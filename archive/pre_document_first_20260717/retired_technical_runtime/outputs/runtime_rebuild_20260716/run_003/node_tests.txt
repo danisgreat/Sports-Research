@@ -1,0 +1,94 @@
+command: C:\WINDOWS\system32\cmd.exe /d /s /c npm test
+exit_code: 0
+
+--- stdout ---
+
+> sports-research-runtime@0.1.0 test
+> node --test --test-concurrency=1 "tests/*.test.mjs"
+
+✔ canonical JSON is stable across input key order (3.7232ms)
+✔ canonical JSON rejects non-finite numbers and normalized-key collisions (0.8943ms)
+✔ UTC parser rejects offsets and local timestamps (2.6285ms)
+✔ canonical ordering is UTF-8 based even for integer-like keys (0.3594ms)
+✔ strict JSON rejects duplicate/colliding keys and safely retains __proto__ (1.5433ms)
+✔ canonical serializer rejects lone UTF-16 surrogates (0.4937ms)
+✔ all current machine controls reconcile while remaining suspended (5.6513ms)
+✔ a model status cannot disagree with its coverage status (0.8781ms)
+✔ an ACTIVE release cross-joins coverage to exact model, source-map, test, shadow and contract evidence (97.8823ms)
+✔ current coverage registry is valid and deliberately inactive (4.3469ms)
+✔ single-scope ACTIVE row passes local registry checks and ALL scopes are rejected (2.8806ms)
+✔ ACTIVE coverage requires every local activation-evidence field and an unexpired approval (0.5886ms)
+✔ ACTIVE coverage rejects multi-token scopes such as EPL|UCL as non-exact (0.2959ms)
+✔ CSV parser handles UTF-8 BOM and RFC4180 escaped quotes (3.3592ms)
+✔ CSV parser rejects malformed quotes, trailing text and blank control rows (0.9383ms)
+✔ risk-coverage includes the abstention denominator and computes selective risk (2.1113ms)
+✔ risk-coverage emits only implementable complete tie blocks (0.5275ms)
+✔ paired event-cluster bootstrap is reproducible and discloses weighting (4.2996ms)
+✔ Holm procedure stops after first retained hypothesis and rejects invalid inputs (0.8847ms)
+✔ a fully populated development plan passes and a real chronological overlap fails (5.3697ms)
+✔ experiment ledger detects spent-test manifest reuse in the same hypothesis family (0.4994ms)
+✔ pairedClusterBootstrap rejects confidenceLevel outside (0,1) (0.3891ms)
+✔ BETWEEN development guardrail requires lower and upper thresholds (0.7375ms)
+✔ ISSUE-HAPPY-001 synthetic ACTIVE RESEARCH_ONLY packet passes every applicable packet gate (157.8598ms)
+✔ GATE-AUTH-001 rejects an ACTIVE packet under a suspended release manifest (90.142ms)
+✔ GATE-CONTRACT-001 fails when the otherwise-valid ISSUE loses its exact ACTIVE contract (79.8707ms)
+✔ GATE-CUTOFF-001 fails when a pregame ISSUE freezes at the event start (56.2318ms)
+✔ GATE-UNIVERSE-001 fails on an isolated candidate_count mismatch (62.7769ms)
+✔ GATE-UNIVERSE-001 rejects both zero and multiple primary questions with reconciled hashes (134.6538ms)
+✔ GATE-SOURCE-001 rejects an observation known one millisecond after cutoff (69.7062ms)
+✔ GATE-SOURCE-001 rejects a production observation fetched after the frozen snapshot (64.6818ms)
+✔ GATE-SOURCE-001 rejects a historical later fetch without versioned as-of evidence (57.3112ms)
+✔ GATE-MODEL-001 rejects SHADOW model status with all other evidence intact (54.2538ms)
+✔ GATE-TEST-001 rejects missing later prospective-shadow evidence (59.9503ms)
+✔ GATE-PROB-001 rejects an out-of-tolerance probability vector (50.8651ms)
+✔ GATE-UNCERTAINTY-001 rejects a material NOT_ESTIMABLE component (52.0893ms)
+✔ GATE-PRICE-001 rejects an EV claim in RESEARCH_ONLY mode (50.7638ms)
+✔ GATE-EXECUTION-001 rejects a stake without an execution record (49.6147ms)
+✔ GATE-MODE-001 has an isolated invalid-mode mutation without a second schema/vocabulary failure (0.0918ms) # TODO
+✔ GATE-PRICE-001 recomputes and validates a complete PRICE_ENABLED packet (0.1271ms) # TODO
+✔ GATE-LEGACY-001 rejects legacy provenance without relying on an unknown-field failure (0.0697ms) # TODO
+✔ journal appends a validated packet and blocks a sequential duplicate snapshot_id (83.6032ms)
+✔ journal blocks a duplicate prediction_id even when snapshot_id is new (164.5027ms)
+✔ payload mutation and tail truncation are detected by chain/anchor (38.8513ms)
+✔ two real concurrent appenders cannot both commit the same semantic record (589.5717ms)
+✔ missing anchor fails closed and recovery requires external head and count (56.2414ms)
+✔ registered contract with no ACTIVE model freezes an evidenced MODEL_UNAVAILABLE PASS (15.9004ms)
+✔ counterfeit RESOLVED contract status cannot validate a CONTRACT_UNRESOLVED PASS (2.0417ms)
+✔ packet mutation breaks canonical snapshot hash (2.1049ms)
+✔ abstention note cannot smuggle a probability (3.1178ms)
+✔ abstention cannot smuggle a quantitative child object (3.3943ms)
+✔ workflow rejects unfilled template sentinels instead of freezing them as evidence (0.7591ms)
+✔ dummy ISSUE cannot bypass model, source, test, probability or uncertainty gates (6.8848ms)
+✔ current release is explicitly suspended and reconciles to zero ACTIVE scopes (5.7213ms)
+✔ an ACTIVE row cannot be smuggled into a suspended release (0.6371ms)
+✔ OPERATIONAL cannot be declared without review and a release bundle hash (0.4382ms)
+✔ decision packet JSON Schema compiles and accepts the genuine ISSUE fixture (228.6864ms)
+✔ decision packet JSON Schema rejects unknown root fields and missing ISSUE evidence (123.5426ms)
+✔ canonical scoring fixtures reproduce exactly (1.9579ms)
+✔ push-aware EV and conditional market comparison do not use p*d-1 (1.118ms)
+✔ structural boundary permission is branch-specific (1.4524ms)
+✔ linked-market coherence rejects an unknown constraint name (2.167ms)
+✔ linked-market coherence rejects empty or nonexistent winning-state ID sets (0.4633ms)
+✔ nested-market contradiction fails coherence (0.2636ms)
+✔ GATE-SETTLEMENT-001 appends an exact frozen-branch settlement and verifies the store (228.0724ms)
+✔ settlement rejects a grade that conflicts with the frozen candidate-state mapping (145.9322ms)
+✔ settlement payload is closed and cannot smuggle frozen forecast fields (111.6978ms)
+✔ settlement rejects a series-only or otherwise ambiguous prediction reference (124.0997ms)
+✔ settlement correction requires exact prior lineage and preserves the frozen subject (183.3002ms)
+✔ evaluation derives proper scores once and blocks a duplicate natural key (170.2043ms)
+✔ settlement rejects attempts to carry mutable probability model or rationale fields (130.8507ms)
+✔ VOID settlement is recorded as EXCLUDED_VOID rather than ELIGIBLE_V3 and scored (0.1485ms) # TODO
+✔ FINAL plus PENDING is rejected by an explicit status-grade matrix (199.8366ms)
+✔ phase-market settlement cannot infer a phase result from a full-event result (0.2316ms) # TODO
+✔ acceptance traceability is complete unique machine-readable and honest about gaps (34.8577ms)
+ℹ tests 75
+ℹ suites 0
+ℹ pass 70
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 5
+ℹ duration_ms 7805.6032
+
+--- stderr ---
+

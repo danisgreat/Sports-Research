@@ -1,0 +1,1 @@
+source_map_id,model_id,model_version,sport_family,competition_id,market_family,forecast_state,horizon_bucket_id,fact_type,source_id,priority,required,parser_id,parser_version,parser_hash,max_observation_age_seconds,max_provider_lag_seconds,cutoff_rule,missingness_action,conflict_rule_id,regression_test_report_id,status,approved_by,approval_utc,expires_utc,map_hash

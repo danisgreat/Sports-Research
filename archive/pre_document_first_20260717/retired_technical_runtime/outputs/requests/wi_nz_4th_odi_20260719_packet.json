@@ -1,0 +1,79 @@
+{
+  "schema_version": "SPORTS_DECISION_PACKET_V1",
+  "request": {
+    "request_id": "REQ-86976b6f-54ad-4e49-8388-077f537e4dbc",
+    "primary_question_id": "QUESTION-514b0e79-f0cc-4fbe-b76d-ed2f85d777d4",
+    "primary_question_text": "Which of the four supplied West Indies team-innings totals are supportable for the fourth ODI against New Zealand, and which team is the qualitative winner lean?",
+    "raw_request_text": "Upcoming Cricket Match: West Indies vs New Zealand. Provide the best 4 picks from West Indies team-innings 50-over Over 212.5, Under 272.5, 10-over Over 39.5 and Under 49.5, plus a potential game winner; research the previous log, ignore any previous game still live, and be honest without hallucinations.",
+    "contract_status": "UNRESOLVED",
+    "request_timestamp_utc": "2026-07-16T18:50:06.087Z",
+    "forecast_series_id": "CRICKET-20260719-WI-NZ-ODI4",
+    "event_id": "CRICBUZZ-162103",
+    "sport_family": "Cricket",
+    "competition_id": "ICC_ODI",
+    "season_id": "2026",
+    "event_name": "West Indies Men v New Zealand Men, 4th ODI",
+    "venue": "Kensington Oval, Bridgetown, Barbados",
+    "event_start_utc": "2026-07-19T14:00:00.000Z",
+    "ruleset_id": null,
+    "market_id": "WI_TEAM_INNINGS_TOTALS_ODI4",
+    "market_family": "team innings totals and match winner",
+    "selection": null,
+    "line": null,
+    "settlement_convention_id": null,
+    "analysis_mode": "RESEARCH_ONLY",
+    "forecast_state": "PREGAME_PROJECTED",
+    "state_bucket_id": null,
+    "horizon_bucket_id": "PREGAME_GT_24H",
+    "selection_mode": "USER_SUPPLIED",
+    "candidate_universe_id": null,
+    "selection_policy_version": null,
+    "user_cancelled": false,
+    "created_by": "Codex sports research"
+  },
+  "decision_snapshot": {
+    "snapshot_id": "SNAP-dcdc5469-d453-4b10-9b0e-c8ec2caff7a9",
+    "request_id": "REQ-86976b6f-54ad-4e49-8388-077f537e4dbc",
+    "forecast_series_id": "CRICKET-20260719-WI-NZ-ODI4",
+    "parent_snapshot_id": null,
+    "snapshot_sequence": 1,
+    "frozen_at_utc": "2026-07-16T18:50:06.087Z",
+    "data_cutoff_utc": "2026-07-16T18:47:02.447Z",
+    "decision": "PASS",
+    "pass_reason": "CONTRACT_UNRESOLVED",
+    "watch_reason": null,
+    "watch_expires_utc": null,
+    "price_evaluation_status": "NOT_REQUESTED",
+    "data_quality_grade": "D",
+    "source_packet_id": null,
+    "candidate_universe_id": null,
+    "missing_prerequisites": [
+      "ruleset_id",
+      "settlement_convention_id"
+    ],
+    "primary_failed_gate": "GATE-CONTRACT-001",
+    "gate_failure_evidence": [
+      {
+        "gate_id": "GATE-CONTRACT-001",
+        "code": "CONTRACT_UNRESOLVED",
+        "detail": "ruleset_id; settlement_convention_id",
+        "evidence_refs": [
+          "request",
+          "coverage_registry",
+          "contract_registry"
+        ]
+      }
+    ],
+    "research_note": "Fourth ODI identified because the third ODI was live at cutoff and was excluded under the user's rule. Official CWI series page showed the third ODI live and the fourth at Kensington Oval on July 19. Cricbuzz listed the fourth ODI at 14:00 UTC. Venue summary: 53 ODIs, historic first-innings average 226. Current completed series results before the live third ODI: West Indies chased 268/3 to beat New Zealand, then were dismissed for 138 batting first; West Indies were 58/0 after 10 overs in the second ODI. The final fourth-ODI squad, XI, toss, pitch report and bookmaker settlement rules were unavailable at cutoff. The preceding England v India second-ODI PASS remained live and was not retrospectively settled. This is a non-quantitative research record and not a prediction-ledger ISSUE.",
+    "snapshot_hash": "6fa8ac5a12a5bf903c06496e562fd9a958c88145bf1be5e650ec659a989ed317",
+    "created_by": "Codex sports research"
+  },
+  "candidate_universe": null,
+  "source_packet": null,
+  "live_state": null,
+  "prediction": null,
+  "forecast_distributions": [],
+  "linked_market_relations": [],
+  "uncertainty_components": [],
+  "price_snapshot": null
+}

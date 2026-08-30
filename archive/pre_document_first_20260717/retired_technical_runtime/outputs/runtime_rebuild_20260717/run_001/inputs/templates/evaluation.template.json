@@ -1,0 +1,10 @@
+{
+  "evaluation_id": null,
+  "prediction_id": "REPLACE_PREDICTION_ID",
+  "settlement_id": "REPLACE_SETTLEMENT_ID",
+  "settlement_version": 1,
+  "scoring_spec_version": "SPORTS_SCORE_V3_20260716",
+  "scoring_code_hash": null,
+  "evaluated_at_utc": null,
+  "report_artifact_hash": null
+}

@@ -1,0 +1,20 @@
+command: C:\Program Files\nodejs\node.exe scripts/sportsctl.mjs validate-system --output C:\Users\danie\Desktop\Sports Research\outputs\runtime_rebuild_20260716\run_001\system_validation.json
+exit_code: 0
+
+--- stdout ---
+PASS   RUNTIME-FILES-001                19 required files exist
+PASS   RUNTIME-CONTROLS-001             machine controls parse
+PASS   RUNTIME-RELEASE-001              SUSPENDED; active=0
+PASS   RUNTIME-COVERAGE-001             16 rows; active=0
+PASS   RUNTIME-MODEL-REGISTRY-001       15 development models join
+PASS   RUNTIME-SOURCE-REGISTRY-001      sources=34; duplicate_ids=0; missing_sports=none
+PASS   RUNTIME-CONTROL-JOINS-001        release/coverage/model/contract/source/test joins reconcile
+PASS   RUNTIME-SCORING-001              canonical Brier/log-loss/EV fixtures
+PASS   RUNTIME-JOURNAL-001              records=0; head=0000000000000000000000000000000000000000000000000000000000000000
+PASS   POWERSHELL-STATIC-001            static specification validator passed
+PASS   RUNTIME-TEST-SUITE-001           implemented Node tests passed; this is not a claim that the full acceptance matrix is covered
+
+system_valid=true; operational_status=SUSPENDED_NO_ACTIVE_MODELS
+
+--- stderr ---
+

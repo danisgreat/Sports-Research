@@ -1,0 +1,1 @@
+contract_id,competition_id,ruleset_id,settlement_convention_id,market_family,forecast_state,status,effective_from_utc,effective_to_utc,official_rules_source_id,settlement_authority_source_id,branch_definition_hash,approved_by,approval_utc,notes

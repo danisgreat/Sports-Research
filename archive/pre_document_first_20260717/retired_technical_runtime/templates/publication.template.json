@@ -1,0 +1,18 @@
+{
+  "publication_id": "REPLACE_WITH_UNIQUE_PUBLICATION_ID",
+  "published_at_utc": "REPLACE_WITH_STRICT_UTC_TIMESTAMP",
+  "snapshot_id": "REPLACE_WITH_RECORDED_SNAPSHOT_ID_OR_SET_NULL",
+  "analysis_id": null,
+  "headline": "REPLACE_WITH_EVENT_AND_MARKET_HEADLINE",
+  "ranked_selections": [
+    {
+      "rank": 1,
+      "selection": "REPLACE_WITH_EXACT_SELECTION_AND_LINE",
+      "verdict": "SUPPORTED_OR_LEAN_OR_AVOID_OR_PASS",
+      "rationale": "REPLACE_WITH_CONCISE_POINT_IN_TIME_REASON"
+    }
+  ],
+  "potential_winner": null,
+  "public_summary": "REPLACE_WITH_THE_EXACT_OR_FAITHFUL_USER_FACING_SUMMARY",
+  "created_by": "REPLACE_WITH_AUTHOR"
+}

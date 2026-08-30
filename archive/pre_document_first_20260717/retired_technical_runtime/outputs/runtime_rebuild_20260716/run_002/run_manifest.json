@@ -1,0 +1,66 @@
+{
+  "manifest_version": "SPORTS_NO_CLOBBER_RELEASE_BUNDLE_V1",
+  "generated_at_utc": "2026-07-16T16:53:15.296Z",
+  "bundle_path": "outputs/runtime_rebuild_20260716/run_002",
+  "no_clobber_enforced": true,
+  "status": "PASS",
+  "environment": {
+    "platform": "win32",
+    "architecture": "x64",
+    "node": "v24.14.1",
+    "npm": "11.11.0",
+    "powershell": "5.1.26100.8737",
+    "git": "git version 2.54.0.windows.1",
+    "repository_state": "NOT_A_GIT_REPOSITORY"
+  },
+  "commands": {
+    "node_tests": {
+      "exit_code": 0,
+      "output_file": "outputs/runtime_rebuild_20260716/run_002/node_tests.txt"
+    },
+    "static_validation": {
+      "exit_code": 0,
+      "output_file": "outputs/runtime_rebuild_20260716/run_002/static_validation.txt"
+    },
+    "system_validation": {
+      "exit_code": 0,
+      "output_file": "outputs/runtime_rebuild_20260716/run_002/system_validation.txt"
+    }
+  },
+  "inventory_file": "workspace_inventory.json",
+  "inventory_entry_count": 109,
+  "operative_input_count": 64,
+  "evidence": [
+    {
+      "path": "node_tests.txt",
+      "size_bytes": 19917,
+      "sha256": "b6acecdf64d62e4121e7f447b3c87c278a47217b132da3f27408ed2d3892bf71"
+    },
+    {
+      "path": "static_validation.txt",
+      "size_bytes": 2681,
+      "sha256": "eb68d320115b05340af5ce65e75e12715742c757e7b160fa7e3a9a9a3dab133c"
+    },
+    {
+      "path": "system_validation.json",
+      "size_bytes": 4580,
+      "sha256": "4f7112ff2df8a072657d04b35f5c2cf1d14a1f71e1643e6e3bb1fec3c899cea4"
+    },
+    {
+      "path": "system_validation.txt",
+      "size_bytes": 1215,
+      "sha256": "3970442ca1b57995373e105a776440295b415e8a61567f1004013867b4f1aa64"
+    },
+    {
+      "path": "workspace_inventory.json",
+      "size_bytes": 23177,
+      "sha256": "7bc8332f8338d08f1a92c45295bf1e05be43b1551a8740312a8f1e91c1440f34"
+    }
+  ],
+  "limitations": [
+    "The bundle validates framework controls; it does not validate or activate a fitted sports model.",
+    "Historical/raw evidence is hashed in the inventory but only operative/test inputs are copied into the bundle.",
+    "The local journal anchor is tamper-evident, not an external immutable timestamp."
+  ],
+  "bundle_manifest_hash": "c2e31902fbdd4d94f7ee4173e3e7a516fa8eaac9606d23ed455e4c01a6f82b38"
+}

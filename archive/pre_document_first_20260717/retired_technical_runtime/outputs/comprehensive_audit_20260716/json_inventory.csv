@@ -1,0 +1,13 @@
+﻿file,bytes,modified,top_type,top_size,top_keys,mentions_final,mentions_odds
+ace.json,168578,2026-06-18T01:59:04.007Z,object,21,"[""boxscore"",""format"",""gameInfo"",""lastFiveGames"",""leaders"",""seasonseries"",""injuries"",""broadcasts"",""pickcenter"",""odds"",""againstTheSpread"",""winprobability"",""predictor"",""news"",""header"",""article"",""videos"",""wallclockAvailable"",""ticketsInfo"",""meta"",""standings""]",true,true
+b_20260617.json,115765,2026-06-18T01:58:45.483Z,object,3,"[""leagues"",""events"",""provider""]",true,true
+b_20260618.json,23483,2026-06-18T01:58:33.926Z,object,3,"[""leagues"",""events"",""provider""]",false,true
+b_20260619.json,49899,2026-06-18T01:58:34.580Z,object,3,"[""leagues"",""events"",""provider""]",false,true
+b_20260620.json,44167,2026-06-18T01:58:35.766Z,object,3,"[""leagues"",""events"",""provider""]",false,false
+b_20260621.json,44332,2026-06-18T01:58:46.499Z,object,3,"[""leagues"",""events"",""provider""]",false,false
+b_20260622.json,58332,2026-06-18T01:58:47.470Z,object,3,"[""leagues"",""events"",""provider""]",false,false
+gm.json,179574,2026-06-18T01:58:21.096Z,object,6,"[""copyright"",""gamePk"",""link"",""metaData"",""gameData"",""liveData""]",false,false
+lib.json,451013,2026-06-18T01:58:19.296Z,object,18,"[""boxscore"",""format"",""gameInfo"",""leaders"",""seasonseries"",""injuries"",""broadcasts"",""pickcenter"",""odds"",""againstTheSpread"",""news"",""videos"",""header"",""plays"",""wallclockAvailable"",""winprobability"",""meta"",""standings""]",false,true
+mlb_2026-06-18.json,27494,2026-06-18T01:34:17.339Z,object,6,"[""copyright"",""totalItems"",""totalEvents"",""totalGames"",""totalGamesInProgress"",""dates""]",false,false
+mlb_2026-06-19.json,41794,2026-06-18T01:34:18.683Z,object,6,"[""copyright"",""totalItems"",""totalEvents"",""totalGames"",""totalGamesInProgress"",""dates""]",false,false
+sum.json,160759,2026-06-18T00:08:37.255Z,object,18,"[""boxscore"",""format"",""gameInfo"",""leaders"",""seasonseries"",""injuries"",""broadcasts"",""pickcenter"",""odds"",""againstTheSpread"",""plays"",""videos"",""winprobability"",""news"",""header"",""wallclockAvailable"",""meta"",""standings""]",false,true

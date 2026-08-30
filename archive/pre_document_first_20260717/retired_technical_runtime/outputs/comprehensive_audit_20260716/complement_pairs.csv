@@ -1,0 +1,151 @@
+﻿card_id,date,sport,match,rank_a,option_a,status_a,probability_a,row_a,rank_b,option_b,status_b,probability_b,row_b,complement_type,line,subject_similarity,probability_sum,outcome_consistent
+AFL-20260710-COLL-NM-SETTLED,2026-07-11,AFL,Collingwood vs North Melbourne,1,Combined Total Under 173.5,L,0.58,7,4,Combined Total Over 173.5,W,0.42,10,over_under,173.5000,1,1,true
+AFL-20260710-COLL-NM-SETTLED,2026-07-11,AFL,Collingwood vs North Melbourne,2,Collingwood -16.5,L,0.54,8,3,North Melbourne +16.5,W,0.46,9,spread,16.5000,1,1,true
+CRICKET-20260710-ENG-IND4,2026-07-10,Cricket/T20I,England vs India,1,India 1st innings Under 197.5,W,0.58,13,4,India 1st innings Over 197.5,L,0.42,16,over_under,197.5000,1,1,true
+CRICKET-20260710-ENG-IND4,2026-07-10,Cricket/T20I,England vs India,2,India powerplay Under 64.5,W,0.55,14,3,India powerplay Over 64.5,L,0.45,15,over_under,64.5000,1,1,true
+CRIC-20260613-CAN-USA,2026-06-13,Cricket,Canada vs United States of America,1,Canada first-5 Over 17.5,W,0.62,22,4,Canada first-5 Under 17.5,L,0.38,25,over_under,17.5000,1,1,true
+CRIC-20260613-CAN-USA,2026-06-13,Cricket,Canada vs United States of America,2,Canada innings Over 208.5,W,0.57,23,3,Canada innings Under 208.5,L,0.43,24,over_under,208.5000,1,1,true
+CRIC-20260614-NZW-WIW,2026-06-14,Cricket,New Zealand Women vs West Indies Women,1,NZ innings Over 165.5,L,0.56,26,3,NZ innings Under 165.5,W,0.44,28,over_under,165.5000,1,1,true
+CRIC-20260614-NZW-WIW,2026-06-14,Cricket,New Zealand Women vs West Indies Women,2,NZ first-6 Over 45.5,W,0.54,27,4,NZ first-6 Under 45.5,L,0.42,29,over_under,45.5000,1,0.96,true
+SOC-20260614-QAT-SUI,2026-06-14,Soccer,Qatar vs Switzerland,1,Total Under 2.5,W,0.57,30,4,Total Over 2.5,L,0.43,33,over_under,2.5000,1,1,true
+SOC-20260614-QAT-SUI,2026-06-14,Soccer,Qatar vs Switzerland,2,1H Over 0.5,W,0.55,31,3,1H Under 0.5,L,0.45,32,over_under,0.5000,1,1,true
+BKB-20260613-ZAL-JUV,2026-06-13,Basketball,Zalgiris Kaunas vs Juventus Utena,1,1H Under 89.5,W,0.7,34,8,1H Over 89.5,L,0.3,41,over_under,89.5000,1,1,true
+BKB-20260613-ZAL-JUV,2026-06-13,Basketball,Zalgiris Kaunas vs Juventus Utena,2,Q1 Under 44.5,L,0.65,35,7,Q1 Over 44.5,W,0.35,40,over_under,44.5000,1,1,true
+BKB-20260613-ZAL-JUV,2026-06-13,Basketball,Zalgiris Kaunas vs Juventus Utena,3,Zalgiris -23.0,L,0.62,36,6,Juventus +23.0,W,0.38,39,spread,23.0000,1,1,true
+BKB-20260613-ZAL-JUV,2026-06-13,Basketball,Zalgiris Kaunas vs Juventus Utena,4,Full Under 177.5,W,0.58,37,5,Full Over 177.5,L,0.42,38,over_under,177.5000,1,1,true
+BKB-20260614-OLY-PAO,2026-06-14,Basketball,Olympiacos vs Panathinaikos AKTOR,1,1H Under 80.5,L,0.63,42,8,1H Over 80.5,W,0.37,49,over_under,80.5000,1,1,true
+BKB-20260614-OLY-PAO,2026-06-14,Basketball,Olympiacos vs Panathinaikos AKTOR,2,Q1 Under 40.5,L,0.61,43,7,Q1 Over 40.5,W,0.39,48,over_under,40.5000,1,1,true
+BKB-20260614-OLY-PAO,2026-06-14,Basketball,Olympiacos vs Panathinaikos AKTOR,3,Full Under 162.5,L,0.57,44,6,Full Over 162.5,W,0.43,47,over_under,162.5000,1,1,true
+BKB-20260614-OLY-PAO,2026-06-14,Basketball,Olympiacos vs Panathinaikos AKTOR,4,Panathinaikos +6.5,W,0.55,45,5,Olympiacos -6.5,L,0.45,46,spread,6.5000,1,1,true
+CRIC-20260614-AUB-JBB,2026-06-14,Cricket,Akcel United Brussels vs JB Bruges,1,AUB first-6 Over 53.5,VOID,0.58,50,3,AUB first-6 Under 53.5,VOID,0.42,52,over_under,53.5000,1,1,true
+SOC-20260614-BRA-MAR,2026-06-14,Soccer,Brazil vs Morocco,1,Total Over 1.5,W,0.64,54,4,Total Under 1.5,L,0.36,57,over_under,1.5000,1,1,true
+SOC-20260614-BRA-MAR,2026-06-14,Soccer,Brazil vs Morocco,2,1H Over 0.5,W,0.57,55,3,1H Under 0.5,L,0.43,56,over_under,0.5000,1,1,true
+BKB-20260614-IND-CON,2026-06-14,Basketball,Indiana Fever at Connecticut Sun,1,Full Over 170.5,L,0.6,58,7,Full Under 170.5,W,0.4,64,over_under,170.5000,1,1,true
+BKB-20260614-IND-CON,2026-06-14,Basketball,Indiana Fever at Connecticut Sun,2,Fever -8.5,W,0.58,59,6,Sun +8.5,L,0.42,63,spread,8.5000,1,1,true
+BKB-20260614-IND-CON,2026-06-14,Basketball,Indiana Fever at Connecticut Sun,3,1H Under 88.5,W,0.57,60,8,1H Over 88.5,L,0.39,65,over_under,88.5000,1,0.96,true
+BKB-20260614-IND-CON,2026-06-14,Basketball,Indiana Fever at Connecticut Sun,4,Q1 Over 44.5,W,0.51,61,5,Q1 Under 44.5,L,0.49,62,over_under,44.5000,1,1,true
+BKB-20260615-PAR-MON,2026-06-15,Basketball,Paris Basketball vs Monaco,1,Full Over 179.5,W,0.62,66,8,Full Under 179.5,L,0.38,73,over_under,179.5000,1,1,true
+BKB-20260615-PAR-MON,2026-06-15,Basketball,Paris Basketball vs Monaco,2,1H Over 89.5,W,0.58,67,7,1H Under 89.5,L,0.42,72,over_under,89.5000,1,1,true
+BKB-20260615-PAR-MON,2026-06-15,Basketball,Paris Basketball vs Monaco,3,Monaco +4.5,W,0.56,68,6,Paris -4.5,L,0.44,71,spread,4.5000,1,1,true
+BKB-20260615-PAR-MON,2026-06-15,Basketball,Paris Basketball vs Monaco,4,Q1 Over 44.5,W,0.55,69,5,Q1 Under 44.5,L,0.45,70,over_under,44.5000,1,1,true
+MLB-20260615-MIA-PIT,2026-06-15,Baseball,Miami Marlins at Pittsburgh Pirates,2,Under 7.5,W,0.55,75,4,Over 7.5,L,0.45,77,over_under,7.5000,1,1,true
+CRIC-20260615-WI-SL,2026-06-15,Cricket,West Indies vs Sri Lanka,1,Sri Lanka first-6 Under 51.5,W,0.68,78,4,Sri Lanka first-6 Over 51.5,L,0.32,79,over_under,51.5000,1,1,true
+CRIC-20260615-WI-SL,2026-06-15,Cricket,West Indies vs Sri Lanka,2,Sri Lanka innings Under 174.5,W,0.58,80,3,Sri Lanka innings Over 174.5,L,0.42,81,over_under,174.5000,1,1,true
+SOC-20260615-SWE-TUN,2026-06-15,Soccer,Sweden vs Tunisia,1,Total Over 1.5,W,0.64,82,6,Total Under 1.5,L,0.36,87,over_under,1.5000,1,1,true
+SOC-20260615-SWE-TUN,2026-06-15,Soccer,Sweden vs Tunisia,2,Total Under 2.5,L,0.58,83,5,Total Over 2.5,W,0.42,86,over_under,2.5000,1,1,true
+SOC-20260615-SWE-TUN,2026-06-15,Soccer,Sweden vs Tunisia,3,1H Over 0.5,W,0.55,84,4,1H Under 0.5,L,0.45,85,over_under,0.5000,1,1,true
+SOC-20260616-ESP-CPV,2026-06-16,Soccer,Spain vs Cape Verde,1,1H Over 0.5,L,0.76,88,6,1H Under 0.5,W,0.24,93,over_under,0.5000,1,1,true
+SOC-20260616-ESP-CPV,2026-06-16,Soccer,Spain vs Cape Verde,2,Total Over 2.5,L,0.63,89,5,Total Under 2.5,W,0.37,92,over_under,2.5000,1,1,true
+SOC-20260616-ESP-CPV,2026-06-16,Soccer,Spain vs Cape Verde,3,Total Under 3.5,W,0.56,90,4,Total Over 3.5,L,0.44,91,over_under,3.5000,1,1,true
+BKB-20260616-FEN-BES,2026-06-16,Basketball,Fenerbahce Beko vs Besiktas Gain,1,Besiktas +9.5,L,0.64,98,8,Fenerbahce -9.5,W,0.36,105,spread,9.5000,1,1,true
+BKB-20260616-FEN-BES,2026-06-16,Basketball,Fenerbahce Beko vs Besiktas Gain,2,Full Over 161.5,L,0.6,99,7,Full Under 161.5,W,0.4,104,over_under,161.5000,1,1,true
+BKB-20260616-FEN-BES,2026-06-16,Basketball,Fenerbahce Beko vs Besiktas Gain,3,1H Over 80.5,W,0.56,100,6,1H Under 80.5,L,0.44,103,over_under,80.5000,1,1,true
+BKB-20260616-FEN-BES,2026-06-16,Basketball,Fenerbahce Beko vs Besiktas Gain,4,Q1 Over 40.5,W,0.52,101,5,Q1 Under 40.5,L,0.48,102,over_under,40.5000,1,1,true
+BKB-20260616-ZAS-LEG,2026-06-16,Basketball,ORLEN Zastal Zielona Gora vs Legia Warszawa,1,Full Under 162.5,W,0.62,106,8,Full Over 162.5,L,0.38,113,over_under,162.5000,1,1,true
+BKB-20260616-ZAS-LEG,2026-06-16,Basketball,ORLEN Zastal Zielona Gora vs Legia Warszawa,2,Legia Warsaw -2.0,L,0.58,107,7,Zastal +2.0,W,0.42,112,spread,2.0000,1,1,true
+BKB-20260616-ZAS-LEG,2026-06-16,Basketball,ORLEN Zastal Zielona Gora vs Legia Warszawa,3,Q1 Under 39.5,L,0.53,108,6,Q1 Over 39.5,W,0.47,111,over_under,39.5000,1,1,true
+BKB-20260616-ZAS-LEG,2026-06-16,Basketball,ORLEN Zastal Zielona Gora vs Legia Warszawa,4,1H Under 80.5,W,0.52,109,5,1H Over 80.5,L,0.48,110,over_under,80.5000,1,1,true
+BKB-20260616-LV-DAL,2026-06-16,Basketball,Las Vegas Aces at Dallas Wings,1,Aces -3.5,L,0.6,114,8,Wings +3.5,W,0.4,121,spread,3.5000,1,1,true
+BKB-20260616-LV-DAL,2026-06-16,Basketball,Las Vegas Aces at Dallas Wings,2,1H Over 86.5,W,0.59,115,7,1H Under 86.5,L,0.41,120,over_under,86.5000,1,1,true
+BKB-20260616-LV-DAL,2026-06-16,Basketball,Las Vegas Aces at Dallas Wings,3,Full Over 177.5,L,0.57,116,6,Full Under 177.5,W,0.43,119,over_under,177.5000,1,1,true
+BKB-20260616-LV-DAL,2026-06-16,Basketball,Las Vegas Aces at Dallas Wings,4,Q1 Over 43.5,W,0.54,117,5,Q1 Under 43.5,L,0.46,118,over_under,43.5000,1,1,true
+KBO-20260616-LOT-SSG,2026-06-16,Baseball,Lotte Giants at SSG Landers,3,Total Over 9.5,W,0.53,128,4,Total Under 9.5,L,0.47,129,over_under,9.5000,1,1,true
+CRIC-20260616-NZW-SLW,2026-06-16,Cricket,New Zealand Women vs Sri Lanka Women,1,NZ first-6 Over 45.5,L,0.62,130,4,NZ first-6 Under 45.5,W,0.38,133,over_under,45.5000,1,1,true
+CRIC-20260616-NZW-SLW,2026-06-16,Cricket,New Zealand Women vs Sri Lanka Women,2,NZ innings Over 165.5,L,0.56,131,3,NZ innings Under 165.5,W,0.44,132,over_under,165.5000,1,1,true
+CRIC-20260617-BAN-AUS,2026-06-17,Cricket,Bangladesh vs Australia,1,Bangladesh 1st Innings 20 overs Under 166.5 Runs,W,0.57,142,4,Bangladesh 1st Innings 20 overs Over 166.5 Runs,L,0.43,145,over_under,166.5000,1,1,true
+CRIC-20260617-BAN-AUS,2026-06-17,Cricket,Bangladesh vs Australia,2,Bangladesh first 6 overs Under 50.5 Runs,L,0.54,143,3,Bangladesh first 6 overs Over 50.5 Runs,W,0.46,144,over_under,50.5000,1,1,true
+KBO-20260617-LG-KIA,2026-06-17,KBO Baseball,LG Twins @ KIA Tigers,2,Combined Final Total Under 10.5 runs,W,0.57,151,4,Combined Final Total Over 10.5 runs,L,0.43,153,over_under,10.5000,1,1,true
+MLB-20260618-NYM-CIN,2026-06-18,Baseball,New York Mets @ Cincinnati Reds,3,Combined Final Total Over 9.0 runs,W,0.48,161,4,Combined Final Total Under 9.0 runs,L,0.4,162,over_under,9.0000,1,0.88,true
+MLB-20260618-BAL-SEA,2026-06-18,Baseball,Baltimore Orioles @ Seattle Mariners,3,Combined Total Over 7.5 runs,W,0.54,185,4,Combined Total Under 7.5 runs,L,0.46,186,over_under,7.5000,1,1,true
+WNBA-20260618-LVA-PHX,2026-06-18,Basketball,Las Vegas Aces @ Phoenix Mercury,1,Combined 1st Half Total Over 83.5 points,W,0.63,187,4,Combined 1st Half Total Under 83.5 points,L,0.37,190,over_under,83.5000,1,1,true
+WNBA-20260618-LVA-PHX,2026-06-18,Basketball,Las Vegas Aces @ Phoenix Mercury,2,Aces -5.5 points,W,0.58,188,3,Mercury +5.5 points,L,0.42,189,spread,5.5000,1,1,true
+LBA-20260617-VEN-MIL-G3,2026-06-17,Basketball,Umana Reyer Venezia vs EA7 Emporio Armani Milano,1,Combined 1st half Total Over 84.5,W,0.64,191,8,Combined 1st half Total Under 84.5,L,0.36,198,over_under,84.5000,1,1,true
+LBA-20260617-VEN-MIL-G3,2026-06-17,Basketball,Umana Reyer Venezia vs EA7 Emporio Armani Milano,2,Milano -4.5,L,0.62,192,7,Venezia +4.5,W,0.38,197,spread,4.5000,1,1,true
+LBA-20260617-VEN-MIL-G3,2026-06-17,Basketball,Umana Reyer Venezia vs EA7 Emporio Armani Milano,3,Combined 1st quarter Total Over 43.5,W,0.57,193,6,Combined 1st quarter Total Under 43.5,L,0.43,196,over_under,43.5000,1,1,true
+LBA-20260617-VEN-MIL-G3,2026-06-17,Basketball,Umana Reyer Venezia vs EA7 Emporio Armani Milano,4,Combined Total Over 172.5,W,0.54,194,5,Combined Total Under 172.5,L,0.46,195,over_under,172.5000,1,1,true
+AFL-20260618-FRE-GEEL,2026-06-18,AFL,Fremantle vs Geelong Cats,1,Geelong +19.5,W,0.6,199,4,Fremantle -19.5,L,0.4,202,spread,19.5000,1,1,true
+AFL-20260618-FRE-GEEL,2026-06-18,AFL,Fremantle vs Geelong Cats,2,Combined Total Over 176.5 Points,W,0.56,200,3,Combined Total Under 176.5 Points,L,0.44,201,over_under,176.5000,1,1,true
+CRICKET-WT20WC-20260619-WIW-SCOW,2026-06-19,Cricket,West Indies Women vs Scotland Women,1,West Indies 1st innings 20 overs Over 164.5 runs,L,0.56,207,4,West Indies 1st innings 20 overs Under 164.5 runs,W,0.44,210,over_under,164.5000,1,1,true
+CRICKET-WT20WC-20260619-WIW-SCOW,2026-06-19,Cricket,West Indies Women vs Scotland Women,2,West Indies powerplay Over 45.5 runs,L,0.54,208,3,West Indies powerplay Under 45.5 runs,W,0.46,209,over_under,45.5000,1,1,true
+MLB-20260619-TOR-BOS,2026-06-19,Baseball/MLB,Toronto Blue Jays @ Boston Red Sox,2,Combined Total Under 9.5 runs,W,0.55,212,4,Combined Total Over 9.5 runs,L,0.45,214,over_under,9.5000,1,1,true
+MLB-20260619-MIN-TEX,2026-06-19,Baseball/MLB,Minnesota Twins @ Texas Rangers,2,Combined Total Over 7.5 runs,W,0.58,216,4,Combined Total Under 7.5 runs,L,0.42,218,over_under,7.5000,1,1,true
+WNBA-20260619-ATL-IND,2026-06-19,Basketball/WNBA,Atlanta Dream @ Indiana Fever,1,Fever +1.5,L,0.63,223,4,Dream -1.5,W,0.37,226,spread,1.5000,1,1,true
+WNBA-20260619-ATL-IND,2026-06-19,Basketball/WNBA,Atlanta Dream @ Indiana Fever,2,Combined Total Under 173.5 points,L,0.57,224,3,Combined Total Over 173.5 points,W,0.43,225,over_under,173.5000,1,1,true
+CRICKET-MLC-20260619-TSK-SOR,2026-06-19,Cricket/MLC,Texas Super Kings vs Seattle Orcas,2,Seattle Orcas 1st innings 20 overs Under 183.5 runs,L,0.55,228,3,Seattle Orcas 1st innings 20 overs Over 183.5 runs,W,0.45,229,over_under,183.5000,1,1,true
+KBO-20260619-DOO-LG,2026-06-19,Baseball/KBO,Doosan Bears @ LG Twins,2,Combined Total Under 8.5 runs,W,0.56,232,4,Combined Total Over 8.5 runs,L,0.44,234,over_under,8.5000,1,1,true
+BKB-NZNBL-20260620-AKL-HBH,2026-06-20,Basketball/NZNBL,Auckland Tuatara vs Hawke's Bay Hawks,1,Auckland Tuatara -15.5,L,0.56,235,6,Hawke's Bay Hawks +15.5,W,0.44,240,spread,15.5000,1,1,true
+BKB-NZNBL-20260620-AKL-HBH,2026-06-20,Basketball/NZNBL,Auckland Tuatara vs Hawke's Bay Hawks,2,Combined Total Under 184.5,W,0.53,236,5,Combined Total Over 184.5,L,0.47,239,over_under,184.5000,1,1,true
+BKB-NZNBL-20260620-AKL-HBH,2026-06-20,Basketball/NZNBL,Auckland Tuatara vs Hawke's Bay Hawks,3,Combined 1st Half Total Under 92.5,W,0.51,237,4,Combined 1st Half Total Over 92.5,L,0.49,238,over_under,92.5000,1,1,true
+BASE-NPB-20260620-SEI-ORI,2026-06-20,Baseball/NPB,Saitama Seibu Lions @ ORIX Buffaloes,3,Combined Total Under 6.5 runs,W,0.52,243,4,Combined Total Over 6.5 runs,L,0.48,244,over_under,6.5000,1,1,true
+SOC-WC2026-20260620-TUR-PAR,2026-06-20,Soccer/FIFA World Cup,Turkiye vs Paraguay,1,Combined 1H Goals Over 0.5,W,0.6,245,4,Combined 1H Goals Under 0.5,L,0.4,248,over_under,0.5000,1,1,true
+SOC-WC2026-20260620-TUR-PAR,2026-06-20,Soccer/FIFA World Cup,Turkiye vs Paraguay,2,Combined Total Goals Over 2.5,L,0.53,246,3,Combined Total Goals Under 2.5,W,0.47,247,over_under,2.5000,1,1,true
+CRIC-WT20WC-20260620-AUSW-NEDW,2026-06-20,Cricket/WT20I,Australia Women vs Netherlands Women,1,Australia 1st innings 20 overs Under 197.5 runs,L,0.61,249,4,Australia 1st innings 20 overs Over 197.5 runs,W,0.39,252,over_under,197.5000,1,1,true
+CRIC-WT20WC-20260620-AUSW-NEDW,2026-06-20,Cricket/WT20I,Australia Women vs Netherlands Women,2,Australia 1st innings 6 overs Over 56.5 runs,W,0.54,250,3,Australia 1st innings 6 overs Under 56.5 runs,L,0.46,251,over_under,56.5000,1,1,true
+CRIC-WT20WC-20260620-PAKW-BANW,2026-06-20,Cricket/WT20I,Pakistan Women vs Bangladesh Women,1,Bangladesh 1st innings 20 overs Under 133.5 runs,W,0.56,253,4,Bangladesh 1st innings 20 overs Over 133.5 runs,L,0.44,256,over_under,133.5000,1,1,true
+CRIC-WT20WC-20260620-PAKW-BANW,2026-06-20,Cricket/WT20I,Pakistan Women vs Bangladesh Women,2,Bangladesh 1st innings 6 overs Under 38.5 runs,W,0.52,254,3,Bangladesh 1st innings 6 overs Over 38.5 runs,L,0.48,255,over_under,38.5000,1,1,true
+AFL-20260620-GWS-CARL,2026-06-20,AFL,GWS Giants vs Carlton,1,Carlton +21.5,W,0.6,257,4,Giants -21.5,L,0.4,260,spread,21.5000,1,1,true
+AFL-20260620-GWS-CARL,2026-06-20,AFL,GWS Giants vs Carlton,2,Combined Total Under 184.5,W,0.55,258,3,Combined Total Over 184.5,L,0.45,259,over_under,184.5000,1,1,true
+BKB-NZNBL-20260620-OTA-TAR,2026-06-20,Basketball/NZNBL,Otago Nuggets vs Taranaki Airs,1,Taranaki Airs +4.5,W,0.61,261,4,Otago Nuggets -4.5,L,0.39,264,spread,4.5000,1,1,true
+CRIC-ODI-20260620-AFG-IND,2026-06-20,Cricket/ODI,Afghanistan vs India,1,Afghanistan first 5 overs Over 25.5,U,0.59,265,4,Afghanistan first 5 overs Under 25.5,U,0.41,268,over_under,25.5000,1,1,false
+CRIC-ODI-20260620-AFG-IND,2026-06-20,Cricket/ODI,Afghanistan vs India,2,Afghanistan 50 overs Over 276.5,L,0.54,266,3,Afghanistan 50 overs Under 276.5,W,0.46,267,over_under,276.5000,1,1,true
+SOC-WC2026-20260621-NED-SWE,2026-06-21,Soccer/FIFA World Cup,Netherlands vs Sweden,1,Combined 1H Goals Over 0.5,W,0.62,269,4,Combined 1H Goals Under 0.5,L,0.38,272,over_under,0.5000,1,1,true
+SOC-WC2026-20260621-NED-SWE,2026-06-21,Soccer/FIFA World Cup,Netherlands vs Sweden,2,Combined Total Goals Over 2.5,W,0.57,270,3,Combined Total Goals Under 2.5,L,0.43,271,over_under,2.5000,1,1,true
+WNBA-20260621-IND-ATL,2026-06-21,WNBA,Indiana Fever @ Atlanta Dream,1,Atlanta Dream +5.5,W,0.68,273,4,Indiana Fever -5.5,L,0.32,276,spread,5.5000,1,1,true
+CRIC-WT20WC-20260621-ENGW-SCOW,2026-06-21,Cricket/WT20I,England Women vs Scotland Women,1,England 1st innings 6 overs Under 51.5,W,0.57,277,3,England 1st innings 6 overs Over 51.5,L,0.43,279,over_under,51.5000,1,1,true
+MLB-20260621-TOR-CHC,2026-06-21,MLB,Toronto Blue Jays @ Chicago Cubs,3,Combined Total Over 9.5,W,0.53,283,4,Combined Total Under 9.5,L,0.47,284,over_under,9.5000,1,1,true
+CRIC-T20I-20260621-BAN-AUS3,2026-06-21,Cricket/T20I,Bangladesh vs Australia,1,Bangladesh first 6 overs Over 50.5,L,0.58,285,4,Bangladesh first 6 overs Under 50.5,W,0.42,288,over_under,50.5000,1,1,true
+CRIC-T20I-20260621-BAN-AUS3,2026-06-21,Cricket/T20I,Bangladesh vs Australia,2,Bangladesh 20 overs Over 168.5,L,0.56,286,3,Bangladesh 20 overs Under 168.5,W,0.44,287,over_under,168.5000,1,1,true
+KBO-20260621-KIA-KT,2026-06-21,KBO,KIA Tigers @ KT Wiz,1,Combined Total Over 10.5,W,0.57,289,4,Combined Total Under 10.5,L,0.43,292,over_under,10.5000,1,1,true
+CRIC-MLC-20260622-LAKR-SEA,2026-06-22,Cricket/MLC,Los Angeles Knight Riders vs Seattle Orcas,1,LAKR first 6 overs Under 63.5,W,0.55,293,4,LAKR first 6 overs Over 63.5,L,0.45,296,over_under,63.5000,1,1,true
+CRIC-MLC-20260622-LAKR-SEA,2026-06-22,Cricket/MLC,Los Angeles Knight Riders vs Seattle Orcas,2,LAKR 20 overs Under 203.5,W,0.52,294,3,LAKR 20 overs Over 203.5,L,0.48,295,over_under,203.5000,1,1,true
+WNBA-20260622-WAS-MIN,2026-06-22,WNBA,Washington Mystics @ Minnesota Lynx,1,Combined 1H Total Over 82.5,L,0.59,297,6,Combined 1H Total Under 82.5,W,0.41,302,over_under,82.5000,1,1,true
+WNBA-20260622-WAS-MIN,2026-06-22,WNBA,Washington Mystics @ Minnesota Lynx,2,Combined Total Over 169.5,L,0.55,298,5,Combined Total Under 169.5,W,0.45,301,over_under,169.5000,1,1,true
+WNBA-20260622-WAS-MIN,2026-06-22,WNBA,Washington Mystics @ Minnesota Lynx,3,Lynx -14.5,L,0.51,299,4,Mystics +14.5,W,0.49,300,spread,14.5000,1,1,true
+MLB-20260622-NYM-PHI,2026-06-22,MLB,New York Mets @ Philadelphia Phillies,2,Combined Total Over 8.0,P,0.56,304,3,Combined Total Under 8.0,P,0.43,305,over_under,8.0000,1,0.99,true
+BASK-ISR-20260623-GAL-NET,2026-06-23,Basketball/Israel Winner League,Hapoel Galil Elyon vs Elitzur Netanya,3,Combined 1st Half Total Under 87.5,L,0.57,309,4,Combined 1st Half Total Over 87.5,W,0.43,310,over_under,87.5000,1,1,true
+SOC-WC2026-20260623-ARG-AUT,2026-06-23,Soccer/FIFA World Cup,Argentina vs Austria,1,Combined 1H Goals Over 0.5,W,0.64,311,4,Combined 1H Goals Under 0.5,L,0.36,314,over_under,0.5000,1,1,true
+SOC-WC2026-20260623-ARG-AUT,2026-06-23,Soccer/FIFA World Cup,Argentina vs Austria,2,Combined Total Goals Under 2.5,W,0.54,312,3,Combined Total Goals Over 2.5,L,0.46,313,over_under,2.5000,1,1,true
+MLB-20260623-BOS-COL,2026-06-23,MLB,Boston Red Sox @ Colorado Rockies,3,Combined Total Under 11.5,W,0.53,317,4,Combined Total Over 11.5,L,0.47,318,over_under,11.5000,1,1,true
+WNBA-20260623-DAL-SEA,2026-06-23,WNBA,Dallas Wings @ Seattle Storm,1,Combined Total Under 170.5,L,0.62,319,6,Combined Total Over 170.5,W,0.38,324,over_under,170.5000,1,1,true
+WNBA-20260623-DAL-SEA,2026-06-23,WNBA,Dallas Wings @ Seattle Storm,2,Combined 1st Half Total Under 83.5,W,0.57,320,5,Combined 1st Half Total Over 83.5,L,0.43,323,over_under,83.5000,1,1,true
+WNBA-20260623-DAL-SEA,2026-06-23,WNBA,Dallas Wings @ Seattle Storm,3,Combined 1st Quarter Total Under 41.5,L,0.55,321,4,Combined 1st Quarter Total Over 41.5,W,0.45,322,over_under,41.5000,1,1,true
+CRIC-WT20-20260623-NZW-SCO,2026-06-23,Cricket/WT20I,New Zealand Women vs Scotland Women,1,Scotland 20 overs Over 136.5,L,0.62,325,4,Scotland 20 overs Under 136.5,W,0.38,328,over_under,136.5000,1,1,true
+CRIC-WT20-20260623-NZW-SCO,2026-06-23,Cricket/WT20I,New Zealand Women vs Scotland Women,2,Scotland first 6 overs Under 42.5,L,0.56,326,3,Scotland first 6 overs Over 42.5,W,0.44,327,over_under,42.5000,1,1,true
+BASK-NZNBL-20260624-WHA-SOU,2026-06-24,Basketball/NZNBL,Tauranga Whai vs Southland Sharks,1,Combined Total Under 180.5,L,0.56,329,6,Combined Total Over 180.5,W,0.44,334,over_under,180.5000,1,1,true
+BASK-NZNBL-20260624-WHA-SOU,2026-06-24,Basketball/NZNBL,Tauranga Whai vs Southland Sharks,2,Combined 1st Quarter Over 44.5,W,0.55,330,5,Combined 1st Quarter Under 44.5,L,0.45,333,over_under,44.5000,1,1,true
+BASK-NZNBL-20260624-WHA-SOU,2026-06-24,Basketball/NZNBL,Tauranga Whai vs Southland Sharks,3,Combined 1st Half Over 89.5,L,0.53,331,4,Combined 1st Half Under 89.5,W,0.47,332,over_under,89.5000,1,1,true
+MLB-20260625-TEX-MIA,2026-06-25,MLB,Texas Rangers @ Miami Marlins,2,Combined Total Under 7.5,W,0.55,336,4,Combined Total Over 7.5,L,0.45,338,over_under,7.5000,1,1,true
+CRIC-WT20-20260625-ENG-WI,2026-06-25,Cricket/WT20I,England Women vs West Indies Women,1,England 20 overs Under 175.5,L,0.6,339,4,England 20 overs Over 175.5,W,0.4,342,over_under,175.5000,1,1,true
+CRIC-WT20-20260625-ENG-WI,2026-06-25,Cricket/WT20I,England Women vs West Indies Women,2,England first 6 overs Under 51.5,W,0.56,340,3,England first 6 overs Over 51.5,L,0.44,341,over_under,51.5000,1,1,true
+BASK-ACB-20260625-BAR-VBC,2026-06-25,Basketball/Spain ACB,FC Barcelona vs Valencia Basket,1,Combined 1st Quarter Under 42.5,L,0.64,343,6,Combined 1st Quarter Over 42.5,W,0.36,348,over_under,42.5000,1,1,true
+BASK-ACB-20260625-BAR-VBC,2026-06-25,Basketball/Spain ACB,FC Barcelona vs Valencia Basket,2,Combined 1st Half Under 85.5,W,0.58,344,5,Combined 1st Half Over 85.5,L,0.42,347,over_under,85.5000,1,1,true
+BASK-ACB-20260625-BAR-VBC,2026-06-25,Basketball/Spain ACB,FC Barcelona vs Valencia Basket,3,Combined Total Under 177.5,L,0.55,345,4,Combined Total Over 177.5,W,0.45,346,over_under,177.5000,1,1,true
+SOC-WC2026-20260625-SUI-CAN,2026-06-25,Soccer/FIFA World Cup,Switzerland vs Canada,1,Combined 1H Goals Over 0.5,L,0.62,349,4,Combined 1H Goals Under 0.5,W,0.38,352,over_under,0.5000,1,1,true
+SOC-WC2026-20260625-SUI-CAN,2026-06-25,Soccer/FIFA World Cup,Switzerland vs Canada,2,Combined Total Goals Under 2.5,L,0.52,350,3,Combined Total Goals Over 2.5,W,0.48,351,over_under,2.5000,1,1,true
+SOC-WC2026-20260625-BIH-QAT,2026-06-25,Soccer/FIFA World Cup,Bosnia-Herzegovina vs Qatar,1,Combined 1H Goals Over 0.5,W,0.65,353,4,Combined 1H Goals Under 0.5,L,0.35,356,over_under,0.5000,1,1,true
+SOC-WC2026-20260625-BIH-QAT,2026-06-25,Soccer/FIFA World Cup,Bosnia-Herzegovina vs Qatar,2,Combined Total Goals Over 2.5,W,0.58,354,3,Combined Total Goals Under 2.5,L,0.42,355,over_under,2.5000,1,1,true
+AFL-20260627-CARL-WCE,2026-06-27,AFL,Carlton Blues vs West Coast Eagles,1,Combined Total Under 174.5,L,0.61,357,4,Combined Total Over 174.5,W,0.39,360,over_under,174.5000,1,1,true
+AFL-20260627-CARL-WCE,2026-06-27,AFL,Carlton Blues vs West Coast Eagles,2,West Coast Eagles +35.5,L,0.57,358,3,Carlton Blues -35.5,W,0.43,359,spread,35.5000,1,1,true
+AFL-20260627-COLL-RICH,2026-06-27,AFL,Collingwood Magpies vs Richmond Tigers,1,Richmond Tigers +38.5,W,0.56,361,4,Collingwood Magpies -38.5,L,0.44,364,spread,38.5000,1,1,true
+AFL-20260627-COLL-RICH,2026-06-27,AFL,Collingwood Magpies vs Richmond Tigers,2,Combined Total Under 165.5,L,0.52,362,3,Combined Total Over 165.5,W,0.48,363,over_under,165.5000,1,1,true
+AFL-20260627-COLL-RICH-LIVE1220,2026-06-27,AFL,Collingwood Magpies vs Richmond Tigers,1,Richmond Tigers +38.5,W,0.63,365,4,Collingwood Magpies -38.5,L,0.37,368,spread,38.5000,1,1,true
+AFL-20260627-COLL-RICH-LIVE1220,2026-06-27,AFL,Collingwood Magpies vs Richmond Tigers,2,Combined Total Under 165.5,L,0.57,366,3,Combined Total Over 165.5,W,0.43,367,over_under,165.5000,1,1,true
+AFL-20260627-COLL-RICH-LIVEQ4,2026-06-27,AFL,Collingwood Magpies vs Richmond Tigers,1,Combined Total Over 165.5,W,0.68,369,4,Combined Total Under 165.5,L,0.32,372,over_under,165.5000,1,1,true
+AFL-20260627-COLL-RICH-LIVEQ4,2026-06-27,AFL,Collingwood Magpies vs Richmond Tigers,2,Collingwood Magpies -38.5,L,0.58,370,3,Richmond Tigers +38.5,W,0.42,371,spread,38.5000,1,1,true
+AFL-20260627-COLL-RICH-SETTLEDQ4,2026-06-27,AFL,Collingwood Magpies vs Richmond Tigers,1,Combined Total Over 165.5,W,0.68,373,4,Combined Total Under 165.5,L,0.32,376,over_under,165.5000,1,1,true
+AFL-20260627-COLL-RICH-SETTLEDQ4,2026-06-27,AFL,Collingwood Magpies vs Richmond Tigers,2,Collingwood Magpies -38.5,L,0.58,374,3,Richmond Tigers +38.5,W,0.42,375,spread,38.5000,1,1,true
+CRIC-WT20WC-20260627-PAKW-NEDW,2026-06-27,Cricket/WT20I,Pakistan Women vs Netherlands Women,1,Pakistan 1st innings 20 overs Under 158.5,W,0.56,377,4,Pakistan 1st innings 20 overs Over 158.5,L,0.44,380,over_under,158.5000,1,1,true
+CRIC-WT20WC-20260627-PAKW-NEDW,2026-06-27,Cricket/WT20I,Pakistan Women vs Netherlands Women,2,Pakistan 1st innings 6 overs Under 45.5,W,0.54,378,3,Pakistan 1st innings 6 overs Over 45.5,L,0.46,379,over_under,45.5000,1,1,true
+CRIC-WT20WC-20260627-WIW-IREW,2026-06-27,Cricket/WT20I,West Indies Women vs Ireland Women,1,West Indies 1st innings 6 overs Over 45.5,L,0.56,381,4,West Indies 1st innings 6 overs Under 45.5,W,0.44,384,over_under,45.5000,1,1,true
+CRIC-WT20WC-20260627-WIW-IREW,2026-06-27,Cricket/WT20I,West Indies Women vs Ireland Women,2,West Indies 1st innings 20 overs Over 158.5,L,0.53,382,3,West Indies 1st innings 20 overs Under 158.5,W,0.47,383,over_under,158.5000,1,1,true
+CRIC-WT20WC-20260628-ENGW-NZW,2026-06-28,Cricket/WT20I,England Women vs New Zealand Women,1,New Zealand 1st innings 20 overs Over 153.5,W,0.55,385,4,New Zealand 1st innings 20 overs Under 153.5,L,0.45,388,over_under,153.5000,1,1,true
+CRIC-WT20WC-20260628-ENGW-NZW,2026-06-28,Cricket/WT20I,England Women vs New Zealand Women,2,New Zealand 1st innings 6 overs Over 42.5,W,0.52,386,3,New Zealand 1st innings 6 overs Under 42.5,L,0.48,387,over_under,42.5000,1,1,true
+CRIC-WT20WC-20260628-ENGCHASE-NZW,2026-06-28,Cricket/WT20I,England Women chase vs New Zealand Women,1,England innings Under 164.5,W,0.82,389,4,England innings Over 164.5,L,0.18,392,over_under,164.5000,1,1,true
+CRIC-WT20WC-20260628-ENGCHASE-NZW,2026-06-28,Cricket/WT20I,England Women chase vs New Zealand Women,2,England 1st innings 6 overs Under 52.5,L,0.58,390,3,England 1st innings 6 overs Over 52.5,W,0.42,391,over_under,52.5000,1,1,true
+MLB-20260627-CIN-PIT,2026-06-28,Baseball/MLB,Cincinnati Reds at Pittsburgh Pirates,2,Combined Total Under 8.0,L,0.54,394,4,Combined Total Over 8.0,W,0.43,396,over_under,8.0000,1,0.97,true
+MLB-20260627-KC-CHW,2026-06-28,Baseball/MLB,Kansas City Royals at Chicago White Sox,3,Combined Total Over 8.0,L,0.49,399,4,Combined Total Under 8.0,W,0.39,400,over_under,8.0000,1,0.88,true
+MLB-20260627-ARI-TB,2026-06-28,Baseball/MLB,Arizona Diamondbacks at Tampa Bay Rays,2,Combined Total Under 8.5,W,0.58,402,4,Combined Total Over 8.5,L,0.42,404,over_under,8.5000,1,1,true
+AFL-20260709-FRE-SYD,2026-07-09,AFL,Fremantle Dockers vs Sydney Swans,1,Sydney Swans +14.5,L,0.58,405,3,Fremantle -14.5,W,0.48,407,spread,14.5000,1,1.06,true
+AFL-20260709-FRE-SYD,2026-07-09,AFL,Fremantle Dockers vs Sydney Swans,2,Combined Total Over 173.5,W,0.56,406,4,Combined Total Under 173.5,L,0.44,408,over_under,173.5000,1,1,true
+MLC-20260712-TSK-WF,2026-07-12,Cricket/T20,Texas Super Kings vs Washington Freedom,1,TSK full Under 179.5,W,0.66,414,4,TSK full Over 179.5,L,0.34,417,over_under,179.5000,1,1,true
+MLC-20260712-TSK-WF,2026-07-12,Cricket/T20,Texas Super Kings vs Washington Freedom,2,TSK PP Under 54.5,L,0.64,415,3,TSK PP Over 54.5,W,0.36,416,over_under,54.5000,1,1,true

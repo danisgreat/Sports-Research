@@ -1,0 +1,18 @@
+{
+  "publication_id": "PUB-BASEBALL-LMB-20260716-DIABLOS-TIGRES-G3-OVER19-5-001",
+  "published_at_utc": "2026-07-17T03:24:47.216Z",
+  "snapshot_id": "SNAP-009b9c86-4f5e-465c-8134-28b921673835",
+  "analysis_id": null,
+  "headline": "Diablos Rojos del Mexico at Tigres de Quintana Roo live Over 19.5 check",
+  "ranked_selections": [
+    {
+      "rank": 1,
+      "selection": "Combined Total Over 19.5 runs",
+      "verdict": "PASS",
+      "rationale": "The total was 18 with two outs in the top of the eighth, so two more runs were required; scoring had cooled and the live market favored Under 19.5."
+    }
+  ],
+  "potential_winner": null,
+  "public_summary": "Over 19.5 remained plausible but was less likely than not at the frozen state. It needed two more runs with roughly two innings remaining. The honest call was PASS on the over, not a supported play, because LMB totals are outside the active model and the exact live settlement contract was unresolved.",
+  "created_by": "Codex sports research"
+}

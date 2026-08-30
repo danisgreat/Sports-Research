@@ -1,0 +1,18 @@
+{
+  "publication_id": "PUB-BASEBALL-LMB-20260716-DIABLOS-TIGRES-G3-OVER19-5-002",
+  "published_at_utc": "2026-07-17T03:26:35.404Z",
+  "snapshot_id": "SNAP-c5fb1f8a-ca0a-4a93-9256-42ff5ccaca21",
+  "analysis_id": null,
+  "headline": "Diablos Rojos del Mexico at Tigres de Quintana Roo refreshed Over 19.5 check",
+  "ranked_selections": [
+    {
+      "rank": 1,
+      "selection": "Combined Total Over 19.5 runs",
+      "verdict": "PASS",
+      "rationale": "The total remained 18 after a scoreless top of the eighth, two runs were still required, and the refreshed live market moved farther toward Under 19.5."
+    }
+  ],
+  "potential_winner": null,
+  "public_summary": "Over 19.5 was still possible but clearly less likely than not at the refreshed cutoff. It needed two runs over the remaining bottom of the eighth and ninth inning, while the recent scoring path and market both favored the under. The honest call remained PASS on the over rather than a supported play.",
+  "created_by": "Codex sports research"
+}

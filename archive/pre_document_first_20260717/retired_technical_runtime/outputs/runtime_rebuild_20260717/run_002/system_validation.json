@@ -1,0 +1,110 @@
+{
+  "report_version": "SPORTS_RUNTIME_SYSTEM_VALIDATION_V1",
+  "generated_at_utc": "2026-07-17T02:53:40.597Z",
+  "release_id": "SR-20260717-ANALYSIS-ONLY-1",
+  "release_mode": "SUSPENDED",
+  "operational_status": "SUSPENDED_NO_ACTIVE_MODELS",
+  "runtime_versions": {
+    "node": "v24.14.1",
+    "powershell": "5.1.26100.8737"
+  },
+  "control_hashes": {
+    "package.json": "cf06da0237995801209c949b8bd297553b3ce9799d5b73d92483273bbc852d32",
+    "package-lock.json": "f5e8abc3de6be0e823d19d26c3e7fb140c92cf1401b1679309bbc6a903ac438b",
+    "SPORTS_RESEARCH_AUTHORITY_MANIFEST.md": "c0bb2a643aa29baac4a596c180c203c6d3303dd88524ef7c08fb1fd3db3e09cf",
+    "SPORTS_MODEL_COVERAGE_REGISTRY_v3.csv": "19112f576af3232fded66163a49330664cfdc0665a606f678f77fd78b812c433",
+    "SPORTS_MODEL_REGISTRY_v1.csv": "f5716a09e808d270257c09ff5ee8269dee74b939dc5d85e276b9228125e91a98",
+    "SPORTS_REGISTERED_SOURCES_v1.csv": "b0a8268074cdf9aa9a05606d25b409bfee819472fc32e432890d8ca1e35bcba6",
+    "SPORTS_RELEASE_MANIFEST_v1.json": "f59509d10503835223486021fbbda65acd0a857e3d79f8fa125e530761f15416",
+    "schema/controlled_vocabularies_v1.json": "b8c002c8a8dd7caa194b0ced1d164827000d2778b5d2a62617fedaf1132af4dd",
+    "schema/competition_registry_v1.csv": "0263f8b67cfb6f16a1dfda6b3188ebe469e31bac311023d019f41d22b47f70ee",
+    "schema/contract_registry_v1.csv": "290afb3bf56c297ea9c82e41c8147648f37373eed433bd9b3f88e734a59d99f5",
+    "schema/source_maps_v1.csv": "f580efad05ed956c9bfe979a15b21de6b95d999e12fa17c41b5234a7d93270c7",
+    "schema/test_evaluations_v1.csv": "ae4cd4b9161313c706438a97ad66e58a0a4978090369deccebccd8b717138895",
+    "schema/decision_packet.schema.json": "1fceffc936d9d974d6c96fe4eb1fa7e6ba5bde6f692c96e47af6cd6312c0ef06",
+    "schema/acceptance_traceability_v1.csv": "a3d5167c1bf6259b50143019525f3a91f67eb64c49e5fae1edcf47a46aeb9196",
+    "SPORTS_ANALYSIS_MODEL_REGISTRY_v1.json": "5e268fe7b71cf075791a8d211711b8687be6f3d8daab4b3386248602725b6433",
+    "SPORTS_ACTIVE_ANALYSIS_MODELS_v1.md": "e1f53a914b302383dd69f18d2a441a9878873c6a3ba2256d4c12a29ba1140825",
+    "schema/analysis_request.schema.json": "6177665997dcb9f971bffd5f8325d03b458e4f8b848e4a51d1b3eb564528ba2a",
+    "schema/analysis_output.schema.json": "727fc670853ad1361052c6301d59ce1ba13e0cfd5f5af1d3911e35d9fdcb5495",
+    "schema/analysis_acceptance_traceability_v1.csv": "6c2dd312943807864926e811513ca306b491a9d8052c635bb0daa91207ba63b3",
+    "schema/experiment_ledger_v1.csv": "5269a40181d7d88cf28b90d55c9c5232399c57c9f0c12ec123a92db127736439",
+    "src/canonical.mjs": "ed0341361c6624561910167612d61bcf41349ce5bbda00a59abc26ef29936eab",
+    "src/csv.mjs": "16581fd522d71019ebcfb9a7b086a4d6b57ef6a2898737413cd05484d55fea51",
+    "src/scoring.mjs": "ca0dac76a5b3f2951fff6adcd8968409c7567785c6b4bbd5aba4be21b7745685",
+    "src/coverage.mjs": "a55ff3274493b120c5629c791cb40f897a55dbf9d24b8885a78cf289ccda5316",
+    "src/release.mjs": "073b1c251851bb6b8529bd150e450e2b9b57ccc1ef7a9449c476b16d0ca207b0",
+    "src/controls.mjs": "4eeee85e23a0be44c63492a009b6cc15349037e3ae766df1cc618869ae27f462",
+    "src/packet.mjs": "ac1ed06eb900b9d9a76228a5797014c761badb2412721c5ea7eac3cd23efb71a",
+    "src/workflow.mjs": "31485535f57e5de96c417f06545e3088c9e3598c0c047ce1742e50d82be1a433",
+    "src/journal.mjs": "4995b60abb1745ff7d12a48b6a0b06d72396661ce60d0b56bd4e53b9a289bc08",
+    "src/development.mjs": "df477790644b3bb7dce74eae0a336ad6481a5cb362c96989341073af5b990a7c",
+    "src/analysis.mjs": "36ea8ef09c64efc3628675db7a282c87b95daf2685b1c79569ddb045e087b39f",
+    "src/prediction-log.mjs": "bb79f2a98aa2177b93b6d107a99225e3c25b5f2311af27e6d39927d952c1a3d3",
+    "scripts/sportsctl.mjs": "8531f51a15ca46021f1b4dc43531b57662a342b53f6a7844e671c0e87978a89b"
+  },
+  "control_bundle_hash": "a94213c333059e5316d0884e3cb7d81d528774af03643911eae7418eeb2e4573",
+  "valid": true,
+  "checks": [
+    {
+      "id": "RUNTIME-FILES-001",
+      "status": "PASS",
+      "detail": "29 required files exist"
+    },
+    {
+      "id": "RUNTIME-CONTROLS-001",
+      "status": "PASS",
+      "detail": "machine controls parse"
+    },
+    {
+      "id": "RUNTIME-RELEASE-001",
+      "status": "PASS",
+      "detail": "SUSPENDED; active=0"
+    },
+    {
+      "id": "RUNTIME-COVERAGE-001",
+      "status": "PASS",
+      "detail": "16 rows; active=0"
+    },
+    {
+      "id": "RUNTIME-MODEL-REGISTRY-001",
+      "status": "PASS",
+      "detail": "15 development models join"
+    },
+    {
+      "id": "RUNTIME-SOURCE-REGISTRY-001",
+      "status": "PASS",
+      "detail": "sources=38; duplicate_ids=0; missing_sports=none"
+    },
+    {
+      "id": "RUNTIME-CONTROL-JOINS-001",
+      "status": "PASS",
+      "detail": "release/coverage/model/contract/source/test joins reconcile"
+    },
+    {
+      "id": "RUNTIME-SCORING-001",
+      "status": "PASS",
+      "detail": "canonical Brier/log-loss/EV fixtures"
+    },
+    {
+      "id": "RUNTIME-ANALYSIS-MODELS-001",
+      "status": "PASS",
+      "detail": "active_analysis_only=5; numeric_forecast_authorized=false"
+    },
+    {
+      "id": "RUNTIME-JOURNAL-001",
+      "status": "PASS",
+      "detail": "records=4; head=830a1712869bdd25c8423c16cc662e5487a9ae041a60afc29fddc594e7cb265d"
+    },
+    {
+      "id": "POWERSHELL-STATIC-001",
+      "status": "PASS",
+      "detail": "static specification validator passed"
+    },
+    {
+      "id": "RUNTIME-TEST-SUITE-001",
+      "status": "PASS",
+      "detail": "implemented Node tests passed; this is not a claim that the full acceptance matrix is covered"
+    }
+  ]
+}
