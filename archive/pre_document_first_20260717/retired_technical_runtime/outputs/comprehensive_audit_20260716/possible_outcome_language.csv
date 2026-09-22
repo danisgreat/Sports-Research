@@ -1,0 +1,43 @@
+﻿card_id,row,field,value
+CRIC-20260617-BAN-AUS-PARLAY,146,projection_band,Bangladesh 5-7 wickets lost most likely
+KBO-20260617-LG-KIA,151,option,Combined Final Total Under 10.5 runs
+KBO-20260617-LG-KIA,153,option,Combined Final Total Over 10.5 runs
+CRIC-20260617-INDW-NEDW,154,frequency_count_base,India stronger full-strength core; beat Pakistan by 64; Netherlands debutant side lost to Bangladesh
+CRIC-20260617-INDW-NEDW,155,projection_band,Netherlands 5-8 wickets lost
+MLB-20260618-NYM-CIN,161,option,Combined Final Total Over 9.0 runs
+MLB-20260618-NYM-CIN,162,option,Combined Final Total Under 9.0 runs
+MLB-20260618-NYM-CIN-PARLAY,164,option,Combined Final Total Over 6.5 runs
+MLB-20260618-NYM-CIN-PARLAY,165,option,Combined Final Total Under 12.5 runs
+SOC-20260618-POR-DRC,170,option,Combined Final Total Under 4.5 goals
+MLB-20260618-TB-LAD,172,option,Combined Final Total Under 9.5 runs
+CRIC-20260617-ENGW-IREW,177,projection_band,Ireland 5-9 wickets lost
+SOC-WC2026-20260619-CZE-RSA,204,option,Combined Final Total Under 4.5 goals
+BKB-NZNBL-20260620-AKL-HBH,235,frequency_count_base,"NZNBL preview, RealGM standings, Sofascore final/quarter table, prior H2H"
+BKB-NZNBL-20260620-AKL-HBH,236,frequency_count_base,"NZNBL preview, RealGM standings, Sofascore final/quarter table, prior H2H"
+BKB-NZNBL-20260620-AKL-HBH,237,frequency_count_base,"NZNBL preview, RealGM standings, Sofascore final/quarter table, prior H2H"
+BKB-NZNBL-20260620-AKL-HBH,238,frequency_count_base,"NZNBL preview, RealGM standings, Sofascore final/quarter table, prior H2H"
+BKB-NZNBL-20260620-AKL-HBH,239,frequency_count_base,"NZNBL preview, RealGM standings, Sofascore final/quarter table, prior H2H"
+BKB-NZNBL-20260620-AKL-HBH,240,frequency_count_base,"NZNBL preview, RealGM standings, Sofascore final/quarter table, prior H2H"
+BASE-NPB-20260620-SEI-ORI,241,frequency_count_base,"Pacific League preview, NPB standings/stats, Sofascore final/inning line"
+BASE-NPB-20260620-SEI-ORI,242,frequency_count_base,"Pacific League preview, NPB standings/stats, Sofascore final/inning line"
+BASE-NPB-20260620-SEI-ORI,243,frequency_count_base,"Pacific League preview, NPB standings/stats, Sofascore final/inning line"
+BASE-NPB-20260620-SEI-ORI,244,frequency_count_base,"Pacific League preview, NPB standings/stats, Sofascore final/inning line"
+SOC-WC2026-20260620-TUR-PAR,245,frequency_count_base,"Guardian confirmed teams, ESPN/FOX final and play-by-play, tournament opener context"
+SOC-WC2026-20260620-TUR-PAR,246,frequency_count_base,"Guardian confirmed teams, ESPN/FOX final and play-by-play, tournament opener context"
+SOC-WC2026-20260620-TUR-PAR,247,frequency_count_base,"Guardian confirmed teams, ESPN/FOX final and play-by-play, tournament opener context"
+SOC-WC2026-20260620-TUR-PAR,248,frequency_count_base,"Guardian confirmed teams, ESPN/FOX final and play-by-play, tournament opener context"
+KBO-20260621-KIA-KT,289,frequency_count_base,MyKBO final settlement sweep 2026-06-22
+KBO-20260621-KIA-KT,290,frequency_count_base,MyKBO final settlement sweep 2026-06-22
+KBO-20260621-KIA-KT,291,frequency_count_base,MyKBO final settlement sweep 2026-06-22
+KBO-20260621-KIA-KT,292,frequency_count_base,MyKBO final settlement sweep 2026-06-22
+WNBA-20260622-WAS-MIN,297,frequency_count_base,ESPN final settlement 2026-06-22
+WNBA-20260622-WAS-MIN,298,frequency_count_base,ESPN final settlement 2026-06-22
+WNBA-20260622-WAS-MIN,299,frequency_count_base,ESPN final settlement 2026-06-22
+WNBA-20260622-WAS-MIN,300,frequency_count_base,ESPN final settlement 2026-06-22
+WNBA-20260622-WAS-MIN,301,frequency_count_base,ESPN final settlement 2026-06-22
+WNBA-20260622-WAS-MIN,302,frequency_count_base,ESPN final settlement 2026-06-22
+MLB-20260622-NYM-PHI,303,frequency_count_base,MLB StatsAPI final settlement 2026-06-22
+MLB-20260622-NYM-PHI,304,frequency_count_base,MLB StatsAPI final settlement 2026-06-22
+MLB-20260622-NYM-PHI,305,frequency_count_base,MLB StatsAPI final settlement 2026-06-22
+MLB-20260622-NYM-PHI,306,frequency_count_base,MLB StatsAPI final settlement 2026-06-22
+BASK-ISR-20260623-GAL-NET,308,frequency_count_base,Galil won all three prior H2Hs

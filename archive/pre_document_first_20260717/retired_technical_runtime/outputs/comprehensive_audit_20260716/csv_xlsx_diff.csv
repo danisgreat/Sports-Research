@@ -1,0 +1,13 @@
+﻿kind,card_id,rank,option,csv_row,xlsx_row
+xlsx_only,MLB-20260713-HOU-TEX,1,Astros +1.5,,444
+xlsx_only,MLB-20260713-HOU-TEX,2,Combined Total Over 9.0,,445
+xlsx_only,MLB-20260713-HOU-TEX,3,Rangers ML,,446
+xlsx_only,MLB-20260713-HOU-TEX,4,Combined Total Under 9.0,,447
+xlsx_only,MLB-20260713-MIL-PIT,1,Pirates +1.5,,440
+xlsx_only,MLB-20260713-MIL-PIT,2,Brewers +1.5,,441
+xlsx_only,MLB-20260713-MIL-PIT,3,Combined Total Under 8.5,,442
+xlsx_only,MLB-20260713-MIL-PIT,4,Combined Total Over 8.5,,443
+xlsx_only,WNBA-20260713-SEA-WAS-LIVE,1,Q1 Over 41.0,,448
+xlsx_only,WNBA-20260713-SEA-WAS-LIVE,2,Full Game Under 162.5,,449
+xlsx_only,WNBA-20260713-SEA-WAS-LIVE,3,First Half Under 83.5,,450
+xlsx_only,WNBA-20260713-SEA-WAS-LIVE,4,First Half Over 83.5,,451

@@ -1,0 +1,80 @@
+{
+  "schema_version": "SPORTS_DECISION_PACKET_V1",
+  "request": {
+    "request_id": "REQ-a22b3aad-0f53-4871-8d0a-31fa2252c3a7",
+    "primary_question_id": "QUESTION-ce068c8d-818b-459a-af6f-da35d61522e2",
+    "primary_question_text": "Is the live full-game total Over 19.5 supportable at the verified eighth-inning state?",
+    "raw_request_text": "Live check, Mexico City at Quintana Roo: how likely is Over 19.5 total runs? Be honest.",
+    "contract_status": "UNRESOLVED",
+    "request_timestamp_utc": "2026-07-17T03:25:39.997Z",
+    "forecast_series_id": "BASEBALL-LMB-20260716-DIABLOS-TIGRES-G3",
+    "event_id": "SPORTRADAR-67361634",
+    "sport_family": "Baseball",
+    "competition_id": "LMB",
+    "season_id": "2026",
+    "event_name": "Diablos Rojos del Mexico at Tigres de Quintana Roo, Game 3",
+    "venue": "Estadio Beto Avila, Cancun",
+    "event_start_utc": "2026-07-17T00:30:00.000Z",
+    "ruleset_id": null,
+    "market_id": "DIABLOS_TIGRES_LIVE_TOTAL_OVER_19_5",
+    "market_family": "live full-game combined total",
+    "selection": "OVER",
+    "line": 19.5,
+    "settlement_convention_id": null,
+    "analysis_mode": "RESEARCH_ONLY",
+    "forecast_state": "LIVE",
+    "state_bucket_id": null,
+    "horizon_bucket_id": null,
+    "selection_mode": "USER_SUPPLIED",
+    "candidate_universe_id": null,
+    "selection_policy_version": null,
+    "user_cancelled": false,
+    "created_by": "Codex sports research"
+  },
+  "decision_snapshot": {
+    "snapshot_id": "SNAP-009b9c86-4f5e-465c-8134-28b921673835",
+    "request_id": "REQ-a22b3aad-0f53-4871-8d0a-31fa2252c3a7",
+    "forecast_series_id": "BASEBALL-LMB-20260716-DIABLOS-TIGRES-G3",
+    "parent_snapshot_id": "SNAP-eb879e9f-98e3-4ddb-8909-38d90b2e934f",
+    "snapshot_sequence": 2,
+    "frozen_at_utc": "2026-07-17T03:25:39.997Z",
+    "data_cutoff_utc": "2026-07-17T03:24:47.216Z",
+    "decision": "PASS",
+    "pass_reason": "CONTRACT_UNRESOLVED",
+    "watch_reason": null,
+    "watch_expires_utc": null,
+    "price_evaluation_status": "NOT_REQUESTED",
+    "data_quality_grade": "D",
+    "source_packet_id": null,
+    "candidate_universe_id": null,
+    "missing_prerequisites": [
+      "ruleset_id",
+      "settlement_convention_id",
+      "horizon_bucket_id"
+    ],
+    "primary_failed_gate": "GATE-CONTRACT-001",
+    "gate_failure_evidence": [
+      {
+        "gate_id": "GATE-CONTRACT-001",
+        "code": "CONTRACT_UNRESOLVED",
+        "detail": "ruleset_id; settlement_convention_id; horizon_bucket_id",
+        "evidence_refs": [
+          "request",
+          "coverage_registry",
+          "contract_registry"
+        ]
+      }
+    ],
+    "research_note": "At the frozen live cutoff, both the market page and its linked Sportradar match centre showed Diablos leading 13-5 in the eighth inning. The market feed showed two outs in the top of the eighth with Diablos batting, so 18 runs had scored and Over 19.5 required at least two more. Only two combined runs had scored from the fourth inning through the current eighth, indicating that scoring had cooled sharply after the first three innings. The displayed alternate-total prices were Over 19.5 at plus 160 and Under 19.5 at minus 225, with the buttons temporarily suspended during live play. Late bullpen and blowout volatility leave a route to two runs, but the observed state and market both favor the under branch. LMB totals are outside registered model coverage and exact settlement terms were unavailable, so this is a qualitative PASS rather than an issued numeric forecast. The immediately preceding record is the same still-live event and therefore was not settled or retrospectively graded.",
+    "snapshot_hash": "b634d2eaebf42a013a8621e045d001d8d709d3b7825081c3af7655b57770c4a7",
+    "created_by": "Codex sports research"
+  },
+  "candidate_universe": null,
+  "source_packet": null,
+  "live_state": null,
+  "prediction": null,
+  "forecast_distributions": [],
+  "linked_market_relations": [],
+  "uncertainty_components": [],
+  "price_snapshot": null
+}

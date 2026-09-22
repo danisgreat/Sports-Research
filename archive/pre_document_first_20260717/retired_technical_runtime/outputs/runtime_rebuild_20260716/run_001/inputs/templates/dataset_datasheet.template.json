@@ -1,0 +1,36 @@
+{
+  "datasheet_version": "SPORTS_DATASET_DATASHEET_V1",
+  "dataset_id": "REPLACE",
+  "dataset_version": "REPLACE",
+  "owner": "REPLACE",
+  "sport_family": "REPLACE_EXACT",
+  "competition_id": "REPLACE_EXACT",
+  "target_and_settlement_contracts": [],
+  "motivation_and_intended_uses": [],
+  "prohibited_uses": [],
+  "source_map_id": "REPLACE",
+  "provenance_and_licence": [],
+  "collection_process": {
+    "start_utc": "REPLACE",
+    "end_utc": "REPLACE",
+    "point_in_time_semantics": "REPLACE",
+    "latency_replay": "REPLACE",
+    "revision_policy": "REPLACE"
+  },
+  "composition": {
+    "event_count": null,
+    "participant_count": null,
+    "seasons": [],
+    "included_scopes": [],
+    "excluded_scopes": []
+  },
+  "feature_definitions_and_units": [],
+  "missingness_by_feature_and_period": [],
+  "provider_or_definition_changes": [],
+  "label_construction": "REPLACE",
+  "known_leakage_risks_and_tests": [],
+  "quality_and_representativeness_limits": [],
+  "retention_and_access_controls": "REPLACE",
+  "maintenance_and_incident_history": [],
+  "artifact_manifest_hash": "REPLACE_SHA256"
+}

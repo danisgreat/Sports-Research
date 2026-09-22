@@ -1,0 +1,79 @@
+{
+  "schema_version": "SPORTS_DECISION_PACKET_V1",
+  "request": {
+    "request_id": "REQ-d4530a0b-23ac-48be-a4ad-071c335011be",
+    "primary_question_id": "QUESTION-6a330a70-387f-464a-910d-e838389dc71d",
+    "primary_question_text": "Which supplied handicap and total outcomes are supportable for Bradford Bulls v Wakefield Trinity, and which team is the qualitative winner lean?",
+    "raw_request_text": "Upcoming Rugby Game: Bradford bulls vs Wakefield Trophy. Provide the best four picks from Bulls +18.0, Trinity -6, combined total Over 42.0 and combined total Under 42.0, plus a potential game winner; research the previous log, ignore any previous game still live, and be honest without hallucinations.",
+    "contract_status": "UNRESOLVED",
+    "request_timestamp_utc": "2026-07-16T18:58:07.283Z",
+    "forecast_series_id": "RUGBY-LEAGUE-20260716-BRADFORD-WAKEFIELD-R19",
+    "event_id": "SUPERLEAGUE-44034",
+    "sport_family": "Rugby league",
+    "competition_id": "SUPER_LEAGUE",
+    "season_id": "2026",
+    "event_name": "Bradford Bulls v Wakefield Trinity, Round 19",
+    "venue": "Bartercard Odsal Stadium, Bradford",
+    "event_start_utc": "2026-07-16T19:00:00.000Z",
+    "ruleset_id": null,
+    "market_id": "BRADFORD_WAKEFIELD_HANDICAPS_AND_TOTAL_42",
+    "market_family": "match handicap, combined total and match winner",
+    "selection": null,
+    "line": null,
+    "settlement_convention_id": null,
+    "analysis_mode": "RESEARCH_ONLY",
+    "forecast_state": "PREGAME_PROJECTED",
+    "state_bucket_id": null,
+    "horizon_bucket_id": "PREGAME_LT_15M",
+    "selection_mode": "USER_SUPPLIED",
+    "candidate_universe_id": null,
+    "selection_policy_version": null,
+    "user_cancelled": false,
+    "created_by": "Codex sports research"
+  },
+  "decision_snapshot": {
+    "snapshot_id": "SNAP-301a5471-f9b6-4917-a72e-a7b607b53649",
+    "request_id": "REQ-d4530a0b-23ac-48be-a4ad-071c335011be",
+    "forecast_series_id": "RUGBY-LEAGUE-20260716-BRADFORD-WAKEFIELD-R19",
+    "parent_snapshot_id": null,
+    "snapshot_sequence": 1,
+    "frozen_at_utc": "2026-07-16T18:58:07.283Z",
+    "data_cutoff_utc": "2026-07-16T18:53:14.674Z",
+    "decision": "PASS",
+    "pass_reason": "CONTRACT_UNRESOLVED",
+    "watch_reason": null,
+    "watch_expires_utc": null,
+    "price_evaluation_status": "NOT_REQUESTED",
+    "data_quality_grade": "D",
+    "source_packet_id": null,
+    "candidate_universe_id": null,
+    "missing_prerequisites": [
+      "ruleset_id",
+      "settlement_convention_id"
+    ],
+    "primary_failed_gate": "GATE-CONTRACT-001",
+    "gate_failure_evidence": [
+      {
+        "gate_id": "GATE-CONTRACT-001",
+        "code": "CONTRACT_UNRESOLVED",
+        "detail": "ruleset_id; settlement_convention_id",
+        "evidence_refs": [
+          "request",
+          "coverage_registry",
+          "contract_registry"
+        ]
+      }
+    ],
+    "research_note": "The event was identified as Bradford Bulls v Wakefield Trinity in Super League Round 19, scheduled for 20:00 BST at Odsal. Official Super League material showed Wakefield in stronger current form and recorded a 52-12 Wakefield win in the reverse fixture. Across the six form results displayed for each team, eleven of twelve match totals exceeded 42 points. Round 18 season data listed Wakefield at 457 points for and 308 against through 17 matches, and Bradford at 312 for and 507 against. The supplied total outcomes are complementary branches, while Bulls plus 18 and Trinity minus 6 overlap when Wakefield wins by 7 to 17 points. Exact bookmaker settlement rules and a registered Super League model contract were unavailable. The prior West Indies v New Zealand fourth-ODI research record remains upcoming, and the third ODI was live, so neither was graded. This is a non-quantitative research record and not a prediction-ledger ISSUE.",
+    "snapshot_hash": "ebb9d7f9ca3e465cc24efa3ecc18c888c69daec3d0ea36e9a89457217ff97516",
+    "created_by": "Codex sports research"
+  },
+  "candidate_universe": null,
+  "source_packet": null,
+  "live_state": null,
+  "prediction": null,
+  "forecast_distributions": [],
+  "linked_market_relations": [],
+  "uncertainty_components": [],
+  "price_snapshot": null
+}

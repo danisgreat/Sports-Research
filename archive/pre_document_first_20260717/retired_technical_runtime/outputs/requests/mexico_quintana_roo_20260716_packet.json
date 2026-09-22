@@ -1,0 +1,80 @@
+{
+  "schema_version": "SPORTS_DECISION_PACKET_V1",
+  "request": {
+    "request_id": "REQ-042a3fab-fd17-4fc1-aa15-84022facd354",
+    "primary_question_id": "QUESTION-0b5a279f-e039-4160-a8d1-bf1a3466b071",
+    "primary_question_text": "Which supplied live run-line and total outcomes are supportable for Diablos Rojos del Mexico at Tigres de Quintana Roo, and which team is the qualitative winner lean?",
+    "raw_request_text": "Live Baseball Game: Mexico City at Quintana Roo. Assess Mexico City -8.5, Quintana Roo +7.5, combined total Over 17.5 and Under 18.5, add a potential winner, research the previous log, ignore a previous game if it remains live, and be honest without hallucinations.",
+    "contract_status": "UNRESOLVED",
+    "request_timestamp_utc": "2026-07-17T01:50:13.385Z",
+    "forecast_series_id": "BASEBALL-LMB-20260716-DIABLOS-TIGRES-G3",
+    "event_id": "CALIENTE-32265114",
+    "sport_family": "Baseball",
+    "competition_id": "LMB",
+    "season_id": "2026",
+    "event_name": "Diablos Rojos del Mexico at Tigres de Quintana Roo, Game 3",
+    "venue": "Estadio Beto Avila, Cancun",
+    "event_start_utc": "2026-07-17T00:30:00.000Z",
+    "ruleset_id": null,
+    "market_id": "DIABLOS_TIGRES_LIVE_ALT_RUN_LINES_AND_TOTALS",
+    "market_family": "live alternate run lines, live combined totals and winner",
+    "selection": null,
+    "line": null,
+    "settlement_convention_id": null,
+    "analysis_mode": "RESEARCH_ONLY",
+    "forecast_state": "LIVE",
+    "state_bucket_id": null,
+    "horizon_bucket_id": null,
+    "selection_mode": "USER_SUPPLIED",
+    "candidate_universe_id": null,
+    "selection_policy_version": null,
+    "user_cancelled": false,
+    "created_by": "Codex sports research"
+  },
+  "decision_snapshot": {
+    "snapshot_id": "SNAP-eb879e9f-98e3-4ddb-8909-38d90b2e934f",
+    "request_id": "REQ-042a3fab-fd17-4fc1-aa15-84022facd354",
+    "forecast_series_id": "BASEBALL-LMB-20260716-DIABLOS-TIGRES-G3",
+    "parent_snapshot_id": null,
+    "snapshot_sequence": 1,
+    "frozen_at_utc": "2026-07-17T01:50:13.385Z",
+    "data_cutoff_utc": "2026-07-17T01:49:32.612Z",
+    "decision": "PASS",
+    "pass_reason": "CONTRACT_UNRESOLVED",
+    "watch_reason": null,
+    "watch_expires_utc": null,
+    "price_evaluation_status": "NOT_REQUESTED",
+    "data_quality_grade": "D",
+    "source_packet_id": null,
+    "candidate_universe_id": null,
+    "missing_prerequisites": [
+      "ruleset_id",
+      "settlement_convention_id",
+      "horizon_bucket_id"
+    ],
+    "primary_failed_gate": "GATE-CONTRACT-001",
+    "gate_failure_evidence": [
+      {
+        "gate_id": "GATE-CONTRACT-001",
+        "code": "CONTRACT_UNRESOLVED",
+        "detail": "ruleset_id; settlement_convention_id; horizon_bucket_id",
+        "evidence_refs": [
+          "request",
+          "coverage_registry",
+          "contract_registry"
+        ]
+      }
+    ],
+    "research_note": "The exact live market feed showed Diablos Rojos del Mexico leading Tigres de Quintana Roo 12-3 at the middle of the third inning, with 15 runs already scored and Tigres due to bat. The same feed had moved its main live run line to Diablos minus 9.5 and its main total to 20.5, so the user-supplied minus 8.5, plus 7.5, 17.5 and 18.5 lines were no longer the displayed main market and require availability confirmation. Over 17.5 needed at least three additional runs, while Under 18.5 allowed no more than three; both could settle as wins only on an 18-run final. Diablos minus 8.5 required a final margin of at least nine and Tigres plus 7.5 required a margin of no more than seven, leaving an eight-run margin where both supplied run lines lose. Official schedule and completed-game records confirmed the matchup and that Diablos won the first two games of the series 3-1 and 6-0. The previous Bradford Bulls v Wakefield Trinity record was still live and was not graded. LMB live markets are outside the registered baseball model coverage, and the exact settlement rules for the supplied lines were unavailable. This is a qualitative research record and not a prediction-ledger ISSUE.",
+    "snapshot_hash": "68ba946acb862165907188dfdc85f4fae626d06d5bcd2799a4adac573b963644",
+    "created_by": "Codex sports research"
+  },
+  "candidate_universe": null,
+  "source_packet": null,
+  "live_state": null,
+  "prediction": null,
+  "forecast_distributions": [],
+  "linked_market_relations": [],
+  "uncertainty_components": [],
+  "price_snapshot": null
+}

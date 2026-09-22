@@ -1,9 +1,36 @@
+## 2026-09-17(c) — current audit corrections
+
+This correction supersedes earlier aggregate and period-bound claims without changing issued probabilities, ranks or contracts. All existing records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. See [the implementation ledger](AUDIT_IMPLEMENTATION_2026-09-17.md) and [scoring specification](SCORING_AND_VALIDATION.md).
+
+**Score arithmetic:** P-344's four Brier cells sum to 1.1337, mean **0.283425**, not 0.3334. Recomputed from canonical rows and latest documented settlements: P-333–P-344 **39 rows, 0.2601307692**; through P-344 **72 rows, 0.2408763889**; through P-371 **177 rows, 0.2423966102**; through P-423 **373 rows, 0.2341018767**; through P-437 **425 rows, 0.2286134118**; through P-451 **477 rows, 273 W/204 L, 0.2265475891**. These are current cumulative-by-ID reconstructions, not claims about what was settled at each historical snapshot date. PRIMARY_SCORED remains **136 rows/33 cards, 71 W/65 L, 0.246825**. Older approximate aggregates are superseded by this row-derived correction. Legacy binary scores retain their original conditioning defect and are labelled LEGACY_MIXED_DIAGNOSTIC; corrected W/P/L and non-push measures are separate.
+
+**Period correction:** P-255-C05 and P-256-C05 are **UNRESOLVED_PERIOD**, not demonstrated research wins. Whole-match corners of 24 and 15 do not establish regulation Over 8.5: losing splits require 16+ and 7+ extra-period corners respectively, and no recovered evidence excludes them. Reopen the existing TMP-AUDIT-20260912-03 and -04 handles. They remain separate documentary/period follow-ups, bringing that queue back to **5**; the primary queue stays **23**. Final scores and other rows remain as recorded. Original Part-1 custody is preserved; Appendix A in Part 4 carries the evidence receipt and correction pointer. No new ID or probability is created.
+
+**Validation correction:** C-OU-GEOMETRY's P-424–P-437 and P-438–P-451 cohorts are historical development observations, with **zero verified prospective cards** until manifest/issue/outcome-time/control-version joins are established. In particular P-425/P-426/P-427/P-429 predate the 16 September manifest. Import time is not issue time. No universal MLB run-line/push ceiling, NFL variance floor, automatic phase preference or Over/Under bias is promoted. Current METHOD v4.1 governs new forecasts only.
+
 # Combined prediction log
 
-Status: **ACTIVE CANONICAL LOG — FUTURE FORECASTS APPEND HERE**
-Combined: **2026-08-30**
-Current method: **MDS-2026.08.30-v2.7 — qualitative champion; late-import, phase-transition, allocation/robustness and termination-order process patch only**
-Component order: `prediction logs/PREDICTION_LOG.md` → `prediction logs/PREDICTION_LOG_2.md` → `prediction logs/PREDICTION_LOG_3.md` → `prediction logs/PREDICTION_LOG_4.md` → `prediction logs/PREDICTION_LOG_6.md` *(P-103–P-123; historical filename)* → `prediction logs/PREDICTION_LOG_5_SETTLED_2026-08-29.md` *(P-124–P-136)* → `prediction logs/PREDICTION_MINI_LOG_3.md` *(canonical P-137–P-164 after alias reconciliation; issued labels preserved)* → `prediction logs/PREDICTION_MINI_LOG_4.md` *(P-165–P-186 supplied continuation plus independent audit)*
+> **2026-09-12 controlling correction:** All current combined-log material is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE under the current user request. Settlement preserves outcome evidence; it does not authorize a performance claim. The [2026-09-12 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md) and [probability/research corrections](audit_2026-09-12/rule_corrections.md) supersede conflicting older operational statements. Original issued records remain unchanged.
+
+
+> Historical policy block; superseded for current log use by the 2026-09-12 LEARNING_ONLY directive.
+
+<!-- USER FREEZE CONFIRMATION 2026-09-05 -->
+**User-confirmed pre-game eligibility:** the existing non-live cards were strictly frozen before play. They are now eligible for historical directional/ranking evaluation under their issued methods, including process failures. The September 5 ten-card v3.4 cohort remains **#1 4/10, #2 4/10, both top two 0/10, preferred O/U 3/10 events (4/12 distinct total/phase targets)**. These results now count in that historical record. Five games found live at first settlement check are pre-game forecasts awaiting settlement, not live-issued cards. Explicit live-issued historical views remain separate. [Policy](PERFORMANCE_ELIGIBILITY_POLICY.md) · [Every ID’s eligibility](PREGAME_ELIGIBILITY_REGISTER_2026-09-05.md).
+
+The earlier blanket non-performance-eligible/late-import classification is superseded by the user’s confirmation. Original source text and old audit statements are retained as history. This correction does not recreate independent timestamp evidence, change any original rank/result, or count already-observed games as tests of a later rule change.
+<!-- END USER FREEZE CONFIRMATION 2026-09-05 -->
+
+> Historical policy block; superseded for current log use by the 2026-09-12 LEARNING_ONLY directive.
+
+<!-- USER DIRECTIVE 2026-09-06 — SETTLEMENT-ONLY PERFORMANCE ELIGIBILITY -->
+**2026-09-06 controlling correction — settlement is the sole performance-eligibility gate.** The user directed that any log that has been settled counts for performance eligibility (`PERFORMANCE_ELIGIBILITY_POLICY.md` `EP-2026.09.06-v2`; `LEARNING_REGISTER.md` L-078). **This single note supersedes every `E1-Q-LATE_IMPORT`, "not performance-eligible", "not prospective performance evidence", "excluded from prospective ranking/model performance", and "clean prospective unit" exclusion-of-eligibility statement anywhere in this file below**, for every settled row across `P-001`–`P-271`. It is issued once here, at the top of the file, rather than as thousands of individual edits through a 70,000+ line closed archive — consistent with this repository's standing practice of appending a dated correction rather than rewriting history. Two things this note does **not** change: (1) the underlying **provenance facts** recorded throughout this file (which component first became locally demonstrable when, which cards had no independent pre-result timestamp, which SHA-256/hash a component carries) remain accurate historical records and are not deleted or edited; only the *eligibility conclusion* drawn from those facts is superseded; (2) the separate, still-governing numerical model pipeline (`NTS-2026.09.02-v0.3` Stage 0, `E1-P` shadow-probability cohort) is unaffected — settlement alone still does not supply model training/calibration/test data, which remains gated by its own frozen manifest process. Every descriptive ledger, rank-#1 record and "not prospective performance evidence" cohort tally recorded below (P-137–P-163, P-165–P-186, P-187–P-214, P-215–P-238, P-239–P-267, and every individually-tagged `E1-Q-LATE_IMPORT` card) is, from 2026-09-06, performance-eligible on its settled rows.
+<!-- END USER DIRECTIVE 2026-09-06 -->
+
+Status: **CLOSED — HISTORICAL ARCHIVE, P-001 THROUGH P-271. All new forecasts append to [`PREDICTION_LOG_COMBINED_2.md`](PREDICTION_LOG_COMBINED_2.md) instead, effective 2026-09-04.**
+Combined: **2026-09-02**; component chain and snapshot extended **2026-09-04**; closed to new forecasts **2026-09-04**
+Current method: **MDS-2026.09.04-v3.2 — SPORTS_ONLY / MARKET_BLIND qualitative champion; qualitative weights unchanged**
+Component order: `prediction logs/PREDICTION_LOG.md` → `prediction logs/PREDICTION_LOG_2.md` → `prediction logs/PREDICTION_LOG_3.md` → `prediction logs/PREDICTION_LOG_4.md` → `prediction logs/PREDICTION_LOG_6.md` *(P-103–P-123; historical filename)* → `prediction logs/PREDICTION_LOG_5_SETTLED_2026-08-29.md` *(P-124–P-136)* → `archive/mini_logs/PREDICTION_MINI_LOG_3.md` *(canonical P-137–P-164 after alias reconciliation; issued labels preserved)* → `archive/mini_logs/PREDICTION_MINI_LOG_4.md` *(P-165–P-186 supplied continuation plus independent audit)* → `archive/mini_logs/PREDICTION_MINI_LOG_5.md` *(P-187–P-214 supplied continuation plus independent audit)* → `archive/mini_logs/PREDICTION_MINI_LOG_6.md` *(P-215–P-216 supplied continuation plus independent audit)* → `archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md` *(P-217–P-238 plus corrective audit addendum; copied into this repo 2026-09-04 from a workspace-only Downloads path this snapshot previously cited — see the 2026-09-04 provenance note below)* → `archive/mini_logs/PREDICTION_MINI_LOG_7.md` *(P-239–P-248 supplied local running continuation plus its own 2026-09-02 settlement/retrospective cleanup)* → `archive/mini_logs/PREDICTION_MINI_LOG_8.md` *(raw P-241–P-267 local running continuation, copied into this repo 2026-09-04)* → `PREDICTION_LOG_COMBINED_P267_SETTLED_2026-09-03.md` *(controlling settlement/retrospective addendum for P-241–P-267, and the intake register for the new P-268–P-271 mini log; retained at repo root, not renamed, to preserve its own internal cross-references)* → `archive/mini_logs/PREDICTION_MINI_LOG_9_P268_P271_PENDING.md` *(raw P-268/P-270/P-271 cards awaiting settlement, P-269 already closed no-action; copied into this repo 2026-09-04, NOT YET audited into this snapshot)*
 
 ## Current controlling snapshot
 
@@ -11,23 +38,141 @@ This is the only queue and next-ID authority. The component snapshots retained b
 
 | Field | Current value |
 |---|---|
-| As of | 2026-08-30 Australia/Sydney independent settlement/source/provenance audit; P-164 and all P-165–P-186 events are verified or strongly corroborated FINAL |
-| Next canonical ID | `P-187` |
-| Open / live / pending settlement queue | **0 live events; 9 final-event follow-ups** — P-126 field-owner result/phase confirmation plus C06 corners unresolved; P-148-C02 unresolved; P-149-C02 provisional win; P-151-C02 strong provisional win; P-162 provisional final pending field owner; P-166 operator OT/action definition unknown; P-176-C05 unresolved; P-178-C05 unresolved; P-179-C05 provisional win |
-| Newly closed/reconciled in this audit | P-164 is officially final, Nippon-Ham 9–7 Lotte. P-165–P-186 are 22/22 final: 19 fully research-graded; P-176/P-178 each retain one unresolved corner row; P-179 retains one provisional corner win; P-166 remains research-geometry settled because operator terms were not supplied. |
-| Provenance/evaluation boundary | The P-137–P-164 boundary remains unchanged. The P-165–P-186 attachment first became locally demonstrable at 2026-08-30 07:56:05 Australia/Sydney, after every event was final, and no earlier section-inclusive immutable receipt was found. All P-165–P-186 views are `E1-Q-LATE_IMPORT`: descriptive settlement/process evidence only, excluded from prospective ranking/model performance, calibration and test completions. |
+| As of | 2026-09-04 Australia/Sydney — extends the 2026-09-02 audit (through P-238, then the P-239–P-248 framework review that issued `MDS-2026.09.02-v3.1`) with the already-completed P-241–P-267 settlement/retrospective (`PREDICTION_LOG_COMBINED_P267_SETTLED_2026-09-03.md`), the 2026-09-04 model/algorithm review (cricket pitch-report rung disclosure, streak persistence-versus-reversion audit, extension-endpoint rate environment, knockout pregame-baseline suppression) that issued method `MDS-2026.09.04-v3.2`, and a repo-provenance fix that copied three previously workspace-only mini-log components into `prediction logs/` |
+| Next canonical ID | `P-272` — **assigned in `PREDICTION_LOG_COMBINED_2.md` from this point on; this file no longer accepts new IDs** |
+| Open / live / pending settlement queue (at closure) | **0 events pending in P-268–P-271 — all now settled** (P-268, P-270, P-271 fully settled 2026-09-04 with live research; P-269 was already closed no-action). **10 inherited final-event follow-ups; 3 provisional China FA Cup watchlist events** remain genuinely open, all operator-definition or field-ownership gaps rather than pending scores: P-126, P-148-C02, P-149-C02, P-151-C02, P-166, P-176-C05, P-178-C05, P-179-C05, P-200, P-217-C01/C02 — see `PREDICTION_LOG_COMBINED_P267_SETTLED_2026-09-03.md` §11 for the current status of each; and P-233/P-234/P-235 China FA Cup watchlist, same file §11. These carry forward as evidence only; they do not block new forecasts in `PREDICTION_LOG_COMBINED_2.md`. |
+| Newly closed/reconciled 2026-09-03 (P-241–P-267) | All of P-241–P-243 and P-249–P-267 are now final and fully settled (P-249 closed no-action). Rank #1 record 13 WIN / 8 LOSS across 21 event cards; contract rows 46 WIN / 42 LOSS / 2 PUSH; potential winners 14 correct / 7 wrong. Full settlement tables, eight deep Rank-#1 retrospectives and general/sport-specific learning amendments are in `PREDICTION_LOG_COMBINED_P267_SETTLED_2026-09-03.md`; the durable process lessons from that review (CL-P267-01 through 08 and the sport-specific table) are promoted into RULES_GENERAL.md, RULES_BASEBALL.md, RULES_SOCCER.md and LEARNING_REGISTER.md L-061–L-064 on 2026-09-04 — see the general-learning entry immediately below this snapshot. **Descriptive only; not prospective performance evidence** (same E1-Q-LATE_IMPORT boundary as the cohorts below). |
+| Newly closed/reconciled 2026-09-02 (through P-248) | P-162 is now official-final settled; P-216 and P-218–P-232/P-236–P-238 are definite-final settled; P-233–P-235 are provisional pending a current CFA/club field-owner final; P-148-C02 and P-176-C05 move from unresolved to provisional. P-217 is final, with its phase rows settled, but C01/C02 remain formally unresolved. P-192 remains closed `EXCLUDED — NO ACTIONABLE V01`. In the P-239–P-248 import, P-239/P-240/P-244/P-245/P-247/P-248 are definite-final settled, P-246 is administratively closed with no forecast issued, and P-241/P-242/P-243 remain open (now settled — see the 2026-09-03 row above). |
+| Provenance/evaluation boundary | Earlier cohort boundaries remain unchanged. P-215/P-216 and P-217–P-238 are `E1-Q-LATE_IMPORT`: descriptive settlement/process evidence only, excluded from prospective ranking/model performance, calibration and test completions. The P-217–P-238 component was originally recorded as first locally demonstrable at 2026-09-02 08:55:54 Australia/Sydney with pre-edit SHA-256 `4F51DBF1036E3BF0685ED4BA71538A99DE5B115E195E50961ED5649A020D8DF5`; the copy now stored at `archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md` (2026-09-04) has SHA-256 `1627CEE3496C8ED45E75AA8C95E95DAE012BDD74A25CD4B90FF8D6AED1850A53` because the corrective audit addendum was appended to the source file after that original hash was taken, exactly as the P-124–P-136 and P-165–P-186 components below already document pre-audit-versus-post-audit hash pairs; both hashes are preserved here rather than silently reconciled. The P-239–P-248 component first became locally demonstrable at 2026-09-02 18:43:00 Australia/Sydney with SHA-256 `33ED14D3FDC78A8E91DBDB30FA88F0F4FB03B062FE1B416C7843E0DB3FC87C57`; its already-final events are `E1-Q-LATE_IMPORT` descriptive evidence only. The P-241–P-267 component (`archive/mini_logs/PREDICTION_MINI_LOG_8.md`) was first locally demonstrable at 2026-09-03 15:59 Australia/Sydney with SHA-256 `2D1C5EBFDA40D3AD804548A801E1A4986A25EABD7F2E4B2562DACDD5572FD9AB`, matching the hash already claimed by its settlement addendum; all its final events are therefore also `E1-Q-LATE_IMPORT`. The pending P-268/P-270/P-271 component was first locally demonstrable at 2026-09-03 22:19 Australia/Sydney with SHA-256 `EC4EFDCDAE16693F0511FE0FC1C6BB422E29B577A27A7858790811A1BF90F113`; because it is not yet settled, its eligibility as a clean prospective unit depends on whether its first-demonstrable time turns out to predate each event's own result once settlement research is actually performed. |
 | Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
 | Value state | `NO VALUE DETERMINABLE` unless a future validated model and complete same-time price/terms snapshot pass the value gate |
 | P-137–P-163 descriptive ledger | 58 WIN / 51 LOSS / 1 UNRESOLVED across 26 actionable late-import events; rank #1 16-10, rank #2 12-13-1, rank #3 12-14, rank #4 15-11, rank #5 3-3; potential winners 20-6. P-157 no-action and the duplicate P-149 storage block are excluded. **Not prospective performance evidence.** |
 | P-165–P-186 descriptive ledger | 54 WIN / 42 LOSS / 2 UNRESOLVED plus 1 PROVISIONAL WIN across 22 late-import final events; rank #1 14-8; potential winners 9-13. **Not prospective performance evidence; 99 contract rows are dependent within events.** |
-| Next formal process/ranking checkpoint | 60 new clean, demonstrably pre-result v2.7 event units; count events, not files |
-| Next sport-specific algorithm iteration target | 100 new clean, balanced v2.7 event units with useful per-sport/market/horizon slices and roughly 30 eligible units per priority slice before any sport-weight review |
+| P-187–P-214 descriptive ledger | 58 WIN / 60 LOSS across 27 actionable late-import final events; rank #1 12-15; potential winners 15-12. P-192 no-action is excluded. **Not prospective performance evidence; 118 contract rows are dependent within events.** |
+| P-215–P-238 descriptive ledger | 42 definite WIN / 40 definite LOSS / 10 PROVISIONAL WIN / 5 PROVISIONAL LOSS / 2 UNRESOLVED across 24 late-import events; rank #1 11 definite WIN / 9 definite LOSS / 2 provisional WIN / 1 provisional LOSS / 1 unresolved; potential winners 15 definite WIN / 6 definite LOSS / 1 provisional WIN / 2 provisional LOSS. **Not prospective performance evidence; 99 contract rows are dependent within events.** |
+| P-239–P-248 descriptive ledger | 12 WIN / 12 LOSS across 6 settled late-import actionable events (24 contract rows); rank #1 5 WIN / 1 LOSS; potential winners 4 WIN / 2 LOSS. P-246 is closed no-action; P-241/P-242/P-243 were unsettled and excluded **at 2026-09-02 issue time** — they settled 2026-09-03 and are carried in the next row rather than retrofitted into this one. **Not prospective performance evidence; the 24 rows are dependent within events.** |
+| P-241–P-243 and P-250–P-267 descriptive ledger (2026-09-03 settlement, from `PREDICTION_LOG_COMBINED_P267_SETTLED_2026-09-03.md`) | 46 WIN / 42 LOSS / 2 PUSH across 21 actionable events (P-249 closed no-action and excluded); rank #1 13 WIN / 8 LOSS; potential winners 14 correct / 7 wrong. Eight Rank-#1 losses received deep retrospectives (P-242, P-250, P-258, P-259, P-261, P-262, P-263, P-266); durable process lessons promoted 2026-09-04 into RULES_GENERAL.md §11.3E (G17.1), RULES_BASEBALL.md controls 22–23, RULES_SOCCER.md controls 28–29 and LEARNING_REGISTER.md L-061–L-064. **Not prospective performance evidence; contract rows are dependent within events.** |
+| Next formal process/ranking checkpoint | 60 new clean, demonstrably pre-result v2.9 event units; count events, not files |
+| Next sport-specific algorithm iteration target | 100 new clean, balanced v2.9 event units with useful per-sport/market/horizon slices and roughly 30 eligible units per priority slice before any sport-weight review |
 
-Before P-187, retry the final-event field-owner/provider items listed above. Leave unresolved definitions and provisional fields labelled exactly; do not delay a new forecast merely because a final niche field remains unresolved.
+Before P-249, retry the final-event field-owner/provider items listed above, and state-check the three open events P-241/P-242/P-243 before any new card. Leave unresolved definitions and provisional fields labelled exactly; do not delay a new forecast merely because a final niche field remains unresolved.
+
+## 2026-09-04 general learning — model/algorithm review (method MDS-2026.09.04-v3.2)
+
+Scope: a user-directed audit of two named blind spots (cricket pitch report; streak/"comeback" reversion) plus a general blind-spot sweep, source-quality check, and extraction of the durable lessons already sitting in the settled-but-unmerged `PREDICTION_LOG_COMBINED_P267_SETTLED_2026-09-03.md`. This entry is itself evidence and process record, not an active instruction; the operative rules are in the Markdown files it cites.
+
+### A. Cricket pitch report — confirmed gap, root cause, and fix
+
+The rules already contained a pitch/strip hard gate (RULES_CRICKET.md §2, effective 2026-09-01/02) and a six-rung conditions ladder (DATA_SOURCE_REGISTER.md §6A). The user was right that this was not visibly working. Direct audit of the two cricket cards actually issued after the ladder took effect — **P-252** (Belfast Wolves vs Edinburgh Castle Rockers, ETPL) and **P-262** (Trinbago Knight Riders vs Antigua & Barbuda Falcons, CPL), both in `archive/mini_logs/PREDICTION_MINI_LOG_8.md` — found that both recorded only a bottom-line conclusion (P-252: "strip-specific field-owner pitch wording was not recovered at toss time and remains `NOT AVAILABLE`," buried in the weather paragraph with no `STRIP STATUS` label at all; P-262: correctly labelled `STRIP STATUS: NOT FOUND AFTER SEARCH` but with no shown attempt). Neither card shows evidence that rungs 1–5 were actually queried, and neither tried the `"<venue>" curator`/`"<venue>" pitch report` query pattern the ladder already named. A same-day (2026-09-04) live re-verification confirmed rung 4 (a specialist match preview) genuinely returns specific, decision-relevant pitch content for major/franchise cricket — an ESPNcricinfo IPL 2026 preview, fetched through the `r.jina.ai` proxy because the direct route is still blocked (403), named the exact numbered strip in use, its two prior scores and the coach's stated expectation. A parallel search also surfaced a named, on-record curator quote about Queen's Park Oval specifically — P-262's own venue — that a `"<venue>" curator` search would have found. **Root cause: the ladder existed on paper but nothing forced a card to show its search; a bare status word was accepted as compliant.** Fix, effective 2026-09-04 (RULES_CRICKET.md §2, DATA_SOURCE_REGISTER.md §6A, LEARNING_REGISTER.md L-061): every cricket card must now reproduce the rung-by-rung attempt-and-result table before `STRIP STATUS: NOT FOUND AFTER SEARCH` may be recorded. For genuinely sparse fixtures like P-252/P-262, `NOT FOUND` after a *shown* attempt remains the honest, correct output — the defect was the missing search trail, not the negative result. New research lanes registered: `SRC-CRIC-ICC-PITCH-RATING` (ICC's official, four-tier, post-match venue rating — multi-year reputation context, not a live report) and `SRC-CRIC-CRICVIZ-PITCHVIZ` (citation-only; its numeric ratings are not a fetchable public feed). The existing fake/SEO "pitch report" exclusion list was expanded with nine named confirmed domains so a future session recognises them instantly.
+
+### B. Streak "comeback"/reversion blind spot — confirmed asymmetry, fix
+
+The existing trend-mechanism control (L-011/G17) required three named causes before a streak could be *extended* directionally, and its own rationale already named "automatic-regression fallacies" as a risk — but the control text never operationalised the reversal side. A team on a long Under run, or a side that just lost a game/leg, had no symmetric requirement before a "comeback," "bounce back," or "due for a change" lean could be taken. New gate **G17.1** (RULES_GENERAL.md §11.3E), effective 2026-09-04: for a streak used in *either* direction, record both the streak's own rate and the longer-run baseline rate, check whether the streak is actually statistically unremarkable against that baseline (most short streaks are, and carry no informational content either way), and require a named, currently active mechanism for a reversal exactly as G17 already requires one for a continuation. This explicitly folds in series/two-leg "response" narratives (a new mandatory series-state block, RULES_GENERAL.md §5) and gets sport-specific teeth in RULES_CRICKET.md control 24, RULES_BASEBALL.md controls 22–23 (including that MLB's automatic-runner extra-inning rule is its own scoring-rate environment, not the regulation rate) and RULES_SOCCER.md controls 28–29 (knockout fixtures need their pregame baseline shrunk toward knockout-fixture history *before* any goal happens, separately from the existing post-goal regime-switch control). Because G17.1 lives in the shared GFA-2 algorithm, it already governs every other sport file without a per-sport duplicate; AFL, basketball, gridiron, ice hockey, rugby league/union and tennis were not given their own worked examples in this pass for lack of a concrete evidenced case, and remain open for a future evidenced addition rather than a padded stub.
+
+### C. Other findings from this pass
+
+- **Orphaned settlement work.** A complete, well-sourced settlement/retrospective for P-241–P-267 (`PREDICTION_LOG_COMBINED_P267_SETTLED_2026-09-03.md`, dated 2026-09-03) existed at repo root but was never folded into this file's controlling snapshot, which still said `Next canonical ID: P-249`. Folded in above. Its own eight deep Rank-#1 retrospectives (P-242, P-250, P-258, P-259, P-261, P-262, P-263, P-266) are the direct evidence behind the new LEARNING_REGISTER.md L-063 (extra-innings own-rate environment, from P-266) and L-064 (knockout pregame baseline, from P-250); the remaining lessons in its §2/§3 (`CL-P267-01` through `08` and the sport-specific table) were checked against the active rule files and found either already covered (source-ownership/corner-conflict handling; motivation/elimination verification; outcome-versus-process grading) or folded into B above (series-state, "response" narratives) — see LEARNING_REGISTER.md's 2026-09-04 disposition table for the full accounting.
+- **Broken/orphaned file references.** README.md referenced a `COMPREHENSIVE_SYSTEM_OVERHAUL_2026-09-02.md` that does not exist anywhere in this repository, and named `archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md` as a stored component when the actual file existed only at an absolute Downloads path on this machine (i.e. outside version control, at risk of loss). UPCOMING_GAME_RESEARCH_GUIDE.md pointed to a non-existent `UPCOMING_GAME_PROMPT_TEMPLATE.md`. All three are corrected in place; the P-217–P-238, P-241–P-267 and pending P-268/P-270/P-271 components are now copied into `prediction logs/` (see the component-order line above) rather than living only in a personal Downloads folder.
+- **Small pre-existing inconsistencies fixed in passing:** RULES_BASEBALL.md's branch table listed nine `BB-B*` branches but its own prose said "all eight states" twice; DATA_SOURCE_REGISTER.md's header and LEARNING_REGISTER.md's numerical-candidates heading each still cited the retired `NTS-2026.08.25-v0.2` label, one place apiece, after the rest of the corpus had moved to `NTS-2026.09.02-v0.3`; MODEL_AND_DATA_SPEC.md's version-history table listed `v3.1` chronologically before its own foundation `v3.0` (both dated 2026-09-02) — reordered.
+- **What is explicitly not done in this pass:** P-268 (KBO), P-270 (NRL) and P-271 (AFL) are registered as pending in the snapshot above but were **not** state-checked or settled — this pass was scoped to model/algorithm review, not live-score research, and settling three games across three sports honestly requires its own fresh research pass. This is the clear next queue action.
+
+### D. What went right (retained, not just failures)
+
+Cross-checked against the same P-252/P-262 cricket cards and the wider P267 cohort: P-252 correctly applied the sparse-competition hierarchical-shrinkage control (RULES_CRICKET.md control 17) for an inaugural league with only two completed team matches, explicitly refusing to fabricate L5/L10 windows that cannot exist yet — this is the control working exactly as designed and is why the framework's existing sparse-data discipline needs no change here. P-267's own §8 register also documents several process wins worth keeping visible rather than only auditing losses: correct nine-inning/regulation-phase reads that were then lost only at an extension endpoint (P-260, P-266), correctly identified return-starter and command-traffic risk that the eventual result validated even where the final rank order still lost (P-257, P-259, P-261), and P-267 itself (Noskova) with no material process defect at all. These reinforce that the framework's process/outcome separation (AGENT_ROLE_AND_TASK.md §7) is doing real work: several of the "losses" tallied above are process-compliant forecasts that lost to a supported ordinary branch, not evidence the method is broken.
+
+## 2026-09-04 settlement — P-268–P-271, and closure of this log
+
+This section settles the three pending cards from `archive/mini_logs/PREDICTION_MINI_LOG_9_P268_P271_PENDING.md` using live research performed 2026-09-04, and closes this file as of `P-271`. **All future forecasts append to `PREDICTION_LOG_COMBINED_2.md` instead — see "Two-log restructuring" below.**
+
+### A. Critical process finding: method-version currency gap
+
+All three cards (P-268, P-270, P-271) declare `Method: MDS-2026.08.31-v2.9` / `General algorithm: GFA-1` in their own frozen headers. Their actual append times were **2026-09-03**, by which point this repository's active method had already moved to `MDS-2026.09.02-v3.0` and then `v3.1` (adding, among other things, `G30.1` winner/cushion reconciliation — directly relevant to P-271 below). This is not a hindsight-bias finding: the newer rules were genuinely available in this repository *before* these cards were frozen, not after. **The generating process was working from a stale/cached copy of the framework rather than re-reading the current documents.** This is graded and reasoned about below against the *older* `v2.9`/`GFA-1` rules each card actually declares (an honest, non-hindsight standard), but it is flagged here as the single most important operational finding of this pass, because the user's stated plan is to run a **separate, external chatbot** to generate future cards from these same documents. An external session with no persistent memory of this repository is exactly the failure mode that produced this gap. **Recommendation, implemented below in the two-log restructuring and the settlement-protocol section: every generating session — this one or an external one — must re-read the current RULES_GENERAL.md, the relevant RULES_<SPORT>.md and the active log's top snapshot at the start of its own work, every time, rather than relying on a remembered method version.**
+
+### B. P-268 — Hanwha Eagles @ KT Wiz, 2026 KBO League
+
+**Official final: KT Wiz 13, Hanwha Eagles 11** (Suwon, 2026-09-03). Line score: Hanwha 5-0-2-0-0-0-0-1-3 (11 R / 14 H / 1 E); KT 3-0-1-2-2-2-0-3 (13 R / 12 H / 1 E, no bottom 9th needed). Winning pitcher Oh Won-seok (KT); losing pitcher Kim Seo-hyeon (Hanwha); save Park Yeong-hyun (KT). Hanwha scored 5 in the top of the first, then the bullpen conceded 8 of the final 10 KT runs; the loss extended Hanwha's losing streak to nine, and the win returned KT to first place.
+
+**Source resolution (conflict found and resolved):** an initial Sofascore team-page fetch returned "KT Wiz 9, Hanwha Eagles 6" labelled as Hanwha's "previous match." That score is the **2026-09-02** game (mykbostats game ID 13897, filename `...-20260902`), not this one — a source-state mislabel (stale/cached "previous match" pointer), not a genuine value conflict. The correct 13-11 result is independently confirmed by three separate lineages: `mykbostats.com` game 13902 (fetched via the `r.jina.ai` proxy; direct fetch returned 403) with a complete official-style line score, and two independent Korean sports outlets (스포츠경향/Sports Khan, 머니투데이/Money Today), both dated 2026-09-03, both narratively consistent with each other and with the box score (An Hyun-min's two home runs among KT's damage, Go Young-pyo's early exit). This is a clean example of the §4 authority rule working as intended: the field-specific, dated, narratively-detailed sources controlled over a same-domain page that turned out to be showing the wrong date.
+
+| Contract | Settlement |
+|---|---|
+| `P-268-C01` KT Wiz -1.5 | **WIN** (won by 2) |
+| `P-268-C02` Hanwha Eagles +1.5 | **LOSS** |
+| `P-268-C03` Over 9.5 | **WIN** (24 combined) |
+| `P-268-C04` Under 9.5 | **LOSS** |
+
+Rank #1 (KT -1.5) **WIN**; Rank #2 (Over 9.5) **WIN**; Rank #3 (Under 9.5) LOSS; Rank #4 (Hanwha +1.5, correctly `AVOID`) LOSS. Potential winner **KT Wiz — WIN**.
+
+**Retrospective:** Preissue expectation versus actual driver — the card's own "High/separation" family (`shorter Wang outing + Hanwha transition failure`) is close to what happened, though the actual game additionally opened with Hanwha scoring 5 in the first before its bullpen (not the returning starter Wang specifically) gave the game away; the named vulnerability ("returning starter / possible shorter hook → middle relief → current run-prevention instability") was directionally correct about *where* the risk sat even though the first-inning burst came from the bat, not the arm. Not knowable pregame: the exact first-inning explosion and the extent of the bullpen collapse. Knowable and named pregame: the direction (KT separation, elevated total, Hanwha bullpen as the fault line). **Process grade: COMPLIANT** against the card's own declared `v2.9` rules — both top-ranked rows won, the correct mechanism was named, and Hanwha +1.5 was correctly kept out of the top two. **Boundary note:** Hanwha +1.5 missed by exactly one run (a 2-run final; a 1-run final would have pushed past this exact half-line onto the push side of an *integer* line, though this specific contract is already a half-line with no push) — recorded as boundary-sensitive, not as a process defect.
+
+### C. P-270 — Canterbury-Bankstown Bulldogs vs Brisbane Broncos, 2026 NRL Round 27
+
+**Official final: Brisbane Broncos 34, Canterbury-Bankstown Bulldogs 20** (Accor Stadium, 2026-09-03), halftime 10-10. Confirmed by two independent current reports (ABC News NRL score centre; Zerotackle match centre), in agreement on both the final and halftime score.
+
+| Contract | Settlement |
+|---|---|
+| `P-270-C01` Bulldogs -7.5 | **LOSS** (Bulldogs lost outright) |
+| `P-270-C02` Broncos +7.5 | **WIN** |
+| `P-270-C03` Over 52.5 | **WIN** (54 combined) |
+| `P-270-C04` Under 52.5 | **LOSS** |
+
+Rank #1 (Under 52.5) **LOSS**; Rank #2 (Bulldogs -7.5) **LOSS**; Rank #3 (Broncos +7.5) **WIN**; Rank #4 (Over 52.5) **WIN**. Potential winner **Bulldogs — LOSS** (Broncos won outright by 14).
+
+**Deep retrospective (both top-ranked rows lost — mandatory under RULES_GENERAL.md §9):**
+
+| Question | Finding |
+|---|---|
+| What went right? | Broncos +7.5 and Over 52.5 were both explicitly ranked (not omitted), and the card's own potential-winner section named an explicit Broncos "upset path" (`Haas/Carrigan control enough middle possession; Hunt/Mam create repeat attacking sets; Bulldogs repeat the attacking inefficiency`) that is a plausible description of what happened. |
+| What went wrong? | The card's own four-family score map (§K) enumerated four representative branches, and **every one of them had the Bulldogs finishing level or ahead** — an outright Broncos win by double digits was never modelled as a representative branch, only as a narrative "upset path" attached to the potential-winner section. This is short of the two-sided branch-completeness standard already active under `v2.9`: an opponent-win branch must appear in the *kill path* of the favoured side's contracts, not only as a footnote to the winner analysis. The reference-base-rate table downgraded Broncos +7.5 from a historically `HIGH` H2H band to `MEDIUM` on a "current regime weaker" adjustment, but the card's own H2H table already showed Brisbane won the most recent 2026 meeting 32-12 — evidence the downgrade may have been larger than the card's own most-recent, most-continuity-qualified data point supported. |
+| Actual mechanism | Not independently verified play-by-play in this pass (only the final and halftime score were sourced); the scoreline (10-10 at half, 34-20 final) shows Brisbane won the second half by 24-10, consistent with the "Broncos attack clicks" branch the card did name, just not as a leading scenario. |
+| Improvement | When an opponent's most-recent, highest-continuity H2H result already contradicts a proposed "current regime" downgrade, that specific data point requires its own explicit reconciliation sentence before the downgrade is applied — not just a general regime narrative. This is a candidate refinement of the existing regime-dominance audit (RULES_GENERAL.md §5), not a new control; see `C-PL13-ALL-REGIME-VS-RECENT-H2H` in LEARNING_REGISTER.md. |
+| Grade | Against `v2.9`: `PROCESS_DEFECT — MATCHUP_CONTEXT` (branch-completeness and regime-discount reconciliation), not `RANDOM_REALIZATION` — the opponent-win branch was foreseeable and partially named, just underweighted. |
+
+### D. P-271 — Fremantle vs Hawthorn, 2026 AFL First Qualifying Final
+
+**Official final: Hawthorn 10.12 (72) def. Fremantle 5.10 (40)** — a 32-point win, decided in regulation with no extra time (Optus Stadium, 2026-09-03). Quarter-by-quarter (cumulative): Q1 Fre 1.3(9)–Haw 4.4(28); Q2 Fre 1.4(10)–Haw 6.7(43); Q3 Fre 4.7(31)–Haw 9.10(64); Q4 (final) Fre 5.10(40)–Haw 10.12(72). Confirmed by AFL.com.au's own match report (headlined a "boilover") and ABC News. Fremantle's Brandon Walker suffered a third-quarter ankle injury unrelated to the contract settlement.
+
+| Contract | Settlement |
+|---|---|
+| `P-271-C01` Hawthorn +13.5 | **WIN** |
+| `P-271-C02` Fremantle -13.5 | **LOSS** |
+| `P-271-C03` Over 165.5 | **LOSS** (112 combined) |
+| `P-271-C04` Under 165.5 | **WIN** |
+
+Rank #1 (Hawthorn +13.5) **WIN**; Rank #2 (Over 165.5) LOSS; Rank #3 (Fremantle -13.5) LOSS; Rank #4 (Under 165.5) **WIN**. Potential winner **Fremantle — LOSS** (Hawthorn won outright — described by AFL's own headline as a "boilover"/upset over the minor premier).
+
+**Retrospective — a clean illustration of why `G30.1` exists:** Rank #1 itself was correct and the reasoning behind it was sound: the card's central qualitative branch (§L) already stated that "a margin around 6–13 points remains at least as credible as a clean 14+ separation" for Fremantle, which is precisely the reasoning that makes a cushion the correct top rank. What the card did not do is what `G30.1` (added 2026-09-02, one day before this card was frozen, and therefore already available) requires: explicitly reconcile that ranking Hawthorn's cushion first, on evidence this strong, necessarily gives weight to the **outright Hawthorn win** branch, not just the narrow-loss branch. The potential-winner section named an "upset path" for Hawthorn narratively but still defaulted to naming Fremantle — the stronger side by reputation and season record — as the winner LEAN, exactly the pre-`G30.1` failure pattern (`favourite-label default`) that motivated `L-060`. **Process grade: this is graded as a confirming case for an already-diagnosed pattern, not a new defect** — the card predates its own repository's adoption of the fix by one day only because it was generated from a stale method copy (see §A above), so no new lesson is promoted here; `G30.1` already covers it. Rank #1 winning while the potential winner lost is recorded as a reminder that these are two different, separately graded calls (AGENT_ROLE_AND_TASK.md §5): a correct top contract does not imply a correct winner call, and vice versa.
+
+### E. Updated ledger and closing state
+
+| Contract rows, P-268/P-270/P-271 | 6 WIN / 6 LOSS (12 rows across 3 events) |
+|---|---|
+| Rank #1 record | 2 WIN (P-268, P-271) / 1 LOSS (P-270) |
+| Potential winners | 1 correct (P-268) / 2 wrong (P-270, P-271) |
+| Combined with the 2026-09-03 P-241–P-267 cohort | Rank #1 now 15 WIN / 9 LOSS across 24 event cards; contract rows 52 WIN / 48 LOSS / 2 PUSH |
+
+These remain descriptive counts only — **not prospective performance evidence** (mixed method versions, `E1-Q-LATE_IMPORT` boundary, dependent rows within events, and P-268/P-270/P-271 specifically graded against a stale declared method version per §A).
+
+**This file (`PREDICTION_LOG_COMBINED.md`) is now closed to new forecasts as of P-271.** Status changed below and in the header. Historical component snapshots, the combination manifest, and every embedded component remain exactly as issued — this closure is administrative only, per RULES_GENERAL.md §0, and rewrites no issued decision.
+
+## Two-log restructuring — 2026-09-04
+
+> **2026-09-07 forward pointer (appended, not a rewrite):** the repository now maintains **three** combined logs. `PREDICTION_LOG_COMBINED_2.md` carries `P-272`–`P-332` and was closed on 2026-09-07 (its `P-318`–`P-332` settlement is §"2026-09-07(b)"; all inherited unsettled / incomplete follow-ups are in its lettered "Appendix — unsettled and incomplete logs"). **`PREDICTION_LOG_COMBINED_3.md` is the active canonical log** (`P-333` onward, opened empty, next ID `P-333`). The table below records the 2026-09-04 state and is not rewritten. See `README.md`, `METHOD.md` §10, and `PREDICTION_LOG_COMBINED_2.md`'s `## 2026-09-07(a)` / `## 2026-09-07(b)` closing sections.
+
+Per user directive: this repository now maintains **two** combined logs, matching how a large append-only ledger should actually be operated rather than left to grow without bound in one file.
+
+| Log | Role | Status |
+|---|---|---|
+| `PREDICTION_LOG_COMBINED.md` (this file) | **Historical archive.** Every forecast, settlement and retrospective from `P-001` through `P-271`. | **CLOSED — read/settle only, no new forecasts appended here from 2026-09-04 onward** |
+| [`PREDICTION_LOG_COMBINED_2.md`](PREDICTION_LOG_COMBINED_2.md) | **Active canonical log.** Every forecast from `P-272` onward, including batches supplied from an external generating session per the user's stated workflow. | **ACTIVE — all new forecasts append here, strictly in canonical-ID order** |
+
+`RULES_GENERAL.md` §0 already states the file-agnostic rule that governs this split without needing any rule-text change: *"README identifies the active prediction log; only that file's top Current controlling snapshot controls queue status and next ID."* README.md is updated (2026-09-04) to point to `PREDICTION_LOG_COMBINED_2.md` as that active file. This file remains fully authoritative evidence for D0/mechanism retrieval and for settling anything that somehow still references a `P-001`–`P-271` ID, but its own top snapshot no longer accepts new appends — a generating session (internal or external) must check README first, exactly as the rules already require, and it will now be pointed at the other file.
+
+**"Updated in order" going forward means:** every batch appended to `PREDICTION_LOG_COMBINED_2.md` must (1) reconcile against that file's own top snapshot's `Next canonical ID` before assigning any new ID, never renumbering or reusing one; (2) be appended as a contiguous block in ascending ID order, with no ID skipped without an explicit administrative note; (3) update that file's top snapshot in the same pass, not left stale as happened to this file between 2026-09-02 and 2026-09-04; and (4) settle every event that has actually finished before issuing the next new forecast, per the settlement protocol in the next section — never accumulate a growing backlog of "semi-settled" cards the way the P-268–P-271 batch did here.
 
 ## Combination manifest
 
-Components 1–4 retain their prior verification hashes. The previously imported P-103–P-123 component is stored as `prediction logs/PREDICTION_LOG_6.md` despite its historical component label. The earlier `PREDICTION_LOG_5.md` is retained as the pre-settlement P-124–P-136 comparison artifact. The P-137–P-164 and P-165–P-186 source continuations are each embedded once with independent audit appendices. Only the combined snapshot above controls current work.
+Components 1–4 retain their prior verification hashes. The previously imported P-103–P-123 component is stored as `prediction logs/PREDICTION_LOG_6.md` despite its historical component label. The earlier `PREDICTION_LOG_5.md` is retained as the pre-settlement P-124–P-136 comparison artifact. The P-137–P-164, P-165–P-186 and P-187–P-214 source continuations are each embedded once with independent audit appendices. Only the combined snapshot above controls current work.
 
 | Component | Bytes before combination | SHA-256 before combination |
 |---|---:|---|
@@ -41,16 +186,31 @@ Components 1–4 retain their prior verification hashes. The previously imported
 | supplied P-124–P-136 settled/restored source | 301,747 | `E6C3BB8E926DB9A2D0A25F271BDFD37FA4DABECAC238BCE991009C3EF9DC2835` |
 | audited workspace P-124–P-136 copy | 319,344 | `071430893879B8AE5AE1AAF5BF020B47048CBB63CE8D3E5461795EE4DC575C82` |
 | supplied P-148–P-164 tail | 264,551 | `95A537C9036348D1C7E9A78C6C4BA5F72F0DC7B9FD3747B069D5B191A1F691E8` |
-| `prediction logs/PREDICTION_MINI_LOG_3.md` before independent audit | 555,646 | `6F33A478E15B59BF709D29929B2168A27028A5AF1CC2D4C1F4AFB20C86DE339B` |
+| `archive/mini_logs/PREDICTION_MINI_LOG_3.md` before independent audit | 555,646 | `6F33A478E15B59BF709D29929B2168A27028A5AF1CC2D4C1F4AFB20C86DE339B` |
 | audited workspace P-137–P-164 component | 588,207 | `8F0ED6A7EFA92C6A385F00818340237828CA41DAE6B75C3E6F73DD8D2B71726A` |
 | supplied P-165–P-186 source | 281,632 | `AD9F6BF27F891257536FE81D5B295017843B4D2FFE35D11371B038562A270FE4` |
 | audited workspace P-165–P-186 component | 298,402 | `CF7F5817E4D66245165BC2DD07F3700D90B541ED3466C0FF59B9019B37069085` |
+| supplied P-187–P-214 source | 256,444 | `906186D4094D29E33799130CCA619621F088095AF19BCA2489DA2677DF6F1EB7` |
+| audited workspace P-187–P-214 component | 279,333 | `69D534F788E7ED91F0693D3E95D2C9252E2C04CC03FB655A2965FDAC555A6ACA` |
+| supplied P-239–P-248 running continuation | 224,074 | `33ED14D3FDC78A8E91DBDB30FA88F0F4FB03B062FE1B416C7843E0DB3FC87C57` |
+| `archive/mini_logs/PREDICTION_MINI_LOG_7.md` stored copy | 224,074 | `33ED14D3FDC78A8E91DBDB30FA88F0F4FB03B062FE1B416C7843E0DB3FC87C57` |
+| Original P-217–P-238 local running continuation (pre-audit, as first cited by this snapshot) | not locally held | `4F51DBF1036E3BF0685ED4BA71538A99DE5B115E195E50961ED5649A020D8DF5` |
+| `archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md` stored copy (post-audit; copied into this repo 2026-09-04 from the workspace path this snapshot previously cited) | 338,520 | `1627CEE3496C8ED45E75AA8C95E95DAE012BDD74A25CD4B90FF8D6AED1850A53` |
+| `archive/mini_logs/PREDICTION_MINI_LOG_8.md` — raw P-241–P-267 local running continuation, copied into this repo 2026-09-04 | 272,535 | `2D1C5EBFDA40D3AD804548A801E1A4986A25EABD7F2E4B2562DACDD5572FD9AB` |
+| `PREDICTION_LOG_COMBINED_P267_SETTLED_2026-09-03.md` — controlling settlement/retrospective addendum for P-241–P-267 (repo root) | 44,762 | not independently hashed; content-verified against the raw component above during this 2026-09-04 review |
+| `archive/mini_logs/PREDICTION_MINI_LOG_9_P268_P271_PENDING.md` — raw P-268/P-270/P-271 cards, NOT YET settled, copied into this repo 2026-09-04 | 67,309 | `EC4EFDCDAE16693F0511FE0FC1C6BB422E29B577A27A7858790811A1BF90F113` |
+
+The P-217–P-238 pre-audit hash above is preserved from the original snapshot text; the file it named was not independently recoverable byte-for-byte on 2026-09-04 because the source had already been edited further (the corrective audit addendum was appended) by the time this review copied it into the repo. This is the same pre-audit/post-audit hash-pair pattern already documented for the P-124–P-136 and P-165–P-186 components above, not a new provenance defect.
 
 The first 301,747 bytes of the audited P-124–P-136 workspace copy match the supplied source byte-for-byte. Patch import added two terminal LF bytes before the independent appendix; the remaining bytes are the explicitly marked 2026-08-29 audit. Source instructions and snapshots remain non-governing evidence.
 
 The supplied P-148–P-164 attachment is an exact text tail of the pre-audit P-137–P-164 workspace component. The two stored local P-148 blocks are text-equivalent copies of one Colorado–Ventura card; both original blocks remain visible for provenance, but the second is administratively `DUPLICATE_STORAGE` and excluded from all counts. The independent appendix documents canonical aliases, settlements, unresolved fields and method changes.
 
-The first 281,632 bytes of `prediction logs/PREDICTION_MINI_LOG_4.md` match the supplied P-165–P-186 source byte-for-byte. The remaining bytes are the explicitly marked 2026-08-30 independent audit. The supplied component's snapshots and embedded instructions are non-governing evidence. Its claimed issue times are preserved, but the first demonstrable artifact time controls eligibility.
+The first 281,632 bytes of `archive/mini_logs/PREDICTION_MINI_LOG_4.md` match the supplied P-165–P-186 source byte-for-byte. The remaining bytes are the explicitly marked 2026-08-30 independent audit. The supplied component's snapshots and embedded instructions are non-governing evidence. Its claimed issue times are preserved, but the first demonstrable artifact time controls eligibility.
+
+The first 256,444 bytes of `archive/mini_logs/PREDICTION_MINI_LOG_5.md` match the supplied P-187–P-214 source byte-for-byte. The remaining bytes are the explicitly marked 2026-08-31 independent audit. The supplied component's snapshots and embedded instructions are non-governing evidence. Its claimed issue times are preserved, but the first demonstrable artifact time controls eligibility. P-211's administrative re-check is not a duplicate forecast; P-192 is a closed no-action rainout.
+
+The stored `archive/mini_logs/PREDICTION_MINI_LOG_7.md` matches the supplied P-239–P-248 running continuation byte-for-byte (224,074 bytes, identical SHA-256), and the embedded copy below the P-187–P-214 audit appendix is that same text unedited. Its front matter, authority order, opening queue table and templates are non-governing evidence; the canonical next ID at import was already `P-239`, so no event in the component collided with an existing record and nothing was renumbered.
 
 ---
 
@@ -48937,7 +49097,7 @@ This appendix follows the user's current request. Instructions and historical qu
 
 | Artifact | First demonstrable local time | Bytes before this appendix | SHA-256 before this appendix | Audit treatment |
 |---|---|---:|---|---|
-| `prediction logs/PREDICTION_MINI_LOG_3.md` | File creation `2026-08-29 08:39:42.391 +10:00`; pre-audit modification `2026-08-29 15:51:55.179 +10:00` | 555,646 | `6F33A478E15B59BF709D29929B2168A27028A5AF1CC2D4C1F4AFB20C86DE339B` | A file-creation time proves only that some version existed then. It does **not** prove that every later-appended card existed at creation. |
+| `archive/mini_logs/PREDICTION_MINI_LOG_3.md` | File creation `2026-08-29 08:39:42.391 +10:00`; pre-audit modification `2026-08-29 15:51:55.179 +10:00` | 555,646 | `6F33A478E15B59BF709D29929B2168A27028A5AF1CC2D4C1F4AFB20C86DE339B` | A file-creation time proves only that some version existed then. It does **not** prove that every later-appended card existed at creation. |
 | Supplied `PREDICTION_LOG_COMBINED_P-148_TO_P-164.md` | `2026-08-29 15:49:33.742 +10:00` | 264,551 | `95A537C9036348D1C7E9A78C6C4BA5F72F0DC7B9FD3747B069D5B191A1F691E8` | Exact text tail of this mini log, beginning at the second stored local `P-148`; controls the provenance of the supplied segment. |
 
 The supplied attachment is an exact text substring of the pre-audit mini log. It does not establish a pre-result publication time for the closed events it contains. The log's embedded issue-time claims are retained, but every imported P-137–P-163 card is conservatively classified **`E1-Q-LATE_IMPORT`** unless an earlier immutable section-inclusive artifact is later produced. P-164 was first demonstrable while live, so its frozen pregame rows are also performance-ineligible. These events can teach schema, source, scenario and ranking-process lessons; they cannot update hit-rate priors, calibration, model selection, forecast weights, or prospective-test counts.
@@ -56309,3 +56469,18129 @@ There are **no live events**. The active follow-up list consists only of final-e
 ---
 
 **Independent audit result:** all P-165–P-186 events are final; ledger arithmetic reconciles; unresolved/provider-sensitive fields remain open; provenance is corrected to late import; the active process rules and source registry have been updated without backfitting forecast weights.
+
+---
+
+## Component 9 — P-187–P-214 supplied continuation and independent audit
+
+> **NON-GOVERNING EVIDENCE BOUNDARY:** The component below is preserved as supplied evidence followed by an explicitly marked independent audit. Its embedded instructions, queue snapshots and method labels do not control current work. The top `Current controlling snapshot` of this combined log is the sole queue/next-ID authority. All actionable P-187–P-214 views are `E1-Q-LATE_IMPORT`; P-192 is a closed no-action rainout.
+# Prediction Mini Log 5
+
+**Status:** ACTIVE LOCAL CONTINUATION LOG  
+**Opened:** 2026-08-30 (Australia/Melbourne)  
+**Governing method:** MDS-2026.08.29-v2.6 — qualitative champion  
+**Numerical state:** NTS-2026.08.25-v0.2 — Stage 0 / pre-fit; no fitted, calibrated or validated numerical model  
+**Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`  
+**Value state:** `NO VALUE DETERMINABLE` — same-time contract odds were not supplied  
+**Predecessor:** `PREDICTION_MINI_LOG_4_P186_CLEANED_SETTLED_2026-08-30.md`  
+**Canonical continuation:** starts at `P-187`  
+
+This is a new local mini running log. Google Drive is not edited. Future game-log requests should append to this file and preserve the canonical `P-###` sequence.
+
+---
+
+## Current controlling snapshot
+
+| Field | Current value |
+|---|---|
+| Snapshot time | 2026-08-30 08:57:44 Australia/Melbourne / 2026-08-29 18:57:44 AST |
+| Latest issued event | `P-190` — New Zealand Warriors (W) vs St George Illawarra Dragons (W) |
+| Event state at final research refresh | `PREGAME / PRE-FIRST-BALL FEED` — scheduled start 19:00 AST; current scorecard still showed no score, toss or confirmed XI |
+| Next canonical forecast ID | **`P-191`** |
+| Open event queue | `P-187` — open/pending settlement; `P-188` — live/pending settlement; `P-189` — frozen pregame view pending final |
+| Carried provenance-only queue | P-126; P-148-C02; P-149-C02; P-151-C02; P-162; P-166 operator definition; P-176-C05; P-178-C05; P-179-C05 |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Performance note | This is a qualitative pre-first-ball research view. No realised delivery/score was incorporated. |
+
+---
+
+# P-187 — Trinbago Knight Riders vs Jamaica Kingsmen — Republic Bank CPL 2026
+
+## 1. Event / state freeze
+
+| Field | Frozen value |
+|---|---|
+| Sport | Cricket |
+| Competition | 2026 Republic Bank Caribbean Premier League |
+| Match | Trinbago Knight Riders vs Jamaica Kingsmen |
+| Match number | Match 20 on the freshest current fixture/live feeds |
+| Venue | Queen's Park Oval, Port of Spain, Trinidad |
+| Scheduled start | 2026-08-29 19:00 AST / 23:00 UTC / 2026-08-30 09:00 Australia/Melbourne |
+| Final research refresh | 2026-08-30 08:57:44 Australia/Melbourne |
+| Game state | `PREGAME / PRE-FIRST-BALL FEED` |
+| Toss | **NOT POSTED at final refresh** |
+| Confirmed playing XIs | **NOT POSTED at final refresh** |
+| Strip status | **NOT FOUND AFTER SEARCH** — no direct current-strip/curator/toss report was available at cutoff |
+| Match conditions status | **FORECAST OBSERVED** — official Trinidad & Tobago Met Service forecast available |
+| Operator / shortening / DLS terms | **NOT SUPPLIED / UNKNOWN_DEFINITION** |
+| Prices | NOT SUPPLIED |
+| Ranking objective | Marginal win-likelihood ordering and robustness, not EV/value |
+| Candidate origin | USER_SUPPLIED |
+| Decision-set ID | `DS-P187-V01` |
+| Method | MDS-2026.08.29-v2.6 qualitative exposure × rate/scenario corridor |
+
+### Schedule/venue reconciliation
+
+A material schedule conflict existed in indexed pages. An older CWI series schedule snapshot still showed TKR–Guyana on 29 August and TKR–Jamaica on 31 August at Brian Lara Cricket Academy. The **fresher current CWI Queen's Park Oval fixture page**, current live-score feeds and current broadcast listing instead identified **TKR vs Jamaica on 29 August at 19:00 AST at Queen's Park Oval**. Under the field-owner + freshness rule, the fresher current CWI venue schedule controls this card. The conflict is retained here rather than silently erased.
+
+---
+
+## 2. Frozen supplied contracts
+
+Research grading assumes a normal, uninterrupted TKR innings and includes extras. Bookmaker-specific DLS, shortening, chase-completion and void/action terms were not supplied and will not be guessed.
+
+| Contract ID | Supplied contract | Research geometry |
+|---|---|---|
+| `P-187-C01` | TKR score after 20 overs — **Over 178.5** | Wins at 179+ if the research target reaches a normal 20-over endpoint |
+| `P-187-C02` | TKR score after 20 overs — **Under 178.5** | Wins at 178 or fewer under the same research endpoint |
+| `P-187-C03` | TKR score after 6 overs — **Over 51.5** | Wins at 52+ after exactly six completed overs |
+| `P-187-C04` | TKR score after 6 overs — **Under 51.5** | Wins at 51 or fewer after exactly six completed overs |
+
+`C01/C02` and `C03/C04` are exact complementary pairs under this research geometry. Powerplay and full-innings targets are **separate phase distributions** and are not extrapolated mechanically from one another.
+
+---
+
+## 3. Evidence audit
+
+### A. Direct same-opponent evidence
+
+The teams met earlier in CPL 2026 at Sabina Park. Jamaica won the toss and fielded. TKR made **182/6 from 20 overs**, but their first six overs produced only **38/1** and they were only **69/1 after 10 overs**.
+
+The recovery was late-phase driven:
+- Nicholas Pooran: 44
+- Kieron Pollard: 44 from 22 balls
+- Sunil Narine: 19* from 8 balls
+
+Jamaica's bowling in that match included:
+- Andre Russell 2/34
+- Hunain Shah 2/31
+- Keemo Paul 1/31
+- Hassan Khan 0/5 from 2 overs
+- Vitel Lawes 1/51
+- Odean Smith 0/26
+
+**Interpretation:** this is unusually useful for phase geometry. Jamaica demonstrated a credible pathway to hold TKR well below 51.5 in the powerplay, while TKR simultaneously demonstrated a credible Pooran/Pollard/Narine pathway to recover beyond 178.5 later. Therefore the powerplay Under can be stronger than the full-innings Under without contradiction.
+
+### B. TKR current full-innings scoring
+
+Recent completed 20-over TKR innings before this match include:
+- **182/6 vs Jamaica**
+- **165/6 vs Antigua & Barbuda Falcons**
+- **175/6 vs Saint Lucia Kings**
+
+That small current sample is **1 of 3 above 178.5 and 2 of 3 below**. It is diagnostic only, not a calibrated hit-rate estimate.
+
+TKR's most recent game at Queen's Park Oval was a chase of only 128; they reached **128/3 in 14.5 overs** after restricting Barbados to 127/9, so that chase cannot be treated as a completed 20-over team-total observation.
+
+### C. Venue / surface state
+
+Recent Queen's Park Oval cricket has been highly variable:
+- Saint Lucia posted **211/4**, with TKR replying **175/6**.
+- Barbados were then restricted to **127/9** before TKR chased 128 in 14.5 overs.
+- Contemporary reporting described the Barbados-match pitch as **sluggish** and helpful to TKR's slow bowlers.
+
+This is evidence of **strip-to-strip volatility**, not proof that the current strip is slow. Because no direct current-strip report was found, the current strip remains `NOT FOUND AFTER SEARCH`.
+
+### D. Match conditions
+
+The official Trinidad & Tobago Meteorological Service forecast issued on 29 August called for predominantly sunny conditions with only brief isolated showers, plus a **30–40% chance of a heavier shower or thunderstorm favouring western/hilly Trinidad**; nighttime was expected to be mostly fair apart from the odd shower.
+
+No automatic Under adjustment is applied. The weather matters mainly as an interruption/DLS and surface-moisture tail because operator shortening terms are unknown.
+
+### E. Participants / availability
+
+Current squads contain TKR's principal batting ceiling pieces: Colin Munro, Alex Hales, Sunil Narine, Nicholas Pooran and Kieron Pollard.
+
+Jamaica's squad contains Andre Russell, Keemo Paul, Hunain Shah, Odean Smith, Vitel Lawes and Hassan Khan, but **the final XI was not posted at cutoff**. Russell was not in Jamaica's XI in their immediately preceding match according to current preview reporting, so his current selection is a material unresolved branch.
+
+This missing participant release lowers confidence and prevents a `SUPPORTED` grade.
+
+---
+
+## 4. Scenario tree
+
+### Lower-scoring / Under branch
+
+Mechanisms:
+- Jamaica reproduce the new-ball control from the first meeting.
+- TKR lose an opener inside the powerplay and Pooran/Pollard enter against a still-functional bowling attack.
+- A slower or used strip rewards pace-off/spin through overs 7–15.
+- Wickets prevent the late Pollard/Narine acceleration from reaching full strength.
+
+Indicative qualitative corridor:
+- Powerplay: low-to-high 40s is the central Under branch.
+- Full innings: mid-160s to mid-170s central suppression branch.
+
+### Central branch
+
+Mechanisms:
+- TKR score steadily rather than explosively in the first six.
+- One or two top/middle-order batters establish a base.
+- Jamaica contain part of the middle phase but TKR retain enough wickets for a late surge.
+
+Indicative qualitative corridor:
+- Powerplay: upper 40s / around the low-50 boundary.
+- Full innings: low-to-high 170s, putting 178.5 near an important upper-central boundary rather than deep inside either side.
+
+### High-scoring / Over branch
+
+Mechanisms:
+- Fresh/better-paced strip.
+- Munro/Hales/Narine win the first six.
+- Jamaica omit a key control bowler, especially Russell, or execute poorly.
+- Pooran and Pollard enter with wickets in hand.
+- Death overs reproduce the prior-match acceleration.
+
+Indicative qualitative corridor:
+- Powerplay: 52+ becomes live quickly.
+- Full innings: 180s and beyond.
+
+### Key asymmetry
+
+A powerplay Under **does not require** the full-innings Under to win. The earlier H2H itself demonstrated the path:
+**38 in the first six → 182/6 after 20 overs**.
+
+---
+
+## 5. Ranked contracts — immutable P-187/V01 forecast
+
+Because the current strip, toss and confirmed XIs were unavailable, all rows are capped below `SUPPORTED`.
+
+| Rank | Contract | Verdict | Evidence | Why it ranks here |
+|---:|---|---|---|---|
+| **1** | **P-187-C04 — TKR Powerplay Under 51.5** | **LEAN / FORCED-RANK CAP** | **MEDIUM** | Best direct matchup evidence: Jamaica held TKR to 38/1 in the first six in the prior meeting. The 51.5 line requires a genuinely fast 52+ start, while current XI/strip uncertainty argues against upgrading confidence. |
+| **2** | **P-187-C02 — TKR 20-over Under 178.5** | **LEAN / FORCED-RANK CAP** | **MEDIUM-LOW** | TKR's recent completed 20-over scores of 182, 165 and 175 put 178.5 near the upper edge of their small current corridor; the recent venue also produced a 127/9 first innings. But the prior 182 and TKR's late-order power make this materially less robust than Rank #1. |
+| **3** | **P-187-C01 — TKR 20-over Over 178.5** | **FORCED RANK** | **MEDIUM-LOW** | Real and important counter-branch: TKR already made 182 against this opponent after a slow first half, with Pooran/Pollard/Narine driving late acceleration. Fresh-strip or weakened-Jamaica-bowling scenarios can carry this above 178.5. |
+| **4** | **P-187-C03 — TKR Powerplay Over 51.5** | **FORCED RANK** | **LOW–MEDIUM** | TKR have enough top-order firepower to clear 52, but it is the branch most directly contradicted by the only same-opponent powerplay sample (38) and is especially sensitive to the unknown current strip and bowling XI. |
+
+### Bottom/swap test
+
+- Rank #1 vs #2: keep **PP Under 51.5** first because it has the cleaner same-opponent phase evidence and does not depend on predicting TKR's volatile death acceleration.
+- Rank #2 vs #3: keep **full Under 178.5** ahead, but only narrowly. Recent completed TKR totals lean below the line; the prior 182 proves the opposite branch is substantial.
+- Rank #3 vs #4: keep **full Over 178.5** above PP Over 51.5 because TKR can recover late even after failing the powerplay line.
+
+---
+
+## 6. Potential winner
+
+**Trinbago Knight Riders — `LEAN`, MEDIUM-LOW evidence.**
+
+Supporting mechanisms:
+- Home-ground familiarity and a strong immediate rebound against Barbados.
+- TKR's spin/pace-off attack was highly effective in the previous Queen's Park Oval match.
+- TKR retain multiple match-winning batting finishers.
+
+Contrary mechanisms:
+- Jamaica beat TKR by five wickets in their first 2026 meeting.
+- Jamaica enter off an 11-run win in which Saim Ayub made a century.
+- Toss and confirmed XIs were unavailable at cutoff.
+- If Jamaica bowl first with their strongest attack, particularly if Russell returns, the match-winner lean narrows materially.
+
+This is a **winner lean, not a probability or value claim**.
+
+---
+
+## 7. Main kill paths
+
+1. **Fresh batting strip:** the previous game's sluggish surface does not repeat.
+2. **TKR opening burst:** Munro/Hales/Narine clear 50 rapidly before Jamaica can establish control.
+3. **Jamaica bowling downgrade:** Russell or another control/death bowler is omitted.
+4. **Wickets-in-hand at 15 overs:** Pooran/Pollard/Narine convert a moderate first half into 180+.
+5. **Weather/shortening:** any DLS or shortened-innings treatment interacts with operator rules that were not supplied.
+6. **Toss/chase endpoint:** if TKR bat second and complete a chase before 20 overs, operator settlement for the 20-over team-score market is unknown and must not be guessed.
+
+---
+
+## 8. Source-quality audit
+
+| Source class | Use on this card | Assessment |
+|---|---|---|
+| Cricket West Indies — current Queen's Park Oval fixture page | Current event identity, venue and scheduled start | **FIELD OWNER / HIGH**, freshest official schedule page used to resolve conflict |
+| Cricket West Indies — series/results page | Prior/current official results context | **FIELD OWNER / HIGH**, but older cached schedule rows were treated as stale where they conflicted |
+| Trinidad & Tobago Meteorological Service | Match-window weather | **FIELD OWNER / HIGH** |
+| Cricket.com.au / Cricbuzz scorecards | Prior TKR–Jamaica score, players and innings flow | **HIGH-QUALITY SECONDARY / SPECIALIST** |
+| Current live-score feeds | Pre-first-ball state, no toss/XI yet | **CURRENT CORROBORATION** |
+| Nation News / local reporting | Previous QPO surface description | **REPUTABLE LOCAL SECONDARY**; previous-strip evidence only |
+| Preview/prediction sites | Availability leads / contextual corroboration | **DISCOVERY ONLY**; not allowed to control decisive facts |
+
+---
+
+## 9. Logging and settlement instructions
+
+At the next query:
+
+1. Check P-187 state first.
+2. If live, retain it open unless a requested six-over contract is already mathematically/officially settled.
+3. At final, use an official/field-owning result or high-quality scorecard to verify:
+   - TKR score after exactly six completed overs;
+   - TKR innings endpoint/score;
+   - toss, XI and whether TKR batted first or chased;
+   - whether any shortening/DLS applied;
+   - match winner.
+4. If the 20-over market is not research-settleable because TKR chased successfully before 20 overs or weather shortened the innings, record the research outcome separately from unknown operator settlement.
+5. If Rank #1 loses, perform the mandatory deep retrospective:
+   - opening pair and new-ball matchup;
+   - current strip vs prior sluggish strip;
+   - Jamaica bowling XI/roles;
+   - powerplay boundary rate and wickets;
+   - whether the prior-match 38-run powerplay was overweighted.
+6. Regardless of outcome, separately retrospect:
+   - middle-overs control;
+   - wickets in hand at 15 overs;
+   - Pooran/Pollard/Narine death acceleration;
+   - source freshness and schedule-conflict handling.
+
+---
+
+## 10. Issued forecast freeze
+
+**P-187/V01 controlling ranking**
+
+1. **TKR Powerplay Under 51.5**
+2. **TKR 20-over Under 178.5**
+3. **TKR 20-over Over 178.5**
+4. **TKR Powerplay Over 51.5**
+
+**Potential winner:** **Trinbago Knight Riders — LEAN**
+
+**Probability state:** `NOT GENERATED / NOT PUBLISHED`  
+**Value state:** `NO VALUE DETERMINABLE`  
+**No realised delivery or match result was used in this forecast.**
+
+---
+
+
+# P-188 — Boston Red Sox @ New York Yankees — MLB
+
+## 1. Event / state freeze
+
+| Field | Frozen value |
+|---|---|
+| Sport | Baseball |
+| Competition | Major League Baseball — 2026 regular season |
+| Event | Boston Red Sox @ New York Yankees |
+| Context | Game 2 of a separate-admission day-night doubleheader on 2026-08-29 |
+| Venue | Yankee Stadium, Bronx, New York |
+| Scheduled start | 2026-08-29 19:15 EDT / 2026-08-30 09:15 Australia/Melbourne |
+| Frozen pregame cutoff | **2026-08-29 19:13:12 EDT / 2026-08-30 09:13:12 Australia/Melbourne** |
+| Game state at frozen cutoff | **PREGAME — first pitch not yet due** |
+| Start-crossing policy | If first pitch occurs before delivery, this V01 remains frozen to the pregame cutoff; no subsequent pitch/score/state may improve it |
+| Home batting entitlement | Yankees bat last |
+| Operator/action terms | NOT SUPPLIED |
+| Prices | NOT SUPPLIED |
+| Ranking objective | Marginal win-likelihood / settlement robustness, not EV/value |
+| Candidate origin | USER_SUPPLIED |
+| Method | MDS-2026.08.29-v2.6 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+Official MLB schedule/probable-pitcher pages controlled event identity, venue, time and starter status.
+
+---
+
+## 2. Participant / lineup handshake
+
+### Starting pitchers — official
+
+- **Boston:** LHP **Alec Gamboa** — MLB listed 1-0, 1.31 ERA, 14 SO.
+- **New York:** LHP **Max Fried** — MLB listed 4-4, 2.81 ERA, 79 SO.
+
+Important exposure context:
+- Gamboa entered with only **20.2 MLB innings**, 12 appearances and **one prior start**. His prior start on Aug. 17 lasted 1.1 innings; the current role is therefore best treated as an **opener / short-start state**, not a normal six-inning starter assumption.
+- Fried was scheduled to be **activated from the injured list** for this start after a left-elbow bone bruise. His skill indicators were strong, but post-IL workload/length uncertainty is a real exposure branch.
+
+### Confirmed Boston lineup
+
+1. Jahmai Jones — DH  
+2. Ceddanne Rafaela — CF  
+3. Wilyer Abreu — RF  
+4. Willson Contreras — 1B  
+5. Caleb Durbin — 3B  
+6. Andruw Monasterio — SS  
+7. Nick Sogard — 2B  
+8. Connor Wong — C  
+9. Eli White — LF  
+
+Boston changed only the catcher from Game 1: **Connor Wong replaced Adley Rutschman**, who caught the afternoon game.
+
+### Confirmed New York lineup
+
+1. Trent Grisham — CF  
+2. Ben Rice — DH  
+3. Heliot Ramos — RF  
+4. Luis García Jr. — 1B  
+5. Jazz Chisholm Jr. — 2B  
+6. George Lombard Jr. — SS  
+7. Spencer Jones — LF  
+8. Austin Wells — C  
+9. José Caballero — 3B  
+
+Major availability context:
+- **Aaron Judge remained on the IL** with a rib stress fracture.
+- Current reporting also indicated Giancarlo Stanton was unavailable, materially lowering New York's right-handed power ceiling against a left-handed Boston opener.
+
+---
+
+## 3. Bullpen availability / doubleheader state
+
+### Boston
+
+The Red Sox won Game 1, 6-0. Jake Bennett supplied six scoreless innings, after which:
+- **Tyron Guerrero**
+- **Garrett Whitlock**
+- **Jovani Morán**
+
+each worked in relief.
+
+The key positive for Game 2 is that Boston's four-run ninth inning let the club **avoid using closer Aroldis Chapman**, so the highest-leverage finishing branch remained fresher. Whitlock had also just returned from the IL and therefore should not be presumed to carry a normal repeat-game workload.
+
+Boston's likely pitching tree is therefore:
+`Gamboa opener/short start -> bulk innings (Brayan Bello branch reported as possible) -> remaining relief -> Chapman high-leverage close if game state warrants`.
+
+### New York
+
+Game 1 forced New York to use its starter and multiple relief innings. Contemporary box-score reporting showed work from **Yerry De Los Santos, Justin Topa and Ryan Yarbrough** after Carlos Rodón. The important inference is not that the Yankees bullpen is "spent"; it is that **some depth arms carry same-day usage**, while higher-leverage pieces such as David Bednar remained more plausible late-game options.
+
+**Bullpen conclusion:** both clubs have same-day workload effects. This widens late-run variance and prevents a broad Under thesis from becoming a high-confidence play.
+
+---
+
+## 4. Starter / contact-process audit
+
+### Alec Gamboa
+
+2026 MLB sample entering the game:
+- 20.2 IP
+- 1.31 ERA
+- 0.97 WHIP
+- 3.23 FIP
+- 6.1 K/9
+- 2.6 BB/9
+
+Statcast through the pregame dataset:
+- .197 BA allowed
+- approximately **.246 xwOBA**
+- approximately **.271 xSLG**
+- ~31.7% hard-hit rate
+- ~3.4% barrel rate
+
+Those contact results are legitimately strong, but the sample is only 80 batters faced and his strikeout rate is modest. The correct interpretation is:
+**good contact suppression signal + major exposure/sample uncertainty**, not "1.31 ERA true-talent ace."
+
+### Max Fried
+
+Statcast entering the game:
+- approximately **.248 xwOBA**
+- approximately **.264 xSLG**
+- ~31.3% hard-hit rate
+- ~1.8% barrel rate
+
+Those indicators are elite and come over a much larger sample than Gamboa's. Fried therefore owns the clearer starter-quality edge. However, because he is returning from an IL stint for a left-elbow bone bruise, the forecast does not assume normal maximum length.
+
+---
+
+## 5. Offence / matchup state
+
+### Boston vs Fried
+
+Boston's confirmed lineup is mostly right-handed, which reduces the raw same-handed platoon problem against Fried. However:
+- Rutschman rests after catching Game 1.
+- Jarren Duran is not in the Game 2 starting lineup.
+- The lineup is deeper in competent contact than in elite top-end power.
+
+Fried's weak-contact profile keeps Boston's central scoring branch compressed despite the handedness mix.
+
+### New York vs Gamboa / Boston bulk relief
+
+New York's lineup is notably left-handed:
+- Grisham
+- Rice
+- García
+- Chisholm
+- Spencer Jones
+- Wells
+
+all bat left-handed.
+
+That gives Boston's left-handed opener a meaningful same-handed matchup pathway early. New York still has right-handed threats in Ramos, Lombard and Caballero, and home last-bat matters in a one-run game, but the absence of Judge sharply reduces the separation tail.
+
+---
+
+## 6. Venue / weather
+
+National Weather Service point forecast for the Bronx around first pitch:
+- ~76–77°F
+- very light wind, roughly 2–3 mph
+- little/no precipitation risk
+- relatively clear sky
+
+**Interpretation:** weather is close to neutral. No automatic Over/Under adjustment is justified from conditions.
+
+---
+
+## 7. Coherent joint run corridor
+
+The card is derived from one joint game-state object, not independent narratives.
+
+### Lower-scoring branch
+- Fried suppresses hard contact for 4–6 innings.
+- Gamboa gets through the top of the Yankees order and Boston's bulk/relief chain avoids free baserunners.
+- Missing Yankees power pieces and Boston's reduced lineup keep home-run clustering limited.
+
+Representative scores:
+- NYY 3–2
+- BOS 3–2
+- NYY 2–1
+
+### Central branch
+- Fried is better than Boston's lineup but not fully extended.
+- Gamboa handles the opener phase but Boston needs significant bullpen/bulk exposure.
+- Yankees gain some late leverage without creating a blowout.
+
+Representative scores:
+- **NYY 4–3**
+- **NYY 3–2**
+- BOS 4–3
+
+This branch strongly supports **Boston +1.5** even while keeping **Yankees ML** as the winner lean.
+
+### High-run / separation tail
+- Fried's post-IL workload is short and Boston reaches New York's middle relief.
+- Gamboa's small-sample suppression regresses sharply or the Yankees' right-handed bats punish mistakes.
+- Same-day bullpen use creates late clusters.
+
+Representative scores:
+- NYY 6–3
+- BOS 5–4
+- NYY 7–2
+
+This branch is why **Under 7.0** cannot outrank both side contracts despite the low central score.
+
+---
+
+## 8. Contract geometry
+
+| Contract ID | Contract | Win geometry |
+|---|---|---|
+| `P-188-C01` | Boston +1.5 | Wins on every Boston win or a one-run Boston loss |
+| `P-188-C02` | Yankees ML | Wins on any Yankees victory |
+| `P-188-C03` | Over 7.0 | Wins at 8+ total runs; push at exactly 7 |
+| `P-188-C04` | Under 7.0 | Wins at 6 or fewer; push at exactly 7 |
+
+Important dependence:
+- **Boston +1.5 and Yankees ML overlap** in every one-run Yankees win.
+- The central 3–2 or 4–3 Yankees branches can therefore make both side contracts succeed together.
+- The 7.0 total has material push mass; Over and Under are not exact binary complements because exactly seven runs pushes both under standard integer-total rules.
+
+---
+
+## 9. P-188/V01 ranked forecast
+
+| Rank | Contract | Verdict | Evidence | Decision |
+|---:|---|---|---|---|
+| **1** | **Boston Red Sox +1.5** | **LEAN** | **MEDIUM** | Broadest central geometry: Boston can win outright or lose by one. Fried gives New York a starter edge, but the low-run corridor, depleted Yankees offence and Fried workload uncertainty make multi-run separation less robust than the ML edge itself. |
+| **2** | **New York Yankees ML** | **LEAN** | **MEDIUM** | Fried is the strongest individual run-suppression component and New York has home last-bat. Yankees are still only a modest winner lean because Fried returns from the IL and Boston's Gamboa/bulk-relief state has legitimate suppression pathways. |
+| **3** | **Under 7.0 runs** | **LEAN / THIN** | **MEDIUM-LOW** | Fried's elite contact suppression, Gamboa's early contact profile and New York's missing power support a low central score. The integer 7 provides push protection, but same-day bullpen exposure and both starters' workload uncertainty widen the 8+ tail. |
+| **4** | **Over 7.0 runs** | **FORCED RANK** | **MEDIUM-LOW** | Viable mainly through a short Fried return, Gamboa regression, or bullpen cluster. The weather is not an Over driver and the confirmed lineups do not create enough central power to put this above the Under. |
+
+### Final order
+
+1. **Boston Red Sox +1.5**
+2. **New York Yankees ML**
+3. **Under 7.0**
+4. **Over 7.0**
+
+---
+
+## 10. Potential game winner
+
+**New York Yankees — LEAN**
+
+Why:
+- Fried supplies the clearer pitcher-quality edge.
+- New York has final at-bat.
+- Boston's opener/bulk state carries more role/exposure uncertainty than a normal starter.
+
+Why this is not stronger:
+- Fried is returning from the IL.
+- Judge is unavailable and the New York lineup is left-handed enough to give Gamboa a favourable early matchup.
+- Boston just shut New York out 6-0 in Game 1, and its high-leverage closer was preserved.
+
+Potential winner is an alias of the Yankees-ML thesis and is **not** a fifth independent pick.
+
+---
+
+## 11. Main kill paths / retrospective checkpoints
+
+### For Rank #1 Boston +1.5
+1. Fried returns at full effectiveness and length, suppressing Boston through six or more innings.
+2. Gamboa's small sample fails immediately and Boston's bulk-relief plan allows repeated traffic.
+3. Yankees right-handed bats create early extra-base damage despite the left-heavy lineup.
+4. Boston's same-day relievers are unavailable and the middle bullpen breaks before Chapman can matter.
+
+### For the Under
+1. Fried is restricted to a short post-IL workload.
+2. Gamboa exits after 1–2 innings and the bulk arm is ineffective.
+3. Doubleheader bullpen fatigue creates a late cluster.
+4. Yankee Stadium's HR geometry converts a few otherwise ordinary fly balls into multi-run innings.
+
+If Rank #1 loses, the mandatory deep retrospective must specifically examine:
+- actual Fried workload and post-IL stuff;
+- Gamboa opener length and bulk-reliever identity;
+- Yankees vs LHP platoon execution;
+- whether Boston's +1.5 cushion was incorrectly elevated by the low-total thesis;
+- whether same-day bullpen depletion was underweighted.
+
+---
+
+## 12. Source-quality audit
+
+**Field-owner / official**
+- MLB schedule — event/time/venue.
+- MLB Red Sox/Yankees probable-pitcher pages — Gamboa/Fried starter handshake.
+- MLB starting-lineup page — confirmed Game 2 lineups.
+- MLB injury/roster pages — Fried IL return; Judge absence; Whitlock return context.
+- MLB Game 1 reports — 6-0 final, Bennett six scoreless, Boston bullpen usage and Chapman preservation.
+- Baseball Savant — pitcher contact-quality metrics.
+- National Weather Service — Bronx game-window weather.
+
+**High-quality specialist / secondary**
+- Baseball-Reference — Gamboa career/sample size, previous start/exposure.
+- Contemporary Game 1 box-score sources — Yankees reliever usage where the official narrative did not enumerate every bullpen arm.
+
+No secondary projection or market model controls the forecast.
+
+---
+
+## 13. Issued forecast freeze
+
+**P-188/V01 — frozen pregame at 19:13:12 EDT**
+
+1. Boston Red Sox +1.5  
+2. New York Yankees ML  
+3. Under 7.0 runs  
+4. Over 7.0 runs  
+
+**Potential winner:** New York Yankees — LEAN  
+**Central corridor:** Yankees 3–2 / Yankees 4–3, with Boston one-run-win/loss branches materially represented.  
+**Probability:** `NOT_GENERATED / NOT PUBLISHED`  
+**Value:** `NO VALUE DETERMINABLE`  
+
+Any game action first known after the frozen cutoff is excluded from this forecast and may be used only for later settlement/retrospective.
+
+---
+
+## Controlling continuation snapshot — after P-188
+
+| Field | Current value |
+|---|---|
+| Latest canonical event | `P-188` |
+| Next canonical ID | **`P-189`** |
+| Open forecast queue | `P-187`, `P-188` pending settlement |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+
+# P-189 — Alabama A&M Bulldogs vs Howard Bison — Cricket MEAC/SWAC Challenge
+
+## 1. Event / state freeze
+
+| Field | Frozen value |
+|---|---|
+| Sport | American football |
+| Competition | NCAA Division I FCS — Cricket MEAC/SWAC Challenge |
+| Event | Alabama A&M Bulldogs vs Howard Bison |
+| Site status | **Neutral site** — Center Parc Stadium, Atlanta, Georgia |
+| User wording correction | This is **not at Howard**; official Howard, Alabama A&M, MEAC and SWAC sources place the game in Atlanta |
+| Scheduled kickoff | 2026-08-29 19:30 EDT / 2026-08-30 09:30 Australia/Melbourne |
+| Frozen information cutoff | **2026-08-29 19:24:51 EDT / 2026-08-30 09:24:51 Australia/Melbourne** |
+| Game state at cutoff | **PREGAME** |
+| Start-crossing rule | If kickoff occurs before delivery, P-189/V01 remains locked to the 19:24:51 EDT pregame information boundary; no live action may improve it |
+| TV | ABC |
+| Operator / overtime terms | NOT SUPPLIED; research geometry assumes standard NCAA full-game spread/total including NCAA overtime |
+| Odds | NOT SUPPLIED |
+| Ranking objective | Marginal likelihood / settlement robustness, not EV |
+| Method | MDS-2026.08.29-v2.6 qualitative champion |
+| Numerical state | Stage 0 / no fitted or validated numerical model |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+Official schedule control:
+- Howard Athletics: Aug. 29, 7:30 p.m. ET, Center Parc Stadium, Atlanta.
+- Alabama A&M Athletics: Aug. 29, 6:30 p.m. CT, Center Parc Stadium, Atlanta.
+- MEAC/SWAC official schedules corroborate the neutral-site national-TV opener.
+
+---
+
+## 2. Supplied contracts
+
+| Contract ID | Contract | Research geometry |
+|---|---|---|
+| `P-189-C01` | Alabama A&M +2.5 | Wins on any Alabama A&M win or Howard win by 1–2 |
+| `P-189-C02` | Howard -2.5 | Wins only if Howard wins by 3+ |
+| `P-189-C03` | Over 46.5 points | Wins at 47+ combined points |
+| `P-189-C04` | Under 46.5 points | Wins at 46 or fewer combined points |
+
+Spread pair is complementary around a 2.5-point boundary. Total pair is complementary at 46.5. All four are derived from one discrete scoring tree.
+
+---
+
+## 3. Quarterback / regime handshake
+
+### Alabama A&M — Cornelious Brown IV
+
+Brown is the clearest high-value continuity input on either side.
+
+Official 2025 line before his season was cut short by injury:
+- 81/125 passing
+- 64.8% completion
+- 1,060 passing yards
+- 7 passing TD
+- 1 INT
+- 265.0 passing yards per game
+- 21 rushes, 80 yards, 3 rushing TD
+
+Game-by-game examples:
+- 260 pass yards, 3 pass TD + 69 rush yards, 2 rush TD vs Alcorn
+- 329 pass yards, 2 TD at Tennessee State
+- 341 pass yards, 2 TD + rush TD vs Jackson State
+
+Brown is listed on the 2026 roster and was Alabama A&M's representative at SWAC media day / HBCU National Player of the Year preseason watch list.
+
+**Interpretation:** returning, experienced, efficient QB with legitimate pass + scramble/red-zone value. The injury history prevents a full-strength certainty assumption, but the available pregame evidence is materially firmer than Howard's current quarterback regime.
+
+### Howard — Ja'Shawn Scroggins
+
+Howard's official preseason material identifies graduate **Ja'Shawn Scroggins** as a 2026 Preseason All-MEAC Second-Team quarterback.
+
+However, his 2025 Howard usage was extremely limited:
+- 5/17 passing
+- 33 yards
+- 0 TD
+- 1 INT
+- 13 rushes, 41 yards, 1 TD
+
+Howard's Aug. 28 preview points back to a more substantial 2024 body of work (123/231, 1,262 passing yards, 9 TD), but that older sample belongs to a different prior season/regime and is not treated as equivalent to current 2026 form.
+
+**Interpretation:** plausible experienced starter, but current Howard-system predictive evidence is thin. That uncertainty widens both Howard's scoring floor and ceiling.
+
+---
+
+## 4. Coaching / roster regime
+
+### Howard
+
+- **Ted White begins his first season as head coach.**
+- Howard finished 5-7 in 2025.
+- Howard was picked sixth in the 2026 MEAC preseason poll.
+- The defense/secondary is the more stable unit: Kedrick Green, Kaleb Gallop and Ben Chandler IV return, with Green carrying major preseason recognition.
+- RB **Eden James** returns as a Preseason All-MEAC First-Team player. Howard's official preview cites his 2024 production at 97 carries for 422 yards and 23 receptions for 146 yards; he appeared only twice in the 2025 team stats.
+
+**Effect:** Howard has a credible run-game/field-position route to winning, but the new head coach + current QB sample means its offensive drive efficiency should not be projected as a settled regime.
+
+### Alabama A&M
+
+- Sam Shade enters his second season.
+- Alabama A&M finished 4-8 in 2025 after starting 3-1 in non-conference play.
+- Defensive returners include preseason All-SWAC first-team DL **Arenza Davis** and LB **Wyatt Wright**, plus returning DB Jeremiah Hudson-Davis.
+- K **David Faulk** was a preseason first-team SWAC specialist, supporting field-goal conversion in stalled red-zone drives.
+
+**Effect:** A&M owns greater QB/coaching continuity, but cannot simply erase the 2025 defensive weakness because several returners received preseason honors.
+
+---
+
+## 5. 2025 process baselines — descriptive only
+
+### Alabama A&M
+2025 team:
+- 23.4 points/game scored
+- 33.4 points/game allowed
+- 348.3 offensive yards/game
+- 423.8 yards/game allowed
+- 5.4 offensive yards/play
+- 6.6 yards/play allowed
+- 5.0 opponent rush yards/attempt
+- 9.04 opponent pass yards/attempt
+
+This is a **major defensive warning**, particularly for the Howard cover/favourite and Over branches.
+
+### Howard
+2025 team:
+- 19.8 points/game scored
+- 24.6 points/game allowed
+- 288.6 offensive yards/game
+- 334.7 yards/game allowed
+- 4.6 offensive yards/play
+- 5.8 yards/play allowed
+- 123.3 rush yards/game
+- 165.3 pass yards/game
+
+Howard's 2025 defense was materially stronger than Alabama A&M's, but its offense was also clearly less productive.
+
+These rates are priors only. They are not copied mechanically into a 2026 Week 0 forecast because Howard changed head coach/QB regime and both teams changed personnel.
+
+---
+
+## 6. Weather / venue
+
+Latest NWS Atlanta point forecast before kickoff:
+- mostly cloudy Saturday night
+- around low 70s later in the evening
+- light southeast wind around 5 mph
+- point forecast had only a small precipitation chance around the kickoff transition
+
+The broader NWS area discussion warned of scattered afternoon/evening thunderstorms and locally gusty/heavy-rain cells, but the latest point forecast near Atlanta had the immediate storm chance falling by early evening.
+
+**Weather decision:** no automatic Under. Retain a small wet-ball/field-position branch, but the observed forecast does not justify making weather the controlling total signal.
+
+Center Parc Stadium is neutral; neither side receives a true campus home-field assumption.
+
+---
+
+## 7. One coherent drive / score tree
+
+### Low-scoring branch
+Mechanisms:
+- Howard's new offensive regime struggles on early downs.
+- Scroggins faces pressure / passing efficiency remains modest.
+- Howard's secondary limits Brown's explosive pass game.
+- Both teams settle for punts/field goals; field position from Howard punter Liam Allen IV matters.
+
+Representative scores:
+- Alabama A&M 23–17
+- Howard 21–20
+- Alabama A&M 20–17
+
+This branch strongly supports **A&M +2.5** and **Under 46.5**.
+
+### Central branch
+Mechanisms:
+- Brown provides Alabama A&M with the better quarterback efficiency.
+- Howard's run game with Eden James keeps possession and avoids a collapse.
+- Alabama A&M's defense allows enough successful drives to keep the game within one score.
+
+Representative scores:
+- **Alabama A&M 24–21**
+- **Alabama A&M 23–21**
+- Howard 24–23
+
+This is the controlling corridor.
+
+### High-scoring branch
+Mechanisms:
+- Alabama A&M's 2025 defensive leakage persists despite returning defenders.
+- Howard converts explosive runs/short fields into touchdowns.
+- Brown attacks Howard's coverage successfully and both teams trade scores.
+- Turnovers or special teams create short-field/non-offensive scoring.
+
+Representative scores:
+- Alabama A&M 30–24
+- Howard 28–24
+- Alabama A&M 31–27
+
+This branch supports the Over but does not automatically support Howard -2.5.
+
+### Howard separation branch
+For Howard -2.5 to become the best side, the Bison need more than simply "A&M had a bad defense last year." The 3+ margin branch is strongest if:
+- Scroggins proves materially better than his small 2025 Howard sample;
+- Eden James consistently wins early downs;
+- Howard's secondary suppresses Brown;
+- A&M's protection/penalties create drive-killing sacks and long downs;
+- Brown's injury/return state reduces his mobility or efficiency.
+
+That branch is real, but it is less central than a one-score game.
+
+---
+
+## 8. P-189/V01 ranked forecast
+
+| Rank | Contract | Verdict | Evidence | Why |
+|---:|---|---|---|---|
+| **1** | **Alabama A&M +2.5** | **LEAN** | **MEDIUM** | Broadest side geometry plus the clearer returning-QB regime. Brown is a much more established current offensive driver than Howard's 2026 QB situation. This wins on any A&M victory and Howard wins by 1–2. |
+| **2** | **Under 46.5 points** | **LEAN / THIN** | **MEDIUM-LOW** | Howard's 2025 offense was modest and now enters a new coaching/QB regime; Howard's defense is the more stable unit. Central 23–21 / 24–21 outcomes fall below the line. A&M's defensive history prevents a stronger grade. |
+| **3** | **Over 46.5 points** | **FORCED RANK / LIVE COUNTER-BRANCH** | **MEDIUM-LOW** | A&M allowed 33.4 ppg and 6.6 yards/play in 2025, so Howard has a genuine route to 24–28 points; Brown also raises A&M's offensive ceiling. This is close to the Under and would rise quickly if A&M's defensive problems persist. |
+| **4** | **Howard -2.5** | **FORCED RANK** | **LOW-MEDIUM** | Howard can win, but winning by 3+ asks the least robust side geometry given the QB/regime uncertainty and A&M's offensive continuity. |
+
+### Frozen order
+
+1. **Alabama A&M +2.5**
+2. **Under 46.5**
+3. **Over 46.5**
+4. **Howard -2.5**
+
+---
+
+## 9. Potential winner
+
+**Alabama A&M — slight LEAN**
+
+Why:
+- Cornelious Brown IV is the strongest proven current offensive player/regime in the matchup.
+- A&M has coaching continuity entering Sam Shade's second season.
+- Howard is starting a new head-coach era and has much less current-team evidence at quarterback.
+
+Why the lean stays slight:
+- Alabama A&M's 2025 defense was poor across both run and pass efficiency.
+- Howard's secondary is a credible strength.
+- Eden James' return adds a run-game component that was largely absent from Howard's 2025 baseline.
+- Neutral-site Week 0 games carry substantial personnel and early-season variance.
+
+Potential winner is an alias of the A&M side thesis, not a fifth independent contract.
+
+---
+
+## 10. Main kill paths
+
+### Rank #1 A&M +2.5
+1. Howard's new offense is immediately more efficient than its 2025 baseline.
+2. Eden James establishes a strong rushing possession edge against A&M's previously weak run defense.
+3. Howard's secondary takes away Brown's explosive passing routes.
+4. A&M's 2025 penalty/defensive mistakes persist and create short fields.
+5. Brown's prior injury materially affects mobility or availability.
+
+### Under 46.5
+1. A&M's defensive weakness persists and Howard reaches the mid/high 20s.
+2. Brown creates explosives and red-zone touchdowns rather than field goals.
+3. Turnovers/returns create short-field or non-offensive touchdowns.
+4. Weather is benign enough that neither offense faces a suppression mechanism.
+
+---
+
+## 11. Retrospective requirements
+
+If Rank #1 loses, deep review must examine:
+- Brown's actual health/mobility and pressure rate;
+- Howard's Scroggins passing efficiency vs the pregame uncertainty;
+- Eden James rushing success and early-down conversion;
+- A&M defensive yards/play and explosive-play allowance;
+- whether "QB continuity" was overweighted relative to Howard's defensive/field-position edge;
+- whether the +2.5 cushion was incorrectly treated as broad enough despite a credible Howard separation branch.
+
+Regardless of result, audit:
+- actual drive count / neutral pace;
+- third/fourth-down conversion;
+- red-zone TD vs FG conversion;
+- turnover/short-field scores;
+- punt/field-position effects;
+- any weather interruption or wet-ball mechanism.
+
+---
+
+## 12. Source-quality audit
+
+**Official / field-owner**
+- Howard Athletics — schedule, neutral site, kickoff, roster, 2025 stats, 2026 preseason personnel and coaching regime.
+- Alabama A&M Athletics — schedule, roster, 2025 stats, Brown history, 2026 preseason personnel.
+- MEAC and SWAC — competition identity, TV/kickoff, preseason conference context.
+- National Weather Service Peachtree City / Atlanta point forecast — weather.
+
+**Secondary use**
+- ESPN game log for Brown was used only to corroborate the official A&M season totals and game-by-game passing outputs.
+
+No sportsbook editorial model or public pick is used as a controlling forecast input.
+
+---
+
+## 13. Issued forecast freeze
+
+**P-189/V01 — frozen 19:24:51 EDT, pregame**
+
+1. Alabama A&M +2.5  
+2. Under 46.5  
+3. Over 46.5  
+4. Howard -2.5  
+
+**Potential winner:** Alabama A&M — slight LEAN  
+**Central score corridor:** Alabama A&M 24–21 / 23–21, with Howard 24–23 retained as a central counter-branch.  
+**Probability:** `NOT_GENERATED / NOT PUBLISHED`  
+**Value:** `NO VALUE DETERMINABLE`
+
+Any game action first known after the frozen cutoff is excluded from this forecast and belongs only to later settlement/retrospective.
+
+---
+
+## Controlling continuation snapshot — after P-189
+
+| Field | Current value |
+|---|---|
+| Latest canonical event | `P-189` |
+| Next canonical ID | **`P-190`** |
+| Open forecast queue | `P-187`, `P-188`, `P-189` pending settlement/final |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+
+
+
+# P-190 — New Zealand Warriors (W) vs St George Illawarra Dragons (W) — NRLW Round 9
+
+## Event freeze
+- Venue: Go Media Stadium, Auckland.
+- Scheduled kickoff: 2026-08-30 13:45 NZST / 11:45 Australia/Melbourne.
+- Frozen cutoff: 2026-08-30 13:30 NZST / 11:30 Australia/Melbourne.
+- State: PREGAME.
+- Method: MDS-2026.08.29-v2.6 qualitative champion.
+- Probability: NOT_GENERATED / NOT PUBLISHED.
+- Value: NO VALUE DETERMINABLE.
+
+## Final teams and key availability
+Warriors: Anastasia Sekene; Lavinia Tauhalaliku, Mele Hufanga, Stacey Waaka, Tysha Ikenasio; Gayle Broughton, Patricia Maliepo; Annetta Nuuausala, Jasmin Huriwai, Matekino Gray, Kaiyah Atai, Shakira Baker, Maarire Puketapu. Bench: Capri Paekau, Harata Butler, Ivana Lauitiiti, Ashlee Matapo. Apii Nicholls, Emmanita Paki, Mya Hill-Moana and Payton Takimoana are unavailable. Sekene debuts at fullback; Gray and Tauhalaliku return.
+
+Dragons: Teagan Berry; Maria Paseka, Tyra Ekepati, Tahlia O'Brien, Jayme Millard; Zali Hopkins, Kasey Reh; Amelia Huakau, Brooke Anderson, Ruby-Jean Kennard-Ellis, Montana Clifford, Ella Koster, Hannah Southwell. Bench: Tori Shipton, Seriah Palepale, Trinity Tauaneai, Keele Browne. Taliah Fuimaono, Shenae Ciesiolka and Nita Maynard-Perrin are out. Anderson shifts to hooker and Southwell to lock.
+
+## Current season state
+Warriors: 4-4, 172 points for, 196 against. Recent: lost 30-22 to Wests Tigers and 66-8 to the Roosters. Their New Zealand results have been materially stronger, including 32-10 over Canterbury, 42-4 over North Queensland and 22-14 over Newcastle.
+
+Dragons: 1-7, 92 points for, 206 against. Recent: lost 16-12 to Wests Tigers, 26-10 to Gold Coast and 32-28 to North Queensland. The Round 8 loss is an important counter-signal because the Dragons scored six tries.
+
+## Weather
+Auckland was mostly cloudy, around 17 C and windy near the cutoff, with spotty afternoon shower risk. This is treated as bidirectional: possible handling/kicking suppression, but also error/short-field risk.
+
+## Joint score tree
+Central suppressed states: Warriors 26-12, 28-14, 30-14.
+Competitive Dragons states: Warriors 26-18, 28-18, 24-20.
+Warriors separation states: 32-12, 34-14, 36-10.
+Open-game states: 32-20, 34-18, 30-22.
+
+## P-190/V01 ranking
+1. Under 47.5 points — LEAN, MEDIUM.
+2. Dragons +15.5 — LEAN / THIN, MEDIUM-LOW.
+3. Warriors -15.5 — FORCED RANK, MEDIUM-LOW.
+4. Over 47.5 points — FORCED RANK, MEDIUM-LOW.
+
+Potential winner: New Zealand Warriors — LEAN.
+
+## Main reasoning
+Under 47.5 ranks first because the strongest central states remain in the low-to-mid 40s. The Warriors' stronger New Zealand/home regime, the Dragons' additional role disruption, a debut Warriors fullback and windy/showery conditions all support less clean sustained scoring than a two-way shootout.
+
+Dragons +15.5 ranks second because a 16+ Warriors margin is a materially stronger requirement than an outright Warriors win. The Dragons have just shown a six-try attacking ceiling and have recent narrow losses, while the Warriors have key spine/backline changes.
+
+Warriors -15.5 remains a credible third-ranked separation branch because the Warriors are the stronger winner, have previously produced large New Zealand wins and face a 1-7 Dragons side with current role reshuffling.
+
+Over 47.5 ranks fourth. It requires the Warriors' recent defensive collapse to persist, a short-field/error cluster, or both teams to convert attacking opportunities efficiently.
+
+## Rank #1 retrospective trigger
+If Under 47.5 loses, review set count, completion rate, field position, line breaks, missed tackles, goal-line entries, try conversion, weather/handling direction, goal-kicking and any sin-bin/injury branch.
+
+## Continuation
+Next canonical ID: P-191.
+Open queue at issue: P-187 schedule-conflicted/upcoming; P-188 live/pending settlement; P-189 live/pending settlement; P-190 pregame.
+
+---
+
+# Settlement sweep before P-191
+
+## P-188 — Boston Red Sox @ New York Yankees — SETTLED
+Official final: **Yankees 9, Red Sox 2**.
+
+| Rank | Contract | Result |
+|---:|---|---|
+| 1 | Boston +1.5 | LOSS |
+| 2 | Yankees ML | WIN |
+| 3 | Under 7.0 | LOSS |
+| 4 | Over 7.0 | WIN |
+
+Potential winner Yankees: **WIN**.
+
+**Rank-1 retrospective:** Boston +1.5 remained live deep into the game, but New York turned a 4-2 game into 9-2 with a five-run eighth. The forecast correctly retained an upper-total/bullpen-cluster branch, but underweighted a one-sided late-relief separation path. Preserving Boston's closer did not protect the cushion while Boston was trailing; the relevant state was the middle/low-leverage chain before a save situation existed. Candidate lesson: for baseball +1.5, explicitly stress the trailing-team relief hierarchy and one-sided late cluster even when the central total is low.
+
+## P-189 — Alabama A&M vs Howard — SETTLED
+Official final: **Howard 31, Alabama A&M 24**.
+
+| Rank | Contract | Result |
+|---:|---|---|
+| 1 | Alabama A&M +2.5 | LOSS |
+| 2 | Under 46.5 | LOSS |
+| 3 | Over 46.5 | WIN |
+| 4 | Howard -2.5 | WIN |
+
+Potential winner Alabama A&M: **LOSS**.
+
+**Rank-1 retrospective:** Howard led 13-0, Alabama A&M recovered to lead 24-23 with 7:49 left, then Howard hit a 51-yard touchdown with 2:41 remaining and added two points for the final seven-point margin. Brown IV still threw for 254 yards and two touchdowns, so the A&M QB-continuity thesis was not fictitious. The main error was treating uncertainty in Howard's new offensive regime too directionally against Howard rather than widening both tails. The late explosive-score branch was also underweighted for both spread and total.
+
+## P-190 — Warriors (W) vs Dragons (W) — SETTLED
+Official final: **Dragons 22, Warriors 18**.
+
+| Rank | Contract | Result |
+|---:|---|---|
+| 1 | Under 47.5 | WIN |
+| 2 | Dragons +15.5 | WIN |
+| 3 | Warriors -15.5 | LOSS |
+| 4 | Over 47.5 | LOSS |
+
+Potential winner Warriors: **LOSS**.
+
+The total/cushion structure was correct: 40 total points and a competitive Dragons path. The weaker element was winner allocation: two Dragons tries in the final five minutes flipped an 18-14 Warriors lead. Rank #1 process remains broadly compliant; late finishing/man-down states matter more for the winner branch than the total centre.
+
+---
+
+# P-191 — Walyalup (Fremantle W) vs Carlton W — AFLW Round 3
+
+## Event freeze
+- Venue: **Cockburn ARC Oval, Western Australia**.
+- Scheduled start: **30 Aug 2026, 3:05 PM AWST / 5:05 PM Australia/Sydney**.
+- Forecast refresh: approximately **2:48 PM AWST / 4:48 PM Australia/Sydney**.
+- GAME-STATE: **PREGAME**; current official/ABC pages showed no live score.
+- Method: **MDS-2026.08.30-v2.7** qualitative champion.
+- Target: `AFLW_JOINT_FINAL_SCORE-v1` — official final scores at the final siren; margin and total derived from the same joint score tree.
+- Prices/operator terms: not supplied; no value claim.
+- Late changes: no field-owning late-change bulletin found at final refresh; last confirmed selection releases control.
+
+## Contracts
+1. Fremantle +11.5
+2. Carlton -11.5
+3. Over 85.5
+4. Under 85.5
+
+## Current selection regime
+**Fremantle/Walyalup:** Holly Egan and Noa McNaughton debut; Georgie Brisbane returns for her first home-and-away match of 2026. Ash Brazill is out in concussion protocols; Laura Pugh and Tunisha Kikoak were omitted. Brazill's absence removes an experienced defensive/transition role, while Brisbane and McNaughton add forward options but with limited current AFLW sample.
+
+**Carlton:** Tara Bohanna returns for Brooke Vickers; otherwise the Blues retain a settled side from their 2-0 start. Bohanna kicked 15 goals in 2025 and adds another established forward target.
+
+## Territory / scoring-shot evidence
+**Carlton:**
+- R1 beat St Kilda 66-40, kicking 9.12: **21 scoring shots**; won clearances 32-22.
+- R2 beat Adelaide 50-23, kicking 7.8: **15 scoring shots**. Adelaide finished +12 inside 50s, but Carlton's defence repelled shallow entries and Carlton generated cleaner scoring opportunities.
+- Current mechanism: contest/spread -> transition -> higher-quality entries -> multiple scoring sources, with strong defensive interception/shot-quality suppression.
+
+**Fremantle:**
+- R1 lost to Port Adelaide 20-41, kicking 2.8: **10 scoring shots**. Fremantle had 11 first-quarter inside 50s but kicked 0.4.
+- R2 beat Collingwood 50-30, again on exactly **10 scoring shots**, but converted 8.2. Fremantle won inside 50s 40-29 and controlled possession; Mim Strom was dominant in ruck/clearance work.
+- The same 10-shot volume produced 20 one week and 50 the next. Therefore recent points cannot be projected without conversion sensitivity.
+
+## Weather / venue
+Cockburn conditions were sunny/mostly sunny, mid-20s Celsius, negligible rain risk and light wind. Weather is effectively neutral and does **not** supply an Under shortcut. Cockburn is Fremantle's new AFLW home base, but the Dockers already lost their first premiership match there, so no strong automatic home coefficient is applied.
+
+## Conversion-sensitive score tree
+- Lower conversion / Carlton control: **44-28, 46-30, 42-32** Carlton.
+- Central: **48-32, 50-34, 52-35** Carlton.
+- Fremantle home-pressure branch: **43-36, 45-38 Carlton; 42-39 Fremantle**.
+- High-conversion/open branch: **57-40, 59-38, 53-44 Carlton**.
+
+## P-191/V01 ranking
+| Rank | Contract | Verdict | Evidence | Reason |
+|---:|---|---|---|---|
+| 1 | **Carlton -11.5** | LEAN | MEDIUM | Carlton has won by 26 and 27, owns the more stable midfield/front-half regime, adds Bohanna, while Fremantle loses Brazill and has two debutants. Low aggregate scoring can still coexist with Carlton separation through Fremantle suppression. |
+| 2 | **Under 85.5** | LEAN / THIN | MEDIUM-LOW | Fremantle has only 10 scoring shots in each game and Carlton's defence has suppressed shot quality. Three of four current game totals involving these sides are below 85.5. Dry conditions and extra forward personnel prevent stronger confidence. |
+| 3 | **Fremantle +11.5** | FORCED RANK / credible counter-branch | MEDIUM-LOW | Home ground, Strom/Bowers contest strength and the 2025 nine-point H2H create a close-game route. It ranks below Carlton because current 2026 performance and Fremantle's defensive personnel change strengthen the ordinary Carlton separation path. |
+| 4 | **Over 85.5** | FORCED RANK | MEDIUM-LOW | Needs combined scoring-shot volume nearer the upper branch and/or strong conversion. Carlton can carry much of the total, but Fremantle's ordinary shot-volume centre keeps this fourth. |
+
+## Potential winner
+**Carlton — LEAN**.
+
+Main path: stable midfield and front-half, multiple scoring sources, Bohanna return, and Fremantle's Brazill absence. Strongest kill path: Strom/Bowers control stoppage/territory, Fremantle's returning forwards improve shot quality, and Carlton's first interstate trip suppresses its transition efficiency.
+
+## Rank-1 kill paths
+Carlton -11.5 loses if Fremantle holds Carlton around the low/mid-40s while reaching the mid-30s; Fremantle's new forward mix materially lifts inside-50 efficiency; the interstate trip reduces Carlton's transition; or Carlton's first-two-round defensive shot-quality edge regresses.
+
+If Rank #1 loses, retrospect clearances, inside-50s, marks inside 50, scoring shots, shot quality/pressure, conversion, and Brazill replacement effects before changing any rule weight.
+
+## Issued freeze
+1. **Carlton -11.5**
+2. **Under 85.5**
+3. **Fremantle +11.5**
+4. **Over 85.5**
+
+Potential winner: **Carlton**.
+Central score corridor: **Carlton 48-32 / 50-34 / 52-35**.
+Probability state: `NOT_GENERATED / NOT PUBLISHED`.
+Value state: `NO VALUE DETERMINABLE`.
+
+Next canonical ID: **P-192**.
+
+
+---
+
+# P-192 — SSG Landers @ KIA Tigers — KBO
+
+## Status
+**POSTPONED / RAIN — NO ACTIONABLE FORECAST ISSUED**
+
+The 2026-08-30 KBO game at Gwangju-KIA Champions Field was scheduled for 18:00 KST but was officially postponed because of rain before first pitch. This P-192/V01 entry preserves the research state and a conditional matchup ordering only. It is not performance-eligible and must not be graded as a forecast.
+
+## Frozen event identity
+- Competition: 2026 KBO regular season
+- Event: SSG Landers @ KIA Tigers
+- Original venue: Gwangju-KIA Champions Field
+- Original start: 2026-08-30 18:00 KST / 19:00 Australia/Melbourne
+- Actual state: POSTPONED — rain
+- Originally announced starters: SSG RHP Lee Jun-ki vs KIA RHP James Naile
+- Operator terms: NOT SUPPLIED
+- Probability state: NOT_GENERATED / NOT_PUBLISHED
+- Value state: NO VALUE DETERMINABLE
+- Performance role: EXCLUDED — POSTPONED BEFORE FIRST PITCH
+
+## Original supplied contracts
+1. SSG Landers +1.5
+2. KIA Tigers -1.5
+3. Combined Over 9.5
+4. Combined Under 9.5
+
+## Starter evidence before postponement
+
+### James Naile — KIA
+- 24 games, 140 2/3 IP
+- 9-5, 3.71 ERA
+- Four consecutive quality starts entering the scheduled game
+- 3 starts / 18 IP vs SSG in 2026 with a 3.50 ERA
+
+### Lee Jun-ki — SSG
+Scheduled first KBO start.
+- First-team sample: 3 IP, 6.00 ERA
+- 2026 Futures: 16 G, 75 1/3 IP, 3-5, 2.75 ERA
+- 63 H, 4 HR, 15 BB, 53 SO
+- Opponent BA .230
+
+The Futures record creates a legitimate good-start branch, but first-team starter exposure remained highly uncertain.
+
+## KIA lineup published before postponement
+1. Park Jae-hyun — LF
+2. Lee Ho-yeon — 2B
+3. Kim Do-young — 3B
+4. Harold Castro — 1B
+5. Na Sung-bum — RF
+6. Kim Sun-bin — DH
+7. Kim Ho-ryeong — CF
+8. Kim Tae-gun — C
+9. Jeong Hyeon-chang — SS
+
+A current field-owning SSG starting nine was not verified before the cancellation, so no exact SSG batting-order assumption is frozen into this conditional card.
+
+## Team / matchup baseline
+- KIA: 63-50-2, 3rd
+- SSG: 48-65-5, 9th
+- KIA entered on a three-game winning streak
+- KIA held a 9-3-1 season H2H advantage entering the scheduled game
+- The previous night's game went 10 innings, KIA winning 2-1
+- SSG had scored 13, 6 and 7 in its previous three wins over Hanwha before being held to 1 by KIA
+
+## Conditional joint run tree
+Only relevant if the same starter/participant regime is retained on the rescheduled date.
+
+### KIA-control branch
+Representative scores:
+- KIA 4-2
+- KIA 5-2
+- KIA 5-3
+
+### Close branch
+Representative scores:
+- KIA 4-3
+- KIA 5-4
+- SSG 4-3
+
+### KIA separation branch
+Representative scores:
+- KIA 6-2
+- KIA 7-3
+- KIA 8-3
+
+### High-total branch
+Representative scores:
+- KIA 7-4
+- KIA 8-5
+- SSG 6-5
+
+## Conditional research ordering
+**NON-ACTIONABLE — full re-verification required on rescheduled date**
+
+1. **KIA Tigers -1.5 — LEAN, CONDITIONAL**
+2. **Under 9.5 runs — LEAN / THIN, CONDITIONAL**
+3. **SSG Landers +1.5 — FORCED RANK, CONDITIONAL**
+4. **Over 9.5 runs — FORCED RANK, CONDITIONAL**
+
+### Potential winner
+**KIA Tigers — LEAN, conditional on the same starter/participant regime.**
+
+## Reissue requirements
+Before any rescheduled P-192 forecast:
+1. verify the new official date/time and venue;
+2. reconfirm both starters;
+3. reconfirm both starting lineups;
+4. rebuild bullpen availability from the new preceding workload;
+5. refresh injuries/roster moves;
+6. refresh weather;
+7. rebuild the joint run tree;
+8. freeze a new P-192 view before first pitch.
+
+## Continuation
+This event occupies canonical ID **P-192** but has no performance-eligible forecast in V01.
+
+**Next distinct event ID: P-193.**
+
+
+---
+
+# P-193 — Essendon (W) vs Richmond (W) — AFLW Round 3
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026 NAB AFLW Premiership Season — Round 3 / Indigenous Round |
+| Event | Essendon vs Richmond |
+| Venue | TIO Stadium, Darwin, Northern Territory |
+| Official latest start | 2026-08-30 18:50 ACST / 19:20 AEST (Australia/Sydney/Melbourne) |
+| Forecast cutoff | 2026-08-30 19:16 AEST / 18:46 ACST |
+| GAME-STATE | **PREGAME** at cutoff |
+| Target | `AFLW_JOINT_FINAL_SCORE-v1` |
+| Endpoint | Final siren; home-and-away draw permitted |
+| Decision set | `DS-P193-V01` |
+| Dependence group | `DG-P193-JOINT-SCORE` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+If first bounce occurs after the frozen cutoff but before delivery, no subsequent score, possession, injury or other live information is permitted to change this V01 ranking.
+
+## Supplied contracts
+1. Essendon +2.5
+2. Richmond -2.5
+3. Over 83.5 points
+4. Under 83.5 points
+
+## Current teams / availability
+
+### Essendon
+Confirmed changes:
+- IN: Brooke Walker, Sophie Van De Heuvel
+- OUT: Maddison Gay (shoulder), Chloe Adams (omitted)
+
+Additional injury context:
+- Maddison Gay: posterior shoulder subluxation, unavailable.
+- Emma Dineen: back, unavailable.
+- Brooke Brown: season-ending bone-stress injury.
+- Daria Bannister and Amelia Radford remained on the injury list/test states.
+
+Role impact:
+Walker and Van De Heuvel restore defensive/transition options, but Gay's absence removes a current intercept/defensive piece. Essendon's back-half regime therefore improves in depth without becoming fully stable.
+
+### Richmond
+Confirmed change:
+- IN: Georgia Stubs (AFLW debut)
+- OUT: Maddie Shevlin (omitted)
+
+Unavailable:
+- Ellie McKenzie — arm, expected Round 4-5.
+- Baia Pugh — high-grade ankle sprain, expected Round 4.
+
+Richmond retains Monique Conti, Emelia Yassir, Poppy Kelly, Gabby Seymour, Katie Brennan, Olivia Wolmarans, Caitlin Greiser and Mackenzie Ford in its current structure.
+
+## 2026 current process baseline
+
+### Essendon — 0-2
+Round 1: Brisbane 85, Essendon 37 — total 122.
+- Brisbane restricted Essendon to four inside 50s in Q1.
+- Repeated Brisbane forward-half pressure overwhelmed Essendon's defence.
+- Essendon kicked 6.1: only seven scoring shots.
+
+Round 2: Sydney 66, Essendon 42 — total 108.
+- Essendon improved to 6.6: 12 scoring shots.
+- Sophie Alexander kicked three.
+- Maddy Prespakis, Amy Gaylor and Georgia Nanscawen remained important midfield contributors.
+
+Interpretation:
+Essendon's raw 0-2 record came against two strong/top-four-calibre opponents. The major concern is defensive shot suppression, not an inability to score at all.
+
+### Richmond — 1-1
+Round 1: Richmond 46, Collingwood 28 — total 74.
+- Richmond won inside 50s 43-24.
+- Won clearances 25-17, including centre clearances 10-2.
+- Kicked 6.10 from 16 scoring shots: strong territorial/shot volume but inefficient conversion.
+
+Round 2: Western Bulldogs 48, Richmond 37 — total 85.
+- Richmond managed only eight inside 50s in the first half, its equal-lowest halftime figure on record.
+- Finished 5.7 from 12 scoring shots.
+- Conti: 26 disposals, six clearances, seven inside 50s.
+- Wolmarans kicked three goals and has four goals across her first two games.
+
+Interpretation:
+Richmond's midfield/territory ceiling is real through Conti, but the non-Conti midfield and forward-entry chain remains less stable. The absence of Ellie McKenzie removes another high-value movement/contest pathway.
+
+## Direct prior
+2025 Round 3: Essendon 6.7 (43) defeated Richmond 3.10 (28), a 15-point Essendon win.
+
+This is descriptive only; current coaches/personnel differ materially.
+
+## Venue / weather
+Darwin at the match window:
+- approximately 30°C around 6:30pm,
+- clear / 0% rain through 6:30-9:30pm,
+- humid conditions around the 50% range,
+- light-to-moderate evening wind.
+
+Mechanism treatment:
+Heat/humidity is not automatically Over or Under. It can:
+- reduce repeated high-intensity running and clean disposal;
+- increase late fatigue and defensive spacing;
+- increase interchange/recovery dependence;
+- create a late-scoring tail if one side's pressure/transition defence breaks down.
+
+Both clubs prepared specifically for the Darwin heat, so no one-sided conditioning assumption is made.
+
+## One coherent score tree
+
+### Essendon-control / lower-total branch
+Representative scores:
+- Essendon 43-32
+- Essendon 45-34
+- Essendon 42-35
+
+Mechanisms:
+Prespakis/Gaylor/Nanscawen compete well at stoppage, Essendon's defensive inclusions improve transition defence, and Richmond struggles to convert territory.
+
+Favours:
+Essendon +2.5, Under 83.5.
+
+### Central competitive branch
+Representative scores:
+- Essendon 44-40
+- Essendon 45-41
+- Richmond 43-41
+
+Mechanisms:
+Both sides generate roughly 11-14 scoring shots; neither fully controls field position. Richmond's Conti/Wolmarans pathway and Essendon's Prespakis/Toogood/Alexander pathway both remain functional.
+
+Favours:
+Essendon +2.5 strongly; total sits directly around the 83.5 boundary.
+
+### Richmond territorial branch
+Representative scores:
+- Richmond 47-38
+- Richmond 48-40
+- Richmond 46-39
+
+Mechanisms:
+Conti wins repeat clearances/inside-50 supply, Essendon's defensive issues persist despite returning personnel, and Wolmarans/Brennan/Greiser convert enough entries.
+
+Favours:
+Richmond -2.5; Over becomes more live if Essendon still scores around 40.
+
+### Heat/fatigue open branch
+Representative scores:
+- Essendon 50-43
+- Richmond 49-42
+- Essendon 48-45
+
+Mechanisms:
+late defensive spacing deteriorates, repeat entries produce higher-quality shots and both forward lines convert.
+
+Favours:
+Over 83.5.
+
+## Frozen P-193/V01 ranking
+
+| Rank | Contract | Verdict | Evidence | Core reason |
+|---:|---|---|---|---|
+| **1** | **Essendon +2.5** | **LEAN** | **MEDIUM** | Essendon has faced materially stronger opposition than Richmond, retains a credible midfield/forward scoring core, regains Walker and Van De Heuvel, and the +2.5 cushion wins on any Essendon victory or 1-2 point Richmond win. Richmond is without Ellie McKenzie and its Round 2 first-half entry creation was poor. |
+| **2** | **Under 83.5** | **LEAN / THIN** | **MEDIUM-LOW** | Richmond has scored only 46 and 37 with 16 then 12 scoring shots; Essendon regains defensive personnel. A large part of Essendon's current high totals came from elite opponents generating 21-25 scoring shots, which Richmond has not yet shown consistently. |
+| **3** | **Over 83.5** | **FORCED RANK / LIVE COUNTER-BRANCH** | **MEDIUM-LOW** | Essendon's games have reached 122 and 108, its defence remains vulnerable, and Darwin heat can create late fatigue/separation. But those totals were opponent-driven and 83.5 still requires Richmond to exploit Essendon's defence or both sides to convert efficiently. |
+| **4** | **Richmond -2.5** | **FORCED RANK** | **MEDIUM-LOW** | Richmond's Conti/Wolmarans core and Essendon's 0-2 start create a real win-and-cover path, but -2.5 is less robust than the Essendon cushion given schedule strength, McKenzie's absence, Essendon's returning defenders and the 2025 matchup prior. |
+
+## Potential winner
+**Essendon — LEAN**
+
+Primary mechanisms:
+- tougher opening schedule than Richmond;
+- Maddy Prespakis-led midfield can generate enough territory against a Richmond midfield overly dependent on Conti;
+- Walker/Van De Heuvel improve current defensive/transition options;
+- Toogood/Alexander give Essendon usable forward targets.
+
+Strongest kill path:
+Richmond wins the clearance/territory chain through Conti, Essendon remains unable to suppress repeated entries, and Wolmarans plus the experienced Richmond forwards convert the resulting shot volume.
+
+## Final freeze
+1. Essendon +2.5
+2. Under 83.5
+3. Over 83.5
+4. Richmond -2.5
+
+Potential winner: Essendon — LEAN.
+
+No internal probabilities are generated or published. No value claim is made without same-time prices.
+
+**Next canonical distinct event ID: P-194.**
+
+
+
+---
+
+# P-194 — FC St. Pauli vs 1. FC Kaiserslautern — Germany 2. Bundesliga
+
+## Event / state freeze
+- Competition: 2026/27 2. Bundesliga — Matchday 3
+- Venue: Millerntor-Stadion, Hamburg
+- Scheduled kickoff: 2026-08-30 13:30 CEST / 21:30 Australia/Melbourne
+- Frozen cutoff: 2026-08-30 13:29:45 CEST / 21:29:45 Australia/Melbourne
+- GAME-STATE: PREGAME
+- Method: MDS-2026.08.30-v2.7 qualitative champion
+- Goal target: SOCCER_REGULATION_JOINT_GOALS-v1
+- Corner target: SOCCER_MATCH_CORNERS-STP-v1
+- Probability state: NOT_GENERATED / NOT_PUBLISHED
+- Value state: NO VALUE DETERMINABLE
+
+No information first known after the frozen cutoff may change this V01 forecast.
+
+## Decision set
+1. 1H Over 0.5 goals
+2. 1H Under 0.5 goals
+3. FT Over 2.5 goals
+4. FT Under 2.5 goals
+5. Generated corner row: St. Pauli Over 5.5 team corners
+
+Corner operator/provider terms were not supplied, so the corner row is capped at FORCED RANK / MEDIUM-LOW evidence.
+
+## Current regime
+
+### St. Pauli
+- League: 1-1 vs Greuther Fürth; 2-2 at Holstein Kiel.
+- Cup: lost 0-2 at Rot-Weiss Essen.
+- Scored three league goals, conceded three.
+- Current secondary near-kickoff lineups listed Hara and Kaars in attack with Hrgota behind.
+- Ceesay was reported available for limited minutes after injury, but his exact matchday role was not field-owner confirmed at cutoff.
+
+### Kaiserslautern
+- League: 0-0 at Wolfsburg; 0-0 vs Karlsruhe.
+- Cup: 0-0 after 90 at Waldhof, won 1-0 in extra time.
+- Therefore three straight 0-0 first halves and three straight 0-0 regulation scorelines entering this match.
+- Current secondary near-kickoff feeds listed Krahl in goal and a back three including Elvedi/Gyamfi/Jacob Rasmussen.
+
+## Weather
+DWD forecast around midday in Hamburg: roughly 20°C, light rain and gusty winds.
+A local forecast also called for afternoon showers and strong southwesterly gusts.
+
+Mechanism:
+- may suppress clean crossing/finishing accuracy,
+- but may increase blocks, clearances and deflections,
+- therefore can support lower finishing without implying low corners.
+
+## Goal-state tree
+Lower/central:
+- 0-0
+- St. Pauli 1-0
+- 1-1
+
+Early-goal branch:
+- HT 1-0, FT 1-0
+- HT 1-0, FT 1-1
+- HT 1-0, FT 2-0
+
+Open tail:
+- 2-1
+- 2-2
+- 3-1
+
+## Corner process
+Recent current corner evidence:
+- St. Pauli: 9 vs Fürth, 5 at Kiel, 1 at RW Essen.
+- Kaiserslautern conceded 9 at Wolfsburg and 11 vs Karlsruhe in the first two league matches.
+- Current specialist long-window rates: St. Pauli ~5.6 corners for/game, Kaiserslautern ~6.4 conceded/game.
+- Current published St. Pauli team-corner line: 5.5.
+- Current match total-corner market: around 10.5.
+
+Mechanism:
+St. Pauli's wingback width through Pyrka/Oppie can create crosses, blocks and clearances against Kaiserslautern's compact back-three/wingback shape. Low goals and high corners can coexist.
+
+## P-194/V01 ranking
+1. **FT Under 2.5 goals — LEAN, MEDIUM**
+2. **St. Pauli Over 5.5 corners — FORCED RANK, MEDIUM-LOW**
+3. **1H Under 0.5 goals — LEAN / THIN, MEDIUM-LOW**
+4. **1H Over 0.5 goals — FORCED RANK / counter-branch, MEDIUM-LOW**
+5. **FT Over 2.5 goals — AVOID / FORCED RANK, MEDIUM-LOW**
+
+## Potential winner
+**FC St. Pauli — FORCED WINNER / LOW CONFIDENCE**
+
+Why:
+- home venue,
+- more current attacking creation,
+- three league goals versus FCK's zero,
+- strong recent second-division H2H.
+
+Why confidence stays low:
+- St. Pauli remains winless this season,
+- FCK has conceded zero in regulation across three competitive matches,
+- the draw is a major central branch,
+- final official XI was not field-owner verified before cutoff.
+
+## Final freeze
+1. Under 2.5 goals
+2. St. Pauli Over 5.5 corners
+3. 1H Under 0.5 goals
+4. 1H Over 0.5 goals
+5. Over 2.5 goals
+
+Potential winner: FC St. Pauli — FORCED WINNER / LOW CONFIDENCE.
+
+Next canonical distinct event ID: **P-195**.
+
+
+
+
+---
+
+# P-195 — KAA Gent vs Club Brugge — Belgium First Division A
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026/27 Jupiler Pro League — Matchday 4 |
+| Event | KAA Gent vs Club Brugge |
+| Venue | Planet Group Arena, Gent |
+| Scheduled kickoff | 2026-08-30 13:30 CEST / 21:30 Australia/Melbourne |
+| Forecast cutoff | ~2026-08-30 13:29 CEST / 21:29 Australia/Melbourne |
+| GAME-STATE | PREGAME at final verified refresh; multiple current live pages still showed "Not started" / no score |
+| Goal target | SOCCER_REGULATION_JOINT_GOALS-v1 |
+| Corner target | SOCCER_TEAM_CORNERS_CLUB-v1 |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | NOT_GENERATED / NOT_PUBLISHED |
+| Value state | NO VALUE DETERMINABLE |
+
+Final field-owner starting XIs were not independently verified at cutoff. Current secondary lineup feeds showed stable recent shapes, but those are treated as projected/secondary only.
+
+## Decision set
+
+User-supplied:
+1. 1H Over 0.5 goals
+2. 1H Under 0.5 goals
+3. FT Over 2.5 goals
+4. FT Under 2.5 goals
+
+Generated corner row:
+5. Club Brugge Over 5.5 team corners.
+
+The corner threshold was current in published market/specialist pages, but the user's sportsbook/provider definition was not supplied, so the row is capped at FORCED RANK / MEDIUM-LOW evidence.
+
+## Current regime
+
+### KAA Gent
+League:
+- 2-0 vs KV Mechelen
+- 2-1 at RAAL La Louvière
+- 6 points from 2 games, 4 goals for, 1 against
+
+First-half states:
+- 2-0 HT vs Mechelen
+- 1-1 HT at La Louvière
+
+Europe:
+- 0-0 vs Hibernian
+- 3-2 win at Hibernian on Thursday 27 Aug to qualify for the Conference League league phase
+
+Context:
+Gent therefore enters on a short turnaround after a high-stakes away match in Edinburgh. This is not an automatic negative scalar; it specifically raises second-half rotation/fatigue uncertainty and may reduce sustained pressing/transition defence.
+
+### Club Brugge
+League:
+- 3-0 vs Kortrijk
+- 3-0 at OH Leuven
+- 1-0 vs Cercle Brugge
+- 9 points from 3 games, 7 goals for, 0 against
+
+First-half scoring:
+- Vetlesen 30' vs Kortrijk
+- Diakhon 26' at OH Leuven
+- Tresoldi 37' vs Cercle
+
+Thus Club has scored before half-time in all three league matches and has yet to concede a league goal.
+
+Recent stable attacking roles have included:
+- Hans Vanaken
+- Carlos Forbs
+- Hugo Vetlesen
+- Mamadou Diakhon
+- Nicolò Tresoldi
+
+Current exact XI remains secondary/projection-only at cutoff.
+
+## Goal-process assessment
+
+### Gent creation
+Gent has scored in both league games and generated multiple first-half chances at home against Mechelen. The 2-0 opener was built through a stronger final 15 minutes of the first half.
+
+### Club suppression
+Club has three league clean sheets and has allowed little scoring despite playing both home and away. This materially strengthens the 1-0/2-0 Club branch and prevents a high-confidence full-game Over.
+
+### Club attack
+Club has scored 7 in 3 league games with goals from multiple roles. The early-scoring pattern has been stable enough to support 1H goal exposure without relying on one scorer.
+
+## Weather
+Current Ghent observations/forecasts:
+- around 20-22°C,
+- cloudy,
+- SW winds roughly 10-20 mph,
+- some forecast sources carried shower risk around the afternoon.
+
+Mechanism:
+wind/showers can reduce cross/shot precision but can also increase blocks, clearances and defensive errors. No automatic total direction is applied.
+
+## Corner process
+
+Current specialist long-window context:
+- Gent around 4.5 team corners per league game; around 4.6 at home.
+- Gent opponents around 5.0 corners overall and ~5.6 in Gent home matches.
+- Club Brugge around 6.9 corners for per league match; ~6.1 away.
+- Current Club Brugge team-corner line: 5.5.
+- Current total-corner market: around 10.5.
+
+Current concrete example:
+Club won 6 corners against Kortrijk while holding 74-75% possession.
+
+Mechanism:
+Club's 4-2-3-1/wing-attacking structure, with wide threats and overlapping fullbacks, creates repeated crossing/end-line/block states. Gent's Thursday travel/short turnaround can increase late territorial defending even if it does not immediately create goals.
+
+This is a separate corner process; low goals and high Club corner volume can coexist.
+
+## Joint goal-state tree
+
+### Club control / low total
+Representative scores:
+- Club 1-0
+- Club 2-0
+- 1-1
+
+Favours:
+- 1H Over remains live if Club scores early
+- FT Under 2.5
+- Club corner Over can still win through sustained territorial pressure
+
+### Central attacking branch
+Representative scores:
+- Club 2-1
+- Club 3-1
+- 2-2
+
+Favours:
+- 1H Over 0.5
+- FT Over 2.5
+- Club corner Over
+
+### Gent resistance branch
+Representative scores:
+- Gent 1-0
+- 1-1
+- Gent 2-1
+
+Mechanisms:
+Gent's home defensive organisation holds and Club's conversion regresses from its 3-0 starts.
+
+Favours:
+- 1H goal direction depends on first score timing
+- Under is stronger in 1-0 / 1-1
+
+### Fatigue/open second half
+Representative scores:
+- Club 3-1
+- Club 3-2
+- 2-2
+
+Mechanism:
+Gent's short turnaround affects transition defence and closing intensity after an initially competitive first half.
+
+Favours:
+- FT Over 2.5
+- Club winner
+- corners can remain elevated
+
+## P-195/V01 ranking
+
+| Rank | Pick | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **1H Over 0.5 goals** | **LEAN** | **MEDIUM** |
+| **2** | **Club Brugge Over 5.5 corners** | **FORCED RANK — derivative/provider cap** | **MEDIUM-LOW** |
+| **3** | **FT Over 2.5 goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **4** | **FT Under 2.5 goals** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **5** | **1H Under 0.5 goals** | **AVOID / FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### Rank 1 — 1H Over 0.5
+Club has scored before half-time in all three league matches; Gent's two league games have also both contained first-half goals. This is supported by actual opening-phase creation, not merely final-score streaks.
+
+Main kill path:
+Club's clean-sheet/control approach and Gent's short-turnaround caution produce a tactical 0-0 opening half.
+
+### Rank 2 — Club Over 5.5 corners
+Club's longer-window corner production sits above the 5.5 threshold, and Gent's opponent-conceded corner profile plus likely Club territorial advantage supports six-plus attempts. The row remains provider-capped because exact operator corner terms were not supplied.
+
+### Rank 3 — FT Over 2.5
+Club has scored 3, 3 and 1 in league play; Gent has scored in both league games and just played a 3-2 European match. The most important Over mechanism is an early goal forcing the losing side to increase attacking exposure.
+
+Why only third:
+Club's three league clean sheets preserve strong 1-0/2-0 branches, so an early first-half goal does not automatically imply 3+ final goals.
+
+### Rank 4 — FT Under 2.5
+The Under has legitimate score families: Club 1-0, Club 2-0, 1-1. Club's defensive regime is the strongest reason.
+
+It ranks below the Over because Gent has scored in both league games, Club's attack has multiple current scoring routes, and Gent's Thursday European turnaround creates a plausible later separation/open-game branch.
+
+### Rank 5 — 1H Under 0.5
+This is directly opposed by the strongest current phase evidence: every Club league match and both Gent league matches have contained a first-half goal.
+
+## Potential winner
+
+**Club Brugge — LEAN**
+
+Reasons:
+- 3-0 league start with 7 scored and 0 conceded
+- materially deeper, stable attacking structure
+- Gent played a high-intensity European qualifier in Scotland only three days earlier
+- current market/external baselines also favour Club, used only as corroboration
+
+Counter-path:
+Gent is 2-0 in league play, has home advantage, has conceded only once in the league, and can keep the game compressed if its defensive structure survives the early Club pressure.
+
+## Final freeze
+
+1. 1H Over 0.5 goals
+2. Club Brugge Over 5.5 corners
+3. FT Over 2.5 goals
+4. FT Under 2.5 goals
+5. 1H Under 0.5 goals
+
+Potential winner: Club Brugge — LEAN.
+
+Next canonical distinct event ID: **P-196**.
+
+
+---
+
+# P-196 — Egypt vs Congo DR — FIBA Basketball World Cup 2027 African Qualifiers
+
+## Frozen state
+- Venue: Dakar Arena, Dakar, Senegal.
+- Scheduled tip: 2026-08-30 12:30 GMT / 22:30 Australia/Melbourne.
+- Frozen cutoff: 2026-08-30 22:21 AEST / 12:21 GMT.
+- GAME-STATE: PREGAME.
+- Method: MDS-2026.08.30-v2.7 qualitative champion.
+- Probability: NOT_GENERATED / NOT_PUBLISHED.
+- Value: NO VALUE DETERMINABLE.
+
+## Current evidence
+Egypt official competition averages at final refresh: 77.4 PPG, 46.6 RPG, 16.9 APG, 50.8% 2PT, 26.7% 3PT, 55.7% FT.
+DR Congo: 66.6 PPG, 39.4 RPG, 16.0 APG, 48.2% 2PT, 23.6% 3PT, 54.8% FT.
+
+Current Window 4:
+- Egypt beat Senegal 76-67 and lost to Côte d'Ivoire 72-66.
+- DR Congo lost to Angola 100-68 and Mali 101-76.
+- Against Angola, DR Congo committed 22 turnovers; Angola recorded 22 steals.
+- Egypt's Senegal win included a 53-45 rebounding edge and 23 offensive rebounds.
+
+Both teams have compressed turnaround. Egypt played Aug 29 at 12:30 Dakar time; DR Congo played at 15:30, leaving roughly 24 and 21 hours respectively before this game.
+
+## Joint score tree
+Central Egypt-control/Under states: 80-62, 82-64, 83-65.
+Egypt-control/Over states: 86-68, 88-70, 90-66.
+Competitive DR Congo cover states: 78-69, 80-70, 79-71.
+Open DR Congo recovery states: 84-75, 86-74.
+
+## P-196/V01 ranking
+1. **Egypt -14.5 — LEAN, MEDIUM**
+2. **Under 151.5 — LEAN / THIN, MEDIUM-LOW**
+3. **DR Congo +14.5 — FORCED RANK / counter-branch, MEDIUM-LOW**
+4. **Over 151.5 — FORCED RANK, MEDIUM-LOW**
+
+### Why Egypt -14.5 ranks first
+Egypt has the stronger current defensive/rebounding process and much better Window 4 results. DR Congo's recent turnover and defensive collapse creates a credible separation branch. The line is still large, and Egypt's poor perimeter/FT shooting can compress margins, so the grade remains LEAN rather than SUPPORTED.
+
+### Why Under 151.5 ranks second
+Egypt's current Window 4 totals are 143 and 138. Egypt's 77.4 PPG plus DR Congo's 66.6 PPG produces a descriptive 144-point baseline. The central state is Egypt winning through defensive suppression and second chances rather than pace. The main kill path is Egypt carrying the total after DR Congo allowed 100 and 101 in its last two games.
+
+### Why DR Congo +14.5 ranks third
+The cushion covers scores such as 78-69 or 80-70. If DR Congo protects the ball and limits Egyptian offensive rebounds, Egypt's weak 3PT/FT shooting can keep the margin inside 15. Current DR Congo process is too unstable to rank it above Egypt.
+
+### Why Over 151.5 ranks fourth
+The best Over route is Egypt carrying the total into an 86-68/88-70 type state. But Egypt itself scored only 76 and 66 in this window, while both teams' official perimeter and FT shooting are weak.
+
+## Potential winner
+**Egypt — LEAN.**
+
+## Final freeze
+1. Egypt -14.5
+2. Under 151.5
+3. DR Congo +14.5
+4. Over 151.5
+
+Potential winner: Egypt — LEAN.
+
+Next canonical distinct event ID: **P-197**.
+
+
+
+
+---
+
+# P-197 — Feyenoord vs ADO Den Haag — Netherlands Eredivisie
+
+## Event / state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026/27 Eredivisie — Round 4 |
+| Event | Feyenoord vs ADO Den Haag |
+| Venue | De Kuip / Stadion Feijenoord, Rotterdam |
+| Scheduled kickoff | 2026-08-30 14:30 CEST / 22:30 Australia/Melbourne |
+| Frozen cutoff | 2026-08-30 14:26 CEST / 22:26 Australia/Melbourne |
+| GAME-STATE | PREGAME |
+| Goal target | `SOCCER_REGULATION_JOINT_GOALS-v1` |
+| Corner target | `SOCCER_TEAM_CORNERS_FEY-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+Any information first known after the frozen cutoff is excluded from this V01 forecast.
+
+## Decision set
+
+User-supplied:
+1. First-half Over 0.5 goals
+2. First-half Under 0.5 goals
+3. Full-time Over 2.5 goals
+4. Full-time Under 2.5 goals
+
+Generated corner row:
+5. Feyenoord Under 7.5 team corners.
+
+The 7.5 corner threshold was present in current published market/specialist pages, but the user's exact corner operator/provider definition was not supplied. The corner row is therefore capped at `FORCED RANK / MEDIUM-LOW`.
+
+## Official / participant state
+
+### Feyenoord — confirmed XI
+Officially reported starting XI:
+- Tjark Ernst
+- Givairo Read
+- Jeremiah St. Juste
+- Tsuyoshi Watanabe
+- Mika Mármol
+- Oussama Targhalline
+- Gjivai Zechiël
+- Luciano Valente
+- Anis Hadj Moussa
+- Ayase Ueda
+- Gaoussou Diarra
+
+Key change:
+- Targhalline starts in place of Charles Vanhoutte.
+
+Current injury context from pregame reporting:
+- Bart Nieuwkoop unavailable
+- Gijs Smal unavailable
+- Jordan Bos unavailable
+- Thomas Beelen unavailable
+- Jakub Moder unavailable
+
+### ADO Den Haag
+A field-owning confirmed XI was not independently retrievable at the frozen cutoff. Current secondary near-kickoff projections consistently centered on:
+- Kilian Nikièma in goal
+- Sylla / Hokke / Mulder or Waem-type defensive structure
+- Juho Kilo in midfield
+- Daryl van Mieghem wide
+- Evan Rottier / Eduardo-type forward roles
+
+Because the final field-owner XI was not verified, these names do not control any decisive participant-specific forecast mechanism.
+
+Current injury reporting consistently listed Cameron Peupion unavailable and Donat Barany unavailable/doubtful, with Jalen Hawkins returning toward availability.
+
+## Current league process
+
+### Feyenoord — 2-1-0, 7 points
+Results:
+- Sparta Rotterdam 0-1 Feyenoord
+- Feyenoord 2-2 Go Ahead Eagles
+- Cambuur 2-5 Feyenoord
+
+Goals:
+- 8 scored
+- 4 conceded
+
+Recent process:
+- vs Sparta: 22 shots, 6 on target, ~3.18 xG, 10 corners
+- vs Go Ahead: 27 shots, 6 on target, ~2.8 xG, 6 corners
+- vs Cambuur: 14 shots, 7 on target, ~2.6 xG, 3 corners
+
+Interpretation:
+Feyenoord's attacking creation has been consistently strong even when scoring output varied. The 1-0 Sparta result materially under-converted a large chance volume; the 5-2 Cambuur game represented the upper conversion branch.
+
+### ADO Den Haag — 0-0-3, 0 points
+Results:
+- AZ 2-0 ADO
+- ADO 1-4 Groningen
+- Go Ahead Eagles 3-1 ADO
+
+Goals:
+- 2 scored
+- 9 conceded
+
+Process:
+- vs AZ: ADO allowed ~2.7 xG and lost 2-0
+- vs Groningen: allowed ~3.4 xG, 17 shots, 14 on target, lost 4-1
+- vs Go Ahead: allowed only ~1.0 xG but still conceded three, while ADO generated ~1.0 xG
+
+Interpretation:
+ADO's defensive weakness is not only a final-score streak. Two of the three games contained high-quality opponent chance creation, while the Go Ahead match also demonstrates an ordinary finishing/goalkeeper/error tail can still produce multiple conceded goals without huge xG.
+
+## First-half state
+
+Feyenoord:
+- vs Go Ahead: led 2-0 at halftime
+- vs Cambuur: led 4-0 at halftime
+- vs Sparta: lower-scoring/late-conversion branch
+
+ADO:
+- vs AZ: 0-0 at halftime
+- vs Groningen: trailed 0-3 at halftime
+- vs Go Ahead: trailed 0-2 at halftime
+
+Thus four of the six current team-games contained at least one first-half goal, and the strongest current mismatch states have produced early opponent scoring against ADO.
+
+## Weather
+
+KNMI's afternoon forecast for the Netherlands called for showers, possible heavy bursts/thunder, temperatures around 20°C and gusty west/southwesterly winds.
+
+No automatic Under is applied.
+
+Mechanisms:
+- wind/rain can reduce crossing/shot precision;
+- can increase goalkeeper/defensive handling errors;
+- can increase blocks and clearances;
+- therefore it widens conversion/corner variance rather than forcing one total direction.
+
+## Goal-state tree
+
+### Feyenoord control / central Over
+Representative scores:
+- Feyenoord 3-0
+- Feyenoord 3-1
+- Feyenoord 4-0
+
+Mechanisms:
+- sustained shot/box-entry advantage
+- ADO's defensive structure fails to suppress central/wide creation
+- Ueda/Hadj Moussa/Diarra convert enough of Feyenoord's volume
+
+Favours:
+- FT Over 2.5
+- 1H Over 0.5
+- Feyenoord winner
+
+### Feyenoord low-conversion control
+Representative scores:
+- Feyenoord 2-0
+- Feyenoord 1-0
+
+Mechanisms:
+- Feyenoord dominates territory but finishing regresses
+- ADO contributes little
+- weather/wind reduces clean finishing
+
+Favours:
+- FT Under 2.5
+- 1H direction depends on opener timing
+
+### ADO contribution / open game
+Representative scores:
+- Feyenoord 3-1
+- Feyenoord 4-1
+- Feyenoord 3-2
+
+Mechanisms:
+- ADO creates transition chances after falling behind
+- Feyenoord's defensive absences/rotation allow one goal
+- score-state produces more open second-half football
+
+Favours:
+- FT Over 2.5
+
+### Tactical / delayed-breakthrough branch
+Representative scores:
+- HT 0-0 -> FT Feyenoord 2-0
+- HT 0-0 -> FT Feyenoord 1-0
+
+Favours:
+- 1H Under 0.5
+- FT Under can survive
+
+## Corner process
+
+Current Feyenoord league corners:
+- 10 at Sparta
+- 6 vs Go Ahead
+- 3 at Cambuur
+
+Current specialist longer-window context:
+- Feyenoord ~6.0 team corners per league game
+- ADO opponents ~5.33 corners per game in the current market snapshot
+- current Feyenoord team-corner line: 7.5
+- specialist current market leaned slightly toward Under 7.5
+
+Mechanism:
+Feyenoord can dominate without needing eight corners, as shown by the five-goal Cambuur match with only three corners. If Feyenoord convert early, later attack can shift from sustained blocked-cross pressure to controlled possession and transition, reducing corner demand.
+
+Kill path:
+ADO defend extremely deep, repeatedly block crosses/shots and concede territory without conceding early, producing 8+ Feyenoord corners.
+
+## P-197/V01 ranking
+
+| Rank | Pick | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **FT Over 2.5 goals** | **LEAN** | **MEDIUM** |
+| **2** | **1H Over 0.5 goals** | **LEAN** | **MEDIUM** |
+| **3** | **Feyenoord Under 7.5 corners** | **FORCED RANK — derivative/provider cap** | **MEDIUM-LOW** |
+| **4** | **FT Under 2.5 goals** | **AVOID / FORCED RANK** | **MEDIUM-LOW** |
+| **5** | **1H Under 0.5 goals** | **AVOID / FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### Rank 1 — FT Over 2.5
+Feyenoord have generated ~2.6-3.2 xG-quality attacking games in all three league matches and have scored five and two in the last two. ADO have conceded nine in three and allowed high-quality chance volume in two of them. The central 3-0 / 3-1 / 4-0 family clears the line without requiring ADO to score.
+
+Main kill path:
+Feyenoord again dominate but under-convert as against Sparta, creating a 1-0 / 2-0 result.
+
+### Rank 2 — 1H Over 0.5
+Feyenoord scored twice before halftime against Go Ahead and four before halftime at Cambuur. ADO conceded three first-half goals to Groningen and two to Go Ahead. The strongest current mismatch branch therefore includes an early Feyenoord breakthrough.
+
+Why below full Over:
+one delayed breakthrough can still produce a 3-0 second-half separation while losing the first-half Over.
+
+### Rank 3 — Feyenoord Under 7.5 corners
+Feyenoord's own current league distribution is 10 / 6 / 3 and the currently published line is 7.5. The attack does not require huge corner volume to score, and an early lead can lower later corner demand.
+
+The exact corner provider/operator is unresolved, so this remains FORCED RANK.
+
+### Rank 4 — FT Under 2.5
+The best Under states are 1-0 and 2-0 Feyenoord. The Sparta opener proves Feyenoord can create heavily without finishing.
+
+It ranks below the Over because ADO's defensive regime has allowed nine goals and Feyenoord's current chance creation is consistently high.
+
+### Rank 5 — 1H Under 0.5
+This requires ADO to survive the opening 45 without conceding and not score themselves. AZ achieved the first part, but Groningen and Go Ahead did not, while Feyenoord's last two matches both contained multiple first-half goals.
+
+## Potential winner
+
+**Feyenoord — LEAN**
+
+Primary reasons:
+- 7 points from 3 vs ADO's 0
+- consistently strong current chance creation
+- confirmed front three of Hadj Moussa, Ueda and Diarra
+- ADO have conceded nine goals and multiple high-xG performances
+- De Kuip home advantage
+
+Why not stronger:
+- Feyenoord still have defensive injuries
+- confirmed ADO XI was not independently field-owner verified
+- Feyenoord's Sparta game demonstrated major under-conversion is possible
+
+## Final freeze
+
+1. FT Over 2.5 goals
+2. 1H Over 0.5 goals
+3. Feyenoord Under 7.5 corners
+4. FT Under 2.5 goals
+5. 1H Under 0.5 goals
+
+Potential winner: Feyenoord — LEAN.
+
+Next canonical distinct event ID: **P-198**.
+
+
+
+
+---
+
+# P-198 — Poland vs Germany — FIBA Basketball World Cup 2027 European Qualifiers
+
+## Event / state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | FIBA Basketball World Cup 2027 European Qualifiers — Second Round, Group K |
+| Event | Poland vs Germany |
+| Venue | ERGO Arena, Gdansk, Poland |
+| Scheduled tip | 2026-08-30 12:45 UTC / 14:45 CEST / 22:45 Australia/Melbourne |
+| Frozen cutoff | 2026-08-30 12:34 UTC / 22:34 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Target | `BASKETBALL_JOINT_FINAL_SCORE-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Operator terms | NOT SUPPLIED |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+The official FIBA game page remained without a live score at the frozen cutoff.
+
+The interrupted Netherlands-Croatia request was not issued or logged, so it does not consume a canonical event ID.
+
+## Confirmed rosters
+
+### Poland
+Aleksander Balcerowski, Kamil Laczynski, Jordan Loyd, Igor Milicic, Dominik Olejniczak, Kuba Pisla, Andrzej Pluta, Mateusz Ponitka, Michal Sokolowski, Szymon Zapala, Przemyslaw Zolnierewicz, Jaroslaw Zyskowski.
+
+Important current-regime note:
+- Jerrick Harding was on Poland's preliminary Window 4 list and remains prominent in broader qualifier averages, but **is not in the confirmed 12 for Germany**.
+- Poland therefore retains Ponitka/Loyd/Balcerowski but loses one major scoring/creation route relative to the broader statistical baseline.
+
+### Germany
+Isaac Bonga, Kay Bruhnke, Oscar da Silva, Tristan da Silva, Malte Delow, David Kramer, Maodo Lo, Kostja Mushidi, Louis Olinde, Dennis Schroder, Daniel Theis, Johannes Thiemann.
+
+Important current-regime note:
+- Germany retains an exceptionally strong senior core: Schroder, Theis, Bonga, Oscar and Tristan da Silva, Lo and Thiemann.
+- The Aug. 30 confirmed roster includes Theis and excludes Nelson Weidemann from the Aug. 27 12.
+
+Starting fives were not yet field-owner confirmed at the cutoff, so exact opening minute allocations remain a mixture rather than fact.
+
+## Current competition state
+
+Group K entering the game:
+- Poland: 7-0, +110 point differential
+- Germany: 6-1, +90
+
+Official FIBA team comparison:
+- Poland: 96.0 PPG, 41.1 RPG, 21.1 APG, 59.8% 2PT, 37.2% 3PT, 79.7% FT
+- Germany: 93.3 PPG, 41.7 RPG, 20.0 APG, 58.0% 2PT, 34.4% 3PT, 80.5% FT
+
+Window 4 openers:
+- Poland beat Israel 106-86
+- Germany beat Netherlands 99-83
+
+Poland's Israel win involved a major shooting ceiling:
+- 60% FG
+- 67.7% 2PT
+- 50% 3PT
+- led essentially wire-to-wire
+
+Germany's current regime:
+- defending world champions
+- Schroder has produced 20+ points and 5+ assists in each of his last three World Cup Qualifier appearances
+- Germany scored 99 against Netherlands in the current window
+
+Home context:
+- Poland have won 10 of their last 12 World Cup Qualifier home games, including the latest five.
+- Their last home qualifier defeat was Germany 72-69 in November 2021.
+
+## Joint possession / efficiency tree
+
+### Competitive Germany win / Poland cover
+Representative scores:
+- Germany 94-90
+- Germany 96-91
+- Germany 92-88
+
+Mechanisms:
+- Germany's superior top-end roster controls late half-court execution.
+- Poland's Ponitka/Loyd creation and home environment prevent large separation.
+- Both teams generate efficient interior and free-throw scoring.
+
+Favours:
+- Poland +8.5
+- Over 180.5 in 94-90 / 96-91 states
+- Germany winner
+
+### Poland home-control branch
+Representative scores:
+- Poland 94-90
+- Poland 97-92
+- Poland 91-88
+
+Mechanisms:
+- Ponitka/Loyd attack Germany's switches successfully.
+- Poland maintains strong defensive rebounding and home-shot confidence.
+- Germany's perimeter shooting remains ordinary.
+
+Favours:
+- Poland +8.5
+- winner flips to Poland
+- total near/above line depending pace
+
+### Germany separation branch
+Representative scores:
+- Germany 99-88
+- Germany 101-89
+- Germany 98-86
+
+Mechanisms:
+- Schroder repeatedly creates paint collapse.
+- Theis/Bonga/da Silva win interior/rebounding matchups.
+- Harding's absence reduces Poland's secondary scoring.
+- Germany's second unit sustains separation.
+
+Favours:
+- Germany -8.5
+- usually Over 180.5 except lower Poland-output branch
+
+### Lower-efficiency / Under branch
+Representative scores:
+- Germany 90-86
+- Germany 92-84
+- Poland 90-87
+
+Mechanisms:
+- Poland's 106-point shooting regresses sharply without Harding.
+- Germany defends the point of attack and limits transition.
+- both teams play more playoff-like half-court possessions in a top-three Group K matchup.
+
+Favours:
+- Poland +8.5
+- Under 180.5
+
+## P-198/V01 ranking
+
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **Poland +8.5** | **LEAN** | **MEDIUM** |
+| **2** | **Over 180.5** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **3** | **Under 180.5** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **4** | **Germany -8.5** | **FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 Poland +8.5
+Poland is 7-0, owns a +110 differential and strong World Cup Qualifier home record. Germany has the stronger top-end roster and is the slight outright winner lean, but an 8.5-point road margin requires genuine separation rather than just late-game superiority.
+
+The cushion covers:
+- any Poland win
+- Germany wins by 1-8
+
+Central Germany 94-90 / 96-91 type states therefore favour the Poland handicap even while Germany remains the winner lean.
+
+Main kill path:
+Harding's absence materially reduces Poland's secondary creation, Germany dominates the interior/transition phases, and the full German roster turns a close first half into a double-digit second-half margin.
+
+### #2 Over 180.5
+Official competition scoring averages sum to about 189.3 points. The current Window 4 openers totaled:
+- Poland-Israel: 192
+- Germany-Netherlands: 182
+
+Both teams possess strong interior efficiency and multiple late-clock creators. Germany's full roster adds high-end shot creation and finishing.
+
+Why only thin:
+180.5 is already a very high threshold, Poland's 106 against Israel came with 60% overall and 50% three-point shooting, and Harding is absent from the confirmed Poland 12. A more tactical 90-86 / 92-84 game is credible.
+
+### #3 Under 180.5
+The Under has a strong ordinary counter-path because:
+- Poland's recent shooting can regress;
+- Harding is absent;
+- this is a direct top-three Group K matchup where both sides may reduce transition risk;
+- Germany has the personnel to defend point-of-attack and switch more effectively than Poland's recent opponents.
+
+It ranks below the Over because both teams' competition scoring profiles are already in the 90s and Germany's current roster is extremely strong offensively.
+
+### #4 Germany -8.5
+Germany is the more talented roster on paper and has won the last three major senior meetings with Poland, including 93-83 and 82-69 in 2022.
+
+However, those H2Hs are old and cannot control the current game. Poland is unbeaten in the current qualification cycle and has a strong home record. Germany -8.5 needs a double-digit-type road separation, which is less robust than Poland's +8.5 cushion.
+
+## Potential winner
+
+**Germany — LEAN**
+
+Reasons:
+- stronger top-end roster and NBA/EuroLeague creation
+- Schroder in elite current qualifier form
+- Theis/Bonga/da Silva frontcourt/defensive flexibility
+- Harding absent for Poland
+
+Why only a lean:
+- Poland is 7-0
+- Poland has +110 point differential
+- home qualifier record is strong
+- Ponitka and Loyd provide enough late-game creation to win or keep the game one-possession
+
+## Final freeze
+
+1. Poland +8.5
+2. Over 180.5
+3. Under 180.5
+4. Germany -8.5
+
+Potential winner: Germany — LEAN.
+
+Central corridor: Germany 94-90 / 96-91, with Poland 94-90 and Germany 99-88 as important adjacent branches.
+
+Next canonical distinct event ID: **P-199**.
+
+
+
+
+---
+
+# P-199 — Frederikshavn White Hawks vs Sønderjyske — Danish Metal Ligaen
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026/27 Danish Metal Ligaen |
+| Event | Frederikshavn White Hawks vs Sønderjyske |
+| Venue | Nordjyske Bank Arena, Frederikshavn |
+| Scheduled puck drop | 2026-08-30 15:00 CEST / 23:00 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 14:46 CEST / 22:46 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Regulation target | `ICE_HOCKEY_REGULATION_JOINT_GOALS-v1` |
+| Match-result target | linked full-match winner state including OT/SO under working market assumption |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+### Contract-definition assumption
+The user's interface labels the side market as **ML**. This card treats ML as **match winner including overtime/shootout**, consistent with currently published matching-event markets from multiple operators. The 6.5 total is treated as a full-match total including OT/SO under the same working assumption.
+
+If the user's actual operator uses regulation-only settlement or a different shootout-goal convention, settlement must be remapped before grading.
+
+## Supplied candidate slate
+
+1. Frederikshavn White Hawks ML
+2. Sønderjyske ML
+3. Over 6.5 goals
+4. Under 6.5 goals
+
+## Participant / roster state
+
+### Frederikshavn
+Current rebuild:
+- new head coach Casper Stockfisch
+- new goalie group led by Lukáš Pařík, with Marcus Bjørn and Magnus Johnsen
+- new/import attack includes Atte Karppinen, Leo Ring, Frank Gymer and Aleksi Halme
+- Louie Roehl and Gustav Nielsen strengthen the blue line
+- Christopher Frederiksen, Christopher Rübenach, Albert Schioldan and other established Danish forwards add depth
+
+The league preview before opening night described Frederikshavn as having almost the full squad available.
+
+**Starting goalie:** NOT OFFICIALLY CONFIRMED in accessible field-owning sources at cutoff. Pařík is the projected/roster lead, but no starter is invented.
+
+### Sønderjyske
+Current rebuild:
+- goalie tandem Thomas Lillie / William Rørth
+- Alexander Ytterell is captain
+- Eric Florchuk is cleared to play
+- Raimonds Vitolins was added as a two-way center/special-teams option
+- Marcus Almquist, Mathias Borring, Frederik Bjerrum and others provide Danish scoring/experience
+- Jarid Lukosevicius was cleared administratively but was reported injured for the opener
+- Albert Grossmann remains a long-term shoulder absence
+
+**Starting goalie:** NOT OFFICIALLY CONFIRMED at cutoff. Lillie started the opener; Rørth remains a plausible short-turnaround branch.
+
+## Current season evidence
+
+### Frederikshavn opener
+Lost 4-3 to Aalborg:
+- trailed 2-0 after the first period
+- recovered to 3-2 by late second-period sequence before Aalborg re-separated
+- scorers included Jesper Bank Olesen, Aleksi Halme and Christopher Rübenach
+- the Finnish/new-look attack showed credible scoring ability
+- Aalborg's opening goals included a power-play goal and a shorthanded goal, showing special-teams/turnover exposure in the White Hawks upper-concession branch
+
+Preseason current-regime examples:
+- lost 4-3 to Aalborg
+- beat Aalborg 3-1 in the return test
+- beat HC Dalen 5-3
+
+### Sønderjyske opener
+Lost 2-1 to Odense:
+- periods: 0-1, 1-1, 0-0
+- Thomas Lillie started in goal
+- Sønderjyske pushed very hard in the third period
+- the low score was partly driven by a standout Emil Zetterquist performance for Odense, so 1 goal cannot be treated as Sønderjyske's stable offensive rate
+
+Current preseason examples:
+- beat Herlev 4-3 after shootout
+- lost 5-1 to Esbjerg while still missing some imports
+- later beat Esbjerg 3-1 in the general rehearsal
+
+## Rest / travel
+
+Both teams played Friday, Aug. 28.
+
+- Frederikshavn remains at home and has no meaningful travel transition.
+- Sønderjyske travels from Vojens to Frederikshavn on the same short recovery window.
+
+Mechanistic interpretation:
+- fatigue can increase defensive mistakes, penalties and late breakdowns;
+- but it can also lower forecheck intensity and shooting quality;
+- goalie rotation becomes more plausible on short turnaround.
+
+Therefore rest is treated as a variance-widening branch rather than an automatic Over.
+
+## Goal / conversion tree
+
+### Low-conversion / goalie-control branch
+Representative regulation scores:
+- Sønderjyske 2-1
+- Sønderjyske 3-2
+- Frederikshavn 3-2
+
+Mechanisms:
+- both teams generate enough attempts but finishing stays ordinary
+- goalie play is stable
+- Sønderjyske's opener-like defensive structure persists
+- Frederikshavn avoids the special-teams mistakes that hurt against Aalborg
+
+Favours:
+- **Under 6.5**
+- either ML remains live
+
+### Sønderjyske control branch
+Representative scores:
+- Sønderjyske 3-1
+- Sønderjyske 4-2
+- Sønderjyske 3-2
+
+Mechanisms:
+- Sønderjyske's deeper current center/defensive structure suppresses Frederikshavn's transition
+- Florchuk/Vitolins/Ytterell help stabilize possession and special teams
+- Frederikshavn's rebuilt lines remain less settled under pressure
+
+Favours:
+- **Sønderjyske ML**
+- often **Under 6.5**
+
+### Frederikshavn home-offence branch
+Representative scores:
+- Frederikshavn 3-2
+- Frederikshavn 4-2
+- Frederikshavn 4-3
+
+Mechanisms:
+- Halme/Ring/Karppinen/Rübenach convert the pace created by White Hawks' skating game
+- Sønderjyske's road/short-rest depth is exposed
+- home ice helps Frederikshavn sustain offensive-zone pressure
+
+Favours:
+- **Frederikshavn ML**
+- Under at 3-2 / 4-2; Over at 4-3
+
+### Open / special-teams / empty-net branch
+Representative scores:
+- Sønderjyske 4-3
+- Frederikshavn 4-3
+- 4-4 regulation, then OT/SO-decided
+
+Mechanisms:
+- penalties or short-handed chances create high-value scoring
+- unresolved goalie mixture lands in a weaker-saving branch
+- trailing team increases attempt volume
+- empty-net or overtime adds the seventh goal
+
+Favours:
+- **Over 6.5**
+
+### Critical OT geometry
+The 2026/27 Metal Ligaen introduced a 3-on-3 overtime "No Return Rule": a team controlling the puck in the offensive zone cannot simply retreat it back over the blue line without consequence.
+
+This makes a 3-3 regulation state important:
+- regulation total = 6
+- an OT winner can turn the full-match score representation into 4-3 = 7 under operators that count the OT goal
+- therefore OT is an explicit Under kill path if the user's total includes OT/SO.
+
+## P-199/V01 frozen ranking
+
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **Under 6.5 goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **2** | **Sønderjyske ML** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **3** | **Frederikshavn White Hawks ML** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **4** | **Over 6.5 goals** | **FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 Under 6.5
+The total requires seven goals to lose. Sønderjyske's opener finished with only three and featured long stretches of defensive structure plus strong late pressure without conversion. Frederikshavn's 4-3 opener demonstrates the kill path, but one goal came on the power play and another Aalborg goal was shorthanded, making special-teams events part of the upper tail rather than a clean five-on-five baseline.
+
+The most central score family is 3-2 / 4-2 / 3-1 rather than 4-3 / 5-3.
+
+Confidence is capped because:
+- neither starting goalie was officially confirmed;
+- Frederikshavn has shown a genuine 3-4 goal offensive ceiling;
+- a 3-3 game plus OT can push a full-match total from six to seven.
+
+### #2 Sønderjyske ML
+Sønderjyske gets the narrow winner edge because its opener showed a stronger defensive-control state than the final 1-2 score suggests: it pressed hard in the third and was repeatedly denied by a standout opposing goalie. Florchuk is now available, Vitolins is integrated, and the roster has more current two-way center/defensive depth than it had early in camp.
+
+However, this is a low-confidence side:
+- Sønderjyske is also 0-1;
+- roster reconstruction remains significant;
+- White Hawks have home ice and no travel;
+- Frederikshavn scored three against a strong Aalborg lineup.
+
+### #3 Frederikshavn ML
+White Hawks have the stronger home and current offensive counter-case:
+- three goals against Aalborg on opening night
+- a deeper rebuilt forward group
+- nearly full availability entering the season
+- no travel on the short turnaround
+
+The side ranks below Sønderjyske because Frederikshavn still showed transition/special-teams mistakes and its current defensive/goalie regime is less proven.
+
+### #4 Over 6.5
+The Over requires a more specific high-conversion branch:
+- goalie weakness/rotation
+- special-teams scoring
+- clustered finishing
+- empty-net/OT seventh goal
+
+Frederikshavn's 4-3 opener and 5-3 preseason win show the ceiling is real, so this is not dismissed. But with current goalie identities unresolved and Sønderjyske just producing a 2-1 game, the framework's sparse-competition conversion cap prevents recent goal totals from overriding the low-conversion branch.
+
+## Potential winner
+
+**Sønderjyske — LEAN / LOW CONFIDENCE**
+
+Primary reasons:
+- stronger defensive-control evidence from the opener than the 1-2 result alone suggests
+- Eric Florchuk available
+- Raimonds Vitolins gives a current two-way center/special-teams reinforcement
+- Ytterell adds experience to the back end
+- external current market pricing generally leans Sønderjyske, used only as a challenger/corroboration source
+
+Strongest kill path:
+Frederikshavn's skating/forecheck game converts home-zone pressure early, the new Finnish forwards continue the attacking form shown against Aalborg, and Sønderjyske's short turnaround/road travel exposes its still-rebuilt depth.
+
+## External-market cross-check
+
+A current matching-event market snapshot had Under 6.5 materially shorter than Over 6.5 and Sønderjyske favored on the moneyline. Other operators showed a much closer winner market.
+
+This is used only as an external challenger/sanity check. It is **not** an internal model probability, and without the user's exact same-time odds there is no value claim.
+
+## Final freeze
+
+1. **Under 6.5 goals**
+2. **Sønderjyske ML**
+3. **Frederikshavn White Hawks ML**
+4. **Over 6.5 goals**
+
+Potential winner: **Sønderjyske — LEAN / LOW CONFIDENCE**.
+
+Central score corridor: Sønderjyske 3-2 / 4-2, Frederikshavn 3-2 counterbranch.
+
+Next canonical distinct event ID: **P-200**.
+
+
+
+
+---
+
+# P-200 — Herning Blue Fox vs Rungsted Seier Capital — Danish Metal Ligaen
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026/27 Danish Metal Ligaen |
+| Event | Herning Blue Fox vs Rungsted Seier Capital |
+| Venue | Kvik Hockey Arena, Herning |
+| Scheduled puck drop | 2026-08-30 15:00 CEST / 23:00 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 14:49 CEST / 22:49 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Regulation target | `ICE_HOCKEY_REGULATION_JOINT_GOALS-v1` |
+| Match-result target | linked full-match result with OT/SO branch |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+## Contract-definition issue
+
+The user's interface did not identify its operator or action terms.
+
+A current matching-event Stake market labels:
+- handicap as including overtime/shootout;
+- total as including overtime/shootout.
+
+A different matching-event operator page lists:
+- handicap and total as regulation-time markets.
+
+Therefore the exact operator endpoint is **unresolved**. This V01 ranking uses the working assumption that the supplied interface is **full match including OT/SO**, while preserving a regulation-only comparison branch. Settlement must be remapped if the actual operator uses regulation-only rules.
+
+## Supplied candidate slate
+
+1. Herning Blue Fox -2.5
+2. Rungsted Seier Capital +2.5
+3. Over 6.5 goals
+4. Under 6.5 goals
+
+## Current participant / goalie state
+
+### Herning Blue Fox
+- defending 2025/26 Danish champions
+- no confirmed absences were reported in the official league preview before the opener
+- current goalie tandem: Janis Fecers and George Sørensen
+- starting goalie for P-200 was **NOT OFFICIALLY CONFIRMED** in accessible field-owning sources at cutoff
+- current offensive group includes Morten Poulsen, Mathias Bau, Oliver Kiljunen, Anton Linde, Phillip Schultz, Kevin O'Neil, Lukas Bang, Jared Dmytriw and others
+- Herning's structure is built around four-line pressure and substantial depth
+
+### Rungsted Seier Capital
+This is Rungsted's **first official league game** of 2026/27; its club schedule begins the regular season at Herning on Aug. 30.
+
+Current roster construction includes:
+- Filips Buncis
+- Bryce Kindopp
+- Olle Liss
+- Gustav Olhaver
+- Ludvig Elvenes
+- Filip Karlsson
+- Valdemar Ahlberg
+- Dennis Fröland
+- Tim Welin
+- young Danish depth
+- goalie tandem David Grubak / Tobias Vilykke
+
+Rungsted lost high-impact offensive defenceman Morten Jensen during the offseason.
+
+Starting goalie and final import activation were **NOT OFFICIALLY CONFIRMED** in accessible field-owning sources at cutoff. Kindopp had missed earlier preseason action while waiting on work permission, so he is not assumed active merely from appearing on the roster page.
+
+## Current competitive / preseason state
+
+### Herning
+Opening league game:
+- beat Esbjerg **7-1**
+- period scores 2-0, 4-0, 1-1
+- Mathias Bau and Morten Poulsen each had three assists
+- Oliver Kiljunen and Anton Linde each scored twice
+- official report emphasized that Herning punished Esbjerg's lack of discipline in the second period
+
+Preseason against Esbjerg:
+- lost 1-0 away
+- won 5-0 at home
+
+Interpretation:
+Herning has both a high-conversion/separation branch and a low-conversion control branch. The 7-1 opener cannot be treated as the permanent scoring rate, but the depth and multi-line scoring are real.
+
+### Rungsted
+Official club preseason results:
+- lost 5-2 vs Herlev
+- lost 5-2 at Karlskrona
+- won 3-2 after shootout at Herlev
+- Aug. 27 at Rødovre listed without a result on the club page
+
+Important context:
+- early preseason lineups were incomplete
+- Kindopp and Tim Daly were absent from an early Herlev test due work-permit issues
+- Olle Liss joined only Aug. 24
+- Dennis Fröland and other new additions improve the current roster relative to those early losses
+
+Therefore preseason defensive concessions are informative about the risk branch but are not a complete current-team baseline.
+
+## Historical same-opponent mechanism
+
+Herning dominated the 2025/26 matchup:
+- Herning won the first nine meetings of that season before Rungsted finally won the tenth.
+- 2026 semifinal examples:
+  - Herning 5-3 Rungsted
+  - Rungsted 2-6 Herning
+  - Herning 6-2 Rungsted
+  - Rungsted 6-4 Herning
+- the first four semifinal games produced 34 total goals, 8.5 per game.
+
+These are **descriptive prior/mechanism evidence only** because both rosters changed materially.
+
+The useful durable mechanism is Herning's ability to roll four lines, create rapid early separation and punish Rungsted special-teams/defensive breakdowns. The old raw goal average is not transferred as a current coefficient.
+
+## Joint regulation/full-match goal tree
+
+### Herning separation + Over branch
+Representative scores:
+- Herning 5-2
+- Herning 6-2
+- Herning 6-1
+
+Mechanisms:
+- four-line pressure creates sustained offensive-zone time
+- Rungsted's still-new defensive structure struggles under forecheck
+- Herning's power play / special-teams conversion remains efficient
+- Rungsted contributes one or two goals through its improved scoring imports
+
+Favours:
+- **Herning -2.5**
+- **Over 6.5**
+
+### Herning separation + Under branch
+Representative scores:
+- Herning 4-1
+- Herning 5-1
+- Herning 4-2
+
+Mechanisms:
+- Herning controls territory and suppresses Rungsted
+- Rungsted's goalie prevents a 6+ Herning total
+- Rungsted's offence remains low
+
+Favours:
+- Herning -2.5 at 4-1 / 5-1
+- Rungsted +2.5 at exactly 4-2
+- **Under 6.5**
+
+### Competitive Rungsted branch
+Representative scores:
+- Herning 4-3
+- Herning 3-2
+- Rungsted 3-2
+
+Mechanisms:
+- Rungsted's new scoring imports integrate quickly
+- Grubak/Vilykke provides strong goaltending
+- Herning converts below the 7-1 opener level
+- discipline stays even and limits special-teams separation
+
+Favours:
+- **Rungsted +2.5**
+- total depends on 4-3 vs 3-2
+
+### 3-3 regulation / OT branch
+Under full-match including OT:
+- 3-3 regulation becomes 4-3 after an OT goal, reaching **7 total goals**
+- both ±2.5 spread branches resolve in favor of Rungsted +2.5 in a one-goal game
+
+This is a meaningful Over + underdog-cushion tail.
+
+## P-200/V01 frozen ranking
+
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **Herning Blue Fox -2.5** | **LEAN** | **MEDIUM** |
+| **2** | **Over 6.5 goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **3** | **Rungsted Seier Capital +2.5** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **4** | **Under 6.5 goals** | **FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 Herning -2.5
+Herning is the defending champion, opened 7-1, carries materially deeper four-line scoring and has repeatedly shown a 3+ goal separation mechanism against Rungsted. Rungsted enters its first official game with meaningful roster turnover and unresolved goalie/import activation.
+
+The spread is still demanding. A Herning 4-2 win loses -2.5, and the rebuilt Rungsted offence is stronger on paper than its early preseason version. This remains LEAN rather than SUPPORTED.
+
+Main kill path:
+Rungsted's new imports are fully active, its goalie produces a strong road start, and Herning's 7-1 shooting/special-teams conversion regresses into a 4-2 / 4-3 / 3-2 game.
+
+### #2 Over 6.5
+The strongest Over mechanism does not require a balanced shootout:
+- Herning can carry five or six goals itself;
+- Rungsted's preseason defensive structure conceded five twice;
+- the last playoff series repeatedly produced 8+ totals;
+- Herning's current opener immediately showed multi-line and special-teams scoring.
+
+Why only thin:
+- Herning's preseason also contained 1-0 and 5-0 games;
+- starting goalies are unconfirmed;
+- the current Rungsted roster is materially different from early preseason and the spring playoff series;
+- a 4-1 / 5-1 / 4-2 Herning control game stays Under.
+
+### #3 Rungsted +2.5
+This line has broad geometry:
+- any Rungsted win covers;
+- any Herning win by one or two covers;
+- any OT/SO one-goal result covers under the full-match assumption.
+
+Rungsted also added genuine offence through Olle Liss, Bryce Kindopp and other imports and retains capable goaltending options.
+
+It ranks below Herning -2.5 because Herning's current depth, home environment and separation history make the ordinary blowout branch too important to ignore.
+
+### #4 Under 6.5
+The Under has credible 4-1, 5-1, 4-2 and 3-2 states and would become more attractive if a strong goalie pairing is confirmed.
+
+It ranks fourth because the current evidence contains multiple independent upper-tail mechanisms:
+- Herning's 7-1 opener;
+- Rungsted's defensive preseason concessions;
+- strong Herning special teams;
+- historically open Herning-Rungsted matchups;
+- and a 3-3 regulation state can become seven goals in OT under full-match total rules.
+
+## Potential winner
+
+**Herning Blue Fox — LEAN**
+
+This is a substantially stronger directional winner view than the -2.5 spread itself.
+
+Primary reasons:
+- defending champions
+- deep four-line roster
+- 7-1 opening win
+- home ice
+- Rungsted's first official match and roster integration uncertainty
+- strong historical matchup control
+
+Strongest kill path:
+Rungsted's newly added scoring talent is fully activated, the goalie wins the shot-quality battle, and Herning's opener proves to be a conversion/special-teams ceiling rather than its immediate central level.
+
+## External-market cross-check
+
+Current matching-event markets generally make Herning a very strong outright favorite.
+
+One current market snapshot:
+- Herning full-match winner 1.17
+- Rungsted 4.40
+- Over 6.5 1.70
+- Under 6.5 2.04
+- Herning -2.5 1.90
+- Rungsted +2.5 1.81
+
+Another operator's regulation market was closer on the -2.5 line and priced Under 6.5 slightly shorter than Over.
+
+This disagreement is treated as an external challenger and reinforces the contract-definition caution. It is not an internal probability or value claim.
+
+## Final freeze
+
+1. **Herning Blue Fox -2.5**
+2. **Over 6.5 goals**
+3. **Rungsted Seier Capital +2.5**
+4. **Under 6.5 goals**
+
+Potential winner: **Herning Blue Fox — LEAN**.
+
+Central score corridor:
+- Herning 5-2
+- Herning 5-1
+- Herning 4-2
+
+Upper tail:
+- Herning 6-2 / 6-1
+
+Competitive counterbranch:
+- Herning 4-3 / 3-2
+
+Next canonical distinct event ID: **P-201**.
+
+
+
+
+---
+
+# P-201 — SC Freiburg vs Werder Bremen — Germany Bundesliga
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026/27 Bundesliga — Matchday 1 |
+| Event | SC Freiburg vs SV Werder Bremen |
+| Venue | Europa-Park Stadion, Freiburg im Breisgau |
+| Scheduled kickoff | 2026-08-30 15:30 CEST / 23:30 Australia/Melbourne |
+| Frozen cutoff | 2026-08-30 ~15:21 CEST / 23:21 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Goal target | `SOCCER_REGULATION_JOINT_GOALS-v1` |
+| Corner target | `SOCCER_MATCH_CORNERS-v1` |
+| Team-goal target | `SOCCER_TEAM_GOALS_SCF-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+Any information first known after the frozen cutoff is excluded from P-201/V01.
+
+## Candidate slate
+
+User-defined market families:
+- 1H goals O/U 0.5
+- FT goals O/U 2.5
+- corner market — line generated from current evidence
+- team-specific goals — line generated from current evidence
+
+Generated derivative lines:
+- **Total Corners Under 10.5**
+- **Freiburg Team Total Over 1.5 Goals**
+
+Top-five ranking is taken across this candidate family.  
+The omitted sixth direction is **1H Under 0.5**, which is the least supported current branch.
+
+Exact corner/team-total sportsbook provider definitions were not supplied, so the generated derivative rows remain capped at `FORCED RANK`/`MEDIUM-LOW` where provider-specific settlement matters.
+
+## Current participants and availability
+
+### Werder Bremen — field-owner confirmed XI
+Werder's official club release confirmed:
+
+- Karl Hein
+- Olivier Deman
+- Amos Pieper
+- Marco Friedl
+- Mick Schmetgens
+- Senne Lynen
+- Ludovit Reis
+- Marco Grüll
+- Chuki
+- Justin Njinmah
+- Niclas Füllkrug
+
+Key late/current changes:
+- **Jens Stage OUT** after suffering a serious thigh injury in final training; expected out for several months.
+- Karl Hein returns in goal after muscular problems.
+- Eren Dinkçi is back in the matchday squad but not starting.
+- Marco Grüll starts instead of Samuel Mbangula.
+- Mick Schmetgens makes his first Bundesliga start.
+- Felix Agu, Keke Topp, Mitchell Weiser, Oskar Wójcik remain unavailable.
+- Niklas Stark not in squad due training deficit.
+
+Role consequence:
+Stage's absence removes a high-value midfield runner/pressing/box-arrival piece. The replacement structure is less established, increasing Werder's risk in transition defence and second-ball control.
+
+### SC Freiburg
+A field-owning confirmed XI was not independently surfaced before the frozen cutoff.
+
+Bundesliga/current near-kickoff projected team:
+- Mio Backhaus
+- Philipp Treu
+- Matthias Ginter
+- Philipp Lienhart / Max Rosenfelder
+- Jordy Makengo
+- Maximilian Eggestein
+- Yannik Engelhardt
+- Niklas Beste
+- Yuito Suzuki
+- Vincenzo Grifo / Derry Scherhant
+- Igor Matanović
+
+Because the exact final Freiburg XI was not field-owner confirmed at cutoff, participant-sensitive confidence is capped and no speculative starter is treated as fact.
+
+Known availability:
+- Muslija unavailable with knee issue in current Bundesliga team news.
+- Noah Atubolu has left on loan; Mio Backhaus is the new Freiburg No.1.
+
+## Freiburg current competitive regime
+
+Freiburg's first three competitive matches of 2026/27:
+
+1. Motherwell 1-3 Freiburg — Conference League
+2. Fortuna Düsseldorf 1-5 Freiburg — DFB-Pokal
+3. Freiburg 4-1 Motherwell — Conference League
+
+Aggregate:
+- **12 goals scored**
+- **3 conceded**
+
+First-half scoring:
+- Motherwell away: first-half goals at 2' and 28'
+- Düsseldorf: Freiburg led 1-0 at HT
+- Motherwell home: 1-1 at HT
+
+Therefore all three current Freiburg competitive games contained at least one first-half goal.
+
+Mechanism:
+- multiple scorers across centre-forward, attacking midfield, wide/second-line and set-piece roles;
+- Matanović, Scherhant, Irié, Ginter, Goto, Höler, Kübler, Makengo all contributed across the first three competitive matches;
+- Freiburg's attack is not dependent on one finishing route.
+
+The 4-1 Motherwell return included two goals directly generated from set-piece/corner delivery after the red card, reinforcing Freiburg's dead-ball threat but also showing that some realised scoring came from favorable game-state/man-advantage conditions.
+
+## Werder current competitive regime
+
+DFB-Pokal:
+- Werder 3-0 Lüneburger SK Hansa
+- HT 1-0
+- Jens Stage scored in the 11th minute from a set piece.
+
+Werder's own post-match review said the first-half tempo was not fully satisfactory despite controlling the game. The opponent was Oberliga level, so the clean sheet and three-goal output are not transferred directly to a Bundesliga baseline.
+
+Critical regime change:
+Stage, the player who scored the cup opener and supplied an important midfield/box-arrival role, is now unavailable.
+
+Werder still retain credible attacking threats:
+- Niclas Füllkrug
+- Justin Njinmah
+- Marco Grüll
+- Ludovit Reis
+- Chuki
+- Dinkçi available from bench
+
+So Freiburg clean-sheet assumptions remain too aggressive.
+
+## Recent H2H / historical mechanism
+
+2025/26:
+- Werder 0-3 Freiburg
+- Freiburg 1-0 Werder
+
+Useful mechanism:
+Freiburg demonstrated they could suppress Werder while still creating enough quality to win both meetings.
+
+But the current Werder roster and coach have changed substantially, so those results are descriptive priors only.
+
+Corners from those two matches were highly unstable:
+- 2025 at Bremen: only 2 total corners
+- 2026 at Freiburg: 12 total corners
+
+That wide spread is why H2H corners do not control the new corner line.
+
+## Weather / environment
+
+Near match window in Freiburg:
+- around 25-26°C
+- scattered/cloudy conditions
+- no rain at current observation
+- moderate SW/WSW breeze around 18-25 km/h, gusts materially higher
+
+Mechanism:
+- no meaningful wet-weather suppression at the frozen cutoff;
+- moderate wind can reduce crossing accuracy while increasing blocked/cleared balls;
+- weather is treated as variance, not a deterministic Over/Under signal.
+
+## Goal-state tree
+
+### Central Freiburg control
+Representative scores:
+- Freiburg 2-1
+- Freiburg 3-1
+- Freiburg 2-0
+
+Mechanisms:
+- Freiburg's established attacking form survives the step up in opponent quality
+- Werder's Stage absence weakens midfield coverage
+- Freiburg generate enough box/set-piece exposure for 2+ goals
+
+Favours:
+- **1H Over 0.5**
+- **Freiburg Over 1.5 team goals**
+- FT Over 2.5 in 2-1 / 3-1
+- FT Under 2.5 in 2-0
+
+### Open two-sided branch
+Representative scores:
+- Freiburg 3-2
+- 2-2
+- Freiburg 4-1
+
+Mechanisms:
+- Füllkrug/Njinmah/Grüll create transition threat
+- Freiburg continue current high scoring
+- Werder must chase after conceding first
+
+Favours:
+- 1H Over 0.5
+- FT Over 2.5
+- Freiburg O1.5
+
+### Low-conversion Freiburg control
+Representative scores:
+- Freiburg 1-0
+- Freiburg 2-0
+
+Mechanisms:
+- Freiburg own territory but finishing falls back
+- Werder's Hein plus deeper defending suppresses clear chances
+- match becomes more controlled after opener
+
+Favours:
+- FT Under 2.5
+- corners can be either high or low depending blocked pressure
+
+### Werder resistance/upset branch
+Representative scores:
+- 1-1
+- Werder 2-1
+- 2-2
+
+Mechanisms:
+- Werder's new attack creates efficient transition chances
+- Freiburg's short recovery from Thursday affects counterpress/defensive recovery
+- Füllkrug converts limited high-value service
+
+Favours:
+- 1H Over remains live
+- FT Over in 2-1 / 2-2
+- Freiburg team-total Over can fail in 1-1 / 1-2
+
+## Corner process
+
+Current/historical evidence:
+- Freiburg 2025/26 Bundesliga: ~4.1 corners/game.
+- Werder recent Bundesliga rolling sample: ~4.6 corners/game overall, ~3.4 away.
+- Freiburg recent specialist home sample: around 5.0-5.3 team corners.
+- Combined market is currently centered around 9-10 corners.
+- Current public market offers 8/9/10/11 three-way thresholds, with Under 10 priced around an ordinary market center.
+
+Generated research line:
+### **Total Corners Under 10.5**
+
+Mechanisms supporting the Under:
+- Freiburg can score without sustained corner volume; goal conversion and set-piece efficiency can reduce repeated blocked-pressure sequences.
+- An early Freiburg lead can lower later corner demand.
+- Werder's away corner production has been below its home level.
+- The recent matchup has produced one extremely low-corner state as well as one high state, emphasizing variance rather than a stable high-corner regime.
+
+Kill path:
+- Werder defend deep and repeatedly block Freiburg's Grifo/Beste/Suzuki-side delivery;
+- Freiburg dominate territorial possession without early conversion;
+- trailing Werder add late attacking width, pushing both teams beyond 10 corners.
+
+Provider/definition cap:
+user's corner sportsbook/provider is not supplied, so the row remains `FORCED RANK / MEDIUM-LOW`.
+
+## P-201/V01 frozen ranking
+
+| Rank | Pick | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **1H Over 0.5 Goals** | **LEAN** | **MEDIUM** |
+| **2** | **Freiburg Team Total Over 1.5 Goals** | **LEAN / derivative cap** | **MEDIUM** |
+| **3** | **FT Over 2.5 Goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **4** | **Total Corners Under 10.5** | **FORCED RANK / provider cap** | **MEDIUM-LOW** |
+| **5** | **FT Under 2.5 Goals** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+
+Omitted sixth direction:
+- **1H Under 0.5 Goals — AVOID / weakest current branch**
+
+## Ranking logic
+
+### #1 — 1H Over 0.5
+Every current Freiburg competitive match has contained a first-half goal, and Werder's only competitive match also produced an 11th-minute opener.
+
+This line does not require the full-game match to become open. A Freiburg 1-0 halftime state can still finish 1-0 or 2-0 and cash this contract.
+
+Main kill path:
+Freiburg's Thursday recovery leads to a slower start, while Werder defend compactly and the game reaches HT 0-0.
+
+### #2 — Freiburg Over 1.5 team goals
+Freiburg have scored 3, 5 and 4 in their three competitive matches and have multiple finishing routes rather than one hot scorer.
+
+Werder's midfield structure has lost Jens Stage at the last moment and starts an inexperienced Bundesliga defensive/midfield configuration.
+
+This line is more robust than the full-game Over because it wins in Freiburg 2-0 as well as 2-1/3-1.
+
+Main kill path:
+the current Freiburg output is inflated by lower-level opposition, a red-card state and high conversion, while Hein/compact Werder defending holds Freiburg to one goal.
+
+### #3 — FT Over 2.5
+The central 2-1/3-1 family clears the threshold.
+
+Freiburg have current multi-source scoring; Werder still have Füllkrug, Njinmah, Grüll and Reis as credible counter/box threats.
+
+Why below Freiburg O1.5:
+a 2-0 Freiburg win is a highly plausible state and loses the match Over while winning the team total.
+
+### #4 — Total Corners Under 10.5
+Current team corner baselines cluster closer to 8-10 than 11+, and early Freiburg conversion can suppress later corner demand.
+
+Why not higher:
+corner creation is highly state-dependent, recent H2Hs ranged from 2 to 12 corners, and the exact operator/provider is not supplied.
+
+### #5 — FT Under 2.5
+The Under retains credible 1-0 / 2-0 Freiburg states.
+
+It ranks fifth because Freiburg's current attacking form and Werder's usable forward talent create more ordinary three-plus-goal branches than one-goal/2-0 control branches.
+
+## Potential winner
+
+**SC Freiburg — LEAN**
+
+Primary reasons:
+- 3 straight competitive wins
+- 12 goals scored in those three games
+- strong home performance Thursday
+- deeper current attacking/rotation options
+- Werder's late Stage injury materially weakens midfield structure
+- Freiburg won both 2025/26 league meetings
+
+Why only LEAN:
+- Freiburg are on a short Thursday-Sunday turnaround
+- exact field-owner confirmed Freiburg XI was not independently retrieved at cutoff
+- Werder have meaningful attacking quality through Füllkrug/Njinmah/Grüll/Reis
+- Bundesliga opener creates some regime uncertainty for both teams
+
+## Final freeze
+
+1. **1H Over 0.5 Goals**
+2. **Freiburg Over 1.5 Team Goals**
+3. **FT Over 2.5 Goals**
+4. **Total Corners Under 10.5**
+5. **FT Under 2.5 Goals**
+
+Potential winner: **SC Freiburg — LEAN**.
+
+Central score corridor:
+- Freiburg 2-1
+- Freiburg 3-1
+- Freiburg 2-0
+
+Next canonical distinct event ID: **P-202**.
+
+
+
+
+---
+
+# P-202 — Randers FC vs AGF Aarhus — Denmark 3F Superliga
+
+## Event / state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026/27 3F Superliga — Round 6 |
+| Event | Randers FC vs AGF |
+| Venue | Cepheus Park Randers |
+| Scheduled kickoff | 2026-08-30 16:00 CEST / 2026-08-31 00:00 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 ~15:50 CEST / 23:50 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Goal target | `SOCCER_REGULATION_JOINT_GOALS-v1` |
+| Corner target | `SOCCER_TEAM_CORNERS_AGF-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+Any information first known after this cutoff is excluded from P-202/V01.
+
+## Candidate slate
+
+User-supplied:
+1. 1H Over 0.5 goals
+2. 1H Under 0.5 goals
+3. FT Over 2.5 goals
+4. FT Under 2.5 goals
+
+Generated corner row:
+5. **AGF Over 5.5 team corners**
+
+Exact corner sportsbook/provider definition was not supplied, so the corner row is capped at `FORCED RANK / MEDIUM-LOW`.
+
+## Current Randers state
+
+League record:
+- 1-1 vs Silkeborg
+- 0-1 at Nordsjælland
+- 2-0 vs Lyngby
+- 0-4 vs FC København
+- 0-1 at FC Midtjylland
+
+Aggregate league state:
+- 1W, 1D, 3L
+- 3 goals scored
+- 7 conceded
+- four of five league matches finished Under 2.5
+
+Current official squad absences:
+- Jannich Storch — illness
+- Felix Sommer — injured
+- Wessel Dammers — injured
+- Lucas Lissens — injured
+- Benjamin Örn — injured
+- Frederik Lauenborg — injured
+- Warren Caddy — injured
+
+Paul Izzo and Mert Demirci are the available goalkeepers in the official squad.
+
+Randers added Axel Henriksson from Blackburn immediately before this fixture; he is in the matchday squad after only just joining the club.
+
+Interpretation:
+Randers' low-scoring baseline is real, but the defensive regime is materially less stable today because several centre-back/defensive options and the prior goalkeeper setup are missing.
+
+## Current AGF state
+
+League record:
+- 1-1 vs Brøndby
+- 2-2 at Lyngby
+- 1-2 at Viborg
+- 2-2 vs OB
+
+Aggregate:
+- 0W, 3D, 1L
+- 6 goals scored
+- 7 conceded
+
+Current league totals:
+- 2
+- 4
+- 3
+- 4
+
+AGF's last league match vs OB:
+- 72% possession
+- 16 shots
+- 6 on target
+- **15 corners to 0**
+- 2-2 final
+- AGF also hit the woodwork multiple times according to the club preview
+
+AGF then played Benfica at Cepheus Park on Thursday and lost 3-1, creating a short three-day turnaround.
+
+Important venue nuance:
+AGF have already used Cepheus Park as their European home venue multiple times this summer, so the surface/stadium is unusually familiar for an away side. This weakens a normal Randers home-familiarity edge.
+
+A final field-owning AGF starting XI was not independently surfaced before the frozen cutoff. Thursday's European lineup and current secondary projections are therefore treated as context only, not confirmed starters.
+
+## First-half state
+
+Randers league first halves:
+- 1-1 vs Silkeborg
+- 0-0 at Nordsjælland
+- 1-0 vs Lyngby
+- 0-3 vs København
+- 0-1 at Midtjylland
+
+Therefore 4 of 5 Randers league matches had a first-half goal.
+
+AGF league first halves:
+- 0-0 vs Brøndby
+- at least one first-half goal at Lyngby
+- 1-1 at Viborg
+- 1-2 vs OB
+
+Therefore the current combined opening-phase sample strongly favours one first-half goal over a repeated 0-0 opening state.
+
+## Goal-state tree
+
+### Low-scoring AGF-control branch
+Representative scores:
+- AGF 1-0
+- AGF 2-0
+- 1-1
+
+Mechanisms:
+- AGF owns more territory but Thursday fatigue limits finishing volume
+- Randers' low current scoring persists
+- AGF's defensive structure prevents Randers from exploiting transition opportunities
+
+Favours:
+- **1H Over 0.5** if AGF score early
+- **FT Under 2.5**
+- AGF winner in 1-0 / 2-0
+
+### Central competitive branch
+Representative scores:
+- AGF 2-1
+- 1-1
+- AGF 1-0
+
+Mechanisms:
+- AGF has the better possession/creation process
+- Randers' defensive absences create enough high-quality entries for AGF
+- Randers retains a home/set-piece route to one goal
+
+Favours:
+- 1H Over 0.5
+- total sits directly around 2.5 boundary
+- AGF slight winner lean
+
+### Open branch
+Representative scores:
+- AGF 3-1
+- 2-2
+- Randers 2-1
+
+Mechanisms:
+- Randers' patched defence/goalkeeper state leaks early
+- score-state forces Randers forward
+- AGF's Thursday workload weakens late transition defence
+
+Favours:
+- **FT Over 2.5**
+
+### Tactical / delayed-breakthrough branch
+Representative scores:
+- HT 0-0 -> AGF 1-0
+- HT 0-0 -> 1-1
+
+Favours:
+- 1H Under 0.5
+- FT Under 2.5
+
+## Corner process
+
+Generated line:
+### **AGF Over 5.5 team corners**
+
+Current AGF league corners:
+- 10 vs Brøndby
+- 2 at Lyngby
+- 10 at Viborg
+- 15 vs OB
+
+Season average in the current four-game sample:
+- 9.25 corners for overall
+- approximately 6.0 away
+
+Current Randers opponent-corner environment:
+- current-season specialist data has Randers conceding roughly 6.6-8.2 corners per game depending source methodology
+- Randers match totals have been very high in the current five-game corner sample despite their own lower possession
+
+Mechanism:
+AGF's recent 3-4-3/wingback structure creates wide attacks, blocked crosses and repeat entries. Randers' depleted defensive personnel can increase emergency clearances and blocked deliveries even if they successfully suppress goals.
+
+This supports the framework distinction:
+**AGF can generate 6+ corners while the match remains Under 2.5 goals.**
+
+Kill path:
+- AGF converts an early chance and shifts into game management
+- Thursday fatigue reduces sustained wide pressure
+- Randers hold more possession than expected and prevent repeat AGF final-third entries
+
+Provider/definition cap:
+exact corner provider/operator is not supplied, so the row remains `FORCED RANK`.
+
+## Weather
+
+Near kickoff in Randers:
+- cloudy
+- about 20°C
+- showers earlier in the day with drier/cloudier afternoon conditions
+
+No deterministic weather direction is applied.
+
+The conditions are mild enough that weather is not a major scoring suppressor. Any residual moisture can affect crossing/handling precision, but this is treated as a small variance component rather than a core pick mechanism.
+
+## P-202/V01 frozen ranking
+
+| Rank | Pick | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **1H Over 0.5 Goals** | **LEAN** | **MEDIUM** |
+| **2** | **AGF Over 5.5 Team Corners** | **FORCED RANK — provider cap** | **MEDIUM-LOW** |
+| **3** | **FT Under 2.5 Goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **4** | **FT Over 2.5 Goals** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **5** | **1H Under 0.5 Goals** | **AVOID / FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 — 1H Over 0.5
+Randers have had a first-half goal in 4 of 5 league games, while AGF's last three league matches all contained first-half scoring. AGF's territorial process and Randers' current defensive absences create a credible early AGF goal branch, while Randers still retain home/set-piece counterplay.
+
+The line needs only one goal and can win in both the Under and Over full-game states.
+
+Main kill path:
+AGF's Thursday recovery produces a conservative first half and Randers' low-output attack fails to contribute, leaving 0-0 at the break.
+
+### #2 — AGF Over 5.5 corners
+AGF's current four-game league corner counts are 10 / 2 / 10 / 15 and Randers are currently allowing heavy opponent-corner volume. AGF dominated OB territorially and produced 15 corners immediately before this fixture.
+
+Why not Rank #1:
+exact provider terms are unresolved and corner volume is very score-state sensitive.
+
+### #3 — FT Under 2.5
+Randers have scored only 3 league goals in 5 matches and four of their five games stayed Under 2.5. AGF's short Thursday-Sunday turnaround can suppress sustained finishing even if AGF control territory.
+
+Representative Under states:
+- AGF 1-0
+- AGF 2-0
+- 1-1
+
+Why only thin:
+Randers' defensive injury/goalkeeper state and AGF's own 3-of-4 Over-2.5 league run create a genuine upper branch.
+
+### #4 — FT Over 2.5
+AGF's last three league matches all reached at least three total goals, and their 2-2 against OB came with huge attacking territorial numbers. Randers are missing multiple defenders and their prior goalkeeper.
+
+The best Over path is AGF 2-1 / 3-1 rather than requiring Randers to dominate.
+
+It stays below the Under because Randers' own scoring floor is very low and AGF are on short rest.
+
+### #5 — 1H Under 0.5
+This is the narrowest current branch. It requires both AGF's recent early-goal pattern and Randers' 4-of-5 first-half scoring-event pattern to break simultaneously.
+
+## Potential winner
+
+**AGF — LEAN / LOW CONFIDENCE**
+
+Reasons:
+- stronger recent territorial/attacking process
+- dominated OB despite drawing
+- Randers' substantial defensive availability losses
+- AGF are unusually familiar with Cepheus Park because it has served as their European home venue
+- AGF have won 3 of the last 6 league trips to Randers and lost only once in that subset
+
+Why confidence stays low:
+- AGF remain winless in league play
+- Thursday Benfica match creates fatigue/rotation uncertainty
+- Randers are at home and have an ordinary 1-0 / 1-1 pathway
+- final field-owning AGF XI was not independently confirmed at cutoff
+
+## Final freeze
+
+1. **1H Over 0.5 Goals**
+2. **AGF Over 5.5 Team Corners**
+3. **FT Under 2.5 Goals**
+4. **FT Over 2.5 Goals**
+5. **1H Under 0.5 Goals**
+
+Potential winner: **AGF — LEAN / LOW CONFIDENCE**.
+
+Central score corridor:
+- AGF 1-0
+- 1-1
+- AGF 2-1
+
+Next canonical distinct event ID: **P-203**.
+
+
+
+
+---
+
+# P-203 — RC Deportivo de A Coruña vs Valencia CF — LaLiga
+
+## Event / state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026/27 LaLiga EA Sports — Matchday 3 |
+| Event | RC Deportivo de A Coruña vs Valencia CF |
+| Venue | ABANCA-Riazor |
+| Scheduled kickoff | 2026-08-30 19:30 CEST / 2026-08-31 03:30 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 19:10 CEST / 03:10 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Goal target | `SOCCER_REGULATION_JOINT_GOALS-v1` |
+| Corner target | `SOCCER_MATCH_CORNERS-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+Any information first known after the frozen cutoff is excluded from P-203/V01.
+
+## Candidate slate
+
+User-supplied:
+1. 1H Over 0.5 goals
+2. 1H Under 0.5 goals
+3. FT Over 2.5 goals
+4. FT Under 2.5 goals
+
+Generated corner row:
+5. **Total Corners Under 10.5**
+
+Exact corner sportsbook/provider terms were not supplied, so the corner row is capped at `FORCED RANK / MEDIUM-LOW`.
+
+## Current official competition state
+
+LaLiga comparison before kickoff:
+- Deportivo: 2 played, 2 draws, 2 goals scored, 2 conceded, 2 points.
+- Valencia: 2 played, 1 draw, 1 loss, **0 goals scored**, 1 conceded, 1 point.
+
+### Deportivo
+Results:
+- Deportivo 1-1 Elche
+- Málaga 1-1 Deportivo
+
+Both goals were scored by Pierre-Emerick Aubameyang, both in the **21st minute**.
+
+At Málaga:
+- Deportivo took the lead through Aubameyang at 21'
+- Málaga equalised by penalty at 35'
+- the second half became much more closed and chance-light
+
+Against Elche:
+- Aubameyang scored at 21'
+- Elche equalised at 76'
+- Deportivo generated relatively little chance volume compared with Elche
+
+Interpretation:
+Deportivo has a real early-transition/Aubameyang route but has not yet shown sustained 3+ goal match creation.
+
+### Valencia
+Results:
+- Valencia 0-0 Celta
+- Valencia 0-1 Real Betis
+
+Valencia have **not scored in either league match**.
+
+Against Betis:
+- Valencia started with intensity
+- created early approaches through Danjuma/Sato
+- no genuine clear first-half scoring chance was converted
+- conceded only in the 83rd minute
+
+Against Celta:
+- 0-0 final
+
+Interpretation:
+Valencia's current problem is attacking conversion/creation rather than defensive collapse.
+
+## Availability / participant state
+
+Valencia's official pre-match press conference confirmed a current injury issue for Guido Rodríguez. Current same-day reporting also listed meaningful defensive/midfield uncertainty around Maffeo and several injured defenders.
+
+Because accessible current lineup sources conflicted materially on Guido Rodríguez/Maffeo and no field-owner confirmed final XI was independently rendered at the frozen cutoff, **no disputed lineup is treated as confirmed fact**.
+
+For Deportivo, Aubameyang is the clear current scoring reference. Current same-day reporting also suggested Deportivo were likely to retain most of the first two-match structure, with Yeremay/Mella still returning toward fuller fitness.
+
+Participant-sensitive confidence is therefore capped.
+
+## Goal-state tree
+
+### Central low-scoring branch
+Representative scores:
+- Deportivo 1-0
+- 1-1
+- Valencia 1-0
+
+Mechanisms:
+- Valencia's low conversion persists
+- Deportivo continues to create selectively through Aubameyang/transition rather than sustained volume
+- both teams remain cautious because neither has won
+
+Favours:
+- **FT Under 2.5**
+- 1H direction depends on whether Deportivo's early Aubameyang route repeats
+
+### Deportivo early-goal branch
+Representative scores:
+- HT Deportivo 1-0 -> FT 1-0
+- HT Deportivo 1-0 -> FT 1-1
+- HT Deportivo 1-0 -> FT 2-0
+
+Mechanism:
+Aubameyang attacks space behind Valencia's reshuffled defensive line and Deportivo again scores during the opening half.
+
+Favours:
+- **1H Over 0.5**
+- FT Under still wins in 1-0 / 1-1 / 2-0
+
+### Valencia control branch
+Representative scores:
+- Valencia 1-0
+- Valencia 2-0
+- 1-1
+
+Mechanisms:
+- Valencia's possession/territory finally converts
+- Danjuma/Hugo Duro/Sato-type attacking roles create enough quality
+- Deportivo's low current shot volume is exposed against stronger top-flight opposition
+
+Favours:
+- FT Under in 1-0 / 2-0 / 1-1
+
+### Open tail
+Representative scores:
+- Deportivo 2-1
+- Valencia 2-1
+- 2-2
+
+Mechanisms:
+- early goal changes score-state demand
+- defensive errors/set pieces create a second goal
+- trailing side opens space late
+
+Favours:
+- **FT Over 2.5**
+
+## Corner process
+
+Generated research line:
+### **Total Corners Under 10.5**
+
+Current Deportivo league corners:
+- 8 total vs Elche (Deportivo 2, Elche 6)
+- 11 total at Málaga (Deportivo 4, Málaga 7)
+
+Current Deportivo sample:
+- 3.0 corners for
+- 6.5 conceded
+- 9.5 combined
+
+Current Valencia:
+- 1 corner vs Celta
+- 8 corners vs Betis
+- recent/rolling sample around 4.8 for and 4.8 conceded, ~9.6 combined
+
+Current public corner market is centred around **9 total corners**, with Under 10 priced materially shorter than Over 10.
+
+Mechanism supporting Under 10.5:
+- both teams have relatively low own attacking-output centres
+- Deportivo's early goal state can reduce later home attacking demand
+- Valencia have one 1-corner and one 8-corner league game, showing large state dependence rather than persistent high volume
+- a low 1-0 / 1-1 match does not require repeated corner clusters
+
+Kill path:
+Valencia dominate territory against a promoted side, Deportivo defend deep, and repeated crosses/blocks push Valencia into 7-9 corners by themselves.
+
+Because the exact corner provider/operator is not supplied, this row stays `FORCED RANK`.
+
+## Weather
+
+Near kickoff in A Coruña:
+- around 18°C
+- sunny/clearing conditions
+- breezy, but no major rain signal
+
+Weather therefore does **not** provide a material Under mechanism. The goal Under is driven by current attacking process rather than conditions.
+
+## P-203/V01 frozen ranking
+
+| Rank | Pick | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **FT Under 2.5 Goals** | **LEAN** | **MEDIUM** |
+| **2** | **Total Corners Under 10.5** | **FORCED RANK — provider cap** | **MEDIUM-LOW** |
+| **3** | **1H Over 0.5 Goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **4** | **1H Under 0.5 Goals** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **5** | **FT Over 2.5 Goals** | **AVOID / FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 — FT Under 2.5
+All four league matches involving these teams have stayed below 2.5:
+- Deportivo 1-1 Elche
+- Málaga 1-1 Deportivo
+- Valencia 0-0 Celta
+- Valencia 0-1 Betis
+
+Valencia has zero league goals, while Deportivo has scored exactly once in each game and has not produced a high-volume attack.
+
+The most important kill path is an early Deportivo goal forcing Valencia to chase, creating a 2-1/2-2 transition state.
+
+### #2 — Total Corners Under 10.5
+The current combined corner baselines sit around 9.5-9.6 and the market centre is around 9. Deportivo's own corner generation is low at 3.0 per game.
+
+Why not higher:
+corner markets are state-sensitive and provider terms are unresolved. Valencia generated 8 against Betis, so a one-sided territorial corner spike remains possible.
+
+### #3 — 1H Over 0.5
+Aubameyang scored in the 21st minute in **both** Deportivo league games. Deportivo therefore has a repeatable-looking early-transition route, while Valencia's defensive availability is not fully settled.
+
+Why only thin:
+Valencia's two league first halves were scoreless and its overall defensive output has been strong.
+
+### #4 — 1H Under 0.5
+Valencia's current opening phase strongly supports a 0-0 first half, but Deportivo's exact two-game pattern directly opposes it.
+
+This is a genuine near-tied phase pair rather than a strong contradiction.
+
+### #5 — FT Over 2.5
+Requires a regime switch:
+- Valencia must finally score and Deportivo contribute,
+- or one side must reach 3 goals alone.
+
+That is materially less central than 1-0 / 1-1 / 2-0.
+
+## Potential winner
+
+**RC Deportivo — FORCED WINNER / LOW CONFIDENCE**
+
+Reasons:
+- home advantage at Riazor
+- unbeaten through two matches
+- Aubameyang has scored in both
+- Valencia has zero league goals
+- Valencia carries more current availability uncertainty
+
+Why confidence remains low:
+- Deportivo's underlying chance creation has been modest
+- Valencia has conceded only once
+- the **draw is one of the largest central branches**
+- Valencia has the stronger established top-flight roster on paper
+
+## Final freeze
+
+1. **FT Under 2.5 Goals**
+2. **Total Corners Under 10.5**
+3. **1H Over 0.5 Goals**
+4. **1H Under 0.5 Goals**
+5. **FT Over 2.5 Goals**
+
+Potential winner: **RC Deportivo — FORCED WINNER / LOW CONFIDENCE**.
+
+Central score corridor:
+- Deportivo 1-0
+- 1-1
+- Valencia 1-0
+
+Next canonical distinct event ID: **P-204**.
+
+
+
+
+---
+
+# P-204 — Boston Red Sox @ New York Yankees — MLB
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | MLB — 2026 regular season |
+| Event | Boston Red Sox @ New York Yankees |
+| Venue | Yankee Stadium, Bronx, New York |
+| Scheduled first pitch | 2026-08-30 13:35 EDT / 2026-08-31 03:35 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 13:14 EDT / 03:14 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Boston starter | Ranger Suárez — LHP — official probable |
+| Yankees starter | Will Warren — RHP — official probable |
+| Target | `BASEBALL_JOINT_FINAL_RUNS-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator/listed-pitcher/action terms | NOT SUPPLIED |
+
+Any information first known after the frozen cutoff is excluded from P-204/V01.
+
+## Supplied candidate slate
+
+1. Boston Red Sox ML
+2. New York Yankees +1.5
+3. Over 8.0 Runs
+4. Under 8.0 Runs
+
+### Contract geometry
+
+Working assumption:
+- moneyline and +1.5 are full-game contracts including extra innings;
+- total 8.0 is a full-game integer total.
+
+At **exactly 8 runs**:
+- Over 8.0 = PUSH
+- Under 8.0 = PUSH
+
+Operator-specific listed-pitcher/action/rain-shortening terms were not supplied and must be checked before settlement.
+
+## Official starter state
+
+### Ranger Suárez — Boston
+Official MLB probable:
+- 5-3
+- 3.35 ERA
+- 117 SO
+- 118.1 IP
+- roughly 1.20 WHIP
+
+Current August:
+- 18.1 IP
+- 17 H
+- 10 R / 9 ER
+- 2 HR
+- 9 BB
+- 12 SO
+- 4.42 monthly ERA
+
+Recent starts:
+- at Miami: 5.0 IP, 1 ER
+- vs Arizona: 5.1 IP, 4 ER
+- vs Toronto: 5.0 IP, 1 ER
+- vs White Sox: 3.0 IP, 3 ER / 4 R
+
+Interpretation:
+Suárez retains the better established run-suppression centre but is not currently in a deep-workload/ace-dominance state. Five-ish innings is the more realistic exposure centre, preserving a meaningful Boston bullpen share.
+
+### Will Warren — Yankees
+Official MLB probable:
+- 8-6
+- 4.39 ERA
+- 126 SO
+- roughly 1.42 WHIP
+
+Current August:
+- 18.1 IP
+- 23 H
+- 13 R / 12 ER
+- 5 HR
+- 9 BB
+- 17 SO
+- **5.89 ERA**
+- **1.75 WHIP**
+
+Recent starts:
+- vs Houston: 5.0 IP, 7 H, 2 ER / 3 R
+- at Baltimore: 4.0 IP, 2 ER
+- vs Seattle: 4.0 IP, 5 ER
+- at St. Louis: 5.1 IP, 3 ER
+
+Previous 2026 start against Boston:
+- 5.2 IP
+- 7 H
+- 5 R
+- 3 BB
+- **0 strikeouts**
+
+Interpretation:
+Warren's ordinary/early-hook/contact-HR branch is materially wider than Suárez's. The Boston lineup is the strongest current matchup pressure point on the card.
+
+## Current lineups / availability
+
+### Boston — announced lineup
+1. Roman Anthony — DH
+2. Ceddanne Rafaela — CF
+3. Wilyer Abreu — RF
+4. Willson Contreras — 1B
+5. Adley Rutschman — C
+6. Caleb Durbin — 3B
+7. Jarren Duran — LF
+8. Trevor Story — SS
+9. Nick Sogard — 2B
+
+Key change:
+- **Roman Anthony activated and returns as leadoff DH**
+- **Trevor Story activated and returns at SS**
+
+Anthony hit .280 with two HR, two doubles and four walks over eight rehab games.
+Story hit only .171 during his rehab assignment, so his return is treated primarily as lineup/defensive depth rather than a guaranteed offensive upgrade.
+
+### New York — reported lineup
+1. Paul Goldschmidt — 1B
+2. Cody Bellinger — LF
+3. Heliot Ramos — RF
+4. Luis García Jr. — DH
+5. Amed Rosario — 3B
+6. Trent Grisham — CF
+7. José Caballero — SS
+8. Jazz Chisholm Jr. — 2B
+9. Ali Sánchez — C
+
+Current losses/limitations:
+- Aaron Judge remains unavailable with rib stress-fracture recovery.
+- George Lombard Jr. is out of the starting lineup with right-knee inflammation after leaving Saturday night.
+- Ben Rice is not in the reported starting nine.
+
+This materially lowers the Yankees' current offensive ceiling relative to a full-strength lineup.
+
+## Current offensive / matchup context
+
+Boston vs RHP:
+- roughly .713 OPS on the season.
+
+Yankees vs LHP:
+- roughly .725 OPS on the season.
+
+So raw handedness does **not** create a large team-level split advantage.
+
+The event-specific difference comes more from:
+- Warren's current deterioration;
+- Boston's lineup reinforcements;
+- the Yankees' missing/reduced lineup;
+- Suárez's better established starter centre.
+
+## Bullpen / workload state
+
+### Boston
+Saturday Game 1:
+- Tyron Guerrero
+- Garrett Whitlock
+- Jovani Moran
+
+Whitlock returned from the IL and threw a clean inning; he has a 2.00 ERA / 0.87 WHIP in 2026.
+
+Saturday Game 2:
+- Boston used lower/middle-leverage relief after the opener/bulk sequence; Raymond Burgos allowed the five-run eighth.
+
+Aroldis Chapman had not appeared since Aug. 24 in the available current game log and is therefore on a favorable rest state if active/available.
+
+Interpretation:
+Boston's top-end late-game bullpen is better preserved than the 9-2 final might imply.
+
+### Yankees
+Friday:
+- David Bednar closed the 1-0 win.
+
+Saturday doubleheader:
+- Yerry De los Santos appeared in both games.
+- Ryan Yarbrough covered three innings in Game 1.
+- Paul Blackburn worked important Game 2 outs.
+- the 9-2 lead allowed New York to **rest David Bednar** in the nightcap.
+
+Interpretation:
+the Yankees' bullpen has accumulated volume, but their best closer is available. This supports both a close-game cushion branch and some late scoring suppression.
+
+## Weather / termination branch
+
+NWS Bronx forecast around game time:
+- ~80°F at 1 PM
+- ~82°F at 2-4 PM
+- SW wind around 9-10 mph
+- precipitation chance rises from ~12% at 1 PM to ~37% from 2-4 PM
+- slight/chance thunder risk develops during the afternoon
+
+Interpretation:
+- warm air can support carry;
+- rain/thunder creates delay/termination uncertainty;
+- rain is **not** mechanically an Under;
+- if interruption occurs, starter re-entry and bullpen transition can widen the upper run tail.
+
+Because operator rain/action terms are unknown, a shortened/void branch is retained rather than graded prospectively.
+
+## Joint run tree
+
+### Boston narrow-win branch
+Representative scores:
+- Boston 5-4
+- Boston 4-3
+- Boston 5-3
+
+Mechanisms:
+- Boston reaches Warren for 3-4 runs before the middle innings.
+- Suárez keeps New York around 2-3 through five.
+- both teams' better late relievers prevent a huge late cluster.
+
+Favours:
+- **Yankees +1.5** in 5-4 / 4-3
+- **Boston ML**
+- Over at 5-4, push at 5-3, Under at 4-3
+
+### Boston separation branch
+Representative scores:
+- Boston 6-3
+- Boston 6-2
+- Boston 7-3
+
+Mechanisms:
+- Warren's contact/HR/early-hook branch lands.
+- Anthony/Rafaela/Abreu/Contreras turn lineup depth into repeated baserunners.
+- Yankees' reduced lineup fails to answer Suárez.
+
+Favours:
+- Boston ML
+- Over usually
+- Yankees +1.5 loses
+
+### Yankees close-win branch
+Representative scores:
+- Yankees 4-3
+- Yankees 5-4
+- Yankees 5-3
+
+Mechanisms:
+- Suárez's August command/walk volatility creates traffic.
+- Yankee Stadium rewards one mistake.
+- Warren stabilizes enough to reach the bullpen without a large deficit.
+- Bednar preserves a narrow lead.
+
+Favours:
+- **Yankees +1.5**
+- Over at 5-4, push at 5-3, Under at 4-3
+
+### Lower-run control branch
+Representative scores:
+- Boston 4-2
+- Yankees 3-2
+- Boston 3-2
+
+Mechanisms:
+- both starters suppress HR clusters;
+- restored/high-leverage bullpen arms dominate late;
+- missing Yankees power lowers NY's scoring ceiling.
+
+Favours:
+- **Under 8.0**
+- Yankees +1.5 in one-run states
+
+### High-run / interruption / bullpen-transition branch
+Representative scores:
+- Boston 7-5
+- Yankees 6-5
+- Boston 8-4
+
+Mechanisms:
+- Warren exits early;
+- Suárez also fails to reach six;
+- weather delay disrupts starter plans;
+- high bullpen exposure produces inherited-runner or HR clusters.
+
+Favours:
+- **Over 8.0**
+
+## P-204/V01 frozen ranking
+
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **Yankees +1.5** | **LEAN** | **MEDIUM** |
+| **2** | **Boston Red Sox ML** | **LEAN** | **MEDIUM** |
+| **3** | **Over 8.0 Runs** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **4** | **Under 8.0 Runs** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 Yankees +1.5
+This is the broadest contract:
+- every Yankees win cashes;
+- every one-run Boston win also cashes.
+
+The central event tree contains many 5-4 / 4-3 / 3-2 one-run finals because:
+- Suárez has the better starter centre but is unlikely to work extremely deep;
+- Warren is vulnerable but New York retains Bednar and enough bullpen depth to keep some deficits small;
+- both teams have already played multiple close games in this series.
+
+Main kill path:
+Warren's current deterioration becomes an early-hook state and Boston's restored lineup converts it into a 6-3 / 6-2 / 7-3 separation.
+
+### #2 Boston ML
+Boston gets the outright winner lean because:
+- Suárez is the better current starting-pitcher centre;
+- Warren has a 5.89 August ERA / 1.75 WHIP;
+- Warren already struggled against Boston this year;
+- Anthony and Story return;
+- New York remains without Judge and Lombard, and the reported lineup is also without Rice.
+
+Why below Yankees +1.5:
+the Yankees cushion survives a one-run Boston victory.
+
+### #3 Over 8.0
+The Over has several real mechanisms:
+- Warren's August contact/HR deterioration;
+- Boston's reinforced lineup;
+- warm Yankee Stadium conditions;
+- both starters have a realistic five-inning rather than seven-inning exposure centre;
+- possible rain delay can accelerate bullpen usage.
+
+Important geometry:
+- 5-4 = Over WIN
+- 5-3 = PUSH
+- 4-3 = Over LOSS
+
+Why only thin:
+Suárez can suppress this reduced Yankees lineup, and both teams retain rested high-leverage closers.
+
+### #4 Under 8.0
+The Under is a strong counterbranch:
+- 4-3
+- 4-2
+- 3-2
+
+all win.
+
+At exactly 8 runs it pushes rather than loses.
+
+It ranks below the Over because Warren's current starter distribution and the upgraded Boston lineup create a larger ordinary upper-tail branch than Suárez/New York's lineup creates in the opposite direction.
+
+## Potential winner
+
+**Boston Red Sox — LEAN**
+
+Primary reasons:
+- starter edge
+- current Warren deterioration
+- Roman Anthony return
+- deeper Boston lineup
+- Yankees missing important bats
+
+Strongest kill path:
+Warren gives New York five competitive innings, the Yankees produce one HR/cluster against Suárez, and Bednar protects a narrow 4-3 / 5-4 lead.
+
+## External market sanity check
+
+A current matching-event snapshot around final refresh showed:
+- Boston slight moneyline favorite
+- total 8.0
+
+This agrees broadly with:
+- Boston slight winner lean
+- total near the 8-run boundary
+
+It is used only as an external challenger, not as an internal model probability or value claim.
+
+## Final freeze
+
+1. **Yankees +1.5**
+2. **Boston Red Sox ML**
+3. **Over 8.0 Runs**
+4. **Under 8.0 Runs**
+
+Potential winner: **Boston Red Sox — LEAN**.
+
+Central score corridor:
+- Boston 5-4
+- Boston 5-3
+- Boston 4-3
+- Yankees 4-3 counterbranch
+
+Next canonical distinct event ID: **P-205**.
+
+
+
+---
+
+# P-205 — Chicago White Sox @ Minnesota Twins — MLB
+
+## Freeze
+- Competition: MLB, 2026 regular season
+- Venue: Target Field
+- Scheduled first pitch: 2026-08-30 13:10 CDT / 2026-08-31 04:10 Australia/Melbourne
+- Frozen cutoff: ~13:05 CDT / 04:05 Melbourne
+- GAME-STATE: PREGAME
+- Official probables: Jordan Hicks (CWS) vs Zebby Matthews (MIN)
+- Probability: NOT_GENERATED / NOT_PUBLISHED
+- Value: NO VALUE DETERMINABLE
+
+## Supplied contracts
+1. White Sox ML
+2. Twins ML
+3. Over 8.5 Runs
+4. Under 8.5 Runs
+
+## Current starter state
+Jordan Hicks:
+- 2-1, 3.83 ERA, 40.0 IP, 49 SO, 1.53 WHIP
+- 43 appearances, only one prior start
+- August: 9.0 IP, 12 H, 6 ER, 2 HR, 3 BB, 13 SO, 6.00 ERA
+- most recent outing vs Texas: 1 IP, 4 H, 3 ER
+- current role is opener/short-start rather than a normal six-inning starter
+
+Zebby Matthews:
+- 8-8, 4.86 ERA, 103.2 IP, 88 SO, 1.31 WHIP
+- August: 22.2 IP, 24 H, 9 ER, 3 HR, 6 BB, 19 SO, 3.57 ERA
+- last two: 5.2 IP/1 ER at Atlanta; 7.0 IP/1 ER vs Athletics
+
+## Current form
+- White Sox 72-63, 7-3 last 10, four-game winning streak
+- Twins 64-72, 3-7 last 10, four-game losing streak
+- current series: Chicago won 7-4 and 3-2
+- Chicago has also held the stronger 2026 season-series record
+
+## Lineups
+MLB's field-owner starting-lineup page had not fully rendered the orders at cutoff.
+A current secondary source marked these lineups as officially posted:
+
+Chicago:
+Antonacci, Murakami, Vargas, Benintendi, Braden Montgomery, Colson Montgomery, Peters, Doyle, Romo.
+
+Minnesota:
+Keaschall, Brooks Lee, Kody Clemens, Jeffers, Josh Bell, Larnach, Royce Lewis, Culpepper, Walker Jenkins.
+
+Because the field-owner lineup page was still TBD, the orders are treated as secondary-confirmed only.
+
+## Bullpen state
+- Bryan Hudson closed both Aug. 28 and Aug. 29 for Chicago.
+- Grant Taylor worked 2.2 innings Friday.
+- Chicago's opener setup increases expected bulk/relief exposure.
+- Minnesota used Andrew Morris for two innings Saturday, but Matthews' recent 5-7 inning workload gives Minnesota the cleaner route to reducing bullpen exposure.
+
+## Joint run tree
+Minnesota control:
+- MIN 4-3
+- MIN 5-3
+- MIN 4-2
+
+Chicago counter:
+- CWS 5-4
+- CWS 5-3
+- CWS 6-3
+
+Low-run:
+- MIN 4-2
+- CWS 4-3
+- MIN 3-2
+
+High-run:
+- CWS 6-5
+- MIN 6-4
+- CWS 7-4
+
+## Frozen ranking
+1. **Minnesota Twins ML — LEAN / THIN, MEDIUM-LOW**
+2. **Under 8.5 Runs — LEAN / THIN, MEDIUM-LOW**
+3. **Chicago White Sox ML — FORCED RANK / strong counter-branch, MEDIUM-LOW**
+4. **Over 8.5 Runs — FORCED RANK, MEDIUM-LOW**
+
+### Potential winner
+**Minnesota Twins — LEAN / LOW CONFIDENCE**
+
+### Main rationale
+Minnesota gets the slight winner edge because Matthews is the only conventional starter and has improved sharply in August, while Hicks is an opener whose short exposure pushes a large share of the game into Chicago's bulk/relief chain. Chicago is the stronger team and has dominated the current series, which is why confidence stays low.
+
+The Under ranks second because Matthews has recently worked deep and Minnesota's run production has been weak. Its main kill path is the Hicks/bulk-relief transition creating extra early/middle-inning run exposure.
+
+## Final freeze
+1. Minnesota Twins ML
+2. Under 8.5 Runs
+3. Chicago White Sox ML
+4. Over 8.5 Runs
+
+Potential winner: Minnesota Twins — LEAN / LOW CONFIDENCE.
+
+Next canonical distinct event ID: **P-206**.
+
+
+
+
+---
+
+# P-206 — Los Angeles Dodgers @ Detroit Tigers — MLB
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | MLB — 2026 regular season |
+| Event | Los Angeles Dodgers @ Detroit Tigers |
+| Venue | Comerica Park, Detroit |
+| Scheduled first pitch | 2026-08-30 13:40 EDT / 2026-08-31 03:40 Australia/Melbourne |
+| Final verified state | **PREGAME — DELAYED START / INCLEMENT WEATHER** |
+| Official starters | Tyler Glasnow (LAD, RHP) vs Framber Valdez (DET, LHP) |
+| Target | `BASEBALL_JOINT_FINAL_RUNS-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator/listed-pitcher/action terms | NOT SUPPLIED |
+
+MLB still listed the event as **Delayed Start — Inclement Weather** at the final refresh and no official live play was incorporated.
+
+## Supplied contracts
+
+1. Dodgers ML
+2. Tigers +1.5
+3. Over 7.5 Runs
+4. Under 7.5 Runs
+
+Working assumption:
+- ML and run line include extra innings;
+- total 7.5 is full game;
+- exact operator listed-pitcher/action/rain-shortening terms remain unknown.
+
+## Starting pitchers
+
+### Tyler Glasnow — Dodgers
+- 3-0
+- 3.02 ERA
+- 44.2 IP
+- 56 SO
+- 0.87 WHIP
+- 11.3 K/9-scale strikeout environment from current season line
+
+Current regime:
+- returned from 60-day IL on Aug. 25 after not pitching in MLB since May 6
+- first game back: 5.0 IP, 6 H, 3 ER, 0 BB, 7 SO at Atlanta
+- no formal pitch limit was announced for his return
+- he is now working on ordinary four-day rest but only his second MLB start since May
+
+Interpretation:
+Glasnow owns the better run-suppression and strikeout centre, but workload/second-start-after-IL uncertainty remains wider than his season ERA alone implies.
+
+### Framber Valdez — Tigers
+- 8-9
+- 4.35 ERA
+- 144.2 IP
+- 111 SO
+- 1.41 WHIP
+
+August starts:
+- 7.0 IP, 2 ER vs Athletics
+- 7.0 IP, 0 ER vs Seattle
+- 5.2 IP, 4 ER at Cleveland
+- 5.2 IP, 4 ER vs Pittsburgh
+- 6.0 IP, 3 ER vs Tampa Bay
+
+Interpretation:
+Valdez's current month is better than the raw 4.35 season ERA suggests, but the latest three starts contain a stable 3-4 earned-run branch and lower strikeout output.
+
+## Current batting orders
+
+MLB's field-owning lineup page still displayed TBD at the final crawl, so the posted batting orders are treated as **current secondary-confirmed**, not field-owner-confirmed.
+
+### Dodgers
+1. Shohei Ohtani — DH
+2. Tommy Edman — 2B
+3. Mookie Betts — SS
+4. Freddie Freeman — 1B
+5. Teoscar Hernández — LF
+6. Miguel Rojas — 3B
+7. Kyle Tucker — RF
+8. Kiké Hernández — CF
+9. Ben Rortvedt — C
+
+Important current limitations:
+- Will Smith is unavailable.
+- Andy Pages is unavailable.
+- Max Muncy is not in the posted starting nine against the left-hander.
+- Ohtani is batting but will **not pitch**; current arm/knee discomfort removed the earlier opener possibility.
+
+### Tigers
+1. Gleyber Torres — 2B
+2. Colt Keith
+3. Kevin McGonigle
+4. Dillon Dingler
+5. Brett Callahan
+6. Zach McKinstry
+7. Hao-Yu Lee
+8. Max Clark
+9. Javier Báez
+
+Important injuries/current absences include Riley Greene, Kerry Carpenter, Matt Vierling and others from Detroit's normal offensive pool.
+
+## Team/current-form context
+
+### Dodgers
+- 81-55
+- 6-4 last 10
+- current recent scoring has fallen sharply:
+  - lost 1-2 Saturday
+  - won 2-1 Friday
+  - lost 0-1 Thursday
+  - lost 5-6 Wednesday
+  - lost 3-4 Tuesday
+- current last-10 O/U record in one market database: 2 Overs, 8 Unders
+- road record remains strong
+
+### Tigers
+- 63-72
+- 2-8 last 10
+- approximately 28 runs over the latest 10-game StatMuse sample
+- .180 batting average across the last 10 in the current AP/StatMuse game preview
+- Friday/Saturday vs LAD: 1 run, then 2 runs
+- several important power/outfield bats remain unavailable
+
+## Historical/current matchup cautions
+
+Current career-vs-starter samples:
+- Ohtani vs Valdez: poor historical results across a meaningful but still non-controlling sample
+- several Dodgers have tiny prior samples against Valdez
+- most current Tigers have little/no history against Glasnow
+
+These are treated only as matchup context; small BvP samples do not control the card.
+
+## Bullpen state
+
+### Detroit
+Saturday:
+- Tyler Holton: 0.2 IP / 8 pitches
+- Kenley Jansen: 0.1 IP / 4 pitches
+- Andrew Sears had already supplied 2.2 scoreless innings before the ninth
+
+Detroit therefore reached Sunday with Jansen essentially fresh and several high-leverage options still plausible, although Holton and some middle-relief arms have accumulated multi-day use.
+
+### Los Angeles
+Saturday:
+- Alex Vesia
+- Edgardo Henriquez
+- Jack Dreyer
+- Seth Halvorsen
+combined for 3.1 relief innings / roughly 63 pitches.
+
+Friday:
+- Evan Phillips and Tanner Scott handled the key late innings.
+
+Interpretation:
+Detroit owns the cleaner late-game relief freshness profile. Los Angeles still has quality arms, but the Dodgers' bullpen has worked more across the first two games of the series.
+
+This materially supports the Tigers +1.5 close-game branch.
+
+## Weather / rain-delay state
+
+Official MLB:
+- delayed start due to inclement weather.
+
+Current game-thread/park conditions:
+- low/mid-70s at the park before the delay
+- cloudy
+- modest wind roughly right-to-left
+
+Important mechanism:
+- because the delay occurred **before first pitch**, no starter has yet been removed from an already-live outing;
+- however, prolonged delay/warm-up disruption creates wider starter-routine uncertainty, particularly for Glasnow in only his second MLB start since May;
+- rain is not automatically an Under;
+- if the delay materially alters starter preparation or produces another interruption later, bullpen exposure can increase the Over tail.
+
+## Joint run tree
+
+### Central Dodgers low-run edge
+Representative scores:
+- Dodgers 4-2
+- Dodgers 4-3
+- Dodgers 3-2
+
+Mechanisms:
+- Glasnow suppresses Detroit's depleted offence.
+- Valdez keeps Los Angeles below a full offensive ceiling.
+- Detroit's fresher bullpen prevents a late separation cluster.
+
+Favours:
+- **Dodgers ML**
+- **Tigers +1.5** at 4-3 / 3-2
+- **Under 7.5**
+
+### Tigers close-game/upset branch
+Representative scores:
+- Tigers 3-2
+- Tigers 4-3
+- Tigers 3-1
+
+Mechanisms:
+- Glasnow's post-IL/rain-delay routine lands below centre.
+- Valdez induces enough poor contact/ground-ball outs.
+- Detroit's rested high-leverage relief protects a narrow lead.
+
+Favours:
+- **Tigers +1.5**
+- Under at 3-2 / 3-1 / 4-3
+
+### Dodgers separation branch
+Representative scores:
+- Dodgers 5-1
+- Dodgers 5-2
+- Dodgers 6-2
+
+Mechanisms:
+- Valdez's 3-4 ER current branch becomes an early hook.
+- Ohtani/Betts/Freeman/Hernández/Tucker create repeated traffic.
+- Detroit's low scoring prevents margin compression.
+
+Favours:
+- Dodgers ML
+- **Tigers +1.5 loses**
+- total depends on 5-1/5-2 vs 6-2
+
+### High-run / disrupted-starter branch
+Representative scores:
+- Dodgers 6-3
+- Dodgers 6-4
+- Tigers 5-4
+
+Mechanisms:
+- rain-delay routine affects one/both starters
+- Glasnow does not work deep
+- Valdez's recent 3-4 ER branch persists
+- bullpen exposure/HR sequencing lifts total
+
+Favours:
+- **Over 7.5**
+
+## P-206/V01 frozen ranking
+
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **Tigers +1.5** | **LEAN** | **MEDIUM** |
+| **2** | **Dodgers ML** | **LEAN** | **MEDIUM** |
+| **3** | **Under 7.5 Runs** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **4** | **Over 7.5 Runs** | **FORCED RANK / counter-branch** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 Tigers +1.5
+The cushion has the broadest settlement geometry:
+- every Tigers win cashes;
+- every one-run Dodgers win cashes.
+
+The current centre contains many one-run/low-run outcomes because:
+- Valdez is pitching better than his season ERA alone suggests;
+- Detroit has the fresher high-leverage bullpen;
+- both games in this series finished 2-1;
+- Los Angeles has suffered many recent one-run losses and is in a current low-scoring stretch.
+
+The main kill path is low-total separation:
+Glasnow suppresses Detroit almost completely while Valdez gives up 4-5 runs, producing 5-1 / 5-2 / 6-2. The framework explicitly retains this branch rather than assuming "low total = close game."
+
+### #2 Dodgers ML
+Los Angeles gets the outright winner lean because:
+- Glasnow owns the stronger starter centre;
+- Detroit is 2-8 in its last 10;
+- Detroit's offence has been extremely weak;
+- the Dodgers are substantially stronger overall and on the road;
+- Detroit's current lineup is missing several established bats.
+
+Why below Tigers +1.5:
+a Dodgers 4-3 / 3-2 victory wins both contracts, while a Detroit upset only wins the Tigers cushion.
+
+### #3 Under 7.5
+The central score family is roughly 5-7 total runs.
+
+Support:
+- Glasnow's strikeout/run-suppression profile
+- Detroit's recent offensive weakness
+- both first two series games ending 2-1
+- Dodgers' current run-scoring slowdown
+- current Valdez form better than season ERA
+- Detroit's fresh high-leverage bullpen
+
+Why only third:
+7.5 is low; the pregame rain delay plus Glasnow's second-start-after-IL state widens pitcher-exposure uncertainty, and Valdez has allowed 3-4 ER in each of his last three starts.
+
+### #4 Over 7.5
+The Over requires 8+ and has clear routes:
+- Valdez gives up 4-5 and Detroit contributes 3+
+- rain/delay disrupts starter exposure
+- Dodgers bullpen carries more series workload
+- one HR/sequencing cluster turns a 4-2 game into 6-3
+
+But those require a higher-scoring state than the current central distribution.
+
+## Potential winner
+
+**Los Angeles Dodgers — LEAN**
+
+Primary reasons:
+- Tyler Glasnow starter-quality edge
+- Dodgers' large season-strength advantage
+- Detroit's current offensive decline and injuries
+- deeper top-end Dodgers lineup even with several absences
+
+Strongest failure path:
+Valdez sustains the better part of his August form, Glasnow's rain-delay/post-IL routine is ordinary rather than dominant, and Detroit's fresher late bullpen closes a 3-2 / 4-3 home win.
+
+## External market sanity check
+
+Current matching-event markets around the delay generally showed:
+- Dodgers roughly -150 to -180
+- Tigers roughly +135 to +155
+- Tigers +1.5 favored relative to Dodgers -1.5
+- total centered at 7.5
+
+This is used only as an external challenger and broadly agrees with:
+- Dodgers slight/clear winner preference
+- Tigers +1.5 broad margin protection
+- total near a low-run boundary
+
+No internal value claim is made.
+
+## Final freeze
+
+1. **Tigers +1.5**
+2. **Dodgers ML**
+3. **Under 7.5 Runs**
+4. **Over 7.5 Runs**
+
+Potential winner: **Los Angeles Dodgers — LEAN**.
+
+Central score corridor:
+- Dodgers 4-2
+- Dodgers 4-3
+- Dodgers 3-2
+- Tigers 3-2 counterbranch
+
+Next canonical distinct event ID: **P-207**.
+
+
+
+
+---
+
+# P-207 — Cagliari vs Inter Milan — Italy Serie A
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026/27 Serie A — Matchday 2 |
+| Event | Cagliari vs Inter |
+| Venue | Unipol Domus, Cagliari |
+| Scheduled kickoff | 2026-08-30 20:45 CEST / 2026-08-31 04:45 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 20:44 CEST / 04:44 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Goal target | `SOCCER_REGULATION_JOINT_GOALS-v1` |
+| Corner target | `SOCCER_TEAM_CORNERS_INTER-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+The official Inter match centre and official lineup release still showed the match as scheduled for 20:45 at the frozen cutoff. No live event was used.
+
+## Candidate slate
+
+User-supplied market directions:
+1. 1H Over 0.5 goals
+2. 1H Under 0.5 goals
+3. FT Over 2.5 goals
+4. FT Under 2.5 goals
+
+Generated corner row:
+5. **Inter Over 4.5 team corners**
+
+The exact sportsbook/provider definition for corners was not supplied, so the corner row is capped at `FORCED RANK / MEDIUM-LOW`.
+
+## Official lineups
+
+### Inter — official 3-5-2
+- Josep Martínez
+- Benjamin Pavard
+- Manuel Akanji
+- Alessandro Bastoni
+- Luis Henrique
+- Nicolò Barella
+- Hakan Çalhanoğlu
+- Petar Sučić
+- Federico Dimarco
+- Pio Esposito
+- Lautaro Martínez
+
+Key bench attacking options:
+- Marcus Thuram
+- Ange-Yoan Bonny
+- Piotr Zieliński
+- Henrikh Mkhitaryan
+- Carlos Augusto
+
+Interpretation:
+Inter have not materially weakened the central creation structure. Lautaro starts, Dimarco provides left-side width/set-piece delivery, and the Barella/Çalhanoğlu/Sučić midfield supplies both progression and second-line threat. Thuram and Bonny preserve a strong late attacking branch.
+
+### Cagliari — official 4-3-2-1
+- Elia Caprile
+- Zé Pedro
+- Alessandro Deiola
+- Rodriguez
+- Adam Obert
+- Romano
+- Harry Winks
+- Jacopo Fazzini
+- Michel Adopo
+- Daniel Maldini
+- Pape Mendy
+
+Bench attacking options include:
+- Kevin Carlos
+- Mattia Felici
+- Borrelli
+- Fadera
+
+Interpretation:
+Cagliari retain a compact midfield/half-space structure rather than an ultra-defensive five-back. Winks/Fazzini/Adopo can support progression, while Maldini and Mendy preserve a transition/finishing route.
+
+## Current competitive regime
+
+### Inter
+Serie A opener:
+- Inter 4-1 Monza
+- 1-1 at half-time
+- 70% possession
+- 10 total shots listed by Inter's match centre
+- 5 on target
+- 3 corners
+
+Scorers:
+- Çalhanoğlu 6'
+- Zieliński 49'
+- Pio Esposito 56'
+- Bisseck 64'
+
+Interpretation:
+Inter's attack was multi-source and did not rely on Lautaro alone. The second-half acceleration branch is especially important for the full-game Over.
+
+### Cagliari
+Serie A opener:
+- Parma 0-1 Cagliari
+- 0-0 at half-time
+- winning goal by Romano at 79'
+- 53% possession
+- 14 shots
+- 5 on target
+- 2 corners
+- current reports also noted two woodwork hits
+
+Interpretation:
+The 1-0 final understates Cagliari's attacking process. Cagliari did not simply sit deep and steal one chance; it generated enough attempts to keep a one-goal contribution live against Inter.
+
+## Recent direct matchup
+
+Recent Serie A:
+- Cagliari 0-2 Inter — Sep. 2025
+- Inter 3-0 Cagliari — Apr. 2026
+- Cagliari 0-3 Inter — Dec. 2024
+- Cagliari 0-2 Inter — Aug. 2023
+
+First-half states in recent relevant meetings:
+- Sep. 2025: Inter led 1-0 at HT
+- Apr. 2026: 0-0 at HT
+- Aug. 2023: Inter led 2-0 at HT
+
+Useful mechanism:
+Inter have repeatedly controlled territory and suppressed Cagliari's scoring, but the exact timing of the breakthrough has varied considerably.
+
+H2H is descriptive only; current lineups and season state control.
+
+## Corner process
+
+Generated research line:
+### **Inter Over 4.5 team corners**
+
+Relevant direct-match corner examples:
+- Cagliari 0-2 Inter (Sep. 2025): Cagliari 5, Inter 7
+- Cagliari 0-2 Inter (Aug. 2023): Cagliari 4, Inter 7
+
+Current openers:
+- Inter produced only 3 corners against Monza despite 70% possession.
+- Cagliari conceded only 3 corners to Parma.
+
+Interpretation:
+The current-season corner evidence prevents a strong high-corner claim, but the matchup mechanism still supports 5+:
+- Inter's wingback width through Dimarco/Luis Henrique
+- Cagliari's likely lower territorial share
+- crossing/block/clearance states against a compact home shape
+- multiple historical 7-corner Inter outputs at this venue
+
+Kill path:
+Inter score very early and switch into controlled circulation, reducing sustained blocked-cross pressure; Cagliari defend centrally without conceding repeated corners.
+
+Because the exact corner provider/operator is not supplied, this remains provider-capped.
+
+## Weather/environment
+
+Near kickoff:
+- roughly 28°C
+- mostly clear
+- warm conditions after a very hot day
+
+Mechanism:
+- no rain/wet-ball suppression
+- heat can lower repeated pressing intensity later
+- lower late defensive pressure can widen the second-half scoring branch
+
+Weather is a secondary variance input, not a controlling Over signal.
+
+## Joint goal-state tree
+
+### Inter control / Under branch
+Representative scores:
+- Inter 2-0
+- Inter 1-0
+- Inter 2-0 after 0-0 HT
+
+Mechanisms:
+- Inter dominate territory
+- Cagliari's compact shape limits central chance quality
+- Inter's defence suppresses Mendy/Maldini transition
+
+Favours:
+- **FT Under 2.5**
+- 1H direction depends on breakthrough timing
+
+### Inter control / Over branch
+Representative scores:
+- Inter 3-0
+- Inter 3-1
+- Inter 2-1
+
+Mechanisms:
+- Inter's multi-source attack produces 2-3 goals
+- Cagliari contributes one through transition/set piece, or Inter carries the total alone
+- Inter's strong bench maintains attacking pressure
+
+Favours:
+- **FT Over 2.5**
+- Inter winner
+
+### Early Inter breakthrough
+Representative states:
+- HT Inter 1-0 -> FT 2-0
+- HT Inter 1-0 -> FT 3-0
+- HT Inter 1-0 -> FT 3-1
+
+Favours:
+- **1H Over 0.5**
+- full total remains split between 2-0 and 3+ states
+
+### Slow first-half state
+Representative states:
+- HT 0-0 -> Inter 1-0
+- HT 0-0 -> Inter 2-0
+- HT 0-0 -> 1-1
+
+Favours:
+- **1H Under 0.5**
+- FT Under usually
+
+## P-207/V01 frozen ranking
+
+| Rank | Pick | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **FT Over 2.5 Goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **2** | **1H Over 0.5 Goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **3** | **Inter Over 4.5 Team Corners** | **FORCED RANK — provider cap** | **MEDIUM-LOW** |
+| **4** | **FT Under 2.5 Goals** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **5** | **1H Under 0.5 Goals** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 — FT Over 2.5
+Inter opened with four goals from four different scorers and field a strong attacking structure again. Cagliari's 1-0 opener contained substantially more attacking activity than the scoreline suggests, so a Cagliari contribution cannot be dismissed.
+
+Central Over states:
+- Inter 2-1
+- Inter 3-0
+- Inter 3-1
+
+Main kill path:
+Inter dominate but Cagliari remain compact and scoreless, producing the familiar 2-0 result.
+
+### #2 — 1H Over 0.5
+Inter scored in the sixth minute of the opener and have several current/historical early-breakthrough routes through Lautaro, Dimarco delivery and second-line midfield runners.
+
+Recent Cagliari-Inter meetings have included both 1-0 and 0-0 halftime states, so evidence is not strong enough to rank this first.
+
+Main kill path:
+Cagliari's compact midfield survives the opening pressure and Inter's breakthrough is delayed until the second half.
+
+### #3 — Inter Over 4.5 corners
+Inter have produced seven corners in each of the two recent away H2H examples available from Inter's match centre, and today's width/territorial matchup again supports sustained wide pressure.
+
+Why only third/provider-capped:
+Inter had only three corners despite 70% possession against Monza, while Cagliari conceded only three at Parma. The current-season evidence is therefore mixed.
+
+### #4 — FT Under 2.5
+The Under has an extremely credible Inter 1-0 / 2-0 family. Inter have beaten Cagliari 2-0 and 3-0 in the two most recent meetings and Cagliari's opener stayed 1-0.
+
+It ranks below the Over because Inter's current attack has more scoring routes than last season's narrow-control branch, and Cagliari's opener showed enough chance creation to preserve a one-goal home contribution.
+
+### #5 — 1H Under 0.5
+Cagliari's opener was 0-0 at HT and the April 2026 H2H was also 0-0 at HT, so this is a live branch.
+
+It ranks fifth because Inter scored early in the current opener and also led 1-0 at halftime in the last trip to Cagliari.
+
+## Potential winner
+
+**Inter Milan — LEAN**
+
+Primary reasons:
+- defending champions
+- materially stronger starting XI
+- strong midfield/territorial advantage
+- Lautaro starts with Pio Esposito
+- deep attacking bench
+- repeated recent H2H control
+- Cagliari's single-match win does not erase the quality gap
+
+Strongest failure path:
+Cagliari's compact 4-3-2-1 frustrates Inter, Caprile performs strongly, and Mendy/Maldini/Fazzini create one high-value transition or set-piece goal, producing 1-0 / 1-1.
+
+## Final freeze
+
+1. **FT Over 2.5 Goals**
+2. **1H Over 0.5 Goals**
+3. **Inter Over 4.5 Team Corners**
+4. **FT Under 2.5 Goals**
+5. **1H Under 0.5 Goals**
+
+Potential winner: **Inter Milan — LEAN**.
+
+Central score corridor:
+- Inter 2-1
+- Inter 3-0
+- Inter 2-0
+
+Next canonical distinct event ID: **P-208**.
+
+
+
+
+---
+
+# P-208 — Lazio vs Genoa — Italy Serie A
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026/27 Serie A — Matchday 2 |
+| Event | Lazio vs Genoa |
+| Venue | Stadio Olimpico, Rome |
+| Scheduled kickoff | 2026-08-30 20:45 CEST / 2026-08-31 04:45 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 20:47 CEST / 04:47 Australia/Melbourne |
+| GAME-STATE | **PREGAME-AT-CUTOFF / START-CROSSING FEED LAG** |
+| Goal target | `SOCCER_REGULATION_JOINT_GOALS-v1` |
+| Corner target | `SOCCER_MATCH_CORNERS-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+At the cutoff, Lazio's official site and multiple current match pages still showed the event as scheduled/pre-match with **no verified live score or clock**. Under the project's documented feed-lag precedent, P-208/V01 is treated as pregame-at-cutoff. No later live event may revise this frozen card.
+
+## Candidate slate
+
+User-supplied:
+1. 1H Over 0.5 goals
+2. 1H Under 0.5 goals
+3. FT Over 2.5 goals
+4. FT Under 2.5 goals
+
+Generated corner row:
+5. **Total Corners Over 8.5**
+
+Exact corner sportsbook/provider terms were not supplied. The corner row is therefore capped at `FORCED RANK / MEDIUM-LOW`.
+
+## Confirmed/current lineups
+
+### Lazio — current official-lineup consensus
+- Christos Mandas
+- Romano Floriani Mussolini
+- Danilho Doekhi
+- Oliver Provstgaard
+- Alfonso Pedraza
+- Davide Frattesi
+- Nicolò Rovella
+- Kenneth Taylor
+- Gustav Isaksen
+- Boulaye Dia
+- Mattia Zaccagni
+
+Current official squad absences included Adam Marusic and Fisayo Dele-Bashiru, with additional unavailable/non-selected names around the wider squad. Andrea Pinamonti and Josip Sutalo were newly available from the bench.
+
+### Genoa
+- Justin Bijlow
+- Alessandro Marcandalli
+- Leo Østigård
+- Johan Vásquez
+- Brooke Norton-Cuffy
+- Djibril Sow
+- Morten Frendrup
+- Mikael Ellertsson
+- Tommaso Baldanzi
+- Vitinha
+- Lorenzo Colombo
+
+Milutin Osmajic and Hamed Traorè were newly available from the bench.
+
+## Current league process
+
+### Lazio — 1-0 win at Bologna
+Headline:
+- won 1-0
+- Frattesi scored at 59'
+
+Underlying process from current statistical sources:
+- 41% possession
+- 10 shots
+- 3 on target
+- 6 corners
+- roughly **0.64-0.65 xG**
+- Bologna generated roughly 1.9-2.3 xG depending provider, 13-14 shots and 8 corners
+
+Interpretation:
+The win was valuable, but Lazio's underlying attacking creation was much less dominant than the result. The defensive/goalkeeping branch overperformed the raw chance balance, so a home offensive surge cannot simply be assumed.
+
+### Genoa — 0-2 loss vs Napoli
+Current process:
+- 46% possession
+- 11 shots
+- 2 on target
+- 5 corners
+- roughly **0.65-0.71 xG**
+- Napoli roughly 0.9 xG
+
+Interpretation:
+Genoa's 0-2 result was worse than the underlying shot/xG balance. They did not generate enough high-quality chances, but neither were they territorially overwhelmed throughout.
+
+## First-half state
+
+Opening league matches:
+- Bologna 0-0 Lazio at HT
+- Genoa 0-0 Napoli at HT
+
+Recent direct meetings:
+- Lazio 3-2 Genoa (Jan 2026) was **0-0 at HT**
+- Genoa 0-3 Lazio (Sep 2025) was **0-2 at HT**
+
+Interpretation:
+Current-season opening-phase evidence supports a cautious first half, but the previous away H2H shows Lazio retains a real early-breakthrough branch.
+
+## Direct-match prior
+
+Recent Serie A:
+- Lazio 3-2 Genoa — Jan 2026
+- Genoa 0-3 Lazio — Sep 2025
+- Genoa 0-2 Lazio — Apr 2025
+- Lazio 3-0 Genoa — Oct 2024
+- Genoa 0-1 Lazio — Apr 2024
+
+Lazio have controlled the recent results strongly.
+
+However, the January 3-2 contained two penalties and all five goals after halftime, so it is not treated as proof of a naturally high-scoring first half or match.
+
+## Corner process
+
+Generated line:
+### **Total Corners Over 8.5**
+
+Current opening-round totals:
+- Bologna-Lazio: **14 corners** (8-6)
+- Genoa-Napoli: **10 corners** (5-5)
+
+Current direct-match context:
+- Lazio 3-2 Genoa, Jan 2026: 8 total corners (5-3)
+- Genoa 0-3 Lazio, Sep 2025: 6 total corners (6-0)
+- broader current H2H specialist sample: roughly 9.5 average total corners
+
+Mechanism supporting 9+:
+- Lazio's 4-3-3 uses wide attackers Zaccagni/Isaksen and fullback width
+- Genoa's 3-4-2-1/3-5-2 can concede wide territory and clearances while also generating wingback attacks through Norton-Cuffy/Ellertsson
+- both opening league matches generated at least 10 corners
+
+Kill path:
+- an early Lazio goal changes the game into controlled circulation
+- Genoa fail to sustain territory
+- efficient finishing reduces repeated blocked-cross/clearance sequences
+
+Because exact provider terms are unknown, the corner row remains `FORCED RANK`.
+
+## Weather
+
+Near kickoff in Rome:
+- around 29°C
+- mostly clear
+- no rain signal
+
+Mechanism:
+- no wet-weather finishing suppression
+- heat can reduce repeated pressing intensity later, potentially widening late defensive spacing
+- weather is secondary and does not override the current low-goal process.
+
+## Joint goal-state tree
+
+### Central low-output Lazio edge
+Representative scores:
+- Lazio 1-0
+- Lazio 2-0
+- 1-1
+
+Mechanisms:
+- Lazio own more territory at home but remain only moderately efficient
+- Genoa's compact structure keeps central chance quality down
+- Mandas/Bijlow and deeper blocks prevent clusters
+
+Favours:
+- **FT Under 2.5**
+- Lazio winner in 1-0/2-0
+- 1H Under remains live
+
+### Slow first half / second-half Lazio breakthrough
+Representative:
+- HT 0-0 -> Lazio 1-0
+- HT 0-0 -> Lazio 2-0
+- HT 0-0 -> 1-1
+
+Favours:
+- **1H Under 0.5**
+- **FT Under 2.5**
+
+### Early Lazio goal branch
+Representative:
+- HT Lazio 1-0 -> FT 2-0
+- HT Lazio 1-0 -> FT 2-1
+- HT Lazio 1-0 -> FT 3-0
+
+Favours:
+- **1H Over 0.5**
+- full-game total splits between Under 2-0 and Over 2-1/3-0
+
+### Open second-half branch
+Representative:
+- Lazio 2-1
+- Lazio 3-1
+- 2-2
+
+Mechanisms:
+- Genoa equalizes or concedes early and must open
+- Lazio bench attackers exploit wider spaces
+- late fatigue/transition errors increase quality
+
+Favours:
+- **FT Over 2.5**
+
+## P-208/V01 frozen ranking
+
+| Rank | Pick | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **FT Under 2.5 Goals** | **LEAN** | **MEDIUM** |
+| **2** | **1H Under 0.5 Goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **3** | **Total Corners Over 8.5** | **FORCED RANK — provider cap** | **MEDIUM-LOW** |
+| **4** | **1H Over 0.5 Goals** | **FORCED RANK / counter-branch** | **MEDIUM-LOW** |
+| **5** | **FT Over 2.5 Goals** | **AVOID / FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 — FT Under 2.5
+Both opening league matches stayed Under 2.5 and were 0-0 at halftime. Lazio's 1-0 win at Bologna came from only ~0.64 xG while Genoa created only ~0.7 xG against Napoli. The strongest current score family is 1-0 / 2-0 / 1-1.
+
+Main kill path:
+Lazio score early, Genoa must abandon the compact state, and the match opens into 2-1 / 3-1 / 2-2.
+
+### #2 — 1H Under 0.5
+Both teams opened the league with 0-0 first halves, and the January 2026 H2H was also 0-0 at halftime. Lazio's opener did not show strong early chance creation.
+
+Why only thin:
+the September 2025 H2H had Lazio 2-0 up at half-time, and today's Zaccagni-Dia-Isaksen front three can produce an early transition/set-piece goal.
+
+### #3 — Total Corners Over 8.5
+The two opening-round matches involving these teams generated 14 and 10 total corners. The structural matchup includes two sets of wide players/wingbacks and a plausible clearance/block chain.
+
+Why capped:
+recent direct H2Hs also produced only 8 and 6 corners, and exact sportsbook/provider terms are unknown.
+
+### #4 — 1H Over 0.5
+The best path is an early Lazio goal through Zaccagni/Isaksen/Dia or a Genoa transition through Baldanzi/Vitinha/Colombo.
+
+It stays below the Under because current opening-phase evidence is distinctly low-event.
+
+### #5 — FT Over 2.5
+The Over has real 2-1 / 3-0 / 3-1 branches and recent H2Hs include 3-2 and 3-0.
+
+But the current 2026/27 process is substantially lower-output than those historic scorelines, so 3+ goals remains the less central branch.
+
+## Potential winner
+
+**Lazio — LEAN / MEDIUM-LOW**
+
+Primary reasons:
+- home field
+- stronger recent H2H record
+- won at Bologna despite a difficult underlying game
+- Frattesi provides current midfield box-arrival threat
+- Zaccagni/Dia/Isaksen is a stronger attacking trio than Genoa's current front line on paper
+
+Why confidence is capped:
+- Lazio's Bologna underlying process was poor
+- current defensive injuries/changes reduce stability
+- Genoa's Napoli loss was not as one-sided by xG as the 0-2 score suggests
+- 0-0 / 1-1 draw branches remain material
+
+## Final freeze
+
+1. **FT Under 2.5 Goals**
+2. **1H Under 0.5 Goals**
+3. **Total Corners Over 8.5**
+4. **1H Over 0.5 Goals**
+5. **FT Over 2.5 Goals**
+
+Potential winner: **Lazio — LEAN / MEDIUM-LOW**.
+
+Central score corridor:
+- Lazio 1-0
+- Lazio 2-0
+- 1-1
+
+Next canonical distinct event ID: **P-209**.
+
+
+---
+
+# P-209 — Corinthians vs Santos — Brazil Série A
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026 Campeonato Brasileiro Série A — Round 25 |
+| Event | Corinthians vs Santos |
+| Venue | Neo Química Arena, São Paulo |
+| Scheduled kickoff | 2026-08-30 16:00 BRT / 2026-08-31 05:00 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 15:51 BRT / 2026-08-31 04:51 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Goal target | `SOCCER_REGULATION_JOINT_GOALS-v1` |
+| Corner target | `SOCCER_MATCH_CORNERS-v1` |
+| Method | current active qualitative soccer framework |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+The stadium schedule and current match feeds still showed the match as not started at the frozen cutoff. No live event is used.
+
+## Candidate slate
+
+User-supplied:
+1. 1H Over 0.5 goals
+2. 1H Under 0.5 goals
+3. FT Over 2.5 goals
+4. FT Under 2.5 goals
+
+Generated corner row:
+5. **Total Corners Over 8.5**
+
+Exact corner sportsbook/provider terms were not supplied. The corner row is therefore capped at `FORCED RANK / MEDIUM-LOW`.
+
+## Current lineups / availability
+
+### Corinthians — confirmed by multiple same-day lineup sources
+- Hugo Souza
+- Matheuzinho
+- Gabriel Paulista
+- Gustavo Henrique
+- Matheus Bidu
+- Raniele
+- Allan
+- Rodrigo Garro
+- Dieguinho
+- Kaio César
+- Memphis Depay
+
+Key availability:
+- **Memphis Depay starts**, his first start since renewing and first start in more than five months.
+- **Yuri Alberto OUT** after renewed discomfort during recovery from a right-thigh injury.
+- **Breno Bidon suspended**.
+- André unavailable with thigh injury.
+- Hugo Souza, Matheuzinho and Matheus Bidu return.
+
+Interpretation:
+Corinthians restores important ball progression and finishing quality through Memphis/Garro, but loses the usual Yuri-Alberto striker route and Bidon's midfield continuity.
+
+### Santos — confirmed by multiple same-day lineup sources
+- Gabriel Brazão
+- Igor Vinícius
+- Lucas Veríssimo
+- Luan Peres
+- Escobar
+- Willian Arão
+- Gustavo Henrique
+- Gabriel Bontempo
+- Barreal
+- Neymar
+- Gabigol
+
+Key availability:
+- **Neymar returns to the XI** after being preserved from the Palmeiras cup match.
+- **Gabigol returns to the XI**.
+- Gabriel Bontempo returns.
+- João Schmidt is suspended.
+
+Interpretation:
+Santos' attacking ceiling is materially higher than in the midweek 0-3 cup loss because Neymar and Gabigol both start. Schmidt's absence weakens one midfield-control/defensive-protection route.
+
+## Current table / form context
+
+Entering Round 25:
+- Corinthians: 10th, 32 points.
+- Santos: 14th, 26 points, close to the relegation zone.
+
+Corinthians' last two league matches:
+- Corinthians 1-2 Cruzeiro
+- Coritiba 2-1 Corinthians
+
+Santos' latest:
+- Santos 1-1 Mirassol — league
+- Palmeiras 3-0 Santos — Copa do Brasil, without Neymar
+
+Interpretation:
+Corinthians has the stronger table/home position but enters off two league losses.
+Santos' cup defeat is not transferred directly because today's attacking XI is materially stronger.
+
+## First-half goal process
+
+Recent relevant phase evidence:
+
+### Current-season H2H
+Santos 1-1 Corinthians:
+- Memphis 18'
+- Gabigol 21'
+- HT 1-1
+
+### Corinthians latest league games
+vs Cruzeiro:
+- Cruzeiro scored at 36'
+- HT 0-1
+
+at Coritiba:
+- Coritiba scored at 39'
+- HT 1-0
+
+### Santos latest league/cup games
+vs Mirassol:
+- Mirassol scored at 35'
+- HT 0-1
+
+at Palmeiras:
+- Palmeiras scored twice in the first half
+
+This is unusually coherent phase evidence: each of these recent relevant matches contained at least one first-half goal.
+
+Mechanisms today:
+- Memphis/Garro/Kaio César offer Corinthians an early attacking route.
+- Neymar/Gabigol/Barreal give Santos a higher-quality transition/final-third route than the midweek cup XI.
+- suspended/absent midfield pieces on both sides reduce continuity in defensive control.
+
+Main 1H-Under branch:
+classical-derby caution plus heat/storm uncertainty produces a lower-tempo first 30-40 minutes.
+
+## Full-game goal process
+
+Recent exact score evidence:
+- Santos 1-1 Corinthians — March 2026
+- Corinthians 1-2 Cruzeiro
+- Coritiba 2-1 Corinthians
+- Santos 1-1 Mirassol
+- Palmeiras 3-0 Santos
+
+The current evidence therefore includes both:
+- strong 2-1 / 1-2 / 3-0 upper states,
+- and a repeated 1-1 derby/league-control branch.
+
+Important structural change:
+today's Santos attack is stronger than the cup XI because Neymar and Gabigol return, while Corinthians' attack improves through Memphis but remains without Yuri Alberto.
+
+## Corner process
+
+Generated research line:
+### **Total Corners Over 8.5**
+
+Current/recent corner evidence:
+- season-profile sources put both Corinthians and Santos around **5.0 corners for and 5.0 conceded per match**, implying a descriptive ~10-corner centre.
+- Corinthians-Coritiba recent total: **18 corners**
+- Corinthians-Cruzeiro: **11 corners**
+- Santos-Mirassol: **12 corners**
+- March Santos-Corinthians H2H: **10 corners** (Santos 4, Corinthians 6)
+
+Mechanism:
+- Corinthians use Garro/Kaio César/Dieguinho and fullback width to create blocked delivery and end-line states.
+- Santos use Neymar/Barreal plus overlapping fullbacks/Igor Vinícius to generate width and defensive clearances.
+- if the first goal arrives early, the trailing side's chasing state can sustain corner exposure.
+
+Kill path:
+an early goal produces controlled possession rather than sustained wide pressure, or high finishing efficiency converts attacks before they become repeated blocked-cross sequences.
+
+Provider cap:
+the exact corner provider/operator definition was not supplied, so this remains `FORCED RANK`.
+
+## Weather
+
+Near the frozen cutoff in São Paulo:
+- around 27°C
+- mostly cloudy
+- humid/warm
+- current weather feed carries afternoon thunderstorm risk and an INMET storm alert
+
+A separate local forecast source described hotter/drier conditions with limited rain, so the exact short-window precipitation state is not perfectly consistent across sources.
+
+Treatment:
+weather is **not** used directionally. Heat can reduce sustained pressing; storm/wind can reduce clean delivery but also create errors. It widens variance rather than determining Over/Under.
+
+## Joint goal-state tree
+
+### Central derby branch
+Representative scores:
+- 1-1
+- Corinthians 2-1
+- Santos 2-1
+
+Mechanisms:
+- at least one early chance is converted
+- neither side sustains full control
+- both attacks have enough quality for one goal
+
+Favours:
+- **1H Over 0.5**
+- FT total sits directly around the 2.5 boundary
+
+### Corinthians control branch
+Representative scores:
+- Corinthians 1-0
+- Corinthians 2-0
+- Corinthians 2-1
+
+Mechanisms:
+- home pressure and Garro/Memphis creation
+- Santos' Schmidt absence weakens midfield protection
+- Hugo Souza / centre-backs suppress Santos transitions
+
+Favours:
+- Corinthians winner
+- Under at 1-0 / 2-0
+- Over at 2-1
+
+### Santos attacking branch
+Representative scores:
+- Santos 2-1
+- 1-1
+- Santos 2-0
+
+Mechanisms:
+- Neymar/Gabigol return changes final-third quality
+- Corinthians' recent defensive concessions persist
+- Santos attack Garro/wingback transition spaces
+
+Favours:
+- full-game total depends on 2-1 vs 1-1/2-0
+
+### Open branch
+Representative scores:
+- Corinthians 3-1
+- Santos 3-1
+- 2-2
+
+Mechanisms:
+- early goal plus chase state
+- midfield control weakens
+- heat/storm conditions increase late fatigue/error variance
+
+Favours:
+- **FT Over 2.5**
+
+### Slow/tactical branch
+Representative scores:
+- Corinthians 1-0
+- 0-0
+- 1-1 after 0-0 HT
+
+Favours:
+- **1H Under 0.5**
+- **FT Under 2.5**
+
+## P-209/V01 frozen ranking
+
+| Rank | Pick | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **1H Over 0.5 Goals** | **LEAN** | **MEDIUM** |
+| **2** | **Total Corners Over 8.5** | **FORCED RANK — provider cap** | **MEDIUM-LOW** |
+| **3** | **FT Over 2.5 Goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **4** | **FT Under 2.5 Goals** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **5** | **1H Under 0.5 Goals** | **AVOID / FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 — 1H Over 0.5
+The strongest current phase evidence:
+- the March derby had goals at 18' and 21';
+- Corinthians' last two league games contained first-half goals;
+- Santos-Mirassol contained a first-half goal;
+- Palmeiras-Santos contained two first-half goals.
+
+Today's attacking personnel also improve the early-goal branch through Memphis for Corinthians and Neymar/Gabigol for Santos.
+
+Main kill path:
+derby caution creates a low-risk opening and both sides reach halftime 0-0.
+
+### #2 — Total Corners Over 8.5
+The descriptive combined team baseline is about 10 corners, and recent relevant totals are 18, 11, 12 and 10.
+
+The tactical matchup provides credible wide-entry/block/clearance exposure.
+
+Why provider-capped:
+exact operator/provider terms remain unresolved.
+
+### #3 — FT Over 2.5
+Three of the four latest all-competition results across these teams reached at least three total goals, and today's Santos attacking XI is stronger than the midweek cup XI.
+
+Central Over states:
+- Corinthians 2-1
+- Santos 2-1
+- 2-2
+
+Why only thin:
+the March derby finished 1-1 despite two early goals, showing that an early-goal contract can win while the full-game Over still fails. Corinthians also remain without Yuri Alberto.
+
+### #4 — FT Under 2.5
+The Under has meaningful 1-0 / 2-0 / 1-1 branches.
+
+The most important evidence is the March 1-1 H2H, where both goals came by 21' but no further scoring occurred.
+
+It ranks below the Over because both sides' recent defensive profiles and today's restored attacking talent make 2-1 more live than in that March game.
+
+### #5 — 1H Under 0.5
+This requires the strongest current phase pattern to reverse. It is still a valid derby branch, but the recent early-goal evidence is unusually consistent.
+
+## Potential winner
+
+**Corinthians — LEAN / LOW CONFIDENCE**
+
+Primary reasons:
+- home advantage at Neo Química Arena
+- stronger table position
+- Hugo Souza and both fullbacks return
+- Memphis starts and Garro remains the principal creator
+- Santos remain under greater league pressure and are missing João Schmidt
+
+Why confidence stays low:
+- Corinthians have lost two straight league games
+- Yuri Alberto and Bidon are absent
+- Neymar and Gabigol materially improve Santos compared with the cup defeat
+- the March H2H finished 1-1 and the draw remains a major central branch
+
+## Final freeze
+
+1. **1H Over 0.5 Goals**
+2. **Total Corners Over 8.5**
+3. **FT Over 2.5 Goals**
+4. **FT Under 2.5 Goals**
+5. **1H Under 0.5 Goals**
+
+Potential winner: **Corinthians — LEAN / LOW CONFIDENCE**.
+
+Central score corridor:
+- Corinthians 2-1
+- 1-1
+- Santos 2-1
+
+Next canonical distinct event ID: **P-210**.
+
+
+---
+
+# P-210 — Flamengo vs Botafogo — Brazil Série A
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026 Campeonato Brasileiro Série A — Round 25 |
+| Event | Flamengo vs Botafogo |
+| Venue | Maracanã, Rio de Janeiro |
+| Scheduled kickoff | 2026-08-30 16:00 BRT / 2026-08-31 05:00 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 15:56 BRT / 04:56 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Goal target | `SOCCER_REGULATION_JOINT_GOALS-v1` |
+| Corner target | `SOCCER_MATCH_CORNERS-v1` |
+| Method | current active qualitative soccer framework |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator terms | NOT SUPPLIED |
+
+No information first known after the frozen cutoff may revise P-210/V01.
+
+## Candidate slate
+
+User-supplied:
+1. 1H Over 0.5 goals
+2. 1H Under 0.5 goals
+3. FT Over 2.5 goals
+4. FT Under 2.5 goals
+
+Generated corner row:
+5. **Total Corners Over 8.5**
+
+The exact sportsbook/provider definition for corners was not supplied, so the corner row is capped at `FORCED RANK / MEDIUM-LOW`.
+
+## Current lineups / availability
+
+### Flamengo — confirmed same-day XI
+- Rossi
+- Emerson Royal
+- Léo Ortiz
+- Léo Pereira
+- Ayrton Lucas
+- Erick Pulgar
+- Jorginho
+- Giorgian de Arrascaeta
+- Luiz Araújo
+- Samuel Lino
+- Pedro
+
+Important current changes:
+- Gonzalo Plata has left for Dinamo Moscow.
+- Luiz Araújo starts in his role on the right.
+- Saúl is unavailable with fever.
+- Alex Sandro, Vitão and De la Cruz remain unavailable.
+- Bruno Henrique is also among the current absences reported in pregame coverage.
+
+Interpretation:
+Flamengo retain a high-quality attacking spine through Arrascaeta, Pedro, Samuel Lino and Luiz Araújo, but the defensive/rotation state is not full strength.
+
+### Botafogo — current same-day XI/consensus
+- Gabriel Batista
+- Vitinho
+- Ferraresi
+- Justino
+- Alex Telles
+- Huguinho
+- Medina
+- Danilo
+- Montoro
+- Arthur Cabral
+- Danilo Pereira
+
+Important current changes:
+- Danilo returns from a muscular issue.
+- Arthur Cabral returns from suspension.
+- Kaio Pantaleão, Paulinho and Barrera remain unavailable.
+- Tiquinho Soares is registered but not expected to be part of this matchday group because of conditioning/rhythm.
+
+Interpretation:
+Botafogo's midfield and forward structure is stronger than in the Athletico loss through Danilo/Arthur Cabral availability, but defensive absences remain.
+
+## Current league state
+
+### Flamengo
+Entering Round 25:
+- 2nd place
+- 45 points from 23 matches
+- 45 goals scored
+- 21 conceded
+- home: 6W, 3D, 1L
+- home goals: 1.90 scored / 0.80 conceded per match
+
+Recent league result:
+- lost 2-1 at Cruzeiro
+- Pedro scored at 22'
+- Flamengo led 1-0 at halftime
+- match xG around 1.01 Flamengo vs 1.41 Cruzeiro
+- shots: 14 Flamengo vs 24 Cruzeiro
+- corners: 3-3
+
+Important defensive context:
+Flamengo still own one of the league's best season defences, but current club reporting notes they have conceded in four consecutive matches and used the free week to address "avoidable goals."
+
+### Botafogo
+Entering Round 25:
+- 11th place
+- 30 points from 24 matches
+- no win in three league matches entering the derby
+
+Latest league:
+- lost 3-2 at home to Athletico-PR
+- conceded at 10' and 12'
+- trailed 2-0 at halftime
+- Santi Rodríguez scored twice late
+- Botafogo generated heavy territorial pressure and 13 corners in one current stat feed
+
+Previous recent league sequence included:
+- 0-1 at Vitória
+- 1-1 vs Fluminense
+- 0-0 vs Grêmio
+- 1-0 at Cruzeiro
+
+Interpretation:
+Botafogo's ordinary recent scoring environment has been lower than the 2-3 Athletico game, but the defensive process has become more volatile and today's attack is strengthened.
+
+## Current-season direct meeting
+
+2026 Série A:
+- Botafogo 0-3 Flamengo
+- HT: Botafogo 0-2 Flamengo
+- goals: Samuel Lino 12', Léo Pereira 45+1', Pedro 48'
+- Botafogo later went down to ten men
+- corners: Botafogo 2, Flamengo 4
+
+Interpretation:
+The earlier derby strongly supports Flamengo's side/early-goal ceiling, but the red-card state means the 3-0 final cannot be transferred directly as a clean current-score coefficient.
+
+## First-half process
+
+Current phase evidence supporting 1H Over:
+- March H2H: Flamengo goals at 12' and 45+1'
+- Cruzeiro-Flamengo: Pedro scored at 22'
+- Botafogo-Athletico: Athletico scored at 10' and 12'
+
+Season context:
+- Flamengo score about 0.83 first-half goals per league match overall
+- at home Flamengo score before halftime in roughly 60% of current league matches
+- Flamengo concede very little in first halves at home, so the strongest 1H-Over mechanism is a Flamengo goal rather than a balanced early shootout
+
+Main 0-0 HT branch:
+classic-derby caution, Botafogo protecting the central zone, and Flamengo patiently circulating rather than forcing early risk.
+
+## Full-game goal process
+
+Current season:
+- Flamengo: ~1.96 scored / 0.91 conceded per match
+- Botafogo: ~1.61 scored per match; away scoring around 1.42 in current specialist data
+- Flamengo home: ~1.90 scored / 0.80 conceded
+- Botafogo away defensive rate in current specialist sources is materially weaker than Flamengo's home defensive rate
+
+Current tension:
+- Flamengo's season defence supports 2-0 / 1-0 branches.
+- But Flamengo have conceded in four straight and Botafogo restore Arthur Cabral/Danilo.
+- Botafogo just conceded three and were 2-0 down within 12 minutes against Athletico.
+
+## Corner process
+
+Generated line:
+### **Total Corners Over 8.5**
+
+Current season/recent context:
+- Flamengo matches: roughly 8.8 total corners per game in current season specialist data.
+- Botafogo matches: roughly 9.8 total corners per game.
+- Flamengo home profile: about 5.5 corners for and 3.7 against in one current dataset.
+- Botafogo away profile: about 3.25 corners for and 5.83 conceded.
+- Botafogo's last match produced a very high corner count, including 13 Botafogo corners.
+- the March H2H produced only 6 total corners, demonstrating the low-corner kill path.
+
+Mechanism supporting 9+:
+- Flamengo's wide progression through Samuel Lino/Luiz Araújo plus fullback overlaps can generate blocked crosses and defensive clearances.
+- Botafogo's Alex Telles/Vitinho width gives the away side a route to corners when chasing.
+- if Flamengo score first, Botafogo may increase wide attack volume.
+
+Kill path:
+Flamengo score efficiently before sustained pressure develops, then control possession centrally; Botafogo fail to sustain attacks, reproducing the six-corner March pattern.
+
+Provider cap:
+exact corner provider/operator terms were not supplied, so this remains `FORCED RANK`.
+
+## Weather
+
+Near kickoff in Rio:
+- around 27°C
+- mostly sunny/humid at the current observation
+- an INMET storm alert is active for the broader day
+
+No immediate rain was observed at the frozen cutoff.
+
+Treatment:
+weather is not used as a directional goal signal. Heat/humidity can lower repeated pressing; storm risk can widen handling/crossing variance if conditions change later.
+
+## Joint match tree
+
+### Flamengo control + Over branch
+Representative scores:
+- Flamengo 3-0
+- Flamengo 3-1
+- Flamengo 2-1
+
+Mechanisms:
+- Flamengo score early through Pedro/Arrascaeta/Samuel Lino/Luiz Araújo
+- Botafogo's defensive instability persists
+- restored Botafogo attack either contributes one or forces a more open score-state
+
+Favours:
+- **1H Over 0.5**
+- **FT Over 2.5**
+- Flamengo winner
+
+### Flamengo control + Under branch
+Representative scores:
+- Flamengo 2-0
+- Flamengo 1-0
+- 1-1
+
+Mechanisms:
+- Flamengo dominate territory but protect transitions better after recent defensive work
+- Botafogo struggle to convert limited entries
+- early lead lowers later match tempo
+
+Favours:
+- 1H Over can still win
+- **FT Under 2.5**
+
+### Competitive derby branch
+Representative scores:
+- Flamengo 2-1
+- 1-1
+- Botafogo 2-1
+
+Mechanisms:
+- Botafogo's restored midfield/front line improves possession retention
+- Flamengo's defensive absences/recent concession streak remains relevant
+- both teams generate one high-value transition/set-piece chance
+
+Favours:
+- FT total sits on/above boundary
+- draw remains meaningful
+
+### Slow opening branch
+Representative:
+- HT 0-0 -> Flamengo 1-0
+- HT 0-0 -> 1-1
+- HT 0-0 -> Flamengo 2-0
+
+Favours:
+- **1H Under 0.5**
+- FT Under in most states
+
+## P-210/V01 frozen ranking
+
+| Rank | Pick | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **1H Over 0.5 Goals** | **LEAN** | **MEDIUM** |
+| **2** | **FT Over 2.5 Goals** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **3** | **Total Corners Over 8.5** | **FORCED RANK — provider cap** | **MEDIUM-LOW** |
+| **4** | **FT Under 2.5 Goals** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **5** | **1H Under 0.5 Goals** | **AVOID / FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 — 1H Over 0.5
+The strongest phase-specific evidence points toward one early goal:
+- Flamengo led 2-0 at halftime in the March H2H.
+- Flamengo scored at 22' against Cruzeiro.
+- Botafogo conceded twice in the opening 12 minutes against Athletico.
+
+Flamengo's confirmed attacking XI remains strong enough to create the first-half goal even without Plata.
+
+Main kill path:
+derby caution and Botafogo's compact midfield keep Flamengo circulating outside the box and the teams reach HT 0-0.
+
+### #2 — FT Over 2.5
+The central score family is 2-1 / 3-0 / 3-1.
+
+Support:
+- Flamengo average nearly two league goals per match.
+- Botafogo's current defensive form is unstable.
+- Flamengo have conceded in four straight.
+- Arthur Cabral and Danilo return for Botafogo.
+- the first H2H finished 3-0.
+
+Why only thin:
+Flamengo have a strong season defence, and a 2-0 home win remains one of the largest central counter-states.
+
+### #3 — Total Corners Over 8.5
+Current season match baselines cluster around 9-10 total corners and Botafogo's latest game produced heavy corner pressure.
+
+Why not higher:
+the exact March H2H produced only six corners, and corner count is highly score-state dependent. Provider terms are also unresolved.
+
+### #4 — FT Under 2.5
+Strongest Under states:
+- Flamengo 1-0
+- Flamengo 2-0
+- 1-1
+
+This is a meaningful branch because Flamengo's underlying season defence remains excellent and Botafogo's recent scoring floor is low.
+
+It ranks below the Over because today's Botafogo attack is stronger than in several recent matches and Flamengo's current four-game concession streak widens the 2-1 state.
+
+### #5 — 1H Under 0.5
+The 0-0 halftime derby branch is real, but it is directly opposed by the March H2H and both teams' most recent first-half events.
+
+## Potential winner
+
+**Flamengo — LEAN / MEDIUM**
+
+Primary reasons:
+- materially stronger season performance
+- 45 points vs Botafogo's 30
+- home strength at the Maracanã
+- stronger confirmed attacking spine
+- Botafogo enter winless in three and with current defensive instability
+- Flamengo won the first 2026 league H2H 3-0
+
+Why not stronger:
+- Flamengo have just lost at Cruzeiro
+- they have conceded in four straight
+- important defensive/midfield absences remain
+- Botafogo restore Arthur Cabral and Danilo
+- derby draw/upset branches cannot be dismissed
+
+## Final freeze
+
+1. **1H Over 0.5 Goals**
+2. **FT Over 2.5 Goals**
+3. **Total Corners Over 8.5**
+4. **FT Under 2.5 Goals**
+5. **1H Under 0.5 Goals**
+
+Potential winner: **Flamengo — LEAN / MEDIUM**.
+
+Central score corridor:
+- Flamengo 2-1
+- Flamengo 3-0
+- Flamengo 2-0
+
+Next canonical distinct event ID: **P-211**.
+
+
+---
+
+# P-211 — Jaime Faria vs Jenson Brooksby — US Open Men's Singles R1
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026 US Open — Men's Singles Round 1 / R128 |
+| Event | Jaime Faria vs Jenson Brooksby |
+| Venue | USTA Billie Jean King National Tennis Center — Stadium 17 |
+| Surface | Outdoor hard |
+| Format | Best of five sets |
+| Order of play | Third match on Stadium 17 |
+| Frozen cutoff | 2026-08-31 04:58:38 Australia/Melbourne / 2026-08-30 14:58:38 EDT |
+| GAME-STATE | **PREGAME / NOT STARTED at cutoff** |
+| Target | `TENNIS_JOINT_SET_GAME_TREE-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator/retirement terms | NOT SUPPLIED / `UNKNOWN_DEFINITION` |
+
+No information first known after the frozen cutoff may revise P-211/V01.
+
+## Supplied contracts
+
+1. Faria +0.5 Games
+2. Brooksby -0.5 Games
+3. Total Games Over 39.5
+4. Total Games Under 39.5
+
+### Settlement geometry
+- Under 39.5 wins at **39 games or fewer**.
+- Over 39.5 wins at **40 games or more**.
+- There is no total-games push.
+- A +0.5/-0.5 games handicap is based on total games won, not merely match winner. A player can theoretically win the match but lose the game handicap if the lost sets were sufficiently lopsided.
+- Exact retirement/walkover treatment is unknown because the user's operator was not supplied.
+
+## Current head-to-head
+
+H2H: 1-1.
+
+### Cincinnati 2026 — outdoor hard
+Faria def. Brooksby 6-3, 6-2.
+
+Match statistics:
+- Faria 5 aces / 6 double faults
+- Faria first serve in 57%
+- Faria won 79% of first-serve points
+- Faria won 60% of second-serve points
+- Faria held 8/9 service games
+- Faria broke Brooksby 4 times
+- Brooksby won only 61% behind first serve and 39% behind second serve
+- Brooksby held only 4/8 service games
+
+This is the most relevant direct-match prior because it occurred on the same surface only about two weeks before the US Open.
+
+### Roland Garros 2025 — clay
+Brooksby def. Faria 6-1, 3-6, 6-3, 6-2.
+
+This meeting is downweighted because it was on clay, more than a year earlier, and preceded the current North American hard-court regime.
+
+Both historical H2Hs also finished below 39.5 total games:
+- Cincinnati 2026: 17 games
+- Roland Garros 2025: 33 games
+
+These totals are descriptive, not independent probability estimates.
+
+## Current hard-court regime
+
+### Jaime Faria
+Recent Cincinnati run:
+- beat Brooksby 6-3, 6-2
+- beat Ben Shelton 6-4, 6-4 for his first Top-10 win
+- beat Adam Walton 4-6, 6-4, 7-6(3)
+- lost to Lorenzo Musetti 5-7, 2-6
+
+Interpretation:
+Faria's current hard-court regime is materially stronger than ranking alone would imply. He has shown:
+- strong first-strike serving when the first serve lands,
+- good pressure on second serves,
+- willingness to attack return games,
+- enough resilience to win a deciding-set/tiebreak match against Walton.
+
+Recent hard-court split from Tennis Abstract's rolling sample:
+- hold around 73.6%
+- break around 27.4%
+- return points won around 38.0%
+- first-serve points won around 73.5%
+- second-serve points won around 48.0%
+
+### Jenson Brooksby
+Recent matches:
+- beat Mpetshi Perricard 6-3, 6-2 in Winston-Salem
+- lost to Stefanos Tsitsipas 4-6, 6-7(6), with a second-set set point and eight break-point chances overall
+- lost to Faria 3-6, 2-6 in Cincinnati
+- lost to Ben Shelton 3-6, 5-7 in Montreal
+- beat Adam Walton 6-3, 6-4 in Montreal
+
+Brooksby's current strength remains return disruption and baseline pressure. Against Mpetshi Perricard he broke four times and did not face a break point.
+
+Recent hard-court split from Tennis Abstract's rolling sample:
+- hold around 76.8%
+- break around 20.3%
+- return points won around 36.5%
+- first-serve points won around 69.3%
+- second-serve points won around 50.5%
+
+Interpretation:
+Brooksby has rebounded from the Cincinnati loss and his close Tsitsipas match is meaningful contrary evidence. Faria still owns the stronger same-surface direct result and the stronger recent high-end win through Shelton.
+
+## Best-of-five / total-games geometry
+
+### Why 39.5 is a high threshold
+A straight-set match **cannot** go Over 39.5:
+- even 7-6, 7-6, 7-6 = 39 games.
+
+So Over 39.5 requires:
+1. at least four sets, and
+2. a fairly close four-set distribution, **or**
+3. a sufficiently long five-set match.
+
+Many ordinary four-set results remain Under:
+- 6-4, 3-6, 6-3, 6-4 = 34
+- 6-3, 4-6, 6-4, 6-4 = 35
+- 7-5, 4-6, 6-3, 6-4 = 37
+
+Four-set Over branches usually require multiple 7-5/7-6 sets or a generally tight game distribution.
+
+### Current break/tiebreak implications
+Both players can pressure return games:
+- Faria's recent rolling hard-court break rate is stronger than Brooksby's.
+- Brooksby remains a disruptive returner and generated eight break chances against Tsitsipas.
+
+That raises the chance of sets being decided by breaks before 6-6 rather than repeated tiebreaks, which is favorable to the Under 39.5 relative to a pure hold-dominant matchup.
+
+## Joint set/game tree
+
+### Faria control branch
+Representative scores:
+- Faria 3-0: 6-4, 6-3, 6-4 — 29 games
+- Faria 3-1: 6-4, 3-6, 6-3, 6-4 — 34 games
+- Faria 3-1: 7-5, 6-3, 4-6, 6-3 — 36 games
+
+Favours:
+- Faria +0.5 Games
+- Under 39.5
+
+Mechanism:
+Faria's Cincinnati second-serve pressure and stronger recent first-strike form persist; Brooksby struggles to protect enough service games to create repeated tiebreaks.
+
+### Brooksby control branch
+Representative scores:
+- Brooksby 3-0: 6-4, 6-4, 6-3 — 29 games
+- Brooksby 3-1: 6-4, 4-6, 6-3, 6-4 — 35 games
+- Brooksby 3-1: 7-5, 6-3, 4-6, 6-3 — 36 games
+
+Favours:
+- Brooksby -0.5 Games
+- Under 39.5
+
+Mechanism:
+Brooksby uses return depth/variation to reduce Faria's first-strike advantage and converts the break chances that were available against Tsitsipas.
+
+### Close four-set branch
+Representative scores:
+- Faria 7-6, 6-7, 7-5, 6-4 — 48 games
+- Brooksby 7-6, 5-7, 7-6, 6-4 — 47 games
+
+Favours:
+- Over 39.5
+- game handicap depends on exact set margins
+
+Mechanism:
+both players protect serve more efficiently than their current rolling hold rates imply, and multiple sets reach 5-5/6-6.
+
+### Five-set branch
+Representative scores:
+- Faria 6-4, 4-6, 7-5, 3-6, 6-4 — 51 games
+- Brooksby 6-3, 4-6, 6-7, 6-3, 6-4 — 51 games
+
+Favours:
+- Over 39.5 in most ordinary five-set score distributions
+- game handicap becomes materially less correlated with match winner
+
+Mechanism:
+Brooksby's return/baseline resilience prevents Faria control, while Faria's serve/forehand prevents Brooksby control.
+
+## P-211/V01 frozen ranking
+
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **Under 39.5 Total Games** | **LEAN** | **MEDIUM** |
+| **2** | **Faria +0.5 Games** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **3** | **Brooksby -0.5 Games** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **4** | **Over 39.5 Total Games** | **FORCED RANK** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 — Under 39.5
+Structural reasons:
+- every straight-set outcome is automatically Under;
+- many ordinary four-set outcomes remain Under;
+- both recent H2Hs were Under 39.5;
+- the most relevant same-surface H2H was highly break-heavy rather than tiebreak-heavy;
+- both players' current return pressure creates realistic 6-3/6-4 set families.
+
+Main kill path:
+Brooksby's recent rebound translates into a much tighter rematch and neither player can establish control, producing four close sets with several 7-5/7-6 scores or a five-set match.
+
+### #2 — Faria +0.5 Games
+Faria gets the side edge because:
+- he beat Brooksby 6-3, 6-2 on the same surface only two weeks ago;
+- he then beat Shelton and Walton;
+- his recent hard-court return/first-serve profile is at least competitive and in several dimensions stronger;
+- the Cincinnati matchup showed a direct second-serve and return-pressure advantage.
+
+Why only thin:
+Brooksby has since beaten Mpetshi Perricard cleanly and pushed Tsitsipas to a second-set tiebreak/set point. External markets remain close and often make Brooksby a slight favorite.
+
+### #3 — Brooksby -0.5 Games
+The best Brooksby pathway is a 3-1 or 3-0 win built through return pressure and forcing Faria into lower first-serve percentages.
+
+Brooksby's rebound at Winston-Salem and close Tsitsipas loss prevent the Cincinnati result from being treated as permanent.
+
+It ranks behind Faria because the direct current-surface matchup was decisively unfavorable and Faria's overall Cincinnati run was stronger.
+
+### #4 — Over 39.5
+The Over is viable if the match becomes a genuine four/five-set fight.
+
+But it needs more simultaneous conditions:
+- neither side achieves straight-set control;
+- a four-set match must remain relatively close, or the match must extend to five;
+- multiple sets must resist the break-rich 6-3/6-4 pattern.
+
+That is less central than the Under branch.
+
+## Potential winner
+
+**Jaime Faria — LEAN / LOW-MEDIUM CONFIDENCE**
+
+Primary reasons:
+- decisive same-surface H2H win only two weeks ago;
+- better recent Cincinnati run;
+- first Top-10 win over Shelton;
+- stronger recent second-serve-return pressure;
+- ranking gap is small and not controlling.
+
+Strongest failure path:
+Brooksby adapts tactically from Cincinnati, extends rallies onto Faria's weaker second-serve/consistency phases, and reproduces his Winston-Salem return performance, leading to a Brooksby 3-1 or 3-2 win.
+
+## External market challenger
+
+Current market snapshots are close and inconsistent:
+- several books/aggregators have Brooksby a small favorite;
+- others have Faria essentially pick'em or marginally favored.
+
+This disagreement is treated only as an external challenger. It reinforces that the side is much less robust than the Under 39.5 total-games thesis.
+
+No internal value/EV claim is made.
+
+## Final freeze
+
+1. **Under 39.5 Total Games**
+2. **Faria +0.5 Games**
+3. **Brooksby -0.5 Games**
+4. **Over 39.5 Total Games**
+
+Potential winner: **Jaime Faria — LEAN / LOW-MEDIUM CONFIDENCE**.
+
+Central match corridor:
+- Faria 3-1
+- Faria 3-0
+- Brooksby 3-1 counterbranch
+
+Next canonical distinct event ID: **P-212**.
+
+
+---
+
+# P-212 — McCartney Kessler vs Ekaterina Alexandrova — US Open Women R1
+
+## Event/state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | 2026 US Open — Women's Singles Round 1 / R128 |
+| Event | McCartney Kessler vs Ekaterina Alexandrova |
+| Surface | Outdoor hard |
+| Format | Best of three sets |
+| Frozen cutoff | 2026-08-31 ~05:01 Australia/Melbourne / 2026-08-30 ~15:01 EDT |
+| GAME-STATE | **PREGAME / NOT STARTED at cutoff** |
+| Target | `TENNIS_JOINT_SET_GAME_TREE-v1` |
+| Method | MDS-2026.08.30-v2.7 qualitative champion |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator/retirement terms | NOT SUPPLIED / `UNKNOWN_DEFINITION` |
+
+Multiple current match pages still showed the match as scheduled/not started at the frozen cutoff. No live point/game/set information is used.
+
+## Supplied contracts
+
+1. McCartney Kessler +2.5 Games
+2. Ekaterina Alexandrova -2.5 Games
+3. Total Games Over 21.5
+4. Total Games Under 21.5
+
+### Settlement geometry
+
+- Over 21.5 wins at 22+ total games.
+- Under 21.5 wins at 21 or fewer.
+- No push is possible at 21.5.
+- Kessler +2.5 can cash in a narrow loss and every Kessler match win.
+- Alexandrova -2.5 requires a game-margin win of at least 3 games.
+- Match winner and game handicap are not identical.
+- Retirement/walkover settlement remains unknown because operator terms were not supplied.
+
+## Ranking / seed context
+
+- Ekaterina Alexandrova is the No. 18 US Open seed and around WTA No. 19.
+- McCartney Kessler is around WTA No. 65.
+
+Rankings are contextual only and do not independently control the forecast.
+
+## Head-to-head
+
+Alexandrova leads 1-0.
+
+### Ningbo 2025 — hard
+Alexandrova def. Kessler **6-3, 6-3**.
+
+Implications:
+- Alexandrova won by 6 games: Alexandrova -2.5 would have covered.
+- Total was 18 games: Under 21.5 would have won.
+
+This is relevant because it was a hard-court meeting, but it is downweighted for being nearly a year old and because both players' current regimes have changed.
+
+## Current hard-court regime
+
+### McCartney Kessler
+
+Recent hard-court results:
+- L Caty McNally 3-6, 4-6 — Cincinnati
+- L Anna Kalinskaya 2-6, 7-6, 4-6 — Toronto
+- W Cadence Brace 6-3, 6-3 — Toronto
+- L Renata Zarazúa 4-6, 1-6 — Memphis
+
+Important process:
+- vs McNally, Kessler won only 54% of first-serve points and faced substantial return pressure.
+- vs Kalinskaya, Kessler still forced a deciding set and won a tiebreak, showing a credible set-winning/length-extension branch against a strong opponent.
+- Kessler's current hard form is therefore mixed: enough resilience to extend matches, but an unstable serve/second-serve floor against strong returners.
+
+### Ekaterina Alexandrova
+
+Recent hard-court results:
+- L Clara Tauson 6-7, 6-4, 3-6 — Monterrey
+- L Sara Bejlek 4-6, 6-1, 2-6 — Cincinnati
+- W Anna Blinkova 6-7, 6-4, 7-5 — Cincinnati
+- L Elina Svitolina 6-3, 0-6, 3-6 — Toronto
+- W Aryna Sabalenka 7-6, 4-6, 6-4 — Toronto
+- W Talia Gibson 5-7, 6-1, 6-3 — Toronto
+- W Camila Osorio 6-3, 7-6 — Toronto
+
+Important process:
+- Alexandrova has repeatedly extended high-level hard-court matches into deciding sets.
+- She recently defeated Sabalenka through aggressive return pressure.
+- She has enough serve power to create short-set separation, but her recent match-to-match volatility and second-set swings widen the three-set branch.
+- Her current opponent quality is substantially stronger than Kessler's recent slate.
+
+### Match-length observation
+
+Alexandrova's last seven completed hard-court matches listed above all reached **22 or more total games**:
+- 32 vs Tauson
+- 25 vs Bejlek
+- 35 vs Blinkova
+- 24 vs Svitolina
+- 33 vs Sabalenka
+- 28 vs Gibson
+- 22 vs Osorio
+
+This is descriptive only. The mechanism is more important:
+Alexandrova has enough serve/first-strike quality to hold frequently, but enough return/serve volatility that one set often swings the opposite direction rather than producing repeated 6-2/6-3 control.
+
+Kessler's recent matches have been shorter more often, so this is not treated as an automatic Over.
+
+## Total-games geometry
+
+### Straight-set Alexandrova control
+Representative:
+- 6-3, 6-3 = 18
+- 6-4, 6-3 = 19
+- 6-4, 6-4 = 20
+
+Favours:
+- Alexandrova -2.5
+- Under 21.5
+
+This is the exact H2H-like branch.
+
+### Competitive straight sets
+Representative:
+- 7-5, 6-4 = 22
+- 7-6, 6-3 = 22
+- 7-6, 6-4 = 23
+
+Favours:
+- Over 21.5
+- handicap depends on exact game margins
+
+This branch matters because Kessler can pressure at least one set even if she does not win it.
+
+### Three-set Alexandrova win
+Representative:
+- 6-4, 4-6, 6-3 = 35
+- 7-5, 3-6, 6-3 = 36
+- 6-3, 4-6, 6-4 = 35
+
+Favours:
+- Over 21.5
+- Alexandrova -2.5 often but not always
+
+### Kessler upset / three-set branch
+Representative:
+- Kessler 6-4, 4-6, 6-4 = 30
+- Kessler 3-6, 6-4, 6-4 = 29
+
+Favours:
+- Kessler +2.5
+- Over 21.5
+
+## Joint set/game tree
+
+### Alexandrova control
+Representative score:
+- Alexandrova 6-3, 6-3
+- Alexandrova 6-4, 6-3
+
+Mechanisms:
+- Alexandrova attacks Kessler's second serve.
+- Kessler struggles to generate enough first-strike points.
+- Alexandrova's stronger recent opponent level translates into cleaner pressure points.
+
+Favours:
+- Alexandrova -2.5
+- Under 21.5
+
+### Competitive Alexandrova win
+Representative:
+- Alexandrova 7-5, 6-4
+- Alexandrova 6-4, 4-6, 6-3
+
+Mechanisms:
+- Kessler serves well enough to stay close or take one set.
+- Alexandrova's return/first-strike ceiling wins the match, but not through repeated early breaks.
+
+Favours:
+- Over 21.5
+- Alexandrova winner
+- handicap depends on exact game margin
+
+### Kessler resistance/upset
+Representative:
+- Kessler 6-4, 4-6, 6-4
+- Kessler 7-6, 4-6, 6-3
+
+Mechanisms:
+- home-crowd/comfort plus first-serve performance improves.
+- Alexandrova's recent double-fault/serve-volatility branch appears.
+- Kessler gets enough second-serve return pressure to create break chances.
+
+Favours:
+- Kessler +2.5
+- Over 21.5
+
+## P-212/V01 frozen ranking
+
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **Over 21.5 Total Games** | **LEAN** | **MEDIUM** |
+| **2** | **Ekaterina Alexandrova -2.5 Games** | **LEAN / THIN** | **MEDIUM** |
+| **3** | **McCartney Kessler +2.5 Games** | **FORCED RANK / strong counter-branch** | **MEDIUM-LOW** |
+| **4** | **Under 21.5 Total Games** | **FORCED RANK / H2H-control branch** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 — Over 21.5
+The threshold can be cleared in:
+- almost every ordinary three-set match;
+- competitive straight sets such as 7-5, 6-4 or 7-6, 6-3.
+
+Alexandrova's current hard-court regime has been unusually match-length heavy, with seven consecutive completed hard matches reaching at least 22 games. Kessler has shown enough resistance against Kalinskaya and other stronger opponents to preserve a close-set or set-winning branch.
+
+Main kill path:
+Alexandrova reproduces the Ningbo matchup, repeatedly attacks Kessler's second serve and wins 6-3, 6-3 / 6-4, 6-3.
+
+### #2 — Alexandrova -2.5
+Alexandrova owns:
+- the ranking/seed edge;
+- the only H2H, won 6-3, 6-3;
+- stronger current opponent quality;
+- recent wins over Sabalenka, Gibson, Osorio and Blinkova;
+- a more dangerous aggressive-return pathway against Kessler's current serve instability.
+
+Why below the Over:
+Alexandrova can win a close three-set or two-tiebreak match without covering -2.5.
+
+### #3 — Kessler +2.5
+Kessler covers every outright win and narrow game-margin loss.
+
+Her strongest current evidence is:
+- taking Kalinskaya to three sets;
+- a straight-set Toronto win;
+- home-major familiarity.
+
+Main problem:
+the previous H2H was a clean six-game Alexandrova margin, and Kessler has recently lost by five games to both McNally and Kalinskaya despite extending the latter to three sets.
+
+### #4 — Under 21.5
+The Under is coherent if Alexandrova controls:
+- 6-3, 6-3
+- 6-4, 6-3
+- 6-4, 6-4
+
+The prior H2H is exactly this type.
+
+It ranks fourth because Alexandrova's current regime has been far more three-set/close-set heavy than that older Ningbo match, while Kessler's best path to competing naturally extends the game count.
+
+## Potential winner
+
+**Ekaterina Alexandrova — LEAN**
+
+Primary reasons:
+- No. 18 seed / current top-20 ranking.
+- 1-0 H2H with a 6-3, 6-3 hard-court win.
+- substantially stronger recent opponent quality.
+- Toronto run included a win over Sabalenka.
+- aggressive return style directly tests Kessler's less-stable current service games.
+
+Strongest failure path:
+Kessler raises her first-serve percentage and first-strike efficiency in the home Slam environment, while Alexandrova's recent serve volatility/double-fault branch returns; Kessler then turns one tight set into a deciding-set upset.
+
+## External market challenger
+
+Current public pricing generally makes Alexandrova the favorite, but not an overwhelming one. This broadly agrees with:
+- Alexandrova as the preferred winner;
+- Kessler retaining enough competitive probability to keep Over 21.5 viable.
+
+No internal probability/EV/value claim is published.
+
+## Final freeze
+
+1. **Over 21.5 Total Games**
+2. **Ekaterina Alexandrova -2.5 Games**
+3. **McCartney Kessler +2.5 Games**
+4. **Under 21.5 Total Games**
+
+Potential winner: **Ekaterina Alexandrova — LEAN**.
+
+Central match corridor:
+- Alexandrova 2-1
+- Alexandrova 2-0 with at least one close set
+- Kessler 2-1 counterbranch
+
+Next canonical distinct event ID: **P-213**.
+
+
+---
+
+## Administrative re-check — P-211 duplicate request — 2026-08-31
+
+The user re-requested the already-issued event:
+
+**P-211 — Jaime Faria vs Jenson Brooksby — US Open Men's Singles Round 1**
+
+No new canonical event ID is consumed.
+
+### Current state at re-check
+- Australia/Melbourne local time at re-check: approximately 05:07 on 2026-08-31.
+- Current tournament-bracket feed marked the match **LIVE**, with Faria leading **2-0 in games** at the observed snapshot.
+- Tennis.com remained stale at **Upcoming**, so current-state feeds were not perfectly aligned.
+
+### Controlling forecast
+The immutable pregame `P-211/V01` remains controlling. It was frozen before the match began and is **not revised using current live information**.
+
+Frozen P-211/V01 ranking:
+1. **Under 39.5 Total Games — LEAN, MEDIUM**
+2. **Faria +0.5 Games — LEAN / THIN, MEDIUM-LOW**
+3. **Brooksby -0.5 Games — FORCED RANK / strong counter-branch, MEDIUM-LOW**
+4. **Over 39.5 Total Games — FORCED RANK, MEDIUM-LOW**
+
+Potential winner:
+**Jaime Faria — LEAN / LOW-MEDIUM CONFIDENCE**
+
+No retrospective or settlement was performed.
+
+
+---
+
+# P-213 — Toby Samuel vs Tomas Machac — US Open Men's Singles R1
+
+## Event/state freeze
+- Competition: 2026 US Open — Men's Singles Round 1 / R128
+- Event: Toby Samuel vs Tomas Machac
+- Venue: USTA Billie Jean King National Tennis Center — Court 10
+- Surface: Outdoor hard
+- Format: Best of five sets
+- Frozen cutoff: 2026-08-31 ~05:10 Australia/Melbourne / 2026-08-30 ~15:10 EDT
+- GAME-STATE: PREGAME / NOT STARTED at cutoff
+- Target: `TENNIS_JOINT_SET_GAME_TREE-v1`
+- Probability state: `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING`
+- Value state: `NO VALUE DETERMINABLE`
+- Operator retirement/walkover terms: `UNKNOWN_DEFINITION`
+
+No live point/game/set information is used.
+
+## Supplied contracts
+1. Toby Samuel -2.5 Games
+2. Tomas Machac +2.5 Games
+3. Over 39.5 Total Games
+4. Under 39.5 Total Games
+
+## Current context
+
+### Toby Samuel
+- Qualifier; around ATP No. 110-113 in current sources.
+- Three Challenger titles in 2026; latest Winnipeg title won without dropping a set.
+- Qualified for the US Open by beating:
+  - Francesco Maestrelli 6-7, 6-3, 6-1
+  - Billy Harris 4-6, 6-1, 6-4
+  - Cristian Garin 4-6, 6-4, 5-0 RET
+- Q1 vs Maestrelli:
+  - 67% first serve in
+  - 74% first-serve points won
+  - 58% second-serve points won
+  - held 13/14 service games
+  - broke 5 times
+- Q2 vs Harris:
+  - held 10/14
+  - broke 6 times
+  - won 64% of Harris second-serve return points
+- Q3 vs Garin:
+  - 76% first serve in
+  - won 63% on both first and second serve
+  - converted all 5 break points
+- Tennis Abstract current hard-court sample is very strong, but materially Challenger/qualifying weighted and therefore shrunk for ATP-main-draw opponent quality.
+- Best-of-five evidence is limited, but Samuel pushed Jakub Mensik to five sets at Wimbledon 2026.
+
+### Tomas Machac
+- Around ATP No. 58-62 in current sources; career high No. 20.
+- Higher ATP-main-draw baseline and substantially more top-level experience.
+- Won Adelaide 2026, but current North American return has been poor:
+  - Cincinnati: lost 3-6, 2-6 to Pablo Carreno Busta
+  - Winston-Salem: lost 2-6, 6-7(1) to Mees Rottgering
+- vs Carreno Busta:
+  - 57% first serve in
+  - 60% first-serve points won
+  - 47% second-serve points won
+  - held only 3/8 service games
+- vs Rottgering:
+  - 56% first serve in
+  - 69% first-serve points won
+  - only 40% second-serve points won
+  - 7 double faults
+  - held 7/10 service games
+  - converted only 1/7 break points
+- Machac missed the grass season, including Wimbledon, because of a left-foot/heel injury. Current sources do not list an active injury at the US Open, so this is treated as comeback/form uncertainty rather than a confirmed current injury downgrade.
+- Tennis Abstract current hard sample shows a stronger ATP-level hold profile than Samuel's main-draw Grand Slam sample, but weaker current return effectiveness and only roughly break-even recent hard-court results.
+
+## H2H
+- No prior Samuel-Machac meeting found.
+- This is a first-meeting matchup; no H2H shortcut is used.
+
+## Level adjustment
+Samuel's hard-court results and hold/break numbers are excellent, but a large share comes from Challenger and qualifying opposition.
+Machac's baseline comes from substantially stronger ATP main-draw competition.
+
+Therefore:
+- Samuel's raw 2026 hard win rate/break rate is shrunk downward.
+- Machac's ranking/main-tour baseline is not allowed to override his poor current comeback form.
+- The forecast is based on the intersection: rising Samuel hard-court regime versus higher-ceiling but unstable Machac return.
+
+## Best-of-five total-games geometry
+
+### Automatic Under branch
+Every 3-0 score is Under 39.5.
+Even the maximum three-set score:
+- 7-6, 7-6, 7-6 = 39 games.
+
+### Ordinary four-set Under examples
+- 6-4, 3-6, 6-3, 6-4 = 34
+- 7-5, 4-6, 6-3, 6-4 = 37
+- 6-3, 4-6, 7-5, 6-3 = 36
+
+### Over branch
+Over 39.5 usually requires:
+- a close four-set match with multiple 7-5/7-6 sets, or
+- a five-set match.
+
+This is why Under can win whether Samuel controls or Machac controls.
+
+## Joint set/game tree
+
+### Samuel control
+Representative:
+- Samuel 6-4, 6-3, 6-4 (3-0)
+- Samuel 6-4, 3-6, 6-3, 6-4 (3-1)
+
+Mechanisms:
+- Samuel's current return pressure attacks Machac's second serve.
+- Machac's comeback serving instability persists.
+- Samuel's qualifying confidence/fitness carries into the main draw.
+
+Favours:
+- Samuel -2.5
+- Under 39.5
+
+### Machac control
+Representative:
+- Machac 6-4, 6-4, 6-3
+- Machac 6-4, 4-6, 6-3, 6-4
+
+Mechanisms:
+- ATP-level shot quality/return depth exposes Samuel's level jump.
+- Machac's first serve stabilises.
+- Samuel's qualifying workload and weaker best-of-five main-draw experience matter.
+
+Favours:
+- Machac +2.5
+- Under 39.5
+
+### Narrow Samuel win
+Representative:
+- Samuel 7-6, 4-6, 6-4, 6-4
+- Samuel 6-4, 1-6, 6-4, 6-4
+- Samuel 3-2 in five close sets
+
+Implication:
+- Samuel can win the match while failing -2.5 games.
+- Machac +2.5 retains important cover pathways.
+
+### Long competitive branch
+Representative:
+- 7-6, 6-7, 7-5, 6-4
+- five-set 3-2 either way
+
+Favours:
+- Over 39.5
+- handicap depends on exact set margins.
+
+## P-213/V01 frozen ranking
+1. **Under 39.5 Total Games — LEAN, MEDIUM**
+2. **Tomas Machac +2.5 Games — LEAN / THIN, MEDIUM-LOW**
+3. **Toby Samuel -2.5 Games — FORCED RANK / strong counter-branch, MEDIUM-LOW**
+4. **Over 39.5 Total Games — FORCED RANK, MEDIUM-LOW**
+
+## Ranking logic
+
+### #1 Under 39.5
+Broadest structural path:
+- every straight-set result wins;
+- many ordinary four-set results win;
+- current matchup contains meaningful break-rich/serve-instability routes on both sides.
+
+Main kill path:
+neither player establishes control and the match becomes a close four-set or five-set contest.
+
+### #2 Machac +2.5
+This is not the same as preferring Machac to win.
+The cushion wins:
+- every Machac victory;
+- narrow Samuel wins by two or fewer net games.
+
+Because the match-winner edge is only slight toward Samuel after level adjustment, the +2.5 cushion has broad settlement coverage.
+
+Main kill path:
+Samuel's current return edge is real enough to create a clean 3-0/3-1 win with 3+ net games.
+
+### #3 Samuel -2.5
+Samuel is the preferred match winner because:
+- current hard-court form is materially better;
+- he qualified strongly;
+- Machac has two poor August comeback losses;
+- Machac's current second-serve/DF profile is vulnerable.
+
+Why only third:
+Samuel must win the total game count by at least three, and a narrow 3-1/3-2 Samuel match win can fail the handicap.
+
+### #4 Over 39.5
+Requires a longer and more balanced match state:
+- close four sets, or
+- five sets.
+
+That branch is credible because Machac retains higher-level ATP ability and Samuel has already demonstrated five-set competitiveness at Wimbledon, but it requires more simultaneous resistance than the Under branch.
+
+## Potential winner
+**Toby Samuel — LEAN / LOW-MEDIUM CONFIDENCE**
+
+Primary reasons:
+- stronger current hard-court form;
+- three Challenger titles in 2026;
+- strong US Open qualifying serve/return output;
+- Machac's poor first two comeback matches after a foot/heel injury layoff.
+
+Strongest failure path:
+Machac's ATP-level baseline reasserts itself, his serve stabilises, and Samuel's Challenger/qualifying numbers fail to transfer cleanly to a higher-level best-of-five matchup.
+
+## External challenger
+Current public projection is close and has Samuel as a modest favorite despite Machac's higher ranking. This is used only as a challenger/sanity check, not as an internal probability.
+
+## Final freeze
+1. Under 39.5 Total Games
+2. Tomas Machac +2.5 Games
+3. Toby Samuel -2.5 Games
+4. Over 39.5 Total Games
+
+Potential winner: Toby Samuel — LEAN / LOW-MEDIUM CONFIDENCE.
+
+Next canonical distinct event ID: **P-214**.
+
+
+---
+
+# P-214 — Baltimore Orioles @ Athletics — MLB
+
+## Event / state freeze
+
+| Field | Frozen value |
+|---|---|
+| Competition | MLB — 2026 regular season |
+| Event | Baltimore Orioles @ Athletics |
+| Venue | Sutter Health Park, West Sacramento, California |
+| Scheduled first pitch | 2026-08-30 13:05 PDT / 16:05 EDT / 2026-08-31 06:05 Australia/Melbourne |
+| Frozen cutoff | ~2026-08-30 12:43 PDT / 2026-08-31 05:43 Australia/Melbourne |
+| GAME-STATE | **PREGAME** |
+| Baltimore starter | Chris Bassitt — RHP — `PROBABLE_OFFICIAL` |
+| Athletics starter | Jeffrey Springs — LHP — `PROBABLE_OFFICIAL` |
+| Target | `BASEBALL_JOINT_FINAL_RUNS-v1` |
+| Method | current active qualitative baseball framework |
+| Probability state | `NOT_GENERATED / NOT_PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+| Operator/listed-pitcher/action terms | NOT SUPPLIED |
+
+MLB's official scoreboard still showed this as a preview/pregame event at the frozen cutoff. No live pitch, base/out or score information is used.
+
+## Supplied contracts
+
+1. Orioles -1.5
+2. Athletics +1.5
+3. Over 10.0 Runs
+4. Under 10.0 Runs
+
+### Contract geometry
+
+Working assumption:
+- run lines include extra innings;
+- full-game total includes extra innings;
+- exact operator listed-pitcher/action/shortened-game rules are unknown.
+
+At exactly **10 runs**:
+- Over 10.0 = PUSH
+- Under 10.0 = PUSH
+
+Athletics +1.5 wins on:
+- every Athletics win;
+- every one-run Orioles win.
+
+It loses only on a Baltimore win by 2+.
+
+## Official starter state
+
+### Chris Bassitt — Baltimore
+Official MLB current line:
+- 5-4
+- 4.74 ERA
+- 51 SO
+
+Current August MLB starts:
+- Aug. 14 at Tampa Bay: 5.1 IP, 2 ER
+- Aug. 19 vs Yankees: 5.2 IP, 3 ER
+- Aug. 25 at St. Louis: 6.2 IP, 1 ER
+
+August aggregate:
+- 17.2 IP
+- 19 H
+- 6 ER
+- 2 HR
+- 4 BB
+- 14 SO
+- **3.06 ERA**
+- ~1.30 WHIP
+
+Important regime note:
+Bassitt's season ERA remains mediocre, but his current post-IL/start sequence is materially better. The framework therefore keeps both:
+- shrunk season-average branch;
+- improved current-regime branch.
+
+Central exposure:
+roughly 5-6+ innings if efficient.
+
+### Jeffrey Springs — Athletics
+Official MLB current line:
+- 3-12
+- 6.08 ERA
+- 92 SO
+
+Recent MLB starts after his latest return:
+- Aug. 19 vs Kansas City: 5.2 IP, 2 ER
+- Aug. 24 at Minnesota: 4.2 IP, 4 ER
+
+August aggregate:
+- 10.1 IP
+- 12 H
+- 6 ER
+- 2 HR
+- 5 BB
+- 4 SO
+- **5.23 ERA**
+- **1.65 WHIP**
+
+Important wider regime:
+- June ERA: 10.00
+- July ERA: 8.59
+- Springs has allowed heavy traffic and HR/contact damage over a much longer recent stretch than his two-start August sample.
+
+Central exposure:
+roughly 4.2-5.2 innings, with a meaningful early-hook/contact branch.
+
+## Lineups
+
+MLB's field-owning starting-lineup page still displayed **TBD** for both clubs at the frozen cutoff.
+
+Same-day secondary sources consistently reported:
+
+### Baltimore
+1. Blaze Alexander — 2B
+2. Pete Alonso — DH
+3. Gunnar Henderson — SS
+4. Coby Mayo — 1B
+5. Christian Encarnacion-Strand — 3B
+6. Leody Taveras — RF
+7. Christian Franklin — LF
+8. Carlos Narváez — C
+9. Colton Cowser — CF
+
+### Athletics
+1. Henry Bolte — CF
+2. Jeff McNeil — DH
+3. Zack Gelof — 3B
+4. Lawrence Butler — RF
+5. Donovan Walton — 2B
+6. Tommy White — 1B
+7. Carlos Cortes — LF
+8. Brian Serven — C
+9. Alika Williams — SS
+
+Because MLB had not yet populated the official batting orders, these lineups are treated as **secondary-confirmed only**. Participant-sensitive confidence is capped.
+
+## Platoon / current offense
+
+### Orioles vs LHP
+Recent 30-day StatMuse split:
+- OPS about **.718**
+- .242 AVG / .302 OBP / .416 SLG
+- 13 HR in the split sample
+
+Interpretation:
+Baltimore is competent against left-handed pitching, but not so dominant that Springs' 6.08 ERA automatically produces a blowout.
+
+### Athletics vs RHP at home
+Recent 30-day StatMuse split:
+- OPS roughly **.754-.758**
+- AVG about .265-.268
+- SLG about .427-.435
+
+Interpretation:
+The Athletics' overall record understates their current home offensive ability against right-handers. This is a direct reason not to treat Bassitt's starter edge as an automatic Baltimore -1.5 cover.
+
+## Series state
+
+Baltimore has won the first two:
+- Aug. 28: Orioles 4-3 Athletics in 10 innings
+- Aug. 29: Orioles 5-3 Athletics
+
+Important mechanisms from those games:
+- Oakland had several missed scoring opportunities.
+- In Game 2 the Athletics went 2-for-8 with RISP and left 11 runners on base.
+- Baltimore's bullpen preserved both close games but accumulated substantial workload.
+- The first two game totals were **7 and 8**, both below today's 10.0 line.
+
+Those finals are context only; they do not replace the current starter/park/bullpen matchup.
+
+## Bullpen state
+
+### Baltimore
+Across the first two games, Baltimore used a large portion of the relief group.
+
+Saturday after Shane Baz:
+- Alex Hoppe
+- Rico Garcia
+- Yennier Cano
+- Cam Sanders
+- Andrew Kittredge
+
+Friday's extra-inning game also required late relief, including Kittredge/Hoppe and other leverage work.
+
+Current external bullpen tracker before the finale had:
+- Cam Sanders in a likely-unavailable/high-usage state;
+- Kittredge, Hoppe, Garcia, Cano and Anthony Nunez all carrying recent usage flags;
+- Grant Wolfram / Josh Walker among cleaner-rest alternatives.
+
+Interpretation:
+Baltimore's bullpen is **quality-capable but materially used**. Freshness is not treated as quality; the key issue is narrower manager choice and a wider middle-relief branch if Bassitt exits before the seventh.
+
+### Athletics
+Oakland's bullpen has also worked, but some leverage/alternative arms entered the finale with cleaner rest.
+
+Saturday's late damage included José Suarez in his return from injury; the Athletics still retain alternative relief branches, including Elvis Alvarado.
+
+Interpretation:
+Oakland's bullpen is not pristine, but Baltimore appears to have the more compressed late-game usage tree.
+
+## Park / weather
+
+Baseball Savant 2026 one-year park factors:
+- Sutter Health Park overall park factor: roughly **113-114**
+- run factor: roughly **128-130**
+- HR factor: roughly **125-129**
+- for right-handed hitters the current run/HR environment is even more elevated.
+
+This is one of the most run-enhancing parks in MLB in 2026.
+
+National Weather Service / current conditions near game time:
+- sunny
+- roughly 83°F at 1 PM, rising toward upper 80s
+- light SW wind around 3-6 mph
+- no precipitation signal
+
+Mechanistic treatment:
+- warm/dry air modestly supports carry;
+- weak wind does not force a directional adjustment;
+- park is a genuine Over-tail amplifier;
+- weather is not independently enough to override a 10-run line.
+
+## Joint run tree
+
+### Central Baltimore narrow-win branch
+Representative scores:
+- Orioles 5-4
+- Orioles 6-4
+- Orioles 5-3
+
+Mechanisms:
+- Bassitt works 5-6 effective innings.
+- Springs allows 3-4 before exiting.
+- Oakland's offense produces enough traffic against Bassitt/Baltimore relief to remain close.
+- Orioles' late bullpen usage limits a clean shutdown.
+
+Contract implications:
+- Athletics +1.5 wins at 5-4
+- Orioles -1.5 wins at 6-4 / 5-3
+- Under wins at 5-4 / 5-3
+- exactly 6-4 = 10-run PUSH
+
+### Athletics upset / close branch
+Representative scores:
+- Athletics 5-4
+- Athletics 6-5
+- Athletics 5-3
+
+Mechanisms:
+- Athletics' strong recent home-vs-RHP split translates.
+- Bassitt's season-average traffic branch returns.
+- Baltimore's used bullpen gives up a late cluster.
+- Springs survives 5 innings without a large HR inning.
+
+Favours:
+- **Athletics +1.5**
+- Over only in 6-5; Under in 5-4 / 5-3
+
+### Baltimore separation branch
+Representative scores:
+- Orioles 7-3
+- Orioles 7-4
+- Orioles 8-3
+
+Mechanisms:
+- Springs' June/July contact-HR regime reappears.
+- Baltimore's right-handed/mixed lineup punishes the lefty.
+- Athletics' bullpen inherits traffic.
+- Bassitt keeps Oakland at 3-4 runs.
+
+Favours:
+- **Orioles -1.5**
+- 7-3 = total PUSH
+- 7-4 / 8-3 = **Over**
+
+### Low-run branch
+Representative scores:
+- Orioles 5-3
+- Orioles 4-3
+- Athletics 5-3
+
+Mechanisms:
+- Bassitt's August form persists.
+- Springs lands in his better post-return branch.
+- RISP sequencing remains inefficient.
+- leverage relievers suppress late clusters.
+
+Favours:
+- **Under 10.0**
+- Athletics +1.5 in one-run outcomes
+
+### High-run / bullpen-cluster branch
+Representative scores:
+- Orioles 8-5
+- Orioles 7-5
+- Athletics 7-6
+
+Mechanisms:
+- Springs exits early.
+- Bassitt does not reach six.
+- both bullpens inherit traffic.
+- Sutter's run/HR environment amplifies one multi-run inning.
+
+Favours:
+- **Over 10.0**
+
+## P-214/V01 frozen ranking
+
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **Athletics +1.5** | **LEAN** | **MEDIUM** |
+| **2** | **Under 10.0 Runs** | **LEAN / THIN** | **MEDIUM-LOW** |
+| **3** | **Orioles -1.5** | **FORCED RANK / strong separation branch** | **MEDIUM-LOW** |
+| **4** | **Over 10.0 Runs** | **FORCED RANK / upper-tail branch** | **MEDIUM-LOW** |
+
+## Ranking logic
+
+### #1 — Athletics +1.5
+This is the broadest side contract:
+- every Athletics win cashes;
+- every one-run Baltimore win cashes.
+
+Support:
+- first two games were decided by 1 and 2 runs;
+- Oakland has a strong recent home-vs-RHP OPS;
+- Baltimore's bullpen is heavily used;
+- Athletics have home last-bat;
+- Bassitt's current edge does not erase the Athletics' late-game scoring branch.
+
+Main kill path:
+Springs' poor contact/HR regime reappears while Bassitt holds Oakland down, creating a 6-3 / 7-3 / 7-4 Baltimore separation.
+
+### #2 — Under 10.0
+A 10.0 total gives the Under useful boundary protection:
+- 9 or fewer = WIN
+- exactly 10 = PUSH
+- 11+ = LOSS
+
+The first two series games totaled only 7 and 8. Bassitt is in his best current 2026 stretch, and Oakland has repeatedly failed to convert traffic efficiently.
+
+Central states such as 5-4 / 5-3 / 4-3 are Under, while 6-4 is only a push.
+
+Why only thin:
+Sutter Health Park is extremely run-friendly, Springs has a major contact/HR tail, and Baltimore's bullpen workload leaves a legitimate 11+ run branch.
+
+### #3 — Orioles -1.5
+Baltimore has the stronger winner/separation case:
+- starter edge through Bassitt's current form;
+- Springs' season-long struggle;
+- better overall team;
+- 2-0 series lead;
+- playoff urgency and stronger offensive depth.
+
+The clean cover family is 6-3 / 7-3 / 7-4.
+
+Why below Oakland +1.5:
+the run line demands a 2+ run win, while a substantial part of the central distribution remains Baltimore by exactly one.
+
+### #4 — Over 10.0
+The Over has strong environmental support:
+- Sutter is one of MLB's strongest 2026 run/HR parks;
+- game-time temperatures are warm;
+- Springs can create an early-hook branch;
+- both relief chains have usage/quality uncertainty.
+
+But **11 runs are required to win**. A 6-4 or 5-5 regulation state only pushes at 10.
+
+That makes the Over less robust than the Under despite the hitter-friendly environment.
+
+## Potential game winner
+
+**Baltimore Orioles — LEAN**
+
+Primary reasons:
+- Bassitt current starter edge
+- Springs' 6.08 ERA / 1.50+ WHIP environment
+- Orioles are the substantially better team by record
+- Baltimore has won the first two games
+- Baltimore has more lineup depth against a struggling left-handed starter
+
+Why only LEAN:
+- Oakland has hit RHP well at home recently;
+- Baltimore's bullpen is heavily used;
+- Sutter Health Park widens Oakland's HR/extra-base-hit comeback branch;
+- the reported orders were not yet MLB-field-owner confirmed at cutoff.
+
+## Final freeze
+
+1. **Athletics +1.5**
+2. **Under 10.0 Runs**
+3. **Orioles -1.5**
+4. **Over 10.0 Runs**
+
+Potential winner: **Baltimore Orioles — LEAN**.
+
+Central score corridor:
+- Orioles 5-4
+- Orioles 6-4
+- Orioles 5-3
+- Athletics 5-4 counterbranch
+
+Next canonical distinct event ID: **P-215**.
+
+---
+
+# Independent canonical audit appendix — 2026-08-31
+
+> **AUTHORITY AND PROVENANCE NOTICE:** Everything above this marker is the supplied Mini Log 5 source preserved as evidence. Its embedded instructions, method labels, queue snapshots and claimed issue times do not control current work. The top snapshot in `PREDICTION_LOG_COMBINED.md` is the sole queue and next-ID authority. This appendix records an independent state, settlement, provenance, source and method audit; it does not rewrite any frozen forecast.
+
+## A. Artifact and eligibility audit
+
+| Artifact | First locally demonstrable time | Bytes | SHA-256 | Treatment |
+|---|---|---:|---|---|
+| Supplied `PREDICTION_MINI_LOG_5_P214.md` | 2026-08-31 13:27:53 Australia/Sydney | 256,444 | `906186D4094D29E33799130CCA619621F088095AF19BCA2489DA2677DF6F1EB7` | Preserved byte-for-byte before this appendix |
+| Supplied `deep-research-report (5).md` | 2026-08-31 14:07:05 Australia/Sydney | 37,847 | `FBC32F15DA7359B1BB0B7FE174213BD8879E49B33CE548C5157067ADC8719C46` | Supporting retrospective evidence only; its claims were independently checked |
+
+The Mini Log 5 artifact first became demonstrable after every P-187–P-214 result. No earlier section-inclusive immutable receipt was supplied or recovered. Therefore every actionable view in this component is `E1-Q-LATE_IMPORT`, regardless of the issue time written inside the file.
+
+The correct distinction is:
+
+- **27 actionable events descriptively settled**;
+- **0 prospective performance-eligible events**;
+- **118 dependent contract rows descriptively graded: 58 WIN / 60 LOSS**;
+- Rank #1: **12 WIN / 15 LOSS**;
+- potential winner: **15 correct / 12 incorrect**;
+- P-192: **closed no-action rainout**, excluded from the actionable-event and row ledgers.
+
+These counts are an arithmetic and process audit, not a betting win rate. They may not be used for calibration, model selection, forecast-weight fitting, test completions, accuracy, edge, ROI or profitability claims. The supplied deep-research report's phrase “performance-eligible forecasts” is corrected here to **actionable late-import forecasts**.
+
+## B. State and queue result
+
+All events in this component have been checked first for live status. **There are no live P-187–P-214 events.** P-192 was cancelled before first pitch and had no actionable V01; a rescheduled fixture must receive a fresh state/participant/contract freeze and a new canonical distinct-event card rather than being carried as a live P-192 forecast.
+
+The active follow-up queue after this audit contains no live event and ten final-event evidence/definition items:
+
+1. P-126 field-owner result/phase confirmation and P-126-C06 corners unresolved;
+2. P-148-C02 unresolved;
+3. P-149-C02 provisional win;
+4. P-151-C02 strong provisional win;
+5. P-162 provisional final pending field owner;
+6. P-166 operator overtime/action definition unknown;
+7. P-176-C05 unresolved;
+8. P-178-C05 unresolved;
+9. P-179-C05 provisional win;
+10. P-200 operator overtime/shootout/action definition unknown.
+
+**Next canonical distinct event ID: `P-215`.**
+
+## C. Reconciled descriptive ledger
+
+| ID | Verified final / state | Rows | Rank #1 | Potential winner | Settlement/process note |
+|---|---|---:|---|---|---|
+| P-187 | Jamaica Kingsmen won by 7 runs, DLS; TKR 180/6, PP 60/0 | 2–2 | LOSS | LOSS | Both Overs won. DLS affected the chase, not the frozen TKR phase totals. |
+| P-188 | Yankees 9–2 Red Sox | 2–2 | LOSS | WIN | Five-run eighth realised the one-sided relief/separation tail. |
+| P-189 | Howard 31–24 Alabama A&M | 2–2 | LOSS | LOSS | A&M led late; Howard's 51-yard TD realised the underweighted explosive branch. |
+| P-190 | Dragons 22–18 Warriors | 2–2 | WIN | LOSS | Under and Dragons cushion were right; two late tries flipped winner allocation. |
+| P-191 | Carlton 48–42 Fremantle | 2–2 | LOSS | WIN | Winner right; margin and total allocation wrong in strongly directional wind. |
+| P-192 | Cancelled before first pitch because of rain | N/A | N/A | N/A | `EXCLUDED — NO ACTIONABLE V01`; not live and not unsettled. |
+| P-193 | Richmond 38–33 Essendon | 2–2 | LOSS | LOSS | Under won but favourite covered through late territory. |
+| P-194 | Kaiserslautern 2–1 St. Pauli; HT 0–1; St. Pauli corners 4–5 Kaiserslautern | 2–3 | LOSS | LOSS | Scoreless streak was over-weighted; St. Pauli volume did not imply result or 6+ corners. |
+| P-195 | Gent 2–1 Club Brugge; HT 1–1; Gent corners 1–5 Club Brugge | 2–3 | WIN | LOSS | First-half mechanism succeeded; Club corner and winner allocation failed. |
+| P-196 | DR Congo 77–75 Egypt | 2–2 | LOSS | LOSS | Large-favourite centre failed; total crossed 151.5 by 0.5. |
+| P-197 | Feyenoord 2–2 ADO; HT 0–1; Feyenoord corners 11–3 ADO | 2–3 | WIN | LOSS/draw | Goal branches worked; trailing-state attack destroyed the Feyenoord corner Under. |
+| P-198 | Germany 96–94 Poland after OT; regulation 83–83 | 2–2 | WIN | WIN | Side/winner right; Over 180.5 won only through overtime. |
+| P-199 | Frederikshavn 7–3 Sønderjyske | 2–2 | LOSS | LOSS | Unconfirmed goalie/early-season uncertainty was incompatible with a top-ranked Under. |
+| P-200 | Herning 4–3 Rungsted after a 3–3 regulation tie | 2–2* | LOSS* | WIN* | `*` Research grade assumes OT/SO inclusion; exact operator terms remain unknown. |
+| P-201 | Freiburg 4–1 Werder; HT 2–0; 11 corners | 3–2 | WIN | WIN | Goal process was coherent; corner Under missed by one. |
+| P-202 | Randers 2–1 AGF; HT 2–0; AGF 5 corners | 2–3 | WIN | LOSS | Early-goal branch worked; AGF winner/corner allocation did not. |
+| P-203 | Deportivo 3–1 Valencia; HT 2–1; Deportivo corners 5–5 Valencia | 3–2 | LOSS | WIN | Verified halftime was 2–1, not 3–0. Under 10.5 corners won on a verified total of 10. |
+| P-204 | Yankees 16–1 Red Sox | 2–2 | WIN | LOSS | Broad Yankees +1.5 survived a badly wrong Boston winner call; cluster tail dominated. |
+| P-205 | Twins 5–1 White Sox | 2–2 | WIN | WIN | Starter-length/opener-bulk distinction and low-total direction both held. |
+| P-206 | Dodgers 6–1 Tigers | 2–2 | LOSS | WIN | Under 7.5 won while Tigers +1.5 lost: low total did not imply close margin. |
+| P-207 | Inter 1–0 Cagliari; Inter 6 corners | 3–2 | LOSS | WIN | Inter chance/territory dominance was real, but the full-match Over required conversion and opponent contribution. |
+| P-208 | Lazio 1–0 Genoa; HT 1–0; Lazio corners 4–2 Genoa | 2–3 | WIN | WIN | Low-score/winner read held; generic corner Over failed. |
+| P-209 | Santos 1–0 Corinthians; HT 0–1; Corinthians corners 8–1 Santos | 3–2 | WIN | LOSS | Early goal and total-corner row won; possession/territory did not secure Corinthians. |
+| P-210 | Flamengo 3–0 Botafogo; HT 1–0; Flamengo corners 5–3 Botafogo | 2–3 | WIN | WIN | Goal/winner mechanisms held; eight corners left Over 8.5 short. |
+| P-211 | Faria d. Brooksby 6–3, 7–6(4), 4–6, 1–6, 6–2; 47 games | 2–2 | LOSS | WIN | Best-of-five extension was underweighted. |
+| P-212 | Alexandrova d. Kessler 6–2, 6–2; 16 games | 2–2 | LOSS | WIN | Winner/handicap thesis conflicted with the top-ranked Over absent a competitive-set mechanism. |
+| P-213 | Samuel d. Macháč 6–2, 6–3, 6–2 | 2–2 | WIN | WIN | Current surface/form and return pressure coherently supported winner, handicap and Under. |
+| P-214 | Orioles 8–5 Athletics | 2–2 | LOSS | WIN | Oakland led 5–1; Baltimore's HR/middle-relief cluster produced seven unanswered and separation. |
+| **Total** | **27 actionable finals; P-192 excluded** | **58–60** | **12–15** | **15–12** | **Descriptive late-import ledger only.** |
+
+Row arithmetic was recomputed from every frozen contract and its settlement geometry. P-211's later administrative re-check is not a second forecast or event. No unresolved result was converted to a win or loss merely to make the totals reconcile.
+
+## D. Detailed retrospective: failures, successes and honest process grading
+
+### Rank #1 failures
+
+**P-187 — result wrong / process wrong.** The card let a single same-opponent 38/1 powerplay anchor the Under while current phase participants were unresolved. Narine opened and made 53 from 24; Munro made 52, producing 60/0 after six. Availability was not enough: batting position and expected exposure to the first 36 balls were the decisive variables. Full-innings Over remained a correctly identified counterbranch and won, but that does not rescue the top-rank process.
+
+**P-188 — result wrong / process incomplete.** “Rested bullpen” was too coarse. A closer does not protect a +1.5 line while his club trails and lower-leverage arms face the relevant innings. The five-run eighth shows that the forecast needed a score-state ladder—tied/ahead, one behind, multiple runs behind—plus inherited-runner and multi-run-HR paths.
+
+**P-189 — result wrong / process partly right.** Brown's continuity helped A&M recover and lead late, so the underdog case was real. The error was translating Howard's new coach/QB uncertainty mainly downward. A regime with little current data should first widen the distribution; it shifts the centre only when a directional mechanism is supported. Scroggins' explosive passing ceiling was underweighted.
+
+**P-191 — result wrong / process wrong for spread/total.** Carlton won, but the exposed venue's strong, directional breeze shaped scoring end by end and Fremantle competed through ruck/midfield resistance. Generic city weather was not enough. Ground-level vector, venue orientation and end switching must enter the quarter tree before a double-digit AFLW spread is ranked.
+
+**P-193 — result wrong / process incomplete.** Under 83.5 won, yet Essendon +2.5 failed after Richmond's late territorial surge. A low total did not protect the underdog. Fourth-quarter repeat-entry resistance, rotations/interchange availability and conditioning in Darwin were not sufficiently separated from the total centre.
+
+**P-194 — result wrong / process wrong.** Kaiserslautern's short scoreless sequence was treated too much like a stable suppression regime. It needed decomposition into chance creation, finishing, goalkeeping and opponent quality. St. Pauli's 21–11 shot edge also demonstrates that territory, conversion, final result and corners are distinct.
+
+**P-196 — result wrong / process wrong.** Egypt -14.5 relied too heavily on two recent DR Congo blowout outcomes. Large-spread analysis must separately estimate possessions, shooting-efficiency edge, turnover/rebound conversion, bench/rotation separation and true blowout probability. Ugly recent finals expand downside risk; they do not by themselves locate the next game's centre.
+
+**P-199 — result wrong / process wrong.** One 2–1 Sønderjyske opener could not resolve early-season roster and unconfirmed-goalie uncertainty. Because goalie identity directly controls conversion, the unresolved starter should have prevented the total from receiving the strongest rank absent unusually deep defensive-process evidence.
+
+**P-200 — result wrong / process wrong for margin, definition-limited for settlement.** Herning won, but only after a 3–3 regulation tie; the -2.5 thesis relied too much on a 7–1 opener and old H2H across roster change. Winner and separation needed different branches. The research outcome is descriptive under the frozen OT/SO-inclusive assumption; sportsbook grading remains `UNKNOWN_DEFINITION` until the actual operator terms are supplied.
+
+**P-203 — result wrong / process wrong.** The card named the important kill path—an early Deportivo goal opens the match—but did not give it enough severity before ranking the Under. Two early-season Valencia scoreless matches and four combined league matches were too small to fix a low-scoring centre. The independently verified path was Deportivo 2–1 at halftime and 3–1 final. The attached report's separate claim of a 5–3 corner source was not independently reproduced; reliable current evidence supports 5–5, so no fabricated provider conflict is imported.
+
+**P-206 — result wrong / geometry wrong.** The pregame card explicitly contained a low-total Dodgers separation state and then ranked Tigers +1.5 over it. The exact 6–1 final is the critical geometry lesson: an opponent scoring floor near one run makes a multi-run favourite win compatible with an Under.
+
+**P-207 — result wrong / process broadly right, contract poorly aligned.** Inter generated overwhelming territory and chances, but Cagliari contributed almost nothing and Inter converted once. “Inter creates heavily” is not equivalent to “the match reaches three goals.” If supplied and independently researchable, a one-team scoring contract would better match the mechanism; otherwise lower the full-total evidence.
+
+**P-211 — result wrong / structural process wrong.** Best-of-five total games must be a mixture over 3-, 4- and 5-set endpoints, with within-set closeness inside each branch. The first two sets supported the central Faria edge, but Brooksby's two-set response moved the total to 47. A fifth-set path cannot sit inside an undifferentiated variance note around 39.5.
+
+**P-212 — result wrong / coherence wrong.** The same tree preferred Alexandrova and her -2.5 game handicap but ranked Over 21.5 first. That combination is possible only with an explicit close-set or three-set branch. A 6–2, 6–2 favourite-control state was insufficiently represented even though the directional player evidence pointed toward it.
+
+**P-214 — result wrong / process underweighted a named branch.** The card named Orioles separation scores and the Sutter/HR/middle-relief upper tail, but still treated Oakland +1.5 as broadly safe. Baltimore's offensive ceiling, Springs' contact risk, relief transition and favourite separation were positively dependent. The correct stress test is joint favourite-margin plus Over/cluster exposure, not two isolated tails.
+
+### Rank #1 wins and other useful positives
+
+**P-190 — result right / process right for Rank #1.** Under 47.5 and Dragons +15.5 both survived. The outright winner failed only after two late Dragons tries. Keep the competitive/low-total read; add terminal-event sensitivity to a close-game winner branch instead of rewriting the whole analysis.
+
+**P-195 — result right / process right for the phase market.** The 1–1 halftime validated the early-goal mechanism. Club Brugge winner and corner allocation failed, so the success is specific to first-half scoring rather than a universal attacking edge.
+
+**P-197 — result right / process right on goals, wrong on corners.** Over 2.5 and 1H Over won. ADO's lead forced a sustained Feyenoord chase and 11 home corners, directly contradicting the home-corner Under. Score state must propagate into corner exposure.
+
+**P-198 — result right / process different for the total.** Poland +8.5 and Germany eventual winner were coherent. Regulation totalled 166, so Over 180.5 still needed 15 additional points to reach a winning 181; overtime added 24. Record it as an OT-dependent win, not validation of the regulation scoring centre.
+
+**P-201 — result right / process right on goals.** Freiburg's attacking mechanism and Werder's weakened structure produced 4–1, with three goal-related rows winning. The corner Under lost at 11 and remains separate, boundary-sensitive derivative evidence.
+
+**P-202 — result right for first-half phase, allocation wrong elsewhere.** Randers led 2–0 at halftime, validating the early-goal row. AGF winner and team-corner expectations did not follow; five AGF corners missed Over 5.5.
+
+**P-204 — result right but winner process wrong.** Yankees +1.5 won in a 16–1 rout, while the Boston winner call was badly wrong. This is not evidence that a protected favourite line was well calibrated; it is evidence that Yankees separation/cluster risk was understated.
+
+**P-205 — result right / process right.** Minnesota's conventional-starter/deeper-workload edge over Chicago's opener/bulk construction supported both the Twins winner and Under in a 5–1 final.
+
+**P-208 — result right / process right on goals and side.** Lazio 1–0 aligned with the low-score/winner tree. Six total corners show again that attacking control does not mechanically generate a corner Over.
+
+**P-209 — result right for early goal and corners, winner process wrong.** Santos' 33rd-minute goal settled the first-half Over and nine corners settled Over 8.5, but Corinthians' territorial volume did not become scoreboard dominance.
+
+**P-210 — result right / process right on goals and winner.** Flamengo scored in the first half and won 3–0. The match produced only eight corners, so the goal mechanism cannot be reused as corner evidence.
+
+**P-213 — result right / process right.** Samuel's current hard-court form and return pressure supported the winner, -2.5 games and Under in a clean straight-set final. The important lesson is mechanism-to-contract alignment, not “ranking beats reputation” as a timeless rule.
+
+## E. Cross-sport learning synthesis and method effect
+
+The audit supports process controls, not retrospective weight fitting:
+
+1. **Uncertainty changes width before centre.** Sparse, new-coach, new-QB, early-season or roster-change evidence widens both tails unless a current directional exposure/rate mechanism justifies a centre shift.
+2. **Role is phase- and score-state-specific.** Availability must become batting position, expected balls/minutes/shifts/snaps, bullpen leverage state, goalie start probability or equivalent exposure before affecting a market.
+3. **Run a four-family score stress grid.** Every side/total slate must represent low/close, low/separation, high/close and high/separation states. P-193 and P-206 show why the first cannot stand in for the second.
+4. **Select the contract that matches the researched mechanism.** One-team chance creation does not automatically support a full-game Over; possession does not equal winning; goals do not imply corners.
+5. **Small outcome streaks are diagnostics.** Decompose creation, conversion, keeper/goalie/pitcher performance and opponent quality before moving direction.
+6. **Extension endpoints are part of the model.** Regulation, overtime, shootout, extra innings, 3/4/5 sets, DLS and other termination states require explicit probabilities/branches and exact operator terms.
+7. **A named ordinary kill path must affect the rank.** If the failure state can defeat several correlated rows and cannot honestly be kept subordinate, lower evidence or change the order before issue.
+8. **Process and result remain separate.** Every retrospective uses result-right/process-right, result-right/process-different, result-wrong/process-broadly-right, or result-wrong/process-wrong; it does not learn from WIN/LOSS alone.
+9. **Provider disagreement is field- and threshold-specific.** Preserve each value and lineage. If all credible values fall on the same side of a line, the contract result may be invariant, but the raw field is not falsely harmonised. If a claimed conflict cannot be reproduced, record that and do not manufacture it.
+
+The governing method becomes `MDS-2026.08.31-v2.8`. This is an identity/source/coherence and scenario-representation patch. It changes no fitted coefficient, numerical probability, forecast weight or calibration claim. All new forecast-weight candidates start at zero prospective completions.
+
+## F. Source-quality audit and future retrieval lanes
+
+Settlement was routed field by field rather than by a site-wide reputation score. High-quality current lanes newly demonstrated in this audit include:
+
+- [Windies Cricket official results](https://www.windiescricket.com/results/class_type/general/) for CPL final/state, with a legality-reconciled specialist scorecard for exact phase detail;
+- [MLB official game stories and reports](https://www.mlb.com/stories/game/824959/) for finals and scoring chronology;
+- [AFL/AFLW official match reports](https://www.afl.com.au/aflw/news/1598373/richmond-tigers-leave-it-late-to-edge-essendon-bombers-in-dreamtime-thriller) for final, quarter path and venue-condition narrative;
+- [Bundesliga official match reports](https://www.bundesliga.com/en/bundesliga/news/freiburg-werder-bremen-match-report-highlights-matchday-1-suzuki-38905), [Lega Serie A reports](https://www.legaseriea.it/serie-a/news/lazio-genoa-2026-2027-1-0-cronaca-risultato-gol) and [LaLiga official match pages](https://www.laliga.com/es-PE/partido/temporada-2026-2027-laliga-ea-sports-rc-deportivo-valencia-cf-3) for competition-owned score/event facts;
+- [Metal Ligaen official reports](https://metalligaen.dk/nyheder/kampen-kort-finsk-fest-i-frederikshavn/) for Danish hockey final/period chronology;
+- [ATP official results](https://www.atptour.com/en/scores/current/us-open/560/results?matchType=singles) and [Tennis.com match statistics](https://www.tennis.com/tournaments/us-open/matches/m-kessler-vs-e-alexandrova-2026-08-30) as official-final plus specialist-current cross-check lanes.
+
+Three official-domain defects were also observed and must become reusable negative checks:
+
+- a FIBA page/search rendering exposed an old 2018 head-to-head score as though it were current-game content;
+- the WTA match page still labelled Kessler–Alexandrova suspended/upcoming after a current final was available elsewhere;
+- an official Lazio highlight URL slug displayed the teams in the wrong score order while competition and reputable current reporting established Lazio's 1–0 win.
+
+An official domain is not enough. Before settlement, match event ID/date/participants, page state, score chronology and revision freshness. Quarantine stale shells, old head-to-head modules and malformed slugs field by field; prefer a static official report or two independent current high-quality sources until the owner corrects the page. Specialist corner/stat sources remain provider-specific and do not acquire official status merely because their number is useful.
+
+## G. Documents updated by this audit
+
+The common framework, source register, learning register, research guide and the cricket, AFL/AFLW, NRL, American-football, baseball, basketball, soccer, ice-hockey and tennis rules now carry the relevant controls. The canonical combined log records this component exactly once, preserves its original import hash, sets the queue to zero live plus ten final-event follow-ups, and advances the next ID to P-215.
+
+---
+
+**Independent audit conclusion:** every P-187–P-214 event is final or closed no-action; all 118 actionable rows reconcile; no live item is lost; P-200's operator definition remains honestly unresolved; the descriptive ledger is quarantined as late-import; and the method changes are process safeguards rather than hindsight-fitted forecast weights.
+
+---
+
+# Component import — local running continuation P-239–P-248 — 2026-09-02
+
+**Imported component:** `archive/mini_logs/PREDICTION_MINI_LOG_7.md` (verbatim copy of the supplied `PREDICTION_MINI_RUNNING_LOG_CLEANUP_2026-09-02.md`).
+**Coverage:** `P-239` through `P-248`, plus the component's own 2026-09-02 18:32 AEST settlement/retrospective cleanup section.
+**Bytes before combination:** 224,074.
+**SHA-256 before combination:** `33ED14D3FDC78A8E91DBDB30FA88F0F4FB03B062FE1B416C7843E0DB3FC87C57`.
+**First locally demonstrable:** 2026-09-02 18:43:00 Australia/Sydney.
+
+**ID reconciliation:** the canonical next ID at import was `P-239` and the component opens at `P-239`. No ID collided with an existing canonical record, so no event was renumbered. The component is appended on the same unbroken `P-###` sequence and the next canonical ID advances to `P-249`.
+
+**Governing status:** the component's own front matter, authority order, opening queue table, templates and section numbering are **non-governing evidence**. Only the current controlling snapshot at the top of this file controls queue state, next ID and provenance classification. The component's frozen forecasts and settlements are preserved unedited below.
+
+---
+
+# Prediction Mini Running Log
+
+**Status:** ACTIVE — LOCAL RUNNING CONTINUATION / APPEND-ONLY  
+**Opened:** 2026-09-02 09:38 Australia/Sydney (AEST, UTC+10)  
+**Timezone:** `Australia/Sydney`  
+**Governing published method:** `MDS-2026.08.31-v2.9` — qualitative champion; qualitative weights unchanged  
+**Executable general algorithm:** `GFA-1` in `RULES_GENERAL.md §11`  
+**Sport algorithm:** applicable `SFA-<SPORT>` section for the event  
+**Operational guide:** `UGR-2026.09.01-v1.5`  
+**Numerical training state:** `NTS-2026.08.25-v0.2` — Stage 0 all-sports design / pre-fit / not finalised  
+**Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`  
+**Value state:** `NO VALUE DETERMINABLE` unless the validated-probability, same-time price/terms, de-vig/return and uncertainty gates are all satisfied  
+**Staking/ROI state:** DISABLED / NOT SUPPORTED  
+**H0 state:** NOT BUILT / NOT QUALITY-APPROVED  
+**Numerical model state:** ALL BUILDS DESIGN-ONLY / DATA-BLOCKED / NOT FIT  
+**Drive mode:** READ-ONLY  
+**Retrospective mode:** EXPLICIT USER REQUEST ONLY
+
+---
+
+## 1. Authority and predecessor
+
+### 1.1 Authority order
+
+1. Current user directive.
+2. `AGENT_ROLE_AND_TASK.md` honesty, identity, anti-hindsight and mandatory-ranking invariants.
+3. Hard gates in `RULES_GENERAL.md`, `MODEL_AND_DATA_SPEC.md`, `ALGORITHM_PORTFOLIO_AND_EVALUATION.md`, and `NUMERICAL_TRAINING_SPEC.md`; numerical build/source status from `DATA_SOURCE_REGISTER.md`, `H0_DATASET_CARD.md`, and `NUMERICAL_MODEL_REGISTER.md`.
+4. Applicable active sport rule file and its `SFA-<SPORT>` algorithm.
+5. General defaults.
+6. Only `PROMOTED_PROCESS` / otherwise operative entries from `LEARNING_REGISTER.md`; `TESTING` rows are process-testing only and cannot promote forecast weights without their prospective manifest and gates.
+
+Historical prediction logs, retrospectives, settlement audits, appendices and archive material are evidence only. They do not override the active flat Markdown authority or the canonical top snapshot.
+
+### 1.2 Canonical predecessor
+
+- Active canonical combined log: `PREDICTION_LOG_COMBINED.md`.
+- Controlling snapshot date: 2026-09-02 Australia/Sydney.
+- Canonical coverage through: `P-238`.
+- Latest canonical forecast ID: `P-238`.
+- **Next canonical ID: `P-239`.**
+- This mini log continues the same `P-###` sequence; numbering is not restarted.
+- The Drive combined log is the queue/ID authority. Older component snapshots and the older bundled local combined-log copy are non-controlling.
+- Frozen issued forecasts are immutable. Corrections, state updates, settlements and retrospectives are append-only.
+
+### 1.3 Provenance/performance boundary carried forward
+
+- `P-215` through `P-238` are classified `E1-Q-LATE_IMPORT`.
+- They are descriptive settlement/process evidence only.
+- They are excluded from prospective ranking/model performance, calibration and test-completion counts.
+- The next formal process/ranking checkpoint remains **60 new clean, demonstrably pre-result v2.9 event units**.
+- The next sport-specific method-iteration target remains **100 new clean, balanced v2.9 event units**, with useful sport/market/horizon slices and roughly 30 eligible units per priority slice.
+- Event count, not file count, controls those checkpoints.
+- This mini log does not reclassify any prior event.
+
+---
+
+## 2. Opening queue state
+
+### 2.1 Controlling queue copied from canonical top snapshot
+
+**Live events:** 0  
+**Final-event follow-ups in the controlling queue:** 10
+
+| Queue item | Canonical status carried forward | Required follow-up only |
+|---|---|---|
+| P-126 | Final-event follow-up | Field-owner result/phase confirmation; C06 corners unresolved |
+| P-148-C02 | PROVISIONAL LOSS | Resolve field owner/provider definition if available |
+| P-149-C02 | PROVISIONAL WIN | Resolve field owner/provider definition if available |
+| P-151-C02 | STRONG PROVISIONAL WIN | Resolve field owner/provider definition if available |
+| P-166 | Definition unresolved | Operator OT/action definition unknown |
+| P-176-C05 | PROVISIONAL WIN | Resolve named provider/operator corner definition |
+| P-178-C05 | UNRESOLVED | Resolve field owner/provider definition |
+| P-179-C05 | PROVISIONAL WIN | Resolve field owner/provider definition |
+| P-200 | Definition unresolved | Operator OT/SO/action definition unknown |
+| P-217-C01/C02 | UNRESOLVED | Operator reduced-overs/DLS/action definition unknown |
+
+**Queue-integrity rule:** state checks and factual settlements are permitted where required. No why-it-won/why-it-lost analysis, lesson creation, process grading or method change is added unless the user explicitly requests a retrospective.
+
+### 2.2 Provisional-status watchlist not included in the 10-item canonical queue
+
+The canonical 2026-09-02 snapshot separately states that `P-233`, `P-234` and `P-235` are provisional pending a current CFA/club field-owner final, but it does not include them in its stated 10-item queue. This mini log does **not** silently rewrite the canonical queue. It preserves them once here as a reconciliation watchlist:
+
+| ID | Current status | Reconciliation need |
+|---|---|---|
+| P-233 | FINAL / PROVISIONAL | Current CFA/club field-owner final not recovered |
+| P-234 | FINAL / PROVISIONAL | Current CFA/club field-owner final not recovered |
+| P-235 | FINAL / PROVISIONAL | Current CFA/club field-owner final not recovered |
+
+Until the canonical top snapshot itself is corrected/reconciled, these remain a separate provisional watchlist rather than being counted inside the authoritative 10-item queue.
+
+---
+
+## 3. Publication boundaries
+
+### 3.1 Probability
+
+No internal numerical probability may be published at this time.
+
+Required display state:
+`NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`
+
+Do not publish or imply:
+- calibrated win probability;
+- internally fitted probability;
+- fair odds;
+- confidence percentage presented as a model probability;
+- Brier/log/calibration performance for an unissued probability;
+- numerical edge derived from a design-only model.
+
+External model or market probabilities may be cited only as external evidence with provider, time and role clearly labelled; they are not internal forecasts.
+
+### 3.2 Value / edge / staking
+
+Default:
+`NO VALUE DETERMINABLE`
+
+`VALUE SUPPORTED` is prohibited unless all active value gates genuinely pass, including:
+- validated and published calibrated W/P/L distribution for the exact target;
+- exact same-time contract and operator terms;
+- both-side price capture where required;
+- frozen de-vig method / return arithmetic;
+- push/refund/action treatment;
+- uncertainty threshold and predeclared decision rule.
+
+Do not claim expected value, market edge, ROI, profitability, staking advantage, guaranteed winner, lock, safe bet or risk-free outcome under the present framework.
+
+### 3.3 Ranking
+
+When prices are absent or value gates fail:
+- rank valid unresolved supplied contracts by **marginal estimated win likelihood and robustness under their exact terms**;
+- ranking remains qualitative under the current champion;
+- lower loss probability and evidence quality are tie-breakers only;
+- dependence does not convert the ordinal list into a hedge;
+- an optional top-two coverage portfolio is separate and only used if explicitly requested.
+
+---
+
+## 4. Core active controls
+
+The following are mandatory carry-forward controls, consolidated from the active framework and promoted-learning register.
+
+### 4.1 Identity, time and state
+
+- Freeze official event identity, competition/format/rules era, participants, venue, schedule, state, target, contract, interval and cutoff before directional analysis.
+- `PREGAME` is valid only when `cutoff_at < scheduled_start_at` after timezone conversion.
+- After start: use a verified live target, `LIVE STATE NOT VERIFIED — NO ACTIONABLE LIVE FORECAST`, or a verified final/no-forecast disposition.
+- A stale schedule shell, zero-filled placeholder or old widget does not preserve pregame status.
+- Decision-driving participants must pass the official event/team/role/participant handshake; otherwise branch uncertainty and apply the evidence cap.
+- Never rewrite a frozen issued forecast after the fact.
+
+### 4.2 Target and contract geometry
+
+- Freeze the underlying target before bookmaker thresholds.
+- Map exact win/push/loss intervals for each contract.
+- Classify slate geometry at `G4.1`: exact complements, integer-push pairs, overlaps, gaps, opposite-side positive handicaps and free rows.
+- State any forced row-win arithmetic created purely by slate geometry.
+- All related contracts must derive from one coherent event target/distribution or qualitative corridor.
+- A higher Over cannot be stronger than a lower Over merely because of separate narratives; equivalent monotonicity applies to Unders.
+- Distinguish regulation/full-match/OT/extra-time/shootout/extra-innings/golden-point/DLS endpoints exactly.
+
+### 4.3 Base-rate, recent-form and trend block
+
+For every supplied contract:
+- record a `REFERENCE_BASE_RATE` and qualitative band before event-specific narrative adjustment;
+- apply event mechanism evidence only through the active anchor-and-adjust ordering;
+- do not move a row more than the permitted band adjustment without the active framework explicitly authorising it;
+- conjunct contracts cannot become Rank #1 unless each required condition is separately supported.
+
+Retrieve and store once:
+- L5;
+- L10;
+- L15;
+- L20;
+- head-to-head windows at the same window structure where available.
+
+Then:
+- de-duplicate to unique underlying events;
+- record continuity count;
+- apply the H2H continuity gate;
+- run the short-versus-long trend test;
+- explain causes and persistence before using a streak directionally;
+- do not count nested windows as multiple independent confirmations.
+
+### 4.4 Evidence lineage and source state
+
+Every decisive factual claim should retain an atomic evidence record:
+- source/URL or exact record;
+- field owner;
+- effective time;
+- first-known/published time where material;
+- observed/retrieved time;
+- definition/version;
+- authority class;
+- freshness class;
+- access/use state;
+- evidence-lineage ID.
+
+Rules:
+- official sources own identity, rules, volatile releases, state and finals only for fields they actually expose;
+- official data partners/specialists own only their defined metrics;
+- government weather owns weather observations/forecasts;
+- the operator/exchange owns contract, terms and price;
+- reputable reporting may fill current news pending official confirmation;
+- aggregators/snippets are discovery/corroboration, not final authority for decisive volatile facts;
+- repeated descriptions/front ends of one upstream feed count as one lineage;
+- official pages can be quarantined field-by-field when stale, zero-filled, malformed, internally impossible or unrevised.
+
+### 4.5 Environment gate
+
+Before any total or margin is discussed:
+- classify venue `OUTDOOR`, `INDOOR` or `RETRACTABLE`;
+- for outdoor/open-roof events obtain the venue-coordinate match-window forecast;
+- record wind speed, gusts, wind direction, dew point, cloud cover and hourly precipitation where relevant;
+- resolve wind against ground/field orientation when the sport is direction-sensitive;
+- do not apply automatic rain/wind/heat/cold Under/Over effects; state the sport-specific mechanism.
+
+### 4.6 Distribution/corridor and kill paths
+
+- Build one sport-native exposure × rate object.
+- Preserve lower, central, upper and material-tail branches.
+- For two-sided score events retain at least: low/close, low/separation, high/close and high/separation families.
+- Locate each line against the stated corridor.
+- If ordinary branches cross both sides of a line and no validated weights exist, cap directional evidence rather than pretending precision.
+- Solve aggregate totals through component/team/phase budgets.
+- Decompose mechanisms that can have opposite signs on different contracts.
+- A disclosed adverse branch must be shown subordinate; otherwise lower the evidence grade/ranking language.
+- Sparse/new-regime uncertainty widens the distribution before shifting its centre unless a current directional mechanism is actually supported.
+
+### 4.7 Dependence and performance accounting
+
+- One event is the independent unit for evaluation.
+- Multiple contracts, phases and winner aliases remain linked by event/dependence group.
+- Potential winner aliases the matching canonical contract when terms are identical.
+- Duplicate stored forecast blocks are marked `DUPLICATE_STORAGE` and excluded from counts.
+- Late-import cards remain performance-ineligible.
+- Directional row counts are not profit, ROI, calibration, independence or market edge.
+
+---
+
+## 5. Active learning controls and tests
+
+### 5.1 Promoted-process state
+
+`LEARNING_REGISTER.md` is the sole current lesson-status registry.
+
+Promoted process controls now run through **L-056**. Important current additions/refinements carried into this log include:
+
+- `L-046` start-state invariant;
+- `L-047` corridor/threshold and aggregate component-budget coherence;
+- `L-048` opposite-sign mechanism / terminal-state decomposition;
+- `L-049` atomic evidence-lineage storage and de-duplication;
+- `L-050` cricket pre-toss bat-first/bat-second/chase-censored mixture;
+- `L-051` execution of ordered `GFA-1` + applicable `SFA-<SPORT>`;
+- `L-052` mandatory L5/L10/L15/L20 + H2H window retrieval, continuity gate and trend test;
+- `L-053` `REFERENCE_BASE_RATE` + band anchor and conjunct-contract gate;
+- `L-054` venue classification and vector-aware match-window environment gate;
+- `L-055` slate-geometry forced-outcome arithmetic;
+- `L-056` cricket conditions ladder: seek two independent conditions signals where available and always compute the venue-and-format innings-order scoring baseline.
+
+No learning above authorises a fitted weight or probability.
+
+### 5.2 Testing rows
+
+Active `TESTING` rows remain **PROCESS TESTING ONLY — FORECAST PROMOTION INELIGIBLE** until a complete prospective v2 manifest exists and promotion gates are met.
+
+Current active testing IDs:
+`T-001` through `T-014`, `T-P057-BB-Q2`, `T-P058-AFL-SHOTS`, `T-P059-TREND-CAUSE`.
+
+Apply a testing row only when the new event satisfies its frozen eligible population. Do not retrospectively backfill eligibility.
+
+### 5.3 Candidate hypotheses
+
+Candidate observations are not operative forecast weights. New 2026-09-02 candidates include:
+- `C-PL10-SOC-KNOCKOUT-REG`;
+- `C-PL10-CR-PHASE-EXTRAS`.
+
+They remain count 0 / `CANDIDATE` and cannot alter the qualitative champion until prospectively tested under the register procedure.
+
+---
+
+## 6. Sport-specific control matrix
+
+The applicable sport file must be read for every later event. This matrix is a routing summary only; the full `SFA-<SPORT>` algorithm controls within its scope.
+
+| Sport | Active algorithm | Mandatory sport-native focus |
+|---|---|---|
+| Cricket | `SFA-CRICKET` | Exact format/innings/target; toss/XI; legal-ball exposure; phase roles; wicket resources; strip and conditions gate; innings-order venue baseline; DLS/shortening/termination; bat-first vs chase-censored mixture |
+| Basketball | `SFA-BASKETBALL` | League/rules/OT; participant minutes and lineup stints; possessions; shot/FT/turnover/rebound process; phase separation; team-score budgets; foul/late-foul, blowout and garbage-time multi-axis branches |
+| American football | `SFA-AMERICAN-FOOTBALL` | Code-specific rules; QB/backup and expected reps; OL/skill/defensive units; drives/field position; red-zone/4th-down; turnover/explosive and special-teams tails; key-score discreteness; competition OT; preseason quarter/unit mixtures |
+| Baseball | `SFA-BASEBALL` | Official starter handshake; posted lineups; starter batters faced/hook; score-state bullpen chain; contact/HR/sequencing tails; park/weather; home ninth and extras; listed-pitcher/action terms |
+| AFL/AFLW | `SFA-AFL` | Separate AFL/AFLW populations; selected teams/roles; clearance/turnover → inside-50 → scoring-shot → conversion; venue/ground orientation; end-switch wind branches; total vs margin allocation; late territorial durability |
+| Rugby league | `SFA-RUGBY-LEAGUE` | Competition/laws; official 13/bench/spine/kicker; sets/field position/completion; ruck/fatigue; goal-line entries; try/conversion; favourite-only blowout and low-total separation; golden-point/terminal winner branches |
+| Rugby union / sevens | `SFA-RUGBY-UNION` | 15s vs sevens separation; official teams/squads; territory/22 entries; set piece/breakdown; discipline/cards; try/kicking composition; sevens restart/turnover/open-space clusters; qualitative-only module |
+| Soccer | `SFA-SOCCER` | Regulation vs advance/ET/penalties; XI/keeper/bench minutes; goal process separate from corners/SOT; early-goal state changes; knockout/friendly/early-season regime handling; derivative completeness; provider-specific niche stats |
+| Ice hockey | `SFA-ICE-HOCKEY` | Regulation vs full-match ML; starting-goalie mixture; lines/units/ice time; shots/chance quality/finishing/save process; special teams; empty-net; OT/SO treatment; goalie uncertainty cap |
+| Tennis | `SFA-TENNIS` | Surface/level/format/tiebreak; exact participants; retirement terms; serve/return priors with shrinkage; H2H continuity; two-sided straight/close/deciding-set tree; winner/handicap/total scoreline coherence; qualitative-only module |
+
+For any sport without a dedicated active module, apply `RULES_GENERAL.md` and require explicit target/source/model cards before numerical work.
+
+---
+
+## 7. Running event index
+
+No new forecast is issued by this log-opening operation.
+
+| Canonical ID | Event | State | Forecast appended | Settlement | Retrospective |
+|---|---|---|---|---|---|
+| P-239 | RESERVED AS NEXT ID — not yet issued | NOT CREATED | NO | N/A | NO |
+
+**Reservation rule:** `P-239` is the next ID, not an issued event. It becomes a canonical forecast ID only when a distinct new event is fully frozen and its complete forecast is appended before delivery. If the canonical top snapshot changes before that event is issued, re-read it and use its current next ID instead.
+
+---
+
+## 8. New-event append template
+
+```markdown
+## P-### — [Event]
+
+### A. Frozen identity and state
+- Append sequence:
+- Request time:
+- State-check time:
+- Information cutoff:
+- Issue time:
+- GAME-STATE:
+- Sport / competition / format / rules era:
+- Official event ID:
+- Participants:
+- Venue / home-away-neutral:
+- Scheduled start — venue local:
+- Scheduled start — Australia/Sydney:
+- Venue class: OUTDOOR / INDOOR / RETRACTABLE
+- Method: MDS-2026.08.31-v2.9
+- General algorithm: GFA-1
+- Sport algorithm: SFA-<SPORT>
+- Applicable learning/test IDs:
+- Provenance class:
+
+### B. Decision set and contract freeze
+- decision_set_id:
+- candidate origin: USER_SUPPLIED / SYSTEMATIC_UNIVERSE
+- operator / terms:
+- price capture / both-side odds:
+- slate geometry:
+- forced-outcome arithmetic:
+- target_id/version:
+- target definition / unit / support:
+- start state:
+- endpoint / horizon:
+- exposure / termination / censoring:
+- regulation/OT/ET/SO/extra-innings/golden-point/DLS/action rules:
+
+| Candidate ID | Canonical contract | Alias | Eligibility | W/P/L geometry | Dependence group |
+|---|---|---|---|---|---|
+
+### C. Participant release handshake
+| Role | Side | Official participant | Status | Source/time | Exposure branch |
+|---|---|---|---|---|---|
+
+### D. Source and evidence-lineage register
+| Evidence ID | Field | Source/record | Owner | Effective/known/observed/retrieved | Freshness | Lineage | State |
+|---|---|---|---|---|---|---|---|
+
+### E. Reference base-rate anchor
+| Candidate | REFERENCE_BASE_RATE | Base-rate band | Basis/source | Max permitted event adjustment |
+|---|---|---|---|---|
+
+### F. Recent-form / H2H window block
+Store underlying events once; derive L5/L10/L15/L20.
+| Side/window | Sample | Target-relevant rate/result | Opponent/regime adjustment | Trend verdict |
+|---|---:|---|---|---|
+- H2H continuity count:
+- H2H continuity verdict:
+- Short-vs-long trend verdict:
+- Causes/persistence test:
+- De-duplication note:
+
+### G. Environment gate
+- Venue coordinates/orientation:
+- Match-window source:
+- Wind speed/gusts/direction:
+- Ground/field vector resolution:
+- Dew point:
+- Cloud cover:
+- Hourly precipitation:
+- Surface/roof:
+- Sport-specific mechanism:
+- Unknown/conflicting fields:
+
+### H. Sport-native exposure × rate model
+- Baseline:
+- Current regime:
+- Participant exposure:
+- Matchup interaction:
+- Phase/score-state transitions:
+- Context:
+- Missingness/evidence caps:
+
+### I. Scenario and component-budget map
+| Scenario family | Exposure/rate mechanism | Representative target state | Contracts helped | Contracts hurt | Evidence lineage |
+|---|---|---|---|---|---|
+| Lower / low-close | | | | | |
+| Central | | | | | |
+| Low-separation | | | | | |
+| High-close | | | | | |
+| Upper / high-separation | | | | | |
+| Material kill path | | | | | |
+
+- Aggregate component/team/phase budget:
+- Line-to-corridor relation:
+- Same-mechanism adverse sign:
+- Why the strongest kill path is subordinate, or evidence downgrade:
+
+### J. GFA-1 / SFA gate record
+| Gate/step | Result | Evidence / reason |
+|---|---|---|
+
+### K. Frozen ranking
+Probability state for every row:
+`NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`
+
+Value state:
+`NO VALUE DETERMINABLE` unless every value gate passes.
+
+| Rank | Candidate / Contract ID | Selection | Verdict | Evidence quality | Base-rate band | Event-adjusted band | Dependence | Performance role | Actionability |
+|---:|---|---|---|---|---|---|---|---|---|
+
+### L. Potential winner
+- Canonical winner contract / alias:
+- Endpoint:
+- Status: LEAN / FORCED WINNER — LOW CONFIDENCE
+- Reason:
+- Winner is not a separate observation when identical to a ranked contract.
+
+### M. Final volatile refresh
+- Official state refresh:
+- Participant refresh:
+- Weather/roof refresh:
+- Market/terms refresh:
+- Cutoff invariant:
+- Changes since initial research:
+
+### N. Frozen forecast
+[Insert the complete user-facing forecast exactly as issued. This block is immutable after issue.]
+
+### O. Append confirmation
+- Forecast appended before delivery: YES
+- Drive modified: NO
+- Retrospective performed: NO
+```
+
+---
+
+## 9. Settlement-only append template
+
+Use for factual result/queue integrity. This is **not** a retrospective.
+
+```markdown
+### Settlement update — P-### — [timestamp Australia/Sydney]
+
+- Official/fallback final source:
+- Source authority/state:
+- Final score/result:
+- Endpoint:
+- Operator/provider terms used:
+- Stat corrections checked:
+- Event status: FINAL / PROVISIONAL / UNRESOLVED / NO ACTION
+- Queue disposition:
+
+| Contract ID | Frozen contract | Official/provisional settled value | Outcome | Settlement authority | Notes |
+|---|---|---:|---|---|---|
+
+- Potential-winner outcome:
+- Remaining unresolved fields:
+- Performance eligibility unchanged:
+- No pregame rationale rewritten: YES
+- Retrospective performed: NO
+- Learning register changed: NO
+```
+
+---
+
+## 10. Retrospective template — explicit request only
+
+Do not execute this section automatically.
+
+```markdown
+### Retrospective — P-### — EXPLICITLY REQUESTED
+
+| Preissue expectation | Actual driver | Difference | Knowability before issue | What was right | What was wrong/omitted | Process grade | Defect class | Candidate lesson/test | Method change |
+|---|---|---|---|---|---|---|---|---|---|
+
+Required controls:
+- Separate outcome grade from process grade.
+- Use only information demonstrably knowable by the frozen cutoff when judging the original process.
+- Do not insert post-result facts into the frozen pregame rationale.
+- A losing compliant forecast is not automatically a model defect.
+- A winning defective process is not validation.
+- Rank #1 losses receive detailed process review when retrospective work is requested, but no automatic weight strike.
+- Candidate learning does not become a forecast weight without the LEARNING_REGISTER prospective procedure.
+- Any learning/register update is append-only and versioned.
+```
+
+---
+
+## 11. Source hierarchy and evidence-lineage rules
+
+### Field-owning hierarchy
+1. Governing body / league / competition / official match centre / team / venue for official identity, rules, participants, state and final.
+2. Government meteorological service for venue-local forecast/observation; venue owner for roof/surface status.
+3. Official data partner or established statistical database for its defined historical field.
+4. Specialist analytical provider for its defined derived metric.
+5. Reputable named reporting for material current information not yet officially released.
+6. Actual operator/exchange for exact contract, terms, line and price.
+7. Aggregator/query/snippet/social discovery as corroboration only unless the active fallback rule expressly permits it.
+
+### Conflict handling
+- Resolve conflicts field-by-field.
+- Prefer the freshest definition-compatible field owner.
+- Quarantine stale/zero-filled/unfinished official placeholders for the affected field.
+- Preserve conflicting raw values and lineage.
+- Two weak sources do not equal one controlling source.
+- Multiple branded front ends using the same upstream feed are one lineage unless independence is demonstrated.
+- For provisional settlement, retain provisional labels until field ownership/definition is resolved.
+- Do not harmonise conflicting values merely to make settlement convenient.
+
+---
+
+## 12. Numerical-training state carried forward
+
+- NTS specification: `NTS-2026.08.25-v0.2`.
+- Stage: `S0 — Markdown targets/source/model/metric/gate design`.
+- S1 source audits / snapshots: NOT STARTED.
+- H0 systematic historical feature store: NOT BUILT / NOT QUALITY-APPROVED.
+- A0/A1 models: NOT FIT.
+- A2 sport-native simulators: NOT FIT.
+- A3/A4 flexible challengers: NOT FIT.
+- Calibration / untouched TEST: NOT STARTED.
+- E1-P shadow: NOT STARTED.
+- Publication decision: DISABLED.
+- No numerical model is calibrated, validated, championed or authorised to publish probabilities.
+- Rugby union/sevens and tennis have qualitative modules but no approved numerical target/source/dataset/model card.
+- Any future numerical implementation requires explicit user authorisation and its separate approval gates.
+
+**Metadata note:** the current Drive `NUMERICAL_TRAINING_SPEC.md` and `NUMERICAL_MODEL_REGISTER.md` headers still name `MDS-2026.08.31-v2.8` as the “governing published forecast method,” while current README, AGENT_ROLE_AND_TASK, RULES_GENERAL, MODEL_AND_DATA_SPEC, guide and learning register identify `MDS-2026.08.31-v2.9`. This mini log treats the v2.8 references as stale cross-reference metadata because the numerical stage/build state is unchanged and the current framework authority expressly identifies v2.9. No numerical permission is inferred from that mismatch.
+
+---
+
+## 13. Change and source provenance
+
+### 13.1 Current Drive authority consulted read-only
+
+- `README.md` — framework review 2026-09-02; identifies current method, active document map and canonical log.
+- `PREDICTION_LOG_COMBINED.md` — controlling top snapshot through P-238; next ID P-239; queue/performance boundary.
+- `LEARNING_REGISTER.md` — effective 2026-09-02; sole current lesson-status registry; promoted controls through L-056 and active tests/candidates.
+- `COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md` — supporting reconciliation evidence only; not used to override the canonical queue.
+- `NUMERICAL_TRAINING_SPEC.md` — Stage 0 design/pre-fit and publication gates.
+
+No Drive file was edited, uploaded, replaced, moved or deleted.
+
+### 13.2 Active local framework copies consulted
+
+- `AGENT_ROLE_AND_TASK.md`
+- `RULES_GENERAL.md`
+- `MODEL_AND_DATA_SPEC.md`
+- `ALGORITHM_PORTFOLIO_AND_EVALUATION.md`
+- `NUMERICAL_TRAINING_SPEC.md`
+- `UPCOMING_GAME_RESEARCH_GUIDE.md`
+- `DATA_SOURCE_REGISTER.md`
+- `H0_DATASET_CARD.md`
+- `NUMERICAL_MODEL_REGISTER.md`
+- `LEARNING_REGISTER.md`
+- `RULES_CRICKET.md`
+- `RULES_BASKETBALL.md`
+- `RULES_AMERICAN_FOOTBALL.md`
+- `RULES_BASEBALL.md`
+- `RULES_AFL.md`
+- `RULES_NRL_RUGBY.md`
+- `RULES_RUGBY_UNION.md`
+- `RULES_SOCCER.md`
+- `RULES_ICE_HOCKEY.md`
+- `RULES_TENNIS.md`
+
+### 13.3 External verification
+
+- Australia/Sydney was verified as AEST / UTC+10 on 2026-09-02; this is recorded only for the opening timestamp. Sports facts for future events must still follow the active field-owning source hierarchy.
+
+---
+
+## 14. Opening verification checklist
+
+- [x] README used to identify active framework and canonical combined log.
+- [x] Canonical top controlling snapshot used for next ID and primary queue.
+- [x] Next canonical ID agrees with top snapshot: `P-239`.
+- [x] Latest valid method carried forward: `MDS-2026.08.31-v2.9`.
+- [x] Numerical state preserved: Stage 0 / pre-fit / no validated model.
+- [x] Probability publication blocked.
+- [x] Value/edge/ROI/staking claims blocked unless future gates genuinely pass.
+- [x] Current performance-ineligibility classifications preserved.
+- [x] All 10 canonical queue follow-ups represented exactly once.
+- [x] P-233/P-234/P-235 provisional-status inconsistency preserved once in a separate reconciliation watchlist rather than silently altering the queue.
+- [x] No archived/historical snapshot treated as current queue authority.
+- [x] No frozen issued forecast rewritten.
+- [x] No retrospective performed.
+- [x] No learning or method weight changed.
+- [x] No Drive file modified.
+- [x] This local mini log is ready to append the next distinct event after re-reading the canonical top snapshot.
+
+---
+
+## 15. Operating rule for every next prediction query
+
+Before responding to any new forecast request:
+
+1. Re-read the current Drive `README.md` and the top controlling snapshot of `PREDICTION_LOG_COMBINED.md`.
+2. Reconcile any queue/next-ID change.
+3. Perform factual state/settlement checks required for queue integrity only; do not run a retrospective unless explicitly requested.
+4. Read the applicable active sport rule file and current promoted/testing learning rows.
+5. Execute `GFA-1` plus the applicable `SFA-<SPORT>`.
+6. Freeze the complete event/target/contract/state/evidence set.
+7. Research and rank under the current publication boundaries.
+8. Append the **complete frozen forecast** to this mini log before delivery.
+9. Never rewrite that frozen forecast afterward.
+10. Return the **complete updated running mini log** with the prediction response.
+
+
+---
+
+# P-239 — Athletics @ Texas Rangers — MLB — 2026-09-01 CDT / 2026-09-02 AEST
+
+## A. Frozen identity and state
+
+- **Append sequence:** P-239
+- **Request received:** 2026-09-02 Australia/Melbourne
+- **Final state/participant refresh:** 2026-09-02 09:53:03 Australia/Sydney (AEST, UTC+10)
+- **Information cutoff:** 2026-09-02 09:53:03 Australia/Sydney
+- **Scheduled first pitch:** 2026-09-01 19:05 CDT / 2026-09-02 10:05 AEST
+- **Cutoff invariant:** PASS — cutoff precedes scheduled first pitch by approximately 12 minutes.
+- **GAME-STATE:** PREGAME
+- **Sport:** Baseball
+- **Competition:** MLB regular season
+- **Official event:** Athletics @ Texas Rangers
+- **Venue:** Globe Life Field, Arlington, Texas
+- **Home/away:** Athletics away; Texas Rangers home
+- **Official/primary schedule evidence:** MLB.com probable-pitcher board and Rangers schedule
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-BASEBALL
+- **Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING
+- **Value state:** NO VALUE DETERMINABLE
+- **Performance/provenance class:** New local pre-result card, subject to future immutable-artifact/provenance audit; no performance claim is made at issue.
+
+### Identity correction
+
+The request contained two incompatible starter references:
+1. supplied event/probables: Athletics @ Texas Rangers — B. Basso / M. Gore;
+2. special-control text: “verify that Nola and Pfaadt remain the announced starters.”
+
+The second pair is not this fixture. At the frozen cutoff, MLB’s current official probable-pitcher board listed:
+- Athletics: **Brady Basso, LHP — PROBABLE_OFFICIAL**
+- Texas Rangers: **MacKenzie Gore, LHP — PROBABLE_OFFICIAL**
+
+Nola/Pfaadt were therefore quarantined as an unrelated copied control and were not used in the forecast.
+
+A secondary Athletics game-day report further stated that Basso would **open a bullpen game** while J.T. Ginn received extra rest. Secondary lineup/DFS sources showed conflicting Athletics pitcher fields (including Ginn/Magdic), so Basso/Gore are treated as official probables rather than “confirmed starters.” If either pitcher changes before first pitch, this frozen card is not silently rewritten.
+
+## B. Decision set and contract freeze
+
+- **decision_set_id:** P-239-DS01
+- **candidate origin:** USER_SUPPLIED
+- **operator:** NOT SUPPLIED
+- **odds:** NOT SUPPLIED
+- **listed-pitcher/action rules:** UNKNOWN_DEFINITION
+- **full-game extra-inning treatment:** OPERATOR TERMS NOT SUPPLIED
+- **research target assumption:** official MLB full-game final score including extra innings if played; this assumption is for sporting-target analysis only and does not establish sportsbook settlement.
+- **action caveat:** if the eventual operator uses listed-pitcher rules and Basso or Gore does not start/open as required, the operator may void or reclassify action. Settlement cannot be called definitively without the operator rules.
+- **scheduled innings:** 9, subject to official MLB game termination/suspension rules.
+- **target_id:** BASEBALL_JOINT_FINAL_RUNS-v1-QUAL
+- **target definition:** joint official final runs (ATH, TEX) for the frozen full-game endpoint.
+- **slate geometry:** two exact half-run complement pairs.
+- **forced-outcome arithmetic:** absent abandonment/void/unknown-operator effects, exactly **2 of the 4 rows must win**:
+  - Athletics +1.5 vs Rangers -1.5;
+  - Over 7.5 vs Under 7.5.
+- **performance note:** the forced 2-2 row structure is not evidence of prediction accuracy.
+
+| Candidate ID | Contract | Eligibility | Geometry | Dependence group |
+|---|---|---|---|---|
+| P-239-C01 | Athletics +1.5 runs | ELIGIBLE | Exact complement of C02 | P239-MARGIN |
+| P-239-C02 | Texas Rangers -1.5 runs | ELIGIBLE | Exact complement of C01 | P239-MARGIN |
+| P-239-C03 | Full-game Over 7.5 runs | ELIGIBLE | Exact complement of C04 | P239-TOTAL |
+| P-239-C04 | Full-game Under 7.5 runs | ELIGIBLE | Exact complement of C03 | P239-TOTAL |
+
+## C. Participant and lineup handshake
+
+### Probable pitchers
+| Role | Side | Participant | Status | Key frozen evidence |
+|---|---|---|---|---|
+| Opener/probable starter | ATH | Brady Basso, LHP | PROBABLE_OFFICIAL | MLB probable-pitcher board: 0-1, 4.50 ERA, 22 SO |
+| Probable starter | TEX | MacKenzie Gore, LHP | PROBABLE_OFFICIAL | MLB probable-pitcher board: 7-10, 4.40 ERA, 165 SO |
+
+### Lineups
+A current match-specific secondary page using MLB Stats API data displayed the following lineups:
+
+**Athletics:** Henry Bolte, Zack Gelof, Lawrence Butler, Jonah Heim, Tommy White, Jeff McNeil, Max Muncy, Alika Williams, Denzel Clarke.
+
+**Texas:** Justin Foscue, Corey Seager, Wyatt Langford, Brandon Nimmo, Ezequiel Duran, Jake Burger, Cody Freeman, Evan Carter, Elias Díaz.
+
+The official team lineup release was not independently recovered through the available search surface before cutoff, and other secondary lineup sites contained stale/conflicting Athletics pitcher fields. Therefore lineup-driven claims are capped and this card does not describe every listed hitter as `CONFIRMED_OFFICIAL`.
+
+## D. Environment gate
+
+- **Venue classification:** RETRACTABLE
+- **Venue:** Globe Life Field
+- **Official venue fact:** Globe Life Field has a retractable roof.
+- **Match-specific roof state:** secondary MLB-API-derived game page reported **Roof Closed**.
+- **Indoor displayed condition:** approximately 72°F / no wind effect.
+- **Weather mechanism:** with the roof reported closed, exterior wind/precipitation is not used as a scoring adjustment.
+- **Roof-status limitation:** no independent official same-game roof-status announcement was recovered; if the roof state changes before first pitch, the environmental branch must be refreshed rather than backfilled.
+
+## E. Recent form and H2H window block
+
+### Team scoring windows
+Recent StatMuse snapshots were retrieved once per window and treated as descriptive, not independent confirmations.
+
+| Team | L5 R/G | L10 R/G | L15 R/G | L20 R/G | Trend read |
+|---|---:|---:|---:|---:|---|
+| Athletics | 3.8 | 4.1 | 4.47 | ~3.65 | Mixed; recent scoring around four runs, no strong directional streak |
+| Rangers | 4.6 | 4.2 | ~3.8 | ~3.5-4.0 depending retrieval snapshot | Short-window rebound over a weaker longer-run scoring base |
+
+Notes:
+- The search surface exposed snapshot-timing differences for some L15/L20 StatMuse queries. The card records the conflict rather than selecting the most favourable number.
+- Current team records at cutoff were Athletics 53-85 and Rangers 68-70.
+- Athletics were 1-4 in the current L5 table; Rangers 2-3.
+- Athletics were 4-6 over a current L10 scoring snapshot; Rangers 5-5 over a current L10 snapshot.
+
+### Pitching/run-prevention context
+- Athletics pitching allowed **174 runs in August**, the most in MLB according to the current game-day report, and the same report characterized the club’s relief situation as league-worst.
+- A current match-specific bullpen page showed Athletics availability at **6 available / 2 limited / 1 rest required** versus Texas at **8 available / 2 limited / 0 rest required**.
+- Athletics used Chris Roycroft for 37 pitches and José Suarez for 23 pitches in the prior 8-1 loss.
+- Texas received seven scoreless innings from Jacob deGrom in that prior game, materially reducing immediate bullpen load.
+- Texas closer Jacob Latz had last worked Aug. 30 and had a 1.65 ERA / 27 saves in the retrieved current log.
+- Texas bullpen depth is not pristine: Peyton Gray and Cole Winn had just been placed on the IL. That weakens the “Texas pen is fully healthy” branch but does not erase the workload advantage created by deGrom’s seven-inning outing.
+
+### Head-to-head continuity
+Current 2026 season series before P-239:
+- Athletics **6-5** Rangers.
+- Reconstructed 11-game total results from the current StatMuse season-series record plus August/official game results: Over 7.5 occurred **7/11**; Under 7.5 **4/11**.
+- Athletics +1.5 would have covered **7/11**; Texas -1.5 **4/11**.
+
+**Continuity verdict:** LIMITED-MODERATE. Team identities and several core hitters persist, but the current Basso bullpen-game structure, Gore role/current form, bullpen health and late-season rosters differ materially from early-season meetings. H2H is descriptive, not controlling.
+
+## F. Starter and relief-chain analysis
+
+### Athletics: Brady Basso / bullpen game
+- MLB listed Basso at 0-1 with a 4.50 ERA.
+- The current Athletics game-day report says Basso is being used as the opener with J.T. Ginn receiving extra rest.
+- Basso had recently appeared from the bullpen, so starter-length assumptions are inappropriate.
+- This is a direct SFA-BASEBALL “short start = exposure, not automatic Over” case: direction depends on the actual relief chain.
+- The current relief context is nevertheless adverse for Oakland: poor August run prevention, multiple recent bullpen usages and a game structure that requires many non-Basso outs.
+
+### Rangers: MacKenzie Gore
+- MLB listed Gore at 7-10 with a 4.40 ERA and 165 strikeouts.
+- In his most recent start against the White Sox, Gore failed to complete four innings and allowed 4 runs on 8 hits and 4 walks in 3 2/3 innings.
+- That recent outing is not treated as a permanent true-talent reset, but it preserves an ordinary Athletics-scoring branch and prevents the Texas side from being treated as a low-total certainty.
+
+### Relief-chain asymmetry
+The most decision-relevant asymmetry is **expected bullpen exposure**, not merely starter ERA:
+- Oakland is scheduled into a bullpen game and comes off a game in which the starter recorded only 4 1/3 innings.
+- Texas got seven innings from deGrom yesterday and has the deeper current availability count.
+- This raises the Texas team-run and separation ceiling.
+- Because Gore has a credible 3-4-run allowance branch, the same structure also raises the full-game Over path.
+
+## G. Reference base-rate anchor
+
+No model probabilities are generated. Bands are qualitative starting positions before event-specific adjustment.
+
+| Contract | Reference band | Event adjustment | Frozen band |
+|---|---|---|---|
+| Athletics +1.5 | MEDIUM-HIGH — positive 1.5-run cushion | Down one band: bullpen-game/separation risk | MEDIUM |
+| Rangers -1.5 | MEDIUM-LOW — requires Texas win by 2+ | Up one band: relief-chain/lineup/field-position equivalent scoring separation path | MEDIUM |
+| Over 7.5 | MEDIUM — no price supplied; total direction begins neutral | Up one band: Oakland relief exposure + Gore non-trivial run allowance | MEDIUM-HIGH |
+| Under 7.5 | MEDIUM — exact complement of Over before event adjustment | Down one band: same upper-tail mechanisms | MEDIUM-LOW |
+
+No band is a calibrated probability.
+
+## H. Scenario and component-budget map
+
+| Scenario family | Representative score family | Main mechanism | Helps | Hurts |
+|---|---|---|---|---|
+| Low / close | TEX 4-3 or ATH 4-3 | Gore/Basso effective early, relief chain holds, limited HR clustering | ATH +1.5, Under | TEX -1.5, Over |
+| Low / separation | TEX 5-1 or 6-1 | Gore rebound + Oakland bullpen gives Texas enough separation | TEX -1.5, Under | ATH +1.5, Over |
+| Central | TEX 5-3, 6-3, 6-2 | Texas gets repeated relief looks; Gore allows some Athletics traffic | Over, TEX -1.5 | Under, ATH +1.5 |
+| High / close | TEX 6-5 / ATH 6-5 | Gore instability + bullpen-game variance + HR clusters | Over, ATH +1.5 | Under, TEX -1.5 |
+| High / separation | TEX 7-3 / 8-3 | Oakland relief chain fails; Texas power/traffic cluster | Over, TEX -1.5 | Under, ATH +1.5 |
+| Athletics control kill path | ATH 5-3 / 6-4 | Gore command/contact issue persists while Oakland pen performs adequately | ATH +1.5, Over often | TEX -1.5; Texas winner |
+
+### Component budget at 7.5
+The Over needs combinations such as:
+- Texas 5 + Athletics 3;
+- Texas 6 + Athletics 2;
+- Texas 4 + Athletics 4.
+
+Those are compatible with both principal pitching uncertainties:
+1. Oakland’s extended bullpen exposure can supply the Texas component;
+2. Gore’s 4.40 ERA and recent 3 2/3-inning failure preserve a non-zero Athletics component.
+
+The strongest Under path is not “both pitchers are aces”; it is specifically a **Texas-controlled low/separation state** such as 5-1 or 6-1 in which Gore rebounds and Oakland is suppressed. That path is credible and is the main reason Over is a LEAN rather than stronger language.
+
+## I. Frozen ranking
+
+**Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING  
+**Value state:** NO VALUE DETERMINABLE  
+**Total-direction rule:** only one of Over/Under is recommended; Under remains in the audit ranking only because the full supplied slate must be ranked.
+
+| Rank | Contract | Verdict | Evidence | Why |
+|---:|---|---|---|---|
+| **1** | **P-239-C03 — Over 7.5 runs** | **LEAN** | MEDIUM-LOW | Best alignment with Oakland’s bullpen-game exposure plus a credible Athletics scoring contribution against volatile Gore. H2H also cleared 7.5 in 7/11, but that is secondary evidence. |
+| **2** | **P-239-C02 — Texas Rangers -1.5** | **LEAN** | MEDIUM-LOW | Direct separation path against the Athletics relief chain; yesterday’s 8-1 result is illustrative, not a repeat assumption. Low-total 5-1/6-1 branches also support this row. |
+| **3** | **P-239-C01 — Athletics +1.5** | **FORCED RANK** | LOW-MEDIUM | Positive cushion and 7/11 season-series cover history are real structural support, but the current bullpen-game state is materially worse than much of that history. |
+| **4** | **P-239-C04 — Under 7.5** | **AVOID / FORCED RANK** | LOW-MEDIUM | Requires the low-conversion branch to dominate both Oakland’s relief exposure and Gore’s current uncertainty. It can win in a Texas 5-1/6-1 script, but it is the weaker total direction. |
+
+### Recommended interpretation
+- **Strongest evidence type:** TOTAL first, then TEX separation side.
+- **Only total direction recommended:** **Over 7.5**.
+- The ranking is not a value/staking recommendation because operator prices and terms were not supplied.
+- Because C01/C02 and C03/C04 are exact complements, this slate mechanically produces two winning rows if all contracts have normal action.
+
+## J. Potential winner
+
+**Likely winner: Texas Rangers — LEAN**
+
+This is a separate descriptive winner call, not an additional independent contract. Texas has:
+- the more stable starting-pitcher length branch;
+- home field;
+- a materially better bullpen-exposure setup at cutoff;
+- a current opponent forced into a bullpen game;
+- a lineup that just generated sustained traffic in the series opener.
+
+The main winner kill path is Gore again failing early while Oakland’s bullpen performs above its current baseline. That is credible enough to keep the winner at LEAN rather than stronger language.
+
+## K. Source/state limitations
+
+1. **Operator not supplied:** exact listed-pitcher, action, shortened-game and extra-inning settlement language is unresolved.
+2. **Starters are official probables, not labelled confirmed starters:** MLB says “subject to change.”
+3. **Secondary pitcher conflict:** some DFS/lineup pages still displayed stale Athletics pitcher names; MLB official probable-pitcher data controls the frozen participant branch.
+4. **Lineups:** match-specific secondary MLB-API-derived lineups were available, but an independently accessible official lineup release was not recovered before cutoff.
+5. **Roof:** match-specific secondary data says closed; the venue’s retractable-roof status is official, but same-game official roof confirmation was not independently recovered.
+6. **Recent-window data:** some StatMuse L15/L20 searches exposed different retrieval snapshots. The direction was not allowed to depend on choosing the most favourable stale value.
+7. **No calibrated model exists:** all scenario bands are qualitative.
+
+## L. Frozen user-facing forecast
+
+### Identity first
+The request’s Nola/Pfaadt instruction does **not** match this event. MLB’s current official probable-pitcher board lists **Brady Basso for the Athletics and MacKenzie Gore for Texas**. The game is scheduled for **Tuesday, September 1 at 7:05 PM CDT at Globe Life Field**, which is **Wednesday, September 2 at 10:05 AM AEST**. The cutoff was frozen about 12 minutes before scheduled first pitch.
+
+### Best four supplied contracts
+1. **Over 7.5 runs — LEAN**
+2. **Texas Rangers -1.5 runs — LEAN**
+3. **Athletics +1.5 runs — FORCED RANK**
+4. **Under 7.5 runs — AVOID / FORCED RANK**
+
+### Why Over 7.5 is #1
+The cleanest current mechanism is the **Athletics’ bullpen-game exposure**. Basso is not being treated as a normal starter-length arm; Oakland must cover a large number of outs with a relief group that has been under heavy pressure, while Texas got seven innings from deGrom in the prior game and enters with the better immediate bullpen availability profile. Texas therefore has a credible 5-6+ run component without requiring an extreme offensive game.
+
+The other half of the Over is that Gore is not a shut-down certainty. His latest start ended after 3 2/3 innings with four runs, eight hits and four walks allowed. That does not mean another poor start is automatic, but it keeps Athletics 2-4 run states ordinary enough that Texas 5-6 runs can clear 7.5.
+
+The strongest Under kill path is a **Texas-controlled 5-1 or 6-1** game: Gore rebounds, Oakland remains suppressed, and the Rangers win comfortably without the Athletics contributing enough. That branch is credible, so the Over is a lean rather than a high-confidence claim.
+
+### Why Texas -1.5 is #2
+The Athletics’ +1.5 has the structurally easier contract and covered 7 of 11 season meetings before this game, but the current state is materially different from much of that history. Oakland is using an opener/bullpen configuration and comes off an 8-1 loss in which the relief staff again had to absorb substantial work. Texas’ central separation paths are 5-3, 6-3 and 6-2; a Gore rebound also produces low-total separation paths such as 5-1 or 6-1.
+
+### Why Athletics +1.5 is not discarded
+It still has a real path. Texas is only 5-6 against Oakland this season, and Gore has been volatile enough that a 4-3/5-4 game or an Athletics outright win cannot be treated as remote. That is why Texas -1.5 is only second and not a strong-confidence selection.
+
+### Total-direction control
+**Recommend only Over 7.5 among the two total directions.** Under 7.5 is retained solely because the full supplied audit slate must receive a unique rank.
+
+### Likely winner
+**Texas Rangers — LEAN.**
+
+This winner call is not a fifth independent pick.
+
+### Publication boundary
+No internally calibrated probability, expected value, market edge, ROI or staking claim is published. Operator/odds were not supplied and exact action/listed-pitcher settlement language remains unknown.
+
+## M. Append confirmation
+
+- Complete frozen forecast appended before delivery: **YES**
+- Frozen cutoff before scheduled start: **YES**
+- Google Drive modified: **NO**
+- Prior forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Learning register changed: **NO**
+
+
+---
+
+## Administrative continuation note — before P-240
+
+The connected Drive canonical top snapshot still states `Next canonical ID: P-239` because Google Drive is read-only in this workspace. The local running continuation already contains the frozen, issued `P-239` Athletics @ Texas Rangers card. Reusing `P-239` for a distinct event would violate the one-event/one-canonical-ID invariant. Therefore this distinct event is appended locally as **P-240**, with the Drive/local sequence divergence explicitly quarantined for later canonical integration. No Drive file was modified.
+
+---
+
+# P-240 — Chicago White Sox @ Houston Astros — MLB — 2026-09-01 CDT / 2026-09-02 AEST
+
+## A. Frozen identity and state
+
+- **Append sequence:** P-240
+- **Request date:** 2026-09-02 Australia/Melbourne
+- **Final state/starter refresh:** 2026-09-02 09:59:52 Australia/Melbourne/Australia-Sydney equivalent (AEST, UTC+10)
+- **Information cutoff:** 2026-09-02 09:59:52 AEST
+- **Scheduled first pitch:** 2026-09-01 19:10 CDT / 2026-09-02 10:10 AEST
+- **Cutoff invariant:** PASS — frozen approximately 10 minutes before scheduled first pitch.
+- **GAME-STATE:** PREGAME
+- **Sport:** Baseball
+- **Competition:** MLB regular season
+- **Official fixture:** Chicago White Sox @ Houston Astros
+- **Venue:** Daikin Park, Houston, Texas
+- **Home/away:** White Sox away; Astros home
+- **Current records at cutoff:** CWS 72-65; HOU 70-68
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-BASEBALL
+- **Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING
+- **Value state:** NO VALUE DETERMINABLE
+- **Retrospective state:** NOT PERFORMED
+
+## B. Starter identity handshake
+
+MLB's field-owning probable-pitcher page at the frozen cutoff listed:
+
+| Role | Team | Participant | Status | Frozen official line |
+|---|---|---|---|---|
+| Starting pitcher | CWS | Sean Burke, RHP | PROBABLE_OFFICIAL | 7-6, 3.32 ERA, 161 SO |
+| Starting pitcher | HOU | Ronel Blanco, RHP | PROBABLE_OFFICIAL | 0-1, 7.71 ERA, 20 SO |
+
+Both are labelled subject to change by MLB. The card therefore uses official probable status rather than calling either pitcher `CONFIRMED_OFFICIAL`.
+
+### Burke current-regime branch
+- Season centre remains strong: 3.32 ERA / 1.15 WHIP through 149 IP in the current public stat line.
+- His latest five starts were less stable: 24 2/3 IP, 13 ER, 13 BB, 21 K, five HR (4.74 ERA over that window).
+- Most recent start (Aug. 26 vs Texas): 3 IP, 2 ER, **8 walks**. This is a material command-width signal, not a permanent coefficient.
+- Previous start vs Houston (July 25): 6 IP, 3 R / 2 ER, 10 K in a 4-1 White Sox loss. Houston therefore has a credible Burke-scoring branch even though Burke owns the superior season profile.
+
+### Blanco current-regime branch
+- Blanco returned during 2026 after Tommy John surgery in 2025.
+- MLB season line at cutoff: 23 1/3 IP, 7.71 ERA, 1.46 WHIP.
+- His five MLB appearances before this game included:
+  - July 26 at CWS: 5 1/3 IP, 5 ER, 2 HR; White Sox won 12-3.
+  - Aug. 1 vs TEX: 4 2/3 IP, 3 ER.
+  - Aug. 7 at SD: 4 2/3 IP, 3 ER.
+  - Aug. 15 vs SEA (relief): 4 IP, 5 ER.
+- After being optioned, his two most recent Triple-A starts totalled 7 1/3 IP with **12 earned runs, 13 hits, three HR and four walks allowed**.
+- He is recalled specifically to start P-240 because Houston's rotation depth is strained.
+- This is a current-regime uncertainty state: the prior 2024 reputation does not override the 2026 post-surgery performance branch.
+
+## C. Decision set / contract freeze
+
+- **decision_set_id:** P-240-DS01
+- **candidate origin:** USER_SUPPLIED
+- **operator:** NOT SUPPLIED
+- **odds:** NOT SUPPLIED
+- **listed-pitcher/action rule:** UNKNOWN_DEFINITION
+- **shortened/suspended-game operator rule:** UNKNOWN_DEFINITION
+- **sporting-target assumption:** MLB official full-game final score, including regular-season extra innings if played.
+- **MLB extra-inning state:** regular-season innings after the ninth begin with the automatic runner on second.
+- **operator caveat:** the sporting target above does not establish how an unnamed sportsbook grades action if a listed pitcher changes or the game is suspended/shortened.
+
+### Slate geometry
+
+The supplied side contracts are **not opposites**:
+
+- CWS +1.5 wins if Chicago wins or loses by exactly one.
+- HOU +1.5 wins if Houston wins or loses by exactly one.
+- **Both +1.5 contracts win in any one-run final.**
+- If either team wins by 2+, only that winning team's +1.5 row wins.
+
+The total pair is an exact half-run complement:
+- Over 8.5 vs Under 8.5.
+- Recommend only one total direction.
+
+| Candidate ID | Contract | Geometry | Dependence |
+|---|---|---|---|
+| P-240-C01 | White Sox +1.5 | Overlaps C02 in one-run games | P240-MARGIN |
+| P-240-C02 | Astros +1.5 | Overlaps C01 in one-run games | P240-MARGIN |
+| P-240-C03 | Over 8.5 | Exact complement of C04 | P240-TOTAL |
+| P-240-C04 | Under 8.5 | Exact complement of C03 | P240-TOTAL |
+
+## D. Lineup gate
+
+The MLB starting-lineup page still displayed both batting orders as **TBD** at the final cutoff.
+
+Therefore:
+- official batting orders, catcher and defensive alignment did not fully pass `BB-P2`;
+- team-level rows remain rankable under explicit lineup mixtures;
+- lineup-specific/platoon claims are evidence-capped;
+- no secondary projected lineup is promoted to `CONFIRMED_OFFICIAL`.
+
+Current secondary game-day reporting indicated:
+- Randal Grichuk expected in RF for Chicago;
+- Jose Altuve returning to Houston's lineup after resting in the series opener.
+
+A separate secondary lineup page published a complete proposed order, but because the field-owning MLB lineup page remained TBD, it is retained as corroboration only.
+
+## E. Venue, roof and weather
+
+- **Venue class:** RETRACTABLE
+- **Venue:** Daikin Park
+- Astros' official park information confirms a retractable roof.
+- Official roof guidelines permit/encourage a closed start for rain threat and relevant heat/wind conditions.
+- Match-window Houston weather was materially adverse: Tropical Storm Edouard had made landfall and current Houston forecasts showed rain/thunderstorm risk through the game window.
+- A current secondary baseball weather report stated that the Daikin Park roof would be **closed** for the game.
+- Because no same-game Astros/MLB field-owner roof announcement was independently recovered, the frozen roof status is:
+  **LIKELY CLOSED / SECONDARY CONFIRMATION — NOT FIELD-OWNER CONFIRMED.**
+
+Mechanism:
+- If closed as expected, outdoor rain/wind do not receive a run-direction adjustment.
+- The storm remains operational/context evidence (travel/access/roof certainty), not an automatic Under or Over signal.
+
+## F. Bullpen availability and recent workload
+
+### Houston
+The Astros' current relief environment is a real uncertainty:
+- recent reporting described **mounting bullpen fatigue** after a long run of short starts;
+- no Houston starter had completed six innings for an extended August stretch in the cited current report;
+- bullpen ERA was reported around 4.14 for August in that workload discussion.
+- In the Aug. 31 series opener, Houston used:
+  - Enyel De Los Santos: 1.0 IP,
+  - Bennett Sousa: 1.1 IP,
+  - Steven Okert: 1.0 IP,
+  - Bryan Abreu: 1.0 IP.
+- Josh Hader did **not** appear in that game and current reporting described his long scoreless streak, preserving a high-leverage late-inning branch if Houston leads closely.
+- Blanco's uncertain length creates a non-trivial probability of needing another 4+ bullpen innings.
+
+### Chicago
+- In the Aug. 31 opener, Chicago used:
+  - Trevor Richards: 2.1 IP,
+  - Tyler Davis: 1.0 IP.
+- A current two-week relief split placed the White Sox bullpen around a **2.97 ERA** over the retrieved period.
+- Sean Newcomb has been an important multi-role relief arm.
+- Chicago's immediate bullpen state is not perfectly fresh, but the retrieved recent performance and prior-day workload are less concerning than Houston's broader repeated-short-start burden.
+
+**Bullpen conclusion:** late-inning state modestly favours CWS relative to HOU, but score-state usage matters; Houston's best leverage arm remains a strong close-game branch.
+
+## G. Recent-form and H2H window block
+
+### Team scoring form
+Current StatMuse retrievals were used as descriptive windows and were not counted as independent confirmations when they overlapped.
+
+| Team | L5 | L10 | L15 | L20 / current longer read | Interpretation |
+|---|---:|---:|---:|---:|---|
+| CWS | ~3.6 R/G in retrieved L5 snapshot | 4.7 R/G | 5.2 R/G | ~4.6-5.35 R/G across timestamped L20 snapshots | Stronger medium window than immediate L5; recent clutch execution has cooled |
+| HOU | ~4.4 R/G | ~4.1-4.7 R/G depending retrieval timestamp | ~4.0-4.9 R/G depending timestamp | ~4.5-4.9 R/G in later-summer snapshots | Ordinary-to-good scoring; short-window rebound but not a runaway scoring regime |
+
+Timestamped StatMuse pages exposed different snapshots for several L15/L20 queries. This is logged as a source-timing conflict rather than cherry-picked.
+
+Additional current-period context:
+- White Sox: 4.81 R/G since Aug. 1 in the retrieved current split.
+- White Sox pitching: 4.56 team ERA since Aug. 1.
+- Houston pitching: 4.85 team ERA over the retrieved Aug. 18-Sep. 1 window.
+- Houston: 4.19 R/G over the retrieved Aug. 2-Sep. 1 window.
+
+### 2026 direct meetings before P-240
+Current completed 2026 meetings:
+1. July 24: HOU 9-5 CWS
+2. July 25: HOU 4-1 CWS
+3. July 26: CWS 12-3 HOU
+4. Aug. 31: HOU 6-3 CWS
+
+Derived descriptive facts:
+- Houston leads the completed 2026 series **3-1**.
+- Over 8.5 occurred **3 of 4**.
+- CWS +1.5 covered **1 of 4**.
+- HOU +1.5 covered **3 of 4**.
+- Burke's direct start: HOU won 4-1 despite Burke pitching well.
+- Blanco's direct start: CWS won 12-3 and scored five earned runs against Blanco.
+
+### H2H continuity
+**LIMITED-MODERATE.**
+Current core hitters overlap meaningfully, and both probable pitchers have direct 2026 matchup evidence. However:
+- Blanco's post-surgery state is evolving;
+- bullpen health/workload changes quickly;
+- roster expansion and September additions change depth;
+- four same-season games remain too small to become a rate coefficient.
+
+The H2H block therefore supports the scenario tree but does not control it.
+
+## H. Reference base-rate anchor
+
+No internal probability is generated.
+
+| Contract | Structural/base-rate band | Event adjustment | Frozen qualitative band |
+|---|---|---|---|
+| White Sox +1.5 | HIGH for a +1.5 cushion in a near-even MLB matchup | Up/hold: superior SP centre and Blanco current-regime risk | HIGH |
+| Astros +1.5 | HIGH for a +1.5 cushion in a near-even MLB matchup | Hold: home field/offence, but SP disadvantage | HIGH / slightly below C01 |
+| Over 8.5 | MEDIUM | Up: Blanco regime + Burke recent command width + Houston bullpen length risk | MEDIUM-HIGH |
+| Under 8.5 | MEDIUM | Down: must suppress Blanco/relief upper tail and Burke's recent volatility | MEDIUM-LOW |
+
+External same-day market pages independently showed a near-coinflip moneyline and a modest Under lean at one sportsbook snapshot. Those prices are **not** the user's operator, are not used for value, and do not override the sports-only ranking.
+
+## I. Scenario / score-family map
+
+| Family | Representative score | Mechanism | Helps |
+|---|---|---|---|
+| Low-close | CWS 4-3 / HOU 4-3 | Burke stabilises; Blanco has best post-return start; bullpens suppress | Both +1.5, Under |
+| CWS low-separation | CWS 5-2 / 5-3 | Blanco short/inefficient; Chicago pen holds | CWS +1.5, often Under at 5-2 |
+| HOU low-separation | HOU 5-2 / 5-3 | Burke command issue persists; Blanco survives 5 innings | HOU +1.5, often Under at 5-2 |
+| Central-close | CWS 5-4 / HOU 5-4 | Both starters allow traffic; leverage pens contain late damage | Both +1.5, Over |
+| CWS high-separation | CWS 7-3 / 8-4 | Blanco/first relief transition fails; Chicago HR/contact cluster | CWS +1.5, Over |
+| HOU high-separation | HOU 7-4 / 8-4 | Burke walks/HR cluster; Houston attacks Chicago middle relief | HOU +1.5, Over |
+| Extra innings | 5-5 into 10th / 6-5 final | close-game state + automatic runner | both +1.5 often; Over boosted |
+
+### Total 8.5 component budget
+
+Over 8.5 clears through ordinary combinations such as:
+- 5-4,
+- 6-3,
+- 6-4,
+- 7-2.
+
+Current process support exists on both sides:
+- Chicago scoring path: Blanco's 7.71 MLB ERA, poor direct matchup and poor most-recent Triple-A results.
+- Houston scoring path: Burke's recent 4.74 ERA over his last five plus eight walks in his most recent start, combined with Houston's top-order power.
+
+The strongest Under path is a **one-starter-rebounds-and-controls** game:
+- Burke gives Chicago 6+ efficient innings and Blanco finally converts his rehab work into a competent 4-5 inning return, followed by strong leverage relief;
+- or one lineup produces only one to two runs while the winner stays around four to five.
+
+That Under path is credible, but it requires more simultaneous suppression than the central upper-tail branches.
+
+## J. Frozen ranking
+
+**Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING  
+**Value state:** NO VALUE DETERMINABLE  
+**Evidence cap:** official batting orders were still TBD at cutoff; all participant-sensitive team conclusions remain below strong publication language.
+
+| Rank | Contract | Verdict | Evidence quality | Main reason |
+|---:|---|---|---|---|
+| **1** | **P-240-C01 — White Sox +1.5** | **LEAN** | MEDIUM-LOW | The +1.5 cushion starts from a structurally high base rate and Chicago has the better starter centre plus a strong attack path against Blanco's current post-surgery regime. |
+| **2** | **P-240-C02 — Astros +1.5** | **LEAN** | MEDIUM-LOW | Houston is still a near-even home side with an effective offence and a +1.5 cushion; both side rows can win in a one-run final. Burke's recent command width prevents this from being treated as merely a hedge. |
+| **3** | **P-240-C03 — Over 8.5** | **LEAN** | MEDIUM-LOW | Blanco's current state, Burke's recent control variance, 3/4 2026 H2H Overs and Houston's bullpen-length risk create the stronger total direction. |
+| **4** | **P-240-C04 — Under 8.5** | **FORCED RANK / AVOID relative to Over** | LOW-MEDIUM | Viable if Burke controls and Blanco rebounds, but it is the weaker total branch under the current exposure tree. |
+
+### Special-control interpretation
+- **Strongest evidence supports a SIDE, specifically White Sox +1.5.**
+- The two +1.5 rows overlap; ranking both highly reflects marginal contract likelihood, not an unordered coverage portfolio.
+- **Only one total direction is recommended: Over 8.5.**
+- Without the user's operator and odds, none of these rows is labelled a value bet.
+
+## K. Likely winner
+
+**Likely winner: Chicago White Sox — LEAN**
+
+Not an additional independent contract.
+
+Primary reasons:
+1. Burke's full-season starter centre is materially stronger than Blanco's current 2026 post-surgery regime.
+2. Blanco has already been hit hard by this Chicago core and returned from Triple-A after poor latest results.
+3. Chicago's recent relief performance is stronger than Houston's broad bullpen-fatigue regime.
+4. The White Sox medium-window scoring process is sufficient to exploit a short Blanco start.
+
+Winner kill paths:
+- Houston's stronger home power core punishes Burke's recent walk/HR instability.
+- Blanco's prior quality returns sharply toward his old baseline.
+- Houston reaches Hader with a late lead after a close start.
+
+Winner language remains LEAN because the official batting orders were not fully released through the MLB lineup page at cutoff and because both starter distributions retain wide tails.
+
+## L. Frozen source/state limitations
+
+1. **Operator absent:** listed-pitcher/action, suspended/shortened-game and exact settlement terms unresolved.
+2. **Official lineups TBD:** BB-P2 incomplete at cutoff; no secondary full lineup is promoted to official fact.
+3. **Starters probable, not confirmed:** MLB explicitly marks probable pitchers subject to change.
+4. **Roof:** highly likely closed given tropical weather and secondary game weather reporting, but same-game field-owner roof confirmation was not recovered.
+5. **StatMuse recency snapshots:** L15/L20 queries returned timestamp-dependent numbers; conflicts were recorded instead of selected away.
+6. **Bullpen availability is score-state specific:** prior-day innings inform exposure but do not mechanically define who will pitch tonight.
+7. **No validated numerical model:** no calibrated probabilities, fair odds or value claims.
+
+## M. Frozen user-facing forecast
+
+### Verified event
+Chicago White Sox @ Houston Astros, MLB regular season, Tuesday September 1, 2026 at 7:10 PM CDT at Daikin Park — Wednesday September 2 at 10:10 AM AEST.
+
+MLB's probable-pitcher board lists:
+- Sean Burke (CWS): 7-6, 3.32 ERA, 161 K
+- Ronel Blanco (HOU): 0-1, 7.71 ERA, 20 K
+
+Both remain official probables / subject to change at cutoff.
+
+### Ranking
+1. **White Sox +1.5 — LEAN**
+2. **Astros +1.5 — LEAN**
+3. **Over 8.5 — LEAN**
+4. **Under 8.5 — weaker total direction / FORCED RANK**
+
+### Why White Sox +1.5 is #1
+The contract has a broad one-run cushion in a matchup that is close at team level, but Chicago owns the cleaner starting-pitcher branch. Burke's season performance is far stronger than Blanco's 2026 post-surgery line. Blanco allowed five earned runs in 5 1/3 innings to Chicago on July 26, then was hit for 12 earned runs across 7 1/3 innings in his two most recent Triple-A starts before this recall. The White Sox therefore have an ordinary scoring route without needing Houston's bullpen to collapse.
+
+Burke is not risk-free: his last five-start ERA is roughly 4.74 and his latest outing included eight walks in three innings. That is why Houston +1.5 also remains very strong.
+
+### Why Astros +1.5 is #2
+Houston is at home, has won three of the four completed 2026 meetings, scored six yesterday and has a power core capable of punishing Burke's recent control variance. A one-run finish makes **both** +1.5 contracts win, so the two side rows are not opposites.
+
+I still put Chicago's +1.5 first because the starting-pitcher/current-regime mismatch is the clearest pregame asymmetry.
+
+### Total: Over 8.5 only
+The Over is the total direction I recommend.
+
+Blanco creates a direct Chicago upper-tail branch, while Burke's recent walk/HR volatility keeps Houston's 4-5+ run contribution alive. Three of the four completed 2026 meetings have reached at least nine total runs: 9-5, 12-3 and 6-3. That history is supportive only; the decision is driven more by the current pitching/exposure state.
+
+The Under's strongest path is a 4-3, 5-2 or similar game in which Burke stabilises and Blanco posts his best outing of the return. It is credible but requires more suppression assumptions.
+
+### Likely winner
+**Chicago White Sox — LEAN.**
+
+This is not a fifth independent pick.
+
+### Environment
+Daikin Park is retractable. Houston is under significant Tropical Storm Edouard rain/storm risk during the game window. Current baseball weather reporting expects the roof closed, which would largely neutralise wind/rain effects on the batted-ball environment. Same-game official roof confirmation was not recovered at cutoff, so it remains a likely—not confirmed—closed-roof branch.
+
+### Settlement/publication boundary
+No operator or odds were supplied. Listed-pitcher/action rules, shortened-game treatment and sportsbook extra-inning grading remain unknown. The sports analysis assumes the MLB official full-game result, including regular-season extras. No calibrated probability, expected value, edge, ROI or staking claim is published.
+
+## N. Append confirmation
+
+- Complete frozen P-240 forecast appended before delivery: **YES**
+- Scheduled-start cutoff invariant passed: **YES**
+- Drive modified: **NO**
+- Prior issued forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Learning register changed: **NO**
+
+
+---
+
+## Administrative continuation note — before P-241
+
+The connected Drive canonical top snapshot remains stale at `Next canonical ID: P-239` because Drive is read-only. The local append-only continuation already contains issued P-239 and P-240 cards. Reusing either ID would violate the one-distinct-event/one-ID rule. This event is therefore appended locally as **P-241**, with the Drive/local integration gap explicitly preserved. No Drive file is modified.
+
+---
+
+# P-241 — Zachary Svajda vs Daniel Altmaier — 2026 US Open Men's Singles R1
+
+## A. Frozen identity and state
+
+- **Append sequence:** P-241
+- **Request date:** 2026-09-02 Australia/Sydney
+- **Final state check:** approximately 2026-09-02 10:10 AEST / 2026-09-01 20:10 EDT
+- **Information cutoff:** 2026-09-02 10:10 AEST
+- **Sport:** Tennis
+- **Competition:** 2026 US Open
+- **Draw:** Men's Singles
+- **Round:** First round / Round of 128
+- **Players:** Zachary Svajda (USA) vs Daniel Altmaier (GER)
+- **Court:** Court 12
+- **Surface:** Outdoor hard
+- **Format:** Best-of-five sets
+- **Final-set rule:** at 6-6 in the deciding set, a first-to-10 tiebreak with two-point margin applies under the Grand Slam rule.
+- **Original schedule state:** scheduled on Tuesday Sep. 1 New York time, but rain delayed the outside-court order.
+- **Frozen GAME-STATE:** **DELAYED / NOT STARTED — RAIN; 0-0 / UPCOMING on the current secondary score surfaces**
+- **State evidence:** Tennis.com still displayed the match as `Upcoming`; Sportschau displayed 0-0 and reported rain-delayed Court 12 sequencing; current Flushing conditions showed light rain.
+- **Start-crossing treatment:** this is not labelled PREGAME because the original scheduled time passed. It is a verified delayed/not-started state, with no live points/games imported.
+- **Current ranking:** Altmaier #57; Svajda #80
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-TENNIS
+- **Tennis numerical status:** NO TENNIS TARGET/SOURCE CARD, DATASET OR MODEL APPROVED OR FIT
+- **Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING
+- **Value state:** NO VALUE DETERMINABLE
+- **Retrospective performed:** NO
+
+## B. Contract freeze and operator boundary
+
+### User-supplied slate
+1. Daniel Altmaier +2.5 games
+2. Zachary Svajda -2.5 games
+3. Total games Over 39.5
+4. Total games Under 39.5
+
+- **Operator:** NOT SUPPLIED
+- **Odds:** NOT SUPPLIED
+- **Retirement/walkover rules:** `UNKNOWN_DEFINITION`
+- **Completed-set / full-match requirement:** `UNKNOWN_DEFINITION`
+- **Void rule:** `UNKNOWN_DEFINITION`
+- **No value claim permitted.**
+
+A current Australian sportsbook page located during research showed a different total (`38.5`) and required full match completion for its own contracts. That is only an external market/state cross-check. It is **not** adopted as the user's settlement rule and it does not change the user's 39.5 target.
+
+### Settlement geometry
+- Altmaier +2.5 and Svajda -2.5 are exact game-margin complements under normal full-completion rules.
+- Over 39.5 and Under 39.5 are exact total-game complements.
+- With ordinary completed-match grading and no retirement/void complication, exactly **two of the four supplied rows win**.
+- The forced 2-of-4 arithmetic is contract geometry, not model accuracy.
+
+| ID | Contract | Geometry | Dependence group |
+|---|---|---|---|
+| P-241-C01 | Altmaier +2.5 games | Exact complement of C02 | P241-MARGIN |
+| P-241-C02 | Svajda -2.5 games | Exact complement of C01 | P241-MARGIN |
+| P-241-C03 | Over 39.5 games | Exact complement of C04 | P241-TOTAL |
+| P-241-C04 | Under 39.5 games | Exact complement of C03 | P241-TOTAL |
+
+## C. Participant/status gate
+
+### Identity
+- Official/current US Open coverage identifies Svajda vs Altmaier as a first-round match.
+- Current rankings source: Altmaier #57, Svajda #80.
+- No withdrawal/walkover was found at cutoff.
+- No credible current injury report was found that justified a directional medical adjustment.
+- Current score surfaces still showed the match as upcoming/0-0 following rain delay.
+
+### Retirement status
+Because the user did not identify the operator, the framework's retirement-term hard gate remains unresolved:
+`TE-P3 = UNKNOWN_DEFINITION / NO VALUE DETERMINABLE`.
+
+No row is described as value-supported.
+
+## D. Current regime and surface profile
+
+### Zachary Svajda
+Current official ATP profile:
+- Rank #80.
+- 2026 ATP-level W-L: 9-13.
+- Career ATP-level service games won: 75%.
+- Career ATP-level return games won: 18%.
+- First-serve points won: 70%.
+- Second-serve points won: 49%.
+- Return points won: 35%.
+
+Current 2026 hard-court top-level sequence includes:
+- L to Mattia Bellucci, Cincinnati: 7-6, 7-6.
+- L to Arthur Fils, Canada: 6-4, 3-6, 6-1.
+- W vs Denis Shapovalov after split sets, retirement at 3-0 in set three.
+- L to Aleksandar Vukic, Washington: 6-3, 6-1.
+- Earlier hard wins over Marin Cilic and Aleksandar Kovacevic.
+
+Cross-level 2026 hard record from the broad results database is materially stronger (17-9), but that includes Challenger/qualifying populations and is **not** treated as exchangeable with main-tour US Open play.
+
+Grand Slam/current-development signal:
+- 2026 Roland Garros: fourth round.
+- 2026 Wimbledon: third round.
+- 2025 US Open: took a set from Novak Djokovic in round two.
+These support improved best-of-five competence but do not create a fitted edge.
+
+### Daniel Altmaier
+Current ranking #57.
+Official ATP career profile:
+- Service games won: about 77%.
+- Return games won: 18%.
+- First-serve points won: about 71%.
+- Second-serve points won: 48%.
+- Return points won: 35%.
+
+Broad 2026 results database:
+- Overall: 20-26.
+- Hard: 3-9.
+Recent hard sequence:
+- L Ignacio Buse, Winston-Salem: 7-6, 7-5.
+- W Francisco Comesana: 6-1, 7-6.
+- L Lorenzo Musetti, Cincinnati: 6-4, 6-2.
+- W Coleman Wong: 3-6, 6-3, 6-4.
+- L Brandon Nakashima, Canada: 6-2, 6-1.
+- A long three-set Canada win over Aleksandar Vukic showed 11 aces and a 63% total service-point win rate.
+
+Altmaier therefore carries:
+- the higher ranking;
+- slightly stronger broad career hold profile;
+- but a materially weaker 2026 hard-surface result regime.
+
+The current-surface regime is allowed to narrow the ranking prior, not erase it.
+
+## E. Head-to-head continuity audit
+
+### Verified meetings
+The available broad H2H history is **Altmaier 2-0**:
+1. 2021 Puerto Vallarta Challenger QF: Altmaier won 4-6, 7-6, 6-3.
+2. 2023 Dallas ATP R32: Altmaier won 6-2, 6-4.
+
+ATP's official Dallas archive verifies the 2023 6-2, 6-4 win.
+
+### Provider discrepancy
+One structured H2H source returned only the 2021 Challenger meeting, while ATP/other specialist records verify the 2023 Dallas match as well. The discrepancy is preserved rather than silently harmonised.
+
+### Continuity verdict
+**LOW-MODERATE / NON-CONTROLLING.**
+Reasons:
+- meetings are three and five years old;
+- one is Challenger level;
+- the 2023 Dallas match was indoor hard, while this is outdoor hard;
+- Svajda has materially developed since those meetings;
+- current 2026 hard form points differently from the old H2H.
+
+Therefore old H2H is a kill-path reminder for the Svajda side, not the controlling prior.
+
+## F. Recency and trend windows
+
+The tennis rules require L5/L10/L15/L20 on the exact surface. Available current databases did not expose every requested serve/return metric at all four windows with one stable provider definition. This is recorded as partial-source coverage rather than backfilled.
+
+### Surface-result windows
+- **Svajda:** recent ATP hard results are mixed and mostly against strong opposition; broad all-level 2026 hard record is positive but includes lower-level events.
+- **Altmaier:** broad 2026 hard record is 3-9; latest four hard matches alternate W/L, with straight-set losses to Buse and Musetti and wins over Comesana/Wong.
+- **Trend verdict:** `NO TREND — NOISE` for short-window W/L. Neither player's L5-style sequence is monotone enough to justify a trend extrapolation.
+- **Longest defensible current-surface read:** Svajda's 2026 hard regime is better than Altmaier's after level adjustment, but the difference is moderate rather than decisive.
+
+### Match-length signal
+Svajda's latest top-level hard matches include:
+- two tiebreak sets vs Bellucci;
+- a three-set loss to Fils;
+- a retirement after two split sets vs Shapovalov.
+Altmaier's recent hard matches include:
+- 7-6, 7-5 vs Buse;
+- 6-1, 7-6 vs Comesana;
+- a three-set win over Wong;
+- a long three-set win over Vukic in Canada.
+
+This raises the close-set/tiebreak branch, but a 39.5-game best-of-five total still requires enough set count and closeness; close individual sets alone do not guarantee the Over.
+
+## G. Environment / delay gate
+
+- **Venue:** USTA Billie Jean King National Tennis Center, Flushing, New York.
+- **Court:** Court 12.
+- **Venue state:** OUTDOOR.
+- **Current condition around final refresh:** light rain in Flushing.
+- National Weather Service evening forecast around the delayed window:
+  - approximately 24°C / mid-70s °F;
+  - high humidity around 87-90%+;
+  - E/NE wind around 5 mph, later 5-7 mph;
+  - rain/thunderstorm probability remained material during the early evening and then declined later.
+- Severe-weather/rain conditions already caused schedule disruption on outside courts.
+
+Mechanism:
+- the primary effect is **delay and uncertain resumption**, not an automatic Over/Under sign;
+- humid/damp conditions can slow play and alter ball/court feel, but the directional magnitude is not verified strongly enough to move a contract band;
+- rest/waiting affects both players and is not assigned one-sided fatigue without evidence.
+
+Environment therefore widens timing/conditions uncertainty but does not drive the ranking.
+
+## H. Score-tree construction
+
+### Qualitative set-count weights
+These are **relative scenario weights, not probabilities**:
+- 3-set endpoint: **3/5**
+- 4-set endpoint: **4/5** — central
+- 5-set endpoint: **2/5**
+
+Rationale:
+- Svajda has the current-surface winner edge, but not enough separation for straight-set control to dominate;
+- Altmaier retains ranking, serve and H2H-based resistance;
+- five sets is live but not the central branch.
+
+### Mandatory two-sided branches
+
+**TE-B1 — Svajda straight-set control**
+Representative: 6-4, 6-3, 6-4.
+- Total = 29 games.
+- Svajda game margin = +7.
+- Wins: Svajda -2.5, Under 39.5.
+
+**TE-B2 — Svajda close straight sets**
+Representative: 7-6, 6-4, 7-6.
+- Total = 36.
+- Margin = +4.
+- Wins: Svajda -2.5, Under 39.5.
+
+**TE-B3 — Svajda extended/deciding control**
+Representative four-set central: 6-4, 4-6, 6-3, 6-4.
+- Total = 39.
+- Margin = +5.
+- Wins: Svajda -2.5, Under 39.5.
+Alternative close four-set: 7-6, 4-6, 6-4, 7-6.
+- Total = 46.
+- Margin = +2.
+- Wins: Altmaier +2.5, Over 39.5 despite a Svajda match win.
+
+**TE-B4 — Altmaier straight-set control**
+Representative: 6-4, 6-4, 6-3.
+- Total = 29.
+- Wins: Altmaier +2.5, Under 39.5.
+
+**TE-B5 — Altmaier close straight sets**
+Representative: 7-6, 6-4, 7-5.
+- Total = 36.
+- Wins: Altmaier +2.5, Under 39.5.
+
+**TE-B6 — Altmaier extended win**
+Representative: 4-6, 6-4, 6-3, 3-6, 6-4.
+- Long five-set state; generally supports Altmaier +2.5 and Over 39.5.
+
+**TE-B7 — best-of-five extension state**
+- Five sets materially raises the Over opportunity but does not mathematically guarantee Over 39.5 because extremely one-sided individual sets can keep total games below the line.
+- Normal close five-set score families strongly favour the Over.
+
+**TE-B8 — retirement/withdrawal**
+- Operator terms unknown.
+- No settlement assumption is imported.
+
+## I. Base-rate anchors and contract interpretation
+
+No calibrated probabilities are issued.
+
+### Under 39.5
+**Base-rate band: MEDIUM-HIGH**
+- 39.5 is a relatively demanding best-of-five total.
+- Most normal three-set outcomes finish comfortably below.
+- Many efficient four-set outcomes also remain below or near 39.
+- Over requires either sufficient four-set closeness or a normal-length five-set branch.
+
+### Over 39.5
+**Base-rate band: MEDIUM-LOW**
+- Needs extension and/or close sets.
+- Recent tiebreak exposure supports it, but does not outweigh the structural set-count requirement.
+
+### Altmaier +2.5 games
+**Base-rate band: MEDIUM**
+- Positive game cushion benefits from any Altmaier outright win.
+- It can also cover in a very close Svajda four/five-set win.
+- Old H2H and higher ranking help only modestly after the current-surface audit.
+
+### Svajda -2.5 games
+**Base-rate band: MEDIUM**
+- Svajda is the current-surface winner lean.
+- A typical 3-0 or ordinary 3-1 Svajda win usually clears -2.5.
+- It fails in a close Svajda win with net game margin of only 1-2.
+
+### External market sanity check — not user pricing
+A current public Australian market snapshot found:
+- Svajda match winner around 1.57 vs Altmaier 2.24;
+- Svajda -2.5 around 1.87 vs Altmaier +2.5 around 1.82;
+- total at 38.5, with Under slightly shorter than Over.
+
+This is **external market evidence only**:
+- not the user's operator;
+- not the user's 39.5 total;
+- not an internal model probability;
+- not sufficient for value.
+
+It does, however, corroborate the structural distinction: Svajda can be the more likely winner while Altmaier +2.5 is marginally easier than Svajda -2.5.
+
+## J. Strongest kill paths
+
+### Against Under 39.5
+- Four competitive sets with one or more tiebreaks.
+- Normal five-set extension.
+- Altmaier serving well enough to keep sets close while Svajda still wins.
+
+### Against Altmaier +2.5
+- Svajda's current-surface edge converts to ordinary break separation rather than only match-win probability.
+- Representative 6-4, 6-3, 4-6, 6-4 type score makes Altmaier lose the game handicap comfortably.
+
+### Against Svajda -2.5
+- Altmaier outright win.
+- Svajda wins only by 1-2 net games in a close 4/5-set match.
+- Old H2H tactical comfort reappears despite low continuity.
+
+### Against Over 39.5
+- Any routine straight-set result.
+- Efficient four-set result around 36-39 games.
+- One player's return pressure creates lopsided sets rather than tiebreak-heavy sets.
+
+## K. Frozen ranking
+
+**Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING  
+**Value state:** NO VALUE DETERMINABLE  
+**Retirement terms:** UNKNOWN_DEFINITION
+
+| Rank | Contract | Verdict | Evidence quality | Reason |
+|---:|---|---|---|---|
+| **1** | **P-241-C04 — Under 39.5 games** | **LEAN** | MEDIUM-LOW | Most three-set states and many ordinary four-set states settle below 39.5. The match is competitive enough for four sets, but five sets is not the central branch. |
+| **2** | **P-241-C01 — Altmaier +2.5 games** | **LEAN** | MEDIUM-LOW | The +2.5 cushion captures every Altmaier win and close Svajda wins; ranking/H2H resistance keeps this live even though Svajda is the winner lean. |
+| **3** | **P-241-C02 — Svajda -2.5 games** | **FORCED RANK / LEAN-ADJACENT** | MEDIUM-LOW | Svajda has the better current hard-surface regime and likely-winner edge, but -2.5 needs that edge to convert into at least three net games. |
+| **4** | **P-241-C03 — Over 39.5 games** | **FORCED RANK / AVOID relative to Under** | LOW-MEDIUM | Tiebreak/extension risk exists, but 39.5 still requires enough four-set closeness or a normal five-set state. It is the weaker total direction. |
+
+### Total-direction control
+Recommend **Under 39.5 only** among the two opposing total directions.
+
+## L. Potential winner
+
+**Zachary Svajda — LEAN**
+
+This is a separate descriptive winner call, not a fifth independent contract.
+
+Why:
+1. Svajda's 2026 outdoor-hard/current-surface regime is stronger after accounting for Altmaier's 3-9 broad hard record.
+2. Svajda has shown improving best-of-five competence in 2026 with deep Roland Garros and Wimbledon runs.
+3. His recent losses include high-level opponents and a two-tiebreak loss, suggesting the raw W-L understates competitiveness.
+4. External market and current match-preview sources also make Svajda the favourite, but those are corroboration only.
+
+Why not stronger:
+- Altmaier is ranked higher (#57 vs #80).
+- Altmaier leads the broad H2H 2-0.
+- Career ATP serve/return summaries are similar rather than clearly Svajda-dominant.
+- Current hard samples are sparse and level-mixed.
+- Rain delay and unknown operator retirement terms widen uncertainty.
+
+## M. Frozen user-facing forecast
+
+### Event/status
+Zachary Svajda vs Daniel Altmaier is a **2026 US Open men's singles first-round match on outdoor hard court, best-of-five**. At the final research refresh the original start had passed because rain disrupted outside courts, but current score surfaces still showed **0-0 / Upcoming**, so this card is frozen as **DELAYED / NOT STARTED**, not as a stale pregame state.
+
+### Best 4 supplied picks
+1. **Under 39.5 total games — LEAN**
+2. **Daniel Altmaier +2.5 games — LEAN**
+3. **Zachary Svajda -2.5 games — lower-confidence directional side**
+4. **Over 39.5 total games — weaker total direction**
+
+### Why Under 39.5 is #1
+This line is high enough that the match needs meaningful extension. A normal straight-set result is comfortably Under, and many ordinary four-set outcomes also stay below the line. My central set-count branch is four sets, but not necessarily four very close sets.
+
+A representative central Svajda score such as **6-4, 4-6, 6-3, 6-4** totals 39 games. A routine Altmaier straight-set upset also lands far Under. The Over becomes strongest if the match produces tiebreak-heavy four sets or a normal five-set extension.
+
+Recent hard matches for both players contain several close sets/tiebreaks, so the Over is not dismissed. It is simply the weaker side of 39.5.
+
+### Why Altmaier +2.5 is #2 even though Svajda is the likely winner
+The game handicap and match winner are different targets. Altmaier +2.5 wins if Altmaier wins the match **or** if Svajda wins but finishes only one or two net games ahead.
+
+Altmaier is the higher-ranked player and leads the old H2H, while his recent hard matches include multiple close-set states. Those factors preserve a close-match branch.
+
+The reason I still make Svajda the likely winner is current surface regime: Altmaier's 2026 broad hard record is only 3-9, while Svajda has shown more competitive hard play and much stronger Grand Slam development this year. The old H2H is too stale and format/level-mixed to override that.
+
+### Why Svajda -2.5 is #3
+If Svajda wins in the ordinary 3-0 or non-razor-thin 3-1 score families, he usually covers -2.5. His current hard-court condition and recent Slam progression give him the winner edge.
+
+But this handicap is harder than simply picking him to win. A close four- or five-set Svajda victory can fail -2.5 while Altmaier +2.5 wins. That is why the Altmaier cushion ranks slightly higher than the Svajda negative handicap.
+
+### Likely winner
+**Zachary Svajda — LEAN.**
+
+Not an additional independent pick.
+
+### Weather/delay
+Court 12 is outdoors. Rain and thunderstorms disrupted the evening schedule in Flushing; at the final refresh current conditions still showed light rain and the match remained delayed/not started. The main impact is uncertainty in start time and conditions, not an automatic total direction.
+
+### Settlement/publication boundary
+The user's operator and retirement terms were not supplied. Tennis handicap and total markets can grade differently after retirement, so the exact settlement definition remains `UNKNOWN_DEFINITION`.
+
+No calibrated probability, expected value, market edge, ROI or staking claim is published.
+
+## N. Append confirmation
+
+- Complete frozen P-241 forecast appended before delivery: **YES**
+- Drive modified: **NO**
+- Prior forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Learning register changed: **NO**
+
+
+---
+
+## Administrative continuation note — before P-242
+
+The connected Drive canonical top snapshot remains at `Next canonical ID: P-239` because Google Drive is read-only. The local append-only continuation already contains issued P-239, P-240 and P-241 cards. Reusing any of those IDs for a distinct event would violate the one-event/one-canonical-ID invariant. This event is therefore appended locally as **P-242**, with the Drive/local integration gap explicitly preserved for later canonical reconciliation. No Drive file is modified.
+
+---
+
+# P-242 — Fabian Marozsan vs Michael Zheng — 2026 US Open Men's Singles R1
+
+## A. Frozen identity and state
+
+- **Append sequence:** P-242
+- **Request date:** 2026-09-02 Australia/Sydney
+- **Final state refresh:** 2026-09-02 10:17:49 AEST
+- **Information cutoff:** 2026-09-02 10:17:49 AEST
+- **Sport:** Tennis
+- **Competition:** 2026 US Open
+- **Draw:** Men's Singles
+- **Round:** First round / Round of 128
+- **Players:** Fabian Marozsan (HUN) vs Michael Zheng (USA)
+- **Court:** Court 11
+- **Surface:** Outdoor hard
+- **Format:** Best-of-five sets
+- **Final-set format:** Grand Slam deciding-set tiebreak at 6-6, first to 10 points by two.
+- **Current ranking:** Marozsan #63; Zheng #107 on current match page
+- **GAME-STATE:** **DELAYED / NOT STARTED — rain-disrupted outside-court schedule**
+- **State evidence:** current Tennis.com/TNT-style match surfaces continued to show `Upcoming` / `Not started`; no set/game/point state was verified. A structured bracket feed contained a premature `live` flag with no score before its own listed start time, so that state flag was quarantined as internally inconsistent.
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-TENNIS
+- **Tennis numerical state:** NO TARGET/SOURCE CARD, DATASET OR MODEL APPROVED OR FIT
+- **Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING
+- **Value state:** NO VALUE DETERMINABLE
+- **Retrospective performed:** NO
+
+## B. Contract freeze
+
+### User-supplied audit slate
+1. Fabian Marozsan +2.5 games
+2. Michael Zheng -2.5 games
+3. Total games Over 38.5
+4. Total games Under 38.5
+
+- **Operator:** NOT SUPPLIED
+- **Odds:** NOT SUPPLIED
+- **Retirement/walkover rule:** UNKNOWN_DEFINITION
+- **Completed-match requirement:** UNKNOWN_DEFINITION
+- **Void/partial-set treatment:** UNKNOWN_DEFINITION
+- **Value publication:** BLOCKED
+
+### Geometry
+- Marozsan +2.5 and Zheng -2.5 are exact game-margin complements under normal full-match grading.
+- Over 38.5 and Under 38.5 are exact total-game complements.
+- Under ordinary completed-match terms, exactly two of the four rows settle as wins.
+- Retirement/void rules can alter that geometry, so definitive sportsbook settlement requires the unnamed operator's terms.
+
+| ID | Contract | Geometry | Dependence group |
+|---|---|---|---|
+| P-242-C01 | Marozsan +2.5 games | Complement of C02 | P242-GAME-MARGIN |
+| P-242-C02 | Zheng -2.5 games | Complement of C01 | P242-GAME-MARGIN |
+| P-242-C03 | Over 38.5 games | Complement of C04 | P242-TOTAL |
+| P-242-C04 | Under 38.5 games | Complement of C03 | P242-TOTAL |
+
+## C. Participant, level and current-regime gate
+
+### Fabian Marozsan
+- Current ranking: #63.
+- Career high: #36.
+- 2026 ATP-level record: 19-21 overall; 9-10 on hard in the retrieved season database.
+- 2026 ATP-level hard/overall service-return summary:
+  - Hold: 76.60%
+  - Break: 19.78%
+  - First serve in: 65.99%
+  - First-serve points won: 69.44%
+  - Second-serve points won: 52.47%
+  - Return points won: 34.93%
+  - Tiebreak record: 13-7
+- Career ATP summary is slightly stronger than the current season centre: approximately 79% service games won and 21% return games won.
+- Immediate hard-court sequence:
+  - L James Duckworth 7-6, 2-6, 4-6 (Winston-Salem QF)
+  - W Martin Damm Jr 2-6, 6-3, 6-3
+  - W Miomir Kecmanovic 6-3, 6-4
+  - L Michael Zheng 6-3, 1-6, 6-7
+  - L Matteo Arnaldi 5-7, 6-2, 4-6
+- Interpretation: Marozsan has recently rebounded from the Cincinnati loss to Zheng and remains an established ATP-level player. His current hard record is mediocre rather than poor, with a meaningful tiebreak/close-set component.
+
+### Michael Zheng
+- Current match-page ranking: #107; recent official ATP material had him around a career-high #106.
+- 2026 ATP main-draw sample: 6-8 overall; 4-6 hard in the retrieved main-draw database.
+- Main-draw season service-return summary:
+  - Hold: 71.60%
+  - Break: 23.93%
+  - First serve in: 62.01%
+  - First-serve points won: 69.30%
+  - Second-serve points won: 46.77%
+  - Return points won: 36.57%
+  - Tiebreak record: 3-7
+- Broad all-level hard record is much stronger at roughly 16-7, but that includes qualifying/Challenger-level competition and is not treated as exchangeable with ATP main draw.
+- Immediate hard sequence:
+  - L Lorenzo Musetti
+  - W Ugo Humbert
+  - W Fabian Marozsan
+  - W Trevor Svajda (qualifying)
+  - W Moez Echargui (qualifying)
+- Zheng's rise is supported by current US Open/ATP reporting: two-time NCAA champion, strong baseline power from both wings, recent Cincinnati Masters breakthrough and movement toward the top 100.
+- Best-of-five evidence exists:
+  - 2026 Australian Open win over Sebastian Korda in five sets.
+  - 2026 Wimbledon five-set win over Cameron Norrie.
+- These Slam results support long-match competence but come from different surfaces and are not copied directly into the hard-court total.
+
+### Level adjustment
+Zheng's L5/L10/L15/L20 hard results include ATP qualifying and lower-level matches. Marozsan's recent sample is more main-tour concentrated. Therefore Zheng's raw W-L advantage is shrunk before it affects the winner/handicap tree.
+
+## D. Recency window block — exact surface
+
+### Fabian Marozsan — hard court
+| Window | W-L | Win rate | Population note |
+|---|---:|---:|---|
+| L5 | 2-3 | 40% | ATP-level |
+| L10 | 3-7 | 30% | ATP-level |
+| L15 | 6-9 | 40% | ATP-level |
+| L20 | TRUE COUNT 19: 9-10 | 47.4% | Only 19 current 2026 hard matches available |
+
+**Trend verdict:** NO TREND — NOISE. The windows are not monotone.
+
+### Michael Zheng — hard court
+| Window | W-L | Win rate | Population note |
+|---|---:|---:|---|
+| L5 | 4-1 | 80% | Level-mixed |
+| L10 | 6-4 | 60% | Level-mixed |
+| L15 | 9-6 | 60% | Level-mixed |
+| L20 | 13-7 | 65% | Level-mixed |
+
+**Trend verdict:** NO TREND — NOISE. L5/L10/L15/L20 are not monotone, and the population mix changes across the window.
+
+### Recency conclusion
+Zheng has the stronger short-window hard results, but the magnitude is reduced because several wins occurred in qualifying/lower-level populations. Marozsan has more established ATP-level baseline quality and a stronger career hold centre.
+
+## E. Head-to-head continuity audit
+
+### Verified H2H
+**Michael Zheng leads 1-0.**
+
+Cincinnati Masters, 2026-08-14, hard court:
+- Zheng def. Marozsan **3-6, 6-1, 7-6(7-1)**.
+
+Derived geometry from that match:
+- Total games: 29.
+- Net game margin: Zheng +3.
+- At today's lines:
+  - Zheng -2.5 would have won by only 0.5 game.
+  - Marozsan +2.5 would have lost by only 0.5 game.
+
+### Continuity
+**MODERATE-HIGH for surface/current matchup, but format-limited.**
+
+Positive continuity:
+- same hard-court season;
+- only about 2.5 weeks ago;
+- same players and current technical regimes;
+- ATP-level matchup.
+
+Continuity break:
+- Cincinnati was best-of-three;
+- US Open is best-of-five;
+- longer exposure changes fitness, set-count, total-game and game-margin distributions.
+
+Therefore the H2H is materially useful but cannot be turned into an automatic Zheng -2.5 repeat.
+
+## F. Environment / schedule gate
+
+- **Venue:** USTA Billie Jean King National Tennis Center, Flushing, New York
+- **Court:** Court 11
+- **Venue class:** OUTDOOR
+- Heavy rain caused significant delays across the outside courts on the session.
+- Current evening forecast around the disrupted window:
+  - roughly 23-24°C;
+  - dew point around 22°C;
+  - relative humidity around 90%+;
+  - E/NE wind roughly 5-6 mph;
+  - meaningful rain/thunderstorm risk in the early evening, declining later.
+
+Mechanism:
+- The primary verified effect is delay and schedule uncertainty.
+- High humidity/damp conditions may affect ball/court feel, but no reliable quantitative court-speed change is available.
+- No automatic Over/Under or player-side adjustment is assigned.
+- Both players face the same waiting disruption; no one-sided fatigue claim is made without evidence.
+
+## G. Serve-return and matchup reconciliation
+
+### Baseline
+Marozsan carries the stronger established ATP service-game base:
+- 2026 hold ~76.6%;
+- career ATP hold near 79%.
+
+Zheng's current main-draw sample shows:
+- lower hold (~71.6%);
+- higher break/return pressure (~23.9% break, 36.6% return points won);
+- but it is a smaller and less stable sample.
+
+### Matchup implication
+The Cincinnati meeting demonstrated both directions:
+- Marozsan controlled set one 6-3;
+- Zheng dominated set two 6-1;
+- set three reached a tiebreak.
+
+That is evidence for **variance plus closeness**, not a one-direction blowout template.
+
+The current matchup therefore supports:
+1. a narrow Zheng winner lean from recency/direct matchup;
+2. a substantial Marozsan +2.5 cushion branch;
+3. meaningful four/five-set extension risk.
+
+## H. Set-count mixture
+
+These are **qualitative relative weights, not probabilities**.
+
+| Endpoint | Relative weight | Interpretation |
+|---|---:|---|
+| 3 sets | 2/5 | Meaningful if either player establishes return dominance |
+| 4 sets | **5/5** | Central branch |
+| 5 sets | 3/5 | Material because both have long-match competence and the matchup is not strongly separated |
+
+This mixture is fixed before locating the 38.5 line.
+
+## I. Mandatory two-sided score branches
+
+### TE-B1 — Marozsan ordinary straight-set control
+Representative: **6-4, 6-4, 6-3**
+- 29 total games.
+- Marozsan +5 games.
+- Wins: Marozsan +2.5, Under 38.5.
+- Defeats: Zheng -2.5, Over.
+
+### TE-B2 — Marozsan close straight sets
+Representative: **7-6, 6-4, 7-5**
+- 35 games.
+- Wins: Marozsan +2.5, Under 38.5.
+
+### TE-B3 — Marozsan extended win
+Representative: **6-4, 3-6, 7-5, 6-4**
+- 41 games.
+- Wins: Marozsan +2.5, Over 38.5.
+
+### TE-B4 — Zheng ordinary straight-set control
+Representative: **6-4, 6-3, 6-4**
+- 29 games.
+- Zheng clears -2.5.
+- Under 38.5 wins.
+
+### TE-B5 — Zheng close straight sets
+Representative: **7-6, 6-4, 7-5**
+- 35 games.
+- Zheng generally clears -2.5; Under wins.
+
+### TE-B6 — Zheng extended win
+**Central coherence scoreline:** **7-6, 4-6, 7-6, 6-4**
+- 46 total games.
+- Zheng wins the match.
+- Net game margin: Zheng +2.
+- **Marozsan +2.5 wins.**
+- **Over 38.5 wins.**
+- Zheng -2.5 loses.
+
+This is the key cross-market branch supporting the top two rankings.
+
+### TE-B7 — Five-set extension
+Normal five-set score families strongly support Over 38.5 and tend to reduce the chance of either player creating a large game margin, although lopsided individual sets can still create unusual margins.
+
+### TE-B8 — Retirement / walkover
+Operator terms not supplied.
+`UNKNOWN_DEFINITION / NO VALUE DETERMINABLE`.
+
+## J. Reference base-rate anchors
+
+No calibrated probability is issued.
+
+### Marozsan +2.5
+**Reference band: MEDIUM-HIGH**
+- Positive cushion.
+- Captures every Marozsan outright win.
+- Also captures close Zheng wins.
+- Event adjustment: hold/maintain due higher ranking/ATP baseline and the narrow margin in the recent H2H.
+- Frozen band: **MEDIUM-HIGH**.
+
+### Zheng -2.5
+**Reference band: MEDIUM**
+- Requires Zheng to win net games by 3+.
+- Event adjustment: up modestly from current recency and direct H2H, but capped because the previous matchup cleared this exact threshold by only 0.5 game and Bo5 increases close-extension paths.
+- Frozen band: **MEDIUM**.
+
+### Over 38.5
+**Reference band: MEDIUM**
+- Four sets often place the total near or above the line.
+- Five sets strongly favour Over.
+- Event adjustment: up modestly because four sets are central and the matchup has demonstrated set swings/tiebreak exposure.
+- Frozen band: **MEDIUM-HIGH / borderline**.
+
+### Under 38.5
+**Reference band: MEDIUM**
+- Every ordinary straight-set state supports it.
+- Efficient four-set matches can also stay Under.
+- Event adjustment: down modestly because the current tree gives meaningful 4/5-set extension.
+- Frozen band: **MEDIUM-LOW**.
+
+## K. External market/model sanity check — non-controlling
+
+Current public market snapshots generally made **Michael Zheng the match favourite**, but there was disagreement on the -2.5 handicap and on the 38.5 total:
+- several books had Marozsan +2.5 slightly shorter than Zheng -2.5;
+- at least one source reversed that ordering;
+- totals ranged from near-even to a mild Over preference.
+A current Tennis.com projection also favoured Zheng.
+
+These are external observations only:
+- not the user's operator;
+- not internal model outputs;
+- not calibrated by this framework;
+- not evidence of value.
+
+The disagreement supports keeping all evidence grades below high confidence.
+
+## L. Strongest kill paths
+
+### Kill path against Marozsan +2.5
+Zheng's return pressure converts the recent H2H advantage into a cleaner best-of-five separation, e.g. **6-4, 6-3, 4-6, 6-2**.
+
+### Kill path against Over 38.5
+Either player's ordinary straight-set control, or an efficient four-set winner with lopsided sets, keeps the total below the line.
+
+### Kill path against Zheng -2.5
+A close Zheng 3-1 or 3-2 win leaves his net game margin at only +1/+2, exactly the central coherence branch.
+
+### Kill path against Under 38.5
+Four competitive sets with tiebreaks or any normal five-set extension crosses the line.
+
+## M. Frozen ranking
+
+**Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING  
+**Value state:** NO VALUE DETERMINABLE  
+**Retirement terms:** UNKNOWN_DEFINITION
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-242-C01 — Fabian Marozsan +2.5 games** | **LEAN** | MEDIUM-LOW | Broad positive cushion, stronger established ATP baseline, and a close Zheng-win branch can still cover Marozsan. The recent H2H landed only 0.5 game beyond this exact threshold. |
+| **2** | **P-242-C03 — Over 38.5 games** | **LEAN** | MEDIUM-LOW | Four sets are the central set-count branch and five sets remain material; 38.5 can be crossed by an ordinary close 3-1 scoreline. |
+| **3** | **P-242-C02 — Michael Zheng -2.5 games** | **FORCED RANK / LEAN-ADJACENT** | MEDIUM-LOW | Zheng is the winner lean and owns the recent H2H, but -2.5 requires his winner edge to become game separation rather than a close extended win. |
+| **4** | **P-242-C04 — Under 38.5 games** | **FORCED RANK / AVOID relative to Over** | LOW-MEDIUM | Strong in straight sets, but less aligned with the central four-set/competitive-match tree. |
+
+### Total-direction control
+Recommend **Over 38.5 only** among the opposing total directions.
+
+## N. Potential winner
+
+**Michael Zheng — LEAN**
+
+This is a descriptive match-winner call, not a fifth independent contract.
+
+Reasons:
+1. Zheng won the direct hard-court meeting only weeks ago.
+2. His current hard L5/L10 direction is stronger after appropriate level shrinkage.
+3. He followed the Marozsan win by beating Ugo Humbert before losing to Lorenzo Musetti.
+4. His 2026 Australian Open/Wimbledon results demonstrate best-of-five competence.
+5. Current public market/match-preview sources also favour Zheng, used only as corroboration.
+
+Counter-evidence:
+- Marozsan is ranked materially higher.
+- Marozsan owns the stronger established ATP hold profile and much larger tour sample.
+- Marozsan rebounded immediately at Winston-Salem with two wins and a QF run.
+- Zheng's broader hard record includes qualifying/lower-level opposition.
+- The only H2H was extremely close at the exact current handicap boundary.
+
+Winner status therefore remains LEAN rather than stronger.
+
+## O. Frozen user-facing forecast
+
+### Event and state
+Fabian Marozsan vs Michael Zheng is a **2026 US Open men's singles first-round match on Court 11, outdoor hard, best-of-five**. Heavy rain disrupted the outside-court schedule. At the final frozen refresh, current match pages still showed **Upcoming / Not started**, with no verified live score. The inconsistent premature `live` flag on one bracket feed was rejected because it carried no score and contradicted its own listed timing.
+
+### Best four supplied picks
+1. **Fabian Marozsan +2.5 games — LEAN**
+2. **Over 38.5 total games — LEAN**
+3. **Michael Zheng -2.5 games — lower-confidence directional side**
+4. **Under 38.5 total games — weaker total direction**
+
+### Why Marozsan +2.5 is #1
+Zheng is my likely match winner, but that does not make his -2.5 automatically stronger.
+
+Their Cincinnati meeting only about 2.5 weeks ago ended **3-6, 6-1, 7-6 to Zheng**. Zheng finished exactly three net games ahead, meaning today's Zheng -2.5 would have won by only half a game. The match showed genuine two-sided control: Marozsan won the first set, Zheng dominated the second, and the third reached a tiebreak.
+
+Marozsan also remains the higher-ranked and more established ATP player. His 2026 hard results have been inconsistent, but after losing to Zheng he reached the Winston-Salem quarterfinal with wins over Kecmanovic and Damm.
+
+In a best-of-five match, a close Zheng 3-1 or 3-2 win can easily leave Zheng only one or two net games ahead. That is the main reason Marozsan +2.5 is more robust than Zheng -2.5 despite the Zheng winner lean.
+
+### Why Over 38.5 is #2
+My central set-count state is **four sets**, with five sets a meaningful secondary branch.
+
+At 38.5, an ordinary competitive four-set match can already clear the line. For example:
+**Zheng 7-6, 4-6, 7-6, 6-4 = 46 games.**
+That scoreline is also fully coherent with Marozsan +2.5, because Zheng wins the match by only two net games.
+
+The Under is strongest if one player controls in straight sets or the fourth set comes with enough lopsided games to finish around 34-38. That is a real branch, so the Over remains a lean rather than a strong call.
+
+### Why Zheng -2.5 is #3
+Zheng has the current winner edge:
+- he won the recent direct hard-court meeting;
+- his short-window hard results are stronger;
+- he beat Ugo Humbert immediately after the Marozsan victory;
+- he has already shown best-of-five resilience at the Australian Open and Wimbledon.
+
+But his broader record contains qualifying/lower-level matches, while Marozsan has the stronger ATP-level baseline. More importantly, -2.5 needs Zheng not merely to win but to create at least a three-game net margin.
+
+### Likely winner
+**Michael Zheng — LEAN.**
+
+This is not a fifth independent selection.
+
+### Weather/delay
+Court 11 is outdoors. Heavy rain produced substantial delays at the US Open, with humid conditions and continuing rain risk around the evening window. I use this mainly as a state/timing uncertainty rather than assigning an automatic player or total direction.
+
+### Settlement/publication boundary
+The user's operator and retirement rules were not supplied. Tennis game handicaps and totals can grade differently after retirement, so the exact contract definition remains `UNKNOWN_DEFINITION`.
+
+No calibrated probability, expected value, market edge, ROI or staking recommendation is published.
+
+## P. Append confirmation
+
+- Complete frozen P-242 forecast appended before delivery: **YES**
+- Drive modified: **NO**
+- Prior forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Learning register changed: **NO**
+
+
+---
+
+## Administrative continuation note — before P-243
+
+The connected Drive canonical top snapshot remains stale at `Next canonical ID: P-239` because Google Drive is read-only. The local append-only continuation already contains issued P-239 through P-242. Reusing one of those IDs for a distinct event would violate the one-event/one-ID invariant. This event is therefore appended locally as **P-243**, with the Drive/local integration gap explicitly preserved for later canonical reconciliation. No Drive file is modified.
+
+---
+
+# P-243 — Magda Linette vs Francesca Jones — 2026 US Open Women's Singles R1
+
+## A. Frozen identity and state
+
+- **Append sequence:** P-243
+- **Request date:** 2026-09-02 Australia/Melbourne
+- **Final state refresh:** 2026-09-02 10:21 AEST
+- **Information cutoff:** 2026-09-02 10:21 AEST
+- **Sport:** Tennis
+- **Competition:** 2026 US Open
+- **Draw:** Women's Singles
+- **Round:** First round / Round of 128
+- **Players:** Magda Linette (POL) vs Francesca Jones (GBR, qualifier)
+- **Court:** Court 6
+- **Surface:** Outdoor hard
+- **Format:** Best-of-three sets
+- **Current rankings:** Linette #78 on current rankings source / #82 on the current Tennis.com match page; Jones #104
+- **Ranking discrepancy:** source-timing difference preserved; no decision hinges on the 78/82 distinction.
+- **H2H:** 0-0; no prior verified meeting.
+- **GAME-STATE:** **DELAYED / NOT STARTED — rain-disrupted outside-court schedule**
+- **State evidence:** current Tennis.com match page showed `Upcoming`; Reuters reported nearly four hours of outdoor-court rain disruption during the session.
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-TENNIS
+- **Tennis numerical status:** NO TENNIS TARGET/SOURCE CARD, DATASET OR MODEL APPROVED OR FIT
+- **Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING
+- **Value state:** NO VALUE DETERMINABLE
+- **Retrospective performed:** NO
+
+## B. Contract freeze
+
+### User-supplied slate
+1. Francesca Jones +0.5 games
+2. Magda Linette -0.5 games
+3. Total games Over 21.5
+4. Total games Under 21.5
+
+- **Operator:** NOT SUPPLIED
+- **Odds:** NOT SUPPLIED
+- **Retirement/walkover rule:** UNKNOWN_DEFINITION
+- **Completed-match requirement:** UNKNOWN_DEFINITION
+- **Void/partial-match treatment:** UNKNOWN_DEFINITION
+
+### Geometry
+- Jones +0.5 and Linette -0.5 are exact game-margin complements under ordinary full-match grading.
+- Over 21.5 and Under 21.5 are exact total-game complements.
+- A match winner and a ±0.5 game handicap are **not mathematically identical**: a player can win the match while finishing behind in net games in an uneven three-set scoreline.
+- Under normal completed-match rules, exactly two of the four supplied rows win.
+- Retirement rules can alter settlement, so sportsbook settlement remains operator-dependent.
+
+| ID | Contract | Geometry | Dependence |
+|---|---|---|---|
+| P-243-C01 | Jones +0.5 games | Complement of C02 | P243-GAME-MARGIN |
+| P-243-C02 | Linette -0.5 games | Complement of C01 | P243-GAME-MARGIN |
+| P-243-C03 | Over 21.5 games | Complement of C04 | P243-TOTAL |
+| P-243-C04 | Under 21.5 games | Complement of C03 | P243-TOTAL |
+
+## C. Participant / current-status gate
+
+### Magda Linette
+- Right-handed, 34.
+- Current ranking source: #78; Tennis.com match page: #82.
+- Career high: #19.
+- 2026 broad hard-court record from current Tennis Explorer snapshot: approximately **13-12**.
+- Stronger historical tour-level baseline and much greater WTA/Grand Slam experience than Jones.
+- Immediate hard-court sequence:
+  - L Elena-Gabriela Ruse, Cincinnati: 0-6, 3-6
+  - L Iva Jovic, Toronto: 3-6, 5-7
+  - W Carol Zhao, Toronto: 4-6, 6-1, 6-4
+  - L Leylah Fernandez, Washington: 1-6, 4-6
+  - L Mai Hontama, Athens: 4-6, 5-7
+- Exact-surface L5: **1-4**.
+- Most concerning current service signal: against Ruse, Linette made only 43% first serves, won 59% of first-serve points and 28% of second-serve points, double-faulted six times, and held only 2 of 8 service games.
+- That one match is not treated as a new permanent serve coefficient, but the broader five-match window does show weak recent hard-court results.
+
+### Francesca Jones
+- Right-handed, 25.
+- Current ranking: #104.
+- 2026 WTA official overall record: 24-18.
+- Broad 2026 hard record is small and definition-sensitive: current databases range around **6-5**, with older/stale snapshots showing fewer matches before US Open qualifying.
+- Qualified through three US Open hard-court matches:
+  - def. Nuria Brancaccio 6-3, 6-4
+  - def. Mona Barthel 7-6, 1-6, 6-2
+  - def. Joanna Garland 6-4, 6-1
+- Final qualifier vs Garland:
+  - 68% first serve in
+  - 92% first-serve points won
+  - 67-80% second-serve points won depending source denominator rendering
+  - faced no break points
+  - broke 4 times
+- Qualifying R1 vs Brancaccio:
+  - 66% first serve in
+  - 71% first-serve points won
+  - 70% second-serve points won
+  - 3/3 break points converted
+- Qualifying R2 vs Barthel was much less clean:
+  - six double faults
+  - 57% service games won
+  - match required three sets
+- This shows a high-current-form branch but not a uniformly dominant serve regime.
+
+### Fitness / retirement
+- No current withdrawal or current injury report was found at cutoff.
+- Jones has a documented history of retirements, including 2026 Australian Open/Auckland/Miami periods on a specialist history page.
+- Historical retirement propensity is **not** used directionally without a current medical signal.
+- It makes the unknown operator retirement rule particularly material.
+
+## D. H2H continuity audit
+
+- Verified H2H: **0-0**.
+- No meeting exists to use as a matchup prior.
+- H2H window count: **0 — NO COMPARABLE CASE**.
+- No invented or proxy H2H is used.
+
+## E. Surface-recency block
+
+### Linette — exact hard-court L5
+| Match | Result |
+|---|---|
+| vs Ruse | L 0-6, 3-6 |
+| vs Jovic | L 3-6, 5-7 |
+| vs Zhao | W 4-6, 6-1, 6-4 |
+| vs Fernandez | L 1-6, 4-6 |
+| vs Hontama | L 4-6, 5-7 |
+
+- **L5:** 1-4
+- **L10/L15/L20:** current source coverage is fragmented across WTA/Tennis.com/TennisExplorer snapshots and not stable enough to produce one definition-consistent reconstructed window without mixing timestamped datasets. Record as `PARTIAL_SOURCE_COVERAGE`, not backfilled.
+- **2026 hard-season anchor:** ~13-12 on the freshest broad snapshot.
+- **Trend verdict:** recent L5 is clearly negative, but the full L5/L10/L15/L20 monotonicity test cannot be completed from one stable current provider; therefore **NO FORMAL TREND PROMOTION**.
+
+### Jones — exact hard-court current sample
+Recent current-source hard sequence includes:
+- W Garland
+- W Barthel
+- W Brancaccio
+- earlier 2026 hard results include losses/wins at Miami, Indian Wells, Austin, Australian Open and Auckland.
+
+- **Current US Open qualifying L3:** 3-0.
+- **Current bookmaker-style L5 snapshot:** 4-1.
+- **2026 hard anchor:** around 6-5 in current broad database.
+- **L10/L15/L20:** true 2026 hard sample is too small for all requested windows; record true-count/missingness rather than inventing 15/20-match windows.
+- **Trend verdict:** the three qualifying wins are positive current regime evidence, but not enough to call a validated monotone L5-L20 trend.
+
+### Level adjustment
+Jones's strongest recent evidence comes from US Open qualifying opponents ranked materially below Linette:
+- Garland ~#201;
+- Barthel ~#205;
+- Brancaccio lower-tour/qualifying level.
+That same-site adaptation is valuable, but the opponent-strength jump into an experienced main-draw WTA player requires shrinkage.
+
+## F. Environment / schedule gate
+
+- **Venue:** USTA Billie Jean King National Tennis Center, Flushing, New York
+- **Court:** Court 6
+- **Venue class:** OUTDOOR
+- Reuters reported heavy rain delaying outside-court play for nearly four hours during the session.
+- Current match page remained Upcoming at the final refresh.
+- Conditions around the disrupted evening window were humid with continuing rain risk.
+
+Mechanism:
+- Primary impact is delay, uncertainty in start time and stop-start preparation.
+- No automatic Over/Under direction is assigned from rain/humidity.
+- Jones has same-site qualifying acclimatisation; Linette has greater tour experience.
+- No one-sided weather adjustment is strong enough to move a contract band.
+
+## G. Serve-return / matchup reconciliation
+
+### Linette established prior
+Linette has:
+- materially more top-level hard-court experience;
+- a long WTA baseline and career-high #19;
+- stronger proof against elite opponents over multiple seasons;
+- a 2026 hard season close to .500 despite the recent downturn.
+
+### Jones current regime
+Jones has:
+- three recent wins on the exact US Open hard courts;
+- strong final-qualifier serving and return pressure;
+- a positive confidence/adaptation branch;
+- but a small hard-court sample and lower-opponent-quality recent set.
+
+### Matchup inference
+No H2H exists, so the comparison is:
+- **established level/experience advantage:** Linette
+- **same-site current-form/acclimatisation advantage:** Jones
+- **recent hard-result advantage:** Jones
+- **sample size/opponent-quality advantage:** Linette
+
+The evidence does not support a large separation state for either player.
+
+## H. Best-of-three set-count mixture
+
+These are qualitative relative weights, **not probabilities**.
+
+| Endpoint | Relative weight | Interpretation |
+|---|---:|---|
+| 2 sets | 3/5 | Meaningful: both have straight-set control branches |
+| **3 sets** | **4/5** | Central: near-even matchup, conflicting regime signals |
+
+The three-set state is fixed as central before locating the 21.5 line.
+
+## I. Mandatory score-tree branches
+
+### TE-B1 — Linette ordinary straight-set control
+Representative: **6-4, 6-3**
+- Total: 19
+- Linette net margin: +5
+- Wins: Linette -0.5, Under 21.5
+
+### TE-B2 — Linette close straight sets
+Representative: **7-5, 6-4**
+- Total: 22
+- Wins: Linette -0.5, **Over 21.5**
+
+### TE-B3 — Linette three-set win
+**Central coherence scoreline:** **6-4, 4-6, 6-3**
+- Total: 29
+- Linette net margin: +3
+- Wins: Linette -0.5, Over 21.5
+
+A lopsided split-set Linette win such as 1-6, 6-4, 6-4 would make Linette win the match but **lose** the -0.5 game handicap. That path is possible and is why match winner ≠ exact game handicap.
+
+### TE-B4 — Jones ordinary straight-set control
+Representative: **6-4, 6-3**
+- Total: 19
+- Wins: Jones +0.5, Under 21.5
+
+### TE-B5 — Jones close straight sets
+Representative: **7-5, 6-4**
+- Total: 22
+- Wins: Jones +0.5, Over 21.5
+
+### TE-B6 — Jones three-set win
+Representative: **4-6, 6-3, 6-4**
+- Total: 29
+- Jones net margin: +3
+- Wins: Jones +0.5, Over 21.5
+
+### TE-B8 — retirement/walkover
+- Operator terms unknown.
+- `UNKNOWN_DEFINITION / NO VALUE DETERMINABLE`.
+
+## J. Reference base-rate anchors
+
+No calibrated probabilities are generated.
+
+### Over 21.5
+**Reference band: MEDIUM**
+- A three-set match usually clears comfortably.
+- Close straight sets can also clear: 7-5, 6-4 = 22.
+- Event adjustment: up one band because three sets are central and the match is close.
+- **Frozen band: MEDIUM-HIGH**.
+
+### Under 21.5
+**Reference band: MEDIUM**
+- Ordinary straight-set outcomes like 6-3, 6-4 or 6-4, 6-4 settle Under.
+- Event adjustment: down one band because the score tree gives substantial three-set/close-two-set mass.
+- **Frozen band: MEDIUM-LOW**.
+
+### Linette -0.5 games
+**Reference band: MEDIUM**
+- Near winner-like contract but requires positive net game margin.
+- Event adjustment: small upward/hold from established level/ranking/experience, partially offset by current hard-form weakness.
+- **Frozen band: MEDIUM**.
+
+### Jones +0.5 games
+**Reference band: MEDIUM**
+- Captures every Jones positive net-game-margin state, including ordinary match wins.
+- Event adjustment: up from same-site qualifying form, then shrink for opponent-quality jump.
+- **Frozen band: MEDIUM, narrowly below Linette -0.5**.
+
+## K. External market sanity check — non-controlling
+
+Public prices were close and **conflicted on the handicap**:
+- Oddschecker broadly had Linette a tiny moneyline favourite.
+- BetVictor had Linette -0.5 slightly shorter than Jones +0.5.
+- BetRaven instead had Jones +0.5 shorter than Linette -0.5.
+- Bwin was essentially even.
+- Multiple public books priced Over 21.5 shorter than Under 21.5.
+
+Interpretation:
+- External market agrees that this is close.
+- External market provides more consistent corroboration for Over 21.5 than for either side.
+- These are **not** the user's operator and are not used for expected value or edge.
+
+One external model on Tennis.com projected Linette 52% / Jones 48%. This is cited only as an external estimate, not an internal probability.
+
+## L. Strongest kill paths
+
+### Against Over 21.5
+Either player wins efficiently in straight sets:
+- 6-3, 6-4 = 19
+- 6-4, 6-4 = 20
+A three-set match can also stay Under if the sets are extremely lopsided, e.g. 6-1, 1-6, 6-1 = 21.
+
+### Against Linette -0.5
+- Jones converts her qualifier form to main-draw level and wins outright.
+- Linette wins in an uneven three-set scoreline but finishes with negative net games.
+- Linette's Cincinnati serve instability persists.
+
+### Against Jones +0.5
+- Linette's experience/quality edge converts to a routine positive game margin.
+- Jones's qualifying serving rates regress sharply against a stronger returner.
+
+### Against Under 21.5
+- Any normal three-set match.
+- Close two-set match such as 7-5, 6-4 or 7-6, 6-4.
+
+## M. Frozen ranking
+
+**Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING  
+**Value state:** NO VALUE DETERMINABLE  
+**Retirement terms:** UNKNOWN_DEFINITION
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-243-C03 — Over 21.5 games** | **LEAN** | MEDIUM-LOW | The evidence points to a close contest; three sets are central and even close straight sets can clear 21.5. |
+| **2** | **P-243-C02 — Linette -0.5 games** | **LEAN** | LOW-MEDIUM | Slight established-level/experience edge and external consensus lean, but recent hard form is weak enough to cap confidence. |
+| **3** | **P-243-C01 — Jones +0.5 games** | **FORCED RANK / LEAN-ADJACENT** | LOW-MEDIUM | Exact-court qualifying form is excellent, but the opponent-quality jump and small hard sample prevent ranking it above Linette's established prior. |
+| **4** | **P-243-C04 — Under 21.5 games** | **FORCED RANK / AVOID relative to Over** | LOW-MEDIUM | Strong in efficient straight sets but less aligned with the central three-set/close-match tree. |
+
+### Total-direction control
+Recommend **Over 21.5 only** among the opposing total directions.
+
+## N. Potential winner
+
+**Magda Linette — LEAN**
+
+This is a separate descriptive match-winner call, not a fifth independent contract.
+
+Why:
+1. Linette's established WTA/Grand Slam baseline is materially stronger.
+2. Current ranking still favours Linette.
+3. Jones's three qualifying wins are strong same-site evidence but came against substantially lower-ranked opponents.
+4. External public markets and the Tennis.com projection were slightly Linette-leaning overall.
+
+Why not stronger:
+- Linette is 1-4 in her exact-surface recent L5.
+- Her Cincinnati serve performance was poor.
+- Jones is fully acclimatised to the US Open courts and arrives 3-0 in qualifying.
+- No H2H exists to resolve the stylistic matchup.
+- Several market sources were close to 50/50 or even slightly Jones-side on the handicap.
+
+## O. Frozen user-facing forecast
+
+### Event and current state
+Magda Linette vs Francesca Jones is a **2026 US Open Women's Singles Round 1 match on Court 6, outdoor hard, best-of-three**. At the final refresh the match remained listed as **Upcoming** after heavy rain disrupted the outside courts, so this is frozen as **DELAYED / NOT STARTED**, not a stale pregame state.
+
+### Best four supplied picks
+1. **Over 21.5 total games — LEAN**
+2. **Magda Linette -0.5 games — LEAN**
+3. **Francesca Jones +0.5 games — lower-confidence side**
+4. **Under 21.5 games — weaker total direction**
+
+### Why Over 21.5 is #1
+The strongest evidence is that this matchup is close.
+
+Jones has already won three US Open qualifying matches on the same courts:
+- 6-3, 6-4 vs Brancaccio
+- 7-6, 1-6, 6-2 vs Barthel
+- 6-4, 6-1 vs Garland
+
+Her final qualifier was especially clean: she faced no break points and dominated first-serve points.
+
+Linette, however, is a much more established WTA player and remains the higher-ranked opponent. That makes a routine Jones straight-set control state less convincing than it would be against the qualifying field.
+
+My central score tree is therefore three sets. A representative Linette win of **6-4, 4-6, 6-3** reaches 29 games. A representative Jones win of **4-6, 6-3, 6-4** also reaches 29. Even a close two-set score like **7-5, 6-4** reaches 22 and clears the line.
+
+The Under's main path is an efficient straight-set result such as 6-3, 6-4 or 6-4, 6-4. That remains meaningful, but it is not the central branch.
+
+### Why Linette -0.5 is #2
+Linette has the stronger established tour baseline, higher ranking and much deeper Grand Slam/WTA experience. Jones's current qualifying run matters, but her three opponents were well below Linette's level, so those raw serving and return numbers must be shrunk.
+
+The main concern is Linette's current hard form: she has lost four of her last five hard matches. Her latest Cincinnati loss to Ruse was particularly poor on serve.
+
+That keeps Linette -0.5 at only a lean.
+
+### Why Jones +0.5 remains live
+Jones is in better immediate rhythm. She has:
+- three recent wins on these exact courts;
+- two straight-set qualifying victories;
+- a strong final-qualifier service performance;
+- no current withdrawal/injury signal.
+
+If Linette's recent serve problems persist, Jones can win outright. That is why the two side contracts are close in rank.
+
+### Likely winner
+**Magda Linette — LEAN.**
+
+This is not a fifth independent pick.
+
+### Weather/delay
+Heavy rain delayed outdoor US Open play for nearly four hours. Court 6 is outdoors, so the main verified effect is schedule/start uncertainty. I do not apply an automatic Over or Under adjustment from the weather.
+
+### Settlement/publication boundary
+The user's operator and retirement rules were not supplied. Jones also has a historical retirement record, which makes those terms particularly important. Exact handicap/total settlement therefore remains `UNKNOWN_DEFINITION`.
+
+No calibrated probability, expected value, market edge, ROI or staking recommendation is published.
+
+## P. Append confirmation
+
+- Complete frozen P-243 forecast appended before delivery: **YES**
+- Drive modified: **NO**
+- Prior forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Learning register changed: **NO**
+
+
+---
+
+## Administrative continuation note — before P-244
+
+The connected Drive canonical top snapshot remains at `Next canonical ID: P-239` because Google Drive is read-only. The local append-only continuation already contains issued P-239 through P-243. Reusing one of those IDs for a distinct event would violate the one-event/one-ID invariant. This event is therefore appended locally as **P-244**, with the Drive/local integration gap explicitly preserved for later canonical reconciliation. No Drive file is modified.
+
+---
+
+# P-244 — Baltimore Orioles @ Colorado Rockies — MLB — 2026-09-01 MDT / 2026-09-02 AEST
+
+## A. Frozen identity and state
+
+- **Append sequence:** P-244
+- **Request date:** 2026-09-02 Australia/Melbourne
+- **Final state refresh:** 2026-09-02 10:27:09 AEST
+- **Information cutoff:** 2026-09-02 10:27:09 AEST
+- **Scheduled first pitch:** 2026-09-01 18:40 MDT / 2026-09-02 10:40 AEST
+- **Cutoff invariant:** PASS — approximately 13 minutes before scheduled first pitch.
+- **GAME-STATE:** PREGAME
+- **Sport:** Baseball
+- **Competition:** MLB regular season
+- **Official fixture:** Baltimore Orioles @ Colorado Rockies
+- **Venue:** Coors Field, Denver, Colorado
+- **Home/away:** Baltimore away; Colorado home
+- **Official starter status:** MLB/Rockies probable-pitcher pages list Kyle Bradish vs Gabriel Hughes; subject to change.
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-BASEBALL
+- **Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING
+- **Value state:** NO VALUE DETERMINABLE
+- **Retrospective performed:** NO
+
+## B. Starter identity handshake
+
+| Role | Team | Pitcher | Status | Frozen line |
+|---|---|---|---|---|
+| Starter | BAL | Kyle Bradish, RHP | PROBABLE_OFFICIAL | 7-12, 4.03 ERA, 133 K, 1.41 WHIP |
+| Starter | COL | Gabriel Hughes, RHP | PROBABLE_OFFICIAL | 0-6, 6.61 ERA, 38 K, 1.45 WHIP |
+
+### Kyle Bradish
+- 2026 season: 4.03 ERA over 143 IP.
+- Last five starts: **5.40 ERA**, 25 IP, 31 H, 15 ER, 10 BB, 19 K.
+- Latest start at St. Louis: 4.1 IP, 9 H, 7 ER.
+- Road split in the freshest current snapshot: approximately **4.50 ERA**; earlier cached snapshots were lower, so the current snapshot controls.
+- Career vs Colorado is limited; StatMuse listed one prior successful appearance/start context around a 3.00 ERA.
+- Bradish therefore has the stronger starter prior than Hughes, but his current form is not strong enough to make Colorado's run contribution negligible.
+
+### Gabriel Hughes
+- 2026 season: 6.61 ERA in 47.2 IP.
+- Last five starts: **10.03 ERA**, 23.1 IP, 28 H, 26 ER, 12 BB, 17 K.
+- Recent starts: 5 ER vs TB, 7 at AZ, 7 at SF, 3 vs CLE, 4 at WSH.
+- Home/Coors sample is materially better than the raw recent road-heavy line:
+  - 4 starts / 5 home appearances;
+  - about **4.18 ERA** over 23.2 home innings.
+- The home split is small and does not erase the current instability, but it is a real reason not to treat Baltimore -1.5 as automatic.
+
+## C. Contract freeze and geometry
+
+### Supplied slate
+1. Orioles -1.5
+2. Rockies +1.5
+3. Full-game Over 11.0 runs
+4. Full-game Under 11.0 runs
+
+- **Operator:** NOT SUPPLIED
+- **Odds:** NOT SUPPLIED
+- **Listed-pitcher/action rules:** UNKNOWN_DEFINITION
+- **Shortened/suspended-game rule:** UNKNOWN_DEFINITION
+- **Extra-inning settlement rule:** UNKNOWN_DEFINITION
+- **Sporting target assumption for research:** official MLB full-game final score including extra innings if played; this does not define unnamed-book settlement.
+
+### Geometry
+- BAL -1.5 and COL +1.5 are exact complements under ordinary completed-game action.
+- Over 11.0 and Under 11.0 are **not exact win/loss complements because 11 is an integer**:
+  - Over wins at 12+;
+  - Under wins at 10 or fewer;
+  - exactly 11 is a push under ordinary total-11 terms.
+- The total's push mass makes forced “one of these must win” language invalid.
+
+| ID | Contract | Win / Push / Loss geometry | Dependence |
+|---|---|---|---|
+| P-244-C01 | Orioles -1.5 | BAL margin 2+ / no push / otherwise loss | P244-MARGIN |
+| P-244-C02 | Rockies +1.5 | COL win or BAL win by 1 / no push / otherwise loss | P244-MARGIN |
+| P-244-C03 | Over 11.0 | 12+ / 11 / 0-10 | P244-TOTAL |
+| P-244-C04 | Under 11.0 | 0-10 / 11 / 12+ | P244-TOTAL |
+
+## D. Lineup and availability gate
+
+- The current MLB starting-lineup page still displayed **TBD** for both clubs at the final cutoff.
+- Baseball Savant also showed Baltimore as **Awaiting Starting Lineup**.
+- Therefore no projected batting order is promoted to `CONFIRMED_OFFICIAL`.
+- Secondary projections centered Baltimore around Jackson Holliday, Pete Alonso, Gunnar Henderson, Christian Encarnacion-Strand/Coby Mayo, Dylan Beavers, Samuel Basallo, Colton Cowser and Leody Taveras.
+- Secondary Colorado projections centered around Jake McCarthy, Cole Carrigg/Connor Norby, Hunter Goodman, T.J. Rumfield, Willi Castro and Mickey Moniak.
+- Baltimore's September additions Luis Robert Jr. and Heston Kjerstad were reported not to be in the starting lineup.
+- Current injury reporting showed Baltimore still without several regular contributors, including Tyler O'Neill/Ryan Mountcastle/Jordan Westburg in the current injury feed.
+- Because official orders were still unavailable, lineup/platoon-specific conclusions are capped below strong evidence.
+
+## E. Environment gate
+
+- **Venue class:** OUTDOOR
+- **Park:** Coors Field
+- **Elevation:** approximately one mile; 2025 MLB park factor listed runs at 128 where 100 = league average.
+- **Field orientation:** home plate-to-center field is approximately due north (~4° bearing).
+- **NWS match-window forecast near downtown Denver:**
+  - ~30°C at 18:00 MDT, ~28°C at 19:00;
+  - dew point ~9°C;
+  - wind ~7 mph, E shifting SE;
+  - partly cloudy/dry evening in the latest NWS point forecast.
+- **Wind-vector interpretation:** with center field nearly due north, the E/SE wind is mostly cross-field with only a modest outfield component; it is not a strong straight-out wind.
+- **Weather conclusion:** warm, dry, light-wind conditions preserve ordinary Coors carry but do not add a major wind-driven Over adjustment.
+- The prior night's 2-1 game had a 1h38m rain delay; that weather state is not imported into tonight because the current NWS forecast is materially different.
+
+## F. Recent-form windows
+
+### Baltimore scoring
+| Window | Runs/game |
+|---|---:|
+| L5 | 4.8 (24 runs) |
+| L10 | ~5.3 |
+| L15 | 5.13 |
+| L20 | 5.00 |
+
+- Season: 4.55 R/G.
+- Road: 4.73 R/G.
+- Current result form: four straight wins and eight wins in the last ten after the 2-1 opener.
+- **Trend verdict:** NO TREND — NOISE. L5/L10/L15/L20 are not monotone; the stable current centre is roughly five runs/game.
+
+### Colorado scoring
+| Window | Runs/game |
+|---|---:|
+| L5 | 4.2 (21 runs, heavily influenced by one 13-run game) |
+| L10 | ~3.3-3.5 |
+| L15 | 4.13 |
+| L20 | 3.85 |
+
+- Home season: approximately **4.97-5.03 R/G** depending snapshot date.
+- Current result form: ten straight home losses entering this game.
+- **Trend verdict:** NO TREND — NOISE. Short windows are non-monotone and the L5 mean is distorted by a 13-run outlier.
+- Important reconciliation: Colorado's home scoring prior is much stronger than its current all-location L10. Both states are retained rather than allowing either one to erase the other.
+
+## G. Head-to-head continuity
+
+### H2H windows
+- Current 2026 continuity count before P-244: **1 game** — BAL won 2-1 on Aug. 31.
+- Recent L5/L10 historical series exist, but many meetings come from 2019-2025 and materially different rosters/pitchers.
+- Current StatMuse L10: Baltimore 6-4 vs Colorado.
+- L20 historical record around 11-9 Baltimore in the freshest retrieval.
+
+### Continuity verdict
+**LOW for old H2H; HIGH only for the immediately prior 2026 game's team/venue context.**
+
+Yesterday's 2-1 result is not treated as a direct total prior because:
+- different starters;
+- different bullpen entry timing;
+- a long rain delay;
+- today's Hughes/Bradish matchup is materially different.
+
+## H. Bullpen exposure and workload
+
+### Baltimore
+- Current bullpen form: approximately **1.77 ERA over the last 15 days**.
+- Yesterday:
+  - Grant Wolfram threw two scoreless innings;
+  - Rico Garcia and Andrew Kittredge also worked;
+  - Kittredge earned the save.
+- The recent pen performance is a meaningful late-game suppression mechanism, but those used relievers are not treated as fully fresh by default.
+
+### Colorado
+- Current bullpen form: approximately **3.59 ERA over the last 15 days**.
+- Season/home environment remains more difficult; Colorado pitching owns approximately a **5.91 home ERA** overall.
+- Yesterday, after Tanner Gordon's five innings, Colorado used four relievers including Manfredi, Frasso, Bernardino and Romano, mostly on modest pitch counts.
+- Hughes' recent inability to work deep raises expected bullpen exposure again.
+
+### Bullpen conclusion
+Late-game structure favors Baltimore in quality, while Colorado's bullpen is not maximally depleted from yesterday. Hughes' expected starter-length/quality risk remains the larger side-market driver.
+
+## I. Target distribution / score-family map
+
+The 11.0 total is deliberately high. The qualitative target corridor is wide because the game combines:
+- Coors;
+- a poor current Hughes state;
+- a hot Baltimore scoring profile;
+- but a strong Baltimore bullpen and a slumping Colorado offense;
+- plus Bradish's own recent instability.
+
+### Representative score families
+
+| Family | Score examples | Contracts helped |
+|---|---|---|
+| Low/close | BAL 5-4, COL 5-4 | COL +1.5, Under 11 |
+| Low/separation | BAL 7-3, BAL 6-3 | BAL -1.5, Under 11 |
+| Boundary | BAL 6-5, BAL 7-4 | COL +1.5 at 6-5 / BAL -1.5 at 7-4; total PUSH at 11 |
+| High/close | BAL 7-6, COL 7-6 | COL +1.5, Over 11 |
+| High/separation | BAL 8-4, BAL 9-4 | BAL -1.5, Over 11 |
+| Colorado-control kill path | COL 6-4 / 7-5 | COL +1.5; Under or Over depending score |
+
+### Component budget
+- Baltimore central scoring component: approximately **5-7 runs**, with a material 8+ tail because Hughes has a 10.03 last-five ERA and Colorado's home pitching environment is poor.
+- Colorado central scoring component: approximately **3-5 runs**, with a higher Coors/home tail because Bradish has a 5.40 last-five ERA and a recent 7-run start.
+- This places **11 inside the ordinary corridor rather than clearly outside it**.
+- Because unweighted ordinary branches cross both sides and also place meaningful mass exactly at 11, total evidence is capped.
+
+## J. Reference base-rate anchors
+
+No calibrated probabilities are generated.
+
+| Contract | Reference band | Event adjustment | Frozen qualitative band |
+|---|---|---|---|
+| Rockies +1.5 | HIGH-MEDIUM — positive 1.5-run cushion | Down modestly for Hughes/current team mismatch | **MEDIUM-HIGH** |
+| Orioles -1.5 | MEDIUM-LOW — requires 2+ separation | Up for Hughes, Baltimore form and bullpen advantage | **MEDIUM** |
+| Over 11.0 | MEDIUM-LOW at a very high integer total | Up for Coors/Hughes/Bradish recent volatility | **MEDIUM** |
+| Under 11.0 | MEDIUM because the threshold is high and push protects exactly 11 | Down for Coors and Hughes upper tail | **MEDIUM-LOW** |
+
+### External market sanity check — not user pricing
+Same-day public prices generally:
+- made Baltimore the outright favorite;
+- priced Colorado +1.5 shorter than Baltimore -1.5;
+- leaned modestly toward Over 11 versus Under 11.
+
+This is used only as external coherence evidence. It is not the user's operator, not an internal probability and not a value claim.
+
+## K. Strongest kill paths
+
+### Against Rockies +1.5
+Hughes' current command/contact problems combine with Baltimore power, producing an ordinary 7-3 / 8-4 / 9-4 separation game.
+
+### Against Over 11
+Bradish stabilizes against Colorado's currently weak offense and Baltimore's bullpen preserves a lead, yielding 7-3 / 6-3 / 6-4 type finals.
+
+### Against Orioles -1.5
+Colorado's home offense returns toward its ~5 R/G home baseline; Hughes repeats one of his better Coors starts; Baltimore wins only by one or loses outright.
+
+### Against Under 11
+Hughes exits early after traffic and Bradish's recent 5.40-ERA window also leaks runs, producing 7-6 / 8-4 / 8-5.
+
+## L. Frozen ranking
+
+**Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING  
+**Value state:** NO VALUE DETERMINABLE  
+**Official lineups:** NOT YET CONFIRMED at cutoff
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-244-C02 — Rockies +1.5** | **LEAN** | MEDIUM-LOW | The +1.5 cushion has the strongest structural base rate and wins on a Colorado victory or a one-run Orioles win. Hughes creates real separation risk, but his better small home split and Coors volatility keep close-game paths material. |
+| **2** | **P-244-C03 — Over 11.0** | **SLIGHT LEAN** | LOW-MEDIUM | Hughes' 10.03 last-five ERA, Coors and Bradish's recent volatility create a genuine 12+ tail, but 11 sits inside the central corridor and retains push mass. |
+| **3** | **P-244-C01 — Orioles -1.5** | **LEAN-ADJACENT / FORCED RANK** | MEDIUM-LOW | Baltimore is the likely winner and has the clearer quality mismatch, but -1.5 needs two-run separation rather than merely the better team winning. |
+| **4** | **P-244-C04 — Under 11.0** | **FORCED RANK / weaker total direction** | LOW-MEDIUM | Strong Baltimore bullpen and Colorado's recent scoring slump support it, but Hughes/Coors/Bradish volatility make it the weaker side of the total. |
+
+### Total-direction control
+Recommend **Over 11.0 only**, and only as a **slight lean**. Under 11.0 is retained solely because the complete supplied audit slate must receive a unique rank.
+
+### Strongest evidence class
+The strongest evidence is in the **side market**, not the total:
+- likely winner = Baltimore;
+- safest supplied side contract by marginal likelihood = Colorado +1.5;
+- Baltimore -1.5 has the higher-separation upside but the harder threshold.
+
+## M. Potential winner
+
+**Baltimore Orioles — LEAN**
+
+This is a descriptive winner call, not a fifth independent contract.
+
+Why:
+1. Bradish owns the clearly stronger season/starter baseline than Hughes.
+2. Hughes carries a 10.03 ERA over his last five starts.
+3. Baltimore has won four straight and eight of ten.
+4. Colorado has lost ten straight home games.
+5. Baltimore's bullpen has a 1.77 ERA over the last 15 days versus Colorado's 3.59.
+6. Baltimore's recent scoring centre is around five runs/game and Hughes creates a meaningful 6-8 run team-score branch.
+
+Why not stronger:
+- Coors widens both tails.
+- Bradish himself has a 5.40 ERA over his last five and allowed seven runs last start.
+- Colorado still scores around five runs/game at home across the season.
+- Official batting orders were still TBD at the frozen cutoff.
+
+## N. Frozen user-facing forecast
+
+### Verified event
+Baltimore Orioles @ Colorado Rockies, MLB, **Tuesday September 1, 2026 at 6:40 PM MDT at Coors Field**, which is **Wednesday September 2 at 10:40 AM AEST**.
+
+MLB/Rockies currently list:
+- **Kyle Bradish (BAL): 7-12, 4.03 ERA, 133 K**
+- **Gabriel Hughes (COL): 0-6, 6.61 ERA, 38 K**
+
+Both remain official probables / subject to change.
+
+### Best four supplied picks
+1. **Rockies +1.5 — LEAN**
+2. **Over 11.0 runs — SLIGHT LEAN**
+3. **Orioles -1.5 — lower-confidence separation side**
+4. **Under 11.0 runs — weaker total direction**
+
+### Why Rockies +1.5 is #1 even though Baltimore is the likely winner
+These are different targets.
+
+Baltimore is the better team and has the superior starter matchup, but Rockies +1.5 wins in every Colorado victory **and** whenever Baltimore wins by exactly one. Yesterday's 2-1 Orioles win is a concrete example of that close-game branch, although it is not treated as a direct repeat prior because the starters and weather were different.
+
+Hughes is a serious problem for Colorado: his last five starts produced a 10.03 ERA. But his small home sample is less disastrous at about a 4.18 ERA, and Coors creates enough offensive variance that a 6-5 or 7-6 Orioles win remains an ordinary branch.
+
+That makes Colorado +1.5 marginally more robust than asking Baltimore to win by two.
+
+### Why Over 11.0 is #2
+This is not a generic “Coors Over” call.
+
+The case for 12+ runs is:
+- Hughes: 10.03 ERA over the last five;
+- Colorado home pitching: about 5.91 ERA;
+- Baltimore: about 5.0-5.3 R/G across L10-L20;
+- Bradish: 5.40 ERA over his last five, including seven earned runs in his latest start;
+- warm, dry Coors conditions around first pitch.
+
+But 11 is already a very high total. Colorado is only around 3.3-3.5 R/G in its latest L10, Baltimore's bullpen has a 1.77 ERA over the last 15 days, and a 7-3 or 6-4 Baltimore win remains very plausible.
+
+Therefore Over 11 is only a **slight lean**. Exactly 11 should be a push under ordinary total-11 rules.
+
+### Why Orioles -1.5 is #3
+The separation case is real:
+- Hughes is in a poor current regime;
+- Baltimore has won eight of ten;
+- Colorado has lost ten straight at home;
+- Baltimore's bullpen is currently much stronger.
+
+A 7-3 or 8-4 Baltimore win is fully ordinary.
+
+But -1.5 gives away the one-run-win branch. That is why it ranks below Rockies +1.5 even though Baltimore remains my likely winner.
+
+### Likely winner
+**Baltimore Orioles — LEAN.**
+
+This is not a fifth independent pick.
+
+### Weather
+Coors is outdoors. The NWS match-window forecast is warm and dry at roughly 28-30°C, with only about 6-7 mph E/SE wind. With center field almost due north, that is largely a cross-field wind rather than a major straight-out boost. Coors' altitude still preserves the naturally high offensive variance.
+
+### Lineup / settlement boundary
+Official MLB lineup pages still showed both orders as TBD at the frozen cutoff. Therefore lineup-specific conclusions are evidence-capped.
+
+The user's sportsbook/operator and action rules were not supplied. Listed-pitcher requirements, shortened/suspended-game treatment and exact extra-inning settlement therefore remain `UNKNOWN_DEFINITION`.
+
+No calibrated probability, expected value, market edge, ROI or staking recommendation is published.
+
+## O. Append confirmation
+
+- Complete frozen P-244 forecast appended before delivery: **YES**
+- Frozen cutoff before scheduled first pitch: **YES**
+- Drive modified: **NO**
+- Prior forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Learning register changed: **NO**
+
+
+---
+
+## Administrative continuation note — before P-245
+
+The connected Drive canonical predecessor remains behind the local read-only continuation. The local append-only running log already contains issued P-239 through P-244. Reusing any earlier ID for this distinct event would violate the one-event/one-ID invariant. This event is therefore appended locally as **P-245**. No Google Drive file is modified.
+
+---
+
+# P-245 — Alexander Zverev vs Lorenzo Sonego — 2026 US Open Men's Singles R1
+
+## A. Frozen identity and state
+
+- **Append sequence:** P-245
+- **Final state refresh:** 2026-09-02 10:36:37 AEST
+- **Information cutoff:** 2026-09-02 10:36:37 AEST
+- **Sport:** Tennis
+- **Competition:** 2026 US Open
+- **Draw / round:** Men's Singles, Round 1 / Round of 128
+- **Players:** Alexander Zverev (GER) vs Lorenzo Sonego (ITA)
+- **Court:** Arthur Ashe Stadium
+- **Surface:** Hard
+- **Venue class:** RETRACTABLE-ROOF STADIUM
+- **Format:** Best-of-five sets
+- **Current scheduled start from tournament bracket feed:** 2026-09-02 01:20 UTC / 2026-09-02 11:20 AEST
+- **Cutoff invariant:** PASS — approximately 44 minutes before the current scheduled start.
+- **Current state:** PREGAME / NOT STARTED
+- **Current rankings:** Zverev #2; Sonego #89
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-TENNIS
+- **Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING
+- **Value state:** NO VALUE DETERMINABLE
+- **Retrospective:** NOT PERFORMED
+
+Current Tennis.com and tournament-bracket sources both showed the match as upcoming/not started at the frozen cutoff.
+
+## B. Contract freeze
+
+### User-supplied audit slate
+1. Lorenzo Sonego +6.5 games
+2. Alexander Zverev -6.5 games
+3. Total games Over 33.5
+4. Total games Under 33.5
+
+- **Operator:** NOT SUPPLIED
+- **Odds:** NOT SUPPLIED
+- **Retirement/walkover rule:** UNKNOWN_DEFINITION
+- **Completed-match requirement:** UNKNOWN_DEFINITION
+- **Void/partial-set treatment:** UNKNOWN_DEFINITION
+
+### Geometry
+- Sonego +6.5 and Zverev -6.5 are exact game-margin complements under ordinary full-match grading.
+- Over 33.5 and Under 33.5 are exact total-game complements.
+- Under ordinary completed-match terms, exactly two of the four supplied rows win.
+- Retirement/withdrawal rules may alter settlement, so the unnamed operator's rule remains a hard unresolved field.
+
+| ID | Contract | Geometry | Dependence |
+|---|---|---|---|
+| P-245-C01 | Sonego +6.5 games | complement of C02 | P245-MARGIN |
+| P-245-C02 | Zverev -6.5 games | complement of C01 | P245-MARGIN |
+| P-245-C03 | Over 33.5 games | complement of C04 | P245-TOTAL |
+| P-245-C04 | Under 33.5 games | complement of C03 | P245-TOTAL |
+
+## C. Player baseline and current regime
+
+### Alexander Zverev
+- Current ranking: #2.
+- 2026 overall: approximately **46-13** in the freshest complete season dataset.
+- 2026 hard: approximately **17-7**.
+- 2026 Grand Slam record before this match: **18-2**.
+- Career hard best-of-five record in the current broad database: approximately **67-24**.
+- 2026 full-season serve/return summary from the current database:
+  - hold ~88.0%;
+  - break ~25.7%;
+  - first serve in ~72.1%;
+  - first-serve points won ~76.4%;
+  - second-serve points won ~57.6%;
+  - return points won ~37.3%;
+  - tiebreaks 24-12.
+- Recent hard results:
+  - L Tommy Paul: 6-4, 6-7, 4-6
+  - W Terence Atmane: 7-6, 7-6
+  - W Cameron Norrie: 3-6, 6-3, 6-3
+  - L Tallon Griekspoor: 7-6, 2-6, 4-6
+- Interpretation: elite underlying hard/Grand-Slam profile, but the immediate North American hard swing has included several close-set/tiebreak and losing states rather than pure blowouts.
+
+### Lorenzo Sonego
+- Current ranking: #89.
+- Current 2026 hard record: approximately **5-5** in the freshest exact-surface retrieval.
+- Career hard Grand Slam / best-of-five record: approximately **14-16**.
+- Career hard record vs Top 10: approximately **4-20**.
+- Recent hard results:
+  - L James Duckworth: 5-7, 3-6
+  - W Adrian Mannarino: 6-1, 7-6
+  - W Pierre-Hugues Herbert: 7-6, 4-6, 6-3
+  - L Frances Tiafoe: 3-6, 4-6
+  - W Juncheng Shang: 6-3, 6-3
+  - L Tallon Griekspoor: 6-7, 5-7
+- Interpretation: mixed current hard form with meaningful tiebreak/close-set exposure. Sonego's record against elite hard-court opposition is poor, but his serve can preserve narrow-set branches even when the match-winner probability is low.
+
+## D. Recency window block
+
+### Zverev — hard
+| Window | Result | Status |
+|---|---:|---|
+| L5 | 2-3 | current direct hard results |
+| L10 | 6-4 | current direct hard results |
+| L15 | not recovered as one stable provider-defined window | PARTIAL_SOURCE_COVERAGE |
+| L20 | not recovered as one stable provider-defined window | PARTIAL_SOURCE_COVERAGE |
+| 2026 hard anchor | 17-7 | current season anchor |
+
+**Trend verdict:** NO FORMAL TREND — L5/L10 are non-monotone and exact L15/L20 provider windows were not recoverable consistently enough to manufacture a trend.
+
+### Sonego — hard
+| Window | Result | Status |
+|---|---:|---|
+| L5 | 3-2 | current hard results |
+| L10 | 5-5 | complete 2026 hard window in current database |
+| L15 | TRUE COUNT 10 | MISSING — insufficient 2026 hard matches |
+| L20 | TRUE COUNT 10 | MISSING — insufficient 2026 hard matches |
+
+**Trend verdict:** NO TREND — NOISE.
+
+## E. Head-to-head continuity audit
+
+Current H2H: **Zverev 3-0**.
+
+Verified meetings:
+1. Beijing 2025, hard: Zverev 6-4, 6-3.
+2. Halle 2025, grass: Zverev 3-6, 6-4, 7-6.
+3. Halle 2024, grass: Zverev 6-4, 7-6.
+
+### Game-margin implication
+All three prior meetings would have made **Sonego +6.5 games a winner**:
+- Beijing: Zverev +5 net games.
+- Halle 2025: net games approximately level.
+- Halle 2024: Zverev +3 net games.
+
+### Continuity verdict
+**MODERATE for matchup shape; LOW-MODERATE for exact-contract transfer.**
+
+Why:
+- the Beijing meeting is recent and on hard;
+- both Halle matches support Sonego's ability to keep sets close;
+- but all three were best-of-three, while this match is best-of-five;
+- best-of-five creates more opportunity for Zverev's quality edge to accumulate into a large game margin.
+
+The H2H therefore supports the Sonego cushion as descriptive matchup evidence, not as a fitted cover rate.
+
+## F. Environment / roof state
+
+- Arthur Ashe Stadium has a retractable roof.
+- Rain heavily affected the outside courts during the session.
+- Earlier Arthur Ashe matches were played under the closed roof.
+- NWS around the night-session window:
+  - ~24-25°C early evening, falling toward 23°C;
+  - dew point ~22°C;
+  - humidity ~87-93%;
+  - E/NE wind about 5-6 mph;
+  - rain/thunderstorm probability still material around the early night window.
+- **Exact roof state for Zverev-Sonego was not independently confirmed by a same-match field-owner notice at cutoff.**
+
+Mechanism:
+- if closed, wind/rain are mostly neutralised as direct ball-flight inputs;
+- humidity/roof conditions may affect court feel, but no robust directional contract adjustment is justified;
+- weather therefore does not drive the ranking.
+
+## G. Set-count mixture
+
+These are qualitative relative weights, **not probabilities**.
+
+| Endpoint | Relative weight | Interpretation |
+|---|---:|---|
+| **3 sets** | **5/5** | central: large underlying quality gap and Zverev's elite Bo5 record |
+| 4 sets | 3/5 | meaningful: Sonego's serve/tiebreak profile can steal a set |
+| 5 sets | 1/5 | tail: requires sustained Sonego resistance or a major Zverev dip |
+
+The mixture is fixed before locating the 33.5 total.
+
+## H. Two-sided score-tree branches
+
+### Zverev ordinary straight-set control
+Representative: **6-3, 6-4, 6-3**
+- Total games: 28.
+- Net margin: Zverev +8.
+- Wins: Zverev -6.5, Under 33.5.
+
+### Zverev close straight-set control
+Representative: **7-6, 6-4, 6-4**
+- Total games: 33.
+- Net margin: Zverev +4.
+- Wins: Sonego +6.5, Under 33.5.
+
+### Zverev extended four-set control
+Representative: **6-4, 4-6, 6-3, 6-4**
+- Total games: 39.
+- Net margin: Zverev +5.
+- Wins: Sonego +6.5, Over 33.5.
+
+### Zverev separation four-set win
+Representative: **6-3, 6-4, 4-6, 6-2**
+- Total games: 37.
+- Net margin: Zverev +7.
+- Wins: Zverev -6.5, Over 33.5.
+
+### Sonego ordinary upset
+Any Sonego outright win automatically wins Sonego +6.5. A four- or five-set upset strongly favors Over 33.5; a straight-set upset is a remote Under path.
+
+## I. Reference base-rate anchors
+
+No calibrated probabilities are generated.
+
+### Sonego +6.5
+**Reference band: MEDIUM-HIGH**
+- large positive game cushion;
+- every Sonego win qualifies;
+- many close Zverev straight/four-set wins qualify.
+Event adjustment:
+- up modestly from all three historical H2H game margins staying inside +6.5;
+- down modestly for Zverev's elite Bo5/top-level gap.
+**Frozen band: MEDIUM-HIGH.**
+
+### Zverev -6.5
+**Reference band: MEDIUM-LOW**
+- requires substantial game separation.
+Event adjustment:
+- up for ranking/serve/Grand-Slam superiority and Sonego's poor Top-10 hard record;
+- down because Zverev's latest hard matches have included tiebreak/close-set states and all prior H2Hs stayed inside this margin.
+**Frozen band: MEDIUM-LOW / MEDIUM.**
+
+### Under 33.5
+**Reference band: MEDIUM**
+- straight sets are structurally favored in a large mismatch;
+- many normal 3-0 Zverev scores land below 34.
+Event adjustment:
+- up slightly because the three-set endpoint is the central branch.
+**Frozen band: MEDIUM / slight lean.**
+
+### Over 33.5
+**Reference band: MEDIUM**
+- four sets usually clear;
+- close three-set scorelines can clear too.
+Event adjustment:
+- down slightly because Sonego winning a set is meaningful but not central.
+**Frozen band: MEDIUM-LOW / boundary.**
+
+## J. External market sanity check — non-controlling
+
+Current public books showed:
+- Zverev as a very heavy match favorite;
+- Sonego +6.5 and Zverev -6.5 priced close to even, with several snapshots marginally favoring Sonego +6.5;
+- total 33.5 near a 50/50 boundary, with some books slightly favoring Under and others slightly favoring Over;
+- Zverev 3-0 as the single shortest correct-score outcome.
+
+These are **not the user's operator**, are not internal probabilities and are not value evidence. They support the qualitative conclusion that:
+1. winner certainty is much higher than handicap certainty;
+2. +6.5 is a meaningful cushion;
+3. the 33.5 total is genuinely near the central score corridor.
+
+## K. Frozen ranking
+
+**Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING  
+**Value state:** NO VALUE DETERMINABLE  
+**Retirement terms:** UNKNOWN_DEFINITION
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-245-C01 — Sonego +6.5 games** | **LEAN** | MEDIUM | The cushion survives every prior H2H margin and many plausible close-straight/four-set Zverev wins. |
+| **2** | **P-245-C04 — Under 33.5 games** | **SLIGHT LEAN** | MEDIUM-LOW | Zverev straight sets are the central set-count branch; ordinary 3-0 scores land below 34. |
+| **3** | **P-245-C02 — Zverev -6.5 games** | **LEAN-ADJACENT / FORCED RANK** | MEDIUM-LOW | Elite mismatch creates strong separation paths, but the line is large and prior matchup margins argue against assuming blowout conversion. |
+| **4** | **P-245-C03 — Over 33.5 games** | **FORCED RANK / weaker total direction** | LOW-MEDIUM | Four sets or extremely close straight sets clear it, but those are secondary to the straight-set central branch. |
+
+### Total-direction control
+Recommend **Under 33.5 only** among the two opposing total directions.
+
+## L. Potential winner
+
+**Alexander Zverev — LEAN, with substantially stronger winner evidence than any derivative contract.**
+
+This is not a fifth independent pick.
+
+Why:
+1. current world ranking #2 vs Sonego #89;
+2. Zverev leads H2H 3-0;
+3. Zverev is 17-7 on hard in 2026 versus Sonego around 5-5;
+4. Zverev's 2026 Grand Slam record is 18-2;
+5. Zverev's hard best-of-five record is elite;
+6. Sonego is only about 4-20 against Top-10 opponents on hard.
+
+Why the -6.5 handicap is much less certain than the winner:
+- all three H2Hs stayed inside a 6.5-game Sonego cushion;
+- Zverev's latest hard matches include several tiebreaks and close-set states;
+- Sonego can lose 3-0 and still cover +6.5 if two sets are close.
+
+## M. Frozen user-facing forecast
+
+### Verified event/status
+Alexander Zverev vs Lorenzo Sonego is a **2026 US Open Men's Singles Round 1 match at Arthur Ashe Stadium, hard court, best-of-five**. At the final refresh the match was still listed **Upcoming / Not started**, with the current bracket start around **11:20 AEST**, roughly 44 minutes after the frozen cutoff.
+
+### Best four supplied picks
+1. **Sonego +6.5 games — LEAN**
+2. **Under 33.5 total games — SLIGHT LEAN**
+3. **Zverev -6.5 games — lower-confidence separation side**
+4. **Over 33.5 games — weaker total direction**
+
+### Why Sonego +6.5 is #1
+Zverev is overwhelmingly the stronger match-winner candidate, but +6.5 is a large game cushion.
+
+The three verified prior meetings all went to Zverev, yet every one would have landed inside Sonego +6.5:
+- Beijing 2025 hard: Zverev 6-4, 6-3 — +5 net games.
+- Halle 2025: Zverev won in three with net games roughly level.
+- Halle 2024: Zverev 6-4, 7-6 — +3 net games.
+
+Best-of-five can amplify Zverev's quality edge, so I do not mechanically project those covers. But Sonego's recent matches still contain tiebreak/close-set patterns, and Zverev's North American hard swing has not been uniformly dominant.
+
+A representative **7-6, 6-4, 6-4 Zverev straight-set win** finishes at only +4 net games, so Sonego +6.5 can win even while Zverev wins comfortably in sets.
+
+### Why Under 33.5 is #2
+The central match-length state is Zverev 3-0.
+
+An ordinary Zverev straight-set score like **6-3, 6-4, 6-3** totals only 28 games. Even a closer **7-6, 6-4, 6-4** totals 33, still Under 33.5.
+
+The Over becomes much stronger if Sonego wins a set; most four-set states clear 33.5. But I do not make Sonego taking a set the central branch given Zverev's ranking, Grand Slam record and serve/return edge.
+
+### Why Zverev -6.5 is only #3
+Zverev has obvious blowout routes. A 6-3, 6-4, 6-3 score covers comfortably.
+
+The issue is that -6.5 needs **game separation**, not merely a straight-set win. Zverev could win 3-0 with one or two tiebreak/close sets and fail -6.5. The historical H2H margins reinforce that caution.
+
+### Likely winner
+**Alexander Zverev — LEAN.**
+
+This is not an additional independent pick.
+
+### Environment
+Arthur Ashe has a retractable roof. Heavy rain affected the US Open session, and earlier Ashe matches were played under the roof. The exact Zverev-Sonego roof state was not independently field-owner confirmed at cutoff, so no weather-based total adjustment is made.
+
+### Settlement/publication boundary
+No operator or retirement rule was supplied. Exact retirement/walkover/void handling therefore remains `UNKNOWN_DEFINITION`.
+
+No calibrated probability, expected value, market edge, ROI or staking recommendation is published.
+
+## N. Append confirmation
+
+- Complete frozen P-245 forecast appended before delivery: **YES**
+- State confirmed not started at cutoff: **YES**
+- Drive modified: **NO**
+- Prior forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Learning register changed: **NO**
+
+
+---
+
+# P-246 — New York Yankees @ Los Angeles Angels — MLB — STATE-CROSSED / NO ACTIONABLE LIVE FORECAST
+
+## A. Identity and request state
+
+- **Append sequence:** P-246
+- **Request received:** 2026-09-02 approximately 11:39 AEST
+- **Scheduled first pitch:** 2026-09-01 18:38 PDT / 2026-09-02 11:38 AEST
+- **Sport:** Baseball
+- **Competition:** MLB regular season
+- **Fixture:** New York Yankees @ Los Angeles Angels
+- **Venue:** Angel Stadium, Anaheim, California
+- **Supplied probable pitchers:** Gerrit Cole / Grayson Rodriguez
+- **Official probable-pitcher verification:** PASS
+  - Gerrit Cole, NYY: 7-7, 3.19 ERA, 105 SO
+  - Grayson Rodriguez, LAA: 4-5, 6.03 ERA, 65 SO
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-BASEBALL
+
+## B. Start-state gate
+
+The request arrived at or immediately after the scheduled first pitch.
+
+Current state evidence was inconsistent:
+- MLB standings/schedule surfaces marked the event **LIVE**.
+- One current live-score source showed **NYY 0 — LAA 1**.
+- The MLB schedule surface returned **NYY 0 — LAA 0**.
+- Current CBS/MLB pages did not expose a consistently retrievable inning/phase state in the same research window.
+
+Because the active framework requires a verified live state before directional live analysis after first pitch, this card is classified:
+
+**`LIVE STATE NOT VERIFIED — NO ACTIONABLE LIVE FORECAST`**
+
+No stale pregame freeze is fabricated.
+
+## C. Supplied contracts preserved for audit only
+
+1. Yankees -1.5
+2. Angels +1.5
+3. Over 7.5
+4. Under 7.5
+
+- **Operator:** NOT SUPPLIED
+- **Odds:** NOT SUPPLIED
+- **Listed-pitcher/action rule:** UNKNOWN_DEFINITION
+- **Extra-inning rule:** UNKNOWN_DEFINITION
+- **Shortened/suspended-game rule:** UNKNOWN_DEFINITION
+- **No ranking issued after state-crossing.**
+
+## D. Pregame research evidence preserved — NON-ACTIONABLE
+
+### Starter baseline
+
+**Gerrit Cole**
+- 2026: 7-7, 3.19 ERA, 1.07 WHIP.
+- Last five starts: 30.2 IP, 8 ER, **2.35 ERA**, 32 K, 7 BB.
+- Recent starts included 6 IP/1 ER at Baltimore, 6 IP/1 ER at Toronto, 7 IP/2 ER vs Atlanta.
+- Stronger established current starter centre than Rodriguez.
+
+**Grayson Rodriguez**
+- 2026: 4-5, 6.03 ERA, 1.52 WHIP.
+- Last five starts: 27.2 IP, 9 ER, **2.93 ERA**, 29 K.
+- Latest two starts: 7 IP with 0 ER at Houston, then 5.2 IP with 1 ER vs Cleveland.
+- His recent form materially improved from the poor full-season ERA and therefore blocked a simple “season ERA = Yankees blowout” argument.
+
+### Team / bullpen context
+- Yankees: 78-60, +108 run differential entering the game.
+- Angels: 53-85.
+- Yankees bullpen ERA over the prior 15 days: **2.65**.
+- Angels bullpen ERA over the prior 15 days: **4.01**.
+- Yankees recent scoring snapshots were roughly 5.4 R/G over the freshest L5 and about 4.6-5.7 over current L10 snapshots depending retrieval timestamp.
+- Angels current L10 scoring snapshot: about **3.5 R/G**.
+- Angels had won the series opener 10-1, but that was against a different starter and is not inserted as a current Cole/Rodriguez expectation.
+- Aaron Judge remained out; the Yankees' lineup therefore was not full-strength.
+- Current game reporting indicated New York planned a heavily left-handed lineup against Rodriguez.
+
+### Environment
+- Angel Stadium: outdoor.
+- NWS near first pitch:
+  - about 79°F at 18:00 PDT, 76°F around 19:00;
+  - dew point about 58°F;
+  - SW wind about 7-8 mph;
+  - 0% precipitation.
+- Weather did not create a strong directional total adjustment.
+
+### Pregame market sanity check — external only
+Same-day public snapshots had approximately:
+- Yankees ML around -175 to -192;
+- Yankees -1.5 around -102 to -110;
+- Angels +1.5 around -118 to -110;
+- total 7.5 with Over roughly -120 to -110 and Under roughly -102 to -110.
+
+This is not the user's operator and is not a value claim. It shows:
+- strong market preference for Yankees outright;
+- much weaker confidence in Yankees -1.5 than in the moneyline;
+- 7.5 was a genuine boundary total rather than a one-sided market.
+
+## E. Why no ranking is issued
+
+A valid pregame card requires `cutoff_at < scheduled_start_at`.
+That condition failed.
+
+A valid live card requires:
+- score,
+- inning/half-inning,
+- outs/base state where material,
+- participant orientation,
+- current pitcher/batter state,
+- consistent current feeds.
+
+Those fields were not verified consistently enough.
+
+Therefore:
+- no four-pick directional ranking is issued;
+- no likely-winner call is issued as an actionable live forecast;
+- no stale pregame analysis is retroactively frozen;
+- no probabilities/value/edge/ROI/staking claims are made.
+
+## F. Research-only pregame conclusion
+
+Before state crossing, the cleanest **non-actionable research conclusion** would have been:
+- **Outright matchup edge:** Yankees, primarily because of Cole + bullpen quality.
+- **Run-line uncertainty:** materially higher than moneyline certainty because Rodriguez's last-five form had improved and Angels +1.5 carried the positive cushion.
+- **Total:** genuinely two-sided at 7.5; Cole/Yankees bullpen supported lower states, while Rodriguez's season volatility and the Yankees' left-handed matchup path supported upper states.
+
+This section is preserved as research evidence only and is **not an issued forecast**.
+
+## G. Append confirmation
+
+- State checked before issuing a forecast: **YES**
+- Event already at/after scheduled start: **YES**
+- Live state consistently verified: **NO**
+- Actionable forecast issued: **NO**
+- Stale pregame forecast fabricated: **NO**
+- Prior forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Drive modified: **NO**
+
+
+---
+
+## Administrative continuation note — before P-247
+
+The connected Drive canonical top snapshot remains behind the local read-only continuation (`Next canonical ID: P-239`). The local append-only sequence already contains P-239 through P-246. This distinct event is therefore appended locally as **P-247**. No Google Drive file is modified.
+
+---
+
+# P-247 — Philadelphia Phillies @ Arizona Diamondbacks — MLB — ZERO-PITCH LIVE-START FORECAST
+
+## A. Frozen identity and live state
+
+- **Append sequence:** P-247
+- **Request type:** LIVE
+- **Final state refresh / frozen cutoff:** 2026-09-02 11:45 AEST (Australia/Melbourne)
+- **Scheduled first pitch:** 2026-09-01 21:40 EDT / 18:40 MST at Chase Field
+- **Sport:** Baseball
+- **Competition:** MLB regular season
+- **Fixture:** Philadelphia Phillies @ Arizona Diamondbacks
+- **Venue:** Chase Field, Phoenix, Arizona
+- **Venue class:** RETRACTABLE
+- **Roof state at frozen live feed:** CLOSED
+- **Frozen score:** PHI 0 — ARI 0
+- **Frozen inning:** Top 1
+- **Frozen phase:** LIVE (WARMUP)
+- **Frozen batter/pitcher orientation:** Kyle Schwarber due; Eduardo Rodríguez pitching
+- **Pitch count / starter exposure at frozen state:** 0 pitches recorded; both starters displayed at 0.0 IP
+- **GAME-STATE:** `LIVE_ZERO_PITCH_WARMUP`
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-BASEBALL
+- **Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING
+- **Value state:** NO VALUE DETERMINABLE
+- **Retrospective performed:** NO
+
+### Live-state freshness note
+
+The best retrieved live game feed showed the zero-pitch warmup state above. This forecast is frozen **only** to that state. No pitch, run, baserunner or result first known after the frozen cutoff is inserted into this analysis. If a downstream app displayed a later state by the time of delivery, this card remains the immutable 0-0/Top-1/warmup forecast rather than being silently refreshed.
+
+## B. Starter / participant handshake
+
+### Philadelphia — Jesús Luzardo, LHP
+- Official MLB probable/starting listing: **12-5, 3.09 ERA, 203 SO**.
+- Current season WHIP around **1.12**.
+- Current preview: approximately **11.2 K/9**.
+- Latest start (Aug. 26 at Seattle): **7 IP, 0 ER, 1 H**.
+- Current preview reports approximately a **1.90 ERA since June 10**, materially better than his early-season volatility.
+- First-inning suppression has been particularly strong in 2026.
+- Earlier 2026 direct start vs Arizona (Apr. 10): 4.2 IP, 5 ER. This is retained as matchup downside evidence but is heavily downweighted relative to his current regime.
+
+### Arizona — Eduardo Rodríguez, LHP
+- Official MLB probable/starting listing: **14-4, 2.50 ERA, 119 SO**.
+- Season WHIP around **1.19**.
+- Last five starts: **31.1 IP, 9 ER, 2.59 ERA**, 31 K.
+- Last four starts before P-247: approximately **25.2 IP, 4 ER**, including back-to-back scoreless outings vs Cincinnati and Chicago.
+- Latest start (Aug. 26 vs Cubs): **7 IP, 0 ER, 2 H, 9 K**.
+- Recent home state is strong and materially reduces Philadelphia's ordinary early-run ceiling.
+- Secondary expected-stat commentary suggested some ERA regression risk, but that is lower-authority evidence and does not override the actual current results.
+
+## C. Confirmed/current lineup state
+
+The live game feed / current match pages exposed the game-day batting orders.
+
+### Philadelphia
+1. Kyle Schwarber — DH
+2. Trea Turner — SS
+3. Bryce Harper — RF
+4. Luis Arraez — 2B
+5. Alec Bohm — 1B
+6. Edmundo Sosa — LF
+7. Bryson Stott — 3B
+8. J.T. Realmuto — C
+9. Derek Hill — CF
+
+### Arizona
+1. Geraldo Perdomo — SS
+2. Corbin Carroll — RF
+3. Gabriel Moreno — C
+4. Ketel Marte — DH
+5. Nolan Arenado — 3B
+6. Ildemaro Vargas — 2B
+7. Tim Tawa — 1B
+8. Jordan Lawlar — CF
+9. Ryan Waldschmidt — LF
+
+Lineup interpretation:
+- Philadelphia carries the stronger concentrated top-order power/OBP branch.
+- Arizona has meaningful contact and speed through Perdomo/Carroll/Moreno/Marte.
+- Both starters are left-handed, so platoon composition matters, but neither lineup is weak enough to erase late scoring tails.
+
+## D. Contract freeze
+
+### User-supplied slate
+1. Phillies ML
+2. Diamondbacks +1.5
+3. Full-game Over 7.5
+4. Full-game Under 7.5
+
+- **Operator:** NOT SUPPLIED
+- **User odds:** NOT SUPPLIED
+- **Listed-pitcher/action terms:** UNKNOWN_DEFINITION
+- **Extra-inning treatment:** UNKNOWN_DEFINITION from user/operator
+- **Sporting target for analysis:** official MLB full-game result including extra innings if played.
+- **Shortened/suspended-game settlement:** UNKNOWN_DEFINITION.
+
+### Geometry
+- Phillies ML and Diamondbacks +1.5 are **not complements**:
+  - both win when Philadelphia wins by exactly one;
+  - Arizona +1.5 also wins on every Arizona outright win;
+  - Phillies ML loses on every Arizona win.
+- Over 7.5 and Under 7.5 are exact half-run complements under normal completed-game action.
+
+| ID | Contract | Geometry | Dependence group |
+|---|---|---|---|
+| P-247-C01 | Phillies ML | PHI final win | P247-WINNER |
+| P-247-C02 | Diamondbacks +1.5 | ARI win or PHI by exactly 1 | P247-MARGIN |
+| P-247-C03 | Over 7.5 | 8+ total runs | P247-TOTAL |
+| P-247-C04 | Under 7.5 | 0-7 total runs | P247-TOTAL |
+
+## E. Recent team form
+
+### Philadelphia
+- Record at freeze: **78-60**.
+- Current streak entering game: **five straight wins**.
+- Current broader run: **14 wins in the last 16**.
+- Last 10: **8-2**.
+- Current L10 scoring: approximately **5.2 runs/game**.
+- August record: **21-7**, best in MLB in the cited current report.
+- Recent road wins immediately before Arizona included 5-2, 4-2 and 5-3 over the Angels, plus a 6-0 win in Seattle.
+
+### Arizona
+- Record at freeze: **73-66**.
+- Last 10 around **5-5** on the freshest current team snapshot; timestamped StatMuse windows ranged roughly **3.8-4.6 runs/game** as the rolling set changed.
+- Lost the opener of this series 2-1.
+- Arizona generated nine hits and four walks in the opener but went **0-for-9 with runners in scoring position**, showing traffic without conversion.
+- Ketel Marte returned to the lineup in the opener after a 13-game absence.
+
+### Trend verdict
+- Philadelphia: clearly positive result regime, but L5/L10/L15/L20 run-rate windows are not treated as independent evidence.
+- Arizona: mixed; no monotone directional trend is promoted.
+
+## F. 2026 H2H / matchup continuity
+
+Current completed 2026 meetings before this frozen state include:
+- April 10: Arizona 5-4
+- April 11: Philadelphia 4-3
+- April 12: Arizona 4-3
+- Aug. 31: Philadelphia 2-1
+
+Implications at a 7.5 total:
+- one of the four completed meetings cleared 7.5;
+- three finished at 7 or fewer.
+- All four were one-run games.
+
+**Continuity verdict:** MODERATE.
+- same clubs and several same core hitters;
+- but pitchers, bullpen roles, injuries and current regimes differ substantially.
+- H2H is therefore descriptive, not a direct probability estimate.
+
+The repeated one-run geometry is relevant to **Diamondbacks +1.5**, but it is not treated as four independent confirmations.
+
+## G. Bullpen state and prior-day workload
+
+### Philadelphia
+In the 2-1 opener, after Aaron Nola's five innings the Phillies used:
+- Alex McFarlane — 15 pitches
+- Orion Kerkering — 11
+- Brooks Raley — 3
+- José Alvarado — 14
+- Jhoan Duran — 18
+
+All five worked scoreless relief innings/outs.
+
+Interpretation:
+- quality state is good;
+- several high-leverage arms were used the previous night;
+- individual pitch counts were mostly moderate, so they are not automatically unavailable;
+- repeated high-leverage usage reduces the certainty of a pristine full-game Under branch.
+
+### Arizona
+The Diamondbacks used:
+- Jonathan Loáisiga — 14 pitches
+- Juan Morillo — **33 pitches**
+- Kevin Ginkel — 12 pitches
+
+Interpretation:
+- Morillo is the clearest likely workload limitation.
+- Other key relief pieces were less taxed.
+- Arizona's late-game depth is not fully fresh, adding a small upper-tail run mechanism.
+
+## H. Venue / roof / environment
+
+- **Chase Field:** retractable roof.
+- Frozen live feed: **roof closed**.
+- Displayed in-stadium condition: approximately **76°F**, no wind influence.
+- External preview park profile: mild positive run/HR environment, roughly neutral-to-slightly hitter friendly rather than Coors-like.
+
+Mechanism:
+- outdoor Phoenix heat/wind is not directly applied with the roof closed.
+- total direction must come from pitchers, offenses, relief exposure and score corridor rather than generic desert weather.
+
+## I. Live target / score-family model
+
+Because the frozen live state is **0-0 before a recorded pitch**, the original full-game target is effectively intact, but it is explicitly stored as a live zero-pitch state rather than retroactively labelled pregame.
+
+### Low / close
+Representative:
+- PHI 3-2
+- PHI 4-3
+- ARI 3-2
+- ARI 4-3
+
+Supports:
+- Diamondbacks +1.5
+- Phillies ML in PHI versions
+- Under 7.5 for 3-2/4-3
+
+### Low / Philadelphia separation
+Representative:
+- PHI 4-1
+- PHI 5-2
+
+Supports:
+- Phillies ML
+- Under 7.5 at 4-1/5-2
+- defeats Arizona +1.5 if margin 2+
+
+### High / close
+Representative:
+- PHI 5-4
+- ARI 5-4
+
+Supports:
+- Diamondbacks +1.5
+- Over 7.5
+
+### High / Philadelphia
+Representative:
+- PHI 6-3 / 6-4
+
+Supports:
+- Phillies ML
+- Over 7.5
+- often defeats Arizona +1.5
+
+### Arizona control kill path
+Representative:
+- ARI 4-2 / 5-3
+
+Mechanism:
+- E. Rodríguez sustains his current form;
+- Arizona converts traffic better than in the opener;
+- Philadelphia's prior-day bullpen workload matters late.
+
+## J. Total 7.5 component budget
+
+### Under mechanisms
+1. Two strong current starting-pitcher centres:
+   - Luzardo 3.09 season ERA with excellent recent run prevention;
+   - Rodríguez 2.50 season ERA / 2.59 last-five ERA.
+2. Roof closed removes material weather variance.
+3. Three of four current-season meetings finished with seven runs or fewer.
+4. Both starters have recent six/seven-inning efficiency branches.
+
+### Over mechanisms
+1. Philadelphia offense: ~5.2 R/G over current L10.
+2. Arizona has generated baserunners/traffic even during lower-scoring games.
+3. Both relief groups used multiple arms in the opener; Philadelphia used five different relievers.
+4. Arizona's Morillo threw 33 pitches.
+5. Chase Field carries a mild positive HR/run environment.
+6. Philadelphia's top order has high-impact extra-base potential.
+
+### Corridor conclusion
+**7.5 lies inside the central corridor.**
+Representative central totals are roughly 6-8 runs.
+The Under has a small mechanism edge from the two starter profiles, but ordinary upper branches reach eight without requiring a collapse.
+
+Therefore the total evidence is capped below strong language.
+
+## K. External same-day market sanity check — non-controlling
+
+External same-day prices located during research varied by snapshot:
+- Phillies ML approximately **1.64-1.66** in one current market;
+- Arizona +1.5 approximately **1.60**;
+- total 7.5 ranged from essentially even to an **Over-shorter** configuration in another snapshot.
+
+An earlier market also dealt an 8.5 total.
+
+Interpretation:
+- external market agrees Arizona +1.5 can be marginally more likely than Phillies ML despite Philadelphia being the outright favorite;
+- total pricing does **not** provide stable confirmation for either direction;
+- market evidence is external only and does not create an internal value claim.
+
+## L. Reference base-rate anchors
+
+No calibrated probabilities are generated.
+
+| Contract | Reference band | Live/event adjustment | Frozen band |
+|---|---|---|---|
+| Diamondbacks +1.5 | HIGH-MEDIUM | Strong E-Rod form + repeated close-game geometry; down for PHI current team form | **MEDIUM-HIGH** |
+| Phillies ML | MEDIUM | Up for current team form/offense/Luzardo; down for E-Rod quality | **MEDIUM-HIGH, slightly below ARI +1.5** |
+| Under 7.5 | MEDIUM | Up for starter quality/closed roof; down for bullpen usage and PHI offense | **MEDIUM / slight lean** |
+| Over 7.5 | MEDIUM | Up for offense/relief exposure; down for two strong SP states | **MEDIUM-LOW / boundary** |
+
+## M. Frozen ranking
+
+**Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING  
+**Value state:** NO VALUE DETERMINABLE
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-247-C02 — Diamondbacks +1.5** | **LEAN** | MEDIUM | Positive run cushion, E-Rod's elite current form, and close-game pathways; can win alongside a one-run Phillies victory. |
+| **2** | **P-247-C01 — Phillies ML** | **LEAN** | MEDIUM | Philadelphia is the stronger current team, hotter offense and stronger overall winner profile, but E-Rod materially narrows the gap. |
+| **3** | **P-247-C04 — Under 7.5** | **SLIGHT LEAN** | MEDIUM-LOW | Two high-quality current starter profiles and closed roof; total remains boundary because relief usage/offense can create eight. |
+| **4** | **P-247-C03 — Over 7.5** | **FORCED RANK / weaker total direction** | LOW-MEDIUM | Credible through bullpen/four-plus-run components, but requires the starter-suppression branch to be overcome. |
+
+### Total-direction control
+Recommend **Under 7.5 only**, and only as a slight lean.
+
+### Strongest evidence type
+**Side market first**, specifically the Arizona +1.5 cushion.  
+Outright winner evidence still favors Philadelphia.
+
+## N. Potential winner
+
+**Philadelphia Phillies — LEAN**
+
+Not an additional independent contract.
+
+Reasons:
+1. 78-60 vs 73-66.
+2. Philadelphia has won five straight and 14 of 16.
+3. Phillies score ~5.2 R/G over the current L10.
+4. Luzardo combines a 3.09 ERA with a major strikeout advantage.
+5. Philadelphia's bullpen has recently rounded into materially better form.
+
+Counterweight:
+- Eduardo Rodríguez has arguably the best immediate starter form in the matchup.
+- Arizona has home field and strong top-half lineup quality.
+- Four completed 2026 meetings before P-247 were all decided by one run.
+- Philadelphia's high-leverage bullpen was used extensively in the opener.
+
+## O. Frozen user-facing forecast
+
+### Verified live state
+The best live feed at the frozen cutoff showed:
+
+- **PHI 0 — ARI 0**
+- **Top 1**
+- **Live / Warmup**
+- **0 pitches recorded**
+- **Eduardo Rodríguez on the mound**
+- **Kyle Schwarber due**
+- **Chase Field roof closed**
+
+This is therefore a **zero-pitch live-start forecast**, not a retroactive pregame forecast.
+
+### Best four supplied picks
+1. **Diamondbacks +1.5 — LEAN**
+2. **Phillies ML — LEAN**
+3. **Under 7.5 — SLIGHT LEAN**
+4. **Over 7.5 — weaker total direction**
+
+### Why Diamondbacks +1.5 is #1
+The cushion is more forgiving than asking Philadelphia simply to win.
+
+Eduardo Rodríguez has a 2.50 season ERA and a 2.59 ERA over his last five starts. His two most recent outings were scoreless, and he has allowed only four earned runs across his last four starts. That makes a close game a very credible central branch.
+
+At the same time, Philadelphia is still the better outright team. A 3-2 or 4-3 Phillies win makes **both** Diamondbacks +1.5 and Phillies ML successful.
+
+The 2026 series has also repeatedly produced one-run games, including the 2-1 Philadelphia win in the opener. That is descriptive matchup geometry, not an independent cover-rate model.
+
+### Why Phillies ML is #2
+Philadelphia enters 78-60, on a five-game winning streak and 14-2 over its latest 16-game stretch. The Phillies are scoring about 5.2 runs per game over their last ten.
+
+Luzardo is also strong enough to keep Arizona's offense controlled: 3.09 ERA, 1.12 WHIP and 203 strikeouts.
+
+The reason this does not rank first is Eduardo Rodríguez. His current run-prevention state is strong enough that Arizona's outright-win branch remains substantial.
+
+### Why Under 7.5 is #3
+Both starting pitchers enter in excellent current form, and the roof is closed.
+
+A 3-2, 4-2, 4-3 or 5-2 game all lands Under. Three of the four completed 2026 meetings before tonight also finished at seven runs or fewer.
+
+The concern is bullpen workload. Philadelphia used five relievers in the opener and Arizona used three, including 33 pitches from Juan Morillo. Philadelphia's offense also has enough current form to turn a 3-2 game into 5-3 quickly.
+
+So Under 7.5 is only a **slight lean**.
+
+### Likely winner
+**Philadelphia Phillies — LEAN.**
+
+This is not a fifth independent contract.
+
+### Publication/settlement boundary
+No user sportsbook or odds were supplied. Listed-pitcher/action rules, shortened-game terms and exact extra-inning settlement therefore remain `UNKNOWN_DEFINITION`.
+
+No calibrated probability, expected value, market edge, ROI or staking recommendation is published.
+
+## P. Append confirmation
+
+- Complete frozen P-247 forecast appended before delivery: **YES**
+- Live state frozen: **YES**
+- Later live facts backfilled: **NO**
+- Drive modified: **NO**
+- Prior forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Learning register changed: **NO**
+
+
+---
+
+## Administrative continuation note — before P-248
+
+The connected Drive canonical top snapshot remains behind the local read-only continuation. The local append-only sequence already contains issued P-239 through P-247. This distinct event is therefore appended locally as **P-248**. No Google Drive file is modified.
+
+---
+
+# P-248 — St. Louis Cardinals @ Los Angeles Dodgers — MLB — PREGAME FORECAST
+
+## A. Frozen identity and state
+
+- **Append sequence:** P-248
+- **Request time:** 2026-09-02 11:51 AEST
+- **Final state refresh / frozen cutoff:** 2026-09-02 11:52:45 AEST
+- **Scheduled first pitch:** 2026-09-01 19:10 PDT / 2026-09-02 12:10 AEST
+- **Cutoff invariant:** PASS — approximately 17 minutes before scheduled first pitch.
+- **GAME-STATE:** PREGAME / SCHEDULED / NO RECORDED PLAYS
+- **Sport:** Baseball
+- **Competition:** MLB regular season
+- **Fixture:** St. Louis Cardinals @ Los Angeles Dodgers
+- **Venue:** UNIQLO Field at Dodger Stadium, Los Angeles, California
+- **Venue class:** OUTDOOR
+- **Records at cutoff:** STL 68-70; LAD 82-55
+- **Method:** MDS-2026.08.31-v2.9
+- **General algorithm:** GFA-1
+- **Sport algorithm:** SFA-BASEBALL
+- **Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING
+- **Value state:** NO VALUE DETERMINABLE
+- **Retrospective performed:** NO
+
+A current game-status page showed the event as scheduled, 0-0, with no recorded plays at the frozen cutoff.
+
+## B. Starter handshake
+
+### St. Louis — Michael McGreevy, RHP
+- MLB official probable: **5-9, 3.86 ERA, 98 SO**.
+- Season: 142.1 IP, 1.25 WHIP.
+- Latest five starts reconstructed from the current game log:
+  - 8/26 vs BAL: 5 IP, 7 ER
+  - 8/20 at CIN: 5.1 IP, 3 ER
+  - 8/15 at CHC: 6 IP, 0 ER
+  - 8/9 vs COL: 5.2 IP, 3 ER
+  - 8/3 at NYY: 4.1 IP, 2 ER
+- Last-five aggregate: approximately **26.1 IP / 15 ER / 5.13 ERA**.
+- Latest start was materially poor: 10 hits and seven earned runs in five innings.
+- Direct 2026 matchup vs LAD (May 2): **6 scoreless innings**, three hits, three walks in a 3-2 Cardinals win.
+- That direct success is relevant but not controlling; the Dodgers lineup/health and McGreevy's current form have changed.
+
+### Los Angeles — Eric Lauer, LHP
+- MLB official probable: **8-6, 4.78 ERA, 70 SO**.
+- Current full-season line: about 105.1 IP, 1.26 WHIP.
+- Latest five starts reconstructed from the current game log:
+  - 8/18 at COL: 5 IP, 4 ER
+  - 8/12 vs KC: 6.1 IP, 1 ER
+  - 8/5 at CHC: 4 IP, 6 ER
+  - 7/29 vs SEA: 6 IP, 0 ER
+  - 7/22 at PHI: 5.1 IP, 3 ER
+- Last-five aggregate: approximately **26.2 IP / 14 ER / 4.73 ERA**.
+- Current reporting notes Lauer has generally pitched better at Dodger Stadium than his overall season ERA suggests.
+- He is not an ace-level suppression anchor; ordinary 3-4 run Cardinals branches remain live.
+
+## C. Contract freeze and geometry
+
+### User-supplied slate
+1. Dodgers -1.5
+2. Cardinals +1.5
+3. Full-game Over 9.0
+4. Full-game Under 9.0
+
+- **Operator:** NOT SUPPLIED
+- **User odds:** NOT SUPPLIED
+- **Listed-pitcher/action terms:** UNKNOWN_DEFINITION
+- **Shortened/suspended-game rule:** UNKNOWN_DEFINITION
+- **Extra-inning grading:** UNKNOWN_DEFINITION
+- **Sporting target assumption for analysis:** official MLB full-game final score including extra innings if played.
+
+### Geometry
+- LAD -1.5 and STL +1.5 are exact margin complements under ordinary completed-game grading.
+- Over 9.0 and Under 9.0 include **push mass at exactly 9 runs**:
+  - Over wins at 10+;
+  - Under wins at 8 or fewer;
+  - exactly 9 pushes under ordinary total-9 terms.
+- Therefore the total pair does not force one winner.
+
+| ID | Contract | Win / Push / Loss geometry | Dependence |
+|---|---|---|---|
+| P-248-C01 | Dodgers -1.5 | LAD by 2+ | P248-MARGIN |
+| P-248-C02 | Cardinals +1.5 | STL win or LAD by exactly 1 | P248-MARGIN |
+| P-248-C03 | Over 9.0 | 10+ / 9 / 0-8 | P248-TOTAL |
+| P-248-C04 | Under 9.0 | 0-8 / 9 / 10+ | P248-TOTAL |
+
+## D. Lineup / availability gate
+
+### Official lineup status
+The MLB official lineup page still displayed **TBD** for both clubs at the frozen cutoff. Therefore projected/secondary orders are not promoted to `CONFIRMED_OFFICIAL`.
+
+### Current secondary game-day lineup
+A current CBS game page listed:
+
+**St. Louis**
+1. José Fermín — 2B
+2. Iván Herrera — DH
+3. Jordan Walker — RF
+4. Alec Burleson — 1B
+5. Joshua Báez — LF
+6. Leo Bernal — C
+7. Ramón Urías — 3B
+8. Thomas Saggese — SS
+9. Nathan Church — CF
+
+**Los Angeles**
+1. Shohei Ohtani — DH
+2. Freddie Freeman — 1B
+3. Mookie Betts — SS
+4. Max Muncy — 3B
+5. Will Smith — C
+6. Kyle Tucker — RF
+7. Tommy Edman — CF
+8. Teoscar Hernández — LF
+9. Alex Freeland — 2B
+
+### Material availability
+- Dodgers activated **Will Smith** from the injured list on Sep. 1; he is expected to materially deepen the lineup after a long absence.
+- Dodgers also activated Justin Wrobleski as relief/length depth.
+- Cardinals placed **JJ Wetherholt** on the 10-day IL with wrist tendinitis.
+- Current injury reporting also listed Masyn Winn and Andre Pallante as unavailable/uncertain around this game.
+- Because the field-owning lineup page remained TBD, lineup-specific claims remain capped below strong evidence.
+
+## E. Environment gate
+
+- **Venue:** Dodger Stadium, Los Angeles
+- **Venue class:** OUTDOOR
+- NWS evening forecast:
+  - clear / mostly clear;
+  - low near 61°F overnight;
+  - west-southwest wind roughly **5-10 mph**, becoming light southeast later;
+  - no meaningful precipitation signal.
+- No extreme heat, rain or high-wind condition was present.
+- Weather therefore receives only a small/neutral scoring adjustment.
+
+## F. Recent-form block
+
+### St. Louis
+- Season scoring: **4.42 R/G**.
+- Current L10: **4.8 R/G**.
+- Current L20 from the freshest 2-day-old StatMuse snapshot: **98 runs / 20 = 4.9 R/G**.
+- One recent L15 snapshot showed a higher 5.0 R/G state, while an older snapshot showed a materially lower figure; source timing is explicitly inconsistent.
+- Team form: Cardinals entered having lost **seven of nine** and only three of the last ten.
+- **Trend verdict:** NO TREND — NOISE. Recent scoring windows are snapshot-sensitive and not monotone.
+
+### Los Angeles
+- Current L10 freshest snapshot: **3.6 R/G**, reflecting recent offensive cooling.
+- Current L15 freshest snapshot: **60 runs / 15 = 4.0 R/G**.
+- Current L20 freshest snapshot: **81 runs / 20 = 4.05 R/G**.
+- Older StatMuse snapshots show higher earlier-run windows; those are not silently blended into the current window.
+- Dodgers are 82-55 and 6-4 over the freshest L10 snapshot despite the lower scoring.
+- Current team context: Los Angeles just beat Detroit 6-1 after dropping four of its previous five.
+- **Trend verdict:** current scoring centre has cooled, but no monotone L5/L10/L15/L20 trend is promoted.
+
+## G. H2H / matchup continuity
+
+2026 series in St. Louis:
+- May 1: STL 7-2
+- May 2: STL 3-2 — McGreevy 6 scoreless
+- May 3: LAD 4-1
+
+### Continuity verdict
+**MODERATE, not controlling.**
+- Same clubs/core offensive identities.
+- Direct McGreevy matchup is relevant.
+- Current September roster differs: Will Smith returns, Cardinals are without Wetherholt, and both bullpens/current forms have changed.
+- Two of the three prior games were Under 9; one finished exactly 9.
+
+The old series is descriptive, not a fitted H2H probability.
+
+## H. Bullpen state
+
+### Los Angeles
+- Relief ERA over the prior 15 days: approximately **3.00**.
+- Blake Treinen remains close to returning but was not yet activated.
+- Justin Wrobleski was activated and is expected to work in relief, increasing left-handed/length depth.
+- Dodgers received seven innings from Tyler Glasnow in their most recent game (6-1 win over Detroit), reducing immediate bullpen burden.
+
+### St. Louis
+- Relief ERA over the prior 15 days: approximately **6.10**.
+- This is a material current weakness.
+- Cardinals' starter McGreevy has averaged only around five-plus innings in several recent starts, increasing the chance of exposing that relief group.
+- Andre Pallante was unavailable/uncertain in current injury reporting.
+
+### Bullpen conclusion
+The largest late-game asymmetry favors **Los Angeles**, and it is a major reason the Dodgers remain the likely outright winner despite Lauer's own volatility.
+
+## I. Score-family / component-budget model
+
+### Low / close
+Representative:
+- LAD 4-3
+- LAD 5-4
+- STL 4-3
+
+Supports:
+- Cardinals +1.5
+- Under 9 at 4-3; push at 5-4
+
+### Low / Dodgers separation
+Representative:
+- LAD 5-2
+- LAD 6-2
+
+Supports:
+- Dodgers -1.5
+- Under 9
+
+### Boundary
+Representative:
+- LAD 5-4
+- LAD 6-3
+
+Total = exactly 9 → ordinary **push** on O/U 9.
+
+### High / close
+Representative:
+- LAD 6-5
+- STL 6-5
+
+Supports:
+- Cardinals +1.5
+- Over 9
+
+### High / Dodgers separation
+Representative:
+- LAD 7-3
+- LAD 8-3
+
+Supports:
+- Dodgers -1.5
+- Over 9
+
+### Cardinals control kill path
+Representative:
+- STL 5-3 / 6-4
+
+Mechanism:
+- McGreevy repeats part of his May matchup success;
+- Lauer's volatility appears;
+- Dodgers' current offensive slowdown persists.
+
+## J. Total 9.0 component budget
+
+### Under mechanisms
+1. Dodgers' current L10/L15/L20 scoring has cooled to roughly 3.6-4.1 R/G.
+2. McGreevy has a direct six-scoreless-inning performance against this opponent in 2026.
+3. Lauer can still give 5-6 innings of 2-3 run baseball.
+4. Clear, ordinary weather does not create a major run boost.
+5. The total benefits from **push protection at exactly 9**.
+
+### Over mechanisms
+1. McGreevy's last-five ERA is around **5.13**, with seven earned runs allowed in his latest start.
+2. Lauer's last-five ERA is around **4.73**.
+3. Cardinals current L10 scoring is 4.8 R/G.
+4. Cardinals bullpen has a **6.10 ERA over the last 15 days**.
+5. Dodgers lineup regains Will Smith and remains deep through Ohtani/Freeman/Betts/Muncy/Tucker despite recent scoring slowdown.
+
+### Corridor conclusion
+The central score corridor is approximately **7-10 runs**.
+Nine itself carries meaningful boundary mass.
+The Under receives a small edge because the current Dodgers run rate is lower than the season/reputation prior and a 5-3 / 6-2 / 5-4 family is ordinary.
+
+## K. External market sanity check — non-controlling
+
+Current same-day public prices:
+- Dodgers ML around **-178 to -187**.
+- Cardinals +1.5 around **-130 to -150**.
+- Dodgers -1.5 around **+108 to +129**.
+- Total 9:
+  - Over around +100
+  - Under around -105 to -120
+
+Interpretation:
+- external market strongly supports Dodgers as the outright winner;
+- it also treats **Cardinals +1.5 as more likely than Dodgers -1.5**;
+- it gives a modest Under lean at 9.
+
+These are not the user's prices and do not establish value.
+
+## L. Reference base-rate anchors
+
+No calibrated probabilities are generated.
+
+| Contract | Reference band | Event adjustment | Frozen band |
+|---|---|---|---|
+| Cardinals +1.5 | HIGH-MEDIUM | Down for LAD quality/bullpen; up for McGreevy H2H/current LAD scoring slowdown | **MEDIUM-HIGH** |
+| Under 9.0 | MEDIUM | Up for push protection/current LAD scoring; down for both SP volatility/STL bullpen | **MEDIUM / slight lean** |
+| Dodgers -1.5 | MEDIUM-LOW | Up for team/bullpen/lineup quality and STL pen weakness; down for large separation requirement | **MEDIUM** |
+| Over 9.0 | MEDIUM | Up for starter/bullpen volatility; down for current LAD offense and 9-run push | **MEDIUM-LOW** |
+
+## M. Frozen ranking
+
+**Probability state:** NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING  
+**Value state:** NO VALUE DETERMINABLE
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-248-C02 — Cardinals +1.5** | **LEAN** | MEDIUM | Positive cushion, current Dodgers offensive cooling, and McGreevy's prior success vs LAD; every STL win and every one-run LAD win covers. |
+| **2** | **P-248-C04 — Under 9.0** | **SLIGHT LEAN** | MEDIUM-LOW | Nine is a high enough boundary with push protection; current LAD scoring is muted and several ordinary score families sit at 7-9. |
+| **3** | **P-248-C01 — Dodgers -1.5** | **LEAN-ADJACENT / FORCED RANK** | MEDIUM | Los Angeles owns the clearer team/bullpen advantage, but the two-run requirement is materially harder than the moneyline. |
+| **4** | **P-248-C03 — Over 9.0** | **FORCED RANK / weaker total direction** | LOW-MEDIUM | Credible via McGreevy/Lauer volatility and the STL bullpen, but less robust than the Under once current LAD run suppression and the push at 9 are respected. |
+
+### Total-direction control
+Recommend **Under 9.0 only**, as a slight lean.
+
+### Strongest evidence type
+The strongest supplied contract evidence is **Cardinals +1.5**.
+The strongest winner evidence is **Dodgers outright**.
+
+## N. Potential winner
+
+**Los Angeles Dodgers — LEAN**
+
+Not an additional independent contract.
+
+Reasons:
+1. 82-55 vs 68-70.
+2. Dodgers bullpen current 15-day ERA ~3.00 versus Cardinals ~6.10.
+3. St. Louis has lost seven of nine.
+4. Dodgers lineup regains Will Smith and remains much deeper.
+5. McGreevy's current last-five form is materially weaker than his season ERA.
+6. Home field and better late-game depth favor Los Angeles.
+
+Why not stronger:
+- Dodgers' current offense is only about 3.6 R/G over the freshest L10.
+- McGreevy threw six scoreless against Los Angeles in May.
+- Lauer owns a 4.78 official ERA and a 4.73 last-five ERA, keeping St. Louis' outright branch live.
+
+## O. Frozen user-facing forecast
+
+### Verified event
+St. Louis Cardinals @ Los Angeles Dodgers, MLB, **Tuesday Sep. 1 at 7:10 PM PDT**, which is **Wednesday Sep. 2 at 12:10 PM AEST**, at Dodger Stadium.
+
+Official MLB probable pitchers:
+- **Michael McGreevy (STL): 5-9, 3.86 ERA, 98 K**
+- **Eric Lauer (LAD): 8-6, 4.78 ERA, 70 K**
+
+The event was still scheduled with no recorded plays at the frozen cutoff.
+
+### Best four supplied picks
+1. **Cardinals +1.5 — LEAN**
+2. **Under 9.0 — SLIGHT LEAN**
+3. **Dodgers -1.5 — lower-confidence separation side**
+4. **Over 9.0 — weaker total direction**
+
+### Why Cardinals +1.5 is #1 even though Dodgers are the likely winner
+The +1.5 cushion captures every Cardinals outright win and every one-run Dodgers win.
+
+Los Angeles is the better team, but its current offense has cooled to roughly 3.6 R/G over the freshest L10 and around 4.0 R/G over the freshest L15. McGreevy also already threw six scoreless innings against this Dodgers club in May.
+
+The main reason not to overrate that H2H is current form: McGreevy has a roughly 5.13 ERA over his last five starts and allowed seven earned runs last time out. Still, a 4-3 or 5-4 Dodgers win remains very plausible and lands Cardinals +1.5.
+
+### Why Under 9.0 is #2
+Nine provides push protection.
+
+The most ordinary central scores include 5-3, 6-2, 5-4 and 6-3. Two of those are Under and the latter two push.
+
+The Under is helped by Los Angeles' current offensive slowdown and ordinary clear weather. It is hurt by the fact that both starters have last-five ERAs near or above 4.7 and the Cardinals bullpen has a 6.10 ERA over the last 15 days.
+
+That makes Under a **slight lean**, not a high-confidence total.
+
+### Why Dodgers -1.5 is #3
+The separation path is real:
+- Los Angeles is 82-55;
+- St. Louis has lost seven of nine;
+- the Cardinals relief corps has been poor;
+- Will Smith returns to deepen an already elite-name lineup.
+
+A 6-2, 7-3 or 7-2 Dodgers win is ordinary.
+
+But the run line is much harder than the winner call. Current public pricing also makes Cardinals +1.5 substantially shorter than Dodgers -1.5, reinforcing the structural difference.
+
+### Likely winner
+**Los Angeles Dodgers — LEAN.**
+
+This is not a fifth independent pick.
+
+### Weather / lineup / settlement boundary
+NWS calls for a clear evening with light 5-10 mph winds and no meaningful rain threat.
+
+MLB's official lineup page still showed TBD at the frozen cutoff; a current CBS game page had both complete batting orders, so those are treated as secondary rather than official field-owner confirmation.
+
+No operator or user odds were supplied. Listed-pitcher/action, shortened-game and extra-inning sportsbook terms therefore remain `UNKNOWN_DEFINITION`.
+
+No calibrated probability, expected value, market edge, ROI or staking recommendation is published.
+
+## P. Append confirmation
+
+- Complete frozen P-248 forecast appended before delivery: **YES**
+- Frozen cutoff before scheduled first pitch: **YES**
+- Drive modified: **NO**
+- Prior forecast rewritten: **NO**
+- Retrospective performed: **NO**
+- Learning register changed: **NO**
+
+
+---
+
+# Settlement and retrospective cleanup — 2026-09-02 18:32 AEST
+
+**Status:** APPEND-ONLY CLEANUP / EXPLICIT RETROSPECTIVE REQUEST  
+**Drive mode:** READ-ONLY  
+**Probability/value state:** unchanged — `NOT_GENERATED / NOT PUBLISHED`; `NO VALUE DETERMINABLE`  
+**Frozen forecasts rewritten:** NO  
+**Retrospectives authorised by user:** YES  
+**Primary settlement sources:** MLB official Gameday/Film Room/club recaps; ATP/US Open/WTA/Tennis.com official/current match pages for tennis.
+
+## 1. Current event-status sweep — P-239 onward
+
+| ID | Event | Current status | Settlement action |
+|---|---|---|---|
+| P-239 | Athletics @ Texas Rangers | FINAL — TEX 8, ATH 5 | SETTLED + RETROSPECTIVE |
+| P-240 | Chicago White Sox @ Houston Astros | FINAL — CWS 5, HOU 1 | SETTLED + RETROSPECTIVE |
+| P-241 | Zachary Svajda vs Daniel Altmaier | UPCOMING / NOT STARTED | LEAVE OPEN |
+| P-242 | Fabian Marozsan vs Michael Zheng | UPCOMING / NOT STARTED | LEAVE OPEN |
+| P-243 | Magda Linette vs Francesca Jones | SUSPENDED — Jones leads first set 6-4; second set not completed | LEAVE OPEN; NO RETROSPECTIVE |
+| P-244 | Baltimore Orioles @ Colorado Rockies | FINAL — COL 4, BAL 2 | SETTLED + RETROSPECTIVE |
+| P-245 | Alexander Zverev vs Lorenzo Sonego | FINAL — Zverev won 6-4, 3-6, 6-7(7), 7-5, 6-4 | SETTLED + RETROSPECTIVE |
+| P-246 | New York Yankees @ Los Angeles Angels | FINAL — NYY 7, LAA 3 | ADMINISTRATIVELY CLOSED — NO FORECAST HAD BEEN ISSUED |
+| P-247 | Philadelphia Phillies @ Arizona Diamondbacks | FINAL — PHI 7, AZ 1 | SETTLED + **DEEP RANK-1 RETROSPECTIVE** |
+| P-248 | St. Louis Cardinals @ Los Angeles Dodgers | FINAL — STL 13, LAD 8 | SETTLED + RETROSPECTIVE |
+
+## 2. Contract settlement tables
+
+### P-239 — Athletics @ Texas Rangers — Final: TEX 8, ATH 5
+
+| Contract ID | Rank | Frozen selection | Official settled value | Outcome |
+|---|---:|---|---:|---|
+| P-239-C03 | 1 | Over 7.5 | 13 total runs | **WIN** |
+| P-239-C02 | 2 | Texas -1.5 | Texas won by 3 | **WIN** |
+| P-239-C01 | 3 | Athletics +1.5 | Athletics lost by 3 | LOSS |
+| P-239-C04 | 4 | Under 7.5 | 13 total runs | LOSS |
+
+**Potential winner:** Texas Rangers — **WIN**
+
+#### Retrospective
+| Forecast expectation | Actual driver | What was right | What was wrong / omitted | Knowability / lesson link | Process grade |
+|---|---|---|---|---|---|
+| Oakland bullpen-game exposure would create Texas scoring; Gore could still allow an Athletics contribution, producing an Over/Texas-separation family. | Texas scored 8; Brandon Nimmo had four hits and five RBIs. Oakland still scored 5 and rallied late. | The component budget was correct: Texas had a large scoring branch and Oakland did contribute enough to make the total clear comfortably. The top two ranks both won. | The forecast did not identify the specific Nimmo concentration, but that is normal player-level variance rather than a process miss. | Reinforces L-047 component-budget coherence and SFA-BASEBALL exposure-chain logic: short/opener games must be evaluated through the full relief chain, not the opener ERA alone. | **COMPLIANT / MECHANISM ALIGNED** |
+
+**Learning note:** no new general rule is promoted. This is a positive example of correctly separating the Texas run component from Oakland's own scoring contribution.
+
+---
+
+### P-240 — Chicago White Sox @ Houston Astros — Final: CWS 5, HOU 1
+
+| Contract ID | Rank | Frozen selection | Official settled value | Outcome |
+|---|---:|---|---:|---|
+| P-240-C01 | 1 | White Sox +1.5 | White Sox won by 4 | **WIN** |
+| P-240-C02 | 2 | Astros +1.5 | Astros lost by 4 | LOSS |
+| P-240-C03 | 3 | Over 8.5 | 6 total runs | LOSS |
+| P-240-C04 | 4 | Under 8.5 | 6 total runs | **WIN** |
+
+**Potential winner:** Chicago White Sox — **WIN**
+
+#### Retrospective
+| Forecast expectation | Actual driver | What was right | What was wrong / omitted | Knowability / lesson link | Process grade |
+|---|---|---|---|---|---|
+| Chicago had the stronger starter/current-regime and relief-state path; Blanco's post-surgery uncertainty could add scoring volatility. | Sean Burke threw 5 2/3 scoreless innings; Blanco himself threw four scoreless, then Houston's relief chain allowed all five Chicago runs. Houston managed only three hits and one run. | Rank #1 and winner were correct. The forecast correctly identified Houston's broader bullpen strain and Chicago's ability to win the matchup. | The total branch was mislocated: Blanco's poor season/rehab data were given too much weight relative to Burke's current run-prevention form and the possibility that Blanco could survive a short start before the bullpen failed only on one side. | Reinforces L-052 current-regime windows and SFA-BASEBALL's starter-vs-relief transition rule. A bad full-season starter ERA should not automatically widen **both** teams' scoring distributions. | **MIXED — SIDE COMPLIANT; TOTAL CALIBRATION DEFECT** |
+
+**Local candidate learning — `C-P240-BB-STARTER-RELIEF-ASymmetry`:** when the weaker starter is expected to have a short leash, distinguish "opponent team-total upside" from "full-game Over." A one-sided relief failure can produce a comfortable side win while the total remains Under.
+
+---
+
+### P-244 — Baltimore Orioles @ Colorado Rockies — Final: COL 4, BAL 2
+
+| Contract ID | Rank | Frozen selection | Official settled value | Outcome |
+|---|---:|---|---:|---|
+| P-244-C02 | 1 | Rockies +1.5 | Rockies won outright | **WIN** |
+| P-244-C03 | 2 | Over 11.0 | 6 total runs | LOSS |
+| P-244-C01 | 3 | Orioles -1.5 | Orioles lost outright | LOSS |
+| P-244-C04 | 4 | Under 11.0 | 6 total runs | **WIN** |
+
+**Potential winner:** Baltimore Orioles — LOSS
+
+#### Retrospective
+| Forecast expectation | Actual driver | What was right | What was wrong / omitted | Knowability / lesson link | Process grade |
+|---|---|---|---|---|---|
+| Rockies +1.5 was structurally more robust than Orioles -1.5 despite a Baltimore winner lean; the total sat inside a wide Coors corridor. | Colorado led 2-0 early, Baltimore tied it 2-2, then TJ Rumfield hit a two-run seventh-inning homer; Colorado won 4-2. | Rank #1 correctly separated **handicap likelihood** from winner probability. The forecast explicitly retained a Rockies-control kill path rather than treating Baltimore's team-strength edge as decisive. | Over 11 was too high in rank. The forecast over-weighted the generic Coors/Hughes upper tail and under-weighted Baltimore's inability to convert offense plus the possibility of a controlled Colorado bullpen game. The winner lean was also too reputation/team-strength anchored. | Strongly reinforces L-055 slate geometry and L-053 base-rate anchoring. Also reinforces L-047: a high total must be built from plausible component budgets; Coors alone cannot manufacture the missing Baltimore/Colorado runs. | **MIXED — RANK #1 COMPLIANT; WINNER/TOTAL CALIBRATION DEFECT** |
+
+**Learning note:** no new general rule needed. Existing "venue is context, not direction" and component-budget controls were sufficient; execution should have given them more weight.
+
+---
+
+### P-245 — Alexander Zverev vs Lorenzo Sonego — Final: Zverev 6-4, 3-6, 6-7(7), 7-5, 6-4
+
+**Final total games:** 54  
+**Final net game margin:** Zverev +2
+
+| Contract ID | Rank | Frozen selection | Official settled value | Outcome |
+|---|---:|---|---:|---|
+| P-245-C01 | 1 | Sonego +6.5 games | Sonego lost by only 2 net games | **WIN** |
+| P-245-C04 | 2 | Under 33.5 games | 54 games | LOSS |
+| P-245-C02 | 3 | Zverev -6.5 games | Zverev +2 games | LOSS |
+| P-245-C03 | 4 | Over 33.5 games | 54 games | **WIN** |
+
+**Potential winner:** Alexander Zverev — **WIN**
+
+#### Retrospective
+| Forecast expectation | Actual driver | What was right | What was wrong / omitted | Knowability / lesson link | Process grade |
+|---|---|---|---|---|---|
+| Zverev should win, but Sonego's serve/H2H margin history made +6.5 more robust; three sets were still assigned the central set-count branch. | Sonego pushed Zverev to five sets and was two points from victory in the fourth. Zverev finally won after nearly five hours, +2 net games. | Rank #1 and winner were both exactly aligned with the result. The key distinction "winner confidence > handicap separation confidence" was correct. | The **Under #2 was internally too aggressive**. The same evidence used to rank Sonego +6.5 first—close sets, H2H margin resistance, tiebreak exposure—also increased four/five-set extension risk. The set-count mixture (3 sets 5/5; 5 sets 1/5) understated the long-match branch. | Directly links to SFA-TENNIS cross-market coherence and the best-of-five set-count rule; also L-047-style target coherence. | **MIXED — SIDE/WINNER STRONG; TOTAL SET-COUNT CALIBRATION DEFECT** |
+
+**Local candidate learning — `C-P245-TEN-CUSHION-TOTAL-COHERENCE`:** in best-of-five, if an underdog +large-game cushion is Rank #1 because repeated close-set/tiebreak resistance is decision-driving, the Under cannot also rank near the top without an explicit high-mass straight-set mechanism that is stronger than that resistance evidence. Do not promote; test prospectively.
+
+---
+
+### P-246 — New York Yankees @ Los Angeles Angels — Final: NYY 7, LAA 3
+
+**Forecast status:** `LIVE STATE NOT VERIFIED — NO ACTIONABLE LIVE FORECAST`
+
+No ranked contracts were issued, so there is **nothing to settle as a prediction**.
+
+#### Process review
+- The state gate was correct: the request arrived at/after first pitch and available feeds disagreed.
+- The research-only pregame note leaned Yankees outright; New York ultimately won 7-3, but that is **not counted as a forecast win**.
+- This is a positive application of **L-046 start-state invariant**: refusing to backdate a card is more important than retrospectively claiming a correct side.
+
+**Process grade:** **COMPLIANT — NO FORECAST / NO PERFORMANCE COUNT**
+
+---
+
+### P-247 — Philadelphia Phillies @ Arizona Diamondbacks — Final: PHI 7, AZ 1
+
+| Contract ID | Rank | Frozen selection | Official settled value | Outcome |
+|---|---:|---|---:|---|
+| P-247-C02 | 1 | Diamondbacks +1.5 | Arizona lost by 6 | **LOSS** |
+| P-247-C01 | 2 | Phillies ML | Philadelphia won | **WIN** |
+| P-247-C04 | 3 | Under 7.5 | 8 total runs | LOSS |
+| P-247-C03 | 4 | Over 7.5 | 8 total runs | **WIN** |
+
+**Potential winner:** Philadelphia Phillies — **WIN**
+
+## DEEP RANK-1 RETROSPECTIVE
+
+### What actually happened
+Philadelphia scored two runs in the first inning, Luzardo held Arizona to one run over 6 2/3 innings, and the Phillies turned a 3-1 game into a 7-1 separation game with four late runs in the eighth and ninth. Eduardo Rodríguez allowed three earned runs in five innings; Arizona's bullpen then allowed the margin to expand.
+
+### Why Rank #1 failed
+The forecast's top-ranked Diamondbacks +1.5 argument relied on three things:
+1. Rodríguez's strong current form;
+2. the positive +1.5 cushion;
+3. four prior 2026 meetings that had all been one-run games.
+
+Those inputs were real, but the ranking **over-concentrated on close-game evidence** and did not give enough weight to the favorite-separation channel:
+- Philadelphia entered on a five-game winning streak and 14-2 stretch;
+- the Phillies' current offense was around 5.2 R/G over L10;
+- the forecast already identified Arizona bullpen workload/late-game exposure;
+- the score-tree contained a Philadelphia high-separation branch, but it was declared subordinate without enough evidence.
+
+The result exposed exactly that branch: Philadelphia was already ahead after the first inning, Luzardo suppressed Arizona, and the Diamondbacks' relief chain allowed the margin to widen late.
+
+### What was right
+- Phillies ML at Rank #2 won.
+- The potential winner (Philadelphia) won.
+- Over 7.5 at Rank #4 won exactly because the late separation created an eighth total run.
+- The pregame analysis correctly recognized Luzardo, Philadelphia form and bullpen exposure as real advantages.
+
+### What was wrong / process defect
+The error was **ranking/calibration**, not absence of the correct mechanism.
+
+**Defect classes:**
+- `CALIBRATION / RANKING`
+- `MATCHUP_CONTEXT`
+- `RELIEF_TRANSITION`
+- `H2H_CONTINUITY OVERWEIGHT`
+
+The four one-run H2Hs were treated too strongly relative to current-team and bullpen-state evidence. L-052's H2H continuity gate explicitly says nested/small historical samples are descriptive; they should not outrank a strong current-state separation mechanism. L-053 also requires the base-rate anchor and event adjustment to remain bounded rather than letting one recent geometry pattern dominate.
+
+### Strongest missed kill path
+**PHI early lead + Luzardo suppression + Arizona bullpen separation.**
+
+This was knowable before issue:
+- Luzardo's current form was verified.
+- Philadelphia's form/offense was verified.
+- Arizona's bullpen usage was known.
+- The lineup quality differential was known.
+
+The miss was not that this path was invisible; it was that it was not weighted heavily enough when choosing Rank #1.
+
+### How the process should improve
+1. **Positive-cushion Rank #1 separation gate:** before ranking an underdog +1.5 first against a materially stronger favorite, explicitly test the favorite's **late separation probability** through starter + bullpen + lineup components.
+2. **H2H cap:** a run of one-run H2Hs cannot itself lift the dog cushion above the favorite's winner/side evidence unless current starter, bullpen and lineup states support the same close-game mechanism.
+3. **Bullpen margin budget:** for full-game run lines, model the expected score **after the starter exits** separately from the starter score. Run-line separation is often created after the sixth inning.
+4. **Winner/handicap coherence:** if the favorite is the likely winner and the dog cushion is Rank #1, the analysis must show why most favorite-win branches are specifically one-run rather than two-plus.
+
+**Process grade:** **PROCESS_DEFECT — RANK #1 CALIBRATION / MATCHUP_CONTEXT / RELIEF_TRANSITION**
+
+**Local candidate learning — `C-P247-BB-CUSHION-SEPARATION-GATE`:** a +1.5 underdog cannot become Rank #1 primarily from historical close-game geometry when the favorite has a materially stronger current offense and a late separation advantage. Require an explicit post-starter margin budget. Candidate only; no promoted weight.
+
+---
+
+### P-248 — St. Louis Cardinals @ Los Angeles Dodgers — Final: STL 13, LAD 8
+
+| Contract ID | Rank | Frozen selection | Official settled value | Outcome |
+|---|---:|---|---:|---|
+| P-248-C02 | 1 | Cardinals +1.5 | Cardinals won outright by 5 | **WIN** |
+| P-248-C04 | 2 | Under 9.0 | 21 total runs | LOSS |
+| P-248-C01 | 3 | Dodgers -1.5 | Dodgers lost outright | LOSS |
+| P-248-C03 | 4 | Over 9.0 | 21 total runs | **WIN** |
+
+**Potential winner:** Los Angeles Dodgers — LOSS
+
+#### Retrospective
+| Forecast expectation | Actual driver | What was right | What was wrong / omitted | Knowability / lesson link | Process grade |
+|---|---|---|---|---|---|
+| Cardinals +1.5 was more robust than Dodgers -1.5; Dodgers still had the stronger winner case; Under 9 had a small edge because LAD scoring had cooled and 9 offered push protection. | St. Louis scored 13 runs, hit **five home runs**, and won 13-8. Lauer was hit hard immediately; St. Louis led 7-0 in the third and 9-3 in the fourth. | Rank #1 won strongly. The forecast correctly kept a Cardinals outright-win branch alive and correctly identified Lauer's volatility and the possibility that the Dodgers run line was much harder than the winner call. | The total/winner hierarchy was poor. Both starters had last-five ERAs around 4.7-5.1 and the Cardinals offense had a 4.8 R/G L10, yet Under was ranked #2. The analysis over-weighted the Dodgers' recent scoring slowdown and underweighted the possibility that **St. Louis itself** could be the high-scoring side. | Links to L-048 opposite-sign mechanism decomposition and SFA-BASEBALL two-team component budget. A total must model each team's upper tail independently rather than assuming the favorite supplies most Over risk. | **MIXED — RANK #1 WIN; TOTAL/WINNER PROCESS DEFECT** |
+
+**Local candidate learning — `C-P248-BB-UNDERDOG-OFFENSE-TOTAL`:** when an underdog cushion is ranked highly because an outright upset branch is credible, the total model must explicitly include the underdog's high-run component. If both starters are currently volatile, a low-total ranking needs stronger suppression evidence than "favorite offense recently cooled."
+
+---
+
+## 3. Rank-1 accountability summary
+
+| ID | Rank #1 | Outcome | Deep review required? | Main conclusion |
+|---|---|---|---|---|
+| P-239 | Over 7.5 | WIN | No | Component-budget / bullpen-game thesis aligned |
+| P-240 | White Sox +1.5 | WIN | No | Side right; total mechanism over-weighted Blanco weakness |
+| P-244 | Rockies +1.5 | WIN | No | Cushion logic right; winner/Over too favorite/venue anchored |
+| P-245 | Sonego +6.5 | WIN | No | Cushion/winner distinction excellent; set-count Under miscalibrated |
+| P-246 | No forecast | N/A | No | Start-state refusal was correct |
+| **P-247** | **Diamondbacks +1.5** | **LOSS** | **YES** | H2H/close-game geometry over-weighted; late PHI separation underweighted |
+| P-248 | Cardinals +1.5 | WIN | No | Rank #1 right; Under/winner incoherent with underdog offensive upside |
+
+**Settled Rank #1 record for issued P-239/P-240/P-244/P-245/P-247/P-248 cards:** **5-1**.  
+This is a descriptive six-event sample only; it is **not** model validation, calibration, edge or ROI evidence.
+
+## 4. Cross-event learning synthesis
+
+### What worked
+1. **Positive-cushion vs winner separation:** P-244, P-245 and P-248 show why the likelier match/game winner need not be the most likely derivative contract. This reinforces L-055 and sport-specific coherence rules.
+2. **Component-budget thinking:** P-239 correctly combined a Texas scoring ceiling with a non-zero Athletics scoring component.
+3. **Start-state discipline:** P-246 correctly refused to create a stale forecast after first pitch.
+4. **Explicit kill paths:** even where rankings were wrong, several losing mechanisms were already disclosed. The main issue was weighting/ranking rather than hidden information.
+
+### What needs improvement
+1. **Cross-market coherence:** P-245 and P-248 show that a top cushion pick and a high-ranked Under can conflict when the cushion is supported by close/extended or underdog-upset states.
+2. **Late separation modeling:** P-247 shows that full-game run-line cushions require a separate bullpen/post-starter margin budget.
+3. **Current-regime weighting:** P-240 shows that poor full-season/rehab starter numbers cannot outrank a strong current opponent starter profile when evaluating totals.
+4. **Venue/reputation restraint:** P-244 shows that Coors and team-quality reputation should not push the total/winner beyond the actual component evidence.
+
+### Local candidate learnings added
+These are **candidate process observations only**, not promoted weights:
+- `C-P240-BB-STARTER-RELIEF-ASymmetry`
+- `C-P245-TEN-CUSHION-TOTAL-COHERENCE`
+- `C-P247-BB-CUSHION-SEPARATION-GATE`
+- `C-P248-BB-UNDERDOG-OFFENSE-TOTAL`
+
+No framework promotion is claimed. Any promotion still requires the active `LEARNING_REGISTER.md` prospective procedure.
+
+## 5. Current open queue — new local events
+
+| ID | Current status | Action |
+|---|---|---|
+| P-241 | Svajda vs Altmaier — UPCOMING / NOT STARTED | Keep open |
+| P-242 | Marozsan vs Michael Zheng — UPCOMING / NOT STARTED | Keep open |
+| P-243 | Linette vs Jones — SUSPENDED; Jones won first set 6-4 | Keep open; do not settle until official final |
+
+## 6. Inherited canonical unresolved queue — recheck result
+
+The inherited top-snapshot queue remains open because the missing items are **field ownership or operator definitions**, not merely final scores.
+
+| Queue item | Current status after recheck | Why it remains open |
+|---|---|---|
+| P-126 | UNRESOLVED / CONFLICTED | Exact SFA field-owner result/phase and C06 corners ownership still not recovered |
+| P-148-C02 | PROVISIONAL LOSS | Exact named provider/field-owner corner definition remains unproved |
+| P-149-C02 | PROVISIONAL WIN | MLS NEXT Pro official club/league pages did not expose a controlling corner field in the current search |
+| P-151-C02 | STRONG PROVISIONAL WIN | Named provider/field-owner corner definition still missing |
+| P-166 | OPERATOR DEFINITION UNRESOLVED | Unnamed operator OT/action rule cannot be reconstructed from the official final |
+| P-176-C05 | PROVISIONAL WIN under canonical top snapshot | Named provider-owner corner confirmation still absent; DATA_SOURCE_REGISTER wording remains internally inconsistent with the canonical snapshot |
+| P-178-C05 | UNRESOLVED | No controlling field-owner corner record recovered |
+| P-179-C05 | PROVISIONAL WIN | Specialist result exists; provider-owner confirmation still missing |
+| P-200 | OPERATOR DEFINITION UNRESOLVED | Regulation/OT/SO/action terms of unnamed operator remain unknowable |
+| P-217-C01/C02 | UNRESOLVED | Reduced-overs/DLS/action rule of unnamed operator remains unknowable |
+
+### P-233/P-234/P-235 provisional watchlist
+Targeted re-search of the CFA site still recovered the official **quarterfinal schedule / pre-quarterfinal coverage**, not a current field-owner results article for these three matches. Specialist pages now show results (for example Dalian Yingbo 1-0 Shanghai Shenhua), but the canonical issue was **field ownership**, so the three remain provisional rather than being silently upgraded.
+
+## 7. Settled vs not-yet-settled list — from the first new event in this mini log
+
+### Settled / closed
+- **P-239** — Athletics @ Texas Rangers — FINAL / SETTLED
+- **P-240** — White Sox @ Astros — FINAL / SETTLED
+- **P-244** — Orioles @ Rockies — FINAL / SETTLED
+- **P-245** — Zverev vs Sonego — FINAL / SETTLED
+- **P-246** — Yankees @ Angels — FINAL / CLOSED, NO ACTIONABLE FORECAST
+- **P-247** — Phillies @ Diamondbacks — FINAL / SETTLED
+- **P-248** — Cardinals @ Dodgers — FINAL / SETTLED
+
+### Not yet settled
+- **P-241** — Svajda vs Altmaier — UPCOMING
+- **P-242** — Marozsan vs Michael Zheng — UPCOMING
+- **P-243** — Linette vs Jones — SUSPENDED
+
+## 8. Source-quality review
+
+### Preferred settlement sources used
+1. **MLB Gameday / MLB Film Room / MLB club recaps** for official baseball finals, inning path and pitcher lines.
+2. **US Open / ATP official pages** for Zverev-Sonego final and match narrative.
+3. **WTA official match page** for Linette-Jones suspended status.
+4. Tennis.com used only as a current state cross-check where official event pages were incomplete.
+
+### Improvements over weaker research lanes
+- Do not use a search-engine scoreboard snippet when an official game story/film-room final is available.
+- Do not use specialist corner totals to upgrade a provisional soccer settlement unless the exact field owner/provider is established.
+- Do not infer operator action, OT/SO or DLS rules from league rules; operator contract language owns those fields.
+- For tennis, official event/tour result pages control final set scores; market or preview pages are not settlement sources.
+
+## 9. Cleanup verification
+
+- [x] Every P-239–P-248 event was state-checked.
+- [x] Final events were settled.
+- [x] P-241/P-242 were left open because they had not started.
+- [x] P-243 was left open because it is suspended.
+- [x] Rank #1 failure P-247 received a deep retrospective.
+- [x] What went right and wrong was recorded for every settled issued forecast.
+- [x] Candidate learnings were added locally without falsely promoting them.
+- [x] Frozen pregame/live-start forecasts were not rewritten.
+- [x] Historical inherited queue was rechecked and not falsely closed where operator/provider ownership remains unknowable.
+- [x] Google Drive was not modified.
+
+---
+
+# Framework review appendix — P-239–P-248 cohort — 2026-09-02
+
+Scope: the six settled events imported above, reviewed against `GFA-2` and the active rule set. This appendix is evidence and process record. It issues method `MDS-2026.09.02-v3.1`, which adds coherence and attribution gates and changes no fitted coefficient, scenario weight, probability or calibration claim.
+
+## A. Verified cohort ledger
+
+Recomputed from the settlement tables above, not copied from the component's summary.
+
+| ID | Rank #1 | #2 | #3 | #4 | Potential winner |
+|---|---|---|---|---|---|
+| P-239 | Over 7.5 — WIN | TEX -1.5 — WIN | ATH +1.5 — LOSS | Under 7.5 — LOSS | Texas — WIN |
+| P-240 | CWS +1.5 — WIN | HOU +1.5 — LOSS | Over 8.5 — LOSS | Under 8.5 — WIN | White Sox — WIN |
+| P-244 | ROC +1.5 — WIN | Over 11.0 — LOSS | BAL -1.5 — LOSS | Under 11.0 — WIN | Baltimore — LOSS |
+| P-245 | Sonego +6.5 — WIN | Under 33.5 — LOSS | Zverev -6.5 — LOSS | Over 33.5 — WIN | Zverev — WIN |
+| P-247 | AZ +1.5 — LOSS | PHI ML — WIN | Under 7.5 — LOSS | Over 7.5 — WIN | Philadelphia — WIN |
+| P-248 | STL +1.5 — WIN | Under 9.0 — LOSS | LAD -1.5 — LOSS | Over 9.0 — WIN | Dodgers — LOSS |
+
+Totals: 12 WIN / 12 LOSS across 24 dependent rows. Slot record #1 5-1, #2 2-4, #3 0-6, #4 5-1. Potential winners 4-2. P-246 is closed no-action; P-241/P-242/P-243 are unsettled.
+
+The higher-ranked total direction lost in five of six events and won only in P-239, where the total itself was Rank #1. This is a descriptive diagnostic on six dependent events and is registered as `C-PL11-ALL-TOTAL-DIRECTION`. No slot rule, fade prior or weight follows from it; GFA-2 G27 and §11.10 prohibit that use.
+
+## B. Defect classification
+
+| ID | Grade | Defect class | Mechanism |
+|---|---|---|---|
+| P-239 | COMPLIANT | — | Component budget correctly combined a Texas ceiling with a live Athletics contribution |
+| P-240 | PROCESS_DEFECT (total) | ATTRIBUTION_ASYMMETRY | A rehabilitating starter's stale season line widened both run distributions against the opposing starter's stronger current-regime form |
+| P-244 | PROCESS_DEFECT (total, winner) | ATTRIBUTION_ASYMMETRY; CROSS_ROW_COHERENCE | Venue reputation supplied runs no lineup exposure produced; the winner defaulted to team strength against the top-ranked opposing cushion |
+| P-245 | PROCESS_DEFECT (total) | CROSS_ROW_COHERENCE | The close-set, tiebreak-exposure and margin-resistance evidence that ranked the cushion first is the evidence that lengthens the match; the Under was ranked second on the same branches |
+| P-247 | PROCESS_DEFECT (rank #1) | SEPARATION_BUDGET | The cushion rested on head-to-head close-game geometry; the margin expanded in the innings after both starters left, which was never budgeted |
+| P-248 | PROCESS_DEFECT (total, winner) | CROSS_ROW_COHERENCE | The total modelled the favourite's cooled scoring while Rank #1 required the underdog to score; the underdog's own upper tail was absent |
+
+Three of the five total misses (P-244, P-245, P-248) share one mechanism: the total was solved marginally rather than conditional on the Rank-1 state. That concentration, not the slot record, is what the patch responds to.
+
+## C. Framework changes issued
+
+| Change | Location | Origin |
+|---|---|---|
+| `G25.1` Rank-1 conditional coherence — convert the Rank-1 branch set into the unit of every other line, classify rows `COHERENT`/`PARTIAL_OVERLAP`/`DISJOINT`, re-solve aggregate budgets conditional on that state | RULES_GENERAL.md §6, §11.6; L-057 | P-244, P-245, P-248 |
+| `G20.1` separation budget — solve every margin, handicap and cushion line by scoring-allocation phase at floor, centre and ordinary high | RULES_GENERAL.md §6, §11.4; L-058 | P-247 |
+| `G14.1` / §11.3D deficit attribution and venue restraint — a participant deficit moves only the distribution that participant governs; a venue factor scales a budget both sides' exposure supports | RULES_GENERAL.md §11.3, §11.3D; L-059 | P-240, P-244 |
+| `G30.1` winner and cushion reconciliation — the winner is named from the joint win-branch mass, never from the favourite label | RULES_GENERAL.md §11.6; L-060 | P-244, P-248 |
+| Three new evidence-ceiling rows and four new mandatory card lines | RULES_GENERAL.md §11.5, §11.9 | All of the above |
+| New defect classes `CROSS_ROW_COHERENCE`, `SEPARATION_BUDGET`, `ATTRIBUTION_ASYMMETRY` | MODEL_AND_DATA_SPEC.md §11 | This review |
+| All ten `SFA-<SPORT>` sections realigned from the retired `GFA-1` to `GFA-2`, with residual reference-band, lexicographic-key and conjunct-penalty language removed and four sport-instantiated checklist lines added | every RULES_<SPORT>.md | Pre-existing defect found by this review |
+| L-053 narrowed to the descriptive base rate and the extra-condition audit | LEARNING_REGISTER.md §2 | Contradiction with MDS-2026.09.02-v3.0 |
+| Baseball `BB-B9` late-separation branch, three kill-path rows and four ordering overrides; tennis cushion-length kill path and three ordering overrides | RULES_BASEBALL.md §8.3/§8.5/§8.6, RULES_TENNIS.md §9.5/§9.6 | P-240, P-244, P-245, P-247, P-248 |
+
+## D. Rejected and deferred
+
+Rejected: any slot-based rule from the #1 5-1 / #2 2-4 / #3 0-6 / #4 5-1 record; any forecast-weight change from the 5-1 Rank-#1 record; any claim that six events validate or invalidate the method; any promotion of the component's local candidate labels as weights. Deferred: sport-specific separation weighting and any numerical form of the coherence interval, pending a frozen prospective manifest.
+
+## E. Evidence boundary
+
+Six settled events, one analyst-day, five MLB games and one tennis match, 24 dependent contract rows, all classified `E1-Q-LATE_IMPORT`. This cohort does not reduce the outstanding requirement of 60 new clean, demonstrably pre-result event units, and it supports no calibration, edge, value or ROI statement. The four new controls are promoted as process because they make an internally contradictory order visible, not because they are shown to improve accuracy. `T-P245-COHERENCE`, `T-P247-SEPARATION` and `T-P240-ATTRIBUTION` track their compliance prospectively from zero.
+
+## September 5 archival follow-up correction — no new IDs in this archive
+
+The current follow-up authority is now the top snapshot of [PREDICTION_LOG_COMBINED_2.md](PREDICTION_LOG_COMBINED_2.md) and [complete status index](GAME_LOG_STATUS_INDEX_2026-09-05.md). Twelve P-233–P-235 goal/half rows are newly settled from original Xinhua and Titan Sports reporting (7 WIN / 5 LOSS). Their corner rows remain provisional. P-126 remains identity/state conflicted: current time-only/postponed records do not establish the prior claimed final. P-148/P-149/P-151/P-166/P-176/P-178/P-179/P-200/P-217 follow-ups remain evidence/definition issues with explicit new checks in the [September 5 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
+
+Detailed updated China FA Cup tables, the deep P-234 #1-loss review, all source records and the revised learning disposition are appended in the active log and full audit. P-234's red-card context means the low score is not clean evidence for universal knockout suppression; L-064/control 28 are narrowed prospectively. Earlier issued cards and dated historical settlements above remain unchanged. The P267 standalone audit previously described as present is absent in this checkout; no replacement has been fabricated.
+
+
+# 2026-09-12 recovery of the supplied P-249-P-267 mini-log records
+
+This restores the supplied issued cards and existing settlement/retrospective sections from [mini log 8](archive/mini_logs/PREDICTION_MINI_LOG_8.md). It does not issue duplicate canonical IDs or make an old queue snapshot current. Source bytes are preserved in the archive; the next-ID and current state remain controlled by Part 3 and [the current register](GAME_LOG_STATUS_CURRENT.md). The separately referenced P267 settlement artifact is still absent. Recovery is therefore partial, not a claim that its entire 21-event result ledger has been independently reproduced. All content is learning-only. Any historical instructions embedded below are provenance, not current workflow authority.
+
+# P-249 — Hanwha Eagles @ KT Wiz — Korean KBO — LIVE REQUEST
+
+## A. Previous-event priority gate
+
+The user-directed workflow requires the immediately previous issued event to be settled and retrospectively reviewed before a new card is attempted.
+
+- Previous issued event: `P-248 — St. Louis Cardinals @ Los Angeles Dodgers`.
+- Canonical Drive state: **FINAL — STL 13, LAD 8**.
+- Canonical status: **SETTLED + RETROSPECTIVE ALREADY COMPLETED**.
+- Action here: **NO DUPLICATE RETROSPECTIVE**. The priority requirement was already satisfied in the canonical log.
+
+## B. Frozen identity and requested contracts
+
+- **Canonical ID:** `P-249`
+- **Request date:** 2026-09-02 Australia/Melbourne
+- **Sport:** Baseball
+- **Competition:** 2026 KBO League regular season
+- **Event:** Hanwha Eagles @ KT Wiz
+- **Venue:** Suwon KT Wiz Park, Suwon
+- **Scheduled start:** 2026-09-02 18:30 Asia/Seoul
+- **Requested mode:** LIVE
+- **Method:** `MDS-2026.09.02-v3.1`
+- **General algorithm:** `GFA-2`
+- **Sport algorithm:** `SFA-BASEBALL`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`
+- **Value state:** `NO VALUE DETERMINABLE`
+- **Operator/action terms:** NOT SUPPLIED / `UNKNOWN_DEFINITION`
+
+### User-supplied slate
+
+| Contract ID | Contract | Ordinary completed-game geometry |
+|---|---|---|
+| `P-249-C01` | Hanwha Eagles +4.5 runs | Wins if Hanwha wins/ties or loses by 1–4 |
+| `P-249-C02` | KT Wiz -4.5 runs | Wins if KT wins by 5+ |
+| `P-249-C03` | Combined Over 8.5 runs | Wins at 9+ combined runs |
+| `P-249-C04` | Combined Under 8.5 runs | Wins at 0–8 combined runs |
+
+Under ordinary completed-game rules, C01/C02 are exact half-run complements and C03/C04 are exact half-run complements. Exactly two of the four rows win if the official game completes under ordinary grading. This forced 2-of-4 geometry is **not forecast accuracy**. Operator-specific suspension/official-game/action treatment remains unknown.
+
+## C. LIVE-STATE HARD GATE — FAILED
+
+### Current source conflict
+
+At the research cutoff, current web sources did **not** provide the two-source agreement required by the active state-integrity rule.
+
+| Source lane | Retrieved state | Assessment |
+|---|---|---|
+| KBO official schedule/scoreboard | Current official web surface was stale/blank for the live score field | FIELD-OWNER STATE DEFECT / cannot control current score |
+| MyKBO current search snapshot | **Hanwha 0 — KT 4, Top 3rd, LIVE** | Fresh exact-state indication, but unofficial |
+| MyKBO exact-game page/search cache | Still displayed **Scheduled** on another exposed surface | Internal source-state conflict |
+| TotalBase current schedule surface | Still displayed pregame/scheduled or stale early state | Does not independently confirm exact live state |
+| ScoreCenter/other score pages | Blank or scheduled | Does not confirm exact live state |
+| Current OSEN game reporting | Confirms the exact game, Ryu Hyun-jin and So Hyeong-jun, and live first-inning action | Independent current event/participant corroboration, but no exact full score + inning confirmation recovered |
+
+### Gate decision
+
+`GFA-2 / L-026` requires the official live state to control, or—when the field owner is defective—**two independent current sources agreeing on participant orientation, score and phase/inning** before directional live analysis.
+
+That condition was **not met**.
+
+**GAME-STATE: LIVE STATE NOT VERIFIED — NO ACTIONABLE LIVE FORECAST**
+
+No exact current base/out state, current pitcher/pitch count, or sufficiently current independently corroborated inning was frozen. A search-index snapshot showing `0-4 Top 3rd` could already be stale relative to the live game clock, so using it as though it were the present state would violate the remaining-exposure rule.
+
+## D. Current matchup research completed before the state gate stopped ranking
+
+The following is retained as background evidence for any later verified live view or settlement. It is **not** converted into current live picks.
+
+### Team / starter state
+
+- KT entered the game **67-43-3, 2nd**; Hanwha **49-63-3, 8th**.
+- Current-season head-to-head entering the game: **KT 9-3 Hanwha**.
+- Announced/actual starters: **Hanwha LHP Ryu Hyun-jin** vs **KT RHP So Hyeong-jun**.
+- Ryu entered at **8-5, 3.85 ERA**, with a **0-1, 4.11 ERA** 2026 line against KT.
+- So entered at **6-3, 3.36 ERA**, with a **0-0, 3.27 ERA** 2026 line against Hanwha.
+- So had seven days of rest after reported right-lat discomfort and most recently worked six innings with two runs allowed.
+- Ryu's latest start was five innings, one unearned run, but he had gone nine starts without a win; wins themselves are not treated as pitcher-performance statistics.
+
+### Current lineups / roles
+
+Hanwha materially reshuffled its lineup for this game, restoring **Choi In-ho, Yonathan Perlaza and Hwang Young-mook**, with **Ryu Hyun-jin / Heo In-seo** as the battery. The lineup change is treated as a role/exposure change, not an automatic offensive upgrade.
+
+Current live reporting independently confirms **Ryu Hyun-jin** and **So Hyeong-jun** actually started the game.
+
+### Team form — de-duplicated completed-game windows immediately before Sep 2
+
+#### Hanwha
+| Window | W-L | Runs scored | Runs allowed | Runs/game | Allowed/game |
+|---|---:|---:|---:|---:|---:|
+| L5 | 0-5 | 19 | 46 | 3.80 | 9.20 |
+| L10 | 1-9 | 47 | 92 | 4.70 | 9.20 |
+| L15 | 2-13 | 71 | 127 | 4.73 | 8.47 |
+| L20 | 3-17 | 86 | 158 | 4.30 | 7.90 |
+
+**Trend verdict:** the short-window deterioration is persistent and driven much more by run prevention than by a uniformly dead offense. It therefore enlarges KT scoring/separation and late-relief branches; it does not mechanically force an Over.
+
+#### KT
+| Window | Record | Runs scored | Runs allowed | Runs/game | Allowed/game |
+|---|---:|---:|---:|---:|---:|
+| L5 | 3-2 | 19 | 16 | 3.80 | 3.20 |
+| L10 | 5-4-1 | 42 | 34 | 4.20 | 3.40 |
+| L15 | 7-7-1 | 66 | 58 | 4.40 | 3.87 |
+| L20 | 12-7-1 | 107 | 71 | 5.35 | 3.55 |
+
+**Trend verdict:** KT's recent scoring rate is below its L20 pace, while run prevention has remained comparatively strong. A live KT lead therefore does not automatically imply continued margin expansion.
+
+### Current-season H2H continuity block
+
+The continuity-qualified 2026 series before this game contained 12 meetings.
+
+- H2H L5: KT 4-1; Over 8.5 in 3/5; KT -4.5 in 2/5; Hanwha +4.5 in 3/5.
+- H2H L10: KT 7-3; Over 8.5 in 7/10; KT -4.5 in 3/10; Hanwha +4.5 in 7/10.
+- H2H L12/current-season full continuity set: KT 9-3; Over 8.5 in 9/12; KT -4.5 in 4/12; Hanwha +4.5 in 8/12.
+- H2H L15/L20: **NOT AVAILABLE UNDER CURRENT-SEASON CONTINUITY**; older meetings were not padded into the table merely to reach a requested denominator.
+
+**H2H interpretation:** KT's winner advantage is much more durable than a five-run-margin advantage. This distinction would matter materially if/when an exact live state is verified.
+
+### Environment
+
+- Venue class: **OUTDOOR**.
+- Current forecast around the game window indicated roughly mid-20s °C, high humidity and light westerly/northwesterly wind, with no strong rain signal on the retrieved game page.
+- A fresh field-owner Korean Meteorological Administration venue-vector record was not recovered in this pass.
+- Therefore conditions are treated as a limited contextual/variance input, not a directional total signal.
+
+## E. D0 / prior-mechanism retrieval
+
+Two relevant prior KBO cases were used only as mechanism challenges:
+
+1. **P-016 Kiwoom @ Lotte** — narrow Lotte win / low total; starter length and rested relief preserved a close game. Lesson: a winner direction and a cushion direction are separate margin questions.
+2. **P-049 Doosan @ KIA** — KIA 2-1; both starters worked seven innings. Lesson: total direction must model the complete starter-to-bullpen exposure chain rather than starter ERA or recent run totals alone.
+
+These outcomes do **not** vote for a direction and are not probability weights.
+
+## F. Mechanical map of the single-source `0-4 Top 3rd` snapshot — NOT A FORECAST
+
+Because the exact state did not pass the live-state gate, this section records only settlement arithmetic for the exposed snapshot.
+
+If `Hanwha 0 — KT 4, Top 3rd` were independently confirmed:
+
+- **Over 8.5** would require **5+ additional combined runs**.
+- **Under 8.5** would require **4 or fewer additional combined runs**.
+- KT currently leading by four would **not yet cover -4.5**.
+- **KT -4.5** would require KT to finish at least five runs ahead; from a four-run lead, KT must create at least one additional net run of separation over the remainder.
+- **Hanwha +4.5** would still cover if the remaining scoring were equal, or if Hanwha reduced the deficit.
+- Representative KT wins such as 4-0, 5-1, 6-2 or 7-3 would still cash **Hanwha +4.5**.
+- Representative 5-0, 6-1, 7-2 or 8-3 finishes would cash **KT -4.5**.
+
+For the total, a five-run remaining requirement is reachable with the amount of scheduled baseball apparently remaining, but without the verified current inning/base-out/pitcher state it is not legitimate to say whether that requirement is likely or unlikely **now**.
+
+## G. Ranked decision
+
+### Required output under the governing hard gate
+
+| Rank | Contract | Decision |
+|---:|---|---|
+| — | Hanwha +4.5 | **NOT RANKED — LIVE STATE NOT VERIFIED** |
+| — | KT -4.5 | **NOT RANKED — LIVE STATE NOT VERIFIED** |
+| — | Over 8.5 | **NOT RANKED — LIVE STATE NOT VERIFIED** |
+| — | Under 8.5 | **NOT RANKED — LIVE STATE NOT VERIFIED** |
+
+**Potential winner:** **NOT ISSUED — LIVE STATE NOT VERIFIED**
+
+This is deliberately stricter than inventing a ranking from a possibly stale score/inning. It follows the user's instruction to avoid hallucinations and the active project hard gate.
+
+## H. Queue / continuation update
+
+- `P-249` status: **OPEN — LIVE STATE NOT VERIFIED / NO ACTIONABLE LIVE FORECAST ISSUED**
+- Settlement rows to grade: **NONE**, because no directional forecast was issued.
+- Next-query priority: **state-check P-249 first**. If final, record the verified final and close this no-action event; there is no pick-outcome retrospective to score, although the state-gate process can be reviewed.
+- Older inherited unresolved/provisional queue remains unchanged.
+- Drive modified: **NO**
+- Existing forecast rewritten: **NO**
+- Numerical probability generated: **NO**
+
+**NEXT CANONICAL ID: `P-250`**
+
+---
+
+# P-250 — Yunnan Yukun vs Chongqing Tonglianglong — 2026 China FA Cup Quarterfinal — PREGAME
+
+## A. Previous-event priority gate
+
+Immediately previous local event: `P-249 — Hanwha Eagles @ KT Wiz`.
+
+- Priority state-check performed first.
+- P-249 remains **OPEN / LIVE**.
+- No directional P-249 forecast had been issued because the live-state hard gate failed.
+- **Settlement + retrospective: DEFERRED — GAME STILL LIVE.**
+- P-249 remains in the unresolved queue for a future query/state check.
+
+## B. Frozen identity, schedule and endpoint
+
+- **Canonical ID:** `P-250`
+- **Competition:** 2026 Chinese FA Cup — Quarterfinal
+- **Event:** Yunnan Yukun vs Chongqing Tonglianglong
+- **Venue:** Yuxi Plateau Sports Center, Yuxi, Yunnan, China
+- **Venue class:** OUTDOOR / plateau venue
+- **Scheduled kickoff:** 2026-09-02 20:00 Asia/Shanghai / 22:00 Australia/Melbourne
+- **Final preissue status refresh:** 2026-09-02 21:52:08 Australia/Melbourne / 19:52:08 China
+- **GAME-STATE:** PREGAME / SCHEDULED
+- **Cutoff invariant:** PASS — frozen before kickoff
+- **Method:** `MDS-2026.09.02-v3.1`; `GFA-2`; `SFA-SOCCER`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability:** NOT GENERATED / NOT PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+- **Operator:** NOT SUPPLIED
+- **Goal contracts:** 90-minute regulation including stoppage; extra time/penalties excluded
+- **Potential-winner endpoint:** TO ADVANCE
+
+## C. Frozen candidate slate
+
+| ID | Contract | Endpoint / geometry |
+|---|---|---|
+| P-250-C01 | 1st Half Over 0.5 Goals | 1+ goals by HT |
+| P-250-C02 | 1st Half Under 0.5 Goals | 0-0 at HT |
+| P-250-C03 | Full Match Over 2.5 Goals | 3+ regulation goals |
+| P-250-C04 | Full Match Under 2.5 Goals | 0-2 regulation goals |
+| P-250-C05 | Total Corners Over 8.5 | 9+ regulation corners; research count anchored to TotalCorner-style full-match data |
+
+C01/C02 and C03/C04 are exact complementary pairs. The corner row is definition-capped because the user supplied no operator/provider semantics.
+
+## D. Confirmed starting XIs
+
+**Yunnan:** Wang Zhifeng; Tsui Wang-Kit; Yi Teng; Burke; Xu Xin; Ionita/Jonica; Hou Yongyong; Caio; Oscar Taty Maritu; Huang Zichang; Bunyamin Abdusalam.
+
+**Chongqing:** Yao Haoyang; Yue Ruijie; Liu Mingshi; He Xiaoqiang; Ngadeu; Lukang/Lucas; Li Zhenquan; Zhang Zhixiong; Cîmpanu/Kempanu; Landry Dimata; Wu Yuxi.
+
+Yunnan selected a high-attacking first XI. Chongqing retained a compact defensive structure while starting Dimata and Cîmpanu/Kempanu; this is materially stronger than the rotated Aug. 29 league XI.
+
+## E. Strength / recent regime
+
+- Yunnan league: 10-5-10, 49-51; home 7-2-3, 26-19.
+- Chongqing: 7-10-8, 26-29; away 3-5-5, 10-15.
+- Yunnan latest five: 0-6, 3-3, 3-1, 1-0, 2-3.
+- Chongqing latest five: 1-1, 0-1, 0-0, 2-3, 0-2.
+
+Yunnan carries the wider scoring tail; Chongqing carries the lower-scoring regime. Neither raw trend is allowed to control without lineup/tactical reconciliation.
+
+## F. Recency / first-half and 2.5-goal evidence
+
+- Yunnan broader retrieved sample: first-half Over 0.5 in 17/21; latest five 4/5.
+- Chongqing broader retrieved sample: first-half Over 0.5 in 13/19; latest five 2/5.
+- Chongqing's two completed 2026 FA Cup matches both had a first-half goal.
+- Yunnan freshest 10-match profile: 9/10 Over 2.5; broader sample about 19/21.
+- Chongqing freshest 10-match profile: 2/10 Over 2.5; broader sample about 4/19.
+- Exact definition-compatible L15/L20 half-time/corner event tables were not fully exposed before cutoff; broader 19/21-game samples are treated only as surrogate trend context, not mislabeled exact windows.
+
+## G. H2H continuity
+
+Current-season meeting: **Chongqing 0-0 Yunnan**, HT 0-0, corners 6-3. Older 2023-24 meetings are different competition/roster regimes and are descriptive only.
+
+## H. Corner process
+
+- Yunnan: roughly 4.5-5.1 corners for and 4.9-5.0 conceded; latest-five match-corner totals 10,14,12,13,8 (4/5 Over 8.5).
+- Chongqing: roughly 3.9 for and 6.0-6.4 conceded; away about 3.15 for and 7.15 conceded; latest-five totals 9,8,7,11,10 (3/5 Over 8.5).
+- Matchup mechanism: Yunnan home pressure vs a deeper Chongqing structure creates width/end-line/clearance exposure. Either side conceding first can increase the trailer's cross/set-play/corner exposure.
+- Exact operator/provider definition absent -> C05 capped at `FORCED RANK / MEDIUM-LOW`.
+
+## I. Environment
+
+Current structured weather near 19:51 local was clear at about 24C with no strong rain-suppression signal. Exact wind vector/dew point and a field-owner surface report were not recovered to sufficient precision and remain unavailable. Plateau/home context is treated as a fatigue/context branch, not an automatic scoring boost.
+
+## J. Scenario tree
+
+- Lower: 1-0 Yunnan / 1-1 / 2-0 Yunnan.
+- Central: **2-1 Yunnan** / 1-1 into late pressure.
+- Upper: 3-1 / 3-2 after an early-goal chase switch.
+- Over kill path: 0-0 HT plus Chongqing compact suppression.
+- Under kill path: early goal opens transition/chase exposure.
+
+Representative scores are qualitative branch illustrations only.
+
+## K. Ranked decision
+
+| Rank | Contract | Verdict | Evidence | Core reason |
+|---:|---|---|---|---|
+| **1** | **1st Half Over 0.5 Goals** | **LEAN** | **MEDIUM** | High Yunnan early-event rate, both Chongqing cup games with first-half goals, and attacking confirmed XIs. Counter-path: May H2H 0-0 HT and knockout caution. |
+| **2** | **Total Corners Over 8.5** | **FORCED RANK** | **MEDIUM-LOW** | Direct corner rates, Chongqing's high away corners-conceded profile, 7/10 combined latest-five samples clearing 8.5, and current H2H at 9. Definition gap prevents LEAN. |
+| **3** | **Full Match Over 2.5 Goals** | **SLIGHT LEAN** | **MEDIUM-LOW** | Yunnan home/recent scoring tail and aggressive XI; an early goal creates chase. Chongqing's low-scoring away profile prevents stronger language. |
+| **4** | **Full Match Under 2.5 Goals** | **FORCED RANK / LEAN-ADJACENT** | **MEDIUM-LOW** | 1-0, 2-0 and 1-1 remain credible through Chongqing suppression. Ranked below Over because Yunnan's home attack/defensive volatility and full-strength cup XIs preserve a stronger three-goal tail. |
+| **5** | **1st Half Under 0.5 Goals** | **AVOID relative to C01** | **LOW-MEDIUM** | Needs 0-0 HT; supported by May H2H but opposed by broader first-half-goal evidence and current attacking personnel. |
+
+## L. Rank-1 coherence
+
+Rank #1 state = at least one first-half goal.
+- Corners O8.5: PARTIAL_OVERLAP.
+- FT O2.5: COHERENT / PARTIAL.
+- FT U2.5: PARTIAL_OVERLAP (1-0, 2-0, 1-1 still win).
+- 1H U0.5: DISJOINT exact complement.
+
+## M. Potential winner
+
+**Yunnan Yukun to advance — LEAN.**
+
+Home record, stronger attacking selection and Chongqing's low away scoring support Yunnan, but Chongqing's defensive structure and the May 0-0 keep a regulation draw live. This is an advancement lean, not a guarantee of a 90-minute win.
+
+## N. Queue / append confirmation
+
+- P-249 checked first: YES — still live
+- P-249 settlement/retrospective: DEFERRED
+- P-250 pregame view frozen before kickoff: YES
+- Drive modified: NO
+- Numerical probability generated: NO
+- Learning register changed: NO
+- **NEXT CANONICAL ID: P-251**
+
+
+---
+
+# P-251 — Sassuolo vs Frosinone — 2026/27 Coppa Italia Round of 32 — PREGAME
+
+## A. Previous-event priority gate
+
+Immediately previous issued event: `P-250 — Yunnan Yukun vs Chongqing Tonglianglong`.
+
+- State check performed before this forecast.
+- At the current query time the fixture had already kicked off, but no trustworthy field-owner final had been recovered.
+- A contradictory low-quality search surface already labelled the match "final 0-0" far too early relative to the known 20:00 China kickoff, while other current sources still exposed pregame/live shells.
+- That impossible/stale result was quarantined under the official-placeholder/source-state rule.
+- **P-250 remains OPEN / LIVE OR FINAL-NOT-VERIFIED.**
+- **Settlement + retrospective: DEFERRED TO NEXT QUERY.**
+- No P-250 result or retrospective is invented.
+
+## B. Frozen identity, schedule and endpoint
+
+- **Canonical ID:** `P-251`
+- **Sport:** Soccer
+- **Competition:** Coppa Italia Frecciarossa 2026/27
+- **Round:** Round of 32 / sedicesimi
+- **Event:** Sassuolo vs Frosinone
+- **Venue:** MAPEI Stadium - Città del Tricolore, Reggio Emilia, Italy
+- **Surface:** natural grass
+- **Venue class:** OUTDOOR
+- **Field-owner kickoff:** 2026-09-02 15:00 Europe/Rome
+- **Australia/Melbourne kickoff:** 2026-09-02 23:00 Australia/Melbourne
+- **Final preissue refresh:** immediately before 15:00 local kickoff
+- **GAME-STATE:** PREGAME / SCHEDULED
+- **Schedule conflict:** older/secondary pages exposed 16:00 or 18:30, but current Lega Serie A referee/schedule publication and both club/current live sources resolve kickoff at 15:00. Field owner controls.
+- **Method:** `MDS-2026.09.02-v3.1`
+- **General algorithm:** `GFA-2`
+- **Sport algorithm:** `SFA-SOCCER`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`
+- **Value state:** `NO VALUE DETERMINABLE`
+- **Operator:** NOT SUPPLIED
+- **Goal endpoint:** 90-minute regulation including stoppage, excluding extra time/penalties
+- **Potential-winner endpoint:** **TO ADVANCE** from the knockout tie
+
+## C. Candidate slate and geometry
+
+| Contract ID | Contract | Settlement region | Dependence |
+|---|---|---|---|
+| `P-251-C01` | 1st Half Over 0.5 Goals | 1+ goals by HT | P251-1H-GOAL |
+| `P-251-C02` | 1st Half Under 0.5 Goals | 0-0 at HT | P251-1H-GOAL |
+| `P-251-C03` | Full Match Over 2.5 Goals | 3+ regulation goals | P251-FT-GOAL |
+| `P-251-C04` | Full Match Under 2.5 Goals | 0-2 regulation goals | P251-FT-GOAL |
+| `P-251-C05` | Total Corners Over 8.5 | 9+ regulation corners under the research provider convention | P251-CORNER |
+
+- C01/C02 are exact complements.
+- C03/C04 are exact complements.
+- Those four goal rows force exactly two winners if the regulation game is completed normally.
+- C05 is a separate derivative target.
+- The user did not supply an operator or exact corner provider definition. C05 therefore cannot exceed `FORCED RANK / MEDIUM-LOW` evidence even if the direct corner process is favorable.
+
+## D. Field-owner schedule and match administration
+
+Current Lega Serie A publication:
+- Sassuolo-Frosinone: Wednesday 2 September, 15:00.
+- Referee: Andrea Calzavara.
+- Assistants: Gilberto Laghezza and Glauco Zanellati.
+- Fourth official: Paride Tremolada.
+- VAR: Daniele Rutella.
+- AVAR: Matteo Gariglio.
+
+The referee assignment is an identity/administration fact only; no referee scoring effect is assumed without current validated evidence.
+
+## E. Confirmed starting XIs
+
+Current published official lineups were corroborated by multiple live/pre-match sources.
+
+### Sassuolo — 4-3-3
+Turati; Cinquegrano, Odenthal, Leysen, Obrador; Thorstvedt, Lipani, Ghion; Volpato, Bowie, Dominguez.
+
+### Frosinone — 4-3-3
+Desplanches; Tchato, Akpoguma, Amey, Terzic; El Azzouzi, Grillitsch, Hasa; Fini, Zerbin, Birligea.
+
+### Lineup interpretation
+
+- Sassuolo rotate several headline first-choice names relative to their strongest league XI, but the front three of Volpato-Bowie-Dominguez plus Thorstvedt still supplies credible shot and transition quality.
+- Frosinone's Birligea/Zerbin/Fini attacking line is not a low-threat reserve front three.
+- Both coaches retain an orthodox attacking 4-3-3 rather than a clearly defensive five-back cup shell.
+- The rotation widens the full-match uncertainty and prevents the current 3/3 Sassuolo Over streak from being copied mechanically.
+
+## F. Environment / surface gate
+
+- Outdoor natural-grass stadium.
+- Current Reggio Emilia forecast around kickoff: hot, roughly upper-20s to low-30s °C, light wind and no meaningful rain signal.
+- No evidence of a waterlogged or otherwise abnormal surface was recovered.
+- Heat can increase late fatigue/substitution effects, but it is not assigned an automatic Over direction.
+- Weather therefore does not overturn the current goal/corner ordering.
+
+## G. Current-season competitive regime
+
+### Sassuolo — first three competitive matches
+1. Sassuolo 3-0 Cesena — Coppa Italia — HT 2-0 — corners 4-5 (9)
+2. Atalanta 2-1 Sassuolo — Serie A — HT 1-0 — corners 4-4 (8)
+3. Sassuolo 2-1 Torino — Serie A — HT 1-1 — corners 4-3 (7)
+
+Current competitive summary:
+- First-half Over 0.5: **3/3**
+- Full Over 2.5: **3/3**
+- Match corners Over 8.5: **1/3**
+
+### Frosinone — first three competitive matches
+1. Frosinone 4-1 Juve Stabia — Coppa Italia — HT 3-0 — corners 4-2 (6)
+2. Frosinone 0-1 Juventus — Serie A — HT 0-1 — corners 3-12 (15)
+3. Fiorentina 0-3 Frosinone — Serie A — HT 0-2 — corners 8-5 (13)
+
+Current competitive summary:
+- First-half Over 0.5: **3/3**
+- Full Over 2.5: **2/3**
+- Match corners Over 8.5: **2/3**
+
+### Combined current-season descriptive reference
+- First-half Over 0.5: **6/6**
+- First-half Under 0.5: **0/6**
+- Full Over 2.5: **5/6**
+- Full Under 2.5: **1/6**
+- Total Corners Over 8.5: **3/6**
+
+These are only six selected early-season team-game observations and are **not probabilities**. Under the early-season shrinkage rule they are treated as a regime signal, not a calibrated base rate.
+
+## H. Broader L10 process block
+
+### Sassuolo
+Current StatMuse Serie A L10:
+- Goals: 13
+- Goals conceded: 13
+- xG: approximately 15.1
+- xGA: approximately 12.7-13.4 depending on the exact current query
+- Shots: 135
+- SOT: 46
+- Corners won: approximately 32 over the latest 10 Serie A matches
+
+Interpretation:
+- Sassuolo's chance creation has run above its actual goal total.
+- Neither attack nor defence supports an extreme low-event prior.
+- Current cup rotation is a genuine regime adjustment against simply copying the L10 centre.
+
+### Frosinone
+Current StatMuse Serie A L10:
+- Goals: 9
+- Goals conceded: 9
+- xG: 12.26
+- xGA: 14.28
+- Shots: 142
+- SOT: 49
+- Corners won: approximately 57
+
+Interpretation:
+- Frosinone's observed 9-9 goal line understates the event volume suggested by its xG/xGA.
+- Its corner generation has remained comparatively high even with low possession in several matches.
+- The recent 3-0 Fiorentina win is not treated as a new true scoring rate by itself.
+
+### L5/L15/L20 handling
+- Current L5/current-season match rows were retrieved directly.
+- L10 process rows were recovered.
+- Exact single-provider definition-compatible L15/L20 event-by-event first-half and corner tables were not fully reconstructable before kickoff.
+- Older-season windows were inspected only as shrunk prior context; they were not allowed to override the confirmed lineups or current competitive regime.
+- Missing exact L15/L20 tables are recorded as `NOT AVAILABLE AFTER SEARCH`, not silently filled.
+
+## I. Head-to-head continuity
+
+Last eight meetings:
+- Sassuolo 0-1 Frosinone — HT 0-1 — 11 corners
+- Frosinone 1-2 Sassuolo — HT 1-1 — 8 corners
+- Sassuolo 1-0 Frosinone — HT 0-0 — 3 corners
+- Frosinone 4-2 Sassuolo — HT 1-2 — 11 corners
+- Sassuolo 2-2 Frosinone — HT 0-2 — 9 corners
+- Frosinone 0-2 Sassuolo — HT 0-1 — 11 corners
+- Frosinone 0-1 Sassuolo — HT 0-0 — 10 corners
+- Sassuolo 2-2 Frosinone — HT 1-2 — 9 corners
+
+Descriptive H2H:
+- First-half Over 0.5: **6/8**
+- Full Over 2.5: **4/8**
+- Total Corners Over 8.5: **6/8**
+- Average total goals: about **2.8**
+- Average total corners: about **9**
+
+Continuity caveat:
+- Several meetings are from materially older Serie A/Serie B roster and coaching regimes.
+- The 2024-25 Serie B meetings are the nearest continuity references.
+- H2H is therefore supportive context only, not a fitted weight.
+
+## J. Corner-process audit
+
+### Direct current evidence
+- Sassuolo current competitive corner totals: 9, 8, 7.
+- Frosinone current competitive corner totals: 6, 15, 13.
+- Combined: 3/6 above 8.5.
+- H2H: 6/8 above 8.5, with nine average total corners.
+- Frosinone's broader L10 Serie A corner generation is high at roughly 5.7 per match.
+- Sassuolo's current wing selection Volpato/Dominguez plus overlapping fullback roles preserves width/end-line entry exposure.
+- Frosinone's Fini/Zerbin attacking widths and its recent ability to generate corners while playing lower-possession football preserve a chasing/counter corner path.
+
+### Score-state branches
+- Early Sassuolo goal: lowers some home attacking demand but can raise Frosinone crossing/corner volume.
+- Early Frosinone goal: raises Sassuolo territory and wide pressure.
+- 0-0 deep into the match: both clubs retain knockout urgency, potentially supporting late corner accumulation.
+- Efficient central finishing with limited blocked/cross sequences is the main Over-8.5 kill path.
+
+### Definition cap
+Exact operator/provider corner semantics were not supplied. C05 is therefore ranked but capped at `FORCED RANK`.
+
+## K. Goal-process scenario tree
+
+| Scenario | Representative regulation family | Mechanism |
+|---|---|---|
+| Lower | 1-0 / 1-1 / 2-0 | rotation suppresses finishing; knockout caution; Desplanches/Turati absorb central chances |
+| Central | 2-1 either way / 1-2 | both 4-3-3s create enough transition and second-phase attacking exposure |
+| Upper | 3-1 / 2-2 / 3-2 | early goal plus open chase, heat/fatigue and stronger attacking substitutions |
+| Over kill path | 0-0 HT, low-quality circulation, one side scores once after the hour | defeats C01/C03 |
+| Under kill path | first-half goal forces sustained chase and both teams generate replacement-phase chances | defeats C02/C04 |
+
+Representative scores are scenario families only, not precise predictions.
+
+## L. Component budget for 2.5
+
+The full-match Over needs at least three regulation goals.
+
+Plausible allocations:
+- Sassuolo 2 + Frosinone 1
+- Sassuolo 1 + Frosinone 2
+- 3-0 either way
+
+Under wins through:
+- 0-0
+- 1-0 / 0-1
+- 1-1
+- 2-0 / 0-2
+
+Current evidence supports both teams reaching at least one meaningful creation phase. The decisive question is conversion, not merely territory. Sassuolo's rotation lowers certainty, but the combined current-season 5/6 Over signal plus both teams' xG/process tails keeps the three-goal family marginally ahead.
+
+## M. Ranked decision — most likely to least likely
+
+| Rank | Contract | Verdict | Evidence quality | Why |
+|---:|---|---|---|---|
+| **1** | **P-251-C01 — 1st Half Over 0.5 Goals** | **LEAN** | **MEDIUM** | All six current competitive games across the two clubs have contained a first-half goal, the confirmed XIs preserve real attacking exposure, and 6/8 H2Hs also had a first-half goal. Small-sample shrinkage and knockout caution prevent stronger language. |
+| **2** | **P-251-C03 — Full Match Over 2.5 Goals** | **SLIGHT LEAN** | **MEDIUM-LOW** | Five of six current competitive games cleared 2.5; Sassuolo's recent xG and Frosinone's xG+xGA indicate enough event volume for a three-goal branch. Rotation and the latest 1-0 H2H keep the evidence below Medium. |
+| **3** | **P-251-C05 — Total Corners Over 8.5** | **FORCED RANK** | **MEDIUM-LOW** | H2H is 6/8 over this threshold, Frosinone has a strong broader corner-generation profile, and either trailing state can raise width/cross exposure. Current-season team totals are only 3/6 over, and provider semantics are unspecified. |
+| **4** | **P-251-C04 — Full Match Under 2.5 Goals** | **FORCED RANK / LEAN-ADJACENT** | **MEDIUM-LOW** | 1-0, 1-1 and 2-0 remain substantial branches, especially with Sassuolo rotating Berardi/Laurienté out of the XI. It is narrowly below the Over because both current XIs still carry enough transition/shot quality and five of six competitive matches reached three goals. |
+| **5** | **P-251-C02 — 1st Half Under 0.5 Goals** | **AVOID RELATIVE TO C01** | **LOW-MEDIUM** | Requires 0-0 HT and is opposed by the 6/6 current competitive early-goal record plus 6/8 H2H first-half-goal frequency. Its best path is cup caution plus rotation suppressing chance quality. |
+
+## N. Rank-1 conditional coherence
+
+Rank #1 winning state: **at least one first-half goal**.
+
+- C03 Full Over 2.5: `COHERENT / PARTIAL` — an early goal raises chase/open-game exposure but does not guarantee three.
+- C05 Corners Over 8.5: `PARTIAL_OVERLAP` — an early goal can suppress the leader's attack but raise the trailer's wide pressure.
+- C04 Full Under 2.5: `PARTIAL_OVERLAP` — 1-0, 2-0 and 1-1 still win after a first-half goal.
+- C02 1H Under 0.5: `DISJOINT` exact complement.
+
+No high-ranked row is structurally impossible under Rank #1.
+
+## O. Potential winner
+
+### **Sassuolo to advance — SLIGHT LEAN**
+
+Endpoint: advancement from the Coppa Italia knockout tie, including extra time/penalties if necessary.
+
+Supporting mechanisms:
+- home venue;
+- deeper top-end attacking bench/squad even after cup rotation;
+- Sassuolo's recent attacking process remains credible;
+- broader H2H favors Sassuolo historically.
+
+Counter-paths:
+- Frosinone just won 3-0 away at Fiorentina;
+- the confirmed Frosinone XI is strong and experienced;
+- Frosinone won the latest meeting at Mapei 1-0;
+- Sassuolo have rotated several headline attackers out of the starting XI.
+
+This is a narrow advancement lean, **not** a strong 90-minute winner call.
+
+## P. Important limitations
+
+- No fitted/validated numerical model.
+- No internal probability publication.
+- No bookmaker odds, implied probability or line movement used.
+- Exact operator corner definition not supplied.
+- Current-season sample is only three competitive matches per club and is aggressively shrunk.
+- Exact L15/L20 first-half/corner tables were not fully reconstructable before kickoff.
+- The final lineups materially differ from the strongest league XIs, especially Sassuolo.
+
+## Q. Source / provenance snapshot
+
+Decisive sources:
+- Lega Serie A Coppa Italia schedule/referee publication — field-owner kickoff and officials.
+- Frosinone official club site — current 25-man call-up and 15:00 kickoff.
+- Current published official-lineup reports corroborated by multiple live match services.
+- FBref — current 2026/27 competitive results/schedules.
+- StatMuse — broader Serie A xG/xGA/shots/corner process.
+- TotalCorner — H2H scores, half-time states and corner history.
+- Reggio Emilia weather source — current temperature/wind/rain context.
+
+Market prices appearing incidentally on some third-party pages were **not used** in the forecast or ranking.
+
+## R. Queue / append confirmation
+
+- P-250 state checked first: YES
+- P-250 settlement/retrospective: DEFERRED — no trustworthy final
+- P-251 pregame identity/schedule resolved: YES
+- P-251 lineups refreshed: YES
+- P-251 forecast frozen before kickoff: YES
+- Drive modified: NO
+- Prior forecast rewritten: NO
+- Numerical model run: NO
+- Learning register changed: NO
+- **NEXT CANONICAL ID: P-252**
+
+
+---
+
+# P-252 — Belfast Wolves vs Edinburgh Castle Rockers — European T20 Premier League 2026, Match 11 — PREGAME
+
+## A. Previous-event priority gate
+
+Immediately previous issued event: `P-251 — Sassuolo vs Frosinone`.
+
+- State check performed first.
+- Scheduled kickoff had crossed, but no authoritative final was available.
+- The event therefore remains **OPEN / LIVE OR FINAL-NOT-YET-VERIFIED**.
+- **Settlement + retrospective: DEFERRED TO NEXT QUERY.**
+- No result, pick grade, or retrospective is fabricated while the event is unfinished/unverified.
+
+## B. Frozen identity, schedule, venue and target
+
+- **Canonical ID:** `P-252`
+- **Sport:** Cricket
+- **Competition:** European T20 Premier League 2026
+- **Match:** Match 11
+- **Event:** Belfast Wolves vs Edinburgh Castle Rockers
+- **Venue:** Sportpark Westvliet / Sportpark Duivesteijn, Voorburg, Netherlands
+- **Official scheduled start:** 2026-09-02 15:15 CEST
+- **Australia/Melbourne start:** 2026-09-02 23:15 AEST
+- **Frozen preissue state:** 2026-09-02 23:14 Australia/Melbourne / 15:14 CEST
+- **GAME-STATE:** PREGAME / OFFICIAL PAGE STILL "YET TO BAT"
+- **Cutoff invariant:** PASS — before scheduled start
+- **Toss:** NOT YET PUBLISHED at frozen cutoff
+- **Confirmed playing XIs:** NOT YET PUBLISHED at frozen cutoff
+- **Method:** `MDS-2026.09.02-v3.1`
+- **General algorithm:** `GFA-2`
+- **Sport algorithm:** `SFA-CRICKET`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`
+- **Value state:** `NO VALUE DETERMINABLE`
+- **Operator / reduced-overs / action terms:** NOT SUPPLIED / `UNKNOWN_DEFINITION`
+
+### Exact target interpretation
+
+The user's phrase "Castle Rockers 1st innings" is interpreted as **Edinburgh Castle Rockers' own batting innings**, regardless of whether it is the first or second innings of the match.
+
+Targets:
+- `P252-ECR-PP6`: Edinburgh runs at the end of six legal overs of their batting innings, subject to innings termination/action rules.
+- `P252-ECR-INN`: Edinburgh completed batting-innings total / 20-over endpoint under the operator's exact action terms.
+
+This distinction is crucial because, if Edinburgh bats second, a successful chase can terminate before 20 overs. No fictional "projected 20-over score" is substituted for a completed chase.
+
+## C. Supplied contract geometry
+
+| Contract ID | Contract | Ordinary win region | Dependence |
+|---|---|---|---|
+| `P-252-C01` | Edinburgh 20-over/innings total Over 165.5 | 166+ settled runs under exact innings/action terms | P252-ECR-INN |
+| `P-252-C02` | Edinburgh 20-over/innings total Under 165.5 | 0-165 settled runs under exact innings/action terms | P252-ECR-INN |
+| `P-252-C03` | Edinburgh first 6 overs Over 44.5 | 45+ after six legal overs | P252-ECR-PP6 |
+| `P-252-C04` | Edinburgh first 6 overs Under 44.5 | 0-44 after six legal overs | P252-ECR-PP6 |
+
+- C01/C02 are exact half-run complements under ordinary action.
+- C03/C04 are exact half-run complements under ordinary action.
+- Exactly two of the four rows win if both targets settle normally.
+- This forced 2-of-4 geometry is not forecast accuracy.
+
+## D. Toss / innings-order mixture — mandatory because toss unresolved
+
+### State 1 — Edinburgh bats first
+- Full 20-over exposure is available unless all out, weather, or another termination mechanism intervenes.
+- The 165.5 line sits above the current venue's ordinary completed-first-innings centre.
+- Edinburgh's explosive top order creates a legitimate 170+ branch, but the line requires sustained middle/death scoring after the powerplay.
+
+### State 2 — Edinburgh bats second
+- Chase censoring becomes material.
+- If Belfast sets a target below 166 and Edinburgh successfully chases it, the innings can end below 165.5 even after a very fast powerplay.
+- This state therefore strengthens **Under 165.5** relative to a naive 20-over extrapolation.
+
+### State 3 — reduced overs / weather interruption
+- Match-window weather is currently dry enough that this is not the central branch.
+- Exact sportsbook treatment is unknown because the operator was not supplied.
+- The row is not redefined post hoc if overs are lost.
+
+## E. Current team state
+
+### Edinburgh Castle Rockers
+
+Official ETPL squad core includes:
+- Mitchell Santner (captain)
+- Trent Boult
+- Andries Gous
+- Ross Adair
+- JJ Smuts
+- Brandon McMullen
+- Laurie Evans
+- Tom Curran
+- Gareth Delany
+- Mark Watt
+- Jack Jarvis
+- Andrew Tye / Safyaan Sharif and other squad options
+
+Confirmed previous-XI continuity in both completed wins was strong:
+`Ross Adair / JJ Smuts / Andries Gous / Brandon McMullen / Laurie Evans` formed the main top/middle batting chain, with Santner, Curran and Delany behind them.
+
+### Belfast Wolves
+
+Official ETPL squad includes:
+- Glenn Maxwell
+- Devon Conway
+- David Miller
+- Paul Stirling
+- Mark Chapman
+- Lorcan Tucker
+- Tim Tector
+- Mark Adair
+- Chris Jordan
+- Fred Klaassen
+- Matthew Humphreys
+- Saurabh Netravalkar and additional squad options
+
+Belfast's previous conventional 20-over XI used a strong new-ball/pace group around Klaassen, Mark Adair, Jordan and Netravalkar/Humphreys, with Maxwell/Chapman providing additional matchup options.
+
+### Participant ceiling
+
+Because the exact toss and playing XIs were not released before cutoff:
+- no player-specific prop is selected;
+- any direction relying on one named bowler being certain to open is capped;
+- the rankings rely on robust team-phase mechanisms that survive plausible XIs.
+
+## F. Edinburgh current batting evidence
+
+### Completed chase vs Glasgow Cosmic — Aug 27
+- Target: 116
+- Edinburgh: **116/3 in 11.3 overs**
+- Powerplay: **70 runs**
+- Ross Adair: 28 off 12
+- JJ Smuts: 16 off 9
+- Andries Gous: 40* off 28
+- Brandon McMullen: 23 off 16
+
+### Completed chase vs Dublin Guardians — Aug 30
+- Target: 110
+- Edinburgh: **110/6 in 13.4 overs**
+- Powerplay: **68 runs**
+- Ross Adair: 24 off 7
+- JJ Smuts: 33 off 24
+- Brandon McMullen: 12 off 6
+- Laurie Evans: 19 off 24
+
+### Critical interpretation
+
+The two Edinburgh completed batting innings provide:
+- **2/2 Over 44.5 at six overs**
+- powerplay scores of **70 and 68**
+
+But they do **not** provide valid evidence that a 20-over Edinburgh innings naturally finishes near 110-116. Both were chases of small targets and ended early. Their final scores are **chase-censored** and are prohibited from being treated as batting-first 20-over baselines.
+
+The powerplay evidence is much more portable because both innings reached six overs and Edinburgh attacked immediately in each.
+
+## G. Belfast current bowling / opponent state
+
+Belfast's most useful full 20-over defensive evidence:
+- Dublin Guardians were held to **132/9** after Belfast made 184/7.
+- Belfast later conceded only 56/2 in a five-over rain-reduced game against Amsterdam, which is not comparable to a 20-over run-rate baseline.
+- Against Rotterdam, Belfast made 156/9 first; only one over of Rotterdam's chase was completed before a no-result.
+
+Belfast therefore has credible bowling personnel, but limited same-horizon full-match defensive evidence. The strongest caution against Edinburgh's powerplay Over is Belfast's multiple quality seam options, not a large team-level sample.
+
+## H. Voorburg venue-and-format baseline — innings-order rung
+
+Completed conventional first-innings scores at this venue before Match 11:
+- 157/8
+- 184/7
+- 115 all out
+- 183/5
+- 156/9
+- 109 all out
+- 140/9
+
+The five-over reduced match (56/2) is excluded from the 20-over first-innings baseline.
+
+### Derived descriptive baseline
+- Mean: approximately **149**
+- Median: **156**
+- Over 165.5: **2/7**
+- Under 165.5: **5/7**
+
+This is a small inaugural-league sample, so it is descriptive rather than a fitted probability. Still, 165.5 is visibly above the ordinary venue centre.
+
+### Powerplay context
+Edinburgh itself scored **70** and **68** in the first six overs of its two completed chases. The line of 44.5 requires only 7.5 runs per over, materially below those two observed Edinburgh starts.
+
+## I. Weather / match conditions
+
+Current Voorburg hourly forecast around 15:00-18:00:
+- around **20°C**
+- broadly dry / near-zero expected precipitation in the strongest hourly source
+- west to southwest breeze around Beaufort 3
+- no strong rain signal during the main match window
+
+A second forecast source retained some drizzle/rain uncertainty later in the day, so weather is not labelled guaranteed dry.
+
+### Conditions interpretation
+- no current basis for a deterministic rain-Under adjustment;
+- moderate breeze/overcast conditions can help new-ball movement, but the magnitude is not sufficient to erase Edinburgh's recent powerplay aggression;
+- strip-specific field-owner pitch wording was not recovered at toss time and remains `NOT AVAILABLE`.
+
+## J. Reference-base-rate summary
+
+| Contract | Direct descriptive evidence | Result |
+|---|---|---|
+| ECR Over 44.5 PP | Edinburgh completed ETPL powerplays | 2/2 over — 70, 68 |
+| ECR Under 44.5 PP | Same | 0/2 under |
+| ECR Over 165.5 full innings | No uncensored ECR 20-over batting sample yet; venue conventional first innings | Venue 2/7 over |
+| ECR Under 165.5 full innings | Same | Venue 5/7 under |
+
+No 2-game team sample or 7-game venue sample is converted into an internal probability.
+
+## K. Current form / L5-L20 handling
+
+This is an inaugural competition and Edinburgh has only:
+- two completed matches,
+- one abandonment before a ball.
+
+Belfast similarly has only a handful of tournament matches with weather-shortened/no-result exposure.
+
+Therefore exact ETPL L5/L10/L15/L20 **cannot exist** for these franchises yet. The framework does not permit padding the windows with unrelated pre-franchise team games. Career/player T20 records are used as role priors only.
+
+**H2H:** no prior Belfast Wolves vs Edinburgh Castle Rockers ETPL meeting was found. `NO CONTINUITY-QUALIFIED H2H`.
+
+## L. Scenario tree — Edinburgh batting innings
+
+| Branch | PP6 state | 20-over / innings state | Contracts helped |
+|---|---|---|---|
+| Fast-start / normal middle | 48-60 | 150-170 | C03 strongly; C01/C02 boundary-sensitive |
+| Repeat Edinburgh powerplay burst | 60-70+ | 165-185 if batting first; lower if chase ends early | C03; C01 only if full exposure survives |
+| Belfast new-ball win | 30-44 with 2-3 wkts | 125-155 | C04 + C02 |
+| Fast PP then spin/middle slowdown | 50-65 | 145-165 | **C03 + C02** |
+| Bat-second low/moderate chase | 45-60 PP | chase completed below 166 | **C03 + C02** |
+| Full 20-over ceiling state | 50+ PP, wickets preserved | 175+ | C03 + C01 |
+
+The important coherence point is that **Powerplay Over 44.5 and Full-Innings Under 165.5 are not contradictory**. A front-loaded start followed by spin control, wickets, or chase completion supports both.
+
+## M. Component/resource budget
+
+### To reach 166 after PP = 45
+Edinburgh would need another **121 runs in 14 overs**: 8.64 runs/over.
+
+### To reach 166 after PP = 55
+They would need **111 in 14**: 7.93 runs/over.
+
+### To reach 166 after PP = 65
+They would need **101 in 14**: 7.21 runs/over.
+
+So a PP Over does not by itself force the full Over. It lowers the later requirement, but wickets/chase target remain decisive.
+
+### Under 165.5 kill path
+If Edinburgh bats first and reaches 55-65/0-1, their depth can absolutely carry them to 170+. That is the strongest Under failure branch.
+
+### Over 44.5 kill path
+Two early seam wickets plus dot-ball pressure can leave Edinburgh around 35-44 despite their aggressive intent. Belfast's seam depth makes this a real branch, but the threshold is still low relative to Edinburgh's two observed powerplays.
+
+## N. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-252-C03 — Edinburgh first 6 overs Over 44.5** | **LEAN** | **MEDIUM** | Edinburgh scored 70 and 68 in its two completed ETPL powerplays. The threshold needs only 7.5 RPO and survives either innings order. Belfast's quality seam attack is the main kill path, and the tiny sample prevents stronger language. |
+| **2** | **P-252-C02 — Edinburgh 20-over/innings total Under 165.5** | **LEAN** | **MEDIUM-LOW** | 165.5 is above the current conventional venue first-innings mean/median and 5/7 comparable venue first innings stayed below. If Edinburgh chases, early target completion is an additional Under/censoring path. The major failure branch is an Edinburgh bat-first 55-65 powerplay with wickets in hand. |
+| **3** | **P-252-C01 — Edinburgh 20-over/innings total Over 165.5** | **FORCED RANK / LEAN-ADJACENT** | **MEDIUM-LOW** | Edinburgh's top four are explosive enough to turn a 50-65 powerplay into 170+, and the batting depth is real. It ranks below Under because there is no uncensored Edinburgh 20-over sample yet, the venue centre is below the line, and a chase may terminate early. |
+| **4** | **P-252-C04 — Edinburgh first 6 overs Under 44.5** | **AVOID relative to C03** | **LOW-MEDIUM** | Requires Belfast's new-ball unit to materially suppress an Edinburgh top order that has already made 70 and 68 in two powerplays. The seam-quality branch exists, but the line sits well below Edinburgh's observed powerplay level. |
+
+## O. Rank-1 conditional coherence
+
+Rank #1 state: Edinburgh reaches **45+ after six overs**.
+
+- Full Under 165.5: `COHERENT / PARTIAL` — fast start can still slow, lose wickets, or be chase-censored.
+- Full Over 165.5: `COHERENT / PARTIAL` — a 50-65 PP with wickets preserved creates a very credible 166+ path.
+- PP Under 44.5: `DISJOINT` exact complement.
+
+The ranking therefore does not transfer the powerplay thesis mechanically into the full-innings Over.
+
+## P. Potential winner
+
+### **Edinburgh Castle Rockers — SLIGHT LEAN**
+
+Reasons:
+- two completed wins and one no-result; undefeated tournament start;
+- the strongest bowling performance of either side in the matchup belongs to Edinburgh's attack: Trent Boult took 5 wickets against Glasgow and Mitchell Santner took 5/16 against Dublin;
+- Edinburgh have already shown two distinct successful chase shapes — an explosive 11.3-over chase and a more disrupted 13.4-over chase;
+- Boult/Santner/Watt/Curran/Jarvis gives Edinburgh multiple phase-specific bowling routes against Belfast's stronger batting depth.
+
+Counterweights:
+- Belfast are also undefeated;
+- Belfast have posted 184/7 and 156/9 in their two conventional first innings and possess elite batting names including Conway, Maxwell, Chapman, Stirling/Miller depending on XI;
+- toss and current XI were unresolved at cutoff.
+
+Therefore the winner call is deliberately only a **slight Edinburgh lean**, not a high-confidence prediction.
+
+## Q. Source / provenance snapshot
+
+Primary/current:
+- ETPL official Match 11 page — identity, venue, scheduled start, pre-start "yet to bat" state.
+- ETPL official team pages — Belfast and Edinburgh squad rosters.
+- ETPL official match reports / home page — prior results and Edinburgh performance context.
+
+Scorecard/detail:
+- Cricbuzz / Willow / myKhel — prior innings, fall-of-wickets and exact powerplay scores.
+- Cricket Ireland archive — Belfast reduced-game and official competition scorecard cross-check.
+
+Weather:
+- Buienradar Voorburg hourly forecast.
+- Secondary Dutch weather cross-checks retained only as conditions corroboration.
+
+No bookmaker odds, implied probabilities, line movement, affiliate picks, or market consensus were used directionally.
+
+## R. Queue / append confirmation
+
+- P-251 priority state check: DONE
+- P-251 settlement/retrospective: DEFERRED — no final
+- P-252 frozen before scheduled start: YES
+- P-252 toss/XIs confirmed: NO — explicitly unresolved and branched
+- P-252 forecast appended before delivery: YES
+- Drive modified: NO
+- Prior forecast rewritten: NO
+- Numerical probability generated: NO
+- Learning register changed: NO
+- **NEXT CANONICAL ID: P-253**
+
+---
+
+# Settlement / retrospective sweep before P-253 — 2026-09-02
+
+## P-249 — Hanwha Eagles @ KT Wiz — closure
+
+### Verified final
+- **Final:** KT Wiz 9, Hanwha Eagles 6.
+- Multiple current result sources agree on the 9-6 final.
+- P-249 had been logged `LIVE STATE NOT VERIFIED — NO ACTIONABLE LIVE FORECAST`.
+- Therefore there are **no directional contract outcomes to grade** and no winner call to score.
+
+### Process retrospective
+| Preissue expectation | Actual driver | Difference | Knowability | Process grade | Defect class | Lesson/test | Method change |
+|---|---|---|---|---|---|---|---|
+| Refuse live ranking unless exact live score/inning is independently verified | Final became KT 9-6 after a volatile game with Hanwha defensive errors and late bullpen damage | No sports forecast was issued, so there is no directional miss; the state-gate decision is the object being reviewed | The conflicting live-state sources were knowable before issue | **COMPLIANT** | NONE — hard gate worked as intended | Reinforces L-026/L-046 live-state integrity | **NO forecast-weight change** |
+
+### What went right
+- The card refused to treat one uncorroborated live snapshot as controlling state.
+- That mattered because the exposed sources were materially inconsistent on score/inning.
+- The final was a high-variance 9-6 game, confirming that a stale early-game snapshot would have been a poor basis for remaining-exposure analysis.
+- No fake probability, winner call, or retrospective pick-grade was manufactured.
+
+### What could improve
+- For KBO live requests, prioritize the official Korean KBO scoreboard before secondary English mirrors.
+- When the official page is temporarily stale, search Korean-language live reporting earlier in the state-verification sequence.
+- This is a source-routing improvement only, not evidence for any Over/Under or side weight.
+
+### Learning disposition
+- No new forecast rule.
+- Process observation only: **retain the fail-closed live-state gate**.
+- No model, probability, or calibration update.
+
+**P-249 status: CLOSED — NO ACTIONABLE FORECAST ISSUED.**
+
+---
+
+## Remaining incomplete local events checked
+
+### P-250 — Yunnan Yukun vs Chongqing Tonglianglong
+- Current high-quality/live sources still show the match in progress / not field-owner-final.
+- Latest trustworthy state recovered during this sweep remained a live 0-0 state.
+- **Settlement + retrospective deferred.**
+
+### P-251 — Sassuolo vs Frosinone
+- Current Lega Serie A sources conflict on the fixture time across official publications (15:00 versus a same-day 18:00 events listing), and no authoritative final was recovered in this sweep.
+- Preserve the issued pregame card; do not rewrite it.
+- **Settlement + retrospective deferred.**
+- Administrative observation: schedule-source conflict must be reconciled before prospective-status grading.
+
+### P-252 — Belfast Wolves vs Edinburgh Castle Rockers
+- Current ETPL/MyKhel surfaces still did not expose a verified completed final at the sweep time.
+- **Settlement + retrospective deferred.**
+
+Older inherited operator-definition/provisional follow-ups remain open exactly as previously carried. No unknown operator term is invented.
+
+---
+
+# P-253 — El Gounah vs Al Mokawloon Al Arab — Egyptian Premier League 2026/27, Round 3 — PREGAME
+
+## A. Identity and schedule hard gate
+
+- **Canonical ID:** `P-253`
+- **User wording:** `Egypt Division 1`
+- **Verified competition:** **Egyptian Premier League / Premier League, Round 3**
+- **Field owner:** Egyptian Professional Clubs Association
+- **Event:** El Gounah vs Al Mokawloon Al Arab
+- **Venue:** Khaled Bichara Stadium, El Gouna, Egypt
+- **Venue class:** OUTDOOR, natural grass
+- **Field-owner kickoff:** 2026-09-02 17:00 Cairo local / 14:00 UTC
+- **Australia/Melbourne kickoff:** 2026-09-03 00:00 Australia/Melbourne
+- **Issue-time context:** approximately five minutes before kickoff
+- **GAME-STATE:** PREGAME / SCHEDULED
+- **Cutoff invariant:** PASS
+- **Method:** `MDS-2026.09.02-v3.1`
+- **General algorithm:** `GFA-2`
+- **Sport algorithm:** `SFA-SOCCER`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`
+- **Value state:** `NO VALUE DETERMINABLE`
+- **Operator:** NOT SUPPLIED
+- **Goal endpoint:** regulation 90 minutes including stoppage
+- **Potential winner endpoint:** regulation match winner
+
+## B. Candidate slate
+
+| Contract ID | Contract | Win region | Dependence |
+|---|---|---|---|
+| `P-253-C01` | 1st Half Over 0.5 Goals | 1+ first-half goals | P253-1H-GOAL |
+| `P-253-C02` | 1st Half Under 0.5 Goals | 0-0 at halftime | P253-1H-GOAL |
+| `P-253-C03` | Full Match Over 2.5 Goals | 3+ regulation goals | P253-FT-GOAL |
+| `P-253-C04` | Full Match Under 2.5 Goals | 0-2 regulation goals | P253-FT-GOAL |
+| `P-253-C05` | Total Corners Over 8.5 | 9+ regulation corners under research-provider convention | P253-CORNER |
+
+Geometry:
+- C01/C02 exact complements.
+- C03/C04 exact complements.
+- Those four goal rows force exactly two winners in an ordinary completed regulation match.
+- C05 is a separate derivative target.
+- Exact operator/provider corner definition is not supplied, so C05 is definition-capped at `FORCED RANK` / `MEDIUM-LOW`.
+
+## C. Participant / lineup gate
+
+### El Gounah — officially published current XI
+Current same-day Egyptian reporting identifies the official XI:
+- GK Ahmed Masoud
+- Khaled Seddik
+- Mostafa Metawea
+- Saber El Shimi
+- Abdel Gawad Taalab
+- Omar El Gazar
+- Nour El Sayed
+- Michael Egbemba / Michael Ayo
+- Ahmed Gamal
+- Ojo Samuel
+- Marwan Mohsen
+
+Current role notes:
+- Marwan Mohsen remains the central striker.
+- Ojo and Ahmed Gamal supply the advanced support/width.
+- Wilfried Parfait Teukeu is unavailable through suspension in current Opta/FotMob coverage.
+
+### Al Mokawloon — current source conflict
+The latest recoverable sources agree on the core defensive/midfield skeleton from the opening two rounds:
+- Mahmoud Abou El-Saoud in goal
+- Ahmed Magdy `Kahraba`, Hassan Shakoush, Mohamed Hamed, Nader Hesham in the back line
+- Omar El Wahsh / Idrissa Thiam / Doku Dodo / Islam Gaber / Mido Gaber among the principal midfield/attacking roles
+
+But current same-day sources conflict on the final striker:
+- one current headline says **Shady Hussein leads the attack**;
+- another current match/broadcast preview still lists **Mohammed Sandouqa** at striker.
+
+The complete official Al Mokawloon XI was not recovered from the competition field owner before cutoff.
+
+**Participant consequence:** side/winner and derivative rows are capped; no unsupported player prop is selected.
+
+## D. Current league state
+
+### El Gounah
+First two 2026/27 league matches:
+1. El Gounah 1-1 Modern Sport — HT 0-0; both goals came in second-half stoppage time.
+2. El Qanah 1-1 El Gounah — HT 1-1; El Qanah scored 6', El Gounah equalized 45+2'.
+
+Season after two:
+- 0 wins, 2 draws, 0 losses
+- 2 GF, 2 GA
+- 2 points
+
+### Al Mokawloon
+First two:
+1. Tala'ea El Gaish 1-0 Al Mokawloon — HT 0-0; only goal 70'.
+2. Al Mokawloon 2-3 Al Masry — HT 1-1; Mokawloon 35', Al Masry 44'.
+
+Season after two:
+- 0 wins, 0 draws, 2 losses
+- 2 GF, 4 GA
+- 0 points
+
+## E. Early-season shrinkage / reference rates
+
+Current-season sample is only four team-games combined and is aggressively shrunk.
+
+### First-half 0.5
+- El Gounah: Over in 1/2, Under in 1/2.
+- Al Mokawloon: Over in 1/2, Under in 1/2.
+- Combined descriptive: **2/4 Over, 2/4 Under**.
+
+### Full match 2.5
+- El Gounah: 0/2 Over 2.5; 2/2 Under 2.5.
+- Al Mokawloon: 1/2 Over 2.5; 1/2 Under 2.5.
+- Combined descriptive: **1/4 Over, 3/4 Under**.
+
+These are descriptive, not probabilities.
+
+## F. Broader L10 / prior-regime context
+
+Current rolling source summaries:
+- El Gounah last 10: roughly 1.1 scored, 1.0 conceded; 3 wins, 5 draws, 2 losses; BTTS around 70%.
+- Al Mokawloon last 10: roughly 1.1 scored, 1.0 conceded; 2 wins, 6 draws, 2 losses; BTTS around 60%.
+
+Older-season windows are prior context only. Exact definition-compatible L15/L20 event-by-event first-half and corner tables were not recoverable before kickoff and were not fabricated.
+
+## G. Head-to-head continuity
+
+Most recent:
+- 8 May 2026: Al Mokawloon 1-0 El Gounah — goal at 82' -> **HT 0-0**, Under 2.5.
+- 23 Feb 2026: El Gounah 1-1 Al Mokawloon — Mokawloon goal 19', El Gounah 73' -> **1H Over 0.5**, Under 2.5.
+- 18 Aug 2024: Al Mokawloon 0-1 El Gounah — Under 2.5.
+- 3 Apr 2024: El Gounah 1-2 Al Mokawloon — Over 2.5.
+
+Last 10 listed H2Hs:
+- six finished Under 2.5
+- four finished Over 2.5
+
+2026 meetings receive the strongest continuity weight.
+
+## H. Goal-process mechanism
+
+### El Gounah attack
+- Current XI preserves Marwan Mohsen centrally with Ojo and Ahmed Gamal as support.
+- El Gounah scored in both opening matches, but only one featured a first-half goal.
+- The Modern Sport game stayed 0-0 until 90+4; late scoring is not backfilled into first-half evidence.
+- Against El Qanah, El Gounah generated 13 shots to 6 and about 0.81 xG to 0.40 in one recovered provider.
+
+### Al Mokawloon attack
+- Opening day stayed 0-0 until 70'.
+- Against Al Masry, Mokawloon scored twice but one recovered xG source credited only about 0.25 xG; the finishing outcome is aggressively shrunk rather than treated as a stable high-scoring regime.
+- Current striker-source conflict widens uncertainty.
+
+### Defensive state
+- El Gounah conceded exactly once in each match.
+- Mokawloon conceded four in two, but three came against an Al Masry side that generated the stronger shot/xG process.
+- The central family remains 0-0 / 1-0 / 0-1 / 1-1, with 2-1 as the principal upper branch.
+
+## I. First-half branch tree
+
+| Branch | Representative HT | Mechanism |
+|---|---|---|
+| Slow central | 0-0 | cautious winless teams; Mokawloon opening-day suppression; hot conditions |
+| El Gounah breakthrough | 1-0 | home width/Ojo-Marwan chain attacks uncertain Mokawloon back line |
+| Mokawloon counter | 0-1 | transition/set-piece route through Mido/Dodo/Shady-or-Sandouqa |
+| Open early | 1-1 | repeat of Mokawloon-Al Masry / El Qanah-El Gounah early-event state |
+
+The current sample is exactly balanced 2/4 Over vs 2/4 Under. The Under receives only a slight structural edge from the low-event prior and conditions.
+
+## J. Full-match 2.5 component budget
+
+For Over 2.5:
+- 2-1 either side
+- 3-0 / 0-3
+- 2-2+
+
+For Under 2.5:
+- 0-0
+- 1-0 / 0-1
+- 1-1
+- 2-0 / 0-2
+
+Why Under leads:
+- 3/4 current-season combined games are Under 2.5.
+- both 2026 H2Hs are Under.
+- six of the last 10 listed H2Hs are Under.
+- El Gounah's two league matches are both 1-1 and one stayed 0-0 until the 94th minute.
+- Mokawloon's 2-3 against Al Masry appears less repeatable than a generic three-goal baseline once xG/shot quality is considered.
+
+Strongest Under kill path:
+- an early goal forces the winless trailing side to open up, creating a 2-1/1-2 state.
+
+## K. Corner process
+
+Direct current evidence:
+- El Gounah vs Modern Sport: **11 total corners (4-7)**.
+- El Qanah vs El Gounah: **5 total corners (1-4)**.
+- Al Mokawloon vs Al Masry: **9 total corners** in the rolling/event source.
+- Tala'ea El Gaish vs Al Mokawloon: **9 total corners** in the rolling source.
+- Feb 2026 El Gounah vs Al Mokawloon: **11 total corners (6-5)**.
+
+Small direct set: 11, 5, 9, 9, 11 -> **4/5 Over 8.5**.
+
+Broader Mokawloon rolling corner source:
+- 5.3 corners for
+- 5.3 conceded
+- 10.5 total-match baseline
+- about 5.0 corners won away
+
+Mechanism:
+- El Gounah's Ojo/Ahmed Gamal width can generate end-line/blocked-cross events.
+- Mokawloon trailing state can raise crossing/corner exposure.
+- Low goals do not mechanically imply low corners; the Feb H2H finished 1-1 with 11 corners.
+
+Kill path:
+- slow central possession with few blocked crosses/deflections, like the five-corner El Qanah-El Gounah match.
+
+Exact operator/provider corner definition is absent, so C05 remains `FORCED RANK`.
+
+## L. Environment
+
+- Khaled Bichara Stadium / El Gouna area.
+- Current nearby conditions: clear and very hot.
+- Match-window temperature around **33-36°C**.
+- El Gouna afternoon wind forecast around **16-18 knots** from northerly/north-northeasterly directions in one local forecast lane, with gusts around **18-20 knots**.
+- Precipitation essentially **0%**.
+- Nearby airport dew point around the mid-teens °C.
+
+Mechanistic treatment:
+- heat/wind can reduce sustained pressing and alter crossing/long-ball quality, but there is no fitted coefficient.
+- conditions modestly strengthen the slow-tempo branch without mechanically determining an Under.
+- no abnormal pitch report was recovered.
+
+## M. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-253-C04 — Full Match Under 2.5 Goals** | **LEAN** | **MEDIUM** | Best-aligned with 3/4 current combined league games, both 2026 H2Hs, six of the last 10 listed H2Hs, and El Gounah's two 1-1 starts. |
+| **2** | **P-253-C05 — Total Corners Over 8.5** | **FORCED RANK** | **MEDIUM-LOW** | Direct recent/H2H sample is 4/5 over 8.5 and Mokawloon's rolling baseline is about 10.5 total corners. Provider definition missing. |
+| **3** | **P-253-C02 — 1st Half Under 0.5 Goals** | **SLIGHT LEAN** | **MEDIUM-LOW** | Current 1H sample is only 2/4 Under; edge comes from the low-event prior, May H2H 0-0 HT, Mokawloon opening 0-0 HT and hot conditions. |
+| **4** | **P-253-C01 — 1st Half Over 0.5 Goals** | **LEAN-ADJACENT / FORCED RANK** | **MEDIUM-LOW** | Two of four current games and the February H2H produced a first-half goal. It is genuinely close to C02. |
+| **5** | **P-253-C03 — Full Match Over 2.5 Goals** | **AVOID relative to C04** | **LOW-MEDIUM** | Needs the game to escape the dominant 0-0/1-0/1-1/2-0 families; credible mainly through an early goal plus Mokawloon defensive instability. |
+
+## N. Rank-1 conditional coherence
+
+Rank #1 state: match finishes with **0-2 regulation goals**.
+
+- C05 Corners Over 8.5: `COHERENT / PARTIAL`.
+- C02 1H Under 0.5: `COHERENT`.
+- C01 1H Over 0.5: `PARTIAL_OVERLAP` because 1-0, 2-0 and 1-1 remain Under 2.5.
+- C03 Full Over 2.5: `DISJOINT` exact complement.
+
+No cross-row contradiction requires repair.
+
+## O. Potential winner
+
+### **El Gounah — SLIGHT LEAN (90-minute winner)**
+
+Supporting factors:
+- home venue;
+- unbeaten after two rounds versus Mokawloon's 0 points;
+- El Gounah scored in both matches;
+- Mokawloon conceded four in two;
+- El Gounah's current official XI is resolved while Mokawloon's final attacking XI had a source conflict.
+
+Counterweights:
+- both 2026 H2Hs were close: 1-1 and a 1-0 Mokawloon win;
+- El Gounah are also winless;
+- low-total matches amplify draw probability;
+- Mokawloon retain transition/set-piece routes.
+
+This is a **slight El Gounah winner lean**, with **draw as the strongest alternative**.
+
+## P. Final delivery
+
+1. **Full Match Under 2.5 Goals**
+2. **Total Corners Over 8.5**
+3. **1st Half Under 0.5 Goals**
+4. **1st Half Over 0.5 Goals**
+5. **Full Match Over 2.5 Goals**
+
+**Potential winner:** El Gounah — slight 90-minute lean.
+
+## Q. Append confirmation
+
+- All currently incomplete local events state-checked before P-253: YES
+- Newly completed P-249 settled/reviewed first: YES
+- P-250/P-251/P-252 still unresolved and preserved open: YES
+- P-253 competition corrected from user label to field-owner Premier League Round 3: YES
+- P-253 frozen before kickoff: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probabilities generated: NO
+- Learning register changed: NO new forecast rule
+- **NEXT CANONICAL ID: P-254**
+
+
+---
+
+# Settlement / retrospective sweep before P-254 — 2026-09-03
+
+## P-250 — Yunnan Yukun vs Chongqing Tonglianglong — FINAL
+
+**Verified final:** Yunnan Yukun 1-0 Chongqing Tonglianglong; **HT 0-0**. Yunnan advanced.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+Corner raw counts conflict (10 vs 11), but every credible retrieved value is above 8.5. Preserve the raw conflict and retain **PROVISIONAL WIN** because the user's exact operator/provider definition was never supplied.
+
+---
+
+## P-252 — Belfast Wolves vs Edinburgh Castle Rockers — OPEN
+
+ETPL's current field-owner page still lists Match 11 as **UPCOMING / yet to bat** with no completed score, despite the scheduled start having passed. Treat this as a source-state defect, not a final.
+
+**Settlement/retrospective deferred.**
+
+## P-253 — El Gounah vs Al Mokawloon — OPEN
+
+The Egyptian Professional Clubs Association still exposes the Round 3 fixture as `VS`, without a field-owner final. No sufficiently trustworthy final was recovered.
+
+**Settlement/retrospective deferred.**
+
+---
+
+# P-254 — Jan Choinski vs Botic Van de Zandschulp — 2026 US Open Men's Singles R1 — PREGAME
+
+## A. Identity / state / contract freeze
+- **Canonical ID:** P-254
+- **Round:** R128 / Round 1
+- **Surface:** outdoor hard
+- **Format:** best of five sets
+- **Court:** Court 5 on the current order of play
+- **Scheduled:** 2026-09-02 16:30 UTC / 12:30 EDT / 2026-09-03 02:30 Australia/Melbourne
+- **State at cutoff:** NOT STARTED
+- Sep 1 outdoor play was disrupted by rain, explaining the delayed first-round slot.
+- **Method:** MDS-2026.09.02-v3.1 / GFA-2 / SFA-TENNIS
+- **Operator retirement terms:** NOT SUPPLIED -> `UNKNOWN_DEFINITION`
+- **Probability:** NOT_GENERATED / NOT PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+- **Forecast lane:** SPORTS_ONLY / MARKET_BLIND
+
+| ID | Contract | Ordinary win region |
+|---|---|---|
+| P-254-C01 | Choinski +5.5 games | Choinski win or loss by <=5 net games |
+| P-254-C02 | Van de Zandschulp -5.5 games | Botic win by >=6 net games |
+| P-254-C03 | Over 38.5 games | 39+ |
+| P-254-C04 | Under 38.5 games | <=38 |
+
+C01/C02 and C03/C04 are exact complementary pairs under ordinary completed-match terms. Exactly two of four rows win in a normal completed match; that is contract geometry, not model accuracy.
+
+## B. Current hard-court regime
+
+### Van de Zandschulp
+Current hard-source record: **12-8 in 2026**, **6-4 L10**. Recent hard results include:
+- W Darderi 6-1, 6-0
+- W Vallejo 6-2, 6-0
+- W Shevchenko 6-4, 6-4
+- W Hurkacz 3-6, 7-6, 7-5
+- W Medvedev 6-3, 7-6
+- W Mpetshi Perricard 6-2, 3-6, 6-3
+- L Bonzi 7-6, 6-4
+- L Fonseca 6-4, 7-6
+
+Mechanism: Botic's current ATP-level hard sample shows both reliable service holds and enough return pressure to create multi-break separation. His dominant wins over Darderi and Vallejo are directly relevant to the -5.5 tail.
+
+### Choinski
+Latest high-level hard results:
+- L Rottgering 5-7, 6-2, 4-6
+- L Taro Daniel 4-6, 3-6
+- L Tirante 6-7, 7-6, 6-7
+
+Mechanism: Choinski's serve is the stronger part of his hard profile. The three-tiebreak Cincinnati loss is direct evidence of margin resistance, but his current return/ATP-level results are less convincing than Botic's.
+
+Level adjustment:
+- Choinski's strongest 2026 title runs were largely Challenger clay.
+- Botic's strongest recent evidence is ATP hard.
+- Challenger clay success is not treated as exchangeable with US Open hard.
+
+## C. H2H continuity
+Clean current H2H source:
+- 2025 Braunschweig Challenger, clay: Botic won 6-1, 6-0
+- 2018 Scheveningen Challenger, clay: Botic won 7-5, 6-2
+
+**H2H = Botic 2-0**, but both matches were clay, BO3 Challenger-level, and one is eight years old. Therefore **LOW continuity / diagnostic only**. Conflicting third-party H2H records are not used.
+
+## D. Recency / BO5 context
+- Botic: L5 hard 3-2; L10 hard 6-4; broader 2026 hard 12-8.
+- Choinski: recent high-level hard sequence is 0-3, though two losses were margin-resistant.
+- Exact definition-compatible L15/L20 hard tables for both players were not fully recoverable before issue and are not imputed.
+- Current official US Open men's R1 event stats: 52 matches -> 22 three-set, 16 four-set, 13 five-set, 1 retirement; 27 tiebreaks. This is contextual only.
+
+**Qualitative set-count weight index, not probabilities:**
+- 3 sets = 3
+- 4 sets = 2
+- 5 sets = 1
+
+The central tree therefore prefers Botic control in three or efficient four sets, while preserving Choinski tiebreak/extension branches.
+
+## E. Environment
+Outdoor hard; Fresh Meadows forecast is mostly cloudy around 24°C with E/NE wind near 9 mph and only a modest shower chance until later afternoon. Rain affected the previous day's outer courts, but there is no basis for an automatic weather direction now. No court-speed coefficient is invented.
+
+## F. Match tree / separation budget
+
+**Central Rank-1 scoreline:** Botic **6-3, 6-4, 6-4**
+- Botic game margin +7 -> -5.5 covers
+- total 29 -> Under 38.5 wins
+
+**Efficient 3-1:** Botic **6-3, 6-4, 4-6, 6-3**
+- margin +6 -> -5.5 covers
+- total 38 -> Under 38.5 wins
+
+**Main kill path:** close/tiebreak-heavy Botic win, e.g. 7-6, 6-4, 4-6, 7-6
+- Choinski +5.5 becomes much stronger
+- Over 38.5 becomes much stronger
+
+**Choinski upset path:** high first-serve day plus Botic second-serve/forehand-error volatility -> Choinski wins 3-1/3-2, automatically defeating Botic -5.5 and usually supporting +5.5/Over.
+
+### Handicap budget
+Botic -5.5 needs actual break separation:
+- 6-4, 6-4, 6-4 = +6, cover
+- 7-6, 7-6, 6-4 = +4, no cover
+- 4/5-set extension usually helps Choinski +5.5 unless Botic owns one lopsided set.
+
+### Total budget
+Under 38.5 is strongest in:
+- ordinary Botic 3-0
+- efficient Botic 3-1
+
+Over 38.5 is strongest in:
+- tiebreak-heavy 3-set extremes (three 7-6 sets = 39)
+- close four-set matches
+- most ordinary five-set matches
+
+Thus the shared latent variable is **Choinski hold resistance**:
+- if high -> Choinski +5.5 + Over rise together
+- if Botic breaks repeatedly -> Botic -5.5 + Under rise together.
+
+## G. Ranked forecast
+
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| **1** | **Van de Zandschulp -5.5 Games** | **LEAN** | **MEDIUM** |
+| **2** | **Under 38.5 Total Games** | **SLIGHT LEAN** | **MEDIUM-LOW** |
+| **3** | **Choinski +5.5 Games** | **FORCED RANK / LEAN-ADJACENT** | **MEDIUM-LOW** |
+| **4** | **Over 38.5 Total Games** | **FORCED RANK / weaker total direction** | **MEDIUM-LOW** |
+
+### Rank-1 coherence
+Rank #1 is Botic -5.5.
+- Under 38.5: **COHERENT** with the central 3-0/efficient 3-1 cover states.
+- Choinski +5.5: **DISJOINT**, exact complement.
+- Over 38.5: **PARTIAL/TAIL**; its strongest close-match states usually compress Botic's margin.
+
+## H. Potential winner
+**Botic Van de Zandschulp — LEAN**
+
+Reason: stronger current ATP hard serve/return regime, better opponent-quality wins, and demonstrated separation ceiling. Rankings are close and are not the decisive input.
+
+## I. Final order
+1. Van de Zandschulp -5.5 Games
+2. Under 38.5 Games
+3. Choinski +5.5 Games
+4. Over 38.5 Games
+
+**Potential winner:** Botic Van de Zandschulp.
+
+## J. Append confirmation
+- All incomplete local events rechecked: YES
+- P-250 newly settled/retrospected: YES
+- P-251 newly settled/retrospected: YES
+- P-252/P-253 preserved open: YES
+- P-254 frozen pre-start: YES
+- Drive modified: NO
+- Numerical probability generated: NO
+- New forecast-weight rule: NO
+- **NEXT CANONICAL ID: P-255**
+
+
+---
+
+# Queue state check before P-255 — 2026-09-03
+
+## P-250-C05 — Yunnan Yukun vs Chongqing Tonglianglong corners
+- Still **UNRESOLVED**.
+- No trustworthy current field-owner/provider corner final recovered.
+- No retrospective change.
+
+## P-251-C05 — Sassuolo vs Frosinone corners
+- Remains **PROVISIONAL WIN / threshold-invariant**.
+- Retrieved raw counts still conflict but all credible counts remain above 8.5.
+- Exact original operator/provider definition was never supplied.
+
+## P-252 — Belfast Wolves vs Edinburgh Castle Rockers
+- ETPL field-owner page still exposes Match 11 as `Yet to bat / no ball-by-ball`.
+- Scheduled start has long passed; this is treated as a source-state defect.
+- **No final / no settlement / no retrospective.**
+
+## P-253 — El Gounah vs Al Mokawloon
+- No field-owner final recovered.
+- **No settlement / no retrospective.**
+
+## P-254 — Jan Choinski vs Botic Van de Zandschulp
+- Current US Open/Tennis.com/TNT surfaces still show the match not started/upcoming.
+- Scheduled around 12:30 EDT / 02:30 Australia-Melbourne.
+- **Leave open.**
+
+No unknown operator definition is invented. No completed retrospective is skipped.
+
+---
+
+# P-255 — Inter Women vs VfL Wolfsburg Women — UEFA Women's Champions League 2026/27 Third Qualifying Round, Second Leg — PREGAME
+
+## A. Identity and tie state
+
+- **Canonical ID:** `P-255`
+- **Sport:** Soccer
+- **Competition:** UEFA Women's Champions League 2026/27
+- **Stage:** Third qualifying round, second leg
+- **Event:** Inter Women vs VfL Wolfsburg Women
+- **Venue:** Stadio Ernesto Breda, Sesto San Giovanni, Italy
+- **Scheduled kickoff:** 2026-09-02 18:30 CEST
+- **Australia/Melbourne kickoff:** 2026-09-03 02:30 AEST
+- **Frozen cutoff:** 2026-09-03 approximately 02:23 AEST / 18:23 CEST
+- **GAME-STATE:** PREGAME / SCHEDULED
+- **Aggregate before kickoff:** Wolfsburg lead **2-0**
+- **First leg:** Wolfsburg 2-0 Inter
+- **First-leg HT:** Wolfsburg 1-0 Inter
+- **Method:** `MDS-2026.09.02-v3.1`
+- **General algorithm:** `GFA-2`
+- **Sport algorithm:** `SFA-SOCCER`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`
+- **Value state:** `NO VALUE DETERMINABLE`
+- **Operator:** NOT SUPPLIED
+- **Goal rows:** regulation 90 minutes including stoppage
+- **Potential winner endpoint:** **TO ADVANCE TO THE LEAGUE PHASE**, not the same as the 90-minute match winner
+
+## B. Candidate slate
+
+| ID | Contract | Settlement region | Dependence |
+|---|---|---|---|
+| `P-255-C01` | 1st Half Over 0.5 Goals | 1+ first-half goals | P255-1H |
+| `P-255-C02` | 1st Half Under 0.5 Goals | 0-0 at HT | P255-1H |
+| `P-255-C03` | Full Match Over 2.5 Goals | 3+ regulation goals | P255-FT |
+| `P-255-C04` | Full Match Under 2.5 Goals | 0-2 regulation goals | P255-FT |
+| `P-255-C05` | Total Corners Over 8.5 | 9+ regulation corners under research-provider convention | P255-CORNER |
+
+- C01/C02 exact complements.
+- C03/C04 exact complements.
+- C05 is a separate corner process.
+- Exact operator/provider corner semantics were not supplied, so C05 is capped at `FORCED RANK / MEDIUM-LOW`.
+
+## C. First-leg mechanism
+
+Official/club first-leg evidence:
+- Wolfsburg won 2-0.
+- Prašnikar scored at 42'.
+- Küver scored at 52' from a Peddemors corner.
+- Inter's Robustellini was sent off at 49'.
+- Wolfsburg were described by the club as controlling proceedings, especially after the red.
+- Independent match statistics: Wolfsburg 25 shots to Inter 7; shots on target 11-2; corners 8-2.
+- Inter still created dangerous first-half chances before the dismissal.
+
+Interpretation:
+- the first-leg 2-0 is not imported as a static return-leg expectation;
+- the second leg begins in a **different tactical state** because Inter are already two goals behind on aggregate from minute 0;
+- the red-card-distorted second half of leg one is not treated as ordinary 11-v-11 evidence.
+
+## D. Participant / availability gate
+
+The current Wolfsburg field-owner matchcenter had still not exposed the official second-leg XI at the frozen cutoff, despite listing both squads.
+
+Latest reliable Wolfsburg team news:
+- Lena Lattwein
+- Cecilie Floe Nielsen
+- Giovanna Hoffmann
+
+were still unavailable for the Aug. 30 league match after also missing the first leg.
+
+Inter participant notes:
+- Chiara Robustellini received a straight red in the first leg, so the back-line structure necessarily requires disciplinary/selection reconciliation.
+- Current indexed field-owner surfaces did not expose a trustworthy full second-leg XI before cutoff.
+- A third-party page showing the **first-leg lineup again**, including Robustellini, was quarantined as stale and not used as the second-leg XI.
+
+**Participant consequence:** side/advance and derivative evidence are capped; no player prop is selected.
+
+## E. Current competitive form
+
+### Inter Women — current competitive matches
+1. Parma 0-1 Inter — HT 0-0
+2. Wolfsburg 2-0 Inter — HT 1-0
+3. Inter 6-0 Napoli — HT 4-0
+
+Current competitive descriptive:
+- 1H Over 0.5: **2/3**
+- Full Over 2.5: **1/3**
+
+Broader recent six including current pre-season:
+- 1H goal in approximately **5/6**
+- recent scores: 6-0, 0-2, 1-0, 2-0, 1-0, 4-1
+
+### Wolfsburg Women — current competitive matches
+1. Nürnberg 2-8 Wolfsburg — HT 2-0
+2. Wolfsburg 2-0 Inter — HT 1-0
+3. Leverkusen 1-2 Wolfsburg — HT 0-1
+
+Current competitive descriptive:
+- 1H Over 0.5: **3/3**
+- Full Over 2.5: **2/3**
+
+Broader recent:
+- first-half goals have been frequent across league, Supercup/friendly and UWCL samples;
+- current scoring ceiling remains high, but the Nürnberg 8-2 second half was heavily influenced by a dismissal and is not used as a normal baseline.
+
+Combined current competitive descriptive:
+- 1H Over 0.5 = **5/6**
+- Full Over 2.5 = **3/6**
+
+Small sample; diagnostic only.
+
+## F. Two-leg regime switch
+
+### Branch 1 — no early goal
+- Wolfsburg can protect the 2-0 aggregate advantage.
+- Inter attack demand rises with time, but Wolfsburg do not need to chase.
+- Supports lower regulation total initially, while late corner pressure can still rise.
+
+### Branch 2 — early Inter goal
+- Aggregate becomes 2-1.
+- Tie becomes materially live.
+- Inter keep pressing; Wolfsburg gain counter space.
+- Strongly supports 1H Over, later goals and corners.
+
+### Branch 3 — early Wolfsburg goal
+- Aggregate becomes 3-0.
+- Inter now require three to draw level.
+- Inter are forced into a very aggressive chase.
+- Strongly supports later transition chances and corner volume.
+
+### Branch 4 — dismissal/injury
+- Must be rebuilt asymmetrically.
+- First-leg red-card effects are not assumed to repeat.
+
+This aggregate-state structure is more important than copying ordinary home/away totals.
+
+## G. Early-goal reconciliation
+
+Evidence supporting 1H Over 0.5:
+- current competitive combined = 5/6
+- first leg itself had a first-half goal
+- Inter just scored four first-half goals against Napoli
+- Wolfsburg's first two league matches and first leg all contained first-half scoring
+- Inter must attack from kickoff because they trail 0-2 on aggregate
+
+Counter-paths:
+- Wolfsburg can begin conservatively and prioritize shape
+- first-leg breakthrough did not arrive until 42'
+- exact second-leg XIs were not field-owner-confirmed at cutoff
+
+Result: early-goal Over remains the strongest goal direction, but evidence is capped at MEDIUM.
+
+## H. Full-total component budget
+
+Over 2.5 wins through:
+- 2-1
+- 1-2
+- 3-0 / 0-3
+- 2-2+
+
+Under 2.5 wins through:
+- 0-0
+- 1-0 / 0-1
+- 1-1
+- 2-0 / 0-2
+
+Central competing families:
+- **1-1 / 1-2 Wolfsburg / 2-1 Inter**
+
+The aggregate deficit specifically raises the right tail:
+- if Inter score, chase remains active;
+- if Wolfsburg score, Inter's chase becomes even more extreme.
+
+The main Under path is Wolfsburg successfully slowing the match and denying Inter an early goal.
+
+## I. Corner process
+
+Direct first-leg:
+- Wolfsburg 8 corners
+- Inter 2
+- total 10
+
+Recent Inter corner process from the retrieved provider:
+- Parma: 4 Inter corners
+- Newcastle: 5
+- Union Berlin: 4
+- Grasshopper: 9
+- first leg vs Wolfsburg: 2
+
+The first-leg 2-corner output occurred in a match where Inter were reduced to ten shortly after halftime and then spent long periods defending.
+
+Second-leg mechanism:
+- Inter start already two goals behind on aggregate.
+- Their required attacking exposure is materially higher from kickoff.
+- If Inter trail further, crosses/end-line entries/set plays should rise.
+- If Inter score early, Wolfsburg may counter more often, preserving two-sided corner generation.
+- Wolfsburg themselves generated 8 corners in leg one and 11 in the 8-2 Nürnberg match.
+
+Kill path:
+- Inter create centrally rather than through blocked/cross actions;
+- Wolfsburg protect territory effectively and the match produces goals from few corner-causing events.
+
+Because the exact sportsbook/provider definition is absent, C05 remains a research-defined ranking row only.
+
+## J. Environment
+
+Sesto San Giovanni / Milan match-window forecast:
+- approximately 30-31°C near kickoff
+- dry / near-zero precipitation
+- light wind around 5-9 km/h
+- no abnormal surface report recovered
+
+Mechanistic use:
+- heat can increase late fatigue/substitution effects;
+- dry light-wind conditions do not create a material suppression signal;
+- no deterministic Over adjustment is assigned.
+
+## K. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-255-C01 — 1st Half Over 0.5 Goals** | **LEAN** | **MEDIUM** | Aggregate state forces Inter to chase from minute 1; current competitive sample is 5/6 with a first-half goal and the first leg also had one. Wolfsburg's control-first branch is the main counter. |
+| **2** | **P-255-C05 — Total Corners Over 8.5** | **FORCED RANK** | **MEDIUM-LOW** | First leg produced 10 corners; Inter's second-leg chasing exposure is structurally higher, and either early-goal direction can raise crossing/set-piece demand. Exact provider definition is missing. |
+| **3** | **P-255-C03 — Full Match Over 2.5 Goals** | **SLIGHT LEAN** | **MEDIUM-LOW** | Two-leg regime switch raises the open-game tail: early Inter goal makes the tie live; early Wolfsburg goal forces an even larger Inter chase. Current competitive raw total sample is only 3/6 Over, so this remains below Rank #1. |
+| **4** | **P-255-C04 — Full Match Under 2.5 Goals** | **FORCED RANK / LEAN-ADJACENT** | **MEDIUM-LOW** | Wolfsburg can protect a 2-0 aggregate cushion and the first leg itself finished with only two goals. 0-0, 1-0, 1-1 and 2-0 remain credible if Inter fail to score early. |
+| **5** | **P-255-C02 — 1st Half Under 0.5 Goals** | **AVOID RELATIVE TO C01** | **LOW-MEDIUM** | Requires 0-0 HT despite Inter's immediate aggregate chase and a current 5/6 competitive early-goal combined sample. Its strongest route is Wolfsburg successfully slowing the first phase. |
+
+## L. Rank-1 coherence
+
+Rank #1 = 1H Over 0.5.
+
+- Corners Over 8.5: `COHERENT / PARTIAL` — early goal changes chase intensity and can add width/set pieces.
+- Full Over 2.5: `COHERENT / PARTIAL` — early goal materially raises three-goal states.
+- Full Under 2.5: `PARTIAL_OVERLAP` — 1-0, 2-0 or 1-1 still win Under after an early goal.
+- 1H Under 0.5: `DISJOINT` exact complement.
+
+No high-ranked row is structurally impossible under Rank #1.
+
+## M. Potential winner / qualification endpoint
+
+### **VfL Wolfsburg to advance — SUPPORTED qualitative direction**
+
+This is intentionally an **advance** call, not a regulation-moneyline call.
+
+Why:
+- Wolfsburg begin 2-0 ahead on aggregate.
+- They controlled much of the first leg and produced a large shot/corner advantage.
+- Inter must score at least twice without net concession merely to force extra time.
+- Wolfsburg's current league form is strong: 8-2 at Nürnberg, 2-1 at Leverkusen.
+- Their transition threat becomes more dangerous as Inter chase.
+
+### Regulation-result note
+A 90-minute Wolfsburg win is only a **slight lean**, because they do not need to win the second leg and can qualify through a draw or narrow defeat.
+
+## N. Final delivery
+
+1. **1st Half Over 0.5 Goals**
+2. **Total Corners Over 8.5**
+3. **Full Match Over 2.5 Goals**
+4. **Full Match Under 2.5 Goals**
+5. **1st Half Under 0.5 Goals**
+
+**Potential winner endpoint:** VfL Wolfsburg **to advance**.
+
+## O. Append confirmation
+
+- All current incomplete local events rechecked: YES
+- Newly final item requiring retrospective: NO
+- P-252/P-253/P-254 remain open/unverified: YES
+- P-250-C05 unresolved and P-251-C05 provisional preserved: YES
+- P-255 frozen pre-start: YES
+- Exact second-leg XI unavailable from indexed field-owner surface: YES / uncertainty preserved
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-256**
+
+
+---
+
+# Queue state check before P-256 — 2026-09-03
+
+## Open / unresolved local items
+- `P-250-C05` Yunnan–Chongqing corners: **UNRESOLVED** — no trustworthy current provider final.
+- `P-251-C05` Sassuolo–Frosinone corners: **PROVISIONAL WIN / threshold-invariant**; raw provider counts still conflict but remain above 8.5.
+- `P-252` Belfast Wolves–Edinburgh Castle Rockers: **OPEN / FIELD-OWNER STATE DEFECT**; ETPL still exposes the match as upcoming/yet-to-bat after scheduled start.
+- `P-253` El Gounah–Al Mokawloon: **OPEN / FINAL NOT VERIFIED**.
+- `P-254` Choinski–Van de Zandschulp: **OPEN / UPCOMING-NOT STARTED** at the queue sweep.
+- `P-255` Inter Women–Wolfsburg Women: **OPEN / PREGAME** at the queue sweep; scheduled for 18:30 CEST / 02:30 Melbourne.
+
+No newly final local event was safe to settle. No retrospective was fabricated. Older inherited provisional/operator-definition items remain unchanged.
+
+---
+
+# P-256 — Paris Saint-Germain Women vs Eintracht Frankfurt Women — UEFA Women's Champions League 2026/27 Third Qualifying Round, Second Leg — PREGAME
+
+## A. Frozen identity and tie state
+- **Canonical ID:** `P-256`
+- **Competition:** UEFA Women's Champions League 2026/27
+- **Stage:** Third qualifying round, second leg
+- **Event:** Paris Saint-Germain Women vs Eintracht Frankfurt Women
+- **Venue:** PSG Campus, Poissy, France
+- **Kickoff:** 2026-09-02 18:30 CEST / 2026-09-03 02:30 Australia/Melbourne
+- **State at cutoff:** PREGAME / SCHEDULED
+- **Aggregate before kickoff:** **1-1**
+- **First leg:** Eintracht Frankfurt 1-1 PSG
+- **First-leg HT:** 1-1
+- **First-leg goals:** Mühlhaus 4', Feller 7'
+- **Method:** `MDS-2026.09.02-v3.1`
+- **General algorithm:** `GFA-2`
+- **Sport algorithm:** `SFA-SOCCER`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`
+- **Value state:** `NO VALUE DETERMINABLE`
+- **Operator:** NOT SUPPLIED
+- **Goal endpoint:** regulation 90 minutes including stoppage
+- **Potential winner endpoint:** **TO ADVANCE TO THE LEAGUE PHASE**
+- If tied after 90 minutes, current Eintracht preview states extra time and then penalties decide the tie.
+
+## B. Candidate slate
+
+| ID | Contract | Settlement region | Dependence |
+|---|---|---|---|
+| `P-256-C01` | 1st Half Over 0.5 Goals | 1+ first-half goals | P256-1H |
+| `P-256-C02` | 1st Half Under 0.5 Goals | 0-0 at halftime | P256-1H |
+| `P-256-C03` | Full Match Over 2.5 Goals | 3+ regulation goals | P256-FT |
+| `P-256-C04` | Full Match Under 2.5 Goals | 0-2 regulation goals | P256-FT |
+| `P-256-C05` | Total Corners Over 8.5 | 9+ regulation corners under the research-provider convention | P256-CORNER |
+
+- C01/C02 are exact complements.
+- C03/C04 are exact complements.
+- C05 is a separate corner process.
+- Exact operator/provider corner semantics were not supplied, so C05 is capped at `FORCED RANK / MEDIUM-LOW` even if it ranks first by sporting likelihood.
+
+## C. Participant / availability gate
+
+### UEFA current squad status
+UEFA's match page exposes current official squad lists but had not yet exposed the confirmed starting XIs at the frozen cutoff.
+
+### PSG available attacking core
+Current UEFA squad includes:
+- Naomie Feller
+- Romée Leuchter
+- Merveille Kanjinga
+- Rasheedat Ajibade
+- Sakina Karchaoui
+- Jennifer Echegini
+- Jackie Groenen
+- Vitória Yaya
+
+First-leg PSG starters included:
+Kiedrzynek; Chagas, De Almeida, Dudek, Elimbi; Echegini, Ebayilin; Feller, Karchaoui; Kanjinga, Leuchter.
+
+### Frankfurt current squad / team news
+Current UEFA squad includes:
+- Laura Freigang
+- Larissa Mühlhaus
+- Hayley Raso
+- Rebecka Blomqvist
+- Danique Tolhoek
+- Erëleta Memeti
+- Hanna Bennison
+- Amanda Ilestedt / Sara Doorsoun defensive options
+
+Current Eintracht preview explicitly states goalkeeper **Sophia Winkler remains unavailable**.
+
+The first-leg XI and current league rotation show meaningful attacking depth, but exact second-leg starter/minutes allocation was not confirmed before cutoff.
+
+**Participant consequence:** no player prop is selected, and side/total confidence is capped below high confidence.
+
+## D. First-leg mechanism
+
+Official Frankfurt report:
+- Frankfurt's high press forced an early PSG turnover.
+- Larissa Mühlhaus scored at **4'**.
+- PSG responded almost immediately through Naomie Feller at **7'**.
+- The match then stayed 1-1.
+- Frankfurt had a major second-half chance when Hanna Bennison struck both posts in the same sequence.
+- Frankfurt described the tie as remaining open.
+
+Independent match stats:
+- possession: Frankfurt 56%, PSG 44%
+- shots: Frankfurt 7, PSG 2
+- shots on target: Frankfurt 4, PSG 1
+- corners: **Frankfurt 10, PSG 5**
+- total corners: **15**
+
+Interpretation:
+- the first-leg early-goal state was real, not a late-score artifact;
+- Frankfurt generated the larger second-half pressure despite failing to score again;
+- PSG proved capable of immediately punishing the high press;
+- the second leg begins level, so neither team has an aggregate cushion to protect.
+
+## E. Aggregate-state tree
+
+### Branch 1 — no early goal
+- Tie remains 1-1 aggregate.
+- Neither side is forced into an immediate desperation chase.
+- The match can remain tactical through the first hour.
+- Supports Full Under 2.5 more than in an aggregate-deficit tie.
+
+### Branch 2 — early PSG goal
+- PSG lead aggregate 2-1.
+- Frankfurt must raise attack/width and set-piece exposure.
+- Supports corners and raises the late Over tail.
+
+### Branch 3 — early Frankfurt goal
+- Frankfurt lead aggregate 2-1.
+- PSG must chase at home.
+- Supports PSG territory/corners and raises transition chances.
+
+### Branch 4 — level after 90
+- Extra time remains possible.
+- User's 90-minute total and first-half rows are settled before extra time.
+- Potential winner-to-advance endpoint continues through ET/penalties.
+
+This tied-aggregate structure is less inherently Over-biased than P-255 Inter–Wolfsburg because no side starts behind.
+
+## F. Current goal form
+
+### Frankfurt current competitive run
+- Frankfurt 8-0 Omonia
+- Frankfurt 2-0 Malmö
+- Frankfurt 2-0 Köln
+- Frankfurt 1-1 PSG
+- Frankfurt 1-1 Nürnberg
+
+Recent competitive totals:
+- Over 2.5: **1/5**
+- Under 2.5: **4/5**
+
+First-half evidence:
+- Köln 2-0 HT
+- PSG 1-1 HT
+- Nürnberg 0-1 HT
+- current UWCL qualifying samples also contain early goals in the Omonia/Malmö wins
+- Frankfurt's current attacking phases are often strongest before halftime even when the final total remains low.
+
+### PSG current recent run
+PSG domestic league had not yet begun; the current usable regime is first-leg plus friendlies:
+- Saint-Malo 1-1 PSG
+- Brighton 1-1 PSG
+- PSG 1-3 Union Berlin
+- PSG 4-0 Valencia
+- Frankfurt 1-1 PSG
+
+Known first-half states:
+- Brighton 0-1 PSG
+- PSG 1-2 Union Berlin
+- PSG 2-0 Valencia
+- Frankfurt 1-1 PSG
+
+This makes PSG's current early-goal exposure materially stronger than its full-match 2.5 direction.
+
+### Combined interpretation
+- **1H goal:** strong current signal.
+- **Full Over 2.5:** mixed.
+- Frankfurt's process is particularly important: repeated first-half goals followed by low-scoring second halves create a natural `1H Over + Full Under` branch.
+
+## G. L5 / L10 / broader-window handling
+
+Current exact L5:
+- Frankfurt: available and directly reconstructed.
+- PSG: current first-team sample spans one competitive match plus friendlies; friendly phase is kept separate.
+
+Broader current corner source:
+- PSG last 10 tracked matches: about **10.8 average total corners**, with 70% above 9.5 in the provider's current window.
+- Frankfurt latest five tracked corner totals: **11, 15, 9, 11, 8**.
+
+Exact definition-compatible L15/L20 current-regime event tables were not fully reconstructable before kickoff. Older-season results remain prior context only.
+
+No missing window is fabricated.
+
+## H. Corner process
+
+This is the strongest target-specific evidence.
+
+### First leg
+- Frankfurt corners: **10**
+- PSG corners: **5**
+- total: **15**
+
+### Frankfurt latest five tracked totals
+- vs Nürnberg: 11
+- vs PSG: 15
+- vs Köln: 9
+- vs Malmö: 11
+- vs Strasbourg: 8
+
+**4/5 exceeded 8.5.**
+
+Frankfurt's current tracked recent form also shows approximately:
+- 7 corners for per match
+- 3.8 against per match
+
+### PSG recent tracked totals
+Available recent records:
+- vs Frankfurt: 15
+- vs Valencia: 15
+- vs Brighton: 7
+- vs Paris FC: 13
+- vs Lyon: 11
+
+**4/5 exceeded 8.5.**
+
+PSG broader tracked average: approximately **10.8 total corners** over the latest 10-provider window.
+
+### Mechanistic branch
+- tied aggregate means both sides need an eventual winner;
+- first goal by either side raises the trailing team's crossing/end-line/set-piece exposure;
+- Frankfurt demonstrated extremely high corner generation in leg one;
+- PSG's current wide/advanced personnel — Feller, Karchaoui, Leuchter/Kanjinga/Ajibade options — preserve flank pressure;
+- even a low-scoring regulation game can clear 8.5 corners.
+
+### Kill path
+- long central-possession spells;
+- few blocked crosses;
+- efficient finishing before sustained territorial pressure develops.
+
+### Definition cap
+Operator/provider definition absent -> row may rank #1 but cannot be labelled `LEAN/SUPPORTED`.
+
+## I. First-half goal audit
+
+Evidence supporting Over 0.5:
+- first leg produced goals at 4' and 7';
+- Frankfurt's latest league games vs Köln and Nürnberg both had first-half goals;
+- PSG's recent known halftime states vs Brighton, Union, Valencia and Frankfurt all contained a goal;
+- first-leg pressing/transition mechanism remains relevant.
+
+Counter-path:
+- second-leg aggregate is level and neither team needs to force the game in the first 20 minutes;
+- both may be more cautious after the chaotic seven-minute opening in Frankfurt;
+- confirmed second-leg XI was unavailable at cutoff.
+
+Result: Over 0.5 still leads the first-half pair.
+
+## J. Full-match 2.5 budget
+
+### Under 2.5 central score families
+- 0-0
+- 1-0 PSG
+- 0-1 Frankfurt
+- 1-1
+- 2-0 / 0-2
+
+### Over 2.5 families
+- 2-1 either way
+- 3-0
+- 2-2+
+
+### Why Under has the slight edge
+- Frankfurt's last five competitive matches: **4/5 Under 2.5**.
+- The first leg generated two very early goals but no third across the remaining 80+ minutes.
+- Aggregate starts level, so there is no forced chase until a goal occurs.
+- Frankfurt have shown an ability to defend leads / keep games at 2 total or fewer.
+
+### Strongest Under kill path
+- early goal by either team forces the other to chase;
+- PSG's home attack converts the additional territory;
+- Frankfurt's strong set-piece/corner pressure produces a second/third goal.
+
+Therefore the full total is close, but Under is marginally more robust than Over.
+
+## K. Environment
+
+Poissy forecast:
+- roughly **20-24°C** through the afternoon/evening
+- very low / 0% precipitation in the current local forecast
+- light wind approximately 4-7 km/h
+- no abnormal surface report recovered
+
+No strong environmental suppression or enhancement is applied.
+
+## L. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-256-C05 — Total Corners Over 8.5** | **FORCED RANK** | **MEDIUM-LOW** | First leg produced 15; Frankfurt latest tracked five produced 11/15/9/11/8; PSG recent tracked sample also clears frequently. Tied aggregate ensures neither side can simply defend a lead from kickoff. Definition gap prevents LEAN label. |
+| **2** | **P-256-C01 — 1st Half Over 0.5 Goals** | **LEAN** | **MEDIUM** | First leg had goals at 4' and 7'; both teams' current known halftime states are heavily early-goal oriented. Level aggregate caution is the main suppressor. |
+| **3** | **P-256-C04 — Full Match Under 2.5 Goals** | **SLIGHT LEAN** | **MEDIUM-LOW** | Frankfurt are 4/5 Under 2.5 in current competitive matches; first leg had two goals despite early scoring; tied aggregate allows a long tactical central branch. |
+| **4** | **P-256-C03 — Full Match Over 2.5 Goals** | **FORCED RANK / LEAN-ADJACENT** | **MEDIUM-LOW** | An early goal creates a clear chase/open-game state and both teams have attacking quality. It ranks below Under because the raw current Frankfurt total regime remains strongly low-scoring. |
+| **5** | **P-256-C02 — 1st Half Under 0.5 Goals** | **AVOID relative to C01** | **LOW-MEDIUM** | Requires 0-0 HT despite an early-goal-heavy current sample and the first-leg 4'/7' goals. Its route is a much more cautious second-leg opening. |
+
+## M. Rank-1 coherence
+
+Rank #1 is Corners Over 8.5.
+
+- 1H Over 0.5: `PARTIAL_OVERLAP` — early goal can increase chase/crossing exposure.
+- Full Under 2.5: `COHERENT / PARTIAL` — low goals can coexist with high corners.
+- Full Over 2.5: `COHERENT / PARTIAL` — an open chase also supports corners.
+- 1H Under 0.5: `PARTIAL_OVERLAP` — 0-0 HT can still build late corners.
+
+No ranked row is structurally disjoint from the corner thesis.
+
+## N. Potential winner / qualification endpoint
+
+### **Paris Saint-Germain to advance — SLIGHT LEAN**
+
+This is a qualification call, not a strong 90-minute winner claim.
+
+Supporting factors:
+- home second leg at PSG Campus;
+- first-leg PSG survived the larger Frankfurt pressure and still earned 1-1;
+- PSG have multiple high-level attacking options and stronger squad depth on paper;
+- home environment removes travel from PSG and places Frankfurt under away knockout pressure.
+
+Counterweights:
+- Frankfurt were arguably the stronger chance-generating side in leg one;
+- Frankfurt's high press created the first goal and their 10-corner / 7-shot profile was stronger;
+- Hanna Bennison hit both posts in one second-half sequence;
+- Frankfurt have more current competitive-match rhythm than PSG.
+
+Therefore:
+- **PSG to advance: slight lean**
+- Frankfurt advancing is a substantial competing branch.
+- No high-confidence regulation winner is published.
+
+## O. Final delivery
+
+1. **Total Corners Over 8.5**
+2. **1st Half Over 0.5 Goals**
+3. **Full Match Under 2.5 Goals**
+4. **Full Match Over 2.5 Goals**
+5. **1st Half Under 0.5 Goals**
+
+**Potential winner endpoint:** Paris Saint-Germain **to advance — slight lean**.
+
+## P. Append confirmation
+- Every incomplete local event rechecked: YES
+- Newly safe-to-settle event: NO
+- P-256 frozen pre-start: YES
+- Confirmed second-leg XI unavailable at cutoff: YES / preserved as uncertainty
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-257**
+
+
+---
+
+# Queue state check before P-257 — 2026-09-03
+
+## Current incomplete / unresolved local items
+- `P-250-C05` Yunnan–Chongqing corners: **UNRESOLVED**.
+- `P-251-C05` Sassuolo–Frosinone corners: **PROVISIONAL WIN / threshold-invariant**.
+- `P-252` Belfast Wolves–Edinburgh Castle Rockers: **OPEN / FIELD-OWNER STATE DEFECT**.
+- `P-253` El Gounah–Al Mokawloon: **OPEN / FINAL NOT VERIFIED**.
+- `P-254` Choinski–Van de Zandschulp: **OPEN / UPCOMING-NOT STARTED** at this sweep.
+- `P-255` Inter Women–Wolfsburg Women: scheduled start crossed; **NO VERIFIED FINAL**.
+- `P-256` PSG Women–Eintracht Frankfurt Women: scheduled start crossed; **NO VERIFIED FINAL**.
+
+No newly final event was safe to settle. No retrospective was fabricated. All older provisional/operator-definition follow-ups remain open as previously recorded.
+
+---
+
+# P-257 — San Diego Padres (Casey Mize) @ Cincinnati Reds (Brandon Williamson) — MLB — PREGAME
+
+## A. Frozen identity / state
+- **Canonical ID:** `P-257`
+- **League:** MLB
+- **Event:** San Diego Padres @ Cincinnati Reds
+- **Venue:** Great American Ball Park, Cincinnati, Ohio
+- **Scheduled first pitch:** 2026-09-02 12:40 EDT
+- **Australia/Melbourne:** 2026-09-03 02:40 AEST
+- **Frozen research cutoff:** approximately 02:38 AEST, before scheduled first pitch
+- **GAME-STATE:** PREGAME / SCHEDULED
+- **Home last bat:** Cincinnati
+- **Method:** `MDS-2026.09.02-v3.1`
+- **General algorithm:** `GFA-2`
+- **Sport algorithm:** `SFA-BASEBALL`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`
+- **Value state:** `NO VALUE DETERMINABLE`
+- **Operator/action/listed-pitcher terms:** NOT SUPPLIED / `UNKNOWN_DEFINITION`
+
+## B. User-supplied slate
+| ID | Contract | Ordinary completed-game settlement |
+|---|---|---|
+| `P-257-C01` | Padres -1.5 | SD wins by 2+ |
+| `P-257-C02` | Reds +1.5 | CIN wins or loses by exactly 1 |
+| `P-257-C03` | Over 9.5 runs | 10+ combined runs |
+| `P-257-C04` | Under 9.5 runs | 0-9 combined runs |
+
+C01/C02 and C03/C04 are exact half-run complements under ordinary completed-game terms.
+
+## C. Starter identity and regime
+
+### Casey Mize — Padres, RHP
+MLB confirms San Diego acquired Mize from Detroit on 3 August 2026.
+
+**Detroit pre-trade regime**
+- 16 starts
+- 4-6
+- 2.70 ERA
+- 2.59 FIP
+- 85 K / 19 BB in 86.2 IP
+
+**Padres post-trade regime**
+Recent game log:
+- at Arizona: 3.1 IP, 8 ER
+- vs Milwaukee: 6 IP, 2 ER
+- at Cleveland: 6 IP, 0 ER
+- vs Minnesota: 2.2 IP, 4 ER, 3 HR
+- at Tampa Bay: 5 IP, 7 R, 2 ER
+
+The current Padres-only line exposed by the latest gametracker is roughly:
+- 23 IP
+- 1-2
+- 6.26 ERA
+- 1.52 WHIP
+
+Interpretation:
+- season reputation/Detroit form cannot silently override the post-trade San Diego regime;
+- Mize retains a credible 5-6 inning suppression branch;
+- his Padres starts also contain large hook/error/HR tails;
+- the latest Tampa result included five unearned runs, so not all recent scoreboard damage is attributed to pitcher skill.
+
+### Brandon Williamson — Reds, LHP
+MLB confirms:
+- 2-3
+- 6.11 ERA
+- 19 SO
+- first MLB start since 29 April
+- activated from the IL after a long shoulder-related absence
+- missed 2025 following Tommy John surgery
+
+2026 MLB pre-injury starts:
+- 4.2 IP, 6 ER
+- 6.2 IP, 0 ER
+- 4 IP, 3 ER
+- 5.1 IP, 1 ER
+- 4.1 IP, 5 ER
+- 3 IP, 4 ER
+
+Totals over those six:
+- 28 IP
+- 19 K
+- 20 BB
+- 1.64 WHIP
+
+Interpretation:
+- Williamson has a very wide current exposure/run-rate mixture;
+- no full normal-starter workload is assumed after the long layoff;
+- an early hook creates extra Reds relief exposure;
+- a short start is not automatically an Over, but Cincinnati's recent staff performance makes that relief transition non-trivial.
+
+## D. Current lineup / participant gate
+
+MLB's official starting-lineup page was still showing `TBD` close to the frozen cutoff, creating a field-owner publication lag.
+
+A current secondary gametracker listed:
+### San Diego
+Tatis Jr.; Samad Taylor; Jackson Merrill; Ty France; Xander Bogaerts; Ethan Salas; Austin Hays; Luis Campusano; Jake Cronenworth.
+
+### Cincinnati
+Héctor Rodríguez; Elly De La Cruz; Sal Stewart; JJ Bleday; Tyler Stephenson; Dane Myers; Juan Brito; Matt McLain; Edwin Arroyo.
+
+Important participant notes:
+- Ethan Salas was called up for September and the latest gametracker had him making his MLB debut.
+- Elly De La Cruz has recently been used at DH while managing a quad issue.
+- Sal Stewart enters with 31 HR / 105 RBI in the current source.
+- Because the field-owner lineup page lagged, the card does not treat every secondary batting slot as `CONFIRMED_OFFICIAL`.
+
+## E. Recent team form
+
+### Padres
+Latest five runs scored:
+- 4
+- 6
+- 4
+- 5
+- 3
+= **22 runs / 4.4 per game**
+
+Latest 10:
+- **42 runs**
+- .228 AVG / .306 OBP / .357 SLG / .663 OPS
+
+Current structural interpretation:
+- San Diego's offense has been inconsistent rather than dead.
+- They produced 15 hits in the 5-0 opener here, then went 0-for-10 with RISP in the 4-3 loss.
+- Tatis hit two homers in the latest game.
+- Padres' low L10 OPS is a meaningful counterweight to a simple Williamson-fade thesis.
+
+### Reds
+Latest five:
+- 10
+- 5
+- 7
+- 0
+- 4
+= **26 runs / 5.2 per game**
+
+Latest 10:
+- **51 runs**
+- .264 AVG / .338 OBP / .464 SLG / .802 OPS
+
+Recent staff:
+- latest current StatMuse team-pitching query shows a **6.59 ERA over the last 10**.
+
+Interpretation:
+- Cincinnati's offense has materially more current run/HR volume than San Diego's.
+- Cincinnati's run-prevention tail is also much wider, supporting both Padres separation and the full-game Over branch.
+
+## F. Handedness / matchup note
+Padres' season line against left-handed pitching in the retrieved current source:
+- .233 AVG
+- .297 OBP
+- .366 SLG
+- .663 OPS
+
+This is a real suppression factor for the Padres scoring centre and prevents Williamson's 6.11 ERA from becoming an automatic huge San Diego total.
+
+However:
+- Williamson's control/exposure uncertainty is materially larger than a normal established left-handed starter;
+- San Diego's right-handed core is well positioned to receive multiple plate appearances if Williamson's command fails.
+
+## G. Current-season H2H continuity
+Previous five 2026 meetings:
+- Padres 6-2 Reds
+- Reds 5-3 Padres (11 innings)
+- Padres 5-4 Reds
+- Padres 5-0 Reds
+- Reds 4-3 Padres
+
+Descriptive:
+- Padres lead 3-2.
+- Padres -1.5 covered **2/5**.
+- Reds +1.5 covered **3/5**.
+- **Under 9.5 was 5/5**.
+
+This is the strongest argument against ranking the Over too aggressively.
+
+Why it does not control:
+- today's starter pairing is unlike the prior games;
+- Williamson is returning from a long IL absence;
+- Mize's post-trade run distribution is wider than his Detroit season line;
+- current midday conditions are materially hitter-friendlier than a neutral environment.
+
+## H. Environment
+Current game-day weather sources agree on:
+- roughly **91-94°F near first pitch**
+- essentially dry
+- light wind, roughly 4-8 mph
+- some sources indicate a component toward/out to left or left-center
+
+No rain/termination concern.
+
+Mechanistic use:
+- hot, dry air does not suppress carry;
+- modest wind is not strong enough to dictate the total alone;
+- the environment raises the HR/contact tail at an already power-friendly venue but is treated as a scale factor, not a manufactured scoring mechanism.
+
+## I. Joint run tree
+
+### Lower state
+Representative:
+- Padres 4, Reds 3
+- or Padres 5, Reds 3
+
+Mechanism:
+- Mize recovers toward his Detroit-quality centre;
+- Williamson is efficiently limited and Cincinnati's relief chain holds;
+- Padres continue current RISP inefficiency.
+
+Helps:
+- Under 9.5
+- Reds +1.5 in the one-run branch
+
+### Central state
+Representative:
+- **Padres 6, Reds 4**
+
+Mechanism:
+- Williamson's return/command limits Cincinnati's starter length;
+- Padres exploit the first relief transition;
+- Reds still score through Mize's current volatility and current power form.
+
+Helps:
+- Over 9.5
+- Padres -1.5
+
+### Upper cluster state
+Representative:
+- Padres 8, Reds 5
+- or Reds 7, Padres 6
+
+Mechanism:
+- both starters shorten;
+- HR/sequencing clusters in hot conditions;
+- trailing bullpen states summon weaker relief arms.
+
+Helps:
+- Over strongly
+- run-line direction depends on cluster allocation
+
+### One-sided Padres separation
+Representative:
+- Padres 7, Reds 2
+
+Mechanism:
+- Williamson's command fails early;
+- Mize lands on his 5-6 inning suppression branch;
+- Cincinnati cannot activate its late offensive state.
+
+Helps:
+- Padres -1.5
+- Under 9.5 can still win at exactly 9 total runs
+
+## J. Component budget at 9.5
+
+To reach 10 runs:
+
+If San Diego scores 6:
+- Cincinnati needs 4.
+
+If San Diego scores 5:
+- Cincinnati needs 5.
+
+If Cincinnati scores 4:
+- San Diego needs 6.
+
+This threshold is not automatically an Over from one weak starter. The Over needs meaningful contribution from both sides or a dominant one-team 7-8 run branch.
+
+Current support for that:
+- Reds L5 scoring = 5.2/game
+- Padres L10 = 4.2/game
+- both starters have wide recent/return-state run distributions
+- hot run environment
+
+Counter:
+- five straight season H2Hs stayed Under 9.5
+- Padres' current offense is only .663 OPS over L10
+- Padres are weak vs LHP on the season
+
+## K. Separation budget at ±1.5
+
+For Padres -1.5:
+- San Diego must create at least two net runs of separation.
+- Mize's current Padres volatility means a winner lean does not automatically become a run-line cover.
+- Williamson's return-state plus Cincinnati's recent 6.59 staff ERA creates genuine 6-3 / 7-3 / 7-4 separation branches.
+
+For Reds +1.5:
+- every Cincinnati win covers;
+- every one-run Padres win covers;
+- home last-bat supports late one-run compression;
+- current-season H2H produced three +1.5 covers in five.
+
+The critical question is whether Cincinnati's pitching transition breaks before Mize's volatility does.
+
+## L. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-257-C03 — Over 9.5 Runs** | **LEAN** | **MEDIUM** | Both starter states are unusually wide: Mize has a 6.26 Padres-only ERA in 23 IP and Williamson returns from a long IL absence with a 6.11 ERA / 1.64 WHIP / 20 BB to 19 K. Reds have scored 51 in L10 and their staff ERA is 6.59 over L10; hot GABP conditions add HR/contact tail. The 5/5 season H2H Under record is the strongest contrary path. |
+| **2** | **P-257-C01 — Padres -1.5** | **SLIGHT LEAN** | **MEDIUM-LOW** | San Diego owns the clearer starter/relief transition advantage if Williamson is short or wild, and Cincinnati's recent run prevention is poor. Mize's volatility and Reds' current offense prevent a stronger cover call. |
+| **3** | **P-257-C04 — Under 9.5 Runs** | **FORCED RANK / LEAN-ADJACENT** | **MEDIUM-LOW** | Every 2026 H2H so far stayed below 10 and San Diego's L10 offense is weak. It falls below the Over because today's starter pair and heat create substantially more upper-tail exposure than those prior games. |
+| **4** | **P-257-C02 — Reds +1.5** | **FORCED RANK / weaker side direction** | **MEDIUM-LOW** | Home last bat, Mize volatility, and three +1.5 covers in five current-season H2Hs make this live. It ranks last because Williamson's return/command uncertainty plus Cincinnati's recent pitching collapse creates the clearest two-plus-run separation risk. |
+
+## M. Rank-1 coherence
+
+Rank #1 = Over 9.5.
+
+- Padres -1.5: `COHERENT / PARTIAL` — central 6-4 / 7-4 / 8-5 Padres states support both.
+- Under 9.5: `DISJOINT` exact total complement.
+- Reds +1.5: `PARTIAL_OVERLAP` — high-scoring 6-5 / 7-6 games can cash Over + Reds cushion.
+
+No cross-row contradiction requires repair.
+
+## N. Potential winner
+
+### **San Diego Padres — SLIGHT LEAN**
+
+Why:
+- Williamson's return-state is the largest single uncertainty in the game;
+- Padres have the stronger broad run-prevention profile;
+- Mize's season-level underlying 2026 work before the trade was strong despite his poor Padres-only results;
+- Cincinnati's recent staff run prevention is much worse.
+
+Why only slight:
+- Reds offense is currently hotter;
+- Mize has been unstable since the trade;
+- Cincinnati has home last bat;
+- Padres have lost four of their last five entering the finale.
+
+## O. Final delivery
+1. **Over 9.5 Runs**
+2. **Padres -1.5**
+3. **Under 9.5 Runs**
+4. **Reds +1.5**
+
+**Potential winner:** San Diego Padres — slight lean.
+
+## P. Append confirmation
+- All current incomplete local items rechecked: YES
+- Newly verified final requiring retrospective: NO
+- P-257 frozen before scheduled first pitch: YES
+- MLB starter identity verified: YES
+- Official lineup page lag preserved as uncertainty: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-258**
+
+
+---
+
+# Queue state check before P-258 — 2026-09-03
+
+## Current unresolved/local items
+- `P-250-C05` Yunnan–Chongqing corners: **UNRESOLVED**.
+- `P-251-C05` Sassuolo–Frosinone corners: **PROVISIONAL WIN / threshold-invariant**.
+- `P-252` Belfast Wolves–Edinburgh Castle Rockers: **OPEN / FIELD-OWNER STATE DEFECT**.
+- `P-253` El Gounah–Al Mokawloon: **OPEN / FINAL NOT VERIFIED**.
+- `P-254` Choinski–Van de Zandschulp: **OPEN / current US Open surfaces had not yet produced a final**.
+- `P-255` Inter Women–Wolfsburg Women: **LIVE / no verified final**.
+- `P-256` PSG Women–Eintracht Frankfurt Women: **LIVE / no verified final**.
+- `P-257` Padres–Reds: **LIVE / scheduled start crossed; no final**.
+
+No newly final local item was safe to settle. No retrospective was fabricated.
+
+---
+
+# P-258 — Atlanta Braves (Grant Holmes) @ Washington Nationals (Brad Lord) — MLB — PREGAME
+
+## A. Frozen identity / state
+- **Canonical ID:** `P-258`
+- **League:** MLB
+- **Event:** Atlanta Braves @ Washington Nationals
+- **Venue:** Nationals Park, Washington, D.C.
+- **Scheduled first pitch:** 2026-09-02 13:05 EDT
+- **Australia/Melbourne:** 2026-09-03 03:05 AEST
+- **State at cutoff:** PREGAME / SCHEDULED
+- **Home last bat:** Washington
+- **Method:** `MDS-2026.09.02-v3.1`
+- **Algorithms:** `GFA-2` + `SFA-BASEBALL`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability:** NOT_GENERATED / NOT_PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+- **Operator action/listed-pitcher terms:** NOT SUPPLIED / UNKNOWN_DEFINITION
+
+## B. User-supplied contracts
+
+| ID | Contract | Ordinary completed-game region |
+|---|---|---|
+| `P-258-C01` | Braves ML | Atlanta wins |
+| `P-258-C02` | Nationals +1.5 | Washington wins or loses by exactly one |
+| `P-258-C03` | Over 9.5 | 10+ combined runs |
+| `P-258-C04` | Under 9.5 | 0-9 combined runs |
+
+C03/C04 are exact complements. C01 and C02 overlap in every one-run Atlanta win.
+
+## C. Starter state
+
+### Grant Holmes — Atlanta RHP
+Current season:
+- 9-5
+- 3.71 ERA
+- 128.2 IP
+- 103 K
+- 1.34 WHIP
+
+August:
+- 5 starts
+- 26.2 IP
+- **3.04 ERA**
+- three scoreless starts
+- one six-run outlier vs Arizona
+- latest: 5 IP, 3 ER vs Colorado
+
+Recent August starts:
+- 6 IP, 0 ER vs Miami
+- 6 IP, 0 ER at NYY
+- 3.2 IP, 6 ER vs Arizona
+- 6 IP, 0 ER at CWS
+- 5 IP, 3 ER vs Colorado
+
+Direct 2026 Nationals evidence:
+- two prior appearances/starts against Washington
+- 5 earned runs in 9.2 innings
+- Washington hitters including Daylen Lile, Dylan Crews and Jorbit Vivas have created meaningful damage in the current series history
+
+Interpretation:
+- Holmes has the stronger current starter centre.
+- His Nationals-specific matchup is not dominant enough to erase Washington's scoring branch.
+- Atlanta can reasonably expect about five-to-six starter innings in the ordinary state, not a guaranteed quality start.
+
+### Brad Lord — Washington RHP / opener-bulk role
+Current season:
+- 33 games
+- 5-2
+- 3.75 ERA
+- 69.2 IP
+- 64 K
+- 1.19 WHIP
+
+Latest three appearances:
+- 2.1 IP, 1 ER vs Miami
+- 2.1 IP, 0 ER vs Colorado
+- 2.2 IP, 0 ER at Miami
+
+Latest five include:
+- 7.1 combined IP / 1 ER across the most recent three
+- a 2-ER short outing at the Mets
+- another 2.2-IP, 1-ER outing vs Cincinnati
+
+Interpretation:
+- Lord is currently pitching well.
+- He is an opener/bulk bridge, not a normal six-inning starter.
+- The game therefore exposes Atlanta to a larger Washington relief-chain share than a conventional Lord ERA comparison implies.
+- Washington has an off day next, so manager flexibility is higher, but Jared Simpson threw three innings the night before and should not be assumed fully available.
+
+## D. Bullpen structure
+
+### Atlanta
+Recent team relief/pitching run prevention:
+- Braves L10 relief/team ERA source: roughly **3.3**
+- current bullpen has been materially more stable than Washington's across the season
+
+### Washington
+Current preview sources describe the Nationals bullpen as among the worst in MLB / third-worst by ERA.
+- Lord's short role means the relief chain is structurally decision-driving.
+- Washington can be aggressive with available arms because of the following off day.
+- However, the strongest fresh long-relief performance — Jared Simpson's three scoreless innings Tuesday — likely reduces his same-day availability.
+
+This is the main reason Atlanta still owns the larger outright-win branch despite Washington's current offense.
+
+## E. Current lineups / participant state
+
+MLB's own lineup page remained `TBD` near the cutoff, but current local gameday reporting had the actual current changes:
+
+### Atlanta core
+- Drake Baldwin at DH
+- Ronald Acuña Jr.
+- Matt Olson
+- Ozzie Albies
+- Michael Harris II
+- Sean Murphy
+- Mike Yastrzemski
+- Austin Riley
+- Ha-Seong Kim
+
+Notable current changes:
+- Mike Yastrzemski starts in left
+- Sean Murphy catches
+- Baldwin shifts to DH
+- Mauricio Dubón rests
+
+### Washington current changes
+- **James Wood returns** from an oblique issue and leads off in RF
+- CJ Abrams shifts to the middle/cleanup region and plays second
+- Yohandy Morales remains after a 3-hit debut
+- Andres Chaparro / Abi Ortiz are in the current young-lineup mix
+- Keibert Ruiz returns at catcher
+
+Participant interpretation:
+- Washington's lineup is stronger than the prior game's generic post-deadline roster because Wood is back.
+- Atlanta still has the deeper established top/middle offensive core.
+- No player prop is selected because the MLB field-owner lineup page lagged.
+
+## F. Current offense
+
+### Atlanta
+Current L10 source:
+- **35 runs in last 10**
+- approximately 3.5 runs/game
+- post-All-Star offense has been materially weaker than the season-wide top-10 reputation
+
+Latest context:
+- scored 5 in the 9-5 loss Tuesday
+- Michael Harris II has homered in consecutive games / three of five
+- Braves entered after a seven-game win streak, then lost two straight
+
+### Washington
+Current form:
+- 9 runs vs Atlanta
+- 6 vs Miami
+- 2 vs Miami
+- 5 vs Miami
+- 9 vs Miami
+- 7 vs Colorado
+- 1 vs Colorado
+- 13 vs Colorado in another recent home game
+
+Current home L10:
+- **57 runs**
+- current home offense is materially hotter than its broad season reputation
+
+Recent team trajectory:
+- Washington has won five of six entering this game
+- current homestand is 7-3
+- James Wood's return adds another high-impact bat
+
+This is why Nationals +1.5 is elevated above a simple Atlanta-team-strength pick.
+
+## G. Season-series / H2H geometry
+
+2026 completed series before today:
+- ATL 9-4
+- WSH 11-4
+- ATL 8-6
+- ATL 7-2
+- ATL 5-4 (11)
+- WSH 2-0
+- WSH 2-1
+- ATL 5-4
+- ATL 6-2
+- ATL 8-3
+- ATL 4-2
+- WSH 9-5
+
+Descriptive:
+- Atlanta ML: **8/12**
+- Washington wins: 4/12
+- Nationals +1.5: **6/12** (four WSH wins + two one-run ATL wins)
+- Over 9.5: **5/12**
+- Under 9.5: **7/12**
+
+H2H supports Atlanta winner more than Washington cushion, but the recent Washington home/offensive regime is stronger than the early-season average.
+
+## H. Weather / park environment
+
+Current Nationals Park forecast around first pitch:
+- approximately **87-90°F**
+- humid / feels much warmer
+- light easterly wind roughly 4-7 mph
+- no strong wind-out signal
+- precipitation estimates conflict by source: some local hourly feeds show low immediate risk, while one baseball-weather source flags scattered thunderstorms later in the game
+
+Mechanistic treatment:
+- heat does not suppress carry
+- light wind has minimal directional effect
+- any interruption would create starter-to-bullpen transition risk and widen total variance
+- weather is therefore a variance factor, not an automatic Over
+
+## I. Joint run tree
+
+### Central close-Atlanta state
+**ATL 5, WSH 4**
+- Braves ML: WIN
+- Nationals +1.5: WIN
+- Under 9.5: WIN
+
+Mechanism:
+- Holmes gives 5-6 competent innings
+- Atlanta scores enough against Lord + relief transition
+- Washington's current lineup still reaches 3-4 runs
+- Atlanta's stronger bullpen protects a narrow lead
+
+### Atlanta separation state
+**ATL 6, WSH 3**
+- Braves ML: WIN
+- Nationals +1.5: LOSS
+- Under 9.5: WIN
+
+Mechanism:
+- Holmes suppresses Washington's current hot offense
+- Atlanta gets to the weaker Washington relief chain
+
+### Washington upset state
+**WSH 5, ATL 4**
+- Braves ML: LOSS
+- Nationals +1.5: WIN
+- Under 9.5: WIN
+
+Mechanism:
+- Washington continues its home offensive surge
+- Holmes repeats his less-effective Nationals matchup
+- Lord/bullpen sequencing survives
+
+### Upper-tail state
+**ATL 7, WSH 5** or **WSH 6, ATL 5**
+- Over 9.5 wins
+- side/cushion depends on allocation
+
+Mechanism:
+- Lord exits early and Washington's relief chain is hit
+- Holmes allows 3-4 before Atlanta's bullpen
+- hot/humid conditions plus bullpen transition increase cluster scoring
+
+## J. 9.5 component budget
+
+For Over:
+- ATL 5 requires WSH 5
+- ATL 6 requires WSH 4
+- WSH 5 requires ATL 5
+
+Current central scoring estimates are close to the line rather than clearly above it.
+
+Under support:
+- Holmes August centre is strong
+- Atlanta bullpen L10 is stable
+- Braves offense has only 35 runs in L10
+- 7/12 H2Hs stayed Under 9.5
+
+Over support:
+- Washington home offense is hot
+- James Wood returns
+- Nationals bullpen exposure is high
+- recent first game of series finished 9-5
+- weather/interruption variance can widen relief exposure
+
+Under therefore receives only a slight edge, not a strong recommendation.
+
+## K. Side / cushion separation budget
+
+### Braves ML
+Wins through every Atlanta one-run or larger victory.
+Main edge:
+- stronger starter centre
+- stronger broad bullpen
+- stronger season team quality
+
+Main failure:
+- Washington's current home offense and James Wood return
+- Holmes has not dominated this opponent
+
+### Nationals +1.5
+Wins through:
+- every Washington victory
+- every one-run Atlanta win
+
+This is a broad union of the Washington upset branch plus the close-Atlanta branch.
+
+The most likely failure family is Atlanta winning by 2+ because:
+- Lord's short role exposes Washington's weak bullpen
+- Atlanta's lineup can create separation after the opener exits
+
+Given Washington's recent home form and Atlanta's mediocre current offense, the cushion is marginally more robust than the Atlanta winner itself.
+
+## L. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-258-C02 — Nationals +1.5** | **LEAN** | **MEDIUM** | Captures every Washington win plus one-run Atlanta wins. Washington has won five of six, scored 57 in its last 10 home games, and gets James Wood back. Holmes is strong but not dominant vs this opponent. The kill path is Atlanta reaching Washington's weak bullpen and separating by 2+. |
+| **2** | **P-258-C01 — Braves ML** | **LEAN** | **MEDIUM** | Atlanta owns the stronger starter centre (Holmes 3.04 ERA in August), deeper season quality, and more reliable bullpen. Washington's current hot offense prevents a stronger label. |
+| **3** | **P-258-C04 — Under 9.5 Runs** | **SLIGHT LEAN** | **MEDIUM-LOW** | Central 5-4 / 6-3 / 5-3 families stay Under; 7/12 H2Hs did too. Holmes and Atlanta's pen provide the strongest suppression mechanisms. Washington's hot home offense and weak bullpen keep the Over tail substantial. |
+| **4** | **P-258-C03 — Over 9.5 Runs** | **FORCED RANK / weaker total direction** | **MEDIUM-LOW** | Very live through bullpen exposure, James Wood's return, Washington's current scoring surge and possible weather interruption. It remains below Under because the line requires 10 runs and Atlanta's own L10 offense has been modest. |
+
+## M. Rank-1 coherence / winner reconciliation
+
+Rank #1 = Nationals +1.5.
+
+Representative Rank-1 central state:
+**Braves 5, Nationals 4**
+
+This makes:
+- Nationals +1.5 = WIN
+- Braves ML = WIN
+- Under 9.5 = WIN
+
+Therefore the top three are strongly coherent.
+
+Why Braves remain the potential winner while Washington +1.5 ranks #1:
+- Atlanta has the larger outright winner branch because Holmes + bullpen are stronger.
+- Washington +1.5 adds all close Atlanta wins to Washington's own win branch.
+- The difference is specifically the **one-run Atlanta-win corridor**, not an independent contradictory narrative.
+
+## N. Potential winner
+### **Atlanta Braves — SLIGHT LEAN**
+
+Reasons:
+- Holmes' August run-prevention centre
+- Washington's opener-to-bullpen exposure
+- Atlanta's stronger season run differential / record
+- Braves have won 8 of 12 current-season H2Hs
+
+Counter:
+- Washington is hotter at home and just won 9-5
+- James Wood returns
+- Braves offense has been mediocre recently
+
+## O. Final delivery
+1. **Nationals +1.5**
+2. **Braves ML**
+3. **Under 9.5 Runs**
+4. **Over 9.5 Runs**
+
+**Potential winner:** Atlanta Braves — slight lean.
+
+## P. Append confirmation
+- All current incomplete local items rechecked: YES
+- Newly safe-to-settle item: NO
+- P-258 frozen pre-start: YES
+- Holmes/Lord starter identities verified: YES
+- Current lineup publication lag disclosed: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New forecast-weight rule: NO
+- **NEXT CANONICAL ID: P-259**
+
+
+---
+
+# Settlement / retrospective sweep before P-259 — 2026-09-03
+
+## P-254 — Choinski vs Van de Zandschulp — FINAL
+
+**Official final:** Botic Van de Zandschulp def. Jan Choinski **6-3, 6-1, 7-6(5)**.
+
+- Total games: **29**
+- Net game margin: Botic **+9**
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-254-C02 | 1 | Van de Zandschulp -5.5 | **WIN** |
+| P-254-C04 | 2 | Under 38.5 | **WIN** |
+| P-254-C01 | 3 | Choinski +5.5 | **LOSS** |
+| P-254-C03 | 4 | Over 38.5 | **LOSS** |
+
+**Potential winner — Botic:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- Rank #1 won through the exact predeclared mechanism: Botic's stronger current hard return profile created real break separation.
+- Botic held in all 14 service games and broke Choinski four times.
+- Choinski's serve-resistance branch appeared only late, producing the third-set tiebreak; it was not large enough to rescue +5.5 or the Over.
+- The central scoreline `6-3, 6-4, 6-4` was directionally close to the actual 6-3, 6-1, 7-6.
+- No new tennis weight is promoted.
+
+## P-255 — Inter Women vs Wolfsburg Women — FINAL
+
+**90-minute result:** Inter **2-0** Wolfsburg.
+**HT:** Inter 1-0.
+Inter ultimately advanced after extra time and penalties.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-255-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-255-C05 | 2 | Corners Over 8.5 | **UNRESOLVED / provider-definition final not recovered** |
+| P-255-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-255-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-255-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Wolfsburg to advance:** **LOSS**.
+
+### Retrospective
+Process grade: **MIXED / PHASE-PROPAGATION CAUTION**.
+- Rank #1 early-goal direction was correct: Inter scored at 40'.
+- The card correctly preserved Full Under as a credible branch; regulation stopped at exactly two goals.
+- The Over branch overstated how much Inter's aggregate chase would propagate into a third 90-minute goal.
+- The advancement miss came from underweighting the exact `Inter wins by two in regulation -> extra-time/penalty variance` branch.
+- No new forecast weight; reinforce existing two-leg regime-switch and endpoint-separation controls.
+
+## P-256 — PSG Women vs Eintracht Frankfurt Women — FINAL
+
+**90-minute result:** PSG **1-1** Frankfurt.
+**HT:** PSG 0-1 Frankfurt.
+PSG ultimately advanced after extra time.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-256-C05 | 1 | Corners Over 8.5 | **UNRESOLVED / exact provider final not recovered** |
+| P-256-C01 | 2 | 1H Over 0.5 | **WIN** |
+| P-256-C04 | 3 | Full Under 2.5 | **WIN** |
+| P-256-C03 | 4 | Full Over 2.5 | **LOSS** |
+| P-256-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — PSG to advance:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- The forecast explicitly identified `1H Over + Full Under` as a coherent central family; the 90-minute result delivered exactly that structure.
+- Frankfurt scored before halftime, then regulation remained at two total goals.
+- PSG's advancement lean also won, but only after extra time, validating the distinction between 90-minute winner and qualification endpoint.
+- No new rule promoted.
+
+## P-257 — Padres @ Reds — FINAL
+
+**Final:** Cincinnati Reds **7-3** San Diego Padres.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-257-C03 | 1 | Over 9.5 | **WIN** |
+| P-257-C01 | 2 | Padres -1.5 | **LOSS** |
+| P-257-C04 | 3 | Under 9.5 | **LOSS** |
+| P-257-C02 | 4 | Reds +1.5 | **WIN** |
+
+**Potential winner — Padres:** **LOSS**.
+
+### Retrospective
+Process grade: **RANK-1 COMPLIANT / SIDE DEFECT**.
+- Rank #1 Over won through the identified wide starter distributions.
+- Brandon Williamson was better than the downside return-state feared, giving Cincinnati 5.1 innings and allowing three runs.
+- Mize's poor Padres regime persisted; Cincinnati hit three home runs and turned a 3-0 deficit into a 7-3 win.
+- The side call over-weighted Williamson's return uncertainty as a Padres advantage and under-weighted Mize's post-trade HR/run-volatility plus Cincinnati's hotter offense.
+- Return-from-IL uncertainty is two-sided variance, not an automatic opponent-side upgrade. No fitted weight change.
+
+## P-258 — Braves @ Nationals — FINAL
+
+**Final:** Atlanta Braves **7-0** Washington Nationals.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-258-C02 | 1 | Nationals +1.5 | **LOSS** |
+| P-258-C01 | 2 | Braves ML | **WIN** |
+| P-258-C04 | 3 | Under 9.5 | **WIN** |
+| P-258-C03 | 4 | Over 9.5 | **LOSS** |
+
+**Potential winner — Braves:** **WIN**.
+
+### Deep Rank-1 retrospective
+Process grade: **PROCESS_DEFECT — SEPARATION BUDGET UNDERWEIGHTED**.
+
+What went right:
+- Braves winner direction was correct.
+- Under 9.5 was correct.
+- The forecast explicitly identified Atlanta's strongest separation route: Holmes suppresses Washington and Atlanta reaches the weaker relief chain.
+
+What went wrong:
+- Nationals +1.5 was ranked first because it unioned Washington wins with one-run Atlanta wins, but the probability mass of the **Atlanta 2+ separation branch** was underweighted.
+- Washington's recent hot home offense and James Wood's return were allowed to compress the margin too much.
+- Grant Holmes and Atlanta relief combined to allow only two hits; the weather interruption did not weaken Atlanta's run prevention because Elieser Hernández supplied three scoreless relief innings.
+- Atlanta's offense eventually broke the game open, led by Sean Murphy's three-run homer/four RBI.
+
+Learning disposition:
+- Reinforces `L-058` separation-budget control: a cushion cannot become Rank #1 merely because it catches close favorite wins; the favorite's starter-plus-bullpen shutdown state and opponent bullpen exposure must be explicitly budgeted as a multi-run branch.
+- No new fitted weight or calibration change from one event.
+
+## Still unresolved after sweep
+- `P-250-C05` corners — unresolved.
+- `P-251-C05` corners — provisional threshold-invariant win.
+- `P-252` Belfast Wolves–Edinburgh Castle Rockers — field-owner source-state defect / no verified final.
+- `P-253` El Gounah–Al Mokawloon — no field-owner final recovered.
+- `P-255-C05` and `P-256-C05` corner rows — unresolved pending exact provider/definition-capable final.
+
+
+---
+
+# P-259 — New York Mets (Justin Hagenman) @ Tampa Bay Rays (Griffin Jax) — MLB — PREGAME
+
+## A. Frozen identity / state
+
+- **Canonical ID:** `P-259`
+- **League:** MLB
+- **Event:** New York Mets @ Tampa Bay Rays
+- **Venue:** Tropicana Field, St. Petersburg, Florida
+- **Venue class:** INDOOR / fixed-roof controlled environment
+- **Scheduled first pitch:** 2026-09-02 18:40 EDT
+- **Australia/Melbourne:** 2026-09-03 08:40 AEST
+- **Research cutoff:** approximately 08:16-08:25 AEST, pre-start
+- **GAME-STATE:** PREGAME / SCHEDULED
+- **Home last bat:** Tampa Bay
+- **Method:** `MDS-2026.09.02-v3.1`
+- **Algorithms:** `GFA-2` + `SFA-BASEBALL`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability:** NOT_GENERATED / NOT_PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+- **Operator action/listed-pitcher terms:** NOT SUPPLIED / UNKNOWN_DEFINITION
+
+## B. User-supplied slate / geometry
+
+| ID | Contract | Ordinary completed-game result |
+|---|---|---|
+| `P-259-C01` | Rays ML | Tampa Bay wins |
+| `P-259-C02` | Mets +1.5 | New York wins or loses by exactly one |
+| `P-259-C03` | Over 8.0 | 9+ runs win; exactly 8 pushes |
+| `P-259-C04` | Under 8.0 | 0-7 runs win; exactly 8 pushes |
+
+The total pair is an integer-line pair with a common push at exactly 8. C01 and C02 overlap in every one-run Rays victory.
+
+## C. Confirmed starter roles
+
+### Justin Hagenman — Mets RHP
+- 2026 MLB season debut.
+- Reinstated from 60-day IL after a rib fracture.
+- Recent rehab: **2.89 ERA over 9.1 innings** across A/AA/AAA.
+- 2025 MLB: approximately **4.5 ERA over 23.2 innings**, mostly bulk/relief exposure.
+- Current assignment is partly to provide rest for the Mets' young starters and evaluate Hagenman for future depth.
+
+Mechanistic consequences:
+- he should not be treated as a normal six-inning established starter;
+- current major-league form is **unknown**, not 0.00 ERA;
+- early hook/bulk transition is a material branch;
+- the injury was rib-related rather than elbow/shoulder, so no unsupported velocity-loss claim is made.
+
+### Griffin Jax — Rays RHP
+- Current 2026 line: **6-9, 3.63 ERA, 91.2 IP, 100 K, 1.21 WHIP**.
+- Returning from IL after right-elbow discomfort.
+- Before IL, recent full starts included:
+  - 5 IP / 1 ER vs CWS
+  - 5.2 / 1 ER vs TEX
+  - 6 / 1 ER at TOR
+  - 5 / 7 ER at BOS
+  - 5 / 1 ER vs SEA
+- Rehab progression:
+  - 3 innings at Triple-A on Aug. 23
+  - 4 innings in a sim game Aug. 28, reported feeling very good
+
+Mechanistic consequences:
+- Jax has the clearly stronger established MLB run-prevention centre.
+- Return from elbow discomfort raises workload/command uncertainty.
+- A normal 6-7 inning projection is not assumed; four-to-five innings is structurally more plausible than a full deep start unless efficiency is exceptional.
+
+## D. Current lineups
+
+Current same-day lineup reporting:
+
+### Mets
+1. Francisco Lindor SS
+2. Juan Soto DH
+3. Bo Bichette 3B
+4. Carson Benge RF
+5. Jared Young 1B
+6. Marcus Semien 2B
+7. A.J. Ewing CF
+8. Brett Baty LF
+9. Luis Torrens C
+
+### Rays
+1. Yandy Díaz DH
+2. Jonathan Aranda 1B
+3. Junior Caminero 3B
+4. Liam Hicks C
+5. Chandler Simpson LF
+6. Victor Mesa Jr. RF
+7. Cedric Mullins CF
+8. Richie Palacios 2B
+9. Taylor Walls SS
+
+Important role notes:
+- Juan Soto is active in the Mets lineup after his recent return.
+- Victor Mesa Jr. is back in the current Rays lineup after hamstring rehab.
+- Junior Caminero enters with a long current hitting streak and 37 HR in the current source.
+- MLB's own lineup page lagged and still displayed TBD; current same-day local gameday lineups are therefore used with a source-status note.
+
+## E. Current offense
+
+### Mets — L10
+- **3.2 runs/game**
+- 32 runs
+- .235 AVG / .288 OBP / .379 SLG / .667 OPS
+- 11 HR
+
+Interpretation:
+- current scoring centre is low.
+- there is still home-run power through Lindor/Soto/Bichette/Benge, but sustained baserunner creation has been weak.
+
+### Rays — L10
+- **4.2 runs/game**
+- 42 runs
+- .263 AVG / .325 OBP / .386 SLG / .711 OPS
+- 7-3 record
+
+Interpretation:
+- higher current floor than New York.
+- Rays create through both contact/efficiency and power.
+- recent offense is good rather than explosive.
+
+## F. Current series / direct matchup
+
+First two games:
+1. Mets **3-2** Rays
+2. Rays **6-2** Mets
+
+Totals:
+- 5
+- 8
+
+At today's line 8.0:
+- Game 1 = Under win
+- Game 2 = push
+
+Series mechanisms:
+- Mets won Game 1 behind Robert Stock's 5.1 scoreless innings.
+- Tampa won Game 2 as Freddy Peralta held New York down after the first inning and the Rays produced a three-run sixth.
+- Current series therefore supports Tampa's superior sustained offense but also shows that eight is a meaningful ceiling/push boundary.
+
+## G. Bullpen chain
+
+### Rays
+Recent relief run prevention is elite:
+- **2.30 ERA from Aug. 23-Sep. 2**
+- 82 relief innings in the retrieved team query
+- 0.80 WHIP
+- 24.4% K rate
+- only 0.66 HR/9
+
+This strongly supports both:
+- Rays winner protection
+- Under 8.0 after Jax exits
+
+### Mets
+Recent bullpen form has been better than the long-season reputation:
+- approximately **3.15 relief ERA over Aug. 16-31**
+- strong recent work from several arms, though isolated collapses remain
+- Kodai Senga has converted five saves in five opportunities with a 1.74 ERA after moving to the closer role
+
+The Mets bullpen is not treated as automatic failure after Hagenman.
+
+## H. Venue / environment
+
+Tropicana Field is a controlled indoor/fixed-roof environment.
+
+Therefore:
+- no wind-out factor
+- no heat/humidity carry adjustment
+- no rain interruption
+- no outdoor weather variance
+
+This removes one common source of upper-tail total volatility.
+
+## I. Joint run tree
+
+### Central Rays-control state
+**Rays 5, Mets 2**
+- Rays ML: WIN
+- Mets +1.5: LOSS
+- Under 8.0: WIN
+
+Mechanism:
+- Jax gives four-to-five effective innings
+- elite Rays bullpen carries the back half
+- Tampa gets repeated looks at Hagenman + Mets middle relief
+
+### Close Rays state
+**Rays 4, Mets 3**
+- Rays ML: WIN
+- Mets +1.5: WIN
+- Under 8.0: WIN
+
+### Push state
+**Rays 5, Mets 3**
+- Rays ML: WIN
+- Mets +1.5: LOSS
+- total = **8 PUSH**
+
+### Mets upset state
+**Mets 4, Rays 3**
+- Rays ML: LOSS
+- Mets +1.5: WIN
+- Under 8.0: WIN
+
+### Upper-tail state
+**Rays 6, Mets 4** / **Rays 7, Mets 3**
+- Over 8.0 wins
+- Rays ML wins
+- Mets cushion usually fails
+
+## J. Total-8 component budget
+
+For Over 8:
+- 5-4
+- 6-3
+- 6-4
+- etc.
+
+Exactly 8 is a push:
+- 5-3
+- 6-2
+
+Under wins at 7 or fewer:
+- 4-3
+- 5-2
+- 4-2
+- 3-2
+
+Current descriptive scoring centres:
+- Mets L10 = 3.2
+- Rays L10 = 4.2
+- simple combined descriptive centre = 7.4
+
+That is not a model, but it locates 8.0 above the raw current scoring centre.
+
+The Under also gets structural support from Tampa's 2.30 recent relief ERA and controlled indoor environment.
+
+Over support:
+- Hagenman's uncertain MLB length
+- Jax returning from elbow IL
+- both starters may hand off early, increasing middle-relief exposure
+
+Because exactly 8 pushes, Under gains boundary protection that 8.5 would not have.
+
+## K. Side / cushion budget
+
+### Rays ML
+Rays own the larger winner branch because:
+- 83-55 vs Mets 62-77
+- stronger current offense
+- substantially more established starting pitcher
+- stronger recent bullpen
+- home last bat
+
+Main failure:
+- Jax return-state limitations plus early Mets top-order damage.
+
+### Mets +1.5
+Cashes through:
+- every Mets upset
+- every one-run Rays win
+
+This row becomes strong only if the game stays compressed.
+
+The major failure branch is Tampa exposing Hagenman early and winning 5-2 / 6-2 / 6-3.
+
+Because the same Rays pitching structure that supports ML also suppresses Mets scoring, the cushion does not outrank the Rays winner direction.
+
+## L. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-259-C01 — Rays ML** | **LEAN** | **MEDIUM** | Tampa has the stronger current offense, the far more established starter, elite recent relief run prevention and home last bat. Jax's elbow-return workload is the main uncertainty. |
+| **2** | **P-259-C04 — Under 8.0 Runs** | **LEAN** | **MEDIUM** | Current L10 scoring centres sum to 7.4, the first two series totals were 5 and 8, Tampa's bullpen has a 2.30 recent ERA, and exactly 8 pushes. Starter-return uncertainty prevents a stronger label. |
+| **3** | **P-259-C02 — Mets +1.5** | **SLIGHT LEAN / LEAN-ADJACENT** | **MEDIUM-LOW** | Covers every Mets win and close Rays victory. Low-total central branches support it, but Hagenman's uncertain exposure creates a real 2+ Tampa separation path. |
+| **4** | **P-259-C03 — Over 8.0 Runs** | **FORCED RANK / weaker total direction** | **MEDIUM-LOW** | Both starters have workload uncertainty and Hagenman is making his 2026 MLB debut, so 9+ is credible. It ranks last because Tampa's bullpen, Mets' low L10 offense and the indoor environment suppress the central total. |
+
+## M. Rank-1 conditional coherence
+
+Rank #1 = Rays ML.
+
+Representative Rank-1 states:
+- Rays 5-2 -> Rays ML + Under
+- Rays 4-3 -> Rays ML + Mets +1.5 + Under
+- Rays 5-3 -> Rays ML + total push
+
+Relations:
+- Under 8.0: **COHERENT**
+- Mets +1.5: **PARTIAL_OVERLAP**
+- Over 8.0: **PARTIAL / upper-tail**
+
+No structural contradiction.
+
+## N. Potential winner
+
+### **Tampa Bay Rays — LEAN**
+
+Same branch mass as Rank #1:
+- superior current team record and form
+- better starter baseline
+- materially stronger current bullpen
+- deeper current run-production profile
+
+This remains a lean rather than a strong claim because:
+- Jax is returning from elbow discomfort
+- Hagenman's exact MLB 2026 level is unknown
+- Mets still possess substantial top-order power
+
+## O. Final delivery
+1. **Rays ML**
+2. **Under 8.0 Runs**
+3. **Mets +1.5**
+4. **Over 8.0 Runs**
+
+**Potential winner:** Tampa Bay Rays.
+
+## P. Append confirmation
+- Full incomplete-event sweep performed first: YES
+- P-254/P-255/P-256/P-257/P-258 newly settled/retrospected: YES
+- Remaining unresolved rows/events preserved: YES
+- P-259 frozen pre-start: YES
+- Starter identities verified: YES
+- Current same-day lineups recovered with field-owner lag disclosed: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New fitted forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-260**
+
+
+---
+
+# Settlement / retrospective sweep before P-260 — 2026-09-03
+
+## P-253 — El Gounah vs Al Mokawloon Al Arab — FINAL
+
+**Verified final:** El Gounah 0-1 Al Mokawloon.  
+**Halftime:** 0-1.  
+**Corners:** El Gounah 8-3 Al Mokawloon = **11 total**.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-253-C04 | 1 | Full Match Under 2.5 Goals | **WIN** |
+| P-253-C05 | 2 | Total Corners Over 8.5 | **WIN** |
+| P-253-C02 | 3 | 1H Under 0.5 Goals | **LOSS** |
+| P-253-C01 | 4 | 1H Over 0.5 Goals | **WIN** |
+| P-253-C03 | 5 | Full Match Over 2.5 Goals | **LOSS** |
+
+**Potential winner — El Gounah:** **LOSS**.
+
+### Retrospective
+Process grade: **RANK-1 COMPLIANT / SIDE MISS**.
+
+What went right:
+- Rank #1 Full Under 2.5 won through the exact low-event family described pregame.
+- Corners Over 8.5 also won despite the low goal total, validating the separate corner-process logic.
+- The card explicitly noted that low goals do not imply low corners.
+- The stronger current/H2H Under structure correctly outweighed the isolated 2-3 Mokawloon game.
+
+What missed:
+- The 1H Under lean lost to a 44th-minute penalty. The opening phase was still relatively low-event in scoring terms, but one penalty was enough to defeat the row.
+- Potential winner El Gounah lost 0-1. The pregame side lean over-weighted home/unbeaten context and under-weighted Mokawloon’s transition/set-piece and penalty-winning paths.
+- El Gounah had 65% possession and 20 shots but failed to convert; this reinforces the distinction between territory, chance quantity and scoreboard control.
+
+Learning disposition:
+- Reinforces existing soccer controls: territory/chance volume is not conversion, and a low total can coexist with the away side winning.
+- No new fitted weight or calibration rule.
+
+## Remaining open/provisional items
+- `P-250-C05` corners — unresolved.
+- `P-251-C05` corners — provisional threshold-invariant win.
+- `P-252` Belfast Wolves–Edinburgh Castle Rockers — field-owner source-state defect / no verified final.
+- `P-255-C05` and `P-256-C05` corner rows — unresolved pending exact provider/definition final.
+- `P-259` Mets–Rays — **upcoming/not started at the sweep**.
+
+No other newly final event required settlement before P-260.
+
+---
+
+# P-260 — San Francisco Giants (Landen Roupp) @ Pittsburgh Pirates (Bubba Chandler) — MLB — PREGAME
+
+## A. Frozen identity / state
+
+- **Canonical ID:** `P-260`
+- **League:** MLB
+- **Event:** San Francisco Giants @ Pittsburgh Pirates
+- **Venue:** PNC Park, Pittsburgh
+- **Scheduled first pitch:** 2026-09-02 18:40 EDT
+- **Australia/Melbourne:** 2026-09-03 08:40 AEST
+- **Cutoff:** approximately 08:22-08:30 AEST, pre-start
+- **GAME-STATE:** PREGAME / SCHEDULED
+- **Home last bat:** Pittsburgh
+- **Method:** `MDS-2026.09.02-v3.1`
+- **Algorithms:** `GFA-2` + current `SFA-BASEBALL`
+- **Forecast lane:** SPORTS_ONLY / MARKET_BLIND
+- **Probability:** NOT_GENERATED / NOT_PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+- **Operator action/listed-pitcher terms:** NOT SUPPLIED / UNKNOWN_DEFINITION
+
+### Starter-source conflict
+Current MLB surfaces conflicted:
+- MLB Giants probable-pitchers page: **Roupp vs Bubba Chandler**
+- one MLB Pirates lineup cache: **Roupp vs Bubba Chandler**
+- other MLB scoreboard/lineup caches: **Roupp vs Jared Jones**
+- current CBS and same-day Giants gamethread: **Roupp vs Chandler**
+
+Because the user supplied Chandler and multiple current sources including an MLB team probable-pitchers page support Chandler, the forecast is frozen as **Roupp vs Chandler**. The conflict remains logged; it is not erased.
+
+## B. User-supplied slate
+
+| ID | Contract | Ordinary completed-game region |
+|---|---|---|
+| `P-260-C01` | Pirates ML | Pittsburgh wins |
+| `P-260-C02` | Giants +1.5 | San Francisco wins or loses by exactly one |
+| `P-260-C03` | Over 9.0 runs | 10+ wins; exactly 9 pushes |
+| `P-260-C04` | Under 9.0 runs | 0-8 wins; exactly 9 pushes |
+
+C01 and C02 overlap in one-run Pittsburgh wins.  
+C03/C04 share a push at exactly nine.
+
+## C. Starting pitchers
+
+### Landen Roupp — Giants RHP
+Current line:
+- 8-13
+- 4.25 ERA
+- 139.2 IP
+- 133 K
+- 66 BB
+- 1.31 WHIP
+
+August L5:
+- 5 IP, 1 ER vs Arizona
+- 5.1 IP, 3 ER at Cleveland
+- 5.2 IP, 4 ER vs Colorado
+- 5.1 IP, 1 ER vs Detroit
+- 4.2 IP, 5 ER at San Diego
+
+August total:
+- 26 IP
+- 14 ER
+- **18 BB vs 19 K**
+
+Mechanism:
+- current walk/command shape is the main weakness;
+- last start was excellent enough to preserve a real five-inning suppression branch;
+- he faced Pittsburgh on May 9 and allowed only **1 ER in 4 IP**, even though the Giants bullpen later collapsed in a 13-3 loss.
+
+### Bubba Chandler — Pirates RHP
+Current line:
+- 6-9
+- 4.26 ERA
+- 131 IP
+- 117 K
+- 68 BB
+- 1.36 WHIP
+
+August:
+- 26.1 IP
+- 9 ER
+- **3.08 ERA**
+- 24 K / 11 BB
+
+Latest:
+- 5.2 IP, 1 ER at San Diego
+- 4 IP, 4 ER at Dodgers
+- 5 IP, 2 ER vs Boston
+- 6 IP, 0 ER vs Mets
+- 5.2 IP, 2 ER at Milwaukee
+
+Mechanism:
+- Chandler has the better current starter centre;
+- the walk rate still creates extra baserunner/cluster risk;
+- San Francisco’s current left-handed core is capable of punishing mistakes.
+
+## D. Confirmed/current lineup state
+
+Current CBS gametracker lineup:
+
+### Giants
+Drew Gilbert; Rafael Devers; Bryce Eldridge; Turner Hill; Jung Hoo Lee; Drew Cavanaugh; Nate Furman; Shay Whitcomb; Christian Koss.
+
+### Pirates
+Spencer Horwitz; Brandon Lowe; Bryan Reynolds; Nick Gonzales; Oneil Cruz; Esmerlyn Valdez; Rafael Flores; Jake Mangum; Jared Triolo.
+
+Key lineup observations:
+- San Francisco is missing major established pieces such as Matt Chapman and Willy Adames, but its current young lineup is producing.
+- Devers has 31 HR in the current source.
+- Pittsburgh’s middle carries substantial left-handed power through Lowe/Cruz plus contact from Gonzales.
+- The lineup strength is closer than the season records alone suggest.
+
+## E. Current offense
+
+### Giants L10
+- **60 runs / 6.0 per game**
+- .270 AVG / .355 OBP / .441 SLG / .797 OPS
+- 13 HR
+
+Recent:
+- 7 at Atlanta
+- 12 at Pittsburgh
+- 7, 1, 6, 6, 9 in several immediately preceding games
+
+### Pirates L10
+- **36 runs / 3.6 per game**
+- .227 AVG / .307 OBP / .329 SLG / .636 OPS
+
+Recent:
+- 13 vs Giants
+- 5 at St. Louis
+- 6 at St. Louis
+- 1 at St. Louis
+- 0 at San Diego
+
+Interpretation:
+- San Francisco has the hotter sustained offense.
+- Pittsburgh’s 13-run opener is a genuine ceiling branch but is not treated as its new baseline.
+- This is the main reason Giants +1.5 remains highly competitive despite Pittsburgh’s stronger record/home position.
+
+## F. Current-season H2H
+
+2026 completed meetings before P-260:
+- Giants 5-2 Pirates
+- Pirates 13-3 Giants
+- Giants 7-6 Pirates (12 innings)
+- Pirates 13-12 Giants
+
+At the 9.0 total:
+- 5-2 = Under
+- 13-3 = Over
+- 7-6 = Over
+- 13-12 = Over
+
+Descriptive:
+- Over 9.0: **3/4**
+- Pirates ML: 2/4
+- Giants +1.5: the close 7-6 and other Giants wins create a substantial coverage path
+
+Important caveat:
+- two of the high-scoring meetings were driven heavily by bullpen/extra-inning or cluster states.
+- H2H is contextual, not a probability.
+
+## G. Bullpen availability / previous-night workload
+
+The Sep. 1 game ended **Pirates 13-12** and heavily used both staffs.
+
+### Giants previous night
+- Braxton Roxby 31 pitches
+- Cesar Perdomo **58 pitches / 4 IP** — effectively removes a major length option
+- Trent Harris 20
+- Carson Seymour 19
+
+### Pirates previous night
+- Yohan Ramírez 26
+- Gregory Soto 7
+- Camilo Doval 13
+- Evan Sisk 22
+- Luke Weaver 14
+- Mason Montgomery 15
+
+Implications:
+- both bullpen trees are less clean than generic season bullpen ERA suggests;
+- San Francisco’s loss of Perdomo as a long-relief bridge is especially important if Roupp is short;
+- Pittsburgh still has several modest-pitch-count leverage arms that may remain usable;
+- this supports Pittsburgh separation and the Over tail simultaneously.
+
+## H. Park / weather
+
+PNC Park current 2026 Statcast run-environment index is approximately **105**, above neutral for runs in the one-year sample; the 2024-26 rolling environment is closer to neutral/slightly above.
+
+Current game weather:
+- roughly **87-88°F**
+- light/moderate wind around 8-9 mph, primarily right-to-left in the strongest current source
+- low immediate rain risk in RotoWire; another weather source retained a higher scattered-storm branch
+- no current likely postponement flag
+
+Mechanistic use:
+- warm air modestly supports carry/contact;
+- wind is not a strong automatic HR direction;
+- a delay would increase starter-hook/bullpen exposure and widen the total tail.
+
+## I. Joint run tree
+
+### Central close-Pirates state
+**Pirates 5, Giants 4**
+- Pirates ML: WIN
+- Giants +1.5: WIN
+- total 9 = PUSH
+
+### Lower state
+**Pirates 4, Giants 3**
+- Pirates ML: WIN
+- Giants +1.5: WIN
+- Under 9: WIN
+
+Mechanism:
+- both starters give five competent innings;
+- Chandler’s current August form holds;
+- previous-night bullpen fatigue does not fully surface.
+
+### Pittsburgh separation state
+**Pirates 6, Giants 3**
+- Pirates ML: WIN
+- Giants +1.5: LOSS
+- total 9 = PUSH
+
+or **Pirates 7, Giants 3**
+- Pirates ML WIN
+- Giants +1.5 LOSS
+- Over WIN
+
+Mechanism:
+- Roupp walks/traffic force an early exit;
+- Giants lack their fresh long bridge;
+- Pittsburgh reaches lower-leverage relief.
+
+### Giants upset / close high state
+**Giants 6, Pirates 5**
+- Pirates ML: LOSS
+- Giants +1.5: WIN
+- Over 9: WIN
+
+Mechanism:
+- hot San Francisco offense gets to Chandler’s walk/command branch;
+- Pirates’ used bullpen allows late scoring.
+
+## J. Total-9 component budget
+
+Over wins at 10+:
+- 6-4
+- 6-5
+- 7-3
+- etc.
+
+Exactly 9 pushes:
+- 5-4
+- 6-3
+
+Under wins at 8 or fewer:
+- 4-3
+- 5-3
+- 4-2
+
+Support for Over:
+- Giants L10 = 6.0 R/G
+- Pirates L10 = 3.6 R/G
+- raw descriptive sum = 9.6
+- 3/4 current-season H2Hs exceeded 9
+- warm 2026 PNC environment
+- both bullpens used heavily on Sep. 1
+- Roupp’s current walk/command volatility
+
+Support for Under:
+- Chandler August = 3.08 ERA
+- Roupp has a real suppression branch and just allowed 1 ER over 5
+- PNC multi-year environment is roughly neutral
+- Pittsburgh’s broader L10 offense is only 3.6 R/G
+- exactly 9 pushes rather than loses
+
+Result: **Over 9 receives only a slight edge**, not a strong call.
+
+## K. Side / separation budget
+
+### Pirates ML
+Pittsburgh owns:
+- home last bat
+- better season record
+- better current starter centre
+- better usable bullpen-depth state after the previous-night marathon
+
+Main failure:
+- Giants offense is materially hotter and can win the game outright if Chandler’s command slips.
+
+### Giants +1.5
+Wins through:
+- every Giants win
+- every one-run Pirates win
+
+Central 5-4 and 4-3 Pittsburgh states both cash the cushion.
+
+Major failure branch:
+- Roupp’s walk/traffic state + unavailable Giants length leads to 6-3 / 7-3 Pittsburgh separation.
+
+Unlike P-258, the opponent’s current offense is not strong enough and Chandler is not dominant enough to make multi-run Pittsburgh separation the central branch. Therefore the cushion remains marginally more robust than Pirates ML.
+
+## L. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-260-C02 — Giants +1.5** | **LEAN** | **MEDIUM** | Covers every SF win plus one-run PIT wins. Giants are scoring 6.0 R/G over L10, while PIT is at 3.6. The main failure is Roupp shortening and Pittsburgh exploiting the depleted Giants relief chain. |
+| **2** | **P-260-C01 — Pirates ML** | **LEAN** | **MEDIUM** | Pittsburgh has home last bat, better season team quality, Chandler’s much stronger August form and a cleaner available relief structure. Giants’ hot offense prevents Rank #1. |
+| **3** | **P-260-C03 — Over 9.0 Runs** | **SLIGHT LEAN** | **MEDIUM-LOW** | Raw current scoring centre is 9.6, 3/4 H2Hs are above 9, both bullpens were taxed, and PNC is warm/above-neutral in 2026. Chandler’s good August and the 9-run push boundary keep this below the side rows. |
+| **4** | **P-260-C04 — Under 9.0 Runs** | **FORCED RANK / weaker total direction** | **MEDIUM-LOW** | 4-3/5-3 states remain credible, especially if Chandler continues current form. It ranks last because recent SF offense, bullpen fatigue and current H2H tail create more ordinary 10+ paths. |
+
+## M. Rank-1 coherence
+
+Rank #1 = Giants +1.5.
+
+Representative states:
+- PIT 5-4 SF -> Giants +1.5 + Pirates ML; total pushes
+- PIT 4-3 SF -> Giants +1.5 + Pirates ML + Under
+- SF 6-5 PIT -> Giants +1.5 + Over
+- PIT 6-3 SF -> Giants +1.5 loses; Pirates ML wins; total pushes
+
+Relations:
+- Pirates ML: **COHERENT / PARTIAL OVERLAP**
+- Over 9: **PARTIAL OVERLAP**
+- Under 9: **PARTIAL OVERLAP**
+
+The potential winner remains Pittsburgh because the largest single winner branch still belongs to the Pirates; Giants +1.5 is broader because it adds one-run Pittsburgh wins to all Giants victories.
+
+## N. Potential winner
+
+### **Pittsburgh Pirates — SLIGHT LEAN**
+
+Why:
+- home last bat
+- better overall record
+- Chandler’s better current starter form
+- San Francisco bullpen-length problem after Perdomo’s 58-pitch outing
+- Pittsburgh’s deeper current lineup core
+
+Why only slight:
+- Giants offense is significantly hotter
+- Chandler still has walk volatility
+- yesterday’s 13-12 game showed both clubs can attack tired relief
+- San Francisco can absolutely win outright if Roupp repeats his latest start
+
+## O. Final order
+1. **Giants +1.5**
+2. **Pirates ML**
+3. **Over 9.0 Runs**
+4. **Under 9.0 Runs**
+
+**Potential winner:** Pittsburgh Pirates — slight lean.
+
+## P. Append confirmation
+- Full incomplete-event sweep performed first: YES
+- P-253 newly settled/retrospected: YES
+- P-259 checked and still upcoming/not started: YES
+- Starter conflict explicitly resolved and preserved: YES
+- Current lineups recovered: YES
+- Bullpen previous-night workload incorporated: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New fitted forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-261**
+
+
+---
+
+# Queue state check before P-261 — 2026-09-03
+
+## Current unresolved / incomplete local items
+- `P-250-C05` Yunnan–Chongqing corners: **UNRESOLVED**.
+- `P-251-C05` Sassuolo–Frosinone corners: **PROVISIONAL WIN / threshold-invariant**.
+- `P-252` Belfast Wolves–Edinburgh Castle Rockers: **OPEN / FIELD-OWNER STATE DEFECT**.
+- `P-255-C05` Inter Women–Wolfsburg Women corners: **UNRESOLVED**.
+- `P-256-C05` PSG Women–Frankfurt Women corners: **UNRESOLVED**.
+- `P-259` Mets–Rays: **UPCOMING / NOT STARTED** at the sweep.
+- `P-260` Giants–Pirates: **UPCOMING / NOT STARTED** at the sweep.
+
+No newly final item was safe to settle. No retrospective was fabricated.
+
+---
+
+
+# P-252 — Belfast Wolves vs Edinburgh Castle Rockers — FINAL SETTLEMENT / RETROSPECTIVE
+
+**Verified final:** Edinburgh Castle Rockers **189/5 (20)** defeated Belfast Wolves **130 all out (17.1)** by **59 runs**.  
+**Toss:** Belfast won the toss and elected to bowl.  
+**Edinburgh powerplay:** **55 runs**.
+
+| ID | Original rank | Contract | Settled quantity | Outcome |
+|---|---:|---|---:|---|
+| `P-252-C03` | 1 | Edinburgh first 6 overs Over 44.5 | 55 | **WIN** |
+| `P-252-C02` | 2 | Edinburgh innings total Under 165.5 | 189 | **LOSS** |
+| `P-252-C01` | 3 | Edinburgh innings total Over 165.5 | 189 | **WIN** |
+| `P-252-C04` | 4 | Edinburgh first 6 overs Under 44.5 | 55 | **LOSS** |
+
+**Potential winner — Edinburgh Castle Rockers:** **WIN**.
+
+## P-252 retrospective
+
+### Process grade
+**RANK-1 COMPLIANT / FULL-INNINGS BRANCH UNDERWEIGHTED**
+
+### What went right
+- Rank #1 **Powerplay Over 44.5** won. The pregame mechanism was correct: Edinburgh's top-order aggression was portable across innings order, and the 44.5 threshold sat materially below their two prior completed ETPL powerplays.
+- The forecast correctly distinguished powerplay scoring from full-innings scoring instead of mechanically turning a fast start into a full Over.
+- Edinburgh's winner lean also won decisively, supported by the stronger phase-specific bowling attack; Boult and Curran were again decisive.
+- The forecast explicitly identified the **fast PP + full 20-over ceiling state** as the strongest failure branch for the full-innings Under.
+
+### What went wrong
+- Rank #2 **Under 165.5** lost badly: Edinburgh posted 189.
+- The venue first-innings baseline (5/7 below 165.5) and the pre-toss chase-censoring branch were given too much practical influence relative to Edinburgh's explosive top-order state.
+- Once Belfast won the toss and fielded, the chase-censoring branch disappeared completely. The remaining state was full 20-over exposure, and Edinburgh reached 55 in the powerplay with enough wickets/resources to make 166+ structurally easy.
+- The preissue card did state that toss/XIs were unresolved, but the cricket process should seek a final toss refresh from alternative current sources when the official match page lags. If that refresh resolves innings order before first ball, the full-innings rows should be re-ordered from the new branch tree.
+
+### Learning disposition
+- Reinforces the existing cricket toss-window / innings-order refresh control.
+- Reinforces that **pre-toss mixture weights must collapse immediately once the toss resolves**; chase-censoring cannot continue to support an Under after the team is confirmed batting first.
+- No fitted probability, calibration or forecast weight is promoted from this single result.
+
+**P-252 status: CLOSED.**
+
+---
+
+# P-261 — Toronto Blue Jays (Dylan Cease) @ Cleveland Guardians (Joey Cantillo) — MLB — PREGAME
+
+## A. Frozen identity / state
+
+- **Canonical ID:** `P-261`
+- **League:** MLB
+- **Event:** Toronto Blue Jays @ Cleveland Guardians
+- **Venue:** Progressive Field, Cleveland, Ohio
+- **Scheduled first pitch:** 2026-09-02 18:40 EDT
+- **Australia/Melbourne:** 2026-09-03 08:40 AEST
+- **Frozen cutoff:** approximately 2026-09-03 08:34 AEST, before scheduled start
+- **GAME-STATE:** PREGAME / SCHEDULED
+- **Home last bat:** Cleveland
+- **Method:** `MDS-2026.09.02-v3.1`
+- **Algorithms:** `GFA-2` + `SFA-BASEBALL`
+- **Forecast lane:** SPORTS_ONLY / MARKET_BLIND
+- **Probability:** NOT_GENERATED / NOT_PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+- **Operator / listed-pitcher / action terms:** NOT SUPPLIED / `UNKNOWN_DEFINITION`
+
+## B. User-supplied slate / geometry
+
+| ID | Contract | Ordinary completed-game settlement |
+|---|---|---|
+| `P-261-C01` | Blue Jays ML | Toronto wins |
+| `P-261-C02` | Guardians +1.5 | Cleveland wins or loses by exactly one |
+| `P-261-C03` | Over 7.0 runs | 8+ wins; exactly 7 pushes |
+| `P-261-C04` | Under 7.0 runs | 0-6 wins; exactly 7 pushes |
+
+- C03/C04 share the integer push at exactly seven.
+- C01/C02 overlap in every one-run Toronto win.
+- No price/market information enters the sports ranking.
+
+## C. Confirmed probable pitchers
+
+Official MLB probable-pitcher pages agree:
+
+### Toronto — Dylan Cease, RHP
+Current:
+- 9-5
+- 2.33 ERA
+- 217 strikeouts
+- approximately 150.1 IP
+- approximately 1.05 WHIP
+
+Latest five starts:
+- vs Seattle: 6.0 IP, 1 ER, 8 K, 1 BB
+- at Yankees: 6.2 IP, 1 ER, 8 K
+- vs Yankees: 6.1 IP, 2 ER, 10 K
+- vs Boston: 5.0 IP, 3 ER, 7 K
+- at Cubs: 7.0 IP, 0 ER, 10 K
+
+Five-start aggregate:
+- 31.0 IP
+- 7 ER
+- **2.03 ERA**
+- 43 K
+- 14 BB
+- 15 hits
+
+Mechanistic interpretation:
+- Cease is the strongest single run-suppression component in the game.
+- The walk count still preserves baserunner/cluster risk.
+- Cleveland's recent home offense is much hotter than its season RHP split, so Cease is not assumed to throw seven scoreless innings.
+
+### Cleveland — Joey Cantillo, LHP
+Current:
+- 9-7
+- 3.70 ERA
+- 145 strikeouts
+- approximately 136.1 IP
+- approximately 1.45 WHIP
+
+Latest five:
+- at Angels: 6.0 IP, 2 ER, 7 BB
+- at Colorado: 4.2 IP, 1 ER, 4 BB
+- vs San Diego: 6.0 IP, 1 ER, 3 BB
+- at White Sox: 1.0 IP, 1 ER
+- vs Mets: 5.0 IP, 2 ER, 2 BB
+
+Five-start aggregate:
+- 22.2 IP
+- 7 ER
+- **2.78 ERA**
+- 21 K
+- **16 BB**
+
+Mechanistic interpretation:
+- Cantillo's recent run prevention is much better than the season 3.70 headline.
+- The underlying command is unstable: 16 walks in 22.2 recent innings is a major traffic/upper-tail risk.
+- Toronto's season-long weakness against left-handed pitching materially reduces the chance that every walk becomes scoring damage.
+
+## D. Lineup / participant gate
+
+MLB's official starting-lineup page was still exposing both lineups as `TBD` at the frozen cutoff.
+
+The prior-day cores were:
+### Toronto
+Brett Bateman; Alejandro Kirk; Vladimir Guerrero Jr.; George Springer; Nathan Lukes; Kazuma Okamoto; Andrés Giménez; Ernie Clement; Myles Straw.
+
+### Cleveland
+Steven Kwan; Chase DeLauter; José Ramírez; Jo Adell; Nathaniel Lowe; Angel Martínez; Travis Bazzana; Patrick Bailey; Brayan Rocchio.
+
+Current same-day game-thread indexing indicates Toronto again begins with Brett Bateman / George Springer / Vladimir Guerrero Jr. in the top-order area, but because the field-owner lineup page lagged, no batter-specific prop is issued and exact order-dependent exposure is capped.
+
+## E. Current offensive regime
+
+### Toronto — latest 10
+Current retrieval:
+- approximately **4.0 runs/game**
+- .273 AVG
+- .335 OBP
+- .444 SLG
+- .780 OPS
+- 11 HR in the current L10 table
+
+The freshest immediate result:
+- **1 run on only 3 hits** in the 6-1 loss to Cleveland on Sep. 1
+- Gavin Williams struck out 13
+
+Critical handedness split:
+- Toronto season OPS vs **left-handed pitching: approximately .643**
+- .225 AVG / .296 OBP / .348 SLG
+
+This is the strongest direct argument against a large Toronto scoring centre despite Cantillo's walk rate.
+
+### Cleveland — latest 10
+Current:
+- **55-56 runs / approximately 5.5-5.6 per game**
+- .278-.280 AVG
+- .340-.342 OBP
+- roughly .426 SLG / .766 OPS in the freshest current table
+- 8-2 recent record
+
+Season split vs RHP:
+- approximately **.694 OPS**
+- .240 AVG / .313 OBP / .381 SLG
+
+Interpretation:
+- Cleveland is in a much hotter short-run offensive regime than its broad season RHP numbers.
+- The current form must still be shrunk because recent 11-run and 6-run games widen the mean.
+- Cease is a much stronger right-handed opponent than Cleveland's generic RHP population.
+
+## F. Bullpen chain
+
+### Cleveland
+Latest current reliever window:
+- **1.19 ERA**
+- 37.2 IP
+- 19 hits
+- 5 ER
+- 49 K
+- 8 BB
+- **0.72 WHIP**
+
+This is an elite short-run bullpen state and materially strengthens:
+- Cleveland +1.5
+- Cleveland outright comeback/hold branches
+- Under 7.0 after Cantillo exits
+
+### Toronto
+Freshest reliever retrieval:
+- roughly **4.75 ERA** over the last 10 team games
+- 41.2 IP
+- 22 ER
+- 22 BB
+- 8 HR
+
+Some slightly older query windows return lower figures around 3.4-4.2; the most current retrieval is therefore treated as the higher-variance recent state rather than silently selecting the most favorable number.
+
+Interpretation:
+- Toronto's bullpen is the largest reason Cease's starter edge does **not** automatically make Blue Jays ML Rank #1.
+- Cleveland's home last-bat plus late-run differential widens its winner branch if the game is tied/close after Cease exits.
+
+## G. 2026 head-to-head continuity
+
+Completed meetings before P-261:
+1. Cleveland 8-6 Toronto — Apr. 24
+2. Toronto 5-3 Cleveland — Apr. 25
+3. Toronto 4-2 Cleveland — Apr. 26
+4. Cleveland 6-1 Toronto — Sep. 1
+
+Descriptive:
+- outright record: **2-2**
+- Guardians +1.5: wins on both Cleveland victories; loses on the two two-run Toronto wins -> **2/4**
+- at total 7.0:
+  - 14 runs = Over
+  - 8 runs = Over
+  - 6 runs = Under
+  - 7 runs = Push
+- Over 7: **2/4**
+- Under 7: **1/4**
+- Push: **1/4**
+
+This H2H does not independently support the Under. Today's Under ranking instead comes from the specific **Cease + Cantillo recent form + Cleveland bullpen + Toronto-vs-LHP suppression** chain.
+
+Cantillo's Apr. 25 start vs Toronto:
+- 5 IP
+- 6 hits
+- 3 runs, only 1 earned
+- 1 HR
+- 1 BB
+- 4 K
+
+Toronto won 5-3 after scoring three runs against Cleveland relief in the sixth inning. That old result is informative but the current Cleveland bullpen regime is materially stronger.
+
+## H. Environment / weather
+
+Current Progressive Field game window:
+- about **88°F** at first pitch
+- wind around **8 mph**, initially crosswind/toward right field
+- gusts potentially above 20 mph
+- wind may become more out-to-right-center later
+- rain/thunderstorm chance around **30-40%** in parts of the game window
+
+Mechanistic treatment:
+- warm air and later outfield wind modestly enlarge HR/contact tail;
+- possible interruption raises starter-hook/bullpen variance;
+- this is meaningful contrary evidence to the Under;
+- no deterministic Over adjustment is assigned because wind is not strongly out at first pitch and rain timing is uncertain.
+
+## I. Joint run tree
+
+### Central Cleveland-close state
+**Guardians 3, Blue Jays 2**
+- Guardians +1.5: WIN
+- Blue Jays ML: LOSS
+- Under 7: WIN
+
+Mechanism:
+- Cease limits Cleveland but does not fully blank them;
+- Cantillo walks runners but Toronto's weak LHP split prevents a large cluster;
+- Cleveland's bullpen outperforms Toronto's late.
+
+### One-run Toronto state
+**Blue Jays 3, Guardians 2**
+- Guardians +1.5: WIN
+- Blue Jays ML: WIN
+- Under 7: WIN
+
+Mechanism:
+- Cease owns six-plus innings;
+- Toronto converts Cantillo traffic once;
+- Toronto survives the late bullpen state.
+
+### Push state
+**Guardians 4, Blue Jays 3**
+- Guardians +1.5: WIN
+- Blue Jays ML: LOSS
+- total = **7 PUSH**
+
+### Toronto separation state
+**Blue Jays 5, Guardians 2**
+- Blue Jays ML: WIN
+- Guardians +1.5: LOSS
+- total = **7 PUSH**
+
+Mechanism:
+- Cantillo's walk rate finally converts into a multi-run inning;
+- Cease suppresses Cleveland;
+- this is the main Rank-1 cushion kill path.
+
+### Upper-tail state
+**Guardians 5, Blue Jays 3** / **Blue Jays 5, Guardians 4**
+- Over 7 wins
+
+Mechanism:
+- weather/HR effect, Cantillo command failure, or a Toronto bullpen collapse pushes the game out of the low-run centre.
+
+## J. Total-7 component budget
+
+Under wins at 0-6:
+- 3-2
+- 4-2
+- 3-1
+- 2-1
+
+Exactly 7 pushes:
+- 4-3
+- 5-2
+- 6-1
+
+Over wins at 8+:
+- 5-3
+- 5-4
+- 6-2
+- etc.
+
+### Under support
+- Cease latest-five ERA approximately 2.03
+- Cantillo latest-five ERA approximately 2.78
+- Toronto only .643 OPS vs LHP
+- Cleveland bullpen recent ERA 1.19
+- Cleveland season OPS vs RHP only about .694
+- exact 7 is push protection
+
+### Over support
+- Cleveland current offense around 5.5-5.6 R/G L10
+- Cantillo has 16 BB in 22.2 recent innings
+- Toronto's bullpen most-current recent ERA around 4.75
+- warm 88°F conditions with later outfield wind
+- current H2H has 2 Over / 1 Under / 1 Push at 7
+
+Result:
+- **Under 7.0 receives a lean, not a strong call.**
+- The line is low enough that the Over remains a substantial tail.
+
+## K. Side / separation budget
+
+### Guardians +1.5
+Wins through:
+- every Cleveland outright win
+- every one-run Toronto win
+
+The central 3-2 CLE and 3-2 TOR states both cash it.
+
+Main failure:
+- Cease dominates while Cantillo's walks become real runs, creating 4-2 / 5-2 Toronto.
+
+Why the cushion still ranks first after the P-258 lesson:
+- Cleveland has home last bat;
+- Cleveland's current bullpen is elite;
+- Toronto's offense is unusually weak against left-handed pitching;
+- Cleveland is 8-2 in the current L10 regime;
+- Toronto's multi-run separation branch exists but is **not** the central branch because Cantillo's recent run prevention and the bullpen behind him compress it.
+
+### Blue Jays ML
+Toronto's strongest edge is Cease, by far the best starter in the matchup.
+
+Why it stays below the Cleveland cushion:
+- Toronto must win, while +1.5 also catches one-run Toronto wins;
+- Cleveland has the hotter offense, home last bat and better recent relief chain;
+- Toronto's weak LHP split directly limits its path to early separation.
+
+## L. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-261-C02 — Guardians +1.5** | **LEAN** | **MEDIUM** | Captures Cleveland wins plus one-run Toronto wins. Cleveland's 8-2 form, 5.5+ L10 scoring, elite 1.19 recent bullpen ERA and Toronto's .643 OPS vs LHP create strong margin resistance. |
+| **2** | **P-261-C04 — Under 7.0 Runs** | **LEAN** | **MEDIUM** | Cease is in elite current form, Cantillo has suppressed runs recently, Cleveland's bullpen is dominant, and seven pushes. Warm/outfield conditions and Toronto relief volatility are the principal kill paths. |
+| **3** | **P-261-C01 — Blue Jays ML** | **SLIGHT LEAN / LEAN-ADJACENT** | **MEDIUM-LOW** | Cease supplies the strongest individual pitching edge and Toronto can win 3-2/4-2. It stays below the cushion because Cleveland owns the superior current offense, bullpen and home-late state. |
+| **4** | **P-261-C03 — Over 7.0 Runs** | **FORCED RANK / weaker total direction** | **MEDIUM-LOW** | Seven is low, Cantillo's walks and Toronto's bullpen create 8+ paths, and weather raises variance. It ranks last because the central starter-to-bullpen tree is still low scoring. |
+
+## M. Rank-1 conditional coherence
+
+Rank #1 = Guardians +1.5.
+
+Representative states:
+- CLE 3-2 TOR -> Guardians +1.5 + Under
+- TOR 3-2 CLE -> Guardians +1.5 + Blue Jays ML + Under
+- CLE 4-3 TOR -> Guardians +1.5 + total push
+- TOR 5-2 CLE -> Blue Jays ML; Guardians +1.5 loses; total push
+
+Relations:
+- Under 7.0: **COHERENT**
+- Blue Jays ML: **PARTIAL_OVERLAP**
+- Over 7.0: **PARTIAL / upper-tail**
+
+The P-258 separation lesson was explicitly applied: Toronto's 2+ win branch was separately budgeted rather than hidden inside a generic close-game narrative.
+
+## N. Potential winner
+
+### **Cleveland Guardians — SLIGHT LEAN**
+
+Why:
+- stronger current team form (8-2)
+- hotter current offense
+- elite recent bullpen
+- home last bat
+- Toronto's poor season performance against left-handed pitching
+
+Counter:
+- Dylan Cease is the strongest player-level run-prevention advantage in the game and can carry Toronto to a low-scoring win.
+
+This is therefore a close Cleveland winner lean, not a strong favourite call.
+
+## O. Final delivery
+
+1. **Guardians +1.5**
+2. **Under 7.0 Runs**
+3. **Blue Jays ML**
+4. **Over 7.0 Runs**
+
+**Potential winner:** Cleveland Guardians — slight lean.
+
+## P. Append confirmation
+
+- Full incomplete-event sweep performed first: YES
+- Newly safe-to-settle event: NO
+- P-259/P-260 still upcoming at sweep: YES
+- P-261 frozen before scheduled first pitch: YES
+- Cease/Cantillo identities verified by MLB: YES
+- Current official lineup lag disclosed: YES
+- Starter-to-bullpen chain incorporated: YES
+- Integer total push geometry incorporated: YES
+- P-258 separation-budget learning explicitly applied: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New fitted forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-262**
+
+
+---
+
+# Queue state check before P-262 — 2026-09-03
+
+## Current unresolved / incomplete local items
+- `P-250-C05` Yunnan–Chongqing corners: **UNRESOLVED**.
+- `P-251-C05` Sassuolo–Frosinone corners: **PROVISIONAL WIN / threshold-invariant**.
+- `P-255-C05` Inter Women–Wolfsburg Women corners: **UNRESOLVED**.
+- `P-256-C05` PSG Women–Frankfurt Women corners: **UNRESOLVED**.
+- `P-259` Mets–Rays: current MLB surfaces still showed **PREVIEW / NOT STARTED** at the sweep.
+- `P-260` Giants–Pirates: current MLB/CBS surfaces still showed **PREVIEW / NOT STARTED** at the sweep.
+- `P-261` Blue Jays–Guardians: current MLB/CBS surfaces still showed **PREVIEW / NOT STARTED** at the sweep.
+
+`P-252` was already settled and retrospectively reviewed in the prior running-log update.
+
+No newly final event was safe to settle. No retrospective was fabricated.
+
+---
+
+# P-262 — Trinbago Knight Riders vs Antigua & Barbuda Falcons — Caribbean Premier League 2026, Match 24 — PREGAME
+
+## A. Identity / timing / target freeze
+
+- **Canonical ID:** `P-262`
+- **Sport:** Cricket
+- **Competition:** Republic Bank Caribbean Premier League 2026
+- **Format:** T20
+- **Event:** Trinbago Knight Riders vs Antigua & Barbuda Falcons
+- **Official start:** 2026-09-02 19:00 AST / 23:00 UTC
+- **Australia/Melbourne:** 2026-09-03 09:00 AEST
+- **Frozen cutoff:** approximately 2026-09-03 08:55 AEST, pre-start
+- **GAME-STATE:** PREGAME / SCHEDULED
+- **Official-current venue resolution:** **Queen's Park Oval, Port of Spain**
+- **Venue conflict note:** some older/secondary CPL surfaces still displayed Brian Lara Stadium, but the current Windies Cricket fixtures page and official CPL ticketing both list Queen's Park Oval for this exact fixture. The fresher field-owner/ticketing state controls.
+- **Method:** `MDS-2026.09.02-v3.1`
+- **General algorithm:** `GFA-2`
+- **Sport algorithm:** `SFA-CRICKET`
+- **Numerical state:** `NTS-2026.09.02-v0.3` / no fit cricket model
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability:** NOT_GENERATED / NOT_PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+- **Operator/DLS/action/reduced-overs terms:** NOT SUPPLIED / UNKNOWN_DEFINITION
+
+## B. Target identity
+
+The user's phrase "Falcons 1st innings" is frozen as **Antigua & Barbuda Falcons' own batting innings**, not necessarily the first innings of the match.
+
+Targets:
+- `P262-ABF-PP6`: Falcons runs after six legal overs of their batting innings, if the phase reaches six overs under the operator/action rules.
+- `P262-ABF-INN`: Falcons innings total / 20-over endpoint under exact action, DLS and innings-termination terms.
+
+### User-supplied contracts
+
+| ID | Contract | Ordinary settlement |
+|---|---|---|
+| `P-262-C01` | Falcons innings total Over 165.5 | 166+ |
+| `P-262-C02` | Falcons innings total Under 165.5 | 0-165 |
+| `P-262-C03` | Falcons first 6 overs Over 45.5 | 46+ |
+| `P-262-C04` | Falcons first 6 overs Under 45.5 | 0-45 |
+
+C01/C02 and C03/C04 are exact complementary pairs under ordinary full-action terms.
+
+## C. Blocking-precondition status
+
+| Gate | Status | Consequence |
+|---|---|---|
+| Format / rules | T20 / CPL verified | PASS |
+| Target identity | Team innings + PP6 separately frozen | PASS |
+| Toss / innings order | **UNRESOLVED at cutoff** | explicit bat-first/chase mixture required |
+| Confirmed XI / phase roles | **UNRESOLVED at cutoff** | named players remain role branches |
+| Strip status | **NOT FOUND AFTER SEARCH** | no pitch characteristic invented |
+| Match conditions status | **OBSERVED** | weather/conditions used only mechanistically |
+
+Under current SFA-CRICKET, near-start unresolved toss/XI/strip caps target evidence at LOW unless a direction survives the material branches.
+
+## D. Toss / innings-order mixture
+
+### State 1 — Falcons bat first
+- Full 20-over exposure available unless all out/interruption.
+- Recent ABF conventional **bat-first** innings recovered:
+  - 116 all out vs Guyana
+  - 155/5 vs Barbados
+- Both were below 165.5.
+- This state therefore supports **Under 165.5** more than the raw all-innings average suggests.
+
+### State 2 — Falcons chase
+- Target censoring becomes decision-driving.
+- Falcons' high current completed chase totals include:
+  - 168/8 chasing 168 vs Jamaica
+  - 183/7 chasing 188 vs Saint Lucia
+  - 191/7 chasing 188 vs St Kitts
+  - 168/5 chasing 166 vs TKR
+- All four exceeded 165.5, but each was **target-conditioned**.
+- If TKR set 165 or fewer, a successful chase can terminate below 166.
+- If TKR set 170-190+, the full Over becomes much stronger.
+
+### State 3 — rain/DLS/reduced overs
+- Match-window forecasts retain some passing-shower risk.
+- Current official/reliable weather did not show a strong deterministic washout signal.
+- Exact operator treatment is unknown.
+- No reduced-overs assumption is backfilled into the normal 20-over contract.
+
+## E. Falcons current batting evidence
+
+### Current conventional completed innings recovered
+- 168/8 vs Jamaica — chase
+- 183/7 vs Saint Lucia — chase
+- 191/7 vs St Kitts — chase
+- 168/5 vs Trinbago — chase
+- 116 all out vs Guyana — bat first
+- 155/5 vs Barbados — bat first
+
+Descriptive:
+- Over 165.5: 4/6
+- Under 165.5: 2/6
+
+But the 4/6 Over count is heavily **innings-order confounded**:
+- all four Overs were chases,
+- both recent bat-first innings were Unders.
+
+Therefore the raw 4/6 Over frequency is diagnostic only and is not allowed to own the innings-total rank.
+
+## F. Falcons verified powerplay evidence
+
+Exact/reliable current powerplay states recovered:
+1. vs Jamaica: **46/1 after 6** -> Over 45.5
+2. vs Saint Lucia: **65/1 after 6** -> Over
+3. vs Guyana: **49/2 after 6** -> Over
+4. vs Trinbago: **33 after 6** -> Under
+
+Descriptive:
+- Over 45.5: **3/4**
+- Under 45.5: 1/4
+
+Important direct-opponent counter:
+- the one verified PP Under was the **reverse fixture against TKR**, where Narine and the TKR attack held the Falcons to 33.
+
+This creates a materially stronger kill path than a generic 3/4 trend.
+
+## G. Phase participants / role mixture
+
+Exact XI was not confirmed at cutoff.
+
+Current Falcons squad / recent-XI role branches include:
+- Evin Lewis / Rahkeem Cornwall / Amir Jangoo / Hasan Nawaz / Karima Gore as top-order possibilities
+- Moeen Ali
+- Shadab Khan
+- Fabian Allen / Shamar Springer
+- Alzarri Joseph / Jayden Seales / Sufyan Moqim among bowling options
+
+Current TKR squad / recent-XI role branches include:
+- Colin Munro
+- Sunil Narine
+- Nicholas Pooran
+- Alex Hales
+- Justin Greaves / Jyd Goolie
+- Akeal Hosein
+- Usman Tariq
+- Lahiru Kumara / Dominic Drakes and other pace options
+
+Phase implication:
+- Falcons have enough top-order boundary access to make 46+ plausible without needing death-over rescue.
+- TKR have multiple new-ball/spin control routes; Narine and Akeal are especially relevant if deployed inside the powerplay.
+- Unconfirmed phase roles prevent a higher evidence grade.
+
+## H. Direct H2H / continuity
+
+Most recent 2026 meeting:
+- TKR 165/6
+- Falcons **168/5 in 18.3 overs**
+- Falcons won by 5 wickets
+- Falcons powerplay: **33**
+- Shadab Khan: 52* from 20 in the late chase
+
+Current broader H2H:
+- ABF have won 4 of the 6 listed recent CPL meetings.
+
+Continuity interpretation:
+- the reverse fixture is highly relevant to opponent bowling/late-finisher branches;
+- it is **not** sufficient to make today's PP Under the baseline because role/venue/toss state may differ;
+- the 33 PP is a direct kill path to C03 and therefore materially lowers its confidence.
+
+## I. Current Trinbago home / venue process
+
+Recent Trinidad/Queen's Park/Brian Lara-labelled official-result sequence has been highly variable:
+- Saint Lucia 211/4; TKR 175/6
+- Barbados 127/9; TKR chased 128/3
+- TKR 180/6 vs Jamaica in a DLS-affected match
+- Guyana 185/5 in 16; TKR 172/7 in 16
+
+The current Windies Cricket fixture and ticketing pages place P-262 at **Queen's Park Oval**.
+
+Implication:
+- 165.5 is not an extreme venue ceiling;
+- the recent Trinidad leg contains both a 127 first innings and multiple 175-211-equivalent high states;
+- venue score history therefore widens rather than resolves the Falcons full-innings line.
+
+## J. Conditions
+
+Current Queen's Park Oval / Port of Spain match-window forecast:
+- approximately 82-84°F / 28-29°C
+- humid
+- overcast / passing-shower possibility
+- winds around 8-10 mph
+- rain probability in the stronger hourly source around low-to-moderate levels rather than a strong washout signal
+
+Mechanistic treatment:
+- humidity/dew may favour skid/chasing later, but **dew is conditional**, not a winner or Over by itself;
+- passing showers create DLS/shortening variance;
+- no strip report was recovered, so no claim about grip, seam, grass, pace or turn is made.
+
+## K. Powerplay 45.5 resource tree
+
+### Over-central branch
+**48-55 / 0-2**
+- one boundary-positive opener survives
+- 7.7-9.2 RPO is sufficient
+- C03 wins
+
+### Strong Over branch
+**60+**
+- Cornwall/Lewis/Jangoo-type top-order aggression
+- TKR pace misses length before spin control arrives
+
+### Under branch
+**32-45 / 1-3**
+- repeat of reverse-fixture Narine/new-ball control
+- wickets force rebuild
+- C04 wins
+
+Threshold note:
+- 45.5 is low enough that the Falcons do not need an exceptional powerplay;
+- the direct opponent 33 remains the main caution.
+
+## L. Full-innings 165.5 resource tree
+
+### Bat-first central
+Representative:
+- PP 45-50 / 1-2
+- middle 55-65
+- death 45-50
+- final **150-165**
+- supports Under
+
+### Bat-first ceiling
+- PP 50-60 with wickets intact
+- Moeen/Shadab/Allen-style late resources preserved
+- final **170-185**
+- supports Over
+
+### Chase-censored state
+- TKR target <=165
+- successful Falcons chase terminates below 166
+- supports Under
+
+### High-target chase
+- TKR target 170-190+
+- Falcons must sustain scoring through middle/death
+- supports Over; recent 183/191/168 chases demonstrate ceiling
+
+### Collapse floor
+- early wickets + TKR spin control
+- 120-150
+- strongly supports Under
+
+## M. Phase-to-innings coherence
+
+A **PP Over 45.5 does not imply innings Over 165.5**.
+
+Example:
+- Falcons 50/1 after six
+- then TKR spin/control takes 3 wickets through overs 7-14
+- Falcons finish 158/7
+
+This gives:
+- PP Over = WIN
+- Innings Under = WIN
+
+Conversely:
+- Falcons 42/1 after six
+- wickets retained
+- Moeen/Shadab finish strongly
+- final 175
+
+This gives:
+- PP Under = WIN
+- Innings Over = WIN
+
+The two targets remain separate conditional distributions, as required by the active cricket rules.
+
+## N. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-262-C03 — Falcons first 6 overs Over 45.5** | **LEAN** | **LOW** | Three of four verified current ABF powerplays cleared the line (46, 65, 49). The threshold requires only 7.67 RPO. The exact TKR reverse fixture held ABF to 33, so the direct-opponent kill path keeps evidence capped. |
+| **2** | **P-262-C02 — Falcons innings total Under 165.5** | **SLIGHT LEAN** | **LOW** | Both recovered recent ABF bat-first innings were below 166 (116, 155), while a second-innings state gains chase-censoring support whenever TKR set <=165. The major failure branch is a 170+ TKR target or a wickets-in-hand ABF first innings. |
+| **3** | **P-262-C01 — Falcons innings total Over 165.5** | **FORCED RANK / LEAN-ADJACENT** | **LOW** | ABF have cleared 165.5 in four conventional completed chases (168, 183, 191, 168), and the recent Trinidad scoring environment has multiple high states. It stays below Under because all four Overs were target-conditioned chases and both recent ABF bat-first totals were Under. |
+| **4** | **P-262-C04 — Falcons first 6 overs Under 45.5** | **FORCED RANK / weaker phase direction** | **LOW** | The reverse fixture's 33-run PP proves TKR can suppress this top order, especially through Narine/new-ball control. It ranks last because 3/4 verified current Falcons PPs were 46+, including two substantially above the threshold. |
+
+## O. Rank-1 conditional coherence
+
+Rank #1 = Falcons PP Over 45.5.
+
+- Innings Under 165.5: **COHERENT / PARTIAL** — fast start + middle-over spin squeeze or chase censoring.
+- Innings Over 165.5: **COHERENT / PARTIAL** — fast start + retained wickets/death acceleration.
+- PP Under 45.5: **DISJOINT** exact complement.
+
+No full-innings direction is mechanically derived from the PP pick.
+
+## P. Potential winner
+
+### **Antigua & Barbuda Falcons — SLIGHT LEAN**
+
+Why:
+- Falcons won the reverse fixture this season by five wickets.
+- Current recent H2H listing favours ABF 4-2.
+- Their batting depth has repeatedly rescued difficult states through Moeen/Shadab and lower-middle resources.
+- Their bowling attack has multiple phase-specific options through Alzarri, Seales, Shadab, Sufyan/Joshua James-type roles.
+
+Counterweights:
+- TKR are at home.
+- Munro/Narine/Pooran/Hales give TKR a higher explosive top-order ceiling.
+- TKR's spin attack can reproduce the 33-run powerplay suppression from the reverse fixture.
+- Toss and final XIs were unresolved at cutoff.
+
+Winner direction is therefore only a slight Falcons lean.
+
+## Q. Final delivery
+
+1. **Falcons first 6 overs — Over 45.5**
+2. **Falcons innings total — Under 165.5**
+3. **Falcons innings total — Over 165.5**
+4. **Falcons first 6 overs — Under 45.5**
+
+**Potential winner:** Antigua & Barbuda Falcons — slight lean.
+
+## R. Append confirmation
+
+- Full unresolved-event sweep performed first: YES
+- Newly safe-to-settle event: NO
+- Current active Drive cricket rules re-read: YES
+- Official venue conflict resolved using fresher current field-owner/ticketing evidence: YES
+- Toss at cutoff: UNRESOLVED
+- XI at cutoff: UNRESOLVED
+- Strip status: NOT FOUND AFTER SEARCH
+- Match conditions: OBSERVED
+- Bat-first / chase-censored mixture explicitly modelled: YES
+- Phase-to-innings independence applied: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New fitted forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-263**
+
+
+---
+
+# P-263 — Jaime Faria vs Carlos Alcaraz — 2026 US Open Men's Singles Round 2 — PREGAME
+
+## Queue state check
+- P-250-C05: unresolved.
+- P-251-C05: provisional threshold-invariant win.
+- P-255-C05 and P-256-C05: unresolved.
+- P-259 Mets–Rays: live; no settlement.
+- P-260 Giants–Pirates: open / final not verified.
+- P-261 Blue Jays–Guardians: live; no settlement.
+- P-262 TKR–Antigua & Barbuda Falcons: delayed / no final verified.
+- No newly final event was safe to settle; no retrospective was fabricated.
+
+## Identity / state
+- Canonical ID: P-263
+- Event: 2026 US Open Men's Singles, Round 2 (R64)
+- Match: Jaime Faria vs Carlos Alcaraz
+- Venue: Arthur Ashe Stadium
+- Surface: hard
+- Format: best of five
+- State at cutoff: UPCOMING / NOT STARTED
+- Expected start: around 21:00 EDT Sep 2 / ~11:00 AEST Sep 3
+- Method: MDS-2026.09.02-v3.1 / GFA-2 / SFA-TENNIS
+- Operator retirement terms: UNKNOWN_DEFINITION
+- Probability: NOT_GENERATED / NOT_PUBLISHED
+- Value: NO VALUE DETERMINABLE
+
+## Contracts
+| ID | Contract |
+|---|---|
+| P-263-C01 | Faria +7.5 games |
+| P-263-C02 | Alcaraz -7.5 games |
+| P-263-C03 | Over 31.5 total games |
+| P-263-C04 | Under 31.5 total games |
+
+## Current regime
+### Alcaraz
+- No. 3 ranking / No. 2 US Open seed.
+- Returned after 139 days away with a right-wrist injury.
+- Beat Safiullin 6-4, 6-4, 6-4 in R1 and reported feeling pain-free.
+- 2026 hard record in current provider: 18-2.
+- Broad 2026 profile: ~88.9% hold, ~32.2% break.
+- R1 serve speed was still managed below his normal peak, so current-state uncertainty remains.
+
+### Faria
+- Around No. 72, career high No. 70.
+- Beat Brooksby 6-3, 7-6(4), 4-6, 1-6, 6-2 in 3h43m.
+- Recent Cincinnati run: wins over Brooksby, Ben Shelton and Adam Walton; loss to Musetti.
+- 2026 hard record in current provider: 5-3.
+- Broad 2026 profile: ~77% hold, ~23% break.
+- Extra rest day partly offsets the five-set R1 workload.
+
+## H2H
+- Current structured H2H: 0-0.
+
+## Best-of-five qualitative set-count mixture
+Ordinal weights only, not probabilities:
+- 3 sets = 6
+- 4 sets = 3
+- 5 sets = 1
+
+## Core branches
+- Alcaraz 6-3, 6-4, 6-2 -> 27 games, +9 margin: Alcaraz -7.5 + Under 31.5.
+- Alcaraz 6-4, 6-4, 6-3 -> 29 games, +7 margin: Faria +7.5 + Under 31.5.
+- Alcaraz 6-3, 4-6, 6-3, 6-4 -> 34 games, +4 margin: Faria +7.5 + Over 31.5.
+- Faria upset branches are retained but materially smaller.
+
+## Separation budget
+Alcaraz -7.5 needs 8+ net games. A straight-set win alone is not enough:
+- 6-4, 6-4, 6-4 = +6 -> Faria covers.
+- 6-3, 6-4, 6-3 = +8 -> Alcaraz covers.
+The favourite handicap therefore requires repeated return pressure and at least one real separation set.
+
+## Total budget
+Under 31.5 is strongest in ordinary 3-0 Alcaraz wins:
+- 6-3, 6-4, 6-2 = 27
+- 6-4, 6-4, 6-4 = 30
+Over can still hit in straight sets if sets are very close:
+- 7-5, 6-4, 6-4 = 32
+Most ordinary 4- and 5-set states support the Over.
+
+## Ranked forecast
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| 1 | Under 31.5 total games | LEAN | MEDIUM |
+| 2 | Alcaraz -7.5 games | SLIGHT LEAN | MEDIUM-LOW |
+| 3 | Faria +7.5 games | FORCED RANK / LEAN-ADJACENT | MEDIUM-LOW |
+| 4 | Over 31.5 total games | FORCED RANK / weaker total direction | MEDIUM-LOW |
+
+## Potential winner
+**Carlos Alcaraz — LEAN**
+
+## Final order
+1. Under 31.5 total games
+2. Alcaraz -7.5 games
+3. Faria +7.5 games
+4. Over 31.5 total games
+
+## Append confirmation
+- Queue sweep first: YES
+- Newly safe-to-settle event: NO
+- Official round/state verified: YES
+- Status refreshed pre-issue: UPCOMING
+- H2H continuity: 0-0
+- Best-of-five mixture: YES
+- Handicap separation budget: YES
+- Retirement terms: UNKNOWN_DEFINITION
+- Drive modified: NO
+- Numerical probability generated: NO
+- NEXT CANONICAL ID: P-264
+
+
+---
+
+# P-264 — Chicago White Sox (Davis Martin) @ Houston Astros (Hayden Wesneski) — MLB — PREGAME
+
+## Queue / state check
+- P-259 Mets–Rays: live, not final.
+- P-260 Giants–Pirates: live/open, not final.
+- P-261 Blue Jays–Guardians: live, not final.
+- P-262 TKR–Falcons: in progress, not final.
+- P-263 Faria–Alcaraz: upcoming.
+- Existing unresolved corner-definition rows remain open/provisional.
+- No newly final event was safe to settle or retrospect.
+
+## Live-state hard gate
+User labelled this match live, but MLB field-owner state at freeze was **PREGAME / PREVIEW**.
+- Scheduled first pitch: 2026-09-02 20:10 EDT / 2026-09-03 10:10 AEST.
+- Query time: about 10:03 AEST.
+- Venue: Daikin Park.
+- Home last bat: Houston.
+- Official MLB event page linked Davis Martin vs Hayden Wesneski.
+- Official batting orders were still TBD at the freeze.
+- Operator/action/listed-pitcher terms: UNKNOWN_DEFINITION.
+- Method: MDS-2026.09.02-v3.1 / GFA-2 / SFA-BASEBALL.
+- Numerical model: not fit / not validated.
+
+## Contracts
+1. Astros ML
+2. White Sox +1.5
+3. Over 8.5
+4. Under 8.5
+
+## Starter state
+### Davis Martin
+- 9-6, 4.32 ERA, 111 K.
+- Activated from 15-day IL on Sep. 2; first MLB start since Aug. 13.
+- Aug. 27 rehab: 5 scoreless innings.
+- Immediate pre-IL MLB starts were volatile, including 9 ER at Boston and 3 ER in 2 IP vs Cincinnati.
+- Current mixture: competent 5-inning return / ordinary 3-4 run state / early-hook-contact-HR tail.
+
+### Hayden Wesneski
+- 4-1, 3.86 ERA, ~1.19 WHIP.
+- Seventh 2026 start after Tommy John surgery.
+- Latest two starts: 10 IP, 1 ER combined.
+- One recent 5-ER start vs Seattle preserves downside.
+- Current centre is better than Martin's, but a roughly 5-inning state remains more plausible than assuming a deep 7-inning start.
+
+## Offense
+### White Sox L10
+- 49 runs, 4.9 R/G
+- .239/.352/.382, .734 OPS
+- 6-4
+- season OPS vs RHP ~.721-.722
+
+### Astros L10
+- 44 runs, 4.4 R/G
+- .207/.289/.385, .674 OPS
+- 5-5
+- season OPS vs RHP ~.728
+
+Chicago has the hotter/steadier current offense. Houston retains greater HR ceiling through Yordan Alvarez / Isaac Paredes but has struggled to sustain baserunners.
+
+## Bullpen
+Houston preserved its primary leverage group in the 5-1 loss. Hader, Abreu, Okert, Blubaugh and De Los Santos carried roughly a 1.06 ERA over 59.1 August innings in current reporting. Hader was 21-for-21 in saves with an 18-game scoreless streak.
+
+Chicago's recent relief ERA is window-sensitive (~3.6 to ~4.4 depending exact current window), so no single cherry-picked number controls.
+
+## Joint early-hook branch
+Both starters have exposure uncertainty:
+- Martin is returning from IL.
+- Wesneski is in a limited post-TJS starting season.
+
+If both exit after ~4 innings, the upper tail rises. However, a short Wesneski start is not automatically an Over because Houston's strongest relievers are rested. Houston's cold offense also keeps the central run tree below nine.
+
+## Central game tree
+- HOU 4-3 CWS -> Under, Astros ML, CWS +1.5
+- HOU 5-3 CWS -> Under, Astros ML
+- CWS 4-3 HOU -> Under, CWS +1.5
+- HOU 6-3 CWS -> Over, Astros ML
+- HOU 5-4 CWS / CWS 5-4 HOU -> Over, CWS +1.5
+
+## Ranked forecast
+| Rank | Contract | Verdict | Evidence |
+|---:|---|---|---|
+| 1 | Under 8.5 Runs | SLIGHT LEAN | MEDIUM-LOW |
+| 2 | White Sox +1.5 | SLIGHT LEAN | MEDIUM-LOW |
+| 3 | Astros ML | LEAN-ADJACENT / FORCED RANK | MEDIUM-LOW |
+| 4 | Over 8.5 Runs | FORCED RANK / weaker total direction | MEDIUM-LOW |
+
+## Potential winner
+**Houston Astros — SLIGHT LEAN**
+
+Reason: better current starter centre, rested leverage bullpen and home last bat. Confidence is capped by Chicago's better record/run differential/recent offense and Houston's weak current batting form.
+
+## Final order
+1. Under 8.5 Runs
+2. White Sox +1.5
+3. Astros ML
+4. Over 8.5 Runs
+
+**Next canonical ID: P-265**
+
+
+---
+
+# Queue state check before P-265 — 2026-09-03
+
+## Current unresolved / incomplete local items
+- `P-250-C05` Yunnan–Chongqing corners: **UNRESOLVED**.
+- `P-251-C05` Sassuolo–Frosinone corners: **PROVISIONAL WIN / threshold-invariant**.
+- `P-255-C05` Inter Women–Wolfsburg Women corners: **UNRESOLVED**.
+- `P-256-C05` PSG Women–Frankfurt Women corners: **UNRESOLVED**.
+- `P-259` Mets–Rays: **LIVE / no verified final at the sweep**.
+- `P-260` Giants–Pirates: **LIVE / no verified final at the sweep**.
+- `P-261` Blue Jays–Guardians: **LIVE / no verified final at the sweep**.
+- `P-262` TKR–Antigua & Barbuda Falcons: **IN PROGRESS / no verified final at the sweep**.
+- `P-263` Faria–Alcaraz: **UPCOMING / not started at the sweep**.
+- `P-264` White Sox–Astros: **UPCOMING / not started at the sweep**.
+
+No newly final event was safe to settle. No retrospective was fabricated.
+
+---
+
+# P-265 — Toluca vs Club León — Leagues Cup 2026 Semifinal — PREGAME
+
+## A. Identity / endpoint freeze
+- **Canonical ID:** `P-265`
+- **Competition:** Leagues Cup 2026
+- **Stage:** Semifinal, single elimination
+- **Event:** Toluca FC vs Club León
+- **Venue:** Shell Energy Stadium, Houston, Texas — neutral site
+- **Kickoff:** 2026-09-02 20:00 Houston / 21:00 ET
+- **Australia/Melbourne:** 2026-09-03 11:00 AEST
+- **Frozen state:** PREGAME / SCHEDULED
+- **Knockout rule:** tied after 90 minutes -> direct penalty shootout; no extra time
+- **Goal rows:** regulation 90 minutes including stoppage
+- **Potential winner endpoint:** **TO ADVANCE TO THE FINAL**
+- **Method:** MDS-2026.09.02-v3.1 / GFA-2 / SFA-SOCCER
+- **Numerical model:** not fit / not validated
+- **Operator / derivative provider:** not supplied
+- **Probability:** NOT_GENERATED / NOT_PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+
+## B. Candidate slate
+| ID | Contract | Ordinary settlement |
+|---|---|---|
+| `P-265-C01` | 1H Over 0.5 Goals | 1+ first-half goals |
+| `P-265-C02` | 1H Under 0.5 Goals | 0-0 HT |
+| `P-265-C03` | Full Match Over 2.5 Goals | 3+ regulation goals |
+| `P-265-C04` | Full Match Under 2.5 Goals | 0-2 regulation goals |
+| `P-265-C05` | Total Corners Over 8.5 | 9+ regulation corners under the research-provider convention |
+
+C01/C02 and C03/C04 are exact complementary pairs.  
+C05 is a separate derivative process. Exact operator/provider definition is absent, so C05 cannot receive `LEAN`/`SUPPORTED` under active SFA-SOCCER even if it ranks first by sporting likelihood.
+
+## C. Participant gate
+A field-owner confirmed XI was not recovered before the frozen cutoff.
+
+Current same-day sources broadly agree on these attacking/structural cores:
+- Toluca: Hugo González in goal; Alexis Vega, Helinho and Federico Viñas among the principal attacking options; Franco Romero / Nicolás Castro-type midfield control.
+- León: Óscar García in goal; Diber Cambindo as the reference striker with Fernando Beltrán, Rodrigo Echeverría, Ismael Díaz / Juan Domínguez / Daniel Arcila-type support.
+
+Current aggregation also lists material Toluca absences around Paulinho, Marcel Ruiz, Santiago Simón and Iván López, and León absences including Ángel Estrada / Edgar Guerra, but because this was not field-owner-confirmed at freeze these are retained as provisional availability states.
+
+**Consequence:** winner/side confidence is capped; no player prop is issued.
+
+## D. Tournament form
+
+### Toluca — Leagues Cup 2026
+- 3-0 Seattle
+- 0-1 LAFC
+- 3-1 FC Dallas
+- 2-0 Austin FC
+
+Summary:
+- 3 wins, 1 loss
+- 8 GF, 2 GA
+- Full Over 2.5: 2/4
+- Full Under 2.5: 2/4
+
+Quarterfinal process:
+- Toluca beat Austin 2-0.
+- Austin went to 10 men in the 40th minute.
+- Toluca finished with 25 shots, 9 on target.
+- Austin did not record a shot on target.
+- The red-card distortion prevents treating that defensive dominance as ordinary 11v11 baseline.
+
+### León — Leagues Cup 2026
+- 1-0 Nashville
+- 2-1 Orlando
+- 3-2 Inter Miami
+- 3-0 Real Salt Lake
+
+Summary:
+- perfect 4-0 record
+- 9 GF, 3 GA
+- Full Over 2.5: 3/4
+- scored in all four
+- clean sheets in 2/4
+
+Current Leagues Cup form therefore supports León's attack more consistently than a pure low-event semifinal prior would.
+
+## E. Current all-competition L5
+
+### Toluca
+- 4-0 Juárez — HT 2-0 — corners 8
+- 2-0 Austin — HT 0-0 — corners 14
+- 2-1 Querétaro — HT 0-0 — corners 13
+- 0-0 Atlante — HT 0-0 — corners 15
+- 3-1 FC Dallas — HT 2-1 — corners 9
+
+Descriptive:
+- GF/game: 2.2
+- GA/game: 0.4
+- 1H Over 0.5: 2/5
+- Full Over 2.5: 3/5
+- Corners Over 8.5: 4/5
+
+### León
+- 1-1 Atlante — HT 0-0 — corners 6
+- 3-0 Real Salt Lake — HT 1-0 — corners 11
+- 2-0 Monterrey — HT 1-0 — corners 13
+- 2-1 Necaxa — HT 0-1 — corners 10
+- 3-2 Inter Miami — HT 0-1 from León perspective / 1-0 match HT — corners 15
+
+Descriptive:
+- GF/game: 2.2
+- GA/game: 0.8
+- 1H Over 0.5: 4/5
+- Full Over 2.5: 3/5
+- Corners Over 8.5: 4/5
+
+Combined L5:
+- 1H Over 0.5: 6/10
+- Full Over 2.5: 6/10
+- Corners Over 8.5: 8/10
+
+Small descriptive sample; not a probability.
+
+## F. H2H continuity
+
+Recent five listed meetings:
+- Toluca 4-1 León — Apr 2026
+- León 2-4 Toluca — Oct 2025
+- León 3-3 Toluca — Feb 2025
+- Toluca 2-2 León — Nov 2024
+- Toluca 4-1 León — Feb 2024
+
+Current continuity summary:
+- Toluca unbeaten in the last five: 3 wins, 2 draws
+- all five cleared 2.5 goals
+- current broader H2H source lists approximately 3.9 total goals per meeting
+- the latest Apr 2026 match produced 9 corners
+- older meetings retain lower weight because current rosters/coaches have changed
+
+The recent H2H strongly supports the Over tail, but it is not allowed to override the current defensive regimes by itself.
+
+## G. Early-goal reconciliation
+
+### Over support
+- León 1H Over in 4/5 current matches
+- combined current L5 = 6/10
+- recent H2Hs repeatedly produced first-half scoring
+- latest April meeting had Toluca score in the 5th minute
+- October 2025 meeting was 1-1 at HT
+- February 2025 meeting had two León goals before halftime
+
+### Under support
+- Toluca were 0-0 at HT in 3 of their latest 5
+- Toluca's quarterfinal stayed 0-0 through the first half despite a 40' Austin red
+- semifinal single-elimination state plus direct penalties can preserve a tactical draw band
+- official Toluca pre-match comments emphasized defending transitions and controlling León's counterattack threat
+
+Result:
+**1H Over 0.5 has a slight edge, not a strong one.**
+
+## H. Full-total process
+
+### Over-supporting mechanisms
+- León have scored 9 in four Leagues Cup matches and cleared 2.5 in 3/4.
+- Both teams are at 2.2 GF/game over current L5.
+- Both teams clear 2.5 in 60% of current L5.
+- The latest five H2Hs all cleared 2.5.
+- First goal by either side creates a trailing-state chase because there is no second leg.
+
+### Under-supporting mechanisms
+- Toluca have conceded only 2 goals across four Leagues Cup matches.
+- Toluca current L5 GA = 0.4.
+- León have two tournament clean sheets and only three goals conceded in four.
+- If level late, neither team needs to force reckless attacks because direct penalties are available.
+- Neutral-site semifinal reduces ordinary home-pressure assumptions.
+
+Central regulation families:
+- 2-1 Toluca
+- 1-1
+- 2-1 León
+- 2-0 Toluca / 1-0 either way as lower branch
+
+Over therefore receives only a **slight** regulation edge.
+
+## I. Corner process
+
+Direct current target evidence:
+- Toluca recent totals: 8, 14, 13, 15, 9 -> **4/5 Over 8.5**
+- León recent totals: 6, 11, 13, 10, 15 -> **4/5 Over 8.5**
+- combined: **8/10 Over 8.5**
+
+Current provider process summaries:
+- Toluca corners for ~5.8/game, against ~6.0
+- León corners for ~4.2/game, against ~6.8
+- broader H2H average ~9.7 total corners
+
+Mechanistic support:
+- León can generate transition attacks without needing high possession.
+- Toluca's wide attack through Vega/Helinho and fullback width creates crossing/end-line entries.
+- Either first goal raises the trailing side's crossing, clearance and set-play exposure.
+- A 1-1 / 2-0 match can still clear 8.5 corners; corner and goal processes remain separate.
+
+Kill path:
+- efficient central finishing with few blocks/clearances;
+- long tactical midfield phases;
+- early lead followed by successful leading-state control.
+
+**Definition cap:** exact sportsbook/provider corner settlement was not supplied. C05 is `FORCED RANK / MEDIUM-LOW`, not a formal LEAN.
+
+## J. Conditions
+
+Houston match-window forecasts are source-conflicted:
+- broadly hot/humid, roughly low-to-mid 80s °F near kickoff
+- SSE winds around 10 mph
+- some nearby stations show only modest rain probability
+- other local stations flag a significant evening thunderstorm/heavy-rain branch
+
+Mechanistic treatment:
+- weather widens delay/wet-surface uncertainty;
+- rain can alter passing/crossing/surface speed in multiple directions;
+- no deterministic Over/Under direction is assigned;
+- if delayed, participant warm-up and surface state should be rechecked before live use.
+
+## K. Knockout state
+
+Leagues Cup knockout rule:
+- single elimination
+- tied after regulation -> direct penalty shootout
+- **no extra time**
+
+Consequences:
+- regulation totals stop after 90 + stoppage.
+- potential winner-to-advance includes penalties.
+- draw at 90 is a substantial state and does not require either side to chase indefinitely late.
+
+## L. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-265-C05 — Total Corners Over 8.5** | **FORCED RANK** | **MEDIUM-LOW** | 8/10 recent combined matches clear 8.5, direct team for/conceded corner rates imply double-digit event exposure, and either first-goal state raises chase-width pressure. Provider definition missing prevents LEAN label. |
+| **2** | **P-265-C03 — Full Match Over 2.5 Goals** | **SLIGHT LEAN** | **MEDIUM-LOW** | Both are at 2.2 GF/game L5, León cleared 2.5 in 3/4 Leagues Cup matches, and the latest five H2Hs all exceeded 2.5. Toluca's current defence and direct-penalty draw band prevent a stronger call. |
+| **3** | **P-265-C01 — 1H Over 0.5 Goals** | **SLIGHT LEAN** | **MEDIUM-LOW** | León is 4/5 current 1H Over and recent H2H has strong early-goal continuity. Toluca's three 0-0 HTs in L5 and tactical semifinal opening keep this below the full Over. |
+| **4** | **P-265-C04 — Full Match Under 2.5 Goals** | **LEAN-ADJACENT / FORCED RANK** | **MEDIUM-LOW** | Toluca's defensive regime and direct-penalty structure create 0-0/1-0/1-1/2-0 states. It stays below Over because León's tournament attack and H2H conversion tail are stronger. |
+| **5** | **P-265-C02 — 1H Under 0.5 Goals** | **WEAKER DIRECTION** | **MEDIUM-LOW** | 0-0 HT is credible through Toluca control and semifinal caution, but current León early scoring plus recent H2H makes the no-goal first half narrower. |
+
+## M. Rank-1 coherence
+
+Rank #1 = Corners Over 8.5.
+
+- Full Over 2.5: `COHERENT / PARTIAL`
+- 1H Over 0.5: `COHERENT / PARTIAL`
+- Full Under 2.5: `COHERENT / PARTIAL` because high corners can coexist with low conversion
+- 1H Under 0.5: `COHERENT / PARTIAL` because a slow first half can still produce late corner pressure
+
+No row is structurally disjoint from the corner thesis.
+
+## N. Potential winner endpoint
+
+### **Toluca to advance — SLIGHT LEAN**
+
+Supporting:
+- unbeaten in last five H2Hs vs León (3W, 2D)
+- stronger current defensive L5 profile (0.4 GA/game)
+- deeper demonstrated knockout experience
+- recent 2-0 quarterfinal and 4-0 league win
+- Toluca rotated in the Juárez match, reducing the raw two-day-rest concern
+
+Counter:
+- León are perfect 4-0 in Leagues Cup and have scored in every tournament match
+- León have more rest before the semifinal
+- neutral venue reduces Toluca's ordinary home advantage
+- direct penalties make the draw/coin-flip advancement branch material
+
+Regulation winner is therefore weaker than the advancement call; no strong 90-minute side is published.
+
+## O. Final delivery
+1. **Total Corners Over 8.5**
+2. **Full Match Over 2.5 Goals**
+3. **1st Half Over 0.5 Goals**
+4. **Full Match Under 2.5 Goals**
+5. **1st Half Under 0.5 Goals**
+
+**Potential winner endpoint:** Toluca to advance — slight lean.
+
+## P. Append confirmation
+- Full unresolved-event sweep performed first: YES
+- Newly safe-to-settle event: NO
+- Competition/stage/neutral venue verified by Leagues Cup: YES
+- Direct-penalty/no-extra-time rule verified: YES
+- Current field-owner confirmed XI recovered: NO
+- Participant uncertainty preserved/capped: YES
+- Current L5 and direct corner process constructed: YES
+- Early-goal reconciliation performed: YES
+- Corners modeled separately from goals: YES
+- Weather conflict preserved rather than silently reconciled: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New fitted forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-266**
+
+
+---
+
+# Queue state check before P-266 — 2026-09-03
+
+## Current incomplete / unresolved local items
+
+- `P-250-C05` Yunnan–Chongqing corners: **UNRESOLVED**.
+- `P-251-C05` Sassuolo–Frosinone corners: **PROVISIONAL WIN / threshold-invariant**.
+- `P-255-C05` Inter Women–Wolfsburg Women corners: **UNRESOLVED**.
+- `P-256-C05` PSG Women–Frankfurt Women corners: **UNRESOLVED**.
+- `P-259` Mets–Rays: **LIVE** at sweep; official game story had New York 3-0 in the first inning, therefore no settlement.
+- `P-260` Giants–Pirates: **LIVE / no verified final** at sweep.
+- `P-261` Blue Jays–Guardians: **LIVE / no verified final** at sweep.
+- `P-262` TKR–Antigua & Barbuda Falcons: **IN PROGRESS / no verified final** at sweep.
+- `P-263` Faria–Alcaraz: **UPCOMING / not final** at sweep.
+- `P-264` White Sox–Astros: **LIVE / no verified final for the current P-264 event**; web results also contained a completed 5-1 prior game, which is preserved as a separate event rather than mis-settled onto P-264.
+- `P-265` Toluca–León: **LIVE / just-started semifinal, no final** at sweep.
+
+No newly final local event was safe to settle. No retrospective was fabricated.
+
+---
+
+# P-266 — New York Yankees (Cam Schlittler) @ Los Angeles Angels (Reid Detmers) — MLB — PREGAME
+
+## A. Frozen identity / state
+
+- **Canonical ID:** `P-266`
+- **League:** MLB
+- **Event:** New York Yankees @ Los Angeles Angels
+- **Venue:** Angel Stadium, Anaheim, California
+- **Scheduled first pitch:** 2026-09-02 21:38 EDT / 18:38 PDT
+- **Australia/Melbourne:** 2026-09-03 11:38 AEST
+- **Research freeze:** approximately 2026-09-03 11:20 AEST
+- **GAME-STATE:** PREGAME / PREVIEW
+- **Home last bat:** Los Angeles Angels
+- **Official probable starters:** Cam Schlittler (NYY RHP) vs Reid Detmers (LAA LHP)
+- **Official batting orders at freeze:** MLB page still showed `TBD`
+- **Current secondary lineups:** available and used only as lineup-mixture evidence, not field-owner-confirmed
+- **Method:** `MDS-2026.09.02-v3.1`
+- **Algorithms:** `GFA-2` + `SFA-BASEBALL`
+- **Numerical state:** `NTS-2026.09.02-v0.3`; no fitted/validated baseball model
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Probability:** `NOT_GENERATED / NOT_PUBLISHED`
+- **Value:** `NO VALUE DETERMINABLE`
+- **Operator / action / listed-pitcher terms:** not supplied / `UNKNOWN_DEFINITION`
+
+## B. Supplied contracts / geometry
+
+| ID | Contract | Ordinary settlement |
+|---|---|---|
+| `P-266-C01` | Yankees -1.5 | NYY wins by 2+ |
+| `P-266-C02` | Angels +1.5 | LAA wins or loses by exactly 1 |
+| `P-266-C03` | Over 6.5 runs | 7+ combined runs |
+| `P-266-C04` | Under 6.5 runs | 0-6 combined runs |
+
+- C01/C02 are exact half-run complements.
+- C03/C04 are exact half-run complements.
+- A low total does **not** imply a close margin; 3-0 / 4-1 / 4-2 separation branches are explicitly retained.
+
+## C. Starting-pitcher state
+
+### Cam Schlittler — Yankees RHP
+
+Current official/current-preview line:
+- 12-6
+- **2.09 ERA**
+- 163.2 IP
+- **201 strikeouts**
+- approximately 0.97 WHIP in current preview data
+
+August:
+- 5 starts
+- 27.0 IP
+- 7 ER
+- **2.33 ERA**
+- 36 K
+- 16 BB
+- 2 HR
+
+Latest three:
+- 5.2 IP, 0 ER vs Boston
+- 6.0 IP, 1 ER vs Toronto
+- 5.1 IP, 1 ER at Toronto
+
+Current same-day preview notes:
+- **2-0, 1.13 ERA over his latest four**
+- road ERA approximately **1.14**
+- first career start against the Angels
+
+Mechanistic interpretation:
+- Schlittler is the strongest single run-suppression component in this game.
+- His fastball/curveball power profile creates a meaningful Angels 0-2 run floor branch.
+- Walks remain the main cluster risk: 16 BB in August and 5 in the most recent Boston start.
+- No direct Angels H2H starter history exists, so no opponent ownership is inferred.
+
+### Reid Detmers — Angels LHP
+
+Current:
+- 4-8
+- **3.54 ERA**
+- 155 IP
+- **174 K**
+- approximately 1.07 WHIP
+
+August:
+- 5 starts
+- 30 IP
+- **5 ER**
+- **1.50 ERA**
+- 29 K
+- 6 BB
+- 2 HR
+
+Latest four:
+- 6 IP, 1 ER vs Philadelphia
+- 6 IP, 0 ER at Texas
+- 8 IP, 0 ER vs Kansas City
+- 6 IP, 1 ER vs Texas
+
+This is **26 innings / 2 earned runs** across the four-start run.
+
+Current preview also reports:
+- approximately **1.55 ERA over his last eight starts**
+- career against Yankees: 1-0, approximately **0.59 ERA** in six appearances/two starts
+- April 14, 2026: **7 IP, 1 R, 4 H, 0 BB, 9 K** against New York
+
+Mechanistic interpretation:
+- Detmers' current regime is dramatically stronger than his 3.54 season ERA.
+- The direct April 2026 start is continuity-relevant because it is same season and same opponent, but one start is not treated as ownership.
+- His slider/left-handed look is materially relevant to a Yankees lineup that has been only around league-average against LHP rather than elite.
+
+## D. Current lineup / availability state
+
+MLB's field-owner lineup page remained `TBD`, so exact slot-PA exposures are capped.
+
+Current same-day secondary reporting listed:
+
+### Yankees
+1. Paul Goldschmidt 1B
+2. Cody Bellinger LF
+3. Heliot Ramos RF
+4. Ben Rice DH
+5. Amed Rosario 3B
+6. Spencer Jones CF
+7. Jose Caballero SS
+8. Jazz Chisholm Jr. 2B
+9. Ali Sánchez C
+
+### Angels
+1. Zach Neto SS
+2. Mike Trout CF
+3. Wade Meckler LF
+4. Vaughn Grissom 1B
+5. Moisés Ballesteros DH
+6. Christian Moore 2B
+7. Josh Lowe RF
+8. Oswald Peraza 3B
+9. Travis d'Arnaud C
+
+Material Yankees availability:
+- **Aaron Judge remains out** while progressing through rib-injury rehab.
+- Giancarlo Stanton is also unavailable in the current roster/injury context.
+- Yankees have intentionally introduced more right-handed bats against Detmers, including Goldschmidt/Rosario/Ramos-type exposure.
+
+Participant implication:
+- New York's current offense is hot, but its absolute ceiling is lower than a full Judge/Stanton roster.
+- No player prop is added because the official lineup freeze was incomplete.
+
+## E. Current offensive form
+
+### Yankees — L10
+Fresh current StatMuse window:
+- **59 runs / 5.9 R/G**
+- .288 AVG
+- .347 OBP
+- .457 SLG
+- **.804 OPS**
+- 15 HR
+- 6-4
+
+A separate same-day query returned 5.5 R/G because of a slightly different rolling window/cache. The more detailed 59-run game table includes Aug. 31 and Sep. 1 and is preferred as the freshest explicit event window.
+
+Against left-handed pitching in 2026:
+- approximately **.728-.730 OPS**
+- .241-.243 AVG
+- .312-.314 OBP
+- .415-.416 SLG
+- 59 HR
+
+Interpretation:
+- New York's overall recent offense is very strong.
+- The specific LHP split is materially less dominant than its L10 overall run rate.
+- Detmers therefore has a credible path to suppressing a normally hot offense.
+
+### Angels — L10
+Fresh current window:
+- **37 runs / 3.7 R/G**
+- .225 AVG
+- .306 OBP
+- .339 SLG
+- **.645 OPS**
+- only 5 HR
+- 2-8
+
+Season:
+- approximately 4.09 R/G
+- 568 runs
+- 26th in runs in the current source
+- 27th in HR
+- among MLB's higher-strikeout offenses
+
+Interpretation:
+- the 10-run Aug. 31 game is a real ceiling event but not the central current offensive regime.
+- Against Schlittler's power profile, the Angels' strikeout/contact floor is a major Under/Yankees-separation mechanism.
+
+## F. Current series and H2H
+
+2026 meetings before P-266:
+- Apr. 13: Yankees 11-10 Angels
+- Apr. 14: Angels 7-1 Yankees — Detmers 7 IP, 1 R
+- Apr. 15: Yankees 5-4 Angels
+- Apr. 16: Angels 11-4 Yankees
+- Aug. 31: Angels 10-1 Yankees
+- Sep. 1: Yankees 7-3 Angels
+
+For today's 6.5 line:
+- **all six listed 2026 meetings cleared Over 6.5**
+
+This is strong **outcome** evidence against an Under.
+
+Continuity caveat:
+- today's pitcher pair is unique; Schlittler has never faced the Angels.
+- the only highly starter-relevant H2H is Detmers' April 14 suppression of New York.
+- previous high totals were driven by different starters, bullpen states, error clusters and/or one-sided blowups.
+- therefore the 6/6 Over H2H is a kill-path signal, not the primary total baseline.
+
+## G. Bullpen / availability chain
+
+### Yankees
+Sep. 1 relief usage:
+- Brent Headrick 1.1 IP
+- Paul Blackburn 1.1 IP
+- John Schreiber 1.0 IP
+- all scoreless
+
+Aug. 31:
+- Michael Fulmer, Luis Gil and David Bednar were used in the 10-1 loss and allowed damage.
+
+Current implication:
+- New York has enough relief depth, but several arms have worked recently.
+- Bednar had Sep. 1 off after pitching Aug. 31, so he is not assumed unavailable.
+- Blackburn/Headrick/Schreiber all worked the prior night.
+- the bullpen therefore receives a **mild fatigue/role-mix widening**, not a generic quality downgrade.
+
+### Angels
+Sep. 1:
+- Tayler Saucedo 1.0 IP
+- Samy Natera Jr. 0.2 IP
+- Sammy Peralta 1.1 IP
+
+This makes the Angels' immediate post-Detmers chain less clean than if all primary relievers were fresh.
+
+However, other arms remain available; no blanket "bullpen tired" assumption is used.
+
+## H. Park / environment
+
+Angel Stadium:
+- 2026 one-year Statcast run factor approximately **92**, meaning observed run scoring has been below neutral in the one-year sample.
+- 2024-26 rolling factor approximately **99**, essentially near neutral over the larger window.
+
+Interpretation:
+- the 2026 one-year environment supports modest run suppression.
+- the broader multi-year environment says not to overstate the park effect.
+- the park does not erase the Yankees' HR/cluster tail.
+
+Current game conditions from secondary game-day reporting:
+- low-80s °F
+- clear
+- modest wind with an out-to-right component
+
+Weather:
+- modestly widens the HR tail.
+- not large enough to override the starter matchup.
+- no rain/termination concern.
+
+## I. Mandatory joint hook / cluster / separation branches
+
+### BB-B1 — Both starters at centre
+Representative:
+**Yankees 3, Angels 2**
+- Angels +1.5 WIN
+- Under 6.5 WIN
+- Yankees -1.5 LOSS
+
+Mechanism:
+- Schlittler 6 IP / 1-2 R
+- Detmers 6-7 IP / 2-3 R
+- bullpens largely hold.
+
+### BB-B2 — Detmers exits first / Yankees reach relief
+**Yankees 4, Angels 2**
+- Yankees -1.5 WIN
+- Under 6.5 WIN
+
+This is important: **the Yankees run line can win while the Under also wins**. Low total does not imply close margin.
+
+### BB-B3 — Angels HR/sequencing cluster
+**Angels 4, Yankees 3**
+- Angels +1.5 WIN
+- Over 6.5 WIN
+
+Mechanism:
+- Schlittler walk traffic + one extra-base-hit/HR sequence
+- current Yankees bullpen mix cannot fully suppress late scoring.
+
+### BB-B4 — Schlittler suppression / favourite separation
+**Yankees 4, Angels 1**
+- Yankees -1.5 WIN
+- Under 6.5 WIN
+
+This is the primary kill path to Rank #1 Angels +1.5 and is explicitly budgeted after the P-258 separation lesson.
+
+### BB-B5 — Detmers suppression / Angels upset
+**Angels 3, Yankees 1**
+- Angels +1.5 WIN
+- Under 6.5 WIN
+
+Mechanism:
+- repeat of Detmers' current four-start regime
+- Yankees' LHP performance remains ordinary rather than elite.
+
+### BB-B6 — High cluster state
+**Yankees 5, Angels 3** / **Yankees 6, Angels 2**
+- Over wins
+- Yankees -1.5 wins
+
+Mechanism:
+- Detmers' current suppression breaks
+- Yankees hot offense converts traffic/HR
+- Angels contribute against Schlittler or tired middle relief.
+
+## J. 6.5-run component budget
+
+Under wins at:
+- 3-2
+- 4-2
+- 4-1
+- 3-1
+- 2-1
+
+Over wins at:
+- 4-3
+- 5-2
+- 5-3
+- 6-1
+- etc.
+
+### Under support
+- Schlittler: 2.09 season ERA; roughly 1.13 over latest four
+- Detmers: **1.50 August ERA**, only 2 ER over latest four starts
+- Angels current L10 offense only 3.7 R/G / .645 OPS
+- Yankees only ~.73 OPS vs LHP
+- Angel Stadium 2026 run factor below neutral
+- Judge/Stanton absent
+- a 4-2 Yankees result still wins the Under
+
+### Over support
+- line is extremely low at 6.5
+- Yankees overall L10 offense around 5.9 R/G
+- all six current-season H2Hs cleared 6.5
+- current wind has a modest out-to-RF component
+- both bullpen chains have some recent usage
+- one multi-run homer/sequence cluster is enough to move 3-2 into 5-3
+
+Result:
+**Under 6.5 receives only a LEAN, not a stronger label.**
+
+## K. ±1.5 separation budget
+
+### Angels +1.5
+Wins through:
+- every Angels win
+- every one-run Yankees win
+
+Central cover states:
+- NYY 3-2
+- LAA 3-2
+- LAA 3-1
+- NYY 2-1
+
+Failure states:
+- NYY 3-1
+- NYY 4-2
+- NYY 4-1
+- NYY 5-2
+
+Why Rank #1 survives the separation audit:
+- Detmers' current run-suppression state materially reduces New York's expected separation.
+- home last bat preserves a one-run/walk-off branch for Los Angeles.
+- Yankees are without Judge/Stanton.
+- New York's LHP split is merely solid, not dominant.
+
+Why confidence stays Medium rather than high:
+- Schlittler creates a genuine Angels 0-1 run floor.
+- Yankees are much stronger overall and hot offensively.
+- 4-1 / 4-2 is not a remote tail.
+
+### Yankees -1.5
+This is the strongest alternative side direction.
+
+It wins when:
+- Schlittler holds LAA to 0-2,
+- and NYY gets even an ordinary 3-5 run output.
+
+At a 6.5 total, a **4-1** or **4-2** result is simultaneously:
+- Yankees -1.5 WIN
+- Under 6.5 WIN
+
+Thus the run-line thesis is coherent with the low-total thesis.
+
+## L. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-266-C02 — Angels +1.5** | **LEAN** | **MEDIUM** | Detmers is in an elite current suppression run (5 ER in August, 2 ER over latest four) and already held NYY to one run in April. The cushion covers every LAA win plus one-run NYY wins. Main kill path: Schlittler holds LAA to 0-1 and Yankees manufacture 3-4 runs, producing 3-1/4-1 separation. |
+| **2** | **P-266-C04 — Under 6.5 Runs** | **LEAN** | **MEDIUM** | Both starters have top-tier current centres, LAA offense is weak, NYY are ordinary vs LHP, Judge/Stanton are absent, and Angel Stadium has suppressed runs in 2026. The 6.5 threshold itself, 6/6 season H2H Overs and bullpen/HR cluster tails prevent Rank #1. |
+| **3** | **P-266-C01 — Yankees -1.5** | **SLIGHT LEAN / LEAN-ADJACENT** | **MEDIUM-LOW** | NYY have the overwhelming team-quality edge and Schlittler can reduce LAA to 0-2 runs; 4-1/4-2 cover states are very plausible. It stays below LAA +1.5 because Detmers' current form compresses NYY scoring and home last bat protects close Angels states. |
+| **4** | **P-266-C03 — Over 6.5 Runs** | **FORCED RANK / weaker total direction** | **MEDIUM-LOW** | A 6.5 line is low, NYY are scoring 5.9 R/G L10, and every 2026 H2H has cleared it. It ranks last because today's pitcher pair is substantially more suppressive than the prior matchup set and both central starter branches point to 4-6 total runs. |
+
+## M. Rank-1 coherence
+
+Rank #1 = Angels +1.5.
+
+Representative states:
+- NYY 3-2 LAA -> Angels +1.5 + Under
+- LAA 3-2 NYY -> Angels +1.5 + Under
+- LAA 4-3 NYY -> Angels +1.5 + Over
+- NYY 4-1 LAA -> Yankees -1.5 + Under; Angels +1.5 loses
+- NYY 5-3 LAA -> Yankees -1.5 + Over; Angels +1.5 loses
+
+Relations:
+- Under 6.5: **COHERENT / PARTIAL**
+- Yankees -1.5: **DISJOINT** exact side complement
+- Over 6.5: **PARTIAL / cluster tail**
+
+The favourite's low-total multi-run branch is explicitly retained rather than hidden.
+
+## N. Potential winner
+
+### **New York Yankees — LEAN**
+
+Why:
+- substantially stronger overall team record and run differential
+- Schlittler is the better season-long starter
+- Yankees' current offense is far hotter than the Angels'
+- New York has more late-inning offensive and relief depth despite recent bullpen usage
+
+Why the winner call can coexist with Angels +1.5 Rank #1:
+- the most likely NYY win families are **close** when Detmers is in this current form;
+- a 3-2 Yankees result makes both calls correct;
+- LAA +1.5 has a broader settlement region because it also catches every Angels upset.
+
+Why not a stronger winner label:
+- Detmers has an excellent current regime and a successful same-season matchup against NYY;
+- Judge and Stanton are unavailable;
+- Angels have home last bat.
+
+## O. Final delivery
+
+1. **Angels +1.5**
+2. **Under 6.5 Runs**
+3. **Yankees -1.5**
+4. **Over 6.5 Runs**
+
+**Potential winner:** New York Yankees — LEAN.
+
+## P. Append confirmation
+
+- Full incomplete-event sweep performed first: YES
+- Newly safe-to-settle event: NO
+- MLB exact event/start state verified: YES
+- Official starters re-handshaken: YES
+- Official batting orders at freeze: TBD / uncertainty preserved
+- Current secondary lineups used only as mixture evidence: YES
+- Starter current-regime vs season-prior reconciliation: YES
+- Bullpen recent usage included without freshness=quality shortcut: YES
+- 6.5 total component budget solved: YES
+- +1.5 / -1.5 separation budget solved: YES
+- Low-total wide-margin branch explicitly retained: YES
+- H2H 6/6 Over evidence retained but continuity-shrunk: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New fitted forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-267**
+
+
+---
+
+# Settlement / retrospective sweep before P-267 — 2026-09-03
+
+## P-261 — Toronto Blue Jays @ Cleveland Guardians — FINAL
+
+**Verified final:** Toronto Blue Jays **11-0** Cleveland Guardians.
+
+### Contract settlement
+
+| ID | Original rank | Contract | Outcome |
+|---|---:|---|---|
+| `P-261-C02` | 1 | Guardians +1.5 | **LOSS** |
+| `P-261-C04` | 2 | Under 7.0 Runs | **LOSS** |
+| `P-261-C01` | 3 | Blue Jays ML | **WIN** |
+| `P-261-C03` | 4 | Over 7.0 Runs | **WIN** |
+
+**Potential winner — Cleveland Guardians:** **LOSS**.
+
+### Deep Rank-1 retrospective
+
+**Process grade:** `PROCESS_DEFECT — COMMAND / SEPARATION TAIL UNDERWEIGHTED`.
+
+#### What went right
+- The pregame card correctly identified **Dylan Cease as the strongest single run-suppression component** in the matchup.
+- The forecast explicitly preserved the Toronto multi-run separation branch, including a 5-2-type score family, rather than assuming every low-total state had to be close.
+- Blue Jays ML and Over 7.0 were retained as real competing branches and both ultimately won.
+- The baseball framework's low-total separation rule was conceptually present.
+
+#### What went wrong
+- Joey Cantillo's recent **walk/traffic risk** was recorded — 16 walks in 22.2 recent innings — but his recent 2.78 ERA was allowed to dominate the practical ranking too strongly.
+- Toronto produced a decisive early cluster, scoring **five runs in the second inning** after already scoring in the first. Two second-inning runs scored on a throwing error, and the inning continued into further run creation.
+- Cleveland's 8-2 recent form / hot offense was weighted too heavily against an elite, highly specific opposing starter. Cease shut Cleveland out.
+- The card treated Cleveland's elite recent bullpen as meaningful cushion protection, but bullpen value is **score-state dependent**. Once Toronto created large early separation, the leverage chain no longer protected the `CLE +1.5` region in the way a close-game model implied.
+- This was also a direct demonstration of the baseball control that **low expected total does not imply a close margin**: Toronto alone scored 11.
+
+#### Learning disposition
+No fitted weight or calibration parameter is promoted from one event. This result reinforces existing active baseball controls:
+1. recent starter ERA must not mute an explicit walk/command-tail branch;
+2. when an elite opposing starter can drive the underdog scoring floor toward zero while the underdog starter carries command traffic, the favourite's **multi-run separation + upper-total cluster states are linked** and must be stress-tested jointly;
+3. elite bullpen quality cannot be treated as generic cushion insurance when the likely realised score state never summons the relevant leverage arms.
+
+**P-261 status:** CLOSED.
+
+## Still open / provisional at the P-267 sweep
+- `P-250-C05` Yunnan–Chongqing corners — unresolved.
+- `P-251-C05` Sassuolo–Frosinone corners — provisional threshold-invariant win.
+- `P-255-C05` Inter Women–Wolfsburg Women corners — unresolved.
+- `P-256-C05` PSG Women–Frankfurt Women corners — unresolved.
+- `P-259` Mets–Rays — live / no final verified at sweep.
+- `P-260` Giants–Pirates — live/open / no final verified.
+- `P-262` TKR–Falcons — in progress / no final verified.
+- `P-263` Faria–Alcaraz — upcoming / no final verified.
+- `P-264` White Sox–Astros — live / no final verified.
+- `P-265` Toluca–León — live / no final verified.
+- `P-266` Yankees–Angels — upcoming / no final verified.
+
+No other retrospective was fabricated.
+
+---
+
+# P-267 — Lanlana Tararudee vs Linda Noskova — 2026 US Open Women's Singles Round 2 — PREGAME
+
+## A. Identity / contract freeze
+
+- **Canonical ID:** `P-267`
+- **Event:** 2026 US Open Women's Singles
+- **Round:** Round of 64 / Second Round
+- **Match:** Lanlana Tararudee vs Linda Noskova
+- **Venue:** Louis Armstrong Stadium, USTA Billie Jean King National Tennis Center
+- **Surface:** Outdoor hard; retractable-roof stadium
+- **Format:** Best of three sets
+- **State at research cutoff:** **UPCOMING / NOT STARTED**
+- **Scheduled window:** approximately 2026-09-03 01:50 UTC / 11:50 AEST, subject to preceding match duration
+- **Method:** `MDS-2026.09.02-v3.1`
+- **Algorithm:** `GFA-2` + `SFA-TENNIS`
+- **Forecast lane:** `SPORTS_ONLY / MARKET_BLIND`
+- **Numerical state:** no approved/fitted tennis target/source/model
+- **Operator retirement/walkover terms:** NOT SUPPLIED -> `UNKNOWN_DEFINITION`
+- **Probability:** `NOT_GENERATED / NOT_PUBLISHED`
+- **Value:** `NO VALUE DETERMINABLE`
+
+## B. User-supplied contracts
+
+| ID | Contract | Ordinary completed-match region |
+|---|---|---|
+| `P-267-C01` | Tararudee +4.5 games | Tararudee wins, or loses by 4 net games or fewer |
+| `P-267-C02` | Noskova -4.5 games | Noskova wins by 5+ net games |
+| `P-267-C03` | Over 31.5 total games | 32+ games |
+| `P-267-C04` | Under 31.5 total games | 0-31 games |
+
+C01/C02 are exact complements under ordinary completed-match settlement.  
+C03/C04 are exact complements.  
+Retirement treatment remains operator-unknown.
+
+## C. Participant / current-status gate
+
+### Lanlana Tararudee
+- Right-handed.
+- Current WTA rank: **No. 76**.
+- Age: 22.
+- 2026 WTA official record: **41-17** across all recorded levels.
+- 2026 breakthrough includes two WTA 125 titles (Austin and Istanbul), but those lower-level results are not treated as exchangeable with a Grand Slam match against a top-six opponent.
+- US Open R1: defeated Elvina Kalieva **6-3, 6-7(4), 6-2**.
+- No verified current injury/withdrawal was found.
+
+### Linda Noskova
+- Right-handed.
+- Current WTA rank: **No. 6**.
+- No. 6 seed at this US Open.
+- 2026 Wimbledon champion.
+- US Open R1: defeated Katie Volynets **7-5, 6-1**.
+- No verified current injury/withdrawal was found.
+
+## D. Level / surface adjustment
+
+Tararudee's broad 2026 record is strong, but a large portion was accumulated at WTA 125 / qualifying / lower-level contexts. Her current WTA official Grand Slam record entering this round is still sparse.
+
+Noskova's current evidence is materially higher-level:
+- reigning Wimbledon champion;
+- WTA 1000 hard-court wins over Katie Boulter and Clara Tauson in Cincinnati;
+- Grand Slam/WTA-level opponent quality is substantially stronger.
+
+Therefore:
+- Tararudee's recent form is promoted above a ranking-only underdog prior;
+- it is **not** treated as equivalent to Noskova's top-tier surface/level sample.
+
+## E. Current hard-court form
+
+### Tararudee — recent hard sequence
+- W Kalieva: **6-3, 6-7(4), 6-2** — US Open
+- L Timofeeva: **6-7(5), 6-2, 6-7(4)** — Monterrey qualifying
+- L Sawangkaew: **4-6, 3-6** — Cincinnati qualifying
+- W Emerson Jones: **7-5, 7-5** — Cincinnati qualifying
+- W Emerson Jones: **7-6(2), 6-2** — Toronto main draw
+- W Qinwen Zheng: **6-3, 6-4** — Toronto qualifying
+
+Interpretation:
+- Tararudee has real current hard-court margin resistance.
+- Her Timofeeva loss was extremely close over three sets.
+- However, level/opponent comparability is mixed and must be shrunk.
+
+### Noskova — recent hard sequence
+- W Volynets: **7-5, 6-1** — US Open
+- L Anisimova: **1-6, 4-6** — Cincinnati R16
+- W Tauson: **7-6(3), 6-2** — Cincinnati
+- W Boulter: **6-3, 6-3** — Cincinnati
+- L McNally: **6-7(5), 1-6** — Toronto
+
+Interpretation:
+- Noskova's recent wins repeatedly contain genuine second-set / margin separation.
+- Her losses also show volatility; she is not modelled as an automatic straight-set dominator.
+
+## F. Serve / return mechanism
+
+### Tararudee R1 vs Kalieva
+Official WTA match stats:
+- 11 aces
+- 6 double faults
+- **49.1% first serves in**
+- **83.9% first-serve points won**
+- only **36.2% second-serve points won**
+- faced 9 break points, saved 6
+- converted 6/15 break points
+
+Mechanistic read:
+- Tararudee has a high-upside first-strike serve when the first ball lands.
+- The low first-serve entry rate plus weak second-serve conversion creates a clear Noskova return-pressure / separation path.
+- The key uncertainty is whether Tararudee can raise first-serve percentage without sacrificing first-strike effectiveness.
+
+### Noskova recent hard mechanism
+Against Boulter:
+- 10 aces
+- 65.3% first serves in
+- 78.1% first-serve points won
+- created 9 break points and converted 4
+
+Against Tauson:
+- 17 aces
+- 65.7% first serves in
+- 78.3% first-serve points won
+- created 9 break points and converted 3
+
+Against Anisimova:
+- second-serve conversion collapsed and Noskova created no break points, demonstrating the downside state.
+
+Mechanistic read:
+- Noskova owns the more reliable high-level combination of serve power + return pressure.
+- Her ability to attack vulnerable second serves is particularly relevant to Tararudee's R1 profile.
+- Noskova's own double-fault/second-serve volatility prevents the handicap from receiving stronger confidence.
+
+## G. H2H continuity
+
+Structured current H2H: **0-0**.
+
+No prior meeting exists to weight.  
+No synthetic H2H is created from common opponents.
+
+## H. Workload / rest
+
+Tararudee R1:
+- three sets
+- score total: 30 games
+- required a deciding set
+
+Noskova R1:
+- two sets
+- score total: 19 games
+- after falling behind 2-5 in the opener, she won 11 of the final 12 games
+
+Both have had recovery time. Tararudee carries more match workload, but there is no evidence that this has become a fitness limitation.
+
+## I. Best-of-three set-count mixture
+
+Qualitative ordinal weights only — **not probabilities**:
+
+| Match length | Relative weight | Mechanism |
+|---|---:|---|
+| **2 sets** | **6** | Noskova's higher-level serve/return edge produces straight-set control, or Tararudee's upset occurs quickly |
+| **3 sets** | **4** | Tararudee's current hard resistance / Noskova volatility produces a split-set match |
+
+The mixture remains meaningfully two-sided rather than treating every Tararudee-success branch as a long match.
+
+## J. Mandatory two-sided score tree
+
+### Noskova ordinary straight-set control
+**6-3, 6-3**
+- total games = 18
+- Noskova margin = +6
+- Noskova -4.5: WIN
+- Under 31.5: WIN
+
+### Noskova close straight sets
+**7-5, 6-4**
+- total = 22
+- Noskova margin = +4
+- Tararudee +4.5: WIN
+- Under 31.5: WIN
+
+### Noskova deciding-set win
+**6-3, 4-6, 6-3**
+- total = 28
+- Noskova margin = +2
+- Tararudee +4.5: WIN
+- Under 31.5: WIN
+
+### Long Noskova deciding-set win
+**7-6, 4-6, 6-3**
+- total = 32
+- Over 31.5: WIN
+- Tararudee +4.5 generally wins the handicap
+
+### Tararudee ordinary straight-set upset
+**7-5, 6-4**
+- total = 22
+- Tararudee +4.5: WIN
+- Under 31.5: WIN
+
+### Tararudee close straight-set upset
+**7-6, 7-5**
+- total = 25
+- Tararudee +4.5: WIN
+- Under 31.5: WIN
+
+### Tararudee deciding-set upset
+**6-4, 3-6, 6-4**
+- total = 29
+- Tararudee +4.5: WIN
+- Under 31.5: WIN
+
+### Long Tararudee deciding-set upset
+**7-5, 5-7, 6-4**
+- total = 34
+- Tararudee +4.5 + Over 31.5
+
+## K. Handicap separation budget — ±4.5
+
+Noskova -4.5 needs **5+ net games**.
+
+Examples:
+- 6-3, 6-3 = +6 -> Noskova covers
+- 6-4, 6-3 = +5 -> Noskova covers
+- 7-5, 6-4 = +4 -> Tararudee covers
+- 6-4, 6-4 = +4 -> Tararudee covers
+- 6-3, 4-6, 6-3 = +2 -> Tararudee covers
+- 6-2, 4-6, 6-2 = +6 -> Noskova covers
+
+Therefore Noskova -4.5 needs real separation, not merely a match win.
+
+The key favourite-cover mechanism:
+- Noskova repeatedly attacks Tararudee's second serve;
+- at least one 6-2/6-3-type set occurs;
+- Noskova avoids donating a set through double-fault / second-serve collapse.
+
+The main Tararudee +4.5 mechanism:
+- close straight sets or any ordinary split-set match;
+- Tararudee's own win branches;
+- first-serve effectiveness protects enough service games to prevent five-game net separation.
+
+## L. Total-games budget — 31.5
+
+This threshold is structurally high for WTA best-of-three.
+
+### Every straight-set match is Under
+Maximum ordinary two-set total:
+- 7-6, 7-6 = **26**
+
+So **all two-set branches cash Under 31.5**.
+
+### Many three-set matches are also Under
+- 6-4, 4-6, 6-4 = 30
+- 6-3, 4-6, 6-3 = 28
+- 6-2, 4-6, 6-3 = 27
+
+### Over requires a long three-set match
+Examples:
+- 7-6, 4-6, 6-3 = 32
+- 7-5, 5-7, 6-4 = 34
+- 7-6, 6-7, 6-3 = 35
+
+Direct Tararudee evidence:
+- her recent Timofeeva match (7-6, 2-6, 7-6) totaled **34 games**, proving a genuine Over pathway.
+
+But:
+- Tararudee R1 totaled 30;
+- Noskova R1 totaled 19;
+- Noskova-Boulter totaled 18;
+- Noskova-Tauson totaled 21;
+- Noskova-Anisimova totaled 17;
+- Noskova-McNally totaled 20.
+
+The Under therefore survives both the central two-set state **and a large portion of three-set states**.
+
+## M. Rank-1 implied games interval
+
+Rank #1 = Under 31.5.
+
+Its ordinary winning score families span:
+- approximately **12 games** in an extreme 6-0, 6-0 match
+- through **31 games** in long but still Under three-set structures
+
+The practical central interval is roughly:
+**18-30 total games**.
+
+This interval is compatible with:
+- Noskova -4.5 in efficient straight-set control;
+- Tararudee +4.5 in close straight sets or ordinary three sets.
+
+The Over's 32+ region sits beyond the central Rank-1 interval and therefore belongs in the bottom half.
+
+## N. Reference-base-rate status
+
+No clean, definition-compatible current US Open / WTA-hard threshold population was reconstructed for:
+- Tararudee +4.5
+- Noskova -4.5
+- Over 31.5
+- Under 31.5
+
+without mixing very different favourite strengths and match states.
+
+`REFERENCE_BASE_RATE = NOT AVAILABLE CLEANLY`.
+
+No market or historical threshold frequency is imputed.
+
+## O. Environment
+
+- Louis Armstrong Stadium.
+- Current US Open schedule has experienced rain disruption on outside courts.
+- No verified current court-speed measurement is available for this exact match state.
+- No speed coefficient is assigned.
+- Roof state at match start is not assumed before the official start-state refresh.
+
+## P. Direct marginal-likelihood ranking
+
+| Rank | Contract | Verdict | Evidence quality | Core reason |
+|---:|---|---|---|---|
+| **1** | **P-267-C04 — Under 31.5 Total Games** | **LEAN** | **MEDIUM** | Every straight-set result is automatically Under, and many ordinary three-set matches also stay at 28-30. A 32+ result requires a long three-set state. |
+| **2** | **P-267-C02 — Noskova -4.5 Games** | **SLIGHT LEAN** | **MEDIUM-LOW** | Noskova has the materially stronger WTA/Grand Slam level and a more reliable high-level serve/return combination. Tararudee's 49% first-serve rate / 36% second-serve conversion in R1 creates a real multi-break path. |
+| **3** | **P-267-C01 — Tararudee +4.5 Games** | **LEAN-ADJACENT / FORCED RANK** | **MEDIUM-LOW** | Tararudee's current hard form provides genuine margin resistance; any ordinary three-set match and close Noskova straight-set win can cover +4.5. Level gap and serve volatility keep it below Noskova's separation branch. |
+| **4** | **P-267-C03 — Over 31.5 Total Games** | **WEAKER DIRECTION / FORCED RANK** | **LOW-MEDIUM** | Requires not merely three sets, but a long three-set match. Tararudee has demonstrated that state recently, but it remains narrower than the large 2-set and sub-32 three-set regions. |
+
+## Q. Rank-1 coherence
+
+Rank #1 = Under 31.5.
+
+Representative central state:
+**Noskova 6-3, 6-3**
+- Under 31.5 = WIN
+- Noskova -4.5 = WIN
+
+Adjacent close state:
+**Noskova 7-5, 6-4**
+- Under 31.5 = WIN
+- Tararudee +4.5 = WIN
+
+Three-set Under state:
+**Noskova 6-3, 4-6, 6-3**
+- Under = WIN
+- Tararudee +4.5 = WIN
+
+Therefore the Under is more robust than either handicap direction.
+
+## R. Potential winner
+
+### **Linda Noskova — LEAN**
+
+Why:
+- current world No. 6 / No. 6 seed;
+- reigning Wimbledon champion;
+- materially stronger high-level opponent/surface sample;
+- demonstrated current hard-court separation against Boulter, Tauson and Volynets;
+- Tararudee's R1 second-serve vulnerability provides a specific return-pressure mechanism.
+
+Why not stronger:
+- Noskova started R1 poorly and trailed Volynets 2-5 before recovering;
+- her Cincinnati loss to Anisimova and Toronto loss to McNally show real volatility;
+- Tararudee is in genuine current hard-court form and has repeatedly played close, margin-resistant matches.
+
+## S. Final delivery
+
+1. **Under 31.5 Total Games**
+2. **Linda Noskova -4.5 Games**
+3. **Lanlana Tararudee +4.5 Games**
+4. **Over 31.5 Total Games**
+
+**Potential winner:** Linda Noskova — LEAN.
+
+## T. Append confirmation
+
+- Full unresolved-event sweep performed first: YES
+- P-261 newly settled / deeply retrospectively reviewed: YES
+- Other live/upcoming items left open: YES
+- P-267 official event/round/state verified: YES
+- H2H: 0-0
+- Surface/level adjustment explicit: YES
+- Two-set / three-set mixture explicit: YES
+- Two-sided quick/close/deciding branches explicit: YES
+- Handicap separation budget solved: YES
+- Rank-1 games interval stated: YES
+- Retirement terms: UNKNOWN_DEFINITION
+- No bookmaker odds / implied probabilities / market movement used: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New fitted forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-268**
+
+
+
+# 2026-09-12 recovered historical retrospectives and evidence tasks
+
+
+The separately named P267 settlement artifact remains absent. The supplied mini log 8 is present and contains the issued P-249-P-267 cards and eleven earlier event settlement/process blocks (P-249-P-258 plus P-261; P-249 administrative, ten issued events). Those sections have now been restored to Part 1. Mini log 7 already supplied the P-241-P-243 forecasts and the detailed P-244-P-248 settlements. The blanket claim that no per-event detail is recoverable for P-241-P-267 is therefore narrowed. New evidence below fills eleven remaining event narratives; it does not recreate the missing artifact or its undocumented corner adjudications.
+
+No new probability is generated. These cards predate the mandatory probability format. Do not put them into the later Brier cohort. Rank order below is copied from the archived issued table; W/L/PUSH is arithmetic on the named completed target. Existing cohort aggregates remain quarantined until all field-specific differences are reconciled.
+
+## Reconstructed ranked-row table
+
+| ID / evidence | Completed target | Original rank 1 | Original rank 2 | Original rank 3 | Original rank 4 / 5 | Winner label |
+|---|---|---|---|---|---|---|
+| P-241 / [Tennis Majors exact dated result](https://www.tennismajors.com/people/zachary-svajda) | Svajda 6-3, 6-1, 6-7, 6-2; games 24-13, total 37. Specialist source; official draw not recovered in this retry | Under 39.5 W | Altmaier +2.5 L | Svajda -2.5 W | Over 39.5 L | Svajda W |
+| P-242 / [Tennis.com exact match](https://www.tennis.com/tournaments/us-open/matches/f-marozsan-vs-m-zheng-2026-09-02) | Zheng 6-4, 6-4, 6-2; games 18-10, total 28. Specialist match page | Marozsan +2.5 L | Over 38.5 L | Zheng -2.5 W | Under 38.5 W | Zheng W |
+| P-243 / [WTA exact match](https://www.wtatennis.com/tournaments/us-open/scores/LS74150432), [LTA player record](https://www.lta.org.uk/fan-zone/british-tennis-players/francesca-jones/) | Jones 6-4, 1-6, 6-3; games 13-13, total 26 | Over 21.5 W | Linette -0.5 L | Jones +0.5 W | Under 21.5 L | Linette L |
+| P-259 / [official MLB feed](https://statsapi.mlb.com/api/v1.1/game/822931/feed/live) | Mets 10-4, total 14 | Rays ML L | Under 8.0 L | Mets +1.5 W | Over 8.0 W | Rays L |
+| P-260 / [official MLB feed](https://statsapi.mlb.com/api/v1.1/game/823339/feed/live) | Giants 5-4 after 10 innings, total 9 | Giants +1.5 W | Pirates ML L | Over 9.0 PUSH | Under 9.0 PUSH | Pirates L |
+| P-262 / [official CPL newsroom](https://cplt20.prezly.com/falcons-close-in-on-playoffs) | Falcons 43/1 after six; 183/4 after 20; TKR 175/7 | Falcons six-over Over 45.5 L | Falcons innings Under 165.5 L | Falcons innings Over 165.5 W | Falcons six-over Under 45.5 W | Falcons W |
+| P-263 / [USTA event report](https://www.usopen.org/amp/en_US/news/articles/2026-09-02/carlos_alcaraz_advances_at_2026_us_open_after_dropping_first_set.html) | Alcaraz 4-6, 6-0, 6-3, 6-2; games 22-11, total 33 | Under 31.5 L | Alcaraz -7.5 W | Faria +7.5 L | Over 31.5 W | Alcaraz W |
+| P-264 / [official MLB feed](https://statsapi.mlb.com/api/v1.1/game/824147/feed/live) | Astros 2-0, total 2 | Under 8.5 W | White Sox +1.5 L | Astros ML W | Over 8.5 L | Astros W |
+| P-265 / [official competition report](https://es.leaguescup.com/noticias/cronica-toluca-acaba-con-el-sueno-del-leon-y-avanza-a-la-final-de-leagues-cup) | Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible | Corners Over 8.5: inherited success not re-certified | Full Over 2.5 L | First-half Over 0.5 W | Full Under 2.5 W; first-half Under 0.5 L | Toluca to advance W |
+| P-266 / [official MLB feed](https://statsapi.mlb.com/api/v1.1/game/823983/feed/live) | Yankees 6-3 after 10 innings; 1-1 after nine, total 9 | Angels +1.5 L | Under 6.5 L | Yankees -1.5 W | Over 6.5 W | Yankees W |
+| P-267 / [USTA event report](https://www.usopen.org/amp/en_US/news/articles/2026-09-02/linda_noskova_vs_lanlana_tararudee_at_the_2026_us_open.html) | Noskova 6-4, 6-2; games 12-6, total 18 | Under 31.5 W | Noskova -4.5 W | Tararudee +4.5 L | Over 31.5 L | Noskova W |
+
+P-260's two pushes are a direct counterexample to any unconditional promise that one O/U side must win. P-243's tied aggregate games despite a match winner also illustrates why games-handicap grading must use actual games. Tennis results P-241/P-242 are specialist-supported, not newly owner-certified; no missing tiebreak point score is invented.
+
+## Detailed top-pick failures
+
+| ID | What was right and why | Failure mechanism / pregame blind spot | Knowability, prior lesson and next-game improvement |
+|---|---|---|---|
+| P-242 | Zheng winner was the issued winner lean and won; the Zheng handicap and Under alternatives match straight-set separation | The top two assumed Marozsan resistance and an extended match. The final was a clean eight-game Zheng margin in 28 games. The same specialist page reports Zheng winning 38/47 first-serve points versus Marozsan 32/52; the serving asymmetry supports separation, not an evenly matched extension | The recent Zheng H2H win was already known; its closeness was not a guarantee of another close score. Cross-check serve/return denominators, opponent level and a straight-set Zheng branch. Connect to tennis score-family and separation controls, plus P-267's successful short-match scenario. Do not add an arbitrary upset or college-player weight. Exact realized serve rates were postgame, not known before play |
+| P-259 | Mets +1.5 and Over retained the losing favourite's alternatives; both won. The card explicitly named Jax's return workload as uncertainty | Official feed: Jax 2.2 innings, six earned runs, seven hits, two walks; Hagenman three innings, one run. The return/early-run-loss branch realized on the favourite's side. Recent bullpen ERA did not prevent a 14-run game. The sixth Mets run arrived in the third; Tampa's fourth-inning three runs took the full total past eight | Distinguish role, recent starter workload and projected innings from reputation. A stronger overall team or relief unit cannot erase early deficit states. Reuse G-L2 and baseball return/workload/score-state controls from P-257/P-261/P-335. Estimate both teams' early traffic and relief usage jointly. This outcome shows a scenario occurred; it does not identify its correct pregame probability |
+| P-262 | Falcons winner and the two lower opposing total directions won. Separating powerplay from innings was conceptually right | The first six stopped at 43/1, below 45.5, yet the innings reached 183/4. Official CPL reporting records dropped chances and later accumulation. A slow start with one wicket down left substantial resources. The pregame 3/4 powerplay Over sample included a 46, barely over, and its direct opponent comparator was 33; two below-line bat-first totals were a weak basis for a strong ceiling | Retain toss/XI mixture only until reliable pre-ball confirmation; after batting first is confirmed remove chase-censoring. Print wickets/resources and boundary distances, and condition on attack composition. This anticipates the repeated issue in P-352 and P-364. Dropped catches are realized variance; do not rewrite the forecast as if they were predicted. No universal uplift to innings totals follows |
+| P-263 | Alcaraz winner and -7.5 won comfortably; his eventual superiority was real | Losing the opening set added enough exposure for 33 games even with a 6-0 second set. Under 31.5 failed while the favourite covered by 11 games. The original narrow games band did not absorb the four-set extension well enough | Enumerate games within each set-count branch, including an early underdog set followed by a rout. A heavy favourite can cover and still go Over. Tie this to P-350's later long-match/Alcaraz-loss distinction and tennis endpoint controls. The official report supports the score; its seed wording differs from the archived card, so it is not used to adjudicate seed identity. No historical probability or medical recovery certainty is inferred |
+| P-266 | Starter suppression and Yankees winner were correctly anticipated. The official feed has Schlittler eight innings/one run and Detmers seven/one, both without a walk; the game was 1-1 after nine | Both leading picks survived regulation but failed after five Yankees and two Angels runs in the tenth. This is an extension failure of the full-game contracts, not evidence that the starter analysis was wrong. Luke Murphy was charged five runs/four earned in two-thirds of an inning; the distinction matters because all runs settle totals | Explicitly model ties, additional innings, remaining relief availability and the competition's extension scoring environment. Keep full-game versus regulation targets distinct. Link to the existing CL-P267 extension lesson and P-365 low-total separation. Do not raise every baseball total or demote every cushion; stress the exact endpoint and conditional extension branch |
+
+## Successful first picks and lower-rank misses
+
+| ID | Detailed retrospective and next-game lesson |
+|---|---|
+| P-241 | Four sets with an uneven allocation finished at 37, so the Under succeeded while Altmaier's cushion failed by a wide margin. This supports the card's distinction between four sets and a long four-set total. Its claim that a positive games handicap covers every match win is mathematically unsafe; the set-based counterexample in tennis L-068 still applies. No injury or treatment causality is inferred from the specialist score alone. |
+| P-243 | The three-set structure supported Over 21.5. Linette and Jones each won 13 games, so experience did not produce the slight game separation required by rank 2. The original mention of external consensus is not admissible future MARKET_BLIND evidence. The WTA page exposes incompatible generic Upcoming/Finished/Suspended labels and only nine service games per player despite 26 total games; accept the final with LTA corroboration, quarantine that statistical panel's phase/completeness until resolved. Official branding does not certify every returned field. |
+| P-260 | Roupp's five innings/one run helped the Giants cushion win, but the Pirates winner call failed. Extra innings took a six-run regulation game to exactly nine: both total directions pushed. Recent offensive averages and taxed bullpens supported a tail, not a win at the integer threshold. Print win/loss/push mass separately and do not count a push as a successful O/U selection. |
+| P-264 | Wesneski's seven scoreless innings and Martin's 5.2 scoreless supported Under 8.5. Houston's two eighth-inning runs still defeated White Sox +1.5. Starter quality, total suppression and cushion protection require distinct conditions. The late scoring settled the side without invalidating the low-total analysis. No relief-fatigue cause is asserted from timing alone. |
+| P-265 | Toluca's 2-0 advancement supports its defensive-control branch; recent 2.2 goals per game on each side and high-scoring H2Hs did not force a match Over. The official competition report and club account are useful score/coaching routes, but source-field agreement must precede exact phase/corner adjudication. Both teams eventually playing with ten is post-issue state, not a generic semifinal coefficient. Rank-1 corner success remains an inherited claim awaiting documentary recovery. |
+| P-267 | The issued Noskova separation and short-match scenario produced both top-two wins. Eighteen games is comfortably below 31.5. Credit the broad win region and correct level/serve-risk direction; a comfortable outcome alone does not demonstrate a calibrated model. The phrase that any ordinary three-set match covers an underdog +4.5 is too broad: enumerate aggregate games rather than using set count as a proxy. |
+
+## Starting, bench and coaching answers
+
+For P-241/P-242/P-243/P-263/P-267, team starters and bench are N/A; player identity was captured, but this recovery does not establish both coaches or complete pre-cutoff health evidence. For P-259/P-260/P-264/P-266, the original cards identified pitchers; complete pregame starters, reserves and both managers are **not demonstrated by this recovery**. The current MLB feeds expose the final starting batting order and remaining bench, not proof of what was saved before issue. P-262 explicitly lacked toss and confirmed XIs at cutoff. P-265's [official club report](https://www.tolucafc.com/noticias/merecido-finalista) now supplies both XIs, used substitutes and coaches Mohamed/Gandolfi. Unused bench completeness and pregame publication are unproved. It corroborates the 41-minute opener; one-minute dismissal differences remain between club and competition reports. Therefore none of these eleven is newly labelled fully complete on all three questions.
+
+## Remaining historical evidence tasks (not duplicate forecasts)
+
+| Temporary audit handle | Existing event | Missing evidence / next action |
+|---|---|---|
+| TMP-AUDIT-20260912-01 | P-250-C05 | Restored mini says corners unresolved; missing later settlement artifact claims all graded. Recover field-owner/provider adjudication and exact count before certifying the inherited closure. |
+| TMP-AUDIT-20260912-02 | P-251-C05 | Restored mini has provisional 10-11 corners. Recover the later definition/owner decision; threshold invariance alone does not establish provider validity. |
+| TMP-AUDIT-20260912-03 | P-255-C05 | Restored mini has unresolved corners; recover later exact regulation-only adjudication. |
+| TMP-AUDIT-20260912-04 | P-256-C05 | Same gap, and this was rank 1. Full process retrospective present; outcome-specific corner explanation is not certified without the missing field. |
+| TMP-AUDIT-20260912-05 | P-265-C05 | Supplied pregame provider unknown. A secondary nine-corner display exists, but it cannot reconstruct the missing later settlement decision. Recover corner owner and later settlement decision. The official competition/club reports now verify the first-half goal. |
+
+These five tasks expose evidence gaps inside inherited closed records; they do not silently overwrite the historical W/L ledger. The fourteen sporting-result/derivative follow-ups remain a separate queue. The current register must show both queues, so the user can distinguish carried settlements from independently reproducible completion. This means a claim that every historical log has a fully verified final retrospective would still be false.

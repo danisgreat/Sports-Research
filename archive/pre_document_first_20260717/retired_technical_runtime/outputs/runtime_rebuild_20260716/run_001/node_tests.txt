@@ -1,0 +1,9 @@
+command: npm.cmd test
+exit_code: null
+
+--- stdout ---
+
+--- stderr ---
+
+--- spawn error ---
+spawnSync npm.cmd EINVAL

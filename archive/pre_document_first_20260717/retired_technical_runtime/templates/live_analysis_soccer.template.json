@@ -1,0 +1,34 @@
+{
+  "schema_version": "SPORTS_ANALYSIS_REQUEST_V1",
+  "analysis_id": "<UNIQUE_ANALYSIS_ID>",
+  "sport_family": "Soccer",
+  "competition_id": "FIFA",
+  "market_family": "winner",
+  "forecast_state": "LIVE",
+  "as_of_utc": "<UTC_TIMESTAMP>",
+  "participants": [
+    { "participant_id": "<HOME_ID>", "name": "<HOME_NAME>" },
+    { "participant_id": "<AWAY_ID>", "name": "<AWAY_NAME>" }
+  ],
+  "source_observations": [
+    {
+      "source_id": "FIFA_MATCH_CENTRE",
+      "source_url": "<EXACT_HTTPS_FIFA_URL>",
+      "observed_at_utc": "<UTC_TIMESTAMP>",
+      "fetched_at_utc": "<UTC_TIMESTAMP>",
+      "content_hash": "<SHA256_OF_RETAINED_SOURCE_SNAPSHOT>"
+    }
+  ],
+  "live_state": {
+    "home_participant_id": "<HOME_ID>",
+    "away_participant_id": "<AWAY_ID>",
+    "home_goals": 0,
+    "away_goals": 0,
+    "elapsed_minutes": 0,
+    "regulation_minutes": 90,
+    "home_red_cards": 0,
+    "away_red_cards": 0,
+    "period": "FIRST_HALF",
+    "game_status": "IN_PROGRESS"
+  }
+}

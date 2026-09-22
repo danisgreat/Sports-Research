@@ -1,18 +1,52 @@
-# Numerical model register
+﻿# Numerical model register
+> **Current revision — CR-2026.09.21-3:** METHOD **MDS-2026.09.19-v4.3** is the workflow/template authority; **SCORING_AND_VALIDATION.md** controls conditioning, exact scoring, event-level evaluation and prospective evidence. All existing logs remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. NUMERICAL_PROGRAM controls authorized implementation scope and actual build state; MODEL_IMPLEMENTATION_RECIPES contains the executable Markdown reference. Older dated policy blocks are historical where inconsistent. No source, dataset or model is approved/fitted by this banner.
 
-Status: **ACTIVE DESIGN REGISTER — ALL NUMERICAL BUILDS NOT FIT**
 
-Register version: **NMR-2026.08.25-v0.2**
 
-Numerical training specification: **NTS-2026.08.25-v0.2**
 
-Governing published forecast method: **MDS-2026.08.30-v2.7 — qualitative champion**
+
+
+
+
+> **`NUMERICAL_PROGRAM.md` is the new entry point (v4.0 comprehensive overhaul, 2026-09-06).** This document remains the full candidate-model reference.
+
+
+
+
+Status: **ACTIVE DESIGN REGISTER — ALL NUMERICAL BUILDS NOT FIT — DETAILED REFERENCE**
+
+
+
+
+Register version: **NMR-2026.09.19-v0.4**
+
+
+
+
+Numerical training specification: **NTS-2026.09.19-v0.5**
+
+
+
+
+Governing published forecast method: **MDS-2026.09.19-v4.3 / CR-2026.09.21-3 — SPORTS_ONLY / MARKET_BLIND qualitative method; no numerical champion is fitted**
+
+
+
 
 Effective: **2026-08-25**
 
+
+
+
 This register separates an architecture candidate from an immutable fitted build. A model family, paper, source, external forecast or completed Markdown card is not a fitted model and cannot generate an internal probability.
 
+
+
+
 ## 1. Status vocabulary
+
+
+
 
 | Status | Meaning |
 |---|---|
@@ -28,9 +62,18 @@ This register separates an architecture candidate from an immutable fitted build
 | SUPPRESSED | Build exists but display blocked by source/OOD/drift/calibration/version failure |
 | RETIRED | No new predictions; artifacts remain immutable evidence |
 
+
+
+
 No model currently exceeds `DESIGN REGISTERED / DATA BLOCKED`.
 
+
+
+
 ## 2. Portfolio roles
+
+
+
 
 | Role | Definition |
 |---|---|
@@ -38,14 +81,26 @@ No model currently exceeds `DESIGN REGISTERED / DATA BLOCKED`.
 | A1 | Interpretable hierarchical/distributional model with target-valid support |
 | A2 | Sport-native generative event/state simulator |
 | A3/A4 | Flexible distributional boosting, ordered-CDF or non-crossing-quantile challenger |
-| M0 | Same-time de-vigged market-only benchmark |
-| M1 | Explicitly market-informed hybrid using out-of-fold sports and market signals |
+| M0 | RETIRED — market-only predictive benchmark excluded by MARKET_BLIND |
+| M1 | RETIRED — market-informed hybrid excluded by MARKET_BLIND |
+
+
+
 
 A2 is structurally preferred for expressing state transitions and dependence, but it is not presumed superior. A simpler candidate remains champion until an untouched chronological comparison and prospective shadow support promotion.
 
+
+
+
 ## 3. All-sports candidate register
 
+
+
+
 Each group is instantiated for an exact target/population/horizon only after its H0 card is frozen.
+
+
+
 
 | Candidate group ID | Sport/target family | Role and output | Frozen comparison purpose | Status |
 |---|---|---|---|---|
@@ -81,12 +136,34 @@ Each group is instantiated for an exact target/population/horizon only after its
 | `IH-A1-JOINT-GOAL-v0` | Ice-hockey regulation goals/result | Hierarchical bivariate goal/shot distribution | Test dispersion, covariance, goalie/manpower effects | DESIGN REGISTERED / DATA BLOCKED |
 | `IH-A2-SHIFT-SHOT-SIM-v0` | Ice-hockey regulation plus result state | Shift/shot/xG/manpower/goalie/pulled-goalie/OT-SO simulation | Coherent regulation and match-result contracts | DESIGN REGISTERED / DATA BLOCKED |
 | `IH-A3-FLEX-GRID-v0` | Ice-hockey goal grid | Boosted/ordered goal-grid challenger | Flexible nonlinear and tail comparison | DESIGN REGISTERED / DATA BLOCKED |
+| `TEN-A0-SERVE-RETURN-v0` | Tennis, surface/format-specific completed matches | Serve/return empirical baseline, point-to-match recursion | Joint games/sets/winner with tiebreak, final-set and retirement contract | DESIGN REGISTERED / DATA BLOCKED |
+| `TEN-A1-HIER-POINT-v0` | Tennis, exact surface/format | Hierarchical opponent-adjusted serve/return point model | Role/workload scenarios and coherent total-games distribution | DESIGN REGISTERED / DATA BLOCKED |
+| `TEN-A2-MATCH-STATE-v0` | Tennis, exact rule era | Point/game/set/retirement state process | Termination, break-back and fatigue scenarios without independent line heads | DESIGN REGISTERED / DATA BLOCKED |
+| `RU-A0-EMP-SCORE-v0` | Rugby union, competition-specific regulation score | Empirical scoring-event baseline | Tries/conversions/penalties/drop-goals, exact draw/endpoint support | DESIGN REGISTERED / DATA BLOCKED |
+| `RU-A1-HIER-SCORE-v0` | Rugby union, competition-specific joint score | Hierarchical event/exposure model | Territory, kicker, cards, bench and joint totals/margins | DESIGN REGISTERED / DATA BLOCKED |
+| `RU-A2-PHASE-STATE-v0` | Rugby union, regulation and separately scoped extra time | Possession/territory/scoring/clock state process | Joint phase/full-match queries and exact terminal rules | DESIGN REGISTERED / DATA BLOCKED |
 
-For each sport/target group, instantiate `M0-MARKET-v0` and `M1-HYBRID-v0` only when exact same-time market snapshots and de-vig cards exist. They are not silently part of A0–A4.
+
+
+
+
+
+
+
+M0/M1 are RETIRED from active, shadow and promotion-eligible prediction. A user-requested post-freeze price audit is segregated and cannot train or alter a forecast.
+
+
+
 
 ## 4. Player and niche-target templates
 
+
+
+
 These are separate model groups, not direct team-score queries:
+
+
+
 
 | Template ID | Target process | Candidate ladder | Status |
 |---|---|---|---|
@@ -95,11 +172,23 @@ These are separate model groups, not direct team-score queries:
 | `SOCCER-SOT-v0` | Minutes × shots per minute × role/box share × on-target conversion | Hierarchical components -> linked event simulator -> flexible CDF | DESIGN REGISTERED / DATA BLOCKED |
 | `CRICKET-BATTER-RUNS-v0` | Balls faced jointly with dismissal hazard × run rate | Survival/count components -> ball-state simulator | DESIGN REGISTERED / DATA BLOCKED |
 
+
+
+
 Every instantiated target requires exact provider/action/void terms and its own H0/support/calibration gate.
+
+
+
 
 ## 5. Prohibited production designs
 
+
+
+
 The following may exist only as labelled diagnostics unless a new specification proves coherence:
+
+
+
 
 - unrelated binary classifiers/calibrators for each bookmaker threshold;
 - training on user-selected games/lines as if they were an eligible-event universe;
@@ -112,9 +201,18 @@ The following may exist only as labelled diagnostics unless a new specification 
 - a later closing price used at an earlier cutoff;
 - a website search result or external forecast presented as an internal fitted probability.
 
+
+
+
 ## 6. Immutable build card
 
+
+
+
 Every actual fit appends:
+
+
+
 
 | Field | Required value |
 |---|---|
@@ -134,7 +232,13 @@ Every actual fit appends:
 | Provenance | Code/data/model/calibrator hashes and immutable references |
 | Limitations | Unsupported populations, failure modes and prohibited uses |
 
+
+
+
 ## 7. Frozen comparison questions
+
+
+
 
 | Comparison ID | Question | Primary evidence | Current state |
 |---|---|---|---|
@@ -142,24 +246,42 @@ Every actual fit appends:
 | `CMP-ALL-A2-v0` | Does the sport-native A2 simulator improve over best A0/A1? | Same-fold distribution score, coverage, critical scenarios and simulation error | CANDIDATE — NOT STARTED |
 | `CMP-ALL-FLEX-v0` | Does A3/A4 improve over the simplest qualified distribution? | Proper-score improvement with support, calibration, OOD and complexity guardrails | CANDIDATE — NOT STARTED |
 | `CMP-ALL-CAL-v0` | Does shared-distribution calibration improve without breaking coherence? | Held-out proper score/reliability, sharpness and slice non-inferiority | CANDIDATE — NOT STARTED |
-| `CMP-ALL-MARKET-v0` | How do sport-only, market-only and hybrid lanes compare? | Identical event/cutoff scorecard; independent-signal and hybrid claims kept separate | CANDIDATE — NOT STARTED |
+| `CMP-ALL-MARKET-v0` | RETIRED — market-only/hybrid prediction excluded | No active training or shadow comparison | RETIRED |
 | `CMP-ALL-UNIVERSE-v0` | Does systematic event enumeration remove selected-sample distortion? | Frozen population coverage, missing-event audit and event-weighted scores | CANDIDATE — NOT STARTED |
 | `CMP-ALL-FRESH-v0` | Do field-specific freshness triggers improve process without leakage? | Source-age/missingness audit and predeclared chronological ablation | CANDIDATE — NOT STARTED |
 
+
+
+
 No comparison becomes `TESTING` until population, folds, builds, metrics, uncertainty, horizon and decision rule are frozen before outcomes.
+
+
+
 
 ## 8. Promotion rule
 
+
+
+
 A build advances only when target, source, H0, feature and label cards are approved; candidates use identical point-in-time folds; integrity/leakage/support/coherence tests pass; the primary proper score improves with useful uncertainty; calibration/coverage/critical slices and rank guardrails are non-inferior; complexity/source failure behavior is acceptable; TEST is opened once; and immutable prospective E1-P shadow evidence supports publication.
+
+
+
 
 Hit rate, a short winning run, attractive examples, external-model reputation, one backtest slice or ROI without complete price/stake records cannot promote a model.
 
+
+
+
 ## 9. Current model card
+
+
+
 
 | Field | Current state |
 |---|---|
 | Published numerical model | NONE |
-| Qualitative champion | MDS-2026.08.30-v2.7 |
+| Qualitative method | MDS-2026.09.19-v4.3 / CR-2026.09.21-3; unvalidated qualitative forecasts under current controls |
 | H0 dependency | NOT BUILT / NOT QUALITY-APPROVED for every sport |
 | Registered numerical candidates | DESIGN ONLY / DATA BLOCKED |
 | Trained coefficients or priors | NONE |
@@ -169,4 +291,81 @@ Hit rate, a short winning run, attractive examples, external-model reputation, o
 | Probability publication | DISABLED |
 | Market/value model | NOT ESTABLISHED |
 
+
+
+
 Volatile queue state belongs only to the top controlling snapshot of the active log identified in README.
+
+
+
+
+## September 5 user confirmation — controlling eligibility correction
+
+
+
+
+[Controlling policy](PERFORMANCE_ELIGIBILITY_POLICY.md). The user confirmed: **all existing game logs except views explicitly labelled LIVE were strictly frozen pre-game**. Accept this as the provenance basis `USER_CONFIRMED_PREGAME_FREEZE`, effective September 5. Non-live issued cards are eligible for historical qualitative directional/ranking evaluation. A late local import alone no longer excludes them. This correction supersedes earlier blanket `E1-Q-LATE_IMPORT`, “all non-performance-eligible” and “zero eligible historical units” statements. It records user confirmation; it does not assert independent timestamp verification or change original file times.
+
+
+
+
+Keep four distinct fields: **forecast horizon at issue**, **event state when checked for settlement**, **provenance basis**, and **endpoint settlement status**. An originally pre-game card found live during settlement stays pre-game and awaits a final; it does not become a live-issued forecast. A live source/page, a “live counter-branch”, or a post-issue status check is not an issuance label. Explicit live or live-state-unverified issued views stay outside pre-game metrics. Original pre-game and later live views of one event must retain their own ranks and share an event cluster.
+
+
+
+
+The headline historical scorecard includes all identifiable, genuinely issued, settled contracts/ranks in its stated cohort, including `FORCED RANK`, LOW evidence, and `PROCESS_DEFECT` outcomes. Do not remove a bad pick because its reasoning was poor. Process grade is a diagnostic column and a separately labelled compliance slice. No-forecast/no-action records are not trials; unresolved/void/push/partial rows have explicit denominators; materially unidentifiable contracts remain unscorable with the reason recorded. A row’s missing operator terms may limit ticket settlement without erasing a clearly defined research endpoint. Never use an issue-time row already decided as a predictive success.
+
+
+
+
+Use the exact original pre-game order, including the latest genuinely pre-game refresh; never substitute a later live or retrospective order. Deduplicate aliases and group related targets/views by underlying event. Report historical performance by issued method, sport/competition, horizon and target. The ten newly settled cards are an evaluated v3.4 pre-game cohort. Earlier historical scorecards need those same row/view joins before a new all-history aggregate is reported; the complete status index is not itself a performance denominator.
+
+
+
+
+Old games may measure their issued methods and supply development evidence for improvements. They cannot validate a v3.5/v3.6 change designed after their outcomes were seen. Keep the historical ranking count separate from each frozen challenger’s later test count. No probabilities, fitted coefficients, calibration or market-edge claims are created by this provenance correction. Future snapshots/hashes and externally timestamped revisions are useful provenance records; a local hash or editable git timestamp alone is not an independent timestamp authority, and no git-only approval gate is imposed on this user-confirmed history.
+
+
+
+
+## Implementation priority — 2026-09-17
+
+
+
+
+BS-A0-EMP-COUNT-v0 and BS-A1-JOINT-RUN-v0 have executable probability primitives and complete estimation/data specifications in MODEL_IMPLEMENTATION_RECIPES; **NOT FIT**. Soccer A0/A1 have Poisson/Dixon-Coles grids and linked phase composition in the same reference; **NOT FIT**. Cricket resource/wicket state is specified there. All A3/A4 flexible models and learned rank/pair selectors are **DORMANT — BASELINE EVIDENCE REQUIRED**, overriding the generic candidate table's build ordering. A2 is deferred unless necessary for a correct endpoint. Tennis/union scopes are design-only additions. No calibrated, TESTED or SHADOW build exists. Publication requires S5 plus qualifying S6 evidence under NUMERICAL_PROGRAM.
+
+
+
+
+<!-- DEEP-RESEARCH-IMPLEMENTATION-2026-09-19-V42 -->
+
+
+
+
+## 2026-09-19 registration requirements for any future fitted model
+
+
+
+
+No existing `NOT FIT` model status is promoted by this documentation change. A newly registered model must additionally declare:
+
+
+
+
+- `market_independence = SPORTS_ONLY / MARKET_BLIND`;
+- training dataset hash and point-in-time feature schema version;
+- prohibited-source scan result and source-lineage manifest;
+- chronological TRAIN/TUNE/CAL/TEST definition with event grouping;
+- all fitted preprocessing/encoding/imputation scope;
+- distribution family/support and how one frozen distribution answers multiple lines;
+- calibration method and CAL-only fitting receipt;
+- full-distribution proper scores plus target-specific scores, calibration, interval coverage and error by key data-quality/OOD slices;
+- untouched TEST opening date and commit/hash; and
+- prospective shadow status before any production promotion.
+
+
+
+
+A model that requires market lines/odds, fantasy/DFS projections or betting-consensus features is **INELIGIBLE FOR THIS PROJECT**, regardless of predictive performance elsewhere.

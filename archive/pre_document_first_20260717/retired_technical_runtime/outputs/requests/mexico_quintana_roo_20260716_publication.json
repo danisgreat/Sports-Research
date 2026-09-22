@@ -1,0 +1,36 @@
+{
+  "publication_id": "PUB-BASEBALL-LMB-20260716-DIABLOS-TIGRES-G3-001",
+  "published_at_utc": "2026-07-17T02:48:40.072Z",
+  "snapshot_id": "SNAP-eb879e9f-98e3-4ddb-8909-38d90b2e934f",
+  "analysis_id": null,
+  "headline": "Diablos Rojos del Mexico at Tigres de Quintana Roo live ranked selections",
+  "ranked_selections": [
+    {
+      "rank": 1,
+      "selection": "Combined Total Over 17.5 runs",
+      "verdict": "SUPPORTED",
+      "rationale": "The observed live feed already showed 15 runs after two and a half innings, so three additional runs were required."
+    },
+    {
+      "rank": 2,
+      "selection": "Mexico City -8.5",
+      "verdict": "LEAN",
+      "rationale": "Diablos led by nine at the cutoff, so the supplied line was narrowly covering with substantial game time remaining."
+    },
+    {
+      "rank": 3,
+      "selection": "Quintana Roo +7.5",
+      "verdict": "AVOID",
+      "rationale": "Tigres needed to improve the observed nine-run deficit by at least two runs; an eight-run final margin would lose both supplied run lines."
+    },
+    {
+      "rank": 4,
+      "selection": "Combined Total Under 18.5 runs",
+      "verdict": "AVOID",
+      "rationale": "The under allowed no more than three additional runs across the remaining six and a half innings."
+    }
+  ],
+  "potential_winner": "Diablos Rojos del Mexico",
+  "public_summary": "At the 2026-07-17T01:49:32.612Z cutoff, the live feed showed Diablos leading 12-3 midway through the third. Over 17.5 ranked first, Mexico City -8.5 was a secondary lean, Quintana Roo +7.5 and Under 18.5 were avoids, and Diablos were the potential winner. The formal framework decision remained PASS because LMB was outside registered live-model coverage and the supplied settlement contract was unresolved.",
+  "created_by": "Codex sports research"
+}

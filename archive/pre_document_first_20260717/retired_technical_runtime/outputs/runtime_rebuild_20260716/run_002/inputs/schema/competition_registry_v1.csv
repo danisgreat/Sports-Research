@@ -1,0 +1,19 @@
+competition_id,sport_family,official_name,governing_body,status,effective_from_utc,effective_to_utc,notes
+AFL,Australian football,Australian Football League,Australian Football League,DEVELOPMENT,2026-01-01T00:00:00Z,,Machine identifier only; no model activation implied
+AFLW,Australian football,Australian Football League Women's,Australian Football League,DEVELOPMENT,2026-01-01T00:00:00Z,,Separate model and rules scope required
+NRL,Rugby league,National Rugby League,Australian Rugby League Commission,DEVELOPMENT,2026-01-01T00:00:00Z,,Exact season rules remain contract-specific
+NRLW,Rugby league,NRL Women's Premiership,Australian Rugby League Commission,DEVELOPMENT,2026-01-01T00:00:00Z,,Separate model scope required
+MLB,Baseball,Major League Baseball,Major League Baseball,DEVELOPMENT,2026-01-01T00:00:00Z,,No active model
+NPB,Baseball,Nippon Professional Baseball,Nippon Professional Baseball,DEVELOPMENT,2026-01-01T00:00:00Z,,No active model
+KBO,Baseball,KBO League,Korea Baseball Organization,DEVELOPMENT,2026-01-01T00:00:00Z,,No active model
+NBA,Basketball,National Basketball Association,National Basketball Association,DEVELOPMENT,2026-01-01T00:00:00Z,,No active model
+WNBA,Basketball,Women's National Basketball Association,Women's National Basketball Association,DEVELOPMENT,2026-01-01T00:00:00Z,,Separate model scope required
+MLC,Cricket,Major League Cricket,Major League Cricket,DEVELOPMENT,2026-01-01T00:00:00Z,,Format and season-specific contract required
+NHL,Ice hockey,National Hockey League,National Hockey League,DEVELOPMENT,2026-01-01T00:00:00Z,,Regulation and winner contracts remain separate
+NFL,American football,National Football League,National Football League,DEVELOPMENT,2026-01-01T00:00:00Z,,Exact 2026 rule release must be registered before use
+ATP,Tennis,ATP Tour,Association of Tennis Professionals,DEVELOPMENT,2026-01-01T00:00:00Z,,Tournament and surface-specific scope required
+WTA,Tennis,WTA Tour,Women's Tennis Association,DEVELOPMENT,2026-01-01T00:00:00Z,,Tournament and surface-specific scope required
+FIVB,Volleyball,FIVB competitions,FIVB,DEVELOPMENT,2026-01-01T00:00:00Z,,Event and format-specific scope required
+PGA_TOUR,Golf,PGA Tour,PGA Tour,DEVELOPMENT,2026-01-01T00:00:00Z,,Tournament-specific field and rules required
+FIA_F1,Motorsport,FIA Formula One World Championship,Federation Internationale de l'Automobile,DEVELOPMENT,2026-01-01T00:00:00Z,,Series-specific regulations required
+UFC_MMA,Combat,Ultimate Fighting Championship mixed martial arts,Event athletic commission,DEVELOPMENT,2026-01-01T00:00:00Z,,Commission and event rules override promotion summaries

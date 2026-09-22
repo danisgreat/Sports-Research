@@ -1,0 +1,42 @@
+{
+  "schema_version": "SPORTS_RELEASE_MANIFEST_V1",
+  "release_id": "SR-20260716-RUNTIME-REBUILD-1",
+  "effective_at_utc": "2026-07-16T00:00:00.000Z",
+  "release_mode": "SUSPENDED",
+  "operational_status": "SUSPENDED_NO_ACTIVE_MODELS",
+  "activation_authorized": false,
+  "expected_active_coverage_count": 0,
+  "expected_acceptance_requirement_count": 88,
+  "review_ticket_id": null,
+  "reviewed_by": null,
+  "reviewed_at_utc": null,
+  "release_bundle_hash": null,
+  "runtime_entrypoint": "scripts/sportsctl.mjs",
+  "coverage_registry": "SPORTS_MODEL_COVERAGE_REGISTRY_v3.csv",
+  "journal_path": "runtime/store/journal.jsonl",
+  "current_truth": {
+    "active_models": 0,
+    "eligible_predictions": 0,
+    "authorized_numeric_forecasts": false,
+    "price_enabled_issue_supported": false,
+    "legacy_rows_eligible": false
+  },
+  "activation_contract": {
+    "allowed_release_modes": [
+      "SUSPENDED",
+      "VALIDATION_CANDIDATE",
+      "OPERATIONAL"
+    ],
+    "operational_requires_explicit_review": true,
+    "operational_requires_nonzero_exact_active_coverage": true,
+    "operational_requires_complete_machine_evidence_joins": true,
+    "validation_candidate_is_not_operational": true
+  },
+  "known_blockers": [
+    "No coverage row is ACTIVE.",
+    "Contract, source-map, untouched-test and prospective-shadow registries contain no approved evidence rows.",
+    "No fitted model, calibration artifact or prospective performance result has been approved.",
+    "The complete acceptance traceability matrix has not yet reached full executable coverage.",
+    "PRICE_ENABLED publication remains fail-closed until price and execution negative tests are complete."
+  ]
+}
