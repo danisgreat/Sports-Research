@@ -1,6 +1,6 @@
 ## Current queue / canonical rollover — reconciled 2026-09-23
 
-Part 4 is **CLOSED at P-481**. Part 5 (PREDICTION_LOG_COMBINED_5.md) is active and reconciled through **P-494**; next canonical ID is **P-495**. **2026-09-23(c) consolidated import (~21:50 AEST):** P-489 (22 Sep game 24) and P-491 are FINAL/SETTLED. P-493, P-494 (live-issued WTA view) and TMP-20260923-NPB-CHU-DB-G25 were LIVE and are carried unsettled in the P-495-onward mini log. **P-487 = Dallas Wings @ Phoenix Mercury** (card body recovered and fully settled, §"2026-09-23(d)"); the NBL card stays TMP-20260923-NBL-CNS-TAS (settled). Full records: Part 5 §"2026-09-23(c)".
+Part 4 is **CLOSED at P-481**. Part 5 (PREDICTION_LOG_COMBINED_5.md) is active and reconciled through **P-493**; next canonical ID is **P-494**. Three Part-5 cards remain open (P-489, P-491, P-493). The NBL P-487 source claim is held noncanonically pending issue-time evidence; P-490 is a retired unused provisional alias. No result-state refresh or retrospective was performed in the 2026-09-23 ID reconciliation. Performance status remains **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**.
 
 ## Current queue correction — 2026-09-17(c)
 
@@ -8,7 +8,7 @@ Historical 2026-09-17 snapshot (superseded by the 2026-09-21 rollover above): Pa
 
 # Current complete game-log register — updated 2026-09-23
 
-**LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** The ID register spans 494 numbered slots (P-001–P-494), including reserved/unused P-372, P-487 and P-490; this is not a prediction count. Next canonical ID: **P-495**, controlled by PREDICTION_LOG_COMBINED_5.md.
+**LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** The ID register spans 493 numbered slots (P-001–P-493), including reserved/unused P-372, P-487 and P-490; this is not a prediction count. Next canonical ID: **P-494**, controlled by PREDICTION_LOG_COMBINED_5.md.
 
 **2026-09-17 update:** `P-424`–`P-437` imported from an external mini log, settled and audited ([Part 4 §"2026-09-17"](PREDICTION_LOG_COMBINED_4.md)). **12 cards scored** (52 graded rows, 36 W / 16 L, mean Brier 0.1892 — every row independently recomputed), **2 administratively closed** (`P-424`, `P-428`: correct start-crossing fail-closes, no forecast issued). Rank #1 10 W / 2 L; at least one of the top two won on 11 of 12; both won on 8 of 12. One row open: `P-430-C05` (`TMP-OPEN-20260917-01`). All five ACLE finals and both ETPL scorecards were independently verified at ESPN; the four KBO finals could not be (lane degraded). Canonical IDs now `P-001`–`P-437`; **next ID `P-438`**. New cross-sport rules `G-L17`–`G-L20` (`RULES_GENERAL.md` §16.12).
 
@@ -525,26 +525,22 @@ This category table was computed before the P-452–P-481 rollover and is retain
 | P-481 | Soccer / Spain La Liga — Villarreal vs Levante | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
 | P-482 | Cricket / CPL 2026 Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: PREDICTION_LOG_COMBINED_5.md; full card and review in the P-482-P-493 predecessor mini log |
 | P-483 | Tennis / WTA 250 Korea Open (Seoul) R32 — Katie Volynets vs Elvina Kalieva | FINAL / SETTLED / RETROSPECTIVE COMPLETE (ENHANCED) | Canonical source: PREDICTION_LOG_COMBINED_5.md; full card and review in the P-482-P-493 predecessor mini log |
-| P-484 | WNBA — Atlanta Dream @ New York Liberty | FINAL / SETTLED | Retained as actual P-484 in collision with later Padres claim; full card and review in `archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md` (Part 5 custody row) |
-| P-485 | NFL — New York Giants @ Los Angeles Rams | FINAL / SETTLED; START_CROSSED / PREGAME STATUS UNVERIFIED | Full card and review in `archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md` (Part 5 custody row; full import pending) |
-| P-486 | MLB — Minnesota Twins @ San Francisco Giants | FINAL / SETTLED | Full card and review in `archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md` (Part 5 custody row; full import pending) |
-| P-487 | WNBA — Dallas Wings @ Phoenix Mercury (22 Sep 2026, 12:00 AEST) | FINAL / SETTLED 2026-09-23(d); pre-tip freeze ~12:01 AEST v actual tip 12:07:42 AEST | PHX 87–86. Rank-1 Mercury +5.5 W; Over 174.5 L (`TOP_OU_REVIEW`); Under W; Dallas −5.5 L; winner L. Card body recovered from the operator; promoted from TMP-20260922-WNBA-DAL-PHX. Part 5 §"2026-09-23(d)" |
-| P-488 | WTA Singapore — Vivian Wolff vs Oleksandra Oliynykova | FINAL / SETTLED | Full card and review in `archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md` (Part 5 custody row; full import pending) |
-| P-489 | NPB — Chunichi Dragons @ Yokohama DeNA BayStars — **22 Sep 2026, game 24** (Azuma v Muller) | FINAL / SETTLED 2026-09-23; START_CROSSED (outside pregame metrics) | DeNA 7–3. Rank-1 Under 6.5 L (`TOP_OU_REVIEW`); DeNA ML W; +1.5 L; winner W. The former "same-event R1" is a different game → TMP-20260923-NPB-CHU-DB-G25. Part 5 §"2026-09-23(c)" |
+| P-484 | WNBA — Atlanta Dream @ New York Liberty | FINAL / SETTLED | Retained as actual P-484 in collision with later Padres claim; full card and review in the P-482-P-493 predecessor mini log |
+| P-485 | NFL — New York Giants @ Los Angeles Rams | FINAL / SETTLED; START_CROSSED / PREGAME STATUS UNVERIFIED | Full card and review in active mini log |
+| P-486 | MLB — Minnesota Twins @ San Francisco Giants | FINAL / SETTLED | Full card and review in active mini log |
+| P-487 | RESERVED / ISSUE-TIME HOLD — NBL Cairns vs Tasmania source claims this ID | Noncanonical forecast under TMP-20260923-NBL-CNS-TAS; no verified original freeze time; do not reuse |
+| P-488 | WTA Singapore — Vivian Wolff vs Oleksandra Oliynykova | FINAL / SETTLED | Full card and review in active mini log |
+| P-489 | NPB — Chunichi Dragons @ Yokohama DeNA BayStars | UNSETTLED / ISSUE_HORIZON_UNVERIFIED | Original card plus same-event R1 retained; result state not refreshed |
 | P-490 | RESERVED / UNUSED — retired provisional Padres alias | No event maps to this slot; do not reuse |
-| P-491 | NPB — Orix Buffaloes @ Chiba Lotte Marines | FINAL / SETTLED 2026-09-23; PREGAME (clean) | Orix 1–0. Rank-1 Orix +1.5 W; Under 7.0 W; Marines ML L; winner L (toss-up). Part 5 §"2026-09-23(c)" |
-| P-492 | MLB — San Diego Padres @ Los Angeles Dodgers | FINAL / SETTLED; START_CROSSED / PREGAME STATUS UNVERIFIED | Source claim P-484 and prior provisional P-490 are aliases; full card and review in `archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md` |
-| P-493 | KBO — Kia Tigers @ Doosan Bears | UNSETTLED — LIVE at carry-over (top 7th, 2–2, 21:38 AEST); pregame freeze 19:28:29 AEST | Carried as-is to `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-495 onward - 2026-09-23/`; settle when three lineages show FINAL |
-| P-494 | WTA / Singapore Open — Mirra Andreeva vs Aliaksandra Sasnovich | LIVE-ISSUED / UNSETTLED — LIVE at carry-over (Andreeva 6-2, 3-2, 21:39 AEST) | Carried as-is to the P-495-onward mini log; excluded from pregame metrics |
+| P-491 | NPB — Orix Buffaloes @ Chiba Lotte Marines | UNSETTLED / terminal state not checked | Pregame freeze recorded around 17:54 AEST; full card carried forward in the P-494-onward mini log |
+| P-492 | MLB — San Diego Padres @ Los Angeles Dodgers | FINAL / SETTLED; START_CROSSED / PREGAME STATUS UNVERIFIED | Source claim P-484 and prior provisional P-490 are aliases; one card, one canonical record |
+| P-493 | KBO — Kia Tigers @ Doosan Bears | UNSETTLED / pregame freeze recorded at 19:28:29 AEST | Scheduled 19:30 AEST; terminal state not refreshed |
 
 ## Noncanonical records and retired identity aliases
 
 | ID | Event | Status / mapping |
 |---|---|---|
-| TMP-20260923-NBL-CNS-TAS | Cairns Taipans vs Tasmania JackJumpers (NBL, 23 Sep; formerly claimed P-487) | **FINAL / SETTLED 2026-09-23 under temporary ID** — CNS 93–87; Rank-1 JackJumpers +2.5 L; Under 186.5 W (contract ambiguity "18.5" recorded); winner L. P-487 now belongs to the earlier WNBA card; this card takes the next free canonical ID at reconciliation. Part 5 §"2026-09-23(c)". |
-| TMP-20260922-WNBA-DAL-PHX | Dallas Wings @ Phoenix Mercury (WNBA, 22 Sep) | **RETIRED alias of canonical P-487** (promoted 2026-09-23(d) after the card body was recovered). The partial settlement in §"2026-09-23(c)" is superseded by the full settlement in §"2026-09-23(d)". |
-| TMP-20260923-NPB-CHU-DB-G25 | Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as "R1") | **UNSETTLED — LIVE at carry-over** (7th, 3–3, 21:40 AEST); pregame freeze 18:59:17 AEST. Carried as-is to the P-495-onward mini log. Next free canonical ID at reconciliation. |
-| TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH | Mirra Andreeva vs Aliaksandra Sasnovich, WTA Singapore | RETIRED alias of canonical P-494 live view; card now held in the P-495-onward mini log; original source archived byte-exact; no retrospective. |
+| TMP-20260923-NBL-CNS-TAS | Cairns Taipans vs Tasmania JackJumpers (source claims P-487) | Temporary issue-time hold; full card and status notes carried forward in the P-494-onward mini log; no canonical ID promoted and no retrospective. |
 | LOCAL-GEELONG-20260904 | Geelong v Fremantle (AFL); inherited final Geelong 107-74 | Research-settled local record; never overwrite canonical P-272 Osaka-Siniakova |
 | TMP-SETTLED-20260911-01 | Fenerbahce v Roma; unsupplied external P-358 no-forecast record | **RETIRED 2026-09-15(b) — merged into canonical P-374** (the genuine pregame forecast for the same event; final 1-1 re-verified at ESPN 401915444). Not scored twice. `TMP-RECON-20260912-01` retired with it |
 | TMP-CANON-20260911-01 | Puerto Rico Women v China Women | RETIRED alias of canonical P-358; not another game |

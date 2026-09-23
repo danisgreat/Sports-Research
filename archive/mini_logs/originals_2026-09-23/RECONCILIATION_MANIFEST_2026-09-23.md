@@ -26,8 +26,18 @@ Each archived source copy was verified against original byte length and SHA-256 
 
 | Local file | Bytes | SHA-256 |
 |---|---:|---|
-| C:\Users\danie\Documents\Sports Research\PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD.md | 181111 | 1500c6341b81df53749ccf912f155afecb5d9c02d12153f0ba21dab62e402710 |
-| C:\Users\danie\Desktop\Sports Research\PREDICTION_LOG_COMBINED_5.md | 114838 | 9870c3fe2787846532aecca18b3e7b91b6df8dca1622d2c90c43dda02ed01080 |
-| C:\Users\danie\Desktop\Sports Research\GAME_LOG_STATUS_CURRENT.md | 124022 | 3a80d2cd26cbbf102acac14e4083583632df10eab4e5605b142d8364d54d49ae |
+| C:\Users\danie\Documents\Sports Research\PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD.md | 181259 | 942d344e848cf7e5523d38cc7c3c689a99d62fda336f66dc8f01eb958b179f8a |
+| C:\Users\danie\Desktop\Sports Research\PREDICTION_LOG_COMBINED_5.md | 114939 | c7249aa3dc458aa54f28ee641bf893b7d701c7b44bb8352ad642302f03f79b7f |
+| C:\Users\danie\Desktop\Sports Research\GAME_LOG_STATUS_CURRENT.md | 124127 | d74c6d7096fe6ee5c05ded751b006ddd4bdafe87b5f155d37d1bac5dacc4eda3 |
+| C:\Users\danie\Desktop\Sports Research\Mini logs (to be sent to actual log later)\Mini Prediction Log - P-494 onward - 2026-09-23\PREDICTION_MINI_RUNNING_LOG_P494_ONWARD.md | 48895 | 12eedf606d72f94b7baa4d120fe5fbed9cb93f44a24197ce7c36274041240f00 |
 | C:\Users\danie\Desktop\Sports Research\Mini logs (to be sent to actual log later)\Mini Prediction Log - P-482 onward - 2026-09-21\PREDICTION_MINI_RUNNING_LOG_P482_ONWARD.md | 572 | 914503c6f3c46799ebfbb1d4dbbed82c3a0a54f7dea46e14419d7ca89a2c59d1 |
 | C:\Users\danie\Desktop\Sports Research\Mini logs (to be sent to actual log later)\Mini Prediction Log - P-484 onward - 2026-09-23\PREDICTION_MINI_RUNNING_LOG_P484_ONWARD.md | 728 | 88cf046f68bf6517595b0ee4768415dea48931a635468bedfca767566c58a20a |
+
+## Supplemental reconciliation — 2026-09-23, WTA live view P-494
+
+- Canonical ID **P-494** is assigned to Mirra Andreeva vs Aliaksandra Sasnovich, WTA Singapore Open, live-issued view frozen at **20:51:54 AEST** (official WTA feed observation 20:51:14 AEST). This is a separate live horizon, not a pregame card; no result state or retrospective was added.
+- The event's source handle `TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH` is retired as an alias. The full 21,560-byte source log was copied before clearing the temporary folder; SHA-256 `449B1235A5E87949DB02B9DDF7E72E9265B8D97A9513B43829CEE9B574595D0E`; the archived copy is `PREDICTION_MINI_RUNNING_LOG_TMP_20260923_WTA_SGP_PRE_RECON_2026-09-23.md`.
+- The WTA card was frozen after P-493 and before the later Khonkaen United–Navy request. The soccer request received no prediction, so it consumes no ID.
+- Active mini log: `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-494 onward - 2026-09-23/PREDICTION_MINI_RUNNING_LOG_P494_ONWARD.md`. Part 5 and the status register now include P-494. **Next canonical ID: P-495.**
+- Local files only. No Drive documents or rules were modified. No retrospective or terminal-state refresh was performed.
+- The temporary WTA prediction body was cleared after archive/hash verification and replaced by a short retired-ID receipt; the folder is retained for the pointer only.

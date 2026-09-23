@@ -1,0 +1,554 @@
+# Vivian Wolff vs Oleksandra Oliynykova — WTA Singapore
+
+I completed the final pre-match research refresh at approximately **12:56 PM AEST**. At that cutoff, the official WTA match page still showed the match as **Upcoming**, so **no live points, games or sets were used** in the forecast.
+
+The controlling methodology is **MDS-2026.09.19-v4.3 / CR-2026.09.21-3**, with `SFA-TENNIS`, `SPORTS_ONLY / MARKET_BLIND`. The supplied ±4.5 and 20.5 lines were not used to form the initial match tree.
+
+## Final ranking
+
+| Rank | Pick | Estimated probability* | Evidence |
+|---|---|---:|---|
+| **1** | **Under 20.5 total games** | **~60%** | **MEDIUM-LOW** |
+| **2** | **Vivian Wolff +4.5 games** | **~58%** | **MEDIUM-LOW** |
+| **3** | **Oleksandra Oliynykova -4.5 games** | **~42%** | LOW / forced complement |
+| **4** | **Over 20.5 total games** | **~40%** | LOW / forced complement |
+
+### Potential match winner
+## **Oleksandra Oliynykova — ~74%**
+
+### Most representative score
+**Oliynykova 6-4, 6-4**
+
+That score is the key to the entire card:
+
+- Oliynykova wins the match ✅
+- Under 20.5 wins ✅
+- Wolff +4.5 wins ✅
+- Oliynykova -4.5 loses ❌
+
+So **Oliynykova being the clearly more likely winner does not mean -4.5 is the best handicap**.
+
+\*These are `UNVALIDATED_SUBJECTIVE` research probabilities from a qualitative match tree. They are not calibrated betting probabilities; the current Drive explicitly has no fitted and validated tennis model.
+
+---
+
+# 1. Match identity and conditions
+
+The Singapore Tennis Open is a **WTA 500**, running September 21-27. The WTA lists it as a **hard-court tournament**, with the event played **indoors at OCBC Arena** and a 28-player singles draw. :chatgpt-content-reference{index="1"}
+
+That is useful because:
+
+- wind is effectively removed;
+- rain is irrelevant;
+- there is no reason to apply an outdoor-weather adjustment;
+- the matchup should be judged primarily on hard-court serve/return performance and level.
+
+The WTA's current player list had **both Wolff and Oliynykova listed as playing** in the main draw. Oliynykova was also on the original direct-entry list. :chatgpt-content-reference{index="2"}
+
+The exact operator was not supplied, so retirement/walkover settlement remains:
+
+**`UNKNOWN_DEFINITION / NO VALUE DETERMINABLE`**
+
+That does **not** prevent a sporting prediction, but I will not make a price/value claim.
+
+---
+
+# 2. Current ranking and competitive level
+
+This is the largest obvious gap.
+
+### Oleksandra Oliynykova
+The latest WTA page has:
+
+- **World No. 41**
+- 2026 record: **24-18**
+- Roland Garros R32
+- US Open R64
+- two WTA 500 R16 appearances
+- two WTA 250 semifinals. :chatgpt-content-reference{index="3"}
+
+### Vivian Wolff
+The current WTA ranking page has:
+
+- **World No. 240**
+- 2026 record: **28-22**
+- career-high 2026 ranking of No. 231. :chatgpt-content-reference{index="4"}
+
+More importantly, the WTA record page shows Wolff had **no previous WTA 500 main-draw appearance** before Singapore. Her higher-level 2026 experience has mainly been WTA 125 plus ITF competition. :chatgpt-content-reference{index="5"}
+
+So the level-strength edge clearly belongs to Oliynykova.
+
+But the Drive rules specifically prohibit using ranking alone to justify a large handicap. That becomes important once we isolate the hard-court evidence.
+
+---
+
+# 3. Surface adjustment: the ranking gap exaggerates the hard-court gap
+
+Wolff's 2026 hard-court record is approximately:
+
+**13-7**
+
+with an additional **6-3 indoor** record in the secondary match database. :chatgpt-content-reference{index="6"}
+
+Those numbers cannot be compared one-for-one with Oliynykova's WTA results because Wolff accumulated most of them at **ITF level**.
+
+For example, during her hard-court Lopota run, Wolff defeated Amandine Hesse 6-3, 6-2, with most of the opposition in that period ranked well below established WTA-tour level. :chatgpt-content-reference{index="7"}
+
+So there are two competing effects:
+
+> **Wolff has genuine hard-court competence, but against weaker average competition.**
+
+That is exactly the sort of level adjustment required by `RULES_TENNIS.md`.
+
+---
+
+# 4. Surface-specific Elo cross-check
+
+Tennis Abstract provides an especially useful diagnostic here because it publishes both overall Elo and hard-court Elo.
+
+Its August 3 table had approximately:
+
+- Oliynykova overall Elo: **1762**
+- Oliynykova hard Elo: **1566**
+- Wolff overall Elo: **1466**
+- Wolff hard Elo: **1459**
+
+Tennis Abstract itself says roughly 100 Elo points correspond to about a 64% best-of-three win expectation. :chatgpt-content-reference{index="8"}
+
+That table is **stale**, last updated August 3, so I do **not** convert its 108-point hard-Elo gap directly into today's probability.
+
+But it gives a very useful structural message:
+
+> Oliynykova's huge overall-ranking/overall-Elo advantage is substantially smaller on hard courts.
+
+That is one of the biggest reasons I prefer **Wolff +4.5** over **Oliynykova -4.5**.
+
+---
+
+# 5. Oliynykova's recent hard-court regime
+
+Oliynykova has been playing meaningfully stronger hard-court opposition than Wolff.
+
+Recent results include:
+
+- beat **Elvina Kalieva 6-4, 6-1**
+- lost **Mirra Andreeva 1-6, 0-6**
+- beat **Mayar Sherif 6-3, 6-4**
+- lost **Diane Parry 4-6, 6-7**
+- beat **Reese Brantmeier 6-4, 6-4**
+- lost **Alexandra Eala 1-6, 4-6**. :chatgpt-content-reference{index="9"}
+
+The Brantmeier match is instructive. Oliynykova won 6-4, 6-4 while:
+
+- making 68.5% of first serves;
+- winning 58% of first-serve points;
+- winning 47.8% of second-serve points;
+- converting 6 of 8 break points;
+- winning **54.1% of return points**. :chatgpt-content-reference{index="10"}
+
+That was much more **return-driven than serve-dominant**.
+
+Against Eala, however, Oliynykova won only 46% of service points and just 27.3% of return points in a 1-6, 4-6 defeat. :chatgpt-content-reference{index="11"}
+
+So there is meaningful variance.
+
+She is clearly capable of breaking Wolff repeatedly, but I do not see a current hard-court service profile strong enough to make **6-2, 6-2 / 6-2, 6-3** the overwhelming central outcome.
+
+---
+
+# 6. Wolff's current regime
+
+Wolff's recent schedule has been primarily clay rather than hard:
+
+- Sep 15: lost Alice Tubello **4-6, 3-6**
+- Sep 3: lost Diletta Cherubini **6-7, 1-6**
+- Sep 1: beat Madison Sieg **6-3, 7-6**. :chatgpt-content-reference{index="12"}
+
+So unlike Oliynykova, she has **not recently been competing in a WTA-level hard-court swing**.
+
+That creates some uncertainty around transferring her earlier 13-7 hard record directly into Singapore.
+
+On the other hand, she is not entering with no hard-court evidence. Earlier in 2026 she produced several competent hard-court runs at ITF level. :chatgpt-content-reference{index="13"}
+
+The correct treatment is therefore:
+
+**shrink Wolff's strong lower-level hard record rather than either accepting it literally or discarding it entirely.**
+
+---
+
+# 7. Head-to-head
+
+They have met once.
+
+### August 3, 2024 — Köge ITF
+**Oliynykova def. Wolff 7-5, 6-0.** :chatgpt-content-reference{index="14"}
+
+But that match was on **red clay**.
+
+Today's match is **indoor hard** and both players' level/rank has changed considerably.
+
+Therefore the H2H has **LOW continuity** under the Drive methodology.
+
+It supports a historical Oliynykova-control branch, particularly because she eventually ran away with the second set, but it is **not permitted to determine today's -4.5 handicap**.
+
+---
+
+# 8. Rest, workload and fitness
+
+Neither player came through Singapore qualifying.
+
+Oliynykova's last major recorded match was against Eala at the US Open on September 3. Wolff played in Ljubljana on September 15.
+
+So:
+
+- **Wolff:** more recent match rhythm;
+- **Oliynykova:** considerably more rest;
+- neither has a qualifying-load penalty.
+
+I found **no credible current medical/withdrawal report** for either player, and the WTA event player list continued to show both as playing. :chatgpt-content-reference{index="15"}
+
+Wolff has prior retirements in her historical record, but there is no basis to turn those into a current injury assumption.
+
+---
+
+# 9. Serve-return interpretation
+
+The available data is much stronger for Oliynykova than for Wolff, which itself lowers the evidence grade.
+
+The central matchup pattern I infer is:
+
+### Oliynykova
+- stronger opposition-adjusted return;
+- greater ability to create multiple break chances;
+- much stronger WTA-level competitive prior;
+- but a service game that is still breakable.
+
+### Wolff
+- sufficient hard-court competence to win service games in clusters;
+- weaker evidence against Top-100-calibre opposition;
+- likely vulnerable on second serve;
+- but not such a weak hard-court player that 6-2 sets should automatically dominate the tree.
+
+This produces a fairly specific prediction:
+
+> **Oliynykova is more likely to win both sets, but a meaningful share of those straight-set wins should look like 6-4, 6-4 or 6-3, 6-4 rather than two lopsided sets.**
+
+That is exactly the state that separates the match winner from -4.5.
+
+---
+
+# 10. Independent match tree
+
+Constructed before locating the supplied 4.5-game and 20.5-game thresholds.
+
+### `P-488-TEN-joint-v1`
+**`UNVALIDATED_SUBJECTIVE`**
+
+| Branch | Weight | Representative score | Interpretation |
+|---|---:|---|---|
+| **TE-B1 Oliynykova strong straight-set control** | 35% | OLI 6-2, 6-3 | WTA-level return/class edge turns into repeated breaks |
+| **TE-B2 Oliynykova close straight sets** | 27% | OLI 6-4, 6-4 | Oliynykova stronger but Wolff's hard-court resistance survives |
+| **TE-B3 Oliynykova in three** | 12% | OLI 6-4, 3-6, 6-3 | Wolff takes one set but not the match |
+| **TE-B4 Wolff clear straight-set upset** | 7% | WOL 6-4, 6-3 | Oliynykova's hard-court serve/return level drops |
+| **TE-B5 Wolff close straight-set upset** | 6% | WOL 7-5, 6-4 | close games swing Wolff's way |
+| **TE-B6 Wolff in three** | 13% | WOL 4-6, 6-4, 6-3 | extended match plus Wolff resistance |
+
+### Set-count mixture
+
+- **Two sets: ~75%**
+- **Three sets: ~25%**
+
+### Winner mixture
+
+- **Oliynykova: ~74%**
+- Wolff: ~26%
+
+The weighted representative total is roughly **21 games**, but that does **not** imply Over is more likely.
+
+Why?
+
+Because the long three-set outcomes create a large upper tail. The *median/mode-type region* is still around **18-20 games**, while fewer three-set states extend to 27-30 games and raise the mean.
+
+That distinction is important.
+
+---
+
+# 11. Why Under 20.5 is #1
+
+## **1. Under 20.5 — ~60%**
+
+The Under primarily wins through scores such as:
+
+- 6-2, 6-3 = 17
+- 6-3, 6-3 = 18
+- 6-3, 6-4 = 19
+- **6-4, 6-4 = 20**
+
+That last score matters because Oliynykova does **not** need to dominate Wolff for the Under to land.
+
+Recent Oliynykova hard-court matches have also been heavily straight-set oriented. Among the immediately relevant hard-court sequence, scores such as 6-4 6-4, 6-3 6-4, 4-6 6-7, 1-6 4-6 and 6-4 6-1 repeatedly remained near or below this threshold. :chatgpt-content-reference{index="16"}
+
+I treat that as **diagnostic**, not a standalone trend system.
+
+### Under kill path
+
+The cleanest way to lose is:
+
+> **Wolff wins a set.**
+
+Ordinary three-set outcomes almost automatically move this game well past 20.5.
+
+A 7-5 or 7-6 set can also kill the Under even in two sets.
+
+This is why Under is only around 60%, not a high-confidence 70%+ play.
+
+---
+
+# 12. Why Wolff +4.5 is #2
+
+## **2. Wolff +4.5 — ~58%**
+
+This is the more subtle pick.
+
+Wolff can lose the match and still cover.
+
+For example:
+
+### Oliynykova 6-4, 6-4
+- Oliynykova games: 12
+- Wolff games: 8
+- difference: **4**
+- **Wolff +4.5 wins**
+
+Even 6-3, 6-4 produces a five-game gap, which loses the handicap by only half a game.
+
+Because I see a meaningful **close-straight-set branch**, +4.5 remains attractive despite Oliynykova being my likely winner.
+
+The main evidence:
+
+- hard-court gap is materially smaller than overall ranking gap;
+- Wolff has a real 13-7 2026 hard record, albeit lower-level; :chatgpt-content-reference{index="17"}
+- Oliynykova's hard-court service is not dominant enough to assume easy holds throughout;
+- Wolff has enough return exposure to prevent every set becoming 6-2/6-2.
+
+### Main failure
+
+Oliynykova repeatedly attacks Wolff's second serve and the level difference shows up immediately:
+
+**6-2, 6-3**, **6-3, 6-2**, **6-2, 6-2**.
+
+Those are the primary -4.5 states.
+
+---
+
+# 13. Oliynykova -4.5
+
+## **3. Oliynykova -4.5 — ~42%**
+
+There is a credible route.
+
+If Oliynykova produces her best return-pressure state, the WTA-vs-ITF level gap can create a very uneven match.
+
+The 2024 H2H also contains a historical example: after a close 7-5 first set, Oliynykova won the second **6-0**. :chatgpt-content-reference{index="18"}
+
+But I do not want to overfit that clay result.
+
+To cover -4.5 in a normal two-set win, Oliynykova generally needs something like:
+
+- 6-3, 6-3
+- 6-2, 6-4
+- 6-2, 6-3
+- more dominant.
+
+**6-4, 6-4 is not enough.**
+
+That separation requirement is why the handicap is much weaker than the outright-winner call.
+
+---
+
+# 14. Over 20.5
+
+## **4. Over 20.5 — ~40%**
+
+The Over is not a bad scenario. It just relies more heavily on extension.
+
+Its main routes are:
+
+1. a deciding third set;
+2. at least one 7-5 or 7-6 set;
+3. Wolff holding sufficiently well to generate 6-4, 7-5-type straight sets;
+4. an upset in which Oliynykova still wins many games.
+
+The problem is that my match tree gives **roughly three-quarters of its mass to straight sets**, with a significant chunk of those straight-set outcomes landing at 17-20 games.
+
+Hence the Over is fourth.
+
+---
+
+# Cross-market coherence
+
+My Rank #1 is **Under 20.5**.
+
+Its ordinary implied score corridor is approximately **15-20 games**.
+
+| Other row | Relationship to Rank #1 |
+|---|---|
+| **Wolff +4.5** | **COHERENT** in 6-4 6-4 and similar close straight-set states |
+| Oliynykova -4.5 | **PARTIAL OVERLAP** in scores like 6-2 6-3 |
+| Over 20.5 | **Mostly DISJOINT** from ordinary Under states; rescued by long/tiebreak/3-set states |
+| Oliynykova winner | **Highly coherent**, because many Under paths are Oliynykova 2-0 |
+
+This is why the final order is internally consistent rather than four independent narratives.
+
+---
+
+# Source-quality limitations
+
+There are four material limitations:
+
+- Wolff has much less WTA-level hard-court data than Oliynykova.
+- Some detailed serve/return data for Wolff comes from secondary databases rather than current WTA match-stat pages.
+- Tennis Abstract's surface Elo snapshot is dated **August 3**, so I use it only as a diagnostic.
+- Your operator's retirement/walkover rules are unknown.
+
+Those factors cap this at **MEDIUM-LOW**, despite Oliynykova's clear overall class advantage.
+
+---
+
+# Sources used
+
+1. **WTA Singapore official tournament page** — WTA 500, indoor hard, dates and draw size. :chatgpt-content-reference{index="19"}
+2. **WTA Singapore player list** — both players listed as playing; Oliynykova and Wolff current event status. :chatgpt-content-reference{index="20"}
+3. **WTA entry-list announcement** — Oliynykova direct-entry status. :chatgpt-content-reference{index="21"}
+4. **WTA Oliynykova record** — No. 41, 24-18 and 2026 tour-level results. :chatgpt-content-reference{index="22"}
+5. **WTA Wolff ranking/stat page** — No. 240, 28-22 and weekly ranking history. :chatgpt-content-reference{index="23"}
+6. **WTA Wolff record** — absence of prior WTA 500/1000/Grand Slam main-draw experience. :chatgpt-content-reference{index="24"}
+7. **WTA US Open Oliynykova-Brantmeier** — current hard-court serve/return statistics. :chatgpt-content-reference{index="25"}
+8. **WTA US Open Oliynykova-Eala** — latest hard-court performance and serve/return downside state. :chatgpt-content-reference{index="26"}
+9. **Tennis Explorer / SteveG Tennis** — Wolff's 2026 13-7 hard and 6-3 indoor records, used with explicit level adjustment. :chatgpt-content-reference{index="27"}
+10. **Tennis Abstract** — overall/hard-court Elo methodology and surface adjustment, with August 3 staleness disclosed. :chatgpt-content-reference{index="28"}
+11. **Sofascore / L'Équipe** — 2024 H2H, 7-5 6-0 on red clay. :chatgpt-content-reference{index="29"}
+12. **Sports Research Google Drive** — `METHOD.md`, `RULES_GENERAL.md`, `RULES_TENNIS.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, current control manifest and research guide.
+13. The user-supplied Sports Research GitHub repository remains an additional source. No GitHub-only factual claim was used without independent verification. :chatgpt-content-reference{index="30"}
+
+No sportsbook prediction, odds movement, tipster, betting consensus or fantasy projection was used.
+
+---
+
+# Updated Prediction Mini Running Log
+
+The running-log instructions require the new prediction and research to be retained with the unsettled queue, without performing a retrospective automatically. :chatgpt-content-reference{index="31"}
+
+## Prediction Mini Running Log — P-482 onward
+
+**Method:** MDS-2026.09.19-v4.3 / CR-2026.09.21-3  
+**Mode:** SPORTS_ONLY / MARKET_BLIND  
+**Status:** LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE  
+**Next canonical ID after this card:** **P-489**
+
+### Existing unsettled cards
+
+| ID | Event | Rank #1 | Potential winner |
+|---|---|---|---|
+| P-482 | CPL Final: Antigua vs Jamaica | Jamaica first 6 O47.5 ~59.9% | Antigua ~53% |
+| P-483 | Volynets vs Kalieva | Over 19.5 ~65.2% | Volynets ~62% |
+| P-484 | Atlanta Dream @ NY Liberty | Under 177.5 ~54% | Atlanta ~58% |
+| P-485 | NY Giants @ LA Rams | Giants +6.5 ~61% | Rams ~64% |
+| P-486 | MIN Twins @ SF Giants | Twins ML ~59% | Twins ~59% |
+| P-487 | DAL Wings @ PHX Mercury | Mercury +5.5 ~62% | Dallas ~58% |
+
+### **P-488 — Tennis / WTA Singapore — Vivian Wolff vs Oleksandra Oliynykova**
+
+**Status:** `UNSETTLED — PREGAME FORECAST / NO RETROSPECTIVE`
+
+**Final research cutoff:** ~22 Sep 2026, 12:56 PM AEST.  
+**State at cutoff:** official WTA page showed upcoming; no live score used.  
+**Competition:** Singapore Tennis Open, WTA 500, R32/Round 1.  
+**Surface:** indoor hard, OCBC Arena.  
+**Format:** best-of-three tiebreak sets.
+
+**Participants**
+- Vivian Wolff, USA, right-handed, WTA No. 240.
+- Oleksandra Oliynykova, Ukraine, right-handed, WTA No. 41.
+- Oliynykova: original direct entrant.
+- Wolff: main draw; exact official route into the final main draw not independently recovered.
+- No credible current withdrawal/medical issue recovered.
+
+**Operator terms**
+- Retirement/walkover rules: `UNKNOWN_DEFINITION`.
+- Therefore: no betting-value determination.
+
+**Surface/level state**
+- Wolff: ~13-7 hard in 2026, but predominantly ITF-level.
+- Oliynykova: much stronger WTA-level opposition and recent North American hard-court schedule.
+- Tennis Abstract August 3 diagnostic hard Elo gap much smaller than overall Elo gap.
+- Old H2H: Oliynykova 7-5 6-0 on clay in 2024; `LOW_CONTINUITY`.
+
+**Independent set tree**
+
+| Branch | Weight |
+|---|---:|
+| Oliynykova strong 2-0 | 35% |
+| Oliynykova close 2-0 | 27% |
+| Oliynykova 2-1 | 12% |
+| Wolff strong 2-0 | 7% |
+| Wolff close 2-0 | 6% |
+| Wolff 2-1 | 13% |
+
+**Set-count mixture**
+- Two sets ~75%
+- Three sets ~25%
+
+**Potential winner**
+- **Oliynykova ~74%**
+
+**Representative centre**
+- **Oliynykova 6-4, 6-4**
+- 20 games
+- Oliynykova +4 aggregate games
+
+**Ranked picks**
+1. **UNDER 20.5 GAMES — ~60% — MEDIUM-LOW**
+2. **WOLFF +4.5 GAMES — ~58% — MEDIUM-LOW**
+3. **OLIYNYKOVA -4.5 GAMES — ~42% — LOW / forced complement**
+4. **OVER 20.5 GAMES — ~40% — LOW / forced complement**
+
+**Rank-1 kill paths**
+- deciding third set;
+- 7-5/7-6 set;
+- Wolff's hard-court resistance creating prolonged hold sequences.
+
+**Wolff +4.5 kill path**
+- Oliynykova converts the level advantage into repeated breaks and wins roughly 6-2 6-3 or wider.
+
+**Coherence**
+- Under 20.5 + Oliynykova winner: `COHERENT`.
+- Under 20.5 + Wolff +4.5: `COHERENT`, notably 6-4 6-4.
+- Under + Oliynykova -4.5: `PARTIAL_OVERLAP`.
+- Over 20.5: largely supported by close/tiebreak and deciding-set branches.
+
+**Source ledger**
+WTA official tournament/player/ranking/match pages; WTA entry list; Tennis Abstract; Tennis Explorer; SteveG Tennis; Sofascore; L'Équipe; Sports Research Drive.
+
+**Document mapping**
+- `RULES_TENNIS.md`: TE-P1–P4, surface/level adjustment, H2H continuity, six two-sided branches, numeric set-count mixture, game-handicap geometry, total-game coherence and retirement gate applied.
+- `SOURCES.md` / `DATA_SOURCE_REGISTER.md`: WTA sources control identity/ranking/event status; specialist databases used only for fields not exposed by official WTA data.
+- `LEARNING_REGISTER.md`: observation only, no new rule. Large ranking gaps should not automatically become large games-handicap edges when current surface-specific evidence materially narrows the gap. Existing surface-regime and level-comparability controls already cover this.
+- No methodology file changed.
+
+### Settlement status
+
+**P-482 through P-488 remain unsettled in this running view. No retrospective was performed.**
+
+**Next canonical ID: P-489.**
+
+## Final call
+
+**#1 Under 20.5 games**  
+**#2 Wolff +4.5 games**  
+**#3 Oliynykova -4.5 games**  
+**#4 Over 20.5 games**
+
+**Potential winner: Oleksandra Oliynykova.**
+
+The highest-probability match shape is not an Oliynykova blowout. It is **Oliynykova winning in two sets while Wolff keeps enough games to stay inside +4.5**, with **6-4, 6-4** the best representative score.

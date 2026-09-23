@@ -266,3 +266,17 @@ This reconciliation does not claim improved prediction accuracy and does not com
 
 
 CR-3 removes residual active wording that conflicted with the CR-2 supersession ledger, synchronizes the active log to Part 5 / P-482, and aligns the preflight control revision. Current analysis is distribution-first; rejected historical shortcut rules remain provenance only. This is a governance/consistency correction, not a predictive-lift claim.
+
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-23 -->
+## Consolidated mini-log import — 23 September 2026
+
+- Four mini-log files were consolidated, settled and imported to Part 5 §"2026-09-23(c)":
+  - **P-489**: the 22 Sep game 24, DeNA 7–3. Rank #1 Under 6.5 lost; `TOP_OU_REVIEW`.
+  - **P-491**: Orix 1–0; both top rows won.
+  - Two temporary-ID records: the NBL card and a previously unregistered WNBA card, which both claim **P-487**. P-487 is held.
+- The P-489 "R1" was a **different game** (23 Sep game 25) and is now `TMP-20260923-NPB-CHU-DB-G25`.
+- Live records (TMP-G25, P-493, P-494) were carried unsettled to the new active mini log, `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-495 onward - 2026-09-23/`.
+- The consolidated log is archived at `archive/mini_logs/Mini Prediction Log - P-487 to P-494 CONSOLIDATED - 2026-09-23/`.
+- Content receipt: [CONTROL_MANIFEST_2026-09-23.md](CONTROL_MANIFEST_2026-09-23.md). Method and control revision are unchanged (MDS-2026.09.19-v4.3 / CR-2026.09.21-3).
+- Everything remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.

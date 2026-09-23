@@ -1,4 +1,4 @@
-﻿# General analysis rules
+# General analysis rules
 
 
 
@@ -2639,10 +2639,7 @@ The normal order is raw sporting evidence -> canonical facts -> prediction-time 
 
 ### Fail closed
 
-
-
-
-Before issue, run `prediction_preflight.py` against the forecast manifest. Any BLOCK finding means **NO NORMAL FORECAST** until resolved or the missing field is explicitly handled under an allowed low-evidence path that does not invent values. The preflight itself proves control compliance only, not predictive accuracy.
+Before issue, verify all preflight controls (pregame state, timezone conversion, market-blind source firewall, and minimum 3 independent lineages). Per 2026-09-23 user directive, interactive forecasting workflows verify these controls directly within the card body (and audit via `audit_card_controls.py`) without generating separate scratch JSON manifests; automated pipelines run `prediction_preflight.py` against the machine manifest. Any blocking failure means **NO NORMAL FORECAST** until resolved. Preflight proves control compliance only, not predictive accuracy.
 
 
 
@@ -2697,3 +2694,23 @@ CR-2 correctly classified several 6 September audit ideas as rejected/superseded
 
 
 Current rule: **one sport-native joint outcome distribution/branch mixture first; exact contract queries second.** Historical order-statistic pseudo-tail sums, path-count/category ranking shortcuts, universal 40–60% top-slot bands and blanket `DISJOINT` top-half bans are non-operative. A disjoint relationship is a defect only when it exposes an impossible/incoherent construction; otherwise it is a normal dependence fact. No old prospective candidate built on those shortcuts can control a forecast without a new preregistered design consistent with the current distribution-first method.
+
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-23 -->
+## 2026-09-23 — identity-gate pointer: `O-ID-DATE-STARTER-MATCH`
+
+The identity gates (G0–G6) apply to **record merging as well as to issuance**. Two records may be treated as views of one event only when date, venue, home/away and starters/lineups/participants all match. Otherwise they are separate events with separate IDs, and a reforecast of a different date is a new event.
+
+- Origin: P-489 v "R1" (22 v 23 Sep NPB), `PREDICTION_LOG_COMBINED_5.md` §"2026-09-23(c)".
+- Procedure: `EXTERNAL_LOGGING_WORKFLOW.md` §"2026-09-23".
+- Integrity control only; no forecasting rule changes.
+
+<!-- PREFLIGHT-WORKFLOW-AMENDMENT-2026-09-23 -->
+## 2026-09-23 — preflight workflow amendment: direct card-level verification (user directive)
+
+Per user directive on 2026-09-23, the requirement to generate a separate scratch JSON manifest file (`scratch/preflight_manifest_*.json`) and execute `prediction_preflight.py` is **dropped** for interactive forecasting and game log generation.
+
+1. **Direct card-level verification:** All substantive preflight gates (event identity, pregame state before first action/freeze, IANA timezone and AEST/AEDT conversion, market-blind source firewall, and minimum 3 independent lineages) are verified and documented **directly within the prediction card** (Fields 1, 2, 6, Sources table, and the §16.8 completeness block).
+2. **Audit execution:** Card-level compliance is verified directly on the Markdown file via `python audit_card_controls.py <file.md>`, which checks that all mandatory completeness and governance fields are printed.
+3. **Machine manifest status:** `FORECAST_PREFLIGHT_MANIFEST.md` and `prediction_preflight.py` remain valid reference specifications for automated or batch-ingestion systems, but are not required for interactive card issuance.
+

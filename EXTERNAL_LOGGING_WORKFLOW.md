@@ -453,3 +453,44 @@ External/mini logs may preserve the method/control version that governed an alre
 
 
 For an unissued card, resolve audit conflicts through `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` before copying any older mini-log instruction. A later verified correction supersedes an incompatible older audit finding; a redundant finding is not re-added; and historical cards keep the method/control revision frozen at issue. This is a workflow/authority correction only and creates no predictive coefficient, probability cap or performance claim.
+
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-23 -->
+## 2026-09-23 — four mini-log files consolidated; two custody controls promoted
+
+**What arrived.** The local `Mini logs (to be sent to actual log later)/` folder held four files:
+- two receipt stubs (P-482-onward, P-484-onward);
+- one WTA receipt stub (already merged by a peer session at about 21:10 AEST);
+- the P-494-onward log (77,390 bytes, SHA-256 `aba5f510…87c7`).
+
+The P-494 log in turn pointed at an external Codex attachment (the only full copy of the P-489 card) and at an out-of-repo Documents merged log (the only full copy of the P-484–P-488/P-492 settlements). Everything was archived byte-exact in `archive/mini_logs/originals_2026-09-23/`, then consolidated into `archive/mini_logs/Mini Prediction Log - P-487 to P-494 CONSOLIDATED - 2026-09-23/` and imported to Part 5 §"2026-09-23(c)". Live records were carried as-is to the new `Mini Prediction Log - P-495 onward - 2026-09-23/` (user direction).
+
+**Two findings that change the import procedure.** Both are integrity controls with no forecast effect, promoted as PROMOTED_PROCESS (`LEARNING_REGISTER.md` L-20260923-01/02).
+
+1. **`O-ID-DATE-STARTER-MATCH`.** Before labelling two records "the same event" (a reforecast, R1, a same-event view), print for both records:
+   - date;
+   - venue;
+   - home/away;
+   - starters, lineups or players.
+
+   Any mismatch makes them separate events with separate IDs.
+   - *Origin:* the P-489 card (22 Sep, Azuma v Muller) and its "R1" (23 Sep, Fukazawa v Nakachi) were merged. The merge created a false issue-horizon conflict, and it would have settled a 22 Sep card on a 23 Sep game.
+2. **`O-EXTERNAL-ID-CLAIM-SWEEP`.** Every supplied transcript or attachment is scanned for embedded running-log ID tables.
+   - Any ID/event pair not present in the repository is registered as `BODY_NOT_CARRIED` under a temporary ID.
+   - It blocks promotion of any competing claimant to that ID until the operator resolves it.
+   - *Origin:* P-487 = Dallas Wings @ Phoenix Mercury existed only in the P-488 and P-489 transcripts. A later NBL card claimed P-487, and the reconciliation recorded "no claimant".
+
+**Two further checks added to the import checklist.**
+
+3. **Pointer resolution.** Every "record location" pointer in a mini log must resolve to a file that actually contains the record.
+   - *Origin:* the P-494 log said P-484–P-488/P-492 were "recorded in Part 5"; only custody rows were.
+   - Out-of-repo files that hold the only copy of a record are archived in-repo at import.
+4. **Concurrency.** Peer sessions wrote to Part 5, the status register and the mini log within minutes of one another on 2026-09-23.
+   - Snapshot and hash the mini-log folder before an import.
+   - Re-check modification times immediately before each write.
+   - Never delete a file whose hash differs from its archived copy.
+
+**Audit-script limitation (proposed tooling fix; not changed in this pass).**
+- `audit_card_controls.py` opens a card at a `P-###` heading and closes it at the next `## ` heading.
+- Cards whose fields sit under "## Entry 1 / ## Entry 2" (P-494), or in bold-label paragraphs (P-491), are reported as missing fields they visibly print.
+- Record its output together with a manual field check (as in Part 5 §"2026-09-23(c)" F.1) until the segmentation is fixed.

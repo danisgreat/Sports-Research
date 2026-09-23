@@ -1277,3 +1277,23 @@ Global failure-safe labels retained across sports: `RETRIEVAL_MISS`, `NOT_YET_PU
 
 
 No source class is promoted by this revision. Keep the CR-2/CR-1 source findings: field-specific source ownership, upstream-lineage deduplication, `known_at <= cutoff_at`, betting/fantasy source firewall, explicit stale/not-yet-published/retrieval-miss states, cricket toss/strip separation, and three-lineage event/finality verification. Unverified routes remain unverified; documentation cannot promote them.
+
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-23 -->
+## 2026-09-23 — sources exercised during the consolidated P-487–P-494 import
+
+Quick reference: `SOURCES.md` §"2026-09-23". None is `APPROVED FOR FEATURE`. Settlement lineages must be independent and each must show a terminal marker (CR-4).
+
+| Source ID (proposed) | Endpoint / record | Field(s) | Status | Evidence and limits |
+|---|---|---|---|---|
+| `SRC-NPB-BOX-RAWHTML` (method note on `SRC-BS-NPB-BIS`) | `https://npb.jp/scores/YYYY/MMDD/<home>-<away>-NN/box.html`, fetched with curl and tag-stripped | State (試合開始前 / 試合中 N回表・裏 / 試合終了), 開始/終了/試合時間/入場者, linescore, per-batter results, per-pitcher 投球数/打者/投球回/H/HR/BB/K/R/ER; pregame 先発 and スタメン | `CANDIDATE — FIELD OWNER` (reconfirmed 2026-09-23 on 0922 db-d-24, 0923 m-b-25 and 0923 db-d-25) | A summarising fetch returned an internally inconsistent box for the P-491 card; the raw parse did not. Innings notation such as "3 +" needs care. Pages lag live play by a few minutes. |
+| `SRC-SPORTNAVI-NPB` (upgrade) | `https://baseball.yahoo.co.jp/npb/schedule/?date=YYYY-MM-DD` | Whole-slate state, score, W/L/S pitchers | `CANDIDATE — SETTLEMENT LINEAGE 2` | Independent statistics publisher. Summary line only; its game pages carry bench and pitcher-v-team splits. |
+| `SRC-KYODO-NPB-WIRE` | Yahoo! News articles headed "D7―3中（22日）" | Final, key plays, W/L | `CANDIDATE — SETTLEMENT LINEAGE` | Wire copy is syndicated widely (Daily Sports and others): **count it once**. |
+| `SRC-NIKKAN-NPB` | Nikkan Sports staff reports (also via Yahoo! News) | Final, starter lines, decisive play | `CANDIDATE — SETTLEMENT LINEAGE` | Staff byline and photographer credit; independent of Kyodo. |
+| `SRC-MYNAVI-NPB-AI` | `news.mynavi.jp/article/YYYYMMDD-baseball_gameNN/` | — | **`EXCLUDED FOR SETTLEMENT`** | Self-labelled "AIを活用して作成"; the 22 Sep DeNA–Chunichi recap omitted a three-run inning. |
+| `SRC-NBL-MATCH-API` | `https://schedule.nbl.com.au/api/calendar/match?match=<uuid>&league=NBL` | `match_status`, `status`, `match_status_string`, home/away score, period, clock, play-by-play (the first live event's timestamp = actual tip), lead tracker; data by Sportradar (`sportradar_timestamp`) | `CANDIDATE — FIELD OWNER (SETTLEMENT ONLY)` | **Contains `betting` and `odds` objects.** Read it programmatically and skip those keys; never print the raw JSON. Stays quarantined from forecast evidence. |
+| `SRC-ESPN-SITE-API-NBL` | `site.api.espn.com/apis/site/v2/sports/basketball/nbl/scoreboard?dates=YYYYMMDD` → `summary?event=<id>` | Status, quarters, team/player box | `CANDIDATE` | HTTP **403 when a browser User-Agent is sent**. "Final" lagged the league feed by about 7 minutes and briefly reverted to "In Progress". Its data vendor relative to the NBL feed is unverified. |
+| `SRC-FLASHSCORE-NBL-RESULTS` | `https://www.flashscore.com.au/basketball/australia/nbl/results/` (inline feed: `AB` status, `AG`/`AH` scores, `BA`–`BH` quarters) | Finished state, score, quarters | `CANDIDATE — INDEPENDENT SETTLEMENT LINEAGE` | Livesport runs its own data collection. The feed format is undocumented: record the raw fields; `AB÷3` on the results page = finished. |
+| `SRC-WTA-MATCH-FEED` (behaviour note) | `api.wtatennis.com/tennis/tournaments/<id>/<year>/matches/` | `MatchState`, `ScoreSet*`, `ResultString` | `CANDIDATE — FIELD OWNER` | **A live (state `P`) match dropped out of the list** for several minutes (LS008, 21:33 AEST, 23 Sep); per-match `…/matches/LS008` returned 404. Re-query and cross-check with the ESPN tennis scoreboard (competition id). |
+| `SRC-ESPN-SITE-API-WNBA` | `…/basketball/wnba/scoreboard?dates=` → `summary?event=` | Final, quarters, box, records | `CANDIDATE` (reconfirmed) | Used for the P-487 claimant A settlement. |
+| `SRC-NBL-OFFICIAL-PREVIEW` | `nbl.com.au/news/how-to-watch-talking-points-<home>-v-<away>-round<N>`; `nbl.com.au/news/nbl26-the-latest-injury-updates` | **Expected depth chart** (first initial and surname); injury list with return round | `CANDIDATE — AVAILABILITY FIELD OWNER` | It listed "PF: J.McVeigh / K.Galloway", which the NBL card missed. It is an expected chart, not a confirmed starting five. |

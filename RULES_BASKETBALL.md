@@ -831,3 +831,36 @@ Estimate possessions/pace and offensive/defensive efficiency independently of th
 
 
 Current prospective override. Retain the possession/opportunity model, minutes/usage mixtures, shooting shrinkage/uncertainty, foul/garbage-time/overtime tails and spread-total coupling. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, normalized-distance ordering, and one-result response rules. Build one coherent basketball joint outcome distribution before querying targets; without a fitted/calibrated distribution, do not invent precise probabilities.
+
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-23 -->
+## 2026-09-23 settlement learning — `TMP-20260923-NBL-CNS-TAS` (NBL) and `TMP-20260922-WNBA-DAL-PHX` (WNBA; body not carried)
+
+Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-23(c)"](PREDICTION_LOG_COMBINED_5.md). Learning-only.
+
+**NBL — Cairns 93, Tasmania 87.** Rank #1 JackJumpers +2.5 **lost**; Under 186.5 won (on the card's reading of a prompt that said "18.5"); the winner call (Tasmania) lost.
+
+- **The card executed none of this file's §7–§8 sequence.** It had no pace × efficiency joint, no probabilities and no margin distribution. This is **M15**.
+- **Roster identity failed.**
+  - The Cairns list omitted Jack McVeigh (starter, 17 points) and Kyrin Galloway (19 points off the bench).
+  - "Galloway out" was Jaylin Galloway. The **official NBL expected depth chart**, published pregame, listed "PF: J.McVeigh / K.Galloway".
+  - → **OBSERVATION `O-ROSTER-NAME-COLLISION`**: when an injury note names a player who shares a surname with an active teammate, print first names and the official active list. §7 step 2 already requires official availability before process history.
+- **One-game recency as a rate** (R-1): "surrendered 111 in R1".
+- **Travel fatigue given one sign only** (G-L2): it was applied to the total, not to the travelling side.
+- **Home court unpriced** for an away-side winner call.
+- **Tip lag.** The official NBL match feed's first live play-by-play event was 19:36:09 AEST against a 19:30 schedule. **OBSERVATION `O-START-MARKER`**: use the feed's first-event timestamp as the actual start in horizon audits.
+- **Settlement sources.**
+  - The NBL match-data endpoint (`schedule.nbl.com.au/api/calendar/match?match=<uuid>&league=NBL`) exposes `match_status`, scores, the play-by-play and a lead tracker. **It also contains `betting` and `odds` objects: parse it programmatically, skip those keys, and use it for settlement only.** It stays quarantined from forecast evidence.
+  - ESPN `…/basketball/nbl/scoreboard?dates=YYYYMMDD` (no browser User-Agent) lagged "Final" by about 7 minutes.
+  - Flashscore's NBL results page served as an independent third lineage.
+
+**WNBA — Phoenix 87, Dallas 86** (P-487 claimant A). The surviving Rank #1, Mercury +5.5, won; the Dallas winner call lost on a last-second layup. The body is not carried, so **no process learning** is drawn.
+
+**Follow-up, 2026-09-23 ~22:05 AEST — WNBA P-487 body recovered and settled** ([Part 5 §"2026-09-23(d)"](PREDICTION_LOG_COMBINED_5.md)):
+
+- Mercury +5.5 (Rank #1) **won**: Phoenix 87–86 on Copper's layup with 2.4 s left.
+- Over 174.5 **lost** at 173 (`TOP_OU_REVIEW`). The line sat at the card's centre, making it a coin flip that was correctly labelled LOW. **No totals rule.**
+- Dallas winner call **lost**.
+- The card's eight-branch mixture (BK-B1–B8, weights summing to 100%) reproduces its total probability (Over 52% at representative level). The spread and winner probabilities are not reproducible without a within-branch spread (G-L8), and `P(R1 ∧ R2)` was not printed (G-L10).
+- **OBSERVATION `O-ANNOUNCED-MINUTES-PLAN`:** Dallas's reported minutes management did not bind in a close game (Shepard 36 min v 27 two days earlier). Treat such reports as intentions with a close-game restoration branch.
+- **Horizon aid:** ESPN `summary` `plays[].wallclock` gives the actual tip (02:07:42Z here, v a 02:00Z schedule).

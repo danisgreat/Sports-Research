@@ -1,0 +1,580 @@
+# Chunichi Dragons @ Yokohama DeNA BayStars — NPB
+
+The first correction is the start time: **NPB lists this game for 18:00 JST, which is 7:00 PM AEST**, not 7:40 PM. The official probable starters are **Katsuki Azuma for DeNA and Kyle Muller for Chunichi**. :chatgpt-content-reference{index="0"}
+
+I completed the final research pass just after the scheduled start. I used only information that was pregame-relevant, such as confirmed starters, roster status and prior bullpen workloads. **I did not use the live score, hits, outs, inning state or any in-game performance.**
+
+## Final ranking
+
+| Rank | Pick | Estimated sporting probability* | Evidence |
+|---|---|---:|---|
+| **1** | **Under 6.5 runs** | **~62%** | **MEDIUM-LOW** |
+| **2** | **BayStars ML / outright win** | **~60%** | **MEDIUM-LOW** |
+| **3** | **Dragons +1.5** | **~57%** | **MEDIUM-LOW** |
+| **4** | **Over 6.5 runs** | **~38%** | LOW / forced complement |
+
+### Potential game winner
+## **Yokohama DeNA BayStars — ~60% outright**
+
+My approximate three-way sporting distribution is:
+
+**DeNA ~60% | Chunichi ~35% | Draw ~5%**
+
+### Representative score
+## **BayStars 3 – Dragons 2**
+
+That central score simultaneously gives:
+
+- **Under 6.5 ✅**
+- **BayStars outright ✅**
+- **Dragons +1.5 ✅**
+- Over 6.5 ❌
+
+\*These are `UNVALIDATED_SUBJECTIVE` research probabilities, not calibrated betting probabilities. The current Drive has **no fitted and validated NPB model**.
+
+---
+
+## 1. Methodology and the NPB moneyline issue
+
+This forecast uses the current Drive framework, **MDS-2026.09.19-v4.3 / CR-2026.09.21-3**, `SFA-BASEBALL`, with the supplied betting lines quarantined until after the sporting run distribution was constructed.
+
+There is an important NPB-specific contract issue. In the **2026 regular season, games can continue through 12 innings and then finish tied**. Unlike MLB, a draw is therefore a genuine terminal result. The exact operator's treatment of a tie on **“BayStars ML”** was not supplied.
+
+So:
+
+- my **~60%** means DeNA **wins the sporting event outright**;
+- I am **not** claiming your operator necessarily settles an NPB draw as a loss, push or void;
+- exact moneyline value therefore remains `UNKNOWN_DEFINITION / NO VALUE DETERMINABLE`.
+
+That distinction is required by the Drive methodology.
+
+---
+
+# 2. Starting pitching is the strongest reason for the Under
+
+## Katsuki Azuma — DeNA
+
+Official NPB figures entering today:
+
+- **11-5**
+- **2.22 ERA**
+- **150 IP**
+- 121 hits
+- just **21 walks**
+- 116 strikeouts
+- 11 HR allowed. :chatgpt-content-reference{index="1"}
+
+His recent five-start block has been exceptionally stable:
+
+| Date | Opponent | IP | ER |
+|---|---|---:|---:|
+| Sep 15 | Giants | 6.0 | 2 |
+| Sep 8 | Yakult | 7.0 | **0** |
+| Sep 2 | Giants | 7.0 | 1 |
+| Aug 26 | Hiroshima | 6.0 | 0 |
+| Aug 19 | Giants | 7.0 | **0** |
+
+That is **33 innings and only three earned runs** across those five outings. :chatgpt-content-reference{index="2"}
+
+His September 8 start is particularly relevant mechanically rather than just statistically: he went **seven scoreless innings, five hits, two walks and six strikeouts**. :chatgpt-content-reference{index="3"}
+
+### Against Chunichi
+
+A secondary current-season split database has Azuma at approximately:
+
+- **6 starts**
+- **39 IP**
+- **1.85 ERA**
+- 23 hits
+- 7 walks
+- 27 strikeouts
+- **0.77 WHIP**
+
+against Chunichi in 2026. :chatgpt-content-reference{index="4"}
+
+I do **not** treat that as six independent confirmations. The same opponent roster appears repeatedly and lineups change. But it supports the broader mechanism already visible in Azuma's current form: he limits free baserunners and is difficult to turn over for clustered innings.
+
+---
+
+# 3. Kyle Muller is also a genuine run-suppression starter
+
+Muller is not simply the weaker pitcher in a "DeNA ace vs ordinary Chunichi starter" setup.
+
+Official NPB figures:
+
+- **7-7**
+- **2.45 ERA**
+- **117⅓ IP**
+- 97 hits
+- 24 walks
+- 93 strikeouts
+- 10 HR. :chatgpt-content-reference{index="5"}
+
+His recent five starts:
+
+| Date | Opponent | IP | ER |
+|---|---|---:|---:|
+| Sep 14 | Hanshin | **9.0** | **0** |
+| Sep 5 | Yakult | 6.0 | 4 |
+| Aug 29 | DeNA | 6.0 | **1** |
+| Aug 22 | Yakult | 7.0 | 2 |
+| Aug 15 | Giants | 7.0 | **0** | :chatgpt-content-reference{index="6"}
+
+
+The latest start was especially strong: **nine scoreless innings on 106 pitches**, seven hits and only one walk against Hanshin. :chatgpt-content-reference{index="7"}
+
+### Against DeNA
+
+A current-season split database has Muller at:
+
+- 3 starts
+- **19⅓ IP**
+- **2.33 ERA**
+- 13 hits
+- just 2 walks
+- 13 strikeouts
+
+against DeNA. :chatgpt-content-reference{index="8"}
+
+On August 29 at this same venue, Muller gave DeNA **six innings of one-run baseball** in a 1-0 Dragons loss.
+
+That materially strengthens the Under rather than merely serving as generic recent form.
+
+---
+
+# 4. Central League rules also lower the ordinary scoring baseline
+
+This is a **Central League regular-season game**.
+
+In 2026, the Central League still **does not use the designated hitter**. The DH starts there in 2027.
+
+That means both starting pitchers occupy lineup spots tonight.
+
+Ordinarily this reduces offensive depth.
+
+There is one amusing but legitimate wrinkle: **Muller is unusually useful with the bat for a pitcher**. Official NPB records show him hitting:
+
+- **8-for-40**
+- **2 home runs**
+- **10 RBI**
+- .200/.200/.425. :chatgpt-content-reference{index="9"}
+
+He even hit a two-run homer and two-run double while throwing his shutout against Hanshin.
+
+So I do not model Chunichi's pitcher spot as quite the normal automatic offensive sink. It still does not remove the overall no-DH suppression mechanism.
+
+---
+
+# 5. Lineup availability: important limitation
+
+The official NPB and club feeds confirmed the starting pitchers, but I did **not recover a reliable source exposing both final nine-man starting orders before issuance**.
+
+A game-information feed explicitly said the starting members would be updated around 30 minutes before first pitch, but its indexed version still had the field blank when retrieved. :chatgpt-content-reference{index="10"}
+
+Therefore `BB-P2` is **PARTIAL / NOT RETRIEVED**.
+
+I will not relabel yesterday's batting orders as today's confirmed orders.
+
+The current regular cores are nevertheless clear. Chunichi's September 21 lineup included **Fukunaga, Muramatsu, Hosokawa, Sano, Ishikawa, Hanada, Okabayashi and Ishii**, while DeNA's September 21 lineup contained **Watarai, Maki, Tsutsugo, Encarnacion, Sano and Ebina** among its first six. :chatgpt-content-reference{index="11"}
+
+Because today's exact batting slots/catcher combinations were not recovered from a primary source, **none of my picks receives a HIGH evidence grade**.
+
+---
+
+# 6. Availability and roster changes
+
+NPB does not publish an NFL-style injury report. The correct current-availability hierarchy is roster registration/deregistration plus team reporting.
+
+On September 21:
+
+- DeNA registered **Katsumata** and deregistered pitcher **Takeda**.
+- Chunichi deregistered starter **Yudai Ohno** after his turn. :chatgpt-content-reference{index="12"}
+
+Nothing there changes today's Azuma-Muller matchup.
+
+The bigger late-game availability difference comes from **bullpen workload**.
+
+---
+
+# 7. Bullpen condition strongly favors Chunichi late
+
+This is an important counterweight to DeNA's starter advantage.
+
+## DeNA bullpen
+
+Yesterday's 3-2, 11-inning loss to Hanshin required:
+
+- Naoki Wakamatsu: 18 pitches
+- **Hiromu Ise: 11**
+- Hamachi: 16
+- **Reynolds: 16**
+- Yoshino: 15
+- Nakagawa: 9
+
+after the starter departed. :chatgpt-content-reference{index="13"}
+
+So DeNA used **six relievers**, including important leverage arms, and played 11 innings.
+
+That does not mean they are unavailable tonight. It means expected late-game quality and availability have to be widened.
+
+This is one reason I am not making DeNA ML a 65-70% selection.
+
+## Chunichi bullpen
+
+Chunichi had a much easier bullpen day yesterday.
+
+Hiroto Takahashi went **seven scoreless**, and only **Haruki Miyauchi and Sakurai** were required to cover the eighth and ninth. :chatgpt-content-reference{index="14"}
+
+Closer **Shinya Matsuyama**, who has 30 saves, was not needed in the 10-0 win after having recorded his 30th save on September 20. :chatgpt-content-reference{index="15"}
+
+### Consequence
+
+**Starter innings:** meaningful DeNA advantage.
+
+**Late bullpen condition:** meaningful Chunichi advantage.
+
+That is a large reason **Dragons +1.5 remains competitive** despite DeNA being my outright winner.
+
+---
+
+# 8. Recent offensive form: useful for dispersion, not direction
+
+The Drive forbids using one or two high-scoring games as evidence that an offence has permanently changed.
+
+That matters especially for Chunichi.
+
+Their recent sequence includes:
+
+- 1-0 win
+- 6-0 win
+- 4-1 win
+- 0-2 loss
+- **1-14 loss**
+- **8-5 win**
+- **10-0 win**. :chatgpt-content-reference{index="16"}
+
+That is enormous dispersion.
+
+The 10-run game yesterday does **not** cause another high-scoring game tonight. It came against a completely different starting-pitcher environment.
+
+DeNA's recent results are similarly mixed, including 13-2, 2-1, 1-3, 5-3, 1-8 and 2-3. :chatgpt-content-reference{index="17"}
+
+So I preserve **run-cluster upper tails**, but the current starters control the centre.
+
+---
+
+# 9. Yokohama Stadium pushes back against the Under
+
+This is the strongest environmental argument against Pick #1.
+
+Yokohama Stadium has been a **hitter-friendlier Central League venue in 2026**.
+
+Current park factors:
+
+- HR factor: **1.12**
+- run factor: **1.11** for same-league games
+- all-games run factor: **1.08**. :chatgpt-content-reference{index="18"}
+
+So I am **not** treating Yokohama as a pitchers' park.
+
+That prevents the Under from getting into a 65-70% type range.
+
+### Current venue matchup diagnostic
+
+In the 2026 data through the latest update, Chunichi at Yokohama is:
+
+- **2-8-1**
+- batting about .189
+- **22 runs in 11 games**, roughly 2.0/game. :chatgpt-content-reference{index="19"}
+
+That supports a low Chunichi centre, but I treat it only as diagnostic because it bundles many different starters and batting orders.
+
+---
+
+# 10. Weather
+
+Current pregame conditions carried a meaningful shower/interruption possibility. Around the game window, the retrieved forecast showed roughly **45-52% precipitation probability**, humid conditions and temperatures in the mid-20s Celsius.
+
+
+
+::chatgpt-content-reference{index="20"}
+
+
+
+NPB's schedule itself described the Yokohama weather broadly as cloudy with some sun. :chatgpt-content-reference{index="21"}
+
+I did **not** retrieve an authoritative field-relative wind vector.
+
+Therefore:
+
+- no automatic rain = Under adjustment;
+- no unsupported wind/home-run adjustment;
+- weather adds a **termination/delay and pitcher-rhythm uncertainty branch**.
+
+Because your operator's rain/suspension action rules were not supplied, that branch remains `UNKNOWN_DEFINITION`.
+
+---
+
+# 11. Independent run tree
+
+Built before querying the 6.5 total and the supplied sides.
+
+### `P-489-NPB-joint-v1`
+**`UNVALIDATED_SUBJECTIVE`**
+
+| Branch | Weight | Representative state | Mechanism |
+|---|---:|---|---|
+| **BB-B1 starter-control centre** | 32% | DeNA 3-2 | Azuma/Muller both work deep |
+| **BB-B2 early hook** | 9% | DeNA 5-4 | one starter loses command/HR cluster |
+| **BB-B3 sequencing/HR cluster** | 10% | Chunichi 5-3 | Yokohama park + right-handed power beats the starter centre |
+| **BB-B4 low opponent floor** | 12% | DeNA 4-0 | Azuma controls Chunichi and DeNA creates separation |
+| **BB-B5 relief transition** | 13% | Chunichi 3-2 | DeNA's worked bullpen loses a late one-run state |
+| **BB-B6 home ninth suppressed** | 9% | DeNA 3-1 | DeNA leads after 8½ and does not bat ninth |
+| **BB-B7 extra innings / tie** | 8% | 2-2 / 3-2 state | no automatic runner; game can end tied after 12 |
+| **BB-B8 weather interruption** | 3% | action-dependent | interruption/restart/shortening uncertainty |
+| **BB-B9 late separation** | 4% | DeNA 5-2 | close starter phase expands after relief transition |
+
+### Integrated sporting distribution
+
+My best estimate is approximately:
+
+- **DeNA: 60% outright**
+- **Chunichi: 35% outright**
+- **tie: 5%**
+- projected DeNA runs: **~3.1**
+- projected Chunichi runs: **~2.2**
+- total centre: **~5.3 runs**
+- **Under 6.5 ~62%**
+- **Over 6.5 ~38%**
+- **Dragons +1.5 ~57%**
+
+These probabilities include broader score variation inside each branch; the representative score is not assumed to occur exactly.
+
+---
+
+# 12. Why Under 6.5 is #1
+
+## **Under 6.5 — ~62%**
+
+This is the most robust sporting contract because the central path has **two legitimate run-prevention starters**.
+
+At 6.5:
+
+- DeNA 3 + Chunichi 3 = Under
+- DeNA 4 + Chunichi 2 = Under
+- DeNA 3 + Chunichi 2 = comfortably Under
+- 4-3 or 5-2 is enough to lose it.
+
+### Main supporting mechanisms
+
+**Azuma:** 2.22 season ERA and outstanding current five-start run prevention. :chatgpt-content-reference{index="22"}
+
+**Muller:** 2.45 season ERA, with 0, 4, 1, 2, 0 earned runs across his most recent five starts. :chatgpt-content-reference{index="23"}
+
+**No DH:** pitchers bat in the 2026 Central League.
+
+**Direct opponent history:** Azuma and Muller have both prevented runs effectively against today's opponent this season. :chatgpt-content-reference{index="24"}
+
+### Kill paths
+
+The Under can still fail through:
+
+1. Yokohama's hitter-friendly HR environment;
+2. Hosokawa/Sano/right-handed Chunichi power finding Azuma;
+3. Muller's less dominant 4-run branch;
+4. a taxed DeNA bullpen;
+5. one multi-run relief inning;
+6. extra innings;
+7. weather disrupting starter rhythm rather than suppressing scoring.
+
+That upper tail is why I stop around **62%**.
+
+---
+
+# 13. Why BayStars ML is #2
+
+## **BayStars outright — ~60%**
+
+DeNA has three meaningful advantages:
+
+**Azuma > Muller**, although the gap is not huge on current form.
+
+**Home last bat**, which is particularly valuable in a low-scoring close game.
+
+**Stronger season-level team profile:** DeNA enters **66-66-3**, while Chunichi is **59-76-2**. :chatgpt-content-reference{index="25"}
+
+Azuma has also been extremely effective against Chunichi during the current season.
+
+### Why it isn't #1
+
+Muller is genuinely pitching well, and **DeNA's bullpen is considerably more worked than Chunichi's**.
+
+The most likely BayStars-loss mechanism is not a blowout. It is:
+
+> Azuma and Muller both pitch well, the game reaches the seventh/eighth tied or within one, and Chunichi has the fresher leverage chain.
+
+That is a real enough branch to keep DeNA around 60%.
+
+And again, the **operator's ML tie rule is unknown**.
+
+---
+
+# 14. Why Dragons +1.5 is #3
+
+## **Dragons +1.5 — ~57%**
+
+This is very close to BayStars ML in my distribution.
+
+A **3-2 DeNA win** gives both:
+
+- BayStars outright win;
+- Dragons +1.5 cover.
+
+Chunichi +1.5 also benefits from:
+
+- Muller pitching well;
+- the low expected run count;
+- the stronger-rested bullpen;
+- NPB's possibility of a terminal tie.
+
+### Why it doesn't rank higher
+
+Low totals do **not automatically imply close margins**.
+
+Azuma can shut Chunichi down completely.
+
+Scores such as:
+
+- 3-1,
+- 4-1,
+- 4-0,
+- 5-2
+
+all lose Dragons +1.5 even while remaining mostly consistent with the Under thesis.
+
+That explicit one-sided low-scoring branch is mandatory under the Drive methodology.
+
+---
+
+# 15. Over 6.5
+
+## **Over 6.5 — ~38%**
+
+This is the weakest of the supplied four, but it has a credible tail.
+
+The best Over mechanisms are:
+
+- Yokohama's 1.11 run factor;
+- Chunichi's Hosokawa-led home-run threat;
+- Muller's occasional ordinary/poor-start state;
+- DeNA's six-reliever workload yesterday;
+- rain/delay interrupting starter rhythm;
+- a 4-3 game;
+- extra innings.
+
+The Over does **not** require both offences to dominate. One 4-run inning can fundamentally change the target.
+
+I still put most probability below seven because **both starting-pitching distributions are unusually strong for this threshold**.
+
+---
+
+# Cross-market coherence
+
+My representative state is:
+
+## **DeNA 3-2 Chunichi**
+
+| Contract | Result in central state |
+|---|---|
+| Under 6.5 | **WIN** |
+| BayStars outright | **WIN** |
+| Dragons +1.5 | **WIN** |
+| Over 6.5 | LOSS |
+
+So the top three are coherent rather than contradictory.
+
+The distinction is:
+
+> I expect DeNA to be **more likely to win**, but I do **not** expect DeNA to be highly likely to win by multiple runs.
+
+---
+
+# Source ledger
+
+The key sources were:
+
+1. **NPB official schedule / Central League page** for event identity, correct 18:00 JST start and official starters. :chatgpt-content-reference{index="26"}
+2. **NPB official pitching leaders** for Azuma's current season record. :chatgpt-content-reference{index="27"}
+3. **NPB official Muller player page** for his current pitching and batting record. :chatgpt-content-reference{index="28"}
+4. **SportsNavi starter game logs** for the recent Azuma/Muller workload and results. :chatgpt-content-reference{index="29"}
+5. **Nikkansports** for Muller's September 14 complete-game shutout. :chatgpt-content-reference{index="30"}
+6. **DeNA official September 21 box score** for exact prior-day bullpen workload. :chatgpt-content-reference{index="31"}
+7. **SportsNavi September 21 Chunichi box score** for Takahashi/Miyauchi/Sakurai bullpen usage. :chatgpt-content-reference{index="32"}
+8. **NPB registration notices** for current roster transactions. :chatgpt-content-reference{index="33"}
+9. **Baseball Chronicle** for current Yokohama park factors and venue splits. :chatgpt-content-reference{index="34"}
+10. **NPB official September results** for recent-team windows; used diagnostically rather than as a predictive streak. :chatgpt-content-reference{index="35"}
+11. **Sports Research Google Drive** for `METHOD.md`, `RULES_GENERAL.md`, `RULES_BASEBALL.md`, `DATA_SOURCE_REGISTER.md`, `BASE_RATES_REGISTER.md` and current controls.
+12. The user-provided GitHub repository remains a requested research source; no GitHub-only claim was admitted without independent verification. :chatgpt-content-reference{index="36"}
+
+No sportsbook prediction, betting consensus, market movement, fantasy projection or tipster analysis was used.
+
+---
+
+# Updated Prediction Mini Running Log
+
+Per the mini-log instructions, unsettled forecasts stay tracked and no retrospective is done unless requested. :chatgpt-content-reference{index="37"}
+
+## Prediction Mini Running Log — P-482 onward
+
+**Method:** MDS-2026.09.19-v4.3 / CR-2026.09.21-3  
+**Mode:** SPORTS_ONLY / MARKET_BLIND  
+**Performance:** LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE  
+**Next canonical ID:** **P-490**
+
+| ID | Event | Rank #1 | Potential winner | Status |
+|---|---|---|---|---|
+| P-482 | Antigua vs Jamaica, CPL | Jamaica 1st 6 O47.5 ~59.9% | Antigua ~53% | Unsettled |
+| P-483 | Volynets vs Kalieva | Over 19.5 ~65.2% | Volynets ~62% | Unsettled |
+| P-484 | Atlanta @ NY Liberty | Under 177.5 ~54% | Atlanta ~58% | Unsettled |
+| P-485 | NY Giants @ LA Rams | Giants +6.5 ~61% | Rams ~64% | Unsettled |
+| P-486 | Twins @ Giants MLB | Twins ML ~59% | Twins ~59% | Unsettled |
+| P-487 | Wings @ Mercury | Mercury +5.5 ~62% | Dallas ~58% | Unsettled |
+| P-488 | Wolff vs Oliynykova | Under 20.5 ~60% | Oliynykova ~74% | Unsettled |
+| **P-489** | **Chunichi @ DeNA** | **Under 6.5 ~62%** | **DeNA ~60%** | **Unsettled** |
+
+### P-489 — NPB — Chunichi Dragons @ Yokohama DeNA BayStars
+
+**Status:** `UNSETTLED — PREGAME FORECAST / NO RETROSPECTIVE`
+
+**Correct scheduled start:** 22 Sep 2026, **7:00 PM AEST / 18:00 JST**.  
+**Venue:** Yokohama Stadium.  
+**Starters:** Katsuki Azuma vs Kyle Muller, official NPB probables.  
+**Exact lineups:** not recovered from an eligible current source before issuance; `BB-P2 PARTIAL`.  
+**Operator ML/tie and weather-action terms:** `UNKNOWN_DEFINITION`.
+
+**Independent centre:** DeNA approximately **3.1**, Chunichi approximately **2.2**, total approximately **5.3**.
+
+**Ranked picks**
+1. **Under 6.5 — ~62% — MEDIUM-LOW**
+2. **BayStars outright — ~60% — MEDIUM-LOW**
+3. **Dragons +1.5 — ~57% — MEDIUM-LOW**
+4. **Over 6.5 — ~38% — LOW**
+
+**Potential winner:** **Yokohama DeNA BayStars ~60%**, with Chunichi ~35% and draw ~5%.
+
+**Main Rank-1 kill path:** Yokohama HR/cluster state or DeNA's taxed relief chain turns a 3-2/3-1 game into 4-3/5-3 or an extended extra-inning game.
+
+**Document mapping:** `RULES_BASEBALL.md` starter identity, no-DH NPB regime, bullpen score-state, home-last-bat, tie/12-inning endpoint, weather termination, low-total separation, joint scoring and line-quarantine controls applied. No new methodology rule proposed.
+
+**No retrospective was performed.**
+
+## Bottom line
+
+**#1 Under 6.5**  
+**#2 BayStars ML / outright**  
+**#3 Dragons +1.5**  
+**#4 Over 6.5**
+
+**Potential winner: Yokohama DeNA BayStars, most likely in a low-scoring one-run game.**
+
+For future NPB cards, I can also monitor the official starter/lineup release near first pitch and flag any change that materially alters the ranking.

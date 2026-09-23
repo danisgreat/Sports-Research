@@ -567,3 +567,15 @@ Historical source conclusions are explicitly superseded when later audits demons
 
 
 Source rules are unchanged from the reconciled CR-2 state: field ownership, independent upstream lineage, point-in-time cutoff safety, market/fantasy source quarantine, explicit missingness and three-lineage terminal settlement remain controlling. The revision bump reflects live-rule/read-back synchronization elsewhere, not a new source weight or predictive feature.
+
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-23 -->
+## 2026-09-23 — quick reference from the consolidated P-487–P-494 import
+
+Full cards: `DATA_SOURCE_REGISTER.md` §"2026-09-23".
+
+- **NPB settlement:** NPB box (raw HTML; field owner) + Sports Navi schedule page + Kyodo wire **or** Nikkan staff report. **Exclude Mynavi's AI-generated "プロ野球試合結果" recaps.**
+- **NBL settlement:** the NBL match-data API (status/score fields only; skip the `betting`/`odds` keys) + ESPN (no browser UA; `?dates=`) + Flashscore results. ESPN and the NBL feed may share a vendor, so keep one fully independent lineage (Flashscore).
+- **NBL availability:** the official preview's expected depth chart and the injury list come first. Print first names where surnames collide (Jaylin v Kyrin Galloway).
+- **WTA live:** the match feed can drop a live match from its list; use the ESPN tennis scoreboard as the live cross-check.
+- **Lineage rule reminder:** a league feed and a publisher on the same data vendor are one lineage until shown otherwise. Record the vendor where a feed exposes it (e.g., `sportradar_timestamp`).

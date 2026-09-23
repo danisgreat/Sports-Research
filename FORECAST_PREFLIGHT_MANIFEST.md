@@ -1,10 +1,10 @@
-﻿# Forecast preflight manifest schema — 2026-09-21
+# Forecast preflight manifest schema — 2026-09-21
 
 
-Status: **ACTIVE companion to `prediction_preflight.py`** under METHOD **MDS-2026.09.19-v4.3** / CONTROLS **CR-2026.09.21-3**. This schema is a control artifact, not a fitted model.
+Status: **ACTIVE machine-generation schema; OPTIONAL / SUPERSEDED by direct card verification for interactive logging (2026-09-23 user directive)** under METHOD **MDS-2026.09.19-v4.3** / CONTROLS **CR-2026.09.21-3**. This schema is a control artifact, not a fitted model.
 
 
-A new forecast must produce a JSON manifest before normal issuance. The validator is fail-closed.
+For automated batch pipelines, a forecast produces a JSON manifest validated by `prediction_preflight.py`. For interactive logging, per 2026-09-23 user directive, preflight gates are verified and printed directly within the prediction card, and audited via `audit_card_controls.py` without separate scratch JSON files.
 
 
 ```json
