@@ -1,0 +1,32 @@
+{
+  "source_folder": "https://drive.google.com/drive/folders/1ChlwkiOvd8c4MTaLC5BvkLniWogrm8Lj",
+  "baseline_manifest": "DRIVE_SYNC_MANIFEST_2026-09-22.json",
+  "baseline_commit": "919552aad7e5dc274919400d4a9cf86d51f59699",
+  "baseline_synced_at": "2026-09-22T00:35:13.599Z",
+  "checked_at": "2026-09-23T02:40:56Z",
+  "check": "Drive search for all non-trashed items modified after baseline sync returned one file; its parent is the source folder.",
+  "changed_source_file_count": 1,
+  "files": [
+    {
+      "drive_id": "11Rhc1CDam9YO3yRSGTC0qNr2fXYk2HHV6dD1wSipcZo",
+      "source_title": "IMPLEMENTED_CHANGES_2026_09_23.md",
+      "source_url": "https://docs.google.com/document/d/11Rhc1CDam9YO3yRSGTC0qNr2fXYk2HHV6dD1wSipcZo",
+      "source_mime_type": "application/vnd.google-apps.document",
+      "source_modified_at": "2026-09-22T15:22:06.182Z",
+      "exports": [
+        {
+          "path": "IMPLEMENTED_CHANGES_2026_09_23.md",
+          "mime_type": "text/markdown",
+          "bytes": 3662,
+          "sha256": "369101F81AF1F13B5D0F6D385F2B84F2A02F7EE8FB16E345F50E8850BCBC53EE"
+        },
+        {
+          "path": "IMPLEMENTED_CHANGES_2026_09_23.md.docx",
+          "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "bytes": 9570,
+          "sha256": "B39174E61C4F2D5720C9F1C9DC58F2BE8B94B6625B75EF3A69490153698D4126"
+        }
+      ]
+    }
+  ]
+}
