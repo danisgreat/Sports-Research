@@ -1,76 +1,72 @@
-# Combined prediction log 5
+# Prediction Mini Running Log — P-482 Onward
 
-> **Controlling status:** all combined-log material remains **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. Settlement preserves evidence; it does not make the dataset formally performance-valid. Issued records are immutable.
+**Created:** 2026-09-21 (Australia/Melbourne)  
+**Canonical authority:** `PREDICTION_LOG_COMBINED_5.md`  
+**Previous combined log:** `PREDICTION_LOG_COMBINED_4.md` closed at `P-481`  
+**Next canonical ID:** **P-484**, after issuance of P-483  
+**Governing method at creation:** **MDS-2026.09.19-v4.3 / CR-2026.09.19-4**; fresh-read the current root documents before every prediction  
+**Operating mode:** **SPORTS_ONLY / MARKET_BLIND**  
+**Performance status:** **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**  
+**Retrospective policy:** do **not** perform a retrospective automatically unless explicitly requested.
 
-Status: **ACTIVE CANONICAL LOG — ALL NEW FORECASTS APPEND HERE**
-Opened: **2026-09-21**, after Part 4 was closed at `P-481`.
-Canonical range: **`P-482` onward**.
-Next canonical ID: **P-494** (updated 2026-09-23 after local ID reconciliation; fresh preflight remains required before any new forecast).
-Current governing method at rollover: **MDS-2026.09.19-v4.3 / CR-2026.09.19-4**. Always fresh-read `METHOD.md` and the current control manifest before a new prediction rather than relying on this snapshot.
-Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
+---
 
-| Part | File | ID range | Status |
-|---|---|---|---|
-| 1 | `PREDICTION_LOG_COMBINED.md` | `P-001`–`P-271` | CLOSED — read/settle only |
-| 2 | `PREDICTION_LOG_COMBINED_2.md` | `P-272`–`P-332` | CLOSED — read/settle only |
-| 3 | `PREDICTION_LOG_COMBINED_3.md` | `P-333`–`P-423` (`P-372` reserved/unused) | CLOSED — read/settle only |
-| 4 | `PREDICTION_LOG_COMBINED_4.md` | `P-424`–`P-481` | CLOSED 2026-09-21 — read/settle only |
-| **5** | **`PREDICTION_LOG_COMBINED_5.md` (this file)** | **`P-482` onward** | **ACTIVE** |
+## Settlement pass — 2026-09-22
 
-## Current controlling snapshot
+> This is the **settled** version of the P-482-onward running log. Every issued card is preserved **verbatim** — moved unchanged from §1 into §3. All settlement, retrospective and audit material is appended and dated. No issued probability, rank, selection, reasoning, distribution, source list or canonical ID was altered. The complete issue-time sections that followed the cards are kept unchanged in Appendix A, and the brief for this pass is kept in Appendix B.
 
-| Field | Current value |
+| Field | Value |
 |---|---|
-| As of | **2026-09-23, Australia/Sydney** — P-482–P-483 retained from the prior settled import; P-484–P-493 custody reconciled below; no result-state refresh or retrospective was performed in this pass |
-| Highest canonical prediction ID | **P-493** |
-| Next canonical ID | **P-494** |
-| Part-5 issued events | **10 canonical event cards** — P-482, P-483, P-484, P-485, P-486, P-488, P-489, P-491, P-492, P-493. P-487 is a noncanonical issue-time hold; P-490 is retired/unused. |
-| Part-5 open / pending events | **3** — P-489 (Chunichi–DeNA), P-491 (Orix–Lotte), P-493 (KIA–Doosan); current terminal states were not refreshed in this ID-only pass. |
-| Part-5 learning-only diagnostics | Existing settled results are unchanged by ID reassignment; active mini-log counters remain descriptive, not performance evidence. |
-| Active mini log | ../Documents/Sports Research/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD.md — full ranked cards and sources retained locally |
-| Historical open handles | Continue in GAME_LOG_STATUS_CURRENT.md; recovered NBL card remains temporary under TMP-20260923-NBL-CNS-TAS until issue-time sequence is established |
-| Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE** |
-| Value status | `NO VALUE DETERMINABLE` unless the current governing value gate is explicitly satisfied |
-
-## Mandatory continuity rules
-
-1. Fresh-read the current governing methodology, controls, source register and relevant sport-specific rule file before every forecast.
-2. Check `GAME_LOG_STATUS_CURRENT.md` and the active mini log before assigning an ID.
-3. Do not reuse or renumber a canonical ID. Use a temporary ID if a collision cannot be safely reconciled.
-4. Preserve the original pre-game prediction exactly after issue; settlement and retrospective material is appended, never retrofitted.
-5. Keep unresolved/live events explicitly pending. Do not settle from incomplete or non-terminal data.
-6. Record all material sources and field ownership. Primary/official and high-quality statistical sources take priority.
-7. Rank #1 is the strongest justified selection under the governing methodology. Rank-1 failures receive enhanced retrospective scrutiny.
-8. Totals, phase markets, alternate lines, lineups/bench availability, coaching, venue/weather and source-quality controls follow the current root framework and relevant sport file.
-9. Sportsbook odds, betting picks, tipsters, line movement and fantasy/DFS material are not predictive evidence under the market-blind firewall.
-10. After each new prediction, append the complete event to the active mini log and provide the entire updated mini log.
-
-## Chronological issued / settled events
-
-### 2026-09-22 — import of `P-482`–`P-483` from the P-482-onward mini log, with settlement and retrospective
-
-Both Part-5 events to date were issued in the external running log `PREDICTION_MINI_RUNNING_LOG_P482_ONWARD.md` and are registered here for the first time. Each issued card is reproduced **verbatim**; the settlement and retrospective that follow each card are dated 2026-09-22 and identical to the settled mini log.
-
-| Provenance field | Value |
-|---|---|
-| Source file | `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-482 onward - 2026-09-21/PREDICTION_MINI_RUNNING_LOG_P482_ONWARD.md` |
-| As-issued (pre-settlement) bytes | 45,286 bytes — SHA-256 `857413c7d2b50087ad4c71c670ed632dcd5d4c9e89e2ac4f0801e04e659557c5` — Drive file `1WgrecYGDkaYOhWPOCTXDHl9b46QjxEGr`, Drive modifiedTime 2026-09-21T03:03:36Z. Byte-exact copy: `archive/mini_logs/originals_2026-09-22/PREDICTION_MINI_RUNNING_LOG_P482_ONWARD_PRE_SETTLEMENT.md` |
-| Settled variant written by this pass | 144,868 bytes — SHA-256 `6beb4b5cdaab2e31c3665331101307a56a7ebf02a71d01522f2762ed49558549` |
-| Issue horizon | **P-482 — PREGAME**: final volatile refresh 2026-09-21 08:54:41 AEST (2026-09-20 22:54:41 UTC), 5 min 19 s before the scheduled start. **P-483 — PREGAME**: final refresh 2026-09-21 13:00:42 AEST (03:00:42 UTC), at the scheduled-start minute, with the WTA exact-match page, L'Equipe and MyKhel all showing the match as upcoming |
-| Issued method / control revision | MDS-2026.09.19-v4.3 / **CR-2026.09.19-4** for both (issued before CR-2026.09.21-1 existed). Not retrofitted |
-| Provenance basis | Genuine pregame issue recorded on each card; no live information used. A local hash is content evidence, not an independent timestamp |
-| Registration timing | **Overdue** under METHOD §3 step 7: about 39 h (P-482) and 35 h (P-483) after issue against a 24-hour window. Nothing was lost — the mini log held both cards on Drive throughout — but this log's snapshot was stale until this pass |
-| Pre-write integrity check | Two IDs, each used once; no collision with `P-001`–`P-481`; no duplicate events (the CPL Final, ESPN event 1534217, is distinct from P-445's Eliminator, event 1534214); no temporary IDs; both events **FINAL**, each passing the three-lineage terminal-state gate with four independent lineages |
+| Pass | Full settlement and retrospective, run on the user's explicit request (brief preserved in Appendix B) |
+| Pass date | 2026-09-22 → 2026-09-23 (Australia/Melbourne); settlement checks 2026-09-22 ≈ 23:45–23:55 AEST (13:45–13:55 UTC) |
+| Pre-settlement file | `PREDICTION_MINI_RUNNING_LOG_P482_ONWARD.md` — 45,286 bytes — SHA-256 `857413c7d2b50087ad4c71c670ed632dcd5d4c9e89e2ac4f0801e04e659557c5`. Same byte count as the Drive copy (file ID `1WgrecYGDkaYOhWPOCTXDHl9b46QjxEGr`, Drive modifiedTime 2026-09-21T03:03:36Z) |
+| Byte-exact pre-settlement copy | `archive/mini_logs/originals_2026-09-22/PREDICTION_MINI_RUNNING_LOG_P482_ONWARD_PRE_SETTLEMENT.md` |
+| Authority read for this pass | MDS-2026.09.19-v4.3 / CR-2026.09.21-3 (`CONTROL_MANIFEST_2026-09-21-3.md`); `METHOD.md`; `SCORING_AND_VALIDATION.md` (SCV-2026.09.19-v2); `EXTERNAL_LOGGING_WORKFLOW.md`; `RULES_GENERAL.md`; `RULES_CRICKET.md`; `RULES_TENNIS.md`; `LEARNING_REGISTER.md`; `GAME_LOG_STATUS_CURRENT.md`; `PREDICTION_LOG_COMBINED_4.md` and `_5.md`; the settled P-474 audit layer |
+| Revision the cards are judged against | Both cards were issued under **CR-2026.09.19-4** — P-482 at 2026-09-20 22:54:41 UTC, P-483 at 2026-09-21 03:00:42 UTC — before CR-2026.09.21-1 existed (its audit file was created 2026-09-21 03:51 UTC). They are graded against the controls in force at issue. CR-2026.09.21-1 and -3 controls are cited only as "since added" |
+| Provenance basis | Genuine pregame issue, with the final volatile refresh time printed on each card; no live information used. A local hash is content evidence, not an independent timestamp |
+| Mechanical completeness audit | `python audit_card_controls.py <this log> --settlement` on the pre-settlement file: both cards flagged on blocking fields 2, 3, 5a and 7 (and 10 for P-483, before settlement). Manual adjudication in §4.6 item 7: most flags are **template drift** — the script checks the retired §16.8 block, not METHOD v4.3's six-field object — and the script **did not detect** the omissions that actually mattered |
 | Eligibility | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE** |
 
-**Cohort summary (learning-only diagnostics; forced pairs counted once in decisions).**
+### What this pass found, in brief
 
-| ID | Event | Result | Rank-1 | Hit@2 | Wins@2 | NDCG@2 | Decisions | Top O/U | Winner call | Grade (G37) |
-|---|---|---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|---|
-| P-482 | CPL 2026 Final — Falcons v Kingsmen | Jamaica 170/9, Falcons 173/2 (16.4) — Falcons by 8 wkts; **Jamaica 59/2 after six** | **W** | YES (mechanical) | 1/2 | 1.000 | 1 W / 0 L (Brier 0.1608) | W | **W** (0.2209) | Result-right / process-different |
-| P-483 | WTA Seoul R32 — Volynets v Kalieva | **Volynets 6-3, 6-0** — 15 games, +9 | **L** | NO | 0/2 | 0.000 | 0 W / 2 L (Brier 0.4251, 0.3411) | **L** (`TOP_OU_REVIEW`) | **W** (0.1444) | Result-wrong / process-wrong in part |
+- **Both events are final and settled.** Each passed the three-lineage terminal-state gate with four independent lineages.
+- **P-482 (CPL 2026 Final):** Jamaica were **59/2 after six legal overs**. Rank #1 Over 47.5 **WIN**; projected winner Falcons **WIN**. Graded **result-right / process-different**: the Over won through the mechanism the card named (Maaz Sadaqat), but its breakaway component was sized on two *chase* powerplays and Jamaica batted first. At Kensington that week, batting-first powerplays averaged 35.0 (1 of 5 above 47.5); the toss had been made about 25 minutes before the card's final refresh.
+- **P-483 (WTA Seoul R32):** Volynets won **6-3, 6-0** (15 games). Rank #1 Over 19.5 — also the top over/under — **LOSS**, and Rank #2 Kalieva +4.5 **LOSS**; Ranks #3 and #4 won; projected winner Volynets **WIN**. Graded **result-wrong / process-wrong in part**. The card's 62% for Volynets sat 12–15 points below the independent Elo benchmark (≈ 74–77%) that tennis control 13 requires be printed; it was not printed, and neither player's return profile was.
+- **Every issue-time fact checked was accurate** (five of five cricket powerplay checkpoints; tennis identity, rankings, serve fields and recent results). The defects are **omissions of existing mandatory controls** (`M15`), not factual errors.
+- **P-483 is the fourth logged tennis card** on which a favourite's separation defeated a ranked Over (with P-212, P-242 and P-310).
+- **No ID conflict; no temporary ID needed.** P-482 and P-483 had not been registered in `PREDICTION_LOG_COMBINED_5.md` within METHOD §3 step 7's 24-hour window; they are appended there in this pass.
 
-Decisions 1 W / 2 L; decision Brier 0.3090 across targets, 0.2719 event-weighted; winner calls 2 of 2 (mean Brier 0.1826). The 3 W / 3 L row record is mechanical — all six rows are halves of forced pairs — and is not a performance figure.
+---
+
+## 1. Incomplete / Unsettled Logs
+
+**None.** Both entries are complete, settled and retrospectively reviewed.
+
+Phase-1 audit of every entry, first to most recent:
+
+| # | Canonical ID | Sport / competition | Event | Scheduled start (venue-local → Melbourne) | State at settlement check | Checked (AEST) | Settlement status |
+|---|---|---|---|---|---|---|---|
+| 1 | P-482 | Cricket / Republic Bank CPL 2026 Final | Antigua & Barbuda Falcons vs Jamaica Kingsmen, Kensington Oval, Bridgetown | 20 Sep 2026 19:00 AST (UTC−4) → 21 Sep 2026 09:00 AEST | **Completed** — full 20 overs each side; no interruption; "Antigua and Barbuda Falcons won the 2026 Caribbean Premier League" | 2026-09-22 ≈ 23:45 | SETTLED / RETROSPECTIVE COMPLETE |
+| 2 | P-483 | Tennis / WTA 250 Korea Open (Seoul), Round of 32 | Katie Volynets vs Elvina Kalieva, Show Court 1 | 21 Sep 2026 12:00 KST (UTC+9) → 21 Sep 2026 13:00 AEST | **Completed** — "Finished", 6-3 6-0, 1 h 12 min; no retirement or walkover | 2026-09-22 ≈ 23:50 | SETTLED / RETROSPECTIVE COMPLETE (ENHANCED) |
+
+No entry is Upcoming, Live, Delayed, Suspended, Postponed, Abandoned or Cancelled.
+
+## 2. Temporary-ID / Canonical-ID Conflict Logs
+
+**None. No temporary ID is required.**
+
+Reconciliation performed 2026-09-22:
+
+- `PREDICTION_LOG_COMBINED_5.md` — the active queue and next-ID authority — showed before this pass: highest canonical ID P-481, next P-482, "Part-5 issued events: None yet". P-482 and P-483 therefore collide with nothing.
+- `GAME_LOG_STATUS_CURRENT.md` enumerates canonical records through P-481 only.
+- A repository-wide search for `P-482` / `P-483` finds only "next intended ID" pointers (Part 4, the P-474 mini-log files, `METHOD.md`, `README.md`, the CR-3 ledger) and one audit reference (`AUDIT_AND_CRICKET_SOURCE_UPDATE_2026-09-21.md` §1.2 D) that describes this same P-482 card. No other event carries either ID.
+- Duplicate-event check: the CPL 2026 Final (ESPN event 1534217) is a different event from P-445 (the CPL 2026 Eliminator, event 1534214). No earlier log holds Volynets vs Kalieva.
+- **Integrity observation.** Registration in Part 5 was overdue: about 39 hours after issue for P-482 and 35 hours for P-483, against METHOD §3 step 7's 24 hours. Nothing was lost — the mini log held both cards on Drive throughout — but the Part-5 snapshot was stale. Corrected in this pass.
+- Next canonical ID after this pass: **P-484**, unchanged from this log's header.
+
+## 3. Fully Settled Logs
+
+In canonical-ID order. Each card is reproduced exactly as issued, preceded by a short settlement banner and followed by its dated settlement and retrospective.
 
 
 > **P-482 — SETTLED 2026-09-22 / RETROSPECTIVE COMPLETE.** Jamaica Kingsmen 170/9 (20) lost to Antigua & Barbuda Falcons 173/2 (16.4) by 8 wickets. **Jamaica after six legal overs: 59/2.** Rank #1 Over 47.5 **WIN**; Rank #2 Under 47.5 **LOSS**; projected winner Falcons **WIN**. G37 grade: **RESULT-RIGHT / PROCESS-DIFFERENT** — the Over won through the mechanism the card named (Maaz Sadaqat), but the evidence that sized it came from chase powerplays and Jamaica batted first.
@@ -774,11 +770,11 @@ Document destinations for each of these are in §5.
 
 ---
 
-### 4. General Learnings, Rule Changes, Observations, and New Sources — 2026-09-22 cohort (P-482–P-483)
+## 4. General Learnings, Rule Changes, Observations, and New Sources
 
 Everything below is **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. Two events cannot establish calibration, edge or model quality, and nothing here is a prospective validation. Every probability referenced is `UNVALIDATED_SUBJECTIVE`.
 
-#### 4.0 What the two events show
+### 4.0 What the two events show
 
 | ID | Rank-1 | Hit@2 | Wins@2 | NDCG@2 | Decisions (forced pairs counted once) | Top over/under | Winner call |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -792,7 +788,7 @@ Everything below is **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. Two events can
 
 **The common thread.** Both winner calls were right, and neither card got a fact wrong. On both cards, an **existing, mandatory control that bore directly on the decisive variable was not executed**: the innings-order venue window, the chase-inflation kill path and the toss retrieval for P-482; the rating benchmark, the return profile and the base rate for P-483. That is the `M15` pattern, and it is now the dominant defect across the last two mini logs (6 of 8 cards in P-474–P-481; 2 of 2 here).
 
-#### 4.1 Cross-sport learnings
+### 4.1 Cross-sport learnings
 
 1. **Inspect wins as closely as losses.** P-482 won through the right mechanism with a probability sized on the wrong evidence. Grading it "process-different" rather than "process-right" keeps a lucky sizing from being reinforced. METHOD §7 already requires this; P-482 is a worked example.
 2. **`M15` dominates, and the mechanical audit cannot see it.** Every decisive omission in this log is an existing control: cricket §10.8 venue window by innings order, control 32 toss retrieval and the §10.5 chase-inflation kill path; tennis control 13, TE-S3 / `G-L18`, §9.8 and §9.10. `audit_card_controls.py` detected none of them. It checks the retired §16.8 block rather than METHOD v4.3's six-field object, and it has no sport-checklist items. Tooling change R-7.
@@ -801,7 +797,7 @@ Everything below is **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. Two events can
 5. **Print joint masses as numbers when the tree is explicit.** P-483's own disjoint six-branch tree gave the shared-failure mass (≈ 30%); the card printed only Fréchet bounds. Keep `JOINT_UNQUANTIFIED` for dependence the model genuinely does not represent (R-5).
 6. **Ledger discipline.** Register each mini-log card in the active combined log within 24 hours of issue (missed here; corrected in this pass).
 
-#### 4.2 Sport-specific learnings
+### 4.2 Sport-specific learnings
 
 **Cricket (T20 franchise; CPL).**
 
@@ -819,7 +815,7 @@ Everything below is **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. Two events can
 - Serve volatility is two-sided width. A double-fault-prone server is also more likely to be routed.
 - Favourite separation defeating a ranked Over plus an underdog cushion is now a four-card pattern (P-212, P-242, P-310, P-483), with at least one clean counter-example (P-350). Test it, do not ban it (§4.8).
 
-#### 4.3 Potential rule changes
+### 4.3 Potential rule changes
 
 Ordered by strength of evidence. None is asserted as validated. **No Google Drive or repository rule document was edited by this pass**; each proposal is mapped in §5.
 
@@ -841,7 +837,7 @@ Ordered by strength of evidence. None is asserted as validated. **No Google Driv
 - Lowering Rank-1 confidence across the board after P-483.
 - Treating P-482's win as evidence for chase-anchored breakaway components.
 
-#### 4.4 Algorithm improvements
+### 4.4 Algorithm improvements
 
 All are design proposals; none is fitted, calibrated or validated (`NUMERICAL_PROGRAM.md` governs any build).
 
@@ -850,7 +846,7 @@ All are design proposals; none is fitted, calibrated or validated (`NUMERICAL_PR
 3. **Tennis totals output.** Report P(decisive straight sets) and P(three sets) as the two primary total drivers beside every best-of-three total.
 4. **Both sports.** Print the joint-failure number for the top two from the branch states.
 
-#### 4.5 Source improvements
+### 4.5 Source improvements
 
 | Source / route | Best used for | Evidence from this pass | Recommended class |
 |---|---|---|---|
@@ -869,7 +865,7 @@ All are design proposals; none is fitted, calibrated or validated (`NUMERICAL_PR
 - **ESPNcricinfo HTML pages** returned HTTP 403 to automated fetch; use the API route.
 - **Sackmann `tennis_wta` repository** returned HTTP 404 on 2026-09-22; no admitted WTA totals base-rate source currently exists.
 
-#### 4.6 Data-quality observations
+### 4.6 Data-quality observations
 
 1. **Every issue-time fact checked was accurate** — all five cricket powerplay checkpoints; tennis identity, rankings, serve fields and recent results. Source accuracy was not the problem.
 2. **Over labels in summarised ESPN JSON can be off by one.** The feed's "over 5" deliveries were the sixth over. Verify checkpoints with the run-rate identity (59 at 9.83 per over ⇒ 6.0 overs).
@@ -879,7 +875,7 @@ All are design proposals; none is fitted, calibrated or validated (`NUMERICAL_PR
 6. **The Elo page was dated match day**, so whether the match is included cannot be read from the page. Snapshot benchmarks before the event.
 7. **Mechanical audit mismatch.** `audit_card_controls.py --settlement` on the pre-settlement file flagged blocking fields 2, 3, 5a and 7 on both cards (and 10 on P-483 before settlement). Manual adjudication: field 2 is present on both (a three-component mixture with weights; a six-branch tree with masses); field 3 is present on both (mean/SD/corridor on P-482; representative total, margin and line probabilities on P-483, though with no interval for total games); field 5a is present on P-483 as named family plus bounds and is trivially zero on P-482's forced pair; field 7 is genuinely partial on P-482 (XIs, toss and coaches unrecorded) and not applicable in form on P-483 (singles). The script missed every omission that decided the outcome (R-7).
 
-#### 4.7 Recurring blind spots
+### 4.7 Recurring blind spots
 
 Mapped to the recurring-mistake registry so repeats are countable.
 
@@ -892,7 +888,7 @@ Mapped to the recurring-mistake registry so repeats are countable.
 | **M10** — kill path written as prose, not weighted | Not observed — both cards weighted their named failure paths | Holding |
 | **Candidate M21 (new) — state-contaminated evidence window:** evidence from one game state or level sizes a component for a different state | P-482 (chase → batting first); P-483 (lower-level aggregates → tour-level matchup); precedent P-445 | Proposed for the registry |
 
-#### 4.8 Items requiring more evidence before becoming rules
+### 4.8 Items requiring more evidence before becoming rules
 
 1. **Dominant-hitter collapse keying (R-6).** One supporting case (P-482) and one counter-case (P-300). Needs a counted sample of phases with early wickets, split by whether the team's top-scoring batter was dismissed.
 2. **Kensington night / chase effect.** 6 of 6 in one fortnight at one venue. Needs season-level innings-order splits at the venue before it is used as anything more than context.
@@ -900,9 +896,9 @@ Mapped to the recurring-mistake registry so repeats are countable.
 4. **Benchmark gap as an error predictor.** P-350 (inside the band; loss judged variance) and P-483 (outside; process defects) are consistent with the idea but are two cases. Track the gap against outcomes prospectively; do not use it for calibration.
 5. **Post-toss freezing for cricket phase rows.** Track pre-toss against post-toss cards before recommending a default freeze time.
 
-### 5. Document Update Mapping — 2026-09-22 cohort (P-482–P-483)
+## 5. Document Update Mapping
 
-**No governing rule, method, source or register document was edited in this pass.** The mini log was updated in place, and P-482/P-483 were appended to this log. Every other item below is a mapping for later incorporation.
+**No governing rule, method, source or register document was edited in this pass.** The mini log (this file) was updated in place, and P-482/P-483 were appended to `PREDICTION_LOG_COMBINED_5.md`. Every other item below is a mapping for later incorporation.
 
 | # | Learning / change | Target document | Section | Type |
 |---|---|---|---|---|
@@ -937,35 +933,903 @@ Rows for item 20, ready to paste under P-481:
 
 **Proposed new document: none.** A venue-by-innings-order phase register was considered and rejected: `BASE_RATES_REGISTER.md` already exists for descriptive base rates, and a second file would split them. Likewise the tennis benchmark belongs in the existing control 13 and `DATA_SOURCE_REGISTER.md`.
 
-### 2026-09-22 — integrity notes for this import
+## 6. Settlement Lists
 
-- No issued probability, rank, selection, reasoning, distribution or source list was altered; the cards above are verbatim.
-- Every printed card figure was recomputed and reproduced; every Brier value above was recomputed from the issued probabilities.
-- Settlement used four independent lineages per event; syndicated copies of one release were counted once. No betting, tipster, line-movement or fantasy/DFS material was used.
-- This was a local ID-only reconciliation; no methodology or Drive document was edited. GAME_LOG_STATUS_CURRENT.md now carries the reconciled P-482–P-493 register and P-487 issue-time hold.
-- The P-482-onward active merged mini log retains P-489, P-491, P-493 as pending and TMP-20260923-NBL-CNS-TAS on issue-time hold; it has not been archived.
-- Next canonical ID: **P-494** after the 2026-09-23 local ID reconciliation.
+### Settled logs — first to most recent
+
+1. **P-482** — Cricket, Republic Bank CPL 2026 Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen — **SETTLED / RETROSPECTIVE COMPLETE (2026-09-22).** Jamaica 170/9; Falcons 173/2 (16.4), won by 8 wickets. Jamaica first six legal overs **59/2**. Rank #1 Over 47.5 **WIN**; Rank #2 Under 47.5 LOSS; winner Falcons **WIN**. Grade: result-right / process-different.
+2. **P-483** — Tennis, WTA 250 Korea Open (Seoul) R32 — Katie Volynets vs Elvina Kalieva — **SETTLED / ENHANCED RETROSPECTIVE COMPLETE (2026-09-22).** Volynets 6-3, 6-0 (15 games, +9). Rank #1 Over 19.5 **LOSS** (`TOP_OU_REVIEW`); Rank #2 Kalieva +4.5 **LOSS**; Rank #3 Volynets −4.5 WIN; Rank #4 Under 19.5 WIN; winner Volynets **WIN**. Grade: result-wrong / process-wrong in part.
+
+### Logs still awaiting settlement — first to most recent
+
+**None.** No entry in this mini log is unsettled, live, delayed, suspended, postponed, abandoned or cancelled. The historical open handles outside this log remain tracked in `GAME_LOG_STATUS_CURRENT.md`; none was touched by this pass.
+
+## 7. Running Integrity Notes
+
+- **Issued material unchanged.** Both cards are reproduced verbatim; no probability, rank, selection, reasoning, distribution, hash or source list was altered. All additions are dated. The byte-exact pre-settlement file is archived (front-matter table).
+- **Revisions.** The cards keep **CR-2026.09.19-4**, their issue revision. The next card uses the current authority, **MDS-2026.09.19-v4.3 / CR-2026.09.21-3**, after a fresh read of the root documents and the current control manifest.
+- **Settlement standard.** Both events passed the three-lineage terminal-state gate with four independent lineages each. Mirrors and syndicated copies were counted once.
+- **Firewall.** No sportsbook odds, betting previews, tipsters, line movement or fantasy/DFS material was used in settlement or retrospective. Betting-branded pages surfaced in searches were not opened as evidence.
+- **Performance status.** The mini log remains **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. Settlement does not confer eligibility; nothing here supports an EV, ROI, edge or calibration claim.
+- **Sensitivities.** The illustrative re-weightings in the P-483 review are not forecasts, are not scored and enter no aggregate.
+- **Not archived.** This log is fully settled but stays in place: it remains the active running log for P-484 onward, and the rule and reference promotions in §5 have not been implemented.
+- **Canonical log.** P-482 and P-483 are now registered and settled in `PREDICTION_LOG_COMBINED_5.md`. Next canonical ID: **P-484**.
+- **Drive.** Google Drive was read only. This file and the combined log were updated in the local Sports Research repository copy.
+
+---
+
+## Appendix A — Issue-time sections that followed the cards (preserved verbatim)
+
+The block below is the original text that followed the two cards in the pre-settlement file — its §2 Settled Logs, §3 Sources, §4 Document Mapping, §5 Running Integrity Notes and the user-supplied mini-log instructions of 2026-09-21. It is fenced so that its headings do not interleave with the current section numbering. Byte-exact original: see the front-matter table.
+
+~~~~markdown
+## 2. Settled Logs
+
+**None.**
+
+## 3. Sources
+
+P-483 source index: WTA exact Seoul match/tournament pages; WTA player records and match-stat pages; USTA/US Open official report; L'Equipe current match page; MyKhel current scoreboard; structured Seoul weather; full URLs and contributions are preserved inside the P-483 card above.
+
+### P-482 event sources
+See the full source ledger under P-482 above. Material primary/current lineages: Cricket West Indies official schedule/state route; CPL official Newsroom match reports; Jamaica Gleaner/CMC; Wisden current fixture state; structured weather source.
+
+Initialization authority:
+- `METHOD.md`
+- `RULES_GENERAL.md`
+- `CONTROLS.md`
+- `SOURCES.md`
+- `DATA_SOURCE_REGISTER.md`
+- `SCORING_AND_VALIDATION.md`
+- `EXTERNAL_LOGGING_WORKFLOW.md`
+- relevant `RULES_<SPORT>.md` and league-specific rules
+- `PREDICTION_LOG_COMBINED_5.md` for canonical-ID authority
+- `GAME_LOG_STATUS_CURRENT.md` for historical open-handle custody
+
+Every event must add its own material sources, links/retrieval methods and contribution.
+
+## 4. Document Mapping
+
+P-483: `RULES_TENNIS.md` shared score-tree coherence; `SOURCES.md` / `DATA_SOURCE_REGISTER.md` WTA exact-match lane; `LEARNING_REGISTER.md` ace/double-fault exposure-normalization observation only. No permanent rule or coefficient change proposed.
+
+### P-482
+- `RULES_CRICKET.md`: existing phase-participant, phase-distribution, near-start XI/toss-gap and streak controls applied; no permanent rule change proposed.
+- `DATA_SOURCE_REGISTER.md`: retain CWI/CPL primary routes; note confirmed-XI/toss retrieval latency.
+- Prediction log: carry P-482 as unsettled until exact six-over phase and match final are verified; no retrospective has been performed.
+ Each prediction, source discovery, learning or proposed rule change will record its appropriate Markdown destination here.
+
+## 5. Running Integrity Notes
+
+- P-452–P-481 were reconciled into `PREDICTION_LOG_COMBINED_4.md` before this log was opened.
+- Do not overwrite existing canonical IDs.
+- Keep unresolved entries at the top until fully settleable.
+- Preserve enough source and reasoning detail to support later exact settlement and retrospective audit.
+- After every new sports prediction, return the **entire updated mini running log**.
+
+---
+
+# User-Supplied Mini-Log and Settlement Instructions — 2026-09-21
+
+The following instruction block is retained as the operating brief supplied for this new mini log. Where a later governing root methodology is more current, the root framework controls methodological details; the user's explicit workflow requirements below remain applicable.
+
+Start a new mini prediction log using the latest applicable rules, methodologies, learnings, observations, source guidance, and updates contained in the linked Google Drive.
+
+. Do not edit, overwrite, move, rename, or create files in Google Drive. Use it  as the authoritative reference source for the prediction methodology and historical learnings and only update the mini log within the drive as a separate folder, within the Drive
+
+## Mini Log Requirements
+
+Maintain a complete running mini log throughout this chat and provide the **fully updated version after every new prediction query**.
+
+Structure the mini log as follows:
+
+### 1. Incomplete / Unsettled Logs
+
+Keep all predictions that have not yet been fully settled in a separate section at the **top of the mini log**.
+
+For each unsettled event, retain:
+
+* Canonical or temporary prediction ID.
+* Sport and competition.
+* Event.
+* Scheduled start time.
+* Original pre-game prediction.
+* Ranked picks.
+* Projected winner.
+* Research reasoning.
+* All sources used.
+* Current settlement status.
+
+Do not move an event into the settled section until the event is fully complete and all relevant markets can be accurately settled.
+
+### 2. Settled Logs
+
+Once an event has been properly settled and its retrospective has been completed, move it from the unsettled section into its correct chronological/canonical position in the settled prediction log.
+
+Do not prematurely classify live, delayed, suspended, postponed, abandoned, or otherwise unresolved events as settled.
+
+### 3. Sources
+
+Record **all material information sources used for every prediction**, including:
+
+* Official league or competition sources.
+* Official team or player sources.
+* Lineup and injury sources.
+* Statistical databases.
+* Weather, pitch, venue, or conditions sources where relevant.
+* Any other source materially used in the prediction.
+
+Where possible, include the source name, link, and what information it contributed.
+
+Prioritise primary and high-quality statistical sources over sportsbook commentary or low-quality secondary reporting.
+
+### 4. Document Mapping
+
+For every meaningful prediction, observation, learning, source discovery, or potential rule improvement, identify which existing Markdown document it would belong in.
+
+If no appropriate document currently exists, note the proposed new Markdown document and its intended purpose.
+
+Record clearly within the mini log where each update should eventually be incorporated.
+
+### 5. Prediction Integrity
+
+Follow all applicable sport-specific and cross-sport instructions from the Google Drive.
+
+Before producing each prediction:
+
+* Verify the correct event, competition, teams/players, markets, and scheduled start time.
+* Check whether the event is upcoming, delayed, live, postponed, cancelled, or completed.
+* Obtain the latest available starting lineups, bench/reserve information, injuries, suspensions, rest decisions, coaching information, and other availability information where relevant.
+* Use the strongest available sources.
+* Clearly identify information that could not be confirmed.
+* Do not fabricate missing information.
+* Do not silently correct an inconsistent market or event. Flag the issue first.
+
+Rank selections according to the governing methodology, with **Pick #1 representing the strongest available selection**.
+
+### 6. Continuity
+
+Preserve the correct prediction-ID sequence.
+
+If an ID conflict or uncertainty is discovered, do not overwrite an existing canonical ID. Clearly flag the conflict and assign a temporary ID until the canonical sequence can be reconciled.
+
+Maintain enough detail in every entry so that the prediction can later be fully settled and retrospectively audited without reconstructing the original reasoning from memory.
+
+## Output After Every Query
+
+After completing each new sports prediction:
+
+1. Provide the requested prediction and analysis.
+2. Add the complete entry to the unsettled section.
+3. Record all material sources.
+4. Note any relevant document mappings or potential learnings.
+5. Provide the **entire updated mini running log**.
+
+Do not perform a retrospective automatically unless explicitly requested.
 
 
-## 2026-09-23 — local ID reconciliation and running-log custody
+Settling a mini log in ChatGPT:
 
-This reconciliation changes ID custody only. It does not change any original selection, probability, reasoning, source list, settlement, or retrospective. Full cards for P-484–P-493 are retained in the active local mini log linked in the controlling snapshot. P-482 and P-483 remain as previously registered and settled.
+**Claude/Codex combined-log audit and algorithm update:
+Append all relevant prediction entries, settlements, retrospectives, learnings, source discoveries, and temporary-ID entries from the supplied mini log(s) into the appropriate **combined prediction log and supporting Markdown documents**.**
 
-| Canonical ID | Event / disposition | Status |
-|---|---|---|
-| P-484 | Atlanta Dream @ New York Liberty (WNBA); retained from the duplicate P-484 pair | FINAL / SETTLED |
-| P-485 | New York Giants @ Los Angeles Rams (NFL) | FINAL / SETTLED |
-| P-486 | Minnesota Twins @ San Francisco Giants (MLB) | FINAL / SETTLED |
-| P-487 | Reserved issue-time hold; later NBL source carries this claim but lacks a verifiable original issue timestamp | Not promoted; see TMP-20260923-NBL-CNS-TAS |
-| P-488 | Vivian Wolff vs Oleksandra Oliynykova (WTA Singapore) | FINAL / SETTLED |
-| P-489 | Chunichi Dragons @ Yokohama DeNA BayStars (NPB); R1 is the same event and consumes no new ID | UNSETTLED / issue horizon unverified; no result-state refresh |
-| P-490 | Retired unused slot from the earlier provisional Padres mapping; do not reuse | RESERVED / UNUSED |
-| P-491 | Orix Buffaloes @ Chiba Lotte Marines (NPB) | UNSETTLED / terminal state not checked |
-| P-492 | San Diego Padres @ Los Angeles Dodgers (MLB); source claimed P-484 and a prior mini-log variant used P-490 | FINAL / SETTLED; one card, one canonical ID |
-| P-493 | Kia Tigers @ Doosan Bears (KBO); freeze 19:28:29 AEST before 19:30 scheduled start | UNSETTLED / terminal state not checked |
+Then perform a comprehensive audit of those newly incorporated logs to identify evidence-based improvements to the prediction methodology, sport-specific algorithms, research procedures, source hierarchy, and retrospective framework.
 
-**P-484 decision.** The WNBA card keeps P-484 because it is the earlier valid pregame issue in this run: its official event was scheduled for 22 September at 10:00 AEST and the preserved card reports an upcoming near-tip check. The Padres card's own final verification was 23 September at 12:13 AEST, after its 12:10 scheduled start. Per the current user instruction, the duplicate Padres claim is assigned the next available canonical ID, P-492. The former P-490 assignment is retired as an alias and is not reused.
+Use any linked Google Drive material. Apply actual document changes only to the writable Markdown files available in the current working repository/environment.
 
-**NBL custody.** The later temporary source contains a full Cairns–Tasmania forecast labelled P-487, contradicting the earlier “no claimant” audit. The card has no original freeze/issue timestamp. To avoid asserting a false issue order, the forecast is preserved under TMP-20260923-NBL-CNS-TAS with P-487 held, pending timestamp evidence. Its later live-status material remains quarantined as described in the card.
+## 1. Pre-Update Integrity Check
 
-**Source preservation.** Byte-exact pre-edit copies are in archive/mini_logs/originals_2026-09-23/. SHA-256: P-482 temp source ce2057b70b786670edb7842cfdbb832b4eb2e70e35826c4fd829108de99cbeea; P-484 temp source a79c9e377a3949c8b33449213b2be801fdd5a4a5520a1504bc0405fd38fc9c0a. Temporary source files were replaced by receipts after verifying the archive copies. No Drive documents were modified.
+Before modifying any document:
+
+1. Identify every prediction contained in the supplied mini log(s).
+2. Identify its current canonical or temporary ID.
+3. Check for duplicate IDs.
+4. Check for duplicate events.
+5. Check whether an entry already exists in the combined log.
+6. Preserve the original pre-game prediction exactly.
+7. Do not overwrite an existing event because of an ID conflict.
+8. Determine whether each event is:
+
+   * Upcoming
+   * Live
+   * Delayed
+   * Suspended
+   * Postponed
+   * Abandoned
+   * Cancelled
+   * Completed
+
+If an event is still live or otherwise unresolved:
+
+* Do **not** settle it.
+* Add or retain it in the unresolved/pending settlement section.
+* Ensure it remains available for settlement during the next audit cycle.
+* Proceed to the next event.
+
+## 2. Append Completed Mini-Log Entries
+
+For completed events, append all relevant material into the combined log using the existing required table and document structure.
+
+Include:
+
+* Original prediction.
+* Ranked picks.
+* Projected winner.
+* Original reasoning.
+* Final result.
+* Pick-by-pick settlement.
+* Full retrospective.
+* Rank-1 analysis.
+* Top-two analysis.
+* Over/under analysis where applicable.
+* What went right.
+* What went wrong.
+* Blind spots.
+* Source audit.
+* Event-specific learnings.
+* Rule implications.
+* Temporary-ID information where applicable.
+
+Preserve the required historical format unless there is a compelling structural reason to improve it.
+
+## 3. Temporary IDs and Canonical Conflicts
+
+Do not omit predictions merely because their original ID conflicts with another entry.
+
+If a prediction has a temporary ID:
+
+* Append it to the combined log.
+* Preserve the temporary ID clearly.
+* Mark it for later canonical reconciliation.
+* Complete its full settlement and retrospective.
+* Include it in all relevant learning and algorithm audits.
+
+Every legitimate event must ultimately be represented in the combined dataset.
+
+## 4. Detailed Retrospective Audit
+
+For every newly appended completed event, examine in detail:
+
+### Prediction Performance
+
+* Pick #1 result.
+* Pick #2 result.
+* Remaining picks.
+* Game/match winner.
+* Totals.
+* Relevant ranking metrics.
+* Whether the ranking order was justified.
+
+### Why Picks Won or Lost
+
+Provide a detailed explanation of the actual factors responsible for each outcome.
+
+Compare:
+
+* Expected game script vs actual game script.
+* Expected lineups vs actual lineups.
+* Expected role/usage vs actual role/usage.
+* Expected pace/scoring environment vs actual environment.
+* Expected tactical matchup vs actual tactical execution.
+* Expected injury/availability assumptions vs reality.
+* Expected weather/venue effects vs observed conditions.
+
+Distinguish predictable analytical failures from genuine variance.
+
+## 5. Mandatory Rank-1 Failure Review
+
+Whenever **Pick #1 fails**, conduct an enhanced retrospective.
+
+Determine:
+
+* Why it was ranked first.
+* Whether available evidence genuinely supported that ranking.
+* Whether another pick should have ranked above it.
+* What variable caused the ranking failure.
+* Whether the issue was:
+
+  * Missing information.
+  * Poor weighting.
+  * Weak source quality.
+  * Market misunderstanding.
+  * Statistical overfitting.
+  * Small sample size.
+  * Failure to apply an existing rule.
+  * Missing rule.
+  * Genuine unpredictable variance.
+
+Rank-1 failures should receive materially more scrutiny than lower-ranked failures.
+
+Do not retroactively rewrite the reasoning to make the original decision appear better than it was.
+
+## 6. Top-Two Reliability Review
+
+The framework places additional importance on the top two ranked selections.
+
+For every event, assess:
+
+* Rank-1 success.
+* Rank-2 success.
+* Whether at least one of the top two succeeded.
+* Whether both succeeded.
+* Whether their ordering was appropriate.
+* Whether ranking methodology changes could improve future top-two reliability.
+
+Use existing Rank-1, Wins@2, Hit@2, NDCG@2, or equivalent framework metrics where the governing documents specify them.
+
+## 7. Over/Under Market Review
+
+When totals markets are included, evaluate them separately.
+
+The goal is to improve the quality of totals predictions so that the model is more likely to identify the correct side of a total when evidence supports doing so.
+
+Analyse:
+
+* Line value.
+* Expected scoring distribution.
+* Pace.
+* Offensive efficiency.
+* Defensive efficiency.
+* Lineups.
+* Player availability.
+* Venue.
+* Weather.
+* Pitch/ground/court/ice conditions.
+* Recent scoring environment.
+* Matchup-specific scoring drivers.
+* Variance around the market line.
+
+Ideally, at least one appropriately selected over/under recommendation should have a strong chance of succeeding, but **do not introduce artificial hedging or contradictory selections merely to guarantee that one side wins**.
+
+Any totals-related algorithm change must improve predictive reasoning rather than mechanically covering both outcomes.
+
+## 8. Starting Lineup and Availability Audit
+
+For every relevant team sport, explicitly validate:
+
+* Were confirmed starting lineups obtained?
+* Were bench, reserve, interchange, substitute, or rotation lineups obtained?
+* Was relevant coaching/manager information obtained?
+* Were injuries checked?
+* Were suspensions checked?
+* Were rest decisions checked?
+* Were late withdrawals checked?
+* Were role or positional changes checked?
+* Were expected and confirmed lineups clearly distinguished?
+
+For individual sports, perform the equivalent availability check, including injuries, illness, workload, withdrawals, surface/venue suitability, and other relevant participation concerns.
+
+If confirmed information was unavailable before the event, record that limitation.
+
+## 9. Source Quality Audit
+
+Evaluate every important pre-game and retrospective source.
+
+Determine:
+
+* Was the source accurate?
+* Was it current?
+* Was it authoritative?
+* Did it update quickly enough?
+* Did it contain confirmed information or speculation?
+* Was there a better source available?
+* Should the source remain in the preferred-source hierarchy?
+
+Search for newly available high-quality sources that could improve future information retrieval.
+
+For each newly recommended source, document:
+
+* Source name.
+* Link or retrieval method.
+* Sport/domain.
+* Information type.
+* Why it is useful.
+* Reliability considerations.
+* Whether it should be primary, secondary, or fallback.
+
+Prefer official and primary sources where practical.
+
+## 10. Blind-Spot Audit
+
+For every event, identify any blind spots in the original pre-game analysis.
+
+Examples include:
+
+* Missing or late lineup information.
+* Coaching/tactical changes.
+* Bench strength.
+* Rotation.
+* Rest.
+* Travel.
+* Schedule congestion.
+* Weather.
+* Venue characteristics.
+* Pitch/court/ground/ice conditions.
+* Starting pitcher/goaltender/quarterback uncertainty.
+* Referee or officiating effects where sufficiently evidenced.
+* Matchup-specific weaknesses.
+* Role changes.
+* Misleading recent-form samples.
+* Poor opponent-strength adjustment.
+* Head-to-head over-weighting.
+* Market movement.
+* Source latency.
+* Inadequate uncertainty handling.
+
+For each blind spot:
+
+1. Explain what was missed.
+2. Explain whether the information was available pre-game.
+3. Explain how much it mattered.
+4. Propose a concrete future mitigation.
+5. Decide whether it warrants a formal algorithm/rule change or only an observation.
+
+## 11. Compare Against Previous Lessons
+
+Link each new observation to previous lessons where possible.
+
+Ask:
+
+* Has this failure occurred before?
+* Was there already a rule designed to prevent it?
+* Was that rule actually followed?
+* Did a previous algorithm change improve performance?
+* Is the same problem recurring?
+* Is the pattern sport-specific or cross-sport?
+* Is there enough evidence to formalise a new rule?
+
+Do not create a permanent rule from a single unusual event unless the underlying reasoning independently justifies it.
+
+## 12. Sport-Specific Algorithm Updates
+
+For each sport represented in the new logs:
+
+1. Review the relevant sport-specific rules/algorithm document.
+2. Compare recent retrospective evidence against the current methodology.
+3. Identify:
+
+   * Missing variables.
+   * Incorrect weighting.
+   * Redundant rules.
+   * Weak source dependencies.
+   * Ranking weaknesses.
+   * Totals-model weaknesses.
+   * Availability/lineup weaknesses.
+   * Market-specific weaknesses.
+
+Where sufficient evidence exists, **update the appropriate sport-specific Markdown rules document**.
+
+Every algorithm change must include:
+
+* The problem being addressed.
+* Evidence supporting the change.
+* The exact new or revised rule.
+* Where in the workflow it applies.
+* Any conditions or exceptions.
+* Whether the change is experimental or established.
+
+Avoid vague instructions such as "research better." Convert learnings into operational rules.
+
+## 13. Cross-Sport Improvements
+
+Where a recurring pattern applies across multiple sports, update the appropriate shared/global methodology document.
+
+Examples may include:
+
+* Lineup verification hierarchy.
+* Source recency rules.
+* Ranking calibration.
+* Rank-1 confidence handling.
+* Market-number sensitivity.
+* Uncertainty penalties.
+* Source-quality weighting.
+* Late-breaking-news procedures.
+* Handling unavailable confirmed lineups.
+* Minimum evidence requirements.
+* Retrospective classification.
+
+Do not duplicate the same global rule separately across every sport unless sport-specific implementation differs materially.
+
+## 14. What Went Right
+
+Explicitly analyse successful decisions.
+
+Identify:
+
+* Which metrics worked.
+* Which matchup factors were predictive.
+* Which sources were valuable.
+* Which algorithm rules functioned correctly.
+* Which ranking decisions were well calibrated.
+* Which prior retrospective lessons successfully prevented earlier mistakes.
+
+Preserve successful methodology instead of changing rules solely because some unrelated selections lost.
+
+## 15. Prediction Log Updates
+
+Add relevant learnings into the prediction log itself:
+
+* Event-specific learnings belong with the corresponding event.
+* General lessons belong in the designated general-learning section.
+* Source discoveries belong in the relevant source section.
+* Cross-sport lessons should be clearly distinguished from sport-specific findings.
+* Temporary-ID entries must be included rather than omitted.
+
+Maintain the existing required table format.
+
+## 16. Performance-Eligibility Status
+
+The dataset is currently **not performance-eligible**.
+
+Continue using these logs for:
+
+* Methodology development.
+* Error analysis.
+* Source evaluation.
+* Algorithm improvement.
+* Hypothesis formation.
+* Process validation.
+
+Do not treat the results as formally performance-valid or statistically conclusive until the governing methodology's eligibility criteria are satisfied.
+
+## 17. Archive the Mini Log
+
+After:
+
+* Every completed event has been appended,
+* Every completed event has been fully settled,
+* Every retrospective has been completed,
+* All learnings have been extracted,
+* All document updates have been implemented,
+* All temporary-ID entries have been preserved,
+* All unresolved events have been retained for future settlement,
+
+move the processed mini log into the appropriate **archive folder for prediction logs**.
+
+Do not archive away unresolved information without ensuring the unresolved events remain explicitly tracked in the active pending-settlement system.
+
+## 18. Required Final Validation
+
+Before finishing, explicitly verify:
+
+* All supplied mini-log entries were processed.
+* No completed event was accidentally left unsettled.
+* No live event was incorrectly settled.
+* All temporary-ID events were included.
+* All Rank-1 failures received enhanced retrospectives.
+* All picks received win/loss explanations.
+* Top-two performance was reviewed.
+* Totals performance was reviewed.
+* Starting and bench lineups were audited where applicable.
+* Coaching information was checked where materially relevant.
+* Source accuracy was audited.
+* New high-quality sources were recorded.
+* Blind spots were documented.
+* Appropriate sport-specific rules were updated.
+* Appropriate cross-sport rules were updated.
+* Prediction logs were updated.
+* The mini log was archived correctly.
+* Remaining unsettled events remain tracked.
+
+## 19. Final Report
+
+At completion, provide a concise implementation report containing:
+
+### Settled and Appended
+
+List every event successfully appended and settled.
+
+### Still Unsettled
+
+List every event that remains unresolved and explain why.
+
+### Temporary IDs
+
+List every temporary-ID event awaiting canonical reconciliation.
+
+### Files Updated
+
+List every Markdown file modified and briefly describe the change.
+
+### Algorithm Changes
+
+List all sport-specific and cross-sport algorithm changes.
+
+### New Sources
+
+List newly added or newly prioritised information sources.
+
+### Major Learnings
+
+Summarise the most important recurring lessons from the batch.
+
+### Outstanding Issues
+
+Identify any unresolved data-quality, source, ID, or methodology issues requiring future attention.
+
+Be comprehensive and evidence-driven. Do not hide pre-game mistakes, force explanations to fit the result, or invent information. The objective is to improve future predictive methodology, not to make historical performance appear better.
+~~~~
+
+## Appendix B — Settlement brief supplied 2026-09-22 (preserved verbatim)
+
+The brief under which this settlement and retrospective were performed, as supplied by the user. Fenced for the same reason as Appendix A.
+
+~~~~markdown
+Perform a **complete, detailed, honest, and evidence-based settlement and retrospective** of every prediction entry contained in this mini log as long as they are not live any more, following all applicable settlement procedures, retrospective rules, methodologies, and sport-specific instructions contained in the linked Google Drive.
+
+Use it to determine the governing rules and historical lessons, but do not directly modify Google Drive files.
+
+The purpose of this review is not merely to mark selections as wins or losses. It is to determine **why each prediction succeeded or failed, identify analytical blind spots, validate source quality, extract useful patterns, and identify improvements for future predictions**.
+
+## Phase 1: Audit Every Log
+
+Review every event in the mini log from the first entry to the most recent.
+
+For each event, first determine its current status:
+
+* Upcoming
+* Live
+* Delayed
+* Suspended
+* Postponed
+* Abandoned
+* Cancelled
+* Completed
+
+Do not settle an event unless sufficient official or reliable final information exists to settle all applicable markets accurately.
+
+If an event is still unresolved, leave it in the **Incomplete / Unsettled Logs** section at the top of the mini log.
+
+## Phase 2: Settle Completed Events
+
+For every completed event:
+
+1. Obtain reliable final results and relevant underlying statistics.
+2. Settle every ranked selection according to its exact original market.
+3. Settle the projected winner separately.
+4. Preserve the original pre-game picks and reasoning.
+5. Clearly record:
+
+   * Win
+   * Loss
+   * Push/Void, where applicable
+   * Any settlement ambiguity
+
+Do not alter the original prediction after seeing the result.
+
+Use high-quality official or statistical sources wherever possible and record all settlement sources.
+
+## Phase 3: Detailed Retrospective for Every Event
+
+For each completed game or match, provide a detailed retrospective covering the following.
+
+### A. Prediction Outcome
+
+Document:
+
+* Pick #1 result.
+* Pick #2 result.
+* Remaining ranked-pick results.
+* Over/under market results.
+* Projected winner result.
+* Overall prediction outcome.
+
+Where the methodology uses Rank-1, Hit@2, Wins@2, NDCG@2, or equivalent metrics, record them as applicable.
+
+### B. Why Each Pick Won or Lost
+
+For **every individual pick**, explain:
+
+* What happened in the game.
+* Why the selection succeeded or failed.
+* Which pre-game assumptions were correct.
+* Which assumptions were incorrect.
+* Whether the result was primarily driven by predictable factors, model weakness, information gaps, unusual variance, or an unforeseen event.
+* Whether the original reasoning appropriately weighted the most important factors.
+
+Do not simply state that a pick "did not hit." Explain the causal game factors as far as the evidence supports.
+
+### C. Rank-1 Failure Review
+
+If **Pick #1 loses**, perform a substantially deeper retrospective because the most confident selection failed.
+
+Specifically determine:
+
+* Why Pick #1 was ranked first.
+* Whether the ranking process was justified based on information available before the event.
+* Whether another selection should reasonably have ranked higher.
+* Whether an important variable was missed, underweighted, overweighted, or incorrectly sourced.
+* Whether an existing rule should have prevented the error.
+* Whether a new rule or algorithm adjustment is warranted.
+
+Do not rationalise the failure after the fact. Judge the pre-game process based on information that was reasonably available before the event.
+
+### D. Top-Two Review
+
+The methodology aims for the **top two selections to be especially reliable**.
+
+Evaluate:
+
+* Whether Pick #1 succeeded.
+* Whether at least one of Picks #1 and #2 succeeded.
+* Whether both succeeded.
+* Whether their relative ordering was justified.
+* What could improve future top-two ranking accuracy.
+
+### E. Over/Under Review
+
+Where over/under markets were analysed, investigate their performance carefully.
+
+The objective is to improve the likelihood that **at least one appropriately selected total-side recommendation succeeds when totals are included**, without artificially hedging or presenting contradictory selections as equally strong.
+
+Evaluate:
+
+* Scoring environment assumptions.
+* Pace/tempo.
+* Offensive and defensive efficiency.
+* Venue or conditions.
+* Lineups and absences.
+* Market number.
+* Distribution around the line.
+* Whether the total was especially sensitive to variance.
+* Whether the analysis used enough sport-specific total-market indicators.
+
+Do not create rules purely to force one side of every total to win. Any improvement must be analytically defensible and supported by evidence.
+
+### F. What Went Right
+
+Do not focus only on failures.
+
+Identify:
+
+* Correct assumptions.
+* Strong sources.
+* Useful metrics.
+* Successful matchup reads.
+* Effective rules.
+* Correct weighting decisions.
+* Patterns worth preserving.
+
+Explain **why** these elements worked and whether they can be reused.
+
+### G. Blind Spots
+
+Identify every meaningful analytical blind spot, including:
+
+* Missing lineup information.
+* Incomplete bench/reserve information.
+* Coaching changes or tactical decisions.
+* Injuries or late withdrawals.
+* Rotation/rest issues.
+* Starting-player uncertainty.
+* Weather or venue conditions.
+* Travel or schedule effects.
+* Matchup-specific factors.
+* Incorrect weighting.
+* Small-sample trends.
+* Misleading head-to-head data.
+* Source-quality problems.
+* Market interpretation errors.
+* Timing problems.
+* Other sport-specific variables.
+
+For every blind spot, state how future analysis should account for it.
+
+## Phase 4: Mandatory Validation Questions
+
+For every event, explicitly answer:
+
+1. **Were confirmed starting lineups obtained for both teams/players where applicable?**
+2. **Were bench, reserve, substitute, or rotation lineups obtained where relevant?**
+3. **Was coaching/manager information obtained where it could materially affect the event?**
+4. **Were injuries, suspensions, rest decisions, late withdrawals, and availability changes adequately checked?**
+5. **Were the original sources sufficiently accurate and current?**
+6. **Were better sources available that should be prioritised in future?**
+7. **Were there blind spots in the pre-game analysis?**
+8. **How should those blind spots be accounted for in future predictions?**
+
+If information could not reasonably have been obtained before the event, say so rather than treating hindsight-only information as a pre-game failure.
+
+## Phase 5: Connect Results to Previous Learnings
+
+Where possible, compare each retrospective with existing historical lessons in the Google Drive.
+
+Determine:
+
+* Whether an earlier lesson correctly predicted the issue.
+* Whether an existing rule was followed.
+* Whether a rule was ignored or inadequately applied.
+* Whether the same mistake has appeared repeatedly.
+* Whether a previously identified improvement worked.
+* Whether a new pattern is emerging.
+
+Clearly distinguish:
+
+* One-off variance.
+* Sport-specific patterns.
+* Cross-sport recurring patterns.
+* Strong candidates for future rule changes.
+
+## Phase 6: Source Audit
+
+For every event, review source quality.
+
+Identify:
+
+* Which sources proved accurate.
+* Which sources were outdated, incomplete, or misleading.
+* Whether official or higher-quality alternatives exist.
+* Any newly discovered reliable sources that should be considered for future research.
+
+Record the new sources and explain what information each is best suited to provide.
+
+Do not promote a source based on a single successful result. Judge source quality based on accuracy, timeliness, authority, and usefulness.
+
+## Phase 7: Learnings and Proposed Rule Changes
+
+Add event-specific learnings directly to the relevant event's retrospective section.
+
+At the bottom of the mini log, create a separate section titled:
+
+# General Learnings, Rule Changes, Observations, and New Sources
+
+Organise this section into:
+
+* Cross-sport learnings.
+* Sport-specific learnings.
+* Potential rule changes.
+* Algorithm improvements.
+* Source improvements.
+* Data-quality observations.
+* Recurring blind spots.
+* Items requiring more evidence before becoming formal rules.
+
+Do not introduce a permanent rule solely because of one unusual game. Clearly distinguish a tentative observation from a validated recurring pattern.
+
+## Phase 8: ID and Canonical-Log Integrity
+
+Check the Google Drive references to determine whether any entries still require settlement and whether any canonical prediction IDs conflict.
+
+If a completed entry's canonical ID:
+
+* Already belongs to another event, or
+* Cannot be safely reconciled,
+
+assign that entry a clearly labelled **temporary ID**.
+
+Place conflicting or temporary-ID entries in a separate section of the mini log until they can be reconciled.
+
+Never overwrite another event merely to preserve numbering.
+
+All temporary-ID logs must still receive:
+
+* Full settlement.
+* Full retrospective.
+* Complete source documentation.
+* Learnings.
+* Document mapping.
+
+## Phase 9: Final Mini Log Structure
+
+Return the **fully updated mini log**, not merely a summary.
+
+It must contain, in this order:
+
+1. **Incomplete / Unsettled Logs**
+2. **Temporary-ID / Canonical-ID Conflict Logs**, if applicable
+3. **Fully Settled Logs**, preserving the appropriate order
+4. **General Learnings, Rule Changes, Observations, and New Sources**
+5. **Document Update Mapping**
+
+For every proposed learning or rule change, identify the relevant existing Markdown document where it should eventually be incorporated.
+
+If a new Markdown document would be justified, name the proposed document and explain its purpose, but **do not create or modify Google Drive documents**.
+
+Finally, provide two explicit lists:
+
+* **Settled logs**, from the first log in this mini log to the most recent.
+* **Logs still awaiting settlement**, from the first unresolved entry to the most recent.
+
+The mini log is still **not performance-eligible**. Continue using the results for learning, methodology refinement, source evaluation, and algorithm improvement, but do not treat the dataset as formally performance-eligible unless the governing methodology later permits it.
+
+Accuracy, transparency, methodological consistency, and source quality take priority over producing favourable-looking results.
+~~~~

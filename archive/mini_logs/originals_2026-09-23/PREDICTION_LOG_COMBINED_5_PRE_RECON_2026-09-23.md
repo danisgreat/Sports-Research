@@ -5,7 +5,7 @@
 Status: **ACTIVE CANONICAL LOG — ALL NEW FORECASTS APPEND HERE**
 Opened: **2026-09-21**, after Part 4 was closed at `P-481`.
 Canonical range: **`P-482` onward**.
-Next canonical ID: **P-494** (updated 2026-09-23 after local ID reconciliation; fresh preflight remains required before any new forecast).
+Next canonical ID: **`P-484`** (updated 2026-09-22, after `P-482`–`P-483` were registered and settled), subject to the normal fresh reconciliation / preflight before issue.
 Current governing method at rollover: **MDS-2026.09.19-v4.3 / CR-2026.09.19-4**. Always fresh-read `METHOD.md` and the current control manifest before a new prediction rather than relying on this snapshot.
 Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 
@@ -21,14 +21,14 @@ Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 
 | Field | Current value |
 |---|---|
-| As of | **2026-09-23, Australia/Sydney** — P-482–P-483 retained from the prior settled import; P-484–P-493 custody reconciled below; no result-state refresh or retrospective was performed in this pass |
-| Highest canonical prediction ID | **P-493** |
-| Next canonical ID | **P-494** |
-| Part-5 issued events | **10 canonical event cards** — P-482, P-483, P-484, P-485, P-486, P-488, P-489, P-491, P-492, P-493. P-487 is a noncanonical issue-time hold; P-490 is retired/unused. |
-| Part-5 open / pending events | **3** — P-489 (Chunichi–DeNA), P-491 (Orix–Lotte), P-493 (KIA–Doosan); current terminal states were not refreshed in this ID-only pass. |
-| Part-5 learning-only diagnostics | Existing settled results are unchanged by ID reassignment; active mini-log counters remain descriptive, not performance evidence. |
-| Active mini log | ../Documents/Sports Research/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD.md — full ranked cards and sources retained locally |
-| Historical open handles | Continue in GAME_LOG_STATUS_CURRENT.md; recovered NBL card remains temporary under TMP-20260923-NBL-CNS-TAS until issue-time sequence is established |
+| As of | **2026-09-22, Australia/Melbourne** — `P-482`–`P-483` registered, settled and retrospectively reviewed |
+| Highest canonical prediction ID | **`P-483`** |
+| Next canonical ID | **`P-484`** |
+| Part-5 issued events | **2** — `P-482` (cricket, CPL 2026 Final), `P-483` (tennis, WTA Seoul R32); both **FINAL / SETTLED / RETROSPECTIVE COMPLETE** (2026-09-22) |
+| Part-5 open / pending events | **None** |
+| Part-5 learning-only diagnostics | Rank-1 1/2; top over/under 1/2; decisions 1 W / 2 L (forced pairs counted once); winner calls 2/2. Not a performance figure |
+| Active mini log | **`PREDICTION_MINI_RUNNING_LOG_P482_ONWARD.md`** |
+| Historical open handles | Continue to be tracked in `GAME_LOG_STATUS_CURRENT.md`; do not renumber or silently settle them |
 | Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE** |
 | Value status | `NO VALUE DETERMINABLE` unless the current governing value gate is explicitly satisfied |
 
@@ -942,30 +942,6 @@ Rows for item 20, ready to paste under P-481:
 - No issued probability, rank, selection, reasoning, distribution or source list was altered; the cards above are verbatim.
 - Every printed card figure was recomputed and reproduced; every Brier value above was recomputed from the issued probabilities.
 - Settlement used four independent lineages per event; syndicated copies of one release were counted once. No betting, tipster, line-movement or fantasy/DFS material was used.
-- This was a local ID-only reconciliation; no methodology or Drive document was edited. GAME_LOG_STATUS_CURRENT.md now carries the reconciled P-482–P-493 register and P-487 issue-time hold.
-- The P-482-onward active merged mini log retains P-489, P-491, P-493 as pending and TMP-20260923-NBL-CNS-TAS on issue-time hold; it has not been archived.
-- Next canonical ID: **P-494** after the 2026-09-23 local ID reconciliation.
-
-
-## 2026-09-23 — local ID reconciliation and running-log custody
-
-This reconciliation changes ID custody only. It does not change any original selection, probability, reasoning, source list, settlement, or retrospective. Full cards for P-484–P-493 are retained in the active local mini log linked in the controlling snapshot. P-482 and P-483 remain as previously registered and settled.
-
-| Canonical ID | Event / disposition | Status |
-|---|---|---|
-| P-484 | Atlanta Dream @ New York Liberty (WNBA); retained from the duplicate P-484 pair | FINAL / SETTLED |
-| P-485 | New York Giants @ Los Angeles Rams (NFL) | FINAL / SETTLED |
-| P-486 | Minnesota Twins @ San Francisco Giants (MLB) | FINAL / SETTLED |
-| P-487 | Reserved issue-time hold; later NBL source carries this claim but lacks a verifiable original issue timestamp | Not promoted; see TMP-20260923-NBL-CNS-TAS |
-| P-488 | Vivian Wolff vs Oleksandra Oliynykova (WTA Singapore) | FINAL / SETTLED |
-| P-489 | Chunichi Dragons @ Yokohama DeNA BayStars (NPB); R1 is the same event and consumes no new ID | UNSETTLED / issue horizon unverified; no result-state refresh |
-| P-490 | Retired unused slot from the earlier provisional Padres mapping; do not reuse | RESERVED / UNUSED |
-| P-491 | Orix Buffaloes @ Chiba Lotte Marines (NPB) | UNSETTLED / terminal state not checked |
-| P-492 | San Diego Padres @ Los Angeles Dodgers (MLB); source claimed P-484 and a prior mini-log variant used P-490 | FINAL / SETTLED; one card, one canonical ID |
-| P-493 | Kia Tigers @ Doosan Bears (KBO); freeze 19:28:29 AEST before 19:30 scheduled start | UNSETTLED / terminal state not checked |
-
-**P-484 decision.** The WNBA card keeps P-484 because it is the earlier valid pregame issue in this run: its official event was scheduled for 22 September at 10:00 AEST and the preserved card reports an upcoming near-tip check. The Padres card's own final verification was 23 September at 12:13 AEST, after its 12:10 scheduled start. Per the current user instruction, the duplicate Padres claim is assigned the next available canonical ID, P-492. The former P-490 assignment is retired as an alias and is not reused.
-
-**NBL custody.** The later temporary source contains a full Cairns–Tasmania forecast labelled P-487, contradicting the earlier “no claimant” audit. The card has no original freeze/issue timestamp. To avoid asserting a false issue order, the forecast is preserved under TMP-20260923-NBL-CNS-TAS with P-487 held, pending timestamp evidence. Its later live-status material remains quarantined as described in the card.
-
-**Source preservation.** Byte-exact pre-edit copies are in archive/mini_logs/originals_2026-09-23/. SHA-256: P-482 temp source ce2057b70b786670edb7842cfdbb832b4eb2e70e35826c4fd829108de99cbeea; P-484 temp source a79c9e377a3949c8b33449213b2be801fdd5a4a5520a1504bc0405fd38fc9c0a. Temporary source files were replaced by receipts after verifying the archive copies. No Drive documents were modified.
+- No governing rule, method, source or register document was edited. The proposals above are mapped for later incorporation; `GAME_LOG_STATUS_CURRENT.md` still ends at P-481 (rows ready to paste are in the mapping above).
+- The P-482-onward mini log is fully settled but **not archived**: it remains the active running log for `P-484` onward.
+- Next canonical ID: **`P-484`**.

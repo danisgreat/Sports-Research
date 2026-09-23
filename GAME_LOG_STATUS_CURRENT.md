@@ -1,14 +1,14 @@
-## Current queue / canonical rollover — 2026-09-21
+## Current queue / canonical rollover — reconciled 2026-09-23
 
-Part 4 is now **CLOSED at P-481** after importing the settled P-452–P-473 and P-474–P-481 mini logs. **Part 5 (`PREDICTION_LOG_COMBINED_5.md`) is the active queue/next-ID authority; next canonical ID is P-482.** All P-452–P-481 events are settled and retrospectively reviewed. Historical result/derivative handles outside that batch remain open exactly where previously tracked and are not silently regraded by this rollover. Performance status remains **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**.
+Part 4 is **CLOSED at P-481**. Part 5 (PREDICTION_LOG_COMBINED_5.md) is active and reconciled through **P-493**; next canonical ID is **P-494**. Three Part-5 cards remain open (P-489, P-491, P-493). The NBL P-487 source claim is held noncanonically pending issue-time evidence; P-490 is a retired unused provisional alias. No result-state refresh or retrospective was performed in the 2026-09-23 ID reconciliation. Performance status remains **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**.
 
 ## Current queue correction — 2026-09-17(c)
 
 Historical 2026-09-17 snapshot (superseded by the 2026-09-21 rollover above): Part 4 was the queue authority at P-452; the historical open-handle counts remain evidence, not the current next-ID state. TMP-AUDIT-20260912-03 and -04 are reopened for P-255-C05/P-256-C05 as UNRESOLVED_PERIOD. The two older bounded WIN labels and handle retirements are superseded. No historical forecast was changed. [Correction and receipts](PREDICTION_LOG_COMBINED_4.md).
 
-# Current complete game-log register - 2026-09-12
+# Current complete game-log register — updated 2026-09-23
 
-**LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** One row per canonical ID, in ascending order from P-001. There are now 481 canonical record IDs (P-001–P-481), including administrative records, one alias and one reserved/unused ID (P-372); this is not 371 independent predictions. Two noncanonical records appear after the main table. Next canonical ID: **P-482**, controlled by **`PREDICTION_LOG_COMBINED_5.md`** (opened 2026-09-21 after Part 4 closed at P-481).
+**LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** The ID register spans 493 numbered slots (P-001–P-493), including reserved/unused P-372, P-487 and P-490; this is not a prediction count. Next canonical ID: **P-494**, controlled by PREDICTION_LOG_COMBINED_5.md.
 
 **2026-09-17 update:** `P-424`–`P-437` imported from an external mini log, settled and audited ([Part 4 §"2026-09-17"](PREDICTION_LOG_COMBINED_4.md)). **12 cards scored** (52 graded rows, 36 W / 16 L, mean Brier 0.1892 — every row independently recomputed), **2 administratively closed** (`P-424`, `P-428`: correct start-crossing fail-closes, no forecast issued). Rank #1 10 W / 2 L; at least one of the top two won on 11 of 12; both won on 8 of 12. One row open: `P-430-C05` (`TMP-OPEN-20260917-01`). All five ACLE finals and both ETPL scorecards were independently verified at ESPN; the four KBO finals could not be (lane degraded). Canonical IDs now `P-001`–`P-437`; **next ID `P-438`**. New cross-sport rules `G-L17`–`G-L20` (`RULES_GENERAL.md` §16.12).
 
@@ -522,12 +522,25 @@ This category table was computed before the P-452–P-481 rollover and is retain
 | P-478 | Soccer / Sweden Allsvenskan — Djurgårdens IF vs IF Elfsborg | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
 | P-479 | Cricket / European T20 Premier League Final — Edinburgh Castle Rockers vs Belfast Wolves | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
 | P-480 | Soccer / Denmark Superligaen — Viborg FF vs FC Nordsjælland | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
-| P-481 | Soccer / Spain La Liga — Villarreal vs Levante | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-481 | Soccer / Spain La Liga — Villarreal vs Levante | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-482 | Cricket / CPL 2026 Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: PREDICTION_LOG_COMBINED_5.md; full card and review in active local mini log |
+| P-483 | Tennis / WTA 250 Korea Open (Seoul) R32 — Katie Volynets vs Elvina Kalieva | FINAL / SETTLED / RETROSPECTIVE COMPLETE (ENHANCED) | Canonical source: PREDICTION_LOG_COMBINED_5.md; full card and review in active local mini log |
+| P-484 | WNBA — Atlanta Dream @ New York Liberty | FINAL / SETTLED | Retained as actual P-484 in collision with later Padres claim; full card and review in active mini log |
+| P-485 | NFL — New York Giants @ Los Angeles Rams | FINAL / SETTLED; START_CROSSED / PREGAME STATUS UNVERIFIED | Full card and review in active mini log |
+| P-486 | MLB — Minnesota Twins @ San Francisco Giants | FINAL / SETTLED | Full card and review in active mini log |
+| P-487 | RESERVED / ISSUE-TIME HOLD — NBL Cairns vs Tasmania source claims this ID | Noncanonical forecast under TMP-20260923-NBL-CNS-TAS; no verified original freeze time; do not reuse |
+| P-488 | WTA Singapore — Vivian Wolff vs Oleksandra Oliynykova | FINAL / SETTLED | Full card and review in active mini log |
+| P-489 | NPB — Chunichi Dragons @ Yokohama DeNA BayStars | UNSETTLED / ISSUE_HORIZON_UNVERIFIED | Original card plus same-event R1 retained; result state not refreshed |
+| P-490 | RESERVED / UNUSED — retired provisional Padres alias | No event maps to this slot; do not reuse |
+| P-491 | NPB — Orix Buffaloes @ Chiba Lotte Marines | UNSETTLED / terminal state not checked | Pregame freeze recorded around 17:54 AEST; full card in active mini log |
+| P-492 | MLB — San Diego Padres @ Los Angeles Dodgers | FINAL / SETTLED; START_CROSSED / PREGAME STATUS UNVERIFIED | Source claim P-484 and prior provisional P-490 are aliases; one card, one canonical record |
+| P-493 | KBO — Kia Tigers @ Doosan Bears | UNSETTLED / pregame freeze recorded at 19:28:29 AEST | Scheduled 19:30 AEST; terminal state not refreshed |
 
 ## Noncanonical records and retired identity aliases
 
 | ID | Event | Status / mapping |
 |---|---|---|
+| TMP-20260923-NBL-CNS-TAS | Cairns Taipans vs Tasmania JackJumpers (source claims P-487) | Temporary issue-time hold; full card retained in active local mini log; no canonical ID promoted and no retrospective. |
 | LOCAL-GEELONG-20260904 | Geelong v Fremantle (AFL); inherited final Geelong 107-74 | Research-settled local record; never overwrite canonical P-272 Osaka-Siniakova |
 | TMP-SETTLED-20260911-01 | Fenerbahce v Roma; unsupplied external P-358 no-forecast record | **RETIRED 2026-09-15(b) — merged into canonical P-374** (the genuine pregame forecast for the same event; final 1-1 re-verified at ESPN 401915444). Not scored twice. `TMP-RECON-20260912-01` retired with it |
 | TMP-CANON-20260911-01 | Puerto Rico Women v China Women | RETIRED alias of canonical P-358; not another game |
