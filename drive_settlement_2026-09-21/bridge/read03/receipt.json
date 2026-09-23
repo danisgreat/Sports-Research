@@ -1,0 +1,31 @@
+{
+  "bridgeVersion": "3.6",
+  "kind": "google-docs-trusted-read-receipt",
+  "status": "complete",
+  "target": {
+    "documentId": "1Q-LxpgTlFIzf5Lkl3ZQYyKkyLTrlV_pdN-ASmABa8jQ",
+    "title": "PREDICTION_MINI_RUNNING_LOG_P474_ONWARD.md",
+    "revisionId": "ANLCKQkgHYtfhwtxQqtVUqyBrT2MoGj66ptmYph2rpEe1Xr0EYsXkQYDXDCDK_3587wNi_VzYqX1BrWHo6Y1ggU4TxO_BX_AYD1bWieFvN0",
+    "documentUrl": "https://docs.google.com/document/d/1Q-LxpgTlFIzf5Lkl3ZQYyKkyLTrlV_pdN-ASmABa8jQ",
+    "selectedTabId": null
+  },
+  "dropdownMetadata": {
+    "status": "unavailable",
+    "resolvedTool": null,
+    "authoritative": false,
+    "count": 0
+  },
+  "controlAwareness": {
+    "hasProtectedControls": false,
+    "authoritativeDropdownCount": 0,
+    "opaqueControlCount": 0,
+    "affectedParagraphCount": 0,
+    "nativeElementCounts": {
+      "dateElement": 1
+    },
+    "preservationRequired": false,
+    "recommendedBehavior": "No protected controls were detected in the scanned scope."
+  },
+  "warnings": [],
+  "error": null
+}

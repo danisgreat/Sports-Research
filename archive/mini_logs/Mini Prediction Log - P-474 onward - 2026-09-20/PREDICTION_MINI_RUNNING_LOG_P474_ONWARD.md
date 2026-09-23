@@ -1,0 +1,2717 @@
+﻿# Prediction Mini Running Log — P-474 Onward
+
+
+Created: Sep 20, 2026
+Location/time basis: Australia/Melbourne
+Governing method: MDS-2026.09.19-v4.3 / CR-2026.09.19-4
+Control hashes: METHOD da544d4c47efdf33bdbcc130a5ef0adc23055f77f80fd25284c1dc55f3d1b1b6; RULES_BASEBALL 1e0b5a0e9636469f7b75fcc21d19f9fe3c557c691724e67bba821b145889a411; RULES_BASKETBALL f5ad8787a08fe6b1533c0f273058f26ab3ff3f731bc5307ebe40423993c14421
+Operating mode: SPORTS_ONLY / MARKET_BLIND
+Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE
+Next intended ID after this card: P-482, subject to fresh reconciliation.
+Retrospective policy: settle completed events only after required verification; live/unresolved events remain pending.
+
+
+## 1. Incomplete / Unsettled Logs
+
+
+None. All P-474 through P-481 events are now fully settled and retrospectively reviewed.
+
+
+## 2. Fully Settled Logs
+
+
+### P-474 — MLB — Athletics @ Cleveland Guardians
+
+
+
+
+- Canonical / staging ID: P-474
+- Venue: Progressive Field, Cleveland, Ohio, United States
+- Venue timezone: America/New_York
+- Official venue-local start: Sep 19, 2026 at 6:10 PM EDT
+- Australia/Melbourne conversion: Sep 20, 2026 at 8:10 AM AEST; calendar-date rollover = YES
+- Research cutoff / distribution freeze: Sep 20, 2026 at approximately 8:14 AM AEST
+- Issuance state: START_CROSSED_UNVERIFIED. The official scheduled start had passed before delivery. Per the user's explicit instruction, research continued, but no live score, pitches, baserunners, or other in-game observations were admitted into the predictive model.
+- Normal pregame preflight: FAIL with exactly one blocking finding, PF-EVENT-STATE. Source-count, lineage, field-owner, timezone, line-quarantine and freeze-order checks passed. This is therefore a late-issued research forecast, not a normal pregame PASS.
+
+
+
+
+#### Identity / contracts
+
+
+
+
+Supplied contracts were quarantined until after the sporting distribution was frozen:
+- Cleveland Guardians moneyline
+- Athletics +1.5 runs
+- Full-game Over 7.5 runs
+- Full-game Under 7.5 runs
+
+
+
+
+Research endpoint treats a completed MLB regular-season game as including extra innings. Exact sportsbook suspension/action rules were not supplied, so operator action is not asserted.
+
+
+
+
+#### Starters / lineups / availability
+
+
+
+
+Official probable-starter handshake:
+- Athletics: Jacob Lopez, LHP — 6-4, 5.02 ERA, 107 K in 114.2 IP.
+- Guardians: Tanner Bibee, RHP — 6-15, 4.16 ERA, 140 K in 177.1 IP.
+
+
+
+
+Latest pregame lineup cross-check recovered from CBS/STATS-Field Level and an MLB-derived automated game feed:
+- Athletics: Henry Bolte CF; Jeff McNeil 1B; Shea Langeliers DH; Lawrence Butler RF; Zack Gelof 3B; Donovan Walton 2B; Carlos Cortes LF; Brian Serven C; Alika Williams SS.
+- Guardians: Steven Kwan CF; José Ramírez 3B; Chase DeLauter DH; Jo Adell RF; Angel Martínez LF; David Fry 1B; Travis Bazzana 2B; Austin Hedges C; Brayan Rocchio SS.
+
+
+
+
+Lineup integrity note: the MLB starting-lineups index retrieved during the research window still rendered the matchup as TBD, so a field-owner posted-order capture was not recovered to gate standard. The secondary lineup cross-check is used with an evidence cap; no player prop is ranked.
+
+
+
+
+Major Athletics absences materially reduce their offensive depth: Brent Rooker, Nick Kurtz and Jacob Wilson are on the 60-day IL with 2027 expected returns; Tyler Soderstrom underwent season-ending hip surgery. Shea Langeliers is available and is a key surviving power bat.
+
+
+
+
+Guardians availability: Rhys Hoskins remains out; Colin Holderman's wrist rehab suffered a setback; Shawn Armstrong was still on rehab progression. Chase DeLauter and Angel Martínez had recent day-to-day issues but were listed in the latest pregame lineup cross-check, so they are treated as available with residual uncertainty.
+
+
+
+
+#### Pitching / team process evidence
+
+
+
+
+Tanner Bibee:
+- Latest completed start: 6 2/3 IP, 2 ER, 7 K.
+- Baseball Savant 2026 line: 28 HR allowed, .307 wOBA, .318 xwOBA, 39.2% hard-hit and 8.3% barrel rate. This supports a credible Athletics home-run/cluster tail even though Cleveland is preferred overall.
+
+
+
+
+Jacob Lopez:
+- Season line remains volatile at 5.02 ERA / 1.48 WHIP.
+- One recent quality-start branch is real: 6 IP, 2 ER, 7 K in the official MLB record against Texas.
+- But the immediate recent window also contains material contact/home-run damage; CBS/Field Level reported nine runs on 13 hits in 9 2/3 innings over his prior two starts and five homers allowed across his prior three outings.
+
+
+
+
+Current-regime team context since early August, used descriptively rather than as a fitted coefficient:
+- Athletics: 91 wRC+, -15 defensive runs in the cited metric, 6.17 starter ERA, 4.53 bullpen ERA.
+- Guardians: 101 wRC+, approximately neutral/positive defense, 3.11 bullpen ERA.
+
+
+
+
+Bullpen workload note: Cleveland used Joey Cantillo for six relief innings in the preceding game; Hunter Gaddis and Cade Smith each handled late innings. Cantillo's immediate availability is therefore reduced, while the strongest one-inning leverage arms were used but not multi-inning exhausted. Workload informs availability only, not quality.
+
+
+
+
+#### Weather / park
+
+
+
+
+National Weather Service Cleveland forecast around the game window was roughly low-70s °F, mostly cloudy with a chance of showers and modest winds. No reliable park-orientation transformation justified a signed wind adjustment, so weather widens interruption/environment uncertainty but does not force an Over or Under direction.
+
+
+
+
+#### Frozen independent joint run distribution
+
+
+
+
+Model: explicit UNVALIDATED_SUBJECTIVE scenario mixture; independent Poisson team-run kernels within each scenario, then a separate MLB extra-inning branch. This is not a fitted, calibrated or prospectively validated model.
+
+
+
+
+Scenario 1 — Cleveland control: weight 0.33; CLE 5.0, ATH 2.7.
+Scenario 2 — competitive central: weight 0.34; CLE 4.2, ATH 3.4.
+Scenario 3 — Athletics power / Bibee HR tail: weight 0.15; CLE 3.8, ATH 5.0.
+Scenario 4 — high-run starter-to-bullpen cluster: weight 0.18; CLE 6.2, ATH 4.3.
+
+
+
+
+Frozen centre:
+- Cleveland runs: 4.76
+- Athletics runs: 3.57
+- PROJECTED TOTAL: 8.34 runs
+- Projected Cleveland margin: +1.19 runs
+- Regulation total SD: approximately 3.09 runs
+- Regulation margin SD: approximately 3.12 runs
+- Representative score family: Cleveland 5-3 Athletics
+- Distribution ID: P-474-dist-v1
+- Distribution SHA-256: 80ed1ee27b0e8c1958bbe2ce07fbca5d9ce2a8ffb06c4dd974e4eb9f2ca6467d
+
+
+
+
+##### Mandatory total projection / ceiling audit
+
+
+
+
+PROJECTED TOTAL: 8.34
+SUPPLIED TOTAL: 7.5
+RAW GAP: +0.84 runs
+DISTRIBUTION WIDTH: ~3.09 runs SD
+NORMALIZED GAP: ~+0.27 SD
+ASSESSMENT: MODEST SEPARATION, not a strong total edge.
+PREFERRED SUPPLIED SIDE: Over 7.5.
+MODEL ALTERNATE TARGET: Over 6.5, roughly 71-72% from the same frozen distribution before minor extras uplift. Operator availability is not asserted.
+
+
+
+
+Component / failure-state budget:
+- Cleveland centre 4.8 + Athletics centre 3.6 = about 8.4 -> Over.
+- Cleveland ordinary high 6 + Athletics centre 3-4 -> 9-10 -> Over.
+- Cleveland centre 4-5 + Athletics ordinary high 5 -> 9-10 -> Over.
+- Bibee-control + depleted Oakland branch can still produce 4-2 / 5-2 -> Under 7.5.
+- A strong Lopez outing plus Cleveland home-last-bat suppression can produce 3-2 / 4-2 -> Under.
+- A tie after nine activates MLB's automatic runner at second, increasing the scoring rate of the extra-inning branch and modestly helping the Over relative to a regulation-only calculation.
+
+
+
+
+#### Ranked supplied contracts
+
+
+
+
+1. GUARDIANS ML — ~65.5% UNVALIDATED_SUBJECTIVE — Rank #1.
+   Why: Cleveland owns the stronger current bullpen/process profile; Oakland's lineup is missing several of its highest-impact bats; Bibee's central branch is more stable than Lopez's; Cleveland also has home-last-bat and extra-inning home advantage.
+   Main failure: Bibee's 28-HR season tail is hit by Langeliers/Butler/Gelof, while Lopez reaches his quality-start branch and Cleveland's depleted relief depth is exposed.
+
+
+
+
+2. OVER 7.5 RUNS — ~60.6% — Rank #2.
+   Why: independent centre is 8.34; Lopez's contact/HR volatility plus Bibee's own HR tail produces several ordinary 5-3, 5-4 and 6-3 states; MLB extras add upper-tail scoring when regulation ends tied.
+   Main failure: Bibee suppresses the depleted Oakland lineup and Lopez lands his good-start branch, producing a 4-2 / 5-2 or lower state; a Cleveland lead can also remove the bottom of the ninth.
+
+
+
+
+3. ATHLETICS +1.5 — ~52.8% — Rank #3.
+   Why: the +1.5 wins in every Athletics victory and every Cleveland one-run win. The regulation model puts about 13.1% mass specifically on a Cleveland one-run win, which creates meaningful overlap with Guardians ML.
+   Main failure: Cleveland separates by 2+ through the Lopez-to-middle-relief transition, a multi-run homer/sequence cluster, or late bullpen separation.
+
+
+
+
+4. UNDER 7.5 RUNS — ~39.4% — Rank #4.
+   Why it remains live: Cleveland has a legitimate run-prevention path against a heavily depleted Athletics lineup, and Bibee just delivered a strong start.
+   Why it ranks last: 7.5 is below the 8.34 centre, both starters retain home-run/contact tails, and several ordinary rather than extreme score combinations clear eight runs.
+
+
+
+
+Forced-pair integrity: Over 7.5 + Under 7.5 = 100% conditional on action; there is no push at a half-run line. Guardians ML and Athletics +1.5 are not complements because both win when Cleveland wins by exactly one run.
+
+
+
+
+#### Potential game winner
+
+
+
+
+CLEVELAND GUARDIANS — approximately 65.5% eventual-win estimate.
+
+
+
+
+Regulation decomposition before the extra-inning branch:
+- Cleveland win ~59.1%
+- Tie after nine ~12.1%
+- Athletics win ~28.8%
+
+
+
+
+The MLB automatic-runner branch is assigned a small home-side edge, lifting Cleveland's eventual research endpoint to about 65.5%. This is an unvalidated scenario assumption, not a calibrated MLB win model.
+
+
+
+
+#### Dependence / kill-path audit
+
+
+
+
+Top two: Guardians ML + Over 7.5.
+- Approximate joint success: ~40%.
+- Approximate both-fail state: ~14%.
+- Approximate probability at least one of top two wins: ~86%.
+- Main both-fail family: Athletics win a low-scoring game because Lopez reaches his strong branch while Bibee allows one decisive power cluster, e.g. 4-3 / 3-2 Athletics.
+
+
+
+
+Guardians ML and Athletics +1.5 positively overlap in Cleveland one-run wins; they should not be treated as independent confirmation.
+
+
+
+
+#### Self-selected model targets outside the supplied slate
+
+
+
+
+These are model thresholds, not claims that an operator offers them:
+- Over 6.5 runs: ~71-72%, safer than the supplied Over 7.5.
+- Athletics team total Under 4.5: ~70% regulation-model target; slightly lower after accounting for extra-inning exposure.
+- Cleveland team total Over 3.5: ~68% regulation-model target.
+
+
+
+
+These are not promoted above the supplied four in the official ranked slate because the user explicitly supplied those four contracts and the Drive baseball rule requires every supplied row to be ranked.
+
+
+
+
+#### Integrity flags
+
+
+
+
+- START_CROSSED_USER_OVERRIDE / PF-EVENT-STATE BLOCK
+- NO_LIVE_GAME_STATE_USED_IN_MODEL
+- MLB_FIELD_OWNER_POSTED_LINEUPS_NOT_RECOVERED_TO_GATE_STANDARD
+- EXACT_OPERATOR_SUSPENSION/ACTION_RULES_UNKNOWN
+- UNVALIDATED_SUBJECTIVE_DISTRIBUTION
+- MARKET_ODDS / LINE_MOVEMENT / TIPSTERS / FANTASY-DFS EXCLUDED
+- Original issue status: UNSETTLED — LATE-ISSUED RESEARCH FORECAST / NO RETROSPECTIVE
+
+
+
+
+#### Sources / provenance
+
+
+
+
+1. MLB Probable Pitchers — exact event, venue, scheduled time, official probable starters and season starter lines — PRIMARY FIELD OWNER — https://www.mlb.com/probable-pitchers
+2. MLB Scores / schedule — exact event/date/state route — PRIMARY FIELD OWNER — https://www.mlb.com/scores/2026-09-19
+3. MLB Athletics injuries and roster moves — Rooker/Kurtz/Wilson and other current IL status — PRIMARY FIELD OWNER — https://www.mlb.com/athletics/news/athletics-injuries-and-roster-moves
+4. MLB Athletics report on Wilson/Kurtz/Soderstrom — season-ending availability context — PRIMARY TEAM/FIELD OWNER — https://www.mlb.com/news/jacob-wilson-nick-kurtz-expected-to-miss-rest-of-2026-season
+5. MLB Guardians injuries and roster moves — Hoskins/Holderman/Armstrong and recent day-to-day availability — PRIMARY FIELD OWNER — https://www.mlb.com/guardians/news/guardians-injuries-and-roster-moves
+6. MLB Guardians transactions — Holderman rehab status and bullpen roster context — PRIMARY FIELD OWNER — https://www.mlb.com/guardians/roster/transactions
+7. Baseball Savant / MLB — Bibee Statcast contact, xwOBA, hard-hit, barrel and HR data — PRIMARY MLB TRACKING SOURCE — https://baseballsavant.mlb.com/team/114_4
+8. MLB game video, Athletics at Rangers — official Lopez 6 IP / 2 ER / 7 K quality-start branch — PRIMARY FIELD OWNER — https://www.mlb.com/video/game/822851
+9. Reuters — Bibee latest 6 2/3 IP / 2 ER / 7 K and Cleveland recent offense — HIGH-QUALITY INDEPENDENT — https://www.reuters.com/sports/baseball/guardians-creep-closer-al-central-lead-by-hammering-twins--flm-2026-09-13/
+10. Covering the Corner series preview — current-regime wRC+, defense, starter ERA and bullpen ERA diagnostics — INDEPENDENT SECONDARY — https://www.coveringthecorner.com/cleveland-guardians-analysis/74254/series-preview-athletics-at-guardians
+11. Covering the Corner game discussion — pregame matchup / lineup corroboration — INDEPENDENT SECONDARY — https://www.coveringthecorner.com/cleveland-guardians-discussion/74401/athletics-at-guardians-bibee-vs-lopez-discussion
+12. CBS Sports / STATS LLC / Field Level Media exact-game preview — posted lineup cross-check, Lopez recent-contact/HR window, WHIP and starter context — INDEPENDENT SECONDARY — exact Athletics-at-Guardians game preview.
+13. National Weather Service Cleveland — venue-area game-window temperature/cloud/showers/wind context — GOVERNMENT FIELD OWNER — https://forecast.weather.gov/MapClick.php?FcstType=digital&lat=41.4797&lon=-81.6785
+14. MLB Automatic Runner glossary — extra-inning runner-on-second rule — RULES FIELD OWNER — https://www.mlb.com/glossary/rules/designated-runner
+15. MLB Regulation Game glossary — nine-inning/home-last-bat/extra-inning endpoint definition — RULES FIELD OWNER — https://www.mlb.com/glossary/rules/regulation-game
+16. Sports Research Drive — METHOD.md, RULES_BASEBALL.md, RULES_GENERAL.md, CONTROL_MANIFEST_2026-09-19.md, DATA_SOURCE_REGISTER.md and FORECAST_PREFLIGHT_MANIFEST.md — governing methodology.
+
+
+
+
+Source firewall: no sportsbook odds, betting picks, tipster predictions, line movement, fantasy/DFS projections, or market consensus were used as predictive inputs. The user-supplied 7.5/+1.5/ML contracts were queried only after distribution freeze.
+
+
+
+
+#### Document mapping / candidate learnings
+
+
+
+
+- Starter HR/contact tail plus depleted opponent lineup should remain a two-sided mixture rather than a one-sign Under adjustment -> existing RULES_BASEBALL starter/current-regime and cluster controls; no new fixed coefficient.
+- Exact posted-lineup field-owner retrieval remained incomplete at the issuance gate -> DATA_SOURCE_REGISTER source-latency/retrieval observation.
+- Start crossing with explicit user direction demonstrates that normal preflight can fail while a clearly labelled research-only late forecast is still recorded without live-state contamination -> EXTERNAL_LOGGING_WORKFLOW process note candidate; do not weaken normal pregame gate.
+
+
+
+
+---
+
+
+
+
+#### Settlement and retrospective — P-474
+
+
+Settlement status: SETTLED / RETROSPECTIVE COMPLETE.
+Verified final: Cleveland Guardians 12, Athletics 6.
+Actual full-game total: 18 runs.
+Actual margin: Cleveland +6.
+
+
+Three-source final-state gate: PASS.
+- MLB official scoreboard/game story: FINAL, Cleveland 12-6.
+- Associated Press / CBS reporting: Cleveland 12-6 final.
+- Athletics Nation / Field Level Media independent recap: Cleveland 12-6 final.
+
+
+Settlement sources:
+- MLB official scoreboard: https://www.mlb.com/scores/2026-09-19
+- MLB official game story: https://www.mlb.com/stories/game/824380
+- AP/CBS final recap: CBS Sports exact-game recap, Sep 19, 2026.
+- Athletics Nation final recap: https://www.athleticsnation.com/athletics-scores-and-standings/109853/as-fall-to-guardians-12-6
+- Field Level Media final recap: https://fieldlevelmedia.com/mlb/angel-martinez-homers-twice-guardians-dominate-athletics/
+
+
+##### Pick-by-pick settlement — supplied slate
+
+
+1. Guardians ML — WIN. Cleveland won 12-6.
+2. Over 7.5 — WIN. Final total was 18.
+3. Athletics +1.5 — LOSS. Oakland lost by six.
+4. Under 7.5 — LOSS.
+
+
+Potential game winner: Cleveland Guardians — WIN.
+
+
+Self-selected model targets:
+- Over 6.5 — WIN.
+- Athletics team total Under 4.5 — LOSS; Athletics scored 6.
+- Cleveland team total Over 3.5 — WIN; Cleveland scored 12.
+
+
+##### Ranking / top-two / totals review
+
+
+Rank #1 Guardians ML succeeded, so no Rank-1 failure trigger applies.
+Highest-ranked full-game O/U, Over 7.5, succeeded; no mandatory top-O/U failure trigger applies.
+Top two supplied selections both succeeded: Guardians ML WIN + Over 7.5 WIN. Hit@2 = YES; both-win = YES.
+
+
+The ordering of Guardians ML above Over 7.5 was defensible on pre-game evidence because Cleveland had the stronger side profile, while the total was only ~0.27 SD above the supplied line and retained a genuine low-scoring branch.
+
+
+##### What the outcome turned on
+
+
+Cleveland's upper-tail offensive cluster arrived immediately. The Athletics led 2-0 in the top of the first, but Cleveland scored five before Jacob Lopez recorded an out, including Chase DeLauter's three-run homer and Angel Martínez's two-run homer. Cleveland added five more in the third. Lopez was charged with 10 runs and 10 hits in 2 2/3 innings.
+
+
+The important second mechanism was that Tanner Bibee also failed to suppress Oakland. Bibee allowed six runs on 12 hits in 4 2/3 innings. The final therefore came from a two-sided starter-failure / sequencing / home-run state rather than a simple Cleveland-control state.
+
+
+##### Expected script vs reality
+
+
+What went right:
+- Cleveland was correctly preferred to win.
+- Lopez's contact/home-run and early-hook risk was explicitly identified before issue.
+- The Over was correctly preferred to the Under.
+- Cleveland team total Over 3.5 and Over 6.5 both captured the favourite's offensive upside.
+
+
+What went wrong:
+- The 8.34-run centre badly understated the realized 18-run upper tail.
+- The model's Athletics team-total Under 4.5 depended too much on Bibee/depleted-lineup suppression; Bibee instead allowed six runs himself.
+- The high-run branch existed, but its two-sided form — Lopez collapse plus Bibee collapse in the same game — was not given enough prominence.
+
+
+This does not justify adding a fixed Over coefficient. One realised extreme game is not evidence that the centre itself should be shifted by an arbitrary amount.
+
+
+##### Availability / lineup / source audit
+
+
+The issue-time card explicitly recorded that field-owner posted orders were not recovered to gate standard and therefore did not rank player props. That limitation was handled correctly. The final was settled from multiple explicit terminal-state sources rather than search snippets.
+
+
+Source-quality result:
+- MLB official final/game story: retained as field owner.
+- AP/CBS and Field Level Media: retained as high-quality independent final/result sources.
+- Athletics Nation: useful secondary game-script corroboration, not a substitute for MLB field ownership.
+
+
+##### Blind spots and mitigation
+
+
+Blind spot: simultaneous failure of both starters was under-emphasized even though each had a documented contact/HR tail.
+Pre-game knowability: PARTLY KNOWABLE — the component risks were known; the exact joint realization was not.
+Materiality: HIGH for the total and Athletics team total; LOW for the Cleveland winner.
+Mitigation: when both starters carry credible upper-tail contact/HR risk, explicitly show a joint two-starter-failure branch before ranking a total or team-total Under.
+
+
+Existing control check: RULES_BASEBALL already requires BB-B2 joint early-hook, BB-B3 cluster and BB-B5 relief-transition states. This is principally an execution/emphasis observation, not evidence for a new permanent rule.
+
+
+##### Document mapping
+
+
+- RULES_BASEBALL.md — existing BB-B2/BB-B3/BB-B5 controls; reinforce execution only, no new coefficient.
+- DATA_SOURCE_REGISTER.md — retain the issue-time official-lineup retrieval-latency observation.
+- Prediction log — record the two-sided starter-collapse learning with P-474.
+
+
+
+
+---
+
+
+### P-475 — WNBA — Chicago Sky @ Atlanta Dream
+
+
+
+
+- Canonical / staging ID: P-475
+- Competition: WNBA 2026 regular season
+- Official event ID: WNBA game 1022600310
+- Venue: State Farm Arena, Atlanta, Georgia, United States
+- Venue timezone: America/New_York
+- Official venue-local start: Sep 19, 2026 at 7:00 PM EDT
+- Australia/Melbourne conversion: Sep 20, 2026 at 9:00 AM AEST; calendar-date rollover = YES
+- Research cutoff / independent distribution freeze: Sep 20, 2026 at approximately 9:04:40 AM AEST
+- Issuance state: START_CROSSED_UNVERIFIED. Research crossed scheduled tip while completing the required source and methodology checks. No live score, possession, lineup-on-court, shot, foul, injury-in-game or other post-tip performance information was admitted into the predictive model.
+- Method / controls: MDS-2026.09.19-v4.3 / CR-2026.09.19-4 / SFA-BASKETBALL
+- Operating mode: SPORTS_ONLY / MARKET_BLIND
+- Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE
+- Preflight: FAIL with exactly one blocking finding, PF-EVENT-STATE. Source count/lineage, field-owner mix, timezone conversion, source firewall, line quarantine and freeze order otherwise passed.
+- No retrospective performed.
+
+
+
+
+#### Identity / supplied contracts
+
+
+
+
+The supplied thresholds were quarantined until after the independent basketball distribution was frozen:
+- Atlanta Dream -15.5
+- Chicago Sky +15.5
+- Full-game Over 176.5
+- Full-game Under 176.5
+
+
+
+
+Exact operator overtime/action/void terms were not independently supplied. The research endpoint is a normal completed WNBA game including the explicit overtime tail; operator settlement remains a separate field if later required.
+
+
+
+
+#### Participant / availability state
+
+
+
+
+Official WNBA injury-report process was checked, but the dynamically rendered league page did not expose the exact current team rows through the accessible research route. Current pre-tip reporting was therefore reconciled across team/league records and independent current sources and is evidence-capped rather than relabelled field-owner-confirmed.
+
+
+
+
+Chicago:
+- Natasha Cloud — QUESTIONABLE, left knee, after leaving the Sep. 17 Washington game in the first half and not returning.
+- Azurá Stevens — OUT, right knee.
+- DiJonai Carrington — OUT, left foot.
+- Skylar Diggins — OUT for the remainder of the season, right knee.
+- Rickea Jackson — OUT for the remainder of the season after a torn left ACL.
+- Current available core includes Kamilla Cardoso, Courtney Vandersloot, Sydney Taylor, Rachel Banham, Gabriela Jaquez, Aicha Coulibaly, Jacy Sheldon and Elizabeth Williams.
+- Cloud's unresolved availability is represented as a minutes/role mixture; no binary full-workload assumption is made.
+
+
+
+
+Atlanta:
+- Brionna Jones — OUT for the remainder of the season, left leg.
+- Current core available in pre-tip records: Jordin Canada, Allisha Gray, Rhyne Howard, Angel Reese, Naz Hillmon, DeWanna Bonner, Madina Okot and the supporting guard/wing rotation.
+- Atlanta's long-running most-used starting unit has been Canada / Gray / Howard / Hillmon / Reese, but a confirmed five for this exact game was not recovered to gate standard before the research cutoff and is not relabelled as confirmed.
+
+
+
+
+Because both confirmed starting fives were not recovered to the governing gate standard, lineup-sensitive player props are not promoted. Full-game side/total rows carry a participant-evidence cap.
+
+
+
+
+#### Current regime / recent form
+
+
+
+
+Current records immediately before the event:
+- Atlanta: 27-14, 8-2 over the latest league-recorded ten-game form window.
+- Chicago: 15-26, four straight losses; the current standings snapshot shows Chicago materially behind Atlanta.
+
+
+
+
+Descriptive score windows calculated from the latest completed game sequence:
+- Atlanta L5: 4-1; 90.4 scored / 80.2 allowed.
+- Atlanta L10: 8-2; 97.5 scored / 83.0 allowed.
+- Atlanta L15: 11-4; 94.1 scored / 84.7 allowed.
+- Atlanta L20: 15-5; 94.9 scored / 86.3 allowed.
+- Chicago L5: 1-4; 78.0 scored / 93.0 allowed.
+- Chicago L10: 3-7; 81.0 scored / 90.9 allowed.
+- Chicago L15: 6-9; 85.2 scored / 91.3 allowed.
+- Chicago L20: 8-12; 86.9 scored / 91.6 allowed.
+
+
+
+
+These result windows are diagnostic only. They are not converted into a mechanical points adjustment.
+
+
+
+
+Latest completed games:
+- Atlanta beat Connecticut 103-59. Angel Reese scored 30 with 10 rebounds in under 25 minutes; Atlanta's blowout reduced her exposure rather than requiring full star minutes.
+- Chicago lost 110-80 to Washington. Chicago was heavily outrebounded and Washington converted Chicago turnovers into transition/early-offense scoring. Cloud left with the knee issue.
+- Those two blowouts widen today's mismatch branches but do not by themselves justify a 15.5-point central margin.
+
+
+
+
+Current-season head-to-head:
+- Atlanta 82-75 Chicago on June 9.
+- Atlanta 93-91 Chicago on July 19.
+Atlanta is 2-0, but the margins were only 7 and 2. Those games are retained as direct matchup context; today's much more depleted Chicago roster means they do not control the current margin distribution.
+
+
+
+
+#### Possession / efficiency mechanism
+
+
+
+
+Historical structured current-season baselines before the last game placed Atlanta around:
+- 90.8 points per game;
+- 80.6 pace;
+- 112.3 offensive rating;
+- 106.0 defensive rating;
+- +6.3 net rating.
+
+
+
+
+Chicago's comparable baseline before the last game was around:
+- 86.7 points per game;
+- 81.7 pace;
+- 105.5 offensive rating;
+- 109.1 defensive rating;
+- -3.6 net rating.
+
+
+
+
+The current model does not add arbitrary points for injuries or recent results. Instead, it uses an explicit scenario mixture spanning Cloud active/functional, Cloud limited/out, Atlanta favourite sustain, Atlanta blowout slowdown/bench compression, Chicago shooting resistance and a higher-pace late-scoring branch.
+
+
+
+
+Expected possession environment: approximately 80-82 regulation possessions, with material variance from Chicago transition defence/turnovers and Atlanta's ability to control the game state.
+
+
+
+
+Decision-driving mechanisms:
+1. Atlanta's Gray/Howard/Canada perimeter creation against a depleted Chicago guard/wing rotation.
+2. Reese/Hillmon/Okot/Bonner frontcourt rebounding and second-chance pressure against a Chicago group missing Stevens.
+3. Chicago's Cardoso interior scoring/rebounding as its clearest stable half-court floor.
+4. Cloud's uncertain creation/defence and replacement minutes for Vandersloot/Taylor/Banham/Jaquez/Coulibaly/Sheldon.
+5. Atlanta's blowout rotation: starter minutes can fall while bench pace/offence persists.
+6. Chicago's garbage-time response: reduced Atlanta defensive intensity can compress the margin and lift the total simultaneously.
+7. Late-foul and overtime branches remain explicit but low-mass.
+
+
+
+
+#### Frozen independent joint score distribution
+
+
+
+
+Model: explicit UNVALIDATED_SUBJECTIVE scenario mixture. Within each scenario, team-score uncertainty is represented with approximately 10-point team SD and modest positive game-level correlation (~0.15). This is an uncertainty representation, not a calibrated WNBA model.
+
+
+
+
+Scenario 1 — Cloud active / competitive central: weight 0.22; ATL 95, CHI 80.
+Scenario 2 — Cloud limited/out / Atlanta central: weight 0.22; ATL 97, CHI 76.
+Scenario 3 — favourite sustain / shooting-rebound separation: weight 0.22; ATL 104, CHI 74.
+Scenario 4 — blowout slowdown / bench compression: weight 0.18; ATL 91, CHI 82.
+Scenario 5 — Chicago resistance / shooting-high: weight 0.10; ATL 92, CHI 87.
+Scenario 6 — higher-pace bench / late-scoring branch: weight 0.06; ATL 101, CHI 85.
+
+
+
+
+Frozen distribution:
+- Atlanta centre: 96.76
+- Chicago centre: 79.16
+- PROJECTED TOTAL: 175.92
+- PROJECTED ATLANTA MARGIN: +17.60
+- Approx total SD including scenario uncertainty: 15.54
+- Approx margin SD including scenario uncertainty: 15.40
+- Representative score family: Atlanta 97-79
+- Distribution ID: P-475-dist-v1
+- Distribution SHA-256: 0392fe62912bad317ee0ffae5adb0d08ce9bd73b6c044eb9543ae1889d443968
+
+
+
+
+##### Mandatory total projection / team-score budget
+
+
+
+
+PROJECTED TOTAL: 175.92
+SUPPLIED TOTAL: 176.5
+RAW GAP: -0.58 points
+DISTRIBUTION WIDTH: ~15.54 points SD
+NORMALIZED GAP: ~-0.04 SD
+ASSESSMENT: CLOSE TO PROJECTION / WEAK MAIN-TOTAL EDGE.
+Preferred supplied side: Under 176.5, but only marginally.
+
+
+
+
+Team-score threshold budget:
+- Chicago floor 70-74 requires Atlanta roughly 103-107 to cross 176.5; the favourite-sustain branch can do it, while many suppression/blowout states remain Under.
+- Chicago centre 78-81 requires Atlanta about 96-99; this is almost exactly Atlanta's central score range, so ordinary states land on both sides.
+- Chicago ordinary high 86-88 requires only Atlanta 89-91; that underdog-response branch tends to push the game Over even when the final margin compresses.
+- Atlanta ordinary high 101-104 can push the game Over even with Chicago in the mid-70s.
+- Therefore Chicago's depleted offence is not an automatic Under: Atlanta's own ceiling can consume the total budget.
+
+
+
+
+Model alternate-total targets from the same frozen distribution:
+- Under 184.5 ~71.0%.
+- Under 188.5 ~80%+.
+These are model thresholds only; operator availability is not asserted.
+
+
+
+
+##### Mandatory large-spread separation audit
+
+
+
+
+Projected margin: Atlanta +17.60
+Supplied spread: Atlanta -15.5
+Raw separation beyond line: +2.10 points
+Margin width: ~15.40 points SD
+Normalized separation: ~0.14 SD
+ASSESSMENT: LINE INSIDE THE CENTRAL MARGIN CORRIDOR / weak-to-modest supplied spread edge.
+
+
+
+
+Mismatch states:
+- Favourite sustain: Atlanta keeps pressure, rebounding and transition efficiency high -> 25-30+ margin possible.
+- Favourite slowdown: starter minutes fall; Atlanta bench scores enough to win but Chicago response compresses the closing margin -> 7-12 point final possible.
+- Underdog response: Cardoso plus secondary guards score against reduced defensive intensity -> margin can fall inside 15.5 while total rises.
+- Underdog suppression: Chicago's missing creators/wings reduce half-court quality and defensive resistance -> wide Atlanta margin with a lower total.
+
+
+
+
+The two 2026 H2H margins (7 and 2) are a warning against treating -15.5 as automatic; today's roster state is worse for Chicago, but the current model still keeps substantial compression mass.
+
+
+
+
+#### Best four model-selected picks
+
+
+
+
+These are model target thresholds, not claims that a sportsbook currently offers each exact line.
+
+
+
+
+1. ATLANTA DREAM ML — ~87.3% UNVALIDATED_SUBJECTIVE.
+   Rationale: stronger current roster continuity, superior current team process, home venue, Chicago's depleted creation/wing defence and Atlanta's multiple scoring/rebounding pathways.
+   Main failure: Chicago shoots above its ordinary range, Cardoso controls the paint and Atlanta's post-World-Cup/rotation efficiency underperforms.
+
+
+
+
+2. ATLANTA TEAM TOTAL OVER 88.5 — ~77.2%.
+   Rationale: Atlanta's independent team centre is ~96.8, every central scenario keeps the favourite above 90 before within-scenario shooting variance, and Chicago just allowed 110 while losing transition/rebounding control.
+   Main failure: Atlanta builds an early lead, sharply cuts primary creators and the bench shoots poorly enough to stall in the mid-80s.
+
+
+
+
+3. CHICAGO TEAM TOTAL UNDER 86.5 — ~75.1%.
+   Rationale: independent Chicago centre ~79.2; Diggins/Jackson/Carrington/Stevens unavailable and Cloud uncertain; Atlanta owns a strong current defensive/rebounding structure.
+   Main failure: garbage-time response, Cardoso paint efficiency, secondary shooting variance or Atlanta defensive-intensity reduction lifts Chicago into the high 80s.
+
+
+
+
+4. ATLANTA -8.5 — ~71.9%.
+   Rationale: materially safer than -15.5 while preserving the same current-regime mismatch mechanism; survives more blowout-compression states.
+   Main failure: Cloud plays effectively, Chicago's secondary guards shoot well and Atlanta wins only narrowly, as in the two prior 2026 meetings.
+
+
+
+
+#### Supplied slate ranking
+
+
+
+
+1. DREAM -15.5 — ~55.1% — preferred supplied side / LOW evidence because line sits close to margin centre.
+2. UNDER 176.5 — ~51.6% — preferred supplied total / CLOSE TO PROJECTION / very weak directional separation.
+3. OVER 176.5 — ~48.4% — live ordinary-high/garbage-time branch but slightly below the frozen centre query.
+4. SKY +15.5 — ~44.9% — substantial compression path remains, but current roster depletion makes Atlanta 16+ more likely than Chicago +15.5 in the model.
+
+
+
+
+Forced-pair integrity:
+- Dream -15.5 + Sky +15.5 = 100% conditional on action.
+- Over 176.5 + Under 176.5 = 100% conditional on action.
+- No push exists at either half-point threshold.
+
+
+
+
+#### Potential game winner
+
+
+
+
+ATLANTA DREAM — ~87.3% eventual-win estimate.
+
+
+
+
+This winner view is materially stronger than Atlanta -15.5. The model is confident Atlanta wins much more often than not but only modestly prefers a 16+ point final margin.
+
+
+
+
+#### Dependence / kill-path audit
+
+
+
+
+Top two model picks: Atlanta ML + Atlanta team total Over 88.5.
+- Approx joint win: ~73.3%.
+- Approx both-fail: ~8.9%.
+- Approx at least one wins: ~91.1%.
+- Main both-fail state: Atlanta's shooting/turnover process collapses enough to keep the Dream at 88 or below while Chicago's remaining creators/Cardoso produce the upset.
+
+
+
+
+Across all four model-selected targets, approximate all-four-win mass is ~55.6%; approximate all-four-fail mass is ~5.4%. These are derived from the same unvalidated joint scenario object and are not independence calculations.
+
+
+
+
+Top two supplied sides: Atlanta -15.5 + Under 176.5.
+- Approx joint win: ~28%.
+- Approx both-fail: ~21.5%.
+- Main both-fail family: Atlanta wins narrowly or Chicago stays within 15.5 while garbage-time/late-foul scoring pushes the total Over 176.5.
+
+
+
+
+#### Information not confirmed / integrity flags
+
+
+
+
+- START_CROSSED_USER_OVERRIDE / PF-EVENT-STATE BLOCK
+- NO_LIVE_GAME_STATE_USED_IN_MODEL
+- CONFIRMED_STARTING_FIVES_NOT_RECOVERED_TO_GATE_STANDARD
+- CLOUD_FINAL_ACTIVE/INACTIVE_STATUS_NOT_RECOVERED_PRETIP_TO_FIELD_OWNER_STANDARD
+- WNBA_OFFICIAL_INJURY_PAGE_DYNAMIC_ROWS_NOT_EXPOSED_IN_RESEARCH_ROUTE
+- EXACT_OPERATOR_OVERTIME/ACTION_TERMS_UNKNOWN
+- UNVALIDATED_SUBJECTIVE_DISTRIBUTION
+- NO SPORTSBOOK ODDS / MARKET MOVEMENT / TIPSTER / FANTASY-DFS PREDICTIVE INPUT
+- Original issue status: UNSETTLED — LATE-ISSUED RESEARCH FORECAST / NO RETROSPECTIVE
+
+
+
+
+#### Sources / provenance
+
+
+
+
+1. WNBA exact game page, game 1022600310 — exact event, 7:00 PM ET start, State Farm Arena, prior 2026 H2H — PRIMARY FIELD OWNER — https://www.wnba.com/game/1022600310/chi-vs-atl
+2. WNBA official injury-report page — reporting rules and current-update process; exact dynamic rows were not exposed through the accessible text route — PRIMARY FIELD OWNER — https://www.wnba.com/wnba-injury-report
+3. WNBA official current standings/homepage — current Atlanta record and league context — PRIMARY FIELD OWNER — https://www.wnba.com/
+4. Atlanta Dream official Sep. 17 recap — 103-59 win, Reese 30/10 in under 25 minutes, current player/rotation context — PRIMARY TEAM — https://dream.wnba.com/news/dream-returns-with-a-decisive-win
+5. Atlanta Dream official current roster — Canada/Gray/Howard/Reese/Hillmon and current rotation — PRIMARY TEAM — https://dream.wnba.com/roster
+6. Chicago Sky official WNBA team page — current 15-26 record and roster — PRIMARY FIELD OWNER / TEAM — https://www.wnba.com/team/1611661329/chicago-sky
+7. WNBA official Sep. 17 Chicago recap — Washington 110, Chicago 80 — PRIMARY FIELD OWNER — WNBA game recap archive.
+8. Reuters, Sep. 1 — Skylar Diggins shut down for the 2026 season with knee injury — HIGH-QUALITY INDEPENDENT.
+9. Reuters / NBC Chicago / WNBA player archive — Rickea Jackson torn ACL, out for season — HIGH-QUALITY INDEPENDENT + LEAGUE ARCHIVE.
+10. Athlon final pre-tip injury report, published 2:00 PM EDT — Cloud questionable; Stevens/Carrington/Diggins out; Jones out — CURRENT INDEPENDENT SECONDARY; source lineage is not treated as a field owner.
+11. Field Level Media current Chicago recap — Cloud left Sep. 17 with left-knee injury; Chicago lost 110-80 — INDEPENDENT SECONDARY.
+12. Basketball-Reference 2026 Atlanta / Chicago schedules and team pages — pace, ORtg/DRtg, season process and disaggregated game sequence — HISTORICAL STRUCTURED CANDIDATE / diagnostic only.
+13. Basketball-Reference Atlanta starting-lineup history — long-running Canada/Gray/Hillmon/Howard/Reese lineup continuity — HISTORICAL STRUCTURED CANDIDATE; not a confirmed exact-game five.
+14. Sports Research Drive — METHOD.md, RULES_BASKETBALL.md, RULES_GENERAL.md, CONTROL_MANIFEST_2026-09-19.md, DATA_SOURCE_REGISTER.md and FORECAST_PREFLIGHT_MANIFEST.md — governing methodology.
+
+
+
+
+Source firewall: sportsbook odds, consensus, betting picks, line movement, fantasy/DFS projections and betting-derived analysis were not admitted as predictive inputs. User-supplied -15.5/+15.5/176.5 contracts were queried only after the independent distribution freeze.
+
+
+
+
+#### Document mapping / candidate learnings
+
+
+
+
+- Large-spread Chicago depletion does not eliminate blowout-compression/garbage-time response -> existing RULES_BASKETBALL mismatch-state controls; no new coefficient.
+- Main 176.5 total sits almost exactly on independent centre despite strong Atlanta-side mismatch -> reinforces team-score-budget requirement rather than a one-sign depleted-underdog Under.
+- Exact official injury-row/confirmed-five retrieval remained incomplete near tip -> DATA_SOURCE_REGISTER source-access/latency observation.
+- Start-crossing late-research handling remains a process exception only; do not weaken the normal pregame issuance gate in METHOD/FORECAST_PREFLIGHT.
+
+
+
+
+---
+
+
+
+
+#### Settlement and retrospective — P-475
+
+
+Settlement status: SETTLED / RETROSPECTIVE COMPLETE.
+Verified final: Atlanta Dream 106, Chicago Sky 81.
+Actual full-game total: 187 points.
+Actual margin: Atlanta +25.
+
+
+Three-source final-state gate: PASS.
+- WNBA official recap: Atlanta 106-81 Chicago, explicit completed game recap.
+- Atlanta Dream official team recap: 106-81 final.
+- CBS/AP / independent box-score reporting: 106-81 final.
+
+
+Settlement sources:
+- WNBA official recap: https://www.wnba.com/watch/video/game-recap-atlanta-dream-106-chicago-sky-81-09-19-2026
+- Atlanta Dream official recap: https://dream.wnba.com/news/dream-dominate-in-final-regular-season-home-game
+- CBS Sports exact-game recap / box score, Sep 19, 2026.
+- StatMuse exact-game team-stat record, Sep 19, 2026.
+
+
+##### Pick-by-pick settlement — model-selected slate
+
+
+1. Atlanta Dream ML — WIN.
+2. Atlanta team total Over 88.5 — WIN; Atlanta scored 106.
+3. Chicago team total Under 86.5 — WIN; Chicago scored 81.
+4. Atlanta -8.5 — WIN; Atlanta won by 25.
+
+
+##### Pick-by-pick settlement — supplied slate
+
+
+1. Dream -15.5 — WIN.
+2. Under 176.5 — LOSS; final total 187.
+3. Over 176.5 — WIN.
+4. Sky +15.5 — LOSS.
+
+
+Potential game winner: Atlanta Dream — WIN.
+
+
+##### Ranking / top-two review
+
+
+Model-selected Rank #1 Atlanta ML succeeded.
+The model-selected top two both succeeded: Atlanta ML WIN + Atlanta team total Over 88.5 WIN.
+All four model-selected targets won.
+
+
+Supplied Rank #1 Dream -15.5 succeeded. The second supplied row, Under 176.5, lost, so at least one of the supplied top two hit but both did not.
+
+
+The spread read was materially better than the full-game-total read: projected Atlanta +17.6 versus actual +25 correctly identified the wide-margin family, while the projected total 175.92 sat almost exactly on the supplied 176.5 line.
+
+
+##### Enhanced full-game O/U review
+
+
+Under 176.5 was the preferred supplied full-game total and lost. It receives the enhanced totals review even though the higher-ranked model-selected Atlanta team-total Over 88.5 won.
+
+
+Why Under was preferred:
+- Independent centre 175.92 was 0.58 below the line.
+- Chicago's depleted creation supported an underdog-suppression branch.
+- Favourite blowout states could reduce starter minutes.
+
+
+Why it failed:
+- Atlanta scored 106, materially above the central Atlanta score.
+- Atlanta shot 52.9% from the field and 50.0% from three (13-of-26), while producing 29 assists and 13 steals.
+- The decisive separation occurred in a 32-point Atlanta third quarter, and Isobel Borlase supplied 18 points as depth scoring remained productive.
+- Chicago scored 81, close to the model's ordinary Chicago centre. The Under miss was driven primarily by Atlanta's favourite-offensive-ceiling branch, not by an unexpected Chicago offensive explosion.
+
+
+Could another supplied total side have ranked above it ex ante?
+The pre-game gap was only ~0.04 SD, so the Under/Over ordering was inherently fragile. The outcome alone does not prove Over should have been preferred. However, the card itself simultaneously gave Atlanta team total Over 88.5 a much stronger ~77% model probability. That should have made the full-game Under's vulnerability to an Atlanta 100+ state even more explicit in the ranking narrative.
+
+
+Smallest justified improvement:
+Before ranking a full-game Under in a mismatch, reconcile the favourite team-total upper tail and bench-offence branch directly with the game-total budget. If the favourite's high-confidence team-total Over can consume most of the total by itself, the full-game Under must remain low evidence unless the underdog floor is sufficiently low in the same joint states.
+
+
+This is already substantially covered by RULES_BASKETBALL controls 11, 17 and 18 plus PF-10 distribution-first. No new fixed adjustment is justified from one game.
+
+
+##### What went right
+
+
+- Atlanta winner and separation were correctly identified.
+- The safer Atlanta -8.5 alternate won comfortably.
+- Atlanta TT Over 88.5 correctly captured the favourite's scoring ceiling.
+- Chicago TT Under 86.5 correctly captured Chicago's limited scoring output.
+- The model explicitly warned that a depleted underdog does not automatically make the full game Under; Atlanta's own ceiling could consume the budget. That warning described the realised mechanism.
+
+
+##### What went wrong
+
+
+- The preferred supplied Under 176.5 was too close to the centre to deserve much directional confidence.
+- Atlanta's shooting/ball-movement ceiling was realized at an extreme level: 50% from three and 29 assists.
+- The full-game total ranking did not fully reflect how strongly the model already liked Atlanta's own team-total Over.
+
+
+##### Availability / lineup audit
+
+
+Pre-game, confirmed starting fives were not recovered to gate standard and the card correctly capped participant-sensitive confidence. Post-game reporting shows the available Atlanta core delivered across multiple roles, including Reese, Gray, Howard, Canada and Borlase. No retrospective assumption is used to pretend the exact final five was known pre-tip.
+
+
+The unresolved pre-game Natasha Cloud status remains a source-process limitation; no prohibited fantasy source is used to backfill it.
+
+
+##### Source audit
+
+
+- WNBA official recap and Dream official recap: retained as primary result/game-script sources.
+- CBS/AP: retained as high-quality independent box-score/final corroboration.
+- StatMuse: useful structured diagnostic for team-stat cross-check, not the sole terminal-state source.
+
+
+##### Blind spots and mitigation
+
+
+Blind spot: favourite bench/depth scoring staying efficient after separation.
+Pre-game knowability: PARTLY KNOWABLE — roster depth and blowout states were known, exact 50% three-point shooting was not.
+Materiality: HIGH for the full-game total; LOW for winner.
+Mitigation: explicitly couple favourite team-total ceiling, starter-minute reduction and bench offensive quality in the game-total state tree.
+
+
+##### Document mapping
+
+
+- RULES_BASKETBALL.md — controls 11/17/18 already govern mismatch total, team-score budget and late-blowout multi-axis states; reinforce execution, no new fixed rule.
+- DATA_SOURCE_REGISTER.md — WNBA exact-injury/starting-five retrieval latency remains a source-access observation.
+- Prediction log — record the full-game Under miss alongside the successful favourite team-total Over.
+
+
+
+
+---
+
+
+### P-476 — MLB — Minnesota Twins @ Los Angeles Angels
+
+
+
+
+- Canonical / staging ID: P-476
+- Competition: MLB 2026 regular season
+- Venue: Angel Stadium, Anaheim, California, United States
+- Venue timezone: America/Los_Angeles
+- Official venue-local start: Sep 19, 2026 at 6:38 PM PDT
+- Australia/Melbourne conversion: Sep 20, 2026 at 11:38 AM AEST; calendar-date rollover = YES
+- Research cutoff / independent distribution freeze: Sep 20, 2026 at 11:29:34 AM AEST
+- Issuance state: PREGAME / SCHEDULED at freeze.
+- Method / controls: MDS-2026.09.19-v4.3 / CR-2026.09.19-4 / SFA-BASEBALL
+- Operating mode: SPORTS_ONLY / MARKET_BLIND
+- Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE
+- Preflight: PASS, zero blocking findings. Source count/lineage, field-owner mix, timezone conversion, current event state, source firewall, line quarantine and freeze order all passed.
+- Distribution ID: P-476-dist-v1
+- Distribution SHA-256: 780302c06f545698c2e893258d8e928cc4ed9a601d0876cf2cb749c654e23d57
+- No retrospective performed.
+
+
+
+
+#### Identity / supplied contracts
+
+
+
+
+The user-supplied contracts were parsed for identity and quarantined from predictive construction until after the independent joint run distribution was frozen:
+- Los Angeles Angels ML
+- Minnesota Twins +1.5 runs
+- Full-game Over 7.0 runs
+- Full-game Under 7.0 runs
+
+
+
+
+Research endpoint assumes a normally completed MLB regular-season game including extra innings. Exact operator-specific listed-pitcher, suspension, shortening, action and void terms were not supplied, so operator action is not asserted.
+
+
+
+
+The integer 7.0 total is push-capable. Over / Push / Under are therefore reported as a three-state probability set; Over and Under are not falsely forced to sum to 100%.
+
+
+
+
+#### Official starters / posted lineups
+
+
+
+
+Official starter handshake:
+- Minnesota: Joe Ryan, RHP — 6-10, 3.84 ERA, 146 SO.
+- Los Angeles: Reid Detmers, LHP — 6-8, 3.36 ERA, 199 SO.
+
+
+
+
+The current MLB all-club starting-lineup index recovered complete posted orders:
+Minnesota — Luke Keaschall RF; Austin Martin LF; Ryan Jeffers C; Josh Bell DH; Brooks Lee 3B; Royce Lewis 2B; Victor Caratini 1B; Walker Jenkins CF; Ryan Kreidler SS.
+Los Angeles — Zach Neto SS; Mike Trout DH; Wade Meckler LF; Vaughn Grissom 2B; Moisés Ballesteros 1B; Denzer Guzman 3B; Josh Lowe RF; Jose Siri CF; Tyler Heineman C.
+
+
+
+
+Retrieval note: team-specific MLB lineup subpages still rendered this matchup as TBD while MLB's current all-club lineup index exposed the full orders. The full orders are retained as the newest field-owner index view, while the intra-MLB cache inconsistency is recorded rather than hidden.
+
+
+
+
+#### Availability / roster state
+
+
+
+
+Minnesota:
+- Byron Buxton — OUT, right hip; underwent hip labrum repair on Sep. 18 and expected back in 2027.
+- Trevor Larnach — 10-day IL, left wrist sprain.
+- Kaelen Culpepper — 10-day IL, left hamstring strain.
+- Joe Ryan was activated Sep. 7 after a left glute strain.
+- Royce Lewis is in the posted lineup after the recent shoulder-soreness episode, so he is treated as available rather than carrying forward an obsolete absence flag.
+
+
+
+
+Los Angeles:
+- Kyren Paris — 10-day IL, right index-finger fracture; expected 2027.
+- Nolan Schanuel — right intercostal strain, expected 2027 after rehab irritation.
+- Samy Natera Jr. — 15-day IL, left forearm inflammation.
+- Sam Bachman was activated Sep. 16.
+- Mike Trout, Zach Neto, Josh Lowe and the currently posted starting position-player group are treated as available.
+
+
+
+
+Both offences are therefore below ideal full-season roster strength. Minnesota is missing Buxton/Larnach/Culpepper; Los Angeles is missing Schanuel/Paris. No one-sided injury multiplier was applied.
+
+
+
+
+#### Starter process
+
+
+
+
+Joe Ryan:
+- Underlying 2026 Statcast snapshot: 27.1% K, 5.0% BB, .289 xwOBA, 3.46 xERA.
+- Contact-tail warning: 11.1% barrel rate and 42.6% hard-hit rate in that snapshot.
+- Returned from the glute IL on Sep. 7.
+- Latest start versus Cleveland: 4.0 IP, 4 ER, 84 pitches; his first MLB start back was also only four innings.
+- Current modelling therefore separates Ryan's per-batter skill from his length/hook distribution. A central Ryan branch does not assume six-plus innings simply from his season reputation.
+- Career matchup context: official MLB preview states Ryan is 2-0 with a 3.10 ERA and 41 K in five career starts versus the Angels. This remains weak contextual evidence and does not override current workload state.
+
+
+
+
+Reid Detmers:
+- Current official line: 3.36 ERA, 199 K.
+- Latest start: 6.0 IP, 3 ER, 8 K versus Seattle.
+- That was his seventh consecutive quality start, supporting a materially longer central exposure than Ryan's current post-IL branch.
+- 2026 Statcast snapshot: 28.3% K, 7.4% BB, .290 xwOBA, 3.48 xERA, 8.7% barrel rate.
+- Pitch mix snapshot: roughly 45% four-seam and 32% slider, with curve/change secondary usage.
+
+
+
+
+Starter comparison: Detmers has the stronger current length/form branch; Ryan retains strong underlying strikeout/control indicators but has a meaningful short-start and hard-contact tail. This produces only a modest Angels winner lean, not a large separation.
+
+
+
+
+#### Bullpen transition / workload
+
+
+
+
+Minnesota's preceding Sep. 18 game:
+- Connor Prielipp worked seven innings.
+- Tommy Nance handled the eighth and escaped a bases-loaded, no-out jam.
+- Travis Adams worked a clean ninth for the save.
+- Nance had also worked the 13th inning on Sep. 16; Adams had appeared in that extra-inning game as well. Their recent use is treated as a modest availability/workload consideration, not a quality penalty.
+- Jeff Hoffman was not required in the Sep. 18 shutout and remains part of the late-leverage path.
+
+
+
+
+Los Angeles's preceding Sep. 18 game:
+- Grayson Rodriguez worked 6 2/3 innings.
+- Sammy Peralta covered the transition and Luke Murphy pitched the ninth.
+- Ben Joyce, Tayler Saucedo and Blake Weiman were not all forced back into the Sep. 18 game after the Sep. 17 ten-inning contest; the late bullpen therefore has a better-rested branch than if the prior game had been a short-start bullpen game.
+- Ben Joyce had allowed the tying two-run Walker Jenkins homer on Sep. 17, which is retained as a realised tail, not converted into an automatic negative performance adjustment.
+
+
+
+
+#### Current offensive diagnostics
+
+
+
+
+Recent results are descriptive only; they do not mechanically shift the model without a current mechanism.
+
+
+
+
+- Minnesota last 30 days: 4.12 R/G, .231/.299/.388.
+- Minnesota Sep. 5-19 window: 3.08 R/G, lowest in the cited current MLB-team comparison; the roster has also lost Buxton and Larnach.
+- Los Angeles last 30 days: 3.96 R/G, .227/.303/.350.
+- Los Angeles latest 15-day window: 3.43 R/G.
+- Current series: Angels won 5-4 in 10 innings on Sep. 17; Twins won 3-0 on Sep. 18. These outcomes widen the plausible branches but do not become predictive coefficients.
+
+
+
+
+#### Environment
+
+
+
+
+National Weather Service Anaheim hourly forecast around first pitch:
+- about 78°F at 6 PM PDT, falling toward 74°F at 7 PM;
+- dewpoint around 64°F;
+- southwest wind roughly 7 mph;
+- 0% precipitation in the relevant evening window.
+
+
+
+
+No audited park-orientation transform was recovered that justifies assigning the wind a signed run effect, so weather is treated as benign/low-disruption rather than as an Over or Under coefficient.
+
+
+
+
+#### Frozen independent joint run distribution
+
+
+
+
+Model: explicit UNVALIDATED_SUBJECTIVE scenario mixture. Regulation team runs use independent Poisson kernels within each scenario; ties then enter a separately declared MLB automatic-runner extra-inning branch. This is not a fitted, calibrated or prospectively validated model.
+
+
+
+
+1. Central starter control — weight 0.34 — MIN 3.2, LAA 3.6.
+2. Detmers suppression / Ryan stable — weight 0.22 — MIN 2.4, LAA 3.3.
+3. Ryan short / Angels relief-transition attack — weight 0.18 — MIN 3.2, LAA 4.8.
+4. Twins power/contact cluster — weight 0.14 — MIN 5.0, LAA 3.4.
+5. Bullpen / HR cluster — weight 0.12 — MIN 4.7, LAA 5.0.
+
+
+
+
+Frozen centre:
+- Minnesota runs: 3.456
+- Los Angeles runs: 3.890
+- PROJECTED TOTAL: 7.346
+- PROJECTED ANGELS MARGIN: +0.434
+- Regulation total SD: about 2.99 runs
+- Regulation margin SD: about 2.87 runs
+- Representative score family: Angels 4-3 / Twins 4-3
+- Regulation state: MIN win ~36.3%; tie ~14.25%; LAA win ~49.45%.
+- Eventual Angels winner branch after explicit extras assumption: ~56.9%.
+
+
+
+
+Extra-inning assumptions are scenario parameters, not empirical calibration:
+- Angels win 52% of regulation-tie states.
+- Twins +1.5 covers 90% of regulation-tie extra-inning branches.
+- Exact total-7 treatment explicitly reallocates low tied scores into eventual Over/Push/Under states rather than pretending extra innings do not exist.
+
+
+
+
+#### Mandatory total projection / 7.0 push audit
+
+
+
+
+PROJECTED TOTAL: 7.346
+SUPPLIED TOTAL: 7.0
+RAW GAP: +0.346 runs
+REGULATION TOTAL SD: ~2.99
+NORMALIZED GAP: ~+0.12 SD
+ASSESSMENT: CLOSE TO PROJECTION / WEAK MAIN-TOTAL EDGE.
+
+
+
+
+Full-game research probabilities after the explicit extra-inning branch:
+- OVER 7.0: ~46.6% WIN
+- EXACTLY 7: ~15.9% PUSH
+- UNDER 7.0: ~37.5% WIN
+
+
+
+
+Conditional on a non-push:
+- Over q ≈ 55.4%
+- Under q ≈ 44.6%
+
+
+
+
+The preferred supplied total side is therefore Over 7.0, but it is not a strong total call. The large push mass is why neither total direction belongs near the top of the overall supplied ranking by unconditional win probability.
+
+
+
+
+Team-score budget:
+- MIN 2-3 + LAA 3-4 produces 5-7 and is Under/Push territory.
+- MIN 3-4 + LAA 4 produces 7-8 and straddles the target.
+- Ryan-short states with LAA 5 plus ordinary MIN 3-4 clear the total.
+- Detmers suppression plus weak Angels conversion can produce 2-3 / 3-3 regulation states.
+- A 3-3 regulation tie is especially important: the automatic runner can convert what was an Under through nine into a final Push or Over.
+
+
+
+
+#### Supplied-slate ranking
+
+
+
+
+1. MINNESOTA TWINS +1.5 — ~63.4% UNVALIDATED_SUBJECTIVE.
+   Decomposition: every Minnesota win covers, every Angels one-run win covers, and most tied-regulation extra-inning decisions still finish within one run.
+   Main failure: Ryan's short-start/contact tail plus a multi-run Angels sequence produces a 2+ Los Angeles win.
+
+
+
+
+2. LOS ANGELES ANGELS ML — ~56.9%.
+   Why: Detmers owns the stronger current length/form branch; Minnesota's offence is missing Buxton/Larnach and has been weak in the latest current-regime window; Ryan's post-IL outings have both been short.
+   Main failure: Ryan's underlying K/BB skill reasserts, Walker Jenkins/Keaschall/Jeffers generate enough damage against Detmers, and the stronger Minnesota overall season profile wins a close game.
+
+
+
+
+3. OVER 7.0 — ~46.6% win / ~15.9% push / ~37.5% loss; q(non-push) ~55.4%.
+   Why preferred to Under: independent centre is 7.35 and Ryan's length/contact tail plus the MLB extra-inning branch supply plausible 5-3 / 4-4-to-extras states.
+   Why not high-ranked: the target is only 0.12 SD below the centre and both offences have current suppression mechanisms.
+
+
+
+
+4. UNDER 7.0 — ~37.5% win / ~15.9% push / ~46.6% loss; q(non-push) ~44.6%.
+   Why live: Detmers' seven-QS run, Ryan's underlying skill and both offences' current scoring weakness create genuine 3-2 / 4-2 / 3-3 regulation states.
+   Why last: a push is not a win under the ranking objective, and the frozen centre sits slightly above seven.
+
+
+
+
+Supplied-line dependence:
+- Angels ML and Twins +1.5 are not independent and can both win when Los Angeles wins by exactly one run.
+- They cannot both lose in a normally actioned completed game: a Twins win cashes +1.5, while an Angels 2+ win cashes Angels ML.
+- Approximate overlap is the Angels one-run-win state, including extra-inning one-run decisions; the model places material mass there.
+- Over 7.0 and Under 7.0 are push-capable opposites, not binary complements.
+
+
+
+
+#### Best four model-selected targets
+
+
+
+
+Candidate-slate discipline: to avoid trivially inflating hit probability by choosing arbitrarily wide alternates, self-selected lines are limited to nearby/common thresholds around the user's requested markets plus one exposure-linked pitcher threshold. Operator availability is not asserted.
+
+
+
+
+1. REID DETMERS 5+ STRIKEOUTS — ~82% UNVALIDATED_SUBJECTIVE.
+   Exposure chain: seven consecutive quality starts support roughly 21-27 batter central exposure; 2026 Statcast K% snapshot is 28.3%; latest start produced eight strikeouts in six innings.
+   Main failure: early contact/traffic forces a short outing or Minnesota suppresses two-strike conversion.
+
+
+
+
+2. MINNESOTA TWINS +2.5 — ~76-77%.
+   Why: the joint margin distribution is centred near Angels +0.43; this survives Minnesota wins plus one- and two-run Angels wins and is much more robust to the Ryan-short branch than +1.5.
+   Main failure: Angels separation through Ryan's early exit followed by middle-relief damage.
+
+
+
+
+3. MINNESOTA TEAM TOTAL UNDER 4.5 — ~70%.
+   Why: independent MIN centre is 3.46; Detmers' current length plus strikeout profile and Minnesota's depleted/low-scoring current regime support a four-or-fewer central outcome.
+   Main failure: Detmers' home-run/contact variance or late Angels bullpen leakage after a competitive start.
+
+
+
+
+4. FULL-GAME UNDER 8.5 — ~63-64%.
+   Why: 8.5 sits materially above the 7.35 independent centre and protects against the exact-7 push issue.
+   Main failure: Ryan exits early and both middle-relief groups encounter an HR/sequence cluster; extra innings also erode Under protection in tied high-regulation states.
+
+
+
+
+The model-selected slate is not independent: Detmers 5+ K, Minnesota TT Under 4.5 and Under 8.5 share a Detmers-control / Minnesota-suppression driver.
+
+
+
+
+Top-two model dependence cannot be honestly assigned a single joint probability from the current joint score object because the Detmers strikeout module is exposure-linked but not fully coupled to the team-score simulator. Valid Fréchet bounds for Detmers 5+ K (~82%) and Twins +2.5 (~76-77%) put joint success roughly between 59% and 77%; JOINT_UNQUANTIFIED beyond those bounds.
+
+
+
+
+#### Potential game winner
+
+
+
+
+LOS ANGELES ANGELS — ~56.9% eventual-win estimate.
+
+
+
+
+This is a modest lean, not a strong winner call. Twins +1.5 ranks above Angels ML because a low-scoring close game creates a broad overlap region in which Los Angeles wins by one and both contracts succeed.
+
+
+
+
+#### Integrity flags
+
+
+
+
+- PREGAME / SCHEDULED AT FREEZE
+- PREFLIGHT PASS / ZERO BLOCKS
+- MLB_ALL_CLUB_LINEUP_INDEX_POSTED_ORDERS; TEAM_SPECIFIC_LINEUP_CACHE_TBD
+- EXACT_OPERATOR_LISTED_PITCHER/ACTION/VOID TERMS UNKNOWN
+- UNVALIDATED_SUBJECTIVE_DISTRIBUTION
+- INTEGER_TOTAL_PUSH_EXPLICIT
+- MARKET ODDS / IMPLIED PROBABILITY / LINE MOVEMENT / SPORTSBOOK PREVIEWS / TIPSTERS / FANTASY-DFS EXCLUDED
+- Original issue status: UNSETTLED — PREGAME FORECAST / NO RETROSPECTIVE
+
+
+
+
+#### Sources / provenance
+
+
+
+
+1. MLB Probable Pitchers — exact event, venue, scheduled time, Ryan/Detmers identities and current headline stats — PRIMARY FIELD OWNER — https://www.mlb.com/probable-pitchers
+2. MLB Starting Lineups — current all-club posted batting orders — PRIMARY FIELD OWNER — https://www.mlb.com/starting-lineups
+3. MLB Twins/Angels probable-pitcher pages — team-side exact-event corroboration — PRIMARY TEAM/FIELD OWNER.
+4. MLB Twins injury/transaction records — Buxton, Larnach, Culpepper and Ryan availability — PRIMARY TEAM/FIELD OWNER.
+5. MLB Angels injury/transaction records — Paris, Schanuel, Natera and Bachman availability — PRIMARY TEAM/FIELD OWNER.
+6. MLB Joe Ryan Sep. 13 report / film record — 4.0 IP, 4 ER, 84 pitches and current post-IL workload context — PRIMARY FIELD OWNER.
+7. MLB Reid Detmers Sep. 14 film record — 6.0 IP, 3 ER, 8 K and seventh straight quality start — PRIMARY FIELD OWNER.
+8. Baseball Savant / MLB — Ryan and Detmers Statcast xwOBA/xERA/K/BB/contact and arsenal snapshots — PRIMARY MLB TRACKING SOURCE.
+9. Reuters / Field Level Media — Detmers latest start and current series/game context — HIGH-QUALITY INDEPENDENT.
+10. AP / StatMuse exact Sep. 18 game record — bullpen transition and preceding-game usage cross-check — INDEPENDENT SECONDARY / structured diagnostic.
+11. StatMuse / Retrosheet — current L14/L15/L30 scoring diagnostics — INDEPENDENT STRUCTURED DIAGNOSTIC.
+12. National Weather Service — venue-area hourly temperature, dewpoint, wind and precipitation — GOVERNMENT FIELD OWNER.
+13. Sports Research Drive — METHOD.md, RULES_BASEBALL.md, RULES_GENERAL.md, UPCOMING_GAME_RESEARCH_GUIDE.md, DATA_SOURCE_REGISTER.md, CONTROL_MANIFEST_2026-09-19.md and forecast preflight validator — GOVERNING METHODOLOGY.
+
+
+
+
+Source firewall: no sportsbook odds, market consensus, implied probabilities, line movement, betting previews/picks, tipsters, fantasy/DFS projections or ownership data were admitted as predictive inputs. User-supplied contracts were queried only after the independent distribution was frozen and hashed.
+
+
+
+
+#### Document mapping / candidate learnings
+
+
+
+
+- Ryan's post-IL skill and current starter length must remain separate exposure dimensions -> existing RULES_BASEBALL starter-BF/pitch-count/hook control.
+- Exact 7.0 produces material push mass -> current SCORING_AND_VALIDATION push-capable W/P/L requirement; no new rule needed.
+- Full MLB lineup index versus lagging team-specific TBD cache -> DATA_SOURCE_REGISTER retrieval/latency observation only.
+- Detmers current length plus Twins roster depletion supports a suppression branch, but Ryan hard-contact/short-start and MLB extras preserve an upper tail -> existing cluster, relief-transition and extras controls; no fixed coefficient added.
+
+
+
+
+---
+
+
+
+
+#### Settlement and retrospective — P-476
+
+
+Settlement status: SETTLED / RETROSPECTIVE COMPLETE.
+Verified final: Los Angeles Angels 6, Minnesota Twins 5 in 11 innings.
+Actual full-game total: 11 runs.
+Actual margin: Angels +1.
+
+
+Three-source final-state gate: PASS.
+- Reuters / Field Level Media: explicit Angels 6-5 final in 11 innings.
+- CBS/AP exact-game recap/box score: explicit 6-5 final and 11-inning pitching/stat record.
+- Independent local/secondary game recap corroboration plus MLB event video/stat records for pitcher-specific settlement.
+
+
+Settlement sources:
+- Reuters final recap: https://www.reuters.com/sports/baseball/angels-rally-ninth-take-down-twins-11th--flm-2026-09-20/
+- CBS Sports exact-game recap / box score, Sep 19, 2026.
+- MLB Joe Ryan game video: https://www.mlb.com/video/joe-ryan-strikes-out-five-x4706
+- MLB scores/event record, Sep 19, 2026.
+
+
+##### Pick-by-pick settlement — supplied slate
+
+
+1. Twins +1.5 — WIN; Minnesota lost by one.
+2. Angels ML — WIN.
+3. Over 7.0 — WIN; final total 11.
+4. Under 7.0 — LOSS.
+
+
+Potential game winner: Los Angeles Angels — WIN.
+
+
+##### Pick-by-pick settlement — model-selected slate
+
+
+1. Reid Detmers 5+ strikeouts — WIN, exactly 5 strikeouts in 5.0 innings.
+2. Twins +2.5 — WIN.
+3. Minnesota team total Under 4.5 — LOSS; Minnesota scored 5.
+4. Full-game Under 8.5 — LOSS; final total 11.
+
+
+##### Ranking / top-two review
+
+
+Supplied Rank #1 Twins +1.5 and Rank #2 Angels ML both won. This is the precise overlap state described pre-game: Los Angeles won by exactly one run, so both contracts succeeded. Hit@2 = YES; both-win = YES; the dependence logic was correct and important.
+
+
+Model-selected Rank #1 Detmers 5+ K won exactly at the threshold, and Rank #2 Twins +2.5 also won.
+
+
+No Rank-1 failure trigger applies.
+
+
+##### Enhanced totals review
+
+
+The supplied Over 7.0 won, but the self-selected Under 8.5 lost. Because the card contained competing total targets across separate slates, the Under 8.5 miss is reviewed to the enhanced standard rather than ignored.
+
+
+Why Under 8.5 was selected:
+- Independent centre was 7.346.
+- Detmers' current length/strikeout form plus Minnesota roster depletion supported suppression.
+- 8.5 appeared to provide a meaningful cushion above the centre.
+
+
+Why it failed:
+- Minnesota had already built a 5-2 lead entering the bottom of the eighth.
+- Adam Frazier's two-run pinch-hit double cut it to 5-4.
+- Vaughn Grissom's ninth-inning solo homer tied the game 5-5.
+- The game then entered MLB automatic-runner extra innings and Christian Moore drove in the winning run in the 11th, producing the 6-5 final.
+- Thus the late relief-transition + tie + extra-inning branch added four runs after the game stood at seven through seven innings.
+
+
+The supplied Over 7.0 benefited from exactly the extra-inning/late-cluster mechanism that the pre-game card explicitly preserved. The self-selected Under 8.5 did not leave enough room for that same tail.
+
+
+Pitcher reality:
+- Joe Ryan: 5 innings, 2 runs, 5 strikeouts.
+- Reid Detmers: 5 innings, 4 runs, 5 strikeouts.
+Ryan did not realize the forecast's most damaging short-start branch. Detmers also failed to produce the central six-plus-inning quality-start suppression branch, though his 5+ K prop still landed exactly.
+
+
+Could Under 8.5 have been ranked lower ex ante?
+Yes, relative to the supplied Over 7.0, because the same joint object carried ~14% regulation-tie mass and explicitly acknowledged automatic-runner scoring. An Under above the centre can still be reasonable, but the card should not let the central 7.35 estimate dominate the tie/late-bullpen tail when selecting a nearby 8.5 threshold.
+
+
+Smallest justified improvement:
+For MLB self-selected Unders, explicitly report the probability mass of tie-after-nine and late relief-transition states that can cross the alternate threshold, not merely the distance from the central total. This is already required conceptually by BB-B5 and BB-B7; the issue is execution, not a new fixed penalty.
+
+
+##### What went right
+
+
+- Angels winner was correct.
+- Twins +1.5 correctly captured the close-game distribution.
+- The exact one-run Angels win validated the non-independence explanation for the top two supplied picks.
+- Over 7.0 was correctly preferred to Under 7.0.
+- Detmers 5+ strikeouts won exactly.
+- The pre-game analysis explicitly warned that a 3-3 or other tied regulation state could turn an Under/Push into an Over through automatic-runner extras; the realised game followed that general late/extras mechanism.
+
+
+##### What went wrong
+
+
+- Minnesota scored 5, defeating the Minnesota TT Under 4.5.
+- Detmers allowed four runs in five innings, so the Detmers-suppression branch was too strong relative to his realised run prevention.
+- Under 8.5 understated late bullpen/extras scoring despite the model already identifying those states.
+- The game did not require Ryan's early-collapse branch to reach 11 runs; late-game scoring was enough.
+
+
+##### Availability / lineup / source audit
+
+
+The pre-game card recovered MLB's all-club posted orders but recorded an intra-MLB cache inconsistency on team-specific lineup pages. That uncertainty was transparently logged rather than hidden. No material postgame evidence shows that an unmodelled late scratch was the central cause of the miss; the dominant mechanism was late relief/extras.
+
+
+For Detmers 5+ K, CBS box-score data records 5.0 IP and 5 strikeouts, so the prop settles as a WIN.
+
+
+##### Source audit
+
+
+- Reuters: retained as high-quality independent game-script/final source.
+- CBS/AP: retained for final and detailed box score.
+- MLB official event/player video: retained as field-owner pitcher-event corroboration.
+- Search snippets or stale live feeds are not used to override the explicit final sources.
+
+
+##### Blind spots and mitigation
+
+
+Blind spot: underweighting late relief + automatic-runner extras when selecting Under 8.5.
+Pre-game knowability: YES as a structural tail, but not its exact realization.
+Materiality: HIGH for Under 8.5 and MIN TT Under 4.5; LOW for winner/+run-line selections.
+Mitigation: display the tie-after-nine and late-relief threshold-crossing mass before ranking a nearby alternate Under.
+
+
+##### Document mapping
+
+
+- RULES_BASEBALL.md — BB-B5 relief transition and BB-B7 extras already cover the failure mechanism; execution reminder only.
+- SCORING_AND_VALIDATION.md — preserve push-aware 7.0 handling; the supplied Over correctly won outright rather than pushing.
+- DATA_SOURCE_REGISTER.md — retain MLB all-club versus team-page lineup-cache latency observation.
+- Prediction log — record the exact one-run top-two overlap success and Under 8.5 extras-tail miss.
+
+
+
+
+---
+
+
+
+
+### P-477 — Australia NBL — Sydney Kings vs Cairns Taipans
+- Canonical / staging ID: P-477
+- Competition: Australia NBL27, Round 1
+- Venue: Afterpay Arena, Sydney Olympic Park, New South Wales, Australia
+- Official scheduled start: Sep 20, 2026 at 5:00 PM AEST
+- Original research state: PREGAME / SCHEDULED at final pre-issue refresh
+- Method / controls: MDS-2026.09.19-v4.3 / CR-2026.09.19-4 / SFA-BASKETBALL
+- Operating mode: SPORTS_ONLY / MARKET_BLIND
+- Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE
+- No retrospective performed.
+#### Original pre-game prediction
+Independent frozen centre:
+- Sydney Kings: approximately 97 points
+- Cairns Taipans: approximately 90 points
+- PROJECTED TOTAL: approximately 186.7
+- PROJECTED SYDNEY MARGIN: approximately +7.2
+- Representative score: Sydney 97-90 Cairns
+Best four model-selected targets:
+1. SYDNEY KINGS ML — ~70% UNVALIDATED_SUBJECTIVE.
+2. OVER 179.5 TOTAL POINTS — ~69%.
+3. UNDER 191.5 TOTAL POINTS — ~63%.
+4. CAIRNS TAIPANS +11.5 — ~61%.
+Supplied-slate ranking:
+1. OVER 185.5 — ~53.3%.
+2. CAIRNS +8.5 — ~52.9%.
+3. SYDNEY -8.5 — ~47.1%.
+4. UNDER 185.5 — ~46.7%.
+Potential game winner:
+SYDNEY KINGS — ~70%.
+#### Original research reasoning / availability
+- Sydney retained a championship-level core led by Kendric Davis, Matthew Dellavedova, Torrey Craig and Xavier Cooks, with Andrew Carr added to the frontcourt.
+- Davis had a shortened preparation because passport issues delayed his return to Australia; availability was not treated as equivalent to perfect opening-night rhythm.
+- Cairns' current roster was treated as materially stronger offensively than the prior-season team, with Jack McVeigh, Keanu Pinder, Jaylon Brown, Reyne Smith and Malique Lewis providing multiple scoring paths.
+- Confirmed absences at issue: Sydney — Keli Leaupepe; Cairns — Jaylin Galloway and Luke Paul.
+- Expected/projected starting fives were retrieved, but a formal final confirmed starting five for both clubs was not recovered to gate standard before issue. Rotation-sensitive player props were therefore not promoted.
+- The supplied -8.5 and 185.5 thresholds were close to the independent centre, so the winner and nearby alternate thresholds were considered more robust.
+#### Material pre-game sources
+1. NBL exact-game preview / talking points — event identity, expected depth charts and current team context — PRIMARY LEAGUE — https://league.nbl.com.au/news/how-to-watch-talking-points-sydney-v-cairns-fnm29
+2. NBL / Cairns club schedule — exact event/date/time — PRIMARY LEAGUE — https://www.nbl.com.au/club-schedule/cairns
+3. Sydney Kings club schedule / team material — schedule and roster context — PRIMARY TEAM — https://www.nbl.com.au/club-schedule/syd
+4. Cairns Taipans injury report — Jaylin Galloway and Luke Paul availability — PRIMARY TEAM — https://www.taipans.com/news/injury-report-round-1-nbl27
+5. NBL team/statistical and preseason reports — current roster/process context and Cairns final preseason scoring — PRIMARY LEAGUE.
+6. Sydney Kings official preseason reporting — current rotation/process context — PRIMARY TEAM.
+7. Sports Research Drive — METHOD.md, RULES_BASKETBALL.md, RULES_GENERAL.md, CONTROLS.md, DATA_SOURCE_REGISTER.md and current control manifest — GOVERNING METHODOLOGY.
+Source firewall: sportsbook odds, betting picks, prediction markets, line movement, fantasy/DFS projections and betting-derived analysis were excluded from predictive inputs.
+
+
+#### Settlement and retrospective — P-477
+
+
+Settlement status: SETTLED / RETROSPECTIVE COMPLETE.
+Verified final: Sydney Kings 111, Cairns Taipans 90.
+Actual full-game total: 201 points.
+Actual margin: Sydney +21.
+
+
+Three-source terminal-state gate: PASS.
+1. NBL / AAP postgame report — explicit Sydney 111-90 Cairns final, quarter-by-quarter scoring and player statistics — PRIMARY LEAGUE / INDEPENDENT AAP REPORTING — https://league.nbl.com.au/news/kings-open-title-defence-in-style
+2. Cairns Taipans official postgame report — explicit 111-90 defeat plus game script and player statistics — PRIMARY TEAM — https://www.taipans.com/news/pinder-stars-but-taipans-fall-to-kings
+3. Austadiums exact-event record — explicit 111-90 Final, Sep 20 2026, 5:00 PM at Afterpay Arena — INDEPENDENT EVENT RECORD — https://www.austadiums.com/sport/event/34482
+
+
+##### Pick-by-pick settlement — model-selected slate
+
+
+1. Sydney Kings ML — WIN.
+2. Over 179.5 total points — WIN; actual total 201.
+3. Under 191.5 total points — LOSS; actual total 201.
+4. Cairns Taipans +11.5 — LOSS; Cairns lost by 21.
+
+
+##### Pick-by-pick settlement — supplied slate
+
+
+1. Over 185.5 — WIN; actual total 201.
+2. Cairns +8.5 — LOSS; Cairns lost by 21.
+3. Sydney -8.5 — WIN; Sydney won by 21.
+4. Under 185.5 — LOSS.
+
+
+Potential game winner: Sydney Kings — WIN.
+
+
+##### Rank-1 / top-two review
+
+
+Model-selected Rank #1 Sydney ML won and Rank #2 Over 179.5 also won.
+Rank-1 success = YES.
+Hit@2 = YES.
+Both top-two win = YES.
+No Rank-1 failure trigger applies.
+
+
+The ordering was defensible: Sydney's deeper championship core and the independent +7.2 margin centre supported the winner, while Over 179.5 sat materially below the 186.7 total centre. The realised 21-point margin was substantially wider than projected, but that does not invalidate Sydney ML being ranked first.
+
+
+##### Enhanced totals review
+
+
+The highest-ranked model-selected over/under, Over 179.5, WON. The highest-ranked supplied over/under, Over 185.5, also WON. No TOP_OU_REVIEW failure trigger applies.
+
+
+The nearby upper Under 191.5 lost because the game reached 201. Sydney scored 32 in Q1, 59 by halftime and 31 more in Q3, including 6/9 from three in that third period. The pre-game centre of 186.7 therefore underweighted the upper scoring tail. The correct lesson is not to reverse every nearby Under; it is to make the high-variance perimeter/transition branch explicit before ranking an upper Under close to the centre.
+
+
+##### Expected game script vs actual
+
+
+Expected: Sydney as the more likely winner, Cairns materially improved offensively, central score around 97-90, and a competitive game with enough scoring to prefer a lower Over.
+Actual: Cairns led 14-8 early and remained within six at halftime, 59-53, so the competitive early branch was real. Sydney then separated decisively in the third quarter, leading 90-73 after three and finishing 111-90.
+
+
+The largest forecast miss was separation/upper-tail magnitude, not winner direction. Projected Sydney margin was +7.2 versus +21 actual; projected total was 186.7 versus 201 actual.
+
+
+##### What went right
+
+
+- Sydney winner call was correct.
+- Model Rank #1 and Rank #2 both won.
+- The lower alternate Over 179.5 correctly captured a game with significant offensive upside.
+- Supplied Over 185.5 was correctly preferred to Under 185.5.
+- The pre-game absence check correctly had Luke Paul and Jaylin Galloway unavailable for Cairns; the NBL postgame report says Cairns still had both to come into the team.
+- Pinder was correctly treated as a major Cairns offensive path; he delivered 27 points.
+
+
+##### What went wrong
+
+
+- Under 191.5 was too aggressive relative to the model's own uncertainty and lost by 9.5 points.
+- Cairns +11.5 and +8.5 underestimated Sydney's separation tail.
+- The central forecast did not place enough weight on a Sydney perimeter burst: six Kings finished in double figures and the third quarter was driven by hot outside shooting.
+- Cairns' 13/44 three-point shooting created a high-volume, low-efficiency possession profile that widened the margin while still allowing the combined total to reach 201.
+- Jack McVeigh scored only seven, while Cairns' foul trouble also reduced their ability to sustain the halftime response.
+
+
+##### Starting-lineup / availability audit
+
+
+Confirmed pre-game absences that were modelled: Sydney — Keli Leaupepe; Cairns — Jaylin Galloway and Luke Paul.
+Exact field-owner starting fives were not recovered before issue and this remains an evidence limitation. No postgame source recovered in this settlement pass indicates that an unmodelled late withdrawal was the primary cause of the result.
+
+
+##### Blind spots and mitigation
+
+
+Blind spot: insufficient mass on a high-scoring Sydney separation branch in an opening-round game with strong shooting depth.
+Pre-game knowability: PARTLY. Sydney's depth was known, but the exact 6/9 third-quarter three-point burst was not predictable.
+Materiality: HIGH for Under 191.5 and Cairns spreads; LOW for Sydney ML and the lower Over.
+Mitigation: when the centre supports an Over but an upper Under is also selected, explicitly quantify the branch in which favourite shooting efficiency plus opponent high-volume perimeter attempts create both a larger margin and a higher total. This is an execution reinforcement of existing distribution/tail controls, not a new fixed coefficient.
+
+
+##### Source-quality audit
+
+
+- NBL/AAP: retained as a high-quality league-hosted final/game-script source.
+- Cairns Taipans official: retained as a primary team result and availability source.
+- Austadiums: useful independent explicit-final corroboration for exact event/date/venue.
+- NBL public schedule shell: do not use its generic LIVE NOW label as proof of event state; it displayed that label on future fixtures during the earlier check.
+
+
+##### Document mapping / learnings
+
+
+- DATA_SOURCE_REGISTER.md: candidate source-state observation — NBL public schedule LIVE NOW labels can be shell-level and must not control event state without an exact-event terminal source.
+- RULES_BASKETBALL.md / SCORING_AND_VALIDATION.md: execution note only — nearby upper Unders require explicit upper-tail/separation mass when the same card already recognizes strong favourite shooting depth.
+- No permanent sport-specific or cross-sport rule promoted from this single event.
+- Dataset status remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+
+---
+
+
+
+
+### P-478 — Soccer / Sweden Allsvenskan — Djurgårdens IF vs IF Elfsborg
+- Canonical / staging ID: P-478
+- Competition: Sweden Allsvenskan 2026, Round 22
+- Venue: 3Arena, Stockholm, Sweden; artificial surface
+- Official venue-local start: Sep 20, 2026 at 14:00 CEST (Europe/Stockholm, UTC+2)
+- Australia/Melbourne conversion: Sep 20, 2026 at 22:00 AEST (UTC+10); calendar-date rollover = NO
+- Independent distribution freeze: approximately Sep 20, 2026 at 22:01 AEST
+- Issuance state: START_CROSSED_UNVERIFIED / LATE-ISSUED RESEARCH FORECAST. The scheduled kickoff crossed while the required research was being completed; the structured event feed still showed Scheduled. No live score, shot, corner, card, substitution, possession or other in-game observation is admitted into the forecast.
+- Method / controls: MDS-2026.09.19-v4.3 / CR-2026.09.19-4 / SFA-SOCCER
+- Operating mode: SPORTS_ONLY / MARKET_BLIND
+- Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE
+- Distribution ID: P-478-dist-v1
+- Distribution SHA-256: 605b2c4ca216a77088c4df63f4f8224373c70b9370fd59e7b90d4e481d78b8ea
+- No retrospective performed.
+#### Identity / supplied contracts
+User-supplied contracts were parsed only for identity and quarantined until after the independent goal distribution was frozen:
+- First-half Over 0.5 goals
+- First-half Under 0.5 goals
+- Full-game Over 2.5 goals
+- Full-game Under 2.5 goals
+Research endpoint is regulation 90 minutes plus stoppage time. No extra-time/penalty endpoint applies to this Allsvenskan league fixture. Exact operator-specific action/void rules were not supplied.
+#### Event/time/source gate
+Official Djurgården and Elfsborg pages both identify Sunday Sep 20 at 14:00 local at 3Arena. The Allsvenskan round schedule independently lists the same fixture in Round 22. Melbourne conversion is 22:00 AEST.
+At the final state refresh after the scheduled time crossed, the structured soccer event route still returned Scheduled and a zero-filled shell rather than a verified live sequence. Because scheduled-start crossing itself blocks a normal pregame issuance under the active controls, this is recorded as a late-issued research forecast rather than retroactively called a normal pregame PASS.
+#### Participants / availability
+Exact field-owner starting XIs were not recoverable through the accessible official Djurgården page: its preview still stated that the squad would be published one hour before kickoff. High-quality/current lineup feeds and recent official club selections converge on the following role-continuity XI shapes, but they are not relabelled official-confirmed:
+Djurgården 4-2-3-1:
+Jacob Rinne; Adam Ståhl, Miro Tenho, Jacob Une Larsson, Piotr Johansson; Daniel Stensson, Matias Siltanen; Patric Åslund, Bo Hegland, Jeppe Okkels; Kristian Lien.
+Elfsborg 4-2-3-1:
+Isak Pettersson; Alexander Jensen, Rasmus Wikström, Thomas Isherwood, Niklas Hult; Julius Magnússon, Simon Olsson; Momoh Kamara, Julius Beck, Arbër Zeneli; Leo Östman.
+Role continuity is strong: Djurgården's official Sep 14 2-0 win over GAIS used the same XI; Elfsborg's official Sep 13 1-0 win over Kalmar used the same XI.
+Material availability:
+- Djurgården: Christos Almyras suspended after the red card versus GAIS. He was not part of the above recent starting XI, so this is primarily a bench/rotation loss rather than a starting-XI removal.
+- Elfsborg: Per Frick is unavailable with a broken hand in current independent availability feeds. He was used as a late substitute in the Sep 13 official match record, so his loss affects late attacking depth more than the projected starting structure.
+- No unsupported late-scratch claim is added.
+Participant limitation: exact official matchday benches/final XIs were not recovered to field-owner standard before issue. Player props are therefore not ranked, and lineup-sensitive rows retain an evidence cap.
+#### Current team/process evidence
+Season through 21 Allsvenskan matches:
+- Djurgården: 2nd, 41 points, 46 goals for / 19 against; xG 40.3 / xGA 26.0.
+- Elfsborg: 34 points, 29 goals for / 21 against; xG 29.1 / xGA 25.7.
+Djurgården have five straight Allsvenskan wins entering this fixture. The latest official home result was 2-0 over GAIS, with Lien scoring before halftime and Hegland after halftime. The streak is treated as descriptive; the signed view comes from current creation/defence/roster mechanisms rather than a momentum coefficient.
+Elfsborg's latest official league result was 1-0 over Kalmar, with a 0-0 first half and Momoh Kamara scoring in the 51st minute. Their recent league sequence includes 1-1 at Göteborg, 2-0 over Degerfors, 1-2 at Brommapojkarna and 1-0 over Kalmar.
+First-half evidence:
+- Djurgården have scored in the first half in 67% of league matches overall and approximately 82% of home matches in the current sample.
+- Elfsborg have scored in the first half in 43% overall / 40% away, while conceding about 0.40 first-half goals per away match.
+- Recent Djurgården first-half xG examples include 0.80 vs GAIS, 2.10 vs Mjällby at home, 0.72 away to Mjällby and 0.44 at Malmö.
+- Elfsborg's recent first-half creation has varied rather than consistently spiked.
+This creates an early-goal lean driven mainly by Djurgården home creation, while Elfsborg's first-half defensive record prevents treating Over 0.5 as a high-certainty row.
+#### Corner process
+Corners are modelled separately from goals.
+- Djurgården: 6.4 corners taken per Allsvenskan match, third-highest league rate in the cited current table.
+- Elfsborg: 4.1 taken per match.
+- Allsvenskan baseline: approximately 5.1 corners per team per match; home teams about 5.5, away teams about 4.8.
+- Djurgården's recent individual corner counts: 2, 6, 3, 4, 7, 5, 7, 5, 6, 13 across the cited ten-match sequence.
+- Score-state mechanism: a Djurgården lead can reduce their later attacking/corner demand, while an Elfsborg chasing state can add width/cross/end-line exposure. This prevents treating Djurgården territorial superiority as a one-sign team-corner guarantee.
+Explicit corner-total scenario mixture produces an expected total around 9.4 corners. Over 7.5 is approximately 71% under the unvalidated subjective model. Exact operator/provider availability is not asserted.
+#### Environment
+SMHI's Stockholm-area forecast for Sep 20 shows roughly 12-16 C, south-westerly wind around 6 m/s with gusts around 14 m/s and some precipitation risk. 3Arena uses an artificial surface. Weather is retained as a mechanism/variance factor for long balls, crossing and set plays; no automatic Over/Under coefficient is applied.
+#### Frozen independent goal distribution
+Model: UNVALIDATED_SUBJECTIVE scenario mixture with independent Poisson goal kernels inside each state. It is not fitted, calibrated or prospectively validated.
+1. Central Djurgården territorial/home-control state — weight 0.36 — DJU 1.9, ELF 0.9.
+2. Djurgården pressure + Elfsborg compact/suppressed attack — 0.24 — DJU 2.2, ELF 0.7.
+3. Elfsborg counter/resistance branch — 0.18 — DJU 1.6, ELF 1.2.
+4. Closed top-table/keeper branch — 0.14 — DJU 1.4, ELF 0.6.
+5. Open transition/set-piece/weather-variance branch — 0.08 — DJU 2.5, ELF 1.5.
+Frozen centre:
+- Djurgården goals: ~1.90
+- Elfsborg goals: ~0.91
+- PROJECTED TOTAL: ~2.81
+- Representative score family: Djurgården 2-1 / 2-0 / 1-1
+- Djurgården regulation win: ~60.2%
+- Draw: ~21.9%
+- Elfsborg regulation win: ~17.9%
+- Djurgården-or-draw: ~82.1%
+Full-game total:
+- Over 2.5: ~52.6%
+- Under 2.5: ~47.4%
+The supplied 2.5 line is therefore close to the independent centre and is not a strong full-game-total call.
+First-half model:
+- first-half centre ~1.11 goals
+- Over 0.5 first-half goals: ~66.5%
+- Under 0.5: ~33.5%
+#### Best five model-selected targets
+Candidate-slate discipline: thresholds are common/nearby soccer contracts, not arbitrarily wide alternates, and operator availability is not asserted.
+1. DJURGÅRDEN TEAM TOTAL OVER 0.5 GOALS — ~84.2% UNVALIDATED_SUBJECTIVE.
+   Main mechanism: ~1.90 home scoring centre, 46 season goals, 40.3 xG, and a current XI retaining Lien/Hegland/Åslund/Okkels.
+   Main failure: Elfsborg's defensive/keeper branch plus finishing variance produces 0-0 or a narrow away result.
+2. DJURGÅRDEN OR DRAW (1X) — ~82.1%.
+   Main mechanism: stronger current season attack/defence profile and home control.
+   Main failure: Elfsborg absorbs territory and wins a low-event transition/set-piece game.
+3. ELFSBORG TEAM TOTAL UNDER 1.5 GOALS — ~76.8%.
+   Main mechanism: Elfsborg centre ~0.91, Djurgården 19 goals conceded in 21 matches and recent defensive suppression.
+   Main failure: Djurgården turnover/set-piece errors or an early Elfsborg goal forcing an open score-state.
+4. TOTAL CORNERS OVER 7.5 — ~71.2%.
+   Main mechanism: Djurgården 6.4 corners taken/game, Elfsborg 4.1, plus trailing-state width/cross exposure.
+   Main failure: early efficient finishing reduces shot-block/end-line sequences or both sides attack centrally with low corner conversion.
+5. FULL-GAME UNDER 3.5 GOALS — ~68.9%.
+   Main mechanism: the central total is 2.81; Elfsborg's attack is materially below Djurgården's and both clubs have credible low-event/keeper branches.
+   Main failure: an early goal creates transition space and the match enters the open 2-2 / 3-1 family.
+The user-supplied first-half Over 0.5 (~66.5%) is narrowly outside the model top five but remains the preferred supplied first-half side.
+#### Supplied-market ranking
+1. FIRST-HALF OVER 0.5 GOALS — ~66.5% — preferred.
+2. FULL-GAME OVER 2.5 GOALS — ~52.6% — very weak lean / close to projection.
+3. FULL-GAME UNDER 2.5 GOALS — ~47.4%.
+4. FIRST-HALF UNDER 0.5 GOALS — ~33.5%.
+Forced-pair integrity:
+- 1H Over 0.5 + 1H Under 0.5 = 100% conditional on action.
+- FT Over 2.5 + FT Under 2.5 = 100% conditional on action.
+No push exists at either half-goal threshold.
+#### Potential game winner
+DJURGÅRDEN — ~60.2% regulation-win estimate.
+This is a clear but not overwhelming winner lean. Draw mass remains approximately 21.9%, which is why 1X ranks materially above the outright win.
+#### Dependence / kill-path audit
+The top selections are not independent:
+- Djurgården TT Over 0.5 and 1X share the home attack/control driver.
+- Elfsborg TT Under 1.5 also positively overlaps with a Djurgården-control state.
+- Under 3.5 can win with 1X in 1-0, 2-0, 1-1 and 2-1 outcomes, but loses in high-separation/open states.
+- Corner Over 7.5 is only partially linked to goals because trailing-state width can raise corners even when finishing is poor.
+Top-two exact joint probability is not honestly identified by the current marginal goal model beyond the same score grid; the pair is highly dependent and is not presented as a parlay probability.
+#### Integrity flags
+- START_CROSSED_USER_OVERRIDE / PF-EVENT-STATE BLOCK
+- NO_LIVE_GAME_STATE_USED_IN_MODEL
+- EXACT_OFFICIAL_MATCHDAY_XIS/BENCHES_NOT_RECOVERED_TO FIELD-OWNER STANDARD
+- CURRENT ROLE-CONTINUITY XIS RECOVERED FROM OFFICIAL PRIOR MATCHES + INDEPENDENT CURRENT LINEUP FEEDS
+- MARKET ODDS / IMPLIED PROBABILITY / LINE MOVEMENT / SPORTSBOOK PREVIEWS / TIPSTERS / FANTASY-DFS EXCLUDED
+- UNVALIDATED_SUBJECTIVE_DISTRIBUTION
+- Current status: UNSETTLED — LATE-ISSUED RESEARCH FORECAST / NO RETROSPECTIVE
+#### Sources / provenance
+1. Djurgården official preview — exact event, 3Arena, 14:00 local, suspension/warning state — PRIMARY TEAM — https://www.dif.se/nyheter/2026/infor-djurgarden-elfsborg
+2. Djurgården official schedule / date announcement — exact fixture time — PRIMARY TEAM — https://www.dif.se/nyheter/2026/speldatum-satta-for-omgang-18-23-i-allsvenskan
+3. IF Elfsborg official supporter/schedule information — exact event/date/time — PRIMARY TEAM — https://elfsborg.se/2026/09/15/supporterinfo-djurgardens-if-borta-1/
+4. Allsvenskan official round schedule — competition/round identity — PRIMARY COMPETITION — https://allsvenskan.se/nyheter/sa-spelas-omgang-18-23-av-allsvenskan/
+5. Djurgården official Sep 14 GAIS report — recent official starting XI, availability and 2-0 game script — PRIMARY TEAM — https://www.dif.se/nyheter/2026/norsk-briljans-visade-vagen-mot-gais
+6. Elfsborg official Sep 13 Kalmar report — recent official starting XI, bench usage and 1-0 game script — PRIMARY TEAM — https://elfsborg.se/2026/09/13/kamaras-mal-avgjorde-mot-kalmar/
+7. xGstats — current Allsvenskan record, goals and xG/xGA for both clubs — INDEPENDENT STRUCTURED STATISTICAL SOURCE — https://xgstats.com/teams/djurgardens-if and https://xgstats.com/teams/if-elfsborg
+8. FootyStats / SoccerStats — current first-half scoring/conceding splits and home/away scoring rates — INDEPENDENT STRUCTURED DIAGNOSTIC.
+9. FootyMetrics / Statz — current Allsvenskan corner-for rates and league home/away corner baselines — INDEPENDENT STRUCTURED DIAGNOSTIC.
+10. OFStats — Djurgården current shot/possession/corner diagnostics and match-by-match corners — INDEPENDENT STRUCTURED DIAGNOSTIC.
+11. FotMob/GioScore current match pages — lineup-role continuity and current availability cross-check; not promoted above official club records — INDEPENDENT CURRENT SECONDARY.
+12. SMHI — Stockholm-area current weather forecast — GOVERNMENT WEATHER FIELD OWNER.
+13. Structured soccer event feed — exact event ID 67126774 and final pre-issue scheduled-state check — CURRENT EVENT-STATE SOURCE.
+14. Sports Research Drive — METHOD.md, RULES_SOCCER.md, RULES_GENERAL.md, CONTROLS.md and current control manifest — GOVERNING METHODOLOGY.
+Source firewall: betting-academy, bookmaker, odds, tipster, prediction-market and fantasy/DFS sources surfaced during discovery but were excluded from predictive evidence.
+#### Document mapping / candidate learnings
+- Official club preview can remain cache-lagged past its promised one-hour-before squad publication -> DATA_SOURCE_REGISTER source-latency observation candidate.
+- Early-goal lean was reconciled against Elfsborg's strong first-half defensive numbers rather than driven by Djurgården's recent scoring streak -> existing RULES_SOCCER early-goal control executed; no new rule.
+- Corners were derived independently from corner exposure/rates and score-state width rather than from possession/xG dominance -> existing RULES_SOCCER corner-process control executed; no new rule.
+- Scheduled-start crossing while the structured event route still shows Scheduled remains a process exception only; do not weaken the normal pregame gate.
+#### Completed-event settlement check — derivative still unresolved
+Factual event state: COMPLETED.
+Verified regulation result: Djurgårdens IF 1, IF Elfsborg 2.
+Verified halftime state: Djurgården 0, Elfsborg 1.
+Three independent result lineages agree on the completed 1-2 result: the structured exact-event feed (event 67126774, COMPLETE), Aftonbladet/TT's explicit postgame report, and current independent match reporting. The final corner count required to settle Rank #4 Total Corners Over 7.5 was not recovered from a trustworthy final field after attempts through the exact Sofascore match page and additional indexed/stat-provider routes. Pre-match/market-derived corner pages and stale in-game snapshots are not used to manufacture the endpoint.
+Resolved-row grading:
+1. Djurgården team total Over 0.5 — WIN; Djurgården scored once.
+2. Djurgården or Draw (1X) — LOSS; Elfsborg won 2-1.
+3. Elfsborg team total Under 1.5 — LOSS; Elfsborg scored twice.
+4. Total Corners Over 7.5 — UNRESOLVED_DERIVATIVE / FINAL CORNER FIELD NOT VERIFIED.
+5. Full-game Under 3.5 — WIN; three goals.
+Supplied slate:
+1. First-half Over 0.5 — WIN; Elfsborg led 1-0 at halftime.
+2. Full-game Over 2.5 — WIN; final total three.
+3. Full-game Under 2.5 — LOSS.
+4. First-half Under 0.5 — LOSS.
+Potential game winner: Djurgården — LOSS.
+##### Partial retrospective on resolved rows
+Rank #1 Djurgården TT Over 0.5 won. Rank #2 Djurgården-or-draw lost, so Hit@2 = YES but both-win = NO. No Rank-1 failure trigger applies.
+The biggest modelling miss was team/winner separation: the forecast assigned only ~17.9% to an Elfsborg regulation win and ~76.8% to Elfsborg Under 1.5, yet Elfsborg scored twice and won. Aftonbladet/TT reports that Rasmus Wikström's 0-1 just before halftime came through a weak Jacob Rinne intervention. Djurgården improved after halftime and equalised, but Fotbollskanalen's postgame analysis identifies a second structural failure: offensive substitutions increased the home threat but two substitutes failed their defensive assignments, allowing Alexander Jensen to run free and set up Simon Olsson for the decisive 2-1.
+What went right:
+- Djurgården did score, landing Rank #1.
+- First-half Over 0.5 landed.
+- Full-game Over 2.5 landed while Under 3.5 also landed, correctly illustrating the 3-goal overlap band.
+- The pre-game analysis explicitly preserved an Elfsborg counter/resistance branch rather than treating Djurgården home control as certain.
+What went wrong:
+- The Elfsborg counter/resistance branch was materially underweighted relative to the realised 2-1 away win.
+- Djurgården-or-draw and Elfsborg Under 1.5 both failed.
+- The pre-game model did not quantify goalkeeper-error and substitution-driven defensive-transition tails strongly enough for the side/away-team-total distribution.
+- Exact matchday XI/bench confirmation was missing at issue; that mattered because the decisive second goal involved substitute defensive responsibilities.
+Source audit:
+- Aftonbladet/TT postgame — explicit 1-2 final and goal sequence — https://www.aftonbladet.se/senastenytt/ttsport/sport/a/JOdbOX/mardrom-for-djurgarden-jattetavla-och-forlust
+- Fotbollskanalen postgame — detailed tactical/substitution explanation of the decisive 1-2 goal — https://www.fotbollskanalen.se/artiklar/allsvenskan/fem-spaningar-slarvigt-och-svagt-av-djurgarden
+- Sofascore exact-event route — confirms the correct event and exposes detailed-stat capability, but the accessible indexed response did not expose the final corner count — https://www.sofascore.com/football/match/if-elfsborg-djurgardens-if/jKsmK
+- Market/betting pages that surfaced while searching for corners were rejected as settlement evidence.
+Document mapping:
+- RULES_SOCCER.md: existing bench/substitution and score-state transition controls are relevant; execution reinforcement only.
+- DATA_SOURCE_REGISTER.md: exact-event derivative-source latency/coverage note for Allsvenskan corners.
+- No final retrospective closeout or permanent rule promotion until the corner derivative is settled.
+Formal status: COMPLETED / GOAL+SIDE ROWS GRADED / CORNER DERIVATIVE PENDING / NOT FULLY SETTLED.
+
+
+#### Final settlement and retrospective — P-478
+
+
+Settlement status: SETTLED / RETROSPECTIVE COMPLETE.
+Verified final: Djurgårdens IF 1, IF Elfsborg 2.
+Halftime: Djurgården 0, Elfsborg 1.
+Verified final corners: Djurgården 4, Elfsborg 7; total 11.
+
+
+Three-source terminal-state gate: PASS.
+- Structured exact-event soccer feed, event 67126774 — COMPLETE at 1-2.
+- IF Elfsborg official postgame report — explicit 1-2 away win and goal sequence — https://ipv6.elfsborg.se/2026/09/20/stark-trepoangare-borta-mot-djurgarden/
+- Aftonbladet/TT postgame report — explicit 1-2 final and game narrative — https://www.aftonbladet.se/senastenytt/ttsport/sport/a/JOdbOX/mardrom-for-djurgarden-jattetavla-och-forlust
+
+
+Corner endpoint cross-check:
+- WinDrawWin exact result page: 4-7 corners.
+- BetStudy exact result page: 4-7 corners.
+- TotalCorner exact H2H/result row: 4-7 corners, total 11.
+These are used only for the final derivative field; sportsbook odds/tips are not used as predictive evidence.
+
+
+##### Pick-by-pick settlement — model-selected slate
+
+
+1. Djurgården team total Over 0.5 — WIN; Djurgården scored once.
+2. Djurgården or Draw (1X) — LOSS; Elfsborg won 2-1.
+3. Elfsborg team total Under 1.5 — LOSS; Elfsborg scored twice.
+4. Total Corners Over 7.5 — WIN; 11 corners.
+5. Full-game Under 3.5 goals — WIN; total three.
+
+
+Model-selected slate: 3 W / 2 L.
+
+
+##### Supplied-market settlement
+
+
+1. First-half Over 0.5 — WIN; Elfsborg led 1-0 at halftime.
+2. Full-game Over 2.5 — WIN; total three.
+3. Full-game Under 2.5 — LOSS.
+4. First-half Under 0.5 — LOSS.
+
+
+Potential game winner: Djurgården — LOSS.
+
+
+##### Rank-1 / top-two review
+
+
+Rank #1 Djurgården TT Over 0.5 — WIN.
+Rank #2 Djurgården or Draw — LOSS.
+Hit@2 = YES.
+Both top-two win = NO.
+No Rank-1 failure trigger applies.
+
+
+The highest-ranked over/under in the model-selected slate was Total Corners Over 7.5 at Rank #4, and it WON with 11 corners. The highest-ranked goal-total row, Under 3.5 at Rank #5, also WON. No TOP_OU_REVIEW failure trigger applies.
+
+
+##### Expected vs actual game script
+
+
+The forecast correctly retained an Elfsborg counter/resistance branch, but assigned it too little mass: Elfsborg's regulation-win estimate was only ~17.9%. Rasmus Wikström put Elfsborg ahead at 44', Djurgården equalised through Jacob Une Larsson at 66', and Simon Olsson restored the away lead at 76'.
+
+
+The side/winner miss was driven by two concrete mechanisms. First, the 0-1 involved a major Jacob Rinne error. Second, after Djurgården made more attacking substitutions, the decisive 1-2 exposed defensive-transition assignments; postgame tactical reporting identified the space that allowed Alexander Jensen to create the winner.
+
+
+##### What went right
+
+
+- Rank #1 landed.
+- The first-half Over 0.5 direction landed.
+- The model's 3-goal overlap band was coherent: Over 2.5 and Under 3.5 both won.
+- The corner model was directionally correct; 11 actual corners cleared 7.5.
+- The forecast did preserve an Elfsborg counter/resistance scenario instead of treating home control as deterministic.
+
+
+##### What went wrong
+
+
+- Djurgården-or-draw was materially overestimated at ~82.1%.
+- Elfsborg Under 1.5 was too strong at ~76.8%; Elfsborg scored twice.
+- Goalkeeper-error and substitution/transition tails were present conceptually but underweighted in the side and away-team-total distribution.
+- The potential winner call was wrong.
+- Exact field-owner matchday XI/bench confirmation was unavailable before issue, and the decisive second-half mechanism involved substitution-linked defensive responsibilities.
+
+
+##### Source/lineup audit
+
+
+The projected starting XIs were broadly close to the eventual starting structures, but the issue-time card correctly did not label them field-owner confirmed. This limitation mattered more for the bench/substitution state than for the opening XI. The final should therefore not be used to claim that the pregame lineup retrieval was complete.
+
+
+##### Blind spots and mitigation
+
+
+Blind spot: insufficient weight on goalkeeper-error plus transition exposure after attacking substitutions.
+Pre-game knowability: PARTLY. The exact Rinne error was irreducible event variance; the possibility that aggressive substitutions widen transition risk was knowable structurally.
+Materiality: HIGH for 1X and Elfsborg Under 1.5; LOW for Rank #1, corners and Under 3.5.
+Mitigation: execute the existing bench/substitution score-state branch explicitly inside winner/team-total scenario weights rather than leaving it only as prose.
+Rule status: execution reinforcement only; no new permanent rule from one event.
+
+
+##### Document mapping
+
+
+- RULES_SOCCER.md: existing bench/substitution and score-state transition controls; execution reinforcement.
+- DATA_SOURCE_REGISTER.md: Allsvenskan derivative final-field routes (WinDrawWin / BetStudy / TotalCorner) as research-only fallback observations, not predictive sources.
+- No permanent algorithm change promoted.
+- Dataset remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+
+---
+### P-479 — Cricket / European T20 Premier League Final — Edinburgh Castle Rockers vs Belfast Wolves
+- Canonical / staging ID: P-479
+- Competition: European T20 Premier League 2026 Final
+- Venue: The Village, Malahide, Ireland
+- Official venue-local start: Sep 20, 2026 at 14:15 IST (Europe/Dublin, UTC+1)
+- Australia/Melbourne conversion: Sep 20, 2026 at 23:15 AEST (UTC+10); date rollover = NO
+- Original issue state: PREGAME; final pre-issue refresh did not recover toss/confirmed XI.
+- Method / controls: MDS-2026.09.19-v4.3 / CR-2026.09.19-4 / SFA-CRICKET
+- Operating mode: SPORTS_ONLY / MARKET_BLIND
+- Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE
+#### Original pre-game prediction
+Frozen Belfast batting-first centre:
+- Powerplay / first six overs: ~45 runs.
+- Full first innings: ~160 runs.
+- Working first-innings central corridor: ~145-175.
+Best four model-selected targets:
+1. Belfast Wolves first six overs UNDER 55.5 — ~73% UNVALIDATED_SUBJECTIVE.
+2. Belfast Wolves first innings OVER 144.5 — ~66%.
+3. Belfast Wolves first innings UNDER 174.5 — ~64%.
+4. Edinburgh Castle Rockers to win — ~56%.
+Supplied-line ranking:
+1. Belfast first six UNDER 46.5 — ~56%.
+2. Belfast first innings OVER 158.5 — ~53%.
+3. Belfast first innings UNDER 158.5 — ~47%.
+4. Belfast first six OVER 46.5 — ~44%.
+Potential game winner: Edinburgh Castle Rockers — ~56%.
+#### Original research reasoning / availability
+- Belfast's four prior Malahide first-innings powerplays in the retrieved sample were 43/3, 49/1, 54/1 and 36/2, producing a 45.5-run mean and supporting the powerplay-Under direction.
+- The full-innings sample was 107, 161, 187 and 190, showing that a subdued powerplay could still recover into a high final score; the Sep 17 meeting was 36/2 after six but 190/4 after 20.
+- Edinburgh's attack carried multiple wicket paths through Boult, Curran, Jarvis, Santner and Watt.
+- Charlie Tear was officially ruled out for Edinburgh. Mark Chapman had retired hurt in the prior meeting, but no reliable current source confirmed a continuing injury; Chapman and David Miller were treated as selection uncertainties rather than invented absences.
+- Strip status: NOT FOUND AFTER SEARCH after the required pitch-report ladder. Venue/format historical scoring and the preceding Malahide match were used only as historical context.
+- Match-window conditions were low-disruption with no material rain signal.
+#### Material sources
+1. ETPL exact final page — event identity / official competition route — https://www.etplofficial.com/matches/6a688c61b30844b0969df8c2
+2. Tixr official event listing — exact local date/time and Malahide venue — https://www.tixr.com/groups/etplofficial/events/etpl-2026-final-edinburgh-castle-rockers-v-belfast-wolves-198572
+3. CricketWorld Sep 17 exact scorecard — Belfast 190/4 and 36/2 powerplay against Edinburgh — https://www.cricketworld.com/cricket/edinburgh-castle-rockers-vs-belfast-wolves/match/scorecard/98352
+4. CricketEurope tournament results — current ETPL result/scoring context — https://www.cricketeurope.com/FINALSCORE/RESULTS/TOURNAMENTS/EuropeanT20PremierLeague.shtml
+5. ETPL qualifier page — Belfast's immediate prior qualifier result and workload — https://www.etplofficial.com/matches/6a688c61b30844b0969df8c1
+6. CricketArchive / Cricket Ireland scorecard — prior exact Edinburgh-Belfast match context — https://www.cricketarchive.com/CricketIreland/Scorecards/1458/1458982.html
+7. Pitchcare Malahide groundskeeping profile — historical venue tendency only, not current strip — https://www.pitchcare.com/blogs/news/the-craic-of-leather-on-willow-at-malahide
+8. Weather forecast — match-window temperature/rain context.
+9. Sports Research Drive — governing method and cricket rules.
+Source firewall: betting picks, fantasy/DFS projections, market odds and prediction-site recommendations were excluded from predictive inputs.
+#### Current state check
+CURRENT STATUS: LIVE / NO SETTLEMENT.
+A current CricTracker exact-event page reports Play Ongoing, Edinburgh elected to bowl, with Belfast 69/1 after 9.1 overs at the observed refresh. This is a moving live state and is recorded separately from the immutable pre-game prediction. No row is graded and no retrospective is performed while the match remains live.
+Live-state source: https://www.crictracker.com/live-scores/ecr-vs-tba-final-t20-european-t20-premier-league-20-sep-2026/
+Document mapping: no new lesson promoted while live. Any post-match learning waits for terminal-state verification.
+
+
+#### Settlement and retrospective — P-479
+
+
+Settlement status: SETTLED / RETROSPECTIVE COMPLETE.
+Verified final: Belfast Wolves 150/5 (20 overs); Edinburgh Castle Rockers 151/3 (18.4 overs).
+Result: Edinburgh Castle Rockers won by 7 wickets.
+Belfast powerplay: 41/1 after six overs.
+
+
+Three-source terminal-state gate: PASS.
+- CricketWorld exact scorecard — Completed; Belfast 150/5, Edinburgh 151/3, Edinburgh won by 7 wickets; exact powerplay 41/1 — https://www.cricketworld.com/cricket/edinburgh-castle-rockers-vs-belfast-wolves/match/scorecard/98355
+- BBC report syndicated by Yahoo Sports — explicit Edinburgh seven-wicket final and full innings totals — https://ca.sports.yahoo.com/news/edinburgh-castle-rockers-beat-belfast-174958677.html
+- MyKhel exact scorecard — Result; Edinburgh 151/3 beat Belfast 150/5 by 7 wickets — https://www.mykhel.com/cricket/edinburgh-castle-rockers-vs-belfast-wolves-2026-final-scorecard-m273640/
+
+
+##### Pick-by-pick settlement — model-selected slate
+
+
+1. Belfast first six Under 55.5 — WIN; powerplay 41/1.
+2. Belfast first innings Over 144.5 — WIN; 150/5.
+3. Belfast first innings Under 174.5 — WIN; 150/5.
+4. Edinburgh Castle Rockers to win — WIN.
+
+
+Model-selected slate: 4 W / 0 L.
+
+
+##### Supplied-line settlement
+
+
+1. Belfast first six Under 46.5 — WIN; 41 runs.
+2. Belfast first innings Over 158.5 — LOSS; 150.
+3. Belfast first innings Under 158.5 — WIN.
+4. Belfast first six Over 46.5 — LOSS.
+
+
+Potential game winner: Edinburgh Castle Rockers — WIN.
+
+
+##### Rank-1 / top-two / total review
+
+
+Rank #1 Under 55.5 powerplay — WIN.
+Rank #2 Over 144.5 innings — WIN.
+Hit@2 = YES.
+Both top-two win = YES.
+The highest-ranked over/under selection was Rank #1 and won, so no enhanced failure trigger applies.
+
+
+##### Expected vs actual game script
+
+
+The pregame powerplay centre was ~45 and the realised powerplay was 41/1, strongly validating the early-phase direction. Belfast then recovered through Tim Tector's 84 and Devon Conway's 29 but lost middle/death acceleration when Glenn Maxwell made 3 and Lorcan Tucker 6, finishing at 150/5. That landed inside the forecast's 145-175 central corridor and simultaneously won Over 144.5 and Under 174.5.
+
+
+Edinburgh chased efficiently to 151/3 in 18.4 overs, driven by Andries Gous' unbeaten 90. The winner call therefore landed through both bowling control and chase quality.
+
+
+##### What went right
+
+
+- All four model-selected targets won.
+- Both top-two selections won.
+- The powerplay model correctly separated early scoring from the full-innings ceiling.
+- The 145-175 innings corridor was well centred around the actual 150.
+- The explicit possibility that a subdued powerplay could still recover into a respectable final total was correct.
+- Edinburgh winner was correct.
+
+
+##### What went wrong / limitations
+
+
+- The exact supplied 158.5 full-innings line was on the wrong side: Over 158.5 lost while Under won.
+- The pregame analysis could not confirm the final XI or exact current strip before issue.
+- Mark Chapman and David Miller did not appear in the final Belfast batting XI; the pregame card appropriately treated them as selection uncertainties rather than asserting availability.
+- Postgame CricketWorld metadata describes the surface as spinning/average with swing favourable, but this is retrospective information and is not retroactively inserted as known pregame strip evidence.
+
+
+##### Availability / participant audit
+
+
+Belfast's realised batting group included Stirling, Tector, Conway, Maxwell, Tucker and Manenti. The uncertainty around Chapman/Miller was material to the ceiling branch, but because it was disclosed rather than fabricated, this is an evidence-quality limitation rather than a hindsight error.
+
+
+##### Blind spots and mitigation
+
+
+Blind spot: exact 158.5 threshold sensitivity around a central innings corridor.
+Pre-game knowability: YES. A centre around 160 with meaningful uncertainty means 158.5 should remain a low-separation call.
+Materiality: HIGH only for the supplied 158.5 pair; LOW for the broader model-selected corridor and winner.
+Mitigation: retain corridor-first modelling and avoid overstating confidence when a supplied line lies within a few runs of the independent centre.
+Rule status: existing threshold-separation and phase-to-innings controls worked; no new rule.
+
+
+##### Document mapping
+
+
+- RULES_CRICKET.md: powerplay-to-innings separation worked as intended.
+- DATA_SOURCE_REGISTER.md: CricketWorld exact match notes successfully exposed the final powerplay field for settlement.
+- No permanent rule change promoted.
+- Dataset remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+
+---
+### P-480 — Soccer / Denmark Superligaen — Viborg FF vs FC Nordsjælland
+- Canonical / staging ID: P-480
+- Competition: Denmark Superligaen
+- Venue: Energi Viborg Arena, Viborg, Denmark
+- Official venue-local start: Sep 20, 2026 at 18:00 CEST (Europe/Copenhagen, UTC+2)
+- Australia/Melbourne conversion: Sep 21, 2026 at 02:00 AEST; date rollover = YES
+- Original issue state: PREGAME / NOT STARTED
+- Method / controls: MDS-2026.09.19-v4.3 / CR-2026.09.19-4 / SFA-SOCCER
+- Operating mode: SPORTS_ONLY / MARKET_BLIND
+- Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE
+#### Original pre-game prediction
+Frozen goal centre:
+- Viborg ~1.26
+- FC Nordsjælland ~1.42
+- Projected total ~2.68
+Best five:
+1. First-half UNDER 1.5 goals — ~75% UNVALIDATED_SUBJECTIVE.
+2. FC Nordsjælland team total OVER 0.5 — ~75%.
+3. Full-game UNDER 3.5 goals — ~72%.
+4. Total corners OVER 7.5 — ~70%.
+5. FC Nordsjælland or Draw (X2) — ~66%.
+Supplied lines:
+- First-half Over 0.5 ~60.9%; Under 0.5 ~39.1%.
+- Full-game Under 2.5 ~50.2%; Over 2.5 ~49.8%.
+Potential game winner: FC Nordsjælland ~41.1%; Draw ~25.4%; Viborg ~33.5%.
+#### Original research reasoning / availability
+- Viborg entered with 11 goals scored / 7 conceded; FCN 13 / 6, while current xG data indicated FCN's attack was stronger than the raw 13 goals.
+- Viborg's official Opta preview noted all five of FCN's most recent league goals had arrived after the 60th minute, supporting a distinction between a quieter first half and later FCN scoring.
+- Corners were modelled separately: Viborg home match-corner environment around 12.25 and FCN away around 9.00 in the retrieved small samples, then shrunk for uncertainty.
+- Official/current lineup sources converged on likely XI shapes but the accessible final feed still labelled them predicted rather than field-owner confirmed, so no player prop was promoted.
+- Viborg: Riahi long-term knee injury officially confirmed; current feeds also listed Anyembe, Freriks and Njoh unavailable.
+- FCN: current feed listed Salquist, Araphat Mohammed and Souleymane Alio unavailable; no suspensions were reported by Viborg's official preview.
+- Weather near kickoff included showers and wind; treated as variance, not an automatic total direction.
+#### Material sources
+1. Viborg official schedule — exact event/time — https://vff.dk/ligaen/kampprogram
+2. Viborg official Opta/Superstats preview — H2H, goal timing, passing/tackling and suspension context — https://www.vff.dk/nyhedsarkiv/8-sport/15936-info-og-stats-for-vff-fcn-4
+3. FC Nordsjælland official material — recent team/result context — https://fcn.dk/nyheder/2026/september/highlights-fc-nordsjaelland-agf-1
+4. MatchPulse — current-season xG/xGA — https://matchpulsestats.com/en/league/119/xg
+5. SoccerStats — current home/away goal and corner splits — https://www.soccerstats.com/pmatch.asp?league=denmark&stats=50-1-10-2027
+6. FotMob exact-event page — projected XI/current availability; not promoted above official sources — https://www.fotmob.com/en-GB/matches/viborg-vs-nordsjaelland/3crs0u?player=1382135
+7. Viborg official Riahi medical update — https://vff.dk/nyhed/sport/15790-mohamed-riahi-alvorligt-knaeskadet
+8. FCN official squad/availability material — https://fcn.dk/nyheder/2026/september/truppen-til-aftenens-kamp-i-herning
+9. Weather forecast and Sports Research Drive methodology.
+#### Current state check
+CURRENT STATUS: LIVE / NO SETTLEMENT.
+The structured soccer event feed (event 71925034) showed Viborg vs FC Nordsjælland live at the state refresh. No row is graded and no retrospective is performed while live.
+Document mapping: none while live; retain for terminal-state settlement.
+
+
+#### Settlement and retrospective — P-480
+
+
+Settlement status: SETTLED / RETROSPECTIVE COMPLETE.
+Verified final: Viborg FF 4, FC Nordsjælland 1.
+Halftime: Viborg 3, FC Nordsjælland 1.
+Final corners: Viborg 4, FC Nordsjælland 5; total 9.
+
+
+Three-source terminal-state gate: PASS.
+- Structured exact-event soccer feed, event 71925034 — COMPLETE at 4-1.
+- Eurosport exact match page — completed 4-1 with final stats including 4-5 corners — https://www.eurosport.nl/voetbal/3f-superliga/2026-2027/live-viborg-ff-fc-nordsjaelland_mtc21873592/live.shtml
+- Sky Sports exact fixture/result page — full-time Viborg 4-1 FC Nordsjælland — https://www.skysports.com/football/viborg-ff-vs-fc-nordsjaelland/6482622979768878232
+
+
+Derivative cross-check:
+- Abseits exact match page: HT 3-1, corners 4-5.
+- Campo/Ritzau report: four first-half goals and 3-1 halftime, final 4-1.
+- Eurosport: corners 4-5.
+
+
+##### Pick-by-pick settlement — model-selected slate
+
+
+1. First-half Under 1.5 goals — LOSS; halftime total was four.
+2. FC Nordsjælland team total Over 0.5 — WIN; FCN scored once.
+3. Full-game Under 3.5 goals — LOSS; final total five.
+4. Total Corners Over 7.5 — WIN; total nine.
+5. FC Nordsjælland or Draw (X2) — LOSS; Viborg won 4-1.
+
+
+Model-selected slate: 2 W / 3 L.
+
+
+##### Supplied-line settlement
+
+
+- First-half Over 0.5 — WIN.
+- First-half Under 0.5 — LOSS.
+- Full-game Under 2.5 — LOSS.
+- Full-game Over 2.5 — WIN.
+
+
+Potential game winner: FC Nordsjælland — LOSS.
+
+
+##### Mandatory enhanced Rank-1 / TOP_OU failure review
+
+
+Rank #1 First-half Under 1.5 — LOSS.
+This row was also the highest-ranked over/under selection, so one enhanced review covers both the Rank-1 and TOP_OU triggers.
+Rank #2 FCN team total Over 0.5 — WIN.
+Hit@2 = YES.
+Both top-two win = NO.
+
+
+Why Rank #1 was placed first:
+- the first-half centre was ~0.95 goals;
+- FCN's previous five league goals had all arrived after the 60th minute;
+- FCN's two immediately preceding league matches had reached halftime 0-0;
+- the forecast expected a patient opening and separated late FCN scoring from early scoring.
+
+
+Why that ranking failed:
+- Viborg scored at 16', 33' and 41'; FCN scored at 26'. The match had four first-half goals before the model's preferred slow-opening branch could establish itself.
+- The pregame reasoning overweighted FCN's recent late-goal timing and underweighted Viborg's own home first-half attacking capacity and the possibility of early conversion from both sides.
+- The 75% estimate was too confident for a phase total built from small, overlapping timing samples and without field-owner confirmed lineups/bench state.
+- The supplied 1H Over 0.5 at ~60.9% actually won and was the structurally safer early-goal target because it needed only one event, whereas Under 1.5 required the entire first half to avoid a second goal.
+
+
+Should another row have ranked above it?
+YES. On the frozen information, FC Nordsjælland team total Over 0.5 was also estimated around 75% and was less sensitive to exact first-half timing. Given the unresolved XI/bench state and the small timing sample, FCN TT Over 0.5 should have been Rank #1 or at minimum tied ahead of the first-half Under after an uncertainty penalty.
+
+
+Failure classification:
+- Small/overlapping sample timing inference: YES.
+- Poor uncertainty handling: YES.
+- Missing confirmed lineup/bench information: CONTRIBUTORY.
+- Existing rule not fully executed: YES — the phase-total path geometry and evidence-grade cap should have prevented a 75% phase Under from being treated as clearly strongest without stronger first-half suppression evidence.
+- Genuine variance: PARTLY, but not sufficient to excuse the ranking.
+
+
+##### Full-match total review
+
+
+Under 3.5 also lost, with five total goals. The same underlying miss carried forward: the distribution underweighted the high-conversion/open branch. Viborg's 3-1 halftime score meant the Under 3.5 was already dead by the break.
+
+
+The preferred supplied full-game side had been Under 2.5 at only ~50.2%, essentially no separation. It lost, while Over 2.5 won. This was not a strong pregame opinion and should remain classified as near-coin-flip rather than a major directional failure.
+
+
+##### Actual game script
+
+
+Viborg led through Mads Søndergaard at 16'. Alexander Lind equalised for FCN at 26'. Dorian Hanza restored Viborg's lead at 33', and Charly Horneman made it 3-1 at 41'. Adam Kleis-Kristoffersen completed the 4-1 at 81'.
+
+
+The decisive feature was not late FCN scoring. It was Viborg's first-half attacking efficiency and FCN's inability to suppress repeated home chances. FCN still scored once, preserving Rank #2.
+
+
+##### What went right
+
+
+- FCN team total Over 0.5 won.
+- Total corners Over 7.5 won with nine.
+- Supplied first-half Over 0.5 won.
+- Supplied full-game Over 2.5 won.
+- The corner model remained independent of the incorrect goal-total direction and still landed.
+
+
+##### What went wrong
+
+
+- Rank #1 failed badly: four first-half goals versus an Under 1.5 call.
+- Under 3.5 failed by 1.5 goals.
+- FCN X2 and the potential winner call failed.
+- The model over-weighted FCN's recent late-goal pattern and under-weighted Viborg's home attacking ceiling.
+- The 2.68 full-game centre was materially too low for the realised high-conversion game.
+
+
+##### Lineup / availability audit
+
+
+The pregame card explicitly said the accessible lineup feeds were projected rather than field-owner confirmed. The realised scorers included Dorian Hanza and Alexander Lind, both consistent with the expected attacking structures. No postgame evidence indicates a late withdrawal was the central cause. The main failure was distribution/ranking, not an undisclosed injury.
+
+
+##### Blind spots and mitigation
+
+
+1. First-half phase Under built from small timing samples.
+   - Pre-game knowability: YES.
+   - Materiality: VERY HIGH.
+   - Mitigation: shrink recent goal-timing streaks more aggressively toward competition/home-away first-half base rates and require stronger bilateral suppression evidence before assigning ~75% to U1.5.
+
+
+2. Viborg home attacking ceiling.
+   - Pre-game knowability: YES.
+   - Materiality: HIGH.
+   - Mitigation: give the home side's multi-window chance/goal production an explicit branch independent of opponent recent scoring timing.
+
+
+3. No confirmed XI/bench.
+   - Pre-game knowability: known missingness.
+   - Materiality: MODERATE.
+   - Mitigation: preserve a wider phase-total distribution when final participant state is unresolved.
+
+
+Rule status: these are execution corrections to existing phase-total, recency and uncertainty controls. Do not promote a new fixed coefficient from one match.
+
+
+##### Source audit / document mapping
+
+
+- Campo/Ritzau: strong same-day game-script source.
+- Eurosport and Abseits: useful exact-event final/halftime/corner fields.
+- Structured soccer feed: reliable terminal-state confirmation.
+- RULES_SOCCER.md: execution reinforcement for phase-total geometry, recency shrinkage and XI uncertainty.
+- DATA_SOURCE_REGISTER.md: Danish Superliga exact-event derivative field routes as research-only settlement candidates.
+- Dataset remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+
+---
+### P-481 — Soccer / Spain La Liga — Villarreal vs Levante
+- Canonical / staging ID: P-481
+- Competition: Spain La Liga, Matchday 7
+- Venue: Estadio de la Cerámica, Vila-real, Spain
+- Official venue-local start: Sep 20, 2026 at 18:30 CEST (Europe/Madrid, UTC+2)
+- Australia/Melbourne conversion: Sep 21, 2026 at 02:30 AEST; date rollover = YES
+- Original issue state: PREGAME / SCHEDULED
+- Method / controls: MDS-2026.09.19-v4.3 / CR-2026.09.19-4 / SFA-SOCCER
+- Operating mode: SPORTS_ONLY / MARKET_BLIND
+- Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE
+#### Original pre-game prediction
+Frozen goal centre:
+- Villarreal ~1.85
+- Levante ~1.13
+- Projected total ~2.98
+- Villarreal win ~54.0%; Draw ~22.6%; Levante win ~23.4%.
+Best five:
+1. Villarreal team total OVER 0.5 — ~83% UNVALIDATED_SUBJECTIVE.
+2. Full-game UNDER 4.5 — ~81%.
+3. Villarreal or Draw (1X) — ~77%.
+4. First-half OVER 0.5 — ~72%.
+5. Villarreal OVER 4.5 corners — ~68%.
+Supplied lines:
+- First-half Over 0.5 ~72%; Under 0.5 ~28%.
+- Full-game Over 2.5 ~56%; Under 2.5 ~44%.
+Potential game winner: Villarreal ~54%.
+#### Original research reasoning / availability
+- Villarreal's underlying attack was materially stronger than its early results: current sources placed them around 12.3-12.5 xG from six league matches, with 91 shots and 39 on target.
+- Levante had conceded nine in five league matches and carried an away scoring weakness in the small current sample.
+- The Villarreal attack included Pépé, Moleiro, Gerard Moreno and Mikautadze in the freshest accessible lineup feed.
+- A source conflict was resolved in favour of the fresher same-day team news: Juan Foyth was back available, while Santi Comesaña was out with a right-ankle problem; an older page still listing Comesaña starting was treated as stale.
+- Levante's official call-up ruled out Álex Primo, Karl Etta Eyong and Hugo Sotelo.
+- Villarreal had shorter rest after the Sep 17 Málaga match; Levante's scheduled midweek Athletic fixture had been postponed.
+- Weather was dry and low-disruption around kickoff.
+#### Material sources
+1. LaLiga official exact fixture page — event/stadium/kickoff and current competition records — https://www.laliga.com/es-GB/partido/temporada-2026-2027-laliga-ea-sports-villarreal-cf-levante-ud-7
+2. Villarreal official calendar — independent kickoff confirmation — https://villarrealcf.es/en/calendario-primer-equipo/
+3. Levante official match call-up — confirmed Álex Primo, Karl Etta Eyong and Hugo Sotelo absences — https://www.levanteud.com/en/news/convocatoria-or-villarreal-cf-levante-ud-2627
+4. AS exact-match lineup page — freshest lineup state — https://as.com/resultados/futbol/primera/2026_2027/directo/regular_a_7_6a4496c62a77870/alineaciones/amp/
+5. EFE / Mundo Deportivo — same-day Foyth return and Comesaña unavailability corroboration — https://www.mundodeportivo.com/futbol/laliga/20260920/1004229059/villarreal-mide-mejoria-pujante-levante.html
+6. StatMuse — xG/xGA/shots/SOT/possession diagnostics — https://www.statmuse.com/fc/ask/villarreal-levante-xg-xga-xgot?l=laliga
+7. MatchPulse — current-season xG cross-check — https://matchpulsestats.com/es/league/140/xg
+8. SoccerStats / PrematchStats — home/away, first-half and corner splits.
+9. Weather forecast and Sports Research Drive methodology.
+Source firewall: sportsbook odds, line movement, betting previews/tips and fantasy/DFS projections were excluded.
+#### Current state check
+CURRENT STATUS: LIVE / NO SETTLEMENT.
+The structured soccer event feed (event 72478604) showed Villarreal vs Levante live at the state refresh. No row is graded and no retrospective is performed while live.
+Document mapping: none while live; retain for terminal-state settlement.
+
+
+#### Settlement and retrospective — P-481
+
+
+Settlement status: SETTLED / RETROSPECTIVE COMPLETE.
+Verified final: Villarreal 3, Levante 1.
+Halftime: 1-1.
+Final corners: Villarreal 7, Levante 1.
+
+
+Three-source terminal-state gate: PASS.
+- Structured exact-event soccer feed, event 72478604 — COMPLETE at 3-1.
+- Cadena SER / EFE exact postgame report — explicit 3-1 final and goal sequence — https://cadenaser.com/nacional/2026/09/20/villarreal-levante-resumen-resultado-y-goles-del-partido-de-la-jornada-7-de-laliga-ea-sports-cadena-ser/
+- Europa Press exact match report — explicit 3-1 final, goals and final statistics — https://www.europapress.es/deportes/estadisticas-deportivas/noticia-villareal-levante-resumen-goles-resultado-partido-hoy-20260920202832.html
+
+
+Corner endpoint cross-check:
+- Europa Press: corners 7-1.
+- Soccerzz exact match page: corners 7-1.
+- Sofascore postgame analysis explicitly states the 7-1 corner count.
+The corner settlement is therefore verified independently of market pages.
+
+
+##### Pick-by-pick settlement — model-selected slate
+
+
+1. Villarreal team total Over 0.5 — WIN; Villarreal scored three.
+2. Full-game Under 4.5 goals — WIN; total four.
+3. Villarreal or Draw (1X) — WIN.
+4. First-half Over 0.5 goals — WIN; halftime 1-1.
+5. Villarreal Over 4.5 corners — WIN; Villarreal had seven.
+
+
+Model-selected slate: 5 W / 0 L.
+
+
+##### Supplied-line settlement
+
+
+- First-half Over 0.5 — WIN.
+- First-half Under 0.5 — LOSS.
+- Full-game Over 2.5 — WIN.
+- Full-game Under 2.5 — LOSS.
+
+
+Potential game winner: Villarreal — WIN.
+
+
+##### Rank-1 / top-two / total review
+
+
+Rank #1 Villarreal TT Over 0.5 — WIN.
+Rank #2 Under 4.5 — WIN.
+Hit@2 = YES.
+Both top-two win = YES.
+The highest-ranked over/under selection, Under 4.5, WON. No enhanced failure trigger applies.
+
+
+##### Expected vs actual game script
+
+
+The independent centre was Villarreal 1.85, Levante 1.13, total 2.98. The actual 3-1 sat in the forecast's open Villarreal-control family. Ayoze Pérez scored at 41', Iván Romero equalised at 42', Alberto Moleiro restored the lead at 54', and substitute Georges Mikautadze completed the scoring at 86'.
+
+
+The territorial mechanism was strongly supported postgame: Soccerzz records approximately 2.90 xG to 0.94, 21-6 shots, 7-1 shots on target and 7-1 corners. Villarreal's stronger attacking process therefore translated into both goals and corners.
+
+
+##### What went right
+
+
+- All five model-selected picks won.
+- Both top-two selections won.
+- Villarreal winner call won.
+- The supplied 1H Over 0.5 and FT Over 2.5 directions both won.
+- Villarreal TT Over 0.5 was robust to lineup changes and landed comfortably.
+- Under 4.5 correctly protected against a 3-1 open game.
+- Villarreal Over 4.5 corners was supported by actual territorial pressure and landed at seven.
+
+
+##### Important pre-game mistake despite the wins — lineup audit
+
+
+The pregame card described the freshest accessible lineup feed as showing Pépé, Moleiro, Gerard Moreno and Mikautadze in the attacking structure. The verified final lineup did NOT match that description:
+- Starters included Tajon Buchanan, Alberto Moleiro, Ilias Akhomach and Ayoze Pérez.
+- Nicolas Pépé, Gerard Moreno and Georges Mikautadze started on the bench.
+- Mikautadze later came on and scored the 86' goal.
+
+
+This is a genuine pre-game source-latency/lineup-classification defect. The fact that every team-level pick won does not erase it. The selections were robust because they were team-level, but a player prop based on the stated projected attack could have been badly wrong.
+
+
+##### What went wrong / limitations
+
+
+- The lineup source was treated as fresher/more definitive than it actually was.
+- The final total centre of ~2.98 was somewhat low versus the realised four goals, although the distribution retained sufficient upper-tail mass for Under 4.5 and Over 2.5 to coexist.
+- Levante's scoring branch was not negligible; Iván Romero's 42' equaliser confirmed that the away side could punish Villarreal despite the territorial mismatch.
+
+
+##### Source-quality audit
+
+
+- Europa Press / EFE-style match reporting: strong for final, scorers and team stats.
+- Soccerzz: useful detailed exact-event lineup/xG/corner record.
+- Sofascore postgame article: useful independent derivative corroboration.
+- The pregame AS lineup page was not reliable enough to be treated as a confirmed team sheet at the issue timestamp. Future cards must preserve the label PROJECTED until a field-owner or exact-event provider explicitly marks the XI confirmed.
+
+
+##### Blind spots and mitigation
+
+
+Blind spot: near-kickoff lineup freshness/confirmation.
+Pre-game knowability: YES — the missing official confirmation was itself observable.
+Materiality: LOW for the team-level selections that were issued; potentially HIGH for any player prop.
+Mitigation: do not upgrade a lineup from projected to confirmed solely because a page is same-day or recently refreshed. Require an explicit confirmation marker or field-owner team sheet.
+Rule status: this is enforcement of an existing lineup-verification rule, not a new rule.
+
+
+##### Document mapping
+
+
+- RULES_SOCCER.md / RULES_GENERAL.md: existing projected-vs-confirmed XI distinction was not executed strictly enough; record as an execution failure.
+- DATA_SOURCE_REGISTER.md: AS same-day lineup route should remain secondary unless explicit confirmation state is exposed.
+- No new permanent rule required.
+- Dataset remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+
+---
+
+
+## 3. Temporary-ID / Canonical-ID Conflict Logs
+
+
+None. P-474 through P-481 were collision-checked against the active mini-log sequence. P-479, P-480 and P-481 were issued in this chat after the prior Drive snapshot and have now been incorporated without overwriting any existing canonical ID.
+
+
+## 4. Settlement Lists
+
+
+Settled in this mini log:
+- P-474 — Athletics @ Cleveland Guardians — SETTLED / RETROSPECTIVE COMPLETE.
+- P-475 — Chicago Sky @ Atlanta Dream — SETTLED / RETROSPECTIVE COMPLETE.
+- P-476 — Minnesota Twins @ Los Angeles Angels — SETTLED / RETROSPECTIVE COMPLETE.
+- P-477 — Sydney Kings vs Cairns Taipans — SETTLED / RETROSPECTIVE COMPLETE.
+- P-478 — Djurgårdens IF vs IF Elfsborg — SETTLED / RETROSPECTIVE COMPLETE; final 1-2, HT 0-1, corners 4-7.
+- P-479 — Edinburgh Castle Rockers vs Belfast Wolves — SETTLED / RETROSPECTIVE COMPLETE; Edinburgh won by 7 wickets, Belfast 150/5, PP 41/1.
+- P-480 — Viborg FF vs FC Nordsjælland — SETTLED / RETROSPECTIVE COMPLETE; final 4-1, HT 3-1, corners 4-5.
+- P-481 — Villarreal vs Levante — SETTLED / RETROSPECTIVE COMPLETE; final 3-1, HT 1-1, corners 7-1.
+
+
+Awaiting settlement:
+- None.
+
+
+## 5. Running Integrity Notes
+
+
+- The governing methodology remains MDS-2026.09.19-v4.3 / CR-2026.09.19-4.
+- The dataset remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+- Every P-474 through P-481 entry is now in the Fully Settled section. The Incomplete / Unsettled section is empty.
+- P-478's previously unresolved corner derivative is now settled: three exact-event statistical routes independently report Djurgården 4 and Elfsborg 7 corners, so Total Corners Over 7.5 is a WIN. Final model-selected result: 3 W / 2 L.
+- P-479 settled 4 W / 0 L on the model-selected slate. Belfast's powerplay finished 41/1 and first innings 150/5; Edinburgh won by seven wickets. The exact supplied 158.5 innings Over lost, while Under won.
+- P-480 settled 2 W / 3 L on the model-selected slate. Rank #1 First-half Under 1.5 and Rank #3 Under 3.5 both lost in a 4-1 game that was already 3-1 at halftime. The mandatory Rank-1 and TOP_OU enhanced review was completed. The primary correction is stronger recency shrinkage/uncertainty for phase Unders and more weight on Viborg's home first-half attacking ceiling.
+- P-481 settled 5 W / 0 L on the model-selected slate. Villarreal won 3-1, the game had four total goals, and Villarreal won the corner count 7-1. The retrospective nevertheless records a genuine pregame lineup-source defect: several players presented as starting attackers were actually substitutes, so team-level success does not validate that lineup retrieval.
+- Across P-478 through P-481, the model-selected slates were 14 W / 5 L descriptively. Rank #1 was 3 W / 1 L; Hit@2 was 4/4. These are learning-only diagnostics and are not performance-eligible or prospective validation.
+- The final-state/source gate passed for all four newly settled events. Derivative endpoints were separately verified rather than inferred from scores.
+- Market odds, line movement, betting tips and fantasy/DFS material were not admitted as predictive evidence. A small number of betting-branded/statistical pages were used only as independent final-stat cross-checks where stronger field-owner derivative feeds were not exposed; that limitation is explicitly recorded.
+- No governing methodology file, historical combined prediction log or canonical archive was edited in this pass. Only the dedicated mini running log was updated.
+- No new permanent sport-specific or cross-sport rule was promoted. P-480 and P-481 expose execution failures of existing phase-total uncertainty and lineup-confirmation controls; P-479 validates the existing cricket phase-to-innings separation process; P-478 reinforces bench/transition and derivative-source controls.
+- Next intended prediction ID: P-482, subject to fresh reconciliation before issue.

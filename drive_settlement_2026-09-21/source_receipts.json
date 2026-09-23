@@ -1,0 +1,782 @@
+[
+  {
+    "key": "P-453-3",
+    "id": "P-453",
+    "url": "https://www.mlb.com/news/kyle-harrison-struggles-brewers-postseason-role",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/news/kyle-harrison-struggles-brewers-postseason-role",
+    "retrieved": "2026-09-20T20:56:52.282Z",
+    "hash": "ecf2bfe34aa22b25b30fab55796940e48b9d59256ca5d67a9c09dd1ecb279c56",
+    "chars": 150
+  },
+  {
+    "key": "P-453-2",
+    "id": "P-453",
+    "url": "https://www.mlb.com/video/game/823334",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/video/game/823334",
+    "retrieved": "2026-09-20T20:56:52.288Z",
+    "hash": "05ddd8094d2f5834826a852c8e19d03ec87d5701b088a46e5e7108532af22ad3",
+    "chars": 150
+  },
+  {
+    "key": "P-453-1",
+    "id": "P-453",
+    "url": "https://www.mlb.com/scores/2026-09-17",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/scores/2026-09-17",
+    "retrieved": "2026-09-20T20:56:52.290Z",
+    "hash": "e3cf662d138e08e4015fbc8aca667cbb0fa2336fe47332ce5c512dcf29b17b4f",
+    "chars": 151
+  },
+  {
+    "key": "P-454-1",
+    "id": "P-454",
+    "url": "https://vejle-boldklub.dk/vb-braendte-straffe-og-roeg-ud-af-betano-pokalen/",
+    "status": 200,
+    "urlFinal": "https://vejle-boldklub.dk/vb-braendte-straffe-og-roeg-ud-af-betano-pokalen/",
+    "retrieved": "2026-09-20T20:56:53.066Z",
+    "hash": "25ebe0d951140d7041fe197e0b3cef8bd38ffc51583738166358b30ced392d9a",
+    "chars": 10126
+  },
+  {
+    "key": "P-455-2",
+    "id": "P-455",
+    "url": "https://www.mlb.com/video/game/824464",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/video/game/824464",
+    "retrieved": "2026-09-20T20:56:53.101Z",
+    "hash": "2be2ace23be9bdc08231c4501aa9bb94ff1a408973e70547bb75ff7ee87bc75a",
+    "chars": 151
+  },
+  {
+    "key": "P-455-1",
+    "id": "P-455",
+    "url": "https://www.mlb.com/scores/2026-09-17",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/scores/2026-09-17",
+    "retrieved": "2026-09-20T20:56:53.103Z",
+    "hash": "784b859eae7a4f54af8b6c4e36bdcdc2369b4cb2b68b4ac603cfe5ccdebca5e8",
+    "chars": 151
+  },
+  {
+    "key": "P-454-4",
+    "id": "P-454",
+    "url": "https://www.forebet.com/en/football/matches/vejle-bk-br%C3%B8ndby-2548493",
+    "status": 403,
+    "urlFinal": "https://www.forebet.com/en/football/matches/vejle-bk-br%C3%B8ndby-2548493",
+    "retrieved": "2026-09-20T20:56:53.147Z",
+    "hash": "b6ea4300fdf235a808755d88913221ef0896034ee0fb32d0d4a449c44eff1aee",
+    "chars": 58
+  },
+  {
+    "key": "P-454-3",
+    "id": "P-454",
+    "url": "https://gioscore.com/football/match/brondby-if-vejle-boldklub/19872994",
+    "status": 200,
+    "urlFinal": "https://gioscore.com/football/match/brondby-if-vejle-boldklub/19872994",
+    "retrieved": "2026-09-20T20:56:53.251Z",
+    "hash": "6a5849337eb9bec024424c76cbf7152e0f014817eded2a38fb45432681cf1824",
+    "chars": 11447
+  },
+  {
+    "key": "P-452-1",
+    "id": "P-452",
+    "url": "https://www.icc-cricket.com/news/sensational-abhishek-blazes-to-record-hundred",
+    "status": 200,
+    "urlFinal": "https://www.icc-cricket.com/news/sensational-abhishek-blazes-to-record-hundred",
+    "retrieved": "2026-09-20T20:56:53.578Z",
+    "hash": "cc0ac4c98bc95b888e3a3e0c5fba9dc111601833f969a31cb11b6bacedf28be4",
+    "chars": 4014
+  },
+  {
+    "key": "P-455-4",
+    "id": "P-455",
+    "url": "https://www.mlb.com/news/dodgers-clinch-2026-nl-west-title",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/news/dodgers-clinch-2026-nl-west-title",
+    "retrieved": "2026-09-20T20:56:53.691Z",
+    "hash": "9029ff8ba41bda146208254b1de24851479270a63819955c11a2fe2b56e5f0f9",
+    "chars": 144
+  },
+  {
+    "key": "P-455-3",
+    "id": "P-455",
+    "url": "https://www.mlb.com/stories/game/824464",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/stories/game/824464",
+    "retrieved": "2026-09-20T20:56:53.706Z",
+    "hash": "71d11d7ca87ee9920be3552242af81abdf2d830c71296a940b458dea9828d948",
+    "chars": 151
+  },
+  {
+    "key": "P-454-2",
+    "id": "P-454",
+    "url": "https://www.dbu.dk/resultater/kamp/486247_508655/kampinfo",
+    "status": 200,
+    "urlFinal": "https://www.dbu.dk/resultater/kamp/486247_508655/kampinfo",
+    "retrieved": "2026-09-20T20:56:53.820Z",
+    "hash": "4290168f37d1c419f7b4261f8748e8ddb186319aa3bbe88e0a582cbe06116250",
+    "chars": 5279
+  },
+  {
+    "key": "P-456-1",
+    "id": "P-456",
+    "url": "https://rfef.es/es/resultados?competition=33836084&group=33836085&journey=6",
+    "status": 403,
+    "urlFinal": "https://rfef.es/es/resultados?competition=33836084&group=33836085&journey=6",
+    "retrieved": "2026-09-20T20:56:53.898Z",
+    "hash": "cc9a107d36ae2b98db1eb94c3d476165c0c50dd8ef0fa47fc9114d5abc3853c9",
+    "chars": 58
+  },
+  {
+    "key": "P-452-2",
+    "id": "P-452",
+    "url": "https://sports.ndtv.com/apps/cricket/live-scores/afin09172026273950?template=scorecard",
+    "status": 200,
+    "urlFinal": "https://sports.ndtv.com/apps/cricket/live-scores/afin09172026273950?template=scorecard",
+    "retrieved": "2026-09-20T20:56:53.931Z",
+    "hash": "92e2c8b3e00c9b0a1c7775ed90c4bad3f464c91ec51f6bf27fe4614906b7d0ee",
+    "chars": 14363
+  },
+  {
+    "key": "P-457-1",
+    "id": "P-457",
+    "url": "https://www.cricket.com.au/news/4578209/match-report-second-odi-zimbabwe-australia-harare-sports-club-hazlewood-stanlake-return-head-century-ollie-peake",
+    "status": 200,
+    "urlFinal": "https://www.cricket.com.au/news/4578209/match-report-second-odi-zimbabwe-australia-harare-sports-club-hazlewood-stanlake-return-head-century-ollie-peake",
+    "retrieved": "2026-09-20T20:56:54.619Z",
+    "hash": "6bce0467dc0a5a7f4879083f10d4ea673023505c3e370682d6b501ef87e2827f",
+    "chars": 10738
+  },
+  {
+    "key": "P-457-3",
+    "id": "P-457",
+    "url": "https://m.cricbuzz.com/live-cricket-scorecard/152742/zim-vs-aus-2nd-odi-australia-tour-of-zimbabwe-2026",
+    "status": 200,
+    "urlFinal": "https://m.cricbuzz.com/live-cricket-scorecard/152742/zim-vs-aus-2nd-odi-australia-tour-of-zimbabwe-2026",
+    "retrieved": "2026-09-20T20:56:55.048Z",
+    "hash": "83e8df6733d2fa618db5dcc74831d56f69f24b306ff45e8da2604e65fd3b0fc4",
+    "chars": 12717
+  },
+  {
+    "key": "P-457-2",
+    "id": "P-457",
+    "url": "https://www.cricbuzz.com/live-cricket-scores/152742/vs-australia-2026-09-18-harare-sports-club",
+    "status": 200,
+    "urlFinal": "https://www.cricbuzz.com/live-cricket-scores/152742/vs-australia-2026-09-18-harare-sports-club",
+    "retrieved": "2026-09-20T20:56:55.059Z",
+    "hash": "e386eb41071f32ed91b64944c8f216f12569cf146c77fc38da5227dda2fd03f5",
+    "chars": 11663
+  },
+  {
+    "key": "P-458-1",
+    "id": "P-458",
+    "url": "https://npb.jp/scores/2026/0918/g-d-24/",
+    "status": 200,
+    "urlFinal": "https://npb.jp/scores/2026/0918/g-d-24/",
+    "retrieved": "2026-09-20T20:56:55.611Z",
+    "hash": "6736f6e3577552b35450ca3ffc83d6081614a37c525a698f4361bf7a15a6821c",
+    "chars": 2080
+  },
+  {
+    "key": "P-459-1",
+    "id": "P-459",
+    "url": "https://www.afl.com.au/news/1613373/dockers-storm-home-to-seal-gf-berth-in-epic-finish-over-swans",
+    "status": 200,
+    "urlFinal": "https://www.afl.com.au/news/1613373/dockers-storm-home-to-seal-gf-berth-in-epic-finish-over-swans",
+    "retrieved": "2026-09-20T20:56:55.862Z",
+    "hash": "36a586a8e573952c13a567304cbd3a07766fab83158675900c1e1033120cf688",
+    "chars": 19555
+  },
+  {
+    "key": "P-457-4",
+    "id": "P-457",
+    "url": "https://m-aws.cricbuzz.com/cricket-news/140219/heads-century-leads-australias-clinical-win",
+    "status": 200,
+    "urlFinal": "https://m-aws.cricbuzz.com/cricket-news/140219/heads-century-leads-australias-clinical-win",
+    "retrieved": "2026-09-20T20:56:55.900Z",
+    "hash": "fecbf0633361fadc097f420a8b9e9c14f458972d581091a3890cbdcbf6ddb97c",
+    "chars": 6727
+  },
+  {
+    "key": "P-458-2",
+    "id": "P-458",
+    "url": "https://npb.jp/games/2026/schedule_09.html",
+    "status": 200,
+    "urlFinal": "https://npb.jp/games/2026/schedule_09.html",
+    "retrieved": "2026-09-20T20:56:56.014Z",
+    "hash": "fb9fe474f2841313825e0543ab26e053cbe7ad5e2e4aeedcc188efa335498a23",
+    "chars": 4300
+  },
+  {
+    "key": "P-459-2",
+    "id": "P-459",
+    "url": "https://www.fremantlefc.com.au/news/2132870/freo-storm-home-to-seal-grand-final-berth-in-epic-finish-over-swans",
+    "status": 200,
+    "urlFinal": "https://www.fremantlefc.com.au/news/2132870/freo-storm-home-to-seal-grand-final-berth-in-epic-finish-over-swans",
+    "retrieved": "2026-09-20T20:56:56.487Z",
+    "hash": "3f35239c05dc33e105022e9bc12d301c90927f29f613fad7901254cac06e70d1",
+    "chars": 11784
+  },
+  {
+    "key": "P-459-3",
+    "id": "P-459",
+    "url": "https://www.afl.com.au/news/1613378/the-fairytale-finish-never-came-but-the-cinderella-sydney-swans-won-back-a-city-against-the-fremantle-dockers",
+    "status": 200,
+    "urlFinal": "https://www.afl.com.au/news/1613378/the-fairytale-finish-never-came-but-the-cinderella-sydney-swans-won-back-a-city-against-the-fremantle-dockers",
+    "retrieved": "2026-09-20T20:56:56.621Z",
+    "hash": "bf0fbd3e5d012d99f761c0ca1923fd5e7b195f45c647a6d0660b439b2d5498c2",
+    "chars": 14949
+  },
+  {
+    "key": "P-461-1",
+    "id": "P-461",
+    "url": "https://www.wtatennis.com/tournaments/2061/valencia-125/2026/scores/LS006",
+    "status": 200,
+    "urlFinal": "https://www.wtatennis.com/tournaments/2061/valencia-125/2026/scores/LS006",
+    "retrieved": "2026-09-20T20:56:57.095Z",
+    "hash": "f6e955290ec3507226ebe71097757d174a5babbb21ce742bb53795125c8c5d2f",
+    "chars": 6018
+  },
+  {
+    "key": "P-460-3",
+    "id": "P-460",
+    "url": "https://www.cna.com.tw/news/aspt/202609180299.aspx",
+    "status": 200,
+    "urlFinal": "https://www.cna.com.tw/news/aspt/202609180299.aspx",
+    "retrieved": "2026-09-20T20:56:57.564Z",
+    "hash": "0d8f29b40c7f273a3c428b3f80145b46f3e5ecab7f48a18ef620a86a8d872f2f",
+    "chars": 6672
+  },
+  {
+    "key": "P-460-1",
+    "id": "P-460",
+    "url": "https://cpbl.com.tw/box/index?gameSno=338&kindCode=A&year=2026",
+    "status": 200,
+    "urlFinal": "https://cpbl.com.tw/box/index?gameSno=338&kindCode=A&year=2026",
+    "retrieved": "2026-09-20T20:56:57.660Z",
+    "hash": "f1136dc265ed77602920d3b3834b987fc3e7c63e71ec5c65700a40b31e23de25",
+    "chars": 18580
+  },
+  {
+    "key": "P-461-2",
+    "id": "P-461",
+    "url": "https://www.tennisactu.net/news-wta-valence-clara-burel-prend-sa-revanche-et-fonce-en-demi-finales-127082.html",
+    "status": 200,
+    "urlFinal": "https://www.tennisactu.net/news-wta-valence-clara-burel-prend-sa-revanche-et-fonce-en-demi-finales-127082.html",
+    "retrieved": "2026-09-20T20:56:57.815Z",
+    "hash": "8c322b378ec47d453da8a948ba94c65a678a7ab4754ef8df97dbd18139991fa8",
+    "chars": 5001
+  },
+  {
+    "key": "P-460-2",
+    "id": "P-460",
+    "url": "https://stats.cpbl.com.tw/schedule/2026-A-338",
+    "status": 200,
+    "urlFinal": "https://stats.cpbl.com.tw/schedule/2026-A-338",
+    "retrieved": "2026-09-20T20:56:57.904Z",
+    "hash": "1bb245dfddc00aed8f584135ade359b4a0d484306bc40b3a415a8f613313c44c",
+    "chars": 1667
+  },
+  {
+    "key": "P-464-1",
+    "id": "P-464",
+    "url": "https://www.mlb.com/stories/game/824790",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/stories/game/824790",
+    "retrieved": "2026-09-20T20:56:58.551Z",
+    "hash": "4aea0a164305c5aa3b5814abe8184eeb12de0956e434a885d80b538b07248752",
+    "chars": 151
+  },
+  {
+    "key": "P-463-1",
+    "id": "P-463",
+    "url": "https://www.mlb.com/gameday/cubs-vs-reds/2026/09/18/824463/final/box",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/gameday/cubs-vs-reds/2026/09/18/824463/final/box",
+    "retrieved": "2026-09-20T20:56:58.555Z",
+    "hash": "c9695e2bcc37b649d734353b665a89727b251e3c34f14e24d73f272db720da7d",
+    "chars": 151
+  },
+  {
+    "key": "P-462-1",
+    "id": "P-462",
+    "url": "https://www.qiumiwu.com/news/2006152218971",
+    "status": 200,
+    "urlFinal": "https://www.qiumiwu.com/news/2006152218971",
+    "retrieved": "2026-09-20T20:56:58.704Z",
+    "hash": "e0739a40113d590d0347827e5b01e87656722f8a1da2eff043d6059e1ed8dd60",
+    "chars": 2704
+  },
+  {
+    "key": "P-462-2",
+    "id": "P-462",
+    "url": "https://www.qiumiwu.com/game/video-110534337681",
+    "status": 200,
+    "urlFinal": "https://www.qiumiwu.com/game/video-110534337681",
+    "retrieved": "2026-09-20T20:56:58.764Z",
+    "hash": "9b35e02f630efa6869b4efa53b8eb07ecfb6197423b3344b55d1baa8037e5ccb",
+    "chars": 1968
+  },
+  {
+    "key": "P-467-1",
+    "id": "P-467",
+    "url": "https://www.mlb.com/news/dylan-cease-struggles-in-blue-jays-loss-to-rangers",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/news/dylan-cease-struggles-in-blue-jays-loss-to-rangers",
+    "retrieved": "2026-09-20T20:56:59.122Z",
+    "hash": "ef8e050dbca477804325b75b16a485ef2c0515092ae374cd392c345d06708b17",
+    "chars": 142
+  },
+  {
+    "key": "P-462-3",
+    "id": "P-462",
+    "url": "https://www.sohu.com/a/1077957651_463728",
+    "status": 200,
+    "urlFinal": "https://www.sohu.com/a/1077957651_463728",
+    "retrieved": "2026-09-20T20:56:59.195Z",
+    "hash": "f62dfffd0821a17a2aa5679965c43b06a8f7c8a0b0720d88442d2a31555219d3",
+    "chars": 1564
+  },
+  {
+    "key": "P-465-1",
+    "id": "P-465",
+    "url": "https://www.wnba.com/watch/video/game-recap-indiana-fever-103-toronto-tempo-85-09-18-2026",
+    "status": 200,
+    "urlFinal": "https://www.wnba.com/watch/video/game-recap-indiana-fever-103-toronto-tempo-85-09-18-2026",
+    "retrieved": "2026-09-20T20:56:59.208Z",
+    "hash": "bcdffe9e0297baf56c572c3f35b80e2a8e154e706f502710ce2315e32d01eca6",
+    "chars": 289
+  },
+  {
+    "key": "P-467-2",
+    "id": "P-467",
+    "url": "https://www.mlb.com/bluejays/roster/starting-lineups/2026-09-18",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/bluejays/roster/starting-lineups/2026-09-18",
+    "retrieved": "2026-09-20T20:56:59.262Z",
+    "hash": "b0921aa52a1550ab9d8876c53fd87a3c38fc0c449410942aebc072eed4200a19",
+    "chars": 145
+  },
+  {
+    "key": "P-466-1",
+    "id": "P-466",
+    "url": "https://www.afa.com.ar/es/posts/cronograma-y-designaciones-arbitrales-para-la-decima-fecha-del-torneo-clausura-y-de-las-categorias-de-ascenso",
+    "status": 200,
+    "urlFinal": "https://www.afa.com.ar/es/posts/cronograma-y-designaciones-arbitrales-para-la-decima-fecha-del-torneo-clausura-y-de-las-categorias-de-ascenso",
+    "retrieved": "2026-09-20T20:56:59.629Z",
+    "hash": "7629d43e15520f9c873f1d1c76c91bd27d203c2c72086fbbf8cc81ba3c6653a2",
+    "chars": 15409
+  },
+  {
+    "key": "P-462-4",
+    "id": "P-462",
+    "url": "https://k.sina.com.cn/article_2265295433_8705aa4902001cwmm.html",
+    "status": 200,
+    "urlFinal": "https://k.sina.com.cn/article_2265295433_8705aa4902001cwmm.html",
+    "retrieved": "2026-09-20T20:56:59.668Z",
+    "hash": "ddf5a367ddb71afc5b2df658d92a479210cc754b35472a848efc9cf7f5a556f7",
+    "chars": 2032
+  },
+  {
+    "key": "P-473-1",
+    "id": "P-473",
+    "url": "https://www.reuters.com/sports/soccer/lampards-coventry-earn-landmark-first-premier-league-win-25-years-2026-09-19/",
+    "status": 401,
+    "urlFinal": "https://www.reuters.com/sports/soccer/lampards-coventry-earn-landmark-first-premier-league-win-25-years-2026-09-19/",
+    "retrieved": "2026-09-20T20:57:00.166Z",
+    "hash": "ce015d044acf98571d08b1dbb84d7c9af88ab2bdf6302722d9da714fbd2f6dd9",
+    "chars": 55
+  },
+  {
+    "key": "P-468-2",
+    "id": "P-468",
+    "url": "https://www.wnba.com/watch/video/game-recap-golden-state-valkyries-82-portland-fire-66-09-18-2026",
+    "status": 200,
+    "urlFinal": "https://www.wnba.com/watch/video/game-recap-golden-state-valkyries-82-portland-fire-66-09-18-2026",
+    "retrieved": "2026-09-20T20:57:00.259Z",
+    "hash": "92cc25b60a954a5749bbe7a6cc587ff629c34640a53c55c4944d4c6b5a4cebf1",
+    "chars": 317
+  },
+  {
+    "key": "P-473-3",
+    "id": "P-473",
+    "url": "https://www.playmakerstats.com/live/2026-09-19-nottingham-forest-coventry-city/12253137",
+    "status": 403,
+    "urlFinal": "https://www.playmakerstats.com/live/2026-09-19-nottingham-forest-coventry-city/12253137",
+    "retrieved": "2026-09-20T20:57:00.436Z",
+    "hash": "9048a5585a587b456ceffbe589fee8f8c23483a786b0a96f4b52223841be5fc0",
+    "chars": 58
+  },
+  {
+    "key": "P-468-1",
+    "id": "P-468",
+    "url": "https://valkyries.wnba.com/news/gameday-recap-20260918",
+    "status": 200,
+    "urlFinal": "https://valkyries.wnba.com/news/gameday-recap-20260918",
+    "retrieved": "2026-09-20T20:57:00.792Z",
+    "hash": "bf28d43504e2100b5f856e2391210896e6403d0769a0c04c49838b92d63a7040",
+    "chars": 7523
+  },
+  {
+    "key": "P-474-1",
+    "id": "P-474",
+    "url": "https://www.mlb.com/scores/2026-09-19",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/scores/2026-09-19",
+    "retrieved": "2026-09-20T20:57:00.818Z",
+    "hash": "291c749fb0a11ccd9f80c4dd9bb27d7f15a6fbee98fb13ceb745564f1fd603c9",
+    "chars": 146
+  },
+  {
+    "key": "P-473-2",
+    "id": "P-473",
+    "url": "https://www.skysports.com/football/nottingham-forest-vs-coventry-city/report/559492",
+    "status": 200,
+    "urlFinal": "https://www.skysports.com/football/nottingham-forest-vs-coventry-city/report/559492",
+    "retrieved": "2026-09-20T20:57:00.833Z",
+    "hash": "cae17afadc08685c4d848780dd83d2c0412d29113481da5c50fe641921dbb716",
+    "chars": 15619
+  },
+  {
+    "key": "P-474-2",
+    "id": "P-474",
+    "url": "https://www.mlb.com/stories/game/824380",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/stories/game/824380",
+    "retrieved": "2026-09-20T20:57:01.122Z",
+    "hash": "d448e0acbba2196f39ecac73eb3baed77d2ace7087efbec6e6e4d785948d5c25",
+    "chars": 151
+  },
+  {
+    "key": "P-472-1",
+    "id": "P-472",
+    "url": "https://bluehens.com/sports/football/stats/2026/coastal-carolina/boxscore/35196",
+    "status": 200,
+    "urlFinal": "https://bluehens.com/sports/football/stats/2026/coastal-carolina/boxscore/35196",
+    "retrieved": "2026-09-20T20:57:01.461Z",
+    "hash": "2fd25a8594ca96a99e61e55721baba8149193e99b1395b600247293ba99a4019",
+    "chars": 44671
+  },
+  {
+    "key": "P-475-1",
+    "id": "P-475",
+    "url": "https://www.wnba.com/watch/video/game-recap-atlanta-dream-106-chicago-sky-81-09-19-2026",
+    "status": 200,
+    "urlFinal": "https://www.wnba.com/watch/video/game-recap-atlanta-dream-106-chicago-sky-81-09-19-2026",
+    "retrieved": "2026-09-20T20:57:01.463Z",
+    "hash": "7ca7e75ae51677da0ae001792634fc7a3c286acda4528a3c43c4536865fddb19",
+    "chars": 296
+  },
+  {
+    "key": "P-476-1",
+    "id": "P-476",
+    "url": "https://www.reuters.com/sports/baseball/angels-rally-ninth-take-down-twins-11th--flm-2026-09-20/",
+    "status": 401,
+    "urlFinal": "https://www.reuters.com/sports/baseball/angels-rally-ninth-take-down-twins-11th--flm-2026-09-20/",
+    "retrieved": "2026-09-20T20:57:01.671Z",
+    "hash": "19cdb4c554d25eed012542f2de3467a96a07b422c491abdd28901576e33741bb",
+    "chars": 55
+  },
+  {
+    "key": "P-473-4",
+    "id": "P-473",
+    "url": "https://ofstats.com/matches/view/nottingham-forest-coventry-city-2026-09-19",
+    "status": 200,
+    "urlFinal": "https://ofstats.com/matches/view/nottingham-forest-coventry-city-2026-09-19",
+    "retrieved": "2026-09-20T20:57:01.940Z",
+    "hash": "3f9439d0d2b3315d7eb8f4574a11fe3b06a6087127d7f1c86e5a84cb514fe03d",
+    "chars": 14432
+  },
+  {
+    "key": "P-474-3",
+    "id": "P-474",
+    "url": "https://www.athleticsnation.com/athletics-scores-and-standings/109853/as-fall-to-guardians-12-6",
+    "status": 200,
+    "urlFinal": "https://www.athleticsnation.com/athletics-scores-and-standings/109853/as-fall-to-guardians-12-6",
+    "retrieved": "2026-09-20T20:57:01.972Z",
+    "hash": "e545eb5d09f51a5eb09f1304a309d1c8f7e44204f55791ab27b2ed2489116848",
+    "chars": 8385
+  },
+  {
+    "key": "P-476-2",
+    "id": "P-476",
+    "url": "https://www.mlb.com/video/joe-ryan-strikes-out-five-x4706",
+    "status": 403,
+    "urlFinal": "https://www.mlb.com/video/joe-ryan-strikes-out-five-x4706",
+    "retrieved": "2026-09-20T20:57:02.074Z",
+    "hash": "12f8df81b399655719cd00ec21f2e905c90f42d1adb87c44f017db3b8b33a248",
+    "chars": 151
+  },
+  {
+    "key": "P-477-2",
+    "id": "P-477",
+    "url": "https://www.taipans.com/news/pinder-stars-but-taipans-fall-to-kings",
+    "status": 200,
+    "urlFinal": "https://www.taipans.com/news/pinder-stars-but-taipans-fall-to-kings",
+    "retrieved": "2026-09-20T20:57:02.783Z",
+    "hash": "b00a6c63179a989f920b47caab46ca66b49dfd4b43fd0e6caf212311b9d62147",
+    "chars": 7262
+  },
+  {
+    "key": "P-477-1",
+    "id": "P-477",
+    "url": "https://league.nbl.com.au/news/kings-open-title-defence-in-style",
+    "status": 200,
+    "urlFinal": "https://league.nbl.com.au/news/kings-open-title-defence-in-style",
+    "retrieved": "2026-09-20T20:57:03.092Z",
+    "hash": "d63497972da6ca202431203c5f780a7b2a0e97caabd8d1b28384afd2a9c2c93e",
+    "chars": 10201
+  },
+  {
+    "key": "P-475-2",
+    "id": "P-475",
+    "url": "https://dream.wnba.com/news/dream-dominate-in-final-regular-season-home-game",
+    "status": 200,
+    "urlFinal": "https://dream.wnba.com/news/dream-dominate-in-final-regular-season-home-game",
+    "retrieved": "2026-09-20T20:57:03.260Z",
+    "hash": "a3c1b4d9e2d0c8bb88e2e8933ed2408388212e87b0cab78687a78f7f2955e154",
+    "chars": 4346
+  },
+  {
+    "key": "P-456-2",
+    "id": "P-456",
+    "url": "https://www.getafecf.com/partidos/temporada-2026-2027-laliga-ea-sports-6-real-betis-vs-getafe-cf-2979",
+    "status": 200,
+    "urlFinal": "https://www.getafecf.com/partidos/temporada-2026-2027-laliga-ea-sports-6-real-betis-vs-getafe-cf-2979",
+    "retrieved": "2026-09-20T20:57:03.538Z",
+    "hash": "0acd6fee8d60ebcbbe70983f69b283ab7c397ba05f7245f51fa09ba1842e6852",
+    "chars": 23284
+  },
+  {
+    "key": "P-477-3",
+    "id": "P-477",
+    "url": "https://www.austadiums.com/sport/event/34482",
+    "status": 200,
+    "urlFinal": "https://www.austadiums.com/sport/event/34482",
+    "retrieved": "2026-09-20T20:57:03.833Z",
+    "hash": "69670fe7f898dc5a429115868f6f202e91ad28778a69568fb7dd9f293fe78a4a",
+    "chars": 5889
+  },
+  {
+    "key": "P-479-1",
+    "id": "P-479",
+    "url": "https://www.cricketworld.com/cricket/edinburgh-castle-rockers-vs-belfast-wolves/match/scorecard/98355",
+    "status": 403,
+    "urlFinal": "https://www.cricketworld.com/cricket/edinburgh-castle-rockers-vs-belfast-wolves/match/scorecard/98355",
+    "retrieved": "2026-09-20T20:57:03.896Z",
+    "hash": "e122c84e80fbf2bcf40c3acaefad53fec68f6e1b5bfcc5bdbce62aaa18ee7258",
+    "chars": 58
+  },
+  {
+    "key": "P-478-2",
+    "id": "P-478",
+    "url": "https://www.aftonbladet.se/senastenytt/ttsport/sport/a/JOdbOX/mardrom-for-djurgarden-jattetavla-och-forlust",
+    "status": 200,
+    "urlFinal": "https://www.aftonbladet.se/senastenytt/ttsport/sport/a/JOdbOX/mardrom-for-djurgarden-jattetavla-och-forlust",
+    "retrieved": "2026-09-20T20:57:04.297Z",
+    "hash": "8e3154c7304bc2293aae44e5f9eb31228701294438b335867bc241576e3feda8",
+    "chars": 3681
+  },
+  {
+    "key": "P-479-3",
+    "id": "P-479",
+    "url": "https://www.mykhel.com/cricket/edinburgh-castle-rockers-vs-belfast-wolves-2026-final-scorecard-m273640/",
+    "status": 403,
+    "urlFinal": "https://www.mykhel.com/cricket/edinburgh-castle-rockers-vs-belfast-wolves-2026-final-scorecard-m273640/",
+    "retrieved": "2026-09-20T20:57:04.329Z",
+    "hash": "820451b244e3cf81cbd4988dd31f34c0d98df23ae62cebe9c5a06f0043de6bb6",
+    "chars": 782
+  },
+  {
+    "key": "P-478-1",
+    "id": "P-478",
+    "url": "https://ipv6.elfsborg.se/2026/09/20/stark-trepoangare-borta-mot-djurgarden/",
+    "status": 200,
+    "urlFinal": "https://ipv6.elfsborg.se/2026/09/20/stark-trepoangare-borta-mot-djurgarden/",
+    "retrieved": "2026-09-20T20:57:04.366Z",
+    "hash": "31cf7777a85b28b31f7686aa9663fea87bf767782337118c4f3b9aad35cefe51",
+    "chars": 7571
+  },
+  {
+    "key": "P-472-2",
+    "id": "P-472",
+    "url": "https://www.cbssports.com/college-football/gametracker/recap/NCAAF_20260919_CSTCAR%40DE/",
+    "status": 200,
+    "urlFinal": "https://www.cbssports.com/college-football/gametracker/recap/NCAAF_20260919_CSTCAR%40DE/",
+    "retrieved": "2026-09-20T20:57:04.678Z",
+    "hash": "56612f09c7370ed4030b8f33e1d9b883d0e4b3b5fd9b894b857aeffc388cb27b",
+    "chars": 46718
+  },
+  {
+    "key": "P-479-2",
+    "id": "P-479",
+    "url": "https://ca.sports.yahoo.com/news/edinburgh-castle-rockers-beat-belfast-174958677.html",
+    "status": 200,
+    "urlFinal": "https://ca.sports.yahoo.com/news/edinburgh-castle-rockers-beat-belfast-174958677.html",
+    "retrieved": "2026-09-20T20:57:05.184Z",
+    "hash": "5ddc237f74a62942936d096d2860157f41a06ffe340445c3fbc75e43aaad0443",
+    "chars": 11706
+  },
+  {
+    "key": "P-480-1",
+    "id": "P-480",
+    "url": "https://www.eurosport.nl/voetbal/3f-superliga/2026-2027/live-viborg-ff-fc-nordsjaelland_mtc21873592/live.shtml",
+    "status": 200,
+    "urlFinal": "https://www.eurosport.nl/geoblocking.shtml",
+    "retrieved": "2026-09-20T20:57:05.372Z",
+    "hash": "74fbde08fdb0afb4ca8984fd92b6f1fc792d03b654f691b914ca14eabc36f37e",
+    "chars": 83
+  },
+  {
+    "key": "P-453-extra67",
+    "id": "P-453",
+    "url": "https://fieldlevelmedia.com/mlb/pirates-turn-big-second-inning-into-7-4-win-over-brewers/",
+    "status": 200,
+    "urlFinal": "https://fieldlevelmedia.com/mlb/pirates-turn-big-second-inning-into-7-4-win-over-brewers/",
+    "retrieved": "2026-09-20T20:57:05.538Z",
+    "hash": "0394205062f539d541a6f9359917f9941d121fe3270f2b846b488eab31e3fcc0",
+    "chars": 5255
+  },
+  {
+    "key": "P-480-2",
+    "id": "P-480",
+    "url": "https://www.skysports.com/football/viborg-ff-vs-fc-nordsjaelland/6482622979768878232",
+    "status": 200,
+    "urlFinal": "https://www.skysports.com/football/viborg-ff-vs-fc-nordsjaelland/6482622979768878232",
+    "retrieved": "2026-09-20T20:57:05.647Z",
+    "hash": "ed19ef9c1ca0ab9ef63709a172f1c51c633e8c8112632fa62d9d9e095b463797",
+    "chars": 8019
+  },
+  {
+    "key": "P-481-1",
+    "id": "P-481",
+    "url": "https://cadenaser.com/nacional/2026/09/20/villarreal-levante-resumen-resultado-y-goles-del-partido-de-la-jornada-7-de-laliga-ea-sports-cadena-ser/",
+    "status": 200,
+    "urlFinal": "https://cadenaser.com/nacional/2026/09/20/villarreal-levante-resumen-resultado-y-goles-del-partido-de-la-jornada-7-de-laliga-ea-sports-cadena-ser/",
+    "retrieved": "2026-09-20T20:57:05.919Z",
+    "hash": "784daaf63d302786c377c32553566a4603d7907e756686cdff2fd6bd71a64476",
+    "chars": 8176
+  },
+  {
+    "key": "P-455-extra69",
+    "id": "P-455",
+    "url": "https://apnews.com/article/3c906e40854ceb68cb9ec1670ad56153",
+    "status": 403,
+    "urlFinal": "https://apnews.com/article/3c906e40854ceb68cb9ec1670ad56153",
+    "retrieved": "2026-09-20T20:57:05.976Z",
+    "hash": "4c017de52c4bf00b0f183d6bc3e35b91809ded3706583d3d397a27a4a1d512c4",
+    "chars": 58
+  },
+  {
+    "key": "P-481-2",
+    "id": "P-481",
+    "url": "https://www.europapress.es/deportes/estadisticas-deportivas/noticia-villareal-levante-resumen-goles-resultado-partido-hoy-20260920202832.html",
+    "status": 200,
+    "urlFinal": "https://www.europapress.es/deportes/estadisticas-deportivas/noticia-villareal-levante-resumen-goles-resultado-partido-hoy-20260920202832.html",
+    "retrieved": "2026-09-20T20:57:05.992Z",
+    "hash": "4b6d2e5c4afa7996d03a435973dd0054a2e895d5f5118d9f3174ad04fa1a377d",
+    "chars": 8488
+  },
+  {
+    "key": "P-453-extra68",
+    "id": "P-453",
+    "url": "https://www.statmuse.com/mlb/game/9-17-2026-mil-at-pit-235612",
+    "status": 200,
+    "urlFinal": "https://www.statmuse.com/mlb/game/9-17-2026-mil-at-pit-235612",
+    "retrieved": "2026-09-20T20:57:06.023Z",
+    "hash": "1b6dce0596888ca471c6cbec9118362bd22485a03eaf34edc189e28d1dbd24a6",
+    "chars": 29073
+  },
+  {
+    "key": "P-471-extra74",
+    "id": "P-471",
+    "url": "https://www.nbl.com.au/news/sixers-gleeson-era-starts-impressively",
+    "status": 200,
+    "urlFinal": "https://www.nbl.com.au/news/sixers-gleeson-era-starts-impressively",
+    "retrieved": "2026-09-20T20:57:07.135Z",
+    "hash": "abb4c895e08a901da3365d0be663551b5654bbb55c9433e12f90c1fba1a97f1a",
+    "chars": 10461
+  },
+  {
+    "key": "P-477-extra76",
+    "id": "P-477",
+    "url": "https://www.sydneykings.com/news/kings-overpower-taipans-in-round-1",
+    "status": 200,
+    "urlFinal": "https://www.sydneykings.com/news/kings-overpower-taipans-in-round-1",
+    "retrieved": "2026-09-20T20:57:07.282Z",
+    "hash": "a56ef82215373db6386d51b0bf62f86f4f14ded0b9440036decf259bedc28ba5",
+    "chars": 8932
+  },
+  {
+    "key": "P-470-extra73",
+    "id": "P-470",
+    "url": "https://npb.jp/bis/eng/2026/games/s2026091901803.html",
+    "status": 200,
+    "urlFinal": "https://npb.jp/bis/eng/2026/games/s2026091901803.html",
+    "retrieved": "2026-09-20T20:57:07.356Z",
+    "hash": "d83f652674bdd17ec7084834e8cd4ab49704c1230b87d525cedcee301a687638",
+    "chars": 3448
+  },
+  {
+    "key": "P-469-extra72",
+    "id": "P-469",
+    "url": "https://www.theguardian.com/sport/live/2026/sep/19/afl-hawthorn-vs-brisbane-live-preliminary-final-hawks-v-lions-score-game-today",
+    "status": 200,
+    "urlFinal": "https://www.theguardian.com/sport/live/2026/sep/19/afl-hawthorn-vs-brisbane-live-preliminary-final-hawks-v-lions-score-game-today",
+    "retrieved": "2026-09-20T20:57:07.484Z",
+    "hash": "725a70eed7ee78433ce11a4c70f325d0d2bfc75e9112750b0e266700cb2f5828",
+    "chars": 17904
+  },
+  {
+    "key": "P-459-extra70",
+    "id": "P-459",
+    "url": "https://www.abc.net.au/news/2026-09-18/afl-prelim-final-sydney-swans-fremantle-dockers-live-blog/107164694",
+    "status": 200,
+    "urlFinal": "https://www.abc.net.au/news/2026-09-18/afl-prelim-final-sydney-swans-fremantle-dockers-live-blog/107164694",
+    "retrieved": "2026-09-20T20:57:07.607Z",
+    "hash": "e23989ed803de8d210a1722ae2d41ba148559d154eef6ecd8256d41e20b51096",
+    "chars": 31004
+  },
+  {
+    "key": "P-475-extra75",
+    "id": "P-475",
+    "url": "https://www.ajc.com/sports/2026/09/atlanta-dream-rout-chicago-sky-106-81-with-balanced-scoring-attack/",
+    "status": 200,
+    "urlFinal": "https://www.ajc.com/sports/2026/09/atlanta-dream-rout-chicago-sky-106-81-with-balanced-scoring-attack/",
+    "retrieved": "2026-09-20T20:57:07.937Z",
+    "hash": "28c8c1222e564f7748a5ef7f72872674094ff559b881e3301c89adbe4e118869",
+    "chars": 7052
+  },
+  {
+    "key": "P-469-extra71",
+    "id": "P-469",
+    "url": "https://www.abc.net.au/news/2026-09-19/afl-prelim-final-hawthorn-hawks-brisbane-lions-live-blog/107165006",
+    "status": 200,
+    "urlFinal": "https://www.abc.net.au/news/2026-09-19/afl-prelim-final-hawthorn-hawks-brisbane-lions-live-blog/107165006",
+    "retrieved": "2026-09-20T20:57:07.997Z",
+    "hash": "f389a002412104349c3c6594025db38ae7766d52a19cd175ffd517041ea8abbd",
+    "chars": 33280
+  },
+  {
+    "key": "P-466-extra77",
+    "id": "P-466",
+    "url": "https://fublo.ar/partido/racing-club-vs-sarmiento/2026-09-18",
+    "status": 200,
+    "urlFinal": "https://fublo.ar/partido/racing-club-vs-sarmiento/2026-09-18",
+    "retrieved": "2026-09-20T20:57:09.027Z",
+    "hash": "2043b0c7b5fabfa014377043d1a574a9d32df4241a0e08c325c73b760b55056d",
+    "chars": 5261
+  },
+  {
+    "key": "P-474-4",
+    "id": "P-474",
+    "url": "https://fieldlevelmedia.com/mlb/angel-martinez-homers-twice-guardians-dominate-athletics/",
+    "status": 200,
+    "urlFinal": "https://fieldlevelmedia.com/mlb/angel-martinez-homers-twice-guardians-dominate-athletics/",
+    "retrieved": "2026-09-20T20:57:10.489Z",
+    "hash": "cf6ba2719c7c24b74bf8a0aed3fdade0a023345c6c01fbf992e41b0ce6c0b832",
+    "chars": 5407
+  }
+]

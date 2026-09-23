@@ -1,0 +1,90 @@
+# Probability scoring and validation
+
+Version: **SCV-2026.09.19-v2**. Operational authority for scoring, conditioning and evaluation. Historical cards retain their issued probabilities and method versions. All existing combined logs remain **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**.
+
+<!-- THREE-SOURCE-TIME-GATE-2026-09-19-CR4 -->
+## Universal verification prerequisite — CR-2026.09.19-4
+
+Do not score, settle or retrospectively evaluate an event until its identity, date/time and terminal state pass the universal verification gate: **at least three independent reliable source lineages**, timezone-aware venue-local → `Australia/Melbourne` conversion, and three-source explicit terminal-state confirmation for settlement.
+
+A score without a final marker is not enough. A credible current `LIVE/IN PROGRESS` source or material source conflict leaves the record unresolved. Search snippets/generated summaries do not count as settlement evidence. Historical cards remain attached to the method/control version under which they were issued.
+
+## 1. Define the event before its probability
+
+Record event cluster, target ID, competition, period, endpoint, activation, operator action/void rules, cutoff, issue time, information-availability time, method and control-set hash. Research outcome and operator settlement are separate fields. Evaluate activation first; NO ACTION, VOID, censored and unresolved records are not silently converted to losses or decisive trials.
+
+For an active integer total L, derive u=P(T<L), j=P(T=L), o=P(T>L) from one distribution; u+j+o=1. Over has W/P/L=(o,j,u); Under has (u,j,o). Half-lines have j=0 on integer support. If these masses are conditional on action, label that conditioning; separately record action probability when estimated. Unknown action probability stays unknown. Quarter-lines retain their full settlement categories or equal-stake child contracts; never flatten a half-win into WIN.
+
+Rank by the frozen objective, normally unconditional probability of winning the active contract. A push is not a win, so lower ranking due to push mass can be correct. Do not replace this objective with non-push direction without saying so.
+
+## 2. Proper scores
+
+| Target / diagnostic | Definition | Denominator |
+|---|---|---|
+| Complete W/P/L Brier, primary for push-capable contracts | 0.5 × sum over W,P,L of (p_category − one_hot_outcome)^2; range 0–1 | All action-settled W/P/L outcomes, including pushes |
+| Complete categorical log loss | −log(probability assigned to the realised category); zero probability gives infinity | Same complete outcomes |
+| Decisive-direction binary Brier | q=P(W)/(1−P(P)); score (q−I(W))^2 | WIN/LOSS only; undefined if P(P)=1 |
+| Win versus non-win diagnostic | (P(W)−I(W))^2 | Include pushes as non-wins; this does not call a push a ticket loss |
+| Ordinary binary Brier | (p−I(event))^2 | Exactly two exhaustive outcomes with identical action terms |
+| Integer-distribution RPS / CRPS | Sum over integer k of (F(k)−I(y≤k))^2, in target units | One distribution per game and endpoint |
+
+Never compare scores with different category scaling, conditioning, action filters or populations. Legacy WIN/LOSS Brier using unconditional win probabilities is retained only as LEGACY_MIXED_DIAGNOSTIC; it is not the corrected decisive score. Do not invent missing push masses to repair old rows. Recompute new diagnostics only where the entire frozen vector survives, with a separate scoring-version record.
+
+P-443 Over 8: frozen W/P/L=(0.45,0.13,0.42), hence decisive q=0.45/0.87=0.5172413793. The eight recent MLB preferred totals have legacy Brier 0.2591, decisive Brier 0.245720512 and half-scaled categorical Brier 0.259225. These are different measurements of unchanged forecasts, not model improvement.
+
+## 3. One target decision, one event cluster
+
+Keep every row for settlement and coherence. Exact complementary binary rows have identical Brier errors: count the frozen preferred side once in a decision score. An integer pair is one three-category target, including pushes. Label FORCED_PAIR and FREE separately; select highest-ranked scoring total using issue-time ranks before looking at outcomes. Record every analyst-considered line and the fixed selection rule, including rejected lines.
+
+**Top over/under review trigger (user directive, 2026-09-19).** Identify, from issue-time ranks alone and before any outcome is known, the card's **highest-ranked over/under target** and its frozen preferred side. If that side does not win — including when it pushes — the card receives the enhanced failure review defined in `METHOD.md` §7, on the same terms as a Rank #1 loss. Record the trigger as `TOP_OU_REVIEW` beside the Rank-#1 flag so the two are separately countable. This is a retrospective-scrutiny rule and changes no probability, rank or selection rule; in particular it must not be satisfied by hedging a pair, by declining to rank a total, or by shading a stated probability.
+
+Report row, distinct-target decision and event counts separately. Give each event equal weight after averaging its prespecified target scores. Preserve pregame/live and endpoint distinctions and cluster resamples by event, with schedule-block sensitivity when relevant. Do not add family-specific retrospective tallies that used different selection rules.
+
+## 4. Baselines, development and prospective evidence
+
+Use a competition/endpoint/horizon-specific empirical baseline trained only on earlier games, scored on exactly the same events and thresholds. A binary p=0.5 reference is an optional diagnostic, not the main comparator. Match target difficulty using the frozen baseline probability or quantile, sport, endpoint and line band; stated-p bands and absolute normalised distance alone are insufficient.
+
+Freeze event universe, exclusion reasons, TRAIN/TUNE/CAL/TEST dates, candidate settings, features, thresholds, metrics, uncertainty method and decision rule before evaluation. Fit preprocessing and recency weights within training folds. Group all views of one event. Calibration is optional if unsupported, but any fitted calibrator requires its own later disjoint CAL block and a coherent final distribution. Open an untouched TEST once and retain unsuccessful results; changes require a new test population.
+
+Report paired event-level score differences, uncertainty, count calibration, interval coverage and width, endpoint support and important slices. Lower Brier alone does not prove improved calibration. The 25/50-card and 150-game milestones schedule reviews, not automatic promotion. Retain the simpler candidate when evidence is inconclusive. No recalibration from the current mixed log.
+
+A prospective trial requires a frozen manifest timestamp, forecast timestamp before the event, outcome-availability timestamp after forecast, and matching method/control version. Import date cannot substitute. C-OU-GEOMETRY currently has **zero verified prospective cards**: P-425/P-426/P-427/P-429 were issued on 15 September before its 16 September manifest; the rest lack the complete verified manifest-time join. Keep all existing cohorts as historical development observations. A locally generated hash is content evidence, not independent timestamp proof.
+
+## 5. Distribution construction and uncertainty
+
+One joint event distribution supplies team totals, combined totals, margins, winner, phase relationships and joint success/failure queries. Scenario states must be exhaustive and disjoint; otherwise provide joint bounds with JOINT_UNQUANTIFIED. A modal or representative score illustrates a state but is not the full distribution.
+
+Derive exact CDF/PMF probabilities at each line. Cross-family absolute centre-to-line distance does not order probabilities. Specify mean versus median and width definition/coverage. Integrate uncertainty through stated priors or weighted scenarios; hierarchical shrinkage and asymmetric mixtures may change both mean and variance. No unexplained signed lean, zero-centre shrinkage, universal variance floor, or row-level numerical cap after deriving a distribution. Evidence-grade caps such as LOW remain separate from probabilities. If a different subjective distribution replaces a fitted calculation, label it and regenerate every dependent row.
+
+L5/L10/L15/L20 and H2H windows remain required descriptive retrievals where available; record missingness and continuity. They overlap and are not independent replications. Monotonic windows and dispersion of their averages do not establish a trend or noise. Any inferred recency effect requires opponent/regime context and a declared estimation method tested in time order.
+
+Review realised tails on both successful and unsuccessful cards. One named failure does not prove its mass was too low. C-RUN-CENTRE-BIAS stays development-only: separate leagues, actual means, medians and informal corridor midpoints before estimating residual bias. No generic Over/Under tilt, automatic phase preference or fixed shrink factor is promoted.
+
+## 6. Period bounds and model admission
+
+For a whole-game count C and regulation count R, 0≤R≤C alone cannot prove R exceeds an Over threshold. A bounded grade requires a documented lower/upper bound that gives the same settlement for every admissible split. P-255/P-256 regulation corners are UNRESOLVED_PERIOD until a valid split or bound is recovered. Keep their original predictions and append the correction.
+
+Source admission is per field, target and cutoff. A source's general CANDIDATE label does not prove point-in-time feature fitness. Historical current feeds can supply revised labels for a development backtest but cannot prove what a past forecaster knew. No source access claim, fitted build, test result, calibrator or prospective observation exists merely because its design is written down.
+
+Publication requires source/data integrity, held-out comparison, calibrated or explicitly assessed probability reliability, support/coherence and critical-slice checks, followed by qualifying prospective shadow evidence. M0/M1 market-feature models remain RETIRED. The authorized numerical implementation and its exact status live in NUMERICAL_PROGRAM.md and H0_DATASET_CARD.md.
+
+<!-- DEEP-RESEARCH-IMPLEMENTATION-2026-09-19-V42 -->
+## 7. Deep-research validation standard for totals and lines
+
+Future numerical builds are judged on the **underlying predictive distribution**, not on whether one chosen side happened to win.
+
+Primary scorecard by exact target scope:
+
+- full distribution: CRPS/RPS and log score/negative log likelihood where mathematically valid;
+- point summaries: RMSE **and** MAE for expected total/margin/team score;
+- push-capable contracts: complete W/P/L Brier and categorical log loss;
+- uncertainty: central prediction-interval coverage and width, plus PIT/reliability diagnostics where appropriate;
+- probability reliability: calibration intercept/slope and reliability curves with sample uncertainty;
+- ranking/hit rate: NDCG/Hit@k/directional accuracy only as secondary diagnostics.
+
+Validation is chronological and event-grouped. Report paired event-level differences between candidates and baselines with block/event bootstrap uncertainty; do not treat multiple lines from one game as independent trials. Publish results by sport, competition, endpoint, line/quantile difficulty and data-quality/source regime.
+
+A flexible model is promoted only if it improves the frozen proper-score objective against the simpler baseline on the untouched chronological TEST **without material calibration/support failure in important slices**. If uncertainty overlaps no-change or critical slices deteriorate, retain the simpler champion and accrue evidence.
+
+No change in this document constitutes an accuracy gain. Improvement must be demonstrated on data not used to design the change and then survive prospective shadow operation.
+

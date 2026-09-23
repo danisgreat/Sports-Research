@@ -1,0 +1,92 @@
+[
+  {
+    "id": 464,
+    "key": "P464-d2",
+    "url": "https://www.masnsports.com/blog/entry/orioles-rally-early-and-late-but-cant-hold-off-brewers-in-6-5-10-inning-loss/",
+    "status": 200,
+    "urlFinal": "https://www.masnsports.com/blog/entry/orioles-rally-early-and-late-but-cant-hold-off-brewers-in-6-5-10-inning-loss/",
+    "retrieved": "2026-09-20T21:07:36.616Z",
+    "hash": "74ede9a43717e5b232752f55d7933311620bbc86e8ab8ea2b5469443e83e438f",
+    "chars": 10756
+  },
+  {
+    "id": 466,
+    "key": "P466-d4",
+    "url": "https://tn.com.ar/deportes/futbol/2026/09/18/racing-vs-sarmiento-en-vivo-por-la-fase-de-grupos-de-la-liga-profesional-hora-donde-ver-y-formaciones/",
+    "status": 200,
+    "urlFinal": "https://tn.com.ar/deportes/futbol/2026/09/18/racing-vs-sarmiento-en-vivo-por-la-fase-de-grupos-de-la-liga-profesional-hora-donde-ver-y-formaciones/",
+    "retrieved": "2026-09-20T21:07:37.575Z",
+    "hash": "d7dea8a0573720c871ff9e753ad377a30ba02e82928ba13e32aaad83752d81eb",
+    "chars": 17591
+  },
+  {
+    "id": 460,
+    "key": "P460-d1",
+    "url": "https://cpbl.com.tw/xmdoc/cont?sid=0Q261822134058228147",
+    "status": 200,
+    "urlFinal": "https://cpbl.com.tw/xmdoc/cont?sid=0Q261822134058228147",
+    "retrieved": "2026-09-20T21:07:37.663Z",
+    "hash": "6f828c0438d0e57619383870dc75c999fe15249c7278705fd2b144c66b36cbf1",
+    "chars": 1504
+  },
+  {
+    "id": 468,
+    "key": "P468-d7",
+    "url": "https://sportsradioservice.com/2026/09/18/valkyries-back-in-action-get-their-30th-win-of-the-season-on-portland-fire-82-66/",
+    "status": 200,
+    "urlFinal": "https://sportsradioservice.com/2026/09/18/valkyries-back-in-action-get-their-30th-win-of-the-season-on-portland-fire-82-66/",
+    "retrieved": "2026-09-20T21:07:37.705Z",
+    "hash": "b5c8b2c6baf1d23b55d64075cb2445c9382d3ea1d57e0ba08baef4e9fb615821",
+    "chars": 12729
+  },
+  {
+    "id": 468,
+    "key": "P468-d8",
+    "url": "https://sfbayca.com/2026/09/19/valkyries-win-lynx-lose-heck-yeah-the-no-1-seed-is-a-race/",
+    "status": 200,
+    "urlFinal": "https://sfbayca.com/2026/09/19/valkyries-win-lynx-lose-heck-yeah-the-no-1-seed-is-a-race/",
+    "retrieved": "2026-09-20T21:07:37.780Z",
+    "hash": "ca8a05c49b7fc644ff72c3805bb054604d9043eb59ff5702705a3239b83fb573",
+    "chars": 8197
+  },
+  {
+    "id": 466,
+    "key": "P466-d5",
+    "url": "https://www.nuevarioja.com.ar/deportes/racing-rompio-el-maleficio-volvio-a-ganar-por-el-torneo-y-tiene-esperanza-de-playoffs.htm",
+    "status": 200,
+    "urlFinal": "https://www.nuevarioja.com.ar/deportes/racing-rompio-el-maleficio-volvio-a-ganar-por-el-torneo-y-tiene-esperanza-de-playoffs.htm",
+    "retrieved": "2026-09-20T21:07:38.120Z",
+    "hash": "19f188ec28f713bb6edc632b7a75934bf8821d2ca726065042c699012330d6a6",
+    "chars": 5110
+  },
+  {
+    "id": 466,
+    "key": "P466-d3",
+    "url": "https://www.goleamos.com/index.php?idp=80519&pagina=ficha",
+    "status": 200,
+    "urlFinal": "https://www.goleamos.com/index.php?idp=80519&pagina=ficha",
+    "retrieved": "2026-09-20T21:07:38.219Z",
+    "hash": "e94194469c8b56f4b61086d6c8ce19d2c8596f0f3ff551705ca966a91372bfdb",
+    "chars": 6448
+  },
+  {
+    "id": 454,
+    "key": "P454-d0",
+    "url": "https://campo.dk/2026/09/17/p-jublede-mod-broendby-foelelserne-tog-over/",
+    "status": 200,
+    "urlFinal": "https://campo.dk/2026/09/17/p-jublede-mod-broendby-foelelserne-tog-over/",
+    "retrieved": "2026-09-20T21:07:38.349Z",
+    "hash": "5430b8e5d2f693d03a5c0f34afd1cb46da3923a9b4d03b4167bb4888b8637d09",
+    "chars": 5365
+  },
+  {
+    "id": 468,
+    "key": "P468-d6",
+    "url": "https://www.valkyriesbeat.com/p/valkyries-insider-valkyries-get-big-night-from-bench-in-return-from-break",
+    "status": 200,
+    "urlFinal": "https://www.valkyriesbeat.com/p/valkyries-insider-valkyries-get-big-night-from-bench-in-return-from-break",
+    "retrieved": "2026-09-20T21:07:38.934Z",
+    "hash": "154e2a185822c70b623297fc22e45b03f4769b08c15cd9a3f766050e81d2b958",
+    "chars": 2358
+  }
+]

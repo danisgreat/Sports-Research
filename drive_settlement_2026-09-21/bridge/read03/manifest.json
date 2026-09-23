@@ -1,0 +1,59 @@
+{
+  "bridgeVersion": "3.6",
+  "kind": "google-docs-trusted-read",
+  "status": "complete",
+  "outputDir": "/c/Users/danie/Desktop/Sports Research/drive_settlement_2026-09-21/bridge/read03",
+  "target": {
+    "documentId": "1Q-LxpgTlFIzf5Lkl3ZQYyKkyLTrlV_pdN-ASmABa8jQ",
+    "title": "PREDICTION_MINI_RUNNING_LOG_P474_ONWARD.md",
+    "revisionId": "ANLCKQkgHYtfhwtxQqtVUqyBrT2MoGj66ptmYph2rpEe1Xr0EYsXkQYDXDCDK_3587wNi_VzYqX1BrWHo6Y1ggU4TxO_BX_AYD1bWieFvN0",
+    "documentUrl": "https://docs.google.com/document/d/1Q-LxpgTlFIzf5Lkl3ZQYyKkyLTrlV_pdN-ASmABa8jQ",
+    "selectedTabId": null
+  },
+  "dropdownMetadata": {
+    "status": "unavailable",
+    "resolvedTool": null,
+    "authoritative": false,
+    "count": 0
+  },
+  "controlAwareness": {
+    "hasProtectedControls": false,
+    "authoritativeDropdownCount": 0,
+    "opaqueControlCount": 0,
+    "affectedParagraphCount": 0,
+    "nativeElementCounts": {
+      "dateElement": 1
+    },
+    "preservationRequired": false,
+    "recommendedBehavior": "No protected controls were detected in the scanned scope."
+  },
+  "warnings": [],
+  "files": {
+    "document_result": {
+      "path": "/c/Users/danie/Desktop/Sports Research/drive_settlement_2026-09-21/bridge/read03/document-result.json",
+      "bytes": 1410794,
+      "sha256": "acd1b52f33cf043a1b7f2b84b51777be526cfb9fd9805d7360591a32177b103a"
+    },
+    "control_inventory": {
+      "path": "/c/Users/danie/Desktop/Sports Research/drive_settlement_2026-09-21/bridge/read03/control-inventory.json",
+      "bytes": 1838,
+      "sha256": "1432826efaf8fea9e3f33c13c6744c4fa1c0dfb82fd012a824bc482b7ec8e41d"
+    },
+    "document_outline": {
+      "path": "/c/Users/danie/Desktop/Sports Research/drive_settlement_2026-09-21/bridge/read03/document-outline.json",
+      "bytes": 982116,
+      "sha256": "6d3b37719026bd219909967d571f34568d2141bf626a9363ed7727359986a802"
+    },
+    "document_text": {
+      "path": "/c/Users/danie/Desktop/Sports Research/drive_settlement_2026-09-21/bridge/read03/document-text.md",
+      "bytes": 230483,
+      "sha256": "21c2b6de42525afc6b92a6df145ac46263028a632f8a1a011f745e9200bfd36a"
+    },
+    "receipt": {
+      "path": "/c/Users/danie/Desktop/Sports Research/drive_settlement_2026-09-21/bridge/read03/receipt.json",
+      "bytes": 1006,
+      "sha256": "9d03ca520dd800ba4362b4b532d16120eacdebad034373a2b84a9478bf99db99"
+    }
+  },
+  "error": null
+}

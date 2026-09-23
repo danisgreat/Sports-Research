@@ -1,0 +1,138 @@
+[
+  {
+    "id": 458,
+    "key": "P458-b1",
+    "url": "https://www.nikkansports.com/baseball/news/202609180001757.html",
+    "status": 200,
+    "urlFinal": "https://www.nikkansports.com/baseball/news/202609180001757.html",
+    "retrieved": "2026-09-20T21:04:00.028Z",
+    "hash": "271ca828be20b1fa5a264c814cbd9f71829b152df010d151ce52fbbc94be7e1e",
+    "chars": 8254
+  },
+  {
+    "id": 461,
+    "key": "P461-b3",
+    "url": "https://www.tennismajors.com/matches/wta/bbva-open-internacional-de-valencia/clara-burel-vs-guiomar-maristany-zuleta-de-reales-2",
+    "status": 200,
+    "urlFinal": "https://www.tennismajors.com/matches/wta/bbva-open-internacional-de-valencia/clara-burel-vs-guiomar-maristany-zuleta-de-reales-2",
+    "retrieved": "2026-09-20T21:04:00.123Z",
+    "hash": "f3da82713e70802a8d6d8bb508710c829c09cb8184248c72968d652f617ade5b",
+    "chars": 3149
+  },
+  {
+    "id": 458,
+    "key": "P458-b0",
+    "url": "https://baseball.yahoo.co.jp/npb/game/2021039428/top",
+    "status": 200,
+    "urlFinal": "https://baseball.yahoo.co.jp/npb/game/2021039428/top",
+    "retrieved": "2026-09-20T21:04:00.467Z",
+    "hash": "a3bf5477cfb7e02b5b9e732513bfc39159d74a5fe393ad1530f39d468f59c319",
+    "chars": 5077
+  },
+  {
+    "id": 459,
+    "key": "P459-b2",
+    "url": "https://www.theguardian.com/sport/2026/sep/18/afl-finals-sydney-swans-fremantle-dockers-preliminary-final-report",
+    "status": 200,
+    "urlFinal": "https://www.theguardian.com/sport/2026/sep/18/afl-finals-sydney-swans-fremantle-dockers-preliminary-final-report",
+    "retrieved": "2026-09-20T21:04:00.478Z",
+    "hash": "9be482d7b8ae8696d38862f0f2d263a405c9589ba52844d84025f3ab399e0307",
+    "chars": 9014
+  },
+  {
+    "id": 463,
+    "key": "P463-b4",
+    "url": "https://www.cbsnews.com/chicago/news/jose-trevino-reds-vs-cubs-game-recap-sept-18-2026/",
+    "status": 200,
+    "urlFinal": "https://www.cbsnews.com/chicago/news/jose-trevino-reds-vs-cubs-game-recap-sept-18-2026/",
+    "retrieved": "2026-09-20T21:04:00.671Z",
+    "hash": "3f073ed755526fab91325b0640ce627034fca1d649de169b5b222b61f29dd4d8",
+    "chars": 4144
+  },
+  {
+    "id": 464,
+    "key": "P464-b5",
+    "url": "https://www.foxsports.com/articles/mlb/chourios-homer-and-frelicks-rbi-single-in-10th-carry-brewers-past-orioles-65",
+    "status": 200,
+    "urlFinal": "https://www.foxsports.com/articles/mlb/chourios-homer-and-frelicks-rbi-single-in-10th-carry-brewers-past-orioles-65",
+    "retrieved": "2026-09-20T21:04:01.156Z",
+    "hash": "304af896edd6f002419e5ba8cb21da667ed84eddf6642db7b9db0c44b1bd159d",
+    "chars": 5669
+  },
+  {
+    "id": 470,
+    "key": "P470-b7",
+    "url": "https://news.mynavi.jp/article/20260919-4836739/",
+    "status": 200,
+    "urlFinal": "https://news.mynavi.jp/article/20260919-4836739/",
+    "retrieved": "2026-09-20T21:04:01.196Z",
+    "hash": "3af001ec12c95ec91b482bbc1081aa919a3768b3a4a96c143003e8735f73fe23",
+    "chars": 7703
+  },
+  {
+    "id": 476,
+    "key": "P476-b12",
+    "url": "https://apnews.news.racing.cbssports.com/mlb/gametracker/recap/MLB_20260919_MIN%40LAA/",
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "id": 470,
+    "key": "P470-b9",
+    "url": "https://news.livedoor.com/article/detail/32370297/",
+    "status": 200,
+    "urlFinal": "https://news.livedoor.com/article/detail/32370297/",
+    "retrieved": "2026-09-20T21:04:01.498Z",
+    "hash": "78e03ba754966bf083fcc249986369e70f28ad1b7a3af44df0be9fbfa2cb5e72",
+    "chars": 11161
+  },
+  {
+    "id": 470,
+    "key": "P470-b8",
+    "url": "https://news.livedoor.com/article/detail/32370392/",
+    "status": 200,
+    "urlFinal": "https://news.livedoor.com/article/detail/32370392/",
+    "retrieved": "2026-09-20T21:04:01.525Z",
+    "hash": "273490ad31e8fc7b01be1b6ccd184e6f157902bedb155752b6ecad3899064bc6",
+    "chars": 12567
+  },
+  {
+    "id": 471,
+    "key": "P471-b10",
+    "url": "https://www.melbourneutd.com.au/news/nbl27-match-recap-melbourne-united-vs-adelaide-36ers-19-september-2026",
+    "status": 200,
+    "urlFinal": "https://www.melbourneutd.com.au/news/nbl27-match-recap-melbourne-united-vs-adelaide-36ers-19-september-2026",
+    "retrieved": "2026-09-20T21:04:01.705Z",
+    "hash": "351109791578e70b8d3835b1205af1a29b12df79d6cc9b845a36cbc8efac5728",
+    "chars": 6959
+  },
+  {
+    "id": 474,
+    "key": "P474-b11",
+    "url": "https://www.cleveland19.com/2026/09/20/martnez-homers-both-sides-plate-guardians-beat-athletics-stay-atop-al-central-2/?outputType=amp",
+    "status": 200,
+    "urlFinal": "https://www.cleveland19.com/2026/09/20/martnez-homers-both-sides-plate-guardians-beat-athletics-stay-atop-al-central-2/?outputType=amp",
+    "retrieved": "2026-09-20T21:04:01.905Z",
+    "hash": "2845eff9e34e7bff6ec3f61a8b7990d50ef93d3eb35f0ccdf50757cbddf7639a",
+    "chars": 4122
+  },
+  {
+    "id": 478,
+    "key": "P478-b13",
+    "url": "https://www.fotbollskanalen.se/artiklar/allsvenskan/fem-spaningar-slarvigt-och-svagt-av-djurgarden",
+    "status": 200,
+    "urlFinal": "https://www.fotbollskanalen.se/artiklar/allsvenskan/fem-spaningar-slarvigt-och-svagt-av-djurgarden",
+    "retrieved": "2026-09-20T21:04:03.120Z",
+    "hash": "65dd1674239a7d497c6f05a481b20a6dee0e95d9e8159e74ca4c1134bec1f751",
+    "chars": 6407
+  },
+  {
+    "id": 469,
+    "key": "P469-b6",
+    "url": "https://www.afl.com.au/news/1614209/brisbane-lions-prevail-in-all-time-classic-after-decisive-late-call-denies-hawthorn-hawks/",
+    "status": 200,
+    "urlFinal": "https://www.afl.com.au/news/1614209/brisbane-lions-prevail-in-all-time-classic-after-decisive-late-call-denies-hawthorn-hawks/",
+    "retrieved": "2026-09-20T21:04:03.528Z",
+    "hash": "7e863e6e4a18d724c250c0429bbd77c26c3ac7964b9f01aaa2cfbbacc076447b",
+    "chars": 19624
+  }
+]

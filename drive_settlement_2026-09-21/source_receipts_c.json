@@ -1,0 +1,148 @@
+[
+  {
+    "id": 455,
+    "key": "P455-c1",
+    "url": "https://www.latimes.com/sports/dodgers/story/2026-09-17/dodgers-clinch-13th-nl-west-crown-14-years",
+    "status": 200,
+    "urlFinal": "https://www.latimes.com/sports/dodgers/story/2026-09-17/dodgers-clinch-13th-nl-west-crown-14-years",
+    "retrieved": "2026-09-20T21:06:32.060Z",
+    "hash": "d424f491da8394c08c4973415a91f013f3295d65298fe246794e896285e4f63c",
+    "chars": 13816
+  },
+  {
+    "id": 467,
+    "key": "P467-c8",
+    "url": "https://cbssports.games.cbssports.com/mlb/gametracker/recap/MLB_20260918_TOR%40TEX/",
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "id": 465,
+    "key": "P465-c6",
+    "url": "https://globalnews.ca/news/12065355/mitchell-clark-lead-fever-past-tempo-103-85/",
+    "status": 200,
+    "urlFinal": "https://globalnews.ca/news/12065355/mitchell-clark-lead-fever-past-tempo-103-85/",
+    "retrieved": "2026-09-20T21:06:32.245Z",
+    "hash": "91d603c5b97b74015bb384e9d0ce64b3bd3cae118b8acb98a0be2e552d0cffd2",
+    "chars": 9907
+  },
+  {
+    "id": 471,
+    "key": "P471-c10",
+    "url": "https://www.adelaide36ers.com/news/gleesons-pride-in-heart-fight-and-bench-players-in-melbourne-win",
+    "status": 200,
+    "urlFinal": "https://www.adelaide36ers.com/news/gleesons-pride-in-heart-fight-and-bench-players-in-melbourne-win",
+    "retrieved": "2026-09-20T21:06:32.460Z",
+    "hash": "61a45ccaeb33037d32f272aacc1ff2139108be40a0e7c5efb1217340fbc8e5f7",
+    "chars": 8676
+  },
+  {
+    "id": 456,
+    "key": "P456-c3",
+    "url": "https://www.estadiodeportivo.com/futbol/primera-division/betis-getafe-abde-derriba-muro-golpeado-todas-las-manera-posibles-20260917-546752.html",
+    "status": 200,
+    "urlFinal": "https://www.estadiodeportivo.com/futbol/primera-division/betis-getafe-abde-derriba-muro-golpeado-todas-las-manera-posibles-20260917-546752.html",
+    "retrieved": "2026-09-20T21:06:32.899Z",
+    "hash": "175fe5eac1f822611903695c16a497596a374072ccbb6ea827ca79d09635be89",
+    "chars": 10711
+  },
+  {
+    "id": 456,
+    "key": "P456-c4",
+    "url": "https://www.europapress.es/deportes/futbol-00162/noticia-betis-alarga-buen-momento-costa-feo-getafe-20260917210325.html",
+    "status": 200,
+    "urlFinal": "https://www.europapress.es/deportes/futbol-00162/noticia-betis-alarga-buen-momento-costa-feo-getafe-20260917210325.html",
+    "retrieved": "2026-09-20T21:06:33.303Z",
+    "hash": "9a6a512daaae6f96c69f000a876dc731331f16e2d2f3b2d070db0f60c65a0852",
+    "chars": 6494
+  },
+  {
+    "id": 467,
+    "key": "P467-c9",
+    "url": "https://www.baseball-almanac.com/box-scores/boxscore.php?boxid=202609180TEX",
+    "status": 200,
+    "urlFinal": "https://www.baseball-almanac.com/box-scores/boxscore.php?boxid=202609180TEX",
+    "retrieved": "2026-09-20T21:06:33.421Z",
+    "hash": "c4768b87feeb6b5a6a684c3452ba9b2cca8c7528e758e85442acae203a49267e",
+    "chars": 8159
+  },
+  {
+    "id": 481,
+    "key": "P481-c13",
+    "url": "https://www.sofascore.com/es/news/villarreal-3-1-levante-ud-moleiro-tira-de-los-hilos",
+    "status": 403,
+    "urlFinal": "https://www.sofascore.com/es/news/villarreal-3-1-levante-ud-moleiro-tira-de-los-hilos",
+    "retrieved": "2026-09-20T21:06:33.442Z",
+    "hash": "6b771bca0fe4271cc0baf29954f10c68be99102048e4df524b6d7d6bf38dad5d",
+    "chars": 48
+  },
+  {
+    "id": 452,
+    "key": "P452-c0",
+    "url": "https://m.rediff.com/cricket/commentary/2026/sep/17/abhishek-stars-with-century-for-india/addd4ed75fd8ff37d14a9a1597344b4a",
+    "status": 200,
+    "urlFinal": "https://m.rediff.com/cricket/commentary/2026/sep/17/abhishek-stars-with-century-for-india/addd4ed75fd8ff37d14a9a1597344b4a",
+    "retrieved": "2026-09-20T21:06:33.474Z",
+    "hash": "abe0b6a4c80bc46675bb26e7f8f980c8a810037038de3ac53bb9dfc035b54a73",
+    "chars": 4623
+  },
+  {
+    "id": 465,
+    "key": "P465-c7",
+    "url": "https://firedupnetwork.ca/toronto-tempo-game-report-fever-rally-past-tempo-103-85/",
+    "status": 200,
+    "urlFinal": "https://firedupnetwork.ca/toronto-tempo-game-report-fever-rally-past-tempo-103-85/",
+    "retrieved": "2026-09-20T21:06:33.562Z",
+    "hash": "8e044ddc2b8273653a619d42a08f72f21e19b3a68bbd1008a61282a55a8694a3",
+    "chars": 5294
+  },
+  {
+    "id": 472,
+    "key": "P472-c11",
+    "url": "https://sportstalksc.com/coastal-carolina/delaware-defense-does-a-number-on-coastal-carolina-in-the-second-half-to-preserve-a-22-14-win-over-the-chanticleers-audio/",
+    "status": 200,
+    "urlFinal": "https://sportstalksc.com/coastal-carolina/delaware-defense-does-a-number-on-coastal-carolina-in-the-second-half-to-preserve-a-22-14-win-over-the-chanticleers-audio/",
+    "retrieved": "2026-09-20T21:06:33.592Z",
+    "hash": "3fcd0edc6bd4669f5792c84ee02c06c7817bccb9aa25b4b86b530118b5f4ebfd",
+    "chars": 6357
+  },
+  {
+    "id": 457,
+    "key": "P457-c5",
+    "url": "https://www.abc.net.au/news/2026-09-18/head-ton-leads-australia-to-odi-victory-over-zimbabwe/107169640",
+    "status": 200,
+    "urlFinal": "https://www.abc.net.au/news/2026-09-18/head-ton-leads-australia-to-odi-victory-over-zimbabwe/107169640",
+    "retrieved": "2026-09-20T21:06:33.639Z",
+    "hash": "1b9c39706db2243f82ab95b46cd3775af2481fff9309ebed90e4d3ec02715027",
+    "chars": 18782
+  },
+  {
+    "id": 455,
+    "key": "P455-c2",
+    "url": "https://sports.yahoo.com/articles/dodgers-clinch-fifth-straight-nl-034414328.html",
+    "status": 200,
+    "urlFinal": "https://sports.yahoo.com/articles/dodgers-clinch-fifth-straight-nl-034414328.html",
+    "retrieved": "2026-09-20T21:06:35.004Z",
+    "hash": "88c8a9b23e16ba49a57a8144f12fcc8484a2618f1054fdf0059e03c81038ba36",
+    "chars": 21140
+  },
+  {
+    "id": 480,
+    "key": "P480-c12",
+    "url": "https://campo.dk/2026/09/20/viborg-offensiven-er-tilbage-i-fuld-vigoer/",
+    "status": 200,
+    "urlFinal": "https://campo.dk/2026/09/20/viborg-offensiven-er-tilbage-i-fuld-vigoer/",
+    "retrieved": "2026-09-20T21:06:35.235Z",
+    "hash": "ae19b45198b216ebeda83d6722d9a82c34004993ce52ccafcdc6e66856053db0",
+    "chars": 5205
+  },
+  {
+    "id": 481,
+    "key": "P481-c14",
+    "url": "https://www.lapreferente.com/P4963171/2026-2027/villarreal-cf-vs-levante-ud",
+    "status": 200,
+    "urlFinal": "https://www.lapreferente.com/P4963171/2026-2027/villarreal-cf-vs-levante-ud",
+    "retrieved": "2026-09-20T21:06:35.594Z",
+    "hash": "cab0d7d7e1d53267a4c63fe09a1e446d66d741bcf32f7252634704de2a09e62d",
+    "chars": 30662
+  }
+]

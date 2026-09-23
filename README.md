@@ -1,59 +1,268 @@
-# Sports Research
+﻿# Sports Research
 
-Status: **ACTIVE**
-Framework review: **2026-08-30**
-Current method: **MDS-2026.08.30-v2.7 — late-import, phase-transition, allocation/robustness and termination-order process patch; qualitative weights unchanged**
-Numerical training program: **NTS-2026.08.25-v0.2 — STAGE 0 ALL-SPORTS DESIGN / PRE-FIT / NOT FINALISED**
 
-The active authority is the flat Markdown set in this folder. Material under archive/ is historical evidence only. Framework and rule changes remain Markdown-only. The numerical rework defines targets, source/data/model registries, candidate probability models, chronological tests, and promotion gates on paper. It does not authorise a source download, runtime, code, notebook, database, fitted model, calibrator, generated probability, or other numerical artifact; those require a later explicit user request and remain outside the authoritative Markdown rule set.
 
-## Active document map
 
-| File | Purpose |
+Current method: **MDS-2026.09.19-v4.3**, control revision **CR-2026.09.21-3**. All existing game logs remain **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. This project records research forecasts, exact settlement evidence and testable model improvements in Markdown; no numerical model is fitted or validated yet.
+
+
+
+
+<!-- THREE-SOURCE-TIME-GATE-2026-09-19-CR4 -->
+## Universal event-verification gate — CR-2026.09.19-4 component (preserved under CR-2026.09.21-3)
+
+
+
+
+Every new sports event now requires **at least three distinct reliable upstream source lineages**. Mirrors, syndicated copies, reposts, search-result snippets and generated summaries do not create independent verification.
+
+
+
+
+Before issue or refresh, verify the official venue-local date/time and IANA timezone, then convert that exact instant to `Australia/Melbourne`, recording the correct **AEST/AEDT** label and any calendar-date rollover. User-supplied start times are estimates until independently verified.
+
+
+
+
+Settlement requires **three independent reliable lineages** agreeing on the exact event/date, explicit terminal state and final result. A score without a terminal marker is insufficient; any credible current live/in-progress source or material source conflict blocks settlement. P-469 is the reference false-final incident that prompted this gate.
+
+
+
+
+The executable preflight now enforces source-count/lineage diversity, event time-zone conversion and normal pregame state before a new card can pass.
+
+
+
+
+## Cricket source-control implementation — 2026-09-21
+
+
+
+
+**CR-2026.09.21-1** preserves the current forecasting method and CR-4 cross-sport gates while repairing cricket source retrieval.
+
+
+
+
+- Separate `TOSS STATUS`, `STRIP STATUS` and `MATCH CONDITIONS STATUS`.
+- Use field-owner match centres first for the toss; add verified board/competition/rightsholder video and sanctioned NV Play/board-branded Match Centre to the late-information ladder.
+- Only named current-match P1–P5 sources in `RULES_CRICKET.md` §2 can establish today's strip. Previous same-venue matches, venue averages and ICC post-match ratings are context.
+- A transcript and its underlying broadcast are one lineage. Identical/near-identical unusual pitch metadata across front ends is one suspected upstream feed until provenance proves independence.
+- `AUTOMATED_PITCH_METADATA` cannot masquerade as an observed strip.
+- `INSUFFICIENT_VENUE_HISTORY` is valid; no fabricated venue sample.
+- Official dynamic pages are field-specifically stale when fresher reliable evidence proves the displayed state is outdated.
+- Toss-window and final pre-issue refreshes are required.
+
+
+
+
+See [Cricket rules](RULES_CRICKET.md) §2, [source register](DATA_SOURCE_REGISTER.md) §6A, [sources](SOURCES.md), [research guide](UPCOMING_GAME_RESEARCH_GUIDE.md), [implementation ledger](AUDIT_IMPLEMENTATION_2026-09-21.md), and [control manifest](CONTROL_MANIFEST_2026-09-21.md). This is an integrity/retrieval change; no predictive-lift claim is made.
+
+
+
+
+
+
+
+
+## Current canonical rollover — 21 September 2026
+
+
+
+
+Part 4 is closed at P-481. Part 5 (`PREDICTION_LOG_COMBINED_5.md`) is the active queue/next-ID authority; the rollover next ID is P-482. `GAME_LOG_STATUS_CURRENT.md` is the current state register. All current log material remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+
+
+
+## Historical state snapshot — 17 September 2026(c) *(superseded for active queue state)*
+
+
+
+
+- Active canonical log remains [Part 4](PREDICTION_LOG_COMBINED_4.md). **Do not use this README to infer the next ID**; read the top Part-4 snapshot or the active mini-log reconciliation. P-372 remains reserved/unused.
+- **No live event; 23 primary result/derivative handles plus 5 separate documentary/period follow-ups.** The top Part-4 snapshot is the sole queue/next-ID authority. The [status register](GAME_LOG_STATUS_CURRENT.md) provides the per-ID details.
+- P-255-C05/P-256-C05 are **UNRESOLVED_PERIOD**. Whole-match corner counts do not prove their regulation Overs; existing audit handles -03/-04 are reopened. Other recorded rows remain unchanged.
+- Corrected legacy scorecard: **477 rows, 114 cards, 273 W/204 L, mean 0.2265475891**. PRIMARY_SCORED subset: **136 rows, 33 cards, mean 0.246825**. P-344's mean is **0.283425**. These are descriptive legacy diagnostics, not improved-model results or calibration evidence.
+- C-OU-GEOMETRY has **zero verified prospective cards** under the required timestamp/control-version join. Historical imports are development evidence.
+
+
+
+
+## Audit and implementation - 2026-09-19
+
+
+
+
+**Tested the bounce-back hypothesis empirically and it does not hold.** MLB 2026, 4,594 team-games and 108 starters: after a 0-run game teams score **0.102 runs BELOW** their own mean next time (95% CI [−0.456, +0.251]); top-10 offences behave no differently from bottom-10 (−0.126 vs −0.093); a starter's next-start ER after being hit for 6+ lands **−0.017** from his own average and his strikeouts do **not** spike (−0.070). Out-of-sample, shorter recency windows predict monotonically **worse** — last-1 RMSE 2.7677 against a flat league constant's 1.9844. New document [`RECENCY_AND_REBOUND.md`](RECENCY_AND_REBOUND.md) and control **`R-1`**: recent results revise an estimated *rate* through a named mechanism, never forecast a *deviation*.
+
+
+
+
+- **New user directive implemented:** a loss **or push** on the card's highest-ranked over/under now triggers the same enhanced failure review as a Rank #1 loss (`METHOD.md` §7, logged as `TOP_OU_REVIEW`).
+- **Social media tested directly, and it fails.** X: HTTP 200 login wall, 1,644 chars of visible text, zero post content; syndication lane 0 bytes; jina proxy 403 abuse-blocked. Reddit: interstitial, no JSON. Bluesky: API works but **6 of 6 sports handles failed identity** — `jeffpassan.bsky.social` is a squatter who posts *"I continue to not be Jeff Passan"*, `fabrizioromano.bsky.social` is a different Fabrizio posting in Turkish. New control **`S-1`**.
+- **Press conferences (`S-2`):** admissible for availability, workload and role intent; never a signed adjustment to pace, efficiency or scoring rate.
+- **Three structured lanes added instead:** MLB `hydrate=lineups` (distinguishes `LINEUPS_NOT_YET_PUBLISHED` from a `RETRIEVAL_MISS` — most prior flags were the former), `boxscore` `battingOrder`/`bench`/`bullpen`, and **debutant detection** via MLB `mlbDebutDate` and ESPN cricket `debuts[]`. A 6-day rookie batted 6th in `P-455` unflagged.
+- **Cricket pitch-ladder drift repaired prospectively by CR-2026.09.21-1:** toss facts and exact-strip evidence now use separate ladders; preceding same-venue matches remain different-strip context unless reuse is confirmed; official video/NV Play are explicit late-information lanes; duplicate structured pitch feeds are one lineage; `INSUFFICIENT_VENUE_HISTORY` is legitimate.
+- **One recorded success reclassified:** `P-453`'s Rank #1 rested on three-start form — the third-worst predictor measured. Directionally lucky, not validation.
+
+
+
+
+[Recency & rebound](RECENCY_AND_REBOUND.md) · [Controls](CONTROLS.md) · [Sources](SOURCES.md) · [Forecast preflight manifest](FORECAST_PREFLIGHT_MANIFEST.md) · [Control manifest](CONTROL_MANIFEST_2026-09-19.md).
+
+
+
+
+## Audit implementation
+
+
+
+
+[Implementation ledger](AUDIT_IMPLEMENTATION_2026-09-17.md) · [Original model review](MODEL_REVIEW_2026-09-17.md) · [Original evidence](audit_2026-09-17_models/REVIEW_EVIDENCE.md) · [Validation and control hashes](audit_2026-09-17_implementation/VALIDATION.md).
+
+
+
+
+The revision fixes integer push scoring, removes unsupported MLB run-line/push caps and fixed variance floors, corrects extra-inning completion logic, replaces overlapping-window pseudo-tests, permits declared hierarchical uncertainty, and prevents numerical row caps from contradicting a printed distribution. It preserves frozen issued predictions and appends settlement/score corrections. The old README's dated history is preserved in [the before snapshot](audit_2026-09-17_implementation/before/README_with_margin_band_addition.md); it is not current policy.
+
+
+
+
+## Read first
+
+
+
+
+| Document | Purpose |
 |---|---|
-| [AGENT_ROLE_AND_TASK.md](AGENT_ROLE_AND_TASK.md) | Role, honesty boundary, ranking objective, and required delivery |
-| [RULES_GENERAL.md](RULES_GENERAL.md) | Universal hard gates, state/source workflow, ranking, settlement, and governance |
-| [MODEL_AND_DATA_SPEC.md](MODEL_AND_DATA_SPEC.md) | Versioned algorithm, data priority, provenance, validation, schemas, and evaluation |
-| [ALGORITHM_PORTFOLIO_AND_EVALUATION.md](ALGORITHM_PORTFOLIO_AND_EVALUATION.md) | Numerical-model roadmap, feature governance, calibration, ranking, optional pair portfolio, and champion–challenger protocol |
-| [NUMERICAL_TRAINING_SPEC.md](NUMERICAL_TRAINING_SPEC.md) | Distribution-first all-sports training architecture, target/threshold separation, candidate probability models, stages, and publication gates |
-| [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md) | Candidate providers, use/coverage/known-at audit fields, snapshot rules, and approval state |
-| [H0_DATASET_CARD.md](H0_DATASET_CARD.md) | Preregistered source-derived target populations, grains, labels, splits, and data-quality gates for every dedicated sport; currently not built |
-| [NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md) | Candidate and immutable-build registry; all numerical models currently design-only and not fit |
-| [UPCOMING_GAME_RESEARCH_GUIDE.md](UPCOMING_GAME_RESEARCH_GUIDE.md) | Full operational guide for researching, forecasting, ranking, logging, settling, and learning from upcoming games |
-| [LEARNING_REGISTER.md](LEARNING_REGISTER.md) | Sole current registry for hypotheses, tests, promotions, retirements, and superseded rules |
-| [RULES_CRICKET.md](RULES_CRICKET.md) | Cricket-specific identity, inputs, model, live, and settlement controls |
-| [RULES_BASKETBALL.md](RULES_BASKETBALL.md) | Basketball-specific controls |
-| [RULES_AFL.md](RULES_AFL.md) | AFL/AFLW-specific controls |
-| [RULES_NRL_RUGBY.md](RULES_NRL_RUGBY.md) | Rugby league/NRL-specific controls |
-| [RULES_RUGBY_UNION.md](RULES_RUGBY_UNION.md) | Rugby union and rugby-sevens-specific controls; qualitative only |
-| [RULES_AMERICAN_FOOTBALL.md](RULES_AMERICAN_FOOTBALL.md) | NFL, college, and UFL-specific controls |
-| [RULES_BASEBALL.md](RULES_BASEBALL.md) | MLB/KBO/NPB and other baseball-specific controls |
-| [RULES_SOCCER.md](RULES_SOCCER.md) | Soccer-specific controls |
-| [RULES_ICE_HOCKEY.md](RULES_ICE_HOCKEY.md) | NHL and other ice-hockey-specific controls |
-| [RULES_TENNIS.md](RULES_TENNIS.md) | Tennis-specific surface, serve/return, format, retirement, and settlement controls |
-| [PREDICTION_LOG_COMBINED.md](PREDICTION_LOG_COMBINED.md) | **Active canonical combined log**; its top snapshot alone controls queue state and next ID |
-| [PREDICTION_LOG.md](<prediction logs/PREDICTION_LOG.md>) | Frozen source component, P-001–P-066; retained for hash verification/recovery |
-| [PREDICTION_LOG_2.md](<prediction logs/PREDICTION_LOG_2.md>) | Frozen source component, P-067–P-088 closeout; retained for hash verification/recovery |
-| [PREDICTION_LOG_3.md](<prediction logs/PREDICTION_LOG_3.md>) | Frozen source component containing the 2026-08-26 review; retained for hash verification/recovery |
-| [PREDICTION_LOG_4.md](<prediction logs/PREDICTION_LOG_4.md>) | Frozen user-supplied continuation, P-089–P-102 plus settlement sweep; retained byte-for-byte for hash verification/recovery |
-| [PREDICTION_LOG_6.md](<prediction logs/PREDICTION_LOG_6.md>) | Text-preserved user-supplied continuation, P-103–P-123; original import hash and terminal-newline normalization are documented in the combined log |
-| [PREDICTION_LOG_5.md](<prediction logs/PREDICTION_LOG_5.md>) | Earlier mini-log artifact for P-124–P-136 before the supplied settlement/restoration sweep; retained for provenance comparison |
-| [PREDICTION_LOG_5_SETTLED_2026-08-29.md](<prediction logs/PREDICTION_LOG_5_SETTLED_2026-08-29.md>) | Supplied P-124–P-136 continuation with settlement sweep, P-133 restoration and appended independent audit |
-| [PREDICTION_MINI_LOG_3.md](<prediction logs/PREDICTION_MINI_LOG_3.md>) | P-137–P-164 source continuation; audited canonical aliases, duplicate-storage handling, settlements, detailed retrospective and pending-field queue |
-| [PREDICTION_MINI_LOG_4.md](<prediction logs/PREDICTION_MINI_LOG_4.md>) | P-165–P-186 supplied continuation plus independent provenance, settlement, source and algorithm audit; late-import descriptive evidence only |
-| [COMPREHENSIVE_RETROSPECTIVE_2026-08-22.md](COMPREHENSIVE_RETROSPECTIVE_2026-08-22.md) | Full P-001–P-060 audit, findings, corrections, and implementation record |
+| [METHOD](METHOD.md) | Single workflow, six-field forecast object, current authority and honesty rules |
+| [Scoring and validation](SCORING_AND_VALIDATION.md) | Exact W/P/L/action conditioning, decision/event denominators, baseline comparison and prospective admission |
+| [Controls](CONTROLS.md) | Compact current gate index and candidate dispositions |
+| [General rules](RULES_GENERAL.md) | Detailed gate definitions and historical origins; METHOD replaces repeated presentation lists |
+| Relevant RULES sport file and competition file | Sport-native exposures, state transitions, endpoints and source requirements |
+| [Sources](SOURCES.md) / [full source register](DATA_SOURCE_REGISTER.md) | Field-owner routes, availability and numerical admission requirements |
+| [Learning register](LEARNING_REGISTER.md) | Historical observations, current dispositions and prospective manifests |
 
-README never carries a queue ID or performance count. Those values change and belong only in the top controlling snapshot of the active log, currently PREDICTION_LOG_COMBINED.md.
 
-## Workflow
 
-1. Read the role, general rules, model/data specification, algorithm/evaluation protocol, numerical training specification, relevant sport file, and active entries in the learning register. Use UPCOMING_GAME_RESEARCH_GUIDE.md for the operational sequence. For numerical work, also read the source, H0, and model registries.
-2. Read the log's top controlling snapshot and settle every verified final before forecasting; leave live events open and continue to the next item.
-3. Freeze identity, contract, state, method version, and information cutoff.
-4. Freeze the underlying target separately from the bookmaker lines. Research in data-priority order, build one coherent target distribution or qualitative corridor, derive every contract from it, and rank all supplied unresolved rows.
-5. Append the forecast before delivery.
-6. Settle from the official result, separate contract outcome from process quality, and update the learning register only through its prospective procedure.
 
-## Claim boundary
+## Numerical model work
 
-The current log is an audit trail, not a calibrated betting record. D0 is process-development evidence only; H0 has not been built or quality-approved. NTS-2026.08.25-v0.2 is the **training phase at Stage 0 all-sports design/pre-fit**, not evidence that fitting is underway. No numerical challenger is trained, calibrated, tested, or validated. Numeric publication requires the target-specific gates in NUMERICAL_TRAINING_SPEC.md, MODEL_AND_DATA_SPEC.md, and ALGORITHM_PORTFOLIO_AND_EVALUATION.md; otherwise use qualitative verdicts, explicit unknowns, and no false precision.
+
+
+
+| Document | Purpose / real state |
+|---|---|
+| [Numerical program](NUMERICAL_PROGRAM.md) | MLB A0/A1 first, soccer phase/full-match second; one stage/publication sequence |
+| [Implementation recipes](MODEL_IMPLEMENTATION_RECIPES.md) | Executable empirical/count/scoring/phase/extra-state primitives and sport-specific estimation specifications inside Markdown |
+| [H0 dataset card](H0_DATASET_CARD.md) | Restored root dependency; schema and source/time-join gates; NOT BUILT / NOT QUALITY-APPROVED |
+| [Numerical model register](NUMERICAL_MODEL_REGISTER.md) | Existing models plus explicit tennis/union scopes; all NOT FIT; M0/M1 retired; advanced models dormant |
+| [Training specification](NUMERICAL_TRAINING_SPEC.md), [model/data specification](MODEL_AND_DATA_SPEC.md), [algorithm portfolio](ALGORITHM_PORTFOLIO_AND_EVALUATION.md) | Detailed design reference under the current method, scoring specification and numerical program |
+| [Base-rates register](BASE_RATES_REGISTER.md) | Historical reference estimates with populations and provenance; never universal matchup limits |
+
+
+
+
+The user has authorized the audit implementation and asked for improvements within Markdown as far as possible. No new permission gate is imposed on this work. Real data admission, fitting, held-out comparison and future prospective shadow cannot be claimed as completed by writing their specifications. No external data was pulled or fitted for this implementation. The supplied calculation tests are synthetic correctness checks, not measured prediction gains.
+
+
+
+
+## Canonical custody
+
+
+
+
+| Part | Coverage | Custody |
+|---|---|---|
+| [Part 1](PREDICTION_LOG_COMBINED.md) | P-001–P-271 | Closed; settlement corrections only, including reopened P-255/P-256 period questions |
+| [Part 2](PREDICTION_LOG_COMBINED_2.md) | P-272–P-332 | Closed; nine inherited primary follow-up handles |
+| [Part 3](PREDICTION_LOG_COMBINED_3.md) | P-333–P-423; P-372 reserved | Closed; 13 primary follow-up handles |
+| [Part 4](PREDICTION_LOG_COMBINED_4.md) | P-424–P-481 | Closed at P-481; historical custody and unresolved follow-up handles remain tracked in the status register |\n| [Part 5](PREDICTION_LOG_COMBINED_5.md) | P-482 onward | **ACTIVE queue / next-ID authority** |
+
+
+
+
+The [current status register](GAME_LOG_STATUS_CURRENT.md) supersedes dated status indexes for current questions. Older component logs, archived mini variants and dated audits remain evidence; they do not create extra forecasts or new instructions. Preserve canonical IDs and temporary aliases. Follow [external-log workflow](EXTERNAL_LOGGING_WORKFLOW.md) for variant discovery, reconciliation and archival.
+
+
+
+
+## Complete Markdown recording
+
+
+
+
+Record every substantive change, source status, lesson, forecast, settlement correction and validation result in Markdown. Preserve issued records and immutable archival copies. Do not invent missing probabilities, lineups, timestamps or model outputs. Odds and market analysis never enter the SPORTS_ONLY / MARKET_BLIND forecast. Missing validated probabilities or required prices/terms means **NO VALUE DETERMINABLE**.
+
+
+
+
+<!-- DEEP-RESEARCH-IMPLEMENTATION-2026-09-19-V42 -->
+## Deep-research implementation — 19 September 2026
+
+
+
+
+This revision makes the project **strictly market-independent at prediction time** and converts the audit findings into blocking controls.
+
+
+
+
+- **Hard source firewall:** sportsbook/bookmaker material, odds aggregators, betting previews/picks/tipsters, prediction-market sentiment, fantasy/DFS projections/rankings/ownership/start-sit advice, and secondary material derived from those sources are **PROHIBITED as predictive evidence**. RotoWire, RotoGrinders and FPTrack are explicitly prohibited. They may only be used as discovery pointers to an upstream valid source; if the upstream fact cannot be recovered, the fact is `UNAVAILABLE`.
+- **Threshold quarantine:** a user-supplied total/spread/alternate line is contract metadata only. It is kept out of priors, features, model inputs, scenario weights, calibration and narrative direction until the independent sports-outcome distribution has been frozen. Only then is the line queried.
+- **Point-in-time provenance:** every material predictive fact records source class, field owner, upstream lineage, publication/first-known time, retrieval time, cutoff compatibility and freshness. Mirrors that share one upstream feed count as one lineage.
+- **Fail closed:** contaminated source, post-cutoff fact, stale critical state, missing lineage, line leakage, postgame leakage or method/control-version mismatch blocks a normal forecast rather than merely lowering confidence.
+- **Distribution-first evaluation:** future numerical builds are evaluated with distribution scores (CRPS/RPS/log score where applicable), W/P/L Brier/log loss, RMSE/MAE, interval coverage/width and calibration diagnostics, with chronological event-grouped validation. Hit rate and Rank@k remain secondary diagnostics.
+- **No performance claim from documentation changes:** these controls are expected to reduce leakage and false confidence, but no accuracy improvement is claimed until a frozen out-of-sample/prospective comparison demonstrates it.
+
+
+
+
+Executable gate: [`prediction_preflight.py`](prediction_preflight.py). Full rationale and implementation record: [`AUDIT_IMPLEMENTATION_2026-09-19.md`](AUDIT_IMPLEMENTATION_2026-09-19.md).
+
+
+
+
+## Final implementation synchronization — CR-2026.09.19-3
+
+
+
+
+CR-3 is a **control/read-back synchronization revision**, not a new forecasting method. It removes stale active references to v4.1/v0.4 and obsolete hard-coded next-ID state, aligns the preflight schema/executable with the current authority, and records a fresh control-file receipt. Forecasting semantics remain MDS-2026.09.19-v4.2.
+
+
+
+
+This synchronization does **not** establish predictive skill. H0 remains not built/quality-approved and no numerical model has been fitted, calibrated, held-out validated or prospectively promoted.
+
+
+
+
+<!-- ALL-SPORTS-AUDIT-RECONCILIATION-2026-09-21-CR2 -->
+## All-sports historical-audit reconciliation — CR-2026.09.21-2
+
+
+
+
+[`AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`](AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md) is the current supersession/duplication ledger for historical audit findings across baseball, cricket, soccer, basketball, AFL/AFLW, rugby league, rugby union/sevens, American football, ice hockey and tennis. It prevents an older finding from being reintroduced after later evidence rejected or narrowed it, and prevents an already-implemented finding from being double-counted.
+
+
+
+
+This reconciliation does not claim improved prediction accuracy and does not complete empirical tasks by documentation. H0 remains not quality-approved; no numerical champion is promoted; non-MLB rebound/recency magnitudes remain un-derived; and historical settlement/documentary gaps remain separate operational work.
+
+
+
+
+
+
+
+
+## All-sports live-rule cleanup — CR-2026.09.21-3
+
+
+
+
+CR-3 removes residual active wording that conflicted with the CR-2 supersession ledger, synchronizes the active log to Part 5 / P-482, and aligns the preflight control revision. Current analysis is distribution-first; rejected historical shortcut rules remain provenance only. This is a governance/consistency correction, not a predictive-lift claim.
