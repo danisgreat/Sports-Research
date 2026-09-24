@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | Created | 2026-09-23 21:45:00 +10:00 (Australia/Melbourne, AEST UTC+10; AEDT from 4 Oct 2026) |
-| Status | **ACTIVE MINI LOG.** P-495..P-507 issued. |
-| Next canonical ID | **P-508**, advanced after P-507 issue. |
+| Status | **ACTIVE MINI LOG.** P-495..P-508 issued. |
+| Next canonical ID | **P-509**, advanced after P-508 issue. |
 | Temporary IDs awaiting canonical reconciliation (they do **not** reserve numbers) | `TMP-20260923-NBL-CNS-TAS` (settled; formerly claimed P-487) and `TMP-20260923-NPB-CHU-DB-G25` (live, carried below; wrongly merged into P-489 earlier). Each takes the next free canonical ID then available. **P-487 is resolved:** it is Dallas Wings @ Phoenix Mercury. The card body was recovered and settled in Part 5 §"2026-09-23(d)", and `TMP-20260922-WNBA-DAL-PHX` is a retired alias. |
 | Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3** (unchanged); SCORING_AND_VALIDATION **SCV-2026.09.19-v2**. **Freeze with every card:** `CONTROL_MANIFEST_2026-09-23.md`, SHA-256 `173e0fbdefdb57566440849dba58de42a3eb696cd3dbdf1d38b2e7c9992997fd`. It is the post-import content receipt written by the 2026-09-23 consolidated import; METHOD.md now points to it. Before issuing, re-hash the listed governance files: they must match, except the two living logs (Part 5, the status register), which change with every card. |
 | Operating mode | **SPORTS_ONLY / MARKET_BLIND.** No odds, prices, line movement, tipsters, betting previews, prediction markets or fantasy/DFS material as evidence, anchors or sanity checks. Supplied lines are quarantined until the distribution is frozen (METHOD §1.1). |
@@ -46,6 +46,7 @@ All three records below were **LIVE at carry-over** and are carried over **as-is
 | `P-505` | Basketball / El Salvador LMB | Salvadoreños BC vs Cojute, Gimnasio Nacional José Adolfo Pineda | 11:15, 24 Sep (19:15 CST, 23 Sep) | **PREGAME**, frozen 11:14:00 AEST | PREGAME / NOT STARTED (FESABAL, Sofascore, 365Scores) | Awaiting a final |
 | `P-506` | Baseball / MLB | Houston Astros (E. Pecko) @ Seattle Mariners (G. Kirby), T-Mobile Park | 12:10, 24 Sep (19:10 PDT, 23 Sep) | **PREGAME**, frozen 12:00:00 AEST | PREGAME / NOT STARTED (MLB, Baseball-Reference, ESPN) | Awaiting a final |
 | `P-507` | Baseball / KBO | NC Dinos (Song Myung-gi) @ KT Wiz (Davis Daniel), Suwon KT Wiz Park | 18:00, 24 Sep (17:00 KST) | **PREGAME**, frozen 17:58:00 AEST | PREGAME / NOT STARTED (KBO, Naver Sports, MyKBO Stats) | Awaiting a final |
+| `P-508` | Basketball / Australian NBL | SE Melbourne Phoenix vs Melbourne United, John Cain Arena | 19:30, 24 Sep (19:30 AEST) | **PREGAME**, frozen 19:28:00 AEST | PREGAME / NOT STARTED (NBL, ESPN, Sofascore) | Awaiting a final |
 
 **Settlement routes (for the next pass).**
 - **TMP-G25:** NPB box `npb.jp/scores/2026/0923/db-d-25/box.html` (試合終了) + Sports Navi `baseball.yahoo.co.jp/npb/schedule/?date=2026-09-23` + Kyodo or Nikkan (Yahoo! News). Grade the **23 Sep game-25** final. NPB 12-inning cap applies: a tie is a terminal outcome, so DeNA ML is a non-win on a tie and Chunichi +1.5 wins on a tie.
@@ -64,6 +65,7 @@ All three records below were **LIVE at carry-over** and are carried over **as-is
 - **P-505:** FESABAL official game sheet / LMB portal (`fesabal.info` / `fesabal.com`) + Sofascore LMB scoreboard (`sofascore.com/tournament/basketball/el-salvador/liga-mayor`) + 365Scores (`365scores.com`). Minimum three lineages with terminal marker `Final` / completed regulation + OT if played. Record quarter-by-quarter breakdown and final score.
 - **P-506:** MLB official boxscore (`mlb.com/gameday`) + Baseball-Reference boxscore (`baseball-reference.com/boxes`) + ESPN MLB scoreboard (`espn.com/mlb`). Minimum three lineages with terminal marker `Final` / completed 9+ innings. Record full linescore and pitcher decisions.
 - **P-507:** KBO official English scoreboard (`eng.koreabaseball.com/Schedule/Scoreboard.aspx`) + Naver Sports Baseball / Sports Chosun (`sports.news.naver.com/kbaseball`) + MyKBO Stats (`mykbostats.com`). Minimum three lineages with terminal marker `Final` / completed regulation + extra innings (max 12). Record full linescore and pitcher decisions.
+- **P-508:** NBL official gamecenter (`nbl.com.au`) + ESPN NBL scoreboard (`espn.com.au/nbl`) + Sofascore NBL boxscore (`sofascore.com`). Minimum three lineages with terminal marker `Final` / completed regulation + OT if played. Record quarter-by-quarter breakdown and final score.
 
 ---
 
@@ -2508,6 +2510,160 @@ The complete source-session record follows. Its temporary-ID and “not appended
 | Weather Suwon (QWeather / Ventusky) | https://www.ventusky.com | Independent secondary / METEOROLOGICAL | Venue weather conditions, humidity, temperature | 2026-09-24 17:56 | `OPENED` |
 
 <!-- END VERBATIM ISSUED RECORD: P-507 -->
+
+---
+
+### P-508 — Basketball / Australian NBL, SE Melbourne Phoenix vs Melbourne United
+
+##### Field 1 — Identity and contract
+
+- **Event:** South East Melbourne Phoenix (Visitor) vs Melbourne United (Home) — Throwdown 33
+- **Competition:** National Basketball League (Australian NBL 2026-27 Regular Season, Round 2)
+- **Date & venue:** 24 September 2026 (local & Melbourne); John Cain Arena, Melbourne, Victoria, Australia
+- **Timezones:** Venue-local Australia/Melbourne (AEST, UTC+10); Melbourne reference Australia/Melbourne (AEST, UTC+10). **Calendar date rollover: NO**.
+- **Scheduled tip-off:** 2026-09-24 19:30:00 AEST
+- **Event horizon:** **PREGAME / NOT STARTED** at freeze (verified across NBL official match center `nbl.com.au`, ESPN, and Sofascore).
+- **Governing method:** METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2**
+- **Controls applied:** G0–G6, G8, G10.2, G13.1, G14/G14.1/G14.2, G15.1 (indoor hardwood court), G16, G20/G20.1/G20.2, G21.1, G22, G25, G25.1, G26.1, G27, G30.1, G36.1, G-L1, G-L2, G-L7, G-L8, G-L9, G-L10, G-L11, G-L12/G-L24, G-L15, G-L17, G-L19, G-L21, G-L22, R-1, S-1 Rev 2, PF-1, PF-2, C-SRC3, C-TIME1/2, C-STATE3, RULES_BASKETBALL §8 (SFA-BASKETBALL), §9 (FIBA official playing rules, 40-minute regulation), and controls 1–20
+- **Contracts queried (SPORTS_ONLY / MARKET_BLIND):**
+  - United -2.5
+  - Phoenix +2.5
+  - Combined Total: Over 194.5 Points
+  - Combined Total: Under 194.5 Points
+  - Potential Game Winner
+
+##### Field 2 — Evidence and exposure
+
+- **Participants & coaching staff (G14.2 / Control S-1 Rev 2):**
+  - **Melbourne United (Home):** Head Coach **Jacob Chance** (appointed June 2026); assistant coaches verified. Starters: PG Cole Anthony (star American import), SG Chris Goulding, SF Luke Travers, PF Sam Waardenburg / Kyle Bowen, C Josh Oduro / Marcus Lee. Bench rotation: Austin Shelley, Kyle Bowen, Fabijan Krslovic, Tom Wilson, Sean Macdonald, Campbell Blogg. Primary injury news: Elite defensive guard **Shea Ili** is **OUT** (hamstring), replaced by Nominated Replacement Player Austin Shelley. United opened the season 0–1 with a narrow 97–95 defeat to Adelaide. Status: **PROJECTED_BEAT_VERIFIED** under Control S-1 Rev 2.
+  - **South East Melbourne Phoenix (Visitor):** Head Coach **Josh King** (extended through NBL29); assistant coaches verified. Starters: PG Nathan Sobey (cleared to make season debut), SG Angus Glover / Dash Daniels, SF D'Shawn Schwartz, PF Matt Hurt / Akech Aliir, C Jordan Hunter. Bench rotation: Owen Foxwell, Hunter Goodrick, Ellis Biggar, Akech Aliir. Primary injury news: Daniel Foster is **OUT** (groin). Phoenix sit at 1–1 following a 100–79 victory over Perth and a 96–91 defeat to Tasmania. Status: **PROJECTED_BEAT_VERIFIED** under Control S-1 Rev 2.
+- **Pace, efficiency & matchup dynamics (SFA-BASKETBALL §8.2):**
+  - Pace expectation: Moderate-high 84.5 possessions per 40 minutes (FIBA 10-minute quarters).
+  - Historical derby total suppression: Head-to-head regular season encounters between United and Phoenix have consistently fallen well short of 195 points. Over their last 4 meetings, game totals have averaged **181.3 points** (186, 173, 186, 180 points). Zero recent Throwdowns have ever approached 195 points.
+  - Impact of Shea Ili absence: While Ili's absence weakens United's perimeter defense against Sobey, it simultaneously eliminates United's primary transition driver, forcing Jacob Chance's squad into longer half-court possessions centered around Cole Anthony's pick-and-roll sets.
+- **Baseline team scoring:**
+  - Melbourne United expected points: **93.5** points ($\sigma = 10.8$)
+  - South East Melbourne Phoenix expected points: **91.8** points ($\sigma = 11.2$)
+  - Combined baseline regulation total: **185.30** points ($\sigma = 15.60$) (full-game expectation with overtime: **185.90** points, $\sigma = 17.60$).
+- **Outcome-state family table with masses (§16.5(a) G-L1):**
+
+| Family | Description | Representative Scoreline | Probability Mass |
+|---|---|:---:|:---:|
+| **F1** | Under 194.5 & Phoenix +2.5 | Melbourne United 93–92 SE Melbourne Phoenix (Total 185, Margin UTD +1) | **0.3484** (34.84%) |
+| **F2** | Under 194.5 & United -2.5 | Melbourne United 95–90 SE Melbourne Phoenix (Total 185, Margin UTD +5) | **0.3429** (34.29%) |
+| **F3** | Over 194.5 & Phoenix +2.5 | SE Melbourne Phoenix 99–98 Melbourne United (Total 197, Margin PHX +1) | **0.1665** (16.65%) |
+| **F4** | Over 194.5 & United -2.5 | Melbourne United 102–95 SE Melbourne Phoenix (Total 197, Margin UTD +7) | **0.1421** (14.21%) |
+
+- **State family distribution check:** $\sum P(F_i) = 0.3484 + 0.3429 + 0.1665 + 0.1421 = \mathbf{1.0000}$ (100.00%).
+- **Overtime expectation:** $P(\text{Tie after 40 regulation minutes}) = \mathbf{0.0288}$ (2.88% probability of regulation tie, resolved in 5-minute FIBA overtime periods; incorporated into full-game simulations).
+
+##### Field 3 — Distributional parameters
+
+- **Model:** Bivariate normal scoring distribution with empirical inter-team correlation ($\rho = 0.22$, 200,000 Monte Carlo draws; UTD $\mu = 93.5, \sigma = 10.8$; PHX $\mu = 91.8, \sigma = 11.2$; discrete overtime inclusion).
+- **Total points distribution:**
+  - Centre (mean): **185.90** points
+  - Median: **186.00** points
+  - Width (standard deviation): **17.60** points
+  - Contract line: **194.5** points
+  - Derived probabilities: $P(\text{Under } 194.5) = \mathbf{0.6914}$ (69.14%); $P(\text{Over } 194.5) = \mathbf{0.3086}$ (30.86%)
+  - Normalised edge: $|185.90 - 194.5| / 17.60 = \mathbf{0.489}$
+  - Push mass: **0.0000** (half-point contract)
+- **Margin distribution (UTD Margin = United Points − Phoenix Points):**
+  - Centre (mean): **+1.66** points
+  - Median: **+2.00** points
+  - Width (standard deviation): **13.72** points
+  - Contract line: **+2.5** points (United -2.5 requires UTD margin > 2.5; Phoenix +2.5 requires UTD margin < 2.5)
+  - Derived probabilities:
+    - $P(\text{Phoenix } +2.5) = F1 + F3 = 0.3484 + 0.1665 = \mathbf{0.5149}$ (51.49%)
+    - $P(\text{United } -2.5) = F2 + F4 = 0.3429 + 0.1421 = \mathbf{0.4851}$ (48.51%)
+    - $P(\text{United ML}) = \mathbf{0.5490}$ (54.90%)
+    - $P(\text{Phoenix ML}) = \mathbf{0.4510}$ (45.10%)
+  - Normalised edge (Phoenix +2.5 vs line 2.5): $|-1.66 - (-2.5)| / 13.72 = \mathbf{0.061}$
+
+##### Field 4 — Contract queries and ranks (UNVALIDATED_SUBJECTIVE; conditional on completion; SPORTS_ONLY / MARKET_BLIND)
+
+| Rank | Contract | Derived Probability | Verdict / Evidence Grade | Role | Rank Gap to Next |
+|:---:|---|:---:|:---:|:---:|:---:|
+| **1** | **Combined Total: Under 194.5 Points** | **0.691** | LEAN / SOLID | PRIMARY_FORMAL (total pair) | 0.177 (WIDE) |
+| **2** | **Phoenix +2.5** | **0.515** | LEAN / MODERATE | PRIMARY_FORMAL (handicap spread) | 0.030 (SMALL) |
+| **3** | United -2.5 | 0.485 | AVOID-lean / MODERATE | Complement of #2 | 0.177 (WIDE) |
+| **4** | Combined Total: Over 194.5 Points | 0.309 | AVOID / SOLID | Complement of #1 | — |
+
+- **Preferred sides:**
+  - Total pair (FORCED_PAIR): **Under 194.5 Points** (0.691 vs Over 194.5 at 0.309). Decisively favored due to a massive 8.6-point cushion between projected total (185.9) and the 194.5 line, supported by historical Throwdown scoring patterns (181.3 PPG average). Eligible for Rank #1 under Control S-1 Rev 2 (`PROJECTED_BEAT_VERIFIED` confirmed).
+  - Handicap / Spread (FORCED_PAIR): **Phoenix +2.5** (0.515 vs United -2.5 at 0.485). While United are slight straight-up favorites (54.9%), Phoenix covers on all outright wins, 1-point losses, and 2-point losses.
+- **Top Over/Under target:** **Under 194.5 Points** (Rank #1). A `TOP_OU_REVIEW` applies if it fails at settlement.
+- **Potential Game Winner:** **Melbourne United**, P(win) = **0.549** (54.90% conditional on completion; Phoenix win probability = 0.4510). Verdict: **SLIGHT LEAN / NARROW FAVORITE**.
+  - Rationale: Melbourne United have dominated the historical rivalry (winning 8 of the last 10 competitive meetings) and possess superior offensive continuity with Cole Anthony, Chris Goulding, and Luke Travers creating quality looks. However, the absence of defensive anchor Shea Ili prevents United from pulling away easily, keeping this Derby tightly contested to the final possessions.
+  - Failure paths: Nathan Sobey delivers a masterclass in his season debut (25+ points), Jordan Hunter controls the defensive boards, and United's bench struggles to replace Ili's defensive production (Phoenix win probability = 0.451).
+
+##### Field 5 — Dependence and checks
+
+- **Representative Rank-#1 outcome:** Melbourne United win 93–92 (Total 185, Margin UTD +1).
+  - Total points = 185 (< 194.5 → Under 194.5 Points WIN - Rank #1).
+  - Margin = UTD +1 (< 2.5 → Phoenix +2.5 WIN - Rank #2).
+  - Check: Satisfies Rank #1 AND Rank #2 simultaneously!
+- **Joint probability P(R1 ∧ R2):**
+  - $P(\text{Under } 194.5 \wedge \text{Phoenix } +2.5) = F1 = \mathbf{0.3484}$ (34.84%).
+  - Fréchet bounds: $[\max(0, 0.6914 + 0.5149 - 1.0), \min(0.6914, 0.5149)] = [0.2063, 0.5149]$. Independent product: $0.6914 \times 0.5149 = 0.3560$. Actual simulation mass $0.3484 \in [0.2063, 0.5149]$.
+- **Joint failure mass P(¬R1 ∧ ¬R2):**
+  - $\neg\text{R1}$ is Over 194.5 Points.
+  - $\neg\text{R2}$ is United -2.5 (United win by 3+ points).
+  - $P(\neg\text{R1} \wedge \neg\text{R2}) = F4 = \mathbf{0.1421}$ (14.21%) (high-scoring United multi-possession win).
+  - **P(at least one of R1, R2 wins) = 1 - 0.1421 = 0.8579 (85.79%)** across all completed games!
+  - **P(exactly one of the top two wins) = 0.5094 (50.94%)** (F2 + F3 = 0.3429 + 0.1665).
+- **Complement decompositions:**
+  - Complement of R1 (Over 194.5 Points, 0.3086): High-scoring shootout pushed either by Phoenix upset (F3 = 0.1665) or United blowout (F4 = 0.1421).
+  - Complement of R2 (United -2.5, 0.4851): United multi-possession victory either via defensive grind (F2 = 0.3429) or high-scoring shootout (F4 = 0.1421).
+- **Sensitivity analysis:**
+  - If game tempo slows under Derby pressure to 81 possessions: Under 194.5 rises to 0.765, Phoenix +2.5 rises to 0.528.
+  - If Chris Goulding hits 6+ threes in transition: Over 194.5 rises to 0.380, United -2.5 rises to 0.540.
+  - Across all realistic NBL pace variations, Under 194.5 remains decisively favored due to the massive 8.6-point margin below the line.
+
+##### Field 6 — Freeze and follow-up
+
+- **Freeze timestamp:** 2026-09-24 19:28:00 AEST.
+- **Event horizon:** PREGAME / NOT STARTED at freeze (verified across NBL official match center `nbl.com.au`, ESPN, and Sofascore).
+- **Settlement route (G10.2):**
+  - Lineage 1 (Field Owner): NBL Official Gamecenter / Boxscore (`nbl.com.au`).
+  - Lineage 2 (Independent Primary Media): ESPN Australia NBL Scoreboard (`espn.com.au/nbl`).
+  - Lineage 3 (Independent Secondary): Sofascore Basketball (`sofascore.com`).
+- **Settlement criteria:** Minimum 3 distinct lineages agreeing on final score and completion status including overtime if played (C-FINAL3). Record quarter-by-quarter breakdown, final margin, and player statistics.
+- **Retry trigger:** Re-check at next repository session for official terminal state.
+
+##### §16.8 completeness block
+
+1. MDS-2026.09.19-v4.3 / CR-2026.09.21-3. Controls applied: G0–G6, G8, G10.2, G13.1, G14/G14.1/G14.2, G15.1 (indoor court), G16, G20/G20.1/G20.2, G21.1, G22, G25, G25.1, G26.1, G27, G30.1, G36.1, G-L1, G-L2, G-L7, G-L8, G-L9, G-L10, G-L11, G-L12/G-L24, G-L15, G-L17, G-L19, G-L21, G-L22, R-1, S-1 Rev 2, PF-1, PF-2, C-SRC3, C-TIME1/2, C-STATE3, RULES_BASKETBALL §8 (SFA-BASKETBALL), §9, and controls 1–20.
+2. Outcome-state family table with masses: F1 0.3484, F2 0.3429, F3 0.1665, F4 0.1421 (sum = 1.0000).
+3. Total points: centre (mean) 185.90 / median 186.00; width (SD) 17.60; line 194.5; P(Under) = 0.691; P(Over) = 0.309. Margin: centre (mean) +1.66 / median +2.00; width (SD) 13.72; line 2.5; P(Phoenix +2.5) = 0.515; P(United -2.5) = 0.485. Normalised edges: total |185.90 − 194.5| / 17.60 = 0.489; margin |1.66 − 2.5| / 13.72 = 0.061.
+4. Complement decompositions for R1 (Over 194.5 Points, 0.309) and R2 (United -2.5, 0.485): stated above.
+5. P(R1 ∧ R2) = 0.3484, coupling between half-court derby tempo and game total suppression.
+   - 5a. P(¬R1 ∧ ¬R2) = 0.1421 (shared-failure mass in high-scoring United blowout). P(exactly one wins) = 0.5094. P(at least one wins) = 0.8579.
+   - 5b. O/U row labelled FORCED_PAIR; preferred side is Under 194.5 Points; push mass = 0.000 (half-point line).
+6. Representative Rank-#1 outcome: United 93–92 Phoenix (total 185, margin UTD +1); satisfies Rank #1 and Rank #2 simultaneously.
+7. Participant state: PROJECTED_BEAT_VERIFIED under Control S-1 Rev 2; starters Anthony/Goulding/Travers/Waardenburg/Oduro and Sobey/Glover/Schwartz/Hurt/Hunter verified; coaches Chance and King verified; Shea Ili confirmed OUT (hamstring); Daniel Foster confirmed OUT (groin).
+8. AGGREGATE_ONLY: none; full player-level roles, minutes, and scoring lines printed.
+9. Settlement source per row: S1 (NBL field owner) + S2 (ESPN) + S3 (Sofascore).
+10. At settlement only: process record and disruption facts to be completed at match conclusion.
+
+**Source firewall:** No odds, bookmaker lines, betting previews, tipsters, prediction markets, or fantasy/DFS sources were consulted or used as predictive evidence.
+
+**Control receipt (PF-7):** `CONTROL_MANIFEST_2026-09-23.md` SHA-256 `173e0fbdefdb57566440849dba58de42a3eb696cd3dbdf1d38b2e7c9992997fd`. Verified match against live files:
+- METHOD.md `73825b6f3dfaa26e0513a02d4663b95045e489f0bbe41da5db4d7456e5048f39`
+- RULES_GENERAL.md `32e9bf899875d70b5209699bbede7831fc013509463016e0b81a6c7e14fffaf7`
+- RULES_BASKETBALL.md `2671721fdafa9542c7179aef9ffa0e3b14acf77c2a7fdeacd38a022dcd275bfa`
+
+**Sources:**
+
+| Source name | Link | Field owner / lineage | Contributed | Retrieval time (AEST) | Status |
+|---|---|---|---|---|---|
+| NBL Official Gamecenter | https://www.nbl.com.au | Field owner / NATIONAL_BASKETBALL_LEAGUE | Official schedule, team rosters, injury report (Ili out, Foster out) | 2026-09-24 19:24 | `OPENED` |
+| ESPN Australia NBL | https://www.espn.com.au/nbl | Independent primary / BROADCAST_MEDIA | Throwdown 33 preview, broadcast confirmation, team form | 2026-09-24 19:24 | `OPENED` |
+| Melbourne United Official | https://www.melbourneutd.com.au | Independent primary / CLUB_MEDIA | Coach Jacob Chance confirmation, roster updates, Austin Shelley NRP | 2026-09-24 19:25 | `OPENED` |
+| SE Melbourne Phoenix Official | https://www.semphoenix.com.au | Independent primary / CLUB_MEDIA | Coach Josh King extension, Nathan Sobey season debut confirmation | 2026-09-24 19:25 | `OPENED` |
+| Sofascore Basketball | https://www.sofascore.com | Independent secondary / STATISTICAL_AUTHORITY | Historical Throwdown H2H scores, team scoring averages | 2026-09-24 19:25 | `OPENED` |
+
+<!-- END VERBATIM ISSUED RECORD: P-508 -->
 
 ## 2. Settled Logs
 
