@@ -35,7 +35,7 @@ The framework's working principles:
 | Reference data | [`BASE_RATES_REGISTER.md`](BASE_RATES_REGISTER.md) (§7: cross-sport rates and width benchmarks), [`RECENCY_AND_REBOUND.md`](RECENCY_AND_REBOUND.md), [`research/`](research/base_rates_2026-09-25/README.md) (re-runnable queries) |
 | Sources | [`SOURCES.md`](SOURCES.md) (quick), [`DATA_SOURCE_REGISTER.md`](DATA_SOURCE_REGISTER.md) (full) |
 | Procedures | [`UPCOMING_GAME_RESEARCH_GUIDE.md`](UPCOMING_GAME_RESEARCH_GUIDE.md) (pregame), [`EXTERNAL_LOGGING_WORKFLOW.md`](EXTERNAL_LOGGING_WORKFLOW.md) (mini logs, settlement), [`AGENT_ROLE_AND_TASK.md`](AGENT_ROLE_AND_TASK.md) |
-| Learning | [`LEARNING_REGISTER.md`](LEARNING_REGISTER.md) (lessons, prospective tests, recurring mistakes M1–M31) |
+| Learning | [`LEARNING_REGISTER.md`](LEARNING_REGISTER.md) (lessons, prospective tests, recurring mistakes M1–M32) |
 | Logs | Parts 1–4 (closed) and [Part 5](PREDICTION_LOG_COMBINED_5.md) (active); [`GAME_LOG_STATUS_CURRENT.md`](GAME_LOG_STATUS_CURRENT.md) (state register); `Mini logs (to be sent to actual log later)/` (active mini log) |
 | Numerical program (design only, not built) | [`NUMERICAL_PROGRAM.md`](NUMERICAL_PROGRAM.md), [`H0_DATASET_CARD.md`](H0_DATASET_CARD.md), [`NUMERICAL_MODEL_REGISTER.md`](NUMERICAL_MODEL_REGISTER.md), [`NUMERICAL_TRAINING_SPEC.md`](NUMERICAL_TRAINING_SPEC.md), [`MODEL_AND_DATA_SPEC.md`](MODEL_AND_DATA_SPEC.md), [`ALGORITHM_PORTFOLIO_AND_EVALUATION.md`](ALGORITHM_PORTFOLIO_AND_EVALUATION.md), [`MODEL_IMPLEMENTATION_RECIPES.md`](MODEL_IMPLEMENTATION_RECIPES.md) |
 | Freeze receipts | `CONTROL_MANIFEST_*.md` (the current one is named in `METHOD.md`'s header) |
@@ -65,6 +65,15 @@ python audit_card_controls.py "<mini log>.md" --settlement --strict
 python tools/skill_baseline.py                # after appending rows to SKILL_BASELINE_LEDGER.md
 ```
 
+**When building a card, and at each 25-card review**
+
+```bash
+python tools/card_math.py total --dist negbin --mean 8.4 --sd 3.97 --line 7.5       # rows from the card's own distribution
+python tools/card_math.py cover --dist normal --mean 1.44 --sd 13.63 --line -1.5 --no-zero
+python tools/card_math.py departure --p 0.613 --baseline 0.530 --mech "pace:0.6" --mech "lineup:0.4"
+python research/settled_rows_2026-09-25/extract_settled_rows.py && python tools/calibration_report.py
+```
+
 **Before committing** (CI runs the same checks: [`.github/workflows/checks.yml`](.github/workflows/checks.yml))
 
 ```bash
@@ -88,6 +97,7 @@ If you edited a governance file, regenerate the freeze receipt with `python tool
 | Awaiting operator decision | Canonical numbers for `TMP-20260923-NBL-CNS-TAS` and `TMP-20260923-NPB-CHU-DB-G25` (both settled) |
 | Freeze receipt | The manifest named in [`METHOD.md`](METHOD.md)'s header |
 | Skill v baseline | Seed: card Brier 0.2461 v naive baseline 0.2360 (n = 29, 9 cards; interval spans 0). Prospective count 0 of 100 |
+| Full-record calibration (2026-09-25(d)) | 598 rows, 149 cards: Brier 0.2249, slope 1.06, skill +7.7% over the base rate. Skill lives at p ≥ 0.65 (80.3% won); 0.50–0.65 is coin-flip-grade (53.6%). Non-baseball underdog cushions are over-confident (17/40 at 0.642). Soccer shows clear skill; MLB and basketball near zero; tennis, NFL/NCAA and AFL none ([details](research/settled_rows_2026-09-25/README.md)) |
 | Numerical model | Not built ([`H0_DATASET_CARD.md`](H0_DATASET_CARD.md)) |
 
 ## Canonical custody

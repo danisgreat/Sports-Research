@@ -35,7 +35,8 @@ Options
     --strict         Treat the 2026-09-24(f)/2026-09-25 controls as BLOCKING: 7r (S-1 Rev 2
                      receipt), T13 (tennis benchmark, RULES_TENNIS TE-P5), WB (reference
                      width, C-WIDTH-BENCHMARK), BP (BASELINE_P, C-BASELINE-SKILL; from
-                     CONTROL_MANIFEST_2026-09-25-3), HC (tennis handicap coherence), 10p
+                     CONTROL_MANIFEST_2026-09-25-3), DL (departure ledger) and PC (non-baseball +k.5
+                     cushion; both from CONTROL_MANIFEST_2026-09-25-4), HC (tennis handicap coherence), 10p
                      (process-record provenance), 10l (lineup diff) and 10z (standardised
                      miss, C-WIDTH-Z). Use it on every card issued or settled after the
                      2026-09-25 control manifest (WB, HC and 10z from CONTROL_MANIFEST_2026-09-25-2).
@@ -52,7 +53,7 @@ Exit codes
     2  usage or file error
 
 BLOCKING fields (a missing one blocks issue under §16.8): 2, 3, 5a, 7; at settlement 10;
-with --strict also 7r, T13, WB, BP, HC, 10p, 10l, 10z (each only where it applies).
+with --strict also 7r, T13, WB, BP, DL, PC, HC, 10p, 10l, 10z (each only where it applies).
 Everything else is recorded as a process defect on that card without blocking.
 
 Card segmentation (repaired 2026-09-25; 2026-09-23(c) proposal)
@@ -158,6 +159,16 @@ def _prints_width(card) -> bool:
 
 def _settled_with_width(card) -> bool:
     return card.is_settled and _prints_width(card)
+
+
+BASEBALL_RE = re.compile(r"\b(MLB|NPB|KBO|CPBL|baseball|run ?line|innings? pitched|starting pitcher)\b", re.I)
+PLUS_CUSHION_RE = re.compile(r"(?<![\w.])\+\s?\d+\.5\b")
+
+
+def _nonbaseball_plus_cushion(card) -> bool:
+    """A +k.5 handicap row on a card that is not baseball (2026-09-25(d): 17/40 at a stated 0.642)."""
+    head = card.title + " " + card.issue_text[:4000]
+    return bool(PLUS_CUSHION_RE.search(card.issue_text)) and not BASEBALL_RE.search(head)
 
 
 def _tennis_handicap(card) -> bool:
@@ -279,6 +290,19 @@ FIELDS = [
               "BASELINE_P: NOT_YET_DERIVED (C-BASELINE-SKILL, RULES_GENERAL 2026-09-25(c))", False,
         [r"BASELINE_P", r"C-BASELINE-SKILL", r"\bbaseline p\b"],
         origin="2026-09-25(c) skill check (SKILL_BASELINE_LEDGER.md)", strict_blocking=True,
+    ),
+    Field(
+        "DL", "departure ledger: the logit departure of each ranked row from BASELINE_P attributed to named "
+              "mechanisms (C-DEPARTURE-LEDGER, RULES_GENERAL 2026-09-25(d))", False,
+        [r"C-DEPARTURE-LEDGER", r"logit departure", r"departure (?:from|v\.?|vs\.?) BASELINE", r"UNEXPLAINED_DEPARTURE"],
+        origin="2026-09-25(d) settled-row review", strict_blocking=True,
+    ),
+    Field(
+        "PC", "non-baseball +k.5 cushion: population margin band, BASELINE_P, P(underdog wins) + P(loses by ≤ k) "
+              "decomposition and the named reason it stays close (C-PLUS-CUSHION, RULES_GENERAL 2026-09-25(d))", False,
+        [r"C-PLUS-CUSHION", r"margin band", r"loses by (?:≤|<=|at most)\s*\d", r"P\(\s*loses? by"],
+        origin="2026-09-25(d): 17/40 won at a stated 0.642", strict_blocking=True,
+        applies=_nonbaseball_plus_cushion,
     ),
     Field(
         "HC", "tennis games-handicap: P(win), implied P(margin ≥ k+1 | win) and the population "
@@ -601,7 +625,7 @@ def main(argv=None) -> int:
                     help="also check the settlement fields (10, 10p, 10l, 10z)")
     ap.add_argument("--strict", action="store_true",
                     help="treat the 2026-09-24(f)/2026-09-25 controls "
-                         "(7r, T13, WB, BP, HC, 10p, 10l, 10z) as BLOCKING")
+                         "(7r, T13, WB, BP, DL, PC, HC, 10p, 10l, 10z) as BLOCKING")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--quiet", action="store_true")
     ap.add_argument("--allow-empty", action="store_true",

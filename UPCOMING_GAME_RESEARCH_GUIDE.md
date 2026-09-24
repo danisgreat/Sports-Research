@@ -923,3 +923,37 @@ Add these five steps to the §19 one-page checklist, after participant research 
 
    Print it before the result is known. It is how the card is later judged (`SKILL_BASELINE_LEDGER.md`).
 7. **Read `CURRENT_RULES.md` first** (step 0 of the reading gate), and run `python tools/verify_manifest.py` before freezing, so the manifest SHA on the card is the current one.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — construction steps from the full settled-row review
+
+8. **Derive every row with `tools/card_math.py`** from the card's own centre and width (M14). Use:
+   - `--dist negbin` for runs;
+   - `normal` for points and cricket runs;
+   - `poisson` or `skellam` for goals and corners;
+   - `--no-zero` for margins that cannot tie (basketball, MLB and NHL full game).
+
+   A row that does not reproduce from the printed distribution is invented precision.
+9. **Departure ledger** (`C-DEPARTURE-LEDGER`): `python tools/card_math.py departure --p <row p> --baseline <BASELINE_P> --mech "<mechanism>:<share>" …`. Every log-odds move away from the population needs a named mechanism. More than 10% unattributed is `UNEXPLAINED_DEPARTURE`, and the grade is capped at LOW.
+10. **Track-record row** (`C-TRACK-RECORD`). Copy the sport's row from `python tools/calibration_report.py`. As of 2026-09-25(d):
+
+    | Sport | Decisions won | Mean stated |
+    |---|---:|---:|
+    | Soccer | 107/143 | 0.70 |
+    | MLB | 41/70 | 0.60 |
+    | NPB/KBO/CPBL | 36/56 | 0.62 |
+    | Cricket | 22/34 | 0.63 |
+    | Basketball | 18/31 | 0.59 |
+    | Tennis | 8/16 | 0.60 |
+    | NFL/NCAA | 3/12 | 0.54 |
+    | AFL | 3/10 | 0.66 |
+
+    Tennis, NFL/NCAA and AFL cards carry `NO_DEMONSTRATED_SKILL`.
+11. **Rows between 0.50 and 0.65** are labelled `LOW_RESOLUTION` and described as near-coin-flips. They won 53.6% at a stated 0.574.
+12. **Any +k.5 row outside baseball** (`C-PLUS-CUSHION`) prints:
+    - the population margin band;
+    - `BASELINE_P`;
+    - P(underdog wins) + P(loses by ≤ k), from `card_math.py cover`;
+    - the named reason it stays close.
+
+    The full record: 17/40 won at a stated 0.642 (M32).

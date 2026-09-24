@@ -6,6 +6,20 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-25(d) — review of every settled log: calibration findings, construction tools
+
+- **Dataset.** `research/settled_rows_2026-09-25/` extracts every graded row from Parts 1–5: 1,185 rows from 307 cards, 600 with probabilities from 149 cards. It reproduces the logged cohort figures.
+- **Findings.**
+  - Calibration overall is good: Brier 0.2249, slope 1.06, reliability 0.002. Skill is modest (resolution 0.019).
+  - The skill sits at p ≥ 0.65 (80.3% won); 0.50–0.65 is coin-flip-grade (53.6%).
+  - Non-baseball underdog cushions are over-confident: 17/40 at 0.642.
+  - Soccer shows clear skill; MLB and basketball near-zero resolution; tennis, NFL/NCAA and AFL none.
+  - Ranks #2–#4 are indistinguishable. Top-two joint failure equals independence.
+- **Controls.** `C-PLUS-CUSHION` (CANDIDATE, audit field `PC`, M32), `C-DEPARTURE-LEDGER` (audit field `DL`), `C-TRACK-RECORD`, `C-LOW-RESOLUTION-BAND`, and the `SCORING_AND_VALIDATION.md` §14 review standard.
+- **Tools.** `tools/card_math.py`: normal, negative-binomial, Poisson and Skellam queries, `no_zero` margins, push mass, exact joints, and the departure ledger. It reproduces the issued P-509 and P-500 probabilities. `tools/calibration_report.py`: reliability, Murphy decomposition, slope, card-cluster slices. A canonical settlement table format.
+- **Tests.** `T-PLUS-CUSHION`, `T-TOTAL-DIRECTION-LEAGUE`, `C-LOW-RESOLUTION-BAND`; interim rows for `C-PROB-EXTREMITY` and `C-PHASE-VS-FULL-TOTAL`.
+- **Receipt.** `CONTROL_MANIFEST_2026-09-25-4.md`.
+
 ### 2026-09-25(c) — repository hygiene, CI, current-rules summary, baseline skill check
 
 - **Hygiene.** Untracked 16,142 files: two `node_modules` trees in `.codex_spreadsheet_tmp/`, a retired runtime's `node_modules`, `__pycache__`/`.pyc` and `.claude/settings.local.json`. They stay on disk. Added `.gitignore` and `.gitattributes` (CRLF checkout everywhere, so manifest hashes reproduce on any platform) and `LICENSE` (all rights reserved; third-party note). Removed three betting domains from the local permission allowlist. Fixed two literal-`\n` rendering bugs (README custody table; RULES_GENERAL header).

@@ -1102,3 +1102,14 @@ This section is the current prospective override for audit-derived ranking logic
 - **Retained sport package:** legal-ball/resource phase mapping; XI and role continuity; toss, exact strip and match conditions kept separate; exact current-strip evidence; venue-format baseline with honest missingness; DLS/reduced-overs branches.
 - **Withdrawn here:** second-highest/median or second-lowest/median pseudo-tail construction; path-count/category shortcuts as ranking rules; universal 40–60% top-slot bands; normalized-distance ordering; any one-result rebound/hangover/“due” rule; and any implication that a cushion determines the outright winner.
 - **Current construction:** build one coherent sport-native joint outcome distribution/branch mixture, freeze it before supplied lines are queried, then derive exact target marginals and dependencies from that object. When a fitted/calibrated numerical distribution does not exist, a probability may be printed only as an `UNVALIDATED_SUBJECTIVE` output of the card's own complete, reproducible, declared distribution (METHOD §5). A number that cannot be reproduced from the printed distribution is invented precision and is not permitted. No subjective number carries a performance, calibration or value claim. *(Wording corrected 2026-09-25: the earlier "keep probabilities unquantified" contradicted METHOD §5; 2026-09-23 read-only audit item 5.)*
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — track record from the full settled-row review
+
+**Track record (`C-TRACK-RECORD`).** 34 decisions from 14 cards: won 64.7% at a mean stated 0.630. Brier 0.227. Resolution is 0.039 but **reliability is 0.022**, the worst calibration of any sport with n ≥ 30: some skill, but mis-stated.
+
+- **Unders won 9/12 at a stated 0.589; Overs 7/12 at 0.631** (`T-TOTAL-DIRECTION-LEAGUE`).
+- This agrees with the earlier observation that buried powerplay-overs Unders keep winning. It also agrees with control 21: chase totals are capped by the target, and batting-first phase windows run lower.
+- No direction coefficient follows. The response is the innings-order mixture (control 21) and `BASELINE_P` from the venue window where one exists.
+
+Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".

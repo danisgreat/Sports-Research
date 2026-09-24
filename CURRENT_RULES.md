@@ -58,7 +58,7 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
 | 1 Identity and contract | IDs, participants, competition, times (venue-local, UTC, AEST), state, exact contracts, method and manifest | 1 |
 | 2 Evidence and exposure | Sources with owner, time and status (OPENED/SNIPPET/ASSUMED); participants per side; injuries and workload; environment; windows; disaggregated records; settlement route | 7 **B**, 7r **S**, 8, 9 |
 | 3 Joint distribution | Prior with provenance; named signed adjustments; centre, median and width; family table with masses; phase and team marginals; representative score; **reference row** and **reference width** | 2 **B**, 3 **B**, BR, WB **S**, T13 **S** (tennis), CVW (cricket) |
-| 4 Contract queries and ranks | Exact probability per row (UNVALIDATED_SUBJECTIVE); rank by probability; FORCED_PAIR/FREE; preferred side; push mass; **`BASELINE_P` per row** | BP **S**, 5b, HC **S** (tennis handicap) |
+| 4 Contract queries and ranks | Exact probability per row (UNVALIDATED_SUBJECTIVE, reproduced with `tools/card_math.py`); rank by probability; FORCED_PAIR/FREE; preferred side; push mass; **`BASELINE_P` per row**; **departure ledger**; **track-record row**; `LOW_RESOLUTION` label at 0.50–0.65; `C-PLUS-CUSHION` for non-baseball +k.5 | BP **S**, DL **S**, PC **S**, 5b, HC **S** (tennis handicap) |
 | 5 Dependence and checks | P(R1∧R2), P(¬R1∧¬R2), P(all fail) where three or more rows share a driver; complement decomposition; kill paths with mass; COVERING_PAIR | 4, 5, 5a **B**, 6 |
 | 6 Freeze and follow-up | Freeze receipt, manifest SHA, settlement route. At settlement: sourced process record, lineup diff, z, grades, reviews | 10 **B**, 10p **S**, 10l **S**, 10z **S** |
 
@@ -109,7 +109,8 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
   - NBL early season **−8.5** points; WNBA early season **+6.5**. The signs are opposite, so there is no cross-league rule.
   - WNBA 2026 runs **+10.7** over 2024–25: exclude or adjust those seasons in any average (M24).
   - NHL preseason: use preseason rates.
-- **Coherence.** The total probability is derived from the card's own centre and width, with the normalised edge printed (G-L8, M14). Mean and median are kept distinct.
+- **Coherence.** The total probability is derived from the card's own centre and width, with the normalised edge printed (G-L8, M14). Mean and median are kept distinct. **Use `tools/card_math.py`** (normal / negative binomial / Poisson / Skellam, with `--no-zero` for margins that cannot tie) so the numbers reproduce.
+- **Baseline-anchored construction (`C-DEPARTURE-LEDGER`, 2026-09-25(d)).** Start each row at `BASELINE_P`. Print its log-odds departure and attribute it to named mechanisms (`tools/card_math.py departure`). More than 10% unattributed is `UNEXPLAINED_DEPARTURE`, and the grade is capped at LOW.
 
 ### D6 Ranking and dependence (`RULES_GENERAL.md` G23.1, G27, G-L9, G-L10, G-L17, G-L21, G-L22)
 - **Order.** Rank by the derived probability of the exact settlement event, plus robustness. Rows that cannot be separated still get unique ordinals, labelled `NEAR_TIED` with the non-predictive tie-break stated.
@@ -131,7 +132,12 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
   - Settled rows are appended to the ledger.
   - `python tools/skill_baseline.py` reports card minus baseline.
   - **Seed result: the cards have not yet beaten the baseline** (0.2461 v 0.2360, n = 29, interval spans 0).
-- **Top-slot measures:** Rank-1 record; top O/U preferred side; Hit@2 excluding covering pairs. "At least one O/U won" is never a success measure (M23).
+- **Top-slot measures:** Rank-1 record; top O/U preferred side; Hit@2 excluding covering pairs. "At least one O/U won" is never a success measure (M23). **Ranks 2–4 carry no ordering information** in the full record (54–56% each), so report probabilities, not slots.
+- **What the full record says** (2026-09-25(d); `research/settled_rows_2026-09-25/README.md`; 598 rows, 149 cards):
+  - **Calibration overall is good:** slope 1.06, Brier 0.2249. **Skill is modest:** +7.7% over the base rate. No global shrink is warranted.
+  - **Skill lives at p ≥ 0.65:** 80.3% at a stated 0.744. **Rows at 0.50–0.65 are coin-flip-grade:** 53.6% at 0.574. Label them `LOW_RESOLUTION` (`C-LOW-RESOLUTION-BAND`).
+  - **Non-baseball underdog cushions (+k.5) are over-confident:** 17/40 at 0.642. `C-PLUS-CUSHION` applies: margin band, `BASELINE_P`, the P(win) + P(lose by ≤ k) decomposition and a named reason, or `PLUS_CUSHION_UNSUPPORTED` (M32).
+  - **Print the sport's own track record** (`C-TRACK-RECORD`; `tools/calibration_report.py`). **`NO_DEMONSTRATED_SKILL`:** tennis, NFL/NCAA, AFL. Near-zero resolution: MLB, basketball. Clear skill: soccer.
 
 ### D8 Settlement and retrospectives (`METHOD.md` §7; `RULES_GENERAL.md` §"2026-09-24(f)")
 - **Three terminal lineages** agree on the event, the explicit final marker and the score. A score without a final marker, or any credible live source, blocks settlement.
@@ -149,7 +155,8 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
 - **Open prospective tests** (none has a ranking effect until it concludes):
   - `C-WIDTH-Z`, `C-BASELINE-SKILL`, `C-PROB-EXTREMITY`, `C-RUN-CENTRE-BIAS`, `C-PHASE-VS-FULL-TOTAL`;
   - `T-TEN-LOWTIER-HCP`, `T-BKB-SEASON-OPENER-WIDTH`, `T-NHL-PRESEASON-GOALIE`, `T-MLB-WIND-IN-OVER`;
-  - `C-TEN-FAV-SEPARATION`, `T-TEN-BENCHMARK-GAP`, `T-CRI-DOMINANT-HITTER`, `T-CRI-POST-TOSS-FREEZE`.
+  - `C-TEN-FAV-SEPARATION`, `T-TEN-BENCHMARK-GAP`, `T-CRI-DOMINANT-HITTER`, `T-CRI-POST-TOSS-FREEZE`;
+  - from 2026-09-25(d): `T-PLUS-CUSHION`, `C-LOW-RESOLUTION-BAND`, `T-TOTAL-DIRECTION-LEAGUE`.
 - **After every settlement or audit pass,** implement or explicitly disposition its "document mapping" table. Unexecuted mapping tables are how improvements were lost before.
 
 ### D10 Custody, logging and the repository
@@ -168,7 +175,8 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - The venue row from `BASE_RATES_REGISTER.md` §7.5 (all 30 parks). League total mean 8.95, SD 4.51. First five innings: P(tied) 0.154.
 - **Extras identity:** a tie at 9 adds at least one run, so the total exceeds any line equal to the regulation total.
 - Push mass comes from the conditional distribution, not a cap. KBO and NPB innings caps allow official ties (G-L19).
-- **+1.5 rows:** the baseline is 0.638 for either side (walk-off asymmetry); one-run games are 27.6% (covering pairs).
+- **+1.5 rows:** the baseline is 0.638 for either side (walk-off asymmetry); one-run games are 27.6% (covering pairs). MLB +1.5 rows have been calibrated (18/30 at 0.604) but no better than that baseline.
+- **Track record:** MLB resolution is near zero (0.0075), so itemise every departure from `BASELINE_P`. NPB/KBO/CPBL Unders won 11/14 against Overs 4/9 (`T-TOTAL-DIRECTION-LEAGUE`).
 - An opener's first inning is width, not direction. Baseball centres have run high (`C-RUN-CENTRE-BIAS`: accrue, no coefficient).
 
 **Basketball: NBA, WNBA, NBL, FIBA, LKL, LMB** (`RULES_BASKETBALL.md` K-1 to K-8)
@@ -177,6 +185,7 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - Overtime is 4–5.5% of games and adds about 25 points.
 - Reference widths as in §D5. Early-season and regime windows. A back-to-back is worth about −1.8 margin in the NBA, and nothing on totals.
 - Leagues without a benchmark print `NOT_YET_DERIVED`; a width below 13.6 (total) or 9.4 (margin) needs a reason.
+- **Underdog cushions (+k.5) won 3/8 at 0.58**, so `C-PLUS-CUSHION` applies (`card_math.py cover … --no-zero`). Resolution is near zero (0.012), so the departure ledger is mandatory.
 
 **NHL** (`RULES_ICE_HOCKEY.md` H-R1 to H-R6)
 - The official or confirmed goalie; preseason goalies stay projected.
@@ -191,6 +200,7 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - EPL references: first half P(≥ 2) 0.334; Over 2.5 0.550; draw 0.274; corners mean 10.0. A first-half Under 1.5 above about 0.75 needs a reason.
 - **Corners settle with the field owner:** pulselive for the EPL, the UEFA matchstats API for UEFA competitions, ESPN `wonCorners` otherwise.
 - Don't transfer EPL rates to cups or lower tiers (M12).
+- **Track record: the clearest skill of any sport** (107/143 at 0.70; Brier 0.170), mainly phase and team-total rows. **Exception: underdog cushions won 8/13 at a stated 0.77**, so `C-PLUS-CUSHION` applies (Skellam margin).
 
 **Tennis** (`RULES_TENNIS.md` TE-P5, TE-S2, TE-S4, TE-R1 to TE-R3)
 - **The dated Elo benchmark (Tennis Abstract) is blocking.** Explain or rebuild if the gap exceeds 10 points.
@@ -198,6 +208,7 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - **Print P(deciding set)** against the reference (WTA 0.340). Total games is bimodal: 18.2 in straight sets, 28.6 in three.
 - **Handicap coherence:** P(−k.5) ≤ P(win). Print c_s and c_d (WTA −5.5 references: 0.663 / 0.168).
 - A walkover or retirement follows the stated void rules. ITF has no population reference.
+- **`NO_DEMONSTRATED_SKILL`** (8/16 at 0.60; Brier 0.281). Stay near the Elo benchmark and the population rates unless serve/return numerators justify moving; the departure ledger is required.
 
 **Cricket** (`RULES_CRICKET.md` §2, controls 19–21; `LEAGUE_RULES_CRICKET.md`)
 - **Toss, strip and conditions are separate fields** with separate ladders. Retrieve the toss at toss + 5 minutes (ESPN `notes[]`).
@@ -205,13 +216,15 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - Name the incoming Nos. 3–4 and both new-ball bowlers.
 - **The chase is capped near the target:** a high chasing team-total Over is structurally disadvantaged.
 - Settle from official scorecards, never narrative reports. Zero is not a duck.
+- **Track record:** there is resolution but the probabilities are mis-stated (reliability 0.022). Unders won 9/12 at 0.589; Overs 7/12 at 0.631 (`T-TOTAL-DIRECTION-LEAGUE`).
 
 **AFL / NRL / rugby union / NFL** (`RULES_AFL.md`, `RULES_NRL_RUGBY.md`, `RULES_RUGBY_UNION.md`, `RULES_AMERICAN_FOOTBALL.md`)
 - Sport-native state and endpoint rules are in each file.
 - NFL key-number masses at 3 and 7 are `NOT_YET_DERIVED`; the G-L12 residual benchmark is about 13.9 points (Stern 1991).
+- **`NO_DEMONSTRATED_SKILL`** for NFL/NCAA (3/12 at 0.544; cushions 1/6) and AFL (3/10 at 0.662; cushions 0/3), both over-confident. The grade is capped at LOW, and the departure ledger and `C-PLUS-CUSHION` are required.
 - No population references are derived yet, so every row prints `NOT_YET_DERIVED`.
 
-## F. Recurring mistakes to check on every card (M1–M31)
+## F. Recurring mistakes to check on every card (M1–M32)
 
 The full evidence is in `LEARNING_REGISTER.md` §"2026-09-25 audit closure" B and §"2026-09-25(b)" C.
 
@@ -232,7 +245,7 @@ The full evidence is in `LEARNING_REGISTER.md` §"2026-09-25 audit closure" B an
 | **M13** | **Aggregate used where the game log was available (highest-value check)** | M29 | Summary retyped, not copied |
 | M14 | Total probability not derived from the card's own centre and width | M30 | City forecast used instead of the gamefeed wind |
 | M15 | Control listed but not executed | **M31** | **Width chosen without a reference** |
-| M16 | Complement not itemised | | |
+| M16 | Complement not itemised | **M32** | **Non-baseball underdog cushion priced like a baseball +1.5 (17/40 at 0.642)** |
 
 ## G. Tools and commands
 
@@ -245,6 +258,8 @@ All are standard-library Python 3.10+. Run from the repository root.
 | `python audit_card_controls.py <log.md> --settlement --strict` | Every settlement pass (use `--allow-empty` for an empty log) |
 | `python prediction_preflight.py <manifest.json>` | Automated pipelines only (interactive cards verify in the card body) |
 | `python tools/skill_baseline.py` | After appending settled rows to `SKILL_BASELINE_LEDGER.md` |
+| `python tools/card_math.py total\|cover\|departure …` | When building a card: derive every row from its own distribution; departure ledger |
+| `python research/settled_rows_2026-09-25/extract_settled_rows.py` then `python tools/calibration_report.py` | Every 25-card review: rebuild the settled-row dataset and report calibration and resolution |
 | `python tools/verify_manifest.py` | Before issuing: governance files match the current manifest |
 | `python tools/make_manifest.py --out CONTROL_MANIFEST_<date>-<n>.md --title … --note …` | After any governance edit |
 | `python tools/repo_hygiene.py` | Before committing |

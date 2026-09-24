@@ -660,3 +660,13 @@ Use drive/possession scoring distributions with QB/offense/defence/special-teams
 
 
 Current prospective override. Retain drive/play opportunity, QB/offensive-line/skill availability, EPA/success/turnover/field-position branches, pace/game state and overtime/rules era. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, one-score “due” logic and generic recent-score trend adjustments. Build one coherent American-football joint outcome distribution before querying targets.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — track record from the full settled-row review
+
+**Track record (`C-TRACK-RECORD`).** 12 NFL/NCAA decisions from 6 cards: won **25%** at a mean stated 0.544. The gap is −0.29, with a card-cluster interval of [−0.47, −0.12]: **over-confident**. These cards are labelled **`NO_DEMONSTRATED_SKILL`**.
+
+- **Underdog cushions (+k.5): 1/6** at 0.554. `C-PLUS-CUSHION` applies.
+- **Required on every margin row:** the G-L12 residual benchmark (about 13.9 points), and key-number masses at 3 and 7, which are `NOT_YET_DERIVED`, so they are derived before the next NFL handicap card.
+
+Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".

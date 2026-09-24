@@ -6,7 +6,7 @@
 | Status | **ACTIVE MINI LOG.** No events issued yet. |
 | Next canonical ID | **P-510** |
 | Temporary IDs awaiting canonical reconciliation | `TMP-20260923-NPB-CHU-DB-G25` (settled; DeNA 4–3 F/12) and `TMP-20260923-NBL-CNS-TAS` (settled). Both still await a canonical number (operator decision). No live temporary ID. |
-| Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2**. **Freeze with every card:** `CONTROL_MANIFEST_2026-09-25-3.md`, SHA-256 `619a3fda2829723d633efcd320a517f1eaaae3b91ef01719c7ae4aaa86b7dbc0`. It is the post-repository-review content receipt (2026-09-25 about 02:00 AEST; 82 files hashed in CRLF checkout form). Verify it with `python tools/verify_manifest.py`. It supersedes `CONTROL_MANIFEST_2026-09-25-2.md` (`8f65c60e…`) and `CONTROL_MANIFEST_2026-09-25.md` (`7b6efc56…`); no card was issued under either. Before issuing, re-hash the listed governance files: they must match, except the two living logs (Part 5 and the status register), which change with every card. |
+| Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2**. **Freeze with every card:** `CONTROL_MANIFEST_2026-09-25-4.md`, SHA-256 `b6efc79d92e026fe43ab4fb371175642ccb07c31ba9ba6492c2af8bd8009e0a3`. It is the post-settled-row-review content receipt (2026-09-25 about 02:30 AEST; 91 files hashed in CRLF checkout form). Verify it with `python tools/verify_manifest.py`. It supersedes `CONTROL_MANIFEST_2026-09-25-3.md` (`619a3fda…`), `-2` (`8f65c60e…`) and `CONTROL_MANIFEST_2026-09-25.md` (`7b6efc56…`); no card was issued under any of them. Before issuing, re-hash the listed governance files: they must match, except the two living logs (Part 5 and the status register), which change with every card. |
 | Operating mode | **SPORTS_ONLY / MARKET_BLIND.** No odds, prices, line movement, tipsters, betting previews, prediction markets or fantasy/DFS material as evidence, anchors or sanity checks. Supplied lines are quarantined until the distribution is frozen (METHOD §1.1). |
 | Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** No ROI, EV, calibrated-edge or validated-model claim. `NO VALUE DETERMINABLE` unless a governing value gate is explicitly satisfied. |
 | Drive scope | Google Drive is the reference copy of the methodology and learnings; this session reads the repository mirror at `C:\Users\danie\Desktop\Sports Research`. **No Drive file is created, edited, moved or renamed from this workflow.** This log lives in the local `Mini logs (to be sent to actual log later)/` folder; the operator uploads it. |
@@ -66,6 +66,16 @@ The full set is in the governing files. These are the ones most often missed: th
 
 20. **`BASELINE_P` beside every ranked row** (`C-BASELINE-SKILL`). This is the naive population probability for the same contract, from games completed before this event, knowing only which side is at home. Examples: MLB total 7.5 Over ≈ 0.573 (2026 to date); MLB +1.5 ≈ 0.638 for either side; tennis winner 0.5. If no population exists, print `BASELINE_P: NOT_YET_DERIVED`. At settlement, append the decisions to `SKILL_BASELINE_LEDGER.md`. **The seed check found no skill over this baseline yet** (card 0.2461 v baseline 0.2360, n = 29). Beating it is the job.
 21. **Start with `CURRENT_RULES.md`**, and run `python tools/verify_manifest.py` before freezing. Work on a `session/<date>-<topic>` branch and merge through a pull request with green checks (`CONTRIBUTING.md`).
+
+**Added 2026-09-25(d): what the full settled record says** (598 probability rows, 149 cards; `research/settled_rows_2026-09-25/README.md`):
+
+22. **Calibration overall is good; the skill lives at p ≥ 0.65** (80.3% won). Rows at 0.50–0.65 are coin-flip-grade (53.6% won at 0.574): label them `LOW_RESOLUTION` and say so.
+23. **Every row is derived with `tools/card_math.py`** from the card's own centre and width. Print a **departure ledger** from `BASELINE_P`, naming the mechanism for every move (`C-DEPARTURE-LEDGER`), and the sport's **track-record row** (`C-TRACK-RECORD`).
+    - **Clear skill:** soccer.
+    - **Near-zero resolution:** MLB and basketball.
+    - **`NO_DEMONSTRATED_SKILL`:** tennis, NFL/NCAA and AFL.
+24. **Underdog cushions (+k.5) outside baseball won 17/40 at a stated 0.642 (M32).** Every such row prints the margin band, `BASELINE_P`, P(underdog wins) + P(loses by ≤ k) and the named reason it stays close (`C-PLUS-CUSHION`), or it is `PLUS_CUSHION_UNSUPPORTED`.
+25. **Settle in the canonical table:** `| Rank | Contract | Family | p | BASELINE_P | Result | Brier |` (`EXTERNAL_LOGGING_WORKFLOW.md` §"2026-09-25(d)").
 
 ## 1. Incomplete / Unsettled Logs
 

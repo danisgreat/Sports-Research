@@ -1,0 +1,1126 @@
+{
+ "overview": {
+  "graded_rows": 1179,
+  "cards": 307,
+  "p_rows": 598,
+  "p_cards": 149,
+  "p_rows_brier": 0.2249,
+  "decisions": 387,
+  "decision_brier": 0.2115,
+  "decision_win_rate": [
+   0.641,
+   0.592,
+   0.687
+  ],
+  "decision_mean_p": 0.641,
+  "p_range": [
+   58,
+   509
+  ]
+ },
+ "calibration_all_p_rows": [
+  {
+   "label": "0.00-0.40",
+   "n": 67,
+   "cards": 58,
+   "wins": 28,
+   "win_rate_ci": [
+    0.418,
+    0.307,
+    0.537
+   ],
+   "mean_p": 0.356,
+   "gap_(win-mean_p)": 0.062,
+   "brier": 0.2454
+  },
+  {
+   "label": "0.40-0.50",
+   "n": 144,
+   "cards": 98,
+   "wins": 71,
+   "win_rate_ci": [
+    0.493,
+    0.413,
+    0.574
+   ],
+   "mean_p": 0.444,
+   "gap_(win-mean_p)": 0.049,
+   "brier": 0.2514
+  },
+  {
+   "label": "0.50-0.55",
+   "n": 55,
+   "cards": 50,
+   "wins": 27,
+   "win_rate_ci": [
+    0.491,
+    0.364,
+    0.619
+   ],
+   "mean_p": 0.53,
+   "gap_(win-mean_p)": -0.039,
+   "brier": 0.2503
+  },
+  {
+   "label": "0.55-0.60",
+   "n": 113,
+   "cards": 88,
+   "wins": 62,
+   "win_rate_ci": [
+    0.549,
+    0.457,
+    0.637
+   ],
+   "mean_p": 0.567,
+   "gap_(win-mean_p)": -0.018,
+   "brier": 0.2471
+  },
+  {
+   "label": "0.60-0.65",
+   "n": 67,
+   "cards": 61,
+   "wins": 37,
+   "win_rate_ci": [
+    0.552,
+    0.434,
+    0.665
+   ],
+   "mean_p": 0.62,
+   "gap_(win-mean_p)": -0.068,
+   "brier": 0.2524
+  },
+  {
+   "label": "0.65-0.70",
+   "n": 50,
+   "cards": 43,
+   "wins": 36,
+   "win_rate_ci": [
+    0.72,
+    0.583,
+    0.825
+   ],
+   "mean_p": 0.67,
+   "gap_(win-mean_p)": 0.05,
+   "brier": 0.2041
+  },
+  {
+   "label": "0.70-0.80",
+   "n": 64,
+   "cards": 37,
+   "wins": 50,
+   "win_rate_ci": [
+    0.781,
+    0.666,
+    0.865
+   ],
+   "mean_p": 0.74,
+   "gap_(win-mean_p)": 0.041,
+   "brier": 0.1684
+  },
+  {
+   "label": "0.80-1.01",
+   "n": 38,
+   "cards": 19,
+   "wins": 36,
+   "win_rate_ci": [
+    0.947,
+    0.827,
+    0.985
+   ],
+   "mean_p": 0.85,
+   "gap_(win-mean_p)": 0.097,
+   "brier": 0.0593
+  }
+ ],
+ "logistic_calibration_all": {
+  "intercept": 0.07,
+  "slope": 1.062,
+  "se_slope": 0.16
+ },
+ "logistic_calibration_decisions": {
+  "intercept": -0.339,
+  "slope": 1.667,
+  "se_slope": 0.304
+ },
+ "hindsight_best_shrink_all": {
+  "lambda": 1.06,
+  "brier": 0.2248
+ },
+ "hindsight_best_shrink_decisions": {
+  "lambda": 1.15,
+  "brier": 0.2108
+ },
+ "decisions_by_family": [
+  {
+   "label": "total",
+   "n": 124,
+   "cards": 109,
+   "wins": 76,
+   "win_rate_ci": [
+    0.613,
+    0.525,
+    0.694
+   ],
+   "mean_p": 0.609,
+   "gap_(win-mean_p)": 0.004,
+   "brier": 0.2248
+  },
+  {
+   "label": "handicap",
+   "n": 111,
+   "cards": 109,
+   "wins": 60,
+   "win_rate_ci": [
+    0.541,
+    0.448,
+    0.63
+   ],
+   "mean_p": 0.611,
+   "gap_(win-mean_p)": -0.07,
+   "brier": 0.2361
+  },
+  {
+   "label": "phase",
+   "n": 47,
+   "cards": 40,
+   "wins": 36,
+   "win_rate_ci": [
+    0.766,
+    0.628,
+    0.864
+   ],
+   "mean_p": 0.677,
+   "gap_(win-mean_p)": 0.089,
+   "brier": 0.1732
+  },
+  {
+   "label": "other",
+   "n": 31,
+   "cards": 29,
+   "wins": 21,
+   "win_rate_ci": [
+    0.677,
+    0.501,
+    0.814
+   ],
+   "mean_p": 0.676,
+   "gap_(win-mean_p)": 0.001,
+   "brier": 0.204
+  },
+  {
+   "label": "corners",
+   "n": 26,
+   "cards": 24,
+   "wins": 19,
+   "win_rate_ci": [
+    0.731,
+    0.539,
+    0.863
+   ],
+   "mean_p": 0.649,
+   "gap_(win-mean_p)": 0.082,
+   "brier": 0.1984
+  },
+  {
+   "label": "team-total",
+   "n": 25,
+   "cards": 20,
+   "wins": 19,
+   "win_rate_ci": [
+    0.76,
+    0.566,
+    0.885
+   ],
+   "mean_p": 0.744,
+   "gap_(win-mean_p)": 0.016,
+   "brier": 0.1713
+  },
+  {
+   "label": "moneyline",
+   "n": 21,
+   "cards": 21,
+   "wins": 15,
+   "win_rate_ci": [
+    0.714,
+    0.5,
+    0.862
+   ],
+   "mean_p": 0.696,
+   "gap_(win-mean_p)": 0.018,
+   "brier": 0.1814
+  },
+  {
+   "label": "prop",
+   "n": 2,
+   "cards": 2,
+   "wins": 2,
+   "win_rate_ci": [
+    1.0,
+    0.342,
+    1.0
+   ],
+   "mean_p": 0.875,
+   "gap_(win-mean_p)": 0.125,
+   "brier": 0.0157
+  }
+ ],
+ "decisions_by_sport": [
+  {
+   "label": "soccer",
+   "n": 143,
+   "cards": 37,
+   "wins": 107,
+   "win_rate_ci": [
+    0.748,
+    0.671,
+    0.812
+   ],
+   "mean_p": 0.7,
+   "gap_(win-mean_p)": 0.048,
+   "brier": 0.1702
+  },
+  {
+   "label": "baseball-MLB",
+   "n": 70,
+   "cards": 34,
+   "wins": 41,
+   "win_rate_ci": [
+    0.586,
+    0.469,
+    0.694
+   ],
+   "mean_p": 0.596,
+   "gap_(win-mean_p)": -0.01,
+   "brier": 0.2379
+  },
+  {
+   "label": "baseball-NPB/KBO/CPBL",
+   "n": 56,
+   "cards": 23,
+   "wins": 36,
+   "win_rate_ci": [
+    0.643,
+    0.512,
+    0.755
+   ],
+   "mean_p": 0.623,
+   "gap_(win-mean_p)": 0.02,
+   "brier": 0.2162
+  },
+  {
+   "label": "cricket",
+   "n": 34,
+   "cards": 14,
+   "wins": 22,
+   "win_rate_ci": [
+    0.647,
+    0.479,
+    0.785
+   ],
+   "mean_p": 0.63,
+   "gap_(win-mean_p)": 0.017,
+   "brier": 0.2268
+  },
+  {
+   "label": "basketball",
+   "n": 31,
+   "cards": 17,
+   "wins": 18,
+   "win_rate_ci": [
+    0.581,
+    0.408,
+    0.736
+   ],
+   "mean_p": 0.586,
+   "gap_(win-mean_p)": -0.005,
+   "brier": 0.2406
+  },
+  {
+   "label": "tennis",
+   "n": 16,
+   "cards": 7,
+   "wins": 8,
+   "win_rate_ci": [
+    0.5,
+    0.28,
+    0.72
+   ],
+   "mean_p": 0.601,
+   "gap_(win-mean_p)": -0.101,
+   "brier": 0.2809
+  },
+  {
+   "label": "american-football",
+   "n": 12,
+   "cards": 6,
+   "wins": 3,
+   "win_rate_ci": [
+    0.25,
+    0.089,
+    0.532
+   ],
+   "mean_p": 0.544,
+   "gap_(win-mean_p)": -0.294,
+   "brier": 0.2759
+  },
+  {
+   "label": "AFL",
+   "n": 10,
+   "cards": 4,
+   "wins": 3,
+   "win_rate_ci": [
+    0.3,
+    0.108,
+    0.603
+   ],
+   "mean_p": 0.662,
+   "gap_(win-mean_p)": -0.362,
+   "brier": 0.2565
+  },
+  {
+   "label": "rugby",
+   "n": 10,
+   "cards": 5,
+   "wins": 7,
+   "win_rate_ci": [
+    0.7,
+    0.397,
+    0.892
+   ],
+   "mean_p": 0.566,
+   "gap_(win-mean_p)": 0.134,
+   "brier": 0.2173
+  },
+  {
+   "label": "ice-hockey",
+   "n": 3,
+   "cards": 1,
+   "wins": 2,
+   "win_rate_ci": [
+    0.667,
+    0.208,
+    0.939
+   ],
+   "mean_p": 0.618,
+   "gap_(win-mean_p)": 0.049,
+   "brier": 0.1776
+  },
+  {
+   "label": "unclassified",
+   "n": 2,
+   "cards": 1,
+   "wins": 1,
+   "win_rate_ci": [
+    0.5,
+    0.095,
+    0.905
+   ],
+   "mean_p": 0.645,
+   "gap_(win-mean_p)": -0.145,
+   "brier": 0.2466
+  }
+ ],
+ "decisions_by_rank": [
+  {
+   "label": "rank 1",
+   "n": 144,
+   "cards": 144,
+   "wins": 94,
+   "win_rate_ci": [
+    0.653,
+    0.572,
+    0.726
+   ],
+   "mean_p": 0.66,
+   "gap_(win-mean_p)": -0.007,
+   "brier": 0.2124
+  },
+  {
+   "label": "rank 2",
+   "n": 131,
+   "cards": 131,
+   "wins": 79,
+   "win_rate_ci": [
+    0.603,
+    0.517,
+    0.683
+   ],
+   "mean_p": 0.616,
+   "gap_(win-mean_p)": -0.013,
+   "brier": 0.2217
+  },
+  {
+   "label": "rank 3",
+   "n": 57,
+   "cards": 57,
+   "wins": 37,
+   "win_rate_ci": [
+    0.649,
+    0.519,
+    0.76
+   ],
+   "mean_p": 0.653,
+   "gap_(win-mean_p)": -0.004,
+   "brier": 0.1932
+  },
+  {
+   "label": "rank 4",
+   "n": 37,
+   "cards": 37,
+   "wins": 23,
+   "win_rate_ci": [
+    0.622,
+    0.461,
+    0.759
+   ],
+   "mean_p": 0.643,
+   "gap_(win-mean_p)": -0.021,
+   "brier": 0.2226
+  },
+  {
+   "label": "rank 5",
+   "n": 18,
+   "cards": 18,
+   "wins": 15,
+   "win_rate_ci": [
+    0.833,
+    0.608,
+    0.942
+   ],
+   "mean_p": 0.628,
+   "gap_(win-mean_p)": 0.205,
+   "brier": 0.1638
+  }
+ ],
+ "totals_direction": [
+  {
+   "label": "Over",
+   "n": 99,
+   "cards": 74,
+   "wins": 64,
+   "win_rate_ci": [
+    0.646,
+    0.548,
+    0.734
+   ],
+   "mean_p": 0.635,
+   "gap_(win-mean_p)": 0.011,
+   "brier": 0.2179
+  },
+  {
+   "label": "Under",
+   "n": 95,
+   "cards": 72,
+   "wins": 65,
+   "win_rate_ci": [
+    0.684,
+    0.585,
+    0.769
+   ],
+   "mean_p": 0.648,
+   "gap_(win-mean_p)": 0.036,
+   "brier": 0.1954
+  }
+ ],
+ "direction_total": [
+  {
+   "label": "Over",
+   "n": 56,
+   "cards": 55,
+   "wins": 33,
+   "win_rate_ci": [
+    0.589,
+    0.459,
+    0.708
+   ],
+   "mean_p": 0.594,
+   "gap_(win-mean_p)": -0.005,
+   "brier": 0.2303
+  },
+  {
+   "label": "Under",
+   "n": 68,
+   "cards": 63,
+   "wins": 43,
+   "win_rate_ci": [
+    0.632,
+    0.514,
+    0.737
+   ],
+   "mean_p": 0.622,
+   "gap_(win-mean_p)": 0.01,
+   "brier": 0.2204
+  }
+ ],
+ "direction_phase": [
+  {
+   "label": "Over",
+   "n": 28,
+   "cards": 27,
+   "wins": 21,
+   "win_rate_ci": [
+    0.75,
+    0.566,
+    0.873
+   ],
+   "mean_p": 0.672,
+   "gap_(win-mean_p)": 0.078,
+   "brier": 0.1913
+  },
+  {
+   "label": "Under",
+   "n": 17,
+   "cards": 15,
+   "wins": 13,
+   "win_rate_ci": [
+    0.765,
+    0.527,
+    0.904
+   ],
+   "mean_p": 0.679,
+   "gap_(win-mean_p)": 0.086,
+   "brier": 0.1544
+  }
+ ],
+ "direction_team-total": [
+  {
+   "label": "Over",
+   "n": 15,
+   "cards": 14,
+   "wins": 10,
+   "win_rate_ci": [
+    0.667,
+    0.417,
+    0.848
+   ],
+   "mean_p": 0.721,
+   "gap_(win-mean_p)": -0.054,
+   "brier": 0.2217
+  },
+  {
+   "label": "Under",
+   "n": 10,
+   "cards": 9,
+   "wins": 9,
+   "win_rate_ci": [
+    0.9,
+    0.596,
+    0.982
+   ],
+   "mean_p": 0.779,
+   "gap_(win-mean_p)": 0.121,
+   "brier": 0.0957
+  }
+ ],
+ "totals_direction_by_sport": [
+  {
+   "label": "baseball-MLB Over",
+   "n": 15,
+   "cards": 14,
+   "wins": 9,
+   "win_rate_ci": [
+    0.6,
+    0.357,
+    0.802
+   ],
+   "mean_p": 0.578,
+   "gap_(win-mean_p)": 0.022,
+   "brier": 0.2589
+  },
+  {
+   "label": "baseball-MLB Under",
+   "n": 10,
+   "cards": 9,
+   "wins": 5,
+   "win_rate_ci": [
+    0.5,
+    0.237,
+    0.763
+   ],
+   "mean_p": 0.565,
+   "gap_(win-mean_p)": -0.065,
+   "brier": 0.2656
+  },
+  {
+   "label": "baseball-NPB/KBO/CPBL Over",
+   "n": 9,
+   "cards": 7,
+   "wins": 4,
+   "win_rate_ci": [
+    0.444,
+    0.189,
+    0.733
+   ],
+   "mean_p": 0.6,
+   "gap_(win-mean_p)": -0.156,
+   "brier": 0.2703
+  },
+  {
+   "label": "baseball-NPB/KBO/CPBL Under",
+   "n": 14,
+   "cards": 11,
+   "wins": 11,
+   "win_rate_ci": [
+    0.786,
+    0.524,
+    0.924
+   ],
+   "mean_p": 0.607,
+   "gap_(win-mean_p)": 0.179,
+   "brier": 0.2021
+  },
+  {
+   "label": "basketball Under",
+   "n": 8,
+   "cards": 8,
+   "wins": 5,
+   "win_rate_ci": [
+    0.625,
+    0.306,
+    0.863
+   ],
+   "mean_p": 0.608,
+   "gap_(win-mean_p)": 0.017,
+   "brier": 0.2305
+  },
+  {
+   "label": "cricket Over",
+   "n": 12,
+   "cards": 9,
+   "wins": 7,
+   "win_rate_ci": [
+    0.583,
+    0.32,
+    0.807
+   ],
+   "mean_p": 0.631,
+   "gap_(win-mean_p)": -0.048,
+   "brier": 0.2287
+  },
+  {
+   "label": "cricket Under",
+   "n": 12,
+   "cards": 9,
+   "wins": 9,
+   "win_rate_ci": [
+    0.75,
+    0.468,
+    0.911
+   ],
+   "mean_p": 0.589,
+   "gap_(win-mean_p)": 0.161,
+   "brier": 0.2096
+  },
+  {
+   "label": "soccer Over",
+   "n": 51,
+   "cards": 32,
+   "wins": 38,
+   "win_rate_ci": [
+    0.745,
+    0.611,
+    0.845
+   ],
+   "mean_p": 0.674,
+   "gap_(win-mean_p)": 0.071,
+   "brier": 0.1843
+  },
+  {
+   "label": "soccer Under",
+   "n": 40,
+   "cards": 24,
+   "wins": 30,
+   "win_rate_ci": [
+    0.75,
+    0.598,
+    0.858
+   ],
+   "mean_p": 0.735,
+   "gap_(win-mean_p)": 0.015,
+   "brier": 0.1443
+  },
+  {
+   "label": "tennis Over",
+   "n": 5,
+   "cards": 5,
+   "wins": 3,
+   "win_rate_ci": [
+    0.6,
+    0.231,
+    0.882
+   ],
+   "mean_p": 0.618,
+   "gap_(win-mean_p)": -0.018,
+   "brier": 0.2595
+  }
+ ],
+ "handicap_sign": [
+  {
+   "label": "plus",
+   "n": 85,
+   "cards": 83,
+   "wins": 44,
+   "win_rate_ci": [
+    0.518,
+    0.413,
+    0.621
+   ],
+   "mean_p": 0.627,
+   "gap_(win-mean_p)": -0.109,
+   "brier": 0.235
+  },
+  {
+   "label": "minus",
+   "n": 26,
+   "cards": 26,
+   "wins": 16,
+   "win_rate_ci": [
+    0.615,
+    0.425,
+    0.776
+   ],
+   "mean_p": 0.559,
+   "gap_(win-mean_p)": 0.056,
+   "brier": 0.2397
+  }
+ ],
+ "handicap_sign_by_sport": [
+  {
+   "label": "american-football plus",
+   "n": 6,
+   "cards": 6,
+   "wins": 1,
+   "win_rate_ci": [
+    0.167,
+    0.03,
+    0.564
+   ],
+   "mean_p": 0.554,
+   "gap_(win-mean_p)": -0.387,
+   "brier": 0.2877
+  },
+  {
+   "label": "baseball-MLB plus",
+   "n": 30,
+   "cards": 28,
+   "wins": 18,
+   "win_rate_ci": [
+    0.6,
+    0.423,
+    0.754
+   ],
+   "mean_p": 0.604,
+   "gap_(win-mean_p)": -0.004,
+   "brier": 0.2214
+  },
+  {
+   "label": "baseball-MLB minus",
+   "n": 6,
+   "cards": 6,
+   "wins": 3,
+   "win_rate_ci": [
+    0.5,
+    0.188,
+    0.812
+   ],
+   "mean_p": 0.553,
+   "gap_(win-mean_p)": -0.053,
+   "brier": 0.2633
+  },
+  {
+   "label": "baseball-NPB/KBO/CPBL plus",
+   "n": 15,
+   "cards": 15,
+   "wins": 9,
+   "win_rate_ci": [
+    0.6,
+    0.357,
+    0.802
+   ],
+   "mean_p": 0.631,
+   "gap_(win-mean_p)": -0.031,
+   "brier": 0.2143
+  },
+  {
+   "label": "baseball-NPB/KBO/CPBL minus",
+   "n": 6,
+   "cards": 6,
+   "wins": 4,
+   "win_rate_ci": [
+    0.667,
+    0.3,
+    0.903
+   ],
+   "mean_p": 0.575,
+   "gap_(win-mean_p)": 0.092,
+   "brier": 0.215
+  },
+  {
+   "label": "basketball plus",
+   "n": 8,
+   "cards": 8,
+   "wins": 3,
+   "win_rate_ci": [
+    0.375,
+    0.137,
+    0.694
+   ],
+   "mean_p": 0.58,
+   "gap_(win-mean_p)": -0.205,
+   "brier": 0.2683
+  },
+  {
+   "label": "basketball minus",
+   "n": 9,
+   "cards": 9,
+   "wins": 6,
+   "win_rate_ci": [
+    0.667,
+    0.354,
+    0.879
+   ],
+   "mean_p": 0.554,
+   "gap_(win-mean_p)": 0.113,
+   "brier": 0.2362
+  },
+  {
+   "label": "soccer plus",
+   "n": 13,
+   "cards": 13,
+   "wins": 8,
+   "win_rate_ci": [
+    0.615,
+    0.355,
+    0.823
+   ],
+   "mean_p": 0.766,
+   "gap_(win-mean_p)": -0.151,
+   "brier": 0.2106
+  }
+ ],
+ "trend_decisions": [
+  {
+   "label": "P-318..344",
+   "n": 31,
+   "cards": 13,
+   "wins": 19,
+   "win_rate_ci": [
+    0.613,
+    0.438,
+    0.763
+   ],
+   "mean_p": 0.594,
+   "gap_(win-mean_p)": 0.019,
+   "brier": 0.2436
+  },
+  {
+   "label": "P-345..371",
+   "n": 82,
+   "cards": 26,
+   "wins": 49,
+   "win_rate_ci": [
+    0.598,
+    0.489,
+    0.697
+   ],
+   "mean_p": 0.638,
+   "gap_(win-mean_p)": -0.04,
+   "brier": 0.2399
+  },
+  {
+   "label": "P-373..423",
+   "n": 116,
+   "cards": 48,
+   "wins": 72,
+   "win_rate_ci": [
+    0.621,
+    0.53,
+    0.704
+   ],
+   "mean_p": 0.615,
+   "gap_(win-mean_p)": 0.006,
+   "brier": 0.2123
+  },
+  {
+   "label": "P-424..451",
+   "n": 72,
+   "cards": 23,
+   "wins": 54,
+   "win_rate_ci": [
+    0.75,
+    0.639,
+    0.836
+   ],
+   "mean_p": 0.725,
+   "gap_(win-mean_p)": 0.025,
+   "brier": 0.164
+  },
+  {
+   "label": "P-452..481",
+   "n": 43,
+   "cards": 18,
+   "wins": 29,
+   "win_rate_ci": [
+    0.674,
+    0.525,
+    0.795
+   ],
+   "mean_p": 0.655,
+   "gap_(win-mean_p)": 0.019,
+   "brier": 0.1944
+  },
+  {
+   "label": "P-482..509",
+   "n": 41,
+   "cards": 20,
+   "wins": 25,
+   "win_rate_ci": [
+    0.61,
+    0.457,
+    0.743
+   ],
+   "mean_p": 0.595,
+   "gap_(win-mean_p)": 0.015,
+   "brier": 0.223
+  }
+ ],
+ "rank_slot_all_graded": [
+  {
+   "label": "rank 1",
+   "n": 292,
+   "cards": 290,
+   "wins": 194,
+   "win_rate_ci": [
+    0.664,
+    0.608,
+    0.716
+   ]
+  },
+  {
+   "label": "rank 2",
+   "n": 278,
+   "cards": 276,
+   "wins": 156,
+   "win_rate_ci": [
+    0.561,
+    0.502,
+    0.618
+   ]
+  },
+  {
+   "label": "rank 3",
+   "n": 275,
+   "cards": 273,
+   "wins": 153,
+   "win_rate_ci": [
+    0.556,
+    0.497,
+    0.614
+   ]
+  },
+  {
+   "label": "rank 4",
+   "n": 274,
+   "cards": 270,
+   "wins": 148,
+   "win_rate_ci": [
+    0.54,
+    0.481,
+    0.598
+   ]
+  },
+  {
+   "label": "rank 5",
+   "n": 56,
+   "cards": 55,
+   "wins": 32,
+   "win_rate_ci": [
+    0.571,
+    0.441,
+    0.692
+   ]
+  }
+ ],
+ "rank_slot_ordinal_era": [
+  {
+   "label": "rank 1 (no p)",
+   "n": 148,
+   "cards": 146,
+   "wins": 100,
+   "win_rate_ci": [
+    0.676,
+    0.597,
+    0.746
+   ]
+  },
+  {
+   "label": "rank 2 (no p)",
+   "n": 137,
+   "cards": 135,
+   "wins": 71,
+   "win_rate_ci": [
+    0.518,
+    0.435,
+    0.6
+   ]
+  },
+  {
+   "label": "rank 3 (no p)",
+   "n": 134,
+   "cards": 132,
+   "wins": 74,
+   "win_rate_ci": [
+    0.552,
+    0.468,
+    0.634
+   ]
+  },
+  {
+   "label": "rank 4 (no p)",
+   "n": 134,
+   "cards": 133,
+   "wins": 78,
+   "win_rate_ci": [
+    0.582,
+    0.497,
+    0.662
+   ]
+  }
+ ],
+ "direction_all_graded": [
+  {
+   "label": "Over rows ranked 1-2 (all eras)",
+   "n": 118,
+   "cards": 103,
+   "wins": 77,
+   "win_rate_ci": [
+    0.653,
+    0.563,
+    0.732
+   ]
+  },
+  {
+   "label": "Under rows ranked 1-2 (all eras)",
+   "n": 144,
+   "cards": 131,
+   "wins": 87,
+   "win_rate_ci": [
+    0.604,
+    0.523,
+    0.68
+   ]
+  }
+ ],
+ "top_two": {
+  "cards": 264,
+  "both_win": 99,
+  "both_lose": 38,
+  "split": 127,
+  "P(both lose)": [
+   0.144,
+   0.107,
+   0.191
+  ],
+  "P(R1 lose)*P(R2 lose) if independent": 0.145
+ }
+}

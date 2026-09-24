@@ -714,3 +714,13 @@ ITF and UTR are `NOT_YET_DERIVED`: ESPN does not carry them.
 5. **Audit.** Field `HC` in `audit_card_controls.py`: advisory, blocking under `--strict`.
 
 **TE-R3. Reference only, no rule.** Women's qualifying matches ran slightly shorter than main-draw matches (mean 21.28 v 21.95; P(deciding) 0.313 v 0.352). Print the population that matches the card.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — track record from the full settled-row review
+
+**Track record (`C-TRACK-RECORD`).** 16 decisions from 7 cards: won **50.0%** at a mean stated 0.601. Brier **0.281**, worse than a coin flip. Tennis cards are labelled **`NO_DEMONSTRATED_SKILL`**: the evidence grade is capped at LOW and the departure ledger is required.
+
+- **Games-handicap cushions (+k.5): 1/4** at 0.58. `C-PLUS-CUSHION` applies alongside `C-HCP-COHERENCE` (TE-R2).
+- **Practical consequence.** The Elo benchmark (TE-P5) and the population rates (TE-R1) are the starting point. A winner probability far from the Elo implied probability, or a total far from the P(deciding set) reference, needs the serve/return numerators that justify it. Otherwise the card stays near the benchmark.
+
+Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".

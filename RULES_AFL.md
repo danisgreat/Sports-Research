@@ -626,3 +626,13 @@ Use a joint team-score/margin distribution driven by current personnel, venue di
 
 
 Current prospective override. Retain scoring-shot opportunity versus conversion, role/selection/bench, venue/weather, quarter-state exposure and three-source finality. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, normalized-distance ordering and one-result response rules. Build one coherent AFL/AFLW joint outcome distribution before querying targets; do not invent precise probabilities without a fitted/calibrated distribution.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — track record from the full settled-row review
+
+**Track record (`C-TRACK-RECORD`).** 10 decisions from 4 cards: won **30%** at a mean stated 0.662. The gap is −0.36, with a card-cluster interval of [−0.60, −0.10]: **over-confident**. AFL cards are labelled **`NO_DEMONSTRATED_SKILL`**: the evidence grade is capped at LOW and the departure ledger is required.
+
+- **Underdog cushions (+k.5): 0/3.** `C-PLUS-CUSHION` applies.
+- **Missing reference.** There is no AFL population reference yet (`BASELINE_P: NOT_YET_DERIVED`). Deriving an AFL margin and total population from the field owner is the first step to an honest baseline.
+
+Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".

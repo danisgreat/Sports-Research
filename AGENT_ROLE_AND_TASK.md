@@ -234,3 +234,14 @@ These steps extend step 3 of the execution order above. Home: `RULES_GENERAL.md`
 - **Start every session with `CURRENT_RULES.md`**, the step-0 live summary. The full reading gate (`RULES_GENERAL.md` §1) still applies.
 - **Print `BASELINE_P` beside every ranked row** at issue (`C-BASELINE-SKILL`). At settlement, append the decisions to `SKILL_BASELINE_LEDGER.md`.
 - **Work on a branch and merge through a pull request with green checks** (`CONTRIBUTING.md`). Never commit dependency trees, build output, local settings or odds material.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — what the full settled record requires of each card
+
+- **Derive the rows.** Every row comes from the card's own distribution via `tools/card_math.py` (M14).
+- **Itemise the departure** from `BASELINE_P` by named mechanism (`C-DEPARTURE-LEDGER`).
+- **Print the sport's own track record** (`C-TRACK-RECORD`). Tennis, NFL/NCAA and AFL cards carry `NO_DEMONSTRATED_SKILL`.
+- **Label rows at 0.50–0.65 `LOW_RESOLUTION`.** Historically they were coin flips.
+- **Decompose any non-baseball +k.5 cushion** (`C-PLUS-CUSHION`; M32).
+
+None of these changes a number. Together they make over-confidence visible where the record shows it lives.

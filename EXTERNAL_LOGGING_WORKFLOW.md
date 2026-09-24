@@ -585,3 +585,27 @@ Home: `RULES_GENERAL.md` §"2026-09-25(b)". These steps apply to every card sett
    A direct commit to `main` is a process defect (`C-BRANCH-PR`). The `cb95acd` invented process record is the reason.
 3. **Manifests.** If the pass edits any governance file, regenerate the receipt with `tools/make_manifest.py`, repoint `METHOD.md` and the active mini log, and confirm with `tools/verify_manifest.py`. The living logs (Part 5, the status register) are exempt from matching.
 4. **Commands for new cohorts** (supersedes item 3 of §"2026-09-25"): `python audit_card_controls.py <log.md> --settlement --strict` (add `--allow-empty` for an empty active log), `python tools/skill_baseline.py` and `python tools/repo_hygiene.py`.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — canonical settlement table and the 25-card review
+
+1. **Canonical settlement table.** Every settlement block grades its rows in exactly this table, so the settled-row dataset rebuilds without heuristics:
+
+   ```text
+   | Rank | Contract | Family | p | BASELINE_P | Result | Brier |
+   |---|---|---|---:|---:|---|---:|
+   | 1 | Combined Total: Under 184.5 | total | 0.613 | 0.530 | LOSS | 0.3758 |
+   ```
+
+   - The card ID is in the heading or line directly above the table.
+   - `Family` is one of: total, team-total, phase, handicap, moneyline, corners, prop, other.
+   - `Result` is WIN, LOSS, PUSH or VOID.
+   - `p` and `BASELINE_P` are copied from the issued card (`C-SUMMARY-FROM-CARD`).
+2. **The 25-card review** (`SCORING_AND_VALIDATION.md` §14). Rebuild the dataset and report:
+   ```bash
+   python research/settled_rows_2026-09-25/extract_settled_rows.py
+   python tools/calibration_report.py
+   python tools/skill_baseline.py
+   ```
+   Paste the reliability table, Murphy decomposition, slope and the over-confident slices into the review. Update the `C-TRACK-RECORD` rows in `UPCOMING_GAME_RESEARCH_GUIDE.md` step 10 and `CURRENT_RULES.md`. Record the tests' progress (`T-PLUS-CUSHION`, `C-LOW-RESOLUTION-BAND`, `T-TOTAL-DIRECTION-LEAGUE`, `C-PROB-EXTREMITY`).
+3. **No shrink, weight or cap** is ever derived from these reports (`L-087`). They drive labels, disclosures and tests only.

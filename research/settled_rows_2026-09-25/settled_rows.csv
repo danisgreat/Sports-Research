@@ -1,0 +1,1186 @@
+card,num,sport,rank,n_ranks,contract,family,direction,p,result,source,event
+P-002,2,baseball-MLB,1,2,Marlins +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:919,Philadelphia Phillies @ Miami Marlins (MLB regular season)
+P-002,2,baseball-MLB,4,2,Phillies −1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:922,Philadelphia Phillies @ Miami Marlins (MLB regular season)
+P-005,5,baseball-MLB,1,2,Tampa Bay Rays moneyline,moneyline,,,W,PREDICTION_LOG_COMBINED.md:1391,Texas Rangers @ Tampa Bay Rays (MLB regular season)
+P-005,5,baseball-MLB,3,2,Texas Rangers +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:1393,Texas Rangers @ Tampa Bay Rays (MLB regular season)
+P-008,8,baseball-MLB,1,2,,other,,,W,PREDICTION_LOG_COMBINED.md:1869,"New York Yankees @ Chicago Cubs, MLB regular season"
+P-008,8,baseball-MLB,2,2,,other,,,L,PREDICTION_LOG_COMBINED.md:1870,"New York Yankees @ Chicago Cubs, MLB regular season"
+P-010,10,AFL,1,2,,other,,,W,PREDICTION_LOG_COMBINED.md:2439,"Carlton v Brisbane Lions, AFL Round 21 — FORECAST (locked 2026-08-01T08:56:26Z / 18:56:26 AEST)"
+P-010,10,AFL,4,2,,other,,,L,PREDICTION_LOG_COMBINED.md:2442,"Carlton v Brisbane Lions, AFL Round 21 — FORECAST (locked 2026-08-01T08:56:26Z / 18:56:26 AEST)"
+P-011,11,baseball-MLB,1,2,Arizona Diamondbacks +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:2827,Arizona Diamondbacks @ Cleveland Guardians — PREGAME CARD
+P-011,11,baseball-MLB,2,2,Cleveland Guardians ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:2828,Arizona Diamondbacks @ Cleveland Guardians — PREGAME CARD
+P-014,14,baseball-MLB,1,2,,other,,,W,PREDICTION_LOG_COMBINED.md:3391,San Diego Padres (Michael King) at Arizona Diamondbacks (Brandon Pfaadt)
+P-014,14,baseball-MLB,3,2,,other,,,L,PREDICTION_LOG_COMBINED.md:3393,San Diego Padres (Michael King) at Arizona Diamondbacks (Brandon Pfaadt)
+P-016,16,baseball-NPB/KBO/CPBL,2,2,,other,,,L,PREDICTION_LOG_COMBINED.md:3749,"Kiwoom Heroes at Lotte Giants, KBO regular season"
+P-016,16,baseball-NPB/KBO/CPBL,3,2,,other,,,W,PREDICTION_LOG_COMBINED.md:3750,"Kiwoom Heroes at Lotte Giants, KBO regular season"
+P-022,22,baseball-MLB,2,2,,other,,,W,PREDICTION_LOG_COMBINED.md:4977,"Los Angeles Angels (Ryan Johnson) at Baltimore Orioles (Brandon Young), MLB"
+P-022,22,baseball-MLB,3,2,,other,,,W,PREDICTION_LOG_COMBINED.md:4978,"Los Angeles Angels (Ryan Johnson) at Baltimore Orioles (Brandon Young), MLB"
+P-026,26,cricket,2,2,Hawthorn +14.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:5644,"Birmingham Phoenix Women v Sunrisers Leeds Women, The Hundred 2026 - START-CROSSED/PRE-DELIVERY FORECAST (appended 2026-"
+P-026,26,cricket,4,2,Brisbane Lions -9.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:5646,"Birmingham Phoenix Women v Sunrisers Leeds Women, The Hundred 2026 - START-CROSSED/PRE-DELIVERY FORECAST (appended 2026-"
+P-035,35,basketball,1,11,H1 Over 84.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:8015,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,1,11,Q1 Over 42.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:8027,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,2,11,Full Under 174.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:8016,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,2,11,H1 Over 84.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:8028,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,3,11,Q1 Over 42.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:8017,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,3,11,Full Under 174.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:8029,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,4,11,Q1 Under 42.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:8018,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,4,11,Full Over 174.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:8030,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,5,11,Full Over 174.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:8019,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,5,11,Q1 Under 42.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:8031,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-035,35,basketball,6,11,H1 Under 84.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:8032,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST"
+P-036,36,baseball-MLB,1,6,Phillies ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:8061,Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams
+P-036,36,baseball-MLB,2,6,Under 8.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:8054,Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams
+P-036,36,baseball-MLB,2,6,Twins ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:8062,Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams
+P-036,36,baseball-MLB,3,6,Phillies ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:8055,Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams
+P-036,36,baseball-MLB,3,6,Under 8.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:8063,Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams
+P-036,36,baseball-MLB,4,6,Over 8.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:8064,Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams
+P-037,37,cricket,1,4,Jamaica first innings Under 173.5,phase,Under,,W,PREDICTION_LOG_COMBINED.md:8115,Jamaica Kingsmen vs Guyana Amazon Warriors — CPL
+P-037,37,cricket,2,4,Jamaica first six Under 50.5,phase,Under,,W,PREDICTION_LOG_COMBINED.md:8116,Jamaica Kingsmen vs Guyana Amazon Warriors — CPL
+P-037,37,cricket,3,4,Jamaica first innings Over 173.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:8117,Jamaica Kingsmen vs Guyana Amazon Warriors — CPL
+P-037,37,cricket,4,4,Jamaica first six Over 50.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:8118,Jamaica Kingsmen vs Guyana Amazon Warriors — CPL
+P-038,38,cricket,1,4,Bangladesh first innings Over 250.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:9735,Australia vs Bangladesh — 1st Test
+P-038,38,cricket,2,4,Tanzid Hasan Tamim 100+,other,,,W,PREDICTION_LOG_COMBINED.md:9736,Australia vs Bangladesh — 1st Test
+P-038,38,cricket,3,4,Bangladesh first innings Over 356.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:9737,Australia vs Bangladesh — 1st Test
+P-038,38,cricket,4,4,Bangladesh first innings Under 356.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:9738,Australia vs Bangladesh — 1st Test
+P-040,40,AFL,1,6,Adelaide Crows +23.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:8937,Fremantle vs Adelaide Crows — AFL
+P-040,40,AFL,1,6,Combined Total Under 176.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:8941,Fremantle vs Adelaide Crows — AFL
+P-040,40,AFL,2,6,Combined Total Over 168.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:8938,Fremantle vs Adelaide Crows — AFL
+P-040,40,AFL,3,6,Combined Total Under 168.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:8939,Fremantle vs Adelaide Crows — AFL
+P-040,40,AFL,3,6,Adelaide Crows -23.5,handicap,minus,,V,PREDICTION_LOG_COMBINED.md:8942,Fremantle vs Adelaide Crows — AFL
+P-040,40,AFL,4,6,Fremantle -23.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:8940,Fremantle vs Adelaide Crows — AFL
+P-041,41,soccer,1,4,Total goals Under 4.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:9247,"Wolverhampton Wanderers v Blackburn Rovers, EFL Championship Round 1 — PREGAME FORECAST (appended 2026-08-15T02:07:19+10"
+P-041,41,soccer,2,4,Wolves +0.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:9248,"Wolverhampton Wanderers v Blackburn Rovers, EFL Championship Round 1 — PREGAME FORECAST (appended 2026-08-15T02:07:19+10"
+P-041,41,soccer,3,4,Total goals Over 1.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:9249,"Wolverhampton Wanderers v Blackburn Rovers, EFL Championship Round 1 — PREGAME FORECAST (appended 2026-08-15T02:07:19+10"
+P-041,41,soccer,4,4,Total corners Over 8.5,corners,Over,,W,PREDICTION_LOG_COMBINED.md:9250,"Wolverhampton Wanderers v Blackburn Rovers, EFL Championship Round 1 — PREGAME FORECAST (appended 2026-08-15T02:07:19+10"
+P-042,42,cricket,1,4,MSG first innings Under 162.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:9271,"Manchester Super Giants Men v Sunrisers Leeds Men, The Hundred Eliminator — LIVE FORECAST (appended 2026-08-15T03:01:20+"
+P-042,42,cricket,2,4,MSG first 25 balls Under 38.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:9272,"Manchester Super Giants Men v Sunrisers Leeds Men, The Hundred Eliminator — LIVE FORECAST (appended 2026-08-15T03:01:20+"
+P-042,42,cricket,3,4,MSG first 25 balls Over 38.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:9273,"Manchester Super Giants Men v Sunrisers Leeds Men, The Hundred Eliminator — LIVE FORECAST (appended 2026-08-15T03:01:20+"
+P-042,42,cricket,4,4,MSG first innings Over 162.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:9274,"Manchester Super Giants Men v Sunrisers Leeds Men, The Hundred Eliminator — LIVE FORECAST (appended 2026-08-15T03:01:20+"
+P-043,43,baseball-MLB,1,4,Chicago Cubs -1.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:9297,"St. Louis Cardinals at Chicago Cubs, MLB — PREGAME FORECAST (appended 2026-08-15T04:16:53+10:00)"
+P-043,43,baseball-MLB,2,4,Combined Over 8.0,total,Over,,L,PREDICTION_LOG_COMBINED.md:9298,"St. Louis Cardinals at Chicago Cubs, MLB — PREGAME FORECAST (appended 2026-08-15T04:16:53+10:00)"
+P-043,43,baseball-MLB,3,4,St. Louis Cardinals +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:9299,"St. Louis Cardinals at Chicago Cubs, MLB — PREGAME FORECAST (appended 2026-08-15T04:16:53+10:00)"
+P-043,43,baseball-MLB,4,4,Combined Under 8.0,total,Under,,W,PREDICTION_LOG_COMBINED.md:9300,"St. Louis Cardinals at Chicago Cubs, MLB — PREGAME FORECAST (appended 2026-08-15T04:16:53+10:00)"
+P-044,44,AFL,1,4,Under 83.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:9443,"Richmond v Collingwood, AFLW — PREGAME FORECAST (appended 2026-08-15T16:58:00+10:00)"
+P-044,44,AFL,2,4,Richmond -3.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:9444,"Richmond v Collingwood, AFLW — PREGAME FORECAST (appended 2026-08-15T16:58:00+10:00)"
+P-044,44,AFL,3,4,Collingwood +3.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:9445,"Richmond v Collingwood, AFLW — PREGAME FORECAST (appended 2026-08-15T16:58:00+10:00)"
+P-044,44,AFL,4,4,Over 83.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:9446,"Richmond v Collingwood, AFLW — PREGAME FORECAST (appended 2026-08-15T16:58:00+10:00)"
+P-045,45,AFL,1,4,Collingwood +21.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:9531,"Hawthorn v Collingwood, AFL — PREGAME FORECAST (appended 2026-08-15T19:35:00+10:00)"
+P-045,45,AFL,2,4,Over 173.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:9532,"Hawthorn v Collingwood, AFL — PREGAME FORECAST (appended 2026-08-15T19:35:00+10:00)"
+P-045,45,AFL,3,4,Under 173.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:9533,"Hawthorn v Collingwood, AFL — PREGAME FORECAST (appended 2026-08-15T19:35:00+10:00)"
+P-045,45,AFL,4,4,Hawthorn -21.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:9534,"Hawthorn v Collingwood, AFL — PREGAME FORECAST (appended 2026-08-15T19:35:00+10:00)"
+P-046,46,soccer,1,4,Under 4.5 total goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:9749,"Chelsea v Real Sociedad, soccer — PREGAME FORECAST (appended 2026-08-15T22:49:00+10:00)"
+P-046,46,soccer,2,4,Over 1.5 total goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:9750,"Chelsea v Real Sociedad, soccer — PREGAME FORECAST (appended 2026-08-15T22:49:00+10:00)"
+P-046,46,soccer,3,4,Chelsea Over 1.5 team goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:9751,"Chelsea v Real Sociedad, soccer — PREGAME FORECAST (appended 2026-08-15T22:49:00+10:00)"
+P-046,46,soccer,4,4,Chelsea Over 3.5 team corners,corners,Over,,W,PREDICTION_LOG_COMBINED.md:9752,"Chelsea v Real Sociedad, soccer — PREGAME FORECAST (appended 2026-08-15T22:49:00+10:00)"
+P-047,47,soccer,1,4,Bayern Over 1.5 team goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:9763,"Bayern Munich v RB Leipzig, soccer — PREGAME FORECAST (appended 2026-08-15T22:59:00+10:00)"
+P-047,47,soccer,2,4,Bayern Over 3.5 team corners,corners,Over,,L,PREDICTION_LOG_COMBINED.md:9764,"Bayern Munich v RB Leipzig, soccer — PREGAME FORECAST (appended 2026-08-15T22:59:00+10:00)"
+P-047,47,soccer,3,4,Over 2.5 total goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:9765,"Bayern Munich v RB Leipzig, soccer — PREGAME FORECAST (appended 2026-08-15T22:59:00+10:00)"
+P-047,47,soccer,4,4,Leipzig Under 1.5 team goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:9766,"Bayern Munich v RB Leipzig, soccer — PREGAME FORECAST (appended 2026-08-15T22:59:00+10:00)"
+P-048,48,AFL,1,4,Combined Under 185.5 points,total,Under,,L,PREDICTION_LOG_COMBINED.md:9848,"Essendon v Sydney Swans, AFL Round 23 — ZERO-SCORE LIVE-START FORECAST"
+P-048,48,AFL,2,4,Essendon +58.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:9849,"Essendon v Sydney Swans, AFL Round 23 — ZERO-SCORE LIVE-START FORECAST"
+P-048,48,AFL,3,4,Sydney -58.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:9850,"Essendon v Sydney Swans, AFL Round 23 — ZERO-SCORE LIVE-START FORECAST"
+P-048,48,AFL,4,4,Combined Over 185.5 points,total,Over,,W,PREDICTION_LOG_COMBINED.md:9851,"Essendon v Sydney Swans, AFL Round 23 — ZERO-SCORE LIVE-START FORECAST"
+P-049,49,baseball-NPB/KBO/CPBL,1,4,KIA Tigers ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:9977,"Doosan Bears at KIA Tigers, KBO regular season — PREGAME FORECAST"
+P-049,49,baseball-NPB/KBO/CPBL,2,4,Combined Under 8.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED.md:9978,"Doosan Bears at KIA Tigers, KBO regular season — PREGAME FORECAST"
+P-049,49,baseball-NPB/KBO/CPBL,3,4,Doosan Bears ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:9979,"Doosan Bears at KIA Tigers, KBO regular season — PREGAME FORECAST"
+P-049,49,baseball-NPB/KBO/CPBL,4,4,Combined Over 8.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED.md:9980,"Doosan Bears at KIA Tigers, KBO regular season — PREGAME FORECAST"
+P-050,50,cricket,1,2,Sunrisers Leeds first innings Under 134.5,phase,Under,,W,PREDICTION_LOG_COMBINED.md:10170,"Trent Rockets Women v Sunrisers Leeds Women, The Hundred 2026 Final — LIVE ORIGINAL-LINE ASSESSMENT"
+P-050,50,cricket,2,2,Sunrisers Leeds first innings Over 134.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:10171,"Trent Rockets Women v Sunrisers Leeds Women, The Hundred 2026 Final — LIVE ORIGINAL-LINE ASSESSMENT"
+P-051,51,soccer,1,4,Barcelona or draw (X2),moneyline,,,W,PREDICTION_LOG_COMBINED.md:10198,"FC Basel v FC Barcelona, senior men's club friendly — PREGAME FORECAST"
+P-051,51,soccer,2,4,Under 4.5 total goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:10199,"FC Basel v FC Barcelona, senior men's club friendly — PREGAME FORECAST"
+P-051,51,soccer,3,4,Basel Under 1.5 team goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:10200,"FC Basel v FC Barcelona, senior men's club friendly — PREGAME FORECAST"
+P-051,51,soccer,4,4,Over 6.5 combined corners,corners,Over,,W,PREDICTION_LOG_COMBINED.md:10201,"FC Basel v FC Barcelona, senior men's club friendly — PREGAME FORECAST"
+P-052,52,baseball-MLB,1,4,Kansas City Royals -0.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:10381,"Athletics at Kansas City Royals, MLB regular season — PREGAME FORECAST"
+P-052,52,baseball-MLB,2,4,Combined Over 8.5 runs,total,Over,,W,PREDICTION_LOG_COMBINED.md:10382,"Athletics at Kansas City Royals, MLB regular season — PREGAME FORECAST"
+P-052,52,baseball-MLB,3,4,Combined Under 8.5 runs,total,Under,,L,PREDICTION_LOG_COMBINED.md:10383,"Athletics at Kansas City Royals, MLB regular season — PREGAME FORECAST"
+P-052,52,baseball-MLB,4,4,Athletics +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:10384,"Athletics at Kansas City Royals, MLB regular season — PREGAME FORECAST"
+P-053,53,baseball-NPB/KBO/CPBL,1,4,P-053/V01 C01,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:10493,"Yomiuri Giants at Yokohama DeNA BayStars, NPB Central League — PREGAME FORECAST"
+P-053,53,baseball-NPB/KBO/CPBL,2,4,P-053/V01 C04,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:10494,"Yomiuri Giants at Yokohama DeNA BayStars, NPB Central League — PREGAME FORECAST"
+P-053,53,baseball-NPB/KBO/CPBL,3,4,P-053/V01 C02,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:10495,"Yomiuri Giants at Yokohama DeNA BayStars, NPB Central League — PREGAME FORECAST"
+P-053,53,baseball-NPB/KBO/CPBL,4,4,P-053/V01 C03,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:10496,"Yomiuri Giants at Yokohama DeNA BayStars, NPB Central League — PREGAME FORECAST"
+P-054,54,baseball-NPB/KBO/CPBL,1,4,Lotte Giants ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:10606,"Kiwoom Heroes at Lotte Giants, KBO — PREGAME FORECAST"
+P-054,54,baseball-NPB/KBO/CPBL,2,4,Under 9.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED.md:10607,"Kiwoom Heroes at Lotte Giants, KBO — PREGAME FORECAST"
+P-054,54,baseball-NPB/KBO/CPBL,3,4,Over 9.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED.md:10608,"Kiwoom Heroes at Lotte Giants, KBO — PREGAME FORECAST"
+P-054,54,baseball-NPB/KBO/CPBL,4,4,Kiwoom Heroes +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:10609,"Kiwoom Heroes at Lotte Giants, KBO — PREGAME FORECAST"
+P-055,55,baseball-MLB,1,4,Pittsburgh Pirates +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:10718,"Detroit Tigers at Pittsburgh Pirates, MLB — PREGAME FORECAST"
+P-055,55,baseball-MLB,2,4,Over 8.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED.md:10719,"Detroit Tigers at Pittsburgh Pirates, MLB — PREGAME FORECAST"
+P-055,55,baseball-MLB,3,4,Under 8.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED.md:10720,"Detroit Tigers at Pittsburgh Pirates, MLB — PREGAME FORECAST"
+P-055,55,baseball-MLB,4,4,Detroit Tigers ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:10721,"Detroit Tigers at Pittsburgh Pirates, MLB — PREGAME FORECAST"
+P-056,56,baseball-MLB,1,4,Arizona Diamondbacks +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:10844,"Arizona Diamondbacks at Boston Red Sox, MLB — PREGAME FORECAST"
+P-056,56,baseball-MLB,2,4,Boston Red Sox ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:10845,"Arizona Diamondbacks at Boston Red Sox, MLB — PREGAME FORECAST"
+P-056,56,baseball-MLB,3,4,Combined Under 8.0 runs,total,Under,,L,PREDICTION_LOG_COMBINED.md:10846,"Arizona Diamondbacks at Boston Red Sox, MLB — PREGAME FORECAST"
+P-056,56,baseball-MLB,4,4,Combined Over 8.0 runs,total,Over,,W,PREDICTION_LOG_COMBINED.md:10847,"Arizona Diamondbacks at Boston Red Sox, MLB — PREGAME FORECAST"
+P-057,57,basketball,1,6,1st Quarter Under 42.5,phase,Under,,W,PREDICTION_LOG_COMBINED.md:10963,"Minnesota Lynx @ Golden State Valkyries, WNBA — LATE ADMINISTRATIVE IMPORT OF ISSUED CHAT FORECAST"
+P-057,57,basketball,2,6,1st Half Over 84.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:10964,"Minnesota Lynx @ Golden State Valkyries, WNBA — LATE ADMINISTRATIVE IMPORT OF ISSUED CHAT FORECAST"
+P-057,57,basketball,3,6,Full Game Over 162.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:10965,"Minnesota Lynx @ Golden State Valkyries, WNBA — LATE ADMINISTRATIVE IMPORT OF ISSUED CHAT FORECAST"
+P-057,57,basketball,4,6,Full Game Under 162.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:10966,"Minnesota Lynx @ Golden State Valkyries, WNBA — LATE ADMINISTRATIVE IMPORT OF ISSUED CHAT FORECAST"
+P-057,57,basketball,5,6,1st Quarter Over 42.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:10967,"Minnesota Lynx @ Golden State Valkyries, WNBA — LATE ADMINISTRATIVE IMPORT OF ISSUED CHAT FORECAST"
+P-057,57,basketball,6,6,1st Half Under 84.5,phase,Under,,W,PREDICTION_LOG_COMBINED.md:10968,"Minnesota Lynx @ Golden State Valkyries, WNBA — LATE ADMINISTRATIVE IMPORT OF ISSUED CHAT FORECAST"
+P-058,58,AFL,1,4,Combined Under 181.5 points,total,Under,0.630,L,PREDICTION_LOG_COMBINED.md:11170,"St Kilda v Gold Coast SUNS, AFL Round 24 — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECAST"
+P-058,58,AFL,2,4,St Kilda -14.5,handicap,minus,0.530,L,PREDICTION_LOG_COMBINED.md:11171,"St Kilda v Gold Coast SUNS, AFL Round 24 — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECAST"
+P-058,58,AFL,3,4,Gold Coast SUNS +14.5,handicap,plus,0.470,W,PREDICTION_LOG_COMBINED.md:11172,"St Kilda v Gold Coast SUNS, AFL Round 24 — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECAST"
+P-058,58,AFL,4,4,Combined Over 181.5 points,total,Over,0.370,W,PREDICTION_LOG_COMBINED.md:11173,"St Kilda v Gold Coast SUNS, AFL Round 24 — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECAST"
+P-059,59,baseball-MLB,1,4,Cardinals ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:11380,"St. Louis Cardinals (Michael McGreevy) at Cincinnati Reds (Brady Singer), MLB — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECA"
+P-059,59,baseball-MLB,2,4,Under 9.0 runs,total,Under,,L,PREDICTION_LOG_COMBINED.md:11381,"St. Louis Cardinals (Michael McGreevy) at Cincinnati Reds (Brady Singer), MLB — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECA"
+P-059,59,baseball-MLB,3,4,Over 9.0 runs,total,Over,,W,PREDICTION_LOG_COMBINED.md:11382,"St. Louis Cardinals (Michael McGreevy) at Cincinnati Reds (Brady Singer), MLB — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECA"
+P-059,59,baseball-MLB,4,4,Reds ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:11383,"St. Louis Cardinals (Michael McGreevy) at Cincinnati Reds (Brady Singer), MLB — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECA"
+P-060,60,baseball-MLB,1,4,Yankees +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:11654,"New York Yankees (Gerrit Cole) at Baltimore Orioles (Kyle Bradish), MLB — INCLEMENT-WEATHER START DELAY / ORIGINAL-LINE "
+P-060,60,baseball-MLB,2,4,Under 8.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED.md:11655,"New York Yankees (Gerrit Cole) at Baltimore Orioles (Kyle Bradish), MLB — INCLEMENT-WEATHER START DELAY / ORIGINAL-LINE "
+P-060,60,baseball-MLB,3,4,Over 6.5 runs,total,Over,,W,PREDICTION_LOG_COMBINED.md:11656,"New York Yankees (Gerrit Cole) at Baltimore Orioles (Kyle Bradish), MLB — INCLEMENT-WEATHER START DELAY / ORIGINAL-LINE "
+P-060,60,baseball-MLB,4,4,Orioles +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:11657,"New York Yankees (Gerrit Cole) at Baltimore Orioles (Kyle Bradish), MLB — INCLEMENT-WEATHER START DELAY / ORIGINAL-LINE "
+P-061,61,baseball-NPB/KBO/CPBL,1,4,1 Under 8.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:11782,Hokkaido Nippon-Ham Fighters at Chiba Lotte Marines
+P-061,61,baseball-NPB/KBO/CPBL,2,4,2 Fighters ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:11783,Hokkaido Nippon-Ham Fighters at Chiba Lotte Marines
+P-061,61,baseball-NPB/KBO/CPBL,3,4,3 Lotte +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:11784,Hokkaido Nippon-Ham Fighters at Chiba Lotte Marines
+P-061,61,baseball-NPB/KBO/CPBL,4,4,4 Over 6.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:11785,Hokkaido Nippon-Ham Fighters at Chiba Lotte Marines
+P-062,62,baseball-NPB/KBO/CPBL,1,4,1 Under 198.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:11816,West Coast Eagles v Hawthorn (late import)
+P-062,62,baseball-NPB/KBO/CPBL,2,4,2 West Coast +59.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:11817,West Coast Eagles v Hawthorn (late import)
+P-062,62,baseball-NPB/KBO/CPBL,3,4,3 Over 178.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:11818,West Coast Eagles v Hawthorn (late import)
+P-062,62,baseball-NPB/KBO/CPBL,4,4,4 Hawthorn -39.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:11819,West Coast Eagles v Hawthorn (late import)
+P-063,63,soccer,1,4,1 Liverpool or Draw X2,moneyline,,,W,PREDICTION_LOG_COMBINED.md:11852,Newcastle United v Liverpool (late import)
+P-063,63,soccer,2,4,2 corners Over 8.5,corners,Over,,L,PREDICTION_LOG_COMBINED.md:11853,Newcastle United v Liverpool (late import)
+P-063,63,soccer,3,4,3 BTTS Yes,other,,,W,PREDICTION_LOG_COMBINED.md:11854,Newcastle United v Liverpool (late import)
+P-063,63,soccer,4,4,4 Osula 1+ SOT,other,,,L,PREDICTION_LOG_COMBINED.md:11855,Newcastle United v Liverpool (late import)
+P-064,64,baseball-MLB,1,4,White Sox +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:12240,"Texas Rangers (Kumar Rocker) at Chicago White Sox (José Urquidy), MLB — PRE-FIRST-PITCH FORECAST"
+P-064,64,baseball-MLB,2,4,Under 9.5 runs,total,Under,,L,PREDICTION_LOG_COMBINED.md:12241,"Texas Rangers (Kumar Rocker) at Chicago White Sox (José Urquidy), MLB — PRE-FIRST-PITCH FORECAST"
+P-064,64,baseball-MLB,3,4,Rangers +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:12242,"Texas Rangers (Kumar Rocker) at Chicago White Sox (José Urquidy), MLB — PRE-FIRST-PITCH FORECAST"
+P-064,64,baseball-MLB,4,4,Over 7.0 runs,total,Over,,W,PREDICTION_LOG_COMBINED.md:12243,"Texas Rangers (Kumar Rocker) at Chicago White Sox (José Urquidy), MLB — PRE-FIRST-PITCH FORECAST"
+P-065,65,basketball,1,4,Under 162.5 points,total,Under,,W,PREDICTION_LOG_COMBINED.md:12257,"Golden State Valkyries at Minnesota Lynx, WNBA regular season — PRE-TIP FORECAST"
+P-065,65,basketball,2,4,Lynx -5.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:12258,"Golden State Valkyries at Minnesota Lynx, WNBA regular season — PRE-TIP FORECAST"
+P-065,65,basketball,3,4,Valkyries +5.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:12259,"Golden State Valkyries at Minnesota Lynx, WNBA regular season — PRE-TIP FORECAST"
+P-065,65,basketball,4,4,Over 162.5 points,total,Over,,L,PREDICTION_LOG_COMBINED.md:12260,"Golden State Valkyries at Minnesota Lynx, WNBA regular season — PRE-TIP FORECAST"
+P-066,66,basketball,1,4,Atlanta Dream -10.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:12274,"Atlanta Dream at Los Angeles Sparks, WNBA regular season — PRE-TIP FORECAST"
+P-066,66,basketball,2,4,Under 181.5 points,total,Under,,W,PREDICTION_LOG_COMBINED.md:12275,"Atlanta Dream at Los Angeles Sparks, WNBA regular season — PRE-TIP FORECAST"
+P-066,66,basketball,3,4,Los Angeles Sparks +10.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:12276,"Atlanta Dream at Los Angeles Sparks, WNBA regular season — PRE-TIP FORECAST"
+P-066,66,basketball,4,4,Over 181.5 points,total,Over,,L,PREDICTION_LOG_COMBINED.md:12277,"Atlanta Dream at Los Angeles Sparks, WNBA regular season — PRE-TIP FORECAST"
+P-067,67,baseball-NPB/KBO/CPBL,1,4,Under 11.0 runs,total,Under,,W,PREDICTION_LOG_COMBINED.md:12621,"Doosan Bears at KT Wiz, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-067,67,baseball-NPB/KBO/CPBL,2,4,Doosan +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:12622,"Doosan Bears at KT Wiz, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-067,67,baseball-NPB/KBO/CPBL,3,4,KT ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:12623,"Doosan Bears at KT Wiz, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-067,67,baseball-NPB/KBO/CPBL,4,4,Over 8.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED.md:12624,"Doosan Bears at KT Wiz, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-068,68,baseball-NPB/KBO/CPBL,1,4,Hanwha -1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:12638,"Hanwha Eagles at SSG Landers, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-068,68,baseball-NPB/KBO/CPBL,2,4,Under 10.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED.md:12639,"Hanwha Eagles at SSG Landers, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-068,68,baseball-NPB/KBO/CPBL,3,4,SSG +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:12640,"Hanwha Eagles at SSG Landers, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-068,68,baseball-NPB/KBO/CPBL,4,4,Over 10.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED.md:12641,"Hanwha Eagles at SSG Landers, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-069,69,baseball-NPB/KBO/CPBL,1,4,KIA Tigers ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:12655,"Lotte Giants at KIA Tigers, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-069,69,baseball-NPB/KBO/CPBL,2,4,Under 9.5 runs,total,Under,,L,PREDICTION_LOG_COMBINED.md:12656,"Lotte Giants at KIA Tigers, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-069,69,baseball-NPB/KBO/CPBL,3,4,Lotte Giants ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:12657,"Lotte Giants at KIA Tigers, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-069,69,baseball-NPB/KBO/CPBL,4,4,Over 9.5 runs,total,Over,,W,PREDICTION_LOG_COMBINED.md:12658,"Lotte Giants at KIA Tigers, KBO regular season — PRE-FIRST-PITCH FORECAST"
+P-070,70,soccer,1,3,El Porvenir or Draw — X2,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13775,Central Ballester Reserves vs El Porvenir Reserves — START PASSED / LIVE STATE NOT VERIFIED
+P-070,70,soccer,2,3,1H Under 1.5 goals,phase,Under,,W,PREDICTION_LOG_COMBINED.md:13776,Central Ballester Reserves vs El Porvenir Reserves — START PASSED / LIVE STATE NOT VERIFIED
+P-070,70,soccer,3,3,El Porvenir DNB,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13777,Central Ballester Reserves vs El Porvenir Reserves — START PASSED / LIVE STATE NOT VERIFIED
+P-071,71,tennis,1,4,Alejandro Juan Mano ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13789,"Alejandro Juan Mano vs Alejandro Turriziani Alvarez, ITF M25 Oviedo — DELAYED / NOT STARTED FORECAST"
+P-071,71,tennis,2,4,Under 20.5 total games,total,Under,,W,PREDICTION_LOG_COMBINED.md:13790,"Alejandro Juan Mano vs Alejandro Turriziani Alvarez, ITF M25 Oviedo — DELAYED / NOT STARTED FORECAST"
+P-071,71,tennis,3,4,Juan Mano -4.0 games,handicap,minus,,P,PREDICTION_LOG_COMBINED.md:13791,"Alejandro Juan Mano vs Alejandro Turriziani Alvarez, ITF M25 Oviedo — DELAYED / NOT STARTED FORECAST"
+P-071,71,tennis,4,4,Under 19.5 total games,total,Under,,L,PREDICTION_LOG_COMBINED.md:13792,"Alejandro Juan Mano vs Alejandro Turriziani Alvarez, ITF M25 Oviedo — DELAYED / NOT STARTED FORECAST"
+P-072,72,tennis,1,4,Paardekooper +1.5 sets,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:13803,Jelle Sels vs Stijn Paardekooper — DELAYED / NOT STARTED FORECAST
+P-072,72,tennis,2,4,Sels +1.5 sets,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:13804,Jelle Sels vs Stijn Paardekooper — DELAYED / NOT STARTED FORECAST
+P-072,72,tennis,3,4,Sels ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13805,Jelle Sels vs Stijn Paardekooper — DELAYED / NOT STARTED FORECAST
+P-072,72,tennis,4,4,Over 2.5 total sets,total,Over,,W,PREDICTION_LOG_COMBINED.md:13806,Jelle Sels vs Stijn Paardekooper — DELAYED / NOT STARTED FORECAST
+P-073,73,soccer,1,3,Tobol or Draw — 1X,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13819,Tobol Kostanay vs Kaisar Kyzylorda — PREGAME FORECAST
+P-073,73,soccer,2,3,Under 3.5 goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:13820,Tobol Kostanay vs Kaisar Kyzylorda — PREGAME FORECAST
+P-073,73,soccer,3,3,1H Under 1.5 goals,phase,Under,,L,PREDICTION_LOG_COMBINED.md:13821,Tobol Kostanay vs Kaisar Kyzylorda — PREGAME FORECAST
+P-074,74,soccer,1,4,Under 3.5 goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:13835,Maccabi Herzliya U19 vs Hapoel Rishon LeZion U19 — PREGAME FORECAST
+P-074,74,soccer,2,4,1H Under 1.5 goals,phase,Under,,L,PREDICTION_LOG_COMBINED.md:13836,Maccabi Herzliya U19 vs Hapoel Rishon LeZion U19 — PREGAME FORECAST
+P-074,74,soccer,3,4,Maccabi Herzliya U19 ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13837,Maccabi Herzliya U19 vs Hapoel Rishon LeZion U19 — PREGAME FORECAST
+P-074,74,soccer,4,4,Over 7.5 corners,corners,Over,,W,PREDICTION_LOG_COMBINED.md:13838,Maccabi Herzliya U19 vs Hapoel Rishon LeZion U19 — PREGAME FORECAST
+P-075,75,soccer,1,4,Middelfart or Draw — X2,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13851,OKS vs Middelfart — PREGAME FORECAST
+P-075,75,soccer,2,4,Over 1.5 goals,total,Over,,L,PREDICTION_LOG_COMBINED.md:13852,OKS vs Middelfart — PREGAME FORECAST
+P-075,75,soccer,3,4,Middelfart ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13853,OKS vs Middelfart — PREGAME FORECAST
+P-075,75,soccer,4,4,Under 9.5 corners,corners,Under,,L,PREDICTION_LOG_COMBINED.md:13854,OKS vs Middelfart — PREGAME FORECAST
+P-076,76,soccer,1,4,Draw or Dukla — X2,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13867,FK Horní Ředice vs FK Dukla Praha — PREGAME FORECAST
+P-076,76,soccer,2,4,Dukla ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13868,FK Horní Ředice vs FK Dukla Praha — PREGAME FORECAST
+P-076,76,soccer,3,4,Over 2.5 goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:13869,FK Horní Ředice vs FK Dukla Praha — PREGAME FORECAST
+P-076,76,soccer,4,4,Under 9.5 corners,corners,Under,,W,PREDICTION_LOG_COMBINED.md:13870,FK Horní Ředice vs FK Dukla Praha — PREGAME FORECAST
+P-077,77,tennis,1,4,Aryan Jit Singh — Match Winner,moneyline,,,W,PREDICTION_LOG_COMBINED.md:15159,Vincent Weaver vs Aryan Jit Singh — PREGAME FORECAST
+P-077,77,tennis,2,4,Aryan Jit Singh — Set 2 Winner,moneyline,,,W,PREDICTION_LOG_COMBINED.md:15160,Vincent Weaver vs Aryan Jit Singh — PREGAME FORECAST
+P-077,77,tennis,3,4,Aryan Jit Singh — Set 1 Winner,moneyline,,,W,PREDICTION_LOG_COMBINED.md:15161,Vincent Weaver vs Aryan Jit Singh — PREGAME FORECAST
+P-077,77,tennis,4,4,Vincent Weaver — Match Winner,moneyline,,,W,PREDICTION_LOG_COMBINED.md:15162,Vincent Weaver vs Aryan Jit Singh — PREGAME FORECAST
+P-078,78,soccer,1,4,Brann or Draw — 1X,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13897,SK Brann (W) vs FK Austria Wien (W) — PREGAME FORECAST
+P-078,78,soccer,2,4,Over 1.5 goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:13898,SK Brann (W) vs FK Austria Wien (W) — PREGAME FORECAST
+P-078,78,soccer,3,4,1H Over 0.5 goals,phase,Over,,W,PREDICTION_LOG_COMBINED.md:13899,SK Brann (W) vs FK Austria Wien (W) — PREGAME FORECAST
+P-078,78,soccer,4,4,Over 7.5 corners,corners,Over,,W,PREDICTION_LOG_COMBINED.md:13900,SK Brann (W) vs FK Austria Wien (W) — PREGAME FORECAST
+P-079,79,soccer,1,4,Over 1.5 goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:13913,Abha vs Al Khaleej Saihat — PREGAME
+P-079,79,soccer,2,4,Al Khaleej or Draw — X2,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13914,Abha vs Al Khaleej Saihat — PREGAME
+P-079,79,soccer,3,4,1H Over 0.5 goals,phase,Over,,W,PREDICTION_LOG_COMBINED.md:13915,Abha vs Al Khaleej Saihat — PREGAME
+P-079,79,soccer,4,4,Under 9.5 corners,corners,Under,,W,PREDICTION_LOG_COMBINED.md:13916,Abha vs Al Khaleej Saihat — PREGAME
+P-080,80,soccer,1,4,Al Taawoun or Draw — 1X,moneyline,,,W,PREDICTION_LOG_COMBINED.md:13929,Al Taawoun Buraidah vs Al Fayha — PREGAME
+P-080,80,soccer,2,4,Over 1.5 goals,total,Over,,L,PREDICTION_LOG_COMBINED.md:13930,Al Taawoun Buraidah vs Al Fayha — PREGAME
+P-080,80,soccer,3,4,1H Over 0.5 goals,phase,Over,,L,PREDICTION_LOG_COMBINED.md:13931,Al Taawoun Buraidah vs Al Fayha — PREGAME
+P-080,80,soccer,4,4,Under 9.5 corners,corners,Under,,L,PREDICTION_LOG_COMBINED.md:13932,Al Taawoun Buraidah vs Al Fayha — PREGAME
+P-081,81,soccer,1,1,IDV or Draw — 1X,moneyline,,,W,PREDICTION_LOG_COMBINED.md:14864,Independiente del Valle vs Deportes Tolima — PREGAME
+P-082,82,soccer,3,1,Chicago Fire or Draw — X2,moneyline,,,W,PREDICTION_LOG_COMBINED.md:14905,CF Monterrey vs Chicago Fire FC — PREGAME
+P-083,83,baseball-MLB,2,3,Los Angeles Angels +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:15204,"Cleveland Guardians at Los Angeles Angels, MLB regular season — PREGAME FORECAST"
+P-083,83,baseball-MLB,3,3,Cleveland Guardians ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:15205,"Cleveland Guardians at Los Angeles Angels, MLB regular season — PREGAME FORECAST"
+P-083,83,baseball-MLB,4,3,Combined Total — Over 6.0 Runs,total,Over,,P,PREDICTION_LOG_COMBINED.md:15206,"Cleveland Guardians at Los Angeles Angels, MLB regular season — PREGAME FORECAST"
+P-084,84,basketball,1,2,Mystics +2.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:15025,"Washington Mystics at Phoenix Mercury, WNBA regular season — PREGAME FORECAST"
+P-084,84,basketball,2,2,Mercury +6.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:15026,"Washington Mystics at Phoenix Mercury, WNBA regular season — PREGAME FORECAST"
+P-085,85,basketball,1,2,Lobos Puebla +2.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:15246,"Lobos Puebla vs Fuerza Regia, LNBP regular season — LIVE START-CROSSING FORECAST"
+P-085,85,basketball,4,2,Fuerza Regia -2.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:15249,"Lobos Puebla vs Fuerza Regia, LNBP regular season — LIVE START-CROSSING FORECAST"
+P-086,86,soccer,1,4,Combined goals Over 1.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:15286,Club León vs Real Salt Lake — Leagues Cup quarterfinal — START PASSED / LIVE STATE NOT VERIFIED
+P-086,86,soccer,2,4,1st-half goals Over 0.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:15287,Club León vs Real Salt Lake — Leagues Cup quarterfinal — START PASSED / LIVE STATE NOT VERIFIED
+P-086,86,soccer,3,4,Real Salt Lake or Draw (X2),moneyline,,,L,PREDICTION_LOG_COMBINED.md:15288,Club León vs Real Salt Lake — Leagues Cup quarterfinal — START PASSED / LIVE STATE NOT VERIFIED
+P-086,86,soccer,4,4,Total corners Over 7.5,corners,Over,,W,PREDICTION_LOG_COMBINED.md:15289,Club León vs Real Salt Lake — Leagues Cup quarterfinal — START PASSED / LIVE STATE NOT VERIFIED
+P-088,88,soccer,1,3,Howlers or Draw — 1X,moneyline,,,L,PREDICTION_LOG_COMBINED.md:17262,Howlers Sporting Singtam vs Sikkim Boys Football Club — SFA A Division S-League — PREGAME FORECAST
+P-088,88,soccer,2,3,Over 2.5 goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:17263,Howlers Sporting Singtam vs Sikkim Boys Football Club — SFA A Division S-League — PREGAME FORECAST
+P-088,88,soccer,3,3,1H Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:17264,Howlers Sporting Singtam vs Sikkim Boys Football Club — SFA A Division S-League — PREGAME FORECAST
+P-089,89,baseball-NPB/KBO/CPBL,1,4,Under 8.0,total,Under,,W,PREDICTION_LOG_COMBINED.md:17289,Hanshin Tigers @ Chunichi Dragons — PREGAME
+P-089,89,baseball-NPB/KBO/CPBL,2,4,Hanshin +0.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:17290,Hanshin Tigers @ Chunichi Dragons — PREGAME
+P-089,89,baseball-NPB/KBO/CPBL,3,4,Chunichi +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:17291,Hanshin Tigers @ Chunichi Dragons — PREGAME
+P-089,89,baseball-NPB/KBO/CPBL,4,4,Over 6.0,total,Over,,L,PREDICTION_LOG_COMBINED.md:17292,Hanshin Tigers @ Chunichi Dragons — PREGAME
+P-090,90,baseball-NPB/KBO/CPBL,1,4,Seibu +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:17311,Hokkaido Nippon-Ham Fighters @ Saitama Seibu Lions — PREGAME
+P-090,90,baseball-NPB/KBO/CPBL,2,4,Under 7.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:17312,Hokkaido Nippon-Ham Fighters @ Saitama Seibu Lions — PREGAME
+P-090,90,baseball-NPB/KBO/CPBL,3,4,Over 5.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:17313,Hokkaido Nippon-Ham Fighters @ Saitama Seibu Lions — PREGAME
+P-090,90,baseball-NPB/KBO/CPBL,4,4,Nippon-Ham +0.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:17314,Hokkaido Nippon-Ham Fighters @ Saitama Seibu Lions — PREGAME
+P-091,91,baseball-NPB/KBO/CPBL,1,4,Orix +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:17333,Tohoku Rakuten Golden Eagles @ Orix Buffaloes — PREGAME
+P-091,91,baseball-NPB/KBO/CPBL,2,4,Under 8.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:17334,Tohoku Rakuten Golden Eagles @ Orix Buffaloes — PREGAME
+P-091,91,baseball-NPB/KBO/CPBL,3,4,Over 6.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:17335,Tohoku Rakuten Golden Eagles @ Orix Buffaloes — PREGAME
+P-091,91,baseball-NPB/KBO/CPBL,4,4,Rakuten +0.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:17336,Tohoku Rakuten Golden Eagles @ Orix Buffaloes — PREGAME
+P-092,92,baseball-NPB/KBO/CPBL,1,4,KT +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:17355,Doosan Bears @ KT Wiz — PREGAME
+P-092,92,baseball-NPB/KBO/CPBL,2,4,Under 10.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:17356,Doosan Bears @ KT Wiz — PREGAME
+P-092,92,baseball-NPB/KBO/CPBL,3,4,Doosan +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:17357,Doosan Bears @ KT Wiz — PREGAME
+P-092,92,baseball-NPB/KBO/CPBL,4,4,Over 8.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:17358,Doosan Bears @ KT Wiz — PREGAME
+P-093,93,baseball-NPB/KBO/CPBL,1,4,LG +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:17377,"NC Dinos @ LG Twins, KBO regular season — PREGAME FORECAST"
+P-093,93,baseball-NPB/KBO/CPBL,2,4,NC +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:17378,"NC Dinos @ LG Twins, KBO regular season — PREGAME FORECAST"
+P-093,93,baseball-NPB/KBO/CPBL,3,4,Over 7.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:17379,"NC Dinos @ LG Twins, KBO regular season — PREGAME FORECAST"
+P-093,93,baseball-NPB/KBO/CPBL,4,4,Under 9.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:17380,"NC Dinos @ LG Twins, KBO regular season — PREGAME FORECAST"
+P-094,94,cricket,1,4,Yorkshire first 5 overs Over 19.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:17399,"Yorkshire Women vs Surrey Women, Metro Bank One Day Cup Women — TOSS COMPLETE / PRE-FIRST-BALL FORECAST"
+P-094,94,cricket,2,4,Yorkshire 1st innings Over 225.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:17400,"Yorkshire Women vs Surrey Women, Metro Bank One Day Cup Women — TOSS COMPLETE / PRE-FIRST-BALL FORECAST"
+P-094,94,cricket,3,4,Yorkshire 1st innings Under 225.5,phase,Under,,W,PREDICTION_LOG_COMBINED.md:17401,"Yorkshire Women vs Surrey Women, Metro Bank One Day Cup Women — TOSS COMPLETE / PRE-FIRST-BALL FORECAST"
+P-094,94,cricket,4,4,Yorkshire first 5 overs Under 19.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:17402,"Yorkshire Women vs Surrey Women, Metro Bank One Day Cup Women — TOSS COMPLETE / PRE-FIRST-BALL FORECAST"
+P-095,95,baseball-NPB/KBO/CPBL,1,4,Over 6.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:17419,"TSG Hawks @ Fubon Guardians, CPBL regular season — PREGAME FORECAST"
+P-095,95,baseball-NPB/KBO/CPBL,2,4,TSG ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:17420,"TSG Hawks @ Fubon Guardians, CPBL regular season — PREGAME FORECAST"
+P-095,95,baseball-NPB/KBO/CPBL,3,4,Fubon ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:17421,"TSG Hawks @ Fubon Guardians, CPBL regular season — PREGAME FORECAST"
+P-095,95,baseball-NPB/KBO/CPBL,4,4,Under 6.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:17422,"TSG Hawks @ Fubon Guardians, CPBL regular season — PREGAME FORECAST"
+P-096,96,baseball-NPB/KBO/CPBL,1,4,Rakuten ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:17452,"Rakuten Monkeys @ CTBC Brothers, CPBL regular season — PREGAME FORECAST"
+P-096,96,baseball-NPB/KBO/CPBL,2,4,CTBC +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:17453,"Rakuten Monkeys @ CTBC Brothers, CPBL regular season — PREGAME FORECAST"
+P-096,96,baseball-NPB/KBO/CPBL,3,4,Over 7.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:17454,"Rakuten Monkeys @ CTBC Brothers, CPBL regular season — PREGAME FORECAST"
+P-096,96,baseball-NPB/KBO/CPBL,4,4,Under 7.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:17455,"Rakuten Monkeys @ CTBC Brothers, CPBL regular season — PREGAME FORECAST"
+P-097,97,baseball-NPB/KBO/CPBL,1,4,Under 7.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:17476,"Wei-Chuan Dragons @ Uni-President 7-ELEVEn Lions, CPBL regular season — PREGAME FORECAST"
+P-097,97,baseball-NPB/KBO/CPBL,2,4,Uni-Lions ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:17477,"Wei-Chuan Dragons @ Uni-President 7-ELEVEn Lions, CPBL regular season — PREGAME FORECAST"
+P-097,97,baseball-NPB/KBO/CPBL,3,4,Dragons ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:17478,"Wei-Chuan Dragons @ Uni-President 7-ELEVEn Lions, CPBL regular season — PREGAME FORECAST"
+P-097,97,baseball-NPB/KBO/CPBL,4,4,Over 7.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:17479,"Wei-Chuan Dragons @ Uni-President 7-ELEVEn Lions, CPBL regular season — PREGAME FORECAST"
+P-098,98,soccer,1,4,Full-match Under 2.5 goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:17498,"Vietnam vs Thailand, ASEAN Hyundai Cup 2026 Final Leg 2 — PRE-KICKOFF-DATA VIEW"
+P-098,98,soccer,2,4,Thailand more corners than Vietnam,corners,,,W,PREDICTION_LOG_COMBINED.md:17499,"Vietnam vs Thailand, ASEAN Hyundai Cup 2026 Final Leg 2 — PRE-KICKOFF-DATA VIEW"
+P-098,98,soccer,3,4,1H Over 0.5 goals,phase,Over,,W,PREDICTION_LOG_COMBINED.md:17500,"Vietnam vs Thailand, ASEAN Hyundai Cup 2026 Final Leg 2 — PRE-KICKOFF-DATA VIEW"
+P-098,98,soccer,4,4,Total corners Under 9.5,corners,Under,,W,PREDICTION_LOG_COMBINED.md:17501,"Vietnam vs Thailand, ASEAN Hyundai Cup 2026 Final Leg 2 — PRE-KICKOFF-DATA VIEW"
+P-099,99,cricket,1,4,Amsterdam 1st innings Under 164.5,phase,Under,,W,PREDICTION_LOG_COMBINED.md:17526,"Rotterdam Dockers vs Amsterdam Flames, European T20 Premier League 2026 — TOSS COMPLETE / PRE-FIRST-BALL VIEW"
+P-099,99,cricket,2,4,Amsterdam first 6 Under 40.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:17527,"Rotterdam Dockers vs Amsterdam Flames, European T20 Premier League 2026 — TOSS COMPLETE / PRE-FIRST-BALL VIEW"
+P-099,99,cricket,3,4,Amsterdam first 6 Over 40.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:17528,"Rotterdam Dockers vs Amsterdam Flames, European T20 Premier League 2026 — TOSS COMPLETE / PRE-FIRST-BALL VIEW"
+P-099,99,cricket,4,4,Amsterdam 1st innings Over 164.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:17529,"Rotterdam Dockers vs Amsterdam Flames, European T20 Premier League 2026 — TOSS COMPLETE / PRE-FIRST-BALL VIEW"
+P-103,103,baseball-MLB,1,4,Tigers ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:18898,Tampa Bay Rays at Detroit Tigers
+P-103,103,baseball-MLB,2,4,Under 7.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED.md:18899,Tampa Bay Rays at Detroit Tigers
+P-103,103,baseball-MLB,3,4,Over 7.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED.md:18900,Tampa Bay Rays at Detroit Tigers
+P-103,103,baseball-MLB,4,4,Rays ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:18901,Tampa Bay Rays at Detroit Tigers
+P-104,104,soccer,1,3,Real Madrid or Draw (X2),moneyline,,,W,PREDICTION_LOG_COMBINED.md:18915,"Ajax Women vs Real Madrid Women — UEFA Women's Champions League third qualifying round, first leg — PREGAME"
+P-104,104,soccer,2,3,1H Over 0.5 goals,phase,Over,,W,PREDICTION_LOG_COMBINED.md:18916,"Ajax Women vs Real Madrid Women — UEFA Women's Champions League third qualifying round, first leg — PREGAME"
+P-104,104,soccer,3,3,Under 2.5 goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:18917,"Ajax Women vs Real Madrid Women — UEFA Women's Champions League third qualifying round, first leg — PREGAME"
+P-105,105,soccer,1,3,Al Ahli ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:18932,"Al Ahli Saudi FC vs Auckland FC — FIFA Intercontinental Cup 2026, African-Asian-Pacific Cup Playoff — PREGAME"
+P-105,105,soccer,2,3,1H Over 0.5 goals,phase,Over,,L,PREDICTION_LOG_COMBINED.md:18933,"Al Ahli Saudi FC vs Auckland FC — FIFA Intercontinental Cup 2026, African-Asian-Pacific Cup Playoff — PREGAME"
+P-105,105,soccer,3,3,Over 2.5 goals,total,Over,,L,PREDICTION_LOG_COMBINED.md:18934,"Al Ahli Saudi FC vs Auckland FC — FIFA Intercontinental Cup 2026, African-Asian-Pacific Cup Playoff — PREGAME"
+P-106,106,soccer,1,4,Newcastle ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:18949,Newcastle United vs West Bromwich Albion — Carabao Cup Second Round — PREGAME
+P-106,106,soccer,2,4,1H Over 0.5 goals,phase,Over,,W,PREDICTION_LOG_COMBINED.md:18950,Newcastle United vs West Bromwich Albion — Carabao Cup Second Round — PREGAME
+P-106,106,soccer,3,4,Over 2.5 goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:18951,Newcastle United vs West Bromwich Albion — Carabao Cup Second Round — PREGAME
+P-106,106,soccer,4,4,Over 7.5 total corners,corners,Over,,W,PREDICTION_LOG_COMBINED.md:18952,Newcastle United vs West Bromwich Albion — Carabao Cup Second Round — PREGAME
+P-107,107,soccer,1,4,"Bradford or Draw (1X), 90 min",moneyline,,,W,PREDICTION_LOG_COMBINED.md:18966,Bradford City vs Burnley — Carabao Cup Round 2 — PREGAME
+P-107,107,soccer,2,4,Under 2.5 goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:18967,Bradford City vs Burnley — Carabao Cup Round 2 — PREGAME
+P-107,107,soccer,3,4,1H Over 0.5 goals,phase,Over,,L,PREDICTION_LOG_COMBINED.md:18968,Bradford City vs Burnley — Carabao Cup Round 2 — PREGAME
+P-107,107,soccer,4,4,Over 7.5 total corners,corners,Over,,W,PREDICTION_LOG_COMBINED.md:18969,Bradford City vs Burnley — Carabao Cup Round 2 — PREGAME
+P-108,108,soccer,1,4,Tottenham ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:18983,Tottenham Hotspur vs Charlton Athletic — Carabao Cup Round 2 — PREGAME
+P-108,108,soccer,2,4,1H Over 0.5 goals,phase,Over,,W,PREDICTION_LOG_COMBINED.md:18984,Tottenham Hotspur vs Charlton Athletic — Carabao Cup Round 2 — PREGAME
+P-108,108,soccer,3,4,Over 2.5 goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:18985,Tottenham Hotspur vs Charlton Athletic — Carabao Cup Round 2 — PREGAME
+P-108,108,soccer,4,4,Over 7.5 total corners,corners,Over,,W,PREDICTION_LOG_COMBINED.md:18986,Tottenham Hotspur vs Charlton Athletic — Carabao Cup Round 2 — PREGAME
+P-109,109,baseball-MLB,1,2,Diamondbacks +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:18617,Chicago Cubs @ Arizona Diamondbacks — MLB regular season — PREGAME
+P-109,109,baseball-MLB,2,2,Cubs +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:18618,Chicago Cubs @ Arizona Diamondbacks — MLB regular season — PREGAME
+P-110,110,tennis,1,3,Nishikori +1.5 sets / Nishikori to win a set,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:18640,Kei Nishikori vs Michael Antonius — US Open Men's Qualifying Q2 — DELAYED / NOT STARTED
+P-110,110,tennis,2,3,Antonius +1.5 sets / Antonius to win a set,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:18641,Kei Nishikori vs Michael Antonius — US Open Men's Qualifying Q2 — DELAYED / NOT STARTED
+P-110,110,tennis,4,3,Nishikori match winner,moneyline,,,W,PREDICTION_LOG_COMBINED.md:18643,Kei Nishikori vs Michael Antonius — US Open Men's Qualifying Q2 — DELAYED / NOT STARTED
+P-111,111,baseball-MLB,1,2,Red Sox ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:18762,Boston Red Sox @ Miami Marlins — MLB regular season — PREGAME
+P-111,111,baseball-MLB,3,2,Marlins +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:18764,Boston Red Sox @ Miami Marlins — MLB regular season — PREGAME
+P-112,112,baseball-MLB,1,2,Athletics +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:19114,Minnesota Twins @ Athletics — MLB regular season — PREGAME
+P-112,112,baseball-MLB,3,2,Twins ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:19116,Minnesota Twins @ Athletics — MLB regular season — PREGAME
+P-113,113,soccer,1,1,"Club América or Draw (1X), 90 min",moneyline,,,W,PREDICTION_LOG_COMBINED.md:19131,Club América vs Columbus Crew — Leagues Cup 2026 Quarterfinal
+P-124,124,tennis,1,3,Chase Ferguson — Match Winner,moneyline,,,W,PREDICTION_LOG_COMBINED.md:29084,Chase Ferguson vs Fumin Jiang — M15 Maanshan 8 Quarterfinal
+P-124,124,tennis,2,3,Chase Ferguson — 1st Set Winner,moneyline,,,W,PREDICTION_LOG_COMBINED.md:29085,Chase Ferguson vs Fumin Jiang — M15 Maanshan 8 Quarterfinal
+P-124,124,tennis,3,3,Fumin Jiang +5.5 Games,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:29086,Chase Ferguson vs Fumin Jiang — M15 Maanshan 8 Quarterfinal
+P-125,125,ice-hockey,1,2,Sydney Bears +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:29125,Canberra Brave vs Sydney Bears — 2026 AIHL Goodall Cup Preliminary Final
+P-125,125,ice-hockey,3,2,Canberra Brave -1.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:29127,Canberra Brave vs Sydney Bears — 2026 AIHL Goodall Cup Preliminary Final
+P-127,127,basketball,1,2,Iran +7.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:29166,Iran vs New Zealand — FIBA Basketball World Cup 2027 Asian Qualifiers
+P-127,127,basketball,4,2,New Zealand -7.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:29169,Iran vs New Zealand — FIBA Basketball World Cup 2027 Asian Qualifiers
+P-128,128,rugby,2,2,Auckland +4.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:29206,Auckland vs Bay of Plenty — Hilux NPC Round 5
+P-128,128,rugby,4,2,Bay of Plenty -4.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:29208,Auckland vs Bay of Plenty — Hilux NPC Round 5
+P-129,129,rugby,1,2,Manly +10.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:29259,Manly Warringah Sea Eagles vs St George Illawarra Dragons — NRL Round 26
+P-129,129,rugby,4,2,Dragons -4.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:29262,Manly Warringah Sea Eagles vs St George Illawarra Dragons — NRL Round 26
+P-131,131,rugby,1,2,Bulldogs +9.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:29338,Penrith Panthers vs Canterbury-Bankstown Bulldogs — NRL Round 26
+P-131,131,rugby,4,2,Panthers -9.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:29341,Penrith Panthers vs Canterbury-Bankstown Bulldogs — NRL Round 26
+P-132,132,rugby,2,2,Lyon +9.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:29380,"RC Vannes Sevens vs LOU Rugby Sevens — In Extenso SuperSevens, Pau"
+P-132,132,rugby,4,2,Vannes -9.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:29382,"RC Vannes Sevens vs LOU Rugby Sevens — In Extenso SuperSevens, Pau"
+P-133,133,tennis,1,2,Arthur Géa -2.5 games,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:29417,Arthur Géa vs Nishesh Basavareddy — US Open 2026 Men's Qualifying Final
+P-133,133,tennis,4,2,Nishesh Basavareddy +2.5 games,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:29420,Arthur Géa vs Nishesh Basavareddy — US Open 2026 Men's Qualifying Final
+P-134,134,basketball,1,2,Cape Verde +10.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:29524,Cape Verde vs Guinea — FIBA Basketball World Cup 2027 African Qualifiers
+P-134,134,basketball,4,2,Guinea -10.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:29527,Cape Verde vs Guinea — FIBA Basketball World Cup 2027 African Qualifiers
+P-164,164,baseball-NPB/KBO/CPBL,1,1,Nippon-Ham +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:51203,"Lotte @ Nippon-Ham, live"
+P-166,166,ice-hockey,1,4,Melbourne +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:51281,Melbourne Mustangs vs Canberra Brave — AIHL Goodall Cup Semifinal
+P-166,166,ice-hockey,2,4,Over 7.5 goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:51282,Melbourne Mustangs vs Canberra Brave — AIHL Goodall Cup Semifinal
+P-166,166,ice-hockey,3,4,Under 7.5 goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:51283,Melbourne Mustangs vs Canberra Brave — AIHL Goodall Cup Semifinal
+P-166,166,ice-hockey,4,4,Canberra -1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:51284,Melbourne Mustangs vs Canberra Brave — AIHL Goodall Cup Semifinal
+P-167,167,baseball-NPB/KBO/CPBL,1,4,Doosan Bears ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:55687,Kiwoom Heroes @ Doosan Bears — KBO
+P-167,167,baseball-NPB/KBO/CPBL,2,4,Under 7.5 Runs,total,Under,,L,PREDICTION_LOG_COMBINED.md:55688,Kiwoom Heroes @ Doosan Bears — KBO
+P-167,167,baseball-NPB/KBO/CPBL,3,4,Kiwoom Heroes +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:55689,Kiwoom Heroes @ Doosan Bears — KBO
+P-167,167,baseball-NPB/KBO/CPBL,4,4,Over 7.5 Runs,total,Over,,W,PREDICTION_LOG_COMBINED.md:55690,Kiwoom Heroes @ Doosan Bears — KBO
+P-168,168,baseball-NPB/KBO/CPBL,1,4,Under 10.5 Runs,total,Under,,L,PREDICTION_LOG_COMBINED.md:55707,LG Twins @ Lotte Giants — KBO
+P-168,168,baseball-NPB/KBO/CPBL,2,4,Lotte Giants +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:55708,LG Twins @ Lotte Giants — KBO
+P-168,168,baseball-NPB/KBO/CPBL,3,4,LG Twins -1.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:55709,LG Twins @ Lotte Giants — KBO
+P-168,168,baseball-NPB/KBO/CPBL,4,4,Over 10.5 Runs,total,Over,,W,PREDICTION_LOG_COMBINED.md:55710,LG Twins @ Lotte Giants — KBO
+P-169,169,AFL,1,4,Carlton -1.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:55737,Melbourne vs Carlton — AFL Wildcard Final
+P-169,169,AFL,2,4,Under 179.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:55738,Melbourne vs Carlton — AFL Wildcard Final
+P-169,169,AFL,3,4,Melbourne +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:55739,Melbourne vs Carlton — AFL Wildcard Final
+P-169,169,AFL,4,4,Over 179.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:55740,Melbourne vs Carlton — AFL Wildcard Final
+P-170,170,rugby,1,4,Under 57.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:55757,North Queensland Cowboys vs Wests Tigers — NRL
+P-170,170,rugby,2,4,Wests Tigers +12.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:55758,North Queensland Cowboys vs Wests Tigers — NRL
+P-170,170,rugby,3,4,Cowboys -12.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:55759,North Queensland Cowboys vs Wests Tigers — NRL
+P-170,170,rugby,4,4,Over 57.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:55760,North Queensland Cowboys vs Wests Tigers — NRL
+P-171,171,cricket,1,4,Glasgow 20-over Under 165.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:55778,Glasgow Cosmic vs Dublin Guardians — European T20 Premier League
+P-171,171,cricket,2,4,Glasgow first 6 overs Under 48.5,phase,Under,,W,PREDICTION_LOG_COMBINED.md:55779,Glasgow Cosmic vs Dublin Guardians — European T20 Premier League
+P-171,171,cricket,3,4,Glasgow first 6 overs Over 48.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:55780,Glasgow Cosmic vs Dublin Guardians — European T20 Premier League
+P-171,171,cricket,4,4,Glasgow 20-over Over 165.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:55781,Glasgow Cosmic vs Dublin Guardians — European T20 Premier League
+P-172,172,soccer,1,5,1st Half Over 0.5 Goals,phase,Over,,W,PREDICTION_LOG_COMBINED.md:55809,Liverpool vs Nottingham Forest — English Premier League
+P-172,172,soccer,2,5,Liverpool ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:55810,Liverpool vs Nottingham Forest — English Premier League
+P-172,172,soccer,3,5,Nottingham Forest Team Under 1.5 Goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:55811,Liverpool vs Nottingham Forest — English Premier League
+P-172,172,soccer,4,5,Nottingham Forest Team Corners Under 3.5,corners,Under,,L,PREDICTION_LOG_COMBINED.md:55812,Liverpool vs Nottingham Forest — English Premier League
+P-172,172,soccer,5,5,Under 2.5 Goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:55813,Liverpool vs Nottingham Forest — English Premier League
+P-173,173,soccer,1,5,1st Half Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:55831,Chengdu Rongcheng vs Liaoning Tieren (Ironman) — Chinese Super League
+P-173,173,soccer,2,5,Chengdu ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:55832,Chengdu Rongcheng vs Liaoning Tieren (Ironman) — Chinese Super League
+P-173,173,soccer,3,5,Liaoning Team Under 1.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:55833,Chengdu Rongcheng vs Liaoning Tieren (Ironman) — Chinese Super League
+P-173,173,soccer,4,5,Under 11.5 Corners,corners,Under,,L,PREDICTION_LOG_COMBINED.md:55834,Chengdu Rongcheng vs Liaoning Tieren (Ironman) — Chinese Super League
+P-173,173,soccer,5,5,Over 2.5 Goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:55835,Chengdu Rongcheng vs Liaoning Tieren (Ironman) — Chinese Super League
+P-174,174,soccer,1,5,Henan ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:55853,Henan vs Chongqing Tonglianglong — Chinese Super League
+P-174,174,soccer,2,5,Chongqing Team Under 1.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:55854,Henan vs Chongqing Tonglianglong — Chinese Super League
+P-174,174,soccer,3,5,1st Half Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:55855,Henan vs Chongqing Tonglianglong — Chinese Super League
+P-174,174,soccer,4,5,Under 2.5 Goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:55856,Henan vs Chongqing Tonglianglong — Chinese Super League
+P-174,174,soccer,5,5,Under 10.5 Corners,corners,Under,,W,PREDICTION_LOG_COMBINED.md:55857,Henan vs Chongqing Tonglianglong — Chinese Super League
+P-175,175,cricket,1,4,Zimbabwe Under 158.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:55885,South Africa vs Zimbabwe — Namibia T20I Tri-Series
+P-175,175,cricket,2,4,Zimbabwe first 6 Over 45.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:55886,South Africa vs Zimbabwe — Namibia T20I Tri-Series
+P-175,175,cricket,3,4,Zimbabwe first 6 Under 45.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:55887,South Africa vs Zimbabwe — Namibia T20I Tri-Series
+P-175,175,cricket,4,4,Zimbabwe Over 158.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:55888,South Africa vs Zimbabwe — Namibia T20I Tri-Series
+P-176,176,soccer,1,4,Amiens Team Under 1.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:55904,Amiens SC vs FC Versailles — France Ligue 3
+P-176,176,soccer,2,4,Under 2.5 Goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:55905,Amiens SC vs FC Versailles — France Ligue 3
+P-176,176,soccer,3,4,Versailles ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:55906,Amiens SC vs FC Versailles — France Ligue 3
+P-176,176,soccer,4,4,1st Half Over 0.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:55907,Amiens SC vs FC Versailles — France Ligue 3
+P-177,177,soccer,1,5,Aubagne Team Under 1.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:55938,SC Aubagne Air Bel vs Bourg-en-Bresse Péronnas — France Ligue 3
+P-177,177,soccer,2,5,Under 2.5 Goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:55939,SC Aubagne Air Bel vs Bourg-en-Bresse Péronnas — France Ligue 3
+P-177,177,soccer,3,5,1st Half Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:55940,SC Aubagne Air Bel vs Bourg-en-Bresse Péronnas — France Ligue 3
+P-177,177,soccer,4,5,BTTS — No,other,,,W,PREDICTION_LOG_COMBINED.md:55941,SC Aubagne Air Bel vs Bourg-en-Bresse Péronnas — France Ligue 3
+P-177,177,soccer,5,5,Under 10.5 Corners,corners,Under,,W,PREDICTION_LOG_COMBINED.md:55942,SC Aubagne Air Bel vs Bourg-en-Bresse Péronnas — France Ligue 3
+P-178,178,soccer,1,4,Under 2.5 Goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:55970,AS Cannes vs Le Puy-en-Velay — France Ligue 3
+P-178,178,soccer,2,4,Cannes Team Under 1.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:55971,AS Cannes vs Le Puy-en-Velay — France Ligue 3
+P-178,178,soccer,3,4,1st Half Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:55972,AS Cannes vs Le Puy-en-Velay — France Ligue 3
+P-178,178,soccer,4,4,BTTS — No,other,,,W,PREDICTION_LOG_COMBINED.md:55973,AS Cannes vs Le Puy-en-Velay — France Ligue 3
+P-179,179,soccer,1,5,Thionville Team Over 0.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:55992,Thionville Lusitanos vs Paris 13 Atletico — France Ligue 3
+P-179,179,soccer,2,5,1st Half Over 0.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:55993,Thionville Lusitanos vs Paris 13 Atletico — France Ligue 3
+P-179,179,soccer,3,5,Paris 13 Team Under 1.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:55994,Thionville Lusitanos vs Paris 13 Atletico — France Ligue 3
+P-179,179,soccer,4,5,Under 2.5 Goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:55995,Thionville Lusitanos vs Paris 13 Atletico — France Ligue 3
+P-179,179,soccer,5,5,Under 10.5 Corners,corners,Under,,W,PREDICTION_LOG_COMBINED.md:55996,Thionville Lusitanos vs Paris 13 Atletico — France Ligue 3
+P-180,180,baseball-NPB/KBO/CPBL,1,5,1st Half Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:56010,1. FC Köln vs TSG Hoffenheim — Germany Bundesliga
+P-180,180,baseball-NPB/KBO/CPBL,2,5,Hoffenheim Team Over 0.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:56011,1. FC Köln vs TSG Hoffenheim — Germany Bundesliga
+P-180,180,baseball-NPB/KBO/CPBL,3,5,Hoffenheim or Draw X2,moneyline,,,L,PREDICTION_LOG_COMBINED.md:56012,1. FC Köln vs TSG Hoffenheim — Germany Bundesliga
+P-180,180,baseball-NPB/KBO/CPBL,4,5,Over 2.5 Goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:56013,1. FC Köln vs TSG Hoffenheim — Germany Bundesliga
+P-180,180,baseball-NPB/KBO/CPBL,5,5,Hoffenheim Most Corners — 3-way,corners,,,W,PREDICTION_LOG_COMBINED.md:56014,1. FC Köln vs TSG Hoffenheim — Germany Bundesliga
+P-181,181,soccer,1,5,Coventry or Draw 1X,moneyline,,,L,PREDICTION_LOG_COMBINED.md:56032,Coventry City vs Hull City — English Premier League
+P-181,181,soccer,2,5,Hull Team Under 1.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:56033,Coventry City vs Hull City — English Premier League
+P-181,181,soccer,3,5,Under 2.5 Goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:56034,Coventry City vs Hull City — English Premier League
+P-181,181,soccer,4,5,Coventry Most Corners,corners,,,W,PREDICTION_LOG_COMBINED.md:56035,Coventry City vs Hull City — English Premier League
+P-181,181,soccer,5,5,1st Half Over 0.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:56036,Coventry City vs Hull City — English Premier League
+P-182,182,soccer,1,5,1st Half Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:56064,Excelsior Rotterdam vs Sparta Rotterdam — Netherlands Eredivisie
+P-182,182,soccer,2,5,Excelsior Team Over 0.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:56065,Excelsior Rotterdam vs Sparta Rotterdam — Netherlands Eredivisie
+P-182,182,soccer,3,5,Over 2.5 Goals,total,Over,,W,PREDICTION_LOG_COMBINED.md:56066,Excelsior Rotterdam vs Sparta Rotterdam — Netherlands Eredivisie
+P-182,182,soccer,4,5,Over 9.5 Corners,corners,Over,,W,PREDICTION_LOG_COMBINED.md:56067,Excelsior Rotterdam vs Sparta Rotterdam — Netherlands Eredivisie
+P-182,182,soccer,5,5,Excelsior or Draw 1X,moneyline,,,W,PREDICTION_LOG_COMBINED.md:56068,Excelsior Rotterdam vs Sparta Rotterdam — Netherlands Eredivisie
+P-183,183,soccer,1,5,Levante Team Under 1.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:56082,Levante UD vs Real Betis — La Liga
+P-183,183,soccer,2,5,Real Betis or Draw X2,moneyline,,,L,PREDICTION_LOG_COMBINED.md:56083,Levante UD vs Real Betis — La Liga
+P-183,183,soccer,3,5,Under 2.5 Goals,total,Under,,L,PREDICTION_LOG_COMBINED.md:56084,Levante UD vs Real Betis — La Liga
+P-183,183,soccer,4,5,1st Half Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:56085,Levante UD vs Real Betis — La Liga
+P-183,183,soccer,5,5,Under 10.5 Corners,corners,Under,,L,PREDICTION_LOG_COMBINED.md:56086,Levante UD vs Real Betis — La Liga
+P-184,184,american-football,1,4,TCU -7.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:56113,North Carolina vs TCU — NCAA Football
+P-184,184,american-football,2,4,Over 45.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:56114,North Carolina vs TCU — NCAA Football
+P-184,184,american-football,3,4,Under 45.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:56115,North Carolina vs TCU — NCAA Football
+P-184,184,american-football,4,4,North Carolina +7.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:56116,North Carolina vs TCU — NCAA Football
+P-185,185,american-football,1,4,Under 40.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:56143,Robert Morris @ Wagner — NCAA FCS / NEC
+P-185,185,american-football,2,4,Wagner -5.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:56144,Robert Morris @ Wagner — NCAA FCS / NEC
+P-185,185,american-football,3,4,Robert Morris +5.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:56145,Robert Morris @ Wagner — NCAA FCS / NEC
+P-185,185,american-football,4,4,Over 40.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:56146,Robert Morris @ Wagner — NCAA FCS / NEC
+P-186,186,baseball-MLB,1,4,Detroit Tigers +2.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:56163,Los Angeles Dodgers @ Detroit Tigers — MLB
+P-186,186,baseball-MLB,2,4,Dodgers ML,moneyline,,,L,PREDICTION_LOG_COMBINED.md:56164,Los Angeles Dodgers @ Detroit Tigers — MLB
+P-186,186,baseball-MLB,3,4,Under 7.0,total,Under,,W,PREDICTION_LOG_COMBINED.md:56165,Los Angeles Dodgers @ Detroit Tigers — MLB
+P-186,186,baseball-MLB,4,4,Over 7.0,total,Over,,L,PREDICTION_LOG_COMBINED.md:56166,Los Angeles Dodgers @ Detroit Tigers — MLB
+P-188,188,baseball-MLB,1,4,Boston +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:57490,Boston Red Sox @ New York Yankees — MLB
+P-188,188,baseball-MLB,2,4,Yankees ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:57491,Boston Red Sox @ New York Yankees — MLB
+P-188,188,baseball-MLB,3,4,Under 7.0,total,Under,,L,PREDICTION_LOG_COMBINED.md:57492,Boston Red Sox @ New York Yankees — MLB
+P-188,188,baseball-MLB,4,4,Over 7.0,total,Over,,W,PREDICTION_LOG_COMBINED.md:57493,Boston Red Sox @ New York Yankees — MLB
+P-189,189,cricket,1,4,Alabama A&M +2.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:57504,Alabama A&M Bulldogs vs Howard Bison — Cricket MEAC/SWAC Challenge
+P-189,189,cricket,2,4,Under 46.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:57505,Alabama A&M Bulldogs vs Howard Bison — Cricket MEAC/SWAC Challenge
+P-189,189,cricket,3,4,Over 46.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:57506,Alabama A&M Bulldogs vs Howard Bison — Cricket MEAC/SWAC Challenge
+P-189,189,cricket,4,4,Howard -2.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:57507,Alabama A&M Bulldogs vs Howard Bison — Cricket MEAC/SWAC Challenge
+P-190,190,rugby,1,4,Under 47.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:57518,New Zealand Warriors (W) vs St George Illawarra Dragons (W) — NRLW Round 9
+P-190,190,rugby,2,4,Dragons +15.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:57519,New Zealand Warriors (W) vs St George Illawarra Dragons (W) — NRLW Round 9
+P-190,190,rugby,3,4,Warriors -15.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:57520,New Zealand Warriors (W) vs St George Illawarra Dragons (W) — NRLW Round 9
+P-190,190,rugby,4,4,Over 47.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:57521,New Zealand Warriors (W) vs St George Illawarra Dragons (W) — NRLW Round 9
+P-239,239,baseball-MLB,1,5,Over 7.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:68046,Athletics @ Texas Rangers
+P-239,239,baseball-MLB,2,5,Texas -1.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:68047,Athletics @ Texas Rangers
+P-239,239,baseball-MLB,3,5,Athletics +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:68048,Athletics @ Texas Rangers
+P-239,239,baseball-MLB,4,5,Under 7.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:68049,Athletics @ Texas Rangers
+P-239,239,baseball-MLB,7,5,,other,,,W,PREDICTION_LOG_COMBINED.md:68234,Athletics @ Texas Rangers
+P-240,240,baseball-MLB,1,4,,other,,,W,PREDICTION_LOG_COMBINED.md:68235,Chicago White Sox @ Houston Astros
+P-240,240,baseball-MLB,2,4,Astros +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:68067,Chicago White Sox @ Houston Astros
+P-240,240,baseball-MLB,3,4,Over 8.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:68068,Chicago White Sox @ Houston Astros
+P-240,240,baseball-MLB,4,4,Under 8.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:68069,Chicago White Sox @ Houston Astros
+P-244,244,baseball-MLB,1,4,,other,,,W,PREDICTION_LOG_COMBINED.md:68236,Baltimore Orioles @ Colorado Rockies
+P-244,244,baseball-MLB,2,4,Over 11.0,total,Over,,L,PREDICTION_LOG_COMBINED.md:68087,Baltimore Orioles @ Colorado Rockies
+P-244,244,baseball-MLB,3,4,Orioles -1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:68088,Baltimore Orioles @ Colorado Rockies
+P-244,244,baseball-MLB,4,4,Under 11.0,total,Under,,W,PREDICTION_LOG_COMBINED.md:68089,Baltimore Orioles @ Colorado Rockies
+P-245,245,tennis,1,5,Sonego +6.5 games,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:68109,Alexander Zverev vs Lorenzo Sonego
+P-245,245,tennis,2,5,Under 33.5 games,total,Under,,L,PREDICTION_LOG_COMBINED.md:68110,Alexander Zverev vs Lorenzo Sonego
+P-245,245,tennis,3,5,Zverev -6.5 games,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:68111,Alexander Zverev vs Lorenzo Sonego
+P-245,245,tennis,4,5,Over 33.5 games,total,Over,,W,PREDICTION_LOG_COMBINED.md:68112,Alexander Zverev vs Lorenzo Sonego
+P-245,245,tennis,6,5,,other,,,W,PREDICTION_LOG_COMBINED.md:68237,Alexander Zverev vs Lorenzo Sonego
+P-247,247,baseball-MLB,1,4,,other,,,L,PREDICTION_LOG_COMBINED.md:68239,Philadelphia Phillies @ Arizona Diamondbacks
+P-247,247,baseball-MLB,2,4,Phillies ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:68145,Philadelphia Phillies @ Arizona Diamondbacks
+P-247,247,baseball-MLB,3,4,Under 7.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:68146,Philadelphia Phillies @ Arizona Diamondbacks
+P-247,247,baseball-MLB,4,4,Over 7.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:68147,Philadelphia Phillies @ Arizona Diamondbacks
+P-248,248,baseball-MLB,1,4,,other,,,W,PREDICTION_LOG_COMBINED.md:68240,St. Louis Cardinals @ Los Angeles Dodgers
+P-248,248,baseball-MLB,2,4,Under 9.0,total,Under,,L,PREDICTION_LOG_COMBINED.md:68215,St. Louis Cardinals @ Los Angeles Dodgers
+P-248,248,baseball-MLB,3,4,Dodgers -1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:68216,St. Louis Cardinals @ Los Angeles Dodgers
+P-248,248,baseball-MLB,4,4,Over 9.0,total,Over,,W,PREDICTION_LOG_COMBINED.md:68217,St. Louis Cardinals @ Los Angeles Dodgers
+P-250,250,soccer,1,4,1H Over 0.5,phase,Over,,L,PREDICTION_LOG_COMBINED.md:69717,Yunnan Yukun vs Chongqing Tonglianglong
+P-250,250,soccer,3,4,Full Over 2.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:69719,Yunnan Yukun vs Chongqing Tonglianglong
+P-250,250,soccer,4,4,Full Under 2.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:69720,Yunnan Yukun vs Chongqing Tonglianglong
+P-250,250,soccer,5,4,1H Under 0.5,phase,Under,,W,PREDICTION_LOG_COMBINED.md:69718,Yunnan Yukun vs Chongqing Tonglianglong
+P-251,251,soccer,1,5,1H Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:69747,Sassuolo vs Frosinone
+P-251,251,soccer,2,5,Full Over 2.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:69748,Sassuolo vs Frosinone
+P-251,251,soccer,3,5,Corners Over 8.5,corners,Over,,W,PREDICTION_LOG_COMBINED.md:69749,Sassuolo vs Frosinone
+P-251,251,soccer,4,5,Full Under 2.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:69750,Sassuolo vs Frosinone
+P-251,251,soccer,5,5,1H Under 0.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:69751,Sassuolo vs Frosinone
+P-252,252,cricket,1,4,Edinburgh first 6 overs Over 44.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:72270,Belfast Wolves vs Edinburgh Castle Rockers
+P-252,252,cricket,2,4,Edinburgh innings total Under 165.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:72271,Belfast Wolves vs Edinburgh Castle Rockers
+P-252,252,cricket,3,4,Edinburgh innings total Over 165.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:72272,Belfast Wolves vs Edinburgh Castle Rockers
+P-252,252,cricket,4,4,Edinburgh first 6 overs Under 44.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:72273,Belfast Wolves vs Edinburgh Castle Rockers
+P-253,253,soccer,1,5,Full Match Under 2.5 Goals,total,Under,,W,PREDICTION_LOG_COMBINED.md:71836,El Gounah vs Al Mokawloon Al Arab
+P-253,253,soccer,2,5,Total Corners Over 8.5,corners,Over,,W,PREDICTION_LOG_COMBINED.md:71837,El Gounah vs Al Mokawloon Al Arab
+P-253,253,soccer,3,5,1H Under 0.5 Goals,phase,Under,,L,PREDICTION_LOG_COMBINED.md:71838,El Gounah vs Al Mokawloon Al Arab
+P-253,253,soccer,4,5,1H Over 0.5 Goals,phase,Over,,W,PREDICTION_LOG_COMBINED.md:71839,El Gounah vs Al Mokawloon Al Arab
+P-253,253,soccer,5,5,Full Match Over 2.5 Goals,total,Over,,L,PREDICTION_LOG_COMBINED.md:71840,El Gounah vs Al Mokawloon Al Arab
+P-254,254,tennis,1,4,Van de Zandschulp -5.5,handicap,minus,,W,PREDICTION_LOG_COMBINED.md:71370,Jan Choinski vs Botic Van de Zandschulp
+P-254,254,tennis,2,4,Under 38.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:71371,Jan Choinski vs Botic Van de Zandschulp
+P-254,254,tennis,3,4,Choinski +5.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:71372,Jan Choinski vs Botic Van de Zandschulp
+P-254,254,tennis,4,4,Over 38.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:71373,Jan Choinski vs Botic Van de Zandschulp
+P-255,255,soccer,1,4,1H Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:71393,Inter Women vs VfL Wolfsburg Women
+P-255,255,soccer,3,4,Full Over 2.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:71395,Inter Women vs VfL Wolfsburg Women
+P-255,255,soccer,4,4,Full Under 2.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:71396,Inter Women vs VfL Wolfsburg Women
+P-255,255,soccer,5,4,1H Under 0.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:71397,Inter Women vs VfL Wolfsburg Women
+P-256,256,soccer,2,4,1H Over 0.5,phase,Over,,W,PREDICTION_LOG_COMBINED.md:71418,Paris Saint-Germain Women vs Eintracht Frankfurt Women
+P-256,256,soccer,3,4,Full Under 2.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:71419,Paris Saint-Germain Women vs Eintracht Frankfurt Women
+P-256,256,soccer,4,4,Full Over 2.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:71420,Paris Saint-Germain Women vs Eintracht Frankfurt Women
+P-256,256,soccer,5,4,1H Under 0.5,phase,Under,,L,PREDICTION_LOG_COMBINED.md:71421,Paris Saint-Germain Women vs Eintracht Frankfurt Women
+P-257,257,baseball-MLB,1,4,Over 9.5,total,Over,,W,PREDICTION_LOG_COMBINED.md:71438,San Diego Padres @ Cincinnati Reds
+P-257,257,baseball-MLB,2,4,Padres -1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED.md:71439,San Diego Padres @ Cincinnati Reds
+P-257,257,baseball-MLB,3,4,Under 9.5,total,Under,,L,PREDICTION_LOG_COMBINED.md:71440,San Diego Padres @ Cincinnati Reds
+P-257,257,baseball-MLB,4,4,Reds +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED.md:71441,San Diego Padres @ Cincinnati Reds
+P-258,258,baseball-MLB,1,4,Nationals +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:71459,Atlanta Braves @ Washington Nationals
+P-258,258,baseball-MLB,2,4,Braves ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:71460,Atlanta Braves @ Washington Nationals
+P-258,258,baseball-MLB,3,4,Under 9.5,total,Under,,W,PREDICTION_LOG_COMBINED.md:71461,Atlanta Braves @ Washington Nationals
+P-258,258,baseball-MLB,4,4,Over 9.5,total,Over,,L,PREDICTION_LOG_COMBINED.md:71462,Atlanta Braves @ Washington Nationals
+P-261,261,baseball-MLB,1,4,Guardians +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED.md:74100,Toronto Blue Jays @ Cleveland Guardians
+P-261,261,baseball-MLB,2,4,Under 7.0 Runs,total,Under,,L,PREDICTION_LOG_COMBINED.md:74101,Toronto Blue Jays @ Cleveland Guardians
+P-261,261,baseball-MLB,3,4,Blue Jays ML,moneyline,,,W,PREDICTION_LOG_COMBINED.md:74102,Toronto Blue Jays @ Cleveland Guardians
+P-261,261,baseball-MLB,4,4,Over 7.0 Runs,total,Over,,W,PREDICTION_LOG_COMBINED.md:74103,Toronto Blue Jays @ Cleveland Guardians
+P-273,273,soccer,1,5,1st Half Over 0.5 goals,phase,Over,,W,PREDICTION_LOG_COMBINED_2.md:1173,Palermo vs Mantova
+P-273,273,soccer,2,5,Palermo Over 4.5 team corners,corners,Over,,L,PREDICTION_LOG_COMBINED_2.md:1174,Palermo vs Mantova
+P-273,273,soccer,3,5,Under 2.5 total goals,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:1175,Palermo vs Mantova
+P-273,273,soccer,4,5,Over 2.5 total goals,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:1176,Palermo vs Mantova
+P-273,273,soccer,5,5,1st Half Under 0.5 goals,phase,Under,,L,PREDICTION_LOG_COMBINED_2.md:1177,Palermo vs Mantova
+P-274,274,baseball-MLB,1,4,Giants +1.5,handicap,plus,,L,PREDICTION_LOG_COMBINED_2.md:1178,San Francisco Giants @ Pittsburgh Pirates
+P-274,274,baseball-MLB,2,4,Pirates ML,moneyline,,,W,PREDICTION_LOG_COMBINED_2.md:1179,San Francisco Giants @ Pittsburgh Pirates
+P-274,274,baseball-MLB,3,4,Over 9.0 runs,total,Over,,L,PREDICTION_LOG_COMBINED_2.md:1180,San Francisco Giants @ Pittsburgh Pirates
+P-274,274,baseball-MLB,4,4,Under 9.0 runs,total,Under,,W,PREDICTION_LOG_COMBINED_2.md:1181,San Francisco Giants @ Pittsburgh Pirates
+P-275,275,tennis,1,4,Over 37.5 total games,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:1182,Alexander Zverev vs Quentin Halys
+P-275,275,tennis,2,4,Halys +5.5 games,handicap,plus,,W,PREDICTION_LOG_COMBINED_2.md:1183,Alexander Zverev vs Quentin Halys
+P-275,275,tennis,3,4,Zverev -5.5 games,handicap,minus,,L,PREDICTION_LOG_COMBINED_2.md:1184,Alexander Zverev vs Quentin Halys
+P-275,275,tennis,4,4,Under 37.5 total games,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:1185,Alexander Zverev vs Quentin Halys
+P-276,276,american-football,1,4,Buffalo +18.5,handicap,plus,,W,PREDICTION_LOG_COMBINED_2.md:1186,UAlbany @ Buffalo
+P-276,276,american-football,2,4,Under 47.5 points,total,Under,,W,PREDICTION_LOG_COMBINED_2.md:1187,UAlbany @ Buffalo
+P-276,276,american-football,3,4,Over 47.5 points,total,Over,,L,PREDICTION_LOG_COMBINED_2.md:1188,UAlbany @ Buffalo
+P-276,276,american-football,4,4,Albany -18.5,handicap,minus,,L,PREDICTION_LOG_COMBINED_2.md:1189,UAlbany @ Buffalo
+P-277,277,baseball-MLB,1,4,Mariners -1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED_2.md:1190,Athletics @ Seattle Mariners
+P-277,277,baseball-MLB,2,4,Under 7.5 runs,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:1191,Athletics @ Seattle Mariners
+P-277,277,baseball-MLB,3,4,Over 7.5 runs,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:1192,Athletics @ Seattle Mariners
+P-277,277,baseball-MLB,4,4,Athletics +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED_2.md:1193,Athletics @ Seattle Mariners
+P-278,278,baseball-MLB,1,4,Dodgers -1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED_2.md:1194,St. Louis Cardinals @ Los Angeles Dodgers
+P-278,278,baseball-MLB,2,4,Under 7.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED_2.md:1195,St. Louis Cardinals @ Los Angeles Dodgers
+P-278,278,baseball-MLB,3,4,Over 7.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED_2.md:1196,St. Louis Cardinals @ Los Angeles Dodgers
+P-278,278,baseball-MLB,4,4,Cardinals +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED_2.md:1197,St. Louis Cardinals @ Los Angeles Dodgers
+P-279,279,soccer,1,4,Abejas +5.5,handicap,plus,,L,PREDICTION_LOG_COMBINED_2.md:1198,Mineros de Zacatecas vs Abejas de León
+P-279,279,soccer,2,4,Under 169.5 points,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:1199,Mineros de Zacatecas vs Abejas de León
+P-279,279,soccer,3,4,Mineros -5.5,handicap,minus,,W,PREDICTION_LOG_COMBINED_2.md:1200,Mineros de Zacatecas vs Abejas de León
+P-279,279,soccer,4,4,Over 169.5 points,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:1201,Mineros de Zacatecas vs Abejas de León
+P-280,280,rugby,1,4,Roosters +22.5,handicap,plus,,L,PREDICTION_LOG_COMBINED_2.md:6907,South Sydney Rabbitohs vs Sydney Roosters
+P-280,280,rugby,2,4,Under 54.5,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:6908,South Sydney Rabbitohs vs Sydney Roosters
+P-280,280,rugby,3,4,Rabbitohs -22.5,handicap,minus,,W,PREDICTION_LOG_COMBINED_2.md:6909,South Sydney Rabbitohs vs Sydney Roosters
+P-280,280,rugby,4,4,Over 54.5,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:6910,South Sydney Rabbitohs vs Sydney Roosters
+P-281,281,baseball-NPB/KBO/CPBL,1,4,Under 6.5,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:6918,Rakuten Monkeys @ Fubon Guardians
+P-281,281,baseball-NPB/KBO/CPBL,2,4,Fubon +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED_2.md:6919,Rakuten Monkeys @ Fubon Guardians
+P-281,281,baseball-NPB/KBO/CPBL,3,4,Rakuten -1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED_2.md:6920,Rakuten Monkeys @ Fubon Guardians
+P-281,281,baseball-NPB/KBO/CPBL,4,4,Over 6.5,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:6921,Rakuten Monkeys @ Fubon Guardians
+P-282,282,baseball-NPB/KBO/CPBL,1,4,Under 6.5,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:6929,TSG Hawks @ Uni-Lions
+P-282,282,baseball-NPB/KBO/CPBL,2,4,Uni +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED_2.md:6930,TSG Hawks @ Uni-Lions
+P-282,282,baseball-NPB/KBO/CPBL,3,4,TSG -1.5,handicap,minus,,L,PREDICTION_LOG_COMBINED_2.md:6931,TSG Hawks @ Uni-Lions
+P-282,282,baseball-NPB/KBO/CPBL,4,4,Over 6.5,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:6932,TSG Hawks @ Uni-Lions
+P-283,283,cricket,1,4,South Africa Over 53.5 — first six,phase,Over,,W,PREDICTION_LOG_COMBINED_2.md:6940,Namibia vs South Africa — tri-series match 6
+P-283,283,cricket,2,4,South Africa Under 183.5 — 20 overs,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:6941,Namibia vs South Africa — tri-series match 6
+P-283,283,cricket,3,4,South Africa Over 183.5 — 20 overs,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:6942,Namibia vs South Africa — tri-series match 6
+P-283,283,cricket,4,4,South Africa Under 53.5 — first six,phase,Under,,L,PREDICTION_LOG_COMBINED_2.md:6943,Namibia vs South Africa — tri-series match 6
+P-284,284,basketball,1,4,Under 161.5,total,Under,,W,PREDICTION_LOG_COMBINED_2.md:6951,USA vs China — Women’s World Cup
+P-284,284,basketball,2,4,China +29.5,handicap,plus,,L,PREDICTION_LOG_COMBINED_2.md:6952,USA vs China — Women’s World Cup
+P-284,284,basketball,3,4,USA -29.5,handicap,minus,,W,PREDICTION_LOG_COMBINED_2.md:6953,USA vs China — Women’s World Cup
+P-284,284,basketball,4,4,Over 161.5,total,Over,,L,PREDICTION_LOG_COMBINED_2.md:6954,USA vs China — Women’s World Cup
+P-285,285,basketball,1,4,Under 143.5,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:6962,Korea vs Nigeria — Women’s World Cup
+P-285,285,basketball,2,4,Korea +12.5,handicap,plus,,W,PREDICTION_LOG_COMBINED_2.md:6963,Korea vs Nigeria — Women’s World Cup
+P-285,285,basketball,3,4,Nigeria -12.5,handicap,minus,,L,PREDICTION_LOG_COMBINED_2.md:6964,Korea vs Nigeria — Women’s World Cup
+P-285,285,basketball,4,4,Over 143.5,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:6965,Korea vs Nigeria — Women’s World Cup
+P-286,286,cricket,1,4,Belfast Under 120.5 — 12 overs,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:6973,Glasgow Cosmic vs Belfast Wolves — Match 13
+P-286,286,cricket,2,4,Belfast Under 57.5 — first six,phase,Under,,W,PREDICTION_LOG_COMBINED_2.md:6974,Glasgow Cosmic vs Belfast Wolves — Match 13
+P-286,286,cricket,3,4,Belfast Over 57.5 — first six,phase,Over,,L,PREDICTION_LOG_COMBINED_2.md:6975,Glasgow Cosmic vs Belfast Wolves — Match 13
+P-286,286,cricket,4,4,Belfast Over 120.5 — 12 overs,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:6976,Glasgow Cosmic vs Belfast Wolves — Match 13
+P-287,287,tennis,1,4,Over 40.5 games,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:6984,Alexander Bublik vs Tommy Paul — US Open R3
+P-287,287,tennis,2,4,Bublik +2.5 games,handicap,plus,,L,PREDICTION_LOG_COMBINED_2.md:6985,Alexander Bublik vs Tommy Paul — US Open R3
+P-287,287,tennis,3,4,Paul -2.5 games,handicap,minus,,W,PREDICTION_LOG_COMBINED_2.md:6986,Alexander Bublik vs Tommy Paul — US Open R3
+P-287,287,tennis,4,4,Under 40.5 games,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:6987,Alexander Bublik vs Tommy Paul — US Open R3
+P-288,288,baseball-MLB,1,1,,other,,,W,PREDICTION_LOG_COMBINED_2.md:7305,Athletics @ Seattle Mariners — September 4 local
+P-289,289,AFL,1,4,Sydney -10.5,handicap,minus,,L,PREDICTION_LOG_COMBINED_2.md:6995,Western Bulldogs vs Sydney Swans — Round 4
+P-289,289,AFL,2,4,Under 82.5,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:6996,Western Bulldogs vs Sydney Swans — Round 4
+P-289,289,AFL,3,4,Over 82.5,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:6997,Western Bulldogs vs Sydney Swans — Round 4
+P-289,289,AFL,4,4,Bulldogs +10.5,handicap,plus,,W,PREDICTION_LOG_COMBINED_2.md:6998,Western Bulldogs vs Sydney Swans — Round 4
+P-291,291,tennis,5,1,,other,,,W,PREDICTION_LOG_COMBINED_2.md:7307,Ben Shelton vs Denis Shapovalov — US Open R3
+P-300,300,cricket,5,1,,other,,,W,PREDICTION_LOG_COMBINED_2.md:7316,Rotterdam Dockers vs Edinburgh Castle Rockers — ETPL Match 14
+P-311,311,cricket,5,1,,other,,,W,PREDICTION_LOG_COMBINED_2.md:7684,Barbados Women v Trinbago Knight Riders Women
+P-315,315,AFL,5,1,,other,,,W,PREDICTION_LOG_COMBINED_2.md:7688,Melbourne v West Coast (AFLW)
+P-322,322,cricket,1,4,SA PP Over 54.5,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:7859,South Africa vs Zimbabwe — Namibia T20I Tri-Series Final
+P-322,322,cricket,2,4,SA 20-over Over 186.5,total,Over,,W,PREDICTION_LOG_COMBINED_2.md:7859,South Africa vs Zimbabwe — Namibia T20I Tri-Series Final
+P-322,322,cricket,3,4,SA 20-over Under 186.5,total,Over,,L,PREDICTION_LOG_COMBINED_2.md:7859,South Africa vs Zimbabwe — Namibia T20I Tri-Series Final
+P-322,322,cricket,4,4,SA PP Under 54.5,total,Under,,L,PREDICTION_LOG_COMBINED_2.md:7859,South Africa vs Zimbabwe — Namibia T20I Tri-Series Final
+P-323,323,soccer,1,5,1H Over 0.5,phase,Over,0.740,L,PREDICTION_LOG_COMBINED_2.md:7860,Everton vs Manchester United — EPL MW3
+P-323,323,soccer,2,5,Man United Over 4.5 team corners,corners,Over,0.640,L,PREDICTION_LOG_COMBINED_2.md:7860,Everton vs Manchester United — EPL MW3
+P-323,323,soccer,3,5,FT Over 2.5,total,Over,0.570,W,PREDICTION_LOG_COMBINED_2.md:7860,Everton vs Manchester United — EPL MW3
+P-323,323,soccer,4,5,FT Under 2.5,total,Under,0.430,L,PREDICTION_LOG_COMBINED_2.md:7860,Everton vs Manchester United — EPL MW3
+P-323,323,soccer,5,5,1H Under 0.5,phase,Under,0.260,W,PREDICTION_LOG_COMBINED_2.md:7860,Everton vs Manchester United — EPL MW3
+P-325,325,cricket,1,5,BAN PP Under 42.5,total,Under,0.730,W,PREDICTION_LOG_COMBINED_2.md:7861,Bangladesh W vs Sri Lanka W — Women's Asia Cup M10
+P-325,325,cricket,2,5,BAN innings Under 116.5,total,Under,0.560,W,PREDICTION_LOG_COMBINED_2.md:7861,Bangladesh W vs Sri Lanka W — Women's Asia Cup M10
+P-325,325,cricket,3,5,BAN innings Over 116.5,total,Over,0.440,L,PREDICTION_LOG_COMBINED_2.md:7861,Bangladesh W vs Sri Lanka W — Women's Asia Cup M10
+P-325,325,cricket,4,5,BAN PP Over 42.5,total,Over,0.270,L,PREDICTION_LOG_COMBINED_2.md:7861,Bangladesh W vs Sri Lanka W — Women's Asia Cup M10
+P-325,325,cricket,5,5,,other,,,W,PREDICTION_LOG_COMBINED_2.md:7844,Bangladesh W vs Sri Lanka W — Women's Asia Cup M10
+P-328,328,soccer,1,5,1H Over 0.5,phase,Over,0.680,W,PREDICTION_LOG_COMBINED_2.md:7863,Arsenal vs Chelsea — EPL MW3
+P-328,328,soccer,2,5,Arsenal Over 4.5 team corners,corners,Over,0.620,W,PREDICTION_LOG_COMBINED_2.md:7863,Arsenal vs Chelsea — EPL MW3
+P-328,328,soccer,3,5,FT Over 2.5,total,Over,0.530,W,PREDICTION_LOG_COMBINED_2.md:7863,Arsenal vs Chelsea — EPL MW3
+P-328,328,soccer,4,5,FT Under 2.5,total,Under,0.470,L,PREDICTION_LOG_COMBINED_2.md:7863,Arsenal vs Chelsea — EPL MW3
+P-328,328,soccer,5,5,1H Under 0.5,phase,Under,0.320,L,PREDICTION_LOG_COMBINED_2.md:7863,Arsenal vs Chelsea — EPL MW3
+P-331,331,baseball-MLB,1,4,Combined Total Over 8.5,total,Over,0.570,W,PREDICTION_LOG_COMBINED_2.md:7865,Milwaukee Brewers @ Cincinnati Reds — MLB
+P-331,331,baseball-MLB,2,4,Cincinnati +1.5,handicap,plus,0.560,W,PREDICTION_LOG_COMBINED_2.md:7865,Milwaukee Brewers @ Cincinnati Reds — MLB
+P-331,331,baseball-MLB,3,4,Milwaukee -1.5,handicap,minus,0.440,L,PREDICTION_LOG_COMBINED_2.md:7865,Milwaukee Brewers @ Cincinnati Reds — MLB
+P-331,331,baseball-MLB,4,4,Combined Total Under 8.5,total,Under,0.430,L,PREDICTION_LOG_COMBINED_2.md:7865,Milwaukee Brewers @ Cincinnati Reds — MLB
+P-335,335,baseball-MLB,1,4,WSH +1.5,handicap,plus,0.590,W,PREDICTION_LOG_COMBINED_3.md:222,Washington Nationals @ San Diego Padres — MLB
+P-335,335,baseball-MLB,2,4,Over 8.0,total,Over,0.520,L,PREDICTION_LOG_COMBINED_3.md:222,Washington Nationals @ San Diego Padres — MLB
+P-335,335,baseball-MLB,3,4,SD -1.5,handicap,minus,0.410,L,PREDICTION_LOG_COMBINED_3.md:222,Washington Nationals @ San Diego Padres — MLB
+P-335,335,baseball-MLB,4,4,Under 8.0,total,Under,0.360,W,PREDICTION_LOG_COMBINED_3.md:222,Washington Nationals @ San Diego Padres — MLB
+P-336,336,soccer,1,5,Under 2.5,total,Under,0.600,W,PREDICTION_LOG_COMBINED_3.md:223,Carabobo FC vs Estudiantes de Mérida — Venezuela Clausura J8
+P-336,336,soccer,2,5,Over 7.5 total corners,corners,Over,0.590,W,PREDICTION_LOG_COMBINED_3.md:223,Carabobo FC vs Estudiantes de Mérida — Venezuela Clausura J8
+P-336,336,soccer,3,5,1H Over 0.5,phase,Over,0.560,W,PREDICTION_LOG_COMBINED_3.md:223,Carabobo FC vs Estudiantes de Mérida — Venezuela Clausura J8
+P-336,336,soccer,4,5,1H Under 0.5,phase,Under,0.440,L,PREDICTION_LOG_COMBINED_3.md:223,Carabobo FC vs Estudiantes de Mérida — Venezuela Clausura J8
+P-336,336,soccer,5,5,Over 2.5,total,Over,0.400,L,PREDICTION_LOG_COMBINED_3.md:223,Carabobo FC vs Estudiantes de Mérida — Venezuela Clausura J8
+P-337,337,soccer,1,5,Under 2.5,total,Under,0.650,W,PREDICTION_LOG_COMBINED_3.md:224,Barracas Central vs Argentinos Juniors — Argentina Clausura F8
+P-337,337,soccer,2,5,1H Over 0.5,phase,Over,0.600,L,PREDICTION_LOG_COMBINED_3.md:224,Barracas Central vs Argentinos Juniors — Argentina Clausura F8
+P-337,337,soccer,3,5,Argentinos team corners Over 4.5,corners,Over,0.580,L,PREDICTION_LOG_COMBINED_3.md:224,Barracas Central vs Argentinos Juniors — Argentina Clausura F8
+P-337,337,soccer,4,5,1H Under 0.5,phase,Under,0.400,W,PREDICTION_LOG_COMBINED_3.md:224,Barracas Central vs Argentinos Juniors — Argentina Clausura F8
+P-337,337,soccer,5,5,Over 2.5,total,Over,0.350,L,PREDICTION_LOG_COMBINED_3.md:224,Barracas Central vs Argentinos Juniors — Argentina Clausura F8
+P-338,338,tennis,1,4,Gauff -4.5 games,handicap,minus,0.540,W,PREDICTION_LOG_COMBINED_3.md:225,Iva Jovic vs Coco Gauff — US Open Women's R16
+P-338,338,tennis,2,4,Under 21.5 games,total,Under,0.530,W,PREDICTION_LOG_COMBINED_3.md:225,Iva Jovic vs Coco Gauff — US Open Women's R16
+P-338,338,tennis,3,4,Over 21.5 games,total,Over,0.470,L,PREDICTION_LOG_COMBINED_3.md:225,Iva Jovic vs Coco Gauff — US Open Women's R16
+P-338,338,tennis,4,4,Jovic +4.5 games,handicap,plus,0.460,L,PREDICTION_LOG_COMBINED_3.md:225,Iva Jovic vs Coco Gauff — US Open Women's R16
+P-339,339,baseball-NPB/KBO/CPBL,1,4,Doosan +1.5,handicap,plus,0.600,L,PREDICTION_LOG_COMBINED_3.md:226,Doosan Bears @ Hanwha Eagles — KBO
+P-339,339,baseball-NPB/KBO/CPBL,2,4,Over 9.5,total,Over,0.560,L,PREDICTION_LOG_COMBINED_3.md:226,Doosan Bears @ Hanwha Eagles — KBO
+P-339,339,baseball-NPB/KBO/CPBL,3,4,Under 9.5,total,Under,0.440,W,PREDICTION_LOG_COMBINED_3.md:226,Doosan Bears @ Hanwha Eagles — KBO
+P-339,339,baseball-NPB/KBO/CPBL,4,4,Hanwha -1.5,handicap,minus,0.400,W,PREDICTION_LOG_COMBINED_3.md:226,Doosan Bears @ Hanwha Eagles — KBO
+P-340,340,soccer,1,5,1H Over 0.5,phase,Over,0.610,W,PREDICTION_LOG_COMBINED_3.md:227,Incheon United vs Bucheon FC 1995 — K League 1 R28
+P-340,340,soccer,2,5,Under 10.5 total corners,corners,Under,0.590,W,PREDICTION_LOG_COMBINED_3.md:227,Incheon United vs Bucheon FC 1995 — K League 1 R28
+P-340,340,soccer,3,5,Under 2.5,total,Under,0.550,L,PREDICTION_LOG_COMBINED_3.md:227,Incheon United vs Bucheon FC 1995 — K League 1 R28
+P-340,340,soccer,4,5,Over 2.5,total,Over,0.450,W,PREDICTION_LOG_COMBINED_3.md:227,Incheon United vs Bucheon FC 1995 — K League 1 R28
+P-340,340,soccer,5,5,1H Under 0.5,phase,Under,0.390,L,PREDICTION_LOG_COMBINED_3.md:227,Incheon United vs Bucheon FC 1995 — K League 1 R28
+P-341,341,soccer,1,5,1H Over 0.5,phase,Over,0.610,W,PREDICTION_LOG_COMBINED_3.md:228,BUL FC vs Ntugasaze FC — Uganda Premier League R3
+P-341,341,soccer,2,5,Under 2.5,total,Under,0.580,L,PREDICTION_LOG_COMBINED_3.md:228,BUL FC vs Ntugasaze FC — Uganda Premier League R3
+P-341,341,soccer,4,5,Over 2.5,total,Over,0.420,W,PREDICTION_LOG_COMBINED_3.md:228,BUL FC vs Ntugasaze FC — Uganda Premier League R3
+P-341,341,soccer,4,5,"R1 W, R2 L, R4 W, R5 L; winner W; 4-row Brier 0.2443",moneyline,,,W,PREDICTION_LOG_COMBINED_3.md:1498,BUL FC vs Ntugasaze FC — Uganda Premier League R3
+P-341,341,soccer,5,5,1H Under 0.5,phase,Under,0.390,L,PREDICTION_LOG_COMBINED_3.md:228,BUL FC vs Ntugasaze FC — Uganda Premier League R3
+P-342,342,soccer,1,5,1H Over 0.5,phase,Over,0.680,L,PREDICTION_LOG_COMBINED_3.md:229,MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3
+P-342,342,soccer,2,5,Over 2.5,total,Over,0.560,L,PREDICTION_LOG_COMBINED_3.md:229,MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3
+P-342,342,soccer,4,5,Under 2.5,total,Under,0.440,W,PREDICTION_LOG_COMBINED_3.md:229,MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3
+P-342,342,soccer,4,5,"R1 L, R2 L, R4 W, R5 W; winner W; 4-row Brier 0.3880",moneyline,,,L,PREDICTION_LOG_COMBINED_3.md:1499,MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3
+P-342,342,soccer,5,5,1H Under 0.5,phase,Under,0.320,W,PREDICTION_LOG_COMBINED_3.md:229,MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3
+P-344,344,basketball,1,4,Japan +3.0,handicap,plus,0.560,L,PREDICTION_LOG_COMBINED_3.md:230,Hungary W vs Japan W — FIBA W World Cup Qual. to QF
+P-344,344,basketball,2,4,Over 146.5,total,Over,0.540,W,PREDICTION_LOG_COMBINED_3.md:230,Hungary W vs Japan W — FIBA W World Cup Qual. to QF
+P-344,344,basketball,3,4,Under 146.5,total,Under,0.460,L,PREDICTION_LOG_COMBINED_3.md:230,Hungary W vs Japan W — FIBA W World Cup Qual. to QF
+P-344,344,basketball,4,4,Hungary -3.0,handicap,minus,0.370,W,PREDICTION_LOG_COMBINED_3.md:230,Hungary W vs Japan W — FIBA W World Cup Qual. to QF
+P-345,345,soccer,1,5,Club Brugge +0.5 / double chance 1X,handicap,plus,0.710,L,PREDICTION_LOG_COMBINED_3.md:570,Club Brugge v Aston Villa — UCL MD1
+P-345,345,soccer,2,5,,other,,0.700,W,PREDICTION_LOG_COMBINED_3.md:1607,Club Brugge v Aston Villa — UCL MD1
+P-345,345,soccer,3,5,Club Brugge Over 3.5 team corners,corners,Over,0.600,W,PREDICTION_LOG_COMBINED_3.md:572,Club Brugge v Aston Villa — UCL MD1
+P-345,345,soccer,4,5,1st-half Over 0.5 goals,total,Over,0.580,W,PREDICTION_LOG_COMBINED_3.md:573,Club Brugge v Aston Villa — UCL MD1
+P-345,345,soccer,5,5,Under 2.5 goals,total,Under,0.550,L,PREDICTION_LOG_COMBINED_3.md:574,Club Brugge v Aston Villa — UCL MD1
+P-346,346,soccer,1,5,AEK +0.5 / 1X,handicap,plus,0.790,W,PREDICTION_LOG_COMBINED_3.md:604,AEK Athens v LASK — UCL MD1
+P-346,346,soccer,2,5,,other,,0.780,W,PREDICTION_LOG_COMBINED_3.md:1608,AEK Athens v LASK — UCL MD1
+P-346,346,soccer,3,5,Under 4.5 goals,total,Under,0.770,W,PREDICTION_LOG_COMBINED_3.md:606,AEK Athens v LASK — UCL MD1
+P-346,346,soccer,4,5,1st-half Over 0.5,total,Over,0.680,W,PREDICTION_LOG_COMBINED_3.md:607,AEK Athens v LASK — UCL MD1
+P-346,346,soccer,5,5,Total corners Over 7.5,corners,Over,0.600,W,PREDICTION_LOG_COMBINED_3.md:608,AEK Athens v LASK — UCL MD1
+P-347,347,baseball-MLB,1,4,Rangers +1.5,handicap,plus,0.760,W,PREDICTION_LOG_COMBINED_3.md:624,Rangers @ Mariners (`MLB PRIMARY_SCORED`)
+P-347,347,baseball-MLB,2,4,,other,,0.710,L,PREDICTION_LOG_COMBINED_3.md:1609,Rangers @ Mariners (`MLB PRIMARY_SCORED`)
+P-347,347,baseball-MLB,3,4,Rangers team total Over 2.5,team-total,Over,0.690,W,PREDICTION_LOG_COMBINED_3.md:626,Rangers @ Mariners (`MLB PRIMARY_SCORED`)
+P-347,347,baseball-MLB,4,4,Under 7.5,total,Under,0.540,L,PREDICTION_LOG_COMBINED_3.md:627,Rangers @ Mariners (`MLB PRIMARY_SCORED`)
+P-348,348,baseball-MLB,1,4,,other,,0.730,W,PREDICTION_LOG_COMBINED_3.md:1610,Blue Jays @ Athletics (`MLB PRIMARY_SCORED`)
+P-348,348,baseball-MLB,2,4,Athletics team total Over 3.5,team-total,Over,0.620,L,PREDICTION_LOG_COMBINED_3.md:644,Blue Jays @ Athletics (`MLB PRIMARY_SCORED`)
+P-348,348,baseball-MLB,3,4,Athletics +1.5,handicap,plus,0.610,L,PREDICTION_LOG_COMBINED_3.md:645,Blue Jays @ Athletics (`MLB PRIMARY_SCORED`)
+P-348,348,baseball-MLB,4,4,Over 9.0 (integer; 54% win / 10% push / 36% loss),total,Over,0.540,L,PREDICTION_LOG_COMBINED_3.md:646,Blue Jays @ Athletics (`MLB PRIMARY_SCORED`)
+P-349,349,baseball-MLB,1,4,Giants +1.5,handicap,plus,0.680,W,PREDICTION_LOG_COMBINED_3.md:662,Cardinals @ Giants (`MLB PRIMARY_SCORED`)
+P-349,349,baseball-MLB,2,4,,other,,0.660,W,PREDICTION_LOG_COMBINED_3.md:1611,Cardinals @ Giants (`MLB PRIMARY_SCORED`)
+P-349,349,baseball-MLB,3,4,Cardinals team total Under 4.5,team-total,Under,0.630,W,PREDICTION_LOG_COMBINED_3.md:664,Cardinals @ Giants (`MLB PRIMARY_SCORED`)
+P-349,349,baseball-MLB,4,4,Under 7.5,total,Under,0.530,W,PREDICTION_LOG_COMBINED_3.md:665,Cardinals @ Giants (`MLB PRIMARY_SCORED`)
+P-350,350,tennis,1,4,Alcaraz match winner,moneyline,,0.760,L,PREDICTION_LOG_COMBINED_3.md:681,Shelton v Alcaraz — US Open men's QF
+P-350,350,tennis,2,4,,other,,0.660,W,PREDICTION_LOG_COMBINED_3.md:1612,Shelton v Alcaraz — US Open men's QF
+P-350,350,tennis,3,4,Total games Over 38.5,total,Over,0.600,W,PREDICTION_LOG_COMBINED_3.md:683,Shelton v Alcaraz — US Open men's QF
+P-350,350,tennis,4,4,Shelton +4.5 games,handicap,plus,0.580,W,PREDICTION_LOG_COMBINED_3.md:684,Shelton v Alcaraz — US Open men's QF
+P-351,351,baseball-MLB,1,4,,other,,0.740,W,PREDICTION_LOG_COMBINED_3.md:1613,Reds @ Dodgers (`MLB PRIMARY_SCORED`)
+P-351,351,baseball-MLB,2,4,Dodgers match winner,moneyline,,0.720,W,PREDICTION_LOG_COMBINED_3.md:715,Reds @ Dodgers (`MLB PRIMARY_SCORED`)
+P-351,351,baseball-MLB,3,4,Dodgers team total Over 3.5,team-total,Over,0.700,L,PREDICTION_LOG_COMBINED_3.md:716,Reds @ Dodgers (`MLB PRIMARY_SCORED`)
+P-351,351,baseball-MLB,4,4,Dodgers −1.5,handicap,minus,0.590,L,PREDICTION_LOG_COMBINED_3.md:717,Reds @ Dodgers (`MLB PRIMARY_SCORED`)
+P-352,352,cricket,1,4,,other,,0.680,L,PREDICTION_LOG_COMBINED_3.md:1614,Namibia v South Africa — 1st ODI
+P-352,352,cricket,2,4,South Africa match winner,moneyline,,0.670,W,PREDICTION_LOG_COMBINED_3.md:734,Namibia v South Africa — 1st ODI
+P-352,352,cricket,3,4,SA 1st innings 250+,phase,,0.660,W,PREDICTION_LOG_COMBINED_3.md:735,Namibia v South Africa — 1st ODI
+P-352,352,cricket,4,4,SA first 5 overs Under 25.5,phase,Under,0.580,W,PREDICTION_LOG_COMBINED_3.md:736,Namibia v South Africa — 1st ODI
+P-353,353,baseball-NPB/KBO/CPBL,1,4,,other,,0.750,W,PREDICTION_LOG_COMBINED_3.md:1615,"Dragons @ Giants — NPB, 9 Sep"
+P-353,353,baseball-NPB/KBO/CPBL,2,4,Yomiuri team total Under 3.5,team-total,Under,0.690,L,PREDICTION_LOG_COMBINED_3.md:767,"Dragons @ Giants — NPB, 9 Sep"
+P-353,353,baseball-NPB/KBO/CPBL,3,4,Under 6.5,total,Under,0.620,W,PREDICTION_LOG_COMBINED_3.md:768,"Dragons @ Giants — NPB, 9 Sep"
+P-353,353,baseball-NPB/KBO/CPBL,4,4,Chunichi +0.5,handicap,plus,0.580,L,PREDICTION_LOG_COMBINED_3.md:769,"Dragons @ Giants — NPB, 9 Sep"
+P-354,354,baseball-NPB/KBO/CPBL,1,4,,other,,0.760,W,PREDICTION_LOG_COMBINED_3.md:1616,Carp @ Tigers — NPB
+P-354,354,baseball-NPB/KBO/CPBL,2,4,Hanshin team total Over 1.5,team-total,Over,0.740,L,PREDICTION_LOG_COMBINED_3.md:790,Carp @ Tigers — NPB
+P-354,354,baseball-NPB/KBO/CPBL,3,4,Hanshin match winner,moneyline,,0.630,L,PREDICTION_LOG_COMBINED_3.md:791,Carp @ Tigers — NPB
+P-354,354,baseball-NPB/KBO/CPBL,4,4,Hiroshima +1.5,handicap,plus,0.570,W,PREDICTION_LOG_COMBINED_3.md:792,Carp @ Tigers — NPB
+P-355,355,soccer,1,5,,other,,0.820,W,PREDICTION_LOG_COMBINED_3.md:1617,Sydney FC v Melbourne Victory — Australia Cup SF
+P-355,355,soccer,2,5,Under 3.5 goals,total,Under,0.790,W,PREDICTION_LOG_COMBINED_3.md:813,Sydney FC v Melbourne Victory — Australia Cup SF
+P-355,355,soccer,3,5,Sydney +0.5 / 1X,handicap,plus,0.700,L,PREDICTION_LOG_COMBINED_3.md:814,Sydney FC v Melbourne Victory — Australia Cup SF
+P-355,355,soccer,4,5,Over 1.5 goals,total,Over,0.700,W,PREDICTION_LOG_COMBINED_3.md:815,Sydney FC v Melbourne Victory — Australia Cup SF
+P-355,355,soccer,5,5,Total corners Over 8.5,corners,Over,0.670,W,PREDICTION_LOG_COMBINED_3.md:816,Sydney FC v Melbourne Victory — Australia Cup SF
+P-356,356,baseball-NPB/KBO/CPBL,1,4,,other,,0.700,L,PREDICTION_LOG_COMBINED_3.md:1618,KT @ Samsung — KBO
+P-356,356,baseball-NPB/KBO/CPBL,2,4,KT team total Under 5.5,team-total,Under,0.660,W,PREDICTION_LOG_COMBINED_3.md:833,KT @ Samsung — KBO
+P-356,356,baseball-NPB/KBO/CPBL,3,4,KT +1.5,handicap,plus,0.590,W,PREDICTION_LOG_COMBINED_3.md:834,KT @ Samsung — KBO
+P-356,356,baseball-NPB/KBO/CPBL,4,4,Under 10.5 (normalised edge 0.12 printed),total,Under,0.560,W,PREDICTION_LOG_COMBINED_3.md:835,KT @ Samsung — KBO
+P-357,357,cricket,1,4,,other,,0.720,L,PREDICTION_LOG_COMBINED_3.md:1619,Dublin Guardians v Belfast Wolves — ETPL M18
+P-357,357,cricket,2,4,Belfast match winner,moneyline,,0.680,L,PREDICTION_LOG_COMBINED_3.md:866,Dublin Guardians v Belfast Wolves — ETPL M18
+P-357,357,cricket,3,4,Belfast first 6 overs Under 52.5,phase,Under,0.580,W,PREDICTION_LOG_COMBINED_3.md:867,Dublin Guardians v Belfast Wolves — ETPL M18
+P-357,357,cricket,4,4,Belfast innings Under 177.5 (normalised edge 0.19 printed),total,Under,0.560,W,PREDICTION_LOG_COMBINED_3.md:868,Dublin Guardians v Belfast Wolves — ETPL M18
+P-358,358,basketball,1,4,,other,,0.640,L,PREDICTION_LOG_COMBINED_3.md:1620,"Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired)"
+P-358,358,basketball,2,4,Puerto Rico +9.5,handicap,plus,0.570,W,PREDICTION_LOG_COMBINED_3.md:903,"Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired)"
+P-358,358,basketball,3,4,China −9.5,handicap,minus,0.430,L,PREDICTION_LOG_COMBINED_3.md:904,"Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired)"
+P-358,358,basketball,4,4,Over 141.5,total,Over,0.360,W,PREDICTION_LOG_COMBINED_3.md:905,"Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired)"
+P-359,359,unclassified,1,4,Chinese Taipei +10.5,handicap,plus,0.670,W,PREDICTION_LOG_COMBINED_3.md:935,Jordan v Chinese Taipei — Asian Games
+P-359,359,unclassified,2,4,,other,,0.620,L,PREDICTION_LOG_COMBINED_3.md:1621,Jordan v Chinese Taipei — Asian Games
+P-359,359,unclassified,3,4,Over 162.5,total,Over,0.380,W,PREDICTION_LOG_COMBINED_3.md:937,Jordan v Chinese Taipei — Asian Games
+P-359,359,unclassified,4,4,Jordan −10.5,handicap,minus,0.330,L,PREDICTION_LOG_COMBINED_3.md:938,Jordan v Chinese Taipei — Asian Games
+P-360,360,soccer,1,4,,other,,0.590,W,PREDICTION_LOG_COMBINED_3.md:1622,South Korea v Saudi Arabia — Asian Games
+P-360,360,soccer,2,4,Saudi Arabia +12.5,handicap,plus,0.560,L,PREDICTION_LOG_COMBINED_3.md:959,South Korea v Saudi Arabia — Asian Games
+P-360,360,soccer,3,4,Korea −12.5,handicap,minus,0.440,W,PREDICTION_LOG_COMBINED_3.md:960,South Korea v Saudi Arabia — Asian Games
+P-360,360,soccer,4,4,Over 160.5,total,Over,0.410,L,PREDICTION_LOG_COMBINED_3.md:961,South Korea v Saudi Arabia — Asian Games
+P-361,361,baseball-NPB/KBO/CPBL,1,4,Giants −0.5,handicap,minus,0.570,W,PREDICTION_LOG_COMBINED_3.md:981,"Dragons @ Giants — NPB, 10 Sep"
+P-361,361,baseball-NPB/KBO/CPBL,2,4,,other,,0.560,L,PREDICTION_LOG_COMBINED_3.md:1623,"Dragons @ Giants — NPB, 10 Sep"
+P-361,361,baseball-NPB/KBO/CPBL,3,4,Over 5.5,total,Over,0.440,W,PREDICTION_LOG_COMBINED_3.md:983,"Dragons @ Giants — NPB, 10 Sep"
+P-361,361,baseball-NPB/KBO/CPBL,4,4,Dragons +0.5,handicap,plus,0.430,L,PREDICTION_LOG_COMBINED_3.md:984,"Dragons @ Giants — NPB, 10 Sep"
+P-362,362,baseball-NPB/KBO/CPBL,1,4,,other,,0.580,W,PREDICTION_LOG_COMBINED_3.md:1624,Eagles @ Landers — KBO
+P-362,362,baseball-NPB/KBO/CPBL,2,4,SSG −1.5,handicap,minus,0.560,L,PREDICTION_LOG_COMBINED_3.md:1005,Eagles @ Landers — KBO
+P-362,362,baseball-NPB/KBO/CPBL,3,4,Hanwha +1.5,handicap,plus,0.440,W,PREDICTION_LOG_COMBINED_3.md:1006,Eagles @ Landers — KBO
+P-362,362,baseball-NPB/KBO/CPBL,4,4,Over 9.5,total,Over,0.420,L,PREDICTION_LOG_COMBINED_3.md:1007,Eagles @ Landers — KBO
+P-363,363,rugby,1,4,Bulldogs +40.5,handicap,plus,0.610,W,PREDICTION_LOG_COMBINED_3.md:1023,Roosters W v Bulldogs W — NRLW R11
+P-363,363,rugby,2,4,,other,,0.550,W,PREDICTION_LOG_COMBINED_3.md:1625,Roosters W v Bulldogs W — NRLW R11
+P-363,363,rugby,3,4,Over 59.5,total,Over,0.450,L,PREDICTION_LOG_COMBINED_3.md:1025,Roosters W v Bulldogs W — NRLW R11
+P-363,363,rugby,4,4,Roosters −40.5,handicap,minus,0.390,L,PREDICTION_LOG_COMBINED_3.md:1026,Roosters W v Bulldogs W — NRLW R11
+P-364,364,cricket,1,4,,other,,0.610,L,PREDICTION_LOG_COMBINED_3.md:1626,England v Pakistan — 3rd Test (Day-2 card)
+P-364,364,cricket,2,4,England 1st innings Under 336.5,phase,Under,0.560,L,PREDICTION_LOG_COMBINED_3.md:1047,England v Pakistan — 3rd Test (Day-2 card)
+P-364,364,cricket,3,4,England 1st innings Over 336.5,phase,Over,0.440,W,PREDICTION_LOG_COMBINED_3.md:1048,England v Pakistan — 3rd Test (Day-2 card)
+P-364,364,cricket,4,4,England Over 179.5 after 45 overs,phase,Over,0.390,W,PREDICTION_LOG_COMBINED_3.md:1049,England v Pakistan — 3rd Test (Day-2 card)
+P-365,365,baseball-NPB/KBO/CPBL,1,4,CTBC Brothers +1.5,handicap,plus,0.600,L,PREDICTION_LOG_COMBINED_3.md:1083,Uni-Lions @ CTBC Brothers — CPBL
+P-365,365,baseball-NPB/KBO/CPBL,2,4,,other,,0.560,W,PREDICTION_LOG_COMBINED_3.md:1627,Uni-Lions @ CTBC Brothers — CPBL
+P-365,365,baseball-NPB/KBO/CPBL,3,4,Over 6.5,total,Over,0.440,L,PREDICTION_LOG_COMBINED_3.md:1085,Uni-Lions @ CTBC Brothers — CPBL
+P-365,365,baseball-NPB/KBO/CPBL,4,4,Uni-Lions −1.5,handicap,minus,0.400,W,PREDICTION_LOG_COMBINED_3.md:1086,Uni-Lions @ CTBC Brothers — CPBL
+P-366,366,cricket,1,3,,other,,0.560,W,PREDICTION_LOG_COMBINED_3.md:1628,Rotterdam v Glasgow — ETPL M19
+P-366,366,cricket,2,3,W C C L; winner W; Brier 0.1936 (2 rows),moneyline,,,W,PREDICTION_LOG_COMBINED_3.md:1531,Rotterdam v Glasgow — ETPL M19
+P-366,366,cricket,4,3,Dockers first 6 overs Over 50.5,phase,Over,0.440,L,PREDICTION_LOG_COMBINED_3.md:1119,Rotterdam v Glasgow — ETPL M19
+P-367,367,basketball,1,4,France −24.5,handicap,minus,0.550,W,PREDICTION_LOG_COMBINED_3.md:1135,China W v France W — FIBA WWC QF
+P-367,367,basketball,2,4,,other,,0.540,W,PREDICTION_LOG_COMBINED_3.md:1629,China W v France W — FIBA WWC QF
+P-367,367,basketball,3,4,Over 153.5,total,Over,0.460,L,PREDICTION_LOG_COMBINED_3.md:1137,China W v France W — FIBA WWC QF
+P-367,367,basketball,4,4,China +24.5,handicap,plus,0.450,L,PREDICTION_LOG_COMBINED_3.md:1138,China W v France W — FIBA WWC QF
+P-368,368,soccer,1,6,,other,,0.680,W,PREDICTION_LOG_COMBINED_3.md:1630,Al Jazira v Al Nasr — UAE Pro League
+P-368,368,soccer,2,6,Total corners Over 7.5 (no frozen provider),corners,Over,0.550,W,PREDICTION_LOG_COMBINED_3.md:1159,Al Jazira v Al Nasr — UAE Pro League
+P-368,368,soccer,3,6,Over 2.5 goals,total,Over,0.530,L,PREDICTION_LOG_COMBINED_3.md:1160,Al Jazira v Al Nasr — UAE Pro League
+P-368,368,soccer,4,6,Under 2.5 goals,total,Under,0.470,W,PREDICTION_LOG_COMBINED_3.md:1161,Al Jazira v Al Nasr — UAE Pro League
+P-368,368,soccer,4,6,W P L W L; winner L (draw); Brier 0.1917 (4 rows),moneyline,,,W,PREDICTION_LOG_COMBINED_3.md:1533,Al Jazira v Al Nasr — UAE Pro League
+P-368,368,soccer,5,6,1st-half Under 0.5,total,Under,0.320,L,PREDICTION_LOG_COMBINED_3.md:1162,Al Jazira v Al Nasr — UAE Pro League
+P-369,369,soccer,1,6,Total corners Under 10.5 (no frozen provider),corners,Under,0.680,L,PREDICTION_LOG_COMBINED_3.md:1178,Dubai United v Shabab Al Ahli — UAE Pro League
+P-369,369,soccer,2,6,,other,,0.640,L,PREDICTION_LOG_COMBINED_3.md:1631,Dubai United v Shabab Al Ahli — UAE Pro League
+P-369,369,soccer,3,6,Over 2.5 goals,total,Over,0.610,L,PREDICTION_LOG_COMBINED_3.md:1180,Dubai United v Shabab Al Ahli — UAE Pro League
+P-369,369,soccer,4,6,Under 2.5 goals,total,Under,0.390,W,PREDICTION_LOG_COMBINED_3.md:1181,Dubai United v Shabab Al Ahli — UAE Pro League
+P-369,369,soccer,4,6,P L L W W; winner L (draw); Brier 0.3909 (4 rows),moneyline,,,P,PREDICTION_LOG_COMBINED_3.md:1534,Dubai United v Shabab Al Ahli — UAE Pro League
+P-369,369,soccer,5,6,1st-half Under 0.5,total,Under,0.360,W,PREDICTION_LOG_COMBINED_3.md:1182,Dubai United v Shabab Al Ahli — UAE Pro League
+P-371,371,basketball,1,4,Belgium −6.5,handicap,minus,0.590,L,PREDICTION_LOG_COMBINED_3.md:1216,Belgium W v Germany W — FIBA WWC QF
+P-371,371,basketball,2,4,,other,,0.530,L,PREDICTION_LOG_COMBINED_3.md:1632,Belgium W v Germany W — FIBA WWC QF
+P-371,371,basketball,3,4,Over 144.5,total,Over,0.470,W,PREDICTION_LOG_COMBINED_3.md:1218,Belgium W v Germany W — FIBA WWC QF
+P-371,371,basketball,4,4,Germany +6.5,handicap,plus,0.410,W,PREDICTION_LOG_COMBINED_3.md:1219,Belgium W v Germany W — FIBA WWC QF
+P-373,373,baseball-MLB,1,4,Tampa Bay Rays +1.5,handicap,plus,0.650,L,PREDICTION_LOG_COMBINED_3.md:2123,Tampa Bay Rays @ Atlanta Braves — MLB — 2026-09-10 (Atlanta local)
+P-373,373,baseball-MLB,2,4,Under 8.5 runs,total,Under,0.560,W,PREDICTION_LOG_COMBINED_3.md:2124,Tampa Bay Rays @ Atlanta Braves — MLB — 2026-09-10 (Atlanta local)
+P-373,373,baseball-MLB,3,4,Over 8.5 runs,total,Over,0.440,L,PREDICTION_LOG_COMBINED_3.md:2125,Tampa Bay Rays @ Atlanta Braves — MLB — 2026-09-10 (Atlanta local)
+P-373,373,baseball-MLB,4,4,Atlanta Braves -1.5,handicap,minus,0.350,W,PREDICTION_LOG_COMBINED_3.md:2126,Tampa Bay Rays @ Atlanta Braves — MLB — 2026-09-10 (Atlanta local)
+P-374,374,soccer,1,5,1H Over 0.5 goals,phase,Over,0.680,W,PREDICTION_LOG_COMBINED_3.md:2161,Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10
+P-374,374,soccer,2,5,Under 9.5 total corners,corners,Under,0.630,W,PREDICTION_LOG_COMBINED_3.md:2162,Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10
+P-374,374,soccer,3,5,Under 2.5 total goals,total,Under,0.520,W,PREDICTION_LOG_COMBINED_3.md:2163,Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10
+P-374,374,soccer,4,5,Over 2.5 total goals,total,Over,0.480,L,PREDICTION_LOG_COMBINED_3.md:2164,Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10
+P-374,374,soccer,5,5,1H Under 0.5 goals,phase,Under,0.320,L,PREDICTION_LOG_COMBINED_3.md:2165,Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10
+P-375,375,tennis,1,4,Over 22.5 total games,total,Over,0.580,W,PREDICTION_LOG_COMBINED_3.md:2201,Coco Gauff vs Elena Rybakina — US Open Women — Semifinal
+P-375,375,tennis,2,4,Rybakina -0.5 aggregate games,handicap,minus,0.550,W,PREDICTION_LOG_COMBINED_3.md:2202,Coco Gauff vs Elena Rybakina — US Open Women — Semifinal
+P-375,375,tennis,3,4,Gauff +0.5 aggregate games,handicap,plus,0.450,L,PREDICTION_LOG_COMBINED_3.md:2203,Coco Gauff vs Elena Rybakina — US Open Women — Semifinal
+P-375,375,tennis,4,4,Under 22.5 total games,total,Under,0.420,L,PREDICTION_LOG_COMBINED_3.md:2204,Coco Gauff vs Elena Rybakina — US Open Women — Semifinal
+P-376,376,american-football,1,4,San Francisco 49ers +3.5,handicap,plus,0.560,W,PREDICTION_LOG_COMBINED_3.md:2238,San Francisco 49ers vs Los Angeles Rams — NFL Week 1 — Melbourne
+P-376,376,american-football,2,4,Over 47.5 total points,total,Over,0.540,L,PREDICTION_LOG_COMBINED_3.md:2239,San Francisco 49ers vs Los Angeles Rams — NFL Week 1 — Melbourne
+P-376,376,american-football,3,4,Under 47.5 total points,total,Under,0.460,W,PREDICTION_LOG_COMBINED_3.md:2240,San Francisco 49ers vs Los Angeles Rams — NFL Week 1 — Melbourne
+P-376,376,american-football,4,4,Los Angeles Rams -3.5,handicap,minus,0.440,L,PREDICTION_LOG_COMBINED_3.md:2241,San Francisco 49ers vs Los Angeles Rams — NFL Week 1 — Melbourne
+P-377,377,soccer,1,5,1H Over 0.5 goals,phase,Over,0.680,L,PREDICTION_LOG_COMBINED_3.md:2275,Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026
+P-377,377,soccer,2,5,Over 8.5 total corners,corners,Over,0.590,L,PREDICTION_LOG_COMBINED_3.md:2276,Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026
+P-377,377,soccer,3,5,Over 2.5 total goals,total,Over,0.550,L,PREDICTION_LOG_COMBINED_3.md:2277,Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026
+P-377,377,soccer,4,5,Under 2.5 total goals,total,Under,0.450,W,PREDICTION_LOG_COMBINED_3.md:2278,Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026
+P-377,377,soccer,5,5,1H Under 0.5 goals,phase,Under,0.320,W,PREDICTION_LOG_COMBINED_3.md:2279,Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026
+P-378,378,basketball,1,4,Under 163.5 total points,total,Under,0.590,L,PREDICTION_LOG_COMBINED_3.md:2318,Philippines vs Bahrain — 2026 Aichi-Nagoya Asian Games Men's Basketball
+P-378,378,basketball,2,4,Bahrain -9.5,handicap,minus,0.560,L,PREDICTION_LOG_COMBINED_3.md:2319,Philippines vs Bahrain — 2026 Aichi-Nagoya Asian Games Men's Basketball
+P-378,378,basketball,3,4,Philippines +9.5,handicap,plus,0.440,W,PREDICTION_LOG_COMBINED_3.md:2320,Philippines vs Bahrain — 2026 Aichi-Nagoya Asian Games Men's Basketball
+P-378,378,basketball,4,4,Over 163.5 total points,total,Over,0.410,W,PREDICTION_LOG_COMBINED_3.md:2321,Philippines vs Bahrain — 2026 Aichi-Nagoya Asian Games Men's Basketball
+P-379,379,cricket,1,4,South Africa 50-over first innings Over 315.5,phase,Over,0.580,W,PREDICTION_LOG_COMBINED_3.md:2355,Namibia vs South Africa — 2nd ODI — South Africa tour of Namibia 2026
+P-379,379,cricket,2,4,South Africa first 5 overs Under 25.5,phase,Under,0.570,W,PREDICTION_LOG_COMBINED_3.md:2356,Namibia vs South Africa — 2nd ODI — South Africa tour of Namibia 2026
+P-379,379,cricket,3,4,South Africa first 5 overs Over 25.5,phase,Over,0.430,L,PREDICTION_LOG_COMBINED_3.md:2357,Namibia vs South Africa — 2nd ODI — South Africa tour of Namibia 2026
+P-379,379,cricket,4,4,South Africa 50-over first innings Under 315.5,phase,Over,0.420,L,PREDICTION_LOG_COMBINED_3.md:2358,Namibia vs South Africa — 2nd ODI — South Africa tour of Namibia 2026
+P-380,380,rugby,1,4,Raiders -6.5,handicap,minus,0.560,W,PREDICTION_LOG_COMBINED_3.md:2392,"Wests Tigers (W) vs Canberra Raiders (W) — NRLW Round 11, 2026"
+P-380,380,rugby,2,4,Under 46.5 total points,total,Under,0.540,W,PREDICTION_LOG_COMBINED_3.md:2393,"Wests Tigers (W) vs Canberra Raiders (W) — NRLW Round 11, 2026"
+P-380,380,rugby,3,4,Over 46.5 total points,total,Over,0.460,L,PREDICTION_LOG_COMBINED_3.md:2394,"Wests Tigers (W) vs Canberra Raiders (W) — NRLW Round 11, 2026"
+P-380,380,rugby,4,4,Wests Tigers +6.5,handicap,plus,0.440,L,PREDICTION_LOG_COMBINED_3.md:2395,"Wests Tigers (W) vs Canberra Raiders (W) — NRLW Round 11, 2026"
+P-381,381,baseball-NPB/KBO/CPBL,1,4,SoftBank Hawks -1.5,handicap,minus,0.580,W,PREDICTION_LOG_COMBINED_3.md:2429,Chiba Lotte Marines @ Fukuoka SoftBank Hawks — NPB Pacific League
+P-381,381,baseball-NPB/KBO/CPBL,2,4,Over 7.5 runs,total,Over,0.520,W,PREDICTION_LOG_COMBINED_3.md:2430,Chiba Lotte Marines @ Fukuoka SoftBank Hawks — NPB Pacific League
+P-381,381,baseball-NPB/KBO/CPBL,3,4,Under 7.5 runs,total,Under,0.480,L,PREDICTION_LOG_COMBINED_3.md:2431,Chiba Lotte Marines @ Fukuoka SoftBank Hawks — NPB Pacific League
+P-381,381,baseball-NPB/KBO/CPBL,4,4,Chiba Lotte Marines +1.5,handicap,plus,0.420,L,PREDICTION_LOG_COMBINED_3.md:2432,Chiba Lotte Marines @ Fukuoka SoftBank Hawks — NPB Pacific League
+P-382,382,baseball-NPB/KBO/CPBL,1,4,Seibu Lions -1.5,handicap,minus,0.540,L,PREDICTION_LOG_COMBINED_3.md:2466,Saitama Seibu Lions @ Orix Buffaloes — NPB Pacific League
+P-382,382,baseball-NPB/KBO/CPBL,2,4,Over 7.0 runs,total,Over,0.470,W,PREDICTION_LOG_COMBINED_3.md:2467,Saitama Seibu Lions @ Orix Buffaloes — NPB Pacific League
+P-382,382,baseball-NPB/KBO/CPBL,3,4,Orix Buffaloes +1.5,handicap,plus,0.460,W,PREDICTION_LOG_COMBINED_3.md:2468,Saitama Seibu Lions @ Orix Buffaloes — NPB Pacific League
+P-382,382,baseball-NPB/KBO/CPBL,4,4,Under 7.0 runs,total,Under,0.390,L,PREDICTION_LOG_COMBINED_3.md:2469,Saitama Seibu Lions @ Orix Buffaloes — NPB Pacific League
+P-383,383,baseball-NPB/KBO/CPBL,1,4,Hiroshima Carp +1.5,handicap,plus,0.590,L,PREDICTION_LOG_COMBINED_3.md:2503,Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League
+P-383,383,baseball-NPB/KBO/CPBL,2,4,Under 6.5 runs,total,Under,0.560,L,PREDICTION_LOG_COMBINED_3.md:2504,Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League
+P-383,383,baseball-NPB/KBO/CPBL,3,4,Over 6.5 runs,total,Over,0.440,W,PREDICTION_LOG_COMBINED_3.md:2505,Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League
+P-383,383,baseball-NPB/KBO/CPBL,4,4,DeNA BayStars -1.5,handicap,minus,0.410,W,PREDICTION_LOG_COMBINED_3.md:2506,Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League
+P-384,384,baseball-NPB/KBO/CPBL,1,4,Samsung Lions -1.5,handicap,minus,0.640,W,PREDICTION_LOG_COMBINED_3.md:2540,Kiwoom Heroes @ Samsung Lions — KBO League
+P-384,384,baseball-NPB/KBO/CPBL,2,4,Under 11.5 runs,total,Under,0.600,W,PREDICTION_LOG_COMBINED_3.md:2541,Kiwoom Heroes @ Samsung Lions — KBO League
+P-384,384,baseball-NPB/KBO/CPBL,3,4,Over 11.5 runs,total,Over,0.400,L,PREDICTION_LOG_COMBINED_3.md:2542,Kiwoom Heroes @ Samsung Lions — KBO League
+P-384,384,baseball-NPB/KBO/CPBL,4,4,Kiwoom Heroes +1.5,handicap,plus,0.360,L,PREDICTION_LOG_COMBINED_3.md:2543,Kiwoom Heroes @ Samsung Lions — KBO League
+P-385,385,baseball-NPB/KBO/CPBL,1,4,KT Wiz -1.5,handicap,minus,0.560,W,PREDICTION_LOG_COMBINED_3.md:2577,KT Wiz @ Lotte Giants — KBO League
+P-385,385,baseball-NPB/KBO/CPBL,2,4,Over 9.5 runs,total,Over,0.510,L,PREDICTION_LOG_COMBINED_3.md:2578,KT Wiz @ Lotte Giants — KBO League
+P-385,385,baseball-NPB/KBO/CPBL,3,4,Under 9.5 runs,total,Under,0.490,W,PREDICTION_LOG_COMBINED_3.md:2579,KT Wiz @ Lotte Giants — KBO League
+P-385,385,baseball-NPB/KBO/CPBL,4,4,Lotte Giants +1.5,handicap,plus,0.440,L,PREDICTION_LOG_COMBINED_3.md:2580,KT Wiz @ Lotte Giants — KBO League
+P-386,386,rugby,1,4,Newcastle Knights +8.5,handicap,plus,0.630,W,PREDICTION_LOG_COMBINED_3.md:2614,South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final
+P-386,386,rugby,2,4,Over 49.5 total points,total,Over,0.530,L,PREDICTION_LOG_COMBINED_3.md:2615,South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final
+P-386,386,rugby,3,4,Under 49.5 total points,total,Under,0.470,W,PREDICTION_LOG_COMBINED_3.md:2616,South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final
+P-386,386,rugby,4,4,South Sydney -8.5,handicap,minus,0.370,L,PREDICTION_LOG_COMBINED_3.md:2617,South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final
+P-387,387,soccer,1,5,1H Over 0.5 goals,phase,Over,0.640,W,PREDICTION_LOG_COMBINED_3.md:2652,Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League
+P-387,387,soccer,2,5,Under 2.5 total goals,total,Under,0.570,L,PREDICTION_LOG_COMBINED_3.md:2653,Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League
+P-387,387,soccer,3,5,Kyoto team corners Under 4.5,corners,Under,0.550,L,PREDICTION_LOG_COMBINED_3.md:2654,Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League
+P-387,387,soccer,4,5,Over 2.5 total goals,total,Over,0.430,W,PREDICTION_LOG_COMBINED_3.md:2655,Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League
+P-387,387,soccer,5,5,1H Under 0.5 goals,phase,Under,0.360,L,PREDICTION_LOG_COMBINED_3.md:2656,Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League
+P-388,388,AFL,1,4,Geelong +11.5,handicap,plus,0.600,L,PREDICTION_LOG_COMBINED_3.md:2691,Fremantle Dockers vs Geelong Cats — AFL First Semi-Final
+P-388,388,AFL,2,4,Under 180.5 total points,total,Under,0.550,L,PREDICTION_LOG_COMBINED_3.md:2692,Fremantle Dockers vs Geelong Cats — AFL First Semi-Final
+P-388,388,AFL,3,4,Over 180.5 total points,total,Over,0.450,W,PREDICTION_LOG_COMBINED_3.md:2693,Fremantle Dockers vs Geelong Cats — AFL First Semi-Final
+P-388,388,AFL,4,4,Fremantle -11.5,handicap,minus,0.400,W,PREDICTION_LOG_COMBINED_3.md:2694,Fremantle Dockers vs Geelong Cats — AFL First Semi-Final
+P-390,390,baseball-MLB,1,4,Over 8.0 runs,total,Over,0.570,W,PREDICTION_LOG_COMBINED_3.md:2918,Cincinnati Reds @ Milwaukee Brewers — MLB
+P-390,390,baseball-MLB,2,4,Reds +1.5,handicap,plus,0.560,L,PREDICTION_LOG_COMBINED_3.md:2919,Cincinnati Reds @ Milwaukee Brewers — MLB
+P-390,390,baseball-MLB,3,4,Brewers -1.5,handicap,minus,0.440,W,PREDICTION_LOG_COMBINED_3.md:2920,Cincinnati Reds @ Milwaukee Brewers — MLB
+P-390,390,baseball-MLB,4,4,Under 8.0 runs,total,Under,0.330,L,PREDICTION_LOG_COMBINED_3.md:2921,Cincinnati Reds @ Milwaukee Brewers — MLB
+P-391,391,baseball-MLB,1,4,Twins +1.5,handicap,plus,0.600,L,PREDICTION_LOG_COMBINED_3.md:2950,Cleveland Guardians @ Minnesota Twins — MLB
+P-391,391,baseball-MLB,2,4,Under 7.5,total,Under,0.540,W,PREDICTION_LOG_COMBINED_3.md:2951,Cleveland Guardians @ Minnesota Twins — MLB
+P-391,391,baseball-MLB,3,4,Over 7.5,total,Over,0.460,L,PREDICTION_LOG_COMBINED_3.md:2952,Cleveland Guardians @ Minnesota Twins — MLB
+P-391,391,baseball-MLB,4,4,Guardians -1.5,handicap,minus,0.400,W,PREDICTION_LOG_COMBINED_3.md:2953,Cleveland Guardians @ Minnesota Twins — MLB
+P-392,392,baseball-MLB,1,4,Cardinals +1.5,handicap,plus,0.650,W,PREDICTION_LOG_COMBINED_3.md:2985,Chicago White Sox @ St. Louis Cardinals — MLB
+P-392,392,baseball-MLB,2,4,Over 7.5,total,Over,0.610,W,PREDICTION_LOG_COMBINED_3.md:2986,Chicago White Sox @ St. Louis Cardinals — MLB
+P-392,392,baseball-MLB,3,4,Under 7.5,total,Under,0.390,L,PREDICTION_LOG_COMBINED_3.md:2987,Chicago White Sox @ St. Louis Cardinals — MLB
+P-392,392,baseball-MLB,4,4,White Sox -1.5,handicap,minus,0.350,L,PREDICTION_LOG_COMBINED_3.md:2988,Chicago White Sox @ St. Louis Cardinals — MLB
+P-393,393,baseball-MLB,1,4,Under 10.5,total,Under,0.680,L,PREDICTION_LOG_COMBINED_3.md:3017,Seattle Mariners @ Athletics — MLB
+P-393,393,baseball-MLB,2,4,Athletics +1.5,handicap,plus,0.580,W,PREDICTION_LOG_COMBINED_3.md:3018,Seattle Mariners @ Athletics — MLB
+P-393,393,baseball-MLB,3,4,Mariners -1.5,handicap,minus,0.420,L,PREDICTION_LOG_COMBINED_3.md:3019,Seattle Mariners @ Athletics — MLB
+P-393,393,baseball-MLB,4,4,Over 10.5,total,Over,0.320,W,PREDICTION_LOG_COMBINED_3.md:3020,Seattle Mariners @ Athletics — MLB
+P-394,394,rugby,1,4,Cowboys Women +10.5,handicap,plus,0.580,W,PREDICTION_LOG_COMBINED_3.md:3051,Parramatta Eels Women vs North Queensland Cowboys Women — NRLW
+P-394,394,rugby,2,4,Over 48.5,total,Over,0.550,W,PREDICTION_LOG_COMBINED_3.md:3052,Parramatta Eels Women vs North Queensland Cowboys Women — NRLW
+P-394,394,rugby,3,4,Under 48.5,total,Under,0.450,L,PREDICTION_LOG_COMBINED_3.md:3053,Parramatta Eels Women vs North Queensland Cowboys Women — NRLW
+P-394,394,rugby,4,4,Eels -10.5,handicap,minus,0.420,L,PREDICTION_LOG_COMBINED_3.md:3054,Parramatta Eels Women vs North Queensland Cowboys Women — NRLW
+P-395,395,cricket,1,4,Wolves 20-over Under 171.5,total,Over,0.620,W,PREDICTION_LOG_COMBINED_3.md:3085,Belfast Wolves vs Rotterdam Dockers — European T20 Premier League
+P-395,395,cricket,2,4,Wolves first 6 Under 50.5,phase,Under,0.570,W,PREDICTION_LOG_COMBINED_3.md:3086,Belfast Wolves vs Rotterdam Dockers — European T20 Premier League
+P-395,395,cricket,3,4,Wolves first 6 Over 50.5,phase,Over,0.430,L,PREDICTION_LOG_COMBINED_3.md:3087,Belfast Wolves vs Rotterdam Dockers — European T20 Premier League
+P-395,395,cricket,4,4,Wolves 20-over Over 171.5,total,Over,0.380,L,PREDICTION_LOG_COMBINED_3.md:3088,Belfast Wolves vs Rotterdam Dockers — European T20 Premier League
+P-396,396,AFL,1,4,Adelaide +21.5,handicap,plus,0.640,L,PREDICTION_LOG_COMBINED_3.md:3117,Brisbane Lions vs Adelaide Crows — AFL Semi Final
+P-396,396,AFL,2,4,Under 188.5,total,Under,0.580,L,PREDICTION_LOG_COMBINED_3.md:3118,Brisbane Lions vs Adelaide Crows — AFL Semi Final
+P-396,396,AFL,3,4,Over 188.5,total,Over,0.420,W,PREDICTION_LOG_COMBINED_3.md:3119,Brisbane Lions vs Adelaide Crows — AFL Semi Final
+P-396,396,AFL,4,4,Brisbane -21.5,handicap,minus,0.360,W,PREDICTION_LOG_COMBINED_3.md:3120,Brisbane Lions vs Adelaide Crows — AFL Semi Final
+P-397,397,rugby,1,4,Over 48.5,total,Over,0.560,L,PREDICTION_LOG_COMBINED_3.md:3153,Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final
+P-397,397,rugby,2,4,Cowboys +7.5,handicap,plus,0.550,L,PREDICTION_LOG_COMBINED_3.md:3154,Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final
+P-397,397,rugby,3,4,Sharks -7.5,handicap,minus,0.450,W,PREDICTION_LOG_COMBINED_3.md:3155,Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final
+P-397,397,rugby,4,4,Under 48.5,total,Under,0.440,W,PREDICTION_LOG_COMBINED_3.md:3156,Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final
+P-398,398,soccer,1,5,Combined corners Over 8.5,corners,Over,0.730,W,PREDICTION_LOG_COMBINED_3.md:3187,Racing Santander vs Deportivo Alavés — La Liga
+P-398,398,soccer,2,5,1H Over 0.5 goals,phase,Over,0.640,W,PREDICTION_LOG_COMBINED_3.md:3188,Racing Santander vs Deportivo Alavés — La Liga
+P-398,398,soccer,3,5,FT Under 2.5 goals,total,Under,0.520,L,PREDICTION_LOG_COMBINED_3.md:3189,Racing Santander vs Deportivo Alavés — La Liga
+P-398,398,soccer,4,5,FT Over 2.5 goals,total,Over,0.480,W,PREDICTION_LOG_COMBINED_3.md:3190,Racing Santander vs Deportivo Alavés — La Liga
+P-398,398,soccer,5,5,1H Under 0.5 goals,phase,Under,0.360,L,PREDICTION_LOG_COMBINED_3.md:3191,Racing Santander vs Deportivo Alavés — La Liga
+P-399,399,soccer,1,5,1H Over 0.5,phase,Over,0.670,W,PREDICTION_LOG_COMBINED_3.md:2760,Genoa vs Frosinone — Serie A
+P-399,399,soccer,2,5,Combined corners Over 8.5,corners,Over,0.640,W,PREDICTION_LOG_COMBINED_3.md:2761,Genoa vs Frosinone — Serie A
+P-399,399,soccer,3,5,FT Under 2.5,total,Under,0.560,W,PREDICTION_LOG_COMBINED_3.md:2762,Genoa vs Frosinone — Serie A
+P-399,399,soccer,4,5,FT Over 2.5,total,Over,0.440,L,PREDICTION_LOG_COMBINED_3.md:2763,Genoa vs Frosinone — Serie A
+P-399,399,soccer,5,5,1H Under 0.5,phase,Under,0.330,L,PREDICTION_LOG_COMBINED_3.md:2764,Genoa vs Frosinone — Serie A
+P-400,400,cricket,1,4,Warriors first 6 Under 37.5,phase,Under,0.640,W,PREDICTION_LOG_COMBINED_3.md:3222,Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL
+P-400,400,cricket,2,4,Warriors 20-over Under 132.5,total,Over,0.600,W,PREDICTION_LOG_COMBINED_3.md:3223,Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL
+P-400,400,cricket,3,4,Warriors 20-over Over 132.5,total,Over,0.400,L,PREDICTION_LOG_COMBINED_3.md:3224,Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL
+P-400,400,cricket,4,4,Warriors first 6 Over 37.5,phase,Over,0.360,L,PREDICTION_LOG_COMBINED_3.md:3225,Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL
+P-401,401,soccer,1,5,Combined corners Over 8.5,corners,Over,0.800,W,PREDICTION_LOG_COMBINED_3.md:2796,IFK Göteborg vs Halmstads BK — Allsvenskan
+P-401,401,soccer,2,5,Halmstad team total Under 1.5,team-total,Under,0.770,W,PREDICTION_LOG_COMBINED_3.md:2797,IFK Göteborg vs Halmstads BK — Allsvenskan
+P-401,401,soccer,3,5,IFK team corners Over 4.5,corners,Over,0.760,W,PREDICTION_LOG_COMBINED_3.md:2798,IFK Göteborg vs Halmstads BK — Allsvenskan
+P-401,401,soccer,4,5,1H Under 0.5,phase,Under,0.560,L,PREDICTION_LOG_COMBINED_3.md:2799,IFK Göteborg vs Halmstads BK — Allsvenskan
+P-401,401,soccer,5,5,FT Over 2.5,total,Over,0.530,W,PREDICTION_LOG_COMBINED_3.md:2800,IFK Göteborg vs Halmstads BK — Allsvenskan
+P-402,402,soccer,1,5,Everton +1.5,handicap,plus,0.810,W,PREDICTION_LOG_COMBINED_3.md:2832,Tottenham Hotspur vs Everton — Premier League
+P-402,402,soccer,2,5,Combined corners Over 8.5,corners,Over,0.740,W,PREDICTION_LOG_COMBINED_3.md:2833,Tottenham Hotspur vs Everton — Premier League
+P-402,402,soccer,3,5,Tottenham team corners Over 4.5,corners,Over,0.710,W,PREDICTION_LOG_COMBINED_3.md:2834,Tottenham Hotspur vs Everton — Premier League
+P-402,402,soccer,4,5,1H Over 0.5,phase,Over,0.630,L,PREDICTION_LOG_COMBINED_3.md:2835,Tottenham Hotspur vs Everton — Premier League
+P-402,402,soccer,5,5,FT Over 2.5,total,Over,0.520,L,PREDICTION_LOG_COMBINED_3.md:2836,Tottenham Hotspur vs Everton — Premier League
+P-403,403,baseball-MLB,1,4,Rockies +1.5,handicap,plus,0.570,L,PREDICTION_LOG_COMBINED_3.md:3254,Colorado Rockies @ Detroit Tigers — MLB
+P-403,403,baseball-MLB,2,4,Over 8.5,total,Over,0.540,W,PREDICTION_LOG_COMBINED_3.md:3255,Colorado Rockies @ Detroit Tigers — MLB
+P-403,403,baseball-MLB,3,4,Under 8.5,total,Under,0.460,L,PREDICTION_LOG_COMBINED_3.md:3256,Colorado Rockies @ Detroit Tigers — MLB
+P-403,403,baseball-MLB,4,4,Tigers -1.5,handicap,minus,0.430,W,PREDICTION_LOG_COMBINED_3.md:3257,Colorado Rockies @ Detroit Tigers — MLB
+P-404,404,baseball-MLB,1,4,Under 9.5,total,Under,0.610,L,PREDICTION_LOG_COMBINED_3.md:3288,Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB
+P-404,404,baseball-MLB,2,4,Athletics +1.5,handicap,plus,0.550,L,PREDICTION_LOG_COMBINED_3.md:3289,Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB
+P-404,404,baseball-MLB,3,4,Mariners -1.5,handicap,minus,0.450,W,PREDICTION_LOG_COMBINED_3.md:3290,Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB
+P-404,404,baseball-MLB,4,4,Over 9.5,total,Over,0.390,W,PREDICTION_LOG_COMBINED_3.md:3291,Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB
+P-405,405,baseball-NPB/KBO/CPBL,1,4,Dragons +1.5,handicap,plus,0.600,W,PREDICTION_LOG_COMBINED_3.md:3320,Chunichi Dragons @ Hanshin Tigers — NPB
+P-405,405,baseball-NPB/KBO/CPBL,2,4,Under 5.5,total,Under,0.550,W,PREDICTION_LOG_COMBINED_3.md:3321,Chunichi Dragons @ Hanshin Tigers — NPB
+P-405,405,baseball-NPB/KBO/CPBL,3,4,Over 5.5,total,Over,0.450,L,PREDICTION_LOG_COMBINED_3.md:3322,Chunichi Dragons @ Hanshin Tigers — NPB
+P-405,405,baseball-NPB/KBO/CPBL,4,4,Tigers -1.5,handicap,minus,0.400,L,PREDICTION_LOG_COMBINED_3.md:3323,Chunichi Dragons @ Hanshin Tigers — NPB
+P-406,406,cricket,1,4,ECR first 6 overs Over 50.5,phase,Over,0.640,W,PREDICTION_LOG_COMBINED_3.md:3599,Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24
+P-406,406,cricket,2,4,ECR 20-over Over 172.5,total,Over,0.540,L,PREDICTION_LOG_COMBINED_3.md:3600,Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24
+P-406,406,cricket,3,4,ECR 20-over Under 172.5,total,Over,0.460,W,PREDICTION_LOG_COMBINED_3.md:3601,Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24
+P-406,406,cricket,4,4,ECR first 6 overs Under 50.5,phase,Under,0.360,L,PREDICTION_LOG_COMBINED_3.md:3602,Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24
+P-407,407,soccer,2,4,Royal Antwerp team goals Under 1.5,total,Under,0.740,W,PREDICTION_LOG_COMBINED_3.md:1771,Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League
+P-407,407,soccer,3,4,1st Half total goals Over 0.5,phase,Over,0.720,W,PREDICTION_LOG_COMBINED_3.md:1772,Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League
+P-407,407,soccer,4,4,Full match total goals Under 3.5,total,Under,0.680,L,PREDICTION_LOG_COMBINED_3.md:1773,Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League
+P-407,407,soccer,5,4,Full match total goals Over 2.5,total,Over,0.560,W,PREDICTION_LOG_COMBINED_3.md:1774,Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League
+P-408,408,soccer,1,5,Brighton team corners Over 3.5,corners,Over,0.750,L,PREDICTION_LOG_COMBINED_3.md:1793,Coventry City vs Brighton & Hove Albion — English Premier League
+P-408,408,soccer,2,5,Brighton or Draw (90 min),moneyline,,0.740,W,PREDICTION_LOG_COMBINED_3.md:1794,Coventry City vs Brighton & Hove Albion — English Premier League
+P-408,408,soccer,3,5,1st Half total goals Over 0.5,phase,Over,0.720,W,PREDICTION_LOG_COMBINED_3.md:1795,Coventry City vs Brighton & Hove Albion — English Premier League
+P-408,408,soccer,4,5,Coventry team goals Under 1.5,total,Under,0.680,W,PREDICTION_LOG_COMBINED_3.md:1796,Coventry City vs Brighton & Hove Albion — English Premier League
+P-408,408,soccer,5,5,Full match total goals Over 2.5,total,Over,0.550,W,PREDICTION_LOG_COMBINED_3.md:1797,Coventry City vs Brighton & Hove Albion — English Premier League
+P-409,409,soccer,1,4,Lille team goals Over 0.5,total,Over,0.820,W,PREDICTION_LOG_COMBINED_3.md:1809,Lille OSC vs ESTAC Troyes — French Ligue 1
+P-409,409,soccer,3,4,Lille or Draw (90 min),moneyline,,0.760,W,PREDICTION_LOG_COMBINED_3.md:1811,Lille OSC vs ESTAC Troyes — French Ligue 1
+P-409,409,soccer,4,4,1st Half total goals Over 0.5,phase,Over,0.700,W,PREDICTION_LOG_COMBINED_3.md:1812,Lille OSC vs ESTAC Troyes — French Ligue 1
+P-409,409,soccer,5,4,Full match total goals Under 3.5,total,Under,0.650,W,PREDICTION_LOG_COMBINED_3.md:1813,Lille OSC vs ESTAC Troyes — French Ligue 1
+P-410,410,soccer,1,4,RB Leipzig team goals Over 0.5,total,Over,0.880,W,PREDICTION_LOG_COMBINED_3.md:1825,RB Leipzig vs Hamburger SV — German Bundesliga
+P-410,410,soccer,2,4,RB Leipzig or Draw (90 min),moneyline,,0.860,W,PREDICTION_LOG_COMBINED_3.md:1826,RB Leipzig vs Hamburger SV — German Bundesliga
+P-410,410,soccer,3,4,Hamburger SV team goals Under 1.5,total,Under,0.820,W,PREDICTION_LOG_COMBINED_3.md:1827,RB Leipzig vs Hamburger SV — German Bundesliga
+P-410,410,soccer,4,4,1st Half total goals Over 0.5,phase,Over,0.760,W,PREDICTION_LOG_COMBINED_3.md:1828,RB Leipzig vs Hamburger SV — German Bundesliga
+P-411,411,basketball,1,4,Germany (W) +6.5,handicap,plus,0.560,L,PREDICTION_LOG_COMBINED_3.md:1841,"Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place"
+P-411,411,basketball,2,4,Under 147.5,total,Under,0.530,W,PREDICTION_LOG_COMBINED_3.md:1842,"Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place"
+P-411,411,basketball,3,4,Over 147.5,total,Over,0.470,L,PREDICTION_LOG_COMBINED_3.md:1843,"Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place"
+P-411,411,basketball,4,4,Spain (W) -6.5,handicap,minus,0.440,W,PREDICTION_LOG_COMBINED_3.md:1844,"Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place"
+P-412,412,american-football,1,4,Atlanta Falcons +6.5,handicap,plus,0.550,L,PREDICTION_LOG_COMBINED_3.md:1856,Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1
+P-412,412,american-football,2,4,Under 40.5,total,Under,0.530,W,PREDICTION_LOG_COMBINED_3.md:1857,Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1
+P-412,412,american-football,3,4,Over 40.5,total,Over,0.470,L,PREDICTION_LOG_COMBINED_3.md:1858,Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1
+P-412,412,american-football,4,4,Pittsburgh Steelers -6.5,handicap,minus,0.450,W,PREDICTION_LOG_COMBINED_3.md:1859,Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1
+P-413,413,american-football,1,4,Indianapolis Colts +3.0 (53% win / 8% push / 39% loss),handicap,plus,0.530,L,PREDICTION_LOG_COMBINED_3.md:1871,Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1
+P-413,413,american-football,2,4,Under 48.5,total,Under,0.520,L,PREDICTION_LOG_COMBINED_3.md:1872,Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1
+P-413,413,american-football,3,4,Over 48.5,total,Over,0.480,W,PREDICTION_LOG_COMBINED_3.md:1873,Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1
+P-413,413,american-football,4,4,Baltimore Ravens -3.0 (39 / 8 / 53),handicap,minus,0.390,W,PREDICTION_LOG_COMBINED_3.md:1874,Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1
+P-414,414,american-football,1,4,Houston Texans +1.5,handicap,plus,0.550,L,PREDICTION_LOG_COMBINED_3.md:1886,Buffalo Bills @ Houston Texans — NFL Regular Season Week 1
+P-414,414,american-football,2,4,Under 44.5,total,Under,0.530,L,PREDICTION_LOG_COMBINED_3.md:1887,Buffalo Bills @ Houston Texans — NFL Regular Season Week 1
+P-414,414,american-football,3,4,Over 44.5,total,Over,0.470,W,PREDICTION_LOG_COMBINED_3.md:1888,Buffalo Bills @ Houston Texans — NFL Regular Season Week 1
+P-414,414,american-football,4,4,Buffalo Bills -1.5,handicap,minus,0.450,W,PREDICTION_LOG_COMBINED_3.md:1889,Buffalo Bills @ Houston Texans — NFL Regular Season Week 1
+P-416,416,baseball-MLB,1,4,Under 8.0 (52 / 11 / 37),total,Under,0.520,W,PREDICTION_LOG_COMBINED_3.md:1905,New York Mets @ New York Yankees — MLB
+P-416,416,baseball-MLB,2,4,Mets +1.5,handicap,plus,0.510,L,PREDICTION_LOG_COMBINED_3.md:1906,New York Mets @ New York Yankees — MLB
+P-416,416,baseball-MLB,3,4,Yankees -1.5,handicap,minus,0.490,W,PREDICTION_LOG_COMBINED_3.md:1907,New York Mets @ New York Yankees — MLB
+P-416,416,baseball-MLB,4,4,Over 8.0 (37 / 11 / 52),total,Over,0.370,L,PREDICTION_LOG_COMBINED_3.md:1908,New York Mets @ New York Yankees — MLB
+P-417,417,baseball-NPB/KBO/CPBL,1,4,Chunichi Dragons +1.5,handicap,plus,0.620,W,PREDICTION_LOG_COMBINED_3.md:1926,Chunichi Dragons @ Hanshin Tigers — NPB Central League
+P-417,417,baseball-NPB/KBO/CPBL,2,4,Under 5.5,total,Under,0.550,L,PREDICTION_LOG_COMBINED_3.md:1927,Chunichi Dragons @ Hanshin Tigers — NPB Central League
+P-417,417,baseball-NPB/KBO/CPBL,3,4,Over 5.5,total,Over,0.450,W,PREDICTION_LOG_COMBINED_3.md:1928,Chunichi Dragons @ Hanshin Tigers — NPB Central League
+P-417,417,baseball-NPB/KBO/CPBL,4,4,Hanshin Tigers -1.5,handicap,minus,0.380,L,PREDICTION_LOG_COMBINED_3.md:1929,Chunichi Dragons @ Hanshin Tigers — NPB Central League
+P-419,419,soccer,1,4,Djurgården team goals Over 0.5,total,Over,0.840,W,PREDICTION_LOG_COMBINED_3.md:1956,Djurgårdens IF vs GAIS — Sweden Allsvenskan
+P-419,419,soccer,2,4,Djurgården or Draw (1X),moneyline,,0.830,W,PREDICTION_LOG_COMBINED_3.md:1957,Djurgårdens IF vs GAIS — Sweden Allsvenskan
+P-419,419,soccer,3,4,GAIS team goals Under 1.5,total,Under,0.790,W,PREDICTION_LOG_COMBINED_3.md:1958,Djurgårdens IF vs GAIS — Sweden Allsvenskan
+P-419,419,soccer,4,4,Under 3.5 total goals,total,Under,0.700,W,PREDICTION_LOG_COMBINED_3.md:1959,Djurgårdens IF vs GAIS — Sweden Allsvenskan
+P-420,420,baseball-MLB,1,4,Atlanta Braves +1.5,handicap,plus,0.570,L,PREDICTION_LOG_COMBINED_3.md:1972,Atlanta Braves @ Chicago Cubs — MLB
+P-420,420,baseball-MLB,2,4,Over 9.5,total,Over,0.530,W,PREDICTION_LOG_COMBINED_3.md:1973,Atlanta Braves @ Chicago Cubs — MLB
+P-420,420,baseball-MLB,3,4,Under 9.5,total,Under,0.470,L,PREDICTION_LOG_COMBINED_3.md:1974,Atlanta Braves @ Chicago Cubs — MLB
+P-420,420,baseball-MLB,4,4,Chicago Cubs -1.5,handicap,minus,0.430,W,PREDICTION_LOG_COMBINED_3.md:1975,Atlanta Braves @ Chicago Cubs — MLB
+P-421,421,baseball-MLB,1,4,New York Yankees -1.5,handicap,minus,0.520,W,PREDICTION_LOG_COMBINED_3.md:1987,New York Yankees @ Minnesota Twins — MLB
+P-421,421,baseball-MLB,2,4,Over 8.0 (50 / 12 / 38),total,Over,0.500,W,PREDICTION_LOG_COMBINED_3.md:1988,New York Yankees @ Minnesota Twins — MLB
+P-421,421,baseball-MLB,3,4,Minnesota Twins +1.5,handicap,plus,0.480,L,PREDICTION_LOG_COMBINED_3.md:1989,New York Yankees @ Minnesota Twins — MLB
+P-421,421,baseball-MLB,4,4,Under 8.0 (38 / 12 / 50),total,Under,0.380,L,PREDICTION_LOG_COMBINED_3.md:1990,New York Yankees @ Minnesota Twins — MLB
+P-422,422,american-football,1,4,Denver Broncos +2.5,handicap,plus,0.560,L,PREDICTION_LOG_COMBINED_3.md:2002,Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1
+P-422,422,american-football,2,4,Under 42.5,total,Under,0.530,W,PREDICTION_LOG_COMBINED_3.md:2003,Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1
+P-422,422,american-football,3,4,Over 42.5,total,Over,0.470,L,PREDICTION_LOG_COMBINED_3.md:2004,Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1
+P-422,422,american-football,4,4,Kansas City Chiefs -2.5,handicap,minus,0.440,W,PREDICTION_LOG_COMBINED_3.md:2005,Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1
+P-423,423,baseball-MLB,1,4,San Diego Padres -1.5,handicap,minus,0.540,L,PREDICTION_LOG_COMBINED_3.md:2017,San Diego Padres @ Colorado Rockies — MLB
+P-423,423,baseball-MLB,2,4,Over 11.0 (48 / 10 / 42),total,Over,0.480,W,PREDICTION_LOG_COMBINED_3.md:2018,San Diego Padres @ Colorado Rockies — MLB
+P-423,423,baseball-MLB,3,4,Colorado Rockies +1.5,handicap,plus,0.460,W,PREDICTION_LOG_COMBINED_3.md:2019,San Diego Padres @ Colorado Rockies — MLB
+P-423,423,baseball-MLB,4,4,Under 11.0 (42 / 10 / 48),total,Under,0.420,L,PREDICTION_LOG_COMBINED_3.md:2020,San Diego Padres @ Colorado Rockies — MLB
+P-425,425,soccer,1,5,Daejeon team total Over 0.5,team-total,Over,0.760,W,PREDICTION_LOG_COMBINED_4.md:850,Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1
+P-425,425,soccer,2,5,Match total Over 1.5,total,Over,0.730,L,PREDICTION_LOG_COMBINED_4.md:851,Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1
+P-425,425,soccer,3,5,Daejeon +0.5 / 1X,handicap,plus,0.700,W,PREDICTION_LOG_COMBINED_4.md:852,Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1
+P-425,425,soccer,4,5,Match Over 2.5,total,Over,0.570,L,PREDICTION_LOG_COMBINED_4.md:853,Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1
+P-425,425,soccer,5,5,Daejeon team corners Over 3.5,corners,Over,0.550,W,PREDICTION_LOG_COMBINED_4.md:854,Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1
+P-426,426,soccer,1,5,1st Half Under 1.5,phase,Under,0.770,W,PREDICTION_LOG_COMBINED_4.md:868,Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1
+P-426,426,soccer,2,5,Cong An Ha Noi +1.5,handicap,plus,0.750,L,PREDICTION_LOG_COMBINED_4.md:869,Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1
+P-426,426,soccer,3,5,Full Match Under 3.5,total,Under,0.740,L,PREDICTION_LOG_COMBINED_4.md:870,Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1
+P-426,426,soccer,4,5,Gamba team corners Over 2.5,corners,Over,0.630,L,PREDICTION_LOG_COMBINED_4.md:871,Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1
+P-426,426,soccer,5,5,Full Match Under 2.5,total,Under,0.590,L,PREDICTION_LOG_COMBINED_4.md:872,Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1
+P-427,427,basketball,1,4,Kolossos +2.5,handicap,plus,0.610,L,PREDICTION_LOG_COMBINED_4.md:884,Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round
+P-427,427,basketball,2,4,Under 162.5,total,Under,0.580,L,PREDICTION_LOG_COMBINED_4.md:885,Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round
+P-427,427,basketball,3,4,Over 162.5,total,Over,0.420,W,PREDICTION_LOG_COMBINED_4.md:886,Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round
+P-427,427,basketball,4,4,Biotekno Körfez −2.5,handicap,minus,0.390,W,PREDICTION_LOG_COMBINED_4.md:887,Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round
+P-429,429,cricket,1,4,Afghanistan lose 1+ wicket in first 6 overs,phase,,0.790,W,PREDICTION_LOG_COMBINED_4.md:925,"Afghanistan vs India — 2nd T20I, Delhi"
+P-429,429,cricket,2,4,Arshdeep Singh 1+ wicket,other,,0.660,W,PREDICTION_LOG_COMBINED_4.md:926,"Afghanistan vs India — 2nd T20I, Delhi"
+P-429,429,cricket,3,4,Afghanistan first 6 overs Under 47.5,phase,Under,0.550,W,PREDICTION_LOG_COMBINED_4.md:927,"Afghanistan vs India — 2nd T20I, Delhi"
+P-429,429,cricket,4,4,Afghanistan 20-over innings Over 167.5,total,Over,0.540,L,PREDICTION_LOG_COMBINED_4.md:928,"Afghanistan vs India — 2nd T20I, Delhi"
+P-430,430,soccer,1,4,Al Nassr team total Over 0.5,team-total,Over,0.850,L,PREDICTION_LOG_COMBINED_4.md:942,Al Ain FC vs Al Nassr — AFC Champions League Elite MD1
+P-430,430,soccer,2,4,Match Over 1.5,total,Over,0.810,W,PREDICTION_LOG_COMBINED_4.md:943,Al Ain FC vs Al Nassr — AFC Champions League Elite MD1
+P-430,430,soccer,3,4,1st Half Over 0.5,phase,Over,0.750,W,PREDICTION_LOG_COMBINED_4.md:944,Al Ain FC vs Al Nassr — AFC Champions League Elite MD1
+P-430,430,soccer,4,4,Al Nassr +0.5 / X2,handicap,plus,0.750,L,PREDICTION_LOG_COMBINED_4.md:945,Al Ain FC vs Al Nassr — AFC Champions League Elite MD1
+P-431,431,cricket,1,4,England first innings Over 149.5,phase,Over,0.840,W,PREDICTION_LOG_COMBINED_4.md:971,"England vs Sri Lanka — 1st T20I, Southampton"
+P-431,431,cricket,2,4,Adil Rashid 1+ wicket,other,,0.760,W,PREDICTION_LOG_COMBINED_4.md:972,"England vs Sri Lanka — 1st T20I, Southampton"
+P-431,431,cricket,3,4,England first 6 overs Under 60.5,phase,Under,0.620,L,PREDICTION_LOG_COMBINED_4.md:973,"England vs Sri Lanka — 1st T20I, Southampton"
+P-431,431,cricket,4,4,England first innings Under 193.5,phase,Under,0.550,L,PREDICTION_LOG_COMBINED_4.md:974,"England vs Sri Lanka — 1st T20I, Southampton"
+P-432,432,baseball-NPB/KBO/CPBL,1,4,KT Wiz +1.5,handicap,plus,0.680,W,PREDICTION_LOG_COMBINED_4.md:988,KT Wiz @ Hanwha Eagles — KBO
+P-432,432,baseball-NPB/KBO/CPBL,2,4,Under 9.5,total,Under,0.550,W,PREDICTION_LOG_COMBINED_4.md:989,KT Wiz @ Hanwha Eagles — KBO
+P-432,432,baseball-NPB/KBO/CPBL,3,4,Over 9.5,total,Over,0.450,L,PREDICTION_LOG_COMBINED_4.md:990,KT Wiz @ Hanwha Eagles — KBO
+P-432,432,baseball-NPB/KBO/CPBL,4,4,Hanwha −1.5,handicap,minus,0.320,L,PREDICTION_LOG_COMBINED_4.md:991,KT Wiz @ Hanwha Eagles — KBO
+P-433,433,baseball-NPB/KBO/CPBL,1,4,LG Twins +1.5,handicap,plus,0.680,W,PREDICTION_LOG_COMBINED_4.md:1003,LG Twins @ NC Dinos — KBO
+P-433,433,baseball-NPB/KBO/CPBL,2,4,LG team total Over 3.5,team-total,Over,0.650,W,PREDICTION_LOG_COMBINED_4.md:1004,LG Twins @ NC Dinos — KBO
+P-433,433,baseball-NPB/KBO/CPBL,3,4,NC team total Over 3.5,team-total,Over,0.630,L,PREDICTION_LOG_COMBINED_4.md:1005,LG Twins @ NC Dinos — KBO
+P-433,433,baseball-NPB/KBO/CPBL,4,4,Combined Over 10.5,total,Over,0.570,W,PREDICTION_LOG_COMBINED_4.md:1006,LG Twins @ NC Dinos — KBO
+P-434,434,baseball-NPB/KBO/CPBL,1,4,Chris Paddack 3+ strikeouts,prop,,0.870,W,PREDICTION_LOG_COMBINED_4.md:1018,Samsung Lions @ Doosan Bears — KBO
+P-434,434,baseball-NPB/KBO/CPBL,2,4,Under 10.5 runs,total,Under,0.750,W,PREDICTION_LOG_COMBINED_4.md:1019,Samsung Lions @ Doosan Bears — KBO
+P-434,434,baseball-NPB/KBO/CPBL,3,4,Doosan +2.5,handicap,plus,0.740,W,PREDICTION_LOG_COMBINED_4.md:1020,Samsung Lions @ Doosan Bears — KBO
+P-434,434,baseball-NPB/KBO/CPBL,4,4,Under 8.5 runs,total,Under,0.580,W,PREDICTION_LOG_COMBINED_4.md:1021,Samsung Lions @ Doosan Bears — KBO
+P-435,435,baseball-NPB/KBO/CPBL,1,4,Pedro Avila 4+ strikeouts,prop,,0.880,W,PREDICTION_LOG_COMBINED_4.md:1033,SSG Landers @ Lotte Giants — KBO
+P-435,435,baseball-NPB/KBO/CPBL,2,4,SSG +1.5,handicap,plus,0.750,W,PREDICTION_LOG_COMBINED_4.md:1034,SSG Landers @ Lotte Giants — KBO
+P-435,435,baseball-NPB/KBO/CPBL,3,4,Lotte team total Under 4.5,team-total,Under,0.720,W,PREDICTION_LOG_COMBINED_4.md:1035,SSG Landers @ Lotte Giants — KBO
+P-435,435,baseball-NPB/KBO/CPBL,4,4,SSG team total Over 3.5,team-total,Over,0.690,W,PREDICTION_LOG_COMBINED_4.md:1036,SSG Landers @ Lotte Giants — KBO
+P-436,436,soccer,1,5,Match Under 4.5,total,Under,0.900,W,PREDICTION_LOG_COMBINED_4.md:1050,Jeonbuk Hyundai Motors vs Kashiwa Reysol — AFC Champions League Elite MD1
+P-436,436,soccer,2,5,Kashiwa +1.5,handicap,plus,0.840,W,PREDICTION_LOG_COMBINED_4.md:1051,Jeonbuk Hyundai Motors vs Kashiwa Reysol — AFC Champions League Elite MD1
+P-436,436,soccer,3,5,1st Half Under 1.5,phase,Under,0.730,W,PREDICTION_LOG_COMBINED_4.md:1052,Jeonbuk Hyundai Motors vs Kashiwa Reysol — AFC Champions League Elite MD1
+P-436,436,soccer,4,5,Kashiwa team total Over 0.5,team-total,Over,0.720,W,PREDICTION_LOG_COMBINED_4.md:1053,Jeonbuk Hyundai Motors vs Kashiwa Reysol — AFC Champions League Elite MD1
+P-436,436,soccer,5,5,Kashiwa team corners Over 3.5,corners,Over,0.680,W,PREDICTION_LOG_COMBINED_4.md:1054,Jeonbuk Hyundai Motors vs Kashiwa Reysol — AFC Champions League Elite MD1
+P-437,437,soccer,1,5,Match Under 4.5,total,Under,0.860,W,PREDICTION_LOG_COMBINED_4.md:1068,Port FC vs Vissel Kobe — AFC Champions League Elite MD1
+P-437,437,soccer,2,5,Vissel Kobe +1.5,handicap,plus,0.840,W,PREDICTION_LOG_COMBINED_4.md:1069,Port FC vs Vissel Kobe — AFC Champions League Elite MD1
+P-437,437,soccer,3,5,Vissel team total Over 0.5,team-total,Over,0.810,W,PREDICTION_LOG_COMBINED_4.md:1070,Port FC vs Vissel Kobe — AFC Champions League Elite MD1
+P-437,437,soccer,4,5,Match Over 1.5,total,Over,0.780,W,PREDICTION_LOG_COMBINED_4.md:1071,Port FC vs Vissel Kobe — AFC Champions League Elite MD1
+P-437,437,soccer,5,5,1st Half Over 0.5,phase,Over,0.700,W,PREDICTION_LOG_COMBINED_4.md:1072,Port FC vs Vissel Kobe — AFC Champions League Elite MD1
+P-439,439,soccer,1,5,First Half Under 2.5,phase,Under,0.870,W,PREDICTION_LOG_COMBINED_4.md:221,Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A
+P-439,439,soccer,2,5,Nasaf team total Under 2.5,team-total,Under,0.850,W,PREDICTION_LOG_COMBINED_4.md:222,Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A
+P-439,439,soccer,3,5,Full Match Under 4.5,total,Under,0.820,W,PREDICTION_LOG_COMBINED_4.md:223,Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A
+P-439,439,soccer,4,5,Al Khaldiya +1.5,handicap,plus,0.790,W,PREDICTION_LOG_COMBINED_4.md:224,Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A
+P-439,439,soccer,5,5,First Half Under 1.5,phase,Under,0.730,W,PREDICTION_LOG_COMBINED_4.md:225,Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A
+P-440,440,soccer,1,5,First Half Under 2.5,phase,Under,0.890,W,PREDICTION_LOG_COMBINED_4.md:239,Ararat-Armenia vs Sparta Praha — UEFA Europa League MD1
+P-440,440,soccer,2,5,Ararat-Armenia team total Under 2.5,team-total,Under,0.870,W,PREDICTION_LOG_COMBINED_4.md:240,Ararat-Armenia vs Sparta Praha — UEFA Europa League MD1
+P-440,440,soccer,3,5,Sparta Praha +1.5,handicap,plus,0.860,W,PREDICTION_LOG_COMBINED_4.md:241,Ararat-Armenia vs Sparta Praha — UEFA Europa League MD1
+P-440,440,soccer,4,5,Full Match Under 4.5,total,Under,0.830,L,PREDICTION_LOG_COMBINED_4.md:242,Ararat-Armenia vs Sparta Praha — UEFA Europa League MD1
+P-440,440,soccer,5,5,Sparta Praha team total Over 0.5,team-total,Over,0.760,W,PREDICTION_LOG_COMBINED_4.md:243,Ararat-Armenia vs Sparta Praha — UEFA Europa League MD1
+P-441,441,soccer,1,5,First Half Under 2.5,phase,Under,0.920,W,PREDICTION_LOG_COMBINED_4.md:257,Omonia Nicosia vs Celta Vigo — UEFA Europa League MD1
+P-441,441,soccer,2,5,Full Match Under 4.5,total,Under,0.910,W,PREDICTION_LOG_COMBINED_4.md:258,Omonia Nicosia vs Celta Vigo — UEFA Europa League MD1
+P-441,441,soccer,3,5,Celta Vigo team total Under 2.5,team-total,Under,0.900,W,PREDICTION_LOG_COMBINED_4.md:259,Omonia Nicosia vs Celta Vigo — UEFA Europa League MD1
+P-441,441,soccer,4,5,Omonia team total Under 2.5,team-total,Under,0.890,W,PREDICTION_LOG_COMBINED_4.md:260,Omonia Nicosia vs Celta Vigo — UEFA Europa League MD1
+P-441,441,soccer,5,5,Celta Vigo +1.5 Asian Handicap,handicap,plus,0.860,W,PREDICTION_LOG_COMBINED_4.md:261,Omonia Nicosia vs Celta Vigo — UEFA Europa League MD1
+P-442,442,baseball-MLB,1,4,White Sox +1.5,handicap,plus,0.650,L,PREDICTION_LOG_COMBINED_4.md:336,Chicago White Sox @ Cleveland Guardians — MLB
+P-442,442,baseball-MLB,2,4,Combined Total Over 7.0,total,Over,0.480,W,PREDICTION_LOG_COMBINED_4.md:337,Chicago White Sox @ Cleveland Guardians — MLB
+P-442,442,baseball-MLB,3,4,Combined Total Under 7.0,total,Under,0.370,L,PREDICTION_LOG_COMBINED_4.md:338,Chicago White Sox @ Cleveland Guardians — MLB
+P-442,442,baseball-MLB,4,4,Guardians −1.5,handicap,minus,0.350,W,PREDICTION_LOG_COMBINED_4.md:339,Chicago White Sox @ Cleveland Guardians — MLB
+P-443,443,baseball-MLB,1,4,Giants +1.5,handicap,plus,0.610,W,PREDICTION_LOG_COMBINED_4.md:365,San Francisco Giants @ St. Louis Cardinals — MLB
+P-443,443,baseball-MLB,2,4,Combined Total Over 8.0,total,Over,0.450,W,PREDICTION_LOG_COMBINED_4.md:366,San Francisco Giants @ St. Louis Cardinals — MLB
+P-443,443,baseball-MLB,3,4,Combined Total Under 8.0,total,Under,0.420,L,PREDICTION_LOG_COMBINED_4.md:367,San Francisco Giants @ St. Louis Cardinals — MLB
+P-443,443,baseball-MLB,4,4,Cardinals −1.5,handicap,minus,0.390,L,PREDICTION_LOG_COMBINED_4.md:368,San Francisco Giants @ St. Louis Cardinals — MLB
+P-444,444,baseball-MLB,1,4,Yankees −1.5,handicap,minus,0.560,L,PREDICTION_LOG_COMBINED_4.md:382,New York Yankees @ Minnesota Twins — MLB
+P-444,444,baseball-MLB,2,4,Combined Total Under 8.0,total,Under,0.460,L,PREDICTION_LOG_COMBINED_4.md:383,New York Yankees @ Minnesota Twins — MLB
+P-444,444,baseball-MLB,3,4,Twins +1.5,handicap,plus,0.440,W,PREDICTION_LOG_COMBINED_4.md:384,New York Yankees @ Minnesota Twins — MLB
+P-444,444,baseball-MLB,4,4,Combined Total Over 8.0,total,Over,0.410,W,PREDICTION_LOG_COMBINED_4.md:385,New York Yankees @ Minnesota Twins — MLB
+P-446,446,baseball-MLB,1,4,Cubs −1.5,handicap,minus,0.560,W,PREDICTION_LOG_COMBINED_4.md:411,Atlanta Braves @ Chicago Cubs — MLB
+P-446,446,baseball-MLB,2,4,Combined Total Under 7.5,total,Under,0.530,L,PREDICTION_LOG_COMBINED_4.md:412,Atlanta Braves @ Chicago Cubs — MLB
+P-446,446,baseball-MLB,3,4,Combined Total Over 7.5,total,Over,0.470,W,PREDICTION_LOG_COMBINED_4.md:413,Atlanta Braves @ Chicago Cubs — MLB
+P-446,446,baseball-MLB,4,4,Braves +1.5,handicap,plus,0.440,L,PREDICTION_LOG_COMBINED_4.md:414,Atlanta Braves @ Chicago Cubs — MLB
+P-447,447,baseball-MLB,1,4,Rangers +1.5,handicap,plus,0.660,W,PREDICTION_LOG_COMBINED_4.md:428,Boston Red Sox @ Texas Rangers — MLB
+P-447,447,baseball-MLB,2,4,Combined Total Under 8.0,total,Under,0.440,L,PREDICTION_LOG_COMBINED_4.md:429,Boston Red Sox @ Texas Rangers — MLB
+P-447,447,baseball-MLB,3,4,Combined Total Over 8.0,total,Over,0.420,W,PREDICTION_LOG_COMBINED_4.md:430,Boston Red Sox @ Texas Rangers — MLB
+P-447,447,baseball-MLB,4,4,Red Sox −1.5,handicap,minus,0.340,L,PREDICTION_LOG_COMBINED_4.md:431,Boston Red Sox @ Texas Rangers — MLB
+P-448,448,baseball-MLB,1,4,Royals +1.5,handicap,plus,0.650,W,PREDICTION_LOG_COMBINED_4.md:445,Kansas City Royals @ Houston Astros — MLB
+P-448,448,baseball-MLB,2,4,Combined Total Under 9.0,total,Under,0.490,W,PREDICTION_LOG_COMBINED_4.md:446,Kansas City Royals @ Houston Astros — MLB
+P-448,448,baseball-MLB,3,4,Combined Total Over 9.0,total,Over,0.360,L,PREDICTION_LOG_COMBINED_4.md:447,Kansas City Royals @ Houston Astros — MLB
+P-448,448,baseball-MLB,4,4,Astros −1.5,handicap,minus,0.350,L,PREDICTION_LOG_COMBINED_4.md:448,Kansas City Royals @ Houston Astros — MLB
+P-449,449,baseball-MLB,1,4,Padres −1.5,handicap,minus,0.550,W,PREDICTION_LOG_COMBINED_4.md:462,San Diego Padres @ Colorado Rockies — MLB
+P-449,449,baseball-MLB,2,4,Combined Total Under 11.0,total,Under,0.490,L,PREDICTION_LOG_COMBINED_4.md:463,San Diego Padres @ Colorado Rockies — MLB
+P-449,449,baseball-MLB,3,4,Rockies +1.5,handicap,plus,0.450,L,PREDICTION_LOG_COMBINED_4.md:464,San Diego Padres @ Colorado Rockies — MLB
+P-449,449,baseball-MLB,4,4,Combined Total Over 11.0,total,Over,0.400,W,PREDICTION_LOG_COMBINED_4.md:465,San Diego Padres @ Colorado Rockies — MLB
+P-450,450,baseball-MLB,1,4,Marlins +1.5,handicap,plus,0.630,W,PREDICTION_LOG_COMBINED_4.md:479,Miami Marlins @ Arizona Diamondbacks — MLB
+P-450,450,baseball-MLB,2,4,Combined Total Under 9.0,total,Under,0.440,W,PREDICTION_LOG_COMBINED_4.md:480,Miami Marlins @ Arizona Diamondbacks — MLB
+P-450,450,baseball-MLB,3,4,Combined Total Over 9.0,total,Over,0.420,L,PREDICTION_LOG_COMBINED_4.md:481,Miami Marlins @ Arizona Diamondbacks — MLB
+P-450,450,baseball-MLB,4,4,Diamondbacks −1.5,handicap,minus,0.370,L,PREDICTION_LOG_COMBINED_4.md:482,Miami Marlins @ Arizona Diamondbacks — MLB
+P-452,452,cricket,1,4,India first 6 overs Over 66.5,phase,Over,0.670,W,PREDICTION_LOG_COMBINED_4.md:1791,"Cricket / Afghanistan vs India T20I Series 2026 — Afghanistan vs India, 3rd T20I"
+P-452,452,cricket,2,4,India 20-over innings Under 216.5,total,Over,0.650,L,PREDICTION_LOG_COMBINED_4.md:1792,"Cricket / Afghanistan vs India T20I Series 2026 — Afghanistan vs India, 3rd T20I"
+P-452,452,cricket,3,4,India 20-over innings Over 216.5,total,Over,0.350,W,PREDICTION_LOG_COMBINED_4.md:1793,"Cricket / Afghanistan vs India T20I Series 2026 — Afghanistan vs India, 3rd T20I"
+P-452,452,cricket,4,4,India first 6 overs Under 66.5,phase,Under,0.330,L,PREDICTION_LOG_COMBINED_4.md:1794,"Cricket / Afghanistan vs India T20I Series 2026 — Afghanistan vs India, 3rd T20I"
+P-453,453,baseball-MLB,1,4,Pittsburgh Pirates +1.5,handicap,plus,0.570,W,PREDICTION_LOG_COMBINED_4.md:2068,Baseball / MLB — Milwaukee Brewers @ Pittsburgh Pirates
+P-453,453,baseball-MLB,2,4,Combined Over 8.5,total,Over,0.530,W,PREDICTION_LOG_COMBINED_4.md:2069,Baseball / MLB — Milwaukee Brewers @ Pittsburgh Pirates
+P-453,453,baseball-MLB,3,4,Combined Under 8.5,total,Under,0.470,L,PREDICTION_LOG_COMBINED_4.md:2070,Baseball / MLB — Milwaukee Brewers @ Pittsburgh Pirates
+P-453,453,baseball-MLB,4,4,Milwaukee Brewers -1.5,handicap,minus,0.430,L,PREDICTION_LOG_COMBINED_4.md:2071,Baseball / MLB — Milwaukee Brewers @ Pittsburgh Pirates
+P-454,454,soccer,1,5,1st Half Over 0.5 goals,phase,Over,0.680,W,PREDICTION_LOG_COMBINED_4.md:2325,Soccer / Denmark DBU Pokalen (Betano Pokalen) — Vejle Boldklub vs Brøndby IF
+P-454,454,soccer,2,5,Total corners Under 11.5,corners,Under,0.640,W,PREDICTION_LOG_COMBINED_4.md:2326,Soccer / Denmark DBU Pokalen (Betano Pokalen) — Vejle Boldklub vs Brøndby IF
+P-454,454,soccer,3,5,"Brøndby or Draw X2, 90 min",moneyline,,0.660,W,PREDICTION_LOG_COMBINED_4.md:2327,Soccer / Denmark DBU Pokalen (Betano Pokalen) — Vejle Boldklub vs Brøndby IF
+P-454,454,soccer,4,5,Brøndby team total Over 0.5,team-total,Over,0.620,W,PREDICTION_LOG_COMBINED_4.md:2328,Soccer / Denmark DBU Pokalen (Betano Pokalen) — Vejle Boldklub vs Brøndby IF
+P-454,454,soccer,5,5,Combined goals Over 2.5,total,Over,0.560,W,PREDICTION_LOG_COMBINED_4.md:2329,Soccer / Denmark DBU Pokalen (Betano Pokalen) — Vejle Boldklub vs Brøndby IF
+P-455,455,baseball-MLB,1,4,Cincinnati Reds +1.5,handicap,plus,0.550,L,PREDICTION_LOG_COMBINED_4.md:2606,Baseball / MLB — Los Angeles Dodgers @ Cincinnati Reds
+P-455,455,baseball-MLB,2,4,Combined Under 10.0,total,Under,0.510,P,PREDICTION_LOG_COMBINED_4.md:2607,Baseball / MLB — Los Angeles Dodgers @ Cincinnati Reds
+P-455,455,baseball-MLB,3,4,Los Angeles Dodgers -1.5,handicap,minus,0.450,W,PREDICTION_LOG_COMBINED_4.md:2608,Baseball / MLB — Los Angeles Dodgers @ Cincinnati Reds
+P-455,455,baseball-MLB,4,4,Combined Over 10.0,total,Over,0.420,P,PREDICTION_LOG_COMBINED_4.md:2609,Baseball / MLB — Los Angeles Dodgers @ Cincinnati Reds
+P-456,456,soccer,1,5,1st Half Under 1.5 goals,phase,Under,0.850,W,PREDICTION_LOG_COMBINED_4.md:2891,Soccer / Spain LaLiga — Real Betis vs Getafe CF
+P-456,456,soccer,2,5,Getafe team total Under 1.5,team-total,Under,0.810,W,PREDICTION_LOG_COMBINED_4.md:2892,Soccer / Spain LaLiga — Real Betis vs Getafe CF
+P-456,456,soccer,3,5,Real Betis team total Over 0.5,team-total,Over,0.750,W,PREDICTION_LOG_COMBINED_4.md:2893,Soccer / Spain LaLiga — Real Betis vs Getafe CF
+P-456,456,soccer,4,5,Getafe team corners Under 5.5,corners,Under,0.690,W,PREDICTION_LOG_COMBINED_4.md:2894,Soccer / Spain LaLiga — Real Betis vs Getafe CF
+P-456,456,soccer,5,5,Combined goals Under 2.5,total,Under,0.630,W,PREDICTION_LOG_COMBINED_4.md:2895,Soccer / Spain LaLiga — Real Betis vs Getafe CF
+P-457,457,cricket,1,4,Australia 50-over first innings UNDER 309.5,phase,Over,0.660,L,PREDICTION_LOG_COMBINED_4.md:3158,"Cricket / Zimbabwe v Australia ODIs 2026 — Zimbabwe vs Australia, 2nd ODI"
+P-457,457,cricket,2,4,Australia first 5 overs OVER 31.5,phase,Over,0.630,L,PREDICTION_LOG_COMBINED_4.md:3159,"Cricket / Zimbabwe v Australia ODIs 2026 — Zimbabwe vs Australia, 2nd ODI"
+P-457,457,cricket,3,4,Australia first 5 overs UNDER 31.5,phase,Under,0.370,W,PREDICTION_LOG_COMBINED_4.md:3160,"Cricket / Zimbabwe v Australia ODIs 2026 — Zimbabwe vs Australia, 2nd ODI"
+P-457,457,cricket,4,4,Australia 50-over first innings OVER 309.5,phase,Over,0.340,W,PREDICTION_LOG_COMBINED_4.md:3161,"Cricket / Zimbabwe v Australia ODIs 2026 — Zimbabwe vs Australia, 2nd ODI"
+P-458,458,baseball-NPB/KBO/CPBL,1,4,Chunichi Dragons +1.5,handicap,plus,0.620,L,PREDICTION_LOG_COMBINED_4.md:3331,Baseball / NPB Central League — Chunichi Dragons @ Yomiuri Giants
+P-458,458,baseball-NPB/KBO/CPBL,2,4,Over 5.5 runs,total,Over,0.530,L,PREDICTION_LOG_COMBINED_4.md:3332,Baseball / NPB Central League — Chunichi Dragons @ Yomiuri Giants
+P-458,458,baseball-NPB/KBO/CPBL,3,4,Under 5.5 runs,total,Under,0.470,W,PREDICTION_LOG_COMBINED_4.md:3333,Baseball / NPB Central League — Chunichi Dragons @ Yomiuri Giants
+P-458,458,baseball-NPB/KBO/CPBL,4,4,Yomiuri Giants -1.5,handicap,minus,0.380,W,PREDICTION_LOG_COMBINED_4.md:3334,Baseball / NPB Central League — Chunichi Dragons @ Yomiuri Giants
+P-459,459,AFL,1,4,Charlie Curnow 1+ goal,other,,0.840,W,PREDICTION_LOG_COMBINED_4.md:3625,"AFL / 2026 Toyota AFL Finals Series — Sydney Swans vs Fremantle Dockers, Preliminary Final"
+P-459,459,AFL,2,4,Jye Amiss 1+ goal,other,,0.820,W,PREDICTION_LOG_COMBINED_4.md:3626,"AFL / 2026 Toyota AFL Finals Series — Sydney Swans vs Fremantle Dockers, Preliminary Final"
+P-459,459,AFL,3,4,Logan McDonald 1+ goal,other,,0.810,W,PREDICTION_LOG_COMBINED_4.md:3627,"AFL / 2026 Toyota AFL Finals Series — Sydney Swans vs Fremantle Dockers, Preliminary Final"
+P-459,459,AFL,4,4,Sydney +11.5,handicap,plus,0.620,L,PREDICTION_LOG_COMBINED_4.md:3628,"AFL / 2026 Toyota AFL Finals Series — Sydney Swans vs Fremantle Dockers, Preliminary Final"
+P-460,460,baseball-NPB/KBO/CPBL,1,4,Rakuten Monkeys ML,moneyline,,0.570,L,PREDICTION_LOG_COMBINED_4.md:3945,Baseball / Taiwan CPBL — Rakuten Monkeys @ Fubon Guardians
+P-460,460,baseball-NPB/KBO/CPBL,2,4,Under 6.5,total,Under,0.560,W,PREDICTION_LOG_COMBINED_4.md:3946,Baseball / Taiwan CPBL — Rakuten Monkeys @ Fubon Guardians
+P-460,460,baseball-NPB/KBO/CPBL,3,4,Over 6.5,total,Over,0.440,L,PREDICTION_LOG_COMBINED_4.md:3947,Baseball / Taiwan CPBL — Rakuten Monkeys @ Fubon Guardians
+P-460,460,baseball-NPB/KBO/CPBL,4,4,Fubon -1.5,handicap,minus,0.260,L,PREDICTION_LOG_COMBINED_4.md:3948,Baseball / Taiwan CPBL — Rakuten Monkeys @ Fubon Guardians
+P-461,461,tennis,1,4,Over 20.5 games,total,Over,0.630,L,PREDICTION_LOG_COMBINED_4.md:4217,"Tennis / WTA 125 Valencia — Clara Burel vs Guiomar Maristany Zuleta De Reales, Quarterfinal"
+P-461,461,tennis,2,4,Maristany +3.5 games,handicap,plus,0.620,L,PREDICTION_LOG_COMBINED_4.md:4218,"Tennis / WTA 125 Valencia — Clara Burel vs Guiomar Maristany Zuleta De Reales, Quarterfinal"
+P-461,461,tennis,3,4,Burel -3.5 games,handicap,minus,0.380,W,PREDICTION_LOG_COMBINED_4.md:4219,"Tennis / WTA 125 Valencia — Clara Burel vs Guiomar Maristany Zuleta De Reales, Quarterfinal"
+P-461,461,tennis,4,4,Under 20.5 games,total,Under,0.370,W,PREDICTION_LOG_COMBINED_4.md:4220,"Tennis / WTA 125 Valencia — Clara Burel vs Guiomar Maristany Zuleta De Reales, Quarterfinal"
+P-462,462,soccer,1,5,Zhejiang team total Over 0.5,team-total,Over,0.820,W,PREDICTION_LOG_COMBINED_4.md:4488,Soccer / Chinese Super League — Zhejiang FC vs Wuhan Three Towns
+P-462,462,soccer,2,5,Zhejiang or Draw (1X),moneyline,,0.760,W,PREDICTION_LOG_COMBINED_4.md:4489,Soccer / Chinese Super League — Zhejiang FC vs Wuhan Three Towns
+P-462,462,soccer,3,5,1H Goals Over 0.5,phase,Over,0.750,W,PREDICTION_LOG_COMBINED_4.md:4490,Soccer / Chinese Super League — Zhejiang FC vs Wuhan Three Towns
+P-462,462,soccer,4,5,Total Corners Over 8.5,corners,Over,0.670,W,PREDICTION_LOG_COMBINED_4.md:4491,Soccer / Chinese Super League — Zhejiang FC vs Wuhan Three Towns
+P-462,462,soccer,5,5,Total Goals Over 2.5,total,Over,0.620,W,PREDICTION_LOG_COMBINED_4.md:4492,Soccer / Chinese Super League — Zhejiang FC vs Wuhan Three Towns
+P-463,463,baseball-MLB,1,2,Cincinnati Reds +1.5,handicap,plus,0.540,W,PREDICTION_LOG_COMBINED_4.md:4755,Baseball / MLB — Chicago Cubs @ Cincinnati Reds
+P-463,463,baseball-MLB,4,2,Chicago Cubs -1.5,handicap,minus,0.460,L,PREDICTION_LOG_COMBINED_4.md:4758,Baseball / MLB — Chicago Cubs @ Cincinnati Reds
+P-464,464,baseball-MLB,1,2,Milwaukee Brewers ML,moneyline,,0.620,W,PREDICTION_LOG_COMBINED_4.md:5078,Baseball / MLB — Milwaukee Brewers @ Baltimore Orioles
+P-464,464,baseball-MLB,3,2,Baltimore Orioles +1.5,handicap,plus,0.550,L,PREDICTION_LOG_COMBINED_4.md:5080,Baseball / MLB — Milwaukee Brewers @ Baltimore Orioles
+P-465,465,basketball,1,3,Indiana Fever ML,moneyline,,0.910,W,PREDICTION_LOG_COMBINED_4.md:5372,Basketball / WNBA — Indiana Fever @ Toronto Tempo
+P-465,465,basketball,3,3,Indiana -15.5,handicap,minus,0.570,W,PREDICTION_LOG_COMBINED_4.md:5374,Basketball / WNBA — Indiana Fever @ Toronto Tempo
+P-465,465,basketball,4,3,Toronto +15.5,handicap,plus,0.430,L,PREDICTION_LOG_COMBINED_4.md:5375,Basketball / WNBA — Indiana Fever @ Toronto Tempo
+P-466,466,soccer,2,1,Racing or Draw (1X),moneyline,,0.720,W,PREDICTION_LOG_COMBINED_4.md:5679,Soccer / Argentina Torneo Clausura — Racing Club vs Sarmiento
+P-467,467,baseball-MLB,1,2,Toronto Blue Jays ML,moneyline,,0.640,L,PREDICTION_LOG_COMBINED_4.md:6107,Baseball / MLB — Toronto Blue Jays @ Texas Rangers
+P-467,467,baseball-MLB,2,2,Texas Rangers +1.5,handicap,plus,0.540,W,PREDICTION_LOG_COMBINED_4.md:6108,Baseball / MLB — Toronto Blue Jays @ Texas Rangers
+P-468,468,basketball,2,2,Golden State -12.5,handicap,minus,0.540,W,PREDICTION_LOG_COMBINED_4.md:6406,Basketball / WNBA — Portland Fire @ Golden State Valkyries
+P-468,468,basketball,3,2,Portland +12.5,handicap,plus,0.460,L,PREDICTION_LOG_COMBINED_4.md:6407,Basketball / WNBA — Portland Fire @ Golden State Valkyries
+P-472,472,american-football,1,4,Coastal Carolina +4.5,handicap,plus,0.577,L,PREDICTION_LOG_COMBINED_4.md:7344,American Football / NCAA FBS — Coastal Carolina @ Delaware
+P-472,472,american-football,2,4,Combined Total OVER 56.5,total,Over,0.548,L,PREDICTION_LOG_COMBINED_4.md:7345,American Football / NCAA FBS — Coastal Carolina @ Delaware
+P-472,472,american-football,3,4,Combined Total UNDER 56.5,total,Under,0.452,W,PREDICTION_LOG_COMBINED_4.md:7346,American Football / NCAA FBS — Coastal Carolina @ Delaware
+P-472,472,american-football,4,4,Delaware -4.5,handicap,minus,0.423,W,PREDICTION_LOG_COMBINED_4.md:7347,American Football / NCAA FBS — Coastal Carolina @ Delaware
+P-473,473,soccer,1,5,"Nottingham Forest or Draw (1X), 90 min",moneyline,,,L,PREDICTION_LOG_COMBINED_4.md:7593,Soccer / English Premier League — Nottingham Forest vs Coventry City
+P-473,473,soccer,2,5,"Total corners UNDER 11.5, 90 min",corners,Under,,W,PREDICTION_LOG_COMBINED_4.md:7594,Soccer / English Premier League — Nottingham Forest vs Coventry City
+P-473,473,soccer,3,5,Full-match OVER 1.5 goals,total,Over,,L,PREDICTION_LOG_COMBINED_4.md:7595,Soccer / English Premier League — Nottingham Forest vs Coventry City
+P-473,473,soccer,4,5,1st Half OVER 0.5 goals,phase,Over,,L,PREDICTION_LOG_COMBINED_4.md:7596,Soccer / English Premier League — Nottingham Forest vs Coventry City
+P-473,473,soccer,5,5,Coventry team total UNDER 1.5 goals,team-total,Under,,W,PREDICTION_LOG_COMBINED_4.md:7597,Soccer / English Premier League — Nottingham Forest vs Coventry City
+P-482,482,cricket,1,2,Kingsmen first 6 legal overs OVER 47.5,phase,Over,0.599,W,PREDICTION_LOG_COMBINED_5.md:213,Cricket / CPL 2026 Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen
+P-482,482,cricket,2,2,Kingsmen first 6 legal overs UNDER 47.5,phase,Under,0.401,L,PREDICTION_LOG_COMBINED_5.md:214,Cricket / CPL 2026 Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen
+P-483,483,tennis,1,4,TOTAL GAMES OVER 19.5,total,Over,0.652,L,PREDICTION_LOG_COMBINED_5.md:584,Tennis / WTA 250 Korea Open (Seoul) R32 — Katie Volynets vs Elvina Kalieva
+P-483,483,tennis,2,4,KALIEVA +4.5 GAMES,handicap,plus,0.584,L,PREDICTION_LOG_COMBINED_5.md:585,Tennis / WTA 250 Korea Open (Seoul) R32 — Katie Volynets vs Elvina Kalieva
+P-483,483,tennis,3,4,VOLYNETS −4.5 GAMES,handicap,minus,0.416,W,PREDICTION_LOG_COMBINED_5.md:586,Tennis / WTA 250 Korea Open (Seoul) R32 — Katie Volynets vs Elvina Kalieva
+P-483,483,tennis,4,4,TOTAL GAMES UNDER 19.5,total,Under,0.348,W,PREDICTION_LOG_COMBINED_5.md:587,Tennis / WTA 250 Korea Open (Seoul) R32 — Katie Volynets vs Elvina Kalieva
+P-487,487,basketball,1,2,Phoenix Mercury +5.5,handicap,plus,0.620,W,PREDICTION_LOG_COMBINED_5.md:2641,"WNBA — Dallas Wings @ Phoenix Mercury (22 Sep 2026, 12:00 AEST)"
+P-487,487,basketball,4,2,Dallas −5.5 (forced complement of #1),handicap,minus,0.380,L,PREDICTION_LOG_COMBINED_5.md:2644,"WNBA — Dallas Wings @ Phoenix Mercury (22 Sep 2026, 12:00 AEST)"
+P-489,489,baseball-NPB/KBO/CPBL,2,2,BayStars ML / outright win (three-way distribution DeNA .60 / CHU .35 / tie .05),moneyline,,0.600,W,PREDICTION_LOG_COMBINED_5.md:1337,"NPB — Chunichi Dragons @ Yokohama DeNA BayStars — **22 Sep 2026, game 24** (Azuma v Muller)"
+P-489,489,baseball-NPB/KBO/CPBL,3,2,Dragons +1.5,handicap,plus,0.570,L,PREDICTION_LOG_COMBINED_5.md:1338,"NPB — Chunichi Dragons @ Yokohama DeNA BayStars — **22 Sep 2026, game 24** (Azuma v Muller)"
+P-491,491,baseball-NPB/KBO/CPBL,1,2,Buffaloes +1.5,handicap,plus,0.670,W,PREDICTION_LOG_COMBINED_5.md:2117,NPB — Orix Buffaloes @ Chiba Lotte Marines
+P-491,491,baseball-NPB/KBO/CPBL,3,2,Marines ML,moneyline,,0.490,L,PREDICTION_LOG_COMBINED_5.md:2119,NPB — Orix Buffaloes @ Chiba Lotte Marines
+P-493,493,baseball-NPB/KBO/CPBL,1,4,Doosan Bears +1.5,handicap,plus,,W,PREDICTION_LOG_COMBINED_5.md:3515,KBO — KIA Tigers @ Doosan Bears (23 Sep)
+P-493,493,baseball-NPB/KBO/CPBL,2,4,Combined Total: Over 7.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED_5.md:3516,KBO — KIA Tigers @ Doosan Bears (23 Sep)
+P-493,493,baseball-NPB/KBO/CPBL,3,4,KIA Tigers ML,moneyline,,,L,PREDICTION_LOG_COMBINED_5.md:3517,KBO — KIA Tigers @ Doosan Bears (23 Sep)
+P-493,493,baseball-NPB/KBO/CPBL,4,4,Combined Total: Under 7.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED_5.md:3518,KBO — KIA Tigers @ Doosan Bears (23 Sep)
+P-494,494,tennis,1,4,Under 18.5 total games,total,Under,,W,PREDICTION_LOG_COMBINED_5.md:3567,WTA 500 Singapore — Mirra Andreeva vs Aliaksandra Sasnovich
+P-494,494,tennis,2,4,Sasnovich +6.5 games,handicap,plus,,L,PREDICTION_LOG_COMBINED_5.md:3568,WTA 500 Singapore — Mirra Andreeva vs Aliaksandra Sasnovich
+P-494,494,tennis,3,4,Andreeva -6.5 games,handicap,minus,,W,PREDICTION_LOG_COMBINED_5.md:3569,WTA 500 Singapore — Mirra Andreeva vs Aliaksandra Sasnovich
+P-494,494,tennis,4,4,Over 18.5 total games,total,Over,,L,PREDICTION_LOG_COMBINED_5.md:3570,WTA 500 Singapore — Mirra Andreeva vs Aliaksandra Sasnovich
+P-495,495,tennis,1,4,Gormaz -5.5 Games Handicap,handicap,minus,0.591,L,PREDICTION_LOG_COMBINED_5.md:3621,WTA 125 Tolentino — Jessica Pieri vs Leyre Romero Gormaz
+P-495,495,tennis,2,4,Under 19.5 Total Games,total,Under,0.576,L,PREDICTION_LOG_COMBINED_5.md:3622,WTA 125 Tolentino — Jessica Pieri vs Leyre Romero Gormaz
+P-495,495,tennis,3,4,Over 19.5 Total Games,total,Over,0.424,W,PREDICTION_LOG_COMBINED_5.md:3623,WTA 125 Tolentino — Jessica Pieri vs Leyre Romero Gormaz
+P-495,495,tennis,4,4,Pieri +5.5 Games Handicap,handicap,plus,0.409,W,PREDICTION_LOG_COMBINED_5.md:3624,WTA 125 Tolentino — Jessica Pieri vs Leyre Romero Gormaz
+P-496,496,tennis,1,4,Over 22.5 Total Games,total,Over,0.627,W,PREDICTION_LOG_COMBINED_5.md:3673,ITF M25 Falun — Iiro Vasa vs Wojciech Marek
+P-496,496,tennis,2,4,Vasa +0.5 Games Handicap,handicap,plus,0.535,L,PREDICTION_LOG_COMBINED_5.md:3674,ITF M25 Falun — Iiro Vasa vs Wojciech Marek
+P-496,496,tennis,3,4,Marek -0.5 Games Handicap,handicap,minus,0.465,W,PREDICTION_LOG_COMBINED_5.md:3675,ITF M25 Falun — Iiro Vasa vs Wojciech Marek
+P-496,496,tennis,4,4,Under 22.5 Total Games,total,Under,0.373,L,PREDICTION_LOG_COMBINED_5.md:3676,ITF M25 Falun — Iiro Vasa vs Wojciech Marek
+P-497,497,basketball,1,4,Klaipėda -3.5,handicap,minus,0.530,W,PREDICTION_LOG_COMBINED_5.md:3734,LKL — BC Neptūnas vs BC Juventus
+P-497,497,basketball,2,4,Over 175.5 Total Points,total,Over,0.529,W,PREDICTION_LOG_COMBINED_5.md:3735,LKL — BC Neptūnas vs BC Juventus
+P-497,497,basketball,3,4,Under 175.5 Total Points,total,Under,0.471,L,PREDICTION_LOG_COMBINED_5.md:3736,LKL — BC Neptūnas vs BC Juventus
+P-497,497,basketball,4,4,Utena +3.5,handicap,plus,0.470,L,PREDICTION_LOG_COMBINED_5.md:3737,LKL — BC Neptūnas vs BC Juventus
+P-498,498,basketball,1,4,Under 171.5 Total Points,total,Under,0.654,W,PREDICTION_LOG_COMBINED_5.md:3787,LKL — BC Šiauliai vs BC Lietkabelis
+P-498,498,basketball,2,4,Lietkabelis +3.5,handicap,plus,0.618,L,PREDICTION_LOG_COMBINED_5.md:3788,LKL — BC Šiauliai vs BC Lietkabelis
+P-498,498,basketball,3,4,Siauliai -3.5,handicap,minus,0.382,W,PREDICTION_LOG_COMBINED_5.md:3789,LKL — BC Šiauliai vs BC Lietkabelis
+P-498,498,basketball,4,4,Over 171.5 Total Points,total,Over,0.346,L,PREDICTION_LOG_COMBINED_5.md:3790,LKL — BC Šiauliai vs BC Lietkabelis
+P-499,499,basketball,1,4,Combined Total: Under 149.5 Points,total,Under,0.626,L,PREDICTION_LOG_COMBINED_5.md:3840,EuroLeague Women Qualifiers — Flammes Carolo vs KP Brno
+P-499,499,basketball,2,4,Brno(W) +26.5,handicap,plus,0.587,W,PREDICTION_LOG_COMBINED_5.md:3841,EuroLeague Women Qualifiers — Flammes Carolo vs KP Brno
+P-499,499,basketball,3,4,Basket(W) -26.5,handicap,minus,0.413,L,PREDICTION_LOG_COMBINED_5.md:3842,EuroLeague Women Qualifiers — Flammes Carolo vs KP Brno
+P-499,499,basketball,4,4,Combined Total: Over 149.5 Points,total,Over,0.374,W,PREDICTION_LOG_COMBINED_5.md:3843,EuroLeague Women Qualifiers — Flammes Carolo vs KP Brno
+P-500,500,baseball-MLB,1,4,Nationals +1.5,handicap,plus,0.587,W,PREDICTION_LOG_COMBINED_5.md:3891,MLB — Washington Nationals @ Detroit Tigers
+P-500,500,baseball-MLB,2,4,Tigers ML,moneyline,,0.562,L,PREDICTION_LOG_COMBINED_5.md:3892,MLB — Washington Nationals @ Detroit Tigers
+P-500,500,baseball-MLB,3,4,Combined Total: Over 7.5 Runs,total,Over,0.536,L,PREDICTION_LOG_COMBINED_5.md:3893,MLB — Washington Nationals @ Detroit Tigers
+P-500,500,baseball-MLB,4,4,Combined Total: Under 7.5 Runs,total,Under,0.464,W,PREDICTION_LOG_COMBINED_5.md:3894,MLB — Washington Nationals @ Detroit Tigers
+P-501,501,baseball-MLB,1,4,Combined Total: Over 7.5 Runs,total,Over,0.662,L,PREDICTION_LOG_COMBINED_5.md:3944,MLB — Toronto Blue Jays @ Baltimore Orioles (DH G1)
+P-501,501,baseball-MLB,2,4,Orioles ML,moneyline,,0.576,W,PREDICTION_LOG_COMBINED_5.md:3945,MLB — Toronto Blue Jays @ Baltimore Orioles (DH G1)
+P-501,501,baseball-MLB,3,4,Blue Jays +1.5,handicap,plus,0.554,L,PREDICTION_LOG_COMBINED_5.md:3946,MLB — Toronto Blue Jays @ Baltimore Orioles (DH G1)
+P-501,501,baseball-MLB,4,4,Combined Total: Under 7.5 Runs,total,Under,0.338,W,PREDICTION_LOG_COMBINED_5.md:3947,MLB — Toronto Blue Jays @ Baltimore Orioles (DH G1)
+P-502,502,baseball-MLB,1,4,White Sox +1.5,handicap,plus,0.700,W,PREDICTION_LOG_COMBINED_5.md:3996,MLB — Chicago White Sox @ Kansas City Royals
+P-502,502,baseball-MLB,2,4,Royals +1.5,handicap,plus,0.558,W,PREDICTION_LOG_COMBINED_5.md:3997,MLB — Chicago White Sox @ Kansas City Royals
+P-502,502,baseball-MLB,3,4,Combined Total: Over 8.5 Runs,total,Over,0.553,W,PREDICTION_LOG_COMBINED_5.md:3998,MLB — Chicago White Sox @ Kansas City Royals
+P-502,502,baseball-MLB,4,4,Combined Total: Under 8.5 Runs,total,Under,0.447,L,PREDICTION_LOG_COMBINED_5.md:3999,MLB — Chicago White Sox @ Kansas City Royals
+P-503,503,ice-hockey,1,4,Stars ML,moneyline,,0.708,W,PREDICTION_LOG_COMBINED_5.md:4051,NHL pre-season — Minnesota Wild @ Dallas Stars
+P-503,503,ice-hockey,2,4,Combined Total: Under 5.5 Goals,total,Under,0.605,W,PREDICTION_LOG_COMBINED_5.md:4052,NHL pre-season — Minnesota Wild @ Dallas Stars
+P-503,503,ice-hockey,3,4,Wild +1.5,handicap,plus,0.540,L,PREDICTION_LOG_COMBINED_5.md:4053,NHL pre-season — Minnesota Wild @ Dallas Stars
+P-503,503,ice-hockey,4,4,Combined Total: Over 5.5 Goals,total,Over,0.395,L,PREDICTION_LOG_COMBINED_5.md:4054,NHL pre-season — Minnesota Wild @ Dallas Stars
+P-504,504,basketball,1,4,Dream -4.5,handicap,minus,0.591,W,PREDICTION_LOG_COMBINED_5.md:4105,WNBA — Atlanta Dream @ New York Liberty (23 Sep ET; a different game from P-484)
+P-504,504,basketball,2,4,Combined Total: Under 173.5 Points,total,Under,0.553,W,PREDICTION_LOG_COMBINED_5.md:4106,WNBA — Atlanta Dream @ New York Liberty (23 Sep ET; a different game from P-484)
+P-504,504,basketball,3,4,Combined Total: Over 173.5 Points,total,Over,0.447,L,PREDICTION_LOG_COMBINED_5.md:4107,WNBA — Atlanta Dream @ New York Liberty (23 Sep ET; a different game from P-484)
+P-504,504,basketball,4,4,Liberty +4.5,handicap,plus,0.409,L,PREDICTION_LOG_COMBINED_5.md:4108,WNBA — Atlanta Dream @ New York Liberty (23 Sep ET; a different game from P-484)
+P-505,505,basketball,1,4,Combined Total: Under 154.5 Points,total,Under,0.637,W,PREDICTION_LOG_COMBINED_5.md:4158,El Salvador LMB (Clausura R1) — Salvadoreños vs Cojute
+P-505,505,basketball,2,4,Salvadorenos -2.5,handicap,minus,0.541,W,PREDICTION_LOG_COMBINED_5.md:4159,El Salvador LMB (Clausura R1) — Salvadoreños vs Cojute
+P-505,505,basketball,3,4,Cojute +2.5,handicap,plus,0.459,L,PREDICTION_LOG_COMBINED_5.md:4160,El Salvador LMB (Clausura R1) — Salvadoreños vs Cojute
+P-505,505,basketball,4,4,Combined Total: Over 154.5 Points,total,Over,0.364,L,PREDICTION_LOG_COMBINED_5.md:4161,El Salvador LMB (Clausura R1) — Salvadoreños vs Cojute
+P-506,506,baseball-MLB,1,4,Astros +1.5,handicap,plus,0.685,W,PREDICTION_LOG_COMBINED_5.md:4212,MLB — Houston Astros @ Seattle Mariners
+P-506,506,baseball-MLB,2,4,Mariners +1.5,handicap,plus,0.659,W,PREDICTION_LOG_COMBINED_5.md:4213,MLB — Houston Astros @ Seattle Mariners
+P-506,506,baseball-MLB,3,4,Combined Total: Under 7.5 Runs,total,Under,0.506,L,PREDICTION_LOG_COMBINED_5.md:4214,MLB — Houston Astros @ Seattle Mariners
+P-506,506,baseball-MLB,4,4,Combined Total: Over 7.5 Runs,total,Over,0.494,W,PREDICTION_LOG_COMBINED_5.md:4215,MLB — Houston Astros @ Seattle Mariners
+P-507,507,baseball-NPB/KBO/CPBL,1,4,Wiz ML,moneyline,,0.637,W,PREDICTION_LOG_COMBINED_5.md:4266,KBO — NC Dinos @ KT Wiz
+P-507,507,baseball-NPB/KBO/CPBL,2,4,Combined Total: Under 9.5 Runs,total,Under,0.545,W,PREDICTION_LOG_COMBINED_5.md:4267,KBO — NC Dinos @ KT Wiz
+P-507,507,baseball-NPB/KBO/CPBL,3,4,Dinos +1.5,handicap,plus,0.484,W,PREDICTION_LOG_COMBINED_5.md:4268,KBO — NC Dinos @ KT Wiz
+P-507,507,baseball-NPB/KBO/CPBL,4,4,Combined Total: Over 9.5 Runs,total,Over,0.455,L,PREDICTION_LOG_COMBINED_5.md:4269,KBO — NC Dinos @ KT Wiz
+P-508,508,basketball,1,4,Combined Total: Under 194.5 Points,total,Under,0.691,W,PREDICTION_LOG_COMBINED_5.md:4319,NBL — SE Melbourne Phoenix vs Melbourne United
+P-508,508,basketball,2,4,Phoenix +2.5,handicap,plus,0.515,L,PREDICTION_LOG_COMBINED_5.md:4320,NBL — SE Melbourne Phoenix vs Melbourne United
+P-508,508,basketball,3,4,United -2.5,handicap,minus,0.485,W,PREDICTION_LOG_COMBINED_5.md:4321,NBL — SE Melbourne Phoenix vs Melbourne United
+P-508,508,basketball,4,4,Combined Total: Over 194.5 Points,total,Over,0.309,L,PREDICTION_LOG_COMBINED_5.md:4322,NBL — SE Melbourne Phoenix vs Melbourne United
+P-509,509,basketball,2,2,36ers −1.5,handicap,minus,0.516,L,PREDICTION_LOG_COMBINED_5.md:7483,"NBL — Perth Wildcats vs Adelaide 36ers (RAC Arena, 21:30 AEST 24 Sep; Round 2)"
+P-509,509,basketball,3,2,Wildcats +1.5,handicap,plus,0.484,W,PREDICTION_LOG_COMBINED_5.md:7484,"NBL — Perth Wildcats vs Adelaide 36ers (RAC Arena, 21:30 AEST 24 Sep; Round 2)"
+TMP-20260923-NPB-CHU-DB-G25,,baseball-NPB/KBO/CPBL,1,4,Chunichi Dragons +1.5 runs,handicap,plus,,W,PREDICTION_LOG_COMBINED_5.md:3461,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
+TMP-20260923-NPB-CHU-DB-G25,,baseball-NPB/KBO/CPBL,2,4,Yokohama DeNA moneyline,moneyline,,,W,PREDICTION_LOG_COMBINED_5.md:3462,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
+TMP-20260923-NPB-CHU-DB-G25,,baseball-NPB/KBO/CPBL,3,4,Combined Total: Under 7.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED_5.md:3463,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
+TMP-20260923-NPB-CHU-DB-G25,,baseball-NPB/KBO/CPBL,4,4,Combined Total: Over 7.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED_5.md:3464,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"

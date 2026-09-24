@@ -171,7 +171,8 @@ class ResearchFieldTests(unittest.TestCase):
         self.assertIn("WB", card.missing_blocking)
 
     def test_standardised_miss_at_settlement(self):
-        base = ("#### P-680 — NBL basketball\n" + FULL_ISSUE + "Reference width 18.7. BASELINE_P 0.53.\n"
+        base = ("#### P-680 — NBL basketball\n" + FULL_ISSUE +
+                "Reference width 18.7. BASELINE_P 0.53. C-DEPARTURE-LEDGER: pace 100%.\n"
                 "\n**Status:** FINAL / SETTLED.\nQuarter scores. https://site.api.espn.com C-LINEUP-DIFF: 5 of 5 named starters started.\n")
         card = audit(base, settlement=True, strict=True)["P-680"]
         self.assertIn("10z", card.missing_blocking)
@@ -200,6 +201,21 @@ class ResearchFieldTests(unittest.TestCase):
         self.assertTrue(audit(ok, strict=True)["P-701"].present["BP"]["present"])
         nd = "#### P-702 — LKL basketball\n" + FULL_ISSUE + "BASELINE_P: NOT_YET_DERIVED.\n"
         self.assertTrue(audit(nd, strict=True)["P-702"].present["BP"]["present"])
+
+    def test_departure_ledger_field(self):
+        base = "#### P-710 — NBL basketball\n" + FULL_ISSUE + "BASELINE_P 0.53.\n"
+        self.assertIn("DL", audit(base, strict=True)["P-710"].missing_blocking)
+        ok = base + "C-DEPARTURE-LEDGER: logit departure +0.34 = pace 60%, lineup 40%.\n"
+        self.assertTrue(audit(ok, strict=True)["P-710"].present["DL"]["present"])
+
+    def test_plus_cushion_applies_outside_baseball_only(self):
+        bk = "#### P-720 — NBL basketball, Phoenix +2.5\n" + FULL_ISSUE + "R2 Phoenix +2.5 0.515.\n"
+        card = audit(bk, strict=True)["P-720"]
+        self.assertIn("PC", card.missing_blocking)
+        ok = bk + "C-PLUS-CUSHION: NBL margin band P(|margin| <= 2) 0.18; P(Phoenix wins) 0.45 + P(loses by ≤ 2) 0.07.\n"
+        self.assertTrue(audit(ok, strict=True)["P-720"].present["PC"]["present"])
+        mlb = "#### P-721 — MLB, Nationals +1.5\n" + FULL_ISSUE + "R1 Nationals +1.5 0.587 (run line).\n"
+        self.assertTrue(audit(mlb, strict=True)["P-721"].present["PC"]["note"].startswith("n/a"))
 
     def test_allow_empty_exit_codes(self):
         import os

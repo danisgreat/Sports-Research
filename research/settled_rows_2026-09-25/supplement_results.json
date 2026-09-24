@@ -1,0 +1,306 @@
+{
+ "plus_handicap_baseball": {
+  "n": 45,
+  "cards": 43,
+  "wins": 27,
+  "win_rate": 0.6,
+  "mean_p": 0.613,
+  "gap": -0.013,
+  "brier": 0.2191
+ },
+ "plus_handicap_non_baseball": {
+  "n": 40,
+  "cards": 40,
+  "wins": 17,
+  "win_rate": 0.425,
+  "mean_p": 0.642,
+  "gap": -0.217,
+  "brier": 0.253
+ },
+ "plus_handicap_non_baseball_gap_ci95_card_cluster": [
+  -0.353,
+  -0.073
+ ],
+ "plus_handicap_non_baseball_by_sport": {
+  "AFL": {
+   "n": 3,
+   "cards": 3,
+   "wins": 0,
+   "win_rate": 0.0,
+   "mean_p": 0.62,
+   "gap": -0.62,
+   "brier": 0.3847
+  },
+  "american-football": {
+   "n": 6,
+   "cards": 6,
+   "wins": 1,
+   "win_rate": 0.167,
+   "mean_p": 0.554,
+   "gap": -0.388,
+   "brier": 0.2877
+  },
+  "basketball": {
+   "n": 8,
+   "cards": 8,
+   "wins": 3,
+   "win_rate": 0.375,
+   "mean_p": 0.58,
+   "gap": -0.205,
+   "brier": 0.2683
+  },
+  "ice-hockey": {
+   "n": 1,
+   "cards": 1,
+   "wins": 0,
+   "win_rate": 0.0,
+   "mean_p": 0.54,
+   "gap": -0.54,
+   "brier": 0.2916
+  },
+  "rugby": {
+   "n": 4,
+   "cards": 4,
+   "wins": 3,
+   "win_rate": 0.75,
+   "mean_p": 0.593,
+   "gap": 0.157,
+   "brier": 0.192
+  },
+  "soccer": {
+   "n": 13,
+   "cards": 13,
+   "wins": 8,
+   "win_rate": 0.615,
+   "mean_p": 0.766,
+   "gap": -0.151,
+   "brier": 0.2106
+  },
+  "tennis": {
+   "n": 4,
+   "cards": 4,
+   "wins": 1,
+   "win_rate": 0.25,
+   "mean_p": 0.58,
+   "gap": -0.33,
+   "brier": 0.297
+  },
+  "unclassified": {
+   "n": 1,
+   "cards": 1,
+   "wins": 1,
+   "win_rate": 1.0,
+   "mean_p": 0.67,
+   "gap": 0.33,
+   "brier": 0.1089
+  }
+ },
+ "minus_handicap_all": {
+  "n": 26,
+  "cards": 26,
+  "wins": 16,
+  "win_rate": 0.615,
+  "mean_p": 0.559,
+  "gap": 0.057,
+  "brier": 0.2397
+ },
+ "decisions_0.50-0.65": {
+  "n": 235,
+  "cards": 132,
+  "wins": 126,
+  "win_rate": 0.536,
+  "mean_p": 0.574,
+  "gap": -0.037,
+  "brier": 0.2494
+ },
+ "decisions_0.50-0.65_gap_ci95": [
+  -0.105,
+  0.031
+ ],
+ "decisions_0.65+": {
+  "n": 152,
+  "cards": 68,
+  "wins": 122,
+  "win_rate": 0.803,
+  "mean_p": 0.744,
+  "gap": 0.058,
+  "brier": 0.1529
+ },
+ "decisions_0.65+_gap_ci95": [
+  -0.011,
+  0.118
+ ],
+ "murphy_all_p_rows": {
+  "reliability": 0.002,
+  "resolution": 0.0188,
+  "uncertainty": 0.2436,
+  "brier_binned": 0.2268
+ },
+ "murphy_decisions": {
+  "reliability": 0.0016,
+  "resolution": 0.018,
+  "uncertainty": 0.2302,
+  "brier_binned": 0.2138
+ },
+ "murphy_by_sport": {
+  "baseball-MLB": {
+   "reliability": 0.0011,
+   "resolution": 0.0075,
+   "uncertainty": 0.2495,
+   "brier_binned": 0.243,
+   "n": 128
+  },
+  "baseball-NPB/KBO/CPBL": {
+   "reliability": 0.0041,
+   "resolution": 0.0229,
+   "uncertainty": 0.2454,
+   "brier_binned": 0.2266,
+   "n": 88
+  },
+  "basketball": {
+   "reliability": 0.01,
+   "resolution": 0.0123,
+   "uncertainty": 0.2499,
+   "brier_binned": 0.2476,
+   "n": 61
+  },
+  "cricket": {
+   "reliability": 0.022,
+   "resolution": 0.039,
+   "uncertainty": 0.2485,
+   "brier_binned": 0.2316,
+   "n": 52
+  },
+  "soccer": {
+   "reliability": 0.01,
+   "resolution": 0.0358,
+   "uncertainty": 0.2102,
+   "brier_binned": 0.1845,
+   "n": 173
+  }
+ },
+ "same_card_phase_v_full": {
+  "cards": 34,
+  "phase": {
+   "n": 36,
+   "cards": 34,
+   "wins": 30,
+   "win_rate": 0.833,
+   "mean_p": 0.693,
+   "gap": 0.14,
+   "brier": 0.1519
+  },
+  "full": {
+   "n": 41,
+   "cards": 34,
+   "wins": 27,
+   "win_rate": 0.659,
+   "mean_p": 0.652,
+   "gap": 0.006,
+   "brier": 0.2049
+  }
+ },
+ "sports_decision_brier_ge_0.25": {
+  "AFL": {
+   "n": 10,
+   "cards": 4,
+   "wins": 3,
+   "win_rate": 0.3,
+   "mean_p": 0.662,
+   "gap": -0.362,
+   "brier": 0.2565
+  },
+  "tennis": {
+   "n": 16,
+   "cards": 7,
+   "wins": 8,
+   "win_rate": 0.5,
+   "mean_p": 0.601,
+   "gap": -0.101,
+   "brier": 0.2809
+  },
+  "american-football": {
+   "n": 12,
+   "cards": 6,
+   "wins": 3,
+   "win_rate": 0.25,
+   "mean_p": 0.544,
+   "gap": -0.294,
+   "brier": 0.2759
+  }
+ },
+ "rank1_by_family": {
+  "handicap": {
+   "n": 64,
+   "cards": 64,
+   "wins": 38,
+   "win_rate": 0.594,
+   "mean_p": 0.607,
+   "gap": -0.013,
+   "brier": 0.2291
+  },
+  "total": {
+   "n": 26,
+   "cards": 26,
+   "wins": 17,
+   "win_rate": 0.654,
+   "mean_p": 0.669,
+   "gap": -0.015,
+   "brier": 0.2081
+  },
+  "phase": {
+   "n": 23,
+   "cards": 23,
+   "wins": 19,
+   "win_rate": 0.826,
+   "mean_p": 0.713,
+   "gap": 0.114,
+   "brier": 0.1584
+  },
+  "other": {
+   "n": 15,
+   "cards": 15,
+   "wins": 10,
+   "win_rate": 0.667,
+   "mean_p": 0.693,
+   "gap": -0.027,
+   "brier": 0.2141
+  },
+  "moneyline": {
+   "n": 7,
+   "cards": 7,
+   "wins": 4,
+   "win_rate": 0.571,
+   "mean_p": 0.692,
+   "gap": -0.121,
+   "brier": 0.2402
+  },
+  "corners": {
+   "n": 4,
+   "cards": 4,
+   "wins": 2,
+   "win_rate": 0.5,
+   "mean_p": 0.74,
+   "gap": -0.24,
+   "brier": 0.2845
+  },
+  "team-total": {
+   "n": 3,
+   "cards": 3,
+   "wins": 2,
+   "win_rate": 0.667,
+   "mean_p": 0.81,
+   "gap": -0.143,
+   "brier": 0.2708
+  },
+  "prop": {
+   "n": 2,
+   "cards": 2,
+   "wins": 2,
+   "win_rate": 1.0,
+   "mean_p": 0.875,
+   "gap": 0.125,
+   "brier": 0.0157
+  }
+ }
+}

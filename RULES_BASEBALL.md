@@ -1210,3 +1210,27 @@ Each park mean has an SE of about 0.4–0.6 runs. The row is a disclosure anchor
 - Around a season-to-date team predictor, the total residual SD is **4.50** against a raw SD of 4.51: team rates explain almost none of the game-total variance (RECENCY §2).
 - A total width below **3.8** (0.85 × 4.5) names what justifies it: both starters' run-prevention estimates, bullpen availability, gamefeed weather.
 - In the 2026-09-24 cohort, P-506 (3.83) was at the threshold and P-500 (3.97) above it.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — track record from the full settled-row review
+
+**Track record (`C-TRACK-RECORD`).**
+
+- **MLB:** 70 decisions from 34 cards: won 58.6% at a mean stated 0.596. Brier 0.238, resolution **0.0075**, the lowest of any sport. The seed baseline check found MLB rows no better than a population table.
+- **NPB/KBO/CPBL:** 56 decisions from 23 cards: won 64.3% at 0.623. Brier 0.216.
+
+**B-9. +1.5 rows are calibrated but not better than the population.**
+
+- MLB +1.5 won 18/30 at 0.604. The population +1.5 rate for either side is 0.638 (`BASE_RATES_REGISTER.md` §7.5).
+- `BASELINE_P` is the bar. A +1.5 stated *below* 0.638 is claiming specific information against that side, and the departure ledger names it.
+
+**B-10. Total direction by league (`T-TOTAL-DIRECTION-LEAGUE`).**
+
+- **NPB/KBO/CPBL:** Unders won **11/14** at a stated 0.607; Overs **4/9** at 0.60.
+- **MLB:** Overs 9/15, Unders 5/10; no asymmetry.
+
+No direction coefficient follows. If the test confirms the asymmetry, the NPB/KBO population total distribution becomes `BASELINE_P`.
+
+**B-11. Use `tools/card_math.py`** for every total and run-line row: `--dist negbin` for runs; `--no-zero` for full-game margins, because extras decide. It reproduces the issued P-500 Over 7.5 (0.546 against 0.536).
+
+Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".

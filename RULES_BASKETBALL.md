@@ -954,3 +954,20 @@ Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-23(c)"](PREDICTION_LOG_
 - In all three leagues, a single previous game is the worst predictor of a team's next score: **+18% to +36% RMSE** against the league constant.
 - Adding the opponent's defence to date improves RMSE by **7–11%**, more than any recency window.
 - A card's team-scoring input is the season rate (in the NBL, a last-10 rate is acceptable because scoring rises through the season) plus the opponent's defence. One recent game is a pointer to a mechanism, never a weight.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — track record from the full settled-row review
+
+**Track record (`C-TRACK-RECORD`).** 31 decisions from 17 cards: won **58.1%** at a mean stated 0.586. Brier 0.241, resolution **0.012**, which is near zero.
+
+- **Underdog cushions (+k.5): 3/8** at 0.58. **Favourite handicaps (−k.5): 6/9** at 0.554. Unders 5/8 at 0.608.
+- **K-9. `C-PLUS-CUSHION` applies to every +k.5 row.** The card prints:
+  - the population margin band from `BASE_RATES_REGISTER.md` §7.1(a), e.g. NBL P(|margin| ≤ 2) is about 0.18 and NBA P(|margin| ≤ 5) is 0.246;
+  - `BASELINE_P`;
+  - P(underdog wins) + P(loses by ≤ k) from `python tools/card_math.py cover --dist normal --mean … --sd … --line +k --no-zero`;
+  - the named reason the margin stays inside k.
+
+  The recurrence is recorded under M32. Basketball margins can never be 0, so always use `--no-zero`.
+- **K-10. Departure ledger.** With resolution near zero, every departure from `BASELINE_P` is itemised (`C-DEPARTURE-LEDGER`). The seed baseline check found the basketball rows no better than the population.
+
+Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".

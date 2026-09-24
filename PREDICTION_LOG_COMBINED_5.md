@@ -21,7 +21,7 @@ Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 
 | Field | Current value |
 |---|---|
-| As of | **2026-09-25, about 02:00 AEST, Australia/Melbourne.** Covers §"2026-09-24(e)"–"(g)" (the peer import, its verification audit and the P-509 settlement) and §"2026-09-25(a)"–"(d)": the verbatim import of P-484–P-486, P-488 and P-492; the audit closure (implementable items written into governing files, audit documents archived to `archive/audit_documents_implemented_2026-09-25/`); the research pass (derived reference rates, width and receipt controls, `receipts.py`); and the repository follow-through (baseline skill check, `CURRENT_RULES.md`, CI). Current control manifest: `CONTROL_MANIFEST_2026-09-25-3.md`. No event is open. |
+| As of | **2026-09-25, about 02:30 AEST, Australia/Melbourne.** Covers §"2026-09-24(e)"–"(g)" (the peer import, its verification audit and the P-509 settlement) and §"2026-09-25(a)"–"(e)", the last being the review of every settled log (calibration findings, `tools/card_math.py`, `tools/calibration_report.py`): the verbatim import of P-484–P-486, P-488 and P-492; the audit closure (implementable items written into governing files, audit documents archived to `archive/audit_documents_implemented_2026-09-25/`); the research pass (derived reference rates, width and receipt controls, `receipts.py`); and the repository follow-through (baseline skill check, `CURRENT_RULES.md`, CI). Current control manifest: `CONTROL_MANIFEST_2026-09-25-4.md`. No event is open. |
 | Highest canonical prediction ID | **P-509** |
 | Next canonical ID | **P-510** |
 | Part-5 issued events | **27 canonical event cards:** P-482–P-489 and P-491–P-509 (P-487 = Dallas Wings @ Phoenix Mercury). P-490 is retired and unused. Temporary-ID records awaiting canonical reconciliation (operator decision): TMP-20260923-NBL-CNS-TAS (settled) and TMP-20260923-NPB-CHU-DB-G25 (settled). |
@@ -11101,5 +11101,45 @@ Audit fields `WB`, `HC` and `10z` apply to cards issued or settled after `CONTRO
 - Audit field `BP` added.
 
 Freeze receipt: `CONTROL_MANIFEST_2026-09-25-3.md`.
+
+**Queue unchanged:** no open event; next canonical ID **P-510**. **Status:** LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(e) — review of every completed and settled log: calibration findings and construction tools (no card issued, settled or re-graded)
+
+**Operator instruction:** "Check all of the completed and settled logs and see what can be added to any probabilistic models or any algorithms or learnings to improve the sports prediction system."
+
+**Dataset.** Every graded ranked row in Parts 1–5, including this file, was extracted into `research/settled_rows_2026-09-25/settled_rows.csv`: **1,185 rows from 307 cards; 600 rows from 149 cards carry an issued probability.** It reproduces the logs' own figures; P-424–P-437 matches exactly (52 rows, 36 W / 16 L, Brier 0.1892).
+
+**Findings** (hindsight, descriptive; card-cluster intervals):
+
+| # | Finding | Figure |
+|---|---|---|
+| 1 | Overall calibration is good, skill modest | Brier 0.2249; slope 1.06; resolution 0.019; +7.7% over the base rate |
+| 2 | Skill lives at p ≥ 0.65 | 80.3% won at a stated 0.744 |
+| 2 | Rows at 0.50–0.65 are coin-flip-grade | 53.6% won at a stated 0.574 |
+| 3 | Non-baseball underdog cushions (+k.5) are over-confident | 17/40 at 0.642, interval [−0.353, −0.073]; baseball +1.5 is calibrated (27/45 at 0.613) |
+| 4 | Soccer: clear skill | Brier 0.170 |
+| 4 | MLB and basketball: near-zero resolution | 0.0075 and 0.012 |
+| 4 | Tennis, NFL/NCAA and AFL: no demonstrated skill | the last two over-confident |
+| 5 | Rank slots #2–#4 are indistinguishable | 54–56% each |
+| 5 | Top-two joint failure equals independence | 14.4% against 14.5% |
+| 5 | Phase beat full totals in the same card | 30/36 against 27/41 |
+| 6 | `C-PROB-EXTREMITY` not supported (interim) | 79 of 100 rows: 91.1% at a stated 79.3% |
+
+**Added** (`RULES_GENERAL.md` §"2026-09-25(d)"; all disclosure, construction or measurement; nothing fitted, per `L-087`):
+- **Controls:**
+  - `C-PLUS-CUSHION` (CANDIDATE; audit field `PC`; registry item M32);
+  - `C-DEPARTURE-LEDGER` (audit field `DL`);
+  - `C-TRACK-RECORD`;
+  - `C-LOW-RESOLUTION-BAND`;
+  - the `SCORING_AND_VALIDATION.md` §14 review standard.
+- **Tools:** `tools/card_math.py`, the reference distribution-to-contract implementation (it reproduces the issued P-509 and P-500 probabilities within 0.015), and `tools/calibration_report.py`.
+- **Canonical settlement table:** `| Rank | Contract | Family | p | BASELINE_P | Result | Brier |`.
+- **Tests:** `T-PLUS-CUSHION`, `T-TOTAL-DIRECTION-LEAGUE`, and the `C-LOW-RESOLUTION-BAND` check.
+- **Evidence rows:** added to `C-PHASE-VS-FULL-TOTAL` and `C-PROB-EXTREMITY`.
+- **Numerical program:** MLB, the lowest-resolution sport, is the strongest case for the A0/A1 pilot.
+
+Freeze receipt: `CONTROL_MANIFEST_2026-09-25-4.md`.
 
 **Queue unchanged:** no open event; next canonical ID **P-510**. **Status:** LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.

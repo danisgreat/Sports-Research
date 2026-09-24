@@ -2923,3 +2923,73 @@ The operator then asked for every improvement to be implemented. Every item belo
 - 16,142 of 17,045 tracked files were `node_modules` or build artefacts before this pass.
 - Two literal-`\n` rendering bugs were found by the new hygiene check (the README custody table; this file's header).
 - The CRLF/LF manifest fragility was found while committing 47e7748.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — full settled-row review: calibration findings, construction algorithm, and tools
+
+**Origin.** On 2026-09-25 the operator asked for every completed and settled log to be checked for what could improve the probabilistic models, algorithms and learnings. Every graded row in Parts 1–5 was extracted into one dataset: 1,185 rows from 307 cards; 600 rows from 149 cards carry an issued probability. The extraction reproduces the logs' own cohort figures. Evidence is in [`research/settled_rows_2026-09-25/README.md`](research/settled_rows_2026-09-25/README.md).
+
+**Status.** Every figure is hindsight on the framework's own selected cards, and descriptive. Nothing below is a fitted shrink, weight or cap (`L-087`). Each control is a disclosure, measurement or construction discipline with a prospective test (`C-PROMOTION-RECEIPT`).
+
+### (a) What the record shows
+
+1. **Overall calibration is good; skill is modest.** Brier 0.2249. Murphy reliability 0.002, resolution 0.019. Logistic slope 1.06 (SE 0.16). **No global shrink is warranted.** `C-PROB-EXTREMITY` is not supported on its prospective subset (79 of 100 rows: 91.1% won against a stated 79.3%).
+2. **Skill lives at p ≥ 0.65.**
+
+   | Decisions | n (cards) | Won | Mean stated |
+   |---|---|---:|---:|
+   | p 0.50–0.65 | 235 (132) | **53.6%** | 0.574 |
+   | p ≥ 0.65 | 152 (68) | **80.3%** | 0.744 |
+
+3. **Non-baseball underdog cushions (+k.5) are over-confident:** 17/40 won at a stated **0.642**, gap −0.217, card-cluster 95% interval [−0.353, −0.073]. Baseball +1.5 rows are calibrated: 27/45 at 0.613.
+4. **Sports with no demonstrated skill:**
+   - tennis: 8/16 at 0.60, Brier 0.281;
+   - NFL/NCAA: 3/12 at 0.544, over-confident;
+   - AFL: 3/10 at 0.662, over-confident;
+   - MLB and basketball: near-zero resolution (0.0075 and 0.012).
+
+   **Soccer** carries the clearest skill: 107/143 at 0.70, Brier 0.170.
+5. **Rank slots below #1 are indistinguishable:** #1 66.4%; #2–#4 54–56% (1,179 rows).
+6. **Top-two joint failure equals independence on average:** 14.4% observed against 14.5% (264 cards).
+7. **Phase totals beat full-game totals in the same card:** 30/36 against 27/41 (34 cards).
+
+### (b) `C-PLUS-CUSHION` — disclosure for non-baseball +k.5 rows (CANDIDATE control)
+
+**Scope.** Any +k.5 handicap row outside baseball (basketball, NFL, AFL, rugby, soccer, tennis, hockey).
+
+**What the card prints:**
+1. The population margin band for the line (`BASE_RATES_REGISTER.md` §7, or `NOT_YET_DERIVED`) and `BASELINE_P`.
+2. The decomposition P(cover) = P(underdog wins outright) + P(underdog loses by ≤ k), from the card's own margin distribution (`tools/card_math.py cover`, with `--no-zero` where a tie is impossible).
+3. The named reason the underdog stays within k: pace, the favourite's missing personnel, garbage-time structure, or similar.
+
+**Rules.**
+- Stated above 0.60 without item 3, the row's evidence grade is capped at LOW and the row is labelled `PLUS_CUSHION_UNSUPPORTED`. This is an evidence label, not a probability cap.
+- Audit field `PC` (advisory; blocks under `--strict`).
+- **Why a CANDIDATE control, not TESTING:** the error has recurred across three independent readings: G-L12's origin (10 W / 13 L), `C-UNDERDOG-SEPARATION` (basketball), and now the full record (17/40). Its interval excludes zero. It still moves no probability. The prospective test is `T-PLUS-CUSHION` (`LEARNING_REGISTER.md` §"2026-09-25(d)").
+
+### (c) `C-DEPARTURE-LEDGER` — baseline-anchored construction (construction discipline)
+
+1. **The prior is the population.** Each ranked row starts from `BASELINE_P` (C-BASELINE-SKILL).
+2. **Every departure is itemised.** The card states its final probability's log-odds departure from `BASELINE_P` and attributes it to named mechanisms, each with a signed share: pace, lineup, weather, starters, surface, and so on. `python tools/card_math.py departure --p … --baseline … --mech "name:share" …` computes it.
+3. **Unattributed departure is flagged.** A departure more than 10% of which is unattributed is `UNEXPLAINED_DEPARTURE`: a process defect, and an evidence-grade cap at LOW.
+4. **Where no population exists** (`BASELINE_P: NOT_YET_DERIVED`), the card prints `C-DEPARTURE-LEDGER: n/a`.
+5. **Why.** Resolution is near zero exactly where the cards departed most from population rates without named evidence: MLB, basketball, tennis, NFL, AFL. The seed baseline check found the cards no better than the population (`SKILL_BASELINE_LEDGER.md`). Forcing every departure to be named is the construction-side answer. The measurement side is `C-BASELINE-SKILL`.
+6. **Audit field `DL`** (advisory; blocks under `--strict`).
+
+### (d) `C-TRACK-RECORD` — print the framework's own record beside the probability (disclosure)
+
+Each card prints one row for its sport (and family where n ≥ 10) from `python tools/calibration_report.py`: decisions, win rate, mean stated p and Brier.
+
+- Where that record is **over-confident** (the interval below 0), the card is labelled `NO_DEMONSTRATED_SKILL`. As of 2026-09-25(d): NFL/NCAA, AFL, and non-baseball +k.5 cushions. Tennis is also labelled, on Brier above 0.25.
+- The label caps the evidence grade at LOW and requires the departure ledger. It never changes the number (`L-087`).
+
+### (e) `C-LOW-RESOLUTION-BAND` — honest language for 0.50–0.65 rows (disclosure)
+
+Rows stated between 0.50 and 0.65 are labelled `LOW_RESOLUTION`, and the card's delivery text calls them near-coin-flips. Historically they won 53.6% against a stated 0.574. It extends G23.1's `NEAR_TIED` language from normalised edge to the band. It changes no rank or number. Its prospective check is in `LEARNING_REGISTER.md` §"2026-09-25(d)".
+
+### (f) Reporting and tooling
+
+1. **The 25-card review standard** (`SCORING_AND_VALIDATION.md` §14): run `python tools/calibration_report.py`, which gives the reliability table, Murphy decomposition, logistic slope, and card-cluster intervals by family, sport, direction and rank. Report probabilities and the baseline difference, **not rank-slot records below #1**.
+2. **`tools/card_math.py`** is the reference implementation of distribution-to-contract queries: normal with continuity correction, negative binomial, Poisson, Skellam, a `no_zero` option for margins, push mass, exact same-variable joints, and the departure ledger. It reproduces the issued P-509 and P-500 probabilities within 0.015. It is the M14/G-L8 check.
+3. **Canonical settlement table** (`EXTERNAL_LOGGING_WORKFLOW.md` §"2026-09-25(d)"): `| Rank | Contract | Family | p | BASELINE_P | Result | Brier |`. The dataset is rebuilt with `python research/settled_rows_2026-09-25/extract_settled_rows.py`.
+4. **Joint failure (G-L17).** Without a named shared driver, P(¬R1 ∧ ¬R2) should sit near P(¬R1) × P(¬R2). A card that states a much larger joint failure names the driver. Historically the product has held (14.4% against 14.5%).

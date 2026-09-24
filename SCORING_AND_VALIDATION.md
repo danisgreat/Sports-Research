@@ -179,3 +179,31 @@ A Brier score is reported beside a **baseline on the same decisions**. From 2026
 - **Counting.** Forced pairs are counted once and pushes are excluded, as elsewhere in this specification.
 - **Status.** Descriptive and LEARNING_ONLY. Beating the naive baseline is a *minimum* condition for any later claim that the research process adds information. It is not sufficient for performance eligibility (`PERFORMANCE_ELIGIBILITY_POLICY.md`). Never fit a shrink or weight from it (`L-087`).
 - **Seed result (hindsight, 2026-09-24 cohort).** Card 0.2461 against baseline 0.2360, n = 29 decisions from 9 cards, interval [−0.059, +0.089]: no demonstrated difference.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 14. Calibration review standard (added 2026-09-25(d))
+
+Every 25-card pattern review, and every audit of a cohort's probabilities, reports the following from `python tools/calibration_report.py`, run on the rebuilt settled-row dataset (`research/settled_rows_2026-09-25/extract_settled_rows.py`):
+
+1. **Reliability table** by stated band, with Wilson intervals and the number of distinct cards per band.
+2. **Murphy decomposition**, Brier = reliability − resolution + uncertainty, plus skill against climatology. Resolution is the only component that shows information. A low Brier on a lopsided population can come from uncertainty alone.
+3. **Logistic calibration slope and intercept** of the outcome on logit(p), with their SE. A slope below 1 means the probabilities are too extreme; above 1, too timid.
+4. **Slices** (family, sport, direction, rank) on **decisions** (p ≥ 0.5, so forced complements count once). Each gives win rate − mean p with a **card-cluster** bootstrap interval, because rows within a card are dependent.
+5. **The baseline difference** (§13), whenever `BASELINE_P` exists.
+
+**Reporting rules.**
+- **Rank-slot records below #1 are not reported as evidence of ordering.** In the full record, #2–#4 are indistinguishable (54–56%).
+- **A cohort Brier trend is read against its sport mix** before any method-improvement statement.
+- **Nothing in this section may be applied back to a forecast as a shrink, weight or cap** (`L-087`). Its outputs feed disclosures (`C-TRACK-RECORD`, `C-LOW-RESOLUTION-BAND`) and prospective tests only.
+
+**First full review (2026-09-25(d)):**
+
+| Measure | Value |
+|---|---|
+| Rows with p | 598 rows, 149 cards |
+| Brier | 0.2249 |
+| Reliability / resolution / uncertainty | 0.0020 / 0.0188 / 0.2436 |
+| Skill against climatology | +7.7% |
+| Logistic slope | 1.06 (SE 0.16) |
+
+Details are in `research/settled_rows_2026-09-25/README.md`.

@@ -1316,3 +1316,44 @@ The operator then asked for every improvement to be implemented. The controls ar
 | L-20260925-23 | There was no CI and no branch discipline. The invented process record in `cb95acd` and a commit titled "c" with build files reached `main` unchecked | **PROMOTED_PROCESS (repository)**: `C-REPO-CI`, `C-BRANCH-PR` (`CONTRIBUTING.md`). Branch protection is an owner action | CI on every push |
 | L-20260925-24 | Manifest generation and verification lived in scratch scripts. Hashes of LF-only files broke on a CRLF checkout | **FIXED**: `tools/make_manifest.py` and `tools/verify_manifest.py` (CRLF-form hashing); `.gitattributes` `eol=crlf` | CI `verify_manifest` step |
 | L-20260925-25 | Two literal-`\n` rendering bugs survived in governing files (the README custody table; the RULES_GENERAL header) | **FIXED**; `tools/repo_hygiene.py` now detects the pattern | CI |
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+# 2026-09-25(d) — review of every settled log: dataset, calibration and new tests
+
+**Evidence.** [`research/settled_rows_2026-09-25/README.md`](research/settled_rows_2026-09-25/README.md).
+- 1,185 graded rows from 307 cards, 600 of them with a probability (149 cards).
+- The dataset reproduces the logged cohort figures; P-424–P-437 matches exactly.
+
+**Controls.** `RULES_GENERAL.md` §"2026-09-25(d)".
+
+Everything is hindsight on the framework's own selected cards and LEARNING_ONLY. Nothing is fitted (`L-087`).
+
+## A. Prospective tests opened or updated
+
+| Test ID | Origin | Frozen hypothesis / control | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`T-PLUS-CUSHION`** | Settled-row review: non-baseball +k.5 decisions won 17/40 at a stated 0.642; gap −0.217 [−0.353, −0.073] | With `C-PLUS-CUSHION` in force, non-baseball +k.5 rows remain over-confident | Non-baseball +k.5 decisions issued under `CONTROL_MANIFEST_2026-09-25-4.md` or later | 30 decisions from ≥ 20 cards | 0 | Card-cluster interval of (win rate − mean p). **Still below 0:** open a `CANDIDATE` requiring a *quantified* margin mechanism (a pace or possession model, confirmed absences) for any such row stated above `BASELINE_P`. **Within ±0.05 of 0:** retire | TESTING |
+| **`C-LOW-RESOLUTION-BAND`** | 0.50–0.65 decisions won 53.6% at a stated 0.574 (n = 235, 132 cards) | Rows stated at 0.50–0.65 carry no discrimination beyond a coin flip | The next 100 decisions in that band | 100 | 0 | **Win rate ≥ 0.56 and within 0.02 of the mean stated p:** withdraw the `LOW_RESOLUTION` label. **Otherwise:** keep it | TESTING (disclosure in force) |
+| **`T-TOTAL-DIRECTION-LEAGUE`** | NPB/KBO/CPBL Unders 11/14 (stated 0.607) v Overs 4/9; cricket Unders 9/12 (0.589) v Overs 7/12 | In these leagues, the cards' Under probabilities are too timid and their Over probabilities too bold | Total decisions in NPB/KBO/CPBL and in cricket | 20 per league | 0 | Report by direction with card-cluster intervals. **An interval excludes 0 in the same direction:** derive the league's population total distribution (`BASE_RATES_REGISTER.md`) and require it as `BASELINE_P`. Never a direction coefficient | TESTING |
+| `C-PHASE-VS-FULL-TOTAL` (existing) | Evidence added: in 34 cards with both, phase decisions won 30/36 (0.693 stated) and full totals 27/41 (0.652) | Unchanged | Unchanged | 25 | 0 prospective | Unchanged: the advantage must survive stratification by normalised edge | TESTING — evidence row added |
+| `C-PROB-EXTREMITY` (existing) | Prospective subset since P-372: **79 of 100** rows at p ≥ 0.70 won 91.1% against a stated 79.3% (27 cards) | Unchanged | Unchanged | 100 | 79 | Unchanged. Interim: **not supported**, with under-confidence rather than over-confidence | TESTING — interim recorded |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260925-26 | There was no row-level dataset: every review re-counted by hand, and several counts disagreed with the logs (13 of 17 rows in `cb95acd`) | **PROMOTED_PROCESS (tool)**: `research/settled_rows_2026-09-25/` (extractor and dataset), `tools/calibration_report.py`, and the canonical settlement table (`EXTERNAL_LOGGING_WORKFLOW.md` §"2026-09-25(d)") | Rebuild at each 25-card review |
+| L-20260925-27 | Overall calibration is good: slope 1.06 (SE 0.16), reliability 0.002; the hindsight best shrink λ is 1.06, i.e. none | **REFERENCE.** No global shrink is warranted, which is also what `L-087` requires. Recurring fears of over-confidence at the top are not supported | 25-card reviews |
+| L-20260925-28 | The skill sits at p ≥ 0.65 (80.3% at 0.744); rows at 0.50–0.65 behave like coin flips (53.6% at 0.574) | **PROMOTED_PROCESS (disclosure)** `C-LOW-RESOLUTION-BAND`; test above | `C-LOW-RESOLUTION-BAND` |
+| L-20260925-29 | Non-baseball +k.5 cushions: 17/40 at 0.642 (basketball 3/8, NFL 1/6, AFL 0/3, tennis 1/4, soccer 8/13 at 0.77). Baseball +1.5 is calibrated (27/45 at 0.613) | **CANDIDATE control** `C-PLUS-CUSHION` (disclosure plus evidence-grade label), audit field `PC`, test `T-PLUS-CUSHION`. **Recurrence:** G-L12 origin, `C-UNDERDOG-SEPARATION`, this review. New registry item **M32** | `T-PLUS-CUSHION` |
+| L-20260925-30 | No demonstrated skill in tennis (Brier 0.281), NFL/NCAA (over-confident) or AFL (over-confident); near-zero resolution in MLB (0.0075) and basketball (0.012); clear skill in soccer (Brier 0.170, resolution 0.036) | **PROMOTED_PROCESS (disclosure)** `C-TRACK-RECORD` (`NO_DEMONSTRATED_SKILL` label) and **construction** `C-DEPARTURE-LEDGER` (every departure from `BASELINE_P` named; audit field `DL`). **Numerical program note:** MLB, where the human process shows the least resolution, is the strongest case for the MLB A0/A1 pilot (`NUMERICAL_PROGRAM.md`) | `C-BASELINE-SKILL`; 25-card reviews |
+| L-20260925-31 | Rank slots #2–#4 are indistinguishable (54–56%; the ordinal era's #4 is above its #2); only #1 separates (66.4%) | **REFERENCE.** Report probabilities and the baseline difference, not rank-slot records below #1. The bottom-slot memory (#4 ≈ 46.7%) is superseded by this larger count | — |
+| L-20260925-32 | Top-two joint failure: 14.4% observed against 14.5% under independence (264 cards) | **REFERENCE** for G-L17. Without a named shared driver, the joint failure mass should be close to the product | — |
+| L-20260925-33 | The decision-Brier trend by cohort (0.244 → 0.164 → 0.223) follows the sport mix; the best cohort was soccer-heavy | **REFERENCE.** No method-improvement claim follows from a cohort trend | — |
+| L-20260925-34 | `tools/card_math.py` reproduces issued probabilities from each card's own centre and width (P-509 0.610 v 0.613 and 0.513 v 0.516; P-500 0.546 v 0.536). Basketball, MLB and NHL margins need `no_zero` | **PROMOTED_PROCESS (tool)** — the M14/G-L8 check | Tests (`tools/test_card_math.py`) |
+
+## C. Recurring-mistake registry addition
+
+| ID | Pattern | Control | Evidence |
+|---|---|---|---|
+| **M32** *(new; three independent readings)* | **Underdog cushion outside baseball stated as if it were a baseball +1.5.** A +k.5 row is priced near 0.60–0.77 without a margin mechanism, in sports where blowouts and garbage-time structure make margins wide | `C-PLUS-CUSHION`; `C-DEPARTURE-LEDGER`; G-L12 | G-L12 origin (10 W / 13 L); `C-UNDERDOG-SEPARATION`; 2026-09-25(d) review: 17/40 at 0.642 |

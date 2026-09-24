@@ -76,3 +76,26 @@ For each sport, the first model must be a robust baseline plus a partially poole
 
 
 A future claimed improvement must state: eligible population, exact dates, source manifest/hash, model/feature versions, TRAIN/TUNE/CAL/TEST blocks, baseline, proper-score differences with uncertainty, calibration/coverage, critical slices and prospective-shadow status. No undocumented "before/after" hit-rate comparison is acceptable.
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 6. Evidence from the settled-row review for where a numerical model would help (2026-09-25(d))
+
+This is descriptive; the scope and build state above are unchanged.
+
+**Where resolution is lowest.** In the full settled record (`research/settled_rows_2026-09-25/README.md`), the human card process shows its lowest resolution where it is used most:
+
+| Sport | Resolution | Decision Brier | n |
+|---|---:|---:|---:|
+| MLB | 0.0075 | 0.238 | 70 |
+| Basketball | 0.012 | 0.241 | 31 |
+| Soccer (for comparison) | 0.036 | 0.170 | 143 |
+
+The seed baseline check agrees: across 29 decisions the cards did not beat a population table (`SKILL_BASELINE_LEDGER.md`).
+
+That strengthens, but does not change, the existing priority: **the MLB A0/A1 pilot (§2) is where a disciplined numerical model has the most room to add information.** Its A0 is the leak-free population baseline, which is already computed per game by `research/base_rates_2026-09-25/build_skill_baseline_seed.py`. It must be beaten on held-out games before any card may cite it.
+
+**Tools the pilot should reuse.**
+- `tools/card_math.py`: negative-binomial run totals, the `no_zero` margin and push mass. It is the query layer, so model outputs and card outputs are scored identically.
+- `tools/calibration_report.py`: the calibration and resolution report used in §1's evaluation gate.
+
+**Soccer (the second scope).** Its phase and team-total rows already carry resolution (phase decisions 76.6% at a stated 0.677; team totals 76.0% at 0.744). A phase model is therefore a calibration and efficiency project there, not a rescue.

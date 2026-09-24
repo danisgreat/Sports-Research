@@ -1007,3 +1007,14 @@ This section is the current prospective override for audit-derived ranking logic
 - A team-form narrative therefore needs a named mechanism: lineup, tactical change or xG process. Otherwise it is width.
 - Width: the total residual SD is **1.61** (no better than the raw 1.57); the margin residual SD is 1.51.
 - A goals-total width below about 1.37 (0.85 × 1.61) names what the card knows (`C-WIDTH-BENCHMARK`).
+
+<!-- SETTLED-ROW-REVIEW-2026-09-25D -->
+## 2026-09-25(d) — track record from the full settled-row review
+
+**Track record (`C-TRACK-RECORD`).** 143 decisions from 37 cards: won **74.8%** at a mean stated 0.700. Brier **0.170**, resolution 0.036. **This is the framework's clearest demonstrated skill.**
+
+- Overs won 38/51 at 0.674; Unders 30/40 at 0.735.
+- **Phase against full-game totals in the same card:** 30/36 against 27/41 (this is evidence for `C-PHASE-VS-FULL-TOTAL`).
+- **Exception: underdog cushions (+k.5) won 8/13 at a stated 0.766**, a gap of −0.15. `C-PLUS-CUSHION` applies. A +k.5 soccer row prints P(underdog wins) + P(draw) + P(loses by ≤ k) from a Skellam or bivariate-Poisson margin (`python tools/card_math.py cover --dist skellam --mu … --mu-opp … --line +k`), beside the EPL margin band (`BASE_RATES_REGISTER.md` §7.3), or `NOT_YET_DERIVED` for other competitions.
+
+Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".
