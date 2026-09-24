@@ -1,4 +1,4 @@
-﻿# Sources — quick reference
+# Sources — quick reference
 
 
 > **CR-2026.09.21-3:** all historical source-audit findings are reconciled in `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`; older source claims marked superseded/rejected there cannot be revived. CR-3 changes no source-admission semantics; it synchronizes the live control revision after rule read-back.
@@ -53,6 +53,9 @@ Settlement requires three independent reliable lineages explicitly agreeing that
 A prohibited page may be used only as a **discovery pointer**. The fact must be re-retrieved from a valid upstream source before it can enter the forecast. If that cannot be done, record `UNAVAILABLE_FROM_VALID_SOURCE`.
 
 
+**Factual lineup and availability disclosures:** Factual lineup cards, batting orders, morning skate line combinations, shootaround reports, and confirmed scratch notices reported by accredited beat reporters or official team media channels are **factual availability evidence**, not tout material. They are governed by Control `S-1 Rev 2` and may be used for pre-game participant and rotation modeling.
+
+
 **User-supplied lines and totals are not sources.** They define the contract threshold and remain quarantined until after an independent predictive distribution has been frozen. No odds, implied probability, line movement or closing line may be used to set or calibrate the sports forecast.
 
 
@@ -61,6 +64,7 @@ A prohibited page may be used only as a **discovery pointer**. The fact must be 
 
 1. **Field owner / governing body / competition official:** schedule, rules, final result, gamebook/scorecard, roster/team sheet, official injury/availability release, official tracking/stat feed.
 2. **Official team/club/player communication:** own-team availability, transactions, role/lineup announcements; scope is limited to what that entity can authoritatively know.
+2b. **Credentialed beat reporting and official team media channels:** Accredited journalists (AP, regional newspapers, verified team beat writers, accredited broadcast desks, and official team PR portals/game notes). Scope: starter confirmations, batting orders, morning skate/shootaround line combinations, confirmed scratches/inactives, pitch limits, and rotation intent. Valid pre-game availability evidence under Control `S-1 Rev 2`.
 3. **Independent structured sports-data provider with known lineage/definitions:** historical/process features where coverage and licensing are documented.
 4. **Named reputable reporter / broadcaster / wire service:** availability, workload and tactical context, with timestamp and sourcing; corroborate material claims when possible.
 5. **Generic derivative score/stat sites:** discovery/corroboration only unless a field-specific source card proves definitions, lineage and point-in-time fitness.
@@ -74,16 +78,16 @@ Web-search snippets are never evidence. A second website using the same upstream
 
 | Sport / field | Preferred primary lanes | Valid historical/secondary lanes subject to source-card admission |
 |---|---|---|
-| Baseball | MLB StatsAPI / official game feeds and Baseball Savant/Statcast; official NPB/KBO league feeds; official club transactions/lineups | process/stat databases with documented definitions and lineage; named beat reporters for availability only |
-| Cricket | ICC / national-board / competition official scorecards, toss/team sheets and rules | Cricsheet JSON for historical ball-level research with coverage/revision checks; reputable reporters/broadcasters for pitch/availability |
-| Soccer | FIFA/UEFA/competition/federation official match centres; official club lineups/injury releases | Hudl/StatsBomb open data where competition coverage exists; named reporters/broadcasters for team news |
-| Basketball | NBA/FIBA/NBL or competition official stats, injury reports and rosters; official club/team releases | independent structured stats with known lineage; reputable reporting for rotation intent |
-| American football | NFL/competition official gamebooks, injury/practice reports, transactions and tracking products | nflverse sports-statistical lanes for historical research with lineage/definition checks; named team reporters |
-| Ice hockey | NHL/competition official Gamecenter/stats/EDGE; official team roster/goalie news | independent structured stats with documented lineage; reputable reporters |
-| AFL | AFL official match centre, team sheets, injury/availability and club releases | government weather and reputable reporting where official detail is absent |
-| Rugby league | NRL/competition official team lists, match centre, judiciary/availability and club releases | government weather and reputable reporting |
-| Rugby union/sevens | World Rugby / union / competition official match centres, team lists and rules | government weather and reputable reporting |
-| Tennis | ATP/WTA/ITF official draws, results, rankings/order-of-play and tournament releases | reputable reporting for verified injury/withdrawal context; government weather for outdoor play |
+| Baseball | MLB StatsAPI / official game feeds and Baseball Savant/Statcast; official NPB/KBO league feeds; official club transactions/lineups | process/stat databases with documented definitions and lineage; accredited beat reporters and official team PR game notes for batting orders, scratches, and bullpen availability (`PROJECTED_BEAT_VERIFIED`) |
+| Cricket | ICC / national-board / competition official scorecards, toss/team sheets and rules | Cricsheet JSON for historical ball-level research with coverage/revision checks; accredited pitch-side reporters/broadcasters for pitch, toss, and XI availability |
+| Soccer | FIFA/UEFA/competition/federation official match centres; official club lineups/injury releases | Hudl/StatsBomb open data where competition coverage exists; official club social/PR releases and accredited beat journalists for starting XI, bench, and tactical news |
+| Basketball | NBA/FIBA/WNBA/NBL or competition official stats, injury reports and rosters; official club/team releases | independent structured stats with known lineage; accredited beat reporting and official team shootaround/pre-game notes for starters, inactives, and rotation intent (`PROJECTED_BEAT_VERIFIED`) |
+| American football | NFL/competition official gamebooks, injury/practice reports, transactions and tracking products | nflverse sports-statistical lanes for historical research with lineage/definition checks; accredited beat reporters and official team 90-min inactives/depth charts |
+| Ice hockey | NHL/competition official Gamecenter/stats/EDGE; official team roster/goalie news | independent structured stats with documented lineage; accredited beat reporters for morning skate lines, starting goaltender off-ice cues, and scratches (`PROJECTED_BEAT_VERIFIED`) |
+| AFL | AFL official match centre, team sheets, injury/availability and club releases | government weather, official club team announcements (60-min pre-bounce), and accredited AFL Media reporting |
+| Rugby league | NRL/competition official team lists, match centre, judiciary/availability and club releases | government weather, official club 24h/1h cut team announcements, and accredited rugby league beat reporting |
+| Rugby union/sevens | World Rugby / union / competition official match centres, team lists and rules | government weather, official union/club 48h team sheets, and accredited rugby media for warm-up changes |
+| Tennis | ATP/WTA/ITF official draws, results, rankings/order-of-play and tournament releases | accredited tennis journalists and tournament media for verified injury/withdrawal/strapping context; government weather for outdoor play |
 | Weather/environment | National meteorological agencies (for example BOM/NOAA/Met Office equivalents) and verified venue/roof/surface owners | reputable local authority fallback where the primary national service lacks the required field |
 
 

@@ -1,4 +1,4 @@
-﻿# Data source register (full register)
+# Data source register (full register)
 
 
 > **CR-2026.09.21-3 source-audit precedence:** consult `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` before relying on an older coverage/source conclusion. Later verified route evidence supersedes disproved non-coverage; shared upstream feeds still count once. CR-3 is a control synchronization, not a new source weighting rule.
@@ -1164,44 +1164,48 @@ Bluesky's public API is reachable and returns well-formed JSON. **Its sports-med
 **Zero of the handles tested were the real, current entity.** Two were confidently wrong in a way that is invisible from the handle alone — exactly the failure mode that would put a fabricated or two-year-stale "lineup" onto a card. A handle that *looks* canonical is not evidence of identity.
 
 
-**Control `S-1` — social identity and corroboration gate.** A social post may be used only when **all four** hold, each recorded on the card:
+**Control `S-1 Rev 2` — Accredited Beat & Media Extraction Protocol (Approved 2026-09-24).** A beat-reported or team-media lineup, scratch, or rotation signal may be ingested and used for pre-game participant and rotation modeling (`G14.2`) when **all four conditions** hold, each recorded on the card:
 
 
-1. **Identity verified by a durable identifier**, not a handle string — the account's DID/verification record, or a link to that account published on the entity's **own official domain**. A plausible handle is not identity.
-2. **Recency checked** — the post's own timestamp is inside the event's information window. An account whose latest post is months old is stale regardless of who owns it.
-3. **Corroborated by a field owner before it changes anything on the card.** A social post may *prompt* a retrieval; it may never *be* the retrieval. A line-up, injury, scratch or toss taken from social and not confirmed at the field owner stays `SECONDARY_ONLY` and cannot lift a participant field to `CONFIRMED_OFFICIAL`.
-4. **Quoted, not paraphrased**, with the account, timestamp and retrieval time.
+1. **Accredited identity verified:** The report must originate from an accredited beat reporter (AP, accredited newspaper/media outlet, verified team beat writer, official broadcaster) or an official team PR channel (e.g. team PR media desk, official game notes). Parody accounts, fan blogs, odds/DFS touts, and unverified social aggregators are strictly prohibited.
+2. **Temporal and event anchoring verified:** The report must explicitly anchor to **today's calendar date**, **correct venue**, and **opposing team**. Lineups lacking explicit date anchors are rejected to prevent historical matchup reuse.
+3. **Corroboration standard:** Corroborated across at least **two independent accredited reporting outlets**, OR directly backed by an official team PR graphic / photograph of the physical lineup card.
+4. **Verbatim citation and audit trail:** Quoted with the reporter's name, media outlet, original publication timestamp, and retrieval timestamp.
 
 
-**Disposition: social media is a latency instrument, not an authority instrument.** Its only genuine advantage is that a beat reporter may post a scratch or a line-up a few minutes before the official feed. That advantage is worth **nothing** here while X and Reddit return no content, and it is worth **less than the identity risk** on Bluesky at current coverage. Do not build a card's participant state on it. Re-test the platforms each quarter; the access position changes.
+**Lineup State Taxonomy:**
+- `CONFIRMED_OFFICIAL` — Published by the field owner / league structured API (`hydrate=lineups`, official boxscore, or official federation team sheet).
+- `PROJECTED_BEAT_VERIFIED` — Extracted under Control `S-1 Rev 2` from accredited beat reporters present at morning skate, shootaround, batting practice, or press box. **Satisfies `G14.2` personnel modeling and DOES NOT block a margin or full-game total row from Rank #1.**
+- `LINEUPS_NOT_YET_PUBLISHED @ <time>` — Structured query returned empty and no consensus beat report is available. Legitimate availability state, not a defect. Margin/full-game total capped per `G14.2`.
+- `RETRIEVAL_MISS` — Lineup was published by the league or accredited beat consensus prior to freeze but not retrieved. A genuine process defect.
 
 
-### Structured lanes added instead — these carry the fields social media was being considered for
+**Disposition:** While raw social media platforms (`x.com`) remain unauthenticated login walls, real-time search indexing, newsroom live blogs, and official team PR game notes provide reliable pre-game access to lineup cards 1–3 hours before league APIs populate. S-1 Rev 2 captures this latency advantage safely while preserving strict anti-parody, anti-stale, and anti-tout firewalls.
 
 
-| Source | Retrieval | Field | Why it is better than the social route |
+### Structured and beat-reporting lanes added — cross-sport coverage
+
+
+| Source | Retrieval | Field | Why it is better than unverified social routes |
 |---|---|---|---|
-| **`statsapi.mlb.com/api/v1/schedule?...&hydrate=lineups`** | keyless JSON | **Confirmed batting orders, both sides** | Verified this pass: populates with 9 named players per side once the club posts (checked on 17 Sep games); returns **empty arrays** for games still `Scheduled`. That empty/populated state is itself the finding — see the `NOT_YET_PUBLISHED` rule below |
-| **`statsapi.mlb.com/api/v1/game/{pk}/boxscore`** | keyless JSON | **`battingOrder` (9 IDs), `bench`, `bullpen`, positions** | Gives the exact `BENCH_NOT_RETRIEVED` field that has capped Rank-#1 margin rows on nearly every MLB card. Verified: Dodgers/Reds 17 Sep returned both full orders, 3 bench and 9–10 bullpen arms each |
-| **`statsapi.mlb.com/api/v1/people/{id}` → `mlbDebutDate`** | keyless JSON | **Debut date → service time** | Verified: Josue De Paula, batting 6th for the Dodgers in `P-455`, had debuted **2026-09-11** — six days earlier. No card flagged it |
-| **ESPN cricket `summary` → `debuts[]`** | keyless JSON | **Explicit per-match debutant list** | Verified on `P-452`: flagged Noor ul Rahman as debuting for Afghanistan. A machine-readable answer to "is anyone in this XI an unknown?" |
+| **`SRC-BEAT-REPORTING-CROSS-SPORT`** | Search indexing / newsroom live blogs / team PR | **Projected line combinations, starters, scratches, pitch caps** | Verified beat journalists present at the venue bridge the 1–3 hour latency gap before central league feeds populate; governed by `S-1 Rev 2` |
+| **`statsapi.mlb.com/api/v1/schedule?...&hydrate=lineups`** | keyless JSON | **Confirmed batting orders, both sides** | Populates with 9 named players per side once the club posts; returns empty arrays for games still `Scheduled` |
+| **`statsapi.mlb.com/api/v1/game/{pk}/boxscore`** | keyless JSON | **`battingOrder` (9 IDs), `bench`, `bullpen`, positions** | Gives the exact `BENCH_NOT_RETRIEVED` field that has capped Rank-#1 margin rows on nearly every MLB card |
+| **`statsapi.mlb.com/api/v1/people/{id}` → `mlbDebutDate`** | keyless JSON | **Debut date → service time** | Verified service time for rookie and debutant gates |
+| **ESPN cricket `summary` → `debuts[]`** | keyless JSON | **Explicit per-match debutant list** | Machine-readable verification of format debutants |
 
 
-### `NOT_YET_PUBLISHED` versus `RETRIEVAL_MISS` — a correction to how line-up misses are recorded
+### `NOT_YET_PUBLISHED` versus `RETRIEVAL_MISS` — updated for beat reporting
 
 
-§16.8 field 7 treats a line-up not retrieved *after publication* as a `RETRIEVAL_MISS`, a process defect. Cards have been recording that flag without being able to tell the two states apart, because they were reading a human-facing page that says "TBD" either way.
+§16.8 field 7 treats a line-up not retrieved *after publication* as a `RETRIEVAL_MISS`, a process defect. Cards have been recording that flag without being able to tell the states apart.
 
 
-`hydrate=lineups` resolves it deterministically. Tested this pass: for 2026-09-19 games still `Scheduled`, the field returned **`awayPlayers: 0, homePlayers: 0`** for all eight — the line-ups genuinely were not posted. For 17 September games it returned **9 and 9**.
-
-
-**Rule.** At the final volatile refresh, query `hydrate=lineups` and record the result with its query time:
-
-
-- **empty** → `LINEUPS_NOT_YET_PUBLISHED @ <time>` — a verified availability state, **not** a process defect, and not a `RETRIEVAL_MISS`;
-- **populated but not captured** → `RETRIEVAL_MISS` — a genuine process defect;
-- **populated and captured** → `CONFIRMED_OFFICIAL`.
+`hydrate=lineups` and accredited beat reporting resolve it deterministically:
+- **empty in feed, no beat consensus** → `LINEUPS_NOT_YET_PUBLISHED @ <time>` — verified availability state, **not** a process defect;
+- **empty in feed, but verified via S-1 Rev 2** → `PROJECTED_BEAT_VERIFIED` — satisfies `G14.2` exposure modeling, unlocks Rank #1;
+- **populated in feed or consensus beat published, but not captured** → `RETRIEVAL_MISS` — genuine process defect;
+- **populated in feed and captured** → `CONFIRMED_OFFICIAL`.
 
 
 Most of the `STARTING_LINEUPS_NOT_RETRIEVED_AT_FREEZE` flags across `P-442`–`P-455` are, on this evidence, the **first** category. The cards were penalising themselves for a publication schedule. The fix is the structured query and an honest label, not more searching.

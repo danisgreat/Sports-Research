@@ -1,4 +1,4 @@
-﻿# Soccer analysis rules
+# Soccer analysis rules
 
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
@@ -453,7 +453,7 @@ The endpoint is `https://site.api.espn.com/apis/site/v2/sports/soccer/<league>/s
 
 
 1. Item 1 of §8.6 is amended: a corner/card/player row lacking a layer of its own chain is still capped, **but the blanket "may not occupy a top slot above an opposing full-target contract" clause now applies only when `G10.2` returns `SETTLEMENT_UNSOURCED` for that competition.** Where the settling endpoint is confirmed, rank the row on its merits.
-2. `BENCH_NOT_RETRIEVED` for either side ⇒ no full-match total row and no handicap row may be Rank #1. First-half and other pre-substitution-window phase rows are unaffected, which is a further structural reason those rows have been the more reliable top slot in this log (`P-302`, `P-304`).
+2. `BENCH_NOT_RETRIEVED` for either side ⇒ no full-match total row and no handicap row may be Rank #1. Where official structured feeds lag, an official club release or accredited beat consensus verified under Control `S-1 Rev 2` qualifies as `PROJECTED_BEAT_VERIFIED`, satisfies `G14.2` personnel modeling, and does not block Rank #1. First-half and other pre-substitution-window phase rows are unaffected, which is a further structural reason those rows have been the more reliable top slot in this log (`P-302`, `P-304`).
 
 
 
@@ -464,7 +464,7 @@ The endpoint is `https://site.api.espn.com/apis/site/v2/sports/soccer/<league>/s
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | Name the ESPN league slug and event ID, or the official competition match-centre record, for every supplied row. Verified non-coverage: Liga MX Femenil, MLS NEXT Pro, French tier 3, China FA Cup. |
-| `G14.2` coaching / bench / rotation record | `rosters[]` from the same ESPN summary call returns confirmed XI, full bench and formation. Coaches are **not** in that feed (`coach` is `null`) — take them from the club/league official source. |
+| `G14.2` coaching / bench / rotation record | `rosters[]` from the same ESPN summary call returns confirmed XI, full bench and formation. When ESPN feeds lag, official club media team sheets (typically released ~60 min pre-kickoff) or accredited journalist reporting verified under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED` and satisfy `G14.2`. Coaches are **not** in that feed (`coach` is `null`) — take them from the club/league official source. |
 | `G20.2` distributional tail audit | Derive goal/phase tail mass from the **same frozen soccer joint distribution** used for ranking, including lineup/bench/coaching state, shot/xG process, set pieces, red-card and post-goal regimes, regulation/extra-time endpoint and any competition-specific corner process. Historical second-highest/median order-statistic sums are superseded and cannot rank a row. |
 | `G21.1` exact target geometry | Map every supplied total/phase-total to its exact settlement event and derive WIN/PUSH/LOSS (plus void/censoring where applicable) from the same frozen sport-native PMF/CDF or coherent branch mixture. Genuine unions may be described as unions, but historical `TRUE_UNION` / `LOW_BAR_CUMULATIVE` / `CENTRAL_BAND` path-count labels have **no mandatory ordinal effect** and are not a substitute for the distribution. |
 | `G26.1` no universal separation floor | Print any relevant reference base rate and `rank_gap` descriptively. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank by the row's exact marginal likelihood from the frozen joint distribution plus robustness/evidence uncertainty; precise probabilities require the validated-model gate. |

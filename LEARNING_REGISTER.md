@@ -1,4 +1,4 @@
-﻿# Learning and prospective-test register (the lesson archive)
+# Learning and prospective-test register (the lesson archive)
 
 
 > **CR-2026.09.21-3 current override:** historical lesson/candidate text is evidence only when inconsistent with the all-sports reconciliation. The live rule set is distribution-first; stale order-statistic/path-count/separation-floor candidates described below are explicitly closed in the CR-3 disposition at the end of this file.
@@ -1110,3 +1110,12 @@ Source: `archive/mini_logs/Mini Prediction Log - P-487 to P-494 CONSOLIDATED - 2
 | L-20260923-11 | The operator supplied the P-487 (Dallas @ Phoenix) card. It self-labels P-487 and states a final refresh at about 12:01 AEST on 22 Sep, which falls between P-486 (~11:30) and P-488 (~12:56). This closes L-20260923-02's validation item. | **RESOLVED.** P-487 promoted to Dallas @ Phoenix; `TMP-20260922-WNBA-DAL-PHX` retired as an alias; the NBL card stays temporary. Full settlement: Rank-1 Mercury +5.5 **W**; Over 174.5 **L** (`TOP_OU_REVIEW`: a near-line coin flip, lost by 1.5; no rule); winner Dallas **L** (Dallas led for 94% of the game and lost on a basket with 2.4 s left). | — |
 | L-20260923-12 | The card's thesis that Dallas would restrict Bueckers', Ogunbowale's and Shepard's minutes (a secondary report of the club's intention) **did not bind**: they played 33, 31 and 36 minutes in a close game. The Rank-1 cover came from Copper's return (31 pts) and a 26–18 fourth quarter. | **OBSERVATION — `O-ANNOUNCED-MINUTES-PLAN`**: an announced workload plan for a playoff-clinched team is an intention, not a constraint. Grade the source's reliability and keep a close-game restoration branch with explicit mass. | Recurrence across later late-season cards |
 | L-20260923-13 | **`O-START-MARKER`, second data point.** The WNBA card froze at ~12:01 AEST, one minute after the 12:00 schedule; the actual tip by ESPN play-by-play `wallclock` was 12:07:42. | Accrue to L-20260923-07. The ESPN `summary` `plays[].wallclock` field is a usable independent tip timestamp for WNBA/NBA/NBL. | Confirm the field on other leagues |
+
+
+# 2026-09-24 learning dispositions — accredited beat reporting, team media, and G14.2 lineup latency protocol
+
+
+| Lesson ID | Evidence | Disposition | Validation still required |
+|---|---|---|---|
+| L-20260924-01 | **Pre-game lineup latency bottleneck resolved across all sports.** Central league structured APIs (MLB StatsAPI, NHL Gamecenter, WNBA/NBA boxscores) frequently populate official lineups only 15–30 minutes before start, causing premature `LINEUPS_NOT_YET_PUBLISHED` and capping Rank #1 under `G14.2`. Real-time search indexing and newsroom live blogs successfully capture venue beat reporting (morning skate combinations, shootaround lines, batting practice orders, scratches) 1–3 hours in advance. | **PROMOTED_PROCESS — `Control S-1 Rev 2` & `PROJECTED_BEAT_VERIFIED`**: S-1 upgraded across all sports. Lineups from accredited beat reporters/team media meeting the 4-point gate (accredited identity, explicit date/venue anchor, 2-source corroboration, verbatim quote) satisfy `G14.2` exposure modeling under `PROJECTED_BEAT_VERIFIED` and do NOT bar Rank #1. Parody, fan, tout, and DFS accounts remain strictly blocked. | Ongoing audit in settlement passes |
+

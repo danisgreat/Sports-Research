@@ -1,4 +1,4 @@
-﻿# American football analysis rules
+# American football analysis rules
 
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
@@ -459,7 +459,7 @@ No American-football card was settled in the `P-294`–`P-305` cohort. The v3.7 
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | NFL and NCAA settle from the official league/NCAA box score; ESPN's `football/<league>/summary` is the structured corroboration lane. UFL/CFL need their own named official endpoint. |
-| `G14.2` coaching / bench / rotation record | Record the head coach and coordinators where a change has occurred inside five games, the inactives list, and the QB depth chart — the bench-depth analogue in this sport is almost entirely the backup quarterback. |
+| `G14.2` coaching / bench / rotation record | Record the head coach and coordinators where a change has occurred inside five games, the inactives list, and the QB depth chart — the bench-depth analogue in this sport is almost entirely the backup quarterback. 90-minute inactives, starter notices, and workload limits verified across accredited beat reporters or official team media releases under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED`, satisfy `G14.2`, and do not block Rank #1. |
 | `G20.2` distributional tail audit | Derive tail and boundary mass from the **same frozen American-football joint score distribution**, including drive/play opportunity, QB/offensive-line/skill availability, EPA/success, turnover and field-position branches, pace/game state and overtime/rules era. Historical order-statistic stress sums are superseded as active gates. |
 | `G21.1` exact target geometry | Map every supplied target to its exact settlement event and derive WIN/PUSH/LOSS from the same frozen sport-native PMF/CDF or coherent branch mixture. Historical path-count/category labels have no mandatory ordinal effect. |
 | `G26.1` no universal separation floor | Reference rates and `rank_gap` are descriptive only. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank from exact marginal likelihood plus robustness/evidence uncertainty. |

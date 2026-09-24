@@ -1,4 +1,4 @@
-﻿# Basketball analysis rules
+# Basketball analysis rules
 
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
@@ -498,7 +498,7 @@ Full evidence: [PREDICTION_LOG_COMBINED_2.md, 2026-09-05(b) section](PREDICTION_
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | FIBA, WNBA and NBA events settle from the competition's official box score; ESPN's `basketball/<league>/summary` is the structured corroboration lane. LNBP and comparable leagues need their own named endpoint per `SRC-BB-LNBP-OFFICIAL`. |
-| `G14.2` coaching / bench / rotation record | Record the head coach, the confirmed inactive list, and the rotation depth (how many bench players average ≥15 minutes across the L10). International tournaments rotate heavily in group play — record the qualification state as a rotation signal. |
+| `G14.2` coaching / bench / rotation record | Record the head coach, the confirmed inactive list, and the rotation depth (how many bench players average ≥15 minutes across the L10). Where official feeds are `LINEUPS_NOT_YET_PUBLISHED`, shootaround line combinations and scratch reports verified across accredited beat reporters or official team media releases under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED`, satisfy `G14.2` personnel modeling, and do not block Rank #1. International tournaments rotate heavily in group play — record the qualification state as a rotation signal. |
 | `G20.2` distributional tail audit | Derive tail and boundary mass from the **same frozen basketball joint score distribution**: possessions/opportunity, minutes and usage mixtures, lineup state, shot mix/efficiency with shrinkage and uncertainty, rebounding/turnovers, fouls/bonus, garbage-time and overtime branches. Historical second-highest/median or hand-built upper-decile stress sums are superseded as active ranking gates. |
 | `G21.1` exact target geometry | Map every supplied total/phase-total to its exact settlement event and derive WIN/PUSH/LOSS (plus void/censoring where applicable) from the same frozen sport-native PMF/CDF or coherent branch mixture. Historical path-count/category labels have no mandatory ordinal effect and are not a substitute for the distribution. |
 | `G26.1` no universal separation floor | Print any relevant reference base rate and `rank_gap` descriptively. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank by exact marginal likelihood from the frozen joint distribution plus robustness/evidence uncertainty; precise probabilities require the validated-model gate. |
