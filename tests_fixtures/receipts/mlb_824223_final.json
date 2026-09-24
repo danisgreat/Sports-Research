@@ -1,0 +1,871 @@
+{
+ "gameData": {
+  "teams": {
+   "away": {
+    "name": "Washington Nationals",
+    "abbreviation": "WSH"
+   },
+   "home": {
+    "name": "Detroit Tigers",
+    "abbreviation": "DET"
+   }
+  },
+  "datetime": {
+   "dateTime": "2026-09-23T17:10:00Z"
+  },
+  "status": {
+   "abstractGameState": "Final",
+   "codedGameState": "F",
+   "detailedState": "Final",
+   "statusCode": "F",
+   "startTimeTBD": false,
+   "abstractGameCode": "F"
+  },
+  "venue": {
+   "name": "Comerica Park"
+  },
+  "weather": {
+   "condition": "Sunny",
+   "temp": "65",
+   "wind": "14 mph, In From LF"
+  },
+  "probablePitchers": {
+   "away": {
+    "id": 663992,
+    "fullName": "Richard Lovelady",
+    "link": "/api/v1/people/663992"
+   },
+   "home": {
+    "id": 664285,
+    "fullName": "Framber Valdez",
+    "link": "/api/v1/people/664285"
+   }
+  }
+ },
+ "liveData": {
+  "linescore": {
+   "currentInning": 9,
+   "scheduledInnings": 9,
+   "teams": {
+    "home": {
+     "runs": 2,
+     "hits": 8,
+     "errors": 0,
+     "leftOnBase": 11
+    },
+    "away": {
+     "runs": 4,
+     "hits": 6,
+     "errors": 0,
+     "leftOnBase": 4
+    }
+   },
+   "innings": [
+    {
+     "num": 1,
+     "ordinalNum": "1st",
+     "home": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     },
+     "away": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    },
+    {
+     "num": 2,
+     "ordinalNum": "2nd",
+     "home": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 1
+     },
+     "away": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    },
+    {
+     "num": 3,
+     "ordinalNum": "3rd",
+     "home": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     },
+     "away": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    },
+    {
+     "num": 4,
+     "ordinalNum": "4th",
+     "home": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     },
+     "away": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 2
+     }
+    },
+    {
+     "num": 5,
+     "ordinalNum": "5th",
+     "home": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 2
+     },
+     "away": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 2
+     }
+    },
+    {
+     "num": 6,
+     "ordinalNum": "6th",
+     "home": {
+      "runs": 1,
+      "hits": 2,
+      "errors": 0,
+      "leftOnBase": 1
+     },
+     "away": {
+      "runs": 3,
+      "hits": 4,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    },
+    {
+     "num": 7,
+     "ordinalNum": "7th",
+     "home": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 1
+     },
+     "away": {
+      "runs": 1,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    },
+    {
+     "num": 8,
+     "ordinalNum": "8th",
+     "home": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 2
+     },
+     "away": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    },
+    {
+     "num": 9,
+     "ordinalNum": "9th",
+     "home": {
+      "runs": 1,
+      "hits": 3,
+      "errors": 0,
+      "leftOnBase": 2
+     },
+     "away": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    }
+   ]
+  },
+  "decisions": {
+   "winner": {
+    "id": 702021,
+    "fullName": "Will Dion",
+    "link": "/api/v1/people/702021"
+   },
+   "loser": {
+    "id": 664285,
+    "fullName": "Framber Valdez",
+    "link": "/api/v1/people/664285"
+   },
+   "save": {
+    "id": 672442,
+    "fullName": "Yovanny Cruz",
+    "link": "/api/v1/people/672442"
+   }
+  },
+  "boxscore": {
+   "teams": {
+    "away": {
+     "battingOrder": [
+      695578,
+      665953,
+      691781,
+      682928,
+      686611,
+      691002,
+      660688,
+      696285,
+      683083
+     ],
+     "pitchers": [
+      663992,
+      695418,
+      702021,
+      695378,
+      680899,
+      672442
+     ],
+     "players": {
+      "ID691781": {
+       "person": {
+        "fullName": "Brady House"
+       },
+       "battingOrder": "300",
+       "position": {
+        "abbreviation": "3B"
+       }
+      },
+      "ID691384": {
+       "person": {
+        "fullName": "Luis Perales"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID702021": {
+       "person": {
+        "fullName": "Will Dion"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID691002": {
+       "person": {
+        "fullName": "Yohandy Morales"
+       },
+       "battingOrder": "600",
+       "position": {
+        "abbreviation": "1B"
+       }
+      },
+      "ID694673": {
+       "person": {
+        "fullName": "Abimelec Ortiz"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "1B"
+       }
+      },
+      "ID682928": {
+       "person": {
+        "fullName": "CJ Abrams"
+       },
+       "battingOrder": "400",
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID683083": {
+       "person": {
+        "fullName": "Nasim Nuñez"
+       },
+       "battingOrder": "900",
+       "position": {
+        "abbreviation": "SS"
+       }
+      },
+      "ID665953": {
+       "person": {
+        "fullName": "Andrés Chaparro"
+       },
+       "battingOrder": "200",
+       "position": {
+        "abbreviation": "DH"
+       }
+      },
+      "ID683000": {
+       "person": {
+        "fullName": "Riley Cornelio"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID678391": {
+       "person": {
+        "fullName": "Jorbit Vivas"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "3B"
+       }
+      },
+      "ID686611": {
+       "person": {
+        "fullName": "Dylan Crews"
+       },
+       "battingOrder": "500",
+       "position": {
+        "abbreviation": "LF"
+       }
+      },
+      "ID680686": {
+       "person": {
+        "fullName": "Josiah Gray"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID663992": {
+       "person": {
+        "fullName": "Richard Lovelady"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID695418": {
+       "person": {
+        "fullName": "Brad Lord"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID695734": {
+       "person": {
+        "fullName": "Daylen Lile"
+       },
+       "battingOrder": "701",
+       "position": {
+        "abbreviation": "PH"
+       }
+      },
+      "ID677588": {
+       "person": {
+        "fullName": "José Tena"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "DH"
+       }
+      },
+      "ID695578": {
+       "person": {
+        "fullName": "James Wood"
+       },
+       "battingOrder": "100",
+       "position": {
+        "abbreviation": "RF"
+       }
+      },
+      "ID695378": {
+       "person": {
+        "fullName": "Jack Sinclair"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID687792": {
+       "person": {
+        "fullName": "DJ Herz"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID676917": {
+       "person": {
+        "fullName": "Cade Cavalli"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID695670": {
+       "person": {
+        "fullName": "Harry Ford"
+       },
+       "battingOrder": "700",
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID696285": {
+       "person": {
+        "fullName": "Jacob Young"
+       },
+       "battingOrder": "800",
+       "position": {
+        "abbreviation": "CF"
+       }
+      },
+      "ID680899": {
+       "person": {
+        "fullName": "Erik Tolman"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID663623": {
+       "person": {
+        "fullName": "Jake Irvin"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID681402": {
+       "person": {
+        "fullName": "Gus Varland"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID660688": {
+       "person": {
+        "fullName": "Keibert Ruiz"
+       },
+       "battingOrder": "702",
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID672442": {
+       "person": {
+        "fullName": "Yovanny Cruz"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID674841": {
+       "person": {
+        "fullName": "Andrew Alvarez"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      }
+     }
+    },
+    "home": {
+     "battingOrder": [
+      805808,
+      701678,
+      701162,
+      682985,
+      693307,
+      703601,
+      679529,
+      814430,
+      690291
+     ],
+     "pitchers": [
+      664285,
+      641755,
+      621097,
+      445276
+     ],
+     "players": {
+      "ID664285": {
+       "person": {
+        "fullName": "Framber Valdez"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID676428": {
+       "person": {
+        "fullName": "Brant Hurter"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID690291": {
+       "person": {
+        "fullName": "Jace Jung"
+       },
+       "battingOrder": "902",
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID689981": {
+       "person": {
+        "fullName": "River Ryan"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID814430": {
+       "person": {
+        "fullName": "Brett Callahan"
+       },
+       "battingOrder": "801",
+       "position": {
+        "abbreviation": "PH"
+       }
+      },
+      "ID656716": {
+       "person": {
+        "fullName": "Zach McKinstry"
+       },
+       "battingOrder": "900",
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID701678": {
+       "person": {
+        "fullName": "Hao-Yu Lee"
+       },
+       "battingOrder": "200",
+       "position": {
+        "abbreviation": "DH"
+       }
+      },
+      "ID689225": {
+       "person": {
+        "fullName": "Beau Brieske"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID680744": {
+       "person": {
+        "fullName": "Ty Madden"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID623454": {
+       "person": {
+        "fullName": "Drew Anderson"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID595879": {
+       "person": {
+        "fullName": "Javier Báez"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "SS"
+       }
+      },
+      "ID682985": {
+       "person": {
+        "fullName": "Riley Greene"
+       },
+       "battingOrder": "400",
+       "position": {
+        "abbreviation": "LF"
+       }
+      },
+      "ID680664": {
+       "person": {
+        "fullName": "Eduardo Valencia"
+       },
+       "battingOrder": "901",
+       "position": {
+        "abbreviation": "PH"
+       }
+      },
+      "ID621097": {
+       "person": {
+        "fullName": "Jacob Waguespack"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID663947": {
+       "person": {
+        "fullName": "Tyler Holton"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID805808": {
+       "person": {
+        "fullName": "Kevin McGonigle"
+       },
+       "battingOrder": "100",
+       "position": {
+        "abbreviation": "3B"
+       }
+      },
+      "ID445276": {
+       "person": {
+        "fullName": "Kenley Jansen"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID679529": {
+       "person": {
+        "fullName": "Spencer Torkelson"
+       },
+       "battingOrder": "700",
+       "position": {
+        "abbreviation": "1B"
+       }
+      },
+      "ID807726": {
+       "person": {
+        "fullName": "John Peck"
+       },
+       "battingOrder": "800",
+       "position": {
+        "abbreviation": "SS"
+       }
+      },
+      "ID805427": {
+       "person": {
+        "fullName": "Drew Sommers"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID672456": {
+       "person": {
+        "fullName": "Keider Montero"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID701162": {
+       "person": {
+        "fullName": "Ben Malgeri"
+       },
+       "battingOrder": "300",
+       "position": {
+        "abbreviation": "RF"
+       }
+      },
+      "ID650402": {
+       "person": {
+        "fullName": "Gleyber Torres"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID641755": {
+       "person": {
+        "fullName": "Tyler Kinley"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID703601": {
+       "person": {
+        "fullName": "Max Clark"
+       },
+       "battingOrder": "600",
+       "position": {
+        "abbreviation": "CF"
+       }
+      },
+      "ID693307": {
+       "person": {
+        "fullName": "Dillon Dingler"
+       },
+       "battingOrder": "500",
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID695549": {
+       "person": {
+        "fullName": "Jackson Jobe"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID808825": {
+       "person": {
+        "fullName": "Andrew Sears"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      }
+     }
+    }
+   },
+   "officials": [
+    {
+     "official": {
+      "id": 483912,
+      "fullName": "Mike Muchlinski",
+      "link": "/api/v1/people/483912"
+     },
+     "officialType": "Home Plate"
+    },
+    {
+     "official": {
+      "id": 427139,
+      "fullName": "Doug Eddings",
+      "link": "/api/v1/people/427139"
+     },
+     "officialType": "First Base"
+    },
+    {
+     "official": {
+      "id": 621660,
+      "fullName": "Emil Jimenez",
+      "link": "/api/v1/people/621660"
+     },
+     "officialType": "Second Base"
+    },
+    {
+     "official": {
+      "id": 665299,
+      "fullName": "Louie Krupa",
+      "link": "/api/v1/people/665299"
+     },
+     "officialType": "Third Base"
+    }
+   ],
+   "info": [
+    {
+     "label": "WP",
+     "value": "Tolman; Valdez, F."
+    },
+    {
+     "label": "ABS Challenge",
+     "value": "Ford, H 2 (Ball-Overturned to Strike, Ball-Overturned to Strike); Dingler (Ball-Confirmed); Clark (Strike-Overturned to Ball)."
+    },
+    {
+     "label": "Pitches-strikes",
+     "value": "Lovelady 19-12; Lord 49-32; Dion 41-30; Sinclair 4-2; Tolman 20-8; Cruz, Y 22-15; Valdez, F 87-53; Kinley 13-10; Waguespack 28-18; Jansen, K 9-7."
+    },
+    {
+     "label": "Groundouts-flyouts",
+     "value": "Lovelady 3-1; Lord 4-1; Dion 0-1; Sinclair 0-1; Tolman 1-0; Cruz, Y 0-1; Valdez, F 6-0; Kinley 1-1; Waguespack 2-1; Jansen, K 0-2."
+    },
+    {
+     "label": "Batters faced",
+     "value": "Lovelady 6; Lord 12; Dion 10; Sinclair 1; Tolman 4; Cruz, Y 7; Valdez, F 22; Kinley 3; Waguespack 7; Jansen, K 3."
+    },
+    {
+     "label": "Inherited runners-scored",
+     "value": "Lord 1-0; Dion 1-0; Sinclair 1-0; Cruz, Y 2-0; Kinley 1-1."
+    },
+    {
+     "label": "Umpires",
+     "value": "HP: Mike Muchlinski. 1B: Doug Eddings. 2B: Emil Jimenez. 3B: Louie Krupa. "
+    },
+    {
+     "label": "Weather",
+     "value": "65 degrees, Sunny."
+    },
+    {
+     "label": "Wind",
+     "value": "14 mph, In From LF."
+    },
+    {
+     "label": "First pitch",
+     "value": "1:12 PM."
+    },
+    {
+     "label": "T",
+     "value": "2:44."
+    },
+    {
+     "label": "Att",
+     "value": "21,373."
+    },
+    {
+     "label": "Venue",
+     "value": "Comerica Park."
+    },
+    {
+     "label": "September 23, 2026"
+    }
+   ]
+  }
+ }
+}

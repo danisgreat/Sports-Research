@@ -1,0 +1,284 @@
+{
+ "Women's singles, all (best of 3)": {
+  "label": "Women's singles, all (best of 3)",
+  "n": 5146,
+  "total_mean": 21.75,
+  "total_sd": 5.79,
+  "total_median": 20.0,
+  "total_p10_p90": [
+   15.0,
+   30.0
+  ],
+  "P(deciding set)": 0.3397,
+  "mean_total_straight": 18.2,
+  "mean_total_deciding": 28.64,
+  "P(total>=k)": {
+   "18": 0.7143,
+   "19": 0.6238,
+   "20": 0.5416,
+   "21": 0.4716,
+   "22": 0.4252,
+   "23": 0.3764,
+   "24": 0.3395,
+   "25": 0.3169
+  },
+  "winner_margin_mean_sd": [
+   5.35,
+   2.65
+  ],
+  "P(winner margin>=k)": {
+   "2": 0.9172,
+   "3": 0.8545,
+   "4": 0.7672,
+   "5": 0.6372,
+   "6": 0.4949,
+   "7": 0.3436,
+   "8": 0.207
+  },
+  "P(any tiebreak)": 0.2163,
+  "CI95_halfwidth_P(deciding)": 0.0129
+ },
+ "Women's singles, main draw": {
+  "label": "Women's singles, main draw",
+  "n": 3547,
+  "total_mean": 21.95,
+  "total_sd": 5.8,
+  "total_median": 20,
+  "total_p10_p90": [
+   16.0,
+   31.0
+  ],
+  "P(deciding set)": 0.3516,
+  "mean_total_straight": 18.31,
+  "mean_total_deciding": 28.67,
+  "P(total>=k)": {
+   "18": 0.7257,
+   "19": 0.6372,
+   "20": 0.5568,
+   "21": 0.4863,
+   "22": 0.4418,
+   "23": 0.3905,
+   "24": 0.3527,
+   "25": 0.3293
+  },
+  "winner_margin_mean_sd": [
+   5.25,
+   2.62
+  ],
+  "P(winner margin>=k)": {
+   "2": 0.9132,
+   "3": 0.848,
+   "4": 0.7578,
+   "5": 0.6239,
+   "6": 0.4829,
+   "7": 0.333,
+   "8": 0.1962
+  },
+  "P(any tiebreak)": 0.227,
+  "CI95_halfwidth_P(deciding)": 0.0157
+ },
+ "Women's singles, qualifying": {
+  "label": "Women's singles, qualifying",
+  "n": 1599,
+  "total_mean": 21.28,
+  "total_sd": 5.75,
+  "total_median": 20,
+  "total_p10_p90": [
+   15.0,
+   30.0
+  ],
+  "P(deciding set)": 0.3133,
+  "mean_total_straight": 17.97,
+  "mean_total_deciding": 28.55,
+  "P(total>=k)": {
+   "18": 0.6892,
+   "19": 0.5941,
+   "20": 0.5078,
+   "21": 0.439,
+   "22": 0.3884,
+   "23": 0.3452,
+   "24": 0.3102,
+   "25": 0.2896
+  },
+  "winner_margin_mean_sd": [
+   5.57,
+   2.71
+  ],
+  "P(winner margin>=k)": {
+   "2": 0.9262,
+   "3": 0.8687,
+   "4": 0.788,
+   "5": 0.6667,
+   "6": 0.5216,
+   "7": 0.3671,
+   "8": 0.2308
+  },
+  "P(any tiebreak)": 0.1926,
+  "CI95_halfwidth_P(deciding)": 0.0227
+ },
+ "Women's singles, Slams main draw": {
+  "label": "Women's singles, Slams main draw",
+  "n": 501,
+  "total_mean": 21.92,
+  "total_sd": 5.87,
+  "total_median": 20,
+  "total_p10_p90": [
+   16.0,
+   31.0
+  ],
+  "P(deciding set)": 0.3433,
+  "mean_total_straight": 18.26,
+  "mean_total_deciding": 28.92,
+  "P(total>=k)": {
+   "18": 0.7146,
+   "19": 0.6287,
+   "20": 0.5509,
+   "21": 0.4671,
+   "22": 0.4092,
+   "23": 0.3772,
+   "24": 0.3413,
+   "25": 0.3214
+  },
+  "winner_margin_mean_sd": [
+   5.18,
+   2.64
+  ],
+  "P(winner margin>=k)": {
+   "2": 0.8982,
+   "3": 0.8224,
+   "4": 0.7485,
+   "5": 0.6367,
+   "6": 0.493,
+   "7": 0.3453,
+   "8": 0.1836
+  },
+  "P(any tiebreak)": 0.2275,
+  "CI95_halfwidth_P(deciding)": 0.0416
+ },
+ "Women's singles, non-Slam main draw": {
+  "label": "Women's singles, non-Slam main draw",
+  "n": 3046,
+  "total_mean": 21.96,
+  "total_sd": 5.79,
+  "total_median": 20.0,
+  "total_p10_p90": [
+   15.7,
+   31.0
+  ],
+  "P(deciding set)": 0.3529,
+  "mean_total_straight": 18.32,
+  "mean_total_deciding": 28.63,
+  "P(total>=k)": {
+   "18": 0.7275,
+   "19": 0.6385,
+   "20": 0.5578,
+   "21": 0.4895,
+   "22": 0.4471,
+   "23": 0.3926,
+   "24": 0.3546,
+   "25": 0.3306
+  },
+  "winner_margin_mean_sd": [
+   5.27,
+   2.62
+  ],
+  "P(winner margin>=k)": {
+   "2": 0.9156,
+   "3": 0.8523,
+   "4": 0.7594,
+   "5": 0.6218,
+   "6": 0.4813,
+   "7": 0.3309,
+   "8": 0.1983
+  },
+  "P(any tiebreak)": 0.2269,
+  "CI95_halfwidth_P(deciding)": 0.017
+ },
+ "Men's singles, best of 3 (all non-Slam-main)": {
+  "label": "Men's singles, best of 3 (all non-Slam-main)",
+  "n": 2698,
+  "total_mean": 23.41,
+  "total_sd": 6.0,
+  "total_median": 22.0,
+  "total_p10_p90": [
+   17.0,
+   32.0
+  ],
+  "P(deciding set)": 0.3584,
+  "mean_total_straight": 19.56,
+  "mean_total_deciding": 30.3,
+  "P(total>=k)": {
+   "18": 0.8436,
+   "19": 0.7628,
+   "20": 0.6705,
+   "21": 0.5856,
+   "22": 0.5304,
+   "23": 0.4533,
+   "24": 0.3921,
+   "25": 0.3825
+  },
+  "winner_margin_mean_sd": [
+   4.43,
+   2.38
+  ],
+  "P(winner margin>=k)": {
+   "2": 0.8973,
+   "3": 0.8032,
+   "4": 0.6586,
+   "5": 0.4863,
+   "6": 0.3206,
+   "7": 0.1846,
+   "8": 0.0927
+  },
+  "P(any tiebreak)": 0.384,
+  "CI95_halfwidth_P(deciding)": 0.0181
+ },
+ "Men's singles, Slams main draw (best of 5)": {
+  "label": "Men's singles, Slams main draw (best of 5)",
+  "n": 485,
+  "total_mean": 37.25,
+  "total_sd": 9.34,
+  "total_median": 36,
+  "total_p10_p90": [
+   26.0,
+   51.0
+  ],
+  "P(deciding set)": 0.2165,
+  "mean_total_straight": 33.57,
+  "mean_total_deciding": 50.54,
+  "P(total>=k)": {
+   "18": 1.0,
+   "19": 1.0,
+   "20": 1.0,
+   "21": 0.9979,
+   "22": 0.9938,
+   "23": 0.9876,
+   "24": 0.9794,
+   "25": 0.9711
+  },
+  "winner_margin_mean_sd": [
+   6.49,
+   3.26
+  ],
+  "P(winner margin>=k)": {
+   "2": 0.9258,
+   "3": 0.8763,
+   "4": 0.8268,
+   "5": 0.7485,
+   "6": 0.6515,
+   "7": 0.5093,
+   "8": 0.3835
+  },
+  "P(any tiebreak)": 0.5381,
+  "CI95_halfwidth_P(deciding)": 0.0367
+ },
+ "n_tournaments_women": 94,
+ "excluded_status": {
+  "STATUS_FINAL": 8347,
+  "STATUS_RETIRED": 208,
+  "STATUS_WALKOVER": 51,
+  "STATUS_SCHEDULED": 71,
+  "STATUS_IN_PROGRESS": 4,
+  "STATUS_CANCELED": 3
+ }
+}

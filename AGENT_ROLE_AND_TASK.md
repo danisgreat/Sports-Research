@@ -8,7 +8,7 @@
 
 
 Status: **ACTIVE — DETAILED REFERENCE**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Method version: **MDS-2026.09.19-v4.3**
 Numerical training specification: **NTS-2026.09.19-v0.5 — Stage 0 all-sports design/pre-fit**
 
@@ -148,6 +148,9 @@ For each settled view record:
 - **pairwise `rank_gap`** against the row immediately adjacent in the issued order (`NEAR_TIE`/`SMALL`/`MODERATE`/`LARGE`, added 2026-09-06, `L-088`);
 - candidate lesson or active test ID;
 - whether a method change is justified.
+- **provenance of every process fact** (endpoint and retrieval time; `C-PROCESS-RECORD-PROVENANCE`, 2026-09-24(f)); unsourced causal facts make the block `PROCESS_RECORD_UNVERIFIED`;
+- **the lineup diff** for team sports: card-named starters, starting pitcher or goalie against the official box, "k of n started" (`C-LINEUP-DIFF`); a Rank-1 driver who did not play is `LINEUP_CLAIM_FALSE`;
+- **summary rows copied from the issued Field 4 table** (`C-SUMMARY-FROM-CARD`), and any new rule receipted with status, evidence count and a prospective-test ID (`C-PROMOTION-RECEIPT`).
 
 
 Every #1 loss receives a process audit, but a loss alone is not a confidence strike and cannot prove calibration error. Apply an immediate process lock only for a demonstrated identity/contract, source-transformation, arithmetic, temporal-leakage, settlement, or compliance defect. Forecast-weight changes require predefined prospective evidence in LEARNING_REGISTER.md. **A lesson that prescribes a specific discount/shift magnitude derived from one session's outcome is never eligible for immediate `PROMOTED_PROCESS` status — only the disclosure/reconciliation requirement it carries may promote immediately; the magnitude itself is a `CANDIDATE` under its own prospective test (added 2026-09-06, `L-087`, `C-WEIGHT-PROPAGATION`).**
@@ -189,7 +192,7 @@ Old games may measure their issued methods and supply development evidence for i
 For each future change, update the active prediction log, the specific sport rule document or RULES_GENERAL for cross-sport controls, LEARNING_REGISTER for disposition, and relevant method/source/workflow documents in the same pass. Append a dated, source-linked retrospective with original ranks, results, what went right/wrong, knowability, prior lessons and the exact adopted change. Record pending fields and live-at-first-check deferrals in the active queue. Preserve original issued cards and label superseding corrections. Document validation and link the changed Markdown files in the audit change log before delivery.
 
 
-Current implementation: [September 5 audit change log](AUDIT_CHANGELOG_2026-09-05.md).
+Current implementation: [September 5 audit change log](archive/audit_documents_implemented_2026-09-25/AUDIT_CHANGELOG_2026-09-05.md).
 
 
 <!-- DEEP-RESEARCH-IMPLEMENTATION-2026-09-19-V42 -->
@@ -209,3 +212,18 @@ For every new prediction request:
 
 
 When a valid source cannot be found for a material fact, say it is unavailable. Never substitute RotoWire/RotoGrinders/FPTrack, sportsbook content, fantasy/DFS projections, betting previews/picks or market consensus.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — execution-order additions (research pass)
+
+These steps extend step 3 of the execution order above. Home: `RULES_GENERAL.md` §"2026-09-25(b)"; checklist: `UPCOMING_GAME_RESEARCH_GUIDE.md` §"2026-09-25(b)".
+
+**At freeze:**
+- Where `receipts.py` covers the lane, paste its pregame table (MLB `pregame mlb <gamePk>`; ESPN leagues `pregame espn <sport/league> <eventId>`).
+- Print the competition's reference row and reference width from `BASE_RATES_REGISTER.md` §7, or `NOT_YET_DERIVED`, beside the card's own numbers.
+- Never let a single previous game outweigh the season rate.
+
+**At settlement:**
+- Paste `receipts.py settle …` (one lineage; C-FINAL3 still needs three).
+- Print z for the total and the margin.
+- Run `audit_card_controls.py --settlement --strict`.

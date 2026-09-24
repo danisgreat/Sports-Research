@@ -12,7 +12,7 @@
 
 
 Status: **ACTIVE**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Method version: **MDS-2026.09.06-v4.0**
 Applies with RULES_GENERAL.md, MODEL_AND_DATA_SPEC.md, ALGORITHM_PORTFOLIO_AND_EVALUATION.md, and NUMERICAL_TRAINING_SPEC.md.
 Executable algorithm: **SFA-SOCCER (§8) — instantiates GFA-2 in RULES_GENERAL.md §11**
@@ -381,7 +381,7 @@ P-233's second and third goals were late, so a 3–1 final is not proof of unifo
 
 
 
-Full evidence and frozen-card comparisons: [September 5 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
+Full evidence and frozen-card comparisons: [September 5 audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
 
 
 ## September 5(b) settlement learning — P-294–P-305 second continuation
@@ -473,7 +473,7 @@ The endpoint is `https://site.api.espn.com/apis/site/v2/sports/soccer/<league>/s
 **Pre-issue checklist additions (this sport):** settlement endpoint named per row; coaching/bench/rotation record for both sides with missingness codes; tail-budget sums printed against every total line; path-geometry class and `N` printed for every total and phase-total row; separation-floor result stated for Rank #1.
 
 
-Full narrative and evidence: [`IMPROVEMENT_PLAN_2026-09-06.md`](IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
+Full narrative and evidence: [`archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md`](archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
 
 
 ## September 5 implementation after freeze confirmation
@@ -686,7 +686,7 @@ Five soccer cards ([`PREDICTION_LOG_COMBINED_3.md` §"2026-09-11"](PREDICTION_LO
 Separate goals, corners and period-specific fields, and compute integer thresholds with push mass explicit. A 0-0 first half and late cup goals can support final superiority without an early-goal thesis. A final score does not establish corners or the official provider. Verify exact event/round/date/team order after opening links; translated sites and multiple domains do not prove independence. P-341/P-342/P-368/P-369 retain pending corner fields; provider selection is not backfilled after seeing the count. A league match that draws is not a shootout unless its competition rules and event report establish one. Recent finishing droughts warrant opponent/shot-quality context and sensitivity, not automatic no-direction or two-SE gates.
 
 
-For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. [Shared correction and methodology sources](audit_2026-09-12/rule_corrections.md). All current log observations remain learning-only and not performance-eligible.
+For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. Shared correction and methodology sources (`audit_2026-09-12/rule_corrections.md`, not present in this repository). All current log observations remain learning-only and not performance-eligible.
 
 
 
@@ -974,4 +974,36 @@ This section is the current prospective override for audit-derived ranking logic
 
 - **Retained sport package:** regulation/extra-time endpoint; lineup, bench and coaching; shot/xG/process and set-piece/corner state; red-card/post-goal regimes; competition-specific field-owner corner settlement.
 - **Withdrawn here:** second-highest/median or second-lowest/median pseudo-tail construction; path-count/category shortcuts as ranking rules; universal 40–60% top-slot bands; normalized-distance ordering; any one-result rebound/hangover/“due” rule; and any implication that a cushion determines the outright winner.
-- **Current construction:** build one coherent sport-native joint outcome distribution/branch mixture, freeze it before supplied lines are queried, then derive exact target marginals and dependencies from that object. When a fitted/calibrated numerical distribution does not exist, keep probabilities unquantified rather than inventing precision.
+- **Current construction:** build one coherent sport-native joint outcome distribution/branch mixture, freeze it before supplied lines are queried, then derive exact target marginals and dependencies from that object. When a fitted/calibrated numerical distribution does not exist, a probability may be printed only as an `UNVALIDATED_SUBJECTIVE` output of the card's own complete, reproducible, declared distribution (METHOD §5). A number that cannot be reproduced from the printed distribution is invented precision and is not permitted. No subjective number carries a performance, calibration or value claim. *(Wording corrected 2026-09-25: the earlier "keep probabilities unquantified" contradicted METHOD §5; 2026-09-23 read-only audit item 5.)*
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — EPL reference rates and recency (research pass)
+
+**Status.** Reference rates (`C-PROMOTION-RECEIPT`: `REFERENCE`). No coefficient. Source: `BASE_RATES_REGISTER.md` §7.3. That is the ESPN scoreboard plus match summaries for all 380 EPL 2025-26 matches: goal minutes from `keyEvents` and `wonCorners`. `RECENCY_AND_REBOUND.md` §7 covers recency.
+
+**S-R1. EPL references (field BR).**
+
+| Quantity | EPL 2025-26 |
+|---|---|
+| Total goals: mean | 2.75 |
+| Over 1.5 / 2.5 / 3.5 | 0.789 / **0.550** / 0.284 |
+| Draw; both teams score | 0.274; 0.561 |
+| First half: mean goals (second half) | **1.19** (1.56) |
+| First half: P(≥ 1) / P(≥ 2) / P(≥ 3) | 0.716 / **0.334** / 0.111 |
+| Corners: mean / SD | 10.0 / 3.27 |
+| Corners: P(≥ 10) / P(≥ 11) | 0.563 / 0.437 |
+
+- These are EPL-only.
+- Cups, lower tiers and other leagues are `NOT_YET_DERIVED`. Do not transfer the EPL rates to them (M12).
+- EPL corner **settlement** stays with the pulselive field owner. The ESPN `wonCorners` figures are base rates only.
+
+**S-R2. Disclosure thresholds that follow from the references.**
+- A first-half Under 1.5 above about 0.75 names its reason. The population rate is 0.666; the §4 ACL2/UEL round was 0.647.
+- A full-match Over or Under 2.5 above about 0.70 names its reason. The population is 0.550 / 0.450.
+- Neither threshold is a cap. It is the point at which the card's departure from the population must be written down (field BR).
+
+**S-R3. Recency and width.**
+- A team's season scoring rate predicts its next game no better than the league constant (RMSE 1.135 v 1.135). The last game is **38% worse**; half-shrinking to the league mean is best.
+- A team-form narrative therefore needs a named mechanism: lineup, tactical change or xG process. Otherwise it is width.
+- Width: the total residual SD is **1.61** (no better than the raw 1.57); the margin residual SD is 1.51.
+- A goals-total width below about 1.37 (0.85 × 1.61) names what the card knows (`C-WIDTH-BENCHMARK`).

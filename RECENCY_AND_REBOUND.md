@@ -127,10 +127,11 @@ The tests above are MLB. The **mechanism** — that single-game results are domi
 | Sport | Status | Note |
 |---|---|---|
 | MLB team runs; MLB starter ER | **DERIVED** (§2–§4) | |
+| NBA, WNBA, NBL team points; NHL team goals; EPL team goals | **DERIVED 2026-09-25** (§7) | Same conclusion as MLB in all five: no rebound; the one-game window is the worst predictor tested |
 | Cricket innings / phase | `NOT_YET_DERIVED` | Conditions and toss dominate; a prior innings on a *different strip* is a weaker comparator than a prior MLB start. `P-457` moved a 5-over centre onto one observation and lost |
-| Soccer goals | `NOT_YET_DERIVED` | Low-count target; finishing variance is large relative to the mean (`P-441`, `P-438`) |
+| Soccer goals, other competitions | `NOT_YET_DERIVED` | EPL is derived (§7). Do not transfer it to cup or lower-tier competitions without deriving them. Finishing variance is large relative to the mean (`P-441`, `P-438`) |
 | NPB runs | `NOT_YET_DERIVED` | Do **not** import the MLB figures. `P-458` moved a total centre above a 9-game same-venue base rate on one comparator and lost |
-| Basketball, AFL, NRL, NFL, hockey, tennis | `NOT_YET_DERIVED` | Higher-count targets may show different autocorrelation; derive before use |
+| Other basketball leagues (LKL, EuroLeague, LMB …), AFL, NRL, NFL, tennis | `NOT_YET_DERIVED` | The qualitative result replicated in six competitions (§7). Magnitudes still need deriving per competition before any number is quoted |
 
 Until a sport's figures are derived, `R-1`'s **qualitative** requirement still applies: mechanism or width, never a bare rebound lean.
 
@@ -145,3 +146,83 @@ The opponent explains ~30× more next-game variance than the unit's own last gam
 `G-L7` (disaggregated record before an aggregate carries direction) · `G-L11` (real numerators before a small-sample rate takes a signed adjustment) · `G-L20` (a direct comparable gets explicit mass — but see §4: a *single* comparable is the weakest predictor measured, so `G-L20` mass must be sized accordingly) · `M13`, `M17` in the recurring-mistake registry · [`BASE_RATES_REGISTER.md`](BASE_RATES_REGISTER.md) for the frequencies themselves.
 
 **Reproduction.** Every figure is recomputable from the two public endpoints named in §1. Refresh per season; a figure cited more than one completed season after 2026-09-19 is `STALE` until recomputed.
+
+---
+
+<!-- RESEARCH-2026-09-25 -->
+## 7. Cross-sport derivation — basketball, hockey, soccer (added 2026-09-25)
+
+**Why.** §5 required the magnitudes to be derived per competition before `R-1` could cite a number outside MLB. This section derives them for the five team-sport competitions carded most often after MLB.
+
+**Population and method.** Regular-season games, retrieved 2026-09-25:
+
+| Competition | Games | Team-games (out of sample) |
+|---|---:|---:|
+| NBA 2025-26 | 1,235 | 2,152 |
+| WNBA 2026 | 327 | 496 |
+| NBL 2025-26 | 165 | 222 |
+| NHL 2025-26 | 1,312 | 2,290 |
+| EPL 2025-26 | 380 | 600 |
+
+- **Target:** a team's own points (goals in the NHL and EPL).
+- **Baseline:** the team's own leave-two-out mean, as in §1.
+- **"Poor game":** the bottom quintile of the previous-game residual.
+- **Out-of-sample:** each prediction uses only earlier games; each team needs at least 10 prior games (8 in the EPL); the opponent's defence is measured to date.
+- **Code and results:** [`research/base_rates_2026-09-25/`](research/base_rates_2026-09-25/README.md) (`analyze_leagues.py`, `league_results.json`).
+
+### 7.1 Is there a bounce-back?
+
+| Competition | After a bottom-quintile game: next − own mean (95% CI) | After a top-quintile game | Lag-1 r (own points) |
+|---|---|---|---:|
+| NBA | **−1.21** [−2.37, −0.06] (n = 487) | +1.09 [−0.03, +2.22] | +0.019 |
+| WNBA | −0.27 [−2.25, +1.70] (n = 128) | +1.82 [−0.33, +3.98] | +0.030 |
+| NBL | −0.07 [−2.82, +2.68] (n = 65) | +2.39 [−0.51, +5.29] | +0.036 |
+| NHL (goals) | +0.01 [−0.14, +0.16] (n = 519) | +0.06 [−0.08, +0.20] | −0.016 |
+| EPL (goals) | −0.11 [−0.30, +0.07] (n = 150) | −0.09 [−0.27, +0.08] | −0.046 |
+
+**No competition shows a rebound.**
+- The only interval that excludes zero is the NBA's, and it points the other way: a poor game is followed by a slightly *below-average* next game.
+- That is mild persistence. It is consistent with within-season changes in a team's true rate (injuries, rotation, trades), which is exactly the **named-mechanism** case `R-1` permits. It is not a licence to fade a cold team without naming the mechanism.
+- Hockey and soccer show neither persistence nor rebound.
+
+### 7.2 Which window predicts the next game best?
+
+RMSE of next-game team points. The bracket is the change against the league constant (negative = better).
+
+| Predictor | NBA | WNBA | NBL | NHL | EPL |
+|---|---|---|---|---|---|
+| League constant (running) | 13.08 | 12.84 | 13.32 | 1.730 | 1.135 |
+| Season to date | 12.93 (−1.1%) | 12.30 (−4.2%) | 12.29 (−7.7%) | 1.731 (0.0%) | 1.135 (0.0%) |
+| Last 10 | 13.33 (+1.9%) | 12.62 (−1.7%) | 11.93 (−10.4%) | 1.789 (+3.4%) | 1.160 (+2.2%) |
+| Last 5 | 13.93 (+6.5%) | 12.95 (+0.9%) | 12.24 (−8.1%) | 1.872 (+8.2%) | 1.222 (+7.7%) |
+| Last 3 | 14.69 (+12.3%) | 13.72 (+6.8%) | 12.92 (−3.0%) | 1.986 (+14.8%) | 1.303 (+14.9%) |
+| **Last 1** | **17.76 (+35.7%)** | **16.46 (+28.2%)** | **15.71 (+18.0%)** | **2.421 (+39.9%)** | **1.562 (+37.6%)** |
+| Season to date + opponent defence to date | **12.19 (−6.9%)** | **11.61 (−9.6%)** | **11.90 (−10.6%)** | 1.745 (+0.8%) | 1.146 (+1.0%) |
+| Half season-to-date, half league | 12.89 (−1.5%) | 12.38 (−3.6%) | 12.58 (−5.6%) | **1.722 (−0.5%)** | **1.121 (−1.2%)** |
+
+**Reading.**
+1. **The one-game window is the worst predictor in every competition**, 18–40% worse than the league constant. This replicates §4 (MLB, +39%).
+2. In the NBA, NHL and EPL, the shorter the window, the worse the forecast, monotonically. The NBL is the exception: last-10 beats season-to-date. That fits its three-season pattern of scoring rising through the season (`BASE_RATES_REGISTER.md` §7.1(c)), where a longer window lags the environment. It still does not favour last-3 or last-1.
+3. **The opponent matters in basketball.** Adding the opponent's defence to date improves RMSE by 7–11%, more than any recency window. In hockey and soccer it adds nothing at team level; the target is too noisy.
+4. **In hockey and soccer, a team's own season rate barely beats the league constant.** A half-way shrink to the league mean is the best of the simple predictors. Team-scoring leans in these sports need a named mechanism more than in any other sport tested.
+
+### 7.3 A named mechanism that is measurable: back-to-backs
+
+A team on the second night of a back-to-back, against a rested opponent. The figure is the margin residual against the season-to-date predictor (`analyze_extra.py`).
+
+| Competition | n | Mean margin residual (95% CI) | Reading |
+|---|---:|---|---|
+| NBA | 261 | **−1.84** [−3.78, +0.11] | About two points, borderline; small next to a margin SD of about 15 |
+| NHL | 253 | −0.20 goals [−0.53, +0.12] | Not distinguishable from zero |
+| WNBA | 19 | −5.65 [−13.74, +2.44] | n too small |
+
+- This is a **reference size for a named mechanism**, not a coefficient.
+- A card that moves a margin centre for a back-to-back should move it by about this much or less, and say so.
+- A card that moves a total for fatigue has no support here: NBA games with both teams on a back-to-back were −3.6 [−8.5, +1.4], n = 65.
+
+### 7.4 What changes
+
+- `R-1` now has derived magnitudes for six competitions. The rule is unchanged: recent form moves a rate only through a named mechanism, and otherwise widens.
+- The operational corollary is new and cross-sport: **a one-game comparator should never carry more weight than the season rate.** In six of six competitions it is the worst predictor available.
+- For basketball totals and margins, research time spent on the **opponent's defence and the confirmed rotation** buys more than time spent on the subject team's last result.
+- **No coefficient is created.** The percentages above describe these seasons' out-of-sample errors; they are not weights to copy onto a card (`L-087`).

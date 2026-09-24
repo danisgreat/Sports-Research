@@ -1,7 +1,7 @@
 # Controls — current compact reference
 
 
-Revision **CR-2026.09.21-3**, METHOD **MDS-2026.09.19-v4.3**. SCORING_AND_VALIDATION is the mathematical authority. The six-field METHOD object is the single mandatory output template. Historical controls and origins are preserved in LEARNING_REGISTER and the [pre-revision control snapshot](audit_2026-09-17_implementation/before/CONTROLS_with_margin_band_addition.md); their withdrawn statistical claims are not active rules.
+Revision **CR-2026.09.21-3**, METHOD **MDS-2026.09.19-v4.3**. SCORING_AND_VALIDATION is the mathematical authority. The six-field METHOD object is the single mandatory output template. Historical controls and origins are preserved in LEARNING_REGISTER and the pre-revision control snapshot (`audit_2026-09-17_implementation/before/CONTROLS_with_margin_band_addition.md`, not present in this repository); their withdrawn statistical claims are not active rules.
 
 
 | Control | Current requirement | Template field |
@@ -41,7 +41,7 @@ These are **blocking cross-sport controls** for every new forecast, late refresh
 - **C-TIME1:** verify venue/host city and country, official venue-local calendar date and time, IANA timezone, exact-date UTC offset, `Australia/Melbourne` converted date/time, correct **AEST/AEDT** label, and calendar-date rollover.
 - **C-TIME2:** user-supplied time is estimated metadata until independently verified. Any discrepancy must be printed explicitly before analysis.
 - **C-STATE3:** immediately before issue/refresh, verify `SCHEDULED/PREGAME`, `LIVE`, `POSTPONED/CANCELLED`, or terminal state across the qualifying source set. Credible conflict = `EVENT_STATE_CONFLICT` and fail closed.
-- **C-FINAL3:** settlement requires at least **3 distinct reliable lineages** agreeing on exact event/date, explicit terminal state and final result. A score without a terminal marker is insufficient. Any credible live/in-progress source blocks settlement.
+- **C-FINAL3:** settlement requires at least **3 distinct reliable lineages** agreeing on exact event/date, explicit terminal state and final result. A score without a terminal marker is insufficient. Any credible live/in-progress source blocks settlement. **Receipt requirement (added 2026-09-25; 2026-09-23 read-only audit item 6):** each settlement lineage is recorded with its exact URL or endpoint and event ID, field owner, upstream lineage (data vendor where exposed, e.g. `sportradar_timestamp`), known-at or retrieved-at time, and admissibility (field owner, independent, or discovery-only). **Three hostnames do not certify C-FINAL3.** Syndicated copies, mirrors of one feed and pages built on one data vendor count as one lineage. A lineage whose printed record ID cannot be reproduced does not count (2026-09-24(f): four MLB gamePks and one NHL game ID printed in a settlement were not the real records).
 - **C-SNIP:** search-result snippets, generated summaries and headlines are discovery only and cannot establish finality.
 - **C-DERIV3:** derivative fields used for grading require three independent providers where three genuinely independent providers exist; otherwise record the source limitation and do not claim three-source verification.
 - **C-WRITECHK:** re-check event state immediately before a Drive status transition and read back the written log afterward.
@@ -114,7 +114,7 @@ P-344 arithmetic corrected to 0.283425; current legacy aggregate 477 rows at 0.2
 ## 2026-09-19(b) — active-control classification (resolves the `L-095` deferral) and control revision CR-2026.09.19-1
 
 
-**Why this exists.** `L-095` (2026-09-06) created a three-class control taxonomy and deferred tagging the ~86 lesson rows that predated it. That backlog has sat open ever since, and `L-096` — the control-effectiveness review — cannot run without it. The deferral is resolved here by **correcting the unit**: `L-096` needs *controls* classified by consequence-of-failure, not historical *lesson rows* tagged. `METHOD.md` §9 is explicit that dated retrospectives and archived text are evidence, not active instructions, and `METHOD.md` §4 has since superseded the taxonomy's forward function. Retro-tagging the 86 historical rows is therefore **closed as not-to-be-done**, with the reasoning recorded, rather than carried indefinitely. Full disposition: [`AUDIT_IMPLEMENTATION_2026-09-19.md`](AUDIT_IMPLEMENTATION_2026-09-19.md) §4.
+**Why this exists.** `L-095` (2026-09-06) created a three-class control taxonomy and deferred tagging the ~86 lesson rows that predated it. That backlog has sat open ever since, and `L-096` — the control-effectiveness review — cannot run without it. The deferral is resolved here by **correcting the unit**: `L-096` needs *controls* classified by consequence-of-failure, not historical *lesson rows* tagged. `METHOD.md` §9 is explicit that dated retrospectives and archived text are evidence, not active instructions, and `METHOD.md` §4 has since superseded the taxonomy's forward function. Retro-tagging the 86 historical rows is therefore **closed as not-to-be-done**, with the reasoning recorded, rather than carried indefinitely. Full disposition: [`archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-19.md`](archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-19.md) §4.
 
 
 **Classes**, aligned to `METHOD.md` §4's split:
@@ -147,7 +147,7 @@ P-344 arithmetic corrected to 0.283425; current legacy aggregate 477 rows at 0.2
 | `G-L14` settlement route printed and verified | `MECHANISM_REQUIRED` | row may become unsettleable |
 | `G-L23` process record and disruption facts before amending a control | `MECHANISM_REQUIRED` | control may not be amended |
 | `G14.2` participants: starters, bench, coaches | `MECHANISM_REQUIRED` | evidence cap; `BENCH_NOT_RETRIEVED` blocks a margin/full-game total from Rank #1 |
-| **`S-1 Rev 2`** beat & team media gate | `MECHANISM_REQUIRED` | uncorroborated claim stays `SECONDARY_ONLY`; accredited 2-source beat report lifts to `PROJECTED_BEAT_VERIFIED` |
+| **`S-1 Rev 2`** beat & team media gate | `MECHANISM_REQUIRED` | uncorroborated claim stays `SECONDARY_ONLY`; accredited 2-source beat report lifts to `PROJECTED_BEAT_VERIFIED` . **2026-09-24(f):** the printed receipt is mandatory, and an official lineup published before the freeze outranks it |
 | **`S-2`** press-conference material | `CONTEXT_MATERIALITY` | admissible for availability/role only; never a signed rate adjustment |
 | `G15.1` environment / venue-coordinate forecast | `CONTEXT_MATERIALITY` | evidence cap (outdoor events) |
 | `G13.1` descriptive recency windows, `G17.1` streak audit | `CONTEXT_MATERIALITY` | descriptive display only — **not** a trend test (withdrawn 2026-09-17) |
@@ -165,7 +165,7 @@ P-344 arithmetic corrected to 0.283425; current legacy aggregate 477 rows at 0.2
 The control set changed on 2026-09-19 (`METHOD.md` §7, `SCORING_AND_VALIDATION.md` §3, this file, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, all ten `RULES_*.md`, and the new `RECENCY_AND_REBOUND.md`). The revision ID therefore advances from `CR-2026.09.17-1`.
 
 
-**Manifest: 24 files** — the 23 in the previous manifest plus `RECENCY_AND_REBOUND.md`, which is control-class and must be covered. `audit_2026-09-17_implementation/VALIDATION.md` was corrected in the same pass so its manifest includes that file and its emitted revision label is **read live from `METHOD.md`** rather than hardcoded. **The authoritative revision ID is the one in `METHOD.md`.** **The hash value itself is deliberately NOT recorded in this file.** `CONTROLS.md` is inside the manifest, so writing the hash here would change the bytes being hashed and invalidate the value as it is written — a self-reference loop. The authoritative value lives in [`AUDIT_IMPLEMENTATION_2026-09-19.md`](AUDIT_IMPLEMENTATION_2026-09-19.md) §7 and in `audit_2026-09-17_implementation/RESULTS.md`, **both of which are outside the manifest**. Never record a manifest hash inside a manifest file.
+**Manifest: 24 files** — the 23 in the previous manifest plus `RECENCY_AND_REBOUND.md`, which is control-class and must be covered. `audit_2026-09-17_implementation/VALIDATION.md` was corrected in the same pass so its manifest includes that file and its emitted revision label is **read live from `METHOD.md`** rather than hardcoded. **The authoritative revision ID is the one in `METHOD.md`.** **The hash value itself is deliberately NOT recorded in this file.** `CONTROLS.md` is inside the manifest, so writing the hash here would change the bytes being hashed and invalidate the value as it is written — a self-reference loop. The authoritative value lives in [`archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-19.md`](archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-19.md) §7 and in `audit_2026-09-17_implementation/RESULTS.md`, **both of which are outside the manifest**. Never record a manifest hash inside a manifest file.
 
 
 Recompute before freezing onto a card:
@@ -185,7 +185,7 @@ print(len(h), hashlib.sha256(json.dumps(h, sort_keys=True, separators=(',',':'))
 ```
 
 
-If the bytes have changed since the value recorded in [`AUDIT_IMPLEMENTATION_2026-09-19.md`](AUDIT_IMPLEMENTATION_2026-09-19.md), **open a new revision ID** rather than reusing this one. A hash is a byte receipt, not timestamp evidence.
+If the bytes have changed since the value recorded in [`archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-19.md`](archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-19.md), **open a new revision ID** rather than reusing this one. A hash is a byte receipt, not timestamp evidence.
 
 
 <!-- DEEP-RESEARCH-IMPLEMENTATION-2026-09-19-V42 -->
@@ -221,7 +221,7 @@ CR-3 synchronizes active headers and executable controls to the already-governin
 ## Audit-precedence control — CR-2026.09.21-2
 
 
-`A-REC-1` is a blocking governance check before an historical audit finding changes current analysis. Resolve the finding through `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`.
+`A-REC-1` is a blocking governance check before an historical audit finding changes current analysis. Resolve the finding through `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`.
 
 
 | State | Required action |
@@ -253,3 +253,35 @@ The canonical cross-audit survivors are: event/time/state verification; source-l
 
 
 These controls correct implementation drift only. They add no fitted coefficient, probability cap, rank bonus/penalty or performance claim.
+
+
+<!-- AUDIT-2026-09-24F -->
+## 2026-09-24(f) — settlement-integrity controls (from the audit of the P-495–P-508 import)
+
+Home: `RULES_GENERAL.md` §"2026-09-24(f)". Evidence: `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(f)". The control revision label is unchanged (`CR-2026.09.21-3`); these are additive integrity, measurement and retrieval controls with no forecasting effect.
+
+| Control | Rule in one line | Class | Failure consequence |
+|---|---|---|---|
+| **`C-PROCESS-RECORD-PROVENANCE`** | Every settlement process fact carries the endpoint or URL and the retrieval time it was read from, or is marked `UNSOURCED`. A causal narrative on unsourced facts is `PROCESS_RECORD_UNVERIFIED` | `BLOCKING_INTEGRITY` (settlement) | No rule, weight or disposition may cite the block |
+| **`C-LINEUP-DIFF`** | At settlement, print the card's named starters, starting pitcher or goalie against the official box, as "k of n started" per side. A Rank-1 driver who did not play means `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` | `MECHANISM_REQUIRED` (settlement) | The defect is recorded whatever the result |
+| **`S-1 Rev 2` receipt enforcement** | `PROJECTED_BEAT_VERIFIED` counts only with a printed receipt: outlet, reporter, timestamp, verbatim quote, two sources. An official lineup published before the freeze outranks it: `CONFIRMED_OFFICIAL` or `RETRIEVAL_MISS` | `MECHANISM_REQUIRED` (issue) | Without the receipt: `NOT_RETRIEVED`, and G14.2's Rank-1 block applies |
+| **`G-L22(c) COVERING_PAIR`** | Two rows whose union covers every outcome (opposite +1.5 in MLB; ML plus the opponent's +1.5) are labelled. Hit@2 is mechanical and is excluded from top-two summaries | measurement | Measurement defect |
+| **`C-SUMMARY-FROM-CARD`** | Every summary row is copied from the issued Field 4 table and cross-checked | `BLOCKING_INTEGRITY` (import) | The import commit is blocked |
+| **`C-PROMOTION-RECEIPT`** | Every RULES-file rule carries its status, evidence count and, if predictive, a prospective-test ID. A predictive rule from one or two events is `TESTING` | governance | The rule is non-operative until it is receipted |
+| **MLB gamefeed weather at freeze** | A baseball total at #1 or as the top O/U prints the statsapi `weather` block (field-relative wind), or `WEATHER_NOT_RETRIEVED` | `CONTEXT_MATERIALITY` → retrieval | Evidence cap on the total row |
+
+**Rules withdrawn in the same pass** (all were promoted from a single game in `cb95acd`): `MLB-DOUBLEHEADER-G1-TOTAL-DEFLATION`, `BASKETBALL-DERBY-TOTAL-SUPPRESSION`, "dual run-line arbitrage", `FIBA-CLUB-QUALIFIER-PACE-ADJUSTMENT` (→ TESTING `T-BKB-SEASON-OPENER-WIDTH`) and `TENNIS-CHALLENGER-CLAY-HANDICAP-CAP` (→ TESTING `T-TEN-LOWTIER-HCP`). `NHL-PRESEASON-ROSTER-ASYMMETRY` is demoted to a non-ranking disclosure item.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — research-derived reference checks and retrieval tooling
+
+Home: `RULES_GENERAL.md` §"2026-09-25(b)". Evidence: `BASE_RATES_REGISTER.md` §7, `RECENCY_AND_REBOUND.md` §7 and `research/base_rates_2026-09-25/`. Freeze receipt: `CONTROL_MANIFEST_2026-09-25-2.md`. The control revision label is unchanged (`CR-2026.09.21-3`), following the 2026-09-23 and 2026-09-25 precedent. These are additive disclosure, measurement and retrieval controls: none moves a probability, centre, width or rank.
+
+| Control | Rule in one line | Class | Failure consequence |
+|---|---|---|---|
+| **`C-WIDTH-BENCHMARK`** | A printed total or margin width is printed beside the competition's reference width from `BASE_RATES_REGISTER.md` §7, or `REFERENCE_WIDTH_NOT_YET_DERIVED`. A width below 0.85 × the reference names the information that justifies it | disclosure (issue) | `WIDTH_BELOW_REFERENCE_UNEXPLAINED`; audit field `WB` (blocks under `--strict`) |
+| **`C-WIDTH-Z`** | At settlement, print z = (actual − centre)/width for the total and the margin. It accrues to the `C-WIDTH-Z` manifest | measurement (settlement) | Measurement defect; audit field `10z` (blocks under `--strict`) |
+| **`C-RECEIPT-TOOL`** | In lanes it covers, `receipts.py pregame` (at freeze) and `receipts.py settle` (at settlement) are the preferred receipts. A hand-written record must carry the same fields and endpoints | retrieval | A hand record without endpoints is `PROCESS_RECORD_UNVERIFIED` (2026-09-24(f)(b)). The tool is one lineage; C-FINAL3 is unchanged |
+| **`C-HCP-COHERENCE`** (tennis) | A −k.5 games-handicap row prints P(win), c_s and c_d, beside the population conditionals. Hard identity: P(−k.5) ≤ P(win) | disclosure (issue); the identity fails closed | `HCP_CONDITIONAL_ABOVE_REFERENCE`; audit field `HC` (blocks under `--strict`) |
+| **Early-season and regime references** | NBL and WNBA early-season windows (opposite signs); WNBA 2026 regime shift; NHL preseason. Print the reference beside the centre | disclosure (field BR) | Process defect |
+| **`R-1` corollary** | A one-game comparator never carries more numeric weight than the season rate (worst predictor in 6 of 6 competitions) | reference | Process defect; G-L20 and M17 apply |

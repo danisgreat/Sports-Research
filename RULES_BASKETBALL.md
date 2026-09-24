@@ -12,7 +12,7 @@
 
 
 Status: **ACTIVE**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Method version: **MDS-2026.09.06-v4.0**
 Applies with RULES_GENERAL.md, MODEL_AND_DATA_SPEC.md, ALGORITHM_PORTFOLIO_AND_EVALUATION.md, and NUMERICAL_TRAINING_SPEC.md.
 Executable algorithm: **SFA-BASKETBALL (§8) — instantiates GFA-2 in RULES_GENERAL.md §11**
@@ -433,7 +433,7 @@ P-285's printed score families all had Nigeria ahead despite a Korean scoring/up
 
 
 
-Full evidence and frozen-card comparisons: [September 5 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
+Full evidence and frozen-card comparisons: [September 5 audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
 
 
 ## September 5(b) settlement learning — P-294–P-305 second continuation
@@ -507,7 +507,7 @@ Full evidence: [PREDICTION_LOG_COMBINED_2.md, 2026-09-05(b) section](PREDICTION_
 **Pre-issue checklist additions (this sport):** settlement endpoint named per row; coaching/bench/rotation record for both sides with missingness codes; tail-budget sums printed against every total line; path-geometry class and `N` printed for every total and phase-total row; separation-floor result stated for Rank #1.
 
 
-Full narrative and evidence: [`IMPROVEMENT_PLAN_2026-09-06.md`](IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
+Full narrative and evidence: [`archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md`](archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
 
 
 ## September 5 implementation after freeze confirmation
@@ -678,7 +678,7 @@ Total error: mean **+4.9**, mean absolute **8.4** points. The three total misses
 Control 24 is corrected: a close game can add late fouls but can also have slow pace; separation can arise from either excellent offence or suppressed opposition. Derive dependence from joint possessions, efficiency, rotation and foul states. No fixed cushion-plus-Under sign. In P-371 the frozen tournament sample was Belgium three games versus Germany four; actual attempt denominators were not captured. Withdraw the equal-75-attempt/1.7-SE and mostly-noise claim. Keep shooting reversals as observations and sensitivity hypotheses. Record both starting fives separately from the twelve-player eligible rosters and coaches. Germany won each quarter but did not lead throughout.
 
 
-For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. [Shared correction and methodology sources](audit_2026-09-12/rule_corrections.md). All current log observations remain learning-only and not performance-eligible.
+For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. Shared correction and methodology sources (`audit_2026-09-12/rule_corrections.md`, not present in this repository). All current log observations remain learning-only and not performance-eligible.
 
 
 
@@ -866,25 +866,91 @@ Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-23(c)"](PREDICTION_LOG_
 - **Horizon aid:** ESPN `summary` `plays[].wallclock` gives the actual tip (02:07:42Z here, v a 02:00Z schedule).
 
 <!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
-## 2026-09-24 settlement learning — P-497, P-498 (Lithuanian LKL), P-499 (EuroLeague Women), P-504 (WNBA), P-505 (El Salvador LMB), P-508 (Australian NBL)
+<!-- AUDIT-2026-09-24F -->
+## 2026-09-24 settlement learning — P-497, P-498 (LKL), P-499 (EuroLeague Women), P-504 (WNBA), P-505 (El Salvador LMB), P-508 (NBL), corrected 2026-09-24(f)
 
-Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)"](PREDICTION_LOG_COMBINED_5.md). Learning-only.
+**Full record:** `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)" (peer settlement, with its audit banner) and §"2026-09-24(f)" (verification audit). This is learning-only.
 
-| Card | Competition | Rank #1 | Result | Top O/U | Score | Verdict |
-|---|---|---|---|---|:---:|---|
-| `P-497` | Lithuanian LKL | Neptūnas -6.5 (W) | Neptūnas +15 | Over 167.5 (W) | 99–84 (183) | Clean sweep; offensive clinic |
-| `P-498` | Lithuanian LKL | Lietkabelis -4.5 (L) | Šiauliai +9 | Over 164.5 (L) | 86–77 (163) | Šiauliai home dog upset; early foul trouble |
-| `P-499` | EuroLeague Women | Under 149.5 (L) | Carolo +20 | Under 149.5 (L) | 101–81 (182) | **Rank-1 Failure Review**: Cross-tier qualifier pace explosion |
-| `P-504` | WNBA | Dream -4.5 (W) | Dream +18 | Under 173.5 (W) | 83–65 (148) | Clean sweep; playoff seeding motivation vs rest |
-| `P-505` | El Salvador LMB | Salvadoreños -3.5 (W) | Salvadoreños +6 | Under 153.5 (W) | 77–71 (148) | Clean sweep; home interior dominance |
-| `P-508` | Australian NBL | Under 194.5 (W) | United +25 | Under 194.5 (W) | 86–61 (147) | Melbourne Derby defensive intensity; total crushed by 47.5 pts |
+**What changed.** The peer version of this section (`cb95acd`) got P-498 wrong: it said "Rank-1 Lietkabelis −4.5 L; home-dog upset". The issued Rank 1 was **Under 171.5, and it won**. It also printed quarter lines that the field owner contradicts, and it promoted two rules that are withdrawn below. The table is copied from the issued cards. The quarter lines come from BasketNews, FIBA, xscores and ESPN.
 
-### 1. New Rule: `FIBA-CLUB-QUALIFIER-PACE-ADJUSTMENT`
-- **Tournament vs League Baseline Mismatch:** Modeling European cross-border club qualification stages (e.g. EuroLeague Women Qualifiers) using domestic league defensive metrics (e.g. French LFB) introduces severe negative pace bias.
-- **Mechanism:** Qualification tournaments feature disparate officiating standards, lower familiarity between teams, rushed transition possessions, and high shooting volume from behind the arc. Possession counts frequently surge 10–14% above domestic league averages.
-- **Protocol:** In single-game or two-leg FIBA international club qualifiers, adjust expected pace upward by at least +5.5 possessions and do not position an Under below 150.0 at Rank #1 without verified multi-possession tape demonstrating half-court stagnation.
+| Card | Competition | Rank #1 (p) | Final (verified; quarters) | Top O/U (rank) | Centre → actual | Verified note |
+|---|---|---|---|---|---|---|
+| P-497 | LKL | Neptūnas −3.5 (0.530) **W** | 99–84 (18:16, 31:20, 28:20, 22:28) | Over 175.5 (#2) **W** | 176.9 → 183 | A near-tie row that landed. Coaches Petrauskas and Eglinskas (the card was right) |
+| P-498 | LKL | Under 171.5 (0.654) **W** | 86–77 (26:20, 16:25, 22:20, 22:12) | Under 171.5 (#1) **W** | 167.3 → 163 | Lietkabelis led 65–64 after three; their +3.5 died in a 22–12 fourth quarter |
+| P-499 | EWL qualifier | Under 149.5 (0.626) **L** | 101–81 (22-25-32-22 v 22-16-22-21) | Under 149.5 (#1) **L** | 144.8 → 182 | Brno's top scorer, Puckett (27), was **not in the card**. Carolo did not rest when 19+ ahead. Comparator: two games against a different club |
+| P-504 | WNBA | Dream −4.5 (0.591) **W** | 83–65 (18-23-17-25 v 19-7-18-21) | Under 173.5 (#2) **W** | 171.4 → 148 | Stewart absent (the card was right). ATL: B. Jones, listed as a starter, was a coach's-decision DNP |
+| P-505 | LMB (Clausura R1) | Under 154.5 (0.637) **W** | 77–71 (20-17-23-17 v 18-18-9-26) | Under 154.5 (#1) **W** | 149.3 → 148 | Best centre of the batch. Season opener |
+| P-508 | NBL | Under 194.5 (0.691) **W** | 86–61 (16-29-24-17 v 14-21-22-4) | Under 194.5 (#1) **W** | 185.9 → 147 | PNX 24/88 FG and **4/41 from three**; 4 points in Q4. The card's PNX starter Hurt did not play; Foster, listed OUT, played |
 
-### 2. New Rule: `BASKETBALL-DERBY-TOTAL-SUPPRESSION`
-- **Intra-City Rivalries (e.g. NBL "Throwdown"):** Local derbies feature heightened physical perimeter containment, intense scouting familiarity, and reduced transition run-outs.
-- **Outcome:** Total points routinely fall 15–30 points below standard regular-season lines (e.g. P-508 finished at 147 points against a 194.5 total).
-- **Protocol:** Rank Under totals aggressively in high-stakes local derbies when early-season conditioning and perimeter scouting suppress transition scoring.
+### Withdrawn or demoted (not operative)
+
+**`BASKETBALL-DERBY-TOTAL-SUPPRESSION` — REJECTED (L-20260924-F04).**
+- It came from one game.
+- The Under's 47.5-point margin came from Phoenix shooting 10% from three and scoring 4 points in the final quarter, a shooting-variance state and not a derby mechanism.
+- "Totals routinely fall 15–30 below lines" has no source.
+- The rule had already leaked into the P-509 card text ("half-court derby tempo") for Perth v Adelaide, which is not a derby.
+
+**`FIBA-CLUB-QUALIFIER-PACE-ADJUSTMENT` (a mandatory +5.5 possessions) — REJECTED as a coefficient (L-20260924-F07).**
+- It came from one game, and its "89 possessions" was never sourced.
+- The P-499 miss traces to a roster retrieval failure (Puckett missing), comparator over-weighting (M13/M17) and an unevidenced "coach rests starters when ahead" branch (compare `O-ANNOUNCED-MINUTES-PLAN`, L-20260923-12).
+- Replacement: **TESTING `T-BKB-SEASON-OPENER-WIDTH`.** For a team's first competitive game of a season (a qualifier or league opener), test whether |actual − centre|/width is larger than on concurrent non-opener cards. The response, if confirmed, is **width only, never a centre shift**. Test on the next 15 opener cards.
+- Current evidence is mixed. P-499 missed by +37 (opener). P-505 missed by −1.3 (Clausura R1). P-497 and P-498 missed by +6 and −4 (early LKL season).
+
+### Controls added (integrity and retrieval only)
+
+**K-1. Official starters and roster at freeze (`C-LINEUP-DIFF`; G14.2; L-20260923-06 recurrence).**
+- The card prints each side's starting five and active roster from the competition's official feed, with the fetch time: NBA/WNBA/NBL official preview or box; FIBA LiveStats or the game page; the LKL match centre.
+- `PROJECTED_BEAT_VERIFIED` requires the S-1 Rev 2 receipt (outlet, reporter, timestamp, verbatim quote, two sources).
+- At settlement, the card-listed starters are diffed against the box score.
+- Evidence: P-499 (the top scorer absent from the card), P-504 (ATL 4/5, NY 3/5), P-508 (PNX 3/5; Foster's status wrong), and the 2026-09-23 NBL card. Recurrence: P-509 (2026-09-24(g): ADL 3/5 named starters; no receipt printed).
+
+**K-2. Blowout, rest and shooting-variance states are width.**
+- The two biggest Under wins, P-504 (−25.5 against the line) and P-508 (−47.5), and the biggest Under loss, P-499 (+32.5), all came from states outside the stated widths. The absolute residuals were 23.4, 38.9 and 37.2 against widths of 16–17.6.
+- Keep reporting these wins as **result-right with the process unconfirmed**. They do not validate a centre.
+
+**K-3. NBL actual start marker (confirmed 2026-09-25; `O-START-MARKER`).** In the NBL match feed the actual tip is the first `play_by_play` event with `action_type = jumpBall`. The earliest records are `fixture`/`period` placeholders. Two NBL games tipped about six minutes after schedule: TMP-NBL-CNS-TAS at 19:36:09 against 19:30, and P-509 at 21:36:13 against 21:30 AEST. A freeze inside that window is still pregame; horizon audits use the `jumpBall` timestamp.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — reference rates, width benchmarks, early-season windows and recency (research pass)
+
+**Status.** Reference rates and disclosure controls (`C-PROMOTION-RECEIPT`: `REFERENCE` / `PROMOTED_PROCESS`). None is a coefficient or a floor. Sources: `BASE_RATES_REGISTER.md` §7.1 and `RECENCY_AND_REBOUND.md` §7. Regular seasons: NBA 2025-26 (n = 1,235), WNBA 2026 (327; plus 2024 and 2025), NBL 2025-26 (165; plus 2023-24 and 2024-25).
+
+**K-4. Print the league reference (field BR).**
+- **Totals:** the league mean and SD.
+- **Handicaps:** the pooled P(\|margin\| ≤ k) band for the line. For example, NBA ≤ 5 is 0.246 and ≤ 10 is 0.479.
+- **Phase rows:** the league's quarter shape.
+  - NBA: Q4 averages **55.3**, against 57.6–58.7 in Q1–Q3.
+  - NBL: the second half runs below the first (Q3/Q4 about 44.4 v Q1/Q2 about 46.2; first-half share 0.504–0.514 across three seasons).
+  - WNBA: flat.
+- **Overtime:** about 4–5.5% of games, adding about 25 points. A total within about 12 of the line keeps the overtime branch as explicit mass.
+
+**K-5. `C-WIDTH-BENCHMARK` (RULES_GENERAL §"2026-09-25(b)"(a)).**
+
+| League | Total residual SD | Margin residual SD | 0.85 × total | 0.85 × margin |
+|---|---:|---:|---:|---:|
+| NBA | 19.4 | 15.1 | 16.5 | 12.8 |
+| WNBA 2026 | 19.5 | 13.3 | 16.6 | 11.3 |
+| NBL | 18.7 | 15.2 | 15.9 | 12.9 |
+| Narrowest derived benchmark (WNBA 2024) | 16.0 | 11.1 | 13.6 | 9.4 |
+
+- A card width below the 0.85 figure names what the card knows beyond a season-to-date model.
+- For leagues without a benchmark (LKL, EuroLeague and EuroLeague Women, LMB, FIBA windows), print `REFERENCE_WIDTH_NOT_YET_DERIVED`. The narrowest derived benchmark is the comparison: a width below 13.6 (total) or 9.4 (margin) needs the same written reason.
+- **Evidence.** In the 2026-09-24 cohort, basketball total widths ran about 39% narrow (mean z² 1.93, n = 7). Both LKL cards used total widths of 12.1–12.9 and margin widths of 8.4–9.0.
+
+**K-6. Early-season windows and the 2026 WNBA regime (RULES_GENERAL §"2026-09-25(b)"(d)).**
+- **NBL.** Games where both teams have played fewer than 3 games ran **−8.5 points** against the rest of the season (95% CI −14.3 to −2.7). That is three seasons and 38 games, with the same sign each season. NBL scoring also rises through the season: a season-to-date predictor under-shoots by 4–9 points.
+  - An NBL round 1–3 card prints the early-season reference beside its centre.
+  - It does not centre on the previous season's full-season mean without saying so.
+  - P-508 (147) and P-509 (195) were both in the 2026-27 early window.
+- **WNBA.** The early window runs the other way: **+6.5** (+0.4, +12.6), n = 57. This is why no cross-league early-season rule exists.
+- **WNBA 2026 scored 10.7 points per game more than 2024 and 2025** (174.4 v 163.7). A WNBA head-to-head or multi-season average that includes 2024 or 2025 is state-contaminated (M24). The card excludes those seasons or adjusts for the shift, and says which.
+
+**K-7. Back-to-backs (named-mechanism size).**
+- NBA: a team on a back-to-back against a rested opponent ran **−1.84** (−3.78, +0.11), n = 261. That is small against a margin SD of about 15. A margin centre moved for a back-to-back moves by about this much or less.
+- Totals show no reliable fatigue effect: both teams on a back-to-back ran −3.6 (−8.5, +1.4), n = 65. A fatigue argument is width (G-L2), not a signed total adjustment.
+- The WNBA (n = 19) and NBL (none among the scored games) are not derived.
+
+**K-8. Recency (`R-1`; RECENCY §7.2).**
+- In all three leagues, a single previous game is the worst predictor of a team's next score: **+18% to +36% RMSE** against the league constant.
+- Adding the opponent's defence to date improves RMSE by **7–11%**, more than any recency window.
+- A card's team-scoring input is the season rate (in the NBL, a last-10 rate is acceptable because scoring rises through the season) plus the opponent's defence. One recent game is a pointer to a mechanism, never a weight.

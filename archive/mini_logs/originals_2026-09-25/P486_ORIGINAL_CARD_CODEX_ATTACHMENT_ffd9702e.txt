@@ -1,0 +1,620 @@
+# MIN Twins @ SF Giants — MLB
+
+Final pregame research pass completed at roughly **11:30 AM AEST**, about 15 minutes before the scheduled 11:45 AM start. MLB still listed the game as upcoming, with **Zebby Matthews vs Blade Tidwell**. :chatgpt-content-reference{index="1"}
+
+The current Drive framework is **MDS-2026.09.19-v4.3 / CR-2026.09.21-3, SFA-BASEBALL, SPORTS_ONLY / MARKET_BLIND**. The mini-log instructions require the strongest selection at #1, explicit acknowledgement of unresolved information, preservation of the canonical sequence, and no automatic retrospective. :chatgpt-content-reference{index="2"}
+
+## Final ranking
+
+| Rank | Selection | Research probability* | Evidence |
+|---|---|---:|---|
+| **1** | **Minnesota Twins ML** | **~59%** | **MEDIUM-LOW** |
+| **2** | **San Francisco Giants +1.5** | **~57%** | **MEDIUM-LOW** |
+| **3** | **Under 8.0 runs** | **~47% win / ~10% push** | **LOW** |
+| **4** | **Over 8.0 runs** | **~43% win / ~10% push** | **LOW** |
+
+### Potential game winner
+## **Minnesota Twins — ~59%**
+
+### Representative score
+**Twins 4, Giants 3**
+
+My independent score centre is roughly **MIN 4.2 – SF 3.3**, or approximately **7.5 regulation runs**.
+
+The important distinction is that **Twins ML and Giants +1.5 can both succeed** if Minnesota wins by exactly one run. That one-run state has meaningful mass in a low-to-moderate scoring baseball matchup.
+
+\*All percentages are **`UNVALIDATED_SUBJECTIVE` scenario-distribution estimates**, not calibrated sportsbook probabilities. The Drive explicitly states that no fitted/validated baseball model has been promoted.
+
+---
+
+# 1. Event, starters and state
+
+MLB's official probable-pitcher feeds identify:
+
+- **Minnesota: Zebby Matthews, RHP — 9-10, 4.74 ERA, 107 K**
+- **San Francisco: Blade Tidwell, RHP — 1-2, 4.56 ERA, 42 K**
+- Oracle Park
+- 6:45 PM PDT / **11:45 AM AEST**. :chatgpt-content-reference{index="3"}
+
+At the final state check MLB had **not started MIN-SF**, while another game on the slate was already live. This is useful confirmation that no live score or in-game performance contaminated the forecast. :chatgpt-content-reference{index="4"}
+
+### Baseball preconditions
+
+- `BB-P1 starters`: **PASS**, both official probables identified.
+- `BB-P2 batting orders`: **PARTIAL / unresolved**.
+- `BB-P3 MLB rules`: **PASS** for MLB regular-season baseball, DH, home ninth and automatic-runner extras.
+- `BB-P4 operator action/listed-pitcher rules`: **UNKNOWN_DEFINITION**, because the operator was not supplied.
+- `BB-P5 home-last-bat`: **PASS**, San Francisco bats last.
+
+That `BB-P2` limitation is the main reason I will not call the top two picks high confidence.
+
+---
+
+# 2. Starting lineups and the late lineup problem
+
+An official MLB starting-lineup retrieval exposed Minnesota's order as:
+
+1. **Walker Jenkins — CF, L**
+2. **Luke Keaschall — RF, R**
+3. **Brooks Lee — 3B, S**
+4. **Kody Clemens — 2B, L**
+5. **Ryan Jeffers — C, R**
+6. **Alan Roden — DH, L**
+7. **Aaron Sabato — 1B, R**
+8. **Emmanuel Rodriguez — LF, L**
+9. **Ryan Kreidler — SS, R**. :chatgpt-content-reference{index="5"}
+
+However, MLB's lineup surfaces showed inconsistent publication/cache state during the final refresh, and **San Francisco's lineup remained TBD in the accessible official feed**. :chatgpt-content-reference{index="6"}
+
+I am therefore **not inventing San Francisco's nine-man order**.
+
+That matters because the Giants made significant same-day roster moves.
+
+---
+
+# 3. Injuries and roster changes
+
+## San Francisco
+
+MLB's transaction feed confirms that today the Giants:
+
+- placed **Bryce Eldridge** on the 7-day concussion IL;
+- placed **Jung Hoo Lee** on the 10-day IL with a groin contusion;
+- activated **Marcelo Mayer**;
+- selected **Bo Davidson**;
+- designated reliever **Philip Abner**. :chatgpt-content-reference{index="7"}
+
+Those are meaningful changes.
+
+Eldridge had recently been one of their most dangerous power bats, while Lee removes another established hitter from a lineup that managed just **1, 4 and 2 runs** in its last three games at the Dodgers. StatMuse shows San Francisco at **3-7 over its most recent 10**, and the most recent three were 1-3, 4-10 and 2-8. :chatgpt-content-reference{index="8"}
+
+Mayer's return and Davidson's promotion preserve an upside branch, but until the official order is confirmed I cannot responsibly assume lineup slots, plate appearances or defensive positions.
+
+## Minnesota
+
+Minnesota is also far from full strength:
+
+- **Byron Buxton** had season-ending hip surgery;
+- **Trevor Larnach** is on the IL with a wrist sprain;
+- **Kaelen Culpepper** is on the IL with a hamstring strain. :chatgpt-content-reference{index="9"}
+
+And today's lineup does **not** include Josh Bell, even though Bell had three hits in Sunday's 8-0 win. Instead, newly selected **Aaron Sabato** starts at first base. MLB confirms his contract was selected today. :chatgpt-content-reference{index="10"}
+
+This is an important reason not to simply extrapolate Minnesota's eight-run performance against the Angels into tonight.
+
+---
+
+# 4. Starting pitcher comparison
+
+## Zebby Matthews
+
+Matthews' 2026 Statcast profile:
+
+- **4.74 ERA**
+- **4.48 xERA**
+- 125⅓ IP
+- **1.24 WHIP**
+- 20.5% K
+- 7.5% BB
+- .324 xwOBA
+- .250 xBA
+- .429 xSLG
+- 42.2% hard-hit
+- 10.8% barrel rate. :chatgpt-content-reference{index="11"}
+
+That is basically a mid-4s true-run-prevention profile rather than an ace profile.
+
+His immediate form illustrates why a wide distribution is necessary. On September 9, Detroit knocked him out after **2⅓ innings, five runs and four walks**. :chatgpt-content-reference{index="12"}
+
+Then on September 16 he responded with **six scoreless innings and eight strikeouts against the Yankees**. :chatgpt-content-reference{index="13"}
+
+So I model Matthews approximately as:
+
+- central: **5⅓-6 innings**;
+- positive state: six-plus controlled innings;
+- early-hook state: 2⅓-4⅓ innings;
+- meaningful HR/contact tail retained.
+
+The Giants losing Eldridge and Lee reduces the offensive threat he faces, but Matthews' own variance prevents me from treating SF's depleted lineup as an automatic low score.
+
+---
+
+# 5. Blade Tidwell
+
+Tidwell's 2026 Statcast profile is remarkably similar in central run expectation:
+
+- **4.56 ERA**
+- **4.48 xERA**
+- 53⅓ IP
+- **1.20 WHIP**
+- 18.9% K
+- 9.5% BB
+- .325 xwOBA
+- .244 xBA
+- .394 xSLG
+- 38.6% hard-hit
+- 10.5% barrel rate. :chatgpt-content-reference{index="14"}
+
+But Tidwell has only **eight starts among 16 MLB appearances**, so his starter-length distribution is less established than Matthews'.
+
+Recent starts:
+
+- Sep. 15: **6⅔ IP, 2 ER**
+- Sep. 9: **4 IP, 4 ER**
+- Sep. 3: **5 IP, 2 ER**
+- Aug. 28: **5 IP, 6 ER**
+- Aug. 22: **5⅔ scoreless**, 7 K. :chatgpt-content-reference{index="15"}
+
+That suggests roughly:
+
+- central: **5-5⅔ innings**
+- good tail: ~6-6⅔
+- early/contact-cluster tail: ~4 innings or five innings with multiple runs.
+
+His most recent outing was good, but one 6⅔-inning performance is not enough to erase the wider current-regime distribution.
+
+---
+
+# 6. Minnesota offence
+
+Minnesota is only **4-6 in its last 10**, scoring 37 runs over that span while batting:
+
+- .239 AVG
+- .295 OBP
+- .349 SLG
+- .644 OPS. :chatgpt-content-reference{index="16"}
+
+The last five were better: 5, 4, 3, 5 and 8 runs.
+
+But Sunday's eight-run game came with Josh Bell in the lineup and against a different pitching/bullpen environment. Today's lineup loses Bell and includes the newly promoted Sabato.
+
+Therefore I apply **some recent offensive improvement**, but not an eight-run-game continuation adjustment.
+
+Brooks Lee is a legitimate hot bat, with MLB noting he entered this matchup **9-for-19 over his previous five games**. :chatgpt-content-reference{index="17"}
+
+---
+
+# 7. San Francisco offence
+
+The Giants' last three:
+
+- **1 run**
+- **4 runs**
+- **2 runs**. :chatgpt-content-reference{index="18"}
+
+That alone is not enough to make an Under pick. The more important current mechanism is that the lineup has now lost **both Eldridge and Jung Hoo Lee**.
+
+The current Giants L10 batting line was approximately .234, but even that window overstates continuity because some of those plate appearances belonged to hitters unavailable tonight. :chatgpt-content-reference{index="19"}
+
+So I lower San Francisco's central offensive expectation, while maintaining an ordinary 4-5 run branch because:
+
+- Matthews has early-inning/contact variance;
+- SF bats last;
+- Mayer returns;
+- Davidson adds unknown/debut power variance;
+- Minnesota could still expose middle relief if Matthews' command goes.
+
+---
+
+# 8. Bullpen state
+
+## Minnesota
+
+This is one of Minnesota's more useful advantages tonight.
+
+Sunday's 8-0 game required only:
+
+- **Dean Kremer: 6 innings**
+- **Bailey Ober: 3 innings**. :chatgpt-content-reference{index="20"}
+
+So normal leverage options such as **Jeff Hoffman, A.J. Minter, Taylor Rogers, Tommy Nance and Andrew Morris** were not needed in that game and appear on Minnesota's current bullpen/depth listings. :chatgpt-content-reference{index="21"}
+
+Ober himself should not be treated as a fresh long-relief option after three innings Sunday.
+
+## San Francisco
+
+Sunday's 3-1 loss at Los Angeles used:
+
+- Carson Seymour,
+- **Sam Hentges**,
+- **Trent Harris** after the starter. :chatgpt-content-reference{index="22"}
+
+Hentges had only just been activated, while Tristan Beck was recalled on September 20. The available relief pool also includes arms such as Jason Foley, Harris, Joel Kuhnel, Yunior Marte and Anthony Molina. :chatgpt-content-reference{index="23"}
+
+I therefore give Minnesota a **small late-game bullpen-availability edge**, not a massive one.
+
+---
+
+# 9. Oracle Park and conditions
+
+Oracle is not an ordinary home-run environment.
+
+MLB's ballpark guide lists:
+
+- left field 339 ft
+- center 391
+- right 309
+- right-center / Triples Alley 415
+- 2022-24 park factor:
+  - **Runs 94**
+  - **Home runs 78**
+  - Hits 100. :chatgpt-content-reference{index="24"}
+
+The current Statcast park-factor database also continues to show Oracle below league average overall in its rolling environment. :chatgpt-content-reference{index="25"}
+
+Current retrieved conditions around the park were approximately **58°F / 14°C**, mostly cloudy, with roughly 15-16°C expected during the early game window.
+
+I did **not** recover an authoritative field-relative wind vector at the final refresh, nor a confirmed home-plate umpire from an eligible primary source.
+
+Accordingly:
+
+- park geometry gets a modest run/HR suppression effect;
+- **no unsupported wind adjustment** is made;
+- **no umpire adjustment** is made.
+
+---
+
+# 10. Independent run distribution
+
+This was constructed before querying **ML / +1.5 / 8.0**.
+
+### `P-486-MLB-joint-v1` — `UNVALIDATED_SUBJECTIVE`
+
+| Branch | Weight | Representative state | Mechanism |
+|---|---:|---|---|
+| **BB-B1 central starters** | 25% | MIN 4-3 | both starters around 5-6 IP; modest scoring |
+| **BB-B2 joint early hook** | 12% | SF 5-4 | one/both starters expose middle relief early |
+| **BB-B3 sequencing/HR cluster** | 11% | MIN 6-3 | Tidwell walk/contact or relief transition produces multi-run MIN inning |
+| **BB-B4 one-sided floor** | 13% | MIN 5-1 | Matthews controls depleted SF order; fresh MIN leverage arms close |
+| **BB-B5 relief transition flip** | 11% | SF 4-3 | Tidwell survives long enough; SF attacks MIN transition inning |
+| **BB-B6 home-nine exposure reduction** | 9% | SF 4-2 | Giants lead after 8½, removing MIN's final defensive half and total exposure |
+| **BB-B7 extra innings** | 8% | 5-4 either way | tied after nine; automatic runner materially raises scoring rate |
+| **BB-B8 termination/weather** | 1% | action uncertain | small interruption/settlement branch; no rain-driven direction |
+| **BB-B9 late separation** | 10% | MIN 5-2 | close game becomes multi-run MIN lead against SF relief |
+
+After allowing score variation inside those branches rather than treating each representative score as deterministic:
+
+- **Minnesota eventual win: ~59%**
+- **San Francisco eventual win: ~41%**
+- **Minnesota wins by exactly one: ~16%**
+- **Giants +1.5: ~57%**
+- **Under 8: ~47%**
+- **Exactly 8: ~10%**
+- **Over 8: ~43%**
+- projected central total: **~7.5**
+- projected central margin: approximately **MIN +0.9 runs**
+
+The Drive's 2026 reference sample puts league-average total scoring at **8.98 runs** and the observed exact-eight frequency at **8.1%**, but those are only descriptive anchors. This matchup's missing bats, Oracle environment and current pitching mixture move the game-specific centre below the league mean.
+
+---
+
+# 11. Why Twins ML is #1
+
+## **1. Twins ML — ~59%**
+
+This is my strongest selection.
+
+The edge does **not** come from Minnesota's 73-83 record versus San Francisco's 64-92 record alone.
+
+It comes from the current-state chain:
+
+**Matthews**
+→ slightly longer/more established starter workload than Tidwell  
+→ faces a Giants offence missing Eldridge and Lee  
+→ Minnesota has the fresher conventional leverage bullpen  
+→ Minnesota's posted order still has Jenkins/Keaschall/Lee/Clemens/Jeffers/Roden at the top/middle  
+→ Giants have materially more lineup uncertainty.
+
+Matthews also just demonstrated the upside state with six scoreless against New York, although the Detroit collapse prevents overconfidence. :chatgpt-content-reference{index="26"}
+
+### Main failure path
+
+Matthews' road/first-inning command problem returns, Mayer/Davidson or another SF hitter capitalizes, Tidwell repeats his St. Louis start, and San Francisco takes a small lead into the home bullpen.
+
+This is why **59%, not 65-70%**.
+
+---
+
+# 12. Why Giants +1.5 is still #2
+
+## **2. Giants +1.5 — ~57%**
+
+This may initially look inconsistent with Twins ML, but it isn't.
+
+Both selections win together when Minnesota wins by exactly one.
+
+Baseball produces a lot of one-run finals. The Drive's 2026 reference database has roughly **27.8% of MLB games ending with an absolute one-run margin**, and that share is even higher among games reaching extras.
+
+The likely game family here is more **4-3 / 3-2 / 5-4** than **8-2**.
+
+Giants +1.5 also benefits from:
+
+- San Francisco batting last;
+- Oracle suppressing HR separation;
+- Tidwell having a real 6+ inning ceiling;
+- the automatic-runner extra-inning environment producing many one-run finals.
+
+### Main failure
+
+Minnesota's likely win comes through the specific branch where the Giants' depleted order scores only 1-2 and Tidwell/middle relief concedes a cluster.
+
+Scores like **5-2 or 5-1** are the key Giants +1.5 kill paths.
+
+---
+
+# 13. Under 8.0
+
+## **3. Under 8 — ~47% win, ~10% push**
+
+The Under has a **small directional lean**, but the integer line matters.
+
+A central 4-3 projection is Under.
+
+At **MIN 4**, San Francisco must remain at **3 or fewer**.
+
+At **SF 3**, Minnesota must remain at **4 or fewer**.
+
+Support:
+
+- Oracle;
+- cool conditions;
+- Giants missing Eldridge and Lee;
+- Twins missing Buxton/Larnach/Culpepper and sitting Bell;
+- fresh Minnesota high-leverage relievers;
+- both starters' Statcast xERAs are roughly 4.48 rather than catastrophic. :chatgpt-content-reference{index="27"}
+
+### Why it isn't higher
+
+The total has a large joint upper tail.
+
+Both starters have recent **early-hook/multi-run** failures. Tidwell gave up six runs in five innings to Arizona; Matthews lasted 2⅓ innings against Detroit. :chatgpt-content-reference{index="28"}
+
+And if the regulation score reaches **4-4**, eight is **not safely a push** in a normally completed MLB game: extras must produce at least one run, moving the final total Over 8.
+
+That extra-inning geometry is why simply looking at a 7.5-run central projection would overstate the Under.
+
+---
+
+# 14. Over 8.0
+
+## **4. Over 8 — ~43% win, ~10% push**
+
+The Over's path is very live:
+
+- Matthews early-hook state;
+- Tidwell's walk/HR/contact variance;
+- rookie/debut lineup volatility on both sides;
+- starter-to-middle-relief transition;
+- a multi-run homer or sequencing cluster;
+- automatic-runner extras.
+
+It's last because San Francisco's same-day loss of Eldridge and Lee, Minnesota's own missing bats, and Oracle's environment pull more ordinary branches below nine runs.
+
+---
+
+# Rank-1 coherence
+
+Rank #1 is **Twins ML**.
+
+Within Minnesota-winning states:
+
+- **Giants +1.5:** substantial overlap because a Minnesota one-run win satisfies both.
+- **Under 8:** partial overlap, especially 3-2 and 4-3.
+- **Over 8:** also partial overlap through 5-4, 6-3, 6-4 and extra-inning states.
+
+So no total direction is logically implied by Minnesota winning.
+
+### Representative top-two joint success
+
+**Twins 4-3 Giants**
+
+- Twins ML: **WIN**
+- Giants +1.5: **WIN**
+- Under 8: **WIN**
+- Over 8: loss
+
+This is the modal-style state I consider most coherent with the whole card.
+
+---
+
+# Source ledger
+
+Material predictive/research sources used:
+
+1. **MLB official schedule/scores** — event identity, records, start time and final pregame state. :chatgpt-content-reference{index="29"}
+2. **MLB Twins/Giants probable-pitcher pages** — Matthews/Tidwell identity. :chatgpt-content-reference{index="30"}
+3. **MLB official starting-lineup feed** — Minnesota order and unresolved SF lineup/source-latency condition. :chatgpt-content-reference{index="31"}
+4. **MLB transactions** — Eldridge, Lee, Mayer, Davidson and Sabato changes. :chatgpt-content-reference{index="32"}
+5. **MLB Twins injury reporting** — Buxton, Larnach, Culpepper. :chatgpt-content-reference{index="33"}
+6. **Baseball Savant — Zebby Matthews** — ERA/xERA, K/BB, hard contact, expected statistics. :chatgpt-content-reference{index="34"}
+7. **Baseball Savant — Blade Tidwell** — current MLB sample and underlying metrics. :chatgpt-content-reference{index="35"}
+8. **MLB Matthews reporting/game data** — September 9 collapse and September 16 rebound. :chatgpt-content-reference{index="36"}
+9. **MLB Tidwell reporting/game data** — recent 6⅔-inning outing and career-best scoreless outing. :chatgpt-content-reference{index="37"}
+10. **MLB Twins September 20 recap** — Kremer 6 IP/Ober 3 IP and rested regular bullpen. :chatgpt-content-reference{index="38"}
+11. **MLB Giants September 20 game record** — recent relief usage and one-run offensive output. :chatgpt-content-reference{index="39"}
+12. **MLB official roster/depth pages** — current bullpen pools. :chatgpt-content-reference{index="40"}
+13. **StatMuse** — current recent-form game logs, used only descriptively. :chatgpt-content-reference{index="41"}
+14. **MLB Oracle Park guide** — dimensions and historical run/HR factors. :chatgpt-content-reference{index="42"}
+15. **Baseball Savant park factors** — current Oracle environment cross-check. :chatgpt-content-reference{index="43"}
+16. **Sports Research Drive** — `METHOD.md`, `RULES_GENERAL.md`, `RULES_BASEBALL.md`, `BASE_RATES_REGISTER.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, control manifest and running-log framework.
+17. **User-supplied GitHub repository** — searched again for `SFA-BASEBALL` / `BB-P1`; the connected repository search returned no usable indexed matching files, so I did **not** invent any GitHub-only rules. The repository remains a supplied source. :chatgpt-content-reference{index="44"}
+
+**Excluded:** sportsbook predictions, bookmaker odds, betting consensus, DFS/fantasy projections and market-implied probability. They played no role in the ranking.
+
+---
+
+# Updated Mini Prediction Running Log
+
+This new forecast is **P-486**. The Drive copy currently lags the two immediately preceding chat-issued cards, but P-484 and P-485 already exist in this conversation, so they cannot be reused. The continuity instructions prohibit overwriting/reusing canonical IDs. :chatgpt-content-reference{index="45"}
+
+## Prediction Mini Running Log — P-482 onward
+
+**Method:** MDS-2026.09.19-v4.3 / CR-2026.09.21-3  
+**Operating mode:** SPORTS_ONLY / MARKET_BLIND  
+**Performance status:** LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE  
+**Next canonical ID:** **P-487**  
+**Retrospective policy:** none automatically. :chatgpt-content-reference{index="46"}
+
+### 1. Incomplete / Unsettled
+
+#### P-482 — Cricket / CPL Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen
+**Status:** UNSETTLED, no retrospective.  
+**Market:** Jamaica first six overs O/U 47.5.  
+**Ranking:** 1. Over 47.5 ~59.9% / LOW; 2. Under ~40.1%.  
+**Potential winner:** Antigua ~53%.  
+**Original distribution:** mean 51.75, SD ~14.43, centre ~50-52/1.  
+**Core reasoning:** Jamaica's current openers had recent 50/1, 79/0 and 75/1 starts but retained a significant early-wicket floor; toss/XI/strip unresolved.  
+**Sources:** CWI, CPL official Newsroom, Jamaica Gleaner/CMC, Wisden, phase-score source, weather, Sports Research Drive.  
+**Mapping:** `RULES_CRICKET.md`, `DATA_SOURCE_REGISTER.md`.
+
+#### P-483 — Tennis / WTA Seoul — Katie Volynets vs Elvina Kalieva
+**Status:** UNSETTLED, no retrospective.  
+**Ranking:** 1. Over 19.5 ~65.2%; 2. Kalieva +4.5 ~58.4%; 3. Volynets -4.5 ~41.6%; 4. Under ~34.8%.  
+**Potential winner:** Volynets ~62%.  
+**Original centre:** 23.1 games, Volynets +1.66 games.  
+**Core reasoning:** Volynets stronger ranking/current hard-court and return prior; Kalieva's improved serve and deciding-set resilience supported close-match branches.  
+**Sources:** WTA, USTA/US Open, L'Equipe, MyKhel, Seoul conditions, Sports Research Drive.  
+**Mapping:** `RULES_TENNIS.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `LEARNING_REGISTER.md`.
+
+#### P-484 — Basketball / WNBA — Atlanta Dream @ New York Liberty
+**Status:** UNSETTLED, no retrospective.  
+**Ranking:** 1. Under 177.5 ~54%; 2. Atlanta -1.5 ~53-54%; 3. Liberty +1.5 ~46-47%; 4. Over ~46%.  
+**Potential winner:** Atlanta ~58%.  
+**Original centre:** ATL 88-86 NYL, ~176.7 total.  
+**Availability:** Brionna Jones unavailable; Satou Sabally unavailable; exact game starting fives not primary-source confirmed at issue.  
+**Sources:** WNBA/team sources, StatMuse, recent box scores, AP, Sports Research Drive.  
+**Mapping:** `RULES_BASKETBALL.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `LEARNING_REGISTER.md`.
+
+#### P-485 — American Football / NFL — NY Giants @ LA Rams
+**Status:** UNSETTLED, no retrospective.  
+**Ranking:** 1. Giants +6.5 ~61%; 2. Under 47.5 ~54%; 3. Over ~46%; 4. Rams -6.5 ~39%.  
+**Potential winner:** LA Rams ~64%.  
+**Representative state:** Rams 24-20.  
+**Availability:** Puka Nacua/Jordan Whittington out; Myles Garrett IR; Aaron Donald active; Giants missing Deonte Banks/Paulson Adebo/Micah McFadden while Andrew Thomas and primary OL active.  
+**Sources:** NFL Football Operations; Rams/Giants official schedules, inactives, rosters and injury reports; PFR; StatMuse; SoFi; Sports Research Drive.  
+**Mapping:** `RULES_AMERICAN_FOOTBALL.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `LEARNING_REGISTER.md`.
+
+---
+
+### P-486 — Baseball / MLB — Minnesota Twins @ San Francisco Giants
+
+**Status:** **UNSETTLED — PREGAME FORECAST / NO RETROSPECTIVE**
+
+**Identity**
+- Scheduled: 22 Sep 2026, 11:45 AM AEST / 21 Sep 6:45 PM PDT.
+- Venue: Oracle Park.
+- Final research state: **scheduled / not live**.
+- Starters: **Zebby Matthews vs Blade Tidwell**.
+- SF bats last.
+- Operator listed-pitcher/action terms: `UNKNOWN_DEFINITION`.
+
+**Availability**
+- MIN out: Byron Buxton, Trevor Larnach, Kaelen Culpepper plus longer-term absences.
+- SF out/current: Bryce Eldridge IL, Jung Hoo Lee IL, Logan Webb IL; Marcelo Mayer activated, Bo Davidson selected.
+- Minnesota official order observed with Jenkins/Keaschall/Lee/Clemens/Jeffers/Roden/Sabato/Rodriguez/Kreidler.
+- SF official order not recovered before issue.
+- Lineup field therefore `PARTIAL / NOT_CONFIRMED`.
+
+**Starter states**
+- Matthews: 4.74 ERA / 4.48 xERA / 1.24 WHIP; central ~5⅓-6 IP with live early-hook branch.
+- Tidwell: 4.56 ERA / 4.48 xERA / 1.20 WHIP in 53⅓ IP; central ~5-5⅔ with wider small-sample/hook dispersion.
+
+**Bullpens**
+- MIN regular leverage arms largely spared Sunday because Kremer threw six and Ober three.
+- SF used Seymour/Hentges/Harris Sunday; Beck newly recalled, Hentges newly activated.
+
+**Environment**
+- Oracle historic run factor below average and strongly HR suppressing.
+- Cool ~58°F pregame.
+- Field-relative wind and official umpire assignment not independently verified; no signed adjustment.
+
+**Independent branch object**
+- BB-B1 central: MIN 4-3.
+- BB-B2 early-hook: SF 5-4.
+- BB-B3 run cluster: MIN 6-3.
+- BB-B4 opponent-floor: MIN 5-1.
+- BB-B5 relief transition: SF 4-3.
+- BB-B6 home-ninth effect: SF 4-2.
+- BB-B7 extras: roughly 5-4 either direction.
+- BB-B8 termination: very small/uncertain.
+- BB-B9 late separation: MIN 5-2.
+
+**Distribution**
+- MIN winner ~59%.
+- SF winner ~41%.
+- MIN exact-one-run win ~16%.
+- SF +1.5 ~57%.
+- Under 8 ~47%.
+- Exactly 8 ~10%.
+- Over 8 ~43%.
+- Centre ~MIN 4.2, SF 3.3.
+- Status `UNVALIDATED_SUBJECTIVE`.
+
+**Ranked predictions**
+1. **TWINS ML — ~59% — Rank #1 / MEDIUM-LOW.**
+2. **GIANTS +1.5 — ~57% — Rank #2 / MEDIUM-LOW.**
+3. **UNDER 8.0 — ~47% win / ~10% push — Rank #3 / LOW.**
+4. **OVER 8.0 — ~43% win / ~10% push — Rank #4 / LOW.**
+
+**Potential winner:** **Minnesota Twins ~59%.**
+
+**Rank-1 coherence**
+- Twins 4-3 represents a coherent Rank-1 state.
+- Giants +1.5 = `COHERENT` through one-run MIN wins.
+- Under 8 = `PARTIAL_OVERLAP`.
+- Over 8 = `PARTIAL_OVERLAP`.
+- No total side is mechanically implied by Twins ML.
+
+**Material sources**
+MLB official schedule/scores, probable pitchers, lineup feed, transactions and injury reporting; Baseball Savant pitcher/park metrics; MLB recent-game recaps; MLB roster/depth pages; StatMuse recent logs; Oracle Park official guide; Sports Research Drive; user-supplied GitHub repo search attempted.
+
+**Document mapping**
+- `RULES_BASEBALL.md`: starter-identity, lineup-mixture, joint-hook, bullpen score-state, home-ninth, extra-inning and run-line coherence controls applied.
+- `DATA_SOURCE_REGISTER.md` / `SOURCES.md`: MLB official lineup publication latency should remain explicitly distinguishable from invented/secondary projected lineups.
+- `LEARNING_REGISTER.md`: observation only, no new permanent rule. Same-day loss of multiple regular bats can move the centre while simultaneously increasing uncertainty if replacement slots are unconfirmed.
+- No permanent algorithm change proposed from one event.
+
+### 2. Settled logs
+**None added in this query.**
+
+### 3. Integrity
+- P-482: unsettled.
+- P-483: unsettled.
+- P-484: unsettled.
+- P-485: unsettled.
+- **P-486: unsettled.**
+- No retrospective performed.
+- No previous forecast rewritten.
+- No Google Drive methodology file edited.
+- **Next canonical ID: P-487.**
+
+## Bottom line
+
+**1. Twins ML**  
+**2. Giants +1.5**  
+**3. Under 8.0**  
+**4. Over 8.0**
+
+**Potential winner: Minnesota Twins.**
+
+The strongest analytical feature is **Minnesota's winner edge without a large expected margin**. San Francisco's depleted/unconfirmed batting order plus Minnesota's fresher leverage bullpen favour the Twins, while Oracle Park and baseball's one-run geometry keep **Giants +1.5** almost as strong.

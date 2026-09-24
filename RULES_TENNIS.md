@@ -12,7 +12,7 @@
 
 
 Status: **ACTIVE — QUALITATIVE MODULE**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Method version: **MDS-2026.09.06-v4.0**
 Applies with RULES_GENERAL.md, MODEL_AND_DATA_SPEC.md, and ALGORITHM_PORTFOLIO_AND_EVALUATION.md.
 Executable algorithm: **SFA-TENNIS (§9) — instantiates GFA-2 in RULES_GENERAL.md §11**
@@ -126,6 +126,7 @@ Algorithm ID: `SFA-TENNIS`. Effective **2026-09-02**. Instantiates `GFA-2` (RULE
 | `TE-P2` participants | Exact players, handedness, entry status, draw position and scheduled start from the official event or tour source, re-handshaken at G31 | Identity unresolved means no directional analysis |
 | `TE-P3` retirement terms | The operator's retirement, walkover and withdrawal rules for every supplied row | `UNKNOWN_DEFINITION` and `NO VALUE DETERMINABLE` |
 | `TE-P4` current status | Verified withdrawal, medical, rest, travel and qualifying-workload state | Record the missingness code; never infer fitness from a result list |
+| `TE-P5` independent benchmark (added 2026-09-25; R-2 of the 2026-09-22 audit; enforces control 13) | Dated Tennis Abstract Elo, overall and surface-specific (ATP `tennisabstract.com/reports/atp_elo_ratings.html`; WTA `tennisabstract.com/reports/wta_elo_ratings.html`), **snapshotted before the event** with its page date. The card prints the implied best-of-three or best-of-five win probability beside its own winner mass. If the two differ by more than 10 percentage points, the card names the current mechanism or rebuilds the serve/return tree before issue | `BENCHMARK_NOT_RETRIEVED`: no winner, games-handicap or total row may be Rank #1. The benchmark is a check, never a probability source or calibration target |
 
 
 ### 9.2 Exposure chain
@@ -134,9 +135,9 @@ Algorithm ID: `SFA-TENNIS`. Effective **2026-09-02**. Instantiates `GFA-2` (RULE
 | Step | Output |
 |---|---|
 | `TE-S1` | Participation and completion state: start probability, retirement and walkover branches |
-| `TE-S2` | Surface- and opponent-adjusted serve profile for each player: first-serve in rate, first- and second-serve points won, ace and double-fault shape |
+| `TE-S2` | Surface- and opponent-adjusted serve profile for each player: first-serve in rate, first- and second-serve points won, ace and double-fault shape. **Stored as numerators and denominators, match by match (added 2026-09-25):** total service points, first serves in, first-serve points won, second-serve opportunities, second-serve points won, double faults and aces, so that every rate carries its n and can be reproduced |
 | `TE-S3` | Return profile for each player: return points won, break-point creation, and pressure-point behaviour |
-| `TE-S4` | Hold and break distributions per player from `TE-S2` and `TE-S3`, with score-state uncertainty |
+| `TE-S4` | Hold and break distributions per player from `TE-S2` and `TE-S3`, with score-state uncertainty. **Matchup holds, not season holds (added 2026-09-25; R-3):** each player's expected hold is derived from their level- and surface-adjusted serve points won against **this opponent's** return points won, and printed before any total or handicap is ranked. Comparing season hold percentages serve against serve (P-483) does not satisfy this step |
 | `TE-S5` | Within-set game tree: comfortable hold sequences, close games, tiebreak exposure |
 | `TE-S6` | Set-score tree for both players: ordinary straight-set control, close straight sets or tiebreaks, and a deciding-set win where supported |
 | `TE-S7` | Set-count mixture: explicit weights over two and three sets, or over three, four and five sets, before within-set closeness is applied |
@@ -171,7 +172,7 @@ Both players receive the full set. A perceived underdog's win probability may ne
 |---|---|---|
 | Match winner | Sum of that player's `TE-B*` branches | Both a quick and a long winning path |
 | Set handicap | The set-score tree | A credible set-winning or match-length pathway; a cushion is not free safety |
-| Total games | Set-count mixture times within-set closeness | Which set count carries the mass; a deciding-set branch can rescue an Over without being independent of the handicap |
+| Total games | Set-count mixture times within-set closeness | Which set count carries the mass; a deciding-set branch can rescue an Over without being independent of the handicap. **For best-of-three totals from 18.5 to 21.5, print P(decisive straight sets for either player) and P(three sets) beside the row (added 2026-09-25; R-4)**: at these lines the Over is close to "no decisive straight-set win". Best-of-five analogue: P(straight sets) and P(five sets) |
 | Set betting and correct score | The same tree | The exact set sequence, not a directional lean |
 | First set | Its own opening-set sub-tree from early hold, break and return pressure | Why the opening state differs from or agrees with the full-match state |
 | Player props | Service and return point counts from `TE-S2`/`TE-S3` times expected games | The provider's own definition |
@@ -183,7 +184,7 @@ Both players receive the full set. A perceived underdog's win probability may ne
 | Kill path | Defeats | Evidence origin |
 |---|---|---|
 | An opponent's ordinary straight-set control | A favourite handicap whose kill path is written only as "favourite wins narrowly" | §5 control 11, C-PL6-TEN-BIDIRECTIONAL-TREE |
-| Favourite control at 6-2, 6-2 | An Over ranked alongside a preference for that same favourite and their game handicap | §5 control 12, C-PL9-TEN-CROSSMARKET |
+| Favourite control at 6-2, 6-2 | An Over ranked alongside a preference for that same favourite and their game handicap; also an Over plus an underdog games cushion as the top two | §5 control 12, C-PL9-TEN-CROSSMARKET; recurrence P-212, P-242, P-310, P-483 (Volynets 6-3 6-0); counter-example P-350 (tracked as `C-TEN-FAV-SEPARATION`, LEARNING_REGISTER) |
 | A fifth-set extension in best-of-five | A total ranked on an undifferentiated corridor with a variance note | C-PL9-TEN-BO5-MIX, §4 best-of-five paragraph |
 | Current-surface serve and return form diverging from ranking and old head-to-head | A side ranked on ranking, seeding or an old meeting on another surface | §5 controls 1, 3 and 8, C-PL5-TEN-SURFACE-H2H |
 | Level mismatch between ATP, Challenger, qualifying and ITF rates | Any comparison made without a stated level and opponent-strength adjustment | §5 control 9 |
@@ -224,6 +225,9 @@ Both players receive the full set. A perceived underdog's win probability may ne
 14. Rank-1 implied-target interval (G25.1) stated in the unit of every other supplied line, each remaining row classified `COHERENT`/`PARTIAL_OVERLAP`/`DISJOINT`, and every aggregate budget re-solved conditional on the Rank-1 state.
 15. Winner-and-cushion reconciliation (G30.1) whenever Rank #1 is an underdog cushion, with the outright-win and narrow-loss branch ordering stated. Example separation kill path for this sport: an extended or deciding set.
 16. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
+17. **Benchmark (`TE-P5`; added 2026-09-25):** the dated Elo benchmark is printed beside the winner mass. A gap of more than 10 percentage points is explained by a named current mechanism, or the tree is rebuilt.
+18. **Matchup holds (`TE-S4`; added 2026-09-25):** each player's hold against this opponent is derived from serve × return, with the numerators and denominators shown.
+19. **Decisive-branch disclosure (§9.4; added 2026-09-25):** P(decisive straight sets) and P(three sets) are printed beside any best-of-three total from 18.5 to 21.5.
 
 
 ### 9.8 Recency, head-to-head and trend windows
@@ -420,7 +424,7 @@ This corrects §9.6(7), whose former wording supplied the same false shortcut as
 
 
 
-Full evidence and frozen-card comparisons: [September 5 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
+Full evidence and frozen-card comparisons: [September 5 audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
 
 
 ## September 6 settlement learning — cross-sport gates instantiated
@@ -458,7 +462,7 @@ No tennis-specific defect was evidenced in the `P-294`–`P-305` cohort; `P-291`
 **Pre-issue checklist additions (this sport):** settlement endpoint named per row; coaching/bench/rotation record for both sides with missingness codes; tail-budget sums printed against every total line; path-geometry class and `N` printed for every total and phase-total row; separation-floor result stated for Rank #1.
 
 
-Full narrative and evidence: [`IMPROVEMENT_PLAN_2026-09-06.md`](IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
+Full narrative and evidence: [`archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md`](archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
 
 
 ## September 5 implementation after freeze confirmation
@@ -555,7 +559,7 @@ Full frozen ranks, actual drivers, knowability and smallest fixes: [PREDICTION_M
 Correct P-350's deciding breaker to 10-7; the match still contained 49 games. Verify event-specific deciding-set and retirement rules before grade. A match tiebreak score is not extra games. An underdog handicap can win in a short straight-set upset, so control G-L10's long-match dependence language is conditional. A dated Elo comparison is a benchmark under explicit assumptions; agreement cannot distinguish variance from probability error in one match. Bench is NOT_APPLICABLE; coach/fitness information must retain capture time and unknown fields.
 
 
-For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. [Shared correction and methodology sources](audit_2026-09-12/rule_corrections.md). All current log observations remain learning-only and not performance-eligible.
+For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. Shared correction and methodology sources (`audit_2026-09-12/rule_corrections.md`, not present in this repository). All current log observations remain learning-only and not performance-eligible.
 
 
 
@@ -647,17 +651,66 @@ Serve/return point strength, surface, format, fatigue/rest, verified health/avai
 
 Current prospective override. Retain surface/format-specific serve-return state, hold/break tree, set-count mixture, scoreline coherence, retirement endpoint and rating benchmark as a check only. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, blanket DISJOINT top-half bans, match-winner⇒games-handicap shortcuts, long-match⇒Over logic and tiny-H2H ownership rules. Build one coherent tennis set/game distribution before querying all targets.
 <!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
-## 2026-09-24 settlement learning — P-494 (WTA 500 Singapore), P-495 (WTA 125 Tolentino), P-496 (ITF M25 Falun)
+<!-- AUDIT-2026-09-24F -->
+## 2026-09-24 settlement learning — P-494 (WTA 500 Singapore), P-495 (WTA 125 Tolentino), P-496 (ITF M25 Falun), corrected 2026-09-24(f)
 
-Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)"](PREDICTION_LOG_COMBINED_5.md). Learning-only.
+**Full record:** `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(f)". This is learning-only.
 
-| Card | Tournament | Rank #1 | Result | Score | Verdict |
-|---|---|---|---|:---:|---|
-| `P-494` | WTA 500 Singapore | Andreeva -4.5 (W) | Andreeva 2–0 | 6–2, 6–2 | Exact modal scoreline predicted; dominant hold rate |
-| `P-495` | WTA 125 Tolentino | Romero Gormaz -5.5 (L) | Pieri 2–1 | 3–6, 6–4, 6–1 | **Rank-1 Failure Review**: Underestimated slow clay underdog resilience |
-| `P-496` | ITF M25 Falun | Over 21.5 (W) | Marek 2–1 | 2–6, 6–3, 7–6(6) | Indoor carpet 3-set tiebreak battle; total smashed |
+**What changed.** The peer version of this section (`cb95acd`) listed P-494's Rank 1 as "Andreeva −4.5"; the issued Rank 1 was Under 18.5. It printed P-496's score reversed as 6–2 3–6 7–6(4), which caused a **grading error**, and it called Falun "indoor carpet". The rows below are copied from the issued cards.
 
-### 1. New Rule: `TENNIS-CHALLENGER-CLAY-HANDICAP-CAP`
-- **Challenger & ITF Slow Clay Volatility:** On slow European outdoor red clay (e.g. Tolentino), service hold rates drop below 60% across lower-tier WTA/ITF events. Return games dominate, generating frequent reciprocal service breaks.
-- **Handicap Capping:** Heavy game handicaps (e.g. -5.5 or greater) require a near-flawless 6–3, 6–2 or 6–2, 6–2 margin. In lower tiers where ranking separation (e.g. #170 vs #380) reflects tournament tier participation rather than raw baseline skill, underdogs playing on home soil possess immense break-back potential.
-- **Protocol:** Never rank a games handicap of -5.5 or higher at Rank #1 on slow red clay in WTA 125 or ITF events unless the favourite boasts a verified hold rate >78% and the underdog has a return-points-won rate <32% on clay. Prefer straight-set match-winner or conservative game totals.
+| Card | Event | Rank #1 (p) | Final (verified) | Top O/U (rank) | Note |
+|---|---|---|---|---|---|
+| P-494 | WTA 500 Singapore (LIVE-ISSUED) | Under 18.5 (0.550) **W** | Andreeva 6–2 6–2 (WTA LS008; ESPN 184095) | Under 18.5 (#1) **W** | Outside pregame metrics |
+| P-495 | WTA 125 Tolentino, outdoor clay | Romero Gormaz −5.5 (0.591) **L** | Pieri 3–6 6–4 6–1 (ESPN 183890) | Under 19.5 (#2) **L** (26) | Rank-1 failure review: Part 5 §(f) E.1 |
+| P-496 | ITF M25 Falun, **indoor hard** (ITF `M-ITF-SWE-2026-004`) | Over 22.5 (0.627) **W** (30) | **Marek 2–6 6–3 7–6(3); games 15–15** (ITF draw page; TennisExplorer 3331086) | Over 22.5 (#1) **W** | **R2 Vasa +0.5 = W and R3 Marek −0.5 = L** (corrected; previously graded the other way) |
+
+### Rejected as a rule: `TENNIS-CHALLENGER-CLAY-HANDICAP-CAP` (L-20260924-F06)
+
+Its thresholds (">78% hold", "<32% return points won", ">80% straight-set wins over the last 15 clay matches") are unsourced and rest on one match. Its companion claim that lower-tier clay holds fall below 60% is unsourced too.
+
+What the P-495 card actually shows is already covered by existing rules:
+- The margin mean (+5.09) sat below the 5.5 line; P(−5.5) = 0.591 came from the median and the skew. At a normalised edge of 0.09 this is a coin flip, and a #1 at a coin flip must say NEAR_TIE / LOW in the ordinal (G23.1; §16.5(d)).
+- Romero Gormaz's 33-game R32 was treated as neutral while Pieri's qualifying run was discounted. G-L2 says mechanisms carry both signs, so workload is at least width on a heavy games handicap.
+
+**Test.** `T-TEN-LOWTIER-HCP`: in WTA 125 and ITF matches, games-handicap rows of 5.5 or more whose normalised edge is below 0.15 win less often than their stated p. Test on the next 20 such rows by Brier and hit rate against stated p. **No cap and no rank effect meanwhile.**
+
+### Controls added (integrity and retrieval)
+
+**T-1. ITF settlement route.**
+- The field owner is the ITF tournament "draws-and-results" page, fetched through `r.jina.ai` (for example `…/en/tournament/m25-falun/swe/2026/m-itf-swe-2026-004/draws-and-results/`). The page prints per-set games and tiebreak points.
+- `…/tennis/api/TournamentApi/GetCalendar` and `GetEventFilters` also return JSON through the proxy (tournament key, surface, indoor/outdoor).
+- `GetDrawsheet` and direct requests are blocked by Incapsula.
+- Games-handicap rows are graded from set games, with a tiebreak set counted as 7–6.
+
+**T-2. Surface.**
+- Record the surface and the indoor/outdoor flag from the ITF calendar JSON, not from memory. Falun is **Hard, Indoor**.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — reference rates and games-handicap coherence (research pass)
+
+**Status.** Reference rates plus two disclosure controls (`C-PROMOTION-RECEIPT`: `REFERENCE` and `PROMOTED_PROCESS`, disclosure only). Nothing here moves a probability or a rank. Source: `BASE_RATES_REGISTER.md` §7.4, from the ESPN tennis scoreboard, 1 Jan – 24 Sep 2026. It covers the Slams, tour events and WTA 125 events, but not ITF. Completed matches only; retirements and walkovers are excluded.
+
+**TE-R1. The WTA totals gap is closed; print the reference.** Every tennis total row prints three things.
+1. **P(deciding set)** beside the population reference: WTA best of 3 **0.340**; men best of 3 0.358; women's qualifying 0.313 v main draw 0.352.
+   - Total games is a two-component mixture. The WTA means are **18.2 in straight sets and 28.6 with a deciding set**.
+   - Lines from 19.5 to 25.5 fall in the trough between them. A total row there is mostly a P(deciding set) row, and the card should say so.
+2. `REFERENCE_BASE_RATE`: the population P(total ≥ L + 0.5). WTA best of 3: ≥ 19 0.624, ≥ 20 0.542, ≥ 21 0.472, ≥ 22 0.425, ≥ 23 0.376. Men best of 3: ≥ 22 0.530, ≥ 23 0.453.
+3. The reference width for `C-WIDTH-BENCHMARK`: WTA raw SD **5.79**; men best of 3 6.00. P-495 (5.68) and P-496 (5.92) were consistent with it.
+
+ITF and UTR are `NOT_YET_DERIVED`: ESPN does not carry them.
+
+**TE-R2. `C-HCP-COHERENCE` — games-handicap decomposition.**
+1. **Hard identity (a probability law).** For a −k.5 row on player A, P(A −k.5) ≤ P(A wins). A card that violates it has an arithmetic error and fails closed.
+2. **Disclosure.** The card prints P(A −k.5) = P(A wins in straight sets) · c_s + P(A wins in a deciding set) · c_d. Here c_s = P(margin ≥ k + 1 | straight-sets win) and c_d = P(margin ≥ k + 1 | deciding-set win), both from the card's own model. Beside c_s and c_d it prints the population references:
+
+   | Handicap | WTA best of 3: c_s / c_d | Men best of 3: c_s / c_d |
+   |---|---|---|
+   | −4.5 (margin ≥ 5) | 0.818 / 0.286 | 0.654 / 0.186 |
+   | −5.5 (margin ≥ 6) | **0.663 / 0.168** | 0.447 / 0.094 |
+   | −6.5 (margin ≥ 7) | 0.479 / 0.081 | 0.270 / 0.032 |
+
+3. **When c_s or c_d is above its reference,** the card names the hold and break evidence: both players' service-hold and return-game-won rates, over a dated window, with n. Without it the row is flagged `HCP_CONDITIONAL_ABOVE_REFERENCE`. The +k.5 row is the complement and carries the same disclosure.
+4. **Evidence.** In P-495, P(win) 0.843 and P(−5.5) 0.591 imply P(margin ≥ 6 | win) = 0.70. That is above even the straight-sets reference of 0.663, and no hold/break evidence was printed. The row lost; Pieri won 3-6 6-4 6-1. This is the measurement lane for `T-TEN-LOWTIER-HCP`.
+5. **Audit.** Field `HC` in `audit_card_controls.py`: advisory, blocking under `--strict`.
+
+**TE-R3. Reference only, no rule.** Women's qualifying matches ran slightly shorter than main-draw matches (mean 21.28 v 21.95; P(deciding) 0.313 v 0.352). Print the population that matches the card.

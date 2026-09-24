@@ -35,7 +35,7 @@ No original issued card, probability, rank, result receipt or archive is rewritt
 
 
 
-> **2026-09-12 controlling correction:** All current combined-log material is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE under the current user request. Settlement preserves outcome evidence; it does not authorize a performance claim. The [2026-09-12 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md) and [probability/research corrections](audit_2026-09-12/rule_corrections.md) supersede conflicting older operational statements. Original issued records remain unchanged.
+> **2026-09-12 controlling correction:** All current combined-log material is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE under the current user request. Settlement preserves outcome evidence; it does not authorize a performance claim. The [2026-09-12 audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md) and probability/research corrections (`audit_2026-09-12/rule_corrections.md`, not present in this repository) supersede conflicting older operational statements. Original issued records remain unchanged.
 
 
 
@@ -55,7 +55,7 @@ The earlier blanket non-performance-eligible/late-import classification is super
 
 
 Status: **ACTIVE — sole current lesson-status registry**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Method version: **MDS-2026.09.06-v4.0**
 Numerical training specification: **NTS-2026.09.02-v0.3 — Stage 0 all-sports design/pre-fit**
 
@@ -201,7 +201,7 @@ A five-case total is an exploratory checkpoint, not statistical validation. No t
 | L-117 | 2026-09-06(d) second independent review, finding F23; a retrospective treated an in-game event with no realistic pre-match forecastability (a sin-bin roughly 15 seconds into a match) on the same footing as a knowable pre-match personnel fact | **Distinguish, explicitly and by timestamp where possible: confirmed-before-issue facts, scheduled-but-not-yet-released information, reasonable pre-match uncertainty, and realised in-game shocks that were not knowable at issue time.** Only the first category may ground a claim that something "should have been known"; an in-game shock discovered after the cutoff is not evidence of a research failure | Upgrading every eventual adverse event to "should have been caught" erodes the honest distinction between a real omission and ordinary unknowable variance, which the framework's own knowability field exists to preserve | PROMOTED_PROCESS |
 | L-118 | 2026-09-06(d) second independent review, finding F24; `G14.2` (2026-09-06) was introduced describing the framework as previously having no bench/coaching requirement, but the pre-existing `RULES_SOCCER.md` and `RULES_GENERAL.md` text already required XI, goalkeeper, bench, formation and expected-minutes evidence | **When a new gate formalises and strengthens an existing requirement, describe it as strengthened enforcement and schema coverage, not as filling a previously wholly absent gap**, unless a check of the prior text actually confirms nothing existed. `G14.2` remains adopted and still adds real value (a dedicated structured record with sport-specific bench-analogue fields and explicit `NOT_APPLICABLE` handling), but its origin story is corrected: the gap was inconsistent *execution* of an existing requirement, not the requirement's total absence | Overstating a control's novelty both misrepresents the framework's own history and can mask that the real fix needed is enforcement discipline (see `L-095`/`L-096`), not a brand-new rule | PROMOTED_PROCESS |
 | L-119 | 2026-09-06(d) second independent review, finding F27; `G36.1`'s original wording graded a row under "standard rules" without a separate field for the operator's own action terms, risking an invented universal betting-settlement convention | **A settlement-grade research score and an unidentified operator's contract action are two separate fields, not one.** `G36.1` is revised to require both: `RESEARCH_GRADE` (settled under the stated standard-rules convention, never left indefinitely `PROVISIONAL` for lack of operator terms) and `OPERATOR_ACTION` (separately `UNKNOWN_DEFINITION` where no ticket/terms were ever supplied). Neither field may be dropped or merged into the other | This preserves both halves of the governing price-independence rule: a missing price/operator term never blocks a research grade, and a research grade never manufactures a betting-settlement fact that was never actually supplied | PROMOTED_PROCESS |
-| L-120 | 2026-09-06(d) second independent review, finding F29; `RULES_GENERAL.md` both instructs against dated narratives governing active rules and carries an increasing number of dated amendment sections (§§12–15) that do govern active behaviour | **State the precedence explicitly: the numbered gates (`G0`–`G40` and their lettered sub-steps) are the controlling, current text; dated amendment sections exist to explain *why* and *when* a numbered gate reached its current wording, and are historical narrative once their content has been folded into the gate itself.** Where a dated section's prose and a numbered gate's text appear to differ, the numbered gate controls. This does not resolve the maintainability concern raised in `IMPROVEMENT_PLAN_2026-09-06.md` §D.3(1) (a periodic consolidation pass remains flagged as future work), but it removes the immediate ambiguity about which text governs today | A precedence rule is cheap to state and removes an entire class of "which version actually applies" confusion without requiring the larger consolidation effort to happen first | PROMOTED_PROCESS |
+| L-120 | 2026-09-06(d) second independent review, finding F29; `RULES_GENERAL.md` both instructs against dated narratives governing active rules and carries an increasing number of dated amendment sections (§§12–15) that do govern active behaviour | **State the precedence explicitly: the numbered gates (`G0`–`G40` and their lettered sub-steps) are the controlling, current text; dated amendment sections exist to explain *why* and *when* a numbered gate reached its current wording, and are historical narrative once their content has been folded into the gate itself.** Where a dated section's prose and a numbered gate's text appear to differ, the numbered gate controls. This does not resolve the maintainability concern raised in `archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md` §D.3(1) (a periodic consolidation pass remains flagged as future work), but it removes the immediate ambiguity about which text governs today | A precedence rule is cheap to state and removes an entire class of "which version actually applies" confusion without requiring the larger consolidation effort to happen first | PROMOTED_PROCESS |
 | L-121 | 2026-09-06(d) second independent review, finding F30; no single reliable pooled all-history strike rate can be computed from the existing summaries without row/view joins, explicit denominators and stratification | **Cross-referenced to `L-090` (mandatory stratification of the settlement-only scorecard) and `PERFORMANCE_ELIGIBILITY_POLICY.md`, both already adopted 2026-09-06(c) in response to the first external audit.** No further control is needed here; this entry exists so a future session searching for "reliable all-history strike rate" finds the existing answer rather than re-deriving it. A reproducible history table (physical event ID, canonical card ID, issue/horizon, frozen rank, exact contract, source location, settling field, outcome/action status, method version, process grade) remains a described-but-not-yet-built future deliverable | Recording "this was already solved by L-090" prevents a third independent review from re-discovering the same gap a third time | PROMOTED_PROCESS |
 
 
@@ -329,7 +329,7 @@ These are future-only candidates from the clean P-064–P-084 review cohort. P-0
 ### 2026-09-06(d) second independent review disposition — F01 to F30
 
 
-Source: a second, separately supplied local document (`GAME_LOG_BLINDSPOT_REVIEW_2026-09-06.md`, found already present in the repository root; preserved with a provenance header at `archive/GAME_LOG_BLINDSPOT_REVIEW_2026-09-06_RECEIVED.md`, original left in place), an internal read-only review comparing this repository's own records, rules and the first external audit. Every one of its 30 findings (`F01`-`F30`) was checked against primary source before any correction was made -- several were independently re-derived from the settlement table, the ESPN API records retrieved earlier in this session, and the raw preserved component text, and confirmed accurate; none was accepted on assertion alone.
+Source: a second, separately supplied local document (`archive/audit_documents_implemented_2026-09-25/GAME_LOG_BLINDSPOT_REVIEW_2026-09-06.md`, found already present in the repository root; preserved with a provenance header at `archive/GAME_LOG_BLINDSPOT_REVIEW_2026-09-06_RECEIVED.md`, original left in place), an internal read-only review comparing this repository's own records, rules and the first external audit. Every one of its 30 findings (`F01`-`F30`) was checked against primary source before any correction was made -- several were independently re-derived from the settlement table, the ESPN API records retrieved earlier in this session, and the raw preserved component text, and confirmed accurate; none was accepted on assertion alone.
 
 
 | Finding | Verified? | Disposition |
@@ -348,7 +348,7 @@ Source: a second, separately supplied local document (`GAME_LOG_BLINDSPOT_REVIEW
 | `F12` Conditional compatibility (`G25.1`) confused with marginal ranking | **Accepted** -- the counterexample (0.45/0.40/0.15 disjoint outcomes) is mathematically valid | Corrected; `L-108` |
 | `F13` Cushion strength does not force an underdog winner call (`G30.1`) | **Accepted** -- the counterexample (70% cushion cover, 80% favourite outright win, simultaneously valid) is mathematically valid | Corrected; `L-109` |
 | `F14` Tennis match-win/handicap conflation persisted after `L-068` | **Verified against the preserved `P-291` card text**, which does contain the claimed general assertion | Annotated in `RULES_TENNIS.md`; `L-110` |
-| `F15` ETPL reference population incomplete/mislabelled | **Verified against this session's own ESPN retrieval records** -- `P-099`/`P-115`/`P-171` were not queried, and the "Match 13" label was applied to two different fixtures | Flagged in `IMPROVEMENT_PLAN_2026-09-06.md` and `PREDICTION_LOG_COMBINED_2.md`; `L-111`. **Not fully re-derived from scratch** -- see "not yet done" below |
+| `F15` ETPL reference population incomplete/mislabelled | **Verified against this session's own ESPN retrieval records** -- `P-099`/`P-115`/`P-171` were not queried, and the "Match 13" label was applied to two different fixtures | Flagged in `archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md` and `PREDICTION_LOG_COMBINED_2.md`; `L-111`. **Not fully re-derived from scratch** -- see "not yet done" below |
 | `F16` n=2 does not establish bimodality | **Accepted** | `L-083` narrowed; `L-112` |
 | `F17` Phase/resource/format mismatches recur | Consistent with existing controls; the specific examples (Hundred 25-ball powerplay, five-over checkpoints, shortened-match remapping) are already named in the relevant sport files | No new action -- already covered |
 | `F18` Pitch ladder's guaranteed fallback overstated | **Verified against `DATA_SOURCE_REGISTER.md` §6A's actual wording** | Corrected; `L-113` |
@@ -366,7 +366,7 @@ Source: a second, separately supplied local document (`GAME_LOG_BLINDSPOT_REVIEW
 | `F30` No reliable pooled all-history strike rate follows from summaries alone | **Already addressed** by `L-090` (2026-09-06(c)) | Cross-referenced; `L-121` |
 
 
-**What this disposition does not do.** It does not re-audit the full P-001-P-200 game-by-game table the second review supplied -- those entries mostly restate or reinforce controls already covered in this register (`F17`, `F20`, `F25` and the bulk of §7's per-card notes), and re-litigating roughly 200 already-settled historical rows individually is not repeated here; the register instead absorbs the *classes* of finding (`L-102`-`L-121`) so the same class is caught automatically in future work. It does not perform the full `F15` population reconstruction (re-querying every ETPL fixture from the tournament's actual start) -- that remains flagged, not completed, in `IMPROVEMENT_PLAN_2026-09-06.md`. It does not change any settled card's contract outcome (`WIN`/`LOSS`) -- every correction here is to reasoning, disclosure, gate wording, or previously-uncounted-but-recoverable rows, never to a result already recorded from an official final.
+**What this disposition does not do.** It does not re-audit the full P-001-P-200 game-by-game table the second review supplied -- those entries mostly restate or reinforce controls already covered in this register (`F17`, `F20`, `F25` and the bulk of §7's per-card notes), and re-litigating roughly 200 already-settled historical rows individually is not repeated here; the register instead absorbs the *classes* of finding (`L-102`-`L-121`) so the same class is caught automatically in future work. It does not perform the full `F15` population reconstruction (re-querying every ETPL fixture from the tournament's actual start) -- that remains flagged, not completed, in `archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md`. It does not change any settled card's contract outcome (`WIN`/`LOSS`) -- every correction here is to reasoning, disclosure, gate wording, or previously-uncounted-but-recoverable rows, never to a result already recorded from an official final.
 
 
 ### 2026-09-06(c) external blindspot audit disposition — B-01 to B-15
@@ -593,6 +593,8 @@ Three manifests, frozen before any qualifying event. **No event already observed
 
 ## 3. Active prospective tests
 
+> **Pointer (2026-09-25):** tests opened after 2026-09-24 are listed in part A of the section "2026-09-25 audit closure" at the end of this file. The repository copy of the recurring-mistake registry (M1–M30) is in part B of that section.
+
 
 Counts below reproduce historical exploratory completions through P-060. They test process representations only and cannot promote a numerical forecast weight. From v2 onward, an event is added only if the preissue card followed the frozen test and met the eligible population. Retrospective backfilling is prohibited.
 
@@ -693,7 +695,7 @@ The user has confirmed that the non-live issued cards were frozen pre-game. Ten 
 | L-064 | PROMOTED_PROCESS — NARROWED; signed adjustment CANDIDATE | Require competition/round/leg/aggregate-specific baseline comparison; no automatic knockout suppression | P-250; P-234 source recovery showed an early keeper dismissal, so the low score is not a clean baseline case |
 
 
-The detailed “what went right/wrong” and driver/knowability tables are appended to the active prediction log and [full audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md). Existing L-023/L-033/L-037/L-039/L-043/L-047/L-048/L-050/L-058/L-059/L-060 remain reinforced; none gains a fitted weight.
+The detailed “what went right/wrong” and driver/knowability tables are appended to the active prediction log and [full audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md). Existing L-023/L-033/L-037/L-039/L-043/L-047/L-048/L-050/L-058/L-059/L-060 remain reinforced; none gains a fitted weight.
 
 
 | Candidate ID | Comparison to preregister | Eligible population to freeze | Primary assessment / falsification | Completed |
@@ -838,7 +840,7 @@ Earlier origin narratives that declare a 5/10 sample a “pure coin flip,” cal
 | L-20260912-10 | Recovered mini log 8; five missing corner adjudications | PROMOTED_PROCESS: document custody and temporary audit handles; restore supplied material before declaring it absent | Resolve TMP-AUDIT-20260912-01 through -05; do not fabricate the missing artifact |
 
 
-All historical/current log material is learning-only under the latest user direction. These process corrections supersede conflicting historical operational advice. No PROMOTED_FORECAST coefficient, calibrated probability, EV, ROI or performance eligibility was granted. [Full retrospective](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md) and [current register](GAME_LOG_STATUS_CURRENT.md).
+All historical/current log material is learning-only under the latest user direction. These process corrections supersede conflicting historical operational advice. No PROMOTED_FORECAST coefficient, calibrated probability, EV, ROI or performance eligibility was granted. [Full retrospective](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md) and [current register](GAME_LOG_STATUS_CURRENT.md).
 
 
 # 2026-09-15 learning dispositions
@@ -1053,7 +1055,7 @@ Prospective authority: **MDS-2026.09.19-v4.3 / CR-2026.09.21-2**. No historical 
 ## 2026-09-21 all-sports audit disposition receipt
 
 
-The full historical-audit supersession map now lives in [`AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`](AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md). This register remains the lesson/prospective-test archive, but old lesson language is not re-promoted merely because it appears here.
+The full historical-audit supersession map now lives in [`archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`](archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md). This register remains the lesson/prospective-test archive, but old lesson language is not re-promoted merely because it appears here.
 
 
 **Closed as superseded/rejected:** universal normalized-edge ordering; complementary-O/U success inflation; second-highest/second-lowest pseudo-modes; universal probability ceilings; cushion⇒winner and match-winner⇒games-handicap shortcuts; bowl-first⇒low-score; guaranteed venue-history availability; front-end-count⇒independent-source; and one-result rebound/hangover/“due” rules.
@@ -1117,11 +1119,157 @@ Source: `archive/mini_logs/Mini Prediction Log - P-487 to P-494 CONSOLIDATED - 2
 
 | Lesson ID | Evidence | Disposition | Validation still required |
 |---|---|---|---|
-| L-20260924-01 | **Pre-game lineup latency bottleneck resolved across all sports.** Central league structured APIs (MLB StatsAPI, NHL Gamecenter, WNBA/NBA boxscores) frequently populate official lineups only 15–30 minutes before start, causing premature `LINEUPS_NOT_YET_PUBLISHED` and capping Rank #1 under `G14.2`. Real-time search indexing and newsroom live blogs successfully capture venue beat reporting (morning skate combinations, shootaround lines, batting practice orders, scratches) 1–3 hours in advance. | **PROMOTED_PROCESS — `Control S-1 Rev 2` & `PROJECTED_BEAT_VERIFIED`**: S-1 upgraded across all sports. Lineups from accredited beat reporters/team media meeting the 4-point gate (accredited identity, explicit date/venue anchor, 2-source corroboration, verbatim quote) satisfy `G14.2` exposure modeling under `PROJECTED_BEAT_VERIFIED` and do NOT bar Rank #1. Parody, fan, tout, and DFS accounts remain strictly blocked. | Ongoing audit in settlement passes |
+| L-20260924-01 | **Pre-game lineup latency bottleneck resolved across all sports.** Central league structured APIs (MLB StatsAPI, NHL Gamecenter, WNBA/NBA boxscores) frequently populate official lineups only 15–30 minutes before start, causing premature `LINEUPS_NOT_YET_PUBLISHED` and capping Rank #1 under `G14.2`. Real-time search indexing and newsroom live blogs successfully capture venue beat reporting (morning skate combinations, shootaround lines, batting practice orders, scratches) 1–3 hours in advance. | **2026-09-24(f) first settlement audit: ENFORCEMENT FAILED; see L-20260924-F03.** No card claiming `PROJECTED_BEAT_VERIFIED` printed the reporter, timestamp or quote the gate requires, and five of seven diffable cards had false personnel claims. S-1 Rev 2 remains in force with its receipt now mandatory; official lineups published before the freeze take precedence. Original disposition: **PROMOTED_PROCESS — `Control S-1 Rev 2` & `PROJECTED_BEAT_VERIFIED`**: S-1 upgraded across all sports. Lineups from accredited beat reporters/team media meeting the 4-point gate (accredited identity, explicit date/venue anchor, 2-source corroboration, verbatim quote) satisfy `G14.2` exposure modeling under `PROJECTED_BEAT_VERIFIED` and do NOT bar Rank #1. Parody, fan, tout, and DFS accounts remain strictly blocked. | Ongoing audit in settlement passes |
 
 
-| L-20260924-02 | **WTA 125 Tolentino (P-495): Romero Gormaz -5.5 lost to Pieri outright (3-6, 6-4, 6-1).** Underestimated slow red clay underdog resilience and break-back frequency in lower-tier tournaments. | **TESTING — `TENNIS-CHALLENGER-CLAY-HANDICAP-CAP`**: Heavy game handicaps (-5.5+) on slow clay require >78% hold rate and <32% opponent return points won; otherwise cap handicap rank. | Ongoing tennis settlement audit |
-| L-20260924-03 | **EuroLeague Women Qualifiers (P-499): Under 149.5 lost in 101-81 blowout (182 pts).** Applying domestic league (LFB) defensive averages to international club qualifiers severely underprojects transition tempo. | **PROMOTED_PROCESS — `FIBA-CLUB-QUALIFIER-PACE-ADJUSTMENT`**: Single/two-leg international qualifiers require a mandatory +5.5 possession pace adjustment. | FIBA qualification tournaments |
-| L-20260924-04 | **MLB Doubleheader Game 1 (P-501): Over 7.5 lost in 4-2 Orioles win.** Starting pitchers pitching to contact to conserve bullpens for G2, paired with afternoon lighting shadows, deflates totals. | **PROMOTED_PROCESS — `MLB-DOUBLEHEADER-G1-TOTAL-DEFLATION`**: Mandatory deflation check before ranking Over #1 in split or day/night doubleheader Game 1s. | Split/scheduled doubleheaders |
-| L-20260924-05 | **NBL Throwdown Derby (P-508): Under 194.5 won by 47.5 pts (86-61).** High-intensity defensive derbies severely depress transition scoring. | **PROMOTED_PROCESS — `BASKETBALL-DERBY-TOTAL-SUPPRESSION`**: Local derbies with physical half-court containment warrant aggressive Under weighting. | Cross-sport local derbies |
-| L-20260924-06 | **NHL Pre-Season Roster Asymmetry (P-503): Stars ML swept 2-0.** NHL regular core facing AHL/junior trialists creates massive unpriced structural advantage. | **PROMOTED_PROCESS — `NHL-PRESEASON-ROSTER-ASYMMETRY`**: Mandatory roster tier classification under Control S-1 Rev 2 for pre-season contests. | NHL pre-season games |
+| L-20260924-02 | **WTA 125 Tolentino (P-495): Romero Gormaz -5.5 lost to Pieri outright (3-6, 6-4, 6-1).** Underestimated slow red clay underdog resilience and break-back frequency in lower-tier tournaments. | **2026-09-24(f): REJECTED as stated.** The thresholds have no source, and it rests on one match. Replaced by TESTING `T-TEN-LOWTIER-HCP` (L-20260924-F06). Original: **TESTING — `TENNIS-CHALLENGER-CLAY-HANDICAP-CAP`**: Heavy game handicaps (-5.5+) on slow clay require >78% hold rate and <32% opponent return points won; otherwise cap handicap rank. | Ongoing tennis settlement audit |
+| L-20260924-03 | **EuroLeague Women Qualifiers (P-499): Under 149.5 lost in 101-81 blowout (182 pts).** Applying domestic league (LFB) defensive averages to international club qualifiers severely underprojects transition tempo. | **2026-09-24(f): REJECTED as a coefficient.** One game; the possession count was never sourced; the miss was driven by roster and comparator failures. Replaced by TESTING `T-BKB-SEASON-OPENER-WIDTH` (F07). Original: ~~PROMOTED_PROCESS~~ `FIBA-CLUB-QUALIFIER-PACE-ADJUSTMENT`: Single/two-leg international qualifiers require a mandatory +5.5 possession pace adjustment. | FIBA qualification tournaments |
+| L-20260924-04 | **MLB Doubleheader Game 1 (P-501): Over 7.5 lost in 4-2 Orioles win.** Starting pitchers pitching to contact to conserve bullpens for G2, paired with afternoon lighting shadows, deflates totals. | **2026-09-24(f): REJECTED.** 2026 statsapi: G1 P(total<=7) 0.435 (n=23) v 0.427 non-doubleheader (n=2,328). P-501 was overcast, so the "shadows" mechanism is refuted (F05). Original: ~~PROMOTED_PROCESS~~ `MLB-DOUBLEHEADER-G1-TOTAL-DEFLATION`: Mandatory deflation check before ranking Over #1 in split or day/night doubleheader Game 1s. | Split/scheduled doubleheaders |
+| L-20260924-05 | **NBL Throwdown Derby (P-508): Under 194.5 won by 47.5 pts (86-61).** High-intensity defensive derbies severely depress transition scoring. | **2026-09-24(f): REJECTED.** One game. The margin came from PNX shooting 4/41 from three and a 4-point Q4; the "15–30 below lines" claim has no source (F04). Original: ~~PROMOTED_PROCESS~~ `BASKETBALL-DERBY-TOTAL-SUPPRESSION`: Local derbies with physical half-court containment warrant aggressive Under weighting. | Cross-sport local derbies |
+| L-20260924-06 | **NHL Pre-Season Roster Asymmetry (P-503): Stars ML swept 2-0.** NHL regular core facing AHL/junior trialists creates massive unpriced structural advantage. | **2026-09-24(f): DEMOTED** to a non-ranking disclosure item plus TESTING. One win, and the "confirmed" goalie Oettinger did not play (F08). Original: ~~PROMOTED_PROCESS~~ `NHL-PRESEASON-ROSTER-ASYMMETRY`: Mandatory roster tier classification under Control S-1 Rev 2 for pre-season contests. | NHL pre-season games |
+
+
+<!-- AUDIT-2026-09-24F -->
+# 2026-09-24(f) learning dispositions — verification audit of the P-495–P-508 import
+
+Full record: `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(f)". Everything here is learning-only. None of these rows changes a probability, centre or rank. The controls marked `PROMOTED_PROCESS` are integrity, measurement or retrieval controls.
+
+| Lesson ID | Evidence | Disposition | Validation still required |
+|---|---|---|---|
+| L-20260924-F01 | §"2026-09-24(e)" printed a process record for 17 events, and in 14 or more of them it is contradicted by the field owner: linescores, W/L/S, goal types, goalies, quarter lines, coaches, stat lines, weather and a base rate. Examples: TMP-G25 went 12 innings, not 9; P-503 had no empty-net goal; P-506's Under was lost in regulation. Six rules were derived from those narratives. | **PROMOTED_PROCESS — `C-PROCESS-RECORD-PROVENANCE`** (RULES_GENERAL §"2026-09-24(f)"). Every settlement process fact carries its endpoint and retrieval time, or is marked `UNSOURCED`. A block with unsourced causal facts is `PROCESS_RECORD_UNVERIFIED` and cannot support a rule. Extends G-L23; recurs with L-20260923-08 and the synthetic-content trap. | Audit the next settlement pass for URL coverage of every process fact |
+| L-20260924-F02 | 13 of 17 status-register rows, plus the learning-register and sport-file summary tables, misstated the issued Rank-1 contract, lines or winner verdict. Examples: P-500 "Rank-1 Under 8.5" (issued R1 was Nationals +1.5); P-498 "Rank-1 Lietkabelis −4.5 L" (issued R1 was Under 171.5, which won). | **PROMOTED_PROCESS — `C-SUMMARY-FROM-CARD`** (EXTERNAL_LOGGING_WORKFLOW §"2026-09-24(f)"). Every summary row is copied from the issued Field 4 table and cross-checked; a mismatch blocks the import commit. | Spot-check on the next import |
+| L-20260924-F03 | Official box scores contradict the "reported", "confirmed" or `PROJECTED_BEAT_VERIFIED` personnel claims in 5 of the 7 diffable cards. P-500: DET 3/9 named players started. P-501: BAL 2/9 and TOR 3/9, including Santander's 2024 "44 HR" figure. P-503: Oettinger "confirmed", Poirier played. P-508: Hurt listed, did not play; Foster listed out, played. P-499: Brno's top scorer, Puckett (27), missing. P-504 was partly wrong. The completeness script passed field 7 on all of them. | **PROMOTED_PROCESS — `C-LINEUP-DIFF`** (settlement) plus **S-1 Rev 2 receipt enforcement** (issue). `PROJECTED_BEAT_VERIFIED` requires the printed receipt. An official lineup published before the freeze takes precedence; otherwise the state is `RETRIEVAL_MISS` and G14.2's Rank-1 block applies. Recurs with M19 and L-20260923-06. | Per-card lineup diff recorded at every settlement; error rate reviewed after 20 cards |
+| L-20260924-F04 | P-508 Under 194.5 won by 47.5, but PNX shot 24/88 FG and 4/41 from three and scored 4 in Q4. MEL led 69–57 after three. | **REJECTED:** `BASKETBALL-DERBY-TOTAL-SUPPRESSION`. The win is not evidence for a derby mechanism. The rule had already contaminated the P-509 card text. | — |
+| L-20260924-F05 | Doubleheader G1 claim, tested on 2026 statsapi finals (9-inning games): G1 n=23, mean 7.78, P(≤7) 0.435 (95% CI 0.23–0.64); G2 n=23, mean 7.91; non-doubleheader n=2,328, mean 8.98, P(≤7) 0.427. P-501 conditions: overcast, 63 °F, wind in from CF. | **REJECTED:** `MLB-DOUBLEHEADER-G1-TOTAL-DEFLATION`. The G1 and G2 means are both low, which points to a makeup-game confound rather than a G1 mechanism. Base rate recorded in `BASE_RATES_REGISTER.md`. | — |
+| L-20260924-F06 | P-495: Romero Gormaz −5.5 ranked #1 at 0.591 with a mean margin of +5.09 *below* the 5.5 line (normalised edge 0.09). Romero Gormaz had played a 33-game R32; Pieri was in qualifying rhythm. | **TESTING — `T-TEN-LOWTIER-HCP`:** in WTA 125 and ITF matches, games-handicap rows of 5.5 or more with a normalised edge below 0.15 win less often than their stated p. Test on the next 20 such rows by Brier and hit rate against stated p. **No cap and no rank effect meanwhile.** | 20 prospective rows |
+| L-20260924-F07 | P-499: Under 149.5 missed by +37.2 points (2.3 widths). The first competitive game of the season against a cross-league opponent; the top scorer was not modelled; comparator games carried the scoring evidence. | **TESTING — `T-BKB-SEASON-OPENER-WIDTH`:** a team's first competitive game of a season has a larger absolute (actual − centre)/width than concurrent non-opener basketball cards. The response is **width only, never a centre shift**. | 15 prospective opener cards against concurrent non-openers |
+| L-20260924-F08 | P-503: the roster-tier read was right (MIN dressed prospects), but the "confirmed" goalie was wrong, and pre-season goalie usage is often split. | **DEMOTED:** `NHL-PRESEASON-ROSTER-ASYMMETRY` becomes a non-ranking disclosure item (roster tier per side). Pre-season goalie state stays `PROJECTED` until the official lineup. **TESTING `T-NHL-PRESEASON-GOALIE`:** how often the projected pre-season starter plays the full game. | 10 pre-season cards |
+| L-20260924-F09 | R1/R2 pairs covered every outcome in TMP-G25 (DeNA ML plus Chunichi +1.5), P-500 (DET ML plus WSH +1.5), P-502 and P-506 (opposite +1.5). Hit@2 = 1 by construction; both win in any one-run game (27.6% of 2026 MLB finals, n=2,374). The "dual run-line arbitrage" was built on this. | **PROMOTED_PROCESS (measurement) — `G-L22(c) COVERING_PAIR`**; **REJECTED:** "dual run-line arbitrage". Covering-pair cards are excluded from top-two reliability summaries. | — |
+| L-20260924-F10 | `C-RUN-CENTRE-BIAS` prospective residuals (actual − centre): P-493 −3.68 (KBO), P-500 −2.40, P-501 −3.82, P-502 −0.50, P-506 +2.99 (regulation −0.01), P-507 −4.59 (KBO). Mean −2.0; 5 of 6 below. | **ACCRUE.** No coefficient and no Under tilt, per the manifest. Two of the three losing Overs also had lineup or wind retrieval defects, so the retrieval fix comes first. | Unchanged manifest |
+| L-20260924-F11 | P-500 card said "wind out to RC 6–8 mph"; official: **14 mph in from LF**. P-501 card said "73 °F, wind out to LC"; official: **63 °F, overcast, 7 mph in from CF**. Both were losing top-O/U Overs. | **PROMOTED_PROCESS (retrieval):** an MLB total at #1 or as the top O/U prints the statsapi gamefeed `weather` block (condition, temperature, field-relative wind) retrieved at freeze, or `WEATHER_NOT_RETRIEVED`. Extends the weather game-window rule. | Record the gamefeed wind string on every MLB total card |
+| L-20260924-F12 | The six single-game predictive rules were marked `PROMOTED_PROCESS`, against RULES_GENERAL §16.10 item 11 and EXTERNAL_LOGGING_WORKFLOW §3. | **PROMOTED_PROCESS (governance) — `C-PROMOTION-RECEIPT`:** every rule written into a RULES file carries a status, an evidence count and, if predictive, a prospective-test ID. A predictive rule from one or two events is TESTING and non-binding. | Check on every import |
+| L-20260924-F13 | P-496 R2/R3 were graded on reversed set scores (6–2 3–6 7–6(4)). The ITF draw page and TennisExplorer give 2–6 6–3 7–6(3), 15–15 games. | **FIXED:** Vasa +0.5 **W**, Marek −0.5 **L**. Part 5 §(e) note and §(f) part B. | Third lineage not retrievable (Sofascore 403; TennisTemple 404) |
+| L-20260924-F14 | What worked, to preserve: P-505's centre (−1.3); P-498's centre (−4.3); TMP-G25's named tie and one-run branch; P-504's availability retrieval (Stewart absent); P-506's honest coin-flip label; every card printed its family table, P(R1∧R2) and failure mass. | **KEEP** (reinforced). | — |
+
+
+<!-- AUDIT-CLOSURE-2026-09-25 -->
+# 2026-09-25 audit closure — prospective tests, recurring-mistake registry, and carried dispositions
+
+This section implements the learning-register items that three audits mapped but never wrote here:
+- the 2026-09-22 cohort audit: Part 5 §"2026-09-22" §4.3, §4.8 and §5 items 8, 14, 17 and 18;
+- the 2026-09-23 read-only audit: `archive/audit_documents_implemented_2026-09-25/IMPLEMENTED_CHANGES_2026_09_23.md` item 4;
+- the 2026-09-24(f) verification audit: part I.6.
+
+The full closure ledger is at `archive/audit_documents_implemented_2026-09-25/AUDIT_CLOSURE_LEDGER_2026-09-25.md`. Every row is learning-only.
+
+## A. Prospective tests opened or carried (no ranking effect until a test concludes)
+
+These rows use the §3 table format and are PROCESS TESTING ONLY — FORECAST PROMOTION INELIGIBLE until a v2 manifest exists (§3).
+
+| Test ID | Origin | Frozen hypothesis/control | Eligible population | Exploratory checkpoint | Completed | Comparator / review question | Status |
+|---|---|---|---|---:|---:|---|---|
+| `T-TEN-LOWTIER-HCP` | P-495 (2026-09-24(f) E.1) | In WTA 125 and ITF matches, games-handicap rows of 5.5 or more with a normalised edge below 0.15 win less often than their stated p | WTA 125, ATP Challenger and ITF games-handicap rows ≥ 5.5 | 20 | 0 | Brier and hit rate against stated p; no cap meanwhile | TESTING |
+| `T-BKB-SEASON-OPENER-WIDTH` | P-499, with P-497, P-498, P-505, P-508 and P-509 as data points | Early-season or qualifier games (a team's first competitive games of a season) have a larger absolute (actual − centre)/width than concurrent non-opener basketball cards; any response is width only | Basketball full-game totals, Rounds 1–2 or qualifiers | 15 | 6 (P-499 2.33; P-508 2.21; P-509 0.89; P-497 0.47; P-498 0.35; P-505 0.09) | Compare against concurrent non-opener cards; the comparison set does not exist yet | TESTING |
+| `T-NHL-PRESEASON-GOALIE` | P-503 | The projected pre-season starting goalie plays the full game less often than the regular season implies | NHL pre-season cards | 10 | 1 (projected Oettinger; Poirier played 59:29) | Rate of full-game projected starters | TESTING |
+| `T-MLB-WIND-IN-OVER` | P-500, P-501 | Retrieval audit: every MLB total card records the gamefeed wind string at freeze; tracks outcomes where the card's stated wind contradicted the gamefeed | MLB total rows at #1 or top O/U | 10 | 2 (both Overs lost) | Retrieval compliance first; outcome tracking is descriptive | TESTING (retrieval) |
+| `C-TEN-FAV-SEPARATION` | 2026-09-22 audit §4.8 item 3 | Top-two pairs of "Over + underdog games cushion" underperform when the card's favourite mass sits below the Elo benchmark | Tennis cards whose top two are an Over and an underdog cushion | 10 | 5 historical (P-212, P-242, P-310, P-483; counter P-350); 0 prospective | Needs a counted denominator across Parts 1–5 before any prospective count | TESTING |
+| `T-TEN-BENCHMARK-GAP` | 2026-09-22 audit §4.8 item 4 | The gap between a card's winner mass and the Elo benchmark predicts process error (P-350 inside the band, variance; P-483 outside, process defects) | Tennis winner, handicap and total cards | 10 | 0 prospective | Track the gap against outcomes; never used for calibration | TESTING |
+| `T-CRI-DOMINANT-HITTER` | P-482 (R-6); counter-example P-300 | A collapse branch keyed to *which* batter is dismissed (the side's dominant hitter) describes phase risk better than one keyed to wicket count | T20 phase rows with early-wicket risk | 10 | 2 (1 for, 1 against) | Counted sample of phases with early wickets, split by whether the top scorer was dismissed | TESTING (weak, n = 1 for) |
+| `T-CRI-POST-TOSS-FREEZE` | 2026-09-22 audit §4.8 item 5 | Phase rows frozen after the toss are more accurate than those frozen before it | Cricket phase rows | 10 | 0 | Pre-toss against post-toss cards before any default freeze time is recommended | TESTING |
+
+## B. Recurring-mistake registry (M-items), consolidated into the repository
+
+**Why here.** Until 2026-09-25 the M1–M23 registry lived only in one session's memory file ("GATE -0.1"), so other sessions could not apply it. Two audits also proposed colliding numbers: the 2026-09-22 audit's "M21" and the 2026-09-21 forced-pair note's "M20". Both are renumbered below. Every card is checked against this list before ranking. Every retrospective names the M-item it reinforces.
+
+| ID | Leak | Control / home | Evidence |
+|---|---|---|---|
+| M1 | Exact-winner over-trust | G30.1; potential-winner rules | Detroit/Skubal, Atlanta/Padres, South Korea |
+| M2 | Non-loss / double chance over-ranked | Soccer rules | South Africa 1–0 South Korea |
+| M3 | Totals stacked off one factor | Baseball control 26 | P-348, P-356, P-351, P-489 |
+| M4 | Full-total blowout or OT tail against phase Unders | G-L1 families | Chicago 101–78; Southland–Whai OT |
+| M5 | Cold-offence cushion | Sport kill paths | Braves without Acuña |
+| M6 | Reputation or returning ace against a park suppressor | Baseball rules | Skubal 3 HR |
+| M7 | Elite ceiling against a venue Under | Cricket rules | Australia 199/219; England 186 at Lord's |
+| M8 | Bottom-slot honesty | G23.1 | #4 slot record |
+| M9 | Source recency | Source-freshness rule | Cached or proxy rows |
+| M10 | Kill path as prose, not mass | G-L1 (§16.5(a)) | P-340, P-342, P-344 |
+| M11 | Unit uncertainty turned into a directional total lean | G-L2 (§16.5(b)) | P-335, P-339, P-342 |
+| M12 | Tier gap translated into scoring shape | G-L3 candidate | P-341, P-342 |
+| M13 | Aggregate used where the disaggregated record was one click away | G-L7 (§16.5(c)) | P-335, P-339, P-344; P-493 (disclosed absences unpriced) |
+| M14 | Total probability not derived from the card's own centre and width | G-L8 (§16.5(d)) | P-335, P-336 |
+| M15 | Control listed, not executed | §16.8; `audit_card_controls.py` | 0/13 in P-358+; P-482, P-483, P-489 |
+| M16 | Complement not itemised | G-L9 | P-347, P-351, P-354 … |
+| M17 | Small-sample rate as direction | G-L11 | P-356, P-358, P-371, P-483, P-499 |
+| M18 | Top two structurally anti-coupled | G-L10 | Basketball cushion plus Under |
+| M19 | Published lineup not retrieved | G14.2; `RETRIEVAL_MISS` | P-357, P-362, P-365, P-482, P-492 |
+| M20 | Model summary used as the record | G-L13 | Invented Bundesliga corners; P-418 |
+| M21 | Settlement route not consulted | G-L14 | P-406 |
+| M22 | Period-scope mismatch | G-L16 | UEFA `played_time` |
+| M23 | O/U geometry confusion ("at least one O/U won" for a forced pair) | G-L15, G-L22 | 2026-09-06(d); the forced-pair mechanical record, P-474–P-481 (the 2026-09-21 "M20" proposal is this item) |
+| **M24** *(new; proposed as "M21" in the 2026-09-22 audit)* | **State-contaminated evidence window**: evidence from one game state or level sizes a component for another | Control 21 extension (cricket); `TE-S4` matchup holds (tennis); G-L7 | P-482 (chase powerplays sizing batting-first); P-483 (lower-level aggregates sizing a tour-level matchup); precedent P-445 |
+| **M25** *(new)* | **Personnel claim labelled confirmed or projected without retrieval or receipt** | `C-LINEUP-DIFF`; S-1 Rev 2 receipt; `PF-LINEUP-*` | P-500, P-501, P-503, P-504, P-508, P-499 (2026-09-24(f)); P-509 (ADL 3/5) |
+| **M26** *(new)* | **Process record written, not read**: settlement narrative built on invented linescores or events | `C-PROCESS-RECORD-PROVENANCE`; G-L23 | §"2026-09-24(e)" (≥14 of 17 blocks) |
+| **M27** *(new)* | **Single-game predictive rule promoted** | `C-PROMOTION-RECEIPT`; §16.10 item 11 | Six rules in `cb95acd` |
+| **M28** *(new)* | **Covering-pair record read as skill** ("dual run-line arbitrage") | `G-L22(c) COVERING_PAIR` | P-502, P-506 |
+| **M29** *(new)* | **Summary row retyped instead of copied from the card** | `C-SUMMARY-FROM-CARD` | 13/17 status rows in `cb95acd` |
+| **M30** *(new)* | **City forecast used where the gamefeed or venue wind exists** | `RULES_BASEBALL.md` B-2; weather game-window rule | P-500, P-501 (card "out", official "in") |
+
+## C. Dispositions carried from the 2026-09-23 read-only audit (item 4)
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260925-01 | P-483: a coherent Volynets-winner + Kalieva +4.5 + Over pathway existed in the card's own tree. The card's winner call was right; its total and cushion rows lost to decisive straight sets | **EXISTING CONTROL EXECUTION** (G25, `TE-S7`, R-4 decisive-branch disclosure). No new rule | — |
+| L-20260925-02 | The WTA exact-match page is a high-value current lane; profile-page renders were inconsistent | **SOURCE STATE RECORDED** (`DATA_SOURCE_REGISTER.md` §"2026-09-25" (b)) | — |
+| L-20260925-03 | Kalieva's service profile (48 aces and 56 double faults in 126 service games) is more volatile per exposed game than raw totals imply | **OBSERVATION** — two-sided width (G-L2). A volatile server is also more likely to be routed. No coefficient | — |
+| L-20260925-04 | Cricket early-wicket suppression groups unlike remaining batting states | **TESTING** — merged into `T-CRI-DOMINANT-HITTER` (A above) and T-012 | See T-012 |
+| L-20260925-05 | `O-START-MARKER` confirmed for the NBL: the first `jumpBall` event gives the actual tip (P-509 21:36:13 against 21:30; TMP-NBL 19:36:09 against 19:30) | **CONFIRMED (field definition)** — horizon audits use it. L-20260923-07 is closed for the NBL; the WTA definition is still pending | — |
+| L-20260925-06 | The P-482 "result-right / process-different" worked example | **IMPLEMENTED** at `RULES_GENERAL.md` G37 | — |
+| L-20260925-07 | Audit-script defects: segmentation (TMP IDs, level-5 headings, `## Entry N`); the settlement-boundary regex truncating issue-time "**Status:** UNSETTLED" lines (it hid P-494's fields); no sport checklist items | **FIXED** in `audit_card_controls.py` (2026-09-25) with `test_audit_card_controls.py` (17 tests). On the archived P-495–P-508 log, P-493 and TMP-G25 are now audited, and their gaps match the 2026-09-23(c) manual check | — |
+
+<!-- RESEARCH-2026-09-25 -->
+# 2026-09-25(b) research pass — derived references, width measurement and retrieval tooling
+
+**What this pass was.** On the operator's instruction ("research what else can be implemented to improve the results"), the framework's standing `NOT_YET_DERIVED` gaps were derived from field-owner population data. None of the data comes from the log's own cards.
+
+**Evidence.**
+- `BASE_RATES_REGISTER.md` §7;
+- `RECENCY_AND_REBOUND.md` §7;
+- `research/base_rates_2026-09-25/` (queries, scripts, result JSON).
+
+**Controls:** `RULES_GENERAL.md` §"2026-09-25(b)" (a)–(f); sport files §"2026-09-25(b)". Every row below is learning-only. Nothing here is a fitted coefficient (`L-087`), and no historical card was re-graded.
+
+## A. Prospective test opened
+
+| Test ID | Origin | Frozen hypothesis / control | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`C-WIDTH-Z`** | 2026-09-24 cohort width check (`BASE_RATES_REGISTER.md` §7.6) | Issued widths are calibrated: z = (actual − centre)/width has mean z² ≈ 1 within each family | Settled cards issued after `CONTROL_MANIFEST_2026-09-25-2` that print a centre and width. Six families, counted separately: basketball total; basketball margin; baseball total; hockey total; soccer goals total; tennis total games | 20 per family | 0 | Mean z² over the family's first 20 cards against the χ²₂₀/20 band [0.54, 1.57] (5% and 95% points: 10.85/20 and 31.41/20). **Above 1.57:** open a `CANDIDATE` making the family's reference width (§7) the default, with any narrower width needing a written reason; `C-WIDTH-BENCHMARK`'s trigger moves from 0.85 to 1.0 for that family. **Below 0.54:** record "widths too wide" and review the family's width construction. **Inside the band:** retire. z is not exactly normal (discrete, skewed targets); the band is a screening rule, not a test statistic to report as significance | TESTING — PROCESS ONLY |
+
+**Descriptive seed (hindsight; not counted toward the checkpoint).** The 2026-09-24 cohort gave:
+
+| Target | n | Mean z² |
+|---|---:|---:|
+| Totals | 15 | 1.29 |
+| Basketball totals | 7 | **1.93** |
+| Margins | 13 | 0.57 |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260925-08 | `R-1` magnitudes derived for NBA, WNBA, NBL, NHL and EPL. No rebound anywhere. The one-game window is the worst predictor in 6 of 6 competitions measured (18–40% above the league constant). Opponent defence to date improves basketball RMSE by 7–11% | **REFERENCE** (`RECENCY_AND_REBOUND.md` §7). **PROMOTED_PROCESS (disclosure)**: the `R-1` corollary, RULES_GENERAL §"2026-09-25(b)"(e) | Refresh per season |
+| L-20260925-09 | Basketball total widths in the 2026-09-24 cohort ran about 39% narrow (mean z² 1.93, n = 7). LKL cards used total widths of 12.1–12.9 against derived benchmarks of 15.9–19.5 | **PROMOTED_PROCESS (disclosure)** `C-WIDTH-BENCHMARK`. **TESTING (measurement)** `C-WIDTH-Z` (A above). No automatic widening | `C-WIDTH-Z` |
+| L-20260925-10 | Early-season totals: NBL −8.5 (−14.3, −2.7), n = 38, three seasons with the same sign; WNBA +6.5 (+0.4, +12.6), n = 57, three seasons with the same sign. The signs are opposite between leagues | **REFERENCE + disclosure** (RULES_GENERAL §"2026-09-25(b)"(d); RULES_BASKETBALL K-6). No cross-league rule and no coefficient. `T-BKB-SEASON-OPENER-WIDTH` continues (width). It now has a population centre reference beside it | Refresh each season |
+| L-20260925-11 | WNBA 2026 scored 10.7 points per game above 2024–25 (174.4 v 163.7; n = 327 v 530) | **REFERENCE** — an M24 application. WNBA multi-season or head-to-head averages must exclude 2024–25 or adjust for them, and say which | — |
+| L-20260925-12 | NHL structure: 73% of two-goal regulation wins contain an empty-net goal; totals of overtime and shoot-out games are odd; preseason totals are 0.6–0.9 goals below the regular season | **REFERENCE + disclosure** (RULES_ICE_HOCKEY H-R1 to H-R3) | Refresh per season |
+| L-20260925-13 | Tennis population rates now exist (WTA best of 3, n = 5,146). P-495's implied P(margin ≥ 6 \| win) of 0.70 exceeded the straight-sets reference of 0.663 | **REFERENCE**; **PROMOTED_PROCESS (disclosure)** `C-HCP-COHERENCE`, plus the hard identity P(−k.5) ≤ P(win). Measurement lane for `T-TEN-LOWTIER-HCP` | `T-TEN-LOWTIER-HCP` |
+| L-20260925-14 | EPL references (first half, corners, totals); MLB all 30 parks, first five innings, width benchmark | **REFERENCE** (`BASE_RATES_REGISTER.md` §7.3, §7.5) | Refresh per season |
+| L-20260925-15 | NBA back-to-back against a rested opponent: −1.84 (−3.78, +0.11), n = 261; NHL −0.20 (not significant) | **REFERENCE** — the size of a named mechanism; totals show no fatigue effect | — |
+| L-20260925-16 | M19, M25, M26 and M30 are retrieval failures. `receipts.py` reproduces the settled record's own facts: P-503 goalie; P-500 wind; P-506 regulation score; P-504 starters | **PROMOTED_PROCESS (retrieval tool)** `C-RECEIPT-TOOL`, with `test_receipts.py` (17 tests). One lineage only; C-FINAL3 is unchanged | Use at every freeze and settlement in covered lanes |
+| L-20260925-17 | ESPN scoreboard date *ranges* now return HTTP 400; one date per call works | **SOURCE STATE RECORDED** (`DATA_SOURCE_REGISTER.md` §"2026-09-25(b)") | — |
+| L-20260925-18 | `audit_card_controls.py` hard-coded its settlement keys, so a new settlement field would have been scanned against issue text | **FIXED** — `SETTLEMENT_KEYS` is derived from `SETTLEMENT_FIELDS`. Fields `WB`, `HC` and `10z` added (advisory; block under `--strict`). 70 tests pass | — |
+
+## C. Recurring-mistake registry addition
+
+| ID | Pattern | Control | Evidence |
+|---|---|---|---|
+| **M31** *(new; one cohort, so recurrence is to be confirmed by `C-WIDTH-Z`)* | **Width chosen without a reference.** A card's SD is set by feel, well below any population benchmark, so the total or handicap probability is over-confident | `C-WIDTH-BENCHMARK`; `C-WIDTH-Z`; M14 (derive p from the card's own centre and width) | P-497 and P-498 (LKL totals 12.1–12.9; margins 8.4–9.0); P-499 (z +2.33); P-508 (z −2.21) |

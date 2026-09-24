@@ -62,7 +62,7 @@ A3/A4 flexible boosting/neural/distributional challengers, learned ranking and p
 An actual build requires immutable input hashes, source/field availability, population exclusions, exact settings/code hash, training maximum time, validation split manifest, numerical tolerances and every test result. The source owner and endpoint must be checked at field level; qualitative source use does not imply approved model-feature use. Observed final scores are labels, never issue-time covariates. Current-season end-of-season W% must not be joined into earlier forecasts.
 
 
-Record fitting and evaluation artifacts in Markdown as requested; executable code blocks may be extracted in memory for checks. [Implementation validation](audit_2026-09-17_implementation/VALIDATION.md) reports which reference-algorithm and document checks actually ran. Those checks establish implementation consistency, not forecast accuracy. No external data retrieval, training, prospective run or result improvement is claimed by this revision.
+Record fitting and evaluation artifacts in Markdown as requested; executable code blocks may be extracted in memory for checks. Implementation validation (`audit_2026-09-17_implementation/VALIDATION.md`, not present in this repository) reports which reference-algorithm and document checks actually ran. Those checks establish implementation consistency, not forecast accuracy. No external data retrieval, training, prospective run or result improvement is claimed by this revision.
 
 
 <!-- DEEP-RESEARCH-IMPLEMENTATION-2026-09-19-V42 -->

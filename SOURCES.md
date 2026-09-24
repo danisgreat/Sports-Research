@@ -1,7 +1,7 @@
 # Sources — quick reference
 
 
-> **CR-2026.09.21-3:** all historical source-audit findings are reconciled in `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`; older source claims marked superseded/rejected there cannot be revived. CR-3 changes no source-admission semantics; it synchronizes the live control revision after rule read-back.
+> **CR-2026.09.21-3:** all historical source-audit findings are reconciled in `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`; older source claims marked superseded/rejected there cannot be revived. CR-3 changes no source-admission semantics; it synchronizes the live control revision after rule read-back.
 
 
 > **Current revision — 2026-09-19:** METHOD **MDS-2026.09.19-v4.3** is the workflow/template authority; **SCORING_AND_VALIDATION.md** controls conditioning, exact scoring, event-level evaluation and prospective evidence. All existing logs remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. NUMERICAL_PROGRAM controls authorized implementation scope and actual build state; MODEL_IMPLEMENTATION_RECIPES contains the executable Markdown reference. Older dated policy blocks are historical where inconsistent. No source, dataset or model is approved/fitted by this banner.
@@ -12,7 +12,7 @@
 Status: **ACTIVE SOURCE REGISTER — NO H0 FIELD QUALITY-APPROVED YET. New in v4.0 comprehensive overhaul, 2026-09-06.**
 
 
-This document is the compact source table the origin review (`FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md` §7.1) called for. `DATA_SOURCE_REGISTER.md` — now labelled the **full source register** — retains every dated addendum, full source-card audit trail, per-competition prose citation, and the numerical-approval gate mechanics in complete detail. Consult it when a specific source's full audit history is needed; this document is what's consulted per card.
+This document is the compact source table the origin review (`archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md` §7.1) called for. `DATA_SOURCE_REGISTER.md` — now labelled the **full source register** — retains every dated addendum, full source-card audit trail, per-competition prose citation, and the numerical-approval gate mechanics in complete detail. Consult it when a specific source's full audit history is needed; this document is what's consulted per card.
 
 
 **No source below is `APPROVED FOR FEATURE`.** A source being public, official, popular, searchable or technically accessible does not establish permitted automation, retention, redistribution, complete coverage, or a stable definition for numerical training. This table governs prediction-time research and settlement only.
@@ -64,7 +64,7 @@ A prohibited page may be used only as a **discovery pointer**. The fact must be 
 
 1. **Field owner / governing body / competition official:** schedule, rules, final result, gamebook/scorecard, roster/team sheet, official injury/availability release, official tracking/stat feed.
 2. **Official team/club/player communication:** own-team availability, transactions, role/lineup announcements; scope is limited to what that entity can authoritatively know.
-2b. **Credentialed beat reporting and official team media channels:** Accredited journalists (AP, regional newspapers, verified team beat writers, accredited broadcast desks, and official team PR portals/game notes). Scope: starter confirmations, batting orders, morning skate/shootaround line combinations, confirmed scratches/inactives, pitch limits, and rotation intent. Valid pre-game availability evidence under Control `S-1 Rev 2`.
+2b. **Credentialed beat reporting and official team media channels:** Accredited journalists (AP, regional newspapers, verified team beat writers, accredited broadcast desks, and official team PR portals/game notes). Scope: starter confirmations, batting orders, morning skate/shootaround line combinations, confirmed scratches/inactives, pitch limits, and rotation intent. Valid pre-game availability evidence under Control `S-1 Rev 2`. **2026-09-24(f):** item 2b applies only when the field owner (item 1) has not published before the freeze. A 2b lineup claim counts only with its printed S-1 Rev 2 receipt (outlet, reporter, timestamp, verbatim quote, two sources); see §"2026-09-24 / 2026-09-24(f)".
 3. **Independent structured sports-data provider with known lineage/definitions:** historical/process features where coverage and licensing are documented.
 4. **Named reputable reporter / broadcaster / wire service:** availability, workload and tactical context, with timestamp and sourcing; corroborate material claims when possible.
 5. **Generic derivative score/stat sites:** discovery/corroboration only unless a field-specific source card proves definitions, lineage and point-in-time fitness.
@@ -289,7 +289,7 @@ Source approval is field-specific. Re-open the exact event, season, sex/team lev
 | [Sofascore Sikkim exact pairing](https://www.sofascore.com/football/match/aakraman-sc-sikkim-boys-club/zxuhsicEi) | Candidate identity/result lead only | Explicit community editor; cannot resolve the inherited organiser-level conflict alone |
 
 
-Sporting Life betting-tips/in-play previews are excluded from future MARKET_BLIND feature retrieval even when they contain weather/pitch prose; locate the original non-market sporting source. Ignore prediction/odds widgets adjacent to otherwise useful score data. ESPN's empty 2026-09-08 Uganda query returned a stale 2025-26 season, not proof that no match occurred. UAE official fixture shells did not expose current corner totals. [Full evidence and limitations](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md). All new lanes remain RESEARCH ONLY/CANDIDATE; no H0 feature approval or bulk-ingestion permission is implied.
+Sporting Life betting-tips/in-play previews are excluded from future MARKET_BLIND feature retrieval even when they contain weather/pitch prose; locate the original non-market sporting source. Ignore prediction/odds widgets adjacent to otherwise useful score data. ESPN's empty 2026-09-08 Uganda query returned a stale 2025-26 season, not proof that no match occurred. UAE official fixture shells did not expose current corner totals. [Full evidence and limitations](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md). All new lanes remain RESEARCH ONLY/CANDIDATE; no H0 feature approval or bulk-ingestion permission is implied.
 
 
 ## 2026-09-15 — sources demonstrated during the `P-364` final settlement and queue retry
@@ -583,3 +583,77 @@ Full cards: `DATA_SOURCE_REGISTER.md` §"2026-09-23".
 - **NBL availability:** the official preview's expected depth chart and the injury list come first. Print first names where surnames collide (Jaylin v Kyrin Galloway).
 - **WTA live:** the match feed can drop a live match from its list; use the ESPN tennis scoreboard as the live cross-check.
 - **Lineage rule reminder:** a league feed and a publisher on the same data vendor are one lineage until shown otherwise. Record the vendor where a feed exposes it (e.g., `sportradar_timestamp`).
+
+
+<!-- AUDIT-2026-09-24F -->
+## 2026-09-24 / 2026-09-24(f) — quick reference: Control S-1 Rev 2 in practice, and lanes verified by retrieval
+
+`CONTROLS.md` and `DATA_SOURCE_REGISTER.md` both point here as §"2026-09-24". Until now no such section existed; this section resolves those pointers. Full register rows: `DATA_SOURCE_REGISTER.md` §"2026-09-24(f)".
+
+### Control S-1 Rev 2 — what a valid use looks like
+
+S-1 Rev 2 (hierarchy item 2b above) admits accredited beat or team-media lineup reports when the official feed has not yet published. Its **first settlement audit, on 2026-09-24, failed on enforcement**:
+- no card that claimed `PROJECTED_BEAT_VERIFIED` printed a reporter, timestamp or quotation;
+- personnel claims were wrong in five of the seven cards that could be diffed.
+
+From 2026-09-24(f):
+1. **Receipt required.** A `PROJECTED_BEAT_VERIFIED` state requires the printed receipt: outlet, reporter, publication timestamp, a verbatim quote, and a second source. Without it, the state is `NOT_RETRIEVED`.
+2. **Item 1 outranks item 2b.** When the field owner has published before the freeze, only the official lineup may be used. Examples: MLB statsapi `battingOrder`; NPB and KBO official orders; NBA, WNBA and NBL official starters; the NHL official lineup or goalie.
+3. **Settlement diff.** At settlement, every card's personnel claim is diffed against the official box (`C-LINEUP-DIFF`).
+
+### Verified lanes (settlement and process record)
+
+| Need | Lane | Class |
+|---|---|---|
+| ITF tennis final, sets and tiebreaks | ITF draws-and-results page via `r.jina.ai`; `GetCalendar` / `GetEventFilters` JSON via `r.jina.ai` for key, surface and indoor flag | Primary |
+| Tennis second lineage | TennisExplorer `match-detail` via `r.jina.ai` (scores only; its odds columns are firewalled) | Secondary |
+| MLB lineup, pitching lines, weather and wind | statsapi `/game/<pk>/boxscore` (`battingOrder`, `info[]` Wind/Weather) | Primary |
+| KBO final and decisions | KBO English scoreboard (curl) | Primary (no box score) |
+| NPB final including extra innings | `npb.jp/scores/.../box.html` | Primary |
+| NHL goals and goalies | `api-web.nhle.com` with **curl** (Python urllib gets 403) | Primary |
+| WNBA/NBL starters, DNP reasons, shooting | ESPN `summary?event=` (no browser User-Agent) | Primary for settlement |
+| EuroLeague Women | FIBA game page via `r.jina.ai` | Primary |
+| LKL quarter lines and coaches | BasketNews match page via `r.jina.ai` | Secondary |
+| Minor-league basketball (LMB) | xscores match page via `r.jina.ai` | Fallback |
+
+**Excluded:** `archysport.com` (synthetic content), MSN syndication (counts only as its upstream), and the Sofascore API, tennislive and the TennisTemple player page (all blocked or missing this pass).
+
+
+<!-- AUDIT-CLOSURE-2026-09-25 -->
+## 2026-09-25 — quick reference: audit-closure source items
+
+Full rows are in `DATA_SOURCE_REGISTER.md` §"2026-09-25".
+
+**Cricket settlement order.**
+1. The official final report or scorecard.
+2. An independent exact scorecard (Cricbuzz, or the ESPN API league-ID route: CPL `8623`, plus `playbyplay`).
+3. Independent reporting (e.g. Nation News).
+
+Republications of one release count once: CaribbeanCricket.com and CricTracker are the CPL lineage. A duck is not "0 not out" or "did not bat". ESPN over labels are checked with the run-rate identity. ESPNcricinfo HTML returns 403 to automated fetch.
+
+**Tennis.**
+- The WTA exact-match page is the field owner, and the draw PDF is the same lineage (parse its text layer).
+- Tennis Majors is an independent terminal-state lineage.
+- Tennis Abstract WTA Elo is a **benchmark only**, snapshotted before the event (`RULES_TENNIS.md` `TE-P5`).
+- Take facts from match pages, not automated renders of player profiles.
+- No admitted WTA totals base-rate source exists (the Sackmann repository returned 404).
+
+**NBL start marker.** The first `jumpBall` event in the NBL match feed gives the actual tip. It has been about six minutes after the scheduled time twice (19:36:09 and 21:36:13 AEST).
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — quick reference: receipts and base-rate lanes
+
+**Receipts (use these instead of typing facts).**
+- **Freeze, MLB:** `python receipts.py pregame mlb <gamePk>` gives probables, gamefeed weather, official batting orders and umpires, or prints `LINEUPS_NOT_YET_PUBLISHED` / `WEATHER_NOT_YET_PUBLISHED`.
+- **Freeze, ESPN-covered leagues:** `python receipts.py pregame espn basketball/nbl <eventId>` gives the state and the injury list. An empty list is not a confirmation of availability.
+- **Settlement:** `python receipts.py settle mlb|nhl|espn …` gives the final, the lines, the regulation score, decisions, goalies' time on ice, empty-net goals, starters and minutes, DNPs and the `C-LINEUP-DIFF` lines (`--card-home "A;B;C"`).
+- The tool is one lineage. C-FINAL3 still needs three.
+
+**Base-rate lanes** (`DATA_SOURCE_REGISTER.md` §"2026-09-25(b)"):
+- The ESPN scoreboard takes **one date per call**; ranges return HTTP 400.
+- ESPN tennis covers the Slams, tour and WTA 125 events, but not ITF.
+- The NHL `score/{date}` endpoint (curl only) carries per-goal `empty-net` flags.
+- The ESPN soccer summary carries goal minutes and `wonCorners`.
+- Market keys are never read.
+
+**Where the numbers live:** `BASE_RATES_REGISTER.md` §7 and `RECENCY_AND_REBOUND.md` §7.

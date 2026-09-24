@@ -221,6 +221,69 @@ class PreflightTests(unittest.TestCase):
 
 
 
+    # --- 2026-09-24(f) / 2026-09-25 participant-state object ---------------------------
+
+    def _receipt(self, outlet, published="2026-09-19T11:30:00+10:00"):
+        return {"outlet": outlet, "reporter": "Named Reporter", "published_at": published,
+                "quote": "Starting lineup: A, B, C, D, E"}
+
+    def test_manifest_without_participants_still_passes(self):
+        m = valid_manifest()
+        self.assertNotIn("PF-LINEUP-STATE", self.codes(m))
+        self.assertEqual([f for f in validate(m) if f.level == "BLOCK"], [])
+
+    def test_projected_beat_verified_without_receipt_blocked(self):
+        m = valid_manifest()
+        m["participants"] = {"lineup_state": "PROJECTED_BEAT_VERIFIED"}
+        self.assertIn("PF-LINEUP-RECEIPT", self.codes(m))
+
+    def test_projected_beat_verified_with_two_outlet_receipt_passes(self):
+        m = valid_manifest()
+        m["participants"] = {"lineup_state": "PROJECTED_BEAT_VERIFIED",
+                             "official_lineup_published_before_freeze": False,
+                             "s1r2_receipt": [self._receipt("Outlet One"), self._receipt("Outlet Two")]}
+        self.assertFalse({c for c in self.codes(m) if c.startswith("PF-LINEUP")})
+
+    def test_single_outlet_receipt_blocked(self):
+        m = valid_manifest()
+        m["participants"] = {"lineup_state": "PROJECTED_BEAT_VERIFIED",
+                             "s1r2_receipt": [self._receipt("Outlet One"), self._receipt("outlet one")]}
+        self.assertIn("PF-LINEUP-RECEIPT", self.codes(m))
+
+    def test_receipt_published_after_freeze_blocked(self):
+        m = valid_manifest()
+        m["participants"] = {"lineup_state": "PROJECTED_BEAT_VERIFIED",
+                             "s1r2_receipt": [self._receipt("Outlet One"),
+                                              self._receipt("Outlet Two", "2026-09-19T12:30:00+10:00")]}
+        self.assertIn("PF-LINEUP-RECEIPT", self.codes(m))
+
+    def test_official_lineup_precedence_blocks_projected_state(self):
+        m = valid_manifest()
+        m["participants"] = {"lineup_state": "PROJECTED_BEAT_VERIFIED",
+                             "official_lineup_published_before_freeze": True,
+                             "s1r2_receipt": [self._receipt("Outlet One"), self._receipt("Outlet Two")]}
+        self.assertIn("PF-LINEUP-OFFICIAL-PRECEDENCE", self.codes(m))
+
+    def test_confirmed_official_after_freeze_blocked(self):
+        m = valid_manifest()
+        m["participants"] = {"lineup_state": "CONFIRMED_OFFICIAL",
+                             "official_lineup_published_before_freeze": True,
+                             "official_lineup_retrieved_at": "2026-09-19T12:10:00+10:00"}
+        self.assertIn("PF-LINEUP-TIME", self.codes(m))
+
+    def test_confirmed_official_before_freeze_passes(self):
+        m = valid_manifest()
+        m["participants"] = {"lineup_state": "CONFIRMED_OFFICIAL",
+                             "official_lineup_published_before_freeze": True,
+                             "official_lineup_retrieved_at": "2026-09-19T11:55:00+10:00"}
+        self.assertFalse({c for c in self.codes(m) if c.startswith("PF-LINEUP")})
+
+    def test_unknown_lineup_state_blocked(self):
+        m = valid_manifest()
+        m["participants"] = {"lineup_state": "CONFIRMED"}
+        self.assertIn("PF-LINEUP-STATE", self.codes(m))
+
+
 
 if __name__ == "__main__":
     unittest.main()

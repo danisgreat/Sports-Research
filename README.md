@@ -56,7 +56,7 @@ The executable preflight now enforces source-count/lineage diversity, event time
 
 
 
-See [Cricket rules](RULES_CRICKET.md) §2, [source register](DATA_SOURCE_REGISTER.md) §6A, [sources](SOURCES.md), [research guide](UPCOMING_GAME_RESEARCH_GUIDE.md), [implementation ledger](AUDIT_IMPLEMENTATION_2026-09-21.md), and [control manifest](CONTROL_MANIFEST_2026-09-21.md). This is an integrity/retrieval change; no predictive-lift claim is made.
+See [Cricket rules](RULES_CRICKET.md) §2, [source register](DATA_SOURCE_REGISTER.md) §6A, [sources](SOURCES.md), [research guide](UPCOMING_GAME_RESEARCH_GUIDE.md), [implementation ledger](archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-21.md), and [control manifest](CONTROL_MANIFEST_2026-09-21.md). This is an integrity/retrieval change; no predictive-lift claim is made.
 
 
 
@@ -119,12 +119,12 @@ Part 4 is closed at P-481. Part 5 (`PREDICTION_LOG_COMBINED_5.md`) is the active
 
 
 
-[Implementation ledger](AUDIT_IMPLEMENTATION_2026-09-17.md) · [Original model review](MODEL_REVIEW_2026-09-17.md) · [Original evidence](audit_2026-09-17_models/REVIEW_EVIDENCE.md) · [Validation and control hashes](audit_2026-09-17_implementation/VALIDATION.md).
+[Implementation ledger](archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-17.md) · [Original model review](archive/audit_documents_implemented_2026-09-25/MODEL_REVIEW_2026-09-17.md) · Original evidence (`audit_2026-09-17_models/REVIEW_EVIDENCE.md`, not present in this repository) · Validation and control hashes (`audit_2026-09-17_implementation/VALIDATION.md`, not present in this repository).
 
 
 
 
-The revision fixes integer push scoring, removes unsupported MLB run-line/push caps and fixed variance floors, corrects extra-inning completion logic, replaces overlapping-window pseudo-tests, permits declared hierarchical uncertainty, and prevents numerical row caps from contradicting a printed distribution. It preserves frozen issued predictions and appends settlement/score corrections. The old README's dated history is preserved in [the before snapshot](audit_2026-09-17_implementation/before/README_with_margin_band_addition.md); it is not current policy.
+The revision fixes integer push scoring, removes unsupported MLB run-line/push caps and fixed variance floors, corrects extra-inning completion logic, replaces overlapping-window pseudo-tests, permits declared hierarchical uncertainty, and prevents numerical row caps from contradicting a printed distribution. It preserves frozen issued predictions and appends settlement/score corrections. The old README's dated history is preserved in the before snapshot (`audit_2026-09-17_implementation/before/README_with_margin_band_addition.md`, not present in this repository); it is not current policy.
 
 
 
@@ -220,7 +220,7 @@ This revision makes the project **strictly market-independent at prediction time
 
 
 
-Executable gate: [`prediction_preflight.py`](prediction_preflight.py). Full rationale and implementation record: [`AUDIT_IMPLEMENTATION_2026-09-19.md`](AUDIT_IMPLEMENTATION_2026-09-19.md).
+Executable gate: [`prediction_preflight.py`](prediction_preflight.py). Full rationale and implementation record: [`archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-19.md`](archive/audit_documents_implemented_2026-09-25/AUDIT_IMPLEMENTATION_2026-09-19.md).
 
 
 
@@ -246,7 +246,7 @@ This synchronization does **not** establish predictive skill. H0 remains not bui
 
 
 
-[`AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`](AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md) is the current supersession/duplication ledger for historical audit findings across baseball, cricket, soccer, basketball, AFL/AFLW, rugby league, rugby union/sevens, American football, ice hockey and tennis. It prevents an older finding from being reintroduced after later evidence rejected or narrowed it, and prevents an already-implemented finding from being double-counted.
+[`archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`](archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md) is the current supersession/duplication ledger for historical audit findings across baseball, cricket, soccer, basketball, AFL/AFLW, rugby league, rugby union/sevens, American football, ice hockey and tennis. It prevents an older finding from being reintroduced after later evidence rejected or narrowed it, and prevents an already-implemented finding from being double-counted.
 
 
 
@@ -280,3 +280,93 @@ CR-3 removes residual active wording that conflicted with the CR-2 supersession 
 - The consolidated log is archived at `archive/mini_logs/Mini Prediction Log - P-487 to P-494 CONSOLIDATED - 2026-09-23/`.
 - Content receipt: [CONTROL_MANIFEST_2026-09-23.md](CONTROL_MANIFEST_2026-09-23.md). Method and control revision are unchanged (MDS-2026.09.19-v4.3 / CR-2026.09.21-3).
 - Everything remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+
+<!-- AUDIT-2026-09-24F -->
+## Verification audit of the P-495–P-508 import — 24 September 2026(f)
+
+**Scope.**
+- A peer session settled TMP-G25 and P-493–P-508 at 22:47 AEST (`cb95acd`).
+- This pass re-verified every final against field-owner or structured feeds and checked every causal claim against the real process record. Full record: Part 5 §"2026-09-24(f)".
+- **P-509 (NBL, Perth v Adelaide) was live throughout and is not settled**, per the operator's instruction. It stays in the active mini log `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-509 onward - 2026-09-24/`.
+
+**Finals and grades.** All 17 finals are right. **One grade pair was wrong**: P-496 Vasa +0.5 is now a WIN and Marek −0.5 a LOSS, because the ITF draw sheet gives 15–15 games.
+
+**The peer's process record was largely invented.** Linescores, decisions, goal types, goalies, quarter lines, coaches and game IDs were written rather than read. For example, TMP-G25 went 12 innings, not 9, and P-503 had no empty-net goal. The six single-game rules built on those narratives are **withdrawn or demoted**:
+- doubleheader-G1 deflation: 2026 G1 P(total ≤ 7) is 0.435 (n=23) against 0.427 for other games;
+- derby Under suppression: P-508's margin came from 4/41 three-point shooting;
+- "dual run-line arbitrage": a mechanical cover, since both opposite +1.5 rows win in any one-run game (27.6%);
+- FIBA qualifier pace;
+- the clay handicap cap;
+- NHL pre-season asymmetry.
+
+**The biggest real defect is at issue time.** In 5 of the 7 cards that could be checked, the printed "reported/confirmed" lineups were wrong. P-501's Rank-1 Over was built on a Baltimore lineup of which only 2 of the 9 named players started. Two losing MLB Overs also printed the wind as blowing out when the official record says it was blowing in.
+
+**Controls added.** All are integrity, measurement or retrieval controls; none is a forecasting coefficient: `C-PROCESS-RECORD-PROVENANCE`, `C-LINEUP-DIFF` with S-1 Rev 2 receipt enforcement, `G-L22(c) COVERING_PAIR`, `C-SUMMARY-FROM-CARD`, `C-PROMOTION-RECEIPT`, and MLB gamefeed weather at freeze.
+
+**Where to look.** The descriptive batch record, the verified source lanes and the base rates are in Part 5 §(f) part M, `DATA_SOURCE_REGISTER.md` §"2026-09-24(f)" and `BASE_RATES_REGISTER.md` §5. Everything remains **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**.
+
+
+<!-- AUDIT-CLOSURE-2026-09-25 -->
+## Audit closure and archive — 25 September 2026
+
+**Every audit's implementable recommendations are now in the governing files, and the audit documents are archived.** The 15 audit documents (2026-09-05 to 2026-09-23) moved to [`archive/audit_documents_implemented_2026-09-25/`](archive/audit_documents_implemented_2026-09-25/). Their index and item-by-item receipt is [`AUDIT_CLOSURE_LEDGER_2026-09-25.md`](archive/audit_documents_implemented_2026-09-25/AUDIT_CLOSURE_LEDGER_2026-09-25.md).
+
+**What was still missing** came mainly from three sources:
+- the 2026-09-22 cohort audit, whose mapping had never been written in;
+- the 2026-09-23 read-only audit, items 4–10;
+- the propagation of the 2026-09-24(f) controls.
+
+**Key changes:**
+- cricket phase totals by innings order;
+- the tennis benchmark as a blocking precondition, and matchup holds from serve × return;
+- the METHOD probability-wording contradiction resolved;
+- `COVERING_PAIR` and settlement-integrity labels;
+- the recurring-mistake registry (M1–M30) now in-repo;
+- the audit script repaired (it had silently truncated issue-time cards) and extended;
+- a preflight `participants` object.
+
+**Still open** (empirical, not documentable): the H0 dataset, chronological fits, prospective shadow, ~~non-MLB `R-1` magnitudes~~ (derived for five competitions in the 2026-09-25(b) research pass, below) and every TESTING manifest. These are tracked in `NUMERICAL_PROGRAM.md`, `H0_DATASET_CARD.md` and `LEARNING_REGISTER.md`.
+
+**Custody:**
+- P-509 settled (Part 5 §"2026-09-24(g)").
+- P-484–P-486, P-488 and P-492 imported verbatim (Part 5 §"2026-09-25(a)").
+- Active mini log: `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-510 onward - 2026-09-25/PREDICTION_MINI_RUNNING_LOG_P510_ONWARD.md`.
+- Next ID: **P-510**.
+- Control receipt: [`CONTROL_MANIFEST_2026-09-25.md`](CONTROL_MANIFEST_2026-09-25.md), superseded the same day by `CONTROL_MANIFEST_2026-09-25-2.md` (below).
+- Everything remains **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**.
+
+<!-- RESEARCH-2026-09-25 -->
+## Research pass — 25 September 2026(b)
+
+**Question asked:** what else can be implemented to improve future results? **Answer, in short:** the recurring losses of the last cohorts were mostly *retrieval* failures (lineups, weather, invented process records) and *uncalibrated widths*, not missing model sophistication. This pass therefore did two kinds of work.
+
+**1. Derived the base rates the framework had marked `NOT_YET_DERIVED`,** from population data rather than the log's own cards.
+- **Recency (`R-1`) in five more competitions** (NBA, WNBA, NBL, NHL, EPL) — [`RECENCY_AND_REBOUND.md`](RECENCY_AND_REBOUND.md) §7. There is no rebound anywhere. The previous game is the worst predictor in 6 of 6 competitions, 18–40% worse than the league average. In basketball, the opponent's defence to date is worth more than any recency window.
+- **Reference rates** — [`BASE_RATES_REGISTER.md`](BASE_RATES_REGISTER.md) §7:
+  - league totals, margin bands, quarter shapes and width benchmarks;
+  - NBL early season **−8.5** and WNBA early season **+6.5** points (three seasons each, opposite signs);
+  - the WNBA 2026 regime shift of **+10.7** points;
+  - the NHL empty-net structure (73% of two-goal wins) and preseason rates;
+  - EPL first-half goals and corners;
+  - WTA/ATP total-games and games-handicap conditionals, which close the recorded WTA gap;
+  - all 30 MLB parks and first-five-innings rates.
+- **Width check** of the 2026-09-24 cohort: basketball total widths ran about 39% too narrow (mean z² 1.93, n = 7).
+
+**2. Built and wired the controls that act on it.**
+- [`receipts.py`](receipts.py) prints freeze and settlement receipts with endpoints: MLB lineups, weather and probables; NHL goalies and empty-net goals; ESPN starters and DNPs; the regulation score; and the `C-LINEUP-DIFF` lines. It replays the settled P-500, P-503, P-504 and P-506 facts exactly. Tests: [`test_receipts.py`](test_receipts.py), 17.
+- The controls themselves are in [`RULES_GENERAL.md`](RULES_GENERAL.md) §"2026-09-25(b)":
+  - `C-WIDTH-BENCHMARK` (disclosure);
+  - `C-WIDTH-Z` (measurement; prospective manifest in `LEARNING_REGISTER.md`);
+  - `C-RECEIPT-TOOL`;
+  - early-season and regime references;
+  - the `R-1` one-game corollary;
+  - tennis `C-HCP-COHERENCE`.
+- The sport files each have a §"2026-09-25(b)"; the research guide and logging workflow have new checklist steps.
+- `audit_card_controls.py` gained fields `WB`, `HC` and `10z`, and a settlement-key fix. Tests: 70 in total.
+- Registry item **M31** was added: width chosen without a reference.
+
+**None of this moves a probability, centre, width or rank by itself.** Everything is disclosure, measurement or retrieval, and no coefficient was fitted from the log (`L-087`).
+- Queries, scripts and results: [`research/base_rates_2026-09-25/`](research/base_rates_2026-09-25/README.md).
+- Custody: the stray root `PREDICTION_MINI_RUNNING_LOG_P474_ONWARD.md` was checked and moved intact into its archive folder.
+- Control receipt: [`CONTROL_MANIFEST_2026-09-25-2.md`](CONTROL_MANIFEST_2026-09-25-2.md).

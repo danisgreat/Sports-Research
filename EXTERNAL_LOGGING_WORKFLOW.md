@@ -238,7 +238,7 @@ Old games may measure their issued methods and supply development evidence for i
 For each future change, update the active prediction log, the specific sport rule document or RULES_GENERAL for cross-sport controls, LEARNING_REGISTER for disposition, and relevant method/source/workflow documents in the same pass. Append a dated, source-linked retrospective with original ranks, results, what went right/wrong, knowability, prior lessons and the exact adopted change. Record pending fields and live-at-first-check deferrals in the active queue. Preserve original issued cards and label superseding corrections. Document validation and link the changed Markdown files in the audit change log before delivery.
 
 
-Current implementation: [September 5 audit change log](AUDIT_CHANGELOG_2026-09-05.md).
+Current implementation: [September 5 audit change log](archive/audit_documents_implemented_2026-09-25/AUDIT_CHANGELOG_2026-09-05.md).
 
 
 ## Archival completeness — added 2026-09-06 (`G34.1` / `L-086`)
@@ -423,6 +423,7 @@ The distinction matters because the two produce identical-looking audit output a
 
 ```
 python audit_card_controls.py <mini_log.md> --settlement
+python audit_card_controls.py <mini_log.md> --settlement --strict   # cards issued/settled after the 2026-09-25 manifest
 ```
 
 
@@ -452,7 +453,7 @@ External/mini logs may preserve the method/control version that governed an alre
 ## 2026-09-21 all-sports audit-precedence note
 
 
-For an unissued card, resolve audit conflicts through `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` before copying any older mini-log instruction. A later verified correction supersedes an incompatible older audit finding; a redundant finding is not re-added; and historical cards keep the method/control revision frozen at issue. This is a workflow/authority correction only and creates no predictive coefficient, probability cap or performance claim.
+For an unissued card, resolve audit conflicts through `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` before copying any older mini-log instruction. A later verified correction supersedes an incompatible older audit finding; a redundant finding is not re-added; and historical cards keep the method/control revision frozen at issue. This is a workflow/authority correction only and creates no predictive coefficient, probability cap or performance claim.
 
 
 <!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-23 -->
@@ -490,7 +491,77 @@ The P-494 log in turn pointed at an external Codex attachment (the only full cop
    - Re-check modification times immediately before each write.
    - Never delete a file whose hash differs from its archived copy.
 
-**Audit-script limitation (proposed tooling fix; not changed in this pass).**
+**Audit-script limitation (proposed tooling fix; not changed in this pass).** *— **Resolved 2026-09-25.** The segmentation now uses the `BEGIN/END VERBATIM ISSUED RECORD` markers, recognises `TMP-` IDs and level-5/6 headings, and ignores `## Entry N`. The real cause of P-494's false negatives was also fixed: the settlement-boundary regex treated the issue-time line "**Status:** UNSETTLED — LIVE-ISSUED VIEW" as the start of settlement text. Tests: `test_audit_card_controls.py`.*
 - `audit_card_controls.py` opens a card at a `P-###` heading and closes it at the next `## ` heading.
 - Cards whose fields sit under "## Entry 1 / ## Entry 2" (P-494), or in bold-label paragraphs (P-491), are reported as missing fields they visibly print.
 - Record its output together with a manual field check (as in Part 5 §"2026-09-23(c)" F.1) until the segmentation is fixed.
+
+
+<!-- AUDIT-2026-09-24F -->
+## 2026-09-24(f) — a peer import whose finals were right and whose process record was invented
+
+**What arrived.** At 22:47 AEST a peer repository session committed `cb95acd`. It:
+- settled the P-495-onward mini log (TMP-G25 and P-493–P-508);
+- archived the mini log;
+- created the P-509-onward log;
+- wrote six new rules into five RULES files.
+
+The operator then asked for this pass, with the instruction not to settle live logs.
+
+**What the verification found.**
+1. **All 17 finals were right.** One grade pair was wrong: P-496 had its set scores reversed.
+2. **The process record was largely invented.** In 14 or more of 17 blocks it is contradicted by the field owner: linescores, decisions, goal types, goalies, quarter lines, coaches, stat lines, game IDs, weather and a base rate.
+3. **The rules were built on the invented narratives.** Six predictive rules were derived from those narratives and promoted from one game each.
+4. **The summaries misstated the cards.** 13 of 17 status-register rows, and the learning-register and sport-file tables, misstated the issued ranks, lines or winners.
+5. **Pointers and snapshot were broken.** The §"2026-09-24(e)" heading cited by every register row did not exist, and the Part 5 snapshot was not advanced.
+6. **The cards were not appended.** The issued cards were never added to Part 5.
+
+**The 2026-09-17(b) standing rule gets one more clause.**
+> Verify the final, recompute the arithmetic, check the causal claim against the process record — **and read the process record from the feed instead of writing it.** A settlement can be right about every score and still invent the game.
+
+**Import checklist additions (all now required).**
+1. **`C-PROCESS-RECORD-PROVENANCE`.** Every process fact in a settlement block carries its endpoint and retrieval time. Unsourced causal facts make the block `PROCESS_RECORD_UNVERIFIED`, and no rule may cite it.
+2. **`C-SUMMARY-FROM-CARD`.** Generate every register and summary row from the issued Field 4 table, then diff the summary against the card. A mismatch blocks the commit.
+3. **`C-LINEUP-DIFF`.** At settlement, diff every card's named personnel against the official box.
+4. **`C-PROMOTION-RECEIPT`.** No predictive rule enters a RULES file as `PROMOTED_PROCESS` from the games that suggested it. It enters as `TESTING`, with a prospective-test ID.
+5. **Pointer resolution (2026-09-23 rule, re-applied).**
+   - Every "§X" cited in a register row must exist as a heading.
+   - The Part 5 snapshot's next ID must equal the status register's next ID.
+   - Issued cards must be present in Part 5 (or explicitly `BODY_NOT_CARRIED`) before their settlement is summarised as "full records in Part 5".
+6. **Leftover sweep.** Drive re-syncs can restore already-processed mini-log folders into `Mini logs (to be sent to actual log later)/`. On 2026-09-24 this happened with the P-482 and P-484 folders.
+   - Hash each leftover against the archive.
+   - If it is byte-identical, move it to `archive/mini_logs/originals_<date>/` with a receipt.
+   - If it differs, verify that every event in it is already settled, then move it (never delete).
+
+**Live-event handling (operator instruction, 2026-09-24).** P-509 was live throughout the pass. It is not settled and not retrospected, and it stays the only record in the active mini log. The audit added only a pre-settlement checklist (Part 5 §(f) part N), without touching the issued card text.
+
+
+<!-- AUDIT-CLOSURE-2026-09-25 -->
+## 2026-09-25 — audit closure: archive conditions and registration timing
+
+These items were mapped by the 2026-09-22 cohort audit (§5 item 21) and the 2026-09-23 read-only audit (item 10) but never written here. Closure ledger: `archive/audit_documents_implemented_2026-09-25/AUDIT_CLOSURE_LEDGER_2026-09-25.md`.
+
+1. **Archive a mini log only after canonical custody is verified.** Before a processed mini log moves to `archive/mini_logs/`, confirm each of these in the canonical files:
+   - every issued card is preserved verbatim in Part 5, or explicitly `BODY_NOT_CARRIED`;
+   - every row has its target-level settlement;
+   - every required retrospective is written: Rank-1, `TOP_OU_REVIEW` and wins audited;
+   - every unresolved handle is still tracked in the active mini log and the status register.
+
+   On 2026-09-24 the P-495–P-508 log was archived while its cards were not yet in Part 5; they were appended by the §"2026-09-24(f)" audit (Appendix Z).
+2. **Registration within 24 hours** (`METHOD.md` §3 step 7). This recurred on the P-482-onward log, registered about 35–39 hours after issue. It is an existing rule, so no new rule is added; this is recurrence evidence only.
+3. **Commands for new cohorts:** `python audit_card_controls.py <log.md> --settlement --strict`, and for automated manifests `python prediction_preflight.py <manifest.json>`, which now accepts the optional `participants` object.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — settlement additions: receipts, z-scores and reference rows
+
+Home: `RULES_GENERAL.md` §"2026-09-25(b)". These steps apply to every card settled after `CONTROL_MANIFEST_2026-09-25-2`.
+
+1. **Process record from the receipt tool** (`C-RECEIPT-TOOL`, implementing `C-PROCESS-RECORD-PROVENANCE`). In lanes the tool covers, paste the output of one of these:
+   - `python receipts.py settle mlb <gamePk> --card-away "…" --card-home "…" --card-sp-away X --card-sp-home Y`;
+   - `… settle nhl <gameId> --card-goalie-away X --card-goalie-home Y`;
+   - `… settle espn <sport/league> <eventId> --card-away "…" --card-home "…"`.
+
+   The output carries the endpoints, the regulation score (for regulation-only contracts), and the `C-LINEUP-DIFF` lines. It is **one** terminal lineage; C-FINAL3's other two lineages are still fetched separately.
+2. **z-scores** (`C-WIDTH-Z`). For each card that printed a centre and width, append `z_total = (actual − centre)/width` and `z_margin` to the settlement block. Add them to the `C-WIDTH-Z` manifest count for the card's family (`LEARNING_REGISTER.md` §"2026-09-25(b)" A).
+3. **Reference rows at review.** A Rank-1 or `TOP_OU_REVIEW` retrospective states where the actual result fell against the §7 reference row. For example, "total 195: 0.89 card-SDs above the centre; the league 1H share was 0.51". This separates "unusual game" from "card far from population".
+4. **Audit.** `python audit_card_controls.py <log.md> --settlement --strict` now also checks `WB`, `HC` and `10z`.

@@ -12,7 +12,7 @@
 
 
 Status: **ACTIVE**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Method version: **MDS-2026.09.06-v4.0**
 Applies with RULES_GENERAL.md, MODEL_AND_DATA_SPEC.md, ALGORITHM_PORTFOLIO_AND_EVALUATION.md, and NUMERICAL_TRAINING_SPEC.md.
 Executable algorithm: **SFA-CRICKET (§10) — instantiates GFA-2 in RULES_GENERAL.md §11**
@@ -179,6 +179,8 @@ At the competition's actual toss window, refresh the official match centre, offi
 
 Record explicitly whether the forecast freeze was `PRE_TOSS` or `POST_TOSS`.
 
+**Toss check at toss + 5 minutes (added 2026-09-25; 2026-09-22 audit).** Where the registered ESPN `summary?event=` route carries a `toss` note in `notes[]`, query it about five minutes after the competition's usual toss time and before the final refresh. In P-482 the CPL toss (about 30 minutes before the first ball, roughly 08:30 AEST) was probably public before the 08:54:41 AEST final refresh, yet it was not retrieved: a probable `RETRIEVAL_MISS` under control 32.
+
 
 ### 2.8 Toss decision as weak circumstantial context
 
@@ -316,9 +318,9 @@ Calibrate the whole CDF or a shared monotone transformation. Separate threshold 
 16. **Phase-to-innings transition is joint.** Link a powerplay/first-five/first-six target to the innings only through the phase-end state distribution—runs, wickets, batters/resources, bowling allocation and conditions. Phase runs alone cannot project the completed innings. A correct phase direction does not validate the innings direction, or vice versa.
 17. **Sparse or inaugural competitions require hierarchical shrinkage.** One venue innings, one prior match or a short direct series cannot own the baseline. Separate competition, venue, team/player and broader format priors; disclose their compatibility and weight, then condition on verified toss/XI/strip. If toss/XI or start state is unresolved, lower evidence quality rather than using weather or one low total as a deterministic Under.
 18. **Test rearguards are survival processes.** A large lead and wickets required are not sufficient for a win lean. Model remaining playable balls, current batters, partnership/farming ability, new-ball cycles, bowler workload, dismissal hazards, weather/light and follow-on fatigue. Repeated same-match tail resistance is current evidence, not merely a season-average outlier. A multi-day match's own strip is not a fixed condition: where a day-1/day-2 pitch/toss report exists, treat later-day turn, bounce and deterioration as a within-match wear trajectory distinct from that opening report, and update it from what the match itself has shown (footmarks, patch wear, ball behaviour already observed) rather than re-using the first-day description unchanged.
-19. **Retained resources can reverse phase direction.** At every limited-overs phase boundary, condition the next rate on runs, wickets, batter identities/roles, boundary access, bowling overs remaining, target/required rate and conditions. A slow powerplay with wickets/resources intact can accelerate above the innings line; a fast powerplay with depleted batting resources can finish below it. Rank phase and innings contracts on their own conditional distributions.
-20. **Phase participants outrank phase H2H.** For powerplay, middle and death contracts, confirm or explicitly mix the batting-order positions and likely bowlers actually exposed to that phase. A prior same-opponent phase score with materially different openers, finishers or bowling roles is a discounted mechanism clue, not the phase baseline; unresolved roles cap evidence.
-21. **Pregame innings totals require an innings-order mixture.** Before the toss, build separate bat-first and bat-second/chase branches. The chase branch includes target censoring, early completion and required-rate incentives; it cannot borrow the full 20/50-over exposure of the first-innings branch. Merely mentioning chase truncation without propagating it through the corridor and rank is insufficient.
+19. **Retained resources can reverse phase direction.** At every limited-overs phase boundary, condition the next rate on runs, wickets, batter identities/roles, boundary access, bowling overs remaining, target/required rate and conditions. A slow powerplay with wickets/resources intact can accelerate above the innings line; a fast powerplay with depleted batting resources can finish below it. Rank phase and innings contracts on their own conditional distributions. **Extended 2026-09-25 (audit closure; 2026-09-23 read-only audit item 7):** model *which* wickets fall and the surviving batters' strike exposure jointly with the phase-bowler allocation (which batter faces which bowler, for roughly how many balls), not a wicket count alone. Derive the full-match winner from the explicit innings states: the bat-first total distribution, then the target, then the chase-resource process. Never derive it from an innings-total lean. Structure only; no coefficient. Evidence: P-482, where the realised mechanism was one batter (Sadaqat 114) and the named failure path fired for him alone.
+20. **Phase participants outrank phase H2H.** For powerplay, middle and death contracts, confirm or explicitly mix the batting-order positions and likely bowlers actually exposed to that phase. A prior same-opponent phase score with materially different openers, finishers or bowling roles is a discounted mechanism clue, not the phase baseline; unresolved roles cap evidence. **Reinforced 2026-09-25 (2026-09-22 audit, P-482):** the phase map must at minimum name the incoming Nos. 3–4 and **both** opposing new-ball bowlers, not only the openers.
+21. **Pregame innings totals require an innings-order mixture.** Before the toss, build separate bat-first and bat-second/chase branches. The chase branch includes target censoring, early completion and required-rate incentives; it cannot borrow the full 20/50-over exposure of the first-innings branch. Merely mentioning chase truncation without propagating it through the corridor and rank is insufficient. **Extended 2026-09-25 to every phase total (R-1 of the 2026-09-22 audit; audit closure).** The same mixture governs powerplay, middle-overs, death and first-N-overs rows. Before the toss a phase row is an explicit bat-first / chase mixture with printed weights. After the toss it uses the realised branch only. Team and venue phase windows are split by innings order and printed with n. A phase component sized on chase powerplays may not be applied to a batting-first innings, and vice versa. Evidence: ETPL 2026 Match 15 (69/1 chasing v 60/1 setting); P-445 (Jamaica 79/0 chasing v a batting-first mean of 43.5); P-482 (Kensington 12–18 Sep, batting-first powerplay mean 35.0 v chasing 60.0, n = 5 each). This is a construction and disclosure rule; no coefficient.
 22. **Near-start identity gaps cap evidence.** When toss, innings order, confirmed XI or exact current strip remains unresolved near scheduled start, target-specific evidence is at most `LOW` unless a predeclared mixture demonstrates that the direction survives every material state. Named openers, phase bowlers or finishers that are not confirmed must remain role branches, not facts.
 23. **Evidence units are overlap-aware.** The same match cannot count independently as a recent-form row, same-venue row, H2H row and prior-log case. Likewise, several score fronts sharing one upstream feed are one source lineage. Preserve each useful transformation, but shrink from the unique underlying events and disclose the overlap.
 24. **A batting or bowling run is not self-correcting, and it is not self-perpetuating.** A team or player on a run of Unders, Overs, low powerplay scores, or wicket clusters neither "regresses" nor "continues" without a named, currently active mechanism under the streak persistence-versus-reversion audit (RULES_GENERAL.md §11.3E, G17.1) — for example a returning bowler/batter, a genuinely different attack/order faced, a strip that behaves differently from the recent venue run, or a demonstrated tactical change. Absent that, rank from the longer-run format/venue baseline (rung 6, DATA_SOURCE_REGISTER.md §6A) and widen the corridor rather than leaning on the streak's direction or its reversal. This applies equally to a chasing team's recent target-censored totals, which must first be separated from bat-first totals under control 21 before any trend across them is assessed.
@@ -340,6 +342,11 @@ Store target ID/version, cutoff and endpoint; innings, score, legal balls/overs,
 
 
 For DLS, use the official revised target/result; do not reverse-engineer proprietary resource tables. Settle exact phases from official phase data or a legality-reconciled delivery reconstruction.
+
+**Settlement additions (2026-09-25 audit closure).**
+- **Official final reports first.** The competition's own final report or scorecard is the first settlement lineage, for example the CPL official final report or an exact final scorecard on Cricbuzz or ESPNcricinfo. Republications of one release (such as CaribbeanCricket.com and CricTracker copying the CPL release) count as **one** lineage.
+- **Zero is not a duck.** A batter who did not bat, or who was not out on 0, is different from a dismissed duck. Player-level rows settle from the official scorecard's dismissal field, never from a runs value alone.
+- **Over labels in summarised feeds.** An ESPN over label can be off by one (its "over 5" deliveries were the sixth over in P-482). Verify every phase checkpoint with the run-rate identity (e.g. 59 at 9.83 per over means 6.0 overs) before settling a phase row.
 
 
 ## 8. Numerical research basis
@@ -424,7 +431,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 | Contract | Queried from | Extra condition the mechanism must predict |
 |---|---|---|
 | Innings total | The innings-target corridor with `CR-S2` innings-order mixture | For a chasing side, the target cap and early completion; a first-innings corridor may not be reused |
-| Phase total | The phase's own conditional distribution from `CR-S3`/`CR-S4` | The batting positions and bowlers actually exposed to those balls |
+| Phase total | The phase's own conditional distribution from `CR-S3`/`CR-S4`, as a bat-first / chase mixture before the toss or the realised branch after it (control 21, extended 2026-09-25) | The batting positions and bowlers actually exposed to those balls, and the innings order |
 | Nested lines on one target | One CDF, integrated at each threshold | Over probability falls as the line rises; Under probability rises; a violation is a failed model record |
 | Match result | Full match-resource process, including defendability of the projected target | Never inferred mechanically from an innings-total lean |
 | Player milestone | Crease time, balls faced and dismissal hazard | Boundary sensitivity at the exact threshold |
@@ -444,6 +451,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 | Test lower-order and follow-on resistance | A win lean resting on lead and wickets required | C-PL5-CR-TEST-REARGUARD, §5 control 18 |
 | Runs already scored before a rain stop | The assumption that interruption risk supports an Under | §5 controls 9 and 13, L-040 |
 | The same match counted as form, venue, head-to-head and prior-log evidence | An evidence grade inflated by repetition | §5 control 23, L-049 |
+| A chase-anchored phase read applied to a batting-first innings (the reverse of chasing-side powerplay inflation) | A phase Over sized on chase powerplays for a side that may bat first | P-482 (Kensington batting-first mean 35.0 v chasing 60.0; Jamaica chasing 77.0 v batting-first 50.0); control 21 extension (2026-09-25) |
 | A returning bowler/batter, genuinely different attack faced, or a strip that reads differently from the recent run | An Under/Over or a reversal ranked purely on streak length without a currently active named mechanism | §5 control 24, RULES_GENERAL.md §11.3E (G17.1) |
 
 
@@ -462,7 +470,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 
 1. `CR-P1`–`CR-P5` status printed, including both conditions statuses and the toss state.
 2. Format-and-venue baseline stated before any line.
-3. Batting and bowling phase-resource maps stated, with unconfirmed roles held as branches.
+3. Batting and bowling phase-resource maps stated, with unconfirmed roles held as branches, naming at least the incoming Nos. 3–4 and both opposing new-ball bowlers (control 20).
 4. All eight `CR-B*` branches represented, with the innings-order mixture explicit when the toss is unresolved.
 5. Nested-line monotonicity verified across every supplied line on one target.
 6. Kill-path rows selected from §10.5 and reconciled against the issued order.
@@ -477,6 +485,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 14. Rank-1 implied-target interval (G25.1) stated in the unit of every other supplied line, each remaining row classified `COHERENT`/`PARTIAL_OVERLAP`/`DISJOINT`, and every aggregate budget re-solved conditional on the Rank-1 state.
 15. Winner-and-cushion reconciliation (G30.1) whenever Rank #1 is an underdog cushion, with the outright-win and narrow-loss branch ordering stated. Example separation kill path for this sport: a death-overs acceleration or a middle-order collapse.
 16. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
+17. **Phase rows (added 2026-09-25):** the innings-order mixture is printed before the toss, or the realised branch after it, with team and venue phase windows split by innings order and n (control 21). The toss is retrieved at the toss window, via the registered ESPN `summary` `notes[]` route where available (§2.7).
 
 
 ### 10.8 Recency, head-to-head and trend windows
@@ -491,7 +500,7 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 | Window metric | Content |
 |---|---|
 | Team innings totals | Completed innings totals in this exact format, split by bat-first and chase |
-| Phase output | Powerplay, middle and death runs and wickets, for and against, as separate series |
+| Phase output | Powerplay, middle and death runs and wickets, for and against, as separate series, **each split by bat-first and chase** (control 21, extended 2026-09-25) |
 | Batting resources | Each decision-driving batter's own last 5/10/15/20 innings: position, balls faced, strike rate and dismissal mode |
 | Bowling resources | Each likely bowler's own last 5/10/15/20 spells: phase bowled, overs, economy and wickets |
 | Venue window | **The last 5/10/15/20 matches at this exact venue in this format and rules era, by innings order.** This is rung 6 of the conditions ladder and is mandatory |
@@ -569,7 +578,7 @@ Preserve P-286's already-issued 12-over contract versus P-217's interrupted 20-o
 
 
 
-Full evidence and frozen-card comparisons: [September 5 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
+Full evidence and frozen-card comparisons: [September 5 audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
 
 
 ## September 5(b) settlement learning — P-294–P-305 second continuation
@@ -664,7 +673,7 @@ Edinburgh Castle Rockers' two prior full powerplays were **68 for 3** and **55 f
 **Pre-issue checklist additions (this sport):** settlement endpoint named per row; coaching/bench/rotation record for both sides with missingness codes; tail-budget sums printed against every total line; path-geometry class and `N` printed for every total and phase-total row; separation-floor result stated for Rank #1.
 
 
-Full narrative and evidence: [`IMPROVEMENT_PLAN_2026-09-06.md`](IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
+Full narrative and evidence: [`archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md`](archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
 
 
 ## September 5 implementation after freeze confirmation
@@ -783,7 +792,7 @@ Four issued cricket cards and one fail-closed administrative closure ([`PREDICTI
 Keep Test restart targets conditional on the observed innings state, ball age, wickets and batter/bowler resources. P-364 remains a live Test with settled innings/45-over rows; no winner is awarded early. The 39-to-45-over target added 54 runs, not six overs from a fresh innings. A nominated XI before toss is not proof of a publicly accessible team sheet. For P-357/P-366, missing public availability times remain unknown. Preserve P-366's unreached fixed 20-over target as censored. Remove the Sporting Life betting-tips preview used in P-364 from prospective sporting inputs and retrieve original market-blind reporting. Strike rate/run rate are not binomial proportions.
 
 
-For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. [Shared correction and methodology sources](audit_2026-09-12/rule_corrections.md). All current log observations remain learning-only and not performance-eligible.
+For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. Shared correction and methodology sources (`audit_2026-09-12/rule_corrections.md`, not present in this repository). All current log observations remain learning-only and not performance-eligible.
 
 
 
@@ -1092,4 +1101,4 @@ This section is the current prospective override for audit-derived ranking logic
 
 - **Retained sport package:** legal-ball/resource phase mapping; XI and role continuity; toss, exact strip and match conditions kept separate; exact current-strip evidence; venue-format baseline with honest missingness; DLS/reduced-overs branches.
 - **Withdrawn here:** second-highest/median or second-lowest/median pseudo-tail construction; path-count/category shortcuts as ranking rules; universal 40–60% top-slot bands; normalized-distance ordering; any one-result rebound/hangover/“due” rule; and any implication that a cushion determines the outright winner.
-- **Current construction:** build one coherent sport-native joint outcome distribution/branch mixture, freeze it before supplied lines are queried, then derive exact target marginals and dependencies from that object. When a fitted/calibrated numerical distribution does not exist, keep probabilities unquantified rather than inventing precision.
+- **Current construction:** build one coherent sport-native joint outcome distribution/branch mixture, freeze it before supplied lines are queried, then derive exact target marginals and dependencies from that object. When a fitted/calibrated numerical distribution does not exist, a probability may be printed only as an `UNVALIDATED_SUBJECTIVE` output of the card's own complete, reproducible, declared distribution (METHOD §5). A number that cannot be reproduced from the printed distribution is invented precision and is not permitted. No subjective number carries a performance, calibration or value claim. *(Wording corrected 2026-09-25: the earlier "keep probabilities unquantified" contradicted METHOD §5; 2026-09-23 read-only audit item 5.)*

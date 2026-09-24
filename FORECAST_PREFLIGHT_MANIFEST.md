@@ -171,4 +171,43 @@ An unknown toss or a genuinely unavailable same-format venue history is **not it
 ## CR-2026.09.21-3 audit-precedence receipt
 
 
-This revision does not change the preflight schema or predictive semantics. It records the all-sports historical-audit reconciliation in `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`: later verified corrections supersede incompatible older findings; redundant findings are not duplicated; rejected historical shortcuts remain non-operative. The source firewall, line quarantine, point-in-time, lineage, distribution-first, settlement, and cricket source-state controls are unchanged.
+This revision does not change the preflight schema or predictive semantics. It records the all-sports historical-audit reconciliation in `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`: later verified corrections supersede incompatible older findings; redundant findings are not duplicated; rejected historical shortcuts remain non-operative. The source firewall, line quarantine, point-in-time, lineage, distribution-first, settlement, and cricket source-state controls are unchanged.
+
+
+<!-- AUDIT-CLOSURE-2026-09-25 -->
+## 2026-09-25 — optional `participants` object (S-1 Rev 2 receipt and official-lineup precedence)
+
+Implements the 2026-09-24(f) control in `RULES_GENERAL.md` §"2026-09-24(f)"(c) for automated manifests. The object is **optional**: a manifest without it validates exactly as before. When it is present, `prediction_preflight.py` validates it fail-closed.
+
+```json
+"participants": {
+  "lineup_state": "PROJECTED_BEAT_VERIFIED",
+  "official_lineup_published_before_freeze": false,
+  "official_lineup_retrieved_at": "2026-09-19T11:55:00+10:00",
+  "s1r2_receipt": [
+    {"outlet": "Outlet One", "reporter": "Named Reporter", "published_at": "2026-09-19T11:30:00+10:00", "quote": "verbatim lineup line"},
+    {"outlet": "Outlet Two", "reporter": "Named Reporter", "published_at": "2026-09-19T11:32:00+10:00", "quote": "verbatim lineup line"}
+  ]
+}
+```
+
+| Code | Blocks when |
+|---|---|
+| `PF-LINEUP-OBJECT` | `participants` is present but not an object |
+| `PF-LINEUP-STATE` | `lineup_state` is not one of `CONFIRMED_OFFICIAL`, `PROJECTED_BEAT_VERIFIED`, `LINEUPS_NOT_YET_PUBLISHED`, `RETRIEVAL_MISS`, `NOT_RETRIEVED`, `NOT_APPLICABLE` |
+| `PF-LINEUP-OFFICIAL-PRECEDENCE` | `official_lineup_published_before_freeze` is true and the state is anything other than `CONFIRMED_OFFICIAL` or `RETRIEVAL_MISS` |
+| `PF-LINEUP-TIME` | `CONFIRMED_OFFICIAL` with `official_lineup_retrieved_at` after `distribution_frozen_at` |
+| `PF-LINEUP-RECEIPT` | `PROJECTED_BEAT_VERIFIED` without receipts from **two distinct outlets**, each with outlet, reporter, `published_at` (at or before freeze) and a verbatim quote |
+
+Tests: `test_prediction_preflight.py` (29 tests, including 9 participant-state cases).
+
+## 2026-09-25 — settlement receipts (C-FINAL3) are not inferred from a pregame PASS
+
+A pregame PASS says nothing about settlement. Each settlement lineage is recorded with:
+- its exact URL or endpoint and event ID;
+- the field owner;
+- the upstream lineage, including the data vendor where exposed;
+- the known-at or retrieved-at time;
+- its admissibility.
+
+**Three hostnames do not certify C-FINAL3.** Mirrors, syndicated copies and pages built on one vendor feed count once (`CONTROLS.md` C-FINAL3; 2026-09-23 read-only audit item 6).

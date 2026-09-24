@@ -1,0 +1,576 @@
+{
+ "gameData": {
+  "teams": {
+   "away": {
+    "name": "Chicago Cubs",
+    "abbreviation": "CHC"
+   },
+   "home": {
+    "name": "Boston Red Sox",
+    "abbreviation": "BOS"
+   }
+  },
+  "datetime": {
+   "dateTime": "2026-09-25T17:05:00Z"
+  },
+  "status": {
+   "abstractGameState": "Preview",
+   "codedGameState": "S",
+   "detailedState": "Scheduled",
+   "statusCode": "S",
+   "startTimeTBD": false,
+   "abstractGameCode": "P"
+  },
+  "venue": {
+   "name": "Fenway Park"
+  },
+  "weather": {},
+  "probablePitchers": {}
+ },
+ "liveData": {
+  "linescore": {
+   "currentInning": null,
+   "scheduledInnings": 9,
+   "teams": {
+    "home": {},
+    "away": {}
+   },
+   "innings": []
+  },
+  "decisions": {},
+  "boxscore": {
+   "teams": {
+    "away": {
+     "battingOrder": [],
+     "pitchers": [],
+     "players": {
+      "ID694037": {
+       "person": {
+        "fullName": "Daniel Palencia"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID624424": {
+       "person": {
+        "fullName": "Michael Conforto"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "DH"
+       }
+      },
+      "ID621438": {
+       "person": {
+        "fullName": "Tyrone Taylor"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "LF"
+       }
+      },
+      "ID665795": {
+       "person": {
+        "fullName": "Edward Cabrera"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID664023": {
+       "person": {
+        "fullName": "Ian Happ"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "LF"
+       }
+      },
+      "ID665871": {
+       "person": {
+        "fullName": "Javier Assad"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID573204": {
+       "person": {
+        "fullName": "Caleb Thielbar"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID684007": {
+       "person": {
+        "fullName": "Shota Imanaga"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID608324": {
+       "person": {
+        "fullName": "Alex Bregman"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "3B"
+       }
+      },
+      "ID699393": {
+       "person": {
+        "fullName": "Pedro Ramírez"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID683737": {
+       "person": {
+        "fullName": "Michael Busch"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "1B"
+       }
+      },
+      "ID608348": {
+       "person": {
+        "fullName": "Carson Kelly"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID691718": {
+       "person": {
+        "fullName": "Pete Crow-Armstrong"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "CF"
+       }
+      },
+      "ID592332": {
+       "person": {
+        "fullName": "Kevin Gausman"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID657097": {
+       "person": {
+        "fullName": "Jacob Webb"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID665804": {
+       "person": {
+        "fullName": "Miguel Amaya"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID672356": {
+       "person": {
+        "fullName": "Gabriel Arias"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "3B"
+       }
+      },
+      "ID673548": {
+       "person": {
+        "fullName": "Seiya Suzuki"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "RF"
+       }
+      },
+      "ID650644": {
+       "person": {
+        "fullName": "Aaron Civale"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID666171": {
+       "person": {
+        "fullName": "Ryan Zeferjahn"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID656849": {
+       "person": {
+        "fullName": "David Peterson"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID669020": {
+       "person": {
+        "fullName": "Ryan Rolison"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID605280": {
+       "person": {
+        "fullName": "Clay Holmes"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID571510": {
+       "person": {
+        "fullName": "Matthew Boyd"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID607067": {
+       "person": {
+        "fullName": "Colin Rea"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID621020": {
+       "person": {
+        "fullName": "Dansby Swanson"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "SS"
+       }
+      },
+      "ID663538": {
+       "person": {
+        "fullName": "Nico Hoerner"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID807713": {
+       "person": {
+        "fullName": "Matt Shaw"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "RF"
+       }
+      }
+     }
+    },
+    "home": {
+     "battingOrder": [],
+     "pitchers": [],
+     "players": {
+      "ID670103": {
+       "person": {
+        "fullName": "Raymond Burgos"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID701350": {
+       "person": {
+        "fullName": "Roman Anthony"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "LF"
+       }
+      },
+      "ID687562": {
+       "person": {
+        "fullName": "Jake Bennett"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID575929": {
+       "person": {
+        "fullName": "Willson Contreras"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "1B"
+       }
+      },
+      "ID594027": {
+       "person": {
+        "fullName": "Tyron Guerrero"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID663776": {
+       "person": {
+        "fullName": "Patrick Sandoval"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID663330": {
+       "person": {
+        "fullName": "Jahmai Jones"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "DH"
+       }
+      },
+      "ID687941": {
+       "person": {
+        "fullName": "Alec Gamboa"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID669711": {
+       "person": {
+        "fullName": "Greg Weissert"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID657136": {
+       "person": {
+        "fullName": "Connor Wong"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID668939": {
+       "person": {
+        "fullName": "Adley Rutschman"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID596115": {
+       "person": {
+        "fullName": "Trevor Story"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "SS"
+       }
+      },
+      "ID678394": {
+       "person": {
+        "fullName": "Brayan Bello"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID677800": {
+       "person": {
+        "fullName": "Wilyer Abreu"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "RF"
+       }
+      },
+      "ID676477": {
+       "person": {
+        "fullName": "Garrett Whitlock"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID543243": {
+       "person": {
+        "fullName": "Sonny Gray"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID655316": {
+       "person": {
+        "fullName": "Andruw Monasterio"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "SS"
+       }
+      },
+      "ID643396": {
+       "person": {
+        "fullName": "Isiah Kiner-Falefa"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID681508": {
+       "person": {
+        "fullName": "Mickey Gasper"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "DH"
+       }
+      },
+      "ID702332": {
+       "person": {
+        "fullName": "Caleb Durbin"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "3B"
+       }
+      },
+      "ID624133": {
+       "person": {
+        "fullName": "Ranger Suarez"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID680776": {
+       "person": {
+        "fullName": "Jarren Duran"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "LF"
+       }
+      },
+      "ID686765": {
+       "person": {
+        "fullName": "Nick Sogard"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID801139": {
+       "person": {
+        "fullName": "Payton Tolle"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID678882": {
+       "person": {
+        "fullName": "Ceddanne Rafaela"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "CF"
+       }
+      },
+      "ID663558": {
+       "person": {
+        "fullName": "Jovani Morán"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID669062": {
+       "person": {
+        "fullName": "Erik Miller"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID547973": {
+       "person": {
+        "fullName": "Aroldis Chapman"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      }
+     }
+    }
+   },
+   "officials": [],
+   "info": [
+    {
+     "label": "Umpires",
+     "value": ""
+    },
+    {
+     "label": "Venue",
+     "value": "Fenway Park."
+    },
+    {
+     "label": "September 25, 2026"
+    }
+   ]
+  }
+ }
+}

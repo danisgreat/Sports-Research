@@ -3,7 +3,7 @@
 
 
 
-> **CR-2026.09.21-3 current audit-precedence override:** [`AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`](AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md) remains the supersession map for historical audit findings. CR-3 additionally removes stale live gate text that survived the CR-2 prose reconciliation. Older text remains provenance only where superseded/rejected; duplicate findings must not be double-weighted.
+> **CR-2026.09.21-3 current audit-precedence override:** [`archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`](archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md) remains the supersession map for historical audit findings. CR-3 additionally removes stale live gate text that survived the CR-2 prose reconciliation. Older text remains provenance only where superseded/rejected; duplicate findings must not be double-weighted.
 
 
 
@@ -23,7 +23,7 @@
 
 
 Status: **ACTIVE — FULL GATE REFERENCE; §16 IS CONTROLLING FOR WHAT IS MANDATORY**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Method version: **MDS-2026.09.19-v4.3**\nControl revision: **CR-2026.09.21-3**
 Executable algorithm: **GFA-2 (§11) — general forecast algorithm; sport instantiations are the SFA-<SPORT> sections in each sport file**
 Numerical training specification: **NTS-2026.09.19-v0.5 — Stage 0 all-sports design/pre-fit**
@@ -1528,7 +1528,7 @@ Ranking is by marginal estimated win likelihood and robustness under the exact c
 |---|---|
 | **G36** | Settle from the official final, field by field, preserving conflicting provider values and their lineages. Mark a contract invariant only when every credible value falls on the same side of the frozen line. |
 | **G36.1** | **Standard-rules settlement; `PROVISIONAL` is not a terminal state (refined 2026-09-06(d) — two separate fields, not one).** A row whose only remaining obstacle is *unsupplied operator terms* is graded under the stated standard rules of the competition **as a `RESEARCH_GRADE`**, with the standard-rules assumption written down beside the grade. Record `OPERATOR_ACTION` **separately** as `UNKNOWN_DEFINITION` where no operator ticket/terms were ever supplied — sporting/competition rules (retirement, reduced-overs/DLS, overtime/shootout, listed-player conditions) do not by themselves determine what an *unidentified operator's contract* pays out on. `RESEARCH_GRADE` may be `WIN`/`LOSS`/`PUSH` under the stated standard-rules convention while `OPERATOR_ACTION` remains genuinely `UNKNOWN` — these are not in tension, and neither field may be silently dropped or merged into the other. `PROVISIONAL` and `UNRESOLVED` are reserved for genuine source conflict or genuinely missing *result* data, not for a missing operator convention, which now has its own field. This follows directly from the governing price-independence rule: a missing price or missing operator wording never justifies leaving a finished event's `RESEARCH_GRADE` ungraded, but it also never licenses inventing a universal betting-settlement convention on the operator's behalf. |
-| **G37** | Grade outcome and process separately using the four honest verdicts: result-right/process-right, result-right/process-different, result-wrong/process-broadly-right, result-wrong/process-wrong. |
+| **G37** | Grade outcome and process separately using the four honest verdicts: result-right/process-right, result-right/process-different, result-wrong/process-broadly-right, result-wrong/process-wrong. **Worked example of "result-right / process-different" (added 2026-09-25; 2026-09-22 audit):** P-482's powerplay Over won through the mechanism the card named (Sadaqat), but its probability was sized on chase powerplays while Jamaica batted first. A win with mis-sized evidence is not graded "process-right", so a lucky sizing is not reinforced. |
 | **G37.1** | **Two-pass retrospective discipline (added 2026-09-06, `L-089`).** Reach the process/compliance grade (Pass A) from the frozen card's identity, contract, state, sources, scenario tree, kill-path library and component/separation budgets alone, judged against what was knowable and required at issue time — **before** consulting the final result. Only then reveal the result and perform Pass B: actual driver, its knowability, and whether the branch that occurred was ordinary or exceptional. Record both as separate fields, `ISSUE_TIME_PROCESS_GRADE` and `OUTCOME_DRIVER_GRADE`; a process lock may be applied only from Pass A, never inferred backward from Pass B alone. |
 | **G38** | Audit every #1 loss. Apply a process lock only for a demonstrated identity/contract, source-transformation, arithmetic, temporal-leakage, settlement or compliance defect. |
 | **G39** | Quarantine any process-defective view from mechanism validation, ranking/model performance, calibration and prospective test completions, while keeping its settlements for ledger integrity. |
@@ -1597,7 +1597,7 @@ Every issued card carries these lines. A line that cannot be completed is writte
 
 
 
-Effective for future work under MDS-2026.09.05-v3.5. These amend execution of GFA-2 across **every SFA**; they do not fit coefficients, assign new branch weights, or establish predictive lift. Evidence and per-sport examples: [September 5 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
+Effective for future work under MDS-2026.09.05-v3.5. These amend execution of GFA-2 across **every SFA**; they do not fit coefficients, assign new branch weights, or establish predictive lift. Evidence and per-sport examples: [September 5 audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
 
 
 
@@ -1632,7 +1632,7 @@ For “at least one O/U should win,” first disclose complement geometry. An ex
 
 
 
-Effective **2026-09-06**, method `MDS-2026.09.06-v3.7`. Every item below is a validity, provenance or disclosure control. **None fits a coefficient, assigns a scenario weight, publishes a probability, or claims predictive lift.** Origin evidence is the settlement of `P-304`/`P-305` and the closure of the `P-300`, `P-302`, `P-273` and `P-151` evidence gaps; full narrative in [`IMPROVEMENT_PLAN_2026-09-06.md`](IMPROVEMENT_PLAN_2026-09-06.md).
+Effective **2026-09-06**, method `MDS-2026.09.06-v3.7`. Every item below is a validity, provenance or disclosure control. **None fits a coefficient, assigns a scenario weight, publishes a probability, or claims predictive lift.** Origin evidence is the settlement of `P-304`/`P-305` and the closure of the `P-300`, `P-302`, `P-273` and `P-151` evidence gaps; full narrative in [`archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md`](archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md).
 
 
 
@@ -1798,7 +1798,7 @@ Old games may measure their issued methods and supply development evidence for i
 
 
 
-Status: **CONTROLLING.** Effective **2026-09-06**, method `MDS-2026.09.06-v4.0`. Origin: `FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md`, a complete review of every game log from `P-001` to `P-317` against this rule set, requested and delivered the same day, finding (i) a measured mandatory-checklist compliance rate between 0% and 28% across 238 parsed cards, (ii) an all-history Rank #1 record of 59.2% with no demonstrated separation from Rank #4 (which outperforms it in the largest fully-explicit sample), and (iii) a ~570 KB / ~143,000-token mandatory pre-research read that no session can complete in full before opening a stats source. This section is the controlling response. **Nothing below deletes any historical gate definition, card, or settlement in §§0–15 above — every gate discussed remains defined exactly as written, for reference and for interpreting historical cards issued under it.** What changes is which gates are *mandatory on every new card going forward*.
+Status: **CONTROLLING.** Effective **2026-09-06**, method `MDS-2026.09.06-v4.0`. Origin: `archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md`, a complete review of every game log from `P-001` to `P-317` against this rule set, requested and delivered the same day, finding (i) a measured mandatory-checklist compliance rate between 0% and 28% across 238 parsed cards, (ii) an all-history Rank #1 record of 59.2% with no demonstrated separation from Rank #4 (which outperforms it in the largest fully-explicit sample), and (iii) a ~570 KB / ~143,000-token mandatory pre-research read that no session can complete in full before opening a stats source. This section is the controlling response. **Nothing below deletes any historical gate definition, card, or settlement in §§0–15 above — every gate discussed remains defined exactly as written, for reference and for interpreting historical cards issued under it.** What changes is which gates are *mandatory on every new card going forward*.
 
 
 
@@ -1858,7 +1858,7 @@ A card must complete every `BLOCKING` and `REQUIRED ANALYSIS` item above, in thi
 
 
 
-**Mechanical check.** Run `python audit_card_controls.py <log.md> --settlement` over the running log at the settlement pass and record the per-card result (§16.8). The script detects *printed fields*, not good analysis: a PASS is weak evidence and a FAIL is strong evidence, which is the correct asymmetry for an execution audit.
+**Mechanical check.** Run `python audit_card_controls.py <log.md> --settlement` over the running log at the settlement pass and record the per-card result (§16.8). The script detects *printed fields*, not good analysis: a PASS is weak evidence and a FAIL is strong evidence, which is the correct asymmetry for an execution audit. *(From the 2026-09-25 control manifest onward, add `--strict`: the 2026-09-24(f) controls 7r, T13, 10p and 10l then block.)*
 
 
 
@@ -2055,15 +2055,15 @@ The `GUIDANCE` list may not silently grow back into a `BLOCKING`/`REQUIRED ANALY
 5a. **`P(¬R1 ∧ ¬R2)` — the shared-failure mass — with the single state that produces it (`G-L17`, §16.12(a)); and, where three or more rows share one driver, `P(all of them fail)` with Fréchet bounds and the sign of each row under that driver (`G-L21`, §16.13(a)). A number, or `JOINT_UNQUANTIFIED` plus bounds — an unanswered line blocks the card in the same way an unretrieved bench blocks a Rank-#1 margin row** *(added 2026-09-17(b): four controls were listed and not executed across the `P-438`–`P-451` import, the `M15` pattern)*.
 5b. Every over/under row labelled `FORCED_PAIR` or `FREE` (`G-L15`), with the preferred side named for each forced pair and the push mass shown with its derivation (`G-L22`, §16.13(b)).
 6. One representative Rank-#1 outcome, checked against every other row.
-7. Participant state per side: lineup `CONFIRMED_OFFICIAL` / `PROJECTED_BEAT_VERIFIED` / `LINEUPS_NOT_YET_PUBLISHED @ <time>` / `NOT_RETRIEVED`, bench, head coach. **Where the competition publishes line-ups before the freeze time** — a cricket XI is nominated before the toss (MCC Law 1.2); baseball, soccer and rugby-league line-ups are normally published before the start — `NOT_RETRIEVED` after publication is recorded as **`RETRIEVAL_MISS`**, a process defect, not as unavailability. When official feeds are not yet published, a lineup verified under Control `S-1 Rev 2` as `PROJECTED_BEAT_VERIFIED` satisfies `G14.2` exposure modeling and does NOT block full-game totals or margins from Rank #1. Only an unmodeled/unretrieved bench (`BENCH_NOT_RETRIEVED`) triggers the Rank #1 block.
+7. Participant state per side: lineup `CONFIRMED_OFFICIAL` / `PROJECTED_BEAT_VERIFIED` / `LINEUPS_NOT_YET_PUBLISHED @ <time>` / `NOT_RETRIEVED`, bench, head coach. **Where the competition publishes line-ups before the freeze time** — a cricket XI is nominated before the toss (MCC Law 1.2); baseball, soccer and rugby-league line-ups are normally published before the start — `NOT_RETRIEVED` after publication is recorded as **`RETRIEVAL_MISS`**, a process defect, not as unavailability. When official feeds are not yet published, a lineup verified under Control `S-1 Rev 2` as `PROJECTED_BEAT_VERIFIED` satisfies `G14.2` exposure modeling and does NOT block full-game totals or margins from Rank #1. Only an unmodeled/unretrieved bench (`BENCH_NOT_RETRIEVED`) triggers the Rank #1 block. **Amended 2026-09-24(f):** `PROJECTED_BEAT_VERIFIED` counts only with its printed S-1 Rev 2 receipt (outlet, reporter, timestamp, verbatim quote, two sources). Where an official lineup or goalie was published before the freeze, only `CONFIRMED_OFFICIAL` or `RETRIEVAL_MISS` is allowed. At settlement, field 10 carries the `C-LINEUP-DIFF` line. See §"2026-09-24(f)"(c).
 8. `AGGREGATE_ONLY` flags (§16.5(c)) and the sampling-noise checks (§16.5(g)).
 9. The settlement source for every row (`G10.2`).
-10. **At settlement only:** the structured process record and the disruption facts, with the explicit process-versus-outcome classification (`G-L23`, §16.13(c)).
+10. **At settlement only:** the structured process record and the disruption facts, with the explicit process-versus-outcome classification (`G-L23`, §16.13(c)). **Amended 2026-09-24(f)/2026-09-25:** every process fact names its endpoint and retrieval time (`C-PROCESS-RECORD-PROVENANCE`; audit field `10p`). Team sports also add the `C-LINEUP-DIFF` line, "k of n named starters started" per side (audit field `10l`). Run `audit_card_controls.py --settlement --strict`.
 
 
 
 
-**Audit.** At settlement, run `python audit_card_controls.py <running_log.md> --settlement` (repository root) over the external running log and record which fields each card printed. *(Rebuilt 2026-09-17(b) after being found missing from the repository root — the block had been self-reported since 2026-09-11, and the `P-438`–`P-451` run found field 5a absent on 13 of 13 auditable cards one day after `G-L17` was promoted.)* **Run it against the running log, not the combined log:** the combined log carries settlement summaries rather than issued card bodies, so a run there measures the summary's completeness, not the card's. Fields 1–9 are matched only against text printed **before** the card's settlement heading, and field 10 only against settlement text — otherwise a retrospective sentence credits the card with a disclosure it never made. Detection is deliberately generous, so a PASS is weak evidence and a FAIL is strong evidence. Where an imported log did not carry a card's body at all, mark that card `BODY_NOT_CARRIED`: an unauditable record and a non-compliant card produce identical output and mean opposite things. A missing field does not invalidate an issued card — issued evidence is immutable — but it is recorded as a process defect on that card, and a pattern of missing fields across a cohort is itself a finding, as it was on 2026-09-11. This is a format and audit requirement of the same class as §16.5's "show the arithmetic"; it adds no coefficient, weight or ordinal bar (`L-087`).
+**Audit.** At settlement, run `python audit_card_controls.py <running_log.md> --settlement` (repository root) over the external running log and record which fields each card printed. *(Rebuilt 2026-09-17(b) after being found missing from the repository root — the block had been self-reported since 2026-09-11, and the `P-438`–`P-451` run found field 5a absent on 13 of 13 auditable cards one day after `G-L17` was promoted.)* **Run it against the running log, not the combined log:** the combined log carries settlement summaries rather than issued card bodies, so a run there measures the summary's completeness, not the card's. Fields 1–9 are matched only against text printed **before** the card's settlement heading, and field 10 only against settlement text — otherwise a retrospective sentence credits the card with a disclosure it never made. Detection is deliberately generous, so a PASS is weak evidence and a FAIL is strong evidence. Where an imported log did not carry a card's body at all, mark that card `BODY_NOT_CARRIED`: an unauditable record and a non-compliant card produce identical output and mean opposite things. A missing field does not invalidate an issued card — issued evidence is immutable — but it is recorded as a process defect on that card, and a pattern of missing fields across a cohort is itself a finding, as it was on 2026-09-11. This is a format and audit requirement of the same class as §16.5's "show the arithmetic"; it adds no coefficient, weight or ordinal bar (`L-087`). *(From the 2026-09-25 control manifest onward, add `--strict`: the 2026-09-24(f) controls 7r, T13, 10p and 10l then block.)*
 
 
 
@@ -2440,7 +2440,7 @@ Origin: the `P-424`–`P-437` import (`PREDICTION_LOG_COMBINED_4.md` §"2026-09-
 
 
 
-**(a) `G-L17` — print the joint *failure* mass of the top two, not only the joint win.** `G-L10` requires `P(R1 ∧ R2)` and a coupling label. That is the probability both rows **win**, which is not the quantity that governs top-two reliability. For any two ranked rows that share a driver, the card must also print:
+**(a) `G-L17` — print the joint *failure* mass of the top two, not only the joint win.** `G-L10` requires `P(R1 ∧ R2)` and a coupling label. That is the probability both rows **win**, which is not the quantity that governs top-two reliability. For any two ranked rows that share a driver, the card must also print: *(Clarified 2026-09-25, R-5 of the 2026-09-22 audit: when the card's joint states are explicit, the failure mass is read off the family table as a number. `JOINT_UNQUANTIFIED` with Fréchet bounds is reserved for dependence the model does not represent. P-483 printed bounds although its own six-branch tree gave about 30%.)*
 
 
 
@@ -2522,6 +2522,7 @@ Origin: the `P-438`–`P-451` import (`PREDICTION_LOG_COMBINED_4.md` §"2026-09-
 1. When a card ranks both sides of the same market (`X` and `¬X`), it has made **one** decision — which side, and how far from 0.5 — and that pair contributes **exactly one win and one loss** to any W/L tally regardless of the forecast. Report the **preferred side as the trial**; the complement row keeps its Brier for completeness but is never counted as an independent result.
 2. The running scorecard in the active log carries **separate lines for `FREE` rows and for `FORCED_PAIR` decisions**, with their own counts and means. Pooling them biases the aggregate W/L toward 50% and makes the Brier a statement about the supplied line rather than the forecast.
 3. **Push mass is part of the decision.** Inflating the push deflates both sides of the pair simultaneously, which lowers Brier on a loss and pushes the whole pair down the rank order against unpaired side rows. State the push mass with its derivation (§16.5(d)); an unsourced push is an unsourced rank.
+4. **Covering pairs (added 2026-09-24(f), `G-L22(c)`).** Two rows whose union covers every outcome (e.g., opposite +1.5 cushions in MLB, or ML plus the opponent +1.5) record at least one win by construction. Label them `COVERING_PAIR` and exclude the card's Hit@2 from top-two reliability summaries. See §"2026-09-24(f)"(d).
 
 
 
@@ -2717,15 +2718,162 @@ Per user directive on 2026-09-23, the requirement to generate a separate scratch
 
 
 <!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
-## 16.12 Cross-sport settlement learnings — mini log P-495..P-508 (2026-09-24)
+<!-- AUDIT-2026-09-24F -->
+## 2026-09-24(f) — settlement-integrity controls, and withdrawal of the peer "§16.12" cross-sport learnings
 
-Consolidated findings from the 17-event settlement pass of 24 September 2026 (`TMP-G25` and `P-493` through `P-508`):
+**Numbering fix.** The peer import of 2026-09-24 (`cb95acd`) appended a section headed "## 16.12 Cross-sport settlement learnings". The number **§16.12** already belongs to *Joint-failure mass, allocation marginals, end-state ontology and direct comparables* (2026-09-17). The peer section is superseded by this one; its text is preserved in git at `cb95acd`.
 
-1. **Dual Run-Line / Spread Arbitrage (+1.5 / +1.5):**
-   In tightly contested, low-margin sports (baseball run lines, hockey puck lines), taking both opposing sides at +1.5 cushion creates a mathematically robust dual-win zone in any 1-run decision. Validated in `P-502` (Royals 5–4 White Sox) and `P-506` (Mariners 6–5 Astros), where both +1.5 sides cashed.
-2. **International Qualifier Pace Volatility vs Domestic Baselines:**
-   Cross-border qualification tournaments (FIBA, UEFA, Concacaf) exhibit higher tempo, looser transition defense, and greater shooting variance than domestic regular-season fixtures. Domestic league defensive averages cannot be applied without upward pace adjustments (`P-499`).
-3. **End-of-Regular-Season Seeding Motivation vs Resting Dynamics:**
-   When one competitor requires a victory for playoff seeding/home-court advantage while the opponent has clinched and actively rests key starters, the motivational and rotation disparity overwhelms generic power ratings (`P-504`, Atlanta Dream 83–65 New York Liberty).
-4. **Lower-Tier Clay Court Underdog Handicap Volatility:**
-   On slow clay courts in secondary circuits (WTA 125, ITF M25), low serve-hold percentages amplify break frequency, making heavy minus game handicaps (-5.5+) highly vulnerable to underdog surges (`P-495`).
+**Evidence base.** `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(f)": every final re-verified; the process record checked against field-owner feeds; lineups diffed against official box scores.
+
+**Status.** Every control below is integrity, measurement, retrieval or governance. None is a forecasting coefficient, probability cap or ranking override (§16.10 item 11).
+
+### (a) Withdrawn: the four peer "cross-sport learnings"
+
+| Peer item | Disposition | Why |
+|---|---|---|
+| 1. "Dual run-line / spread arbitrage (+1.5/+1.5)" | **REJECTED** | Opposite +1.5 cushions jointly cover every MLB outcome. At least one wins every game; both win in a one-run game, 27.6% of 2026 MLB finals (n = 2,374). The P-502 and P-506 "sweeps" are mechanical. "Arbitrage" is price language inside a MARKET_BLIND framework. Ranking both sides to guarantee a winner is the hedging the operator has ruled out. Measurement replacement: (d) below |
+| 2. "International qualifier pace volatility" | **REJECTED as a rule** → TESTING `T-BKB-SEASON-OPENER-WIDTH` (`RULES_BASKETBALL.md`) | One game (P-499). Its "89 possessions" was never sourced. The miss traces to roster retrieval (Brno's top scorer was absent from the card) and comparator over-weighting (M13/M17) |
+| 3. "End-of-season seeding motivation vs rest" | **OBSERVATION** | One game (P-504). The operative mechanism was an availability fact (Stewart OUT), which G14.2 already requires |
+| 4. "Lower-tier clay handicap volatility" | **REJECTED as a rule** → TESTING `T-TEN-LOWTIER-HCP` (`RULES_TENNIS.md`) | One match (P-495). The row was a coin flip (normalised edge 0.09) ranked #1; G23.1, G-L2 and §16.5(d) already cover it |
+
+### (b) `C-PROCESS-RECORD-PROVENANCE` — settlement process facts must be read, not written (extends G-L23, §16.13(c))
+
+1. **Sourcing.** Every process fact printed in a settlement or retrospective names the endpoint or URL it was read from and the retrieval time. Process facts include linescores; quarter, period or set scores; decisions; scorers and goal types; goalies and time on ice; minutes; player stat lines; possessions; weather and wind; and any base rate. One source line per block is enough if it covers every fact in the block.
+2. **Unsourced facts.** A fact not read from a record is either omitted or marked `UNSOURCED`. It may not be phrased as observation.
+3. **Blocks with unsourced causal facts.** A settlement block whose *causal* narrative relies on unsourced facts is `PROCESS_RECORD_UNVERIFIED`. G23.1, G-L23 and no rule, weight, base rate or learning-register disposition may cite it.
+4. **Record IDs.** Printed record IDs (gamePk, NHL game ID, match-centre IDs, URLs) must be the ones actually opened. A lineage whose ID cannot be reproduced does not count toward CR-4.
+
+**Evidence and recurrence.**
+- §"2026-09-24(e)": in 14 or more of 17 blocks the field owner contradicts the process facts. Examples: TMP-G25 went 12 innings, not 9; P-503 had no empty-net goal; P-506's Under was lost in regulation; four MLB gamePks and one NHL game ID were wrong. Six rules were derived from those narratives.
+- Prior evidence: P-438 (G-L23's origin: a wrong causal diagnosis); L-20260923-08 (AI-generated recaps); the synthetic-match-report trap. The same failure mode is now appearing inside repository sessions.
+
+### (c) `C-LINEUP-DIFF` and S-1 Rev 2 receipt enforcement (amends §16.8 fields 7 and 10; G14.2)
+
+1. **At issue, field 7.** `PROJECTED_BEAT_VERIFIED` is valid only when the card prints the Control S-1 Rev 2 receipt for each side: outlet, reporter, publication timestamp and a verbatim quotation of the lineup or goalie line, corroborated by a second source. Without the receipt the state is `NOT_RETRIEVED`.
+2. **Official lineups take precedence.** Where the competition's official lineup or goalie is published before the freeze, a non-official lineup may not be labelled "reported", "confirmed" or `PROJECTED_BEAT_VERIFIED`. The state is then `CONFIRMED_OFFICIAL`, with the fetch time, or `RETRIEVAL_MISS`, and G14.2's Rank-1 block applies to full-game total and margin rows. Official sources include:
+   - MLB: statsapi `hydrate=lineups` / `battingOrder`;
+   - NPB and KBO: official orders;
+   - NBA, WNBA and NBL: official box or preview starters;
+   - NHL: official lineup or starting goalie.
+3. **At settlement, field 10.** Print the card-listed starters, starting pitcher or goalie beside the official box score.
+   - State `k of n named starters started`, per side.
+   - If a player the card named as a driver of the Rank-1 row did not play, classify the card `PROCESS_DEFECT: LINEUP_CLAIM_FALSE`, whatever the result.
+4. **The completeness audit checks presence, not truth.** A **Y** from `audit_card_controls.py` on field 7 does not satisfy this control. ~~Proposed tooling fix (not implemented; Markdown-only pass)~~ **Implemented 2026-09-25.** Audit field `7r` flags `PROJECTED_BEAT_VERIFIED` without an S-1 Rev 2 receipt; it blocks under `--strict`. From 2026-09-25(b), `receipts.py` prints the official lineup, starting pitcher and goalie diff (§"2026-09-25(b)"(c)).
+
+**Evidence.**
+- 2026-09-24(f): personnel claims were false in five of the seven diffable cards (P-500, P-501, P-503, P-508, P-499) and partly wrong in P-504.
+- P-501's Rank-1 Over was built on a Baltimore lineup of which 2 of 9 named players started.
+- Recurrence: M19 (2026-09-11); L-20260923-06 (NBL wrong roster).
+- L-20260924-01 scheduled a settlement audit of S-1 Rev 2; this is that audit.
+
+### (d) `G-L22(c) COVERING_PAIR` — measurement (extends §16.13(b))
+
+1. **Definition.** Two ranked rows whose union covers every settlement outcome are a `COVERING_PAIR`. Examples:
+   - A +1.5 and B +1.5 in MLB, where ties are impossible;
+   - A ML plus B +1.5;
+   - in sports with draws or ties, only if the pair's settlement terms cover them.
+2. **What it measures.** The pair records at least one win by construction, and both win exactly in the overlap state (for MLB, a one-run game).
+3. **Labelling.** Label the pair on the card (field 5b) and in the settlement.
+4. **Top-two summaries.** Exclude the card's Hit@2 from top-two reliability summaries. Report which member was preferred, whether it won, and P(overlap).
+5. **Base rate.** MLB 2026 P(one-run game) = 0.276 (n = 2,374). Recorded in `BASE_RATES_REGISTER.md`.
+6. **Ranking.** A covering pair may still be the honest ranked output of a supplied slate: G23.1 ranks by probability. What this rule forbids is *counting* it as evidence of skill, or *seeking* it to guarantee a win.
+
+**Evidence.** R1/R2 were covering pairs in TMP-G25, P-500, P-502 and P-506; R1/R3 or R2/R3 in P-493, P-501, P-503 and P-507.
+
+### (e) `C-SUMMARY-FROM-CARD` — summaries are copied, not recalled
+
+Every summary of an issued card is **copied from the issued Field 4 table**: rank, contract, line and probability. This covers status-register rows, learning-register rows, sport-file tables and README lines. Any mismatch between a summary and its card blocks the import commit.
+
+**Evidence.** In `cb95acd`, 13 of 17 status rows and 9 or more summary rows in the learning register and sport files misstated the Rank-1 contract, the line or the winner verdict. Examples: P-498 was summarised as "Rank-1 Lietkabelis −4.5 L; home-dog upset", when the issued Rank 1 was Under 171.5 and it won. P-500's Rank 1 was given as "Under 8.5", when the issued Rank 1 was Nationals +1.5.
+
+### (f) `C-PROMOTION-RECEIPT` — a receipt for §16.10 item 11
+
+Every rule written into a RULES file carries a one-line receipt:
+- **status:** `TESTING`, `PROMOTED_PROCESS` or `REFERENCE`;
+- **evidence:** the event count;
+- **test:** for any rule that changes a probability, centre, width, ordinal or row eligibility, a prospective-test ID with its sample size.
+
+A **predictive** rule supported by one or two events is `TESTING` and non-binding. `PROMOTED_PROCESS` is reserved for integrity, measurement, retrieval and completeness controls, or for predictive rules that have passed their preregistered test.
+
+**Evidence.** Six single-game predictive rules were marked `PROMOTED_PROCESS` in `cb95acd`. One of them, the "derby" rule, had already leaked into the P-509 card's reasoning before settlement.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — research-derived reference checks and retrieval tooling
+
+**Origin.** A research pass run on the operator's instruction of 2026-09-25 ("research what else can be implemented to improve the results"). It derived the base rates and recency magnitudes that the framework had marked `NOT_YET_DERIVED`, and built a receipt tool for the retrieval failures behind M19, M25, M26 and M30. Evidence is in `BASE_RATES_REGISTER.md` §7, `RECENCY_AND_REBOUND.md` §7 and [`research/base_rates_2026-09-25/`](research/base_rates_2026-09-25/README.md).
+
+**Status of every item below.** Each is a **disclosure, measurement or retrieval control** (`C-PROMOTION-RECEIPT`: `PROMOTED_PROCESS` or `REFERENCE`). None changes a probability, centre, width or rank by itself. None is fitted from the log's own results (`L-087`).
+
+### (a) `C-WIDTH-BENCHMARK` — print the reference width beside the card's width (disclosure)
+
+1. **What to print.** Every card that prints a width (SD) for a total or margin also prints the reference width for that competition:
+   - the crude-predictor residual SD from `BASE_RATES_REGISTER.md` §7 (§7.1(b), §7.2, §7.3, §7.5);
+   - or, for tennis, the raw SD from §7.4;
+   - or `REFERENCE_WIDTH_NOT_YET_DERIVED` when the competition has none.
+2. **When the card is much narrower.** If the card's width is **below 0.85 × the reference**, the card names the information the crude predictor lacks that justifies narrowing. Examples: confirmed lineups and rotation, a pace or possession model, both starting pitchers, a same-day weather reading. Without a stated reason, the audit flags `WIDTH_BELOW_REFERENCE_UNEXPLAINED`.
+3. **Why 0.85.** Adding opponent defence improved basketball RMSE by 7–11% (`RECENCY_AND_REBOUND.md` §7.2), so a card that knows more than the crude model can legitimately be about 10% narrower. 0.85 marks where the claim of extra knowledge must be written down. It is a disclosure trigger, not an estimate and not a floor.
+4. **What it is not.** It does not widen anything automatically and has no rank effect.
+5. **Evidence.**
+   - In the 2026-09-24 cohort, basketball total widths ran about 39% too narrow: mean z² 1.93, n = 7 (`BASE_RATES_REGISTER.md` §7.6).
+   - Both LKL cards used total widths of 12.1–12.9, below every derived benchmark (15.9–19.5).
+   - Audit field `WB`: advisory; blocks under `--strict`.
+
+### (b) `C-WIDTH-Z` — standardised miss at settlement (measurement)
+
+1. **What to print.** Every settled card that printed a centre and width prints z = (actual − centre) / width for the total and for the margin.
+2. **How it is used.** The values accrue in the `C-WIDTH-Z` manifest (`LEARNING_REGISTER.md` §"2026-09-25(b)"), by sport family. The decision rule is preregistered there. Until it fires, z is a record only.
+3. **Audit field:** `10z` (advisory; blocks under `--strict`).
+
+### (c) `C-RECEIPT-TOOL` — `receipts.py` (retrieval; implements the receipt format of 2026-09-24(f)(b)–(c) and the MLB gamefeed-weather rule)
+
+**Commands.**
+- **`python receipts.py pregame mlb <gamePk>`**, at freeze. Prints:
+  - probable pitchers;
+  - gamefeed weather, or `WEATHER_NOT_YET_PUBLISHED`;
+  - the official batting orders, or `LINEUPS_NOT_YET_PUBLISHED`;
+  - umpires;
+  - the feed state (`PREGAME` / `LIVE` / `FINAL` / `START_CROSSED_STATUS_NOT_FINAL`), with UTC and AEST times.
+- **`python receipts.py pregame espn <sport/league> <eventId>`** prints the state and the ESPN injury list. An empty list is labelled as **not** a confirmation of availability.
+- **`python receipts.py settle {mlb|nhl|espn} …`** prints:
+  - the final and the period, inning or quarter lines;
+  - the regulation score where extras or overtime were played;
+  - decisions, scorers, empty-net goals, goalies' time on ice, starters and minutes, and DNPs;
+  - every fact with its endpoint and retrieval time.
+- **`--card-away/--card-home/--card-sp-*/--card-goalie-*`** add the `C-LINEUP-DIFF` line (k of n started; `DID NOT PLAY` / `MISMATCH`).
+
+**Rules for using it.**
+1. **Where the tool covers the lane** (MLB statsapi; NHL api-web; ESPN summary for NBA, WNBA, NBL, NHL, soccer and others), its output is the preferred receipt at freeze and at settlement.
+2. **A hand-written process record** must carry the same fields and endpoints. Otherwise it is `PROCESS_RECORD_UNVERIFIED` under (b) of 2026-09-24(f).
+3. **Lineage count.** The tool is **one lineage**. It does not satisfy C-FINAL3's three independent terminal lineages on its own.
+4. **Market-blind by construction.** ESPN `pickcenter`, `odds`, `againstTheSpread` and `winprobability` keys are deleted on load; the NHL `oddsPartners` key is never read.
+5. **Tested.** `test_receipts.py` has 17 offline tests on fixtures of games already settled in Part 5 (P-500, P-503, P-504, P-506).
+
+**Evidence.** It reproduces two retrieval failures from the settled record:
+- P-503: the "confirmed" Oettinger did not play; Poirier played 59:29.
+- P-500: gamefeed wind "14 mph, In From LF", where the card said out.
+
+These are the failures the 2026-09-24(f) audit traced to hand retrieval.
+
+### (d) Early-season and regime-shift references (disclosure; specialises M24 and field BR)
+
+1. **Early-season windows.** A card in a derived early-season window prints that reference beside its total centre:
+   - **NBL:** games where both teams have played fewer than 3 games ran **−8.5 points** (−14.3, −2.7), three seasons, n = 38.
+   - **WNBA:** the same window ran **+6.5** (+0.4, +12.6), n = 57.
+   - The signs are opposite, so **no cross-league early-season rule exists**. Other leagues are `NOT_YET_DERIVED`.
+2. **Documented regime shifts.** A card that averages across a documented regime shift says how the pre-shift seasons were handled. Currently documented: WNBA 2026 at +10.7 points per game over 2024–25, n = 327 v 530.
+3. **NHL preseason.** A preseason card uses the preseason reference (2025: 5.68 goals, n = 104; 2026 to date: 5.33, n = 36), not the regular-season 6.25.
+
+### (e) `R-1` corollary — a one-game comparator never outweighs the season rate (reference)
+
+In **six of six** competitions measured (MLB, NBA, WNBA, NBL, NHL, EPL), the last-game predictor is the worst tested. It is 18–40% worse than the league constant (`RECENCY_AND_REBOUND.md` §4, §7.2).
+
+- A card may cite a single recent game only as a mechanism pointer: a new starter, a lineup change, a tactical change.
+- Its numeric weight may not exceed the season rate's.
+- This extends `R-1` and `G-L20` (direct comparables), and is consistent with M17 and M27.
+
+### (f) Tennis games-handicap coherence — `C-HCP-COHERENCE` (disclosure; `RULES_TENNIS.md` §"2026-09-25(b)")
+
+1. **What to print.** A games-handicap row −k.5 prints P(win), the implied P(margin ≥ k+1 | win), and the population conditional from `BASE_RATES_REGISTER.md` §7.4:
+   - WTA best of 3, k = 5: straight-sets win **0.663**; deciding-set win **0.168**.
+2. **When the implied conditional exceeds the straight-sets reference,** the card names the hold and break evidence for it. Otherwise it is flagged `HCP_CONDITIONAL_ABOVE_REFERENCE`.
+3. **Status.** This is the measurement lane for the existing `T-TEN-LOWTIER-HCP` test. Origin: P-495, where the implied 0.70 exceeded the straight-sets reference 0.663 and the row lost.

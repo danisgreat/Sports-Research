@@ -483,6 +483,64 @@ def validate(manifest: dict[str, Any]) -> list[Finding]:
             ))
 
 
+    # 2026-09-24(f) / 2026-09-25: optional participant-state object (S-1 Rev 2 receipt and
+    # official-lineup precedence). Manifests without it are unaffected; when present it is
+    # validated fail-closed. Origin: five of seven diffable 2026-09-24 cards printed
+    # "confirmed"/"PROJECTED_BEAT_VERIFIED" lineups that the official box contradicted.
+    participants = manifest.get("participants")
+    if participants is not None:
+        lineup_states = {"CONFIRMED_OFFICIAL", "PROJECTED_BEAT_VERIFIED", "LINEUPS_NOT_YET_PUBLISHED",
+                         "RETRIEVAL_MISS", "NOT_RETRIEVED", "NOT_APPLICABLE"}
+        if not isinstance(participants, dict):
+            findings.append(Finding("PF-LINEUP-OBJECT", "BLOCK",
+                "participants must be an object when present.", "participants"))
+        else:
+            state = str(participants.get("lineup_state", "")).upper()
+            if state not in lineup_states:
+                findings.append(Finding("PF-LINEUP-STATE", "BLOCK",
+                    f"participants.lineup_state must be one of {sorted(lineup_states)}.",
+                    "participants.lineup_state"))
+            official_first = participants.get("official_lineup_published_before_freeze") is True
+            if official_first and state not in {"CONFIRMED_OFFICIAL", "RETRIEVAL_MISS"}:
+                findings.append(Finding("PF-LINEUP-OFFICIAL-PRECEDENCE", "BLOCK",
+                    "An official lineup was published before the freeze: only CONFIRMED_OFFICIAL "
+                    "or RETRIEVAL_MISS is allowed (RULES_GENERAL 2026-09-24(f)(c)).",
+                    "participants.lineup_state"))
+            if state == "CONFIRMED_OFFICIAL":
+                got = parse_time(participants.get("official_lineup_retrieved_at"),
+                                 "participants.official_lineup_retrieved_at", findings)
+                if got and frozen and got > frozen:
+                    findings.append(Finding("PF-LINEUP-TIME", "BLOCK",
+                        "official_lineup_retrieved_at cannot be after distribution_frozen_at.",
+                        "participants.official_lineup_retrieved_at"))
+            if state == "PROJECTED_BEAT_VERIFIED":
+                receipts = participants.get("s1r2_receipt")
+                ok_receipts = []
+                if isinstance(receipts, list):
+                    for i, r in enumerate(receipts):
+                        path = f"participants.s1r2_receipt[{i}]"
+                        if not isinstance(r, dict):
+                            continue
+                        missing = [k for k in ("outlet", "reporter", "published_at", "quote")
+                                   if not str(r.get(k, "")).strip()]
+                        if missing:
+                            findings.append(Finding("PF-LINEUP-RECEIPT", "BLOCK",
+                                f"S-1 Rev 2 receipt is missing {missing}.", path))
+                            continue
+                        pub = parse_time(r.get("published_at"), f"{path}.published_at", findings)
+                        if pub and frozen and pub > frozen:
+                            findings.append(Finding("PF-LINEUP-RECEIPT", "BLOCK",
+                                "A receipt published after distribution_frozen_at cannot support the lineup.",
+                                f"{path}.published_at"))
+                            continue
+                        ok_receipts.append(str(r.get("outlet")).strip().lower())
+                if len(set(ok_receipts)) < 2:
+                    findings.append(Finding("PF-LINEUP-RECEIPT", "BLOCK",
+                        "PROJECTED_BEAT_VERIFIED requires an S-1 Rev 2 receipt from at least two distinct "
+                        "outlets (outlet, reporter, published_at, verbatim quote).",
+                        "participants.s1r2_receipt"))
+
+
     if sport == "cricket":
         cc = manifest.get("cricket_conditions")
         if not isinstance(cc, dict):

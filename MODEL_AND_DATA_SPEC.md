@@ -9,7 +9,7 @@
 
 Status: **ACTIVE — DETAILED REFERENCE**
 Method version: **MDS-2026.09.19-v4.3 / CR-2026.09.21-3**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Numerical training specification: **NTS-2026.09.19-v0.5 — Stage 0 all-sports design/pre-fit**
 
 

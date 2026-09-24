@@ -1,0 +1,884 @@
+{
+ "gameData": {
+  "teams": {
+   "away": {
+    "name": "Houston Astros",
+    "abbreviation": "HOU"
+   },
+   "home": {
+    "name": "Seattle Mariners",
+    "abbreviation": "SEA"
+   }
+  },
+  "datetime": {
+   "dateTime": "2026-09-24T02:10:00Z"
+  },
+  "status": {
+   "abstractGameState": "Final",
+   "codedGameState": "F",
+   "detailedState": "Final",
+   "statusCode": "F",
+   "startTimeTBD": false,
+   "abstractGameCode": "F"
+  },
+  "venue": {
+   "name": "T-Mobile Park"
+  },
+  "weather": {
+   "condition": "Partly Cloudy",
+   "temp": "62",
+   "wind": "6 mph, In From LF"
+  },
+  "probablePitchers": {
+   "away": {
+    "id": 814490,
+    "fullName": "Ethan Pecko",
+    "link": "/api/v1/people/814490"
+   },
+   "home": {
+    "id": 669923,
+    "fullName": "George Kirby",
+    "link": "/api/v1/people/669923"
+   }
+  }
+ },
+ "liveData": {
+  "linescore": {
+   "currentInning": 10,
+   "scheduledInnings": 9,
+   "teams": {
+    "home": {
+     "runs": 6,
+     "hits": 9,
+     "errors": 0,
+     "leftOnBase": 9
+    },
+    "away": {
+     "runs": 5,
+     "hits": 10,
+     "errors": 0,
+     "leftOnBase": 8
+    }
+   },
+   "innings": [
+    {
+     "num": 1,
+     "ordinalNum": "1st",
+     "home": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     },
+     "away": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     }
+    },
+    {
+     "num": 2,
+     "ordinalNum": "2nd",
+     "home": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     },
+     "away": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    },
+    {
+     "num": 3,
+     "ordinalNum": "3rd",
+     "home": {
+      "runs": 3,
+      "hits": 3,
+      "errors": 0,
+      "leftOnBase": 2
+     },
+     "away": {
+      "runs": 4,
+      "hits": 4,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    },
+    {
+     "num": 4,
+     "ordinalNum": "4th",
+     "home": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     },
+     "away": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 2
+     }
+    },
+    {
+     "num": 5,
+     "ordinalNum": "5th",
+     "home": {
+      "runs": 1,
+      "hits": 2,
+      "errors": 0,
+      "leftOnBase": 1
+     },
+     "away": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 1
+     }
+    },
+    {
+     "num": 6,
+     "ordinalNum": "6th",
+     "home": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     },
+     "away": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     }
+    },
+    {
+     "num": 7,
+     "ordinalNum": "7th",
+     "home": {
+      "runs": 0,
+      "hits": 0,
+      "errors": 0,
+      "leftOnBase": 0
+     },
+     "away": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     }
+    },
+    {
+     "num": 8,
+     "ordinalNum": "8th",
+     "home": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     },
+     "away": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     }
+    },
+    {
+     "num": 9,
+     "ordinalNum": "9th",
+     "home": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     },
+     "away": {
+      "runs": 0,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     }
+    },
+    {
+     "num": 10,
+     "ordinalNum": "10th",
+     "home": {
+      "runs": 2,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 3
+     },
+     "away": {
+      "runs": 1,
+      "hits": 1,
+      "errors": 0,
+      "leftOnBase": 1
+     }
+    }
+   ]
+  },
+  "decisions": {
+   "winner": {
+    "id": 681867,
+    "fullName": "Cooper Criswell",
+    "link": "/api/v1/people/681867"
+   },
+   "loser": {
+    "id": 623352,
+    "fullName": "Josh Hader",
+    "link": "/api/v1/people/623352"
+   }
+  },
+  "boxscore": {
+   "teams": {
+    "away": {
+     "battingOrder": [
+      514888,
+      670541,
+      670623,
+      673237,
+      676369,
+      666211,
+      664774,
+      828599,
+      669397
+     ],
+     "pitchers": [
+      814490,
+      681973,
+      701121,
+      805123,
+      650556,
+      623352
+     ],
+     "players": {
+      "ID670623": {
+       "person": {
+        "fullName": "Isaac Paredes"
+       },
+       "battingOrder": "300",
+       "position": {
+        "abbreviation": "3B"
+       }
+      },
+      "ID650556": {
+       "person": {
+        "fullName": "Bryan Abreu"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID669397": {
+       "person": {
+        "fullName": "Nick Allen"
+       },
+       "battingOrder": "900",
+       "position": {
+        "abbreviation": "SS"
+       }
+      },
+      "ID701358": {
+       "person": {
+        "fullName": "Cam Smith"
+       },
+       "battingOrder": "700",
+       "position": {
+        "abbreviation": "RF"
+       }
+      },
+      "ID669713": {
+       "person": {
+        "fullName": "Hayden Wesneski"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID686613": {
+       "person": {
+        "fullName": "Hunter Brown"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID681973": {
+       "person": {
+        "fullName": "Josh Hendrickson"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID669854": {
+       "person": {
+        "fullName": "Ronel Blanco"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID623352": {
+       "person": {
+        "fullName": "Josh Hader"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID662139": {
+       "person": {
+        "fullName": "Daulton Varsho"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "CF"
+       }
+      },
+      "ID805123": {
+       "person": {
+        "fullName": "AJ Blubaugh"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID814490": {
+       "person": {
+        "fullName": "Ethan Pecko"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID656986": {
+       "person": {
+        "fullName": "Bennett Sousa"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID701121": {
+       "person": {
+        "fullName": "Logan VanWey"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID514888": {
+       "person": {
+        "fullName": "Jose Altuve"
+       },
+       "battingOrder": "100",
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID666211": {
+       "person": {
+        "fullName": "Taylor Trammell"
+       },
+       "battingOrder": "600",
+       "position": {
+        "abbreviation": "LF"
+       }
+      },
+      "ID837227": {
+       "person": {
+        "fullName": "Tatsuya Imai"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID665161": {
+       "person": {
+        "fullName": "Jeremy Peña"
+       },
+       "battingOrder": "501",
+       "position": {
+        "abbreviation": "PR"
+       }
+      },
+      "ID663567": {
+       "person": {
+        "fullName": "Peter Lambert"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID687911": {
+       "person": {
+        "fullName": "Bryan King"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID664774": {
+       "person": {
+        "fullName": "LaMonte Wade Jr."
+       },
+       "battingOrder": "701",
+       "position": {
+        "abbreviation": "1B"
+       }
+      },
+      "ID572233": {
+       "person": {
+        "fullName": "Christian Walker"
+       },
+       "battingOrder": "500",
+       "position": {
+        "abbreviation": "1B"
+       }
+      },
+      "ID699044": {
+       "person": {
+        "fullName": "Miguel Ullola"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID828599": {
+       "person": {
+        "fullName": "Lucas Spence"
+       },
+       "battingOrder": "800",
+       "position": {
+        "abbreviation": "CF"
+       }
+      },
+      "ID543877": {
+       "person": {
+        "fullName": "Christian Vázquez"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID673237": {
+       "person": {
+        "fullName": "Yainer Diaz"
+       },
+       "battingOrder": "400",
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID670541": {
+       "person": {
+        "fullName": "Yordan Alvarez"
+       },
+       "battingOrder": "200",
+       "position": {
+        "abbreviation": "DH"
+       }
+      },
+      "ID676369": {
+       "person": {
+        "fullName": "Nelson Velázquez"
+       },
+       "battingOrder": "502",
+       "position": {
+        "abbreviation": "RF"
+       }
+      }
+     }
+    },
+    "home": {
+     "battingOrder": [
+      641487,
+      668227,
+      686527,
+      663728,
+      677594,
+      647304,
+      702284,
+      621493,
+      703197
+     ],
+     "pitchers": [
+      669923,
+      678606,
+      642100,
+      672841,
+      622554,
+      681867
+     ],
+     "players": {
+      "ID647304": {
+       "person": {
+        "fullName": "Josh Naylor"
+       },
+       "battingOrder": "600",
+       "position": {
+        "abbreviation": "1B"
+       }
+      },
+      "ID645302": {
+       "person": {
+        "fullName": "Victor Robles"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "RF"
+       }
+      },
+      "ID702284": {
+       "person": {
+        "fullName": "Cole Young"
+       },
+       "battingOrder": "700",
+       "position": {
+        "abbreviation": "SS"
+       }
+      },
+      "ID703197": {
+       "person": {
+        "fullName": "Michael Arroyo"
+       },
+       "battingOrder": "901",
+       "position": {
+        "abbreviation": "2B"
+       }
+      },
+      "ID678606": {
+       "person": {
+        "fullName": "José A. Ferrer"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID571948": {
+       "person": {
+        "fullName": "Hoby Milner"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID703155": {
+       "person": {
+        "fullName": "Lazaro Montes"
+       },
+       "battingOrder": "800",
+       "position": {
+        "abbreviation": "RF"
+       }
+      },
+      "ID621074": {
+       "person": {
+        "fullName": "Michael Rucker"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID642215": {
+       "person": {
+        "fullName": "Weston Wilson"
+       },
+       "battingOrder": "900",
+       "position": {
+        "abbreviation": "3B"
+       }
+      },
+      "ID668227": {
+       "person": {
+        "fullName": "Randy Arozarena"
+       },
+       "battingOrder": "200",
+       "position": {
+        "abbreviation": "LF"
+       }
+      },
+      "ID641487": {
+       "person": {
+        "fullName": "J.P. Crawford"
+       },
+       "battingOrder": "100",
+       "position": {
+        "abbreviation": "3B"
+       }
+      },
+      "ID621493": {
+       "person": {
+        "fullName": "Taylor Ward"
+       },
+       "battingOrder": "801",
+       "position": {
+        "abbreviation": "RF"
+       }
+      },
+      "ID686527": {
+       "person": {
+        "fullName": "Dominic Canzone"
+       },
+       "battingOrder": "300",
+       "position": {
+        "abbreviation": "DH"
+       }
+      },
+      "ID663728": {
+       "person": {
+        "fullName": "Cal Raleigh"
+       },
+       "battingOrder": "400",
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID640902": {
+       "person": {
+        "fullName": "Jhonny Pereda"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "C"
+       }
+      },
+      "ID801126": {
+       "person": {
+        "fullName": "Brock Rodden"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "SS"
+       }
+      },
+      "ID669302": {
+       "person": {
+        "fullName": "Logan Gilbert"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID693433": {
+       "person": {
+        "fullName": "Bryan Woo"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID622554": {
+       "person": {
+        "fullName": "Seranthony Domínguez"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID681867": {
+       "person": {
+        "fullName": "Cooper Criswell"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID669923": {
+       "person": {
+        "fullName": "George Kirby"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID662253": {
+       "person": {
+        "fullName": "Andrés Muñoz"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID642100": {
+       "person": {
+        "fullName": "Gabe Speier"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID677594": {
+       "person": {
+        "fullName": "Julio Rodríguez"
+       },
+       "battingOrder": "500",
+       "position": {
+        "abbreviation": "CF"
+       }
+      },
+      "ID807739": {
+       "person": {
+        "fullName": "Kade Anderson"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID682243": {
+       "person": {
+        "fullName": "Bryce Miller"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID660825": {
+       "person": {
+        "fullName": "Eduard Bazardo"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      },
+      "ID672841": {
+       "person": {
+        "fullName": "Carlos Vargas"
+       },
+       "battingOrder": null,
+       "position": {
+        "abbreviation": "P"
+       }
+      }
+     }
+    }
+   },
+   "officials": [
+    {
+     "official": {
+      "id": 427243,
+      "fullName": "Marvin Hudson",
+      "link": "/api/v1/people/427243"
+     },
+     "officialType": "Home Plate"
+    },
+    {
+     "official": {
+      "id": 503586,
+      "fullName": "Tripp Gibson",
+      "link": "/api/v1/people/503586"
+     },
+     "officialType": "First Base"
+    },
+    {
+     "official": {
+      "id": 596740,
+      "fullName": "Jansen Visconti",
+      "link": "/api/v1/people/596740"
+     },
+     "officialType": "Second Base"
+    },
+    {
+     "official": {
+      "id": 503502,
+      "fullName": "Ryan Blakney",
+      "link": "/api/v1/people/503502"
+     },
+     "officialType": "Third Base"
+    }
+   ],
+   "info": [
+    {
+     "label": "WP",
+     "value": "Pecko."
+    },
+    {
+     "label": "ABS Challenge",
+     "value": "Diaz, Y (Ball-Overturned to Strike); Trammell (Strike-Confirmed); Canzone (Strike-Confirmed); Hader (Ball-Confirmed)."
+    },
+    {
+     "label": "Pitches-strikes",
+     "value": "Pecko 51-34; Hendrickson 31-20; VanWey 6-3; Blubaugh 24-14; Abreu, B 18-16; Hader 44-25; Kirby 96-61; Ferrer 13-9; Speier 12-10; Vargas 17-14; Domínguez 19-12; Criswell, C 15-9."
+    },
+    {
+     "label": "Groundouts-flyouts",
+     "value": "Pecko 1-2; Hendrickson 1-2; VanWey 0-0; Blubaugh 0-4; Abreu, B 0-1; Hader 2-1; Kirby 2-2; Ferrer 0-0; Speier 0-0; Vargas 0-1; Domínguez 1-1; Criswell, C 2-0."
+    },
+    {
+     "label": "Batters faced",
+     "value": "Pecko 14; Hendrickson 8; VanWey 1; Blubaugh 6; Abreu, B 4; Hader 9; Kirby 23; Ferrer 3; Speier 4; Vargas 4; Domínguez 4; Criswell, C 4."
+    },
+    {
+     "label": "Inherited runners-scored",
+     "value": "Hendrickson 2-0; VanWey 1-0."
+    },
+    {
+     "label": "Umpires",
+     "value": "HP: Marvin Hudson. 1B: Tripp Gibson. 2B: Jansen Visconti. 3B: Ryan Blakney. "
+    },
+    {
+     "label": "Weather",
+     "value": "62 degrees, Partly Cloudy."
+    },
+    {
+     "label": "Wind",
+     "value": "6 mph, In From LF."
+    },
+    {
+     "label": "First pitch",
+     "value": "7:12 PM."
+    },
+    {
+     "label": "T",
+     "value": "3:18."
+    },
+    {
+     "label": "Att",
+     "value": "24,802."
+    },
+    {
+     "label": "Venue",
+     "value": "T-Mobile Park."
+    },
+    {
+     "label": "September 23, 2026"
+    }
+   ]
+  }
+ }
+}

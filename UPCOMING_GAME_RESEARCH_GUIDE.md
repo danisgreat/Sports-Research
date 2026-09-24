@@ -1,7 +1,7 @@
 ﻿## 2026-09-12 current pregame checklist amendment
 
 
-> **CR-2026.09.21-3:** before using a historical audit lesson, resolve it through `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`. Do not revive superseded/rejected findings or double-apply duplicate controls. CR-3 additionally requires live-rule read-back so stale gate text cannot override the reconciliation.
+> **CR-2026.09.21-3:** before using a historical audit lesson, resolve it through `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`. Do not revive superseded/rejected findings or double-apply duplicate controls. CR-3 additionally requires live-rule read-back so stale gate text cannot override the reconciliation.
 
 
 > **Current revision — 2026-09-19:** METHOD **MDS-2026.09.19-v4.3** is the workflow/template authority; **SCORING_AND_VALIDATION.md** controls conditioning, exact scoring, event-level evaluation and prospective evidence. All existing logs remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. NUMERICAL_PROGRAM controls authorized implementation scope and actual build state; MODEL_IMPLEMENTATION_RECIPES contains the executable Markdown reference. Older dated policy blocks are historical where inconsistent. No source, dataset or model is approved/fitted by this banner.
@@ -18,7 +18,7 @@ Before a new card, read the current settlement queue in GAME_LOG_STATUS_CURRENT.
 # Upcoming game research and forecast guide
 
 
-> **2026-09-12 controlling correction:** All current combined-log material is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE under the current user request. Settlement preserves outcome evidence; it does not authorize a performance claim. The [2026-09-12 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md) and [probability/research corrections](audit_2026-09-12/rule_corrections.md) supersede conflicting older operational statements. Original issued records remain unchanged.
+> **2026-09-12 controlling correction:** All current combined-log material is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE under the current user request. Settlement preserves outcome evidence; it does not authorize a performance claim. The [2026-09-12 audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md) and probability/research corrections (`audit_2026-09-12/rule_corrections.md`, not present in this repository) supersede conflicting older operational statements. Original issued records remain unchanged.
 
 
 
@@ -556,6 +556,9 @@ This section is the single self-contained walkthrough for settling a previous ga
 1. the **sport's process fields** from the structured feed — shots and shots on target and possession (soccer), inning-by-inning with the regulation-versus-final split (baseball), phase runs and wickets (cricket), quarter scores (basketball);
 2. the **disruption facts** required by `RULES_GENERAL.md` §16.11(o) — red cards, sin bins, injury exits, weather stoppages — each **with its minute and the score at that minute**;
 3. an explicit classification: did the card's **process** read fail, or did the process read hold while **conversion, an endpoint or a disruption** produced the result? A control may not be amended on the second kind without a separate, independent argument.
+4. **provenance for every process fact (`C-PROCESS-RECORD-PROVENANCE`, 2026-09-24(f)):** name the endpoint or URL and the retrieval time each fact was read from: linescore, quarter/period/set scores, decisions, scorers, goalies, minutes, weather, base rates. A fact not read from a record is omitted or marked `UNSOURCED`. A block with unsourced causal facts is `PROCESS_RECORD_UNVERIFIED` and cannot support a rule. Printed record IDs must be the IDs actually opened.
+
+**Step 4b — lineup diff (`C-LINEUP-DIFF`, 2026-09-24(f); team sports).** Print the card's named starters, starting pitcher or goalie beside the official box score as "k of n named starters started" per side, and check every OUT claim. If a player the card named as a driver of the Rank-1 row did not play, the card is `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` whatever the result. Record whether a `PROJECTED_BEAT_VERIFIED` claim printed its S-1 Rev 2 receipt.
 
 
 The competition's official report is authoritative for the score and usually publishes nothing else — AFC reports carry no shots, corners or cards, and wire recaps carry no regulation-versus-final split. Register the **process feed** alongside the settlement route (`DATA_SOURCE_REGISTER.md`).
@@ -576,13 +579,13 @@ Origin: `P-438` finished 3–2 against three ranked Unders, and the external ret
 | Grade | The process grade and defect class from Step 4 |
 
 
-**Step 6 — record learning, never promote from one case.** Add only `CANDIDATE` (or, for a pure completeness/disclosure/symmetry repair with no predictive claim, `PROMOTED_PROCESS` — see LEARNING_REGISTER.md §5) entries. A single event, or a same-day batch, is an exploratory checkpoint (five cases minimum before even exploratory review) and can never itself promote a forecast weight.
+**Step 6 — record learning, never promote from one case.** Add only `CANDIDATE` (or, for a pure completeness/disclosure/symmetry repair with no predictive claim, `PROMOTED_PROCESS` — see LEARNING_REGISTER.md §5) entries. A single event, or a same-day batch, is an exploratory checkpoint (five cases minimum before even exploratory review) and can never itself promote a forecast weight. **Promotion receipt (`C-PROMOTION-RECEIPT`, 2026-09-24(f)):** every rule written into a RULES file carries its status, evidence count and, if it moves a probability, centre, width, ordinal or row eligibility, a prospective-test ID. A predictive rule from one or two events is `TESTING` and non-binding. Six single-game "PROMOTED_PROCESS" rules were withdrawn on 2026-09-24(f) for breaking this.
 
 
-**Step 6a — run the mechanical completeness audit.** Run `python audit_card_controls.py <running_log.md> --settlement` over the log and record the per-card result (`RULES_GENERAL.md` §16.8). A missing field does not invalidate an issued card — issued evidence is immutable — but it is a process defect on that card, and a cohort-wide pattern is itself a finding. The script detects *printed fields*, not analysis quality, so a PASS is weak evidence and a FAIL is strong evidence.
+**Step 6a — run the mechanical completeness audit.** Run `python audit_card_controls.py <running_log.md> --settlement` over the log and record the per-card result (`RULES_GENERAL.md` §16.8). A missing field does not invalidate an issued card — issued evidence is immutable — but it is a process defect on that card, and a cohort-wide pattern is itself a finding. The script detects *printed fields*, not analysis quality, so a PASS is weak evidence and a FAIL is strong evidence. **From the 2026-09-25 control manifest onward run it with `--strict`**, which makes the S-1 Rev 2 receipt (7r), the tennis benchmark (T13), process provenance (10p) and the lineup diff (10l) blocking.
 
 
-**Step 7 — update the log's controlling snapshot in the same pass.** Next canonical ID, queue state, and any descriptive ledger rows are updated before, or in the same edit as, the settlement content — never left stale for a later session to reconcile. If a batch is later found only after being merged into a separate settlement addendum (as happened with P-241–P-267 on 2026-09-03), the active log's own top snapshot must still be updated at the time of merge, not left pointing at an earlier ID.
+**Step 7 — update the log's controlling snapshot in the same pass.** Next canonical ID, queue state, and any descriptive ledger rows are updated before, or in the same edit as, the settlement content — never left stale for a later session to reconcile. If a batch is later found only after being merged into a separate settlement addendum (as happened with P-241–P-267 on 2026-09-03), the active log's own top snapshot must still be updated at the time of merge, not left pointing at an earlier ID. **Summaries are copied, not recalled (`C-SUMMARY-FROM-CARD`):** every status-register, learning-register and sport-file row is copied from the issued Field 4 table (rank, contract, line, probability) and diffed against the card before commit. In `cb95acd`, 13 of 17 status rows misstated their cards.
 
 
 **Only after Steps 1–7 are complete for every queued event does a new forecast request proceed.**
@@ -664,7 +667,13 @@ Primary distribution metrics are CRPS/RPS and log score, with calibration/reliab
 - [ ] Appended the immutable Markdown view before delivery, if authorised.
 - [ ] Cited current claims and disclosed unknowns/conflicts/source limits.
 - [ ] **At settlement:** opened the structured process record (shots/on-target, inning splits, phase runs, quarter scores) and the disruption facts (red cards, sin bins, injury exits, stoppages) **with minute and score**, and classified the card as a *process* failure or a *conversion / endpoint / disruption* outcome before amending any control (`G-L23`).
-- [ ] **At settlement:** ran `python audit_card_controls.py <log.md> --settlement` and recorded the per-card completeness result (§16.8).
+- [ ] **At settlement:** ran `python audit_card_controls.py <log.md> --settlement` (with `--strict` from the 2026-09-25 manifest onward) and recorded the per-card completeness result (§16.8).
+- [ ] **Lineups (2026-09-24(f)):** used the official lineup where it was published before the freeze (`CONFIRMED_OFFICIAL` with its fetch time); printed an S-1 Rev 2 receipt (outlet, reporter, timestamp, verbatim quote, two sources) for any `PROJECTED_BEAT_VERIFIED` claim; otherwise recorded `RETRIEVAL_MISS` / `NOT_RETRIEVED` and applied G14.2.
+- [ ] **MLB totals:** printed the statsapi gamefeed `weather` block (field-relative wind) retrieved at freeze, or `WEATHER_NOT_RETRIEVED`.
+- [ ] **Covering pairs:** labelled any two rows that jointly cover every outcome `COVERING_PAIR` (field 5b).
+- [ ] **Tennis:** printed the dated Elo benchmark (`TE-P5`), matchup holds from serve × return with numerators (`TE-S4`), and P(decisive straight sets) / P(three sets) beside any best-of-three total from 18.5 to 21.5.
+- [ ] **Cricket phase rows:** printed the bat-first / chase mixture before the toss, or the realised branch after it, with the team and venue phase windows split by innings order (control 21 extension).
+- [ ] **At settlement:** process facts carry their endpoint and retrieval time (`C-PROCESS-RECORD-PROVENANCE`); team-sport cards carry the `C-LINEUP-DIFF` line; summaries are copied from Field 4 (`C-SUMMARY-FROM-CARD`).
 
 
 This checklist is the fill-in prompt; no separate template file is maintained. (A prior revision of this guide referenced a standalone `UPCOMING_GAME_PROMPT_TEMPLATE.md`, which does not exist anywhere in this repository — that dead link is corrected here rather than left to fail silently.)
@@ -709,7 +718,7 @@ Old games may measure their issued methods and supply development evidence for i
 For each future change, update the active prediction log, the specific sport rule document or RULES_GENERAL for cross-sport controls, LEARNING_REGISTER for disposition, and relevant method/source/workflow documents in the same pass. Append a dated, source-linked retrospective with original ranks, results, what went right/wrong, knowability, prior lessons and the exact adopted change. Record pending fields and live-at-first-check deferrals in the active queue. Preserve original issued cards and label superseding corrections. Document validation and link the changed Markdown files in the audit change log before delivery.
 
 
-Current implementation: [September 5 audit change log](AUDIT_CHANGELOG_2026-09-05.md).
+Current implementation: [September 5 audit change log](archive/audit_documents_implemented_2026-09-25/AUDIT_CHANGELOG_2026-09-05.md).
 
 
 <!-- DEEP-RESEARCH-IMPLEMENTATION-2026-09-19-V42 -->
@@ -859,7 +868,7 @@ SOURCE-LINEAGE CHECK:
 ## All-sports audit-reconciliation step — 2026-09-21
 
 
-Before finalizing research, check any historical audit/retrospective rule you intend to use against `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`. Apply only the current retained formulation. In particular, never use an older normalized-edge shortcut, O/U “one side won” success measure, universal probability cap, automatic rebound/hangover, `UNORDERED` escape hatch, bookmaker/fantasy evidence, or guaranteed venue-history fallback.
+Before finalizing research, check any historical audit/retrospective rule you intend to use against `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md`. Apply only the current retained formulation. In particular, never use an older normalized-edge shortcut, O/U “one side won” success measure, universal probability cap, automatic rebound/hangover, `UNORDERED` escape hatch, bookmaker/fantasy evidence, or guaranteed venue-history fallback.
 
 
 This is a governance step, not an additional model layer: the same sporting mechanism must not be counted twice merely because it appears in multiple dated audits.
@@ -872,3 +881,32 @@ This is a governance step, not an additional model layer: the same sporting mech
 
 
 After source/participant/environment research and before ordering: construct one coherent sport-native joint event distribution or qualitative branch mixture, freeze it, then query each supplied target. Do not compute or rank from historical second-highest/median pseudo-tail sums, path-count/category shortcuts, a universal 40–60% separation floor, or a blanket `DISJOINT` ban. A dependence conflict triggers repair only when the underlying event object is actually incoherent.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — freeze-time additions: receipts and reference checks
+
+Add these five steps to the §19 one-page checklist, after participant research and before ordering. Each takes a minute or less, and each answers a failure recorded in `LEARNING_REGISTER.md` §"2026-09-25(b)".
+
+1. **Receipt, not memory** (`C-RECEIPT-TOOL`; M19, M25, M30).
+   - **MLB:** `python receipts.py pregame mlb <gamePk>`. Paste its table into the card.
+   - If it says `LINEUPS_NOT_YET_PUBLISHED` or `WEATHER_NOT_YET_PUBLISHED`, the card says so too. Do not substitute a projected lineup labelled "confirmed", or a city forecast for the gamefeed wind.
+   - Re-run within 60 minutes of first pitch if the card is frozen earlier.
+   - **ESPN-covered leagues:** `python receipts.py pregame espn <sport/league> <eventId>`, for the feed state and injury list. The state line settles PREGAME v START_CROSSED before anything is issued.
+2. **Reference row beside every number (field BR).** Look up `BASE_RATES_REGISTER.md` §7 for the competition and print the relevant row beside the card's number:
+   - league total mean and SD;
+   - the P(\|margin\| ≤ k) band for a handicap;
+   - the venue row for MLB;
+   - P(deciding set) for tennis;
+   - the first-half distribution for EPL.
+   If none exists, print `REFERENCE_BASE_RATE: NOT_YET_DERIVED`.
+3. **Reference width beside the card's width** (`C-WIDTH-BENCHMARK`). If the card's width is below 0.85 × the reference, write one line naming what the card knows that a season-to-date model does not.
+4. **Windows and regimes** (RULES_GENERAL §"2026-09-25(b)"(d)).
+   - NBL rounds 1–3 and WNBA openers: print the early-season reference. The two leagues have opposite signs.
+   - WNBA: exclude or adjust 2024–25 in any average.
+   - NHL preseason: use preseason rates.
+5. **Tennis handicaps** (`C-HCP-COHERENCE`).
+   - Check P(−k.5) ≤ P(win).
+   - Print c_s and c_d beside the §7.4 conditionals. For WTA −5.5 those are 0.663 and 0.168.
+   - Above reference, name the hold/break evidence.
+
+**What these steps do not do.** They do not move a centre, widen a width or change a rank on their own. They make the card's departure from the population visible, so that the card, not the settlement, is where it gets justified.

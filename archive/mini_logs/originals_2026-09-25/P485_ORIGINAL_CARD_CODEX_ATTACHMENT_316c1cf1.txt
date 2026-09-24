@@ -1,0 +1,644 @@
+# NY Giants @ LA Rams — NFL Week 2
+
+The final pre-kickoff refresh is complete. The official inactive lists are published, and the event remains at **Q1 15:00 with no score**, so no live-play information has entered the forecast. The Drive methodology requires event verification, current participant status, explicit handling of unconfirmed information, and Pick #1 to be the strongest supported selection. :chatgpt-content-reference{index="1"}
+
+## Final ranking
+
+| Rank | Pick | Estimated probability* | Evidence |
+|---|---|---:|---|
+| **1** | **NY Giants +6.5** | **~61%** | **LOW–MODERATE lean** |
+| **2** | **Under 47.5 points** | **~54%** | **LOW** |
+| **3** | **Over 47.5 points** | **~46%** | Forced complement |
+| **4** | **LA Rams -6.5** | **~39%** | Forced complement |
+
+### Potential game winner
+**Los Angeles Rams — ~64% `UNVALIDATED_SUBJECTIVE`**
+
+### Representative score
+**Rams 24, Giants 20**
+
+That result is important because it captures my core position cleanly:
+
+- **Rams win**
+- **Giants +6.5 covers**
+- **Under 47.5 wins**
+
+So **Giants +6.5 and Rams moneyline/winner are not contradictory**. I think a narrow Rams win is materially more plausible than Los Angeles winning by 7+.
+
+\*These are scenario-distribution estimates, **not calibrated model probabilities**. The Drive explicitly says no American-football numerical model is currently fitted, calibrated, held-out validated, or prospectively promoted.
+
+---
+
+# 1. Event and rules verification
+
+This is **NFL regular season, Week 2**, New York Giants at Los Angeles Rams, scheduled for **Monday, September 21 at 8:15 PM ET / Tuesday, September 22 at 10:15 AM AEST**, at SoFi Stadium. The Rams' official schedule and Giants official game information independently confirm the fixture. :chatgpt-content-reference{index="2"}
+
+NFL regular-season overtime is a single **10-minute period**, with both teams normally receiving an opportunity to possess the ball even after an opening-possession touchdown under the current rule. The game can finish tied. :chatgpt-content-reference{index="3"}
+
+For the research distribution, the final official score including NFL overtime is modelled. The user's sportsbook/operator was not supplied, so I am **not inventing operator-specific settlement/void terms**.
+
+---
+
+# 2. Final availability and inactive report
+
+This is the most important late update.
+
+## Los Angeles Rams
+
+**Officially inactive:**
+
+- **WR Puka Nacua — hip**
+- **WR Jordan Whittington — quadriceps**
+- **S Kamren Kinchens — hamstring**
+- WR C.J. Daniels
+- OL Bill Murray
+- QB Ty Simpson, emergency third QB. :chatgpt-content-reference{index="4"}
+
+Additionally, star pass rusher **Myles Garrett was placed on injured reserve on September 17 after knee surgery** and is unavailable. :chatgpt-content-reference{index="5"}
+
+### Aaron Donald
+
+Aaron Donald planned to make his season debut tonight after sitting out the Australia opener while completing his return-to-football ramp-up. He is **not on the final inactive list**, so he is active. However, after two seasons away, I do **not** assume an unrestricted peak-Donald snap load. :chatgpt-content-reference{index="6"}
+
+### Rams offensive structure
+
+The official depth chart has:
+
+- QB **Matthew Stafford**
+- RB **Kyren Williams**, Blake Corum
+- WR **Davante Adams**
+- WR branch behind the absent Nacua/Whittington: Xavier Smith, Tutu Atwell and Konata Mumpfield
+- TE group: Davis Allen, Tyler Higbee, Colby Parkinson and Terrance Ferguson
+- OL: Alaric Jackson, Steve Avila, Coleman Shelton, Kevin Dotson, Warren McClendon Jr. :chatgpt-content-reference{index="7"}
+
+The tight-end depth is relevant. That same core TE room combined for **103 catches, 1,128 yards and 17 TDs in 2025**, and Los Angeles had already demonstrated an ability to use heavy 13-personnel packages. That gives McVay a credible mechanism for absorbing some of Nacua's missing underneath/structure work, but not a one-for-one replacement for his receiving value. :chatgpt-content-reference{index="8"}
+
+---
+
+## New York Giants
+
+**Officially inactive:**
+
+- **CB Deonte Banks — calf**
+- **LB Micah McFadden — neck**
+- S Jason Pinnock
+- TE Thomas Fidone II
+- OL J.C. Davis
+- DL Bobby Jamison-Travis
+- DL Darius Alexander. :chatgpt-content-reference{index="9"}
+
+Starting-calibre CB **Paulson Adebo is also on injured reserve** and must miss at least four games. :chatgpt-content-reference{index="10"}
+
+That leaves the Giants' secondary as the largest New York weakness in this matchup.
+
+### Important positive for New York
+
+LT **Andrew Thomas**, who had been limited with an ankle issue, is **not inactive**, as are the other principal starting offensive linemen. The official depth chart has:
+
+- LT Andrew Thomas
+- LG Jon Runyan Jr.
+- C John Michael Schmitz Jr.
+- RG Francis "Sisi" Mauigoa
+- RT Jermaine Eluemunor. :chatgpt-content-reference{index="11"}
+
+The Giants therefore avoid the major negative branch in which Jaxson Dart must play behind a materially compromised offensive line.
+
+Their skill core is also available:
+
+- QB **Jaxson Dart**
+- RB **Cam Skattebo**
+- WR **Malik Nabers**
+- WR Darnell Mooney
+- TE Isaiah Likely. :chatgpt-content-reference{index="12"}
+
+---
+
+# 3. Quarterback regimes
+
+## Jaxson Dart
+
+New York's Week 1 evidence was legitimately strong:
+
+- **23/29**
+- **230 passing yards**
+- **3 passing TD**
+- **0 INT**
+- **134.2 passer rating**
+- **54 rushing yards**
+- Giants won Dallas **28-20**. :chatgpt-content-reference{index="13"}
+
+More importantly, this was not merely touchdown variance. The Giants produced **394 total yards and 29 first downs** and converted an extraordinary 81.8% of their third downs in the game-log data. :chatgpt-content-reference{index="14"}
+
+I aggressively regress that third-down percentage. An 81.8% rate is not a sustainable expectation.
+
+But it still provides evidence for something more useful: the **Dart/Harbaugh/Nagy offence can sustain long drives**, Dart's mobility creates an additional conversion mechanism, and New York's offensive improvement is not captured well by its 2025 team average.
+
+## Matthew Stafford
+
+Stafford's Week 1 was almost the reverse:
+
+- 15/25
+- **155 yards**
+- 0 TD
+- 1 INT
+- 61.2 rating. :chatgpt-content-reference{index="15"}
+
+Los Angeles produced only seven points in the 27-7 loss to San Francisco. But treating seven points as Stafford's new offensive level would be poor modelling.
+
+The 2025 Rams were **12-5**, scored **30.5 points per game**, ranked first in scoring, and Stafford led the NFL with **4,707 passing yards and 46 TDs**. :chatgpt-content-reference{index="16"}
+
+So my Stafford prior rebounds substantially above Week 1.
+
+The problem is that his receiving environment tonight is objectively weaker without Nacua and Whittington.
+
+---
+
+# 4. Week 1 process rather than just results
+
+### Giants
+
+New York's Week 1 offensive performance was strong enough that it cannot simply be dismissed as “they beat Dallas.”
+
+The Giants' 394 yards, 29 first downs and repeated sustained drives indicate a plausible ball-control path against Los Angeles. That is especially important for **+6.5** because long New York drives simultaneously:
+
+1. reduce Rams possessions,
+2. keep Stafford off the field,
+3. make a one-score final more likely,
+4. increase the chances of a late backdoor cover even if Los Angeles leads. :chatgpt-content-reference{index="17"}
+
+### Rams
+
+Los Angeles generated **290 yards** against San Francisco. Stafford wasn't sacked, but the Rams lost two turnovers and failed on a fourth-and-goal at the 1. Kyren Williams and Blake Corum combined for 95 rushing yards on 21 carries, so the run-game mechanism remained functional despite the 7-point final. :chatgpt-content-reference{index="18"}
+
+That is why I do **not** downgrade the Rams winner probability anywhere near 50%.
+
+---
+
+# 5. Prior-season adjustment
+
+2025 strongly favours Los Angeles if used blindly:
+
+| Team | 2025 record | PF/game | PA/game |
+|---|---:|---:|---:|
+| Rams | 12-5 | **30.5** | **20.4** |
+| Giants | 4-13 | **22.4** | **25.8** | :chatgpt-content-reference{index="19"}
+
+
+But the Giants have undergone a meaningful regime change. Their coaching structure and offensive personnel are different, and Week 1 is the first regular-season observation of that current system.
+
+Therefore:
+
+**Rams 2025 data = strong prior.**  
+**Giants 2025 data = materially down-weighted prior.**  
+**Giants Week 1 = informative, but only one game.**
+
+That is more defensible than either blindly trusting the Rams' 2025 power rating or declaring the Giants transformed after one game.
+
+---
+
+# 6. Recency and head-to-head control
+
+The Rams' latest five completed games entering tonight were:
+
+- 7-27 SF
+- 27-31 SEA
+- 20-17 CHI
+- 34-31 CAR
+- 37-20 ARI. :chatgpt-content-reference{index="20"}
+
+New York's last ten include the current **28-20 Dallas win**, two strong wins closing 2025, but also several losses from the former coaching regime. :chatgpt-content-reference{index="21"}
+
+Per the Drive rules, L5/L10/L15/L20 overlap and are **not four independent confirmations**.
+
+For New York specifically, the truly comparable 2026 Harbaugh/Nagy/Wilson regime has only **one regular-season game**. Therefore the older L10/L15/L20 history widens the prior; it does not override the new regime.
+
+### Head-to-head
+
+The Rams beat the Giants:
+
+- **38-11 in 2021**
+- **26-25 in 2023**. :chatgpt-content-reference{index="22"}
+
+I assign those results very little directional weight because **current H2H continuity is effectively zero on the Giants side**: different starting QB, head coach, offensive coordinator and significant personnel changes.
+
+---
+
+# 7. Venue and conditions
+
+SoFi Stadium has a **fixed roof** and is climate-controlled. :chatgpt-content-reference{index="23"}
+
+Therefore there is no meaningful wind/rain branch to force an Under or Over.
+
+This matters because one of the Drive's required American-football branches is weather/surface. Here the correct result is essentially:
+
+> **Environment neutral. No signed weather adjustment.**
+
+---
+
+# 8. Drive-level scoring reference
+
+The current American-football rules file contains a 2025 NFL reference sample of 272 completed regular-season games:
+
+- average total: **46.0**
+- SD: **13.8**
+- exact final margin of **3: 15.1%**
+- exact final margin of **7: 9.6%**
+- margin 0-6: **40.1%**
+- margin 7-13: **24.6%**
+- 14+: **35.3%**
+- at least one non-offensive TD: **18.8%**
+
+These are unconditional descriptive reference rates, **not model coefficients**.
+
+The exact-seven figure is especially relevant.
+
+**Giants +6.5 does not protect against a Rams win by exactly seven.**
+
+That is a meaningful kill path and is why I am not pushing Giants +6.5 into high-confidence territory despite ranking it first.
+
+---
+
+# 9. Independent joint-score tree
+
+This score object was constructed **before querying ±6.5 and 47.5**.
+
+`UNVALIDATED_SUBJECTIVE`, not fitted/calibrated.
+
+| Drive/state branch | Weight | Representative score | Mechanism |
+|---|---:|---:|---|
+| **AM-B1 Central** | 20% | LAR 24-20 | Stafford rebound, but Dart sustains enough offence to keep it one score |
+| **AM-B2 Rams explosive** | 16% | LAR 31-20 | Giants' depleted CB room gives Stafford/Adams or TE group explosive opportunities |
+| **AM-B3 Giants long drives** | 16% | NYG 24-23 | Dart mobility + run game + third-down regression that remains above poor levels |
+| **AM-B4 Short field/non-offensive** | 10% | LAR 31-24 | turnover/ST score breaks ordinary drive-efficiency relationship |
+| **AM-B5 Low Giants scoring** | 13% | LAR 27-13 | Donald-led interior disruption plus secondary coverage prevents sustained NY drives |
+| **AM-B6 Clock/game script** | 5% | LAR 24-21 | Rams lead, run game drains clock; Giants accumulate late points |
+| **AM-B7 Stable indoor upset** | 12% | NYG 27-23 | no adverse environment, current Giants offence transfers on road |
+| **AM-B8 OT tail** | 8% | NYG 27-24 | close regulation state reaches extra period |
+
+### Distribution summary
+
+- Weighted representative total: **47.51**
+- Weighted Rams margin: **+4.35**
+- Rams outright-win mass: **~64%**
+- Giants +6.5 mass: **~61%**
+- Rams -6.5 mass: **~39%**
+- Under 47.5 mass: **~54%**
+- Over 47.5 mass: **~46%**
+
+The interesting feature is that the **mean total is virtually sitting on 47.5** even though Under carries 54% of the discrete branch mass. That's because the Over states have larger scoring tails.
+
+This is precisely why the total is lower confidence than Giants +6.5.
+
+---
+
+# 10. Spread separation budget
+
+## Giants +6.5
+
+The Giants win this contract if they:
+
+- win outright, or
+- lose by 1-6.
+
+The central **Rams 24-20** state gives New York a 2.5-point buffer against the supplied handicap.
+
+### Why I prefer New York +6.5
+
+The Rams have enough disadvantages to reduce confidence in **large separation**:
+
+- Nacua unavailable.
+- Whittington unavailable.
+- Garrett on IR.
+- Donald playing his first game in roughly two years, with workload effectiveness uncertain.
+- New York's primary OL is active.
+- Dart's mobility makes sack/pressure conversion less straightforward.
+- New York demonstrated a credible sustained-drive offence in Week 1. :chatgpt-content-reference{index="24"}
+
+### What kills it
+
+The biggest threat is not simply “the Rams are better.”
+
+It is this exact game script:
+
+> Stafford exploits an Adebo/Banks-depleted secondary, Los Angeles reaches 27-31 points, Donald meaningfully improves the Rams' interior front, and New York's Week 1 third-down performance regresses hard.
+
+A **27-20 Rams score loses Giants +6.5**, and exact seven is structurally common enough in NFL scoring that it cannot be hand-waved.
+
+That is why this is **~61%, not 70%**.
+
+---
+
+# 11. Total budget at 47.5
+
+For the Under:
+
+- Rams 24 → Giants must score **23 or fewer**
+- Giants 20 → Rams can score **27 or fewer**
+- Giants 21 → Rams can score **26 or fewer**
+
+My central 24-20 state = **44 points**.
+
+### Under support
+
+- Nacua is a meaningful Rams receiving loss.
+- Giants demonstrated the ability to sustain possession.
+- Rams can lean on Williams/Corum.
+- A Rams lead naturally opens clock-drain states.
+- Los Angeles' Week 1 offence has not yet demonstrated 2025-level efficiency in the new season. :chatgpt-content-reference{index="25"}
+
+### Over kill paths
+
+They are substantial:
+
+1. depleted Giants secondary;
+2. Stafford rebound;
+3. Rams tight-end depth against Nacua's absence;
+4. Dart's Week 1 efficiency carrying over;
+5. defensive/special-teams touchdown;
+6. turnover-created short fields;
+7. close-game late fourth-down aggression;
+8. overtime.
+
+So although **Under 47.5 is #2**, I see the total as almost a coin flip.
+
+---
+
+# 12. Final pick-by-pick reasoning
+
+## **#1 Giants +6.5 — ~61%**
+This is the cleanest contract because I do **not** need New York to be the better team.
+
+I only need the game to land inside six points or for New York to win.
+
+The Rams' current offensive absences reduce their separation ceiling, while New York enters with its quarterback, top skill players and main offensive line intact.
+
+**Primary failure:** Rams by exactly 7-14 through Stafford attacking the Giants' cornerback losses.
+
+---
+
+## **#2 Under 47.5 — ~54%**
+Central states cluster around approximately **43-47 points**, and Nacua's absence plus potential possession-heavy football supports several Under paths.
+
+But 47.5 lies essentially on my weighted score centre, so this is **LOW-confidence**.
+
+**Primary failure:** Los Angeles attacks New York's depleted secondary successfully and the Giants contribute enough themselves to create 27-24/31-20-type states.
+
+---
+
+## **#3 Over 47.5 — ~46%**
+This is not dead at all.
+
+The Over benefits from:
+
+- Stafford rebound;
+- NYG cornerback depletion;
+- Dart/Nabers/Likely upside;
+- short fields;
+- non-offensive scoring;
+- OT.
+
+It's only third because those higher-scoring branches are less frequent in my current score tree than the sub-48 states.
+
+---
+
+## **#4 Rams -6.5 — ~39%**
+I prefer the Rams to **win**, but winning and winning by seven are materially different targets.
+
+The -6.5 requires the branch where:
+
+- New York's Week 1 offensive efficiency regresses sharply,
+- Stafford exploits the Giants' CB losses,
+- and Los Angeles' defensive front creates enough drive separation.
+
+Those states are real, but not central enough to outrank the other three.
+
+---
+
+# Potential winner: **Los Angeles Rams ~64%**
+
+The Rams retain the stronger established quarterback/coaching/team-quality prior. Stafford came off an MVP season, the 2025 Rams scored 30.5 PPG, Los Angeles is home, and the Giants' cornerback depth is genuinely compromised. :chatgpt-content-reference{index="26"}
+
+But that does **not** automatically justify Rams -6.5.
+
+My modal relationship is:
+
+> **Rams more likely to win than lose, but Giants more likely to stay within 6.5 than not.**
+
+---
+
+# Source-quality notes
+
+I excluded sportsbook odds, betting previews, consensus picks, implied probabilities and fantasy projections from the sporting distribution.
+
+I also avoided treating coach comments such as “we need to establish the run” as a quantitative adjustment. The Drive permits such comments as role/context evidence, not as an unsupported signed change to scoring efficiency.
+
+The user-supplied GitHub repository remains an additional requested source. :chatgpt-content-reference{index="27"} The Drive methodology remained the controlling source because no conflicting GitHub-only rule was recovered in this research pass.
+
+## Material sources
+
+1. **NFL Football Operations** — current NFL rules and overtime. :chatgpt-content-reference{index="28"}
+2. **LA Rams official schedule** — fixture/date/time. :chatgpt-content-reference{index="29"}
+3. **Giants official game information** — fixture/date/time. :chatgpt-content-reference{index="30"}
+4. **Rams official final inactives** — Nacua, Whittington, Kinchens and other final inactives. :chatgpt-content-reference{index="31"}
+5. **Giants official final inactives** — Banks, McFadden and current availability; Adebo IR context. :chatgpt-content-reference{index="32"}
+6. **NFL/Rams transaction and injury sources** — Garrett IR/knee surgery. :chatgpt-content-reference{index="33"}
+7. **Rams/NFL Aaron Donald reporting** — planned season debut and ramp-up. :chatgpt-content-reference{index="34"}
+8. **Giants official depth chart** — Dart, offensive line and skill players. :chatgpt-content-reference{index="35"}
+9. **Rams official depth chart** — Stafford, current OL, WR/TE/RB depth and defensive structure. :chatgpt-content-reference{index="36"}
+10. **Giants official Week 1 material** — Dart's Week 1 production. :chatgpt-content-reference{index="37"}
+11. **Rams official Week 1 recap/player stats** — 27-7 loss, Stafford and run-game process. :chatgpt-content-reference{index="38"}
+12. **Pro Football Reference** — 2025 Rams/Giants season baselines. :chatgpt-content-reference{index="39"}
+13. **StatMuse** — recent game windows and H2H, used descriptively only. :chatgpt-content-reference{index="40"}
+14. **SoFi Stadium official guide** — fixed roof and climate control. :chatgpt-content-reference{index="41"}
+15. **Sports Research Google Drive** — `METHOD.md`, `RULES_GENERAL.md`, `RULES_AMERICAN_FOOTBALL.md`, `CONTROLS.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `SCORING_AND_VALIDATION.md`, current control manifest and active mini log.
+
+---
+
+# Updated mini prediction running log
+
+One continuity point matters: the Drive copy currently physically ends at **P-483**, but **P-484 was already issued in this chat for Atlanta Dream @ New York Liberty**. I will not reuse that canonical ID. The mini-log instructions explicitly require preserving the sequence and not overwriting an existing issued event. :chatgpt-content-reference{index="42"}
+
+Therefore **this NFL card is P-485**.
+
+The instructions also require retaining incomplete predictions at the top and returning the updated running log after each new prediction. :chatgpt-content-reference{index="43"}
+
+## Prediction Mini Running Log — P-482 onward
+
+**Governing method:** MDS-2026.09.19-v4.3 / CR-2026.09.21-3  
+**Operating mode:** SPORTS_ONLY / MARKET_BLIND  
+**Performance status:** LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE  
+**Next canonical ID:** **P-486**  
+**Retrospective policy:** none automatically.
+
+### 1. Incomplete / Unsettled
+
+### **P-482 — Cricket / CPL Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen**
+
+**Status:** UNSETTLED / no retrospective.
+
+**Original market:** Jamaica Kingsmen first six legal overs O/U 47.5.
+
+**Original ranking**
+1. **Over 47.5 — ~59.9% / LOW**
+2. Under 47.5 — ~40.1%, forced complement.
+
+**Original distribution:** projected six-over mean **51.75**, SD ~14.43, central state around 50-52/1.
+
+**Potential winner:** **Antigua & Barbuda Falcons ~53% / LOW**.
+
+**Core original reasoning:** Jamaica's current opening regime had recently generated 50/1, 79/0 and 75/1 six-over states, but early-wicket suppression remained significant. Toss, confirmed XI and exact strip were not verified at issue, so the evidence grade was capped.
+
+**Sources:** Cricket West Indies schedules/current event state; CPL official Newsroom; Jamaica Gleaner/CMC; Wisden; secondary phase-score route; Bridgetown conditions; Sports Research Drive.
+
+**Document mapping:** `RULES_CRICKET.md`, `DATA_SOURCE_REGISTER.md`.
+
+---
+
+### **P-483 — Tennis / WTA Seoul — Katie Volynets vs Elvina Kalieva**
+
+**Status:** UNSETTLED / no retrospective.
+
+**Original ranking**
+1. **Over 19.5 games — ~65.2%**
+2. **Kalieva +4.5 — ~58.4%**
+3. Volynets -4.5 — ~41.6%
+4. Under 19.5 — ~34.8%
+
+**Potential winner:** **Katie Volynets ~62%**.
+
+**Original tree:** weighted representative total 23.1 games and Volynets margin +1.66.
+
+**Core original reasoning:** Volynets held the stronger ranking/current hard-court title and return-pressure profile, while Kalieva's improved service profile and three-set resilience created a substantial close-match branch.
+
+**Sources:** WTA exact match/tournament/player records; WTA Philadelphia and US Open match data; USTA; L'Equipe/MyKhel event-state checks; Seoul conditions; Sports Research Drive.
+
+**Document mapping:** `RULES_TENNIS.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `LEARNING_REGISTER.md`.
+
+---
+
+### **P-484 — Basketball / WNBA — Atlanta Dream @ New York Liberty**
+
+**Status:** UNSETTLED / no retrospective.
+
+**Original ranking**
+1. **Under 177.5 — ~54% / LOW**
+2. **Atlanta -1.5 — ~53-54% / LOW**
+3. Liberty +1.5 — ~46-47%
+4. Over 177.5 — ~46%
+
+**Potential winner:** **Atlanta Dream ~58%**.
+
+**Original central state:** Atlanta **88-86** New York; weighted total ~176.7 and Atlanta margin ~+2.4.
+
+**Core original reasoning:** Atlanta carried the stronger overall net profile, defensive efficiency, offensive-rebounding/turnover-generation and rest advantages; New York's strong home defence and star core kept both the total and handicap near their central corridors.
+
+**Availability at issue:** Brionna Jones unavailable for Atlanta; Satou Sabally unavailable for New York. Exact tonight starting fives were not recovered from a fresh primary lineup publication, so evidence was capped.
+
+**Sources:** WNBA official event/team sources; Liberty/Dream official material; StatMuse; RealGM recent box scores; AP; Sports Research Drive.
+
+**Document mapping:** `RULES_BASKETBALL.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `LEARNING_REGISTER.md`.
+
+---
+
+### **P-485 — American Football / NFL — New York Giants @ Los Angeles Rams**
+
+**Status:** **UNSETTLED — FINAL PREGAME/NEAR-KICKOFF FORECAST / NO RETROSPECTIVE.**
+
+**Scheduled start:** 22 Sep 2026, 10:15 AM AEST / 21 Sep 8:15 PM ET.  
+**Venue:** SoFi Stadium, Inglewood.  
+**Final event state:** Q1 15:00 / no score at final research refresh.
+
+**Contracts**
+- Giants +6.5
+- Rams -6.5
+- Over 47.5
+- Under 47.5
+
+**Final availability**
+- Rams inactive: Puka Nacua, Jordan Whittington, Kamren Kinchens, C.J. Daniels, Bill Murray, Ty Simpson.
+- Rams Myles Garrett: IR.
+- Aaron Donald: active/not inactive; planned season debut, workload uncertainty retained.
+- Giants inactive: Deonte Banks, Micah McFadden, Jason Pinnock, Thomas Fidone II, J.C. Davis, Bobby Jamison-Travis, Darius Alexander.
+- Giants Paulson Adebo: IR.
+- Andrew Thomas and principal Giants OL: active.
+- Starting QBs: Jaxson Dart / Matthew Stafford.
+
+**Independent score tree**
+- AM-B1 central, 20%: LAR 24-20.
+- AM-B2 Rams explosive, 16%: LAR 31-20.
+- AM-B3 Giants long-drive, 16%: NYG 24-23.
+- AM-B4 non-offensive/short-field, 10%: LAR 31-24.
+- AM-B5 low-NYG-score, 13%: LAR 27-13.
+- AM-B6 clock/game-script, 5%: LAR 24-21.
+- AM-B7 stable-roof/current-Giants-upside, 12%: NYG 27-23.
+- AM-B8 overtime tail, 8%: NYG 27-24.
+
+**Distribution**
+- Weighted total: ~47.51.
+- Weighted Rams margin: ~+4.35.
+- Rams winner mass: ~64%.
+- Giants +6.5: ~61%.
+- Rams -6.5: ~39%.
+- Under 47.5: ~54%.
+- Over 47.5: ~46%.
+- Status: `UNVALIDATED_SUBJECTIVE`.
+
+**Ranked picks**
+1. **GIANTS +6.5 — ~61% — Rank #1 / LOW–MODERATE lean.**
+2. **UNDER 47.5 — ~54% — Rank #2 / LOW.**
+3. **OVER 47.5 — ~46% — Rank #3 / forced complement.**
+4. **RAMS -6.5 — ~39% — Rank #4 / forced complement.**
+
+**Potential winner**
+- **Los Angeles Rams ~64%.**
+
+**Rank-1 implied state**
+- Main state approximately **Rams 24-20 Giants**.
+- Giants +6.5: WIN.
+- Under 47.5: WIN.
+- Rams outright: WIN.
+- Under = **COHERENT** with the principal Rank-1 branch but only partially overlapping across the full Giants-cover distribution.
+- Over = **PARTIAL_OVERLAP** because Giants can cover in 27-24/27-23-type scoring states.
+- Rams -6.5 = **DISJOINT from the central Rank-1 state**, though both can coexist in Rams 7+ branches.
+
+**Main Rank-1 failure path**
+Stafford exploits New York's Adebo/Banks absences, Donald materially improves Rams pressure, Dart's Week 1 conversion efficiency sharply regresses, and Los Angeles wins by ≥7.
+
+**Source ledger**
+NFL Football Operations; Rams and Giants official schedules, inactives, injury reports and depth charts; Rams official Week 1 recap and Donald/Garrett updates; Giants official Week 1/Dart material; PFR 2025 baselines; StatMuse recent/H2H game logs; SoFi official venue guide; Sports Research Drive.
+
+**Source firewall:** no sportsbook prediction, line movement, consensus pick, tipster or DFS source contributed directional evidence.
+
+**Document mapping**
+- `RULES_AMERICAN_FOOTBALL.md`: existing QB/inactive, separation-budget, key-number, non-offensive-score, current-regime uncertainty, game-script, weather/roof and OT rules applied.
+- `SOURCES.md` / `DATA_SOURCE_REGISTER.md`: official final inactive lists remain primary late-participant source.
+- `LEARNING_REGISTER.md`: observation only, not a new permanent rule: when a strong prior-season favourite loses its top receiver and elite edge defender but retains its starting QB, **winner probability and large-margin probability should be separated explicitly rather than downgraded together**. This is already substantially covered by the framework's separation-budget rules.
+- No new permanent methodology rule proposed.
+
+---
+
+### 2. Settled logs
+
+**None moved to settled in this query.** Per instruction, no retrospective was performed.
+
+### 3. Integrity status
+
+- P-482: unsettled.
+- P-483: unsettled.
+- P-484: unsettled.
+- **P-485: unsettled.**
+- No historical issued forecast was rewritten.
+- No retrospective was performed.
+- No non-mini-log Drive file was edited.
+- **Next ID: P-486.**
+
+## Bottom line
+
+**1. Giants +6.5**  
+**2. Under 47.5**  
+**3. Over 47.5**  
+**4. Rams -6.5**
+
+**Potential winner: LA Rams.**
+
+The most important distinction is **Rams to win versus Rams to win by 7+**. Current personnel and matchup evidence supports the first much more strongly than the second.

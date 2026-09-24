@@ -1,0 +1,217 @@
+{
+ "header": {
+  "id": "401875254",
+  "uid": "s:40~l:55~e:401875254",
+  "season": {
+   "year": 2027,
+   "current": true,
+   "type": 2
+  },
+  "timeValid": true,
+  "competitions": [
+   {
+    "id": "401875254",
+    "uid": "s:40~l:55~e:401875254~c:401875254",
+    "date": "2026-09-26T11:30Z",
+    "neutralSite": false,
+    "conferenceCompetition": false,
+    "boxscoreAvailable": false,
+    "commentaryAvailable": false,
+    "liveAvailable": false,
+    "onWatchESPN": false,
+    "recent": false,
+    "wallclockAvailable": false,
+    "boxscoreSource": "none",
+    "playByPlaySource": "none",
+    "competitors": [
+     {
+      "id": "7",
+      "uid": "s:40~l:55~t:7",
+      "order": 0,
+      "homeAway": "home",
+      "team": {
+       "id": "7",
+       "guid": "8d74919a-a69b-3cd3-94d0-8cf1428c08d5",
+       "uid": "s:40~l:55~t:7",
+       "location": "Perth",
+       "name": "Wildcats",
+       "abbreviation": "PER",
+       "displayName": "Perth Wildcats",
+       "color": "ec1c23",
+       "alternateColor": "f1f2f3"
+      },
+      "record": [
+       {
+        "type": "total",
+        "summary": "1-1",
+        "displayValue": "1-1"
+       }
+      ],
+      "possession": false
+     },
+     {
+      "id": "6",
+      "uid": "s:40~l:55~t:6",
+      "order": 1,
+      "homeAway": "away",
+      "team": {
+       "id": "6",
+       "guid": "d45b1189-8f3d-3c8e-bbcd-e1326a66a88f",
+       "uid": "s:40~l:55~t:6",
+       "location": "New Zealand",
+       "name": "Breakers",
+       "abbreviation": "NZL",
+       "displayName": "New Zealand Breakers",
+       "color": "e33c95",
+       "alternateColor": "33aee3"
+      },
+      "record": [
+       {
+        "type": "total",
+        "summary": "1-1",
+        "displayValue": "1-1"
+       }
+      ],
+      "possession": false
+     }
+    ],
+    "status": {
+     "type": {
+      "id": "1",
+      "name": "STATUS_SCHEDULED",
+      "state": "pre",
+      "completed": false,
+      "description": "Scheduled",
+      "detail": "Sat, September 26th at 7:30 AM EDT",
+      "shortDetail": "9/26 - 7:30 AM EDT"
+     }
+    },
+    "broadcasts": [],
+    "series": [
+     {
+      "type": "season",
+      "title": "Regular Season Series",
+      "description": "Regular Season Series",
+      "summary": "Series starts 9/26",
+      "completed": false,
+      "totalCompetitions": 4,
+      "competitors": [
+       {
+        "id": "7",
+        "uid": "s:40~l:55~t:7",
+        "wins": 0,
+        "ties": 0,
+        "team": {
+         "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nbl/seasons/2027/teams/7?lang=en&region=us"
+        }
+       },
+       {
+        "id": "6",
+        "uid": "s:40~l:55~t:6",
+        "wins": 0,
+        "ties": 0,
+        "team": {
+         "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nbl/seasons/2027/teams/6?lang=en&region=us"
+        }
+       }
+      ],
+      "events": [
+       {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nbl/events/401875254?lang=en&region=us",
+        "id": "401875254"
+       },
+       {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nbl/events/401875268?lang=en&region=us",
+        "id": "401875268"
+       },
+       {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nbl/events/401875353?lang=en&region=us",
+        "id": "401875353"
+       },
+       {
+        "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/nbl/events/401875397?lang=en&region=us",
+        "id": "401875397"
+       }
+      ],
+      "startDate": "2026-09-26T11:30Z"
+     }
+    ],
+    "boxscoreMinutes": false
+   }
+  ],
+  "week": 1,
+  "league": {
+   "id": "55",
+   "uid": "s:40~l:55",
+   "name": "National Basketball League",
+   "abbreviation": "NBL",
+   "slug": "nbl",
+   "isTournament": false
+  }
+ },
+ "boxscore": {
+  "teams": [
+   {
+    "team": {
+     "id": "6",
+     "uid": "s:40~l:55~t:6",
+     "slug": "new-zealand-breakers",
+     "location": "New Zealand",
+     "name": "Breakers",
+     "abbreviation": "NZL",
+     "displayName": "New Zealand Breakers",
+     "shortDisplayName": "Breakers",
+     "color": "e33c95",
+     "alternateColor": "33aee3"
+    },
+    "statistics": [
+     {
+      "name": "streak",
+      "displayValue": "L1",
+      "abbreviation": "STRK",
+      "label": "Streak"
+     },
+     {
+      "name": "avgPointsAgainst",
+      "displayValue": "84.5",
+      "abbreviation": "OPP PPG",
+      "label": "Points Against"
+     }
+    ],
+    "displayOrder": 1,
+    "homeAway": "away"
+   },
+   {
+    "team": {
+     "id": "7",
+     "uid": "s:40~l:55~t:7",
+     "slug": "perth-wildcats",
+     "location": "Perth",
+     "name": "Wildcats",
+     "abbreviation": "PER",
+     "displayName": "Perth Wildcats",
+     "shortDisplayName": "Wildcats",
+     "color": "ec1c23",
+     "alternateColor": "f1f2f3"
+    },
+    "statistics": [
+     {
+      "name": "streak",
+      "displayValue": "W1",
+      "abbreviation": "STRK",
+      "label": "Streak"
+     },
+     {
+      "name": "avgPointsAgainst",
+      "displayValue": "98.5",
+      "abbreviation": "OPP PPG",
+      "label": "Points Against"
+     }
+    ],
+    "displayOrder": 2,
+    "homeAway": "home"
+   }
+  ]
+ },
+ "gameInfo": {}
+}

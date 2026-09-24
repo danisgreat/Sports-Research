@@ -12,7 +12,7 @@
 
 
 Status: **ACTIVE**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Method version: **MDS-2026.09.06-v4.0**
 Applies with RULES_GENERAL.md, MODEL_AND_DATA_SPEC.md, ALGORITHM_PORTFOLIO_AND_EVALUATION.md, and NUMERICAL_TRAINING_SPEC.md.
 Executable algorithm: **SFA-ICE-HOCKEY (§8) — instantiates GFA-2 in RULES_GENERAL.md §11**
@@ -416,7 +416,7 @@ L-068–L-071 apply at this SFA's identity/goalie-exposure/period-to-OT/settleme
 
 
 
-Full evidence and frozen-card comparisons: [September 5 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
+Full evidence and frozen-card comparisons: [September 5 audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
 
 
 ## September 6 settlement learning — cross-sport gates instantiated, and the overtime-terms closure route
@@ -448,7 +448,7 @@ No ice-hockey card was settled in the `P-294`–`P-305` cohort. Two inherited fo
 **Pre-issue checklist additions (this sport):** settlement endpoint named per row; coaching/bench/rotation record for both sides with missingness codes; tail-budget sums printed against every total line; path-geometry class and `N` printed for every total and phase-total row; separation-floor result stated for Rank #1.
 
 
-Full narrative and evidence: [`IMPROVEMENT_PLAN_2026-09-06.md`](IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
+Full narrative and evidence: [`archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md`](archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
 
 
 ## September 5 implementation after freeze confirmation
@@ -508,7 +508,7 @@ No ice-hockey card in the `P-345`–`P-371` import. From the next card ([`RULES_
 Apply section 16.9 to joint regulation goals and the overtime/shootout contract. Confirm starting goalies separately from roster membership, skater lines, scratches, reserves and coaches. Empty-net and power-play states can alter total/margin dependence; include them once in exclusive outcome branches. Shot/save rates use actual attempts and quality/context, not invented denominators. No new hockey result was settled in this pass; transferred controls repair arithmetic/provenance only.
 
 
-For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. [Shared correction and methodology sources](audit_2026-09-12/rule_corrections.md). All current log observations remain learning-only and not performance-eligible.
+For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. Shared correction and methodology sources (`audit_2026-09-12/rule_corrections.md`, not present in this repository). All current log observations remain learning-only and not performance-eligible.
 
 
 
@@ -586,15 +586,64 @@ Model regulation/OT score states with confirmed/probabilistic goalie, lineup/lin
 
 Current prospective override. Retain confirmed goalie state, 5v5 shot/xG process, special teams, score effects, empty-net/overtime branches and travel/rest only with a named mechanism. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, automatic goalie-unknown total direction and recent-finishing-streak conversion shifts. Build one coherent ice-hockey joint outcome distribution before querying targets.
 <!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
-## 2026-09-24 settlement learning — P-503 (NHL Pre-Season: Minnesota Wild @ Dallas Stars)
+<!-- AUDIT-2026-09-24F -->
+## 2026-09-24 settlement learning — P-503 (NHL pre-season: Minnesota Wild @ Dallas Stars), corrected 2026-09-24(f)
 
-Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)"](PREDICTION_LOG_COMBINED_5.md). Learning-only.
+**Full record:** `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(f)". This is learning-only.
 
-| Card | Matchup | Rank #1 | Result | Top O/U | Score | Verdict |
-|---|---|---|---|---|:---:|---|
-| `P-503` | Wild @ Stars | Stars ML (W) | Stars 2–0 | Under 6.0 (W) | 2–0 (2) | Clean sweep; Stars NHL-tier roster overwhelmed Wild AHL prospects |
+| Card | Rank #1 (p) | Final (verified: NHL api-web `2026010034`) | Top O/U (rank) | Verified process |
+|---|---|---|---|---|
+| P-503 | Stars ML (0.708) **W** | DAL 2–0, regulation | Under 5.5 (#2) **W** (2) | Goals: Seminoff P2 15:33 (even strength) and Lindell P3 10:39 (even strength); no empty-net modifier. **DAL goalie: Poirier, 59:29, 24/24. Oettinger, whom the card called "confirmed", did not play.** MIN goalie Wallstedt stopped 22 of 24. SOG 24–24 |
 
-### 1. New Rule: `NHL-PRESEASON-ROSTER-ASYMMETRY`
-- **Pre-Season Split-Squad / Prospect Disparities:** In NHL pre-season fixtures, team quality is completely divorced from regular-season ratings and is dictated entirely by game-day roster tier splits.
-- **Mechanism:** When one club dresses its NHL regular top-six forwards and top-pairing defensemen alongside an NHL starter/tandem goalie, while the opposing club fields an AHL/junior prospect roster to audition depth, the resulting shot-quality and possession differential creates massive structural skew.
-- **Protocol:** Roster tier classification (NHL Veteran Core vs AHL/Junior Trialists) is mandatory for NHL pre-season analysis under `Control S-1 Rev 2`. When a 3-tier gap exists, the higher-tier side's ML or puck-line may be promoted to Rank #1, paired with Under when veteran defensemen control pace and shot suppression.
+The peer version of this section (`cb95acd`) was wrong in four respects:
+- it printed a short-handed goal and an empty-net goal;
+- it credited Poirier and Oettinger with a combined shutout;
+- it put the Under line at 6.0 (the issued line was 5.5);
+- it listed a "Stars −1.5" row, which the card never had.
+
+### Demoted: `NHL-PRESEASON-ROSTER-ASYMMETRY` → non-ranking disclosure plus TESTING (L-20260924-F08)
+
+**Why demoted.** The roster read was right: Minnesota dressed a prospect squad (Stramel, Shaw, Pitlick, Heidt and others) while Dallas dressed Benn, Heiskanen, Lindell, Steel, Faksa and others. But it rests on one win, and the same card's highest-leverage participant claim, the goalie, was false. A rule that makes a roster-tier gap "promotable to Rank #1" is a predictive override from one game (§16.10 item 11).
+
+**What remains operative (disclosure only).**
+1. A pre-season card prints each side's roster tier: NHL regulars dressed, AHL/junior or try-out players dressed, and the named absentees. It has **no ranking effect**.
+2. The pre-season starting goalie is `PROJECTED` until the official lineup or warm-up report. Pre-season goalies often split periods, and a projected goalie may not be printed as "confirmed" (`C-LINEUP-DIFF`).
+
+**Test.** `T-NHL-PRESEASON-GOALIE`: record, over the next 10 pre-season cards, how often the projected starter plays the full game.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — NHL reference rates, empty-net structure, preseason and recency (research pass)
+
+**Status.** Reference rates and disclosure (`C-PROMOTION-RECEIPT`: `REFERENCE` / `PROMOTED_PROCESS`). No coefficient. Source: `BASE_RATES_REGISTER.md` §7.2, from `api-web.nhle.com/v1/score/{date}` fetched with curl (n = 1,312 regular-season games, 2025-26), and `RECENCY_AND_REBOUND.md` §7.
+
+**H-R1. Totals.**
+- P(total ≤ 5) = 0.427 and P(total ≤ 6) = 0.531; mean 6.25, SD 2.30.
+- 24.8% of games reach overtime (9.1% shoot-outs). An overtime or shoot-out winner adds exactly one goal to a regulation tie, so full-game totals of those games are **odd**: P(total = 5) is 0.233 but P(total = 6) is 0.104.
+- Consequence: a 2–2 regulation tie always lands Under 5.5; a 3–3 tie always lands Over 6.5.
+- A full-game 5.5 or 6.5 total prints the regulation-tie state's mass as its own branch. A regulation-only contract settles on the 60-minute score (`receipts.py settle nhl` prints it).
+
+**H-R2. The puck line is an empty-net market.**
+- P(margin ≥ 2) = **0.568** of all games (0.756 of games decided in regulation).
+- **73%** of two-goal regulation wins contained an empty-net goal, which was scored in 34.6% of games.
+- A −1.5 row names the empty-net branch (lead by one late, goalie pulled, empty-net goal) as explicit mass: it is the modal route to a two-goal margin.
+- A +1.5 row names the same branch as its main kill path (G-L1; M10).
+
+**H-R3. Preseason uses preseason rates.**
+- 2025 preseason: total **5.68** (n = 104), P(total ≤ 5) 0.567.
+- 2026 preseason to 24 Sep: **5.33** (n = 36).
+- Both sit about 0.6–0.9 goals below the regular season.
+- A preseason card prints the preseason reference, not 6.25. P-503 (DAL 2–0 MIN, Under 5.5 won) fits.
+
+**H-R4. Recency and team scoring (RECENCY §7.2).**
+- A team's season scoring rate predicts its next game no better than the league constant (RMSE 1.731 v 1.730). The last game is **40% worse**; half-shrinking to the league mean is best.
+- A back-to-back against a rested opponent is −0.20 goals (−0.53, +0.12), n = 253: not distinguishable from zero.
+- Team-scoring leans therefore need a named mechanism: goalie, injuries or special teams. Otherwise they belong in the width.
+
+**H-R5. Width benchmark (`C-WIDTH-BENCHMARK`).** Total residual SD **2.29**; margin **2.57** (0.85×: 1.95 and 2.18). P-503's 2.68 and 2.74 were consistent with it.
+
+**H-R6. Settlement and the goalie test.** `receipts.py settle nhl <gameId> --card-goalie-home X` prints:
+- the goalies who played, with time on ice;
+- the empty-net goals;
+- the regulation score.
+
+It supplies `T-NHL-PRESEASON-GOALIE`'s record directly. P-503 replays as "card Jake Oettinger → DID NOT PLAY; R. Poirier 59:29".

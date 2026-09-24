@@ -3,27 +3,27 @@
 | Field | Value |
 |---|---|
 | Created | 2026-09-24 22:45:00 +10:00 (Australia/Melbourne, AEST UTC+10; AEDT from 4 Oct 2026) |
-| Status | **ACTIVE MINI LOG.** P-509 issued and currently **LIVE / IN-PROGRESS**. |
+| Status | **CLOSED AND ARCHIVED 2026-09-25.** P-509 was settled in Part 5 §"2026-09-24(g)": PER 98–97 ADL, confirmed by three terminal lineages. No event in this log remains unresolved. Successor: `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-510 onward - 2026-09-25/`. |
 | Next canonical ID | **P-510**, advanced after P-509 issue. |
-| Temporary IDs awaiting canonical reconciliation | None active. `TMP-20260923-NPB-CHU-DB-G25` settled in Part 5 §"2026-09-24(e)". |
+| Temporary IDs awaiting canonical reconciliation | **Corrected 2026-09-24(f):** `TMP-20260923-NPB-CHU-DB-G25` (settled; DeNA 4–3 F/12) and `TMP-20260923-NBL-CNS-TAS` (settled). Both are still temporary and await a canonical number (operator decision). No live temporary ID. |
 | Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2**. **Freeze with every card:** `CONTROL_MANIFEST_2026-09-23.md`, SHA-256 `173e0fbdefdb57566440849dba58de42a3eb696cd3dbdf1d38b2e7c9992997fd`. |
 | Operating mode | **SPORTS_ONLY / MARKET_BLIND.** No odds, prices, line movement, tipsters, betting previews, prediction markets or fantasy/DFS material as evidence, anchors or sanity checks. Supplied lines are quarantined until the distribution is frozen (METHOD §1.1). |
 | Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** No ROI, EV, calibrated-edge or validated-model claim. `NO VALUE DETERMINABLE` unless a governing value gate is explicitly satisfied. |
 | Drive scope | Google Drive is the reference copy of the methodology and learnings; this session reads the repository mirror at `C:\Users\danie\Desktop\Sports Research`. **No Drive file is created, edited, moved or renamed from this workflow.** This log lives in the local `Mini logs (to be sent to actual log later)/` folder; the operator uploads it. |
 | Predecessor | `archive/mini_logs/Mini Prediction Log - P-495 to P-508 CONSOLIDATED - 2026-09-24/` — consolidated, settled and imported to `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)" on 2026-09-24. P-509 is carried live into §1 below with its issued text unchanged. |
 
-## Standing learnings to apply to every new card (from the 2026-09-24 consolidation; see Part 5 §"2026-09-24(e)")
+## Standing learnings to apply to every new card (from the 2026-09-24 consolidation; **revised by the 2026-09-24(f) audit**, see Part 5 §"2026-09-24(f)")
 
 1. **Identity match before any "same-event" label:** date, venue, home/away, starters/participants (`O-ID-DATE-STARTER-MATCH`).
 2. **Freeze before first ball / first pitch / tip-off**, and stamp the freeze time on the card.
 3. **Six-field object (METHOD §4) on every card.** No rank without a derived probability from one joint distribution.
-4. **Pre-game line combinations & beat reporting (Control S-1 Rev 2 / `PROJECTED_BEAT_VERIFIED`):** Accredited beat reporters and team media verified across the 4-point gate satisfy `G14.2` exposure modeling.
-5. **MLB Doubleheader Game 1 total deflation (`MLB-DOUBLEHEADER-G1-TOTAL-DEFLATION`):** Starters pitch to contact to conserve bullpens for G2; early afternoon shadows depress contact.
-6. **Lower-Tier Clay Court Handicap Capping (`TENNIS-CHALLENGER-CLAY-HANDICAP-CAP`):** Never rank -5.5+ handicaps at Rank #1 on slow clay in WTA 125/ITF without >78% hold rate.
-7. **International Club Qualifier Pace Adjustment (`FIBA-CLUB-QUALIFIER-PACE-ADJUSTMENT`):** Single/two-leg cross-border qualifiers surge +5.5 possessions over domestic defensive baselines.
-8. **Basketball Derby Defensive Suppression (`BASKETBALL-DERBY-TOTAL-SUPPRESSION`):** Intra-city rivalries feature intense scouting and half-court containment, heavily favouring Under totals.
-9. **Dual Run-Line (+1.5 / +1.5) Arbitrage:** In tight 1-run games, opposite +1.5 cushions sweep simultaneously.
-10. **NHL Pre-Season Roster Asymmetry (`NHL-PRESEASON-ROSTER-ASYMMETRY`):** Classify roster tiers (NHL Core vs AHL/Junior Trialists) before issuing pre-season forecasts.
+4. **Lineups (amended 2026-09-24(f)).** An official lineup published before the freeze always wins: print it with its fetch time (MLB statsapi `battingOrder`; NPB/KBO official orders; NBA/WNBA/NBL official starters; NHL official goalie). `PROJECTED_BEAT_VERIFIED` (S-1 Rev 2) counts **only** with a printed receipt: outlet, reporter, timestamp, verbatim quote, two sources. Otherwise the state is `NOT_RETRIEVED` / `RETRIEVAL_MISS`, and G14.2 blocks a full-game total or margin at Rank #1. *Why:* in 5 of 7 checkable 2026-09-24 cards the printed "confirmed/reported" lineups were wrong (e.g., P-501: 2 of 9 named Orioles started).
+5. **MLB weather (new 2026-09-24(f)).** A baseball total at #1 or as the top O/U prints the statsapi gamefeed `weather` (field-relative wind) retrieved at freeze. A city forecast does not qualify. *Why:* in P-500 and P-501 the card said "wind out", the official record says "in", and both Overs lost.
+6. **Covering pairs (new 2026-09-24(f)).** Two rows that jointly cover every outcome (opposite +1.5 in MLB; ML plus the opponent's +1.5) are labelled `COVERING_PAIR` in field 5b. Their Hit@2 is mechanical: never cite it as skill, and never seek it to guarantee a win.
+7. **Withdrawn, do not apply:** `MLB-DOUBLEHEADER-G1-TOTAL-DEFLATION` (2026 data: G1 P(≤7) 0.435, n=23, v 0.427); `BASKETBALL-DERBY-TOTAL-SUPPRESSION` (one game; the P-508 margin was 4/41 three-point shooting); "dual run-line arbitrage" (mechanical); `FIBA-CLUB-QUALIFIER-PACE-ADJUSTMENT` (one game → TESTING `T-BKB-SEASON-OPENER-WIDTH`, width only); `TENNIS-CHALLENGER-CLAY-HANDICAP-CAP` (unsourced thresholds → TESTING `T-TEN-LOWTIER-HCP`, no rank effect).
+8. **Demoted:** NHL pre-season roster tier is a **disclosure item with no ranking effect**. The pre-season goalie stays `PROJECTED` until the official lineup.
+9. **Coin flips say so.** A row whose normalised edge is under about 0.15 is a near-tie. If it must take a unique ordinal, label it `NEAR_TIED` / LOW (G23.1; P-495).
+10. **Mechanisms carry both signs (G-L2).** Workload, fatigue, rest and "rests starters when ahead" branches widen the distribution before they move a centre (P-495, P-499).
 
 ## 1. Incomplete / Unsettled Logs
 
@@ -38,6 +38,16 @@ The record below was **LIVE at carry-over** and is carried over **as-is**, per f
 - Lineage 2 (Independent Primary Media): ESPN Australia NBL scoreboard (`espn.com.au/nbl`).
 - Lineage 3 (Independent Secondary): Sofascore Basketball (`sofascore.com`).
 - Settle only after 3 distinct lineages show terminal state `Final` including overtime if played. Record quarter-by-quarter breakdown and final score.
+
+**State re-check, 2026-09-24(f)** (custody note, added outside the verbatim record):
+- ESPN `401875245` read **LIVE** at 22:53 AEST (end of Q3, ADL 77–68) and at 23:09 AEST (Q4 3:19, PER 89–86). At 23:34 AEST it showed `STATUS_END_PERIOD` "End of 4th Quarter", PER 98–97, which is **not a terminal FINAL marker**. At **23:41 AEST ESPN showed `STATUS_FINAL`, PER 98–97**. That is one lineage only. The game is **not settled** (operator instruction) and is ready for three-lineage settlement next pass.
+- **Not settled**, per the operator's instruction of 2026-09-24. No retrospective has been done.
+
+**Pre-settlement checklist from the 2026-09-24(f) audit.** This is not a retrospective, and the card text below is unchanged.
+1. **Lineages.** Get three terminal lineages: the NBL field owner, ESPN (`summary?event=401875245`, without a browser User-Agent) and a third. Read quarter lines from the feed (`C-PROCESS-RECORD-PROVENANCE`).
+2. **Lineup diff (`C-LINEUP-DIFF`).** The card's `PROJECTED_BEAT_VERIFIED` starters, bench, OUT list and coach claims print **no** S-1 Rev 2 receipt (no reporter, timestamp or quote). Diff them against the ESPN/NBL box: "k of n named starters started" per side. If a Rank-1 driver did not play, record `PROCESS_DEFECT: LINEUP_CLAIM_FALSE`.
+3. **Grading the Under #1.** The Under's rationale leans on "half-court derby tempo" (the withdrawn `BASKETBALL-DERBY-TOTAL-SUPPRESSION`; Perth v Adelaide is not a derby) and on a four-game head-to-head average (M13/M17). Grade the Under against its printed centre (179.75), width (17.07) and the actual pace, not those narratives.
+4. **Ranking.** The R2 36ers −1.5 (0.516, normalised edge 0.004) is a coin flip. Say so in the retrospective, whatever the result.
 
 ---
 
@@ -196,7 +206,9 @@ The record below was **LIVE at carry-over** and is carried over **as-is**, per f
 
 ## 2. Settled Logs
 
-No event issued in this log has been settled yet. Settled predecessor events (P-482–P-494 and the three temporary IDs) are in `PREDICTION_LOG_COMBINED_5.md`; this section will receive this log's own events once they are final and retrospected on request.
+**Settled 2026-09-24(g).** `P-509` Perth Wildcats 98–97 Adelaide 36ers (30-18-22-28 v 20-28-29-20). R1 Under 184.5 **L** (195; Rank-1 review and `TOP_OU_REVIEW`); R2 36ers −1.5 **L**; R3 Wildcats +1.5 W; R4 Over W; winner Adelaide **L**. The card's printed shared-failure family F4 (0.1944) occurred. `C-LINEUP-DIFF`: PER 5/5, ADL 3/5; no S-1 Rev 2 receipt. The full settlement, retrospective and verbatim card are in `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(g)". Archive conditions (`EXTERNAL_LOGGING_WORKFLOW.md` §"2026-09-25" item 1) were verified before archiving: the card is verbatim in Part 5 (SHA of the card block `173f36a5…` matches this log); the settlement and retrospective are written; no unresolved handle remains.
+
+No event issued in this log has been settled yet. Settled predecessor events (P-482–P-508 and the temporary IDs) are in `PREDICTION_LOG_COMBINED_5.md`. The P-493–P-508 and TMP-G25 settlements were verified in §"2026-09-24(f)", which corrected the P-496 R2/R3 grades and appended the issued cards in Appendix Z. This section will receive this log's own events once they are final and retrospected on request.
 
 ## 3. Sources
 

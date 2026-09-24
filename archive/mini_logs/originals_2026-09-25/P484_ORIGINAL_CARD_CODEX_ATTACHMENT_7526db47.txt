@@ -1,0 +1,638 @@
+## ATL Dream @ NY Liberty — WNBA, 22 Sep 2026
+
+I completed the near-tip research pass using the current Sports Research methodology. The governing framework is **MDS-2026.09.19-v4.3 / CR-2026.09.21-3**, `SFA-BASKETBALL`, with **SPORTS_ONLY / MARKET_BLIND** analysis. The Drive requires event/market verification, current availability and lineup checking, explicit uncertainty where something cannot be confirmed, and Pick #1 to be the strongest supported selection. :chatgpt-content-reference{index="0"}
+
+### Final ranking
+
+| Rank | Selection | Estimated probability* | Evidence |
+|---|---|---:|---|
+| **1** | **Under 177.5 points** | **~54%** | **LOW** |
+| **2** | **Atlanta Dream -1.5** | **~53-54%** | **LOW** |
+| **3** | **New York Liberty +1.5** | **~46-47%** | Forced complement |
+| **4** | **Over 177.5 points** | **~46%** | Forced complement |
+
+**Potential game winner: Atlanta Dream, ~58% `UNVALIDATED_SUBJECTIVE`.**
+
+My central score state is approximately **Atlanta 88, New York 86**, with the full scenario mixture producing roughly **176.7 total points** and an Atlanta margin of **+2.4**.
+
+The important qualification is that **neither Rank #1 nor Rank #2 has large separation**. I would not describe either as a high-confidence pick. The 177.5 total and -1.5 spread both sit very close to the centre of the plausible distribution.
+
+\*These are research probabilities from an explicit qualitative/scenario distribution, **not probabilities from a fitted or calibrated model**. The Drive currently states that no approved numerical basketball model has been fitted or prospectively validated.
+
+---
+
+# 1. Event verification
+
+The official WNBA game page lists **Atlanta Dream at New York Liberty for Monday, September 21 at 8:00 PM ET**, which converts to **Tuesday, September 22 at 10:00 AM AEST**. The WNBA homepage also lists Dream-Liberty as Monday night's 8 PM ET game and shows Atlanta at 28-14 and New York at 26-16. :chatgpt-content-reference{index="1"}
+
+The Dream's official schedule independently confirms September 21 at New York at 8 PM ET. :chatgpt-content-reference{index="2"}
+
+At my final reliable event-state check, the authoritative WNBA surface still represented this as the scheduled matchup and I found **no authoritative postponement or cancellation**. I have **not used any in-game score, possession, play-by-play, or other live information** to alter the pregame model.
+
+### Exact contracts analysed
+
+- Atlanta Dream **-1.5**
+- New York Liberty **+1.5**
+- Combined total **Over 177.5**
+- Combined total **Under 177.5**
+
+The supplied numbers were quarantined from the underlying sports analysis until after the score distribution was built.
+
+---
+
+# 2. Latest availability and starting-five check
+
+This is the biggest limitation on the card.
+
+### Atlanta
+
+**Latest confirmed starting five from Atlanta's September 19 game:**
+
+| Position | Player |
+|---|---|
+| PG | Jordin Canada |
+| SG | Rhyne Howard |
+| SF | Allisha Gray |
+| PF | Naz Hillmon |
+| C | Angel Reese |
+
+All five started Atlanta's 106-81 win over Chicago. Gray played 28:05, Canada 26:42, Howard 23:40, Hillmon 18:59 and Reese 28:00. :chatgpt-content-reference{index="3"}
+
+The core reserve group includes **DeWanna Bonner, Isobel Borlase, Te-Hina Paopao and Madina Okot**, with other depth available behind them. Atlanta's official roster page also confirms Karl Smesko as head coach. :chatgpt-content-reference{index="4"}
+
+**Brionna Jones is unavailable for the remainder of the season because of a leg injury.** This is not a new surprise immediately before this matchup and Atlanta has already been operating under the Hillmon/Reese/Okot/Bonner frontcourt redistribution.
+
+### New York
+
+**Latest confirmed starting five from New York's September 20 game:**
+
+| Position | Player |
+|---|---|
+| PG | Pauline Astier |
+| SG | Sabrina Ionescu |
+| SF | Breanna Stewart |
+| PF | Leonie Fiebich |
+| C | Jonquel Jones |
+
+Those five started the 106-69 win over Toronto. Importantly, because that game became a blowout, their workloads were modest: Ionescu 22:09, Stewart 22:00, Jones 20:06, Astier 22:02 and Fiebich 23:54. :chatgpt-content-reference{index="5"}
+
+That materially reduces, but does not eliminate, the negative effect of New York playing on consecutive days.
+
+New York's bench on Sunday included **Rebecca Allen, Marine Johannès, Rebekah Gardner and Han Xu**. Allen scored 14 points, while the official Liberty recap confirms Stewart's 27 points, eight rebounds and four assists. :chatgpt-content-reference{index="6"}
+
+**Satou Sabally remains a long-term absence**, while Elizabeth Balogun was reported as unavailable/not with the team. Sabally is materially more important to the roster than Balogun. :chatgpt-content-reference{index="7"}
+
+### Lineup integrity warning
+
+I **could not recover an authoritative primary-source publication explicitly confirming tonight's starting five for both teams** before issuance.
+
+Therefore:
+
+- Those are the **most recent confirmed starting fives**, not falsely labelled as tonight's officially confirmed lineups.
+- No late scratch has been fabricated.
+- `BK-P2` is not fully satisfied.
+- That is one reason both main selections remain **LOW evidence**, rather than being promoted to medium/high confidence.
+
+This follows the supplied instruction to identify anything that cannot be confirmed rather than invent it. :chatgpt-content-reference{index="8"}
+
+---
+
+# 3. Underlying team comparison
+
+Current StatMuse data has Atlanta at approximately:
+
+- **111.9 offensive rating**
+- **104.0 defensive rating**
+- **81.48 pace**
+- **91.5 PPG**
+- 10.8 offensive rebounds per game
+- 13.7 turnovers per game. :chatgpt-content-reference{index="9"}
+
+New York is approximately:
+
+- **112.2 offensive rating**
+- **107.2 defensive rating**
+- **80.01 pace**
+- **90.3 PPG**
+- 35.5% from three. :chatgpt-content-reference{index="10"}
+
+So Atlanta has the stronger full-season **net efficiency profile**, even though New York has a marginally higher raw offensive rating.
+
+## The home/road correction matters
+
+New York's home profile is considerably better than its overall defensive number:
+
+- **110.0 home ORtg**
+- **102.2 home DRtg**
+- 87.1 home PPG through the retrieved sample. :chatgpt-content-reference{index="11"}
+
+That is one of the strongest arguments against making Atlanta -1.5 a materially stronger selection.
+
+Atlanta, meanwhile, enters 28-14 and has been highly competitive away from home. The current AP matchup information lists Atlanta's recent form as **8-2 over its last 10**, scoring 97.4 per game and allowing 81.6; New York is **7-3**, scoring 90.9 and allowing 82.3. :chatgpt-content-reference{index="12"}
+
+Those recent margins are useful context, but I have **not extrapolated them directly** because Atlanta's recent schedule includes large wins over weaker Connecticut and Chicago teams.
+
+---
+
+# 4. Rest and workload
+
+This is a genuine Atlanta advantage, but not as large as “back-to-back” alone might suggest.
+
+New York played in Toronto on **Sunday, September 20**, winning 106-69, then returned home for this Monday night matchup. Atlanta last played Saturday, September 19. :chatgpt-content-reference{index="13"}
+
+The mitigating factor is that New York's main starters only needed roughly **20-24 minutes** Sunday. Stewart, for example, played only 22 minutes after having played a much heavier workload against Minnesota on Friday.
+
+Therefore I model New York's rest disadvantage primarily through:
+
+- somewhat more second-half fatigue risk;
+- defensive transition/recovery;
+- late-game shot quality;
+- slightly greater probability of reduced star efficiency;
+
+rather than applying a crude full-game penalty.
+
+That treatment directly follows the basketball Drive rule that fatigue/rest must be connected to an actual basketball mechanism rather than automatically producing an Over, Under, or side.
+
+---
+
+# 5. Matchup mechanisms
+
+### Atlanta's strongest advantages
+
+Atlanta's superior overall defensive efficiency is important against a New York offence that can become dependent on perimeter conversion. The Dream also generate substantially more offensive rebounds, and Angel Reese's rebounding creates additional possessions that are particularly relevant against a New York team averaging only 8.2 offensive rebounds itself. :chatgpt-content-reference{index="14"}
+
+Atlanta also forces considerably more turnovers than New York does. That creates a second route to Atlanta separation: not necessarily better half-court shooting, but **more possessions created through turnovers and offensive rebounds**.
+
+Rhyne Howard, Allisha Gray and Canada also make Atlanta difficult to attack cleanly on the perimeter.
+
+### New York's strongest counter
+
+New York's interior and half-court personnel are considerably better than an ordinary +1.5 underdog's:
+
+**Stewart + Jonquel Jones + Ionescu + Fiebich + Astier** gives New York enough shooting, size and creation to punish even a strong Atlanta defence.
+
+Its home defence has also been materially better than its season-wide defensive rating. :chatgpt-content-reference{index="15"}
+
+And the Liberty's last two games were legitimate positive signals: **93-81 at Minnesota** and **106-69 at Toronto**. :chatgpt-content-reference{index="16"}
+
+That keeps the Atlanta margin distribution wide.
+
+---
+
+# 6. Prior head-to-head
+
+New York won the June 11 meeting **104-90**. :chatgpt-content-reference{index="17"}
+
+But I substantially down-weighted that result.
+
+The game included a very strong New York perimeter shooting state. Contemporary official game-note data shows New York made **16 threes on 31 attempts**, while Atlanta made 9 on 29. :chatgpt-content-reference{index="18"}
+
+That matters because a 14-point previous result driven partly by 51.6% three-point shooting should not simply become the centre of today's margin distribution.
+
+The current Atlanta rotation is also different, particularly around the frontcourt after Brionna Jones' absence and the addition/use of Bonner.
+
+---
+
+# 7. Independent joint-score distribution
+
+Before querying 177.5 or ±1.5, I used this explicit **`UNVALIDATED_SUBJECTIVE`** game-state tree:
+
+| Game state | Weight | Representative score | Total | ATL margin |
+|---|---:|---:|---:|---:|
+| Central half-court game | 30% | ATL 88-86 NYL | 174 | +2 |
+| NYL shooting-variance upside | 15% | ATL 88-94 NYL | 182 | -6 |
+| ATL turnover/transition control | 15% | ATL 94-84 NYL | 178 | +10 |
+| ATL lead + late slowdown | 10% | ATL 85-80 NYL | 165 | +5 |
+| NYL home-response state | 10% | ATL 87-90 NYL | 177 | -3 |
+| ATL defensive suppression | 8% | ATL 91-82 NYL | 173 | +9 |
+| Competitive late-foul state | 7% | ATL 94-91 NYL | 185 | +3 |
+| Overtime tail | 5% | ATL 96-94 NYL | 190 | +2 |
+
+Weighted representative outputs:
+
+- **Projected total: 176.7**
+- **Projected Atlanta margin: +2.4**
+- Representative central score: **Atlanta 88-86**
+- Winner mass after allowing within-branch score variance: **Atlanta ~58%**
+
+This is deliberately wider than simply using a single 88-86 forecast.
+
+---
+
+# 8. Total budget: 177.5
+
+This is why **Under 177.5 is Rank #1**, but only narrowly.
+
+With an Atlanta central score of **88**, New York can score at most **89** for the Under to survive.
+
+With New York at its central **86**, Atlanta can score as many as **91**.
+
+Those are perfectly plausible outcomes given:
+
+- Atlanta's 104.0 season defensive rating;
+- New York's strong 102.2 home defensive rating;
+- the teams' recent defensive results;
+- a pace baseline around 80-81 possessions;
+- New York's second-night scheduling situation. :chatgpt-content-reference{index="19"}
+
+Recent five-game totals are also directionally supportive but only as diagnostics:
+
+- Atlanta: 149, 184, 170, 162, 187 → **3/5 below 177.5**.
+- New York: 175, 174, 151, 139, 211 → **4/5 below 177.5**. :chatgpt-content-reference{index="20"}
+
+### Why the Under is still LOW confidence
+
+The projected total of 176.7 is only **0.8 points below 177.5**.
+
+That's tiny.
+
+The Over has several perfectly ordinary kill paths:
+
+- New York shoots efficiently from three;
+- Atlanta's turnovers/transition generation raises possessions rather than merely suppressing New York;
+- Reese's offensive rebounding creates repeat possessions;
+- a close game causes intentional fouling;
+- overtime.
+
+The June H2H itself finished at **194 points**, demonstrating that this matchup absolutely possesses a high-scoring shooting branch.
+
+Therefore:
+
+> **Under 177.5 ≈ 54%**, not anything resembling 60-65%.
+
+---
+
+# 9. Spread budget: Atlanta -1.5
+
+For Atlanta -1.5 to win, the Dream need a final margin of **2+**.
+
+The central state is approximately **Atlanta +2**, and the weighted scenario centre is about **Atlanta +2.4**.
+
+So the handicap is sitting almost directly on the projected central margin.
+
+Atlanta's case:
+
+- stronger season-long net profile;
+- better season defence;
+- stronger turnover creation;
+- major offensive-rebounding advantage;
+- one additional rest day;
+- recent 8-2 run;
+- New York coming off travel/B2B.
+
+New York's counter:
+
+- excellent home defensive profile;
+- 15-6 home record in the current secondary matchup database;
+- Stewart/Jones/Ionescu core;
+- two strong post-break wins;
+- starters played limited minutes Sunday;
+- New York already demonstrated one viable matchup path against Atlanta earlier this year. :chatgpt-content-reference{index="21"}
+
+That leaves:
+
+> **Atlanta -1.5 ≈ 53-54%.**
+
+Again, this is not enough separation for a high evidence grade.
+
+---
+
+# 10. Why the rankings are in this order
+
+### **#1 Under 177.5 — ~54%**
+The strongest combination is the 80-ish possession environment, Atlanta's elite defence, New York's much stronger home defence, and a New York back-to-back. The failure route is obvious, however: efficient New York perimeter shooting, Atlanta-generated transition possessions, late fouling or OT.
+
+### **#2 Atlanta -1.5 — ~53-54%**
+Atlanta has the stronger overall season profile plus the cleaner rest situation. But New York's home defence and star core keep the distribution close enough that a 1-3 point Liberty win is an ordinary state, not a remote upset.
+
+### **#3 New York +1.5 — ~46-47%**
+New York's cover route is substantial: its home defence holds Atlanta around the mid-80s and Stewart/Jones win enough half-court possessions late. It ranks below Atlanta only because the rest, season net rating, turnover pressure and offensive rebounding collectively lean slightly Dream.
+
+### **#4 Over 177.5 — ~46%**
+It has meaningful paths, especially New York three-point efficiency and a close high-scoring fourth quarter, but the independent distribution lands slightly below the threshold more often than above.
+
+The complementary pairs are **not independent picks**. Under/Over is one binary decision and Dream -1.5/Liberty +1.5 is another.
+
+---
+
+# Potential game winner
+
+## **Atlanta Dream — ~58%**
+
+This is slightly stronger than Atlanta -1.5 because Atlanta can win by exactly one point and still fail the spread.
+
+The most coherent Atlanta winner state is approximately:
+
+> **ATL 88-86 NYL**
+
+That simultaneously supports:
+
+- Atlanta game winner;
+- Atlanta -1.5, just barely;
+- Under 177.5.
+
+The major correlated failure state is New York getting sufficient three-point production and Stewart/Jones efficiency to reach approximately **90-94 points**. In those states, both Atlanta -1.5 and the Under can lose together.
+
+---
+
+# Important source-quality findings
+
+A few source issues were actively filtered out.
+
+The official WNBA schedule and homepage control the event identity and current official records. A RealGM preview currently displays New York as 27-16, conflicting with the official WNBA's 26-16, so I **did not use RealGM as the standings authority**. I used RealGM only for its useful prior-game starter/minute tables. :chatgpt-content-reference{index="22"}
+
+Likewise, several stale injury aggregators still surfaced players who had actually appeared in New York's September 20 game. Actual recent participation and official team reporting took priority over those stale listings. Stewart, Astier, Fiebich, Jones and Allen all played Sunday. :chatgpt-content-reference{index="23"}
+
+Sportsbook predictions, sportsbook odds, line movement, fantasy projections and betting-consensus articles were **excluded from predictive evidence**. Some search results reproduced the user's 177.5/-1.5 lines; none of their recommendations were used.
+
+The separate GitHub repository was also supplied as a research source. :chatgpt-content-reference{index="24"} I attempted to retrieve indexed methodology content from it, but no usable matching repository content was returned through the available GitHub/public retrieval routes during this run. I therefore did **not invent any GitHub-only rule or finding**; the linked Drive remained the authoritative methodology source.
+
+Exact operator settlement terms were not supplied, so this research object assumes the ordinary full-game basketball endpoint with an explicit overtime branch. There is therefore **NO VALUE DETERMINABLE** from these probabilities alone because no price/odds and operator grading terms were supplied.
+
+---
+
+# Material sources used
+
+1. **WNBA official game page and homepage** — event identity, scheduled 8 PM ET start, official standings/current event state. :chatgpt-content-reference{index="25"}
+2. **Atlanta Dream official schedule/game-notes index** — independent schedule confirmation and current team media route. :chatgpt-content-reference{index="26"}
+3. **New York Liberty official September 20 recap** — Toronto result, Stewart performance and current participation. :chatgpt-content-reference{index="27"}
+4. **Atlanta and Liberty official roster pages** — roster/coaching context. :chatgpt-content-reference{index="28"}
+5. **RealGM September 19 Atlanta and September 20 New York box scores** — most recent confirmed starting fives, minutes and bench participation; not standings authority. :chatgpt-content-reference{index="29"}
+6. **StatMuse current 2026 team data** — Atlanta 111.9 ORtg/104.0 DRtg/81.48 pace and New York 112.2/107.2/80.01. :chatgpt-content-reference{index="30"}
+7. **StatMuse New York home split** — 110.0 ORtg / 102.2 DRtg. :chatgpt-content-reference{index="31"}
+8. **StatMuse latest L5 game logs** — current scoring/total dispersion for both teams. :chatgpt-content-reference{index="32"}
+9. **Associated Press matchup report** — records, recent L10 production, H2H and current major injury context. :chatgpt-content-reference{index="33"}
+10. **WNBA game-note material from prior H2H** — June matchup shooting/rebounding state, used only as H2H variance evidence. :chatgpt-content-reference{index="34"}
+11. **Sports Research Drive** — `METHOD.md`, `RULES_GENERAL.md`, `RULES_BASKETBALL.md`, `CONTROLS.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `SCORING_AND_VALIDATION.md`, control manifest and active prediction log.
+12. **User-supplied GitHub repository** — retrieval attempted; no GitHub-only predictive claim admitted because its indexed contents were not recoverable in this run. :chatgpt-content-reference{index="35"}
+
+---
+
+# Updated Mini Prediction Running Log
+
+The supplied operating instructions require the new prediction to be retained in the unsettled section, all material sources to be recorded, document mapping to be preserved, and no retrospective to be performed automatically. :chatgpt-content-reference{index="36"}
+
+## Prediction Mini Running Log — P-482 onward
+
+**Current governing method:** MDS-2026.09.19-v4.3 / CR-2026.09.21-3  
+**Canonical authority:** `PREDICTION_LOG_COMBINED_5.md`  
+**Previous combined log:** Part 4 closed at P-481  
+**Issued in active mini log:** P-482, P-483, **P-484**  
+**Next canonical ID:** **P-485**  
+**Operating mode:** SPORTS_ONLY / MARKET_BLIND  
+**Performance status:** LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE  
+**Retrospective policy:** No automatic retrospective.
+
+---
+
+## 1. Incomplete / Unsettled Logs
+
+### P-482 — Cricket / CPL Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen
+
+**Status:** UNSETTLED — original pregame forecast retained; no retrospective.
+
+**Scheduled start:** 21 Sep 2026, 09:00 AEST.  
+**Venue:** Kensington Oval, Bridgetown.
+
+**Contract:** Jamaica Kingsmen first six legal overs, O/U 47.5.
+
+**Original ranked predictions**
+1. **Kingsmen first 6 overs Over 47.5 — ~59.9% `UNVALIDATED_SUBJECTIVE` / LOW**
+2. **Kingsmen first 6 overs Under 47.5 — ~40.1% / forced complement**
+
+**Projected six-over state:** mean 51.75, approximate SD 14.43; central state around 50-52/1.
+
+**Projected game winner:** **Antigua & Barbuda Falcons ~53% / LOW**.
+
+**Key reasoning retained:** Jamaica's then-current opening regime had produced 50/1, 79/0 and 75/1 in relevant recent phases, but early-wicket states and the older Antigua matchup preserved a substantial low-scoring tail. Toss, exact strip and official XI had not been confirmed at issuance, preventing a higher evidence grade.
+
+**Sources retained:** Cricket West Indies fixtures/current schedule; CPL official Newsroom reports; Jamaica Gleaner/CMC; Wisden event-state route; CricInnings phase checkpoint; structured Bridgetown weather; Sports Research methodology/source documents.
+
+**Document mapping:** `RULES_CRICKET.md`, `DATA_SOURCE_REGISTER.md`, prediction-log phase-mechanism notes. No permanent rule change from this event.
+
+**Settlement status:** **Remain unsettled. No retrospective requested in this query.**
+
+---
+
+### P-483 — Tennis / WTA Seoul — Katie Volynets vs Elvina Kalieva
+
+**Status:** UNSETTLED — original pregame forecast retained; no retrospective.
+
+**Scheduled start:** 21 Sep 2026, 13:00 AEST.  
+**Venue:** Seoul Olympic Park Tennis Center, outdoor hard court.
+
+**Contracts:** Volynets -4.5; Kalieva +4.5; O/U 19.5 games.
+
+**Original ranked predictions**
+1. **Over 19.5 games — ~65.2% `UNVALIDATED_SUBJECTIVE`**
+2. **Kalieva +4.5 games — ~58.4%**
+3. **Volynets -4.5 games — ~41.6%**
+4. **Under 19.5 games — ~34.8%**
+
+**Projected winner:** **Katie Volynets ~62%**.
+
+**Underlying original score tree:** Volynets decisive 2-0 30%; Volynets close 2-0 13%; Volynets 2-1 19%; Kalieva 2-1 20%; Kalieva close 2-0 12%; Kalieva decisive 2-0 6%. Weighted representative total 23.1 games and Volynets margin +1.66 games.
+
+**Key reasoning retained:** Volynets' stronger ranking/current WTA125 hard-court form and return pressure supported the winner lean, but Kalieva's 2026 improvement, service performance and deciding-set resilience created substantial close-match/three-set mass.
+
+**Sources retained:** WTA Seoul exact match/tournament pages; WTA player records; WTA Philadelphia and US Open match pages; USTA/US Open reporting; WTA Kalieva 2026 material; L'Equipe and MyKhel event-state checks; structured Seoul weather; Sports Research methodology.
+
+**Document mapping:** `RULES_TENNIS.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `LEARNING_REGISTER.md`. No permanent rule change.
+
+**Settlement status:** **Remain unsettled. No retrospective requested in this query.**
+
+---
+
+### P-484 — Basketball / WNBA — Atlanta Dream @ New York Liberty
+
+**Status:** **UNSETTLED — PREGAME/NEAR-TIP FORECAST; NO RETROSPECTIVE.**
+
+**Identity / timing**
+- Canonical ID: `P-484`.
+- Competition: WNBA 2026 regular season.
+- Event: Atlanta Dream @ New York Liberty.
+- Venue: Barclays Center, Brooklyn, New York.
+- Official scheduled start: **21 Sep 2026, 8:00 PM ET = 22 Sep 2026, 10:00 AM AEST**.
+- Official event route remained scheduled at final reliable pregame research check; no authoritative postponement/cancellation found.
+- No live score/play-by-play was admitted to the pregame distribution.
+- Method: MDS-2026.09.19-v4.3 / CR-2026.09.21-3, SFA-BASKETBALL.
+- Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+**Exact supplied contracts**
+- Atlanta Dream -1.5.
+- New York Liberty +1.5.
+- Total Over 177.5.
+- Total Under 177.5.
+- User thresholds quarantined until the independent game-score object was constructed.
+- Half-point lines mean no push conditional on ordinary market action.
+- Exact operator grading/OT/void conditions were not supplied; operator settlement remains `UNKNOWN_DEFINITION`.
+- Model object contains an explicit overtime branch.
+
+**Availability**
+- Atlanta: Brionna Jones unavailable for remainder of season with leg injury.
+- New York: Satou Sabally remains a long-term absence; Elizabeth Balogun reported unavailable/not with team.
+- No credible new late withdrawal was verified among the principal currently active starters.
+- Stale injury-feed entries contradicted by recent actual participation were discarded.
+
+**Most recent confirmed starting fives**
+- Atlanta, Sep 19: **Jordin Canada / Rhyne Howard / Allisha Gray / Naz Hillmon / Angel Reese**.
+- New York, Sep 20: **Pauline Astier / Sabrina Ionescu / Breanna Stewart / Leonie Fiebich / Jonquel Jones**.
+- These are **most recent confirmed starters, not falsely labelled as confirmed tonight's five**.
+- Tonight's official five was not independently recovered from a current primary-source lineup publication before issuance.
+- `BK-P2` therefore remains partially unresolved and evidence is capped.
+
+**Rotation context**
+- Atlanta principal depth: DeWanna Bonner, Isobel Borlase, Te-Hina Paopao, Madina Okot, with additional reserve depth.
+- New York principal depth: Rebecca Allen, Marine Johannès, Rebekah Gardner, Han Xu and additional reserves.
+- New York's starters played approximately 20-24 minutes in its Sep 20 blowout win, reducing the severity of the B2B workload penalty.
+
+**Current performance evidence**
+- ATL: ORtg ~111.9, DRtg ~104.0, pace ~81.48, 91.5 PPG.
+- NYL: ORtg ~112.2, DRtg ~107.2, pace ~80.01, 90.3 PPG.
+- NYL home split: ORtg ~110.0 / DRtg ~102.2.
+- Atlanta recent L5 totals: 149, 184, 170, 162, 187.
+- New York recent L5 totals: 175, 174, 151, 139, 211.
+- AP L10: Atlanta 8-2, 97.4 scored/81.6 allowed; New York 7-3, 90.9/82.3.
+- Prior H2H: NYL 104-90, but the Liberty's unusually strong three-point conversion is treated as a shooting-upside state rather than the new centre.
+
+**Independent joint-score tree — frozen before contract query**
+
+| Branch | Weight | Representative state |
+|---|---:|---|
+| Central half-court | 30% | ATL 88-86 NYL |
+| NYL shooting upside | 15% | ATL 88-94 NYL |
+| ATL transition/turnover control | 15% | ATL 94-84 NYL |
+| ATL lead/slowdown | 10% | ATL 85-80 NYL |
+| NYL home response | 10% | ATL 87-90 NYL |
+| ATL defensive suppression | 8% | ATL 91-82 NYL |
+| Late foul/FT tail | 7% | ATL 94-91 NYL |
+| Overtime tail | 5% | ATL 96-94 NYL |
+
+**Distribution outputs**
+- Distribution status: `UNVALIDATED_SUBJECTIVE`.
+- Weighted representative total: **176.69**.
+- Weighted representative Atlanta margin: **+2.43**.
+- Central representative score: approximately **ATL 88-86 NYL**.
+- Within-state score dispersion retained around each branch; no branch is treated as deterministic.
+
+**Team-score budget at 177.5**
+- ATL 88 permits NYL ≤89 for Under.
+- NYL 86 permits ATL ≤91 for Under.
+- Central distribution therefore sits just below the line.
+- High-side kill paths: NYL perimeter shooting, ATL transition volume, offensive rebounding, late fouling, OT.
+- Under pathways: ~80-possession baseline, both defensive profiles, NY home defence, B2B second-half fatigue.
+- Because the total centre is only ~0.8 below 177.5, separation is modest.
+
+**Separation budget at Atlanta -1.5**
+- Required ATL margin: ≥2.
+- Central state: ATL +2.
+- Weighted representative margin: ATL +2.43.
+- Atlanta separation mechanisms: defensive efficiency, turnovers/transition, offensive rebounding, additional rest.
+- New York compression/reversal mechanisms: home defence, Stewart/Jones interior efficiency, perimeter variance, deep rotation and reduced Sunday starter minutes.
+- Ordinary branches exist on both sides of -1.5; evidence is LOW.
+
+**Ranked supplied selections**
+1. **UNDER 177.5 — ~54% — Rank #1 / LOW evidence.**
+2. **ATLANTA DREAM -1.5 — ~53-54% — Rank #2 / LOW evidence.**
+3. **NEW YORK LIBERTY +1.5 — ~46-47% — Rank #3 / forced complement.**
+4. **OVER 177.5 — ~46% — Rank #4 / forced complement.**
+
+**Potential game winner**
+- **Atlanta Dream ~58% `UNVALIDATED_SUBJECTIVE`.**
+- Main support: superior overall net profile, elite defence, offensive-rebounding/turnover creation and rest advantage.
+- Main failure state: Liberty home defence contains Atlanta and New York's primary creators convert enough half-court/perimeter opportunities to reach ~90+.
+
+**Rank-1 coherence**
+- Representative top state ATL 88-86 gives:
+  - Under 177.5 = win.
+  - Atlanta -1.5 = win.
+  - Atlanta winner = win.
+- Shared failure state: NYL three-point/half-court efficiency plus competitive late scoring can defeat both Under and Atlanta -1.5.
+- Therefore the top two are directionally coherent but positively dependent, not independent evidence.
+
+**Reference/trend diagnostics**
+- Atlanta L5: 3/5 below 177.5.
+- New York L5: 4/5 below 177.5.
+- Atlanta L5 would have cleared a hypothetical current -1.5 threshold in 4/5.
+- New York L5 would have remained within +1.5 or won in 4/5.
+- Prior H2H: NYL +1.5 and Over 177.5 states occurred.
+- These are descriptive diagnostics only and do not adjust model probability or rank.
+
+**Evidence limitations**
+- Tonight's official confirmed starting five was not recovered from a primary lineup publication.
+- Exact operator settlement terms were not supplied.
+- No validated/calibrated numerical basketball model exists in the current framework.
+- Both key supplied lines fall inside/near the central corridor.
+- Exact probabilities are therefore not represented as calibrated forecasting accuracy.
+- **NO VALUE DETERMINABLE** without price and complete operator terms.
+
+**P-484 material sources**
+- WNBA official game page/homepage and Atlanta official schedule.
+- Atlanta Dream and New York Liberty official team roster/current-content pages.
+- Liberty official Sep 20 Toronto recap.
+- RealGM Sep 19 ATL and Sep 20 NYL exact box scores for starters/minutes only.
+- StatMuse current season ratings, pace, home split and L5 logs.
+- Associated Press current matchup report.
+- WNBA historical game-note/score data for June H2H.
+- Sports Research Drive methodology, basketball rules, source register, current controls and mini-log authority.
+- User-supplied GitHub repository attempted; no retrievable GitHub-only methodology content admitted.
+- No sportsbook/tipster/fantasy source used as predictive evidence.
+
+**Document mapping / observations**
+- `RULES_BASKETBALL.md`: existing `BK-P2`, team-score-budget, separation-budget, rest segmentation, shooting-variance and OT controls applied. **No new permanent rule proposed.**
+- `SOURCES.md` / `DATA_SOURCE_REGISTER.md`: official WNBA/team pages remain primary for identity and participation; RealGM is useful as a secondary structured starter/minutes cross-check but **not** as current standings authority after its record mismatch.
+- `LEARNING_REGISTER.md`: observation only — stale injury listings must lose precedence when contradicted by newer direct participation/official box-score evidence. This is consistent with existing source-recency rules, so no duplicate permanent rule should be created.
+- Prediction log: preserve the unconfirmed-tonight-lineup limitation for retrospective analysis.
+
+**Current settlement status:** **UNSETTLED. NO RETROSPECTIVE.**
+
+---
+
+## 2. Settled Logs
+
+**None in the current P-482-onward mini log.**
+
+---
+
+## 3. Running source register
+
+**P-482:** CWI/CPL official routes; Jamaica Gleaner/CMC; Wisden; phase score source; weather; Sports Research Drive.
+
+**P-483:** WTA exact-match/tournament/player/match records; USTA/US Open; L'Equipe; MyKhel; Seoul weather; Sports Research Drive.
+
+**P-484:** WNBA official event/schedule/team sources; Liberty/Dream team material; StatMuse; RealGM exact recent box scores; AP/Sportradar current matchup report; prior WNBA game-note data; Sports Research Drive; supplied GitHub link attempted with no GitHub-only evidence admitted.
+
+---
+
+## 4. Current document mapping
+
+- **P-482:** `RULES_CRICKET.md`, `DATA_SOURCE_REGISTER.md`.
+- **P-483:** `RULES_TENNIS.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `LEARNING_REGISTER.md`.
+- **P-484:** `RULES_BASKETBALL.md`, `SOURCES.md`, `DATA_SOURCE_REGISTER.md`, `LEARNING_REGISTER.md`.
+- No permanent methodology change is justified by P-484 alone.
+
+---
+
+## 5. Running integrity status
+
+- Historical Part 4 closes at **P-481**.
+- **P-482: unsettled.**
+- **P-483: unsettled.**
+- **P-484: unsettled.**
+- No retrospective was performed in this query.
+- No existing issued prediction was rewritten.
+- No Google Drive file was edited.
+- **Next canonical prediction ID: P-485.**
+
+### Bottom line
+
+For the exact four choices you supplied, my order is:
+
+**1. Under 177.5**  
+**2. Dream -1.5**  
+**3. Liberty +1.5**  
+**4. Over 177.5**
+
+**Projected winner: Atlanta Dream.**
+
+The key point is the confidence: **Under 177.5 and Atlanta -1.5 are only marginal preferences, not strong edges.** The matchup is sufficiently close that claiming 60%+ certainty on either would exceed what the available evidence supports.

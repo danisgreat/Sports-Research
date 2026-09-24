@@ -1,7 +1,7 @@
 # Data source register (full register)
 
 
-> **CR-2026.09.21-3 source-audit precedence:** consult `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` before relying on an older coverage/source conclusion. Later verified route evidence supersedes disproved non-coverage; shared upstream feeds still count once. CR-3 is a control synchronization, not a new source weighting rule.
+> **CR-2026.09.21-3 source-audit precedence:** consult `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` before relying on an older coverage/source conclusion. Later verified route evidence supersedes disproved non-coverage; shared upstream feeds still count once. CR-3 is a control synchronization, not a new source weighting rule.
 
 
 > **Current revision — 2026-09-19:** METHOD **MDS-2026.09.19-v4.3** is the workflow/template authority; **SCORING_AND_VALIDATION.md** controls conditioning, exact scoring, event-level evaluation and prospective evidence. All existing logs remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. NUMERICAL_PROGRAM controls authorized implementation scope and actual build state; MODEL_IMPLEMENTATION_RECIPES contains the executable Markdown reference. Older dated policy blocks are historical where inconsistent. No source, dataset or model is approved/fitted by this banner.
@@ -730,7 +730,7 @@ These are the fields that are available but routinely skipped. Each is a researc
 ## September 5 research-source and field-definition addendum
 
 
-Register DSR-2026.09.05-v1.5; research-only discoveries and corrections. No source becomes APPROVED FOR FEATURE or H0 ingestion. Full exact URLs, observation limitations and conflicting values: [September 5 source register](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md#research-source-register).
+Register DSR-2026.09.05-v1.5; research-only discoveries and corrections. No source becomes APPROVED FOR FEATURE or H0 ingestion. Full exact URLs, observation limitations and conflicting values: [September 5 source register](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md#research-source-register).
 
 
 | Lane | Successful use | Restriction / routing improvement |
@@ -980,7 +980,7 @@ Card mapping: `PREDICTION_LOG_COMBINED_3.md` §"2026-09-11". Compact table: `SOU
 # Research source review - 2026-09-12
 
 
-The current field-level routes, successful openings and limitations are in [SOURCES.md](SOURCES.md), [recent queue evidence](audit_2026-09-12/recent_queue_evidence.md), [historical queue evidence](audit_2026-09-12/historical_queue_evidence.md), [sport evidence](audit_2026-09-12/sport_evidence.md) and [recovered MLB records](audit_2026-09-12/recovered_mlb_evidence.md). They add original CPL newsroom, CPBL statistics, dated NPB roster/box, Toluca match-report and explicit MLB innings routes to future retrieval guidance; some are strengthened routes already known, not newly discovered providers.
+The current field-level routes, successful openings and limitations are in [SOURCES.md](SOURCES.md), recent queue evidence (`audit_2026-09-12/recent_queue_evidence.md`, not present in this repository), historical queue evidence (`audit_2026-09-12/historical_queue_evidence.md`, not present in this repository), sport evidence (`audit_2026-09-12/sport_evidence.md`, not present in this repository) and recovered MLB records (`audit_2026-09-12/recovered_mlb_evidence.md`, not present in this repository). They add original CPL newsroom, CPBL statistics, dated NPB roster/box, Toluca match-report and explicit MLB innings routes to future retrieval guidance; some are strengthened routes already known, not newly discovered providers.
 
 
 Status for all: **RESEARCH ONLY / CANDIDATE; no new APPROVED FOR FEATURE source.** Licence/retention, automation, historical known-at reconstruction and complete field definitions have not been established for H0. The exact source record must retain event ID, date/time zone, phase, team ordering, owner, publication/retrieval times, observed fields and missing fields. Independence is recorded only where upstream provenance supports it; proxy/embedded duplication is not corroboration.
@@ -989,7 +989,7 @@ Status for all: **RESEARCH ONLY / CANDIDATE; no new APPROVED FOR FEATURE source.
 The missing P267 artifact does not justify claiming every P-241-P-267 detail is absent: mini log 8 retained substantial issued and retrospective material, now restored. Five later corner adjudications still lack reproducible evidence and have explicit TMP-AUDIT handles. A source-lane audit must inspect all supplied mini variants before declaring a document gap total.
 
 
-Method references newly checked: [NIST binomial-proportion intervals](https://itl.nist.gov/div898/handbook/prc/section2/prc241.htm) and [ASA statement on threshold-based inference](https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf). These support uncertainty practice, not a claim of sports model accuracy. [Controlling corrections](audit_2026-09-12/rule_corrections.md).
+Method references newly checked: [NIST binomial-proportion intervals](https://itl.nist.gov/div898/handbook/prc/section2/prc241.htm) and [ASA statement on threshold-based inference](https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf). These support uncertainty practice, not a claim of sports model accuracy. Controlling corrections (`audit_2026-09-12/rule_corrections.md`, not present in this repository).
 
 
 ## 2026-09-15 — sources demonstrated during the `P-364` final settlement and the `P-373`–`P-423` import
@@ -1268,7 +1268,7 @@ RotoWire, RotoGrinders and FPTrack are `PROHIBITED_FANTASY_DFS` for predictive e
 ## 2026-09-21 all-sports source-audit reconciliation
 
 
-The register remains the source-route inventory; `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` controls historical audit precedence. No old “unavailable everywhere” claim survives merely because it predates a later demonstrated field-owner/structured route. Conversely, no new frontend, mirror or automated block is promoted to an independent lineage or human observation without provenance.
+The register remains the source-route inventory; `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` controls historical audit precedence. No old “unavailable everywhere” claim survives merely because it predates a later demonstrated field-owner/structured route. Conversely, no new frontend, mirror or automated block is promoted to an independent lineage or human observation without provenance.
 
 
 Global failure-safe labels retained across sports: `RETRIEVAL_MISS`, `NOT_YET_PUBLISHED`, `STALE_SUPERSEDED`, `SOURCE_LINEAGE_NOT_INDEPENDENT`, `SUMMARY_ONLY`, and competition/field-specific missingness. These labels describe evidence state; none creates a signed forecast adjustment.
@@ -1305,7 +1305,7 @@ Quick reference: `SOURCES.md` §"2026-09-23". None is `APPROVED FOR FEATURE`. Se
 <!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
 ## 2026-09-24 — sources exercised during the consolidated P-495–P-508 import
 
-Quick reference: `SOURCES.md` §"2026-09-24". None is `APPROVED FOR FEATURE`. Settlement lineages must be independent and each must show a terminal marker (CR-4).
+**Superseded by §"2026-09-24(f)" below.** That audit shows these five candidate rows were never retrieval-verified; their corrected statuses are in part (a) of that section. Quick reference: `SOURCES.md` §"2026-09-24". None is `APPROVED FOR FEATURE`. Settlement lineages must be independent and each must show a terminal marker (CR-4).
 
 | Source ID (proposed) | Endpoint / record | Field(s) | Status | Evidence and limits |
 |---|---|---|---|---|
@@ -1314,3 +1314,112 @@ Quick reference: `SOURCES.md` §"2026-09-24". None is `APPROVED FOR FEATURE`. Se
 | `SRC-FIBA-EUROLEAGUE-WOMEN` | `https://www.fiba.basketball/en/events/euroleague-women-qualifiers-...` | Live box scores, shot charts, efficiency, quarter splits | `CANDIDATE — FIELD OWNER (FIBA)` | Official tournament portal. Primary lineage for P-499. |
 | `SRC-MYKBOSTATS-PORTAL` | `https://mykbostats.com` | English-language KBO box scores, starting lineups, pitcher pitch counts, park factors | `CANDIDATE — SETTLEMENT LINEAGE` | Comprehensive KBO independent statistics portal. Corroborating lineage for P-493 and P-507. |
 | `SRC-TENNISTEMPLE-LIVE` | `https://en.tennistemple.com` | Lower-tier ATP/WTA/ITF game-by-game scores, tiebreak point logs, retirement tracking | `CANDIDATE — INDEPENDENT LINEAGE` | Highly responsive lower-tier tournament coverage. Corroborating lineage for P-495 and P-496. |
+
+
+<!-- AUDIT-2026-09-24F -->
+## 2026-09-24(f) — source audit of the P-495–P-508 import, and lanes verified by retrieval
+
+Quick reference: `SOURCES.md` §"2026-09-24 / 2026-09-24(f)". Full evidence: `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(f)" part J. None of these sources is `APPROVED FOR FEATURE`.
+
+Every row in the tables below was **actually fetched** in this pass, at 2026-09-24 about 22:50–23:40 AEST. This follows `C-PROCESS-RECORD-PROVENANCE`: a source enters the register only with a reproducible retrieval.
+
+### (a) Corrections to the §"2026-09-24" candidate rows (peer import, `cb95acd`)
+
+| Peer row | Corrected status | Reason |
+|---|---|---|
+| `SRC-FESABAL-LMB` (`fesabal.info`) | **UNVERIFIED — domain not shown to be the federation's** | A search surfaced `fesabal.org/estadisticas`, but it was not opened. P-505's final was verified on xscores (row (b)7). No official box for P-505 was retrieved |
+| `SRC-LKL-MATCHCENTER` (`lkl.lt/rungtynes/...`) | **CANDIDATE, unverified for settlement** | The printed match IDs (`11024`, `11025`) could not be reproduced. `lkl.lt/tvarkarastis` lists upcoming fixtures (e.g. `rungtynes/11586`), but no completed match page was opened. The verified LKL lane is BasketNews (row (b)5) |
+| `SRC-FIBA-EUROLEAGUE-WOMEN` | **VERIFIED — FIELD OWNER** | Route: `fiba.basketball/en/events/euroleague-women-26-27/games/<id>-<HOME>-<AWAY>` via `r.jina.ai`. It prints the final, quarter lines and game leaders. The `/boxscore` sub-route did not render |
+| `SRC-MYKBOSTATS-PORTAL` | **UNVERIFIED** | Not opened in either pass. The KBO English scoreboard (row (b)3) is the verified KBO settlement lane |
+| `SRC-TENNISTEMPLE-LIVE` | **UNVERIFIED** | The player page (`en.tennistemple.com/iiro-vasa/`) returned 404. The verified ITF lanes are the ITF page and TennisExplorer (rows (b)1–2) |
+
+### (b) Lanes verified by retrieval in this pass
+
+| # | Source ID (proposed) | Endpoint / retrieval method | Sport | Fields | Class | Reliability and limits |
+|---|---|---|---|---|---|---|
+| 1 | `SRC-ITF-DRAWS-PAGE` | `r.jina.ai/https://www.itftennis.com/en/tournament/<slug>/<nat>/<yyyy>/<tournamentKey>/draws-and-results/`; tournament key and surface from `r.jina.ai/https://www.itftennis.com/tennis/api/TournamentApi/GetCalendar?circuitCode=MT&searchString=<city>&dateFrom=…&dateTo=…`, or `GetEventFilters?tournamentKey=…` | Tennis (ITF) | Per-set games and tiebreak points; next-round opponent; surface; indoor/outdoor | **PRIMARY (field owner)** | Direct requests and `GetDrawsheet` are Incapsula-blocked. The draws page is text-rendered; parse the set games beside each name |
+| 2 | `SRC-TENNISEXPLORER-MATCH` | `r.jina.ai/https://www.tennisexplorer.com/match-detail/?id=<id>`; player pages `…/player/<slug>/` | Tennis (all tiers) | Winner-first set scores with tiebreak points; round; indoor flag | **SECONDARY (independent aggregator)** | The page carries **odds columns**. These are firewalled: never read, quoted or used, scores only. Site time is GMT+1 |
+| 3 | `SRC-KBO-ENG-SCOREBOARD` (existing lane, reconfirmed) | `eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=YYYY-MM-DD` (curl) | Baseball (KBO) | FINAL marker, inning linescore, R/H/E/B, W/L/S pitchers | **PRIMARY** | `BoxScore.aspx` redirects, and the `ws/Schedule.asmx/GetBoxScoreScroll` POST returns HTML. Starting-pitcher identity is therefore **not** machine-verifiable from these routes |
+| 4 | `SRC-NPB-BOX` (existing lane, reconfirmed) | `npb.jp/scores/YYYY/MMDD/<home>-<away>-<nn>/box.html` | Baseball (NPB) | 試合終了 marker; start and end time; **12-inning linescore**; batting lines; pitcher lines (IP, runs, ER) | **PRIMARY** | Decode as UTF-8, and print with `PYTHONIOENCODING=utf-8` on Windows |
+| 5 | `SRC-BASKETNEWS-MATCH` | `r.jina.ai/https://www.basketnews.lt/rungtynes/ziureti/<id>-<slug>.html`; results list `…/lygos/59-lkl/rezultatai.html` | Basketball (LKL) | Final and quarter line (e.g. "99:84 (18:16, 31:20, 28:20, 22:28)"); coaches; report | **SECONDARY (independent media)** | Lithuanian-language text. Quarter lines are printed in the match report |
+| 6 | `SRC-MLB-BOXSCORE-WEATHER` (existing statsapi lane, new fields) | `statsapi.mlb.com/api/v1/game/<pk>/boxscore` (`teams.*.battingOrder`, `players.*.stats.pitching`, `info[]` Weather/Wind/Att/T) | Baseball (MLB) | Official batting order, full pitching lines, **field-relative wind** ("14 mph, In From LF"), temperature, condition | **PRIMARY** | Pre-game, the order and weather appear in the live feed once posted. Use them at freeze (`RULES_BASEBALL.md` B-1, B-2) |
+| 7 | `SRC-XSCORES-BASKETBALL` | `r.jina.ai/https://www.xscores.com/basketball/match/<slug>/<dd-mm-yyyy>/<id>` | Basketball (minor leagues, e.g. El Salvador LMB) | Final, quarter lines, round | **FALLBACK (aggregator)** | Site timezone is not stated; the date appears as the UTC+3 calendar day. One lineage only |
+| 8 | `SRC-NHL-APIWEB-BOXSCORE` (existing lane, new note) | `api-web.nhle.com/v1/score/YYYY-MM-DD` and `/v1/gamecenter/<id>/boxscore` | Ice hockey | Goals with strength and modifier; **goalie TOI and saves**; dressed skaters | **PRIMARY** | Returns **HTTP 403 to Python `urllib`'s default client and 200 to curl**. Fetch with curl |
+| 9 | `SRC-ESPN-SUMMARY-LINEUPS` (existing lane, new use) | `site.api.espn.com/apis/site/v2/sports/basketball/{wnba,nbl}/summary?event=<id>` | Basketball | `starter` flag, minutes, `didNotPlay` and reason; team shooting splits | **PRIMARY for settlement lineup diffs** | Omit the browser User-Agent (known 403) |
+| 10 | `SRC-MLB-SEASON-SCHEDULE` | `statsapi.mlb.com/api/v1/schedule?sportId=1&gameType=R&startDate=…&endDate=…&fields=…` | Baseball | Season-wide finals with the `doubleHeader`/`gameNumber` flags, for base rates | **PRIMARY** | This route produced the doubleheader and one-run base rates in `BASE_RATES_REGISTER.md` §"2026-09-24(f)" |
+
+### (c) Sources that failed this pass
+
+| Source | Result | Decision |
+|---|---|---|
+| `api.sofascore.com` | HTTP 403 `{"error":{"code":403}}` | Not usable without a browser. Remove from settlement-route defaults |
+| `www.tennislive.net` (via jina) | Cloudflare challenge | Not usable |
+| `archysport.com` | Surfaced by search for P-499 | **EXCLUDED: synthetic-content site** (the same class as the Mynavi AI recaps, L-20260923-08). Never a lineage |
+| MSN syndication | Surfaced by search | Syndication counts once, with its upstream; not an independent lineage |
+
+
+<!-- AUDIT-CLOSURE-2026-09-25 -->
+## 2026-09-25 — audit closure: source items carried from the 2026-09-22 cohort audit and the 2026-09-23 read-only audit
+
+The 2026-09-22 cohort retrospective (Part 5 §"2026-09-22" §4.5 and §5 items 5, 7 and 12) and the 2026-09-23 read-only audit (`archive/audit_documents_implemented_2026-09-25/IMPLEMENTED_CHANGES_2026_09_23.md` item 9) mapped these rows for later incorporation. None had been written into this register. Each row cites the evidence that already sits in Part 5. None is `APPROVED FOR FEATURE`.
+
+### (a) Cricket
+
+| Source ID | Endpoint / record | Fields | Status | Evidence and limits |
+|---|---|---|---|---|
+| `SRC-ESPN-SITE-API-CRICKET` (league-ID route) | `site.web.api.espn.com/apis/site/v2/sports/cricket/<leagueId>/summary?event=<id>` (CPL league ID `8623`); ball-by-ball via `…/playbyplay?event=<id>&period=<innings>&page=<n>` | Toss note, innings order, per-innings `Powerplay 1` matchnote, milestones, over-end checkpoints; a whole venue window in a few calls | `CANDIDATE — PRIMARY STRUCTURED` (one lineage with ESPNcricinfo) | Settled P-482 and built the Kensington 12–20 Sep window (events 1534212–1534216). Complements the series-ID route (`1534175`). **Over labels in summarised output can be off by one**: verify checkpoints with the run-rate identity (`RULES_CRICKET.md` §7) |
+| `SRC-CPL-OFFICIAL-FINAL-REPORT` | Competition's own final match report or scorecard | Final result; innings totals; phase checkpoints where printed | `FIELD OWNER — SETTLEMENT LINEAGE 1` | **Official final reports come before aggregators** (2026-09-23 read-only audit item 9). Republications count once: CaribbeanCricket.com and CricTracker reproduce the CPL release verbatim, so they are **the same lineage as CPL** |
+| `SRC-CRICBUZZ-SCORECARD` | Exact final scorecard page | Final, dismissals (a duck is distinguished from not out and did not bat) | `INDEPENDENT SECONDARY` | Player rows settle from the dismissal field, never from runs alone (`RULES_CRICKET.md` §7) |
+| `SRC-NATION-NEWS-BB` | Nation News (Barbados) match reports | Independent Caribbean reporting with ball-level detail | `INDEPENDENT SECONDARY` | Supplied P-482's 30/2 at 3.4 and the dismissal sequence |
+| `SRC-CREX` | Crex live pages | Figures | `FALLBACK ONLY` | Consistent figures, but carried an unverified dew claim |
+| Yahoo Sports cricket previews | Probable XIs | — | `PROJECTED ONLY` | Never a confirmed XI |
+| ESPNcricinfo HTML pages | — | — | **HTTP 403 to automated fetch (2026-09-22)** | Use the ESPN API route instead |
+
+### (b) Tennis
+
+| Source ID | Endpoint / record | Fields | Status | Evidence and limits |
+|---|---|---|---|---|
+| `SRC-TENNISABSTRACT-WTA-ELO` | `tennisabstract.com/reports/wta_elo_ratings.html` (ATP equivalent already registered) | Overall and surface Elo with a page date | `CANDIDATE — BENCHMARK ONLY` (`RULES_TENNIS.md` `TE-P5`, control 13) | P-483: Volynets 1809.8 / 1766.3 hard v Kalieva 1597.8 / 1567.2, implying about 74–77% against the card's 62%. **The page is dated on match day, so snapshot it before the event**; a check, never a probability source |
+| `SRC-WTA-DRAW-PDF` | `wtafiles.wtatennis.com/pdf/draws/<year>/<tournamentId>/MDS.pdf` | Official result lines with a release timestamp | `FIELD-OWNER CORROBORATION` (same lineage as the WTA match page) | P-483: "K. Volynets 63 60", released 21 Sep 2026 10:35 PM. **Parse the text layer.** Summaries of draw PDFs are unreliable: two extractions of one bracket disagreed |
+| `SRC-WTA-MATCH-PAGE` | `wtatennis.com/tournaments/<id>/<slug>/<year>/scores/<matchId>` | Exact-match state and score | `FIELD OWNER` | High-value current lane (2026-09-23 read-only audit item 4). **Take facts from match-level pages**: automated renders of WTA player-profile pages returned figures inconsistent with WTA's own match pages (P-483 research) |
+| `SRC-TENNIS-MAJORS` | `tennismajors.com/matches/wta/<event>/<match>` | "Ended" state, score, duration | `INDEPENDENT TERMINAL-STATE LINEAGE` | P-483 settlement lineage 2 |
+| Sackmann `tennis_wta` repository | GitHub | Historical match-level WTA data | **HTTP 404 on 2026-09-22 — no admitted WTA totals base-rate source exists** | Recorded as a gap in `BASE_RATES_REGISTER.md` §6 |
+
+### (c) Feeds (2026-09-23(c) observation `O-START-MARKER`, confirmed with P-509)
+
+`SRC-NBL-MATCH-API` (`schedule.nbl.com.au/api/calendar/match?match=<uuid>&league=NBL`) exposes `play_by_play[].timestamp` in UTC and `action_type` per event. The match ID is on the `nbl.com.au/matches/<slug>` page.
+- **The earliest events are placeholders.** In P-509 the first records (10:32:50 UTC) are `action_type = fixture` and `period`, about an hour before the tip.
+- **The actual start marker is the first `action_type = jumpBall` event** (period 1, clock 10:00). In P-509 that was **11:36:13 UTC = 21:36:13 AEST, against a 21:30 schedule**.
+- This is the second NBL observation of a tip about six minutes after schedule (TMP-NBL-CNS-TAS: 19:36:09 against 19:30). `O-START-MARKER`'s field definition is therefore confirmed for the NBL.
+- The `betting`/`odds` objects stay quarantined: parse programmatically and skip them.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — research pass: lanes verified by bulk retrieval, and the receipt tool
+
+All entries were verified by retrieval on 2026-09-25 (about 00:10–01:00 AEST). The scripts are in `research/base_rates_2026-09-25/`; the tool is `receipts.py` (RULES_GENERAL §"2026-09-25(b)"(c)). **Market quarantine** applies to every lane below. Keys that carry prices or market-derived numbers are never read:
+- ESPN summary: `pickcenter`, `odds`, `againstTheSpread`, `winprobability`;
+- NHL score: `oddsPartners`;
+- ESPN navigation links with `rel: ["odds"]`, which are stripped from stored fixtures.
+
+`receipts.py` deletes these keys on load. `test_receipts.py` asserts the stored fixtures are market-free.
+
+### (a) Lane-state change
+
+| Source | Change | Consequence |
+|---|---|---|
+| `SRC-ESPN-SITE-API` scoreboard | **Every date *range* now returns HTTP 400**: `dates=YYYYMMDD-YYYYMMDD`, even 7 days, with or without `limit`. A single date (`dates=YYYYMMDD`) returns 200. Verified on WNBA, then used for 1,842 single-day calls across five leagues and nine league-seasons, with 0 failures | Season pulls go one date per call (`fetch.py`, 4 workers). The older note in `BASE_RATES_REGISTER.md` §1 ("ranges are unsupported") is now confirmed for all leagues tested |
+
+### (b) Lanes admitted or extended for base rates
+
+| ID | Endpoint | Fields used | Status | Notes |
+|---|---|---|---|---|
+| `SRC-ESPN-TENNIS-SCOREBOARD` | `site.api.espn.com/apis/site/v2/sports/tennis/{wta,atp}/scoreboard?dates=YYYYMMDD` | `events[].groupings[].competitions[]`: `competitors[].linescores[].value`, `status.type.name` (`STATUS_FINAL` / `STATUS_RETIRED` / `STATUS_WALKOVER`), `round.displayName`, `notes` | **ADMITTED — base rates** (closes the WTA totals gap) | One call returns every match of each tournament active that day, qualifying included. Coverage: Slams, WTA/ATP tour **and WTA 125** (Tolentino, Oeiras, Megasaray …). Not ITF. Tiebreak points are not in `value`; only games are. Retirements and walkovers are flagged, so censored totals can be excluded |
+| `SRC-ESPN-SOCCER-SUMMARY` (extension) | `…/soccer/eng.1/summary?event={id}` | `keyEvents[]` with `scoringPlay`, `period.number`, `clock.displayValue`; `boxscore.teams[].statistics[]` `wonCorners`, `totalShots`, `shotsOnTarget` | **ADMITTED — base rates** | 380 of 380 EPL matches: the goal count matched the final score in every match. EPL corner **settlement** still belongs to the pulselive field owner |
+| `SRC-NHL-API-WEB-SCORE` | `api-web.nhle.com/v1/score/YYYY-MM-DD` (**curl**; urllib gets 403) | `games[]`: `gameType` (1 preseason, 2 regular, 3 playoffs), `gameState`, `gameOutcome.lastPeriodType`, `goals[]` with `goalModifier` (`empty-net`), `strength`, `periodDescriptor`, `teamAbbrev` | **ADMITTED — base rates and settlement corroboration** | Empty-net goals are machine-readable per goal. Same lineage as the gamecenter endpoints |
+| `SRC-NHL-API-WEB-GAMECENTER` | `…/v1/gamecenter/{id}/boxscore` and `/landing` | `playerByGameStats.*.goalies[]` (`toi`, `decision`); `summary.scoring[]` by period | **PRIMARY (settlement)** — used by `receipts.py settle nhl` | Reproduced P-503 (Poirier 59:29; card-named Oettinger did not play) |
+| `SRC-MLB-GAMEFEED` | `statsapi.mlb.com/api/v1.1/game/{gamePk}/feed/live` | `gameData.weather`, `probablePitchers`, `datetime.dateTime`, `status.codedGameState`, `venue`; `liveData.boxscore.teams.*.battingOrder`, `players.ID*.battingOrder`, `officials`, `info` (Weather, Wind, First pitch); `linescore.innings`; `decisions` | **PRIMARY (freeze and settlement)** — used by `receipts.py` | `battingOrder` lists the **current** occupant of each slot. A starter is the player whose `battingOrder` string ends in `00` (substitutes are `X01`, `X02`), which is how `receipts.py` recovers replaced starters (P-500: Harry Ford started in slot 7, Keibert Ruiz entered). Before publication, `battingOrder` is empty and `weather` is `{}` |
+| `SRC-MLB-STATSAPI-SEASON` (refresh) | `…/api/v1/schedule?sportId=1&startDate=2026-03-25&endDate=2026-09-24&gameType=R&hydrate=linescore,venue` | Final scores, innings, venue | **PRIMARY — base rates** | 2,373 nine-inning Finals. All 30 parks derived (`BASE_RATES_REGISTER.md` §7.5) |
+
+### (c) Tool
+
+`receipts.py` (`pregame mlb|espn`; `settle mlb|nhl|espn`) prints every fact with its endpoint and retrieval time, and derives the `PREGAME` / `LIVE` / `FINAL` / `START_CROSSED_STATUS_NOT_FINAL` state from the feed. It never infers state from the clock alone. Offline fixtures live in `tests_fixtures/receipts/`: trimmed, market-free, and all from events already settled in Part 5 except two pregame captures.

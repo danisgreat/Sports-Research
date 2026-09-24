@@ -1,7 +1,7 @@
 ﻿# Probability scoring and validation
 
 
-> **CR-2026.09.21-3 audit reconciliation:** scoring/evaluation findings marked superseded or rejected in `AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` are non-operative. CR-3 additionally removes surviving live gate references to pseudo-tail/path-count/separation-floor shortcuts. Frozen historical probabilities remain unchanged.
+> **CR-2026.09.21-3 audit reconciliation:** scoring/evaluation findings marked superseded or rejected in `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` are non-operative. CR-3 additionally removes surviving live gate references to pseudo-tail/path-count/separation-floor shortcuts. Frozen historical probabilities remain unchanged.
 
 
 
@@ -58,6 +58,8 @@ Keep every row for settlement and coherence. Exact complementary binary rows hav
 
 **Top over/under review trigger (user directive, 2026-09-19).** Identify, from issue-time ranks alone and before any outcome is known, the card's **highest-ranked over/under target** and its frozen preferred side. If that side does not win — including when it pushes — the card receives the enhanced failure review defined in `METHOD.md` §7, on the same terms as a Rank #1 loss. Record the trigger as `TOP_OU_REVIEW` beside the Rank-#1 flag so the two are separately countable. This is a retrospective-scrutiny rule and changes no probability, rank or selection rule; in particular it must not be satisfied by hedging a pair, by declining to rank a total, or by shading a stated probability.
 
+
+**Covering pairs (`G-L22(c)`, added 2026-09-24(f); implemented here 2026-09-25).** Two ranked rows whose union covers every settlement outcome are labelled `COVERING_PAIR`. Examples are opposite +1.5 run lines in MLB, where ties are impossible, and an ML plus the opponent's +1.5. Such a pair records at least one win by construction, and both rows win exactly in the overlap state (a one-run game: 27.6% of 2026 MLB finals, n = 2,374; `BASE_RATES_REGISTER.md` §5). For the card concerned, Hit@2 and "at least one of the top two won" are excluded from top-two reliability summaries. Report which member was preferred, whether it won, and P(overlap). A covering pair may still be the honest ranked output of a supplied slate. What is forbidden is counting it as skill, or seeking it to guarantee a win.
 
 Report row, distinct-target decision and event counts separately. Give each event equal weight after averaging its prespecified target scores. Preserve pregame/live and endpoint distinctions and cluster resamples by event, with schedule-block sensitivity when relevant. Do not add family-specific retrospective tallies that used different selection rules.
 
@@ -151,3 +153,18 @@ For current forecasts, tail checks, target geometry, winner, margin/cushion and 
 
 
 Where no validated numerical distribution exists, retain an explicit qualitative branch set and uncertainty state; do not publish pseudo-precision. This does not alter historical score vectors or resurrect any closed candidate design.
+
+
+<!-- AUDIT-CLOSURE-2026-09-25 -->
+## 12. Settlement-integrity labels (2026-09-24(f) controls; implemented 2026-09-25)
+
+These labels change no forecast probability. They decide what a settled record may be used for.
+
+| Label | Meaning | Consequence for scoring and learning |
+|---|---|---|
+| `PROCESS_RECORD_UNVERIFIED` | A settlement block whose causal narrative relies on process facts not read from a named record (`C-PROCESS-RECORD-PROVENANCE`) | Grades may stand if the final is verified. The block supports **no** rule, weight, base rate, calibration input or learning-register disposition until the process record is re-read |
+| `LINEUP_CLAIM_FALSE` | A player the card named as a driver of the Rank-1 row did not play (`C-LINEUP-DIFF`) | A process defect whatever the result. The card's Rank-1 outcome is reported with the flag and excluded from any "the method worked" summary |
+| `COVERING_PAIR` | Two ranked rows jointly cover every outcome (§3) | Hit@2 is excluded from top-two reliability summaries |
+| `FIELD_OWNER_VERIFIED_LT3` | The final was verified from the field owner, plus a second lineage where available, but a third independent lineage could not be re-opened at audit time | The grade stands (no conflicting source exists); the record states the lineage count rather than claiming CR-4 completion |
+
+Descriptive reports list how many cards carry each label beside every Rank-1, Hit@2 and top-O/U figure.

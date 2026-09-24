@@ -15,7 +15,10 @@ mass). This script is the remedy §16.8 names.
 It is a *detector of printed fields*, not a judge of analysis quality. A field is "present"
 when the card contains recognisable evidence that the field was printed. It cannot tell a
 good width from a bad one; it can tell a printed width from a missing one, which is the
-failure mode that actually recurs.
+failure mode that actually recurs. **It checks presence, not truth**: a card can print a
+lineup field that the official box later contradicts (2026-09-24(f): five of seven
+diffable cards). The settlement fields `10l` (C-LINEUP-DIFF) and `10p`
+(C-PROCESS-RECORD-PROVENANCE) exist so that the truth check is at least *recorded*.
 
 Usage
 -----
@@ -23,11 +26,20 @@ Usage
     python audit_card_controls.py <file.md> --section "2026-09-17(b)"
     python audit_card_controls.py <file.md> --json
     python audit_card_controls.py <file.md> --settlement
+    python audit_card_controls.py <file.md> --settlement --strict
 
 Options
 -------
     --section TEXT   Only audit cards inside the dated section whose heading contains TEXT.
-    --settlement     Also check field 10 (process record), which only applies at settlement.
+    --settlement     Also check the settlement fields (10, 10p, 10l, 10z), settlement passes only.
+    --strict         Treat the 2026-09-24(f)/2026-09-25 controls as BLOCKING: 7r (S-1 Rev 2
+                     receipt), T13 (tennis benchmark, RULES_TENNIS TE-P5), WB (reference
+                     width, C-WIDTH-BENCHMARK), HC (tennis handicap coherence), 10p
+                     (process-record provenance), 10l (lineup diff) and 10z (standardised
+                     miss, C-WIDTH-Z). Use it on every card issued or settled after the
+                     2026-09-25 control manifest (WB, HC and 10z from CONTROL_MANIFEST_2026-09-25-2).
+                     Without it these fields are reported as process defects only, so historical
+                     cohorts are not failed retroactively for controls that postdate them.
     --json           Emit machine-readable JSON instead of the Markdown table.
     --quiet          Suppress the per-card table; print only the summary.
 
@@ -37,8 +49,18 @@ Exit codes
     1  at least one card is missing a BLOCKING field
     2  usage or file error
 
-BLOCKING fields (a missing one blocks issue under §16.8): 2, 3, 5a, 7.
+BLOCKING fields (a missing one blocks issue under §16.8): 2, 3, 5a, 7; at settlement 10;
+with --strict also 7r, T13, WB, HC, 10p, 10l, 10z (each only where it applies).
 Everything else is recorded as a process defect on that card without blocking.
+
+Card segmentation (repaired 2026-09-25; 2026-09-23(c) proposal)
+---------------------------------------------------------------
+A card starts at a `P-###` or `TMP-YYYYMMDD-…` heading (levels 2–6) or at a
+`<!-- BEGIN VERBATIM ISSUED RECORD: <ID> … -->` marker. Inside a BEGIN/END verbatim block
+no heading closes the card. `<!-- END VERBATIM ISSUED RECORD … -->` always closes it.
+`## Entry N` headings never close a card. An issue-time line such as
+"**Status:** UNSETTLED — LIVE-ISSUED VIEW" is not a settlement boundary (it truncated
+P-494's audit on 2026-09-23/24).
 
 Detection is deliberately generous: it accepts any of several spellings, because the
 purpose is to catch a field that was never printed at all, not to enforce one phrasing.
@@ -54,9 +76,11 @@ import json
 import re
 import sys
 from dataclasses import dataclass, field as dc_field
+from typing import Callable, Optional
 
 # --------------------------------------------------------------------------------------
-# Field definitions — RULES_GENERAL.md §16.8, as amended 2026-09-17(b)
+# Field definitions — RULES_GENERAL.md §16.8, as amended 2026-09-17(b), 2026-09-24(f)
+# and 2026-09-25
 # --------------------------------------------------------------------------------------
 
 
@@ -67,6 +91,77 @@ class Field:
     blocking: bool
     patterns: list  # any match => present
     origin: str = ""
+    strict_blocking: bool = False  # becomes BLOCKING under --strict
+    # applies(card) -> bool; None means "applies to every forecast card"
+    applies: Optional[Callable] = None
+
+
+TENNIS_RE = re.compile(
+    r"\b(?:WTA|ATP|ITF|UTR)\b|Challenger|\bgames handicap|total games|straight sets|"
+    r"\btiebreak\b|Grand Slam", re.I)
+CRICKET_RE = re.compile(
+    r"\b(?:T20|ODI|powerplay|wickets?|CPL|IPL|BBL|ETPL|WPL|PSL|The Hundred|"
+    r"Sheffield Shield|Ranji|County Championship)\b|\btoss\b", re.I)
+# A team-sport league named in the card title settles the sport before the body is scanned
+# (2026-09-25: an NBL card's "full-game handicap" was mis-read as tennis).
+TEAM_TITLE_RE = re.compile(
+    r"\b(?:NBL|NBA|WNBA|MLB|NPB|KBO|CPBL|LMB|NHL|NFL|AFLW?|NRL|LKL|EuroLeague|FIBA|EPL|"
+    r"Premier League|MLS|A-League|Bundesliga|LaLiga|Serie A|Ligue 1|UEFA|basketball|"
+    r"baseball|soccer|football|hockey|rugby)\b", re.I)
+
+
+def detect_sport(text: str, title: str = "") -> str:
+    """Heuristic sport label used only to decide whether a sport-checklist field applies.
+
+    The card title is checked first; the body scan is a fallback.
+    """
+    if title:
+        if TENNIS_RE.search(title):
+            return "tennis"
+        if CRICKET_RE.search(title):
+            return "cricket"
+        if TEAM_TITLE_RE.search(title):
+            return "other"
+    head = text[:6000]
+    if TENNIS_RE.search(head):
+        return "tennis"
+    if CRICKET_RE.search(head):
+        return "cricket"
+    return "other"
+
+
+def _claims_projected_beat(card) -> bool:
+    return bool(re.search(r"PROJECTED_BEAT_VERIFIED", card.issue_text))
+
+
+def _is_tennis(card) -> bool:
+    return card.sport == "tennis"
+
+
+def _is_cricket(card) -> bool:
+    return card.sport == "cricket"
+
+
+def _team_sport_settled(card) -> bool:
+    return card.is_settled and card.sport != "tennis"
+
+
+# A card "prints a width" when a numeric SD/width appears in its issued text (2026-09-25(b)).
+WIDTH_PRINTED_RE = re.compile(r"\bwidth\b[^\n]{0,20}?\d|\bSD\b\s*[=:≈]?\s*\d", re.I)
+
+
+def _prints_width(card) -> bool:
+    return bool(WIDTH_PRINTED_RE.search(card.issue_text))
+
+
+def _settled_with_width(card) -> bool:
+    return card.is_settled and _prints_width(card)
+
+
+def _tennis_handicap(card) -> bool:
+    return card.sport == "tennis" and bool(
+        re.search(r"[−-]\s*\d+\.5\b[^\n]{0,40}(?:games|handicap)|games handicap|handicap[^\n]{0,20}[−-]\s*\d+\.5",
+                  card.issue_text, re.I))
 
 
 FIELDS = [
@@ -78,7 +173,10 @@ FIELDS = [
         "2", "outcome-family table with masses (§16.5(a) G-L1)", True,
         [r"outcome[- ]state famil", r"outcome famil", r"state famil",
          r"(?:\|\s*\d{1,3}\s*%\s*\|.*){2,}", r"\b\d{1,2}\s*goals?:\s*\d{1,3}\s*%",
-         r"probability geometry"],
+         r"probability geometry",
+         # "| Family (live, given completion) | Mass |" with a "Sum | 1.0000" row (P-494).
+         r"\|\s*(?:\*\*)?Family\b[^|\n]{0,60}\|\s*(?:\*\*)?(?:Probability )?Mass",
+         r"\bSum\b\**\s*\|\s*\**\s*1\.0{2,4}\b"],
     ),
     Field(
         "3", "centre, numeric width, normalised edge — or an explicit derivation of each "
@@ -128,6 +226,14 @@ FIELDS = [
          r"\bbench\b", r"\bcoach(?:es)?\b", r"\bmanagers?\b"],
     ),
     Field(
+        "7r", "S-1 Rev 2 receipt (outlet, reporter, timestamp, verbatim quote, two sources) "
+              "wherever PROJECTED_BEAT_VERIFIED is claimed (RULES_GENERAL 2026-09-24(f)(c))",
+        False,
+        [r"S-1 Rev 2 receipt", r"s1r2_receipt"],
+        origin="P-500, P-501, P-503, P-504, P-508, P-509",
+        strict_blocking=True, applies=_claims_projected_beat,
+    ),
+    Field(
         "8", "AGGREGATE_ONLY flags and sampling-noise checks (§16.5(c),(g))", False,
         [r"AGGREGATE_ONLY", r"sampling noise", r"small[- ]sample", r"game log",
          r"numerator", r"denominator"],
@@ -137,6 +243,42 @@ FIELDS = [
         [r"settlement rout", r"settle(?:d|ment) (?:from|at)", r"field[- ]own",
          r"pre-?register"],
     ),
+    Field(
+        "BR", "REFERENCE_BASE_RATE (population, threshold, n) or NOT_YET_DERIVED recorded "
+              "(sport §9.10/§10.10; R-7 of the 2026-09-22 audit)", False,
+        [r"REFERENCE_BASE_RATE", r"NOT_YET_DERIVED", r"reference base rate",
+         r"\bbase[- ]rate"],
+        origin="P-482, P-483",
+    ),
+    Field(
+        "T13", "tennis: dated independent Elo benchmark beside the winner mass "
+               "(RULES_TENNIS TE-P5 / control 13)", False,
+        [r"\bElo\b", r"benchmark"],
+        origin="P-350, P-483", strict_blocking=True, applies=_is_tennis,
+    ),
+    Field(
+        "CVW", "cricket: venue window by innings order, or INSUFFICIENT_VENUE_HISTORY "
+               "(RULES_CRICKET §10.8; control 21)", False,
+        [r"venue window", r"INSUFFICIENT_VENUE_HISTORY", r"by innings order",
+         r"innings[- ]order", r"bat(?:ting)?[- ]first.{0,80}chas"],
+        origin="P-482", applies=_is_cricket,
+    ),
+    Field(
+        "WB", "width printed beside the competition's reference width, or "
+              "REFERENCE_WIDTH_NOT_YET_DERIVED (C-WIDTH-BENCHMARK, RULES_GENERAL 2026-09-25(b)(a))",
+        False,
+        [r"C-WIDTH-BENCHMARK", r"reference width", r"REFERENCE_WIDTH_NOT_YET_DERIVED",
+         r"width benchmark", r"benchmark width", r"WIDTH_BELOW_REFERENCE"],
+        origin="P-497, P-498, P-508 (2026-09-24 cohort)", strict_blocking=True,
+        applies=_prints_width,
+    ),
+    Field(
+        "HC", "tennis games-handicap: P(win), implied P(margin ≥ k+1 | win) and the population "
+              "conditional (C-HCP-COHERENCE, RULES_GENERAL 2026-09-25(b)(f))", False,
+        [r"C-HCP-COHERENCE", r"HCP_CONDITIONAL", r"P\(\s*margin\s*(?:≥|>=)\s*\d+\s*\|\s*win",
+         r"implied P\(margin", r"conditional on (?:the |her |his )?(?:win|winning)"],
+        origin="P-495", strict_blocking=True, applies=_tennis_handicap,
+    ),
 ]
 
 SETTLEMENT_FIELDS = [
@@ -145,15 +287,46 @@ SETTLEMENT_FIELDS = [
               "(G-L23 §16.13(c); §16.11(o))", True,
         [r"\bshots?\b.{0,40}\bon target\b", r"\bshots?\b.{0,30}\bpossession\b",
          r"red card", r"sin bin", r"disruption fact", r"regulation (?:total|split|ended)",
-         r"inning[- ]by[- ]inning", r"powerplay", r"quarter scores?",
+         r"inning[- ]by[- ]inning", r"powerplay", r"quarter scores?", r"quarter lines?",
          r"process (?:read|record)"],
         origin="P-438",
     ),
+    Field(
+        "10p", "process facts carry the endpoint/URL they were read from "
+               "(C-PROCESS-RECORD-PROVENANCE, 2026-09-24(f))", False,
+        [r"https?://", r"\bstatsapi\b", r"site\.api", r"api-web", r"\bapi\.[a-z]",
+         r"\b[a-z0-9-]+\.(?:com|org|net|jp|au|lt|kr|fr|cz|sv|io)(?:\.au)?(?:/|\b)"],
+        origin="2026-09-24(e)", strict_blocking=True,
+    ),
+    Field(
+        "10l", "lineup diff: card-named starters v official box, 'k of n started' "
+               "(C-LINEUP-DIFF, 2026-09-24(f))", False,
+        [r"C-LINEUP-DIFF", r"named starters? started", r"\b\d+\s*(?:of|/)\s*\d+\s*named",
+         r"LINEUP_CLAIM_FALSE", r"lineup diff", r"\b\d\s*of\s*\d\b.{0,40}start"],
+        origin="P-500, P-501, P-503, P-508", strict_blocking=True,
+        applies=_team_sport_settled,
+    ),
+    Field(
+        "10z", "standardised miss z = (actual − centre)/width for total and margin "
+               "(C-WIDTH-Z, RULES_GENERAL 2026-09-25(b)(b))", False,
+        [r"C-WIDTH-Z", r"\bz\s*(?:_?(?:total|margin|tot|mar))?\s*=\s*[−+-]?\s*\d",
+         r"standardi[sz]ed (?:miss|residual|error)"],
+        origin="2026-09-24 cohort (BASE_RATES_REGISTER §7.6)", strict_blocking=True,
+        applies=_settled_with_width,
+    ),
 ]
 
-# A card heading looks like "### `P-438` — ..." or "## P-438 [PROVISIONAL] — ..." etc.
-CARD_HEADING = re.compile(r"^#{2,4}\s+.{0,8}?`?(P-\d{3}[A-Za-z0-9-]*)`?\b(.*)$")
+SETTLEMENT_KEYS = frozenset(f.key for f in SETTLEMENT_FIELDS)
+
+ID_PATTERN = r"(?:P-\d{3}[A-Za-z0-9-]*|TMP-\d{8}-[A-Z0-9-]+)"
+
+# A card heading looks like "### `P-438` — ...", "## P-438 [PROVISIONAL] — ...",
+# "##### P-493 - KBO ..." or "### TMP-20260923-NBL-CNS-TAS — ...".
+CARD_HEADING = re.compile(r"^#{2,6}\s+.{0,8}?`?(" + ID_PATTERN + r")`?(?![A-Za-z0-9])(.*)$")
 SECTION_HEADING = re.compile(r"^##\s+(?!#)(.*)$")
+ENTRY_HEADING = re.compile(r"^##\s+Entry\s+\d", re.I)
+VERBATIM_BEGIN = re.compile(r"<!--\s*BEGIN VERBATIM ISSUED RECORD:\s*`?(" + ID_PATTERN + r")")
+VERBATIM_END = re.compile(r"<!--\s*END VERBATIM ISSUED RECORD")
 
 # Cards that issued nothing are audited for identity only, not for forecast fields.
 NO_FORECAST = re.compile(
@@ -169,9 +342,14 @@ NO_ACTION = re.compile(r"CONDITION NOT MET|NO ACTION", re.I)
 # the event. Crediting them from settlement prose is the exact error this script exists to
 # prevent — a retrospective that says "both top two lost to one state" is not the same
 # object as a card that printed P(¬R1 ∧ ¬R2) beforehand.
+# An issue-time status line ("**Status:** UNSETTLED — LIVE-ISSUED VIEW", "**Status:**
+# UPCOMING / PREGAME AT FREEZE") is NOT a settlement boundary (repaired 2026-09-25).
 SETTLEMENT_BOUNDARY = re.compile(
     r"^#{2,5}\s*(?:Settlement|Settled|Settlement and (?:full )?retrospective|"
-    r"P-\d+\s*—\s*Settlement)\b|^\*\*(?:Status|Official (?:MLB )?final):\*\*",
+    r"P-\d+\s*—\s*Settlement)\b|"
+    r"^\*\*Status:\*\*\s*(?!\**\s*(?:UNSETTLED|UPCOMING|PREGAME|LIVE|PENDING|OPEN|NOT\b|"
+    r"SCHEDULED|ACTIVE))|"
+    r"^\*\*Official (?:MLB )?final:\*\*",
     re.I | re.M,
 )
 
@@ -184,6 +362,7 @@ class Card:
     section: str = ""
     present: dict = dc_field(default_factory=dict)
     kind: str = "forecast"  # forecast | no-forecast | no-action
+    sport: str = "other"
 
     @property
     def issue_text(self) -> str:
@@ -193,7 +372,7 @@ class Card:
 
     @property
     def settlement_text(self) -> str:
-        """The portion appended at settlement (field 10)."""
+        """The portion appended at settlement (fields 10, 10p, 10l, 10z)."""
         m = SETTLEMENT_BOUNDARY.search(self.body)
         return self.body[m.start():] if m else ""
 
@@ -217,15 +396,43 @@ def split_cards(text: str, section_filter: str | None):
     cur_section = ""
     cur: Card | None = None
     buf: list[str] = []
+    in_verbatim = False
+
+    def close():
+        nonlocal cur, buf
+        if cur is not None:
+            cur.body = "\n".join(buf)
+            cards.append(cur)
+        cur, buf = None, []
 
     for line in lines:
+        m_begin = VERBATIM_BEGIN.search(line)
+        if m_begin:
+            close()
+            cur = Card(cid=m_begin.group(1), title="(verbatim issued record)", body="",
+                       section=cur_section)
+            buf = [line]
+            in_verbatim = True
+            continue
+
+        if VERBATIM_END.search(line):
+            if cur is not None:
+                buf.append(line)
+                close()
+            in_verbatim = False
+            continue
+
+        if in_verbatim:
+            # Inside a preserved record no heading closes the card.
+            if cur is not None:
+                buf.append(line)
+            continue
+
         m_card = CARD_HEADING.match(line)
-        m_sec = SECTION_HEADING.match(line) if not m_card else None
+        m_sec = None if (m_card or ENTRY_HEADING.match(line)) else SECTION_HEADING.match(line)
 
         if m_card:
-            if cur is not None:
-                cur.body = "\n".join(buf)
-                cards.append(cur)
+            close()
             cur = Card(cid=m_card.group(1), title=m_card.group(2).strip(" —-"),
                        body="", section=cur_section)
             buf = [line]
@@ -233,20 +440,14 @@ def split_cards(text: str, section_filter: str | None):
 
         if m_sec:
             # A new top-level "## " heading closes the current card.
-            if cur is not None:
-                cur.body = "\n".join(buf)
-                cards.append(cur)
-                cur = None
-                buf = []
+            close()
             cur_section = m_sec.group(1).strip()
             continue
 
         if cur is not None:
             buf.append(line)
 
-    if cur is not None:
-        cur.body = "\n".join(buf)
-        cards.append(cur)
+    close()
 
     # De-duplicate: keep the longest block per ID (a settlement block may repeat the ID).
     best: dict[str, Card] = {}
@@ -258,24 +459,28 @@ def split_cards(text: str, section_filter: str | None):
     return [best[k] for k in sorted(best, key=lambda x: (len(x), x))]
 
 
-def audit_card(card: Card, fields: list, doc_level: dict | None = None) -> Card:
+def audit_card(card: Card, fields: list, doc_level: dict | None = None,
+               strict: bool = False) -> Card:
     body = card.body
     if NO_FORECAST.search(body):
         card.kind = "no-forecast"
     elif NO_ACTION.search(body):
         card.kind = "no-action"
+    card.sport = detect_sport(card.issue_text or body, card.title)
 
     doc_level = doc_level or {}
 
     for f in fields:
+        blocking = f.blocking or (strict and f.strict_blocking)
+
         # A card that issued nothing is audited for identity and retrieval only.
-        if card.kind == "no-forecast" and f.key not in ("1", "7", "9", "10"):
+        if card.kind == "no-forecast" and f.key not in ("1", "7", "9", "10", "10p", "10l"):
             card.present[f.key] = {"present": True, "blocking": False, "label": f.label,
                                    "note": "n/a — nothing issued"}
             continue
 
-        # Field 10 applies only to a settled card, and only against settlement text.
-        if f.key == "10":
+        # Settlement fields apply only to a settled card, and only against settlement text.
+        if f.key in SETTLEMENT_KEYS:
             if not card.is_settled:
                 card.present[f.key] = {"present": True, "blocking": False,
                                        "label": f.label, "note": "n/a — not yet settled"}
@@ -283,6 +488,11 @@ def audit_card(card: Card, fields: list, doc_level: dict | None = None) -> Card:
             scope = card.settlement_text
         else:
             scope = card.issue_text
+
+        if f.applies is not None and not f.applies(card):
+            card.present[f.key] = {"present": True, "blocking": False, "label": f.label,
+                                   "note": "n/a — does not apply"}
+            continue
 
         hit = any(re.search(p, scope, re.I | re.S) for p in f.patterns)
 
@@ -292,7 +502,7 @@ def audit_card(card: Card, fields: list, doc_level: dict | None = None) -> Card:
         if not hit and doc_level.get(f.key):
             hit, note = True, "declared document-wide"
 
-        card.present[f.key] = {"present": hit, "blocking": f.blocking, "label": f.label,
+        card.present[f.key] = {"present": hit, "blocking": blocking, "label": f.label,
                                "note": note}
     return card
 
@@ -345,11 +555,12 @@ def render_markdown(cards: list, fields: list, quiet: bool) -> str:
                f"{len([c for c in cards if c.kind=='no-action'])} no-action)")
 
     for f in fields:
-        miss = [c.cid for c in cards
+        miss = [c for c in cards
                 if c.present.get(f.key) and not c.present[f.key]["present"]]
         if miss:
-            tag = "**BLOCKING**" if f.blocking else "process defect"
-            shown = ", ".join(f"`{m}`" for m in miss[:12])
+            tag = "**BLOCKING**" if any(c.present[f.key]["blocking"] for c in miss) \
+                else "process defect"
+            shown = ", ".join(f"`{m.cid}`" for m in miss[:12])
             more = f" (+{len(miss)-12} more)" if len(miss) > 12 else ""
             out.append(f"- Field **{f.key}** ({f.label}) — {tag} — missing on "
                        f"{len(miss)}/{len(cards)}: {shown}{more}")
@@ -379,7 +590,10 @@ def main(argv=None) -> int:
     ap.add_argument("--section", default=None,
                     help="only audit cards inside the dated section matching this text")
     ap.add_argument("--settlement", action="store_true",
-                    help="also check field 10 (process record), settlement passes only")
+                    help="also check the settlement fields (10, 10p, 10l, 10z)")
+    ap.add_argument("--strict", action="store_true",
+                    help="treat the 2026-09-24(f)/2026-09-25 controls "
+                         "(7r, T13, WB, HC, 10p, 10l, 10z) as BLOCKING")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args(argv)
@@ -396,9 +610,9 @@ def main(argv=None) -> int:
             return 2
         cards = split_cards(text, args.section)
         if not cards:
-            print(f"warning: no `P-###` card headings found in {path}", file=sys.stderr)
+            print(f"warning: no `P-###`/`TMP-` card headings found in {path}", file=sys.stderr)
         doc_level = scan_doc_level(text, fields)
-        all_cards.extend(audit_card(c, fields, doc_level) for c in cards)
+        all_cards.extend(audit_card(c, fields, doc_level, strict=args.strict) for c in cards)
 
     if not all_cards:
         print("error: no cards to audit", file=sys.stderr)
@@ -408,7 +622,7 @@ def main(argv=None) -> int:
 
     if args.json:
         print(json.dumps(
-            [{"card": c.cid, "section": c.section, "kind": c.kind,
+            [{"card": c.cid, "section": c.section, "kind": c.kind, "sport": c.sport,
               "fields": c.present, "missing_blocking": c.missing_blocking}
              for c in all_cards], indent=2, ensure_ascii=False))
     else:

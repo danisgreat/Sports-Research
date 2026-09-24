@@ -12,7 +12,7 @@
 
 
 Status: **ACTIVE**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
+Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
 Method version: **MDS-2026.09.06-v4.0**
 Applies with RULES_GENERAL.md, MODEL_AND_DATA_SPEC.md, ALGORITHM_PORTFOLIO_AND_EVALUATION.md, and NUMERICAL_TRAINING_SPEC.md.
 Executable algorithm: **SFA-BASEBALL (§8) — instantiates GFA-2 in RULES_GENERAL.md §11**
@@ -549,7 +549,7 @@ A winning +1.5 in a 13–0 or 11–0 upset does not validate a close low-total m
 
 
 
-Full evidence and frozen-card comparisons: [September 5 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
+Full evidence and frozen-card comparisons: [September 5 audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-05.md).
 
 
 ## September 5(b) settlement learning — P-294–P-305 second continuation
@@ -628,7 +628,7 @@ Full evidence: [PREDICTION_LOG_COMBINED_2.md, 2026-09-05(b) section](PREDICTION_
 **Pre-issue checklist additions (this sport):** settlement endpoint named per row; coaching/bench/rotation record for both sides with missingness codes; tail-budget sums printed against every total line **with innings conserved and both failure branches checked**; path-geometry class printed for every total and phase-total row.
 
 
-Full narrative and evidence: [`IMPROVEMENT_PLAN_2026-09-06.md`](IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §§13–15](RULES_GENERAL.md).
+Full narrative and evidence: [`archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md`](archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §§13–15](RULES_GENERAL.md).
 
 
 ## September 5 implementation after freeze confirmation
@@ -831,7 +831,7 @@ Ten baseball cards ([`PREDICTION_LOG_COMBINED_3.md` §"2026-09-11"](PREDICTION_L
 Use a joint home/away final-run distribution with regulation/extra-innings scope explicit. A six-inning, one-run starter branch still needs the remaining bullpen and batting innings before a full-game team-total grade follows; remove control 28's automatic subtraction of its entire mass from every favourite/Over probability. P-361 Under 5.5 crossed at 3-3 in inning four; inning eight decided the side. P-365 requires the walk/control branch as well as contact: Yu walked five and allowed four runs (three earned), while Dykxhoorn completed seven scoreless innings. PA weights are scenario inputs, not universal league-independent constants. Verify actual eligible reserves as well as the nine starters; a postgame substitution list alone is not the pregame bench.
 
 
-For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. [Shared correction and methodology sources](audit_2026-09-12/rule_corrections.md). All current log observations remain learning-only and not performance-eligible.
+For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. Shared correction and methodology sources (`audit_2026-09-12/rule_corrections.md`, not present in this repository). All current log observations remain learning-only and not performance-eligible.
 
 
 
@@ -1062,7 +1062,7 @@ This section is the current prospective override for audit-derived ranking logic
 
 - **Retained sport package:** PA/BF exposure; starter hook distribution; named bullpen chain; park/defence; base-out and HR sequencing; home-ninth entitlement; extra-inning state; debut/small-sample mixture.
 - **Withdrawn here:** second-highest/median or second-lowest/median pseudo-tail construction; path-count/category shortcuts as ranking rules; universal 40–60% top-slot bands; normalized-distance ordering; any one-result rebound/hangover/“due” rule; and any implication that a cushion determines the outright winner.
-- **Current construction:** build one coherent sport-native joint outcome distribution/branch mixture, freeze it before supplied lines are queried, then derive exact target marginals and dependencies from that object. When a fitted/calibrated numerical distribution does not exist, keep probabilities unquantified rather than inventing precision.
+- **Current construction:** build one coherent sport-native joint outcome distribution/branch mixture, freeze it before supplied lines are queried, then derive exact target marginals and dependencies from that object. When a fitted/calibrated numerical distribution does not exist, a probability may be printed only as an `UNVALIDATED_SUBJECTIVE` output of the card's own complete, reproducible, declared distribution (METHOD §5). A number that cannot be reproduced from the printed distribution is invented precision and is not permitted. No subjective number carries a performance, calibration or value claim. *(Wording corrected 2026-09-25: the earlier "keep probabilities unquantified" contradicted METHOD §5; 2026-09-23 read-only audit item 5.)*
 
 
 <!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-23 -->
@@ -1113,26 +1113,100 @@ Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-23(c)"](PREDICTION_LOG_
 - Both are in the P-495-onward mini log.
 
 <!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
-## 2026-09-24 settlement learning — P-500, P-501, P-502, P-506 (MLB), P-493, P-507 (KBO), and TMP-20260923-NPB-CHU-DB-G25 (NPB)
+<!-- AUDIT-2026-09-24F -->
+## 2026-09-24 settlement learning — P-500, P-501, P-502, P-506 (MLB), P-493, P-507 (KBO) and TMP-20260923-NPB-CHU-DB-G25 (NPB), corrected 2026-09-24(f)
 
-Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)"](PREDICTION_LOG_COMBINED_5.md). Learning-only.
+**Full record:** `PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)" (the peer settlement, subject to its audit banner) and §"2026-09-24(f)" (the verification audit). This is learning-only.
 
-| Card | Competition | Rank #1 | Result | Top O/U | Score | Verdict |
-|---|---|---|---|---|:---:|---|
-| `TMP-G25` | NPB | DeNA +1.5 (W) | DeNA 4–3 | Under 7.0 (L) | 4–3 (7) Push | Dual cushion win; total push |
-| `P-493` | KBO | Under 8.5 (W) | Doosan 3–2 | Under 8.5 (W) | 3–2 (5) | Clean sweep; bullpen hold |
-| `P-500` | MLB | Under 8.5 (W) | Nats 4–2 | Under 8.5 (W) | 4–2 (6) | Process-right; low total held |
-| `P-501` | MLB | Over 7.5 (L) | Orioles 4–2 | Over 7.5 (L) | 4–2 (6) | **Rank-1 Failure Review**: Doubleheader G1 effect |
-| `P-502` | MLB | Royals +1.5 (W) | Royals 5–4 | Under 8.5 (L) | 5–4 (9) | Dual +1.5 run-line arbitrage sweep |
-| `P-506` | MLB | Astros +1.5 (W) | Mariners 6–5 | Over 7.5 (W) | 6–5 F/10 | Dual +1.5 run-line arbitrage sweep |
-| `P-507` | KBO | KT Wiz ML (W) | KT Wiz 3–2 | Under 9.5 (W) | 3–2 (5) | Clean sweep; high-leverage pen hold |
+**What changed.** The peer version of this section (`cb95acd`) mis-stated three Rank-1 contracts and two top-O/U results, and promoted two rules that are withdrawn below. The table is now copied from the issued Field 4 tables (`C-SUMMARY-FROM-CARD`). The process lines come from statsapi, the KBO scoreboard and the NPB box.
 
-### 1. New Rule: `MLB-DOUBLEHEADER-G1-TOTAL-DEFLATION`
-In Major League Baseball traditional day-night or split doubleheaders, Game 1 dynamics systematically deflate offensive scoring profiles:
-- **Starter Strike-Zone Aggressiveness:** Both starting pitchers enter under managerial mandates to pitch to early contact, attack the strike zone, and conserve bullpen arms for Game 2.
-- **Lighting and Shadow Conditions:** Early afternoon starts (e.g. 12:05 or 13:05 local) create severe home-plate shadow transitions between the mound and batter's box, depressing early-inning barrel rates and whiff recognition.
-- **Resting Regulars:** Lineups in Game 1 frequently rest one or more everyday power bats to balance workload across 18 innings.
-- **Protocol:** Game 1 totals must apply a mandatory deflation check before promoting an Over to Rank #1. When both clubs deploy veteran rotation anchors in Game 1, the total should not be placed at Rank #1 without explicit proof of extreme bullpen exhaustion.
+| Card | League | Rank #1 (p) | Final (verified) | Top O/U (rank) | Process note (verified) |
+|---|---|---|---|---|---|
+| TMP-G25 | NPB | Chunichi +1.5 **W** | DeNA 4–3 **F/12** (3–3 after 9) | Under 7.5 (#3) **W** (7) | The card named the tie/one-run branch. R1/R2 (DeNA ML) are a `COVERING_PAIR` |
+| P-493 | KBO | Doosan +1.5 (0.582) **W** | Doosan 3–2, walk-off in the 9th | Over 7.5 (#2) **L** (5) | KIA's three Asian Games bats were disclosed on the card but not priced into the 8.68 centre |
+| P-500 | MLB | Nationals +1.5 (0.587) **W** | WSH 4–2 | Over 7.5 (#3) **L** (6) | **Wind 14 mph in from LF** (the card said "out"); card DET order 3/9 correct. R1/R2 (DET ML) are a `COVERING_PAIR` |
+| P-501 | MLB (DH G1) | Over 7.5 (0.662) **L** | BAL 4–2 | Over 7.5 (#1) **L** | **Lineups stale** (BAL 2/9, TOR 3/9 named starters played); overcast, 63 °F, wind in from CF (the card said 73 °F, out) |
+| P-502 | MLB | White Sox +1.5 (0.700) **W** | KC 5–4 | Over 8.5 (#3) **W** (9) | Opener Hudson 0.1 IP, 4 R; Fedde 2.2 scoreless. R1/R2 (KC +1.5) are a `COVERING_PAIR` |
+| P-506 | MLB | Astros +1.5 (0.685) **W** | SEA 6–5 F/10 | Under 7.5 (#3) **L** (8 after 9) | A 7-run 3rd inning (Pecko 2.2 IP; Kirby 5.0 IP, 4 ER). Honest coin flip (0.506). R1/R2 are a `COVERING_PAIR` |
+| P-507 | KBO | KT ML (0.637) **W** | KT 3–2 | Under 9.5 (#2) **W** (5) | W Daniel, S Kim Jeong-woon, L Song Myung-gi |
 
-### 2. Dual Run-Line (+1.5 / +1.5) Arbitrage Success
-In tightly matched baseball games featuring high pitching quality or volatile late-inning bullpens (`P-502`, `P-506`), taking opposite +1.5 run lines creates a mathematical sweet spot where any 1-run outcome (e.g. 5–4, 6–5 in extras) results in both selections winning simultaneously. This structural dynamic provides resilient cushion against walk-off home team victories.
+### Withdrawn (not operative)
+
+**`MLB-DOUBLEHEADER-G1-TOTAL-DEFLATION` — REJECTED (L-20260924-F05).**
+- It came from one game.
+- 2026 statsapi finals over 9 innings: doubleheader G1 n=23, mean 7.78, P(total ≤ 7) **0.435** (95% CI 0.23–0.64). G2 n=23, mean 7.91. Non-doubleheader games n=2,328, mean 8.98, P(≤ 7) **0.427**.
+- G1 and G2 are both low relative to the league, which points to a makeup-game or season-timing confound rather than a G1 effect.
+- P-501 was overcast, which refutes the "afternoon shadows" mechanism. The claimed "57.3% G1 Under base rate" is unsourced.
+- The base rate is recorded in `BASE_RATES_REGISTER.md`.
+
+**"Dual run-line (+1.5/+1.5) arbitrage" — REJECTED (L-20260924-F09).**
+- MLB has no ties, so opposite +1.5 rows cover every outcome. At least one wins every game, and both win in a one-run game: 27.6% of 2026 finals (n=2,374).
+- Two such "sweeps" in one batch (P-502, P-506) have a joint chance of about 0.28² ≈ 0.08 and say nothing about skill.
+- Measurement rule: `RULES_GENERAL.md` §16.13(b) item 4 / §"2026-09-24(f)"(d), **`COVERING_PAIR`**.
+
+### Controls added (retrieval and integrity only; no coefficient)
+
+**B-1. Official MLB lineup at freeze (M19; `C-LINEUP-DIFF`).**
+- A baseball card that prints a batting order prints the statsapi `battingOrder` (`/game/{pk}/boxscore`, or `schedule?hydrate=lineups`) with its fetch time. It never prints a remembered, previewed or "reported" order.
+- If the order is not published at freeze, the state is `LINEUPS_NOT_YET_PUBLISHED @ time`. If it is published but was not fetched, the state is `RETRIEVAL_MISS`, and no full-game total or run line may be ranked #1 (G14.2).
+- Evidence: P-500 (DET 3/9) and P-501 (BAL 2/9, TOR 3/9; Santander's "44 HR" is a 2024 figure).
+
+**B-2. Gamefeed weather at freeze (L-20260924-F11).**
+- A baseball total at #1 or as the top O/U prints the statsapi `gameData.weather` block (condition, temperature, field-relative wind, e.g. "14 mph, In From LF") retrieved at freeze. Otherwise it prints `WEATHER_NOT_RETRIEVED`. A generic city forecast does not qualify.
+- This extends the existing weather game-window rule.
+- Evidence: in P-500 and P-501 the card's wind was "out" and the official record says "in"; both were losing top Overs.
+
+**B-3. `C-RUN-CENTRE-BIAS`, accrual only.**
+- Residuals (actual − centre): P-493 −3.68, P-500 −2.40, P-501 −3.82, P-502 −0.50, P-506 +2.99 (regulation −0.01), P-507 −4.59. The mean is −2.0; 5 of 6 are below the centre.
+- This is prospective relative to the 2026-09-12 finding (mean −1.58, 9 of 12 below).
+- **No coefficient and no Under tilt, per the manifest.** Two of the three losing Overs also had lineup or wind retrieval defects, so B-1 and B-2 come first.
+
+**B-4. Opener caution (observation only).**
+- P-502's CWS opener (Hudson, 3.03 ERA) gave up 4 runs in 0.1 IP. The card had retrieved the opener-then-bulk plan correctly.
+- An opener's first inning is a short-exposure, high-variance branch: width, not direction.
+
+<!-- RESEARCH-2026-09-25 -->
+## 2026-09-25(b) — freeze receipts, all-park references, first five innings and width (research pass)
+
+**Status.** A retrieval control and reference rates (`C-PROMOTION-RECEIPT`: `PROMOTED_PROCESS` / `REFERENCE`). No coefficient. Sources: `BASE_RATES_REGISTER.md` §7.5 (statsapi, 2,373 nine-inning Finals through 24 Sep) and `RULES_GENERAL.md` §"2026-09-25(b)"(c).
+
+**B-5. Freeze and settlement receipts (M19, M25, M30).**
+- **At freeze,** run `python receipts.py pregame mlb <gamePk>`. It prints, from the live gamefeed with UTC and AEST times:
+  - probable pitchers;
+  - gamefeed weather (condition, temperature, field-relative wind);
+  - the official batting orders;
+  - umpires;
+  - the feed state.
+- **Before publication,** it prints `LINEUPS_NOT_YET_PUBLISHED` or `WEATHER_NOT_YET_PUBLISHED`. Those states are printed on the card as they are:
+  - a projected lineup is never labelled confirmed;
+  - a city forecast never replaces the gamefeed wind.
+- **Re-run within 60 minutes of first pitch** when a card is frozen earlier.
+- **At settlement,** `python receipts.py settle mlb <gamePk> --card-away "…" --card-home "…" --card-sp-away X --card-sp-home Y` prints:
+  - the final and linescore;
+  - the **regulation (9-inning) score when extras were played**, which is what settles a regulation-only contract;
+  - decisions and box weather/wind;
+  - the `C-LINEUP-DIFF` lines.
+- **Replay check.** It reproduces two settled records: P-500 (wind "14 mph, In From LF") and P-506 (4–4 after 9; SEA won 6–5 in the 10th).
+
+**B-6. All 30 parks are derived.** Every MLB total card prints its venue row from §7.5: mean, P(total ≤ 7), P(total ≥ 10). The 16 Sep eight-park table is superseded. Examples:
+
+| Venue | Mean | P(≤ 7) |
+|---|---:|---:|
+| Sutter Health Park | 11.41 | 0.225 |
+| Coors Field | 11.12 | 0.225 |
+| Nationals Park | 10.83 | 0.231 |
+| T-Mobile Park | 7.78 | 0.494 |
+| Petco Park | 7.78 | 0.500 |
+
+Each park mean has an SE of about 0.4–0.6 runs. The row is a disclosure anchor, not a tiebreaker.
+
+**B-7. First five innings.**
+- Mean 5.00, SD 3.29.
+- P(F5 ≤ 4) = 0.499; P(tied after five) = **0.154**.
+- The first five carry 55.9% of runs.
+- An F5 row prints these. An F5 moneyline or −0.5 row carries the tie mass explicitly.
+
+**B-8. Width benchmark (`C-WIDTH-BENCHMARK`).**
+- Around a season-to-date team predictor, the total residual SD is **4.50** against a raw SD of 4.51: team rates explain almost none of the game-total variance (RECENCY §2).
+- A total width below **3.8** (0.85 × 4.5) names what justifies it: both starters' run-prevention estimates, bullpen availability, gamefeed weather.
+- In the 2026-09-24 cohort, P-506 (3.83) was at the threshold and P-500 (3.97) above it.
