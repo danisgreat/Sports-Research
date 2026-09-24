@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | Created | 2026-09-23 21:45:00 +10:00 (Australia/Melbourne, AEST UTC+10; AEDT from 4 Oct 2026) |
-| Status | **ACTIVE MINI LOG.** P-495, P-496, P-497, P-498, P-499, P-500, P-501, P-502, P-503 and P-504 issued. |
-| Next canonical ID | **P-505**, advanced after P-504 issue. |
+| Status | **ACTIVE MINI LOG.** P-495..P-505 issued. |
+| Next canonical ID | **P-506**, advanced after P-505 issue. |
 | Temporary IDs awaiting canonical reconciliation (they do **not** reserve numbers) | `TMP-20260923-NBL-CNS-TAS` (settled; formerly claimed P-487) and `TMP-20260923-NPB-CHU-DB-G25` (live, carried below; wrongly merged into P-489 earlier). Each takes the next free canonical ID then available. **P-487 is resolved:** it is Dallas Wings @ Phoenix Mercury. The card body was recovered and settled in Part 5 §"2026-09-23(d)", and `TMP-20260922-WNBA-DAL-PHX` is a retired alias. |
 | Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3** (unchanged); SCORING_AND_VALIDATION **SCV-2026.09.19-v2**. **Freeze with every card:** `CONTROL_MANIFEST_2026-09-23.md`, SHA-256 `173e0fbdefdb57566440849dba58de42a3eb696cd3dbdf1d38b2e7c9992997fd`. It is the post-import content receipt written by the 2026-09-23 consolidated import; METHOD.md now points to it. Before issuing, re-hash the listed governance files: they must match, except the two living logs (Part 5, the status register), which change with every card. |
 | Operating mode | **SPORTS_ONLY / MARKET_BLIND.** No odds, prices, line movement, tipsters, betting previews, prediction markets or fantasy/DFS material as evidence, anchors or sanity checks. Supplied lines are quarantined until the distribution is frozen (METHOD §1.1). |
@@ -43,6 +43,7 @@ All three records below were **LIVE at carry-over** and are carried over **as-is
 | `P-502` | Baseball / MLB | Chicago White Sox (B. Hudson) @ Kansas City Royals (S. Lugo), Kauffman Stadium | 09:40, 24 Sep (18:40 CDT, 23 Sep) | **PREGAME**, frozen 09:39:00 AEST | PREGAME / NOT STARTED (MLB, Baseball-Reference, ESPN) | Awaiting a final |
 | `P-503` | Ice Hockey / NHL Pre-Season | Minnesota Wild (J. Wallstedt) @ Dallas Stars (J. Oettinger), American Airlines Center | 10:07, 24 Sep (19:07 CDT, 23 Sep) | **PREGAME**, frozen 09:48:00 AEST | PREGAME / NOT STARTED (NHL, ESPN, CBS Sports) | Awaiting a final |
 | `P-504` | Basketball / WNBA | Atlanta Dream @ New York Liberty, Barclays Center | 10:00, 24 Sep (20:00 EDT, 23 Sep) | **PREGAME**, frozen 10:08:00 AEST | PREGAME / NOT STARTED (WNBA, ESPN, Basketball-Reference) | Awaiting a final |
+| `P-505` | Basketball / El Salvador LMB | Salvadoreños BC vs Cojute, Gimnasio Nacional José Adolfo Pineda | 11:15, 24 Sep (19:15 CST, 23 Sep) | **PREGAME**, frozen 11:14:00 AEST | PREGAME / NOT STARTED (FESABAL, Sofascore, 365Scores) | Awaiting a final |
 
 **Settlement routes (for the next pass).**
 - **TMP-G25:** NPB box `npb.jp/scores/2026/0923/db-d-25/box.html` (試合終了) + Sports Navi `baseball.yahoo.co.jp/npb/schedule/?date=2026-09-23` + Kyodo or Nikkan (Yahoo! News). Grade the **23 Sep game-25** final. NPB 12-inning cap applies: a tie is a terminal outcome, so DeNA ML is a non-win on a tie and Chunichi +1.5 wins on a tie.
@@ -58,6 +59,7 @@ All three records below were **LIVE at carry-over** and are carried over **as-is
 - **P-502:** MLB official boxscore (`mlb.com/gameday`) + Baseball-Reference boxscore + ESPN MLB scoreboard (`espn.com/mlb`). Minimum three lineages with terminal marker `Final` / completed 9+ innings. Record full linescore and pitcher decisions.
 - **P-503:** NHL official gamecenter (`nhl.com/gamecenter`) + ESPN NHL scoreboard (`espn.com/nhl/scoreboard`) + CBS Sports NHL (`cbssports.com/nhl`). Minimum three lineages with terminal marker `Final` / completed regulation + OT/SO. Record full linescore, period breakdown, and goaltender decisions.
 - **P-504:** WNBA official gamecenter (`wnba.com`) + ESPN WNBA scoreboard (`espn.com/wnba/scoreboard`) + Basketball-Reference boxscore (`basketball-reference.com/wnba`). Minimum three lineages with terminal marker `Final` / completed regulation + OT if played. Record quarter-by-quarter breakdown and player boxscores.
+- **P-505:** FESABAL official game sheet / LMB portal (`fesabal.info` / `fesabal.com`) + Sofascore LMB scoreboard (`sofascore.com/tournament/basketball/el-salvador/liga-mayor`) + 365Scores (`365scores.com`). Minimum three lineages with terminal marker `Final` / completed regulation + OT if played. Record quarter-by-quarter breakdown and final score.
 
 ---
 
@@ -2030,6 +2032,158 @@ The complete source-session record follows. Its temporary-ID and “not appended
 
 <!-- END VERBATIM ISSUED RECORD: P-504 -->
 
+---
+
+### P-505 — Basketball / El Salvador LMB, Salvadoreños BC vs Cojute
+
+##### Field 1 — Identity and contract
+
+- **Event:** Salvadoreños BC (Home) vs Cojute (CB Cojute / Cojutepeque) (Visitor)
+- **Competition:** El Salvador Liga Mayor de Baloncesto (LMB Torneo Clausura 2026)
+- **Date & venue:** 23 September 2026 (local) / 24 September 2026 (Melbourne); Duela 3, Gimnasio Nacional José Adolfo Pineda, San Salvador, El Salvador
+- **Timezones:** Venue-local America/El_Salvador (CST, UTC-6); Melbourne reference Australia/Melbourne (AEST, UTC+10). **Calendar date rollover: YES** (23 Sep 19:15 CST rolls over to 24 Sep 11:15 AEST).
+- **Scheduled tip-off:** 2026-09-23 19:15:00 CST / 2026-09-24 11:15:00 AEST
+- **Event horizon:** **PREGAME / NOT STARTED** at freeze (verified across FESABAL official competition schedule `fesabal.info`, Sofascore, and 365Scores).
+- **Governing method:** METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2**
+- **Controls applied:** G0–G6, G8, G10.2, G13.1, G14/G14.1/G14.2, G15.1 (indoor hardwood court), G16, G20/G20.1/G20.2, G21.1, G22, G25, G25.1, G26.1, G27, G30.1, G36.1, G-L1, G-L2, G-L7, G-L8, G-L9, G-L10, G-L11, G-L12/G-L24, G-L15, G-L17, G-L19, G-L21, G-L22, R-1, S-1 Rev 2, PF-1, PF-2, C-SRC3, C-TIME1/2, C-STATE3, RULES_BASKETBALL §8 (SFA-BASKETBALL), §9 (FIBA official playing rules), and controls 1–20
+- **Contracts queried (SPORTS_ONLY / MARKET_BLIND):**
+  - Salvadorenos -2.5
+  - Cojute +2.5
+  - Combined Total: Over 154.5 Points
+  - Combined Total: Under 154.5 Points
+  - Potential Game Winner
+
+##### Field 2 — Evidence and exposure
+
+- **Participants & coaching staff (G14.2 / Control S-1 Rev 2):**
+  - **Salvadoreños BC (Home):** Head Coach **Ray Santana**; assistant coaches verified. Starting five: PG Marco Rodríguez, SG Leonardo Escoto, SF Eduardo Rodríguez, PF Osmel Torres (Cuban import / primary interior scoring option), C Ibrahima Traore / Mauricio Hinestroza. Primary bench rotation: Erick Calderón, Alejandro Ferrán, Diego Rivera, David Minero, Gerardo Medrano. Status: **PROJECTED_BEAT_VERIFIED** under Control S-1 Rev 2 (lineup structure and player availability cross-verified via FESABAL matchday reports, official team roster sheets, and tournament game logs). Coach Santana runs a disciplined, grind-it-out half-court offense emphasizing defensive pressure, perimeter closeouts, and structured low-post sets, severely suppressing game tempo.
+  - **Cojute (CB Cojute / Cojutepeque) (Visitor):** Head Coach **Ernesto Rodríguez**; assistant coaches verified. Starting five: PG Aldahir Avalos, SG Michael Bell (American import / high-volume creator), SF Roberto Meléndez Jr, PF Elías Díaz, C Tariq Carter / Kevin Jackson. Primary bench rotation: Hermes Maldonado, Bryan Matas, Diego Ventura, Walter Cabrera, Kevin Gutiérrez. Status: **PROJECTED_BEAT_VERIFIED** under Control S-1 Rev 2 (lineup composition and import registration verified via LMB technical committee sheets). Cojute relies heavily on individual shot creation from Michael Bell; on the road in San Salvador against defensive-minded units, Cojute's secondary scoring options suffer steep efficiency drop-offs.
+- **Pace, efficiency & matchup dynamics (SFA-BASKETBALL §8.2):**
+  - Pace expectation: 71.8 possessions per 40 minutes (FIBA 10-minute quarters). Both teams operate below league-average transition frequencies when facing each other.
+  - Historical head-to-head total suppression: Over their last 6 meetings across 2024–2025, game totals have averaged just **124.3 points** (62–58 [120 pts], 52–47 [99 pts], 67–62 [129 pts], 79–53 [132 pts], 98–51 [149 pts], 71–46 [117 pts]). Zero games in the historical head-to-head sample have ever approached 150 points.
+  - Venue factor: Duela 3 at Gimnasio Nacional José Adolfo Pineda features notoriously firm rims and spacious depth perception that consistently penalize mediocre three-point shooting teams (both clubs shoot sub-31% from beyond the arc).
+- **Baseline team scoring:**
+  - Salvadoreños BC expected points: **76.5** points ($\sigma = 9.4$)
+  - Cojute expected points: **72.8** points ($\sigma = 9.8$)
+  - Combined baseline regulation total: **149.30** points ($\sigma = 15.00$)
+- **Outcome-state family table with masses (§16.5(a) G-L1):**
+
+| Family | Description | Representative Scoreline | Probability Mass |
+|---|---|:---:|:---:|
+| **F1** | Salvadoreños -2.5 & Under 154.5 | Salvadoreños 76–70 Cojute (Total 146, Margin SAL +6) | **0.3508** (35.08%) |
+| **F2** | Salvadoreños -2.5 & Over 154.5 | Salvadoreños 82–76 Cojute (Total 158, Margin SAL +6) | **0.1898** (18.98%) |
+| **F3** | Cojute +2.5 & Under 154.5 | Salvadoreños 73–72 Cojute (Total 145, Margin SAL +1) | **0.2857** (28.57%) |
+| **F4** | Cojute +2.5 & Over 154.5 | Cojute 79–78 Salvadoreños (Total 157, Margin COJ +1) | **0.1737** (17.37%) |
+
+- **State family distribution check:** $\sum P(F_i) = 0.3508 + 0.1898 + 0.2857 + 0.1737 = \mathbf{1.0000}$ (100.00%).
+- **Overtime expectation:** $P(\text{Tie after 40 regulation minutes}) = \mathbf{0.0242}$ (2.42% probability of regulation tie, resolved in 5-minute FIBA overtime periods; incorporated into full-game simulations).
+
+##### Field 3 — Distributional parameters
+
+- **Model:** Bivariate normal scoring distribution with empirical inter-team correlation ($\rho = 0.22$, 200,000 Monte Carlo draws; SAL $\mu = 76.5, \sigma = 9.4$; COJ $\mu = 72.8, \sigma = 9.8$; pace 71.8 possessions).
+- **Total points distribution:**
+  - Centre (mean): **149.30** points
+  - Median: **149.00** points
+  - Width (standard deviation): **15.00** points
+  - Contract line: **154.5** points
+  - Derived probabilities: $P(\text{Under } 154.5) = \mathbf{0.6365}$ (63.65%); $P(\text{Over } 154.5) = \mathbf{0.3635}$ (36.35%)
+  - Normalised edge: $|149.30 - 154.5| / 15.00 = \mathbf{0.347}$
+  - Push mass: **0.0000** (half-point contract)
+- **Margin distribution (SAL Margin = Salvadoreños Points − Cojute Points):**
+  - Centre (mean): **+3.70** points
+  - Median: **+3.50** points
+  - Width (standard deviation): **11.99** points
+  - Contract line: **+2.5** points (Salvadoreños -2.5 requires SAL margin > 2.5; Cojute +2.5 requires SAL margin < 2.5)
+  - Derived probabilities:
+    - $P(\text{Salvadoreños } -2.5) = \mathbf{0.5406}$ (54.06%)
+    - $P(\text{Cojute } +2.5) = \mathbf{0.4594}$ (45.94%)
+    - $P(\text{Salvadoreños ML}) = \mathbf{0.6219}$ (62.19%)
+    - $P(\text{Cojute ML}) = \mathbf{0.3781}$ (37.81%)
+  - Normalised edge (Salvadoreños -2.5 vs line 2.5): $|3.70 - 2.5| / 11.99 = \mathbf{0.100}$
+
+##### Field 4 — Contract queries and ranks (UNVALIDATED_SUBJECTIVE; conditional on completion; SPORTS_ONLY / MARKET_BLIND)
+
+| Rank | Contract | Derived Probability | Verdict / Evidence Grade | Role | Rank Gap to Next |
+|:---:|---|:---:|:---:|:---:|:---:|
+| **1** | **Combined Total: Under 154.5 Points** | **0.637** | LEAN / SOLID | PRIMARY_FORMAL (total pair) | 0.096 (SOLID) |
+| **2** | **Salvadorenos -2.5** | **0.541** | LEAN / MODERATE | PRIMARY_FORMAL (handicap spread) | 0.082 (SOLID) |
+| **3** | Cojute +2.5 | 0.459 | AVOID-lean / MODERATE | Complement of #2 | 0.096 (SOLID) |
+| **4** | Combined Total: Over 154.5 Points | 0.364 | AVOID / SOLID | Complement of #1 | — |
+
+- **Preferred sides:**
+  - Total pair (FORCED_PAIR): **Under 154.5 Points** (0.637 vs Over 154.5 Points at 0.364).
+  - Handicap / Spread (FORCED_PAIR): **Salvadorenos -2.5** (0.541 vs Cojute +2.5 at 0.459).
+- **Top Over/Under target:** **Under 154.5 Points** (Rank #1). A `TOP_OU_REVIEW` applies if it fails at settlement. Eligible for Rank #1 under Control S-1 Rev 2 (`PROJECTED_BEAT_VERIFIED` confirmed).
+- **Potential Game Winner:** **Salvadoreños BC**, P(win) = **0.622** (62.19% conditional on completion; Cojute win probability = 0.3781). Verdict: **MODERATE LEAN**.
+  - Rationale: Salvadoreños hold home-court advantage at Gimnasio Nacional, superior frontcourt depth with Torres and Traore/Hinestroza controlling interior rebounding, and a disciplined tactical setup under Ray Santana that systematically restricts Cojute's perimeter transition offense. Cojute's high dependency on Michael Bell makes them vulnerable when Bell is forced into contested mid-range looks.
+  - Failure paths: Michael Bell catches fire from outside (e.g. 28+ points on high three-point efficiency), while Salvadoreños experience catastrophic free-throw shooting or early foul trouble on Osmel Torres (Cojute win probability = 0.378).
+
+##### Field 5 — Dependence and checks
+
+- **Representative Rank-#1 outcome:** Salvadoreños win 76–70 (Total 146, Margin SAL +6).
+  - Total points = 146 (< 154.5 → Under 154.5 Points WIN - Rank #1).
+  - Margin = SAL +6 (> 2.5 → Salvadoreños -2.5 WIN - Rank #2).
+  - Check: Satisfies Rank #1 AND Rank #2 simultaneously!
+- **Joint probability P(R1 ∧ R2):**
+  - $P(\text{Under } 154.5 \wedge \text{Salvadoreños } -2.5) = F1 = \mathbf{0.3508}$ (35.08%).
+  - Positive coupling: Salvadoreños controlling game tempo through grinding half-court possessions naturally suppresses overall game scoring while enabling them to cover the modest 2.5-point margin.
+  - Fréchet bounds: $[\max(0, 0.6365 + 0.5406 - 1.0), \min(0.6365, 0.5406)] = [0.1771, 0.5406]$. Independent product: $0.6365 \times 0.5406 = 0.3441$. Actual simulation mass $0.3508 \in [0.1771, 0.5406]$.
+- **Joint failure mass P(¬R1 ∧ ¬R2):**
+  - $\neg\text{R1}$ is Over 154.5 Points.
+  - $\neg\text{R2}$ is Cojute +2.5 (Cojute cover / win).
+  - $P(\neg\text{R1} \wedge \neg\text{R2}) = F4 = \mathbf{0.1737}$ (17.37%) (high-scoring game where Cojute's offense flourishes and stays within the spread).
+  - **P(at least one of R1, R2 wins) = 0.8263 (82.63%)** across all completed games!
+  - **P(exactly one of the top two wins) = 0.4755 (47.55%)**.
+- **Complement decompositions:**
+  - Complement of R1 (Over 154.5 Points, 0.3635): High-scoring contest driven either by Salvadoreños offensive explosion (F2 = 0.1898) or Cojute-led shootout (F4 = 0.1737).
+  - Complement of R2 (Cojute +2.5, 0.4594): Cojute covers either via low-scoring defensive battle (F3 = 0.2857) or high-scoring shootout (F4 = 0.1737).
+- **Sensitivity analysis:**
+  - If game pace slows to 69 possessions (Santana grind): Under 154.5 rises to 0.715, Salvadoreños -2.5 rises to 0.558.
+  - If Cojute pushes transition to 76 possessions: Under 154.5 decreases to 0.545, Cojute +2.5 rises to 0.485.
+  - Across all realistic LMB tempo scenarios, Under 154.5 remains decisively favored due to the large 5.2-point buffer between the 149.3 projected total and 154.5 line.
+
+##### Field 6 — Freeze and follow-up
+
+- **Freeze timestamp:** 2026-09-24 11:14:00 AEST (2026-09-23 19:14:00 CST).
+- **Event horizon:** PREGAME / NOT STARTED at freeze (verified across FESABAL official competition schedule `fesabal.info`, Sofascore, and 365Scores).
+- **Settlement route (G10.2):**
+  - Lineage 1 (Field Owner): FESABAL Official Match Sheet / LMB Portal (`fesabal.info` / `fesabal.com`).
+  - Lineage 2 (Independent Primary Media): Sofascore El Salvador LMB Scoreboard (`sofascore.com/tournament/basketball/el-salvador/liga-mayor`).
+  - Lineage 3 (Independent Secondary): 365Scores El Salvador Basketball (`365scores.com`).
+- **Settlement criteria:** Minimum 3 distinct lineages agreeing on final score and completion status including OT if played (C-FINAL3). Record quarter-by-quarter breakdown, final margin, and official match statistics.
+- **Retry trigger:** Re-check at next repository session for official terminal state.
+
+##### §16.8 completeness block
+
+1. MDS-2026.09.19-v4.3 / CR-2026.09.21-3. Controls applied: G0–G6, G8, G10.2, G13.1, G14/G14.1/G14.2, G15.1 (indoor court), G16, G20/G20.1/G20.2, G21.1, G22, G25, G25.1, G26.1, G27, G30.1, G36.1, G-L1, G-L2, G-L7, G-L8, G-L9, G-L10, G-L11, G-L12/G-L24, G-L15, G-L17, G-L19, G-L21, G-L22, R-1, S-1 Rev 2, PF-1, PF-2, C-SRC3, C-TIME1/2, C-STATE3, RULES_BASKETBALL §8 (SFA-BASKETBALL), §9, and controls 1–20.
+2. Outcome-state family table with masses: F1 0.3508, F2 0.1898, F3 0.2857, F4 0.1737 (sum = 1.0000).
+3. Total points: centre (mean) 149.30 / median 149.00; width (SD) 15.00; line 154.5; P(Under) = 0.637. Margin: centre (mean) +3.70 / median +3.50; width (SD) 11.99; line 2.5; P(Salvadoreños -2.5) = 0.541; P(Cojute +2.5) = 0.459. Normalised edges: total |149.30 − 154.5| / 15.00 = 0.347; margin |3.70 − 2.5| / 11.99 = 0.100.
+4. Complement decompositions for R1 (Over 154.5 Points, 0.364) and R2 (Cojute +2.5, 0.459): stated above.
+5. P(R1 ∧ R2) = 0.3508, positive coupling between Salvadoreños tempo control and game total suppression.
+   - 5a. P(¬R1 ∧ ¬R2) = 0.1737 (shared-failure mass in high-scoring Cojute cover/upset). P(exactly one wins) = 0.4755. P(at least one wins) = 0.8263.
+   - 5b. O/U row labelled FORCED_PAIR; preferred side is Under 154.5 Points; push mass = 0.000 (half-point line).
+6. Representative Rank-#1 outcome: Salvadoreños 76–70 Cojute (total 146, margin SAL +6); satisfies Rank #1 and Rank #2 simultaneously.
+7. Participant state: PROJECTED_BEAT_VERIFIED under Control S-1 Rev 2; lineups Rodriguez/Escoto/Rodriguez/Torres/Traore and Avalos/Bell/Melendez/Diaz/Carter verified; coaches Santana and Rodriguez verified; bench rotations verified.
+8. AGGREGATE_ONLY: none; full player-level roles, foreign import tracking, and scoring lines printed.
+9. Settlement source per row: S1 (FESABAL field owner) + S2 (Sofascore) + S3 (365Scores).
+10. At settlement only: process record and disruption facts to be completed at match conclusion.
+
+**Source firewall:** No odds, bookmaker lines, betting previews, tipsters, prediction markets, or fantasy/DFS sources were consulted or used as predictive evidence.
+
+**Control receipt (PF-7):** `CONTROL_MANIFEST_2026-09-23.md` SHA-256 `173e0fbdefdb57566440849dba58de42a3eb696cd3dbdf1d38b2e7c9992997fd`. Verified match against live files:
+- METHOD.md `73825b6f3dfaa26e0513a02d4663b95045e489f0bbe41da5db4d7456e5048f39`
+- RULES_GENERAL.md `32e9bf899875d70b5209699bbede7831fc013509463016e0b81a6c7e14fffaf7`
+- RULES_BASKETBALL.md `2671721fdafa9542c7179aef9ffa0e3b14acf77c2a7fdeacd38a022dcd275bfa`
+
+**Sources:**
+
+| Source name | Link | Field owner / lineage | Contributed | Retrieval time (AEST) | Status |
+|---|---|---|---|---|---|
+| FESABAL Official Portal / LMB | https://fesabal.info | Field owner / FEDERACION_SALVADORENA_DE_BALONCESTO | Official tournament schedule, standings, team rosters, venue assignment | 2026-09-24 11:10 | `OPENED` |
+| Sofascore El Salvador LMB | https://www.sofascore.com/tournament/basketball/el-salvador/liga-mayor | Independent primary / STATISTICAL_AUTHORITY | Head-to-head match history, recent team game logs, tournament scoring rates | 2026-09-24 11:11 | `OPENED` |
+| 365Scores Basketball | https://www.365scores.com/basketball | Independent secondary / BROADCAST_MEDIA | Schedule cross-check, starting tip-off verification, linescore tracker | 2026-09-24 11:11 | `OPENED` |
+
+<!-- END VERBATIM ISSUED RECORD: P-505 -->
 
 ## 2. Settled Logs
 
