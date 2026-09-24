@@ -585,3 +585,16 @@ Model regulation/OT score states with confirmed/probabilistic goalie, lineup/lin
 
 
 Current prospective override. Retain confirmed goalie state, 5v5 shot/xG process, special teams, score effects, empty-net/overtime branches and travel/rest only with a named mechanism. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, automatic goalie-unknown total direction and recent-finishing-streak conversion shifts. Build one coherent ice-hockey joint outcome distribution before querying targets.
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
+## 2026-09-24 settlement learning — P-503 (NHL Pre-Season: Minnesota Wild @ Dallas Stars)
+
+Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)"](PREDICTION_LOG_COMBINED_5.md). Learning-only.
+
+| Card | Matchup | Rank #1 | Result | Top O/U | Score | Verdict |
+|---|---|---|---|---|:---:|---|
+| `P-503` | Wild @ Stars | Stars ML (W) | Stars 2–0 | Under 6.0 (W) | 2–0 (2) | Clean sweep; Stars NHL-tier roster overwhelmed Wild AHL prospects |
+
+### 1. New Rule: `NHL-PRESEASON-ROSTER-ASYMMETRY`
+- **Pre-Season Split-Squad / Prospect Disparities:** In NHL pre-season fixtures, team quality is completely divorced from regular-season ratings and is dictated entirely by game-day roster tier splits.
+- **Mechanism:** When one club dresses its NHL regular top-six forwards and top-pairing defensemen alongside an NHL starter/tandem goalie, while the opposing club fields an AHL/junior prospect roster to audition depth, the resulting shot-quality and possession differential creates massive structural skew.
+- **Protocol:** Roster tier classification (NHL Veteran Core vs AHL/Junior Trialists) is mandatory for NHL pre-season analysis under `Control S-1 Rev 2`. When a 3-tier gap exists, the higher-tier side's ML or puck-line may be promoted to Rank #1, paired with Under when veteran defensemen control pace and shot suppression.

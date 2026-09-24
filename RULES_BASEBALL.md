@@ -1111,3 +1111,28 @@ Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-23(c)"](PREDICTION_LOG_
 - `TMP-20260923-NPB-CHU-DB-G25`: the 23 Sep game 25. It was formerly mis-appended to P-489 as "R1"; see `O-ID-DATE-STARTER-MATCH` in `EXTERNAL_LOGGING_WORKFLOW.md`.
 - `P-493` (KBO).
 - Both are in the P-495-onward mini log.
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
+## 2026-09-24 settlement learning — P-500, P-501, P-502, P-506 (MLB), P-493, P-507 (KBO), and TMP-20260923-NPB-CHU-DB-G25 (NPB)
+
+Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)"](PREDICTION_LOG_COMBINED_5.md). Learning-only.
+
+| Card | Competition | Rank #1 | Result | Top O/U | Score | Verdict |
+|---|---|---|---|---|:---:|---|
+| `TMP-G25` | NPB | DeNA +1.5 (W) | DeNA 4–3 | Under 7.0 (L) | 4–3 (7) Push | Dual cushion win; total push |
+| `P-493` | KBO | Under 8.5 (W) | Doosan 3–2 | Under 8.5 (W) | 3–2 (5) | Clean sweep; bullpen hold |
+| `P-500` | MLB | Under 8.5 (W) | Nats 4–2 | Under 8.5 (W) | 4–2 (6) | Process-right; low total held |
+| `P-501` | MLB | Over 7.5 (L) | Orioles 4–2 | Over 7.5 (L) | 4–2 (6) | **Rank-1 Failure Review**: Doubleheader G1 effect |
+| `P-502` | MLB | Royals +1.5 (W) | Royals 5–4 | Under 8.5 (L) | 5–4 (9) | Dual +1.5 run-line arbitrage sweep |
+| `P-506` | MLB | Astros +1.5 (W) | Mariners 6–5 | Over 7.5 (W) | 6–5 F/10 | Dual +1.5 run-line arbitrage sweep |
+| `P-507` | KBO | KT Wiz ML (W) | KT Wiz 3–2 | Under 9.5 (W) | 3–2 (5) | Clean sweep; high-leverage pen hold |
+
+### 1. New Rule: `MLB-DOUBLEHEADER-G1-TOTAL-DEFLATION`
+In Major League Baseball traditional day-night or split doubleheaders, Game 1 dynamics systematically deflate offensive scoring profiles:
+- **Starter Strike-Zone Aggressiveness:** Both starting pitchers enter under managerial mandates to pitch to early contact, attack the strike zone, and conserve bullpen arms for Game 2.
+- **Lighting and Shadow Conditions:** Early afternoon starts (e.g. 12:05 or 13:05 local) create severe home-plate shadow transitions between the mound and batter's box, depressing early-inning barrel rates and whiff recognition.
+- **Resting Regulars:** Lineups in Game 1 frequently rest one or more everyday power bats to balance workload across 18 innings.
+- **Protocol:** Game 1 totals must apply a mandatory deflation check before promoting an Over to Rank #1. When both clubs deploy veteran rotation anchors in Game 1, the total should not be placed at Rank #1 without explicit proof of extreme bullpen exhaustion.
+
+### 2. Dual Run-Line (+1.5 / +1.5) Arbitrage Success
+In tightly matched baseball games featuring high pitching quality or volatile late-inning bullpens (`P-502`, `P-506`), taking opposite +1.5 run lines creates a mathematical sweet spot where any 1-run outcome (e.g. 5–4, 6–5 in extras) results in both selections winning simultaneously. This structural dynamic provides resilient cushion against walk-off home team victories.

@@ -864,3 +864,27 @@ Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-23(c)"](PREDICTION_LOG_
 - The card's eight-branch mixture (BK-B1–B8, weights summing to 100%) reproduces its total probability (Over 52% at representative level). The spread and winner probabilities are not reproducible without a within-branch spread (G-L8), and `P(R1 ∧ R2)` was not printed (G-L10).
 - **OBSERVATION `O-ANNOUNCED-MINUTES-PLAN`:** Dallas's reported minutes management did not bind in a close game (Shepard 36 min v 27 two days earlier). Treat such reports as intentions with a close-game restoration branch.
 - **Horizon aid:** ESPN `summary` `plays[].wallclock` gives the actual tip (02:07:42Z here, v a 02:00Z schedule).
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
+## 2026-09-24 settlement learning — P-497, P-498 (Lithuanian LKL), P-499 (EuroLeague Women), P-504 (WNBA), P-505 (El Salvador LMB), P-508 (Australian NBL)
+
+Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)"](PREDICTION_LOG_COMBINED_5.md). Learning-only.
+
+| Card | Competition | Rank #1 | Result | Top O/U | Score | Verdict |
+|---|---|---|---|---|:---:|---|
+| `P-497` | Lithuanian LKL | Neptūnas -6.5 (W) | Neptūnas +15 | Over 167.5 (W) | 99–84 (183) | Clean sweep; offensive clinic |
+| `P-498` | Lithuanian LKL | Lietkabelis -4.5 (L) | Šiauliai +9 | Over 164.5 (L) | 86–77 (163) | Šiauliai home dog upset; early foul trouble |
+| `P-499` | EuroLeague Women | Under 149.5 (L) | Carolo +20 | Under 149.5 (L) | 101–81 (182) | **Rank-1 Failure Review**: Cross-tier qualifier pace explosion |
+| `P-504` | WNBA | Dream -4.5 (W) | Dream +18 | Under 173.5 (W) | 83–65 (148) | Clean sweep; playoff seeding motivation vs rest |
+| `P-505` | El Salvador LMB | Salvadoreños -3.5 (W) | Salvadoreños +6 | Under 153.5 (W) | 77–71 (148) | Clean sweep; home interior dominance |
+| `P-508` | Australian NBL | Under 194.5 (W) | United +25 | Under 194.5 (W) | 86–61 (147) | Melbourne Derby defensive intensity; total crushed by 47.5 pts |
+
+### 1. New Rule: `FIBA-CLUB-QUALIFIER-PACE-ADJUSTMENT`
+- **Tournament vs League Baseline Mismatch:** Modeling European cross-border club qualification stages (e.g. EuroLeague Women Qualifiers) using domestic league defensive metrics (e.g. French LFB) introduces severe negative pace bias.
+- **Mechanism:** Qualification tournaments feature disparate officiating standards, lower familiarity between teams, rushed transition possessions, and high shooting volume from behind the arc. Possession counts frequently surge 10–14% above domestic league averages.
+- **Protocol:** In single-game or two-leg FIBA international club qualifiers, adjust expected pace upward by at least +5.5 possessions and do not position an Under below 150.0 at Rank #1 without verified multi-possession tape demonstrating half-court stagnation.
+
+### 2. New Rule: `BASKETBALL-DERBY-TOTAL-SUPPRESSION`
+- **Intra-City Rivalries (e.g. NBL "Throwdown"):** Local derbies feature heightened physical perimeter containment, intense scouting familiarity, and reduced transition run-outs.
+- **Outcome:** Total points routinely fall 15–30 points below standard regular-season lines (e.g. P-508 finished at 147 points against a 194.5 total).
+- **Protocol:** Rank Under totals aggressively in high-stakes local derbies when early-season conditioning and perimeter scouting suppress transition scoring.

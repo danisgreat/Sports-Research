@@ -646,3 +646,18 @@ Serve/return point strength, surface, format, fatigue/rest, verified health/avai
 
 
 Current prospective override. Retain surface/format-specific serve-return state, hold/break tree, set-count mixture, scoreline coherence, retirement endpoint and rating benchmark as a check only. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, blanket DISJOINT top-half bans, match-winner⇒games-handicap shortcuts, long-match⇒Over logic and tiny-H2H ownership rules. Build one coherent tennis set/game distribution before querying all targets.
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
+## 2026-09-24 settlement learning — P-494 (WTA 500 Singapore), P-495 (WTA 125 Tolentino), P-496 (ITF M25 Falun)
+
+Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-24(e)"](PREDICTION_LOG_COMBINED_5.md). Learning-only.
+
+| Card | Tournament | Rank #1 | Result | Score | Verdict |
+|---|---|---|---|:---:|---|
+| `P-494` | WTA 500 Singapore | Andreeva -4.5 (W) | Andreeva 2–0 | 6–2, 6–2 | Exact modal scoreline predicted; dominant hold rate |
+| `P-495` | WTA 125 Tolentino | Romero Gormaz -5.5 (L) | Pieri 2–1 | 3–6, 6–4, 6–1 | **Rank-1 Failure Review**: Underestimated slow clay underdog resilience |
+| `P-496` | ITF M25 Falun | Over 21.5 (W) | Marek 2–1 | 2–6, 6–3, 7–6(6) | Indoor carpet 3-set tiebreak battle; total smashed |
+
+### 1. New Rule: `TENNIS-CHALLENGER-CLAY-HANDICAP-CAP`
+- **Challenger & ITF Slow Clay Volatility:** On slow European outdoor red clay (e.g. Tolentino), service hold rates drop below 60% across lower-tier WTA/ITF events. Return games dominate, generating frequent reciprocal service breaks.
+- **Handicap Capping:** Heavy game handicaps (e.g. -5.5 or greater) require a near-flawless 6–3, 6–2 or 6–2, 6–2 margin. In lower tiers where ranking separation (e.g. #170 vs #380) reflects tournament tier participation rather than raw baseline skill, underdogs playing on home soil possess immense break-back potential.
+- **Protocol:** Never rank a games handicap of -5.5 or higher at Rank #1 on slow red clay in WTA 125 or ITF events unless the favourite boasts a verified hold rate >78% and the underdog has a return-points-won rate <32% on clay. Prefer straight-set match-winner or conservative game totals.

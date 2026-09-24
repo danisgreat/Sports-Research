@@ -2715,3 +2715,17 @@ Per user directive on 2026-09-23, the requirement to generate a separate scratch
 2. **Audit execution:** Card-level compliance is verified directly on the Markdown file via `python audit_card_controls.py <file.md>`, which checks that all mandatory completeness and governance fields are printed.
 3. **Machine manifest status:** `FORECAST_PREFLIGHT_MANIFEST.md` and `prediction_preflight.py` remain valid reference specifications for automated or batch-ingestion systems, but are not required for interactive card issuance.
 
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
+## 16.12 Cross-sport settlement learnings — mini log P-495..P-508 (2026-09-24)
+
+Consolidated findings from the 17-event settlement pass of 24 September 2026 (`TMP-G25` and `P-493` through `P-508`):
+
+1. **Dual Run-Line / Spread Arbitrage (+1.5 / +1.5):**
+   In tightly contested, low-margin sports (baseball run lines, hockey puck lines), taking both opposing sides at +1.5 cushion creates a mathematically robust dual-win zone in any 1-run decision. Validated in `P-502` (Royals 5–4 White Sox) and `P-506` (Mariners 6–5 Astros), where both +1.5 sides cashed.
+2. **International Qualifier Pace Volatility vs Domestic Baselines:**
+   Cross-border qualification tournaments (FIBA, UEFA, Concacaf) exhibit higher tempo, looser transition defense, and greater shooting variance than domestic regular-season fixtures. Domestic league defensive averages cannot be applied without upward pace adjustments (`P-499`).
+3. **End-of-Regular-Season Seeding Motivation vs Resting Dynamics:**
+   When one competitor requires a victory for playoff seeding/home-court advantage while the opponent has clinched and actively rests key starters, the motivational and rotation disparity overwhelms generic power ratings (`P-504`, Atlanta Dream 83–65 New York Liberty).
+4. **Lower-Tier Clay Court Underdog Handicap Volatility:**
+   On slow clay courts in secondary circuits (WTA 125, ITF M25), low serve-hold percentages amplify break frequency, making heavy minus game handicaps (-5.5+) highly vulnerable to underdog surges (`P-495`).

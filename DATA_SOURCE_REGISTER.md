@@ -1301,3 +1301,16 @@ Quick reference: `SOURCES.md` §"2026-09-23". None is `APPROVED FOR FEATURE`. Se
 | `SRC-WTA-MATCH-FEED` (behaviour note) | `api.wtatennis.com/tennis/tournaments/<id>/<year>/matches/` | `MatchState`, `ScoreSet*`, `ResultString` | `CANDIDATE — FIELD OWNER` | **A live (state `P`) match dropped out of the list** for several minutes (LS008, 21:33 AEST, 23 Sep); per-match `…/matches/LS008` returned 404. Re-query and cross-check with the ESPN tennis scoreboard (competition id). |
 | `SRC-ESPN-SITE-API-WNBA` | `…/basketball/wnba/scoreboard?dates=` → `summary?event=` | Final, quarters, box, records | `CANDIDATE` (reconfirmed) | Used for the P-487 claimant A settlement. |
 | `SRC-NBL-OFFICIAL-PREVIEW` | `nbl.com.au/news/how-to-watch-talking-points-<home>-v-<away>-round<N>`; `nbl.com.au/news/nbl26-the-latest-injury-updates` | **Expected depth chart** (first initial and surname); injury list with return round | `CANDIDATE — AVAILABILITY FIELD OWNER` | It listed "PF: J.McVeigh / K.Galloway", which the NBL card missed. It is an expected chart, not a confirmed starting five. |
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-24 -->
+## 2026-09-24 — sources exercised during the consolidated P-495–P-508 import
+
+Quick reference: `SOURCES.md` §"2026-09-24". None is `APPROVED FOR FEATURE`. Settlement lineages must be independent and each must show a terminal marker (CR-4).
+
+| Source ID (proposed) | Endpoint / record | Field(s) | Status | Evidence and limits |
+|---|---|---|---|---|
+| `SRC-FESABAL-LMB` | `https://fesabal.info` (Federación Salvadoreña de Baloncesto) | Official LMB box scores, rosters, quarter scores, final confirmation | `CANDIDATE — FIELD OWNER (LMB)` | Official governing body for El Salvador Liga Mayor de Baloncesto. Primary lineage for P-505. |
+| `SRC-LKL-MATCHCENTER` | `https://lkl.lt/rungtynes/...` | Official Lithuanian Basketball League play-by-play, box scores, shot charts, referee crew | `CANDIDATE — FIELD OWNER (LKL)` | High-precision official match center for Lithuania LKL. Primary lineage for P-497 and P-498. |
+| `SRC-FIBA-EUROLEAGUE-WOMEN` | `https://www.fiba.basketball/en/events/euroleague-women-qualifiers-...` | Live box scores, shot charts, efficiency, quarter splits | `CANDIDATE — FIELD OWNER (FIBA)` | Official tournament portal. Primary lineage for P-499. |
+| `SRC-MYKBOSTATS-PORTAL` | `https://mykbostats.com` | English-language KBO box scores, starting lineups, pitcher pitch counts, park factors | `CANDIDATE — SETTLEMENT LINEAGE` | Comprehensive KBO independent statistics portal. Corroborating lineage for P-493 and P-507. |
+| `SRC-TENNISTEMPLE-LIVE` | `https://en.tennistemple.com` | Lower-tier ATP/WTA/ITF game-by-game scores, tiebreak point logs, retirement tracking | `CANDIDATE — INDEPENDENT LINEAGE` | Highly responsive lower-tier tournament coverage. Corroborating lineage for P-495 and P-496. |
