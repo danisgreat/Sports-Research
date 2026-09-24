@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "kind": "google-docs-trusted-read-context",
+  "target": {
+    "documentId": "1Q-LxpgTlFIzf5Lkl3ZQYyKkyLTrlV_pdN-ASmABa8jQ",
+    "title": "PREDICTION_MINI_RUNNING_LOG_P474_ONWARD.md",
+    "revisionId": "ANLCKQkgHYtfhwtxQqtVUqyBrT2MoGj66ptmYph2rpEe1Xr0EYsXkQYDXDCDK_3587wNi_VzYqX1BrWHo6Y1ggU4TxO_BX_AYD1bWieFvN0",
+    "documentUrl": "https://docs.google.com/document/d/1Q-LxpgTlFIzf5Lkl3ZQYyKkyLTrlV_pdN-ASmABa8jQ",
+    "selectedTabId": null
+  },
+  "dropdownMetadata": {
+    "status": "unavailable",
+    "resolvedTool": null,
+    "authoritative": false,
+    "count": 0
+  },
+  "derivedControlInventory": {
+    "hasProtectedControls": false,
+    "authoritativeDropdownCount": 0,
+    "opaqueControlCount": 0,
+    "nativeElementCounts": {
+      "dateElement": 1
+    },
+    "tabsScanned": [
+      "t.0"
+    ],
+    "controls": [],
+    "nativeElements": [
+      {
+        "type": "dateElement",
+        "startIndex": 56,
+        "endIndex": 57,
+        "tabId": "t.0",
+        "segmentId": null,
+        "container": {
+          "kind": "paragraph",
+          "path": "root.tabs[0].body.content[3]",
+          "tabId": "t.0",
+          "segmentId": null,
+          "startIndex": 47,
+          "endIndex": 58,
+          "namedStyleType": "NORMAL_TEXT",
+          "listId": null,
+          "nestingLevel": null,
+          "table": null
+        },
+        "properties": {
+          "timestamp": "2026-09-20T12:00:00Z",
+          "locale": "en",
+          "dateFormat": "DATE_FORMAT_MONTH_DAY_YEAR_ABBREVIATED",
+          "timeFormat": "TIME_FORMAT_DISABLED",
+          "displayText": "Sep 20, 2026"
+        }
+      }
+    ]
+  },
+  "editGuidance": {
+    "advisoryOnly": true,
+    "requiresTargetedPreservation": false,
+    "recommendedBehavior": "No protected controls were detected in the scanned scope.",
+    "warnings": []
+  }
+}

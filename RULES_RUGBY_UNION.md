@@ -1,4 +1,4 @@
-﻿<!-- THREE-SOURCE-TIME-GATE-2026-09-19-CR4 -->
+<!-- THREE-SOURCE-TIME-GATE-2026-09-19-CR4 -->
 > **Current cross-sport authority — MDS-2026.09.19-v4.3 / CR-2026.09.21-3:** this sport module inherits the reconciled all-sports source, timing, settlement and distribution-construction controls. Historical issued cards retain their own revision.
 
 
@@ -450,7 +450,7 @@ No rugby-union or sevens card was settled in the `P-294`–`P-305` cohort. This 
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | Test and club rugby settle from the union's or competition's official match record; name the exact record at freeze. Sevens tournaments settle from the World Rugby event record. |
-| `G14.2` coaching / bench / rotation record | Record the head coach, the full eight-player bench with its front-row cover, the substitution/HIA provisions from §11, and any confirmed rotation for a congested block. |
+| `G14.2` coaching / bench / rotation record | Record the head coach, the full eight-player bench with its front-row cover, the substitution/HIA provisions from §11, and any confirmed rotation for a congested block. Official union/club 48h team sheets or warm-up scratch notices verified across accredited rugby journalists under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED`, satisfy `G14.2`, and do not block Rank #1. |
 | `G20.2` distributional tail audit | Derive tail and boundary mass from the **same frozen rugby-union/sevens joint score distribution**, conditioning on format-specific possession/territory, set piece, discipline/cards, replacements, goal-kicking, and extra-time/tiebreak rules. Sparse evidence widens uncertainty; historical order-statistic stress sums are superseded as active gates. |
 | `G21.1` exact target geometry | Map every supplied target to its exact settlement event and derive WIN/PUSH/LOSS from the same frozen sport-native PMF/CDF or coherent branch mixture. Historical path-count/category labels have no mandatory ordinal effect. |
 | `G26.1` no universal separation floor | Reference rates and `rank_gap` are descriptive only. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank from exact marginal likelihood plus robustness/evidence uncertainty. |

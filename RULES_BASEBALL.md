@@ -1,4 +1,4 @@
-﻿# Baseball analysis rules
+# Baseball analysis rules
 
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
@@ -619,7 +619,7 @@ Full evidence: [PREDICTION_LOG_COMBINED_2.md, 2026-09-05(b) section](PREDICTION_
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | MLB, and any competition ESPN carries, settle from `site.api.espn.com/.../baseball/<league>/summary`. KBO/NPB/CPBL are **not** ESPN-covered — name the league's own official box score and the native-language reporting lane instead (`L-067`). |
-| `G14.2` coaching / bench / rotation record | Baseball's analogue is the bullpen and bench: available relievers with days-of-rest, the confirmed lineup card, and the manager. `injuries[]` corroborates but does not own availability. |
+| `G14.2` coaching / bench / rotation record | Baseball's analogue is the bullpen and bench: available relievers with days-of-rest, the confirmed lineup card, and the manager. Where official feeds have not yet populated (`hydrate=lineups` empty), batting orders and bullpen availability verified across accredited beat reporters or team media releases under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED`, satisfy `G14.2` exposure modeling, and do not block Rank #1. `injuries[]` corroborates but does not own availability. |
 | `G20.2` distributional tail audit | Derive lower-tail, line-boundary/push and upper-tail mass from the **same frozen baseball joint distribution** used for ranking: PA/BF exposure, starter hook distribution, named bullpen chain, park/defence, base-out/HR sequencing, home-ninth entitlement and extra-inning state. Historical second-highest/median order-statistic sums are superseded and must not be used as an active gate or probability proxy. |
 | `G21.1` exact target geometry | Map every supplied total/phase-total to its exact settlement event and derive WIN/PUSH/LOSS (plus void/censoring where applicable) from the same frozen sport-native PMF/CDF or coherent branch mixture. Genuine unions may be described as unions, but historical `TRUE_UNION` / `LOW_BAR_CUMULATIVE` / `CENTRAL_BAND` path-count labels have **no mandatory ordinal effect** and are not a substitute for the distribution. |
 | `G26.1` no universal separation floor | Print any relevant reference base rate and `rank_gap` descriptively. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank by the row's exact marginal likelihood from the frozen joint distribution plus robustness/evidence uncertainty; precise probabilities require the validated-model gate. |
@@ -812,7 +812,7 @@ Ten baseball cards ([`PREDICTION_LOG_COMBINED_3.md` §"2026-09-11"](PREDICTION_L
 - The opposing established starter's long-start branch with mass, before any team-total Over or favourite row (control 28).
 - Complement decomposition for Rank #1 and Rank #2 (`G-L9`); `P(R1 ∧ R2)` with its coupling label (`G-L10`).
 - Median-based `P(total ≤ line)` printed beside the run-total probability (§16.5(d) addendum).
-- Posted batting orders and benches for both sides, or `RETRIEVAL_MISS` — and no margin or full-game total at Rank #1 without the bench (`G14.2`).
+- Posted batting orders and benches for both sides (`CONFIRMED_OFFICIAL` or `PROJECTED_BEAT_VERIFIED` under Control `S-1 Rev 2`), or `RETRIEVAL_MISS` — and no margin or full-game total at Rank #1 without the bench (`G14.2`).
 
 
 ### Source notes (this pass)
@@ -1063,3 +1063,51 @@ This section is the current prospective override for audit-derived ranking logic
 - **Retained sport package:** PA/BF exposure; starter hook distribution; named bullpen chain; park/defence; base-out and HR sequencing; home-ninth entitlement; extra-inning state; debut/small-sample mixture.
 - **Withdrawn here:** second-highest/median or second-lowest/median pseudo-tail construction; path-count/category shortcuts as ranking rules; universal 40–60% top-slot bands; normalized-distance ordering; any one-result rebound/hangover/“due” rule; and any implication that a cushion determines the outright winner.
 - **Current construction:** build one coherent sport-native joint outcome distribution/branch mixture, freeze it before supplied lines are queried, then derive exact target marginals and dependencies from that object. When a fitted/calibrated numerical distribution does not exist, keep probabilities unquantified rather than inventing precision.
+
+
+<!-- CONSOLIDATED-MINI-LOG-IMPORT-2026-09-23 -->
+## 2026-09-23 settlement learning — `P-489` (NPB, 22 Sep game 24) and `P-491` (NPB); `TMP-20260923-NPB-CHU-DB-G25` and `P-493` carried live
+
+Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-23(c)"](PREDICTION_LOG_COMBINED_5.md). Learning-only. **No coefficient, cap or ordinal bar is added** (`L-087`).
+
+| Card | Rank #1 | Result | Top O/U | Centre → actual | Verdict |
+|---|---|---|---|---|---|
+| `P-489` (START_CROSSED) | Under 6.5 (~0.62) — **L** | DeNA 7–3 | Under — **L** (`TOP_OU_REVIEW`) | 5.3 → 10 | Result-wrong / process-wrong in part |
+| `P-491` (PREGAME) | Orix +1.5 (0.676) — **W** | Orix 1–0 | Under 7.0 — **W** | 7.19 → 1 | Result-right / process-right |
+
+### What went right (keep it)
+
+- **`P-491` is the reference NPB construction.**
+  - Team centres came from partially pooled team R/G × opponent run prevention × a starter adjustment, applied once.
+  - One per-inning simulation generated winner, margin, total and joint probabilities.
+  - The override forms were honest: override 3 named the BB-B4 separation mass (0.32) rather than excluding it; override 8 attached the small-sample starter to the opponent's branch as width; override 9 re-solved `P(U ∧ +1.5)`.
+  - Posted orders came from the NPB box pregame.
+  - **Use this order of operations as the default baseball template.** It is a construction standard, not a fitted model.
+- **R-1 held in both cards.** Kuri's three-start walk spike (P-491) and DeNA's worked bullpen (P-489) were treated as width, not direction; Kuri walked two, and DeNA's pen threw four scoreless innings.
+- **Weather as a termination branch, not an automatic Under** (P-489, 45–52% shower risk; control 18). This was correct.
+
+### What went wrong, linked to earlier lessons
+
+1. **Control 26 was not executed (P-489).**
+   - Each starter's quality entered three times: season ERA, L5 ERA and v-opponent ERA. The no-DH effect was added on top.
+   - No team R/G or RA/G baseline was printed; DeNA 3.9 and Chunichi 3.4 R/G sum to about 7.3.
+   - The centre (5.3) sat about 2 runs below the teams' own scoring with no adjustment chain.
+   - Illustrative pregame-only arithmetic anchored on team rates gives about 6.0–6.3, which would have put Under 6.5 below the ML (0.60).
+   - **M3/M15.** This is the same class as P-348, P-351 and P-356.
+2. **The §8.5 kill-path row "one ordinary cluster crossing a low line — Under 5.5/6.5 at 0.56+" (origin P-361, NPB) recurred** in the same league and contract family: Under 6.5 at 0.62, lost to a 3-run 1st (after an error) and a 3-run 4th.
+3. **ERA-anchored centres omit unearned runs.** 3 of 10 runs were unearned (Muller 7 R / 4 ER). → **TESTING `O-NPB-ERA-CENTRE`** (`LEARNING_REGISTER.md` L-20260923-03). When a run projection is built from ERA, add back the unearned-run share and print the reconciliation with team R/G and RA/G before an Under can rank #1. This is disclosure and arithmetic; it is not promoted to the §8.7 checklist until a third case and a prospective check exist.
+4. **BB-P2 PARTIAL with a full-game total at #1 (P-489)** — `G14.2` / M19 again. The NPB box posts スタメン about an hour before first pitch (the P-491 lane). Tsutsugo, listed in the card's "Sep 21 core", did not start.
+5. **`C-RUN-CENTRE-BIAS` (NPB leg):** P-489 +4.7 and P-491 −6.19. The signs conflict, so **no directional tilt** is supported; consistent construction is the lesson.
+
+### Source notes (this pass)
+
+- **NPB box raw HTML** (`npb.jp/scores/YYYY/MMDD/<home>-<away>-NN/box.html`) parses cleanly with curl plus a tag-strip: state (試合開始前 / 試合中 N回表 / 試合終了), start/end/attendance, per-batter results and per-pitcher pitch counts and BF. P-491's "reliever lines not reliably extracted" was a summarising-fetch artefact (M20).
+- **Sports Navi schedule page** (`baseball.yahoo.co.jp/npb/schedule/?date=YYYY-MM-DD`) gives final state plus W/L/S for the whole slate: settlement lineage 2.
+- **Kyodo wire** ("D7―3中（22日）") and **Nikkan staff reports** via Yahoo! News: settlement lineage 3.
+- **Mynavi "プロ野球試合結果" pages are AI-generated. Exclude them.**
+
+### Carried live (not settled; no learning drawn)
+
+- `TMP-20260923-NPB-CHU-DB-G25`: the 23 Sep game 25. It was formerly mis-appended to P-489 as "R1"; see `O-ID-DATE-STARTER-MATCH` in `EXTERNAL_LOGGING_WORKFLOW.md`.
+- `P-493` (KBO).
+- Both are in the P-495-onward mini log.

@@ -3,7 +3,7 @@
 
 Status: **ACTIVE — primary operational authority**
 Method version: **MDS-2026.09.19-v4.3**
-Control revision: **CR-2026.09.21-3** — preserves CR-2026.09.21-2 and removes residual live-rule/version/queue drift found by post-reconciliation read-back. Freeze the SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-21-3.md](CONTROL_MANIFEST_2026-09-21-3.md) with every new card.
+Control revision: **CR-2026.09.21-3** — preserves CR-2026.09.21-2 and removes residual live-rule/version/queue drift found by post-reconciliation read-back. Freeze the SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-23.md](CONTROL_MANIFEST_2026-09-23.md) with every new card (post-import content receipt under the same control revision; [CONTROL_MANIFEST_2026-09-21-3.md](CONTROL_MANIFEST_2026-09-21-3.md) remains the receipt for cards issued before 2026-09-23 ~22:00 AEST).
 Effective: 21 September 2026 for forecasts issued after this control revision; earlier cards retain their issued method/control versions.
 
 

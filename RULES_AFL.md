@@ -1,4 +1,4 @@
-﻿# Australian rules football analysis rules
+# Australian rules football analysis rules
 
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
@@ -475,7 +475,7 @@ North Melbourne recorded **29 scoring shots** (14 goals, 15 behinds). At a leagu
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | AFL/AFLW settle from the AFL official match report and its host-qualified event ID per `L-071`; name the exact match record at freeze. |
-| `G14.2` coaching / bench / rotation record | Record the senior coach, the named emergencies/medical substitute, and the AFL/AFLW substitution provision from §9, plus any confirmed managed-rest signal. |
+| `G14.2` coaching / bench / rotation record | Record the senior coach, the named emergencies/medical substitute, and the AFL/AFLW substitution provision from §9, plus any confirmed managed-rest signal. Official club team announcements (released 60 minutes pre-bounce) or accredited AFL Media reporting verified under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED`, satisfy `G14.2`, and do not block Rank #1. |
 | `G20.2` distributional tail audit | Derive tail and boundary mass from the **same frozen AFL/AFLW scoring distribution**, explicitly separating scoring-shot opportunity from conversion and conditioning on role/selection/bench, venue/weather and quarter-state exposure. Historical second-highest-L10 scoring-shot constructions are superseded as active gates. |
 | `G21.1` exact target geometry | Map every supplied target to its exact settlement event and derive WIN/PUSH/LOSS from the same frozen sport-native PMF/CDF or coherent branch mixture. Historical path-count/category labels have no mandatory ordinal effect. |
 | `G26.1` no universal separation floor | Reference rates and `rank_gap` are descriptive only. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank from exact marginal likelihood plus robustness/evidence uncertainty. |

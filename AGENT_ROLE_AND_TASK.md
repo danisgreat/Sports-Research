@@ -1,4 +1,4 @@
-﻿# Agent role and task
+# Agent role and task
 > **Current revision — CR-2026.09.21-3:** METHOD **MDS-2026.09.19-v4.3** is the workflow/template authority; **SCORING_AND_VALIDATION.md** controls conditioning, exact scoring, event-level evaluation and prospective evidence. All existing logs remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. NUMERICAL_PROGRAM controls authorized implementation scope and actual build state; MODEL_IMPLEMENTATION_RECIPES contains the executable Markdown reference. Older dated policy blocks are historical where inconsistent. No source, dataset or model is approved/fitted by this banner.
 
 
@@ -201,7 +201,7 @@ For every new prediction request:
 
 1. Parse event and contracts; place supplied lines/totals in `CONTRACT_ONLY_QUARANTINE`.
 2. Retrieve only valid independent sporting evidence under `SOURCES.md`; prohibited betting/fantasy material cannot influence the forecast even if surfaced by search.
-3. Record point-in-time provenance/lineage and run `prediction_preflight.py` (or the same checks explicitly if the manifest is not machine-generated).
+3. Record point-in-time provenance/lineage and verify preflight controls directly within the card body (Fields 1, 2, 6, Sources table, §16.8 completeness block; audited via `audit_card_controls.py`); per 2026-09-23 user directive, do not generate separate scratch JSON manifests for interactive logs.
 4. Build/freeze the independent event distribution without the requested threshold.
 5. Only after the distribution is frozen, query the supplied total/spread and any permitted alternate lines.
 6. Rank by the declared probability objective; do not move a centre because a line "looks high/low".

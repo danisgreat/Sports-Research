@@ -1,4 +1,4 @@
-﻿# Tennis analysis rules
+# Tennis analysis rules
 
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
@@ -449,7 +449,7 @@ No tennis-specific defect was evidenced in the `P-294`–`P-305` cohort; `P-291`
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | Grand slam and tour matches settle from the tournament's official scoreboard or the tour's official match record; name the exact record at freeze. Retirement/walkover action follows `G36.1` under standard rules when operator terms are unsupplied. |
-| `G14.2` coaching / bench / rotation record | Tennis has no bench; record the coach where publicly named and, more importantly, the **prior-round workload** (minutes/sets played, days of rest) as the rotation-capacity analogue. |
+| `G14.2` coaching / bench / rotation record | Tennis has no bench; record the coach where publicly named and, more importantly, the **prior-round workload** (minutes/sets played, days of rest) as the rotation-capacity analogue. Pre-match court practice observations, physical strapping, and withdrawal/illness updates verified across accredited tennis journalists under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED` and satisfy `G14.2`. |
 | `G20.2` distributional tail audit | Derive tail and boundary mass from the **same frozen tennis match tree**, conditioned on surface/format-specific serve-return state, hold/break process, set-count mixture, scoreline coherence, retirement endpoint and any rating benchmark used only as a check. Historical second-highest set-count × median-games constructions are superseded as active gates. |
 | `G21.1` exact target geometry | Map match winner, set count, total games and games handicap to exact settlement events from the same frozen set/game tree. Derive WIN/PUSH/LOSS and retirement/action branches from that tree; historical path-count/category labels have no mandatory ordinal effect. |
 | `G26.1` no universal separation floor | Reference rates and `rank_gap` are descriptive only. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank from exact marginal likelihood plus robustness/evidence uncertainty. |

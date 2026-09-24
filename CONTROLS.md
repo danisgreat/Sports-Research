@@ -1,4 +1,4 @@
-﻿# Controls — current compact reference
+# Controls — current compact reference
 
 
 Revision **CR-2026.09.21-3**, METHOD **MDS-2026.09.19-v4.3**. SCORING_AND_VALIDATION is the mathematical authority. The six-field METHOD object is the single mandatory output template. Historical controls and origins are preserved in LEARNING_REGISTER and the [pre-revision control snapshot](audit_2026-09-17_implementation/before/CONTROLS_with_margin_band_addition.md); their withdrawn statistical claims are not active rules.
@@ -102,7 +102,7 @@ P-344 arithmetic corrected to 0.283425; current legacy aggregate 477 rows at 0.2
 |---|---|---|
 | **Top-O/U enhanced review** | A loss **or push** on the card's highest-ranked over/under (identified from issue-time ranks) triggers the same deep failure review as a Rank #1 loss; logged as `TOP_OU_REVIEW`. Retrospective scrutiny only — it licenses no hedging, no probability shading and no refusal to rank a total | `METHOD.md` §7; `SCORING_AND_VALIDATION.md` §3; research-guide Step 5 |
 | **`R-1`** recency | Recent results are evidence about a **rate**, never a forecast of a **deviation**. No rebound lean, no hangover lean, no "high calibre will correct it". Moving a centre requires a **named mechanism** in the disaggregated record; otherwise recent form widens only | [`RECENCY_AND_REBOUND.md`](RECENCY_AND_REBOUND.md); sport files §"2026-09-19" |
-| **`S-1`** social identity | A social post needs durable-identifier identity, a checked timestamp, field-owner corroboration before it changes anything, and verbatim quotation. A plausible handle is not identity | `SOURCES.md` §"2026-09-19" |
+| **`S-1 Rev 2`** accredited beat & media | Beat/team reporting needs accredited identity, explicit date/venue anchor, 2-source corroboration, and verbatim quotation. When official feeds lag, satisfies G14.2 as `PROJECTED_BEAT_VERIFIED` | `SOURCES.md` §"2026-09-24"; `DATA_SOURCE_REGISTER.md` |
 | **`S-2`** press conferences | Admissible for availability, workload and role intent (`SECONDARY_ONLY`); **never** a signed adjustment to pace, efficiency or scoring rate | same |
 | **`NOT_YET_PUBLISHED`** | A structured line-up query returning empty is a verified availability state, not a `RETRIEVAL_MISS` process defect. Record the query time | `SOURCES.md` §"2026-09-19"; §16.8 field 7 |
 | **Debutant gates** | MLB `mlbDebutDate` → `LOW_SERVICE_SAMPLE`; ESPN cricket `debuts[]` → `NO_PRIOR_FORMAT_RECORD`; soccer `NO_COMPETITION_SAMPLE`. A debutant contributes width, never an assumed contribution | `RULES_BASEBALL.md`, `RULES_CRICKET.md`, `RULES_SOCCER.md` |
@@ -147,7 +147,7 @@ P-344 arithmetic corrected to 0.283425; current legacy aggregate 477 rows at 0.2
 | `G-L14` settlement route printed and verified | `MECHANISM_REQUIRED` | row may become unsettleable |
 | `G-L23` process record and disruption facts before amending a control | `MECHANISM_REQUIRED` | control may not be amended |
 | `G14.2` participants: starters, bench, coaches | `MECHANISM_REQUIRED` | evidence cap; `BENCH_NOT_RETRIEVED` blocks a margin/full-game total from Rank #1 |
-| **`S-1`** social identity gate | `MECHANISM_REQUIRED` | social claim stays `SECONDARY_ONLY`, cannot lift a participant field |
+| **`S-1 Rev 2`** beat & team media gate | `MECHANISM_REQUIRED` | uncorroborated claim stays `SECONDARY_ONLY`; accredited 2-source beat report lifts to `PROJECTED_BEAT_VERIFIED` |
 | **`S-2`** press-conference material | `CONTEXT_MATERIALITY` | admissible for availability/role only; never a signed rate adjustment |
 | `G15.1` environment / venue-coordinate forecast | `CONTEXT_MATERIALITY` | evidence cap (outdoor events) |
 | `G13.1` descriptive recency windows, `G17.1` streak audit | `CONTEXT_MATERIALITY` | descriptive display only — **not** a trend test (withdrawn 2026-09-17) |

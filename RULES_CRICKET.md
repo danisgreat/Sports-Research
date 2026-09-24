@@ -1,4 +1,4 @@
-﻿# Cricket analysis rules
+# Cricket analysis rules
 
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
@@ -655,7 +655,7 @@ Edinburgh Castle Rockers' two prior full powerplays were **68 for 3** and **55 f
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | ETPL/associate and franchise T20 phase fields are sourceable through `SRC-ESPN-SITE-API-CRICKET`; name the exact series ID and event ID at freeze. Where the competition has no ESPNcricinfo series ID, phase rows are `SETTLEMENT_UNSOURCED`. |
-| `G14.2` coaching / bench / rotation record | Cricket has no bench in the substitution sense; record instead the named XI, the confirmed impact-player/substitute provision from `LEAGUE_RULES_CRICKET.md` where the competition has one, and the head coach. |
+| `G14.2` coaching / bench / rotation record | Cricket has no bench in the substitution sense; record instead the named XI, the confirmed impact-player/substitute provision from `LEAGUE_RULES_CRICKET.md` where the competition has one, and the head coach. Pitch-side toss reports, broadcast team-sheet reveals, or accredited cricket beat reporting verified under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED`, satisfy `G14.2`, and do not block Rank #1. |
 | `G20.2` distributional tail audit | Derive phase and innings tail mass from the **same frozen cricket resource distribution** used for ranking: legal balls, wickets/resources, role/XI continuity, phase scoring, toss/strip/conditions as separate evidence, and DLS/reduced-overs branches where applicable. Historical second-highest/median or second-lowest/median constructions are superseded and are not active forecast inputs. |
 | `G21.1` exact target geometry | Map every supplied total/phase-total to its exact settlement event and derive WIN/PUSH/LOSS (plus void/censoring where applicable) from the same frozen sport-native PMF/CDF or coherent branch mixture. Genuine unions may be described as unions, but historical `TRUE_UNION` / `LOW_BAR_CUMULATIVE` / `CENTRAL_BAND` path-count labels have **no mandatory ordinal effect** and are not a substitute for the distribution. |
 | `G26.1` no universal separation floor | Print any relevant reference base rate and `rank_gap` descriptively. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank by the row's exact marginal likelihood from the frozen joint distribution plus robustness/evidence uncertainty; precise probabilities require the validated-model gate. |

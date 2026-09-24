@@ -1,4 +1,4 @@
-﻿# Ice hockey analysis rules
+# Ice hockey analysis rules
 
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
@@ -439,7 +439,7 @@ No ice-hockey card was settled in the `P-294`–`P-305` cohort. Two inherited fo
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | NHL settles from the official NHL game summary; AIHL, Metal Ligaen and comparable leagues need their own named official endpoint. Where overtime/shootout action terms are unsupplied, `G36.1` governs: grade under standard rules with the assumption stated. |
-| `G14.2` coaching / bench / rotation record | Record the head coach, the confirmed starting goaltender (the single highest-leverage participant in this sport), the scratches, and back-to-back/travel signals. |
+| `G14.2` coaching / bench / rotation record | Record the head coach, the confirmed starting goaltender (the single highest-leverage participant in this sport), the scratches, and back-to-back/travel signals. Where official NHL feeds lag, morning skate line combinations, starting goaltender off-the-ice cues, and scratch reports verified across accredited beat reporters or official team media releases under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED`, satisfy `G14.2` personnel modeling, and do not block Rank #1. |
 | `G20.2` distributional tail audit | Derive tail and boundary mass from the **same frozen ice-hockey joint score distribution**, including confirmed goalie state, 5v5 shot/xG process, special teams, score effects, empty-net and overtime branches, with travel/rest used only through a named mechanism. Historical order-statistic stress sums are superseded as active gates. |
 | `G21.1` exact target geometry | Map every supplied target to its exact settlement event and derive WIN/PUSH/LOSS from the same frozen sport-native PMF/CDF or coherent branch mixture. Historical path-count/category labels have no mandatory ordinal effect. |
 | `G26.1` no universal separation floor | Reference rates and `rank_gap` are descriptive only. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank from exact marginal likelihood plus robustness/evidence uncertainty. |

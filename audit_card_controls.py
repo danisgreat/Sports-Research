@@ -121,7 +121,8 @@ FIELDS = [
     ),
     Field(
         "7", "participant state per side: lineup / bench / coach (G14.2)", True,
-        [r"CONFIRMED_OFFICIAL", r"SECONDARY_ONLY", r"NOT[_ ]RETRIEVED", r"RETRIEVAL_MISS",
+        [r"CONFIRMED_OFFICIAL", r"PROJECTED_BEAT_VERIFIED", r"LINEUPS_NOT_YET_PUBLISHED",
+         r"SECONDARY_ONLY", r"NOT[_ ]RETRIEVED", r"RETRIEVAL_MISS",
          r"BENCH_NOT_RETRIEVED", r"\bstarting (?:line-?ups?|XIs?|five)\b",
          r"\bline-?ups?\b", r"\bbatting orders?\b", r"\bXIs?\b", r"\bsquads?\b",
          r"\bbench\b", r"\bcoach(?:es)?\b", r"\bmanagers?\b"],

@@ -1,4 +1,4 @@
-﻿# Rugby league / NRL analysis rules
+# Rugby league / NRL analysis rules
 
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
@@ -456,7 +456,7 @@ Full evidence: [PREDICTION_LOG_COMBINED_2.md, 2026-09-05(b) section](PREDICTION_
 | Gate | Sport-native instantiation |
 |---|---|
 | `G10.2` settlement-source pre-registration | NRL/NRLW finals settle from the ABC News Score Centre lane promoted on 2026-09-05(b); `nrl.com` remains behind a login wall for automated fetches. Name the exact Score Centre record at freeze. |
-| `G14.2` coaching / bench / rotation record | Record the head coach, the named interchange bench (four in the NRL) and any 18th-man/concussion provision from §9, plus the rotation signal for a dead rubber or a finals-eve rest. |
+| `G14.2` coaching / bench / rotation record | Record the head coach, the named interchange bench (four in the NRL) and any 18th-man/concussion provision from §9, plus the rotation signal for a dead rubber or a finals-eve rest. Official club 24h cuts, 1h final team lists, or accredited rugby league beat reporting verified under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED`, satisfy `G14.2`, and do not block Rank #1. |
 | `G20.2` distributional tail audit | Derive tail and boundary mass from the **same frozen rugby-league joint score distribution**, including final team/role/bench, possession and field position, set starts, ruck/play-the-ball, kicking/discipline, venue/weather and golden-point endpoint where applicable. Historical order-statistic stress sums are superseded as active gates. |
 | `G21.1` exact target geometry | Map every supplied target to its exact settlement event and derive WIN/PUSH/LOSS from the same frozen sport-native PMF/CDF or coherent branch mixture. Historical path-count/category labels have no mandatory ordinal effect. |
 | `G26.1` no universal separation floor | Reference rates and `rank_gap` are descriptive only. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank from exact marginal likelihood plus robustness/evidence uncertainty. |
