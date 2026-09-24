@@ -271,6 +271,8 @@ Retirements (208) and walkovers (51) are excluded, because their totals are cens
 - P(tied after five) **0.154**;
 - the first five innings carry 55.9% of all runs.
 
+**One-run asymmetry (added 2026-09-25(c)).** Home teams win **52.9%** of games. They win by exactly one run **16.7%** of the time and lose by exactly one run **10.9%**: walk-offs end home wins at a one-run margin. So P(home +1.5) = 0.638 and P(away +1.5) = 0.638 are nearly equal, although the moneyline split is 52.9 / 47.1. A card's +1.5 row is judged against that 0.638 baseline, not against its moneyline probability (`SKILL_BASELINE_LEDGER.md`).
+
 **Venues:** every park with n ≥ 30. SE of a mean is about 0.4–0.6 runs, so these anchor a disclosure and do not settle a close call.
 
 | Venue | n | Mean | Median | P(≤ 7) | P(≥ 10) | P(≥ 12) |

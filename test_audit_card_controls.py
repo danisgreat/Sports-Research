@@ -171,7 +171,7 @@ class ResearchFieldTests(unittest.TestCase):
         self.assertIn("WB", card.missing_blocking)
 
     def test_standardised_miss_at_settlement(self):
-        base = ("#### P-680 — NBL basketball\n" + FULL_ISSUE + "Reference width 18.7.\n"
+        base = ("#### P-680 — NBL basketball\n" + FULL_ISSUE + "Reference width 18.7. BASELINE_P 0.53.\n"
                 "\n**Status:** FINAL / SETTLED.\nQuarter scores. https://site.api.espn.com C-LINEUP-DIFF: 5 of 5 named starters started.\n")
         card = audit(base, settlement=True, strict=True)["P-680"]
         self.assertIn("10z", card.missing_blocking)
@@ -191,6 +191,25 @@ class ResearchFieldTests(unittest.TestCase):
         self.assertIn("HC", card.missing_blocking)
         ok = text + "Implied P(margin ≥ 6 | win) = 0.70 v straight-sets reference 0.663 (C-HCP-COHERENCE).\n"
         self.assertTrue(audit(ok, strict=True)["P-690"].present["HC"]["present"])
+
+    def test_baseline_p_field(self):
+        card = audit("#### P-700 — NBL basketball\n" + FULL_ISSUE, strict=True)["P-700"]
+        self.assertIn("BP", card.missing_blocking)
+        self.assertFalse(audit("#### P-700 — NBL basketball\n" + FULL_ISSUE)["P-700"].present["BP"]["blocking"])
+        ok = "#### P-701 — NBL basketball\n" + FULL_ISSUE + "R1 Under 184.5: p 0.61, BASELINE_P 0.53 (NBL pop, n=185).\n"
+        self.assertTrue(audit(ok, strict=True)["P-701"].present["BP"]["present"])
+        nd = "#### P-702 — LKL basketball\n" + FULL_ISSUE + "BASELINE_P: NOT_YET_DERIVED.\n"
+        self.assertTrue(audit(nd, strict=True)["P-702"].present["BP"]["present"])
+
+    def test_allow_empty_exit_codes(self):
+        import os
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "empty_log.md")
+            with open(p, "w", encoding="utf-8") as fh:
+                fh.write("# Mini log\n\nNo events issued yet.\n")
+            self.assertEqual(a.main([p, "--quiet"]), 2)
+            self.assertEqual(a.main([p, "--quiet", "--allow-empty", "--settlement", "--strict"]), 0)
 
     def test_handicap_coherence_not_applicable_to_team_sports(self):
         text = "#### P-691 — NBL basketball, United −2.5\n" + FULL_ISSUE

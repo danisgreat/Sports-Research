@@ -1,1 +1,8 @@
 cache/
+# raw API pulls (re-fetchable with the pull_* scripts; not redistributed)
+wta.json
+atp.json
+nhl.json
+nhl_pre.json
+epl_summaries.json
+seed_rows.md

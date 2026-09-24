@@ -227,3 +227,10 @@ These steps extend step 3 of the execution order above. Home: `RULES_GENERAL.md`
 - Paste `receipts.py settle …` (one lineage; C-FINAL3 still needs three).
 - Print z for the total and the margin.
 - Run `audit_card_controls.py --settlement --strict`.
+
+<!-- REPO-HYGIENE-CI-2026-09-25C -->
+## 2026-09-25(c) — start point and repository discipline
+
+- **Start every session with `CURRENT_RULES.md`**, the step-0 live summary. The full reading gate (`RULES_GENERAL.md` §1) still applies.
+- **Print `BASELINE_P` beside every ranked row** at issue (`C-BASELINE-SKILL`). At settlement, append the decisions to `SKILL_BASELINE_LEDGER.md`.
+- **Work on a branch and merge through a pull request with green checks** (`CONTRIBUTING.md`). Never commit dependency trees, build output, local settings or odds material.

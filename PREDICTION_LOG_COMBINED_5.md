@@ -21,7 +21,7 @@ Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 
 | Field | Current value |
 |---|---|
-| As of | **2026-09-25, about 01:20 AEST, Australia/Melbourne.** Covers §"2026-09-24(e)"–"(g)" (the peer import, its verification audit and the P-509 settlement) and §"2026-09-25(a)"–"(c)": the verbatim import of P-484–P-486, P-488 and P-492; the audit closure (implementable items written into governing files, audit documents archived to `archive/audit_documents_implemented_2026-09-25/`); and the research pass (derived reference rates, width and receipt controls, `receipts.py`). Current control manifest: `CONTROL_MANIFEST_2026-09-25-2.md`. No event is open. |
+| As of | **2026-09-25, about 02:00 AEST, Australia/Melbourne.** Covers §"2026-09-24(e)"–"(g)" (the peer import, its verification audit and the P-509 settlement) and §"2026-09-25(a)"–"(d)": the verbatim import of P-484–P-486, P-488 and P-492; the audit closure (implementable items written into governing files, audit documents archived to `archive/audit_documents_implemented_2026-09-25/`); the research pass (derived reference rates, width and receipt controls, `receipts.py`); and the repository follow-through (baseline skill check, `CURRENT_RULES.md`, CI). Current control manifest: `CONTROL_MANIFEST_2026-09-25-3.md`. No event is open. |
 | Highest canonical prediction ID | **P-509** |
 | Next canonical ID | **P-510** |
 | Part-5 issued events | **27 canonical event cards:** P-482–P-489 and P-491–P-509 (P-487 = Dallas Wings @ Phoenix Mercury). P-490 is retired and unused. Temporary-ID records awaiting canonical reconciliation (operator decision): TMP-20260923-NBL-CNS-TAS (settled) and TMP-20260923-NPB-CHU-DB-G25 (settled). |
@@ -11066,5 +11066,40 @@ Under 8.5 is the rejected side rather than an additional recommendation.
 Audit fields `WB`, `HC` and `10z` apply to cards issued or settled after `CONTROL_MANIFEST_2026-09-25-2.md`. Earlier cards are not failed retroactively.
 
 **Custody.** The stray root copy of the P-474–P-481 mini log (the 2026-09-21 re-audited version, SHA `48532d08…`) was checked and moved intact into `archive/mini_logs/Mini Prediction Log - P-474 onward - 2026-09-20/`. Part 4's verbatim import remains the canonical issued record.
+
+**Queue unchanged:** no open event; next canonical ID **P-510**. **Status:** LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+<!-- REPO-HYGIENE-CI-2026-09-25C -->
+## 2026-09-25(d) — repository review follow-through: baseline skill check, current-rules summary, CI (no card issued, settled or re-graded)
+
+**Operator instruction:** "Comprehensively implement all of the improvements into the local files here and the next steps." This follows the repository review of 2026-09-25, which rated the project 5/10.
+
+**First skill-versus-baseline check** (`SKILL_BASELINE_LEDGER.md`; `C-BASELINE-SKILL`). Every decision of the 2026-09-24 cohort with a population reference was compared with a naive, leak-free population baseline for the same contract. The baseline knows only the league's outcome rates from earlier games, and which side is at home.
+- **Nine cards, 29 decisions:** P-495, P-500–P-504, P-506, P-508, P-509.
+- **Result:** card Brier **0.2461** against baseline **0.2360**. Card-cluster 95% interval for the difference: [−0.059, +0.089]. **There is no demonstrated skill over the baseline.**
+- **By family:**
+
+  | Family | Card | Baseline |
+  |---|---:|---:|
+  | Handicaps | 0.2107 | 0.2339 |
+  | Totals | 0.2600 | 0.2322 |
+  | Moneylines | 0.2753 | 0.2424 |
+
+  The largest contributions were P-504 Dream −4.5 (card 0.591 v baseline 0.353, won) and the P-495 Romero Gormaz winner call (0.843 v 0.5, lost).
+- These seed rows are hindsight-selected, although they use pre-event data only. They do not count toward the prospective decision rule: 100 decisions from 30 or more cards, with `BASELINE_P` printed at issue.
+
+**Structural fact.** MLB home teams win by exactly one run 16.7% of the time and lose by one 10.9% (walk-offs), so +1.5 is about 0.638 for either side (`BASE_RATES_REGISTER.md` §7.5).
+
+**Repository changes** (`RULES_GENERAL.md` §"2026-09-25(c)"; `CHANGELOG.md`):
+- `CURRENT_RULES.md` is now step 0 of the reading gate.
+- README rewritten; its history moved verbatim to `CHANGELOG.md`.
+- `CONTRIBUTING.md` added (branches and pull requests).
+- CI added: `.github/workflows/checks.yml`.
+- New tools: `tools/verify_manifest.py`, `make_manifest.py`, `repo_hygiene.py` and `skill_baseline.py`.
+- `.gitignore`, `.gitattributes` and `LICENSE` added.
+- 16,142 dependency and build files untracked.
+- Audit field `BP` added.
+
+Freeze receipt: `CONTROL_MANIFEST_2026-09-25-3.md`.
 
 **Queue unchanged:** no open event; next canonical ID **P-510**. **Status:** LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.

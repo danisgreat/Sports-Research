@@ -1,0 +1,19 @@
+# Line endings (added 2026-09-25(c)).
+# Control manifests hash files byte-for-byte in their CRLF form. Checking every text file out
+# with CRLF on every platform (Windows and the Linux CI runner alike) makes those hashes
+# reproducible anywhere. Git still stores LF internally.
+* text=auto eol=crlf
+
+# Binary formats: never convert.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.pptx binary
+*.zip binary
+*.pyc binary
+*.node binary
+*.dll binary

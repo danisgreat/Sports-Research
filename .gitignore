@@ -1,0 +1,31 @@
+# Sports Research — ignore rules (added 2026-09-25(c), repository-hygiene pass).
+# The repository holds Markdown governance, prediction logs, small stdlib-only Python tools,
+# test fixtures and re-runnable research scripts. Tool dependencies and build output never belong here.
+
+# Dependency trees and tool scratch directories (Codex spreadsheet/artifact tooling, retired runtimes)
+node_modules/
+.codex_spreadsheet_tmp/
+.pnpm-store/
+
+# Python build output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local agent / editor settings (machine-specific permissions and paths)
+.claude/settings.local.json
+.vscode/
+.idea/
+
+# Research-script caches (raw API pulls are re-fetchable; results JSON is committed)
+research/**/cache/
+
+# OS and Office clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.tmp

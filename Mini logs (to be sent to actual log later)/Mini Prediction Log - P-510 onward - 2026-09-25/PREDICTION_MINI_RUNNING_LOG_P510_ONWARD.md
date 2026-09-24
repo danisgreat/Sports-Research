@@ -6,7 +6,7 @@
 | Status | **ACTIVE MINI LOG.** No events issued yet. |
 | Next canonical ID | **P-510** |
 | Temporary IDs awaiting canonical reconciliation | `TMP-20260923-NPB-CHU-DB-G25` (settled; DeNA 4–3 F/12) and `TMP-20260923-NBL-CNS-TAS` (settled). Both still await a canonical number (operator decision). No live temporary ID. |
-| Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2**. **Freeze with every card:** `CONTROL_MANIFEST_2026-09-25-2.md`, SHA-256 `8f65c60e5a10c1e5b9f8bc7fbea0ffa9a2fe9e25e30c066aa1467cf4050c568b`. It is the post-research-pass content receipt (2026-09-25 about 01:25 AEST; files hashed in their CRLF checkout form) and supersedes `CONTROL_MANIFEST_2026-09-25.md` (`7b6efc56…`), under which no card was issued. Before issuing, re-hash the listed governance files: they must match, except the two living logs (Part 5 and the status register), which change with every card. |
+| Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2**. **Freeze with every card:** `CONTROL_MANIFEST_2026-09-25-3.md`, SHA-256 `619a3fda2829723d633efcd320a517f1eaaae3b91ef01719c7ae4aaa86b7dbc0`. It is the post-repository-review content receipt (2026-09-25 about 02:00 AEST; 82 files hashed in CRLF checkout form). Verify it with `python tools/verify_manifest.py`. It supersedes `CONTROL_MANIFEST_2026-09-25-2.md` (`8f65c60e…`) and `CONTROL_MANIFEST_2026-09-25.md` (`7b6efc56…`); no card was issued under either. Before issuing, re-hash the listed governance files: they must match, except the two living logs (Part 5 and the status register), which change with every card. |
 | Operating mode | **SPORTS_ONLY / MARKET_BLIND.** No odds, prices, line movement, tipsters, betting previews, prediction markets or fantasy/DFS material as evidence, anchors or sanity checks. Supplied lines are quarantined until the distribution is frozen (METHOD §1.1). |
 | Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** No ROI, EV, calibrated-edge or validated-model claim. `NO VALUE DETERMINABLE` unless a governing value gate is explicitly satisfied. |
 | Drive scope | Google Drive is the reference copy of the methodology and learnings; this session reads the repository mirror at `C:\Users\danie\Desktop\Sports Research`. **No Drive file is created, edited, moved or renamed from this workflow.** This log lives in the local `Mini logs (to be sent to actual log later)/` folder; the operator uploads it. |
@@ -61,6 +61,11 @@ The full set is in the governing files. These are the ones most often missed: th
     - Print P(deciding set) beside the reference (WTA 0.340).
 18. **NHL puck line.** 73% of two-goal regulation wins contain an empty-net goal. A −1.5 row carries the empty-net branch as mass; a +1.5 row names it as its main kill path. Overtime and shoot-out totals are odd (a 2–2 tie lands Under 5.5; a 3–3 tie lands Over 6.5).
 19. **At settlement, print z_total and z_margin = (actual − centre)/width (`C-WIDTH-Z`).**
+
+**Added 2026-09-25(c)** (`RULES_GENERAL.md` §"2026-09-25(c)"):
+
+20. **`BASELINE_P` beside every ranked row** (`C-BASELINE-SKILL`). This is the naive population probability for the same contract, from games completed before this event, knowing only which side is at home. Examples: MLB total 7.5 Over ≈ 0.573 (2026 to date); MLB +1.5 ≈ 0.638 for either side; tennis winner 0.5. If no population exists, print `BASELINE_P: NOT_YET_DERIVED`. At settlement, append the decisions to `SKILL_BASELINE_LEDGER.md`. **The seed check found no skill over this baseline yet** (card 0.2461 v baseline 0.2360, n = 29). Beating it is the job.
+21. **Start with `CURRENT_RULES.md`**, and run `python tools/verify_manifest.py` before freezing. Work on a `session/<date>-<topic>` branch and merge through a pull request with green checks (`CONTRIBUTING.md`).
 
 ## 1. Incomplete / Unsettled Logs
 

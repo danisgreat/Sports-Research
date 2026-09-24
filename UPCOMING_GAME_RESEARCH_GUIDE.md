@@ -910,3 +910,16 @@ Add these five steps to the §19 one-page checklist, after participant research 
    - Above reference, name the hold/break evidence.
 
 **What these steps do not do.** They do not move a centre, widen a width or change a rank on their own. They make the card's departure from the population visible, so that the card, not the settlement, is where it gets justified.
+
+<!-- REPO-HYGIENE-CI-2026-09-25C -->
+## 2026-09-25(c) — two more freeze-time steps
+
+6. **`BASELINE_P` beside every ranked row** (`C-BASELINE-SKILL`). This is the naive population probability of the same contract, using only games completed before this event, and the only side information is who is at home. Look it up in `BASE_RATES_REGISTER.md` §7, or run its query:
+   - **Totals:** the league P(total over or under the line).
+   - **Moneylines:** P(home win) or P(away win).
+   - **Handicaps:** P(home or away margin + line > 0). For MLB +1.5 this is about 0.638 for either side.
+   - **Tennis:** 0.5 for a winner; 0.5 × P(winner margin ≥ k+1) for −k.5.
+   - **No population exists:** `BASELINE_P: NOT_YET_DERIVED`.
+
+   Print it before the result is known. It is how the card is later judged (`SKILL_BASELINE_LEDGER.md`).
+7. **Read `CURRENT_RULES.md` first** (step 0 of the reading gate), and run `python tools/verify_manifest.py` before freezing, so the manifest SHA on the card is the current one.

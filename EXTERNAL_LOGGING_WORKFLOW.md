@@ -565,3 +565,23 @@ Home: `RULES_GENERAL.md` §"2026-09-25(b)". These steps apply to every card sett
 2. **z-scores** (`C-WIDTH-Z`). For each card that printed a centre and width, append `z_total = (actual − centre)/width` and `z_margin` to the settlement block. Add them to the `C-WIDTH-Z` manifest count for the card's family (`LEARNING_REGISTER.md` §"2026-09-25(b)" A).
 3. **Reference rows at review.** A Rank-1 or `TOP_OU_REVIEW` retrospective states where the actual result fell against the §7 reference row. For example, "total 195: 0.89 card-SDs above the centre; the league 1H share was 0.51". This separates "unusual game" from "card far from population".
 4. **Audit.** `python audit_card_controls.py <log.md> --settlement --strict` now also checks `WB`, `HC` and `10z`.
+
+<!-- REPO-HYGIENE-CI-2026-09-25C -->
+## 2026-09-25(c) — baseline ledger, branches and manifests at import and settlement
+
+1. **Baseline ledger** (`C-BASELINE-SKILL`). For each settled card, append one row per decision to `SKILL_BASELINE_LEDGER.md` §"Prospective rows":
+   - a forced pair once;
+   - `Card p` copied from Field 4;
+   - `Baseline p` exactly as the card printed `BASELINE_P` at issue;
+   - the result W, L or P.
+
+   Then run `python tools/skill_baseline.py` and paste its table into the settlement block. Cards that printed `BASELINE_P: NOT_YET_DERIVED` are listed as excluded, not scored.
+2. **Branch per import or settlement pass** (`CONTRIBUTING.md`):
+   - work on `session/<date>-<topic>`;
+   - run the local checks;
+   - open a pull request;
+   - merge when the `checks` workflow is green.
+
+   A direct commit to `main` is a process defect (`C-BRANCH-PR`). The `cb95acd` invented process record is the reason.
+3. **Manifests.** If the pass edits any governance file, regenerate the receipt with `tools/make_manifest.py`, repoint `METHOD.md` and the active mini log, and confirm with `tools/verify_manifest.py`. The living logs (Part 5, the status register) are exempt from matching.
+4. **Commands for new cohorts** (supersedes item 3 of §"2026-09-25"): `python audit_card_controls.py <log.md> --settlement --strict` (add `--allow-empty` for an empty active log), `python tools/skill_baseline.py` and `python tools/repo_hygiene.py`.

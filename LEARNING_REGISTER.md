@@ -1273,3 +1273,46 @@ These rows use the §3 table format and are PROCESS TESTING ONLY — FORECAST PR
 | ID | Pattern | Control | Evidence |
 |---|---|---|---|
 | **M31** *(new; one cohort, so recurrence is to be confirmed by `C-WIDTH-Z`)* | **Width chosen without a reference.** A card's SD is set by feel, well below any population benchmark, so the total or handicap probability is over-confident | `C-WIDTH-BENCHMARK`; `C-WIDTH-Z`; M14 (derive p from the card's own centre and width) | P-497 and P-498 (LKL totals 12.1–12.9; margins 8.4–9.0); P-499 (z +2.33); P-508 (z −2.21) |
+
+<!-- REPO-HYGIENE-CI-2026-09-25C -->
+# 2026-09-25(c) — baseline skill check, current-rules summary, repository controls
+
+**Origin.** The 2026-09-25 repository review rated the project **5/10**:
+
+| Area | Score |
+|---|---:|
+| Method | 8 |
+| Evidence trail | 8 |
+| Code and tests | 6 |
+| Documentation usability | 3 |
+| Hygiene | 2 |
+| Demonstrated skill | 3 |
+
+The operator then asked for every improvement to be implemented. The controls are in `RULES_GENERAL.md` §"2026-09-25(c)" and `CONTROLS.md`. Everything is learning-only.
+
+## A. Prospective test opened
+
+| Test ID | Origin | Frozen hypothesis / control | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`C-BASELINE-SKILL`** | 2026-09-25 review ("prove skill against a baseline"); seed in `SKILL_BASELINE_LEDGER.md` | The research process adds information beyond a naive population baseline (league outcome rates, home/away, games before the event): mean paired Brier (card − baseline) < 0 | Every settled decision issued under `CONTROL_MANIFEST_2026-09-25-3.md` or later whose card printed a numeric `BASELINE_P` at issue. Forced pairs count once; pushes are excluded | 100 decisions from ≥ 30 cards | 0 | 95% card-cluster bootstrap interval (`tools/skill_baseline.py`, 10,000 resamples, seed 20260925). **Below 0:** the framework may state "beats a naive population baseline", which is still not a performance claim. **Spans 0:** "no demonstrated skill over the baseline"; continue. **Above 0:** open a method review of the family driving it (by-family table). Never fit a shrink or weight from this (`L-087`) | TESTING — MEASUREMENT |
+
+**Seed (hindsight-selected, pre-event data only; not counted):** 29 decisions from 9 cards of the 2026-09-24 cohort.
+
+| Scope | Card Brier | Baseline Brier | Card − baseline |
+|---|---:|---:|---:|
+| All (95% interval [−0.059, +0.089]) | 0.2461 | 0.2360 | +0.0101 |
+| Totals | 0.2600 | 0.2322 | +0.0278 |
+| Moneylines | 0.2753 | 0.2424 | +0.0329 |
+| Handicaps | 0.2107 | 0.2339 | −0.0232 |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260925-19 | Against a naive population baseline, the seed cohort shows no demonstrated skill. Totals and moneylines trail, handicaps lead. Consistent with M31 and the width check: centres are unbiased, but probabilities are stated more confidently than their evidence | **TESTING (measurement)** `C-BASELINE-SKILL`; audit field `BP`. **No shrink or weight** (`L-087`). The existing responses are the width and reference disclosures (`C-WIDTH-BENCHMARK`, BR) | `C-BASELINE-SKILL` at 100 decisions |
+| L-20260925-20 | MLB home teams win by exactly one run 16.7% of the time and lose by one 10.9% (walk-offs), so P(+1.5) is about 0.638 for either side | **REFERENCE** (`BASE_RATES_REGISTER.md` §7.5) | Refresh per season |
+| L-20260925-21 | The rules had grown too large to follow (about 2.1 MB of governance as dated addenda). The README was a changelog, and "Read first" was its 8th section | **PROMOTED_PROCESS (documentation)**: `CURRENT_RULES.md` as step 0 (the full reading gate retained); README rewritten; history moved verbatim to `CHANGELOG.md` | Keep `CURRENT_RULES.md` in step with every rule change |
+| L-20260925-22 | 16,142 of 17,045 tracked files were dependency trees or build output. There was no `.gitignore` and no licence. The local permission file allow-listed three betting sites, contradicting the market-blind rule | **FIXED**: untracked, not deleted; `.gitignore`, `.gitattributes` and `LICENSE` added; betting domains removed from `.claude/settings.local.json`. `tools/repo_hygiene.py` in CI prevents recurrence. The history rewrite (about 140 MB) is left to the owner (`CONTRIBUTING.md`) | CI |
+| L-20260925-23 | There was no CI and no branch discipline. The invented process record in `cb95acd` and a commit titled "c" with build files reached `main` unchecked | **PROMOTED_PROCESS (repository)**: `C-REPO-CI`, `C-BRANCH-PR` (`CONTRIBUTING.md`). Branch protection is an owner action | CI on every push |
+| L-20260925-24 | Manifest generation and verification lived in scratch scripts. Hashes of LF-only files broke on a CRLF checkout | **FIXED**: `tools/make_manifest.py` and `tools/verify_manifest.py` (CRLF-form hashing); `.gitattributes` `eol=crlf` | CI `verify_manifest` step |
+| L-20260925-25 | Two literal-`\n` rendering bugs survived in governing files (the README custody table; the RULES_GENERAL header) | **FIXED**; `tools/repo_hygiene.py` now detects the pattern | CI |

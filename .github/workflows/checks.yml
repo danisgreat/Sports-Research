@@ -1,0 +1,44 @@
+# Sports Research — automated checks (added 2026-09-25(c)).
+# Runs on every push and pull request. All tools are standard-library Python, so there is nothing
+# to install. See CONTRIBUTING.md for how to run the same checks locally before committing.
+name: checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out (text files as CRLF, per .gitattributes)
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests (root tools)
+        run: python -m unittest discover -s . -p "test_*.py" -v
+
+      - name: Unit tests (tools/)
+        run: python -m unittest discover -s tools -p "test_*.py" -v
+
+      - name: Repository hygiene (no node_modules / pyc / local settings / control chars / literal \n)
+        run: python tools/repo_hygiene.py
+
+      - name: Control manifest matches governance files
+        run: python tools/verify_manifest.py
+
+      - name: Card-completeness audit of active mini logs (--settlement --strict)
+        shell: bash
+        run: |
+          shopt -s nullglob
+          files=("Mini logs (to be sent to actual log later)"/*/*.md)
+          if [ ${#files[@]} -eq 0 ]; then echo "no active mini log"; exit 0; fi
+          python audit_card_controls.py "${files[@]}" --settlement --strict --quiet --allow-empty

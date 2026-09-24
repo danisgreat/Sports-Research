@@ -24,7 +24,8 @@
 
 Status: **ACTIVE — FULL GATE REFERENCE; §16 IS CONTROLLING FOR WHAT IS MANDATORY**
 Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
-Method version: **MDS-2026.09.19-v4.3**\nControl revision: **CR-2026.09.21-3**
+Method version: **MDS-2026.09.19-v4.3**
+Control revision: **CR-2026.09.21-3**
 Executable algorithm: **GFA-2 (§11) — general forecast algorithm; sport instantiations are the SFA-<SPORT> sections in each sport file**
 Numerical training specification: **NTS-2026.09.19-v0.5 — Stage 0 all-sports design/pre-fit**
 Read with: AGENT_ROLE_AND_TASK.md, MODEL_AND_DATA_SPEC.md, ALGORITHM_PORTFOLIO_AND_EVALUATION.md, and NUMERICAL_TRAINING_SPEC.md.
@@ -108,6 +109,7 @@ Before opening a stats source:
 
 
 
+0. read `CURRENT_RULES.md` (added 2026-09-25(c)): the one-page live summary and map of what is current. It is a derived summary. The steps below still apply in full, and where the summary and a cited section disagree, the cited section governs;
 1. read AGENT_ROLE_AND_TASK.md, this file, MODEL_AND_DATA_SPEC.md, ALGORITHM_PORTFOLIO_AND_EVALUATION.md, NUMERICAL_TRAINING_SPEC.md, and UPCOMING_GAME_RESEARCH_GUIDE.md;
 2. read the relevant sport file;
 3. read the PROMOTED controls and applicable TESTING rows in LEARNING_REGISTER.md;
@@ -2877,3 +2879,47 @@ In **six of six** competitions measured (MLB, NBA, WNBA, NBL, NHL, EPL), the las
    - WTA best of 3, k = 5: straight-sets win **0.663**; deciding-set win **0.168**.
 2. **When the implied conditional exceeds the straight-sets reference,** the card names the hold and break evidence for it. Otherwise it is flagged `HCP_CONDITIONAL_ABOVE_REFERENCE`.
 3. **Status.** This is the measurement lane for the existing `T-TEN-LOWTIER-HCP` test. Origin: P-495, where the implied 0.70 exceeded the straight-sets reference 0.663 and the row lost.
+
+<!-- REPO-HYGIENE-CI-2026-09-25C -->
+## 2026-09-25(c) — current-rules summary, baseline skill check and repository controls
+
+**Origin.** The repository review of 2026-09-25 rated the project 5/10. The method was rated strong, but four weaknesses were found:
+- 95% of tracked files were `node_modules`;
+- the rules were too large to follow;
+- there was no CI and no branch discipline (the `cb95acd` invented process record reached `main` unchecked);
+- there was no evidence of skill beyond a coin-flip comparison.
+
+The operator then asked for every improvement to be implemented. Every item below is a documentation, measurement, retrieval or repository control (`C-PROMOTION-RECEIPT`: `PROMOTED_PROCESS`). None moves a probability, centre, width or rank.
+
+### (a) `CURRENT_RULES.md` — step 0 of the reading gate (§1)
+
+`CURRENT_RULES.md` is the one-page live summary: non-negotiables, workflow, card fields mapped to audit IDs, rules by topic, sport quick cards, M1–M31, tools, file map and withdrawn rules.
+
+- **It is derived.** Every rule cites its source section, and where they disagree the source governs (`METHOD.md` §9). The disagreement is then a documentation defect, fixed in the same pass.
+- **Keep it in step.** Any pass that adds, changes or withdraws a live rule updates `CURRENT_RULES.md` in the same edit.
+- **It does not relax the reading gate.** §1's full read remains the standing user directive.
+- **History has moved.** The README's dated history moved verbatim to `CHANGELOG.md`, and the README is now an overview and quickstart.
+
+### (b) `C-BASELINE-SKILL` — every row carries a naive population baseline
+
+1. **At issue.** From `CONTROL_MANIFEST_2026-09-25-3.md` onward, every ranked row prints `BASELINE_P`. This is the naive population probability of the same contract, taken from `BASE_RATES_REGISTER.md` §7 or its re-runnable query and restricted to games completed before the event. It knows only the league's outcome rates and which side is at home; for tennis it knows no side at all. Competitions without a population print `BASELINE_P: NOT_YET_DERIVED`.
+2. **At settlement.** Append the decision row to `SKILL_BASELINE_LEDGER.md` (a forced pair once) and run `python tools/skill_baseline.py`.
+3. **Why.** Comparison with a coin flip (0.25) credits the card with information any population table has. The seed comparison (2026-09-24 cohort, 29 decisions from 9 cards, hindsight-selected with pre-event data only) gave card Brier **0.2461** against baseline **0.2360**, a 95% card-cluster interval of [−0.059, +0.089]. That is **no demonstrated skill over the baseline**: totals trailed, moneylines trailed, handicaps led.
+4. **Decision rule** (`LEARNING_REGISTER.md` §"2026-09-25(c)"). After 100 prospective decisions from at least 30 cards, report whether the interval lies below, spans or lies above 0. Nothing is claimed before then, and nothing is fitted from it (`L-087`).
+5. **Audit field `BP`** (advisory; blocks under `--strict`).
+
+### (c) Repository controls (`C-REPO-CI`, `C-BRANCH-PR`)
+
+1. **CI** (`.github/workflows/checks.yml`) runs on every push and pull request:
+   - all unit tests;
+   - `tools/repo_hygiene.py`, which fails on tracked `node_modules`, `.pyc`, `.codex_spreadsheet_tmp`, local settings, oversized non-log files, control characters and literal-`\n` artefacts;
+   - `tools/verify_manifest.py`, which fails if a governance file changed without a new manifest;
+   - the strict card audit of the active mini logs (`--allow-empty`).
+2. **Manifest tooling.** Manifests are generated with `tools/make_manifest.py` and verified with `tools/verify_manifest.py`. Hashes are taken in CRLF form, and `.gitattributes` forces CRLF checkout on every platform, so a manifest verifies anywhere.
+3. **Branches.** Sessions work on `session/<date>-<topic>` branches and merge by pull request once the checks pass (`CONTRIBUTING.md`). Commit messages follow `type(scope): what changed`. Branch protection on GitHub is an owner action; the command is in `CONTRIBUTING.md`.
+4. **Hygiene.** `.gitignore` excludes dependency trees, build output, machine-local settings, research caches and raw API pulls. `LICENSE` states the rights position.
+
+**Evidence.**
+- 16,142 of 17,045 tracked files were `node_modules` or build artefacts before this pass.
+- Two literal-`\n` rendering bugs were found by the new hygiene check (the README custody table; this file's header).
+- The CRLF/LF manifest fragility was found while committing 47e7748.

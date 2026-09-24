@@ -160,3 +160,5 @@ No model/version is performance-eligible unless its evidence chain proves all of
 
 
 A software test pass demonstrates control correctness only. It does not make the forecasting model performance-eligible.
+
+**Baseline minimum (added 2026-09-25(c)).** Before any statement that the research process adds information, the prospective `C-BASELINE-SKILL` comparison must be completed: at least 100 decisions from at least 30 cards, card Brier against the naive population baseline, with a card-cluster interval (`SCORING_AND_VALIDATION.md` §13; `SKILL_BASELINE_LEDGER.md`). Beating it is necessary, not sufficient: every other eligibility condition in this policy still applies. At 2026-09-25(c) the seed comparison shows no demonstrated difference.

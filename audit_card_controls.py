@@ -34,7 +34,8 @@ Options
     --settlement     Also check the settlement fields (10, 10p, 10l, 10z), settlement passes only.
     --strict         Treat the 2026-09-24(f)/2026-09-25 controls as BLOCKING: 7r (S-1 Rev 2
                      receipt), T13 (tennis benchmark, RULES_TENNIS TE-P5), WB (reference
-                     width, C-WIDTH-BENCHMARK), HC (tennis handicap coherence), 10p
+                     width, C-WIDTH-BENCHMARK), BP (BASELINE_P, C-BASELINE-SKILL; from
+                     CONTROL_MANIFEST_2026-09-25-3), HC (tennis handicap coherence), 10p
                      (process-record provenance), 10l (lineup diff) and 10z (standardised
                      miss, C-WIDTH-Z). Use it on every card issued or settled after the
                      2026-09-25 control manifest (WB, HC and 10z from CONTROL_MANIFEST_2026-09-25-2).
@@ -42,6 +43,7 @@ Options
                      cohorts are not failed retroactively for controls that postdate them.
     --json           Emit machine-readable JSON instead of the Markdown table.
     --quiet          Suppress the per-card table; print only the summary.
+    --allow-empty    Exit 0 instead of 2 when no card is found (CI over an empty active mini log).
 
 Exit codes
 ----------
@@ -50,7 +52,7 @@ Exit codes
     2  usage or file error
 
 BLOCKING fields (a missing one blocks issue under §16.8): 2, 3, 5a, 7; at settlement 10;
-with --strict also 7r, T13, WB, HC, 10p, 10l, 10z (each only where it applies).
+with --strict also 7r, T13, WB, BP, HC, 10p, 10l, 10z (each only where it applies).
 Everything else is recorded as a process defect on that card without blocking.
 
 Card segmentation (repaired 2026-09-25; 2026-09-23(c) proposal)
@@ -271,6 +273,12 @@ FIELDS = [
          r"width benchmark", r"benchmark width", r"WIDTH_BELOW_REFERENCE"],
         origin="P-497, P-498, P-508 (2026-09-24 cohort)", strict_blocking=True,
         applies=_prints_width,
+    ),
+    Field(
+        "BP", "BASELINE_P printed beside each ranked row (naive leak-free population baseline), or "
+              "BASELINE_P: NOT_YET_DERIVED (C-BASELINE-SKILL, RULES_GENERAL 2026-09-25(c))", False,
+        [r"BASELINE_P", r"C-BASELINE-SKILL", r"\bbaseline p\b"],
+        origin="2026-09-25(c) skill check (SKILL_BASELINE_LEDGER.md)", strict_blocking=True,
     ),
     Field(
         "HC", "tennis games-handicap: P(win), implied P(margin ≥ k+1 | win) and the population "
@@ -593,9 +601,12 @@ def main(argv=None) -> int:
                     help="also check the settlement fields (10, 10p, 10l, 10z)")
     ap.add_argument("--strict", action="store_true",
                     help="treat the 2026-09-24(f)/2026-09-25 controls "
-                         "(7r, T13, WB, HC, 10p, 10l, 10z) as BLOCKING")
+                         "(7r, T13, WB, BP, HC, 10p, 10l, 10z) as BLOCKING")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--allow-empty", action="store_true",
+                    help="exit 0 (not 2) when the files contain no cards — for CI runs over an "
+                         "active mini log that has not issued a card yet")
     args = ap.parse_args(argv)
 
     fields = list(FIELDS) + (SETTLEMENT_FIELDS if args.settlement else [])
@@ -615,6 +626,9 @@ def main(argv=None) -> int:
         all_cards.extend(audit_card(c, fields, doc_level, strict=args.strict) for c in cards)
 
     if not all_cards:
+        if args.allow_empty:
+            print("no cards to audit (--allow-empty): nothing issued yet")
+            return 0
         print("error: no cards to audit", file=sys.stderr)
         return 2
 

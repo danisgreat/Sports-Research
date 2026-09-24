@@ -168,3 +168,14 @@ These labels change no forecast probability. They decide what a settled record m
 | `FIELD_OWNER_VERIFIED_LT3` | The final was verified from the field owner, plus a second lineage where available, but a third independent lineage could not be re-opened at audit time | The grade stands (no conflicting source exists); the record states the lineage count rather than claiming CR-4 completion |
 
 Descriptive reports list how many cards carry each label beside every Rank-1, Hit@2 and top-O/U figure.
+
+<!-- REPO-HYGIENE-CI-2026-09-25C -->
+## 13. Naive population baseline (`C-BASELINE-SKILL`, added 2026-09-25(c))
+
+A Brier score is reported beside a **baseline on the same decisions**. From 2026-09-25(c) the primary descriptive baseline is the **naive population baseline** recorded as `BASELINE_P` on each card, not the coin flip (0.25).
+
+- **What it knows.** The competition's outcome distribution from games completed before the event, and which side is at home. For tennis it knows no side information.
+- **Report.** Card Brier, baseline Brier, their paired difference (card − baseline), and a bootstrap interval that resamples whole cards (rows within a card are dependent). `tools/skill_baseline.py` computes all of this from `SKILL_BASELINE_LEDGER.md`.
+- **Counting.** Forced pairs are counted once and pushes are excluded, as elsewhere in this specification.
+- **Status.** Descriptive and LEARNING_ONLY. Beating the naive baseline is a *minimum* condition for any later claim that the research process adds information. It is not sufficient for performance eligibility (`PERFORMANCE_ELIGIBILITY_POLICY.md`). Never fit a shrink or weight from it (`L-087`).
+- **Seed result (hindsight, 2026-09-24 cohort).** Card 0.2461 against baseline 0.2360, n = 29 decisions from 9 cards, interval [−0.059, +0.089]: no demonstrated difference.
