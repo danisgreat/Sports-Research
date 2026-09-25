@@ -1259,7 +1259,7 @@ P-515,515,rugby,1,4,Combined Total: Under 45.5 Points,total,Under,0.635,L,PREDIC
 P-515,515,rugby,2,4,Dolphins -2.5,handicap,minus,0.514,L,PREDICTION_LOG_COMBINED_5.md:11227,NRL — Sydney Roosters @ Dolphins (Preliminary Final)
 P-515,515,rugby,3,4,Roosters +2.5,handicap,plus,0.486,W,PREDICTION_LOG_COMBINED_5.md:11228,NRL — Sydney Roosters @ Dolphins (Preliminary Final)
 P-515,515,rugby,4,4,Combined Total: Over 45.5 Points,total,Over,0.365,W,PREDICTION_LOG_COMBINED_5.md:11229,NRL — Sydney Roosters @ Dolphins (Preliminary Final)
-TMP-20260923-NPB-CHU-DB-G25,,baseball-NPB/KBO/CPBL,1,4,Chunichi Dragons +1.5 runs,handicap,plus,,W,PREDICTION_LOG_COMBINED_5.md:3461,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
-TMP-20260923-NPB-CHU-DB-G25,,baseball-NPB/KBO/CPBL,2,4,Yokohama DeNA moneyline,moneyline,,,W,PREDICTION_LOG_COMBINED_5.md:3462,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
-TMP-20260923-NPB-CHU-DB-G25,,baseball-NPB/KBO/CPBL,3,4,Combined Total: Under 7.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED_5.md:3463,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
-TMP-20260923-NPB-CHU-DB-G25,,baseball-NPB/KBO/CPBL,4,4,Combined Total: Over 7.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED_5.md:3464,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
+P-516,516,baseball-NPB/KBO/CPBL,1,4,Chunichi Dragons +1.5 runs,handicap,plus,,W,PREDICTION_LOG_COMBINED_5.md:3461,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
+P-516,516,baseball-NPB/KBO/CPBL,2,4,Yokohama DeNA moneyline,moneyline,,,W,PREDICTION_LOG_COMBINED_5.md:3462,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
+P-516,516,baseball-NPB/KBO/CPBL,3,4,Combined Total: Under 7.5 runs,total,Under,,W,PREDICTION_LOG_COMBINED_5.md:3463,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"
+P-516,516,baseball-NPB/KBO/CPBL,4,4,Combined Total: Over 7.5 runs,total,Over,,L,PREDICTION_LOG_COMBINED_5.md:3464,"Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (formerly appended to P-489 as ""R1"")"

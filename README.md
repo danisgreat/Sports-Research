@@ -95,8 +95,8 @@ If you edited a governance file, regenerate the freeze receipt with `python tool
 |---|---|
 | Active canonical log | [Part 5](PREDICTION_LOG_COMBINED_5.md) (P-482 onward). Parts 1–4 are closed |
 | Active mini log | `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-516 onward - 2026-09-25/` |
-| Next canonical ID | See Part 5's snapshot (P-516 as of 2026-09-25(e); P-510–P-515 imported and settled in §"2026-09-25(f)") |
-| Awaiting operator decision | Canonical numbers for `TMP-20260923-NBL-CNS-TAS` and `TMP-20260923-NPB-CHU-DB-G25` (both settled) |
+| Next canonical ID | See Part 5's snapshot (**P-518** as of 2026-09-26: P-510–P-515 imported in §"2026-09-25(f)"; P-516/P-517 assigned to the settled temporary IDs in §"2026-09-26(a)") |
+| Temporary IDs | None open. `TMP-20260923-NPB-CHU-DB-G25` = **P-516**; `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)) |
 | Freeze receipt | The manifest named in [`METHOD.md`](METHOD.md)'s header |
 | Skill v baseline | Seed: card Brier 0.2461 v naive baseline 0.2360 (n = 29, 9 cards; interval spans 0). Prospective count 0 of 100 |
 | Full-record calibration (2026-09-25(d)) | 598 rows, 149 cards: Brier 0.2249, slope 1.06, skill +7.7% over the base rate. Skill lives at p ≥ 0.65 (80.3% won); 0.50–0.65 is coin-flip-grade (53.6%). Non-baseball underdog cushions are over-confident (17/40 at 0.642). Soccer shows clear skill; MLB and basketball near zero; tennis, NFL/NCAA and AFL none ([details](research/settled_rows_2026-09-25/README.md)) |

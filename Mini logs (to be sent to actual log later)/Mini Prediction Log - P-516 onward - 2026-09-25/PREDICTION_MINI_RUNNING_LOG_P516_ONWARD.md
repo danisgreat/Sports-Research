@@ -4,9 +4,9 @@
 |---|---|
 | Created | 2026-09-25 about 23:50 +10:00 (Australia/Melbourne, AEST UTC+10; AEDT from 4 Oct 2026) |
 | Status | **OPEN — no events yet.** |
-| Next canonical ID | **P-516** |
-| Temporary IDs awaiting canonical reconciliation | `TMP-20260923-NPB-CHU-DB-G25` and `TMP-20260923-NBL-CNS-TAS` (both settled; an operator decision). No live temporary ID. |
-| Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2** (§15, RM-1). **Freeze with every card:** `CONTROL_MANIFEST_2026-09-25-5.md`, SHA-256 `0752501820e9922a98ee79fe880a7ac4146c1e2b3e237462c4d6559aee29bcfe` (the Rank-1/Rank-2 receipt, 2026-09-25 about 23:55 AEST; 103 files hashed in CRLF checkout form). Verify it with `python tools/verify_manifest.py`. |
+| Next canonical ID | **P-518** (P-516 and P-517 were assigned to the two settled temporary IDs on 2026-09-26; this folder's name predates that) |
+| Temporary IDs awaiting canonical reconciliation | **None.** `TMP-20260923-NPB-CHU-DB-G25` = P-516 and `TMP-20260923-NBL-CNS-TAS` = P-517 (`PREDICTION_LOG_COMBINED_5.md` §"2026-09-26(a)"). |
+| Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2** (§15, RM-1). **Freeze with every card:** `CONTROL_MANIFEST_2026-09-25-6.md`, SHA-256 `fe80cc60742349e7489e36d07ce89a044f51341c6dbc588f742089ca76a8602b` (2026-09-26 re-hash of the Rank-1/Rank-2 receipt `CONTROL_MANIFEST_2026-09-25-5.md` after the P-516/P-517 assignment; 103 files, CRLF form; no card was issued under -5). Verify it with `python tools/verify_manifest.py`. |
 | Operating mode | **SPORTS_ONLY / MARKET_BLIND.** No odds, prices, line movement, tipsters, betting previews, prediction markets or fantasy/DFS material. |
 | Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** |
 | Predecessor | `archive/mini_logs/Mini Prediction Log - P-510 to P-515 SETTLED - 2026-09-25/` (corrected, imported into `PREDICTION_LOG_COMBINED_5.md` §"2026-09-25(f)"). |

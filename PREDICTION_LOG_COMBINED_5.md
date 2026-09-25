@@ -5,7 +5,7 @@
 Status: **ACTIVE CANONICAL LOG — ALL NEW FORECASTS APPEND HERE**
 Opened: **2026-09-21**, after Part 4 was closed at `P-481`.
 Canonical range: **`P-482` onward**.
-Next canonical ID: **P-516** (P-510–P-515 were issued 2026-09-25 in the mini log and imported in §"2026-09-25(f)"; temporary IDs do not reserve numbers; a fresh preflight is still required before any new forecast).
+Next canonical ID: **P-518** (P-510–P-515 were issued 2026-09-25 in the mini log and imported in §"2026-09-25(f)"; P-516 and P-517 were assigned to the two settled temporary IDs in §"2026-09-26(a)"; temporary IDs do not reserve numbers; a fresh preflight is still required before any new forecast).
 Current governing method at rollover: **MDS-2026.09.19-v4.3 / CR-2026.09.19-4**. Always fresh-read `METHOD.md` and the current control manifest before a new prediction rather than relying on this snapshot.
 Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 
@@ -21,14 +21,14 @@ Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 
 | Field | Current value |
 |---|---|
-| As of | **2026-09-25, about 02:30 AEST, Australia/Melbourne.** Covers §"2026-09-24(e)"–"(g)" (the peer import, its verification audit and the P-509 settlement) and §"2026-09-25(a)"–"(e)", the last being the review of every settled log (calibration findings, `tools/card_math.py`, `tools/calibration_report.py`): the verbatim import of P-484–P-486, P-488 and P-492; the audit closure (implementable items written into governing files, audit documents archived to `archive/audit_documents_implemented_2026-09-25/`); the research pass (derived reference rates, width and receipt controls, `receipts.py`); and the repository follow-through (baseline skill check, `CURRENT_RULES.md`, CI). Current control manifest: `CONTROL_MANIFEST_2026-09-25-4.md`. No event is open. |
-| Highest canonical prediction ID | **P-515** |
-| Next canonical ID | **P-516** |
-| Part-5 issued events | **33 canonical event cards:** P-482–P-489 and P-491–P-515 (P-487 = Dallas Wings @ Phoenix Mercury). P-490 is retired and unused. Temporary-ID records awaiting canonical reconciliation (operator decision): TMP-20260923-NBL-CNS-TAS (settled) and TMP-20260923-NPB-CHU-DB-G25 (settled). |
+| As of | **2026-09-26 (AEST), Australia/Melbourne.** §"2026-09-25(f)" imported and settled P-510–P-515 (next ID P-516); §"2026-09-26(a)" assigned P-516 and P-517 to the two settled temporary IDs (next ID **P-518**). Earlier coverage, as of 2026-09-25 about 02:30 AEST: Covers §"2026-09-24(e)"–"(g)" (the peer import, its verification audit and the P-509 settlement) and §"2026-09-25(a)"–"(e)", the last being the review of every settled log (calibration findings, `tools/card_math.py`, `tools/calibration_report.py`): the verbatim import of P-484–P-486, P-488 and P-492; the audit closure (implementable items written into governing files, audit documents archived to `archive/audit_documents_implemented_2026-09-25/`); the research pass (derived reference rates, width and receipt controls, `receipts.py`); and the repository follow-through (baseline skill check, `CURRENT_RULES.md`, CI). Current control manifest: `CONTROL_MANIFEST_2026-09-25-4.md`. No event is open. |
+| Highest canonical prediction ID | **P-517** |
+| Next canonical ID | **P-518** |
+| Part-5 issued events | **35 canonical event cards:** P-482–P-489 and P-491–P-517 (P-487 = Dallas Wings @ Phoenix Mercury; **P-516 = `TMP-20260923-NPB-CHU-DB-G25`**; **P-517 = `TMP-20260923-NBL-CNS-TAS`**, both assigned 2026-09-26(a)). P-490 is retired and unused. **No temporary ID awaits reconciliation.** |
 | Part-5 open / pending events | **None.** P-509 (Perth v Adelaide, NBL) finished 98–97 at about 23:40 AEST. Three terminal lineages agree (NBL feed, ESPN, Flashscore), and it was settled in §"2026-09-24(g)" after the operator's "proceed accordingly" instruction. |
 | Part-5 learning-only diagnostics | Existing settled results are unchanged by ID reassignment. The 2026-09-23(c)/(d) cohort (descriptive only): **P-487** Rank-1 **W**; **P-489** Rank-1 **L** (`TOP_OU_REVIEW`); **P-491** Rank-1 **W**; TMP-NBL Rank-1 L. The **2026-09-24 cohort** (16 pregame units; P-494 live-issued and excluded; §(f) part M): **Rank-1 13 W / 3 L**; Rank-2 11 W / 5 L; Hit@2 11/12 once the four covering-pair cards are excluded; top O/U 10 W / 6 L (baseball Overs 1–3); row Brier 0.2282 (n=60), Rank-1 Brier 0.187. |
 | Active mini log | `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-516 onward - 2026-09-25/PREDICTION_MINI_RUNNING_LOG_P516_ONWARD.md` (created 2026-09-25(e); no events yet). The predecessor, the P-510–P-515 log, is closed, corrected, imported (§"2026-09-25(f)") and archived at `archive/mini_logs/Mini Prediction Log - P-510 to P-515 SETTLED - 2026-09-25/`. |
-| Historical open handles | These continue in GAME_LOG_STATUS_CURRENT.md. Temporary IDs awaiting canonical reconciliation: TMP-20260923-NBL-CNS-TAS and TMP-20260923-NPB-CHU-DB-G25. TMP-20260922-WNBA-DAL-PHX is retired as an alias of P-487. |
+| Historical open handles | These continue in GAME_LOG_STATUS_CURRENT.md. No temporary ID awaits reconciliation: `TMP-20260923-NPB-CHU-DB-G25` = **P-516** and `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)). TMP-20260922-WNBA-DAL-PHX is retired as an alias of P-487. |
 | Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE** |
 | Value status | `NO VALUE DETERMINABLE` unless the current governing value gate is explicitly satisfied |
 
@@ -12641,3 +12641,26 @@ Sources:
 | Rugby League Project Database | https://www.rugbyleagueproject.org/ | Independent statistical authority | 2026 head-to-head match records (R15 48-10, R26 26-12), finals base rates | 2026-09-25 19:47 | OPENED |
 <!-- END VERBATIM ISSUED RECORD: P-515 -->
 
+<!-- CANONICAL-ID-ASSIGNMENT-2026-09-26A -->
+## 2026-09-26(a) — canonical IDs assigned to the two settled temporary IDs (operator instruction)
+
+**Instruction.** On 2026-09-26 the operator instructed that "the latest new canonical IDs" be assigned to the temporary IDs. Both records were settled and had been held for this decision since 2026-09-23. See §"2026-09-23(c)" and §"2026-09-24(f)", and `GAME_LOG_STATUS_CURRENT.md`.
+
+| Canonical ID | Temporary ID (retired alias) | Event | Issue-time evidence | Settled result (unchanged) | Records |
+|---|---|---|---|---|---|
+| **P-516** | `TMP-20260923-NPB-CHU-DB-G25` | NPB — Chunichi Dragons @ Yokohama DeNA BayStars, 23 Sep 2026, game 25 (18:00 JST = 19:00 AEST) | Frozen **2026-09-23 18:59:17 AEST** (a verified pre-start timestamp in the card) | DeNA 4–3 F/12. R1 Chunichi +1.5 **W**; R2 DeNA ML **W**; R3 Under 7.5 **W**; R4 Over 7.5 L; winner DeNA **W** | Issued record: Appendix Z (§"2026-09-24(f)"). Settlement: §"2026-09-24(e)", audited §"2026-09-24(f)" |
+| **P-517** | `TMP-20260923-NBL-CNS-TAS` | NBL — Cairns Taipans vs Tasmania JackJumpers, 23 Sep 2026, 19:30 AEST (formerly claimed P-487) | **Untimestamped**; bounded only by the 19:30 AEST tip ("PREGAME, bounded") | CNS 93–87. R1 JackJumpers +2.5 **L**; R2 Under 186.5 **W** (contract ambiguity recorded); R3 Over 186.5 L; R4 Taipans −2.5 W; winner **L** | Issued record and settlement: §"2026-09-23(c)" |
+
+**Order rule** (administrative and non-predictive): **the verifiably timestamped card takes the lower number.** P-516's freeze is recorded to the second; P-517's issue time cannot be verified. That order also matches the scheduled starts (19:00 before 19:30 AEST).
+
+What the canonical IDs change and do not change:
+- They assert nothing about which card was issued first beyond that.
+- They change no pick, probability, rank, result or grade.
+- The issued records keep their temporary headings verbatim (`METHOD.md` §6, immutable records). The temporary IDs are now **retired aliases** of P-516 and P-517: a citation of either form refers to the same card.
+
+**Custody.**
+- Next canonical ID: **P-518**.
+- Highest canonical ID: P-517.
+- No temporary ID remains open.
+- The settled-row extractor maps both aliases to their canonical numbers (`ALIASES` in `research/settled_rows_2026-09-25/extract_settled_rows.py`). Their graded rows carry no stated probability, so RM-1's fit is unchanged.
+- Performance status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.

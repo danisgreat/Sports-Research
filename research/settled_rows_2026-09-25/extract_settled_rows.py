@@ -41,6 +41,9 @@ MINI_LOGS = sorted(os.path.relpath(p, REPO) for p in glob.glob(
     os.path.join(REPO, 'Mini logs (to be sent to actual log later)', '*', '*.md')))
 PARTS += MINI_LOGS
 EXACT_RESULT_RE = re.compile(r'^(WIN|WON|LOSS|LOST|PUSH|VOID|W|L|P)$')
+# Temporary IDs that later received canonical numbers (PREDICTION_LOG_COMBINED_5.md §"2026-09-26(a)").
+# The issued records keep their temporary headings; the dataset reports the canonical ID.
+ALIASES = {'TMP-20260923-NPB-CHU-DB-G25': 'P-516', 'TMP-20260923-NBL-CNS-TAS': 'P-517'}
 
 ID_RE = re.compile(r'\b(P-\d{3}|TMP-\d{8}-[A-Z0-9-]+)\b')
 RANGE_RE = re.compile(r'P-\d{3}\W{0,3}[–—-]\W{0,3}P-\d{3}')
@@ -334,8 +337,9 @@ def main():
         by_card[r['card']].append(r)
     out = []
     for card, rs in by_card.items():
-        ev = events.get(card, '')
+        ev = events.get(card, '') or events.get(ALIASES.get(card, ''), '')
         sport = classify_sport(ev, titles.get(card, ''), [r['contract'] for r in rs])
+        card = ALIASES.get(card, card)
         for r in sorted(rs, key=lambda x: x['rank']):
             out.append({'card': card, 'num': int(card[2:5]) if card.startswith('P-') else '', 'sport': sport,
                         'rank': r['rank'], 'n_ranks': len(rs), 'contract': r['contract'],

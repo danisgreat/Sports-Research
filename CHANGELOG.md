@@ -6,6 +6,17 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-26(a) — canonical IDs for the two settled temporary IDs; merge to main
+
+- **Assignments.** On the operator's instruction:
+  - **P-516** = `TMP-20260923-NPB-CHU-DB-G25` (NPB game 25, frozen 23 Sep 18:59:17 AEST);
+  - **P-517** = `TMP-20260923-NBL-CNS-TAS` (NBL Cairns v Tasmania, untimestamped).
+- **Order rule.** The verifiably timestamped card takes the lower number.
+- **Records.** The issued records are unchanged and keep their temporary headings as retired aliases. The record is Part 5 §"2026-09-26(a)".
+- **Next ID: P-518.**
+- **Extractor.** It maps the aliases to their canonical IDs. The dataset and RM-1 are unchanged: those rows carry no stated p.
+- **Receipt.** `CONTROL_MANIFEST_2026-09-25-6.md`.
+
 ### 2026-09-25(e) — Rank 1 and Rank 2: the ranking model, the team baseline, oval references, settlement integrity
 
 - **Ask.** A sport-by-sport review of sources and reasoning, to make Rank 1 and Rank 2 far more likely to win than lose, and a new probability model if one could be built.
