@@ -245,3 +245,14 @@ These steps extend step 3 of the execution order above. Home: `RULES_GENERAL.md`
 - **Decompose any non-baseball +k.5 cushion** (`C-PLUS-CUSHION`; M32).
 
 None of these changes a number. Together they make over-confidence visible where the record shows it lives.
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — execution-order additions: rank by the calibrated probability, anchor on the team baseline
+
+- **Before ranking,** print `TEAM_BASELINE_P` in covered leagues (`tools/team_baseline.py`), and measure the departure ledger from it where TB-1 has resolution.
+- **Rank by RM-1 q** (`tools/rank_model.py rank`), with the stated p printed unchanged beside it, and print `TOP2_QUALITY`.
+  - Rank 1 is only far more likely to win than lose when its q is STRONG (≥ 0.70).
+  - When no supplied row reaches that, the honest output says so. An optional `SLATE_ADVISORY` names the same-event contracts that would reach it.
+- **At settlement,** every process fact is read from a feed (`C-SETTLEMENT-FROM-FEED`), and both p and q are scored.
+
+The rules are in `RULES_GENERAL.md` §"2026-09-25(e)". RM-1 is the user-authorised exception to `L-087`, with the safeguards listed there.

@@ -97,6 +97,9 @@ class Field:
     strict_blocking: bool = False  # becomes BLOCKING under --strict
     # applies(card) -> bool; None means "applies to every forecast card"
     applies: Optional[Callable] = None
+    # check(card) -> bool replaces the pattern test for the rare field that checks content,
+    # not presence (10n, 2026-09-25(e)).
+    check: Optional[Callable] = None
 
 
 TENNIS_RE = re.compile(
@@ -175,6 +178,55 @@ def _tennis_handicap(card) -> bool:
     return card.sport == "tennis" and bool(
         re.search(r"[−-]\s*\d+\.5\b[^\n]{0,40}(?:games|handicap)|games handicap|handicap[^\n]{0,20}[−-]\s*\d+\.5",
                   card.issue_text, re.I))
+
+
+# Cards frozen under CONTROL_MANIFEST_2026-09-25-5 or later carry the 2026-09-25(e) fields (RM, TB).
+MANIFEST_RE = re.compile(r"CONTROL_MANIFEST_(\d{4})-(\d{2})-(\d{2})(?:-(\d+))?")
+
+
+def _manifest_at_least(card, floor=(2026, 9, 25, 5)) -> bool:
+    for m in MANIFEST_RE.finditer(card.issue_text):
+        key = (int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4) or 1))
+        if key >= floor:
+            return True
+    return False
+
+
+TB1_LEAGUE_RE = re.compile(r"\b(?:NBA|WNBA|NBL|EPL|Premier League)\b")
+
+
+def _tb1_league(card) -> bool:
+    """TB-1 covers the league and the card was frozen under the 2026-09-25(e) manifest."""
+    return _manifest_at_least(card) and bool(TB1_LEAGUE_RE.search(card.title + " " + card.issue_text[:3000]))
+
+
+# The settlement lineup diff (C-LINEUP-DIFF) must name players who appear on the issued card.
+# P-510's settlement listed nine 2024-era Cardinals who were not on the card (2026-09-25(e)).
+LINEUP_DIFF_SECTION_RE = re.compile(r"(?:C-LINEUP-DIFF|lineup (?:and availability )?diff)[^\n]*\n?((?:[^\n]*\n){0,6})",
+                                    re.I)
+DIFF_NAME_LIST_RE = re.compile(r"started\s*\(([^)]{20,})\)", re.I)
+
+
+def _lineup_diff_names_on_card(card) -> bool:
+    """True unless a settlement lineup-diff list names players mostly absent from the issued card."""
+    text = card.settlement_text
+    lists = []
+    for m in LINEUP_DIFF_SECTION_RE.finditer(text):
+        lists += DIFF_NAME_LIST_RE.findall(m.group(0))
+    if not lists:
+        return True
+    issue = card.issue_text
+    names = []
+    for chunk in lists:
+        for item in re.split(r",|;", chunk):
+            words = [w for w in re.findall(r"[A-ZÀ-Ý][\w'’.-]+", item) if w.upper() != w or len(w) > 3]
+            words = [w for w in words if w not in ("SS", "CF", "LF", "RF", "DH", "C", "Jr.")]
+            if words:
+                names.append(words[0])
+    if len(names) < 3:
+        return True
+    found = sum(1 for n in names if re.search(r"\b" + re.escape(n) + r"\b", issue))
+    return found / len(names) >= 0.6
 
 
 FIELDS = [
@@ -311,6 +363,18 @@ FIELDS = [
          r"implied P\(margin", r"conditional on (?:the |her |his )?(?:win|winning)"],
         origin="P-495", strict_blocking=True, applies=_tennis_handicap,
     ),
+    Field(
+        "RM", "RM-1 calibrated q printed beside every ranked row's stated p, ranks ordered by q, and the "
+              "TOP2_QUALITY line (C-RANK-MODEL, RULES_GENERAL 2026-09-25(e))", False,
+        [r"C-RANK-MODEL", r"RM-1 q", r"\bRM-1\b[^\n]{0,60}\bq\b", r"TOP2_QUALITY"],
+        origin="2026-09-25(e) ranking model", strict_blocking=True, applies=_manifest_at_least,
+    ),
+    Field(
+        "TB", "TEAM_BASELINE_P (tools/team_baseline.py) beside BASELINE_P where TB-1 covers the league, or "
+              "TEAM_BASELINE_P: NOT_YET_DERIVED (C-TEAM-BASELINE, RULES_GENERAL 2026-09-25(e))", False,
+        [r"TEAM_BASELINE_P", r"C-TEAM-BASELINE", r"\bTB-1\b"],
+        origin="2026-09-25(e) team-strength baseline", strict_blocking=True, applies=_tb1_league,
+    ),
 ]
 
 SETTLEMENT_FIELDS = [
@@ -345,6 +409,12 @@ SETTLEMENT_FIELDS = [
          r"standardi[sz]ed (?:miss|residual|error)"],
         origin="2026-09-24 cohort (BASE_RATES_REGISTER §7.6)", strict_blocking=True,
         applies=_settled_with_width,
+    ),
+    Field(
+        "10n", "the settlement lineup diff names players who are on the issued card — a list of other names is "
+               "a written, not read, process record (C-SETTLEMENT-FROM-FEED, 2026-09-25(e); P-510)", False,
+        [], origin="P-510 (nine 2024-era names in a 2026 diff)", strict_blocking=True,
+        applies=_team_sport_settled, check=_lineup_diff_names_on_card,
     ),
 ]
 
@@ -526,7 +596,10 @@ def audit_card(card: Card, fields: list, doc_level: dict | None = None,
                                    "note": "n/a — does not apply"}
             continue
 
-        hit = any(re.search(p, scope, re.I | re.S) for p in f.patterns)
+        if f.check is not None:
+            hit = bool(f.check(card))
+        else:
+            hit = any(re.search(p, scope, re.I | re.S) for p in f.patterns)
 
         # Some fields are declared once for a whole running log rather than per card
         # (the method-version banner is the standard case). Credit them document-wide.

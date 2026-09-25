@@ -657,3 +657,29 @@ Republications of one release count once: CaribbeanCricket.com and CricTracker a
 - Market keys are never read.
 
 **Where the numbers live:** `BASE_RATES_REGISTER.md` §7 and `RECENCY_AND_REBOUND.md` §7.
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — quick reference: the source review behind the Rank-1/Rank-2 pass
+
+Full rows are in `DATA_SOURCE_REGISTER.md` §"2026-09-25(e)". The rules are in `RULES_GENERAL.md` §"2026-09-25(e)".
+
+**What the review found.**
+- **The binding constraint for Rank 1 and Rank 2 is not source access.** Five of the six P-510–P-515 finals, and the cards' lineups, came from field owners. The constraint is the probability content of the slate, plus two failures:
+  - **Settlement facts were typed, not read.** P-510 and P-511 lineup diffs named players who did not play; P-515's score was wrong (36–14 against the true 36–20).
+  - **Cards had no team-aware anchor** in the sports where their own probabilities carry no information.
+- **Terminal state, verified 2026-09-25:**
+  - MLB statsapi `feed/live` for P-510 and P-511;
+  - NPB official score page `npb.jp/scores/2026/0925/db-t-23/` ("試合終了", 2–1) for P-513;
+  - KBO English scoreboard `eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=…` ("FINAL", 7–8) for P-512;
+  - ESPN `rugby-league/3` scoreboard for P-515 (event 604843: HT 16–6, FT 36–20);
+  - ESPN `basketball/nbl` summary for P-514.
+
+**New lanes.**
+- **ESPN oval scoreboards:** `football/nfl`, `australian-football/afl`, `rugby-league/3`. One date per call. The NRL regular season is ESPN season type 1, finals type 2.
+- **ESPN team schedules:** `…/{league}/teams/{id}/schedule?seasontype=2`, with no type filter for soccer. They are the TB-1 data lane. **NRL returns HTTP 500**, so TB-1 reads the NRL scoreboard day by day.
+- **MLB statsapi boxscore** `api/v1/game/{pk}/boxscore`: `battingOrder` lists each slot's **current** occupant. Starters are the `X00` entries (see `receipts.py`). This is the lineup-diff lane: never type the diff.
+
+**Tools.**
+- `python tools/team_baseline.py predict …` → `TEAM_BASELINE_P` (cache `.cache/team_baseline/`; no browser User-Agent on ESPN).
+- `python tools/rank_model.py rank …` → RM-1 q.
+- Neither reads any market field.

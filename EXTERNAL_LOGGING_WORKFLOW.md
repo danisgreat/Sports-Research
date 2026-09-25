@@ -609,3 +609,36 @@ Home: `RULES_GENERAL.md` §"2026-09-25(b)". These steps apply to every card sett
    ```
    Paste the reliability table, Murphy decomposition, slope and the over-confident slices into the review. Update the `C-TRACK-RECORD` rows in `UPCOMING_GAME_RESEARCH_GUIDE.md` step 10 and `CURRENT_RULES.md`. Record the tests' progress (`T-PLUS-CUSHION`, `C-LOW-RESOLUTION-BAND`, `T-TOTAL-DIRECTION-LEAGUE`, `C-PROB-EXTREMITY`).
 3. **No shrink, weight or cap** is ever derived from these reports (`L-087`). They drive labels, disclosures and tests only.
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — settlement read from the feed; the canonical table gains q and TEAM_BASELINE_P
+
+1. **Canonical settlement table** (it supersedes the 2026-09-25(d) form for cards frozen under `CONTROL_MANIFEST_2026-09-25-5.md` or later):
+
+   ```text
+   | Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+   ```
+
+   - `Rank` is the issued q order.
+   - `p`, `q` and both baselines are copied from the issued Field 4 (`C-SUMMARY-FROM-CARD`).
+   - `Result` is exactly WIN, LOSS, PUSH or VOID. Narrative goes in a separate column or line, never in the result cell. That is how 17 historical rows were mis-graded.
+2. **`C-SETTLEMENT-FROM-FEED`.** Process facts are read, never typed:
+   - the linescore, lineup diff, scorers, statistics, the half-time or period score, and times;
+   - they come from `receipts.py settle …` or from an endpoint response fetched in the session and pasted with its URL and retrieval time.
+
+   A script may *assemble* a block from fetched JSON. It may never contain narrative or numbers as literals (P-510–P-515). Run `python audit_card_controls.py <log> --settlement --strict`: field `10n` fails a lineup diff whose names are not on the card.
+3. **Import and archive.** When a mini log is closed:
+   - import its verbatim issued records and settlement into Part 5, as P-510–P-515 were in §"2026-09-25(f)";
+   - update the snapshot and `GAME_LOG_STATUS_CURRENT.md`;
+   - `git mv` the folder to `archive/mini_logs/… SETTLED …/`;
+   - open the next mini log with the current manifest named in its header.
+
+   The extractor reads every active mini log, so a card settled there counts before import.
+4. **At the 25-card review:**
+   ```bash
+   python research/settled_rows_2026-09-25/extract_settled_rows.py
+   python research/rank_model_2026-09-25e/validate_rank_model.py
+   python tools/rank_model.py fit --fitted <date> --out tools/rank_model_coefficients.json
+   ```
+   Report p against q for `T-RM1-PROSPECTIVE`. Then issue a new control manifest.

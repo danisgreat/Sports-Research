@@ -971,3 +971,42 @@ Full records: [`PREDICTION_LOG_COMBINED_5.md` §"2026-09-23(c)"](PREDICTION_LOG_
 - **K-10. Departure ledger.** With resolution near zero, every departure from `BASELINE_P` is itemised (`C-DEPARTURE-LEDGER`). The seed baseline check found the basketball rows no better than the population.
 
 Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank 1 and Rank 2 in basketball: the team baseline, cushion population rates and the ranking model
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)". Evidence: `research/team_baseline_2026-09-25e/README.md`, `research/rank_model_2026-09-25e/README.md`.
+
+**Record at Rank 1/2 (probability era): 18 W / 16 L.** Resolution is near zero. Underdog cushions won 2/9. P-514 (NBL): Under 188.5 lost; Hawks +1.5 lost; the complement Bullets −1.5 won.
+
+### (a) Sources
+
+- **TB-1 lane.** ESPN team schedules (`…/basketball/{nba,wnba,nbl}/teams/{id}/schedule?seasontype=2`), no browser User-Agent. `python tools/team_baseline.py predict --league nba|wnba|nbl …`.
+- **Not covered:** FIBA, LKL, BCL, EuroLeague, LNBP and LMB have no TB-1 lane (`TEAM_BASELINE_P: NOT_COVERED`). `BASELINE_P` stays the anchor, and the §7.1 reference width applies.
+- **Unchanged:** official starters, the NBL `jumpBall` tip marker, and the settlement diff from `receipts.py settle espn`.
+
+### (b) Reasoning
+
+- **K-11. TB-1 is the anchor for NBA, WNBA and NBL sides.**
+  - Out of sample, P(home win) Brier: NBA 0.216 v 0.248; WNBA 0.216 v 0.256; NBL 0.223 v 0.255.
+  - NBA and WNBA totals also have resolution (0.240 v 0.249; 0.232 v 0.258). **NBL totals do not.**
+  - A departure of more than 0.10 from `TEAM_BASELINE_P` names a receipted mechanism: a confirmed absence, rest, travel, or the NBL early-season −8.5 on totals.
+  - `TB1_EARLY_SEASON` applies below 3 games per team. In the WNBA, TB-1 carries last season forward (r = 0.75).
+- **K-12. Small cushions at their population rate.** The TB-1 underdog covers:
+
+  | Cushion | Population cover rate |
+  |---|---|
+  | +1.5 | 0.32–0.40 |
+  | +2.5 | 0.35–0.43 |
+  | +3.5 | 0.38–0.45 |
+  | +5.5 | 0.44–0.51 |
+
+  Sources: NBA 2025-26, WNBA 2025–26, NBL 2024-26 (`BASE_RATES_REGISTER.md` §7.7(c)).
+  - A +k.5 row on the weaker team stated above its rate by more than 0.05 needs a receipted mechanism on the favourite's side. Otherwise it is `PLUS_CUSHION_UNSUPPORTED`, and **RM-1 flips the pair.** In P-514, Bullets −1.5 had RM-1 q ≈ 0.74; it won.
+  - "The underdog keeps it close" is not a mechanism: P(|margin| ≤ 2) is only 7–12%.
+- **K-13. Ranking.**
+  - Rank by RM-1 q.
+  - A flipped favourite handicap is capped at SUPPORTED. It may be overridden only if `TEAM_BASELINE_P` gives the stated cushion ≥ 0.55.
+  - Basketball total widths still run narrow (M31), so an Under at Rank 1 needs its width at or above the reference.
+- **Rejected (M27):** `C-ABSENCE-DEFENSIVE-PENALTY`, from two games (P-514, P-515). An absence widens the distribution (G-L2); it does not set a signed lean without a measured rate.

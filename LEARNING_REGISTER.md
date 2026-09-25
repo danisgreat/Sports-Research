@@ -1357,3 +1357,48 @@ Everything is hindsight on the framework's own selected cards and LEARNING_ONLY.
 | ID | Pattern | Control | Evidence |
 |---|---|---|---|
 | **M32** *(new; three independent readings)* | **Underdog cushion outside baseball stated as if it were a baseball +1.5.** A +k.5 row is priced near 0.60–0.77 without a margin mechanism, in sports where blowouts and garbage-time structure make margins wide | `C-PLUS-CUSHION`; `C-DEPARTURE-LEDGER`; G-L12 | G-L12 origin (10 W / 13 L); `C-UNDERDOG-SEPARATION`; 2026-09-25(d) review: 17/40 at 0.642 |
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+# 2026-09-25(e) — Rank 1 and Rank 2: the ranking model, the team baseline and settlement integrity
+
+**Evidence:**
+- [`research/rank_model_2026-09-25e/README.md`](research/rank_model_2026-09-25e/README.md) (RM-1);
+- [`research/team_baseline_2026-09-25e/README.md`](research/team_baseline_2026-09-25e/README.md) (TB-1, the NFL/AFL/NRL references, cushion base rates);
+- the settled-row dataset, rebuilt (1,264 graded rows; 641 with p).
+
+**Controls:** `RULES_GENERAL.md` §"2026-09-25(e)".
+
+**Origin:** the user's instruction of 2026-09-25 to make Rank 1 and Rank 2 far more likely to win than lose, and to build a probability model or calibration if one could be built. RM-1 is the user-authorised `L-087` exception. TB-1 is fitted on population data only.
+
+## A. Prospective tests opened
+
+| Test ID | Origin | Frozen hypothesis | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`T-RM1-PROSPECTIVE`** | RM-1 beat the stated p on log loss in grouped CV and four forward splits; ranking by q raised top-two wins held out (+0.068 per card [+0.007, +0.128]), with R1 and R2 never lower in any forward split | RM-1 q is better calibrated than stated p on untouched cards, and q-ordered Rank 1 + Rank 2 wins at least as often as p-ordered | Every ranked row issued under `CONTROL_MANIFEST_2026-09-25-5.md` or later | 25 cards | 0 | **q Brier > p Brier over the 25 cards:** `C-RANK-MODEL` reverts to disclosure-only. **Otherwise** it stays operative and RM-1 is refitted at the review | TESTING — operative |
+| **`T-TB1-ANCHOR`** | TB-1 beats the population on sides by 5–19% in Brier (NBA, WNBA, NBL, NFL, AFL, NRL, EPL); the cards have ~0 resolution in basketball and none in NFL/AFL | In covered leagues, a card's row probability is no better than `TEAM_BASELINE_P` unless its departure names a receipted mechanism | Ranked rows in covered leagues with `TEAM_BASELINE_P` printed | 40 rows | 0 | **Card Brier − TB-1 Brier ≥ 0 over 40 rows:** departures from TB-1 above 0.05 need a receipted mechanism (the evidence grade is capped at LOW otherwise) | TESTING |
+| **`T-NRL-BYE-RUST`** | P-515 retrospective candidate (one game) | NRL finals teams coming off a bye are out-scored in the first half beyond their TB-1 margin | NRL finals after a bye, from the ESPN `rugby-league/3` scoreboard (half-time `linescores`), historical and prospective | 30 games | 0 | Mean first-half residual below −3 with a 95% interval excluding 0: open a CANDIDATE; otherwise close | TESTING — non-binding; no ranking effect |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260925-35 | **The extractor read narrative result columns.** 17 rows were graded the wrong way round and 55 dropped in the 2026-09-25(d) dataset (e.g. "Lobos lost by 1; +2.5 covers" read as a loss). P-514 NBL was classed as NPB via "Hawks" | **PROMOTED_PROCESS (tool fix):** an exact result token beats narrative; an explicit league word beats a nickname; the mini log is included. The (d) figures move slightly; none of their conclusions changes | `tools/test_rank_model.py` (the family rules match the extractor); the diff in this pass |
+| L-20260925-36 | **Rank-1 success follows the probability tier, not the slot.** Held out: q ≥ 0.70 won 80.6% (Rank 1 73.1%); below 0.70, 52–63% | **REFERENCE + PROMOTED_PROCESS (disclosure)** `C-TOP2-QUALITY` and `SLATE_ADVISORY` | `T-RM1-PROSPECTIVE` |
+| L-20260925-37 | **The decision-side calibration slope is about 1.5, not 1.** logit(q) = −0.19 + 1.54·logit(p). This amends the *reading* of L-20260925-27: the all-rows slope of 1.06 includes forced complements, which symmetrise the fit. On the decision side the middle is over-stated and the top under-stated | **OPERATIVE (user-authorised) in RM-1**, with safeguards | `T-RM1-PROSPECTIVE` |
+| L-20260925-38 | **The cushion term.** Outside baseball, hockey and soccer, +k.5 decisions won 7/27 at a stated ~0.58. The RM-1 coefficient was −0.50 by P-420 and −1.03 by P-495. Held out: 26 rows, mean q 0.307, won 0.308. The ordinal era was different (17/28) | **OPERATIVE in RM-1.** `T-PLUS-CUSHION` is now measured through RM-1 q | `T-RM1-PROSPECTIVE`; refit at the review |
+| L-20260925-39 | **The population mechanism.** The TB-1 underdog's small cushions cover 32–54% in basketball, NFL and NRL, and 38–43% at AFL +6.5 (`BASE_RATES_REGISTER.md` §7.7(c)) | **REFERENCE + construction rule** (`C-PLUS-CUSHION` amended: the population cover rate is the cushion's `BASELINE_P`) | 25-card review |
+| L-20260925-40 | **A richer RM-1X** (per-sport slopes and offsets, 14 class offsets) did not generalise: its ridge weight went to the maximum in every forward split | **REJECTED** for now; kept switched off and re-tested at each review | Each 25-card review |
+| L-20260925-41 | **TB-1 resolution map.** Sides: NBA, WNBA, NBL, NFL, AFL, NRL, EPL. Totals: NBA, WNBA, NFL. MLB and NHL: none | **PROMOTED_PROCESS (tool and anchor)** `C-TEAM-BASELINE` | `T-TB1-ANCHOR` |
+| L-20260925-42 | **NFL, AFL and NRL population references** derived for the first time (1,704 games; NFL key numbers at 3 and 7) | **REFERENCE** (`BASE_RATES_REGISTER.md` §7.7) | Staleness rule |
+| L-20260925-43 | **The P-510–P-515 settlement was script-typed.** P-510/P-511 lineup diffs were false; P-515's score was wrong (36–14 against 36–20); unsourced "facts" (329 m) | **PROMOTED_PROCESS (settlement-integrity control)** `C-SETTLEMENT-FROM-FEED`; audit field `10n`; the six process records are `PROCESS_RECORD_UNVERIFIED`; M26 recurrence | Audit `10n` on every settlement |
+| L-20260925-44 | **Mini-log rule candidates:** `C-ABSENCE-DEFENSIVE-PENALTY`, `C-KBO-PITCHER-VELOCITY-FILTER`, `C-NRL-SPINE-PEDIGREE-TOTAL-FLOOR`, "ace dominance" | **REJECTED (M27)**: one or two games, partly invented support | — |
+| L-20260925-45 | **`C-FINALS-BYE-RUST`** | **TESTING, non-binding** (`T-NRL-BYE-RUST`) | 30 games |
+| L-20260925-46 | **Hockey +1.5 was grouped with the cushion class** in the first RM-1 draft, on one row of evidence | **Corrected before issue:** hockey sits with baseball (`hcp_plus_low`), because one-goal games are common | Unit test |
+
+## C. Recurring-mistake registry updates
+
+| ID | Update |
+|---|---|
+| M26 (process record written, not read) | **Recurrence:** P-510, P-511 and P-515, through a script with literal narratives. Control: `C-SETTLEMENT-FROM-FEED`, audit `10n` |
+| M32 (non-baseball cushion priced like a baseball +1.5) | **Mechanism now measured.** The population cover of a small cushion on the weaker team is 0.32–0.54. Control: `C-PLUS-CUSHION` amended, plus the RM-1 flip |

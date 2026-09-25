@@ -587,3 +587,12 @@ Build score/margin distributions from team strength, lineup/bench/kicker availab
 
 
 Current prospective override. Retain format-specific possession/territory, set-piece, discipline/cards, replacements, goal-kicking and extra-time/tiebreak rules, with sparse-evidence uncertainty widening. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, imported rugby-league rates, and one-result response rules. Build one coherent rugby-union/sevens joint outcome distribution before querying targets.
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank 1 and Rank 2 in rugby union
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)".
+
+- **No union population or TB-1 lane has been derived yet.** Cards print `TEAM_BASELINE_P: NOT_COVERED` and `REFERENCE_BASE_RATE: NOT_YET_DERIVED`. The ESPN rugby union scoreboards are the candidate lane for the next research pass.
+- **RM-1's cushion term applies to union +k.5 rows.** The rugby rows in the record (P-127, P-128, P-132, P-363) include large cushions that won. So a large cushion (k ≥ 10) stated at 0.60–0.65 is still scored by RM-1; when the card writes the reconciliation line, it names the population margin band (`C-PLUS-CUSHION`).
+- **The ranking rules are general:** rank by RM-1 q, print `TOP2_QUALITY`, and settle from the feed.

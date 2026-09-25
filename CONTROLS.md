@@ -313,3 +313,19 @@ Home: `RULES_GENERAL.md` §"2026-09-25(d)". Evidence: `research/settled_rows_202
 | **`C-LOW-RESOLUTION-BAND`** | Rows stated 0.50–0.65 are labelled `LOW_RESOLUTION` and described as near-coin-flips | disclosure | Process defect |
 | **Calibration review standard** | Every 25-card review runs `tools/calibration_report.py`: reliability, Murphy decomposition, logistic slope, card-cluster slices, baseline difference. No rank-slot claims below #1 | measurement | Review incomplete |
 | **`tools/card_math.py`** | The reference distribution-to-contract implementation (M14/G-L8): normal, negative binomial, Poisson, Skellam, `no_zero`, push mass, exact joints | tool | A row not reproducible from the card's own distribution is invented precision (METHOD §12) |
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank-1/Rank-2 controls: the ranking model, the team baseline and settlement from the feed
+
+Home: `RULES_GENERAL.md` §"2026-09-25(e)". Evidence: `research/rank_model_2026-09-25e/README.md`, `research/team_baseline_2026-09-25e/README.md`. Freeze receipt: `CONTROL_MANIFEST_2026-09-25-5.md`.
+
+**Status.** `C-RANK-MODEL` is the user-authorised exception to `L-087`. It changes the issued order, never the stated p.
+
+| Control | Rule in one line | Class | Failure consequence |
+|---|---|---|---|
+| **`C-RANK-MODEL`** | Every ranked row prints stated p and RM-1 q, tier and flags (`tools/rank_model.py rank`). Ranks follow q. A `SIDE_FLIP` (≥ 0.05 across 0.5) is capped at SUPPORTED, reconciled, and overridable only by a TB-1 target with resolution giving the stated side ≥ 0.55 | **OPERATIVE** (user-authorised; `T-RM1-PROSPECTIVE`) | Audit field `RM` (strict-blocking from manifest 2026-09-25-5); a p-ordered card is a process defect |
+| **`C-TOP2-QUALITY`** | The card prints `TOP2_QUALITY` (STRONG / SUPPORTED / TOP1_ONLY / COIN_FLIP). Under COIN_FLIP, the delivery says so in plain words. Optional `SLATE_ADVISORY`: up to two same-event rows the card's own distribution prices at q ≥ 0.70, unranked and unscored | disclosure | Process defect (it prints via `RM`) |
+| **`C-TEAM-BASELINE`** | Covered leagues (NBA, WNBA, NBL, NFL, AFL, NRL, EPL; optionally MLB, NHL) print `TEAM_BASELINE_P` beside `BASELINE_P` (`tools/team_baseline.py`). The departure ledger anchors on it where TB-1 has resolution | **OPERATIVE** (population-fitted; `T-TB1-ANCHOR`) | Audit field `TB` (strict-blocking in covered leagues from manifest 2026-09-25-5); `UNEXPLAINED_DEPARTURE` above 0.10 without a receipted mechanism |
+| **`C-PLUS-CUSHION` (amended)** | A non-baseball, non-hockey, non-soccer +k.5 row takes its `BASELINE_P` from the population cover rate (`BASE_RATES_REGISTER.md` §7.7(c)). Stated more than 0.05 above it, it needs a receipted mechanism on the favourite's side | construction rule | `PLUS_CUSHION_UNSUPPORTED`; the RM-1 flip stands |
+| **`C-SETTLEMENT-FROM-FEED`** | Settlement process facts (linescore, lineup diff, scorers, statistics) come from `receipts.py` or from a fetched endpoint pasted with its URL. A script may assemble fetched data but never hold narrative or numeric literals | settlement integrity (OPERATIVE) | `PROCESS_RECORD_UNVERIFIED`; audit field `10n` (the diff's names must be on the card; strict-blocking) |

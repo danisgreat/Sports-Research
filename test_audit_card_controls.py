@@ -232,6 +232,39 @@ class ResearchFieldTests(unittest.TestCase):
         card = audit(text, strict=True)["P-691"]
         self.assertTrue(card.present["HC"]["note"].startswith("n/a"))
 
+    # ---- 2026-09-25(e): RM, TB and 10n
+    def test_rank_model_field_gated_by_manifest(self):
+        old = "#### P-730 — MLB, Cardinals @ Pirates\n" + FULL_ISSUE + "Freeze: CONTROL_MANIFEST_2026-09-25-4.md.\n"
+        self.assertTrue(audit(old, strict=True)["P-730"].present["RM"]["note"].startswith("n/a"))
+        new = "#### P-731 — MLB, Cardinals @ Pirates\n" + FULL_ISSUE + "Freeze: CONTROL_MANIFEST_2026-09-25-5.md.\n"
+        card = audit(new, strict=True)["P-731"]
+        self.assertIn("RM", card.missing_blocking)
+        ok = new + "| 1 | 1 | Cardinals +1.5 | 0.602 | RM-1 q 0.611 | LEAN |\nTOP2_QUALITY: TOP2_COIN_FLIP\n"
+        self.assertTrue(audit(ok, strict=True)["P-731"].present["RM"]["present"])
+
+    def test_team_baseline_field_only_for_covered_leagues(self):
+        nbl = ("#### P-740 — NBL basketball, Hawks @ Bullets\n" + FULL_ISSUE +
+               "Freeze: CONTROL_MANIFEST_2026-09-25-5.md. RM-1 q printed. TOP2_QUALITY: TOP1_ONLY\n")
+        card = audit(nbl, strict=True)["P-740"]
+        self.assertIn("TB", card.missing_blocking)
+        ok = nbl + "TEAM_BASELINE_P home_-1.5 0.517 (TB-1; flags TB1_EARLY_SEASON)\n"
+        self.assertTrue(audit(ok, strict=True)["P-740"].present["TB"]["present"])
+        kbo = ("#### P-741 — KBO, Eagles @ Dinos\n" + FULL_ISSUE +
+               "Freeze: CONTROL_MANIFEST_2026-09-25-5.md. TOP2_QUALITY: TOP1_ONLY\n")
+        self.assertTrue(audit(kbo, strict=True)["P-741"].present["TB"]["note"].startswith("n/a"))
+
+    def test_lineup_diff_names_must_be_on_card(self):
+        card_text = ("#### P-750 — MLB, Cardinals @ Pirates\n" + FULL_ISSUE +
+                     "Lineup STL: Wetherholt, Herrera, Burleson, Walker, Bernal, Torres, Saggese, Church, Winn.\n")
+        fake = (card_text + "\n#### Settlement and full retrospective\n\n##### 4. Lineup and availability diff (`C-LINEUP-DIFF`)\n"
+                "- Cardinals: 9 of 9 named starters started (Winn SS, Burleson 1B, Contreras DH, Arenado 3B, Nootbaar LF, "
+                "Walker RF, Gorman 2B, Siani CF, Pages C).\n")
+        self.assertIn("10n", audit(fake, settlement=True, strict=True)["P-750"].missing_blocking)
+        real = (card_text + "\n#### Settlement and full retrospective\n\n##### 4. Lineup and availability diff (`C-LINEUP-DIFF`)\n"
+                "- Cardinals: 9 of 9 named starters started (Wetherholt 2B, Herrera C, Burleson 1B, Walker RF, Bernal DH, "
+                "Torres LF, Saggese 3B, Church CF, Winn SS).\n")
+        self.assertTrue(audit(real, settlement=True, strict=True)["P-750"].present["10n"]["present"])
+
 
 if __name__ == "__main__":
     unittest.main()

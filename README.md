@@ -71,6 +71,8 @@ python tools/skill_baseline.py                # after appending rows to SKILL_BA
 python tools/card_math.py total --dist negbin --mean 8.4 --sd 3.97 --line 7.5       # rows from the card's own distribution
 python tools/card_math.py cover --dist normal --mean 1.44 --sd 13.63 --line -1.5 --no-zero
 python tools/card_math.py departure --p 0.613 --baseline 0.530 --mech "pace:0.6" --mech "lineup:0.4"
+python tools/team_baseline.py predict --league nbl --home "Brisbane Bullets" --away "Illawarra Hawks" --date 2026-09-25 --total 188.5 --home-line -1.5
+python tools/rank_model.py rank --sport nbl --row "Under 188.5=0.646" --row "Hawks +1.5=0.540" --row "Bullets -1.5=0.460" --row "Over 188.5=0.354"
 python research/settled_rows_2026-09-25/extract_settled_rows.py && python tools/calibration_report.py
 ```
 
@@ -92,13 +94,14 @@ If you edited a governance file, regenerate the freeze receipt with `python tool
 | Item | State |
 |---|---|
 | Active canonical log | [Part 5](PREDICTION_LOG_COMBINED_5.md) (P-482 onward). Parts 1–4 are closed |
-| Active mini log | `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-510 onward - 2026-09-25/` |
-| Next canonical ID | See Part 5's snapshot (P-510 as of 2026-09-25(c)) |
-| Awaiting operator decision | Canonical numbers for `TMP-20260923-NBL-CNS-TAS` and `TMP-20260923-NPB-CHU-DB-G25` (both settled) |
+| Active mini log | `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-516 onward - 2026-09-25/` |
+| Next canonical ID | See Part 5's snapshot (**P-518** as of 2026-09-26: P-510–P-515 imported in §"2026-09-25(f)"; P-516/P-517 assigned to the settled temporary IDs in §"2026-09-26(a)") |
+| Temporary IDs | None open. `TMP-20260923-NPB-CHU-DB-G25` = **P-516**; `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)) |
 | Freeze receipt | The manifest named in [`METHOD.md`](METHOD.md)'s header |
 | Skill v baseline | Seed: card Brier 0.2461 v naive baseline 0.2360 (n = 29, 9 cards; interval spans 0). Prospective count 0 of 100 |
 | Full-record calibration (2026-09-25(d)) | 598 rows, 149 cards: Brier 0.2249, slope 1.06, skill +7.7% over the base rate. Skill lives at p ≥ 0.65 (80.3% won); 0.50–0.65 is coin-flip-grade (53.6%). Non-baseball underdog cushions are over-confident (17/40 at 0.642). Soccer shows clear skill; MLB and basketball near zero; tennis, NFL/NCAA and AFL none ([details](research/settled_rows_2026-09-25/README.md)) |
-| Numerical model | Not built ([`H0_DATASET_CARD.md`](H0_DATASET_CARD.md)) |
+| Ranking and baselines (2026-09-25(e)) | **RM-1** calibrates each stated p into a ranking probability q, and cards rank by q. Held out: top-two wins +0.068 per card [+0.007, +0.128]; Rank 1 64.2% → 68.9% ([details](research/rank_model_2026-09-25e/README.md)). **TB-1** is a leak-free team-strength baseline with resolution for sides in NBA/WNBA/NBL/NFL/AFL/NRL/EPL, and none in MLB/NHL ([details](research/team_baseline_2026-09-25e/README.md)). Rank 1 is "far more likely to win than lose" only in the STRONG tier (q ≥ 0.70: 81% of decisions) |
+| Numerical model | H0 not built ([`H0_DATASET_CARD.md`](H0_DATASET_CARD.md)). RM-1 and TB-1 are a calibration layer and a population baseline, not H0 |
 
 ## Canonical custody
 

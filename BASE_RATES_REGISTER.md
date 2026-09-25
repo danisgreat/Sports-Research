@@ -325,6 +325,76 @@ z = (actual − card centre) / card width, from each card's Field 3 line and the
 - Margin widths were adequate.
 - n = 7 is far too small to calibrate on. This opens the prospective measurement `C-WIDTH-Z` (`LEARNING_REGISTER.md` §"2026-09-25(b)"), and it is **not** a width multiplier.
 
+### 7.7 NFL, AFL and NRL references, TB-1 widths and underdog-cushion cover rates (derived 2026-09-25(e))
+
+**Source.** ESPN site API scoreboards (`football/nfl`, `australian-football/afl`, `rugby-league/3`), one date per call. There were 1,704 completed games and 0 failed days. The NRL regular season is ESPN season type 1. Query: `research/team_baseline_2026-09-25e/oval_base_rates.py` → `oval_base_rates.json`. No odds are read. These rows replace `NOT_YET_DERIVED` for the NFL, AFL and NRL.
+
+#### (a) Population rows
+
+| | NFL 2024 | NFL 2025 | AFL 2025 | AFL 2026 | NRL 2025 | NRL 2026 |
+|---|---:|---:|---:|---:|---:|---:|
+| n | 272 | 272 | 207 | 207 | 216 | 213 |
+| Home win (non-neutral) | 0.524 | 0.536 | 0.565 | 0.585 | 0.551 | 0.545 |
+| Draw | 0.000 | 0.004 | 0.005 | 0.015 | 0.005 | 0.000 |
+| Total mean (SD) | 45.8 (13.1) | 46.0 (13.8) | 168.6 (29.8) | 178.2 (29.1) | 46.1 (14.0) | 47.8 (13.9) |
+| Total 10 / 50 / 90% | 30 / 46 / 62 | 29 / 45 / 65 | 132 / 168 / 208 | 142 / 181 / 216 | 29 / 44 / 64 | 30 / 48 / 66 |
+| Home margin mean | +1.7 | +2.2 | +6.0 | +7.1 | +3.8 | +0.0 |
+| Margin SD | 14.5 | 14.2 | 42.5 | 40.8 | 18.7 | 20.7 |
+
+**NFL key numbers** (the G-L12 residual benchmark; previously `NOT_YET_DERIVED`):
+
+| Margin | 2024 | 2025 |
+|---|---:|---:|
+| P(\|margin\| = 3) | 0.136 | 0.151 |
+| P(\|margin\| = 7) | 0.074 | 0.096 |
+| P(\|margin\| ≤ 3) | 0.239 | 0.268 |
+| P(\|margin\| ≤ 7) | 0.518 | 0.496 |
+
+**Close games:**
+- AFL: P(\|m\| ≤ 6) 0.145 / 0.169; ≤ 12 0.300 / 0.280; ≤ 24 0.478 / 0.473.
+- NRL: P(\|m\| ≤ 2) 0.125 / 0.150; ≤ 6 0.343 / 0.291; ≤ 12 0.509 / 0.455.
+
+#### (b) Reference widths (TB-1 residual SD, leak-free)
+
+| | Total | Margin |
+|---|---:|---:|
+| NFL | 13.4 | 13.6 |
+| AFL | 29.1 | 36.8 |
+| NRL | 13.9 | 19.9 |
+
+The `C-WIDTH-BENCHMARK` row for these leagues. A card below 0.85 × the reference names what it knows.
+
+#### (c) Underdog cushion cover rates
+
+The underdog is the side with the lower leak-free TB-1 margin, never the market. Each entry is the share of games in which the underdog covered +k.5.
+
+| League (season) | Dog won | +1.5 | +2.5 | +3.5 | +4.5 / +5.5 / +6.5 | +7.5 / +8.5 | larger |
+|---|---:|---:|---:|---:|---:|---:|---|
+| NBA 2025-26 | 0.297 | 0.321 | 0.348 | 0.383 | +5.5 0.439 | +7.5 0.501 | +9.5 0.562 |
+| WNBA 2026 | 0.321 | 0.339 | 0.365 | 0.390 | +5.5 0.459 | +7.5 0.531 | +9.5 0.610 |
+| WNBA 2025 | 0.353 | 0.365 | 0.385 | 0.409 | +5.5 0.480 | +7.5 0.540 | +9.5 0.631 |
+| NBL 2025-26 | 0.368 | 0.397 | 0.427 | 0.449 | +5.5 0.507 | +7.5 0.559 | +9.5 0.566 |
+| NBL 2024-25 | 0.383 | 0.392 | 0.408 | 0.442 | +5.5 0.500 | +7.5 0.583 | +9.5 0.683 |
+| NFL 2024 | 0.320 | 0.345 | 0.379 | 0.453 | +6.5 0.567 | +7.5 0.606 | +10.5 0.690; +13.5 0.704 |
+| NFL 2025 | 0.395 | 0.422 | 0.457 | 0.543 | +6.5 0.596 | +7.5 0.655 | +10.5 0.695; +13.5 0.762 |
+| NRL 2025 | 0.385 | 0.412 | 0.440 | — | +4.5 0.511; +6.5 0.566 | +8.5 0.615 | +12.5 0.670 |
+| NRL 2026 | 0.417 | 0.429 | 0.491 | — | +4.5 0.509; +6.5 0.549 | +8.5 0.617 | +12.5 0.651 |
+| AFL 2025 | 0.294 | — | — | — | +6.5 0.383 | +12.5 0.483 | +18.5 0.556; +24.5 0.600; +30.5 0.628 |
+| AFL 2026 | 0.328 | — | — | — | +6.5 0.430 | +12.5 0.505 | +18.5 0.586; +24.5 0.618; +30.5 0.688 |
+
+**Use.** This table is the `BASELINE_P` of a +k.5 row on the TB-1 underdog (`C-PLUS-CUSHION` as amended in `RULES_GENERAL.md` §"2026-09-25(e)"(e)). Read the nearest k and the most recent season. Where the side is not the TB-1 underdog, use `TEAM_BASELINE_P`.
+
+**Reading.** A small cushion on the weaker team covers well under half the time in every one of these leagues. That is the population mechanism behind M32.
+
+#### (d) TB-1 resolution map (out of sample, latest season)
+
+Details are in `research/team_baseline_2026-09-25e/README.md`.
+
+| Target | TB-1 beats the base rate | No resolution |
+|---|---|---|
+| Sides and margins | NBA, WNBA, NBL, NFL, AFL, NRL, EPL (by 5–19% in Brier) | MLB, NHL |
+| Totals | NBA, WNBA, NFL (marginal) | NBL, AFL, NRL, EPL, MLB, NHL |
+
 ---
 
 ## Maintenance

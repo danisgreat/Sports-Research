@@ -13,6 +13,9 @@ itself. After generating it:
 - repoint METHOD.md's header;
 - repoint the active mini log's "Freeze with every card" row, with the printed SHA;
 - run tools/verify_manifest.py.
+
+A manifest that changes a forecasting coefficient, cap or ranking rule must say so with
+--model-change "..." (added 2026-09-25(e), when RM-1 made the default no-change line false).
 """
 from __future__ import annotations
 
@@ -29,8 +32,11 @@ from manifest_lib import current_manifest, file_digest, read_rows  # noqa: E402
 REPO = Path(__file__).resolve().parent.parent
 
 
+NO_MODEL_CHANGE = "**It does not change any forecasting coefficient, probability cap or ranking override.**"
+
+
 def build(prev: Path, out_name: str, title: str, note: str, add=(), drop=(), repo: Path = REPO,
-          now: dt.datetime | None = None) -> tuple[str, dict]:
+          now: dt.datetime | None = None, model_change: str | None = None) -> tuple[str, dict]:
     prev_rows = {rel: sha for rel, sha, _ in read_rows(prev)}
     files = [rel for rel in prev_rows if rel not in set(drop)]
     for rel in add:
@@ -61,7 +67,7 @@ def build(prev: Path, out_name: str, title: str, note: str, add=(), drop=(), rep
         f"Status: **CURRENT post-write content receipt**, generated {stamp} by `tools/make_manifest.py` "
         f"from `{prev.name}`.\n\n"
         f"**Purpose.** This is the byte-level SHA-256 receipt that every new card freezes (`METHOD.md` header; PF-7). {note}\n\n"
-        "**It does not change any forecasting coefficient, probability cap or ranking override.**\n\n"
+        + (f"**Model change:** {model_change}" if model_change else NO_MODEL_CHANGE) + "\n\n"
         "This manifest is excluded from its own hash table. The living logs (`PREDICTION_LOG_COMBINED_5.md`, "
         "`GAME_LOG_STATUS_CURRENT.md`) are a write-time snapshot and change with every card. Hashes are taken "
         "in CRLF form (`tools/manifest_lib.py`); verify with `python tools/verify_manifest.py`.\n\n"
@@ -87,13 +93,16 @@ def main(argv=None) -> int:
     ap.add_argument("--from", dest="prev")
     ap.add_argument("--add", nargs="*", default=[])
     ap.add_argument("--drop", nargs="*", default=[])
+    ap.add_argument("--model-change", default=None,
+                    help="state a change to a forecasting coefficient, cap or ranking rule (replaces the no-change line)")
     args = ap.parse_args(argv)
     prev = REPO / args.prev if args.prev else current_manifest(REPO)
     out = REPO / args.out
     if out.exists():
         print(f"error: {args.out} already exists; choose a new name", file=sys.stderr)
         return 2
-    text, info = build(prev, args.out, args.title, args.note, args.add, args.drop)
+    text, info = build(prev, args.out, args.title, args.note, args.add, args.drop,
+                       model_change=args.model_change)
     out.write_bytes(text.encode("utf-8").replace(b"\r\n", b"\n").replace(b"\n", b"\r\n"))
     sha = hashlib.sha256(out.read_bytes()).hexdigest()
     print(f"wrote {args.out}: {len(info['files'])} files; changed {len(info['changed'])}, new {len(info['new'])}, "

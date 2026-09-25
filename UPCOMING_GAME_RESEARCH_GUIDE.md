@@ -957,3 +957,30 @@ Add these five steps to the §19 one-page checklist, after participant research 
     - the named reason it stays close.
 
     The full record: 17/40 won at a stated 0.642 (M32).
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — checklist additions for Rank 1 and Rank 2
+
+13. **Team baseline.** For NBA, WNBA, NBL, NFL, AFL, NRL or EPL (and optionally MLB or NHL), run:
+
+    ```bash
+    python tools/team_baseline.py predict --league <league> --home "<home>" --away "<away>" --date <venue-local date> --total <line> --home-line <home handicap>
+    ```
+
+    Print `TEAM_BASELINE_P` and its flags beside `BASELINE_P`. Where TB-1 has resolution, the departure ledger measures from it. Elsewhere it prints `NOT_COVERED` or `NOT_YET_DERIVED`.
+14. **Cushion baseline.** A +k.5 row outside baseball, hockey and soccer reads its population cover rate from `BASE_RATES_REGISTER.md` §7.7(c). Stated more than 0.05 above it, it needs a receipted mechanism on the favourite's side.
+15. **Official starters before a lineup-dependent Rank 1.** A "projected" lineup behind a Rank-1 total or margin is a G14.2 breach. P-514 named three starters who did not play.
+16. **Rank with RM-1.** After every row's p is derived:
+
+    ```bash
+    python tools/rank_model.py rank --sport <league> --row "<contract>=<p>" …
+    ```
+
+    - Paste the table.
+    - Issue ranks in the q order.
+    - Print `TOP2_QUALITY`. Under `TOP2_COIN_FLIP`, say plainly in the delivery that the top two are near coin flips.
+17. **`SLATE_ADVISORY`** (optional, after the freeze). When the top two are not STRONG, name up to two same-event contracts the card's own distribution prices at q ≥ 0.70. Label them unranked, unscored and not a betting recommendation.
+    - Soccer: phase rows, team totals, double chances.
+    - Baseball: +2.5 run lines, low total lines.
+    - Oval sports: wide cushions, at their population rates.
+18. **Settlement.** Read everything from the feed (`receipts.py settle …`). Score both p and q.

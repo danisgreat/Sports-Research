@@ -2993,3 +2993,164 @@ Rows stated between 0.50 and 0.65 are labelled `LOW_RESOLUTION`, and the card's 
 2. **`tools/card_math.py`** is the reference implementation of distribution-to-contract queries: normal with continuity correction, negative binomial, Poisson, Skellam, a `no_zero` option for margins, push mass, exact same-variable joints, and the departure ledger. It reproduces the issued P-509 and P-500 probabilities within 0.015. It is the M14/G-L8 check.
 3. **Canonical settlement table** (`EXTERNAL_LOGGING_WORKFLOW.md` §"2026-09-25(d)"): `| Rank | Contract | Family | p | BASELINE_P | Result | Brier |`. The dataset is rebuilt with `python research/settled_rows_2026-09-25/extract_settled_rows.py`.
 4. **Joint failure (G-L17).** Without a named shared driver, P(¬R1 ∧ ¬R2) should sit near P(¬R1) × P(¬R2). A card that states a much larger joint failure names the driver. Historically the product has held (14.4% against 14.5%).
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank 1 and Rank 2: the ranking model (RM-1), the team baseline (TB-1), oval-sport references and settlement integrity
+
+**Origin.** On 2026-09-25 the user asked for a comprehensive review, sport by sport, of the information sources and of the reasoning applied to them, against the log results, the sport rules and the general framework. The aim is **to make Rank 1 and Rank 2 far more likely to win than lose.** Every point was to be implemented, including a new probabilistic model or calibration if one was needed or could be built.
+
+**Evidence.**
+- [`research/rank_model_2026-09-25e/README.md`](research/rank_model_2026-09-25e/README.md) (RM-1, with out-of-sample validation);
+- [`research/team_baseline_2026-09-25e/README.md`](research/team_baseline_2026-09-25e/README.md) (TB-1, the NFL/AFL/NRL references and the cushion base rates);
+- [`research/settled_rows_2026-09-25/README.md`](research/settled_rows_2026-09-25/README.md) §"2026-09-25(e) rebuild".
+
+**Status.**
+- `C-RANK-MODEL` and `C-TEAM-BASELINE` are **operative**. RM-1 is a **user-authorised exception to `L-087`** (item (h)).
+- Every other item is a disclosure, a construction rule or a settlement-integrity control.
+- All records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+### (a) What the evidence says about Rank 1 and Rank 2
+
+1. **The slot does not win; the probability does.**
+   - Held out, Rank-1 rows with a calibrated probability q ≥ 0.70 won **73–81%**. Every tier below 0.70 won **53–62%**.
+   - Stated p says the same: rows stated at 0.70 or more won 83%; rows at 0.50–0.65 won 54%.
+   - **"Far more likely to win than lose" is available only when the slate contains a row the evidence supports at about 0.70 or more.**
+   - What the process can do: rank by the best-calibrated probability; stop overstating weak rows; choose the right side of each pair; say plainly when no STRONG row exists; and show which contracts on the same event would be STRONG (item (c)).
+2. **The stated probabilities are informative but predictably mis-stated.**
+   - On decision rows, logit(q) ≈ −0.19 + 1.54·logit(p): rows stated at 0.55 won about 53%, and rows at 0.75 about 82%.
+   - Underdog cushions (+k.5) outside baseball, hockey and soccer won **7 of 27** at a stated ~0.58.
+   - A richer model with per-sport slopes and per-class offsets does **not** generalise (RM-1X; its ridge weight went to the maximum).
+   - The 2026-09-25(d) all-rows slope of 1.06 is not a contradiction. Including forced complements symmetrises the fit. On the decision side, the middle is over-stated and the top under-stated.
+3. **Why the cushions fail: the population fact.**
+   - In basketball, NFL, NRL and AFL, a small cushion on the weaker team covers well under half the time: basketball +1.5 to +3.5 32–45%; NFL +1.5 to +3.5 34–54%; NRL +1.5/+2.5 41–49%; AFL +6.5 38–43%.
+   - The cushion adds only P(the underdog loses by ≤ k), which is small: basketball P(\|margin\| ≤ 2) is 7–12%.
+   - Cards priced these rows like a baseball +1.5, whose base rate is 0.638 because 27.6% of MLB games are one-run games (M32).
+4. **Where a team-strength model has resolution and the cards do not.**
+   - A two-number, leak-free team baseline (TB-1) beats the population rate on sides by 5–19% in Brier: NBA, WNBA, NBL, NFL, AFL, NRL, EPL.
+   - It beats it on totals in the NBA, WNBA and (marginally) the NFL.
+   - It adds nothing in MLB or the NHL. There, cards anchor on the population rate, with starters and lineups as named departures.
+5. **The data were partly wrong.** The settled-row extractor was reading narrative columns ("Lobos lost by 1; +2.5 covers") as results. **17 rows were graded the wrong way round** in the 2026-09-25(d) dataset, and 55 more were dropped. The dataset is rebuilt: 1,264 graded rows, 641 with a stated probability.
+6. **The P-510–P-515 settlement block was written, not read** (item (f)).
+
+### (b) `C-RANK-MODEL` — rank by RM-1's calibrated probability (OPERATIVE)
+
+**What the card prints.** Field 4 prints, for every ranked row:
+- the card's own stated p, unchanged and still derived from the card's distribution;
+- the RM-1 q, tier and flags from `python tools/rank_model.py rank --sport <league> --row "<contract>=<p>" …` (rows in stated order);
+- the `TOP2_QUALITY` line the tool prints.
+
+**Ordering.**
+- **Ranks are ordered by q.** Stated p breaks ties within 0.005.
+- If the q order differs from the p order, the card prints both orders, and the q order is the issued rank.
+
+**`SIDE_FLIP`** (q crosses 0.5 by at least 0.05 against the stated side).
+- The flipped side is ranked by its q, labelled `SIDE_FLIP`, and its tier is capped at SUPPORTED.
+- The card writes one line reconciling it with its own distribution.
+- **Override (`RM1_OVERRIDE`)** is allowed only where the league's `TEAM_BASELINE_P` has resolution (item (d)) **and** gives the stated side ≥ 0.55. The population model then says the mechanism behind the flip is absent.
+- A narrative reason alone is never an override. The stated cushion rows were exactly the ones whose narrative reasons failed.
+
+**`NEAR_TIED_FLIP`** (a flip within 0.05 of 0.5): the row keeps its stated side and is labelled a coin flip. Held out, such flips won 27/57.
+
+**Scoring.** Both p and q are scored at settlement (Brier and log loss), and settlement tables gain a `q` column (`T-RM1-PROSPECTIVE`).
+
+**Refit.** Only at the 25-card review, with the three commands in the RM-1 README, then a new control manifest.
+
+**Audit field `RM`.** It is strict-blocking for cards frozen under `CONTROL_MANIFEST_2026-09-25-5` or later.
+
+### (c) `C-TOP2-QUALITY` — say what the top two are worth, and what on this event would be stronger (disclosure)
+
+1. **The TOP2_QUALITY line.** Every card prints it, from `tools/rank_model.py`:
+   - `TOP2_STRONG`: both rows at q ≥ 0.70;
+   - `TOP2_SUPPORTED`: both at ≥ 0.62;
+   - `TOP1_ONLY`: R1 at ≥ 0.62, R2 below;
+   - `TOP2_COIN_FLIP`: R1 below 0.62.
+
+   The line also gives P(both win) and P(both lose) under independence (G-L17 holds on average: 14.4% against 14.5%).
+2. **Plain language for a coin-flip top two.** Under `TOP2_COIN_FLIP`, the delivery text says in plain words that the top two are near coin flips. It never uses "lean", "supported" or "confident".
+3. **`SLATE_ADVISORY`** (optional; printed whenever TOP2 is not STRONG).
+   - Up to two contracts on the same event that the card's **own frozen distribution** prices at q ≥ 0.70. For example: a phase total, a team total, a wider cushion, a double chance, or a total line further from the centre, read with `tools/card_math.py`.
+   - It is labelled `SLATE_ADVISORY — not ranked, not scored, not a recommendation to bet; market-blind, so a higher probability carries no claim of value`.
+   - It is printed after the freeze and never changes a ranked row.
+   - Why: the record shows the STRONG tier is where Rank 1 wins about four times in five, and the slate decides whether that tier is available. Phase totals won 30/36 against full totals' 27/41 on the same cards.
+
+### (d) `C-TEAM-BASELINE` — TB-1 as the anchor where it has resolution (OPERATIVE)
+
+1. **What the card prints.** For NBA, WNBA, NBL, NFL, AFL, NRL and EPL (and optionally MLB and NHL), `TEAM_BASELINE_P` for every ranked row goes beside `BASELINE_P`, from `python tools/team_baseline.py predict --league … --home … --away … --date <venue-local date> --total … --home-line …`.
+   - Its flags are printed with it: `TB1_EARLY_SEASON`, and `TB1_NO_RESOLUTION:<target>`.
+   - With too few games, the card prints `TEAM_BASELINE_P: NOT_YET_DERIVED`.
+2. **The departure ledger's anchor** (`C-DEPARTURE-LEDGER`) is `TEAM_BASELINE_P` for every target where TB-1 has resolution, and `BASELINE_P` otherwise.
+
+   | TB-1 has resolution | Leagues |
+   |---|---|
+   | Sides and margins | NBA, WNBA, NBL, NFL, AFL, NRL, EPL |
+   | Totals | NBA, WNBA, NFL |
+
+3. **A departure larger than 0.10 in probability** from the anchor names a row-specific, receipted mechanism: a confirmed absence, a starter, rest or travel, a rule or format difference, or weather. Otherwise the row is `UNEXPLAINED_DEPARTURE`, with the evidence grade capped at LOW.
+4. **Where no tool covers the league** (FIBA, LKL, BCL, EuroLeague, KBO/NPB/CPBL, cricket, tennis, most soccer leagues), the card prints `TEAM_BASELINE_P: NOT_COVERED`, and `BASELINE_P` stays the anchor.
+5. **Audit field `TB`.** It is strict-blocking for covered leagues from `CONTROL_MANIFEST_2026-09-25-5`.
+
+### (e) `C-PLUS-CUSHION` amended — the population cover rate is the cushion's baseline (CANDIDATE → construction rule)
+
+1. **The baseline.** For a non-baseball +k.5 row, `BASELINE_P` is the population cover rate of that side at +k.5 (`BASE_RATES_REGISTER.md` §7.7(c)):
+   - the TB-1 underdog's rate if the side is the TB-1 underdog;
+   - otherwise `TEAM_BASELINE_P`.
+2. **The rule.** A cushion stated more than 0.05 above that baseline needs, in the departure ledger, a named mechanism that is receipted **on the favourite's side**: a confirmed absence, rest or a lineup change.
+   - Otherwise it is `PLUS_CUSHION_UNSUPPORTED`, and `C-RANK-MODEL`'s flip stands.
+   - "The underdog keeps it close" is not a mechanism.
+3. **The rest of `C-PLUS-CUSHION` (2026-09-25(d)(b)) is unchanged:** the margin band, the decomposition P(dog wins) + P(dog loses by ≤ k), and the named reason.
+
+### (f) `C-SETTLEMENT-FROM-FEED` — a settlement block is read, never written (OPERATIVE settlement-integrity control)
+
+**What happened.**
+- The P-510–P-515 settlement was generated by a script (`scratch/build_full_settlement.py`) whose settlement narratives were **typed-in strings**.
+- The finals of five of the six games were right: checked on 2026-09-25 against MLB statsapi, the NPB official page, the KBO official scoreboard and ESPN.
+- **P-515's score was wrong:** 36–14 against the true **36–20** (ESPN event 604843: half-time 16–6, full time 36–20). Grades are unchanged.
+- **The P-510 and P-511 lineup diffs listed players who did not play.**
+  - P-510: Contreras, Arenado, Nootbaar and Siani for St. Louis; Bart, Tellez and Hayes for Pittsburgh.
+  - P-511: Schanuel, O'Hoppe, Rendon, Polanco and others.
+  - They were compared with the official statsapi boxscores.
+- The retrospective's "facts" (329 run metres, 14 errors, a 16–6 half-time "then" 36–14) were unsourced.
+
+**The rules.**
+1. **Settlement process facts** come from `receipts.py settle …` output, or from an endpoint response fetched in the same session and pasted with its URL and retrieval time. The linescore, lineup diff, scorers, stats and times all qualify.
+2. **A script may assemble** a settlement block from fetched data. It may never contain the narrative or the numbers as literals.
+3. **The audit's new field `10n`** (strict-blocking at settlement) checks that the lineup diff names players who appear on the issued card.
+4. **The P-510–P-515 process records are `PROCESS_RECORD_UNVERIFIED`.** Their grades stand, because five finals were independently confirmed and P-515's corrected score leaves every grade unchanged. Their causal retrospectives may not be cited. M26 recurrence: P-510, P-511 and P-515.
+
+### (g) Rule candidates from the P-510–P-515 mini log — dispositions
+
+| Candidate | Disposition | Why |
+|---|---|---|
+| `C-ABSENCE-DEFENSIVE-PENALTY` (absences raise totals) | **REJECTED as a rule; hypothesis only** | Two games (M27). Mechanism asserted, not measured. The item (d) TB-1 anchor and G-L2 (uncertainty widens; it does not lean) already cover the construction |
+| `C-KBO-PITCHER-VELOCITY-FILTER` | **REJECTED** | One game. No velocity data were retrieved (the claim was unsourced) |
+| `C-NRL-SPINE-PEDIGREE-TOTAL-FLOOR` | **REJECTED** | One game, built partly on an invented statistic (329 m) and a wrong score |
+| `C-FINALS-BYE-RUST` | **TESTING, non-binding** (`T-NRL-BYE-RUST`) | A real, measurable question (finals after a bye, first-half margin). Needs a field-owner sample, not one game |
+| "Ace starting pitcher dominance" | **Not a rule** | Two low totals. The existing starter adjustment is the channel |
+| Source notes (NPB official, KBO official, ESPN NBL, NRL match centre) | **Verified in part; recorded in `SOURCES.md` §"2026-09-25(e)"** | NPB official and KBO English scoreboards were verified on 2026-09-25. The "NRL match centre" statistics were not |
+
+### (h) The `L-087` exception for RM-1, and its safeguards
+
+`L-087` forbids coefficients fitted from the log's own results. The user's instruction of 2026-09-25 authorises a calibration model. RM-1 is admitted **only** under these conditions:
+1. **Pooled, pre-specified terms.** A term is admitted only if it beats the current RM-1 on log loss in every forward split at a 25-card review.
+2. **Refits happen only at the 25-card review,** never after a single game or card.
+3. **Stated p is printed unchanged beside q.** q never overwrites the distribution.
+4. **Both p and q are scored.** If q's Brier is worse than p's over the next 25 settled cards (`T-RM1-PROSPECTIVE`), `C-RANK-MODEL` reverts to disclosure-only until the next review.
+5. **Flips are capped at SUPPORTED.**
+
+`L-087` continues to govern everything else. No single-game coefficient, cap or override is admitted anywhere.
+
+### (i) What changes, sport by sport
+
+The detail is in each sport file's §"2026-09-25(e)".
+
+| Sport | Source change | Reasoning change |
+|---|---|---|
+| MLB | Settlement lineup diff from the statsapi boxscore `battingOrder` (never typed) | TB-1 has no resolution: anchor on the population rate. +1.5 rows sit near their 0.638 base; the first-choice R1 is whichever row's calibrated q is highest, not a +1.5 by habit |
+| NPB / KBO / CPBL | NPB official score page and KBO English scoreboard verified for terminal state | RM-1 and the population anchor. Unders' 11/14 stays TESTING |
+| Basketball | ESPN team-schedule lane for TB-1 | TB-1 anchor. Small cushions at their population rate (32–45%); a flip is expected unless the favourite's absence is receipted |
+| Soccer | ESPN team schedule, EPL | Unchanged: the best record. Phase, team-total and double-chance rows remain the STRONG-tier source |
+| NFL / AFL / NRL | ESPN scoreboards (`football/nfl`, `australian-football/afl`, `rugby-league/3`); NRL scoreboard fallback | First population references and TB-1. Cushions at population rate; the worst R1/R2 record (12 W / 20 L) is the main target of RM-1's flip |
+| NHL | Unchanged | TB-1 has no resolution; population anchor |
+| Tennis | Unchanged (Elo benchmark blocking) | RM-1 cushion term covers games handicaps (+k.5): 1/4 won |
+| Cricket | Unchanged | RM-1 global recalibration only |
+

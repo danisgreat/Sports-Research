@@ -1113,3 +1113,18 @@ This section is the current prospective override for audit-derived ranking logic
 - No direction coefficient follows. The response is the innings-order mixture (control 21) and `BASELINE_P` from the venue window where one exists.
 
 Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank 1 and Rank 2 in cricket
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)".
+
+**Record at Rank 1/2 (probability era): 17 W / 10 L.** Cricket has resolution but is mis-stated (reliability 0.022).
+
+- **RM-1 applies its global recalibration only.** Cricket has no cushion-class rows, and RM-1 did not re-order any held-out cricket card. Rows stated at 0.55–0.60 read as coin flips (q about 0.53–0.61).
+- **Settlement tables must print the contract text.**
+  - Several cricket rows in the logs carry a result with a blank contract cell (P-352, P-356, P-357, P-364), so the dataset cannot classify them.
+  - The canonical settlement table (`| Rank | Contract | Family | p | q | BASELINE_P | Result | Brier |`) is mandatory from 2026-09-25(e).
+- **No TB-1 lane.** `TEAM_BASELINE_P: NOT_COVERED`. The anchors remain the chase cap and the venue window by innings order.
+- **Unchanged:** the toss, strip and conditions ladders, and scorecard-only settlement. The Unders/Overs asymmetry stays TESTING.

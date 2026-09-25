@@ -1,0 +1,1766 @@
+{
+  "data": {
+    "decision_rows": 409,
+    "cards": 154,
+    "prob_rows": 635,
+    "decision_win_rate": 0.6381
+  },
+  "grouped_cv": {
+    "IDENTITY": {
+      "logloss": 0.6112,
+      "brier": 0.2129
+    },
+    "GLOBAL": {
+      "logloss": 0.609,
+      "brier": 0.2129
+    },
+    "RM-1": {
+      "logloss": 0.6032,
+      "brier": 0.21
+    },
+    "RM-1X": {
+      "logloss": 0.6043,
+      "brier": 0.2104
+    }
+  },
+  "loco": {
+    "GLOBAL": {
+      "rerank": {
+        "ALL": {
+          "cards": 148,
+          "issued": {
+            "r1": 0.642,
+            "r2": 0.601,
+            "both": 0.426,
+            "none": 0.182
+          },
+          "model": {
+            "r1": 0.622,
+            "r2": 0.628,
+            "both": 0.426,
+            "none": 0.176
+          },
+          "r1_changed": 5,
+          "r2_changed": 9
+        },
+        "oval": {
+          "cards": 16,
+          "issued": {
+            "r1": 0.375,
+            "r2": 0.375,
+            "both": 0.25,
+            "none": 0.5
+          },
+          "model": {
+            "r1": 0.375,
+            "r2": 0.438,
+            "both": 0.25,
+            "none": 0.438
+          },
+          "r1_changed": 0,
+          "r2_changed": 1
+        },
+        "soccer": {
+          "cards": 35,
+          "issued": {
+            "r1": 0.8,
+            "r2": 0.714,
+            "both": 0.629,
+            "none": 0.114
+          },
+          "model": {
+            "r1": 0.8,
+            "r2": 0.714,
+            "both": 0.629,
+            "none": 0.114
+          },
+          "r1_changed": 0,
+          "r2_changed": 1
+        },
+        "cricket": {
+          "cards": 13,
+          "issued": {
+            "r1": 0.692,
+            "r2": 0.538,
+            "both": 0.462,
+            "none": 0.231
+          },
+          "model": {
+            "r1": 0.692,
+            "r2": 0.538,
+            "both": 0.462,
+            "none": 0.231
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        },
+        "mlb": {
+          "cards": 35,
+          "issued": {
+            "r1": 0.657,
+            "r2": 0.629,
+            "both": 0.343,
+            "none": 0.057
+          },
+          "model": {
+            "r1": 0.6,
+            "r2": 0.686,
+            "both": 0.343,
+            "none": 0.057
+          },
+          "r1_changed": 3,
+          "r2_changed": 2
+        },
+        "tennis": {
+          "cards": 7,
+          "issued": {
+            "r1": 0.429,
+            "r2": 0.429,
+            "both": 0.286,
+            "none": 0.429
+          },
+          "model": {
+            "r1": 0.429,
+            "r2": 0.429,
+            "both": 0.286,
+            "none": 0.429
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        },
+        "asia_bb": {
+          "cards": 25,
+          "issued": {
+            "r1": 0.68,
+            "r2": 0.64,
+            "both": 0.44,
+            "none": 0.12
+          },
+          "model": {
+            "r1": 0.64,
+            "r2": 0.64,
+            "both": 0.4,
+            "none": 0.12
+          },
+          "r1_changed": 2,
+          "r2_changed": 4
+        },
+        "basketball": {
+          "cards": 16,
+          "issued": {
+            "r1": 0.5,
+            "r2": 0.562,
+            "both": 0.312,
+            "none": 0.25
+          },
+          "model": {
+            "r1": 0.5,
+            "r2": 0.625,
+            "both": 0.375,
+            "none": 0.25
+          },
+          "r1_changed": 0,
+          "r2_changed": 1
+        },
+        "hockey": {
+          "cards": 1,
+          "issued": {
+            "r1": 1.0,
+            "r2": 1.0,
+            "both": 1.0,
+            "none": 0.0
+          },
+          "model": {
+            "r1": 1.0,
+            "r2": 1.0,
+            "both": 1.0,
+            "none": 0.0
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        }
+      },
+      "bootstrap": {
+        "mean_change_in_top2_wins_per_card": 0.0068,
+        "ci95": [
+          -0.027,
+          0.0405
+        ],
+        "cards_better": 4,
+        "cards_worse": 3,
+        "n": 148
+      }
+    },
+    "RM-1": {
+      "rerank": {
+        "ALL": {
+          "cards": 148,
+          "issued": {
+            "r1": 0.642,
+            "r2": 0.601,
+            "both": 0.426,
+            "none": 0.182
+          },
+          "model": {
+            "r1": 0.689,
+            "r2": 0.622,
+            "both": 0.459,
+            "none": 0.149
+          },
+          "r1_changed": 21,
+          "r2_changed": 10
+        },
+        "oval": {
+          "cards": 16,
+          "issued": {
+            "r1": 0.375,
+            "r2": 0.375,
+            "both": 0.25,
+            "none": 0.5
+          },
+          "model": {
+            "r1": 0.625,
+            "r2": 0.375,
+            "both": 0.25,
+            "none": 0.25
+          },
+          "r1_changed": 12,
+          "r2_changed": 1
+        },
+        "soccer": {
+          "cards": 35,
+          "issued": {
+            "r1": 0.8,
+            "r2": 0.714,
+            "both": 0.629,
+            "none": 0.114
+          },
+          "model": {
+            "r1": 0.8,
+            "r2": 0.714,
+            "both": 0.629,
+            "none": 0.114
+          },
+          "r1_changed": 0,
+          "r2_changed": 1
+        },
+        "cricket": {
+          "cards": 13,
+          "issued": {
+            "r1": 0.692,
+            "r2": 0.538,
+            "both": 0.462,
+            "none": 0.231
+          },
+          "model": {
+            "r1": 0.692,
+            "r2": 0.538,
+            "both": 0.462,
+            "none": 0.231
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        },
+        "mlb": {
+          "cards": 35,
+          "issued": {
+            "r1": 0.657,
+            "r2": 0.629,
+            "both": 0.343,
+            "none": 0.057
+          },
+          "model": {
+            "r1": 0.657,
+            "r2": 0.629,
+            "both": 0.343,
+            "none": 0.057
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        },
+        "tennis": {
+          "cards": 7,
+          "issued": {
+            "r1": 0.429,
+            "r2": 0.429,
+            "both": 0.286,
+            "none": 0.429
+          },
+          "model": {
+            "r1": 0.429,
+            "r2": 0.857,
+            "both": 0.429,
+            "none": 0.143
+          },
+          "r1_changed": 1,
+          "r2_changed": 3
+        },
+        "asia_bb": {
+          "cards": 25,
+          "issued": {
+            "r1": 0.68,
+            "r2": 0.64,
+            "both": 0.44,
+            "none": 0.12
+          },
+          "model": {
+            "r1": 0.68,
+            "r2": 0.64,
+            "both": 0.44,
+            "none": 0.12
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        },
+        "basketball": {
+          "cards": 16,
+          "issued": {
+            "r1": 0.5,
+            "r2": 0.562,
+            "both": 0.312,
+            "none": 0.25
+          },
+          "model": {
+            "r1": 0.688,
+            "r2": 0.562,
+            "both": 0.562,
+            "none": 0.312
+          },
+          "r1_changed": 8,
+          "r2_changed": 5
+        },
+        "hockey": {
+          "cards": 1,
+          "issued": {
+            "r1": 1.0,
+            "r2": 1.0,
+            "both": 1.0,
+            "none": 0.0
+          },
+          "model": {
+            "r1": 1.0,
+            "r2": 1.0,
+            "both": 1.0,
+            "none": 0.0
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        }
+      },
+      "bootstrap": {
+        "mean_change_in_top2_wins_per_card": 0.0676,
+        "ci95": [
+          0.0068,
+          0.1284
+        ],
+        "cards_better": 17,
+        "cards_worse": 7,
+        "n": 148
+      }
+    },
+    "RM-1X (10-fold)": {
+      "rerank": {
+        "ALL": {
+          "cards": 148,
+          "issued": {
+            "r1": 0.642,
+            "r2": 0.601,
+            "both": 0.426,
+            "none": 0.182
+          },
+          "model": {
+            "r1": 0.682,
+            "r2": 0.628,
+            "both": 0.459,
+            "none": 0.149
+          },
+          "r1_changed": 21,
+          "r2_changed": 11
+        },
+        "oval": {
+          "cards": 16,
+          "issued": {
+            "r1": 0.375,
+            "r2": 0.375,
+            "both": 0.25,
+            "none": 0.5
+          },
+          "model": {
+            "r1": 0.562,
+            "r2": 0.438,
+            "both": 0.25,
+            "none": 0.25
+          },
+          "r1_changed": 12,
+          "r2_changed": 2
+        },
+        "soccer": {
+          "cards": 35,
+          "issued": {
+            "r1": 0.8,
+            "r2": 0.714,
+            "both": 0.629,
+            "none": 0.114
+          },
+          "model": {
+            "r1": 0.8,
+            "r2": 0.714,
+            "both": 0.629,
+            "none": 0.114
+          },
+          "r1_changed": 0,
+          "r2_changed": 1
+        },
+        "cricket": {
+          "cards": 13,
+          "issued": {
+            "r1": 0.692,
+            "r2": 0.538,
+            "both": 0.462,
+            "none": 0.231
+          },
+          "model": {
+            "r1": 0.692,
+            "r2": 0.538,
+            "both": 0.462,
+            "none": 0.231
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        },
+        "mlb": {
+          "cards": 35,
+          "issued": {
+            "r1": 0.657,
+            "r2": 0.629,
+            "both": 0.343,
+            "none": 0.057
+          },
+          "model": {
+            "r1": 0.657,
+            "r2": 0.629,
+            "both": 0.343,
+            "none": 0.057
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        },
+        "tennis": {
+          "cards": 7,
+          "issued": {
+            "r1": 0.429,
+            "r2": 0.429,
+            "both": 0.286,
+            "none": 0.429
+          },
+          "model": {
+            "r1": 0.429,
+            "r2": 0.857,
+            "both": 0.429,
+            "none": 0.143
+          },
+          "r1_changed": 1,
+          "r2_changed": 3
+        },
+        "asia_bb": {
+          "cards": 25,
+          "issued": {
+            "r1": 0.68,
+            "r2": 0.64,
+            "both": 0.44,
+            "none": 0.12
+          },
+          "model": {
+            "r1": 0.68,
+            "r2": 0.64,
+            "both": 0.44,
+            "none": 0.12
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        },
+        "basketball": {
+          "cards": 16,
+          "issued": {
+            "r1": 0.5,
+            "r2": 0.562,
+            "both": 0.312,
+            "none": 0.25
+          },
+          "model": {
+            "r1": 0.688,
+            "r2": 0.562,
+            "both": 0.562,
+            "none": 0.312
+          },
+          "r1_changed": 8,
+          "r2_changed": 5
+        },
+        "hockey": {
+          "cards": 1,
+          "issued": {
+            "r1": 1.0,
+            "r2": 1.0,
+            "both": 1.0,
+            "none": 0.0
+          },
+          "model": {
+            "r1": 1.0,
+            "r2": 1.0,
+            "both": 1.0,
+            "none": 0.0
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        }
+      },
+      "bootstrap": {
+        "mean_change_in_top2_wins_per_card": 0.0676,
+        "ci95": [
+          0.0068,
+          0.1284
+        ],
+        "cards_better": 17,
+        "cards_worse": 7,
+        "n": 148
+      }
+    }
+  },
+  "loco_rm1_changed_cards": [
+    {
+      "card": "P-344",
+      "group": "basketball",
+      "issued": [
+        [
+          "Japan +3.0",
+          0,
+          0.56
+        ],
+        [
+          "Over 146.5",
+          1,
+          0.54
+        ]
+      ],
+      "model": [
+        [
+          "Hungary -3.0",
+          1,
+          0.608
+        ],
+        [
+          "Over 146.5",
+          1,
+          0.513
+        ]
+      ]
+    },
+    {
+      "card": "P-358",
+      "group": "basketball",
+      "issued": [
+        [
+          "",
+          0,
+          0.64
+        ],
+        [
+          "Puerto Rico +9.5",
+          1,
+          0.57
+        ]
+      ],
+      "model": [
+        [
+          "China \u22129.5",
+          0,
+          0.734
+        ],
+        [
+          "",
+          0,
+          0.67
+        ]
+      ]
+    },
+    {
+      "card": "P-363",
+      "group": "oval",
+      "issued": [
+        [
+          "Bulldogs +40.5",
+          1,
+          0.61
+        ],
+        [
+          "",
+          1,
+          0.55
+        ]
+      ],
+      "model": [
+        [
+          "Roosters \u221240.5",
+          0,
+          0.679
+        ],
+        [
+          "",
+          1,
+          0.529
+        ]
+      ]
+    },
+    {
+      "card": "P-376",
+      "group": "oval",
+      "issued": [
+        [
+          "San Francisco 49ers +3.5",
+          1,
+          0.56
+        ],
+        [
+          "Over 47.5 total points",
+          0,
+          0.54
+        ]
+      ],
+      "model": [
+        [
+          "Los Angeles Rams -3.5",
+          0,
+          0.747
+        ],
+        [
+          "Over 47.5 total points",
+          0,
+          0.517
+        ]
+      ]
+    },
+    {
+      "card": "P-386",
+      "group": "oval",
+      "issued": [
+        [
+          "Newcastle Knights +8.5",
+          1,
+          0.63
+        ],
+        [
+          "Over 49.5 total points",
+          0,
+          0.53
+        ]
+      ],
+      "model": [
+        [
+          "South Sydney -8.5",
+          0,
+          0.65
+        ],
+        [
+          "Over 49.5 total points",
+          0,
+          0.504
+        ]
+      ]
+    },
+    {
+      "card": "P-388",
+      "group": "oval",
+      "issued": [
+        [
+          "Geelong +11.5",
+          0,
+          0.6
+        ],
+        [
+          "Under 180.5 total points",
+          0,
+          0.55
+        ]
+      ],
+      "model": [
+        [
+          "Fremantle -11.5",
+          1,
+          0.652
+        ],
+        [
+          "Under 180.5 total points",
+          0,
+          0.533
+        ]
+      ]
+    },
+    {
+      "card": "P-394",
+      "group": "oval",
+      "issued": [
+        [
+          "Cowboys Women +10.5",
+          1,
+          0.58
+        ],
+        [
+          "Over 48.5",
+          1,
+          0.55
+        ]
+      ],
+      "model": [
+        [
+          "Eels -10.5",
+          0,
+          0.721
+        ],
+        [
+          "Over 48.5",
+          1,
+          0.528
+        ]
+      ]
+    },
+    {
+      "card": "P-396",
+      "group": "oval",
+      "issued": [
+        [
+          "Adelaide +21.5",
+          0,
+          0.64
+        ],
+        [
+          "Under 188.5",
+          0,
+          0.58
+        ]
+      ],
+      "model": [
+        [
+          "Brisbane -21.5",
+          1,
+          0.587
+        ],
+        [
+          "Under 188.5",
+          0,
+          0.579
+        ]
+      ]
+    },
+    {
+      "card": "P-397",
+      "group": "oval",
+      "issued": [
+        [
+          "Over 48.5",
+          0,
+          0.56
+        ],
+        [
+          "Cowboys +7.5",
+          0,
+          0.55
+        ]
+      ],
+      "model": [
+        [
+          "Sharks -7.5",
+          1,
+          0.722
+        ],
+        [
+          "Over 48.5",
+          0,
+          0.549
+        ]
+      ]
+    },
+    {
+      "card": "P-411",
+      "group": "basketball",
+      "issued": [
+        [
+          "Germany (W) +6.5",
+          0,
+          0.56
+        ],
+        [
+          "Under 147.5",
+          1,
+          0.53
+        ]
+      ],
+      "model": [
+        [
+          "Spain (W) -6.5",
+          1,
+          0.709
+        ],
+        [
+          "Under 147.5",
+          1,
+          0.497
+        ]
+      ]
+    },
+    {
+      "card": "P-412",
+      "group": "oval",
+      "issued": [
+        [
+          "Atlanta Falcons +6.5",
+          0,
+          0.55
+        ],
+        [
+          "Under 40.5",
+          1,
+          0.53
+        ]
+      ],
+      "model": [
+        [
+          "Pittsburgh Steelers -6.5",
+          1,
+          0.722
+        ],
+        [
+          "Under 40.5",
+          1,
+          0.497
+        ]
+      ]
+    },
+    {
+      "card": "P-413",
+      "group": "oval",
+      "issued": [
+        [
+          "Indianapolis Colts +3.0 (53% win / 8% pu",
+          0,
+          0.53
+        ],
+        [
+          "Under 48.5",
+          0,
+          0.52
+        ]
+      ],
+      "model": [
+        [
+          "Baltimore Ravens -3.0 (39 / 8 / 53)",
+          1,
+          0.641
+        ],
+        [
+          "Under 48.5",
+          0,
+          0.488
+        ]
+      ]
+    },
+    {
+      "card": "P-414",
+      "group": "oval",
+      "issued": [
+        [
+          "Houston Texans +1.5",
+          0,
+          0.55
+        ],
+        [
+          "Under 44.5",
+          0,
+          0.53
+        ]
+      ],
+      "model": [
+        [
+          "Buffalo Bills -1.5",
+          1,
+          0.721
+        ],
+        [
+          "Under 44.5",
+          0,
+          0.503
+        ]
+      ]
+    },
+    {
+      "card": "P-422",
+      "group": "oval",
+      "issued": [
+        [
+          "Denver Broncos +2.5",
+          0,
+          0.56
+        ],
+        [
+          "Under 42.5",
+          1,
+          0.53
+        ]
+      ],
+      "model": [
+        [
+          "Kansas City Chiefs -2.5",
+          1,
+          0.709
+        ],
+        [
+          "Under 42.5",
+          1,
+          0.497
+        ]
+      ]
+    },
+    {
+      "card": "P-427",
+      "group": "basketball",
+      "issued": [
+        [
+          "Kolossos +2.5",
+          0,
+          0.61
+        ],
+        [
+          "Under 162.5",
+          0,
+          0.58
+        ]
+      ],
+      "model": [
+        [
+          "Biotekno K\u00f6rfez \u22122.5",
+          1,
+          0.636
+        ],
+        [
+          "Under 162.5",
+          0,
+          0.579
+        ]
+      ]
+    },
+    {
+      "card": "P-454",
+      "group": "soccer",
+      "issued": [
+        [
+          "1st Half Over 0.5 goals",
+          1,
+          0.68
+        ],
+        [
+          "Total corners Under 11.5",
+          1,
+          0.64
+        ]
+      ],
+      "model": [
+        [
+          "1st Half Over 0.5 goals",
+          1,
+          0.722
+        ],
+        [
+          "Br\u00f8ndby or Draw X2, 90 min",
+          1,
+          0.693
+        ]
+      ]
+    },
+    {
+      "card": "P-461",
+      "group": "tennis",
+      "issued": [
+        [
+          "Over 20.5 games",
+          0,
+          0.63
+        ],
+        [
+          "Maristany +3.5 games",
+          0,
+          0.62
+        ]
+      ],
+      "model": [
+        [
+          "Over 20.5 games",
+          0,
+          0.655
+        ],
+        [
+          "Burel -3.5 games",
+          1,
+          0.62
+        ]
+      ]
+    },
+    {
+      "card": "P-472",
+      "group": "oval",
+      "issued": [
+        [
+          "Coastal Carolina +4.5",
+          0,
+          0.577
+        ],
+        [
+          "Combined Total OVER 56.5",
+          0,
+          0.548
+        ]
+      ],
+      "model": [
+        [
+          "Delaware -4.5",
+          1,
+          0.685
+        ],
+        [
+          "Combined Total OVER 56.5",
+          0,
+          0.53
+        ]
+      ]
+    },
+    {
+      "card": "P-483",
+      "group": "tennis",
+      "issued": [
+        [
+          "TOTAL GAMES OVER 19.5",
+          0,
+          0.652
+        ],
+        [
+          "KALIEVA +4.5 GAMES",
+          0,
+          0.584
+        ]
+      ],
+      "model": [
+        [
+          "TOTAL GAMES OVER 19.5",
+          0,
+          0.688
+        ],
+        [
+          "VOLYNETS \u22124.5 GAMES",
+          1,
+          0.675
+        ]
+      ]
+    },
+    {
+      "card": "P-487",
+      "group": "basketball",
+      "issued": [
+        [
+          "Phoenix Mercury +5.5",
+          1,
+          0.62
+        ],
+        [
+          "Over 174.5",
+          0,
+          0.52
+        ]
+      ],
+      "model": [
+        [
+          "Dallas \u22125.5 (forced complement of #1)",
+          0,
+          0.665
+        ],
+        [
+          "Over 174.5",
+          0,
+          0.488
+        ]
+      ]
+    },
+    {
+      "card": "P-496",
+      "group": "tennis",
+      "issued": [
+        [
+          "Over 22.5 Total Games",
+          1,
+          0.627
+        ],
+        [
+          "Vasa +0.5 Games Handicap",
+          0,
+          0.535
+        ]
+      ],
+      "model": [
+        [
+          "Marek -0.5 Games Handicap",
+          1,
+          0.741
+        ],
+        [
+          "Over 22.5 Total Games",
+          1,
+          0.648
+        ]
+      ]
+    },
+    {
+      "card": "P-498",
+      "group": "basketball",
+      "issued": [
+        [
+          "Under 171.5 Total Points",
+          1,
+          0.654
+        ],
+        [
+          "Lietkabelis +3.5",
+          0,
+          0.618
+        ]
+      ],
+      "model": [
+        [
+          "Under 171.5 Total Points",
+          1,
+          0.688
+        ],
+        [
+          "Siauliai -3.5",
+          1,
+          0.623
+        ]
+      ]
+    },
+    {
+      "card": "P-499",
+      "group": "basketball",
+      "issued": [
+        [
+          "Combined Total: Under 149.5 Points",
+          0,
+          0.626
+        ],
+        [
+          "Brno(W) +26.5",
+          1,
+          0.587
+        ]
+      ],
+      "model": [
+        [
+          "Basket(W) -26.5",
+          0,
+          0.712
+        ],
+        [
+          "Combined Total: Under 149.5 Points",
+          0,
+          0.649
+        ]
+      ]
+    },
+    {
+      "card": "P-508",
+      "group": "basketball",
+      "issued": [
+        [
+          "Combined Total: Under 194.5 Points",
+          1,
+          0.691
+        ],
+        [
+          "Phoenix +2.5",
+          0,
+          0.515
+        ]
+      ],
+      "model": [
+        [
+          "United -2.5",
+          1,
+          0.764
+        ],
+        [
+          "Combined Total: Under 194.5 Points",
+          1,
+          0.74
+        ]
+      ]
+    },
+    {
+      "card": "P-514",
+      "group": "basketball",
+      "issued": [
+        [
+          "Combined Total: Under 188.5 Points",
+          0,
+          0.646
+        ],
+        [
+          "Hawks +1.5",
+          0,
+          0.54
+        ]
+      ],
+      "model": [
+        [
+          "Bullets -1.5",
+          1,
+          0.735
+        ],
+        [
+          "Combined Total: Under 188.5 Points",
+          0,
+          0.679
+        ]
+      ]
+    }
+  ],
+  "loco_rm1_rank1_by_tier": {
+    "SUPPORTED": {
+      "won": 24,
+      "n": 38,
+      "rate": 0.632,
+      "mean_q": 0.657
+    },
+    "STRONG": {
+      "won": 49,
+      "n": 67,
+      "rate": 0.731,
+      "mean_q": 0.801
+    },
+    "LEAN": {
+      "won": 19,
+      "n": 30,
+      "rate": 0.633,
+      "mean_q": 0.587
+    },
+    "COIN_FLIP": {
+      "won": 10,
+      "n": 13,
+      "rate": 0.769,
+      "mean_q": 0.519
+    }
+  },
+  "loco_rm1_reliability_by_tier": {
+    "SUPPORTED": {
+      "won": 42,
+      "n": 68,
+      "rate": 0.618,
+      "mean_q": 0.66,
+      "mean_stated_p": 0.634
+    },
+    "COIN_FLIP": {
+      "won": 70,
+      "n": 135,
+      "rate": 0.519,
+      "mean_q": 0.477,
+      "mean_stated_p": 0.549
+    },
+    "STRONG": {
+      "won": 108,
+      "n": 134,
+      "rate": 0.806,
+      "mean_q": 0.819,
+      "mean_stated_p": 0.757
+    },
+    "LEAN": {
+      "won": 41,
+      "n": 72,
+      "rate": 0.569,
+      "mean_q": 0.583,
+      "mean_stated_p": 0.583
+    }
+  },
+  "forward": {
+    "420": {
+      "train_decisions": 222,
+      "test_cards": 71,
+      "test_decisions": 187,
+      "IDENTITY": {
+        "logloss": 0.5756,
+        "brier": 0.1974
+      },
+      "GLOBAL": {
+        "logloss": 0.5656,
+        "brier": 0.1944,
+        "rerank": {
+          "cards": 68,
+          "issued": {
+            "r1": 0.691,
+            "r2": 0.647,
+            "both": 0.485,
+            "none": 0.147
+          },
+          "model": {
+            "r1": 0.676,
+            "r2": 0.676,
+            "both": 0.485,
+            "none": 0.132
+          },
+          "r1_changed": 1,
+          "r2_changed": 5
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.0147,
+          "ci95": [
+            -0.0294,
+            0.0735
+          ],
+          "cards_better": 2,
+          "cards_worse": 1,
+          "n": 68
+        },
+        "weights": {
+          "intercept": -0.296,
+          "logit_p": 1.498
+        },
+        "lam": 0.0
+      },
+      "RM-1": {
+        "logloss": 0.5551,
+        "brier": 0.1892,
+        "rerank": {
+          "cards": 68,
+          "issued": {
+            "r1": 0.691,
+            "r2": 0.647,
+            "both": 0.485,
+            "none": 0.147
+          },
+          "model": {
+            "r1": 0.721,
+            "r2": 0.691,
+            "both": 0.529,
+            "none": 0.118
+          },
+          "r1_changed": 4,
+          "r2_changed": 7
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.0735,
+          "ci95": [
+            0.0,
+            0.1471
+          ],
+          "cards_better": 6,
+          "cards_worse": 1,
+          "n": 68
+        },
+        "weights": {
+          "intercept": -0.239,
+          "logit_p": 1.451,
+          "cushion_nb": -0.5
+        },
+        "lam": 0.0
+      },
+      "RM-1X": {
+        "logloss": 0.556,
+        "brier": 0.1895,
+        "rerank": {
+          "cards": 68,
+          "issued": {
+            "r1": 0.691,
+            "r2": 0.647,
+            "both": 0.485,
+            "none": 0.147
+          },
+          "model": {
+            "r1": 0.721,
+            "r2": 0.691,
+            "both": 0.529,
+            "none": 0.118
+          },
+          "r1_changed": 3,
+          "r2_changed": 7
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.0735,
+          "ci95": [
+            0.0,
+            0.1471
+          ],
+          "cards_better": 6,
+          "cards_worse": 1,
+          "n": 68
+        },
+        "weights": null,
+        "lam": 256
+      }
+    },
+    "450": {
+      "train_decisions": 300,
+      "test_cards": 45,
+      "test_decisions": 109,
+      "IDENTITY": {
+        "logloss": 0.6154,
+        "brier": 0.2145
+      },
+      "GLOBAL": {
+        "logloss": 0.605,
+        "brier": 0.2111,
+        "rerank": {
+          "cards": 42,
+          "issued": {
+            "r1": 0.667,
+            "r2": 0.595,
+            "both": 0.452,
+            "none": 0.19
+          },
+          "model": {
+            "r1": 0.667,
+            "r2": 0.619,
+            "both": 0.452,
+            "none": 0.167
+          },
+          "r1_changed": 0,
+          "r2_changed": 4
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.0238,
+          "ci95": [
+            -0.0476,
+            0.119
+          ],
+          "cards_better": 2,
+          "cards_worse": 1,
+          "n": 42
+        },
+        "weights": {
+          "intercept": -0.294,
+          "logit_p": 1.51
+        },
+        "lam": 0.0
+      },
+      "RM-1": {
+        "logloss": 0.5861,
+        "brier": 0.2019,
+        "rerank": {
+          "cards": 42,
+          "issued": {
+            "r1": 0.667,
+            "r2": 0.595,
+            "both": 0.452,
+            "none": 0.19
+          },
+          "model": {
+            "r1": 0.69,
+            "r2": 0.69,
+            "both": 0.524,
+            "none": 0.143
+          },
+          "r1_changed": 4,
+          "r2_changed": 8
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.119,
+          "ci95": [
+            0.0,
+            0.2619
+          ],
+          "cards_better": 7,
+          "cards_worse": 2,
+          "n": 42
+        },
+        "weights": {
+          "intercept": -0.217,
+          "logit_p": 1.452,
+          "cushion_nb": -0.753
+        },
+        "lam": 0.0
+      },
+      "RM-1X": {
+        "logloss": 0.5872,
+        "brier": 0.2024,
+        "rerank": {
+          "cards": 42,
+          "issued": {
+            "r1": 0.667,
+            "r2": 0.595,
+            "both": 0.452,
+            "none": 0.19
+          },
+          "model": {
+            "r1": 0.69,
+            "r2": 0.69,
+            "both": 0.524,
+            "none": 0.143
+          },
+          "r1_changed": 4,
+          "r2_changed": 8
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.119,
+          "ci95": [
+            0.0,
+            0.2619
+          ],
+          "cards_better": 7,
+          "cards_worse": 2,
+          "n": 42
+        },
+        "weights": null,
+        "lam": 256
+      }
+    },
+    "480": {
+      "train_decisions": 350,
+      "test_cards": 26,
+      "test_decisions": 59,
+      "IDENTITY": {
+        "logloss": 0.6646,
+        "brier": 0.2362
+      },
+      "GLOBAL": {
+        "logloss": 0.6525,
+        "brier": 0.2305,
+        "rerank": {
+          "cards": 25,
+          "issued": {
+            "r1": 0.68,
+            "r2": 0.56,
+            "both": 0.4,
+            "none": 0.16
+          },
+          "model": {
+            "r1": 0.68,
+            "r2": 0.52,
+            "both": 0.36,
+            "none": 0.16
+          },
+          "r1_changed": 0,
+          "r2_changed": 1
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": -0.04,
+          "ci95": [
+            -0.12,
+            0.0
+          ],
+          "cards_better": 0,
+          "cards_worse": 1,
+          "n": 25
+        },
+        "weights": {
+          "intercept": -0.272,
+          "logit_p": 1.571
+        },
+        "lam": 0.0
+      },
+      "RM-1": {
+        "logloss": 0.6371,
+        "brier": 0.2235,
+        "rerank": {
+          "cards": 25,
+          "issued": {
+            "r1": 0.68,
+            "r2": 0.56,
+            "both": 0.4,
+            "none": 0.16
+          },
+          "model": {
+            "r1": 0.68,
+            "r2": 0.68,
+            "both": 0.52,
+            "none": 0.16
+          },
+          "r1_changed": 5,
+          "r2_changed": 6
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.12,
+          "ci95": [
+            -0.08,
+            0.32
+          ],
+          "cards_better": 5,
+          "cards_worse": 2,
+          "n": 25
+        },
+        "weights": {
+          "intercept": -0.163,
+          "logit_p": 1.492,
+          "cushion_nb": -1.113
+        },
+        "lam": 0.0
+      },
+      "RM-1X": {
+        "logloss": 0.6376,
+        "brier": 0.2237,
+        "rerank": {
+          "cards": 25,
+          "issued": {
+            "r1": 0.68,
+            "r2": 0.56,
+            "both": 0.4,
+            "none": 0.16
+          },
+          "model": {
+            "r1": 0.68,
+            "r2": 0.68,
+            "both": 0.52,
+            "none": 0.16
+          },
+          "r1_changed": 5,
+          "r2_changed": 6
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.12,
+          "ci95": [
+            -0.08,
+            0.32
+          ],
+          "cards_better": 5,
+          "cards_worse": 2,
+          "n": 25
+        },
+        "weights": null,
+        "lam": 256
+      }
+    },
+    "495": {
+      "train_decisions": 360,
+      "test_cards": 21,
+      "test_decisions": 49,
+      "IDENTITY": {
+        "logloss": 0.6559,
+        "brier": 0.232
+      },
+      "GLOBAL": {
+        "logloss": 0.6448,
+        "brier": 0.2268,
+        "rerank": {
+          "cards": 20,
+          "issued": {
+            "r1": 0.7,
+            "r2": 0.6,
+            "both": 0.45,
+            "none": 0.15
+          },
+          "model": {
+            "r1": 0.7,
+            "r2": 0.6,
+            "both": 0.45,
+            "none": 0.15
+          },
+          "r1_changed": 0,
+          "r2_changed": 0
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "cards_better": 0,
+          "cards_worse": 0,
+          "n": 20
+        },
+        "weights": {
+          "intercept": -0.284,
+          "logit_p": 1.572
+        },
+        "lam": 0.0
+      },
+      "RM-1": {
+        "logloss": 0.6233,
+        "brier": 0.2169,
+        "rerank": {
+          "cards": 20,
+          "issued": {
+            "r1": 0.7,
+            "r2": 0.6,
+            "both": 0.45,
+            "none": 0.15
+          },
+          "model": {
+            "r1": 0.75,
+            "r2": 0.7,
+            "both": 0.6,
+            "none": 0.15
+          },
+          "r1_changed": 5,
+          "r2_changed": 6
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.15,
+          "ci95": [
+            -0.05,
+            0.35
+          ],
+          "cards_better": 4,
+          "cards_worse": 1,
+          "n": 20
+        },
+        "weights": {
+          "intercept": -0.177,
+          "logit_p": 1.498,
+          "cushion_nb": -1.032
+        },
+        "lam": 0.0
+      },
+      "RM-1X": {
+        "logloss": 0.6237,
+        "brier": 0.2171,
+        "rerank": {
+          "cards": 20,
+          "issued": {
+            "r1": 0.7,
+            "r2": 0.6,
+            "both": 0.45,
+            "none": 0.15
+          },
+          "model": {
+            "r1": 0.75,
+            "r2": 0.7,
+            "both": 0.6,
+            "none": 0.15
+          },
+          "r1_changed": 4,
+          "r2_changed": 5
+        },
+        "bootstrap": {
+          "mean_change_in_top2_wins_per_card": 0.15,
+          "ci95": [
+            -0.05,
+            0.35
+          ],
+          "cards_better": 4,
+          "cards_worse": 1,
+          "n": 20
+        },
+        "weights": null,
+        "lam": 256
+      }
+    }
+  },
+  "cushion_nb_by_era": {
+    "ordinal era (no p), R1/R2": {
+      "won": 17,
+      "n": 28,
+      "rate": 0.607
+    },
+    "probability era, R1/R2": {
+      "won": 7,
+      "n": 24,
+      "rate": 0.292
+    }
+  },
+  "final_rm1": {
+    "intercept": -0.1871,
+    "logit_p": 1.5433,
+    "cushion_nb": -1.1272
+  }
+}

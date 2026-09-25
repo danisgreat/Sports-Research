@@ -123,3 +123,18 @@ The movement follows the **sport mix** (the best cohort was soccer-heavy), not a
 - **`tools/card_math.py`:** the reference distribution-to-contract implementation (M14).
 - **`tools/calibration_report.py`:** the review standard.
 - **A canonical settlement table,** so future extraction is exact.
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) rebuild
+
+1. **Result-parsing fix.** Where a table has both a narrative result column and an exact result column, the exact token (WIN/LOSS/PUSH/VOID) now wins.
+   - In the (d) dataset, **17 rows were graded the wrong way round**, e.g. P-085 "Lobos lost by 1; +2.5 covers" was read as a loss.
+   - **55 rows were missing.**
+   - The (d) findings above move slightly; none of their conclusions changes.
+2. **Mini logs.** Every file under `Mini logs (to be sent to actual log later)/*/` is read. A card also imported into Part 5 is de-duplicated: the last occurrence wins.
+3. **Sport classification.** An explicit league word ("NBL", "Basketball") beats a shared nickname ("Hawks").
+
+**Result:** 1,264 graded rows from 315 cards; 641 with p (155 cards).
+
+**Use.** This dataset trains RM-1 (`research/rank_model_2026-09-25e/`). The (d) sections above remain the descriptive review.

@@ -25,6 +25,7 @@ Output (this folder): settled_rows.csv, conflicts.csv, coverage.txt.
 Usage: python extract_settled_rows.py
 """
 import csv
+import glob
 import os
 import re
 from collections import defaultdict
@@ -33,6 +34,16 @@ REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 HERE = os.path.dirname(os.path.abspath(__file__))
 PARTS = ['PREDICTION_LOG_COMBINED.md', 'PREDICTION_LOG_COMBINED_2.md', 'PREDICTION_LOG_COMBINED_3.md',
          'PREDICTION_LOG_COMBINED_4.md', 'PREDICTION_LOG_COMBINED_5.md']
+# Active mini logs (2026-09-25(e)): cards settled there but not yet imported into Part 5. A card that is
+# also in Part 5 is de-duplicated by the (card, rank) rule below (the last occurrence in log order wins),
+# so reading a mini log never double-counts it. P-510–P-515 were imported into Part 5 §"2026-09-25(f)".
+MINI_LOGS = sorted(os.path.relpath(p, REPO) for p in glob.glob(
+    os.path.join(REPO, 'Mini logs (to be sent to actual log later)', '*', '*.md')))
+PARTS += MINI_LOGS
+EXACT_RESULT_RE = re.compile(r'^(WIN|WON|LOSS|LOST|PUSH|VOID|W|L|P)$')
+# Temporary IDs that later received canonical numbers (PREDICTION_LOG_COMBINED_5.md §"2026-09-26(a)").
+# The issued records keep their temporary headings; the dataset reports the canonical ID.
+ALIASES = {'TMP-20260923-NPB-CHU-DB-G25': 'P-516', 'TMP-20260923-NBL-CNS-TAS': 'P-517'}
 
 ID_RE = re.compile(r'\b(P-\d{3}|TMP-\d{8}-[A-Z0-9-]+)\b')
 RANGE_RE = re.compile(r'P-\d{3}\W{0,3}[–—-]\W{0,3}P-\d{3}')
@@ -109,6 +120,8 @@ SPORT_RULES = [
     ('rugby', r'\b(NRLW?|Super Rugby|rugby|Top 14|Premiership Rugby|URC|NPC|Hilux|Rugby Championship|State of Origin)\b'),
     ('ice-hockey', r'\b(NHL|AHL|KHL|SHL|AIHL|hockey|Metal Ligaen|puck ?line|Goodall Cup)\b'),
     ('baseball-MLB', r'\bMLB\b'),
+    # An explicit basketball league word beats a shared nickname (P-514 "Illawarra Hawks" is not SoftBank).
+    ('basketball', r'\b(Basketball|NBL|NBA|WNBA)\b'),
     ('baseball-NPB/KBO/CPBL', r'\b(NPB|KBO|CPBL|Fighters|Seibu|Eagles|Buffaloes|Hawks|Marines|Dragons|Hanshin|Tigers \(NPB\)|Yomiuri|'
                               r'Giants \(NPB\)|Swallows|Carp|DeNA|BayStars|Doosan|KT Wiz|LG Twins|NC Dinos|Kia|Samsung|Lotte|Hanwha|'
                               r'Kiwoom|SSG|Monkeys|Brothers|Guardians \(CPBL\)|Uni-President|Wei-Chuan|TSG)\b'),
@@ -255,6 +268,11 @@ def main():
                 rank_c = pick_col(headers, ['rank'])
                 res_c = pick_col(headers, ['result', 'operator settlement', 'settlement', 'outcome', 'realised'],
                                  avoid=('route', 'source', 'endpoint', 'note'))
+                # Every result-bearing column. A cell that is exactly a result token ("**WIN**") beats a
+                # narrative cell ("STL lost 1–2 (margin -1)"), which can describe the game, not the row.
+                res_cols = [k for k, hh in enumerate(headers)
+                            if any(t in hh.lower() for t in ('result', 'settlement', 'outcome', 'realised'))
+                            and not any(a in hh.lower() for a in ('route', 'source', 'endpoint', 'note'))]
                 p_c = prob_col(headers)
                 con_c = pick_col(headers, ['contract', 'pick', 'selection', 'frozen issued row', 'issued row', 'row', 'option'],
                                  avoid=('contract id',))
@@ -271,7 +289,9 @@ def main():
                         p = parse_prob(cs[p_c]) if p_c is not None else None
                         if rk:
                             if res_c is not None:
-                                res = parse_result(cs[res_c])
+                                exact = [cs[k] for k in res_cols
+                                         if EXACT_RESULT_RE.match(re.sub(r'[*`\s]', '', cs[k]).upper())]
+                                res = parse_result(exact[0]) if exact else parse_result(cs[res_c])
                                 if res:
                                     if card:
                                         graded.append({'part': part, 'line': j + 1, 'card': card, 'rank': int(rk.group(1)),
@@ -317,8 +337,9 @@ def main():
         by_card[r['card']].append(r)
     out = []
     for card, rs in by_card.items():
-        ev = events.get(card, '')
+        ev = events.get(card, '') or events.get(ALIASES.get(card, ''), '')
         sport = classify_sport(ev, titles.get(card, ''), [r['contract'] for r in rs])
+        card = ALIASES.get(card, card)
         for r in sorted(rs, key=lambda x: x['rank']):
             out.append({'card': card, 'num': int(card[2:5]) if card.startswith('P-') else '', 'sport': sport,
                         'rank': r['rank'], 'n_ranks': len(rs), 'contract': r['contract'],

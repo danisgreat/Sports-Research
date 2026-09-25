@@ -1,6 +1,6 @@
 # Current rules — the live operating summary
 
-**Opened 2026-09-25(c).**
+**Opened 2026-09-25(c). Revised 2026-09-25(e):** the Rank-1/Rank-2 pass. It adds RM-1 ranking, TB-1 team baselines, the NFL/AFL/NRL references and settlement from the feed (`RULES_GENERAL.md` §"2026-09-25(e)").
 - **Method:** MDS-2026.09.19-v4.3.
 - **Control revision:** CR-2026.09.21-3.
 - **Scoring:** SCV-2026.09.19-v2.
@@ -27,7 +27,8 @@
 5. **Pregame means before the start.** A card cannot issue after the first ball, pitch, puck or tip. Use the feed's actual start marker, e.g. the NBL `jumpBall` event (`RULES_GENERAL.md` §2; `RULES_BASKETBALL.md` K-3).
 6. **Issued records are immutable.** Corrections are appended, never rewritten (`METHOD.md` §6, §10).
 7. **Distribution first.** One coherent joint outcome distribution per event. Every row's probability is read from it, and rows are ranked by that probability (`METHOD.md` §12; `RULES_GENERAL.md` §16.11, G23.1).
-8. **No coefficient from this log's own results.** A single game can expose a bug or open a prospective test; it never creates a weight, cap or ranking override (`L-087`; `RULES_GENERAL.md` §16.10 item 11; `C-PROMOTION-RECEIPT`).
+8. **No coefficient from this log's own results.** A single game can expose a bug or open a prospective test. It never creates a weight, cap or ranking override (`L-087`; `RULES_GENERAL.md` §16.10 item 11; `C-PROMOTION-RECEIPT`).
+   - **The one user-authorised exception is RM-1** (2026-09-25(e)). It is pooled and pre-specified, validated out of sample, refitted only at the 25-card review, and printed beside the unchanged stated p (`RULES_GENERAL.md` §"2026-09-25(e)"(h)).
 9. **Read the record; don't write it.** Every settlement fact comes from a named endpoint with its retrieval time (`C-PROCESS-RECORD-PROVENANCE`).
 10. **Honest labels.** Coin flips are called coin flips (`NEAR_TIED`). Forced and covering pairs are labelled. A mechanical win is not skill (G-L22, `COVERING_PAIR`).
 
@@ -43,10 +44,10 @@ Source: `METHOD.md` §3. The tools are in §G.
 | 3 | **Participants.** Official lineup, starters, goalie and pitchers first, with fetch time. Otherwise `LINEUPS_NOT_YET_PUBLISHED`, `RETRIEVAL_MISS` or a receipted `PROJECTED_BEAT_VERIFIED` (§D3) | a Rank-1 total or margin row depends on an unretrieved lineup (G14.2) |
 | 4 | **Environment.** Outdoor events: a venue-coordinate hourly forecast for the game window. MLB: the gamefeed weather block (§D4) | outdoor card without it |
 | 5 | **Evidence.** Disaggregated records before aggregates (M13); L5/L10/L15/L20 descriptively; the season rate plus the opponent (§D5) | an aggregate carries direction while the game log sits one click away: mark `AGGREGATE_ONLY` and cap it |
-| 6 | **Distribution.** Prior plus named adjustments → centre and width → family table with masses. Print the **reference row, reference width and `BASELINE_P`** (§D5, §D7) | the probabilities can't be reproduced from the table |
-| 7 | **Rank and dependence.** Rank by derived probability; label FORCED_PAIR/FREE and COVERING_PAIR; print P(R1∧R2), P(¬R1∧¬R2) and the complement decomposition (§D6) | a joint number is invented: use `JOINT_UNQUANTIFIED` with bounds |
+| 6 | **Distribution.** Prior plus named adjustments → centre and width → family table with masses. Print the **reference row, reference width, `BASELINE_P` and `TEAM_BASELINE_P`** (`tools/team_baseline.py`; §D5, §D7). The departure ledger anchors on TB-1 where it has resolution | the probabilities can't be reproduced from the table |
+| 7 | **Rank and dependence.** Derive each row's p, then run **`tools/rank_model.py rank`**. **Rank by RM-1 q** and print the `TOP2_QUALITY` line. Label FORCED_PAIR/FREE and COVERING_PAIR; print P(R1∧R2), P(¬R1∧¬R2) and the complement decomposition (§D6) | a joint number is invented: use `JOINT_UNQUANTIFIED` with bounds |
 | 8 | **Freeze.** Final volatile refresh, freeze time, manifest SHA. Append the card to the active mini log **before** delivery | — |
-| 9 | **Settle.** Three terminal lineages; the `receipts.py settle …` process record; lineup diff; z-scores; row grades; enhanced reviews (§D8) | any credible live or conflicting source |
+| 9 | **Settle.** Three terminal lineages; the `receipts.py settle …` process record, **read from the feed, never typed** (`C-SETTLEMENT-FROM-FEED`); lineup diff; z-scores; p **and** q grades; enhanced reviews (§D8) | any credible live or conflicting source |
 | 10 | **Learn.** Retrospective questions; dispositions to `LEARNING_REGISTER.md` with a receipt; baseline ledger row appended (§D9) | a predictive rule from one or two games |
 
 ## C. The card: six fields plus the completeness block
@@ -58,9 +59,9 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
 | 1 Identity and contract | IDs, participants, competition, times (venue-local, UTC, AEST), state, exact contracts, method and manifest | 1 |
 | 2 Evidence and exposure | Sources with owner, time and status (OPENED/SNIPPET/ASSUMED); participants per side; injuries and workload; environment; windows; disaggregated records; settlement route | 7 **B**, 7r **S**, 8, 9 |
 | 3 Joint distribution | Prior with provenance; named signed adjustments; centre, median and width; family table with masses; phase and team marginals; representative score; **reference row** and **reference width** | 2 **B**, 3 **B**, BR, WB **S**, T13 **S** (tennis), CVW (cricket) |
-| 4 Contract queries and ranks | Exact probability per row (UNVALIDATED_SUBJECTIVE, reproduced with `tools/card_math.py`); rank by probability; FORCED_PAIR/FREE; preferred side; push mass; **`BASELINE_P` per row**; **departure ledger**; **track-record row**; `LOW_RESOLUTION` label at 0.50–0.65; `C-PLUS-CUSHION` for non-baseball +k.5 | BP **S**, DL **S**, PC **S**, 5b, HC **S** (tennis handicap) |
+| 4 Contract queries and ranks | Exact probability per row (UNVALIDATED_SUBJECTIVE, reproduced with `tools/card_math.py`); **RM-1 q, tier and flags per row; ranks by q; `TOP2_QUALITY`** (optional `SLATE_ADVISORY`); FORCED_PAIR/FREE; preferred side; push mass; **`BASELINE_P` and `TEAM_BASELINE_P` per row**; **departure ledger**; **track-record row**; `LOW_RESOLUTION` label at 0.50–0.65; `C-PLUS-CUSHION` for non-baseball +k.5 | BP **S**, DL **S**, PC **S**, **RM S, TB S** (from manifest 2026-09-25-5), 5b, HC **S** (tennis handicap) |
 | 5 Dependence and checks | P(R1∧R2), P(¬R1∧¬R2), P(all fail) where three or more rows share a driver; complement decomposition; kill paths with mass; COVERING_PAIR | 4, 5, 5a **B**, 6 |
-| 6 Freeze and follow-up | Freeze receipt, manifest SHA, settlement route. At settlement: sourced process record, lineup diff, z, grades, reviews | 10 **B**, 10p **S**, 10l **S**, 10z **S** |
+| 6 Freeze and follow-up | Freeze receipt, manifest SHA, settlement route. At settlement: sourced process record, lineup diff (names must be on the card), z, grades, reviews | 10 **B**, 10p **S**, 10l **S**, 10z **S**, **10n S** |
 
 ## D. Rules by topic
 
@@ -112,8 +113,16 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
 - **Coherence.** The total probability is derived from the card's own centre and width, with the normalised edge printed (G-L8, M14). Mean and median are kept distinct. **Use `tools/card_math.py`** (normal / negative binomial / Poisson / Skellam, with `--no-zero` for margins that cannot tie) so the numbers reproduce.
 - **Baseline-anchored construction (`C-DEPARTURE-LEDGER`, 2026-09-25(d)).** Start each row at `BASELINE_P`. Print its log-odds departure and attribute it to named mechanisms (`tools/card_math.py departure`). More than 10% unattributed is `UNEXPLAINED_DEPARTURE`, and the grade is capped at LOW.
 
-### D6 Ranking and dependence (`RULES_GENERAL.md` G23.1, G27, G-L9, G-L10, G-L17, G-L21, G-L22)
-- **Order.** Rank by the derived probability of the exact settlement event, plus robustness. Rows that cannot be separated still get unique ordinals, labelled `NEAR_TIED` with the non-predictive tie-break stated.
+### D6 Ranking and dependence (`RULES_GENERAL.md` G23.1, G27, G-L9, G-L10, G-L17, G-L21, G-L22; §"2026-09-25(e)")
+- **Order (`C-RANK-MODEL`, from 2026-09-25(e)).** Rank by **RM-1 q**, the calibrated probability of the exact settlement event, from `python tools/rank_model.py rank --sport <league> --row "<contract>=<p>" …`.
+  - Stated p is printed unchanged beside q and breaks ties within 0.005.
+  - Rows that cannot be separated still get unique ordinals, labelled `NEAR_TIED` with the non-predictive tie-break stated.
+- **`SIDE_FLIP`** (q crosses 0.5 by ≥ 0.05). The flipped side is ranked by q, capped at SUPPORTED, and given a reconciliation line.
+  - Override is allowed only when a TB-1 target with resolution gives the stated side ≥ 0.55. A narrative is never an override.
+  - `NEAR_TIED_FLIP` (within 0.05 of 0.5) keeps the stated side as a coin flip.
+- **`TOP2_QUALITY` on every card:** STRONG / SUPPORTED / TOP1_ONLY / COIN_FLIP. Under `TOP2_COIN_FLIP`, the delivery says in plain words that the top two are near coin flips.
+  - Optional **`SLATE_ADVISORY`**: up to two same-event contracts the card's own distribution prices at q ≥ 0.70. Not ranked, not scored, not a betting recommendation.
+  - **Rank 1 is only "far more likely to win than lose" in the STRONG tier.** Held out, q ≥ 0.70 won 81% of decisions and 73% as Rank 1; below 0.70, 52–63%.
 - **No pooled band forces an ordinal:** no 40–60% floor, no slot-history fade (G26.1).
 - **Bottom row (G27):** write its best case in full and run the swap test against the row above.
 - **Pairs.**
@@ -133,6 +142,14 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
   - `python tools/skill_baseline.py` reports card minus baseline.
   - **Seed result: the cards have not yet beaten the baseline** (0.2461 v 0.2360, n = 29, interval spans 0).
 - **Top-slot measures:** Rank-1 record; top O/U preferred side; Hit@2 excluding covering pairs. "At least one O/U won" is never a success measure (M23). **Ranks 2–4 carry no ordering information** in the full record (54–56% each), so report probabilities, not slots.
+- **RM-1 (2026-09-25(e); `research/rank_model_2026-09-25e/README.md`).** logit(q) = −0.187 + 1.543·logit(p) − 1.127·[a +k.5 cushion outside baseball, hockey and soccer].
+  - It beat the stated p on log loss in grouped CV and in four forward splits.
+  - Ranking by q raised the top-two win count on held-out cards: leave-one-card-out +0.068 per card [+0.007, +0.128]; Rank 1 64.2% → 68.9%; Rank 2 60.1% → 62.2%.
+  - Rank 1 and Rank 2 were never lower in any forward split (from P-450: 66.7% → 69.0% and 59.5% → 69.0%).
+  - The gains are in the oval sports, basketball and tennis. MLB, NPB/KBO, soccer and cricket are unchanged.
+  - A richer per-sport and per-class model failed.
+  - Both p and q are scored at settlement (`T-RM1-PROSPECTIVE`). If q's Brier is worse than p's over 25 cards, RM-1 reverts to disclosure.
+- **The dataset was rebuilt in 2026-09-25(e):** 17 rows had been graded the wrong way round, 55 had been dropped, and the P-510+ mini log was added (1,264 rows).
 - **What the full record says** (2026-09-25(d); `research/settled_rows_2026-09-25/README.md`; 598 rows, 149 cards):
   - **Calibration overall is good:** slope 1.06, Brier 0.2249. **Skill is modest:** +7.7% over the base rate. No global shrink is warranted.
   - **Skill lives at p ≥ 0.65:** 80.3% at a stated 0.744. **Rows at 0.50–0.65 are coin-flip-grade:** 53.6% at 0.574. Label them `LOW_RESOLUTION` (`C-LOW-RESOLUTION-BAND`).
@@ -148,6 +165,8 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
 - **Enhanced failure review** when the Rank-1 row loses, or when the top O/U loses or pushes (`TOP_OU_REVIEW`). Inspect wins as well as losses.
 - **The three questions:** what the outcome turned on; whether it was knowable before issue (with evidence); the smallest justified change.
 - **Summaries are copied from the issued Field 4 table,** never retyped (`C-SUMMARY-FROM-CARD`).
+- **Settlement is read, never written (`C-SETTLEMENT-FROM-FEED`).** Linescores, lineup diffs, scorers and statistics come from `receipts.py` or from a fetched endpoint pasted with its URL. A script may assemble fetched data but never contain narrative literals.
+  - P-510 and P-511 lineup diffs listed players who did not play, and P-515's score was wrong. Audit field `10n` checks that the diff's names are on the card.
 - Run `python audit_card_controls.py <log> --settlement --strict` and record its table.
 
 ### D9 Learning discipline (`LEARNING_REGISTER.md`; `RULES_GENERAL.md` §"2026-09-24(f)"(f))
@@ -156,7 +175,8 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
   - `C-WIDTH-Z`, `C-BASELINE-SKILL`, `C-PROB-EXTREMITY`, `C-RUN-CENTRE-BIAS`, `C-PHASE-VS-FULL-TOTAL`;
   - `T-TEN-LOWTIER-HCP`, `T-BKB-SEASON-OPENER-WIDTH`, `T-NHL-PRESEASON-GOALIE`, `T-MLB-WIND-IN-OVER`;
   - `C-TEN-FAV-SEPARATION`, `T-TEN-BENCHMARK-GAP`, `T-CRI-DOMINANT-HITTER`, `T-CRI-POST-TOSS-FREEZE`;
-  - from 2026-09-25(d): `T-PLUS-CUSHION`, `C-LOW-RESOLUTION-BAND`, `T-TOTAL-DIRECTION-LEAGUE`.
+  - from 2026-09-25(d): `T-PLUS-CUSHION`, `C-LOW-RESOLUTION-BAND`, `T-TOTAL-DIRECTION-LEAGUE`;
+  - from 2026-09-25(e): `T-RM1-PROSPECTIVE` (q against p), `T-TB1-ANCHOR` (cards against TB-1 in covered leagues), `T-NRL-BYE-RUST` (non-binding).
 - **After every settlement or audit pass,** implement or explicitly disposition its "document mapping" table. Unexecuted mapping tables are how improvements were lost before.
 
 ### D10 Custody, logging and the repository
@@ -178,6 +198,11 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - **+1.5 rows:** the baseline is 0.638 for either side (walk-off asymmetry); one-run games are 27.6% (covering pairs). MLB +1.5 rows have been calibrated (18/30 at 0.604) but no better than that baseline.
 - **Track record:** MLB resolution is near zero (0.0075), so itemise every departure from `BASELINE_P`. NPB/KBO/CPBL Unders won 11/14 against Overs 4/9 (`T-TOTAL-DIRECTION-LEAGUE`).
 - An opener's first inning is width, not direction. Baseball centres have run high (`C-RUN-CENTRE-BIAS`: accrue, no coefficient).
+- **2026-09-25(e).**
+  - TB-1 has **no** resolution in MLB, so anchor on the population: away/home +1.5 0.617/0.659; +2.5 0.718/0.749; P(total > 6.5) 0.686; P(total > 8.5) 0.491 (9-inning games).
+  - Rank 1 is the highest RM-1 q, not a +1.5 by habit. Typical slates are `TOP2_COIN_FLIP` or `LEAN`.
+  - The settlement lineup diff comes from the statsapi boxscore (starters are the `X00` entries).
+  - NPB and KBO terminal state: the official score pages.
 
 **Basketball: NBA, WNBA, NBL, FIBA, LKL, LMB** (`RULES_BASKETBALL.md` K-1 to K-8)
 - Official starters from the box or preview. The NBL's actual tip is the first `jumpBall` event.
@@ -186,6 +211,9 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - Reference widths as in §D5. Early-season and regime windows. A back-to-back is worth about −1.8 margin in the NBA, and nothing on totals.
 - Leagues without a benchmark print `NOT_YET_DERIVED`; a width below 13.6 (total) or 9.4 (margin) needs a reason.
 - **Underdog cushions (+k.5) won 3/8 at 0.58**, so `C-PLUS-CUSHION` applies (`card_math.py cover … --no-zero`). Resolution is near zero (0.012), so the departure ledger is mandatory.
+- **2026-09-25(e).**
+  - Print **`TEAM_BASELINE_P`** (`tools/team_baseline.py --league nba|wnba|nbl`) and anchor on it. Its side Brier is 0.216–0.223 against 0.248–0.256 for the base rate; NBL totals have no resolution.
+  - The weaker team's **+1.5/+2.5/+3.5 covers only 0.32–0.45** (§7.7(c)). An unsupported cushion is flipped by RM-1.
 
 **NHL** (`RULES_ICE_HOCKEY.md` H-R1 to H-R6)
 - The official or confirmed goalie; preseason goalies stay projected.
@@ -193,6 +221,7 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - **73% of two-goal regulation wins contain an empty-net goal.** A −1.5 row carries the empty-net branch as mass.
 - Preseason totals run 5.3–5.7 against 6.25 in the regular season.
 - `receipts.py settle nhl` gives the goalies' time on ice, empty-net goals and the regulation score.
+- **2026-09-25(e).** TB-1 has no resolution; anchor on the population. RM-1 treats a +1.5 puck line like a baseball +1.5, with no cushion penalty.
 
 **Soccer** (`RULES_SOCCER.md`; `LEAGUE_RULES_SOCCER.md`)
 - The confirmed XI via the ESPN summary `rosters[]` or the official source.
@@ -201,6 +230,10 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - **Corners settle with the field owner:** pulselive for the EPL, the UEFA matchstats API for UEFA competitions, ESPN `wonCorners` otherwise.
 - Don't transfer EPL rates to cups or lower tiers (M12).
 - **Track record: the clearest skill of any sport** (107/143 at 0.70; Brier 0.170), mainly phase and team-total rows. **Exception: underdog cushions won 8/13 at a stated 0.77**, so `C-PLUS-CUSHION` applies (Skellam margin).
+- **2026-09-25(e).**
+  - Rank 1/Rank 2 went 55 W / 17 L, and RM-1 leaves soccer order almost unchanged.
+  - Split out "+0.5 / 1X" rows as double chances (2/5 at 0.73); +1.5 cushions won 7/8.
+  - EPL `TEAM_BASELINE_P` has resolution for results, **not totals**.
 
 **Tennis** (`RULES_TENNIS.md` TE-P5, TE-S2, TE-S4, TE-R1 to TE-R3)
 - **The dated Elo benchmark (Tennis Abstract) is blocking.** Explain or rebuild if the gap exceeds 10 points.
@@ -209,6 +242,7 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - **Handicap coherence:** P(−k.5) ≤ P(win). Print c_s and c_d (WTA −5.5 references: 0.663 / 0.168).
 - A walkover or retirement follows the stated void rules. ITF has no population reference.
 - **`NO_DEMONSTRATED_SKILL`** (8/16 at 0.60; Brier 0.281). Stay near the Elo benchmark and the population rates unless serve/return numerators justify moving; the departure ledger is required.
+- **2026-09-25(e).** RM-1's cushion term applies to +k.5 games handicaps (q ≈ 0.30 at a stated 0.58). A total-games Over at Rank 1 prints P(deciding set) against 0.340.
 
 **Cricket** (`RULES_CRICKET.md` §2, controls 19–21; `LEAGUE_RULES_CRICKET.md`)
 - **Toss, strip and conditions are separate fields** with separate ladders. Retrieve the toss at toss + 5 minutes (ESPN `notes[]`).
@@ -217,12 +251,17 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - **The chase is capped near the target:** a high chasing team-total Over is structurally disadvantaged.
 - Settle from official scorecards, never narrative reports. Zero is not a duck.
 - **Track record:** there is resolution but the probabilities are mis-stated (reliability 0.022). Unders won 9/12 at 0.589; Overs 7/12 at 0.631 (`T-TOTAL-DIRECTION-LEAGUE`).
+- **2026-09-25(e).** Global recalibration only. Settlement tables must carry the contract text (several cricket rows were blank).
 
 **AFL / NRL / rugby union / NFL** (`RULES_AFL.md`, `RULES_NRL_RUGBY.md`, `RULES_RUGBY_UNION.md`, `RULES_AMERICAN_FOOTBALL.md`)
 - Sport-native state and endpoint rules are in each file.
-- NFL key-number masses at 3 and 7 are `NOT_YET_DERIVED`; the G-L12 residual benchmark is about 13.9 points (Stern 1991).
+- **NFL key numbers (2026-09-25(e)):** P(\|m\| = 3) 0.136–0.151; P(\|m\| = 7) 0.074–0.096. The TB-1 residual width is 13.6 (the G-L12 benchmark of about 13.9 is confirmed).
 - **`NO_DEMONSTRATED_SKILL`** for NFL/NCAA (3/12 at 0.544; cushions 1/6) and AFL (3/10 at 0.662; cushions 0/3), both over-confident. The grade is capped at LOW, and the departure ledger and `C-PLUS-CUSHION` are required.
-- No population references are derived yet, so every row prints `NOT_YET_DERIVED`.
+- **Population references now exist** for the NFL, AFL and NRL (`BASE_RATES_REGISTER.md` §7.7). Rugby union is still `NOT_YET_DERIVED`.
+- **`TEAM_BASELINE_P`** (`--league nfl|afl|nrl`) is the anchor for sides (AFL 0.202 v 0.249). Totals anchor on the population, except the NFL (marginal).
+- **Cushions on the TB-1 underdog cover:** NFL +1.5/+2.5/+3.5 0.35–0.54; NRL +1.5/+2.5 0.41–0.49; AFL +6.5 0.38–0.43. RM-1 flips unsupported cushions.
+- **Rank 1/Rank 2 record: 12 W / 20 L,** the worst group. RM-1 held-out Rank 1 was 62.5% against 37.5% issued.
+- **P-515's score was 36–20**, not 36–14 (grades unchanged). The NRL regular season is ESPN season type 1.
 
 ## F. Recurring mistakes to check on every card (M1–M32)
 
@@ -245,7 +284,9 @@ The full evidence is in `LEARNING_REGISTER.md` §"2026-09-25 audit closure" B an
 | **M13** | **Aggregate used where the game log was available (highest-value check)** | M29 | Summary retyped, not copied |
 | M14 | Total probability not derived from the card's own centre and width | M30 | City forecast used instead of the gamefeed wind |
 | M15 | Control listed but not executed | **M31** | **Width chosen without a reference** |
-| M16 | Complement not itemised | **M32** | **Non-baseball underdog cushion priced like a baseball +1.5 (17/40 at 0.642)** |
+| M16 | Complement not itemised | **M32** | **Non-baseball underdog cushion priced like a baseball +1.5 (17/40 at 0.642; population cover of a small cushion is 0.32–0.54, §7.7(c))** |
+
+**M26 recurrence (2026-09-25(e)):** the P-510–P-515 settlement was generated from typed strings. It carried false lineup diffs (P-510, P-511) and a wrong score (P-515). `C-SETTLEMENT-FROM-FEED` and audit `10n` are the controls.
 
 ## G. Tools and commands
 
@@ -259,9 +300,12 @@ All are standard-library Python 3.10+. Run from the repository root.
 | `python prediction_preflight.py <manifest.json>` | Automated pipelines only (interactive cards verify in the card body) |
 | `python tools/skill_baseline.py` | After appending settled rows to `SKILL_BASELINE_LEDGER.md` |
 | `python tools/card_math.py total\|cover\|departure …` | When building a card: derive every row from its own distribution; departure ledger |
+| `python tools/team_baseline.py predict --league <nba\|wnba\|nbl\|nfl\|afl\|nrl\|epl\|mlb\|nhl> --home … --away … --date <local date> --total … --home-line …` | When building a card: `TEAM_BASELINE_P` and its flags |
+| `python tools/rank_model.py rank --sport <league> --row "<contract>=<p>" …` | Field 4: RM-1 q, tiers, flags, the q order and `TOP2_QUALITY` |
+| `python research/rank_model_2026-09-25e/validate_rank_model.py`, then `python tools/rank_model.py fit --fitted <date> --out tools/rank_model_coefficients.json` | At the 25-card review only, after rebuilding the dataset |
 | `python research/settled_rows_2026-09-25/extract_settled_rows.py` then `python tools/calibration_report.py` | Every 25-card review: rebuild the settled-row dataset and report calibration and resolution |
 | `python tools/verify_manifest.py` | Before issuing: governance files match the current manifest |
-| `python tools/make_manifest.py --out CONTROL_MANIFEST_<date>-<n>.md --title … --note …` | After any governance edit |
+| `python tools/make_manifest.py --out CONTROL_MANIFEST_<date>-<n>.md --title … --note … [--model-change "…"]` | After any governance edit (`--model-change` whenever a coefficient, cap or ranking rule changes) |
 | `python tools/repo_hygiene.py` | Before committing |
 | `python -m unittest discover -s . -p "test_*.py"` and `… -s tools …` | Before committing (CI runs all of the above) |
 
@@ -283,6 +327,8 @@ All are standard-library Python 3.10+. Run from the repository root.
 | Mini-log import, settlement procedure | `EXTERNAL_LOGGING_WORKFLOW.md` |
 | Role and honesty boundary | `AGENT_ROLE_AND_TASK.md` |
 | Numerical program (not built) | `NUMERICAL_PROGRAM.md`, `H0_DATASET_CARD.md` |
+| Ranking model RM-1 (evidence, refit procedure) | `research/rank_model_2026-09-25e/README.md`; `tools/rank_model.py` |
+| Team baseline TB-1, NFL/AFL/NRL references, cushion base rates | `research/team_baseline_2026-09-25e/README.md`; `tools/team_baseline.py`; `BASE_RATES_REGISTER.md` §7.7 |
 | Active log / state register | `PREDICTION_LOG_COMBINED_5.md` / `GAME_LOG_STATUS_CURRENT.md` |
 | History of changes | `CHANGELOG.md` |
 | How to contribute and commit | `CONTRIBUTING.md` |

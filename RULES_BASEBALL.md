@@ -1234,3 +1234,54 @@ No direction coefficient follows. If the test confirms the asymmetry, the NPB/KB
 **B-11. Use `tools/card_math.py`** for every total and run-line row: `--dist negbin` for runs; `--no-zero` for full-game margins, because extras decide. It reproduces the issued P-500 Over 7.5 (0.546 against 0.536).
 
 Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank 1 and Rank 2 in baseball: sources, anchors and the ranking model
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)". Evidence: `research/rank_model_2026-09-25e/`, `research/team_baseline_2026-09-25e/`.
+
+**Record at Rank 1/2 (probability era).** MLB 45 W / 26 L; NPB/KBO/CPBL 33 W / 17 L.
+- The MLB Rank-1 row is usually a +1.5. It won 65.6% (21/32), which matches its population base rate, not more.
+- MLB resolution is near zero (0.0075).
+
+### (a) Sources
+
+1. **Settlement lineup diff.** Read it from the statsapi boxscore (`/api/v1/game/{pk}/boxscore`), or run `python receipts.py settle mlb … --card-away … --card-home …`.
+   - `battingOrder` holds each slot's **current** occupant. Starters are the `X00` entries.
+   - The P-510 and P-511 diffs were typed and named players who did not play (`C-SETTLEMENT-FROM-FEED`; audit field `10n`).
+2. **NPB terminal state:** the official page `npb.jp/scores/YYYY/MMDD/<away>-<home>-<n>/`, marker 【試合終了】.
+3. **KBO terminal state:** `eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=YYYY-MM-DD` ("FINAL", with W/L/S).
+
+   Both were verified on 2026-09-25 (P-512 7–8; P-513 2–1).
+4. **Unchanged:** the freeze receipt (`receipts.py pregame mlb`), gamefeed wind, and official orders.
+
+### (b) Reasoning
+
+1. **Anchor on the population, not on TB-1.** A team-strength baseline adds nothing in MLB: out of sample, P(home win) Brier 0.2480 against 0.2497, and totals 0.2491 against 0.2500. The anchor is `BASELINE_P`.
+
+   | MLB 2026 row (9-inning games, n = 2,373) | Population rate |
+   |---|---:|
+   | Home win | 0.529 |
+   | Away +1.5 / home +1.5 | 0.617 / 0.659 |
+   | Away +2.5 / home +2.5 | 0.718 / 0.749 |
+   | P(total > 5.5) | 0.757 |
+   | P(total > 6.5) | 0.686 |
+   | P(total > 7.5) | 0.572 |
+   | P(total > 8.5) | 0.491 |
+   | P(total > 9.5) | 0.398 |
+   | P(total > 10.5) | 0.329 |
+
+   The 0.638 figure in §7.5 includes extra innings. Starters, bullpen state, orders and gamefeed wind are the named departures (`C-DEPARTURE-LEDGER`).
+2. **RM-1 ordering.**
+   - A baseball +1.5 carries no cushion penalty: it is calibrated, 27/45.
+   - The global recalibration pulls rows stated at 0.55–0.60 to about 0.53–0.61. A typical slate (ML, a +1.5, and a main-line total pair) therefore lands at **`TOP2_COIN_FLIP` or `LEAN`**, and the card says so.
+   - The first-choice Rank 1 is **the row with the highest q, not a +1.5 by habit.**
+3. **What MLB rows can reach STRONG** (`SLATE_ADVISORY`), from the population alone:
+   - a **+2.5** run line (0.72–0.75);
+   - a **low total line**, Over 5.5 (0.76);
+   - a total two or more runs from the card's own centre.
+
+   These are printed only as the card's own distribution prices them, never as a recommendation.
+4. **NPB/KBO/CPBL.** Unders won 11/14. That remains `T-TOTAL-DIRECTION-LEAGUE` (TESTING, non-binding). RM-1X's class terms (which would encode it) did not generalise.
+5. **Rejected (single-game, M27):** the "KBO velocity filter" and "ace dominance" candidates from the P-510–P-515 mini log (`RULES_GENERAL.md` §"2026-09-25(e)"(g)). The starter adjustment is already the channel.

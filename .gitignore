@@ -22,6 +22,8 @@ venv/
 
 # Research-script caches (raw API pulls are re-fetchable; results JSON is committed)
 research/**/cache/
+# tools/team_baseline.py fetch cache (2026-09-25(e))
+.cache/
 
 # OS and Office clutter
 .DS_Store
