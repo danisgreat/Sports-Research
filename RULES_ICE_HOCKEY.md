@@ -647,3 +647,14 @@ The peer version of this section (`cb95acd`) was wrong in four respects:
 - the regulation score.
 
 It supplies `T-NHL-PRESEASON-GOALIE`'s record directly. P-503 replays as "card Jake Oettinger → DID NOT PLAY; R. Poirier 59:29".
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank 1 and Rank 2 in ice hockey
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)".
+
+- **TB-1 has no resolution in the NHL.** Out of sample, P(home win) Brier 0.2477 against 0.2503; totals 0.2490 against 0.2502. The anchor stays `BASELINE_P` and the §7.2 population, with goalies (H-R2) and the preseason regime as named departures. `python tools/team_baseline.py predict --league nhl …` prints `TB1_NO_RESOLUTION` for both targets.
+- **RM-1 classes a +1.5 puck line with the low-scoring sports** (`hcp_plus_low`, like baseball). It carries **no cushion penalty**: one-goal games are common (§7.2), and the penalty's evidence holds a single hockey row.
+- **The −1.5 empty-net branch (H-R3) is unchanged.**
+- **Ranking:** by RM-1 q, with the `TOP2_QUALITY` line printed.

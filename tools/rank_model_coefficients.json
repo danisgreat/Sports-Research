@@ -1,0 +1,16 @@
+{
+  "cards": 154,
+  "fitted": "2026-09-25",
+  "lam": 0.0,
+  "model": "RM-1",
+  "n": 409,
+  "source_csv": "research/settled_rows_2026-09-25/settled_rows.csv",
+  "terms": [
+    "cushion_nb"
+  ],
+  "weights": {
+    "cushion_nb": -1.1271935699367828,
+    "intercept": -0.1870923256466745,
+    "logit_p": 1.5433050759973534
+  }
+}

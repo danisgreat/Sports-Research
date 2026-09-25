@@ -724,3 +724,19 @@ ITF and UTR are `NOT_YET_DERIVED`: ESPN does not carry them.
 - **Practical consequence.** The Elo benchmark (TE-P5) and the population rates (TE-R1) are the starting point. A winner probability far from the Elo implied probability, or a total far from the P(deciding set) reference, needs the serve/return numerators that justify it. Otherwise the card stays near the benchmark.
 
 Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank 1 and Rank 2 in tennis
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)".
+
+**Record at Rank 1/2 (probability era): 6 W / 8 L.** The losses were two total-games Overs at Rank 1 and three +k.5 games cushions. The sport stays `NO_DEMONSTRATED_SKILL`.
+
+- **The RM-1 cushion term covers +k.5 games handicaps.**
+  - Stated at 0.58, such a row has a q of about 0.30, and the favourite's −k.5 becomes the decision side. That side is capped at SUPPORTED and must still pass `C-HCP-COHERENCE`: P(−k.5) ≤ P(win), with the c_s / c_d decomposition.
+  - Held out, RM-1 raised tennis Rank 2 from 3/7 to 5/7 (small n).
+- **No TB-1 lane.**
+  - The anchor stays the dated Elo benchmark (TE-P5, blocking) plus the §7.4 population (WTA P(deciding set) 0.340; total games bimodal).
+  - A total-games Over at Rank 1 needs the card's P(deciding set) printed against 0.340, because the Over is mostly a third-set bet.
+- **Unchanged:** sources (the WTA match page, Tennis Majors and the Elo snapshot).

@@ -670,3 +670,54 @@ Current prospective override. Retain drive/play opportunity, QB/offensive-line/s
 - **Required on every margin row:** the G-L12 residual benchmark (about 13.9 points), and key-number masses at 3 and 7, which are `NOT_YET_DERIVED`, so they are derived before the next NFL handicap card.
 
 Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — the first NFL population reference, key numbers, the team baseline and the ranking model
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)". Evidence: `research/team_baseline_2026-09-25e/README.md`; `BASE_RATES_REGISTER.md` §7.7.
+
+**Record.** NFL/NCAA stays `NO_DEMONSTRATED_SKILL`: 3/12 at 0.544; cushions 1/6. The losses at Rank 1 were five underdog cushions of +1.5 to +6.5 (P-412, P-413, P-414, P-422, P-472).
+
+### (a) Sources
+
+- **ESPN NFL scoreboard** (`…/football/nfl/scoreboard?dates=…`) and **team schedule** (`…/football/nfl/teams/{id}/schedule?seasontype=2`): the TB-1 lane (`--league nfl`).
+- **NCAA:** no TB-1 lane (`NOT_COVERED`).
+
+### (b) Reference rows (NFL 2024 / 2025, regular season, n = 272 each)
+
+| Row | 2024 | 2025 |
+|---|---:|---:|
+| Home win | 0.524 | 0.536 |
+| Total mean (SD) | 45.8 (13.1) | 46.0 (13.8) |
+| Home margin | +1.7 | +2.2 |
+| Margin SD | 14.5 | 14.2 |
+| TB-1 residual width, total / margin | 13.1 / 13.7 | 13.4 / 13.6 |
+
+**Key numbers** (previously `NOT_YET_DERIVED`; this is the G-L12 residual benchmark):
+
+| Margin | 2024 | 2025 |
+|---|---:|---:|
+| P(\|margin\| = 3) | 0.136 | 0.151 |
+| P(\|margin\| = 7) | 0.074 | 0.096 |
+| P(\|margin\| ≤ 3) | 0.24 | 0.27 |
+| P(\|margin\| ≤ 7) | 0.52 | 0.50 |
+
+### (c) Reasoning
+
+1. **TB-1 is the anchor.**
+   - Sides: 0.231 v 0.252.
+   - Totals: 0.246 v 0.254, which is marginal; the departure ledger uses TB-1 for totals too.
+   - Early season (Weeks 1–3) is flagged `TB1_EARLY_SEASON`. Its early-season result still beat the base rate (0.246 v 0.253).
+2. **Cushions at their population rate.** The TB-1 underdog covered:
+
+   | Cushion | Cover rate |
+   |---|---|
+   | +1.5 | 0.35–0.42 |
+   | +2.5 | 0.38–0.46 |
+   | +3.5 | 0.45–0.54 |
+   | +6.5 | 0.57–0.60 |
+   | +7.5 | 0.61–0.66 |
+
+   Every Rank-1 cushion that lost sat in the +1.5 to +6.5 range and was stated at 0.53–0.58. That is at or above the population rate, with no receipted mechanism. Such a row is now `PLUS_CUSHION_UNSUPPORTED`, and RM-1 flips it.
+3. **Key numbers.** A +2.5 or +3.5 row prints the mass at 3 (0.14–0.15). A +6.5 or +7.5 row prints the mass at 7 (0.07–0.10). These are the only places the half-point matters.

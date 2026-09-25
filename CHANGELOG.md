@@ -6,6 +6,36 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-25(e) — Rank 1 and Rank 2: the ranking model, the team baseline, oval references, settlement integrity
+
+- **Ask.** A sport-by-sport review of sources and reasoning, to make Rank 1 and Rank 2 far more likely to win than lose, and a new probability model if one could be built.
+- **Data fixes.**
+  - The settled-row extractor was reading narrative columns: 17 rows had been graded the wrong way round and 55 dropped. P-514 was classed as NPB.
+  - The dataset is rebuilt: 1,264 rows; 641 with p.
+- **RM-1** (`tools/rank_model.py`; user-authorised `L-087` exception).
+  - The model: logit(q) = −0.187 + 1.543·logit(p) − 1.127·[a +k.5 cushion outside baseball, hockey and soccer].
+  - It beat the stated p on log loss in grouped CV and in four forward splits.
+  - Ranking by q raised held-out top-two wins by +0.068 per card [+0.007, +0.128] and never lowered Rank 1 or Rank 2 in any forward split.
+  - A per-sport/per-class challenger failed.
+  - Controls: `C-RANK-MODEL`, `C-TOP2-QUALITY` (`SLATE_ADVISORY`).
+- **TB-1** (`tools/team_baseline.py`).
+  - A leak-free team-strength baseline, validated on 12 league-seasons plus 1,704 newly pulled NFL, AFL and NRL games.
+  - It has resolution for sides in NBA, WNBA, NBL, NFL, AFL, NRL and EPL (5–19% Brier) and for NBA, WNBA and NFL totals; none in MLB or the NHL.
+  - Control: `C-TEAM-BASELINE`.
+- **References.**
+  - The first NFL, AFL and NRL population rows, and the NFL key numbers.
+  - Underdog-cushion cover rates by league (`BASE_RATES_REGISTER.md` §7.7). A small cushion on the weaker team covers 32–54%: the mechanism of M32.
+  - `C-PLUS-CUSHION` amended.
+- **Settlement integrity.**
+  - The P-510–P-515 settlement had been script-typed. P-510, P-511 and P-514 lineup diffs were false; P-515's score was 36–20, not 36–14. Grades are unchanged.
+  - New controls: `C-SETTLEMENT-FROM-FEED` and audit field `10n`.
+  - P-514 is a `LINEUP_CLAIM_FALSE` process defect.
+  - P-510–P-515 are imported into Part 5 §"2026-09-25(f)"; that mini log is archived; the next ID is P-516.
+- **Sources.** Verified and admitted: ESPN NFL, AFL and NRL scoreboards; ESPN team schedules; the KBO English scoreboard; the NPB official score page. The NRL team schedule returns HTTP 500.
+- **Audit.** New fields `RM`, `TB` and `10n`.
+- **Sport files.** Each has a §"2026-09-25(e)".
+- **Receipt.** `CONTROL_MANIFEST_2026-09-25-5.md`.
+
 ### 2026-09-25(d) — review of every settled log: calibration findings, construction tools
 
 - **Dataset.** `research/settled_rows_2026-09-25/` extracts every graded row from Parts 1–5: 1,185 rows from 307 cards, 600 with probabilities from 149 cards. It reproduces the logged cohort figures.

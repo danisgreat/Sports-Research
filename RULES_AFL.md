@@ -636,3 +636,52 @@ Current prospective override. Retain scoring-shot opportunity versus conversion,
 - **Missing reference.** There is no AFL population reference yet (`BASELINE_P: NOT_YET_DERIVED`). Deriving an AFL margin and total population from the field owner is the first step to an honest baseline.
 
 Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — the first AFL population reference, the team baseline and the ranking model
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)". Evidence: `research/team_baseline_2026-09-25e/README.md`; `BASE_RATES_REGISTER.md` §7.7.
+
+This implements the 2026-09-25(d) to-do ("deriving an AFL margin and total population from the field owner is the first step").
+
+**Record at Rank 1/2, NFL, AFL and NRL together: 12 W / 20 L,** the worst of any group. The losses were mostly underdog cushions and totals. AFL stays `NO_DEMONSTRATED_SKILL`.
+
+### (a) Sources
+
+- **ESPN AFL scoreboard** `…/australian-football/afl/scoreboard?dates=YYYYMMDD`: one date per call; season type 2 = home-and-away.
+- **ESPN team schedule** `…/australian-football/afl/teams/{id}/schedule?seasontype=2`: the TB-1 lane (`python tools/team_baseline.py predict --league afl …`).
+- **Unchanged:** the settlement sources.
+
+### (b) Reference rows (AFL 2025 / 2026, n = 207 each)
+
+| Row | 2025 | 2026 |
+|---|---:|---:|
+| Home win | 0.565 | 0.585 |
+| Draw | 0.005 | 0.015 |
+| Total mean (SD) | 168.6 (29.8) | 178.2 (29.1) |
+| Total, 10th / 50th / 90th percentile | 132 / 168 / 208 | 142 / 181 / 216 |
+| Home margin | +6.0 | +7.1 |
+| Margin SD | 42.5 | 40.8 |
+| P(\|m\| ≤ 12) | 0.30 | 0.28 |
+| P(\|m\| ≤ 24) | 0.48 | 0.47 |
+| TB-1 residual width, total / margin | 29.8 / 36.9 | 29.1 / 36.7 |
+
+These replace `NOT_YET_DERIVED` for `BASELINE_P`, the reference row and the reference width.
+
+### (c) Reasoning
+
+1. **TB-1 is the anchor for sides and margins.**
+   - It has the strongest resolution of any league: P(home win) Brier 0.202 against 0.249 (2026, chosen on 2025).
+   - **Totals have no resolution** (0.248 v 0.255, below the 3% bar). Totals anchor on the 2026 population row.
+2. **Cushions.** The TB-1 underdog covered:
+
+   | Cushion | Cover rate (2025–26) |
+   |---|---|
+   | +6.5 | 0.38–0.43 |
+   | +12.5 | 0.48–0.51 |
+   | +18.5 | 0.56–0.59 |
+   | +24.5 | 0.60–0.62 |
+
+   A cushion stated above its rate by more than 0.05 needs a receipted mechanism on the favourite's side (`C-PLUS-CUSHION`). Otherwise RM-1 flips it. The record's AFL cushions were 0/3.
+3. **Finals.** TB-1 is a regular-season model. For finals, print `TB1_FINALS_CONTEXT` and name the finals-specific departures: venue, rest days, and the weather at the ground.

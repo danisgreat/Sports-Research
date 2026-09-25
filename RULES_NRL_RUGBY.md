@@ -613,3 +613,51 @@ Totals and handicaps should arise from a joint scoring model using lineup/spine 
 
 
 Current prospective override. Retain final team/role/bench, possession/field-position/set starts, ruck/play-the-ball, kicking/discipline, venue/weather and golden-point endpoint. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, normalized-distance ordering, symmetric widening from a one-sided absence without a named mechanism, and automatic rebound/response rules. Build one coherent rugby-league joint outcome distribution before querying targets.
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — the first NRL population reference, the team baseline, P-515 and the ranking model
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)". Evidence: `research/team_baseline_2026-09-25e/README.md`; `BASE_RATES_REGISTER.md` §7.7.
+
+### (a) Sources
+
+1. **ESPN NRL scoreboard** `…/rugby-league/3/scoreboard?dates=YYYYMMDD`.
+   - The NRL regular season is ESPN **season type 1**; finals are type 2.
+   - `linescores` carry cumulative values: the half-time score, then the full-time score.
+   - It is admitted as one settlement lineage and as the TB-1 lane (`--league nrl`). The NRL team-schedule endpoint returns HTTP 500, so the tool reads the scoreboard; the first run takes about 2 minutes, then it is cached.
+2. **P-515 correction.** The settled log recorded the Preliminary Final as Roosters 36, Dolphins 14 (total 50). ESPN event 604843 gives **36–20** (half time 16–6; total 56).
+   - The grades are unchanged: Under 45.5 lost; Roosters +2.5 won; Dolphins −2.5 lost.
+   - The process "facts" in that retrospective (329 run metres, 14 errors) were unsourced and are struck (`C-SETTLEMENT-FROM-FEED`).
+3. **The nrl.com match centre** returned no statistics through the proxy on 2026-09-25. Its figures are admissible only when fetched and pasted with a URL.
+
+### (b) Reference rows (NRL 2025 / 2026, all completed games, n = 216 / 213)
+
+| Row | 2025 | 2026 |
+|---|---:|---:|
+| Home win | 0.551 | 0.545 |
+| Total mean (SD) | 46.1 (14.0) | 47.8 (13.9) |
+| Total, 10th / 50th / 90th percentile | 29 / 44 / 64 | 30 / 48 / 66 |
+| Home margin | +3.8 | +0.0 |
+| Margin SD | 18.7 | 20.7 |
+| P(\|m\| ≤ 2) | 0.13 | 0.15 |
+| P(\|m\| ≤ 6) | 0.34 | 0.29 |
+| TB-1 residual width, total / margin | 13.8 / 18.3 | 13.9 / 19.9 |
+
+### (c) Reasoning
+
+1. **TB-1 is the anchor for sides** (0.240 v 0.253). **Totals have no resolution:** TB-1's total RMSE is worse than the league mean. NRL totals therefore anchor on the population row: in 2026, 47.8 with SD 13.9.
+   - P-515's Under 45.5 at 0.635 sat about 0.10 above that population, where P(total < 45.5) ≈ 0.43–0.48 (TB-1 gave 0.445). It rested on an unmeasured "bye rust / wet track" story. Under the departure ledger it now needs a receipted mechanism, such as a confirmed wet-track forecast for the match window.
+2. **Early season.** TB-1 was worse than the base rate in the NRL's early rounds (0.284 v 0.271). Before Round 5, anchor on `BASELINE_P`.
+3. **Cushions.** The TB-1 underdog covered:
+
+   | Cushion | Cover rate (2025–26) |
+   |---|---|
+   | +1.5 | 0.41–0.43 |
+   | +2.5 | 0.44–0.49 |
+   | +4.5 | 0.51 |
+   | +6.5 | 0.55–0.57 |
+   | +8.5 | 0.62 |
+   | +12.5 | 0.65–0.67 |
+
+   `C-PLUS-CUSHION`, as amended, applies.
+4. **Finals and byes.** `C-FINALS-BYE-RUST` is **TESTING, non-binding** (`T-NRL-BYE-RUST`): collect the first-half margins of NRL finals played after a bye, from the ESPN scoreboard, over at least 30 games. `C-NRL-SPINE-PEDIGREE-TOTAL-FLOOR` is **REJECTED** (one game, and an invented statistic).

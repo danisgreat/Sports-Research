@@ -207,3 +207,37 @@ Every 25-card pattern review, and every audit of a cohort's probabilities, repor
 | Logistic slope | 1.06 (SE 0.16) |
 
 Details are in `research/settled_rows_2026-09-25/README.md`.
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 15. The ranking probability q (RM-1) and the team baseline (added 2026-09-25(e))
+
+1. **Two probabilities per row.** Each ranked row carries the card's stated p (UNVALIDATED_SUBJECTIVE, from its own distribution) and RM-1's q (`tools/rank_model.py`).
+   - q is a **calibrated ranking probability**. It is not a PUBLISHED numerical probability (`NUMERICAL_PROGRAM.md`).
+   - Ranks follow q (`C-RANK-MODEL`).
+   - Settlement scores **both** (Brier and log loss). Settlement tables add a `q` column: `| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |`.
+2. **§14 exception.** §14's rule that "nothing in this section may be applied back to a forecast" continues for everything **except RM-1**. RM-1 is the user-authorised calibration of 2026-09-25(e) (`RULES_GENERAL.md` §"2026-09-25(e)"(h)).
+   - It is refitted only at the 25-card review, after `extract_settled_rows.py` and `validate_rank_model.py`.
+   - A new term enters only if it beats RM-1 on log loss in every forward split.
+3. **Prospective check (`T-RM1-PROSPECTIVE`).** After 25 cards, q's Brier is compared with p's on the same rows. If q is worse, `C-RANK-MODEL` reverts to disclosure-only.
+4. **Top-two reporting.** For every review, report:
+   - the Rank-1 and Rank-2 win rates;
+   - the both-win and both-lose rates;
+   - the same four under the p order (counterfactual) and the q order (issued);
+   - the Rank-1 record by q tier.
+
+   Covering pairs stay excluded from Hit@2.
+5. **`TEAM_BASELINE_P`** joins `BASELINE_P` in the baseline difference (§13) wherever it is printed. For a covered league, "card beats baseline" means it beats TB-1.
+
+**RM-1 as fitted 2026-09-25(e)** (409 decision rows, 154 cards):
+
+| Term | Value |
+|---|---:|
+| a | −0.187 |
+| b | 1.543 |
+| c (cushion outside baseball, hockey and soccer) | −1.127 |
+
+| Measure | Stated p | RM-1 |
+|---|---:|---:|
+| Grouped-CV log loss | 0.6112 | 0.6032 |
+| Forward log loss from P-450 | 0.6154 | 0.5861 |

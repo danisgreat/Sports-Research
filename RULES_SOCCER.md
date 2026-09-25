@@ -1018,3 +1018,22 @@ This section is the current prospective override for audit-derived ranking logic
 - **Exception: underdog cushions (+k.5) won 8/13 at a stated 0.766**, a gap of −0.15. `C-PLUS-CUSHION` applies. A +k.5 soccer row prints P(underdog wins) + P(draw) + P(loses by ≤ k) from a Skellam or bivariate-Poisson margin (`python tools/card_math.py cover --dist skellam --mu … --mu-opp … --line +k`), beside the EPL margin band (`BASE_RATES_REGISTER.md` §7.3), or `NOT_YET_DERIVED` for other competitions.
 
 Source: `research/settled_rows_2026-09-25/README.md`. The figures are hindsight on the framework's own cards, descriptive, and use card-cluster intervals. None is a coefficient (`L-087`). Controls: `RULES_GENERAL.md` §"2026-09-25(d)".
+
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank 1 and Rank 2 in soccer: keep what works
+
+Controls: `RULES_GENERAL.md` §"2026-09-25(e)".
+
+**Record at Rank 1/2 (probability era): 55 W / 17 L,** the best of any sport. RM-1 re-ordered 1 of 35 held-out cards, so soccer's order is essentially unchanged.
+
+- **Where soccer's STRONG rows come from.** Phase rows, team totals, double chances and corners, plus +1.5 cushions (7/8 won at about 0.82). These remain the preferred Rank-1/Rank-2 material. `SLATE_ADVISORY` points at them when a supplied slate is main-line only.
+- **Classification.**
+  - A "+0.5 / 1X" row is a **double chance**, not a cushion. Such rows won 2/5 at a stated ~0.73, so none is stated above 0.70 without the Skellam draw mass printed.
+  - Soccer +k.5 rows carry no RM-1 cushion penalty.
+- **TB-1 (EPL only).**
+  - Results have resolution: P(home win) Brier 0.231 v 0.247.
+  - **Totals do not:** TB-1 is worse than the league rate (0.258 v 0.250), so EPL goal totals stay anchored on the §7.3 reference and the XI.
+  - Other leagues: `TEAM_BASELINE_P: NOT_COVERED`.
+- **First-half Over 0.5 at Rank 1/2** lost 4 times in the probability era. It stays under the §7.3 reference and M12 (no EPL-to-cup transfer).
+- **Unchanged:** corner settlement lanes and the confirmed XI.

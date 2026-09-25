@@ -1423,3 +1423,37 @@ All entries were verified by retrieval on 2026-09-25 (about 00:10–01:00 AEST).
 ### (c) Tool
 
 `receipts.py` (`pregame mlb|espn`; `settle mlb|nhl|espn`) prints every fact with its endpoint and retrieval time, and derives the `PREGAME` / `LIVE` / `FINAL` / `START_CROSSED_STATUS_NOT_FINAL` state from the feed. It never infers state from the clock alone. Offline fixtures live in `tests_fixtures/receipts/`: trimmed, market-free, and all from events already settled in Part 5 except two pregame captures.
+
+<!-- RANK-MODEL-2026-09-25E -->
+## 2026-09-25(e) — Rank-1/Rank-2 pass: lanes verified, admitted and corrected
+
+Verified by retrieval on 2026-09-25, about 22:40–23:59 AEST. **Market quarantine** applies to every lane: no `odds`, `pickcenter`, `againstTheSpread` or `winprobability` key is read.
+
+### (a) Terminal-state checks of the P-510–P-515 settlement
+
+| Card | Lane | Result | Verdict |
+|---|---|---|---|
+| P-510 | `statsapi.mlb.com/api/v1.1/game/823326/feed/live`; `/api/v1/game/823326/boxscore` | Final, STL 1 @ PIT 2; innings as logged | Final **confirmed**. The **lineup diff in the settled log is false**: it names Contreras, Arenado, Nootbaar, Siani, Bart, Tellez and Hayes; the box has Wetherholt, Herrera, Burleson, Walker, Bernal … and Cruz, Griffin, Lowe, O'Hearn … |
+| P-511 | `…/game/823087/feed/live`; `…/boxscore` | Final, LAA 6 @ SEA 4 | Final **confirmed**. The **lineup diff is false** (Schanuel, O'Hoppe, Ward, Moniak, Drury, Rendon, Adell, Raley, Polanco, Turner, Haniger and Rojas are not in the box) |
+| P-512 | `eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-09-25` | HANWHA 7 FINAL 8 NC; W Koo, L White, S Shin | **Confirmed** |
+| P-513 | `npb.jp/scores/2026/0925/db-t-23/` | 【試合終了】 DeNA 2–1 Hanshin | **Confirmed** |
+| P-514 | `site.api.espn.com/apis/site/v2/sports/basketball/nbl/summary?event=401875252` | Final, BNE 103 (25-25-23-30), ILL 95 | **Confirmed** |
+| P-515 | `site.api.espn.com/apis/site/v2/sports/rugby-league/3/scoreboard?dates=20260925` (event 604843) | Final, Roosters 36, Dolphins 20; half time 16–6 | **The logged 36–14 is wrong.** Grades are unchanged (Under 45.5 lost; Roosters +2.5 won). The "329 m", "14 errors" and the other process "facts" are unsourced |
+
+Each of these is one lineage. They correct the record; C-FINAL3 still needs three lineages for a settlement.
+
+### (b) Lanes admitted
+
+| ID | Endpoint | Fields used | Status | Notes |
+|---|---|---|---|---|
+| `SRC-ESPN-NFL-SCOREBOARD` | `…/sports/football/nfl/scoreboard?dates=YYYYMMDD` | scores, `season.type`, `neutralSite` | **ADMITTED — base rates and TB-1** | NFL 2024 and 2025: 286 events each, 0 failed days |
+| `SRC-ESPN-AFL-SCOREBOARD` | `…/sports/australian-football/afl/scoreboard?dates=…` | same | **ADMITTED — base rates and TB-1** | AFL 2025: 216 events; 2026: 217 |
+| `SRC-ESPN-NRL-SCOREBOARD` | `…/sports/rugby-league/3/scoreboard?dates=…` | same, plus `linescores` (cumulative half-time and full-time values) | **ADMITTED — base rates, TB-1 and one settlement lineage** | NRL 2025: 216; 2026: 213. **Regular season = season type 1** (not 2). `…/sports/rugby-league/nrl/…` returns 400 |
+| `SRC-ESPN-TEAM-SCHEDULE` | `…/sports/{league}/teams/{id}/schedule?seasontype=2[&season=YYYY]` | completed events' scores | **ADMITTED — TB-1 live lane** (NBA, WNBA, NBL, NFL, AFL; EPL without `seasontype`) | `requestedSeason.year` is the END year for NBA/NBL (2026-27 = 2027). **NRL returns HTTP 500 (2026-09-25):** use the scoreboard |
+| `SRC-KBO-ENG-SCOREBOARD` | `eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=YYYY-MM-DD` | line score, R/H/E, FINAL marker, W/L/S | **PRIMARY — KBO terminal state** | Plain HTML; urllib with a browser UA works |
+| `SRC-NPB-SCORES-PAGE` | `npb.jp/scores/YYYY/MMDD/<away>-<home>-<n>/` | 【試合終了】 marker, day's finals | **PRIMARY — NPB terminal state** | UTF-8. Decode before searching; the Windows console needs `PYTHONIOENCODING=utf-8` |
+
+### (c) Corrections
+
+- The mini-log note "ESPN NBL API (without User-Agent) … quarter scores" is **confirmed**.
+- "NRL Official Match Centre … run-metre stats (Nawaqanitawase 329m)" is **not confirmed**. The `nrl.com` match page returned no statistics through the jina proxy, and the figure appears in no retrieved source. It is struck.
