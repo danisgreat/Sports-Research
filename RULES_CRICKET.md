@@ -20,6 +20,62 @@ Numerical training specification: **NTS-2026.09.02-v0.3 — all-sports design on
 Sport and competition rules reference: **§11 → [LEAGUE_RULES_CRICKET.md](LEAGUE_RULES_CRICKET.md)** (added 2026-09-04) — the laws of cricket plus per-competition playing conditions for every cricket competition in the prediction logs (The Hundred, CPL, ETPL, T20I bilateral/tri-series, ICC Women's Championship ODIs, and Test/ODI/T20I base formats). Broken out to its own file because the full rulebook would roughly double this document.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: §2's toss/strip/conditions gate (CR-2026.09.21-1), the numbered controls, SFA-CRICKET and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page and §2 in full for every cricket card, then open each cited section the card relies on (and `LEAGUE_RULES_CRICKET.md` for the competition). Everything else below is the full reference and its history.
+
+### 0.1 Blocking preconditions (§10.1) and the three evidence objects (§2)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| CR-P1 format and rules | Overs, playing conditions, powerplay definition, DLS/shortening, super over, no-result | Stop |
+| CR-P2 target identity | Named-day runs, remaining-day runs, innings total, phase total, milestone or result, each with its own endpoint (control 11) | A phase, innings and match target never share a label |
+| CR-P3 toss and innings order | Toss from the TOSS FACT ladder (T1–T6), or an explicit bat-first/chase mixture. Check the ESPN `notes[]` toss at toss + 5 minutes (§2.7) | Innings-total rows capped at LOW unless the direction survives both branches (override 2) |
+| CR-P4 XIs and phase roles | Both XIs; the phase map names the openers, the **incoming Nos. 3–4 and both opposing new-ball bowlers** (control 20). After the toss the XIs exist: "unresolved" is `RETRIEVAL_MISS` (control 26) | Unconfirmed participants stay role branches; XI-dependent rows capped |
+| CR-P5 strip and conditions | `TOSS STATUS`, `STRIP STATUS` and `MATCH CONDITIONS STATUS` kept separately, each with its search trail (§2) | Continue with a disclosed evidence limit; never invent the strip |
+
+- **Conditional activation (control 32).** A contract defined by innings role ("team batting first", "the chase") with the toss unretrieved stores the activation condition beside the contract, names the forbidden substitute in advance, and at settlement grades `NO ACTION / CONDITION NOT MET` before looking at the score. Such rows are excluded from every statistic.
+- **Toss and strip.** Only P1–P5 establish the exact strip. A previous match at the venue is a **different strip** (P6). Duplicated unusual feed labels across front ends are one automated lineage (§2.4). The toss decision is weak context, never a pitch report or a direction (§2.8, control 5). **Bowl-first does not mean low-scoring.**
+- **Debutants.** ESPN `debuts[]`: a debutant is `NO_PRIOR_FORMAT_RECORD` and contributes width only (2026-09-19).
+- Record whether the freeze was `PRE_TOSS` or `POST_TOSS` (`T-CRI-POST-TOSS-FREEZE` compares them).
+
+### 0.2 Building the run distribution
+1. **Anchor.** `BASELINE_P` from the venue window by innings order where one exists (§2.6 attempts it; `INSUFFICIENT_VENUE_HISTORY` is an honest state). There is no TB-1 lane (`TEAM_BASELINE_P: NOT_COVERED`). Sparse or inaugural competitions shrink hierarchically (control 17).
+2. **Innings-order mixture (control 21).** Before the toss, every innings **and phase** total is a bat-first/chase mixture; after it, the realised branch. The chase is capped by the target and may end early. Windows are split by innings order: a chase powerplay may not size a batting-first powerplay (M24; P-482).
+3. **Resources through phases.** Phase-end state (runs, wickets, which batters survive, bowling overs left) carries into the next phase (controls 16, 19). One CDF per target integrates every nested line (controls 12, 14). Wickets change the rate, the ceiling and termination (CR-S6).
+4. **Current-surface evidence.** Same-venue, same-week scoring in another format is a named, weighted adjustment (control 25). A same-venue current-regime innings that already cleared the line gets its own mass and a named reason it won't repeat (control 30, G-L20).
+5. **Bowling replacement chain.** Outgoing role → incoming bowler → the residual attack's phase resources; never a one-sign absence (control 31).
+6. **Tests.** Session priors start from the batting side's **current-series** run-rate table (control 27). A Test winner label is a win/draw/loss time budget with a resistance branch (control 28). Rearguards are survival processes (control 18).
+7. **Recency (R-1).** Magnitudes are `NOT_YET_DERIVED` for cricket and are not imported from baseball. A single prior innings on a different strip is a weak comparator (P-457). Streaks need a named mechanism (control 24).
+8. **Interruptions.** Runs scored before a stop count. DLS is an endpoint event, not a surface misread (G-L23). Incomplete is not zero (control 15).
+
+### 0.3 Row rules
+- Phase and innings rows on one innings are dependent; only one is primary without independent phase-participant evidence (override 1).
+- Nested lines follow the CDF: a higher Over never outranks a lower Over on likelihood (override 4).
+- Upper Unders need a finisher/death branch (control 4). A low projected total is checked for defendability before any winner lean (control 6).
+- Most cricket contracts are `FREE`, not forced pairs. That is part of why cricket Briers look better than MLB's: **contract geometry, not skill** (G-L22).
+
+### 0.4 Ranking and track record
+- RM-1 applies its global recalibration only (no cushion-class rows; no held-out cricket card was re-ordered). Rows stated at 0.55–0.60 read as coin flips.
+- **Track record:** 34 decisions won 64.7% at 0.630; resolution 0.039 but **reliability 0.022, the worst calibration of any sport with n ≥ 30**. Unders 9/12 at 0.589 against Overs 7/12 at 0.631 (`T-TOTAL-DIRECTION-LEAGUE`, non-binding). Rank 1/2 17 W / 10 L.
+
+### 0.5 Settlement
+- Official scorecards only, never narrative reports. Zero is not a duck.
+- Six-over checkpoints: the ESPN matchnote `Powerplay 1: Overs 0.1 - 6.0 (Mandatory - N runs, W wickets)`, valid only for a full 6.0-over powerplay (control 29).
+- Settlement tables print the contract text (several historical rows were blank).
+- Record rain stoppages, overs lost and DLS revisions with the score (§16.11(o)).
+
+### 0.6 Withdrawn in cricket — never apply
+"Bowl-first means low-scoring"; guaranteed venue-history availability; the six-rung/eight-rung pitch ladder numbering (replaced by the separate toss and strip ladders); the "bimodal phase total" shape claim from two observations (L-112); additive cricket tail shortcuts; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
+
+### Numerical shadow model (2026-09-26(c); never a card input)
+
+`python tools/sport_models.py shadow --league <t20|odi> --espn-path cricket/<league id> --event <ESPN id> --date … --card P-### --total <first-innings line> --cricsheet <history>` after the freeze (`C-SPORT-SHADOW`; `predict` for research). A1 is Elo for the result plus a ridge batting/bowling/venue first-innings total, priced 50/50 on who bats first; second innings are target-censored and not modelled. **On the IPL (2016–2026), v1 was worse than a coin flip on results and worse than the format mean on totals.** v2 (elo_k 4, lam_team 200, re-selected on 2016–19) is only level with both. Cricket has **no demonstrated model skill**. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (k), (l); `research/sport_models_2026-09-26/README.md`).
+
+### 0.7 Control index (full text in §5 and the dated sections)
+1 legal deliveries · 2 phase ≠ innings · 3 wicket-cluster floor · 4 finisher ceiling · 5 toss is context · 6 winner independence · 7 adjusted venue samples · 8 direct ceiling conflict · 9 rain/dew conditional · 10 milestones boundary-sensitive · 11 target identity first · 12 one CDF for nested totals · 13 stochastic exposure · 14 calibration preserves geometry · 15 incomplete is not zero · 16 phase-to-innings is joint · 17 sparse competitions shrink · 18 Test rearguards are survival processes · 19 retained resources reverse phase direction (which wickets fall) · 20 phase participants outrank phase H2H (Nos. 3–4, both new-ball bowlers) · 21 innings-order mixture for innings and phase totals · 22 near-start identity gaps cap evidence · 23 overlap-aware evidence units · 24 runs are neither self-correcting nor self-perpetuating · 25 same-venue, same-week cross-format evidence · 26 retrieve XIs after the toss · 27 current-series tempo prior; restart is width · 28 Test winner as a three-way time budget · 29 phase-checkpoint settlement route · 30 direct same-venue current-regime ceiling · 31 bowling replacement chain · 32 conditional activation.
+
+
 ## 1. Identity and contract
 
 

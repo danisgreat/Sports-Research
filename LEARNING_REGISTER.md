@@ -1,5 +1,7 @@
 # Learning and prospective-test register (the lesson archive)
 
+> **Current as of 2026-09-26.** Live method **MDS-2026.09.19-v4.3 / CR-2026.09.21-3** (the "v4.0" and "sole current registry" lines further down are historical headers). **Start with [`LEARNINGS_INDEX.md`](LEARNINGS_INDEX.md)**: one line per lesson, test and recurring mistake, with its current status. The recurring-mistake registry runs **M1–M34** (parts B of §"2026-09-25 audit closure", C of §"2026-09-25(b)", C of §"2026-09-25(d)" and C of §"2026-09-26"). The open tests are those in `CURRENT_RULES.md` §D9. The 80 historical candidates and early tests with zero or near-zero prospective counts were closed on 2026-09-26 (§"2026-09-26" D).
+
 
 > **CR-2026.09.21-3 current override:** historical lesson/candidate text is evidence only when inconsistent with the all-sports reconciliation. The live rule set is distribution-first; stale order-statistic/path-count/separation-floor candidates described below are explicitly closed in the CR-3 disposition at the end of this file.
 
@@ -593,7 +595,7 @@ Three manifests, frozen before any qualifying event. **No event already observed
 
 ## 3. Active prospective tests
 
-> **Pointer (2026-09-25):** tests opened after 2026-09-24 are listed in part A of the section "2026-09-25 audit closure" at the end of this file. The repository copy of the recurring-mistake registry (M1–M30) is in part B of that section.
+> **Pointer (2026-09-25):** tests opened after 2026-09-24 are listed in part A of the section "2026-09-25 audit closure" at the end of this file. The repository copy of the recurring-mistake registry (M1–M30) is in part B of that section; M31–M34 were added later (§"2026-09-25(b)" C, §"2026-09-25(d)" C, §"2026-09-26" C).
 
 
 Counts below reproduce historical exploratory completions through P-060. They test process representations only and cannot promote a numerical forecast weight. From v2 onward, an event is added only if the preissue card followed the frozen test and met the eligible population. Retrospective backfilling is prohibited.
@@ -1402,3 +1404,107 @@ Everything is hindsight on the framework's own selected cards and LEARNING_ONLY.
 |---|---|
 | M26 (process record written, not read) | **Recurrence:** P-510, P-511 and P-515, through a script with literal narratives. Control: `C-SETTLEMENT-FROM-FEED`, audit `10n` |
 | M32 (non-baseball cushion priced like a baseball +1.5) | **Mechanism now measured.** The population cover of a small cushion on the weaker team is 0.32–0.54. Control: `C-PLUS-CUSHION` amended, plus the RM-1 flip |
+
+<!-- REVIEW-IMPLEMENTATION-2026-09-26 -->
+# 2026-09-26 — review implementation: evidence before rules
+
+**Origin.** The 2026-09-26 repository review (6.5/10) and the user's instruction to implement every recommendation. Controls: `RULES_GENERAL.md` §"2026-09-26". Everything here is learning-only. **Nothing is a fitted coefficient, cap or ranking override** (`L-087`).
+
+## A. Prospective tests opened or amended
+
+| Test ID | Origin | Frozen hypothesis / control | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`T-UNIVERSE-VS-SELECTED`** | Review: the record is self-selected (M34) | Cards on events in a declared universe (`C-EVENT-UNIVERSE`) are calibrated differently from operator-selected `OUT_OF_UNIVERSE` cards | Settled cards issued from 2026-09-26, split by `UNIVERSE:` field | 30 cards per group | 0 | Report calibration gap and Brier against `BASELINE_P` per group with card-cluster intervals. **Intervals separate:** the universe group becomes the reported record. **Otherwise:** report both | TESTING |
+| **`C-MARKET-BENCHMARK`** | Review: no market yardstick | The cards' paired Brier against the closing no-vig market (scoring only, after settlement) | Decisions in `MARKET_BENCHMARK_LEDGER.md` entered after settlement | 100 decisions / 30 cards | 0 | "Beats", "no demonstrated difference from" or "is less calibrated than" the closing line, with the interval. Never a value claim | TESTING (measurement) |
+| **`C-MLB-SHADOW`** | Review: the MLB pilot existed only in Markdown | A1 (with starters) beats A0 on frozen, prospective MLB rows; and beats the cards' p on shared games | Shadow rows frozen after an MLB card and before first pitch | 150 settled games | 0 | Both differences below 0 with intervals below 0, **plus** an explicit user instruction, before any anchor use. Otherwise continue or retire | TESTING (shadow) |
+| `T-RM1-PROSPECTIVE` (amended) | Review: RM-1 caveats | As before, plus: non-baseball cushion-class rows reported separately | As before | + 15 cushion-class rows | 0 | As before, plus: cushion-class win rate more than 0.15 above mean q ⇒ the cushion term reverts to disclosure-only | TESTING |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260926-01 | 1,264 settled rows and no prospective baseline decision; the seed check found no skill over a naive table (+0.0101, [−0.059, +0.089]) | **PROMOTED_PROCESS (governance) — `C-RULE-FREEZE`.** No new predictive rule until `C-BASELINE-SKILL` and `T-RM1-PROSPECTIVE` report. `make_manifest.py` enforces `--category` and one manifest per day | `tools/evidence_status.py` |
+| L-20260926-02 | The per-card reading gate measured about 65,000 words; M15 ("control listed, not executed") is the most-recurring defect | **PROMOTED_PROCESS (documentation) — `C-READING-GATE`.** Two-tier gate; every sport file opens with a §0 live page kept in step with each change | Next audit counts M15 recurrences |
+| L-20260926-03 | Every card was for an operator-chosen event; `C-NT-ALL-UNIVERSE` sat at 0 | **PROMOTED_PROCESS (measurement) — `C-EVENT-UNIVERSE`** with `tools/slate_universe.py` | `T-UNIVERSE-VS-SELECTED` |
+| L-20260926-04 | No comparison with the strongest public forecast existed | **PROMOTED_PROCESS (measurement) — `C-MARKET-BENCHMARK`**, post-settlement scoring only; the forecasting firewall is unchanged | 100 decisions |
+| L-20260926-05 | MLB resolution 0.0075, the lowest; the A0/A1 pilot had no code | **PROMOTED_PROCESS (measurement) — `C-MLB-SHADOW`** with `tools/mlb_model.py` (synthetic-data tests only; not fit) | 150 settled games |
+| L-20260926-06 | RM-1: cushion term discovered on overlapping data; only LOCO excludes zero; ordinal-era cushions 17/28 v probability-era 7/24 | **VALIDITY (amendment)** to `T-RM1-PROSPECTIVE` (A above). RM-1 described as promising and unproven | `T-RM1-PROSPECTIVE` |
+| L-20260926-07 | `tools/skill_baseline.py` pooled seed and prospective rows, which would have let hindsight rows into the preregistered verdict | **FIXED** — rows tagged by ledger section; prospective reported first with checkpoint progress; test added | Unit tests |
+| L-20260926-08 | README quoted the pre-fix calibration (0.2249 / 1.06 / +7.7%; rebuilt 0.2268 / 1.01 / +6.6%); "no numerical model fitted" beside an operative RM-1; register header on v4.0; soccer "clear skill" on an interval spanning 0 | **FIXED** (documentation) | — |
+| L-20260926-09 | 80 candidates and early tests at zero or near-zero counts, most predating the distribution-first rebuild | **CLOSED_UNTESTED** (D below). Four §3/§3A tests closed or superseded | Re-register with a v2 manifest if wanted |
+| L-20260926-10 | 952 tracked files; 319 byte-identical runtime copies; unreferenced Drive dumps and a root `scratch/` at the top level | **FIXED** — archived and de-duplicated with an index; duplicate rule in `repo_hygiene.py` | CI |
+| L-20260926-11 | Six control manifests on 2026-09-25 and none of the new rules exercised by a card | **PROMOTED_PROCESS** — one manifest per issuing day except validity repairs (`make_manifest.py`); M33 | `evidence_status.py` |
+
+## C. Recurring-mistake registry additions
+
+| ID | Pattern | Control | Evidence |
+|---|---|---|---|
+| **M33** *(new)* | **Rule churn outruns evidence.** Controls are added, revised or re-promoted faster than any card can exercise them, so no rule is ever tested before the next replaces it | `C-RULE-FREEZE`; one manifest per day; `--category` | Six manifests on 2026-09-25 with zero cards under them; 80 untested candidates; the peer promotion of six single-game rules (`cb95acd`, M27) |
+| **M34** *(new)* | **Self-selected sample read as the competition.** Calibration and "skill by sport" read off events the operator chose, often from a handful of cards | `C-EVENT-UNIVERSE`; `T-UNIVERSE-VS-SELECTED`; card-cluster intervals | All 1,264 settled rows; soccer's "clear skill" from 37 cards; tennis 7 cards; AFL 4 cards |
+
+## D. Closed without a test (`CLOSED_UNTESTED`, 2026-09-26)
+
+**Why.** Each needed a v2 manifest (population, champion/challenger, metric, horizon, decision rule) before its first eligible case (§5). None received one. Most predate the CR-2026.09.21-3 distribution-first rebuild, which absorbed their mechanisms into the sport files' branch sets and kill-path libraries. Leaving them "open" made the register look busier than the evidence. **Their observations remain provenance in the tables above.** Any may be re-registered under a new ID with a v2 manifest; while `C-RULE-FREEZE` is in force, a re-registered test may accrue but not promote.
+
+**Historical candidates (59):** `C-P063-CORNER-COMPLETE`, `C-P063-SOT-EXPOSURE`, `C-P293-AFL-VOLUME`, `C-P293-BB-CLUSTERS`, `C-P293-BK-ALLOCATION`, `C-P293-CR-RESOURCES`, `C-P293-NRL-ROLE`, `C-P293-TEN-ALLOCATION`, `C-PL10-CR-PHASE-EXTRAS`, `C-PL10-SOC-KNOCKOUT-REG`, `C-PL11-ALL-TOTAL-DIRECTION`, `C-PL11-ALL-WINNER-BRANCH`, `C-PL11-BB-DEFICIT-ATTRIBUTION`, `C-PL11-BB-SEPARATION-BUDGET`, `C-PL11-BB-UNDERDOG-TAIL`, `C-PL11-BB-VENUE-RESTRAINT`, `C-PL11-TEN-CUSHION-LENGTH`, `C-PL12-BB-EXTRAS-RATE`, `C-PL12-CR-TOSS-SIGNAL`, `C-PL12-SOC-KNOCKOUT-BASELINE`, `C-PL13-ALL-REGIME-VS-RECENT-H2H`, `C-PL14-TEN-RECOVERY-LENGTH`, `C-PL15-BSK-CUSHION-VS-SPREAD`, `C-PL2-BB-TAIL-STRESS`, `C-PL2-BSK-RETURN-MINUTES`, `C-PL2-SOC-YOUTH-TAIL`, `C-PL2-TEN-CROSSOVER-RANK`, `C-PL4-BB-SMALL-SAMPLE-STARTER`, `C-PL4-SOC-AGG-EARLY-GOAL`, `C-PL5-BSK-MISMATCH-PATH`, `C-PL5-CR-SPARSE-COMP`, `C-PL5-CR-TEST-REARGUARD`, `C-PL5-REGIME-MIX`, `C-PL5-TEN-SURFACE-H2H`, `C-PL6-RL-FAVOURITE-ONLY-TOTAL`, `C-PL6-RU-TOTAL-MECHANISM`, `C-PL6-TEN-BIDIRECTIONAL-TREE`, `C-PL7-AF-PRESEASON-UNIT-TAIL`, `C-PL7-AFLW-CONVERSION-AVAIL`, `C-PL7-BB-HOOK-TAIL`, `C-PL7-BSK-REST-SEGMENT`, `C-PL7-CFL-POSSESSION-CONVERSION`, `C-PL7-SOC-EARLY-RANK-RECON`, `C-PL8-AF-ALIGNED-REGIME`, `C-PL8-BB-TERMINATION-ORDER`, `C-PL8-RL-H2-SEPARATION`, `C-PL8-SOC-EARLY-SHRINK`, `C-PL8-SOC-TRANSITION-EVENTS`, `C-PL8-SOC-VOLUME-ALLOC`, `C-PL9-AF-REGIME-WIDTH`, `C-PL9-AFL-WIND-Q4`, `C-PL9-BB-SCORESTATE-RELIEF`, `C-PL9-BSK-MISMATCH-FACTORS`, `C-PL9-CR-PHASE-ROLE`, `C-PL9-IH-GOALIE-TOTAL`, `C-PL9-RL-TERMINAL-WINNER`, `C-PL9-SOC-MECHANISM-CONTRACT`, `C-PL9-TEN-BO5-MIX`, `C-PL9-TEN-CROSSMARKET`.
+
+**Early process tests (21):** `T-001`, `T-002`, `T-003`, `T-004`, `T-005`, `T-006`, `T-007`, `T-008`, `T-009`, `T-010`, `T-011`, `T-012`, `T-013`, `T-014`, `T-P057-BB-Q2`, `T-P058-AFL-SHOTS`, `T-P059-TREND-CAUSE`, `T-P240-ATTRIBUTION`, `T-P245-COHERENCE`, `T-P247-SEPARATION`, `T-P275-RECOVERY-LENGTH`. `T-012`'s early-wicket question continues inside `T-CRI-DOMINANT-HITTER`.
+
+**Other §3/§3A tests:**
+
+| Test | Disposition | Reason |
+|---|---|---|
+| `C-RANK2-GAP` | **CLOSED — answered** | The full record (L-20260925-31) has Rank 1 at 66.4% and Rank 2 at 56.1%. The two-pass "Rank 2 beats Rank 1" signal was noise |
+| `C-WEIGHT-PROPAGATION` | **CLOSED_UNTESTED** | No eligible-row count was ever kept; the disclosure parts of L-075/L-076/L-077 stay mandatory |
+| `C-MARGIN-TAIL-MASS` | **SUPERSEDED** by `T-PLUS-CUSHION` and `T-RM1-PROSPECTIVE` | Both measure the margin tails it targeted, with population references now derived |
+| `C-OU-GEOMETRY` | **SUPERSEDED** by `C-PHASE-VS-FULL-TOTAL` and `T-UNIVERSE-VS-SELECTED` | Verified prospective count was 0; the family comparison continues there |
+
+`C-NT-*` (the numerical-programme comparisons) are **not** closed: they are the design of `NUMERICAL_PROGRAM.md` and are exercised by `C-MLB-SHADOW` first.
+
+<!-- SPORT-MODELS-2026-09-26C -->
+# 2026-09-26(c) — a numerical model for every sport
+
+**Origin.** The user asked for the numerical model to cover every sport, not only MLB. Controls: `RULES_GENERAL.md` §"2026-09-26" (k). The evidence is in `research/sport_models_2026-09-26/README.md`. Everything is learning-only, and **no model output is a card input.**
+
+## A. Prospective tests opened
+
+| Test ID | Origin | Frozen hypothesis / control | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`C-SPORT-SHADOW`** | The user's request; L-20260926-12 | Per league: A1 beats A0 on frozen, prospective shadow rows, and beats the cards' p on shared rows | Rows frozen by `sport_models.py shadow` after a card and before the start | 150 settled rows per league | 0 | As `C-MLB-SHADOW`; promotion needs the user's instruction (`C-RULE-FREEZE`) | ACCRUING |
+| **`T-MLB-V2-2025`** | L-20260926-14 | The v2 team prior (120) beats A0 on 2025 MLB games, a season neither version has seen | `python tools/mlb_model.py validate --season 2025` (statsapi) | The full 2025 season | 0 | Report A1 − A0 with the day-block interval; if it is not below 0, v2 is recorded as not replicated | OPEN (needs statsapi) |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260926-12 | On public results, a pooled team-strength A1 beat the league baseline on results and margins in 5 soccer leagues, the NFL, AFL and NBA (every interval below 0). It beat TB-1 on results in the EPL, AFL and NBA | **PROMOTED_PROCESS (measurement) — `C-SPORT-SHADOW`** with `tools/sport_models.py`. Not a card input | 150 settled rows per league |
+| L-20260926-13 | Totals were the hard target. A1 gained in the NBA, La Liga, the Bundesliga (at the line) and MLB after v2. It was level elsewhere. At the AFL total line TB-1 was ahead by 0.008, with an interval crossing 0 | **OBSERVATION**, consistent with TB-1's missing total resolution. Team-strength models are not evidence for a total direction | `C-SPORT-SHADOW` totals, reported separately |
+| L-20260926-14 | MLB team-only v1 was overconfident: P(home win) 0.08–0.90, SD 0.147. Multiplied offence and prevention ratings with 20 prior games did not shrink enough, and v1 was no better than A0 and worse than TB-1 | **FIXED (v2), not independent.** `team_prior_games` 120 was selected on 2022 by win log loss. On 2023–2024 it was better than A0 and level with TB-1 on results | `T-MLB-V2-2025`; `C-MLB-SHADOW` |
+| L-20260926-15 | The tennis i.i.d. point chain over-predicted close matches: 24.9 games v 23.7, and 45% three-setters v 37%. Its games route lost to the population | **FIXED (v2), not independent.** A match-level random effect on the serve gap (gap_sd 0.09, selected on 2021–22) brought it level to slightly better on 2023–2026 | Tennis lane (`C-SPORT-SHADOW`, from 2026-09-26(d)) |
+| L-20260926-16 | The Dixon–Coles low-score factor made no measurable difference in any of five leagues (every interval includes 0) | **CLOSED** — it stays off, as `MODEL_IMPLEMENTATION_RECIPES.md` §2 requires ("check actual improvement") | — |
+| L-20260926-17 | Only GitHub-hosted public results were reachable from the implementing session. The second pass (2026-09-26(d)) added NHL, WNBA, NBA 2023–26 and IPL cricket. Still not validated: NBL, NCAAF, NRL, rugby union, WTA, NPB/KBO/CPBL, non-IPL cricket and the soccer competitions beyond the top five | **OPEN** — run `python tools/sport_models.py validate --league <key> …` where ESPN (or a results CSV) is reachable, and record the result beside the public-data runs | — |
+| L-20260926-18 | Check the spread of a model's probabilities before scoring it. L-20260926-14's failure showed in the range (0.08–0.90) before any score was computed | **PROCESS NOTE** for every numerical build: print the predicted-probability range and SD beside the scores (`diagnose.py`) | — |
+
+<!-- SPORT-MODELS-2026-09-26D -->
+# 2026-09-26(d) — second validation pass, lanes for tennis and cricket, the settlement record
+
+**Origin.** The user's instruction to continue the implementation across the framework, for every sport, accurately and carefully. Controls: `RULES_GENERAL.md` §"2026-09-26" (k), (l). Evidence: `research/sport_models_2026-09-26/README.md`.
+
+## A. Tests opened
+
+| Test ID | Origin | Frozen hypothesis / control | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`T-CRICKET-V2-UNSEEN`** | L-20260926-21 | Cricket v2 (elo_k 4, lam_team 200) is at least level with A0 on a competition neither version has seen | `validate_cricket` on cricsheet BBL, CPL, T20I or The Hundred data | One full competition-season | 0 | A1 − A0 on the result and the first-innings total, with block intervals; worse ⇒ cricket A1 retired, A0 only | OPEN (needs cricsheet) |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260926-19 | NBA 2023–26 (3,701 games) and WNBA 2022–26 (1,308) repeat the NBA 2013–15 result. A1 beat A0 and TB-1 on results **and** totals (result −0.008, total −0.006/−0.007 against TB-1; every interval below 0) | **REPLICATED** — basketball is the strongest model sport | `C-SPORT-SHADOW` (nba, wnba) |
+| L-20260926-20 | NHL 2023–26 (3,936 games): A1 beat A0 and TB-1 on the result (−0.0075; −0.003 against TB-1) and the regulation three-way. It was **worse** on totals (RPS +0.008; +0.002 against TB-1 at the line) | **OBSERVATION** — the hockey model is a sides-only candidate; its totals are not evidence | `C-SPORT-SHADOW` (nhl) |
+| L-20260926-21 | IPL 2016–2026: v1 (elo_k 24, lam_team 6) was worse than a coin flip on results (+0.009) and worse than the format mean on first-innings totals. v2 (4, 200; selected on 2016–19) is level with both on 2020–26 | **FIXED to parity (v2), not independent; no demonstrated skill** | `T-CRICKET-V2-UNSEEN` |
+| L-20260926-22 | Every shadow lane printed its probabilities to the operator, who then builds the next card | **FIXED (integrity)** — blind output: row ID only; probabilities are read at review | Tests (`ShadowCommands`) |
+| L-20260926-23 | A lane nobody records produces no evidence, the M15 pattern ("control listed, not executed") | **PROMOTED_PROCESS** — settlement prints `SHADOW: <row id>` / `NO_LANE` / `MISSED`; audit `10s`, strict from `CONTROL_MANIFEST_2026-09-26.md` | `audit_card_controls.py --settlement --strict` |
+| L-20260926-24 | The tennis source dates every match by its tournament's start, so concurrent tournaments can leak later-round Elo updates into another event's early rounds | **DISCLOSED** — this touches the A0 and A1 winner routes equally and does not favour A1; the live lane uses ESPN's own match dates | — |
+| L-20260926-26 | An independent review, before any shadow row existed, found no leakage and confirmed that only the four disclosed constants changed. It found seven lane defects (stale cache, one bad event blocking settlement, cricket tie and innings validity, partial tennis scores, soccer extra time, side results counted per line) and five overstated claims | **FIXED** with tests (`ShadowCommands`, `test_mlb_model`) and corrected wording | Review report summarised in CHANGELOG 2026-09-26(d) |
+| L-20260926-25 | The NHL linescore file's `has_shootout` flag was False for every game. Shootouts were found from the scoring file's `SO` rows (474 of 6,560), and every OT/SO game then had a one-goal margin | **FIXED in the loader** before any NHL run; a data check, not a model change | `validate_public.py` `nhl()` |

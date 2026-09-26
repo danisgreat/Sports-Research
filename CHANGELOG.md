@@ -6,6 +6,71 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-26(d) — second validation pass; shadow lanes for tennis and cricket; the settlement record
+
+**Why.** The user asked to continue the implementation across the framework, for every sport, accurately and carefully.
+
+- **Validation, second pass** (`research/sport_models_2026-09-26/`, constants unchanged except cricket):
+  - **NBA 2023–26 and WNBA 2022–26:** A1 beat A0 and TB-1 on results and totals.
+  - **NHL 2023–26:** A1 beat A0 and TB-1 on results, and was worse on totals.
+  - **IPL cricket:** v1 was worse than a coin flip. v2 (elo_k 4, lam_team 200, re-selected on 2016–19; disclosed) is only level.
+
+  Sources: sportsdataverse (research-only pyarrow dependency) and an IPL dataset. The NHL shootout flag is missing in the source, so shootouts were read from the scoring file.
+- **Lanes.** Tennis and cricket now freeze and settle from the ESPN scoreboards (`tools/sport_data.py`). Tennis retirements void the games rows. Cricket's first innings is priced 50/50 on the toss, and scored only when it was full-length.
+- **Integrity.** Shadow commands are blind and print the row ID only (both tools). Settlements print `SHADOW: <row id>` / `NO_LANE` / `MISSED`; this is audit field `10s`, strict from `CONTROL_MANIFEST_2026-09-26.md`.
+- **Docs.** `RULES_GENERAL.md` §"2026-09-26" (k), (l), `CONTROLS.md`, `CURRENT_RULES.md`, the hockey, basketball, tennis and cricket §0 pages, `NUMERICAL_PROGRAM.md`, `NUMERICAL_MODEL_REGISTER.md`, the lane READMEs, `LEARNING_REGISTER.md` §"2026-09-26(d)" (L-20260926-19–25; `T-CRICKET-V2-UNSEEN`), `LEARNINGS_INDEX.md` and README are updated.
+- **Tests.** Offline end-to-end shadow → settle → score for team sports, tennis and cricket; ESPN tennis and cricket parsers; audit `10s`.
+- **Independent review** (a separate agent, before any shadow row existed).
+  - **Leakage:** no look-ahead leakage; scrambling every later result left all forecasts identical.
+  - **Protocol:** only the four disclosed constants changed after ac6fdc5.
+  - **Fixed in the lanes:**
+    - a stale cached pre-game scoreboard could never settle;
+    - one unfindable event stopped all settlement;
+    - a cricket super-over tie scored as a home loss;
+    - cricket innings with no overs shown counted as full-length;
+    - partial tennis scores without retirement text counted as complete;
+    - soccer extra time was scored against a 90-minute model;
+    - a side result was counted once per frozen line (also in `mlb_model.py score`).
+  - **Wording corrected:** AFL and NFL against TB-1 (the intervals cross 0), cricket v2 ("no clear difference"), the not-validated lists, and the thinness of the v2 selections.
+
+### 2026-09-26(c) — a numerical model for every sport
+
+**Why.** The user asked for the numerical model to cover every sport, not only MLB.
+
+- **Models.** `tools/sport_models.py` (with `tools/sport_data.py` for ESPN, CSV, TML-Database and cricsheet results) gives every sport an A0 baseline and a reduced-feature A1:
+  - soccer: Poisson ratings with linked halves;
+  - ice hockey: regulation Poisson plus OT/SO;
+  - basketball, American football, AFL, rugby league and rugby union: ridge ratings, key-number weights and residual widths;
+  - NPB, KBO and CPBL: the MLB joint with the league's tie rate;
+  - tennis: surface Elo plus an exact serve chain;
+  - cricket: Elo plus a first-innings ridge model.
+
+  None reads odds.
+- **Shadow lane.** `C-SPORT-SHADOW` (`research/sport_shadow/`, per league). It works like the MLB lane and is never a card input. `evidence_status.py` prints it.
+- **Validation** (`research/sport_models_2026-09-26/`). Priors were committed before the first run (ac6fdc5). The comparisons are rolling origin on public results.
+  - **Results and margins:** A1 beat A0 in soccer (five leagues), the NFL, AFL and NBA, and beat TB-1 on results in the EPL, AFL and NBA.
+  - **Totals:** A1 rarely helped.
+  - **MLB and tennis:** each failed at v1 and was re-selected on an earlier TUNE window. MLB's team prior went from 20 to 120, now also in `tools/mlb_model.py`; tennis got a gap effect of 0.09. Both are disclosed as not independent.
+  - **Dixon–Coles:** no gain.
+  - **Not validated:** NHL, WNBA, NBL, NRL, rugby union, cricket, NPB, KBO and CPBL.
+- **Docs.**
+  - Every sport's §0 page now says what its model is and what the validation showed.
+  - `RULES_GENERAL.md` §"2026-09-26" (k), `CONTROLS.md`, `CURRENT_RULES.md`, `NUMERICAL_PROGRAM.md`, `NUMERICAL_MODEL_REGISTER.md` §"2026-09-26(c)", `MODEL_IMPLEMENTATION_RECIPES.md` §4, `LEARNING_REGISTER.md` §"2026-09-26(c)" (L-20260926-12–18; `T-MLB-V2-2025`) and `LEARNINGS_INDEX.md` are updated.
+- **Receipt.** `CONTROL_MANIFEST_2026-09-26.md` was regenerated in place before merge; no card was issued under its earlier version.
+
+### 2026-09-26(b) — review implementation: evidence before rules
+
+**Why.** The 2026-09-26 repository review rated the project 6.5/10. It found careful honesty and tooling, but no demonstrated skill over a simple baseline, six control revisions in one day with no card issued under them, a self-selected event sample, no market benchmark, an MLB pilot that existed only in Markdown, and a reading gate of about 65,000 words per card. The user asked for every recommendation to be implemented. Record: `RULES_GENERAL.md` §"2026-09-26"; `LEARNING_REGISTER.md` §"2026-09-26". **No forecasting coefficient, cap or ranking override changed.**
+
+- **Rules you read.** Every `RULES_<SPORT>.md` opens with a §0 live rules page (560–1,650 words against 6,800–18,700 for the full files). `RULES_GENERAL.md` §1 is now a two-tier reading gate (`C-READING-GATE`). Nothing was deleted.
+- **Rule freeze.** `C-RULE-FREEZE` holds new predictive rules until `C-BASELINE-SKILL` and `T-RM1-PROSPECTIVE` report. `tools/make_manifest.py` requires `--category`, allows one manifest per issuing day except validity repairs, and refuses a `MODEL_CHANGE` during the freeze without the user's instruction.
+- **New measurement lanes.** `C-EVENT-UNIVERSE` (`tools/slate_universe.py`; audit field `UV`); `C-MARKET-BENCHMARK` (`MARKET_BENCHMARK_LEDGER.md`, `tools/market_benchmark.py`; post-settlement closing probabilities only; forecasting stays market-blind); `C-MLB-SHADOW` (`tools/mlb_model.py`, the numerical programme's MLB A0/A1 pilot as tested code; declared priors, not fit; never a card input); `tools/evidence_status.py` (every gate in one table; also run in CI).
+- **Fixes.** `tools/skill_baseline.py` had pooled seed and prospective rows; it now reports them separately. README calibration figures updated to the rebuilt dataset (0.2268 / slope 1.01 / +6.6%). RM-1 is described as promising and unproven, with a stricter reversion rule for its cushion term. Soccer's record is "strongest resolution", not proof.
+- **Learning register.** `LEARNINGS_INDEX.md` indexes every lesson, test and recurring mistake with its status. M33 (rule churn) and M34 (self-selected sample) added. 80 untested historical candidates and early tests are `CLOSED_UNTESTED`; `C-RANK2-GAP` is answered; `C-WEIGHT-PROPAGATION`, `C-MARGIN-TAIL-MASS` and `C-OU-GEOMETRY` are closed or superseded.
+- **Repository.** `drive_settlement_2026-09-21/`, the Drive-sync manifests and `scratch/` moved into `archive/`. 319 byte-identical retired-runtime copies were removed (`archive/DEDUP_INDEX_2026-09-26.md`); tracked files went from 952 to 648. `tools/repo_hygiene.py` fails on live duplicates.
+- **Tests.** Tool tests went from 51 to 90; root tests from 77 to 78.
+- **Receipt.** `CONTROL_MANIFEST_2026-09-26.md`.
+
 ### 2026-09-26(a) — canonical IDs for the two settled temporary IDs; merge to main
 
 - **Assignments.** On the operator's instruction:

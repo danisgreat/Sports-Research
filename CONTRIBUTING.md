@@ -21,7 +21,9 @@ On 2026-09-24 a peer session committed an invented settlement process record str
    python audit_card_controls.py "Mini logs (to be sent to actual log later)/<active>/<log>.md" --settlement --strict --allow-empty
    ```
 3. **If you changed a governance file** (anything listed in the current `CONTROL_MANIFEST_*.md`, other than the two living logs):
-   - regenerate the receipt: `python tools/make_manifest.py --out CONTROL_MANIFEST_<date>-<n>.md --title "…" --note "…"`;
+   - check `python tools/evidence_status.py`: while `C-RULE-FREEZE` is in force, the change must be a validity repair, a retrieval/integrity control, a measurement/disclosure control or documentation (`RULES_GENERAL.md` §"2026-09-26"(b));
+   - regenerate the receipt: `python tools/make_manifest.py --out CONTROL_MANIFEST_<date>.md --title "…" --note "…" --category <INTEGRITY|MEASUREMENT|DOCUMENTATION|VALIDITY_REPAIR|MODEL_CHANGE>`. One manifest per issuing day except validity repairs; a `MODEL_CHANGE` also needs `--model-change` and, during the freeze, `--freeze-override` quoting the user's instruction;
+   - if you changed a sport file's controls, update its §0 live page in the same commit (`C-READING-GATE`);
    - repoint `METHOD.md`'s header ("Freeze the SHA-256 file receipt from …");
    - repoint the active mini log's "Freeze with every card" row, with the printed SHA;
    - re-run `tools/verify_manifest.py`.
@@ -45,7 +47,8 @@ On 2026-09-24 a peer session committed an invented settlement process record str
 - Python build output: `__pycache__/`, `*.pyc`.
 - Machine-local settings: `.claude/settings.local.json`.
 - Raw API pulls, i.e. research caches and raw JSON. Commit derived results and small trimmed fixtures only.
-- Odds, prices or betting-site content in any form.
+- Odds, prices or betting-site content in any form. The single exception is `MARKET_BENCHMARK_LEDGER.md`: operator-entered, **post-settlement**, no-vig closing **probabilities** and the de-vig method only — never raw odds, never fetched by an agent (`C-MARKET-BENCHMARK`).
+- Session scratch files (`scratch/` is ignored; the former folder is archived).
 
 `.gitignore` covers the first four; `tools/repo_hygiene.py` fails CI if any of them is tracked.
 

@@ -138,3 +138,15 @@ The movement follows the **sport mix** (the best cohort was soccer-heavy), not a
 **Result:** 1,264 graded rows from 315 cards; 641 with p (155 cards).
 
 **Use.** This dataset trains RM-1 (`research/rank_model_2026-09-25e/`). The (d) sections above remain the descriptive review.
+
+
+<!-- REVIEW-2026-09-26 -->
+## 2026-09-26 — figures on the rebuilt dataset
+
+`python tools/calibration_report.py` on the 2026-09-25(e) dataset (411 decisions from 155 cards; 639 rows with p) gives:
+- **Brier 0.2268**; reliability 0.0028, resolution 0.0167, uncertainty 0.2430; **skill +6.6%** over climatology;
+- **calibration slope 1.01** (SE 0.16), intercept +0.11.
+
+The (d) figures quoted above (0.2249, slope 1.06, +7.7%) came from the dataset before the result-parsing fix. **None of the conclusions changes.** Two readings are sharpened:
+- **Soccer:** 146 decisions from only 37 cards; gap +0.054 with a card-cluster interval of [−0.035, +0.132]. It has the strongest resolution of any sport, but its calibration interval spans 0: "strongest evidence", not "proof of skill".
+- **The whole record is self-selected.** Every card was for an event the operator chose. `C-EVENT-UNIVERSE` (2026-09-26) starts the first systematically declared sample.

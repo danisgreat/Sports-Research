@@ -53,7 +53,8 @@ Exit codes
     2  usage or file error
 
 BLOCKING fields (a missing one blocks issue under §16.8): 2, 3, 5a, 7; at settlement 10;
-with --strict also 7r, T13, WB, BP, DL, PC, HC, 10p, 10l, 10z (each only where it applies).
+with --strict also 7r, T13, WB, BP, DL, PC, HC, RM, TB, UV, 10p, 10l, 10z, 10n, 10s (each only where it applies;
+UV and 10s from CONTROL_MANIFEST_2026-09-26).
 Everything else is recorded as a process defect on that card without blocking.
 
 Card segmentation (repaired 2026-09-25; 2026-09-23(c) proposal)
@@ -190,6 +191,11 @@ def _manifest_at_least(card, floor=(2026, 9, 25, 5)) -> bool:
         if key >= floor:
             return True
     return False
+
+
+def _manifest_from_2026_09_26(card) -> bool:
+    """Cards frozen under CONTROL_MANIFEST_2026-09-26 or later (C-EVENT-UNIVERSE, added 2026-09-26)."""
+    return _manifest_at_least(card, floor=(2026, 9, 26, 1))
 
 
 TB1_LEAGUE_RE = re.compile(r"\b(?:NBA|WNBA|NBL|EPL|Premier League)\b")
@@ -375,6 +381,13 @@ FIELDS = [
         [r"TEAM_BASELINE_P", r"C-TEAM-BASELINE", r"\bTB-1\b"],
         origin="2026-09-25(e) team-strength baseline", strict_blocking=True, applies=_tb1_league,
     ),
+    Field(
+        "UV", "event-universe line: UNIVERSE: <universe file> / <event id>, or OUT_OF_UNIVERSE "
+              "(C-EVENT-UNIVERSE, RULES_GENERAL 2026-09-26(c))", False,
+        [r"UNIVERSE:\s*\S", r"OUT_OF_UNIVERSE", r"UNIVERSE_\d{4}-\d{2}-\d{2}"],
+        origin="2026-09-26 review: the record is self-selected (M34)", strict_blocking=True,
+        applies=_manifest_from_2026_09_26,
+    ),
 ]
 
 SETTLEMENT_FIELDS = [
@@ -415,6 +428,14 @@ SETTLEMENT_FIELDS = [
                "a written, not read, process record (C-SETTLEMENT-FROM-FEED, 2026-09-25(e); P-510)", False,
         [], origin="P-510 (nine 2024-era names in a 2026 diff)", strict_blocking=True,
         applies=_team_sport_settled, check=_lineup_diff_names_on_card,
+    ),
+    Field(
+        "10s", "shadow-model record at settlement: SHADOW: <row id> (tools/mlb_model.py or tools/sport_models.py), "
+               "or SHADOW: NO_LANE <reason> / SHADOW: MISSED <reason> (C-MLB-SHADOW, C-SPORT-SHADOW; "
+               "RULES_GENERAL 2026-09-26 (k))", False,
+        [r"SHADOW:\s*\S"],
+        origin="2026-09-26(d): a lane nobody records is M15 (control listed, not executed)", strict_blocking=True,
+        applies=lambda card: card.is_settled and _manifest_from_2026_09_26(card),
     ),
 ]
 

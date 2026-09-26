@@ -24,6 +24,63 @@ Evidence density: **MODERATE** (added 2026-09-06, `L-099`, external blindspot au
 This file covers rugby league. Rugby union and rugby sevens are different codes and are governed by `RULES_RUGBY_UNION.md`; their data and scoring populations must not be pooled with rugby league.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-RUGBY-LEAGUE and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every rugby-league card, then open each cited section the card relies on (and §9 for the competition). Everything below §0 is the full reference and its history.
+
+**Track record.** Rugby codes combined: 12 decisions won 58.3% at a stated 0.567 (too few to judge). NFL, AFL and NRL together went 12 W / 20 L at Rank 1/2, the worst group. NRL and NRLW are separate populations. League and union are never pooled (control 8).
+
+### 0.1 Blocking preconditions (§8.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| RL-P1 laws | Law variations, interchange, six-again/set restarts, regulation, golden point and draw terms | Stop |
+| RL-P2 team list | Official list, final match-day reduction and late mail, starting 13, bench and the confirmed spine (fullback, five-eighth, halfback, hooker), from the raw NRL match centre or club page with publication time (G-L13). After late mail, `NOT_RETRIEVED` is `RETRIEVAL_MISS` | Spine and role mixtures; dependent rows capped |
+| RL-P3 goal kicker | Primary goal kicker and replacement (control 5) | Required before any total or margin row |
+| RL-P4 conditions | Venue, surface and match-window weather with a named mechanism | Wet weather is bidirectional (control 4) |
+
+### 0.2 Building the score distribution
+1. **Anchor.** Sides: `TEAM_BASELINE_P` (`tools/team_baseline.py --league nrl`; 0.240 v 0.253). **Totals have no TB-1 resolution** (its RMSE is worse than the league mean): anchor on the population row (2026: mean 47.8, SD 13.9). Before Round 5, anchor sides on `BASELINE_P` too (TB-1 was worse than the base rate early).
+2. **Scoring components, not points** (September 6). Points = 4×tries + 2×conversions + 2×penalty goals + 1×field goals, with conversions = tries × goal-kicking %. A debutant kicker's own reserve-grade kicking percentage enters the conversion term (L-075).
+3. **Branches.** Before any Under or underdog cushion is ranked, write one favourite-only scoring path (RL-B2) and one low-total separation path (RL-B3) with their mechanisms (override 1; controls 13, 14). The second half carries score, possession, field position, bench and fatigue forward (control 15). Close-game winners need the terminal-event branch (RL-B5, control 16; override 3). Blowouts are possession-native (control 12).
+4. **Regimes.** A changed spine rebuilds set organisation, kicking and edge attack (control 1). A current defensive collapse or spine return against season averages is a baseline/current-regime mixture (control 11).
+5. **Small samples.** Completion, goal-kicking and try rates over three or four rounds print their standard error before any signed adjustment (G-L11).
+6. **Width.** TB-1 residual widths: total 13.9, margin 19.9 (2026).
+7. **One score object → total and margin queried separately** (override 2). Possession imbalance is bidirectional (control 2, override 4).
+
+### 0.3 Row rules
+- **Cushions (C-PLUS-CUSHION).** The TB-1 underdog covered +1.5 at 0.41–0.43, +2.5 at 0.44–0.49, +4.5 at 0.51, +6.5 at 0.55–0.57, +8.5 at 0.62, +12.5 at 0.65–0.67 (2025–26). Print the favourite's 7+ and 13+ margin families beside any cushion (G-L12). Stated more than 0.05 above the rate without a receipted mechanism, RM-1 flips it.
+- **Over + underdog cushion.** When RL-B3 carries material mass, print P(R1 ∧ R2) and its sign (P-397). These are distinct targets with a shared driver (G-L15).
+- **Totals departing from the population by about 0.10 or more** need a receipted mechanism, such as a confirmed wet-track forecast for the match window (P-515).
+- **Recent cover rates, points averages and old H2H** are diagnostic only (control 3, override 5).
+
+### 0.4 Reference rows (NRL, all completed games; `BASE_RATES_REGISTER.md` §7.7)
+| Row | 2025 (n = 216) | 2026 (n = 213) |
+|---|---:|---:|
+| Home win | 0.551 | 0.545 |
+| Total mean (SD) | 46.1 (14.0) | 47.8 (13.9) |
+| Total 10th / 50th / 90th percentile | 29 / 44 / 64 | 30 / 48 / 66 |
+| Home margin; margin SD | +3.8; 18.7 | +0.0; 20.7 |
+| P(\|m\| ≤ 2); P(\|m\| ≤ 6) | 0.13; 0.34 | 0.15; 0.29 |
+
+NRLW has no population reference yet (`NOT_YET_DERIVED`).
+
+### 0.5 Ranking and settlement
+- Rank by RM-1 q; its cushion term applies to NRL +k.5 rows.
+- Settle from ESPN `rugby-league/3` (regular season is season type 1, finals type 2; `linescores` carry half-time then full-time) plus two further lineages. nrl.com statistics are admissible only when fetched and pasted with a URL.
+- Record sin bins, send-offs and HIA removals with the minute and score.
+
+### 0.6 Withdrawn or not operative in rugby league
+`C-NRL-SPINE-PEDIGREE-TOTAL-FLOOR` (rejected: one game, invented statistic). `C-FINALS-BYE-RUST` is TESTING only (`T-NRL-BYE-RUST`, 30 games), with no ranking effect. Pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
+
+### Numerical shadow model (2026-09-26(c); never a card input)
+
+`python tools/sport_models.py shadow --league nrl …` (`C-SPORT-SHADOW`). A1 is ridge ratings with key-number weights. **Not validated:** no NRL results could be reached. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+
+### 0.7 Control index (full text in §4 and the dated sections)
+1 spine is a regime · 2 possession imbalance drives dependence · 3 cover rates diagnostic · 4 wet weather bidirectional · 5 goal-kicker state · 6 sin-bin/send-off tail · 7 winner ≠ handicap · 8 league and union never pooled · 9 motivation conditional · 10 no calibration claim · 11 defensive regime and spine-return mixture · 12 blowouts are possession-native · 13 a total can clear through one team · 14 low total ≠ close margin · 15 halftime doesn't freeze separation · 16 close-game winner needs terminal events.
+
+
 ## 1. Identity and contract
 
 

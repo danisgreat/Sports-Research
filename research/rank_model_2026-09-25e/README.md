@@ -143,3 +143,25 @@ In the ordinal era (P-001–P-317, before stated probabilities), the same cushio
 3. **Stated p is printed unchanged beside q.** q never overwrites the card's distribution.
 4. **Both p and q are scored at settlement.** If q's Brier is worse than p's over the next 25 cards, RM-1 reverts to disclosure-only (`T-RM1-PROSPECTIVE`).
 5. **A flip created by RM-1 is capped at SUPPORTED.** Override is allowed only when a TB-1 with resolution gives the stated side ≥ 0.55.
+
+
+<!-- REVIEW-2026-09-26 -->
+## 2026-09-26 review addendum — what the validation does and does not show
+
+**Reproduced.** Re-running `validate_rank_model.py` on the committed dataset reproduced `validation_results.json` byte for byte (coefficients −0.1871 / 1.5433 / −1.1272).
+
+**Three limits the headline figures do not show:**
+1. **The cushion term was discovered on the data that validates it.** It was observed in P-345–P-423 (the G-L12 origin) and confirmed by the 2026-09-25(d) review of rows through P-509. The forward splits from P-420, P-450 and P-480 therefore test on rows that helped name the term. Only rows from P-518 onward are genuinely new.
+2. **Only the leave-one-card-out figure excludes zero.** The forward-split re-ranking intervals, in top-two wins per card, are:
+
+   | Split | Change (95% interval) | Cards | R1/R2 changed |
+   |---|---|---:|---|
+   | from P-420 | +0.074 [0.000, +0.147] | 68 | 4 / 7 |
+   | from P-450 | +0.119 [0.000, +0.262] | 42 | 4 / 8 |
+   | from P-480 | +0.120 [−0.080, +0.320] | 25 | 5 / 6 |
+   | from P-495 | +0.150 [−0.050, +0.350] | 20 | 5 / 6 |
+
+   The improvement comes from a handful of re-ordered cards per split.
+3. **The cushion effect is era-dependent.** Top-two underdog cushions won 17/28 (61%) in the ordinal era and 7/24 (29%) in the probability era. The penalty may describe how probabilities were written in one period rather than a stable property of cushions.
+
+**Consequence (`RULES_GENERAL.md` §"2026-09-26"(g)).** RM-1 stays operative for ranking, as the user authorised, but it is described as **promising and unproven**. `T-RM1-PROSPECTIVE` now also reports non-baseball cushion-class rows separately. If, over at least 15 prospective cushion-class rows, the win rate exceeds the mean q by more than 0.15, the cushion term reverts to disclosure-only until the next review.

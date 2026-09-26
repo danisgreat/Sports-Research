@@ -1,0 +1,124 @@
+{
+ "dates": [
+  {
+   "date": "2026-09-27",
+   "games": [
+    {
+     "gamePk": 900001,
+     "gameDate": "2026-09-27T17:05:00Z",
+     "status": {
+      "abstractGameState": "Preview",
+      "detailedState": "Scheduled"
+     },
+     "teams": {
+      "home": {
+       "team": {
+        "name": "New York Yankees"
+       }
+      },
+      "away": {
+       "team": {
+        "name": "Boston Red Sox"
+       }
+      }
+     },
+     "venue": {
+      "name": "Yankee Stadium"
+     }
+    },
+    {
+     "gamePk": 900002,
+     "gameDate": "2026-09-27T20:10:00Z",
+     "status": {
+      "abstractGameState": "Preview",
+      "detailedState": "Scheduled"
+     },
+     "teams": {
+      "home": {
+       "team": {
+        "name": "Chicago Cubs"
+       }
+      },
+      "away": {
+       "team": {
+        "name": "St. Louis Cardinals"
+       }
+      }
+     },
+     "venue": {
+      "name": "Wrigley Field"
+     }
+    },
+    {
+     "gamePk": 900003,
+     "gameDate": "2026-09-27T23:10:00Z",
+     "status": {
+      "abstractGameState": "Preview",
+      "detailedState": "Scheduled"
+     },
+     "teams": {
+      "home": {
+       "team": {
+        "name": "Los Angeles Dodgers"
+       }
+      },
+      "away": {
+       "team": {
+        "name": "San Diego Padres"
+       }
+      }
+     },
+     "venue": {
+      "name": "Dodger Stadium"
+     }
+    },
+    {
+     "gamePk": 900004,
+     "gameDate": "2026-09-27T16:05:00Z",
+     "status": {
+      "abstractGameState": "Live",
+      "detailedState": "In Progress"
+     },
+     "teams": {
+      "home": {
+       "team": {
+        "name": "Toronto Blue Jays"
+       }
+      },
+      "away": {
+       "team": {
+        "name": "Baltimore Orioles"
+       }
+      }
+     },
+     "venue": {
+      "name": "Rogers Centre"
+     }
+    },
+    {
+     "gamePk": 900005,
+     "gameDate": "2026-09-27T18:05:00Z",
+     "status": {
+      "abstractGameState": "Preview",
+      "detailedState": "Postponed"
+     },
+     "teams": {
+      "home": {
+       "team": {
+        "name": "Miami Marlins"
+       }
+      },
+      "away": {
+       "team": {
+        "name": "Atlanta Braves"
+       }
+      }
+     },
+     "venue": {
+      "name": "loanDepot park"
+     }
+    }
+   ]
+  }
+ ]
+}

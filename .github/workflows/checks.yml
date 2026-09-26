@@ -42,3 +42,6 @@ jobs:
           files=("Mini logs (to be sent to actual log later)"/*/*.md)
           if [ ${#files[@]} -eq 0 ]; then echo "no active mini log"; exit 0; fi
           python audit_card_controls.py "${files[@]}" --settlement --strict --quiet --allow-empty
+
+      - name: Evidence status (informational; added 2026-09-26)
+        run: python tools/evidence_status.py

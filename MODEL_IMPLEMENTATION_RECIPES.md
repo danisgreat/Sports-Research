@@ -47,7 +47,7 @@ Validate wicket/resource-conditioned residuals, phase/innings coherence and targ
 | Tennis — scope added | Surface/format serve-return baseline; hierarchical point probabilities with match-state recursion | Point→game→set→match termination, tiebreak/final-set rules, best-of-three/five, retirement action and player workload; one joint games/sets/winner distribution |
 | Rugby union — scope added | Competition-specific possession/scoring-event baseline; hierarchical tries/conversions/penalties/drop goals | Territory, cards/front-row/bench and kicker state; discrete score support, phase linkage and competition-specific draw/extra-time rules |
 
-Tennis and union are DESIGN REGISTERED / DATA BLOCKED. All other sport families retain that status until an actual build exists. Flexible boosting/neural challengers, learned rankers and pair selectors remain dormant. No cross-sport scalar predicts all totals, and no sport inherits MLB's margin frequencies.
+Tennis and union are DESIGN REGISTERED / DATA BLOCKED. All other sport families retain that status until an actual build exists. **2026-09-26(c):** reduced-feature A0/A1 builds of every row above now exist as code (`tools/sport_models.py`; `NUMERICAL_MODEL_REGISTER.md` §"2026-09-26(c)"). They use final scores only, so the state representations and O/U requirements in this table remain the specification for the full builds. Flexible boosting/neural challengers, learned rankers and pair selectors remain dormant. No cross-sport scalar predicts all totals, and no sport inherits MLB's margin frequencies.
 
 ## 5. Executable probability primitives
 

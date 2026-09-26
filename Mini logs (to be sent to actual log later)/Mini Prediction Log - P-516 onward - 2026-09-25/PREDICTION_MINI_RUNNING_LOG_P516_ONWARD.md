@@ -6,7 +6,7 @@
 | Status | **OPEN — no events yet.** |
 | Next canonical ID | **P-518** (P-516 and P-517 were assigned to the two settled temporary IDs on 2026-09-26; this folder's name predates that) |
 | Temporary IDs awaiting canonical reconciliation | **None.** `TMP-20260923-NPB-CHU-DB-G25` = P-516 and `TMP-20260923-NBL-CNS-TAS` = P-517 (`PREDICTION_LOG_COMBINED_5.md` §"2026-09-26(a)"). |
-| Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2** (§15, RM-1). **Freeze with every card:** `CONTROL_MANIFEST_2026-09-25-6.md`, SHA-256 `fe80cc60742349e7489e36d07ce89a044f51341c6dbc588f742089ca76a8602b` (2026-09-26 re-hash of the Rank-1/Rank-2 receipt `CONTROL_MANIFEST_2026-09-25-5.md` after the P-516/P-517 assignment; 103 files, CRLF form; no card was issued under -5). Verify it with `python tools/verify_manifest.py`. |
+| Governing method for the next issue | METHOD.md **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; SCORING_AND_VALIDATION **SCV-2026.09.19-v2** (§15, RM-1). **Freeze with every card:** `CONTROL_MANIFEST_2026-09-26.md`, SHA-256 `b6e038d36c09dc295074b2517e9d50b4afb6e760e239ede5d90f487706a7f098` (2026-09-26 review implementation, category MEASUREMENT: rule freeze, event universe, post-settlement market benchmark, MLB shadow model, one-page live rules, and blind numerical shadow models for every sport with the settlement `SHADOW:` record; 120 files, CRLF form; supersedes `CONTROL_MANIFEST_2026-09-25-6.md`, under which no card was issued). Every card from this manifest also carries the `UNIVERSE:` field (`C-EVENT-UNIVERSE`; declare with `python tools/slate_universe.py declare`). Verify it with `python tools/verify_manifest.py`. |
 | Operating mode | **SPORTS_ONLY / MARKET_BLIND.** No odds, prices, line movement, tipsters, betting previews, prediction markets or fantasy/DFS material. |
 | Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** |
 | Predecessor | `archive/mini_logs/Mini Prediction Log - P-510 to P-515 SETTLED - 2026-09-25/` (corrected, imported into `PREDICTION_LOG_COMBINED_5.md` §"2026-09-25(f)"). |
@@ -22,6 +22,14 @@
 4. **Official starters before a lineup-dependent Rank 1** (G14.2). P-514 named three starters who did not play.
 5. **Settlement is read from the feed** (`receipts.py settle …`, or a pasted endpoint response), never typed. Audit field `10n` checks the lineup diff against the card.
 6. **The settlement table** is `| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |`.
+
+**Added 2026-09-26 (`CONTROL_MANIFEST_2026-09-26.md`; `RULES_GENERAL.md` §"2026-09-26"):**
+
+7. **Declare the slate before choosing a game.** `python tools/slate_universe.py declare --date <venue-local YYYY-MM-DD> --league <key> [--league <key> …]` writes `universe/UNIVERSE_<date>.json`. Every card prints `UNIVERSE: UNIVERSE_<date>.json` (audit field `UV`, strict). A game outside it prints `OUT_OF_UNIVERSE` with a reason. Skipped games are recorded with `slate_universe.py skip <universe file> --event <id> --reason <code>`.
+8. **The rule freeze is in force** (`C-RULE-FREEZE`; `python tools/evidence_status.py`). No new predictive rule, weight or cap until `C-BASELINE-SKILL` and `T-RM1-PROSPECTIVE` reach their checkpoints.
+9. **After the freeze, record the shadow row** (MLB: `python tools/mlb_model.py shadow --gamepk <pk> --total <line> --card P-<n>`; every other sport, tennis and cricket included: `python tools/sport_models.py shadow --league <key> --event <ESPN id> --date <date> --card P-<n> --total <line> --line <home handicap>`, with tennis adding `--surface`/`--best-of` and cricket adding `--espn-path cricket/<id> --cricsheet <dir>`), before the start. It is blind (the row ID only), never a card input, and never changes a rank.
+10. **After settlement only**, the user may add no-vig closing prices to `MARKET_BENCHMARK_LEDGER.md` (`C-MARKET-BENCHMARK`). Agents never fetch or read prices while building a card.
+11. **At settlement, print `SHADOW: <row id>`** (or `SHADOW: NO_LANE <reason>` / `SHADOW: MISSED <reason>`). Audit field `10s` is strict for this log.
 
 ## 1. Incomplete / Unsettled Logs
 

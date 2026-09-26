@@ -24,6 +24,53 @@ Evidence density: **SPARSE** (added 2026-09-06, `L-099`, external blindspot audi
 This module covers NHL and other ice-hockey competitions only after their rules, data and scoring populations are separated. It does not authorise an NHL probability model.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-ICE-HOCKEY and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every hockey card, then open each cited section the card relies on (and §9 for the competition's overtime and shootout rules). Everything below §0 is the full reference and its history.
+
+Hockey is **sparse**: too few settled cards for a track record (evidence density `SPARSE`, L-099). Treat every card as low-evidence until the record exists.
+
+### 0.1 Blocking preconditions (§8.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| IH-P1 endpoint | Rules, overtime format, shootout treatment, and whether each row settles on regulation or the full match | Stop. Regulation and full match are different targets (control 7) |
+| IH-P2 goaltender | Both starting goalies with release status, backup quality and pull risk, re-handshaken at freeze. **Preseason goalies stay `PROJECTED`** until the official lineup or warm-up report | Goalie mixture (IH-B3). In early-season or sparse competitions an unresolved starter keeps a total off Rank 1 (control 14, override 1) |
+| IH-P3 operator terms | Whether moneyline, puck line and total include OT/SO, and how a shootout goal counts | `UNKNOWN_DEFINITION`; keep the regulation-draw and one-goal-OT branch (control 13) |
+| IH-P4 metric definition | Blocked-shot treatment under the named provider for shot/attempt rows | Capped until reconciled (control 3) |
+
+### 0.2 Building the goal distribution
+1. **Anchor.** TB-1 has **no resolution in the NHL** (sides 0.2477 v 0.2503; totals 0.2490 v 0.2502), so anchor on `BASELINE_P` and the §7.2 population. Goalies and the preseason regime are the named departures.
+2. **Regular season v preseason (H-R3).** Regular-season total mean 6.25 (SD 2.30). Preseason runs 0.6–0.9 goals lower (2025: 5.68; 2026 to 24 Sep: 5.33). A preseason card prints the preseason reference. Roster tier per side (regulars v AHL/junior/try-outs) is a disclosure with no ranking effect (L-20260924-F08).
+3. **Recency (H-R4).** A season scoring rate predicts no better than the league constant; the last game is 40% worse. A back-to-back is −0.20 goals, not distinguishable from zero. Team-scoring leans need a named mechanism (goalie, injuries, special teams); otherwise they are width.
+4. **Exposure and conversion.** Shot volume is exposure, never a goal total (control 11). Conversion runs through shot quality, finishing shrinkage and the goalie mixture (IH-S4, IH-S5). Special teams change both opportunity and rate (control 4).
+5. **Late state.** Score effects, pulled goalie and empty net are explicit branches (IH-B5, IH-B6).
+6. **Width (H-R5).** Total residual SD 2.29, margin 2.57. Below 1.95 (total) or 2.18 (margin), name what the card knows.
+7. **One regulation goal object, plus a rules-correct OT/SO object where needed → every row** (IH-S8).
+
+### 0.3 Row rules
+- **Totals (H-R1).** OT/SO winners add exactly one goal to a regulation tie, so full-game totals of those games are odd: a 2–2 tie always lands Under 5.5 and a 3–3 tie always lands Over 6.5. A full-game 5.5 or 6.5 prints the regulation-tie mass as its own branch. 24.8% of games reach OT (9.1% shootouts). Regulation-only contracts settle on the 60-minute score.
+- **Puck line (H-R2).** P(margin ≥ 2) = 0.568 of all games (0.756 of regulation-decided games). **73% of two-goal regulation wins contain an empty-net goal.** A −1.5 row carries the empty-net route as explicit mass; a +1.5 row names it as its main kill path.
+- **Moneyline** matches its endpoint: a regulation draw is not a loss on a full-match line (§8.4).
+- **Props:** participation × ice time × event rate (control 9).
+
+### 0.4 Ranking
+Rank by RM-1 q with the `TOP2_QUALITY` line. A +1.5 puck line is classed with baseball (`hcp_plus_low`) and carries **no cushion penalty**, because one-goal games are common.
+
+### 0.5 Settlement
+`python receipts.py settle nhl <gameId> --card-goalie-home X --card-goalie-away Y` prints the goalies who played with time on ice, the empty-net goals and the regulation score (H-R6). It also supplies `T-NHL-PRESEASON-GOALIE`. Record regulation versus OT/SO exactly.
+
+### 0.6 Withdrawn in hockey — never apply
+`NHL-PRESEASON-ROSTER-ASYMMETRY` as a ranking rule; any "confirmed" preseason goalie without an official report; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
+
+### Numerical shadow model (2026-09-26(c); never a card input)
+
+`python tools/sport_models.py shadow --league nhl …` (`C-SPORT-SHADOW`). A1 is regulation Poisson ratings, with OT won in proportion to scoring rates and the shootout a coin flip. Validated on 2023-24 to 2025-26 (2026-09-26(d)). A1 beat the league baseline and TB-1 on the result, and beat the baseline on the regulation three-way and the margin. It was **worse than the baseline on totals**, and slightly worse than TB-1 at the total line. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+
+### 0.7 Control index (full text in §4 and the dated sections)
+1 goalie uncertainty is a mixture · 2 shots and goals linked, not interchangeable · 3 blocked shots definition-sensitive · 4 special teams change exposure and rate · 5 score state changes pace · 6 empty-net goals are an explicit tail · 7 regulation ≠ moneyline · 8 back-to-back is mechanistic · 9 props need role and ice time · 10 external xG models are challengers · 11 shot volume is exposure · 12 sparse competitions keep a conversion cap · 13 OT geometry v operator settlement · 14 unconfirmed goalie blocks a fragile Rank-1 total. References: H-R1 totals and odd OT totals · H-R2 puck line is an empty-net market · H-R3 preseason rates · H-R4 recency · H-R5 width · H-R6 settlement receipt.
+
+
 ## 1. Identity and contract
 
 
