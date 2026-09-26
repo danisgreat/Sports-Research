@@ -8,7 +8,11 @@ Fails (exit 1) when any of these holds:
 3. a tracked Markdown or Python file contains a control character. Heredoc and `python -c` edits have
    silently written backspace bytes before (memory: shell-quoting corruption);
 4. a tracked Markdown file contains a literal "\\n" joining two table rows ("|\\n|") or following
-   bold text ("**\\nWord"). This is the corruption shape found in README and RULES_GENERAL on 2026-09-25.
+   bold text ("**\\nWord"). This is the corruption shape found in README and RULES_GENERAL on 2026-09-25;
+5. (added 2026-09-26) two tracked files over 1 KB are byte-identical and at least one of them lives outside
+   `archive/` and `prediction logs/`. The retired runtime once stored 319 identical copies of its inputs
+   (archive/DEDUP_INDEX_2026-09-26.md); live folders must not start doing the same. Historical duplicates
+   inside the archive and the component-log folder are provenance and are allowed.
 
 Usage: python tools/repo_hygiene.py [--max-mb 10]
 """
@@ -62,7 +66,31 @@ def check(paths: list[str], repo: Path = REPO, max_mb: float = 10.0) -> list[str
                 for mm in LITERAL_NL.finditer(t):
                     line = t.count("\n", 0, mm.start()) + 1
                     problems.append(f"LITERAL \\n ARTEFACT at line {line}: {rel}")
+    problems += duplicate_problems(paths, repo)
     return problems
+
+
+HISTORICAL = ("archive/", "prediction logs/")
+
+
+def duplicate_problems(paths: list[str], repo: Path = REPO, min_bytes: int = 1024) -> list[str]:
+    """Byte-identical tracked files (> min_bytes) where at least one copy is outside the historical folders.
+    Content is compared in the CRLF-normalised form, so a checkout's line endings do not matter."""
+    import hashlib
+    groups: dict[str, list[str]] = {}
+    for rel in paths:
+        p = repo / rel
+        if not p.is_file() or p.stat().st_size <= min_bytes:
+            continue
+        data = p.read_bytes()
+        if b"\x00" not in data:
+            data = data.replace(b"\r\n", b"\n")
+        groups.setdefault(hashlib.sha256(data).hexdigest(), []).append(rel)
+    out = []
+    for rels in groups.values():
+        if len(rels) > 1 and any(not r.startswith(HISTORICAL) for r in rels):
+            out.append("DUPLICATE (byte-identical): " + ", ".join(sorted(rels)))
+    return out
 
 
 def main(argv=None) -> int:

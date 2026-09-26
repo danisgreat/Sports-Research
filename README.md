@@ -2,14 +2,15 @@
 
 A disciplined, **market-blind** framework for researching sports events, issuing probability forecasts before the start, and settling them against the official record. It covers MLB, NPB/KBO, basketball (NBA, WNBA, NBL and more), the NHL, soccer, tennis, cricket, AFL, NRL, rugby union and the NFL. Everything is recorded in Markdown: every forecast, the evidence behind it, its settlement and every lesson learned.
 
-> **Status.** Method **MDS-2026.09.19-v4.3** · control revision **CR-2026.09.21-3** · every record is **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. This is research, not betting advice. Odds and betting sources are excluded by design. No numerical model has been fitted yet. The first card-versus-baseline check (`SKILL_BASELINE_LEDGER.md`) shows **no demonstrated skill yet over a naive population baseline**.
+> **Status.** Method **MDS-2026.09.19-v4.3** · control revision **CR-2026.09.21-3** · every record is **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. This is research, not betting advice. Forecasting is market-blind by design; the only market use is a post-settlement scoring benchmark (`C-MARKET-BENCHMARK`). **No forecasting model has been fitted and validated yet:** RM-1 (a ranking calibration) and TB-1 (a team baseline) are fitted layers, and the MLB pilot (`tools/mlb_model.py`) is tested code with no fit. The first card-versus-baseline check (`SKILL_BASELINE_LEDGER.md`) shows **no demonstrated skill yet over a naive population baseline**. From 2026-09-26, **`C-RULE-FREEZE`** holds new predictive rules until the evidence gates report: run `python tools/evidence_status.py`.
 
 ## Start here
 
-1. **[`CURRENT_RULES.md`](CURRENT_RULES.md)**: the live rules on one page, with the workflow, the card format, sport quick cards, the recurring-mistake list and the tools. This is step 0 of the reading gate.
-2. **[`METHOD.md`](METHOD.md)**: the operational authority (workflow, six-field card, precedence).
-3. The sport's `RULES_<SPORT>.md`, in full. The standing reading gate is in `RULES_GENERAL.md` §1.
-4. The active log's top snapshot, [`PREDICTION_LOG_COMBINED_5.md`](PREDICTION_LOG_COMBINED_5.md), for the next ID and open items.
+1. **`python tools/evidence_status.py`**: where every preregistered test stands, and whether `C-RULE-FREEZE` is in force.
+2. **[`CURRENT_RULES.md`](CURRENT_RULES.md)**: the live rules on one page, with the workflow, the card format, sport quick cards, the recurring-mistake list and the tools.
+3. **The sport file's §0 live rules page**: every `RULES_<SPORT>.md` opens with a one-page consolidation of its live controls (2026-09-26). With `CURRENT_RULES.md` it is Tier 1 of the reading gate (`RULES_GENERAL.md` §1); the rest of each file is read by citation.
+4. The active log's top snapshot, [`PREDICTION_LOG_COMBINED_5.md`](PREDICTION_LOG_COMBINED_5.md), for the next ID and open items, and the day's declared universe in `universe/`.
+5. **[`LEARNINGS_INDEX.md`](LEARNINGS_INDEX.md)**: every lesson, test and recurring mistake, one line each, with its status.
 
 ## How it works
 
@@ -30,20 +31,27 @@ The framework's working principles:
 
 | Area | Files |
 |---|---|
-| Live rules | [`CURRENT_RULES.md`](CURRENT_RULES.md) (summary) → [`METHOD.md`](METHOD.md), [`RULES_GENERAL.md`](RULES_GENERAL.md), `RULES_<SPORT>.md`, [`LEAGUE_RULES_CRICKET.md`](LEAGUE_RULES_CRICKET.md), [`LEAGUE_RULES_SOCCER.md`](LEAGUE_RULES_SOCCER.md), [`CONTROLS.md`](CONTROLS.md) |
-| Scoring and evidence of skill | [`SCORING_AND_VALIDATION.md`](SCORING_AND_VALIDATION.md), [`SKILL_BASELINE_LEDGER.md`](SKILL_BASELINE_LEDGER.md), [`PERFORMANCE_ELIGIBILITY_POLICY.md`](PERFORMANCE_ELIGIBILITY_POLICY.md) |
+| Live rules | [`CURRENT_RULES.md`](CURRENT_RULES.md) (summary) and each `RULES_<SPORT>.md` §0 live page → [`METHOD.md`](METHOD.md), [`RULES_GENERAL.md`](RULES_GENERAL.md), the rest of `RULES_<SPORT>.md`, [`LEAGUE_RULES_CRICKET.md`](LEAGUE_RULES_CRICKET.md), [`LEAGUE_RULES_SOCCER.md`](LEAGUE_RULES_SOCCER.md), [`CONTROLS.md`](CONTROLS.md) |
+| Scoring and evidence of skill | [`SCORING_AND_VALIDATION.md`](SCORING_AND_VALIDATION.md) (§16: the measurement ladder), [`SKILL_BASELINE_LEDGER.md`](SKILL_BASELINE_LEDGER.md), [`MARKET_BENCHMARK_LEDGER.md`](MARKET_BENCHMARK_LEDGER.md) (post-settlement only), [`PERFORMANCE_ELIGIBILITY_POLICY.md`](PERFORMANCE_ELIGIBILITY_POLICY.md), `universe/` (declared event universes) |
 | Reference data | [`BASE_RATES_REGISTER.md`](BASE_RATES_REGISTER.md) (§7: cross-sport rates and width benchmarks), [`RECENCY_AND_REBOUND.md`](RECENCY_AND_REBOUND.md), [`research/`](research/base_rates_2026-09-25/README.md) (re-runnable queries) |
 | Sources | [`SOURCES.md`](SOURCES.md) (quick), [`DATA_SOURCE_REGISTER.md`](DATA_SOURCE_REGISTER.md) (full) |
 | Procedures | [`UPCOMING_GAME_RESEARCH_GUIDE.md`](UPCOMING_GAME_RESEARCH_GUIDE.md) (pregame), [`EXTERNAL_LOGGING_WORKFLOW.md`](EXTERNAL_LOGGING_WORKFLOW.md) (mini logs, settlement), [`AGENT_ROLE_AND_TASK.md`](AGENT_ROLE_AND_TASK.md) |
-| Learning | [`LEARNING_REGISTER.md`](LEARNING_REGISTER.md) (lessons, prospective tests, recurring mistakes M1–M32) |
+| Learning | [`LEARNINGS_INDEX.md`](LEARNINGS_INDEX.md) (one line per item, with status) → [`LEARNING_REGISTER.md`](LEARNING_REGISTER.md) (evidence; recurring mistakes M1–M34) |
 | Logs | Parts 1–4 (closed) and [Part 5](PREDICTION_LOG_COMBINED_5.md) (active); [`GAME_LOG_STATUS_CURRENT.md`](GAME_LOG_STATUS_CURRENT.md) (state register); `Mini logs (to be sent to actual log later)/` (active mini log) |
-| Numerical program (design only, not built) | [`NUMERICAL_PROGRAM.md`](NUMERICAL_PROGRAM.md), [`H0_DATASET_CARD.md`](H0_DATASET_CARD.md), [`NUMERICAL_MODEL_REGISTER.md`](NUMERICAL_MODEL_REGISTER.md), [`NUMERICAL_TRAINING_SPEC.md`](NUMERICAL_TRAINING_SPEC.md), [`MODEL_AND_DATA_SPEC.md`](MODEL_AND_DATA_SPEC.md), [`ALGORITHM_PORTFOLIO_AND_EVALUATION.md`](ALGORITHM_PORTFOLIO_AND_EVALUATION.md), [`MODEL_IMPLEMENTATION_RECIPES.md`](MODEL_IMPLEMENTATION_RECIPES.md) |
+| Numerical program (MLB pilot implemented as code, not fit; everything else design only) | [`NUMERICAL_PROGRAM.md`](NUMERICAL_PROGRAM.md), [`H0_DATASET_CARD.md`](H0_DATASET_CARD.md), [`NUMERICAL_MODEL_REGISTER.md`](NUMERICAL_MODEL_REGISTER.md), [`NUMERICAL_TRAINING_SPEC.md`](NUMERICAL_TRAINING_SPEC.md), [`MODEL_AND_DATA_SPEC.md`](MODEL_AND_DATA_SPEC.md), [`ALGORITHM_PORTFOLIO_AND_EVALUATION.md`](ALGORITHM_PORTFOLIO_AND_EVALUATION.md), [`MODEL_IMPLEMENTATION_RECIPES.md`](MODEL_IMPLEMENTATION_RECIPES.md), `tools/mlb_model.py`, [`research/mlb_shadow/`](research/mlb_shadow/README.md) |
 | Freeze receipts | `CONTROL_MANIFEST_*.md` (the current one is named in `METHOD.md`'s header) |
 | History | [`CHANGELOG.md`](CHANGELOG.md) (dated changes, including the former README body), `archive/` (implemented audits, archived mini logs, historical snapshots) |
 
 ## Quickstart
 
 All tools are standard-library Python 3.10 or later. There is nothing to install.
+
+**Before the day's first card**
+
+```bash
+python tools/evidence_status.py                                    # gates, and whether C-RULE-FREEZE is in force
+python tools/slate_universe.py declare --date 2026-09-27 --league mlb --league epl   # C-EVENT-UNIVERSE
+```
 
 **Before issuing a card**
 
@@ -55,6 +63,12 @@ python receipts.py pregame espn basketball/nbl 401875254   # ESPN leagues: state
 
 Print the reference row, reference width and `BASELINE_P` from [`BASE_RATES_REGISTER.md`](BASE_RATES_REGISTER.md) §7. Build the six-field card ([`METHOD.md`](METHOD.md) §4) and append it to the active mini log before delivery.
 
+**Straight after freezing an MLB card (never shown on the card)**
+
+```bash
+python tools/mlb_model.py shadow --gamepk 824703 --total 8.5 --card P-518
+```
+
 **At settlement**
 
 ```bash
@@ -62,7 +76,10 @@ python receipts.py settle mlb 824223 --card-home "Name A;Name B" --card-sp-home 
 python receipts.py settle nhl 2026010034 --card-goalie-home "Goalie"
 python receipts.py settle espn basketball/wnba 401857213 --card-away "A;B;C"
 python audit_card_controls.py "<mini log>.md" --settlement --strict
-python tools/skill_baseline.py                # after appending rows to SKILL_BASELINE_LEDGER.md
+python tools/skill_baseline.py                # prospective rows (counted) and seed rows (never counted), separately
+python tools/slate_universe.py status universe/UNIVERSE_2026-09-27.json --log "<mini log>.md"
+python tools/mlb_model.py settle && python tools/mlb_model.py score
+python tools/market_benchmark.py report       # operator-entered closing lines, after settlement only
 ```
 
 **When building a card, and at each 25-card review**
@@ -85,7 +102,7 @@ python tools/repo_hygiene.py
 python tools/verify_manifest.py
 ```
 
-If you edited a governance file, regenerate the freeze receipt with `python tools/make_manifest.py --out CONTROL_MANIFEST_<date>-<n>.md --title "…" --note "…"`. Then repoint `METHOD.md` and the active mini log. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the branch and pull-request workflow.
+If you edited a governance file, regenerate the freeze receipt with `python tools/make_manifest.py --out CONTROL_MANIFEST_<date>.md --title "…" --note "…" --category <INTEGRITY|MEASUREMENT|DOCUMENTATION|VALIDITY_REPAIR|MODEL_CHANGE>` (one per issuing day; a `MODEL_CHANGE` needs the user's instruction while `C-RULE-FREEZE` is in force). Then repoint `METHOD.md` and the active mini log. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the branch and pull-request workflow.
 
 ## Current state
 
@@ -99,9 +116,10 @@ If you edited a governance file, regenerate the freeze receipt with `python tool
 | Temporary IDs | None open. `TMP-20260923-NPB-CHU-DB-G25` = **P-516**; `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)) |
 | Freeze receipt | The manifest named in [`METHOD.md`](METHOD.md)'s header |
 | Skill v baseline | Seed: card Brier 0.2461 v naive baseline 0.2360 (n = 29, 9 cards; interval spans 0). Prospective count 0 of 100 |
-| Full-record calibration (2026-09-25(d)) | 598 rows, 149 cards: Brier 0.2249, slope 1.06, skill +7.7% over the base rate. Skill lives at p ≥ 0.65 (80.3% won); 0.50–0.65 is coin-flip-grade (53.6%). Non-baseball underdog cushions are over-confident (17/40 at 0.642). Soccer shows clear skill; MLB and basketball near zero; tennis, NFL/NCAA and AFL none ([details](research/settled_rows_2026-09-25/README.md)) |
+| Full-record calibration (rebuilt dataset, re-run 2026-09-26) | 411 decisions, 155 cards, **self-selected events**: Brier 0.2268, slope 1.01, skill +6.6% over the base rate. Skill lives at p ≥ 0.65 (about 80% won); 0.50–0.65 is coin-flip-grade (53.6%). Non-baseball underdog cushions are over-confident (17/40 at 0.642). Soccer has the strongest resolution (37 cards; interval spans 0); MLB and basketball near zero; tennis, NFL/NCAA and AFL none ([details](research/settled_rows_2026-09-25/README.md)) |
 | Ranking and baselines (2026-09-25(e)) | **RM-1** calibrates each stated p into a ranking probability q, and cards rank by q. Held out: top-two wins +0.068 per card [+0.007, +0.128]; Rank 1 64.2% → 68.9% ([details](research/rank_model_2026-09-25e/README.md)). **TB-1** is a leak-free team-strength baseline with resolution for sides in NBA/WNBA/NBL/NFL/AFL/NRL/EPL, and none in MLB/NHL ([details](research/team_baseline_2026-09-25e/README.md)). Rank 1 is "far more likely to win than lose" only in the STRONG tier (q ≥ 0.70: 81% of decisions) |
-| Numerical model | H0 not built ([`H0_DATASET_CARD.md`](H0_DATASET_CARD.md)). RM-1 and TB-1 are a calibration layer and a population baseline, not H0 |
+| Numerical model | H0 not built ([`H0_DATASET_CARD.md`](H0_DATASET_CARD.md)). RM-1 and TB-1 are a calibration layer and a population baseline, not H0. RM-1 is **promising and unproven** (its cushion term was found on the data that validates it; [caveats](research/rank_model_2026-09-25e/README.md)). The MLB A0/A1 pilot is implemented and tested on synthetic data; it runs as a **prospective shadow** only (`C-MLB-SHADOW`) |
+| Evidence gates and rule freeze (2026-09-26) | `C-BASELINE-SKILL` 0/100, `T-RM1-PROSPECTIVE` 0/25 cards, `C-MARKET-BENCHMARK` 0/100, `C-MLB-SHADOW` 0/150 games, no universe declared yet. **`C-RULE-FREEZE` in force.** Live figures: `python tools/evidence_status.py` |
 
 ## Canonical custody
 

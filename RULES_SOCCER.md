@@ -20,6 +20,59 @@ Numerical training specification: **NTS-2026.09.02-v0.3 — design only; no socc
 Sport and competition rules reference: **§9 → [LEAGUE_RULES_SOCCER.md](LEAGUE_RULES_SOCCER.md)** (added 2026-09-04) — the IFAB Laws of the Game, the shared competition variables (extra time, penalties, substitutions, VAR, points and tiebreak systems, promotion/relegation and playoffs), and a per-competition section for every one of the ~35 soccer competitions in the prediction logs. Broken out to its own file because a full treatment would be several times the length of this document.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-SOCCER and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every soccer card, then open each cited section the card relies on (and `LEAGUE_RULES_SOCCER.md` for the competition). Everything below §0 is the full reference and its history.
+
+### 0.1 Blocking preconditions (§8.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| SO-P1 endpoint | Competition, leg/tie state, regulation / extra time / penalties / advance, and which endpoint each row settles on | Stop. Regulation winner, eventual winner and advance are different contracts (controls 1, 18) |
+| SO-P2 participants | Confirmed XI, keeper, formation, **bench**, set-piece and penalty takers for both sides (ESPN `rosters[]` or the official club/league source), refreshed at freeze | Side, double-chance and handicap rows capped. `BENCH_NOT_RETRIEVED` ⇒ no full-match total or handicap at Rank 1 (September 6 override 2). `PROJECTED_BEAT_VERIFIED` needs the S-1 Rev 2 receipt |
+| SO-P3 derivative provider | Exact provider and definition for corners, cards, shots | `UNKNOWN_DEFINITION`; the row cannot reach LEAN/SUPPORTED |
+| SO-P4 schedule identity | Start confirmed by the competition or association when aggregators conflict | Identity quarantined |
+
+**Settlement route at issue (controls 30, 32, 35, 36, 38, G-L14).** A corner or shot row names its route before it is ranked: EPL → the Premier League data API (pulselive, control 32); UEFA club competitions → UEFA matchstats (control 30); otherwise pre-register ESPN `wonCorners` (Opta lineage) or do not issue the row. On a knockout fixture, name the interval and settle from a record that exposes it (control 36).
+
+### 0.2 Building the goal distribution
+1. **Anchor.** EPL: the §7.3 reference (S-R1) and, for results only, `TEAM_BASELINE_P` (TB-1 has resolution for EPL results, **not totals**). Other competitions: `BASELINE_P` where derived, else `NOT_YET_DERIVED`. **Never transfer EPL rates to cups, lower tiers or other leagues (M12).**
+2. **Four layers per side:** chance creation, shot quality, finishing, goalkeeping (SO-S2, control 27). Print shots, shots on target and xG beside goals per match (G-L7). A season rate predicts no better than the league constant, and the last game is 38% worse: form needs a named mechanism (S-R3, R-1).
+3. **Cross-competition translation.** Print the source-league rate, the adjustment and the result for every cross-league or cross-division fixture (control 31). A clean-sheet run against weaker opposition widens the favourite-separation tail; it does not shift the centre (control 39). Early-season droughts shrink hard (control 23).
+4. **Phases.** First and second halves are separate states, not a fixed fraction (SO-S3). Before any 1H Over 0.5 outranks its Under, print both teams' current first-half rates and 0–0-HT frequency and derive P(no 1H goal) ≈ e^(−λ) from both sides (control 20). Sibling phase lines come from **one printed phase distribution**. A phase Under at 0.80+ on U1.5 or lower states the modal count and P(phase = 2) (control 40).
+5. **Bench and state.** The bench has expected-minute value (control 22). Early goals switch to leading/trailing-state branches that propagate into later goals and corners (controls 5, 12, 25). Red cards rebuild both sides (control 6).
+6. **Knockouts.** Compare the exact competition/round/leg/aggregate population; there is no automatic knockout Under sign (control 28, L-064).
+7. **Width.** The EPL total residual SD is 1.61. A goals-total width below about 1.37 names what the card knows (S-R3, C-WIDTH-BENCHMARK).
+8. **One regulation score grid plus linked corner and player objects → every row** (SO-S7). Use `tools/card_math.py … --dist skellam` for margins.
+
+### 0.3 Row rules
+- **Where soccer's skill lives:** phase rows, low-threshold team totals, wide alternate totals, corners with their own chain, and protected sides. Main-line full-match totals are close to coin flips (the preferred side won 1 of 6 in one cohort): rank them honestly and never prefer them by default.
+- **Disclosure thresholds (S-R2):** a first-half Under 1.5 above about 0.75, or a full-match Over/Under 2.5 above about 0.70, names its reason. These are not caps.
+- **Single-team scoring rows above 0.80 without a confirmed XI** print the opponent-suppression and finishing-failure branches with mass (control 37).
+- **Corners:** their own exposure → rate → opponent → score-state → provider chain, or they are capped (controls 4, 11, 14). A team-corner row missing its crossers recomputes the centre and gives the leading-state branch mass (control 33). A 3-game corner sample is width.
+- **Winner labels:** print the draw mass beside any label under 50%, and the upset mass at or below 60% (control 3). A draw is a third terminal state (G-L19).
+- **Cushions and double chances.** +k.5 rows print P(underdog wins) + P(draw) + P(loses by ≤ k) from a Skellam margin beside the EPL band. Underdog cushions went 8/13 at a stated 0.77. A "+0.5 / 1X" row is a **double chance**: 2/5 at about 0.73, so none is stated above 0.70 without the draw mass printed. Soccer +k.5 rows carry no RM-1 cushion penalty.
+- **Contract must match mechanism.** One-sided creation supports a team target, not a full-match Over (control 26). Volume, allocation and result are different questions (control 24).
+
+### 0.4 Ranking and track record
+- Rank by RM-1 q; soccer's order is almost unchanged by it (1 of 35 held-out cards re-ordered).
+- **Track record:** the strongest resolution of any sport. 143 decisions from 37 cards won 74.8% at 0.700 (Brier 0.170, resolution 0.036). The card-cluster calibration interval spans 0, so this is the strongest evidence rather than proof of skill. Rank 1/2 went 55 W / 17 L. Phase against full-game totals on the same cards: 30/36 against 27/41 (`C-PHASE-VS-FULL-TOTAL`, still TESTING). First-half Over 0.5 at Rank 1/2 lost four times.
+
+### 0.5 Settlement (controls 34, 36, 41)
+- Settle from a structured feed that carries shots, cards and minutes, never a narrative report. Copy red cards, penalties, keeper changes and weather stoppages with the minute and score, and say whether each target was already decided (controls 34, 41).
+- Regulation versus extra time is exact (G-L16). Media corner counts are cross-checks only; both observed media conflicts were wrong by one (control 30).
+- ESPN slugs: AFC Champions League Two is `soccer/afc.cup`; the AFC feed has no `Halftime` event, so reconstruct half-time from goal minutes (control 41).
+
+### 0.6 Reference numbers (EPL 2025-26, `BASE_RATES_REGISTER.md` §7.3)
+Goals mean 2.75; Over 1.5/2.5/3.5 0.789/0.550/0.284; draw 0.274; BTTS 0.561. First half: mean 1.19 (second half 1.56); P(≥1)/P(≥2)/P(≥3) 0.716/0.334/0.111. Corners mean 10.0 (SD 3.27); P(≥10) 0.563, P(≥11) 0.437. EPL only.
+
+### 0.7 Withdrawn in soccer — never apply
+The blanket corners Rank-1 cap (L-073, replaced by the coverage test L-081/G10.2); the automatic knockout Under sign; pseudo-tails; path-count categories; 40–60% bands; normalised-edge ordering; one-result response rules; any implication that a cushion determines the winner.
+
+### 0.8 Control index (full text in §4 and the dated sections)
+1 regulation winner ≠ advance · 2 rotation changes strength · 3 draw-band discipline (draw/upset mass) · 4 corners are not dominance proxies · 5 leading-state branch · 6 red cards asymmetric · 7 friendlies phased · 8 set-piece/keeper extremes shrink · 9 weather is mechanism-specific · 10 niche-stat settleability · 11 derivative completeness · 12 two-leg early-goal regime · 13 sparse-participant side cap · 14 corner share ≠ corner total · 15 current competition v inherited class · 16 friendly participant phase · 17 placeholder conflict is not a final · 18 winner endpoint literal · 19 schedule conflict · 20 early-goal reconciliation with both sides' first-half rates · 21 late events don't backfill first half · 22 bench minutes · 23 early-season shrinkage · 24 volume/allocation/result · 25 transition pressure · 26 contract matches mechanism · 27 territory/chance/scoreboard separate · 28 exact knockout population · 29 prior leg is context · 30 UEFA matchstats route · 31 cross-competition translation · 32 EPL data API route · 33 team-corner generators · 34 disruption facts · 35 league corner route table · 36 period scope on knockout derivatives · 37 single-team rows > 0.80 without XI · 38 AFC routes · 39 cross-league defensive translation · 40 sibling phase lines from one distribution · 41 settle from a structured feed. References: S-R1 EPL rates · S-R2 disclosure thresholds · S-R3 recency and width.
+
+
 ## 1. Identity and contract
 
 

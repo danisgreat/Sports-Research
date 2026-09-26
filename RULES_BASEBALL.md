@@ -20,6 +20,71 @@ Numerical training specification: **NTS-2026.09.02-v0.3 — design only; no base
 Sport and competition rules reference: **§9 (added 2026-09-04)** — playing laws plus per-league rules for every baseball competition in the prediction logs (MLB, NPB, KBO, LMB, MiLB/Triple-A, WBSC/international). Reference material for identity, state classification and settlement; it does not change `SFA-BASEBALL`.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-BASEBALL and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass (`RULES_GENERAL.md` §0; `CURRENT_RULES.md` precedence). **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every baseball card, then open each cited section the card relies on. Everything below §0 is the full reference and its history. It is consulted by citation, not reread end to end.
+
+MLB, NPB, KBO, CPBL, LMB, MiLB and international baseball are separate populations at every step (§8).
+
+### 0.1 Blocking preconditions (§8.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| BB-P1 starters | Both starters linked to the official event/team/role, re-handshaken at the final refresh | No starter analysis drives a row; the starter is a mixture; dependent rows are capped |
+| BB-P2 orders | The statsapi `battingOrder` (or the NPB/KBO official order) with its fetch time (B-1) | `LINEUPS_NOT_YET_PUBLISHED @ time` or `RETRIEVAL_MISS`; with `RETRIEVAL_MISS` no full-game total or run line may be Rank 1 (G14.2) |
+| BB-P3 league and rules era | Innings, extras rule, DH, listed-pitcher/action terms, roof | Stop (`GATE-TARGET`) |
+| BB-P4 termination terms | Official-game rule and operator action rule | `UNKNOWN_DEFINITION`; keep the termination branch |
+| BB-P5 endpoint | Who bats last; whether the contract includes extras | Required before any total or run line is located |
+| Tie-permitting leagues | KBO/NPB: the winner family is home/away/tie summing to 1, with the innings cap from the rulebook (control 32) | Never a two-way winner label |
+
+### 0.2 Freeze receipts
+- `python receipts.py pregame mlb <gamePk>`: probables, official orders, gamefeed weather (condition, temperature, field-relative wind), umpires, state. Re-run within 60 minutes of first pitch (B-5).
+- MLB totals at #1 or as the top O/U print the gamefeed weather block or `WEATHER_NOT_RETRIEVED`. **Never a city forecast** (B-2, M30).
+- Check `mlbDebutDate` for every posted starter; under about 30 days of service is `LOW_SERVICE_SAMPLE`, which widens the team marginal and does not shift it (2026-09-19).
+- NPB: the official box posts スタメン about an hour before first pitch. KBO: the English scoreboard. Native-language search for same-day news (L-067).
+
+### 0.3 Building the run distribution — the default order (the P-491 template, 2026-09-23)
+1. **Anchor.** Partially pooled team R/G × opponent RA/G, the league row and the venue row (B-6; `BASE_RATES_REGISTER.md` §7.5). TB-1 has **no resolution in MLB**, so `BASELINE_P` is the population row (2026-09-25(e)(b)1). Print `BASELINE_P` beside every row.
+2. **Starters, applied once.** Per-start game log (IP/ER/SO/BB) with a front-loaded/back-loaded/uniform verdict and "command held?" (control 24). Rehab pitch-count ladder for an IL return (25). Small-sample mixture (11). Season prior versus current-regime branch (13). **Recency (R-1):** recent results revise a rate only through a named mechanism (velocity, IL, role, leash); the last game is the worst predictor measured.
+3. **Channel audit.** Park, heat and same-park form are one "carry" channel; ERA, last-N starts and opponent split are one starter channel. Three or more same-signed adjustments moving the centre by over a run are netted in one line (control 26). Lineup changes go through PA by slot (27).
+4. **Relief.** A named score-state ladder for both sides (20, 36); the starter-exit transition inning with "first relief inning concedes 2+" as mass (30); freshness is not quality (6); workload informs availability only.
+5. **Environment.** Park and weather scale a budget both lineups already support (override 7). No automatic weather direction; rain is a termination-order branch (18).
+6. **Endpoint.** Choose route A (final-score model) or route B (regulation + rules-versioned extras kernel) and label it (37). A regulation tie at exactly L adds at least one run under completion. P(tie after 9) is context (8.75% in 2026).
+7. **Width.** The reference is 4.50. A total width below 3.8 names what the card knows (B-8, M31). Push mass comes from the conditional distribution, never a cap (35).
+8. **One joint run object → every row** (§8.4). Use `tools/card_math.py total --dist negbin` and `cover … --no-zero` so the numbers reproduce (B-11, M14).
+
+### 0.4 Row rules
+- **Run lines (control 34).** P(fav −1.5) = w(1 − r); P(dog +1.5) = P(dog wins) + w·r. P(A +1.5) ≥ P(A ML) always. For a ±1.5 in the top two print P(fav by 2+), the exactly-one-run mass split by who bats last, and the early-hook mass for a starter back from the IL (29). The cushion is decomposed into win / lose by 1 / lose by 2+ (4). A low total is not a close margin (5, 17). BB-B9 late separation is represented before any cushion is Rank 1 (override 6).
+- **+1.5 baseline.** 0.638 for either side, extras included; nine-inning away/home 0.617/0.659. A +1.5 stated below it claims information against that side and the departure ledger names it (B-9).
+- **Totals.** An Under outranking its Over states why the BB-B2/B3 upper tail is subordinate (override 2). One team alone can clear a total (P-404, P-417). Print the median-based P(total ≤ line) for skewed totals and the venue row beside the line; opposing the venue row needs a named mechanism (35).
+- **NPB/KBO/CPBL.** A team total at p ≥ 0.65 needs the opposing starter's log and the posted order (31a). A batting pitcher is an exposure branch (31b). An ERA-built centre adds back unearned runs and reconciles with team R/G and RA/G (TESTING `O-NPB-ERA-CENTRE`).
+- **Strikeout-floor props (33):** exposure base, direct opponent split, early-exit branch with mass, settlement definition.
+- **Winner.** Three-way in tie leagues (32). The winner label inherits the ranked rows' evidence (G-L21(3)).
+- **First five innings (B-7):** mean 5.00, SD 3.29, P(tied) 0.154; an F5 moneyline or −0.5 carries the tie mass.
+- **Openers.** The opener's first inning is width, not direction (B-4).
+
+### 0.5 Ranking and track record
+- Rank by **RM-1 q** (`tools/rank_model.py rank`). A baseball +1.5 carries no cushion penalty. Rank 1 is the highest q, **not a +1.5 by habit**. A typical slate is `TOP2_COIN_FLIP` or `LEAN`, and the delivery says so.
+- STRONG rows available from the population alone: +2.5 (0.72–0.75), a low total line (Over 5.5, 0.76), or a total two or more runs from the card's own centre. They appear only as the card's own distribution prices them (`SLATE_ADVISORY`).
+- Opposite +1.5 rows, and a moneyline plus the opponent's +1.5, are a `COVERING_PAIR`.
+- **Track record:** MLB won 58.6% at a stated 0.596, resolution **0.0075** (the lowest of any sport), so the departure ledger is mandatory. NPB/KBO/CPBL won 64.3% at 0.623. NPB/KBO/CPBL Unders 11/14 against Overs 4/9 is `T-TOTAL-DIRECTION-LEAGUE` (non-binding). `C-RUN-CENTRE-BIAS` accrues with no tilt.
+- **MLB shadow model (C-MLB-SHADOW, 2026-09-26).** At every MLB freeze, record `python tools/mlb_model.py shadow …` in the shadow log. It is never ranked or cited as evidence until its prospective test concludes.
+
+### 0.6 Settlement
+- Three terminal lineages. `receipts.py settle mlb …` prints the final, the regulation score when extras were played, decisions, box weather and the lineup diff (starters are the `X00` entries).
+- NPB: the official page marker 【試合終了】, plus Sports Navi and Kyodo as lineages 2–3. KBO: the English scoreboard ("FINAL", W/L/S). Mynavi result pages are AI-generated: exclude them.
+- Record runs in the starter-exit transition inning (30). Keep regulation versus extras attribution exact.
+
+### 0.7 Reference numbers (2026; `BASE_RATES_REGISTER.md` §1–§3, §7.5)
+League total mean 8.95–8.98, SD 4.51–4.53. One-run games 27.6–27.8% (nine-inning games 23.9%). P(margin ≥ 2) 72.2%. r = P(margin = 1 | win) 22.9–30.1% (nearly flat). Extras 8.75% of games, adding a mean of 2.88 runs; the final margin is one run 68.5% of the time after extras. Park identity explains 4.3% of total-runs variance. Population P(total > L): 5.5 0.757 · 6.5 0.686 · 7.5 0.572 · 8.5 0.491 · 9.5 0.398 · 10.5 0.329.
+
+### 0.8 Withdrawn in baseball — never apply
+Universal run-line caps (0.53/0.54) and the 12% push cap; fixed extras contributions and the "60% extras conversion"; second-highest/median pseudo-tails; path-count categories; 40–60% top-slot bands; normalised-edge ordering; rebound, hangover or "due" rules; doubleheader-G1 deflation; "dual run-line arbitrage"; the KBO velocity filter; "ace dominance"; three-start form as validation (P-453 was lucky).
+
+### 0.9 Control index (full text in §4 and the dated sections)
+1 short start is exposure · 2 run suppression keeps the HR tail · 3 pitch limit ≠ innings · 4 cushion decomposition · 5 low total ≠ close margin · 6 bullpen freshness ≠ quality · 7 post-trade regime · 8 trend mechanism · 9 gapped/overlapping lines · 10 home batting is state-dependent · 11 small-sample starter mixture · 12 identity before quality · 13 season prior v current regime · 14 defence and unearned-run tails · 15 joint hook-tail reconciliation · 16 strong opponent doesn't erase debut variance · 17 low-total separation · 18 weather termination order · 19 stable centres keep cluster risk · 20 score-state bullpen · 21 favourite separation and clusters linked · 22 extras rate environment · 23 prior series game is context · 24 game log beats aggregates · 25 rehab pitch ladder · 26 mechanism-overlap audit · 27 PA-weighted lineup exposure · 28 opponent starter full-game branch (as corrected 2026-09-12) · 29 run-line decomposition · 30 starter-exit transition inning · 31 NPB/KBO/CPBL team totals; batting pitcher · 32 tie-permitting end states · 33 strikeout-floor props · 34 run-line identity · 35 conditional total and exact push · 36 score-state relief ladder before a run line is Rank 1 · 37 regulation-to-completion endpoint. Receipts and references: B-1 official lineup · B-2 gamefeed weather · B-3 run-centre accrual · B-4 opener caution · B-5 freeze/settlement receipts · B-6 all-park rows · B-7 first five · B-8 width benchmark · B-9 +1.5 baseline · B-10 total direction by league · B-11 `card_math.py`.
+
+
 ## 1. Identity and contract
 
 

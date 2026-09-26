@@ -31,3 +31,6 @@ Thumbs.db
 desktop.ini
 ~$*
 *.tmp
+
+# Session scratch (2026-09-26): never committed; the former scratch/ folder is archived at archive/scratch_2026-09-25/
+scratch/

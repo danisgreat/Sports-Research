@@ -636,7 +636,8 @@ Primary distribution metrics are CRPS/RPS and log score, with calibration/reliab
 ## 19. One-page pre-delivery checklist
 
 
-- [ ] Read active role/general/model/algorithm/numerical/sport/learning documents and top log snapshot.
+- [ ] **(2026-09-26, `C-READING-GATE`)** Read Tier 1 in full (`CURRENT_RULES.md`, the sport file's §0 live page, the top log snapshot, this checklist) and opened every cited section the card relies on; ran `python tools/evidence_status.py`.
+- [ ] **(2026-09-26, `C-EVENT-UNIVERSE`)** Printed `UNIVERSE: <file> / <event id>` from the day's declared universe, or `OUT_OF_UNIVERSE`.
 - [ ] Settled verified earlier finals; left live/postponed/unverified events open.
 - [ ] Verified new event identity, state, rules, venue and schedule/timezones.
 - [ ] Verified `cutoff_at < scheduled_start_at` before using `PREGAME`; otherwise changed state or failed closed.
@@ -665,6 +666,8 @@ Primary distribution metrics are CRPS/RPS and log score, with calibration/reliab
 - [ ] Made no probability/value claim beyond current validation and price gates.
 - [ ] Refreshed state/participants/weather/price just before issue.
 - [ ] Appended the immutable Markdown view before delivery, if authorised.
+- [ ] **MLB (2026-09-26, `C-MLB-SHADOW`):** after the freeze and before first pitch, ran `python tools/mlb_model.py shadow --gamepk <pk> --total <line> --card P-###`. Its output is not on the card and did not change it.
+- [ ] **At settlement (2026-09-26):** recorded a `skip` reason for every universe event left uncarded; ran `python tools/mlb_model.py settle` for MLB shadow rows. Did **not** fetch or read any price: closing lines are entered by the operator only (`C-MARKET-BENCHMARK`).
 - [ ] Cited current claims and disclosed unknowns/conflicts/source limits.
 - [ ] **At settlement:** opened the structured process record (shots/on-target, inning splits, phase runs, quarter scores) and the disruption facts (red cards, sin bins, injury exits, stoppages) **with minute and score**, and classified the card as a *process* failure or a *conversion / endpoint / disruption* outcome before amending any control (`G-L23`).
 - [ ] **At settlement:** ran `python audit_card_controls.py <log.md> --settlement` (with `--strict` from the 2026-09-25 manifest onward) and recorded the per-card completeness result (§16.8).

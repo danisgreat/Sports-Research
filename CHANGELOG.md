@@ -6,6 +6,19 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-26(b) — review implementation: evidence before rules
+
+**Why.** The 2026-09-26 repository review rated the project 6.5/10. It found careful honesty and tooling, but no demonstrated skill over a simple baseline, six control revisions in one day with no card issued under them, a self-selected event sample, no market benchmark, an MLB pilot that existed only in Markdown, and a reading gate of about 65,000 words per card. The user asked for every recommendation to be implemented. Record: `RULES_GENERAL.md` §"2026-09-26"; `LEARNING_REGISTER.md` §"2026-09-26". **No forecasting coefficient, cap or ranking override changed.**
+
+- **Rules you read.** Every `RULES_<SPORT>.md` opens with a §0 live rules page (560–1,650 words against 6,800–18,700 for the full files). `RULES_GENERAL.md` §1 is now a two-tier reading gate (`C-READING-GATE`). Nothing was deleted.
+- **Rule freeze.** `C-RULE-FREEZE` holds new predictive rules until `C-BASELINE-SKILL` and `T-RM1-PROSPECTIVE` report. `tools/make_manifest.py` requires `--category`, allows one manifest per issuing day except validity repairs, and refuses a `MODEL_CHANGE` during the freeze without the user's instruction.
+- **New measurement lanes.** `C-EVENT-UNIVERSE` (`tools/slate_universe.py`; audit field `UV`); `C-MARKET-BENCHMARK` (`MARKET_BENCHMARK_LEDGER.md`, `tools/market_benchmark.py`; post-settlement closing probabilities only; forecasting stays market-blind); `C-MLB-SHADOW` (`tools/mlb_model.py`, the numerical programme's MLB A0/A1 pilot as tested code; declared priors, not fit; never a card input); `tools/evidence_status.py` (every gate in one table; also run in CI).
+- **Fixes.** `tools/skill_baseline.py` had pooled seed and prospective rows; it now reports them separately. README calibration figures updated to the rebuilt dataset (0.2268 / slope 1.01 / +6.6%). RM-1 is described as promising and unproven, with a stricter reversion rule for its cushion term. Soccer's record is "strongest resolution", not proof.
+- **Learning register.** `LEARNINGS_INDEX.md` indexes every lesson, test and recurring mistake with its status. M33 (rule churn) and M34 (self-selected sample) added. 80 untested historical candidates and early tests are `CLOSED_UNTESTED`; `C-RANK2-GAP` is answered; `C-WEIGHT-PROPAGATION`, `C-MARGIN-TAIL-MASS` and `C-OU-GEOMETRY` are closed or superseded.
+- **Repository.** `drive_settlement_2026-09-21/`, the Drive-sync manifests and `scratch/` moved into `archive/`. 319 byte-identical retired-runtime copies were removed (`archive/DEDUP_INDEX_2026-09-26.md`); tracked files went from 952 to 648. `tools/repo_hygiene.py` fails on live duplicates.
+- **Tests.** Tool tests went from 51 to 90; root tests from 77 to 78.
+- **Receipt.** `CONTROL_MANIFEST_2026-09-26.md`.
+
 ### 2026-09-26(a) — canonical IDs for the two settled temporary IDs; merge to main
 
 - **Assignments.** On the operator's instruction:

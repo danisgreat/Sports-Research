@@ -85,6 +85,23 @@ class MakeAndVerify(unittest.TestCase):
         self.assertNotIn("METHOD.md", info["files"])
 
 
+    def test_category_rules_for_the_rule_freeze(self):  # added 2026-09-26 (C-RULE-FREEZE)
+        self.assertEqual(mk.category_errors("DOCUMENTATION", None, None, True, 0), [])
+        self.assertTrue(mk.category_errors("CHORE", None, None, False, 0))
+        self.assertTrue(mk.category_errors("MODEL_CHANGE", None, None, False, 0))            # needs --model-change
+        self.assertTrue(mk.category_errors("INTEGRITY", "new cap", None, False, 0))          # model change mislabelled
+        self.assertTrue(mk.category_errors("MODEL_CHANGE", "refit RM-1", None, True, 0))     # freeze needs override
+        self.assertEqual(mk.category_errors("MODEL_CHANGE", "refit RM-1", "user: refit now", True, 0), [])
+        self.assertTrue(mk.category_errors("MEASUREMENT", None, None, True, 1))              # second manifest today
+        self.assertEqual(mk.category_errors("VALIDITY_REPAIR", None, None, True, 2), [])
+
+    def test_build_prints_category_and_override(self):  # added 2026-09-26
+        text, _ = mk.build(self.repo / "CONTROL_MANIFEST_A.md", "CONTROL_MANIFEST_C.md", "t", "n", repo=self.repo,
+                           category="MODEL_CHANGE", model_change="x", freeze_override="user said so")
+        self.assertIn("**Category (C-RULE-FREEZE):** MODEL_CHANGE.", text)
+        self.assertIn("**Freeze override (user instruction):** user said so", text)
+
+
 class Hygiene(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -110,10 +127,24 @@ class Hygiene(unittest.TestCase):
 
     def test_large_file_rule(self):
         write(self.repo / "big.bin", b"0" * (2 * 1024 * 1024))
-        write(self.repo / "PREDICTION_LOG_COMBINED_9.md", b"0" * (2 * 1024 * 1024))
+        write(self.repo / "PREDICTION_LOG_COMBINED_9.md", b"1" * (2 * 1024 * 1024))  # distinct bytes (duplicate rule, 2026-09-26)
         probs = rh.check(["big.bin", "PREDICTION_LOG_COMBINED_9.md"], self.repo, max_mb=1)
         self.assertEqual(len(probs), 1)
         self.assertIn("big.bin", probs[0])
+
+    def test_duplicate_rule_live_versus_historical(self):  # added 2026-09-26
+        body = b"x" * 4096
+        for rel in ("archive/a/f.md", "archive/b/f.md", "prediction logs/f.md", "tools/one.py", "tools/two.py"):
+            write(self.repo / rel, body if rel.startswith(("archive", "prediction")) else b"y" * 4096)
+        write(self.repo / "small1.md", b"z" * 10)
+        write(self.repo / "small2.md", b"z" * 10)
+        probs = rh.duplicate_problems(["archive/a/f.md", "archive/b/f.md", "prediction logs/f.md",
+                                       "tools/one.py", "tools/two.py", "small1.md", "small2.md"], self.repo)
+        self.assertEqual(len(probs), 1)
+        self.assertIn("tools/one.py", probs[0])
+        write(self.repo / "crlf.md", b"a\r\n" * 600)
+        write(self.repo / "lf.md", b"a\n" * 600)
+        self.assertEqual(len(rh.duplicate_problems(["crlf.md", "lf.md"], self.repo)), 1)
 
 
 if __name__ == "__main__":

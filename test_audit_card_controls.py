@@ -253,6 +253,17 @@ class ResearchFieldTests(unittest.TestCase):
                "Freeze: CONTROL_MANIFEST_2026-09-25-5.md. TOP2_QUALITY: TOP1_ONLY\n")
         self.assertTrue(audit(kbo, strict=True)["P-741"].present["TB"]["note"].startswith("n/a"))
 
+    def test_universe_field_gated_by_manifest(self):  # added 2026-09-26 (C-EVENT-UNIVERSE)
+        old = "#### P-750 — MLB, Cubs @ Reds\n" + FULL_ISSUE + "Freeze: CONTROL_MANIFEST_2026-09-25-6.md.\n"
+        self.assertTrue(audit(old, strict=True)["P-750"].present["UV"]["note"].startswith("n/a"))
+        new = "#### P-751 — MLB, Cubs @ Reds\n" + FULL_ISSUE + "Freeze: CONTROL_MANIFEST_2026-09-26.md.\n"
+        self.assertIn("UV", audit(new, strict=True)["P-751"].missing_blocking)
+        self.assertNotIn("UV", audit(new, strict=False)["P-751"].missing_blocking)
+        ok = new + "UNIVERSE: universe/UNIVERSE_2026-09-27.json / mlb:824703\n"
+        self.assertTrue(audit(ok, strict=True)["P-751"].present["UV"]["present"])
+        out = new + "OUT_OF_UNIVERSE (operator request)\n"
+        self.assertTrue(audit(out, strict=True)["P-751"].present["UV"]["present"])
+
     def test_lineup_diff_names_must_be_on_card(self):
         card_text = ("#### P-750 — MLB, Cardinals @ Pirates\n" + FULL_ISSUE +
                      "Lineup STL: Wetherholt, Herrera, Burleson, Walker, Bernal, Torres, Saggese, Church, Winn.\n")

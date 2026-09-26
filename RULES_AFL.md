@@ -20,6 +20,58 @@ Numerical training specification: **NTS-2026.09.02-v0.3 — design only; no AFL 
 Sport and competition rules reference: **§9 (added 2026-09-04)** — the laws of Australian football and the competition rules for the AFL (men's premiership + 2026 Wildcard finals system) and AFLW, including the 2026 rule changes, quarter/time-on structure, interchange caps, finals brackets and extra-time rules. Reference material for identity, state and settlement; it does not change `SFA-AFL`.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-AFL and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every AFL or AFLW card, then open each cited section the card relies on (and §9 for the competition's rules). Everything below §0 is the full reference and its history.
+
+**AFL is `NO_DEMONSTRATED_SKILL` and over-confident.** 10 decisions won 30% at a stated 0.662 (gap −0.36, card-cluster interval −0.60 to −0.10). Underdog cushions went 0/3. NFL, AFL and NRL together went 12 W / 20 L at Rank 1/2, the worst group. The evidence grade is capped at LOW and the departure ledger is required. AFL men's and AFLW evidence are never pooled.
+
+### 0.1 Blocking preconditions (§8.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| AF-P1 rules | Rules era, quarter length, interchange/substitute rules, draw and extra-time terms | Stop |
+| AF-P2 selected teams | Official teams, late changes, substitute and material outs, re-handshaken after the final late-change window. Returning forwards get play/limited/withdrawn states until the warm-up check | Role mixtures; dependent rows capped |
+| AF-P3 venue | Venue, dimensions, roof and ground orientation | Required before wind enters any branch |
+| AF-P4 wind vector | Near-bounce wind speed and direction mapped to ground orientation and scoring ends, plus surface (control 14) | Totals and handicaps capped at LEAN; widen margin and total states (override 3) |
+
+Match IDs are host-qualified: verify date and participants before reusing an AFL/club ID pairing (L-071).
+
+### 0.2 Building the score distribution
+1. **Anchor.** Sides and margins: `TEAM_BASELINE_P` from `tools/team_baseline.py --league afl` — the strongest resolution of any league (P(home win) Brier 0.202 v 0.249). **Totals have no TB-1 resolution**; anchor them on the 2026 population row. Finals print `TB1_FINALS_CONTEXT` and name the finals departures (venue, rest days, ground weather).
+2. **Scoring shots × conversion, never points as one number** (September 6). Points = S × (1 + 5p), with S = goals + behinds and p = goals/S, per side. The shot chain runs territory → inside-50 → mark/shot → shot quality → conversion (control 1). Conversion persistence is estimated, not assumed (control 2). Near a line, show lower/central/upper conversion branches (control 12).
+3. **Mismatches.** The dominant side's shots compound while the weaker side is already at its floor, so a one-sided game is more dangerous for an Under (September 6 item 3; P-292). A high-shot branch is mandatory for 180+ men's totals (control 9).
+4. **Personnel.** Availability goes through role and time on ground into shots and conversion; no name-only bump (control 11). A personnel-loss discount is conditioned on the opponent's own roster quality (L-077, P-298).
+5. **Conditions.** Wind is a quarter/end-switch variable (control 14). AFLW late territorial durability is separate from the total (control 15).
+6. **Width.** TB-1 residual widths: total 29.1, margin 36.7 (2026).
+7. **One score object → totals and margins queried separately** (override 1). A broad Under never supports an underdog cushion (control 13).
+
+### 0.3 Row rules
+- **Cushions (C-PLUS-CUSHION).** The TB-1 underdog covered +6.5 at 0.38–0.43, +12.5 at 0.48–0.51, +18.5 at 0.56–0.59 and +24.5 at 0.60–0.62 (2025–26). Stated more than 0.05 above that without a receipted mechanism on the favourite's side, RM-1 flips it.
+- **Winner and handicap are different thresholds** (control 3); overlapping positive handicaps are mapped (control 4). Finals margins take their centre from the scoring-shot differential chain, not a shrink toward a close game (G-L12).
+- **Hitouts are opportunity**, never a decisive term (control 8, override 4). Raw totals, Under/Over counts and cover history are diagnostic only (override 5).
+
+### 0.4 Reference rows (AFL, n = 207 per season; `BASE_RATES_REGISTER.md` §7.7)
+| Row | 2025 | 2026 |
+|---|---:|---:|
+| Home win / draw | 0.565 / 0.005 | 0.585 / 0.015 |
+| Total mean (SD) | 168.6 (29.8) | 178.2 (29.1) |
+| Total 10th / 50th / 90th percentile | 132 / 168 / 208 | 142 / 181 / 216 |
+| Home margin; margin SD | +6.0; 42.5 | +7.1; 40.8 |
+| P(\|m\| ≤ 12); P(\|m\| ≤ 24) | 0.30; 0.48 | 0.28; 0.47 |
+
+AFLW has no population reference yet (`NOT_YET_DERIVED`).
+
+### 0.5 Ranking and settlement
+Rank by RM-1 q (its cushion term applies to AFL +k.5 rows). Settle from the AFL/AFLW official match centre with ESPN `australian-football/afl` as corroboration; record goals and behinds per side so the shot/conversion split is auditable.
+
+### 0.6 Withdrawn in AFL — never apply
+Points budgeted as one number; name-only personnel bumps; fixed conversion regression; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
+
+### 0.7 Control index (full text in §4 and the dated sections)
+1 decompose the shot chain · 2 conversion persistence estimated · 3 winner ≠ handicap · 4 overlapping positive handicaps · 5 live Under needs observed suppression · 6 large Q4 cushion needs remaining-possession analysis · 7 venue and competition matter · 8 hitouts are opportunity · 9 high totals need a high-shot branch · 10 motivation is conditional · 11 availability-to-conversion handshake · 12 conversion sensitivity near the line · 13 volume and margin separate · 14 ground-level wind is a phase variable · 15 Q4 territorial durability.
+
+
 ## 1. Identity and contract
 
 

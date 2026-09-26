@@ -12,7 +12,13 @@ This is a descriptive LEARNING_ONLY diagnostic, not a performance claim
 (PERFORMANCE_ELIGIBILITY_POLICY.md). The preregistered decision rule is in LEARNING_REGISTER.md
 §"2026-09-25(c)" (C-BASELINE-SKILL).
 
-Usage: python tools/skill_baseline.py [SKILL_BASELINE_LEDGER.md] [--boot 10000] [--seed 20260925]
+Usage: python tools/skill_baseline.py [SKILL_BASELINE_LEDGER.md] [--boot 10000] [--seed 20260925] [--section all|prospective|seed]
+
+Sections (added 2026-09-26). Rows are tagged by the ledger heading they sit under. Only rows under the
+"Prospective rows" heading count toward the preregistered decision rule (100 decisions from at least 30
+cards); the hindsight "Seed rows" never do. Before 2026-09-26 the tool pooled both, which would have
+let seed rows leak into the prospective verdict once prospective rows existed. The default report now
+prints the two sections separately, prospective first, with progress against the checkpoint.
 """
 from __future__ import annotations
 
@@ -27,9 +33,19 @@ REPO = Path(__file__).resolve().parent.parent
 HEADER = re.compile(r"^\|\s*Decision\s*\|", re.I)
 
 
+CHECKPOINT_DECISIONS, CHECKPOINT_CARDS = 100, 30
+
+
+def section_of(heading: str) -> str:
+    h = heading.lower()
+    return "prospective" if "prospective" in h else "seed" if "seed" in h else "other"
+
+
 def parse(text: str) -> list[dict]:
-    rows, cols = [], None
+    rows, cols, section = [], None, "other"
     for line in text.splitlines():
+        if line.startswith("## "):
+            section = section_of(line)
         if HEADER.match(line):
             cols = [c.strip().lower() for c in line.strip().strip("|").split("|")]
             continue
@@ -43,7 +59,8 @@ def parse(text: str) -> list[dict]:
         r = dict(zip(cols, cells))
         try:
             rows.append({"decision": r["decision"], "card": r["card"], "family": r["family"],
-                         "p": float(r["card p"]), "b": float(r["baseline p"]), "result": r["result"].upper()})
+                         "p": float(r["card p"]), "b": float(r["baseline p"]), "result": r["result"].upper(),
+                         "section": section})
         except (KeyError, ValueError):
             continue
     return rows
@@ -121,10 +138,26 @@ def main(argv=None) -> int:
     ap.add_argument("ledger", nargs="?", default=str(REPO / "SKILL_BASELINE_LEDGER.md"))
     ap.add_argument("--boot", type=int, default=10000)
     ap.add_argument("--seed", type=int, default=20260925)
+    ap.add_argument("--section", choices=("all", "prospective", "seed"), default="all")
     args = ap.parse_args(argv)
     rows = parse(Path(args.ledger).read_text(encoding="utf-8-sig"))
-    print(render(summarise(rows, args.boot, args.seed)))
+    if args.section != "all":
+        print(render(summarise([r for r in rows if r["section"] == args.section], args.boot, args.seed)))
+        return 0
+    print(report_sections(rows, args.boot, args.seed))
     return 0
+
+
+def report_sections(rows: list[dict], boot: int = 10000, seed: int = 20260925) -> str:
+    pro = summarise([r for r in rows if r["section"] == "prospective"], boot, seed)
+    sd = summarise([r for r in rows if r["section"] == "seed"], boot, seed)
+    n, c = pro["n"], pro["cards"]
+    done = n >= CHECKPOINT_DECISIONS and c >= CHECKPOINT_CARDS
+    out = ["## Prospective rows (count toward C-BASELINE-SKILL)",
+           f"Progress: {n}/{CHECKPOINT_DECISIONS} decisions from {c}/{CHECKPOINT_CARDS} cards — "
+           + ("**checkpoint reached: apply the decision rule**." if done else "checkpoint not reached; no verdict."),
+           "", render(pro), "", "## Seed rows (hindsight; never counted)", "", render(sd)]
+    return "\n".join(out)
 
 
 if __name__ == "__main__":

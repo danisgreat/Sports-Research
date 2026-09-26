@@ -20,6 +20,59 @@ Numerical training specification: **NTS-2026.09.02-v0.3 — design only; no bask
 Sport and competition rules reference: **§9 (added 2026-09-04; Copa Value/LNBP onboarding audit updated 2026-09-04)** — playing rules and the FIBA / WNBA / NBA rule differences, plus per-competition rules for every basketball competition in the prediction logs (WNBA; FIBA World Cup 2027 qualifiers; FIBA Asia Cup pre-qualifiers; FIBA Women's events; LNBP/Copa Value with unresolved-rule gates). Reference material for identity, state and settlement; it does not change `SFA-BASKETBALL`.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-BASKETBALL and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every basketball card, then open each cited section the card relies on. Everything below §0 is the full reference and its history.
+
+NBA, WNBA, NBL, NCAA, FIBA, EuroLeague, LKL, LNBP, summer league and preseason are never pooled (§8).
+
+### 0.1 Blocking preconditions (§8.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| BK-P1 league and clock | Rules era, period length, foul/bonus, overtime terms. A competition with no current regulation packet (LNBP 2026) stays `FAIL` | Stop; no rank, probability or direction (P-451 is the reference fail-close) |
+| BK-P2 availability | Official injury report plus both starting fives and the active roster from the official feed, with fetch time (K-1) | Start/minutes mixtures; dependent rows capped. `PROJECTED_BEAT_VERIFIED` needs the S-1 Rev 2 receipt |
+| BK-P3 phase identity | Which segment each row settles on (Q1/Q2/H1/H2/full; OT in or out) | A completed segment is `SETTLED_AT_ISSUE` and unranked |
+| BK-P4 endpoint | Regulation or including overtime for every total, spread and team total | `UNKNOWN_DEFINITION`; the OT branch stays explicit |
+
+Pregame means before the actual tip. NBL: the first `jumpBall` event in the match feed (K-3). ESPN `plays[].wallclock` gives the tip for NBA/WNBA/NBL. When an injury note shares a surname with an active teammate, print first names and the official active list (`O-ROSTER-NAME-COLLISION`).
+
+### 0.2 Building the score distribution
+1. **Anchor.** NBA/WNBA/NBL sides: `TEAM_BASELINE_P` from `tools/team_baseline.py` (K-11). NBA/WNBA totals also anchor on TB-1; **NBL totals do not** (no resolution) and anchor on the population. Uncovered leagues (FIBA, LKL, BCL, EuroLeague, LNBP, LMB) anchor on `BASELINE_P` and print `TEAM_BASELINE_P: NOT_COVERED`.
+2. **Team scoring input** = season rate (NBL: a last-10 rate is acceptable because scoring rises through the season) + the opponent's defence to date. A single previous game is the worst predictor (+18% to +36% RMSE); the opponent's defence improves RMSE by 7–11% (K-8, R-1).
+3. **Exposure.** Minutes, lineup stints, usage and replacement quality for every decision-driving player (BK-S1). Every top-three scorer and every player of about 20+ minutes has a quantified line (PPG, minutes, rebounds, assists); a bare name is `AGGREGATE_ONLY` and caps the dependent rows (control 20).
+4. **Possessions × efficiency** by lineup (BK-S2–S4). Raw PPG and recent shooting percentages never substitute. Shooting inputs print attempts and makes; small samples are width (control 22, G-L11).
+5. **Windows and regimes (K-6).** NBL rounds 1–3: print the early-season reference (−8.5, 95% CI −14.3 to −2.7). WNBA early season runs +6.5, so there is no cross-league rule. WNBA 2026 scores +10.7 over 2024–25: exclude or adjust those seasons (M24). A team's first competitive game of a season is `T-BKB-SEASON-OPENER-WIDTH` (width only).
+6. **Rest (K-7).** NBA back-to-back against a rested opponent is worth about −1.8 on the margin; totals show no fatigue effect, so fatigue is width. Rest is segmented by half and mechanism (controls 7, 14).
+7. **Width (K-5).** References: NBA 19.4/15.1, WNBA 19.5/13.3, NBL 18.7/15.2 (total/margin). Below 0.85 × the reference, name what the card knows. Without a benchmark, a width below 13.6 (total) or 9.4 (margin) needs a reason. **Recent basketball total widths ran about 39% narrow (M31).**
+8. **Branches.** All eight BK-B states; for a double-digit spread the four mismatch states (favourite sustain, slowdown, underdog response, underdog suppression) are enumerated separately (§8.3). Overtime is about 4–5.5% of games and adds about 25 points; a total within about 12 of the line keeps OT as explicit mass (K-4).
+9. **One joint score object → every row.** Use `tools/card_math.py … --no-zero` for margins (basketball margins are never 0).
+
+### 0.3 Row rules
+- **Underdog cushions (C-PLUS-CUSHION, K-9, K-12).** Print the population margin band, `BASELINE_P`, P(underdog wins) + P(loses by ≤ k) and the named reason the margin stays inside k. The weaker team's +1.5/+2.5/+3.5/+5.5 covers only 0.32–0.40 / 0.35–0.43 / 0.38–0.45 / 0.44–0.51. Stated more than 0.05 above that without a receipted mechanism on the favourite's side is `PLUS_CUSHION_UNSUPPORTED`, and RM-1 flips the pair. "The underdog keeps it close" is not a mechanism: P(|margin| ≤ 2) is only 7–12%.
+- **Spreads.** Opening separation, maximum lead and closing margin are three distributions (§8.4). Large spreads are factorised (control 16). A same-competition, same-roster meeting is current evidence: decompose it into repeatable versus variance shares before shrinking it (control 25).
+- **Totals.** Solve the team-score budget at the supplied line in both directions (control 17). A cushion and an Under can die to one fourth-quarter run: print P(¬R1 ∧ ¬R2) and name the state (control 26, G-L17).
+- **Segments.** Nested Q1/H1/full rows on one pace thesis are one primary row (control 1). Q2 is not Q1 (control 2). Quarter shape: NBA Q4 averages 55.3 against 57.6–58.7 in Q1–Q3; the NBL second half runs below the first; the WNBA is flat.
+- **Props:** participation × minutes × usage/opportunity × rate (control 8).
+- **Intentions are not constraints.** An announced minutes plan keeps a close-game restoration branch (`O-ANNOUNCED-MINUTES-PLAN`). A coach's stated pace intent is at most a branch, never a centre shift (S-2).
+
+### 0.4 Ranking and track record
+- Rank by **RM-1 q**. A flipped favourite handicap is capped at SUPPORTED unless `TEAM_BASELINE_P` gives the stated cushion ≥ 0.55. An Under at Rank 1 needs its width at or above the reference (K-13).
+- A departure of more than 0.10 from `TEAM_BASELINE_P` names a receipted mechanism (K-11). With resolution near zero, the departure ledger is mandatory (K-10).
+- **Track record:** 31 decisions won 58.1% at 0.586, resolution **0.012**. Underdog cushions 3/8 (2/9 at Rank 1/2). Rank 1/2 overall 18 W / 16 L.
+
+### 0.5 Settlement
+- Official box scores. ESPN `summary` corroborates. `receipts.py settle espn basketball/<league> …` gives the process record and starter diff (K-1). The NBL match API settles only; skip its `betting`/`odds` keys. Flashscore is an independent third lineage.
+- LNBP finals render only in a browser: `JS_ONLY — RENDER REQUIRED` is reachable, so a miss is `RETRIEVAL_MISS` (control 27).
+- Record regulation versus OT exactly (control 13) and disruption facts (ejections, injury exits with clock and score).
+
+### 0.6 Withdrawn in basketball — never apply
+Derby Under suppression; the FIBA club-qualifier +5.5 possessions coefficient; `C-ABSENCE-DEFENSIVE-PENALTY`; upper-decile pace × ORtg tail sums as a ranking bar; path-count categories; 40–60% top-slot bands; normalised-edge ordering; a fixed cushion-plus-Under coupling sign; the equal-attempt 1.7-SE claim; one-result response rules.
+
+### 0.7 Control index (full text in §4 and the dated sections)
+1 nested rows dependent · 2 Q1 pace ≠ Q2 · 3 small H2H phase samples weak · 4 minutes are a distribution · 5 blowout/garbage time two-sided · 6 late fouling and OT explicit · 7 rest is mechanistic · 8 prop role coherence · 9 extreme spread is not safety · 10 friendly halves differ · 11 mismatch total and margin share a tree · 12 current roster regime · 13 exact regulation/OT attribution · 14 rest segmented by half · 15 low total can coexist with a blowout · 16 factorised large spreads · 17 team-score budget · 18 late blowouts are multi-axis · 19 names become exposure · 20 quantify every rotation scorer · 21 secondary-scorer usage transfer; floor from worst same-regime shooting · 22 shooting uncertainty with real denominators · 23 spread families incl. underdog separation · 24 conditional margin-total coupling (corrected) · 25 same-competition meeting is current evidence · 26 shared late-game kill state · 27 JS-only field owner is a render escalation. Receipts and references: K-1 official starters/roster · K-2 blowout/rest/shooting states are width · K-3 NBL tip marker · K-4 league reference row · K-5 width benchmark · K-6 early-season and WNBA regime · K-7 back-to-backs · K-8 recency · K-9 plus-cushion disclosure · K-10 departure ledger · K-11 TB-1 anchor · K-12 cushion population rates · K-13 ranking.
+
+
 ## 1. Identity and contract
 
 

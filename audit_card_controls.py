@@ -53,7 +53,8 @@ Exit codes
     2  usage or file error
 
 BLOCKING fields (a missing one blocks issue under §16.8): 2, 3, 5a, 7; at settlement 10;
-with --strict also 7r, T13, WB, BP, DL, PC, HC, 10p, 10l, 10z (each only where it applies).
+with --strict also 7r, T13, WB, BP, DL, PC, HC, RM, TB, UV, 10p, 10l, 10z, 10n (each only where it applies;
+UV from CONTROL_MANIFEST_2026-09-26).
 Everything else is recorded as a process defect on that card without blocking.
 
 Card segmentation (repaired 2026-09-25; 2026-09-23(c) proposal)
@@ -190,6 +191,11 @@ def _manifest_at_least(card, floor=(2026, 9, 25, 5)) -> bool:
         if key >= floor:
             return True
     return False
+
+
+def _manifest_from_2026_09_26(card) -> bool:
+    """Cards frozen under CONTROL_MANIFEST_2026-09-26 or later (C-EVENT-UNIVERSE, added 2026-09-26)."""
+    return _manifest_at_least(card, floor=(2026, 9, 26, 1))
 
 
 TB1_LEAGUE_RE = re.compile(r"\b(?:NBA|WNBA|NBL|EPL|Premier League)\b")
@@ -374,6 +380,13 @@ FIELDS = [
               "TEAM_BASELINE_P: NOT_YET_DERIVED (C-TEAM-BASELINE, RULES_GENERAL 2026-09-25(e))", False,
         [r"TEAM_BASELINE_P", r"C-TEAM-BASELINE", r"\bTB-1\b"],
         origin="2026-09-25(e) team-strength baseline", strict_blocking=True, applies=_tb1_league,
+    ),
+    Field(
+        "UV", "event-universe line: UNIVERSE: <universe file> / <event id>, or OUT_OF_UNIVERSE "
+              "(C-EVENT-UNIVERSE, RULES_GENERAL 2026-09-26(c))", False,
+        [r"UNIVERSE:\s*\S", r"OUT_OF_UNIVERSE", r"UNIVERSE_\d{4}-\d{2}-\d{2}"],
+        origin="2026-09-26 review: the record is self-selected (M34)", strict_blocking=True,
+        applies=_manifest_from_2026_09_26,
     ),
 ]
 

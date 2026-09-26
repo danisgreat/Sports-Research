@@ -58,5 +58,18 @@ class SkillBaseline(unittest.TestCase):
                 self.assertIn(r["result"], ("W", "L", "P"))
 
 
+    def test_sections_are_separated(self):  # added 2026-09-26
+        head = ("| Decision | Card | Rank | Contract (as issued) | Family | Card p | Baseline p | "
+                "Baseline population (leak-free) | Result |\n|---|---|---|---|---|---:|---:|---|---|\n")
+        text = ("## Seed rows\n\n" + head + "| S1 | A | 1 | x | total | 0.6 | 0.5 | pop | W |\n\n"
+                "Seed reading paragraph.\n\n## Prospective rows (from manifest)\n\n" + head +
+                "| P1 | B | 1 | x | total | 0.7 | 0.5 | pop | W |\n| P2 | C | 1 | x | total | 0.6 | 0.5 | pop | L |\n")
+        rows = sb.parse(text)
+        self.assertEqual({r["decision"]: r["section"] for r in rows}, {"S1": "seed", "P1": "prospective", "P2": "prospective"})
+        rep = sb.report_sections(rows, boot=100)
+        self.assertIn("Progress: 2/100 decisions from 2/30 cards", rep)
+        self.assertLess(rep.index("Prospective"), rep.index("Seed rows"))
+
+
 if __name__ == "__main__":
     unittest.main()

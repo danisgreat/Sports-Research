@@ -21,6 +21,58 @@ Sport and competition rules reference: **§9 (added 2026-09-04)** — the rules 
 Evidence density: **SPARSE** (added 2026-09-06, `L-099`, external blindspot audit `B-13`) — this sport has markedly fewer settled cards in this log than baseball, soccer or cricket, and much of the sample is preseason/rotation-uncertain. Every identity/state/contract/source/coherence gate applies at full force regardless; any *directional or magnitude* claim in this file is held to lower confidence than an equivalent claim in a `DENSE` sport and may not be promoted `PROMOTED_PROCESS` on one or two cards alone.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-AMERICAN-FOOTBALL and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every gridiron card, then open each cited section the card relies on (and §9 for the code's rules). Everything below §0 is the full reference and its history.
+
+**NFL/NCAA is `NO_DEMONSTRATED_SKILL` and over-confident.** 12 decisions won 25% at a stated 0.544 (gap −0.29, card-cluster interval −0.47 to −0.12). Every Rank-1 loss was an underdog cushion of +1.5 to +6.5 stated at 0.53–0.58 (P-412, P-413, P-414, P-422, P-472). The evidence grade is capped at LOW and the departure ledger is required. NFL, NCAA, CFL and UFL are separate populations.
+
+### 0.1 Blocking preconditions (§8.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| AM-P1 code and rules | Downs, field, regulation, overtime and tie terms, and each row's phase | Stop |
+| AM-P2 quarterback | Starter with release status, backup branch, health and mobility, re-handshaken after the inactive release | QB mixture; dependent rows capped |
+| AM-P3 units | Offensive-line combination, skill snaps, defensive front and coverage absences, kickers where a row depends on them | Widen side and total; cap unit-dependent claims |
+| AM-P4 preseason rep plan | QB, line, skill and defensive rotation by quarter | Never project a starter or one reserve sample through four quarters (controls 9, 11) |
+| AM-P5 college availability | The absence of an NFL-style report is not evidence of health | Missingness code (control 10) |
+
+### 0.2 Building the score distribution
+1. **Anchor.** NFL: `TEAM_BASELINE_P` (`tools/team_baseline.py --league nfl`) for sides (0.231 v 0.252) and, marginally, totals (0.246 v 0.254). Weeks 1–3 are flagged `TB1_EARLY_SEASON`. NCAA has no TB-1 lane (`NOT_COVERED`).
+2. **Margin prior and width (control 17, G-L12).** Print the margin prior (prior-season differential adjusted for QB status) and a width no narrower than the residual SD (**13.6**, TB-1 2025) unless the card shows why. New-regime uncertainty widens; it does not centre the margin toward pick'em (controls 15, 16). Prior-season unit ratings are width in a new season (control 19).
+3. **Discrete scoring.** Key numbers and pushes come from score combinations (control 6). Every handicap row prints the exact masses at 3 and 7 (control 18); a card without a margin table caps its handicap rows at FORCED RANK.
+4. **Non-offensive scores (control 20).** A handicap row within one score of the centre carries a defensive or special-teams TD branch: 0.217 per game, at least one in 18.8% of games (2025), adjusted only with named evidence (backup QB, sack or turnover rates).
+5. **Game script and dependence.** A leading favourite drains clock; a trailing team adds yards, sacks and garbage-time points (control 3). Low total ≠ close spread (control 13). When a handicap and a total are both in the top two, print P(favourite covers ∧ Under) and P(underdog covers ∧ Over) from the joint table (control 21).
+6. **Shrink turnovers and one-score records** without a pressure, decision or ball-security mechanism (control 4). Weather is matchup-specific; rain is not an automatic Under (control 5).
+7. **One joint score object → every row.** Overtime follows the exact competition rules (control 7).
+
+### 0.3 Row rules
+- **Cushions (C-PLUS-CUSHION).** The TB-1 underdog covered +1.5 at 0.35–0.42, +2.5 at 0.38–0.46, +3.5 at 0.45–0.54, +6.5 at 0.57–0.60, +7.5 at 0.61–0.66. A cushion at or above that without a receipted mechanism is `PLUS_CUSHION_UNSUPPORTED`, and RM-1 flips it. A +2.5/+3.5 prints the mass at 3 (0.14–0.15); a +6.5/+7.5 prints the mass at 7 (0.07–0.10).
+- **Aligned current-regime uncertainty caps a favourite** (control 15): several uncertainties supporting the favourite's kill path keep its spread below SUPPORTED.
+- **CFL** uses its own possession-to-points chain (control 14). **Preseason** is a quarter-by-quarter unit mixture with reserve-sample shrinkage and explosive tails (controls 11, 12).
+
+### 0.4 Reference rows (NFL regular season, n = 272 each; `BASE_RATES_REGISTER.md` §7.7)
+| Row | 2024 | 2025 |
+|---|---:|---:|
+| Home win | 0.524 | 0.536 |
+| Total mean (SD) | 45.8 (13.1) | 46.0 (13.8) |
+| Home margin; margin SD | +1.7; 14.5 | +2.2; 14.2 |
+| TB-1 residual width, total / margin | 13.1 / 13.7 | 13.4 / 13.6 |
+| P(\|m\| = 3); P(\|m\| = 7) | 0.136; 0.074 | 0.151; 0.096 |
+| P(\|m\| ≤ 3); P(\|m\| ≤ 7) | 0.24; 0.52 | 0.27; 0.50 |
+
+Margin bands (2025): 0–6 40.1%, 7–13 24.6%, 14+ 35.3%; mean absolute margin 11.15.
+
+### 0.5 Ranking and settlement
+Rank by RM-1 q; its cushion term applies to gridiron +k.5 rows. Settle from ESPN `football/nfl` summaries (with `scoringPlays`) plus two further lineages; record non-offensive scores, turnovers and sacks as process facts.
+
+### 0.6 Withdrawn in gridiron — never apply
+A universal 13.9 SD floor (the residual benchmark is a disclosure reference, not a floor); a hand-picked healthy-QB window as the prior; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
+
+### 0.7 Control index (full text in §4 and the dated sections)
+1 QB identity is a regime · 2 line continuity is combinatorial · 3 game script creates dependence · 4 turnovers and one-score records shrink · 5 weather is matchup-specific · 6 key numbers and pushes are discrete · 7 OT matches the competition · 8 special teams are field position · 9 preseason is a separate phase · 10 college availability is asymmetric · 11 preseason quarter-by-quarter unit mixture · 12 reserve-sample shrinkage and explosive tails · 13 low total ≠ close spread · 14 CFL possession chain · 15 aligned regime uncertainty caps a favourite · 16 new-regime uncertainty two-sided · 17 margin prior and width · 18 key numbers at 3 and 7 · 19 prior-season ratings are width · 20 non-offensive score branch · 21 favourite covers inside the Under.
+
+
 ## 1. Identity and contract
 
 

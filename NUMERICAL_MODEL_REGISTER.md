@@ -116,8 +116,8 @@ Each group is instantiated for an exact target/population/horizon only after its
 | `AF-A1-DRIVE-DIST-v0` | American-football joint score | Hierarchical drive outcome and discrete score distribution | Test QB/field-position/rules partial pooling | DESIGN REGISTERED / DATA BLOCKED |
 | `AF-A2-DRIVE-SIM-v0` | American-football joint score | Drive/play/clock/field-position/scoring-state simulation | Coherent side/total/margin, key values and OT | DESIGN REGISTERED / DATA BLOCKED |
 | `AF-A3-FLEX-GRID-v0` | American-football score grid | Boosted state components/ordered score grid | Flexible challenger without independent line heads | DESIGN REGISTERED / DATA BLOCKED |
-| `BS-A0-EMP-COUNT-v0` | Baseball joint runs | Empirical plus Poisson/NB diagnostic | Run-dispersion and simple baseline | DESIGN REGISTERED / DATA BLOCKED |
-| `BS-A1-JOINT-RUN-v0` | Baseball joint runs | Hierarchical bivariate count/distributional model | Test lineup/starter/bullpen/park covariance | DESIGN REGISTERED / DATA BLOCKED |
+| `BS-A0-EMP-COUNT-v0` | Baseball joint runs | Empirical plus Poisson/NB diagnostic | Run-dispersion and simple baseline | **MLB: CODE IMPLEMENTED (2026-09-26, `tools/mlb_model.py` A0) — SHADOW lane open; not fit** |
+| `BS-A1-JOINT-RUN-v0` | Baseball joint runs | Hierarchical bivariate count/distributional model | Test lineup/starter/bullpen/park covariance | **MLB: CODE IMPLEMENTED (2026-09-26, `tools/mlb_model.py` A1: pooled team, park, home, starter; shared-gamma joint) — SHADOW lane open (`C-MLB-SHADOW`); declared priors, not fit; historical validation not yet run** |
 | `BS-A2-PA-BASEOUT-v0` | Baseball joint runs | PA/base-out/starter-hook/bullpen/home-ninth/extra simulation | Coherent winner, totals and run lines | DESIGN REGISTERED / DATA BLOCKED |
 | `BS-A3-FLEX-RUN-v0` | Baseball joint runs | Boosted/ordered run-grid challenger | Flexible overdispersion/interaction test | DESIGN REGISTERED / DATA BLOCKED |
 | `AFL-A0-EMP-SHOT-v0` | AFL/AFLW joint score | Empirical and simple scoring-shot/conversion baseline | Separate territory/volume from conversion | DESIGN REGISTERED / DATA BLOCKED |

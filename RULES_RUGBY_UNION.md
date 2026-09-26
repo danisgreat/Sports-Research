@@ -24,6 +24,36 @@ Evidence density: **SPARSE** (added 2026-09-06, `L-099`, external blindspot audi
 This module covers 15-a-side rugby union and rugby sevens. They share laws ancestry but have different duration, space, possession, rest, squad and scoring distributions. Neither population may be pooled with rugby league or with the other union format without an explicit population/era model.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-RUGBY-UNION and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every union or sevens card, then open each cited section the card relies on (and §11 for the competition). Everything below §0 is the full reference and its history.
+
+**Evidence density: `SPARSE`** (L-099). There is **no union population reference and no TB-1 lane yet**: cards print `TEAM_BASELINE_P: NOT_COVERED` and `REFERENCE_BASE_RATE: NOT_YET_DERIVED`, the evidence grade is capped at LOW, and the departure ledger names every move away from an even-money prior. Deriving the ESPN rugby-union population is the next research step. Union is never pooled with league, and fifteens are never pooled with sevens (controls 1, 2).
+
+### 0.1 Blocking preconditions (§10.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| RU-P1 code and format | Fifteens or sevens, law era, duration, stage, extra-time, draw and qualification terms | Stop |
+| RU-P2 team sheet | Official XV or sevens squad, bench, late changes, halfback/fly-half pairing, front row and set-piece roles, substitution plan | Role mixtures; participant-sensitive rows capped (control 11) |
+| RU-P3 goal kicker | Primary and replacement kicker, attempt choice and range (control 6) | Required before any total or margin row |
+| RU-P4 conditions | Venue, surface, match-window weather through a named mechanism | No automatic total direction |
+| RU-P5 sevens schedule | Daily schedule, match load, recovery | Widen tails (control 10) |
+
+### 0.2 Building the score distribution
+1. **Territory is not points** (control 4): opposition-22 entry → lineout/maul/breakdown → finishing and goal-kicking.
+2. **Points composition** (control 5): tries and conversions versus repeated penalty goals respond differently to weather, discipline and score state. Set piece and breakdown are exposure engines (control 7).
+3. **Cards** create asymmetric tails for the exact man-down duration (control 8).
+4. **Margins (G-L12):** print the favourite's 8+ and 15+ margin families beside any handicap, with the late-try branch (bonus-point chasing, yellow cards) as mass. Sparse team lists widen the margin distribution rather than centring it on a close game. A low total is not a close margin (control 9).
+5. **Broad totals need matchup-native mechanism support**; league averages and recent Over counts cannot outrank thin process evidence (control 3).
+
+### 0.3 Ranking and settlement
+Rank by RM-1 q; its cushion term applies to union +k.5 rows. A large cushion (k ≥ 10) stated at 0.60–0.65 is still scored by RM-1, and the reconciliation line names the margin band (`C-PLUS-CUSHION`). Print `TOP2_QUALITY`. Settle from the competition's official match centre plus two further lineages, read from the feed.
+
+### 0.4 Control index (full text in §6 and the dated sections)
+1 union is not league · 2 fifteens and sevens separate · 3 broad totals need mechanism support · 4 territory is not points · 5 points composition matters · 6 goal kicker is a regime · 7 set piece and breakdown are exposure engines · 8 cards create asymmetric tails · 9 low total ≠ close margin · 10 sevens clusters need restart/card branches · 11 sparse lineups cap evidence.
+
+
 ## 1. Identity and contract
 
 

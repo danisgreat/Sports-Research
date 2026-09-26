@@ -4,7 +4,7 @@
 Program revision: **NP-2026.09.19-v2**. Training specification: **NTS-2026.09.19-v0.5**. Governing forecast method: **MDS-2026.09.19-v4.3 / CR-2026.09.21-3**.
 
 
-**Current state: Markdown implementation complete; no empirical dataset built, model fitted, calibrator fitted or prospective shadow forecast issued.** The user's 17 September request authorizes implementation of the audit findings; the subsequent clarification prioritizes implementation within Markdown. This satisfies the authorization question for this work. The previous statement that “implement all recommendations” could not authorize implementation is withdrawn. It is not a reason to request permission again.
+**Current state (updated 2026-09-26):** the MLB A0/A1 pilot is implemented as tested code (`tools/mlb_model.py`, synthetic-data tests in `tools/test_mlb_model.py`), and its prospective shadow lane (stage S6, `C-MLB-SHADOW`) is open. **No empirical dataset is approved, no model is fitted, no calibrator is fitted, and no shadow forecast has been issued yet.** Every other scope remains Markdown-only. The user's 17 September request authorizes implementation of the audit findings; the subsequent clarification prioritizes implementation within Markdown. This satisfies the authorization question for this work. The previous statement that “implement all recommendations” could not authorize implementation is withdrawn. It is not a reason to request permission again.
 
 
 The executable reference algorithms, sport-specific equations, forecast/evaluation schemas and acceptance cases are in [MODEL_IMPLEMENTATION_RECIPES.md](MODEL_IMPLEMENTATION_RECIPES.md). They are implementations/specifications, not numerical champions. Seasonal MLB data were retrieved in an earlier retrospective, but that does not constitute a point-in-time H0 training dataset. [H0_DATASET_CARD.md](H0_DATASET_CARD.md) restores the missing root dependency and defines the remaining data requirements.
@@ -18,10 +18,10 @@ The executable reference algorithms, sport-specific equations, forecast/evaluati
 | S0 design | Exact target, algorithms and comparison plan | Markdown implementation provided; ten sport scopes registered |
 | S1 authorization and source admission | User-authorized scope; exact field/source/endpoint/cutoff admission | Authorization for audit implementation recorded. Actual historical feature admission NOT COMPLETED; a generic CANDIDATE label is insufficient |
 | S2 H0 | Systematic eligible-event universe and immutable point-in-time feature/label manifest | NOT BUILT; uniqueness, completeness, availability, joins, support and exclusions must pass |
-| S3 A0/A1 | Fit empirical and interpretable conditional baselines on identical chronological folds | NOT FIT; execute the supplied recipes only on admitted inputs; preserve failed comparisons |
+| S3 A0/A1 | Fit empirical and interpretable conditional baselines on identical chronological folds | NOT FIT. MLB: code exists (`tools/mlb_model.py`); `validate --season` runs the leak-free rolling-origin A0 v team-only A1 comparison where statsapi is reachable. Preserve failed comparisons |
 | S4 optional challengers | Sport-state A2, then A3/A4 where justified | DEFERRED until A0/A1 and data coverage support the extra complexity; not a compulsory step toward publication |
 | S5 held-out evaluation | Optional calibration on disjoint CAL, then untouched TEST opened once | NOT RUN; proper scores, coverage, calibration, support, critical slices and operational failure checks required |
-| S6 prospective shadow | Immutable, time-stamped forecasts from the frozen build, before outcomes | NOT STARTED; required before promotion/publication, not bypassed by S5 |
+| S6 prospective shadow | Immutable, time-stamped forecasts from the frozen build, before outcomes | MLB lane OPEN 2026-09-26 (`research/mlb_shadow/`; frozen after the card, before first pitch; append-only); 0 rows so far. Required before promotion/publication, not bypassed by S5 |
 | S7 optional decision models | A5 ranker/A7 pair selector on independent decision sets | DORMANT; neither is needed to query a coherent distribution |
 
 

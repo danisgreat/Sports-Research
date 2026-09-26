@@ -20,6 +20,50 @@ Numerical status: **NO TENNIS TARGET/SOURCE CARD, DATASET OR MODEL IS APPROVED O
 Sport and competition rules reference: **§10 (added 2026-09-04)** — the rules of tennis scoring and the tour-by-tour format differences (Grand Slam / US Open, ATP Tour + Challenger, WTA Tour, ITF World Tennis Tour, UTR Pro Tennis Tour), including the 2026 final-set tiebreak alignment, on-court coaching, and retirement/walkover settlement. Reference material for identity, state and settlement; it does not change `SFA-TENNIS`.
 
 
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-TENNIS and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every tennis card, then open each cited section the card relies on (and §10 for the event's format). Everything below §0 is the full reference and its history.
+
+**Tennis is `NO_DEMONSTRATED_SKILL`.** 16 decisions won 50.0% at a stated 0.601 (Brier 0.281, worse than a coin flip). The evidence grade is capped at LOW, the departure ledger is required, and the card stays near the Elo benchmark and the population rates unless serve/return numerators justify moving (2026-09-25(d)).
+
+### 0.1 Blocking preconditions (§9.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| TE-P1 format | Tour, event, round, surface (from the official calendar, not memory), best-of-3/5, final-set and tiebreak rules | Stop |
+| TE-P2 participants | Exact players from the official event source, re-handshaken at freeze | No directional analysis |
+| TE-P3 retirement terms | Operator retirement/walkover rules for every row | `UNKNOWN_DEFINITION`, `NO VALUE DETERMINABLE` (control 7) |
+| TE-P4 status | Withdrawal, medical, rest, travel and qualifying workload | Missingness code; never infer fitness from results |
+| **TE-P5 Elo benchmark (blocking)** | Dated Tennis Abstract Elo (overall and surface), snapshotted before the event, converted to the format's win probability and printed beside the card's winner mass | A gap above 10 percentage points needs a named current mechanism (control 13) |
+
+### 0.2 Building the match tree
+1. **Serve and return as numerators and denominators**, match by match, so every rate carries its n (TE-S2). **Matchup holds, not season holds:** each player's hold comes from their level- and surface-adjusted serve points won against *this opponent's* return points won (TE-S4). Level and opponent comparability is shown, not assumed (control 9).
+2. **Both players get the full branch set** (TE-B1–B6): straight-set control, close straight sets/tiebreaks, deciding-set win. An underdog's win mass is never attached only to long matches (§4).
+3. **Set-count mixture before within-set closeness** (TE-S7). Best-of-five holds three-, four- and five-set endpoints separately (TE-B7). A total without an explicit set-count mixture is capped at FORCED RANK (override 3).
+4. **Width.** A long layoff widens the tree (control 14). Workload carries both signs, so at least width (G-L2). The WTA raw total-games SD is 5.79 (men best of 3 6.00).
+5. **One tree → every row** (TE-S8). Write a representative Rank-1 scoreline and check it against every leading row (control 12, override 1). Tiebreak sets count 7+6 = 13 games; tiebreak points are not games (L-068).
+
+### 0.3 Row rules
+- **Totals (TE-R1).** Print P(deciding set) against the reference (WTA best of 3 0.340; men best of 3 0.358; women's qualifying 0.313 v main draw 0.352). WTA total games are bimodal: 18.2 in straight sets, 28.6 with a decider. Lines from 19.5 to 25.5 are mostly P(deciding set) rows, and the card says so. For best-of-three lines from 18.5 to 21.5, print P(decisive straight sets) and P(three sets) (§9.4).
+- **Games handicaps (TE-R2, C-HCP-COHERENCE).** Hard identity: P(A −k.5) ≤ P(A wins), or the card fails closed. Print P(A −k.5) = P(straight-set win)·c_s + P(deciding-set win)·c_d, with the population c_s/c_d beside them (WTA −5.5: 0.663/0.168). Above the reference without dated hold/break evidence is `HCP_CONDITIONAL_ABOVE_REFERENCE`. A games handicap is aggregate games, independent of the set winner (override 7).
+- **Cushions.** +k.5 games cushions won 1/4 at 0.58: `C-PLUS-CUSHION` applies with C-HCP-COHERENCE, and RM-1's cushion term covers them (q ≈ 0.30 at a stated 0.58). A cushion supported by close sets lengthens the same match, so an Under co-ranked with it is a coherence question (§9.5).
+- **Over + underdog games cushion as the top two** underperforms when the card's favourite mass sits below Elo (`C-TEN-FAV-SEPARATION`, TESTING).
+- **Low-tier games handicaps of 5.5+ at a normalised edge below 0.15** are `T-TEN-LOWTIER-HCP` (TESTING; no cap meanwhile).
+- **Rankings, seeding, streaks, cover counts and old H2H** are diagnostic only (overrides 4–5; controls 3, 8, 10).
+
+### 0.4 Ranking
+Rank by RM-1 q. There is no TB-1 lane: the anchors are the dated Elo benchmark (TE-P5) and the §7.4 population. A total-games Over at Rank 1 prints P(deciding set) against 0.340, because the Over is mostly a third-set bet.
+
+### 0.5 Settlement
+Raw ATP/WTA/ITF records for set and tiebreak scores (G-L13). ITF: the tournament "draws-and-results" page through `r.jina.ai` (T-1). Name the settling record and the retirement rule at issue (G-L14). Record medical time-outs, retirements and rain suspensions with the set and game score.
+
+### 0.6 Withdrawn in tennis — never apply
+The clay/Challenger handicap cap (L-20260924-F06); "winner implies games handicap" and "cushion implies underdog winner"; long-match-only coupling of underdog wins; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
+
+### 0.7 Control index (full text in §5 and the dated sections)
+1 surface is a regime · 2 current stability decomposed · 3 H2H needs continuity · 4 set count and total linked · 5 set cushions aren't free safety · 6 qualifying and workload · 7 retirement terms gate · 8 no ranking-only confidence · 9 level comparability demonstrated · 10 win-conditioned cover counts descriptive · 11 kill paths include opponent control · 12 scoreline coherence · 13 Elo benchmark beside the winner probability · 14 a long layoff widens the tree. Receipts and references: T-1 ITF route · T-2 surface from the calendar · TE-R1 totals reference · TE-R2 handicap coherence · TE-R3 qualifying v main draw.
+
+
 ## 1. Identity and contract
 
 

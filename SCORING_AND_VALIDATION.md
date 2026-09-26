@@ -241,3 +241,21 @@ Details are in `research/settled_rows_2026-09-25/README.md`.
 |---|---:|---:|
 | Grouped-CV log loss | 0.6112 | 0.6032 |
 | Forward log loss from P-450 | 0.6154 | 0.5861 |
+
+
+<!-- REVIEW-IMPLEMENTATION-2026-09-26 -->
+## 16. The measurement ladder and its reports (added 2026-09-26)
+
+Three yardsticks now sit beside every settled decision, from weakest to strongest. Each is scored as a paired Brier difference with a card-cluster bootstrap. Forced pairs count once, pushes are excluded, and **no difference below is a performance, value or ROI claim**.
+
+| Yardstick | Knows | Ledger / tool | Checkpoint |
+|---|---|---|---|
+| `BASELINE_P` (§13) | League outcome rates and home side, games before the event | `SKILL_BASELINE_LEDGER.md` · `tools/skill_baseline.py` | 100 prospective decisions / 30 cards |
+| `TEAM_BASELINE_P` (§15.5) | Season-to-date team scoring (covered leagues) | printed on the card; scored at settlement | as §15 |
+| Closing market (`C-MARKET-BENCHMARK`) | Everything public at the close | `MARKET_BENCHMARK_LEDGER.md` · `tools/market_benchmark.py` | 100 decisions / 30 cards |
+
+1. **Seed rows never count.** `tools/skill_baseline.py` reports the "Prospective rows" and "Seed rows" sections separately; only the prospective section counts toward §13's checkpoint (fixed 2026-09-26: the tool had pooled them).
+2. **The closing line is entered after settlement only**, as a no-vig probability with its de-vig method (`multiplicative`, `power` or `shin`). Rows entered before settlement are excluded. See `RULES_GENERAL.md` §"2026-09-26"(d).
+3. **Universe split.** Cards in a declared universe (`C-EVENT-UNIVERSE`) and `OUT_OF_UNIVERSE` cards are reported separately in every review; the universe group is the one that describes the competition.
+4. **MLB shadow model.** `tools/mlb_model.py score` reports A1 against A0 on frozen shadow rows (`C-MLB-SHADOW`). It is compared with the cards only at its 150-game review.
+5. **One table first.** Every 25-card review opens with `python tools/evidence_status.py`.

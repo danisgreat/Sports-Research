@@ -1,0 +1,127 @@
+{
+ "events": [
+  {
+   "id": "740001",
+   "date": "2026-09-27T13:00Z",
+   "status": {
+    "type": {
+     "state": "pre",
+     "name": "STATUS_SCHEDULED"
+    }
+   },
+   "competitions": [
+    {
+     "venue": {
+      "fullName": "Arsenal Ground"
+     },
+     "competitors": [
+      {
+       "homeAway": "home",
+       "team": {
+        "displayName": "Arsenal"
+       }
+      },
+      {
+       "homeAway": "away",
+       "team": {
+        "displayName": "Chelsea"
+       }
+      }
+     ],
+     "odds": [
+      {
+       "details": "QUARANTINED"
+      }
+     ]
+    }
+   ],
+   "pickcenter": [
+    {
+     "spread": -1.5
+    }
+   ]
+  },
+  {
+   "id": "740002",
+   "date": "2026-09-27T15:30Z",
+   "status": {
+    "type": {
+     "state": "pre",
+     "name": "STATUS_SCHEDULED"
+    }
+   },
+   "competitions": [
+    {
+     "venue": {
+      "fullName": "Everton Ground"
+     },
+     "competitors": [
+      {
+       "homeAway": "home",
+       "team": {
+        "displayName": "Everton"
+       }
+      },
+      {
+       "homeAway": "away",
+       "team": {
+        "displayName": "Fulham"
+       }
+      }
+     ],
+     "odds": [
+      {
+       "details": "QUARANTINED"
+      }
+     ]
+    }
+   ],
+   "pickcenter": [
+    {
+     "spread": -1.5
+    }
+   ]
+  },
+  {
+   "id": "740003",
+   "date": "2026-09-27T11:30Z",
+   "status": {
+    "type": {
+     "state": "post",
+     "name": "STATUS_FULL_TIME"
+    }
+   },
+   "competitions": [
+    {
+     "venue": {
+      "fullName": "Leeds United Ground"
+     },
+     "competitors": [
+      {
+       "homeAway": "home",
+       "team": {
+        "displayName": "Leeds United"
+       }
+      },
+      {
+       "homeAway": "away",
+       "team": {
+        "displayName": "Burnley"
+       }
+      }
+     ],
+     "odds": [
+      {
+       "details": "QUARANTINED"
+      }
+     ]
+    }
+   ],
+   "pickcenter": [
+    {
+     "spread": -1.5
+    }
+   ]
+  }
+ ]
+}
