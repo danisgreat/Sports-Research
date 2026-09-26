@@ -6,6 +6,21 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-26(d) — second validation pass; shadow lanes for tennis and cricket; the settlement record
+
+**Why.** The user asked to continue the implementation across the framework, for every sport, accurately and carefully.
+
+- **Validation, second pass** (`research/sport_models_2026-09-26/`, constants unchanged except cricket):
+  - **NBA 2023–26 and WNBA 2022–26:** A1 beat A0 and TB-1 on results and totals.
+  - **NHL 2023–26:** A1 beat A0 and TB-1 on results, and was worse on totals.
+  - **IPL cricket:** v1 was worse than a coin flip. v2 (elo_k 4, lam_team 200, re-selected on 2016–19; disclosed) is only level.
+
+  Sources: sportsdataverse (research-only pyarrow dependency) and an IPL dataset. The NHL shootout flag is missing in the source, so shootouts were read from the scoring file.
+- **Lanes.** Tennis and cricket now freeze and settle from the ESPN scoreboards (`tools/sport_data.py`). Tennis retirements void the games rows. Cricket's first innings is priced 50/50 on the toss, and scored only when it was full-length.
+- **Integrity.** Shadow commands are blind and print the row ID only (both tools). Settlements print `SHADOW: <row id>` / `NO_LANE` / `MISSED`; this is audit field `10s`, strict from `CONTROL_MANIFEST_2026-09-26.md`.
+- **Docs.** `RULES_GENERAL.md` §"2026-09-26" (k), (l), `CONTROLS.md`, `CURRENT_RULES.md`, the hockey, basketball, tennis and cricket §0 pages, `NUMERICAL_PROGRAM.md`, `NUMERICAL_MODEL_REGISTER.md`, the lane READMEs, `LEARNING_REGISTER.md` §"2026-09-26(d)" (L-20260926-19–25; `T-CRICKET-V2-UNSEEN`), `LEARNINGS_INDEX.md` and README are updated.
+- **Tests.** Offline end-to-end shadow → settle → score for team sports, tennis and cricket; ESPN tennis and cricket parsers; audit `10s`.
+
 ### 2026-09-26(c) — a numerical model for every sport
 
 **Why.** The user asked for the numerical model to cover every sport, not only MLB.

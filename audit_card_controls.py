@@ -53,8 +53,8 @@ Exit codes
     2  usage or file error
 
 BLOCKING fields (a missing one blocks issue under §16.8): 2, 3, 5a, 7; at settlement 10;
-with --strict also 7r, T13, WB, BP, DL, PC, HC, RM, TB, UV, 10p, 10l, 10z, 10n (each only where it applies;
-UV from CONTROL_MANIFEST_2026-09-26).
+with --strict also 7r, T13, WB, BP, DL, PC, HC, RM, TB, UV, 10p, 10l, 10z, 10n, 10s (each only where it applies;
+UV and 10s from CONTROL_MANIFEST_2026-09-26).
 Everything else is recorded as a process defect on that card without blocking.
 
 Card segmentation (repaired 2026-09-25; 2026-09-23(c) proposal)
@@ -428,6 +428,14 @@ SETTLEMENT_FIELDS = [
                "a written, not read, process record (C-SETTLEMENT-FROM-FEED, 2026-09-25(e); P-510)", False,
         [], origin="P-510 (nine 2024-era names in a 2026 diff)", strict_blocking=True,
         applies=_team_sport_settled, check=_lineup_diff_names_on_card,
+    ),
+    Field(
+        "10s", "shadow-model record at settlement: SHADOW: <row id> (tools/mlb_model.py or tools/sport_models.py), "
+               "or SHADOW: NO_LANE <reason> / SHADOW: MISSED <reason> (C-MLB-SHADOW, C-SPORT-SHADOW; "
+               "RULES_GENERAL 2026-09-26 (k))", False,
+        [r"SHADOW:\s*\S"],
+        origin="2026-09-26(d): a lane nobody records is M15 (control listed, not executed)", strict_blocking=True,
+        applies=lambda card: card.is_settled and _manifest_from_2026_09_26(card),
     ),
 ]
 

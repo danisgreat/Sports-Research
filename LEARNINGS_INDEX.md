@@ -427,6 +427,13 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260926-16 | Dixon–Coles adds nothing | CLOSED |
 | L-20260926-17 | Seven competitions could not be validated from the cloud | OPEN (run `validate` locally) |
 | L-20260926-18 | Check a model's probability spread before scoring it | PROCESS NOTE |
+| L-20260926-19 | Basketball model replicated (NBA 2023–26, WNBA) | REPLICATED |
+| L-20260926-20 | Hockey model: sides yes, totals worse | OBSERVATION |
+| L-20260926-21 | Cricket model: no skill (v2 only level) | FIXED to parity; `T-CRICKET-V2-UNSEEN` |
+| L-20260926-22 | Shadow output was visible to the card builder | FIXED (blind output) |
+| L-20260926-23 | Unrecorded lanes produce no evidence | PROMOTED (audit `10s`) |
+| L-20260926-24 | Tennis concurrent-tournament ordering | DISCLOSED |
+| L-20260926-25 | NHL shootout flag missing in source | FIXED in loader |
 
 ---
 
@@ -437,6 +444,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 - **2026-09-24(f) verification audit:** L-20260924-F01–F14.
 - **2026-09-26 review:** L-20260926-01–11.
 - **2026-09-26(c) models for every sport:** L-20260926-12–18.
+- **2026-09-26(d) second pass and lanes:** L-20260926-19–25.
 
 ---
 
@@ -449,7 +457,7 @@ MLB run-line and push caps and fixed variance floors · order-statistic pseudo-t
 ## 8. Open tests (no ranking effect until each concludes)
 
 `python tools/evidence_status.py` prints the headline gates. The full list is `CURRENT_RULES.md` §D9:
-- **Headline gates:** `C-BASELINE-SKILL` (0/100), `T-RM1-PROSPECTIVE` (0/25 cards, amended 2026-09-26), `C-MARKET-BENCHMARK` (0/100), `C-MLB-SHADOW` (0/150 games), `C-SPORT-SHADOW` (0/150 rows per league), `T-MLB-V2-2025` (needs statsapi), `T-UNIVERSE-VS-SELECTED` (0/30 + 30 cards).
+- **Headline gates:** `C-BASELINE-SKILL` (0/100), `T-RM1-PROSPECTIVE` (0/25 cards, amended 2026-09-26), `C-MARKET-BENCHMARK` (0/100), `C-MLB-SHADOW` (0/150 games), `C-SPORT-SHADOW` (0/150 rows per league), `T-MLB-V2-2025` (needs statsapi), `T-CRICKET-V2-UNSEEN` (needs cricsheet), `T-UNIVERSE-VS-SELECTED` (0/30 + 30 cards).
 - **Calibration and width:** `C-WIDTH-Z`, `C-PROB-EXTREMITY` (79/100, not supported so far), `C-LOW-RESOLUTION-BAND`, `T-PLUS-CUSHION`, `T-TB1-ANCHOR`.
 - **Direction and centre (accrue, no tilt):** `C-RUN-CENTRE-BIAS`, `T-TOTAL-DIRECTION-LEAGUE`, `C-PHASE-VS-FULL-TOTAL`, `O-NPB-ERA-CENTRE`.
 - **Sport-specific:** `T-TEN-LOWTIER-HCP`, `C-TEN-FAV-SEPARATION`, `T-TEN-BENCHMARK-GAP`, `T-BKB-SEASON-OPENER-WIDTH` (6/15), `T-NHL-PRESEASON-GOALIE` (1/10), `T-MLB-WIND-IN-OVER` (2/10), `T-CRI-DOMINANT-HITTER` (2/10), `T-CRI-POST-TOSS-FREEZE`, `T-NRL-BYE-RUST`.

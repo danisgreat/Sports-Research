@@ -214,5 +214,105 @@
  "https://raw.githubusercontent.com/openfootball/football.json/master/2025-26/it.1.json": {
   "bytes": 105202,
   "sha256": "28f7773dea86345aeb0cbb4aff2f90231033f7ed855219e70fdd1cf45d4d7e7f"
+ },
+ "https://raw.githubusercontent.com/ritesh-ojha/IPL-DATASET/main/csv/Ball_By_Ball_Match_Data.csv": {
+  "bytes": 25120505,
+  "sha256": "59ba63f5531f2c98b6156cc08300122a2ee0bfc20a99f44e1f54422e6adc9e15"
+ },
+ "https://raw.githubusercontent.com/ritesh-ojha/IPL-DATASET/main/csv/Match_Info.csv": {
+  "bytes": 524038,
+  "sha256": "5cccca6631ac648f9a235432f47e358b769c6677858b98009a4e745e4e7291f2"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/game_info/parquet/game_info_2022.parquet": {
+  "bytes": 13888,
+  "sha256": "0fb8889defdb2c2130fc452a9ba062ede3ba702bf1fa3ceed8579b0baa1872b4"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/game_info/parquet/game_info_2023.parquet": {
+  "bytes": 13660,
+  "sha256": "86375dc8c1725e706ddf63c313edfa49de63bb32e8e2fd374e81556b732cc48a"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/game_info/parquet/game_info_2024.parquet": {
+  "bytes": 13678,
+  "sha256": "1e7a1c8f29df0d04d61240b6a7cf760aa467b8958564406aa776a50d13ae4739"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/game_info/parquet/game_info_2025.parquet": {
+  "bytes": 13638,
+  "sha256": "76cf49071462324ff8ce072253735b0c5c27e39b70dfd37cc3cff129378404f2"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/game_info/parquet/game_info_2026.parquet": {
+  "bytes": 13579,
+  "sha256": "41c573bf4d6d0d02b6b88e057d10e930ace20c390cc5fe274b7cf25f6a292e42"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/scoring/parquet/scoring_2022.parquet": {
+  "bytes": 511678,
+  "sha256": "7465e1c50d05d6d8d41d7b13c2f2e534fb1aef844bbda176c1c9ff735cef6ae3"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/scoring/parquet/scoring_2023.parquet": {
+  "bytes": 516702,
+  "sha256": "136ea4b24b0120d210133ec5c3c35d7515c315cac1e7c25055065129d4a793ca"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/scoring/parquet/scoring_2024.parquet": {
+  "bytes": 746137,
+  "sha256": "5142c200ec536c8dca783f56aa87987a74bb8c1da50553c75113fe23b9286f1d"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/scoring/parquet/scoring_2025.parquet": {
+  "bytes": 843328,
+  "sha256": "10c4309f6d5380298a4dd0ddba36c45606e271753986c763a3f4923e163aa0d8"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/fastRhockey-nhl-data/main/nhl/scoring/parquet/scoring_2026.parquet": {
+  "bytes": 889658,
+  "sha256": "05002f30b8bb53defa04dea52a4cb5fc7a12d257aad08c9cd90bd10e837769d1"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-data/main/nba/schedules/parquet/nba_schedule_2021.parquet": {
+  "bytes": 130148,
+  "sha256": "0c2eab5b22cc956646ac0351ddf6110d9527e46f4ee4d9200bf2945051688392"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-data/main/nba/schedules/parquet/nba_schedule_2022.parquet": {
+  "bytes": 140437,
+  "sha256": "e3a764147f108c6fb3883eaa5617234ab41aa95e668dd7eb9506616c8a953d2f"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-data/main/nba/schedules/parquet/nba_schedule_2023.parquet": {
+  "bytes": 138092,
+  "sha256": "9532db81a254b2ea9982111fbea970bb61ea34b6aa3fc4607b2cad17ba55c60b"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-data/main/nba/schedules/parquet/nba_schedule_2024.parquet": {
+  "bytes": 143706,
+  "sha256": "2069783562b531b91ee9ad6a85358761ad6a611ce3291a60ed124bb978969b63"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-data/main/nba/schedules/parquet/nba_schedule_2025.parquet": {
+  "bytes": 151821,
+  "sha256": "239829fdcf99629ee682bca4d6d0a6709b3c095be39c39f425664754ae1a979e"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/hoopR-nba-data/main/nba/schedules/parquet/nba_schedule_2026.parquet": {
+  "bytes": 525802,
+  "sha256": "b3884aa4aa276d1fcafc71b69394675904a968902068bff634932e5d7afacae4"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/wehoop-wnba-data/main/wnba/schedules/parquet/wnba_schedule_2020.parquet": {
+  "bytes": 48930,
+  "sha256": "b48472b819ffb308b6fd6ad3232ffb5ab7dc69567284ee67c9896d8ee8a34a52"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/wehoop-wnba-data/main/wnba/schedules/parquet/wnba_schedule_2021.parquet": {
+  "bytes": 55612,
+  "sha256": "e252b0fb9ec09a3636e02d8a2557387ae88192cf4186a9799d45d36dc88c5491"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/wehoop-wnba-data/main/wnba/schedules/parquet/wnba_schedule_2022.parquet": {
+  "bytes": 58018,
+  "sha256": "75d80f3863249f52d78a6a17cd64db0a41220c95123713f79e2be26ce8a23b5f"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/wehoop-wnba-data/main/wnba/schedules/parquet/wnba_schedule_2023.parquet": {
+  "bytes": 85069,
+  "sha256": "733e13fd1241d35e804c310b5275178fb9104b2cd1e5aa13ad8443733696b056"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/wehoop-wnba-data/main/wnba/schedules/parquet/wnba_schedule_2024.parquet": {
+  "bytes": 84577,
+  "sha256": "5d20832586db38d0b5f6ebb18f1a3c7a5b639c83f52bfd049a6838eab01df1ae"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/wehoop-wnba-data/main/wnba/schedules/parquet/wnba_schedule_2025.parquet": {
+  "bytes": 98609,
+  "sha256": "109d4b7d41cdfd39889e517483e3e847579352ffb3671783f56569d40097f7ce"
+ },
+ "https://raw.githubusercontent.com/sportsdataverse/wehoop-wnba-data/main/wnba/schedules/parquet/wnba_schedule_2026.parquet": {
+  "bytes": 161723,
+  "sha256": "57debd9530f6533bd72ef9b146aeb554d6300512f5b3864441b70e4f8aa512b2"
  }
 }

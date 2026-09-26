@@ -3234,10 +3234,24 @@ The user asked for the numerical model to cover every sport, not only MLB.
    - cricket: Elo, plus a ridge first-innings model.
 
    Adapters are in `tools/sport_data.py`: ESPN, CSV, TML-Database and cricsheet. Nothing reads odds or lines as inputs.
-2. **Order of operations.** This is the same as `C-MLB-SHADOW`. Freeze the card first. Then, before the start, run `python tools/sport_models.py shadow --league <key> --event <ESPN id> --date <date> --card P-### --total … --line …`. At settlement, run `settle` (read from the ESPN feed) and `score`. The output is **never shown on, cited by or used to revise a card.** Tennis and cricket are `predict`/`validate` only until a settlement feed is admitted.
+2. **Order of operations.** This is the same as `C-MLB-SHADOW`. Freeze the card first. Then, before the start, run `python tools/sport_models.py shadow --league <key> --event <ESPN id> --date <date> --card P-### --total … --line …`. Tennis adds `--surface` and `--best-of`, and takes the ESPN competition ID. Cricket adds `--espn-path cricket/<league id> --cricsheet <history>`; its first-innings line is priced before the toss, 50/50 on who bats first. The command is **blind**: it prints the row ID only, and the probabilities are read at review, never while building cards. At settlement, run `settle` (from the same ESPN feed, never typed) and `score`. The output is **never shown on, cited by or used to revise a card.**
 3. **Validation (`research/sport_models_2026-09-26/README.md`).** Rolling origin on the public results that could be reached, with priors committed before the first run:
-   - **Soccer (five leagues), NFL, AFL and NBA:** A1 beat A0 on results and margins in every league. It beat TB-1 on results in the EPL, AFL and NBA; in the NFL it was ahead but the interval crossed 0.
-   - **Totals:** A1 gained only in the NBA, La Liga and the Bundesliga at the line. It was no better elsewhere, and TB-1 was slightly better at the AFL total line.
-   - **MLB and tennis:** each needed one re-selected parameter (v2, disclosed as not independent).
-   - **Not validated:** NHL, WNBA, NBL, NRL, rugby union, cricket and the Asian baseball leagues.
+   - **Soccer (five leagues), NFL, AFL, NBA, WNBA and NHL** (the last three in the second pass, 2026-09-26(d)): A1 beat A0 on results and margins in every league. It beat TB-1 on results in the EPL, AFL, NBA, WNBA and NHL; in the NFL it was ahead but the interval crossed 0.
+   - **Totals:** A1 gained in basketball (NBA and WNBA, also over TB-1), La Liga, the Bundesliga at the line, and MLB after v2. It was level elsewhere. It was **worse in the NHL** (total RPS +0.008) and slightly worse than TB-1 at the AFL and NHL total lines.
+   - **MLB, tennis and cricket:** each failed at v1 and was re-selected on an earlier TUNE window (v2, disclosed as not independent). IPL cricket v2 is only level with a coin flip on results and with the format mean on totals.
+   - **Not validated:** NBL, NRL, rugby union, the Asian baseball leagues and cricket outside the IPL.
 4. **Review at 150 settled rows per league** (a review point, not proof). The rule is the same as (e): A1 − A0 below 0 with its interval below 0, A1 better than the cards' p on shared rows, and an explicit user instruction. Replacing TB-1 as the printed team baseline in a league where A1 beat it is a `MODEL_CHANGE` under `C-RULE-FREEZE`. It is a user decision, not an agent one.
+
+### (l) Shadow lanes for every sport, and the settlement record (2026-09-26(d); measurement)
+
+1. **Tennis and cricket lanes.** These are no longer `predict`-only. `sport_models.py shadow` reads the ESPN tennis scoreboard (competition ID, pregame state and start) and the ESPN cricket scoreboard. `settle` reads the same feed.
+   - **Tennis:** a retirement settles the winner row only, and the games rows are void. A walkover voids every row.
+   - **Cricket:** the first-innings total is scored only when the innings was full-length (all out, or its overs complete) and no DLS text appears. Otherwise the row is `FIRST_INNINGS_UNSCORED`.
+2. **Blind output.** `sport_models.py shadow` and `mlb_model.py shadow` now print only the row ID. The probabilities go to the CSV and are read only at review. The operator building the next card does not see them.
+3. **Settlement record, audit field `10s`** (strict-blocking for cards frozen under `CONTROL_MANIFEST_2026-09-26.md` or later). Every settlement prints one of:
+   - `SHADOW: <row id>` (the lane's row);
+   - `SHADOW: NO_LANE <reason>` (for example, a league with no ESPN path);
+   - `SHADOW: MISSED <reason>`.
+
+   A lane that is not recorded is M15, "control listed, not executed".
+4. **Second-pass validation** (see (k) point 3 and `research/sport_models_2026-09-26/README.md`) used public results for NHL, NBA 2023–26, WNBA and IPL cricket. No constant changed for NHL or basketball. Cricket's two constants were re-selected (v2) after v1 lost to a coin flip.

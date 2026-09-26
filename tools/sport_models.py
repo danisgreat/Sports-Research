@@ -28,8 +28,9 @@ contract lines are only the thresholds that the frozen distribution is queried a
                                                 the first-innings total; A0 = 0.5 and the format's totals
 
 Status. DECLARED PRIORS, NOT PROMOTED. Every constant below was declared before any validation run
-(commit ac6fdc5), except two that v1 got wrong and were re-selected on an earlier TUNE window:
-baseball team_prior_games (20 -> 120) and tennis gap_sd (0 -> 0.09). research/sport_models_2026-09-26/
+(commit ac6fdc5), except four that v1 got wrong and were re-selected on an earlier TUNE window:
+baseball team_prior_games (20 -> 120), tennis gap_sd (0 -> 0.09), and cricket elo_k (24 -> 4) and
+lam_team (6 -> 200). research/sport_models_2026-09-26/
 holds the rolling-origin comparisons on the public results data that could be reached, v1 and v2,
 recorded whichever way they went. Outputs are LEARNING_ONLY and never a card input (C-SPORT-SHADOW).
 A card may not cite a model probability.
@@ -68,7 +69,7 @@ REPO = HERE.parent
 sys.path.insert(0, str(HERE))
 import mlb_model as mm  # noqa: E402  (shared-gamma joint, baseball ratings)
 
-MODEL_VERSION = "SPORT-A1-shadow/2026-09-26b"   # b: baseball team_prior_games 120, tennis gap_sd 0.09 (see research/sport_models_2026-09-26)
+MODEL_VERSION = "SPORT-A1-shadow/2026-09-26d"   # b: baseball team_prior_games 120, tennis gap_sd 0.09; d: cricket elo_k 4, lam_team 200 (research/sport_models_2026-09-26)
 SHADOW_DIR = REPO / "research" / "sport_shadow"
 
 # --------------------------------------------------------------------------- declared constants
@@ -91,7 +92,8 @@ FAMILY_DEFAULTS = {
                "gap_sd": 0.09,   # v2 (2026-09-26b): v1 = 0 (i.i.d. points) over-predicted games and three-setters
                "serve_prior": {"Hard": 0.64, "Clay": 0.62, "Grass": 0.67, "Carpet": 0.65},
                "serve_window_days": 730, "min_matches": 5, "games_window_days": 730},
-    "cricket": {"elo_k": 24.0, "elo_init": 1500.0, "lam_team": 6.0, "lam_venue": 10.0, "half_life": 365,
+    "cricket": {"elo_k": 4.0, "elo_init": 1500.0, "lam_team": 200.0, "lam_venue": 10.0, "half_life": 365,
+                # v2 (2026-09-26d): v1 elo_k 24 / lam_team 6 lost to a coin flip and the format mean on IPL
                 "window": 1095, "resid_keep": 300, "sd_prior_n": 20.0, "min_innings": 30},
 }
 
@@ -1382,28 +1384,81 @@ def validate_tennis(cfg: dict, matches: list[dict], start: str, end: str, levels
     return res
 
 
+def validate_cricket(cfg: dict, matches: list[dict], start: str, end: str, boot: int = 2000) -> dict:
+    """Rolling origin in date order: each match is forecast from matches on earlier dates (Elo also sees
+    earlier same-day matches, which finished first), then the model updates. Scores: the result against
+    team1 (ties and no-results excluded; A0 = 0.5), and for full-length first innings the total's RPS and
+    Brier at a line fixed from pre-start history. Bootstrap blocks are ISO weeks."""
+    model = CricketModel(cfg)
+    ordered = sorted(matches, key=lambda m: m["date"])
+    pre = [m["first_innings_runs"] for m in ordered if m["date"] < start and m.get("first_innings_valid")]
+    line = math.floor(sum(pre[-400:]) / len(pre[-400:])) + 0.5 if pre else None
+    rows = []
+    for m in ordered:
+        pred = None
+        fc = None
+        if m.get("first_innings_valid"):
+            fc = model.forecast(m["bat_first"], m["bowl_first"], m.get("venue", ""), m["date"])
+            if fc is not None:
+                pred = fc[1].meta["mu"]
+        if start <= m["date"] <= end:
+            r = {"block": iso_week(m["date"]), "date": m["date"], "a0": {}, "a1": {}}
+            if m.get("winner") in (m["team1"], m["team2"]):
+                p1 = model.p_win(m["team1"], m["team2"])
+                y = 1.0 if m["winner"] == m["team1"] else 0.0
+                r["a0"].update({"win_brier": 0.25, "win_logloss": math.log(2)})
+                r["a1"].update({"win_brier": (p1 - y) ** 2, "win_logloss": -math.log(max(p1 if y else 1 - p1, 1e-12))})
+            if fc is not None:
+                x = m["first_innings_runs"]
+                r["a0"]["total_rps"], r["a1"]["total_rps"] = rps(fc[0].total, x), rps(fc[1].total, x)
+                if line is not None:
+                    r["a0"]["total_brier_line"] = (p_gt(fc[0].total, line) - (1.0 if x > line else 0.0)) ** 2
+                    r["a1"]["total_brier_line"] = (p_gt(fc[1].total, line) - (1.0 if x > line else 0.0)) ** 2
+            if r["a1"]:
+                rows.append(r)
+        model.update(m, pred)
+    res = summarise_pairs(rows, ["win_brier", "win_logloss", "total_rps", "total_brier_line"], boot=boot)
+    res.update({"league": cfg["league"], "from": start, "to": end, "total_line": line,
+                "model_version": MODEL_VERSION, "params_sha": params_sha(cfg)})
+    return res
+
+
 # --------------------------------------------------------------------------- shadow lane
 
-LOG_FIELDS = ["row_id", "frozen_at_utc", "card", "league", "event_id", "event_date", "start_utc", "home", "away",
-              "neutral", "model_version", "params_sha", "n_prior_games", "line_total", "line_home",
-              "a1_mu_home", "a1_mu_away",
+LOG_FIELDS = ["row_id", "frozen_at_utc", "card", "league", "espn_path", "event_id", "event_date", "start_utc",
+              "home", "away", "neutral", "surface", "best_of", "flags", "model_version", "params_sha", "n_prior_games",
+              "line_total", "line_home", "a1_mu_home", "a1_mu_away",
               "a1_p_home_win", "a1_p_draw", "a1_p_away_win", "a1_p_over", "a1_p_push", "a1_p_home_cover", "a1_p_line_push",
               "a0_p_home_win", "a0_p_draw", "a0_p_away_win", "a0_p_over", "a0_p_push", "a0_p_home_cover", "a0_p_line_push"]
-RESULT_FIELDS = ["row_id", "event_id", "home_score", "away_score", "finish", "settled_at_utc", "source"]
+# winner_side: home | away | draw | void. total_value: the quantity the total line refers to (goals, points or
+# runs; games in tennis; first-innings runs in cricket). margin_value: home − away in the handicap's unit.
+RESULT_FIELDS = ["row_id", "event_id", "winner_side", "total_value", "margin_value", "home_score", "away_score",
+                 "finish", "settled_at_utc", "source"]
+PROB_KEYS = ("p_home_win", "p_draw", "p_away_win", "p_over", "p_push", "p_home_cover", "p_line_push")
+
+
+def row_id(league: str, event_id, total, line) -> str:
+    return f"{league}:{event_id}:{total}:{line}"
 
 
 def shadow_row(cfg: dict, event: dict, fc0: Forecast, fc1: Forecast, n_prior: int, card: str,
-               total: float | None, line: float | None, now: dt.datetime) -> dict:
-    row = {"row_id": f"{cfg['league']}:{event['id']}:{total}:{line}", "frozen_at_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
-           "card": card, "league": cfg["league"], "event_id": event["id"], "event_date": event["date"][:10],
-           "start_utc": event.get("start_utc", ""), "home": event["home"], "away": event["away"],
-           "neutral": int(bool(event.get("neutral"))), "model_version": MODEL_VERSION, "params_sha": params_sha(cfg),
+               total: float | None, line: float | None, now: dt.datetime, extra: dict | None = None,
+               probs0: dict | None = None, probs1: dict | None = None) -> dict:
+    """One append-only shadow row. probs0/probs1 override the Forecast queries (tennis winner, cricket)."""
+    row = {"row_id": row_id(cfg["league"], event["id"], total, line), "frozen_at_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "card": card, "league": cfg["league"], "espn_path": event.get("espn_path", cfg.get("espn") or ""),
+           "event_id": event["id"], "event_date": event["date"][:10], "start_utc": event.get("start_utc", ""),
+           "home": event["home"], "away": event["away"], "neutral": int(bool(event.get("neutral"))),
+           "surface": "", "best_of": "", "flags": "", "model_version": MODEL_VERSION, "params_sha": params_sha(cfg),
            "n_prior_games": n_prior, "line_total": "" if total is None else total, "line_home": "" if line is None else line,
-           "a1_mu_home": f"{fc1.meta.get('mu_home', float('nan')):.4f}", "a1_mu_away": f"{fc1.meta.get('mu_away', float('nan')):.4f}"}
-    for pre, fc in (("a1_", fc1), ("a0_", fc0)):
-        q = fc.probs(total=total, line=line)
-        for k in ("p_home_win", "p_draw", "p_away_win", "p_over", "p_push", "p_home_cover", "p_line_push"):
-            row[pre + k] = f"{q[k]:.4f}" if k in q else ""
+           "a1_mu_home": f"{fc1.meta['mu_home']:.4f}" if fc1 is not None and "mu_home" in fc1.meta else "",
+           "a1_mu_away": f"{fc1.meta['mu_away']:.4f}" if fc1 is not None and "mu_away" in fc1.meta else ""}
+    row.update(extra or {})
+    for pre, fc, override in (("a1_", fc1, probs1), ("a0_", fc0, probs0)):
+        q = fc.probs(total=total, line=line) if fc is not None else {}
+        q.update(override or {})
+        for k in PROB_KEYS:
+            row[pre + k] = f"{q[k]:.4f}" if q.get(k) is not None else ""
     return row
 
 
@@ -1411,28 +1466,42 @@ def append_row(path: Path, fields: list[str], row: dict) -> None:
     mm.append_row(path, fields, row)
 
 
+def result_row(r: dict, winner_side: str, total_value, margin_value, hs, as_, finish: str, source: str,
+               now: dt.datetime) -> dict:
+    return {"row_id": r["row_id"], "event_id": r["event_id"], "winner_side": winner_side,
+            "total_value": "" if total_value is None else total_value, "margin_value": "" if margin_value is None else margin_value,
+            "home_score": "" if hs is None else hs, "away_score": "" if as_ is None else as_, "finish": finish,
+            "settled_at_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "source": source}
+
+
 def score_shadow(log: Path, results: Path) -> dict:
+    """Per league: A1 and A0 Brier on the home-win event, the total line and the handicap line. Pushes are
+    removed (decisive probability p/(1 − push)); void results and blank values are skipped."""
     res = {r["row_id"]: r for r in mm.read_rows(results)}
     acc = defaultdict(lambda: defaultdict(lambda: {"a0": 0.0, "a1": 0.0, "n": 0}))
     for r in mm.read_rows(log):
         f = res.get(r["row_id"])
-        if not f:
+        if not f or f["winner_side"] == "void":
             continue
-        h, a = int(float(f["home_score"])), int(float(f["away_score"]))
-        lg = r["league"]
-        targets = {"home_win": (1.0 if h > a else 0.0, "p_home_win", None)}
-        if r["line_total"] != "" and (h + a) != float(r["line_total"]):
-            targets["total_over"] = (1.0 if h + a > float(r["line_total"]) else 0.0, "p_over", "p_push")
-        if r["line_home"] != "" and (h - a + float(r["line_home"])) != 0:
-            targets["home_cover"] = (1.0 if h - a + float(r["line_home"]) > 0 else 0.0, "p_home_cover", "p_line_push")
+        targets = {}
+        if r["a1_p_home_win"] and r["a0_p_home_win"]:
+            targets["home_win"] = (1.0 if f["winner_side"] == "home" else 0.0, "p_home_win", None)
+        if r["line_total"] != "" and f["total_value"] != "" and r["a1_p_over"] and r["a0_p_over"]:
+            tv, L = float(f["total_value"]), float(r["line_total"])
+            if tv != L:
+                targets["total_over"] = (1.0 if tv > L else 0.0, "p_over", "p_push")
+        if r["line_home"] != "" and f["margin_value"] != "" and r["a1_p_home_cover"] and r["a0_p_home_cover"]:
+            mv = float(f["margin_value"]) + float(r["line_home"])
+            if mv != 0:
+                targets["home_cover"] = (1.0 if mv > 0 else 0.0, "p_home_cover", "p_line_push")
         for name, (y, key, push) in targets.items():
             for m in ("a0", "a1"):
-                p = float(r[f"{m}_{key}"])
+                pr = float(r[f"{m}_{key}"])
                 if push:
                     pu = float(r[f"{m}_{push}"] or 0)
-                    p = p / (1 - pu) if pu < 1 else 0.5
-                acc[lg][name][m] += (p - y) ** 2
-            acc[lg][name]["n"] += 1
+                    pr = pr / (1 - pu) if pu < 1 else 0.5
+                acc[r["league"]][name][m] += (pr - y) ** 2
+            acc[r["league"]][name]["n"] += 1
     return {lg: {k: {"n": v["n"], "a1_brier": v["a1"] / v["n"], "a0_brier": v["a0"] / v["n"],
                      "a1_minus_a0": (v["a1"] - v["a0"]) / v["n"]} for k, v in d.items() if v["n"]}
             for lg, d in acc.items()}
@@ -1517,33 +1586,103 @@ def cmd_predict(args) -> int:
     return 0
 
 
+def _refuse_started(ev: dict, now: dt.datetime, label) -> None:
+    if ev["state"] != "pre" or not ev.get("start_utc") or now >= mm.parse_iso(ev["start_utc"]):
+        raise SystemExit(f"STARTED_OR_NOT_PREGAME — no shadow row for {label} (state {ev['state']!r})")
+
+
+def _refuse_duplicate(log: Path, rid: str) -> None:
+    if any(r["row_id"] == rid for r in mm.read_rows(log)):
+        raise SystemExit(f"error: {rid} is already frozen in {log}; rows are never replaced")
+
+
 def cmd_shadow(args) -> int:
+    """Freeze A0/A1 for one event after its card is frozen and before the start. Blind by design: it prints
+    the row ID only; the probabilities go to the CSV and are read at review, never while building cards."""
     import sport_data as sd
     cfg = config(args.league)
-    if cfg["family"] not in FAMILY_MODELS:
-        raise SystemExit("error: the shadow lane covers the team sports; tennis and cricket are predict/validate only "
-                         "until a settlement feed is admitted")
     now = dt.datetime.now(dt.timezone.utc)
-    path = args.espn_path or cfg.get("espn")
-    if not path:
-        raise SystemExit(f"error: {cfg['league']} has no ESPN path; pass --espn-path")
-    ev = sd.espn_event(path, args.event, args.date)
-    if ev["state"] != "pre" or now >= mm.parse_iso(ev["start_utc"]):
-        raise SystemExit(f"STARTED_OR_NOT_PREGAME — no shadow row for {args.event} (state {ev['state']})")
     log = Path(args.log)
-    row_id = f"{cfg['league']}:{ev['id']}:{args.total}:{args.line}"
-    if any(r["row_id"] == row_id for r in mm.read_rows(log)):
-        raise SystemExit(f"error: {row_id} is already frozen in {log}; rows are never replaced")
-    games = load_games(cfg, args, ev["date"][:10])
-    eng = TeamEngine(cfg, [g for g in games if g["date"][:10] < ev["date"][:10]])
-    f0, f1 = eng.predict(ev["home"], ev["away"], ev["date"][:10], ev.get("neutral", False))
-    row = shadow_row(cfg, ev, f0, f1, eng.model.n, args.card, args.total, args.line, now)
+    fam = cfg["family"]
+    if fam == "tennis":
+        ev = sd.espn_tennis_match(cfg["league"], args.event, args.date)
+        _refuse_started(ev, now, args.event)
+        rid = row_id(cfg["league"], ev["id"], args.total, args.line)
+        _refuse_duplicate(log, rid)
+        best_of = int(args.best_of or ev.get("best_of") or 3)
+        matches = sd.load_tennis(cfg["league"], ev["date"], tml_dir=args.tml_dir, csv_path=args.csv)
+        elo = TennisElo(cfg)
+        for m in sorted(matches, key=tennis_order):
+            if m["date"] < ev["date"]:
+                elo.update(m)
+        flags = []
+        names = []
+        for who in (ev["a"], ev["b"]):
+            try:
+                names.append(sd.match_name(who, elo.n))
+            except SystemExit:
+                names.append(who)
+                flags.append(f"UNRATED:{who}")
+        p0, g0, p1, f1 = elo.forecast(names[0], names[1], args.surface, best_of, ev["date"])
+        q0 = {"p_home_win": p0, "p_draw": 0.0, "p_away_win": 1 - p0}
+        q1 = {"p_home_win": p1, "p_draw": 0.0, "p_away_win": 1 - p1}
+        if g0 is not None and args.total is not None:
+            gq = g0.probs(total=args.total)
+            q0.update({"p_over": gq["p_over"], "p_push": gq["p_push"]})
+        f1.meta.pop("mu_home", None)
+        event = {"id": ev["id"], "date": ev["date"], "start_utc": ev["start_utc"], "home": ev["a"], "away": ev["b"],
+                 "neutral": True, "espn_path": f"tennis/{cfg['league']}"}
+        row = shadow_row(cfg, event, None, f1, sum(elo.n.values()) // 2, args.card, args.total, args.line, now,
+                         extra={"surface": args.surface, "best_of": best_of, "flags": ";".join(flags)},
+                         probs0=q0, probs1={**f1.probs(total=args.total, line=args.line), **q1})
+    elif fam == "cricket":
+        path = args.espn_path
+        if not path or not args.cricsheet:
+            raise SystemExit("error: cricket needs --espn-path cricket/<league id> and --cricsheet <dir or zip> for history")
+        ev = sd.espn_cricket_match(path, args.event, args.date, cfg["overs"])
+        _refuse_started(ev, now, args.event)
+        rid = row_id(cfg["league"], ev["id"], args.total, None)
+        _refuse_duplicate(log, rid)
+        model = CricketModel(cfg)
+        for m in sorted(sd.load_cricsheet(args.cricsheet, cfg["overs"]), key=lambda x: x["date"]):
+            if m["date"] < ev["date"]:
+                model.update(m)
+        teams = set(model.elo)
+        a, b = sd.match_name(ev["a"], teams), sd.match_name(ev["b"], teams)
+        p1 = model.p_win(a, b)
+        q0 = {"p_home_win": 0.5, "p_draw": None, "p_away_win": 0.5}
+        q1 = {"p_home_win": p1, "p_draw": None, "p_away_win": 1 - p1}
+        if args.total is not None:   # first-innings runs, before the toss: either side may bat first (declared 50/50)
+            fa, fb = model.forecast(a, b, args.venue or "", ev["date"]), model.forecast(b, a, args.venue or "", ev["date"])
+            if fa and fb:
+                for q, i in ((q0, 0), (q1, 1)):
+                    q["p_over"] = 0.5 * p_gt(fa[i].total, args.total) + 0.5 * p_gt(fb[i].total, args.total)
+                    q["p_push"] = 0.5 * p_eq(fa[i].total, args.total) + 0.5 * p_eq(fb[i].total, args.total)
+        event = {"id": ev["id"], "date": ev["date"], "start_utc": ev["start_utc"], "home": ev["a"], "away": ev["b"],
+                 "neutral": True, "espn_path": path}
+        row = shadow_row(cfg, event, None, None, len(model.innings), args.card, args.total, None,
+                         now, extra={"flags": "TOSS_50_50" if args.total is not None else ""}, probs0=q0, probs1=q1)
+    else:
+        path = args.espn_path or cfg.get("espn")
+        if not path:
+            raise SystemExit(f"error: {cfg['league']} has no ESPN path; pass --espn-path")
+        ev = sd.espn_event(path, args.event, args.date)
+        _refuse_started(ev, now, args.event)
+        rid = row_id(cfg["league"], ev["id"], args.total, args.line)
+        _refuse_duplicate(log, rid)
+        games = load_games(cfg, args, ev["date"][:10])
+        eng = TeamEngine(cfg, [g for g in games if g["date"][:10] < ev["date"][:10]])
+        f0, f1 = eng.predict(ev["home"], ev["away"], ev["date"][:10], ev.get("neutral", False))
+        ev["espn_path"] = path
+        row = shadow_row(cfg, ev, f0, f1, eng.model.n, args.card, args.total, args.line, now)
     append_row(log, LOG_FIELDS, row)
-    print(json.dumps(row, indent=2))
+    print(f"Frozen shadow row {row['row_id']} at {row['frozen_at_utc']} ({row['home']} v {row['away']}). "
+          f"Blind: probabilities are in {log.name}, read only at review. Never a card input.")
     return 0
 
 
 def cmd_settle(args) -> int:
+    """Append finals for every frozen row that has none, read from the same ESPN feed (never typed)."""
     import sport_data as sd
     log, results = Path(args.log), Path(args.results)
     done = {r["row_id"] for r in mm.read_rows(results)}
@@ -1553,13 +1692,36 @@ def cmd_settle(args) -> int:
         if r["row_id"] in done:
             continue
         cfg = config(r["league"])
-        path = cfg.get("espn") or args.espn_path
-        ev = sd.espn_event(path, r["event_id"], r["event_date"])
-        if ev["state"] != "post" or ev.get("hs") is None:
-            continue
-        append_row(results, RESULT_FIELDS, {"row_id": r["row_id"], "event_id": r["event_id"], "home_score": ev["hs"],
-                                            "away_score": ev["as"], "finish": ev.get("finish", ""),
-                                            "settled_at_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "source": ev["source"]})
+        fam = cfg["family"]
+        path = r.get("espn_path") or cfg.get("espn") or args.espn_path
+        if fam == "tennis":
+            ev = sd.espn_tennis_match(cfg["league"], r["event_id"], r["event_date"])
+            if ev["state"] != "post" or not ev["completed"]:
+                continue
+            side = {"a": "home", "b": "away"}.get(ev["winner"], "void")
+            if ev["finish"] == "WO":
+                side = "void"
+            full = ev["finish"] == "REG"
+            out = result_row(r, side, ev["games_a"] + ev["games_b"] if full else None,
+                             ev["games_a"] - ev["games_b"] if full else None, ev["games_a"], ev["games_b"],
+                             ev["finish"], ev["source"], now)
+        elif fam == "cricket":
+            ev = sd.espn_cricket_match(path, r["event_id"], r["event_date"], cfg["overs"])
+            if ev["state"] != "post" or not ev["completed"]:
+                continue
+            side = "void" if ev["no_result"] else "draw" if ev["tie"] else {"a": "home", "b": "away"}.get(ev["winner"], "void")
+            tv = ev["first_innings_runs"] if ev["first_innings_valid"] else None
+            out = result_row(r, side, tv, None, None, None,
+                             "FIRST_INNINGS_OK" if ev["first_innings_valid"] else "FIRST_INNINGS_UNSCORED",
+                             ev["source"], now)
+        else:
+            ev = sd.espn_event(path, r["event_id"], r["event_date"])
+            if ev["state"] != "post" or ev.get("hs") is None:
+                continue
+            hs, as_ = ev["hs"], ev["as"]
+            side = "home" if hs > as_ else "away" if as_ > hs else "draw"
+            out = result_row(r, side, hs + as_, hs - as_, hs, as_, ev.get("finish") or "", ev["source"], now)
+        append_row(results, RESULT_FIELDS, out)
         done.add(r["row_id"])
         added += 1
     print(f"settled {added} row(s)")
@@ -1610,8 +1772,13 @@ def main(argv=None) -> int:
     s.add_argument("--card", required=True, help="the card this row follows (run after that card is frozen)")
     s.add_argument("--total", type=float)
     s.add_argument("--line", type=float)
-    s.add_argument("--espn-path")
+    s.add_argument("--espn-path", help="ESPN sport/league path where the league has none built in (rugby union, cricket)")
     s.add_argument("--csv")
+    s.add_argument("--surface", default="Hard", help="tennis")
+    s.add_argument("--best-of", type=int, help="tennis (default: the ESPN format, else 3)")
+    s.add_argument("--tml-dir", help="tennis: local results CSVs (required for WTA)")
+    s.add_argument("--cricsheet", help="cricket: cricsheet JSON directory or zip (history)")
+    s.add_argument("--venue", help="cricket: the ground, for the venue effect")
     s.add_argument("--log", default=str(SHADOW_DIR / "shadow_log.csv"))
     t = sub.add_parser("settle")
     t.add_argument("--log", default=str(SHADOW_DIR / "shadow_log.csv"))

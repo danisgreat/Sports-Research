@@ -2,9 +2,9 @@
 
 Method: **MDS-2026.09.19-v4.3**
 Control revision: **CR-2026.09.21-3** (label unchanged; content receipt under the same label)
-Status: **CURRENT post-write content receipt**, generated 2026-09-26 15:57 AEST by `tools/make_manifest.py` from `CONTROL_MANIFEST_2026-09-25-6.md`.
+Status: **CURRENT post-write content receipt**, generated 2026-09-26 19:42 AEST by `tools/make_manifest.py` from `CONTROL_MANIFEST_2026-09-25-6.md`.
 
-**Purpose.** This is the byte-level SHA-256 receipt that every new card freezes (`METHOD.md` header; PF-7). Implements the 2026-09-26 repository review (RULES_GENERAL.md §"2026-09-26" (a)–(j)): C-RULE-FREEZE, C-READING-GATE and the sport files' §0 live pages, C-EVENT-UNIVERSE, C-MARKET-BENCHMARK (post-settlement scoring only), C-MLB-SHADOW, the evidence-status tool, LEARNINGS_INDEX.md, the closed candidate backlog and the repository clean-up; and (k) C-SPORT-SHADOW: reduced-feature A0/A1 models for every other sport (tools/sport_models.py, tools/sport_data.py) with their public-data validation (research/sport_models_2026-09-26/). Shadow models are never a card input. Regenerated in place before merge (2026-09-26(c)); no card was issued under the earlier version of this file or under CONTROL_MANIFEST_2026-09-25-6.
+**Purpose.** This is the byte-level SHA-256 receipt that every new card freezes (`METHOD.md` header; PF-7). Implements the 2026-09-26 repository review (RULES_GENERAL.md §"2026-09-26" (a)–(j)): C-RULE-FREEZE, C-READING-GATE and the sport files' §0 live pages, C-EVENT-UNIVERSE, C-MARKET-BENCHMARK (post-settlement scoring only), C-MLB-SHADOW, the evidence-status tool, LEARNINGS_INDEX.md, the closed candidate backlog and the repository clean-up; (k) C-SPORT-SHADOW: reduced-feature A0/A1 models for every other sport (tools/sport_models.py, tools/sport_data.py) with their public-data validation (research/sport_models_2026-09-26/); and (l) blind shadow lanes for every sport including tennis and cricket, with the settlement record SHADOW: (audit 10s). Shadow models are never a card input. Regenerated in place before merge (2026-09-26(d)); no card was issued under any earlier version of this file or under CONTROL_MANIFEST_2026-09-25-6.
 
 **It does not change any forecasting coefficient, probability cap or ranking override.**
 
@@ -24,40 +24,40 @@ This manifest is excluded from its own hash table. The living logs (`PREDICTION_
 
 | File | SHA-256 | Bytes |
 |---|---|---:|
-| `README.md` | `1795b2e9a050409298d4d440e8109d5f5b72fb8b459a9af9769a3358f16d5fce` | 14107 |
-| `METHOD.md` | `47408e3f7a4cf5681cac0f8b1e4e59c29b21a958bf508083a89204c603d1a5dd` | 31002 |
-| `CONTROLS.md` | `eb04bc88da4f704bde5e08bf28eb06b98dc7dedb9b0094d1e257e9a87dde1765` | 42348 |
-| `RULES_GENERAL.md` | `a39cf0ee4b9c999487cc93e008291a63ce6be99feaa4b83c1823ade59656014a` | 283026 |
+| `README.md` | `628a588c43f5f825ae0e8b7e4aeda3d66ae2c6a9d2c6bec423a82afe92df0d7d` | 14247 |
+| `METHOD.md` | `817e5e61aec60dd7788f0f26aa607986d3a464ff3fea1778075ab9cb34f8a7b6` | 31073 |
+| `CONTROLS.md` | `50240aa1254b49141b864fe575f78d3ee5862074aa7c06fbfc6d89b8d2c6223c` | 42572 |
+| `RULES_GENERAL.md` | `fa89f9149539a6cfad1d7a2bb7a726f703e451bd2da91580fd4ba0b6dfbb6486` | 285129 |
 | `SOURCES.md` | `6e172c9fecf767af75da09d0f745e1428910795aa1e4e674a364b4b3af71faac` | 76886 |
 | `DATA_SOURCE_REGISTER.md` | `898affe43d3490b83a2c8a888d88dc2b09cbdfe71024294ae79df9d32d17efef` | 178952 |
-| `UPCOMING_GAME_RESEARCH_GUIDE.md` | `c6cbc5c58957e9c0c399e2be4f43bf3a4effabb589c6e6564c68a75d2d2fcd3f` | 75779 |
+| `UPCOMING_GAME_RESEARCH_GUIDE.md` | `a3e7ed767257a7660c5c221cc23ffa6d4d3f3b332430c1ef5705427de445778f` | 76011 |
 | `SCORING_AND_VALIDATION.md` | `64cb95cf3afcfd3f4d33f79bc34428aa82d095290810d64e9f62de929e806a22` | 23793 |
 | `PERFORMANCE_ELIGIBILITY_POLICY.md` | `a102c231debc12253accf5ade0ed3086c7b51dcf3959e570129ad8b6d96dd2fa` | 19422 |
-| `LEARNING_REGISTER.md` | `21a5197a08c54d1a7c2aa00e4abe1a5859a965ac35f2fdb1486aa28d255a14a0` | 325772 |
+| `LEARNING_REGISTER.md` | `375d3243f00c6be7f3d888f97788f29cbfb9ff20404ecf036aa28676b34cf199` | 329003 |
 | `AGENT_ROLE_AND_TASK.md` | `7ab4a2b52fa33a0cf9f9838926dda2acc6babc71fb1b99c3387873b0c15d52fb` | 25862 |
 | `EXTERNAL_LOGGING_WORKFLOW.md` | `b724db948916f0bb4ae8847fcfd7fc278cf5db8fed8a2d04411507f5dcc1a6d8` | 68415 |
 | `FORECAST_PREFLIGHT_MANIFEST.md` | `34718b2faca3276e7213bc622e01ff06998151390f5f7c3f12497082e7468678` | 9309 |
 | `RULES_BASEBALL.md` | `cb9549d4bdb730a80f7141de7cf4a7d48bef0ed0f1402e73401de3f6b758762a` | 139544 |
-| `RULES_CRICKET.md` | `229d5e4c77792c4e8c671e1e1a65b54d31ebf3e4943b8804f7e87e91e90e1ee2` | 112540 |
+| `RULES_CRICKET.md` | `82896597cfacaf04b2779ed3f2a5805dc8a65dd01f600d511c95ed3355066fe7` | 112985 |
 | `RULES_SOCCER.md` | `c35fecedbd855f444d00d1c8a52f34893726b4ce800daaded0b73301c76d3a3b` | 111637 |
-| `RULES_BASKETBALL.md` | `95da81104854273d501eee5bc0d03c38e8408df234715e664aebb38d9be6c4eb` | 107437 |
-| `RULES_AFL.md` | `e36e73b785434cf4d3cbd5d6466f9a48cf170bad965fd4f71da10ba1007d7d08` | 65671 |
+| `RULES_BASKETBALL.md` | `f86d5d456211ed4f1b2e88c874c2392e7fff6c06a7155934fd8bbd006b186c3d` | 107462 |
+| `RULES_AFL.md` | `e39a3e99c6fe4c072dcd355b9d6771c3c1eaf1f9ce39e53eea547816ba8c0893` | 65683 |
 | `RULES_NRL_RUGBY.md` | `02029fb588ec3e3c6c526b1048d6ffeaa225519a82831b42af8b8141166cc391` | 64224 |
 | `RULES_RUGBY_UNION.md` | `24f3ed0bc16f720245fb7e94e95777a8171e7878dbbe1615c154d6a573faa833` | 54278 |
 | `RULES_AMERICAN_FOOTBALL.md` | `5651e7330ed40c78fc686807bf9f600d81ece39f8ad00e4e6bfabcf0f71aabe1` | 69998 |
-| `RULES_ICE_HOCKEY.md` | `2aefdae1ece992d4090dc2d30cb73bfaab3e35d63a1bdc3f0e13e44f9059d5ff` | 61647 |
-| `RULES_TENNIS.md` | `fcfc5ea6ab92867bee41a76c56c13c0abeb586528e448078272dfe738dee901c` | 77742 |
+| `RULES_ICE_HOCKEY.md` | `ad728316a64c16b6a60c98a000e17251c95bb3ef1a9273146505cb888de1e8f2` | 61765 |
+| `RULES_TENNIS.md` | `0fcf130aae5f04e7c7a1e612f99a6386bab9e53d7883fbfc7f27ba515075382d` | 77976 |
 | `LEAGUE_RULES_CRICKET.md` | `b6b13dfa72047b62fd9987e21daa0ec25510ab0853ebbac461b5725de5f99099` | 26252 |
 | `LEAGUE_RULES_SOCCER.md` | `236463054f21792ad091fd3f326c7cb12aac767c933ffc4bd2e265acf55df06b` | 43865 |
 | `prediction_preflight.py` | `b4d07fef54e71ef8478c5b2cec3af15c5f5accf50ba3e703348ab16609006d26` | 29319 |
 | `test_prediction_preflight.py` | `c91ef73ac3faa420e3b67f8e5f345a851c4f9a69e43e75c21be6d3c7a53d5d60` | 11403 |
-| `audit_card_controls.py` | `f22785c09a9b6156aeda757e7cccb05288761b64f3995553176e15b575ecd67c` | 34592 |
-| `test_audit_card_controls.py` | `a81d8676530d399b2c5e87373506972a45d02c44235dae42f293217eb2e1bfb0` | 16880 |
+| `audit_card_controls.py` | `c8f5b420e995c28dfbf1daaaf451801248c4f58182dbde2c1eebbb61d0ac9a69` | 35130 |
+| `test_audit_card_controls.py` | `84da7061d82bc7cc063499c516298b0e3888356205b349ea26116bdfcba21693` | 17948 |
 | `receipts.py` | `33c906e5b6a0f67ffaf103347f058955401923a3cb57ee43158cd7f2d1b3de30` | 21886 |
 | `test_receipts.py` | `c841b495300f0e7e7afec7f4b24b1780c6a879b0067ed5b648a800625cee3c08` | 6502 |
 | `H0_DATASET_CARD.md` | `a2d44c60788d0506c1108e1629fb2a2e6ac23d6fc41ca87c2e27a6d138152278` | 19413 |
-| `NUMERICAL_PROGRAM.md` | `ad24a72f372201308d4b4e4d126c232791489b2e4b464587c55c633030b146d5` | 12991 |
-| `NUMERICAL_MODEL_REGISTER.md` | `633277c6abf8a0556bca85f66ff0e4d628bf57822eeaa09abb42057b51388316` | 26162 |
+| `NUMERICAL_PROGRAM.md` | `58b16f645172a3b94fae8ffe90af0e1d7f08606df6baa67745e6cc5a29429665` | 13037 |
+| `NUMERICAL_MODEL_REGISTER.md` | `833e6f50478203aab8e03725a5c637853b418b6c6b02efe7b2fc3519f4bc3c41` | 26393 |
 | `NUMERICAL_TRAINING_SPEC.md` | `888fa925485a64642443b7555d8a989aea955d0a7997e23a09edef7db93bbd37` | 31309 |
 | `MODEL_AND_DATA_SPEC.md` | `c4d77b5036afbe531387886ee460d35a47ba6d824bf5a13077f20d7c9906b771` | 64024 |
 | `ALGORITHM_PORTFOLIO_AND_EVALUATION.md` | `c0dbea56b78a51c5f6a075d7e0ace6e0d84a4fe97a1366cd699624e5783f49aa` | 51138 |
@@ -89,8 +89,8 @@ This manifest is excluded from its own hash table. The living logs (`PREDICTION_
 | `research/base_rates_2026-09-25/pull_nhl_pre.py` | `53a6ea9ece407426622606c1a7d97b08154d7721e12aa40aef75620357cb4fe8` | 328 |
 | `research/base_rates_2026-09-25/pull_nhl_tennis.py` | `32d15bcb8efc7bb69d880883c0e6d91610758b676c58ed63d31fb6d9054517c6` | 3509 |
 | `research/base_rates_2026-09-25/tennis_results.json` | `274650d4117e9b75bfaaaa028f43a7f6ae599a265a46a397ba94d326d886f34e` | 5574 |
-| `CURRENT_RULES.md` | `50822a0d5d23683bfeac96ba24dba83f886f66a3a748c3d23b0cce398853a8fc` | 43928 |
-| `CHANGELOG.md` | `126d130572f8c62669ba112026cc10d4fa72c6a8b0214464c8b8cc6828056ef5` | 37918 |
+| `CURRENT_RULES.md` | `412daf58757daf5aa444acc5109b1ac80b913eca69d64c3fc75fd213695b2750` | 44267 |
+| `CHANGELOG.md` | `f42263897caa5503f982938b7a93c446dce8baaf7275161bda8cf240f01b6c2a` | 39687 |
 | `CONTRIBUTING.md` | `2a62e9f3910c01e474ad3f5bac3b5b493277b901a4f2caae82d35ab6cfe57ee6` | 4705 |
 | `SKILL_BASELINE_LEDGER.md` | `63ab9bddaff8d5381224664aa929df759eebbdbc03a189688c0f8daed4458712` | 10145 |
 | `LICENSE` | `1efb20731adc03fb046120ceeceb7f4e0ca0d73b2eb2d5fcf2093350863161b8` | 1211 |
@@ -127,7 +127,7 @@ This manifest is excluded from its own hash table. The living logs (`PREDICTION_
 | `research/team_baseline_2026-09-25e/oval_base_rates.py` | `62617d80a3eec1c8f077df04dfa03ae1d97f5144e33c1d95029b7dd6596ca7dd` | 5991 |
 | `research/team_baseline_2026-09-25e/pull_oval.py` | `ebf68e78db6e555c0228f52327252b02918842c0b33e3ab9cc9b62643eae77a4` | 1114 |
 | `research/base_rates_2026-09-25/pull_oval_specs.py` | `1b757907548ea1341eb5e3119c509dd2705aaa34f6dd79637896acc4144a7ea3` | 694 |
-| `LEARNINGS_INDEX.md` | `09db4394790a9747ae00205963d5477b6fd83807aabddfd4c86b53b1a9ec5fef` | 35634 |
+| `LEARNINGS_INDEX.md` | `c8250be5774da41be53c85bdb5be46b22bffcda0240f2496a949ad93bea7df71` | 36317 |
 | `MARKET_BENCHMARK_LEDGER.md` | `c17ac01e622fc07e020c28ac576fcd6f0478af06b0212610b2f37ac3591aa467` | 3349 |
 | `tools/slate_universe.py` | `9331769ace5441d9d1c63f3ae5412b1c8960cd1e8c44cfb569236e5935141550` | 15186 |
 | `tools/test_slate_universe.py` | `030a22aefb59d4df5da9b538bd89533eb82172baf3e709da1fdf3ef1f3bb3db4` | 4689 |
@@ -135,12 +135,12 @@ This manifest is excluded from its own hash table. The living logs (`PREDICTION_
 | `tools/test_market_benchmark.py` | `56cd7541090ed5180c7841d94d6cfdfd8371b7b332c582c2d05e3442c5d1e794` | 4559 |
 | `tools/evidence_status.py` | `985f233ddfa96903679e3517d17b833595c066d4cfdfdd7d2e9da523298ee4b2` | 9596 |
 | `tools/test_evidence_status.py` | `63db5f665c55102118eeb6eaf4326e9fa46c1db49b180143543ffdc6eb45da3b` | 4954 |
-| `tools/mlb_model.py` | `1d9fe5d1c97995f1a3ef7d9907aee4006ab831ecf1101ca5aaa724d6d087b79f` | 29708 |
+| `tools/mlb_model.py` | `bf8f079185691584370511f50b39b0490992c6ba8899e39770dce5feeba6733e` | 29731 |
 | `tools/test_mlb_model.py` | `0fab2be5e9a2d632156b681578317d8bd3f6328d08c65d78f56dcc8ace24aad9` | 9720 |
-| `research/mlb_shadow/README.md` | `b527b7cdcb7899ccb09fe49f94f0c859683deac47118954bf170f33a9db8ee17` | 3294 |
-| `tools/sport_models.py` | `309036154930028e9961d0b7c6e000f125127ce5c45a5a72a431f698e8c006be` | 84754 |
-| `tools/sport_data.py` | `47511502c24763f9c9101c17ad6da2025ea7e85c9f28f2a658c5f155176edd60` | 13959 |
-| `tools/test_sport_models.py` | `3c01f0eec4a77673193176f8f1e575ab8b31bdd72761944ddea6bacd0535f451` | 19882 |
-| `research/sport_shadow/README.md` | `c712353ccc870a55e0af5729aa52b376da92c55e92ac58fee6c75a8a1e54d5a1` | 4815 |
-| `research/sport_models_2026-09-26/README.md` | `df19cc9034e0a60c5c2f70ebf496aaa57a21cf20fef6e3da60d622356bdc3e05` | 19713 |
-| `research/sport_models_2026-09-26/validation_results.json` | `44a5145e0ee9d614d3041a05556621ca5570c6f2aab00765362e15f8c109bc9a` | 55177 |
+| `research/mlb_shadow/README.md` | `d8cab21b78a75948795a00bc18a7e9b5a313567af517d4e9fc36d60710c424a2` | 3442 |
+| `tools/sport_models.py` | `7febca640b33b7ad2e84d5f1b51568f98786ef431945860127a42e0bb3c3290c` | 95454 |
+| `tools/sport_data.py` | `a22506ad563ac1bf611fba2f229f5f86a5d8c29720c4172617e8d63cbb7f9c87` | 19291 |
+| `tools/test_sport_models.py` | `82aeaa44cda2434221dcc3a00798c2f0df2f9577afb73ce03bd03198120952ec` | 29150 |
+| `research/sport_shadow/README.md` | `bcd0cc4b390f7d09992ea7cf5f50e3ab33087abe1508ad61e28b2a9d19942f0a` | 5578 |
+| `research/sport_models_2026-09-26/README.md` | `5b4517d16dabfd73640102134a182ec8593939a474ef9aba272920449e8e192a` | 26215 |
+| `research/sport_models_2026-09-26/validation_results.json` | `6f81d67bea221520a488c1302462a024c212af5f39b16f849f08e68a72762ca1` | 74679 |

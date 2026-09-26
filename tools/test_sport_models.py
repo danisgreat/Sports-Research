@@ -367,13 +367,157 @@ class DataAndShadow(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             log, res = Path(tmp, "log.csv"), Path(tmp, "res.csv")
             sm.append_row(log, sm.LOG_FIELDS, row)
-            sm.append_row(res, sm.RESULT_FIELDS, {"row_id": row["row_id"], "event_id": "77", "home_score": 3,
-                                                  "away_score": 0, "finish": "REG", "settled_at_utc": "x", "source": "y"})
+            sm.append_row(res, sm.RESULT_FIELDS, sm.result_row(row, "home", 3, 3, 3, 0, "REG", "y", now))
             s = sm.score_shadow(log, res)
         self.assertEqual(s["epl"]["home_win"]["n"], 1)
         self.assertLess(s["epl"]["home_win"]["a1_brier"], s["epl"]["home_win"]["a0_brier"])
         self.assertIn("total_over", s["epl"])
         self.assertIn("home_cover", s["epl"])
+
+
+class ShadowCommands(unittest.TestCase):
+    """End-to-end shadow → settle → score with the ESPN readers replaced by fixtures (no network)."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.log, self.res = Path(self.tmp.name, "log.csv"), Path(self.tmp.name, "res.csv")
+        self.saved = {k: getattr(sd, k) for k in ("espn_event", "espn_tennis_match", "espn_cricket_match",
+                                                  "load_tennis", "load_cricsheet")}
+        self.saved_load = sm.load_games
+        self.start = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        self.day = self.start[:10]
+
+    def tearDown(self):
+        for k, v in self.saved.items():
+            setattr(sd, k, v)
+        sm.load_games = self.saved_load
+        self.tmp.cleanup()
+
+    def args(self, **kw):
+        import argparse
+        base = {"league": "epl", "event": "77", "date": self.day, "card": "P-600", "total": 2.5, "line": -0.5,
+                "espn_path": None, "csv": None, "surface": "Hard", "best_of": None, "tml_dir": None, "cricsheet": None,
+                "venue": None, "log": str(self.log), "results": str(self.res)}
+        base.update(kw)
+        return argparse.Namespace(**base)
+
+    def test_team_sport_lane_is_blind_append_only_and_refuses_started_events(self):
+        games = soccer_season()
+        shift = (dt.date.fromisoformat(self.day) - dt.date.fromisoformat(games[-1]["date"])).days - 1
+        games = [dict(g, date=(dt.date.fromisoformat(g["date"]) + dt.timedelta(days=shift)).isoformat()) for g in games]
+        sm.load_games = lambda cfg, args, end, start=None: games
+        pre = {"id": "77", "date": self.start, "start_utc": self.start, "state": "pre", "home": "T00", "away": "T11",
+               "neutral": False, "hs": None, "as": None}
+        sd.espn_event = lambda path, eid, date: dict(pre)
+        import contextlib
+        import io
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            self.assertEqual(sm.cmd_shadow(self.args()), 0)
+        self.assertIn("Blind", buf.getvalue())
+        self.assertNotIn("0.", buf.getvalue().split("Blind")[0].split(")")[-1])
+        rows = sm.mm.read_rows(self.log)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["espn_path"], "soccer/eng.1")
+        with self.assertRaises(SystemExit):      # never replaced
+            sm.cmd_shadow(self.args())
+        sd.espn_event = lambda path, eid, date: dict(pre, id="78", state="in")
+        with self.assertRaises(SystemExit):      # started
+            sm.cmd_shadow(self.args(event="78"))
+        sd.espn_event = lambda path, eid, date: dict(pre, state="post", hs=2, **{"as": 2}, finish="REG", source="u")
+        with contextlib.redirect_stdout(io.StringIO()):
+            sm.cmd_settle(self.args())
+            sm.cmd_settle(self.args())            # append-only: settles once
+        res = sm.mm.read_rows(self.res)
+        self.assertEqual([(r["winner_side"], r["total_value"], r["margin_value"]) for r in res], [("draw", "4", "0")])
+        s = sm.score_shadow(self.log, self.res)["epl"]
+        self.assertEqual(s["home_win"]["n"], 1)
+        self.assertEqual(s["total_over"]["n"], 1)
+        self.assertEqual(s["home_cover"]["n"], 1)   # 0 + (−0.5) is decided
+
+    def test_tennis_lane_scores_the_winner_and_voids_games_on_retirement(self):
+        rng = random.Random(2)
+        matches = []
+        for i in range(200):
+            w = "Ann Strong" if rng.random() < 0.8 else "Bea Weak"
+            matches.append({"date": (dt.date(2025, 1, 1) + dt.timedelta(days=i)).isoformat(), "winner": w,
+                            "loser": "Bea Weak" if w == "Ann Strong" else "Ann Strong", "surface": "Hard", "best_of": 3,
+                            "complete": True, "total_games": 22, "sets_margin": 2, "serve_won": 110, "serve_pts": 170,
+                            "tourney_id": str(i), "round": "R32", "match_num": 1})
+        sd.load_tennis = lambda league, date, tml_dir=None, csv_path=None: matches
+        pre = {"id": "9001", "date": self.day, "start_utc": self.start, "state": "pre", "completed": False,
+               "a": "Ann Strong", "b": "Bea Weak", "best_of": 3, "winner": None, "games_a": 0, "games_b": 0,
+               "finish": "REG", "source": "u"}
+        sd.espn_tennis_match = lambda tour, cid, date: dict(pre)
+        import contextlib
+        import io
+        with contextlib.redirect_stdout(io.StringIO()):
+            sm.cmd_shadow(self.args(league="atp", event="9001", total=22.5, line=-3.5))
+        row = sm.mm.read_rows(self.log)[0]
+        self.assertGreater(float(row["a1_p_home_win"]), 0.6)
+        self.assertEqual(row["best_of"], "3")
+        self.assertTrue(row["a1_p_over"])
+        sd.espn_tennis_match = lambda tour, cid, date: dict(pre, state="post", completed=True, winner="a",
+                                                            games_a=9, games_b=4, finish="RET")
+        with contextlib.redirect_stdout(io.StringIO()):
+            sm.cmd_settle(self.args())
+        r = sm.mm.read_rows(self.res)[0]
+        self.assertEqual((r["winner_side"], r["total_value"], r["finish"]), ("home", "", "RET"))
+        s = sm.score_shadow(self.log, self.res)["atp"]
+        self.assertEqual(list(s), ["home_win"])
+
+    def test_cricket_lane_prices_the_first_innings_before_the_toss(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            rng = random.Random(4)
+            for i in range(80):
+                a, b = ("Kings", "Jets") if i % 2 else ("Jets", "Kings")
+                js = Cricket().match_json(i, a, b, int(rng.gauss(175, 15)), "Kings" if rng.random() < 0.7 else "Jets")
+                Path(tmp, f"{i}.json").write_text(json.dumps(js), encoding="utf-8")
+            pre = {"id": "555", "date": self.day, "start_utc": self.start, "state": "pre", "completed": False,
+                   "a": "Kings", "b": "Jets", "winner": None, "no_result": False, "tie": False,
+                   "first_innings_runs": None, "first_innings_valid": False, "source": "u"}
+            sd.espn_cricket_match = lambda path, eid, date, overs: dict(pre)
+            import contextlib
+            import io
+            with contextlib.redirect_stdout(io.StringIO()):
+                sm.cmd_shadow(self.args(league="t20", event="555", total=170.5, line=None, espn_path="cricket/8048",
+                                        cricsheet=tmp))
+            row = sm.mm.read_rows(self.log)[0]
+            self.assertEqual(row["a0_p_home_win"], "0.5000")
+            self.assertIn("TOSS_50_50", row["flags"])
+            self.assertTrue(row["a1_p_over"] and row["a0_p_over"])
+            sd.espn_cricket_match = lambda path, eid, date, overs: dict(pre, state="post", completed=True, winner="b",
+                                                                        first_innings_runs=181, first_innings_valid=True)
+            with contextlib.redirect_stdout(io.StringIO()):
+                sm.cmd_settle(self.args())
+        r = sm.mm.read_rows(self.res)[0]
+        self.assertEqual((r["winner_side"], r["total_value"]), ("away", "181"))
+        self.assertEqual(set(sm.score_shadow(self.log, self.res)["t20"]), {"home_win", "total_over"})
+
+    def test_espn_tennis_and_cricket_parsers(self):
+        comp = {"id": "1", "date": "2026-09-27T10:00Z", "format": {"regulation": {"periods": 5}},
+                "status": {"type": {"state": "post", "completed": True, "detail": "Final"}},
+                "competitors": [{"athlete": {"displayName": "A One"}, "winner": True,
+                                 "linescores": [{"value": 6}, {"value": 7}, {"value": 6}]},
+                                {"athlete": {"displayName": "B Two"}, "winner": False,
+                                 "linescores": [{"value": 4}, {"value": 6}, {"value": 3}]}]}
+        m = sd.parse_tennis_comp(comp, "u")
+        self.assertEqual((m["games_a"], m["games_b"], m["sets_a"], m["best_of"], m["start_utc"]),
+                         (19, 13, 3, 5, "2026-09-27T10:00:00Z"))
+        comp["status"]["type"]["detail"] = "Retired"
+        self.assertEqual(sd.parse_tennis_comp(comp, "u")["finish"], "RET")
+        ev = {"id": "7", "date": "2026-09-05T13:00Z", "competitions": [{
+            "status": {"type": {"state": "post", "completed": True, "detail": "Amsterdam won by 9 runs"}},
+            "competitors": [{"team": {"displayName": "Amsterdam"}, "score": "169/7", "winner": True},
+                            {"team": {"displayName": "Dublin"}, "score": "160/8 (20 ov, target 170)", "winner": False}]}]}
+        c = sd.parse_cricket_event(ev, 20, "u")
+        self.assertEqual((c["winner"], c["first_innings_team"], c["first_innings_runs"], c["first_innings_valid"]),
+                         ("a", "a", 169, True))
+        ev["competitions"][0]["competitors"][0]["score"] = "121/6 (15 ov)"
+        ev["competitions"][0]["status"]["type"]["detail"] = "Dublin won by 2 wickets (DLS method)"
+        self.assertFalse(sd.parse_cricket_event(ev, 20, "u")["first_innings_valid"])
+        ev["competitions"][0]["competitors"][1]["score"] = "40/1 (5 ov)"
+        self.assertIsNone(sd.parse_cricket_event(ev, 20, "u")["first_innings_team"])   # nobody chasing: unknown
 
     def test_every_league_has_a_valid_config(self):
         for lg in sm.LEAGUES:

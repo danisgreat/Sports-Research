@@ -27,6 +27,7 @@ import gzip
 import hashlib
 import io
 import json
+import re
 import sys
 import unicodedata
 import urllib.request
@@ -171,6 +172,93 @@ def espn_event(path: str, event_id: str, date: str) -> dict:
                 g["source"] = ESPN.format(path=path, day=f"{day:%Y%m%d}")
                 return g
     raise SystemExit(f"error: event {event_id} not found on the {path} scoreboard around {date}")
+
+
+# --------------------------------------------------------------------------- ESPN tennis and cricket
+
+def _iso_z(s: str) -> str:
+    return s[:-1] + ":00Z" if s and len(s) == 17 and s.endswith("Z") else s
+
+
+def parse_tennis_comp(c: dict, source: str) -> dict:
+    """One ESPN tennis competition (a singles match). Players are A and B in ESPN's order."""
+    cps = c.get("competitors", [])
+    if len(cps) != 2 or not all((x.get("athlete") or {}).get("displayName") for x in cps):
+        raise SystemExit("error: not a singles match with two named players")
+    stype = (c.get("status") or {}).get("type", {})
+    detail = " ".join(str(stype.get(k, "")) for k in ("detail", "shortDetail", "description")).upper()
+    sets = [[float(ls.get("value", 0) or 0) for ls in (x.get("linescores") or [])] for x in cps]
+    out = {"id": str(c.get("id")), "start_utc": _iso_z(c.get("date", "")), "date": c.get("date", "")[:10],
+           "state": stype.get("state", ""), "completed": bool(stype.get("completed")),
+           "a": cps[0]["athlete"]["displayName"], "b": cps[1]["athlete"]["displayName"],
+           "best_of": ((c.get("format") or {}).get("regulation") or {}).get("periods"),
+           "winner": "a" if cps[0].get("winner") else "b" if cps[1].get("winner") else None,
+           "games_a": int(sum(sets[0])), "games_b": int(sum(sets[1])),
+           "sets_a": sum(1 for x, y in zip(*sets) if x > y), "sets_b": sum(1 for x, y in zip(*sets) if y > x),
+           "finish": "WO" if ("WALKOVER" in detail or "W/O" in detail) else
+                     "RET" if ("RET" in detail or "RETIRED" in detail or "ABANDON" in detail) else "REG",
+           "source": source}
+    return out
+
+
+def espn_tennis_match(tour: str, comp_id: str, date: str) -> dict:
+    d = dt.date.fromisoformat(date[:10])
+    for day in (d, d - dt.timedelta(days=1), d + dt.timedelta(days=1)):
+        for ev in espn_day(f"tennis/{tour}", day):
+            for grp in ev.get("groupings", []):
+                for c in grp.get("competitions", []):
+                    if str(c.get("id")) == str(comp_id):
+                        return parse_tennis_comp(c, ESPN.format(path=f"tennis/{tour}", day=f"{day:%Y%m%d}"))
+    raise SystemExit(f"error: tennis match {comp_id} not found on the {tour} scoreboard around {date}")
+
+
+CRICKET_SCORE_RE = re.compile(r"^\s*(\d+)(?:/(\d+))?\s*(?:\((.*)\))?")
+
+
+def parse_cricket_score(s: str) -> dict | None:
+    """ESPN cricket competitor score: '169/7', '160/8 (20 ov, target 170)', '142 (18.3 ov)' (no wickets
+    shown = all out). Returns runs, wickets, overs (None when not shown) and whether it was a chase."""
+    m = CRICKET_SCORE_RE.match(str(s or ""))
+    if not m:
+        return None
+    paren = (m.group(3) or "").lower()
+    ov = re.search(r"([\d.]+)\s*ov", paren)
+    return {"runs": int(m.group(1)), "wkts": int(m.group(2)) if m.group(2) is not None else 10,
+            "overs": float(ov.group(1)) if ov else None, "chase": "target" in paren}
+
+
+def parse_cricket_event(ev: dict, scheduled_overs: int, source: str) -> dict:
+    comp = (ev.get("competitions") or [{}])[0]
+    cps = comp.get("competitors", [])
+    if len(cps) != 2:
+        raise SystemExit("error: cricket event without two competitors")
+    stype = (comp.get("status") or ev.get("status") or {}).get("type", {})
+    text = " ".join(str(stype.get(k, "")) for k in ("detail", "shortDetail", "description")).upper()
+    sc = [parse_cricket_score(x.get("score")) for x in cps]
+    out = {"id": str(ev.get("id")), "start_utc": _iso_z(ev.get("date", "")), "date": ev.get("date", "")[:10],
+           "state": stype.get("state", ""), "completed": bool(stype.get("completed")),
+           "a": cps[0]["team"].get("displayName", ""), "b": cps[1]["team"].get("displayName", ""),
+           "winner": "a" if cps[0].get("winner") else "b" if cps[1].get("winner") else None,
+           "no_result": "NO RESULT" in text or "ABANDON" in text, "tie": "TIED" in text or "TIE" in text.split(),
+           "first_innings_runs": None, "first_innings_team": None, "first_innings_valid": False, "source": source}
+    # first innings = the side that did not chase; ambiguous (both or neither chasing) = unknown
+    firsts = [i for i in (0, 1) if sc[i] and not sc[i]["chase"]]
+    if len(firsts) == 1 and sc[1 - firsts[0]] and sc[1 - firsts[0]]["chase"]:
+        f = sc[firsts[0]]
+        dls = any(k in text for k in ("DLS", "D/L", "DUCKWORTH", "REDUCED"))
+        full = f["wkts"] >= 10 or f["overs"] is None or abs(f["overs"] - scheduled_overs) < 1e-9
+        out.update({"first_innings_runs": f["runs"], "first_innings_team": "a" if firsts[0] == 0 else "b",
+                    "first_innings_valid": full and not (dls and f["wkts"] < 10)})
+    return out
+
+
+def espn_cricket_match(path: str, event_id: str, date: str, scheduled_overs: int) -> dict:
+    d = dt.date.fromisoformat(date[:10])
+    for day in (d, d - dt.timedelta(days=1), d + dt.timedelta(days=1)):
+        for ev in espn_day(path, day):
+            if str(ev.get("id")) == str(event_id):
+                return parse_cricket_event(ev, scheduled_overs, ESPN.format(path=path, day=f"{day:%Y%m%d}"))
+    raise SystemExit(f"error: cricket event {event_id} not found on the {path} scoreboard around {date}")
 
 
 # --------------------------------------------------------------------------- CSV (any league)

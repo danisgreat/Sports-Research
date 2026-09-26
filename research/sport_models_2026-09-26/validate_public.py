@@ -33,6 +33,7 @@ import datetime as dt
 import hashlib
 import io
 import json
+import os
 import sys
 import time
 import urllib.request
@@ -149,6 +150,92 @@ def mlb() -> list[dict]:
     return sorted(out, key=lambda g: (g["date"], g["id"]))
 
 
+# ----- second pass (2026-09-26(d)): sportsdataverse parquet files and an IPL dataset. These need pyarrow
+# (research only: `pip install pyarrow`); tools/ stays standard-library. Only the named columns are read.
+
+SDV = RAW + "sportsdataverse/"
+
+
+def _parquet(url: str, columns: list[str]) -> list[dict]:
+    import pyarrow.parquet as pq  # research-only dependency
+    return pq.read_table(io.BytesIO(get(url)), columns=columns).to_pylist()
+
+
+def espn_sdv(repo: str, league: str, seasons) -> list[dict]:
+    """ESPN schedules as compiled by sportsdataverse (hoopR/wehoop): regular season (type 2), completed."""
+    cols = ["game_id", "game_date", "season", "season_type", "neutral_site", "status_type_completed",
+            "status_type_short_detail", "home_display_name", "away_display_name", "home_score", "away_score"]
+    out = []
+    for s in seasons:
+        for r in _parquet(f"{SDV}{repo}/main/{league}/schedules/parquet/{league}_schedule_{s}.parquet", cols):
+            if r["season_type"] != 2 or not r["status_type_completed"] or r["home_score"] in (None, ""):
+                continue
+            out.append({"id": str(r["game_id"]), "date": str(r["game_date"])[:10], "season": int(r["season"]),
+                        "home": r["home_display_name"], "away": r["away_display_name"], "hs": int(r["home_score"]),
+                        "as": int(r["away_score"]), "neutral": bool(r["neutral_site"]),
+                        "finish": "OT" if "OT" in str(r["status_type_short_detail"] or "").upper() else "REG"})
+    return sorted(out, key=lambda g: (g["date"], g["id"]))
+
+
+def nhl() -> list[dict]:
+    """fastRhockey NHL game_info (final scores, the shootout winner's +1 included) and scoring (period type of
+    every goal: an 'SO' row marks a shootout, an 'OT' row an overtime winner). The linescore file's
+    has_shootout flag is False for every game in these files, so it is not used."""
+    base = f"{SDV}fastRhockey-nhl-data/main/nhl"
+    out = []
+    for s in range(2022, 2027):
+        goals = _parquet(f"{base}/scoring/parquet/scoring_{s}.parquet", ["game_id", "period_type"])
+        so = {r["game_id"] for r in goals if r["period_type"] == "SO"}
+        ot = {r["game_id"] for r in goals if r["period_type"] == "OT"}
+        for r in _parquet(f"{base}/game_info/parquet/game_info_{s}.parquet",
+                          ["game_id", "season", "game_type", "game_date", "home_team_abbr", "away_team_abbr",
+                           "home_score", "away_score", "game_state"]):
+            if r["game_type"] != "R" or r["game_state"] not in ("OFF", "FINAL") or r["home_score"] is None:
+                continue
+            gid = r["game_id"]
+            finish = "SO" if gid in so else "OT" if gid in ot else "REG"
+            out.append({"id": str(gid), "date": str(r["game_date"])[:10], "season": s, "home": r["home_team_abbr"],
+                        "away": r["away_team_abbr"], "hs": int(r["home_score"]), "as": int(r["away_score"]),
+                        "neutral": False, "finish": finish})
+    return sorted(out, key=lambda g: (g["date"], g["id"]))
+
+
+IPL_RENAMES = {"Delhi Daredevils": "Delhi Capitals", "Kings XI Punjab": "Punjab Kings",
+               "Royal Challengers Bangalore": "Royal Challengers Bengaluru",
+               "Rising Pune Supergiants": "Rising Pune Supergiant"}
+
+
+def ipl() -> list[dict]:
+    """IPL results and first innings from ritesh-ojha/IPL-DATASET. A first innings is valid (uncensored) when
+    it faced all 120 legal balls or lost 10 wickets; a rain-shortened first innings is excluded."""
+    ren = lambda s: IPL_RENAMES.get(s, s)  # noqa: E731
+    info = {r["match_number"]: r for r in csv.DictReader(io.StringIO(
+        get(f"{RAW}ritesh-ojha/IPL-DATASET/main/csv/Match_Info.csv").decode("utf-8")))}
+    inn = {}
+    for r in csv.DictReader(io.StringIO(get(f"{RAW}ritesh-ojha/IPL-DATASET/main/csv/Ball_By_Ball_Match_Data.csv")
+                                        .decode("utf-8"))):
+        if r["Innings"] != "1":
+            continue
+        d = inn.setdefault(r["ID"], {"team": r["BattingTeam"], "runs": 0, "legal": 0, "wkts": 0})
+        d["runs"] += int(r["TotalRun"])
+        d["wkts"] += r["IsWicketDelivery"] == "1"
+        d["legal"] += r["ExtraType"] not in ("wides", "noballs")
+    out = []
+    for mid, r in info.items():
+        t1, t2 = ren(r["team1"]), ren(r["team2"])
+        res = r["result"].strip().lower()
+        m = {"date": r["match_date"], "team1": t1, "team2": t2, "winner": ren(r["winner"]) if res == "win" else None,
+             "venue": r["venue"].split(",")[0].strip(), "first_innings_valid": False, "bat_first": None,
+             "bowl_first": None, "first_innings_runs": None}
+        f = inn.get(mid)
+        if f:
+            bat = ren(f["team"])
+            m.update({"bat_first": bat, "bowl_first": t2 if bat == t1 else t1, "first_innings_runs": f["runs"],
+                      "first_innings_valid": res != "no result" and (f["legal"] >= 120 or f["wkts"] >= 10)})
+        out.append(m)
+    return sorted(out, key=lambda m: m["date"])
+
+
 # --------------------------------------------------------------------------- runs
 
 RUNS = {
@@ -162,12 +249,18 @@ RUNS = {
     "afl": (afl, "afl", "2021-03-01", "2025-10-01", "afl"),
     "nba": (nba538, "nba", "2012-10-01", "2015-04-30", "nba"),
     "mlb": (mlb, "mlb-teamonly", "2022-04-01", "2024-10-01", "mlb"),
+    # second pass, 2026-09-26(d): constants as frozen in commit 0872a36, not changed for these runs
+    "nhl": (nhl, "nhl", "2023-10-01", "2026-06-30", "nhl"),
+    "nba_recent": (lambda: espn_sdv("hoopR-nba-data", "nba", range(2021, 2027)), "nba", "2023-10-01", "2026-06-30", "nba"),
+    "wnba": (lambda: espn_sdv("wehoop-wnba-data", "wnba", range(2020, 2027)), "wnba", "2022-05-01", "2026-09-20", "wnba"),
 }
 
 
 def run_one(key: str, boot: int) -> dict:
     t0 = time.time()
-    if key == "atp":
+    if key == "ipl":
+        res = sm.validate_cricket(sm.config("t20"), ipl(), "2016-01-01", "2026-09-20", boot=boot)
+    elif key == "atp":
         res = sm.validate_tennis(sm.config("atp"), tennis(), "2023-01-01", "2026-09-20",
                                  levels={"G", "M", "A", "F", "250", "500"}, boot=boot)
     else:
@@ -190,7 +283,7 @@ def main(argv=None) -> int:
     parts = HERE / "parts"
     parts.mkdir(exist_ok=True)
     if not args.merge:
-        keys = args.only.split(",") if args.only else list(RUNS) + ["atp"]
+        keys = args.only.split(",") if args.only else list(RUNS) + ["atp", "ipl"]
         for key in keys:
             res = run_one(key, args.boot)
             (parts / f"{key}.json").write_text(json.dumps(res, indent=1, sort_keys=True), encoding="utf-8")
@@ -218,4 +311,6 @@ def main(argv=None) -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    code = main()
+    sys.stdout.flush()
+    os._exit(code)   # pyarrow's worker threads can abort a normal interpreter shutdown after the files are written

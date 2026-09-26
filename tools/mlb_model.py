@@ -536,8 +536,8 @@ def main(argv=None) -> int:
         return 0
     if args.cmd == "shadow":
         row = shadow(src, args.gamepk, args.total, args.card, now, Path(args.log))
-        print(f"Frozen shadow row {row['row_id']} for {row['away']} @ {row['home']} "
-              f"(A1 P(over {row['line_total']}) {row['a1_p_over']}, A0 {row['a0_p_over']}). Never a card input.")
+        print(f"Frozen shadow row {row['row_id']} at {row['frozen_at_utc']} for {row['away']} @ {row['home']}. "
+              f"Blind: probabilities are in {Path(args.log).name}, read only at review. Never a card input.")
         return 0
     if args.cmd == "settle":
         added = settle(src, Path(args.log), Path(args.results), now)

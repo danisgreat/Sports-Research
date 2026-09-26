@@ -264,6 +264,18 @@ class ResearchFieldTests(unittest.TestCase):
         out = new + "OUT_OF_UNIVERSE (operator request)\n"
         self.assertTrue(audit(out, strict=True)["P-751"].present["UV"]["present"])
 
+    def test_shadow_record_at_settlement(self):  # added 2026-09-26(d) (C-SPORT-SHADOW, C-MLB-SHADOW)
+        base = "#### P-752 — EPL, Arsenal v Chelsea\n" + FULL_ISSUE + "Freeze: CONTROL_MANIFEST_2026-09-26.md.\n"
+        base += "UNIVERSE: universe/UNIVERSE_2026-09-27.json / epl:740123\n"
+        settled = base + "\n#### Settlement and full retrospective\n\nFinal 2-1 (https://site.api.espn.com/...).\n"
+        self.assertIn("10s", audit(settled, settlement=True, strict=True)["P-752"].missing_blocking)
+        ok = settled + "SHADOW: epl:740123:2.5:-0.5\n"
+        self.assertTrue(audit(ok, settlement=True, strict=True)["P-752"].present["10s"]["present"])
+        miss = settled + "SHADOW: MISSED (event started before the row was frozen)\n"
+        self.assertTrue(audit(miss, settlement=True, strict=True)["P-752"].present["10s"]["present"])
+        old = settled.replace("CONTROL_MANIFEST_2026-09-26.md", "CONTROL_MANIFEST_2026-09-25-6.md")
+        self.assertNotIn("10s", audit(old, settlement=True, strict=True)["P-752"].missing_blocking)
+
     def test_lineup_diff_names_must_be_on_card(self):
         card_text = ("#### P-750 — MLB, Cardinals @ Pirates\n" + FULL_ISSUE +
                      "Lineup STL: Wetherholt, Herrera, Burleson, Walker, Bernal, Torres, Saggese, Church, Winn.\n")

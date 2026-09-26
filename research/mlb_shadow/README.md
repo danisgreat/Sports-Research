@@ -27,8 +27,8 @@ The hand-built card process has its lowest resolution in MLB (0.0075; 58.6% of d
 ## Order of operations for an MLB card
 
 1. Build and freeze the card as normal. The card never sees this model.
-2. Before first pitch: `python tools/mlb_model.py shadow --gamepk <pk> --total <line> --card P-###`.
-3. After the final: `python tools/mlb_model.py settle`, then `python tools/mlb_model.py score`.
+2. Before first pitch: `python tools/mlb_model.py shadow --gamepk <pk> --total <line> --card P-###`. It is blind: it prints the row ID only (2026-09-26(d)).
+3. After the final: `python tools/mlb_model.py settle`, then `python tools/mlb_model.py score`. The card's settlement prints `SHADOW: <row id>` or `SHADOW: MISSED <reason>` (audit `10s`).
 
 ## Preregistered review (150 settled games; a review point, not proof)
 
