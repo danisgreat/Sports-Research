@@ -1,0 +1,634 @@
+{
+  "nba": {
+    "games": 1030,
+    "result_brier_model": 0.2103,
+    "result_brier_A0": 0.2476,
+    "side": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.387,
+          "n": 399,
+          "won": 0.594,
+          "mean_p": 0.549
+        },
+        "0.6-0.7": {
+          "share": 0.323,
+          "n": 333,
+          "won": 0.691,
+          "mean_p": 0.647
+        },
+        "0.7-0.8": {
+          "share": 0.21,
+          "n": 216,
+          "won": 0.782,
+          "mean_p": 0.744
+        },
+        "0.8-1.0": {
+          "share": 0.08,
+          "n": 82,
+          "won": 0.829,
+          "mean_p": 0.838
+        }
+      },
+      "strong_share": 0.289,
+      "strong_won": 0.795,
+      "strong_mean_p": 0.77
+    },
+    "total": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.508,
+          "n": 523,
+          "won": 0.583,
+          "mean_p": 0.546
+        },
+        "0.6-0.7": {
+          "share": 0.37,
+          "n": 381,
+          "won": 0.73,
+          "mean_p": 0.645
+        },
+        "0.7-0.8": {
+          "share": 0.117,
+          "n": 120,
+          "won": 0.767,
+          "mean_p": 0.738
+        },
+        "0.8-1.0": {
+          "share": 0.006,
+          "n": 6,
+          "won": 0.833,
+          "mean_p": 0.845
+        }
+      },
+      "strong_share": 0.122,
+      "strong_won": 0.77,
+      "strong_mean_p": 0.743
+    },
+    "window": [
+      "2025-12-01",
+      "2026-06-20"
+    ],
+    "total_line": 233.5,
+    "model": "A1 SPORT-A1-shadow/2026-09-26d"
+  },
+  "wnba": {
+    "games": 333,
+    "result_brier_model": 0.2093,
+    "result_brier_A0": 0.2505,
+    "side": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.375,
+          "n": 125,
+          "won": 0.512,
+          "mean_p": 0.55
+        },
+        "0.6-0.7": {
+          "share": 0.348,
+          "n": 116,
+          "won": 0.698,
+          "mean_p": 0.647
+        },
+        "0.7-0.8": {
+          "share": 0.216,
+          "n": 72,
+          "won": 0.861,
+          "mean_p": 0.743
+        },
+        "0.8-1.0": {
+          "share": 0.06,
+          "n": 20,
+          "won": 0.75,
+          "mean_p": 0.829
+        }
+      },
+      "strong_share": 0.276,
+      "strong_won": 0.837,
+      "strong_mean_p": 0.762
+    },
+    "total": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.393,
+          "n": 131,
+          "won": 0.511,
+          "mean_p": 0.546
+        },
+        "0.6-0.7": {
+          "share": 0.303,
+          "n": 101,
+          "won": 0.683,
+          "mean_p": 0.651
+        },
+        "0.7-0.8": {
+          "share": 0.213,
+          "n": 71,
+          "won": 0.873,
+          "mean_p": 0.748
+        },
+        "0.8-1.0": {
+          "share": 0.09,
+          "n": 30,
+          "won": 0.967,
+          "mean_p": 0.834
+        }
+      },
+      "strong_share": 0.303,
+      "strong_won": 0.901,
+      "strong_mean_p": 0.774
+    },
+    "window": [
+      "2026-05-01",
+      "2026-09-24"
+    ],
+    "total_line": 163.5,
+    "model": "A1 SPORT-A1-shadow/2026-09-26d"
+  },
+  "nbl": {
+    "games": 177,
+    "result_brier_model": 0.2129,
+    "result_brier_A0": 0.2526,
+    "side": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.435,
+          "n": 77,
+          "won": 0.455,
+          "mean_p": 0.551
+        },
+        "0.6-0.7": {
+          "share": 0.305,
+          "n": 54,
+          "won": 0.741,
+          "mean_p": 0.648
+        },
+        "0.7-0.8": {
+          "share": 0.198,
+          "n": 35,
+          "won": 0.771,
+          "mean_p": 0.743
+        },
+        "0.8-1.0": {
+          "share": 0.062,
+          "n": 11,
+          "won": 0.909,
+          "mean_p": 0.837
+        }
+      },
+      "strong_share": 0.26,
+      "strong_won": 0.804,
+      "strong_mean_p": 0.765
+    },
+    "total": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.525,
+          "n": 93,
+          "won": 0.473,
+          "mean_p": 0.554
+        },
+        "0.6-0.7": {
+          "share": 0.328,
+          "n": 58,
+          "won": 0.672,
+          "mean_p": 0.641
+        },
+        "0.7-0.8": {
+          "share": 0.119,
+          "n": 21,
+          "won": 0.667,
+          "mean_p": 0.754
+        },
+        "0.8-1.0": {
+          "share": 0.028,
+          "n": 5,
+          "won": 1.0,
+          "mean_p": 0.811
+        }
+      },
+      "strong_share": 0.147,
+      "strong_won": 0.731,
+      "strong_mean_p": 0.765
+    },
+    "window": [
+      "2025-09-01",
+      "2026-04-30"
+    ],
+    "total_line": 186.5,
+    "model": "A1 SPORT-A1-shadow/2026-09-26d"
+  },
+  "nfl": {
+    "games": 286,
+    "result_brier_model": 0.2263,
+    "result_brier_A0": 0.2504,
+    "side": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.399,
+          "n": 114,
+          "won": 0.57,
+          "mean_p": 0.553
+        },
+        "0.6-0.7": {
+          "share": 0.297,
+          "n": 85,
+          "won": 0.612,
+          "mean_p": 0.647
+        },
+        "0.7-0.8": {
+          "share": 0.182,
+          "n": 52,
+          "won": 0.673,
+          "mean_p": 0.747
+        },
+        "0.8-1.0": {
+          "share": 0.091,
+          "n": 26,
+          "won": 0.846,
+          "mean_p": 0.838
+        }
+      },
+      "strong_share": 0.273,
+      "strong_won": 0.731,
+      "strong_mean_p": 0.778
+    },
+    "total": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.552,
+          "n": 158,
+          "won": 0.538,
+          "mean_p": 0.553
+        },
+        "0.6-0.7": {
+          "share": 0.367,
+          "n": 105,
+          "won": 0.629,
+          "mean_p": 0.643
+        },
+        "0.7-0.8": {
+          "share": 0.063,
+          "n": 18,
+          "won": 0.722,
+          "mean_p": 0.742
+        },
+        "0.8-1.0": {
+          "share": 0.017,
+          "n": 5,
+          "won": 0.8,
+          "mean_p": 0.836
+        }
+      },
+      "strong_share": 0.08,
+      "strong_won": 0.739,
+      "strong_mean_p": 0.762
+    },
+    "window": [
+      "2025-09-01",
+      "2026-02-15"
+    ],
+    "total_line": 46.5,
+    "model": "A1 SPORT-A1-shadow/2026-09-26d"
+  },
+  "afl": {
+    "games": 217,
+    "result_brier_model": 0.1831,
+    "result_brier_A0": 0.244,
+    "side": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.29,
+          "n": 63,
+          "won": 0.508,
+          "mean_p": 0.55
+        },
+        "0.6-0.7": {
+          "share": 0.295,
+          "n": 64,
+          "won": 0.641,
+          "mean_p": 0.651
+        },
+        "0.7-0.8": {
+          "share": 0.171,
+          "n": 37,
+          "won": 0.838,
+          "mean_p": 0.747
+        },
+        "0.8-1.0": {
+          "share": 0.221,
+          "n": 48,
+          "won": 0.958,
+          "mean_p": 0.872
+        }
+      },
+      "strong_share": 0.392,
+      "strong_won": 0.906,
+      "strong_mean_p": 0.818
+    },
+    "total": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.484,
+          "n": 105,
+          "won": 0.533,
+          "mean_p": 0.544
+        },
+        "0.6-0.7": {
+          "share": 0.406,
+          "n": 88,
+          "won": 0.58,
+          "mean_p": 0.644
+        },
+        "0.7-0.8": {
+          "share": 0.106,
+          "n": 23,
+          "won": 0.652,
+          "mean_p": 0.736
+        },
+        "0.8-1.0": {
+          "share": 0.005,
+          "n": 1,
+          "won": 1.0,
+          "mean_p": 0.809
+        }
+      },
+      "strong_share": 0.111,
+      "strong_won": 0.667,
+      "strong_mean_p": 0.739
+    },
+    "window": [
+      "2026-03-01",
+      "2026-09-24"
+    ],
+    "total_line": 168.5,
+    "model": "A1 SPORT-A1-shadow/2026-09-26d"
+  },
+  "nrl": {
+    "games": 213,
+    "result_brier_model": 0.2353,
+    "result_brier_A0": 0.2489,
+    "side": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.474,
+          "n": 101,
+          "won": 0.545,
+          "mean_p": 0.55
+        },
+        "0.6-0.7": {
+          "share": 0.315,
+          "n": 67,
+          "won": 0.701,
+          "mean_p": 0.644
+        },
+        "0.7-0.8": {
+          "share": 0.183,
+          "n": 39,
+          "won": 0.667,
+          "mean_p": 0.737
+        },
+        "0.8-1.0": {
+          "share": 0.009,
+          "n": 2,
+          "won": 1.0,
+          "mean_p": 0.842
+        }
+      },
+      "strong_share": 0.192,
+      "strong_won": 0.683,
+      "strong_mean_p": 0.742
+    },
+    "total": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.681,
+          "n": 145,
+          "won": 0.538,
+          "mean_p": 0.542
+        },
+        "0.6-0.7": {
+          "share": 0.272,
+          "n": 58,
+          "won": 0.431,
+          "mean_p": 0.634
+        },
+        "0.7-0.8": {
+          "share": 0.042,
+          "n": 9,
+          "won": 0.667,
+          "mean_p": 0.717
+        },
+        "0.8-1.0": {
+          "share": 0.005,
+          "n": 1,
+          "won": 0.0,
+          "mean_p": 0.827
+        }
+      },
+      "strong_share": 0.047,
+      "strong_won": 0.6,
+      "strong_mean_p": 0.728
+    },
+    "window": [
+      "2026-03-01",
+      "2026-09-24"
+    ],
+    "total_line": 46.5,
+    "model": "A1 SPORT-A1-shadow/2026-09-26d"
+  },
+  "nhl": {
+    "games": 989,
+    "result_brier_model": 0.2477,
+    "result_brier_A0": 0.25,
+    "side": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.672,
+          "n": 665,
+          "won": 0.508,
+          "mean_p": 0.547
+        },
+        "0.6-0.7": {
+          "share": 0.268,
+          "n": 265,
+          "won": 0.577,
+          "mean_p": 0.637
+        },
+        "0.7-0.8": {
+          "share": 0.051,
+          "n": 50,
+          "won": 0.76,
+          "mean_p": 0.731
+        },
+        "0.8-1.0": {
+          "share": 0.009,
+          "n": 9,
+          "won": 0.556,
+          "mean_p": 0.829
+        }
+      },
+      "strong_share": 0.06,
+      "strong_won": 0.729,
+      "strong_mean_p": 0.746
+    },
+    "total": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.661,
+          "n": 654,
+          "won": 0.514,
+          "mean_p": 0.546
+        },
+        "0.6-0.7": {
+          "share": 0.284,
+          "n": 281,
+          "won": 0.577,
+          "mean_p": 0.637
+        },
+        "0.7-0.8": {
+          "share": 0.054,
+          "n": 53,
+          "won": 0.642,
+          "mean_p": 0.732
+        },
+        "0.8-1.0": {
+          "share": 0.001,
+          "n": 1,
+          "won": 1.0,
+          "mean_p": 0.809
+        }
+      },
+      "strong_share": 0.055,
+      "strong_won": 0.648,
+      "strong_mean_p": 0.733
+    },
+    "window": [
+      "2025-12-01",
+      "2026-06-20"
+    ],
+    "total_line": 6.5,
+    "model": "A1 SPORT-A1-shadow/2026-09-26d"
+  },
+  "epl": {
+    "games": 290,
+    "result_brier_model": 0.2222,
+    "result_brier_A0": 0.2433,
+    "side": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.283,
+          "n": 82,
+          "won": 0.561,
+          "mean_p": 0.546
+        },
+        "0.6-0.7": {
+          "share": 0.162,
+          "n": 47,
+          "won": 0.574,
+          "mean_p": 0.646
+        },
+        "0.7-0.8": {
+          "share": 0.031,
+          "n": 9,
+          "won": 0.333,
+          "mean_p": 0.735
+        },
+        "0.8-1.0": {
+          "share": 0.028,
+          "n": 8,
+          "won": 0.875,
+          "mean_p": 0.834
+        }
+      },
+      "strong_share": 0.059,
+      "strong_won": 0.588,
+      "strong_mean_p": 0.781
+    },
+    "total": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.624,
+          "n": 181,
+          "won": 0.541,
+          "mean_p": 0.547
+        },
+        "0.6-0.7": {
+          "share": 0.345,
+          "n": 100,
+          "won": 0.47,
+          "mean_p": 0.638
+        },
+        "0.7-0.8": {
+          "share": 0.028,
+          "n": 8,
+          "won": 0.25,
+          "mean_p": 0.73
+        },
+        "0.8-1.0": {
+          "share": 0.003,
+          "n": 1,
+          "won": 0.0,
+          "mean_p": 0.805
+        }
+      },
+      "strong_share": 0.031,
+      "strong_won": 0.222,
+      "strong_mean_p": 0.738
+    },
+    "window": [
+      "2025-11-01",
+      "2026-05-24"
+    ],
+    "total_line": 2.5,
+    "model": "A1 SPORT-A1-shadow/2026-09-26d"
+  },
+  "mlb": {
+    "games": 2073,
+    "result_brier_model": 0.247,
+    "result_brier_A0": 0.2498,
+    "side": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.895,
+          "n": 1855,
+          "won": 0.531,
+          "mean_p": 0.538
+        },
+        "0.6-0.7": {
+          "share": 0.105,
+          "n": 218,
+          "won": 0.624,
+          "mean_p": 0.626
+        }
+      },
+      "strong_share": 0.0,
+      "strong_won": null,
+      "strong_mean_p": null
+    },
+    "total": {
+      "bands": {
+        "0.5-0.6": {
+          "share": 0.85,
+          "n": 1763,
+          "won": 0.533,
+          "mean_p": 0.537
+        },
+        "0.6-0.7": {
+          "share": 0.15,
+          "n": 310,
+          "won": 0.642,
+          "mean_p": 0.63
+        }
+      },
+      "strong_share": 0.0,
+      "strong_won": null,
+      "strong_mean_p": null
+    },
+    "window": [
+      "2026 season, after 300 games",
+      "2026-09-24"
+    ],
+    "model": "A1 team-only MLB-A1-shadow/2026-09-26b"
+  }
+}

@@ -6,6 +6,32 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-26(e) — predictability across sports
+
+**Why.** The user asked for predictability across all sports to be improved properly, then to continue thoroughly and accurately. **Category:** MEASUREMENT plus validity repairs. No probability, rank, width, centre or model constant moved (`C-RULE-FREEZE`).
+
+- **Preregistered first.** P1–P4 were committed in `cc447c9` before any run (`research/predictability_2026-09-26/PREREGISTRATION.md`).
+- **P1, the MLB declared-starter term:** not demonstrated on results in 2025 or 2026. It helped 2026 totals only.
+- **P2, coverage:**
+  - NBL 2025-26: A1 beat the population and TB-1.
+  - NBL 2024-25: not significant on results.
+  - NRL 2026: not significant on results.
+- **P3, cards against models on 98 of the cards' own contracts (54 cards):** card 0.2438, A1 0.2505, population 0.2680. Card − A1 = −0.007 [−0.025, +0.011], so anchoring the cards on the models is not supported.
+- **P4, the registry:** `tools/model_anchor.py` (+ tests), status `REFERENCE`, applied as `C-MODEL-ANCHOR`.
+- **P5, the predictability map** (exploratory; `BASE_RATES_REGISTER.md` §7.8; `C-PREDICTABILITY-MAP`): the share of STRONG (≥ 0.70) favourites runs from AFL 39% (90.6% won) and basketball 26–29% (80–84%) to MLB 0%.
+- **`T-MLB-V2-2025` concluded, replicated:** A1 − A0 = −0.0023 [−0.0042, −0.0005] over 2,121 unseen 2025 games.
+- **Validity repairs:**
+  - TB-1 `resolution` withdrawn for NRL sides and NFL totals (their intervals cross 0). NBA totals were kept on 2023–26 evidence.
+  - `tools/mlb_model.py`'s claim that historical starters cannot be reconstructed was corrected.
+- **Opened:** `T-FAV70-BAND` (NFL/NRL favourites at 0.70–0.80 look over-confident; tested prospectively, not fitted).
+- **Docs updated:**
+  - `RULES_GENERAL.md` §"2026-09-26(e)" and `CURRENT_RULES.md`;
+  - every sport's §0 page, with the NRL and American-football anchors corrected;
+  - `CONTROLS.md` and `BASE_RATES_REGISTER.md` §7.8;
+  - `LEARNING_REGISTER.md` §"2026-09-26(e)" (L-20260926-27–33) and `LEARNINGS_INDEX.md`;
+  - `NUMERICAL_MODEL_REGISTER.md`, `research/sport_shadow/README.md` and `research/sport_models_2026-09-26/README.md`;
+  - `CONTROL_MANIFEST_2026-09-27.md`.
+
 ### 2026-09-26(d) — second validation pass; shadow lanes for tennis and cricket; the settlement record
 
 **Why.** The user asked to continue the implementation across the framework, for every sport, accurately and carefully.

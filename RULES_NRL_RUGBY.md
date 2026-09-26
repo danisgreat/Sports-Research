@@ -40,7 +40,9 @@ This file covers rugby league. Rugby union and rugby sevens are different codes 
 | RL-P4 conditions | Venue, surface and match-window weather with a named mechanism | Wet weather is bidirectional (control 4) |
 
 ### 0.2 Building the score distribution
-1. **Anchor.** Sides: `TEAM_BASELINE_P` (`tools/team_baseline.py --league nrl`; 0.240 v 0.253). **Totals have no TB-1 resolution** (its RMSE is worse than the league mean): anchor on the population row (2026: mean 47.8, SD 13.9). Before Round 5, anchor sides on `BASELINE_P` too (TB-1 was worse than the base rate early).
+1. **Anchor.** Sides and totals both anchor on the population (`BASELINE_P`).
+   - **Sides (corrected 2026-09-26(e), validity repair):** TB-1's 2026 point gain (0.240 v 0.253) has a 95% interval that crosses 0 (−0.0294, +0.0044), so `TEAM_BASELINE_P` is printed with `TB1_NO_RESOLUTION:margin` and is not the anchor.
+   - **Totals have no TB-1 resolution either** (its RMSE is worse than the league mean): anchor on the population row (2026: mean 47.8, SD 13.9).
 2. **Scoring components, not points** (September 6). Points = 4×tries + 2×conversions + 2×penalty goals + 1×field goals, with conversions = tries × goal-kicking %. A debutant kicker's own reserve-grade kicking percentage enters the conversion term (L-075).
 3. **Branches.** Before any Under or underdog cushion is ranked, write one favourite-only scoring path (RL-B2) and one low-total separation path (RL-B3) with their mechanisms (override 1; controls 13, 14). The second half carries score, possession, field position, bench and fatigue forward (control 15). Close-game winners need the terminal-event branch (RL-B5, control 16; override 3). Blowouts are possession-native (control 12).
 4. **Regimes.** A changed spine rebuilds set organisation, kicking and edge attack (control 1). A current defensive collapse or spine return against season averages is a baseline/current-regime mixture (control 11).
@@ -75,7 +77,14 @@ NRLW has no population reference yet (`NOT_YET_DERIVED`).
 
 ### Numerical shadow model (2026-09-26(c); never a card input)
 
-`python tools/sport_models.py shadow --league nrl …` (`C-SPORT-SHADOW`). A1 is ridge ratings with key-number weights. **Not validated:** no NRL results could be reached. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+`python tools/sport_models.py shadow --league nrl …` (`C-SPORT-SHADOW`). A1 is ridge ratings with key-number weights. **Validated on 2026 (2026-09-26(e)):**
+- results: not significant (−0.0273, +0.0003);
+- margin RPS: better;
+- totals: no better than the population.
+
+TB-1's result gain was not significant either, so the NRL reference is the population. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+
+**Predictability and cards (2026-09-26(e)).** The model's favourite reached 0.70 in 19% of games and won 68.3%. The 0.70–0.80 band won 67% at 0.737, so it is over-confident. On the cards' own NRL contracts (4, from 2 cards): card 0.271, A1 0.203. That is too few to read (`research/predictability_2026-09-26/README.md`; `BASE_RATES_REGISTER.md` §7.8).
 
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 spine is a regime · 2 possession imbalance drives dependence · 3 cover rates diagnostic · 4 wet weather bidirectional · 5 goal-kicker state · 6 sin-bin/send-off tail · 7 winner ≠ handicap · 8 league and union never pooled · 9 motivation conditional · 10 no calibration claim · 11 defensive regime and spine-return mixture · 12 blowouts are possession-native · 13 a total can clear through one team · 14 low total ≠ close margin · 15 halftime doesn't freeze separation · 16 close-game winner needs terminal events.

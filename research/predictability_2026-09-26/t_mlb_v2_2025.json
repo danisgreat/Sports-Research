@@ -1,0 +1,22 @@
+{
+  "n_games": 2121,
+  "n_days": 158,
+  "targets": [
+    "home_win",
+    "over_6.5",
+    "over_7.5",
+    "over_8.5",
+    "over_9.5",
+    "over_10.5"
+  ],
+  "a1_brier": 0.23654421408183854,
+  "a0_brier": 0.23883603326491268,
+  "a1_minus_a0": -0.0022918191830741245,
+  "ci95_day_block": [
+    -0.004186570517268257,
+    -0.00046210130172273206
+  ],
+  "model_version": "MLB-A1-shadow/2026-09-26b",
+  "params_sha": "40454ee4ef159de8",
+  "note": "A1 is team + park + home only (no starters). Mean Brier across the listed targets. Negative a1_minus_a0 means A1 was better. Descriptive; not a promotion."
+}

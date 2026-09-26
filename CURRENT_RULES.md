@@ -10,6 +10,11 @@
 - **`C-MLB-SHADOW`:** after an MLB card is frozen, `tools/mlb_model.py shadow` records the numerical pilot's forecast. It is never a card input.
 - **`C-SPORT-SHADOW` (2026-09-26(c), (d)):** every other sport, tennis and cricket included, has a numerical A0/A1 model too (`tools/sport_models.py`). After the card is frozen, `sport_models.py shadow` records it blind; the command prints the row ID only. Every settlement prints `SHADOW: <row id>`, `SHADOW: NO_LANE …` or `SHADOW: MISSED …` (audit `10s`). It is never a card input. Its validation, sport by sport, is in `research/sport_models_2026-09-26/README.md`.
 - **Every learning is indexed** in `LEARNINGS_INDEX.md`; 80 untested historical candidates and early tests are closed.
+- **2026-09-26(e): predictability across sports** (`RULES_GENERAL.md` §"2026-09-26(e)"; measurement only).
+  - The predictability map (`BASE_RATES_REGISTER.md` §7.8) shows where STRONG picks exist: AFL and basketball sides; not MLB.
+  - The cards were no worse than the team models on 98 of their own contracts, so the models stay a reference (`tools/model_anchor.py`), not a card input.
+  - MLB's starter term failed its preregistered test.
+  - NRL sides and NFL totals no longer anchor on TB-1 (validity repair: their gains are not significant).
 - **Method:** MDS-2026.09.19-v4.3.
 - **Control revision:** CR-2026.09.21-3.
 - **Scoring:** SCV-2026.09.19-v2.
@@ -137,6 +142,12 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
 - **`TOP2_QUALITY` on every card:** STRONG / SUPPORTED / TOP1_ONLY / COIN_FLIP. Under `TOP2_COIN_FLIP`, the delivery says in plain words that the top two are near coin flips.
   - Optional **`SLATE_ADVISORY`**: up to two same-event contracts the card's own distribution prices at q ≥ 0.70. Not ranked, not scored, not a betting recommendation.
   - **Rank 1 is only "far more likely to win than lose" in the STRONG tier.** Held out, q ≥ 0.70 won 81% of decisions and 73% as Rank 1; below 0.70, 52–63%.
+- **Predictability map (`C-PREDICTABILITY-MAP`, 2026-09-26(e); `BASE_RATES_REGISTER.md` §7.8).** Beside the track-record row, print the league's map row: the share of games whose model favourite reaches 0.70, and how often those won.
+  - **STRONG sides are common** in the AFL (39%, won 90.6%) and basketball (26–29%, won 80–84%), and less reliable in the NFL (27%, 73.1%).
+  - **They are uncommon** in the NRL (19%) and **rare** in the NHL (6%) and soccer three-way results (6%).
+  - **They are absent in MLB (0%).** Totals rarely reach 0.70 anywhere.
+  - Where the map shows few or no STRONG favourites, a `TOP2_COIN_FLIP` delivery says the *slate* cannot produce a STRONG Rank 1.
+- **The models are a reference, not a card input (`C-MODEL-ANCHOR`, status `REFERENCE`).** On 98 contracts from 54 settled cards, the cards (Brier 0.2438) were no worse than the team model (0.2505) [−0.025, +0.011]. Anchoring cards on the models is not supported, and would be a `MODEL_CHANGE` needing the user's explicit instruction.
 - **No pooled band forces an ordinal:** no 40–60% floor, no slot-history fade (G26.1).
 - **Bottom row (G27):** write its best case in full and run the swap test against the row above.
 - **Pairs.**
@@ -192,6 +203,7 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
   - `C-TEN-FAV-SEPARATION`, `T-TEN-BENCHMARK-GAP`, `T-CRI-DOMINANT-HITTER`, `T-CRI-POST-TOSS-FREEZE`;
   - from 2026-09-25(d): `T-PLUS-CUSHION`, `C-LOW-RESOLUTION-BAND`, `T-TOTAL-DIRECTION-LEAGUE`;
   - from 2026-09-25(e): `T-RM1-PROSPECTIVE` (q against p; amended 2026-09-26), `T-TB1-ANCHOR` (cards against TB-1 in covered leagues), `T-NRL-BYE-RUST` (non-binding);
+  - from 2026-09-26(e): `T-FAV70-BAND` (NFL and NRL favourites at 0.70–0.80; 0/100 band games per league). `T-MLB-V2-2025` concluded (replicated);
   - from 2026-09-23: `O-NPB-ERA-CENTRE`;
   - from 2026-09-26: `T-UNIVERSE-VS-SELECTED`, `C-MARKET-BENCHMARK`, `C-MLB-SHADOW`, `C-SPORT-SHADOW`.
 - **Closed 2026-09-26:** 59 historical candidates and 21 early process tests (`CLOSED_UNTESTED`), plus `C-RANK2-GAP` (answered), `C-WEIGHT-PROPAGATION`, `C-MARGIN-TAIL-MASS` and `C-OU-GEOMETRY` (superseded). Re-register with a v2 manifest if wanted (`LEARNING_REGISTER.md` §"2026-09-26" D).
@@ -282,7 +294,7 @@ Each card lists what the card must print, plus the traps that recur. The detail 
 - **NFL key numbers (2026-09-25(e)):** P(\|m\| = 3) 0.136–0.151; P(\|m\| = 7) 0.074–0.096. The TB-1 residual width is 13.6 (the G-L12 benchmark of about 13.9 is confirmed).
 - **`NO_DEMONSTRATED_SKILL`** for NFL/NCAA (3/12 at 0.544; cushions 1/6) and AFL (3/10 at 0.662; cushions 0/3), both over-confident. The grade is capped at LOW, and the departure ledger and `C-PLUS-CUSHION` are required.
 - **Population references now exist** for the NFL, AFL and NRL (`BASE_RATES_REGISTER.md` §7.7). Rugby union is still `NOT_YET_DERIVED`.
-- **`TEAM_BASELINE_P`** (`--league nfl|afl|nrl`) is the anchor for sides (AFL 0.202 v 0.249). Totals anchor on the population, except the NFL (marginal).
+- **`TEAM_BASELINE_P`** (`--league nfl|afl`) is the anchor for NFL and AFL sides (AFL 0.202 v 0.249). **NRL sides anchor on the population** (TB-1's NRL gain is not significant; corrected 2026-09-26(e)). Totals anchor on the population, the NFL's included (its marginal TB-1 total gain is not significant; corrected 2026-09-26(e)).
 - **Cushions on the TB-1 underdog cover:** NFL +1.5/+2.5/+3.5 0.35–0.54; NRL +1.5/+2.5 0.41–0.49; AFL +6.5 0.38–0.43. RM-1 flips unsupported cushions.
 - **Rank 1/Rank 2 record: 12 W / 20 L,** the worst group. RM-1 held-out Rank 1 was 62.5% against 37.5% issued.
 - **P-515's score was 36–20**, not 36–14 (grades unchanged). The NRL regular season is ESPN season type 1.
@@ -332,6 +344,7 @@ All are standard-library Python 3.10+. Run from the repository root.
 | `python tools/card_math.py total\|cover\|departure …` | When building a card: derive every row from its own distribution; departure ledger |
 | `python tools/team_baseline.py predict --league <nba\|wnba\|nbl\|nfl\|afl\|nrl\|epl\|mlb\|nhl> --home … --away … --date <local date> --total … --home-line …` | When building a card: `TEAM_BASELINE_P` and its flags |
 | `python tools/rank_model.py rank --sport <league> --row "<contract>=<p>" …` | Field 4: RM-1 q, tiers, flags, the q order and `TOP2_QUALITY` |
+| `python tools/model_anchor.py registry` | The reference model per league and target (`C-MODEL-ANCHOR`; research and shadow reviews only, never a card input) |
 | `python research/rank_model_2026-09-25e/validate_rank_model.py`, then `python tools/rank_model.py fit --fitted <date> --out tools/rank_model_coefficients.json` | At the 25-card review only, after rebuilding the dataset |
 | `python research/settled_rows_2026-09-25/extract_settled_rows.py` then `python tools/calibration_report.py` | Every 25-card review: rebuild the settled-row dataset and report calibration and resolution |
 | `python tools/verify_manifest.py` | Before issuing: governance files match the current manifest |
@@ -361,6 +374,7 @@ All are standard-library Python 3.10+. Run from the repository root.
 | Role and honesty boundary | `AGENT_ROLE_AND_TASK.md` |
 | Numerical program (not built) | `NUMERICAL_PROGRAM.md`, `H0_DATASET_CARD.md` |
 | Ranking model RM-1 (evidence, refit procedure) | `research/rank_model_2026-09-25e/README.md`; `tools/rank_model.py` |
+| Predictability by sport; cards against models; MLB starters; NBL/NRL validation | `research/predictability_2026-09-26/README.md`; `BASE_RATES_REGISTER.md` §7.8; `tools/model_anchor.py` |
 | Team baseline TB-1, NFL/AFL/NRL references, cushion base rates | `research/team_baseline_2026-09-25e/README.md`; `tools/team_baseline.py`; `BASE_RATES_REGISTER.md` §7.7 |
 | Active log / state register | `PREDICTION_LOG_COMBINED_5.md` / `GAME_LOG_STATUS_CURRENT.md` |
 | History of changes | `CHANGELOG.md` |

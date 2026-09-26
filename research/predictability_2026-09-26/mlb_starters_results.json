@@ -1,0 +1,354 @@
+{
+  "2026": {
+    "season": 2026,
+    "games_scored": 2073.0,
+    "days": 156,
+    "coverage": {
+      "games": 2073,
+      "both_starters": 2009
+    },
+    "model_version": "MLB-A1-shadow/2026-09-26b",
+    "params_sha": "40454ee4ef159de8",
+    "a0": {
+      "win_brier": 0.24976,
+      "win_ll": 0.69266,
+      "rl_home_-1.5": 0.23005,
+      "over_7.5": 0.24544,
+      "over_8.5": 0.25016,
+      "over_9.5": 0.23967
+    },
+    "a1": {
+      "win_brier": 0.24704,
+      "win_ll": 0.68716,
+      "over_7.5": 0.24388,
+      "over_8.5": 0.24866,
+      "over_9.5": 0.23735,
+      "rl_home_-1.5": 0.22884
+    },
+    "a1s": {
+      "win_brier": 0.24612,
+      "win_ll": 0.6853,
+      "over_7.5": 0.24115,
+      "over_8.5": 0.24692,
+      "over_9.5": 0.23557,
+      "rl_home_-1.5": 0.2278
+    },
+    "tb1": {
+      "win_brier": 0.24746,
+      "win_ll": 0.68803,
+      "rl_home_-1.5": 0.22887,
+      "over_7.5": 0.24429,
+      "over_8.5": 0.24922,
+      "over_9.5": 0.23873
+    },
+    "primary_A1S_minus_A1_win_logloss": {
+      "mean": -0.00186,
+      "ci95": [
+        -0.00789,
+        0.00432
+      ]
+    },
+    "secondary_A1S_minus_A1_composite_brier": {
+      "mean": -0.00164,
+      "ci95": [
+        -0.00309,
+        -0.00017
+      ]
+    },
+    "A1S_minus_A0_win_logloss": {
+      "mean": -0.00737,
+      "ci95": [
+        -0.01484,
+        0.00012
+      ]
+    },
+    "A1S_minus_A0_composite_brier": {
+      "mean": -0.0035,
+      "ci95": [
+        -0.00559,
+        -0.00144
+      ]
+    },
+    "A1S_minus_TB1_win_logloss": {
+      "mean": -0.00273,
+      "ci95": [
+        -0.00877,
+        0.00353
+      ]
+    },
+    "A1S_minus_TB1_composite_brier": {
+      "mean": -0.0022,
+      "ci95": [
+        -0.00379,
+        -0.00058
+      ]
+    },
+    "A1_minus_A0_win_logloss": {
+      "mean": -0.0055,
+      "ci95": [
+        -0.01095,
+        6e-05
+      ]
+    },
+    "A1_minus_A0_win_brier": {
+      "mean": -0.00272,
+      "ci95": [
+        -0.00542,
+        2e-05
+      ]
+    },
+    "A1_minus_TB1_win_brier": {
+      "mean": -0.00042,
+      "ci95": [
+        -0.00143,
+        0.00053
+      ]
+    },
+    "TB1_minus_A0_win_brier": {
+      "mean": -0.0023,
+      "ci95": [
+        -0.00432,
+        -0.00028
+      ]
+    },
+    "A1_minus_A0_over_7.5_brier": {
+      "mean": -0.00156,
+      "ci95": [
+        -0.00366,
+        0.00057
+      ]
+    },
+    "A1_minus_A0_over_8.5_brier": {
+      "mean": -0.00149,
+      "ci95": [
+        -0.00377,
+        0.00074
+      ]
+    },
+    "A1_minus_A0_over_9.5_brier": {
+      "mean": -0.00232,
+      "ci95": [
+        -0.00456,
+        -0.00012
+      ]
+    },
+    "A1S_minus_A0_over_7.5_brier": {
+      "mean": -0.00428,
+      "ci95": [
+        -0.0074,
+        -0.00131
+      ]
+    },
+    "A1S_minus_A0_over_8.5_brier": {
+      "mean": -0.00323,
+      "ci95": [
+        -0.00646,
+        -0.00016
+      ]
+    },
+    "A1S_minus_A0_over_9.5_brier": {
+      "mean": -0.0041,
+      "ci95": [
+        -0.00713,
+        -0.00105
+      ]
+    },
+    "TB1_minus_A0_over_7.5_brier": {
+      "mean": -0.00115,
+      "ci95": [
+        -0.00269,
+        0.00039
+      ]
+    },
+    "TB1_minus_A0_over_8.5_brier": {
+      "mean": -0.00094,
+      "ci95": [
+        -0.00241,
+        0.00051
+      ]
+    },
+    "TB1_minus_A0_over_9.5_brier": {
+      "mean": -0.00094,
+      "ci95": [
+        -0.00234,
+        0.00046
+      ]
+    }
+  },
+  "2025": {
+    "season": 2025,
+    "games_scored": 2121.0,
+    "days": 158,
+    "coverage": {
+      "games": 2121,
+      "both_starters": 2038
+    },
+    "model_version": "MLB-A1-shadow/2026-09-26b",
+    "params_sha": "40454ee4ef159de8",
+    "a0": {
+      "win_brier": 0.25014,
+      "win_ll": 0.69347,
+      "rl_home_-1.5": 0.22697,
+      "over_7.5": 0.24717,
+      "over_8.5": 0.25034,
+      "over_9.5": 0.24049
+    },
+    "a1": {
+      "win_brier": 0.2458,
+      "win_ll": 0.68451,
+      "over_7.5": 0.24535,
+      "over_8.5": 0.249,
+      "over_9.5": 0.23869,
+      "rl_home_-1.5": 0.22355
+    },
+    "a1s": {
+      "win_brier": 0.24629,
+      "win_ll": 0.68568,
+      "over_7.5": 0.24552,
+      "over_8.5": 0.24895,
+      "over_9.5": 0.23984,
+      "rl_home_-1.5": 0.22421
+    },
+    "tb1": {
+      "win_brier": 0.2456,
+      "win_ll": 0.68423,
+      "rl_home_-1.5": 0.22367,
+      "over_7.5": 0.24582,
+      "over_8.5": 0.24987,
+      "over_9.5": 0.23898
+    },
+    "primary_A1S_minus_A1_win_logloss": {
+      "mean": 0.00117,
+      "ci95": [
+        -0.00458,
+        0.00692
+      ]
+    },
+    "secondary_A1S_minus_A1_composite_brier": {
+      "mean": 0.00048,
+      "ci95": [
+        -0.00093,
+        0.00191
+      ]
+    },
+    "A1S_minus_A0_win_logloss": {
+      "mean": -0.00779,
+      "ci95": [
+        -0.01761,
+        0.00148
+      ]
+    },
+    "A1S_minus_A0_composite_brier": {
+      "mean": -0.00206,
+      "ci95": [
+        -0.00444,
+        0.00019
+      ]
+    },
+    "A1S_minus_TB1_win_logloss": {
+      "mean": 0.00146,
+      "ci95": [
+        -0.00466,
+        0.00739
+      ]
+    },
+    "A1S_minus_TB1_composite_brier": {
+      "mean": 0.00018,
+      "ci95": [
+        -0.00149,
+        0.00185
+      ]
+    },
+    "A1_minus_A0_win_logloss": {
+      "mean": -0.00896,
+      "ci95": [
+        -0.01611,
+        -0.00214
+      ]
+    },
+    "A1_minus_A0_win_brier": {
+      "mean": -0.00434,
+      "ci95": [
+        -0.00784,
+        -0.00103
+      ]
+    },
+    "A1_minus_TB1_win_brier": {
+      "mean": 0.00021,
+      "ci95": [
+        -0.00098,
+        0.00135
+      ]
+    },
+    "TB1_minus_A0_win_brier": {
+      "mean": -0.00454,
+      "ci95": [
+        -0.00732,
+        -0.00206
+      ]
+    },
+    "A1_minus_A0_over_7.5_brier": {
+      "mean": -0.00182,
+      "ci95": [
+        -0.00446,
+        0.00074
+      ]
+    },
+    "A1_minus_A0_over_8.5_brier": {
+      "mean": -0.00134,
+      "ci95": [
+        -0.00393,
+        0.00114
+      ]
+    },
+    "A1_minus_A0_over_9.5_brier": {
+      "mean": -0.0018,
+      "ci95": [
+        -0.00415,
+        0.00053
+      ]
+    },
+    "A1S_minus_A0_over_7.5_brier": {
+      "mean": -0.00165,
+      "ci95": [
+        -0.00456,
+        0.0013
+      ]
+    },
+    "A1S_minus_A0_over_8.5_brier": {
+      "mean": -0.00139,
+      "ci95": [
+        -0.00433,
+        0.00164
+      ]
+    },
+    "A1S_minus_A0_over_9.5_brier": {
+      "mean": -0.00065,
+      "ci95": [
+        -0.00355,
+        0.0022
+      ]
+    },
+    "TB1_minus_A0_over_7.5_brier": {
+      "mean": -0.00135,
+      "ci95": [
+        -0.00346,
+        0.00069
+      ]
+    },
+    "TB1_minus_A0_over_8.5_brier": {
+      "mean": -0.00047,
+      "ci95": [
+        -0.00232,
+        0.00131
+      ]
+    },
+    "TB1_minus_A0_over_9.5_brier": {
+      "mean": -0.00151,
+      "ci95": [
+        -0.00306,
+        0.00011
+      ]
+    }
+  }
+}

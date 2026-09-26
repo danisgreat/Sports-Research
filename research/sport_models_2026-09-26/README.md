@@ -78,7 +78,7 @@ Three v1 routes failed. Each was diagnosed (`diagnose.py`, `diagnostics.json`). 
 - The grids and rules were written into `tune_v2.py` before its runs, but they were committed together with the results, so git cannot prove the order.
 
 **The v2 TEST numbers are not independent evidence**, because the v1 failures were seen on those windows first. The independent tests are:
-- the 2025 MLB season: `python tools/mlb_model.py validate --season 2025`;
+- the 2025 MLB season: `python tools/mlb_model.py validate --season 2025` (run 2026-09-26(e): A1 − A0 = −0.0023 [−0.0042, −0.0005], replicated; `research/predictability_2026-09-26/t_mlb_v2_2025.json`);
 - competitions neither version has seen, for cricket: the BBL, CPL, T20Is and The Hundred;
 - the prospective shadow lanes.
 

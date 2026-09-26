@@ -54,6 +54,8 @@ Rank by RM-1 q; its cushion term applies to union +k.5 rows. A large cushion (k 
 
 `python tools/sport_models.py shadow --league union --espn-path rugby/<competition id> …`, or `--csv` results (`C-SPORT-SHADOW`). A1 is ridge ratings with key-number weights and draws allowed. **Not validated.** Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
 
+**Predictability (2026-09-26(e)).** Not measured: no union results were reached. The reference is the population (`research/predictability_2026-09-26/README.md`; `BASE_RATES_REGISTER.md` §7.8).
+
 ### 0.4 Control index (full text in §6 and the dated sections)
 1 union is not league · 2 fifteens and sevens separate · 3 broad totals need mechanism support · 4 territory is not points · 5 points composition matters · 6 goal kicker is a regime · 7 set piece and breakdown are exposure engines · 8 cards create asymmetric tails · 9 low total ≠ close margin · 10 sevens clusters need restart/card branches · 11 sparse lineups cap evidence.
 

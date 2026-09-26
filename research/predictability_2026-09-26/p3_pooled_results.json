@@ -1,0 +1,57 @@
+{
+  "events": 98,
+  "cards": 54,
+  "brier": {
+    "card_p": 0.2438,
+    "a1": 0.2505,
+    "a0": 0.268,
+    "blend": 0.2454
+  },
+  "card_minus_a1": {
+    "mean": -0.0067,
+    "ci95_card_cluster": [
+      -0.0251,
+      0.0113
+    ]
+  },
+  "card_minus_a0": {
+    "mean": -0.0242,
+    "ci95_card_cluster": [
+      -0.0555,
+      0.0029
+    ]
+  },
+  "a1_minus_a0": {
+    "mean": -0.0175,
+    "ci95_card_cluster": [
+      -0.0398,
+      0.0025
+    ]
+  },
+  "blend_minus_card (exploratory)": {
+    "mean": 0.0015,
+    "ci95_card_cluster": [
+      -0.0074,
+      0.0104
+    ]
+  },
+  "EXPLORATORY_disagreement_gt_0.10": {
+    "n": 25,
+    "cards": 19,
+    "brier_card": 0.2553,
+    "brier_a1": 0.2759,
+    "card_closer_to_outcome": 14,
+    "card_minus_a1": {
+      "mean": -0.0206,
+      "ci95_card_cluster": [
+        -0.0746,
+        0.0436
+      ]
+    }
+  },
+  "agreement_le_0.10": {
+    "n": 73,
+    "brier_card": 0.2399,
+    "brier_a1": 0.2418
+  }
+}

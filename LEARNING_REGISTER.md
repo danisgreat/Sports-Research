@@ -1508,3 +1508,35 @@ Everything is hindsight on the framework's own selected cards and LEARNING_ONLY.
 | L-20260926-24 | The tennis source dates every match by its tournament's start, so concurrent tournaments can leak later-round Elo updates into another event's early rounds | **DISCLOSED** — this touches the A0 and A1 winner routes equally and does not favour A1; the live lane uses ESPN's own match dates | — |
 | L-20260926-26 | An independent review, before any shadow row existed, found no leakage and confirmed that only the four disclosed constants changed. It found seven lane defects (stale cache, one bad event blocking settlement, cricket tie and innings validity, partial tennis scores, soccer extra time, side results counted per line) and five overstated claims | **FIXED** with tests (`ShadowCommands`, `test_mlb_model`) and corrected wording | Review report summarised in CHANGELOG 2026-09-26(d) |
 | L-20260926-25 | The NHL linescore file's `has_shootout` flag was False for every game. Shootouts were found from the scoring file's `SO` rows (474 of 6,560), and every OT/SO game then had a one-goal margin | **FIXED in the loader** before any NHL run; a data check, not a model change | `validate_public.py` `nhl()` |
+
+<!-- PREDICTABILITY-2026-09-26E -->
+# 2026-09-26(e) — predictability across sports
+
+**Origin.** The user asked for predictability across all sports to be improved "properly", then to continue thoroughly and accurately.
+- **Controls:** `RULES_GENERAL.md` §"2026-09-26(e)" (`C-MODEL-ANCHOR`, `C-PREDICTABILITY-MAP`).
+- **Evidence:** `research/predictability_2026-09-26/README.md`. P1–P4 were preregistered in `cc447c9`; P5 and the P3 disagreement split are exploratory.
+- **Category:** MEASUREMENT plus validity repairs. No probability, rank, width, centre or model constant moved.
+
+## A. Tests opened
+
+| Test ID | Origin | Frozen hypothesis / control | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`T-FAV70-BAND`** | L-20260926-31 | In the NFL and the NRL, a validated-model favourite stated at 0.70–0.80 wins less often than its mean stated probability | Games not yet played on 2026-09-27: the rest of NFL 2026 and NRL 2027, scored by `sport_models.py` A1 blind, leak-free | 100 band games per league | 0 | The observed rate is below the mean stated probability with a 95% interval excluding it: a shrinkage model version is preregistered and proposed as a `MODEL_CHANGE` for the user to decide. Otherwise closed | TESTING |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260926-27 | P5: the share of games whose validated-model favourite reaches 0.70 ranges from 39% (AFL; 90.6% won) through 26–29% (basketball; 80–84%), 27% (NFL; 73.1%), 19% (NRL; 68.3%) and 6% (NHL; 72.9%) to 0% in MLB, where 90% of games sit at 0.50–0.60. Totals rarely reach 0.70 at a sensible line | **PROMOTED (disclosure)** as `C-PREDICTABILITY-MAP` (`BASE_RATES_REGISTER.md` §7.8). Cards print the league's row. It moves no probability or rank | Descriptive. The rows are refreshed each season |
+| L-20260926-28 | P3 (preregistered): on 98 contracts from 54 settled cards, the card scored 0.2438, A1 0.2505 and the population 0.2680. Card − A1 is −0.007 [−0.025, +0.011], and a 50/50 blend (0.2454) was no better than the card | **OBSERVATION.** Anchoring cards on the models is not supported. `C-MODEL-ANCHOR` stays `REFERENCE` (`tools/model_anchor.py`). Any change needs the shadow-lane review and the user's `MODEL_CHANGE` instruction | `C-SPORT-SHADOW` / `C-MLB-SHADOW` at 150 rows per league |
+| L-20260926-29 | P1 (preregistered): MLB's declared-starter term (A1S) against A1 on win log loss: 2025 +0.0012 [−0.0046, +0.0069]; 2026 −0.0019 [−0.0079, +0.0043]. On totals at 8.5 it helped 2026 only (−0.0032 [−0.0065, −0.0002]) | **CLOSED — not demonstrated** on results. It is the MLB totals reference in the registry (2026 only); its season-to-season inconsistency is a candidate for the next preregistered version | None open; `C-MLB-SHADOW` records it |
+| L-20260926-30 | TB-1's `resolution` flags rested on a 3% point-estimate bar. With intervals, NRL sides ([−0.0294, +0.0044]) and NFL totals ([−0.0184, +0.0017]; 2021–25 0.2403 v 0.2423) are not significant. NBA totals are kept (2023–26 0.2129 v 0.2308) | **FIXED (validity repair).** `team_baseline.py` prints `TB1_NO_RESOLUTION` for both, and they anchor on `BASELINE_P` (`RULES_NRL_RUGBY.md` §0.2; `RULES_AMERICAN_FOOTBALL.md` §0.2; `CURRENT_RULES.md`) | `tools/test_team_baseline.py`. NRL sides and NFL totals leave `T-TB1-ANCHOR`'s eligible population from 2026-09-27. It had 0 completed rows, so no result moves |
+| L-20260926-31 | P5 calibration: the NFL and NRL 0.70–0.80 favourite bands won about 67% at a stated 0.74–0.75, while basketball and the AFL were calibrated or under-confident | **TESTING** (`T-FAV70-BAND`). Not fitted to the data that revealed it | The prospective test above |
+| L-20260926-32 | P2 (preregistered): NBL 2025-26 A1 beat the population (−0.0397 [−0.0578, −0.0201]) and TB-1 (−0.0135 [−0.0245, −0.0018]); 2024-25 was not significant on results (−0.0164 [−0.0368, +0.0058]) but was on totals. NRL 2026 was not significant on results (−0.0137 [−0.0273, +0.0003]) | **OBSERVATION.** The NBL and NRL are validated, with those limits; `RULES_BASKETBALL.md` and `RULES_NRL_RUGBY.md` §0 pages updated. NHL totals (worse than the population) and NBL's mixed seasons are candidates for the next preregistered version | — |
+| L-20260926-33 | `tools/mlb_model.py` said historical probable starters "cannot be reconstructed leak-free". statsapi keeps `probablePitcher` on completed games, and pitcher game logs give every prior appearance | **FIXED (documentation)** | P1 ran on 2025 and 2026 with it |
+
+## C. Tests concluded
+
+| Test ID | Result | Decision | Receipt |
+|---|---|---|---|
+| **`T-MLB-V2-2025`** | Run exactly as preregistered (`python tools/mlb_model.py validate --season 2025`, model `MLB-A1-shadow/2026-09-26b`, params `40454ee4ef159de8`) on all 2,121 games of 2025. The mean Brier over home win and totals 6.5–10.5 was A1 0.2365 v A0 0.2388: A1 − A0 = **−0.0023 [−0.0042, −0.0005]** (day-block interval) | **CONCLUDED — replicated.** The v2 team prior beats A0 on a season it has not seen. L-20260926-14's "not independent" caveat is answered for the team-only model. It stays a shadow reference (`C-MLB-SHADOW`), not a card input | `research/predictability_2026-09-26/t_mlb_v2_2025.json` |
