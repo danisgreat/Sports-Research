@@ -1,0 +1,24 @@
+{
+  "label": "EXPLORATORY; not a basis for a MODEL_CHANGE",
+  "s_fitted_2021_2023": 0.9,
+  "train_brier_s": 0.22952,
+  "train_brier_1": 0.2297,
+  "2024": {
+    "brier_s": 0.22329,
+    "brier_1": 0.22273,
+    "diff": 0.00056,
+    "ci95": [
+      -0.0012,
+      0.0022
+    ]
+  },
+  "2025": {
+    "brier_s": 0.22837,
+    "brier_1": 0.22887,
+    "diff": -0.0005,
+    "ci95": [
+      -0.002,
+      0.001
+    ]
+  }
+}

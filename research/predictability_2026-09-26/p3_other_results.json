@@ -1,0 +1,435 @@
+{
+ "summary": {
+  "cards_matched": 20,
+  "events": 37,
+  "exclusions": {
+   "no unique consistent game": 2,
+   "row: outcome or model probability unavailable": 5,
+   "row: unsupported market": 4,
+   "no consistent game (not this league, or outside the window)": 3,
+   "row: unsupported contract": 2,
+   "row: side not identified": 1,
+   "nhl preseason card (A1 is a regular-season model)": 1
+  },
+  "matches": {
+   "P-058": "afl 2026-08-20 Gold Coast SUNS @ St Kilda (1133686)",
+   "P-388": "afl 2026-09-11 Geelong Cats @ Fremantle (1133708)",
+   "P-396": "afl 2026-09-12 Adelaide Crows @ Brisbane Lions (1133707)",
+   "P-323": "epl 2026-09-06 Manchester United @ Everton (401879291)",
+   "P-328": "epl 2026-09-06 Chelsea @ Arsenal (401879292)",
+   "P-402": "epl 2026-09-12 Everton @ Tottenham Hotspur (401879277)",
+   "P-376": "nfl 2026-09-11 San Francisco 49ers @ Los Angeles Rams (401872657)",
+   "P-412": "nfl 2026-09-13 Atlanta Falcons @ Pittsburgh Steelers (401872658)",
+   "P-413": "nfl 2026-09-13 Baltimore Ravens @ Indianapolis Colts (401872659)",
+   "P-414": "nfl 2026-09-13 Buffalo Bills @ Houston Texans (401872660)",
+   "P-422": "nfl 2026-09-15 Denver Broncos @ Kansas City Chiefs (401872931)",
+   "P-386": "nrl 2026-09-11 Knights @ Rabbitohs (604733)",
+   "P-515": "nrl 2026-09-25 Roosters @ Dolphins (604843)",
+   "P-465": "wnba 2026-09-18 Indiana Fever @ Toronto Tempo (401857195)",
+   "P-468": "wnba 2026-09-19 Portland Fire @ Golden State Valkyries (401857197)",
+   "P-487": "wnba 2026-09-22 Dallas Wings @ Phoenix Mercury (401857207)",
+   "P-504": "wnba 2026-09-24 Atlanta Dream @ New York Liberty (401857213)",
+   "P-508": "nbl 2026-09-24 Melbourne United @ South East Melbourne Phoenix (401875267)",
+   "P-509": "nbl 2026-09-24 Adelaide 36ers @ Perth Wildcats (401875245)",
+   "P-514": "nbl 2026-09-25 Illawarra Hawks @ Brisbane Bullets (401875252)"
+  },
+  "brier": {
+   "card_p": 0.2528,
+   "a0": 0.2952,
+   "a1": 0.2666
+  },
+  "card_minus_a0": {
+   "mean": -0.0423,
+   "ci95_card_cluster": [
+    -0.1167,
+    0.0167
+   ]
+  },
+  "card_minus_a1": {
+   "mean": -0.0138,
+   "ci95_card_cluster": [
+    -0.0517,
+    0.0236
+   ]
+  },
+  "by_league": {
+   "afl": {
+    "n": 6,
+    "cards": 3,
+    "card_p": 0.3477,
+    "a0": 0.3384,
+    "a1": 0.3153
+   },
+   "epl": {
+    "n": 4,
+    "cards": 3,
+    "card_p": 0.1781,
+    "a0": 0.1956,
+    "a1": 0.1507
+   },
+   "nfl": {
+    "n": 9,
+    "cards": 5,
+    "card_p": 0.2663,
+    "a0": 0.3005,
+    "a1": 0.2743
+   },
+   "nrl": {
+    "n": 4,
+    "cards": 2,
+    "card_p": 0.2713,
+    "a0": 0.1804,
+    "a1": 0.2033
+   },
+   "wnba": {
+    "n": 8,
+    "cards": 4,
+    "card_p": 0.1704,
+    "a0": 0.4051,
+    "a1": 0.2697
+   },
+   "nbl": {
+    "n": 6,
+    "cards": 3,
+    "card_p": 0.2853,
+    "a0": 0.2402,
+    "a1": 0.3219
+   }
+  }
+ },
+ "records": [
+  {
+   "league": "afl",
+   "card": "P-058",
+   "event": "over_181.5",
+   "y": 1,
+   "card_p": 0.37,
+   "a0": 0.39971945870727804,
+   "a1": 0.3743286043901799
+  },
+  {
+   "league": "afl",
+   "card": "P-058",
+   "event": "home_cover_-14.5",
+   "y": 0,
+   "card_p": 0.53,
+   "a0": 0.42342085646995153,
+   "a1": 0.3783488989048829
+  },
+  {
+   "league": "afl",
+   "card": "P-388",
+   "event": "home_cover_-11.5",
+   "y": 1,
+   "card_p": 0.4,
+   "a0": 0.4516808293319395,
+   "a1": 0.40184833263934794
+  },
+  {
+   "league": "afl",
+   "card": "P-388",
+   "event": "over_180.5",
+   "y": 1,
+   "card_p": 0.44999999999999996,
+   "a0": 0.4275428942320451,
+   "a1": 0.4613895338435339
+  },
+  {
+   "league": "afl",
+   "card": "P-396",
+   "event": "home_cover_-21.5",
+   "y": 1,
+   "card_p": 0.36,
+   "a0": 0.3575223152656811,
+   "a1": 0.3456515471136228
+  },
+  {
+   "league": "afl",
+   "card": "P-396",
+   "event": "over_188.5",
+   "y": 1,
+   "card_p": 0.42000000000000004,
+   "a0": 0.32941307149802,
+   "a1": 0.46957032472626853
+  },
+  {
+   "league": "epl",
+   "card": "P-323",
+   "event": "over_2.5",
+   "y": 1,
+   "card_p": 0.57,
+   "a0": 0.5192854850637114,
+   "a1": 0.5643712273272995
+  },
+  {
+   "league": "epl",
+   "card": "P-328",
+   "event": "over_2.5",
+   "y": 1,
+   "card_p": 0.53,
+   "a0": 0.5192854850637114,
+   "a1": 0.5584295632622714
+  },
+  {
+   "league": "epl",
+   "card": "P-402",
+   "event": "home_cover_-1.5",
+   "y": 0,
+   "card_p": 0.18999999999999995,
+   "a0": 0.22205664329906233,
+   "a1": 0.14185924824132665
+  },
+  {
+   "league": "epl",
+   "card": "P-402",
+   "event": "over_2.5",
+   "y": 0,
+   "card_p": 0.52,
+   "a0": 0.5206153295101307,
+   "a1": 0.4447690299838643
+  },
+  {
+   "league": "nfl",
+   "card": "P-376",
+   "event": "home_cover_-3.5",
+   "y": 0,
+   "card_p": 0.43999999999999995,
+   "a0": 0.3723786556477448,
+   "a1": 0.49541448837334046
+  },
+  {
+   "league": "nfl",
+   "card": "P-376",
+   "event": "over_47.5",
+   "y": 0,
+   "card_p": 0.54,
+   "a0": 0.4647601894754847,
+   "a1": 0.5960884585360966
+  },
+  {
+   "league": "nfl",
+   "card": "P-412",
+   "event": "home_cover_-6.5",
+   "y": 1,
+   "card_p": 0.44999999999999996,
+   "a0": 0.3408240510232187,
+   "a1": 0.38965563504914014
+  },
+  {
+   "league": "nfl",
+   "card": "P-412",
+   "event": "over_40.5",
+   "y": 0,
+   "card_p": 0.47,
+   "a0": 0.6503060465087188,
+   "a1": 0.6242415002620745
+  },
+  {
+   "league": "nfl",
+   "card": "P-413",
+   "event": "over_48.5",
+   "y": 1,
+   "card_p": 0.48,
+   "a0": 0.4360649881715171,
+   "a1": 0.6308896650567911
+  },
+  {
+   "league": "nfl",
+   "card": "P-414",
+   "event": "home_cover_+1.5",
+   "y": 0,
+   "card_p": 0.55,
+   "a0": 0.5869081958379656,
+   "a1": 0.5566593557371012
+  },
+  {
+   "league": "nfl",
+   "card": "P-414",
+   "event": "over_44.5",
+   "y": 1,
+   "card_p": 0.47,
+   "a0": 0.5448084484175411,
+   "a1": 0.5869608381224605
+  },
+  {
+   "league": "nfl",
+   "card": "P-422",
+   "event": "home_cover_-2.5",
+   "y": 1,
+   "card_p": 0.43999999999999995,
+   "a0": 0.4970702126622216,
+   "a1": 0.44456574011202
+  },
+  {
+   "league": "nfl",
+   "card": "P-422",
+   "event": "over_42.5",
+   "y": 0,
+   "card_p": 0.47,
+   "a0": 0.6081591795429235,
+   "a1": 0.4243660169700968
+  },
+  {
+   "league": "nrl",
+   "card": "P-386",
+   "event": "home_cover_-8.5",
+   "y": 0,
+   "card_p": 0.37,
+   "a0": 0.33491188312723186,
+   "a1": 0.40907162253935153
+  },
+  {
+   "league": "nrl",
+   "card": "P-386",
+   "event": "over_49.5",
+   "y": 0,
+   "card_p": 0.53,
+   "a0": 0.44497496211789284,
+   "a1": 0.533899376806073
+  },
+  {
+   "league": "nrl",
+   "card": "P-515",
+   "event": "over_45.5",
+   "y": 1,
+   "card_p": 0.365,
+   "a0": 0.5514565540287574,
+   "a1": 0.6076099858079054
+  },
+  {
+   "league": "nrl",
+   "card": "P-515",
+   "event": "home_cover_-2.5",
+   "y": 0,
+   "card_p": 0.514,
+   "a0": 0.4586695022766558,
+   "a1": 0.45493017739988584
+  },
+  {
+   "league": "wnba",
+   "card": "P-465",
+   "event": "home_win",
+   "y": 0,
+   "card_p": 0.08999999999999997,
+   "a0": 0.5604086381153913,
+   "a1": 0.22447455513738324
+  },
+  {
+   "league": "wnba",
+   "card": "P-465",
+   "event": "home_cover_+15.5",
+   "y": 0,
+   "card_p": 0.43000000000000005,
+   "a0": 0.8844193230778993,
+   "a1": 0.6650155230723637
+  },
+  {
+   "league": "wnba",
+   "card": "P-468",
+   "event": "over_159.5",
+   "y": 0,
+   "card_p": 0.42000000000000004,
+   "a0": 0.748642387235736,
+   "a1": 0.5721026721787943
+  },
+  {
+   "league": "wnba",
+   "card": "P-468",
+   "event": "home_cover_-12.5",
+   "y": 1,
+   "card_p": 0.54,
+   "a0": 0.24132252431264237,
+   "a1": 0.4696988877093777
+  },
+  {
+   "league": "wnba",
+   "card": "P-487",
+   "event": "home_cover_+5.5",
+   "y": 1,
+   "card_p": 0.62,
+   "a0": 0.6782520325101551,
+   "a1": 0.5710319854043255
+  },
+  {
+   "league": "wnba",
+   "card": "P-487",
+   "event": "over_174.5",
+   "y": 0,
+   "card_p": 0.52,
+   "a0": 0.47645365248448124,
+   "a1": 0.44677822565364306
+  },
+  {
+   "league": "wnba",
+   "card": "P-504",
+   "event": "home_cover_+4.5",
+   "y": 0,
+   "card_p": 0.40900000000000003,
+   "a0": 0.6586121886019562,
+   "a1": 0.6054364768222138
+  },
+  {
+   "league": "wnba",
+   "card": "P-504",
+   "event": "over_173.5",
+   "y": 0,
+   "card_p": 0.44699999999999995,
+   "a0": 0.4942464446571883,
+   "a1": 0.5534676310103279
+  },
+  {
+   "league": "nbl",
+   "card": "P-508",
+   "event": "over_194.5",
+   "y": 0,
+   "card_p": 0.30900000000000005,
+   "a0": 0.31626901377128797,
+   "a1": 0.4126117664176022
+  },
+  {
+   "league": "nbl",
+   "card": "P-508",
+   "event": "home_cover_+2.5",
+   "y": 0,
+   "card_p": 0.515,
+   "a0": 0.5687300661635388,
+   "a1": 0.6698890133982385
+  },
+  {
+   "league": "nbl",
+   "card": "P-509",
+   "event": "home_cover_+1.5",
+   "y": 1,
+   "card_p": 0.484,
+   "a0": 0.545107352477837,
+   "a1": 0.49797158530095187
+  },
+  {
+   "league": "nbl",
+   "card": "P-509",
+   "event": "over_184.5",
+   "y": 1,
+   "card_p": 0.387,
+   "a0": 0.5248791561458324,
+   "a1": 0.3707263289275261
+  },
+  {
+   "league": "nbl",
+   "card": "P-514",
+   "event": "over_188.5",
+   "y": 1,
+   "card_p": 0.354,
+   "a0": 0.43129521277733346,
+   "a1": 0.5573601904973423
+  },
+  {
+   "league": "nbl",
+   "card": "P-514",
+   "event": "home_cover_-1.5",
+   "y": 1,
+   "card_p": 0.45999999999999996,
+   "a0": 0.4886364278490997,
+   "a1": 0.31576179996566583
+  }
+ ]
+}

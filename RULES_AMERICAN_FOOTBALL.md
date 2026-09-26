@@ -38,7 +38,7 @@ Evidence density: **SPARSE** (added 2026-09-06, `L-099`, external blindspot audi
 | AM-P5 college availability | The absence of an NFL-style report is not evidence of health | Missingness code (control 10) |
 
 ### 0.2 Building the score distribution
-1. **Anchor.** NFL: `TEAM_BASELINE_P` (`tools/team_baseline.py --league nfl`) for sides (0.231 v 0.252) and, marginally, totals (0.246 v 0.254). Weeks 1–3 are flagged `TB1_EARLY_SEASON`. NCAA has no TB-1 lane (`NOT_COVERED`).
+1. **Anchor.** NFL: `TEAM_BASELINE_P` (`tools/team_baseline.py --league nfl`) for sides (0.231 v 0.252). Totals anchor on the population: TB-1's marginal total gain (0.246 v 0.254) is not significant (corrected 2026-09-26(e); `TB1_NO_RESOLUTION:total`). Weeks 1–3 are flagged `TB1_EARLY_SEASON`. NCAA has no TB-1 lane (`NOT_COVERED`).
 2. **Margin prior and width (control 17, G-L12).** Print the margin prior (prior-season differential adjusted for QB status) and a width no narrower than the residual SD (**13.6**, TB-1 2025) unless the card shows why. New-regime uncertainty widens; it does not centre the margin toward pick'em (controls 15, 16). Prior-season unit ratings are width in a new season (control 19).
 3. **Discrete scoring.** Key numbers and pushes come from score combinations (control 6). Every handicap row prints the exact masses at 3 and 7 (control 18); a card without a margin table caps its handicap rows at FORCED RANK.
 4. **Non-offensive scores (control 20).** A handicap row within one score of the centre carries a defensive or special-teams TD branch: 0.217 per game, at least one in 18.8% of games (2025), adjusted only with named evidence (backup QB, sack or turnover rates).
@@ -72,6 +72,8 @@ A universal 13.9 SD floor (the residual benchmark is a disclosure reference, not
 ### Numerical shadow model (2026-09-26(c); never a card input)
 
 `python tools/sport_models.py shadow --league <nfl|ncaaf> …` (`C-SPORT-SHADOW`). A1 is ridge ratings with the league's own key-number weights (3, 7, …). On the NFL 2021–2025 it beat the league baseline on results and margins. It was ahead of TB-1 on results, but the interval crosses 0. It gave **no gain on totals**. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+
+**Predictability and cards (2026-09-26(e)).** In the NFL 2025, the model's favourite reached 0.70 in 27% of games and won **73.1%**. The 0.70–0.80 band won only 67% at a stated 0.747, so it is over-confident. This replicated on 2021–24 (66.7% at 0.744, 177 games; C1, 2026-09-27). A uniform shrink did not improve the Brier score, so the model is unchanged: read an NFL favourite at 0.70–0.80 as about a two-in-three row. Totals reach 0.70 in only 8% of games. The side reference is TB-1, because A1 was not separated from it. On the cards' own NFL contracts (9, from 5 cards): card 0.266, A1 0.274, population 0.301 (`research/predictability_2026-09-26/README.md`; `BASE_RATES_REGISTER.md` §7.8).
 
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 QB identity is a regime · 2 line continuity is combinatorial · 3 game script creates dependence · 4 turnovers and one-score records shrink · 5 weather is matchup-specific · 6 key numbers and pushes are discrete · 7 OT matches the competition · 8 special teams are field position · 9 preseason is a separate phase · 10 college availability is asymmetric · 11 preseason quarter-by-quarter unit mixture · 12 reserve-sample shrinkage and explosive tails · 13 low total ≠ close spread · 14 CFL possession chain · 15 aligned regime uncertainty caps a favourite · 16 new-regime uncertainty two-sided · 17 margin prior and width · 18 key numbers at 3 and 7 · 19 prior-season ratings are width · 20 non-offensive score branch · 21 favourite covers inside the Under.
@@ -763,7 +765,7 @@ Controls: `RULES_GENERAL.md` §"2026-09-25(e)". Evidence: `research/team_baselin
 
 1. **TB-1 is the anchor.**
    - Sides: 0.231 v 0.252.
-   - Totals: 0.246 v 0.254, which is marginal; the departure ledger uses TB-1 for totals too.
+   - Totals: 0.246 v 0.254, which is marginal. **Corrected 2026-09-26(e):** the 2025 interval is [−0.018, +0.002] and 2021–2025 gave 0.2403 v 0.2423, so totals anchor on the population (`TB1_NO_RESOLUTION:total`); §0.2 governs.
    - Early season (Weeks 1–3) is flagged `TB1_EARLY_SEASON`. Its early-season result still beat the base rate (0.246 v 0.253).
 2. **Cushions at their population rate.** The TB-1 underdog covered:
 

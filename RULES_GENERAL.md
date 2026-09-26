@@ -3256,3 +3256,113 @@ The user asked for the numerical model to cover every sport, not only MLB.
 
    A lane that is not recorded is M15, "control listed, not executed".
 4. **Second-pass validation** (see (k) point 3 and `research/sport_models_2026-09-26/README.md`) used public results for NHL, NBA 2023–26, WNBA and IPL cricket. No constant changed for NHL or basketball. Cricket's two constants were re-selected (v2) after v1 lost to a coin flip.
+
+
+<!-- PREDICTABILITY-2026-09-26E -->
+## 2026-09-26(e) — predictability across sports: what the models and the cards can do (measurement; no rule moves a probability)
+
+**Origin.** On 2026-09-26 the user asked for predictability across all sports to be improved "properly".
+
+**Evidence.**
+- [`research/predictability_2026-09-26/README.md`](research/predictability_2026-09-26/README.md).
+- P1–P4 were preregistered in `PREREGISTRATION.md`, committed in `cc447c9` before any run. P5 and the P3 disagreement split are exploratory.
+
+**Category.** MEASUREMENT, plus validity repairs (TB-1 flags for NRL sides and NFL totals) and a documentation correction. **`C-RULE-FREEZE` is respected:**
+- no probability, rank, width, centre or card construction rule changes;
+- no model constant changes.
+
+### (a) What the evidence shows
+
+1. **Predictability differs enormously by sport** (P5; `BASE_RATES_REGISTER.md` §7.8). This is the share of games in which the validated model's favourite reaches 0.70 (the STRONG tier), with the win rate there:
+
+   | League | STRONG share | Won |
+   |---|---:|---:|
+   | AFL | 39% | 90.6% |
+   | Basketball (NBA, WNBA, NBL) | 26–29% | 80–84% |
+   | NFL | 27% | 73.1% (the 0.70–0.80 band is over-confident) |
+   | NRL | 19% | 68.3% (the same band is over-confident) |
+   | NHL | 6% | 72.9% |
+   | EPL three-way | 6% | small n |
+   | **MLB** | **0%** (90% of games at 0.50–0.60) | — |
+
+   Totals rarely reach 0.70 at a sensible line in any league.
+2. **The team models add information over the population.** On sides in soccer's top five leagues, the NFL, AFL, NBA, WNBA, NBL (2025-26), the NHL (small) and MLB (small), and on totals mainly in basketball.
+3. **They are not better than the cards on the cards' own contracts** (P3). On 98 contracts from 54 settled cards:
+
+   | Source | Brier |
+   |---|---:|
+   | Card | 0.2438 |
+   | A1 | 0.2505 |
+   | Population | 0.2680 |
+
+   Card − A1 is −0.007 [−0.025, +0.011]. A 50/50 blend was no better than the card. So **anchoring the cards on the models is not supported by the evidence** and is not proposed.
+4. **MLB's declared starter term did not add skill on results** (P1, preregistered verdict: not demonstrated). It helped the 2026 totals only.
+5. **NBL and NRL.**
+   - NBL results beat the population and TB-1 in 2025-26, but not significantly in 2024-25.
+   - NRL results were not significant, for A1 or for TB-1.
+
+### (b) `C-MODEL-ANCHOR` — the reference registry (OPERATIVE as MEASUREMENT; not a card input)
+
+1. **The registry.** `python tools/model_anchor.py registry` derives, per league and target, the reference model: A1S (MLB totals), A1, TB-1 or POP (the population). The rule preregistered as P4 is applied mechanically to held-out evidence stored in the tool:
+   - the first model that beat the population with a 95% interval below 0;
+   - A1 over TB-1 only if it also beat TB-1.
+2. **Its uses:**
+   - the reference model for each league's shadow-lane review (`C-SPORT-SHADOW`, `C-MLB-SHADOW`);
+   - the source of the predictability map.
+3. **It is never printed on, cited by or used to revise a card** (status `REFERENCE`).
+4. **Changing that is a `MODEL_CHANGE`** that needs the user's explicit instruction under `C-RULE-FREEZE`. After P3, the case for it has to come from the shadow-lane review (150 rows per league, with the model beating the cards on shared rows), not from population validation alone.
+
+### (c) `C-PREDICTABILITY-MAP` — say which contracts can be STRONG (disclosure)
+
+1. **What the card prints.** Beside the track-record row, the card prints its league's §7.8 row: the share of STRONG favourites and their win rate, or `NOT_YET_DERIVED`.
+   - Under `TOP2_COIN_FLIP` in a league whose map shows few or no STRONG favourites (MLB, NHL, soccer three-way results, most totals), the delivery text says the slate cannot produce a STRONG Rank 1, not only that this card did not.
+2. **`SLATE_ADVISORY`** (optional, unchanged in kind) may name the league's STRONG-capable targets from the map:
+   - AFL and basketball sides;
+   - NFL sides with the over-confidence caveat;
+   - soccer phase, team-total and double-chance rows from the cards' own record.
+
+   It moves no probability or rank.
+3. **`C-EVENT-UNIVERSE` declarations** may use the map to choose which leagues to card, before any event is researched. Choosing leagues by predictability is declared, never event-by-event after research.
+
+### (d) Validity repairs
+
+1. **NRL sides no longer anchor on TB-1.**
+   - TB-1's 2026 NRL side gain has a 95% interval of [−0.0294, +0.0044]; the "resolution" flag had rested on a point estimate.
+   - `tools/team_baseline.py` now prints `TB1_NO_RESOLUTION:margin` for the NRL, and NRL sides anchor on `BASELINE_P` (`RULES_NRL_RUGBY.md` §0.2; `CURRENT_RULES.md`).
+   - §"2026-09-25(e)"(d) and `BASE_RATES_REGISTER.md` §7.7(d) are corrected by §7.8, not rewritten.
+2. **NFL totals no longer anchor on TB-1.** The same standard was applied to every flag:
+   - **NFL totals fail it.** The 2025 total gain has an interval of [−0.0184, +0.0017], and over 2021–2025 TB-1 was 0.2403 v 0.2423 over 1,359 games. `team_baseline.py` prints `TB1_NO_RESOLUTION:total` for the NFL (`RULES_AMERICAN_FOOTBALL.md` §0.2; `CURRENT_RULES.md`).
+   - **NBA totals keep their flag.** Their single-season interval crosses 0, but 2023–26 gives 0.2129 v 0.2308 over 3,689 games.
+3. **`tools/mlb_model.py`'s claim is corrected.** It said historical probable starters "cannot be reconstructed leak-free". They can: statsapi keeps `probablePitcher` on completed games, and pitcher game logs give every prior appearance. The starter term has now been tested on two seasons.
+
+### (e) Candidates for the next preregistered model version (TESTING; nothing applied)
+
+These are recorded so they are tested prospectively or on untouched seasons, **not** fitted to the data that revealed them:
+- NFL and NRL over-confidence in the 0.70–0.80 favourite band (opened as `T-FAV70-BAND`: 100 band games per league not yet played on 2026-09-27; `LEARNING_REGISTER.md` §"2026-09-26(e)");
+- NHL totals worse than the population;
+- the MLB starter term's season-to-season inconsistency;
+- NBL's mixed seasons.
+
+### (f) What this means for Rank 1 and Rank 2
+
+The route to "far more likely to win than lose" is a STRONG row that actually exists. By league:
+- **Often:** AFL and basketball sides; NFL sides at a slightly lower hit rate.
+- **Sometimes:** NRL and NHL.
+- **Almost never:** MLB and most totals. Soccer's STRONG rows are in phase, team-total and double-chance markets.
+
+The cards' own probabilities are about as informative as the models' on the contracts they priced. So the gain available now is **in which contracts are carded and in honest labelling**, not in replacing the card's judgement with the model's.
+
+### (g) The user's bar for a model change (2026-09-27): none meets it
+
+**The instruction.** On 2026-09-27 the user said: "do a model change if its absolutely going to make it better only". The bar was stated before testing: a 95% interval below 0 in every independent window, on data that did not suggest the change.
+
+**Every candidate fails:**
+- **Anchoring the cards on A1:** card − A1 −0.007 [−0.025, +0.011] (P3).
+- **A 50/50 blend:** no better than the card (P3).
+- **MLB's starter term:** not demonstrated (P1).
+- **Shrinking the model's 0.70–0.80 favourites** (C1, preregistered in `1bc57d7`):
+  - The NFL over-confidence replicated on 2021–24: 66.7% won at 0.744, [−0.147, −0.010].
+  - The NRL's reversed in 2025: 82.8% won at 0.747.
+  - Even an NFL-only shrink did not improve Brier in either test season.
+
+**So no `MODEL_CHANGE` is made.** The freeze stays in force. `T-FAV70-BAND` remains open prospectively. The NFL band finding is disclosed in `RULES_AMERICAN_FOOTBALL.md` §0: a model favourite at 0.70–0.80 has won about two in three.

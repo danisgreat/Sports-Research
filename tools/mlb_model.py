@@ -21,8 +21,12 @@ Model (route A, reduced-form final score; RULES_BASEBALL control 37):
   team means feed the shared-environment Gamma-Poisson joint (negative multinomial; recipes §5), with
   the shape estimated by moments from the season's totals. Ties are removed and the remainder
   renormalised: this is the recipe's labelled "conditional no-tie support" for completed games.
-- Historical `validate` uses A1 **without** starters. Past probable starters cannot be reconstructed
-  leak-free from box scores (NUMERICAL_PROGRAM §2), so the starter term is only ever judged prospectively.
+- Historical `validate` uses A1 **without** starters. Correction (2026-09-26(e)): past probable starters CAN be
+  reconstructed leak-free. statsapi's schedule keeps each completed game's pre-game `probablePitcher`, and
+  `people/{id}/stats?stats=gameLog` gives every appearance, so a starter's line strictly before a date can be summed.
+  research/predictability_2026-09-26/mlb_starters.py tested the declared starter term that way (PRIORS
+  unchanged). On 2025 and 2026 it did NOT improve the home-win log loss (preregistered primary). It improved the
+  2026 totals (7.5/8.5/9.5 lines) but not the 2025 totals.
 
 Commands:
   predict   --date D --home "Team" --away "Team" [--venue-id N] [--total L] [--home-sp ID --away-sp ID]

@@ -395,6 +395,52 @@ Details are in `research/team_baseline_2026-09-25e/README.md`.
 | Sides and margins | NBA, WNBA, NBL, NFL, AFL, NRL, EPL (by 5–19% in Brier) | MLB, NHL |
 | Totals | NBA, WNBA, NFL (marginal) | NBL, AFL, NRL, EPL, MLB, NHL |
 
+### 7.8 Predictability map — how often a STRONG pick exists, by league (derived 2026-09-26(e); EXPLORATORY, descriptive)
+
+**Source:** `research/predictability_2026-09-26/p5_predictability_results.json` (script `p5_predictability_map.py`).
+
+**Method:**
+- The validated team model is replayed leak-free on each league's latest season: tools/sport_models.py A1 for the ESPN leagues, tools/mlb_model.py A1 team-only for MLB.
+- "Favourite ≥ 0.70" is the STRONG tier, where Rank 1 won about 80% on the cards (`research/rank_model_2026-09-25e`).
+- The total line is floor(mean of prior games) + 0.5, which is not a market line.
+
+No odds were read. This is a reference row for choosing and describing slates. It is not a forecast, and it moves no probability.
+
+| League (window) | Games | Result Brier: model / population | Favourite ≥ 0.70: share, won | 0.50–0.60 share | Total side ≥ 0.70: share, won |
+|---|---:|---|---|---:|---|
+| AFL (2026) | 217 | 0.183 / 0.244 | **39%, 90.6%** | 29% | 11%, 67% |
+| WNBA (2026) | 333 | 0.209 / 0.251 | 28%, 83.7% | 38% | 30%, 90% † |
+| NBA (Dec 2025 – Jun 2026) | 1,030 | 0.210 / 0.248 | 29%, 79.5% | 39% | 12%, 77% |
+| NBL (2025-26) | 177 | 0.213 / 0.253 | 26%, 80.4% | 44% | 15%, 73% |
+| NFL (2025) | 286 | 0.226 / 0.250 | 27%, 73.1% ‡ | 40% | 8%, 74% |
+| NRL (2026) | 213 | 0.235 / 0.249 | 19%, 68.3% ‡ | 47% | 5%, 60% |
+| NHL (Dec 2025 – Jun 2026) | 989 | 0.248 / 0.250 | 6%, 72.9% | 67% | 6%, 65% |
+| EPL, three-way winner (Nov 2025 – May 2026) | 290 | 0.222 / 0.243 | 6%, 58.8% (n = 17) | 28% | 3%, 22% (n = 9) |
+| **MLB (2026)** | 2,073 | 0.247 / 0.250 | **0%** | **90%** | 0% |
+
+† The WNBA's total line came from earlier seasons, and 2026 scoring rose by about 10.7 points, so the "strong" Overs are an artefact of the fixed line, not predictability.
+
+‡ The 0.70–0.80 band is over-confident: NFL 67% at a stated 0.747; NRL 67% at 0.737.
+
+**Measured elsewhere** (`research/sport_models_2026-09-26/README.md`):
+- ATP winners are predictable by Elo: Brier 0.222 against a coin flip's 0.25.
+- IPL results are not predictable by a team model: 0.254 against 0.25.
+
+**Reading:**
+- **STRONG sides:** routine in the AFL and basketball, common in the NFL, uncommon in the NRL, rare in the NHL and in soccer three-way results, and **absent in MLB**.
+- **Totals** rarely reach 0.70 at a sensible line in any league.
+
+**Correction to §7.7(d)** (not rewritten above). With 95% week-block intervals (`p4_tb1_intervals.json`):
+
+| Target | Significant TB-1 gain over the base rate | Not significant |
+|---|---|---|
+| Sides | NBA, WNBA, NBL, NFL, AFL, EPL, and **NHL and MLB** (both tiny) | **NRL** |
+| Totals | WNBA only | NBA, NFL and the rest; EPL totals were significantly **worse** |
+
+**What changed in the TB-1 flags** (`tools/team_baseline.py` `resolution`; validity repair):
+- **Withdrawn:** NRL sides and NFL totals. NFL 2021–2025 totals were 0.2403 v 0.2423 over 1,359 games (`research/sport_models_2026-09-26/validation_results.json`), so the single-season gain does not replicate.
+- **Kept:** NBA totals. The 2025-26 interval alone crosses 0 ([−0.018, +0.001]), but over 2023–26 TB-1 was 0.2129 v 0.2308 over 3,689 games.
+
 ---
 
 ## Maintenance

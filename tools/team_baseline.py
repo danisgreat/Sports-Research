@@ -5,9 +5,10 @@ Why. `BASELINE_P` (C-BASELINE-SKILL) knows only home/away, so a card that "beats
 has cleared a very low bar, and a card that departs from it has no team-aware anchor. TB-1 is a
 leak-free, population-fitted baseline that knows each team's season-to-date scoring. Its resolution
 was measured out of sample on field-owner seasons (research/team_baseline_2026-09-25e/README.md).
-It is informative for results and margins in NBA, WNBA, NBL, AFL, NFL, NRL and EPL, and for NBA,
-WNBA and NFL totals. It is uninformative for MLB and NHL (sides and totals) and for NBL, AFL, NRL and EPL
-totals: those targets print `TB1_NO_RESOLUTION:<target>`, so no card leans on them.
+It is informative for results and margins in NBA, WNBA, NBL, AFL, NFL and EPL, and for NBA and
+WNBA totals. It is uninformative for MLB and NHL (sides and totals; their gains are significant but below
+the 3% materiality bar), for NRL sides and NFL totals (both withdrawn 2026-09-26(e): the intervals cross 0),
+and for NBL, AFL, NRL and EPL totals: those targets print `TB1_NO_RESOLUTION:<target>`, so no card leans on them.
 
 TB-1 is NOT a forecast of the card and reads no odds or market material. It fits nothing from the
 prediction logs; its two constants per league (shrink k and carry-over r) were chosen on earlier
@@ -78,12 +79,19 @@ LEAGUES = {
              "resolution": {"margin": True, "total": False}},
     "mlb":  {"statsapi": True,          "kind": "baseball", "k": 20, "r": 0.0, "sd_total": 4.50, "sd_margin": 4.57,
              "resolution": {"margin": False, "total": False}},
+    # NFL total resolution withdrawn 2026-09-26(e) (validity repair): the 3.3% point gain on 2025 has a 95% week-block
+    # interval of [-0.0184, +0.0017] (research/predictability_2026-09-26/p4_tb1_intervals.json), and over 2021-2025
+    # TB-1 was 0.2403 v 0.2423 (research/sport_models_2026-09-26/validation_results.json), so NFL totals anchor on
+    # the population.
     "nfl":  {"espn": "football/nfl",    "kind": "normal", "k": 2, "r": 0.0, "sd_total": 13.4, "sd_margin": 13.6,
-             "resolution": {"margin": True, "total": True}},
+             "resolution": {"margin": True, "total": False}},
     "afl":  {"espn": "australian-football/afl", "kind": "normal", "k": 2, "r": 0.0, "sd_total": 29.1,
              "sd_margin": 36.8, "resolution": {"margin": True, "total": False}},
+    # NRL margin resolution withdrawn 2026-09-26(e) (validity repair): the 5% point gain on 2026 has a 95% week-block
+    # interval of [-0.0294, +0.0044] (research/predictability_2026-09-26/p4_tb1_intervals.json), so NRL sides anchor
+    # on the population like NRL totals.
     "nrl":  {"espn": "rugby-league/3",  "kind": "normal", "k": 2, "r": 0.0, "sd_total": 13.9, "sd_margin": 19.9,
-             "resolution": {"margin": True, "total": False},
+             "resolution": {"margin": False, "total": False},
              "scoreboard_from": "02-20"},   # the NRL team-schedule endpoint returns HTTP 500: read the scoreboard
 }
 MIN_GAMES = 3        # below this many games for either team the row is flagged TB1_EARLY_SEASON

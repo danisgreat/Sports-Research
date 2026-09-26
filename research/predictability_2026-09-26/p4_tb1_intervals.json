@@ -1,0 +1,191 @@
+{
+  "NBL": {
+    "season": "NBL 2025-26",
+    "k": 5,
+    "carry_r": 0.0,
+    "home_win_TB1_minus_base": {
+      "mean": -0.0312,
+      "ci95": [
+        -0.04604,
+        -0.01434
+      ],
+      "n": 154
+    },
+    "total_over_mean_TB1_minus_base": {
+      "mean": -0.00406,
+      "ci95": [
+        -0.01652,
+        0.0084
+      ],
+      "n": 154
+    }
+  },
+  "WNBA": {
+    "season": "WNBA 2026",
+    "k": 2,
+    "carry_r": 0.75,
+    "home_win_TB1_minus_base": {
+      "mean": -0.04078,
+      "ci95": [
+        -0.05181,
+        -0.03037
+      ],
+      "n": 316
+    },
+    "total_over_mean_TB1_minus_base": {
+      "mean": -0.02511,
+      "ci95": [
+        -0.03742,
+        -0.01371
+      ],
+      "n": 316
+    }
+  },
+  "NBA": {
+    "season": "NBA 2025-26",
+    "k": 0,
+    "carry_r": 0.0,
+    "home_win_TB1_minus_base": {
+      "mean": -0.03227,
+      "ci95": [
+        -0.04067,
+        -0.02308
+      ],
+      "n": 1217
+    },
+    "total_over_mean_TB1_minus_base": {
+      "mean": -0.00921,
+      "ci95": [
+        -0.01812,
+        0.00054
+      ],
+      "n": 1217
+    }
+  },
+  "NHL": {
+    "season": "NHL 2025-26 (ESPN)",
+    "k": 20,
+    "carry_r": 0.0,
+    "home_win_TB1_minus_base": {
+      "mean": -0.00265,
+      "ci95": [
+        -0.00469,
+        -0.00065
+      ],
+      "n": 1291
+    },
+    "total_over_mean_TB1_minus_base": {
+      "mean": -0.00114,
+      "ci95": [
+        -0.00292,
+        0.00091
+      ],
+      "n": 1291
+    }
+  },
+  "EPL": {
+    "season": "EPL 2025-26",
+    "k": 2,
+    "carry_r": 0.0,
+    "home_win_TB1_minus_base": {
+      "mean": -0.01603,
+      "ci95": [
+        -0.02393,
+        -0.00734
+      ],
+      "n": 370
+    },
+    "total_over_mean_TB1_minus_base": {
+      "mean": 0.00825,
+      "ci95": [
+        0.00252,
+        0.01467
+      ],
+      "n": 370
+    }
+  },
+  "NFL": {
+    "season": "NFL 2025",
+    "k": 2,
+    "carry_r": 0.0,
+    "home_win_TB1_minus_base": {
+      "mean": -0.02049,
+      "ci95": [
+        -0.02941,
+        -0.01217
+      ],
+      "n": 256
+    },
+    "total_over_mean_TB1_minus_base": {
+      "mean": -0.00838,
+      "ci95": [
+        -0.01844,
+        0.00173
+      ],
+      "n": 256
+    }
+  },
+  "AFL": {
+    "season": "AFL 2026",
+    "k": 0,
+    "carry_r": 0.0,
+    "home_win_TB1_minus_base": {
+      "mean": -0.0476,
+      "ci95": [
+        -0.06384,
+        -0.02924
+      ],
+      "n": 193
+    },
+    "total_over_mean_TB1_minus_base": {
+      "mean": -0.00626,
+      "ci95": [
+        -0.02013,
+        0.00856
+      ],
+      "n": 193
+    }
+  },
+  "NRL": {
+    "season": "NRL 2026",
+    "k": 2,
+    "carry_r": 0.0,
+    "home_win_TB1_minus_base": {
+      "mean": -0.01262,
+      "ci95": [
+        -0.02939,
+        0.00442
+      ],
+      "n": 201
+    },
+    "total_over_mean_TB1_minus_base": {
+      "mean": -0.00321,
+      "ci95": [
+        -0.01148,
+        0.00489
+      ],
+      "n": 201
+    }
+  },
+  "MLB": {
+    "season": "MLB 2026",
+    "k": 20,
+    "carry_r": 0.0,
+    "home_win_TB1_minus_base": {
+      "mean": -0.00173,
+      "ci95": [
+        -0.00346,
+        -0.00018
+      ],
+      "n": 2358
+    },
+    "total_over_mean_TB1_minus_base": {
+      "mean": -0.00092,
+      "ci95": [
+        -0.00233,
+        0.00046
+      ],
+      "n": 2358
+    }
+  }
+}

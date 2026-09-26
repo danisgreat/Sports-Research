@@ -435,6 +435,15 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260926-24 | Tennis concurrent-tournament ordering | DISCLOSED |
 | L-20260926-25 | NHL shootout flag missing in source | FIXED in loader |
 | L-20260926-26 | Independent review: 7 lane defects, 5 overstatements | FIXED |
+| L-20260926-27 | Predictability map: STRONG favourites by league (AFL 39% … MLB 0%) | PROMOTED (disclosure, `C-PREDICTABILITY-MAP`) |
+| L-20260926-28 | Cards no worse than the models on their own contracts (P3) | OBSERVATION; `C-MODEL-ANCHOR` = REFERENCE |
+| L-20260926-29 | MLB declared-starter term on results (P1) | CLOSED — not demonstrated |
+| L-20260926-30 | TB-1 flags for NRL sides and NFL totals rested on point estimates | FIXED (validity repair) |
+| L-20260926-31 | NFL/NRL 0.70–0.80 favourite bands over-confident | TESTING (`T-FAV70-BAND`) |
+| L-20260926-32 | NBL validated (2025-26; 2024-25 mixed); NRL results not significant | OBSERVATION |
+| L-20260926-33 | `mlb_model.py` "starters cannot be reconstructed" claim | FIXED (documentation) |
+| `T-MLB-V2-2025` | MLB v2 team prior on the unseen 2025 season | CONCLUDED — replicated (−0.0023 [−0.0042, −0.0005]) |
+| L-20260926-34 | C1: NFL band over-confidence replicates, NRL reverses; shrinking does not improve Brier | NO MODEL CHANGE (user's bar not met) |
 
 ---
 
@@ -446,6 +455,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 - **2026-09-26 review:** L-20260926-01–11.
 - **2026-09-26(c) models for every sport:** L-20260926-12–18.
 - **2026-09-26(d) second pass and lanes:** L-20260926-19–26.
+- **2026-09-26(e) predictability across sports:** L-20260926-27–34; `T-FAV70-BAND` opened; `T-MLB-V2-2025` concluded; C1 (2026-09-27): no model change meets the user's bar.
 
 ---
 
@@ -458,8 +468,8 @@ MLB run-line and push caps and fixed variance floors · order-statistic pseudo-t
 ## 8. Open tests (no ranking effect until each concludes)
 
 `python tools/evidence_status.py` prints the headline gates. The full list is `CURRENT_RULES.md` §D9:
-- **Headline gates:** `C-BASELINE-SKILL` (0/100), `T-RM1-PROSPECTIVE` (0/25 cards, amended 2026-09-26), `C-MARKET-BENCHMARK` (0/100), `C-MLB-SHADOW` (0/150 games), `C-SPORT-SHADOW` (0/150 rows per league), `T-MLB-V2-2025` (needs statsapi), `T-CRICKET-V2-UNSEEN` (needs cricsheet), `T-UNIVERSE-VS-SELECTED` (0/30 + 30 cards).
-- **Calibration and width:** `C-WIDTH-Z`, `C-PROB-EXTREMITY` (79/100, not supported so far), `C-LOW-RESOLUTION-BAND`, `T-PLUS-CUSHION`, `T-TB1-ANCHOR`.
+- **Headline gates:** `C-BASELINE-SKILL` (0/100), `T-RM1-PROSPECTIVE` (0/25 cards, amended 2026-09-26), `C-MARKET-BENCHMARK` (0/100), `C-MLB-SHADOW` (0/150 games), `C-SPORT-SHADOW` (0/150 rows per league), `T-CRICKET-V2-UNSEEN` (needs cricsheet), `T-UNIVERSE-VS-SELECTED` (0/30 + 30 cards).
+- **Calibration and width:** `C-WIDTH-Z`, `C-PROB-EXTREMITY` (79/100, not supported so far), `C-LOW-RESOLUTION-BAND`, `T-PLUS-CUSHION`, `T-TB1-ANCHOR` (NRL sides and NFL totals left it 2026-09-26(e)), `T-FAV70-BAND` (0/100 band games per league, NFL and NRL).
 - **Direction and centre (accrue, no tilt):** `C-RUN-CENTRE-BIAS`, `T-TOTAL-DIRECTION-LEAGUE`, `C-PHASE-VS-FULL-TOTAL`, `O-NPB-ERA-CENTRE`.
 - **Sport-specific:** `T-TEN-LOWTIER-HCP`, `C-TEN-FAV-SEPARATION`, `T-TEN-BENCHMARK-GAP`, `T-BKB-SEASON-OPENER-WIDTH` (6/15), `T-NHL-PRESEASON-GOALIE` (1/10), `T-MLB-WIND-IN-OVER` (2/10), `T-CRI-DOMINANT-HITTER` (2/10), `T-CRI-POST-TOSS-FREEZE`, `T-NRL-BYE-RUST`.
 
