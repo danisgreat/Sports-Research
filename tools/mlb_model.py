@@ -56,11 +56,15 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 SHADOW_DIR = REPO / "research" / "mlb_shadow"
-MODEL_VERSION = "MLB-A1-shadow/2026-09-26"
+MODEL_VERSION = "MLB-A1-shadow/2026-09-26b"   # b: team_prior_games 20 -> 120 (research/sport_models_2026-09-26)
 
 # Declared inputs, not fitted values (NUMERICAL_PROGRAM §2: "Parameters/priors are explicit inputs").
 PRIORS = {
-    "team_prior_games": 20.0,     # games of league-mean runs added to each team's offence and prevention
+    "team_prior_games": 120.0,    # games of league-mean runs added to each team's offence and prevention.
+                                  # v1 used 20 and was overconfident on Retrosheet 2022-24 (P(home win) from
+                                  # 0.08 to 0.90); 120 was selected on 2022 alone by win log loss, then scored
+                                  # on 2023-24 (research/sport_models_2026-09-26/README.md §MLB). Not independent
+                                  # evidence: the 2025 season and the shadow lane are.
     "park_prior_games": 60.0,     # games of neutral park added to each venue
     "home_prior_games": 200.0,    # games of an even home/away split added to the league home factor
     "starter_prior_ip": 40.0,     # innings of league-mean run prevention added to each starter

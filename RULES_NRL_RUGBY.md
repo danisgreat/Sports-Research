@@ -73,6 +73,10 @@ NRLW has no population reference yet (`NOT_YET_DERIVED`).
 ### 0.6 Withdrawn or not operative in rugby league
 `C-NRL-SPINE-PEDIGREE-TOTAL-FLOOR` (rejected: one game, invented statistic). `C-FINALS-BYE-RUST` is TESTING only (`T-NRL-BYE-RUST`, 30 games), with no ranking effect. Pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
 
+### Numerical shadow model (2026-09-26(c); never a card input)
+
+`python tools/sport_models.py shadow --league nrl …` (`C-SPORT-SHADOW`). A1 is ridge ratings with key-number weights. **Not validated:** no NRL results could be reached. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 spine is a regime · 2 possession imbalance drives dependence · 3 cover rates diagnostic · 4 wet weather bidirectional · 5 goal-kicker state · 6 sin-bin/send-off tail · 7 winner ≠ handicap · 8 league and union never pooled · 9 motivation conditional · 10 no calibration claim · 11 defensive regime and spine-return mixture · 12 blowouts are possession-native · 13 a total can clear through one team · 14 low total ≠ close margin · 15 halftime doesn't freeze separation · 16 close-game winner needs terminal events.
 

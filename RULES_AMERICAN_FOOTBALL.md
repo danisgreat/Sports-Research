@@ -69,6 +69,10 @@ Rank by RM-1 q; its cushion term applies to gridiron +k.5 rows. Settle from ESPN
 ### 0.6 Withdrawn in gridiron — never apply
 A universal 13.9 SD floor (the residual benchmark is a disclosure reference, not a floor); a hand-picked healthy-QB window as the prior; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
 
+### Numerical shadow model (2026-09-26(c); never a card input)
+
+`python tools/sport_models.py shadow --league <nfl|ncaaf> …` (`C-SPORT-SHADOW`). A1 is ridge ratings with the league's own key-number weights (3, 7, …). On the NFL 2021–2025 it beat the league baseline on results and margins. It was ahead of TB-1 on results, but the interval crosses 0. It gave **no gain on totals**. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 QB identity is a regime · 2 line continuity is combinatorial · 3 game script creates dependence · 4 turnovers and one-score records shrink · 5 weather is matchup-specific · 6 key numbers and pushes are discrete · 7 OT matches the competition · 8 special teams are field position · 9 preseason is a separate phase · 10 college availability is asymmetric · 11 preseason quarter-by-quarter unit mixture · 12 reserve-sample shrinkage and explosive tails · 13 low total ≠ close spread · 14 CFL possession chain · 15 aligned regime uncertainty caps a favourite · 16 new-regime uncertainty two-sided · 17 margin prior and width · 18 key numbers at 3 and 7 · 19 prior-season ratings are width · 20 non-offensive score branch · 21 favourite covers inside the Under.
 

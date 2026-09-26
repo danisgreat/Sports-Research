@@ -15,6 +15,8 @@ Gates reported:
   C-EVENT-UNIVERSE     declared universes in universe/ and their coverage against the logs
   C-MLB-SHADOW         games frozen in research/mlb_shadow/shadow_log.csv and settled in shadow_results.csv
                        (150-game review point)
+  C-SPORT-SHADOW       rows frozen in research/sport_shadow/shadow_log.csv (tools/sport_models.py, every
+                       other sport) and settled in shadow_results.csv, per league (150-row review point each)
   C-RULE-FREEZE        IN FORCE until C-BASELINE-SKILL and T-RM1-PROSPECTIVE both reach checkpoint
 
 Usage: python tools/evidence_status.py [--repo PATH] [--log FILE ...]
@@ -125,6 +127,22 @@ def shadow_gate(repo: Path) -> dict:
             "status": "REVIEW DUE" if settled >= SHADOW_REVIEW_GAMES else "ACCRUING (never a card input)"}
 
 
+def sport_shadow_gate(repo: Path) -> dict:
+    d = repo / "research" / "sport_shadow"
+    frozen = _csv(d / "shadow_log.csv")
+    settled_ids = {r.get("row_id") for r in _csv(d / "shadow_results.csv")}
+    per = {}
+    for r in frozen:
+        lg = r.get("league", "?")
+        n, s = per.get(lg, (0, 0))
+        per[lg] = (n + 1, s + (r.get("row_id") in settled_ids))
+    due = sorted(lg for lg, (_, s) in per.items() if s >= SHADOW_REVIEW_GAMES)
+    progress = "; ".join(f"{lg} {n} frozen/{s} settled" for lg, (n, s) in sorted(per.items())) or "0 rows frozen"
+    return {"gate": "C-SPORT-SHADOW", "checkpoint": f"{SHADOW_REVIEW_GAMES} settled rows per league (review point, not proof)",
+            "progress": progress, "done": bool(due),
+            "status": ("REVIEW DUE: " + ", ".join(due)) if due else "ACCRUING (never a card input)"}
+
+
 def freeze_gate(base: dict, rm1: dict) -> dict:
     lifted = base["done"] and rm1["done"]
     return {"gate": "C-RULE-FREEZE", "checkpoint": "C-BASELINE-SKILL and T-RM1-PROSPECTIVE at checkpoint",
@@ -138,14 +156,16 @@ def collect(repo: Path, logs: list[Path] | None = None) -> list[dict]:
     if logs is None:
         logs = sorted(repo.glob(ACTIVE_LOG_GLOB)) + [repo / "PREDICTION_LOG_COMBINED_5.md"]
     base, rm1 = baseline_gate(repo), rm1_gate(repo)
-    return [base, rm1, market_gate(repo), universe_gate(repo, logs), shadow_gate(repo), freeze_gate(base, rm1)]
+    return [base, rm1, market_gate(repo), universe_gate(repo, logs), shadow_gate(repo), sport_shadow_gate(repo),
+            freeze_gate(base, rm1)]
 
 
 def render(rows: list[dict]) -> str:
     out = ["| Gate | Checkpoint | Progress | Status |", "|---|---|---|---|"]
     out += [f"| `{r['gate']}` | {r['checkpoint']} | {r['progress']} | {r['status']} |" for r in rows]
     out += ["", "LEARNING_ONLY: progress counts, not performance claims. Sources: SKILL_BASELINE_LEDGER.md, "
-            "MARKET_BENCHMARK_LEDGER.md, universe/, research/mlb_shadow/, research/settled_rows_2026-09-25/."]
+            "MARKET_BENCHMARK_LEDGER.md, universe/, research/mlb_shadow/, research/sport_shadow/, "
+            "research/settled_rows_2026-09-25/."]
     return "\n".join(out)
 
 

@@ -369,3 +369,23 @@ No existing `NOT FIT` model status is promoted by this documentation change. A n
 
 
 A model that requires market lines/odds, fantasy/DFS projections or betting-consensus features is **INELIGIBLE FOR THIS PROJECT**, regardless of predictive performance elsewhere.
+
+<!-- REDUCED-FEATURE-BUILDS-2026-09-26C -->
+## 2026-09-26(c) — reduced-feature A0/A1 builds for every sport
+
+These builds implement the A0/A1 roles of the candidate groups above in reduced-feature form: final scores, dates and venue roles only. The candidate rows keep their designs for the full builds, which remain DATA BLOCKED. Every build here is **shadow only** and never a card input.
+
+| Build | Implements | What it is | Status | Evidence |
+|---|---|---|---|---|
+| `SOC-A0/A1-RF-2026.09.26` | `SOC-A0-POIS-v0`; the attack/defence part of `SOC-A1-DC-BIVAR-v0` | League goal rates; time-decayed Gamma-pooled Poisson ratings with linked halves. Dixon–Coles tested as a separate candidate | **TESTED — NOT PROMOTED**; SHADOW (`C-SPORT-SHADOW`) | 5 leagues, 2022-23 to 2025-26: A1 better on results and margins everywhere; totals mixed; DC no gain |
+| `IH-A0/A1-RF-2026.09.26` | `IH-A0-POIS-v0` and the regulation part of `IH-A1-JOINT-GOAL-v0` | Regulation Poisson ratings; OT won in proportion to scoring rates at the league's decided-in-OT rate; SO 0.5 | CODE IMPLEMENTED — NOT VALIDATED; SHADOW | Synthetic only |
+| `BB-A0/A1-RF-2026.09.26` | `BB-A0-EMP-POSS-v0` (without possessions) | Ridge offence/defence; discretised normal margin (no tie) and total; residual widths | **TESTED — NOT PROMOTED** (NBA 2013–15); WNBA/NBL not validated; SHADOW | NBA: A1 better than A0 and TB-1 on results and totals |
+| `AF-A0/A1-RF-2026.09.26` | `AF-A0-EMP-DRIVE-v0` (without drives) | As basketball, with the league's key-number weights | **TESTED — NOT PROMOTED** (NFL 2021–25); SHADOW | A1 better than A0 on results and margins; against TB-1 the interval crosses 0; totals no gain |
+| `AFL-A0/A1-RF-2026.09.26` | `AFL-A0-EMP-SHOT-v0` (without shots) | As basketball, draws allowed | **TESTED — NOT PROMOTED** (2021–24); SHADOW | A1 better than A0 and TB-1 on results; TB-1 slightly better at the total line |
+| `RL-A0/A1-RF-2026.09.26` | `RL-A0-EMP-SET-v0` (without sets) | As American football | CODE IMPLEMENTED — NOT VALIDATED; SHADOW | Synthetic only |
+| `RU-A0/A1-RF-2026.09.26` | `RU-A0-EMP-SCORE-v0` | As American football; any ESPN path or CSV | CODE IMPLEMENTED — NOT VALIDATED; SHADOW | Synthetic only |
+| `BS-A1-TEAM-v2` (MLB and NPB/KBO/CPBL) | Team + park + home core of `BS-A1-JOINT-RUN-v0` | Shared-gamma joint; team prior 120 games (v1: 20); competition tie rate kept where ties exist | **TUNED** (2022) then scored 2023–24 (not independent); SHADOW (`C-MLB-SHADOW`; Asian leagues via CSV) | v1 failed (overconfident); v2 better than A0, level with TB-1 on results |
+| `TEN-A0/A1-RF-2026.09.26` | `TEN-A0-SERVE-RETURN-v0` (serve rate from Elo, not player serve stats) | Surface-blended Elo, then the exact point → match chain with a match-level gap effect (gap_sd 0.09; v1: 0) | **TUNED** (2021–22) then scored 2023–26 (not independent); predict/validate only | Winner: narrowly better than overall Elo; games: v1 worse than population, v2 level to slightly better |
+| `CR-A0/A1-RF-2026.09.26` | `CR-A0-ECDF-COUNT-v0` (first innings only) | Elo result; ridge batting/bowling/venue first-innings total; target-censored second innings not modelled | CODE IMPLEMENTED — NOT VALIDATED; predict/validate only | Synthetic only |
+
+Full tables, protocol and disclosures: `research/sport_models_2026-09-26/README.md`.

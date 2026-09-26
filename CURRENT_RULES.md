@@ -8,6 +8,7 @@
 - **`C-EVENT-UNIVERSE`:** declare the day's events before carding them (`tools/slate_universe.py`).
 - **`C-MARKET-BENCHMARK`:** the closing line is recorded **after settlement only**, for scoring (`MARKET_BENCHMARK_LEDGER.md`). Forecasting stays market-blind.
 - **`C-MLB-SHADOW`:** after an MLB card is frozen, `tools/mlb_model.py shadow` records the numerical pilot's forecast. It is never a card input.
+- **`C-SPORT-SHADOW` (2026-09-26(c)):** every other sport has a numerical A0/A1 model too (`tools/sport_models.py`). After the card is frozen, `sport_models.py shadow` records it. It is never a card input. Its validation, sport by sport, is in `research/sport_models_2026-09-26/README.md`.
 - **Every learning is indexed** in `LEARNINGS_INDEX.md`; 80 untested historical candidates and early tests are closed.
 - **Method:** MDS-2026.09.19-v4.3.
 - **Control revision:** CR-2026.09.21-3.
@@ -59,9 +60,9 @@ Source: `METHOD.md` §3. The tools are in §G.
 | 5 | **Evidence.** Disaggregated records before aggregates (M13); L5/L10/L15/L20 descriptively; the season rate plus the opponent (§D5) | an aggregate carries direction while the game log sits one click away: mark `AGGREGATE_ONLY` and cap it |
 | 6 | **Distribution.** Prior plus named adjustments → centre and width → family table with masses. Print the **reference row, reference width, `BASELINE_P` and `TEAM_BASELINE_P`** (`tools/team_baseline.py`; §D5, §D7). The departure ledger anchors on TB-1 where it has resolution | the probabilities can't be reproduced from the table |
 | 7 | **Rank and dependence.** Derive each row's p, then run **`tools/rank_model.py rank`**. **Rank by RM-1 q** and print the `TOP2_QUALITY` line. Label FORCED_PAIR/FREE and COVERING_PAIR; print P(R1∧R2), P(¬R1∧¬R2) and the complement decomposition (§D6) | a joint number is invented: use `JOINT_UNQUANTIFIED` with bounds |
-| 8 | **Freeze.** Final volatile refresh, freeze time, manifest SHA, and `UNIVERSE: <file> / <event id>` or `OUT_OF_UNIVERSE`. Append the card to the active mini log **before** delivery. **MLB only, after the freeze and before first pitch:** `python tools/mlb_model.py shadow --gamepk <pk> --total <line> --card P-###` (`C-MLB-SHADOW`; never shown on the card) | — |
+| 8 | **Freeze.** Final volatile refresh, freeze time, manifest SHA, and `UNIVERSE: <file> / <event id>` or `OUT_OF_UNIVERSE`. Append the card to the active mini log **before** delivery. **MLB only, after the freeze and before first pitch:** `python tools/mlb_model.py shadow --gamepk <pk> --total <line> --card P-###` (`C-MLB-SHADOW`). **Other sports, same timing:** `python tools/sport_models.py shadow --league <key> --event <ESPN id> --date … --card P-###` (`C-SPORT-SHADOW`). Neither is ever shown on the card | — |
 | 9 | **Settle.** Three terminal lineages; the `receipts.py settle …` process record, **read from the feed, never typed** (`C-SETTLEMENT-FROM-FEED`); lineup diff; z-scores; p **and** q grades; enhanced reviews (§D8) | any credible live or conflicting source |
-| 10 | **Learn.** Retrospective questions; dispositions to `LEARNING_REGISTER.md` and `LEARNINGS_INDEX.md` with a receipt; baseline ledger row appended; universe skips recorded (`slate_universe.py skip`); `mlb_model.py settle` for MLB (§D9) | a predictive rule while `C-RULE-FREEZE` is in force |
+| 10 | **Learn.** Retrospective questions; dispositions to `LEARNING_REGISTER.md` and `LEARNINGS_INDEX.md` with a receipt; baseline ledger row appended; universe skips recorded (`slate_universe.py skip`); `mlb_model.py settle` for MLB and `sport_models.py settle` for the rest (§D9) | a predictive rule while `C-RULE-FREEZE` is in force |
 
 ## C. The card: six fields plus the completeness block
 
@@ -192,7 +193,7 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
   - from 2026-09-25(d): `T-PLUS-CUSHION`, `C-LOW-RESOLUTION-BAND`, `T-TOTAL-DIRECTION-LEAGUE`;
   - from 2026-09-25(e): `T-RM1-PROSPECTIVE` (q against p; amended 2026-09-26), `T-TB1-ANCHOR` (cards against TB-1 in covered leagues), `T-NRL-BYE-RUST` (non-binding);
   - from 2026-09-23: `O-NPB-ERA-CENTRE`;
-  - from 2026-09-26: `T-UNIVERSE-VS-SELECTED`, `C-MARKET-BENCHMARK`, `C-MLB-SHADOW`.
+  - from 2026-09-26: `T-UNIVERSE-VS-SELECTED`, `C-MARKET-BENCHMARK`, `C-MLB-SHADOW`, `C-SPORT-SHADOW`.
 - **Closed 2026-09-26:** 59 historical candidates and 21 early process tests (`CLOSED_UNTESTED`), plus `C-RANK2-GAP` (answered), `C-WEIGHT-PROPAGATION`, `C-MARGIN-TAIL-MASS` and `C-OU-GEOMETRY` (superseded). Re-register with a v2 manifest if wanted (`LEARNING_REGISTER.md` §"2026-09-26" D).
 - **`C-RULE-FREEZE`:** while in force, a retrospective may open a TESTING row but may not create a binding rule.
 - **After every settlement or audit pass,** implement or explicitly disposition its "document mapping" table. Unexecuted mapping tables are how improvements were lost before.
@@ -209,6 +210,8 @@ Source: `METHOD.md` §4; `RULES_GENERAL.md` §16.3, §16.8. The audit field IDs 
 ## E. Sport quick cards
 
 Each card lists what the card must print, plus the traps that recur. The detail is in the sport file's latest dated section and its SFA checklist.
+
+**Every sport has a numerical shadow model (2026-09-26(c)).** Use `tools/mlb_model.py` for MLB and `tools/sport_models.py` for everything else. Record it after the freeze where its lane exists; it never goes on the card. What its validation showed, per sport, is in each sport file's §0 and in `research/sport_models_2026-09-26/README.md`.
 
 **MLB / NPB / KBO** (`RULES_BASEBALL.md`)
 - `receipts.py pregame mlb`: probables, official orders, gamefeed wind, umpires. Re-run within 60 minutes of first pitch.
@@ -325,6 +328,7 @@ All are standard-library Python 3.10+. Run from the repository root.
 | `python tools/skill_baseline.py [--section prospective\|seed]` | After appending settled rows to `SKILL_BASELINE_LEDGER.md` (prospective rows count; seed rows never do) |
 | `python tools/market_benchmark.py devig --odds …` · `report` | Operator only, **after settlement** (`C-MARKET-BENCHMARK`) |
 | `python tools/mlb_model.py shadow --gamepk … --total … --card P-###` · `settle` · `score` · `validate --season …` | MLB: after the card is frozen, before first pitch; at settlement; at review (`C-MLB-SHADOW`) |
+| `python tools/sport_models.py shadow --league <key> --event <ESPN id> --date … --card P-### --total … --line …` · `settle` · `score` · `predict …` · `validate …` · `leagues` | Every other sport: after the card is frozen, before the start; at settlement; at review (`C-SPORT-SHADOW`). `predict` is for research only and never feeds a card |
 | `python tools/card_math.py total\|cover\|departure …` | When building a card: derive every row from its own distribution; departure ledger |
 | `python tools/team_baseline.py predict --league <nba\|wnba\|nbl\|nfl\|afl\|nrl\|epl\|mlb\|nhl> --home … --away … --date <local date> --total … --home-line …` | When building a card: `TEAM_BASELINE_P` and its flags |
 | `python tools/rank_model.py rank --sport <league> --row "<contract>=<p>" …` | Field 4: RM-1 q, tiers, flags, the q order and `TOP2_QUALITY` |

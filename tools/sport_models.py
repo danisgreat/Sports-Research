@@ -27,10 +27,12 @@ contract lines are only the thresholds that the frozen distribution is queried a
   cricket   limited-overs (T20, ODI, leagues)   Elo for the result; ridge batting/bowling/venue model for
                                                 the first-innings total; A0 = 0.5 and the format's totals
 
-Status. DECLARED PRIORS, NOT PROMOTED. Every constant below was declared before any validation run.
-research/sport_models_2026-09-26/ holds the rolling-origin comparisons on the public results data
-that could be reached; the result is recorded whichever way it went. Outputs are LEARNING_ONLY and
-are never a card input (C-SPORT-SHADOW). A card may not cite a model probability.
+Status. DECLARED PRIORS, NOT PROMOTED. Every constant below was declared before any validation run
+(commit ac6fdc5), except two that v1 got wrong and were re-selected on an earlier TUNE window:
+baseball team_prior_games (20 -> 120) and tennis gap_sd (0 -> 0.09). research/sport_models_2026-09-26/
+holds the rolling-origin comparisons on the public results data that could be reached, v1 and v2,
+recorded whichever way they went. Outputs are LEARNING_ONLY and never a card input (C-SPORT-SHADOW).
+A card may not cite a model probability.
 
 Usage:
   python tools/sport_models.py leagues
@@ -66,7 +68,7 @@ REPO = HERE.parent
 sys.path.insert(0, str(HERE))
 import mlb_model as mm  # noqa: E402  (shared-gamma joint, baseball ratings)
 
-MODEL_VERSION = "SPORT-A1-shadow/2026-09-26"
+MODEL_VERSION = "SPORT-A1-shadow/2026-09-26b"   # b: baseball team_prior_games 120, tennis gap_sd 0.09 (see research/sport_models_2026-09-26)
 SHADOW_DIR = REPO / "research" / "sport_shadow"
 
 # --------------------------------------------------------------------------- declared constants
@@ -83,8 +85,10 @@ FAMILY_DEFAULTS = {
                "resid_days": 400, "resid_keep": 400, "sd_prior_n": 20.0, "shape_smooth": 5.0,
                "shape_min_games": 200, "shape_bounds": [0.25, 3.0], "draws": True, "key_numbers": False,
                "key_max": 20},
-    "baseball": {"tie_prior": 0.02, "tie_prior_strength": 100.0, "min_games": 100, "draws": True},
+    "baseball": {"tie_prior": 0.02, "tie_prior_strength": 100.0, "min_games": 100, "draws": True,
+                 "team_prior_games": 120.0},   # v2 (2026-09-26b); v1 = 20 failed on MLB 2022-24
     "tennis": {"k_num": 250.0, "k_offset": 5.0, "k_exp": 0.4, "init": 1500.0, "surface_blend": 0.5,
+               "gap_sd": 0.09,   # v2 (2026-09-26b): v1 = 0 (i.i.d. points) over-predicted games and three-setters
                "serve_prior": {"Hard": 0.64, "Clay": 0.62, "Grass": 0.67, "Carpet": 0.65},
                "serve_window_days": 730, "min_matches": 5, "games_window_days": 730},
     "cricket": {"elo_k": 24.0, "elo_init": 1500.0, "lam_team": 6.0, "lam_venue": 10.0, "half_life": 365,
@@ -725,7 +729,10 @@ class BaseballModel:
         self.cfg = cfg
         mg = [{"hr": g["hs"], "ar": g["as"], "home": g["home"], "away": g["away"],
                "venue": g.get("venue") or g["home"]} for g in prior]
-        self.rt = mm.Ratings(mg)
+        priors = dict(mm.PRIORS)
+        if cfg.get("team_prior_games"):
+            priors["team_prior_games"] = float(cfg["team_prior_games"])
+        self.rt = mm.Ratings(mg, priors)
         ties = sum(1 for g in prior if g["hs"] == g["as"])
         k, t0 = cfg["tie_prior_strength"], cfg["tie_prior"]
         self.tie = (ties + k * t0) / (self.n + k) if cfg.get("ties") else 0.0
@@ -953,6 +960,35 @@ def serve_probs_for(p_match: float, p_serve_avg: float, best_of: int) -> tuple[f
     return p_serve_avg + d / 2, p_serve_avg - d / 2
 
 
+GH_NODES = [(-2.8569700138728056, 0.011257411327720693), (-1.3556261799742657, 0.22207592200561266), (0.0, 0.5333333333333333),
+            (1.3556261799742657, 0.22207592200561266), (2.8569700138728056, 0.011257411327720693)]
+
+
+def _node_probs(p_serve_avg: float, d: float) -> tuple[float, float]:
+    pa = min(0.98, max(0.02, p_serve_avg + d / 2))
+    pb = min(0.98, max(0.02, p_serve_avg - d / 2))
+    return pa, pb
+
+
+def mixed_serve_nodes(p_match: float, p_serve_avg: float, best_of: int, gap_sd: float) -> list[tuple[float, float, float]]:
+    """Match-level random effect on the serve-point gap: gap = d0 + gap_sd·Z, Z ~ N(0, 1) on 5 Gauss–Hermite
+    nodes, with d0 set so the mixture's match-win probability equals p_match. Returns [(weight, pa, pb)]."""
+    if gap_sd <= 0:
+        pa, pb = serve_probs_for(p_match, p_serve_avg, best_of)
+        return [(1.0, pa, pb)]
+    target = min(max(p_match, 1e-4), 1 - 1e-4)
+    lo, hi = -0.6, 0.6
+    for _ in range(28):
+        mid = (lo + hi) / 2
+        pw = math.fsum(w * match_win_prob(*_node_probs(p_serve_avg, mid + gap_sd * z), best_of) for z, w in GH_NODES)
+        if pw < target:
+            lo = mid
+        else:
+            hi = mid
+    d0 = (lo + hi) / 2
+    return [(w, *_node_probs(p_serve_avg, d0 + gap_sd * z)) for z, w in GH_NODES]
+
+
 def tennis_forecast(dist: dict) -> Forecast:
     """Forecast whose 'margin' is games_a − games_b and 'total' is total games; extra['sets'] holds the
     set-score distribution (margin = sets_a − sets_b)."""
@@ -1020,9 +1056,14 @@ class TennisElo:
     def forecast(self, a: str, b: str, surface: str, best_of: int, asof: str) -> tuple[float, Forecast | None, float, Forecast]:
         p0 = self.p_overall(a, b)
         p1 = self.p_blend(a, b, surface)
-        pa, pb = serve_probs_for(p1, self.serve_avg(surface, asof), best_of)
-        f1 = tennis_forecast(match_distribution(pa, pb, best_of))
-        f1.meta.update({"p_serve_a": pa, "p_serve_b": pb})
+        nodes = mixed_serve_nodes(p1, self.serve_avg(surface, asof), best_of, self.cfg.get("gap_sd", 0.0))
+        dist = defaultdict(float)
+        for w, pa, pb in nodes:
+            for k, v in match_distribution(pa, pb, best_of).items():
+                dist[k] += w * v
+        f1 = tennis_forecast(dict(dist))
+        f1.meta.update({"p_serve_a": math.fsum(w * pa for w, pa, _ in nodes),
+                        "p_serve_b": math.fsum(w * pb for w, _, pb in nodes), "gap_sd": self.cfg.get("gap_sd", 0.0)})
         return p0, self.a0_games(best_of, asof), p1, f1
 
     def update(self, m: dict) -> None:
@@ -1289,6 +1330,56 @@ def tb1_scores(league: str, games: list[dict], total_line: float | None) -> dict
             out[game_key(g)] = sc
         st.add({"home": g["home"], "away": g["away"], "hs": g["hs"], "as": g["as"], "neutral": g.get("neutral", False)})
     return out
+
+
+def validate_tennis(cfg: dict, matches: list[dict], start: str, end: str, levels=None, boot: int = 2000) -> dict:
+    """Rolling origin in tournament/round order: each match is forecast from matches earlier in that order,
+    then the ratings update. Player A is the alphabetically first name (never the winner). Scores: winner
+    Brier/log loss (A0 overall Elo v A1 surface blend); for completed matches, total-games RPS and Brier at a
+    line fixed from pre-start history, and P(three sets) Brier in best-of-3 (A0 empirical v A1 chain).
+    Bootstrap blocks are tournaments."""
+    elo = TennisElo(cfg)
+    ordered = sorted(matches, key=tennis_order)
+    lines = {}
+    for bo in (3, 5):
+        pre = [m["total_games"] for m in ordered if m["date"] < start and m.get("complete") and m["best_of"] == bo
+               and m.get("total_games")]
+        lines[bo] = math.floor(sum(pre) / len(pre)) + 0.5 if pre else None
+    rows = []
+    for m in ordered:
+        eligible = (start <= m["date"] <= end and not m.get("walkover")
+                    and (levels is None or m.get("level") in levels)
+                    and min(elo.n[m["winner"]], elo.n[m["loser"]]) >= cfg["min_matches"])
+        if eligible:
+            a, b = sorted([m["winner"], m["loser"]])
+            y = 1.0 if a == m["winner"] else 0.0
+            bo = m["best_of"]
+            p0, g0, p1, f1 = elo.forecast(a, b, m["surface"], bo, m["date"])
+            r = {"block": m.get("tourney_id") or iso_week(m["date"]), "date": m["date"],
+                 "a0": {"win_brier": (p0 - y) ** 2, "win_logloss": -math.log(max(p0 if y else 1 - p0, 1e-12))},
+                 "a1": {"win_brier": (p1 - y) ** 2, "win_logloss": -math.log(max(p1 if y else 1 - p1, 1e-12))},
+                 "flat": {"win_brier": 0.25}}
+            if m.get("complete") and m.get("total_games") and g0 is not None:
+                tg = m["total_games"]
+                r["a0"]["games_rps"] = rps(g0.total, tg)
+                r["a1"]["games_rps"] = rps(f1.total, tg)
+                if lines.get(bo) is not None:
+                    L = lines[bo]
+                    r["a0"]["games_brier_line"] = (p_gt(g0.total, L) - (1.0 if tg > L else 0.0)) ** 2
+                    r["a1"]["games_brier_line"] = (p_gt(f1.total, L) - (1.0 if tg > L else 0.0)) ** 2
+                if bo == 3 and m.get("sets_margin") is not None:
+                    three = 1.0 if abs(m["sets_margin"]) == 1 else 0.0
+                    hist = [s for d, b_, _, s in elo.games_hist if b_ == 3 and 0 < (to_date(m["date"]) - d).days <= cfg["games_window_days"]]
+                    p0s = sum(1 for s in hist if abs(s) == 1) / len(hist) if hist else 0.4
+                    p1s = f1.extra["sets"].total.get(3, 0.0)
+                    r["a0"]["three_sets_brier"] = (p0s - three) ** 2
+                    r["a1"]["three_sets_brier"] = (p1s - three) ** 2
+            rows.append(r)
+        elo.update(m)
+    res = summarise_pairs(rows, ["win_brier", "win_logloss", "games_rps", "games_brier_line", "three_sets_brier"], boot=boot)
+    res.update({"league": cfg["league"], "from": start, "to": end, "games_lines": lines,
+                "model_version": MODEL_VERSION, "params_sha": params_sha(cfg)})
+    return res
 
 
 # --------------------------------------------------------------------------- shadow lane

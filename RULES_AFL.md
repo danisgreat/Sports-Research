@@ -68,6 +68,10 @@ Rank by RM-1 q (its cushion term applies to AFL +k.5 rows). Settle from the AFL/
 ### 0.6 Withdrawn in AFL — never apply
 Points budgeted as one number; name-only personnel bumps; fixed conversion regression; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
 
+### Numerical shadow model (2026-09-26(c); never a card input)
+
+`python tools/sport_models.py shadow --league afl …` (`C-SPORT-SHADOW`). A1 is ridge ratings with draws allowed. On 2021–2024 it beat the league baseline and TB-1 on results and margins. It gave **no gain on totals**, and TB-1 was slightly better at the total line. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 decompose the shot chain · 2 conversion persistence estimated · 3 winner ≠ handicap · 4 overlapping positive handicaps · 5 live Under needs observed suppression · 6 large Q4 cushion needs remaining-possession analysis · 7 venue and competition matter · 8 hitouts are opportunity · 9 high totals need a high-shot branch · 10 motivation is conditional · 11 availability-to-conversion handshake · 12 conversion sensitivity near the line · 13 volume and margin separate · 14 ground-level wind is a phase variable · 15 Q4 territorial durability.
 

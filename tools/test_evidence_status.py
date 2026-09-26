@@ -85,6 +85,14 @@ class EvidenceStatus(unittest.TestCase):
         g = self.gate(es.collect(self.repo, []), "C-MLB-SHADOW")
         self.assertEqual(g["progress"], "2 games frozen, 1 settled")
 
+    def test_sport_shadow_counts_per_league(self):
+        d = self.repo / "research" / "sport_shadow"
+        write(d / "shadow_log.csv", "row_id,league\nepl:1:2.5:None,epl\nepl:2:2.5:None,epl\nnba:9:220.5:-3.5,nba\n")
+        write(d / "shadow_results.csv", "row_id,home_score\nepl:1:2.5:None,2\n")
+        g = self.gate(es.collect(self.repo, []), "C-SPORT-SHADOW")
+        self.assertEqual(g["progress"], "epl 2 frozen/1 settled; nba 1 frozen/0 settled")
+        self.assertFalse(g["done"])
+
 
 if __name__ == "__main__":
     unittest.main()

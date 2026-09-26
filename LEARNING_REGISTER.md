@@ -1460,3 +1460,27 @@ Everything is hindsight on the framework's own selected cards and LEARNING_ONLY.
 | `C-OU-GEOMETRY` | **SUPERSEDED** by `C-PHASE-VS-FULL-TOTAL` and `T-UNIVERSE-VS-SELECTED` | Verified prospective count was 0; the family comparison continues there |
 
 `C-NT-*` (the numerical-programme comparisons) are **not** closed: they are the design of `NUMERICAL_PROGRAM.md` and are exercised by `C-MLB-SHADOW` first.
+
+<!-- SPORT-MODELS-2026-09-26C -->
+# 2026-09-26(c) — a numerical model for every sport
+
+**Origin.** The user asked for the numerical model to cover every sport, not only MLB. Controls: `RULES_GENERAL.md` §"2026-09-26" (k). The evidence is in `research/sport_models_2026-09-26/README.md`. Everything is learning-only, and **no model output is a card input.**
+
+## A. Prospective tests opened
+
+| Test ID | Origin | Frozen hypothesis / control | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`C-SPORT-SHADOW`** | The user's request; L-20260926-12 | Per league: A1 beats A0 on frozen, prospective shadow rows, and beats the cards' p on shared rows | Rows frozen by `sport_models.py shadow` after a card and before the start | 150 settled rows per league | 0 | As `C-MLB-SHADOW`; promotion needs the user's instruction (`C-RULE-FREEZE`) | ACCRUING |
+| **`T-MLB-V2-2025`** | L-20260926-14 | The v2 team prior (120) beats A0 on 2025 MLB games, a season neither version has seen | `python tools/mlb_model.py validate --season 2025` (statsapi) | The full 2025 season | 0 | Report A1 − A0 with the day-block interval; if it is not below 0, v2 is recorded as not replicated | OPEN (needs statsapi) |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260926-12 | On public results, a pooled team-strength A1 beat the league baseline on results and margins in 5 soccer leagues, the NFL, AFL and NBA (every interval below 0). It beat TB-1 on results in the EPL, AFL and NBA | **PROMOTED_PROCESS (measurement) — `C-SPORT-SHADOW`** with `tools/sport_models.py`. Not a card input | 150 settled rows per league |
+| L-20260926-13 | Totals were the hard target. A1 gained only in the NBA, La Liga and the Bundesliga (at the line). It was level elsewhere, and TB-1 was slightly better at the AFL total line | **OBSERVATION**, consistent with TB-1's missing total resolution. Team-strength models are not evidence for a total direction | `C-SPORT-SHADOW` totals, reported separately |
+| L-20260926-14 | MLB team-only v1 was overconfident: P(home win) 0.08–0.90, SD 0.147. Multiplied offence and prevention ratings with 20 prior games did not shrink enough, and v1 was no better than A0 and worse than TB-1 | **FIXED (v2), not independent.** `team_prior_games` 120 was selected on 2022 by win log loss. On 2023–2024 it was better than A0 and level with TB-1 on results | `T-MLB-V2-2025`; `C-MLB-SHADOW` |
+| L-20260926-15 | The tennis i.i.d. point chain over-predicted close matches: 24.9 games v 23.7, and 45% three-setters v 37%. Its games route lost to the population | **FIXED (v2), not independent.** A match-level random effect on the serve gap (gap_sd 0.09, selected on 2021–22) brought it level to slightly better on 2023–2026 | Tennis lane once a settlement feed is admitted |
+| L-20260926-16 | The Dixon–Coles low-score factor made no measurable difference in any of five leagues (every interval includes 0) | **CLOSED** — it stays off, as `MODEL_IMPLEMENTATION_RECIPES.md` §2 requires ("check actual improvement") | — |
+| L-20260926-17 | Only GitHub-hosted public results were reachable from the implementing session. NHL, WNBA, NBL, NRL, rugby union, cricket and NPB/KBO/CPBL could not be validated | **OPEN** — run `python tools/sport_models.py validate --league <key> …` where ESPN (or a results CSV) is reachable, and record the result beside the public-data runs | — |
+| L-20260926-18 | Check the spread of a model's probabilities before scoring it. L-20260926-14's failure showed in the range (0.08–0.90) before any score was computed | **PROCESS NOTE** for every numerical build: print the predicted-probability range and SD beside the scores (`diagnose.py`) | — |

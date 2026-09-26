@@ -50,6 +50,10 @@ This module covers 15-a-side rugby union and rugby sevens. They share laws ances
 ### 0.3 Ranking and settlement
 Rank by RM-1 q; its cushion term applies to union +k.5 rows. A large cushion (k ≥ 10) stated at 0.60–0.65 is still scored by RM-1, and the reconciliation line names the margin band (`C-PLUS-CUSHION`). Print `TOP2_QUALITY`. Settle from the competition's official match centre plus two further lineages, read from the feed.
 
+### Numerical shadow model (2026-09-26(c); never a card input)
+
+`python tools/sport_models.py shadow --league union --espn-path rugby/<competition id> …`, or `--csv` results (`C-SPORT-SHADOW`). A1 is ridge ratings with key-number weights and draws allowed. **Not validated.** Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+
 ### 0.4 Control index (full text in §6 and the dated sections)
 1 union is not league · 2 fifteens and sevens separate · 3 broad totals need mechanism support · 4 territory is not points · 5 points composition matters · 6 goal kicker is a regime · 7 set piece and breakdown are exposure engines · 8 cards create asymmetric tails · 9 low total ≠ close margin · 10 sevens clusters need restart/card branches · 11 sparse lineups cap evidence.
 

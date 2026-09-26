@@ -63,6 +63,10 @@ Rank by RM-1 q with the `TOP2_QUALITY` line. A +1.5 puck line is classed with ba
 ### 0.6 Withdrawn in hockey — never apply
 `NHL-PRESEASON-ROSTER-ASYMMETRY` as a ranking rule; any "confirmed" preseason goalie without an official report; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
 
+### Numerical shadow model (2026-09-26(c); never a card input)
+
+`python tools/sport_models.py shadow --league nhl …` (`C-SPORT-SHADOW`). A1 is regulation Poisson ratings, with OT won in proportion to scoring rates and the shootout a coin flip. **Not validated:** no NHL results could be reached from the implementing session. Run `validate --league nhl` before reading anything into it. Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 goalie uncertainty is a mixture · 2 shots and goals linked, not interchangeable · 3 blocked shots definition-sensitive · 4 special teams change exposure and rate · 5 score state changes pace · 6 empty-net goals are an explicit tail · 7 regulation ≠ moneyline · 8 back-to-back is mechanistic · 9 props need role and ice time · 10 external xG models are challengers · 11 shot volume is exposure · 12 sparse competitions keep a conversion cap · 13 OT geometry v operator settlement · 14 unconfirmed goalie blocks a fragile Rank-1 total. References: H-R1 totals and odd OT totals · H-R2 puck line is an empty-net market · H-R3 preseason rates · H-R4 recency · H-R5 width · H-R6 settlement receipt.
 

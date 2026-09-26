@@ -3190,12 +3190,12 @@ Every sport file now opens with a §0 live rules page (560–1,650 words, agains
 
 1. `tools/mlb_model.py` implements the MLB A0/A1 pilot (`NUMERICAL_PROGRAM.md` §2; `MODEL_IMPLEMENTATION_RECIPES.md` §1, §5): leak-free league A0; A1 with pooled team offence and prevention, park, home, and a starter term; the shared-environment Gamma-Poisson joint; route A reduced-form final scores. **Every constant is a declared input, not a fitted value.**
 2. **Order of operations:** freeze the MLB card first; then, before first pitch, run `python tools/mlb_model.py shadow --gamepk <pk> --total <line> --card P-###`. The tool refuses a started game and never replaces a frozen row. The shadow output is **never shown on, cited by or used to revise a card.**
-3. At settlement, `settle` appends the finals and `score` reports A1 against A0. `validate --season <year>` runs the leak-free rolling-origin comparison of A0 and team-only A1 where statsapi is reachable (it was not reachable from the 2026-09-26 implementation session, so no validation result exists yet).
+3. At settlement, `settle` appends the finals and `score` reports A1 against A0. `validate --season <year>` runs the leak-free rolling-origin comparison of A0 and team-only A1 where statsapi is reachable. **Update 2026-09-26(c):** the team-only core was validated on Retrosheet game logs (2022–2024; `research/sport_models_2026-09-26/README.md`). v1 (20 prior games per team) was overconfident and no better than A0. v2 (120, selected on 2022 alone) beat A0 on results and totals on 2023–2024 and tied TB-1 on results. That test is not independent, so the 2025 season (`validate --season 2025`) and this lane are the real tests.
 4. **Review at 150 settled shadow games** (a review point, not proof). A proposal to use the model as an MLB anchor needs: A1 − A0 below 0 with its day-block interval below 0; A1 better than the cards' own p on the shared games; and an explicit user instruction (as for RM-1).
 
 ### (f) Evidence status at every session start and every review
 
-Run `python tools/evidence_status.py`. It prints `C-BASELINE-SKILL`, `T-RM1-PROSPECTIVE`, `C-MARKET-BENCHMARK`, `C-EVENT-UNIVERSE`, `C-MLB-SHADOW` and `C-RULE-FREEZE` in one table. Every 25-card review prints that table first.
+Run `python tools/evidence_status.py`. It prints `C-BASELINE-SKILL`, `T-RM1-PROSPECTIVE`, `C-MARKET-BENCHMARK`, `C-EVENT-UNIVERSE`, `C-MLB-SHADOW`, `C-SPORT-SHADOW` (added (k)) and `C-RULE-FREEZE` in one table. Every 25-card review prints that table first.
 
 ### (g) RM-1 — evidence caveats and a stricter reversion rule (validity, not a new weight)
 
@@ -3210,7 +3210,7 @@ The review re-ran `research/rank_model_2026-09-25e/validate_rank_model.py` and r
 
 - The rebuilt 2026-09-25(e) dataset gives **Brier 0.2268, calibration slope 1.01 and skill +6.6%** over the base rate (the README quoted the earlier (d) figures, 0.2249 / 1.06 / +7.7%). No conclusion changes.
 - Soccer's record is the **strongest resolution** of any sport (37 cards). Its card-cluster calibration interval spans 0, so it is "the strongest evidence", not "proof of skill".
-- RM-1 and TB-1 are fitted calibration and baseline layers. H0 and every forecasting model remain unbuilt; the MLB shadow model is implemented code with no fit.
+- RM-1 and TB-1 are fitted calibration and baseline layers. H0 remains unbuilt. The shadow models (MLB, and every other sport from (k)) are implemented code with declared priors, validated only where public results could be reached.
 - `LEARNING_REGISTER.md`'s header now names the live method (v4.3) and the M1–M32 registry.
 
 ### (i) The untested candidate backlog is closed
@@ -3220,3 +3220,24 @@ The 59 historical `C-P*` candidates and the 21 early process tests (`T-001`–`T
 ### (j) Repository
 
 The unreferenced `drive_settlement_2026-09-21/` folder and the Drive-sync manifests moved into `archive/`. The former `scratch/` folder is archived at `archive/scratch_2026-09-25/`, and `scratch/` is now ignored. The retired runtime's 319 byte-identical input copies were removed, with `archive/DEDUP_INDEX_2026-09-26.md` naming each identical kept file. `tools/repo_hygiene.py` now fails on byte-identical duplicates outside the historical folders.
+
+### (k) `C-SPORT-SHADOW` — a numerical model for every sport (2026-09-26(c); OPERATIVE, measurement)
+
+The user asked for the numerical model to cover every sport, not only MLB.
+
+1. **What exists.** `tools/sport_models.py` implements reduced-feature A0/A1 builds (`MODEL_IMPLEMENTATION_RECIPES.md` §4, "a separately labelled reduced-feature build") for:
+   - soccer: Poisson ratings with linked halves;
+   - ice hockey: regulation Poisson plus OT/SO resolution;
+   - basketball, American football, AFL, rugby league and rugby union: ridge ratings, a discretised normal with the league's own key-number weights, and widths from out-of-sample residuals;
+   - baseball outside MLB: the MLB joint with the competition's tie rate;
+   - tennis: surface-blended Elo, then a serve/return chain with a match-level gap effect;
+   - cricket: Elo, plus a ridge first-innings model.
+
+   Adapters are in `tools/sport_data.py`: ESPN, CSV, TML-Database and cricsheet. Nothing reads odds or lines as inputs.
+2. **Order of operations.** This is the same as `C-MLB-SHADOW`. Freeze the card first. Then, before the start, run `python tools/sport_models.py shadow --league <key> --event <ESPN id> --date <date> --card P-### --total … --line …`. At settlement, run `settle` (read from the ESPN feed) and `score`. The output is **never shown on, cited by or used to revise a card.** Tennis and cricket are `predict`/`validate` only until a settlement feed is admitted.
+3. **Validation (`research/sport_models_2026-09-26/README.md`).** Rolling origin on the public results that could be reached, with priors committed before the first run:
+   - **Soccer (five leagues), NFL, AFL and NBA:** A1 beat A0 on results and margins in every league. It beat TB-1 on results in the EPL, AFL and NBA; in the NFL it was ahead but the interval crossed 0.
+   - **Totals:** A1 gained only in the NBA, La Liga and the Bundesliga at the line. It was no better elsewhere, and TB-1 was slightly better at the AFL total line.
+   - **MLB and tennis:** each needed one re-selected parameter (v2, disclosed as not independent).
+   - **Not validated:** NHL, WNBA, NBL, NRL, rugby union, cricket and the Asian baseball leagues.
+4. **Review at 150 settled rows per league** (a review point, not proof). The rule is the same as (e): A1 − A0 below 0 with its interval below 0, A1 better than the cards' p on shared rows, and an explicit user instruction. Replacing TB-1 as the printed team baseline in a league where A1 beat it is a `MODEL_CHANGE` under `C-RULE-FREEZE`. It is a user decision, not an agent one.

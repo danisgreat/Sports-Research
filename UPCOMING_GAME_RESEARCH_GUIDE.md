@@ -667,6 +667,7 @@ Primary distribution metrics are CRPS/RPS and log score, with calibration/reliab
 - [ ] Refreshed state/participants/weather/price just before issue.
 - [ ] Appended the immutable Markdown view before delivery, if authorised.
 - [ ] **MLB (2026-09-26, `C-MLB-SHADOW`):** after the freeze and before first pitch, ran `python tools/mlb_model.py shadow --gamepk <pk> --total <line> --card P-###`. Its output is not on the card and did not change it.
+- [ ] **Other sports (2026-09-26(c), `C-SPORT-SHADOW`):** after the freeze and before the start, ran `python tools/sport_models.py shadow --league <key> --event <ESPN id> --date <date> --card P-### --total <line> --line <home handicap>` where the league has an ESPN path. The output is not on the card.
 - [ ] **At settlement (2026-09-26):** recorded a `skip` reason for every universe event left uncarded; ran `python tools/mlb_model.py settle` for MLB shadow rows. Did **not** fetch or read any price: closing lines are entered by the operator only (`C-MARKET-BENCHMARK`).
 - [ ] Cited current claims and disclosed unknowns/conflicts/source limits.
 - [ ] **At settlement:** opened the structured process record (shots/on-target, inning splits, phase runs, quarter scores) and the disruption facts (red cards, sin bins, injury exits, stoppages) **with minute and score**, and classified the card as a *process* failure or a *conversion / endpoint / disruption* outcome before amending any control (`G-L23`).

@@ -420,6 +420,13 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260926-09 | 80-item untested backlog | CLOSED_UNTESTED |
 | L-20260926-10 | Repository clutter | FIXED |
 | L-20260926-11 | Six manifests in one day | PROMOTED (one per day; M33) |
+| L-20260926-12 | Every sport has a numerical A0/A1 model; A1 beats the baseline on results in soccer, NFL, AFL, NBA | PROMOTED (`C-SPORT-SHADOW`; shadow only) |
+| L-20260926-13 | Team-strength models rarely help on totals | OBSERVATION |
+| L-20260926-14 | MLB team-only v1 overconfident | FIXED (v2, not independent; `T-MLB-V2-2025`) |
+| L-20260926-15 | Tennis point chain over-predicted close matches | FIXED (v2, not independent) |
+| L-20260926-16 | Dixon–Coles adds nothing | CLOSED |
+| L-20260926-17 | Seven competitions could not be validated from the cloud | OPEN (run `validate` locally) |
+| L-20260926-18 | Check a model's probability spread before scoring it | PROCESS NOTE |
 
 ---
 
@@ -429,6 +436,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 - **External blindspot audit, B-01–B-15 (2026-09-06(c)):** implemented as L-087–L-101 (B-01 → L-087 and `C-WEIGHT-PROPAGATION`, B-02 → L-088, B-03 → L-089, … B-15 → L-101).
 - **2026-09-24(f) verification audit:** L-20260924-F01–F14.
 - **2026-09-26 review:** L-20260926-01–11.
+- **2026-09-26(c) models for every sport:** L-20260926-12–18.
 
 ---
 
@@ -441,7 +449,7 @@ MLB run-line and push caps and fixed variance floors · order-statistic pseudo-t
 ## 8. Open tests (no ranking effect until each concludes)
 
 `python tools/evidence_status.py` prints the headline gates. The full list is `CURRENT_RULES.md` §D9:
-- **Headline gates:** `C-BASELINE-SKILL` (0/100), `T-RM1-PROSPECTIVE` (0/25 cards, amended 2026-09-26), `C-MARKET-BENCHMARK` (0/100), `C-MLB-SHADOW` (0/150 games), `T-UNIVERSE-VS-SELECTED` (0/30 + 30 cards).
+- **Headline gates:** `C-BASELINE-SKILL` (0/100), `T-RM1-PROSPECTIVE` (0/25 cards, amended 2026-09-26), `C-MARKET-BENCHMARK` (0/100), `C-MLB-SHADOW` (0/150 games), `C-SPORT-SHADOW` (0/150 rows per league), `T-MLB-V2-2025` (needs statsapi), `T-UNIVERSE-VS-SELECTED` (0/30 + 30 cards).
 - **Calibration and width:** `C-WIDTH-Z`, `C-PROB-EXTREMITY` (79/100, not supported so far), `C-LOW-RESOLUTION-BAND`, `T-PLUS-CUSHION`, `T-TB1-ANCHOR`.
 - **Direction and centre (accrue, no tilt):** `C-RUN-CENTRE-BIAS`, `T-TOTAL-DIRECTION-LEAGUE`, `C-PHASE-VS-FULL-TOTAL`, `O-NPB-ERA-CENTRE`.
 - **Sport-specific:** `T-TEN-LOWTIER-HCP`, `C-TEN-FAV-SEPARATION`, `T-TEN-BENCHMARK-GAP`, `T-BKB-SEASON-OPENER-WIDTH` (6/15), `T-NHL-PRESEASON-GOALIE` (1/10), `T-MLB-WIND-IN-OVER` (2/10), `T-CRI-DOMINANT-HITTER` (2/10), `T-CRI-POST-TOSS-FREEZE`, `T-NRL-BYE-RUST`.

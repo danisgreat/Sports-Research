@@ -60,6 +60,10 @@ Raw ATP/WTA/ITF records for set and tiebreak scores (G-L13). ITF: the tournament
 ### 0.6 Withdrawn in tennis — never apply
 The clay/Challenger handicap cap (L-20260924-F06); "winner implies games handicap" and "cushion implies underdog winner"; long-match-only coupling of underdog wins; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
 
+### Numerical shadow model (2026-09-26(c); never a card input)
+
+`python tools/sport_models.py predict --league atp --p1 … --p2 … --surface … --best-of …` (research only; no shadow lane until a settlement feed is admitted). On ATP 2023 to January 2026, surface-blended Elo narrowly beat overall Elo on winners. The serve-chain games route lost to the population at v1. After v2 (a match-level gap effect, selected on 2021–22) it is level to slightly better. WTA needs local results files. It is never printed, ranked or cited on a card (`RULES_GENERAL.md` §"2026-09-26" (k); `research/sport_models_2026-09-26/README.md`).
+
 ### 0.7 Control index (full text in §5 and the dated sections)
 1 surface is a regime · 2 current stability decomposed · 3 H2H needs continuity · 4 set count and total linked · 5 set cushions aren't free safety · 6 qualifying and workload · 7 retirement terms gate · 8 no ranking-only confidence · 9 level comparability demonstrated · 10 win-conditioned cover counts descriptive · 11 kill paths include opponent control · 12 scoreline coherence · 13 Elo benchmark beside the winner probability · 14 a long layoff widens the tree. Receipts and references: T-1 ITF route · T-2 surface from the calendar · TE-R1 totals reference · TE-R2 handicap coherence · TE-R3 qualifying v main draw.
 

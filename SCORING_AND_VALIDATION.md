@@ -257,5 +257,5 @@ Three yardsticks now sit beside every settled decision, from weakest to stronges
 1. **Seed rows never count.** `tools/skill_baseline.py` reports the "Prospective rows" and "Seed rows" sections separately; only the prospective section counts toward §13's checkpoint (fixed 2026-09-26: the tool had pooled them).
 2. **The closing line is entered after settlement only**, as a no-vig probability with its de-vig method (`multiplicative`, `power` or `shin`). Rows entered before settlement are excluded. See `RULES_GENERAL.md` §"2026-09-26"(d).
 3. **Universe split.** Cards in a declared universe (`C-EVENT-UNIVERSE`) and `OUT_OF_UNIVERSE` cards are reported separately in every review; the universe group is the one that describes the competition.
-4. **MLB shadow model.** `tools/mlb_model.py score` reports A1 against A0 on frozen shadow rows (`C-MLB-SHADOW`). It is compared with the cards only at its 150-game review.
+4. **Shadow models.** `tools/mlb_model.py score` (MLB, `C-MLB-SHADOW`) and `tools/sport_models.py score` (every other sport, `C-SPORT-SHADOW`, per league) report A1 against A0 on frozen shadow rows. Their historical rolling-origin validation is in `research/sport_models_2026-09-26/README.md`. It is compared with the cards only at its 150-game review.
 5. **One table first.** Every 25-card review opens with `python tools/evidence_status.py`.

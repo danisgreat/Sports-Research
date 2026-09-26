@@ -207,6 +207,7 @@ def tennis_rows(text: str) -> list[dict]:
         sc = parse_tennis_score(r.get("score", ""))
         wo = "W/O" in (r.get("score") or "").upper() or (r.get("score") or "").strip().upper() in ("W/O", "WO")
         m = {"date": f"{d[:4]}-{d[4:6]}-{d[6:]}", "tourney_id": r.get("tourney_id", ""), "round": r.get("round", ""),
+             "level": r.get("tourney_level", ""),
              "match_num": r.get("match_num") or 0, "winner": r["winner_name"], "loser": r["loser_name"],
              "surface": r.get("surface") or "Hard", "best_of": int(r.get("best_of") or 3), "walkover": wo,
              "complete": bool(sc and sc["complete"]) and not wo,

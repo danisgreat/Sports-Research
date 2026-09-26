@@ -38,7 +38,7 @@ The framework's working principles:
 | Procedures | [`UPCOMING_GAME_RESEARCH_GUIDE.md`](UPCOMING_GAME_RESEARCH_GUIDE.md) (pregame), [`EXTERNAL_LOGGING_WORKFLOW.md`](EXTERNAL_LOGGING_WORKFLOW.md) (mini logs, settlement), [`AGENT_ROLE_AND_TASK.md`](AGENT_ROLE_AND_TASK.md) |
 | Learning | [`LEARNINGS_INDEX.md`](LEARNINGS_INDEX.md) (one line per item, with status) → [`LEARNING_REGISTER.md`](LEARNING_REGISTER.md) (evidence; recurring mistakes M1–M34) |
 | Logs | Parts 1–4 (closed) and [Part 5](PREDICTION_LOG_COMBINED_5.md) (active); [`GAME_LOG_STATUS_CURRENT.md`](GAME_LOG_STATUS_CURRENT.md) (state register); `Mini logs (to be sent to actual log later)/` (active mini log) |
-| Numerical program (MLB pilot implemented as code, not fit; everything else design only) | [`NUMERICAL_PROGRAM.md`](NUMERICAL_PROGRAM.md), [`H0_DATASET_CARD.md`](H0_DATASET_CARD.md), [`NUMERICAL_MODEL_REGISTER.md`](NUMERICAL_MODEL_REGISTER.md), [`NUMERICAL_TRAINING_SPEC.md`](NUMERICAL_TRAINING_SPEC.md), [`MODEL_AND_DATA_SPEC.md`](MODEL_AND_DATA_SPEC.md), [`ALGORITHM_PORTFOLIO_AND_EVALUATION.md`](ALGORITHM_PORTFOLIO_AND_EVALUATION.md), [`MODEL_IMPLEMENTATION_RECIPES.md`](MODEL_IMPLEMENTATION_RECIPES.md), `tools/mlb_model.py`, [`research/mlb_shadow/`](research/mlb_shadow/README.md) |
+| Numerical program (reduced-feature A0/A1 models for every sport, as code; validated where public results were reachable; shadow only) | [`NUMERICAL_PROGRAM.md`](NUMERICAL_PROGRAM.md), [`H0_DATASET_CARD.md`](H0_DATASET_CARD.md), [`NUMERICAL_MODEL_REGISTER.md`](NUMERICAL_MODEL_REGISTER.md), [`NUMERICAL_TRAINING_SPEC.md`](NUMERICAL_TRAINING_SPEC.md), [`MODEL_AND_DATA_SPEC.md`](MODEL_AND_DATA_SPEC.md), [`ALGORITHM_PORTFOLIO_AND_EVALUATION.md`](ALGORITHM_PORTFOLIO_AND_EVALUATION.md), [`MODEL_IMPLEMENTATION_RECIPES.md`](MODEL_IMPLEMENTATION_RECIPES.md), `tools/mlb_model.py`, [`research/mlb_shadow/`](research/mlb_shadow/README.md) |
 | Freeze receipts | `CONTROL_MANIFEST_*.md` (the current one is named in `METHOD.md`'s header) |
 | History | [`CHANGELOG.md`](CHANGELOG.md) (dated changes, including the former README body), `archive/` (implemented audits, archived mini logs, historical snapshots) |
 
@@ -63,10 +63,11 @@ python receipts.py pregame espn basketball/nbl 401875254   # ESPN leagues: state
 
 Print the reference row, reference width and `BASELINE_P` from [`BASE_RATES_REGISTER.md`](BASE_RATES_REGISTER.md) §7. Build the six-field card ([`METHOD.md`](METHOD.md) §4) and append it to the active mini log before delivery.
 
-**Straight after freezing an MLB card (never shown on the card)**
+**Straight after freezing a card (never shown on the card)**
 
 ```bash
-python tools/mlb_model.py shadow --gamepk 824703 --total 8.5 --card P-518
+python tools/mlb_model.py shadow --gamepk 824703 --total 8.5 --card P-518                          # MLB
+python tools/sport_models.py shadow --league epl --event 740123 --date 2026-09-27 --card P-519 --total 2.5 --line -0.5   # every other sport
 ```
 
 **At settlement**
@@ -79,6 +80,7 @@ python audit_card_controls.py "<mini log>.md" --settlement --strict
 python tools/skill_baseline.py                # prospective rows (counted) and seed rows (never counted), separately
 python tools/slate_universe.py status universe/UNIVERSE_2026-09-27.json --log "<mini log>.md"
 python tools/mlb_model.py settle && python tools/mlb_model.py score
+python tools/sport_models.py settle && python tools/sport_models.py score
 python tools/market_benchmark.py report       # operator-entered closing lines, after settlement only
 ```
 
@@ -118,8 +120,8 @@ If you edited a governance file, regenerate the freeze receipt with `python tool
 | Skill v baseline | Seed: card Brier 0.2461 v naive baseline 0.2360 (n = 29, 9 cards; interval spans 0). Prospective count 0 of 100 |
 | Full-record calibration (rebuilt dataset, re-run 2026-09-26) | 411 decisions, 155 cards, **self-selected events**: Brier 0.2268, slope 1.01, skill +6.6% over the base rate. Skill lives at p ≥ 0.65 (about 80% won); 0.50–0.65 is coin-flip-grade (53.6%). Non-baseball underdog cushions are over-confident (17/40 at 0.642). Soccer has the strongest resolution (37 cards; interval spans 0); MLB and basketball near zero; tennis, NFL/NCAA and AFL none ([details](research/settled_rows_2026-09-25/README.md)) |
 | Ranking and baselines (2026-09-25(e)) | **RM-1** calibrates each stated p into a ranking probability q, and cards rank by q. Held out: top-two wins +0.068 per card [+0.007, +0.128]; Rank 1 64.2% → 68.9% ([details](research/rank_model_2026-09-25e/README.md)). **TB-1** is a leak-free team-strength baseline with resolution for sides in NBA/WNBA/NBL/NFL/AFL/NRL/EPL, and none in MLB/NHL ([details](research/team_baseline_2026-09-25e/README.md)). Rank 1 is "far more likely to win than lose" only in the STRONG tier (q ≥ 0.70: 81% of decisions) |
-| Numerical model | H0 not built ([`H0_DATASET_CARD.md`](H0_DATASET_CARD.md)). RM-1 and TB-1 are a calibration layer and a population baseline, not H0. RM-1 is **promising and unproven** (its cushion term was found on the data that validates it; [caveats](research/rank_model_2026-09-25e/README.md)). The MLB A0/A1 pilot is implemented and tested on synthetic data; it runs as a **prospective shadow** only (`C-MLB-SHADOW`) |
-| Evidence gates and rule freeze (2026-09-26) | `C-BASELINE-SKILL` 0/100, `T-RM1-PROSPECTIVE` 0/25 cards, `C-MARKET-BENCHMARK` 0/100, `C-MLB-SHADOW` 0/150 games, no universe declared yet. **`C-RULE-FREEZE` in force.** Live figures: `python tools/evidence_status.py` |
+| Numerical model | H0 not built ([`H0_DATASET_CARD.md`](H0_DATASET_CARD.md)). RM-1 and TB-1 are a calibration layer and a population baseline, not H0. RM-1 is **promising and unproven** (its cushion term was found on the data that validates it; [caveats](research/rank_model_2026-09-25e/README.md)). The MLB A0/A1 pilot is implemented and tested on synthetic data; it runs as a **prospective shadow** only (`C-MLB-SHADOW`) | **Every other sport (2026-09-26(c))** has a reduced-feature A0/A1 model in `tools/sport_models.py`, with its own shadow lane (`C-SPORT-SHADOW`). On public results, A1 beat the league baseline on results and margins in soccer (five leagues), the NFL, AFL and NBA. It beat TB-1 on results in the EPL, AFL and NBA. It rarely helped on totals, and MLB and tennis each needed one re-selected parameter. NHL, WNBA, NBL, NRL, rugby union, cricket and the Asian baseball leagues are not yet validated ([details](research/sport_models_2026-09-26/README.md)).
+| Evidence gates and rule freeze (2026-09-26) | `C-BASELINE-SKILL` 0/100, `T-RM1-PROSPECTIVE` 0/25 cards, `C-MARKET-BENCHMARK` 0/100, `C-MLB-SHADOW` 0/150 games, `C-SPORT-SHADOW` 0 rows, no universe declared yet. **`C-RULE-FREEZE` in force.** Live figures: `python tools/evidence_status.py` |
 
 ## Canonical custody
 

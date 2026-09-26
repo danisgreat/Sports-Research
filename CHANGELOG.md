@@ -6,6 +6,31 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-26(c) — a numerical model for every sport
+
+**Why.** The user asked for the numerical model to cover every sport, not only MLB.
+
+- **Models.** `tools/sport_models.py` (with `tools/sport_data.py` for ESPN, CSV, TML-Database and cricsheet results) gives every sport an A0 baseline and a reduced-feature A1:
+  - soccer: Poisson ratings with linked halves;
+  - ice hockey: regulation Poisson plus OT/SO;
+  - basketball, American football, AFL, rugby league and rugby union: ridge ratings, key-number weights and residual widths;
+  - NPB, KBO and CPBL: the MLB joint with the league's tie rate;
+  - tennis: surface Elo plus an exact serve chain;
+  - cricket: Elo plus a first-innings ridge model.
+
+  None reads odds.
+- **Shadow lane.** `C-SPORT-SHADOW` (`research/sport_shadow/`, per league). It works like the MLB lane and is never a card input. `evidence_status.py` prints it.
+- **Validation** (`research/sport_models_2026-09-26/`). Priors were committed before the first run (ac6fdc5). The comparisons are rolling origin on public results.
+  - **Results and margins:** A1 beat A0 in soccer (five leagues), the NFL, AFL and NBA, and beat TB-1 on results in the EPL, AFL and NBA.
+  - **Totals:** A1 rarely helped.
+  - **MLB and tennis:** each failed at v1 and was re-selected on an earlier TUNE window. MLB's team prior went from 20 to 120, now also in `tools/mlb_model.py`; tennis got a gap effect of 0.09. Both are disclosed as not independent.
+  - **Dixon–Coles:** no gain.
+  - **Not validated:** NHL, WNBA, NBL, NRL, rugby union, cricket, NPB, KBO and CPBL.
+- **Docs.**
+  - Every sport's §0 page now says what its model is and what the validation showed.
+  - `RULES_GENERAL.md` §"2026-09-26" (k), `CONTROLS.md`, `CURRENT_RULES.md`, `NUMERICAL_PROGRAM.md`, `NUMERICAL_MODEL_REGISTER.md` §"2026-09-26(c)", `MODEL_IMPLEMENTATION_RECIPES.md` §4, `LEARNING_REGISTER.md` §"2026-09-26(c)" (L-20260926-12–18; `T-MLB-V2-2025`) and `LEARNINGS_INDEX.md` are updated.
+- **Receipt.** `CONTROL_MANIFEST_2026-09-26.md` was regenerated in place before merge; no card was issued under its earlier version.
+
 ### 2026-09-26(b) — review implementation: evidence before rules
 
 **Why.** The 2026-09-26 repository review rated the project 6.5/10. It found careful honesty and tooling, but no demonstrated skill over a simple baseline, six control revisions in one day with no card issued under them, a self-selected event sample, no market benchmark, an MLB pilot that existed only in Markdown, and a reading gate of about 65,000 words per card. The user asked for every recommendation to be implemented. Record: `RULES_GENERAL.md` §"2026-09-26"; `LEARNING_REGISTER.md` §"2026-09-26". **No forecasting coefficient, cap or ranking override changed.**
