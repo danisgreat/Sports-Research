@@ -2,9 +2,9 @@
 """Rolling-origin validation of tools/sport_models.py (and the MLB team-only A1) on public results data.
 
 Run on 2026-09-26 with the priors declared in commit ac6fdc5 ("declare A0/A1 engines and priors for every
-sport before validation"). Nothing in tools/sport_models.py was tuned on these results; if a constant
-changes later, this file is re-run and both results are kept (NUMERICAL_PROGRAM §1: preserve failed
-comparisons).
+sport before validation"). The v1 results in parts/ used those constants. Three routes failed and one
+parameter each (two for cricket) was re-selected on an earlier TUNE window by tune_v2.py (MLB, tennis,
+cricket; see the README). Both results are kept (NUMERICAL_PROGRAM §1: preserve failed comparisons).
 
 Sources (only those reachable from the session that ran this; each file's SHA-256 is recorded):
   soccer   openfootball/football.json  (public domain; scores and half-time scores)
@@ -18,8 +18,9 @@ Sources (only those reachable from the session that ran this; each file's SHA-25
   MLB      chadwickbureau/retrosheet   game logs. "The information used here was obtained free of charge
                                         from and is copyrighted by Retrosheet. Interested parties may
                                         contact Retrosheet at www.retrosheet.org."
-Not reachable from that session, so NOT validated here: NHL, WNBA, NBL, NRL, rugby union, cricket,
-NPB/KBO/CPBL. `python tools/sport_models.py validate --league <key> --from … --to …` runs the same
+Second pass (2026-09-26(d)): NHL, WNBA and NBA 2023-26 (sportsdataverse parquet; needs pyarrow) and IPL
+cricket (ritesh-ojha/IPL-DATASET). Not reachable, so NOT validated here: NBL, NCAAF, NRL, rugby union, WTA,
+NPB/KBO/CPBL, non-IPL cricket, and the soccer competitions beyond the top five. `python tools/sport_models.py validate --league <key> --from … --to …` runs the same
 comparison from ESPN wherever the network allows.
 
 Usage: python research/sport_models_2026-09-26/validate_public.py [--only soccer,nfl,...] [--boot 2000]
@@ -302,7 +303,7 @@ def main(argv=None) -> int:
     results["_meta"] = {"merged_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                         "declared_priors_commit": "ac6fdc5",
                         "v1": "priors as declared in ac6fdc5 (SPORT-A1-shadow/2026-09-26); MLB run = team_prior_games 20",
-                        "v2": "tune_v2.py: MLB team_prior_games and tennis gap_sd re-selected on earlier TUNE windows",
+                        "v2": "tune_v2.py: MLB team_prior_games, tennis gap_sd, cricket elo_k and lam_team re-selected on earlier TUNE windows",
                         "note": "A1 − A0 < 0 means A1 scored better (all metrics are losses). ci95_block is a "
                                 "block bootstrap (ISO weeks; tournaments for tennis). Descriptive, not a promotion."}
     (HERE / "validation_results.json").write_text(json.dumps(results, indent=1, sort_keys=True), encoding="utf-8")

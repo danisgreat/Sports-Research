@@ -52,11 +52,11 @@ def _strip(obj):
     return obj
 
 
-def fetch(url: str, permanent: bool, binary: bool = False):
-    """Cached GET (gzip-aware, no browser User-Agent). Permanent entries are never refetched."""
+def fetch(url: str, permanent: bool, binary: bool = False, force: bool = False):
+    """Cached GET (gzip-aware, no browser User-Agent). Permanent entries are not refetched unless force."""
     CACHE.mkdir(parents=True, exist_ok=True)
     path = CACHE / (hashlib.sha1(url.encode()).hexdigest() + (".bin" if binary else ".json"))
-    fresh = path.exists() and (permanent or (dt.datetime.now().timestamp() - path.stat().st_mtime) < 1800)
+    fresh = not force and path.exists() and (permanent or (dt.datetime.now().timestamp() - path.stat().st_mtime) < 1800)
     if fresh:
         raw = path.read_bytes()
     else:
@@ -128,12 +128,36 @@ def parse_espn_event(ev: dict, family: str) -> dict | None:
                     out["hs_ht"], out["as_ht"] = int(float(lh[0]["value"])), int(float(la[0]["value"]))
                 except (KeyError, TypeError, ValueError, IndexError):
                     pass
+            # extra time or penalties: the model's target is the 90-minute score. Settle on the first two
+            # periods when ESPN gives them; otherwise the score is unknown (hs/as None) and the row is void.
+            if any(k in detail for k in ("AET", "PEN", "EXTRA TIME")) or len(lh) > 2 or len(la) > 2:
+                out["finish"] = "AET"
+                try:
+                    out["hs"] = int(sum(float(x["value"]) for x in lh[:2]))
+                    out["as"] = int(sum(float(x["value"]) for x in la[:2]))
+                    if len(lh) < 2 or len(la) < 2:
+                        raise ValueError
+                except (KeyError, TypeError, ValueError):
+                    out["hs"] = out["as"] = None
     return out
 
 
-def espn_day(path: str, day: dt.date) -> list[dict]:
+def _all_final(events: list[dict]) -> bool:
+    def state(ev):
+        comp = (ev.get("competitions") or [{}])[0]
+        return ((comp.get("status") or ev.get("status") or {}).get("type") or {}).get("state")
+    groups = [c for ev in events for g in ev.get("groupings", []) for c in g.get("competitions", [])]
+    return all(state(x) == "post" for x in (groups or events))
+
+
+def espn_day(path: str, day: dt.date, force: bool = False) -> list[dict]:
+    """One scoreboard date. A cached day is reused only when it is more than two days old AND every event in
+    it was already final when cached; otherwise it is refetched (a stale pre-game snapshot never settles)."""
+    url = ESPN.format(path=path, day=f"{day:%Y%m%d}")
     old = (dt.date.today() - day).days > 2
-    data = fetch(ESPN.format(path=path, day=f"{day:%Y%m%d}"), permanent=old)
+    data = fetch(url, permanent=old and not force, force=force)
+    if old and not force and not _all_final(data.get("events", [])):
+        data = fetch(url, permanent=False, force=True)
     return data.get("events", [])
 
 
@@ -159,11 +183,11 @@ def espn_results(path: str, start: str, end: str, family: str) -> list[dict]:
     return sorted(out, key=lambda g: g["date"])
 
 
-def espn_event(path: str, event_id: str, date: str) -> dict:
+def espn_event(path: str, event_id: str, date: str, force: bool = False) -> dict:
     """One event, read from the scoreboard of its date (and the neighbouring dates for time-zone edges)."""
     d = dt.date.fromisoformat(date[:10])
     for day in (d, d - dt.timedelta(days=1), d + dt.timedelta(days=1)):
-        for ev in espn_day(path, day):
+        for ev in espn_day(path, day, force=force):
             if str(ev.get("id")) == str(event_id):
                 g = parse_espn_event(ev, "hockey" if path.startswith("hockey/") else
                                      "goals" if path.startswith("soccer/") else "points")
@@ -188,6 +212,7 @@ def parse_tennis_comp(c: dict, source: str) -> dict:
     stype = (c.get("status") or {}).get("type", {})
     detail = " ".join(str(stype.get(k, "")) for k in ("detail", "shortDetail", "description")).upper()
     sets = [[float(ls.get("value", 0) or 0) for ls in (x.get("linescores") or [])] for x in cps]
+    best_of = ((c.get("format") or {}).get("regulation") or {}).get("periods")
     out = {"id": str(c.get("id")), "start_utc": _iso_z(c.get("date", "")), "date": c.get("date", "")[:10],
            "state": stype.get("state", ""), "completed": bool(stype.get("completed")),
            "a": cps[0]["athlete"]["displayName"], "b": cps[1]["athlete"]["displayName"],
@@ -198,13 +223,31 @@ def parse_tennis_comp(c: dict, source: str) -> dict:
            "finish": "WO" if ("WALKOVER" in detail or "W/O" in detail) else
                      "RET" if ("RET" in detail or "RETIRED" in detail or "ABANDON" in detail) else "REG",
            "source": source}
+    # a completed match is scored for games only when its sets form a legal finished match
+    if out["finish"] == "REG" and out["completed"] and not legal_match(sets, best_of):
+        out["finish"] = "WO" if out["games_a"] + out["games_b"] == 0 else "RET"
     return out
 
 
-def espn_tennis_match(tour: str, comp_id: str, date: str) -> dict:
+def legal_set(x: float, y: float) -> bool:
+    hi, lo = max(x, y), min(x, y)
+    return (hi >= 6 and hi - lo >= 2) or (hi == 7 and lo == 6)
+
+
+def legal_match(sets: list[list[float]], best_of) -> bool:
+    """Every set is a finished set and the winner reached best_of//2 + 1 sets (best of 3 when unknown)."""
+    need = int(best_of or 3) // 2 + 1
+    pairs = list(zip(*sets)) if len(sets) == 2 else []
+    if not pairs or not all(legal_set(x, y) for x, y in pairs):
+        return False
+    wa, wb = sum(1 for x, y in pairs if x > y), sum(1 for x, y in pairs if y > x)
+    return max(wa, wb) == need
+
+
+def espn_tennis_match(tour: str, comp_id: str, date: str, force: bool = False) -> dict:
     d = dt.date.fromisoformat(date[:10])
     for day in (d, d - dt.timedelta(days=1), d + dt.timedelta(days=1)):
-        for ev in espn_day(f"tennis/{tour}", day):
+        for ev in espn_day(f"tennis/{tour}", day, force=force):
             for grp in ev.get("groupings", []):
                 for c in grp.get("competitions", []):
                     if str(c.get("id")) == str(comp_id):
@@ -244,18 +287,26 @@ def parse_cricket_event(ev: dict, scheduled_overs: int, source: str) -> dict:
     # first innings = the side that did not chase; ambiguous (both or neither chasing) = unknown
     firsts = [i for i in (0, 1) if sc[i] and not sc[i]["chase"]]
     if len(firsts) == 1 and sc[1 - firsts[0]] and sc[1 - firsts[0]]["chase"]:
-        f = sc[firsts[0]]
+        f, ch = sc[firsts[0]], sc[1 - firsts[0]]
         dls = any(k in text for k in ("DLS", "D/L", "DUCKWORTH", "REDUCED"))
-        full = f["wkts"] >= 10 or f["overs"] is None or abs(f["overs"] - scheduled_overs) < 1e-9
+        # Uncensored and full-length, conservatively: all out; or its overs are shown and complete; or its
+        # overs are not shown but the chase batted the full scheduled overs (so the match was not shortened).
+        # A DLS or reduced-overs note invalidates any innings that was not all out. Anything else: unscored.
+        if f["wkts"] >= 10:
+            full = True
+        elif f["overs"] is not None:
+            full = abs(f["overs"] - scheduled_overs) < 1e-9 and not dls
+        else:
+            full = ch["overs"] is not None and abs(ch["overs"] - scheduled_overs) < 1e-9 and not dls
         out.update({"first_innings_runs": f["runs"], "first_innings_team": "a" if firsts[0] == 0 else "b",
-                    "first_innings_valid": full and not (dls and f["wkts"] < 10)})
+                    "first_innings_valid": full})
     return out
 
 
-def espn_cricket_match(path: str, event_id: str, date: str, scheduled_overs: int) -> dict:
+def espn_cricket_match(path: str, event_id: str, date: str, scheduled_overs: int, force: bool = False) -> dict:
     d = dt.date.fromisoformat(date[:10])
     for day in (d, d - dt.timedelta(days=1), d + dt.timedelta(days=1)):
-        for ev in espn_day(path, day):
+        for ev in espn_day(path, day, force=force):
             if str(ev.get("id")) == str(event_id):
                 return parse_cricket_event(ev, scheduled_overs, ESPN.format(path=path, day=f"{day:%Y%m%d}"))
     raise SystemExit(f"error: cricket event {event_id} not found on the {path} scoreboard around {date}")

@@ -177,6 +177,7 @@ class Shadow(Fixture):
         log, results = self.dir / "shadow_log.csv", self.dir / "shadow_results.csv"
         now = dt.datetime(2026, 7, 1, 20, 0, tzinfo=dt.timezone.utc)
         mm.shadow(self.src, 800001, 8.5, "P-600", now, log)
+        mm.shadow(self.src, 800001, 7.5, "P-600", now, log)            # a second line for the same game
         self.assertEqual(mm.settle(self.src, log, results, now), [])   # not final yet
         final = feed(800001, state="Final", linescore={"teams": {"home": {"runs": 6}, "away": {"runs": 2}},
                                                         "innings": [{}] * 9})
@@ -185,8 +186,8 @@ class Shadow(Fixture):
         self.assertEqual(len(added), 1)
         self.assertEqual(mm.settle(self.src, log, results, now + dt.timedelta(hours=6)), [])  # append-only, once
         s = mm.score(log, results)
-        self.assertEqual(s["home_win"]["n"], 1)
-        self.assertIn("total_over", s)
+        self.assertEqual(s["home_win"]["n"], 1)                  # the game's side result counts once
+        self.assertEqual(s["total_over"]["n"], 2)                 # each frozen total line counts
 
 
 if __name__ == "__main__":

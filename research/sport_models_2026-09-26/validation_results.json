@@ -1,10 +1,10 @@
 {
  "_meta": {
   "declared_priors_commit": "ac6fdc5",
-  "merged_utc": "2026-09-26T09:39:33Z",
+  "merged_utc": "2026-09-26T09:57:58Z",
   "note": "A1 \u2212 A0 < 0 means A1 scored better (all metrics are losses). ci95_block is a block bootstrap (ISO weeks; tournaments for tennis). Descriptive, not a promotion.",
   "v1": "priors as declared in ac6fdc5 (SPORT-A1-shadow/2026-09-26); MLB run = team_prior_games 20",
-  "v2": "tune_v2.py: MLB team_prior_games and tennis gap_sd re-selected on earlier TUNE windows"
+  "v2": "tune_v2.py: MLB team_prior_games, tennis gap_sd, cricket elo_k and lam_team re-selected on earlier TUNE windows"
  },
  "v1": {
   "afl": {

@@ -434,6 +434,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260926-23 | Unrecorded lanes produce no evidence | PROMOTED (audit `10s`) |
 | L-20260926-24 | Tennis concurrent-tournament ordering | DISCLOSED |
 | L-20260926-25 | NHL shootout flag missing in source | FIXED in loader |
+| L-20260926-26 | Independent review: 7 lane defects, 5 overstatements | FIXED |
 
 ---
 
@@ -444,7 +445,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 - **2026-09-24(f) verification audit:** L-20260924-F01–F14.
 - **2026-09-26 review:** L-20260926-01–11.
 - **2026-09-26(c) models for every sport:** L-20260926-12–18.
-- **2026-09-26(d) second pass and lanes:** L-20260926-19–25.
+- **2026-09-26(d) second pass and lanes:** L-20260926-19–26.
 
 ---
 

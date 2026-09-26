@@ -408,7 +408,7 @@ class ShadowCommands(unittest.TestCase):
         sm.load_games = lambda cfg, args, end, start=None: games
         pre = {"id": "77", "date": self.start, "start_utc": self.start, "state": "pre", "home": "T00", "away": "T11",
                "neutral": False, "hs": None, "as": None}
-        sd.espn_event = lambda path, eid, date: dict(pre)
+        sd.espn_event = lambda path, eid, date, **k: dict(pre)
         import contextlib
         import io
         buf = io.StringIO()
@@ -421,10 +421,10 @@ class ShadowCommands(unittest.TestCase):
         self.assertEqual(rows[0]["espn_path"], "soccer/eng.1")
         with self.assertRaises(SystemExit):      # never replaced
             sm.cmd_shadow(self.args())
-        sd.espn_event = lambda path, eid, date: dict(pre, id="78", state="in")
+        sd.espn_event = lambda path, eid, date, **k: dict(pre, id="78", state="in")
         with self.assertRaises(SystemExit):      # started
             sm.cmd_shadow(self.args(event="78"))
-        sd.espn_event = lambda path, eid, date: dict(pre, state="post", hs=2, **{"as": 2}, finish="REG", source="u")
+        sd.espn_event = lambda path, eid, date, **k: dict(pre, state="post", hs=2, **{"as": 2}, finish="REG", source="u")
         with contextlib.redirect_stdout(io.StringIO()):
             sm.cmd_settle(self.args())
             sm.cmd_settle(self.args())            # append-only: settles once
@@ -448,7 +448,7 @@ class ShadowCommands(unittest.TestCase):
         pre = {"id": "9001", "date": self.day, "start_utc": self.start, "state": "pre", "completed": False,
                "a": "Ann Strong", "b": "Bea Weak", "best_of": 3, "winner": None, "games_a": 0, "games_b": 0,
                "finish": "REG", "source": "u"}
-        sd.espn_tennis_match = lambda tour, cid, date: dict(pre)
+        sd.espn_tennis_match = lambda tour, cid, date, **k: dict(pre)
         import contextlib
         import io
         with contextlib.redirect_stdout(io.StringIO()):
@@ -457,7 +457,7 @@ class ShadowCommands(unittest.TestCase):
         self.assertGreater(float(row["a1_p_home_win"]), 0.6)
         self.assertEqual(row["best_of"], "3")
         self.assertTrue(row["a1_p_over"])
-        sd.espn_tennis_match = lambda tour, cid, date: dict(pre, state="post", completed=True, winner="a",
+        sd.espn_tennis_match = lambda tour, cid, date, **k: dict(pre, state="post", completed=True, winner="a",
                                                             games_a=9, games_b=4, finish="RET")
         with contextlib.redirect_stdout(io.StringIO()):
             sm.cmd_settle(self.args())
@@ -476,7 +476,7 @@ class ShadowCommands(unittest.TestCase):
             pre = {"id": "555", "date": self.day, "start_utc": self.start, "state": "pre", "completed": False,
                    "a": "Kings", "b": "Jets", "winner": None, "no_result": False, "tie": False,
                    "first_innings_runs": None, "first_innings_valid": False, "source": "u"}
-            sd.espn_cricket_match = lambda path, eid, date, overs: dict(pre)
+            sd.espn_cricket_match = lambda path, eid, date, overs, **k: dict(pre)
             import contextlib
             import io
             with contextlib.redirect_stdout(io.StringIO()):
@@ -486,13 +486,57 @@ class ShadowCommands(unittest.TestCase):
             self.assertEqual(row["a0_p_home_win"], "0.5000")
             self.assertIn("TOSS_50_50", row["flags"])
             self.assertTrue(row["a1_p_over"] and row["a0_p_over"])
-            sd.espn_cricket_match = lambda path, eid, date, overs: dict(pre, state="post", completed=True, winner="b",
+            sd.espn_cricket_match = lambda path, eid, date, overs, **k: dict(pre, state="post", completed=True, winner="b",
                                                                         first_innings_runs=181, first_innings_valid=True)
             with contextlib.redirect_stdout(io.StringIO()):
                 sm.cmd_settle(self.args())
         r = sm.mm.read_rows(self.res)[0]
         self.assertEqual((r["winner_side"], r["total_value"]), ("away", "181"))
         self.assertEqual(set(sm.score_shadow(self.log, self.res)["t20"]), {"home_win", "total_over"})
+
+    def test_settle_continues_past_an_unfindable_event_and_scores_each_event_once(self):
+        cfg = sm.config("epl")
+        m = sm.GoalsModel(soccer_season(), "2024-12-01", cfg)
+        now = dt.datetime(2024, 12, 1, 12, tzinfo=dt.timezone.utc)
+        for eid, total in (("1", 2.5), ("2", 2.5), ("2", 3.5)):
+            ev = {"id": eid, "date": "2024-12-01", "start_utc": "2024-12-01T15:00:00Z", "home": "T00", "away": "T09"}
+            sm.append_row(self.log, sm.LOG_FIELDS, sm.shadow_row(cfg, ev, m.a0(), m.a1("T00", "T09"), m.n, "P-600",
+                                                                 total, None, now))
+
+        def fake(path, eid, date, **k):
+            if eid == "1":
+                raise SystemExit("event 1 not found")
+            return {"id": eid, "state": "post", "hs": 2, "as": 0, "finish": "REG", "source": "u"}
+        sd.espn_event = fake
+        import contextlib
+        import io
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            sm.cmd_settle(self.args())
+        self.assertIn("UNSETTLED epl:1", buf.getvalue())
+        self.assertIn("settled 2 row(s)", buf.getvalue())
+        s = sm.score_shadow(self.log, self.res)["epl"]
+        self.assertEqual(s["home_win"]["n"], 1)          # event 2 frozen at two lines: its result counts once
+        self.assertEqual(s["total_over"]["n"], 2)
+
+    def test_old_scoreboard_is_refetched_unless_every_event_was_final(self):
+        calls = []
+        pre_ev = {"id": "1", "competitions": [{"status": {"type": {"state": "pre"}}}]}
+        post_ev = {"id": "1", "competitions": [{"status": {"type": {"state": "post"}}}]}
+
+        def fake_fetch(url, permanent, binary=False, force=False):
+            calls.append(force)
+            return {"events": [post_ev if force else pre_ev]}
+        saved = sd.fetch
+        sd.fetch = fake_fetch
+        try:
+            evs = sd.espn_day("soccer/eng.1", dt.date.today() - dt.timedelta(days=10))
+        finally:
+            sd.fetch = saved
+        self.assertEqual(calls, [False, True])
+        self.assertEqual(evs[0]["competitions"][0]["status"]["type"]["state"], "post")
+        self.assertTrue(sd._all_final([post_ev]))
+        self.assertFalse(sd._all_final([post_ev, pre_ev]))
 
     def test_espn_tennis_and_cricket_parsers(self):
         comp = {"id": "1", "date": "2026-09-27T10:00Z", "format": {"regulation": {"periods": 5}},
@@ -518,6 +562,49 @@ class ShadowCommands(unittest.TestCase):
         self.assertFalse(sd.parse_cricket_event(ev, 20, "u")["first_innings_valid"])
         ev["competitions"][0]["competitors"][1]["score"] = "40/1 (5 ov)"
         self.assertIsNone(sd.parse_cricket_event(ev, 20, "u")["first_innings_team"])   # nobody chasing: unknown
+        cps = ev["competitions"][0]["competitors"]
+        ev["competitions"][0]["status"]["type"]["detail"] = "Amsterdam won by 5 runs"
+        cps[0]["score"], cps[1]["score"] = "96/3", "91/6 (12 ov, target 97)"          # a 12-over match
+        self.assertFalse(sd.parse_cricket_event(ev, 20, "u")["first_innings_valid"])
+        cps[0]["score"], cps[1]["score"] = "169/7", "171/4 (17.2 ov, target 170)"     # early chase: allotment unknown
+        self.assertFalse(sd.parse_cricket_event(ev, 20, "u")["first_innings_valid"])
+        cps[0]["score"], cps[1]["score"] = "142 (18.3 ov)", "143/2 (15 ov, target 143)"  # all out: uncensored
+        self.assertTrue(sd.parse_cricket_event(ev, 20, "u")["first_innings_valid"])
+        # tennis: a partial score with no retirement text is not a legal finished match
+        partial = {"id": "2", "date": "2026-09-27T10:00Z", "status": {"type": {"state": "post", "completed": True}},
+                   "competitors": [{"athlete": {"displayName": "A"}, "winner": True, "linescores": [{"value": 6}, {"value": 2}]},
+                                   {"athlete": {"displayName": "B"}, "winner": False, "linescores": [{"value": 3}, {"value": 1}]}]}
+        self.assertEqual(sd.parse_tennis_comp(partial, "u")["finish"], "RET")
+        partial["competitors"][0]["linescores"] = partial["competitors"][1]["linescores"] = []
+        self.assertEqual(sd.parse_tennis_comp(partial, "u")["finish"], "WO")
+        self.assertTrue(sd.legal_match([[6, 7], [4, 6]], 3))
+        self.assertFalse(sd.legal_match([[6, 5], [4, 7]], 3))
+
+    def test_soccer_extra_time_settles_on_ninety_minutes_or_voids(self):
+        ev = {"id": "5", "date": "2026-05-01T19:00Z", "competitions": [{
+            "status": {"type": {"state": "post", "completed": True, "shortDetail": "FT-Pens", "detail": "AET"}},
+            "competitors": [{"homeAway": "home", "score": "3", "team": {"displayName": "H"},
+                             "linescores": [{"value": 1}, {"value": 1}, {"value": 1}, {"value": 0}]},
+                            {"homeAway": "away", "score": "2", "team": {"displayName": "A"},
+                             "linescores": [{"value": 0}, {"value": 2}, {"value": 0}, {"value": 0}]}]}]}
+        g = sd.parse_espn_event(ev, "goals")
+        self.assertEqual((g["hs"], g["as"], g["finish"]), (2, 2, "AET"))
+        for c in ev["competitions"][0]["competitors"]:
+            c["linescores"] = []
+        self.assertIsNone(sd.parse_espn_event(ev, "goals")["hs"])
+
+    def test_cricket_tie_settles_on_the_super_over_winner(self):
+        rid = {"row_id": "t20:1:None:None", "event_id": "1", "league": "t20", "event_date": "2026-05-01",
+               "espn_path": "cricket/8048"}
+        sd.espn_cricket_match = lambda *a, **k: {"state": "post", "completed": True, "winner": "b", "no_result": False,
+                                                 "tie": True, "first_innings_valid": False, "first_innings_runs": None,
+                                                 "source": "u"}
+        now = dt.datetime(2026, 5, 2, tzinfo=dt.timezone.utc)
+        self.assertEqual(sm._settle_row(sd, rid, self.args(), now)["winner_side"], "away")
+        sd.espn_cricket_match = lambda *a, **k: {"state": "post", "completed": True, "winner": None, "no_result": False,
+                                                 "tie": True, "first_innings_valid": False, "first_innings_runs": None,
+                                                 "source": "u"}
+        self.assertEqual(sm._settle_row(sd, rid, self.args(), now)["winner_side"], "void")
 
     def test_every_league_has_a_valid_config(self):
         for lg in sm.LEAGUES:

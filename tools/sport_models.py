@@ -1385,8 +1385,9 @@ def validate_tennis(cfg: dict, matches: list[dict], start: str, end: str, levels
 
 
 def validate_cricket(cfg: dict, matches: list[dict], start: str, end: str, boot: int = 2000) -> dict:
-    """Rolling origin in date order: each match is forecast from matches on earlier dates (Elo also sees
-    earlier same-day matches, which finished first), then the model updates. Scores: the result against
+    """Rolling origin in date order: each match is forecast from matches on earlier dates, then the model
+    updates. Elo also sees same-day matches that sit earlier in the source file; the IPL file is not in time
+    order within a day, but IPL double-headers never share a team, so no forecast can use its own match. Scores: the result against
     team1 (ties and no-results excluded; A0 = 0.5), and for full-length first innings the total's RPS and
     Brier at a line fixed from pre-start history. Bootstrap blocks are ISO weeks."""
     model = CricketModel(cfg)
@@ -1479,12 +1480,15 @@ def score_shadow(log: Path, results: Path) -> dict:
     removed (decisive probability p/(1 − push)); void results and blank values are skipped."""
     res = {r["row_id"]: r for r in mm.read_rows(results)}
     acc = defaultdict(lambda: defaultdict(lambda: {"a0": 0.0, "a1": 0.0, "n": 0}))
+    seen_events = set()      # the result is one event: scored once per event, however many line pairs were frozen
     for r in mm.read_rows(log):
         f = res.get(r["row_id"])
         if not f or f["winner_side"] == "void":
             continue
         targets = {}
-        if r["a1_p_home_win"] and r["a0_p_home_win"]:
+        ev_key = (r["league"], r["event_id"])
+        if r["a1_p_home_win"] and r["a0_p_home_win"] and ev_key not in seen_events:
+            seen_events.add(ev_key)
             targets["home_win"] = (1.0 if f["winner_side"] == "home" else 0.0, "p_home_win", None)
         if r["line_total"] != "" and f["total_value"] != "" and r["a1_p_over"] and r["a0_p_over"]:
             tv, L = float(f["total_value"]), float(r["line_total"])
@@ -1572,6 +1576,8 @@ def cmd_predict(args) -> int:
                 extra = f"; over {args.total}: A1 {q1['p_over']:.4f} / A0 {q0['p_over']:.4f}" if args.total is not None else ""
                 print(f"  {bat} batting first: A1 mean {q1['mean_total']:.1f} (A0 {q0['mean_total']:.1f}){extra}")
         return 0
+    print("RESEARCH ONLY — never while building or revising a card (C-SPORT-SHADOW); shadow rows are the "
+          "record of what the model said.", file=sys.stderr)
     games = load_games(cfg, args, args.date)
     eng = TeamEngine(cfg, [g for g in games if g["date"][:10] < args.date])
     import sport_data as sd
@@ -1691,41 +1697,54 @@ def cmd_settle(args) -> int:
     for r in mm.read_rows(log):
         if r["row_id"] in done:
             continue
-        cfg = config(r["league"])
-        fam = cfg["family"]
-        path = r.get("espn_path") or cfg.get("espn") or args.espn_path
-        if fam == "tennis":
-            ev = sd.espn_tennis_match(cfg["league"], r["event_id"], r["event_date"])
-            if ev["state"] != "post" or not ev["completed"]:
-                continue
-            side = {"a": "home", "b": "away"}.get(ev["winner"], "void")
-            if ev["finish"] == "WO":
-                side = "void"
-            full = ev["finish"] == "REG"
-            out = result_row(r, side, ev["games_a"] + ev["games_b"] if full else None,
-                             ev["games_a"] - ev["games_b"] if full else None, ev["games_a"], ev["games_b"],
-                             ev["finish"], ev["source"], now)
-        elif fam == "cricket":
-            ev = sd.espn_cricket_match(path, r["event_id"], r["event_date"], cfg["overs"])
-            if ev["state"] != "post" or not ev["completed"]:
-                continue
-            side = "void" if ev["no_result"] else "draw" if ev["tie"] else {"a": "home", "b": "away"}.get(ev["winner"], "void")
-            tv = ev["first_innings_runs"] if ev["first_innings_valid"] else None
-            out = result_row(r, side, tv, None, None, None,
-                             "FIRST_INNINGS_OK" if ev["first_innings_valid"] else "FIRST_INNINGS_UNSCORED",
-                             ev["source"], now)
-        else:
-            ev = sd.espn_event(path, r["event_id"], r["event_date"])
-            if ev["state"] != "post" or ev.get("hs") is None:
-                continue
-            hs, as_ = ev["hs"], ev["as"]
-            side = "home" if hs > as_ else "away" if as_ > hs else "draw"
-            out = result_row(r, side, hs + as_, hs - as_, hs, as_, ev.get("finish") or "", ev["source"], now)
+        try:
+            out = _settle_row(sd, r, args, now)
+        except SystemExit as exc:          # one unfindable or unreadable event never blocks the others
+            print(f"UNSETTLED {r['row_id']}: {exc}")
+            continue
+        if out is None:
+            continue
         append_row(results, RESULT_FIELDS, out)
         done.add(r["row_id"])
         added += 1
     print(f"settled {added} row(s)")
     return 0
+
+
+def _settle_row(sd, r: dict, args, now: dt.datetime) -> dict | None:
+    """The result row for one frozen shadow row, or None while the event is not final. Always refetched."""
+    cfg = config(r["league"])
+    fam = cfg["family"]
+    path = r.get("espn_path") or cfg.get("espn") or args.espn_path
+    if fam == "tennis":
+        ev = sd.espn_tennis_match(cfg["league"], r["event_id"], r["event_date"], force=True)
+        if ev["state"] != "post" or not ev["completed"]:
+            return None
+        side = {"a": "home", "b": "away"}.get(ev["winner"], "void")
+        if ev["finish"] == "WO":
+            side = "void"
+        full = ev["finish"] == "REG"
+        return result_row(r, side, ev["games_a"] + ev["games_b"] if full else None,
+                          ev["games_a"] - ev["games_b"] if full else None, ev["games_a"], ev["games_b"],
+                          ev["finish"], ev["source"], now)
+    if fam == "cricket":
+        ev = sd.espn_cricket_match(path, r["event_id"], r["event_date"], cfg["overs"], force=True)
+        if ev["state"] != "post" or not ev["completed"]:
+            return None
+        # a tie decided by a super over settles on ESPN's winner flag; an undecided tie or no result is void
+        side = "void" if ev["no_result"] else {"a": "home", "b": "away"}.get(ev["winner"], "void")
+        tv = ev["first_innings_runs"] if ev["first_innings_valid"] else None
+        return result_row(r, side, tv, None, None, None,
+                          "FIRST_INNINGS_OK" if ev["first_innings_valid"] else "FIRST_INNINGS_UNSCORED",
+                          ev["source"], now)
+    ev = sd.espn_event(path, r["event_id"], r["event_date"], force=True)
+    if ev["state"] != "post":
+        return None
+    if ev.get("hs") is None:          # e.g. soccer after extra time without period scores: void, not guessed
+        return result_row(r, "void", None, None, None, None, ev.get("finish") or "NO_SCORE", ev["source"], now)
+    hs, as_ = ev["hs"], ev["as"]
+    side = "home" if hs > as_ else "away" if as_ > hs else "draw"
+    return result_row(r, side, hs + as_, hs - as_, hs, as_, ev.get("finish") or "", ev["source"], now)
 
 
 def cmd_validate(args) -> int:

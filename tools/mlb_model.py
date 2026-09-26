@@ -407,14 +407,18 @@ def settle(src: Source, log: Path, results: Path, now: dt.datetime) -> list[dict
 def score(log: Path, results: Path) -> dict:
     res = {r["game_pk"]: r for r in read_rows(results)}
     acc = defaultdict(lambda: {"a1": 0.0, "a0": 0.0, "n": 0})
+    seen = set()   # the side and run-line targets are one per game, however many total lines were frozen
     for r in read_rows(log):
         f = res.get(r["game_pk"])
         if not f:
             continue
         h, a = int(f["home_runs"]), int(f["away_runs"])
         t, line = h + a, float(r["line_total"])
-        targets = {"home_win": (h > a, "p_home_win"), "home_m15": (h - a >= 2, "p_home_m15"),
-                   "away_m15": (a - h >= 2, "p_away_m15")}
+        targets = {}
+        if r["game_pk"] not in seen:
+            seen.add(r["game_pk"])
+            targets = {"home_win": (h > a, "p_home_win"), "home_m15": (h - a >= 2, "p_home_m15"),
+                       "away_m15": (a - h >= 2, "p_away_m15")}
         if t != line:
             targets["total_over"] = (t > line, "p_over")
         for name, (y, key) in targets.items():

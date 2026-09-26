@@ -20,6 +20,18 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 - **Integrity.** Shadow commands are blind and print the row ID only (both tools). Settlements print `SHADOW: <row id>` / `NO_LANE` / `MISSED`; this is audit field `10s`, strict from `CONTROL_MANIFEST_2026-09-26.md`.
 - **Docs.** `RULES_GENERAL.md` §"2026-09-26" (k), (l), `CONTROLS.md`, `CURRENT_RULES.md`, the hockey, basketball, tennis and cricket §0 pages, `NUMERICAL_PROGRAM.md`, `NUMERICAL_MODEL_REGISTER.md`, the lane READMEs, `LEARNING_REGISTER.md` §"2026-09-26(d)" (L-20260926-19–25; `T-CRICKET-V2-UNSEEN`), `LEARNINGS_INDEX.md` and README are updated.
 - **Tests.** Offline end-to-end shadow → settle → score for team sports, tennis and cricket; ESPN tennis and cricket parsers; audit `10s`.
+- **Independent review** (a separate agent, before any shadow row existed).
+  - **Leakage:** no look-ahead leakage; scrambling every later result left all forecasts identical.
+  - **Protocol:** only the four disclosed constants changed after ac6fdc5.
+  - **Fixed in the lanes:**
+    - a stale cached pre-game scoreboard could never settle;
+    - one unfindable event stopped all settlement;
+    - a cricket super-over tie scored as a home loss;
+    - cricket innings with no overs shown counted as full-length;
+    - partial tennis scores without retirement text counted as complete;
+    - soccer extra time was scored against a 90-minute model;
+    - a side result was counted once per frozen line (also in `mlb_model.py score`).
+  - **Wording corrected:** AFL and NFL against TB-1 (the intervals cross 0), cricket v2 ("no clear difference"), the not-validated lists, and the thinness of the v2 selections.
 
 ### 2026-09-26(c) — a numerical model for every sport
 

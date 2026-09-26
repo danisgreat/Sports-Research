@@ -10,6 +10,9 @@
 
 - **Priors declared first.** Every constant in `tools/sport_models.py` was committed in ac6fdc5 before the first run on real data. The second pass ran on the constants frozen in 0872a36 and changed none for it. Three routes failed and were re-selected on an earlier TUNE window (MLB, tennis, cricket); all three are disclosed below.
 - **Rolling origin, leak-free.** Each game is forecast from games strictly before its date. Ratings are refit on each date, warm-started. Widths come only from earlier out-of-sample residuals.
+- **Cricket exception.** Cricket Elo also sees same-day matches that sit earlier in the source file. The IPL file is not in time order within a day, but IPL double-headers never share a team, so no forecast can use its own match. An independent re-check found identical result metrics with the within-day order reversed.
+- **Leakage check.** An independent reviewer scrambled every result dated on or after each forecast date and re-ran the forecasts. A0 and A1 came out identical for the EPL, NFL, MLB, NHL and NBA; ATP was checked the same way with later tournaments scrambled.
+- **A1-v-TB-1 comparisons are conservative.** TB-1's replay sees earlier same-day games, and its k was chosen on seasons inside some test windows. Both help TB-1.
 - **Known ordering limit.** Tennis runs in tournament and round order. The source dates every match by its tournament's start, so when two tournaments start the same week, the Elo updates from one tournament's later rounds can precede the other's early rounds. This touches the A0 and A1 winner routes equally.
 - **Proper scores only.** Each metric is a loss, so lower is better:
   - Brier and log loss on the result;
@@ -25,9 +28,9 @@
 
 | Sport (data) | Result / side | Margin | Totals | Against TB-1 |
 |---|---|---|---|---|
-| Soccer — EPL, La Liga, Bundesliga, Serie A, Ligue 1 (2022-23 to 2025-26; 7,061 matches) | **A1 better in all five** (3-way RPS −0.025 to −0.033) | **A1 better in all five** | Better in La Liga; better at the line in the Bundesliga; **no difference** in the EPL, Serie A and Ligue 1. BTTS no better (Ligue 1 slightly worse) | EPL: **better on the result** (−0.008); the same on totals |
-| NFL (2021–2025; 1,359 games) | **A1 better** (−0.021) | **A1 better** | No difference | Better on the result by 0.005, but the interval crosses 0; the same on totals |
-| AFL (2021–2024, plus 27 games of 2025; 873 games) | **A1 better** (−0.036) | **A1 better** | No difference | **Better on the result** (−0.012); **worse on the total at the line** (+0.008; the interval just crosses 0) |
+| Soccer — EPL, La Liga, Bundesliga, Serie A, Ligue 1 (2022-23 to 2025-26; 7,061 matches) | **A1 better in all five** (3-way RPS −0.025 to −0.032) | **A1 better in all five** | Better in La Liga; better at the line in the Bundesliga; **no difference** in the EPL, Serie A and Ligue 1. BTTS no better (Ligue 1 slightly worse) | EPL: **better on the result** (−0.008); the same on totals |
+| NFL (2021–2025; 1,359 games) | **A1 better** (−0.021) | **A1 better** | No difference | **No clear difference** on the result (A1 ahead by 0.005; the interval crosses 0); the same on totals |
+| AFL (2021–2024, plus 27 games of 2025; 873 games) | **A1 better** (−0.036) | **A1 better** | No difference | **Better on the result** (−0.012); **no clear difference** at the total line (TB-1 ahead by 0.008; the interval just crosses 0) |
 | NBA (2023-24 to 2025-26; 3,701 games) | **A1 better** (−0.037) | **A1 better** | **A1 better** (−0.021 at the line) | **Better on both** (−0.008 result, −0.006 total) |
 | NBA (2012-13 to 2014-15, first pass; 3,689 games) | **A1 better** (−0.036) | **A1 better** | **A1 better** | **Better on both** |
 | WNBA (2022–2026; 1,308 games) | **A1 better** (−0.038) | **A1 better** | **A1 better** (−0.017 at the line) | **Better on both** (−0.008 result, −0.007 total) |
@@ -39,12 +42,17 @@
 | IPL cricket v1 (2016–2026; 720 matches) | **A1 worse than a coin flip** (+0.009) | — | **A1 worse** on first-innings total RPS | — |
 | IPL cricket v2 (elo_k 4, lam_team 200; TEST 2020–2026; 482 matches) | No difference from a coin flip (+0.004, the interval crosses 0) | — | No difference | — |
 
-**Not validated anywhere yet:** NBL, NRL, rugby union, the Asian baseball leagues (NPB, KBO, CPBL), and cricket outside the IPL. No public results for them could be reached. `python tools/sport_models.py validate --league <key> --from … --to …` runs the same comparison from ESPN, or from a `--csv` results file.
+**Not validated anywhere yet:**
+- NBL, NCAAF, NRL and rugby union;
+- WTA tennis;
+- the Asian baseball leagues (NPB, KBO, CPBL);
+- cricket outside the IPL;
+- the other soccer competitions (Championship, Eredivisie, Primeira, SPL, A-League, MLS, J-League, UCL and UEL). No public results for them could be reached. `python tools/sport_models.py validate --league <key> --from … --to …` runs the same comparison from ESPN, or from a `--csv` results file.
 
 **What this does and does not show.**
 - **Results and margins.** A pooled team-strength model with a sport-native distribution clearly beats the league baseline in soccer, the NFL, AFL, NBA, WNBA and NHL. It also beats the TB-1 baseline the cards already print in the EPL, AFL, NBA, WNBA and NHL.
 - **Totals.** The model helps in basketball (NBA and WNBA, clearly), in two soccer leagues, and in MLB after the v2 re-selection (not independent). It is level elsewhere, and worse in the NHL.
-- **Cricket.** IPL results are close to a coin flip for a team-strength model. v2 gets the model to "no worse than the baseline" and no further.
+- **Cricket.** IPL results are close to a coin flip for a team-strength model. v2 gets the model to no clear difference from the baseline (its point estimates are still slightly worse on the result) and no further.
 - **The cards.** None of this is evidence about the cards. Their skill is measured by `C-BASELINE-SKILL` and `T-RM1-PROSPECTIVE`, and the models' prospective record by the shadow lanes.
 
 ## v2 re-selections (disclosed)
@@ -62,6 +70,12 @@ Three v1 routes failed. Each was diagnosed (`diagnose.py`, `diagnostics.json`). 
   - first-innings total: lam_team 6, 20, 60, 200 innings; rule: lowest total RPS; selected **200**.
 
   Both selections shrink the model toward A0, because IPL team strength barely carries from match to match.
+
+**How thin these selections are.**
+- MLB's 120 beat 80 by only 0.00007 in log loss.
+- Both cricket selections sit at the edge of their grids, on the side toward A0.
+- The tennis gap effect is a new model component; only its size was tuned.
+- The grids and rules were written into `tune_v2.py` before its runs, but they were committed together with the results, so git cannot prove the order.
 
 **The v2 TEST numbers are not independent evidence**, because the v1 failures were seen on those windows first. The independent tests are:
 - the 2025 MLB season: `python tools/mlb_model.py validate --season 2025`;
@@ -315,7 +329,7 @@ python research/sport_models_2026-09-26/report.py                     # the tabl
 python research/sport_models_2026-09-26/diagnose.py                   # the two v1 failure diagnostics
 ```
 
-`validate_public.py` now runs with the v2 constants, so a rerun of its MLB, ATP and IPL cells reproduces v2, not v1. v1 is `tools/sport_models.py` at ac6fdc5. Raw downloads are cached in the git-ignored `cache/`. Their URLs and SHA-256 are in `provenance.json`.
+`validate_public.py` now runs with the v2 constants, so a rerun of its MLB, ATP and IPL cells reproduces v2, not v1. The v1 constants are those at ac6fdc5. The tennis and cricket validators were added later (0872a36 and ad398e6), and the IPL v1 run carried version label `2026-09-26b` with the v1 cricket constants. Raw downloads are cached in the git-ignored `cache/`. Their URLs and SHA-256 are in `provenance.json`.
 
 ## Sources and licences
 
