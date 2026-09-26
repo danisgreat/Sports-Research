@@ -24,6 +24,10 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
   - TB-1 `resolution` withdrawn for NRL sides and NFL totals (their intervals cross 0). NBA totals were kept on 2023–26 evidence.
   - `tools/mlb_model.py`'s claim that historical starters cannot be reconstructed was corrected.
 - **Opened:** `T-FAV70-BAND` (NFL/NRL favourites at 0.70–0.80 look over-confident; tested prospectively, not fitted).
+- **C1 (2026-09-27), the user's bar for a model change: none meets it.** The test was preregistered in `1bc57d7`.
+  - NFL 2021–24 favourites at 0.70–0.80 won 66.7% at 0.744 (replicated).
+  - NRL 2025 reversed (82.8%).
+  - An NFL-only shrink did not improve Brier (exploratory).
 - **Docs updated:**
   - `RULES_GENERAL.md` §"2026-09-26(e)" and `CURRENT_RULES.md`;
   - every sport's §0 page, with the NRL and American-football anchors corrected;

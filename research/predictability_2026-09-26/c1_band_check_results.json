@@ -1,0 +1,86 @@
+{
+  "preregistered": "docstring of this file, 2026-09-27, before any run",
+  "band": [
+    0.7,
+    0.8
+  ],
+  "nfl_2021": {
+    "games": 271,
+    "band_n": 52,
+    "band_mean_p": 0.7466,
+    "band_won": 0.7308,
+    "gap": -0.0159,
+    "gap_ci95": [
+      -0.1442,
+      0.1022
+    ]
+  },
+  "nfl_2022": {
+    "games": 269,
+    "band_n": 49,
+    "band_mean_p": 0.7448,
+    "band_won": 0.6531,
+    "gap": -0.0917,
+    "gap_ci95": [
+      -0.1809,
+      0.0069
+    ]
+  },
+  "nfl_2023": {
+    "games": 272,
+    "band_n": 39,
+    "band_mean_p": 0.7464,
+    "band_won": 0.6154,
+    "gap": -0.131,
+    "gap_ci95": [
+      -0.2785,
+      0.0113
+    ]
+  },
+  "nfl_2024": {
+    "games": 272,
+    "band_n": 37,
+    "band_mean_p": 0.7388,
+    "band_won": 0.6486,
+    "gap": -0.0902,
+    "gap_ci95": [
+      -0.2879,
+      0.0907
+    ]
+  },
+  "nfl_2025": {
+    "games": 271,
+    "band_n": 62,
+    "band_mean_p": 0.7441,
+    "band_won": 0.6935,
+    "gap": -0.0506,
+    "gap_ci95": [
+      -0.148,
+      0.0498
+    ]
+  },
+  "nfl_2021_2024_pooled": {
+    "games": 1084,
+    "band_n": 177,
+    "band_mean_p": 0.7444,
+    "band_won": 0.6667,
+    "gap": -0.0778,
+    "gap_ci95": [
+      -0.1469,
+      -0.0103
+    ]
+  },
+  "nrl_2025": {
+    "games": 167,
+    "band_n": 29,
+    "band_mean_p": 0.7467,
+    "band_won": 0.8276,
+    "gap": 0.0809,
+    "gap_ci95": [
+      -0.0478,
+      0.2132
+    ]
+  },
+  "stage1_pass": false,
+  "verdict": "NO CHANGE: the preregistered bar was not met"
+}

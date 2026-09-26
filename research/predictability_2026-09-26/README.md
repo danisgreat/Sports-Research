@@ -148,6 +148,34 @@ P1's statsapi pull made the test runnable, so it was run exactly as registered: 
 - **Result:** A1 0.2365 v A0 0.2388; A1 − A0 = **−0.0023 [−0.0042, −0.0005]**.
 - **Verdict: replicated.** The v2 team prior (selected on 2022) beats the population on a season it has not seen.
 
+## C1 — would shrinking over-confident favourites help? (preregistered 2026-09-27, `1bc57d7`)
+
+**Why it was run.** On 2026-09-27 the user said to make a model change only if it is absolutely going to make things better. P5's NFL and NRL over-confidence at 0.70–0.80 was the one candidate left. The card anchor and the blend (P3) and the MLB starter term (P1) had already failed.
+
+**The rule, fixed before running** (`c1_band_check.py` docstring):
+- The over-confidence must replicate on windows that played no part in finding it: NFL 2021–24 pooled **and** NRL 2025, each with a 95% week-block interval below 0.
+- Only then is a logit shrink fitted on NFL 2021–23, and it must beat A1 on 2024 **and** 2025 with both intervals below 0.
+
+| Window | Favourites at 0.70–0.80 | Stated | Won | Gap [95%] |
+|---|---:|---:|---:|---|
+| NFL 2021 | 52 | 0.747 | 73.1% | −0.016 [−0.144, +0.102] |
+| NFL 2022 | 49 | 0.745 | 65.3% | −0.092 [−0.181, +0.007] |
+| NFL 2023 | 39 | 0.746 | 61.5% | −0.131 [−0.279, +0.011] |
+| NFL 2024 | 37 | 0.739 | 64.9% | −0.090 [−0.288, +0.091] |
+| **NFL 2021–24 pooled** | 177 | 0.744 | 66.7% | **−0.078 [−0.147, −0.010]** |
+| NRL 2025 | 29 | 0.747 | 82.8% | +0.081 [−0.048, +0.213] |
+
+- **Verdict (preregistered): no change.**
+  - The NFL over-confidence replicates.
+  - The NRL's reverses, so Stage 1 fails.
+- **Exploratory, not a basis for change** (`c1_stage2_exploratory.py`): an NFL-only shrink still does not help.
+  - Fitted on 2021–23, it gives s = 0.90.
+  - 2024 Brier moves by +0.0006 [−0.0012, +0.0022] (worse); 2025 by −0.0005 [−0.0020, +0.0010].
+  - The band is over-confident, but pulling every probability toward 0.5 costs as much elsewhere as it gains there.
+- **What it means for cards:**
+  - A NFL model favourite at 0.70–0.80 has won about two in three, not three in four. Treat it as the evidence it is.
+  - No model change passes the user's bar. `T-FAV70-BAND` continues prospectively.
+
 ## What was not done, and why
 
 - **No model constant was changed.** The P5 over-confidence in the NFL and NRL bands and the NHL total failure are candidates for the next preregistered model version, **not** retrofits on the data that revealed them.
@@ -161,6 +189,8 @@ P1's statsapi pull made the test runnable, so it was run exactly as registered: 
 | `PREREGISTRATION.md` | P1–P4, committed before any run (`cc447c9`) |
 | `mlb_starters.py` → `mlb_starters_results.json` | P1 (statsapi cache in `cache/`, git-ignored) |
 | `t_mlb_v2_2025.json` | `T-MLB-V2-2025`, the output of `mlb_model.py validate --season 2025` |
+| `c1_band_check.py` → `c1_band_check_results.json` | C1, preregistered in its docstring (`1bc57d7`) |
+| `c1_stage2_exploratory.py` → `c1_stage2_exploratory_results.json` | C1 Stage 2 on the NFL alone (exploratory) |
 | `p2_coverage.py` → `p2_coverage_results.json` | P2 |
 | `p3_cards_mlb.py` → `p3_mlb_results.json`; `p3_cards_other.py` → `p3_other_results.json`; `p3_pooled.py` → `p3_pooled_results.json` | P3 |
 | `p4_tb1_intervals.py` → `p4_tb1_intervals.json` | P4 input: TB-1 against the population, with intervals |

@@ -3351,3 +3351,18 @@ The route to "far more likely to win than lose" is a STRONG row that actually ex
 - **Almost never:** MLB and most totals. Soccer's STRONG rows are in phase, team-total and double-chance markets.
 
 The cards' own probabilities are about as informative as the models' on the contracts they priced. So the gain available now is **in which contracts are carded and in honest labelling**, not in replacing the card's judgement with the model's.
+
+### (g) The user's bar for a model change (2026-09-27): none meets it
+
+**The instruction.** On 2026-09-27 the user said: "do a model change if its absolutely going to make it better only". The bar was stated before testing: a 95% interval below 0 in every independent window, on data that did not suggest the change.
+
+**Every candidate fails:**
+- **Anchoring the cards on A1:** card − A1 −0.007 [−0.025, +0.011] (P3).
+- **A 50/50 blend:** no better than the card (P3).
+- **MLB's starter term:** not demonstrated (P1).
+- **Shrinking the model's 0.70–0.80 favourites** (C1, preregistered in `1bc57d7`):
+  - The NFL over-confidence replicated on 2021–24: 66.7% won at 0.744, [−0.147, −0.010].
+  - The NRL's reversed in 2025: 82.8% won at 0.747.
+  - Even an NFL-only shrink did not improve Brier in either test season.
+
+**So no `MODEL_CHANGE` is made.** The freeze stays in force. `T-FAV70-BAND` remains open prospectively. The NFL band finding is disclosed in `RULES_AMERICAN_FOOTBALL.md` §0: a model favourite at 0.70–0.80 has won about two in three.

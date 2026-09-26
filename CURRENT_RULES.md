@@ -15,6 +15,7 @@
   - The cards were no worse than the team models on 98 of their own contracts, so the models stay a reference (`tools/model_anchor.py`), not a card input.
   - MLB's starter term failed its preregistered test.
   - NRL sides and NFL totals no longer anchor on TB-1 (validity repair: their gains are not significant).
+  - **No model change (2026-09-27).** Under the user's bar ("only if absolutely better"), every candidate failed: the card anchor, the blend, MLB starters and the favourite-band shrink (C1). NFL model favourites at 0.70–0.80 win about two in three.
 - **Method:** MDS-2026.09.19-v4.3.
 - **Control revision:** CR-2026.09.21-3.
 - **Scoring:** SCV-2026.09.19-v2.

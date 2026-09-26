@@ -2,9 +2,9 @@
 
 Method: **MDS-2026.09.19-v4.3**
 Control revision: **CR-2026.09.21-3** (label unchanged; content receipt under the same label)
-Status: **CURRENT post-write content receipt**, generated 2026-09-27 01:36 AEST by `tools/make_manifest.py` from `CONTROL_MANIFEST_2026-09-26.md`.
+Status: **CURRENT post-write content receipt**, generated 2026-09-27 01:58 AEST by `tools/make_manifest.py` from `CONTROL_MANIFEST_2026-09-26.md`.
 
-**Purpose.** This is the byte-level SHA-256 receipt that every new card freezes (`METHOD.md` header; PF-7). Predictability pass (preregistered P1-P4 in cc447c9; P5 exploratory): the predictability map (C-PREDICTABILITY-MAP, BASE_RATES_REGISTER 7.8), the reference model registry (C-MODEL-ANCHOR, tools/model_anchor.py, status REFERENCE, not a card input), T-FAV70-BAND opened, T-MLB-V2-2025 concluded (replicated). Validity repairs: TB-1 resolution withdrawn for NRL sides and NFL totals (intervals cross 0); the mlb_model.py starter-reconstruction claim corrected. No probability, rank, width, centre or model constant moved.
+**Purpose.** This is the byte-level SHA-256 receipt that every new card freezes (`METHOD.md` header; PF-7). Predictability pass (preregistered P1-P4 in cc447c9; P5 exploratory): the predictability map (C-PREDICTABILITY-MAP, BASE_RATES_REGISTER 7.8), the reference model registry (C-MODEL-ANCHOR, tools/model_anchor.py, status REFERENCE, not a card input), T-FAV70-BAND opened, T-MLB-V2-2025 concluded (replicated). Validity repairs: TB-1 resolution withdrawn for NRL sides and NFL totals (intervals cross 0); the mlb_model.py starter-reconstruction claim corrected. C1 (preregistered in 1bc57d7, run on the user's 2026-09-27 instruction to change the model only if absolutely better): no candidate met the bar, so no model change. No probability, rank, width, centre or model constant moved.
 
 **It does not change any forecasting coefficient, probability cap or ranking override.**
 
@@ -25,15 +25,15 @@ This manifest is excluded from its own hash table. The living logs (`PREDICTION_
 | File | SHA-256 | Bytes |
 |---|---|---:|
 | `README.md` | `6e0236836cabc63c3e30d32d71f004790365dc55a7eef0e13153466ef584f040` | 14760 |
-| `METHOD.md` | `141344a50e64f60d236d9ce23a2d63ca263fab80e04f46c8f4f73ccbefb85feb` | 31559 |
+| `METHOD.md` | `068df55d95295bdd6455341fd66bc5623b2c6a80fa64d2af4ec346cf8ff5d2d3` | 31615 |
 | `CONTROLS.md` | `86c9afa3b26c492df249fc6ae689dd4da14dd56190768087db74233c01985efe` | 43771 |
-| `RULES_GENERAL.md` | `44ea2f115d69c8bf3081397e60cdb146729c3e7ca2adbb1d2b925f84f03154e2` | 292879 |
+| `RULES_GENERAL.md` | `6c3563b645183b14c6774641ff2bb89add26ff5a5f03a0e9075be706a6648e54` | 293961 |
 | `SOURCES.md` | `6e172c9fecf767af75da09d0f745e1428910795aa1e4e674a364b4b3af71faac` | 76886 |
 | `DATA_SOURCE_REGISTER.md` | `898affe43d3490b83a2c8a888d88dc2b09cbdfe71024294ae79df9d32d17efef` | 178952 |
 | `UPCOMING_GAME_RESEARCH_GUIDE.md` | `a3e7ed767257a7660c5c221cc23ffa6d4d3f3b332430c1ef5705427de445778f` | 76011 |
 | `SCORING_AND_VALIDATION.md` | `64cb95cf3afcfd3f4d33f79bc34428aa82d095290810d64e9f62de929e806a22` | 23793 |
 | `PERFORMANCE_ELIGIBILITY_POLICY.md` | `a102c231debc12253accf5ade0ed3086c7b51dcf3959e570129ad8b6d96dd2fa` | 19422 |
-| `LEARNING_REGISTER.md` | `6b5fe8e9584ba7b65c24b3c1f72e54899114fbbca676412e45ce7fc8a0801962` | 335068 |
+| `LEARNING_REGISTER.md` | `59d90b3a31e642d21f5ff2dea6d993af2039797baff9a48f0d7654055805a951` | 336129 |
 | `AGENT_ROLE_AND_TASK.md` | `7ab4a2b52fa33a0cf9f9838926dda2acc6babc71fb1b99c3387873b0c15d52fb` | 25862 |
 | `EXTERNAL_LOGGING_WORKFLOW.md` | `b724db948916f0bb4ae8847fcfd7fc278cf5db8fed8a2d04411507f5dcc1a6d8` | 68415 |
 | `FORECAST_PREFLIGHT_MANIFEST.md` | `34718b2faca3276e7213bc622e01ff06998151390f5f7c3f12497082e7468678` | 9309 |
@@ -44,7 +44,7 @@ This manifest is excluded from its own hash table. The living logs (`PREDICTION_
 | `RULES_AFL.md` | `4194823914cd0be790a7657fda20aebe5d6487ef26a9c3614eb54d3ae8efb5bf` | 66322 |
 | `RULES_NRL_RUGBY.md` | `962593aad12c8e24b65fd4b76a378d6c2c5a8c922b201973a73161b676f1a53d` | 64919 |
 | `RULES_RUGBY_UNION.md` | `476258c0c7f1a65ab6539a4dc69a964f3d9413924d3733c724c3c0830f46eb4e` | 54476 |
-| `RULES_AMERICAN_FOOTBALL.md` | `6dafbaec18f43ca50f80cd125a2be41f89a058649af718684f28abb8fc0c2132` | 70737 |
+| `RULES_AMERICAN_FOOTBALL.md` | `2d2c869d6d40438e86e14e5f846395408c3ee8974d64945d52b8b1145afafdbb` | 70954 |
 | `RULES_ICE_HOCKEY.md` | `8b7a4d79fd0641dae9b749a8cf2bf6746c04e16ed3dd0f0b23412eca6131f599` | 62167 |
 | `RULES_TENNIS.md` | `ba6490d45ea02c2e73ae554953397168f7cb6d4c04a778f08b7b682bb1c3b72e` | 78238 |
 | `LEAGUE_RULES_CRICKET.md` | `b6b13dfa72047b62fd9987e21daa0ec25510ab0853ebbac461b5725de5f99099` | 26252 |
@@ -89,8 +89,8 @@ This manifest is excluded from its own hash table. The living logs (`PREDICTION_
 | `research/base_rates_2026-09-25/pull_nhl_pre.py` | `53a6ea9ece407426622606c1a7d97b08154d7721e12aa40aef75620357cb4fe8` | 328 |
 | `research/base_rates_2026-09-25/pull_nhl_tennis.py` | `32d15bcb8efc7bb69d880883c0e6d91610758b676c58ed63d31fb6d9054517c6` | 3509 |
 | `research/base_rates_2026-09-25/tennis_results.json` | `274650d4117e9b75bfaaaa028f43a7f6ae599a265a46a397ba94d326d886f34e` | 5574 |
-| `CURRENT_RULES.md` | `ba941afca4178887c39474855099623960d3be6aecc0c029b8a4888175188c49` | 46534 |
-| `CHANGELOG.md` | `9d63da461ef0204a7c77e5774dc0a820f07b9e7f0521b7de5b3540a675b38207` | 42864 |
+| `CURRENT_RULES.md` | `2671fee2cd63a5311a56070a12341b88a8094440c01cc7a96cdf9803b648500e` | 46786 |
+| `CHANGELOG.md` | `2c5bbb6e2d3eedd3a8a04a776be541975a085dd47ecae28eeb942c83fe08a07e` | 43150 |
 | `CONTRIBUTING.md` | `2a62e9f3910c01e474ad3f5bac3b5b493277b901a4f2caae82d35ab6cfe57ee6` | 4705 |
 | `SKILL_BASELINE_LEDGER.md` | `63ab9bddaff8d5381224664aa929df759eebbdbc03a189688c0f8daed4458712` | 10145 |
 | `LICENSE` | `1efb20731adc03fb046120ceeceb7f4e0ca0d73b2eb2d5fcf2093350863161b8` | 1211 |
@@ -127,7 +127,7 @@ This manifest is excluded from its own hash table. The living logs (`PREDICTION_
 | `research/team_baseline_2026-09-25e/oval_base_rates.py` | `62617d80a3eec1c8f077df04dfa03ae1d97f5144e33c1d95029b7dd6596ca7dd` | 5991 |
 | `research/team_baseline_2026-09-25e/pull_oval.py` | `ebf68e78db6e555c0228f52327252b02918842c0b33e3ab9cc9b62643eae77a4` | 1114 |
 | `research/base_rates_2026-09-25/pull_oval_specs.py` | `1b757907548ea1341eb5e3119c509dd2705aaa34f6dd79637896acc4144a7ea3` | 694 |
-| `LEARNINGS_INDEX.md` | `6ee462d5df7ce8f1db11bce35d86686ccd3e78328092c776e35ef5b9feeed113` | 37494 |
+| `LEARNINGS_INDEX.md` | `e6188a3ad44df91e232d8a5d5d6ea440ed4684f8b54fe430f7320ce09292045b` | 37697 |
 | `MARKET_BENCHMARK_LEDGER.md` | `c17ac01e622fc07e020c28ac576fcd6f0478af06b0212610b2f37ac3591aa467` | 3349 |
 | `tools/slate_universe.py` | `9331769ace5441d9d1c63f3ae5412b1c8960cd1e8c44cfb569236e5935141550` | 15186 |
 | `tools/test_slate_universe.py` | `030a22aefb59d4df5da9b538bd89533eb82172baf3e709da1fdf3ef1f3bb3db4` | 4689 |
@@ -147,4 +147,4 @@ This manifest is excluded from its own hash table. The living logs (`PREDICTION_
 | `tools/model_anchor.py` | `8191b38d6f0e5ff1b94269254a037e52781ba269cf0208f027ec6e3a8f8a8689` | 14427 |
 | `tools/test_model_anchor.py` | `5129c18ccb1dc7904d7825005bee42c72858d8df8a3a1780098accade9e336e1` | 3304 |
 | `research/predictability_2026-09-26/PREREGISTRATION.md` | `8dca83f036eb588cbc10542eda3231f234f84e1bf09b01526e0c4ae736696be4` | 6072 |
-| `research/predictability_2026-09-26/README.md` | `2d51819d868b1d6176a5bbdeb56e45e3f77834047b2ecc2cf84a8b35fde96c30` | 12558 |
+| `research/predictability_2026-09-26/README.md` | `03308bd4b4e5c91faf2fc4fb40d51598e0fb1b5a625203b7d03f406425f0fbb6` | 14783 |

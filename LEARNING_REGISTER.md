@@ -1540,3 +1540,11 @@ Everything is hindsight on the framework's own selected cards and LEARNING_ONLY.
 | Test ID | Result | Decision | Receipt |
 |---|---|---|---|
 | **`T-MLB-V2-2025`** | Run exactly as preregistered (`python tools/mlb_model.py validate --season 2025`, model `MLB-A1-shadow/2026-09-26b`, params `40454ee4ef159de8`) on all 2,121 games of 2025. The mean Brier over home win and totals 6.5–10.5 was A1 0.2365 v A0 0.2388: A1 − A0 = **−0.0023 [−0.0042, −0.0005]** (day-block interval) | **CONCLUDED — replicated.** The v2 team prior beats A0 on a season it has not seen. L-20260926-14's "not independent" caveat is answered for the team-only model. It stays a shadow reference (`C-MLB-SHADOW`), not a card input | `research/predictability_2026-09-26/t_mlb_v2_2025.json` |
+
+## D. 2026-09-27 — the user's bar for a model change (C1)
+
+**Instruction (2026-09-27):** "do a model change if its absolutely going to make it better only". The pre-stated bar: improvement with a 95% interval below 0 in every independent window, on data that did not suggest the change.
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260926-34 | C1 (preregistered in `1bc57d7`). NFL 2021–24 favourites at 0.70–0.80 won 66.7% at 0.744 (gap −0.078 [−0.147, −0.010]); NRL 2025 won 82.8% at 0.747 (+0.081 [−0.048, +0.213]). An NFL-only logit shrink (s = 0.90, fitted on 2021–23; exploratory) changed Brier by +0.0006 in 2024 and −0.0005 in 2025, both intervals spanning 0 | **NO MODEL CHANGE.** Nothing tested in 2026-09-26(e) meets the bar: the card anchor, the blend (P3), the MLB starter term (P1) and the band shrink (C1). The NFL over-confidence is disclosed (`RULES_AMERICAN_FOOTBALL.md` §0). `T-FAV70-BAND` stays open prospectively | `research/predictability_2026-09-26/c1_band_check_results.json` |

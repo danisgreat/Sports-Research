@@ -443,6 +443,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260926-32 | NBL validated (2025-26; 2024-25 mixed); NRL results not significant | OBSERVATION |
 | L-20260926-33 | `mlb_model.py` "starters cannot be reconstructed" claim | FIXED (documentation) |
 | `T-MLB-V2-2025` | MLB v2 team prior on the unseen 2025 season | CONCLUDED — replicated (−0.0023 [−0.0042, −0.0005]) |
+| L-20260926-34 | C1: NFL band over-confidence replicates, NRL reverses; shrinking does not improve Brier | NO MODEL CHANGE (user's bar not met) |
 
 ---
 
@@ -454,7 +455,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 - **2026-09-26 review:** L-20260926-01–11.
 - **2026-09-26(c) models for every sport:** L-20260926-12–18.
 - **2026-09-26(d) second pass and lanes:** L-20260926-19–26.
-- **2026-09-26(e) predictability across sports:** L-20260926-27–33; `T-FAV70-BAND` opened; `T-MLB-V2-2025` concluded.
+- **2026-09-26(e) predictability across sports:** L-20260926-27–34; `T-FAV70-BAND` opened; `T-MLB-V2-2025` concluded; C1 (2026-09-27): no model change meets the user's bar.
 
 ---
 
