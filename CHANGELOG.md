@@ -6,6 +6,12 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-28(d) — Markdown evidence and custody repair
+
+The P-518–P-522 working mini log remains byte-for-byte frozen. [P-518–P-522 Reconciliation](P518_P522_RECONCILIATION.md) records the five reserved, unimported IDs, official event/result checks, two wrong settlement event references, process conflicts, all 20 issue-versus-settlement baseline differences, and the P-520 q-order conflict. Canonical custody remains through P-517; next ID stays HOLD. None of the five cards is performance eligible.
+
+[Validation Evidence](VALIDATION_EVIDENCE.md) restores the deleted P6 preregistration, aggregate results, home-edge inputs and historical implementation into Markdown. Its game-level input and dependent modules remain absent; published baseline effects are identified as historical, provisional reference evidence, not proof of card skill. [Record Eligibility Schema](RECORD_ELIGIBILITY_SCHEMA.md) states the strict prospective record gate in Markdown. [Historical Link Index](HISTORICAL_LINK_INDEX.md) maps deleted targets in preserved ledgers to reachable Git copies or marks them unavailable. [Verification Protocol](VERIFICATION_PROTOCOL.md) defines the maintainer checks. The new freeze receipt is named in [Method](METHOD.md); the dated execution result is in [Verification Receipt](VERIFICATION_RECEIPT_2026-09-28.md).
+
 ### 2026-09-28(c) — repository Markdown-only cleanup
 
 The working tree and published `main` retain only root-level Markdown files and the `prediction logs/` folder. Two mini logs and three historical combined-log snapshots were moved there to preserve custody. All other folders and non-Markdown files were removed from the current tree; earlier versions remain in Git history. The five canonical combined prediction logs remain at the root. The freeze receipt was refreshed for the remaining Markdown governance files.

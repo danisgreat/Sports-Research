@@ -1,14 +1,14 @@
 # Current rules — the operating manual
 
-**Method MDS-2026.09.28-v5.0 (md-only) · Control revision CR-2026.09.28-MD2 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+**Method MDS-2026.09.28-v5.0 (md-only) · Control revision CR-2026.09.28-MD3 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
 **What changed on 2026-09-28.** The user instructed that the forecasting model uses Markdown documents only: no Python and no non-Markdown repository file, in the future. So this manual is now self-contained.
 - **Every step that used a tool** has a Markdown procedure. The probability arithmetic, the team baseline (TB-1-MD) and the ranking model (RM-1) are in `PROBABILITY_TOOLKIT.md`, and were checked against the tools they replace. The card, settlement and log formats, and the self-audit, are in `CARD_AND_LOG_TEMPLATES.md`.
 - **Sources** were merged into one register and re-verified by live request (`SOURCES.md`).
 - **Redundant documents** were retired; their former versions remain in Git history. Live rules are in this manual and the sport files.
-- **No probability, width, centre or ranking rule changed** (`C-RULE-FREEZE`), with two measured effects (`PROBABILITY_TOOLKIT.md` §4.3–§4.4):
-  - the hand-computed baseline is at least as accurate as the tool it replaces;
-  - under the existing rule "anchor on TB-1 where it has resolution", a preregistered held-out test (P6) extended the anchor to four more soccer leagues' results and two leagues' totals.
+- **No probability, width, centre or ranking rule changed** (`C-RULE-FREEZE`). The historical aggregate evaluation (`PROBABILITY_TOOLKIT.md` §4.3–§4.4; [preserved evidence](VALIDATION_EVIDENCE.md)) reported two effects, pending a game-level replication from preserved source data:
+  - the hand-computed baseline matched or improved on the prior tool in the reported cohorts;
+  - under the existing rule "anchor on TB-1 where it has resolution", a preregistered held-out test (P6) extended the reference anchor to four more soccer leagues' results and two leagues' totals. This does not validate issued cards or RM-1.
 
 **Precedence.**
 1. The user's current instructions.

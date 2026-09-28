@@ -1,14 +1,14 @@
 ﻿# Probability scoring and validation
 
 
-> **CR-2026.09.21-3 audit reconciliation:** scoring/evaluation findings marked superseded or rejected in `archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md` are non-operative. CR-3 additionally removes surviving live gate references to pseudo-tail/path-count/separation-floor shortcuts. Frozen historical probabilities remain unchanged.
+> **CR-2026.09.21-3 audit reconciliation:** scoring/evaluation findings marked superseded or rejected in the deleted historical audit file are non-operative; its recovery location is listed in [Historical Link Index](HISTORICAL_LINK_INDEX.md). CR-3 additionally removes surviving live gate references to pseudo-tail/path-count/separation-floor shortcuts. Frozen historical probabilities remain unchanged.
 
 
 
 
 Version: **SCV-2026.09.19-v2**. Operational authority for scoring, conditioning and evaluation. Historical cards retain their issued probabilities and method versions. All existing combined logs remain **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**.
 
-> **Measurement correction — 28 September 2026.** Every result and control below remains tied to its dated historical sample. The old settled-row file is a mixed legacy extract; strict extraction retains rows only for descriptive review and currently certifies **zero performance-eligible decisions**. Do not infer the frozen preferred side from `p >= 0.5`. Use the explicit issue-time `preferred_at_issue` decision. RM-1 `q` is a row-calibration/ranking output, not an event marginal or joint distribution; multiplying q values does not estimate joint success. Push-capable records remain blocked from the binary p-v-q prospective comparison until a vector-aware method is validated. Current control details: [structured record schema](research/settled_rows_2026-09-28/RECORD_SCHEMA.md), [capability status](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md), `tools/semantic_validation.py` and `tools/prospective_eligibility.py`.
+> **Measurement correction — 28 September 2026.** Every result and control below remains tied to its dated historical sample. The old settled-row file is a mixed legacy extract; strict extraction retains rows only for descriptive review and currently certifies **zero performance-eligible decisions**. Do not infer the frozen preferred side from `p >= 0.5`. Use the explicit issue-time `preferred_at_issue` decision. RM-1 `q` is a row-calibration/ranking output, not an event marginal or joint distribution; multiplying q values does not estimate joint success. Push-capable records remain blocked from the binary p-v-q prospective comparison until a vector-aware method is validated. Current Markdown control details: [record and eligibility contract](RECORD_ELIGIBILITY_SCHEMA.md). The prior machine validators are historical Git artifacts and are not runnable from this tree.
 
 
 <!-- THREE-SOURCE-TIME-GATE-2026-09-19-CR4 -->

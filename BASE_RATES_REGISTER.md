@@ -152,7 +152,7 @@ These are too small to be identities. They are recorded because a card that depa
 **Status: §1-class reference rates** (historical field-owner frequencies with n and query). They are not identities, not coefficients and not caps, and none automatically moves a centre, width or rank.
 
 - **Where they are used:** a card prints the relevant row beside its own number (`REFERENCE_BASE_RATE`). When a card departs far from the row, it says why.
-- **Queries, scripts and result JSON:** [`research/base_rates_2026-09-25/`](research/base_rates_2026-09-25/README.md).
+- **Historical queries, scripts and result JSON:** [immutable Git inventory](https://github.com/danisgreat/Sports-Research/blob/47e774879430f078c99808e7c86a400d17ef7318/research/base_rates_2026-09-25/README.md). Their game-level inputs are absent from the current Markdown tree; recheck the source and cutoff before using a rate on a new card.
 - **Retrieval:** 2026-09-25, 00:10–01:00 AEST.
 - **ESPN lane change, verified this pass:** scoreboard date *ranges* now return HTTP 400. Query one date per call.
 
@@ -447,7 +447,7 @@ No odds were read. This is a reference row for choosing and describing slates. I
 - TB-1-MD has resolution for **results** in the EPL, La Liga, the Bundesliga, Serie A and Ligue 1: every league 5/5 seasons, three-way Brier −0.043 to −0.057 against the population, all intervals below 0;
 - it has resolution for **Over/Under 2.5** in La Liga (−0.0037) and the Bundesliga (−0.0045) only.
 
-Details: `PROBABILITY_TOOLKIT.md` §4.3; `research/md_only_2026-09-28/p6_soccer_tb1md.json`.
+Details: `PROBABILITY_TOOLKIT.md` §4.3; [Validation Evidence](VALIDATION_EVIDENCE.md) (historical aggregate results; current game-level inputs are absent).
 
 ---
 

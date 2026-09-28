@@ -41,10 +41,10 @@ identity + state ─► contract (lines quarantined) ─► official participant
 |---|---|
 | Operating documents (what the model reads) | `CURRENT_RULES.md`, `PROBABILITY_TOOLKIT.md`, `CARD_AND_LOG_TEMPLATES.md`, `SOURCES.md`, `PROMPTS.md`, `RULES_<SPORT>.md` ×10, `LEAGUE_RULES_CRICKET.md`, `LEAGUE_RULES_SOCCER.md`, `BASE_RATES_REGISTER.md`, `LEARNINGS_INDEX.md` |
 | Records | `PREDICTION_LOG_COMBINED*.md` (Parts 1–4 closed; Part 5 active), `GAME_LOG_STATUS_CURRENT.md`, `prediction logs/` (historical and mini logs), `SKILL_BASELINE_LEDGER.md`, `MARKET_BENCHMARK_LEDGER.md` (operator, post-settlement only) |
-| Evidence and history | `LEARNING_REGISTER.md`, `CHANGELOG.md`; removed research and review material remains in Git history |
+| Evidence and history | `LEARNING_REGISTER.md`, `CHANGELOG.md`; [validation evidence](VALIDATION_EVIDENCE.md), [P-518–P-522 reconciliation](P518_P522_RECONCILIATION.md), [historical link index](HISTORICAL_LINK_INDEX.md) |
 | Archived combined-log snapshots | `prediction logs/` |
 | Version and freeze receipt | `METHOD.md` (header), the current `CONTROL_MANIFEST_*.md` |
-| Maintainer guidance | `SCORING_AND_VALIDATION.md`, `CONTRIBUTING.md` |
+| Maintainer guidance | `SCORING_AND_VALIDATION.md`, `CONTRIBUTING.md`, [verification protocol](VERIFICATION_PROTOCOL.md) |
 
 ## Current state
 
@@ -56,7 +56,7 @@ The active log's top snapshot is the only authority for queue state and the next
 | Next canonical ID | **On hold.** P-518–P-522 are reserved while they are reconciled ([status](GAME_LOG_STATUS_CURRENT.md)). New cards use TMP IDs until the snapshot names the next number |
 | Freeze receipt | The manifest named in [`METHOD.md`](METHOD.md) |
 | Prospective gates | `C-BASELINE-SKILL` 0/100 · `T-RM1-PROSPECTIVE` 0/25 cards · `C-MARKET-BENCHMARK` 0/100 · **`C-RULE-FREEZE` in force** |
-| Validated anchors | **TB-1-MD** beats the population on sides and results in the NBA, WNBA, NBL, NFL, AFL, EPL, La Liga, Bundesliga, Serie A and Ligue 1, and on totals in the NBA, WNBA, La Liga and Bundesliga. It is at least as accurate as the old tool in every league (`PROBABILITY_TOOLKIT.md` §4.3–§4.4) |
+| Historical TB-1-MD evaluation | Aggregate results reported gains over population in several league and target cohorts ([source bundle](VALIDATION_EVIDENCE.md)). The current tree lacks game-level inputs for an independent rerun; these are provisional reference anchors, not demonstrated card-level skill. |
 | Predictability | STRONG (≥ 0.70) favourites exist mainly in AFL and basketball sides, less in the NFL and NRL, rarely in the NHL, and never in MLB (`BASE_RATES_REGISTER.md` §7.8) |
 | Legacy settled rows | Historical extraction records were removed from the current tree; no issued row is performance-eligible |
 
@@ -72,7 +72,7 @@ The active log's top snapshot is the only authority for queue state and the next
 
 ## For maintainers
 
-After editing a governance file, update the Markdown freeze receipt and its pointer in `METHOD.md`, then check the Markdown files and current custody state. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+After editing a governance file, update the Markdown freeze receipt and its pointer in `METHOD.md`, then check the Markdown files and current custody state. See [Contributing](CONTRIBUTING.md) and the [verification protocol](VERIFICATION_PROTOCOL.md).
 
 ## Honesty boundary
 
