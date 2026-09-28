@@ -2,7 +2,7 @@
 
 Status: **ACTIVE**
 Method version: **MDS-2026.09.28-v5.1 (md-only)**
-Control revision: **CR-2026.09.28-MD4**. Freeze the normalized-CRLF SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-28-7.md](CONTROL_MANIFEST_2026-09-28-7.md) with every new card. Copy the manifest name and its SHA-256 onto the card. The SHA is printed in the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`, a living file the manifest does not hash, so it can carry the manifest's own SHA.
+Control revision: **CR-2026.09.28-MD5**. Freeze the normalized-CRLF SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-28-8.md](CONTROL_MANIFEST_2026-09-28-8.md) with every new card. Copy the manifest name and its SHA-256 onto the card. The SHA is printed in the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`, a living file the manifest does not hash, so it can carry the manifest's own SHA.
 Scoring version: **SCV-2026.09.19-v2**
 
 **This file is a pointer, not a procedure.** From 2026-09-28 the forecasting model works from Markdown documents only:
@@ -31,4 +31,6 @@ Scoring version: **SCV-2026.09.19-v2**
 - **Removed paths are audited** (`VERIFICATION_PROTOCOL.md` §4, rules L1 and L2), and indexed in `HISTORICAL_LINK_INDEX.md`.
 - **The rule inventory is closed** until the checkpoints read out (`CURRENT_RULES.md` §D9).
 
-**Receipts.** The `-4`, `-5` and `-6` manifests remain historical receipts, even though their original headers call them current. This header and `-7` identify the active receipt. Cards frozen under `-6` keep it.
+**2026-09-28(f), MD5 source coverage.** `SOURCES.md` adds field-specific immediate fallback routes and audited official-source paths for all ten sport sections. An original, timestamped, authenticated organisation social announcement is admissible for its own field and remains one lineage with its website. This repairs the overbroad categorical social ban; it does not change forecast arithmetic, probabilities, ranks or prior cards.
+
+**Receipts.** The `-4` through `-7` manifests remain historical receipts, even though their original headers call them current. This header and `-8` identify the active receipt. Cards frozen under an earlier manifest keep it.

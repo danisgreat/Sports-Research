@@ -1,6 +1,19 @@
-# Verification receipt — 2026-09-28(d) and (e)
+# Verification receipt — 2026-09-28(d), (e) and (f)
 
 This receipt records executed checks for the Markdown evidence and custody repair. The [protocol](VERIFICATION_PROTOCOL.md) defines the gates. It is a living execution note, excluded from the stable control manifest so the manifest's own SHA-256 can be recorded here without a circular hash.
+
+## Executed results — 2026-09-28(f) source and fallback expansion (manifest -8)
+
+These checks were run after the source edits, against the local working tree on `main`. The research reviewed official competition and club routes across all ten sport sections; route-specific access and limits are in `SOURCES.md`. No game card or settled result was generated from this source pass.
+
+| Gate | Result |
+|---|---|
+| Repository layout | 59 content files; all `.md`, at the root or directly in `prediction logs/` |
+| Source coverage | Ten sport sections (§3.1–§3.10), a field-specific fallback (§1.7), conditional original official-social evidence (§1.8), and ten sport-specific fallback rows (§3.11). Dated examples, the NBA `JS_ONLY` page and untested exact-game coverage are visibly qualified |
+| Local links | New/current links in `METHOD.md`, `CURRENT_RULES.md`, `PROMPTS.md`, `SOURCES.md` and manifest -8 resolve locally. Historical broken links in the preserved `CHANGELOG.md` remain governed by `HISTORICAL_LINK_INDEX.md` |
+| Frozen source custody | P-518 onward mini log raw SHA-256 remains `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`; no prediction log or numeric toolkit was edited |
+| Freeze receipt | [Manifest -8](CONTROL_MANIFEST_2026-09-28-8.md) lists 55 stable files. All 55 normalized-CRLF SHA-256 values and byte counts matched an independent readback. Its normalized SHA-256 `6dc64b2d74178335b76dc8180983a8d51b104c1cbe50f463148927d675bf6a0f` matches the first status line and `METHOD.md` points to -8 |
+| Diff syntax and publication | `git diff --check` passed; these local edits were not committed or pushed. The publish gate in protocol §5 remains unrun |
 
 ## Executed results — 2026-09-28(e) review improvements (manifest -7)
 

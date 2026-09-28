@@ -89,6 +89,8 @@ Research and card this event under the framework in the linked Drive, using its 
 4. Evidence.
    - Use game logs before aggregates; the season rate plus the opponent.
    - Use the SOURCES.md lanes for this sport, and more than one lineage for every decisive fact.
+   - For each missing field, record the failed route and time, then immediately use the next applicable sport-specific route in SOURCES.md §1.7 and §3.11. Distinguish not yet published from inaccessible, stale and wrong-event pages; recheck the field owner at the final refresh.
+   - An original official social post may establish only the announcing organisation's own field if its account, exact post, contents and pre-issue time are verified (SOURCES.md §1.8). Count it with that organisation's website as one lineage; otherwise treat it as discovery only.
    - Stay market-blind.
 5. Baselines and distribution.
    - Print BASELINE_P and TEAM_BASELINE_P: TB-1-MD by hand from the standings (PROBABILITY_TOOLKIT.md §4).

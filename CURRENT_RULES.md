@@ -1,6 +1,6 @@
 # Current rules — the operating manual
 
-**Method MDS-2026.09.28-v5.1 (md-only) · Control revision CR-2026.09.28-MD4 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+**Method MDS-2026.09.28-v5.1 (md-only) · Control revision CR-2026.09.28-MD5 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
 **What changed on 2026-09-28(e)** (the user instructed the review's improvements; no probability, width, centre or in-domain rank changed):
 - **Core first, annex after (§B, §C).** Four of the five cards before this change finished after the start, so none could count toward a checkpoint. A card now freezes its **core** (everything that sets a probability or a rank) before the start, and appends its disclosure **annex** afterwards.
@@ -139,12 +139,13 @@ All in `SOURCES.md`:
 - **Ladder:** field owner → official team or player → structured API → independent quality media → fallback.
 - **Access modes:** API / Browser / Proxy (`r.jina.ai`). ESPN routes reject a browser user-agent. NHL api-web, Tennis Abstract, UEFA and Squiggle need one.
 - **Critical dynamic fields** (lineup, starter, toss, goalie): the field owner, or two genuinely independent current lineages, or leave the field unresolved.
+- **Immediate fallback:** when a field's route is blocked, stale, empty or the wrong event, record the attempt and follow `SOURCES.md` §1.7 and §3.11 for that field. An authenticated original organisation post may be that organisation's release under §1.8, and counts in the same upstream lineage.
 - **Excluded:** market material, synthetic content, and search summaries as facts.
 
 ### D3 Participants and lineups (M19, M25)
 - **An official lineup published before the freeze always wins,** printed with its fetch time.
 - `PROJECTED_BEAT_VERIFIED` needs a printed S-1 Rev 2 receipt: outlet, reporter, timestamp, verbatim quote, and two sources.
-- Preseason goalies stay `PROJECTED`. Social media is not a lineup source.
+- Preseason goalies stay `PROJECTED`. Only an original, visible, pre-issue team/competition lineup announcement from an authenticated account can serve as that organisation's official release (`SOURCES.md` §1.8); other social posts cannot confirm a lineup.
 - **Every decision-driving player has a quantified line** (minutes, usage, the rate) or is marked `AGGREGATE_ONLY`.
 
 ### D4 Environment

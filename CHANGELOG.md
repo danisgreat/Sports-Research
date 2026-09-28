@@ -1,10 +1,19 @@
-﻿# Changelog
+# Changelog
 
 **Opened 2026-09-25(c).** This is the project's dated history. Until 2026-09-25(c) it lived in the body of `README.md`, which had grown into about twenty dated sections. That buried what the project is and how to use it. The complete former README body is preserved **verbatim** below, in its original order (SHA-256 of the whole former README: `003a7eaecb6b64e70a28811449a34e5f4a7572ef03dffca621675c7d200a9b71`). Its original link text is unchanged; links whose targets were removed are mapped in the [Historical Link Index](HISTORICAL_LINK_INDEX.md).
 
 New entries go at the top, under **Entries from 2026-09-25(c)**. The governing rules live in [`CURRENT_RULES.md`](CURRENT_RULES.md) and the files it cites; this changelog is history, not instruction (`METHOD.md` §9). Older links to removed files refer to versions available in Git history.
 
 ## Entries from 2026-09-25(c)
+
+### 2026-09-28(f) — all-sport source and fallback expansion (MDS-2026.09.28-v5.1, CR-2026.09.28-MD5, manifest -8)
+
+**Why and exception.** The user explicitly requested wider sources for every sport, immediate alternatives when a game-log field cannot be retrieved, and an assessment of social sources. The old blanket ban on social lineups incorrectly excluded visible original announcements from authenticated official team and competition accounts. This is a user-instructed retrieval change and a validity repair to that categorical rule, within the `C-RULE-FREEZE` exception in `CURRENT_RULES.md` §D9 and the same-day manifest exception to M33. It adds no named control, card field, probability, coefficient, width, centre or rank rule.
+
+- `SOURCES.md` §1.7 defines a field-specific fallback and attempt ledger; §1.8 admits only original, timestamped, authenticated posts for fields the organisation controls. Its site and social account are one lineage. Blocked or inaccessible platforms remain retrieval misses, and search snippets remain discovery only.
+- The ten sport tables now include additional official routes for baseball, basketball, cricket, soccer, AFL/AFLW, rugby league, rugby union, NFL/NCAA football, NHL and tennis. §3.11 gives the next practical route and conditional official-social use for each sport. `JS_ONLY`, dated-example and untested exact-game pages are labelled rather than claimed as reliable game-day feeds.
+- `CURRENT_RULES.md` and `PROMPTS.md` apply the same fallback and social rules at card time. Earlier issued records and frozen mini logs are unchanged. These additions improve retrieval coverage and traceability; they are not evidence of predictive lift.
+- Receipt: `CONTROL_MANIFEST_2026-09-28-8.md`; `METHOD.md` and the first line of `GAME_LOG_STATUS_CURRENT.md` point to it. The previous -7 receipt remains available for cards issued under it.
 
 ### 2026-09-28(e) — review improvements (MDS-2026.09.28-v5.1, CR-2026.09.28-MD4, manifest -7)
 
