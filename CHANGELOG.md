@@ -6,6 +6,43 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-28(b) — Markdown-only operation, validated hand procedures, more sources, consolidated documents
+
+**Why.** The user asked for:
+- a comprehensive review of the documents, rated out of 10;
+- implementation of every improvement, especially to predictability and the probabilities;
+- more sources, and the removal of redundant information and documents;
+- that the model uses **no Python or non-Markdown files** in future.
+
+**Category:** VALIDITY_REPAIR plus documentation (the method could not be carried out without the excluded tools). The receipt is `CONTROL_MANIFEST_2026-09-28-4.md`.
+
+- **The model's documents (new or rewritten):**
+  - `CURRENT_RULES.md`: a self-contained operating manual (MDS-2026.09.28-v5.0, CR-2026.09.28-MD1);
+  - `PROBABILITY_TOOLKIT.md`: the Φ, Poisson, negative binomial and Elo tables; TB-1-MD; the RM-1 table; departures; scoring;
+  - `CARD_AND_LOG_TEMPLATES.md`: the card, the settlement block, the mini log, the universe table, the self-audit that replaces `audit_card_controls.py`, ledger rows and the import procedure;
+  - `PROMPTS.md`: the prompt set, updated for md-only operation;
+  - `SOURCES.md`: one register.
+- **Checked against the tools** (`research/md_only_2026-09-28/`):
+  - the RM-1 table: 0 mismatches;
+  - the margin and Skellam formulas: exact;
+  - TB-1-MD: at least as accurate as the tool's TB-1 in all nine leagues, and better in the NBL (−0.0045 [−0.0088, −0.0005]).
+- **Predictability.** P6, preregistered in `a3c39d2` before any run, extends the TB-1 anchor under the existing resolution rule:
+  - results in La Liga, the Bundesliga, Serie A and Ligue 1 (and the EPL again) all pass 5/5 seasons, at −0.043 to −0.057 three-way Brier;
+  - totals pass in La Liga and the Bundesliga.
+  - Opened `T-TB1MD-NRL`.
+- **Sources.** About 120 routes were tested live; about 30 sources were added. Examples: ESPN standings and injury feeds, NPB probable starters, CPBL, EuroLeague and ACB feeds, AFL API and team lineups, NRL draw, ladder and team lists, World Rugby rankings, Understat, Transfermarkt, FotMob, Daily Faceoff, the NHL stats API, Tennis Abstract Elo, the WTA API, NWS, BOM, JMA and MET Norway. Blocked routes are listed; football-data.co.uk is excluded because it carries odds.
+- **Redundancy removed.**
+  - 18 documents were retired verbatim to `archive/superseded_2026-09-28/`, with a map: RULES_GENERAL, METHOD's text, CONTROLS, AGENT_ROLE, EXTERNAL_LOGGING_WORKFLOW, FORECAST_PREFLIGHT, UPCOMING_GAME_RESEARCH_GUIDE, PERFORMANCE_ELIGIBILITY_POLICY, RECENCY_AND_REBOUND, DATA_SOURCE_REGISTER, the seven numerical-program documents and two snapshots.
+  - 15 superseded manifests moved to `archive/manifests/`.
+  - The ten sport files lost their dated history (4,215 lines, now in `sport_history/`).
+  - Root Markdown files went from 64 to 34.
+- **Integrity:**
+  - M35: frozen fields are copied at settlement, never replaced (review F2);
+  - the "decision Brier" label was corrected (F5);
+  - the shadow lanes are suspended for md-only operation;
+  - the SHA now travels via the freeze-receipt line in `GAME_LOG_STATUS_CURRENT.md`.
+- **Unchanged:** every probability, width, centre and ranking rule; the P-518–P-522 reconciliation (that mini log is untouched); the Python tooling and CI (`tools/test_model_anchor.py` now reads `CURRENT_RULES.md`).
+
 ### 2026-09-26(e) — predictability across sports
 
 **Why.** The user asked for predictability across all sports to be improved properly, then to continue thoroughly and accurately. **Category:** MEASUREMENT plus validity repairs. No probability, rank, width, centre or model constant moved (`C-RULE-FREEZE`).

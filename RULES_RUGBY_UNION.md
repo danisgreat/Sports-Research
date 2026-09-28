@@ -1,36 +1,15 @@
 <!-- THREE-SOURCE-TIME-GATE-2026-09-19-CR4 -->
-> **Current cross-sport authority — MDS-2026.09.19-v4.3 / CR-2026.09.21-3:** this sport module inherits the reconciled all-sports source, timing, settlement and distribution-construction controls. Historical issued cards retain their own revision.
 
-
-# Rugby union and rugby sevens analysis rules
-
-> **Current research status — 28 September 2026:** No sport/competition/target scope is prospectively validated or approved for a performance claim. Use the [capability table](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md) and `python tools/evidence_status.py`; all issued forecasts remain `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE` under the current method and evidence gates.
-
-
-
-> **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
-
-
-> **`METHOD.md` is now the primary mandatory read (v4.0 comprehensive overhaul, 2026-09-06).** This file remains the full sport-specific reference: its `SFA-<SPORT>` algorithm and competition-rules section (`§9`/`§10`/`§11`) are consulted in full when forecasting this sport; `METHOD.md` states the cross-sport process once.
-
-
-Status: **ACTIVE — QUALITATIVE MODULE**
-Effective: **2026-09-06 (v4.0 comprehensive overhaul — see METHOD.md and archive/audit_documents_implemented_2026-09-25/FRAMEWORK_AND_GAME_LOG_OVERHAUL_REVIEW_2026-09-06.md)**
-Method version: **MDS-2026.09.06-v4.0**
-Applies with RULES_GENERAL.md, MODEL_AND_DATA_SPEC.md, and ALGORITHM_PORTFOLIO_AND_EVALUATION.md.
-Executable algorithm: **SFA-RUGBY-UNION (§10) — instantiates GFA-2 in RULES_GENERAL.md §11**
-Numerical status: **NO RUGBY-UNION OR RUGBY-SEVENS TARGET/SOURCE CARD, DATASET OR MODEL IS APPROVED OR FIT**
-Sport and competition rules reference: **§11 (added 2026-09-04)** — the laws of 15-a-side rugby union and rugby sevens, plus the competition rules for the New Zealand NPC (Hilux NPC) and the French In Extenso SuperSevens. Reference material for identity, state and settlement; it does not change `SFA-RUGBY-UNION`.
-Evidence density: **SPARSE** (added 2026-09-06, `L-099`, external blindspot audit `B-13`) — this sport has markedly fewer settled cards in this log than baseball, soccer or cricket. Every identity/state/contract/source/coherence gate applies at full force regardless; any *directional or magnitude* claim in this file is held to lower confidence than an equivalent claim in a `DENSE` sport and may not be promoted `PROMOTED_PROCESS` on one or two cards alone.
-
-
-This module covers 15-a-side rugby union and rugby sevens. They share laws ancestry but have different duration, space, possession, rest, squad and scoring distributions. Neither population may be pooled with rugby league or with the other union format without an explicit population/era model.
-
+**Live rules for Rugby union and sevens. Markdown-only operation, 2026-09-28.** Read §0 in full for every card: it governs this file.
+- §1 onward is the reference algorithm and the competition rules; it is consulted by citation.
+- The dated history (settlement learnings and the evidence behind every numbered control) moved verbatim to [`archive/superseded_2026-09-28/sport_history/RULES_RUGBY_UNION_history_to_2026-09-28.md`](archive/superseded_2026-09-28/sport_history/RULES_RUGBY_UNION_history_to_2026-09-28.md). Open it when a control's full text or evidence is needed.
+- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.7. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `CURRENT_RULES.md`, which outranks this file.
+- No sport, competition or target is prospectively validated. Every card is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
 <!-- LIVE-RULES-PAGE-2026-09-26 -->
 ## 0. Live rules — one page (consolidated 2026-09-26)
 
-**Status.** This page consolidates everything in this file that is live on 2026-09-26: the numbered controls, SFA-RUGBY-UNION and the dated sections through 2026-09-25(e). It is a derived index. If it disagrees with the section it cites, the cited section governs and this page is corrected in the same pass. **Reading gate (C-READING-GATE, 2026-09-26):** read this page in full for every union or sevens card, then open each cited section the card relies on (and §11 for the competition). Everything below §0 is the full reference and its history.
+**Status (md-only, 2026-09-28).** This page is the live rule set for this sport and governs the rest of the file. It was consolidated on 2026-09-26 from the numbered controls, the SFA algorithm and the dated sections through 2026-09-25(e). Those dated sections are now archived (see the header). Where a control below is one line, that line is the operative rule, and the archived history is its evidence.
 
 **Evidence density: `SPARSE`** (L-099). There is **no union population reference and no TB-1 lane yet**: cards print `TEAM_BASELINE_P: NOT_COVERED` and `REFERENCE_BASE_RATE: NOT_YET_DERIVED`, the evidence grade is capped at LOW, and the departure ledger names every move away from an even-money prior. Deriving the ESPN rugby-union population is the next research step. Union is never pooled with league, and fifteens are never pooled with sevens (controls 1, 2).
 
@@ -53,9 +32,9 @@ This module covers 15-a-side rugby union and rugby sevens. They share laws ances
 ### 0.3 Ranking and settlement
 Rank by RM-1 q; its cushion term applies to union +k.5 rows. A large cushion (k ≥ 10) stated at 0.60–0.65 is still scored by RM-1, and the reconciliation line names the margin band (`C-PLUS-CUSHION`). Print `TOP2_QUALITY`. Settle from the competition's official match centre plus two further lineages, read from the feed.
 
-### Numerical shadow model (2026-09-26(c); never a card input)
+### Numerical shadow model (2026-09-26(c); suspended for md-only operation, 2026-09-28)
 
-`python tools/sport_models.py shadow --league union --espn-path rugby/<competition id> …`, or `--csv` results (`C-SPORT-SHADOW`). A1 is ridge ratings with key-number weights and draws allowed. **Not validated.** Record it after the freeze and before the start; it is never printed, ranked or cited on a card, and a promotion needs its 150-row review and your instruction (`RULES_GENERAL.md` §"2026-09-26" (e), (k); `research/sport_models_2026-09-26/README.md`).
+The rugby-union model (A1) is ridge ratings with key-number weights and draws allowed. **Not validated.** It is maintainer Python, never a card input, and the model does not run it: print `SHADOW: NO_LANE (md-only)` at settlement (`research/sport_models_2026-09-26/README.md`). The hand-computable team baseline that does feed cards is TB-1-MD (`PROBABILITY_TOOLKIT.md` §4).
 
 **Predictability (2026-09-26(e)).** Not measured: no union results were reached. The reference is the population (`research/predictability_2026-09-26/README.md`; `BASE_RATES_REGISTER.md` §7.8).
 
@@ -188,7 +167,7 @@ Method references:
 ## 10. SFA-RUGBY-UNION — sport forecast algorithm
 
 
-Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL.md §11) with rugby-union content. Process composition only; no fitted weight, scenario weight or published probability is introduced, and no rugby-union or sevens target, source, dataset or model is approved or fit. Fifteens and sevens run separate branch sets and are never pooled with each other or with rugby league.
+Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with rugby-union content. Process composition only; no fitted weight, scenario weight or published probability is introduced, and no rugby-union or sevens target, source, dataset or model is approved or fit. Fifteens and sevens run separate branch sets and are never pooled with each other or with rugby league.
 
 
 ### 10.1 Blocking preconditions
@@ -309,7 +288,7 @@ Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` 
 ### 10.9 Recency, head-to-head and trend windows
 
 
-Implements `GFA-2` step G13.1 (RULES_GENERAL.md §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
+Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
 
 
 Populate one windowed table per side with these metrics, and one head-to-head table:
@@ -336,7 +315,7 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 ### 10.10 Environment and conditions
 
 
-Implements `GFA-2` step G15.1 (RULES_GENERAL.md §11.3C). Venue classification for this sport is normally **OUTDOOR**.
+Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **OUTDOOR**.
 
 
 | Field | Use in this sport |
@@ -372,7 +351,7 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the laws of rugby union (15s and 7s) and the competition rules of the two rugby competitions in the prediction logs: the **New Zealand NPC** (now the Hilux NPC) and the **French In Extenso SuperSevens**. Supports `RU-P` identity and §8 settlement; introduces no rate, weight or ordering rule.
 
 
-**Maintenance (RULES_GENERAL.md §3, `G2`).** World Rugby runs frequent law trials (the 20-minute red card, the goal-line drop-out, scrum/breakdown tweaks, a shot-clock) that competitions adopt at different times; SuperSevens changed its whole format for 2026. Before the first card of a new NPC or SuperSevens season, re-verify the red-card law in force, the bonus-point rules, the team count and single-division status, the playoff bracket, and (for SuperSevens) the current stage structure against the competition's site, and update this section **before** issuing the card. The first time another union or sevens competition is forecast (Super Rugby, URC, Top 14, a Test, a World Series leg), document its full rules here first, and keep 15s and 7s as separate populations.
+**Maintenance (RULES_GENERAL (archived) §3, `G2`).** World Rugby runs frequent law trials (the 20-minute red card, the goal-line drop-out, scrum/breakdown tweaks, a shot-clock) that competitions adopt at different times; SuperSevens changed its whole format for 2026. Before the first card of a new NPC or SuperSevens season, re-verify the red-card law in force, the bonus-point rules, the team count and single-division status, the playoff bracket, and (for SuperSevens) the current stage structure against the competition's site, and update this section **before** issuing the card. The first time another union or sevens competition is forecast (Super Rugby, URC, Top 14, a Test, a World Series leg), document its full rules here first, and keep 15s and 7s as separate populations.
 
 
 ### 11.1 The laws of 15-a-side rugby union
@@ -458,180 +437,3 @@ Sevens and 15s are **entirely separate populations** (RULES_RUGBY_UNION.md pream
 
 
 Resolve before any rate work: **which code and format** (15s vs 7s — never pooled); the **competition** (NPC / SuperSevens / other) and its **bonus-point and table rules**; the **stage** (round-robin / pool / quarter-final / final) and therefore whether a **draw is possible** or the match goes to **extra time / kicks**; the **red-card law** in force (straight red vs 20-minute red); whether the **Ranfurly Shield** or a similar trophy is on the line for that specific fixture; squad availability against higher-level competitions; and the operator's market endpoint for a knockout (regulation vs eventual winner).
-
-
-## September 5 cross-sport process inheritance
-
-
-L-068–L-071 in RULES_GENERAL §12 apply to this SFA through phase score budgets, actual role/minute exposure, cards and kicking allocation. Validate arithmetic, propagate failed evidence caps, make both sides’ material winning states evaluable and keep source identity/field definitions explicit. No new completed game in this sport was available in the current cohort; no sport-specific empirical improvement or parameter change is claimed.
-
-
-## September 6 settlement learning — cross-sport gates instantiated
-
-
-No rugby-union or sevens card was settled in the `P-294`–`P-305` cohort. This file remains qualitative-only; the v3.7 gates are instantiated here as disclosures, consistent with that status.
-
-
-**Sport-native tail example.** A rugby-union total is exposed to two compounding tails that a points-only budget hides: **the bonus-point chase**, where a side on three tries plays materially more expansively for the fourth, and **the penalty-count tail**, where a high-penalty referee appointment converts territory into three-point increments at a much higher rate than open play. Hold each side's second-highest L10 try count `T` at its own L10 conversion rate `c` and convert to points as **separate scoring components**: `points = 5×T + 2×(T×c) + 3×penalty_goals + 3×drop_goals + 7×penalty_tries` (using the competition's actual try/conversion/penalty-goal/drop-goal/penalty-try values from the reference section — some competitions vary these). **Correction, 2026-09-06(d):** the earlier wording here mirrored the NRL shorthand ("try count × conversion rate") and likewise omitted the try points themselves and the separate goal-scoring terms; the explicit component sum above is the actual required arithmetic. Add the penalty-goal term separately, derived from the fixture's own recent penalty counts, and print the implied total. Where the appointed referee is known and their penalty count is publicly recorded, that is a named exposure pathway under `G15`; where it is not, record `REFEREE_NOT_ANNOUNCED` and do not infer one.
-
-
-**Sevens** carries a much shorter interval and a much higher per-minute scoring rate, so the same arithmetic is run per seven-minute half rather than per 40. A sevens `Under` is an unusually tight `INTERSECTION_CONSTRAINT`. **Correction, 2026-09-06(d):** the earlier claim that it "should very rarely be Rank #1" was an undisclosed ordinal rule derived from a general geometric observation, not a tested one — one actual sevens result in this log (`P-132`, Vannes 17–10 Lyon, `Under 35.5` **WIN**) is a direct counterexample to treating tight-constraint Unders as structurally unrankable. The path-geometry field remains disclosure only, per `RULES_GENERAL.md` §15; it creates no automatic demotion.
-
-
-**Bench capacity is unusually load-bearing in this sport.** A rugby-union bench is eight players including a full front row, and the "finishers" model means a large share of late scoring comes from replacements as a matter of design rather than accident. `G14.2` is therefore not optional here: a card with `BENCH_NOT_RETRIEVED` cannot honestly rank a margin or full-game total row first.
-
-
-
-
-### Cross-sport gates instantiated here (v3.7)
-
-
-| Gate | Sport-native instantiation |
-|---|---|
-| `G10.2` settlement-source pre-registration | Test and club rugby settle from the union's or competition's official match record; name the exact record at freeze. Sevens tournaments settle from the World Rugby event record. |
-| `G14.2` coaching / bench / rotation record | Record the head coach, the full eight-player bench with its front-row cover, the substitution/HIA provisions from §11, and any confirmed rotation for a congested block. Official union/club 48h team sheets or warm-up scratch notices verified across accredited rugby journalists under Control `S-1 Rev 2` qualify as `PROJECTED_BEAT_VERIFIED`, satisfy `G14.2`, and do not block Rank #1. |
-| `G20.2` distributional tail audit | Derive tail and boundary mass from the **same frozen rugby-union/sevens joint score distribution**, conditioning on format-specific possession/territory, set piece, discipline/cards, replacements, goal-kicking, and extra-time/tiebreak rules. Sparse evidence widens uncertainty; historical order-statistic stress sums are superseded as active gates. |
-| `G21.1` exact target geometry | Map every supplied target to its exact settlement event and derive WIN/PUSH/LOSS from the same frozen sport-native PMF/CDF or coherent branch mixture. Historical path-count/category labels have no mandatory ordinal effect. |
-| `G26.1` no universal separation floor | Reference rates and `rank_gap` are descriptive only. **No 40–60% or other pooled probability band can disqualify Rank #1.** Rank from exact marginal likelihood plus robustness/evidence uncertainty. |
-
-
-**Pre-issue checklist additions (this sport):** settlement endpoint named per row; coaching/bench/rotation record for both sides with missingness codes; tail-budget sums printed against every total line; path-geometry class and `N` printed for every total and phase-total row; separation-floor result stated for Rank #1.
-
-
-Full narrative and evidence: [`archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md`](archive/audit_documents_implemented_2026-09-25/IMPROVEMENT_PLAN_2026-09-06.md). Controlling gate text: [`RULES_GENERAL.md` §13](RULES_GENERAL.md).
-
-
-## September 5 implementation after freeze confirmation
-
-
-**ACTIVE REQUIRED PROCESS — MDS-2026.09.05-v3.6 / L-068–L-072.** Apply the shared native-score arithmetic, final-role/exposure gate, both-side score/separation budgets and source-field checks to possession, territory, kicking and discipline. This audit supplies no new rugby-union-specific coefficient evidence.
-
-
-At final delivery, record the preferred total direction for each exact target, the strongest evidenced failure path for ranks #1 and #2, and whether both can win under the stated joint scenario. Rank by supported marginal likelihood; do not promote an opposite pick solely to manufacture one O/U win. At settlement, keep all issued wins/losses, including defective reasoning, in the applicable historical scorecard and review failed #1/#2 and preferred totals.
-
-
-[Eligibility policy](PERFORMANCE_ELIGIBILITY_POLICY.md): non-live history is user-confirmed frozen pre-game; explicit live-issued views stay separate. These process repairs are implemented now. Numerical weights and predictive-lift claims need a later frozen comparison; historical origin games do not supply those completions.
-
-
-## 2026-09-09 — cross-sport controls instantiated here (`G-L1`, `G-L2`, `G-L7`, `G-L8`)
-
-
-No rugby-union card was issued in the `P-333`–`P-344` cohort. The four cross-sport requirements adopted from it (`RULES_GENERAL.md` §§16.5(a)–(d), full evidence in `PREDICTION_LOG_COMBINED_3.md` §"2026-09-09") apply to this sport from the next card. All four are **disclosure/retrieval requirements — no fitted weight, no ordinal bar** (`L-087`), and none authorises a numerical model here: rugby union remains qualitative-only.
-
-
-| Cross-sport control | Rugby-union instantiation |
-|---|---|
-| **`G-L1` §16.5(a)** — enumerate outcome-state families with explicit mass | Enumerate the **margin families** (favourite by 22+ / 13–21 / 8–12 / 1–7 / draw / underdog win — with the bonus-point thresholds named where the competition uses them) and the **total families** in points, each with an explicit mass summing to 1. Scoring is quantised in 5s, 7s and 3s, so state families as **try-count × conversion × penalty-count** combinations rather than a smooth corridor. Every current-evidence §8.5 kill path — a **yellow/red card**, a **penalty-try**, a shift to kicking for territory, a rolling-maul scoring pattern — appears as a weighted branch. Print a representative Rank-#1 final score as a try/penalty breakdown and check it against the handicap, the total and any bonus-point-dependent row. |
-| **`G-L2` — declared uncertainty model** | State the prior and scenario probabilities. Symmetric uncertainty around an unchanged prior affects width; hierarchical shrinkage or asymmetric scenarios may change both mean and variance. Regenerate all dependent probabilities; unsupported directional adjustments remain prohibited. SCORING_AND_VALIDATION section 5 controls. |
-| **`G-L7` §16.5(c)** — aggregate-to-disaggregate retrieval | Do not let a season points-per-game figure or a "last N" summary carry directional weight while the **round-by-round log** is available. Print the per-match record for the decision-relevant window — points for/against, tries, penalties attempted/converted, and the **goal-kicker's per-match success rate** rather than a season percentage. For a returning player, print the **bench-minutes progression** across recent matchday squads, the analogue of the rehab pitch-count ladder that decided `P-335`. Quantify **the primary goal-kicker and every top-three try-scorer on both sides**; a bare name in a "leaders include…" phrase is `AGGREGATE_ONLY` and caps the dependent margin/total rows. |
-| **`G-L8` — distribution coherence** | Derive each total/spread probability from the exact joint PMF/CDF and settlement endpoint, with push mass. Absolute normalised distance does not order probabilities across different distributions. No missing width or realised result justifies an invented probability. |
-
-
-## 2026-09-11 — cross-sport controls instantiated here (`G-L9`, `G-L10`, `G-L11`, §16.8)
-
-
-No rugby-union card in the `P-345`–`P-371` import. From the next card ([`RULES_GENERAL.md` §§16.5(e)–(g), §16.8](RULES_GENERAL.md)):
-
-
-| Control | Rugby-union instantiation |
-|---|---|
-| `G-L9` §16.5(e) | Itemise the complement across the named paths — a yellow-card swing, goal-kicking accuracy, a bonus-point chase, set-piece dominance in the wet. |
-| `G-L10` §16.5(f) | A late bonus-point chase can raise the total while changing the margin in either direction; print the coupling of any handicap + total pair. |
-| `G-L11` §16.5(g) | Line-out success, goal-kicking percentage and tries-per-match over a few rounds are small samples; print their standard error before a signed adjustment. |
-| §16.8 | Matchday 23s are named before kick-off; `NOT_RETRIEVED` after naming is a `RETRIEVAL_MISS`. |
-
-
-
-
-## 2026-09-12 algorithm corrections and retrospective integration
-
-
-Apply section 16.9 to possession/territory, tries, conversion/penalty attempts, cards and replacements. A low-scoring close match and a low-scoring shutout have different handicap outcomes. Record both XVs, full replacements, kickers and coaches with publication times. Conversion proportions and points per possession require different uncertainty treatment. No new union result was settled in this pass; no union-specific weight or claimed lift is adopted.
-
-
-For every supplied row, use exact target probabilities from a coherent joint distribution; handle push/void/censoring explicitly, avoid overlapping adverse-state counts, and report JOINT_UNQUANTIFIED with bounds if the dependence is not specified. Separate issued-time participant capture, later recovered evidence, source accuracy by field, observed mechanism, and unverified causal interpretation. Keep one preferred O/U direction per distinct target and report the top-two denominator honestly. Shared correction and methodology sources (`audit_2026-09-12/rule_corrections.md`, not present in this repository). All current log observations remain learning-only and not performance-eligible.
-
-
-
-
-## 2026-09-15(b) settlement learning — `P-373`–`P-423` import
-
-
-Learning-only; disclosure/process changes only — no coefficient or ordinal bar (`L-087`). Evidence and tables: [`PREDICTION_LOG_COMBINED_3.md` §"2026-09-15(b)"](PREDICTION_LOG_COMBINED_3.md). Cross-sport rule: `RULES_GENERAL.md` §16.10 (`G-L12` margin centre/width; fixture identity; official-record derivative settlement).
-
-
-No rugby-union card in this import. **`G-L12` instantiation:** print the favourite's 8+ and 15+ margin families beside any handicap, with the late-try branch (bonus-point chasing and yellow cards) as mass; sparse team lists (control 11) widen the margin distribution rather than centring it on a close game.
-
-
-## 2026-09-16 — cross-sport controls instantiated here (`G-L13`, `G-L14`, `G-L15`, disruption facts)
-
-
-No rugby-union card was settled this pass. Rules: `RULES_GENERAL.md` §16.11.
-- **`G-L13`:** XVs, replacements and kickers come from the raw union or competition team announcement, with its publication time.
-- **`G-L14`:** try-count and half rows name their settling record at issue.
-- **`G-L15`:** label total rows forced-pair or free.
-- **Disruption facts:** record yellow cards, red cards (including 20-minute reds where the competition uses them) and HIA replacements with the minute and score.
-
-
-## 2026-09-17 — cross-sport controls instantiated here (`G-L17`–`G-L20`)
-
-
-No rugby-union card in this import. **`G-L17`:** a handicap and a total resting on one territory/tempo thesis need their joint failure mass printed. **`G-L18`:** print each side's points marginal before a match total. **`G-L19`:** draws are possible in league fixtures; knockout fixtures add extra time and, where the regulations allow, kicking competitions — enumerate them before a winner label. **`G-L20`:** a current-regime comparable that cleared the line gets explicit mass.
-
-
-Evidence and cohort audit: [`PREDICTION_LOG_COMBINED_4.md` §"2026-09-17"](PREDICTION_LOG_COMBINED_4.md); rules in `RULES_GENERAL.md` §16.12.
-
-
-## 2026-09-17(b) — cross-sport controls instantiated here (`G-L21`–`G-L24`)
-
-
-**G-L24 in RUGBY UNION:** derive the exact signed-margin distribution under the competition endpoint, including draw, key-value and push masses. Pooled league bands are uncertain references, not mandatory matchup probabilities or rank prohibitions. Missing pooled bands do not invalidate a complete conditional joint distribution. **`G-L21`:** 'forward-pack dominance, territory, low-error game' is one thesis that commonly carries a handicap, an Under and a team total. **`G-L22`:** handicap and total are forced pairs; derive push mass at whole-number lines. **`G-L23`:** possession, territory, set-piece completion and **cards with minute and score** are the process and disruption fields — a red card in union changes the remaining-time scoring rate more sharply than in most codes.
-
-
-Evidence and cohort audit: [`PREDICTION_LOG_COMBINED_4.md` §"2026-09-17(b)"](PREDICTION_LOG_COMBINED_4.md); rules in `RULES_GENERAL.md` §16.13; bands and base rates in [`BASE_RATES_REGISTER.md`](BASE_RATES_REGISTER.md).
-
-
-## Current model implementation — 2026-09-17
-
-
-Use METHOD v4.2's six-field object and SCORING_AND_VALIDATION for exact outcome/push scoring, event-level comparison, descriptive recency and declared hierarchical uncertainty. MODEL_IMPLEMENTATION_RECIPES supplies this sport's retained model scope and endpoint design. Forecast probabilities come from the joint model; pooled base rates are uncertain context, not universal limits. Numeric row caps disconnected from that model, absolute-distance probability ordering and retrospective tail reweighting are withdrawn. No fitted coefficient or predictive improvement is claimed. New cards freeze the method/control hash; existing cards keep their issued versions.
-
-
-## 2026-09-19 — recency/rebound, social sources and the top-O/U review
-
-
-`R-1` ([`RECENCY_AND_REBOUND.md`](RECENCY_AND_REBOUND.md)) applies: recent results revise an estimated **rate** through a named mechanism, never forecast a **deviation**. No rebound and no hangover adjustment is permitted in either direction. This sport's magnitudes are **`NOT_YET_DERIVED`** — the MLB figures are not transferable and must not be imported; derive them from this competition's own record before any recent-form weighting.
-
-
-Source controls `S-1` (social identity: X and Reddit return no usable content; Bluesky sports handles failed identity verification 6/6) and `S-2` (press conferences are availability/role evidence, never a signed adjustment to a modelled rate) apply — `SOURCES.md` §"2026-09-19".
-
-
-A loss **or push** on the card's highest-ranked over/under now triggers the same enhanced failure review as a Rank #1 loss (`METHOD.md` §7).
-
-
-<!-- DEEP-RESEARCH-IMPLEMENTATION-2026-09-19-V42 -->
-## 2026-09-19(c) — market-independent totals/line addendum
-
-
-**Source priority:** World Rugby, union/competition official match centres/team sheets/rules, club releases and government weather. Betting/fantasy material is prohibited.
-
-
-Build score/margin distributions from team strength, lineup/bench/kicker availability, set-piece/territory/discipline process, venue/weather, rest/travel and format-specific end states. Sevens and XVs remain separate populations. The supplied line is a final query, never a predictor.
-
-
-
-
-<!-- ALL-SPORTS-AUDIT-LIVE-RULE-CLEANUP-2026-09-21-CR3 -->
-## 2026-09-21 — all-sports audit live-rule cleanup — CR-2026.09.21-3
-
-
-Current prospective override. Retain format-specific possession/territory, set-piece, discipline/cards, replacements, goal-kicking and extra-time/tiebreak rules, with sparse-evidence uncertainty widening. Withdraw pseudo-tail order-statistic constructions, path-count ranking shortcuts, universal probability-band top-slot rules, imported rugby-league rates, and one-result response rules. Build one coherent rugby-union/sevens joint outcome distribution before querying targets.
-
-<!-- RANK-MODEL-2026-09-25E -->
-## 2026-09-25(e) — Rank 1 and Rank 2 in rugby union
-
-Controls: `RULES_GENERAL.md` §"2026-09-25(e)".
-
-- **No union population or TB-1 lane has been derived yet.** Cards print `TEAM_BASELINE_P: NOT_COVERED` and `REFERENCE_BASE_RATE: NOT_YET_DERIVED`. The ESPN rugby union scoreboards are the candidate lane for the next research pass.
-- **RM-1's cushion term applies to union +k.5 rows.** The rugby rows in the record (P-127, P-128, P-132, P-363) include large cushions that won. So a large cushion (k ≥ 10) stated at 0.60–0.65 is still scored by RM-1; when the card writes the reconciliation line, it names the population margin band (`C-PLUS-CUSHION`).
-- **The ranking rules are general:** rank by RM-1 q, print `TOP2_QUALITY`, and settle from the feed.

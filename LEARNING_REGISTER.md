@@ -1548,3 +1548,35 @@ Everything is hindsight on the framework's own selected cards and LEARNING_ONLY.
 | Lesson ID | Evidence | Disposition | Validation |
 |---|---|---|---|
 | L-20260926-34 | C1 (preregistered in `1bc57d7`). NFL 2021–24 favourites at 0.70–0.80 won 66.7% at 0.744 (gap −0.078 [−0.147, −0.010]); NRL 2025 won 82.8% at 0.747 (+0.081 [−0.048, +0.213]). An NFL-only logit shrink (s = 0.90, fitted on 2021–23; exploratory) changed Brier by +0.0006 in 2024 and −0.0005 in 2025, both intervals spanning 0 | **NO MODEL CHANGE.** Nothing tested in 2026-09-26(e) meets the bar: the card anchor, the blend (P3), the MLB starter term (P1) and the band shrink (C1). The NFL over-confidence is disclosed (`RULES_AMERICAN_FOOTBALL.md` §0). `T-FAV70-BAND` stays open prospectively | `research/predictability_2026-09-26/c1_band_check_results.json` |
+
+<!-- MD-ONLY-2026-09-28 -->
+# 2026-09-28 — Markdown-only operation, validated hand procedures, source re-verification, document consolidation
+
+**Origin.** The user asked for a comprehensive review of the documents, rated out of 10, and for each needed improvement to be implemented, especially predictability and the probabilities. They also asked for more sources, for redundant information and documents to be removed, and that "no python or non md files are to be used by the model in the future".
+- **Evidence:** `research/md_only_2026-09-28/` (`validate_tb1_md.py`, `make_tables.py`, `home_edges.py`, with their JSON and fragments).
+- **Category:** VALIDITY_REPAIR plus documentation. As written, the method could not be carried out without tools the user has now excluded; the rewrite restores an executable method. No probability, width, centre or ranking rule changed (`C-RULE-FREEZE`).
+
+## A. Tests opened
+
+| Test ID | Origin | Frozen hypothesis / control | Eligible population | Checkpoint | Completed | Decision rule | Status |
+|---|---|---|---|---:|---:|---|---|
+| **`T-TB1MD-NRL`** | L-20260928-03 | TB-1-MD (k 2, width 19.9, home edge +1.91) beats the population on NRL sides | The NRL 2027 regular season, leak-free (each game from games strictly before it) | the full season | 0 | Brier difference with a 95% week-block interval below 0: NRL sides may anchor on TB-1-MD, as a `MODEL_CHANGE` needing the user's instruction. Otherwise closed | TESTING |
+
+## B. Dispositions
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260928-01 | The operating documents called Python tools at nine steps: baselines, distribution queries, ranking, receipts, universe, audit, gates, shadow lanes, manifest. The user now excludes them | **PROMOTED (process).** Each step has a Markdown procedure: `PROBABILITY_TOOLKIT.md`, `CARD_AND_LOG_TEMPLATES.md`, `SOURCES.md`. `CURRENT_RULES.md` A11 | `make_tables.py`: RM-1 table 0 mismatches at every stated p; the no-tie margin and Skellam formulas match `card_math.py` exactly |
+| L-20260928-02 | TB-1-MD against the tool's TB-1, held out. P(home win) Brier MD − tool: NBL −0.0045 [−0.0088, −0.0005]; WNBA −0.0010; NBA −0.0002; NFL −0.0040; AFL −0.0019; EPL −0.0013; NRL −0.0036; NHL −0.0007; MLB −0.0002 (all others' intervals include 0 or are tiny). Totals within 0.0003 | **REFERENCE.** The hand version replaces the tool with no loss. The anchor map is unchanged (`BASE_RATES_REGISTER.md` §7.8) | `validate_tb1_md.json` |
+| L-20260928-03 | TB-1-MD − population on NRL 2026 sides: −0.0156 [−0.0282, −0.0026], where the tool's interval was [−0.0294, +0.0044]. One season, found after the fact | **TESTING** (`T-TB1MD-NRL`). NRL stays population-anchored | NRL 2027 |
+| L-20260928-04 | Live retrieval test of about 120 routes on 2026-09-28: about 90 reachable (by plain request, browser request or proxy), and about 30 blocked or failed (Fangraphs, Baseball-Reference, Pro-Football-Reference, FBref, Sofascore, RealGM, NBA CDN, MLS API, Sackmann, ClubElo 502). About 30 sources added. football-data.co.uk is excluded because its files carry bookmaker odds | **PROMOTED** (`SOURCES.md`, a single register with access modes) | Re-test monthly |
+| L-20260928-05 | The 2026-09-28 review (F2): the settlement tables of P-518–P-522 replaced every frozen `BASELINE_P` with 0.500 (20/20 cells) | **PROMOTED** as M35 and `CURRENT_RULES.md` §D8: settlement copies p, q, baselines and missingness exactly | The settlement self-audit S5 |
+| L-20260928-06 | The shadow lanes (`C-MLB-SHADOW`, `C-SPORT-SHADOW`) need Python at freeze time | **SUSPENDED** for md-only operation. Settlement prints `SHADOW: NO_LANE (md-only)`. The lanes resume only if a maintainer runs them before the start | — |
+| L-20260928-07 | About 30 overlapping governing documents with dated addenda; the model had to reconcile precedence per card (review F10) | **DONE.** 18 documents retired verbatim to `archive/superseded_2026-09-28/`, with a map (plus copies of the old METHOD and SOURCES text), and 15 superseded manifests moved to `archive/manifests/`. The dated histories (4,215 lines) moved out of the 10 sport files, whose live parts fell from 9,149 to 4,741 lines. Root Markdown files cut from 64 to 34 | `archive/superseded_2026-09-28/README.md` |
+| L-20260928-08 | `LEARNINGS_INDEX.md` §1 labelled 0.2268 a "decision Brier" (review F5) | **FIXED** (documentation): it is the all-row figure; the p ≥ 0.5 proxy is 0.2131 | — |
+
+## C. Preregistered test P6: soccer TB-1-MD resolution (preregistered in `a3c39d2` before any run)
+
+| Lesson ID | Evidence | Disposition | Validation |
+|---|---|---|---|
+| L-20260928-09 | Held out, 2021-22 to 2025-26, leak-free, k = 2 fixed, previous-season home edge. Results (three-way Brier, MD − population): EPL −0.0493 [−0.0582, −0.0408]; La Liga −0.0462 [−0.0548, −0.0377]; Bundesliga −0.0464 [−0.0572, −0.0356]; Serie A −0.0570 [−0.0653, −0.0486]; Ligue 1 −0.0432 [−0.0521, −0.0340]; all 5/5 seasons. Over 2.5: La Liga −0.0037 [−0.0070, −0.0005] (5/5); Bundesliga −0.0045 [−0.0083, −0.0007] (4/5); EPL, Serie A and Ligue 1 not significant. The EPL replication check passed (results yes, totals no, as in 2025-26) | **PROMOTED (anchor extension under the existing rule "anchor on TB-1 where it has resolution")**. Results anchor on TB-1-MD in all five leagues; totals in La Liga and the Bundesliga. `PROBABILITY_TOOLKIT.md` §4.3; `RULES_SOCCER.md` §0.2 | `research/md_only_2026-09-28/p6_soccer_tb1md.json`; prospective accrual through `T-TB1-ANCHOR` |

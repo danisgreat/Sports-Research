@@ -53,7 +53,7 @@ class TestRegistry(unittest.TestCase):
     def test_status_is_reference_until_user_instruction(self):
         # C-RULE-FREEZE: the registry may not be a card input until the user explicitly instructs it.
         self.assertIn(ma.STATUS, ("REFERENCE", "ACTIVE"))
-        rules = (Path(__file__).resolve().parent.parent / "RULES_GENERAL.md").read_text(encoding="utf-8-sig")
+        rules = (Path(__file__).resolve().parent.parent / "CURRENT_RULES.md").read_text(encoding="utf-8-sig")
         if ma.STATUS == "ACTIVE":
             self.assertIn("C-MODEL-ANCHOR", rules)
             self.assertRegex(rules, r"C-MODEL-ANCHOR[^\n]*ACTIVATED")

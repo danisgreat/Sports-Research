@@ -8,13 +8,13 @@ Historical field-owner frequencies belong here with numerator/denominator, exact
 
 ## Why it exists
 
-Before this register, base rates lived inside whichever sport file happened to derive one. The `P-438`–`P-451` audit derived eight new MLB figures at once and immediately exposed the problem: the same number was needed by `RULES_BASEBALL.md` controls 34, 35 and 37, by `RULES_GENERAL.md` `G-L24`, and by the scorecard's push-mass coherence rule in `METHOD.md` §5. Three copies of a number with three refresh dates is how a stale base rate becomes an invisible error. There is one copy, here.
+Before this register, base rates lived inside whichever sport file happened to derive one. The `P-438`–`P-451` audit derived eight new MLB figures at once and immediately exposed the problem: the same number was needed by `RULES_BASEBALL.md` controls 34, 35 and 37, by RULES_GENERAL (archived) `G-L24`, and by the scorecard's push-mass coherence rule in `CURRENT_RULES.md` §D7. Three copies of a number with three refresh dates is how a stale base rate becomes an invisible error. There is one copy, here.
 
 It also makes the honest gaps visible. Most sports in this repository have **no derived margin band at all**, and the table below says so in the same place it publishes the one that exists, rather than leaving the absence implicit.
 
 ---
 
-## 1. Handicap / margin bands — consumed by `G-L24` (`RULES_GENERAL.md` §16.13(e))
+## 1. Handicap / margin bands — consumed by `G-L24` (RULES_GENERAL (archived) §16.13(e))
 
 G-L24 queries the specified team’s signed-margin distribution, not the realised winner’s pooled margin. See RULES_GENERAL section 16.13(e) for exact integer, half-line and draw treatment.
 
@@ -46,7 +46,7 @@ G-L24 queries the specified team’s signed-margin distribution, not the realise
 
 ---
 
-## 3. Total-runs / total-points geometry — consumed by `RULES_BASEBALL.md` control 35 and `METHOD.md` §5
+## 3. Total-runs / total-points geometry — consumed by `RULES_BASEBALL.md` control 35 and `CURRENT_RULES.md` §D7
 
 | Quantity | 2026 value | `n` | Note |
 |---|---:|---:|---|
@@ -101,7 +101,7 @@ These are too small to be identities. They are recorded because a card that depa
 **Status and use.**
 - These are reference estimates with their `n`.
 - The doubleheader rows are **§4-class evidence**: n = 23, and they are confounded with makeup-game timing. They are not identity inputs.
-- The one-run row is a §1-class reference rate. `RULES_GENERAL.md` §"2026-09-24(f)"(d) (`COVERING_PAIR`) consumes it.
+- The one-run row is a §1-class reference rate. RULES_GENERAL (archived) §"2026-09-24(f)"(d) (`COVERING_PAIR`) consumes it.
 
 | Population | n | Mean total runs | SD | P(total ≤ 7) (95% CI) | P(total ≤ 8) |
 |---|---:|---:|---:|---|---:|
@@ -174,7 +174,7 @@ These are too small to be identities. They are recorded because a card that depa
 | First half: mean / SD / share of regulation | 116.3 / 12.6 / 0.506 | 86.3 / 12.6 / 0.497 | 92.4 / 11.3 / 0.510 |
 | Quarter means Q1 / Q2 / Q3 / Q4 | 58.7 / 57.6 / 58.5 / **55.3** | 43.7 / 42.6 / 44.0 / 43.2 | 46.1 / 46.3 / **44.5 / 44.2** |
 
-**(b) Width benchmark.** This is the residual SD around a crude, leak-free season-to-date predictor (see the research README). It is the reference for `C-WIDTH-BENCHMARK` (`RULES_GENERAL.md` §"2026-09-25(b)").
+**(b) Width benchmark.** This is the residual SD around a crude, leak-free season-to-date predictor (see the research README). It is the reference for `C-WIDTH-BENCHMARK` (RULES_GENERAL (archived) §"2026-09-25(b)").
 
 | Competition | Total: raw SD → residual SD | Margin: raw SD → residual SD | n scored |
 |---|---|---|---:|
@@ -198,7 +198,7 @@ These are too small to be identities. They are recorded because a card that depa
 - **WNBA 2026 scored 10.7 points per game more than 2024 and 2025.** Any multi-season WNBA average or head-to-head that includes 2024 or 2025 is contaminated by that regime (M24) unless it is adjusted or excluded, and the card says which.
 - NBL cards issued in the first rounds of 2026-27 (P-508, P-509 and later) sit inside the early-season window.
 
-**(d) Back-to-backs** (named-mechanism reference; `RECENCY_AND_REBOUND.md` §7.3). NBA team on a back-to-back against a rested opponent: margin residual **−1.84 (−3.78, +0.11)**, n = 261. Totals show no reliable fatigue effect.
+**(d) Back-to-backs** (named-mechanism reference; RECENCY_AND_REBOUND (archived) §7.3). NBA team on a back-to-back against a rested opponent: margin residual **−1.84 (−3.78, +0.11)**, n = 261. Totals show no reliable fatigue effect.
 
 ### 7.2 NHL 2025-26 — regular season, `api-web.nhle.com/v1/score/{date}` (n = 1,312)
 
@@ -263,7 +263,7 @@ Retirements (208) and walkovers (51) are excluded, because their totals are cens
 
 **League.** Total runs mean 8.95, SD 4.51.
 
-**Width benchmark.** Residual SD around the crude team predictor is **4.50** (n = 2,146). That is essentially the raw SD: team season rates explain almost none of the game-total variance (`RECENCY_AND_REBOUND.md` §2). The margin residual SD is 4.57.
+**Width benchmark.** Residual SD around the crude team predictor is **4.50** (n = 2,146). That is essentially the raw SD: team season rates explain almost none of the game-total variance (RECENCY_AND_REBOUND (archived) §2). The margin residual SD is 4.57.
 
 **First five innings:**
 - mean 5.00, SD 3.29;
@@ -382,7 +382,7 @@ The underdog is the side with the lower leak-free TB-1 margin, never the market.
 | AFL 2025 | 0.294 | — | — | — | +6.5 0.383 | +12.5 0.483 | +18.5 0.556; +24.5 0.600; +30.5 0.628 |
 | AFL 2026 | 0.328 | — | — | — | +6.5 0.430 | +12.5 0.505 | +18.5 0.586; +24.5 0.618; +30.5 0.688 |
 
-**Use.** This table is the `BASELINE_P` of a +k.5 row on the TB-1 underdog (`C-PLUS-CUSHION` as amended in `RULES_GENERAL.md` §"2026-09-25(e)"(e)). Read the nearest k and the most recent season. Where the side is not the TB-1 underdog, use `TEAM_BASELINE_P`.
+**Use.** This table is the `BASELINE_P` of a +k.5 row on the TB-1 underdog (`C-PLUS-CUSHION` as amended in RULES_GENERAL (archived) §"2026-09-25(e)"(e)). Read the nearest k and the most recent season. Where the side is not the TB-1 underdog, use `TEAM_BASELINE_P`.
 
 **Reading.** A small cushion on the weaker team covers well under half the time in every one of these leagues. That is the population mechanism behind M32.
 
@@ -439,15 +439,23 @@ No odds were read. This is a reference row for choosing and describing slates. I
 
 **What changed in the TB-1 flags** (`tools/team_baseline.py` `resolution`; validity repair):
 - **Withdrawn:** NRL sides and NFL totals. NFL 2021–2025 totals were 0.2403 v 0.2423 over 1,359 games (`research/sport_models_2026-09-26/validation_results.json`), so the single-season gain does not replicate.
-- **Kept:** NBA totals. The 2025-26 interval alone crosses 0 ([−0.018, +0.001]), but over 2023–26 TB-1 was 0.2129 v 0.2308 over 3,689 games.
+- **Kept:** NBA totals. The 2025-26 interval alone crosses 0 ([−0.018, +0.001]), but over 2023–26 TB-1 was 0.2129 v 0.2308 over 3,689 games.
+
+**The hand-computed version (2026-09-28).** TB-1-MD (`PROBABILITY_TOOLKIT.md` §4) reproduces these verdicts. It was at least as accurate as the tool's TB-1 in all nine leagues, and its NRL 2026 side gain was significant. The flags above are unchanged, and NRL is re-tested on 2027 (`T-TB1MD-NRL`).
+
+**Soccer extension (P6, 2026-09-28, preregistered).** Five held-out seasons (2021-22 to 2025-26):
+- TB-1-MD has resolution for **results** in the EPL, La Liga, the Bundesliga, Serie A and Ligue 1: every league 5/5 seasons, three-way Brier −0.043 to −0.057 against the population, all intervals below 0;
+- it has resolution for **Over/Under 2.5** in La Liga (−0.0037) and the Bundesliga (−0.0045) only.
+
+Details: `PROBABILITY_TOOLKIT.md` §4.3; `research/md_only_2026-09-28/p6_soccer_tb1md.json`.
 
 ---
 
 ## Maintenance
 
-- **Cite, never copy.** A sport file, `METHOD.md` or a card points at the row here. If a figure must be restated in place for readability, restate it with its `n` and derivation date attached so a stale copy is self-evident.
+- **Cite, never copy.** A sport file, `CURRENT_RULES.md` or a card points at the row here. If a figure must be restated in place for readability, restate it with its `n` and derivation date attached so a stale copy is self-evident.
 - **Staleness.** A season-cadence figure cited more than one completed season after its derivation date is `STALE` and must be recomputed before it is used as a reference prior.
 - **Provenance.** Every row carries the query that produced it. A row whose query cannot be re-run is downgraded to §4 (evidence only) and loses its reference-use status.
-- **`n` travels with the number, always** — in the sport file, on the card, and in any report (`METHOD.md` §5).
+- **`n` travels with the number, always** — in the sport file, on the card, and in any report (`CURRENT_RULES.md` §D7).
 
-**Related:** `RULES_GENERAL.md` §16.13(e) (`G-L24`) · `RULES_BASEBALL.md` controls 34–37 · `RULES_AMERICAN_FOOTBALL.md` (G-L12 residual benchmark) · `DATA_SOURCE_REGISTER.md` §"2026-09-17(b)" (`SRC-MLB-STATSAPI-SEASON`) · `CONTROLS.md`.
+**Related:** RULES_GENERAL (archived) §16.13(e) (`G-L24`) · `RULES_BASEBALL.md` controls 34–37 · `RULES_AMERICAN_FOOTBALL.md` (G-L12 residual benchmark) · the archived DATA_SOURCE_REGISTER §"2026-09-17(b)" (`SRC-MLB-STATSAPI-SEASON`) · `CURRENT_RULES.md`.

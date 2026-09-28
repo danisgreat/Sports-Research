@@ -1,6 +1,6 @@
 # Cricket — sport and competition rules reference
 
-> **Current research status — 28 September 2026:** No sport/competition/target scope is prospectively validated or approved for a performance claim. Use the [capability table](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md) and `python tools/evidence_status.py`; all issued forecasts remain `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE` under the current method and evidence gates.
+> **Status (md-only, 2026-09-28):** reference material for identity, format and settlement. No scope is prospectively validated; every card is LEARNING_ONLY. Live rules: `CURRENT_RULES.md` and the sport file's §0.
 
 
 Status: **ACTIVE — reference**
@@ -9,7 +9,7 @@ Companion to: **[RULES_CRICKET.md](RULES_CRICKET.md) §11**. Reference only; it 
 
 Rules-era caveat: the playing conditions below are those in force for the **2025–2026** seasons the current log covers (ICC men's playing conditions effective July 2025; ICC Women's Championship 2025–2029; The Hundred 2026; CPL 2026; ETPL 2026 inaugural). Cricket changes its playing conditions almost every year — verify the era for any event outside this window.
 
-**Maintenance (RULES_GENERAL.md §3, `G2`).** Last reviewed **2026-09-04**. Before the first card of a new season / edition of any competition here — or the first appearance of a cricket competition after a break of ~6 weeks or more — re-verify the ICC playing conditions and the competition's own playing regulations against the field owner (ICC, the league operator) for changes to powerplay/bowler limits, DRS, DLS minima, the Super Over rule, the points/NRR system, squad rules, or the knockout format, and update the relevant section below **before** issuing the card. The first time a new cricket competition is forecast, add its full playing conditions and format here first. Watch especially for: a franchise-league deviation from ICC conditions (e.g. the IPL's two-bouncers-per-over and Impact Player rules, which are IPL-only and not guaranteed to persist), a format switch (The Hundred's investors have floated a move to franchise T20), and expansion/contraction of a league's team count.
+**Maintenance (RULES_GENERAL (archived) §3, `G2`).** Last reviewed **2026-09-04**. Before the first card of a new season / edition of any competition here — or the first appearance of a cricket competition after a break of ~6 weeks or more — re-verify the ICC playing conditions and the competition's own playing regulations against the field owner (ICC, the league operator) for changes to powerplay/bowler limits, DRS, DLS minima, the Super Over rule, the points/NRR system, squad rules, or the knockout format, and update the relevant section below **before** issuing the card. The first time a new cricket competition is forecast, add its full playing conditions and format here first. Watch especially for: a franchise-league deviation from ICC conditions (e.g. the IPL's two-bouncers-per-over and Impact Player rules, which are IPL-only and not guaranteed to persist), a format switch (The Hundred's investors have floated a move to franchise T20), and expansion/contraction of a league's team count.
 
 ---
 

@@ -12,7 +12,7 @@
 
 Source: `research/settled_rows_2026-09-25/` (rebuilt 2026-09-25(e); 1,264 graded rows from 315 cards, 641 with a probability). Hindsight on self-selected cards; card-cluster intervals.
 
-1. **Calibration is good; skill is modest.** Decision Brier 0.2268, slope 1.01, skill +6.6% over climatology.
+1. **Calibration looked reasonable; skill is unproven.** All W/L rows with a probability: Brier 0.2268 (639 rows / 155 cards). The p ≥ 0.5 decision proxy: 0.2131 (411 rows). *Corrected 2026-09-28: 0.2268 was mislabelled a "decision Brier"* (review F5). The +6.6% is against the sample's own base rate, not a frozen baseline. Legacy mixed diagnostic only.
 2. **No skill over a naive population table yet.** Seed check +0.0101 (card − baseline), interval [−0.059, +0.089]. Prospective count 0/100.
 3. **Only strong rows carry information.** p ≥ 0.65 won about 80%; 0.50–0.65 won 53.6% (coin flips).
 4. **Only Rank 1 separates:** 66.4% against 54–56% for Ranks 2–4.
@@ -65,6 +65,7 @@ Source: `research/settled_rows_2026-09-25/` (rebuilt 2026-09-25(e); 1,264 graded
 | M32 | Non-baseball cushion priced like a baseball +1.5 | `C-PLUS-CUSHION`; RM-1 |
 | M33 | Rule churn outruns evidence | `C-RULE-FREEZE`; one manifest per day |
 | M34 | Self-selected sample read as the competition | `C-EVENT-UNIVERSE`; `T-UNIVERSE-VS-SELECTED` |
+| M35 | Frozen field replaced at settlement (e.g. a missing baseline retyped as 0.500) | `CURRENT_RULES.md` §D8; `CARD_AND_LOG_TEMPLATES.md` §2 (added 2026-09-28) |
 
 ---
 
@@ -216,7 +217,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 
 ---
 
-## 4. General-algorithm lessons G-L1 to G-L24 (`RULES_GENERAL.md` §16)
+## 4. General-algorithm lessons G-L1 to G-L24 (RULES_GENERAL §16, archived in `archive/superseded_2026-09-28/`)
 
 | ID | Lesson | Status |
 |---|---|---|
@@ -444,6 +445,15 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260926-33 | `mlb_model.py` "starters cannot be reconstructed" claim | FIXED (documentation) |
 | `T-MLB-V2-2025` | MLB v2 team prior on the unseen 2025 season | CONCLUDED — replicated (−0.0023 [−0.0042, −0.0005]) |
 | L-20260926-34 | C1: NFL band over-confidence replicates, NRL reverses; shrinking does not improve Brier | NO MODEL CHANGE (user's bar not met) |
+| L-20260928-01 | Markdown-only operation: every tool step has a Markdown procedure | PROMOTED (process; `CURRENT_RULES.md` A11) |
+| L-20260928-02 | TB-1-MD (hand-computed from standings) is at least as accurate as the tool's TB-1 in all 9 leagues; better in the NBL | REFERENCE (anchor unchanged; `PROBABILITY_TOOLKIT.md` §4.4) |
+| L-20260928-03 | TB-1-MD beat the population on NRL 2026 sides, where the tool's interval crossed 0 | TESTING (`T-TB1MD-NRL`; NRL 2027) |
+| L-20260928-04 | 60+ sources re-verified by live request; about 30 added (standings, injuries, official ladders, Elo, weather) | PROMOTED (`SOURCES.md`) |
+| L-20260928-05 | Settlement tables replaced frozen baselines with 0.500 (20/20 cells, review F2) | PROMOTED (M35; frozen fields copied, never replaced) |
+| L-20260928-06 | The numerical shadow lanes need Python | SUSPENDED (`SHADOW: NO_LANE (md-only)`) |
+| L-20260928-07 | Documents consolidated: 18 retired to the archive; sport histories moved out | DONE |
+| L-20260928-08 | 0.2268 was mislabelled a "decision Brier" | FIXED |
+| L-20260928-09 | P6: TB-1-MD has resolution for results in the top five soccer leagues, and for totals in La Liga and the Bundesliga | PROMOTED (anchor extension) |
 
 ---
 
@@ -467,7 +477,9 @@ MLB run-line and push caps and fixed variance floors · order-statistic pseudo-t
 
 ## 8. Open tests (no ranking effect until each concludes)
 
-`python tools/evidence_status.py` prints the headline gates. The full list is `CURRENT_RULES.md` §D9:
+**Added 2026-09-28:** `T-TB1MD-NRL`. TB-1-MD sides against the population on the NRL 2027 regular season. Preregistered rule: the Brier difference has a 95% week-block interval below 0, then NRL sides may anchor on TB-1-MD (a `MODEL_CHANGE` needing the user's instruction). Otherwise it is closed.
+
+`CURRENT_RULES.md` §D9 lists the headline gates and their progress (maintainers can print the live counts with `python tools/evidence_status.py`). The full list:
 - **Headline gates:** `C-BASELINE-SKILL` (0/100), `T-RM1-PROSPECTIVE` (0/25 cards, amended 2026-09-26), `C-MARKET-BENCHMARK` (0/100), `C-MLB-SHADOW` (0/150 games), `C-SPORT-SHADOW` (0/150 rows per league), `T-CRICKET-V2-UNSEEN` (needs cricsheet), `T-UNIVERSE-VS-SELECTED` (0/30 + 30 cards).
 - **Calibration and width:** `C-WIDTH-Z`, `C-PROB-EXTREMITY` (79/100, not supported so far), `C-LOW-RESOLUTION-BAND`, `T-PLUS-CUSHION`, `T-TB1-ANCHOR` (NRL sides and NFL totals left it 2026-09-26(e)), `T-FAV70-BAND` (0/100 band games per league, NFL and NRL).
 - **Direction and centre (accrue, no tilt):** `C-RUN-CENTRE-BIAS`, `T-TOTAL-DIRECTION-LEAGUE`, `C-PHASE-VS-FULL-TOTAL`, `O-NPB-ERA-CENTRE`.

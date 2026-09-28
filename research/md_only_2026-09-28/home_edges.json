@@ -1,0 +1,170 @@
+{
+  "NBL": {
+    "NBL 2023-24": {
+      "games": 140,
+      "home_edge": 2.83,
+      "home_win_rate": 0.593,
+      "mean_total": 181.21
+    },
+    "NBL 2024-25": {
+      "games": 145,
+      "home_edge": 1.39,
+      "home_win_rate": 0.552,
+      "mean_total": 185.7
+    },
+    "NBL 2025-26": {
+      "games": 165,
+      "home_edge": 0.65,
+      "home_win_rate": 0.503,
+      "mean_total": 182.5
+    },
+    "pooled": {
+      "games": 450,
+      "home_edge": 1.57,
+      "home_win_rate": 0.547,
+      "mean_total": 183.13
+    }
+  },
+  "WNBA": {
+    "WNBA 2024": {
+      "games": 242,
+      "home_edge": 0.8,
+      "home_win_rate": 0.525,
+      "mean_total": 163.67
+    },
+    "WNBA 2025": {
+      "games": 288,
+      "home_edge": 2.51,
+      "home_win_rate": 0.557,
+      "mean_total": 163.7
+    },
+    "WNBA 2026": {
+      "games": 327,
+      "home_edge": 1.72,
+      "home_win_rate": 0.54,
+      "mean_total": 174.41
+    },
+    "pooled": {
+      "games": 857,
+      "home_edge": 1.73,
+      "home_win_rate": 0.542,
+      "mean_total": 167.78
+    }
+  },
+  "NBA": {
+    "NBA 2025-26": {
+      "games": 1235,
+      "home_edge": 1.71,
+      "home_win_rate": 0.555,
+      "mean_total": 230.73
+    },
+    "pooled": {
+      "games": 1235,
+      "home_edge": 1.71,
+      "home_win_rate": 0.555,
+      "mean_total": 230.73
+    }
+  },
+  "NHL": {
+    "NHL 2025-26 (ESPN)": {
+      "games": 1312,
+      "home_edge": 0.13,
+      "home_win_rate": 0.521,
+      "mean_total": 6.25
+    },
+    "pooled": {
+      "games": 1312,
+      "home_edge": 0.13,
+      "home_win_rate": 0.521,
+      "mean_total": 6.25
+    }
+  },
+  "EPL": {
+    "EPL 2025-26": {
+      "games": 380,
+      "home_edge": 0.3,
+      "home_win_rate": 0.426,
+      "mean_total": 2.75
+    },
+    "pooled": {
+      "games": 380,
+      "home_edge": 0.3,
+      "home_win_rate": 0.426,
+      "mean_total": 2.75
+    }
+  },
+  "NFL": {
+    "NFL 2024": {
+      "games": 272,
+      "home_edge": 1.72,
+      "home_win_rate": 0.524,
+      "mean_total": 45.82
+    },
+    "NFL 2025": {
+      "games": 272,
+      "home_edge": 2.18,
+      "home_win_rate": 0.536,
+      "mean_total": 46.03
+    },
+    "pooled": {
+      "games": 544,
+      "home_edge": 1.95,
+      "home_win_rate": 0.53,
+      "mean_total": 45.92
+    }
+  },
+  "AFL": {
+    "AFL 2025": {
+      "games": 207,
+      "home_edge": 6.03,
+      "home_win_rate": 0.565,
+      "mean_total": 168.61
+    },
+    "AFL 2026": {
+      "games": 207,
+      "home_edge": 7.12,
+      "home_win_rate": 0.585,
+      "mean_total": 178.22
+    },
+    "pooled": {
+      "games": 414,
+      "home_edge": 6.57,
+      "home_win_rate": 0.575,
+      "mean_total": 173.42
+    }
+  },
+  "NRL": {
+    "NRL 2025": {
+      "games": 216,
+      "home_edge": 3.77,
+      "home_win_rate": 0.551,
+      "mean_total": 46.12
+    },
+    "NRL 2026": {
+      "games": 213,
+      "home_edge": 0.03,
+      "home_win_rate": 0.545,
+      "mean_total": 47.84
+    },
+    "pooled": {
+      "games": 429,
+      "home_edge": 1.91,
+      "home_win_rate": 0.548,
+      "mean_total": 46.98
+    }
+  },
+  "MLB": {
+    "MLB 2026": {
+      "games": 2373,
+      "home_edge": 0.07,
+      "home_win_rate": 0.529,
+      "mean_total": 8.95
+    },
+    "pooled": {
+      "games": 2373,
+      "home_edge": 0.07,
+      "home_win_rate": 0.529,
+      "mean_total": 8.95
+    }
+  }
+}
