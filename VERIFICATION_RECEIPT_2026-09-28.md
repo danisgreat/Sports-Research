@@ -17,7 +17,7 @@ The 2026-09-28(g) consolidation had no executed-results entry; its checks were r
 | Links (protocol §4) | L1: 0 broken local links in operating documents. L2: 0. The checker's one candidate (`SKILL_BASELINE_LEDGER.md:108`) is qualified on the next non-blank line and indexed |
 | Source research | About 90 routes and social lanes were live-requested on 2026-09-28/29. Official social handles in `SOURCES.md` §3.12 were extracted from the links on 39 organisations' own websites (direct request, then the proxy for failures). Six had no readable links and are marked not authenticated. X timeline access was confirmed for three official accounts, and the oembed route for one AFL post |
 | Freeze receipt | [Manifest 2026-09-29-1](CONTROL_MANIFEST_2026-09-29-1.md) lists 44 stable files (-9's 43 plus -9). All 44 normalized-CRLF hashes and sizes matched on independent readback. Its own normalized SHA-256 `69b0cb02ca498be86669c8231a94ac0029125207e62ac3a03e5a0d42a413f7b1` matches the status first line, and `METHOD.md` points to it |
-| Publication | **Not committed or pushed.** The protocol §5 publish gate remains to run when the user authorises it |
+| Publication (protocol §5) | Run on user authorisation, 2026-09-29. `git add -A` was staged and reviewed (34 paths; Parts 1–5 and Part 6 recorded as renames; `git diff --cached --check` clean). Committed on `main` as `7be0303` and pushed `753f0a9..7be0303`. After a fetch, `HEAD` equals `origin/main` (`7be03030…`), the worktree is clean, and the only branches are `main` and `origin/main`. This receipt update follows as a separate commit |
 
 ## Executed results — 2026-09-28(f) source and fallback expansion (manifest -8)
 
