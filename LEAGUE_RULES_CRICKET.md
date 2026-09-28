@@ -195,7 +195,7 @@ A "powerplay Over/Under" contract frozen against an assumed six-over phase and s
 
 ## 2026-09-06(f) — settlement and retrospective addendum
 
-P-217 settlement clarification: the actual officially completed revised innings was 16 overs, GAW 185/5. The fixed 20-over target is preserved; research Over/Under grades use that revised completed-innings convention explicitly, with no extrapolated 20-over score and OPERATOR_ACTION UNKNOWN_DEFINITION. ESPN reports the mandatory PP ending at 4.5 (24/2), which must not replace the frozen six-completed-over target. P-305/P-311 batting-first conditions were met by the actual toss. [Details](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md). No competition playing law or operator rule has been invented/changed.
+P-217 settlement clarification: the actual officially completed revised innings was 16 overs, GAW 185/5. The fixed 20-over target is preserved; research Over/Under grades use that revised completed-innings convention explicitly, with no extrapolated 20-over score and OPERATOR_ACTION UNKNOWN_DEFINITION. ESPN reports the mandatory PP ending at 4.5 (24/2), which must not replace the frozen six-completed-over target. P-305/P-311 batting-first conditions were met by the actual toss. [Details (historical; pinned Git 3fbf0c981b40)](https://github.com/danisgreat/Sports-Research/blob/3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa/archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md). No competition playing law or operator rule has been invented/changed.
 
 
 ## Exact exposure and retrospective correction - 2026-09-12

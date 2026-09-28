@@ -63,7 +63,7 @@ No odds are read.
 - A league that fails keeps the population anchor.
 - Either way the result is recorded in `LEARNING_REGISTER.md`.
 
-Script: `p6_soccer_tb1md.py`, results in `p6_soccer_tb1md.json`.
+Script: `p6_soccer_tb1md.py`, results in `p6_soccer_tb1md.json` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
 ```
 
 ## TB-1-MD cross-sport aggregate results

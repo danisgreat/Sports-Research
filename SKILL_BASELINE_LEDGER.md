@@ -1,6 +1,6 @@
 # Skill-versus-baseline ledger (`C-BASELINE-SKILL`)
 
-**Opened 2026-09-25(c).** **Status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** This is a descriptive diagnostic, not a performance, calibration or value claim (the eligibility policy, archived in `archive/superseded_2026-09-28/`).
+**Opened 2026-09-25(c).** **Status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** This is a descriptive diagnostic, not a performance, calibration or value claim. The current eligibility contract is [`RECORD_ELIGIBILITY_SCHEMA.md`](RECORD_ELIGIBILITY_SCHEMA.md). The former policy was in the removed `archive/superseded_2026-09-28/` ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
 
 ## Why this exists
 
@@ -21,15 +21,26 @@ It knows nothing about the teams, players, lineups or conditions. A research pro
    - **Moneylines:** P(home win) or P(away win).
    - **Handicaps:** P(home or away margin + line > 0).
    - **Tennis:** without side information, 0.5 × P(winner margin ≥ k+1) for −k.5, its complement for +k.5, and 0.5 for a winner.
-4. **From `CONTROL_MANIFEST_2026-09-25-3.md` onward,** every card prints `BASELINE_P` beside each ranked row **at issue** (prospective, frozen before the result). The row is appended here at settlement. The seed rows below were computed after the fact from pre-event data only: leak-free, but hindsight-selected.
+4. **From `CONTROL_MANIFEST_2026-09-25-3.md` onward** (a freeze name; the file is removed from the tree, [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)), every card prints `BASELINE_P` beside each ranked row **at issue** (prospective, frozen before the result). The row is appended here at settlement. The seed rows below were computed after the fact from pre-event data only: leak-free, but hindsight-selected.
 5. **Competitions with no population reference** (LKL, EuroLeague Women, El Salvador LMB, KBO, NPB, ITF, cricket) record `BASELINE_P: NOT_YET_DERIVED`. They are not scored here until a population query exists.
-6. **Report (md-only, from 2026-09-28):** compute the paired Brier from the prospective rows: mean of (card p − y)² minus mean of (baseline p − y)², per family, with the row count (`PROBABILITY_TOOLKIT.md` §10). For an uncertainty interval, resample **whole cards**, not individual correlated rows, and record the draws, seed, exclusions and cohort. The former `tools/skill_baseline.py` is in Git history but absent from this tree. Keep the **Prospective rows** (the only rows that can count toward rule 7) separate from the **Seed rows** (which never count). The closing-line comparison is the separate `MARKET_BENCHMARK_LEDGER.md`.
-7. **Decision rule** (preregistered; `LEARNING_REGISTER.md` §"2026-09-25(c)"). After **100 prospective decisions from at least 30 cards**:
-   - **Card − baseline < 0 with the 95% interval below 0:** the framework may state "beats a naive population baseline". This is still not a performance claim.
-   - **The interval spans 0:** "no demonstrated skill over the baseline".
-   - **The interval is above 0:** the card process is adding noise. Open a method review.
+6. **Report (md-only, from 2026-09-28):** compute the paired Brier from the prospective rows: mean of (card p − y)² minus mean of (baseline p − y)², per family, with the row count (`PROBABILITY_TOOLKIT.md` §10). This **decision-weighted** mean is the preregistered estimate (rule 7).
+   - For its interval, resample **whole cards**, not individual correlated rows: 10,000 resamples, seed 20260925, as preregistered. Record the draws, exclusions and cohort.
+   - The event-weighted estimate in `SCORING_AND_VALIDATION.md` §13 (average within each event, then weight events equally) is reported beside it as a secondary diagnostic. It never decides rule 7.
+   - The former `tools/skill_baseline.py` is removed from the tree ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). Keep the **Prospective rows** (the only rows that can count toward rule 7) separate from the **Seed rows** (which never count). The closing-line comparison is the separate `MARKET_BENCHMARK_LEDGER.md`.
+7. **Decision rule** (preregistered; `LEARNING_REGISTER.md` §"2026-09-25(c)"). The single authority for what the checkpoint means and which rows count; `CURRENT_RULES.md` §D9 and `RECORD_ELIGIBILITY_SCHEMA.md` point here.
+   - **Rows that count** (only the Prospective rows section):
+     - one per decision (rule 1), with forced pairs counted once and pushes excluded;
+     - issued under `CONTROL_MANIFEST_2026-09-25-3.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) or later;
+     - from a card whose core was frozen **before the verified start** (a `LIVE_ISSUED` card never counts);
+     - whose card printed a **numeric** `BASELINE_P` at issue (`NOT_YET_DERIVED` rows are listed but not counted);
+     - settled from three terminal lineages.
 
-   The seed rows do not count toward the 100.
+     The seed rows never count.
+   - **The read-out** happens once, when 100 counting decisions from at least 30 cards exist. The interval is the one in rule 6.
+     - **Card − baseline < 0 with the 95% interval below 0:** the framework may state "beats a naive population baseline". This is still not a performance claim.
+     - **The interval spans 0:** "no demonstrated skill over the baseline".
+     - **The interval is above 0:** the card process is adding noise. Open a method review of the family driving it.
+   - **What the read-out is not.** It is a preregistered review point, not a proof threshold. It grants no performance eligibility, which needs the full admission contract in `RECORD_ELIGIBILITY_SCHEMA.md`.
 
 ## Seed rows — 2026-09-24 cohort (hindsight-selected, pre-event data only)
 
@@ -37,7 +48,7 @@ Nine cards had a population reference: P-495, P-500, P-501, P-502, P-503, P-504,
 
 **Excluded, with no population reference:** P-496 (ITF), P-497 and P-498 (LKL), P-499 (EuroLeague Women), P-505 (LMB), P-507 (KBO), TMP-G25 and P-493 (NPB, KBO). P-494 is excluded as live-issued.
 
-**Historical builder:** `research/base_rates_2026-09-25/build_skill_baseline_seed.py` (removed from current tree). The published rows can be recalculated directly, but the population extraction cannot be independently rebuilt without source data.
+**Historical builder:** `research/base_rates_2026-09-25/build_skill_baseline_seed.py` (removed from current tree; [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). The published rows can be recalculated directly, but the population extraction cannot be independently rebuilt without source data.
 
 | Decision | Card | Rank | Contract (as issued) | Family | Card p | Baseline p | Baseline population (leak-free) | Result |
 |---|---|---|---|---|---:|---:|---|---|
@@ -96,7 +107,9 @@ Card-cluster bootstrap 95% interval for (card − baseline): **[−0.0592, +0.08
 
 ## Prospective rows (from `CONTROL_MANIFEST_2026-09-25-3.md`)
 
-Append rows here at settlement, with `BASELINE_P` exactly as printed on the card at issue. None yet.
+The manifest name identifies the freeze boundary; the file itself is removed from the tree ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
+
+Append rows here at settlement, with `BASELINE_P` exactly as printed on the card at issue. Only rows meeting rule 7 count. None yet.
 
 | Decision | Card | Rank | Contract (as issued) | Family | Card p | Baseline p | Baseline population (leak-free) | Result |
 |---|---|---|---|---|---:|---:|---|---|

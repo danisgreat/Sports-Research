@@ -2,7 +2,7 @@
 
 **Live rules for Rugby union and sevens. Markdown-only operation, 2026-09-28.** Read §0 in full for every card: it governs this file.
 - §1 onward is the reference algorithm and the competition rules; it is consulted by citation.
-- The dated history (settlement learnings and the evidence behind every numbered control) moved verbatim to [`archive/superseded_2026-09-28/sport_history/RULES_RUGBY_UNION_history_to_2026-09-28.md`](archive/superseded_2026-09-28/sport_history/RULES_RUGBY_UNION_history_to_2026-09-28.md). Open it when a control's full text or evidence is needed.
+- The dated history (settlement learnings and the evidence behind every numbered control) was moved verbatim to `archive/superseded_2026-09-28/sport_history/RULES_RUGBY_UNION_history_to_2026-09-28.md`, which is no longer in the Markdown tree. A maintainer can recover it from the pinned commit ([Git 3fbf0c981b40](https://github.com/danisgreat/Sports-Research/blob/3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa/archive/superseded_2026-09-28/sport_history/RULES_RUGBY_UNION_history_to_2026-09-28.md); [index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) when a control's full text or evidence is needed. The model works from §0 and the sections below.
 - Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.7. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `CURRENT_RULES.md`, which outranks this file.
 - No sport, competition or target is prospectively validated. Every card is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
@@ -34,9 +34,9 @@ Rank by RM-1 q; its cushion term applies to union +k.5 rows. A large cushion (k 
 
 ### Numerical shadow model (2026-09-26(c); suspended for md-only operation, 2026-09-28)
 
-The rugby-union model (A1) is ridge ratings with key-number weights and draws allowed. **Not validated.** It is maintainer Python, never a card input, and the model does not run it: print `SHADOW: NO_LANE (md-only)` at settlement (`research/sport_models_2026-09-26/README.md`). The hand-computable team baseline that does feed cards is TB-1-MD (`PROBABILITY_TOOLKIT.md` §4).
+The rugby-union model (A1) is ridge ratings with key-number weights and draws allowed. **Not validated.** It is maintainer Python, never a card input, and the model does not run it: print `SHADOW: NO_LANE (md-only)` at settlement (`research/sport_models_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))). The hand-computable team baseline that does feed cards is TB-1-MD (`PROBABILITY_TOOLKIT.md` §4).
 
-**Predictability (2026-09-26(e)).** Not measured: no union results were reached. The reference is the population (`research/predictability_2026-09-26/README.md`; `BASE_RATES_REGISTER.md` §7.8).
+**Predictability (2026-09-26(e)).** Not measured: no union results were reached. The reference is the population (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `BASE_RATES_REGISTER.md` §7.8).
 
 ### 0.4 Control index (full text in §6 and the dated sections)
 1 union is not league · 2 fifteens and sevens separate · 3 broad totals need mechanism support · 4 territory is not points · 5 points composition matters · 6 goal kicker is a regime · 7 set piece and breakdown are exposure engines · 8 cards create asymmetric tails · 9 low total ≠ close margin · 10 sevens clusters need restart/card branches · 11 sparse lineups cap evidence.

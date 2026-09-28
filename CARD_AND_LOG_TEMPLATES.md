@@ -2,6 +2,10 @@
 
 **Opened 2026-09-28 (md-only operation).** Copy these templates. Fill every field, or write its missingness label; never delete a field. The self-audit in §5 is the current Markdown check. The field codes in [brackets] preserve the historical audit IDs.
 
+**Core and annex (2026-09-28(e); `CURRENT_RULES.md` §B, "Timing").** The card is written in two blocks:
+- **Core** (Fields 1–6 below, as marked): everything that sets a probability or a rank. It is frozen and appended to the mini log **before the start**.
+- **Annex** (§1A): disclosures computed from the frozen numbers. It is appended under the core afterwards, and may be written after the start. It never changes a frozen number.
+
 ---
 
 ## 1. The forecast card
@@ -9,16 +13,16 @@
 ```markdown
 ## <ID> — <Home> v <Away> (<competition>), <venue-local date>
 
-### Field 1 — Identity and contract [1]
+### Field 1 — Identity and contract (core) [1]
 - **ID:** <P-### or TMP-YYYYMMDD-LEAGUE-HOME-AWAY> · **Event IDs:** <feed name: id> (e.g. ESPN 401875252; MLB gamePk 822678)
 - **Competition / stage / season type:** <…>
 - **Venue:** <name, city, country> · **Start:** <venue-local time> (<IANA zone>) = <UTC> = **<AEST/AEDT time>** (<date rollover: yes/no>). User time <as given>: <verified / corrected>.
 - **State at freeze:** <PREGAME / LIVE_ISSUED> (source, time)
 - **Contracts (quarantined lines):** 1. <row as supplied> · 2. … · Period, overtime, extra time, tie, push and void terms: <…>
-- **Method:** MDS-2026.09.28-v5.0 · CR-2026.09.28-MD1 · manifest <CONTROL_MANIFEST_… .md>, SHA-256 <copied from the Current freeze receipt line at the top of GAME_LOG_STATUS_CURRENT.md>
+- **Method:** MDS-2026.09.28-v5.1 · CR-2026.09.28-MD4 · manifest <CONTROL_MANIFEST_… .md>, SHA-256 <copied from the Current freeze receipt line at the top of GAME_LOG_STATUS_CURRENT.md>
 - **UNIVERSE:** <mini-log universe table, date / event id> or OUT_OF_UNIVERSE [UV]
 
-### Field 2 — Evidence and exposure [7, 7r, 8, 9]
+### Field 2 — Evidence and exposure, decisive rows (core) [7, 7r, 8]
 | Fact | Value | Source (owner) | Retrieved (AEST) | Status |
 |---|---|---|---|---|
 | Home lineup / starters / goalie / pitcher | <names> | <official page> | <time> | CONFIRMED_OFFICIAL / PROJECTED_BEAT_VERIFIED (receipt below) / LINEUPS_NOT_YET_PUBLISHED / RETRIEVAL_MISS |
@@ -31,11 +35,9 @@
 - **Participants per side:** <side A: lineup / bench / coach; side B: …>
 - **S-1 Rev 2 receipt** (only where PROJECTED_BEAT_VERIFIED is claimed): outlet · reporter · timestamp · verbatim quote · second source.
 - **Decision-driving players,** with quantified lines (minutes, usage, rate). A bare name is `AGGREGATE_ONLY`; list any sampling-noise flags.
-- **Windows:** L5/L10/L15/L20 for both sides (descriptive), and head-to-head with a continuity note and unique-event count.
-- **Settlement route for every row:** <field owner + two independent lineages>.
 - **Lineages for identity and state (three):** 1. … 2. … 3. …
 
-### Field 3 — Joint distribution [2, 3, BR, WB, T13, CVW]
+### Field 3 — Joint distribution (core) [2, 3, BR, WB, T13, CVW]
 - **Prior:** <source and number>. **Reference row:** <`BASE_RATES_REGISTER.md` §… row, n> or REFERENCE_BASE_RATE: NOT_YET_DERIVED.
 - **TB-1-MD:** Oh … Dh … Oa … Da … → T = … , M = … (`PROBABILITY_TOOLKIT.md` §4; k, HE, widths from §4.3).
 - **Named adjustments (signed, each with its mechanism):** 1. … 2. …
@@ -54,40 +56,59 @@
 - **Tennis only:** dated Elo benchmark (Tennis Abstract, <date>, A <elo> v B <elo> → P = …) [T13].
 - **Cricket only:** venue window by innings order, or INSUFFICIENT_VENUE_HISTORY [CVW]; TOSS STATUS; STRIP STATUS; conditions.
 
-### Field 4 — Contract queries and ranks [BP, TB, RM, DL, PC, HC, 5b]
-| Rank | Contract | p (UNVALIDATED_SUBJECTIVE) | BASELINE_P | TEAM_BASELINE_P | RM-1 q | Tier | Flags | Pair |
+### Field 4 — Contract queries and ranks (core) [BP, TB, RM, 5b]
+| Rank | Contract | p (UNVALIDATED_SUBJECTIVE) | BASELINE_P | TEAM_BASELINE_P | RM-1 q (or RM1_OUT_OF_DOMAIN) | Tier | Flags | Pair |
 |---:|---|---:|---:|---:|---:|---|---|---|
 | 1 | | | | | | | | FORCED_PAIR / FREE / COVERING_PAIR |
 | 2 | | | | | | | | |
 | 3 | | | | | | | | |
 | 4 | | | | | | | | |
 
-- **TOP2_QUALITY:** <TOP2_STRONG / TOP2_SUPPORTED / TOP1_ONLY / TOP2_COIN_FLIP> (R1 q …, R2 q …; joint hit/failure probability: not estimated from q).
+- **TOP2_QUALITY:** <TOP2_STRONG / TOP2_SUPPORTED / TOP1_ONLY / TOP2_COIN_FLIP> (R1 q …, R2 q …; joint hit/failure probability: not estimated from q). Out of RM-1's domain: from p, labelled `(p tiers)`.
+- **SIDE_FLIP in the top two:** <none> or "Rank <n>: the card's own probability for this row is <p>, below 0.5. It ranks here only through RM-1's historical recalibration" (+ the cushion-evidence sentence, `PROBABILITY_TOOLKIT.md` §5.3).
 - **Preferred side of each over/under pair:** …; **push mass:** … (derived).
-- **Departure ledger** (anchor = TEAM_BASELINE_P where TB-1 has resolution, otherwise BASELINE_P): row 1 logit departure … = mechanism A (share …) + mechanism B (share …); unexplained share … [DL].
-- **Track-record row:** <the sport's record from its §0 page>. **Predictability row:** <league: share of 0.70+ favourites, won %> (`BASE_RATES_REGISTER.md` §7.8).
-- **LOW_RESOLUTION:** <rows at 0.50–0.65>.
-- **C-PLUS-CUSHION** (non-baseball +k.5): population cover rate …; P(underdog wins) … + P(loses by ≤ k) …; the named reason the margin stays inside k [PC].
-- **Tennis games handicap:** P(win) …; implied P(margin ≥ k+1 | win) …; population conditional … [HC].
+- **Predictability row:** <league: share of 0.70+ favourites, won %> (`BASE_RATES_REGISTER.md` §7.8).
 - **Projected winner:** <team>, P = … (from the same distribution).
-- **Alternatives (not ranked, not scored):** <contract, p>.
-- **SLATE_ADVISORY (optional):** up to two same-event contracts at q ≥ 0.70.
 
-### Field 5 — Dependence and checks [4, 5, 5a, 6]
+### Field 5 — Dependence (core) [5, 5a]
 - **P(R1 ∧ R2)** = … (coupling: positive / negative / independent), read off the family table.
 - **P(¬R1 ∧ ¬R2)** = … (the state that kills both: …); **P(all fail)** = … where three or more rows share a driver.
-- **Complement decomposition** of R1 and R2 across the kill paths: …
-- **Kill paths, as weighted branches:** 1. <state> (mass …) → kills <rows>. 2. …
 - **Checks:** complements sum to 1; nested lines monotone; P(−L) ≤ P(win) ≤ P(+L); family sum 1.000.
 
-### Field 6 — Freeze and follow-up
-- **Frozen at:** <AEST time> after the final refresh of <lineups / injuries / weather / state> at <time>.
-- **Self-audit (§5): all blocking items pass.**
-- **Settlement route:** <sources>. **Retry trigger:** <if not final by …>.
+### Field 6 — Freeze (core)
+- **Frozen at:** <AEST time> after the final refresh of <lineups / injuries / weather / state> at <time>. **Freeze − start:** −<minutes> min. **Supersedes:** <earlier pregame freeze time, or none>.
+- **Self-audit (§5): all blocking items pass; core items listed.**
 - **SHADOW:** NO_LANE (md-only)
 ```
 
-**What the user sees.** Deliver the four ranked picks (with p, q and tier), the projected winner, the alternatives, the sources, and one honest line on predictability. For example: "MLB slates have no STRONG favourites; these are coin flips", or "the supplied rows are two complementary pairs, so they will settle 2 W / 2 L whatever happens".
+### 1A. The annex (appended under the core after the freeze)
+
+```markdown
+### ANNEX (post-freeze, <AEST time>) — <ID>
+No frozen p, q, rank, centre, width or mass is changed below. No in-game information is used.
+- **Departure ledger** (anchor = TEAM_BASELINE_P where TB-1 has resolution, otherwise BASELINE_P): row 1 logit departure … = mechanism A (share …) + mechanism B (share …); unexplained share … [DL].
+- **Track-record row:** <the sport's record from its §0 page>.
+- **LOW_RESOLUTION:** <rows at 0.50–0.65>.
+- **C-PLUS-CUSHION** (non-baseball +k.5): population cover rate …; P(underdog wins) … + P(loses by ≤ k) …; the named reason the margin stays inside k [PC].
+- **Tennis games handicap:** P(win) …; implied P(margin ≥ k+1 | win) …; population conditional … [HC].
+- **Complement decomposition** of R1 and R2 across the kill paths: … [4]
+- **Kill paths, as weighted branches** (masses from the frozen family table): 1. <state> (mass …) → kills <rows>. 2. … [6]
+- **Windows:** L5/L10/L15/L20 for both sides (descriptive), and head-to-head with a continuity note and unique-event count.
+- **Alternatives (not ranked, not scored):** <contract, p from the frozen distribution>.
+- **SLATE_ADVISORY (optional):** up to two same-event contracts at q ≥ 0.70.
+- **Settlement route for every row:** <field owner + two independent lineages> [9]. **Retry trigger:** <if not final by …>.
+- **Full source table:** every source consulted, with owner, time and OPENED / SNIPPET / ASSUMED.
+- **CORE_DEFECT:** <none> or <what is wrong in the core; the core is still scored as issued>.
+```
+
+**What the user sees.** Deliver as soon as the core is frozen:
+- the four ranked picks (with p, q and tier);
+- any top-two `SIDE_FLIP` sentence;
+- the projected winner;
+- the decisive sources;
+- one honest line on predictability. For example: "MLB slates have no STRONG favourites; these are coin flips", or "the supplied rows are two complementary pairs, so they will settle 2 W / 2 L whatever happens".
+
+The annex follows in a second message.
 
 ---
 
@@ -105,7 +126,7 @@
 
 | Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
 |---:|---|---|---:|---:|---:|---:|---|---:|---:|
-(p, q, BASELINE_P and TEAM_BASELINE_P are **copied from Field 4**, missingness labels included; never 0.500 in place of a missing value.)
+(p, q, BASELINE_P and TEAM_BASELINE_P are **copied from Field 4**, missingness labels included; never 0.500 in place of a missing value. Brier(q) is `T-RM1-PROSPECTIVE`'s row diagnostic only: write `EXCLUDED_PUSH` for a push-capable row, `—` for `RM1_OUT_OF_DOMAIN`, and `LIVE_ISSUED` for a card not issued pregame (`PROBABILITY_TOOLKIT.md` §10).)
 
 **Projected winner:** <correct / wrong>. **Rank-1:** W/L. **Hit@2:** … (mechanical if it is a COVERING_PAIR). **Top over/under preferred side:** W/L/P → TOP_OU_REVIEW if L or P.
 
@@ -133,9 +154,10 @@
 
 | Item | Value |
 |---|---|
-| Governing method | MDS-2026.09.28-v5.0 (md-only) · CR-2026.09.28-MD1 · SCV-2026.09.19-v2 |
+| Governing method | MDS-2026.09.28-v5.1 (md-only) · CR-2026.09.28-MD4 · SCV-2026.09.19-v2 |
 | Freeze with every card | <manifest name and SHA-256, copied from the Current freeze receipt line at the top of GAME_LOG_STATUS_CURRENT.md> |
-| Files read (reading gate) | CURRENT_RULES.md; RULES_<SPORT>.md §0; PROBABILITY_TOOLKIT.md; CARD_AND_LOG_TEMPLATES.md; SOURCES.md |
+| Session read (reading gate) | CURRENT_RULES.md; CARD_AND_LOG_TEMPLATES.md §1, §5; SOURCES.md §1 — read <AEST time> under receipt SHA <first 12 characters>. Re-read when the receipt SHA changes |
+| Per-card reads | RULES_<SPORT>.md §0 (+ league rules file); SOURCES.md §3.x; this log's unsettled section; the Part 5 snapshot |
 | Next canonical ID | <from PREDICTION_LOG_COMBINED_5.md top snapshot, or "on hold → TMP IDs"> |
 | Status | LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE |
 
@@ -168,9 +190,9 @@ Write this before the day's first card, and never edit it afterwards:
 
 ---
 
-## 5. Self-audit (run before delivery, and again at settlement)
+## 5. Self-audit (run at the core freeze, when the annex is appended, and at settlement)
 
-**Blocking at issue.** If any item fails, fix it or do not deliver.
+**Blocking at the core freeze.** If any item fails, fix it or do not deliver. If it cannot pass before the start, the card is `LIVE_ISSUED`.
 - [ ] B1. Identity verified with three lineages; venue-local, UTC and AEST times printed; state is PREGAME, or the card is labelled LIVE_ISSUED.
 - [ ] B2. Contracts parsed exactly, with overtime, tie and push terms stated.
 - [ ] B3. The family table has masses summing to 1.000 [2].
@@ -180,33 +202,42 @@ Write this before the day's first card, and never edit it afterwards:
 - [ ] B7. No market, fantasy or synthetic source used; every decisive fact is OPENED, not SNIPPET or ASSUMED.
 - [ ] B8. Outdoor event: a match-window weather row. MLB total: the gamefeed wind (or WEATHER_NOT_YET_PUBLISHED).
 
-**Required at issue.** A missing item caps the grade at LOW and is recorded as a process defect.
+**Required in the core.** A missing item caps the grade at LOW and is recorded as a process defect.
 - [ ] R1. Method version, control revision and manifest SHA [1].
 - [ ] R2. BASELINE_P beside every ranked row [BP].
 - [ ] R3. TEAM_BASELINE_P, or its status (TB1_NO_RESOLUTION / NOT_COVERED / UNVALIDATED) [TB].
-- [ ] R4. RM-1 q, tier and flags per row; ranks by q; the TOP2_QUALITY line [RM].
-- [ ] R5. Departure ledger [DL]; track-record row; predictability row.
+- [ ] R4. RM-1 q (or `RM1_OUT_OF_DOMAIN`), tier and flags per row; ranks by q (or by p out of domain); the TOP2_QUALITY line; the top-two SIDE_FLIP sentence where it applies [RM].
+- [ ] R5. Predictability row.
 - [ ] R6. Reference row [BR] and reference width [WB].
 - [ ] R7. FORCED_PAIR / FREE / COVERING_PAIR labels, the preferred side, and push mass [5b].
-- [ ] R8. P(R1 ∧ R2) with its coupling [5]; the complement decomposition [4]; kill paths with mass; one representative Rank-1 outcome [6].
-- [ ] R9. The settlement route for every row [9]; AGGREGATE_ONLY flags where they apply [8].
+- [ ] R8. P(R1 ∧ R2) with its coupling [5]; one representative Rank-1 outcome [6].
+- [ ] R9. AGGREGATE_ONLY flags where they apply [8].
 - [ ] R10. The UNIVERSE line or OUT_OF_UNIVERSE [UV].
 - [ ] R11. Sport-specific:
-  - tennis: the Elo benchmark [T13] and handicap coherence [HC];
+  - tennis: the Elo benchmark [T13];
   - cricket: toss and strip statuses and the venue window [CVW];
-  - non-baseball +k.5: the cushion decomposition [PC].
+  - non-baseball +k.5: the population cover rate as its BASELINE_P [PC].
 - [ ] R12. The arithmetic checks in `PROBABILITY_TOOLKIT.md` §11.
-- [ ] R13. The card is appended to the mini log before delivery.
+- [ ] R13. The core is appended to the mini log before delivery, with `Freeze − start`.
+
+**Annex (§1A), before settlement.** A missing item is a process defect; it does not change the score.
+- [ ] A1. Departure ledger [DL] and track-record row.
+- [ ] A2. The complement decomposition [4] and kill paths with mass [6].
+- [ ] A3. The settlement route for every row [9].
+- [ ] A4. Narratives: the cushion decomposition [PC]; tennis handicap coherence [HC].
+- [ ] A5. Windows, alternatives, the optional SLATE_ADVISORY, and the full source table.
+- [ ] A6. `CORE_DEFECT` line (none, or the defect, with the core still scored as issued).
 
 **At settlement.**
 - [ ] S1. Three terminal lineages with an explicit final marker; no credible live source.
 - [ ] S2. Process record read from a named endpoint with its time [10, 10p]; disruption facts; classification.
 - [ ] S3. Lineup diff, "k of n", using names that are on the card [10l, 10n].
 - [ ] S4. z_total and z_margin [10z].
-- [ ] S5. Settlement table copied from Field 4 (p, q, baselines, missingness); Brier for p and q.
+- [ ] S5. Settlement table copied from Field 4 (p, q, baselines, missingness); Brier(p) on every row; Brier(q) only as the `T-RM1-PROSPECTIVE` diagnostic, with its exclusions.
 - [ ] S6. Enhanced review for a Rank-1 loss or a top-O/U loss or push; the three questions; kill paths checked.
 - [ ] S7. The SHADOW line [10s].
 - [ ] S8. Ledger row appended (§6); universe dispositions complete; document-mapping rows added.
+- [ ] S9. The annex is complete (A1–A6), or its absence is recorded as a process defect. Any lesson is parked (`LEARNINGS_INDEX.md` §10), not promoted, while the rule inventory is closed.
 
 ---
 
@@ -221,7 +252,7 @@ Write this before the day's first card, and never edit it afterwards:
 ```
 
 - Rows whose baseline is `NOT_YET_DERIVED` are listed but not scored.
-- **Counting toward `C-BASELINE-SKILL`:** only prospective rows count, and only once a pregame issue is verified.
+- **Counting toward `C-BASELINE-SKILL`:** exactly the rows defined in `SKILL_BASELINE_LEDGER.md` rule 7 (prospective, verified pregame core freeze, numeric issue-time BASELINE_P, three terminal lineages).
 - **`MARKET_BENCHMARK_LEDGER.md`** is written by the operator only, after settlement. The model never reads or writes it.
 
 ---
@@ -236,7 +267,7 @@ Write this before the day's first card, and never edit it afterwards:
    - Conflicts go to the conflict section with full settlement.
 4. **State.** Unresolved events stay pending, with the state and the time checked. Only finals are settled (§2).
 5. **Append verbatim.** Copy each card to Part 5 exactly as issued. Corrections are appended settlement revisions, with the old and new values, the source and the reason.
-6. **Learnings.** Dispositions go to `LEARNING_REGISTER.md`, with one line in `LEARNINGS_INDEX.md`. Execute or disposition every document-mapping row.
+6. **Learnings.** While the rule inventory is closed (`CURRENT_RULES.md` §D9), a lesson is parked as one line in `LEARNINGS_INDEX.md` §10. Only validity repairs and user-instructed changes get a `LEARNING_REGISTER.md` disposition. Execute or disposition every document-mapping row.
 7. **Custody and check.**
    - Retain the processed mini log in `prediction logs/` after pending events are tracked in `GAME_LOG_STATUS_CURRENT.md`.
    - Update the Part 5 snapshot: next ID, open follow-ups.

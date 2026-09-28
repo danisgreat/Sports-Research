@@ -177,15 +177,18 @@ Descriptive reports list how many cards carry each label beside every Rank-1, Hi
 A Brier score is reported beside a **baseline on the same decisions**. From 2026-09-25(c) the primary descriptive baseline is the **naive population baseline** recorded as `BASELINE_P` on each card, not the coin flip (0.25). Only rows with an explicit pre-result selection and an exact, verified structured-record join can count prospectively.
 
 - **What it knows.** The competition's outcome distribution from games completed before the event, and which side is at home. For tennis it knows no side information.
-- **Report.** Principal estimate: average target scores within each event, then equally weight events. Report baseline Brier and paired difference (card − baseline), with an event-cluster bootstrap interval. A decision-weighted estimate is a separate diagnostic, not the principal point estimate. `tools/skill_baseline.py` verifies the ledger against `prospective_records.json` before scoring.
+- **Report.** The **preregistered** estimate (`LEARNING_REGISTER.md`, `C-BASELINE-SKILL`, 2026-09-25(c)) is the decision-weighted mean paired Brier (card − baseline), with a 95% card-cluster bootstrap (10,000 resamples, seed 20260925). It alone decides `SKILL_BASELINE_LEDGER.md` rule 7.
+  - The event-weighted estimate (average target scores within each event, then weight events equally, with an event-cluster interval) is reported beside it as a **secondary diagnostic**.
+  - Correction 2026-09-28(e): a 2026-09-28 edit had made the event-weighted estimate "principal". That would have changed a preregistered decision rule after the fact, so it is reverted to secondary.
+  - The removed `tools/skill_baseline.py` and `prospective_records.json` ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) are replaced by the hand procedure in `SKILL_BASELINE_LEDGER.md` rule 6.
 - **Counting.** Forced pairs are counted once and pushes are excluded, as elsewhere in this specification.
-- **Status.** Descriptive and LEARNING_ONLY. Beating the naive baseline is a *minimum* condition for any later claim that the research process adds information. It is not sufficient for performance eligibility (`PERFORMANCE_ELIGIBILITY_POLICY.md`). Never fit a shrink or weight from it (`L-087`).
+- **Status.** Descriptive and LEARNING_ONLY. Beating the naive baseline is a *minimum* condition for any later claim that the research process adds information. It is not sufficient for performance eligibility (`RECORD_ELIGIBILITY_SCHEMA.md`, which replaces the removed `PERFORMANCE_ELIGIBILITY_POLICY.md`; [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). Never fit a shrink or weight from it (`L-087`).
 - **Seed result (hindsight, 2026-09-24 cohort).** Card 0.2461 against baseline 0.2360, n = 29 decisions from 9 cards, interval [−0.059, +0.089]: no demonstrated difference.
 
 <!-- SETTLED-ROW-REVIEW-2026-09-25D -->
 ## 14. Calibration review standard (added 2026-09-25(d))
 
-Every 25-card pattern review, and every audit of a cohort's probabilities, may report the following from `python tools/calibration_report.py`, run on the versioned output of `research/settled_rows_2026-09-25/extract_settled_rows.py`. Its default `legacy` view is descriptive only; preferred-side reports require explicit selection, and performance reports require a valid structured-record join.
+Every 25-card pattern review, and every audit of a cohort's probabilities, may report the following, computed by hand from the Markdown records (`PROMPTS.md` §5) or by a maintainer session. The historical tools `tools/calibration_report.py` and `research/settled_rows_2026-09-25/extract_settled_rows.py` are removed from the tree ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). A legacy extract is descriptive only; preferred-side reports require explicit selection, and performance reports require a valid structured-record join.
 
 1. **Reliability table** by stated band, with Wilson intervals and the number of distinct cards per band.
 2. **Murphy decomposition**, Brier = reliability − resolution + uncertainty, plus skill against climatology. Resolution is the only component that shows information. A low Brier on a lopsided population can come from uncertainty alone.
@@ -208,20 +211,27 @@ Every 25-card pattern review, and every audit of a cohort's probabilities, may r
 | Skill against climatology | +7.7% |
 | Logistic slope | 1.06 (SE 0.16) |
 
-Details are in `research/settled_rows_2026-09-25/README.md`.
+Details were in the removed `research/settled_rows_2026-09-25/README.md` ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
 
 
 <!-- RANK-MODEL-2026-09-25E -->
 ## 15. The ranking probability q (RM-1) and the team baseline (added 2026-09-25(e))
 
-1. **Two outputs per row.** Each ranked row may carry the card's stated p (UNVALIDATED_SUBJECTIVE, from its own distribution) and RM-1's q (`tools/rank_model.py`).
-   - q is a **row-calibrated ranking output**. It is not a joint-distribution probability or necessarily a coherent marginal event probability; it is not a PUBLISHED numerical probability (`NUMERICAL_PROGRAM.md`).
-   - Ranks follow q (`C-RANK-MODEL`).
-   - Do not score q as a coherent forecast by default. RM-1's retrospective row scores are historical. Any prospective q-v-p comparison requires explicit preferred-side identity, valid issue/outcome evidence, frozen model/code hashes, an exact matched baseline, and no unresolved push mass. The current prospective gate has 0 qualifying rows. The q values cannot be multiplied as a joint-success estimate.
-2. **Historical §14 exception, now frozen.** RM-1 was historically user-authorised for ranking (`RULES_GENERAL.md` §"2026-09-25(e)"(h)); that authorization does not establish prospective validity or turn its q output into a probability distribution.
-   - It is refitted only at the 25-card review, after `extract_settled_rows.py` and `validate_rank_model.py`.
+1. **Two outputs per row.** Each ranked row may carry the card's stated p (UNVALIDATED_SUBJECTIVE, from its own distribution) and RM-1's q (the table in `PROBABILITY_TOOLKIT.md` §5; the removed `tools/rank_model.py` it reproduces is recoverable via the [Historical Link Index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
+   - q is a **row-calibrated ranking output** (`ROW_CALIBRATED_NOT_JOINT`). It is not a joint-distribution probability, not necessarily a coherent marginal event probability, and not a published numerical probability (the removed `NUMERICAL_PROGRAM.md` ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))).
+   - Ranks follow q (`C-RANK-MODEL`) inside RM-1's domain (`PROBABILITY_TOOLKIT.md` §5.0). Outside it, rows carry `RM1_OUT_OF_DOMAIN` and rank by p.
+   - **Scoring q: the single rule** (`CURRENT_RULES.md` §D7, `PROBABILITY_TOOLKIT.md` §10 and `RECORD_ELIGIBILITY_SCHEMA.md` point here). q is scored in one place only: `T-RM1-PROSPECTIVE`'s paired comparison of Brier(q) with Brier(p) on the same decision rows, as a row-level diagnostic of the ranking model. A row is admitted only if:
+     - it is from a card whose core was frozen before the verified start;
+     - its p, q and decision side are copied from the issued Field 4;
+     - the RM-1 table is identified by the card's manifest SHA;
+     - it has no push mass. Push-capable rows are excluded, and counted, until a vector-aware method is specified;
+     - it is not `RM1_OUT_OF_DOMAIN`.
+
+     q is never the card's event probability, never pooled or averaged with p, never entered in `SKILL_BASELINE_LEDGER.md`, and never multiplied or used for joint numbers. RM-1's retrospective row scores are historical. The prospective comparison has 0 qualifying rows so far.
+2. **Historical §14 exception, now frozen.** RM-1 was historically user-authorised for ranking (the removed `RULES_GENERAL.md` ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) §"2026-09-25(e)"(h)). That authorisation does not establish prospective validity or turn its q output into a probability distribution.
+   - It is refitted only at the 25-card review, in a maintainer session. The historical extractor and validator (`extract_settled_rows.py`, `validate_rank_model.py`) are recoverable via the [Historical Link Index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents).
    - A new term enters only if it beats RM-1 on log loss in every forward split.
-3. **Prospective check (`T-RM1-PROSPECTIVE`).** After 25 cards, q's Brier is compared with p's on the same rows. If q is worse, `C-RANK-MODEL` reverts to disclosure-only.
+3. **Prospective check (`T-RM1-PROSPECTIVE`).** At the 25-card read-out, Brier(q) is compared with Brier(p) on the admitted rows (1 above). If q is worse, `C-RANK-MODEL` reverts to disclosure-only.
 4. **Top-two reporting.** For every review, report:
    - the Rank-1 and Rank-2 win rates;
    - the both-win and both-lose rates;
@@ -252,12 +262,14 @@ Three yardsticks now sit beside every settled decision, from weakest to stronges
 
 | Yardstick | Knows | Ledger / tool | Checkpoint |
 |---|---|---|---|
-| `BASELINE_P` (§13) | League outcome rates and home side, games before the event | `SKILL_BASELINE_LEDGER.md` · `tools/skill_baseline.py` | 100 prospective decisions / 30 cards |
+| `BASELINE_P` (§13) | League outcome rates and home side, games before the event | `SKILL_BASELINE_LEDGER.md` (hand procedure, rule 6) | 100 prospective decisions / 30 cards (a read-out point) |
 | `TEAM_BASELINE_P` (§15.5) | Season-to-date team scoring (covered leagues) | printed on the card; scored at settlement | as §15 |
-| Closing market (`C-MARKET-BENCHMARK`) | Everything public at the close | `MARKET_BENCHMARK_LEDGER.md` · `tools/market_benchmark.py` | 100 decisions / 30 cards |
+| Closing market (`C-MARKET-BENCHMARK`) | Everything public at the close | `MARKET_BENCHMARK_LEDGER.md` (operator, by hand) | 100 decisions / 30 cards (a read-out point) |
 
-1. **Seed rows never count.** `tools/skill_baseline.py` reports the "Prospective rows" and "Seed rows" sections separately; only the prospective section counts toward §13's checkpoint (fixed 2026-09-26: the tool had pooled them).
-2. **The closing line is entered after settlement only**, as a no-vig probability with its de-vig method (`multiplicative`, `power` or `shin`). Rows entered before settlement are excluded. See `RULES_GENERAL.md` §"2026-09-26"(d).
+The tools formerly named in this table (`tools/skill_baseline.py`, `tools/market_benchmark.py`) are removed from the tree ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
+
+1. **Seed rows never count.** The ledger keeps the "Prospective rows" and "Seed rows" sections separate; only rows meeting `SKILL_BASELINE_LEDGER.md` rule 7 count toward §13's read-out. The removed `tools/skill_baseline.py` once pooled them (fixed 2026-09-26; [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
+2. **The closing line is entered after settlement only**, as a no-vig probability with its de-vig method (`multiplicative`, `power` or `shin`). Rows entered before settlement are excluded (`MARKET_BENCHMARK_LEDGER.md` firewall; historically the removed `RULES_GENERAL.md` §"2026-09-26"(d), [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
 3. **Universe split.** Cards in a declared universe (`C-EVENT-UNIVERSE`) and `OUT_OF_UNIVERSE` cards are reported separately in every review; the universe group is the one that describes the competition.
-4. **Shadow models.** `tools/mlb_model.py score` (MLB, `C-MLB-SHADOW`) and `tools/sport_models.py score` (every other sport, `C-SPORT-SHADOW`, per league) report A1 against A0 on frozen shadow rows. Their historical rolling-origin validation is in `research/sport_models_2026-09-26/README.md`. It is compared with the cards only at its 150-game review.
-5. **One table first.** Every 25-card review opens with `python tools/evidence_status.py`.
+4. **Shadow models: suspended in md-only operation** (`SHADOW: NO_LANE (md-only)`). The historical lanes `tools/mlb_model.py` (`C-MLB-SHADOW`) and `tools/sport_models.py` (`C-SPORT-SHADOW`), and their rolling-origin validation in `research/sport_models_2026-09-26/README.md`, are removed from the tree ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
+5. **One table first.** Every 25-card review opens with the gate table in `CURRENT_RULES.md` §D9, counted by hand from the ledgers. The removed `tools/evidence_status.py` once printed it ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).

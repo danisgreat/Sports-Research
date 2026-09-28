@@ -24,8 +24,9 @@ A disciplined, **market-blind** framework for researching sports events, issuing
 ```text
 identity + state ─► contract (lines quarantined) ─► official participants, weather, evidence
    ─► BASELINE_P and TB-1-MD ─► one joint distribution (centre, width, family masses, reference row)
-   ─► each row's p, by hand from the toolkit ─► RM-1 q and tier ─► rank by q ─► self-audit ─► freeze ─► log before delivery
-   ─► settle from 3 independent lineages (read from the feed) ─► lineup diff, z, p and q grades ─► retrospective ─► TESTING lessons
+   ─► each row's p, by hand from the toolkit ─► RM-1 q and tier (inside its domain) ─► rank by q ─► core self-audit
+   ─► freeze the CORE before the start ─► log before delivery ─► ANNEX of disclosures after the freeze
+   ─► settle from 3 independent lineages (read from the feed) ─► lineup diff, z, p grades (q as the RM-1 diagnostic) ─► retrospective ─► parked lessons
 ```
 
 **Principles:**
@@ -55,7 +56,8 @@ The active log's top snapshot is the only authority for queue state and the next
 | Active canonical log | [Part 5](PREDICTION_LOG_COMBINED_5.md) (P-482 onward); Parts 1–4 are closed |
 | Next canonical ID | **On hold.** P-518–P-522 are reserved while they are reconciled ([status](GAME_LOG_STATUS_CURRENT.md)). New cards use TMP IDs until the snapshot names the next number |
 | Freeze receipt | The manifest named in [`METHOD.md`](METHOD.md) |
-| Prospective gates | `C-BASELINE-SKILL` 0/100 · `T-RM1-PROSPECTIVE` 0/25 cards · `C-MARKET-BENCHMARK` 0/100 · **`C-RULE-FREEZE` in force** |
+| Prospective gates | `C-BASELINE-SKILL` 0/100 · `T-RM1-PROSPECTIVE` 0/25 cards · `C-MARKET-BENCHMARK` 0/100 · **`C-RULE-FREEZE` in force; rule inventory closed** (new lessons are parked, `CURRENT_RULES.md` §D9). The counts are preregistered read-out points, not proof thresholds |
+| Issue timing | Cards freeze a **core** before the start and add an **annex** afterwards (`CURRENT_RULES.md` §B), because four of the five cards before 2026-09-28(e) finished after the start and could not count |
 | Historical TB-1-MD evaluation | Aggregate results reported gains over population in several league and target cohorts ([source bundle](VALIDATION_EVIDENCE.md)). The current tree lacks game-level inputs for an independent rerun; these are provisional reference anchors, not demonstrated card-level skill. |
 | Predictability | STRONG (≥ 0.70) favourites exist mainly in AFL and basketball sides, less in the NFL and NRL, rarely in the NHL, and never in MLB (`BASE_RATES_REGISTER.md` §7.8) |
 | Legacy settled rows | Historical extraction records were removed from the current tree; no issued row is performance-eligible |

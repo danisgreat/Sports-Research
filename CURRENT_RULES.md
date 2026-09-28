@@ -1,6 +1,13 @@
 # Current rules — the operating manual
 
-**Method MDS-2026.09.28-v5.0 (md-only) · Control revision CR-2026.09.28-MD3 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+**Method MDS-2026.09.28-v5.1 (md-only) · Control revision CR-2026.09.28-MD4 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+**What changed on 2026-09-28(e)** (the user instructed the review's improvements; no probability, width, centre or in-domain rank changed):
+- **Core first, annex after (§B, §C).** Four of the five cards before this change finished after the start, so none could count toward a checkpoint. A card now freezes its **core** (everything that sets a probability or a rank) before the start, and appends its disclosure **annex** afterwards.
+- **Reading once per session (§0).** The long documents are read in full once per session, and again whenever the freeze receipt changes. The sport's §0 page is still read before every card.
+- **RM-1 domain guard (§D6).** The retired tool refused any sport outside RM-1's eight fitted sport groups; the Markdown conversion had dropped that guard, and it is restored. A `SIDE_FLIP` row in the top two must say that the card's own p is below 0.5.
+- **One meaning for scoring q and for the checkpoints (§D7, §D9).** Two pairs of documents contradicted each other; both are reconciled.
+- **The rule inventory is closed (§D9)** until the checkpoints report.
 
 **What changed on 2026-09-28.** The user instructed that the forecasting model uses Markdown documents only: no Python and no non-Markdown repository file, in the future. So this manual is now self-contained.
 - **Every step that used a tool** has a Markdown procedure. The probability arithmetic, the team baseline (TB-1-MD) and the ranking model (RM-1) are in `PROBABILITY_TOOLKIT.md`, and were checked against the tools they replace. The card, settlement and log formats, and the self-audit, are in `CARD_AND_LOG_TEMPLATES.md`.
@@ -23,12 +30,17 @@ A dated section, archived text or old card never reinstates a withdrawn rule (§
 
 ## 0. Reading order (`C-READING-GATE`)
 
-**Before every card, read in full:**
+**Once per session, read in full** (and again whenever the **Current freeze receipt** SHA at the top of `GAME_LOG_STATUS_CURRENT.md` differs from the one you read under):
 1. this manual;
-2. the sport file's **§0 live page** (`RULES_<SPORT>.md`), plus `LEAGUE_RULES_CRICKET.md` or `LEAGUE_RULES_SOCCER.md` for those sports;
-3. `CARD_AND_LOG_TEMPLATES.md` §1 (the card) and §5 (the self-audit);
-4. the sport's section of `SOURCES.md` (§3.x) and §1 (source rules);
-5. the active mini log's header and its unsettled section, plus the active canonical log's top snapshot (next ID, open follow-ups).
+2. `CARD_AND_LOG_TEMPLATES.md` §1 (the card) and §5 (the self-audit);
+3. `SOURCES.md` §1 (source rules).
+
+Record the session read (time and receipt SHA) in the mini log header.
+
+**Before every card, read in full:**
+1. the sport file's **§0 live page** (`RULES_<SPORT>.md`), plus `LEAGUE_RULES_CRICKET.md` or `LEAGUE_RULES_SOCCER.md` for those sports;
+2. the sport's section of `SOURCES.md` (§3.x);
+3. the active mini log's header and its unsettled section, plus the active canonical log's top snapshot (next ID, open follow-ups).
 
 **Read by citation when the card needs it:** `PROBABILITY_TOOLKIT.md` (every calculation), `BASE_RATES_REGISTER.md` (reference rows and widths), the rest of the sport file, and `LEARNINGS_INDEX.md` (lessons, one line each).
 
@@ -43,8 +55,8 @@ A dated section, archived text or old card never reinstates a withdrawn rule (§
 3. **Learning-only.** No performance, calibration, ROI or value claim follows from any record.
 4. **Three independent lineages** to issue an event, and three to settle it. Mirrors and syndication count once; snippets never count (`SOURCES.md` §1.1).
 5. **Pregame means before the actual start** (the first ball, pitch, puck or tip; NBL: the first `jumpBall` event).
-   - Take as long as the research needs. Refresh volatile news as late as possible, and freeze just before the start.
-   - A card completed after the start is labelled `LIVE_ISSUED`. It is logged, but excluded from pregame scoring, and it uses no in-game information.
+   - Take as long as the research needs, but **freeze the core before the start** (§B, "Timing"). Refresh volatile news as late as possible before that freeze.
+   - A card whose core is frozen after the start is labelled `LIVE_ISSUED`. It is logged, but excluded from pregame scoring, and it uses no in-game information.
 6. **Issued records are immutable.** Corrections are appended, never rewritten.
 7. **Distribution first.** One coherent joint outcome distribution per event. Every row's probability p is read from it with the toolkit arithmetic, shown on the card.
 8. **No coefficient from this log's own results.** A single game can expose a bug or open a prospective test. It never creates a weight, cap or ranking override (L-087).
@@ -64,13 +76,46 @@ A dated section, archived text or old card never reinstates a withdrawn rule (§
 | 5 | **Evidence.** Game logs before aggregates (M13). L5/L10/L15/L20 descriptively. The season rate plus the opponent (§D5) | An aggregate carries direction while the game log is one click away: mark `AGGREGATE_ONLY` and cap the row |
 | 6 | **Baselines and distribution.** Print `BASELINE_P` (the population row) and `TEAM_BASELINE_P` (TB-1-MD, `PROBABILITY_TOOLKIT.md` §4). Build the prior plus named adjustments → centre and width → the family table with masses. Print the reference row and reference width (`BASE_RATES_REGISTER.md` §7). Read every row's p off the distribution with the toolkit arithmetic, shown | p cannot be reproduced from what is printed |
 | 7 | **Rank.** RM-1 q for each row (`PROBABILITY_TOOLKIT.md` §5): tier, flags, order by q, `TOP2_QUALITY`. Label `FORCED_PAIR`/`FREE` and `COVERING_PAIR`. Print P(R1∧R2) and P(¬R1∧¬R2) from p, the complement decomposition, and kill paths as weighted branches | A joint number is invented: use `JOINT_UNQUANTIFIED` with Fréchet bounds |
-| 8 | **Freeze.** Final volatile refresh; freeze time; the method, control revision and manifest name with its SHA (copied from the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`); `UNIVERSE:` or `OUT_OF_UNIVERSE`. Run the self-audit (`CARD_AND_LOG_TEMPLATES.md` §5). **Append the card to the active mini log before delivering it** | A blocking self-audit item fails |
+| 8 | **Freeze the core** (see "Timing" below). Final volatile refresh; freeze time and `Freeze − start`; the method, control revision and manifest name with its SHA (copied from the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`); `UNIVERSE:` or `OUT_OF_UNIVERSE`. Run the self-audit's core items (`CARD_AND_LOG_TEMPLATES.md` §5). **Append the core to the active mini log before delivering it.** Then write the annex under it | A blocking self-audit item fails |
 | 9 | **Settle** (only when final). Three terminal lineages; the process record read from the feed with its endpoint and time; the lineup diff; z-scores; the p **and** q grades; enhanced reviews (§D8). Use `CARD_AND_LOG_TEMPLATES.md` §2 | Any credible live or conflicting source |
-| 10 | **Learn.** The three questions; dispositions to the mini log's learnings and its **document mapping**; the baseline ledger row (`SKILL_BASELINE_LEDGER.md`); skips for uncarded universe events | A new predictive rule while `C-RULE-FREEZE` is in force: open a TESTING row instead |
+| 10 | **Learn.** The three questions; dispositions to the mini log's learnings and its **document mapping**; the baseline ledger row (`SKILL_BASELINE_LEDGER.md`); skips for uncarded universe events | A new rule, control, test or flag while the inventory is closed (§D9): park the lesson instead |
+
+### Timing: core first, annex after (2026-09-28(e))
+
+A card is built in two parts, so that a valid pregame issue exists even when the full write-up takes longer than the time left.
+
+- **The core sets every probability and rank.** It contains:
+  - Field 1 in full;
+  - Field 2's decisive rows: participants per side with status and fetch time, the absences behind any adjustment, the outdoor weather row, the three identity lineages, and `AGGREGATE_ONLY` flags;
+  - Field 3 in full;
+  - Field 4's ranked table, `TOP2_QUALITY`, pair labels, preferred sides, push mass, the predictability row and the projected winner;
+  - Field 5's P(R1∧R2), P(¬R1∧¬R2) and, where it applies, P(all fail);
+  - Field 6's freeze line.
+
+  The core passes the blocking self-audit and is frozen and appended to the mini log **before the start**.
+- **The annex holds disclosures computed from the frozen numbers:**
+  - the departure ledger and track-record row;
+  - `LOW_RESOLUTION`;
+  - the `C-PLUS-CUSHION` and tennis-handicap narratives;
+  - the complement decomposition and the kill paths;
+  - descriptive windows, alternatives and `SLATE_ADVISORY`;
+  - the settlement routes and the full source table.
+
+  It goes under the core, headed `ANNEX (post-freeze, <AEST time>)`, and may be written after the start.
+  - It uses no in-game information.
+  - It never changes a frozen p, q, rank, centre, width or mass.
+  - An error it finds in the core is recorded as `CORE_DEFECT: <what>`. The core is still scored exactly as issued.
+  - An annex missing at settlement is a process defect. It does not change the score.
+- **Time budget:**
+  - start the core at least 90 minutes before the start where the request allows;
+  - do the final volatile refresh 30 to 5 minutes before the start;
+  - freeze the core by 5 minutes before the start.
+- **Re-freezing.** A core may be re-frozen before the start, for example when the official lineup lands. The last freeze before the start is the issue. Earlier freezes stay in the log labelled `SUPERSEDED_PREGAME` and are never scored.
+- **If the core cannot pass the blocking audit before the start,** the card is `LIVE_ISSUED`, as before.
 
 ## C. The card
 
-The exact template is `CARD_AND_LOG_TEMPLATES.md` §1. It has six fields plus the completeness block:
+The exact template is `CARD_AND_LOG_TEMPLATES.md` §1. It has six fields plus the completeness block. Each item is marked in the template as **core** (frozen before the start) or **annex** (appended after the freeze; §B, "Timing"):
 
 | Field | Must contain |
 |---|---|
@@ -79,7 +124,7 @@ The exact template is `CARD_AND_LOG_TEMPLATES.md` §1. It has six fields plus th
 | 3 Joint distribution | Prior with provenance; named signed adjustments; centre, median and width; the **family table with masses summing to 1**; phase and team marginals; representative score; **reference row** and **reference width**; the arithmetic that turns the distribution into each row's p |
 | 4 Contract queries and ranks | Per row: p (`UNVALIDATED_SUBJECTIVE`), **`BASELINE_P`**, **`TEAM_BASELINE_P`**, **RM-1 q, tier and flags**; ranks by q; **`TOP2_QUALITY`**; `FORCED_PAIR`/`FREE`; preferred side; push mass; departure ledger; track-record row; **predictability row** (§D6); `LOW_RESOLUTION` at 0.50–0.65; the `C-PLUS-CUSHION` decomposition for non-baseball +k.5; projected winner with its probability; alternatives (unranked) |
 | 5 Dependence and checks | P(R1∧R2), P(¬R1∧¬R2), and P(all fail) where three or more rows share a driver; complement decomposition; kill paths with mass; `COVERING_PAIR` |
-| 6 Freeze and follow-up | Freeze receipt, manifest SHA, settlement route, `UNIVERSE:` line, and `SHADOW: NO_LANE (md-only)`. At settlement: sourced process record, lineup diff (names must be on the card), z, p and q grades, reviews |
+| 6 Freeze and follow-up | Freeze time, `Freeze − start` in minutes, freeze receipt, manifest SHA, `UNIVERSE:` line, and `SHADOW: NO_LANE (md-only)`; the settlement route in the annex. At settlement: sourced process record, lineup diff (names must be on the card), z, p and q grades, reviews |
 
 ## D. Rules by topic
 
@@ -139,9 +184,14 @@ All in `SOURCES.md`:
 
 ### D6 Ranking, predictability and dependence
 - **Order by RM-1 q** (`PROBABILITY_TOOLKIT.md` §5). Stated p is printed unchanged beside q, and breaks ties within 0.005. Rows that cannot be separated get unique ordinals labelled `NEAR_TIED`, with the non-predictive tie-break stated.
+- **RM-1's domain** (`PROBABILITY_TOOLKIT.md` §5.0). RM-1 applies only to the eight sport groups it was fitted on: soccer; MLB; other baseball; basketball; cricket; tennis; the oval codes (NFL, NCAA, AFL, AFLW, NRL, NRLW, rugby union); and ice hockey.
+  - Any other sport gets no q. Print `RM1_OUT_OF_DOMAIN`, rank by stated p, and take tiers and `TOP2_QUALITY` from p, labelled `(p tiers)`.
+  - This restores the retired tool's behaviour, which refused such sports; it is not a new model.
 - **`SIDE_FLIP`** (q crosses 0.5 by ≥ 0.05): the flipped side is ranked by q, capped at SUPPORTED, and given a reconciliation line.
   - The stated side may be kept only when TB-1-MD, where it has resolution, gives that side ≥ 0.55. A narrative is never an override.
   - `NEAR_TIED_FLIP` keeps the stated side as a coin flip.
+  - **Top-two disclosure (2026-09-28(e)).** When a `SIDE_FLIP` row sits at Rank 1 or Rank 2, the delivery prints its p beside its q and says plainly: "the card's own probability for this row is <p>, below 0.5. It ranks here only through RM-1's historical recalibration." For a cushion-driven flip, add that the cushion term rests on 26 held-out rows, and name the sport's count from `PROBABILITY_TOOLKIT.md` §5.0.
+  - The rank is not changed: on held-out rows the flipped side won at its q (mean q 0.307 against a 0.308 win rate). A rule overriding it would be a `MODEL_CHANGE` without a test (§D9).
 - **q is a ranking score, not an event probability.** Never multiply q values, and never use q for joint or pair numbers (use p).
 - **`TOP2_QUALITY`:** STRONG / SUPPORTED / TOP1_ONLY / COIN_FLIP, from the effective tiers. Under `TOP2_COIN_FLIP`, the delivery says plainly that the top two are near coin flips.
   - **Rank 1 is only "far more likely to win than lose" in the STRONG tier** (q ≥ 0.70). Historically that won 81% of decisions (73% as Rank 1); below it, 52–63%.
@@ -174,7 +224,10 @@ All in `SOURCES.md`:
   - where TB-1 has no resolution, print it with `TB1_NO_RESOLUTION:<target>`;
   - in uncovered leagues, print `NOT_COVERED` or `UNVALIDATED:<league>`.
 - **The seed comparison:** the cards have not yet beaten the naive baseline (0.2461 against 0.2360; n = 29; the interval spans 0).
-- **Scoring:** half-scaled W/P/L Brier for push-capable rows. A forced pair counts once in decision metrics. Score both p and q (`PROBABILITY_TOOLKIT.md` §10).
+- **Scoring:** half-scaled W/P/L Brier for push-capable rows. A forced pair counts once in decision metrics.
+  - **p** is scored on every row.
+  - **q** is scored in one place only: `T-RM1-PROSPECTIVE`'s paired Brier(q) against Brier(p) on the same decision rows. It is a row-level diagnostic of the ranking model, with the admission conditions in `SCORING_AND_VALIDATION.md` §15.
+  - q is never the card's event probability. It is never pooled with p, never entered in `SKILL_BASELINE_LEDGER.md`, and never multiplied or used for joint or pair numbers (`PROBABILITY_TOOLKIT.md` §10).
 - **Top-slot measures:** the Rank-1 record; the preferred side of the top over/under; Hit@2 excluding covering pairs. "At least one O/U won" is never a success measure (M23).
 - **Historical calibration is a diagnostic only.** The 2026-09-26 figures used a `p ≥ 0.5` proxy. Strict extraction (2026-09-28) certifies zero performance-eligible legacy rows.
 
@@ -200,6 +253,22 @@ Template: `CARD_AND_LOG_TEMPLATES.md` §2.
   - documentation.
 
   A `MODEL_CHANGE` needs the user's explicit instruction. **The user's bar (2026-09-27):** change a model only if it is demonstrably better, meaning a preregistered test with a 95% interval below 0 on held-out data that did not suggest it.
+- **The rule inventory is closed until the checkpoints report** (strengthened 2026-09-28(e) on the user's instruction; M33).
+  - No new named control, test, recurring-mistake number (after M35), card field or flag is created. The closed inventory is:
+    - M1–M35;
+    - the tests listed below;
+    - the card fields and flags in `CARD_AND_LOG_TEMPLATES.md` and `PROBABILITY_TOOLKIT.md` as of CR-2026.09.28-MD4.
+  - **A lesson from a settlement is parked,** not promoted. Write it as one line in `LEARNINGS_INDEX.md` §10 with its evidence pointer, and no ID or status. Parked lines have no effect on any card. They are reviewed together at the first read-out.
+  - **Exceptions:**
+    - a validity repair (it corrects an error; it adds no new predictive idea);
+    - a change the user explicitly instructs.
+
+    Each exception is named in the `CHANGELOG.md` entry that makes it.
+  - Governance releases stay at one manifest per issuing day, validity repairs excepted.
+- **What the checkpoints mean.** "100 prospective decisions from at least 30 cards" (`C-BASELINE-SKILL`) and "25 cards" (`T-RM1-PROSPECTIVE`) are **preregistered read-out points**.
+  - When a count is reached, its decision rule is applied once and recorded (`SKILL_BASELINE_LEDGER.md` rule 7; `LEARNING_REGISTER.md`, `T-RM1-PROSPECTIVE`). The read-out selects one of the preregistered statements, and the pair of read-outs ends this freeze.
+  - A read-out is **not** a proof threshold and grants no performance eligibility. That needs the full admission contract in `RECORD_ELIGIBILITY_SCHEMA.md`.
+  - Which rows count is defined in `SKILL_BASELINE_LEDGER.md` rule 7.
 - **Gates at 2026-09-28** (counted from `SKILL_BASELINE_LEDGER.md` and the logs):
 
   | Gate | Progress |
@@ -236,7 +305,7 @@ Template: `CARD_AND_LOG_TEMPLATES.md` §2.
 
 The live rules are in each sport file's §0 page. This section lists only what every card must print, plus the traps that recur.
 
-**Every sport** prints: `BASELINE_P`; `TEAM_BASELINE_P` (TB-1-MD or its status); RM-1 q; the reference row and width; the predictability row; and `SHADOW: NO_LANE (md-only)`.
+**Every sport** prints: `BASELINE_P`; `TEAM_BASELINE_P` (TB-1-MD or its status); RM-1 q (or `RM1_OUT_OF_DOMAIN`); the reference row and width; the predictability row; and `SHADOW: NO_LANE (md-only)`.
 
 **Shadow models.** The numerical shadow lanes are unavailable in the Markdown-only repository. Print `SHADOW: NO_LANE (md-only)`. `C-MLB-SHADOW` and `C-SPORT-SHADOW` are suspended, not failed.
 

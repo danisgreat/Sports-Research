@@ -10,7 +10,7 @@
 
 ## 1. What the settled record shows (2026-09-26 figures)
 
-Source: `research/settled_rows_2026-09-25/` (rebuilt 2026-09-25(e); 1,264 graded rows from 315 cards, 641 with a probability). Hindsight on self-selected cards; card-cluster intervals.
+Source: the removed `research/settled_rows_2026-09-25/` ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents); rebuilt 2026-09-25(e); 1,264 graded rows from 315 cards, 641 with a probability). Hindsight on self-selected cards; card-cluster intervals.
 
 1. **Calibration looked reasonable; skill is unproven.** All W/L rows with a probability: Brier 0.2268 (639 rows / 155 cards). The p ≥ 0.5 decision proxy: 0.2131 (411 rows). *Corrected 2026-09-28: 0.2268 was mislabelled a "decision Brier"* (review F5). The +6.6% is against the sample's own base rate, not a frozen baseline. Legacy mixed diagnostic only.
 2. **No skill over a naive population table yet.** Seed check +0.0101 (card − baseline), interval [−0.059, +0.089]. Prospective count 0/100.
@@ -44,8 +44,8 @@ Source: `research/settled_rows_2026-09-25/` (rebuilt 2026-09-25(e); 1,264 graded
 | M11 | Uncertainty turned into a directional lean | G-L2 |
 | M12 | Tier gap read as scoring shape | G-L3; no EPL-to-cup transfer |
 | **M13** | **Aggregate used where the game log was one click away (highest-value check)** | G-L7 |
-| M14 | Total probability not derived from the card's own centre and width | G-L8; `tools/card_math.py` |
-| M15 | Control listed, not executed | `audit_card_controls.py`; `C-READING-GATE` |
+| M14 | Total probability not derived from the card's own centre and width | G-L8; `tools/card_math.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) |
+| M15 | Control listed, not executed | `audit_card_controls.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `C-READING-GATE` |
 | M16 | Complement not itemised | G-L9 |
 | M17 | Small-sample rate used as direction | G-L11 |
 | M18 | Top two structurally anti-coupled | G-L10 |
@@ -63,7 +63,7 @@ Source: `research/settled_rows_2026-09-25/` (rebuilt 2026-09-25(e); 1,264 graded
 | M30 | City forecast instead of the gamefeed wind | `RULES_BASEBALL.md` B-2 |
 | M31 | Width chosen without a reference | `C-WIDTH-BENCHMARK`; `C-WIDTH-Z` |
 | M32 | Non-baseball cushion priced like a baseball +1.5 | `C-PLUS-CUSHION`; RM-1 |
-| M33 | Rule churn outruns evidence | `C-RULE-FREEZE`; one manifest per day |
+| M33 | Rule churn outruns evidence | `C-RULE-FREEZE`; one manifest per day; rule inventory closed, lessons parked (§10, 2026-09-28(e)) |
 | M34 | Self-selected sample read as the competition | `C-EVENT-UNIVERSE`; `T-UNIVERSE-VS-SELECTED` |
 | M35 | Frozen field replaced at settlement (e.g. a missing baseline retyped as 0.500) | `CURRENT_RULES.md` §D8; `CARD_AND_LOG_TEMPLATES.md` §2 (added 2026-09-28) |
 
@@ -217,7 +217,9 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 
 ---
 
-## 4. General-algorithm lessons G-L1 to G-L24 (RULES_GENERAL §16, archived in `archive/superseded_2026-09-28/`)
+## 4. General-algorithm lessons G-L1 to G-L24 (RULES_GENERAL §16)
+
+The full text was in the removed `archive/superseded_2026-09-28/` folder ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
 
 | ID | Lesson | Status |
 |---|---|---|
@@ -326,7 +328,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260917b-18 | Phase Under held while the full Under died | Evidence for `C-PHASE-VS-FULL-TOTAL` |
 | L-20260917b-19 | Lineups were not the binding constraint | OBSERVATION (no rule) |
 | L-20260917b-20 | Good practice to preserve (official squad over third-party absence claims) | KEEP |
-| L-20260917b-21 | `audit_card_controls.py` rebuilt and wired in | PROMOTED |
+| L-20260917b-21 | `audit_card_controls.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) rebuilt and wired in | PROMOTED |
 | L-20260917b-22 | Field 5a missing on 13/13 cards | Confirms M15 |
 | L-20260917b-23 | Unauditable logs marked BODY_NOT_CARRIED | PROMOTED |
 | L-20260917b-24 | Every sport has a cushion band → G-L24 | PROMOTED |
@@ -383,7 +385,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260925-13 | Tennis population rates; P(−k.5) ≤ P(win) | REFERENCE; PROMOTED (`C-HCP-COHERENCE`) |
 | L-20260925-14 | EPL and all-30-park references | REFERENCE |
 | L-20260925-15 | NBA back-to-back −1.8; no totals effect | REFERENCE |
-| L-20260925-16 | `receipts.py` | PROMOTED (tool) |
+| L-20260925-16 | `receipts.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) | PROMOTED (tool) |
 | L-20260925-17 | ESPN date ranges return HTTP 400 | Source state |
 | L-20260925-19 | No skill over the naive baseline (seed) | TESTING (`C-BASELINE-SKILL`) |
 | L-20260925-20 | MLB walk-off asymmetry; +1.5 ≈ 0.638 either side | REFERENCE |
@@ -397,7 +399,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260925-31 | Ranks 2–4 carry no ordering information | REFERENCE |
 | L-20260925-32 | Top-two joint failure ≈ independence | REFERENCE |
 | L-20260925-33 | Cohort trend follows sport mix | REFERENCE |
-| L-20260925-34 | `card_math.py` reproduces issued probabilities | PROMOTED (tool) |
+| L-20260925-34 | `card_math.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) reproduces issued probabilities | PROMOTED (tool) |
 | L-20260925-35 | Extractor graded 17 rows backwards | FIXED |
 | L-20260925-36 | Rank-1 success follows the q tier | REFERENCE + `C-TOP2-QUALITY` |
 | L-20260925-37 | Decision-side slope ≈ 1.5 | OPERATIVE in RM-1 (user-authorised) |
@@ -442,7 +444,7 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260926-30 | TB-1 flags for NRL sides and NFL totals rested on point estimates | FIXED (validity repair) |
 | L-20260926-31 | NFL/NRL 0.70–0.80 favourite bands over-confident | TESTING (`T-FAV70-BAND`) |
 | L-20260926-32 | NBL validated (2025-26; 2024-25 mixed); NRL results not significant | OBSERVATION |
-| L-20260926-33 | `mlb_model.py` "starters cannot be reconstructed" claim | FIXED (documentation) |
+| L-20260926-33 | `mlb_model.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) "starters cannot be reconstructed" claim | FIXED (documentation) |
 | `T-MLB-V2-2025` | MLB v2 team prior on the unseen 2025 season | CONCLUDED — replicated (−0.0023 [−0.0042, −0.0005]) |
 | L-20260926-34 | C1: NFL band over-confidence replicates, NRL reverses; shrinking does not improve Brier | NO MODEL CHANGE (user's bar not met) |
 | L-20260928-01 | Markdown-only operation: every tool step has a Markdown procedure | PROMOTED (process; `CURRENT_RULES.md` A11) |
@@ -454,6 +456,12 @@ All PROMOTED unless marked. Origins and full wording: `LEARNING_REGISTER.md` §2
 | L-20260928-07 | Documents consolidated: 18 retired to the archive; sport histories moved out | DONE |
 | L-20260928-08 | 0.2268 was mislabelled a "decision Brier" | FIXED |
 | L-20260928-09 | P6: TB-1-MD has resolution for results in the top five soccer leagues, and for totals in La Liga and the Bundesliga | PROMOTED (anchor extension) |
+| L-20260928-10 | Four of the five cards before this change were `LIVE_ISSUED`, so none could count toward a checkpoint | PROMOTED (process, user-instructed): core frozen before the start, annex after; reading once per session (`CURRENT_RULES.md` §B, §0) |
+| L-20260928-11 | The Markdown conversion dropped the retired tool's RM-1 domain guard; a top-two row could rank above 0.5 while its own p was below 0.5 with no plain disclosure | VALIDITY REPAIR (`RM1_OUT_OF_DOMAIN`, `PROBABILITY_TOOLKIT.md` §5.0) + disclosure; no in-domain rank changed |
+| L-20260928-12 | Documents contradicted each other on scoring q, on what the 100/30 checkpoint means, and on the read-out statistic (the event weighting added 2026-09-28 displaced the preregistered one) | VALIDITY REPAIR: one rule each (`SCORING_AND_VALIDATION.md` §15; `SKILL_BASELINE_LEDGER.md` rule 7); preregistered estimate restored |
+| L-20260928-13 | The link gate missed the sport files: 11 broken local links (L1) and 86 unqualified dead code-span paths (L2) in 30 operating documents, measured on the unmodified tree | VALIDITY REPAIR: audit rules L1/L2 (`VERIFICATION_PROTOCOL.md` §4); 62 removed paths indexed; 0 failures after repair |
+| L-20260928-14 | Rule churn continued after M33 (three manifests on 2026-09-28 before this pass) | PROMOTED (governance, user-instructed): the rule inventory is closed and lessons are parked (§10) until the checkpoints read out |
+| L-20260928-15 | Three table simplifications were undisclosed (independent Poisson goals, fixed run-line ratios, one margin width per league) | DOCUMENTATION: disclosed beside each table as unmeasured; no number changed |
 
 ---
 
@@ -479,7 +487,7 @@ MLB run-line and push caps and fixed variance floors · order-statistic pseudo-t
 
 **Added 2026-09-28:** `T-TB1MD-NRL`. TB-1-MD sides against the population on the NRL 2027 regular season. Preregistered rule: the Brier difference has a 95% week-block interval below 0, then NRL sides may anchor on TB-1-MD (a `MODEL_CHANGE` needing the user's instruction). Otherwise it is closed.
 
-`CURRENT_RULES.md` §D9 lists the headline gates and their progress (maintainers can print the live counts with `python tools/evidence_status.py`). The full list:
+`CURRENT_RULES.md` §D9 lists the headline gates and their progress, counted by hand from the ledgers. The removed `tools/evidence_status.py` once printed them ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). The shadow lanes (`C-MLB-SHADOW`, `C-SPORT-SHADOW`) are suspended in md-only operation. The full list, closed until the checkpoints report (`CURRENT_RULES.md` §D9):
 - **Headline gates:** `C-BASELINE-SKILL` (0/100), `T-RM1-PROSPECTIVE` (0/25 cards, amended 2026-09-26), `C-MARKET-BENCHMARK` (0/100), `C-MLB-SHADOW` (0/150 games), `C-SPORT-SHADOW` (0/150 rows per league), `T-CRICKET-V2-UNSEEN` (needs cricsheet), `T-UNIVERSE-VS-SELECTED` (0/30 + 30 cards).
 - **Calibration and width:** `C-WIDTH-Z`, `C-PROB-EXTREMITY` (79/100, not supported so far), `C-LOW-RESOLUTION-BAND`, `T-PLUS-CUSHION`, `T-TB1-ANCHOR` (NRL sides and NFL totals left it 2026-09-26(e)), `T-FAV70-BAND` (0/100 band games per league, NFL and NRL).
 - **Direction and centre (accrue, no tilt):** `C-RUN-CENTRE-BIAS`, `T-TOTAL-DIRECTION-LEAGUE`, `C-PHASE-VS-FULL-TOTAL`, `O-NPB-ERA-CENTRE`.
@@ -492,3 +500,18 @@ Closed on 2026-09-26 (`CLOSED_UNTESTED`, superseded or answered): 59 historical 
 ## 9. Sport takeaways
 
 Each `RULES_<SPORT>.md` now opens with a §0 live rules page: preconditions, construction order, row rules, track record, reference numbers, withdrawn items and a one-line index of every numbered control. Read that page for the sport's learnings.
+
+---
+
+## 10. Parked lessons (the rule inventory is closed; `CURRENT_RULES.md` §D9)
+
+**Opened 2026-09-28(e).** Until `C-BASELINE-SKILL` and `T-RM1-PROSPECTIVE` read out:
+- a lesson from a settlement or review is written here as **one line**: date · card(s) · the observation · evidence pointer;
+- it has no ID, no status and no effect on any card;
+- parked lines are reviewed together at the first read-out. Only then may one become a test or rule, under the user's 2026-09-27 bar.
+
+Validity repairs and user-instructed changes are not parked; they are dispositioned in `LEARNING_REGISTER.md` and named in `CHANGELOG.md`.
+
+| Date | Card(s) | Observation | Evidence |
+|---|---|---|---|
+| — | — | None yet | — |

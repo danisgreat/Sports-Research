@@ -6,9 +6,12 @@
 
 The framework's forecasting stays market-blind (`CURRENT_RULES.md` §A.1; `METHOD.md` §1.1). This ledger sits entirely **after** settlement:
 
-1. **Who enters rows.** The operator, by hand, after the event is final. Agent sessions never fetch betting sites or odds feeds for any purpose, and never read this ledger while researching or building a card. The ledger is outside the reading gate (`RULES_GENERAL.md` §1).
-2. **When.** `Entered (UTC)` must be later than `Settled (UTC)`. `tools/market_benchmark.py report` excludes any row entered before settlement as `INVALID_ENTRY_ORDER`.
-3. **What is stored.** Only the no-vig closing probability and the de-vig method. Raw odds are never committed (`CONTRIBUTING.md`). Convert them with `python tools/market_benchmark.py devig --odds <all outcomes>` and record the printed probability.
+1. **Who enters rows.** The operator, by hand, after the event is final. Agent sessions never fetch betting sites or odds feeds for any purpose, and never read this ledger while researching or building a card. The ledger is outside the reading gate (`CURRENT_RULES.md` §0 and §A.1; formerly the removed `RULES_GENERAL.md` §1, [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
+2. **When.** `Entered (UTC)` must be later than `Settled (UTC)`. At report time, mark any row entered before settlement `INVALID_ENTRY_ORDER` and exclude it.
+3. **What is stored.** Only the no-vig closing probability and the de-vig method. Raw odds are never committed (`CONTRIBUTING.md`).
+   - Convert by hand with the multiplicative method: for decimal odds o₁…oₙ covering every outcome, p_i = (1/o_i) ÷ Σ(1/o_j). Record p_i to 3 dp.
+   - The `power` and `shin` methods need a maintainer session.
+   - The removed `tools/market_benchmark.py` once did this ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
 4. **What it may not do.** No rule, weight, rank, width, retrospective or learning-register disposition may cite this ledger. It answers one question — where do the cards stand against the market? — and nothing else.
 
 ## Rules
@@ -17,7 +20,7 @@ The framework's forecasting stays market-blind (`CURRENT_RULES.md` §A.1; `METHO
 2. **Card p** is copied from the issued Field 4 table (`C-SUMMARY-FROM-CARD`), never retyped.
 3. **Market p** is the no-vig closing probability of the **exact** contract (same line, same period, same settlement terms). If the closing market for that exact line is not available, the row is not entered. Do not interpolate between lines.
 4. **Method** is one of `multiplicative`, `power`, `shin`. Use one method consistently within a season and name it.
-5. **Report** with `python tools/market_benchmark.py report`: paired Brier (card − market; negative means the card was better), by family, with a card-cluster bootstrap interval.
+5. **Report** the paired Brier (card − market; negative means the card was better), by family, computed as in `SKILL_BASELINE_LEDGER.md` rule 6, with a card-cluster bootstrap interval from a maintainer session.
 6. **Decision rule** (preregistered 2026-09-26). After **100 decisions from at least 30 cards**:
    - **Interval below 0:** "the cards beat the closing line on this sample." Still not a value claim.
    - **Interval spans 0:** "no demonstrated difference from the closing market."
@@ -25,7 +28,7 @@ The framework's forecasting stays market-blind (`CURRENT_RULES.md` §A.1; `METHO
 
 ## Rows
 
-None yet. The first eligible rows are decisions from cards issued under `CONTROL_MANIFEST_2026-09-26.md` or later.
+None yet. The first eligible rows are decisions from cards issued under `CONTROL_MANIFEST_2026-09-26.md` or later (a freeze name; the file is removed from the tree, [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
 
 | Decision | Card | Rank | Contract (as issued) | Family | Card p | Market p (no-vig close) | Method | Settled (UTC) | Entered (UTC) | Result |
 |---|---|---|---|---|---:|---:|---|---|---|---|

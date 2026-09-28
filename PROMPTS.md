@@ -4,7 +4,7 @@
 
 Notes for the operator:
 - **The supplied rows are usually complementary pairs.** Bullets −1.5 with Hawks +1.5, or Over with Under the same line, always settle 2 W / 2 L. Tigers ML with Bay Stars +1.5 is a covering pair: at least one always wins. The prompts ask for the labels, so the arithmetic is never read as skill.
-- **"Take as long as needed" and "pregame" are compatible.** The model keeps refreshing until the start and freezes then. Work that runs past the start is labelled `LIVE_ISSUED` and kept out of pregame scoring.
+- **"Take as long as needed" and "pregame" are compatible.** The model freezes the card's **core** (everything that sets a probability or rank) by about 5 minutes before the start, and writes the **annex** (disclosures) afterwards (`CURRENT_RULES.md` §B, "Timing"). Send requests at least 90 minutes before the start where you can. A core frozen after the start is `LIVE_ISSUED` and kept out of pregame scoring.
 - **Never paste passwords, codes or keys into a prompt.**
 
 ---
@@ -21,13 +21,15 @@ Rules for this chat:
   containing `PREDICTION_MINI_RUNNING_LOG_<first ID>_ONWARD.md`.
   If you cannot write there, say so once and paste the full log after every query.
 
-Before the first prediction, read in full:
+Before the first prediction, read in full (once for this chat; again only if the Current freeze receipt SHA at the top of GAME_LOG_STATUS_CURRENT.md changes):
 - CURRENT_RULES.md (the operating manual);
 - CARD_AND_LOG_TEMPLATES.md;
 - PROBABILITY_TOOLKIT.md;
 - SOURCES.md;
-- the sport file RULES_<SPORT>.md §0 for each sport I ask about;
 - the top snapshot of PREDICTION_LOG_COMBINED_5.md and GAME_LOG_STATUS_CURRENT.md.
+Record the read time and receipt SHA in the log header.
+
+Before each prediction, read the sport file RULES_<SPORT>.md §0 and the sport's SOURCES.md §3 section.
 
 Create the log with the header and the section order in CARD_AND_LOG_TEMPLATES.md §3:
 0. Universe declarations
@@ -42,10 +44,10 @@ IDs:
 - Never overwrite or renumber an issued ID.
 
 After every prediction query:
-1. give the prediction;
-2. append the full card (CARD_AND_LOG_TEMPLATES.md §1) to Incomplete / Unsettled before delivering it;
-3. record every source (owner, link, retrieval time, OPENED/SNIPPET/ASSUMED);
-4. add document mappings for any learning, source or proposed rule. Proposed rules are TESTING only, because the rule freeze is in force;
+1. freeze the card's core before the start and append it (CARD_AND_LOG_TEMPLATES.md §1) to Incomplete / Unsettled before delivering it;
+2. give the prediction;
+3. append the annex (§1A) under the core, with every source (owner, link, retrieval time, OPENED/SNIPPET/ASSUMED);
+4. add document mappings for any learning or source. The rule inventory is closed: a proposed rule is parked as one line, not opened as a rule or test;
 5. give the entire updated mini log.
 
 Do not run a retrospective unless I ask.
@@ -93,17 +95,18 @@ Research and card this event under the framework in the linked Drive, using its 
    - Build one joint distribution, and print the reference row and width.
    - Show the arithmetic from the distribution to each row's probability.
 6. Rank.
-   - RM-1 q for each row (PROBABILITY_TOOLKIT.md §5); rank by q, with #1 the most likely.
-   - Print the tier, the flags and TOP2_QUALITY.
+   - RM-1 q for each row (PROBABILITY_TOOLKIT.md §5); rank by q, with #1 the most likely. If the sport is outside RM-1's eight sport groups (§5.0), print RM1_OUT_OF_DOMAIN and rank by p.
+   - Print the tier, the flags and TOP2_QUALITY. If a SIDE_FLIP row is in the top two, say plainly that the card's own probability for it is below 0.5.
    - Label FORCED_PAIR / COVERING_PAIR, and give P(R1 and R2) and P(both fail) from the probabilities p.
    - Print the league's predictability row. Say plainly when the slate cannot produce a STRONG Rank 1, or when the supplied rows are complementary pairs.
    - You may add rows of your own. Price them from the same distribution and label them as additions.
 7. Give the projected winner with its probability. List more-likely alternative contracts separately, priced from the same distribution and unranked.
-8. Timing.
-   - Take as long as you need; accuracy beats speed.
-   - Refresh lineups and news as late as possible, and freeze just before the start.
-   - If your work passes the start, re-check the state. If the event is live, finish the card, label it LIVE_ISSUED and use no in-game information.
-9. Run the self-audit (CARD_AND_LOG_TEMPLATES.md §5). Append the card to the mini log before delivering it, then give the full updated log.
+8. Timing (CURRENT_RULES.md §B, "Timing").
+   - Build the core first: everything in steps 1–7 that sets a probability or a rank.
+   - Refresh lineups and news 30–5 minutes before the start, and freeze the core by 5 minutes before. You may re-freeze before the start if the official lineup lands; the last pregame freeze is the issue.
+   - After the freeze, write the annex (CARD_AND_LOG_TEMPLATES.md §1A): departure ledger, kill paths, windows, alternatives, settlement routes, the full source table. The annex never changes a frozen number and uses no in-game information.
+   - If the core cannot pass the blocking audit before the start, label the card LIVE_ISSUED.
+9. Run the self-audit's core items (CARD_AND_LOG_TEMPLATES.md §5). Append the core to the mini log before delivering it; then append the annex and give the full updated log.
 
 Never fabricate or guess. Say what you could not confirm. No retrospective yet.
 ```
@@ -202,7 +205,7 @@ Settle every entry in this mini log that is no longer live, following CURRENT_RU
    - the eight validation questions;
    - the three questions;
    - which kill paths occurred.
-4. Link each finding to LEARNINGS_INDEX.md and the recurring mistakes (M1–M35). Classify it as one-off, sport-specific, cross-sport, or a candidate for a test. Proposed rules are TESTING only: no single game creates a rule.
+4. Link each finding to LEARNINGS_INDEX.md and the recurring mistakes (M1–M35). Classify it as one-off, sport-specific or cross-sport. The rule inventory is closed until the checkpoints report: a proposed rule or test is parked as one line for LEARNINGS_INDEX.md §10, and no single game creates a rule.
 5. Sources: assess accuracy and timeliness, and record new reliable sources with their route and role.
 6. IDs: check the Part 5 snapshot for conflicts. Give any conflicting entry a TMP ID in the conflict section, fully settled.
 7. Append a SKILL_BASELINE_LEDGER-format row for each settled decision (CARD_AND_LOG_TEMPLATES.md §6) in the mini log's learnings section, for import.
@@ -230,13 +233,13 @@ Import the supplied mini log(s) into the canonical record, following CARD_AND_LO
    - blind spots, with whether each was available pre-game; links to earlier lessons; what went right.
 4. Across the batch, compute from the logs (show the arithmetic):
    - Rank-1 and top-two records by q tier;
-   - Brier for p, q and BASELINE_P on the same decisions;
+   - Brier for p and BASELINE_P on the same decisions (SKILL_BASELINE_LEDGER.md), and separately Brier(q) against Brier(p) as the T-RM1-PROSPECTIVE diagnostic (SCORING_AND_VALIDATION.md §15 admission rules);
    - results by league against its predictability row;
    - covering and forced pairs reported separately.
    Every figure carries its n.
 5. Turn findings into documents under the rule freeze:
-   - validity repairs, retrieval and integrity controls, and measurement or disclosure controls may be applied;
-   - a new predictive rule, weight or cap becomes a TESTING row in LEARNING_REGISTER.md (hypothesis, population, checkpoint, decision rule), with one line in LEARNINGS_INDEX.md;
+   - validity repairs may be applied;
+   - the rule inventory is closed until the checkpoints report (CURRENT_RULES.md §D9): any new control, test, flag or predictive idea is parked as one line in LEARNINGS_INDEX.md §10, with its evidence pointer;
    - a MODEL_CHANGE happens only if I instruct it after seeing the evidence, and only if it passes a preregistered held-out test.
    - Put sport findings in the sport file's §0, cross-sport findings in CURRENT_RULES.md, and new sources in SOURCES.md.
    - Execute or disposition every document-mapping row.
@@ -267,7 +270,7 @@ Review all completed and settled logs, and find what could genuinely improve the
    - preregister the hypothesis and decision rule first;
    - test on held-out games that did not suggest it;
    - the improvement needs a 95% interval entirely below 0 in every independent window.
-   Tests that need code are run by a maintainer session and reported back as Markdown. Until then, the candidate is TESTING.
+   Tests that need code are run by a maintainer session and reported back as Markdown. While the rule inventory is closed (CURRENT_RULES.md §D9), a candidate is parked in LEARNINGS_INDEX.md §10 unless I explicitly instruct otherwise.
 4. Apply only what qualifies:
    - validity repairs and disclosure or measurement controls may be applied now;
    - anything else is reported to me with its evidence, and waits for my explicit instruction.

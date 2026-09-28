@@ -18,11 +18,41 @@ For each of the 20 disputed rows, compare the issued p, q, contract, and literal
 
 Check the historical preregistration and outputs in [Validation Evidence](VALIDATION_EVIDENCE.md) against the Git blob IDs and byte hashes listed there. Label these as historical aggregate results. A full rerun requires game-level source data and dependent modules absent from the current tree. Do not convert these results into a prospective card-skill claim.
 
-For the [Skill Baseline Ledger](SKILL_BASELINE_LEDGER.md), independently recompute `(card p - y)^2` and `(baseline p - y)^2` for the 29 seed rows. Required rounded means are 0.2461 and 0.2360, so card minus baseline is +0.0101. Confirm that the prospective section still has zero rows and that its 100-decision, 30-card checkpoint remains unopened. RM-1 q is a rank score and must not be scored as an event probability.
+For the [Skill Baseline Ledger](SKILL_BASELINE_LEDGER.md), independently recompute `(card p - y)^2` and `(baseline p - y)^2` for the 29 seed rows. Required rounded means are 0.2461 and 0.2360, so card minus baseline is +0.0101. Confirm that the prospective section still has zero rows and that its 100-decision, 30-card read-out point has not been reached. Which rows count, and what the read-out means, are defined once, in the ledger's rule 7.
+
+RM-1 q is a row-calibrated ranking score. It is scored only in `T-RM1-PROSPECTIVE`'s paired Brier(q) against Brier(p) diagnostic, under the admission rules in `SCORING_AND_VALIDATION.md` §15. It is never scored or reported as the card's event probability.
+
+Check that the four documents that state these rules still agree: `CURRENT_RULES.md` §D7/§D9, `PROBABILITY_TOOLKIT.md` §10, `SCORING_AND_VALIDATION.md` §13/§15, and `RECORD_ELIGIBILITY_SCHEMA.md`.
 
 ## 4. Link and freeze receipt gate
 
-Resolve every local Markdown link in the current operating documents: `README.md`, `METHOD.md`, `CURRENT_RULES.md`, `PROBABILITY_TOOLKIT.md`, `CARD_AND_LOG_TEMPLATES.md`, `SOURCES.md`, `PROMPTS.md`, `BASE_RATES_REGISTER.md`, `CONTRIBUTING.md`, the current status header, and the reconciliation/validation documents. The [Historical Link Index](HISTORICAL_LINK_INDEX.md) records broken old paths inside preserved ledgers, with immutable Git recovery links where available. Do not silently edit frozen historical text merely to repair a link.
+**Scope: every operating document.** That is every root `.md` file except:
+- the preserved historical ledgers (`CHANGELOG.md`, `LEARNING_REGISTER.md`, `PREDICTION_LOG_COMBINED*.md`, `CONTROL_MANIFEST_*.md`, `VERIFICATION_RECEIPT_*.md`);
+- `HISTORICAL_LINK_INDEX.md` itself;
+- the body of `GAME_LOG_STATUS_CURRENT.md`, whose header line is checked.
+
+So the scope includes all ten `RULES_<SPORT>.md` files and both `LEAGUE_RULES_*.md` files, which the model reads before every card. (Before 2026-09-28(e) this gate listed only nine documents and missed a broken link on line 5 of every sport file.)
+
+**What counts as a repository path:**
+- any local Markdown link target;
+- any code span that starts with a directory the repository has ever had (`tools/`, `research/`, `archive/`, `reviews/` and so on; all removed, see the [index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents));
+- any code span that is a bare file name, with a `.md`, `.py`, `.json`, `.csv`, `.txt` or `.yml` extension, that exists anywhere in Git history.
+
+API route slugs (for example `football/nfl`) and URL fragments are not repository paths.
+
+**Two rules, both must pass:**
+- **L1.** Every local Markdown link resolves in the current tree. A broken link is repointed to its pinned Git commit or to a current document; a recovery note beside it does not excuse it.
+- **L2.** A code-span path that does not resolve is qualified on its own line or the next non-blank line by one of:
+  - a link to [Removed paths cited in operating documents](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents);
+  - a pinned GitHub commit link;
+  - a Git object ID;
+  - the words "Original path:".
+
+  Every such path must have a row in that index section.
+
+A text instruction to run a removed tool is not repaired by a link. Rewrite it as the Markdown procedure that replaced it.
+
+The [Historical Link Index](HISTORICAL_LINK_INDEX.md) also records broken old paths inside preserved ledgers, with immutable Git recovery links where available. Do not silently edit frozen historical text merely to repair a link.
 
 Create the next `CONTROL_MANIFEST_*.md` after all stable document edits. Hash UTF-8 contents normalized to CRLF as specified in the manifest, list the stable governance and frozen source files, and exclude the manifest itself and the two living logs if their contents will change. Point `METHOD.md` to the new manifest and put that manifest's own normalized-CRLF SHA-256 into the first line of `GAME_LOG_STATUS_CURRENT.md`. Recheck every listed file and the receipt after those pointer updates.
 

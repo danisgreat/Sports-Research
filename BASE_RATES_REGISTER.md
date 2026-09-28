@@ -327,7 +327,7 @@ z = (actual − card centre) / card width, from each card's Field 3 line and the
 
 ### 7.7 NFL, AFL and NRL references, TB-1 widths and underdog-cushion cover rates (derived 2026-09-25(e))
 
-**Source.** ESPN site API scoreboards (`football/nfl`, `australian-football/afl`, `rugby-league/3`), one date per call. There were 1,704 completed games and 0 failed days. The NRL regular season is ESPN season type 1. Query: `research/team_baseline_2026-09-25e/oval_base_rates.py` → `oval_base_rates.json`. No odds are read. These rows replace `NOT_YET_DERIVED` for the NFL, AFL and NRL.
+**Source.** ESPN site API scoreboards (`football/nfl`, `australian-football/afl`, `rugby-league/3`), one date per call. There were 1,704 completed games and 0 failed days. The NRL regular season is ESPN season type 1. Query: `research/team_baseline_2026-09-25e/oval_base_rates.py` → `oval_base_rates.json` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). No odds are read. These rows replace `NOT_YET_DERIVED` for the NFL, AFL and NRL.
 
 #### (a) Population rows
 
@@ -388,7 +388,7 @@ The underdog is the side with the lower leak-free TB-1 margin, never the market.
 
 #### (d) TB-1 resolution map (out of sample, latest season)
 
-Details are in `research/team_baseline_2026-09-25e/README.md`.
+Details are in `research/team_baseline_2026-09-25e/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).
 
 | Target | TB-1 beats the base rate | No resolution |
 |---|---|---|
@@ -397,11 +397,11 @@ Details are in `research/team_baseline_2026-09-25e/README.md`.
 
 ### 7.8 Predictability map — how often a STRONG pick exists, by league (derived 2026-09-26(e); EXPLORATORY, descriptive)
 
-**Source:** `research/predictability_2026-09-26/p5_predictability_results.json` (script `p5_predictability_map.py`).
+**Source:** `research/predictability_2026-09-26/p5_predictability_results.json` (script `p5_predictability_map.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))).
 
 **Method:**
 - The historically evaluated team model was reported as replayed without future games on each league's latest season: tools/sport_models.py A1 for the ESPN leagues, tools/mlb_model.py A1 team-only for MLB. The game-level rerun inputs are absent from the current Markdown tree.
-- "Favourite ≥ 0.70" is the STRONG tier, where Rank 1 won about 80% on the cards (`research/rank_model_2026-09-25e`).
+- "Favourite ≥ 0.70" is the STRONG tier, where Rank 1 won about 80% on the cards (`research/rank_model_2026-09-25e` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))).
 - The total line is floor(mean of prior games) + 0.5, which is not a market line.
 
 No odds were read. This is a reference row for choosing and describing slates. It is not a forecast, and it moves no probability.
@@ -422,7 +422,7 @@ No odds were read. This is a reference row for choosing and describing slates. I
 
 ‡ The 0.70–0.80 band is over-confident: NFL 67% at a stated 0.747; NRL 67% at 0.737.
 
-**Measured elsewhere** (`research/sport_models_2026-09-26/README.md`):
+**Measured elsewhere** (`research/sport_models_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))):
 - ATP winners are predictable by Elo: Brier 0.222 against a coin flip's 0.25.
 - IPL results are not predictable by a team model: 0.254 against 0.25.
 
@@ -430,16 +430,17 @@ No odds were read. This is a reference row for choosing and describing slates. I
 - **STRONG sides:** routine in the AFL and basketball, common in the NFL, uncommon in the NRL, rare in the NHL and in soccer three-way results, and **absent in MLB**.
 - **Totals** rarely reach 0.70 at a sensible line in any league.
 
-**Correction to §7.7(d)** (not rewritten above). With 95% week-block intervals (`p4_tb1_intervals.json`):
+**Correction to §7.7(d)** (not rewritten above). With 95% week-block intervals (`p4_tb1_intervals.json` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))):
 
 | Target | Significant TB-1 gain over the base rate | Not significant |
 |---|---|---|
 | Sides | NBA, WNBA, NBL, NFL, AFL, EPL, and **NHL and MLB** (both tiny) | **NRL** |
 | Totals | WNBA only | NBA, NFL and the rest; EPL totals were significantly **worse** |
 
-**What changed in the TB-1 flags** (`tools/team_baseline.py` `resolution`; validity repair):
-- **Withdrawn:** NRL sides and NFL totals. NFL 2021–2025 totals were 0.2403 v 0.2423 over 1,359 games (`research/sport_models_2026-09-26/validation_results.json`), so the single-season gain does not replicate.
-- **Kept:** NBA totals. The 2025-26 interval alone crosses 0 ([−0.018, +0.001]), but over 2023–26 TB-1 was 0.2129 v 0.2308 over 3,689 games.
+**What changed in the TB-1 flags** (`tools/team_baseline.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) `resolution`; validity repair):
+- **Withdrawn:** NRL sides and NFL totals. NFL 2021–2025 totals were 0.2403 v 0.2423 over 1,359 games (`research/sport_models_2026-09-26/validation_results.json` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))), so the single-season gain does not replicate.
+- **Kept:** NBA totals. The 2025-26 interval alone crosses 0 ([−0.018, +0.001]), but over 2023–26 TB-1 was 0.2129 v 0.2308 over 3,689 games.
+
 
 **The hand-computed version (2026-09-28).** TB-1-MD (`PROBABILITY_TOOLKIT.md` §4) reproduces these verdicts. It was at least as accurate as the tool's TB-1 in all nine leagues, and its NRL 2026 side gain was significant. The flags above are unchanged, and NRL is re-tested on 2027 (`T-TB1MD-NRL`).
 

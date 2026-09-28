@@ -1,6 +1,6 @@
 # Prospective record and eligibility contract
 
-**Current publication state, 2026-09-28:** zero verified performance-eligible decisions. All issued cards are `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE`; `C-RULE-FREEZE` remains in force. This Markdown contract replaces the current-tree pointers to deleted `research/settled_rows_2026-09-28/RECORD_SCHEMA.md` and `CAPABILITY_STATUS.md` (parent Git blobs `587c7e39cca30fef3dd62c6d90e0b047888d2f00` and `a6ef62b0d5ccf016bfb0358686939253470c3f04`). It states what must be recorded; it does not claim that a machine validator or a prospective dataset exists in this Markdown-only tree.
+**Current publication state, 2026-09-28:** zero verified performance-eligible decisions. All issued cards are `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE`; `C-RULE-FREEZE` remains in force. This Markdown contract replaces the current-tree pointers to deleted `research/settled_rows_2026-09-28/RECORD_SCHEMA.md` and `CAPABILITY_STATUS.md` (parent Git blobs `587c7e39cca30fef3dd62c6d90e0b047888d2f00` and `a6ef62b0d5ccf016bfb0358686939253470c3f04`; [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). It states what must be recorded; it does not claim that a machine validator or a prospective dataset exists in this Markdown-only tree.
 
 ## Grain and required fields
 
@@ -21,7 +21,11 @@ One row is one **issued target decision at one forecast freeze and one settlemen
 
 Require latest available input ≤ cutoff < issue < actual start for a pregame record, plus at least three independent pre-issue identity/state lineages and three independent post-start terminal lineages. A live-issued card retains its actual horizon and cannot be converted to pregame. Confirm exact contract, event and settlement revisions; compare every number and rank with the frozen issue. Require a same-contract baseline measured without future information. A valid-looking row alone never grants eligibility. Any missing timestamp, identity, baseline, independent lineage, or build receipt fails closed with an explicit reason.
 
-Push-capable contracts need a vector-aware scoring method; binary p-versus-q comparisons remain blocked. RM-1 q is a ranking score, so multiplying q values or treating q as the card's event probability is invalid. The 100 decisions / 30 cards, 25 RM-1 cards and 150 shadow games mentioned in historical plans are review checkpoints, not proof thresholds. Evidence of prospective skill additionally needs a point-in-time cohort, a frozen comparator, chronological evaluation, calibration and uncertainty, critical-slice checks, and untouched blind shadow observations.
+Push-capable contracts need a vector-aware scoring method. Until one is specified, they are excluded, and counted, from the binary q-versus-p comparison.
+
+RM-1 q is a row-calibrated ranking score (`ROW_CALIBRATED_NOT_JOINT`). It is scored in one place only: `T-RM1-PROSPECTIVE`'s paired Brier(q) against Brier(p), as a row-level diagnostic of the ranking model, under the admission rules in `SCORING_AND_VALIDATION.md` §15. Treating q as the card's event probability, multiplying q values, or using q for joint numbers is invalid.
+
+The 100 decisions / 30 cards (`C-BASELINE-SKILL`) and the 25 RM-1 cards (`T-RM1-PROSPECTIVE`) are **preregistered read-out points**. When a count is reached, its preregistered decision rule is applied once (`SKILL_BASELINE_LEDGER.md` rule 7; `CURRENT_RULES.md` §D9). A read-out is not a proof threshold and grants no eligibility under this contract. The 150 shadow games in historical plans belong to lanes suspended in md-only operation. Evidence of prospective skill additionally needs a point-in-time cohort, a frozen comparator, chronological evaluation, calibration and uncertainty, critical-slice checks, and untouched blind shadow observations.
 
 ## Current capability by scope
 

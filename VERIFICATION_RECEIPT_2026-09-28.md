@@ -1,8 +1,23 @@
-# Verification receipt — 2026-09-28(d)
+# Verification receipt — 2026-09-28(d) and (e)
 
 This receipt records executed checks for the Markdown evidence and custody repair. The [protocol](VERIFICATION_PROTOCOL.md) defines the gates. It is a living execution note, excluded from the stable control manifest so the manifest's own SHA-256 can be recorded here without a circular hash.
 
-## Executed results
+## Executed results — 2026-09-28(e) review improvements (manifest -7)
+
+These checks were run by a maintainer session after the last edit, against the uncommitted working tree on `main` (base `f2da4ce`).
+
+| Gate | Result |
+|---|---|
+| Repository layout | 58 content files, all `.md`, at the root or directly in `prediction logs/`. The one new file is `CONTROL_MANIFEST_2026-09-28-7.md` |
+| Frozen source custody | The P-518 onward mini log's raw SHA-256 is still `c4d497bf…cf30`. Parts 1–5, everything in `prediction logs/`, and `P518_P522_RECONCILIATION.md` are unchanged (`git diff --quiet`) |
+| Numbers unchanged | Every numeric table row that existed at `f2da4ce` is present, unchanged and in order: toolkit 337 rows, base-rates register 149, current rules 20, ledger 33, sport files 29. The only differing row is the intended version line in the mini-log header template. The seed Brier still recomputes to 0.2461 against 0.2360 (n = 29) |
+| Contradictions | No operating document still says "score both p and q", "must not be scored as an event probability", "review checkpoints, not proof thresholds", or makes the event-weighted estimate principal. The four documents in protocol §3 agree |
+| Path audit (protocol §4) | 30 operating documents. On the unmodified tree: 11 L1 failures (broken local links) and 86 L2 failures (unqualified dead code-span paths). After repair: **0 L1, 0 L2**. There are 113 qualified references to 62 removed paths, all indexed and all recoverable from reachable Git history |
+| Freeze receipt | [Manifest -7](CONTROL_MANIFEST_2026-09-28-7.md) lists 54 stable files: the 53 in -6 plus -6 itself. All 54 normalized-CRLF SHA-256 values and byte counts matched on independent readback. Its own normalized SHA-256 is `a25f89fa04ef02d80e985f3f9f3a829a2a2780922923de9cfbabc339bb6df969`, matching the first status line and the `METHOD.md` pointer. Manifest -6 is unchanged (`f74d0369…`) |
+| Line endings | Six files had mixed line endings, either from earlier edits or from being written with LF; they were converted to CRLF. The conversion was verified to leave each file's manifest-normalized hash unchanged. `git diff --check` passed |
+| Publication | **Not committed or pushed** in this session. Protocol §5 (stage, commit, push, `HEAD` = `origin/main`) remains to be run when the user authorises publication |
+
+## Executed results — 2026-09-28(d)
 
 | Gate | Result |
 |---|---|

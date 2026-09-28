@@ -1,8 +1,8 @@
 # METHOD — version and freeze receipt
 
 Status: **ACTIVE**
-Method version: **MDS-2026.09.28-v5.0 (md-only)**
-Control revision: **CR-2026.09.28-MD3**. Freeze the normalized-CRLF SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-28-6.md](CONTROL_MANIFEST_2026-09-28-6.md) with every new card. Copy the manifest name and its SHA-256 onto the card. The SHA is printed in the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`, a living file the manifest does not hash, so it can carry the manifest's own SHA.
+Method version: **MDS-2026.09.28-v5.1 (md-only)**
+Control revision: **CR-2026.09.28-MD4**. Freeze the normalized-CRLF SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-28-7.md](CONTROL_MANIFEST_2026-09-28-7.md) with every new card. Copy the manifest name and its SHA-256 onto the card. The SHA is printed in the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`, a living file the manifest does not hash, so it can carry the manifest's own SHA.
 Scoring version: **SCV-2026.09.19-v2**
 
 **This file is a pointer, not a procedure.** From 2026-09-28 the forecasting model works from Markdown documents only:
@@ -22,4 +22,13 @@ Scoring version: **SCV-2026.09.19-v2**
 - No probability, width, centre or ranking rule changed.
 - The manifest remains the maintainers' integrity receipt. A maintainer updates and verifies the Markdown receipt; the model only copies its name and SHA.
 
-**2026-09-28 MD3 evidence repair.** Forecast coefficients and ranking arithmetic are unchanged. The current tree now includes [P-518–P-522 reconciliation](P518_P522_RECONCILIATION.md), [historical validation evidence](VALIDATION_EVIDENCE.md), [prospective record requirements](RECORD_ELIGIBILITY_SCHEMA.md), [historical link recovery](HISTORICAL_LINK_INDEX.md), and a [verification protocol](VERIFICATION_PROTOCOL.md). Historical aggregate baseline effects remain provisional until game-level data permit independent replication. Parts 1–4 and the P-518 onward working mini log remain frozen. The `-4` and `-5` manifests remain historical receipts even if their original headers call them current; this header and `-6` identify the active receipt.
+**2026-09-28 MD3 evidence repair.** Forecast coefficients and ranking arithmetic are unchanged. The current tree now includes [P-518–P-522 reconciliation](P518_P522_RECONCILIATION.md), [historical validation evidence](VALIDATION_EVIDENCE.md), [prospective record requirements](RECORD_ELIGIBILITY_SCHEMA.md), [historical link recovery](HISTORICAL_LINK_INDEX.md), and a [verification protocol](VERIFICATION_PROTOCOL.md). Historical aggregate baseline effects remain provisional until game-level data permit independent replication. Parts 1–4 and the P-518 onward working mini log remain frozen.
+
+**What changed in v5.1 (2026-09-28(e), MD4; user-instructed review improvements).** No probability, width, centre, family mass or in-domain rank rule changed. The changes are to the card's issue process and to the consistency of the documents:
+- **Core first, annex after** (`CURRENT_RULES.md` §B). The core, meaning everything that sets a probability or rank, is frozen before the start. Disclosures follow in an annex that cannot change a frozen number. The long documents are read once per session.
+- **RM-1 domain guard restored** (`PROBABILITY_TOOLKIT.md` §5.0). A sport outside RM-1's eight fitted sport groups gets `RM1_OUT_OF_DOMAIN` and ranks by p, as the retired tool did. A `SIDE_FLIP` row in the top two carries a plain-language disclosure; its rank is unchanged.
+- **One rule for scoring q, and one meaning for the checkpoints.** The rule is in `SCORING_AND_VALIDATION.md` §15 and `SKILL_BASELINE_LEDGER.md` rule 7. The preregistered decision-weighted estimate is restored as the read-out statistic.
+- **Removed paths are audited** (`VERIFICATION_PROTOCOL.md` §4, rules L1 and L2), and indexed in `HISTORICAL_LINK_INDEX.md`.
+- **The rule inventory is closed** until the checkpoints read out (`CURRENT_RULES.md` §D9).
+
+**Receipts.** The `-4`, `-5` and `-6` manifests remain historical receipts, even though their original headers call them current. This header and `-7` identify the active receipt. Cards frozen under `-6` keep it.

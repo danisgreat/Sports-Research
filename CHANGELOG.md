@@ -6,6 +6,31 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-28(e) — review improvements (MDS-2026.09.28-v5.1, CR-2026.09.28-MD4, manifest -7)
+
+**Why.** A comprehensive review rated the repository 6/10, and the user instructed that every improvement it listed be implemented. **Category:** validity repairs, plus process and governance changes that the user explicitly instructed (the named exceptions to the closed rule inventory). No probability, width, centre, family mass, coefficient or in-domain rank changed. Dispositions: `LEARNING_REGISTER.md` §"2026-09-28(e)", L-20260928-10 to -15.
+
+- **Issue before the start** (user-instructed). Four of the last five cards were `LIVE_ISSUED`.
+  - Cards now freeze a **core** (everything that sets a probability or rank) by 5 minutes before the start, and append an **annex** of disclosures after the freeze. The annex cannot change a frozen number.
+  - The long documents are read once per session, or when the receipt SHA changes.
+  - Files: `CURRENT_RULES.md` §0, §A.5, §B, §C; `CARD_AND_LOG_TEMPLATES.md` §1, §1A, §3, §5, §6, §7; `PROMPTS.md`.
+- **RM-1 domain guard restored** (validity repair). A sport outside RM-1's eight fitted sport groups gets `RM1_OUT_OF_DOMAIN` and ranks by p, as the retired tool required.
+  - A `SIDE_FLIP` row in the top two must say that its own p is below 0.5.
+  - RM-1's per-group evidence and its shape are documented (`PROBABILITY_TOOLKIT.md` §5.0, §5.2, §5.3).
+  - The review's stronger proposal, to forbid p < 0.5 at Rank 1, was **not** implemented. The held-out evidence supports the flip, and the change would fail the user's 2026-09-27 bar.
+- **Contradictions reconciled** (validity repair).
+  - q is scored only as `T-RM1-PROSPECTIVE`'s paired diagnostic (`SCORING_AND_VALIDATION.md` §15).
+  - The 100/30 and 25-card counts are preregistered read-out points, not proof thresholds (`SKILL_BASELINE_LEDGER.md` rule 7).
+  - The preregistered decision-weighted estimate is restored as the read-out statistic. `989b62c` had made an event-weighted estimate "principal"; that estimate is now a secondary diagnostic.
+- **Path audit** (validity repair). `VERIFICATION_PROTOCOL.md` §4 now covers every operating document, with rules L1 (local links resolve) and L2 (dead code-span paths qualified).
+  - The unmodified tree failed 11 L1 and 86 L2 checks. After repair, both are 0.
+  - The ten sport-file history links and one cricket link were repointed to pinned commits.
+  - Instructions to run removed tools were rewritten as the Markdown procedures that replaced them (`SCORING_AND_VALIDATION.md` §13–§16, `MARKET_BENCHMARK_LEDGER.md`, `LEARNINGS_INDEX.md` §8).
+  - 62 removed paths were indexed, all recoverable (`HISTORICAL_LINK_INDEX.md`, "Removed paths cited in operating documents").
+- **Rule inventory closed** (user-instructed). No new control, test, M-number, card field or flag is created until `C-BASELINE-SKILL` and `T-RM1-PROSPECTIVE` read out. Lessons are parked in `LEARNINGS_INDEX.md` §10 (`CURRENT_RULES.md` §D9).
+- **Disclosures.** The unmeasured table simplifications are disclosed beside their tables (`PROBABILITY_TOOLKIT.md` §1.3, §2.1, §3.1). The stale `MD1` control revision in the card template was corrected.
+- **Receipt.** `CONTROL_MANIFEST_2026-09-28-7.md`; `METHOD.md` and the first line of `GAME_LOG_STATUS_CURRENT.md` point to it. This is the fourth manifest dated 2026-09-28, allowed by the validity-repair exception to the one-per-day rule (M33). The P-518 onward mini log and Parts 1–4 are unchanged.
+
 ### 2026-09-28(d) — Markdown evidence and custody repair
 
 The P-518–P-522 working mini log remains byte-for-byte frozen. [P-518–P-522 Reconciliation](P518_P522_RECONCILIATION.md) records the five reserved, unimported IDs, official event/result checks, two wrong settlement event references, process conflicts, all 20 issue-versus-settlement baseline differences, and the P-520 q-order conflict. Canonical custody remains through P-517; next ID stays HOLD. None of the five cards is performance eligible.
