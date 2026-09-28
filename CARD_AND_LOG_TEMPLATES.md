@@ -3,7 +3,7 @@
 **Opened 2026-09-28 (md-only operation).** Copy these templates. Fill every field, or write its missingness label; never delete a field. The self-audit in §5 is the current Markdown check. The field codes in [brackets] preserve the historical audit IDs.
 
 **Core and annex (2026-09-28(e); `CURRENT_RULES.md` §B, "Timing").** The card is written in two blocks:
-- **Core** (Fields 1–6 below, as marked): everything that sets a probability or a rank. It is frozen and appended to the mini log **before the start**.
+- **Core** (Fields 1–6 below, as marked): everything that sets a probability or a rank. It is frozen and appended to Part 6 **before the start**.
 - **Annex** (§1A): disclosures computed from the frozen numbers. It is appended under the core afterwards, and may be written after the start. It never changes a frozen number.
 
 ---
@@ -19,7 +19,7 @@
 - **Venue:** <name, city, country> · **Start:** <venue-local time> (<IANA zone>) = <UTC> = **<AEST/AEDT time>** (<date rollover: yes/no>). User time <as given>: <verified / corrected>.
 - **State at freeze:** <PREGAME / LIVE_ISSUED> (source, time)
 - **Contracts (quarantined lines):** 1. <row as supplied> · 2. … · Period, overtime, extra time, tie, push and void terms: <…>
-- **Method:** MDS-2026.09.28-v5.1 · CR-2026.09.28-MD4 · manifest <CONTROL_MANIFEST_… .md>, SHA-256 <copied from the Current freeze receipt line at the top of GAME_LOG_STATUS_CURRENT.md>
+- **Method:** MDS-2026.09.28-v5.1 · <control revision named in METHOD.md> · manifest <CONTROL_MANIFEST_… .md>, SHA-256 <copied from the Current freeze receipt line at the top of GAME_LOG_STATUS_CURRENT.md>
 - **UNIVERSE:** <mini-log universe table, date / event id> or OUT_OF_UNIVERSE [UV]
 
 ### Field 2 — Evidence and exposure, decisive rows (core) [7, 7r, 8]
@@ -36,6 +36,8 @@
 - **S-1 Rev 2 receipt** (only where PROJECTED_BEAT_VERIFIED is claimed): outlet · reporter · timestamp · verbatim quote · second source.
 - **Decision-driving players,** with quantified lines (minutes, usage, rate). A bare name is `AGGREGATE_ONLY`; list any sampling-noise flags.
 - **Lineages for identity and state (three):** 1. … 2. … 3. …
+- **Retrieval attempts** (required whenever a route failed; `SOURCES.md` §1.7, §3.12): `ROUTE <n> | <source> | <url/endpoint> | <time> | <OPENED / BLOCKED / JS_ONLY / STALE / WRONG_EVENT / NOT_PUBLISHED / RETRIEVAL_MISS> | <field or none> | <lineage>`, one per route, in the order tried.
+- **Official social post used** (if any; `SOURCES.md` §1.8): platform · account · how authenticated (the organisation's site link, or its domain handle) · post URL/ID · published (exact, or a relative bound) · retrieved · verbatim text · field claimed · counted with lineage <n>.
 
 ### Field 3 — Joint distribution (core) [2, 3, BR, WB, T13, CVW]
 - **Prior:** <source and number>. **Reference row:** <`BASE_RATES_REGISTER.md` §… row, n> or REFERENCE_BASE_RATE: NOT_YET_DERIVED.
@@ -145,20 +147,20 @@ The annex follows in a second message.
 
 ---
 
-## 3. The mini log
+## 3. Part 6 working continuation
 
-**Header of a new mini log.** Its file is `prediction logs/PREDICTION_MINI_RUNNING_LOG_<first ID>_ONWARD.md`.
+**Append this session block after the original-source end marker** in `prediction logs/PREDICTION_LOG_COMBINED_6.md`. Keep its six section headings for new entries. Do not create a separate running file or alter the embedded P-518–P-522 source bytes.
 
 ```markdown
-# Prediction Mini Running Log — <first ID> onward (started <date AEST>)
+# Part 6 working continuation — <date AEST>
 
 | Item | Value |
 |---|---|
-| Governing method | MDS-2026.09.28-v5.1 (md-only) · CR-2026.09.28-MD4 · SCV-2026.09.19-v2 |
+| Governing method | <method, control revision and scoring version from METHOD.md at session read> |
 | Freeze with every card | <manifest name and SHA-256, copied from the Current freeze receipt line at the top of GAME_LOG_STATUS_CURRENT.md> |
 | Session read (reading gate) | CURRENT_RULES.md; CARD_AND_LOG_TEMPLATES.md §1, §5; SOURCES.md §1 — read <AEST time> under receipt SHA <first 12 characters>. Re-read when the receipt SHA changes |
-| Per-card reads | RULES_<SPORT>.md §0 (+ league rules file); SOURCES.md §3.x; this log's unsettled section; the Part 5 snapshot |
-| Next canonical ID | <from PREDICTION_LOG_COMBINED_5.md top snapshot, or "on hold → TMP IDs"> |
+| Per-card reads | RULES_<SPORT>.md §0 (+ league rules file); SOURCES.md §3.x; Part 6's unsettled section; the Part 5 canonical snapshot |
+| Next new prediction ID | <from Part 6 top custody note: P-523 then sequential; use TMP only for collision or unresolved identity> |
 | Status | LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE |
 
 ## 0. Universe declarations
@@ -169,7 +171,7 @@ The annex follows in a second message.
 ## 5. Document Update Mapping
 ```
 
-- **After every query,** the full updated log is written to its file. If the file cannot be written, the whole log is pasted.
+- **After every query,** append the new card and annex in Part 6. If the file cannot be written, paste the full new entry without claiming it was logged.
 - **Section 5 rows** read `| Item | Target file and section (or proposed new file and purpose) | Status: TODO / DONE / DECLINED (reason) |`.
 
 ---
@@ -218,7 +220,7 @@ Write this before the day's first card, and never edit it afterwards:
   - cricket: toss and strip statuses and the venue window [CVW];
   - non-baseball +k.5: the population cover rate as its BASELINE_P [PC].
 - [ ] R12. The arithmetic checks in `PROBABILITY_TOOLKIT.md` §11.
-- [ ] R13. The core is appended to the mini log before delivery, with `Freeze − start`.
+- [ ] R13. The core is appended to Part 6 before delivery, with `Freeze − start`.
 
 **Annex (§1A), before settlement.** A missing item is a process defect; it does not change the score.
 - [ ] A1. Departure ledger [DL] and track-record row.
@@ -257,18 +259,18 @@ Write this before the day's first card, and never edit it afterwards:
 
 ---
 
-## 7. Importing a mini log into the canonical log (maintainer or import session)
+## 7. Promoting Part 6 working entries to canonical custody (maintainer session)
 
-1. **Inventory.** List every entry in the mini log (and any attachment or Drive copy): its ID, event, state and whether it is already in Part 5. Fingerprint duplicates.
+1. **Inventory.** List every working entry in Part 6 (and any supplied attachment or Drive copy): its ID, event, state and whether it is already in Parts 1–5. Fingerprint duplicates.
 2. **Identity.** Check each event on four fields: date, venue, home/away and starters. Duplicates of one event are merged as views. Distinct events are never merged.
 3. **IDs.**
-   - Assign canonical IDs from the Part 5 snapshot; the verifiably timestamped card takes the lower number.
+   - New cards continue at P-523 in issue order by explicit user instruction. Resolve a collision by event identity and issue timestamp; keep P-518–P-522 under their separate audit until certified.
    - Keep TMP IDs as aliases. Never overwrite or renumber.
    - Conflicts go to the conflict section with full settlement.
 4. **State.** Unresolved events stay pending, with the state and the time checked. Only finals are settled (§2).
-5. **Append verbatim.** Copy each card to Part 5 exactly as issued. Corrections are appended settlement revisions, with the old and new values, the source and the reason.
+5. **Preserve issue text.** The original entry stays in Part 6. Append custody or settlement corrections there with the old and new values, source and reason; never replace a frozen issue. Mark an entry canonical only after the identity, issue-time and source gates pass.
 6. **Learnings.** While the rule inventory is closed (`CURRENT_RULES.md` §D9), a lesson is parked as one line in `LEARNINGS_INDEX.md` §10. Only validity repairs and user-instructed changes get a `LEARNING_REGISTER.md` disposition. Execute or disposition every document-mapping row.
 7. **Custody and check.**
-   - Retain the processed mini log in `prediction logs/` after pending events are tracked in `GAME_LOG_STATUS_CURRENT.md`.
-   - Update the Part 5 snapshot: next ID, open follow-ups.
+   - Preserve Part 6's embedded original-source block and track pending events in `GAME_LOG_STATUS_CURRENT.md`.
+   - Update the Part 5/Part 6 top custody notes and status register: next ID and open follow-ups.
    - Maintainers then review the Markdown records and receipt (`CONTRIBUTING.md`).

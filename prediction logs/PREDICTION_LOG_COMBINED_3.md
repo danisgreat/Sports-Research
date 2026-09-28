@@ -1,6 +1,6 @@
 ## 2026-09-17(c) — current audit corrections
 
-This correction supersedes earlier aggregate and period-bound claims without changing issued probabilities, ranks or contracts. All existing records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. See [the implementation ledger](AUDIT_IMPLEMENTATION_2026-09-17.md) and [scoring specification](SCORING_AND_VALIDATION.md).
+This correction supersedes earlier aggregate and period-bound claims without changing issued probabilities, ranks or contracts. All existing records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. See [the implementation ledger](AUDIT_IMPLEMENTATION_2026-09-17.md) and [scoring specification](../SCORING_AND_VALIDATION.md).
 
 **Score arithmetic:** P-344's four Brier cells sum to 1.1337, mean **0.283425**, not 0.3334. Recomputed from canonical rows and latest documented settlements: P-333–P-344 **39 rows, 0.2601307692**; through P-344 **72 rows, 0.2408763889**; through P-371 **177 rows, 0.2423966102**; through P-423 **373 rows, 0.2341018767**; through P-437 **425 rows, 0.2286134118**; through P-451 **477 rows, 273 W/204 L, 0.2265475891**. These are current cumulative-by-ID reconstructions, not claims about what was settled at each historical snapshot date. PRIMARY_SCORED remains **136 rows/33 cards, 71 W/65 L, 0.246825**. Older approximate aggregates are superseded by this row-derived correction. Legacy binary scores retain their original conditioning defect and are labelled LEGACY_MIXED_DIAGNOSTIC; corrected W/P/L and non-push measures are separate.
 
@@ -1674,12 +1674,12 @@ Apply the existing MARKET_BLIND boundary to source content as well as to prices.
 For a failed top pick, identify the target's first decisive checkpoint, actual score/phase facts, assumptions in the original card, what was demonstrably knowable, and plausible alternatives. A narrative listing a possible loss does not prove its probability was too low; a final score alone does not prove the causal story. Credit sound retrieval and successful target logic separately from wins forced by complementary pairs. Retain positive cases and limitations together. Validate candidate predictive changes on future data; do not claim that correcting the explanation would necessarily have changed the pick or made it win.
 
 
-Current source/queue rechecks: [recent five rows](audit_2026-09-12/recent_queue_evidence.md), [historical nine rows](audit_2026-09-12/historical_queue_evidence.md), [source and sport details](audit_2026-09-12/sport_evidence.md). Every per-ID current status, from P-001: [complete chronological list](GAME_LOG_STATUS_CURRENT.md). Full integrated [audit report](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md).
+Current source/queue rechecks: [recent five rows](audit_2026-09-12/recent_queue_evidence.md), [historical nine rows](audit_2026-09-12/historical_queue_evidence.md), [source and sport details](audit_2026-09-12/sport_evidence.md). Every per-ID current status, from P-001: [complete chronological list](../GAME_LOG_STATUS_CURRENT.md). Full integrated [audit report](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md).
 
 
 ### Additional historical evidence tasks discovered 2026-09-12
 
-The fourteen result-evidence follow-ups are unchanged. **Five separate TMP-AUDIT-20260912-01 through -05 tasks** now track the missing later corner adjudications for P-250/P-251/P-255/P-256/P-265. Their original forecasts and available retrospectives were recovered into Part 1; the absent P267 settlement artifact must not be treated as present. See [all current IDs and both queues](GAME_LOG_STATUS_CURRENT.md). Older settled labels on these five mean inherited closure, not independently reproduced field settlement.
+The fourteen result-evidence follow-ups are unchanged. **Five separate TMP-AUDIT-20260912-01 through -05 tasks** now track the missing later corner adjudications for P-250/P-251/P-255/P-256/P-265. Their original forecasts and available retrospectives were recovered into Part 1; the absent P267 settlement artifact must not be treated as present. See [all current IDs and both queues](../GAME_LOG_STATUS_CURRENT.md). Older settled labels on these five mean inherited closure, not independently reproduced field settlement.
 
 
 ### Latest state refresh - 2026-09-11 23:43 UTC / 2026-09-12 09:43 AEST
@@ -1689,7 +1689,7 @@ P-364 remains IN PROGRESS, at Day-3 stumps, not a final: Pakistan 133 and 449 al
 
 ## 2026-09-15 — `P-364` final settlement and queue retry (no new mini log supplied)
 
-**LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** Method unchanged (`MDS-2026.09.06-v4.0`). Next canonical ID unchanged: **`P-372`**. Complete per-ID list from `P-001`: [`GAME_LOG_STATUS_CURRENT.md`](GAME_LOG_STATUS_CURRENT.md).
+**LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** Method unchanged (`MDS-2026.09.06-v4.0`). Next canonical ID unchanged: **`P-372`**. Complete per-ID list from `P-001`: [`GAME_LOG_STATUS_CURRENT.md`](../GAME_LOG_STATUS_CURRENT.md).
 
 ### Input inventory
 

@@ -6,6 +6,39 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-29(a) — log custody close-out and source/social lanes (MDS-2026.09.28-v5.1, CR-2026.09.29-MD7, manifest 2026-09-29-1)
+
+**Why.** The user asked for the six-part consolidation to be finished properly, and for research into additional sources for every sport, with an immediate fallback from each source and official social media added where it works. **Category:** user-instructed custody and retrieval changes. No probability, width, centre, rank, issued card, contract, result or scoring rule changed.
+
+- **Consolidation verified.** `prediction logs/` holds exactly Parts 1–6.
+  - Every P-ID that appeared in the 14 removed files, and in the five former root copies, is present in the six parts.
+  - Parts 1–4 differ from their pre-move bytes only by relative-link rewrites (`X.md` → `../X.md`); Part 2 differs only in line endings.
+  - Part 6's embedded original block still hashes to `c4d497bf…cf30` (141,740 bytes).
+  - The three `PREDICTION_LOG_COMBINED_5_PRE_*` files were backups taken before the 2026-09-23 imports (pre-reconciliation, pre-P-494 reconciliation and pre-consolidated-import). Their content is superseded by Part 5.
+- **Manifest -9 no longer verified.** Nine files were edited after it was written, during the P-523 correction. It is kept as history; the new receipt is `CONTROL_MANIFEST_2026-09-29-1.md`.
+- **Stale queue wording removed.**
+  - `CURRENT_RULES.md` step 0 took the next ID from Part 5 and used a TMP ID while on hold.
+  - Part 5's queue note said "The next ID is on hold".
+  - The status header said "append … with TMP IDs".
+  - All now say P-523 onward in Part 6, sequential in issue order until the user directs a new part. `GAME_LOG_STATUS_CURRENT.md` gains a P-518–P-522 reserved row and a P-523 open row.
+- **Sources (`SOURCES.md`).** About 90 routes and social lanes were live-tested on 2026-09-28/29.
+  - New data routes in every sport: Naver KBO starters and lineups, Yahoo! Japan NPB, the MLB probable-pitchers page, Umpire Scorecards, Retrosheet, the WNBA CDN, Cricbuzz recent results, OpenLigaDB, the AFL injury list, URC/Premiership/Top 14/Super Rugby, NFL weekly injuries, NHL landing/roster/club schedule, ATP draw PDFs and live rankings.
+  - Cross-sport secondaries and discovery (§2.4): BBC Sport, TheSportsDB, Wikipedia REST, and Google/Bing News RSS.
+  - A social-platform access matrix (§1.8). **X is readable again** through the timeline syndication and oembed routes (tested on official AFL, Premier League and MLB posts). Bluesky author feeds (`nba.com`, `wnba.com`, `mets.com` and others) and YouTube watch-page upload times work, and Threads works through the proxy with relative times. Instagram, Facebook, TikTok, Reddit, Weibo and YouTube RSS fail.
+  - §3.12: a source-by-source fallback chain for all ten sports, with each organisation's official accounts **read from its own website**. Six organisations had no readable links and are marked not authenticated.
+  - Newly failing routes are recorded in §4.
+- **Rules and templates.** `CURRENT_RULES.md`, `PROMPTS.md` and `CARD_AND_LOG_TEMPLATES.md` require one attempt-ledger line per failed route and an immediate move to the failed source's next route (§3.12). A social post, when used, carries its own receipt.
+- These changes improve retrieval coverage and traceability. They are not evidence of predictive lift.
+
+### 2026-09-28(g) — six combined prediction logs in one folder (MDS-2026.09.28-v5.1, CR-2026.09.28-MD6, manifest -9)
+
+**Why and exception.** The user requested that `prediction logs/` contain exactly six combined logs, in order, and no redundant combined-5 snapshots or running logs. This is a user-instructed custody consolidation and validity repair: several old files described themselves as active or authoritative despite being superseded. It is the same-day validity-repair exception to M33. No issued probability, rank, contract, scoring rule or game result was changed.
+
+- Moved combined Parts 1–5 from the root into `prediction logs/`; Part 5 is closed to new cards at canonical P-517. Removed 14 source/snapshot files from that folder after coverage checks. Nine early logs' substantive card lines were already in Part 1; three Part-5 snapshots were superseded; the P-516 running log held no event card. [Historical Link Index](HISTORICAL_LINK_INDEX.md#2026-09-28g-six-part-log-consolidation) maps each former path to its current part and pinned Git original at `753f0a9`.
+- Created combined [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) with the original 141,740-byte P-518–P-522 source embedded unchanged (raw SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`). Its fully settled claim is expressly superseded by the custody note. Those five IDs remain reserved, unimported and ineligible.
+- **User correction during the consolidation:** Part 6 is the continuing log, with **P-523** the next new prediction ID and subsequent IDs assigned in issue order until the user directs a new part. This authorization is independent of the old source block's `P-523 next` claim and does not settle P-518–P-522. Updated the current rules, prompts, templates, README, contributing guide, reconciliation record, status header, link index and verification protocol to point to the six-part layout. Historical snapshots in preserved ledgers remain historical.
+- Receipt: `CONTROL_MANIFEST_2026-09-28-9.md`. Earlier manifests continue to document their own historical trees.
+
 ### 2026-09-28(f) — all-sport source and fallback expansion (MDS-2026.09.28-v5.1, CR-2026.09.28-MD5, manifest -8)
 
 **Why and exception.** The user explicitly requested wider sources for every sport, immediate alternatives when a game-log field cannot be retrieved, and an assessment of social sources. The old blanket ban on social lineups incorrectly excluded visible original announcements from authenticated official team and competition accounts. This is a user-instructed retrieval change and a validity repair to that categorical rule, within the `C-RULE-FREEZE` exception in `CURRENT_RULES.md` §D9 and the same-day manifest exception to M33. It adds no named control, card field, probability, coefficient, width, centre or rank rule.

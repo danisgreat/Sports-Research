@@ -1,3 +1,15 @@
+# Combined prediction log 6 — active continuation from P-523
+
+> **Controlling custody status (2026-09-28):** ACTIVE CONTINUATION. Part 5 is canonical through P-517. The five P-518 to P-522 IDs are reserved claims awaiting the checks in [P-518 to P-522 reconciliation](../P518_P522_RECONCILIATION.md); they are not certified canonical imports or performance eligible. By the user's explicit continuation instruction, **P-523 is the next new prediction ID**, then P-524 onward in issue order. This ID decision does not settle or validate P-518 to P-522. All records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+>
+> The historical mini-log text below is preserved **byte for byte** between the markers, including its unverified claim that all five are fully settled. That claim does not control current custody. P-523 is authorized independently by the user's new continuation instruction. Do not score, rename or renumber the original five from that historical snapshot. Append verified corrections only after their reconciliation gate passes.
+
+New game cards use P-523 onward and append **after the end marker** in this Part 6 file until the user directs a new part. Freeze the issue core before the start under `CURRENT_RULES.md`, then append its annex; do not insert, reorder or edit the original source block. If an event identity collides or the next ID is unclear, use a temporary ID for that event and reconcile it before assignment. P-523 continuation does not release P-518 to P-522 from their separate audit.
+
+Original source path: `prediction logs/PREDICTION_MINI_RUNNING_LOG_P518_ONWARD.md` at Git `753f0a9`.
+Original raw-byte SHA-256: `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`.
+
+<!-- BEGIN ORIGINAL P518 SOURCE BYTES -->
 # Prediction Mini Running Log — P-518 onward (started 2026-09-27)
 
 | Field | Value |
@@ -1164,3 +1176,5 @@ SHADOW: NO_LANE tools/sport_models.py has no Liga ACB numerical shadow lane; no 
 | AFLW scoring population decoupling | `RULES_AFL.md` §0 & §1 | Reaffirm strict firewall between Men's AFL and AFLW scoring/widths (`TB1_NO_RESOLUTION:competition_mismatch`). |
 | Rehab starter bullpen exposure observation | `RULES_BASEBALL.md` §0 & §4 (control 25) | Observation: 3-month IL return with <50 rehab pitches creates significant bullpen tail exposure. `TESTING` candidate only (`C-RULE-FREEZE` in force). |
 | ACB Live Stats API validation | `DATA_SOURCE_REGISTER.md` | Register `https://live.acb.com` as primary Lineage 1 endpoint for Liga Endesa. |
+
+<!-- END ORIGINAL P518 SOURCE BYTES -->

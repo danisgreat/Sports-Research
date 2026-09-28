@@ -1,6 +1,23 @@
-# Verification receipt — 2026-09-28(d), (e) and (f)
+# Verification receipt — 2026-09-28(d) to (g), and 2026-09-29(a)
 
 This receipt records executed checks for the Markdown evidence and custody repair. The [protocol](VERIFICATION_PROTOCOL.md) defines the gates. It is a living execution note, excluded from the stable control manifest so the manifest's own SHA-256 can be recorded here without a circular hash.
+
+## Executed results — 2026-09-28(g) close-out and 2026-09-29(a) sources (manifest 2026-09-29-1)
+
+The 2026-09-28(g) consolidation had no executed-results entry; its checks were run in this pass, against the uncommitted working tree on `main` (base `753f0a9`).
+
+| Gate | Result |
+|---|---|
+| Repository layout (protocol §1) | Every content file is `.md`, at the root or directly in `prediction logs/`; no other directory. `prediction logs/` holds exactly `PREDICTION_LOG_COMBINED.md` and `_2` to `_6` |
+| Coverage of removed files | Every `P-###` ID in each of the 19 removed paths (14 in `prediction logs/` and five former root Parts, read from Git `753f0a9`) is present in the six current parts. Parts 1–4 differ from their pre-move bytes only by relative-link rewrites; Part 2 differs only in line endings. The three `PREDICTION_LOG_COMBINED_5_PRE_*` snapshots were pre-import backups from 2026-09-23 |
+| Frozen source custody | Part 6 block extracted per protocol §1: 141,740 bytes, SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`. The original's Git blob is its LF form (140,574 bytes), consistent with CRLF checkout |
+| Manifest -9 | **Failed** on readback: 9 of 43 files had changed after it was written (P-523 correction edits). It is kept as history and superseded |
+| Queue (protocol §2) | Part 5 snapshot, Part 6 custody note, status header and reconciliation record agree: canonical through P-517; P-518–P-522 reserved, not certified; next new ID P-523 in Part 6. Three stale "on hold / use TMP" statements were repaired (`CURRENT_RULES.md` step 0, Part 5 queue note, status header) |
+| Line endings | Four files written by (g) had mixed endings (`P518_P522_RECONCILIATION.md`, `README.md`, `VERIFICATION_PROTOCOL.md`, and Part 6 outside the protected block). They were converted to CRLF; normalized hashes are unchanged and the Part 6 block was re-hashed afterwards. `git diff --check` passed |
+| Links (protocol §4) | L1: 0 broken local links in operating documents. L2: 0. The checker's one candidate (`SKILL_BASELINE_LEDGER.md:108`) is qualified on the next non-blank line and indexed |
+| Source research | About 90 routes and social lanes were live-requested on 2026-09-28/29. Official social handles in `SOURCES.md` §3.12 were extracted from the links on 39 organisations' own websites (direct request, then the proxy for failures). Six had no readable links and are marked not authenticated. X timeline access was confirmed for three official accounts, and the oembed route for one AFL post |
+| Freeze receipt | [Manifest 2026-09-29-1](CONTROL_MANIFEST_2026-09-29-1.md) lists 44 stable files (-9's 43 plus -9). All 44 normalized-CRLF hashes and sizes matched on independent readback. Its own normalized SHA-256 `69b0cb02ca498be86669c8231a94ac0029125207e62ac3a03e5a0d42a413f7b1` matches the status first line, and `METHOD.md` points to it |
+| Publication | **Not committed or pushed.** The protocol §5 publish gate remains to run when the user authorises it |
 
 ## Executed results — 2026-09-28(f) source and fallback expansion (manifest -8)
 

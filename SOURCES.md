@@ -1,6 +1,7 @@
 # Sources — the single source register
 
-**Rebuilt 2026-09-28 for md-only operation; expanded 2026-09-28(f).** This page merges the old quick reference and full register, and adds the sources verified on 2026-09-28. It is the only source document the model reads.
+**Rebuilt 2026-09-28 for md-only operation; expanded 2026-09-28(f) and 2026-09-29(a).** This page merges the old quick reference and full register, and adds the sources verified on 2026-09-28/29. It is the only source document the model reads.
+- **What changed on 2026-09-29(a):** about 90 further routes and social lanes were live-tested. Additions: new data routes in every sport table (marked "New (a)"); a social-platform access matrix (§1.8); cross-sport secondaries and discovery feeds (§2.4); and a **source-by-source fallback chain with that source's authenticated official social accounts** (§3.12). Handles in §3.12 were read from each organisation's own website on 2026-09-29, never guessed. **X (Twitter) is no longer blocked:** two keyless read routes work for official accounts (§1.8).
 - **What changed on 2026-09-28:** 60+ routes were re-tested by live request; the sport tables below list each with its access mode and result. About 30 are new to the register, including the standings feeds for the hand-computed team baseline, injury feeds, official ladders, rating systems and weather services.
 - **Repo files versus web sources:** the model uses no Python and no non-Markdown *file from this repository*. Web sources may be JSON, HTML or PDF: the model opens them with its browser or fetch tool and quotes the fields it used.
 
@@ -94,7 +95,9 @@ For **each missing fact**, run the next applicable route at once. Log every atte
 | Season rates, game logs or specialist metrics | Field-owning official stats → official competition/team history → independent specialist data with definition and cutoff. Use only games complete before the card's input cutoff. | Missing or revised historical data stay missing; never backfill a rate from a later page. |
 | Terminal result and process record | Exact-game official final feed/scorecard → another official route for field-level cross-check → independent structured scorecard and independent report until three upstream lineages agree. | Two official fronts on one feed count once. A recap alone, live page or score without an explicit terminal marker cannot settle. |
 
-If the next route also fails, continue through the remaining routes promptly; record the attempt and then fail closed on the field. The sport-specific sequences below identify the first practical alternates. Source discovery does not imply that every competition, target or historical date is covered.
+If the next route also fails, continue through the remaining routes promptly; record the attempt and then fail closed on the field. The sport-specific sequences below identify the first practical alternates. **§3.12 gives the chain source by source:** for any named source, its "If it fails" cell is the next route to open at once, and its social cell is the organisation's own authenticated account for fields that organisation controls.
+
+**Attempt ledger line (one per route tried):** `ROUTE <n> | <source> | <url or endpoint> | <retrieval time, venue-local and AEST> | <OPENED / BLOCKED / JS_ONLY / STALE / WRONG_EVENT / NOT_PUBLISHED / RETRIEVAL_MISS> | <field obtained or "none"> | <lineage>`. Stop at the first route that gives the field from its owner, or from an admissible route. Stop sooner only when the remaining routes cannot change the field before the cutoff. Source discovery does not imply that every competition, target or historical date is covered.
 
 ### 1.8 Original social posts: conditional evidence, not a separate lineage
 
@@ -102,11 +105,26 @@ If the next route also fails, continue through the remaining routes promptly; re
 
 An official account may announce its **own** starters, team list, withdrawal, roster change, roof status or schedule change; it does not become a source for unrelated statistics or another organisation's selection. A named player may confirm their own statement, but the team or competition still controls official participation. An official post, its embedded copy on the official site and a news article quoting it are **one upstream lineage**. Reposts, screenshots without the original, fan accounts, tipsters, fantasy/DFS accounts and market-bearing posts remain excluded. Social posts never settle a game without the exact-game terminal record and the required independent lineages.
 
-| Platform or route | Use and access decision |
-|---|---|
-| Official organisation website's social links → exact Instagram/Facebook/YouTube post | Conditional source for that organisation's original announcement if the post contents and publication time are actually visible. A verified YouTube channel badge supports identity; the exact video must be watched or its official transcript read. [MLB club account directory](https://www.mlb.com/mariners/social); [YouTube verification guidance](https://support.google.com/youtube/answer/3046484?hl=en). |
-| Bluesky exact post from an organisation-owned domain handle or officially cross-linked account | Conditional only after resolving the account identity and opening the post. Earlier six unverified sports handles remain unadmitted. [Bluesky domain-handle guidance](https://bsky.social/about/blog/4-28-2023-domain-handle-tutorial); [badge guidance](https://bsky.social/about/blog/04-21-2025-verification). |
-| X/Twitter, Reddit, inaccessible Instagram/Facebook posts | X and Reddit remain blocked in this environment; an inaccessible post is `RETRIEVAL_MISS`, even if a snippet displays text. Seek the organisation's website, another public platform, a press release or an independent reporter instead. Re-test access before changing that status. |
+**Identity first.** An account is authenticated only if (a) the organisation's own website links to it (the handles in §3.12 were read that way on 2026-09-29), or (b) it is a Bluesky domain handle on the organisation's own domain. A platform badge alone is not enough. Look-alike accounts are common: `NBA Scores`, `MLB (bot)`, `NHL (Bot)`, `Premier League News` and `nhlcanucks.bsky.social` (0 posts) on Bluesky are all unofficial; `t.me/realmadrid` is **not** Real Madrid; `NBA@sportsbots.xyz` on Mastodon is a mirror.
+
+**Platform access matrix (live-tested 2026-09-28/29, keyless, from this environment):**
+
+| Platform | Working route | What it returns | Status and use |
+|---|---|---|---|
+| **X (Twitter)**: account timeline | `https://syndication.twitter.com/srv/timeline-profile/screen-name/<handle>` (browser user-agent). Parse the `__NEXT_DATA__` JSON: `props.pageProps.timeline.entries[].content.tweet` | About 17–20 recent posts with `id_str`, exact `created_at` (UTC), `user.screen_name` and `full_text` | **WORKS**: confirmed for `afl`, `premierleague` and `MLB` on 2026-09-29. `NBA` returned 429 on 2026-09-28 and was not retested. The first call can return HTTP 429; retry once after a short pause. Entries are not strictly chronological (pinned posts and reposts appear), so check `screen_name` and the time of each post |
+| **X**: single post | `https://publish.twitter.com/oembed?url=https://x.com/<handle>/status/<id>` | Author name, author URL, full post text and the date (day only) | **WORKS** (keyless, no token). Use the timeline's `created_at` for the exact time. `cdn.syndication.twimg.com/tweet-result?id=<id>&token=<t>` also works, but needs an ID-derived token |
+| X: other routes | `x.com` through the proxy (403); nitter.net (refused); xcancel.com (DNS failure) | — | **BLOCKED**. Do not plan on them |
+| **Bluesky** | `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=<handle>`; `…/app.bsky.feed.getAuthorFeed?actor=<handle>&filter=posts_no_replies&limit=<n>` | Profile, `verification.verifiedStatus`, and posts with exact ISO `createdAt` | **WORKS**. `app.bsky.feed.searchPosts` returns 403 without a login: read author feeds, don't search. Active official accounts: `nba.com`, `wnba.com`, `mets.com`, `mls-pr.bsky.social` (MLS Communications, verified). Verified but dormant: `mlb.com` (0 posts); seasonal: `rolandgarros.com`. `nhl.com` is unverified with 0 posts: do not use |
+| **YouTube** | Channel videos tab `https://www.youtube.com/@<handle>/videos` (browser) → `"videoId"`; then `https://www.youtube.com/watch?v=<id>` → `uploadDate` / `datePublished`; `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<id>&format=json` → `author_name` | Exact upload time with offset (e.g. `2026-09-27T13:36:04-07:00`), title and channel identity | **WORKS**. Use it for official press conferences and team-announcement videos: the coach's words are that club's statement. The RSS feeds (`feeds/videos.xml?channel_id=` / `playlist_id=` / `user=`) returned 404/500 on every form on 2026-09-28 |
+| **Threads** | `https://r.jina.ai/https://www.threads.net/@<handle>` and `…/@<handle>/post/<code>` | Post text and post URLs; times are **relative only** (`6h`, `3d`) | **WORKS through the proxy only**; the direct page is a JavaScript shell. Record the retrieval time and the relative age; the publication time is only known to within that unit. It can support pre-issue publication only when the bound falls wholly before the cutoff |
+| Instagram | Profile API (429), proxy (403), profile embed (no timestamps) | — | **RETRIEVAL_MISS** by default. Use a post only if the organisation's own site embeds it with a visible date |
+| Facebook | Proxy returns the login wall; the page plugin has no timestamps | — | **BLOCKED** |
+| TikTok | Proxy renders the shell only | — | Not used: video-only, no reliable text or timestamp |
+| Telegram | `https://t.me/s/<channel>` public preview | Posts with `datetime` | Works technically, but **no official sports channel has been authenticated**. Use one only if the organisation's website links it |
+| Reddit | `.json`, `api.reddit.com` (403); `old.reddit.com/…/.rss` (block page) | — | **BLOCKED**. Fan content in any case, never evidence |
+| Mastodon, Weibo | Mastodon search → bot mirrors only; Weibo 403 | — | Not used |
+
+**Reporter and media accounts** (discovery for the named-reporter lane in §1.5; not field owners): verified Bluesky domain handles `apnews.com`, `reuters.com`, `nytimes.com`, `washingtonpost.com`, `latimes.com`, `bostonglobe.com`, `theguardian.com`, `theathleticfc.bsky.social`, `espn.com` (sparse) and `fangraphs.com`. `theathletic.com` showed verification `invalid` on 2026-09-28, so treat it as unverified. A reporter's post still needs the full §1.5 receipt.
 
 The same rule applies in every sport. Sport-specific social uses and the next non-social routes are indexed in §3.11; no platform or account is pre-approved without an exact-post check for the event.
 
@@ -146,6 +164,7 @@ A league slug that returns 400 is not proof of non-coverage (the Slovak leagues 
 | **Japan Meteorological Agency** | `https://www.jma.go.jp/bosai/forecast/data/forecast/<area>.json` (Tokyo 130000) | API | 200 |
 | **MET Norway** (Europe and global) | `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=<lat>&lon=<lon>` | Browser | 200 |
 | **MLB only:** the statsapi gamefeed `gameData.weather` (field-relative wind) | See §3.1 | API | 200 |
+| Meteostat bulk station history (New (a)) | `https://bulk.meteostat.net/v2/daily/<WMO station>.csv.gz` | API | 200 (observed daily history for settlement notes; never a pregame forecast) |
 
 **Weather rules:**
 - Never use a city forecast for an MLB total (M30).
@@ -159,6 +178,17 @@ A league slug that returns 400 is not proof of non-coverage (the Slovak leagues 
 | **StatMuse** (`https://www.statmuse.com/<nba|wnba|mlb|nfl|nhl>/ask/<question>`) | US-sport L5/L10/L15/L20 splits and quick baselines. Check the dates and scope of every answer | Browser | 200 |
 | **r.jina.ai proxy** (`https://r.jina.ai/<url>`) | Renders blocked or JavaScript pages as text | API | 200 |
 | Reference sites: Basketball-Reference, Hockey-Reference | History and cross-checks | Browser | 200 |
+
+### 2.4 Cross-sport secondaries and discovery feeds (New (a), tested 2026-09-28/29)
+
+| Source | Route | Use | Role | Access | Verified |
+|---|---|---|---|---|---|
+| **BBC Sport** scores and fixtures | `https://www.bbc.com/sport/<football\|rugby-union\|rugby-league\|cricket\|tennis>/scores-fixtures/YYYY-MM-DD` | Independent results and state (FT / full time / Result) for UK and international football, rugby and cricket | S (own lineage) | Browser | 200 (football, rugby union, cricket) |
+| TheSportsDB | `https://www.thesportsdb.com/api/v1/json/3/eventsday.php?d=YYYY-MM-DD&s=<Soccer\|Baseball\|Basketball\|…>` | Cross-sport event list: an identity cross-check and a route to find a fixture. **Crowd-sourced**: never a field owner, and never a settlement lineage on its own | D/F | API | 200 |
+| Wikipedia REST | `https://en.wikipedia.org/api/rest_v1/page/summary/<Title>` (a plain request gets 403; send a browser user-agent) | Structural history and context (finals, venues, formats) | D (history) | Browser | 200 |
+| **Google News RSS** | `https://news.google.com/rss/search?q=<terms>+when:2d&hl=en-AU&gl=AU&ceid=AU:en` | Finds the original club/league release or named-reporter article, with `pubDate`. It found a club's "Final Team" release and an NRL late-change report on 2026-09-28 | **D only**: open the original before use | API | 200 |
+| Bing News RSS | `https://www.bing.com/news/search?q=<terms>&format=rss` | Second discovery feed | D only | API | 200 |
+| AP News hub, Reuters sports | `apnews.com/hub/<sport>`; `reuters.com/sports/` | — | Blocked (403 / 401). Use their Bluesky feeds (`apnews.com`, `reuters.com`) to discover a report, then try its article URL | — | 403 / 401 |
 
 ---
 
@@ -181,6 +211,9 @@ The **Role** column:
 | MLB gamefeed | `https://statsapi.mlb.com/api/v1.1/game/<gamePk>/feed/live` | `gameData.weather`, probables, `battingOrder` (a starter's slot ends in `00`), officials, `codedGameState`, line score, decisions | FO | API | 200 |
 | MLB boxscore | `https://statsapi.mlb.com/api/v1/game/<gamePk>/boxscore` | Official orders, pitching lines, `info[]` weather and wind | FO | API | 200 |
 | MLB starting-lineups page | `https://www.mlb.com/starting-lineups` | Published batting orders; resolve the exact game and publication time before treating an order as confirmed | FO | Browser | Opened 2026-09-28 |
+| MLB probable pitchers page (New (a)) | `https://www.mlb.com/probable-pitchers` | Probables for the day, same data lineage as statsapi | FO (same lineage as statsapi) | Browser | 200 |
+| Umpire Scorecards (New (a)) | `https://umpscorecards.com/api/games?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD` | Plate-umpire accuracy and run impact from completed games only (context for the umpire named in the gamefeed) | S | Browser | 200 |
+| Retrosheet (New (a)) | `https://www.retrosheet.org/` | Historical game logs and box scores | S (history) | Browser | 200 |
 | MLB standings (new) | `https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=YYYY` | Runs scored and allowed, records | FO | API | 200 |
 | MLB transactions (new) | `https://statsapi.mlb.com/api/v1/transactions?startDate=…&endDate=…` | IL moves, call-ups | FO | API | 200 |
 | MLB team stats (new) | `https://statsapi.mlb.com/api/v1/teams/stats?season=YYYY&group=pitching&stats=season&sportIds=1` | Team pitching and hitting | FO | API | 200 |
@@ -190,8 +223,10 @@ The **Role** column:
 | NPB probable starters (new) | `https://npb.jp/announcement/starter/` (予告先発, the official announcement) | Next day's starters | FO | API | 200 |
 | NPB active roster registration | `https://npb.jp/announcement/roster/` | Registered and deregistered players; registration alone does not confirm that game's availability | FO | Browser | Opened 2026-09-28 |
 | NPB score pages | `https://npb.jp/scores/YYYY/MMDD/<away>-<home>-<nn>/` | 【試合終了】 final marker, 12-inning line score | FO | API (403 on the day index on 2026-09-28; the game pages worked on 2026-09-25) | mixed |
+| **Yahoo! Japan NPB** (New (a)) | Day page `https://baseball.yahoo.co.jp/npb/schedule/?date=YYYY-MM-DD` (links `/npb/game/<id>/`); game page `https://baseball.yahoo.co.jp/npb/game/<id>/top` | 予告先発 (probables), スタメン (starting lineups once posted), 試合終了 (final) and line score | S (an independent Japanese lineage from npb.jp) | Browser | 200 |
 | KBO official (English) | `https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=YYYY-MM-DD`; standings `…/Standings/TeamStandings.aspx` | FINAL, line score, R/H/E, W/L/S, standings | FO | API | 200 |
 | KBO official (Korean, new) | `https://www.koreabaseball.com/Schedule/Schedule.aspx` | Schedule, starters (Korean) | FO | API | 200 |
+| **Naver Sports KBO** (New (a)) | Day list `https://api-gw.sports.naver.com/schedule/games?fields=basic&upperCategoryId=kbaseball&categoryId=kbo&fromDate=YYYY-MM-DD&toDate=YYYY-MM-DD` (gives `gameId`, e.g. `20260927LGHT02026`); preview `…/schedule/games/<gameId>/preview`; box `…/schedule/games/<gameId>/record` | `homeStarter`/`awayStarter`, `homeTeamLineUp`/`awayTeamLineUp` and `fullLineUp` once announced (Korean names); box score (`battersBoxscore`, `pitchersBoxscore`) | P. Probably the same upstream league data as the KBO site, so count it with KBO official as **one lineage** unless shown otherwise | Browser | 200 |
 | KBO active registration | `https://www.koreabaseball.com/player/register.aspx`; full roster `https://www.koreabaseball.com/Player/RegisterAll.aspx` | Current registration and roster context; not a confirmed batting order | FO | Browser | Opened 2026-09-28 |
 | CPBL (new) | `https://www.cpbl.com.tw/` (plain request); `https://stats.cpbl.com.tw/` (browser) | Schedule, box, batting order | FO | API or Browser | 200 |
 | CPBL club lineup record | `https://cpbl.com.tw/team/lineuprecord?ClubNo=<club>` | Dated batting-order history and cross-check; today's row needs an observed pregame timestamp | FO | Browser | Opened 2026-09-28 |
@@ -202,6 +237,8 @@ The **Role** column:
 **Settlement lineages:**
 - MLB: statsapi (FO) + ESPN + one independent report or box.
 - NPB and KBO: the official page + ESPN-independent media (e.g. Nikkan Sports or Yonhap) + a third report.
+  - NPB: Yahoo! Japan's game page is an independent structured lineage (New (a)).
+  - KBO: Naver is **not** independent of the KBO site until shown otherwise.
 
 ### 3.2 Basketball — NBA, WNBA, NBL, EuroLeague, ACB, FIBA, LKL and others
 
@@ -222,7 +259,9 @@ The **Role** column:
 | Proballers (new) | `https://www.proballers.com/` | International rosters and player lines | S | Browser | 200 |
 | Eurobasket (new) | `https://basketball.eurobasket.com/` | International leagues, rosters, injuries | S | Browser | 200 |
 | BasketNews (LKL) | `r.jina.ai/https://www.basketnews.lt/…` | Finals, quarter lines | S | Proxy | earlier |
-| RealGM, NBA CDN JSON | — | — | — | **Blocked** from here | — |
+| WNBA CDN live data (New (a)) | `https://cdn.wnba.com/static/json/liveData/scoreboard/todaysScoreboard_10.json` | Today's WNBA scoreboard in the NBA liveData schema | FO (same lineage as wnba.com) | Browser | 200 on 2026-09-28; exact-game fields untested (no game in the file at test time) |
+| RealGM, NBA CDN JSON (`cdn.nba.com` scoreboard and schedule), `stats.nba.com` | — | — | — | **Blocked** from here (403; `stats.nba.com` resets the connection, 2026-09-28) | — |
+| NBL `apicdn.nbl.com.au` Genius route; FIBA LiveStats host (`fibalivestats.dcd.shared.geniussports.com`) | — | — | — | 502 / 403 on 2026-09-28. Use the NBL match page and its `schedule.nbl.com.au` match API | — |
 
 **Settlement lineages:** ESPN summary + the league's own box + an independent report (e.g. Basketball-Reference or BasketNews). The league site and its live-stats page count once.
 
@@ -241,6 +280,9 @@ The **Role** column:
 | ESPNcricinfo pages | Through the proxy only: `r.jina.ai/https://www.espncricinfo.com/…` | Scorecard, commentary | S (same lineage as ESPN) | Proxy | 200 |
 | Cricsheet | `https://cricsheet.org/downloads/` | Historical ball-by-ball for venue and phase history | P (history) | API | 200 |
 | Howstat | `https://www.howstat.com/cricket/home.asp` | Historical records | S | Browser (intermittent) | mixed |
+| Cricbuzz recent results (New (a)) | `https://www.cricbuzz.com/cricket-match/live-scores/recent-matches` | Recent finals with "won by" result lines, linking to each scorecard | S | Browser | 200 |
+| BBC Sport cricket (New (a)) | §2.4 | Results for England, county and international cricket | S (own lineage) | Browser | 200 |
+| ESPNcricinfo consumer API (`hs-consumer-api.espncricinfo.com`), Cricket Australia `apiv2` | — | — | — | **Blocked** (403 / 404, 2026-09-28): use the ESPN cricket API and cricket.com.au pages | — |
 
 **Toss and strip protocol (kept in full from the old register §6A):**
 - **Toss ladder:**
@@ -281,7 +323,9 @@ The **Role** column:
 | League official sites (new) | laliga.com, bundesliga.com, ligue1.com, kleague.com, keepup.com.au (A-League), `data.j-league.or.jp` | Official fixtures, lineups, stats | FO | API | 200 (Serie A redirects: use legaseriea.it through the browser) |
 | Club official site or app | The club's match centre, and the XI about 60 minutes before kick-off | **The confirmed XI** (it beats predicted-lineup pages) | FO | Browser | — |
 | FotMob (new route) | `https://www.fotmob.com/api/data/leagues?id=<id>` and `…/api/data/matches?date=YYYYMMDD`; pages via the proxy | Fixtures, lineups, xG, tables | S | API | 200 |
-| Understat (new) | `https://understat.com/league/<EPL\|La_liga\|Bundesliga\|Serie_A\|Ligue_1>/<season>` | xG for and against by team | S | API | 200 |
+| Understat (new) | `https://understat.com/league/<EPL\|La_liga\|Bundesliga\|Serie_A\|Ligue_1>/<season>` | xG for and against by team | S | API | 200 before; **2026-09-28: the page loaded without its `teamsData` block** (`JS_ONLY`); render it or use FotMob xG |
+| OpenLigaDB (New (a)) | `https://api.openligadb.de/getmatchdata/<bl1\|bl2\|bl3>/<season start year>/<matchday>` | German league fixtures, `matchIsFinished`, goals | S (community-maintained; a cross-check only) | API | 200 |
+| BBC Sport football (New (a)) | §2.4 | Independent results across UK and European leagues | S (own lineage) | Browser | 200 |
 | Transfermarkt injuries (new) | `https://www.transfermarkt.com/<league>/verletztespieler/wettbewerb/<code>` (EPL GB1) | Injuries and suspensions | S | API | 200 |
 | openfootball (new) | `https://raw.githubusercontent.com/openfootball/football.json/master/<season>/<code>.json` | Historical fixtures and results | S (history) | API | 200 |
 | ClubElo | `http://api.clubelo.com/<date>` | European club Elo | S | — | **HTTP 502 on 2026-09-28** (unverified; retry) |
@@ -297,6 +341,7 @@ The **Role** column:
 |---|---|---|---|---|---|
 | AFL API (new in this register) | `https://aflapi.afl.com.au/afl/v2/matches?competitionId=1&compSeasonId=<id>` (AFLW `competitionId=3`); `…/afl/v2/competitions` | Fixtures, results, venues, IDs | FO | API | 200 |
 | AFL team lineups (new) | `https://www.afl.com.au/matches/team-lineups` | **Official team selections, ins/outs, emergencies** | FO | API | 200 |
+| **AFL injury list** (New (a)) | `https://www.afl.com.au/matches/injury-list` | Club-by-club injuries with estimated return, each club block dated ("Updated: September 23, 2026") | FO | Browser | 200 |
 | AFLW team pages | `https://www.afl.com.au/aflw/teams` → exact club and match team selection | AFLW club roster and official releases; a roster page alone is not the selected side | FO | Browser | Opened 2026-09-28; exact match selection untested |
 | ESPN AFL | §2.1 scoreboard and standings (PF/PA) | Results, standings, the TB-1-MD input | P | API | 200 |
 | AFL Tables (new) | `https://afltables.com/afl/seas/YYYY.html` | Complete results and scoring history | S | API | 200 |
@@ -316,6 +361,8 @@ The **Role** column:
 | NRLW official team-list releases | `https://www.nrl.com/news/2026/08/11/nrlw-team-lists-round-7/` (dated example; find current round) | Named NRLW team lists and changes | FO | Browser | Opened 2026-09-28 |
 | ESPN NRL | `rugby-league/3` scoreboard and standings | Results, half-time line score | P | API | 200 |
 | Rugby League Project (new) | `https://www.rugbyleagueproject.org/seasons/nrl-YYYY/summary.html` | Results, history | S | API | 200 |
+| BBC Sport rugby league (New (a)) | §2.4 (`rugby-league`) | Super League and internationals | S | Browser | Route pattern shared with the tested football, rugby union and cricket pages; this path itself is untested |
+| NRL casualty ward | `https://www.nrl.com/casualty-ward/` | — | — | **Login required** (redirects to sign-in, 2026-09-28; the proxy returns nothing). Use the team lists, club sites and the club's official X account (§3.12) | — |
 
 ### 3.7 Rugby union
 
@@ -326,6 +373,11 @@ The **Role** column:
 | World Rugby fixture and match centre | `https://www.world.rugby/tournaments/fixtures-results` → exact match | Fixtures, results and match centre; verify the team-sheet tab separately | FO (World Rugby events) | Browser | Opened 2026-09-28 |
 | ESPN rugby | League IDs (URC 270557, Super Rugby 242041, others) | Results, line-ups | P | API | 200 |
 | Competition official sites | URC, Premiership, Top 14, Super Rugby | Team sheets (48 hours ahead), results | FO | Browser | — |
+| URC match centre (New (a)) | `https://www.unitedrugby.com/match-centre` (the `/fixtures-results` path is 404) | Fixtures, results, team sheets | FO | Browser | 200 |
+| Premiership Rugby (New (a)) | `https://www.premiershiprugby.com/fixtures-results` | Fixtures, results, team sheets | FO | Browser | 200 |
+| Top 14 / LNR (New (a)) | `https://top14.lnr.fr/calendrier-et-resultats` | Fixtures, results (French) | FO | Browser | 200 |
+| Super Rugby Pacific (New (a)) | `https://super.rugby/superrugby/fixtures/` | Fixtures, results | FO | Browser | 200 |
+| BBC Sport rugby union (New (a)) | §2.4 | Independent results | S (own lineage) | Browser | 200 |
 
 ### 3.8 NFL and college football
 
@@ -334,6 +386,7 @@ The **Role** column:
 | ESPN NFL and NCAAF | §2.1 scoreboard, summary, standings, **injuries** | Results, standings PF/PA, injury list | P | API | 200 |
 | NFL official injuries | `https://www.nfl.com/injuries/` | Official practice and game status | FO | API | 200 |
 | NFL official inactives | The team or league release about 90 minutes before kickoff | Inactives, QB status | FO | Browser | — |
+| NFL injuries by week (New (a)) | `https://www.nfl.com/injuries/league/YYYY/reg<week>` | That week's practice participation and game status (Out, Questionable) | FO | Browser | 200 |
 | NFL inactives hub | `https://www.nfl.com/inactives/` → exact game and week | Published inactive list; off-season or empty page is `NOT_PUBLISHED` | FO | Browser | Opened 2026-09-28; no current game list |
 | NFL official game books | `https://support.nfl.com/hc/en-us/articles/35869678028180-Game-Books` → exact game's book | Postgame participation and scoring cross-check; never a pregame lineup | FO | Browser | Opened 2026-09-28 |
 | NCAA football scoreboard | `https://www.ncaa.com/scoreboard/football/fbs` → exact game/competition | College fixture and result cross-check; team athletic departments own injury/availability releases | FO for NCAA event results | Browser | Opened 2026-09-28 |
@@ -345,6 +398,8 @@ The **Role** column:
 | Source | Route | Fields | Role | Access | Verified |
 |---|---|---|---|---|---|
 | NHL api-web | `https://api-web.nhle.com/v1/schedule/YYYY-MM-DD`; `/v1/score/YYYY-MM-DD`; `/v1/gamecenter/<id>/boxscore`; `/v1/standings/now` | Schedule, `gameType` (**1 = preseason, 2 = regular**), goals with `empty-net` modifier, goalie TOI, standings | FO | Browser | 200 |
+| NHL gamecenter landing (New (a)) | `https://api-web.nhle.com/v1/gamecenter/<gameId>/landing` | `gameState`; pregame `matchup.goalieComparison` (season goalie lines, **not** a starter confirmation) | FO | Browser | 200 |
+| NHL roster and club schedule (New (a)) | `https://api-web.nhle.com/v1/roster/<TEAM>/current`; `…/v1/club-schedule-season/<TEAM>/now` | Current roster, including goalies; the team's dated schedule (back-to-backs, rest) | FO | Browser | 200 |
 | NHL stats API (new) | `https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=<yyyyyyyy>` and `/goalie/summary?…` | Team and goalie season stats | FO | Browser | 200 |
 | NHL official status reports | `https://www.nhl.com/news/nhl-status-report-news-and-notes-february-21-2026` (dated example; find the newest report) | Dated injuries, transactions and club statements; no automatic starter confirmation | FO | Browser | Opened 2026-09-28 |
 | Daily Faceoff (new) | `https://www.dailyfaceoff.com/starting-goalies/` | Projected and confirmed starting goalies, with the source quoted. It needs the S-1 receipt until the team confirms | S | Browser | 200 |
@@ -363,6 +418,9 @@ The **Role** column:
 | WTA match page and draw PDF | `wtatennis.com/tournaments/<id>/<slug>/<yyyy>/scores/<matchId>`; `wtafiles.wtatennis.com/pdf/draws/<yyyy>/<id>/MDS.pdf` | Exact-match state and score | FO | Browser | earlier |
 | WTA tournament order of play | `https://www.wtatennis.com/tournaments/wimbledon/order-of-play/` (example; find exact event/day) | Scheduled court/order and changes; confirm terminal state separately | FO (WTA events) | Browser | Opened 2026-09-28 |
 | ATP Tour | `https://www.atptour.com/en/scores/current` | Draws, scores | FO | Browser | 200 |
+| ATP draw PDFs (New (a)) | `https://www.protennislive.com/posting/YYYY/<tournamentId>/mds.pdf` (singles main draw; e.g. `2026/747`) | The official draw sheet, with seeds, qualifiers, lucky losers and results as posted | FO | Browser | 200 (PDF). The guessed order-of-play PDF path returned 404 |
+| Live rankings (New (a)) | `https://live-tennis.eu/en/atp-live-ranking` (and the WTA page) | Live ranking points; context only | S | Browser | 200 |
+| ATP app gateway, ITF tournament API | `app.atptour.com/api/…`; `itftennis.com/tennis/api/…` | — | — | **Blocked** (403; Incapsula challenge, 2026-09-28): use the ATP scores page, the draw PDF and the ITF proxy route | — |
 | ITF draws | `r.jina.ai/https://www.itftennis.com/en/tournament/<slug>/…/draws-and-results/` | ITF results | FO | Proxy (the direct route is Incapsula-blocked) | earlier |
 | ITF order of play | `https://www.itftennis.com/en/tournament/m25-monastir/tun/2026/m-itf-tun-2026-001/order-of-play/` (example; find exact event/day) | Court schedule and withdrawals as displayed; direct access can vary | FO (ITF events) | Browser or Proxy | Opened 2026-09-28 |
 | Tennis Majors | `tennismajors.com/matches/…` | Terminal state, score | S | Browser | earlier |
@@ -388,6 +446,122 @@ Use the table for the **missing field only**; move to the next route immediately
 
 **Coverage limit:** these are tested routes and decision rules, not a guarantee that a given competition publishes every field. Each game log must show what was actually retrieved before its own cutoff, the failed routes, the field's final status and the effect on the forecast. Keep league, season and women's/men's populations separate.
 
+### 3.12 Source-by-source fallback chain and official social accounts (2026-09-29(a))
+
+**How to use it.** Find the source you were using. If it returns `BLOCKED`, `JS_ONLY` without a renderer, `STALE`, `WRONG_EVENT` or `RETRIEVAL_MISS`, open the **next** source listed in its row **at once**, then the one after that. Write one attempt-ledger line per route (§1.7). `NOT_PUBLISHED` means refresh at the expected release time while other fields continue.
+
+The social column lists the organisation's **own accounts, read from links on its own website on 2026-09-29.** They can carry only fields that organisation controls (§1.8), and they are the **same lineage** as its website. "Not authenticated" means no link was readable from the site: do not use a look-alike handle until a browser check of the site's footer confirms it.
+
+**Social read routes (§1.8):**
+- **X-T:** X timeline syndication;
+- **X-P:** X oembed single post;
+- **BS:** Bluesky author feed;
+- **YT:** YouTube watch-page upload time;
+- **TH:** Threads through the proxy (relative times only);
+- **IG:** Instagram (`RETRIEVAL_MISS` by default).
+
+**Club and team accounts:** take them from the club's own website footer, or from a league directory that links them (MLB: `https://www.mlb.com/<club>/social`; nfl.com links club accounts). Club accounts own that club's starting lineup, team sheet, inactives and injury statements.
+
+#### Baseball
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| MLB statsapi schedule/gamefeed/boxscore | MLB probable-pitchers and starting-lineups pages → club site or club X account for the lineup card → ESPN MLB summary → Baseball Savant probables | MLB: X `MLB` (X-T tested); Bluesky `mlb.com` (verified but dormant, 0 posts); Threads `mlb`; YouTube `@MLB`; IG `mlb`. Clubs: `mlb.com/<club>/social`; Bluesky `mets.com` is verified and active |
+| MLB transactions / IL | ESPN MLB injuries → club X account → named beat reporter (§1.5 receipt) | As above |
+| NPB official (npb.jp) scores, starters, registration | Yahoo! Japan NPB game page → NPB X account → Nikkan Sports / Sponichi report | NPB: X `npb`; IG `npb.official`; YouTube `@NPB.official`; Facebook `npb.official` (blocked) |
+| KBO official (English/Korean) | Naver KBO preview/record (same lineage) → KBO Instagram or YouTube → Yonhap report | KBO: IG `kbo.official` (IG); YouTube `@KBO1982` (YT). **No X account is linked** from koreabaseball.com |
+| CPBL site / stats | CPBL club lineup record → CPBL YouTube → Focus Taiwan / named report | CPBL: YouTube `c/CPBL` only. The site's Facebook link points to an unrelated government campaign page, so exclude it |
+| LMB club report / league | LMB roster → LMB X account → named report | LMB: X `LMBBanorte`; IG `ligamexbeis`; YouTube `@LMBBanorteOficial` |
+
+#### Basketball
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ESPN NBA/WNBA summary | NBA/WNBA official injury report → `nba.com/players/todays-lineups` (render) → league Bluesky/X → club X account → named reporter | NBA: Bluesky `nba.com` (verified, active; BS); X `NBA`; Threads `nba` (TH tested); YouTube `@NBA`; IG `nba` |
+| WNBA injury report / WNBA CDN | ESPN WNBA → WNBA Bluesky → club account | WNBA: Bluesky `wnba.com` (verified; BS); X `wnba`; Threads `wnba`; YouTube `user/wnba` |
+| NBL match page / match API | ESPN NBL summary → NBL dated injury list → NBL X account → club account → named report | NBL: X `nbl`; IG `nbl`; YouTube `user/nbl` |
+| EuroLeague feeds | ESPN EuroLeague → Eurobasket / Proballers → club site | EuroLeague: **not authenticated** (site returned 429, and no links through the proxy) |
+| ACB site / live.acb.com | ACB round medical report → ACB X account → club site → Proballers | ACB: X `ACBCOM`; IG `acbcom`; YouTube `acbcom` |
+| FIBA game page / LiveStats | Proxy route → FIBA X account → national federation site → BasketNews / Eurobasket | FIBA: X `FIBA`; Threads `fiba`; YouTube `fiba`; IG `fiba` |
+
+#### Cricket
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ESPN cricket API | Cricbuzz scorecard → board or league official match centre → BBC Sport cricket (UK and international) | — (use the board and league rows below) |
+| ICC match centre | ESPN → Cricbuzz → ICC X or YouTube (toss/XI video) | ICC: X `ICC`; YouTube `ICC` (YT); IG `icc` |
+| IPL official | ESPN → Cricbuzz → IPL X account (toss and XI posts) | IPL: X `IPL`; IG `iplt20` |
+| CPL official | ESPN (league 8623/8676) → Cricbuzz → named report | CPL: **not authenticated** (no social links readable on cplt20.com) |
+| Cricket Australia match centre | ESPN → Cricbuzz → CA X account | Cricket Australia: X `CricketAus`; YouTube `CricketAus`; IG `cricketaustralia` |
+| ECB scorecard | ESPN → Cricbuzz → BBC Sport cricket → ECB X account | ECB: X `ECB_cricket`; YouTube `user/ecbcricket`; IG `englandcricket` |
+
+The toss and strip ladders in §3.3 still govern: a toss post from the board's own account is at the T1–T3 level only if it is the board's original post.
+
+#### Soccer
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ESPN soccer summary | League official match page → club site/app XI → FotMob → BBC Sport football | — |
+| Premier League pulselive / site | ESPN → club XI post → FotMob → BBC | Premier League: X `premierleague` (X-T tested); YouTube `premierleague`; IG `premierleague` |
+| UEFA match API / kits | ESPN (`uefa.champions` etc.) → club XI → FotMob | UEFA: **not authenticated** (site 403 / timeout on 2026-09-29) |
+| LaLiga / Bundesliga / Serie A / Ligue 1 official | ESPN → club site → FotMob → OpenLigaDB (Bundesliga) → BBC | LaLiga: X `laliga`, `LaLigaEN`; YouTube `user/laliga`. Bundesliga: X `bundesliga_EN`; YouTube `bundesliga`. Ligue 1: X `ligue1`. Serie A: **not authenticated** |
+| A-League (keepup.com.au) | ESPN `aus.1` → club site → FotMob | A-Leagues: X `aleaguemen`; IG `aleagues`; YouTube channel `UCzRogd_oK3bzKvAW-4aLuPQ` |
+| J.League (`data.j-league.or.jp`) | ESPN `jpn.1` → club site → FotMob | J.League: X `J_League`, `j_league_en`; YouTube `jleagueinternational` |
+| K League | FotMob → club site → Yonhap | K League: X `kleague`; YouTube `user/withkleague` |
+| MLS site | ESPN `usa.1` → club site → FotMob | MLS: X `mls`; YouTube `mls`; Bluesky `mls-pr.bsky.social` (MLS Communications; badge-verified, but not linked from the site, so check before use) |
+
+#### AFL and AFLW
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| AFL API matches | ESPN AFL → Squiggle games → AFL Tables | AFL: X `afl` (X-T and X-P tested); YouTube `afl`; IG `afl` |
+| AFL team lineups | Club site team selection → club X account → AFL X account → named report | As above, plus the club accounts |
+| AFL injury list | Club injury update → club X account → named report | As above |
+| AFLW team pages | AFL API (`competitionId=3`) → club site → AFLW X account | AFLW: X `aflwomens`; YouTube `AFLWomens`; IG `aflwomens` |
+
+#### Rugby league
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| NRL draw/ladder data | ESPN `rugby-league/3` → Rugby League Project → BBC (Super League) | NRL: **not authenticated** (nrl.com renders its footer by script). Confirm the handle in a browser before use |
+| NRL team lists | Club site team list → club X account → Google News RSS to find the club's "Final Team" release (§2.4) → named report | Club accounts from each club site |
+| NRL casualty ward (login) | Team-list notes → club injury update → named report | — |
+
+#### Rugby union
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| World Rugby API / match centre | ESPN rugby → union site → BBC Sport rugby union | World Rugby: X `worldrugby`; YouTube `worldrugby`; IG `worldrugby` |
+| URC match centre | ESPN (270557) → BBC → URC X account | URC: X `URCOfficial`; YouTube channel `UC-S6cXyil4qbIPfb2hrcH4w` |
+| Premiership Rugby | ESPN → BBC → Prem X account | Premiership: X `premrugby`; YouTube `PREM-Rugby` |
+| Super Rugby Pacific | ESPN (242041) → Super Rugby X account | Super Rugby: X `SuperRugby`; Threads `superrugby`; YouTube `SuperRugbyPacific` |
+| Top 14 (LNR) | ESPN → Top 14 X account → L'Équipe / named report | Top 14: X `top14rugby`; YouTube `top14` |
+
+#### NFL and college football
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ESPN NFL summary / injuries | NFL official injuries (by week) → inactives hub → club X account → named reporter | NFL: X `NFL`; YouTube `NFL`; IG `nfl`. Clubs are linked from nfl.com |
+| NFL inactives (about 90 minutes before kickoff) | Club X account → NFL X account → named reporter (§1.5 receipt) | As above |
+| NCAA scoreboard | ESPN `college-football` → school athletics site → school X account | NCAA: X `NCAA`; YouTube `ncaachampionships` |
+
+#### NHL
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| NHL api-web schedule / score / boxscore / landing | ESPN NHL → Hockey-Reference (history) → NHL X account | NHL: X `NHL`; YouTube `nhl`; IG `nhl`. Bluesky `nhl.com` is unverified with 0 posts: **do not use** |
+| Starting goalie | Club game-day release or club X account → Daily Faceoff (projected, with S-1 receipt) → named reporter | Club accounts from each club site |
+
+#### Tennis
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ATP scores page | ATP draw PDF → ESPN `tennis/atp` → Tennis Majors → TennisExplorer (scores only) | ATP: **not authenticated** (atptour.com returned 403) |
+| WTA API / match page / draw PDF | ESPN `tennis/wta` → WTA order of play → WTA X account | WTA: X `WTA`; Threads `wta`; YouTube `user/WTA` |
+| ITF draws (proxy) | ITF order of play → ITF X account → TennisExplorer (scores only) | ITF: X `worldtennis`; YouTube channel `UCsyvlpbK0BTEc3jec6nhPyQ`; IG `worldtennisofficial` |
+| Grand Slam sites | ESPN → the tour's page → the Slam's social account | Roland-Garros: Bluesky `rolandgarros.com` (verified; posts in season) |
+| Tennis Abstract Elo | Retry, then use the proxy route. There is **no substitute benchmark**: `RULES_TENNIS.md` TE-P5 is blocking, so without a dated snapshot the tennis card is not issued | — |
+
 ---
 
 ## 4. Blocked, failed or excluded (do not plan on these)
@@ -400,8 +574,13 @@ Use the table for the **missing field only**; move to the next route immediately
 | ESPNcricinfo direct | 403; use the proxy |
 | MLS stats API | 404 |
 | Sackmann tennis (GitHub) | 404 |
-| ClubElo | 502 (possibly temporary) |
-| X (Twitter), Reddit | Blocked on every route (2026-09-19) |
+| ClubElo | 502 (again on 2026-09-28) |
+| X (Twitter) | **No longer blocked (2026-09-29):** the timeline syndication and oembed routes work for official accounts (§1.8). `x.com` through the proxy, nitter and xcancel still fail |
+| Reddit | Blocked on every route (re-tested 2026-09-28: `.json` and API 403; the RSS returns a block page) |
+| Instagram, Facebook, TikTok, Weibo, YouTube RSS | 429 / login wall / shell only / 403 / 404 (2026-09-28). YouTube itself works through the watch page (§1.8) |
+| AP News hub, Reuters sports | 403 / 401 |
+| `stats.nba.com`, NBA CDN, ESPNcricinfo consumer API, Cricket Australia `apiv2`, ATP app gateway, ITF API, NBL `apicdn`, FIBA LiveStats host | Blocked or erroring from here on 2026-09-28 (see the sport tables) |
+| NRL casualty ward | Login required |
 | football-data.co.uk | Reachable, but its files carry bookmaker odds columns. **Excluded** under the firewall |
 | Bookmakers, odds sites, tipsters, RotoWire, RotoGrinders, FPTrack, fantasy/DFS | **Prohibited** (§1.4) |
 | sportscafe.in "AI simulation", archysport, AI recaps, formulaic pitch-report sites | **Prohibited** as synthetic content |

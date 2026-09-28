@@ -4,13 +4,13 @@
 
 ## 1. Structural and Git custody gate
 
-From the repository root, verify that every tracked and working file outside `.git` has a `.md` suffix, lives either at the root or directly in `prediction logs/`, and that no other content directory exists. Check `git status --short --branch`, `git branch -a`, and `git remote -v` before attributing a result to `main`. A clean tree before editing is a baseline, not proof of forecast quality.
+From the repository root, verify that every tracked and working file outside `.git` has a `.md` suffix, lives either at the root or directly in `prediction logs/`, and that no other content directory exists. The folder must contain exactly `PREDICTION_LOG_COMBINED.md` and Parts `_2` through `_6`, with no separate running logs or intermediate Part-5 snapshots. Check `git status --short --branch`, `git branch -a`, and `git remote -v` before attributing a result to `main`. A clean tree before editing is a baseline, not proof of forecast quality.
 
-After the edit, inspect `git diff --check`, `git diff --stat`, and the changed content. Confirm the [P-518 onward mini log](prediction%20logs/PREDICTION_MINI_RUNNING_LOG_P518_ONWARD.md) remains SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`; never normalize or reformat frozen issue bytes.
+After the edit, inspect `git diff --check`, `git diff --stat`, and the changed content. In [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md), extract the bytes **after the CRLF following** `<!-- BEGIN ORIGINAL P518 SOURCE BYTES -->` and **before the CRLF preceding** `<!-- END ORIGINAL P518 SOURCE BYTES -->`. Confirm that 141,740-byte block remains SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`; never normalize or reformat those bytes. The former standalone mini log is available at Git `753f0a9`.
 
 ## 2. Queue and baseline custody gate
 
-Compare the first snapshot in [Part 5](PREDICTION_LOG_COMBINED_5.md), the first line of [Current Status](GAME_LOG_STATUS_CURRENT.md), and [P-518–P-522 reconciliation](P518_P522_RECONCILIATION.md). The present required state is: canonical through P-517; P-518–P-522 reserved, unimported, and ineligible; next ID HOLD. The working mini log's “P-523 next” language is a disputed historical claim, not a release authorization.
+Compare the first snapshot in [Part 5](prediction%20logs/PREDICTION_LOG_COMBINED_5.md), the controlling note in Part 6, the first line of [Current Status](GAME_LOG_STATUS_CURRENT.md), and [P-518–P-522 reconciliation](P518_P522_RECONCILIATION.md). The present required state is: canonical history through P-517; P-518–P-522 reserved, not certified imports and ineligible; next new prediction ID P-523 by explicit user instruction. The embedded historical source's “P-523 next” line does not validate P-518–P-522 or supply the authority for this continuation.
 
 For each of the 20 disputed rows, compare the issued p, q, contract, and literal `BASELINE_P` to the working settlement. The table in the reconciliation record identifies the current mismatches. A numeric `0.500` placeholder never replaces `NOT_YET_DERIVED` or a different issued baseline. Keep issued forecasts frozen; append sourced settlement corrections only after the event, cutoff, and independent result lineage gates pass.
 

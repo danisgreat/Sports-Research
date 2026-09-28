@@ -1,6 +1,6 @@
 # Current rules — the operating manual
 
-**Method MDS-2026.09.28-v5.1 (md-only) · Control revision CR-2026.09.28-MD5 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+**Method MDS-2026.09.28-v5.1 (md-only) · Control revision CR-2026.09.29-MD7 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
 **What changed on 2026-09-28(e)** (the user instructed the review's improvements; no probability, width, centre or in-domain rank changed):
 - **Core first, annex after (§B, §C).** Four of the five cards before this change finished after the start, so none could count toward a checkpoint. A card now freezes its **core** (everything that sets a probability or a rank) before the start, and appends its disclosure **annex** afterwards.
@@ -35,12 +35,12 @@ A dated section, archived text or old card never reinstates a withdrawn rule (§
 2. `CARD_AND_LOG_TEMPLATES.md` §1 (the card) and §5 (the self-audit);
 3. `SOURCES.md` §1 (source rules).
 
-Record the session read (time and receipt SHA) in the mini log header.
+Record the session read (time and receipt SHA) in the active Part 6 working section.
 
 **Before every card, read in full:**
 1. the sport file's **§0 live page** (`RULES_<SPORT>.md`), plus `LEAGUE_RULES_CRICKET.md` or `LEAGUE_RULES_SOCCER.md` for those sports;
 2. the sport's section of `SOURCES.md` (§3.x);
-3. the active mini log's header and its unsettled section, plus the active canonical log's top snapshot (next ID, open follow-ups).
+3. [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md)'s top custody note and unsettled section, plus [Part 5](prediction%20logs/PREDICTION_LOG_COMBINED_5.md)'s top canonical snapshot (next ID, open follow-ups).
 
 **Read by citation when the card needs it:** `PROBABILITY_TOOLKIT.md` (every calculation), `BASE_RATES_REGISTER.md` (reference rows and widths), the rest of the sport file, and `LEARNINGS_INDEX.md` (lessons, one line each).
 
@@ -68,7 +68,7 @@ Record the session read (time and receipt SHA) in the mini log header.
 
 | Step | What to do | Hard stop if … |
 |---|---|---|
-| 0 | **Read** §0. **Check the queue:** settle any earlier final first. Get the next canonical ID from the active log's top snapshot; if it is unclear or on hold, use `TMP-YYYYMMDD-<LEAGUE>-<HOME>-<AWAY>`. **Declare the universe:** before the day's first card, write the day's `UNIVERSE` table in the mini log (`CARD_AND_LOG_TEMPLATES.md` §4): every event in the leagues you intend to card, with IDs and start times (`C-EVENT-UNIVERSE`) | The next ID or the event state is unclear: use a TMP ID |
+| 0 | **Read** §0. **Check the queue:** settle any earlier final first. Get the next ID from Part 6's top custody note and the last card appended there (P-523 onward, sequential in issue order, by the user's 2026-09-28 instruction); use `TMP-YYYYMMDD-<LEAGUE>-<HOME>-<AWAY>` only for an actual ID collision or an unresolved event identity. **Declare the universe:** before the day's first card, write the day's `UNIVERSE` table in Part 6 (`CARD_AND_LOG_TEMPLATES.md` §4): every event in the leagues you intend to card, with IDs and start times (`C-EVENT-UNIVERSE`) | The next ID or the event state is unclear: use a TMP ID |
 | 1 | **Identity and state.** Event, competition, venue, venue-local date and time, IANA timezone, AEST/AEDT conversion (with any date rollover). State from the feed (`SOURCES.md` §2.1 or the league's own feed): PREGAME / LIVE / FINAL. Never infer state from the clock alone. User-supplied times are estimates until verified | Not PREGAME: finish only as `LIVE_ISSUED` |
 | 2 | **Contract.** Parse each supplied row exactly: target, period, line, and push/void/overtime/tie terms. Quarantine the line | Ambiguous: flag it; never silently "fix" a row |
 | 3 | **Participants.** Official lineup, starters, goalie, pitchers and team sheet first, with fetch time (`SOURCES.md` §1.5). Injuries, suspensions, rest and coaching changes. Mark each as confirmed or projected | A Rank-1 total or margin row depends on an unretrieved lineup (G14.2) |
@@ -76,9 +76,9 @@ Record the session read (time and receipt SHA) in the mini log header.
 | 5 | **Evidence.** Game logs before aggregates (M13). L5/L10/L15/L20 descriptively. The season rate plus the opponent (§D5) | An aggregate carries direction while the game log is one click away: mark `AGGREGATE_ONLY` and cap the row |
 | 6 | **Baselines and distribution.** Print `BASELINE_P` (the population row) and `TEAM_BASELINE_P` (TB-1-MD, `PROBABILITY_TOOLKIT.md` §4). Build the prior plus named adjustments → centre and width → the family table with masses. Print the reference row and reference width (`BASE_RATES_REGISTER.md` §7). Read every row's p off the distribution with the toolkit arithmetic, shown | p cannot be reproduced from what is printed |
 | 7 | **Rank.** RM-1 q for each row (`PROBABILITY_TOOLKIT.md` §5): tier, flags, order by q, `TOP2_QUALITY`. Label `FORCED_PAIR`/`FREE` and `COVERING_PAIR`. Print P(R1∧R2) and P(¬R1∧¬R2) from p, the complement decomposition, and kill paths as weighted branches | A joint number is invented: use `JOINT_UNQUANTIFIED` with Fréchet bounds |
-| 8 | **Freeze the core** (see "Timing" below). Final volatile refresh; freeze time and `Freeze − start`; the method, control revision and manifest name with its SHA (copied from the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`); `UNIVERSE:` or `OUT_OF_UNIVERSE`. Run the self-audit's core items (`CARD_AND_LOG_TEMPLATES.md` §5). **Append the core to the active mini log before delivering it.** Then write the annex under it | A blocking self-audit item fails |
+| 8 | **Freeze the core** (see "Timing" below). Final volatile refresh; freeze time and `Freeze − start`; the method, control revision and manifest name with its SHA (copied from the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`); `UNIVERSE:` or `OUT_OF_UNIVERSE`. Run the self-audit's core items (`CARD_AND_LOG_TEMPLATES.md` §5). **Append the core after the original-source end marker in Part 6 before delivering it.** Then write the annex under it | A blocking self-audit item fails |
 | 9 | **Settle** (only when final). Three terminal lineages; the process record read from the feed with its endpoint and time; the lineup diff; z-scores; the p **and** q grades; enhanced reviews (§D8). Use `CARD_AND_LOG_TEMPLATES.md` §2 | Any credible live or conflicting source |
-| 10 | **Learn.** The three questions; dispositions to the mini log's learnings and its **document mapping**; the baseline ledger row (`SKILL_BASELINE_LEDGER.md`); skips for uncarded universe events | A new rule, control, test or flag while the inventory is closed (§D9): park the lesson instead |
+| 10 | **Learn.** The three questions; dispositions to Part 6's learnings and its **document mapping**; the baseline ledger row (`SKILL_BASELINE_LEDGER.md`); skips for uncarded universe events | A new rule, control, test or flag while the inventory is closed (§D9): park the lesson instead |
 
 ### Timing: core first, annex after (2026-09-28(e))
 
@@ -92,7 +92,7 @@ A card is built in two parts, so that a valid pregame issue exists even when the
   - Field 5's P(R1∧R2), P(¬R1∧¬R2) and, where it applies, P(all fail);
   - Field 6's freeze line.
 
-  The core passes the blocking self-audit and is frozen and appended to the mini log **before the start**.
+  The core passes the blocking self-audit and is frozen and appended to Part 6 **before the start**.
 - **The annex holds disclosures computed from the frozen numbers:**
   - the departure ledger and track-record row;
   - `LOW_RESOLUTION`;
@@ -139,7 +139,7 @@ All in `SOURCES.md`:
 - **Ladder:** field owner → official team or player → structured API → independent quality media → fallback.
 - **Access modes:** API / Browser / Proxy (`r.jina.ai`). ESPN routes reject a browser user-agent. NHL api-web, Tennis Abstract, UEFA and Squiggle need one.
 - **Critical dynamic fields** (lineup, starter, toss, goalie): the field owner, or two genuinely independent current lineages, or leave the field unresolved.
-- **Immediate fallback:** when a field's route is blocked, stale, empty or the wrong event, record the attempt and follow `SOURCES.md` §1.7 and §3.11 for that field. An authenticated original organisation post may be that organisation's release under §1.8, and counts in the same upstream lineage.
+- **Immediate fallback:** when a field's route is blocked, stale, empty or the wrong event, record the attempt (one attempt-ledger line per route, `SOURCES.md` §1.7) and open the next route **at once**: follow the failed source's own row in `SOURCES.md` §3.12, then §1.7 and §3.11 for that field. An authenticated original organisation post may be that organisation's release under §1.8, and counts in the same upstream lineage.
 - **Excluded:** market material, synthetic content, and search summaries as facts.
 
 ### D3 Participants and lineups (M19, M25)
@@ -294,13 +294,13 @@ Template: `CARD_AND_LOG_TEMPLATES.md` §2.
 - **After every settlement or import,** implement or explicitly disposition each row of the document-mapping table. Unexecuted mapping tables are how improvements were lost before.
 
 ### D10 Custody and logging
-- **Part 5 (`PREDICTION_LOG_COMBINED_5.md`) is the only active canonical log.** Parts 1–4 are closed. Its top snapshot controls the next ID; `GAME_LOG_STATUS_CURRENT.md` is the state register.
-  - **2026-09-28:** P-518–P-522 are reserved while they are reconciled (`GAME_LOG_STATUS_CURRENT.md` and the P-518 mini log in `prediction logs/`). Until the snapshot names the next ID, new cards use TMP IDs.
-  - **The P-518 onward mini log must stay byte-for-byte unchanged** during that reconciliation. New cards go into a **new** mini log (`PROMPTS.md` §1; `CARD_AND_LOG_TEMPLATES.md` §3).
-- **New cards go to the active mini log before delivery.** It lives in `prediction logs/` in the repository, or the one designated Drive folder. Cards are registered in Part 5 at the next import.
+- **Part 5 (`prediction logs/PREDICTION_LOG_COMBINED_5.md`) is canonical through P-517.** Parts 1–4 are closed. Its top snapshot controls the next canonical ID; `GAME_LOG_STATUS_CURRENT.md` is the state register.
+  - **2026-09-28:** P-518–P-522 are reserved while they are reconciled (`GAME_LOG_STATUS_CURRENT.md` and [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md)). The user explicitly set **P-523** as the next new prediction ID; continue sequentially in Part 6. This does not certify the earlier five records. Use a TMP ID only for an actual collision or unresolved event identity.
+  - **The original P-518 onward source block embedded in Part 6 must stay byte-for-byte unchanged** during reconciliation. The source-block raw SHA is `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`.
+- **New cards go to Part 6 before delivery, appended after the original-source end marker.** There are no separate running logs. Canonical promotion follows `CARD_AND_LOG_TEMPLATES.md` §7 only after custody and source checks.
 - **IDs:** use a TMP ID whenever a collision is possible. Never renumber or overwrite an issued ID. The verifiably timestamped card takes the lower number.
 - **The manifest:** copy its name and SHA onto every card, from the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`. Governance edits and new manifests are maintainer work, done in a repository session (`CONTRIBUTING.md`).
-- **The universe** is declared in the mini log (`CARD_AND_LOG_TEMPLATES.md` §4). A declared universe is never edited; skips are appended.
+- **The universe** is declared in Part 6 (`CARD_AND_LOG_TEMPLATES.md` §4). A declared universe is never edited; skips are appended.
 
 ## E. Sport quick cards
 
@@ -399,14 +399,14 @@ The live rules are in each sport file's §0 page. This section lists only what e
 |---|---|
 | This manual | `CURRENT_RULES.md` |
 | All probability arithmetic, TB-1-MD, RM-1, Elo, scoring | `PROBABILITY_TOOLKIT.md` |
-| Card, settlement, mini log, universe, ledger rows, self-audit | `CARD_AND_LOG_TEMPLATES.md` |
+| Card, settlement, Part 6 layout, universe, ledger rows, self-audit | `CARD_AND_LOG_TEMPLATES.md` |
 | Prompts to paste into a chat | `PROMPTS.md` |
 | Sources and access | `SOURCES.md` |
 | Sport rules | `RULES_<SPORT>.md` (§0 is live), `LEAGUE_RULES_CRICKET.md`, `LEAGUE_RULES_SOCCER.md` |
 | Reference rates, widths, the predictability map | `BASE_RATES_REGISTER.md` |
 | Lessons, tests and M-registry, one line each | `LEARNINGS_INDEX.md` (the evidence is in `LEARNING_REGISTER.md`) |
 | Skill against the baseline | `SKILL_BASELINE_LEDGER.md` |
-| Active log and state register | `PREDICTION_LOG_COMBINED_5.md` / `GAME_LOG_STATUS_CURRENT.md` |
+| Working log, canonical snapshot and state register | `prediction logs/PREDICTION_LOG_COMBINED_6.md` / `prediction logs/PREDICTION_LOG_COMBINED_5.md` / `GAME_LOG_STATUS_CURRENT.md` |
 | Method version and freeze receipt | `METHOD.md` (header) |
 | Scoring and evaluation mathematics (maintainers) | `SCORING_AND_VALIDATION.md` |
 | History of changes | `CHANGELOG.md` |

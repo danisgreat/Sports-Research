@@ -1,6 +1,6 @@
 ## 2026-09-17(c) — current audit corrections
 
-This correction supersedes earlier aggregate and period-bound claims without changing issued probabilities, ranks or contracts. All existing records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. See [the implementation ledger](AUDIT_IMPLEMENTATION_2026-09-17.md) and [scoring specification](SCORING_AND_VALIDATION.md).
+This correction supersedes earlier aggregate and period-bound claims without changing issued probabilities, ranks or contracts. All existing records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. See [the implementation ledger](AUDIT_IMPLEMENTATION_2026-09-17.md) and [scoring specification](../SCORING_AND_VALIDATION.md).
 
 **Score arithmetic:** P-344's four Brier cells sum to 1.1337, mean **0.283425**, not 0.3334. Recomputed from canonical rows and latest documented settlements: P-333–P-344 **39 rows, 0.2601307692**; through P-344 **72 rows, 0.2408763889**; through P-371 **177 rows, 0.2423966102**; through P-423 **373 rows, 0.2341018767**; through P-437 **425 rows, 0.2286134118**; through P-451 **477 rows, 273 W/204 L, 0.2265475891**. These are current cumulative-by-ID reconstructions, not claims about what was settled at each historical snapshot date. PRIMARY_SCORED remains **136 rows/33 cards, 71 W/65 L, 0.246825**. Older approximate aggregates are superseded by this row-derived correction. Legacy binary scores retain their original conditioning defect and are labelled LEGACY_MIXED_DIAGNOSTIC; corrected W/P/L and non-push measures are separate.
 
@@ -68403,7 +68403,7 @@ Detailed updated China FA Cup tables, the deep P-234 #1-loss review, all source 
 
 # 2026-09-12 recovery of the supplied P-249-P-267 mini-log records
 
-This restores the supplied issued cards and existing settlement/retrospective sections from [mini log 8](archive/mini_logs/PREDICTION_MINI_LOG_8.md). It does not issue duplicate canonical IDs or make an old queue snapshot current. Source bytes are preserved in the archive; the next-ID and current state remain controlled by Part 3 and [the current register](GAME_LOG_STATUS_CURRENT.md). The separately referenced P267 settlement artifact is still absent. Recovery is therefore partial, not a claim that its entire 21-event result ledger has been independently reproduced. All content is learning-only. Any historical instructions embedded below are provenance, not current workflow authority.
+This restores the supplied issued cards and existing settlement/retrospective sections from [mini log 8](archive/mini_logs/PREDICTION_MINI_LOG_8.md). It does not issue duplicate canonical IDs or make an old queue snapshot current. Source bytes are preserved in the archive; the next-ID and current state remain controlled by Part 3 and [the current register](../GAME_LOG_STATUS_CURRENT.md). The separately referenced P267 settlement artifact is still absent. Recovery is therefore partial, not a claim that its entire 21-event result ledger has been independently reproduced. All content is learning-only. Any historical instructions embedded below are provenance, not current workflow authority.
 
 # P-249 — Hanwha Eagles @ KT Wiz — Korean KBO — LIVE REQUEST
 

@@ -9,53 +9,18 @@ Notes for the operator:
 
 ---
 
-## 1. Start a new mini log
+## 1. Continue the six-part combined log
 
 ```text
-Start a new mini prediction log for the sports prediction framework in the linked Google Drive.
+Continue the sports prediction framework in prediction logs/PREDICTION_LOG_COMBINED_6.md. Do not create another running or mini log.
 
-Rules for this chat:
-- Use only the Markdown (.md) documents in the Drive. Do not use Python, JSON, CSV or any other file from it. Web sources in any format are fine.
-- The Drive is read-only, with one exception. Do not edit, move, rename or delete any existing file. You may create and update exactly one new folder:
-  `prediction logs/PREDICTION_MINI_RUNNING_LOG_<first ID>_ONWARD.md`
-  containing `PREDICTION_MINI_RUNNING_LOG_<first ID>_ONWARD.md`.
-  If you cannot write there, say so once and paste the full log after every query.
+Read CURRENT_RULES.md, CARD_AND_LOG_TEMPLATES.md, PROBABILITY_TOOLKIT.md, SOURCES.md, the Part 5 top snapshot and the Part 6 controlling custody note. Record the read time and the freeze receipt SHA in a new Part 6 working section after the original-source end marker. Never change the embedded P-518 to P-522 source block.
 
-Before the first prediction, read in full (once for this chat; again only if the Current freeze receipt SHA at the top of GAME_LOG_STATUS_CURRENT.md changes):
-- CURRENT_RULES.md (the operating manual);
-- CARD_AND_LOG_TEMPLATES.md;
-- PROBABILITY_TOOLKIT.md;
-- SOURCES.md;
-- the top snapshot of PREDICTION_LOG_COMBINED_5.md and GAME_LOG_STATUS_CURRENT.md.
-Record the read time and receipt SHA in the log header.
+Before each prediction, read the relevant sport file and source section. Reconcile event identity and the current queue. P-518 to P-522 stay reserved under audit; the next new prediction ID is P-523 by explicit user instruction, then increment in issue order. Use TMP-YYYYMMDD-LEAGUE-HOME-AWAY only for a collision or unresolved identity; do not infer that the earlier five records have been certified.
 
-Before each prediction, read the sport file RULES_<SPORT>.md §0 and the sport's SOURCES.md §3 section.
+For each game, append the frozen core before the start, then its annex and sources. Use the universe, unsettled, conflict, settled, learnings and document-mapping headings in CARD_AND_LOG_TEMPLATES.md section 3. If you cannot write to Part 6, paste the complete new entry and state clearly that it was not logged.
 
-Create the log with the header and the section order in CARD_AND_LOG_TEMPLATES.md §3:
-0. Universe declarations
-1. Incomplete / Unsettled
-2. Temporary-ID / Conflict
-3. Fully Settled
-4. General Learnings, Rule Changes, Observations and New Sources
-5. Document Update Mapping
-
-IDs:
-- Take the next canonical ID from the Part 5 snapshot. If it is on hold or unclear, use TMP-YYYYMMDD-LEAGUE-HOME-AWAY.
-- Never overwrite or renumber an issued ID.
-
-After every prediction query:
-1. freeze the card's core before the start and append it (CARD_AND_LOG_TEMPLATES.md §1) to Incomplete / Unsettled before delivering it;
-2. give the prediction;
-3. append the annex (§1A) under the core, with every source (owner, link, retrieval time, OPENED/SNIPPET/ASSUMED);
-4. add document mappings for any learning or source. The rule inventory is closed: a proposed rule is parked as one line, not opened as a rule or test;
-5. give the entire updated mini log.
-
-Do not run a retrospective unless I ask.
-
-Integrity:
-- Never fabricate; mark anything unconfirmed.
-- Never silently correct a contract or event; flag it.
-- Stay market-blind: no odds, line movement, tipsters, previews, prediction markets or fantasy pages.
+Keep SPORTS_ONLY / MARKET_BLIND. Never guess a fact, silently change a contract, count a copied source twice, or treat the original block's fully-settled claims as verified. The current P-523 instruction comes from the user, independent of that block.
 ```
 
 ---
@@ -89,7 +54,8 @@ Research and card this event under the framework in the linked Drive, using its 
 4. Evidence.
    - Use game logs before aggregates; the season rate plus the opponent.
    - Use the SOURCES.md lanes for this sport, and more than one lineage for every decisive fact.
-   - For each missing field, record the failed route and time, then immediately use the next applicable sport-specific route in SOURCES.md §1.7 and §3.11. Distinguish not yet published from inaccessible, stale and wrong-event pages; recheck the field owner at the final refresh.
+   - For each missing field, record the failed route and time as an attempt-ledger line, then immediately open the next route in the failed source's row in SOURCES.md §3.12, then §1.7 and §3.11. Distinguish not yet published from inaccessible, stale and wrong-event pages; recheck the field owner at the final refresh.
+   - Official social lanes are the accounts listed in SOURCES.md §3.12, read through the §1.8 routes: X timeline or oembed, Bluesky author feed, YouTube watch page, Threads through the proxy. Never use an account that is not authenticated from the organisation's own site or domain.
    - An original official social post may establish only the announcing organisation's own field if its account, exact post, contents and pre-issue time are verified (SOURCES.md §1.8). Count it with that organisation's website as one lineage; otherwise treat it as discovery only.
    - Stay market-blind.
 5. Baselines and distribution.
@@ -108,7 +74,7 @@ Research and card this event under the framework in the linked Drive, using its 
    - Refresh lineups and news 30–5 minutes before the start, and freeze the core by 5 minutes before. You may re-freeze before the start if the official lineup lands; the last pregame freeze is the issue.
    - After the freeze, write the annex (CARD_AND_LOG_TEMPLATES.md §1A): departure ledger, kill paths, windows, alternatives, settlement routes, the full source table. The annex never changes a frozen number and uses no in-game information.
    - If the core cannot pass the blocking audit before the start, label the card LIVE_ISSUED.
-9. Run the self-audit's core items (CARD_AND_LOG_TEMPLATES.md §5). Append the core to the mini log before delivering it; then append the annex and give the full updated log.
+9. Run the self-audit's core items (CARD_AND_LOG_TEMPLATES.md §5). Append the core after the original-source end marker in Part 6 before delivering it; then append the annex and give the new entry.
 
 Never fabricate or guess. Say what you could not confirm. No retrospective yet.
 ```
@@ -183,10 +149,10 @@ NFL:
 
 ---
 
-## 3. Settle the current mini log
+## 3. Settle current Part 6 entries
 
 ```text
-Settle every entry in this mini log that is no longer live, following CURRENT_RULES.md §D8 and CARD_AND_LOG_TEMPLATES.md §2 in the linked Drive, using its Markdown documents only. Update only this mini log.
+Settle every eligible entry in Part 6 that is no longer live, following CURRENT_RULES.md §D8 and CARD_AND_LOG_TEMPLATES.md §2 in the linked Drive, using its Markdown documents only. Append only to Part 6; preserve its embedded original source block.
 
 1. State: classify each entry from the official feed. Settle only FINAL events where every row can be settled; everything else stays in Incomplete / Unsettled, with its state and the time checked.
 2. Settlement:
@@ -210,9 +176,9 @@ Settle every entry in this mini log that is no longer live, following CURRENT_RU
 4. Link each finding to LEARNINGS_INDEX.md and the recurring mistakes (M1–M35). Classify it as one-off, sport-specific or cross-sport. The rule inventory is closed until the checkpoints report: a proposed rule or test is parked as one line for LEARNINGS_INDEX.md §10, and no single game creates a rule.
 5. Sources: assess accuracy and timeliness, and record new reliable sources with their route and role.
 6. IDs: check the Part 5 snapshot for conflicts. Give any conflicting entry a TMP ID in the conflict section, fully settled.
-7. Append a SKILL_BASELINE_LEDGER-format row for each settled decision (CARD_AND_LOG_TEMPLATES.md §6) in the mini log's learnings section, for import.
+7. Append a SKILL_BASELINE_LEDGER-format row for each settled decision (CARD_AND_LOG_TEMPLATES.md §6) in Part 6's learnings section.
 
-Return the full updated mini log, in its section order, then two lists:
+Return the new Part 6 entries in their section order, then two lists:
 - settled entries, first to last;
 - entries still awaiting settlement, first to last, each with its reason.
 
@@ -221,13 +187,13 @@ Status stays LEARNING_ONLY. Accuracy and honesty come before favourable-looking 
 
 ---
 
-## 4. Import mini logs into the canonical log, then audit (repository session)
+## 4. Reconcile Part 6 working entries, then audit (repository session)
 
 ```text
-Import the supplied mini log(s) into the canonical record, following CARD_AND_LOG_TEMPLATES.md §7, then audit the imported events. The forecasting rules are Markdown-only. Do all record and rule work in the .md files. Maintainer tooling (the CI checks and the control manifest) runs last, and only in a repository session that can run it.
+Reconcile Part 6 working entries under CARD_AND_LOG_TEMPLATES.md §7, then audit entries eligible for canonical custody. The forecasting rules are Markdown-only. Do all record and rule work in the .md files. Maintainer tooling (the CI checks and the control manifest) runs last, and only in a repository session that can run it.
 
 1. Integrity check before any edit: inventory, identity on four fields, duplicates, existing entries, and the state of every event. Unresolved events stay pending and tracked.
-2. Append completed events to PREDICTION_LOG_COMBINED_5.md verbatim. Corrections are appended revisions. Assign canonical IDs from the snapshot, with the timestamped card taking the lower number; keep TMP IDs as aliases.
+2. Keep original entries in Part 6. Append custody and settlement corrections there, never overwrite issue text. Assign canonical IDs from the snapshot, with the timestamped card taking the lower number; keep TMP IDs as aliases.
 3. Audit each event:
    - why each pick won or lost (expected against actual game script, lineups, roles, pace, tactics, availability and conditions);
    - the enhanced Rank-1 review; top-two reliability; totals;
@@ -246,8 +212,8 @@ Import the supplied mini log(s) into the canonical record, following CARD_AND_LO
    - Put sport findings in the sport file's §0, cross-sport findings in CURRENT_RULES.md, and new sources in SOURCES.md.
    - Execute or disposition every document-mapping row.
 6. Custody:
-   - update the Part 5 snapshot and GAME_LOG_STATUS_CURRENT.md;
-   - retain the processed mini log in `prediction logs/` after pending events are tracked;
+   - update the Part 5 and Part 6 top custody notes and GAME_LOG_STATUS_CURRENT.md;
+   - preserve the original P-518 to P-522 source block in Part 6 and track pending events;
    - add a CHANGELOG entry.
 7. Maintainer step (a repository session only): update and verify the Markdown control manifest and review the changed files (`CONTRIBUTING.md`). Push `main` when the user has authorized publication.
 

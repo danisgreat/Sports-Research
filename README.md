@@ -15,9 +15,9 @@ A disciplined, **market-blind** framework for researching sports events, issuing
    - the hand-computed team baseline TB-1-MD;
    - the RM-1 ranking table;
    - Elo, departures and scoring.
-4. **[`CARD_AND_LOG_TEMPLATES.md`](CARD_AND_LOG_TEMPLATES.md)**: the card, the settlement block, the mini log, the universe table and the self-audit.
+4. **[`CARD_AND_LOG_TEMPLATES.md`](CARD_AND_LOG_TEMPLATES.md)**: the card, the settlement block, the Part 6 working layout, the universe table and the self-audit.
 5. **[`SOURCES.md`](SOURCES.md)**: one source register, re-verified by live request on 2026-09-28, with access modes.
-6. **[`PROMPTS.md`](PROMPTS.md)**: the standard prompts for starting a mini log, carding a game, settling, importing and reviewing.
+6. **[`PROMPTS.md`](PROMPTS.md)**: the standard prompts for continuing Part 6, carding a game, settling, reconciling and reviewing.
 
 ## How a forecast works
 
@@ -41,7 +41,7 @@ identity + state ─► contract (lines quarantined) ─► official participant
 | Area | Files |
 |---|---|
 | Operating documents (what the model reads) | `CURRENT_RULES.md`, `PROBABILITY_TOOLKIT.md`, `CARD_AND_LOG_TEMPLATES.md`, `SOURCES.md`, `PROMPTS.md`, `RULES_<SPORT>.md` ×10, `LEAGUE_RULES_CRICKET.md`, `LEAGUE_RULES_SOCCER.md`, `BASE_RATES_REGISTER.md`, `LEARNINGS_INDEX.md` |
-| Records | `PREDICTION_LOG_COMBINED*.md` (Parts 1–4 closed; Part 5 active), `GAME_LOG_STATUS_CURRENT.md`, `prediction logs/` (historical and mini logs), `SKILL_BASELINE_LEDGER.md`, `MARKET_BENCHMARK_LEDGER.md` (operator, post-settlement only) |
+| Records | `prediction logs/PREDICTION_LOG_COMBINED*.md` (six parts only: Parts 1–5 canonical history; Part 6 active working custody), `GAME_LOG_STATUS_CURRENT.md`, `SKILL_BASELINE_LEDGER.md`, `MARKET_BENCHMARK_LEDGER.md` (operator, post-settlement only) |
 | Evidence and history | `LEARNING_REGISTER.md`, `CHANGELOG.md`; [validation evidence](VALIDATION_EVIDENCE.md), [P-518–P-522 reconciliation](P518_P522_RECONCILIATION.md), [historical link index](HISTORICAL_LINK_INDEX.md) |
 | Archived combined-log snapshots | `prediction logs/` |
 | Version and freeze receipt | `METHOD.md` (header), the current `CONTROL_MANIFEST_*.md` |
@@ -49,12 +49,12 @@ identity + state ─► contract (lines quarantined) ─► official participant
 
 ## Current state
 
-The active log's top snapshot is the only authority for queue state and the next ID.
+Use Part 6's top custody note, Part 5's closed canonical snapshot and `GAME_LOG_STATUS_CURRENT.md` together for queue state and the next ID. The latest user-directed continuation starts at P-523.
 
 | Item | State |
 |---|---|
-| Active canonical log | [Part 5](PREDICTION_LOG_COMBINED_5.md) (P-482 onward); Parts 1–4 are closed |
-| Next canonical ID | **On hold.** P-518–P-522 are reserved while they are reconciled ([status](GAME_LOG_STATUS_CURRENT.md)). New cards use TMP IDs until the snapshot names the next number |
+| Canonical through P-517 | [Part 5](prediction%20logs/PREDICTION_LOG_COMBINED_5.md); Parts 1–4 are closed. [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) continues new cards from P-523, with the P-518–P-522 source quarantined |
+| Next new prediction ID | **P-523**, by the user's explicit continuation instruction. P-518–P-522 stay reserved under [reconciliation](P518_P522_RECONCILIATION.md); their status does not become verified because a later ID is issued |
 | Freeze receipt | The manifest named in [`METHOD.md`](METHOD.md) |
 | Prospective gates | `C-BASELINE-SKILL` 0/100 · `T-RM1-PROSPECTIVE` 0/25 cards · `C-MARKET-BENCHMARK` 0/100 · **`C-RULE-FREEZE` in force; rule inventory closed** (new lessons are parked, `CURRENT_RULES.md` §D9). The counts are preregistered read-out points, not proof thresholds |
 | Issue timing | Cards freeze a **core** before the start and add an **annex** afterwards (`CURRENT_RULES.md` §B), because four of the five cards before 2026-09-28(e) finished after the start and could not count |
@@ -66,11 +66,12 @@ The active log's top snapshot is the only authority for queue state and the next
 
 | Part | Coverage | Custody |
 |---|---|---|
-| [Part 1](PREDICTION_LOG_COMBINED.md) | P-001–P-271 | Closed; settlement corrections only |
-| [Part 2](PREDICTION_LOG_COMBINED_2.md) | P-272–P-332 | Closed |
-| [Part 3](PREDICTION_LOG_COMBINED_3.md) | P-333–P-423; P-372 reserved | Closed |
-| [Part 4](PREDICTION_LOG_COMBINED_4.md) | P-424–P-481 | Closed |
-| [Part 5](PREDICTION_LOG_COMBINED_5.md) | P-482 onward | Active: canonical through P-517; P-518–P-522 reserved pending reconciliation |
+| [Part 1](prediction%20logs/PREDICTION_LOG_COMBINED.md) | P-001–P-271 | Closed; settlement corrections only |
+| [Part 2](prediction%20logs/PREDICTION_LOG_COMBINED_2.md) | P-272–P-332 | Closed |
+| [Part 3](prediction%20logs/PREDICTION_LOG_COMBINED_3.md) | P-333–P-423; P-372 reserved | Closed |
+| [Part 4](prediction%20logs/PREDICTION_LOG_COMBINED_4.md) | P-424–P-481 | Closed |
+| [Part 5](prediction%20logs/PREDICTION_LOG_COMBINED_5.md) | P-482–P-517 | Closed to new cards; canonical through P-517 |
+| [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) | P-518–P-522 reserved; new cards P-523 onward | Active continuation; earlier unresolved records are not certified canonical imports or performance eligible |
 
 ## For maintainers
 

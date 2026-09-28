@@ -2,10 +2,10 @@
 
 > **Controlling status:** all combined-log material remains **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. Settlement preserves evidence; it does not make the dataset formally performance-valid. Issued records are immutable.
 
-Status: **ACTIVE CANONICAL LOG — ALL NEW FORECASTS APPEND HERE**
+Status: **CLOSED FOR NEW FORECASTS AT P-517 — CANONICAL SOURCE THROUGH P-517**. New cards from P-523 onward append to [Part 6](PREDICTION_LOG_COMBINED_6.md); P-518–P-522 remain under separate custody audit.
 Opened: **2026-09-21**, after Part 4 was closed at `P-481`.
-Canonical range: **`P-482` onward**.
-Next canonical ID: **HOLD — unresolved**. The 2026-09-26 snapshot below said P-518; the separate staged/working P-518 onward mini log claims P-518–P-522 were issued, but they have not been imported or fully reconciled. Reserve the claimed IDs against reuse. See [P-518–P-522 reconciliation](P518_P522_RECONCILIATION.md); do not issue a new number until identity and custody checks pass.
+Canonical range: **`P-482`–`P-517`**.
+Next new prediction ID: **P-523**, by the user's explicit continuation instruction on 2026-09-28. The 2026-09-26 snapshot below said P-518; [Part 6](PREDICTION_LOG_COMBINED_6.md) preserves the separate P-518–P-522 issued claims, which have not been canonically imported or fully reconciled. Reserve those five IDs against reuse and continue in Part 6 from P-523. See [P-518–P-522 reconciliation](../P518_P522_RECONCILIATION.md); assigning P-523 does not certify the earlier claims.
 Current governing method at rollover: **MDS-2026.09.19-v4.3 / CR-2026.09.19-4**. Always fresh-read `METHOD.md` and the current control manifest before a new prediction rather than relying on this snapshot.
 Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 
@@ -15,21 +15,22 @@ Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 | 2 | `PREDICTION_LOG_COMBINED_2.md` | `P-272`–`P-332` | CLOSED — read/settle only |
 | 3 | `PREDICTION_LOG_COMBINED_3.md` | `P-333`–`P-423` (`P-372` reserved/unused) | CLOSED — read/settle only |
 | 4 | `PREDICTION_LOG_COMBINED_4.md` | `P-424`–`P-481` | CLOSED 2026-09-21 — read/settle only |
-| **5** | **`PREDICTION_LOG_COMBINED_5.md` (this file)** | **`P-482` onward** | **ACTIVE** |
+| **5** | **`PREDICTION_LOG_COMBINED_5.md` (this file)** | **`P-482`–`P-517`** | **CLOSED to new cards; canonical through P-517** |
+| **6** | **`PREDICTION_LOG_COMBINED_6.md`** | **P-518–P-522 reserved; new cards P-523 onward** | **ACTIVE continuation; earlier source block quarantined** |
 
 ## Current controlling snapshot
 
-**Queue correction — 2026-09-28.** Part 5 remains the canonical log through P-517. P-518–P-522 are claimed as issued in a separate working mini log, whose original bytes are preserved in the current tree. Official-source checks confirm several event results but identify mismatched settlement event references and other unresolved process/baseline fields. The five IDs are reserved against reuse; their records are not yet canonically imported or performance eligible. The next ID is on hold. See [P-518–P-522 reconciliation and source readback](P518_P522_RECONCILIATION.md).
+**Queue correction — 2026-09-28.** Part 5 remains the canonical log through P-517. P-518–P-522 are claimed as issued in a separate working mini log, whose original bytes are preserved in the current tree. Official-source checks confirm several event results but identify mismatched settlement event references and other unresolved process/baseline fields. The five IDs are reserved against reuse; their records are not yet canonically imported or performance eligible. The earlier next-ID hold is superseded: by the user's explicit 2026-09-28 instruction, new cards take P-523 onward in [Part 6](PREDICTION_LOG_COMBINED_6.md). See [P-518–P-522 reconciliation and source readback](../P518_P522_RECONCILIATION.md).
 
 | Field | Current value |
 |---|---|
 | As of | **2026-09-28 (Australia/Sydney).** Part 5 is canonical through P-517. P-518–P-522 are claimed as issued in the preserved working mini log; IDs reserved, identity/process/source/baseline reconciliation open, not imported. Prior 2026-09-26 snapshot is superseded for queue purposes. |
 | Highest canonical prediction ID | **P-517** |
-| Next canonical ID | **HOLD — do not issue or reuse a number until P-518–P-522 identity and custody reconciliation completes.** |
+| Next new prediction ID | **P-523** by explicit user instruction; P-518–P-522 stay reserved and under reconciliation. |
 | Part-5 issued events | **35 canonical event cards through P-517:** P-482–P-489 and P-491–P-517 (P-487 = Dallas Wings @ Phoenix Mercury; **P-516 = `TMP-20260923-NPB-CHU-DB-G25`**; **P-517 = `TMP-20260923-NBL-CNS-TAS`**, both assigned 2026-09-26(a)). P-490 is retired and unused. Separate working mini log claims five further issues; these are reserved but not canonical imports. |
 | Part-5 open / pending events | P-509 was settled in §"2026-09-24(g)". The separate P-518–P-522 working mini log is under reconciliation: do not treat unresolved process, source lineage or baseline fields as verified settlement. |
 | Part-5 learning-only diagnostics | Existing settled results are unchanged by ID reassignment. The 2026-09-23(c)/(d) cohort (descriptive only): **P-487** Rank-1 **W**; **P-489** Rank-1 **L** (`TOP_OU_REVIEW`); **P-491** Rank-1 **W**; TMP-NBL Rank-1 L. The **2026-09-24 cohort** (16 pregame units; P-494 live-issued and excluded; §(f) part M): **Rank-1 13 W / 3 L**; Rank-2 11 W / 5 L; Hit@2 11/12 once the four covering-pair cards are excluded; top O/U 10 W / 6 L (baseball Overs 1–3); row Brier 0.2282 (n=60), Rank-1 Brier 0.187. |
-| Active mini-log custody | [P-518 onward working mini log](prediction%20logs/PREDICTION_MINI_RUNNING_LOG_P518_ONWARD.md) is preserved under reconciliation, not a trusted canonical import. Its current SHA-256 is recorded in [the reconciliation](P518_P522_RECONCILIATION.md); do not edit it during this reconciliation. The prior P-516 onward log contains P-516/P-517 workflow history. |
+| Active working custody | [Part 6](PREDICTION_LOG_COMBINED_6.md) embeds the original P-518 onward source bytes under reconciliation, not as a trusted canonical import. Its original raw SHA-256 is recorded in [the reconciliation](../P518_P522_RECONCILIATION.md); do not edit the embedded block. The removed P-516 onward log had no event cards and remains in Git history. |
 | Historical open handles | These continue in GAME_LOG_STATUS_CURRENT.md. No temporary ID awaits reconciliation: `TMP-20260923-NPB-CHU-DB-G25` = **P-516** and `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)). TMP-20260922-WNBA-DAL-PHX is retired as an alias of P-487. |
 | Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE** |
 | Value status | `NO VALUE DETERMINABLE` unless the current governing value gate is explicitly satisfied |
@@ -37,7 +38,7 @@ Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 ## Mandatory continuity rules
 
 1. Fresh-read the current governing methodology, controls, source register and relevant sport-specific rule file before every forecast.
-2. Check `GAME_LOG_STATUS_CURRENT.md` and the active mini log before assigning an ID.
+2. Check `GAME_LOG_STATUS_CURRENT.md` and Part 6's top custody note before assigning an ID.
 3. Do not reuse or renumber a canonical ID. Use a temporary ID if a collision cannot be safely reconciled.
 4. Preserve the original pre-game prediction exactly after issue; settlement and retrospective material is appended, never retrofitted.
 5. Keep unresolved/live events explicitly pending. Do not settle from incomplete or non-terminal data.

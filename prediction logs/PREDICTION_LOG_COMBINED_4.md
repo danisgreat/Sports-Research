@@ -33,7 +33,7 @@ This is the only queue and next-ID authority for new forecasts. The snapshots in
 
 ## 2026-09-17(c) — current audit corrections
 
-This correction supersedes earlier aggregate and period-bound claims without changing issued probabilities, ranks or contracts. All existing records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. See [the implementation ledger](AUDIT_IMPLEMENTATION_2026-09-17.md) and [scoring specification](SCORING_AND_VALIDATION.md).
+This correction supersedes earlier aggregate and period-bound claims without changing issued probabilities, ranks or contracts. All existing records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. See [the implementation ledger](AUDIT_IMPLEMENTATION_2026-09-17.md) and [scoring specification](../SCORING_AND_VALIDATION.md).
 
 **Score arithmetic:** P-344's four Brier cells sum to 1.1337, mean **0.283425**, not 0.3334. Recomputed from canonical rows and latest documented settlements: P-333–P-344 **39 rows, 0.2601307692**; through P-344 **72 rows, 0.2408763889**; through P-371 **177 rows, 0.2423966102**; through P-423 **373 rows, 0.2341018767**; through P-437 **425 rows, 0.2286134118**; through P-451 **477 rows, 273 W/204 L, 0.2265475891**. These are current cumulative-by-ID reconstructions, not claims about what was settled at each historical snapshot date. PRIMARY_SCORED remains **136 rows/33 cards, 71 W/65 L, 0.246825**. Older approximate aggregates are superseded by this row-derived correction. Legacy binary scores retain their original conditioning defect and are labelled LEGACY_MIXED_DIAGNOSTIC; corrected W/P/L and non-push measures are separate.
 
@@ -500,7 +500,7 @@ Every card that ranked a **favourite −1.5** first implied a one-run conditiona
 
 **Winner:** Barbados — **LOSS**. **No Brier.** Rank-#1 and top-two metrics are undefined and the card is excluded from every cohort rate below.
 
-**This is the process success of the batch.** The card froze, before the toss, that every Jamaica innings and powerplay row was conditional on Jamaica batting first, and named the failure explicitly: *"If Barbados bats first, these exact targets are not silently transferred to Jamaica's second innings."* Jamaica won the toss and bowled. Nothing was transferred. Had the rows been silently reassigned to Jamaica's chase, the powerplay row would have been settled against a **79/0** target-censored chase powerplay — a different contract in a different tactical state — and the innings rows against a target-capped 145/1. That is exactly the [chase-total cap](RULES_CRICKET.md) failure mode, avoided. **Preserve the gate verbatim.** → cricket control 32 records it as positive evidence.
+**This is the process success of the batch.** The card froze, before the toss, that every Jamaica innings and powerplay row was conditional on Jamaica batting first, and named the failure explicitly: *"If Barbados bats first, these exact targets are not silently transferred to Jamaica's second innings."* Jamaica won the toss and bowled. Nothing was transferred. Had the rows been silently reassigned to Jamaica's chase, the powerplay row would have been settled against a **79/0** target-censored chase powerplay — a different contract in a different tactical state — and the innings rows against a target-capped 145/1. That is exactly the [chase-total cap](../RULES_CRICKET.md) failure mode, avoided. **Preserve the gate verbatim.** → cricket control 32 records it as positive evidence.
 
 **Why the winner call lost:** Jamaica's new ball removed four Barbados batters inside the powerplay (24/4), and Sadaqat's century ended the chase in 14.1 overs. The card's four-straight-wins/home-form case for Barbados was outweighed by Jamaica's batting ceiling, which the card itself had flagged as "higher than the venue sample implies" and then under-weighted in the 62/38 split. **Blind spots:** confirmed XIs and the toss were both unretrieved at the freeze — and the toss is the single field that decided whether the card had any active contract at all.
 
@@ -761,7 +761,7 @@ The findings above were recorded in this section and in the sport files on the f
 | Push-mass ceiling | `METHOD.md` §5 coherence rules; baseball control 35; `BASE_RATES_REGISTER.md` §3 |
 | Venue base rate beside the line | `UPCOMING_GAME_RESEARCH_GUIDE.md` §19 checklist; baseball control 35 |
 | Calibration tables mislead on correlated cards | `METHOD.md` §5 — report the **distinct-card count** beside the row count |
-| Base rates scattered across sport files | New **[`BASE_RATES_REGISTER.md`](BASE_RATES_REGISTER.md)** — one maintained copy, with `n`, query, date and refresh cadence |
+| Base rates scattered across sport files | New **[`BASE_RATES_REGISTER.md`](../BASE_RATES_REGISTER.md)** — one maintained copy, with `n`, query, date and refresh cadence |
 | §16.8 audit was self-reported | **`audit_card_controls.py`** rebuilt at the repository root; run at Step 6a of the settlement protocol |
 | Mini logs that cannot be audited | `EXTERNAL_LOGGING_WORKFLOW.md` §"2026-09-17(b)" — carry the card body or mark `BODY_NOT_CARRIED` |
 

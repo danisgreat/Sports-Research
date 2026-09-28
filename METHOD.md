@@ -2,7 +2,7 @@
 
 Status: **ACTIVE**
 Method version: **MDS-2026.09.28-v5.1 (md-only)**
-Control revision: **CR-2026.09.28-MD5**. Freeze the normalized-CRLF SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-28-8.md](CONTROL_MANIFEST_2026-09-28-8.md) with every new card. Copy the manifest name and its SHA-256 onto the card. The SHA is printed in the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`, a living file the manifest does not hash, so it can carry the manifest's own SHA.
+Control revision: **CR-2026.09.29-MD7**. Freeze the normalized-CRLF SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-29-1.md](CONTROL_MANIFEST_2026-09-29-1.md) with every new card. Copy the manifest name and its SHA-256 onto the card. The SHA is printed in the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`, a living file the manifest does not hash, so it can carry the manifest's own SHA.
 Scoring version: **SCV-2026.09.19-v2**
 
 **This file is a pointer, not a procedure.** From 2026-09-28 the forecasting model works from Markdown documents only:
@@ -33,4 +33,8 @@ Scoring version: **SCV-2026.09.19-v2**
 
 **2026-09-28(f), MD5 source coverage.** `SOURCES.md` adds field-specific immediate fallback routes and audited official-source paths for all ten sport sections. An original, timestamped, authenticated organisation social announcement is admissible for its own field and remains one lineage with its website. This repairs the overbroad categorical social ban; it does not change forecast arithmetic, probabilities, ranks or prior cards.
 
-**Receipts.** The `-4` through `-7` manifests remain historical receipts, even though their original headers call them current. This header and `-8` identify the active receipt. Cards frozen under an earlier manifest keep it.
+**2026-09-28(g), MD6 log consolidation.** The only files in `prediction logs/` are combined Parts 1–6. Parts 1–5 preserve canonical history through P-517. Part 6 embeds the original P-518–P-522 source bytes unchanged, quarantines those disputed claims and continues new prediction IDs from P-523 by the user's explicit instruction. This continuation does not certify the earlier five records. Former standalone logs and intermediate Part-5 snapshots are recoverable at pinned Git history through `HISTORICAL_LINK_INDEX.md`. Forecast arithmetic, prior issued values and scoring rules are unchanged.
+
+**2026-09-29(a), MD7 custody close-out and source/social lanes.** This pass finishes the MD6 consolidation. Manifest `-9` no longer verified, because nine files were edited after it was written; the active receipt is now `CONTROL_MANIFEST_2026-09-29-1.md`. It also removes the last "next ID on hold / use TMP" instructions, and `GAME_LOG_STATUS_CURRENT.md` now carries P-518–P-522 as reserved and P-523 as the next ID. `SOURCES.md` adds live-tested routes for every sport, a social-platform access matrix (X read routes now work; Bluesky, YouTube and Threads routes are documented) and a source-by-source fallback chain with each source's authenticated official accounts (§3.12). Retrieval and traceability only: no forecast arithmetic, probability, rank, issued card or scoring rule changed.
+
+**Receipts.** The `-4` through `-9` manifests of 2026-09-28 remain historical receipts, even though their original headers call them current. This header and `CONTROL_MANIFEST_2026-09-29-1.md` identify the active receipt. Cards frozen under an earlier manifest keep it.
