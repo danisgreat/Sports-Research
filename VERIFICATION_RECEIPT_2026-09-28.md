@@ -12,7 +12,7 @@ This receipt records executed checks for the Markdown evidence and custody repai
 | Seed Brier | Independently recalculated from all 29 published seed rows: card 0.2461, population 0.2360, difference +0.0101. Prospective rows: 0. These results do not demonstrate skill. |
 | Historical validation bundle | All nine embedded historical artifacts match their parent Git blob contents after documented newline normalization. Five embedded JSON artifacts parsed successfully. The full game-level evaluation was not rerun because its input data and dependent modules are absent from the Markdown tree. |
 | Link audit | 178 broken local link occurrences in preserved historical documents, across 74 distinct targets. [Recovery index](HISTORICAL_LINK_INDEX.md) maps 61 targets to reachable Git commits and marks 13 unavailable. Zero broken local links in current operating/evidence documents or the current status header. |
-| Freeze receipt | [Manifest -6](CONTROL_MANIFEST_2026-09-28-6.md) lists 53 stable files; all 53 normalized-CRLF SHA-256 values and byte counts matched on independent readback. Its normalized-CRLF SHA-256 is `24261cb741c8f11e3592d946216327e349052860728dafb0759976e01585a124`, matching the first status line. |
+| Freeze receipt | [Manifest -6](CONTROL_MANIFEST_2026-09-28-6.md) lists 53 stable files; all 53 normalized-CRLF SHA-256 values and byte counts matched on independent readback. Its normalized-CRLF SHA-256 is `f74d0369cd91770c54ee32a9c548467023ee19fa3cd2de26114795c6ef26b392`, matching the first status line. |
 | Diff syntax | `git diff --check` passed. The staged diff and remote equality are checked as separate publication steps. |
 
 ## Remaining evidence limits

@@ -400,7 +400,7 @@ Details are in `research/team_baseline_2026-09-25e/README.md`.
 **Source:** `research/predictability_2026-09-26/p5_predictability_results.json` (script `p5_predictability_map.py`).
 
 **Method:**
-- The validated team model is replayed leak-free on each league's latest season: tools/sport_models.py A1 for the ESPN leagues, tools/mlb_model.py A1 team-only for MLB.
+- The historically evaluated team model was reported as replayed without future games on each league's latest season: tools/sport_models.py A1 for the ESPN leagues, tools/mlb_model.py A1 team-only for MLB. The game-level rerun inputs are absent from the current Markdown tree.
 - "Favourite ≥ 0.70" is the STRONG tier, where Rank 1 won about 80% on the cards (`research/rank_model_2026-09-25e`).
 - The total line is floor(mean of prior games) + 0.5, which is not a market line.
 

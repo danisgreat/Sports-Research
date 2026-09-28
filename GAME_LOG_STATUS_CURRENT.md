@@ -1,4 +1,4 @@
-**Current freeze receipt (copy onto every card):** `CONTROL_MANIFEST_2026-09-28-6.md`, normalized-CRLF SHA-256 `24261cb741c8f11e3592d946216327e349052860728dafb0759976e01585a124`. Method MDS-2026.09.28-v5.0 (md-only), control revision CR-2026.09.28-MD3 (2026-09-28(d)). New cards go into a new mini log with TMP IDs while P-518–P-522 are reconciled.
+**Current freeze receipt (copy onto every card):** `CONTROL_MANIFEST_2026-09-28-6.md`, normalized-CRLF SHA-256 `f74d0369cd91770c54ee32a9c548467023ee19fa3cd2de26114795c6ef26b392`. Method MDS-2026.09.28-v5.0 (md-only), control revision CR-2026.09.28-MD3 (2026-09-28(d)). New cards go into a new mini log with TMP IDs while P-518–P-522 are reconciled.
 
 ## Current queue correction — 2026-09-28
 

@@ -1,7 +1,7 @@
 ﻿# Probability scoring and validation
 
 
-> **CR-2026.09.21-3 audit reconciliation:** scoring/evaluation findings marked superseded or rejected in the deleted historical audit file are non-operative; its recovery location is listed in [Historical Link Index](HISTORICAL_LINK_INDEX.md). CR-3 additionally removes surviving live gate references to pseudo-tail/path-count/separation-floor shortcuts. Frozen historical probabilities remain unchanged.
+> **CR-2026.09.21-3 audit reconciliation:** scoring/evaluation findings marked superseded or rejected in the [historical audit file](https://github.com/danisgreat/Sports-Research/blob/47e774879430f078c99808e7c86a400d17ef7318/archive/audit_documents_implemented_2026-09-25/AUDIT_RECONCILIATION_ALL_SPORTS_2026-09-21.md) are non-operative. CR-3 additionally removes surviving live gate references to pseudo-tail/path-count/separation-floor shortcuts. Frozen historical probabilities remain unchanged.
 
 
 

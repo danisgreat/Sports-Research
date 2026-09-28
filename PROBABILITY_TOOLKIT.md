@@ -453,7 +453,7 @@ With k the league's shrinkage constant (§4.3):
 **Where the constants come from:**
 - k and the widths are the tool's constants (`BASE_RATES_REGISTER.md` §7.1, §7.5, §7.7(b)).
 - HE is the mean home margin in non-neutral games, pooled over the cached seasons: NBL 2023–26, WNBA 2024–26, NFL 2024–25, AFL 2025–26, NRL 2025–26, NBA/NHL/EPL/MLB 2025-26 ([historical home-edge inputs](VALIDATION_EVIDENCE.md)).
-- The resolution columns are the out-of-sample verdicts in `BASE_RATES_REGISTER.md` §7.8. They are unchanged by this page.
+- The resolution columns are the historical reported out-of-sample verdicts in `BASE_RATES_REGISTER.md` §7.8. They are unchanged by this page; [Validation Evidence](VALIDATION_EVIDENCE.md) states the current replication limit.
 
 **The four soccer rows marked P6** were added on 2026-09-28 by a test preregistered before any run ([embedded P6 preregistration](VALIDATION_EVIDENCE.md)). Held out over 2021-22 to 2025-26, with each game forecast from earlier games only:
 

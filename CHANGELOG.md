@@ -1,6 +1,6 @@
 ﻿# Changelog
 
-**Opened 2026-09-25(c).** This is the project's dated history. Until 2026-09-25(c) it lived in the body of `README.md`, which had grown into about twenty dated sections. That buried what the project is and how to use it. The complete former README body is preserved **verbatim** below, in its original order (SHA-256 of the whole former README: `003a7eaecb6b64e70a28811449a34e5f4a7572ef03dffca621675c7d200a9b71`). Its links are unchanged and still resolve, because this file sits in the same folder.
+**Opened 2026-09-25(c).** This is the project's dated history. Until 2026-09-25(c) it lived in the body of `README.md`, which had grown into about twenty dated sections. That buried what the project is and how to use it. The complete former README body is preserved **verbatim** below, in its original order (SHA-256 of the whole former README: `003a7eaecb6b64e70a28811449a34e5f4a7572ef03dffca621675c7d200a9b71`). Its original link text is unchanged; links whose targets were removed are mapped in the [Historical Link Index](HISTORICAL_LINK_INDEX.md).
 
 New entries go at the top, under **Entries from 2026-09-25(c)**. The governing rules live in [`CURRENT_RULES.md`](CURRENT_RULES.md) and the files it cites; this changelog is history, not instruction (`METHOD.md` §9). Older links to removed files refer to versions available in Git history.
 
