@@ -109,6 +109,28 @@ class CalibrationReport(unittest.TestCase):
             self.assertIn("Murphy decomposition", text)
             self.assertIn("| soccer |", text)
 
+    def test_paired_baseline_requires_same_target_certification(self):
+        rows = [
+            {"card": "P-1", "p": 0.8, "y": 1, "baseline_match_valid": True,
+             "baseline_probability": 0.5, "event_id": "e1", "event_cluster_id": "cl1", "target_id": "t1", "contract_id": "c1",
+             "horizon": "PREGAME", "input_cutoff_utc": "t0", "baseline_event_id": "e1",
+             "baseline_target_id": "t1", "baseline_contract_id": "c1", "baseline_horizon": "PREGAME",
+             "baseline_input_cutoff_utc": "t0"},
+            {"card": "P-1", "p": 0.6, "y": 0, "baseline_match_valid": True,
+             "baseline_probability": 0.5, "event_id": "e1", "event_cluster_id": "cl1", "target_id": "t2", "contract_id": "c2",
+             "horizon": "PREGAME", "input_cutoff_utc": "t0", "baseline_event_id": "e1",
+             "baseline_target_id": "t2", "baseline_contract_id": "c2", "baseline_horizon": "PREGAME",
+             "baseline_input_cutoff_utc": "t0"},
+            {"card": "P-2", "p": 0.5, "y": 0, "baseline_match_valid": True,
+             "baseline_probability": 0.5, "event_id": "e2", "event_cluster_id": "cl2", "target_id": "t3", "contract_id": "c3",
+             "horizon": "PREGAME", "input_cutoff_utc": "t0", "baseline_event_id": "e2",
+             "baseline_target_id": "not-t3", "baseline_contract_id": "c3", "baseline_horizon": "PREGAME",
+             "baseline_input_cutoff_utc": "t0"},
+        ]
+        result = cr.paired_baseline_summary(rows, boot=200, seed=7)
+        self.assertEqual((result["n"], result["events"], result["excluded"]), (2, 1, 1))
+        self.assertAlmostEqual(result["event_weighted"], (0.04 - 0.25 + 0.36 - 0.25) / 2)
+
 
 if __name__ == "__main__":
     unittest.main()

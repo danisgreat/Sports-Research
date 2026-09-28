@@ -4,6 +4,9 @@
 Program revision: **NP-2026.09.19-v2**. Training specification: **NTS-2026.09.19-v0.5**. Governing forecast method: **MDS-2026.09.19-v4.3 / CR-2026.09.21-3**.
 
 
+> **Current capability correction — 28 September 2026.** Research fitting and retrospective rolling-origin comparisons have occurred for RM-1/TB-1 and the exact reduced-feature sport scopes described below. They are not approved forecasting builds: H0 remains unapproved, no scope has passed prospective shadow validation or promotion, and all card records remain learning-only. Verified prospective baseline/RM-1 rows and eligible shadow results are currently zero; run `python tools/evidence_status.py`. This program records model-development stages; the scope-by-scope current state is [CAPABILITY_STATUS.md](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md).
+
+
 **Current state (updated 2026-09-26(c)):** every sport now has a reduced-feature A0/A1 build in code. MLB is in `tools/mlb_model.py`. Soccer, ice hockey, basketball, American football, AFL, rugby league, rugby union, baseball outside MLB, tennis and cricket are in `tools/sport_models.py`, with adapters in `tools/sport_data.py`. Each has a prospective shadow lane (`C-MLB-SHADOW`, `C-SPORT-SHADOW`). **These are not the full recipes** (possession, drive, shot, delivery and point-state models need play-level data that no admitted source supplies). They are the "separately labelled reduced-feature build" of `MODEL_IMPLEMENTATION_RECIPES.md` §1, built from final scores, dates and venue roles. Rolling-origin comparisons on public results, where they could be reached, are in `research/sport_models_2026-09-26/README.md`. Those comparisons do not constitute an approved H0, and no build is promoted.
 
 *Previous state (2026-09-26(b)):* the MLB A0/A1 pilot is implemented as tested code (`tools/mlb_model.py`, synthetic-data tests in `tools/test_mlb_model.py`), and its prospective shadow lane (stage S6, `C-MLB-SHADOW`) is open. **No empirical dataset is approved, no model is fitted, no calibrator is fitted, and no shadow forecast has been issued yet.** Every other scope remains Markdown-only. The user's 17 September request authorizes implementation of the audit findings; the subsequent clarification prioritizes implementation within Markdown. This satisfies the authorization question for this work. The previous statement that “implement all recommendations” could not authorize implementation is withdrawn. It is not a reason to request permission again.
@@ -23,7 +26,7 @@ The executable reference algorithms, sport-specific equations, forecast/evaluati
 | S3 A0/A1 | Fit empirical and interpretable conditional baselines on identical chronological folds | **Reduced-feature builds for every sport in code (2026-09-26(c)).** Rolling-origin A1 v A0 on public results: soccer (five leagues), NFL, AFL, NBA (2013–15 and 2023–26), WNBA, NHL, MLB (team-only core), ATP and IPL cricket. MLB, tennis and cricket each failed at v1 and were re-selected on an earlier TUNE window (v2; disclosed). Not run: NBL, NRL, rugby union, NPB/KBO/CPBL, cricket outside the IPL. Failed comparisons are preserved (`research/sport_models_2026-09-26/README.md`) |
 | S4 optional challengers | Sport-state A2, then A3/A4 where justified | DEFERRED until A0/A1 and data coverage support the extra complexity; not a compulsory step toward publication |
 | S5 held-out evaluation | Optional calibration on disjoint CAL, then untouched TEST opened once | NOT RUN; proper scores, coverage, calibration, support, critical slices and operational failure checks required |
-| S6 prospective shadow | Immutable, time-stamped forecasts from the frozen build, before outcomes | MLB lane (`research/mlb_shadow/`) and every-other-sport lane (`research/sport_shadow/`, per league) OPEN 2026-09-26; 0 rows so far. Frozen after the card and before the start; append-only. Required before promotion or publication, and not bypassed by S5 |
+| S6 prospective shadow | Immutable, time-stamped forecasts from the frozen build, before outcomes | MLB lane (`research/mlb_shadow/`) and every-other-sport lane (`research/sport_shadow/`, per league) are implemented, but current qualifying settled evidence is 0 rows as of 2026-09-28. Frozen after the card and before the start; append-only. Required before promotion or publication, and not bypassed by S5 |
 | S7 optional decision models | A5 ranker/A7 pair selector on independent decision sets | DORMANT; neither is needed to query a coherent distribution |
 
 
@@ -86,7 +89,7 @@ This is descriptive; the scope and build state above are unchanged.
 
 **Where resolution is lowest.** In the full settled record (`research/settled_rows_2026-09-25/README.md`), the human card process shows its lowest resolution where it is used most:
 
-| Sport | Resolution | Decision Brier | n |
+| Sport | Resolution | Historical binary Brier (legacy selection; not verified preferred decisions) | n |
 |---|---:|---:|---:|
 | MLB | 0.0075 | 0.238 | 70 |
 | Basketball | 0.012 | 0.241 | 31 |

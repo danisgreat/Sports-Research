@@ -15,28 +15,35 @@ Method:
    dropped and counted.
 3. **Probability.** The graded table's `p` / probability / "Issued p" column, taking its first
    number (percentages divided by 100). If absent, the issue-time lookup for the same
-   (card, rank) is used, but only when the contract texts match (normalised token overlap ≥ 0.5).
-4. **Duplicates.** Where one (card, rank) appears in several graded tables, the LAST in log order
-   wins; later tables are corrections or audits. Every disagreement goes to conflicts.csv.
+   (card, rank) is used, but only when normalized contract text matches exactly.
+4. **Duplicates.** Conflicting occurrences are quarantined. Exact-identical repeats are represented
+   once with every source location retained. No "last occurrence wins" rule is used.
 5. **Sport.** Classified from the canonical event name in GAME_LOG_STATUS_CURRENT.md, then the
    card heading, then the contract text.
 
-Output (this folder): settled_rows.csv, conflicts.csv, coverage.txt.
-Usage: python extract_settled_rows.py
+Output defaults to the versioned `research/settled_rows_2026-09-28/generated/` folder. The older
+2026-09-25 CSV remains a frozen historical artifact. Conflicts are quarantined, and approximate
+contract-text matching is not used to join probabilities. Parsed legacy rows lack enough identity,
+time, source and freeze evidence to enter prospective gates.
+Usage: python research/settled_rows_2026-09-25/extract_settled_rows.py [--output-dir PATH]
 """
+import argparse
 import csv
+import hashlib
 import glob
 import os
 import re
+import unicodedata
 from collections import defaultdict
+from pathlib import Path
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 HERE = os.path.dirname(os.path.abspath(__file__))
 PARTS = ['PREDICTION_LOG_COMBINED.md', 'PREDICTION_LOG_COMBINED_2.md', 'PREDICTION_LOG_COMBINED_3.md',
          'PREDICTION_LOG_COMBINED_4.md', 'PREDICTION_LOG_COMBINED_5.md']
 # Active mini logs (2026-09-25(e)): cards settled there but not yet imported into Part 5. A card that is
-# also in Part 5 is de-duplicated by the (card, rank) rule below (the last occurrence in log order wins),
-# so reading a mini log never double-counts it. P-510–P-515 were imported into Part 5 §"2026-09-25(f)".
+# also in Part 5 must agree exactly; a conflicting occurrence is quarantined rather than silently
+# choosing one source. P-510–P-515 were imported into Part 5 §"2026-09-25(f)".
 MINI_LOGS = sorted(os.path.relpath(p, REPO) for p in glob.glob(
     os.path.join(REPO, 'Mini logs (to be sent to actual log later)', '*', '*.md')))
 PARTS += MINI_LOGS
@@ -100,6 +107,11 @@ def parse_result(s):
             'VOID': 'V'}[m.group(1)]
 
 
+def parse_bool(s):
+    t = re.sub(r"[*`\s]", "", s or "").casefold()
+    return True if t in ("yes", "true", "1", "preferred") else False if t in ("no", "false", "0", "notpreferred") else None
+
+
 def tokens(s):
     return set(TOKEN_RE.findall(re.sub(r'[*`]', '', s.lower())))
 
@@ -109,6 +121,107 @@ def similar(a, b):
     if not ta or not tb:
         return False
     return len(ta & tb) / min(len(ta), len(tb)) >= 0.5
+
+
+def normalize_contract(s):
+    """Conservative text key for exact issued/settled joins; never guess by token overlap."""
+    s = unicodedata.normalize("NFKC", re.sub(r"[*`]", "", s or "")).casefold()
+    s = s.translate(str.maketrans({"−": "-", "–": "-", "—": "-", "’": "'"}))
+    return " ".join(re.sub(r"[^\w.+/'-]+", " ", s).split())
+
+
+def exact_col(headers, names):
+    wanted = {x.casefold().strip("` *") for x in names}
+    return next((i for i, h in enumerate(headers) if h.casefold().strip("` *") in wanted), None)
+
+
+def infer_horizon(text):
+    t = (text or "").upper().replace("_", "-")
+    if re.search(r"\b(LIVE-ISSUED|LIVE VIEW|ISSUED LIVE|IN PROGRESS|WARMUP|AFTER START|START CROSSED)\b", t):
+        return "LIVE_ISSUED"
+    if re.search(r"\b(PREGAME|PRE-GAME|PRESTART)\b", t) and not re.search(r"\bNOT PRE[- ]?GAME\b", t):
+        return "PREGAME_LABEL_ONLY"
+    return "UNKNOWN"
+
+
+def horizon_map(parts):
+    """Collect whole card sections so settlement rows inherit a horizon label where present."""
+    text_by_card = defaultdict(list)
+    for part in parts:
+        path = Path(REPO) / part
+        if not path.exists():
+            continue
+        active, active_level = None, 0
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            h = HEAD_RE.match(line)
+            if h:
+                level = len(h.group(1))
+                sid = single_id(h.group(2))
+                if sid and not UMBRELLA_RE.search(h.group(2)):
+                    active, active_level = sid, level
+                elif active and level <= active_level:
+                    active = None
+            marker = MARK_RE.search(line)
+            if marker:
+                active, active_level = marker.group(1), 0
+            if active:
+                text_by_card[active].append(line)
+    return {card: infer_horizon("\n".join(lines)) for card, lines in text_by_card.items()}
+
+
+def reconcile_occurrences(graded, issued):
+    """Keep only stable card/rank/contract/outcome groups; return detailed quarantine rows."""
+    grouped = defaultdict(list)
+    for row in graded:
+        grouped[(row["card"], row["rank"])].append(row)
+    final, conflicts = [], []
+    for (card, rank), occurrences in sorted(grouped.items()):
+        contracts = {normalize_contract(r.get("contract", "")) for r in occurrences}
+        reasons = []
+        if "" in contracts:
+            reasons.append("MISSING_CONTRACT_IDENTITY")
+        if len(contracts) > 1:
+            reasons.append("MULTIPLE_CONTRACTS_FOR_CARD_RANK")
+        for field in ("result", "p", "q", "baseline_p"):
+            vals = {round(float(r[field]), 9) if field != "result" and r.get(field) is not None else r.get(field)
+                    for r in occurrences if r.get(field) is not None}
+            if len(vals) > 1:
+                reasons.append("CONFLICTING_" + field.upper())
+        if reasons:
+            conflicts.append(_conflict_row(card, rank, occurrences, reasons))
+            continue
+        row = dict(occurrences[0])
+        row["source_occurrences"] = " ; ".join(f"{r['part']}:{r['line']}" for r in occurrences)
+        contract_key = next(iter(contracts))
+        issue_rows = [x for x in issued.get((card, rank), [])
+                      if normalize_contract(x.get("contract", "")) == contract_key]
+        mismatch = None
+        for field in ("p", "q", "baseline_p", "preferred_at_issue"):
+            existing = {r.get(field) for r in occurrences if r.get(field) is not None}
+            candidates = {x.get(field) for x in issue_rows if x.get(field) is not None}
+            if len(existing) > 1 or len(candidates) > 1 or (existing and candidates and existing != candidates):
+                mismatch = "ISSUE_SETTLEMENT_" + field.upper() + "_DISAGREEMENT"
+                break
+            if row.get(field) is None and len(candidates) == 1:
+                row[field] = next(iter(candidates))
+        if mismatch:
+            conflicts.append(_conflict_row(card, rank, occurrences, [mismatch]))
+            continue
+        final.append(row)
+    return final, conflicts
+
+
+def _conflict_row(card, rank, occurrences, reasons):
+    return {
+        "card": card, "rank": rank, "occurrences": len(occurrences),
+        "reason": ";".join(sorted(set(reasons))),
+        "source_locations": " ; ".join(f"{r['part']}:{r['line']}" for r in occurrences),
+        "contracts": " // ".join(r.get("contract", "")[:120] for r in occurrences),
+        "results": "/".join(str(r.get("result", "")) for r in occurrences),
+        "ps": "/".join("" if r.get("p") is None else f"{r['p']:.6f}" for r in occurrences),
+        "qs": "/".join("" if r.get("q") is None else f"{r['q']:.6f}" for r in occurrences),
+        "baseline_ps": "/".join("" if r.get("baseline_p") is None else f"{r['baseline_p']:.6f}" for r in occurrences),
+    }
 
 
 SPORT_RULES = [
@@ -204,11 +317,16 @@ def single_id(text):
     return ids.pop()
 
 
-def main():
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--output-dir", type=Path,
+                    default=Path(REPO) / "research" / "settled_rows_2026-09-28" / "generated")
+    args = ap.parse_args(argv)
     events = event_map()
     graded, issued = [], defaultdict(list)
     titles = {}
-    dropped = 0
+    unattributed = []
+    card_horizons = horizon_map(PARTS)
     for part in PARTS:
         lines = open(os.path.join(REPO, part), encoding='utf-8-sig').read().split('\n')
         heading_card, card_level = None, 0
@@ -243,7 +361,8 @@ def main():
                     if res:
                         graded.append({'part': part, 'line': i + 1, 'card': bl.group(1), 'rank': int(seg.group(1)),
                                        'contract': seg.group(2)[:160],
-                                       'p': float(seg.group(3)) if seg.group(3) else None, 'result': res})
+                                       'p': float(seg.group(3)) if seg.group(3) else None, 'q': None,
+                                       'baseline_p': None, 'preferred_at_issue': None, 'result': res})
                 i += 1
                 continue
             if ln.startswith('|') and i + 1 < len(lines) and SEP_RE.match(lines[i + 1].rstrip('\r')):
@@ -274,6 +393,9 @@ def main():
                             if any(t in hh.lower() for t in ('result', 'settlement', 'outcome', 'realised'))
                             and not any(a in hh.lower() for a in ('route', 'source', 'endpoint', 'note'))]
                 p_c = prob_col(headers)
+                q_c = exact_col(headers, ('rm-1 q', 'q', 'ranking q', 'calibrated q'))
+                baseline_c = exact_col(headers, ('baseline_p', 'baseline p', 'naive baseline p'))
+                preferred_c = exact_col(headers, ('preferred_at_issue', 'preferred at issue', 'preferred decision'))
                 con_c = pick_col(headers, ['contract', 'pick', 'selection', 'frozen issued row', 'issued row', 'row', 'option'],
                                  avoid=('contract id',))
                 j = i + 2
@@ -287,6 +409,9 @@ def main():
                         rk = re.search(r'\b([1-8])\b', cs[rank_c].replace('*', ''))
                         contract = re.sub(r'[*`]', '', cs[con_c]) if con_c is not None else ''
                         p = parse_prob(cs[p_c]) if p_c is not None else None
+                        q = parse_prob(cs[q_c]) if q_c is not None else None
+                        baseline_p = parse_prob(cs[baseline_c]) if baseline_c is not None else None
+                        preferred = parse_bool(cs[preferred_c]) if preferred_c is not None else None
                         if rk:
                             if res_c is not None:
                                 exact = [cs[k] for k in res_cols
@@ -295,43 +420,29 @@ def main():
                                 if res:
                                     if card:
                                         graded.append({'part': part, 'line': j + 1, 'card': card, 'rank': int(rk.group(1)),
-                                                       'contract': contract[:160], 'p': p, 'result': res})
+                                                       'contract': contract[:160], 'p': p, 'q': q, 'baseline_p': baseline_p,
+                                                       'preferred_at_issue': preferred, 'result': res})
                                     else:
-                                        dropped += 1
-                            elif p is not None and card:
-                                issued[(card, int(rk.group(1)))].append((contract, p))
+                                        unattributed.append({'part': part, 'line': j + 1, 'reason': 'CARD_ID_NOT_UNIQUE',
+                                                             'row': lines[j][:500]})
+                                elif card and (p is not None or q is not None or baseline_p is not None or preferred is not None):
+                                    # Tables often carry a blank Result column at issue time. Preserve
+                                    # these frozen values as lookups instead of silently dropping them.
+                                    issued[(card, int(rk.group(1)))].append({'contract': contract, 'p': p, 'q': q,
+                                                                             'baseline_p': baseline_p,
+                                                                             'preferred_at_issue': preferred,
+                                                                             'part': part, 'line': j + 1})
+                            elif card and (p is not None or q is not None or baseline_p is not None or preferred is not None):
+                                issued[(card, int(rk.group(1)))].append({'contract': contract, 'p': p, 'q': q,
+                                                                         'baseline_p': baseline_p,
+                                                                         'preferred_at_issue': preferred,
+                                                                         'part': part, 'line': j + 1})
                         card = card_saved
                     j += 1
                 i = j
                 continue
             i += 1
-    # Same (card, rank) with a dissimilar contract = a separate view (e.g. P-038/V01 live re-forecasts):
-    # key it separately, so a view never "corrects" a different view.
-    by_key = defaultdict(list)
-    view_of = defaultdict(list)   # (card, rank) -> list of representative contracts
-    for r in graded:
-        reps = view_of[(r['card'], r['rank'])]
-        idx = next((n for n, c in enumerate(reps) if similar(c, r['contract']) or not c or not r['contract']), None)
-        if idx is None:
-            reps.append(r['contract'])
-            idx = len(reps) - 1
-        by_key[(r['card'], r['rank'], idx)].append(r)
-    final, conflicts, joined = [], [], 0
-    for key, occ in by_key.items():
-        last = occ[-1]
-        if len({o['result'] for o in occ}) > 1 or len({round(o['p'], 3) for o in occ if o['p'] is not None}) > 1:
-            conflicts.append({'card': key[0], 'rank': key[1], 'occurrences': len(occ),
-                              'results': '/'.join(o['result'] for o in occ),
-                              'ps': '/'.join('' if o['p'] is None else f"{o['p']:.3f}" for o in occ),
-                              'contracts': ' // '.join(o['contract'][:40] for o in occ),
-                              'kept_line': f"{last['part']}:{last['line']}"})
-        p = last['p'] if last['p'] is not None else next((o['p'] for o in reversed(occ) if o['p'] is not None), None)
-        if p is None:
-            for con, ip in reversed(issued.get(key[:2], [])):
-                if similar(con, last['contract']):
-                    p, joined = ip, joined + 1
-                    break
-        final.append({**last, 'p': p})
+    final, conflicts = reconcile_occurrences(graded, issued)
     by_card = defaultdict(list)
     for r in final:
         by_card[r['card']].append(r)
@@ -339,28 +450,69 @@ def main():
     for card, rs in by_card.items():
         ev = events.get(card, '') or events.get(ALIASES.get(card, ''), '')
         sport = classify_sport(ev, titles.get(card, ''), [r['contract'] for r in rs])
+        source_card = card
         card = ALIASES.get(card, card)
         for r in sorted(rs, key=lambda x: x['rank']):
+            source = f"{r['part']}:{r['line']}"
+            p = r.get('p')
+            q = r.get('q')
+            base = r.get('baseline_p')
+            horizon = card_horizons.get(source_card, "UNKNOWN")
+            reason = ("LIVE_ISSUED_EXCLUDED" if horizon == "LIVE_ISSUED" else
+                      "LEGACY_ROW_MISSING_EVENT_FORECAST_TARGET_IDS_TIMES_SOURCE_LINEAGES_AND_FREEZE_HASHES")
+            contract_fp = hashlib.sha256(normalize_contract(r['contract']).encode('utf-8')).hexdigest()
+            revision_basis = "|".join((r.get("source_occurrences", source), r["result"], str(p), str(q), str(base)))
+            revision_fp = hashlib.sha256(revision_basis.encode("utf-8")).hexdigest()
             out.append({'card': card, 'num': int(card[2:5]) if card.startswith('P-') else '', 'sport': sport,
                         'rank': r['rank'], 'n_ranks': len(rs), 'contract': r['contract'],
                         'family': classify_family(r['contract']), 'direction': direction(r['contract']),
-                        'p': '' if r['p'] is None else f"{r['p']:.3f}", 'result': r['result'],
-                        'source': f"{r['part']}:{r['line']}", 'event': (ev or titles.get(card, ''))[:120]})
+                        'event_id': '', 'event_cluster_id': '', 'forecast_id': '', 'decision_id': '',
+                        'target_id': '', 'contract_fingerprint': contract_fp,
+                        'p': '' if p is None else f"{p:.6f}",
+                        'q': '' if q is None else f"{q:.6f}",
+                        'q_semantics': 'ROW_CALIBRATED_NOT_JOINT' if q is not None else 'UNKNOWN',
+                        'baseline_p': '' if base is None else f"{base:.6f}",
+                        'baseline_match_valid': '',
+                        'preferred_at_issue': '' if r.get('preferred_at_issue') is None else str(r['preferred_at_issue']).lower(),
+                        'result': r['result'], 'outcome_verified': 'false', 'horizon': horizon,
+                        'input_cutoff_utc': '', 'issued_at_utc': '', 'event_start_utc': '',
+                        'method_sha256': '', 'control_sha256': '', 'manifest_sha256': '',
+                        'performance_eligible': 'false', 'eligibility_reasons': reason,
+                        'settlement_revision_fingerprint': revision_fp,
+                        'source': source, 'source_occurrences': r['source_occurrences'],
+                        'event': (ev or titles.get(source_card, ''))[:120]})
     out.sort(key=lambda x: (x['num'] if x['num'] != '' else 9999, x['card'], x['rank']))
-    with open(os.path.join(HERE, 'settled_rows.csv'), 'w', newline='', encoding='utf-8') as fh:
-        w = csv.DictWriter(fh, fieldnames=list(out[0].keys()))
+    output_dir = args.output_dir.resolve()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    out_fields = ['card', 'num', 'sport', 'rank', 'n_ranks', 'contract', 'family', 'direction',
+                  'event_id', 'event_cluster_id', 'forecast_id', 'decision_id', 'target_id',
+                  'contract_fingerprint', 'p', 'q', 'q_semantics', 'baseline_p', 'preferred_at_issue',
+                  'baseline_match_valid',
+                  'result', 'outcome_verified', 'horizon', 'input_cutoff_utc', 'issued_at_utc',
+                  'event_start_utc', 'method_sha256', 'control_sha256', 'manifest_sha256',
+                  'performance_eligible', 'eligibility_reasons', 'settlement_revision_fingerprint',
+                  'source', 'source_occurrences', 'event']
+    with open(output_dir / 'settled_rows.csv', 'w', newline='', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, fieldnames=out_fields)
         w.writeheader()
         w.writerows(out)
-    with open(os.path.join(HERE, 'conflicts.csv'), 'w', newline='', encoding='utf-8') as fh:
-        w = csv.DictWriter(fh, fieldnames=['card', 'rank', 'occurrences', 'results', 'ps', 'contracts', 'kept_line'])
+    conflict_fields = ['card', 'rank', 'occurrences', 'reason', 'source_locations', 'contracts',
+                       'results', 'ps', 'qs', 'baseline_ps']
+    with open(output_dir / 'conflicts.csv', 'w', newline='', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, fieldnames=conflict_fields)
         w.writeheader()
         w.writerows(conflicts)
+    with open(output_dir / 'unattributed_rows.csv', 'w', newline='', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, fieldnames=['part', 'line', 'reason', 'row'])
+        w.writeheader()
+        w.writerows(unattributed)
     with_p = [r for r in out if r['p']]
-    cov = [f"graded rows: {len(out)} from {len({r['card'] for r in out})} cards; with probability: {len(with_p)} "
-           f"from {len({r['card'] for r in with_p})} cards ({joined} probabilities joined from issue-time tables)",
-           f"raw graded occurrences: {len(graded)}; unattributable rows dropped: {dropped}; (card, rank) conflicts: {len(conflicts)}",
-           f"sports: {dict(sorted(((s, sum(1 for r in out if r['sport'] == s)) for s in {r['sport'] for r in out}), key=lambda x: -x[1]))}"]
-    open(os.path.join(HERE, 'coverage.txt'), 'w', encoding='utf-8').write('\n'.join(cov) + '\n')
+    cov = [f"legacy rows retained after exact conflict checks: {len(out)} from {len({r['card'] for r in out})} cards; rows with p: {len(with_p)}",
+           f"raw graded occurrences: {len(graded)}; unattributed rows retained for review: {len(unattributed)}; quarantined card/rank groups: {len(conflicts)}",
+           f"prospective-eligible rows: {sum(r['performance_eligible'] == 'true' for r in out)} (legacy extraction cannot certify eligibility)",
+           "Identity policy: exact contract text only; no approximate joins; conflicts do not enter the scored CSV.",
+           f"sports among retained rows: {dict(sorted(((s, sum(1 for r in out if r['sport'] == s)) for s in {r['sport'] for r in out}), key=lambda x: -x[1]))}"]
+    (output_dir / 'coverage.txt').write_text('\n'.join(cov) + '\n', encoding='utf-8')
     print('\n'.join(cov))
 
 

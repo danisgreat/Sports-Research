@@ -1,36 +1,33 @@
 #!/usr/bin/env python3
 """RM-1 — the ranking-probability model (added 2026-09-25(e), user-authorised).
 
-Why. Rank 1 and Rank 2 are chosen by probability, so the probability they are chosen by must be
-the best available estimate. The full settled record (research/rank_model_2026-09-25e/README.md)
-shows that the stated probabilities are informative but mis-stated in two pooled, repeatable ways:
-1. They are too timid at the top and too generous in the middle. A logistic recalibration slope
-   of about 1.5 on logit(stated p) fits the record: rows stated at 0.55 won about 53%, rows stated at
-   0.75 won about 83%.
-2. Underdog cushions (+k.5) outside baseball, hockey and soccer (basketball, NFL/NCAA, AFL, rugby,
-   tennis games, cricket) are badly over-stated: 7 of 27 won at a stated ~0.58. The effect held
-   in every time split (before P-420, after P-420, after P-450, after P-480).
+Why. Rank 1 and Rank 2 are chosen by the card's stated probabilities, with this fitted transform kept
+as a historical ranking candidate. The full settled record (research/rank_model_2026-09-25e/README.md)
+reported two pooled relationships, but the cushion term used evaluation data during selection and
+the existing prospective gate has no qualifying rows:
+1. The selected retrospective logistic slope was about 1.5 on logit(stated p).
+2. A cushion relationship was estimated from the historical selected sample. Treat its reported
+   forward comparisons as development diagnostics, not independent prospective validation.
 RM-1 is exactly those two corrections: a logistic model of the outcome on logit(stated p), with one
-unpenalised offset for that cushion class. In out-of-sample tests (leave-one-card-out and four
-forward-in-time splits) it beat the stated probabilities on log loss in every split, and ranking
-by it raised the held-out top-two win count (leave-one-card-out +0.068 wins per card, 95% interval
-[+0.007, +0.128]; Rank 1 64.2% -> 68.9%), and Rank 1 and Rank 2 were never lower in any forward split.
+unpenalised offset for that cushion class. Historical leave-one-card-out and forward split results
+are preserved in the linked research note with their data-reuse limitations. No RM-1 build has
+qualified for prospective validation or promotion as a probability model.
 
 A richer challenger (RM-1X: ridge-penalised sport slopes, sport offsets and market-class offsets)
 was tested and FAILED: cross-validation drove its ridge weight to the maximum and it did not beat
 RM-1. It is kept, switched off, so each 25-card review can re-test it (`fit --terms ...`).
 
-Status. RM-1 is a USER-AUTHORISED exception to L-087 ("no coefficient from this log's own
-results"), made on the user's instruction of 2026-09-25 to build a calibration or probability
-model if one could be built. The safeguards that stand in for L-087 are in RULES_GENERAL.md
-§"2026-09-25(e)": pooled terms only, pre-specified, validated out of sample and forward in time,
-refitted only at the 25-card review, and the stated probability is always printed unchanged beside
-the calibrated one. RM-1 reads no odds, prices or market material of any kind.
+Status. RM-1 was user-authorised on 2026-09-25 as a research ranking layer. That authorization
+does not grant prospective validity or performance eligibility. Coefficients and code are frozen
+under C-RULE-FREEZE. The structured eligibility gate requires the exact coefficient and source-code
+hashes. RM-1 reads no odds, prices or market material of any kind.
 
-How a row is scored. Every binary row has a decision side, the side with stated p >= 0.5. For a row
-stated below 0.5, RM-1 scores its complement (class mapped by complement_class) and returns 1 − q, so
-a row and its complement always sum to one. A strongly biased class can therefore flip the
-preferred side of a pair (flag SIDE_FLIP).
+How a row is transformed. The p >= 0.5 branch selects the named event or its complement for a
+mathematical probability transformation; it does not identify the analyst's preferred decision.
+Training data require the explicit frozen `preferred_at_issue` field and verified prospective
+records. For a row stated below 0.5, RM-1 transforms the complementary event and returns 1 − q,
+so an exact complement pair sums to one. Independently calibrated q values are row scores, not a
+coherent joint distribution; they cannot be multiplied or used as dependence probabilities.
 
     logit(q) = a + b * logit(p) + c * [decision side is a +k.5 cushion outside baseball, hockey and soccer]
 
@@ -46,7 +43,6 @@ Standard library only (CI runs on plain Python 3.12).
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import math
 import re
@@ -54,8 +50,10 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-DEFAULT_CSV = REPO / "research" / "settled_rows_2026-09-25" / "settled_rows.csv"
+DEFAULT_RECORDS = REPO / "research" / "settled_rows_2026-09-28" / "prospective_records.json"
 DEFAULT_COEF = Path(__file__).resolve().parent / "rank_model_coefficients.json"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import prospective_eligibility as pe  # noqa: E402
 
 SPORT_GROUPS = ["soccer", "mlb", "asia_bb", "basketball", "cricket", "tennis", "oval", "hockey"]
 MARKET_CLASSES = ["phase_over", "phase_under", "tt_over", "tt_under", "corners", "total_over", "total_under",
@@ -275,30 +273,45 @@ def fit_logistic(xs: list[list[float]], ys: list[int], penalties: list[float], i
     return w
 
 
-def load_decision_rows(path: Path) -> list[dict]:
-    """Settled rows with a stated p >= 0.5 and a W/L result, classified. Rows stated below 0.5 are
-    the complements of decisions already present (forced pairs), so they are not refitted."""
+def load_decision_rows(path: Path = DEFAULT_RECORDS) -> list[dict]:
+    """Only explicit, verified pregame preferred decisions from structured records may be fitted.
+
+    The historic p>=0.5 selection was an approximate preferred-side proxy. Legacy CSVs lack the
+    evidence needed to refit RM-1 and are deliberately refused; this keeps that proxy from silently
+    re-entering a future coefficient update.
+    """
+    if path.suffix.casefold() != ".json":
+        raise ValueError("RM-1 refits require prospective_records.json; legacy CSVs lack verified preference and lineage evidence")
+    records, _blocked = pe.verified_records(path)
     out = []
-    with open(path, encoding="utf-8-sig", newline="") as fh:
-        for r in csv.DictReader(fh):
-            res = (r.get("result") or "").strip().upper()[:1]
-            p = (r.get("p") or "").strip()
-            if res not in ("W", "L") or not p:
-                continue
-            pf = float(p)
-            if not 0.5 <= pf < 1.0:
-                continue
-            try:
-                g = sport_group(r.get("sport", ""))
-            except ValueError:
-                continue
-            fam = r.get("family") or classify_family(r.get("contract", ""))
-            cls = market_class(g, fam, r.get("direction", ""), r.get("contract", ""))
-            num = str(r.get("num") or "")
-            out.append({"card": r.get("card", ""), "num": int(num) if num.isdigit() else None,
-                        "rank": int(r["rank"]) if str(r.get("rank", "")).isdigit() else None,
-                        "group": g, "cls": cls, "p": pf, "y": 1 if res == "W" else 0,
-                        "contract": r.get("contract", "")})
+    for r in records.values():
+        if pe.rm1_blockers(r):
+            continue
+        res = r.get("result")
+        if r.get("preferred_at_issue") is not True or res not in ("W", "L"):
+            continue
+        probabilities = r.get("probabilities", {})
+        decisive = probabilities.get("W", 0.0) + probabilities.get("L", 0.0)
+        if decisive <= 0:
+            continue
+        pf = probabilities["W"] / decisive
+        if not 0.0 < pf < 1.0:
+            continue
+        try:
+            g = sport_group(r.get("sport", ""))
+        except ValueError:
+            continue
+        fam = r.get("family") or classify_family(r.get("contract", ""))
+        cls = market_class(g, fam, direction(r.get("contract", "")), r.get("contract", ""))
+        card = r.get("card_id", "")
+        m = re.fullmatch(r"P-(\d+)", card)
+        out.append({"card": card, "num": int(m.group(1)) if m else None,
+                    "event_id": r.get("event_id"), "event_cluster_id": r.get("event_cluster_id"),
+                    "target_id": r.get("target_id"), "decision_id": r.get("decision_id"),
+                    "rank": None, "group": g, "cls": cls, "p": pf, "y": 1 if res == "W" else 0,
+                    "contract": r.get("contract", "")})
+    if not out and blocked:
+        return []
     return out
 
 
@@ -376,7 +389,7 @@ def score_row(coef: dict, sport: str, contract: str, p: float) -> dict:
 
 
 def rank_rows(coef: dict, sport: str, rows: list[tuple[str, float]]) -> list[dict]:
-    """Score every row and order by q (ties keep the stated order)."""
+    """Score every row and order by q; near-tied flips use the named stated-side exception."""
     scored = [dict(score_row(coef, sport, c, p), stated_rank=i + 1) for i, (c, p) in enumerate(rows)]
 
     def key(r):
@@ -393,20 +406,24 @@ def rank_rows(coef: dict, sport: str, rows: list[tuple[str, float]]) -> list[dic
 
 
 def top_two_statement(ranked: list[dict]) -> str:
-    """The card-level TOP2_QUALITY line (RULES_GENERAL.md §"2026-09-25(e)")."""
+    """Summarize effective row tiers without treating row q values as a joint distribution."""
     if len(ranked) < 2:
         return "TOP2_QUALITY: n/a (fewer than two rows)"
     q1, q2 = ranked[0]["q"], ranked[1]["q"]
-    if q1 >= 0.70 and q2 >= 0.70:
+    t1 = ranked[0].get("tier", tier(q1))
+    t2 = ranked[1].get("tier", tier(q2))
+    tier_order = {"COIN_FLIP": 0, "LEAN": 1, "SUPPORTED": 2, "STRONG": 3}
+    effective = [tier_order.get(t1, 0), tier_order.get(t2, 0)]
+    if min(effective) >= tier_order["STRONG"]:
         label = "TOP2_STRONG"
-    elif q1 >= 0.62 and q2 >= 0.62:
+    elif min(effective) >= tier_order["SUPPORTED"]:
         label = "TOP2_SUPPORTED"
-    elif q1 >= 0.62:
+    elif effective[0] >= tier_order["SUPPORTED"]:
         label = "TOP1_ONLY"
     else:
         label = "TOP2_COIN_FLIP"
-    return (f"TOP2_QUALITY: {label} (R1 q {q1:.3f} {ranked[0]['tier']}; R2 q {q2:.3f} {ranked[1]['tier']}; "
-            f"if independent: P(both win) {q1 * q2:.3f}, P(both lose) {(1 - q1) * (1 - q2):.3f})")
+    return (f"TOP2_QUALITY: {label} (R1 q {q1:.3f} {t1}; R2 q {q2:.3f} {t2}; "
+            "joint hit/failure probability: NOT ESTIMATED from row q values)")
 
 
 # ------------------------------------------------------------------ CLI
@@ -436,7 +453,8 @@ def main(argv=None) -> int:
     r.add_argument("--sport", required=True)
     r.add_argument("--row", action="append", type=_parse_row, required=True, help='"contract=p", in stated rank order')
     f = sub.add_parser("fit")
-    f.add_argument("--csv", type=Path, default=DEFAULT_CSV)
+    f.add_argument("--records", "--csv", dest="records", type=Path, default=DEFAULT_RECORDS,
+                   help="structured prospective_records.json; legacy CSV input is intentionally refused")
     f.add_argument("--lam", type=float, default=0.0, help="ridge weight on challenger terms (RM-1 has none)")
     f.add_argument("--terms", default=",".join(DEFAULT_TERMS), help=f"comma list from {', '.join(TERMS)}")
     f.add_argument("--fitted", default=None, help="date stamp written into the file, e.g. 2026-09-25")
@@ -449,13 +467,22 @@ def main(argv=None) -> int:
         bad = [t for t in terms if t not in TERMS]
         if bad:
             ap.error(f"unknown terms {bad}")
-        c = fit(load_decision_rows(args.csv), args.lam, terms)
+        try:
+            decision_rows = load_decision_rows(args.records)
+        except (OSError, ValueError) as exc:
+            print(f"ERROR: {exc}", file=sys.stderr)
+            return 2
+        if not decision_rows:
+            print("ERROR: no verified, explicit preferred pregame W/L decisions are available; no coefficients were changed.",
+                  file=sys.stderr)
+            return 2
+        c = fit(decision_rows, args.lam, terms)
         c["model"] = "RM-1" if tuple(c["terms"]) == DEFAULT_TERMS else "RM-1X(" + "+".join(c["terms"]) + ")"
         c["fitted"] = args.fitted or "unstated"
         try:
-            c["source_csv"] = args.csv.resolve().relative_to(REPO).as_posix()
+            c["source_records"] = args.records.resolve().relative_to(REPO).as_posix()
         except ValueError:
-            c["source_csv"] = str(args.csv)
+            c["source_records"] = str(args.records)
         text = json.dumps(c, indent=2, sort_keys=True)
         if args.out:
             args.out.write_text(text + "\n", encoding="utf-8")

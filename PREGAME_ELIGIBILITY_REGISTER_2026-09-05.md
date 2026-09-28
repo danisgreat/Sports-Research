@@ -1,6 +1,6 @@
-# Pre-game eligibility register — 2026-09-05
+# Pre-game eligibility register — 2026-09-05 (historical snapshot; not current authority)
 
-> **2026-09-12 controlling correction:** All current combined-log material is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE under the current user request. Settlement preserves outcome evidence; it does not authorize a performance claim. The [2026-09-12 audit](COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md) and [probability/research corrections](audit_2026-09-12/rule_corrections.md) supersede conflicting older operational statements. Original issued records remain unchanged.
+> **2026-09-12 archival correction:** The cited 2026-09-12 audit and rule-correction snapshots are not present in this checkout. Their content has not been reconstructed or replaced by a later file. This 5 September register is a historical snapshot, not the current eligibility authority; consult [PERFORMANCE_ELIGIBILITY_POLICY.md](PERFORMANCE_ELIGIBILITY_POLICY.md) and the [28 September review record](reviews/2026-09-28/SPORTS_RESEARCH_COMPREHENSIVE_REVIEW.md). All current combined-log material remains LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. Settlement preserves outcome evidence; it does not authorize a performance claim. Original issued records remain unchanged.
 
 
 The user confirms that all existing non-live issued cards were frozen pre-game. This is a provenance/eligibility register, not a newly computed all-history performance scorecard. The 294 rows retain P-001–P-293 plus local Geelong; related views/targets may share an underlying event and are not independent trials. Original live labels are scoped to issuance, not settlement checks. [Controlling policy](PERFORMANCE_ELIGIBILITY_POLICY.md).

@@ -1,8 +1,8 @@
 # Sports Research
 
-A disciplined, **market-blind** framework for researching sports events, issuing probability forecasts before the start, and settling them against the official record. It covers MLB, NPB/KBO, basketball (NBA, WNBA, NBL and more), the NHL, soccer, tennis, cricket, AFL, NRL, rugby union and the NFL. Everything is recorded in Markdown: every forecast, the evidence behind it, its settlement and every lesson learned.
+A disciplined, **market-blind** framework for researching sports events, issuing probability forecasts before the start, and settling them against the official record. It covers MLB, NPB/KBO, basketball (NBA, WNBA, NBL and more), the NHL, soccer, tennis, cricket, AFL, NRL, rugby union and the NFL. Markdown remains the human-readable authority for forecasts, evidence, settlement and lessons; the qualified prospective cohort also uses a versioned JSON evidence record for exact machine-checked joins.
 
-> **Status.** Method **MDS-2026.09.19-v4.3** · control revision **CR-2026.09.21-3** · every record is **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. This is research, not betting advice. Forecasting is market-blind by design; the only market use is a post-settlement scoring benchmark (`C-MARKET-BENCHMARK`). **No forecasting model has been fitted and validated yet:** RM-1 (a ranking calibration) and TB-1 (a team baseline) are fitted layers, and the MLB pilot (`tools/mlb_model.py`) is tested code with no fit. The first card-versus-baseline check (`SKILL_BASELINE_LEDGER.md`) shows **no demonstrated skill yet over a naive population baseline**. From 2026-09-26, **`C-RULE-FREEZE`** holds new predictive rules until the evidence gates report: run `python tools/evidence_status.py`.
+> **Current evidence status — 28 September 2026.** All issued forecasts remain **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. Research fits and retrospective rolling-origin comparisons exist for RM-1/TB-1 and several reduced-feature A0/A1 sport scopes, but **no model or card method is prospectively validated, promoted, or approved for a performance claim**. Verified prospective baseline and RM-1 records: **0**; eligible shadow results: **0**; `C-RULE-FREEZE` remains in force. The review-time legacy seed comparison is 29 retrospective decisions from 9 cards: card Brier 0.2461 vs population baseline 0.2360, with an event-cluster interval spanning zero. See [current capability and scope table](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md), [record contract](research/settled_rows_2026-09-28/RECORD_SCHEMA.md), and `python tools/evidence_status.py`. Forecasting remains `SPORTS_ONLY / MARKET_BLIND`; closing-market benchmarks are post-settlement only.
 
 ## Start here
 
@@ -11,6 +11,7 @@ A disciplined, **market-blind** framework for researching sports events, issuing
 3. **The sport file's §0 live rules page**: every `RULES_<SPORT>.md` opens with a one-page consolidation of its live controls (2026-09-26). With `CURRENT_RULES.md` it is Tier 1 of the reading gate (`RULES_GENERAL.md` §1); the rest of each file is read by citation.
 4. The active log's top snapshot, [`PREDICTION_LOG_COMBINED_5.md`](PREDICTION_LOG_COMBINED_5.md), for the next ID and open items, and the day's declared universe in `universe/`.
 5. **[`LEARNINGS_INDEX.md`](LEARNINGS_INDEX.md)**: every lesson, test and recurring mistake, one line each, with its status.
+6. **[The 28 September comprehensive review](reviews/2026-09-28/SPORTS_RESEARCH_COMPREHENSIVE_REVIEW.md), [implementation report](reviews/2026-09-28/IMPLEMENTATION_REPORT.md), and [repair runbook](reviews/2026-09-28/SPORTS_RESEARCH_REPAIR_PLAN.md)**: findings, completed repairs and remaining evidence gates.
 
 ## How it works
 
@@ -32,7 +33,7 @@ The framework's working principles:
 | Area | Files |
 |---|---|
 | Live rules | [`CURRENT_RULES.md`](CURRENT_RULES.md) (summary) and each `RULES_<SPORT>.md` §0 live page → [`METHOD.md`](METHOD.md), [`RULES_GENERAL.md`](RULES_GENERAL.md), the rest of `RULES_<SPORT>.md`, [`LEAGUE_RULES_CRICKET.md`](LEAGUE_RULES_CRICKET.md), [`LEAGUE_RULES_SOCCER.md`](LEAGUE_RULES_SOCCER.md), [`CONTROLS.md`](CONTROLS.md) |
-| Scoring and evidence of skill | [`SCORING_AND_VALIDATION.md`](SCORING_AND_VALIDATION.md) (§16: the measurement ladder), [`SKILL_BASELINE_LEDGER.md`](SKILL_BASELINE_LEDGER.md), [`MARKET_BENCHMARK_LEDGER.md`](MARKET_BENCHMARK_LEDGER.md) (post-settlement only), [`PERFORMANCE_ELIGIBILITY_POLICY.md`](PERFORMANCE_ELIGIBILITY_POLICY.md), `universe/` (declared event universes) |
+| Scoring and evidence of skill | [`SCORING_AND_VALIDATION.md`](SCORING_AND_VALIDATION.md) (§16: measurement ladder), [`SKILL_BASELINE_LEDGER.md`](SKILL_BASELINE_LEDGER.md), [`MARKET_BENCHMARK_LEDGER.md`](MARKET_BENCHMARK_LEDGER.md) (post-settlement only), [`PERFORMANCE_ELIGIBILITY_POLICY.md`](PERFORMANCE_ELIGIBILITY_POLICY.md), [current capability status](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md), [prospective record schema](research/settled_rows_2026-09-28/RECORD_SCHEMA.md), `universe/` |
 | Reference data | [`BASE_RATES_REGISTER.md`](BASE_RATES_REGISTER.md) (§7: cross-sport rates and width benchmarks), [`RECENCY_AND_REBOUND.md`](RECENCY_AND_REBOUND.md), [`research/`](research/base_rates_2026-09-25/README.md) (re-runnable queries) |
 | Sources | [`SOURCES.md`](SOURCES.md) (quick), [`DATA_SOURCE_REGISTER.md`](DATA_SOURCE_REGISTER.md) (full) |
 | Procedures | [`UPCOMING_GAME_RESEARCH_GUIDE.md`](UPCOMING_GAME_RESEARCH_GUIDE.md) (pregame), [`EXTERNAL_LOGGING_WORKFLOW.md`](EXTERNAL_LOGGING_WORKFLOW.md) (mini logs, settlement), [`AGENT_ROLE_AND_TASK.md`](AGENT_ROLE_AND_TASK.md) |
@@ -92,7 +93,9 @@ python tools/card_math.py cover --dist normal --mean 1.44 --sd 13.63 --line -1.5
 python tools/card_math.py departure --p 0.613 --baseline 0.530 --mech "pace:0.6" --mech "lineup:0.4"
 python tools/team_baseline.py predict --league nbl --home "Brisbane Bullets" --away "Illawarra Hawks" --date 2026-09-25 --total 188.5 --home-line -1.5
 python tools/rank_model.py rank --sport nbl --row "Under 188.5=0.646" --row "Hawks +1.5=0.540" --row "Bullets -1.5=0.460" --row "Over 188.5=0.354"
-python research/settled_rows_2026-09-25/extract_settled_rows.py && python tools/calibration_report.py
+python research/settled_rows_2026-09-25/extract_settled_rows.py   # strict legacy archive → versioned 2026-09-28/generated view
+python tools/calibration_report.py                                 # legacy mixed-row diagnostic only
+python tools/semantic_validation.py research/settled_rows_2026-09-28/prospective_records.json
 ```
 
 **Before committing** (CI runs the same checks: [`.github/workflows/checks.yml`](.github/workflows/checks.yml))
@@ -113,16 +116,15 @@ If you edited a governance file, regenerate the freeze receipt with `python tool
 | Item | State |
 |---|---|
 | Active canonical log | [Part 5](PREDICTION_LOG_COMBINED_5.md) (P-482 onward). Parts 1–4 are closed |
-| Active mini log | `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-516 onward - 2026-09-25/` |
-| Next canonical ID | See Part 5's snapshot (**P-518** as of 2026-09-26: P-510–P-515 imported in §"2026-09-25(f)"; P-516/P-517 assigned to the settled temporary IDs in §"2026-09-26(a)") |
-| Temporary IDs | None open. `TMP-20260923-NPB-CHU-DB-G25` = **P-516**; `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)) |
+| Next canonical ID | **HOLD / unresolved.** Part 5's 26 September snapshot says P-518; the staged/working P-518 onward mini log claims P-518–P-522 were issued but is not imported or fully reconciled. Reserve those IDs against reuse; do not issue a new number until the register, exact event identities and canonical custody are reconciled. See [P-518–P-522 register](reviews/2026-09-28/P518_P522_RECONCILIATION_REGISTER.csv). |
+| Active mini-log custody | The P-516 onward log is the last canonical workflow pointer. A separate P-518 onward working log has staged and unstaged edits; its bytes were snapshotted, preserved and left untouched. It is under reconciliation, not treated as settled canonical authority. |
+| Temporary IDs | P-516 and P-517 remain assigned to their settled temporary IDs. This does not resolve the P-518–P-522 mini-log claims. |
 | Freeze receipt | The manifest named in [`METHOD.md`](METHOD.md)'s header |
-| Skill v baseline | Seed: card Brier 0.2461 v naive baseline 0.2360 (n = 29, 9 cards; interval spans 0). Prospective count 0 of 100 |
-| Full-record calibration (rebuilt dataset, re-run 2026-09-26) | 411 decisions, 155 cards, **self-selected events**: Brier 0.2268, slope 1.01, skill +6.6% over the base rate. Skill lives at p ≥ 0.65 (about 80% won); 0.50–0.65 is coin-flip-grade (53.6%). Non-baseball underdog cushions are over-confident (17/40 at 0.642). Soccer has the strongest resolution (37 cards; interval spans 0); MLB and basketball near zero; tennis, NFL/NCAA and AFL none ([details](research/settled_rows_2026-09-25/README.md)) |
-| Ranking and baselines (2026-09-25(e)) | **RM-1** calibrates each stated p into a ranking probability q, and cards rank by q. Held out: top-two wins +0.068 per card [+0.007, +0.128]; Rank 1 64.2% → 68.9% ([details](research/rank_model_2026-09-25e/README.md)). **TB-1** is a leak-free team-strength baseline with resolution for sides in NBA/WNBA/NBL/NFL/AFL/NRL/EPL, and none in MLB/NHL ([details](research/team_baseline_2026-09-25e/README.md)). Rank 1 is "far more likely to win than lose" only in the STRONG tier (q ≥ 0.70: 81% of decisions) |
-| Numerical model | H0 not built ([`H0_DATASET_CARD.md`](H0_DATASET_CARD.md)). RM-1 and TB-1 are a calibration layer and a population baseline, not H0. RM-1 is **promising and unproven** (its cushion term was found on the data that validates it; [caveats](research/rank_model_2026-09-25e/README.md)). The MLB A0/A1 pilot is implemented and tested on synthetic data; it runs as a **prospective shadow** only (`C-MLB-SHADOW`) | **Every other sport (2026-09-26(c), (d))** has a reduced-feature A0/A1 model in `tools/sport_models.py`, with a blind shadow lane (`C-SPORT-SHADOW`, tennis and cricket included). On public results, A1 beat the league baseline on results and margins in soccer (five leagues), the NFL, AFL, NBA, WNBA and NHL. It beat TB-1 on results in the EPL, AFL, NBA, WNBA and NHL. On totals it helped in basketball and little elsewhere, and was worse in the NHL. Cricket (IPL) shows no skill. MLB, tennis and cricket each needed a re-selected parameter. NBL, NCAAF, NRL, rugby union, WTA, the Asian baseball leagues, non-IPL cricket and the smaller soccer competitions are not yet validated ([details](research/sport_models_2026-09-26/README.md)).
-| Predictability across sports (2026-09-26(e)) | STRONG (≥ 0.70) favourites exist mainly in AFL and basketball sides (26–39% of games, 80–91% won), less in the NFL and NRL, rarely in the NHL, never in MLB ([map](BASE_RATES_REGISTER.md)). On 98 of their own contracts the cards were no worse than the team models (0.2438 v 0.2505), so the models stay a reference (`tools/model_anchor.py`, `REFERENCE`) ([details](research/predictability_2026-09-26/README.md)) |
-| Evidence gates and rule freeze (2026-09-26) | `C-BASELINE-SKILL` 0/100, `T-RM1-PROSPECTIVE` 0/25 cards, `C-MARKET-BENCHMARK` 0/100, `C-MLB-SHADOW` 0/150 games, `C-SPORT-SHADOW` 0 rows, no universe declared yet. **`C-RULE-FREEZE` in force.** Live figures: `python tools/evidence_status.py` |
+| Performance eligibility | 0 verified eligible baseline decisions; 0 qualifying RM-1 cards; current record register has no records. See `python tools/evidence_status.py`. |
+| Historical model work | RM-1 and TB-1 retrospective fits exist; reduced-feature A0/A1 rolling-origin comparisons exist for the exact scopes documented in [historical sport-model results](research/sport_models_2026-09-26/README.md). These do not establish prospective skill or promotion. Full point-in-time H0 is not approved. See [capability status](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md). |
+| Legacy settled-row extract | Rebuilt strict view has 1,188 retained legacy rows, 83 quarantined card/rank conflicts, 72 separately retained unattributed occurrences and **0 performance-eligible rows**. Rows are not all unique verified decisions. See [generated coverage](research/settled_rows_2026-09-28/generated/README.md). |
+| Historical seed comparison | 29 retrospectively selected decisions / 9 cards: card Brier 0.2461 vs population baseline 0.2360; event-cluster interval spans zero. This is not prospective validation. |
+| Rule freeze | **`C-RULE-FREEZE` in force.** Repository evidence counts are live via `python tools/evidence_status.py`. |
 
 ## Canonical custody
 
@@ -132,7 +134,7 @@ If you edited a governance file, regenerate the freeze receipt with `python tool
 | [Part 2](PREDICTION_LOG_COMBINED_2.md) | P-272–P-332 | Closed; nine inherited primary follow-up handles |
 | [Part 3](PREDICTION_LOG_COMBINED_3.md) | P-333–P-423; P-372 reserved | Closed; 13 primary follow-up handles |
 | [Part 4](PREDICTION_LOG_COMBINED_4.md) | P-424–P-481 | Closed at P-481; unresolved follow-up handles are tracked in the status register |
-| [Part 5](PREDICTION_LOG_COMBINED_5.md) | P-482 onward | **Active queue / next-ID authority** |
+| [Part 5](PREDICTION_LOG_COMBINED_5.md) | P-482 onward | **Canonical authority through P-517; P-518–P-522 claimed in an unreconciled working mini log; next ID on hold** |
 
 Older component logs, archived mini variants and dated audits are evidence; they are not instructions. Preserve canonical IDs and temporary aliases. [`EXTERNAL_LOGGING_WORKFLOW.md`](EXTERNAL_LOGGING_WORKFLOW.md) covers variant discovery, reconciliation and archiving.
 

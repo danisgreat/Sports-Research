@@ -1,5 +1,5 @@
 ﻿# Numerical model register
-> **Current revision — CR-2026.09.21-3:** METHOD **MDS-2026.09.19-v4.3** is the workflow/template authority; **SCORING_AND_VALIDATION.md** controls conditioning, exact scoring, event-level evaluation and prospective evidence. All existing logs remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. NUMERICAL_PROGRAM controls authorized implementation scope and actual build state; MODEL_IMPLEMENTATION_RECIPES contains the executable Markdown reference. Older dated policy blocks are historical where inconsistent. No source, dataset or model is approved/fitted by this banner.
+> **Current status correction — 28 September 2026:** This register is the detailed architecture/candidate inventory, not the sole authority for which code has been fitted. Historical research fits/backtests exist for RM-1/TB-1 and some reduced-feature A0/A1 scopes; no H0/model is approved for issue, prospectively validated, or promoted. All logs remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. Use `NUMERICAL_PROGRAM.md` for lifecycle gates and [CAPABILITY_STATUS.md](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md) for exact current sport/target status. Older dated policy blocks below remain historical wherever they conflict with this banner.
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-Status: **ACTIVE DESIGN REGISTER — ALL NUMERICAL BUILDS NOT FIT — DETAILED REFERENCE**
+Status: **ACTIVE DESIGN REGISTER — HISTORICAL CANDIDATE INVENTORY — DETAILED REFERENCE**
 
 
 
@@ -28,7 +28,7 @@ Numerical training specification: **NTS-2026.09.19-v0.5**
 
 
 
-Governing published forecast method: **MDS-2026.09.19-v4.3 / CR-2026.09.21-3 — SPORTS_ONLY / MARKET_BLIND qualitative method; no numerical champion is fitted**
+Governing published forecast method: **MDS-2026.09.19-v4.3 / CR-2026.09.21-3 — SPORTS_ONLY / MARKET_BLIND; no numerical champion is approved**
 
 
 
@@ -65,7 +65,7 @@ This register separates an architecture candidate from an immutable fitted build
 
 
 
-No model currently exceeds `DESIGN REGISTERED / DATA BLOCKED`.
+Historical research fits and retrospective evaluations exist for some candidates, but no current candidate has prospective validation or approved publication status. The exact status is in `research/settled_rows_2026-09-28/CAPABILITY_STATUS.md`.
 
 
 

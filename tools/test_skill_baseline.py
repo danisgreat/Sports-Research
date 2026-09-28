@@ -30,11 +30,13 @@ class SkillBaseline(unittest.TestCase):
 
     def test_brier_arithmetic(self):
         s = sb.summarise(sb.parse(TABLE), boot=200)
-        card = ((0.7 - 1) ** 2 + (0.6 - 0) ** 2 + (0.65 - 1) ** 2) / 3
-        base = ((0.5 - 1) ** 2 + (0.53 - 0) ** 2 + (0.64 - 1) ** 2) / 3
+        # Principal values average decisions within each event/card, then weight events equally.
+        card = (((0.7 - 1) ** 2 + (0.6 - 0) ** 2) / 2 + (0.65 - 1) ** 2) / 2
+        base = (((0.5 - 1) ** 2 + (0.53 - 0) ** 2) / 2 + (0.64 - 1) ** 2) / 2
         self.assertAlmostEqual(s["card_brier"], card, places=9)
         self.assertAlmostEqual(s["baseline_brier"], base, places=9)
         self.assertAlmostEqual(s["diff"], card - base, places=9)
+        self.assertAlmostEqual(s["decision_card_brier"], ((0.7 - 1) ** 2 + (0.6 - 0) ** 2 + (0.65 - 1) ** 2) / 3)
         self.assertEqual(s["by_family"]["total"]["n"], 1)
 
     def test_bootstrap_is_deterministic_and_ordered(self):
@@ -58,17 +60,26 @@ class SkillBaseline(unittest.TestCase):
                 self.assertIn(r["result"], ("W", "L", "P"))
 
 
-    def test_sections_are_separated(self):  # added 2026-09-26
+    def test_unverified_markdown_eligibility_does_not_count(self):
         head = ("| Decision | Card | Rank | Contract (as issued) | Family | Card p | Baseline p | "
-                "Baseline population (leak-free) | Result |\n|---|---|---|---|---|---:|---:|---|---|\n")
-        text = ("## Seed rows\n\n" + head + "| S1 | A | 1 | x | total | 0.6 | 0.5 | pop | W |\n\n"
+                "Baseline population (leak-free) | Result | Performance Eligible | Eligibility Receipt |\n"
+                "|---|---|---|---|---|---:|---:|---|---|---|---|\n")
+        text = ("## Seed rows\n\n" + head + "| S1 | A | 1 | x | total | 0.6 | 0.5 | pop | W | no | seed |\n\n"
                 "Seed reading paragraph.\n\n## Prospective rows (from manifest)\n\n" + head +
-                "| P1 | B | 1 | x | total | 0.7 | 0.5 | pop | W |\n| P2 | C | 1 | x | total | 0.6 | 0.5 | pop | L |\n")
+                "| P1 | B | 1 | x | total | 0.7 | 0.5 | pop | W | eligible | r1 |\n"
+                "| P2 | C | 1 | x | total | 0.6 | 0.5 | pop | L | eligible | r2 |\n")
         rows = sb.parse(text)
         self.assertEqual({r["decision"]: r["section"] for r in rows}, {"S1": "seed", "P1": "prospective", "P2": "prospective"})
         rep = sb.report_sections(rows, boot=100)
-        self.assertIn("Progress: 2/100 decisions from 2/30 cards", rep)
+        self.assertIn("Progress: 0/100 decisions from 0/30 cards", rep)
+        self.assertIn("2 unqualified row(s) excluded", rep)
         self.assertLess(rep.index("Prospective"), rep.index("Seed rows"))
+
+    def test_prospective_rows_without_explicit_eligibility_are_excluded(self):
+        text = ("## Prospective rows\n\n" + TABLE)
+        rep = sb.report_sections(sb.parse(text), boot=100)
+        self.assertIn("Progress: 0/100 decisions from 0/30 cards", rep)
+        self.assertIn("5 unqualified row(s) excluded", rep)
 
 
 if __name__ == "__main__":

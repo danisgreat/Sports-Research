@@ -5,7 +5,7 @@
 Status: **ACTIVE CANONICAL LOG — ALL NEW FORECASTS APPEND HERE**
 Opened: **2026-09-21**, after Part 4 was closed at `P-481`.
 Canonical range: **`P-482` onward**.
-Next canonical ID: **P-518** (P-510–P-515 were issued 2026-09-25 in the mini log and imported in §"2026-09-25(f)"; P-516 and P-517 were assigned to the two settled temporary IDs in §"2026-09-26(a)"; temporary IDs do not reserve numbers; a fresh preflight is still required before any new forecast).
+Next canonical ID: **HOLD — unresolved**. The 2026-09-26 snapshot below said P-518; the separate staged/working P-518 onward mini log claims P-518–P-522 were issued, but they have not been imported or fully reconciled. Reserve the claimed IDs against reuse. See `reviews/2026-09-28/P518_P522_RECONCILIATION_REGISTER.csv`; do not issue a new number until identity and custody checks pass.
 Current governing method at rollover: **MDS-2026.09.19-v4.3 / CR-2026.09.19-4**. Always fresh-read `METHOD.md` and the current control manifest before a new prediction rather than relying on this snapshot.
 Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 
@@ -19,15 +19,17 @@ Operating mode: **SPORTS_ONLY / MARKET_BLIND**.
 
 ## Current controlling snapshot
 
+**Queue correction — 2026-09-28.** Part 5 remains the canonical log through P-517. P-518–P-522 are claimed as issued in a separate working mini log, which was already staged and unstaged when reviewed and has been preserved byte-for-byte. Official-source checks confirm several event results but identify mismatched settlement event references and other unresolved process/baseline fields. The five IDs are reserved against reuse; their records are not yet canonically imported or performance eligible. The next ID is on hold. See the reconciliation register and source readback under `reviews/2026-09-28/`.
+
 | Field | Current value |
 |---|---|
-| As of | **2026-09-26 (AEST), Australia/Melbourne.** §"2026-09-25(f)" imported and settled P-510–P-515 (next ID P-516); §"2026-09-26(a)" assigned P-516 and P-517 to the two settled temporary IDs (next ID **P-518**). Earlier coverage, as of 2026-09-25 about 02:30 AEST: Covers §"2026-09-24(e)"–"(g)" (the peer import, its verification audit and the P-509 settlement) and §"2026-09-25(a)"–"(e)", the last being the review of every settled log (calibration findings, `tools/card_math.py`, `tools/calibration_report.py`): the verbatim import of P-484–P-486, P-488 and P-492; the audit closure (implementable items written into governing files, audit documents archived to `archive/audit_documents_implemented_2026-09-25/`); the research pass (derived reference rates, width and receipt controls, `receipts.py`); and the repository follow-through (baseline skill check, `CURRENT_RULES.md`, CI). Current control manifest: `CONTROL_MANIFEST_2026-09-25-4.md`. No event is open. |
+| As of | **2026-09-28 (Australia/Sydney).** Part 5 is canonical through P-517. P-518–P-522 are claimed as issued in the preserved working mini log; IDs reserved, identity/process/source/baseline reconciliation open, not imported. Prior 2026-09-26 snapshot is superseded for queue purposes. |
 | Highest canonical prediction ID | **P-517** |
-| Next canonical ID | **P-518** |
-| Part-5 issued events | **35 canonical event cards:** P-482–P-489 and P-491–P-517 (P-487 = Dallas Wings @ Phoenix Mercury; **P-516 = `TMP-20260923-NPB-CHU-DB-G25`**; **P-517 = `TMP-20260923-NBL-CNS-TAS`**, both assigned 2026-09-26(a)). P-490 is retired and unused. **No temporary ID awaits reconciliation.** |
-| Part-5 open / pending events | **None.** P-509 (Perth v Adelaide, NBL) finished 98–97 at about 23:40 AEST. Three terminal lineages agree (NBL feed, ESPN, Flashscore), and it was settled in §"2026-09-24(g)" after the operator's "proceed accordingly" instruction. |
+| Next canonical ID | **HOLD — do not issue or reuse a number until P-518–P-522 identity and custody reconciliation completes.** |
+| Part-5 issued events | **35 canonical event cards through P-517:** P-482–P-489 and P-491–P-517 (P-487 = Dallas Wings @ Phoenix Mercury; **P-516 = `TMP-20260923-NPB-CHU-DB-G25`**; **P-517 = `TMP-20260923-NBL-CNS-TAS`**, both assigned 2026-09-26(a)). P-490 is retired and unused. Separate working mini log claims five further issues; these are reserved but not canonical imports. |
+| Part-5 open / pending events | P-509 was settled in §"2026-09-24(g)". The separate P-518–P-522 working mini log is under reconciliation: do not treat unresolved process, source lineage or baseline fields as verified settlement. |
 | Part-5 learning-only diagnostics | Existing settled results are unchanged by ID reassignment. The 2026-09-23(c)/(d) cohort (descriptive only): **P-487** Rank-1 **W**; **P-489** Rank-1 **L** (`TOP_OU_REVIEW`); **P-491** Rank-1 **W**; TMP-NBL Rank-1 L. The **2026-09-24 cohort** (16 pregame units; P-494 live-issued and excluded; §(f) part M): **Rank-1 13 W / 3 L**; Rank-2 11 W / 5 L; Hit@2 11/12 once the four covering-pair cards are excluded; top O/U 10 W / 6 L (baseball Overs 1–3); row Brier 0.2282 (n=60), Rank-1 Brier 0.187. |
-| Active mini log | `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-516 onward - 2026-09-25/PREDICTION_MINI_RUNNING_LOG_P516_ONWARD.md` (created 2026-09-25(e); no events yet). The predecessor, the P-510–P-515 log, is closed, corrected, imported (§"2026-09-25(f)") and archived at `archive/mini_logs/Mini Prediction Log - P-510 to P-515 SETTLED - 2026-09-25/`. |
+| Active mini-log custody | `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-518 onward - 2026-09-27/PREDICTION_MINI_RUNNING_LOG_P518_ONWARD.md` is the preserved staged/working file under reconciliation, not a trusted canonical import. Its worktree and index byte states are snapshotted in `archive/reconciliation_2026-09-28/`; do not edit it during this reconciliation. The prior P-516 onward log contains P-516/P-517 workflow history. |
 | Historical open handles | These continue in GAME_LOG_STATUS_CURRENT.md. No temporary ID awaits reconciliation: `TMP-20260923-NPB-CHU-DB-G25` = **P-516** and `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)). TMP-20260922-WNBA-DAL-PHX is retired as an alias of P-487. |
 | Performance status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE** |
 | Value status | `NO VALUE DETERMINABLE` unless the current governing value gate is explicitly satisfied |

@@ -1,4 +1,6 @@
-# Settled-row dataset and calibration review — every completed log (2026-09-25(d))
+# Historical settled-row dataset and calibration review — every completed log (2026-09-25(d))
+
+> **Superseded for current extraction, preferred-decision selection and prospective scoring (28 September 2026).** This page documents a historical parser/output and historical descriptive figures. Its old `p >= 0.5` rule is only a legacy proxy; it cannot establish which row was frozen as preferred. Do not call the 0.2268 historical Brier a current decision or skill result. The strict extractor now writes to `research/settled_rows_2026-09-28/generated/`, retains conflicts/unattributed occurrences separately, and yields **zero performance-eligible rows**. Current counts and scope are in [capability status](../settled_rows_2026-09-28/CAPABILITY_STATUS.md); new prospective fields and gates are in [record schema](../settled_rows_2026-09-28/RECORD_SCHEMA.md).
 
 **Status: LEARNING_ONLY / descriptive.** This folder turns the settled rows of the five combined logs into one dataset, and describes how the framework's stated probabilities have performed. Nothing here is a fitted coefficient, shrink or cap (`L-087`); the findings feed disclosures, prospective tests and tools. Every figure is hindsight on the framework's own selected cards, and rows within a card are dependent. Intervals therefore resample **whole cards**.
 
@@ -6,9 +8,9 @@
 
 | File | What it is |
 |---|---|
-| `extract_settled_rows.py` | Parser: rank tables and bullet settlements in Parts 1–5 → `settled_rows.csv`. The method is in its docstring |
-| `settled_rows.csv` | One row per graded ranked row. Columns: card, number, sport, rank, contract, family, direction, p, result, source line, event |
-| `conflicts.csv`, `coverage.txt` | Parse diagnostics |
+| `extract_settled_rows.py` | Strict parser for Parts 1–5 and mini logs. It writes the current output into a versioned directory under `research/settled_rows_2026-09-28/generated/`; the old folder output below remains historical. |
+| `settled_rows.csv` | Frozen historical extract described by this report. Do not overwrite it or use it as the current scoring input. |
+| `conflicts.csv`, `coverage.txt` | Historical parse diagnostics; current diagnostics are versioned with the 2026-09-28 output. |
 | `analyze_settled.py` → `analysis_results.json` | Calibration bands; breakdowns by family, sport, rank and direction; trend; top-two |
 | `analyze_supplement.py` → `supplement_results.json` | Murphy decomposition; non-baseball cushions; the 0.50–0.65 band; same-card phase v full total |
 | `../../tools/calibration_report.py` | The reusable version of this analysis (run it at every 25-card review) |
@@ -28,12 +30,12 @@
 
 - **Limitations.**
   - Sport and market family are classified from the event name and contract text.
-  - "Decisions" (p ≥ 0.5) approximate the preferred side of each pair.
+  - The old “decision” proxy (`p >= 0.5`) is not a preferred-side selector. Only an explicit frozen issue-time choice can identify the selected decision.
   - The ordinal era (P-001–P-317) has no probabilities, so it enters only the rank-slot analysis.
 
 ## Findings
 
-Decisions are the preferred rows, with p ≥ 0.5.
+Historical proxy subset only: rows with `p >= 0.5`. This subset is not the verified preferred-decision cohort and must not be described as one.
 
 **1. Overall calibration is good, and skill is modest.**
 - All 598 probability rows: Brier **0.2249**.

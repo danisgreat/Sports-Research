@@ -3,10 +3,10 @@
 
 Reads the decision table in SKILL_BASELINE_LEDGER.md. Each row is one issued decision (a forced
 pair counted once) with the card's issued probability, a leak-free population baseline
-probability for the same contract, and the result (W/L; P = push, which is excluded). It reports
-the Brier score of each and their paired difference (card − baseline; negative = card better),
-overall and by family. It also gives a 95% interval from a bootstrap that resamples whole cards,
-because rows inside one card are not independent.
+probability for the same contract, and the result (W/L; pushes remain excluded from this binary
+ledger). The principal estimate first averages decisions within an event, then weights events
+equally. It also reports a decision-weighted diagnostic and a paired 95% interval from an event-
+cluster bootstrap.
 
 This is a descriptive LEARNING_ONLY diagnostic, not a performance claim
 (PERFORMANCE_ELIGIBILITY_POLICY.md). The preregistered decision rule is in LEARNING_REGISTER.md
@@ -15,10 +15,11 @@ This is a descriptive LEARNING_ONLY diagnostic, not a performance claim
 Usage: python tools/skill_baseline.py [SKILL_BASELINE_LEDGER.md] [--boot 10000] [--seed 20260925] [--section all|prospective|seed]
 
 Sections (added 2026-09-26). Rows are tagged by the ledger heading they sit under. Only rows under the
-"Prospective rows" heading count toward the preregistered decision rule (100 decisions from at least 30
-cards); the hindsight "Seed rows" never do. Before 2026-09-26 the tool pooled both, which would have
-let seed rows leak into the prospective verdict once prospective rows existed. The default report now
-prints the two sections separately, prospective first, with progress against the checkpoint.
+"Prospective rows" heading that exactly join to a semantically verified record in
+research/settled_rows_2026-09-28/prospective_records.json count toward the preregistered decision rule
+(100 decisions from at least 30 cards); the hindsight "Seed rows" never do. A Markdown eligibility
+label alone is not evidence. The default report prints the verified prospective section separately
+from hindsight seed diagnostics.
 """
 from __future__ import annotations
 
@@ -28,6 +29,8 @@ import re
 import sys
 from collections import defaultdict
 from pathlib import Path
+
+import prospective_eligibility as pe
 
 REPO = Path(__file__).resolve().parent.parent
 HEADER = re.compile(r"^\|\s*Decision\s*\|", re.I)
@@ -58,9 +61,16 @@ def parse(text: str) -> list[dict]:
             continue
         r = dict(zip(cols, cells))
         try:
+            eligible_text = (r.get("performance eligible") or r.get("eligible") or "").strip().casefold()
+            rank_text = r.get("rank", "").strip()
             rows.append({"decision": r["decision"], "card": r["card"], "family": r["family"],
                          "p": float(r["card p"]), "b": float(r["baseline p"]), "result": r["result"].upper(),
-                         "section": section})
+                         "rank": int(rank_text) if rank_text.isdigit() else rank_text,
+                         "contract": r.get("contract (as issued)", ""),
+                         "eligibility_receipt": r.get("eligibility receipt", ""),
+                         "event_cluster_id": r.get("event cluster id", ""),
+                         "section": section, "eligible": eligible_text in ("eligible", "yes", "true", "1"),
+                         "eligibility_status": eligible_text or "UNDECLARED"})
         except (KeyError, ValueError):
             continue
     return rows
@@ -78,15 +88,26 @@ def summarise(rows: list[dict], boot: int = 10000, seed: int = 20260925) -> dict
         seen.add(r["decision"])
         y = 1 if r["result"] == "W" else 0
         scored.append({**r, "y": y, "bc": brier(r["p"], y), "bb": brier(r["b"], y)})
-    out = {"n": len(scored), "cards": len({r["card"] for r in scored}), "by_family": {}}
+    event_key = lambda r: r.get("event_cluster_id") or f"CARD:{r['card']}"
+    out = {"n": len(scored), "cards": len({r["card"] for r in scored}),
+           "events": len({event_key(r) for r in scored}), "by_family": {}}
     if not scored:
         return out
 
     def block(rs):
-        n = len(rs)
-        bc = sum(r["bc"] for r in rs) / n
-        bb = sum(r["bb"] for r in rs) / n
-        return {"n": n, "card_brier": bc, "baseline_brier": bb, "diff": bc - bb,
+        by_event = defaultdict(list)
+        for r in rs:
+            by_event[event_key(r)].append(r)
+        event_values = [(sum(r["bc"] for r in group) / len(group),
+                         sum(r["bb"] for r in group) / len(group)) for group in by_event.values()]
+        event_card = sum(x[0] for x in event_values) / len(event_values)
+        event_base = sum(x[1] for x in event_values) / len(event_values)
+        decision_card = sum(r["bc"] for r in rs) / len(rs)
+        decision_base = sum(r["bb"] for r in rs) / len(rs)
+        return {"n": len(rs), "events": len(event_values), "card_brier": event_card,
+                "baseline_brier": event_base, "diff": event_card - event_base,
+                "decision_card_brier": decision_card, "decision_baseline_brier": decision_base,
+                "decision_diff": decision_card - decision_base,
                 "card_better_rows": sum(1 for r in rs if r["bc"] < r["bb"])}
 
     out.update(block(scored))
@@ -94,15 +115,17 @@ def summarise(rows: list[dict], boot: int = 10000, seed: int = 20260925) -> dict
     for r in scored:
         fam[r["family"]].append(r)
     out["by_family"] = {k: block(v) for k, v in sorted(fam.items())}
-    by_card = defaultdict(list)
+    by_event = defaultdict(list)
     for r in scored:
-        by_card[r["card"]].append(r)
-    cards = list(by_card)
+        by_event[event_key(r)].append(r)
+    events = list(by_event)
+    event_diff = {e: sum(r["bc"] - r["bb"] for r in group) / len(group)
+                  for e, group in by_event.items()}
     rng = random.Random(seed)
     diffs = []
     for _ in range(boot):
-        sample = [r for c in (rng.choice(cards) for _ in cards) for r in by_card[c]]
-        diffs.append(sum(r["bc"] - r["bb"] for r in sample) / len(sample))
+        sample = [event_diff[rng.choice(events)] for _ in events]
+        diffs.append(sum(sample) / len(sample))
     diffs.sort()
     out["ci95"] = (diffs[int(0.025 * boot)], diffs[int(0.975 * boot) - 1])
     return out
@@ -111,9 +134,10 @@ def summarise(rows: list[dict], boot: int = 10000, seed: int = 20260925) -> dict
 def render(s: dict) -> str:
     if not s["n"]:
         return "No scored decisions with a baseline yet."
-    lines = [f"Scored decisions: {s['n']} across {s['cards']} cards (forced pairs counted once; pushes excluded).",
+    lines = [f"Scored decisions: {s['n']} across {s['cards']} cards and {s.get('events', s['cards'])} event clusters "
+             "(forced pairs counted once; pushes excluded).",
              "",
-             "| Scope | n | Card Brier | Baseline Brier | Card − baseline | Rows card better |",
+             "| Scope | n | Forecast Brier (event-weighted) | Baseline Brier (event-weighted) | Forecast − baseline | Decisions where forecast Brier is lower |",
              "|---|---:|---:|---:|---:|---:|",
              f"| **All** | {s['n']} | {s['card_brier']:.4f} | {s['baseline_brier']:.4f} | **{s['diff']:+.4f}** | {s['card_better_rows']}/{s['n']} |"]
     for k, v in s["by_family"].items():
@@ -123,7 +147,10 @@ def render(s: dict) -> str:
     verdict = ("card better than baseline (interval below 0)" if hi < 0 else
                "card worse than baseline (interval above 0)" if lo > 0 else
                "no demonstrated difference (interval spans 0)")
-    lines += ["", f"Card-cluster bootstrap 95% interval for (card − baseline): [{lo:+.4f}, {hi:+.4f}] — **{verdict}**.",
+    lines += ["", f"Event-cluster bootstrap 95% interval for (card − baseline): [{lo:+.4f}, {hi:+.4f}] — **{verdict}**.",
+              f"Event-weighted Brier is primary; decision-weighted diagnostic: card {s.get('decision_card_brier', s['card_brier']):.4f}, "
+              f"baseline {s.get('decision_baseline_brier', s['baseline_brier']):.4f}, "
+              f"difference {s.get('decision_diff', s['diff']):+.4f}.",
               "Descriptive and LEARNING_ONLY; see C-BASELINE-SKILL for the preregistered decision rule."]
     return "\n".join(lines)
 
@@ -139,24 +166,49 @@ def main(argv=None) -> int:
     ap.add_argument("--boot", type=int, default=10000)
     ap.add_argument("--seed", type=int, default=20260925)
     ap.add_argument("--section", choices=("all", "prospective", "seed"), default="all")
+    ap.add_argument("--records", type=Path, default=pe.DEFAULT_RECORDS,
+                    help="versioned structured records used to verify prospective ledger joins")
     args = ap.parse_args(argv)
     rows = parse(Path(args.ledger).read_text(encoding="utf-8-sig"))
+    eligible, failures = pe.join_binary_baseline_rows(rows, args.records)
+    eligible_ids = {r["decision"] for r in eligible}
     if args.section != "all":
-        print(render(summarise([r for r in rows if r["section"] == args.section], args.boot, args.seed)))
+        selected = [r for r in rows if r["section"] == args.section]
+        if args.section == "prospective":
+            selected = [r for r in selected if r["decision"] in eligible_ids]
+        print(render(summarise(selected, args.boot, args.seed)))
         return 0
-    print(report_sections(rows, args.boot, args.seed))
+    print(report_sections(rows, args.boot, args.seed, eligible_ids, failures))
     return 0
 
 
-def report_sections(rows: list[dict], boot: int = 10000, seed: int = 20260925) -> str:
-    pro = summarise([r for r in rows if r["section"] == "prospective"], boot, seed)
+def report_sections(rows: list[dict], boot: int = 10000, seed: int = 20260925,
+                    eligible_ids: set[str] | None = None, failures: dict[str, list[str]] | None = None) -> str:
+    prospective = [r for r in rows if r["section"] == "prospective"]
+    eligible_ids = eligible_ids or set()
+    eligible = [r for r in prospective if r["decision"] in eligible_ids]
+    pro = summarise(eligible, boot, seed)
+    excluded = len(prospective) - len(eligible)
     sd = summarise([r for r in rows if r["section"] == "seed"], boot, seed)
     n, c = pro["n"], pro["cards"]
     done = n >= CHECKPOINT_DECISIONS and c >= CHECKPOINT_CARDS
-    out = ["## Prospective rows (count toward C-BASELINE-SKILL)",
+    failure_summary = ""
+    if failures:
+        reasons = defaultdict(int)
+        for values in failures.values():
+            for value in values:
+                reasons[value] += 1
+        if reasons:
+            failure_summary = "\n\nJoin exclusions by reason: " + ", ".join(
+                f"{key}={value}" for key, value in sorted(reasons.items())) + "."
+    out = ["## Prospective rows (explicitly eligible rows only count toward C-BASELINE-SKILL)",
            f"Progress: {n}/{CHECKPOINT_DECISIONS} decisions from {c}/{CHECKPOINT_CARDS} cards — "
-           + ("**checkpoint reached: apply the decision rule**." if done else "checkpoint not reached; no verdict."),
-           "", render(pro), "", "## Seed rows (hindsight; never counted)", "", render(sd)]
+           + (("**checkpoint reached: apply the decision rule**." if done else "checkpoint not reached; no verdict.")
+              + f" {excluded} unqualified row(s) excluded."),
+           "", render(pro),
+           "Eligibility requires an exact decision/card/contract/result/probability/baseline join to a valid structured record, passing source, time, identity and terminal checks."
+           + failure_summary,
+           "", "## Seed rows (hindsight; never counted)", "", render(sd)]
     return "\n".join(out)
 
 

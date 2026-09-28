@@ -1,5 +1,8 @@
 # Soccer analysis rules
 
+> **Current research status — 28 September 2026:** No sport/competition/target scope is prospectively validated or approved for a performance claim. Use the [capability table](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md) and `python tools/evidence_status.py`; all issued forecasts remain `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE` under the current method and evidence gates.
+
+
 
 > **2026-09-12 operational correction:** The dated section at the end of this file and RULES_GENERAL section 16.9 control over conflicting older probability, coupling and source claims.
 

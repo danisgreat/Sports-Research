@@ -1,5 +1,8 @@
 # Soccer — sport and competition rules reference
 
+> **Current research status — 28 September 2026:** No sport/competition/target scope is prospectively validated or approved for a performance claim. Use the [capability table](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md) and `python tools/evidence_status.py`; all issued forecasts remain `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE` under the current method and evidence gates.
+
+
 Status: **ACTIVE — reference**
 Created: **2026-09-04**
 Companion to: **[RULES_SOCCER.md](RULES_SOCCER.md) §9**. Reference only; it does not change `SFA-SOCCER` or any gate. It documents the IFAB Laws of the Game, the competition variables that decide settlement, and the specific rules of every soccer competition in the prediction logs.

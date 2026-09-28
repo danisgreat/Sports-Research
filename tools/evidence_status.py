@@ -8,9 +8,11 @@ those gates, and the new measurement lanes, in one table, so every session start
 answer to "has anything been shown yet?".
 
 Gates reported:
-  C-BASELINE-SKILL     prospective rows in SKILL_BASELINE_LEDGER.md (100 decisions / 30 cards)
+  C-BASELINE-SKILL     prospective rows in SKILL_BASELINE_LEDGER.md (100 decisions / 30 cards),
+                       admitted only through exact joins to the v1 structured record file
   T-RM1-PROSPECTIVE    settled cards issued under RM-1 (first RM-1 card P-518; checkpoint 25 cards),
-                       read from research/settled_rows_2026-09-25/settled_rows.csv (rebuild it first)
+                       read from research/settled_rows_2026-09-28/prospective_records.json and
+                       checked against the shipped RM-1 code and coefficient hashes
   C-MARKET-BENCHMARK   valid rows in MARKET_BENCHMARK_LEDGER.md (100 decisions / 30 cards)
   C-EVENT-UNIVERSE     declared universes in universe/ and their coverage against the logs
   C-MLB-SHADOW         games frozen in research/mlb_shadow/shadow_log.csv and settled in shadow_results.csv
@@ -36,6 +38,8 @@ sys.path.insert(0, str(HERE))
 import market_benchmark as mb  # noqa: E402
 import skill_baseline as sb  # noqa: E402
 import slate_universe as su  # noqa: E402
+import semantic_validation as sv  # noqa: E402
+import prospective_eligibility as pe  # noqa: E402
 
 FIRST_RM1_CARD = 518
 RM1_CHECKPOINT_CARDS = 25
@@ -46,7 +50,11 @@ ACTIVE_LOG_GLOB = "Mini logs (to be sent to actual log later)/*/*.md"
 def baseline_gate(repo: Path) -> dict:
     p = repo / "SKILL_BASELINE_LEDGER.md"
     rows = sb.parse(p.read_text(encoding="utf-8-sig")) if p.exists() else []
-    s = sb.summarise([r for r in rows if r["section"] == "prospective"], boot=2000)
+    prospective = [r for r in rows if r["section"] == "prospective"]
+    eligible, failures = pe.join_binary_baseline_rows(prospective,
+        repo / "research" / "settled_rows_2026-09-28" / "prospective_records.json")
+    excluded = len(prospective) - len(eligible)
+    s = sb.summarise(eligible, boot=2000)
     done = s["n"] >= sb.CHECKPOINT_DECISIONS and s["cards"] >= sb.CHECKPOINT_CARDS
     verdict = ""
     if done:
@@ -54,23 +62,43 @@ def baseline_gate(repo: Path) -> dict:
         verdict = "beats the naive baseline" if hi < 0 else "adds noise: open a method review" if lo > 0 else \
             "no demonstrated skill over the baseline"
     return {"gate": "C-BASELINE-SKILL", "checkpoint": f"{sb.CHECKPOINT_DECISIONS} decisions / {sb.CHECKPOINT_CARDS} cards",
-            "progress": f"{s['n']} decisions / {s['cards']} cards", "done": done,
-            "status": ("CHECKPOINT REACHED — " + verdict) if done else "ACCRUING"}
+            "progress": f"{s['n']} verified eligible decisions / {s['cards']} cards; {excluded} unqualified row(s) excluded",
+            "done": done, "status": ("CHECKPOINT REACHED — " + verdict) if done else "ACCRUING"}
 
 
 def rm1_gate(repo: Path) -> dict:
-    p = repo / "research" / "settled_rows_2026-09-25" / "settled_rows.csv"
-    cards = set()
+    p = repo / "research" / "settled_rows_2026-09-28" / "prospective_records.json"
+    cards, eligible_decisions, blocked = set(), 0, 0
+    seen_decisions = set()
     if p.exists():
-        with p.open(encoding="utf-8", newline="") as fh:
-            for r in csv.DictReader(fh):
-                m = re.fullmatch(r"P-(\d+)", r.get("card", ""))
-                if m and int(m.group(1)) >= FIRST_RM1_CARD and r.get("p"):
-                    cards.add(int(m.group(1)))
+        try:
+            document = json.loads(p.read_text(encoding="utf-8-sig"))
+            records = document.get("records", []) if document.get("schema_version") == 1 else []
+        except (OSError, json.JSONDecodeError):
+            records = []
+        for r in records:
+            if not isinstance(r, dict):
+                blocked += 1
+                continue
+            m = re.fullmatch(r"P-(\d+)", str(r.get("card_id", "")))
+            if not m or int(m.group(1)) < FIRST_RM1_CARD:
+                continue
+            errors = sv.validate_record(r, "RM1 prospective row") + sv.performance_blockers(r)
+            errors += pe.rm1_blockers(r)
+            key = (r.get("forecast_id"), r.get("decision_id"))
+            if key in seen_decisions:
+                errors.append("DUPLICATE_FORECAST_DECISION")
+            seen_decisions.add(key)
+            if errors:
+                blocked += 1
+                continue
+            cards.add(int(m.group(1)))
+            eligible_decisions += 1
     done = len(cards) >= RM1_CHECKPOINT_CARDS
     return {"gate": "T-RM1-PROSPECTIVE", "checkpoint": f"{RM1_CHECKPOINT_CARDS} settled cards from P-{FIRST_RM1_CARD}",
-            "progress": f"{len(cards)} cards (dataset as last rebuilt)", "done": done,
-            "status": "CHECKPOINT REACHED — score p against q" if done else "ACCRUING"}
+            "progress": f"{len(cards)} qualifying cards / {eligible_decisions} eligible decisions; {blocked} blocked row(s)",
+            "done": done,
+            "status": "CHECKPOINT REACHED — score p against q" if done else "ACCRUING; incomplete and unverified rows do not count"}
 
 
 def market_gate(repo: Path) -> dict:
@@ -165,7 +193,7 @@ def render(rows: list[dict]) -> str:
     out += [f"| `{r['gate']}` | {r['checkpoint']} | {r['progress']} | {r['status']} |" for r in rows]
     out += ["", "LEARNING_ONLY: progress counts, not performance claims. Sources: SKILL_BASELINE_LEDGER.md, "
             "MARKET_BENCHMARK_LEDGER.md, universe/, research/mlb_shadow/, research/sport_shadow/, "
-            "research/settled_rows_2026-09-25/."]
+            "research/settled_rows_2026-09-28/prospective_records.json."]
     return "\n".join(out)
 
 

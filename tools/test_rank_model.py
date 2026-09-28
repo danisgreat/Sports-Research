@@ -4,6 +4,7 @@ import io
 import math
 import random
 import sys
+import tempfile
 import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
@@ -95,6 +96,16 @@ class TestCalibration(unittest.TestCase):
         self.assertEqual(ranked[0]["contract"], "Bullets -1.5")
         self.assertIn("TOP2_QUALITY", rm.top_two_statement(ranked))
 
+    def test_capped_second_row_cannot_be_top_two_strong_and_no_q_product_is_printed(self):
+        ranked = [
+            {"q": 0.81, "tier": "STRONG", "contract": "A", "flags": []},
+            {"q": 0.78, "tier": "SUPPORTED", "contract": "B", "flags": ["SIDE_FLIP"]},
+        ]
+        statement = rm.top_two_statement(ranked)
+        self.assertIn("TOP2_QUALITY: TOP2_SUPPORTED", statement)
+        self.assertIn("joint hit/failure probability: NOT ESTIMATED", statement)
+        self.assertNotIn("P(both win)", statement)
+
 
 class TestFit(unittest.TestCase):
     def test_recovers_synthetic_coefficients(self):
@@ -129,6 +140,13 @@ class TestShippedCoefficients(unittest.TestCase):
             rc = rm.main(["rank", "--sport", "mlb", "--row", "Cardinals +1.5=0.602", "--row", "Over 6.5 Runs=0.596"])
         self.assertEqual(rc, 0)
         self.assertIn("TOP2_QUALITY", buf.getvalue())
+
+    def test_refit_refuses_legacy_csv_without_preferred_and_source_evidence(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "legacy.csv"
+            path.write_text("card,p,result\nP-500,0.6,W\n", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "legacy CSVs lack verified preference"):
+                rm.load_decision_rows(path)
 
 
 if __name__ == "__main__":

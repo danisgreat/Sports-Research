@@ -8,6 +8,8 @@
 
 Version: **SCV-2026.09.19-v2**. Operational authority for scoring, conditioning and evaluation. Historical cards retain their issued probabilities and method versions. All existing combined logs remain **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**.
 
+> **Measurement correction — 28 September 2026.** Every result and control below remains tied to its dated historical sample. The old settled-row file is a mixed legacy extract; strict extraction retains rows only for descriptive review and currently certifies **zero performance-eligible decisions**. Do not infer the frozen preferred side from `p >= 0.5`. Use the explicit issue-time `preferred_at_issue` decision. RM-1 `q` is a row-calibration/ranking output, not an event marginal or joint distribution; multiplying q values does not estimate joint success. Push-capable records remain blocked from the binary p-v-q prospective comparison until a vector-aware method is validated. Current control details: [structured record schema](research/settled_rows_2026-09-28/RECORD_SCHEMA.md), [capability status](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md), `tools/semantic_validation.py` and `tools/prospective_eligibility.py`.
+
 
 <!-- THREE-SOURCE-TIME-GATE-2026-09-19-CR4 -->
 ## Universal verification prerequisite — CR-2026.09.19-4
@@ -67,7 +69,7 @@ Report row, distinct-target decision and event counts separately. Give each even
 ## 4. Baselines, development and prospective evidence
 
 
-Use a competition/endpoint/horizon-specific empirical baseline trained only on earlier games, scored on exactly the same events and thresholds. A binary p=0.5 reference is an optional diagnostic, not the main comparator. Match target difficulty using the frozen baseline probability or quantile, sport, endpoint and line band; stated-p bands and absolute normalised distance alone are insufficient.
+Use a competition/endpoint/horizon-specific empirical baseline trained only on earlier games, scored on exactly the same events and thresholds. A binary p=0.5 reference is an optional diagnostic, not the main comparator. Match target difficulty using the frozen baseline probability or quantile, sport, endpoint and line band; stated-p bands and absolute normalised distance alone are insufficient. The baseline join must match event, target, contract, horizon and issue cutoff; missing or invalid baselines are excluded and never filled with 0.500.
 
 
 Freeze event universe, exclusion reasons, TRAIN/TUNE/CAL/TEST dates, candidate settings, features, thresholds, metrics, uncertainty method and decision rule before evaluation. Fit preprocessing and recency weights within training folds. Group all views of one event. Calibration is optional if unsupported, but any fitted calibrator requires its own later disjoint CAL block and a coherent final distribution. Open an untouched TEST once and retain unsuccessful results; changes require a new test population.
@@ -172,10 +174,10 @@ Descriptive reports list how many cards carry each label beside every Rank-1, Hi
 <!-- REPO-HYGIENE-CI-2026-09-25C -->
 ## 13. Naive population baseline (`C-BASELINE-SKILL`, added 2026-09-25(c))
 
-A Brier score is reported beside a **baseline on the same decisions**. From 2026-09-25(c) the primary descriptive baseline is the **naive population baseline** recorded as `BASELINE_P` on each card, not the coin flip (0.25).
+A Brier score is reported beside a **baseline on the same decisions**. From 2026-09-25(c) the primary descriptive baseline is the **naive population baseline** recorded as `BASELINE_P` on each card, not the coin flip (0.25). Only rows with an explicit pre-result selection and an exact, verified structured-record join can count prospectively.
 
 - **What it knows.** The competition's outcome distribution from games completed before the event, and which side is at home. For tennis it knows no side information.
-- **Report.** Card Brier, baseline Brier, their paired difference (card − baseline), and a bootstrap interval that resamples whole cards (rows within a card are dependent). `tools/skill_baseline.py` computes all of this from `SKILL_BASELINE_LEDGER.md`.
+- **Report.** Principal estimate: average target scores within each event, then equally weight events. Report baseline Brier and paired difference (card − baseline), with an event-cluster bootstrap interval. A decision-weighted estimate is a separate diagnostic, not the principal point estimate. `tools/skill_baseline.py` verifies the ledger against `prospective_records.json` before scoring.
 - **Counting.** Forced pairs are counted once and pushes are excluded, as elsewhere in this specification.
 - **Status.** Descriptive and LEARNING_ONLY. Beating the naive baseline is a *minimum* condition for any later claim that the research process adds information. It is not sufficient for performance eligibility (`PERFORMANCE_ELIGIBILITY_POLICY.md`). Never fit a shrink or weight from it (`L-087`).
 - **Seed result (hindsight, 2026-09-24 cohort).** Card 0.2461 against baseline 0.2360, n = 29 decisions from 9 cards, interval [−0.059, +0.089]: no demonstrated difference.
@@ -183,7 +185,7 @@ A Brier score is reported beside a **baseline on the same decisions**. From 2026
 <!-- SETTLED-ROW-REVIEW-2026-09-25D -->
 ## 14. Calibration review standard (added 2026-09-25(d))
 
-Every 25-card pattern review, and every audit of a cohort's probabilities, reports the following from `python tools/calibration_report.py`, run on the rebuilt settled-row dataset (`research/settled_rows_2026-09-25/extract_settled_rows.py`):
+Every 25-card pattern review, and every audit of a cohort's probabilities, may report the following from `python tools/calibration_report.py`, run on the versioned output of `research/settled_rows_2026-09-25/extract_settled_rows.py`. Its default `legacy` view is descriptive only; preferred-side reports require explicit selection, and performance reports require a valid structured-record join.
 
 1. **Reliability table** by stated band, with Wilson intervals and the number of distinct cards per band.
 2. **Murphy decomposition**, Brier = reliability − resolution + uncertainty, plus skill against climatology. Resolution is the only component that shows information. A low Brier on a lopsided population can come from uncertainty alone.
@@ -212,11 +214,11 @@ Details are in `research/settled_rows_2026-09-25/README.md`.
 <!-- RANK-MODEL-2026-09-25E -->
 ## 15. The ranking probability q (RM-1) and the team baseline (added 2026-09-25(e))
 
-1. **Two probabilities per row.** Each ranked row carries the card's stated p (UNVALIDATED_SUBJECTIVE, from its own distribution) and RM-1's q (`tools/rank_model.py`).
-   - q is a **calibrated ranking probability**. It is not a PUBLISHED numerical probability (`NUMERICAL_PROGRAM.md`).
+1. **Two outputs per row.** Each ranked row may carry the card's stated p (UNVALIDATED_SUBJECTIVE, from its own distribution) and RM-1's q (`tools/rank_model.py`).
+   - q is a **row-calibrated ranking output**. It is not a joint-distribution probability or necessarily a coherent marginal event probability; it is not a PUBLISHED numerical probability (`NUMERICAL_PROGRAM.md`).
    - Ranks follow q (`C-RANK-MODEL`).
-   - Settlement scores **both** (Brier and log loss). Settlement tables add a `q` column: `| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |`.
-2. **§14 exception.** §14's rule that "nothing in this section may be applied back to a forecast" continues for everything **except RM-1**. RM-1 is the user-authorised calibration of 2026-09-25(e) (`RULES_GENERAL.md` §"2026-09-25(e)"(h)).
+   - Do not score q as a coherent forecast by default. RM-1's retrospective row scores are historical. Any prospective q-v-p comparison requires explicit preferred-side identity, valid issue/outcome evidence, frozen model/code hashes, an exact matched baseline, and no unresolved push mass. The current prospective gate has 0 qualifying rows. The q values cannot be multiplied as a joint-success estimate.
+2. **Historical §14 exception, now frozen.** RM-1 was historically user-authorised for ranking (`RULES_GENERAL.md` §"2026-09-25(e)"(h)); that authorization does not establish prospective validity or turn its q output into a probability distribution.
    - It is refitted only at the 25-card review, after `extract_settled_rows.py` and `validate_rank_model.py`.
    - A new term enters only if it beats RM-1 on log loss in every forward split.
 3. **Prospective check (`T-RM1-PROSPECTIVE`).** After 25 cards, q's Brier is compared with p's on the same rows. If q is worse, `C-RANK-MODEL` reverts to disclosure-only.
