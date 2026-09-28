@@ -1,3 +1,0 @@
-graded rows: 1284 from 320 cards; with probability: 661 from 160 cards (133 probabilities joined from issue-time tables)
-raw graded occurrences: 1347; unattributable rows dropped: 72; (card, rank) conflicts: 1
-sports: {'soccer': 355, 'baseball-MLB': 261, 'baseball-NPB/KBO/CPBL': 207, 'basketball': 127, 'cricket': 108, 'tennis': 73, 'rugby': 52, 'AFL': 49, 'american-football': 36, 'ice-hockey': 12, 'unclassified': 4}

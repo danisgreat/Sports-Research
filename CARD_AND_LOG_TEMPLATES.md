@@ -1,6 +1,6 @@
 # Card and log templates, with the self-audit
 
-**Opened 2026-09-28 (md-only operation).** Copy these templates. Fill every field, or write its missingness label; never delete a field. The self-audit in §5 replaces `audit_card_controls.py` for the model, and maintainers still run that script in CI. The field codes in [brackets] are the audit's own IDs, so a card that follows this template passes it.
+**Opened 2026-09-28 (md-only operation).** Copy these templates. Fill every field, or write its missingness label; never delete a field. The self-audit in §5 is the current Markdown check. The field codes in [brackets] preserve the historical audit IDs.
 
 ---
 
@@ -126,7 +126,7 @@
 
 ## 3. The mini log
 
-**Header of a new mini log.** Its file is `Mini logs (to be sent to actual log later)/Mini Prediction Log - <first ID> onward - <YYYY-MM-DD>/PREDICTION_MINI_RUNNING_LOG_<first ID>_ONWARD.md`.
+**Header of a new mini log.** Its file is `prediction logs/PREDICTION_MINI_RUNNING_LOG_<first ID>_ONWARD.md`.
 
 ```markdown
 # Prediction Mini Running Log — <first ID> onward (started <date AEST>)
@@ -237,7 +237,7 @@ Write this before the day's first card, and never edit it afterwards:
 4. **State.** Unresolved events stay pending, with the state and the time checked. Only finals are settled (§2).
 5. **Append verbatim.** Copy each card to Part 5 exactly as issued. Corrections are appended settlement revisions, with the old and new values, the source and the reason.
 6. **Learnings.** Dispositions go to `LEARNING_REGISTER.md`, with one line in `LEARNINGS_INDEX.md`. Execute or disposition every document-mapping row.
-7. **Archive and check.**
-   - Move the processed mini log to `archive/mini_logs/` only after pending events are tracked in `GAME_LOG_STATUS_CURRENT.md`.
+7. **Custody and check.**
+   - Retain the processed mini log in `prediction logs/` after pending events are tracked in `GAME_LOG_STATUS_CURRENT.md`.
    - Update the Part 5 snapshot: next ID, open follow-ups.
-   - Maintainers then run the CI checks (`CONTRIBUTING.md`).
+   - Maintainers then review the Markdown records and receipt (`CONTRIBUTING.md`).

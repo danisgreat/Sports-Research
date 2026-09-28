@@ -2,7 +2,7 @@
 
 A disciplined, **market-blind** framework for researching sports events, issuing probability forecasts before the start, and settling them against the official record. It covers MLB, NPB/KBO, basketball (NBA, WNBA, NBL and more), the NHL, soccer, tennis, cricket, AFL, NRL, rugby union and the NFL.
 
-**From 2026-09-28 the forecasting model works from Markdown documents only.** Every rule, calculation, template and source it needs is in the `.md` files at the root. The Python in `tools/` is maintainer tooling (CI checks, research and freeze receipts), and a card never depends on it.
+**From 2026-09-28 this repository contains Markdown files only.** Every rule, calculation, template and source the forecasting model needs is in the `.md` files at the root.
 
 > **Evidence status (2026-09-28).** Every issued forecast is **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. No model or card method is prospectively validated. The prospective baseline and RM-1 gates are at **0**, and `C-RULE-FREEZE` is in force. The historical seed comparison (29 decisions from 9 cards) is card Brier 0.2461 against a population baseline of 0.2360, and its interval spans zero. Forecasting stays `SPORTS_ONLY / MARKET_BLIND`.
 
@@ -40,10 +40,11 @@ identity + state ─► contract (lines quarantined) ─► official participant
 | Area | Files |
 |---|---|
 | Operating documents (what the model reads) | `CURRENT_RULES.md`, `PROBABILITY_TOOLKIT.md`, `CARD_AND_LOG_TEMPLATES.md`, `SOURCES.md`, `PROMPTS.md`, `RULES_<SPORT>.md` ×10, `LEAGUE_RULES_CRICKET.md`, `LEAGUE_RULES_SOCCER.md`, `BASE_RATES_REGISTER.md`, `LEARNINGS_INDEX.md` |
-| Records | `PREDICTION_LOG_COMBINED*.md` (Parts 1–4 closed; Part 5 active), `GAME_LOG_STATUS_CURRENT.md`, `Mini logs (to be sent to actual log later)/`, `SKILL_BASELINE_LEDGER.md`, `MARKET_BENCHMARK_LEDGER.md` (operator, post-settlement only) |
-| Evidence and history | `LEARNING_REGISTER.md`, `CHANGELOG.md`, `research/`, `reviews/`, `archive/` (retired documents are in `archive/superseded_2026-09-28/`, with a map of where each live rule went) |
-| Version and freeze receipt | `METHOD.md` (header), the current `CONTROL_MANIFEST_*.md`; older receipts in `archive/manifests/` |
-| Maintainer tooling (never needed by the model) | `tools/`, `receipts.py`, `audit_card_controls.py`, `.github/workflows/checks.yml`, `SCORING_AND_VALIDATION.md`, `CONTRIBUTING.md` |
+| Records | `PREDICTION_LOG_COMBINED*.md` (Parts 1–4 closed; Part 5 active), `GAME_LOG_STATUS_CURRENT.md`, `prediction logs/` (historical and mini logs), `SKILL_BASELINE_LEDGER.md`, `MARKET_BENCHMARK_LEDGER.md` (operator, post-settlement only) |
+| Evidence and history | `LEARNING_REGISTER.md`, `CHANGELOG.md`; removed research and review material remains in Git history |
+| Archived combined-log snapshots | `prediction logs/` |
+| Version and freeze receipt | `METHOD.md` (header), the current `CONTROL_MANIFEST_*.md` |
+| Maintainer guidance | `SCORING_AND_VALIDATION.md`, `CONTRIBUTING.md` |
 
 ## Current state
 
@@ -52,12 +53,12 @@ The active log's top snapshot is the only authority for queue state and the next
 | Item | State |
 |---|---|
 | Active canonical log | [Part 5](PREDICTION_LOG_COMBINED_5.md) (P-482 onward); Parts 1–4 are closed |
-| Next canonical ID | **On hold.** P-518–P-522 are reserved while they are reconciled ([register](reviews/2026-09-28/P518_P522_RECONCILIATION_REGISTER.csv)). New cards use TMP IDs until the snapshot names the next number |
+| Next canonical ID | **On hold.** P-518–P-522 are reserved while they are reconciled ([status](GAME_LOG_STATUS_CURRENT.md)). New cards use TMP IDs until the snapshot names the next number |
 | Freeze receipt | The manifest named in [`METHOD.md`](METHOD.md) |
 | Prospective gates | `C-BASELINE-SKILL` 0/100 · `T-RM1-PROSPECTIVE` 0/25 cards · `C-MARKET-BENCHMARK` 0/100 · **`C-RULE-FREEZE` in force** |
 | Validated anchors | **TB-1-MD** beats the population on sides and results in the NBA, WNBA, NBL, NFL, AFL, EPL, La Liga, Bundesliga, Serie A and Ligue 1, and on totals in the NBA, WNBA, La Liga and Bundesliga. It is at least as accurate as the old tool in every league (`PROBABILITY_TOOLKIT.md` §4.3–§4.4) |
 | Predictability | STRONG (≥ 0.70) favourites exist mainly in AFL and basketball sides, less in the NFL and NRL, rarely in the NHL, and never in MLB (`BASE_RATES_REGISTER.md` §7.8) |
-| Legacy settled rows | 1,188 retained rows; 0 performance-eligible ([capability status](research/settled_rows_2026-09-28/CAPABILITY_STATUS.md)) |
+| Legacy settled rows | Historical extraction records were removed from the current tree; no issued row is performance-eligible |
 
 ## Canonical custody
 
@@ -71,10 +72,7 @@ The active log's top snapshot is the only authority for queue state and the next
 
 ## For maintainers
 
-CI runs on every push (`.github/workflows/checks.yml`): the unit tests, repository hygiene, manifest verification, the strict card audit and the evidence-status report. After editing a governance file:
-1. regenerate the freeze receipt (`python tools/make_manifest.py …`);
-2. repoint `METHOD.md` and the active mini log;
-3. work on a branch ([`CONTRIBUTING.md`](CONTRIBUTING.md)).
+After editing a governance file, update the Markdown freeze receipt and its pointer in `METHOD.md`, then check the Markdown files and current custody state. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Honesty boundary
 
@@ -85,4 +83,4 @@ CI runs on every push (`.github/workflows/checks.yml`): the unit tests, reposito
 
 ## Licence
 
-All rights reserved; see [`LICENSE`](LICENSE). Sports data remains subject to its providers' terms.
+All rights reserved; see [`LICENSE.md`](LICENSE.md). Sports data remains subject to its providers' terms.

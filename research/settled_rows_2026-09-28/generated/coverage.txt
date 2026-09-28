@@ -1,5 +1,0 @@
-legacy rows retained after exact conflict checks: 1188 from 308 cards; rows with p: 556
-raw graded occurrences: 1347; unattributed rows retained for review: 72; quarantined card/rank groups: 83
-prospective-eligible rows: 0 (legacy extraction cannot certify eligibility)
-Identity policy: exact contract text only; no approximate joins; conflicts do not enter the scored CSV.
-sports among retained rows: {'soccer': 341, 'baseball-MLB': 228, 'baseball-NPB/KBO/CPBL': 195, 'basketball': 111, 'cricket': 99, 'tennis': 70, 'rugby': 51, 'AFL': 42, 'american-football': 36, 'ice-hockey': 12, 'unclassified': 3}

@@ -1,6 +1,6 @@
 # Sources — the single source register
 
-**Rebuilt 2026-09-28 for md-only operation.** This page merges the old quick reference (`SOURCES.md`) and the full register (`DATA_SOURCE_REGISTER.md`, now in `archive/superseded_2026-09-28/`), and adds the sources verified on 2026-09-28. It is the only source document the model reads.
+**Rebuilt 2026-09-28 for md-only operation.** This page merges the old quick reference and full register, and adds the sources verified on 2026-09-28. It is the only source document the model reads.
 - **What changed on 2026-09-28:** 60+ routes were re-tested by live request; the sport tables below list each with its access mode and result. About 30 are new to the register, including the standings feeds for the hand-computed team baseline, injury feeds, official ladders, rating systems and weather services.
 - **Repo files versus web sources:** the model uses no Python and no non-Markdown *file from this repository*. Web sources may be JSON, HTML or PDF: the model opens them with its browser or fetch tool and quotes the fields it used.
 
@@ -343,4 +343,4 @@ The **Role** column:
 - **A source enters** only with a reproducible retrieval: route, date, access mode and response. One good result never promotes a source; judge it on accuracy, timeliness and authority.
 - **Re-test the table each month,** and whenever a route fails twice. Record the date in the "Verified" column.
 - **New sources found during a card** go into the mini log's document mapping with their route. They are added here at the next import.
-- Historical source audits (every dated addendum since 2026-09-01) are in `archive/superseded_2026-09-28/DATA_SOURCE_REGISTER.md` and `archive/superseded_2026-09-28/SOURCES_before_2026-09-28.md`.
+- Historical source audits removed from this tree remain in Git history.

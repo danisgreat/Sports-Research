@@ -17,7 +17,7 @@ Start a new mini prediction log for the sports prediction framework in the linke
 Rules for this chat:
 - Use only the Markdown (.md) documents in the Drive. Do not use Python, JSON, CSV or any other file from it. Web sources in any format are fine.
 - The Drive is read-only, with one exception. Do not edit, move, rename or delete any existing file. You may create and update exactly one new folder:
-  `Mini logs (to be sent to actual log later)/Mini Prediction Log - <first ID> onward - <YYYY-MM-DD>/`
+  `prediction logs/PREDICTION_MINI_RUNNING_LOG_<first ID>_ONWARD.md`
   containing `PREDICTION_MINI_RUNNING_LOG_<first ID>_ONWARD.md`.
   If you cannot write there, say so once and paste the full log after every query.
 
@@ -242,9 +242,9 @@ Import the supplied mini log(s) into the canonical record, following CARD_AND_LO
    - Execute or disposition every document-mapping row.
 6. Custody:
    - update the Part 5 snapshot and GAME_LOG_STATUS_CURRENT.md;
-   - move the processed mini log to archive/mini_logs/ only after pending events are tracked;
+   - retain the processed mini log in `prediction logs/` after pending events are tracked;
    - add a CHANGELOG entry.
-7. Maintainer step (a repository session only): regenerate the control manifest and run the CI checks (CONTRIBUTING.md). Commit on a branch, and ask me before pushing or merging.
+7. Maintainer step (a repository session only): update and verify the Markdown control manifest and review the changed files (`CONTRIBUTING.md`). Push `main` when the user has authorized publication.
 
 Validate every item in CARD_AND_LOG_TEMPLATES.md §5 (settlement block) for each event. Then report under these headings: settled and appended · still unsettled (why) · temporary IDs · files updated · changes (with category) · tests opened · new sources · major learnings · outstanding issues. Don't hide pre-game mistakes, force explanations to fit results, or invent anything.
 ```

@@ -1,11 +1,11 @@
 # Current rules — the operating manual
 
-**Method MDS-2026.09.28-v5.0 (md-only) · Control revision CR-2026.09.28-MD1 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+**Method MDS-2026.09.28-v5.0 (md-only) · Control revision CR-2026.09.28-MD2 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
 **What changed on 2026-09-28.** The user instructed that the forecasting model uses Markdown documents only: no Python and no non-Markdown repository file, in the future. So this manual is now self-contained.
 - **Every step that used a tool** has a Markdown procedure. The probability arithmetic, the team baseline (TB-1-MD) and the ranking model (RM-1) are in `PROBABILITY_TOOLKIT.md`, and were checked against the tools they replace. The card, settlement and log formats, and the self-audit, are in `CARD_AND_LOG_TEMPLATES.md`.
 - **Sources** were merged into one register and re-verified by live request (`SOURCES.md`).
-- **Redundant documents** were retired to `archive/superseded_2026-09-28/`, with a map of where every live rule went (`archive/superseded_2026-09-28/README.md`).
+- **Redundant documents** were retired; their former versions remain in Git history. Live rules are in this manual and the sport files.
 - **No probability, width, centre or ranking rule changed** (`C-RULE-FREEZE`), with two measured effects (`PROBABILITY_TOOLKIT.md` §4.3–§4.4):
   - the hand-computed baseline is at least as accurate as the tool it replaces;
   - under the existing rule "anchor on TB-1 where it has resolution", a preregistered held-out test (P6) extended the anchor to four more soccer leagues' results and two leagues' totals.
@@ -17,7 +17,7 @@
 4. `PROBABILITY_TOOLKIT.md`, `CARD_AND_LOG_TEMPLATES.md` and `SOURCES.md`.
 5. Everything else, which is reference or history.
 
-A dated section, archived text or old card never reinstates a withdrawn rule (§I). Python in `tools/` is maintainer tooling only (CI, research, manifests). The model never needs it, and a card never waits for it.
+A dated section, archived text or old card never reinstates a withdrawn rule (§I). All current repository files are Markdown.
 
 ---
 
@@ -210,7 +210,7 @@ Template: `CARD_AND_LOG_TEMPLATES.md` §2.
   | `T-FAV70-BAND` | 0/100 band games per league |
   | `T-TB1MD-NRL` | awaits NRL 2027 |
 
-  Maintainers can print the live counts with `python tools/evidence_status.py`; the model counts from the ledgers.
+  Maintainers and the model count from the ledgers.
 - **Every rule carries a receipt:** a status (`TESTING`, `PROMOTED_PROCESS` or `REFERENCE`), an evidence count and, if it is predictive, a prospective-test ID. A predictive idea from one or two events is `TESTING` and non-binding.
 - **Open tests** (none has a ranking effect until it concludes):
   - `C-WIDTH-Z`, `C-PROB-EXTREMITY`, `C-RUN-CENTRE-BIAS`, `C-PHASE-VS-FULL-TOTAL`;
@@ -225,9 +225,9 @@ Template: `CARD_AND_LOG_TEMPLATES.md` §2.
 
 ### D10 Custody and logging
 - **Part 5 (`PREDICTION_LOG_COMBINED_5.md`) is the only active canonical log.** Parts 1–4 are closed. Its top snapshot controls the next ID; `GAME_LOG_STATUS_CURRENT.md` is the state register.
-  - **2026-09-28:** P-518–P-522 are reserved while they are reconciled (`reviews/2026-09-28/`). Until the snapshot names the next ID, new cards use TMP IDs.
+  - **2026-09-28:** P-518–P-522 are reserved while they are reconciled (`GAME_LOG_STATUS_CURRENT.md` and the P-518 mini log in `prediction logs/`). Until the snapshot names the next ID, new cards use TMP IDs.
   - **The P-518 onward mini log must stay byte-for-byte unchanged** during that reconciliation. New cards go into a **new** mini log (`PROMPTS.md` §1; `CARD_AND_LOG_TEMPLATES.md` §3).
-- **New cards go to the active mini log before delivery.** It lives in `Mini logs (to be sent to actual log later)/` in the repository, or the one designated Drive folder. Cards are registered in Part 5 at the next import.
+- **New cards go to the active mini log before delivery.** It lives in `prediction logs/` in the repository, or the one designated Drive folder. Cards are registered in Part 5 at the next import.
 - **IDs:** use a TMP ID whenever a collision is possible. Never renumber or overwrite an issued ID. The verifiably timestamped card takes the lower number.
 - **The manifest:** copy its name and SHA onto every card, from the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`. Governance edits and new manifests are maintainer work, done in a repository session (`CONTRIBUTING.md`).
 - **The universe** is declared in the mini log (`CARD_AND_LOG_TEMPLATES.md` §4). A declared universe is never edited; skips are appended.
@@ -238,7 +238,7 @@ The live rules are in each sport file's §0 page. This section lists only what e
 
 **Every sport** prints: `BASELINE_P`; `TEAM_BASELINE_P` (TB-1-MD or its status); RM-1 q; the reference row and width; the predictability row; and `SHADOW: NO_LANE (md-only)`.
 
-**Shadow models.** The shadow models (`tools/mlb_model.py`, `tools/sport_models.py`) need Python. From 2026-09-28 they run only if a maintainer happens to run them before the start; otherwise print `SHADOW: NO_LANE (md-only)`. `C-MLB-SHADOW` and `C-SPORT-SHADOW` are suspended, not failed.
+**Shadow models.** The numerical shadow lanes are unavailable in the Markdown-only repository. Print `SHADOW: NO_LANE (md-only)`. `C-MLB-SHADOW` and `C-SPORT-SHADOW` are suspended, not failed.
 
 **MLB, NPB and KBO** (`RULES_BASEBALL.md`)
 - **Before first pitch:** probables, official orders (`battingOrder`), gamefeed wind and umpires. Re-check within 60 minutes of first pitch.
@@ -340,8 +340,8 @@ The live rules are in each sport file's §0 page. This section lists only what e
 | Method version and freeze receipt | `METHOD.md` (header) |
 | Scoring and evaluation mathematics (maintainers) | `SCORING_AND_VALIDATION.md` |
 | History of changes | `CHANGELOG.md` |
-| Retired documents, and where their rules went | `archive/superseded_2026-09-28/README.md` |
-| Maintainer tooling (never needed by the model) | `tools/`, `CONTRIBUTING.md` |
+| Retired documents | Git history; current rules are in this manual and the sport files |
+| Maintainer guidance | `CONTRIBUTING.md` |
 
 ## I. Withdrawn or non-operative: never apply
 
