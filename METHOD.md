@@ -1,15 +1,16 @@
 # METHOD — version and freeze receipt
 
 Status: **ACTIVE**
-Method version: **MDS-2026.09.28-v5.1 (md-only)**
-Control revision: **CR-2026.09.29-MD7**. Freeze the normalized-CRLF SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-29-1.md](CONTROL_MANIFEST_2026-09-29-1.md) with every new card. Copy the manifest name and its SHA-256 onto the card. The SHA is printed in the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`, a living file the manifest does not hash, so it can carry the manifest's own SHA.
+Method version: **MDS-2026.09.29-v6.0**
+Control revision: **CR-2026.09.29-P1**. Freeze the normalized-CRLF SHA-256 file receipt from [CONTROL_MANIFEST_2026-09-29-3.md](CONTROL_MANIFEST_2026-09-29-3.md) with every new card. Copy the manifest name and its SHA-256 onto the card. The SHA is printed in the **Current freeze receipt** line at the top of `GAME_LOG_STATUS_CURRENT.md`, a living file the manifest does not hash, so it can carry the manifest's own SHA.
 Scoring version: **SCV-2026.09.19-v2**
 
-**This file is a pointer, not a procedure.** From 2026-09-28 the forecasting model works from Markdown documents only:
+**This file is a pointer, not a procedure.** On 2026-09-29 the user authorized non-Markdown research code and data in this repository. [Pipeline implementation and gate register](PIPELINE_IMPLEMENTATION_2026-09-29.md) controls P-523+ numerical cards and the separate pilot; the older Markdown procedures below remain historical/learning-only where they conflict.
 
 | Need | File |
 |---|---|
 | The operating manual: every live rule, the workflow, custody | [`CURRENT_RULES.md`](CURRENT_RULES.md) |
+| Research code, data, tests and run receipts | [`research/README.md`](research/README.md) |
 | Probability arithmetic, TB-1-MD, RM-1, Elo, scoring | [`PROBABILITY_TOOLKIT.md`](PROBABILITY_TOOLKIT.md) |
 | Card, settlement and log templates; the self-audit | [`CARD_AND_LOG_TEMPLATES.md`](CARD_AND_LOG_TEMPLATES.md) |
 | Sources | [`SOURCES.md`](SOURCES.md) |

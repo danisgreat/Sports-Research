@@ -1,0 +1,19 @@
+{
+  "official_event_id": "",
+  "card_id": "DRAFT",
+  "home": "",
+  "away": "",
+  "start_utc": "",
+  "state": "PREGAME",
+  "state_source_url": "",
+  "state_retrieved_utc": "",
+  "identity_sources": [],
+  "lineup_status": "",
+  "lineup_source_url": "",
+  "lineup_retrieved_utc": "",
+  "recency_check": "",
+  "recency_retrieved_utc": "",
+  "adjustment_factors": {"home": 1.0, "away": 1.0},
+  "adjustment_type": "NONE",
+  "adjustment_reason": ""
+}

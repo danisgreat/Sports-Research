@@ -1,0 +1,13 @@
+{
+  "snapshot_utc": "2026-09-29T03:30:39.434769+00:00",
+  "results": 50,
+  "openfootball_sha256": "a2366ea9f7f55b8afd666e455666ba9019f9c62da8864f6bcf3adff65300b445",
+  "football_data_sha256": "8e21d4821be776332f3504f55f85b4277f326f03513b2c7501fbdedf92b8b1a2",
+  "parquet_sha256": "4d68693c465442168dded8082041dace555b07134b9191dd5ff7ed1e1b221f8c",
+  "score_disagreements": 0,
+  "source_urls": [
+    "https://raw.githubusercontent.com/openfootball/england/master/2026-27/1-premierleague.txt",
+    "https://www.football-data.co.uk/mmz4281/2627/E0.csv"
+  ],
+  "market_fields_in_forecast_data": false
+}

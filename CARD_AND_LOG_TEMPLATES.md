@@ -1,5 +1,7 @@
 # Card and log templates, with the self-audit
 
+**P-523+ pipeline amendment (2026-09-29).** The [pipeline gate register](PIPELINE_IMPLEMENTATION_2026-09-29.md) controls new numerical cards: use the `research/src/emit_card.py` distribution bridge, rank by issued p, and include its event ID, cutoff, model/data/distribution hashes, endpoint, same-contract baseline, lineup status, recency check and numbered kill-path masses. Tier C or unsupported targets record `NO_MODEL / NO_FORECAST_ISSUED`. Older q-ordering, Markdown-only and `SHADOW: NO_LANE` lines below are superseded for the new pilot. The original long template remains a learning-only evidence checklist.
+
 **Opened 2026-09-28 (md-only operation).** Copy these templates. Fill every field, or write its missingness label; never delete a field. The self-audit in §5 is the current Markdown check. The field codes in [brackets] preserve the historical audit IDs.
 
 **Core and annex (2026-09-28(e); `CURRENT_RULES.md` §B, "Timing").** The card is written in two blocks:

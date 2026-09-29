@@ -1,6 +1,8 @@
 # Current rules — the operating manual
 
-**Method MDS-2026.09.28-v5.1 (md-only) · Control revision CR-2026.09.29-MD7 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. Every record is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+**2026-09-29 user-directed implementation override for P-523 onward: MDS-2026.09.29-v6.0 / CR-2026.09.29-P1.** [Pipeline implementation and gate register](PIPELINE_IMPLEMENTATION_2026-09-29.md) records D1–D6 and U1–U10. The user authorized non-Markdown files under `research/` and post-settlement closing odds as an informational benchmark. New numerical cards rank by coherent issued p, label forced/covering pairs, and carry an exact endpoint, baseline, lineup status, recency result, numbered kill-path masses and distribution checksum. Tier C numeric cards are paused. Any older instruction below to use RM-1 q to order a new P-523+ card, to use Markdown-only tooling, or to score historical cards prospectively is superseded. RM-1 remains a historical diagnostic. A lane without a competition-specific distribution and baseline prints `NO_MODEL / NO_FORECAST_ISSUED`.
+
+**Method MDS-2026.09.29-v6.0 · Control revision CR-2026.09.29-P1 · Scoring SCV-2026.09.19-v2.** The freeze receipt is the control manifest named in `METHOD.md`'s header. The old cards and all currently issued cards are LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. Prospective admission uses `RECORD_ELIGIBILITY_SCHEMA.md`.
 
 **What changed on 2026-09-28(e)** (the user instructed the review's improvements; no probability, width, centre or in-domain rank changed):
 - **Core first, annex after (§B, §C).** Four of the five cards before this change finished after the start, so none could count toward a checkpoint. A card now freezes its **core** (everything that sets a probability or a rank) before the start, and appends its disclosure **annex** afterwards.
@@ -50,7 +52,7 @@ Record the session read (time and receipt SHA) in the active Part 6 working sect
 
 1. **Sports only, market-blind.** Odds, prices, line movement, tipsters, betting previews, prediction markets and fantasy/DFS material are never evidence, anchors or sanity checks (`SOURCES.md` §1.4).
    - A supplied line is contract metadata. It is quarantined until the distribution is frozen.
-   - The only market use is after settlement, by the operator (`C-MARKET-BENCHMARK`, `MARKET_BENCHMARK_LEDGER.md`). The model never reads that ledger.
+   - The only market use is after terminal settlement, by the operator or the quarantined historical benchmark in `research/src/benchmark.py` (`C-MARKET-BENCHMARK`, `MARKET_BENCHMARK_LEDGER.md`). The forecast model never reads odds or the benchmark ledger.
 2. **Never fabricate.** A missing lineup, timestamp, probability or record stays missing: `UNAVAILABLE`, `NOT_RETRIEVED`, `NOT_YET_DERIVED`. A number that cannot be reproduced from the printed distribution is invented precision.
 3. **Learning-only.** No performance, calibration, ROI or value claim follows from any record.
 4. **Three independent lineages** to issue an event, and three to settle it. Mirrors and syndication count once; snippets never count (`SOURCES.md` §1.1).

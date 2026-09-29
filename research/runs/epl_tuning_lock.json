@@ -1,0 +1,38 @@
+{
+  "stage": "TUNING_LOCK",
+  "created_utc": "2026-09-29T03:12:39.546011+00:00",
+  "data_sha256": "d65079171b422c3bcc902d760427f86c385efd6b5dfa4bc1432a645b0d5187fc",
+  "seasons": [
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "xi_grid": [
+    0.001,
+    0.0019,
+    0.003
+  ],
+  "selected_xi": 0.003,
+  "criterion": "minimum mean 1X2 log-loss",
+  "model_version": "epl-dc-0.1.0",
+  "fixed_bootstrap_reps": 10000,
+  "seed": 20260929,
+  "results": {
+    "0.001": {
+      "mean_m2_logloss": 0.978382669209803,
+      "n": 1520,
+      "output_sha256": "13a8eb8a5e2dc2e8cf59797cb3ef3fb9051e78cd3db6fb503072e834807c1125"
+    },
+    "0.0019": {
+      "mean_m2_logloss": 0.974317882535224,
+      "n": 1520,
+      "output_sha256": "0e748659d76226fc10f40d31e046e95b91caa7646dd3fba0d6cdd211f24fcfd7"
+    },
+    "0.003": {
+      "mean_m2_logloss": 0.9721486979124134,
+      "n": 1520,
+      "output_sha256": "5f27f9a62fb1377686cb8d7b1e40437d649685f681c2712e16c8fb608a86594e"
+    }
+  }
+}

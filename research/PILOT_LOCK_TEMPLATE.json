@@ -1,0 +1,14 @@
+{
+  "status": "NOT_FROZEN",
+  "cohort_version": "EPL-PILOT-1",
+  "primary_score": "mean of 1X2 multiclass log-loss, Over/Under 2.5 binary log-loss, and BTTS binary log-loss per event",
+  "secondary_score": "mean of half-scaled 1X2 Brier, total 2.5 Brier, and BTTS Brier per event",
+  "mwi_brier": 0.01,
+  "target_adjusted_events": null,
+  "futility_look_events": null,
+  "weights": {},
+  "seed": 20260929,
+  "lock_created_utc": null,
+  "first_eligible_event_utc": null,
+  "notes": "EPL-only pilot v1. Freeze weight EPL=1, sample and futility look before the first eligible event. A new sport needs its own versioned family score and lock; do not retrofit this cohort."
+}

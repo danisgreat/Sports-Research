@@ -1,6 +1,28 @@
-# Verification receipt — 2026-09-28(d) to (g), and 2026-09-29(a)
+# Verification receipt — 2026-09-28(d) to (g), and 2026-09-29(a) to (c)
 
 This receipt records executed checks for the Markdown evidence and custody repair. The [protocol](VERIFICATION_PROTOCOL.md) defines the gates. It is a living execution note, excluded from the stable control manifest so the manifest's own SHA-256 can be recorded here without a circular hash.
+
+## Executed results — 2026-09-29(c) NBL source repair and shadow (manifest 2026-09-29-3)
+
+| Gate | Result |
+|---|---|
+| NBL source grain | NBL22–NBL26: **738** official regular-season finals, exact UTC/team match to FixtureDownload for **736**; **two** conflicts adjudicated by the Perth Wildcats and NBL reports. **Zero unresolved**. FixtureDownload raw snapshots are ignored/local-only. ESPN remains diagnostic: 152 missing and 17 conflicting scores. |
+| NBL lock and holdout | [Preregistration](research/NBL_PREREGISTRATION_2026-09-29.md) was written before NBL tuning/holdout. Tuning locked 180-day half-life on 425 games from NBL23–NBL25. One-shot NBL26 holdout: 165 games, 22 UTC week blocks; M2 moneyline log-loss 0.606268 versus M0 0.695720; M2–M0 −0.089452, 95% week-block interval [−0.136569, −0.038731], `M2_PASS`. This is retrospective model evidence. |
+| NBL27 prospective start | Current official/second-publisher snapshot: 13 completed scores agree and 152 fixtures remain upcoming at 2026-09-29 04:52 UTC. Two model-only pregame JSON receipts were frozen for 2026-09-30 fixtures. No card or eligible pilot event was issued. Official NBL exact-event final adapter added. |
+| Tests and control | `python -m pytest research/tests -q`: **24 passed**. `python -m research.src.control_manifest verify`: **129 listed, 0 mismatches**. Normalized-CRLF manifest SHA-256 `d23995fd00020cb3a90dea4adf96c215b49b2e25fb535460e032c7b160e4b3d7`; `METHOD.md` and status header select manifest -3. `git diff --check` scoped to implementation files passed. Six combined logs remain; Part 6 frozen source block is 141,740 bytes, SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`. |
+| Publication boundary | Repository also contains concurrent `Previous Sports Results` work outside this implementation. The implementation checks above make no claim about that tree or a Git push. |
+
+## Executed results — 2026-09-29(b) pipeline implementation (manifest 2026-09-29-2)
+
+| Gate | Result |
+|---|---|
+| Manifest | `python -m research.src.control_manifest verify`: **105 listed files, 0 mismatches**. Manifest normalized-CRLF SHA-256 `a1727278c6d8d662408be09d36d3d6a715cdcee0261b5e2ff4502bd639ed90e6`; the status first line and `METHOD.md` select it. Research code/data use raw-byte hashes; local bookmaker-bearing benchmark source files are excluded. |
+| Historical custody | Combined Parts 1–5 unchanged by `git diff --quiet`. Part 6 original source block extracted as 141,740 exact bytes, SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`; no card was appended. Six combined logs remain in `prediction logs/`. |
+| Ledger | 522 ID rows, P-001 to P-522, zero `performance_eligible=true`. P-518–P-522 remain reserved and were formally excluded from performance, with source reconciliation still open. The asserted full historical ledger CSV was absent; no missing rank or probability was guessed. |
+| EPL data/model | Six completed 380-match seasons, 2,280 cross-checked scores, no disagreements. Locked xi 0.003 on 2021–25 rolling origins. One-shot 2025–26 M2 versus population 1X2 log-loss difference −0.05248 with 95% week-block interval [−0.09228, −0.01018], `M2_PASS`. The 2026–27 score snapshot has 50 completed matches cross-checked, no shadow forecast. Closing benchmark calculated only on the 380 settled holdout games. |
+| NBL data | 738 official regular-season results collected. ESPN second-source check: 569 matched, 152 unmatched, 17 conflicting scores. Build blocked; no NBL fit/holdout or validation claimed. |
+| Automated checks | `python -m pytest research/tests -q`: **20 passed**. `git diff --check`: no whitespace errors. MLB gamePk 822678 and ESPN NBL event 401875254 terminal adapter calls returned exact-event final receipts. |
+| Prospective state | EPL live pilot lock remains `NOT_FROZEN`, with no eligible event. All other league lanes require their own source audit, model, holdout and shadow. |
 
 ## Executed results — 2026-09-28(g) close-out and 2026-09-29(a) sources (manifest 2026-09-29-1)
 

@@ -1,6 +1,8 @@
 # Prompts — paste these into the chat that runs the forecasts
 
-**Opened 2026-09-28.** These are the standard prompts for this framework. They assume the chat can read the linked Drive, or this repository, and nothing else from it: **Markdown files only; no Python and no other repository file.** Fill in the angle brackets.
+**2026-09-29 pipeline instruction for P-523+:** Apply [the pipeline gate register](PIPELINE_IMPLEMENTATION_2026-09-29.md) before the historical prompts below. A numerical card derives every contract from one versioned distribution, prints same-contract baselines and exact settlement endpoints, and ranks by issued p. Tier C and unsupported competitions take `NO_MODEL / NO_FORECAST_ISSUED`. Closing odds are allowed only after terminal settlement as a separate benchmark and never enter a forecast.
+
+**Opened 2026-09-28.** These are historical standard prompts; for P-523+ apply the pipeline amendment above. The chat can use the linked Drive, root Markdown rules and the user-authorized `research/` code/data workspace. Fill in the angle brackets.
 
 Notes for the operator:
 - **The supplied rows are usually complementary pairs.** Bullets −1.5 with Hawks +1.5, or Over with Under the same line, always settle 2 W / 2 L. Tigers ML with Bay Stars +1.5 is a covering pair: at least one always wins. The prompts ask for the labels, so the arithmetic is never read as skill.

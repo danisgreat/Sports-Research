@@ -55,7 +55,7 @@ Never forecasting evidence:
 - anything that republishes those. This includes **RotoWire, RotoGrinders and FPTrack**.
 
 Further rules:
-- **Mixed pages.** A page that mixes scores with odds columns may be used **for scores only**, and the odds are never read. This applies to TennisExplorer, Flashscore and football-data.co.uk (whose results files carry bookmaker columns).
+- **Mixed pages.** A page that mixes scores with odds columns may be used **for scores only** in a forecast or settlement. This applies to TennisExplorer, Flashscore and football-data.co.uk (whose results files carry bookmaker columns). By the user's 2026-09-29 instruction, a separate **post-settlement** benchmark may read closing columns for completed events only, after the forecast and official final are frozen; `research/src/benchmark.py` is outside every forecast import. Football-Data's own use notice limits automated bot/AI reuse, so its raw files stay local and are not redistributed from this repository.
 - **Market keys in ESPN and NHL feeds are quarantined:** `odds`, `pickcenter`, `againstTheSpread`, `winprobability`, `oddsPartners`, `betting`.
 - **A supplied line is contract metadata,** not evidence.
 - **Squiggle's `tips` endpoint aggregates other models' tips.** It is discovery only, and never an anchor. Its `games` and `standings` endpoints are ordinary results data.
@@ -249,6 +249,8 @@ The **Role** column:
 | WNBA official injury report (new) | `https://www.wnba.com/wnba-injury-report` | Official status | FO | Browser | 200 |
 | NBA daily lineups page | `https://www.nba.com/players/todays-lineups` | Potential official starters after rendering and exact-game check | FO | Browser | JS_ONLY on 2026-09-28; not an unattended fallback |
 | NBL official | `https://www.nbl.com.au/` match pages; match data `schedule.nbl.com.au/api/calendar/match?match=<uuid>&league=NBL`. The first `jumpBall` event is the actual tip; skip the `betting`/`odds` objects | Tip time, play-by-play, box | FO | API | Site 200; the match API needs the match UUID from the page |
+| NBL official schedule/results | `https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=<start_year>` | Exact event UUID, UTC tip, phase, regular-season final score; verify pagination and final phase before settlement | FO | API | NBL22–NBL26 738 regular-season finals; NBL27 13 final, 152 upcoming at 2026-09-29 UTC |
+| FixtureDownload NBL results | `https://fixturedownload.com/feed/json/nbl-<start_year>` | Independent published schedule/score cross-check after final; not an injury or lineup source. Local-only raw snapshot under [use terms](https://fixturedownload.com/terms). | P | API | 736/738 historical official scores agree; two named adjudications in `research/data/processed/nbl_fixture_adjudications.json`. NBL27 completed 13/13 agree at snapshot time. |
 | NBL dated injury list | `https://www.nbl.com.au/news/nbl26-the-latest-injury-updates` (page titled NBL27; resolve by current title/date, not the slug) | League-listed injury context; recheck club/game-day status | FO | Browser | Opened 2026-09-28; page updated 27 Sep |
 | EuroLeague official feeds (new) | `https://feeds.incrowdsports.com/provider/euroleague-feeds/v2/competitions/E/seasons/E<yyyy>/games` (plain); `https://api-live.euroleague.net/v2/competitions/E/seasons/E<yyyy>/games` (browser) | Schedule, results, box | FO | API or Browser | 200 |
 | ACB (Spain, new) | `https://www.acb.com/` and `https://live.acb.com` | Results, box. The site and the live stats are **one lineage** | FO | API | 200 |
@@ -479,7 +481,7 @@ The social column lists the organisation's **own accounts, read from links on it
 |---|---|---|
 | ESPN NBA/WNBA summary | NBA/WNBA official injury report → `nba.com/players/todays-lineups` (render) → league Bluesky/X → club X account → named reporter | NBA: Bluesky `nba.com` (verified, active; BS); X `NBA`; Threads `nba` (TH tested); YouTube `@NBA`; IG `nba` |
 | WNBA injury report / WNBA CDN | ESPN WNBA → WNBA Bluesky → club account | WNBA: Bluesky `wnba.com` (verified; BS); X `wnba`; Threads `wnba`; YouTube `user/wnba` |
-| NBL match page / match API | ESPN NBL summary → NBL dated injury list → NBL X account → club account → named report | NBL: X `nbl`; IG `nbl`; YouTube `user/nbl` |
+| NBL match page / match API | For result identity/score: official schedule → FixtureDownload score check → named league/club report for a conflict; ESPN is a diagnostic because its historical coverage and scores have gaps. For availability: NBL dated injury list → club release → NBL/club social → named report. FixtureDownload has no lineup or injury claim. | NBL: X `nbl`; IG `nbl`; YouTube `user/nbl` |
 | EuroLeague feeds | ESPN EuroLeague → Eurobasket / Proballers → club site | EuroLeague: **not authenticated** (site returned 429, and no links through the proxy) |
 | ACB site / live.acb.com | ACB round medical report → ACB X account → club site → Proballers | ACB: X `ACBCOM`; IG `acbcom`; YouTube `acbcom` |
 | FIBA game page / LiveStats | Proxy route → FIBA X account → national federation site → BasketNews / Eurobasket | FIBA: X `FIBA`; Threads `fiba`; YouTube `fiba`; IG `fiba` |
@@ -581,7 +583,7 @@ The toss and strip ladders in §3.3 still govern: a toss post from the board's o
 | AP News hub, Reuters sports | 403 / 401 |
 | `stats.nba.com`, NBA CDN, ESPNcricinfo consumer API, Cricket Australia `apiv2`, ATP app gateway, ITF API, NBL `apicdn`, FIBA LiveStats host | Blocked or erroring from here on 2026-09-28 (see the sport tables) |
 | NRL casualty ward | Login required |
-| football-data.co.uk | Reachable, but its files carry bookmaker odds columns. **Excluded** under the firewall |
+| football-data.co.uk | Historical score cross-check and post-settlement closing benchmark only, in the quarantined research workspace; never pre-issue evidence. Raw files local-only under the source's published use notice. |
 | Bookmakers, odds sites, tipsters, RotoWire, RotoGrinders, FPTrack, fantasy/DFS | **Prohibited** (§1.4) |
 | sportscafe.in "AI simulation", archysport, AI recaps, formulaic pitch-report sites | **Prohibited** as synthetic content |
 

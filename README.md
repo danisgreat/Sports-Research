@@ -1,8 +1,10 @@
 # Sports Research
 
+**Pipeline update, 2026-09-29.** The user authorized non-Markdown research code and data in this repository. [Implementation and gates](PIPELINE_IMPLEMENTATION_2026-09-29.md) and the [research workspace](research/README.md) govern the new p-ranked pilot. Historical cards remain learning-only; six combined logs and the P-523 continuation rule remain in force.
+
 A disciplined, **market-blind** framework for researching sports events, issuing probability forecasts before the start, and settling them against the official record. It covers MLB, NPB/KBO, basketball (NBA, WNBA, NBL and more), the NHL, soccer, tennis, cricket, AFL, NRL, rugby union and the NFL.
 
-**From 2026-09-28 this repository contains Markdown files only.** Every rule, calculation, template and source the forecasting model needs is in the `.md` files at the root.
+**The 2026-09-28 Markdown-only phase is historical.** Root operating rules remain Markdown, and the user-authorized `research/` workspace now contains code, data, tests and run receipts.
 
 > **Evidence status (2026-09-28).** Every issued forecast is **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. No model or card method is prospectively validated. The prospective baseline and RM-1 gates are at **0**, and `C-RULE-FREEZE` is in force. The historical seed comparison (29 decisions from 9 cards) is card Brier 0.2461 against a population baseline of 0.2360, and its interval spans zero. Forecasting stays `SPORTS_ONLY / MARKET_BLIND`.
 

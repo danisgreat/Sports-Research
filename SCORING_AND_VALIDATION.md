@@ -8,6 +8,8 @@
 
 Version: **SCV-2026.09.19-v2**. Operational authority for scoring, conditioning and evaluation. Historical cards retain their issued probabilities and method versions. All existing combined logs remain **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**.
 
+**2026-09-29 prospective pipeline amendment.** [The implementation decision](PIPELINE_IMPLEMENTATION_2026-09-29.md) adopts event-level 1X2 log-loss for the EPL model holdout and a separate, future EPL-only composite event-level log score for manual adjustments. The retrospective holdout pass is not prospective card skill. The first pilot's Brier minimum worthwhile improvement is a separate 0.01 threshold; it is never compared directly with a log-loss interval. Historical scoring and q diagnostics below remain tied to their frozen cohorts.
+
 > **Measurement correction — 28 September 2026.** Every result and control below remains tied to its dated historical sample. The old settled-row file is a mixed legacy extract; strict extraction retains rows only for descriptive review and currently certifies **zero performance-eligible decisions**. Do not infer the frozen preferred side from `p >= 0.5`. Use the explicit issue-time `preferred_at_issue` decision. RM-1 `q` is a row-calibration/ranking output, not an event marginal or joint distribution; multiplying q values does not estimate joint success. Push-capable records remain blocked from the binary p-v-q prospective comparison until a vector-aware method is validated. Current Markdown control details: [record and eligibility contract](RECORD_ELIGIBILITY_SCHEMA.md). The prior machine validators are historical Git artifacts and are not runnable from this tree.
 
 

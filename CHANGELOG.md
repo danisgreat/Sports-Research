@@ -6,6 +6,14 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-09-29(c) — NBL source repair, locked holdout and first prospective shadow
+
+The official NBL22–NBL26 score dataset now has an independent published score for every one of 738 games: 736 exact agreements with FixtureDownload and two explicit club/league-report adjudications. ESPN's 152 missing and 17 conflicting scores remain diagnostic. [NBL preregistration](research/NBL_PREREGISTRATION_2026-09-29.md) preceded tuning and holdout; the one-shot NBL26 moneyline log-loss comparison passed M2 versus population M0 (0.6063 versus 0.6957; 95% week-block difference interval [−0.1366, −0.0387]). NBL27 has 13 completed games cross-checked and two immutable model-only pregame shadow receipts. The official final adapter, source receipts and local-only raw-source quarantine are in `research/`. No card was issued and the live pilot remains closed. This is the same control revision, with a new freeze receipt `CONTROL_MANIFEST_2026-09-29-3.md`.
+
+### 2026-09-29(b) — research pipeline and prospective gate (MDS-2026.09.29-v6.0, CR-2026.09.29-P1)
+
+By the user's implementation instruction, added the `research/` code/data workspace and the [D1–D6/U1–U10 gate register](PIPELINE_IMPLEMENTATION_2026-09-29.md). The user specifically allowed non-Markdown files here and closing odds **after** terminal settlement. P-523 onward stays in combined Part 6; P-518–P-522 remain reserved. The 522-row CSV is an explicit sparse reconstruction because the asserted attachment was absent; all rows remain ineligible. Six completed EPL seasons (2,280 scores) matched the second result source; a locked 2025–26 holdout passed M2 versus population 1X2 log-loss. The live pilot remains unstarted. NBL cross-check disagreements block its build. No frozen historical forecast, source block, rank or settlement was edited.
+
 ### 2026-09-29(a) — log custody close-out and source/social lanes (MDS-2026.09.28-v5.1, CR-2026.09.29-MD7, manifest 2026-09-29-1)
 
 **Why.** The user asked for the six-part consolidation to be finished properly, and for research into additional sources for every sport, with an immediate fallback from each source and official social media added where it works. **Category:** user-instructed custody and retrieval changes. No probability, width, centre, rank, issued card, contract, result or scoring rule changed.

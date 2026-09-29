@@ -1,0 +1,40 @@
+{
+  "stage": "TUNING_LOCK",
+  "created_utc": "2026-09-29T04:49:56.632472+00:00",
+  "model_version": "nbl-joint-0.1.0",
+  "data_sha256": "7c5100c8087864ce9cf9ad1187af171fd90636a2fdbbd58672664a774704bff1",
+  "data_manifest_sha256": "243cf8f42508af48ac1f4689ba1c6aa3e320caa0999ae0669f78ed48323ea6c0",
+  "evaluator_sha256": "273d6d44160100d400534ac81a0146f901641530d3a50ad69f0d61655fa7328c",
+  "model_code_sha256": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe",
+  "tuning_seasons": [
+    "NBL23",
+    "NBL24",
+    "NBL25"
+  ],
+  "half_life_grid": [
+    180,
+    365,
+    730
+  ],
+  "selected_half_life_days": 180,
+  "criterion": "minimum mean moneyline log-loss",
+  "bootstrap_reps": 10000,
+  "seed": 20260929,
+  "results": {
+    "180": {
+      "n": 425,
+      "mean_m2_logloss": 0.6779881466831477,
+      "forecast_sha256": "939954cadca623c7a44de441695149a16b108cf52f6693045b97753d1e71b150"
+    },
+    "365": {
+      "n": 425,
+      "mean_m2_logloss": 0.6831608740127174,
+      "forecast_sha256": "9a08fc4ed5a6283ca2728008316ec5022cd37b1d0dd5406c65fab713586193ae"
+    },
+    "730": {
+      "n": 425,
+      "mean_m2_logloss": 0.6860851852882028,
+      "forecast_sha256": "cbb97f6732be9c589b1d6ada7c3def1b0485ebbe159d9c9c0124c44d045c3d42"
+    }
+  }
+}

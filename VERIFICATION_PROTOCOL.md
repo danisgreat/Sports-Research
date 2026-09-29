@@ -1,10 +1,12 @@
 # Markdown repository verification protocol
 
-**Scope:** current `main` tree and its active custody pointers. Run before each governance receipt and push. This procedure is text in a Markdown file; it does not require adding executable or data files to the repository.
+**2026-09-29 research extension.** The user authorized non-Markdown files in `research/`. For the active [manifest -3](CONTROL_MANIFEST_2026-09-29-3.md), hash Markdown under the existing normalized-CRLF rule and research code/data under exact RAW bytes. `python -m research.src.control_manifest verify` checks the full inventory. Odds-bearing or locally restricted secondary raw files stay under ignored `research/data/benchmark/`; their source hashes appear in data receipts. Keep the active Part 6 and status file as living exclusions, and continue the original P-518 block's exact-byte test below. Older Markdown-only scope text below is historical where it conflicts.
+
+**Scope:** current `main` tree, active custody pointers and the user-authorized research workspace. Run before each governance receipt and push.
 
 ## 1. Structural and Git custody gate
 
-From the repository root, verify that every tracked and working file outside `.git` has a `.md` suffix, lives either at the root or directly in `prediction logs/`, and that no other content directory exists. The folder must contain exactly `PREDICTION_LOG_COMBINED.md` and Parts `_2` through `_6`, with no separate running logs or intermediate Part-5 snapshots. Check `git status --short --branch`, `git branch -a`, and `git remote -v` before attributing a result to `main`. A clean tree before editing is a baseline, not proof of forecast quality.
+From the repository root, verify that `prediction logs/` contains exactly `PREDICTION_LOG_COMBINED.md` and Parts `_2` through `_6`, with no separate running logs or intermediate Part-5 snapshots. Root governance files remain Markdown; the user-authorized `research/` tree may contain code, data, tests and run receipts. Its benchmark raw directory is ignored and never used by forecasts. Check `git status --short --branch`, `git branch -a`, and `git remote -v` before attributing a result to `main`. A clean tree before editing is a baseline, not proof of forecast quality.
 
 After the edit, inspect `git diff --check`, `git diff --stat`, and the changed content. In [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md), extract the bytes **after the CRLF following** `<!-- BEGIN ORIGINAL P518 SOURCE BYTES -->` and **before the CRLF preceding** `<!-- END ORIGINAL P518 SOURCE BYTES -->`. Confirm that 141,740-byte block remains SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`; never normalize or reformat those bytes. The former standalone mini log is available at Git `753f0a9`.
 

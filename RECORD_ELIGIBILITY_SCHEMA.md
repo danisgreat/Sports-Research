@@ -1,8 +1,10 @@
 # Prospective record and eligibility contract
 
-**Current publication state, 2026-09-28:** zero verified performance-eligible decisions. All issued cards are `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE`; `C-RULE-FREEZE` remains in force. This Markdown contract replaces the current-tree pointers to deleted `research/settled_rows_2026-09-28/RECORD_SCHEMA.md` and `CAPABILITY_STATUS.md` (parent Git blobs `587c7e39cca30fef3dd62c6d90e0b047888d2f00` and `a6ef62b0d5ccf016bfb0358686939253470c3f04`; [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). It states what must be recorded; it does not claim that a machine validator or a prospective dataset exists in this Markdown-only tree.
+**As recorded on 2026-09-28:** zero verified performance-eligible decisions. All issued cards are `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE`; `C-RULE-FREEZE` remains in force. This Markdown contract replaces the current-tree pointers to deleted `research/settled_rows_2026-09-28/RECORD_SCHEMA.md` and `CAPABILITY_STATUS.md` (parent Git blobs `587c7e39cca30fef3dd62c6d90e0b047888d2f00` and `a6ef62b0d5ccf016bfb0358686939253470c3f04`; [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). It states what must be recorded; it does not claim that a machine validator or a prospective dataset exists in the then Markdown-only tree.
 
 ## Grain and required fields
+
+**2026-09-29 pipeline status.** The EPL 2025–26 model-only holdout passed its declared M2-versus-population log-loss gate, as recorded in [the pipeline gate register](PIPELINE_IMPLEMENTATION_2026-09-29.md). This is retrospective model evidence. There are still zero eligible prospective **card** decisions. The 522-slot historical ledger under `research/` is learning-only and sparse by design; its blank cells cannot satisfy the admission decision below.
 
 One row is one **issued target decision at one forecast freeze and one settlement revision**. A card can have several rows, and a sporting event can have several cards. Do not count correlated rows as independent events. Every prospective row needs:
 

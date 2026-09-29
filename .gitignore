@@ -1,0 +1,4 @@
+# Local publisher snapshots with restricted redistribution and odds-bearing feeds.
+research/data/benchmark/
+research/**/__pycache__/
+research/.pytest_cache/
