@@ -6,47 +6,34 @@ An authoritative, comprehensive research directory and historical archive of com
 
 ## Directory Architecture
 
-The archive is organized with sports folders at the top level, each containing year subfolders from **1900 to 2025** (126 consecutive calendar years), which each contain two competition tiers:
+The archive is organized with **sport categories** at the root, containing dedicated subfolders for each **specific league, tournament, or championship**, which in turn contain individual **year subfolders from 1900 through 2025** (126 years):
 
 ```
 Previous Sports Results/
-  └── <Sport>/                   # 17 sport categories
-        └── <Year>/              # 1900 through 2025 (126 years)
-              ├── international/ # National-representative & global governing body events
-              └── national/      # Domestic leagues, club tournaments & multi-nation franchise circuits
+  └── <Sport>/                        # 17 sport disciplines
+        └── <Competition or League>/  # Dedicated tournament / competition folder
+              └── <Year>/             # 1900 through 2025 (126 years)
+                    └── .gitkeep      # Git-tracked archive placeholder
 ```
 
-### The 17 Sport Categories
-1. **`soccer`**
-2. **`basketball`**
-3. **`rugby league`**
-4. **`rugby union`**
-5. **`cricket t20`**
-6. **`cricket tests`**
-7. **`cricket one-day format`**
-8. **`ice hockey`**
-9. **`hockey`** (Field Hockey)
-10. **`lawn tennis`**
-11. **`claycourt tennis`**
-12. **`baseball`**
-13. **`afl`** (Australian Football League)
-14. **`state level afl`** (VFL, SANFL, WAFL, etc.)
-15. **`american football`** (Professional: NFL, UFL)
-16. **`college football`** (NCAA FBS, CFP, Bowl Games, FCS)
-17. **`canadian football`** (CFL, Grey Cup, U Sports)
-
----
-
-## Competition Tiers & Classification Rules
-
-1. **`international/`**:
-   - Competitions contested between sovereign nations or territories represented by national governing bodies.
-   - Includes the Summer and Winter Olympic Games, FIFA World Cups, FIBA World Cups, ICC World Cups, Rugby World Cups, IIHF World Championships, Davis Cup, Billie Jean King Cup, and continental national-team championships (UEFA Euro, Copa América, AFCON, AFC Asian Cup, Gold Cup, Six Nations, The Rugby Championship).
-
-2. **`national/`**:
-   - Competitions contested between domestic clubs, regional clubs, franchises, state bodies, or universities.
-   - **Multi-national club leagues belong here:** Competitions that feature member clubs across multiple sovereign nations (e.g. **NBA**, **NHL**, **MLB**, **MLS**, **Super Rugby Pacific**, **EuroLeague**, **United Rugby Championship**, **Toronto Blue Jays / Raptors** participating in North American leagues) are classified under `national` because they are club/franchise tournaments rather than national team representation.
-   - Global and continental club championships (e.g. **FIFA Club World Cup**, **UEFA Champions League**, **CONMEBOL Libertadores**) also reside under `national` as club-tier competitions.
+### The 17 Sport Categories & Documented Competitions
+1. **`soccer`** (World Cups, Continental Euros/Copa/AFCON/Asian/Gold Cups, Champions League, Premier League, La Liga, Serie A, etc.)
+2. **`basketball`** (FIBA World Cup, Olympics, NBA, WNBA, EuroLeague, NBL, domestic leagues)
+3. **`rugby league`** (World Cups, NRL, NRLW, State of Origin, Super League)
+4. **`rugby union`** (World Cups, Six Nations, The Rugby Championship, Super Rugby Pacific, Champions Cup, URC, Top 14, Premiership)
+5. **`cricket t20`** (T20 World Cups, IPL, WPL, Big Bash, PSL, SA20, CPL, ILT20, MLC, The Hundred)
+6. **`cricket tests`** (World Test Championship, The Ashes, Sheffield Shield, County Championship, Ranji Trophy, Plunket Shield)
+7. **`cricket one-day format`** (World Cups, Champions Trophy, Marsh One-Day Cup, Metro Bank One Day Cup, Vijay Hazare Trophy)
+8. **`ice hockey`** (Winter Olympics, IIHF World Championship, NHL, AHL, ECHL, PWHL, KHL, SHL, Liiga, DEL, AIHL)
+9. **`hockey`** (Field Hockey: Olympics, World Cups, FIH Pro League, Euro Hockey League, Hoofdklasse, HIL)
+10. **`lawn tennis`** (Wimbledon, Australian Open, US Open, Davis Cup, Billie Jean King Cup, United Cup, Olympics, ATP/WTA Tours)
+11. **`claycourt tennis`** (French Open / Roland-Garros, Monte-Carlo, Madrid, Rome, Barcelona)
+12. **`baseball`** (World Baseball Classic, Olympics, MLB, NPB, KBO, CPBL, Mexican League, ABL, Caribbean Series)
+13. **`afl`** (AFL Premiership, AFL Grand Final, AFLW)
+14. **`state level afl`** (VFL, SANFL, WAFL, QAFL, TSL, NTFL)
+15. **`american football`** (NFL, Super Bowl, UFL, IFAF World Championship)
+16. **`college football`** (NCAA Division I FBS, CFP, Rose/Sugar/Orange/Cotton/Fiesta/Peach Bowls, FCS)
+17. **`canadian football`** (CFL, Grey Cup, Vanier Cup)
 
 ---
 
