@@ -26,14 +26,13 @@ Previous Sports Results/
 7. **`Cricket One-Day Format`** (World Cups, Champions Trophy, Marsh One-Day Cup, Metro Bank One Day Cup, Vijay Hazare Trophy)
 8. **`Ice Hockey`** (Winter Olympics, IIHF World Championship, NHL, AHL, ECHL, PWHL, KHL, SHL, Liiga, DEL, AIHL)
 9. **`Hockey`** (Field Hockey: Olympics, World Cups, FIH Pro League, Euro Hockey League, Hoofdklasse, HIL)
-10. **`Lawn Tennis`** (Wimbledon, Australian Open, US Open, Davis Cup, Billie Jean King Cup, United Cup, Olympics, ATP/WTA Tours)
-11. **`Claycourt Tennis`** (French Open / Roland-Garros, Monte-Carlo, Madrid, Rome, Barcelona)
-12. **`Baseball`** (World Baseball Classic, Olympics, MLB, NPB, KBO, CPBL, Mexican League, ABL, Caribbean Series)
-13. **`AFL`** (AFL Premiership, AFL Grand Final, AFLW)
-14. **`State Level AFL`** (VFL, SANFL, WAFL, QAFL, TSL, NTFL)
-15. **`American Football`** (NFL, Super Bowl, UFL, IFAF World Championship)
-16. **`College Football`** (NCAA Division I FBS, CFP, Rose/Sugar/Orange/Cotton/Fiesta/Peach Bowls, FCS)
-17. **`Canadian Football`** (CFL, Grey Cup, Vanier Cup)
+10. **`Tennis`** (ATP & WTA Tours organized by Tournament Locations: Melbourne / Australian Open, Paris / Roland-Garros, London / Wimbledon, New York / US Open)
+11. **`Baseball`** (World Baseball Classic, Olympics, MLB, NPB, KBO, CPBL, Mexican League, ABL, Caribbean Series)
+12. **`AFL`** (AFL Premiership, AFL Grand Final, AFLW)
+13. **`State Level AFL`** (VFL, SANFL, WAFL, QAFL, TSL, NTFL)
+14. **`American Football`** (NFL, Super Bowl, UFL, IFAF World Championship)
+15. **`College Football`** (NCAA Division I FBS, CFP, Rose/Sugar/Orange/Cotton/Fiesta/Peach Bowls, FCS)
+16. **`Canadian Football`** (CFL, Grey Cup, Vanier Cup)
 
 ---
 
