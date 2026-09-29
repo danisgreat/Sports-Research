@@ -11,7 +11,7 @@ Each year from **1900** to **2025** is organized with the following directory st
 ```
 Previous Sports Results/
   └── <Year>/                    # 1900 through 2025 (126 years)
-        └── <Sport>/             # 16 sport categories
+        └── <Sport>/             # 17 sport categories
               ├── international/ # International-level competitions (Olympics, World Cups, Continental Championships)
               └── national/      # National & Club-level competitions (Domestic leagues, multi-country club tournaments)
 ```
@@ -36,6 +36,7 @@ Previous Sports Results/
 14. **`american football`**
 15. **`college football`**
 16. **`canadian football`**
+17. **`soccer`**
 
 ---
 
@@ -43,7 +44,15 @@ Previous Sports Results/
 
 ### 1. `international`
 National team events and global governing body championships:
-- **Summer Olympics & Winter Olympics** (Basketball, Ice Hockey, Tennis, Baseball, etc.)
+- **Soccer / Football**:
+  - Men's & Women's FIFA World Cup
+  - UEFA European Championship (Men's & Women's Euro)
+  - Copa América
+  - Africa Cup of Nations (AFCON)
+  - AFC Asian Cup
+  - CONCACAF Gold Cup
+  - Summer Olympics Football
+- **Summer Olympics & Winter Olympics** (Basketball, Ice Hockey, Tennis, Baseball, Hockey, etc.)
 - **World Cups & World Championships**:
   - FIBA Basketball World Cup (Men's & Women's)
   - Men's & Women's Cricket World Cup (One-Day format)
@@ -60,6 +69,9 @@ National team events and global governing body championships:
 
 ### 2. `national`
 Domestic leagues, club tournaments, and multi-country club leagues:
+- **Soccer**:
+  - Top Domestic Leagues: Premier League, La Liga, Serie A, Bundesliga, Ligue 1, MLS, A-League Men/Women, NWSL, WSL, Liga F, Frauen-Bundesliga, Première Ligue, Serie A Femminile
+  - Continental & Global Club Competitions: UEFA Champions League, Europa League, Conference League, CONMEBOL Libertadores, FIFA Club World Cup, AFC Champions League, CONCACAF Champions Cup, CAF Champions League
 - **Basketball**: NBA, WNBA, G League, NBL (Australia & NZ), EuroLeague, EuroCup, Liga ACB, BSL, Serie A, LNB Élite, CBA, B.League, KBL, PBA
 - **Baseball**: MLB, Minor League Baseball, NPB (Japan), KBO (Korea), CPBL (Taiwan), Mexican League, Australian Baseball League, Caribbean Series & Winter Leagues
 - **Cricket**:
@@ -80,6 +92,101 @@ Domestic leagues, club tournaments, and multi-country club leagues:
 ---
 
 ## Historical Reference Guide
+
+### Men's FIFA World Cup
+- 1990: Italy
+- 1994: United States
+- 1998: France
+- 2002: South Korea and Japan
+- 2006: Germany
+- 2010: South Africa
+- 2014: Brazil
+- 2018: Russia
+- 2022: Qatar
+- 2026: Canada, Mexico, and the United States
+
+### Women's FIFA World Cup
+- 1991: China
+- 1995: Sweden
+- 1999: United States
+- 2003: United States
+- 2007: China
+- 2011: Germany
+- 2015: Canada
+- 2019: France
+- 2023: Australia and New Zealand
+
+### UEFA European Championship (Men's)
+- 1988: West Germany
+- 1992: Sweden
+- 1996: England
+- 2000: Belgium and the Netherlands
+- 2004: Portugal
+- 2008: Austria and Switzerland
+- 2012: Poland and Ukraine
+- 2016: France
+- 2021: 11 countries across Europe
+- 2024: Germany
+
+### UEFA European Championship (Women's)
+- 1993: Italy
+- 1995: England, Germany, Norway, and Sweden
+- 1997: Norway and Sweden
+- 2001: Germany
+- 2005: England
+- 2009: Finland
+- 2013: Sweden
+- 2017: Netherlands
+- 2022: England
+- 2025: Switzerland
+
+### Copa América
+- 1999: Paraguay
+- 2001: Colombia
+- 2004: Peru
+- 2007: Venezuela
+- 2011: Argentina
+- 2015: Chile
+- 2016: United States
+- 2019: Brazil
+- 2021: Brazil
+- 2024: United States
+
+### Men's Africa Cup of Nations (AFCON)
+- 2008: Ghana
+- 2010: Angola
+- 2012: Gabon and Equatorial Guinea
+- 2013: South Africa
+- 2015: Equatorial Guinea
+- 2017: Gabon
+- 2019: Egypt
+- 2022: Cameroon
+- 2024: Ivory Coast
+- 2025–26: Morocco
+
+### Men's AFC Asian Cup
+- 1988: Qatar
+- 1992: Japan
+- 1996: United Arab Emirates
+- 2000: Lebanon
+- 2004: China
+- 2007: Indonesia, Malaysia, Thailand, and Vietnam
+- 2011: Qatar
+- 2015: Australia
+- 2019: United Arab Emirates
+- 2023: Qatar
+
+### FIFA Club World Cup
+- 2015: Japan
+- 2016: Japan
+- 2017: United Arab Emirates
+- 2018: United Arab Emirates
+- 2019: Qatar
+- 2020: Qatar
+- 2021: United Arab Emirates
+- 2022: Morocco
+- 2023: Saudi Arabia
+- 2025: United States
 
 ### Men's Cricket World Cup
 - 1987: India and Pakistan
@@ -204,7 +311,7 @@ Domestic leagues, club tournaments, and multi-country club leagues:
 - 2022: Australia
 - 2026: Germany
 
-### Summer Olympics (Basketball, Baseball, Tennis)
+### Summer Olympics (Soccer, Basketball, Baseball, Tennis)
 - 1988: South Korea
 - 1992: Spain
 - 1996: United States
