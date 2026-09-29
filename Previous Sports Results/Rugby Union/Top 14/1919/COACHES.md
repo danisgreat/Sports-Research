@@ -1,0 +1,4 @@
+# Top 14 Coaching Staff — 1919 Season
+
+- **Status:** INACTIVE / CANCELLED.
+- **Reason:** No competition was staged in 1919 due to war interruptions, labor strikes, pandemic restrictions, or league suspension. No official coaching records exist for this season.

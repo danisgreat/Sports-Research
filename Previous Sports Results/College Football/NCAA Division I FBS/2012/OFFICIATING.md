@@ -1,0 +1,12 @@
+# NCAA Division I FBS Officiating & Refereeing Corps — 2012 Season
+
+- **Sport:** College Football
+- **Competition:** NCAA Division I FBS
+- **Season:** 2012
+- **Governing Body:** NCAA / FBS Conferences (SEC, Big Ten, Big 12, ACC, Pac-12/legacy)
+
+## Officiating Structure & Adjudication
+- **Appointed Officials:** FBS Conference Officiating Crews and Video Replay Booths.
+- **Championship Appointments:** Lead match adjudicators and senior officials selected for finals and marquee tournament fixtures based on merit and performance evaluations.
+- **Rule Framework & Interpretations:** Strict enforcement of the 2012 rules of the game, procedural updates, and points of emphasis issued by NCAA / FBS Conferences (SEC, Big Ten, Big 12, ACC, Pac-12/legacy).
+- **Technology & Review Systems:** Early television broadcast reviews, fourth-official technology, and initial electronic decision support systems.

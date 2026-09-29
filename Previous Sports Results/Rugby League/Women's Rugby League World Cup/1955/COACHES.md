@@ -1,0 +1,4 @@
+# Women's Rugby League World Cup Coaching Staff — 1955 Season
+
+- **Status:** INACTIVE.
+- **Reason:** The competition was not established until 2000. No official coaching staffs, managerial appointments, or teams existed in 1955.

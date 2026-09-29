@@ -1,0 +1,4 @@
+# Men's AFC Asian Cup Officiating & Refereeing Corps — 2013 Season
+
+- **Status:** INACTIVE (Inter-Tournament Cycle).
+- **Reason:** This tournament operates on a periodic cycle and was not contested in 2013. No tournament officiating corps was assembled.

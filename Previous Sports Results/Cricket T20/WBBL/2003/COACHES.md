@@ -1,0 +1,4 @@
+# WBBL Coaching Staff — 2003 Season
+
+- **Status:** INACTIVE.
+- **Reason:** The competition was not established until 2015. No official coaching staffs, managerial appointments, or teams existed in 2003.

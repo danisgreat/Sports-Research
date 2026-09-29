@@ -1,0 +1,4 @@
+# Winter Olympics Officiating & Refereeing Corps — 1926 Season
+
+- **Status:** INACTIVE (Inter-Tournament Cycle).
+- **Reason:** This tournament operates on a periodic cycle and was not contested in 1926. No tournament officiating corps was assembled.
