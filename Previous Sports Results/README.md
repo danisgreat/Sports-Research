@@ -6,12 +6,12 @@ An authoritative, comprehensive research directory and historical archive of com
 
 ## Directory Architecture
 
-Each year from **1900** to **2025** (126 consecutive calendar years) is organized in a standardized two-tier hierarchy:
+The archive is organized with sports folders at the top level, each containing year subfolders from **1900 to 2025** (126 consecutive calendar years), which each contain two competition tiers:
 
 ```
 Previous Sports Results/
-  └── <Year>/                    # 1900 through 2025
-        └── <Sport>/             # 17 sport categories
+  └── <Sport>/                   # 17 sport categories
+        └── <Year>/              # 1900 through 2025 (126 years)
               ├── international/ # National-representative & global governing body events
               └── national/      # Domestic leagues, club tournaments & multi-nation franchise circuits
 ```
