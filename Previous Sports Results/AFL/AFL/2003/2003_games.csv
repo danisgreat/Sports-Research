@@ -1,186 +1,218 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
-1,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,2003-03-28,Collingwood 13.16 (94) def. Richmond 8.18 (66),160,28,,Collingwood defeated Richmond by 28 points at M.C.G..
-2,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2003-03-29,West Coast 17.20 (122) def. Port Adelaide 11.8 (74),196,48,,West Coast defeated Port Adelaide by 48 points at Subiaco.
-3,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,M.C.G.,2003-03-29,North Melbourne 14.12 (96) def. St Kilda 10.10 (70),166,26,,North Melbourne defeated St Kilda by 26 points at M.C.G..
-4,Regular Season,Brisbane Lions,Essendon,Brisbane Lions,Essendon,Gabba,2003-03-29,Brisbane Lions 14.20 (104) def. Essendon 8.13 (61),165,43,,Brisbane Lions defeated Essendon by 43 points at Gabba.
-5,Regular Season,Sydney,Carlton,Sydney,Carlton,Stadium Australia,2003-03-29,Sydney 22.14 (146) def. Carlton 10.12 (72),218,74,,Sydney defeated Carlton by 74 points at Stadium Australia.
-6,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Docklands,2003-03-30,Western Bulldogs 19.16 (130) def. Geelong 13.13 (91),221,39,,Western Bulldogs defeated Geelong by 39 points at Docklands.
-7,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2003-03-30,Melbourne 16.10 (106) def. Hawthorn 15.10 (100),206,6,,Melbourne defeated Hawthorn by 6 points at M.C.G..
-8,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2003-03-30,Adelaide 22.13 (145) def. Fremantle 13.11 (89),234,56,,Adelaide defeated Fremantle by 56 points at Football Park.
-9,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2003-04-04,Collingwood 16.11 (107) def. Carlton 13.13 (91),198,16,,Collingwood defeated Carlton by 16 points at M.C.G..
-10,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2003-04-05,St Kilda 15.9 (99) def. Adelaide 13.13 (91),190,8,,St Kilda defeated Adelaide by 8 points at Docklands.
-11,Regular Season,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,2003-04-05,Essendon 17.10 (112) def. Melbourne 10.15 (75),187,37,,Essendon defeated Melbourne by 37 points at M.C.G..
-12,Regular Season,Fremantle,Sydney,Fremantle,Sydney,Subiaco,2003-04-05,Fremantle 12.14 (86) def. Sydney 8.12 (60),146,26,,Fremantle defeated Sydney by 26 points at Subiaco.
-13,Regular Season,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,Football Park,2003-04-05,Brisbane Lions 13.8 (86) def. Port Adelaide 10.16 (76),162,10,,Brisbane Lions defeated Port Adelaide by 10 points at Football Park.
-14,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,York Park,2003-04-06,Hawthorn 13.13 (91) def. West Coast 14.5 (89),180,2,,Hawthorn defeated West Coast by 2 points at York Park.
-15,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Docklands,2003-04-06,Richmond 16.15 (111) def. Western Bulldogs 13.11 (89),200,22,,Richmond defeated Western Bulldogs by 22 points at Docklands.
-16,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,2003-04-06,North Melbourne 13.16 (94) def. Geelong 9.17 (71),165,23,,North Melbourne defeated Geelong by 23 points at Kardinia Park.
-17,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2003-04-11,Carlton 15.15 (105) def. Essendon 13.16 (94),199,11,,Carlton defeated Essendon by 11 points at M.C.G..
-18,Regular Season,West Coast,St Kilda,West Coast,St Kilda,Subiaco,2003-04-12,West Coast 21.18 (144) def. St Kilda 11.8 (74),218,70,,West Coast defeated St Kilda by 70 points at Subiaco.
-19,Regular Season,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,2003-04-12,Collingwood 18.8 (116) def. Geelong 10.9 (69),185,47,,Collingwood defeated Geelong by 47 points at M.C.G..
-20,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2003-04-12,North Melbourne 16.13 (109) drew with Brisbane Lions 16.13 (109),218,0,,North Melbourne and Brisbane Lions played out a draw at Docklands.
-21,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2003-04-12,Port Adelaide 19.14 (128) def. Hawthorn 11.5 (71),199,57,,Port Adelaide defeated Hawthorn by 57 points at Football Park.
-22,Regular Season,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,2003-04-13,Adelaide 15.13 (103) def. Sydney 11.10 (76),179,27,,Adelaide defeated Sydney by 27 points at S.C.G..
-23,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,Docklands,2003-04-13,Melbourne 20.7 (127) def. Western Bulldogs 14.11 (95),222,32,,Melbourne defeated Western Bulldogs by 32 points at Docklands.
-24,Regular Season,Richmond,Fremantle,Richmond,Fremantle,M.C.G.,2003-04-13,Richmond 14.10 (94) def. Fremantle 6.10 (46),140,48,,Richmond defeated Fremantle by 48 points at M.C.G..
-25,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2003-04-17,Brisbane Lions 14.11 (95) def. Collingwood 11.15 (81),176,14,,Brisbane Lions defeated Collingwood by 14 points at Gabba.
-26,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,2003-04-19,Geelong 13.12 (90) def. Melbourne 6.8 (44),134,46,,Geelong defeated Melbourne by 46 points at Kardinia Park.
-27,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2003-04-19,Essendon 20.9 (129) def. Western Bulldogs 16.14 (110),239,19,,Essendon defeated Western Bulldogs by 19 points at Docklands.
-28,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,M.C.G.,2003-04-19,Hawthorn 17.8 (110) def. Sydney 10.8 (68),178,42,,Hawthorn defeated Sydney by 42 points at M.C.G..
-29,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2003-04-20,Adelaide 15.16 (106) def. West Coast 10.13 (73),179,33,,Adelaide defeated West Coast by 33 points at Football Park.
-30,Regular Season,Fremantle,North Melbourne,Fremantle,North Melbourne,Subiaco,2003-04-20,Fremantle 25.17 (167) def. North Melbourne 19.8 (122),289,45,,Fremantle defeated North Melbourne by 45 points at Subiaco.
-31,Regular Season,Carlton,Port Adelaide,Carlton,Port Adelaide,Princes Park,2003-04-20,Port Adelaide 17.12 (114) def. Carlton 12.12 (84),198,30,,Port Adelaide defeated Carlton by 30 points at Princes Park.
-32,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2003-04-21,Richmond 17.5 (107) def. St Kilda 11.15 (81),188,26,,Richmond defeated St Kilda by 26 points at Docklands.
-33,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2003-04-25,Essendon 23.9 (147) def. Collingwood 12.9 (81),228,66,,Essendon defeated Collingwood by 66 points at M.C.G..
-34,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,2003-04-25,Sydney 17.7 (109) def. Melbourne 13.7 (85),194,24,,Sydney defeated Melbourne by 24 points at S.C.G..
-35,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,M.C.G.,2003-04-26,Richmond 18.7 (115) def. Hawthorn 14.11 (95),210,20,,Richmond defeated Hawthorn by 20 points at M.C.G..
-36,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Docklands,2003-04-26,Carlton 18.14 (122) def. North Melbourne 16.17 (113),235,9,,Carlton defeated North Melbourne by 9 points at Docklands.
-37,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2003-04-26,Port Adelaide 12.6 (78) def. Adelaide 9.12 (66),144,12,,Port Adelaide defeated Adelaide by 12 points at Football Park.
-38,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2003-04-27,Brisbane Lions 15.16 (106) def. Western Bulldogs 12.7 (79),185,27,,Brisbane Lions defeated Western Bulldogs by 27 points at Gabba.
-39,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2003-04-27,West Coast 16.12 (108) def. Fremantle 10.13 (73),181,35,,West Coast defeated Fremantle by 35 points at Subiaco.
-40,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2003-04-27,St Kilda 18.11 (119) def. Geelong 11.8 (74),193,45,,St Kilda defeated Geelong by 45 points at Docklands.
-41,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,Docklands,2003-05-02,Adelaide 19.10 (124) def. North Melbourne 9.16 (70),194,54,,Adelaide defeated North Melbourne by 54 points at Docklands.
-42,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,2003-05-03,Hawthorn 11.8 (74) def. Carlton 9.9 (63),137,11,,Hawthorn defeated Carlton by 11 points at Princes Park.
-43,Regular Season,Melbourne,West Coast,Melbourne,West Coast,M.C.G.,2003-05-03,West Coast 19.13 (127) def. Melbourne 14.10 (94),221,33,,West Coast defeated Melbourne by 33 points at M.C.G..
-44,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Docklands,2003-05-03,Sydney 17.7 (109) def. Collingwood 13.11 (89),198,20,,Sydney defeated Collingwood by 20 points at Docklands.
-45,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2003-05-03,Port Adelaide 12.12 (84) def. Richmond 8.9 (57),141,27,,Port Adelaide defeated Richmond by 27 points at Football Park.
-46,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2003-05-04,Fremantle 20.11 (131) def. Essendon 15.10 (100),231,31,,Fremantle defeated Essendon by 31 points at Subiaco.
-47,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Docklands,2003-05-04,St Kilda 15.10 (100) def. Western Bulldogs 12.13 (85),185,15,,St Kilda defeated Western Bulldogs by 15 points at Docklands.
-48,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2003-05-04,Brisbane Lions 13.14 (92) def. Geelong 12.6 (78),170,14,,Brisbane Lions defeated Geelong by 14 points at Kardinia Park.
-49,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Docklands,2003-05-09,North Melbourne 18.9 (117) def. Hawthorn 13.11 (89),206,28,,North Melbourne defeated Hawthorn by 28 points at Docklands.
-50,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2003-05-10,West Coast 17.11 (113) def. Geelong 14.13 (97),210,16,,West Coast defeated Geelong by 16 points at Subiaco.
-51,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2003-05-10,Richmond 11.18 (84) def. Essendon 5.12 (42),126,42,,Richmond defeated Essendon by 42 points at M.C.G..
-52,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Docklands,2003-05-10,St Kilda 16.17 (113) def. Carlton 15.11 (101),214,12,,St Kilda defeated Carlton by 12 points at Docklands.
-53,Regular Season,Adelaide,Collingwood,Adelaide,Collingwood,Football Park,2003-05-10,Collingwood 18.6 (114) def. Adelaide 16.13 (109),223,5,,Collingwood defeated Adelaide by 5 points at Football Park.
-54,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2003-05-11,Sydney 15.8 (98) def. Brisbane Lions 11.13 (79),177,19,,Sydney defeated Brisbane Lions by 19 points at S.C.G..
-55,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Docklands,2003-05-11,Fremantle 23.17 (155) def. Western Bulldogs 10.12 (72),227,83,,Fremantle defeated Western Bulldogs by 83 points at Docklands.
-56,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,M.C.G.,2003-05-11,Melbourne 16.15 (111) def. Port Adelaide 12.12 (84),195,27,,Melbourne defeated Port Adelaide by 27 points at M.C.G..
-57,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,2003-05-16,Essendon 15.16 (106) def. Hawthorn 8.5 (53),159,53,,Essendon defeated Hawthorn by 53 points at M.C.G..
-58,Regular Season,Collingwood,West Coast,Collingwood,West Coast,Docklands,2003-05-17,West Coast 18.11 (119) def. Collingwood 15.13 (103),222,16,,West Coast defeated Collingwood by 16 points at Docklands.
-59,Regular Season,Port Adelaide,North Melbourne,Port Adelaide,North Melbourne,Football Park,2003-05-17,Port Adelaide 15.13 (103) def. North Melbourne 7.7 (49),152,54,,Port Adelaide defeated North Melbourne by 54 points at Football Park.
-60,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2003-05-17,Brisbane Lions 16.11 (107) def. Adelaide 12.17 (89),196,18,,Brisbane Lions defeated Adelaide by 18 points at Gabba.
-61,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2003-05-17,Richmond 17.10 (112) def. Melbourne 16.7 (103),215,9,,Richmond defeated Melbourne by 9 points at M.C.G..
-62,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,2003-05-18,Sydney 17.10 (112) def. Geelong 11.7 (73),185,39,,Sydney defeated Geelong by 39 points at S.C.G..
-63,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2003-05-18,Fremantle 18.15 (123) def. St Kilda 11.16 (82),205,41,,Fremantle defeated St Kilda by 41 points at Subiaco.
-64,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,2003-05-18,Carlton 15.17 (107) def. Western Bulldogs 14.16 (100),207,7,,Carlton defeated Western Bulldogs by 7 points at Princes Park.
-65,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2003-05-23,Port Adelaide 23.8 (146) def. Essendon 14.12 (96),242,50,,Port Adelaide defeated Essendon by 50 points at Docklands.
-66,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Princes Park,2003-05-24,Brisbane Lions 23.15 (153) def. Carlton 11.10 (76),229,77,,Brisbane Lions defeated Carlton by 77 points at Princes Park.
-67,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,M.C.G.,2003-05-24,Fremantle 16.5 (101) def. Melbourne 10.11 (71),172,30,,Fremantle defeated Melbourne by 30 points at M.C.G..
-68,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2003-05-24,West Coast 18.16 (124) def. Richmond 11.6 (72),196,52,,West Coast defeated Richmond by 52 points at Subiaco.
-69,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Docklands,2003-05-24,Collingwood 22.17 (149) def. St Kilda 12.12 (84),233,65,,Collingwood defeated St Kilda by 65 points at Docklands.
-70,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Docklands,2003-05-25,Geelong 16.13 (109) def. Hawthorn 11.9 (75),184,34,,Geelong defeated Hawthorn by 34 points at Docklands.
-71,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Manuka Oval,2003-05-25,North Melbourne 12.12 (84) def. Sydney 8.11 (59),143,25,,North Melbourne defeated Sydney by 25 points at Manuka Oval.
-72,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2003-05-25,Adelaide 16.13 (109) def. Western Bulldogs 14.9 (93),202,16,,Adelaide defeated Western Bulldogs by 16 points at Football Park.
-73,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2003-05-30,Port Adelaide 14.14 (98) def. Collingwood 10.13 (73),171,25,,Port Adelaide defeated Collingwood by 25 points at Football Park.
-74,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2003-05-31,Fremantle 19.13 (127) def. Carlton 15.9 (99),226,28,,Fremantle defeated Carlton by 28 points at Subiaco.
-75,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2003-05-31,North Melbourne 24.12 (156) def. Western Bulldogs 22.13 (145),301,11,,North Melbourne defeated Western Bulldogs by 11 points at Docklands.
-76,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Gabba,2003-05-31,Brisbane Lions 18.15 (123) def. Melbourne 9.9 (63),186,60,,Brisbane Lions defeated Melbourne by 60 points at Gabba.
-77,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,2003-05-31,Sydney 16.8 (104) def. Richmond 10.12 (72),176,32,,Sydney defeated Richmond by 32 points at M.C.G..
-78,Regular Season,Geelong,Adelaide,Geelong,Adelaide,Kardinia Park,2003-06-01,Adelaide 11.10 (76) def. Geelong 8.11 (59),135,17,,Adelaide defeated Geelong by 17 points at Kardinia Park.
-79,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2003-06-01,Essendon 19.14 (128) def. West Coast 16.10 (106),234,22,,Essendon defeated West Coast by 22 points at Docklands.
-80,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,M.C.G.,2003-06-01,St Kilda 17.16 (118) def. Hawthorn 14.6 (90),208,28,,St Kilda defeated Hawthorn by 28 points at M.C.G..
-81,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Docklands,2003-06-06,North Melbourne 13.14 (92) def. Richmond 13.11 (89),181,3,,North Melbourne defeated Richmond by 3 points at Docklands.
-82,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,M.C.G.,2003-06-07,Hawthorn 11.9 (75) def. Adelaide 10.10 (70),145,5,,Hawthorn defeated Adelaide by 5 points at M.C.G..
-83,Regular Season,St Kilda,Brisbane Lions,St Kilda,Brisbane Lions,Docklands,2003-06-07,St Kilda 13.12 (90) def. Brisbane Lions 13.7 (85),175,5,,St Kilda defeated Brisbane Lions by 5 points at Docklands.
-84,Regular Season,Sydney,Essendon,Sydney,Essendon,Stadium Australia,2003-06-07,Sydney 21.7 (133) def. Essendon 12.7 (79),212,54,,Sydney defeated Essendon by 54 points at Stadium Australia.
-85,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco,2003-06-08,West Coast 19.10 (124) drew with Western Bulldogs 19.10 (124),248,0,,West Coast and Western Bulldogs played out a draw at Subiaco.
-86,Regular Season,Geelong,Carlton,Geelong,Carlton,Docklands,2003-06-08,Geelong 17.13 (115) def. Carlton 12.3 (75),190,40,,Geelong defeated Carlton by 40 points at Docklands.
-87,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,2003-06-08,Port Adelaide 16.16 (112) def. Fremantle 9.9 (63),175,49,,Port Adelaide defeated Fremantle by 49 points at Football Park.
-88,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2003-06-09,Collingwood 20.13 (133) def. Melbourne 10.17 (77),210,56,,Collingwood defeated Melbourne by 56 points at M.C.G..
-89,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Docklands,2003-06-13,North Melbourne 14.12 (96) def. Essendon 13.10 (88),184,8,,North Melbourne defeated Essendon by 8 points at Docklands.
-90,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,York Park,2003-06-14,Port Adelaide 15.9 (99) def. St Kilda 7.15 (57),156,42,,Port Adelaide defeated St Kilda by 42 points at York Park.
-91,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2003-06-14,Carlton 14.9 (93) def. Richmond 12.14 (86),179,7,,Carlton defeated Richmond by 7 points at M.C.G..
-92,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2003-06-14,Fremantle 13.10 (88) def. Geelong 10.12 (72),160,16,,Fremantle defeated Geelong by 16 points at Subiaco.
-93,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,S.C.G.,2003-06-14,Sydney 19.13 (127) def. Western Bulldogs 9.9 (63),190,64,,Sydney defeated Western Bulldogs by 64 points at S.C.G..
-94,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2003-06-15,West Coast 24.16 (160) def. Brisbane Lions 13.13 (91),251,69,,West Coast defeated Brisbane Lions by 69 points at Gabba.
-95,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2003-06-15,Hawthorn 12.12 (84) def. Collingwood 6.15 (51),135,33,,Hawthorn defeated Collingwood by 33 points at M.C.G..
-96,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2003-06-15,Adelaide 21.12 (138) def. Melbourne 10.5 (65),203,73,,Adelaide defeated Melbourne by 73 points at Football Park.
-97,Regular Season,Essendon,Geelong,Essendon,Geelong,Docklands,2003-06-27,Essendon 20.9 (129) def. Geelong 15.3 (93),222,36,,Essendon defeated Geelong by 36 points at Docklands.
-98,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,2003-06-28,Melbourne 21.10 (136) def. St Kilda 14.10 (94),230,42,,Melbourne defeated St Kilda by 42 points at M.C.G..
-99,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,2003-06-28,Port Adelaide 14.15 (99) def. Sydney 8.12 (60),159,39,,Port Adelaide defeated Sydney by 39 points at Football Park.
-100,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2003-06-28,Collingwood 18.20 (128) def. Western Bulldogs 12.13 (85),213,43,,Collingwood defeated Western Bulldogs by 43 points at Docklands.
-101,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2003-06-28,Brisbane Lions 15.14 (104) def. Richmond 9.7 (61),165,43,,Brisbane Lions defeated Richmond by 43 points at Gabba.
-102,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,York Park,2003-06-29,Hawthorn 15.8 (98) def. Fremantle 10.8 (68),166,30,,Hawthorn defeated Fremantle by 30 points at York Park.
-103,Regular Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco,2003-06-29,West Coast 11.10 (76) def. North Melbourne 10.7 (67),143,9,,West Coast defeated North Melbourne by 9 points at Subiaco.
-104,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Princes Park,2003-06-29,Adelaide 13.14 (92) def. Carlton 7.8 (50),142,42,,Adelaide defeated Carlton by 42 points at Princes Park.
-105,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2003-07-04,Essendon 17.17 (119) def. St Kilda 7.9 (51),170,68,,Essendon defeated St Kilda by 68 points at Docklands.
-106,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2003-07-05,Fremantle 10.15 (75) def. Brisbane Lions 10.12 (72),147,3,,Fremantle defeated Brisbane Lions by 3 points at Subiaco.
-107,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2003-07-05,Hawthorn 23.16 (154) def. Western Bulldogs 12.11 (83),237,71,,Hawthorn defeated Western Bulldogs by 71 points at M.C.G..
-108,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2003-07-05,Collingwood 19.12 (126) def. North Melbourne 7.8 (50),176,76,,Collingwood defeated North Melbourne by 76 points at Docklands.
-109,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,2003-07-05,Adelaide 10.12 (72) def. Richmond 6.8 (44),116,28,,Adelaide defeated Richmond by 28 points at Football Park.
-110,Regular Season,Sydney,West Coast,Sydney,West Coast,S.C.G.,2003-07-06,Sydney 13.14 (92) def. West Coast 12.12 (84),176,8,,Sydney defeated West Coast by 8 points at S.C.G..
-111,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,2003-07-06,Melbourne 14.13 (97) def. Carlton 14.6 (90),187,7,,Melbourne defeated Carlton by 7 points at Princes Park.
-112,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Kardinia Park,2003-07-06,Geelong 10.10 (70) def. Port Adelaide 10.9 (69),139,1,,Geelong defeated Port Adelaide by 1 points at Kardinia Park.
-113,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,2003-07-11,Adelaide 13.12 (90) def. Essendon 7.7 (49),139,41,,Adelaide defeated Essendon by 41 points at Football Park.
-114,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,M.C.G.,2003-07-12,Collingwood 15.9 (99) def. Fremantle 7.16 (58),157,41,,Collingwood defeated Fremantle by 41 points at M.C.G..
-115,Regular Season,Richmond,Geelong,Richmond,Geelong,Docklands,2003-07-12,Geelong 15.11 (101) def. Richmond 15.7 (97),198,4,,Geelong defeated Richmond by 4 points at Docklands.
-116,Regular Season,West Coast,Carlton,West Coast,Carlton,Subiaco,2003-07-12,West Coast 28.19 (187) def. Carlton 10.11 (71),258,116,,West Coast defeated Carlton by 116 points at Subiaco.
-117,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2003-07-12,Sydney 15.22 (112) def. St Kilda 9.7 (61),173,51,,Sydney defeated St Kilda by 51 points at S.C.G..
-118,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,2003-07-13,Brisbane Lions 14.9 (93) def. Hawthorn 11.15 (81),174,12,,Brisbane Lions defeated Hawthorn by 12 points at Gabba.
-119,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Docklands,2003-07-13,Port Adelaide 15.18 (108) def. Western Bulldogs 14.9 (93),201,15,,Port Adelaide defeated Western Bulldogs by 15 points at Docklands.
-120,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,M.C.G.,2003-07-13,North Melbourne 15.11 (101) def. Melbourne 14.10 (94),195,7,,North Melbourne defeated Melbourne by 7 points at M.C.G..
-121,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2003-07-18,Collingwood 20.11 (131) def. Richmond 9.8 (62),193,69,,Collingwood defeated Richmond by 69 points at M.C.G..
-122,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,2003-07-19,Sydney 18.7 (115) def. Carlton 12.12 (84),199,31,,Sydney defeated Carlton by 31 points at Princes Park.
-123,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2003-07-19,Hawthorn 17.11 (113) def. Melbourne 15.16 (106),219,7,,Hawthorn defeated Melbourne by 7 points at M.C.G..
-124,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Docklands,2003-07-19,Essendon 14.10 (94) def. Brisbane Lions 12.14 (86),180,8,,Essendon defeated Brisbane Lions by 8 points at Docklands.
-125,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,2003-07-19,Port Adelaide 17.12 (114) def. West Coast 7.8 (50),164,64,,Port Adelaide defeated West Coast by 64 points at Football Park.
-126,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,2003-07-20,Western Bulldogs 15.9 (99) def. Geelong 11.15 (81),180,18,,Western Bulldogs defeated Geelong by 18 points at Kardinia Park.
-127,Regular Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco,2003-07-20,Fremantle 13.13 (91) def. Adelaide 13.12 (90),181,1,,Fremantle defeated Adelaide by 1 points at Subiaco.
-128,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Docklands,2003-07-20,St Kilda 21.6 (132) def. North Melbourne 19.13 (127),259,5,,St Kilda defeated North Melbourne by 5 points at Docklands.
-129,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco,2003-07-25,West Coast 14.14 (98) def. Hawthorn 5.12 (42),140,56,,West Coast defeated Hawthorn by 56 points at Subiaco.
-130,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Manuka Oval,2003-07-26,North Melbourne 16.8 (104) def. Geelong 12.14 (86),190,18,,North Melbourne defeated Geelong by 18 points at Manuka Oval.
-131,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,2003-07-26,Essendon 13.10 (88) def. Melbourne 10.11 (71),159,17,,Essendon defeated Melbourne by 17 points at M.C.G..
-132,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2003-07-26,Richmond 24.11 (155) def. Western Bulldogs 14.11 (95),250,60,,Richmond defeated Western Bulldogs by 60 points at Docklands.
-133,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2003-07-26,Port Adelaide 15.14 (104) def. Brisbane Lions 15.13 (103),207,1,,Port Adelaide defeated Brisbane Lions by 1 points at Gabba.
-134,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2003-07-27,Sydney 17.9 (111) def. Fremantle 14.13 (97),208,14,,Sydney defeated Fremantle by 14 points at S.C.G..
-135,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2003-07-27,Collingwood 20.15 (135) def. Carlton 8.14 (62),197,73,,Collingwood defeated Carlton by 73 points at M.C.G..
-136,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,2003-07-27,Adelaide 22.11 (143) def. St Kilda 13.8 (86),229,57,,Adelaide defeated St Kilda by 57 points at Football Park.
-137,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2003-08-01,Western Bulldogs 14.17 (101) def. Melbourne 12.8 (80),181,21,,Western Bulldogs defeated Melbourne by 21 points at Docklands.
-138,Regular Season,Fremantle,Richmond,Fremantle,Richmond,Subiaco,2003-08-02,Fremantle 15.14 (104) def. Richmond 11.15 (81),185,23,,Fremantle defeated Richmond by 23 points at Subiaco.
-139,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2003-08-02,Essendon 13.12 (90) def. Carlton 7.14 (56),146,34,,Essendon defeated Carlton by 34 points at M.C.G..
-140,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Docklands,2003-08-02,Collingwood 14.13 (97) def. Geelong 10.13 (73),170,24,,Collingwood defeated Geelong by 24 points at Docklands.
-141,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2003-08-02,Brisbane Lions 20.17 (137) def. North Melbourne 11.17 (83),220,54,,Brisbane Lions defeated North Melbourne by 54 points at Gabba.
-142,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,2003-08-03,Adelaide 14.13 (97) def. Sydney 14.9 (93),190,4,,Adelaide defeated Sydney by 4 points at Football Park.
-143,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2003-08-03,Port Adelaide 12.12 (84) def. Hawthorn 11.14 (80),164,4,,Port Adelaide defeated Hawthorn by 4 points at M.C.G..
-144,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2003-08-03,St Kilda 19.14 (128) def. West Coast 9.13 (67),195,61,,St Kilda defeated West Coast by 61 points at Docklands.
-145,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2003-08-08,Geelong 11.18 (84) def. Melbourne 6.9 (45),129,39,,Geelong defeated Melbourne by 39 points at M.C.G..
-146,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Subiaco,2003-08-09,Adelaide 13.13 (91) def. West Coast 10.7 (67),158,24,,Adelaide defeated West Coast by 24 points at Subiaco.
-147,Regular Season,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2003-08-09,Brisbane Lions 15.11 (101) def. Collingwood 8.14 (62),163,39,,Brisbane Lions defeated Collingwood by 39 points at M.C.G..
-148,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,2003-08-09,Hawthorn 17.8 (110) def. Sydney 14.9 (93),203,17,,Hawthorn defeated Sydney by 17 points at S.C.G..
-149,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Docklands,2003-08-09,St Kilda 20.10 (130) def. Richmond 7.8 (50),180,80,,St Kilda defeated Richmond by 80 points at Docklands.
-150,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2003-08-10,Port Adelaide 18.17 (125) def. Carlton 12.9 (81),206,44,,Port Adelaide defeated Carlton by 44 points at Football Park.
-151,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2003-08-10,Essendon 22.15 (147) def. Western Bulldogs 12.8 (80),227,67,,Essendon defeated Western Bulldogs by 67 points at Docklands.
-152,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,M.C.G.,2003-08-10,Fremantle 15.9 (99) def. North Melbourne 15.8 (98),197,1,,Fremantle defeated North Melbourne by 1 points at M.C.G..
-153,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,Docklands,2003-08-15,Collingwood 15.18 (108) def. Adelaide 11.5 (71),179,37,,Collingwood defeated Adelaide by 37 points at Docklands.
-154,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,2003-08-16,St Kilda 26.10 (166) def. Carlton 11.9 (75),241,91,,St Kilda defeated Carlton by 91 points at Princes Park.
-155,Regular Season,Geelong,West Coast,Geelong,West Coast,Kardinia Park,2003-08-16,Geelong 9.9 (63) drew with West Coast 9.9 (63),126,0,,Geelong and West Coast played out a draw at Kardinia Park.
-156,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Docklands,2003-08-16,Hawthorn 16.14 (110) def. North Melbourne 14.12 (96),206,14,,Hawthorn defeated North Melbourne by 14 points at Docklands.
-157,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2003-08-16,Port Adelaide 17.10 (112) def. Melbourne 15.8 (98),210,14,,Port Adelaide defeated Melbourne by 14 points at Football Park.
-158,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2003-08-17,Sydney 14.6 (90) def. Brisbane Lions 10.16 (76),166,14,,Sydney defeated Brisbane Lions by 14 points at Gabba.
-159,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Subiaco,2003-08-17,Fremantle 18.25 (133) def. Western Bulldogs 12.5 (77),210,56,,Fremantle defeated Western Bulldogs by 56 points at Subiaco.
-160,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2003-08-17,Essendon 13.14 (92) def. Richmond 7.11 (53),145,39,,Essendon defeated Richmond by 39 points at M.C.G..
-161,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,M.C.G.,2003-08-22,Hawthorn 20.18 (138) def. Carlton 10.4 (64),202,74,,Hawthorn defeated Carlton by 74 points at M.C.G..
-162,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2003-08-23,Essendon 20.13 (133) def. Fremantle 11.7 (73),206,60,,Essendon defeated Fremantle by 60 points at Docklands.
-163,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2003-08-23,North Melbourne 9.20 (74) def. Adelaide 10.4 (64),138,10,,North Melbourne defeated Adelaide by 10 points at Football Park.
-164,Regular Season,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,2003-08-23,Brisbane Lions 19.9 (123) def. Geelong 13.8 (86),209,37,,Brisbane Lions defeated Geelong by 37 points at Gabba.
-165,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Stadium Australia,2003-08-23,Collingwood 14.15 (99) def. Sydney 12.9 (81),180,18,,Collingwood defeated Sydney by 18 points at Stadium Australia.
-166,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,York Park,2003-08-24,St Kilda 13.17 (95) def. Western Bulldogs 3.12 (30),125,65,,St Kilda defeated Western Bulldogs by 65 points at York Park.
-167,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2003-08-24,West Coast 21.17 (143) def. Melbourne 14.7 (91),234,52,,West Coast defeated Melbourne by 52 points at Subiaco.
-168,Regular Season,Richmond,Port Adelaide,Richmond,Port Adelaide,Docklands,2003-08-24,Port Adelaide 18.16 (124) def. Richmond 16.8 (104),228,20,,Port Adelaide defeated Richmond by 20 points at Docklands.
-169,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2003-08-29,Collingwood 12.11 (83) def. Essendon 9.13 (67),150,16,,Collingwood defeated Essendon by 16 points at M.C.G..
-170,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,2003-08-30,Geelong 12.12 (84) def. St Kilda 9.11 (65),149,19,,Geelong defeated St Kilda by 19 points at Kardinia Park.
-171,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,2003-08-30,Sydney 14.10 (94) def. Melbourne 9.6 (60),154,34,,Sydney defeated Melbourne by 34 points at M.C.G..
-172,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Docklands,2003-08-30,Brisbane Lions 26.14 (170) def. Western Bulldogs 13.8 (86),256,84,,Brisbane Lions defeated Western Bulldogs by 84 points at Docklands.
-173,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2003-08-30,Fremantle 14.12 (96) def. West Coast 11.16 (82),178,14,,Fremantle defeated West Coast by 14 points at Subiaco.
-174,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2003-08-31,Port Adelaide 14.10 (94) def. Adelaide 12.6 (78),172,16,,Port Adelaide defeated Adelaide by 16 points at Football Park.
-175,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Docklands,2003-08-31,North Melbourne 28.19 (187) def. Carlton 9.9 (63),250,124,,North Melbourne defeated Carlton by 124 points at Docklands.
-176,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2003-08-31,Hawthorn 11.12 (78) def. Richmond 11.8 (74),152,4,,Hawthorn defeated Richmond by 4 points at M.C.G..
-177,Finals,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2003-09-05,Essendon 15.11 (101) def. Fremantle 8.9 (57),158,44,,Essendon defeated Fremantle by 44 points at Subiaco.
-178,Finals,Adelaide,West Coast,Adelaide,West Coast,Football Park,2003-09-06,Adelaide 16.17 (113) def. West Coast 8.9 (57),170,56,,Adelaide defeated West Coast by 56 points at Football Park.
-179,Finals,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2003-09-06,Collingwood 9.12 (66) def. Brisbane Lions 7.9 (51),117,15,,Collingwood defeated Brisbane Lions by 15 points at M.C.G..
-180,Finals,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,2003-09-07,Sydney 15.10 (100) def. Port Adelaide 13.10 (88),188,12,,Sydney defeated Port Adelaide by 12 points at Football Park.
-181,Finals,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2003-09-12,Brisbane Lions 18.16 (124) def. Adelaide 12.10 (82),206,42,,Brisbane Lions defeated Adelaide by 42 points at Gabba.
-182,Finals,Port Adelaide,Essendon,Port Adelaide,Essendon,Football Park,2003-09-13,Port Adelaide 12.11 (83) def. Essendon 6.8 (44),127,39,,Port Adelaide defeated Essendon by 39 points at Football Park.
-183,Finals,Collingwood,Port Adelaide,Collingwood,Port Adelaide,M.C.G.,2003-09-20,Collingwood 17.10 (112) def. Port Adelaide 9.14 (68),180,44,,Collingwood defeated Port Adelaide by 44 points at M.C.G..
-184,Finals,Sydney,Brisbane Lions,Sydney,Brisbane Lions,Stadium Australia,2003-09-20,Brisbane Lions 14.16 (100) def. Sydney 8.8 (56),156,44,,Brisbane Lions defeated Sydney by 44 points at Stadium Australia.
-185,Grand Final,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2003-09-27,Brisbane Lions 20.14 (134) def. Collingwood 12.12 (84),218,50,,Brisbane Lions defeated Collingwood by 50 points at M.C.G..
+1,pre-Season,ATSIC Chairman’s All Stars,Carlton,ATSIC Chairman’s All Stars,Carlton,Marrara Stadium,2003-02-08,ATSIC Chairman’s All Stars 19.16 (130) def. Carlton 8.9 (57),187,73,,ATSIC Chairman’s All Stars defeated Carlton by 73 points at Marrara Stadium.
+2,pre-Season,Sydney,Essendon,Sydney,Essendon,North Sydney Oval,2003-02-16,Sydney 19.13 (127) def. Essendon 19.5 (119),246,8,,Sydney defeated Essendon by 8 points at North Sydney Oval.
+3,pre-Season,Richmond,Melbourne,Richmond,Melbourne,Docklands,2003-02-21,Richmond 1. 8.0.5 (62) def. by Melbourne 2. 12.0.15 (105),167,43,,Melbourne defeated Richmond by 43 points at Docklands.
+4,pre-Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco Oval,2003-02-21,West Coast 1. 13.0.13 (100) def. Fremantle 1. 11.1.5 (83),183,17,,West Coast defeated Fremantle by 17 points at Subiaco Oval.
+5,pre-Season,Essendon,North Melbourne,Essendon,North Melbourne,Manuka Oval,2003-02-22,Essendon 0. 8.0.9 (57) def. by Kangaroos 1. 15.1.17 (119),176,62,,North Melbourne defeated Essendon by 62 points at Manuka Oval.
+6,pre-Season,Hawthorn,St Kilda,Hawthorn,St Kilda,York Park,2003-02-22,Hawthorn 0. 11.1.13 (82) def. St Kilda 1. 7.0.8 (59),141,23,,Hawthorn defeated St Kilda by 23 points at York Park.
+7,pre-Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Telstra Stadium,2003-02-22,Brisbane Lions 0. 14.1.6 (93) def. Sydney 0. 9.0.7 (61),154,32,,Brisbane Lions defeated Sydney by 32 points at Telstra Stadium.
+8,pre-Season,Adelaide,Adelaide,Adelaide,Adelaide,Football Park,2003-02-22,Adelaide 1. 10.0.9 (78) def. Port Adelaide 0. 11.0.11 (77),155,1,,Adelaide defeated Adelaide by 1 points at Football Park.
+9,pre-Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Skilled Stadium,2003-02-23,Western Bulldogs 4. 7.0.9 (87) def. by Geelong 2. 19.0.14 (146),233,59,,Geelong defeated Western Bulldogs by 59 points at Skilled Stadium.
+10,pre-Season,Carlton,Collingwood,Carlton,Collingwood,Docklands,2003-02-23,Carlton 0. 14.0.8 (92) def. by Collingwood 4. 16.1.13 (148),240,56,,Collingwood defeated Carlton by 56 points at Docklands.
+11,pre-Season,West Coast,Adelaide,West Coast,Adelaide,Marrara Oval,2003-02-28,West Coast 1. 10.0.11 (80) def. by Adelaide 0. 17.0.4 (106),186,26,,Adelaide defeated West Coast by 26 points at Marrara Oval.
+12,pre-Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Docklands,2003-03-01,Kangaroos 1. 10.0.9 (78) def. Melbourne 1. 8.0.8 (65),143,13,,North Melbourne defeated Melbourne by 13 points at Docklands.
+13,pre-Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Bundaberg Rum Stadium,2003-03-01,Geelong 2. 9.0.7 (79) def. Brisbane Lions 1. 9.0.8 (71),150,8,,Geelong defeated Brisbane Lions by 8 points at Bundaberg Rum Stadium.
+14,pre-Season,Sydney,Carlton,Sydney,Carlton,Coffs Harbour International Stadium,2003-03-01,Sydney 5.9 (39) def. by Carlton 12.7 (79),118,40,,Carlton defeated Sydney by 40 points at Coffs Harbour International Stadium.
+15,pre-Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,"Centennial Park Oval, Nuriootpa",2003-03-01,Port Adelaide 10.9 (69) def. by Western Bulldogs 15.14 (104),173,35,,"Western Bulldogs defeated Adelaide by 35 points at Centennial Park Oval, Nuriootpa."
+16,pre-Season,St Kilda,Essendon,St Kilda,Essendon,Perth Stadium,2003-03-01,St Kilda 11.9 (75) def. by Essendon 8.13 (61),136,14,,St Kilda defeated Essendon by 14 points at Perth Stadium.
+17,pre-Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Docklands,2003-03-02,Collingwood 1. 15.0.13 (112) def. Hawthorn 1. 9.1.6 (72),184,40,,Collingwood defeated Hawthorn by 40 points at Docklands.
+18,pre-Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,"Giffin Park, Coorparoo",2003-03-07,Brisbane Lions 16.8 (104) def. St Kilda 11.6 (72),176,32,,"Brisbane Lions defeated St Kilda by 32 points at Giffin Park, Coorparoo."
+19,pre-Season,Collingwood,Geelong,Collingwood,Geelong,Docklands,2003-03-08,Collingwood 5. 8.0.10 (103) def. Geelong 1. 8.0.9 (66),169,37,,Collingwood defeated Geelong by 37 points at Docklands.
+20,pre-Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2003-03-08,Adelaide 1. 9.0.10 (73) def. Kangaroos 0. 10.0.9 (69),142,4,,Adelaide defeated North Melbourne by 4 points at Football Park.
+21,pre-Season,Sydney,Melbourne,Sydney,Melbourne,Manuka Oval,2003-03-08,Sydney 14.7 (91) def. Melbourne 8.8 (56),147,35,,Sydney defeated Melbourne by 35 points at Manuka Oval.
+22,pre-Season,Carlton,Richmond,Carlton,Richmond,Perth Stadium,2003-03-08,Carlton 13.14 (92) def. by Richmond 20.5 (125),217,33,,Richmond defeated Carlton by 33 points at Perth Stadium.
+23,pre-Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,"Queen Elizabeth Oval, Bendigo",2003-03-08,Essendon 20.13 (133) def. Western Bulldogs 9.8 (62),195,71,,"Essendon defeated Western Bulldogs by 71 points at Queen Elizabeth Oval, Bendigo."
+24,pre-Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco Oval,2003-03-08,West Coast 5.4 (34) def. by Hawthorn 14.5 (89),123,55,,Hawthorn defeated West Coast by 55 points at Subiaco Oval.
+25,pre-Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco Oval,2003-03-08,Fremantle 18.9 (117) def. Port Adelaide 10.8 (68),185,49,,Fremantle defeated Adelaide by 49 points at Subiaco Oval.
+26,pre-Season,Melbourne,West Coast,Melbourne,West Coast,Perth Stadium,2003-03-14,Melbourne 6.9 (45) def. by West Coast 7.14 (56),101,11,,West Coast defeated Melbourne by 11 points at Perth Stadium.
+27,pre-Season,Essendon,Geelong,Essendon,Geelong,"Lavington Oval, Albury",2003-03-14,Essendon 11.13 (79) def. by Geelong 12.12 (84),163,5,,"Geelong defeated Essendon by 5 points at Lavington Oval, Albury."
+28,pre-Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,2003-03-14,Port Adelaide 13.14 (92) def. by Carlton 14.15 (99),191,7,,Carlton defeated Adelaide by 7 points at Football Park.
+29,pre-Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,2003-03-15,Sydney 15.13 (103) def. Richmond 8.14 (62),165,41,,Sydney defeated Richmond by 41 points at S.C.G..
+30,pre-Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Whitten Oval,2003-03-15,Western Bulldogs 12.14 (86) def. Brisbane Lions 9.14 (68),154,18,,Western Bulldogs defeated Brisbane Lions by 18 points at Whitten Oval.
+31,pre-Season,St Kilda,North Melbourne,St Kilda,North Melbourne,"Northern Oval, North Ballarat",2003-03-15,St Kilda 5.7 (37) def. by Kangaroos 20.7 (127),164,90,,"North Melbourne defeated St Kilda by 90 points at Northern Oval, North Ballarat."
+32,pre-Season,Hawthorn,Fremantle,Hawthorn,Fremantle,Perth Stadium,2003-03-15,Hawthorn 10.9 (69) def. by Fremantle 10.11 (71),140,2,,Fremantle defeated Hawthorn by 2 points at Perth Stadium.
+33,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,2003-03-28,Collingwood 13.16 (94) def. Richmond 8.18 (66),160,28,,Collingwood defeated Richmond by 28 points at M.C.G..
+34,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2003-03-29,West Coast 17.20 (122) def. Port Adelaide 11.8 (74),196,48,,West Coast defeated Port Adelaide by 48 points at Subiaco.
+35,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,M.C.G.,2003-03-29,North Melbourne 14.12 (96) def. St Kilda 10.10 (70),166,26,,North Melbourne defeated St Kilda by 26 points at M.C.G..
+36,Regular Season,Brisbane Lions,Essendon,Brisbane Lions,Essendon,Gabba,2003-03-29,Brisbane Lions 14.20 (104) def. Essendon 8.13 (61),165,43,,Brisbane Lions defeated Essendon by 43 points at Gabba.
+37,Regular Season,Sydney,Carlton,Sydney,Carlton,Stadium Australia,2003-03-29,Sydney 22.14 (146) def. Carlton 10.12 (72),218,74,,Sydney defeated Carlton by 74 points at Stadium Australia.
+38,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Docklands,2003-03-30,Western Bulldogs 19.16 (130) def. Geelong 13.13 (91),221,39,,Western Bulldogs defeated Geelong by 39 points at Docklands.
+39,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2003-03-30,Melbourne 16.10 (106) def. Hawthorn 15.10 (100),206,6,,Melbourne defeated Hawthorn by 6 points at M.C.G..
+40,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2003-03-30,Adelaide 22.13 (145) def. Fremantle 13.11 (89),234,56,,Adelaide defeated Fremantle by 56 points at Football Park.
+41,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2003-04-04,Collingwood 16.11 (107) def. Carlton 13.13 (91),198,16,,Collingwood defeated Carlton by 16 points at M.C.G..
+42,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2003-04-05,St Kilda 15.9 (99) def. Adelaide 13.13 (91),190,8,,St Kilda defeated Adelaide by 8 points at Docklands.
+43,Regular Season,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,2003-04-05,Essendon 17.10 (112) def. Melbourne 10.15 (75),187,37,,Essendon defeated Melbourne by 37 points at M.C.G..
+44,Regular Season,Fremantle,Sydney,Fremantle,Sydney,Subiaco,2003-04-05,Fremantle 12.14 (86) def. Sydney 8.12 (60),146,26,,Fremantle defeated Sydney by 26 points at Subiaco.
+45,Regular Season,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,Football Park,2003-04-05,Brisbane Lions 13.8 (86) def. Port Adelaide 10.16 (76),162,10,,Brisbane Lions defeated Port Adelaide by 10 points at Football Park.
+46,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,York Park,2003-04-06,Hawthorn 13.13 (91) def. West Coast 14.5 (89),180,2,,Hawthorn defeated West Coast by 2 points at York Park.
+47,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Docklands,2003-04-06,Richmond 16.15 (111) def. Western Bulldogs 13.11 (89),200,22,,Richmond defeated Western Bulldogs by 22 points at Docklands.
+48,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,2003-04-06,North Melbourne 13.16 (94) def. Geelong 9.17 (71),165,23,,North Melbourne defeated Geelong by 23 points at Kardinia Park.
+49,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2003-04-11,Carlton 15.15 (105) def. Essendon 13.16 (94),199,11,,Carlton defeated Essendon by 11 points at M.C.G..
+50,Regular Season,West Coast,St Kilda,West Coast,St Kilda,Subiaco,2003-04-12,West Coast 21.18 (144) def. St Kilda 11.8 (74),218,70,,West Coast defeated St Kilda by 70 points at Subiaco.
+51,Regular Season,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,2003-04-12,Collingwood 18.8 (116) def. Geelong 10.9 (69),185,47,,Collingwood defeated Geelong by 47 points at M.C.G..
+52,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2003-04-12,North Melbourne 16.13 (109) drew with Brisbane Lions 16.13 (109),218,0,,North Melbourne and Brisbane Lions played out a draw at Docklands.
+53,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2003-04-12,Port Adelaide 19.14 (128) def. Hawthorn 11.5 (71),199,57,,Port Adelaide defeated Hawthorn by 57 points at Football Park.
+54,Regular Season,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,2003-04-13,Adelaide 15.13 (103) def. Sydney 11.10 (76),179,27,,Adelaide defeated Sydney by 27 points at S.C.G..
+55,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,Docklands,2003-04-13,Melbourne 20.7 (127) def. Western Bulldogs 14.11 (95),222,32,,Melbourne defeated Western Bulldogs by 32 points at Docklands.
+56,Regular Season,Richmond,Fremantle,Richmond,Fremantle,M.C.G.,2003-04-13,Richmond 14.10 (94) def. Fremantle 6.10 (46),140,48,,Richmond defeated Fremantle by 48 points at M.C.G..
+57,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2003-04-17,Brisbane Lions 14.11 (95) def. Collingwood 11.15 (81),176,14,,Brisbane Lions defeated Collingwood by 14 points at Gabba.
+58,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,2003-04-19,Geelong 13.12 (90) def. Melbourne 6.8 (44),134,46,,Geelong defeated Melbourne by 46 points at Kardinia Park.
+59,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2003-04-19,Essendon 20.9 (129) def. Western Bulldogs 16.14 (110),239,19,,Essendon defeated Western Bulldogs by 19 points at Docklands.
+60,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,M.C.G.,2003-04-19,Hawthorn 17.8 (110) def. Sydney 10.8 (68),178,42,,Hawthorn defeated Sydney by 42 points at M.C.G..
+61,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2003-04-20,Adelaide 15.16 (106) def. West Coast 10.13 (73),179,33,,Adelaide defeated West Coast by 33 points at Football Park.
+62,Regular Season,Fremantle,North Melbourne,Fremantle,North Melbourne,Subiaco,2003-04-20,Fremantle 25.17 (167) def. North Melbourne 19.8 (122),289,45,,Fremantle defeated North Melbourne by 45 points at Subiaco.
+63,Regular Season,Carlton,Port Adelaide,Carlton,Port Adelaide,Princes Park,2003-04-20,Port Adelaide 17.12 (114) def. Carlton 12.12 (84),198,30,,Port Adelaide defeated Carlton by 30 points at Princes Park.
+64,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2003-04-21,Richmond 17.5 (107) def. St Kilda 11.15 (81),188,26,,Richmond defeated St Kilda by 26 points at Docklands.
+65,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2003-04-25,Essendon 23.9 (147) def. Collingwood 12.9 (81),228,66,,Essendon defeated Collingwood by 66 points at M.C.G..
+66,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,2003-04-25,Sydney 17.7 (109) def. Melbourne 13.7 (85),194,24,,Sydney defeated Melbourne by 24 points at S.C.G..
+67,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,M.C.G.,2003-04-26,Richmond 18.7 (115) def. Hawthorn 14.11 (95),210,20,,Richmond defeated Hawthorn by 20 points at M.C.G..
+68,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Docklands,2003-04-26,Carlton 18.14 (122) def. North Melbourne 16.17 (113),235,9,,Carlton defeated North Melbourne by 9 points at Docklands.
+69,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2003-04-26,Port Adelaide 12.6 (78) def. Adelaide 9.12 (66),144,12,,Port Adelaide defeated Adelaide by 12 points at Football Park.
+70,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2003-04-27,Brisbane Lions 15.16 (106) def. Western Bulldogs 12.7 (79),185,27,,Brisbane Lions defeated Western Bulldogs by 27 points at Gabba.
+71,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2003-04-27,West Coast 16.12 (108) def. Fremantle 10.13 (73),181,35,,West Coast defeated Fremantle by 35 points at Subiaco.
+72,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2003-04-27,St Kilda 18.11 (119) def. Geelong 11.8 (74),193,45,,St Kilda defeated Geelong by 45 points at Docklands.
+73,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,Docklands,2003-05-02,Adelaide 19.10 (124) def. North Melbourne 9.16 (70),194,54,,Adelaide defeated North Melbourne by 54 points at Docklands.
+74,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,2003-05-03,Hawthorn 11.8 (74) def. Carlton 9.9 (63),137,11,,Hawthorn defeated Carlton by 11 points at Princes Park.
+75,Regular Season,Melbourne,West Coast,Melbourne,West Coast,M.C.G.,2003-05-03,West Coast 19.13 (127) def. Melbourne 14.10 (94),221,33,,West Coast defeated Melbourne by 33 points at M.C.G..
+76,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Docklands,2003-05-03,Sydney 17.7 (109) def. Collingwood 13.11 (89),198,20,,Sydney defeated Collingwood by 20 points at Docklands.
+77,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2003-05-03,Port Adelaide 12.12 (84) def. Richmond 8.9 (57),141,27,,Port Adelaide defeated Richmond by 27 points at Football Park.
+78,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2003-05-04,Fremantle 20.11 (131) def. Essendon 15.10 (100),231,31,,Fremantle defeated Essendon by 31 points at Subiaco.
+79,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Docklands,2003-05-04,St Kilda 15.10 (100) def. Western Bulldogs 12.13 (85),185,15,,St Kilda defeated Western Bulldogs by 15 points at Docklands.
+80,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2003-05-04,Brisbane Lions 13.14 (92) def. Geelong 12.6 (78),170,14,,Brisbane Lions defeated Geelong by 14 points at Kardinia Park.
+81,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Docklands,2003-05-09,North Melbourne 18.9 (117) def. Hawthorn 13.11 (89),206,28,,North Melbourne defeated Hawthorn by 28 points at Docklands.
+82,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2003-05-10,West Coast 17.11 (113) def. Geelong 14.13 (97),210,16,,West Coast defeated Geelong by 16 points at Subiaco.
+83,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2003-05-10,Richmond 11.18 (84) def. Essendon 5.12 (42),126,42,,Richmond defeated Essendon by 42 points at M.C.G..
+84,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Docklands,2003-05-10,St Kilda 16.17 (113) def. Carlton 15.11 (101),214,12,,St Kilda defeated Carlton by 12 points at Docklands.
+85,Regular Season,Adelaide,Collingwood,Adelaide,Collingwood,Football Park,2003-05-10,Collingwood 18.6 (114) def. Adelaide 16.13 (109),223,5,,Collingwood defeated Adelaide by 5 points at Football Park.
+86,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2003-05-11,Sydney 15.8 (98) def. Brisbane Lions 11.13 (79),177,19,,Sydney defeated Brisbane Lions by 19 points at S.C.G..
+87,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Docklands,2003-05-11,Fremantle 23.17 (155) def. Western Bulldogs 10.12 (72),227,83,,Fremantle defeated Western Bulldogs by 83 points at Docklands.
+88,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,M.C.G.,2003-05-11,Melbourne 16.15 (111) def. Port Adelaide 12.12 (84),195,27,,Melbourne defeated Port Adelaide by 27 points at M.C.G..
+89,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,2003-05-16,Essendon 15.16 (106) def. Hawthorn 8.5 (53),159,53,,Essendon defeated Hawthorn by 53 points at M.C.G..
+90,Regular Season,Collingwood,West Coast,Collingwood,West Coast,Docklands,2003-05-17,West Coast 18.11 (119) def. Collingwood 15.13 (103),222,16,,West Coast defeated Collingwood by 16 points at Docklands.
+91,Regular Season,Port Adelaide,North Melbourne,Port Adelaide,North Melbourne,Football Park,2003-05-17,Port Adelaide 15.13 (103) def. North Melbourne 7.7 (49),152,54,,Port Adelaide defeated North Melbourne by 54 points at Football Park.
+92,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2003-05-17,Brisbane Lions 16.11 (107) def. Adelaide 12.17 (89),196,18,,Brisbane Lions defeated Adelaide by 18 points at Gabba.
+93,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2003-05-17,Richmond 17.10 (112) def. Melbourne 16.7 (103),215,9,,Richmond defeated Melbourne by 9 points at M.C.G..
+94,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,2003-05-18,Sydney 17.10 (112) def. Geelong 11.7 (73),185,39,,Sydney defeated Geelong by 39 points at S.C.G..
+95,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2003-05-18,Fremantle 18.15 (123) def. St Kilda 11.16 (82),205,41,,Fremantle defeated St Kilda by 41 points at Subiaco.
+96,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,2003-05-18,Carlton 15.17 (107) def. Western Bulldogs 14.16 (100),207,7,,Carlton defeated Western Bulldogs by 7 points at Princes Park.
+97,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2003-05-23,Port Adelaide 23.8 (146) def. Essendon 14.12 (96),242,50,,Port Adelaide defeated Essendon by 50 points at Docklands.
+98,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Princes Park,2003-05-24,Brisbane Lions 23.15 (153) def. Carlton 11.10 (76),229,77,,Brisbane Lions defeated Carlton by 77 points at Princes Park.
+99,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,M.C.G.,2003-05-24,Fremantle 16.5 (101) def. Melbourne 10.11 (71),172,30,,Fremantle defeated Melbourne by 30 points at M.C.G..
+100,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2003-05-24,West Coast 18.16 (124) def. Richmond 11.6 (72),196,52,,West Coast defeated Richmond by 52 points at Subiaco.
+101,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Docklands,2003-05-24,Collingwood 22.17 (149) def. St Kilda 12.12 (84),233,65,,Collingwood defeated St Kilda by 65 points at Docklands.
+102,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Docklands,2003-05-25,Geelong 16.13 (109) def. Hawthorn 11.9 (75),184,34,,Geelong defeated Hawthorn by 34 points at Docklands.
+103,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Manuka Oval,2003-05-25,North Melbourne 12.12 (84) def. Sydney 8.11 (59),143,25,,North Melbourne defeated Sydney by 25 points at Manuka Oval.
+104,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2003-05-25,Adelaide 16.13 (109) def. Western Bulldogs 14.9 (93),202,16,,Adelaide defeated Western Bulldogs by 16 points at Football Park.
+105,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2003-05-30,Port Adelaide 14.14 (98) def. Collingwood 10.13 (73),171,25,,Port Adelaide defeated Collingwood by 25 points at Football Park.
+106,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2003-05-31,Fremantle 19.13 (127) def. Carlton 15.9 (99),226,28,,Fremantle defeated Carlton by 28 points at Subiaco.
+107,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2003-05-31,North Melbourne 24.12 (156) def. Western Bulldogs 22.13 (145),301,11,,North Melbourne defeated Western Bulldogs by 11 points at Docklands.
+108,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Gabba,2003-05-31,Brisbane Lions 18.15 (123) def. Melbourne 9.9 (63),186,60,,Brisbane Lions defeated Melbourne by 60 points at Gabba.
+109,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,2003-05-31,Sydney 16.8 (104) def. Richmond 10.12 (72),176,32,,Sydney defeated Richmond by 32 points at M.C.G..
+110,Regular Season,Geelong,Adelaide,Geelong,Adelaide,Kardinia Park,2003-06-01,Adelaide 11.10 (76) def. Geelong 8.11 (59),135,17,,Adelaide defeated Geelong by 17 points at Kardinia Park.
+111,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2003-06-01,Essendon 19.14 (128) def. West Coast 16.10 (106),234,22,,Essendon defeated West Coast by 22 points at Docklands.
+112,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,M.C.G.,2003-06-01,St Kilda 17.16 (118) def. Hawthorn 14.6 (90),208,28,,St Kilda defeated Hawthorn by 28 points at M.C.G..
+113,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Docklands,2003-06-06,North Melbourne 13.14 (92) def. Richmond 13.11 (89),181,3,,North Melbourne defeated Richmond by 3 points at Docklands.
+114,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,M.C.G.,2003-06-07,Hawthorn 11.9 (75) def. Adelaide 10.10 (70),145,5,,Hawthorn defeated Adelaide by 5 points at M.C.G..
+115,Regular Season,St Kilda,Brisbane Lions,St Kilda,Brisbane Lions,Docklands,2003-06-07,St Kilda 13.12 (90) def. Brisbane Lions 13.7 (85),175,5,,St Kilda defeated Brisbane Lions by 5 points at Docklands.
+116,Regular Season,Sydney,Essendon,Sydney,Essendon,Stadium Australia,2003-06-07,Sydney 21.7 (133) def. Essendon 12.7 (79),212,54,,Sydney defeated Essendon by 54 points at Stadium Australia.
+117,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco,2003-06-08,West Coast 19.10 (124) drew with Western Bulldogs 19.10 (124),248,0,,West Coast and Western Bulldogs played out a draw at Subiaco.
+118,Regular Season,Geelong,Carlton,Geelong,Carlton,Docklands,2003-06-08,Geelong 17.13 (115) def. Carlton 12.3 (75),190,40,,Geelong defeated Carlton by 40 points at Docklands.
+119,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,2003-06-08,Port Adelaide 16.16 (112) def. Fremantle 9.9 (63),175,49,,Port Adelaide defeated Fremantle by 49 points at Football Park.
+120,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2003-06-09,Collingwood 20.13 (133) def. Melbourne 10.17 (77),210,56,,Collingwood defeated Melbourne by 56 points at M.C.G..
+121,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Docklands,2003-06-13,North Melbourne 14.12 (96) def. Essendon 13.10 (88),184,8,,North Melbourne defeated Essendon by 8 points at Docklands.
+122,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,York Park,2003-06-14,Port Adelaide 15.9 (99) def. St Kilda 7.15 (57),156,42,,Port Adelaide defeated St Kilda by 42 points at York Park.
+123,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2003-06-14,Carlton 14.9 (93) def. Richmond 12.14 (86),179,7,,Carlton defeated Richmond by 7 points at M.C.G..
+124,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2003-06-14,Fremantle 13.10 (88) def. Geelong 10.12 (72),160,16,,Fremantle defeated Geelong by 16 points at Subiaco.
+125,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,S.C.G.,2003-06-14,Sydney 19.13 (127) def. Western Bulldogs 9.9 (63),190,64,,Sydney defeated Western Bulldogs by 64 points at S.C.G..
+126,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2003-06-15,West Coast 24.16 (160) def. Brisbane Lions 13.13 (91),251,69,,West Coast defeated Brisbane Lions by 69 points at Gabba.
+127,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2003-06-15,Hawthorn 12.12 (84) def. Collingwood 6.15 (51),135,33,,Hawthorn defeated Collingwood by 33 points at M.C.G..
+128,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2003-06-15,Adelaide 21.12 (138) def. Melbourne 10.5 (65),203,73,,Adelaide defeated Melbourne by 73 points at Football Park.
+129,Regular Season,Essendon,Geelong,Essendon,Geelong,Docklands,2003-06-27,Essendon 20.9 (129) def. Geelong 15.3 (93),222,36,,Essendon defeated Geelong by 36 points at Docklands.
+130,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,2003-06-28,Melbourne 21.10 (136) def. St Kilda 14.10 (94),230,42,,Melbourne defeated St Kilda by 42 points at M.C.G..
+131,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,2003-06-28,Port Adelaide 14.15 (99) def. Sydney 8.12 (60),159,39,,Port Adelaide defeated Sydney by 39 points at Football Park.
+132,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2003-06-28,Collingwood 18.20 (128) def. Western Bulldogs 12.13 (85),213,43,,Collingwood defeated Western Bulldogs by 43 points at Docklands.
+133,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2003-06-28,Brisbane Lions 15.14 (104) def. Richmond 9.7 (61),165,43,,Brisbane Lions defeated Richmond by 43 points at Gabba.
+134,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,York Park,2003-06-29,Hawthorn 15.8 (98) def. Fremantle 10.8 (68),166,30,,Hawthorn defeated Fremantle by 30 points at York Park.
+135,Regular Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco,2003-06-29,West Coast 11.10 (76) def. North Melbourne 10.7 (67),143,9,,West Coast defeated North Melbourne by 9 points at Subiaco.
+136,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Princes Park,2003-06-29,Adelaide 13.14 (92) def. Carlton 7.8 (50),142,42,,Adelaide defeated Carlton by 42 points at Princes Park.
+137,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2003-07-04,Essendon 17.17 (119) def. St Kilda 7.9 (51),170,68,,Essendon defeated St Kilda by 68 points at Docklands.
+138,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2003-07-05,Fremantle 10.15 (75) def. Brisbane Lions 10.12 (72),147,3,,Fremantle defeated Brisbane Lions by 3 points at Subiaco.
+139,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2003-07-05,Hawthorn 23.16 (154) def. Western Bulldogs 12.11 (83),237,71,,Hawthorn defeated Western Bulldogs by 71 points at M.C.G..
+140,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2003-07-05,Collingwood 19.12 (126) def. North Melbourne 7.8 (50),176,76,,Collingwood defeated North Melbourne by 76 points at Docklands.
+141,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,2003-07-05,Adelaide 10.12 (72) def. Richmond 6.8 (44),116,28,,Adelaide defeated Richmond by 28 points at Football Park.
+142,Regular Season,Sydney,West Coast,Sydney,West Coast,S.C.G.,2003-07-06,Sydney 13.14 (92) def. West Coast 12.12 (84),176,8,,Sydney defeated West Coast by 8 points at S.C.G..
+143,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,2003-07-06,Melbourne 14.13 (97) def. Carlton 14.6 (90),187,7,,Melbourne defeated Carlton by 7 points at Princes Park.
+144,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Kardinia Park,2003-07-06,Geelong 10.10 (70) def. Port Adelaide 10.9 (69),139,1,,Geelong defeated Port Adelaide by 1 points at Kardinia Park.
+145,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,2003-07-11,Adelaide 13.12 (90) def. Essendon 7.7 (49),139,41,,Adelaide defeated Essendon by 41 points at Football Park.
+146,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,M.C.G.,2003-07-12,Collingwood 15.9 (99) def. Fremantle 7.16 (58),157,41,,Collingwood defeated Fremantle by 41 points at M.C.G..
+147,Regular Season,Richmond,Geelong,Richmond,Geelong,Docklands,2003-07-12,Geelong 15.11 (101) def. Richmond 15.7 (97),198,4,,Geelong defeated Richmond by 4 points at Docklands.
+148,Regular Season,West Coast,Carlton,West Coast,Carlton,Subiaco,2003-07-12,West Coast 28.19 (187) def. Carlton 10.11 (71),258,116,,West Coast defeated Carlton by 116 points at Subiaco.
+149,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2003-07-12,Sydney 15.22 (112) def. St Kilda 9.7 (61),173,51,,Sydney defeated St Kilda by 51 points at S.C.G..
+150,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,2003-07-13,Brisbane Lions 14.9 (93) def. Hawthorn 11.15 (81),174,12,,Brisbane Lions defeated Hawthorn by 12 points at Gabba.
+151,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Docklands,2003-07-13,Port Adelaide 15.18 (108) def. Western Bulldogs 14.9 (93),201,15,,Port Adelaide defeated Western Bulldogs by 15 points at Docklands.
+152,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,M.C.G.,2003-07-13,North Melbourne 15.11 (101) def. Melbourne 14.10 (94),195,7,,North Melbourne defeated Melbourne by 7 points at M.C.G..
+153,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2003-07-18,Collingwood 20.11 (131) def. Richmond 9.8 (62),193,69,,Collingwood defeated Richmond by 69 points at M.C.G..
+154,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,2003-07-19,Sydney 18.7 (115) def. Carlton 12.12 (84),199,31,,Sydney defeated Carlton by 31 points at Princes Park.
+155,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2003-07-19,Hawthorn 17.11 (113) def. Melbourne 15.16 (106),219,7,,Hawthorn defeated Melbourne by 7 points at M.C.G..
+156,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Docklands,2003-07-19,Essendon 14.10 (94) def. Brisbane Lions 12.14 (86),180,8,,Essendon defeated Brisbane Lions by 8 points at Docklands.
+157,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,2003-07-19,Port Adelaide 17.12 (114) def. West Coast 7.8 (50),164,64,,Port Adelaide defeated West Coast by 64 points at Football Park.
+158,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,2003-07-20,Western Bulldogs 15.9 (99) def. Geelong 11.15 (81),180,18,,Western Bulldogs defeated Geelong by 18 points at Kardinia Park.
+159,Regular Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco,2003-07-20,Fremantle 13.13 (91) def. Adelaide 13.12 (90),181,1,,Fremantle defeated Adelaide by 1 points at Subiaco.
+160,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Docklands,2003-07-20,St Kilda 21.6 (132) def. North Melbourne 19.13 (127),259,5,,St Kilda defeated North Melbourne by 5 points at Docklands.
+161,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco,2003-07-25,West Coast 14.14 (98) def. Hawthorn 5.12 (42),140,56,,West Coast defeated Hawthorn by 56 points at Subiaco.
+162,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Manuka Oval,2003-07-26,North Melbourne 16.8 (104) def. Geelong 12.14 (86),190,18,,North Melbourne defeated Geelong by 18 points at Manuka Oval.
+163,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,2003-07-26,Essendon 13.10 (88) def. Melbourne 10.11 (71),159,17,,Essendon defeated Melbourne by 17 points at M.C.G..
+164,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2003-07-26,Richmond 24.11 (155) def. Western Bulldogs 14.11 (95),250,60,,Richmond defeated Western Bulldogs by 60 points at Docklands.
+165,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2003-07-26,Port Adelaide 15.14 (104) def. Brisbane Lions 15.13 (103),207,1,,Port Adelaide defeated Brisbane Lions by 1 points at Gabba.
+166,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2003-07-27,Sydney 17.9 (111) def. Fremantle 14.13 (97),208,14,,Sydney defeated Fremantle by 14 points at S.C.G..
+167,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2003-07-27,Collingwood 20.15 (135) def. Carlton 8.14 (62),197,73,,Collingwood defeated Carlton by 73 points at M.C.G..
+168,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,2003-07-27,Adelaide 22.11 (143) def. St Kilda 13.8 (86),229,57,,Adelaide defeated St Kilda by 57 points at Football Park.
+169,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2003-08-01,Western Bulldogs 14.17 (101) def. Melbourne 12.8 (80),181,21,,Western Bulldogs defeated Melbourne by 21 points at Docklands.
+170,Regular Season,Fremantle,Richmond,Fremantle,Richmond,Subiaco,2003-08-02,Fremantle 15.14 (104) def. Richmond 11.15 (81),185,23,,Fremantle defeated Richmond by 23 points at Subiaco.
+171,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2003-08-02,Essendon 13.12 (90) def. Carlton 7.14 (56),146,34,,Essendon defeated Carlton by 34 points at M.C.G..
+172,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Docklands,2003-08-02,Collingwood 14.13 (97) def. Geelong 10.13 (73),170,24,,Collingwood defeated Geelong by 24 points at Docklands.
+173,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2003-08-02,Brisbane Lions 20.17 (137) def. North Melbourne 11.17 (83),220,54,,Brisbane Lions defeated North Melbourne by 54 points at Gabba.
+174,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,2003-08-03,Adelaide 14.13 (97) def. Sydney 14.9 (93),190,4,,Adelaide defeated Sydney by 4 points at Football Park.
+175,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2003-08-03,Port Adelaide 12.12 (84) def. Hawthorn 11.14 (80),164,4,,Port Adelaide defeated Hawthorn by 4 points at M.C.G..
+176,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2003-08-03,St Kilda 19.14 (128) def. West Coast 9.13 (67),195,61,,St Kilda defeated West Coast by 61 points at Docklands.
+177,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2003-08-08,Geelong 11.18 (84) def. Melbourne 6.9 (45),129,39,,Geelong defeated Melbourne by 39 points at M.C.G..
+178,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Subiaco,2003-08-09,Adelaide 13.13 (91) def. West Coast 10.7 (67),158,24,,Adelaide defeated West Coast by 24 points at Subiaco.
+179,Regular Season,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2003-08-09,Brisbane Lions 15.11 (101) def. Collingwood 8.14 (62),163,39,,Brisbane Lions defeated Collingwood by 39 points at M.C.G..
+180,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,2003-08-09,Hawthorn 17.8 (110) def. Sydney 14.9 (93),203,17,,Hawthorn defeated Sydney by 17 points at S.C.G..
+181,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Docklands,2003-08-09,St Kilda 20.10 (130) def. Richmond 7.8 (50),180,80,,St Kilda defeated Richmond by 80 points at Docklands.
+182,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2003-08-10,Port Adelaide 18.17 (125) def. Carlton 12.9 (81),206,44,,Port Adelaide defeated Carlton by 44 points at Football Park.
+183,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2003-08-10,Essendon 22.15 (147) def. Western Bulldogs 12.8 (80),227,67,,Essendon defeated Western Bulldogs by 67 points at Docklands.
+184,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,M.C.G.,2003-08-10,Fremantle 15.9 (99) def. North Melbourne 15.8 (98),197,1,,Fremantle defeated North Melbourne by 1 points at M.C.G..
+185,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,Docklands,2003-08-15,Collingwood 15.18 (108) def. Adelaide 11.5 (71),179,37,,Collingwood defeated Adelaide by 37 points at Docklands.
+186,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,2003-08-16,St Kilda 26.10 (166) def. Carlton 11.9 (75),241,91,,St Kilda defeated Carlton by 91 points at Princes Park.
+187,Regular Season,Geelong,West Coast,Geelong,West Coast,Kardinia Park,2003-08-16,Geelong 9.9 (63) drew with West Coast 9.9 (63),126,0,,Geelong and West Coast played out a draw at Kardinia Park.
+188,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Docklands,2003-08-16,Hawthorn 16.14 (110) def. North Melbourne 14.12 (96),206,14,,Hawthorn defeated North Melbourne by 14 points at Docklands.
+189,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2003-08-16,Port Adelaide 17.10 (112) def. Melbourne 15.8 (98),210,14,,Port Adelaide defeated Melbourne by 14 points at Football Park.
+190,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2003-08-17,Sydney 14.6 (90) def. Brisbane Lions 10.16 (76),166,14,,Sydney defeated Brisbane Lions by 14 points at Gabba.
+191,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Subiaco,2003-08-17,Fremantle 18.25 (133) def. Western Bulldogs 12.5 (77),210,56,,Fremantle defeated Western Bulldogs by 56 points at Subiaco.
+192,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2003-08-17,Essendon 13.14 (92) def. Richmond 7.11 (53),145,39,,Essendon defeated Richmond by 39 points at M.C.G..
+193,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,M.C.G.,2003-08-22,Hawthorn 20.18 (138) def. Carlton 10.4 (64),202,74,,Hawthorn defeated Carlton by 74 points at M.C.G..
+194,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2003-08-23,Essendon 20.13 (133) def. Fremantle 11.7 (73),206,60,,Essendon defeated Fremantle by 60 points at Docklands.
+195,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2003-08-23,North Melbourne 9.20 (74) def. Adelaide 10.4 (64),138,10,,North Melbourne defeated Adelaide by 10 points at Football Park.
+196,Regular Season,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,2003-08-23,Brisbane Lions 19.9 (123) def. Geelong 13.8 (86),209,37,,Brisbane Lions defeated Geelong by 37 points at Gabba.
+197,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Stadium Australia,2003-08-23,Collingwood 14.15 (99) def. Sydney 12.9 (81),180,18,,Collingwood defeated Sydney by 18 points at Stadium Australia.
+198,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,York Park,2003-08-24,St Kilda 13.17 (95) def. Western Bulldogs 3.12 (30),125,65,,St Kilda defeated Western Bulldogs by 65 points at York Park.
+199,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2003-08-24,West Coast 21.17 (143) def. Melbourne 14.7 (91),234,52,,West Coast defeated Melbourne by 52 points at Subiaco.
+200,Regular Season,Richmond,Port Adelaide,Richmond,Port Adelaide,Docklands,2003-08-24,Port Adelaide 18.16 (124) def. Richmond 16.8 (104),228,20,,Port Adelaide defeated Richmond by 20 points at Docklands.
+201,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2003-08-29,Collingwood 12.11 (83) def. Essendon 9.13 (67),150,16,,Collingwood defeated Essendon by 16 points at M.C.G..
+202,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,2003-08-30,Geelong 12.12 (84) def. St Kilda 9.11 (65),149,19,,Geelong defeated St Kilda by 19 points at Kardinia Park.
+203,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,2003-08-30,Sydney 14.10 (94) def. Melbourne 9.6 (60),154,34,,Sydney defeated Melbourne by 34 points at M.C.G..
+204,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Docklands,2003-08-30,Brisbane Lions 26.14 (170) def. Western Bulldogs 13.8 (86),256,84,,Brisbane Lions defeated Western Bulldogs by 84 points at Docklands.
+205,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2003-08-30,Fremantle 14.12 (96) def. West Coast 11.16 (82),178,14,,Fremantle defeated West Coast by 14 points at Subiaco.
+206,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2003-08-31,Port Adelaide 14.10 (94) def. Adelaide 12.6 (78),172,16,,Port Adelaide defeated Adelaide by 16 points at Football Park.
+207,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Docklands,2003-08-31,North Melbourne 28.19 (187) def. Carlton 9.9 (63),250,124,,North Melbourne defeated Carlton by 124 points at Docklands.
+208,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2003-08-31,Hawthorn 11.12 (78) def. Richmond 11.8 (74),152,4,,Hawthorn defeated Richmond by 4 points at M.C.G..
+209,Finals,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2003-09-05,Essendon 15.11 (101) def. Fremantle 8.9 (57),158,44,,Essendon defeated Fremantle by 44 points at Subiaco.
+210,Finals,Adelaide,West Coast,Adelaide,West Coast,Football Park,2003-09-06,Adelaide 16.17 (113) def. West Coast 8.9 (57),170,56,,Adelaide defeated West Coast by 56 points at Football Park.
+211,Finals,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2003-09-06,Collingwood 9.12 (66) def. Brisbane Lions 7.9 (51),117,15,,Collingwood defeated Brisbane Lions by 15 points at M.C.G..
+212,Finals,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,2003-09-07,Sydney 15.10 (100) def. Port Adelaide 13.10 (88),188,12,,Sydney defeated Port Adelaide by 12 points at Football Park.
+213,Finals,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2003-09-12,Brisbane Lions 18.16 (124) def. Adelaide 12.10 (82),206,42,,Brisbane Lions defeated Adelaide by 42 points at Gabba.
+214,Finals,Port Adelaide,Essendon,Port Adelaide,Essendon,Football Park,2003-09-13,Port Adelaide 12.11 (83) def. Essendon 6.8 (44),127,39,,Port Adelaide defeated Essendon by 39 points at Football Park.
+215,Finals,Collingwood,Port Adelaide,Collingwood,Port Adelaide,M.C.G.,2003-09-20,Collingwood 17.10 (112) def. Port Adelaide 9.14 (68),180,44,,Collingwood defeated Port Adelaide by 44 points at M.C.G..
+216,Finals,Sydney,Brisbane Lions,Sydney,Brisbane Lions,Stadium Australia,2003-09-20,Brisbane Lions 14.16 (100) def. Sydney 8.8 (56),156,44,,Brisbane Lions defeated Sydney by 44 points at Stadium Australia.
+217,Grand Final,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2003-09-27,Brisbane Lions 20.14 (134) def. Collingwood 12.12 (84),218,50,,Brisbane Lions defeated Collingwood by 50 points at M.C.G..

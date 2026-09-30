@@ -1,186 +1,218 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
-1,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2004-03-26,Richmond 14.13 (97) def. Collingwood 8.9 (57),154,40,,Richmond defeated Collingwood by 40 points at M.C.G..
-2,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2004-03-27,Hawthorn 17.17 (119) def. Melbourne 10.10 (70),189,49,,Hawthorn defeated Melbourne by 49 points at M.C.G..
-3,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2004-03-27,Fremantle 15.17 (107) def. Carlton 8.12 (60),167,47,,Fremantle defeated Carlton by 47 points at Subiaco.
-4,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2004-03-27,St Kilda 19.8 (122) def. Geelong 9.7 (61),183,61,,St Kilda defeated Geelong by 61 points at Docklands.
-5,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2004-03-27,Brisbane Lions 11.14 (80) def. Sydney 11.12 (78),158,2,,Brisbane Lions defeated Sydney by 2 points at Gabba.
-6,Regular Season,Port Adelaide,Essendon,Port Adelaide,Essendon,Football Park,2004-03-28,Port Adelaide 23.20 (158) def. Essendon 8.14 (62),220,96,,Port Adelaide defeated Essendon by 96 points at Football Park.
-7,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,M.C.G.,2004-03-28,North Melbourne 23.11 (149) def. Adelaide 10.14 (74),223,75,,North Melbourne defeated Adelaide by 75 points at M.C.G..
-8,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Docklands,2004-03-28,West Coast 22.12 (144) def. Western Bulldogs 20.17 (137),281,7,,West Coast defeated Western Bulldogs by 7 points at Docklands.
-9,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2004-04-02,Melbourne 20.15 (135) def. Richmond 12.4 (76),211,59,,Melbourne defeated Richmond by 59 points at M.C.G..
-10,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,2004-04-03,Collingwood 15.16 (106) def. Western Bulldogs 13.19 (97),203,9,,Collingwood defeated Western Bulldogs by 9 points at M.C.G..
-11,Regular Season,Adelaide,Brisbane Lions,Adelaide,Brisbane Lions,Football Park,2004-04-03,Brisbane Lions 15.14 (104) def. Adelaide 11.17 (83),187,21,,Brisbane Lions defeated Adelaide by 21 points at Football Park.
-12,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2004-04-03,Port Adelaide 18.10 (118) def. West Coast 17.13 (115),233,3,,Port Adelaide defeated West Coast by 3 points at Subiaco.
-13,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2004-04-03,St Kilda 13.16 (94) def. Essendon 8.12 (60),154,34,,St Kilda defeated Essendon by 34 points at Docklands.
-14,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2004-04-04,Sydney 15.12 (102) def. Fremantle 10.11 (71),173,31,,Sydney defeated Fremantle by 31 points at S.C.G..
-15,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,2004-04-04,Carlton 16.8 (104) def. Geelong 6.14 (50),154,54,,Carlton defeated Geelong by 54 points at Princes Park.
-16,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,M.C.G.,2004-04-04,North Melbourne 15.13 (103) def. Hawthorn 11.8 (74),177,29,,North Melbourne defeated Hawthorn by 29 points at M.C.G..
-17,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2004-04-08,Brisbane Lions 21.11 (137) def. Collingwood 12.5 (77),214,60,,Brisbane Lions defeated Collingwood by 60 points at Gabba.
-18,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,M.C.G.,2004-04-10,North Melbourne 17.9 (111) def. Carlton 16.10 (106),217,5,,North Melbourne defeated Carlton by 5 points at M.C.G..
-19,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2004-04-10,Essendon 22.5 (137) def. West Coast 20.11 (131),268,6,,Essendon defeated West Coast by 6 points at Docklands.
-20,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,2004-04-10,Sydney 10.13 (73) def. Geelong 10.7 (67),140,6,,Sydney defeated Geelong by 6 points at S.C.G..
-21,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2004-04-11,Port Adelaide 26.15 (171) def. Hawthorn 13.12 (90),261,81,,Port Adelaide defeated Hawthorn by 81 points at Football Park.
-22,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,M.C.G.,2004-04-11,Melbourne 12.25 (97) def. Western Bulldogs 12.15 (87),184,10,,Melbourne defeated Western Bulldogs by 10 points at M.C.G..
-23,Regular Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco,2004-04-11,Fremantle 10.13 (73) def. Adelaide 8.16 (64),137,9,,Fremantle defeated Adelaide by 9 points at Subiaco.
-24,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2004-04-12,St Kilda 16.18 (114) def. Richmond 10.9 (69),183,45,,St Kilda defeated Richmond by 45 points at Docklands.
-25,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2004-04-16,Essendon 17.15 (117) def. Carlton 12.8 (80),197,37,,Essendon defeated Carlton by 37 points at M.C.G..
-26,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,M.C.G.,2004-04-17,Melbourne 18.16 (124) def. Port Adelaide 10.11 (71),195,53,,Melbourne defeated Port Adelaide by 53 points at M.C.G..
-27,Regular Season,West Coast,Brisbane Lions,West Coast,Brisbane Lions,Subiaco,2004-04-17,West Coast 12.7 (79) def. Brisbane Lions 10.16 (76),155,3,,West Coast defeated Brisbane Lions by 3 points at Subiaco.
-28,Regular Season,Geelong,Richmond,Geelong,Richmond,Docklands,2004-04-17,Geelong 19.13 (127) def. Richmond 11.12 (78),205,49,,Geelong defeated Richmond by 49 points at Docklands.
-29,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,2004-04-17,St Kilda 18.5 (113) def. Adelaide 15.8 (98),211,15,,St Kilda defeated Adelaide by 15 points at Football Park.
-30,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Manuka Oval,2004-04-18,Sydney 18.13 (121) def. North Melbourne 10.10 (70),191,51,,Sydney defeated North Melbourne by 51 points at Manuka Oval.
-31,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,Docklands,2004-04-18,Fremantle 12.16 (88) def. Collingwood 7.12 (54),142,34,,Fremantle defeated Collingwood by 34 points at Docklands.
-32,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2004-04-18,Western Bulldogs 16.13 (109) def. Hawthorn 14.13 (97),206,12,,Western Bulldogs defeated Hawthorn by 12 points at M.C.G..
-33,Regular Season,Richmond,Adelaide,Richmond,Adelaide,Docklands,2004-04-23,Adelaide 21.8 (134) def. Richmond 9.5 (59),193,75,,Adelaide defeated Richmond by 75 points at Docklands.
-34,Regular Season,Carlton,West Coast,Carlton,West Coast,Princes Park,2004-04-24,Carlton 14.8 (92) def. West Coast 6.7 (43),135,49,,Carlton defeated West Coast by 49 points at Princes Park.
-35,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Docklands,2004-04-24,St Kilda 20.10 (130) def. North Melbourne 8.17 (65),195,65,,St Kilda defeated North Melbourne by 65 points at Docklands.
-36,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,2004-04-24,Brisbane Lions 14.26 (110) def. Hawthorn 9.8 (62),172,48,,Brisbane Lions defeated Hawthorn by 48 points at Gabba.
-37,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Stadium Australia,2004-04-24,Melbourne 17.9 (111) def. Sydney 15.9 (99),210,12,,Melbourne defeated Sydney by 12 points at Stadium Australia.
-38,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2004-04-25,Essendon 17.10 (112) def. Collingwood 11.13 (79),191,33,,Essendon defeated Collingwood by 33 points at M.C.G..
-39,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2004-04-25,Fremantle 18.9 (117) def. Geelong 14.7 (91),208,26,,Fremantle defeated Geelong by 26 points at Subiaco.
-40,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Football Park,2004-04-25,Port Adelaide 17.17 (119) def. Western Bulldogs 7.22 (64),183,55,,Port Adelaide defeated Western Bulldogs by 55 points at Football Park.
-41,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Docklands,2004-04-30,Richmond 12.12 (84) def. Hawthorn 13.5 (83),167,1,,Richmond defeated Hawthorn by 1 points at Docklands.
-42,Regular Season,Essendon,Sydney,Essendon,Sydney,M.C.G.,2004-05-01,Essendon 16.12 (108) def. Sydney 15.8 (98),206,10,,Essendon defeated Sydney by 10 points at M.C.G..
-43,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Manuka Oval,2004-05-01,Western Bulldogs 19.6 (120) def. North Melbourne 18.11 (119),239,1,,Western Bulldogs defeated North Melbourne by 1 points at Manuka Oval.
-44,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2004-05-01,Fremantle 12.11 (83) def. West Coast 11.7 (73),156,10,,Fremantle defeated West Coast by 10 points at Subiaco.
-45,Regular Season,St Kilda,Brisbane Lions,St Kilda,Brisbane Lions,Docklands,2004-05-01,St Kilda 13.14 (92) def. Brisbane Lions 14.7 (91),183,1,,St Kilda defeated Brisbane Lions by 1 points at Docklands.
-46,Regular Season,Geelong,Adelaide,Geelong,Adelaide,Kardinia Park,2004-05-02,Geelong 15.11 (101) def. Adelaide 8.10 (58),159,43,,Geelong defeated Adelaide by 43 points at Kardinia Park.
-47,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,2004-05-02,Melbourne 25.10 (160) def. Carlton 8.7 (55),215,105,,Melbourne defeated Carlton by 105 points at M.C.G..
-48,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2004-05-02,Port Adelaide 14.17 (101) def. Collingwood 12.12 (84),185,17,,Port Adelaide defeated Collingwood by 17 points at Football Park.
-49,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2004-05-07,Essendon 18.13 (121) def. Western Bulldogs 14.11 (95),216,26,,Essendon defeated Western Bulldogs by 26 points at Docklands.
-50,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2004-05-08,Carlton 13.11 (89) def. Collingwood 11.14 (80),169,9,,Carlton defeated Collingwood by 9 points at M.C.G..
-51,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2004-05-08,St Kilda 14.11 (95) def. Fremantle 11.6 (72),167,23,,St Kilda defeated Fremantle by 23 points at Subiaco.
-52,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2004-05-08,Brisbane Lions 18.12 (120) def. North Melbourne 11.10 (76),196,44,,Brisbane Lions defeated North Melbourne by 44 points at Docklands.
-53,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2004-05-08,Adelaide 17.17 (119) def. Port Adelaide 13.9 (87),206,32,,Adelaide defeated Port Adelaide by 32 points at Football Park.
-54,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,2004-05-09,Richmond 10.7 (67) def. Sydney 8.6 (54),121,13,,Richmond defeated Sydney by 13 points at S.C.G..
-55,Regular Season,Melbourne,West Coast,Melbourne,West Coast,M.C.G.,2004-05-09,Melbourne 18.14 (122) def. West Coast 11.7 (73),195,49,,Melbourne defeated West Coast by 49 points at M.C.G..
-56,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Docklands,2004-05-09,Geelong 15.18 (108) def. Hawthorn 8.4 (52),160,56,,Geelong defeated Hawthorn by 56 points at Docklands.
-57,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,2004-05-14,Essendon 20.15 (135) def. Adelaide 12.12 (84),219,51,,Essendon defeated Adelaide by 51 points at Football Park.
-58,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,2004-05-15,Richmond 15.15 (105) def. Western Bulldogs 10.22 (82),187,23,,Richmond defeated Western Bulldogs by 23 points at M.C.G..
-59,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,2004-05-15,West Coast 18.16 (124) def. Sydney 15.7 (97),221,27,,West Coast defeated Sydney by 27 points at Subiaco.
-60,Regular Season,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2004-05-15,Brisbane Lions 21.14 (140) def. Carlton 16.6 (102),242,38,,Brisbane Lions defeated Carlton by 38 points at Gabba.
-61,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Docklands,2004-05-15,St Kilda 21.12 (138) def. Collingwood 13.13 (91),229,47,,St Kilda defeated Collingwood by 47 points at Docklands.
-62,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,York Park,2004-05-16,Hawthorn 10.10 (70) def. Fremantle 8.13 (61),131,9,,Hawthorn defeated Fremantle by 9 points at York Park.
-63,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,2004-05-16,Geelong 15.11 (101) def. Melbourne 12.15 (87),188,14,,Geelong defeated Melbourne by 14 points at Kardinia Park.
-64,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Docklands,2004-05-16,North Melbourne 21.14 (140) def. Port Adelaide 7.6 (48),188,92,,North Melbourne defeated Port Adelaide by 92 points at Docklands.
-65,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,Docklands,2004-05-21,Collingwood 9.14 (68) def. Adelaide 9.11 (65),133,3,,Collingwood defeated Adelaide by 3 points at Docklands.
-66,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,2004-05-22,Melbourne 13.18 (96) def. North Melbourne 11.12 (78),174,18,,Melbourne defeated North Melbourne by 18 points at M.C.G..
-67,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2004-05-22,Fremantle 20.17 (137) def. Brisbane Lions 11.12 (78),215,59,,Fremantle defeated Brisbane Lions by 59 points at Subiaco.
-68,Regular Season,Geelong,Essendon,Geelong,Essendon,Docklands,2004-05-22,Geelong 18.12 (120) def. Essendon 14.13 (97),217,23,,Geelong defeated Essendon by 23 points at Docklands.
-69,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2004-05-22,Port Adelaide 19.14 (128) def. Richmond 7.8 (50),178,78,,Port Adelaide defeated Richmond by 78 points at Football Park.
-70,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,2004-05-23,Sydney 11.14 (80) def. Hawthorn 12.7 (79),159,1,,Sydney defeated Hawthorn by 1 points at S.C.G..
-71,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,2004-05-23,Western Bulldogs 16.8 (104) def. Carlton 12.7 (79),183,25,,Western Bulldogs defeated Carlton by 25 points at Princes Park.
-72,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2004-05-23,St Kilda 26.13 (169) def. West Coast 9.14 (68),237,101,,St Kilda defeated West Coast by 101 points at Docklands.
-73,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2004-05-28,Essendon 17.13 (115) def. Fremantle 12.13 (85),200,30,,Essendon defeated Fremantle by 30 points at Docklands.
-74,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,M.C.G.,2004-05-29,Adelaide 20.13 (133) def. Hawthorn 6.11 (47),180,86,,Adelaide defeated Hawthorn by 86 points at M.C.G..
-75,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2004-05-29,West Coast 14.16 (100) def. Richmond 9.9 (63),163,37,,West Coast defeated Richmond by 37 points at Subiaco.
-76,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2004-05-29,Collingwood 13.14 (92) def. North Melbourne 9.11 (65),157,27,,Collingwood defeated North Melbourne by 27 points at Docklands.
-77,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,S.C.G.,2004-05-29,Sydney 12.21 (93) def. Western Bulldogs 10.7 (67),160,26,,Sydney defeated Western Bulldogs by 26 points at S.C.G..
-78,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Gabba,2004-05-30,Brisbane Lions 18.15 (123) def. Melbourne 12.11 (83),206,40,,Brisbane Lions defeated Melbourne by 40 points at Gabba.
-79,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Docklands,2004-05-30,St Kilda 31.10 (196) def. Carlton 13.10 (88),284,108,,St Kilda defeated Carlton by 108 points at Docklands.
-80,Regular Season,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,2004-05-30,Port Adelaide 18.8 (116) def. Geelong 17.10 (112),228,4,,Port Adelaide defeated Geelong by 4 points at Football Park.
-81,Regular Season,Collingwood,West Coast,Collingwood,West Coast,Docklands,2004-06-04,Collingwood 14.9 (93) def. West Coast 11.9 (75),168,18,,Collingwood defeated West Coast by 18 points at Docklands.
-82,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,2004-06-05,Essendon 24.10 (154) def. Hawthorn 12.8 (80),234,74,,Essendon defeated Hawthorn by 74 points at M.C.G..
-83,Regular Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,2004-06-05,Carlton 14.7 (91) def. Adelaide 12.15 (87),178,4,,Carlton defeated Adelaide by 4 points at Football Park.
-84,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Docklands,2004-06-05,North Melbourne 24.10 (154) def. Richmond 12.8 (80),234,74,,North Melbourne defeated Richmond by 74 points at Docklands.
-85,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2004-06-05,Brisbane Lions 18.15 (123) def. Port Adelaide 12.14 (86),209,37,,Brisbane Lions defeated Port Adelaide by 37 points at Gabba.
-86,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2004-06-06,Sydney 17.10 (112) def. St Kilda 11.10 (76),188,36,,Sydney defeated St Kilda by 36 points at S.C.G..
-87,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Docklands,2004-06-06,Geelong 17.11 (113) def. Western Bulldogs 10.7 (67),180,46,,Geelong defeated Western Bulldogs by 46 points at Docklands.
-88,Regular Season,Fremantle,Melbourne,Fremantle,Melbourne,Subiaco,2004-06-06,Melbourne 13.15 (93) def. Fremantle 9.8 (62),155,31,,Melbourne defeated Fremantle by 31 points at Subiaco.
-89,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Docklands,2004-06-11,Carlton 15.10 (100) def. Hawthorn 14.4 (88),188,12,,Carlton defeated Hawthorn by 12 points at Docklands.
-90,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,M.C.G.,2004-06-12,Western Bulldogs 15.13 (103) def. St Kilda 11.14 (80),183,23,,Western Bulldogs defeated St Kilda by 23 points at M.C.G..
-91,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Subiaco,2004-06-12,West Coast 15.18 (108) def. Adelaide 11.10 (76),184,32,,West Coast defeated Adelaide by 32 points at Subiaco.
-92,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Docklands,2004-06-12,Brisbane Lions 25.12 (162) def. Essendon 14.12 (96),258,66,,Brisbane Lions defeated Essendon by 66 points at Docklands.
-93,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,2004-06-13,Port Adelaide 20.12 (132) def. Sydney 8.12 (60),192,72,,Port Adelaide defeated Sydney by 72 points at Football Park.
-94,Regular Season,Richmond,Fremantle,Richmond,Fremantle,M.C.G.,2004-06-13,Fremantle 12.9 (81) def. Richmond 10.11 (71),152,10,,Fremantle defeated Richmond by 10 points at M.C.G..
-95,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,2004-06-13,Geelong 14.10 (94) def. North Melbourne 12.12 (84),178,10,,Geelong defeated North Melbourne by 10 points at Kardinia Park.
-96,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2004-06-14,Melbourne 12.10 (82) def. Collingwood 11.7 (73),155,9,,Melbourne defeated Collingwood by 9 points at M.C.G..
-97,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Docklands,2004-06-18,St Kilda 19.13 (127) def. Hawthorn 9.7 (61),188,66,,St Kilda defeated Hawthorn by 66 points at Docklands.
-98,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2004-06-19,Geelong 13.14 (92) def. Brisbane Lions 9.11 (65),157,27,,Geelong defeated Brisbane Lions by 27 points at Kardinia Park.
-99,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Subiaco,2004-06-19,Port Adelaide 17.10 (112) def. Fremantle 16.6 (102),214,10,,Port Adelaide defeated Fremantle by 10 points at Subiaco.
-100,Regular Season,Richmond,Carlton,Richmond,Carlton,Docklands,2004-06-19,Carlton 18.16 (124) def. Richmond 14.9 (93),217,31,,Carlton defeated Richmond by 31 points at Docklands.
-101,Regular Season,North Melbourne,West Coast,North Melbourne,West Coast,Manuka Oval,2004-06-20,North Melbourne 16.12 (108) def. West Coast 11.9 (75),183,33,,North Melbourne defeated West Coast by 33 points at Manuka Oval.
-102,Regular Season,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,2004-06-20,Melbourne 13.17 (95) def. Essendon 10.9 (69),164,26,,Melbourne defeated Essendon by 26 points at M.C.G..
-103,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2004-06-20,Adelaide 20.13 (133) def. Western Bulldogs 15.11 (101),234,32,,Adelaide defeated Western Bulldogs by 32 points at Football Park.
-104,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Stadium Australia,2004-06-26,Sydney 13.7 (85) def. Collingwood 11.13 (79),164,6,,Sydney defeated Collingwood by 6 points at Stadium Australia.
-105,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Docklands,2004-07-02,North Melbourne 14.16 (100) def. Essendon 12.7 (79),179,21,,North Melbourne defeated Essendon by 21 points at Docklands.
-106,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,2004-07-03,Sydney 15.5 (95) def. Carlton 12.12 (84),179,11,,Sydney defeated Carlton by 11 points at Princes Park.
-107,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2004-07-03,Collingwood 20.20 (140) def. Hawthorn 11.9 (75),215,65,,Collingwood defeated Hawthorn by 65 points at M.C.G..
-108,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2004-07-03,West Coast 7.9 (51) def. Geelong 7.7 (49),100,2,,West Coast defeated Geelong by 2 points at Subiaco.
-109,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2004-07-03,Brisbane Lions 17.12 (114) def. Richmond 14.12 (96),210,18,,Brisbane Lions defeated Richmond by 18 points at Gabba.
-110,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,York Park,2004-07-04,Port Adelaide 14.9 (93) def. St Kilda 7.5 (47),140,46,,Port Adelaide defeated St Kilda by 46 points at York Park.
-111,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Docklands,2004-07-04,Fremantle 18.9 (117) def. Western Bulldogs 10.16 (76),193,41,,Fremantle defeated Western Bulldogs by 41 points at Docklands.
-112,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2004-07-04,Adelaide 22.13 (145) def. Melbourne 10.13 (73),218,72,,Adelaide defeated Melbourne by 72 points at Football Park.
-113,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Docklands,2004-07-09,Geelong 12.22 (94) def. Collingwood 9.11 (65),159,29,,Geelong defeated Collingwood by 29 points at Docklands.
-114,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,York Park,2004-07-10,West Coast 12.14 (86) def. Hawthorn 12.10 (82),168,4,,West Coast defeated Hawthorn by 4 points at York Park.
-115,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2004-07-10,Essendon 24.11 (155) def. Richmond 11.11 (77),232,78,,Essendon defeated Richmond by 78 points at M.C.G..
-116,Regular Season,Fremantle,North Melbourne,Fremantle,North Melbourne,Subiaco,2004-07-10,North Melbourne 14.12 (96) def. Fremantle 12.7 (79),175,17,,North Melbourne defeated Fremantle by 17 points at Subiaco.
-117,Regular Season,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,2004-07-10,Sydney 8.10 (58) def. Adelaide 6.9 (45),103,13,,Sydney defeated Adelaide by 13 points at S.C.G..
-118,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2004-07-11,Brisbane Lions 20.16 (136) def. Western Bulldogs 10.8 (68),204,68,,Brisbane Lions defeated Western Bulldogs by 68 points at Gabba.
-119,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,2004-07-11,Melbourne 23.8 (146) def. St Kilda 13.11 (89),235,57,,Melbourne defeated St Kilda by 57 points at M.C.G..
-120,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2004-07-11,Port Adelaide 18.15 (123) def. Carlton 5.10 (40),163,83,,Port Adelaide defeated Carlton by 83 points at Football Park.
-121,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,2004-07-16,West Coast 18.9 (117) def. Essendon 10.13 (73),190,44,,West Coast defeated Essendon by 44 points at Subiaco.
-122,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,2004-07-17,Carlton 9.16 (70) def. North Melbourne 9.8 (62),132,8,,Carlton defeated North Melbourne by 8 points at Princes Park.
-123,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Docklands,2004-07-17,St Kilda 16.9 (105) def. Richmond 9.7 (61),166,44,,St Kilda defeated Richmond by 44 points at Docklands.
-124,Regular Season,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2004-07-17,Brisbane Lions 16.13 (109) def. Collingwood 11.7 (73),182,36,,Brisbane Lions defeated Collingwood by 36 points at M.C.G..
-125,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2004-07-17,Fremantle 14.8 (92) def. Adelaide 12.8 (80),172,12,,Fremantle defeated Adelaide by 12 points at Football Park.
-126,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,2004-07-18,Geelong 11.11 (77) def. Sydney 9.8 (62),139,15,,Geelong defeated Sydney by 15 points at Kardinia Park.
-127,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,Docklands,2004-07-18,Melbourne 12.21 (93) def. Western Bulldogs 7.13 (55),148,38,,Melbourne defeated Western Bulldogs by 38 points at Docklands.
-128,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2004-07-18,Port Adelaide 15.15 (105) def. Hawthorn 7.11 (53),158,52,,Port Adelaide defeated Hawthorn by 52 points at M.C.G..
-129,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2004-07-23,St Kilda 20.7 (127) def. Essendon 14.8 (92),219,35,,St Kilda defeated Essendon by 35 points at Docklands.
-130,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,M.C.G.,2004-07-24,North Melbourne 22.11 (143) def. Hawthorn 9.9 (63),206,80,,North Melbourne defeated Hawthorn by 80 points at M.C.G..
-131,Regular Season,Fremantle,Sydney,Fremantle,Sydney,Subiaco,2004-07-24,Fremantle 18.10 (118) def. Sydney 14.7 (91),209,27,,Fremantle defeated Sydney by 27 points at Subiaco.
-132,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2004-07-24,Brisbane Lions 29.15 (189) def. Adelaide 6.12 (48),237,141,,Brisbane Lions defeated Adelaide by 141 points at Gabba.
-133,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2004-07-24,Collingwood 17.13 (115) def. Western Bulldogs 8.18 (66),181,49,,Collingwood defeated Western Bulldogs by 49 points at Docklands.
-134,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,2004-07-25,Port Adelaide 16.6 (102) def. West Coast 9.22 (76),178,26,,Port Adelaide defeated West Coast by 26 points at Football Park.
-135,Regular Season,Geelong,Carlton,Geelong,Carlton,Docklands,2004-07-25,Geelong 18.23 (131) def. Carlton 11.8 (74),205,57,,Geelong defeated Carlton by 57 points at Docklands.
-136,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2004-07-25,Melbourne 19.12 (126) def. Richmond 10.10 (70),196,56,,Melbourne defeated Richmond by 56 points at M.C.G..
-137,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2004-07-30,Adelaide 5.19 (49) def. North Melbourne 5.12 (42),91,7,,Adelaide defeated North Melbourne by 7 points at Football Park.
-138,Regular Season,Carlton,Fremantle,Carlton,Fremantle,Princes Park,2004-07-31,Fremantle 16.15 (111) def. Carlton 9.9 (63),174,48,,Fremantle defeated Carlton by 48 points at Princes Park.
-139,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,2004-07-31,Collingwood 15.13 (103) def. Richmond 14.14 (98),201,5,,Collingwood defeated Richmond by 5 points at M.C.G..
-140,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2004-07-31,Essendon 18.11 (119) def. Port Adelaide 11.13 (79),198,40,,Essendon defeated Port Adelaide by 40 points at Docklands.
-141,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2004-07-31,Sydney 12.11 (83) def. Brisbane Lions 7.9 (51),134,32,,Sydney defeated Brisbane Lions by 32 points at S.C.G..
-142,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,2004-08-01,Geelong 15.11 (101) def. St Kilda 15.4 (94),195,7,,Geelong defeated St Kilda by 7 points at Kardinia Park.
-143,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2004-08-01,Melbourne 15.17 (107) def. Hawthorn 9.9 (63),170,44,,Melbourne defeated Hawthorn by 44 points at M.C.G..
-144,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco,2004-08-01,West Coast 15.16 (106) def. Western Bulldogs 8.9 (57),163,49,,West Coast defeated Western Bulldogs by 49 points at Subiaco.
-145,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Subiaco,2004-08-06,Collingwood 14.22 (106) def. Fremantle 11.7 (73),179,33,,Collingwood defeated Fremantle by 33 points at Subiaco.
-146,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,York Park,2004-08-07,St Kilda 14.7 (91) def. Adelaide 10.8 (68),159,23,,St Kilda defeated Adelaide by 23 points at York Park.
-147,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2004-08-07,Carlton 10.14 (74) def. Essendon 8.9 (57),131,17,,Carlton defeated Essendon by 17 points at M.C.G..
-148,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Docklands,2004-08-07,Hawthorn 19.6 (120) def. Western Bulldogs 16.13 (109),229,11,,Hawthorn defeated Western Bulldogs by 11 points at Docklands.
-149,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,2004-08-07,North Melbourne 17.16 (118) def. Sydney 18.4 (112),230,6,,North Melbourne defeated Sydney by 6 points at S.C.G..
-150,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2004-08-08,West Coast 12.15 (87) def. Brisbane Lions 10.13 (73),160,14,,West Coast defeated Brisbane Lions by 14 points at Gabba.
-151,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,2004-08-08,Geelong 16.18 (114) def. Richmond 11.17 (83),197,31,,Geelong defeated Richmond by 31 points at M.C.G..
-152,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2004-08-08,Port Adelaide 18.17 (125) def. Melbourne 6.16 (52),177,73,,Port Adelaide defeated Melbourne by 73 points at Football Park.
-153,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2004-08-13,Essendon 18.13 (121) def. Collingwood 13.9 (87),208,34,,Essendon defeated Collingwood by 34 points at M.C.G..
-154,Regular Season,Geelong,Fremantle,Geelong,Fremantle,Kardinia Park,2004-08-14,Geelong 9.21 (75) def. Fremantle 3.7 (25),100,50,,Geelong defeated Fremantle by 50 points at Kardinia Park.
-155,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,M.C.G.,2004-08-14,Brisbane Lions 8.18 (66) def. Hawthorn 6.7 (43),109,23,,Brisbane Lions defeated Hawthorn by 23 points at M.C.G..
-156,Regular Season,Melbourne,Sydney,Melbourne,Sydney,Docklands,2004-08-14,Sydney 10.7 (67) def. Melbourne 7.4 (46),113,21,,Sydney defeated Melbourne by 21 points at Docklands.
-157,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Marrara Oval,2004-08-14,Port Adelaide 23.9 (147) def. Western Bulldogs 9.7 (61),208,86,,Port Adelaide defeated Western Bulldogs by 86 points at Marrara Oval.
-158,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,2004-08-15,Adelaide 21.12 (138) def. Richmond 13.8 (86),224,52,,Adelaide defeated Richmond by 52 points at Football Park.
-159,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Docklands,2004-08-15,St Kilda 23.9 (147) def. North Melbourne 15.6 (96),243,51,,St Kilda defeated North Melbourne by 51 points at Docklands.
-160,Regular Season,West Coast,Carlton,West Coast,Carlton,Subiaco,2004-08-15,West Coast 15.21 (111) def. Carlton 6.13 (49),160,62,,West Coast defeated Carlton by 62 points at Subiaco.
-161,Regular Season,Collingwood,Port Adelaide,Collingwood,Port Adelaide,M.C.G.,2004-08-20,Port Adelaide 16.11 (107) def. Collingwood 9.16 (70),177,37,,Port Adelaide defeated Collingwood by 37 points at M.C.G..
-162,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,2004-08-21,Carlton 14.9 (93) def. Melbourne 8.14 (62),155,31,,Carlton defeated Melbourne by 31 points at Princes Park.
-163,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2004-08-21,Adelaide 15.19 (109) def. Geelong 12.15 (87),196,22,,Adelaide defeated Geelong by 22 points at Football Park.
-164,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2004-08-21,Western Bulldogs 21.10 (136) def. North Melbourne 15.16 (106),242,30,,Western Bulldogs defeated North Melbourne by 30 points at Docklands.
-165,Regular Season,Sydney,Essendon,Sydney,Essendon,Stadium Australia,2004-08-21,Sydney 17.8 (110) def. Essendon 12.18 (90),200,20,,Sydney defeated Essendon by 20 points at Stadium Australia.
-166,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2004-08-22,Brisbane Lions 20.10 (130) def. St Kilda 13.7 (85),215,45,,Brisbane Lions defeated St Kilda by 45 points at Gabba.
-167,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,M.C.G.,2004-08-22,Hawthorn 16.13 (109) def. Richmond 13.8 (86),195,23,,Hawthorn defeated Richmond by 23 points at M.C.G..
-168,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2004-08-22,West Coast 13.15 (93) def. Fremantle 6.9 (45),138,48,,West Coast defeated Fremantle by 48 points at Subiaco.
-169,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2004-08-27,Carlton 17.6 (108) def. Collingwood 16.11 (107),215,1,,Carlton defeated Collingwood by 1 points at M.C.G..
-170,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,2004-08-28,Sydney 16.12 (108) def. Richmond 6.8 (44),152,64,,Sydney defeated Richmond by 64 points at M.C.G..
-171,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2004-08-28,West Coast 15.17 (107) def. Melbourne 10.7 (67),174,40,,West Coast defeated Melbourne by 40 points at Subiaco.
-172,Regular Season,St Kilda,Fremantle,St Kilda,Fremantle,Docklands,2004-08-28,St Kilda 17.10 (112) def. Fremantle 12.11 (83),195,29,,St Kilda defeated Fremantle by 29 points at Docklands.
-173,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2004-08-28,Brisbane Lions 26.14 (170) def. North Melbourne 9.3 (57),227,113,,Brisbane Lions defeated North Melbourne by 113 points at Gabba.
-174,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2004-08-29,Port Adelaide 12.13 (85) def. Adelaide 9.6 (60),145,25,,Port Adelaide defeated Adelaide by 25 points at Football Park.
-175,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2004-08-29,Essendon 17.11 (113) def. Western Bulldogs 14.12 (96),209,17,,Essendon defeated Western Bulldogs by 17 points at Docklands.
-176,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,2004-08-29,Geelong 17.21 (123) def. Hawthorn 9.4 (58),181,65,,Geelong defeated Hawthorn by 65 points at Kardinia Park.
-177,Finals,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2004-09-03,Brisbane Lions 23.11 (149) def. St Kilda 10.9 (69),218,80,,Brisbane Lions defeated St Kilda by 80 points at Gabba.
-178,Finals,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,2004-09-04,Essendon 15.14 (104) def. Melbourne 15.9 (99),203,5,,Essendon defeated Melbourne by 5 points at M.C.G..
-179,Finals,Sydney,West Coast,Sydney,West Coast,Stadium Australia,2004-09-04,Sydney 11.9 (75) def. West Coast 4.10 (34),109,41,,Sydney defeated West Coast by 41 points at Stadium Australia.
-180,Finals,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,2004-09-05,Port Adelaide 18.9 (117) def. Geelong 9.8 (62),179,55,,Port Adelaide defeated Geelong by 55 points at Football Park.
-181,Finals,St Kilda,Sydney,St Kilda,Sydney,M.C.G.,2004-09-10,St Kilda 16.11 (107) def. Sydney 8.8 (56),163,51,,St Kilda defeated Sydney by 51 points at M.C.G..
-182,Finals,Geelong,Essendon,Geelong,Essendon,M.C.G.,2004-09-11,Geelong 10.14 (74) def. Essendon 9.10 (64),138,10,,Geelong defeated Essendon by 10 points at M.C.G..
-183,Finals,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,2004-09-17,Port Adelaide 14.10 (94) def. St Kilda 13.10 (88),182,6,,Port Adelaide defeated St Kilda by 6 points at Football Park.
-184,Finals,Brisbane Lions,Geelong,Brisbane Lions,Geelong,M.C.G.,2004-09-18,Brisbane Lions 12.12 (84) def. Geelong 10.15 (75),159,9,,Brisbane Lions defeated Geelong by 9 points at M.C.G..
-185,Grand Final,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,M.C.G.,2004-09-25,Port Adelaide 17.11 (113) def. Brisbane Lions 10.13 (73),186,40,,Port Adelaide defeated Brisbane Lions by 40 points at M.C.G..
+1,pre-Season,Sydney,Essendon,Sydney,Essendon,North Sydney Oval,2004-02-14,Sydney 10.9 (69) def. by Essendon 12.8 (80),149,11,,Essendon defeated Sydney by 11 points at North Sydney Oval.
+2,pre-Season,Essendon,Fremantle,Essendon,Fremantle,Marrara Oval,2004-02-20,Essendon 2.13.11 (107) def. Fremantle 1.13.12 (99),206,8,,Essendon defeated Fremantle by 8 points at Marrara Oval.
+3,pre-Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2004-02-20,Western Bulldogs 0.12.9 (81) def. Richmond 2.13.9 (105),186,24,,Richmond defeated Western Bulldogs by 24 points at Docklands.
+4,pre-Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Manuka Oval,2004-02-21,Kangaroos 2.10.13 (91) def. Melbourne 4.11.11 (113),204,22,,Melbourne defeated North Melbourne by 22 points at Manuka Oval.
+5,pre-Season,West Coast,Collingwood,West Coast,Collingwood,Subiaco Oval,2004-02-21,West Coast 1.18.14 (131) def. Collingwood 0.2.14 (26),157,105,,West Coast defeated Collingwood by 105 points at Subiaco Oval.
+6,pre-Season,Adelaide,Geelong,Adelaide,Geelong,Bundaberg Rum Stadium,2004-02-21,Port Adelaide 1.8.5 (65) def. Geelong 2.10.7 (85),150,20,,Geelong defeated Adelaide by 20 points at Bundaberg Rum Stadium.
+7,pre-Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,York Park,2004-02-22,Hawthorn 0.4.16 (40) def. Brisbane Lions 0.12.5 (77),117,37,,Brisbane Lions defeated Hawthorn by 37 points at York Park.
+8,pre-Season,Sydney,Carlton,Sydney,Carlton,Telstra Stadium,2004-02-22,Sydney 2.4.6 (48) def. Carlton 1.22.9 (150),198,102,,Carlton defeated Sydney by 102 points at Telstra Stadium.
+9,pre-Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,2004-02-22,Adelaide 1.11.5 (80) def. St Kilda 1.12.12 (93),173,13,,St Kilda defeated Adelaide by 13 points at Football Park.
+10,pre-Season,West Coast,Melbourne,West Coast,Melbourne,Docklands,2004-02-27,West Coast 0.11.9 (75) def. Melbourne 1.11.12 (87),162,12,,Melbourne defeated West Coast by 12 points at Docklands.
+11,pre-Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2004-02-27,Port Adelaide 15.14 (104) def. Western Bulldogs 13.8 (86),190,18,,Adelaide defeated Western Bulldogs by 18 points at Football Park.
+12,pre-Season,Carlton,Geelong,Carlton,Geelong,Perth Stadium,2004-02-28,Carlton 1.9.3 (66) def. Geelong 0.13.8 (86),152,20,,Geelong defeated Carlton by 20 points at Perth Stadium.
+13,pre-Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Docklands,2004-02-28,Essendon 1.12.9 (90) def. Brisbane Lions 2.8.13 (79),169,11,,Essendon defeated Brisbane Lions by 11 points at Docklands.
+14,pre-Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,2004-02-28,Collingwood 6.11 (47) def. by Sydney 12.8 (80),127,33,,Sydney defeated Collingwood by 33 points at Victoria Park.
+15,pre-Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,"Morwell Recreation Reserve, Morwell",2004-02-28,Hawthorn 11.13 (79) drew with Kangaroos 11.13 (79),158,0,,"Hawthorn and North Melbourne played out a draw at Morwell Recreation Reserve, Morwell."
+16,pre-Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco Oval,2004-02-28,Fremantle 12.4 (76) def. Adelaide 6.9 (45),121,31,,Fremantle defeated Adelaide by 31 points at Subiaco Oval.
+17,pre-Season,Melbourne,Geelong,Melbourne,Geelong,Docklands,2004-03-05,Melbourne 2.8.10 (76) def. Geelong 2.8.11 (77),153,1,,Geelong defeated Melbourne by 1 points at Docklands.
+18,pre-Season,North Melbourne,Sydney,North Melbourne,Sydney,Perth Stadium,2004-03-05,Kangaroos 13.16 (94) def. Sydney 11.5 (71),165,23,,North Melbourne defeated Sydney by 23 points at Perth Stadium.
+19,pre-Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2004-03-05,Adelaide 17.16 (118) def. West Coast 4.6 (30),148,88,,Adelaide defeated West Coast by 88 points at Football Park.
+20,pre-Season,Collingwood,Adelaide,Collingwood,Adelaide,Traeger Park,2004-03-05,Collingwood 14.7 (91) def. by Port Adelaide 15.15 (105),196,14,,Adelaide defeated Collingwood by 14 points at Traeger Park.
+21,pre-Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2004-03-06,Essendon 1.11.9 (84) def. St Kilda 2.16.12 (126),210,42,,St Kilda defeated Essendon by 42 points at Docklands.
+22,pre-Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,"Deakin Reserve, Shepparton",2004-03-06,Carlton 17.15 (117) def. by Western Bulldogs 20.13 (133),250,16,,"Western Bulldogs defeated Carlton by 16 points at Deakin Reserve, Shepparton."
+23,pre-Season,Hawthorn,Fremantle,Hawthorn,Fremantle,Perth Stadium,2004-03-06,Hawthorn 15.4 (94) def. by Fremantle 18.12 (120),214,26,,Fremantle defeated Hawthorn by 26 points at Perth Stadium.
+24,pre-Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,"Giffin Park, Coorparoo",2004-03-06,Brisbane Lions 13.9 (87) def. Richmond 11.12 (78),165,9,,"Brisbane Lions defeated Richmond by 9 points at Giffin Park, Coorparoo."
+25,pre-Season,Carlton,Richmond,Carlton,Richmond,Perth Stadium,2004-03-12,Carlton 19.17 (121) def. Richmond 14.12 (96),217,25,,Carlton defeated Richmond by 25 points at Perth Stadium.
+26,pre-Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,2004-03-12,Collingwood 7.8 (50) def. by Melbourne 9.12 (66),116,16,,Melbourne defeated Collingwood by 16 points at Victoria Park.
+27,pre-Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco Oval,2004-03-12,West Coast 14.15 (99) def. Hawthorn 9.10 (64),163,35,,West Coast defeated Hawthorn by 35 points at Subiaco Oval.
+28,pre-Season,Geelong,St Kilda,Geelong,St Kilda,Docklands,2004-03-13,Geelong 1.10.7 (76) def. St Kilda 1.14.5 (98),174,22,,St Kilda defeated Geelong by 22 points at Docklands.
+29,pre-Season,Sydney,Essendon,Sydney,Essendon,Newcastle Number 1 Sports Ground,2004-03-13,Sydney 17.14 (116) def. Essendon 9.10 (64),180,52,,Sydney defeated Essendon by 52 points at Newcastle Number 1 Sports Ground.
+30,pre-Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Perth Stadium,2004-03-13,Western Bulldogs 15.13 (103) def. by Brisbane Lions 16.12 (108),211,5,,Brisbane Lions defeated Western Bulldogs by 5 points at Perth Stadium.
+31,pre-Season,Adelaide,Adelaide,Adelaide,Adelaide,"Kadina Oval, Kadina, South Australia",2004-03-13,Port Adelaide 10.5 (65) def. by Adelaide 9.18 (72),137,7,,"Adelaide defeated Adelaide by 7 points at Kadina Oval, Kadina, South Australia."
+32,pre-Season,Fremantle,North Melbourne,Fremantle,North Melbourne,"Rushton Park, Mandurah",2004-03-13,Fremantle 15.8 (98) def. by Kangaroos 18.12 (120),218,22,,"North Melbourne defeated Fremantle by 22 points at Rushton Park, Mandurah."
+33,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2004-03-26,Richmond 14.13 (97) def. Collingwood 8.9 (57),154,40,,Richmond defeated Collingwood by 40 points at M.C.G..
+34,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2004-03-27,Hawthorn 17.17 (119) def. Melbourne 10.10 (70),189,49,,Hawthorn defeated Melbourne by 49 points at M.C.G..
+35,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2004-03-27,Fremantle 15.17 (107) def. Carlton 8.12 (60),167,47,,Fremantle defeated Carlton by 47 points at Subiaco.
+36,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2004-03-27,St Kilda 19.8 (122) def. Geelong 9.7 (61),183,61,,St Kilda defeated Geelong by 61 points at Docklands.
+37,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2004-03-27,Brisbane Lions 11.14 (80) def. Sydney 11.12 (78),158,2,,Brisbane Lions defeated Sydney by 2 points at Gabba.
+38,Regular Season,Port Adelaide,Essendon,Port Adelaide,Essendon,Football Park,2004-03-28,Port Adelaide 23.20 (158) def. Essendon 8.14 (62),220,96,,Port Adelaide defeated Essendon by 96 points at Football Park.
+39,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,M.C.G.,2004-03-28,North Melbourne 23.11 (149) def. Adelaide 10.14 (74),223,75,,North Melbourne defeated Adelaide by 75 points at M.C.G..
+40,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Docklands,2004-03-28,West Coast 22.12 (144) def. Western Bulldogs 20.17 (137),281,7,,West Coast defeated Western Bulldogs by 7 points at Docklands.
+41,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2004-04-02,Melbourne 20.15 (135) def. Richmond 12.4 (76),211,59,,Melbourne defeated Richmond by 59 points at M.C.G..
+42,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,2004-04-03,Collingwood 15.16 (106) def. Western Bulldogs 13.19 (97),203,9,,Collingwood defeated Western Bulldogs by 9 points at M.C.G..
+43,Regular Season,Adelaide,Brisbane Lions,Adelaide,Brisbane Lions,Football Park,2004-04-03,Brisbane Lions 15.14 (104) def. Adelaide 11.17 (83),187,21,,Brisbane Lions defeated Adelaide by 21 points at Football Park.
+44,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2004-04-03,Port Adelaide 18.10 (118) def. West Coast 17.13 (115),233,3,,Port Adelaide defeated West Coast by 3 points at Subiaco.
+45,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2004-04-03,St Kilda 13.16 (94) def. Essendon 8.12 (60),154,34,,St Kilda defeated Essendon by 34 points at Docklands.
+46,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2004-04-04,Sydney 15.12 (102) def. Fremantle 10.11 (71),173,31,,Sydney defeated Fremantle by 31 points at S.C.G..
+47,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,2004-04-04,Carlton 16.8 (104) def. Geelong 6.14 (50),154,54,,Carlton defeated Geelong by 54 points at Princes Park.
+48,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,M.C.G.,2004-04-04,North Melbourne 15.13 (103) def. Hawthorn 11.8 (74),177,29,,North Melbourne defeated Hawthorn by 29 points at M.C.G..
+49,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2004-04-08,Brisbane Lions 21.11 (137) def. Collingwood 12.5 (77),214,60,,Brisbane Lions defeated Collingwood by 60 points at Gabba.
+50,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,M.C.G.,2004-04-10,North Melbourne 17.9 (111) def. Carlton 16.10 (106),217,5,,North Melbourne defeated Carlton by 5 points at M.C.G..
+51,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2004-04-10,Essendon 22.5 (137) def. West Coast 20.11 (131),268,6,,Essendon defeated West Coast by 6 points at Docklands.
+52,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,2004-04-10,Sydney 10.13 (73) def. Geelong 10.7 (67),140,6,,Sydney defeated Geelong by 6 points at S.C.G..
+53,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2004-04-11,Port Adelaide 26.15 (171) def. Hawthorn 13.12 (90),261,81,,Port Adelaide defeated Hawthorn by 81 points at Football Park.
+54,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,M.C.G.,2004-04-11,Melbourne 12.25 (97) def. Western Bulldogs 12.15 (87),184,10,,Melbourne defeated Western Bulldogs by 10 points at M.C.G..
+55,Regular Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco,2004-04-11,Fremantle 10.13 (73) def. Adelaide 8.16 (64),137,9,,Fremantle defeated Adelaide by 9 points at Subiaco.
+56,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2004-04-12,St Kilda 16.18 (114) def. Richmond 10.9 (69),183,45,,St Kilda defeated Richmond by 45 points at Docklands.
+57,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2004-04-16,Essendon 17.15 (117) def. Carlton 12.8 (80),197,37,,Essendon defeated Carlton by 37 points at M.C.G..
+58,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,M.C.G.,2004-04-17,Melbourne 18.16 (124) def. Port Adelaide 10.11 (71),195,53,,Melbourne defeated Port Adelaide by 53 points at M.C.G..
+59,Regular Season,West Coast,Brisbane Lions,West Coast,Brisbane Lions,Subiaco,2004-04-17,West Coast 12.7 (79) def. Brisbane Lions 10.16 (76),155,3,,West Coast defeated Brisbane Lions by 3 points at Subiaco.
+60,Regular Season,Geelong,Richmond,Geelong,Richmond,Docklands,2004-04-17,Geelong 19.13 (127) def. Richmond 11.12 (78),205,49,,Geelong defeated Richmond by 49 points at Docklands.
+61,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,2004-04-17,St Kilda 18.5 (113) def. Adelaide 15.8 (98),211,15,,St Kilda defeated Adelaide by 15 points at Football Park.
+62,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Manuka Oval,2004-04-18,Sydney 18.13 (121) def. North Melbourne 10.10 (70),191,51,,Sydney defeated North Melbourne by 51 points at Manuka Oval.
+63,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,Docklands,2004-04-18,Fremantle 12.16 (88) def. Collingwood 7.12 (54),142,34,,Fremantle defeated Collingwood by 34 points at Docklands.
+64,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2004-04-18,Western Bulldogs 16.13 (109) def. Hawthorn 14.13 (97),206,12,,Western Bulldogs defeated Hawthorn by 12 points at M.C.G..
+65,Regular Season,Richmond,Adelaide,Richmond,Adelaide,Docklands,2004-04-23,Adelaide 21.8 (134) def. Richmond 9.5 (59),193,75,,Adelaide defeated Richmond by 75 points at Docklands.
+66,Regular Season,Carlton,West Coast,Carlton,West Coast,Princes Park,2004-04-24,Carlton 14.8 (92) def. West Coast 6.7 (43),135,49,,Carlton defeated West Coast by 49 points at Princes Park.
+67,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Docklands,2004-04-24,St Kilda 20.10 (130) def. North Melbourne 8.17 (65),195,65,,St Kilda defeated North Melbourne by 65 points at Docklands.
+68,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,2004-04-24,Brisbane Lions 14.26 (110) def. Hawthorn 9.8 (62),172,48,,Brisbane Lions defeated Hawthorn by 48 points at Gabba.
+69,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Stadium Australia,2004-04-24,Melbourne 17.9 (111) def. Sydney 15.9 (99),210,12,,Melbourne defeated Sydney by 12 points at Stadium Australia.
+70,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2004-04-25,Essendon 17.10 (112) def. Collingwood 11.13 (79),191,33,,Essendon defeated Collingwood by 33 points at M.C.G..
+71,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2004-04-25,Fremantle 18.9 (117) def. Geelong 14.7 (91),208,26,,Fremantle defeated Geelong by 26 points at Subiaco.
+72,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Football Park,2004-04-25,Port Adelaide 17.17 (119) def. Western Bulldogs 7.22 (64),183,55,,Port Adelaide defeated Western Bulldogs by 55 points at Football Park.
+73,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Docklands,2004-04-30,Richmond 12.12 (84) def. Hawthorn 13.5 (83),167,1,,Richmond defeated Hawthorn by 1 points at Docklands.
+74,Regular Season,Essendon,Sydney,Essendon,Sydney,M.C.G.,2004-05-01,Essendon 16.12 (108) def. Sydney 15.8 (98),206,10,,Essendon defeated Sydney by 10 points at M.C.G..
+75,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Manuka Oval,2004-05-01,Western Bulldogs 19.6 (120) def. North Melbourne 18.11 (119),239,1,,Western Bulldogs defeated North Melbourne by 1 points at Manuka Oval.
+76,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2004-05-01,Fremantle 12.11 (83) def. West Coast 11.7 (73),156,10,,Fremantle defeated West Coast by 10 points at Subiaco.
+77,Regular Season,St Kilda,Brisbane Lions,St Kilda,Brisbane Lions,Docklands,2004-05-01,St Kilda 13.14 (92) def. Brisbane Lions 14.7 (91),183,1,,St Kilda defeated Brisbane Lions by 1 points at Docklands.
+78,Regular Season,Geelong,Adelaide,Geelong,Adelaide,Kardinia Park,2004-05-02,Geelong 15.11 (101) def. Adelaide 8.10 (58),159,43,,Geelong defeated Adelaide by 43 points at Kardinia Park.
+79,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,2004-05-02,Melbourne 25.10 (160) def. Carlton 8.7 (55),215,105,,Melbourne defeated Carlton by 105 points at M.C.G..
+80,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2004-05-02,Port Adelaide 14.17 (101) def. Collingwood 12.12 (84),185,17,,Port Adelaide defeated Collingwood by 17 points at Football Park.
+81,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2004-05-07,Essendon 18.13 (121) def. Western Bulldogs 14.11 (95),216,26,,Essendon defeated Western Bulldogs by 26 points at Docklands.
+82,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2004-05-08,Carlton 13.11 (89) def. Collingwood 11.14 (80),169,9,,Carlton defeated Collingwood by 9 points at M.C.G..
+83,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2004-05-08,St Kilda 14.11 (95) def. Fremantle 11.6 (72),167,23,,St Kilda defeated Fremantle by 23 points at Subiaco.
+84,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2004-05-08,Brisbane Lions 18.12 (120) def. North Melbourne 11.10 (76),196,44,,Brisbane Lions defeated North Melbourne by 44 points at Docklands.
+85,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2004-05-08,Adelaide 17.17 (119) def. Port Adelaide 13.9 (87),206,32,,Adelaide defeated Port Adelaide by 32 points at Football Park.
+86,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,2004-05-09,Richmond 10.7 (67) def. Sydney 8.6 (54),121,13,,Richmond defeated Sydney by 13 points at S.C.G..
+87,Regular Season,Melbourne,West Coast,Melbourne,West Coast,M.C.G.,2004-05-09,Melbourne 18.14 (122) def. West Coast 11.7 (73),195,49,,Melbourne defeated West Coast by 49 points at M.C.G..
+88,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Docklands,2004-05-09,Geelong 15.18 (108) def. Hawthorn 8.4 (52),160,56,,Geelong defeated Hawthorn by 56 points at Docklands.
+89,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,2004-05-14,Essendon 20.15 (135) def. Adelaide 12.12 (84),219,51,,Essendon defeated Adelaide by 51 points at Football Park.
+90,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,2004-05-15,Richmond 15.15 (105) def. Western Bulldogs 10.22 (82),187,23,,Richmond defeated Western Bulldogs by 23 points at M.C.G..
+91,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,2004-05-15,West Coast 18.16 (124) def. Sydney 15.7 (97),221,27,,West Coast defeated Sydney by 27 points at Subiaco.
+92,Regular Season,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2004-05-15,Brisbane Lions 21.14 (140) def. Carlton 16.6 (102),242,38,,Brisbane Lions defeated Carlton by 38 points at Gabba.
+93,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Docklands,2004-05-15,St Kilda 21.12 (138) def. Collingwood 13.13 (91),229,47,,St Kilda defeated Collingwood by 47 points at Docklands.
+94,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,York Park,2004-05-16,Hawthorn 10.10 (70) def. Fremantle 8.13 (61),131,9,,Hawthorn defeated Fremantle by 9 points at York Park.
+95,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,2004-05-16,Geelong 15.11 (101) def. Melbourne 12.15 (87),188,14,,Geelong defeated Melbourne by 14 points at Kardinia Park.
+96,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Docklands,2004-05-16,North Melbourne 21.14 (140) def. Port Adelaide 7.6 (48),188,92,,North Melbourne defeated Port Adelaide by 92 points at Docklands.
+97,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,Docklands,2004-05-21,Collingwood 9.14 (68) def. Adelaide 9.11 (65),133,3,,Collingwood defeated Adelaide by 3 points at Docklands.
+98,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,2004-05-22,Melbourne 13.18 (96) def. North Melbourne 11.12 (78),174,18,,Melbourne defeated North Melbourne by 18 points at M.C.G..
+99,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2004-05-22,Fremantle 20.17 (137) def. Brisbane Lions 11.12 (78),215,59,,Fremantle defeated Brisbane Lions by 59 points at Subiaco.
+100,Regular Season,Geelong,Essendon,Geelong,Essendon,Docklands,2004-05-22,Geelong 18.12 (120) def. Essendon 14.13 (97),217,23,,Geelong defeated Essendon by 23 points at Docklands.
+101,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2004-05-22,Port Adelaide 19.14 (128) def. Richmond 7.8 (50),178,78,,Port Adelaide defeated Richmond by 78 points at Football Park.
+102,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,2004-05-23,Sydney 11.14 (80) def. Hawthorn 12.7 (79),159,1,,Sydney defeated Hawthorn by 1 points at S.C.G..
+103,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,2004-05-23,Western Bulldogs 16.8 (104) def. Carlton 12.7 (79),183,25,,Western Bulldogs defeated Carlton by 25 points at Princes Park.
+104,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2004-05-23,St Kilda 26.13 (169) def. West Coast 9.14 (68),237,101,,St Kilda defeated West Coast by 101 points at Docklands.
+105,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2004-05-28,Essendon 17.13 (115) def. Fremantle 12.13 (85),200,30,,Essendon defeated Fremantle by 30 points at Docklands.
+106,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,M.C.G.,2004-05-29,Adelaide 20.13 (133) def. Hawthorn 6.11 (47),180,86,,Adelaide defeated Hawthorn by 86 points at M.C.G..
+107,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2004-05-29,West Coast 14.16 (100) def. Richmond 9.9 (63),163,37,,West Coast defeated Richmond by 37 points at Subiaco.
+108,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2004-05-29,Collingwood 13.14 (92) def. North Melbourne 9.11 (65),157,27,,Collingwood defeated North Melbourne by 27 points at Docklands.
+109,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,S.C.G.,2004-05-29,Sydney 12.21 (93) def. Western Bulldogs 10.7 (67),160,26,,Sydney defeated Western Bulldogs by 26 points at S.C.G..
+110,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Gabba,2004-05-30,Brisbane Lions 18.15 (123) def. Melbourne 12.11 (83),206,40,,Brisbane Lions defeated Melbourne by 40 points at Gabba.
+111,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Docklands,2004-05-30,St Kilda 31.10 (196) def. Carlton 13.10 (88),284,108,,St Kilda defeated Carlton by 108 points at Docklands.
+112,Regular Season,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,2004-05-30,Port Adelaide 18.8 (116) def. Geelong 17.10 (112),228,4,,Port Adelaide defeated Geelong by 4 points at Football Park.
+113,Regular Season,Collingwood,West Coast,Collingwood,West Coast,Docklands,2004-06-04,Collingwood 14.9 (93) def. West Coast 11.9 (75),168,18,,Collingwood defeated West Coast by 18 points at Docklands.
+114,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,2004-06-05,Essendon 24.10 (154) def. Hawthorn 12.8 (80),234,74,,Essendon defeated Hawthorn by 74 points at M.C.G..
+115,Regular Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,2004-06-05,Carlton 14.7 (91) def. Adelaide 12.15 (87),178,4,,Carlton defeated Adelaide by 4 points at Football Park.
+116,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Docklands,2004-06-05,North Melbourne 24.10 (154) def. Richmond 12.8 (80),234,74,,North Melbourne defeated Richmond by 74 points at Docklands.
+117,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2004-06-05,Brisbane Lions 18.15 (123) def. Port Adelaide 12.14 (86),209,37,,Brisbane Lions defeated Port Adelaide by 37 points at Gabba.
+118,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2004-06-06,Sydney 17.10 (112) def. St Kilda 11.10 (76),188,36,,Sydney defeated St Kilda by 36 points at S.C.G..
+119,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Docklands,2004-06-06,Geelong 17.11 (113) def. Western Bulldogs 10.7 (67),180,46,,Geelong defeated Western Bulldogs by 46 points at Docklands.
+120,Regular Season,Fremantle,Melbourne,Fremantle,Melbourne,Subiaco,2004-06-06,Melbourne 13.15 (93) def. Fremantle 9.8 (62),155,31,,Melbourne defeated Fremantle by 31 points at Subiaco.
+121,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Docklands,2004-06-11,Carlton 15.10 (100) def. Hawthorn 14.4 (88),188,12,,Carlton defeated Hawthorn by 12 points at Docklands.
+122,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,M.C.G.,2004-06-12,Western Bulldogs 15.13 (103) def. St Kilda 11.14 (80),183,23,,Western Bulldogs defeated St Kilda by 23 points at M.C.G..
+123,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Subiaco,2004-06-12,West Coast 15.18 (108) def. Adelaide 11.10 (76),184,32,,West Coast defeated Adelaide by 32 points at Subiaco.
+124,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Docklands,2004-06-12,Brisbane Lions 25.12 (162) def. Essendon 14.12 (96),258,66,,Brisbane Lions defeated Essendon by 66 points at Docklands.
+125,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,2004-06-13,Port Adelaide 20.12 (132) def. Sydney 8.12 (60),192,72,,Port Adelaide defeated Sydney by 72 points at Football Park.
+126,Regular Season,Richmond,Fremantle,Richmond,Fremantle,M.C.G.,2004-06-13,Fremantle 12.9 (81) def. Richmond 10.11 (71),152,10,,Fremantle defeated Richmond by 10 points at M.C.G..
+127,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,2004-06-13,Geelong 14.10 (94) def. North Melbourne 12.12 (84),178,10,,Geelong defeated North Melbourne by 10 points at Kardinia Park.
+128,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2004-06-14,Melbourne 12.10 (82) def. Collingwood 11.7 (73),155,9,,Melbourne defeated Collingwood by 9 points at M.C.G..
+129,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Docklands,2004-06-18,St Kilda 19.13 (127) def. Hawthorn 9.7 (61),188,66,,St Kilda defeated Hawthorn by 66 points at Docklands.
+130,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2004-06-19,Geelong 13.14 (92) def. Brisbane Lions 9.11 (65),157,27,,Geelong defeated Brisbane Lions by 27 points at Kardinia Park.
+131,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Subiaco,2004-06-19,Port Adelaide 17.10 (112) def. Fremantle 16.6 (102),214,10,,Port Adelaide defeated Fremantle by 10 points at Subiaco.
+132,Regular Season,Richmond,Carlton,Richmond,Carlton,Docklands,2004-06-19,Carlton 18.16 (124) def. Richmond 14.9 (93),217,31,,Carlton defeated Richmond by 31 points at Docklands.
+133,Regular Season,North Melbourne,West Coast,North Melbourne,West Coast,Manuka Oval,2004-06-20,North Melbourne 16.12 (108) def. West Coast 11.9 (75),183,33,,North Melbourne defeated West Coast by 33 points at Manuka Oval.
+134,Regular Season,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,2004-06-20,Melbourne 13.17 (95) def. Essendon 10.9 (69),164,26,,Melbourne defeated Essendon by 26 points at M.C.G..
+135,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2004-06-20,Adelaide 20.13 (133) def. Western Bulldogs 15.11 (101),234,32,,Adelaide defeated Western Bulldogs by 32 points at Football Park.
+136,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Stadium Australia,2004-06-26,Sydney 13.7 (85) def. Collingwood 11.13 (79),164,6,,Sydney defeated Collingwood by 6 points at Stadium Australia.
+137,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Docklands,2004-07-02,North Melbourne 14.16 (100) def. Essendon 12.7 (79),179,21,,North Melbourne defeated Essendon by 21 points at Docklands.
+138,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,2004-07-03,Sydney 15.5 (95) def. Carlton 12.12 (84),179,11,,Sydney defeated Carlton by 11 points at Princes Park.
+139,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2004-07-03,Collingwood 20.20 (140) def. Hawthorn 11.9 (75),215,65,,Collingwood defeated Hawthorn by 65 points at M.C.G..
+140,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2004-07-03,West Coast 7.9 (51) def. Geelong 7.7 (49),100,2,,West Coast defeated Geelong by 2 points at Subiaco.
+141,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2004-07-03,Brisbane Lions 17.12 (114) def. Richmond 14.12 (96),210,18,,Brisbane Lions defeated Richmond by 18 points at Gabba.
+142,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,York Park,2004-07-04,Port Adelaide 14.9 (93) def. St Kilda 7.5 (47),140,46,,Port Adelaide defeated St Kilda by 46 points at York Park.
+143,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Docklands,2004-07-04,Fremantle 18.9 (117) def. Western Bulldogs 10.16 (76),193,41,,Fremantle defeated Western Bulldogs by 41 points at Docklands.
+144,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2004-07-04,Adelaide 22.13 (145) def. Melbourne 10.13 (73),218,72,,Adelaide defeated Melbourne by 72 points at Football Park.
+145,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Docklands,2004-07-09,Geelong 12.22 (94) def. Collingwood 9.11 (65),159,29,,Geelong defeated Collingwood by 29 points at Docklands.
+146,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,York Park,2004-07-10,West Coast 12.14 (86) def. Hawthorn 12.10 (82),168,4,,West Coast defeated Hawthorn by 4 points at York Park.
+147,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2004-07-10,Essendon 24.11 (155) def. Richmond 11.11 (77),232,78,,Essendon defeated Richmond by 78 points at M.C.G..
+148,Regular Season,Fremantle,North Melbourne,Fremantle,North Melbourne,Subiaco,2004-07-10,North Melbourne 14.12 (96) def. Fremantle 12.7 (79),175,17,,North Melbourne defeated Fremantle by 17 points at Subiaco.
+149,Regular Season,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,2004-07-10,Sydney 8.10 (58) def. Adelaide 6.9 (45),103,13,,Sydney defeated Adelaide by 13 points at S.C.G..
+150,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2004-07-11,Brisbane Lions 20.16 (136) def. Western Bulldogs 10.8 (68),204,68,,Brisbane Lions defeated Western Bulldogs by 68 points at Gabba.
+151,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,2004-07-11,Melbourne 23.8 (146) def. St Kilda 13.11 (89),235,57,,Melbourne defeated St Kilda by 57 points at M.C.G..
+152,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2004-07-11,Port Adelaide 18.15 (123) def. Carlton 5.10 (40),163,83,,Port Adelaide defeated Carlton by 83 points at Football Park.
+153,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,2004-07-16,West Coast 18.9 (117) def. Essendon 10.13 (73),190,44,,West Coast defeated Essendon by 44 points at Subiaco.
+154,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,2004-07-17,Carlton 9.16 (70) def. North Melbourne 9.8 (62),132,8,,Carlton defeated North Melbourne by 8 points at Princes Park.
+155,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Docklands,2004-07-17,St Kilda 16.9 (105) def. Richmond 9.7 (61),166,44,,St Kilda defeated Richmond by 44 points at Docklands.
+156,Regular Season,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2004-07-17,Brisbane Lions 16.13 (109) def. Collingwood 11.7 (73),182,36,,Brisbane Lions defeated Collingwood by 36 points at M.C.G..
+157,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2004-07-17,Fremantle 14.8 (92) def. Adelaide 12.8 (80),172,12,,Fremantle defeated Adelaide by 12 points at Football Park.
+158,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,2004-07-18,Geelong 11.11 (77) def. Sydney 9.8 (62),139,15,,Geelong defeated Sydney by 15 points at Kardinia Park.
+159,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,Docklands,2004-07-18,Melbourne 12.21 (93) def. Western Bulldogs 7.13 (55),148,38,,Melbourne defeated Western Bulldogs by 38 points at Docklands.
+160,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2004-07-18,Port Adelaide 15.15 (105) def. Hawthorn 7.11 (53),158,52,,Port Adelaide defeated Hawthorn by 52 points at M.C.G..
+161,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2004-07-23,St Kilda 20.7 (127) def. Essendon 14.8 (92),219,35,,St Kilda defeated Essendon by 35 points at Docklands.
+162,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,M.C.G.,2004-07-24,North Melbourne 22.11 (143) def. Hawthorn 9.9 (63),206,80,,North Melbourne defeated Hawthorn by 80 points at M.C.G..
+163,Regular Season,Fremantle,Sydney,Fremantle,Sydney,Subiaco,2004-07-24,Fremantle 18.10 (118) def. Sydney 14.7 (91),209,27,,Fremantle defeated Sydney by 27 points at Subiaco.
+164,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2004-07-24,Brisbane Lions 29.15 (189) def. Adelaide 6.12 (48),237,141,,Brisbane Lions defeated Adelaide by 141 points at Gabba.
+165,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2004-07-24,Collingwood 17.13 (115) def. Western Bulldogs 8.18 (66),181,49,,Collingwood defeated Western Bulldogs by 49 points at Docklands.
+166,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,2004-07-25,Port Adelaide 16.6 (102) def. West Coast 9.22 (76),178,26,,Port Adelaide defeated West Coast by 26 points at Football Park.
+167,Regular Season,Geelong,Carlton,Geelong,Carlton,Docklands,2004-07-25,Geelong 18.23 (131) def. Carlton 11.8 (74),205,57,,Geelong defeated Carlton by 57 points at Docklands.
+168,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2004-07-25,Melbourne 19.12 (126) def. Richmond 10.10 (70),196,56,,Melbourne defeated Richmond by 56 points at M.C.G..
+169,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2004-07-30,Adelaide 5.19 (49) def. North Melbourne 5.12 (42),91,7,,Adelaide defeated North Melbourne by 7 points at Football Park.
+170,Regular Season,Carlton,Fremantle,Carlton,Fremantle,Princes Park,2004-07-31,Fremantle 16.15 (111) def. Carlton 9.9 (63),174,48,,Fremantle defeated Carlton by 48 points at Princes Park.
+171,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,2004-07-31,Collingwood 15.13 (103) def. Richmond 14.14 (98),201,5,,Collingwood defeated Richmond by 5 points at M.C.G..
+172,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2004-07-31,Essendon 18.11 (119) def. Port Adelaide 11.13 (79),198,40,,Essendon defeated Port Adelaide by 40 points at Docklands.
+173,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2004-07-31,Sydney 12.11 (83) def. Brisbane Lions 7.9 (51),134,32,,Sydney defeated Brisbane Lions by 32 points at S.C.G..
+174,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,2004-08-01,Geelong 15.11 (101) def. St Kilda 15.4 (94),195,7,,Geelong defeated St Kilda by 7 points at Kardinia Park.
+175,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2004-08-01,Melbourne 15.17 (107) def. Hawthorn 9.9 (63),170,44,,Melbourne defeated Hawthorn by 44 points at M.C.G..
+176,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco,2004-08-01,West Coast 15.16 (106) def. Western Bulldogs 8.9 (57),163,49,,West Coast defeated Western Bulldogs by 49 points at Subiaco.
+177,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Subiaco,2004-08-06,Collingwood 14.22 (106) def. Fremantle 11.7 (73),179,33,,Collingwood defeated Fremantle by 33 points at Subiaco.
+178,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,York Park,2004-08-07,St Kilda 14.7 (91) def. Adelaide 10.8 (68),159,23,,St Kilda defeated Adelaide by 23 points at York Park.
+179,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2004-08-07,Carlton 10.14 (74) def. Essendon 8.9 (57),131,17,,Carlton defeated Essendon by 17 points at M.C.G..
+180,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Docklands,2004-08-07,Hawthorn 19.6 (120) def. Western Bulldogs 16.13 (109),229,11,,Hawthorn defeated Western Bulldogs by 11 points at Docklands.
+181,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,2004-08-07,North Melbourne 17.16 (118) def. Sydney 18.4 (112),230,6,,North Melbourne defeated Sydney by 6 points at S.C.G..
+182,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2004-08-08,West Coast 12.15 (87) def. Brisbane Lions 10.13 (73),160,14,,West Coast defeated Brisbane Lions by 14 points at Gabba.
+183,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,2004-08-08,Geelong 16.18 (114) def. Richmond 11.17 (83),197,31,,Geelong defeated Richmond by 31 points at M.C.G..
+184,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2004-08-08,Port Adelaide 18.17 (125) def. Melbourne 6.16 (52),177,73,,Port Adelaide defeated Melbourne by 73 points at Football Park.
+185,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2004-08-13,Essendon 18.13 (121) def. Collingwood 13.9 (87),208,34,,Essendon defeated Collingwood by 34 points at M.C.G..
+186,Regular Season,Geelong,Fremantle,Geelong,Fremantle,Kardinia Park,2004-08-14,Geelong 9.21 (75) def. Fremantle 3.7 (25),100,50,,Geelong defeated Fremantle by 50 points at Kardinia Park.
+187,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,M.C.G.,2004-08-14,Brisbane Lions 8.18 (66) def. Hawthorn 6.7 (43),109,23,,Brisbane Lions defeated Hawthorn by 23 points at M.C.G..
+188,Regular Season,Melbourne,Sydney,Melbourne,Sydney,Docklands,2004-08-14,Sydney 10.7 (67) def. Melbourne 7.4 (46),113,21,,Sydney defeated Melbourne by 21 points at Docklands.
+189,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Marrara Oval,2004-08-14,Port Adelaide 23.9 (147) def. Western Bulldogs 9.7 (61),208,86,,Port Adelaide defeated Western Bulldogs by 86 points at Marrara Oval.
+190,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,2004-08-15,Adelaide 21.12 (138) def. Richmond 13.8 (86),224,52,,Adelaide defeated Richmond by 52 points at Football Park.
+191,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Docklands,2004-08-15,St Kilda 23.9 (147) def. North Melbourne 15.6 (96),243,51,,St Kilda defeated North Melbourne by 51 points at Docklands.
+192,Regular Season,West Coast,Carlton,West Coast,Carlton,Subiaco,2004-08-15,West Coast 15.21 (111) def. Carlton 6.13 (49),160,62,,West Coast defeated Carlton by 62 points at Subiaco.
+193,Regular Season,Collingwood,Port Adelaide,Collingwood,Port Adelaide,M.C.G.,2004-08-20,Port Adelaide 16.11 (107) def. Collingwood 9.16 (70),177,37,,Port Adelaide defeated Collingwood by 37 points at M.C.G..
+194,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,2004-08-21,Carlton 14.9 (93) def. Melbourne 8.14 (62),155,31,,Carlton defeated Melbourne by 31 points at Princes Park.
+195,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2004-08-21,Adelaide 15.19 (109) def. Geelong 12.15 (87),196,22,,Adelaide defeated Geelong by 22 points at Football Park.
+196,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2004-08-21,Western Bulldogs 21.10 (136) def. North Melbourne 15.16 (106),242,30,,Western Bulldogs defeated North Melbourne by 30 points at Docklands.
+197,Regular Season,Sydney,Essendon,Sydney,Essendon,Stadium Australia,2004-08-21,Sydney 17.8 (110) def. Essendon 12.18 (90),200,20,,Sydney defeated Essendon by 20 points at Stadium Australia.
+198,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2004-08-22,Brisbane Lions 20.10 (130) def. St Kilda 13.7 (85),215,45,,Brisbane Lions defeated St Kilda by 45 points at Gabba.
+199,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,M.C.G.,2004-08-22,Hawthorn 16.13 (109) def. Richmond 13.8 (86),195,23,,Hawthorn defeated Richmond by 23 points at M.C.G..
+200,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2004-08-22,West Coast 13.15 (93) def. Fremantle 6.9 (45),138,48,,West Coast defeated Fremantle by 48 points at Subiaco.
+201,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2004-08-27,Carlton 17.6 (108) def. Collingwood 16.11 (107),215,1,,Carlton defeated Collingwood by 1 points at M.C.G..
+202,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,2004-08-28,Sydney 16.12 (108) def. Richmond 6.8 (44),152,64,,Sydney defeated Richmond by 64 points at M.C.G..
+203,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2004-08-28,West Coast 15.17 (107) def. Melbourne 10.7 (67),174,40,,West Coast defeated Melbourne by 40 points at Subiaco.
+204,Regular Season,St Kilda,Fremantle,St Kilda,Fremantle,Docklands,2004-08-28,St Kilda 17.10 (112) def. Fremantle 12.11 (83),195,29,,St Kilda defeated Fremantle by 29 points at Docklands.
+205,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2004-08-28,Brisbane Lions 26.14 (170) def. North Melbourne 9.3 (57),227,113,,Brisbane Lions defeated North Melbourne by 113 points at Gabba.
+206,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2004-08-29,Port Adelaide 12.13 (85) def. Adelaide 9.6 (60),145,25,,Port Adelaide defeated Adelaide by 25 points at Football Park.
+207,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2004-08-29,Essendon 17.11 (113) def. Western Bulldogs 14.12 (96),209,17,,Essendon defeated Western Bulldogs by 17 points at Docklands.
+208,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,2004-08-29,Geelong 17.21 (123) def. Hawthorn 9.4 (58),181,65,,Geelong defeated Hawthorn by 65 points at Kardinia Park.
+209,Finals,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2004-09-03,Brisbane Lions 23.11 (149) def. St Kilda 10.9 (69),218,80,,Brisbane Lions defeated St Kilda by 80 points at Gabba.
+210,Finals,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,2004-09-04,Essendon 15.14 (104) def. Melbourne 15.9 (99),203,5,,Essendon defeated Melbourne by 5 points at M.C.G..
+211,Finals,Sydney,West Coast,Sydney,West Coast,Stadium Australia,2004-09-04,Sydney 11.9 (75) def. West Coast 4.10 (34),109,41,,Sydney defeated West Coast by 41 points at Stadium Australia.
+212,Finals,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,2004-09-05,Port Adelaide 18.9 (117) def. Geelong 9.8 (62),179,55,,Port Adelaide defeated Geelong by 55 points at Football Park.
+213,Finals,St Kilda,Sydney,St Kilda,Sydney,M.C.G.,2004-09-10,St Kilda 16.11 (107) def. Sydney 8.8 (56),163,51,,St Kilda defeated Sydney by 51 points at M.C.G..
+214,Finals,Geelong,Essendon,Geelong,Essendon,M.C.G.,2004-09-11,Geelong 10.14 (74) def. Essendon 9.10 (64),138,10,,Geelong defeated Essendon by 10 points at M.C.G..
+215,Finals,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,2004-09-17,Port Adelaide 14.10 (94) def. St Kilda 13.10 (88),182,6,,Port Adelaide defeated St Kilda by 6 points at Football Park.
+216,Finals,Brisbane Lions,Geelong,Brisbane Lions,Geelong,M.C.G.,2004-09-18,Brisbane Lions 12.12 (84) def. Geelong 10.15 (75),159,9,,Brisbane Lions defeated Geelong by 9 points at M.C.G..
+217,Grand Final,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,M.C.G.,2004-09-25,Port Adelaide 17.11 (113) def. Brisbane Lions 10.13 (73),186,40,,Port Adelaide defeated Brisbane Lions by 40 points at M.C.G..

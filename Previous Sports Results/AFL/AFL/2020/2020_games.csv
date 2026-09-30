@@ -1,163 +1,181 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
-1,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2020-03-19,Richmond 16.9 (105) def. Carlton 12.9 (81),186,24,,Richmond defeated Carlton by 24 points at M.C.G..
-2,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2020-03-20,Collingwood 13.8 (86) def. Western Bulldogs 5.4 (34),120,52,,Collingwood defeated Western Bulldogs by 52 points at Docklands.
-3,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2020-03-21,Essendon 9.9 (63) def. Fremantle 8.9 (57),120,6,,Essendon defeated Fremantle by 6 points at Docklands.
-4,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Adelaide Oval,2020-03-21,Sydney 11.8 (74) def. Adelaide 11.5 (71),145,3,,Sydney defeated Adelaide by 3 points at Adelaide Oval.
-5,Regular Season,Greater Western Sydney,Geelong,Greater Western Sydney,Geelong,Sydney Showground,2020-03-21,Greater Western Sydney 17.3 (105) def. Geelong 11.7 (73),178,32,,Greater Western Sydney defeated Geelong by 32 points at Sydney Showground.
-6,Regular Season,Gold Coast,Port Adelaide,Gold Coast,Port Adelaide,Carrara,2020-03-21,Port Adelaide 10.16 (76) def. Gold Coast 4.5 (29),105,47,,Port Adelaide defeated Gold Coast by 47 points at Carrara.
-7,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Docklands,2020-03-22,North Melbourne 8.8 (56) def. St Kilda 7.12 (54),110,2,,North Melbourne defeated St Kilda by 2 points at Docklands.
-8,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,M.C.G.,2020-03-22,Hawthorn 14.6 (90) def. Brisbane Lions 9.8 (62),152,28,,Hawthorn defeated Brisbane Lions by 28 points at M.C.G..
-9,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Perth Stadium,2020-03-22,West Coast 12.6 (78) def. Melbourne 7.9 (51),129,27,,West Coast defeated Melbourne by 27 points at Perth Stadium.
-10,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,2020-06-11,Collingwood 5.6 (36) drew with Richmond 5.6 (36),72,0,,Collingwood and Richmond played out a draw at M.C.G..
-11,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,2020-06-12,Geelong 17.6 (108) def. Hawthorn 7.5 (47),155,61,,Geelong defeated Hawthorn by 61 points at Kardinia Park.
-12,Regular Season,Brisbane Lions,Fremantle,Brisbane Lions,Fremantle,Gabba,2020-06-13,Brisbane Lions 12.9 (81) def. Fremantle 10.9 (69),150,12,,Brisbane Lions defeated Fremantle by 12 points at Gabba.
-13,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Docklands,2020-06-13,Melbourne 8.6 (54) def. Carlton 7.11 (53),107,1,,Melbourne defeated Carlton by 1 points at Docklands.
-14,Regular Season,Gold Coast,West Coast,Gold Coast,West Coast,Carrara,2020-06-13,Gold Coast 14.6 (90) def. West Coast 6.10 (46),136,44,,Gold Coast defeated West Coast by 44 points at Carrara.
-15,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Adelaide Oval,2020-06-13,Port Adelaide 17.8 (110) def. Adelaide 5.5 (35),145,75,,Port Adelaide defeated Adelaide by 75 points at Adelaide Oval.
-16,Regular Season,Greater Western Sydney,North Melbourne,Greater Western Sydney,North Melbourne,Sydney Showground,2020-06-14,North Melbourne 12.8 (80) def. Greater Western Sydney 8.12 (60),140,20,,North Melbourne defeated Greater Western Sydney by 20 points at Sydney Showground.
-17,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,2020-06-14,Essendon 12.7 (79) def. Sydney 11.7 (73),152,6,,Essendon defeated Sydney by 6 points at S.C.G..
-18,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Docklands,2020-06-14,St Kilda 14.4 (88) def. Western Bulldogs 7.7 (49),137,39,,St Kilda defeated Western Bulldogs by 39 points at Docklands.
-19,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2020-06-18,Hawthorn 11.5 (71) def. Richmond 5.9 (39),110,32,,Hawthorn defeated Richmond by 32 points at M.C.G..
-20,Regular Season,Western Bulldogs,Greater Western Sydney,Western Bulldogs,Greater Western Sydney,Docklands,2020-06-19,Western Bulldogs 8.9 (57) def. Greater Western Sydney 4.9 (33),90,24,,Western Bulldogs defeated Greater Western Sydney by 24 points at Docklands.
-21,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Docklands,2020-06-20,Sydney 10.11 (71) def. North Melbourne 8.12 (60),131,11,,Sydney defeated North Melbourne by 11 points at Docklands.
-22,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,2020-06-20,Collingwood 12.9 (81) def. St Kilda 5.7 (37),118,44,,Collingwood defeated St Kilda by 44 points at M.C.G..
-23,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2020-06-20,Brisbane Lions 10.14 (74) def. West Coast 6.8 (44),118,30,,Brisbane Lions defeated West Coast by 30 points at Gabba.
-24,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,2020-06-20,Carlton 12.7 (79) def. Geelong 11.11 (77),156,2,,Carlton defeated Geelong by 2 points at Kardinia Park.
-25,Regular Season,Gold Coast,Adelaide,Gold Coast,Adelaide,Carrara,2020-06-21,Gold Coast 12.10 (82) def. Adelaide 4.5 (29),111,53,,Gold Coast defeated Adelaide by 53 points at Carrara.
-26,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Carrara,2020-06-21,Port Adelaide 10.10 (70) def. Fremantle 6.5 (41),111,29,,Port Adelaide defeated Fremantle by 29 points at Carrara.
-27,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,2020-06-25,Western Bulldogs 10.7 (67) def. Sydney 5.9 (39),106,28,,Western Bulldogs defeated Sydney by 28 points at S.C.G..
-28,Regular Season,Greater Western Sydney,Collingwood,Greater Western Sydney,Collingwood,Sydney Showground,2020-06-26,Greater Western Sydney 10.6 (66) def. Collingwood 9.10 (64),130,2,,Greater Western Sydney defeated Collingwood by 2 points at Sydney Showground.
-29,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Carrara,2020-06-27,Port Adelaide 13.11 (89) def. West Coast 6.5 (41),130,48,,Port Adelaide defeated West Coast by 48 points at Carrara.
-30,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2020-06-27,St Kilda 15.3 (93) def. Richmond 10.7 (67),160,26,,St Kilda defeated Richmond by 26 points at Docklands.
-31,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2020-06-27,Carlton 7.10 (52) def. Essendon 8.3 (51),103,1,,Carlton defeated Essendon by 1 points at M.C.G..
-32,Regular Season,Gold Coast,Fremantle,Gold Coast,Fremantle,Carrara,2020-06-27,Gold Coast 10.4 (64) def. Fremantle 8.3 (51),115,13,,Gold Coast defeated Fremantle by 13 points at Carrara.
-33,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2020-06-28,Brisbane Lions 10.23 (83) def. Adelaide 7.4 (46),129,37,,Brisbane Lions defeated Adelaide by 37 points at Gabba.
-34,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2020-06-28,Geelong 7.5 (47) def. Melbourne 6.8 (44),91,3,,Geelong defeated Melbourne by 3 points at M.C.G..
-35,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Docklands,2020-06-28,Hawthorn 8.10 (58) def. North Melbourne 8.6 (54),112,4,,Hawthorn defeated North Melbourne by 4 points at Docklands.
-36,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Docklands,2020-07-02,St Kilda 11.7 (73) def. Carlton 8.7 (55),128,18,,St Kilda defeated Carlton by 18 points at Docklands.
-37,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2020-07-03,Essendon 10.3 (63) def. Collingwood 7.6 (48),111,15,,Essendon defeated Collingwood by 15 points at M.C.G..
-38,Regular Season,West Coast,Sydney,West Coast,Sydney,Carrara,2020-07-04,West Coast 11.11 (77) def. Sydney 6.7 (43),120,34,,West Coast defeated Sydney by 34 points at Carrara.
-39,Regular Season,Geelong,Gold Coast,Geelong,Gold Coast,Kardinia Park,2020-07-04,Geelong 13.11 (89) def. Gold Coast 8.4 (52),141,37,,Geelong defeated Gold Coast by 37 points at Kardinia Park.
-40,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2020-07-04,Western Bulldogs 13.9 (87) def. North Melbourne 5.8 (38),125,49,,Western Bulldogs defeated North Melbourne by 49 points at Docklands.
-41,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2020-07-04,Brisbane Lions 12.13 (85) def. Port Adelaide 6.12 (48),133,37,,Brisbane Lions defeated Port Adelaide by 37 points at Gabba.
-42,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Carrara,2020-07-05,Fremantle 8.6 (54) def. Adelaide 4.10 (34),88,20,,Fremantle defeated Adelaide by 20 points at Carrara.
-43,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2020-07-05,Richmond 12.7 (79) def. Melbourne 8.4 (52),131,27,,Richmond defeated Melbourne by 27 points at M.C.G..
-44,Regular Season,Greater Western Sydney,Hawthorn,Greater Western Sydney,Hawthorn,Sydney Showground,2020-07-05,Greater Western Sydney 13.5 (83) def. Hawthorn 7.7 (49),132,34,,Greater Western Sydney defeated Hawthorn by 34 points at Sydney Showground.
-45,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,S.C.G.,2020-07-09,Geelong 11.7 (73) def. Brisbane Lions 6.10 (46),119,27,,Geelong defeated Brisbane Lions by 27 points at S.C.G..
-46,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Sydney Showground,2020-07-10,Collingwood 8.11 (59) def. Hawthorn 3.9 (27),86,32,,Collingwood defeated Hawthorn by 32 points at Sydney Showground.
-47,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Carrara,2020-07-11,Fremantle 12.7 (79) def. St Kilda 11.7 (73),152,6,,Fremantle defeated St Kilda by 6 points at Carrara.
-48,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Gabba,2020-07-11,West Coast 10.7 (67) def. Adelaide 5.4 (34),101,33,,West Coast defeated Adelaide by 33 points at Gabba.
-49,Regular Season,Melbourne,Gold Coast,Melbourne,Gold Coast,Sydney Showground,2020-07-11,Melbourne 12.8 (80) def. Gold Coast 9.9 (63),143,17,,Melbourne defeated Gold Coast by 17 points at Sydney Showground.
-50,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Carrara,2020-07-11,Essendon 9.13 (67) def. North Melbourne 7.11 (53),120,14,,Essendon defeated North Melbourne by 14 points at Carrara.
-51,Regular Season,Port Adelaide,Greater Western Sydney,Port Adelaide,Greater Western Sydney,Carrara,2020-07-12,Port Adelaide 9.9 (63) def. Greater Western Sydney 6.10 (46),109,17,,Port Adelaide defeated Greater Western Sydney by 17 points at Carrara.
-52,Regular Season,Richmond,Sydney,Richmond,Sydney,Gabba,2020-07-12,Richmond 4.10 (34) def. Sydney 3.8 (26),60,8,,Richmond defeated Sydney by 8 points at Gabba.
-53,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Carrara,2020-07-12,Carlton 16.7 (103) def. Western Bulldogs 7.9 (51),154,52,,Carlton defeated Western Bulldogs by 52 points at Carrara.
-54,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Perth Stadium,2020-07-16,Collingwood 8.9 (57) def. Geelong 5.5 (35),92,22,,Collingwood defeated Geelong by 22 points at Perth Stadium.
-55,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Carrara,2020-07-17,Western Bulldogs 14.9 (93) def. Essendon 7.9 (51),144,42,,Western Bulldogs defeated Essendon by 42 points at Carrara.
-56,Regular Season,Greater Western Sydney,Brisbane Lions,Greater Western Sydney,Brisbane Lions,Sydney Showground,2020-07-18,Brisbane Lions 13.10 (88) def. Greater Western Sydney 10.8 (68),156,20,,Brisbane Lions defeated Greater Western Sydney by 20 points at Sydney Showground.
-57,Regular Season,Sydney,Gold Coast,Sydney,Gold Coast,S.C.G.,2020-07-18,Gold Coast 13.14 (92) def. Sydney 9.6 (60),152,32,,Gold Coast defeated Sydney by 32 points at S.C.G..
-58,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Carrara,2020-07-18,Richmond 11.11 (77) def. North Melbourne 2.11 (23),100,54,,Richmond defeated North Melbourne by 54 points at Carrara.
-59,Regular Season,Carlton,Port Adelaide,Carlton,Port Adelaide,Gabba,2020-07-19,Port Adelaide 9.10 (64) def. Carlton 9.7 (61),125,3,,Port Adelaide defeated Carlton by 3 points at Gabba.
-60,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Sydney Showground,2020-07-19,Melbourne 14.7 (91) def. Hawthorn 7.6 (48),139,43,,Melbourne defeated Hawthorn by 43 points at Sydney Showground.
-61,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Perth Stadium,2020-07-19,West Coast 9.8 (62) def. Fremantle 5.2 (32),94,30,,West Coast defeated Fremantle by 30 points at Perth Stadium.
-62,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Adelaide Oval,2020-07-20,St Kilda 12.6 (78) def. Adelaide 8.7 (55),133,23,,St Kilda defeated Adelaide by 23 points at Adelaide Oval.
-63,Regular Season,Gold Coast,Western Bulldogs,Gold Coast,Western Bulldogs,Carrara,2020-07-23,Western Bulldogs 7.9 (51) def. Gold Coast 6.10 (46),97,5,,Western Bulldogs defeated Gold Coast by 5 points at Carrara.
-64,Regular Season,Greater Western Sydney,Richmond,Greater Western Sydney,Richmond,Sydney Showground,2020-07-24,Greater Western Sydney 9.8 (62) def. Richmond 6.14 (50),112,12,,Greater Western Sydney defeated Richmond by 12 points at Sydney Showground.
-65,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Gabba,2020-07-25,Carlton 9.10 (64) def. North Melbourne 9.3 (57),121,7,,Carlton defeated North Melbourne by 7 points at Gabba.
-66,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,2020-07-25,Sydney 9.6 (60) def. Hawthorn 7.11 (53),113,7,,Sydney defeated Hawthorn by 7 points at S.C.G..
-67,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Adelaide Oval,2020-07-25,St Kilda 12.1 (73) def. Port Adelaide 6.8 (44),117,29,,St Kilda defeated Port Adelaide by 29 points at Adelaide Oval.
-68,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Adelaide Oval,2020-07-26,Essendon 9.8 (62) def. Adelaide 8.11 (59),121,3,,Essendon defeated Adelaide by 3 points at Adelaide Oval.
-69,Regular Season,West Coast,Collingwood,West Coast,Collingwood,Perth Stadium,2020-07-26,West Coast 18.3 (111) def. Collingwood 6.9 (45),156,66,,West Coast defeated Collingwood by 66 points at Perth Stadium.
-70,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Carrara,2020-07-26,Brisbane Lions 7.11 (53) def. Melbourne 7.7 (49),102,4,,Brisbane Lions defeated Melbourne by 4 points at Carrara.
-71,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Perth Stadium,2020-07-27,Geelong 6.12 (48) def. Fremantle 2.4 (16),64,32,,Geelong defeated Fremantle by 32 points at Perth Stadium.
-72,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Carrara,2020-07-29,Richmond 13.12 (90) def. Western Bulldogs 7.7 (49),139,41,,Richmond defeated Western Bulldogs by 41 points at Carrara.
-73,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,Gabba,2020-07-30,Port Adelaide 12.11 (83) def. Melbourne 4.8 (32),115,51,,Port Adelaide defeated Melbourne by 51 points at Gabba.
-74,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Perth Stadium,2020-07-31,Hawthorn 14.5 (89) def. Carlton 9.4 (58),147,31,,Hawthorn defeated Carlton by 31 points at Perth Stadium.
-75,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Carrara,2020-07-31,Brisbane Lions 14.7 (91) def. Essendon 3.10 (28),119,63,,Brisbane Lions defeated Essendon by 63 points at Carrara.
-76,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,Carrara,2020-08-01,North Melbourne 19.5 (119) def. Adelaide 7.8 (50),169,69,,North Melbourne defeated Adelaide by 69 points at Carrara.
-77,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Gabba,2020-08-01,St Kilda 15.11 (101) def. Sydney 6.12 (48),149,53,,St Kilda defeated Sydney by 53 points at Gabba.
-78,Regular Season,West Coast,Geelong,West Coast,Geelong,Perth Stadium,2020-08-01,West Coast 11.7 (73) def. Geelong 10.4 (64),137,9,,West Coast defeated Geelong by 9 points at Perth Stadium.
-79,Regular Season,Gold Coast,Greater Western Sydney,Gold Coast,Greater Western Sydney,Carrara,2020-08-02,Greater Western Sydney 9.7 (61) def. Gold Coast 4.11 (35),96,26,,Greater Western Sydney defeated Gold Coast by 26 points at Carrara.
-80,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Perth Stadium,2020-08-02,Fremantle 10.1 (61) def. Collingwood 7.7 (49),110,12,,Fremantle defeated Collingwood by 12 points at Perth Stadium.
-81,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Adelaide Oval,2020-08-03,Port Adelaide 8.7 (55) def. Western Bulldogs 5.12 (42),97,13,,Port Adelaide defeated Western Bulldogs by 13 points at Adelaide Oval.
-82,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,Carrara,2020-08-04,Richmond 12.10 (82) def. Brisbane Lions 4.17 (41),123,41,,Richmond defeated Brisbane Lions by 41 points at Carrara.
-83,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Gabba,2020-08-05,Geelong 13.12 (90) def. North Melbourne 9.3 (57),147,33,,Geelong defeated North Melbourne by 33 points at Gabba.
-84,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Adelaide Oval,2020-08-05,Melbourne 13.10 (88) def. Adelaide 5.7 (37),125,51,,Melbourne defeated Adelaide by 51 points at Adelaide Oval.
-85,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Gabba,2020-08-06,Collingwood 6.14 (50) def. Sydney 6.5 (41),91,9,,Collingwood defeated Sydney by 9 points at Gabba.
-86,Regular Season,Gold Coast,St Kilda,Gold Coast,St Kilda,Carrara,2020-08-06,St Kilda 12.6 (78) def. Gold Coast 11.8 (74),152,4,,St Kilda defeated Gold Coast by 4 points at Carrara.
-87,Regular Season,Essendon,Greater Western Sydney,Essendon,Greater Western Sydney,Carrara,2020-08-07,Greater Western Sydney 8.11 (59) def. Essendon 8.7 (55),114,4,,Greater Western Sydney defeated Essendon by 4 points at Carrara.
-88,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Adelaide Oval,2020-08-08,Port Adelaide 13.15 (93) def. Richmond 11.6 (72),165,21,,Port Adelaide defeated Richmond by 21 points at Adelaide Oval.
-89,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2020-08-08,Brisbane Lions 14.12 (96) def. Western Bulldogs 11.6 (72),168,24,,Brisbane Lions defeated Western Bulldogs by 24 points at Gabba.
-90,Regular Season,West Coast,Carlton,West Coast,Carlton,Perth Stadium,2020-08-09,West Coast 11.6 (72) def. Carlton 7.8 (50),122,22,,West Coast defeated Carlton by 22 points at Perth Stadium.
-91,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,Adelaide Oval,2020-08-09,Melbourne 13.14 (92) def. North Melbourne 5.5 (35),127,57,,Melbourne defeated North Melbourne by 57 points at Adelaide Oval.
-92,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Gabba,2020-08-10,Geelong 14.9 (93) def. St Kilda 4.10 (34),127,59,,Geelong defeated St Kilda by 59 points at Gabba.
-93,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Perth Stadium,2020-08-10,Fremantle 7.6 (48) def. Hawthorn 4.8 (32),80,16,,Fremantle defeated Hawthorn by 16 points at Perth Stadium.
-94,Regular Season,Adelaide,Collingwood,Adelaide,Collingwood,Adelaide Oval,2020-08-11,Collingwood 10.2 (62) def. Adelaide 5.8 (38),100,24,,Collingwood defeated Adelaide by 24 points at Adelaide Oval.
-95,Regular Season,Gold Coast,Essendon,Gold Coast,Essendon,Carrara,2020-08-12,Gold Coast 11.7 (73) drew with Essendon 11.7 (73),146,0,,Gold Coast and Essendon played out a draw at Carrara.
-96,Regular Season,Sydney,Greater Western Sydney,Sydney,Greater Western Sydney,Perth Stadium,2020-08-13,Sydney 10.6 (66) def. Greater Western Sydney 3.7 (25),91,41,,Sydney defeated Greater Western Sydney by 41 points at Perth Stadium.
-97,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Carrara,2020-08-14,Geelong 14.7 (91) def. Port Adelaide 4.7 (31),122,60,,Geelong defeated Port Adelaide by 60 points at Carrara.
-98,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Carrara,2020-08-15,Brisbane Lions 7.11 (53) def. North Melbourne 8.4 (52),105,1,,Brisbane Lions defeated North Melbourne by 1 points at Carrara.
-99,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,Gabba,2020-08-15,Melbourne 16.4 (100) def. Collingwood 6.8 (44),144,56,,Melbourne defeated Collingwood by 56 points at Gabba.
-100,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Perth Stadium,2020-08-15,Carlton 5.10 (40) def. Fremantle 5.6 (36),76,4,,Carlton defeated Fremantle by 4 points at Perth Stadium.
-101,Regular Season,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,Carrara,2020-08-16,Western Bulldogs 16.15 (111) def. Adelaide 8.6 (54),165,57,,Western Bulldogs defeated Adelaide by 57 points at Carrara.
-102,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Gabba,2020-08-16,St Kilda 10.8 (68) def. Essendon 5.3 (33),101,35,,St Kilda defeated Essendon by 35 points at Gabba.
-103,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,Perth Stadium,2020-08-16,West Coast 12.9 (81) def. Hawthorn 7.7 (49),130,32,,West Coast defeated Hawthorn by 32 points at Perth Stadium.
-104,Regular Season,Richmond,Gold Coast,Richmond,Gold Coast,Gabba,2020-08-17,Richmond 8.5 (53) def. Gold Coast 4.8 (32),85,21,,Richmond defeated Gold Coast by 21 points at Gabba.
-105,Regular Season,Gold Coast,Carlton,Gold Coast,Carlton,Marrara Oval,2020-08-21,Carlton 7.18 (60) def. Gold Coast 4.3 (27),87,33,,Carlton defeated Gold Coast by 33 points at Marrara Oval.
-106,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Carrara,2020-08-22,Western Bulldogs 12.8 (80) def. Melbourne 7.10 (52),132,28,,Western Bulldogs defeated Melbourne by 28 points at Carrara.
-107,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Adelaide Oval,2020-08-22,Port Adelaide 9.14 (68) def. Hawthorn 9.4 (58),126,10,,Port Adelaide defeated Hawthorn by 10 points at Adelaide Oval.
-108,Regular Season,Essendon,Richmond,Essendon,Richmond,Marrara Oval,2020-08-22,Richmond 10.13 (73) def. Essendon 10.1 (61),134,12,,Richmond defeated Essendon by 12 points at Marrara Oval.
-109,Regular Season,Fremantle,Sydney,Fremantle,Sydney,Perth Stadium,2020-08-22,Fremantle 7.8 (50) def. Sydney 2.7 (19),69,31,,Fremantle defeated Sydney by 31 points at Perth Stadium.
-110,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Adelaide Oval,2020-08-23,Geelong 9.11 (65) def. Adelaide 5.7 (37),102,28,,Geelong defeated Adelaide by 28 points at Adelaide Oval.
-111,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2020-08-23,Brisbane Lions 6.14 (50) def. St Kilda 7.6 (48),98,2,,Brisbane Lions defeated St Kilda by 2 points at Gabba.
-112,Regular Season,West Coast,Greater Western Sydney,West Coast,Greater Western Sydney,Perth Stadium,2020-08-23,West Coast 9.7 (61) def. Greater Western Sydney 7.7 (49),110,12,,West Coast defeated Greater Western Sydney by 12 points at Perth Stadium.
-113,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Gabba,2020-08-24,Collingwood 10.5 (65) def. North Melbourne 5.5 (35),100,30,,Collingwood defeated North Melbourne by 30 points at Gabba.
-114,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Adelaide Oval,2020-08-27,Essendon 13.9 (87) def. Hawthorn 10.11 (71),158,16,,Essendon defeated Hawthorn by 16 points at Adelaide Oval.
-115,Regular Season,Richmond,West Coast,Richmond,West Coast,Carrara,2020-08-27,Richmond 14.4 (88) def. West Coast 9.7 (61),149,27,,Richmond defeated West Coast by 27 points at Carrara.
-116,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Carrara,2020-08-28,Geelong 10.12 (72) def. Western Bulldogs 9.7 (61),133,11,,Geelong defeated Western Bulldogs by 11 points at Carrara.
-117,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Adelaide Oval,2020-08-29,Port Adelaide 11.7 (73) def. Sydney 7.5 (47),120,26,,Port Adelaide defeated Sydney by 26 points at Adelaide Oval.
-118,Regular Season,Fremantle,Greater Western Sydney,Fremantle,Greater Western Sydney,Perth Stadium,2020-08-29,Greater Western Sydney 14.7 (91) def. Fremantle 8.5 (53),144,38,,Greater Western Sydney defeated Fremantle by 38 points at Perth Stadium.
-119,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,Traeger Park,2020-08-29,Melbourne 8.4 (52) def. St Kilda 7.7 (49),101,3,,Melbourne defeated St Kilda by 3 points at Traeger Park.
-120,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Gabba,2020-08-30,Collingwood 10.12 (72) def. Carlton 7.6 (48),120,24,,Collingwood defeated Carlton by 24 points at Gabba.
-121,Regular Season,Gold Coast,North Melbourne,Gold Coast,North Melbourne,Carrara,2020-08-30,Gold Coast 12.19 (91) def. North Melbourne 4.4 (28),119,63,,Gold Coast defeated North Melbourne by 63 points at Carrara.
-122,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,Adelaide Oval,2020-09-01,Adelaide 12.11 (83) def. Hawthorn 7.6 (48),131,35,,Adelaide defeated Hawthorn by 35 points at Adelaide Oval.
-123,Regular Season,West Coast,Essendon,West Coast,Essendon,Gabba,2020-09-01,West Coast 9.6 (60) def. Essendon 6.9 (45),105,15,,West Coast defeated Essendon by 15 points at Gabba.
-124,Regular Season,Richmond,Fremantle,Richmond,Fremantle,Carrara,2020-09-02,Richmond 8.8 (56) def. Fremantle 4.5 (29),85,27,,Richmond defeated Fremantle by 27 points at Carrara.
-125,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Cazaly's Stadium,2020-09-03,Sydney 10.7 (67) def. Melbourne 6.10 (46),113,21,,Sydney defeated Melbourne by 21 points at Cazaly's Stadium.
-126,Regular Season,Greater Western Sydney,Carlton,Greater Western Sydney,Carlton,Carrara,2020-09-03,Greater Western Sydney 6.12 (48) def. Carlton 5.9 (39),87,9,,Greater Western Sydney defeated Carlton by 9 points at Carrara.
-127,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2020-09-04,Brisbane Lions 6.6 (42) def. Collingwood 5.4 (34),76,8,,Brisbane Lions defeated Collingwood by 8 points at Gabba.
-128,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Carrara,2020-09-05,Port Adelaide 11.12 (78) def. North Melbourne 6.6 (42),120,36,,Port Adelaide defeated North Melbourne by 36 points at Carrara.
-129,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Carrara,2020-09-06,St Kilda 11.14 (80) def. Hawthorn 9.12 (66),146,14,,St Kilda defeated Hawthorn by 14 points at Carrara.
-130,Regular Season,Geelong,Essendon,Geelong,Essendon,Gabba,2020-09-06,Geelong 17.6 (108) def. Essendon 5.12 (42),150,66,,Geelong defeated Essendon by 66 points at Gabba.
-131,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Carrara,2020-09-06,Western Bulldogs 6.13 (49) def. West Coast 7.5 (47),96,2,,Western Bulldogs defeated West Coast by 2 points at Carrara.
-132,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,Cazaly's Stadium,2020-09-07,Fremantle 6.11 (47) def. Melbourne 4.9 (33),80,14,,Fremantle defeated Melbourne by 14 points at Cazaly's Stadium.
-133,Regular Season,Adelaide,Greater Western Sydney,Adelaide,Greater Western Sydney,Adelaide Oval,2020-09-08,Adelaide 8.11 (59) def. Greater Western Sydney 7.5 (47),106,12,,Adelaide defeated Greater Western Sydney by 12 points at Adelaide Oval.
-134,Regular Season,Carlton,Sydney,Carlton,Sydney,Carrara,2020-09-08,Carlton 8.9 (57) def. Sydney 8.4 (52),109,5,,Carlton defeated Sydney by 5 points at Carrara.
-135,Regular Season,Brisbane Lions,Gold Coast,Brisbane Lions,Gold Coast,Gabba,2020-09-09,Brisbane Lions 13.10 (88) def. Gold Coast 6.7 (43),131,45,,Brisbane Lions defeated Gold Coast by 45 points at Gabba.
-136,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Gabba,2020-09-10,West Coast 9.11 (65) def. St Kilda 6.14 (50),115,15,,West Coast defeated St Kilda by 15 points at Gabba.
-137,Regular Season,Geelong,Richmond,Geelong,Richmond,Carrara,2020-09-11,Richmond 7.15 (57) def. Geelong 4.7 (31),88,26,,Richmond defeated Geelong by 26 points at Carrara.
-138,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,Carrara,2020-09-12,Fremantle 15.9 (99) def. North Melbourne 5.5 (35),134,64,,Fremantle defeated North Melbourne by 64 points at Carrara.
-139,Regular Season,Port Adelaide,Essendon,Port Adelaide,Essendon,Adelaide Oval,2020-09-12,Port Adelaide 11.13 (79) def. Essendon 4.5 (29),108,50,,Port Adelaide defeated Essendon by 50 points at Adelaide Oval.
-140,Regular Season,Greater Western Sydney,Melbourne,Greater Western Sydney,Melbourne,Gabba,2020-09-12,Melbourne 12.7 (79) def. Greater Western Sydney 11.8 (74),153,5,,Melbourne defeated Greater Western Sydney by 5 points at Gabba.
-141,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Carrara,2020-09-13,Adelaide 10.12 (72) def. Carlton 8.8 (56),128,16,,Adelaide defeated Carlton by 16 points at Carrara.
-142,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Adelaide Oval,2020-09-13,Western Bulldogs 11.10 (76) def. Hawthorn 6.4 (40),116,36,,Western Bulldogs defeated Hawthorn by 36 points at Adelaide Oval.
-143,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,Cazaly's Stadium,2020-09-13,Brisbane Lions 11.7 (73) def. Sydney 6.5 (41),114,32,,Brisbane Lions defeated Sydney by 32 points at Cazaly's Stadium.
-144,Regular Season,Collingwood,Gold Coast,Collingwood,Gold Coast,Gabba,2020-09-14,Collingwood 10.8 (68) def. Gold Coast 6.10 (46),114,22,,Collingwood defeated Gold Coast by 22 points at Gabba.
-145,Regular Season,North Melbourne,West Coast,North Melbourne,West Coast,Carrara,2020-09-17,West Coast 7.7 (49) def. North Melbourne 4.10 (34),83,15,,West Coast defeated North Melbourne by 15 points at Carrara.
-146,Regular Season,St Kilda,Greater Western Sydney,St Kilda,Greater Western Sydney,Gabba,2020-09-18,St Kilda 12.10 (82) def. Greater Western Sydney 3.12 (30),112,52,,St Kilda defeated Greater Western Sydney by 52 points at Gabba.
-147,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Carrara,2020-09-19,Melbourne 10.8 (68) def. Essendon 7.7 (49),117,19,,Melbourne defeated Essendon by 19 points at Carrara.
-148,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Adelaide Oval,2020-09-19,Richmond 12.5 (77) def. Adelaide 4.9 (33),110,44,,Richmond defeated Adelaide by 44 points at Adelaide Oval.
-149,Regular Season,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2020-09-19,Brisbane Lions 11.12 (78) def. Carlton 10.1 (61),139,17,,Brisbane Lions defeated Carlton by 17 points at Gabba.
-150,Regular Season,Hawthorn,Gold Coast,Hawthorn,Gold Coast,Adelaide Oval,2020-09-20,Hawthorn 17.6 (108) def. Gold Coast 8.9 (57),165,51,,Hawthorn defeated Gold Coast by 51 points at Adelaide Oval.
-151,Regular Season,Sydney,Geelong,Sydney,Geelong,Carrara,2020-09-20,Geelong 10.9 (69) def. Sydney 9.9 (63),132,6,,Geelong defeated Sydney by 6 points at Carrara.
-152,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Cazaly's Stadium,2020-09-20,Western Bulldogs 11.8 (74) def. Fremantle 6.8 (44),118,30,,Western Bulldogs defeated Fremantle by 30 points at Cazaly's Stadium.
-153,Regular Season,Collingwood,Port Adelaide,Collingwood,Port Adelaide,Gabba,2020-09-21,Port Adelaide 9.7 (61) def. Collingwood 7.3 (45),106,16,,Port Adelaide defeated Collingwood by 16 points at Gabba.
-154,Finals,Port Adelaide,Geelong,Port Adelaide,Geelong,Adelaide Oval,2020-10-01,Port Adelaide 9.4 (58) def. Geelong 5.12 (42),100,16,,Port Adelaide defeated Geelong by 16 points at Adelaide Oval.
-155,Finals,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2020-10-02,Brisbane Lions 10.9 (69) def. Richmond 8.6 (54),123,15,,Brisbane Lions defeated Richmond by 15 points at Gabba.
-156,Finals,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Gabba,2020-10-03,St Kilda 10.7 (67) def. Western Bulldogs 9.10 (64),131,3,,St Kilda defeated Western Bulldogs by 3 points at Gabba.
-157,Finals,West Coast,Collingwood,West Coast,Collingwood,Perth Stadium,2020-10-03,Collingwood 12.4 (76) def. West Coast 11.9 (75),151,1,,Collingwood defeated West Coast by 1 points at Perth Stadium.
-158,Finals,Richmond,St Kilda,Richmond,St Kilda,Carrara,2020-10-09,Richmond 12.8 (80) def. St Kilda 6.13 (49),129,31,,Richmond defeated St Kilda by 31 points at Carrara.
-159,Finals,Geelong,Collingwood,Geelong,Collingwood,Gabba,2020-10-10,Geelong 15.10 (100) def. Collingwood 5.2 (32),132,68,,Geelong defeated Collingwood by 68 points at Gabba.
-160,Finals,Port Adelaide,Richmond,Port Adelaide,Richmond,Adelaide Oval,2020-10-16,Richmond 6.10 (46) def. Port Adelaide 6.4 (40),86,6,,Richmond defeated Port Adelaide by 6 points at Adelaide Oval.
-161,Finals,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,2020-10-17,Geelong 11.16 (82) def. Brisbane Lions 6.6 (42),124,40,,Geelong defeated Brisbane Lions by 40 points at Gabba.
-162,Grand Final,Richmond,Geelong,Richmond,Geelong,Gabba,2020-10-24,Richmond 12.9 (81) def. Geelong 7.8 (50),131,31,,Richmond defeated Geelong by 31 points at Gabba.
+1,pre-Season,St Kilda,Hawthorn,St Kilda,Hawthorn,RSEA Park,2020-02-20,St Kilda 17.9 (111) def. Hawthorn 13.12 (90),201,21,,St Kilda defeated Hawthorn by 21 points at RSEA Park.
+2,pre-Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2020-02-21,Western Bulldogs 15.11 (101) def. North Melbourne 9.3 (57),158,44,,Western Bulldogs defeated Melbourne by 44 points at Docklands.
+3,pre-Season,Melbourne,Adelaide,Melbourne,Adelaide,Casey Fields,2020-02-22,Melbourne 15.13 (103) def. Adelaide Crows 10.10 (70),173,33,,Melbourne defeated Adelaide by 33 points at Casey Fields.
+4,pre-Season,Gold Coast,Geelong,Gold Coast,Geelong,Carrara,2020-02-22,Gold Coast SUNS 17.20 (122) def. Geelong Cats 7.12 (54),176,68,,Gold Coast defeated Geelong by 68 points at Carrara.
+5,pre-Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Moreton Bay Central Sports Complex,2020-02-23,Brisbane Lions 12.5 (77) def. by Port Adelaide 14.14 (98),175,21,,Adelaide defeated Brisbane Lions by 21 points at Moreton Bay Central Sports Complex.
+6,pre-Season,West Coast,Essendon,West Coast,Essendon,Mineral Resources Park,2020-02-27,West Coast Eagles 13.9 (87) def. by Essendon 14.11 (95),182,8,,Essendon defeated West Coast by 8 points at Mineral Resources Park.
+7,pre-Season,Greater Western Sydney,Sydney,Greater Western Sydney,Sydney,Blacktown ISP,2020-02-29,GWS GIANTS 19.7 (121) def. Sydney Swans 3.9 (27),148,94,,Greater Western Sydney defeated Sydney by 94 points at Blacktown ISP.
+8,pre-Season,Fremantle,Carlton,Fremantle,Carlton,Rushton Park,2020-02-29,Fremantle 13.12 (90) def. Carlton 5.13 (43),133,47,,Fremantle defeated Carlton by 47 points at Rushton Park.
+9,pre-Season,Richmond,Collingwood,Richmond,Collingwood,Norm Minns Oval,2020-03-01,Richmond 6.8 (44) def. by Collingwood 13.6 (84),128,40,,Collingwood defeated Richmond by 40 points at Norm Minns Oval.
+10,pre-Season,Adelaide,Gold Coast,Adelaide,Gold Coast,Magain Stadium,2020-03-06,Adelaide Crows 9.10 (64) def. by Gold Coast SUNS 9.17 (71),135,7,,Gold Coast defeated Adelaide by 7 points at Magain Stadium.
+11,pre-Season,Hawthorn,Melbourne,Hawthorn,Melbourne,UTAS Stadium,2020-03-06,Hawthorn 6.13 (49) def. by Melbourne 12.9 (81),130,32,,Melbourne defeated Hawthorn by 32 points at UTAS Stadium.
+12,pre-Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Bennett Oval,2020-03-07,Port Adelaide 14.11 (95) def. Western Bulldogs 13.7 (85),180,10,,Adelaide defeated Western Bulldogs by 10 points at Bennett Oval.
+13,pre-Season,West Coast,Fremantle,West Coast,Fremantle,Joondalup Arena,2020-03-07,West Coast Eagles 7.12 (54) def. by Fremantle 8.7 (55),109,1,,Fremantle defeated West Coast by 1 points at Joondalup Arena.
+14,pre-Season,Greater Western Sydney,Richmond,Greater Western Sydney,Richmond,Robertson Oval,2020-03-08,GWS GIANTS 17.7 (109) def. Richmond 14.11 (95),204,14,,Greater Western Sydney defeated Richmond by 14 points at Robertson Oval.
+15,pre-Season,Collingwood,St Kilda,Collingwood,St Kilda,Morwell Recreation Reserve,2020-03-08,Collingwood 9.3 (57) def. by St Kilda 10.8 (68),125,11,,St Kilda defeated Collingwood by 11 points at Morwell Recreation Reserve.
+16,pre-Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Princes Park,2020-03-08,Carlton 10.6 (66) def. by Brisbane Lions 16.15 (111),177,45,,Brisbane Lions defeated Carlton by 45 points at Princes Park.
+17,pre-Season,Melbourne,Sydney,Melbourne,Sydney,Twin Oval Kingston,2020-03-09,North Melbourne 14.6 (90) def. Sydney Swans 12.7 (79),169,11,,Melbourne defeated Sydney by 11 points at Twin Oval Kingston.
+18,pre-Season,Geelong,Essendon,Geelong,Essendon,Central Reserve,2020-03-09,Geelong Cats 9.7 (61) def. by Essendon 9.11 (65),126,4,,Essendon defeated Geelong by 4 points at Central Reserve.
+19,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2020-03-19,Richmond 16.9 (105) def. Carlton 12.9 (81),186,24,,Richmond defeated Carlton by 24 points at M.C.G..
+20,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2020-03-20,Collingwood 13.8 (86) def. Western Bulldogs 5.4 (34),120,52,,Collingwood defeated Western Bulldogs by 52 points at Docklands.
+21,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2020-03-21,Essendon 9.9 (63) def. Fremantle 8.9 (57),120,6,,Essendon defeated Fremantle by 6 points at Docklands.
+22,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Adelaide Oval,2020-03-21,Sydney 11.8 (74) def. Adelaide 11.5 (71),145,3,,Sydney defeated Adelaide by 3 points at Adelaide Oval.
+23,Regular Season,Greater Western Sydney,Geelong,Greater Western Sydney,Geelong,Sydney Showground,2020-03-21,Greater Western Sydney 17.3 (105) def. Geelong 11.7 (73),178,32,,Greater Western Sydney defeated Geelong by 32 points at Sydney Showground.
+24,Regular Season,Gold Coast,Port Adelaide,Gold Coast,Port Adelaide,Carrara,2020-03-21,Port Adelaide 10.16 (76) def. Gold Coast 4.5 (29),105,47,,Port Adelaide defeated Gold Coast by 47 points at Carrara.
+25,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Docklands,2020-03-22,North Melbourne 8.8 (56) def. St Kilda 7.12 (54),110,2,,North Melbourne defeated St Kilda by 2 points at Docklands.
+26,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,M.C.G.,2020-03-22,Hawthorn 14.6 (90) def. Brisbane Lions 9.8 (62),152,28,,Hawthorn defeated Brisbane Lions by 28 points at M.C.G..
+27,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Perth Stadium,2020-03-22,West Coast 12.6 (78) def. Melbourne 7.9 (51),129,27,,West Coast defeated Melbourne by 27 points at Perth Stadium.
+28,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,2020-06-11,Collingwood 5.6 (36) drew with Richmond 5.6 (36),72,0,,Collingwood and Richmond played out a draw at M.C.G..
+29,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,2020-06-12,Geelong 17.6 (108) def. Hawthorn 7.5 (47),155,61,,Geelong defeated Hawthorn by 61 points at Kardinia Park.
+30,Regular Season,Brisbane Lions,Fremantle,Brisbane Lions,Fremantle,Gabba,2020-06-13,Brisbane Lions 12.9 (81) def. Fremantle 10.9 (69),150,12,,Brisbane Lions defeated Fremantle by 12 points at Gabba.
+31,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Docklands,2020-06-13,Melbourne 8.6 (54) def. Carlton 7.11 (53),107,1,,Melbourne defeated Carlton by 1 points at Docklands.
+32,Regular Season,Gold Coast,West Coast,Gold Coast,West Coast,Carrara,2020-06-13,Gold Coast 14.6 (90) def. West Coast 6.10 (46),136,44,,Gold Coast defeated West Coast by 44 points at Carrara.
+33,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Adelaide Oval,2020-06-13,Port Adelaide 17.8 (110) def. Adelaide 5.5 (35),145,75,,Port Adelaide defeated Adelaide by 75 points at Adelaide Oval.
+34,Regular Season,Greater Western Sydney,North Melbourne,Greater Western Sydney,North Melbourne,Sydney Showground,2020-06-14,North Melbourne 12.8 (80) def. Greater Western Sydney 8.12 (60),140,20,,North Melbourne defeated Greater Western Sydney by 20 points at Sydney Showground.
+35,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,2020-06-14,Essendon 12.7 (79) def. Sydney 11.7 (73),152,6,,Essendon defeated Sydney by 6 points at S.C.G..
+36,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Docklands,2020-06-14,St Kilda 14.4 (88) def. Western Bulldogs 7.7 (49),137,39,,St Kilda defeated Western Bulldogs by 39 points at Docklands.
+37,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2020-06-18,Hawthorn 11.5 (71) def. Richmond 5.9 (39),110,32,,Hawthorn defeated Richmond by 32 points at M.C.G..
+38,Regular Season,Western Bulldogs,Greater Western Sydney,Western Bulldogs,Greater Western Sydney,Docklands,2020-06-19,Western Bulldogs 8.9 (57) def. Greater Western Sydney 4.9 (33),90,24,,Western Bulldogs defeated Greater Western Sydney by 24 points at Docklands.
+39,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Docklands,2020-06-20,Sydney 10.11 (71) def. North Melbourne 8.12 (60),131,11,,Sydney defeated North Melbourne by 11 points at Docklands.
+40,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,2020-06-20,Collingwood 12.9 (81) def. St Kilda 5.7 (37),118,44,,Collingwood defeated St Kilda by 44 points at M.C.G..
+41,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2020-06-20,Brisbane Lions 10.14 (74) def. West Coast 6.8 (44),118,30,,Brisbane Lions defeated West Coast by 30 points at Gabba.
+42,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,2020-06-20,Carlton 12.7 (79) def. Geelong 11.11 (77),156,2,,Carlton defeated Geelong by 2 points at Kardinia Park.
+43,Regular Season,Gold Coast,Adelaide,Gold Coast,Adelaide,Carrara,2020-06-21,Gold Coast 12.10 (82) def. Adelaide 4.5 (29),111,53,,Gold Coast defeated Adelaide by 53 points at Carrara.
+44,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Carrara,2020-06-21,Port Adelaide 10.10 (70) def. Fremantle 6.5 (41),111,29,,Port Adelaide defeated Fremantle by 29 points at Carrara.
+45,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,2020-06-25,Western Bulldogs 10.7 (67) def. Sydney 5.9 (39),106,28,,Western Bulldogs defeated Sydney by 28 points at S.C.G..
+46,Regular Season,Greater Western Sydney,Collingwood,Greater Western Sydney,Collingwood,Sydney Showground,2020-06-26,Greater Western Sydney 10.6 (66) def. Collingwood 9.10 (64),130,2,,Greater Western Sydney defeated Collingwood by 2 points at Sydney Showground.
+47,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Carrara,2020-06-27,Port Adelaide 13.11 (89) def. West Coast 6.5 (41),130,48,,Port Adelaide defeated West Coast by 48 points at Carrara.
+48,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2020-06-27,St Kilda 15.3 (93) def. Richmond 10.7 (67),160,26,,St Kilda defeated Richmond by 26 points at Docklands.
+49,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2020-06-27,Carlton 7.10 (52) def. Essendon 8.3 (51),103,1,,Carlton defeated Essendon by 1 points at M.C.G..
+50,Regular Season,Gold Coast,Fremantle,Gold Coast,Fremantle,Carrara,2020-06-27,Gold Coast 10.4 (64) def. Fremantle 8.3 (51),115,13,,Gold Coast defeated Fremantle by 13 points at Carrara.
+51,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2020-06-28,Brisbane Lions 10.23 (83) def. Adelaide 7.4 (46),129,37,,Brisbane Lions defeated Adelaide by 37 points at Gabba.
+52,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2020-06-28,Geelong 7.5 (47) def. Melbourne 6.8 (44),91,3,,Geelong defeated Melbourne by 3 points at M.C.G..
+53,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Docklands,2020-06-28,Hawthorn 8.10 (58) def. North Melbourne 8.6 (54),112,4,,Hawthorn defeated North Melbourne by 4 points at Docklands.
+54,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Docklands,2020-07-02,St Kilda 11.7 (73) def. Carlton 8.7 (55),128,18,,St Kilda defeated Carlton by 18 points at Docklands.
+55,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2020-07-03,Essendon 10.3 (63) def. Collingwood 7.6 (48),111,15,,Essendon defeated Collingwood by 15 points at M.C.G..
+56,Regular Season,West Coast,Sydney,West Coast,Sydney,Carrara,2020-07-04,West Coast 11.11 (77) def. Sydney 6.7 (43),120,34,,West Coast defeated Sydney by 34 points at Carrara.
+57,Regular Season,Geelong,Gold Coast,Geelong,Gold Coast,Kardinia Park,2020-07-04,Geelong 13.11 (89) def. Gold Coast 8.4 (52),141,37,,Geelong defeated Gold Coast by 37 points at Kardinia Park.
+58,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2020-07-04,Western Bulldogs 13.9 (87) def. North Melbourne 5.8 (38),125,49,,Western Bulldogs defeated North Melbourne by 49 points at Docklands.
+59,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2020-07-04,Brisbane Lions 12.13 (85) def. Port Adelaide 6.12 (48),133,37,,Brisbane Lions defeated Port Adelaide by 37 points at Gabba.
+60,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Carrara,2020-07-05,Fremantle 8.6 (54) def. Adelaide 4.10 (34),88,20,,Fremantle defeated Adelaide by 20 points at Carrara.
+61,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2020-07-05,Richmond 12.7 (79) def. Melbourne 8.4 (52),131,27,,Richmond defeated Melbourne by 27 points at M.C.G..
+62,Regular Season,Greater Western Sydney,Hawthorn,Greater Western Sydney,Hawthorn,Sydney Showground,2020-07-05,Greater Western Sydney 13.5 (83) def. Hawthorn 7.7 (49),132,34,,Greater Western Sydney defeated Hawthorn by 34 points at Sydney Showground.
+63,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,S.C.G.,2020-07-09,Geelong 11.7 (73) def. Brisbane Lions 6.10 (46),119,27,,Geelong defeated Brisbane Lions by 27 points at S.C.G..
+64,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Sydney Showground,2020-07-10,Collingwood 8.11 (59) def. Hawthorn 3.9 (27),86,32,,Collingwood defeated Hawthorn by 32 points at Sydney Showground.
+65,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Carrara,2020-07-11,Fremantle 12.7 (79) def. St Kilda 11.7 (73),152,6,,Fremantle defeated St Kilda by 6 points at Carrara.
+66,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Gabba,2020-07-11,West Coast 10.7 (67) def. Adelaide 5.4 (34),101,33,,West Coast defeated Adelaide by 33 points at Gabba.
+67,Regular Season,Melbourne,Gold Coast,Melbourne,Gold Coast,Sydney Showground,2020-07-11,Melbourne 12.8 (80) def. Gold Coast 9.9 (63),143,17,,Melbourne defeated Gold Coast by 17 points at Sydney Showground.
+68,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Carrara,2020-07-11,Essendon 9.13 (67) def. North Melbourne 7.11 (53),120,14,,Essendon defeated North Melbourne by 14 points at Carrara.
+69,Regular Season,Port Adelaide,Greater Western Sydney,Port Adelaide,Greater Western Sydney,Carrara,2020-07-12,Port Adelaide 9.9 (63) def. Greater Western Sydney 6.10 (46),109,17,,Port Adelaide defeated Greater Western Sydney by 17 points at Carrara.
+70,Regular Season,Richmond,Sydney,Richmond,Sydney,Gabba,2020-07-12,Richmond 4.10 (34) def. Sydney 3.8 (26),60,8,,Richmond defeated Sydney by 8 points at Gabba.
+71,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Carrara,2020-07-12,Carlton 16.7 (103) def. Western Bulldogs 7.9 (51),154,52,,Carlton defeated Western Bulldogs by 52 points at Carrara.
+72,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Perth Stadium,2020-07-16,Collingwood 8.9 (57) def. Geelong 5.5 (35),92,22,,Collingwood defeated Geelong by 22 points at Perth Stadium.
+73,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Carrara,2020-07-17,Western Bulldogs 14.9 (93) def. Essendon 7.9 (51),144,42,,Western Bulldogs defeated Essendon by 42 points at Carrara.
+74,Regular Season,Greater Western Sydney,Brisbane Lions,Greater Western Sydney,Brisbane Lions,Sydney Showground,2020-07-18,Brisbane Lions 13.10 (88) def. Greater Western Sydney 10.8 (68),156,20,,Brisbane Lions defeated Greater Western Sydney by 20 points at Sydney Showground.
+75,Regular Season,Sydney,Gold Coast,Sydney,Gold Coast,S.C.G.,2020-07-18,Gold Coast 13.14 (92) def. Sydney 9.6 (60),152,32,,Gold Coast defeated Sydney by 32 points at S.C.G..
+76,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Carrara,2020-07-18,Richmond 11.11 (77) def. North Melbourne 2.11 (23),100,54,,Richmond defeated North Melbourne by 54 points at Carrara.
+77,Regular Season,Carlton,Port Adelaide,Carlton,Port Adelaide,Gabba,2020-07-19,Port Adelaide 9.10 (64) def. Carlton 9.7 (61),125,3,,Port Adelaide defeated Carlton by 3 points at Gabba.
+78,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Sydney Showground,2020-07-19,Melbourne 14.7 (91) def. Hawthorn 7.6 (48),139,43,,Melbourne defeated Hawthorn by 43 points at Sydney Showground.
+79,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Perth Stadium,2020-07-19,West Coast 9.8 (62) def. Fremantle 5.2 (32),94,30,,West Coast defeated Fremantle by 30 points at Perth Stadium.
+80,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Adelaide Oval,2020-07-20,St Kilda 12.6 (78) def. Adelaide 8.7 (55),133,23,,St Kilda defeated Adelaide by 23 points at Adelaide Oval.
+81,Regular Season,Gold Coast,Western Bulldogs,Gold Coast,Western Bulldogs,Carrara,2020-07-23,Western Bulldogs 7.9 (51) def. Gold Coast 6.10 (46),97,5,,Western Bulldogs defeated Gold Coast by 5 points at Carrara.
+82,Regular Season,Greater Western Sydney,Richmond,Greater Western Sydney,Richmond,Sydney Showground,2020-07-24,Greater Western Sydney 9.8 (62) def. Richmond 6.14 (50),112,12,,Greater Western Sydney defeated Richmond by 12 points at Sydney Showground.
+83,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Gabba,2020-07-25,Carlton 9.10 (64) def. North Melbourne 9.3 (57),121,7,,Carlton defeated North Melbourne by 7 points at Gabba.
+84,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,2020-07-25,Sydney 9.6 (60) def. Hawthorn 7.11 (53),113,7,,Sydney defeated Hawthorn by 7 points at S.C.G..
+85,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Adelaide Oval,2020-07-25,St Kilda 12.1 (73) def. Port Adelaide 6.8 (44),117,29,,St Kilda defeated Port Adelaide by 29 points at Adelaide Oval.
+86,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Adelaide Oval,2020-07-26,Essendon 9.8 (62) def. Adelaide 8.11 (59),121,3,,Essendon defeated Adelaide by 3 points at Adelaide Oval.
+87,Regular Season,West Coast,Collingwood,West Coast,Collingwood,Perth Stadium,2020-07-26,West Coast 18.3 (111) def. Collingwood 6.9 (45),156,66,,West Coast defeated Collingwood by 66 points at Perth Stadium.
+88,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Carrara,2020-07-26,Brisbane Lions 7.11 (53) def. Melbourne 7.7 (49),102,4,,Brisbane Lions defeated Melbourne by 4 points at Carrara.
+89,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Perth Stadium,2020-07-27,Geelong 6.12 (48) def. Fremantle 2.4 (16),64,32,,Geelong defeated Fremantle by 32 points at Perth Stadium.
+90,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Carrara,2020-07-29,Richmond 13.12 (90) def. Western Bulldogs 7.7 (49),139,41,,Richmond defeated Western Bulldogs by 41 points at Carrara.
+91,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,Gabba,2020-07-30,Port Adelaide 12.11 (83) def. Melbourne 4.8 (32),115,51,,Port Adelaide defeated Melbourne by 51 points at Gabba.
+92,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Perth Stadium,2020-07-31,Hawthorn 14.5 (89) def. Carlton 9.4 (58),147,31,,Hawthorn defeated Carlton by 31 points at Perth Stadium.
+93,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Carrara,2020-07-31,Brisbane Lions 14.7 (91) def. Essendon 3.10 (28),119,63,,Brisbane Lions defeated Essendon by 63 points at Carrara.
+94,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,Carrara,2020-08-01,North Melbourne 19.5 (119) def. Adelaide 7.8 (50),169,69,,North Melbourne defeated Adelaide by 69 points at Carrara.
+95,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Gabba,2020-08-01,St Kilda 15.11 (101) def. Sydney 6.12 (48),149,53,,St Kilda defeated Sydney by 53 points at Gabba.
+96,Regular Season,West Coast,Geelong,West Coast,Geelong,Perth Stadium,2020-08-01,West Coast 11.7 (73) def. Geelong 10.4 (64),137,9,,West Coast defeated Geelong by 9 points at Perth Stadium.
+97,Regular Season,Gold Coast,Greater Western Sydney,Gold Coast,Greater Western Sydney,Carrara,2020-08-02,Greater Western Sydney 9.7 (61) def. Gold Coast 4.11 (35),96,26,,Greater Western Sydney defeated Gold Coast by 26 points at Carrara.
+98,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Perth Stadium,2020-08-02,Fremantle 10.1 (61) def. Collingwood 7.7 (49),110,12,,Fremantle defeated Collingwood by 12 points at Perth Stadium.
+99,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Adelaide Oval,2020-08-03,Port Adelaide 8.7 (55) def. Western Bulldogs 5.12 (42),97,13,,Port Adelaide defeated Western Bulldogs by 13 points at Adelaide Oval.
+100,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,Carrara,2020-08-04,Richmond 12.10 (82) def. Brisbane Lions 4.17 (41),123,41,,Richmond defeated Brisbane Lions by 41 points at Carrara.
+101,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Gabba,2020-08-05,Geelong 13.12 (90) def. North Melbourne 9.3 (57),147,33,,Geelong defeated North Melbourne by 33 points at Gabba.
+102,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Adelaide Oval,2020-08-05,Melbourne 13.10 (88) def. Adelaide 5.7 (37),125,51,,Melbourne defeated Adelaide by 51 points at Adelaide Oval.
+103,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Gabba,2020-08-06,Collingwood 6.14 (50) def. Sydney 6.5 (41),91,9,,Collingwood defeated Sydney by 9 points at Gabba.
+104,Regular Season,Gold Coast,St Kilda,Gold Coast,St Kilda,Carrara,2020-08-06,St Kilda 12.6 (78) def. Gold Coast 11.8 (74),152,4,,St Kilda defeated Gold Coast by 4 points at Carrara.
+105,Regular Season,Essendon,Greater Western Sydney,Essendon,Greater Western Sydney,Carrara,2020-08-07,Greater Western Sydney 8.11 (59) def. Essendon 8.7 (55),114,4,,Greater Western Sydney defeated Essendon by 4 points at Carrara.
+106,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Adelaide Oval,2020-08-08,Port Adelaide 13.15 (93) def. Richmond 11.6 (72),165,21,,Port Adelaide defeated Richmond by 21 points at Adelaide Oval.
+107,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2020-08-08,Brisbane Lions 14.12 (96) def. Western Bulldogs 11.6 (72),168,24,,Brisbane Lions defeated Western Bulldogs by 24 points at Gabba.
+108,Regular Season,West Coast,Carlton,West Coast,Carlton,Perth Stadium,2020-08-09,West Coast 11.6 (72) def. Carlton 7.8 (50),122,22,,West Coast defeated Carlton by 22 points at Perth Stadium.
+109,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,Adelaide Oval,2020-08-09,Melbourne 13.14 (92) def. North Melbourne 5.5 (35),127,57,,Melbourne defeated North Melbourne by 57 points at Adelaide Oval.
+110,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Gabba,2020-08-10,Geelong 14.9 (93) def. St Kilda 4.10 (34),127,59,,Geelong defeated St Kilda by 59 points at Gabba.
+111,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Perth Stadium,2020-08-10,Fremantle 7.6 (48) def. Hawthorn 4.8 (32),80,16,,Fremantle defeated Hawthorn by 16 points at Perth Stadium.
+112,Regular Season,Adelaide,Collingwood,Adelaide,Collingwood,Adelaide Oval,2020-08-11,Collingwood 10.2 (62) def. Adelaide 5.8 (38),100,24,,Collingwood defeated Adelaide by 24 points at Adelaide Oval.
+113,Regular Season,Gold Coast,Essendon,Gold Coast,Essendon,Carrara,2020-08-12,Gold Coast 11.7 (73) drew with Essendon 11.7 (73),146,0,,Gold Coast and Essendon played out a draw at Carrara.
+114,Regular Season,Sydney,Greater Western Sydney,Sydney,Greater Western Sydney,Perth Stadium,2020-08-13,Sydney 10.6 (66) def. Greater Western Sydney 3.7 (25),91,41,,Sydney defeated Greater Western Sydney by 41 points at Perth Stadium.
+115,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Carrara,2020-08-14,Geelong 14.7 (91) def. Port Adelaide 4.7 (31),122,60,,Geelong defeated Port Adelaide by 60 points at Carrara.
+116,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Carrara,2020-08-15,Brisbane Lions 7.11 (53) def. North Melbourne 8.4 (52),105,1,,Brisbane Lions defeated North Melbourne by 1 points at Carrara.
+117,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,Gabba,2020-08-15,Melbourne 16.4 (100) def. Collingwood 6.8 (44),144,56,,Melbourne defeated Collingwood by 56 points at Gabba.
+118,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Perth Stadium,2020-08-15,Carlton 5.10 (40) def. Fremantle 5.6 (36),76,4,,Carlton defeated Fremantle by 4 points at Perth Stadium.
+119,Regular Season,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,Carrara,2020-08-16,Western Bulldogs 16.15 (111) def. Adelaide 8.6 (54),165,57,,Western Bulldogs defeated Adelaide by 57 points at Carrara.
+120,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Gabba,2020-08-16,St Kilda 10.8 (68) def. Essendon 5.3 (33),101,35,,St Kilda defeated Essendon by 35 points at Gabba.
+121,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,Perth Stadium,2020-08-16,West Coast 12.9 (81) def. Hawthorn 7.7 (49),130,32,,West Coast defeated Hawthorn by 32 points at Perth Stadium.
+122,Regular Season,Richmond,Gold Coast,Richmond,Gold Coast,Gabba,2020-08-17,Richmond 8.5 (53) def. Gold Coast 4.8 (32),85,21,,Richmond defeated Gold Coast by 21 points at Gabba.
+123,Regular Season,Gold Coast,Carlton,Gold Coast,Carlton,Marrara Oval,2020-08-21,Carlton 7.18 (60) def. Gold Coast 4.3 (27),87,33,,Carlton defeated Gold Coast by 33 points at Marrara Oval.
+124,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Carrara,2020-08-22,Western Bulldogs 12.8 (80) def. Melbourne 7.10 (52),132,28,,Western Bulldogs defeated Melbourne by 28 points at Carrara.
+125,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Adelaide Oval,2020-08-22,Port Adelaide 9.14 (68) def. Hawthorn 9.4 (58),126,10,,Port Adelaide defeated Hawthorn by 10 points at Adelaide Oval.
+126,Regular Season,Essendon,Richmond,Essendon,Richmond,Marrara Oval,2020-08-22,Richmond 10.13 (73) def. Essendon 10.1 (61),134,12,,Richmond defeated Essendon by 12 points at Marrara Oval.
+127,Regular Season,Fremantle,Sydney,Fremantle,Sydney,Perth Stadium,2020-08-22,Fremantle 7.8 (50) def. Sydney 2.7 (19),69,31,,Fremantle defeated Sydney by 31 points at Perth Stadium.
+128,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Adelaide Oval,2020-08-23,Geelong 9.11 (65) def. Adelaide 5.7 (37),102,28,,Geelong defeated Adelaide by 28 points at Adelaide Oval.
+129,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2020-08-23,Brisbane Lions 6.14 (50) def. St Kilda 7.6 (48),98,2,,Brisbane Lions defeated St Kilda by 2 points at Gabba.
+130,Regular Season,West Coast,Greater Western Sydney,West Coast,Greater Western Sydney,Perth Stadium,2020-08-23,West Coast 9.7 (61) def. Greater Western Sydney 7.7 (49),110,12,,West Coast defeated Greater Western Sydney by 12 points at Perth Stadium.
+131,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Gabba,2020-08-24,Collingwood 10.5 (65) def. North Melbourne 5.5 (35),100,30,,Collingwood defeated North Melbourne by 30 points at Gabba.
+132,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Adelaide Oval,2020-08-27,Essendon 13.9 (87) def. Hawthorn 10.11 (71),158,16,,Essendon defeated Hawthorn by 16 points at Adelaide Oval.
+133,Regular Season,Richmond,West Coast,Richmond,West Coast,Carrara,2020-08-27,Richmond 14.4 (88) def. West Coast 9.7 (61),149,27,,Richmond defeated West Coast by 27 points at Carrara.
+134,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Carrara,2020-08-28,Geelong 10.12 (72) def. Western Bulldogs 9.7 (61),133,11,,Geelong defeated Western Bulldogs by 11 points at Carrara.
+135,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Adelaide Oval,2020-08-29,Port Adelaide 11.7 (73) def. Sydney 7.5 (47),120,26,,Port Adelaide defeated Sydney by 26 points at Adelaide Oval.
+136,Regular Season,Fremantle,Greater Western Sydney,Fremantle,Greater Western Sydney,Perth Stadium,2020-08-29,Greater Western Sydney 14.7 (91) def. Fremantle 8.5 (53),144,38,,Greater Western Sydney defeated Fremantle by 38 points at Perth Stadium.
+137,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,Traeger Park,2020-08-29,Melbourne 8.4 (52) def. St Kilda 7.7 (49),101,3,,Melbourne defeated St Kilda by 3 points at Traeger Park.
+138,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Gabba,2020-08-30,Collingwood 10.12 (72) def. Carlton 7.6 (48),120,24,,Collingwood defeated Carlton by 24 points at Gabba.
+139,Regular Season,Gold Coast,North Melbourne,Gold Coast,North Melbourne,Carrara,2020-08-30,Gold Coast 12.19 (91) def. North Melbourne 4.4 (28),119,63,,Gold Coast defeated North Melbourne by 63 points at Carrara.
+140,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,Adelaide Oval,2020-09-01,Adelaide 12.11 (83) def. Hawthorn 7.6 (48),131,35,,Adelaide defeated Hawthorn by 35 points at Adelaide Oval.
+141,Regular Season,West Coast,Essendon,West Coast,Essendon,Gabba,2020-09-01,West Coast 9.6 (60) def. Essendon 6.9 (45),105,15,,West Coast defeated Essendon by 15 points at Gabba.
+142,Regular Season,Richmond,Fremantle,Richmond,Fremantle,Carrara,2020-09-02,Richmond 8.8 (56) def. Fremantle 4.5 (29),85,27,,Richmond defeated Fremantle by 27 points at Carrara.
+143,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Cazaly's Stadium,2020-09-03,Sydney 10.7 (67) def. Melbourne 6.10 (46),113,21,,Sydney defeated Melbourne by 21 points at Cazaly's Stadium.
+144,Regular Season,Greater Western Sydney,Carlton,Greater Western Sydney,Carlton,Carrara,2020-09-03,Greater Western Sydney 6.12 (48) def. Carlton 5.9 (39),87,9,,Greater Western Sydney defeated Carlton by 9 points at Carrara.
+145,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2020-09-04,Brisbane Lions 6.6 (42) def. Collingwood 5.4 (34),76,8,,Brisbane Lions defeated Collingwood by 8 points at Gabba.
+146,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Carrara,2020-09-05,Port Adelaide 11.12 (78) def. North Melbourne 6.6 (42),120,36,,Port Adelaide defeated North Melbourne by 36 points at Carrara.
+147,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Carrara,2020-09-06,St Kilda 11.14 (80) def. Hawthorn 9.12 (66),146,14,,St Kilda defeated Hawthorn by 14 points at Carrara.
+148,Regular Season,Geelong,Essendon,Geelong,Essendon,Gabba,2020-09-06,Geelong 17.6 (108) def. Essendon 5.12 (42),150,66,,Geelong defeated Essendon by 66 points at Gabba.
+149,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Carrara,2020-09-06,Western Bulldogs 6.13 (49) def. West Coast 7.5 (47),96,2,,Western Bulldogs defeated West Coast by 2 points at Carrara.
+150,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,Cazaly's Stadium,2020-09-07,Fremantle 6.11 (47) def. Melbourne 4.9 (33),80,14,,Fremantle defeated Melbourne by 14 points at Cazaly's Stadium.
+151,Regular Season,Adelaide,Greater Western Sydney,Adelaide,Greater Western Sydney,Adelaide Oval,2020-09-08,Adelaide 8.11 (59) def. Greater Western Sydney 7.5 (47),106,12,,Adelaide defeated Greater Western Sydney by 12 points at Adelaide Oval.
+152,Regular Season,Carlton,Sydney,Carlton,Sydney,Carrara,2020-09-08,Carlton 8.9 (57) def. Sydney 8.4 (52),109,5,,Carlton defeated Sydney by 5 points at Carrara.
+153,Regular Season,Brisbane Lions,Gold Coast,Brisbane Lions,Gold Coast,Gabba,2020-09-09,Brisbane Lions 13.10 (88) def. Gold Coast 6.7 (43),131,45,,Brisbane Lions defeated Gold Coast by 45 points at Gabba.
+154,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Gabba,2020-09-10,West Coast 9.11 (65) def. St Kilda 6.14 (50),115,15,,West Coast defeated St Kilda by 15 points at Gabba.
+155,Regular Season,Geelong,Richmond,Geelong,Richmond,Carrara,2020-09-11,Richmond 7.15 (57) def. Geelong 4.7 (31),88,26,,Richmond defeated Geelong by 26 points at Carrara.
+156,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,Carrara,2020-09-12,Fremantle 15.9 (99) def. North Melbourne 5.5 (35),134,64,,Fremantle defeated North Melbourne by 64 points at Carrara.
+157,Regular Season,Port Adelaide,Essendon,Port Adelaide,Essendon,Adelaide Oval,2020-09-12,Port Adelaide 11.13 (79) def. Essendon 4.5 (29),108,50,,Port Adelaide defeated Essendon by 50 points at Adelaide Oval.
+158,Regular Season,Greater Western Sydney,Melbourne,Greater Western Sydney,Melbourne,Gabba,2020-09-12,Melbourne 12.7 (79) def. Greater Western Sydney 11.8 (74),153,5,,Melbourne defeated Greater Western Sydney by 5 points at Gabba.
+159,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Carrara,2020-09-13,Adelaide 10.12 (72) def. Carlton 8.8 (56),128,16,,Adelaide defeated Carlton by 16 points at Carrara.
+160,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Adelaide Oval,2020-09-13,Western Bulldogs 11.10 (76) def. Hawthorn 6.4 (40),116,36,,Western Bulldogs defeated Hawthorn by 36 points at Adelaide Oval.
+161,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,Cazaly's Stadium,2020-09-13,Brisbane Lions 11.7 (73) def. Sydney 6.5 (41),114,32,,Brisbane Lions defeated Sydney by 32 points at Cazaly's Stadium.
+162,Regular Season,Collingwood,Gold Coast,Collingwood,Gold Coast,Gabba,2020-09-14,Collingwood 10.8 (68) def. Gold Coast 6.10 (46),114,22,,Collingwood defeated Gold Coast by 22 points at Gabba.
+163,Regular Season,North Melbourne,West Coast,North Melbourne,West Coast,Carrara,2020-09-17,West Coast 7.7 (49) def. North Melbourne 4.10 (34),83,15,,West Coast defeated North Melbourne by 15 points at Carrara.
+164,Regular Season,St Kilda,Greater Western Sydney,St Kilda,Greater Western Sydney,Gabba,2020-09-18,St Kilda 12.10 (82) def. Greater Western Sydney 3.12 (30),112,52,,St Kilda defeated Greater Western Sydney by 52 points at Gabba.
+165,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Carrara,2020-09-19,Melbourne 10.8 (68) def. Essendon 7.7 (49),117,19,,Melbourne defeated Essendon by 19 points at Carrara.
+166,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Adelaide Oval,2020-09-19,Richmond 12.5 (77) def. Adelaide 4.9 (33),110,44,,Richmond defeated Adelaide by 44 points at Adelaide Oval.
+167,Regular Season,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2020-09-19,Brisbane Lions 11.12 (78) def. Carlton 10.1 (61),139,17,,Brisbane Lions defeated Carlton by 17 points at Gabba.
+168,Regular Season,Hawthorn,Gold Coast,Hawthorn,Gold Coast,Adelaide Oval,2020-09-20,Hawthorn 17.6 (108) def. Gold Coast 8.9 (57),165,51,,Hawthorn defeated Gold Coast by 51 points at Adelaide Oval.
+169,Regular Season,Sydney,Geelong,Sydney,Geelong,Carrara,2020-09-20,Geelong 10.9 (69) def. Sydney 9.9 (63),132,6,,Geelong defeated Sydney by 6 points at Carrara.
+170,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Cazaly's Stadium,2020-09-20,Western Bulldogs 11.8 (74) def. Fremantle 6.8 (44),118,30,,Western Bulldogs defeated Fremantle by 30 points at Cazaly's Stadium.
+171,Regular Season,Collingwood,Port Adelaide,Collingwood,Port Adelaide,Gabba,2020-09-21,Port Adelaide 9.7 (61) def. Collingwood 7.3 (45),106,16,,Port Adelaide defeated Collingwood by 16 points at Gabba.
+172,Finals,Port Adelaide,Geelong,Port Adelaide,Geelong,Adelaide Oval,2020-10-01,Port Adelaide 9.4 (58) def. Geelong 5.12 (42),100,16,,Port Adelaide defeated Geelong by 16 points at Adelaide Oval.
+173,Finals,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2020-10-02,Brisbane Lions 10.9 (69) def. Richmond 8.6 (54),123,15,,Brisbane Lions defeated Richmond by 15 points at Gabba.
+174,Finals,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Gabba,2020-10-03,St Kilda 10.7 (67) def. Western Bulldogs 9.10 (64),131,3,,St Kilda defeated Western Bulldogs by 3 points at Gabba.
+175,Finals,West Coast,Collingwood,West Coast,Collingwood,Perth Stadium,2020-10-03,Collingwood 12.4 (76) def. West Coast 11.9 (75),151,1,,Collingwood defeated West Coast by 1 points at Perth Stadium.
+176,Finals,Richmond,St Kilda,Richmond,St Kilda,Carrara,2020-10-09,Richmond 12.8 (80) def. St Kilda 6.13 (49),129,31,,Richmond defeated St Kilda by 31 points at Carrara.
+177,Finals,Geelong,Collingwood,Geelong,Collingwood,Gabba,2020-10-10,Geelong 15.10 (100) def. Collingwood 5.2 (32),132,68,,Geelong defeated Collingwood by 68 points at Gabba.
+178,Finals,Port Adelaide,Richmond,Port Adelaide,Richmond,Adelaide Oval,2020-10-16,Richmond 6.10 (46) def. Port Adelaide 6.4 (40),86,6,,Richmond defeated Port Adelaide by 6 points at Adelaide Oval.
+179,Finals,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,2020-10-17,Geelong 11.16 (82) def. Brisbane Lions 6.6 (42),124,40,,Geelong defeated Brisbane Lions by 40 points at Gabba.
+180,Grand Final,Richmond,Geelong,Richmond,Geelong,Gabba,2020-10-24,Richmond 12.9 (81) def. Geelong 7.8 (50),131,31,,Richmond defeated Geelong by 31 points at Gabba.

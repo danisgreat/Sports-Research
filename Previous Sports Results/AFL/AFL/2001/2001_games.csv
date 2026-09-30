@@ -1,186 +1,225 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
-1,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,M.C.G.,2001-03-30,Essendon 23.8 (146) def. North Melbourne 9.7 (61),207,85,,Essendon defeated North Melbourne by 85 points at M.C.G..
-2,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,M.C.G.,2001-03-31,Hawthorn 13.7 (85) def. Collingwood 11.15 (81),166,4,,Hawthorn defeated Collingwood by 4 points at M.C.G..
-3,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2001-03-31,Carlton 18.11 (119) def. Fremantle 18.10 (118),237,1,,Carlton defeated Fremantle by 1 points at Subiaco.
-4,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Docklands,2001-03-31,St Kilda 16.16 (112) def. Western Bulldogs 16.11 (107),219,5,,St Kilda defeated Western Bulldogs by 5 points at Docklands.
-5,Regular Season,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,Football Park,2001-03-31,Port Adelaide 14.15 (99) def. Brisbane Lions 14.9 (93),192,6,,Port Adelaide defeated Brisbane Lions by 6 points at Football Park.
-6,Regular Season,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,2001-04-01,Sydney 19.12 (126) def. Adelaide 10.14 (74),200,52,,Sydney defeated Adelaide by 52 points at S.C.G..
-7,Regular Season,Geelong,West Coast,Geelong,West Coast,Kardinia Park,2001-04-01,Geelong 17.13 (115) def. West Coast 7.7 (49),164,66,,Geelong defeated West Coast by 66 points at Kardinia Park.
-8,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2001-04-01,Richmond 20.14 (134) def. Melbourne 15.13 (103),237,31,,Richmond defeated Melbourne by 31 points at M.C.G..
-9,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2001-04-06,Essendon 23.7 (145) def. Port Adelaide 16.11 (107),252,38,,Essendon defeated Port Adelaide by 38 points at Docklands.
-10,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,2001-04-07,Hawthorn 16.11 (107) def. Carlton 11.15 (81),188,26,,Hawthorn defeated Carlton by 26 points at Princes Park.
-11,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,2001-04-07,Western Bulldogs 17.9 (111) def. Richmond 9.15 (69),180,42,,Western Bulldogs defeated Richmond by 42 points at M.C.G..
-12,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,Docklands,2001-04-07,Collingwood 15.15 (105) def. Fremantle 13.10 (88),193,17,,Collingwood defeated Fremantle by 17 points at Docklands.
-13,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2001-04-07,Melbourne 12.11 (83) def. Adelaide 11.14 (80),163,3,,Melbourne defeated Adelaide by 3 points at Football Park.
-14,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2001-04-08,Geelong 17.13 (115) def. St Kilda 13.8 (86),201,29,,Geelong defeated St Kilda by 29 points at Docklands.
-15,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2001-04-08,Brisbane Lions 17.16 (118) def. North Melbourne 8.10 (58),176,60,,Brisbane Lions defeated North Melbourne by 60 points at Gabba.
-16,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,2001-04-08,Sydney 15.14 (104) def. West Coast 13.11 (89),193,15,,Sydney defeated West Coast by 15 points at Subiaco.
-17,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2001-04-12,Carlton 14.9 (93) def. Essendon 11.10 (76),169,17,,Carlton defeated Essendon by 17 points at M.C.G..
-18,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,M.C.G.,2001-04-14,Richmond 17.14 (116) def. Brisbane Lions 14.10 (94),210,22,,Richmond defeated Brisbane Lions by 22 points at M.C.G..
-19,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2001-04-14,Collingwood 23.15 (153) def. Western Bulldogs 12.9 (81),234,72,,Collingwood defeated Western Bulldogs by 72 points at Docklands.
-20,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,S.C.G.,2001-04-14,Sydney 23.13 (151) def. North Melbourne 11.5 (71),222,80,,Sydney defeated North Melbourne by 80 points at S.C.G..
-21,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2001-04-15,Port Adelaide 23.15 (153) def. Adelaide 13.10 (88),241,65,,Port Adelaide defeated Adelaide by 65 points at Football Park.
-22,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2001-04-15,West Coast 19.11 (125) def. St Kilda 16.11 (107),232,18,,West Coast defeated St Kilda by 18 points at Docklands.
-23,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Subiaco,2001-04-15,Hawthorn 11.16 (82) def. Fremantle 8.11 (59),141,23,,Hawthorn defeated Fremantle by 23 points at Subiaco.
-24,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2001-04-16,Melbourne 18.16 (124) def. Geelong 15.14 (104),228,20,,Melbourne defeated Geelong by 20 points at M.C.G..
-25,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,2001-04-20,Richmond 13.8 (86) def. Collingwood 10.11 (71),157,15,,Richmond defeated Collingwood by 15 points at M.C.G..
-26,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,2001-04-20,Essendon 15.12 (102) def. Sydney 6.19 (55),157,47,,Essendon defeated Sydney by 47 points at S.C.G..
-27,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Princes Park,2001-04-21,Adelaide 9.8 (62) def. Carlton 8.5 (53),115,9,,Adelaide defeated Carlton by 9 points at Princes Park.
-28,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Docklands,2001-04-21,Western Bulldogs 21.14 (140) def. Brisbane Lions 12.15 (87),227,53,,Western Bulldogs defeated Brisbane Lions by 53 points at Docklands.
-29,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2001-04-21,West Coast 16.16 (112) def. Fremantle 13.10 (88),200,24,,West Coast defeated Fremantle by 24 points at Subiaco.
-30,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,2001-04-21,Port Adelaide 17.12 (114) def. St Kilda 7.8 (50),164,64,,Port Adelaide defeated St Kilda by 64 points at Football Park.
-31,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,2001-04-22,North Melbourne 7.11 (53) def. Geelong 4.9 (33),86,20,,North Melbourne defeated Geelong by 20 points at Kardinia Park.
-32,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2001-04-22,Hawthorn 11.17 (83) def. Melbourne 5.14 (44),127,39,,Hawthorn defeated Melbourne by 39 points at M.C.G..
-33,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2001-04-25,Essendon 15.13 (103) def. Collingwood 14.11 (95),198,8,,Essendon defeated Collingwood by 8 points at M.C.G..
-34,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2001-04-27,Richmond 17.7 (109) def. West Coast 11.4 (70),179,39,,Richmond defeated West Coast by 39 points at Subiaco.
-35,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,2001-04-28,Carlton 17.23 (125) def. St Kilda 14.8 (92),217,33,,Carlton defeated St Kilda by 33 points at Princes Park.
-36,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Docklands,2001-04-28,Hawthorn 24.11 (155) def. Western Bulldogs 19.12 (126),281,29,,Hawthorn defeated Western Bulldogs by 29 points at Docklands.
-37,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2001-04-28,Adelaide 12.18 (90) def. North Melbourne 10.15 (75),165,15,,Adelaide defeated North Melbourne by 15 points at Football Park.
-38,Regular Season,Brisbane Lions,Fremantle,Brisbane Lions,Fremantle,Gabba,2001-04-29,Brisbane Lions 25.21 (171) def. Fremantle 19.8 (122),293,49,,Brisbane Lions defeated Fremantle by 49 points at Gabba.
-39,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Kardinia Park,2001-04-29,Port Adelaide 23.10 (148) def. Geelong 15.12 (102),250,46,,Port Adelaide defeated Geelong by 46 points at Kardinia Park.
-40,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,2001-04-29,Melbourne 18.11 (119) def. Sydney 15.14 (104),223,15,,Melbourne defeated Sydney by 15 points at M.C.G..
-41,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Docklands,2001-05-04,Richmond 19.15 (129) def. North Melbourne 12.6 (78),207,51,,Richmond defeated North Melbourne by 51 points at Docklands.
-42,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Docklands,2001-05-05,St Kilda 18.12 (120) def. Sydney 14.10 (94),214,26,,St Kilda defeated Sydney by 26 points at Docklands.
-43,Regular Season,Fremantle,Melbourne,Fremantle,Melbourne,Subiaco,2001-05-05,Melbourne 18.11 (119) def. Fremantle 9.20 (74),193,45,,Melbourne defeated Fremantle by 45 points at Subiaco.
-44,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Football Park,2001-05-05,Port Adelaide 20.9 (129) def. Western Bulldogs 13.8 (86),215,43,,Port Adelaide defeated Western Bulldogs by 43 points at Football Park.
-45,Regular Season,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,2001-05-05,Brisbane Lions 17.14 (116) def. Geelong 8.13 (61),177,55,,Brisbane Lions defeated Geelong by 55 points at Gabba.
-46,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,York Park,2001-05-06,Hawthorn 16.8 (104) def. Adelaide 12.19 (91),195,13,,Hawthorn defeated Adelaide by 13 points at York Park.
-47,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2001-05-06,Essendon 24.14 (158) def. West Coast 10.10 (70),228,88,,Essendon defeated West Coast by 88 points at Docklands.
-48,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2001-05-06,Collingwood 15.13 (103) def. Carlton 14.11 (95),198,8,,Collingwood defeated Carlton by 8 points at M.C.G..
-49,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,2001-05-11,Western Bulldogs 15.17 (107) def. Melbourne 12.5 (77),184,30,,Western Bulldogs defeated Melbourne by 30 points at M.C.G..
-50,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2001-05-12,Essendon 16.24 (120) def. Richmond 10.14 (74),194,46,,Essendon defeated Richmond by 46 points at M.C.G..
-51,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Docklands,2001-05-12,Hawthorn 16.14 (110) def. St Kilda 15.9 (99),209,11,,Hawthorn defeated St Kilda by 11 points at Docklands.
-52,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2001-05-12,Adelaide 14.19 (103) def. Fremantle 12.11 (83),186,20,,Adelaide defeated Fremantle by 20 points at Football Park.
-53,Regular Season,Geelong,Carlton,Geelong,Carlton,M.C.G.,2001-05-13,Carlton 17.6 (108) def. Geelong 9.14 (68),176,40,,Carlton defeated Geelong by 40 points at M.C.G..
-54,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Docklands,2001-05-13,North Melbourne 15.9 (99) def. Collingwood 14.13 (97),196,2,,North Melbourne defeated Collingwood by 2 points at Docklands.
-55,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2001-05-13,Brisbane Lions 15.22 (112) def. Sydney 12.8 (80),192,32,,Brisbane Lions defeated Sydney by 32 points at S.C.G..
-56,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2001-05-13,Port Adelaide 17.19 (121) def. West Coast 7.8 (50),171,71,,Port Adelaide defeated West Coast by 71 points at Subiaco.
-57,Regular Season,Richmond,Adelaide,Richmond,Adelaide,M.C.G.,2001-05-18,Adelaide 17.18 (120) def. Richmond 14.8 (92),212,28,,Adelaide defeated Richmond by 28 points at M.C.G..
-58,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Manuka Oval,2001-05-19,North Melbourne 19.24 (138) def. St Kilda 13.11 (89),227,49,,North Melbourne defeated St Kilda by 49 points at Manuka Oval.
-59,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Princes Park,2001-05-19,Carlton 21.16 (142) def. Brisbane Lions 9.14 (68),210,74,,Carlton defeated Brisbane Lions by 74 points at Princes Park.
-60,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,M.C.G.,2001-05-19,Hawthorn 21.12 (138) def. West Coast 8.10 (58),196,80,,Hawthorn defeated West Coast by 80 points at M.C.G..
-61,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2001-05-19,Collingwood 18.11 (119) def. Port Adelaide 16.14 (110),229,9,,Collingwood defeated Port Adelaide by 9 points at Football Park.
-62,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,2001-05-20,Essendon 12.13 (85) def. Melbourne 11.13 (79),164,6,,Essendon defeated Melbourne by 6 points at M.C.G..
-63,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,S.C.G.,2001-05-20,Western Bulldogs 18.14 (122) def. Sydney 15.11 (101),223,21,,Western Bulldogs defeated Sydney by 21 points at S.C.G..
-64,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2001-05-20,Geelong 14.11 (95) def. Fremantle 10.13 (73),168,22,,Geelong defeated Fremantle by 22 points at Subiaco.
-65,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,M.C.G.,2001-05-25,Carlton 12.10 (82) def. North Melbourne 10.9 (69),151,13,,Carlton defeated North Melbourne by 13 points at M.C.G..
-66,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,2001-05-26,Collingwood 14.14 (98) def. St Kilda 12.8 (80),178,18,,Collingwood defeated St Kilda by 18 points at M.C.G..
-67,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco,2001-05-26,Western Bulldogs 18.17 (125) def. West Coast 11.11 (77),202,48,,Western Bulldogs defeated West Coast by 48 points at Subiaco.
-68,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2001-05-26,Adelaide 19.13 (127) def. Brisbane Lions 18.14 (122),249,5,,Adelaide defeated Brisbane Lions by 5 points at Gabba.
-69,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Docklands,2001-05-26,Essendon 18.14 (122) def. Hawthorn 8.9 (57),179,65,,Essendon defeated Hawthorn by 65 points at Docklands.
-70,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2001-05-27,Port Adelaide 13.10 (88) def. Melbourne 9.14 (68),156,20,,Port Adelaide defeated Melbourne by 20 points at Football Park.
-71,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2001-05-27,Sydney 12.12 (84) def. Fremantle 10.5 (65),149,19,,Sydney defeated Fremantle by 19 points at S.C.G..
-72,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,2001-05-27,Geelong 17.16 (118) def. Richmond 11.10 (76),194,42,,Geelong defeated Richmond by 42 points at Kardinia Park.
-73,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2001-06-01,North Melbourne 19.11 (125) def. Western Bulldogs 11.13 (79),204,46,,North Melbourne defeated Western Bulldogs by 46 points at Docklands.
-74,Regular Season,Carlton,West Coast,Carlton,West Coast,Princes Park,2001-06-02,Carlton 21.23 (149) def. West Coast 3.12 (30),179,119,,Carlton defeated West Coast by 119 points at Princes Park.
-75,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2001-06-02,Port Adelaide 17.14 (116) def. Hawthorn 10.13 (73),189,43,,Port Adelaide defeated Hawthorn by 43 points at M.C.G..
-76,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Docklands,2001-06-02,Melbourne 22.12 (144) def. St Kilda 17.11 (113),257,31,,Melbourne defeated St Kilda by 31 points at Docklands.
-77,Regular Season,Brisbane Lions,Essendon,Brisbane Lions,Essendon,Gabba,2001-06-02,Brisbane Lions 15.12 (102) def. Essendon 10.14 (74),176,28,,Brisbane Lions defeated Essendon by 28 points at Gabba.
-78,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2001-06-03,Adelaide 9.12 (66) def. Geelong 8.7 (55),121,11,,Adelaide defeated Geelong by 11 points at Football Park.
-79,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Docklands,2001-06-03,Sydney 11.7 (73) def. Collingwood 7.13 (55),128,18,,Sydney defeated Collingwood by 18 points at Docklands.
-80,Regular Season,Fremantle,Richmond,Fremantle,Richmond,Subiaco,2001-06-03,Richmond 12.12 (84) def. Fremantle 6.10 (46),130,38,,Richmond defeated Fremantle by 38 points at Subiaco.
-81,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2001-06-08,Essendon 19.14 (128) def. St Kilda 13.8 (86),214,42,,Essendon defeated St Kilda by 42 points at Docklands.
-82,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Docklands,2001-06-09,Geelong 14.9 (93) def. Hawthorn 13.12 (90),183,3,,Geelong defeated Hawthorn by 3 points at Docklands.
-83,Regular Season,West Coast,Brisbane Lions,West Coast,Brisbane Lions,Subiaco,2001-06-09,Brisbane Lions 11.18 (84) def. West Coast 9.8 (62),146,22,,Brisbane Lions defeated West Coast by 22 points at Subiaco.
-84,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2001-06-09,Western Bulldogs 19.13 (127) def. Adelaide 14.13 (97),224,30,,Western Bulldogs defeated Adelaide by 30 points at Football Park.
-85,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2001-06-10,Richmond 13.10 (88) def. Carlton 8.13 (61),149,27,,Richmond defeated Carlton by 27 points at M.C.G..
-86,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,Docklands,2001-06-10,North Melbourne 23.16 (154) def. Fremantle 10.8 (68),222,86,,North Melbourne defeated Fremantle by 86 points at Docklands.
-87,Regular Season,Sydney,Port Adelaide,Sydney,Port Adelaide,S.C.G.,2001-06-10,Sydney 18.17 (125) def. Port Adelaide 10.18 (78),203,47,,Sydney defeated Port Adelaide by 47 points at S.C.G..
-88,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2001-06-11,Collingwood 19.20 (134) def. Melbourne 8.9 (57),191,77,,Collingwood defeated Melbourne by 77 points at M.C.G..
-89,Regular Season,Essendon,Adelaide,Essendon,Adelaide,Docklands,2001-06-15,Essendon 18.14 (122) def. Adelaide 11.7 (73),195,49,,Essendon defeated Adelaide by 49 points at Docklands.
-90,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,2001-06-16,Western Bulldogs 15.4 (94) def. Geelong 13.9 (87),181,7,,Western Bulldogs defeated Geelong by 7 points at Kardinia Park.
-91,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2001-06-16,St Kilda 12.18 (90) def. Fremantle 11.14 (80),170,10,,St Kilda defeated Fremantle by 10 points at Subiaco.
-92,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Gabba,2001-06-17,Brisbane Lions 23.10 (148) def. Melbourne 14.15 (99),247,49,,Brisbane Lions defeated Melbourne by 49 points at Gabba.
-93,Regular Season,Collingwood,West Coast,Collingwood,West Coast,Docklands,2001-06-22,Collingwood 26.17 (173) def. West Coast 14.8 (92),265,81,,Collingwood defeated West Coast by 81 points at Docklands.
-94,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,M.C.G.,2001-06-23,Hawthorn 15.11 (101) def. North Melbourne 14.14 (98),199,3,,Hawthorn defeated North Melbourne by 3 points at M.C.G..
-95,Regular Season,Richmond,Sydney,Richmond,Sydney,Docklands,2001-06-23,Richmond 12.14 (86) def. Sydney 8.12 (60),146,26,,Richmond defeated Sydney by 26 points at Docklands.
-96,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2001-06-24,Carlton 15.14 (104) def. Port Adelaide 10.10 (70),174,34,,Carlton defeated Port Adelaide by 34 points at Football Park.
-97,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,2001-06-29,Brisbane Lions 20.20 (140) def. Hawthorn 8.5 (53),193,87,,Brisbane Lions defeated Hawthorn by 87 points at Gabba.
-98,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Manuka Oval,2001-06-30,North Melbourne 14.11 (95) def. Port Adelaide 10.13 (73),168,22,,North Melbourne defeated Port Adelaide by 22 points at Manuka Oval.
-99,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,2001-06-30,Carlton 23.15 (153) def. Western Bulldogs 13.14 (92),245,61,,Carlton defeated Western Bulldogs by 61 points at Princes Park.
-100,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2001-06-30,Essendon 18.10 (118) def. Fremantle 10.12 (72),190,46,,Essendon defeated Fremantle by 46 points at Docklands.
-101,Regular Season,Adelaide,Collingwood,Adelaide,Collingwood,Football Park,2001-06-30,Collingwood 15.9 (99) def. Adelaide 14.13 (97),196,2,,Collingwood defeated Adelaide by 2 points at Football Park.
-102,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,2001-07-01,Geelong 12.12 (84) def. Sydney 9.11 (65),149,19,,Geelong defeated Sydney by 19 points at S.C.G..
-103,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2001-07-01,Richmond 19.12 (126) def. St Kilda 13.9 (87),213,39,,Richmond defeated St Kilda by 39 points at Docklands.
-104,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2001-07-01,West Coast 15.5 (95) def. Melbourne 13.10 (88),183,7,,West Coast defeated Melbourne by 7 points at Subiaco.
-105,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2001-07-06,Essendon 24.10 (154) def. Western Bulldogs 11.10 (76),230,78,,Essendon defeated Western Bulldogs by 78 points at Docklands.
-106,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2001-07-07,Hawthorn 20.9 (129) def. Richmond 10.11 (71),200,58,,Hawthorn defeated Richmond by 58 points at M.C.G..
-107,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2001-07-07,Adelaide 8.16 (64) def. West Coast 7.9 (51),115,13,,Adelaide defeated West Coast by 13 points at Football Park.
-108,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2001-07-07,Brisbane Lions 17.17 (119) def. St Kilda 9.8 (62),181,57,,Brisbane Lions defeated St Kilda by 57 points at Gabba.
-109,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Subiaco,2001-07-08,Port Adelaide 25.13 (163) def. Fremantle 11.5 (71),234,92,,Port Adelaide defeated Fremantle by 92 points at Subiaco.
-110,Regular Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,2001-07-08,Sydney 12.19 (91) def. Carlton 12.9 (81),172,10,,Sydney defeated Carlton by 10 points at S.C.G..
-111,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Docklands,2001-07-08,Geelong 16.15 (111) def. Collingwood 14.9 (93),204,18,,Geelong defeated Collingwood by 18 points at Docklands.
-112,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,2001-07-08,North Melbourne 18.13 (121) def. Melbourne 13.15 (93),214,28,,North Melbourne defeated Melbourne by 28 points at M.C.G..
-113,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2001-07-13,Adelaide 23.18 (156) def. St Kilda 9.5 (59),215,97,,Adelaide defeated St Kilda by 97 points at Docklands.
-114,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,2001-07-14,Melbourne 18.9 (117) def. Carlton 16.15 (111),228,6,,Melbourne defeated Carlton by 6 points at Princes Park.
-115,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Docklands,2001-07-14,Western Bulldogs 16.23 (119) def. Fremantle 11.19 (85),204,34,,Western Bulldogs defeated Fremantle by 34 points at Docklands.
-116,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,M.C.G.,2001-07-14,Sydney 14.14 (98) def. Hawthorn 11.11 (77),175,21,,Sydney defeated Hawthorn by 21 points at M.C.G..
-117,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2001-07-14,Port Adelaide 14.12 (96) def. Richmond 7.10 (52),148,44,,Port Adelaide defeated Richmond by 44 points at Football Park.
-118,Regular Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco,2001-07-15,North Melbourne 24.10 (154) def. West Coast 17.8 (110),264,44,,North Melbourne defeated West Coast by 44 points at Subiaco.
-119,Regular Season,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2001-07-15,Brisbane Lions 19.15 (129) def. Collingwood 16.7 (103),232,26,,Brisbane Lions defeated Collingwood by 26 points at M.C.G..
-120,Regular Season,Essendon,Geelong,Essendon,Geelong,Docklands,2001-07-15,Essendon 19.13 (127) def. Geelong 17.10 (112),239,15,,Essendon defeated Geelong by 15 points at Docklands.
-121,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2001-07-20,Richmond 19.13 (127) def. Melbourne 12.14 (86),213,41,,Richmond defeated Melbourne by 41 points at M.C.G..
-122,Regular Season,Carlton,Fremantle,Carlton,Fremantle,Princes Park,2001-07-21,Carlton 19.17 (131) def. Fremantle 8.8 (56),187,75,,Carlton defeated Fremantle by 75 points at Princes Park.
-123,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2001-07-21,Hawthorn 21.18 (144) def. Collingwood 14.5 (89),233,55,,Hawthorn defeated Collingwood by 55 points at M.C.G..
-124,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Docklands,2001-07-21,Western Bulldogs 16.16 (112) def. St Kilda 12.6 (78),190,34,,Western Bulldogs defeated St Kilda by 34 points at Docklands.
-125,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2001-07-21,Brisbane Lions 13.16 (94) def. Port Adelaide 8.12 (60),154,34,,Brisbane Lions defeated Port Adelaide by 34 points at Gabba.
-126,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,2001-07-22,Sydney 16.9 (105) def. Adelaide 7.14 (56),161,49,,Sydney defeated Adelaide by 49 points at Football Park.
-127,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,M.C.G.,2001-07-22,Essendon 27.9 (171) def. North Melbourne 25.9 (159),330,12,,Essendon defeated North Melbourne by 12 points at M.C.G..
-128,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2001-07-22,Geelong 22.18 (150) def. West Coast 12.8 (80),230,70,,Geelong defeated West Coast by 70 points at Subiaco.
-129,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2001-07-27,Richmond 15.12 (102) def. Western Bulldogs 15.10 (100),202,2,,Richmond defeated Western Bulldogs by 2 points at Docklands.
-130,Regular Season,Melbourne,Adelaide,Melbourne,Adelaide,M.C.G.,2001-07-28,Adelaide 15.10 (100) def. Melbourne 12.12 (84),184,16,,Adelaide defeated Melbourne by 16 points at M.C.G..
-131,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,2001-07-28,Geelong 12.6 (78) def. St Kilda 10.6 (66),144,12,,Geelong defeated St Kilda by 12 points at Kardinia Park.
-132,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Subiaco,2001-07-28,Collingwood 19.5 (119) def. Fremantle 13.12 (90),209,29,,Collingwood defeated Fremantle by 29 points at Subiaco.
-133,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2001-07-28,Brisbane Lions 21.10 (136) def. North Melbourne 18.7 (115),251,21,,Brisbane Lions defeated North Melbourne by 21 points at Docklands.
-134,Regular Season,Port Adelaide,Essendon,Port Adelaide,Essendon,Football Park,2001-07-29,Port Adelaide 15.14 (104) def. Essendon 14.13 (97),201,7,,Port Adelaide defeated Essendon by 7 points at Football Park.
-135,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,M.C.G.,2001-07-29,Hawthorn 15.6 (96) def. Carlton 13.15 (93),189,3,,Hawthorn defeated Carlton by 3 points at M.C.G..
-136,Regular Season,Sydney,West Coast,Sydney,West Coast,S.C.G.,2001-07-29,Sydney 11.17 (83) def. West Coast 6.12 (48),131,35,,Sydney defeated West Coast by 35 points at S.C.G..
-137,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2001-08-03,Richmond 10.11 (71) def. Collingwood 6.15 (51),122,20,,Richmond defeated Collingwood by 20 points at M.C.G..
-138,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,Docklands,2001-08-04,Fremantle 16.10 (106) def. Hawthorn 13.12 (90),196,16,,Fremantle defeated Hawthorn by 16 points at Docklands.
-139,Regular Season,Geelong,Melbourne,Geelong,Melbourne,M.C.G.,2001-08-04,Melbourne 16.7 (103) def. Geelong 15.10 (100),203,3,,Melbourne defeated Geelong by 3 points at M.C.G..
-140,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,2001-08-04,Sydney 22.11 (143) def. North Melbourne 3.18 (36),179,107,,Sydney defeated North Melbourne by 107 points at S.C.G..
-141,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2001-08-05,Port Adelaide 16.11 (107) def. Adelaide 15.9 (99),206,8,,Port Adelaide defeated Adelaide by 8 points at Football Park.
-142,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2001-08-05,Carlton 16.6 (102) def. Essendon 14.11 (95),197,7,,Carlton defeated Essendon by 7 points at M.C.G..
-143,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2001-08-05,Brisbane Lions 19.22 (136) def. Western Bulldogs 15.13 (103),239,33,,Brisbane Lions defeated Western Bulldogs by 33 points at Gabba.
-144,Regular Season,West Coast,St Kilda,West Coast,St Kilda,Subiaco,2001-08-05,West Coast 26.15 (171) def. St Kilda 12.7 (79),250,92,,West Coast defeated St Kilda by 92 points at Subiaco.
-145,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Docklands,2001-08-10,North Melbourne 21.5 (131) def. Geelong 12.10 (82),213,49,,North Melbourne defeated Geelong by 49 points at Docklands.
-146,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,Docklands,2001-08-11,Port Adelaide 19.11 (125) def. St Kilda 16.18 (114),239,11,,Port Adelaide defeated St Kilda by 11 points at Docklands.
-147,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2001-08-11,Hawthorn 24.12 (156) def. Melbourne 10.11 (71),227,85,,Hawthorn defeated Melbourne by 85 points at M.C.G..
-148,Regular Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,2001-08-11,Adelaide 16.10 (106) def. Carlton 8.5 (53),159,53,,Adelaide defeated Carlton by 53 points at Football Park.
-149,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,2001-08-12,Collingwood 17.17 (119) def. Western Bulldogs 11.11 (77),196,42,,Collingwood defeated Western Bulldogs by 42 points at M.C.G..
-150,Regular Season,Essendon,Sydney,Essendon,Sydney,Docklands,2001-08-12,Essendon 11.13 (79) def. Sydney 11.11 (77),156,2,,Essendon defeated Sydney by 2 points at Docklands.
-151,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2001-08-12,Brisbane Lions 19.14 (128) def. Richmond 15.7 (97),225,31,,Brisbane Lions defeated Richmond by 31 points at Gabba.
-152,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2001-08-12,West Coast 14.14 (98) def. Fremantle 9.10 (64),162,34,,West Coast defeated Fremantle by 34 points at Subiaco.
-153,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,Docklands,2001-08-17,Adelaide 25.12 (162) def. North Melbourne 15.10 (100),262,62,,Adelaide defeated North Melbourne by 62 points at Docklands.
-154,Regular Season,Richmond,West Coast,Richmond,West Coast,Docklands,2001-08-18,Richmond 20.18 (138) def. West Coast 10.13 (73),211,65,,Richmond defeated West Coast by 65 points at Docklands.
-155,Regular Season,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,2001-08-18,Port Adelaide 14.15 (99) def. Geelong 10.9 (69),168,30,,Port Adelaide defeated Geelong by 30 points at Football Park.
-156,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2001-08-18,Essendon 15.17 (107) def. Collingwood 13.9 (87),194,20,,Essendon defeated Collingwood by 20 points at M.C.G..
-157,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Docklands,2001-08-19,Carlton 22.16 (148) def. St Kilda 16.8 (104),252,44,,Carlton defeated St Kilda by 44 points at Docklands.
-158,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2001-08-19,Western Bulldogs 17.23 (125) def. Hawthorn 12.7 (79),204,46,,Western Bulldogs defeated Hawthorn by 46 points at M.C.G..
-159,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,2001-08-19,Melbourne 19.17 (131) def. Sydney 14.14 (98),229,33,,Melbourne defeated Sydney by 33 points at S.C.G..
-160,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2001-08-19,Brisbane Lions 21.12 (138) def. Fremantle 12.15 (87),225,51,,Brisbane Lions defeated Fremantle by 51 points at Subiaco.
-161,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,2001-08-24,Richmond 13.14 (92) def. North Melbourne 13.10 (88),180,4,,Richmond defeated North Melbourne by 4 points at M.C.G..
-162,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2001-08-25,Carlton 20.10 (130) def. Collingwood 9.8 (62),192,68,,Carlton defeated Collingwood by 68 points at M.C.G..
-163,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Docklands,2001-08-25,Port Adelaide 22.18 (150) def. Western Bulldogs 10.13 (73),223,77,,Port Adelaide defeated Western Bulldogs by 77 points at Docklands.
-164,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,2001-08-25,Essendon 21.10 (136) def. West Coast 6.11 (47),183,89,,Essendon defeated West Coast by 89 points at Subiaco.
-165,Regular Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,2001-08-26,Adelaide 13.13 (91) def. Hawthorn 8.5 (53),144,38,,Adelaide defeated Hawthorn by 38 points at Football Park.
-166,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,Docklands,2001-08-26,Melbourne 16.18 (114) def. Fremantle 12.7 (79),193,35,,Melbourne defeated Fremantle by 35 points at Docklands.
-167,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2001-08-26,Brisbane Lions 16.14 (110) def. Geelong 9.13 (67),177,43,,Brisbane Lions defeated Geelong by 43 points at Kardinia Park.
-168,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2001-08-26,Sydney 21.16 (142) def. St Kilda 8.7 (55),197,87,,Sydney defeated St Kilda by 87 points at S.C.G..
-169,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2001-08-31,Richmond 17.5 (107) def. Essendon 12.11 (83),190,24,,Richmond defeated Essendon by 24 points at M.C.G..
-170,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,2001-09-01,Carlton 13.19 (97) def. Geelong 3.9 (27),124,70,,Carlton defeated Geelong by 70 points at Princes Park.
-171,Regular Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco,2001-09-01,Fremantle 17.18 (120) def. Adelaide 11.17 (83),203,37,,Fremantle defeated Adelaide by 37 points at Subiaco.
-172,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,M.C.G.,2001-09-01,St Kilda 13.11 (89) def. Hawthorn 13.9 (87),176,2,,St Kilda defeated Hawthorn by 2 points at M.C.G..
-173,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2001-09-01,Brisbane Lions 13.15 (93) def. Sydney 9.8 (62),155,31,,Brisbane Lions defeated Sydney by 31 points at Gabba.
-174,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Manuka Oval,2001-09-02,Collingwood 19.12 (126) def. North Melbourne 11.17 (83),209,43,,Collingwood defeated North Melbourne by 43 points at Manuka Oval.
-175,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,2001-09-02,Port Adelaide 24.19 (163) def. West Coast 7.9 (51),214,112,,Port Adelaide defeated West Coast by 112 points at Football Park.
-176,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2001-09-02,Melbourne 21.7 (133) def. Western Bulldogs 19.9 (123),256,10,,Melbourne defeated Western Bulldogs by 10 points at Docklands.
-177,Finals,Essendon,Richmond,Essendon,Richmond,M.C.G.,2001-09-07,Essendon 17.11 (113) def. Richmond 5.13 (43),156,70,,Essendon defeated Richmond by 70 points at M.C.G..
-178,Finals,Carlton,Adelaide,Carlton,Adelaide,M.C.G.,2001-09-08,Carlton 17.16 (118) def. Adelaide 6.14 (50),168,68,,Carlton defeated Adelaide by 68 points at M.C.G..
-179,Finals,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2001-09-08,Brisbane Lions 12.16 (88) def. Port Adelaide 8.8 (56),144,32,,Brisbane Lions defeated Port Adelaide by 32 points at Gabba.
-180,Finals,Hawthorn,Sydney,Hawthorn,Sydney,Docklands,2001-09-09,Hawthorn 19.15 (129) def. Sydney 11.8 (74),203,55,,Hawthorn defeated Sydney by 55 points at Docklands.
-181,Finals,Richmond,Carlton,Richmond,Carlton,M.C.G.,2001-09-15,Richmond 10.7 (67) def. Carlton 7.14 (56),123,11,,Richmond defeated Carlton by 11 points at M.C.G..
-182,Finals,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2001-09-15,Hawthorn 10.12 (72) def. Port Adelaide 10.9 (69),141,3,,Hawthorn defeated Port Adelaide by 3 points at Football Park.
-183,Finals,Essendon,Hawthorn,Essendon,Hawthorn,M.C.G.,2001-09-22,Essendon 11.10 (76) def. Hawthorn 9.13 (67),143,9,,Essendon defeated Hawthorn by 9 points at M.C.G..
-184,Finals,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2001-09-22,Brisbane Lions 20.16 (136) def. Richmond 10.8 (68),204,68,,Brisbane Lions defeated Richmond by 68 points at Gabba.
-185,Grand Final,Essendon,Brisbane Lions,Essendon,Brisbane Lions,M.C.G.,2001-09-29,Brisbane Lions 15.18 (108) def. Essendon 12.10 (82),190,26,,Brisbane Lions defeated Essendon by 26 points at M.C.G..
+1,pre-Season,Geelong,Sydney,Geelong,Sydney,Marrara Oval,2001-02-16,Geelong 4.10 (34) def. by Sydney 6.11 (47),81,13,,Sydney defeated Geelong by 13 points at Marrara Oval.
+2,pre-Season,Collingwood,St Kilda,Collingwood,St Kilda,Docklands,2001-02-16,Collingwood 12.14 (86) def. St Kilda 10.8 (68),154,18,,Collingwood defeated St Kilda by 18 points at Docklands.
+3,pre-Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco Oval,2001-02-16,West Coast 6.11 (47) def. by Kangaroos 14.12 (96),143,49,,North Melbourne defeated West Coast by 49 points at Subiaco Oval.
+4,pre-Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,2001-02-17,Port Adelaide 16.25 (121) def. Essendon 5.12 (42),163,79,,Adelaide defeated Essendon by 79 points at Football Park.
+5,pre-Season,Adelaide,Brisbane Lions,Adelaide,Brisbane Lions,Westpac Stadium,2001-02-17,Adelaide 10.13 (73) def. by Brisbane Lions 16.18 (114),187,41,,Brisbane Lions defeated Adelaide by 41 points at Westpac Stadium.
+6,pre-Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Docklands,2001-02-17,Western Bulldogs 14.8 (92) def. by Carlton 16.10 (106),198,14,,Carlton defeated Western Bulldogs by 14 points at Docklands.
+7,pre-Season,Fremantle,Melbourne,Fremantle,Melbourne,Subiaco Oval,2001-02-17,Fremantle 8.9 (57) def. by Melbourne 14.14 (98),155,41,,Melbourne defeated Fremantle by 41 points at Subiaco Oval.
+8,pre-Season,Hawthorn,Richmond,Hawthorn,Richmond,York Park,2001-02-18,Hawthorn 13.11 (89) def. Richmond 6.9 (45),134,44,,Hawthorn defeated Richmond by 44 points at York Park.
+9,pre-Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,2001-02-23,Port Adelaide 17.10 (112) def. Sydney 15.17 (107),219,5,,Adelaide defeated Sydney by 5 points at Football Park.
+10,pre-Season,Essendon,Geelong,Essendon,Geelong,Docklands,2001-02-23,Essendon 12.18 (90) def. by Geelong 17.10 (112),202,22,,Geelong defeated Essendon by 22 points at Docklands.
+11,pre-Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Manuka Oval,2001-02-24,Kangaroos 14.12 (96) def. St Kilda 12.9 (81),177,15,,North Melbourne defeated St Kilda by 15 points at Manuka Oval.
+12,pre-Season,West Coast,Collingwood,West Coast,Collingwood,Subiaco Oval,2001-02-24,West Coast 12.6 (78) def. by Collingwood 12.8 (80),158,2,,Collingwood defeated West Coast by 2 points at Subiaco Oval.
+13,pre-Season,Carlton,Adelaide,Carlton,Adelaide,Perth Stadium,2001-02-24,Carlton 10.12 (72) def. Adelaide 9.12 (66),138,6,,Carlton defeated Adelaide by 6 points at Perth Stadium.
+14,pre-Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Bundaberg Rum Stadium,2001-02-24,Brisbane Lions 5.15 (45) def. by Western Bulldogs 9.7 (61),106,16,,Western Bulldogs defeated Brisbane Lions by 16 points at Bundaberg Rum Stadium.
+15,pre-Season,Richmond,Melbourne,Richmond,Melbourne,Perth Stadium,2001-02-25,Richmond 14.13 (97) def. Melbourne 9.11 (65),162,32,,Richmond defeated Melbourne by 32 points at Perth Stadium.
+16,pre-Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Subiaco Oval,2001-02-25,Fremantle 10.12 (72) def. Hawthorn 5.16 (46),118,26,,Fremantle defeated Hawthorn by 26 points at Subiaco Oval.
+17,pre-Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2001-03-02,St Kilda 19.9 (123) def. West Coast 15.7 (97),220,26,,St Kilda defeated West Coast by 26 points at Docklands.
+18,pre-Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2001-03-02,Adelaide 11.11 (77) def. Western Bulldogs 9.5 (59),136,18,,Adelaide defeated Western Bulldogs by 18 points at Football Park.
+19,pre-Season,Geelong,Adelaide,Geelong,Adelaide,Docklands,2001-03-03,Geelong 12.15 (87) def. by Port Adelaide 16.9 (105),192,18,,Adelaide defeated Geelong by 18 points at Docklands.
+20,pre-Season,Sydney,Essendon,Sydney,Essendon,Manuka Oval,2001-03-03,Sydney 11.17 (83) def. Essendon 8.11 (59),142,24,,Sydney defeated Essendon by 24 points at Manuka Oval.
+21,pre-Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2001-03-03,Kangaroos 18.12 (120) def. Collingwood 14.8 (92),212,28,,North Melbourne defeated Collingwood by 28 points at Docklands.
+22,pre-Season,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2001-03-03,Brisbane Lions 10.14 (74) def. Carlton 9.7 (61),135,13,,Brisbane Lions defeated Carlton by 13 points at Gabba.
+23,pre-Season,Richmond,Fremantle,Richmond,Fremantle,Perth Stadium,2001-03-04,Richmond 22.13 (145) def. Fremantle 7.9 (51),196,94,,Richmond defeated Fremantle by 94 points at Perth Stadium.
+24,pre-Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Docklands,2001-03-04,Hawthorn 21.17 (143) def. Melbourne 6.7 (43),186,100,,Hawthorn defeated Melbourne by 100 points at Docklands.
+25,pre-Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2001-03-09,Port Adelaide 15.12 (102) def. Kangaroos 13.8 (86),188,16,,Adelaide defeated North Melbourne by 16 points at Football Park.
+26,pre-Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Docklands,2001-03-10,Brisbane Lions 14.10 (94) def. Hawthorn 12.7 (79),173,15,,Brisbane Lions defeated Hawthorn by 15 points at Docklands.
+27,pre-Season,Essendon,Melbourne,Essendon,Melbourne,Perth Stadium,2001-03-10,Essendon 13.12 (90) def. by Melbourne 19.8 (122),212,32,,Melbourne defeated Essendon by 32 points at Perth Stadium.
+28,pre-Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Whitten Oval,2001-03-10,Western Bulldogs 16.16 (112) def. Richmond 4.12 (36),148,76,,Western Bulldogs defeated Richmond by 76 points at Whitten Oval.
+29,pre-Season,Sydney,Collingwood,Sydney,Collingwood,Newcastle Number 1 Sports Ground,2001-03-10,Sydney 14.9 (93) def. Collingwood 11.10 (76),169,17,,Sydney defeated Collingwood by 17 points at Newcastle Number 1 Sports Ground.
+30,pre-Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2001-03-10,Adelaide 14.12 (96) def. West Coast 6.10 (46),142,50,,Adelaide defeated West Coast by 50 points at Football Park.
+31,pre-Season,Fremantle,Geelong,Fremantle,Geelong,Fremantle Oval,2001-03-10,Fremantle 9.7 (61) def. by Geelong 17.15 (117),178,56,,Geelong defeated Fremantle by 56 points at Fremantle Oval.
+32,pre-Season,Carlton,St Kilda,Carlton,St Kilda,"Queen Elizabeth Oval, Bendigo",2001-03-11,Carlton 12.13 (85) def. by St Kilda 13.15 (93),178,8,,"St Kilda defeated Carlton by 8 points at Queen Elizabeth Oval, Bendigo."
+33,pre-Season,Essendon,Richmond,Essendon,Richmond,Trevor Barker Beach Oval,2001-03-17,Essendon 9.6 (60) def. Richmond 7.8 (50),110,10,,Essendon defeated Richmond by 10 points at Trevor Barker Beach Oval.
+34,pre-Season,North Melbourne,Fremantle,North Melbourne,Fremantle,Perth Stadium,2001-03-17,Kangaroos 17.10 (112) def. Fremantle 7.6 (48),160,64,,North Melbourne defeated Fremantle by 64 points at Perth Stadium.
+35,pre-Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,2001-03-17,Sydney 16.17 (113) def. Carlton 13.19 (97),210,16,,Sydney defeated Carlton by 16 points at S.C.G..
+36,pre-Season,Geelong,Hawthorn,Geelong,Hawthorn,"Hamilton, Victoria",2001-03-17,Geelong 7.18 (60) def. by Hawthorn 9.12 (66),126,6,,"Hawthorn defeated Geelong by 6 points at Hamilton, Victoria."
+37,pre-Season,Collingwood,Melbourne,Collingwood,Melbourne,North Hobart Oval,2001-03-17,Collingwood 13.9 (87) def. by Melbourne 16.9 (105),192,18,,Melbourne defeated Collingwood by 18 points at North Hobart Oval.
+38,pre-Season,Adelaide,St Kilda,Adelaide,St Kilda,Port Augusta,2001-03-17,Adelaide 4.10 (34) def. by St Kilda 11.13 (79),113,45,,St Kilda defeated Adelaide by 45 points at Port Augusta.
+39,pre-Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco Oval,2001-03-17,West Coast 17.11 (113) def. Western Bulldogs 7.18 (60),173,53,,West Coast defeated Western Bulldogs by 53 points at Subiaco Oval.
+40,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,M.C.G.,2001-03-30,Essendon 23.8 (146) def. North Melbourne 9.7 (61),207,85,,Essendon defeated North Melbourne by 85 points at M.C.G..
+41,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,M.C.G.,2001-03-31,Hawthorn 13.7 (85) def. Collingwood 11.15 (81),166,4,,Hawthorn defeated Collingwood by 4 points at M.C.G..
+42,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2001-03-31,Carlton 18.11 (119) def. Fremantle 18.10 (118),237,1,,Carlton defeated Fremantle by 1 points at Subiaco.
+43,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Docklands,2001-03-31,St Kilda 16.16 (112) def. Western Bulldogs 16.11 (107),219,5,,St Kilda defeated Western Bulldogs by 5 points at Docklands.
+44,Regular Season,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,Football Park,2001-03-31,Port Adelaide 14.15 (99) def. Brisbane Lions 14.9 (93),192,6,,Port Adelaide defeated Brisbane Lions by 6 points at Football Park.
+45,Regular Season,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,2001-04-01,Sydney 19.12 (126) def. Adelaide 10.14 (74),200,52,,Sydney defeated Adelaide by 52 points at S.C.G..
+46,Regular Season,Geelong,West Coast,Geelong,West Coast,Kardinia Park,2001-04-01,Geelong 17.13 (115) def. West Coast 7.7 (49),164,66,,Geelong defeated West Coast by 66 points at Kardinia Park.
+47,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2001-04-01,Richmond 20.14 (134) def. Melbourne 15.13 (103),237,31,,Richmond defeated Melbourne by 31 points at M.C.G..
+48,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2001-04-06,Essendon 23.7 (145) def. Port Adelaide 16.11 (107),252,38,,Essendon defeated Port Adelaide by 38 points at Docklands.
+49,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,2001-04-07,Hawthorn 16.11 (107) def. Carlton 11.15 (81),188,26,,Hawthorn defeated Carlton by 26 points at Princes Park.
+50,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,2001-04-07,Western Bulldogs 17.9 (111) def. Richmond 9.15 (69),180,42,,Western Bulldogs defeated Richmond by 42 points at M.C.G..
+51,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,Docklands,2001-04-07,Collingwood 15.15 (105) def. Fremantle 13.10 (88),193,17,,Collingwood defeated Fremantle by 17 points at Docklands.
+52,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2001-04-07,Melbourne 12.11 (83) def. Adelaide 11.14 (80),163,3,,Melbourne defeated Adelaide by 3 points at Football Park.
+53,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2001-04-08,Geelong 17.13 (115) def. St Kilda 13.8 (86),201,29,,Geelong defeated St Kilda by 29 points at Docklands.
+54,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2001-04-08,Brisbane Lions 17.16 (118) def. North Melbourne 8.10 (58),176,60,,Brisbane Lions defeated North Melbourne by 60 points at Gabba.
+55,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,2001-04-08,Sydney 15.14 (104) def. West Coast 13.11 (89),193,15,,Sydney defeated West Coast by 15 points at Subiaco.
+56,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2001-04-12,Carlton 14.9 (93) def. Essendon 11.10 (76),169,17,,Carlton defeated Essendon by 17 points at M.C.G..
+57,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,M.C.G.,2001-04-14,Richmond 17.14 (116) def. Brisbane Lions 14.10 (94),210,22,,Richmond defeated Brisbane Lions by 22 points at M.C.G..
+58,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2001-04-14,Collingwood 23.15 (153) def. Western Bulldogs 12.9 (81),234,72,,Collingwood defeated Western Bulldogs by 72 points at Docklands.
+59,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,S.C.G.,2001-04-14,Sydney 23.13 (151) def. North Melbourne 11.5 (71),222,80,,Sydney defeated North Melbourne by 80 points at S.C.G..
+60,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2001-04-15,Port Adelaide 23.15 (153) def. Adelaide 13.10 (88),241,65,,Port Adelaide defeated Adelaide by 65 points at Football Park.
+61,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2001-04-15,West Coast 19.11 (125) def. St Kilda 16.11 (107),232,18,,West Coast defeated St Kilda by 18 points at Docklands.
+62,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Subiaco,2001-04-15,Hawthorn 11.16 (82) def. Fremantle 8.11 (59),141,23,,Hawthorn defeated Fremantle by 23 points at Subiaco.
+63,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2001-04-16,Melbourne 18.16 (124) def. Geelong 15.14 (104),228,20,,Melbourne defeated Geelong by 20 points at M.C.G..
+64,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,2001-04-20,Richmond 13.8 (86) def. Collingwood 10.11 (71),157,15,,Richmond defeated Collingwood by 15 points at M.C.G..
+65,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,2001-04-20,Essendon 15.12 (102) def. Sydney 6.19 (55),157,47,,Essendon defeated Sydney by 47 points at S.C.G..
+66,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Princes Park,2001-04-21,Adelaide 9.8 (62) def. Carlton 8.5 (53),115,9,,Adelaide defeated Carlton by 9 points at Princes Park.
+67,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Docklands,2001-04-21,Western Bulldogs 21.14 (140) def. Brisbane Lions 12.15 (87),227,53,,Western Bulldogs defeated Brisbane Lions by 53 points at Docklands.
+68,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2001-04-21,West Coast 16.16 (112) def. Fremantle 13.10 (88),200,24,,West Coast defeated Fremantle by 24 points at Subiaco.
+69,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,2001-04-21,Port Adelaide 17.12 (114) def. St Kilda 7.8 (50),164,64,,Port Adelaide defeated St Kilda by 64 points at Football Park.
+70,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,2001-04-22,North Melbourne 7.11 (53) def. Geelong 4.9 (33),86,20,,North Melbourne defeated Geelong by 20 points at Kardinia Park.
+71,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2001-04-22,Hawthorn 11.17 (83) def. Melbourne 5.14 (44),127,39,,Hawthorn defeated Melbourne by 39 points at M.C.G..
+72,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2001-04-25,Essendon 15.13 (103) def. Collingwood 14.11 (95),198,8,,Essendon defeated Collingwood by 8 points at M.C.G..
+73,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2001-04-27,Richmond 17.7 (109) def. West Coast 11.4 (70),179,39,,Richmond defeated West Coast by 39 points at Subiaco.
+74,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,2001-04-28,Carlton 17.23 (125) def. St Kilda 14.8 (92),217,33,,Carlton defeated St Kilda by 33 points at Princes Park.
+75,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Docklands,2001-04-28,Hawthorn 24.11 (155) def. Western Bulldogs 19.12 (126),281,29,,Hawthorn defeated Western Bulldogs by 29 points at Docklands.
+76,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2001-04-28,Adelaide 12.18 (90) def. North Melbourne 10.15 (75),165,15,,Adelaide defeated North Melbourne by 15 points at Football Park.
+77,Regular Season,Brisbane Lions,Fremantle,Brisbane Lions,Fremantle,Gabba,2001-04-29,Brisbane Lions 25.21 (171) def. Fremantle 19.8 (122),293,49,,Brisbane Lions defeated Fremantle by 49 points at Gabba.
+78,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Kardinia Park,2001-04-29,Port Adelaide 23.10 (148) def. Geelong 15.12 (102),250,46,,Port Adelaide defeated Geelong by 46 points at Kardinia Park.
+79,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,2001-04-29,Melbourne 18.11 (119) def. Sydney 15.14 (104),223,15,,Melbourne defeated Sydney by 15 points at M.C.G..
+80,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Docklands,2001-05-04,Richmond 19.15 (129) def. North Melbourne 12.6 (78),207,51,,Richmond defeated North Melbourne by 51 points at Docklands.
+81,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Docklands,2001-05-05,St Kilda 18.12 (120) def. Sydney 14.10 (94),214,26,,St Kilda defeated Sydney by 26 points at Docklands.
+82,Regular Season,Fremantle,Melbourne,Fremantle,Melbourne,Subiaco,2001-05-05,Melbourne 18.11 (119) def. Fremantle 9.20 (74),193,45,,Melbourne defeated Fremantle by 45 points at Subiaco.
+83,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Football Park,2001-05-05,Port Adelaide 20.9 (129) def. Western Bulldogs 13.8 (86),215,43,,Port Adelaide defeated Western Bulldogs by 43 points at Football Park.
+84,Regular Season,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,2001-05-05,Brisbane Lions 17.14 (116) def. Geelong 8.13 (61),177,55,,Brisbane Lions defeated Geelong by 55 points at Gabba.
+85,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,York Park,2001-05-06,Hawthorn 16.8 (104) def. Adelaide 12.19 (91),195,13,,Hawthorn defeated Adelaide by 13 points at York Park.
+86,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2001-05-06,Essendon 24.14 (158) def. West Coast 10.10 (70),228,88,,Essendon defeated West Coast by 88 points at Docklands.
+87,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2001-05-06,Collingwood 15.13 (103) def. Carlton 14.11 (95),198,8,,Collingwood defeated Carlton by 8 points at M.C.G..
+88,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,2001-05-11,Western Bulldogs 15.17 (107) def. Melbourne 12.5 (77),184,30,,Western Bulldogs defeated Melbourne by 30 points at M.C.G..
+89,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2001-05-12,Essendon 16.24 (120) def. Richmond 10.14 (74),194,46,,Essendon defeated Richmond by 46 points at M.C.G..
+90,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Docklands,2001-05-12,Hawthorn 16.14 (110) def. St Kilda 15.9 (99),209,11,,Hawthorn defeated St Kilda by 11 points at Docklands.
+91,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2001-05-12,Adelaide 14.19 (103) def. Fremantle 12.11 (83),186,20,,Adelaide defeated Fremantle by 20 points at Football Park.
+92,Regular Season,Geelong,Carlton,Geelong,Carlton,M.C.G.,2001-05-13,Carlton 17.6 (108) def. Geelong 9.14 (68),176,40,,Carlton defeated Geelong by 40 points at M.C.G..
+93,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Docklands,2001-05-13,North Melbourne 15.9 (99) def. Collingwood 14.13 (97),196,2,,North Melbourne defeated Collingwood by 2 points at Docklands.
+94,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2001-05-13,Brisbane Lions 15.22 (112) def. Sydney 12.8 (80),192,32,,Brisbane Lions defeated Sydney by 32 points at S.C.G..
+95,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2001-05-13,Port Adelaide 17.19 (121) def. West Coast 7.8 (50),171,71,,Port Adelaide defeated West Coast by 71 points at Subiaco.
+96,Regular Season,Richmond,Adelaide,Richmond,Adelaide,M.C.G.,2001-05-18,Adelaide 17.18 (120) def. Richmond 14.8 (92),212,28,,Adelaide defeated Richmond by 28 points at M.C.G..
+97,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Manuka Oval,2001-05-19,North Melbourne 19.24 (138) def. St Kilda 13.11 (89),227,49,,North Melbourne defeated St Kilda by 49 points at Manuka Oval.
+98,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Princes Park,2001-05-19,Carlton 21.16 (142) def. Brisbane Lions 9.14 (68),210,74,,Carlton defeated Brisbane Lions by 74 points at Princes Park.
+99,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,M.C.G.,2001-05-19,Hawthorn 21.12 (138) def. West Coast 8.10 (58),196,80,,Hawthorn defeated West Coast by 80 points at M.C.G..
+100,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2001-05-19,Collingwood 18.11 (119) def. Port Adelaide 16.14 (110),229,9,,Collingwood defeated Port Adelaide by 9 points at Football Park.
+101,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,2001-05-20,Essendon 12.13 (85) def. Melbourne 11.13 (79),164,6,,Essendon defeated Melbourne by 6 points at M.C.G..
+102,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,S.C.G.,2001-05-20,Western Bulldogs 18.14 (122) def. Sydney 15.11 (101),223,21,,Western Bulldogs defeated Sydney by 21 points at S.C.G..
+103,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2001-05-20,Geelong 14.11 (95) def. Fremantle 10.13 (73),168,22,,Geelong defeated Fremantle by 22 points at Subiaco.
+104,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,M.C.G.,2001-05-25,Carlton 12.10 (82) def. North Melbourne 10.9 (69),151,13,,Carlton defeated North Melbourne by 13 points at M.C.G..
+105,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,2001-05-26,Collingwood 14.14 (98) def. St Kilda 12.8 (80),178,18,,Collingwood defeated St Kilda by 18 points at M.C.G..
+106,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco,2001-05-26,Western Bulldogs 18.17 (125) def. West Coast 11.11 (77),202,48,,Western Bulldogs defeated West Coast by 48 points at Subiaco.
+107,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2001-05-26,Adelaide 19.13 (127) def. Brisbane Lions 18.14 (122),249,5,,Adelaide defeated Brisbane Lions by 5 points at Gabba.
+108,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Docklands,2001-05-26,Essendon 18.14 (122) def. Hawthorn 8.9 (57),179,65,,Essendon defeated Hawthorn by 65 points at Docklands.
+109,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2001-05-27,Port Adelaide 13.10 (88) def. Melbourne 9.14 (68),156,20,,Port Adelaide defeated Melbourne by 20 points at Football Park.
+110,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2001-05-27,Sydney 12.12 (84) def. Fremantle 10.5 (65),149,19,,Sydney defeated Fremantle by 19 points at S.C.G..
+111,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,2001-05-27,Geelong 17.16 (118) def. Richmond 11.10 (76),194,42,,Geelong defeated Richmond by 42 points at Kardinia Park.
+112,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2001-06-01,North Melbourne 19.11 (125) def. Western Bulldogs 11.13 (79),204,46,,North Melbourne defeated Western Bulldogs by 46 points at Docklands.
+113,Regular Season,Carlton,West Coast,Carlton,West Coast,Princes Park,2001-06-02,Carlton 21.23 (149) def. West Coast 3.12 (30),179,119,,Carlton defeated West Coast by 119 points at Princes Park.
+114,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2001-06-02,Port Adelaide 17.14 (116) def. Hawthorn 10.13 (73),189,43,,Port Adelaide defeated Hawthorn by 43 points at M.C.G..
+115,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Docklands,2001-06-02,Melbourne 22.12 (144) def. St Kilda 17.11 (113),257,31,,Melbourne defeated St Kilda by 31 points at Docklands.
+116,Regular Season,Brisbane Lions,Essendon,Brisbane Lions,Essendon,Gabba,2001-06-02,Brisbane Lions 15.12 (102) def. Essendon 10.14 (74),176,28,,Brisbane Lions defeated Essendon by 28 points at Gabba.
+117,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2001-06-03,Adelaide 9.12 (66) def. Geelong 8.7 (55),121,11,,Adelaide defeated Geelong by 11 points at Football Park.
+118,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Docklands,2001-06-03,Sydney 11.7 (73) def. Collingwood 7.13 (55),128,18,,Sydney defeated Collingwood by 18 points at Docklands.
+119,Regular Season,Fremantle,Richmond,Fremantle,Richmond,Subiaco,2001-06-03,Richmond 12.12 (84) def. Fremantle 6.10 (46),130,38,,Richmond defeated Fremantle by 38 points at Subiaco.
+120,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2001-06-08,Essendon 19.14 (128) def. St Kilda 13.8 (86),214,42,,Essendon defeated St Kilda by 42 points at Docklands.
+121,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Docklands,2001-06-09,Geelong 14.9 (93) def. Hawthorn 13.12 (90),183,3,,Geelong defeated Hawthorn by 3 points at Docklands.
+122,Regular Season,West Coast,Brisbane Lions,West Coast,Brisbane Lions,Subiaco,2001-06-09,Brisbane Lions 11.18 (84) def. West Coast 9.8 (62),146,22,,Brisbane Lions defeated West Coast by 22 points at Subiaco.
+123,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2001-06-09,Western Bulldogs 19.13 (127) def. Adelaide 14.13 (97),224,30,,Western Bulldogs defeated Adelaide by 30 points at Football Park.
+124,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2001-06-10,Richmond 13.10 (88) def. Carlton 8.13 (61),149,27,,Richmond defeated Carlton by 27 points at M.C.G..
+125,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,Docklands,2001-06-10,North Melbourne 23.16 (154) def. Fremantle 10.8 (68),222,86,,North Melbourne defeated Fremantle by 86 points at Docklands.
+126,Regular Season,Sydney,Port Adelaide,Sydney,Port Adelaide,S.C.G.,2001-06-10,Sydney 18.17 (125) def. Port Adelaide 10.18 (78),203,47,,Sydney defeated Port Adelaide by 47 points at S.C.G..
+127,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2001-06-11,Collingwood 19.20 (134) def. Melbourne 8.9 (57),191,77,,Collingwood defeated Melbourne by 77 points at M.C.G..
+128,Regular Season,Essendon,Adelaide,Essendon,Adelaide,Docklands,2001-06-15,Essendon 18.14 (122) def. Adelaide 11.7 (73),195,49,,Essendon defeated Adelaide by 49 points at Docklands.
+129,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,2001-06-16,Western Bulldogs 15.4 (94) def. Geelong 13.9 (87),181,7,,Western Bulldogs defeated Geelong by 7 points at Kardinia Park.
+130,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2001-06-16,St Kilda 12.18 (90) def. Fremantle 11.14 (80),170,10,,St Kilda defeated Fremantle by 10 points at Subiaco.
+131,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Gabba,2001-06-17,Brisbane Lions 23.10 (148) def. Melbourne 14.15 (99),247,49,,Brisbane Lions defeated Melbourne by 49 points at Gabba.
+132,Regular Season,Collingwood,West Coast,Collingwood,West Coast,Docklands,2001-06-22,Collingwood 26.17 (173) def. West Coast 14.8 (92),265,81,,Collingwood defeated West Coast by 81 points at Docklands.
+133,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,M.C.G.,2001-06-23,Hawthorn 15.11 (101) def. North Melbourne 14.14 (98),199,3,,Hawthorn defeated North Melbourne by 3 points at M.C.G..
+134,Regular Season,Richmond,Sydney,Richmond,Sydney,Docklands,2001-06-23,Richmond 12.14 (86) def. Sydney 8.12 (60),146,26,,Richmond defeated Sydney by 26 points at Docklands.
+135,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2001-06-24,Carlton 15.14 (104) def. Port Adelaide 10.10 (70),174,34,,Carlton defeated Port Adelaide by 34 points at Football Park.
+136,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,2001-06-29,Brisbane Lions 20.20 (140) def. Hawthorn 8.5 (53),193,87,,Brisbane Lions defeated Hawthorn by 87 points at Gabba.
+137,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Manuka Oval,2001-06-30,North Melbourne 14.11 (95) def. Port Adelaide 10.13 (73),168,22,,North Melbourne defeated Port Adelaide by 22 points at Manuka Oval.
+138,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,2001-06-30,Carlton 23.15 (153) def. Western Bulldogs 13.14 (92),245,61,,Carlton defeated Western Bulldogs by 61 points at Princes Park.
+139,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2001-06-30,Essendon 18.10 (118) def. Fremantle 10.12 (72),190,46,,Essendon defeated Fremantle by 46 points at Docklands.
+140,Regular Season,Adelaide,Collingwood,Adelaide,Collingwood,Football Park,2001-06-30,Collingwood 15.9 (99) def. Adelaide 14.13 (97),196,2,,Collingwood defeated Adelaide by 2 points at Football Park.
+141,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,2001-07-01,Geelong 12.12 (84) def. Sydney 9.11 (65),149,19,,Geelong defeated Sydney by 19 points at S.C.G..
+142,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2001-07-01,Richmond 19.12 (126) def. St Kilda 13.9 (87),213,39,,Richmond defeated St Kilda by 39 points at Docklands.
+143,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2001-07-01,West Coast 15.5 (95) def. Melbourne 13.10 (88),183,7,,West Coast defeated Melbourne by 7 points at Subiaco.
+144,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2001-07-06,Essendon 24.10 (154) def. Western Bulldogs 11.10 (76),230,78,,Essendon defeated Western Bulldogs by 78 points at Docklands.
+145,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2001-07-07,Hawthorn 20.9 (129) def. Richmond 10.11 (71),200,58,,Hawthorn defeated Richmond by 58 points at M.C.G..
+146,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2001-07-07,Adelaide 8.16 (64) def. West Coast 7.9 (51),115,13,,Adelaide defeated West Coast by 13 points at Football Park.
+147,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2001-07-07,Brisbane Lions 17.17 (119) def. St Kilda 9.8 (62),181,57,,Brisbane Lions defeated St Kilda by 57 points at Gabba.
+148,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Subiaco,2001-07-08,Port Adelaide 25.13 (163) def. Fremantle 11.5 (71),234,92,,Port Adelaide defeated Fremantle by 92 points at Subiaco.
+149,Regular Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,2001-07-08,Sydney 12.19 (91) def. Carlton 12.9 (81),172,10,,Sydney defeated Carlton by 10 points at S.C.G..
+150,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Docklands,2001-07-08,Geelong 16.15 (111) def. Collingwood 14.9 (93),204,18,,Geelong defeated Collingwood by 18 points at Docklands.
+151,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,2001-07-08,North Melbourne 18.13 (121) def. Melbourne 13.15 (93),214,28,,North Melbourne defeated Melbourne by 28 points at M.C.G..
+152,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2001-07-13,Adelaide 23.18 (156) def. St Kilda 9.5 (59),215,97,,Adelaide defeated St Kilda by 97 points at Docklands.
+153,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,2001-07-14,Melbourne 18.9 (117) def. Carlton 16.15 (111),228,6,,Melbourne defeated Carlton by 6 points at Princes Park.
+154,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Docklands,2001-07-14,Western Bulldogs 16.23 (119) def. Fremantle 11.19 (85),204,34,,Western Bulldogs defeated Fremantle by 34 points at Docklands.
+155,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,M.C.G.,2001-07-14,Sydney 14.14 (98) def. Hawthorn 11.11 (77),175,21,,Sydney defeated Hawthorn by 21 points at M.C.G..
+156,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2001-07-14,Port Adelaide 14.12 (96) def. Richmond 7.10 (52),148,44,,Port Adelaide defeated Richmond by 44 points at Football Park.
+157,Regular Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco,2001-07-15,North Melbourne 24.10 (154) def. West Coast 17.8 (110),264,44,,North Melbourne defeated West Coast by 44 points at Subiaco.
+158,Regular Season,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2001-07-15,Brisbane Lions 19.15 (129) def. Collingwood 16.7 (103),232,26,,Brisbane Lions defeated Collingwood by 26 points at M.C.G..
+159,Regular Season,Essendon,Geelong,Essendon,Geelong,Docklands,2001-07-15,Essendon 19.13 (127) def. Geelong 17.10 (112),239,15,,Essendon defeated Geelong by 15 points at Docklands.
+160,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2001-07-20,Richmond 19.13 (127) def. Melbourne 12.14 (86),213,41,,Richmond defeated Melbourne by 41 points at M.C.G..
+161,Regular Season,Carlton,Fremantle,Carlton,Fremantle,Princes Park,2001-07-21,Carlton 19.17 (131) def. Fremantle 8.8 (56),187,75,,Carlton defeated Fremantle by 75 points at Princes Park.
+162,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2001-07-21,Hawthorn 21.18 (144) def. Collingwood 14.5 (89),233,55,,Hawthorn defeated Collingwood by 55 points at M.C.G..
+163,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Docklands,2001-07-21,Western Bulldogs 16.16 (112) def. St Kilda 12.6 (78),190,34,,Western Bulldogs defeated St Kilda by 34 points at Docklands.
+164,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2001-07-21,Brisbane Lions 13.16 (94) def. Port Adelaide 8.12 (60),154,34,,Brisbane Lions defeated Port Adelaide by 34 points at Gabba.
+165,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,2001-07-22,Sydney 16.9 (105) def. Adelaide 7.14 (56),161,49,,Sydney defeated Adelaide by 49 points at Football Park.
+166,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,M.C.G.,2001-07-22,Essendon 27.9 (171) def. North Melbourne 25.9 (159),330,12,,Essendon defeated North Melbourne by 12 points at M.C.G..
+167,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2001-07-22,Geelong 22.18 (150) def. West Coast 12.8 (80),230,70,,Geelong defeated West Coast by 70 points at Subiaco.
+168,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2001-07-27,Richmond 15.12 (102) def. Western Bulldogs 15.10 (100),202,2,,Richmond defeated Western Bulldogs by 2 points at Docklands.
+169,Regular Season,Melbourne,Adelaide,Melbourne,Adelaide,M.C.G.,2001-07-28,Adelaide 15.10 (100) def. Melbourne 12.12 (84),184,16,,Adelaide defeated Melbourne by 16 points at M.C.G..
+170,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,2001-07-28,Geelong 12.6 (78) def. St Kilda 10.6 (66),144,12,,Geelong defeated St Kilda by 12 points at Kardinia Park.
+171,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Subiaco,2001-07-28,Collingwood 19.5 (119) def. Fremantle 13.12 (90),209,29,,Collingwood defeated Fremantle by 29 points at Subiaco.
+172,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2001-07-28,Brisbane Lions 21.10 (136) def. North Melbourne 18.7 (115),251,21,,Brisbane Lions defeated North Melbourne by 21 points at Docklands.
+173,Regular Season,Port Adelaide,Essendon,Port Adelaide,Essendon,Football Park,2001-07-29,Port Adelaide 15.14 (104) def. Essendon 14.13 (97),201,7,,Port Adelaide defeated Essendon by 7 points at Football Park.
+174,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,M.C.G.,2001-07-29,Hawthorn 15.6 (96) def. Carlton 13.15 (93),189,3,,Hawthorn defeated Carlton by 3 points at M.C.G..
+175,Regular Season,Sydney,West Coast,Sydney,West Coast,S.C.G.,2001-07-29,Sydney 11.17 (83) def. West Coast 6.12 (48),131,35,,Sydney defeated West Coast by 35 points at S.C.G..
+176,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2001-08-03,Richmond 10.11 (71) def. Collingwood 6.15 (51),122,20,,Richmond defeated Collingwood by 20 points at M.C.G..
+177,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,Docklands,2001-08-04,Fremantle 16.10 (106) def. Hawthorn 13.12 (90),196,16,,Fremantle defeated Hawthorn by 16 points at Docklands.
+178,Regular Season,Geelong,Melbourne,Geelong,Melbourne,M.C.G.,2001-08-04,Melbourne 16.7 (103) def. Geelong 15.10 (100),203,3,,Melbourne defeated Geelong by 3 points at M.C.G..
+179,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,2001-08-04,Sydney 22.11 (143) def. North Melbourne 3.18 (36),179,107,,Sydney defeated North Melbourne by 107 points at S.C.G..
+180,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2001-08-05,Port Adelaide 16.11 (107) def. Adelaide 15.9 (99),206,8,,Port Adelaide defeated Adelaide by 8 points at Football Park.
+181,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2001-08-05,Carlton 16.6 (102) def. Essendon 14.11 (95),197,7,,Carlton defeated Essendon by 7 points at M.C.G..
+182,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2001-08-05,Brisbane Lions 19.22 (136) def. Western Bulldogs 15.13 (103),239,33,,Brisbane Lions defeated Western Bulldogs by 33 points at Gabba.
+183,Regular Season,West Coast,St Kilda,West Coast,St Kilda,Subiaco,2001-08-05,West Coast 26.15 (171) def. St Kilda 12.7 (79),250,92,,West Coast defeated St Kilda by 92 points at Subiaco.
+184,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Docklands,2001-08-10,North Melbourne 21.5 (131) def. Geelong 12.10 (82),213,49,,North Melbourne defeated Geelong by 49 points at Docklands.
+185,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,Docklands,2001-08-11,Port Adelaide 19.11 (125) def. St Kilda 16.18 (114),239,11,,Port Adelaide defeated St Kilda by 11 points at Docklands.
+186,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2001-08-11,Hawthorn 24.12 (156) def. Melbourne 10.11 (71),227,85,,Hawthorn defeated Melbourne by 85 points at M.C.G..
+187,Regular Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,2001-08-11,Adelaide 16.10 (106) def. Carlton 8.5 (53),159,53,,Adelaide defeated Carlton by 53 points at Football Park.
+188,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,2001-08-12,Collingwood 17.17 (119) def. Western Bulldogs 11.11 (77),196,42,,Collingwood defeated Western Bulldogs by 42 points at M.C.G..
+189,Regular Season,Essendon,Sydney,Essendon,Sydney,Docklands,2001-08-12,Essendon 11.13 (79) def. Sydney 11.11 (77),156,2,,Essendon defeated Sydney by 2 points at Docklands.
+190,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2001-08-12,Brisbane Lions 19.14 (128) def. Richmond 15.7 (97),225,31,,Brisbane Lions defeated Richmond by 31 points at Gabba.
+191,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2001-08-12,West Coast 14.14 (98) def. Fremantle 9.10 (64),162,34,,West Coast defeated Fremantle by 34 points at Subiaco.
+192,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,Docklands,2001-08-17,Adelaide 25.12 (162) def. North Melbourne 15.10 (100),262,62,,Adelaide defeated North Melbourne by 62 points at Docklands.
+193,Regular Season,Richmond,West Coast,Richmond,West Coast,Docklands,2001-08-18,Richmond 20.18 (138) def. West Coast 10.13 (73),211,65,,Richmond defeated West Coast by 65 points at Docklands.
+194,Regular Season,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,2001-08-18,Port Adelaide 14.15 (99) def. Geelong 10.9 (69),168,30,,Port Adelaide defeated Geelong by 30 points at Football Park.
+195,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2001-08-18,Essendon 15.17 (107) def. Collingwood 13.9 (87),194,20,,Essendon defeated Collingwood by 20 points at M.C.G..
+196,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Docklands,2001-08-19,Carlton 22.16 (148) def. St Kilda 16.8 (104),252,44,,Carlton defeated St Kilda by 44 points at Docklands.
+197,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2001-08-19,Western Bulldogs 17.23 (125) def. Hawthorn 12.7 (79),204,46,,Western Bulldogs defeated Hawthorn by 46 points at M.C.G..
+198,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,2001-08-19,Melbourne 19.17 (131) def. Sydney 14.14 (98),229,33,,Melbourne defeated Sydney by 33 points at S.C.G..
+199,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2001-08-19,Brisbane Lions 21.12 (138) def. Fremantle 12.15 (87),225,51,,Brisbane Lions defeated Fremantle by 51 points at Subiaco.
+200,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,2001-08-24,Richmond 13.14 (92) def. North Melbourne 13.10 (88),180,4,,Richmond defeated North Melbourne by 4 points at M.C.G..
+201,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2001-08-25,Carlton 20.10 (130) def. Collingwood 9.8 (62),192,68,,Carlton defeated Collingwood by 68 points at M.C.G..
+202,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Docklands,2001-08-25,Port Adelaide 22.18 (150) def. Western Bulldogs 10.13 (73),223,77,,Port Adelaide defeated Western Bulldogs by 77 points at Docklands.
+203,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,2001-08-25,Essendon 21.10 (136) def. West Coast 6.11 (47),183,89,,Essendon defeated West Coast by 89 points at Subiaco.
+204,Regular Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,2001-08-26,Adelaide 13.13 (91) def. Hawthorn 8.5 (53),144,38,,Adelaide defeated Hawthorn by 38 points at Football Park.
+205,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,Docklands,2001-08-26,Melbourne 16.18 (114) def. Fremantle 12.7 (79),193,35,,Melbourne defeated Fremantle by 35 points at Docklands.
+206,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2001-08-26,Brisbane Lions 16.14 (110) def. Geelong 9.13 (67),177,43,,Brisbane Lions defeated Geelong by 43 points at Kardinia Park.
+207,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2001-08-26,Sydney 21.16 (142) def. St Kilda 8.7 (55),197,87,,Sydney defeated St Kilda by 87 points at S.C.G..
+208,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2001-08-31,Richmond 17.5 (107) def. Essendon 12.11 (83),190,24,,Richmond defeated Essendon by 24 points at M.C.G..
+209,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,2001-09-01,Carlton 13.19 (97) def. Geelong 3.9 (27),124,70,,Carlton defeated Geelong by 70 points at Princes Park.
+210,Regular Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco,2001-09-01,Fremantle 17.18 (120) def. Adelaide 11.17 (83),203,37,,Fremantle defeated Adelaide by 37 points at Subiaco.
+211,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,M.C.G.,2001-09-01,St Kilda 13.11 (89) def. Hawthorn 13.9 (87),176,2,,St Kilda defeated Hawthorn by 2 points at M.C.G..
+212,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2001-09-01,Brisbane Lions 13.15 (93) def. Sydney 9.8 (62),155,31,,Brisbane Lions defeated Sydney by 31 points at Gabba.
+213,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Manuka Oval,2001-09-02,Collingwood 19.12 (126) def. North Melbourne 11.17 (83),209,43,,Collingwood defeated North Melbourne by 43 points at Manuka Oval.
+214,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,2001-09-02,Port Adelaide 24.19 (163) def. West Coast 7.9 (51),214,112,,Port Adelaide defeated West Coast by 112 points at Football Park.
+215,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2001-09-02,Melbourne 21.7 (133) def. Western Bulldogs 19.9 (123),256,10,,Melbourne defeated Western Bulldogs by 10 points at Docklands.
+216,Finals,Essendon,Richmond,Essendon,Richmond,M.C.G.,2001-09-07,Essendon 17.11 (113) def. Richmond 5.13 (43),156,70,,Essendon defeated Richmond by 70 points at M.C.G..
+217,Finals,Carlton,Adelaide,Carlton,Adelaide,M.C.G.,2001-09-08,Carlton 17.16 (118) def. Adelaide 6.14 (50),168,68,,Carlton defeated Adelaide by 68 points at M.C.G..
+218,Finals,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2001-09-08,Brisbane Lions 12.16 (88) def. Port Adelaide 8.8 (56),144,32,,Brisbane Lions defeated Port Adelaide by 32 points at Gabba.
+219,Finals,Hawthorn,Sydney,Hawthorn,Sydney,Docklands,2001-09-09,Hawthorn 19.15 (129) def. Sydney 11.8 (74),203,55,,Hawthorn defeated Sydney by 55 points at Docklands.
+220,Finals,Richmond,Carlton,Richmond,Carlton,M.C.G.,2001-09-15,Richmond 10.7 (67) def. Carlton 7.14 (56),123,11,,Richmond defeated Carlton by 11 points at M.C.G..
+221,Finals,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2001-09-15,Hawthorn 10.12 (72) def. Port Adelaide 10.9 (69),141,3,,Hawthorn defeated Port Adelaide by 3 points at Football Park.
+222,Finals,Essendon,Hawthorn,Essendon,Hawthorn,M.C.G.,2001-09-22,Essendon 11.10 (76) def. Hawthorn 9.13 (67),143,9,,Essendon defeated Hawthorn by 9 points at M.C.G..
+223,Finals,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2001-09-22,Brisbane Lions 20.16 (136) def. Richmond 10.8 (68),204,68,,Brisbane Lions defeated Richmond by 68 points at Gabba.
+224,Grand Final,Essendon,Brisbane Lions,Essendon,Brisbane Lions,M.C.G.,2001-09-29,Brisbane Lions 15.18 (108) def. Essendon 12.10 (82),190,26,,Brisbane Lions defeated Essendon by 26 points at M.C.G..

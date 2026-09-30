@@ -1,186 +1,217 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
-1,Regular Season,Carlton,Richmond,Carlton,Richmond,M.C.G.,2008-03-20,Richmond 17.7 (109) def. Carlton 11.13 (79),188,30,,Richmond defeated Carlton by 30 points at M.C.G..
-2,Regular Season,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,2008-03-20,Geelong 15.15 (105) def. Port Adelaide 14.12 (96),201,9,,Geelong defeated Port Adelaide by 9 points at Football Park.
-3,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,M.C.G.,2008-03-22,Collingwood 16.15 (111) def. Fremantle 13.7 (85),196,26,,Collingwood defeated Fremantle by 26 points at M.C.G..
-4,Regular Season,West Coast,Brisbane Lions,West Coast,Brisbane Lions,Subiaco,2008-03-22,West Coast 14.8 (92) def. Brisbane Lions 11.10 (76),168,16,,West Coast defeated Brisbane Lions by 16 points at Subiaco.
-5,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Docklands,2008-03-22,St Kilda 6.15 (51) def. Sydney 6.13 (49),100,2,,St Kilda defeated Sydney by 2 points at Docklands.
-6,Regular Season,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,Docklands,2008-03-23,Western Bulldogs 19.12 (126) def. Adelaide 18.15 (123),249,3,,Western Bulldogs defeated Adelaide by 3 points at Docklands.
-7,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2008-03-23,Hawthorn 23.16 (154) def. Melbourne 6.14 (50),204,104,,Hawthorn defeated Melbourne by 104 points at M.C.G..
-8,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Docklands,2008-03-24,Essendon 19.8 (122) def. North Melbourne 9.13 (67),189,55,,Essendon defeated North Melbourne by 55 points at Docklands.
-9,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2008-03-28,Brisbane Lions 13.18 (96) def. Collingwood 13.16 (94),190,2,,Brisbane Lions defeated Collingwood by 2 points at Gabba.
-10,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,2008-03-29,Western Bulldogs 24.17 (161) def. Melbourne 9.12 (66),227,95,,Western Bulldogs defeated Melbourne by 95 points at M.C.G..
-11,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2008-03-29,Adelaide 21.7 (133) def. West Coast 8.9 (57),190,76,,Adelaide defeated West Coast by 76 points at Football Park.
-12,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Subiaco,2008-03-29,Hawthorn 16.16 (112) def. Fremantle 14.13 (97),209,15,,Hawthorn defeated Fremantle by 15 points at Subiaco.
-13,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Docklands,2008-03-29,St Kilda 19.11 (125) def. Carlton 12.13 (85),210,40,,St Kilda defeated Carlton by 40 points at Docklands.
-14,Regular Season,Sydney,Port Adelaide,Sydney,Port Adelaide,S.C.G.,2008-03-30,Sydney 22.14 (146) def. Port Adelaide 11.12 (78),224,68,,Sydney defeated Port Adelaide by 68 points at S.C.G..
-15,Regular Season,Geelong,Essendon,Geelong,Essendon,Docklands,2008-03-30,Geelong 22.18 (150) def. Essendon 6.15 (51),201,99,,Geelong defeated Essendon by 99 points at Docklands.
-16,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,2008-03-30,North Melbourne 20.7 (127) def. Richmond 13.8 (86),213,41,,North Melbourne defeated Richmond by 41 points at M.C.G..
-17,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Docklands,2008-04-04,Western Bulldogs 19.11 (125) def. St Kilda 13.9 (87),212,38,,Western Bulldogs defeated St Kilda by 38 points at Docklands.
-18,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Docklands,2008-04-05,Hawthorn 15.12 (102) def. North Melbourne 13.8 (86),188,16,,Hawthorn defeated North Melbourne by 16 points at Docklands.
-19,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2008-04-05,Fremantle 12.15 (87) def. West Coast 10.13 (73),160,14,,Fremantle defeated West Coast by 14 points at Subiaco.
-20,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2008-04-05,Sydney 13.10 (88) def. Brisbane Lions 10.11 (71),159,17,,Sydney defeated Brisbane Lions by 17 points at Gabba.
-21,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2008-04-05,Essendon 23.12 (150) def. Carlton 21.8 (134),284,16,,Essendon defeated Carlton by 16 points at M.C.G..
-22,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,2008-04-06,Geelong 16.16 (112) def. Melbourne 12.10 (82),194,30,,Geelong defeated Melbourne by 30 points at Kardinia Park.
-23,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2008-04-06,Collingwood 18.14 (122) def. Richmond 11.12 (78),200,44,,Collingwood defeated Richmond by 44 points at M.C.G..
-24,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2008-04-06,Adelaide 12.13 (85) def. Port Adelaide 11.13 (79),164,6,,Adelaide defeated Port Adelaide by 6 points at Football Park.
-25,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2008-04-11,Western Bulldogs 19.14 (128) def. Essendon 14.14 (98),226,30,,Western Bulldogs defeated Essendon by 30 points at Docklands.
-26,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2008-04-12,Geelong 21.10 (136) def. St Kilda 13.16 (94),230,42,,Geelong defeated St Kilda by 42 points at Docklands.
-27,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,M.C.G.,2008-04-12,North Melbourne 18.19 (127) def. Melbourne 11.13 (79),206,48,,North Melbourne defeated Melbourne by 48 points at M.C.G..
-28,Regular Season,Sydney,West Coast,Sydney,West Coast,Stadium Australia,2008-04-12,Sydney 16.11 (107) def. West Coast 5.15 (45),152,62,,Sydney defeated West Coast by 62 points at Stadium Australia.
-29,Regular Season,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,Football Park,2008-04-12,Brisbane Lions 18.16 (124) def. Port Adelaide 16.8 (104),228,20,,Brisbane Lions defeated Port Adelaide by 20 points at Football Park.
-30,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,York Park,2008-04-13,Hawthorn 17.12 (114) def. Adelaide 10.10 (70),184,44,,Hawthorn defeated Adelaide by 44 points at York Park.
-31,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2008-04-13,Carlton 17.9 (111) def. Collingwood 13.10 (88),199,23,,Carlton defeated Collingwood by 23 points at M.C.G..
-32,Regular Season,Fremantle,Richmond,Fremantle,Richmond,Subiaco,2008-04-13,Richmond 20.17 (137) def. Fremantle 10.13 (73),210,64,,Richmond defeated Fremantle by 64 points at Subiaco.
-33,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2008-04-18,St Kilda 18.15 (123) def. Essendon 14.3 (87),210,36,,St Kilda defeated Essendon by 36 points at Docklands.
-34,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,2008-04-19,Geelong 16.18 (114) def. Sydney 10.12 (72),186,42,,Geelong defeated Sydney by 42 points at Kardinia Park.
-35,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2008-04-19,Adelaide 12.16 (88) def. Fremantle 10.11 (71),159,17,,Adelaide defeated Fremantle by 17 points at Football Park.
-36,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,M.C.G.,2008-04-19,North Melbourne 16.16 (112) def. Collingwood 15.15 (105),217,7,,North Melbourne defeated Collingwood by 7 points at M.C.G..
-37,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,2008-04-19,Hawthorn 19.16 (130) def. Brisbane Lions 17.16 (118),248,12,,Hawthorn defeated Brisbane Lions by 12 points at Gabba.
-38,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,2008-04-20,Carlton 15.11 (101) def. Melbourne 9.14 (68),169,33,,Carlton defeated Melbourne by 33 points at M.C.G..
-39,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2008-04-20,Western Bulldogs 19.16 (130) drew with Richmond 20.10 (130),260,0,,Western Bulldogs and Richmond played out a draw at Docklands.
-40,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2008-04-20,Port Adelaide 19.14 (128) def. West Coast 16.8 (104),232,24,,Port Adelaide defeated West Coast by 24 points at Subiaco.
-41,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2008-04-25,Collingwood 23.16 (154) def. Essendon 12.9 (81),235,73,,Collingwood defeated Essendon by 73 points at M.C.G..
-42,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2008-04-25,Geelong 13.11 (89) def. Fremantle 13.10 (88),177,1,,Geelong defeated Fremantle by 1 points at Subiaco.
-43,Regular Season,Carlton,Adelaide,Carlton,Adelaide,M.C.G.,2008-04-26,Adelaide 16.15 (111) def. Carlton 11.15 (81),192,30,,Adelaide defeated Carlton by 30 points at M.C.G..
-44,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Docklands,2008-04-26,Western Bulldogs 20.14 (134) def. West Coast 11.8 (74),208,60,,Western Bulldogs defeated West Coast by 60 points at Docklands.
-45,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,2008-04-26,Port Adelaide 12.10 (82) def. St Kilda 9.7 (61),143,21,,Port Adelaide defeated St Kilda by 21 points at Football Park.
-46,Regular Season,Brisbane Lions,Melbourne,Brisbane Lions,Melbourne,Gabba,2008-04-27,Brisbane Lions 19.23 (137) def. Melbourne 13.7 (85),222,52,,Brisbane Lions defeated Melbourne by 52 points at Gabba.
-47,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Docklands,2008-04-27,North Melbourne 9.10 (64) drew with Sydney 8.16 (64),128,0,,North Melbourne and Sydney played out a draw at Docklands.
-48,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,M.C.G.,2008-04-27,Hawthorn 14.22 (106) def. Richmond 15.4 (94),200,12,,Hawthorn defeated Richmond by 12 points at M.C.G..
-49,Regular Season,West Coast,Carlton,West Coast,Carlton,Subiaco,2008-05-02,Carlton 17.9 (111) def. West Coast 10.14 (74),185,37,,Carlton defeated West Coast by 37 points at Subiaco.
-50,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,M.C.G.,2008-05-03,Hawthorn 24.10 (154) def. Collingwood 13.11 (89),243,65,,Hawthorn defeated Collingwood by 65 points at M.C.G..
-51,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2008-05-03,Geelong 15.15 (105) def. Brisbane Lions 11.12 (78),183,27,,Geelong defeated Brisbane Lions by 27 points at Kardinia Park.
-52,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Docklands,2008-05-03,St Kilda 17.8 (110) def. Richmond 16.11 (107),217,3,,St Kilda defeated Richmond by 3 points at Docklands.
-53,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2008-05-03,Adelaide 15.17 (107) def. North Melbourne 11.8 (74),181,33,,Adelaide defeated North Melbourne by 33 points at Football Park.
-54,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,2008-05-04,Western Bulldogs 18.4 (112) def. Sydney 14.10 (94),206,18,,Western Bulldogs defeated Sydney by 18 points at S.C.G..
-55,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,M.C.G.,2008-05-04,Melbourne 17.17 (119) def. Fremantle 15.23 (113),232,6,,Melbourne defeated Fremantle by 6 points at M.C.G..
-56,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2008-05-04,Port Adelaide 24.14 (158) def. Essendon 15.4 (94),252,64,,Port Adelaide defeated Essendon by 64 points at Docklands.
-57,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Docklands,2008-05-16,Collingwood 16.7 (103) def. St Kilda 14.10 (94),197,9,,Collingwood defeated St Kilda by 9 points at Docklands.
-58,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,2008-05-17,Geelong 14.15 (99) def. Richmond 10.9 (69),168,30,,Geelong defeated Richmond by 30 points at M.C.G..
-59,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,York Park,2008-05-17,Hawthorn 17.15 (117) def. Port Adelaide 15.12 (102),219,15,,Hawthorn defeated Port Adelaide by 15 points at York Park.
-60,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Docklands,2008-05-17,Brisbane Lions 18.17 (125) def. Carlton 12.20 (92),217,33,,Brisbane Lions defeated Carlton by 33 points at Docklands.
-61,Regular Season,North Melbourne,West Coast,North Melbourne,West Coast,Carrara,2008-05-17,North Melbourne 13.11 (89) def. West Coast 12.11 (83),172,6,,North Melbourne defeated West Coast by 6 points at Carrara.
-62,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2008-05-18,Adelaide 22.18 (150) def. Melbourne 11.8 (74),224,76,,Adelaide defeated Melbourne by 76 points at Football Park.
-63,Regular Season,Sydney,Essendon,Sydney,Essendon,Stadium Australia,2008-05-18,Sydney 21.17 (143) def. Essendon 7.10 (52),195,91,,Sydney defeated Essendon by 91 points at Stadium Australia.
-64,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Subiaco,2008-05-18,Western Bulldogs 17.12 (114) def. Fremantle 17.9 (111),225,3,,Western Bulldogs defeated Fremantle by 3 points at Subiaco.
-65,Regular Season,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,2008-05-23,Collingwood 20.14 (134) def. Geelong 7.6 (48),182,86,,Collingwood defeated Geelong by 86 points at M.C.G..
-66,Regular Season,Carlton,Fremantle,Carlton,Fremantle,Docklands,2008-05-24,Carlton 14.13 (97) def. Fremantle 14.4 (88),185,9,,Carlton defeated Fremantle by 9 points at Docklands.
-67,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,2008-05-24,Sydney 16.9 (105) def. Port Adelaide 14.10 (94),199,11,,Sydney defeated Port Adelaide by 11 points at Football Park.
-68,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Subiaco,2008-05-24,West Coast 14.13 (97) def. Adelaide 5.17 (47),144,50,,West Coast defeated Adelaide by 50 points at Subiaco.
-69,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2008-05-24,Richmond 16.14 (110) def. Essendon 10.12 (72),182,38,,Richmond defeated Essendon by 38 points at M.C.G..
-70,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2008-05-25,Brisbane Lions 21.15 (141) def. St Kilda 14.11 (95),236,46,,Brisbane Lions defeated St Kilda by 46 points at Gabba.
-71,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2008-05-25,Hawthorn 14.13 (97) def. Melbourne 12.6 (78),175,19,,Hawthorn defeated Melbourne by 19 points at M.C.G..
-72,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2008-05-25,North Melbourne 16.17 (113) def. Western Bulldogs 16.14 (110),223,3,,North Melbourne defeated Western Bulldogs by 3 points at Docklands.
-73,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,2008-05-30,Adelaide 9.20 (74) def. Essendon 10.9 (69),143,5,,Adelaide defeated Essendon by 5 points at Football Park.
-74,Regular Season,Collingwood,West Coast,Collingwood,West Coast,M.C.G.,2008-05-31,Collingwood 27.11 (173) def. West Coast 10.13 (73),246,100,,Collingwood defeated West Coast by 100 points at M.C.G..
-75,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,York Park,2008-05-31,Western Bulldogs 15.16 (106) def. Hawthorn 12.2 (74),180,32,,Western Bulldogs defeated Hawthorn by 32 points at York Park.
-76,Regular Season,Geelong,Carlton,Geelong,Carlton,Docklands,2008-05-31,Geelong 19.19 (133) def. Carlton 12.5 (77),210,56,,Geelong defeated Carlton by 56 points at Docklands.
-77,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2008-05-31,Brisbane Lions 18.21 (129) def. North Melbourne 15.8 (98),227,31,,Brisbane Lions defeated North Melbourne by 31 points at Gabba.
-78,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,2008-06-01,Sydney 21.13 (139) def. Richmond 8.9 (57),196,82,,Sydney defeated Richmond by 82 points at S.C.G..
-79,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Docklands,2008-06-01,St Kilda 19.15 (129) def. Melbourne 7.8 (50),179,79,,St Kilda defeated Melbourne by 79 points at Docklands.
-80,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Subiaco,2008-06-01,Port Adelaide 16.7 (103) def. Fremantle 10.15 (75),178,28,,Port Adelaide defeated Fremantle by 28 points at Subiaco.
-81,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Docklands,2008-06-06,Geelong 19.13 (127) def. North Melbourne 17.12 (114),241,13,,Geelong defeated North Melbourne by 13 points at Docklands.
-82,Regular Season,Richmond,Adelaide,Richmond,Adelaide,M.C.G.,2008-06-07,Adelaide 22.14 (146) def. Richmond 14.12 (96),242,50,,Adelaide defeated Richmond by 50 points at M.C.G..
-83,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,2008-06-07,Sydney 12.11 (83) def. West Coast 11.12 (78),161,5,,Sydney defeated West Coast by 5 points at Subiaco.
-84,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Docklands,2008-06-07,Hawthorn 19.16 (130) def. Essendon 12.7 (79),209,51,,Hawthorn defeated Essendon by 51 points at Docklands.
-85,Regular Season,Brisbane Lions,Fremantle,Brisbane Lions,Fremantle,Gabba,2008-06-08,Brisbane Lions 14.12 (96) def. Fremantle 10.14 (74),170,22,,Brisbane Lions defeated Fremantle by 22 points at Gabba.
-86,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Docklands,2008-06-08,Western Bulldogs 15.16 (106) def. St Kilda 11.13 (79),185,27,,Western Bulldogs defeated St Kilda by 27 points at Docklands.
-87,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2008-06-08,Carlton 10.15 (75) def. Port Adelaide 8.15 (63),138,12,,Carlton defeated Port Adelaide by 12 points at Football Park.
-88,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2008-06-09,Collingwood 17.14 (116) def. Melbourne 13.17 (95),211,21,,Collingwood defeated Melbourne by 21 points at M.C.G..
-89,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2008-06-13,Essendon 16.17 (113) def. West Coast 13.13 (91),204,22,,Essendon defeated West Coast by 22 points at Docklands.
-90,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,M.C.G.,2008-06-14,Western Bulldogs 19.17 (131) def. Brisbane Lions 10.8 (68),199,63,,Western Bulldogs defeated Brisbane Lions by 63 points at M.C.G..
-91,Regular Season,Fremantle,North Melbourne,Fremantle,North Melbourne,Subiaco,2008-06-14,Fremantle 18.12 (120) def. North Melbourne 9.13 (67),187,53,,Fremantle defeated North Melbourne by 53 points at Subiaco.
-92,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2008-06-14,Sydney 14.18 (102) def. St Kilda 9.13 (67),169,35,,Sydney defeated St Kilda by 35 points at S.C.G..
-93,Regular Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,2008-06-14,Hawthorn 11.10 (76) def. Adelaide 10.12 (72),148,4,,Hawthorn defeated Adelaide by 4 points at Football Park.
-94,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Kardinia Park,2008-06-15,Geelong 15.18 (108) def. Port Adelaide 7.7 (49),157,59,,Geelong defeated Port Adelaide by 59 points at Kardinia Park.
-95,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2008-06-15,Carlton 17.17 (119) def. Collingwood 12.17 (89),208,30,,Carlton defeated Collingwood by 30 points at M.C.G..
-96,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Docklands,2008-06-15,Richmond 16.20 (116) def. Melbourne 14.10 (94),210,22,,Richmond defeated Melbourne by 22 points at Docklands.
-97,Regular Season,St Kilda,Fremantle,St Kilda,Fremantle,Docklands,2008-06-20,St Kilda 10.5 (65) def. Fremantle 8.9 (57),122,8,,St Kilda defeated Fremantle by 8 points at Docklands.
-98,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,M.C.G.,2008-06-21,North Melbourne 15.13 (103) def. Hawthorn 10.16 (76),179,27,,North Melbourne defeated Hawthorn by 27 points at M.C.G..
-99,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2008-06-21,Richmond 20.7 (127) def. Port Adelaide 19.9 (123),250,4,,Richmond defeated Port Adelaide by 4 points at Football Park.
-100,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2008-06-21,Geelong 28.14 (182) def. West Coast 5.17 (47),229,135,,Geelong defeated West Coast by 135 points at Subiaco.
-101,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2008-06-21,Brisbane Lions 11.17 (83) def. Adelaide 10.10 (70),153,13,,Brisbane Lions defeated Adelaide by 13 points at Gabba.
-102,Regular Season,Melbourne,Sydney,Melbourne,Sydney,Manuka Oval,2008-06-22,Sydney 17.12 (114) def. Melbourne 11.8 (74),188,40,,Sydney defeated Melbourne by 40 points at Manuka Oval.
-103,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2008-06-22,Essendon 20.16 (136) def. Carlton 15.11 (101),237,35,,Essendon defeated Carlton by 35 points at M.C.G..
-104,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Docklands,2008-06-22,Western Bulldogs 15.9 (99) def. Collingwood 13.11 (89),188,10,,Western Bulldogs defeated Collingwood by 10 points at Docklands.
-105,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,M.C.G.,2008-06-27,Hawthorn 18.18 (126) def. West Coast 9.15 (69),195,57,,Hawthorn defeated West Coast by 57 points at M.C.G..
-106,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2008-06-28,Carlton 17.16 (118) def. Richmond 12.16 (88),206,30,,Carlton defeated Richmond by 30 points at M.C.G..
-107,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Carrara,2008-06-28,St Kilda 12.12 (84) def. North Melbourne 9.15 (69),153,15,,St Kilda defeated North Melbourne by 15 points at Carrara.
-108,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Marrara Oval,2008-06-28,Western Bulldogs 20.15 (135) def. Port Adelaide 11.15 (81),216,54,,Western Bulldogs defeated Port Adelaide by 54 points at Marrara Oval.
-109,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,M.C.G.,2008-06-29,Melbourne 14.9 (93) def. Brisbane Lions 13.14 (92),185,1,,Melbourne defeated Brisbane Lions by 1 points at M.C.G..
-110,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2008-06-29,Essendon 14.11 (95) def. Fremantle 13.13 (91),186,4,,Essendon defeated Fremantle by 4 points at Subiaco.
-111,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2008-07-04,Geelong 18.16 (124) def. Adelaide 8.8 (56),180,68,,Geelong defeated Adelaide by 68 points at Football Park.
-112,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Stadium Australia,2008-07-05,Collingwood 11.13 (79) def. Sydney 6.14 (50),129,29,,Collingwood defeated Sydney by 29 points at Stadium Australia.
-113,Regular Season,Carlton,St Kilda,Carlton,St Kilda,M.C.G.,2008-07-11,St Kilda 18.11 (119) def. Carlton 12.15 (87),206,32,,St Kilda defeated Carlton by 32 points at M.C.G..
-114,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,M.C.G.,2008-07-12,Collingwood 15.16 (106) def. Adelaide 11.8 (74),180,32,,Collingwood defeated Adelaide by 32 points at M.C.G..
-115,Regular Season,Geelong,Fremantle,Geelong,Fremantle,Kardinia Park,2008-07-12,Geelong 18.10 (118) def. Fremantle 6.8 (44),162,74,,Geelong defeated Fremantle by 74 points at Kardinia Park.
-116,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Docklands,2008-07-12,Essendon 24.11 (155) def. Brisbane Lions 18.10 (118),273,37,,Essendon defeated Brisbane Lions by 37 points at Docklands.
-117,Regular Season,Port Adelaide,North Melbourne,Port Adelaide,North Melbourne,Football Park,2008-07-12,North Melbourne 10.16 (76) def. Port Adelaide 10.14 (74),150,2,,North Melbourne defeated Port Adelaide by 2 points at Football Park.
-118,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,M.C.G.,2008-07-13,Hawthorn 15.16 (106) def. Sydney 10.15 (75),181,31,,Hawthorn defeated Sydney by 31 points at M.C.G..
-119,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2008-07-13,Western Bulldogs 14.11 (95) def. Melbourne 9.10 (64),159,31,,Western Bulldogs defeated Melbourne by 31 points at Docklands.
-120,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2008-07-13,Richmond 24.8 (152) def. West Coast 11.9 (75),227,77,,Richmond defeated West Coast by 77 points at Subiaco.
-121,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2008-07-18,North Melbourne 17.12 (114) def. Collingwood 14.12 (96),210,18,,North Melbourne defeated Collingwood by 18 points at Docklands.
-122,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2008-07-19,Richmond 16.12 (108) def. Essendon 15.14 (104),212,4,,Richmond defeated Essendon by 4 points at M.C.G..
-123,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,2008-07-19,Geelong 19.17 (131) def. Western Bulldogs 10.10 (70),201,61,,Geelong defeated Western Bulldogs by 61 points at Kardinia Park.
-124,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Docklands,2008-07-19,St Kilda 18.11 (119) def. Hawthorn 13.11 (89),208,30,,St Kilda defeated Hawthorn by 30 points at Docklands.
-125,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2008-07-19,Brisbane Lions 17.11 (113) def. West Coast 9.13 (67),180,46,,Brisbane Lions defeated West Coast by 46 points at Gabba.
-126,Regular Season,Carlton,Sydney,Carlton,Sydney,Docklands,2008-07-20,Sydney 18.13 (121) def. Carlton 18.11 (119),240,2,,Sydney defeated Carlton by 2 points at Docklands.
-127,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2008-07-20,Port Adelaide 13.14 (92) def. Adelaide 11.14 (80),172,12,,Port Adelaide defeated Adelaide by 12 points at Football Park.
-128,Regular Season,Fremantle,Melbourne,Fremantle,Melbourne,Subiaco,2008-07-20,Fremantle 16.18 (114) def. Melbourne 10.8 (68),182,46,,Fremantle defeated Melbourne by 46 points at Subiaco.
-129,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,M.C.G.,2008-07-25,Geelong 12.16 (88) def. Hawthorn 11.11 (77),165,11,,Geelong defeated Hawthorn by 11 points at M.C.G..
-130,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2008-07-26,Essendon 19.14 (128) def. Collingwood 11.14 (80),208,48,,Essendon defeated Collingwood by 48 points at M.C.G..
-131,Regular Season,West Coast,St Kilda,West Coast,St Kilda,Subiaco,2008-07-26,West Coast 15.13 (103) def. St Kilda 12.14 (86),189,17,,West Coast defeated St Kilda by 17 points at Subiaco.
-132,Regular Season,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,2008-07-26,Adelaide 11.11 (77) def. Sydney 6.17 (53),130,24,,Adelaide defeated Sydney by 24 points at S.C.G..
-133,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,Docklands,2008-07-26,Richmond 18.9 (117) def. Brisbane Lions 16.18 (114),231,3,,Richmond defeated Brisbane Lions by 3 points at Docklands.
-134,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,2008-07-27,Fremantle 20.9 (129) def. Port Adelaide 15.11 (101),230,28,,Fremantle defeated Port Adelaide by 28 points at Football Park.
-135,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,2008-07-27,North Melbourne 14.14 (98) def. Melbourne 10.10 (70),168,28,,North Melbourne defeated Melbourne by 28 points at M.C.G..
-136,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Docklands,2008-07-27,Carlton 18.18 (126) def. Western Bulldogs 15.8 (98),224,28,,Carlton defeated Western Bulldogs by 28 points at Docklands.
-137,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2008-08-01,Hawthorn 17.14 (116) def. Collingwood 8.14 (62),178,54,,Hawthorn defeated Collingwood by 54 points at M.C.G..
-138,Regular Season,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,2008-08-02,Essendon 19.10 (124) def. Melbourne 17.6 (108),232,16,,Essendon defeated Melbourne by 16 points at M.C.G..
-139,Regular Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,2008-08-02,Adelaide 13.16 (94) def. Carlton 12.14 (86),180,8,,Adelaide defeated Carlton by 8 points at Football Park.
-140,Regular Season,Geelong,Richmond,Geelong,Richmond,Docklands,2008-08-02,Geelong 20.14 (134) def. Richmond 10.11 (71),205,63,,Geelong defeated Richmond by 63 points at Docklands.
-141,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Carrara,2008-08-02,North Melbourne 13.14 (92) def. Brisbane Lions 11.18 (84),176,8,,North Melbourne defeated Brisbane Lions by 8 points at Carrara.
-142,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Manuka Oval,2008-08-03,Western Bulldogs 17.11 (113) def. Sydney 14.13 (97),210,16,,Western Bulldogs defeated Sydney by 16 points at Manuka Oval.
-143,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,Docklands,2008-08-03,St Kilda 14.17 (101) def. Port Adelaide 14.9 (93),194,8,,St Kilda defeated Port Adelaide by 8 points at Docklands.
-144,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2008-08-03,Fremantle 17.14 (116) def. West Coast 12.11 (83),199,33,,Fremantle defeated West Coast by 33 points at Subiaco.
-145,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2008-08-08,Geelong 24.13 (157) def. Melbourne 5.11 (41),198,116,,Geelong defeated Melbourne by 116 points at M.C.G..
-146,Regular Season,Carlton,Port Adelaide,Carlton,Port Adelaide,Docklands,2008-08-09,Carlton 18.24 (132) def. Port Adelaide 9.12 (66),198,66,,Carlton defeated Port Adelaide by 66 points at Docklands.
-147,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,York Park,2008-08-09,Hawthorn 16.14 (110) def. Brisbane Lions 5.11 (41),151,69,,Hawthorn defeated Brisbane Lions by 69 points at York Park.
-148,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,2008-08-09,Collingwood 14.13 (97) def. St Kilda 12.11 (83),180,14,,Collingwood defeated St Kilda by 14 points at M.C.G..
-149,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2008-08-09,Sydney 17.10 (112) def. Fremantle 15.18 (108),220,4,,Sydney defeated Fremantle by 4 points at S.C.G..
-150,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Docklands,2008-08-10,North Melbourne 21.10 (136) def. Western Bulldogs 18.8 (116),252,20,,North Melbourne defeated Western Bulldogs by 20 points at Docklands.
-151,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,2008-08-10,Adelaide 16.12 (108) def. Richmond 6.9 (45),153,63,,Adelaide defeated Richmond by 63 points at Football Park.
-152,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,2008-08-10,West Coast 17.11 (113) def. Essendon 16.7 (103),216,10,,West Coast defeated Essendon by 10 points at Subiaco.
-153,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2008-08-15,Collingwood 16.10 (106) def. Port Adelaide 10.15 (75),181,31,,Collingwood defeated Port Adelaide by 31 points at Football Park.
-154,Regular Season,Essendon,Adelaide,Essendon,Adelaide,Docklands,2008-08-16,Adelaide 19.15 (129) def. Essendon 10.13 (73),202,56,,Adelaide defeated Essendon by 56 points at Docklands.
-155,Regular Season,Melbourne,West Coast,Melbourne,West Coast,M.C.G.,2008-08-16,Melbourne 11.13 (79) def. West Coast 5.15 (45),124,34,,Melbourne defeated West Coast by 34 points at M.C.G..
-156,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2008-08-16,Brisbane Lions 13.12 (90) def. Western Bulldogs 10.19 (79),169,11,,Brisbane Lions defeated Western Bulldogs by 11 points at Gabba.
-157,Regular Season,Sydney,Geelong,Sydney,Geelong,Stadium Australia,2008-08-16,Geelong 20.13 (133) def. Sydney 14.10 (94),227,39,,Geelong defeated Sydney by 39 points at Stadium Australia.
-158,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2008-08-17,Richmond 16.9 (105) def. Hawthorn 10.16 (76),181,29,,Richmond defeated Hawthorn by 29 points at M.C.G..
-159,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Docklands,2008-08-17,North Melbourne 22.9 (141) def. Carlton 14.6 (90),231,51,,North Melbourne defeated Carlton by 51 points at Docklands.
-160,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2008-08-17,St Kilda 17.10 (112) def. Fremantle 9.15 (69),181,43,,St Kilda defeated Fremantle by 43 points at Subiaco.
-161,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2008-08-22,Western Bulldogs 23.13 (151) def. Essendon 15.15 (105),256,46,,Western Bulldogs defeated Essendon by 46 points at Docklands.
-162,Regular Season,Richmond,Fremantle,Richmond,Fremantle,M.C.G.,2008-08-23,Richmond 15.15 (105) def. Fremantle 15.8 (98),203,7,,Richmond defeated Fremantle by 7 points at M.C.G..
-163,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2008-08-23,Port Adelaide 18.21 (129) def. Melbourne 7.9 (51),180,78,,Port Adelaide defeated Melbourne by 78 points at Football Park.
-164,Regular Season,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2008-08-23,Carlton 18.7 (115) def. Brisbane Lions 16.13 (109),224,6,,Carlton defeated Brisbane Lions by 6 points at Gabba.
-165,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Docklands,2008-08-23,Collingwood 18.10 (118) def. Sydney 10.13 (73),191,45,,Collingwood defeated Sydney by 45 points at Docklands.
-166,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,2008-08-24,Geelong 17.13 (115) def. North Melbourne 13.4 (82),197,33,,Geelong defeated North Melbourne by 33 points at Kardinia Park.
-167,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2008-08-24,St Kilda 13.17 (95) def. Adelaide 6.11 (47),142,48,,St Kilda defeated Adelaide by 48 points at Docklands.
-168,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco,2008-08-24,Hawthorn 19.19 (133) def. West Coast 9.8 (62),195,71,,Hawthorn defeated West Coast by 71 points at Subiaco.
-169,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Subiaco,2008-08-29,Fremantle 12.8 (80) def. Collingwood 8.8 (56),136,24,,Fremantle defeated Collingwood by 24 points at Subiaco.
-170,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,M.C.G.,2008-08-30,Port Adelaide 23.10 (148) def. North Melbourne 10.12 (72),220,76,,Port Adelaide defeated North Melbourne by 76 points at M.C.G..
-171,Regular Season,Geelong,West Coast,Geelong,West Coast,Kardinia Park,2008-08-30,Geelong 24.20 (164) def. West Coast 10.5 (65),229,99,,Geelong defeated West Coast by 99 points at Kardinia Park.
-172,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2008-08-30,Adelaide 10.16 (76) def. Western Bulldogs 9.13 (67),143,9,,Adelaide defeated Western Bulldogs by 9 points at Football Park.
-173,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Docklands,2008-08-30,Hawthorn 24.15 (159) def. Carlton 12.9 (81),240,78,,Hawthorn defeated Carlton by 78 points at Docklands.
-174,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2008-08-30,Sydney 17.12 (114) def. Brisbane Lions 6.17 (53),167,61,,Sydney defeated Brisbane Lions by 61 points at S.C.G..
-175,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2008-08-31,Richmond 18.13 (121) def. Melbourne 6.5 (41),162,80,,Richmond defeated Melbourne by 80 points at M.C.G..
-176,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2008-08-31,St Kilda 21.21 (147) def. Essendon 5.9 (39),186,108,,St Kilda defeated Essendon by 108 points at Docklands.
-177,Finals,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2008-09-05,Hawthorn 18.19 (127) def. Western Bulldogs 11.10 (76),203,51,,Hawthorn defeated Western Bulldogs by 51 points at M.C.G..
-178,Finals,Adelaide,Collingwood,Adelaide,Collingwood,Football Park,2008-09-06,Collingwood 19.11 (125) def. Adelaide 14.10 (94),219,31,,Collingwood defeated Adelaide by 31 points at Football Park.
-179,Finals,Sydney,North Melbourne,Sydney,North Melbourne,Stadium Australia,2008-09-06,Sydney 17.8 (110) def. North Melbourne 11.9 (75),185,35,,Sydney defeated North Melbourne by 35 points at Stadium Australia.
-180,Finals,Geelong,St Kilda,Geelong,St Kilda,M.C.G.,2008-09-07,Geelong 17.17 (119) def. St Kilda 8.13 (61),180,58,,Geelong defeated St Kilda by 58 points at M.C.G..
-181,Finals,Western Bulldogs,Sydney,Western Bulldogs,Sydney,M.C.G.,2008-09-12,Western Bulldogs 16.10 (106) def. Sydney 9.15 (69),175,37,,Western Bulldogs defeated Sydney by 37 points at M.C.G..
-182,Finals,St Kilda,Collingwood,St Kilda,Collingwood,M.C.G.,2008-09-13,St Kilda 17.4 (106) def. Collingwood 9.18 (72),178,34,,St Kilda defeated Collingwood by 34 points at M.C.G..
-183,Finals,Geelong,Western Bulldogs,Geelong,Western Bulldogs,M.C.G.,2008-09-19,Geelong 12.11 (83) def. Western Bulldogs 7.12 (54),137,29,,Geelong defeated Western Bulldogs by 29 points at M.C.G..
-184,Finals,Hawthorn,St Kilda,Hawthorn,St Kilda,M.C.G.,2008-09-20,Hawthorn 18.10 (118) def. St Kilda 9.10 (64),182,54,,Hawthorn defeated St Kilda by 54 points at M.C.G..
-185,Grand Final,Geelong,Hawthorn,Geelong,Hawthorn,M.C.G.,2008-09-27,Hawthorn 18.7 (115) def. Geelong 11.23 (89),204,26,,Hawthorn defeated Geelong by 26 points at M.C.G..
+1,pre-Season,Collingwood,Adelaide,Collingwood,Adelaide,"Ghantoot Racing and Polo Club, Dubai",2008-02-09,Collingwood 0.7.13 (55) def. by Adelaide 4.15.10 (136),191,81,,"Adelaide defeated Collingwood by 81 points at Ghantoot Racing and Polo Club, Dubai."
+2,pre-Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2008-02-15,St Kilda 1.15.12 (111) def. Richmond 2.7.11 (71),182,40,,St Kilda defeated Richmond by 40 points at Docklands.
+3,pre-Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,TIO Stadium,2008-02-15,Western Bulldogs 1.6.9 (54) def. North Melbourne 1.4.10 (43),97,11,,Western Bulldogs defeated Melbourne by 11 points at TIO Stadium.
+4,pre-Season,Geelong,Melbourne,Geelong,Melbourne,Skilled Stadium,2008-02-16,Geelong 2.22.10 (160) def. Melbourne 1.12.8 (89),249,71,,Geelong defeated Melbourne by 71 points at Skilled Stadium.
+5,pre-Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,2008-02-16,Port Adelaide 0.12.13 (85) def. by Carlton 1.13.13 (100),185,15,,Carlton defeated Adelaide by 15 points at Football Park.
+6,pre-Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Gold Coast Stadium,2008-02-16,Essendon 2.11.16 (100) def. Brisbane Lions 2.8.7 (73),173,27,,Essendon defeated Brisbane Lions by 27 points at Gold Coast Stadium.
+7,pre-Season,Hawthorn,Sydney,Hawthorn,Sydney,Aurora Stadium,2008-02-17,Hawthorn 3.2.13 (52) def. Sydney 0.7.8 (50),102,2,,Hawthorn defeated Sydney by 2 points at Aurora Stadium.
+8,pre-Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco Oval,2008-02-17,Fremantle 2.12.14 (104) def. West Coast 1.7.9 (60),164,44,,Fremantle defeated West Coast by 44 points at Subiaco Oval.
+9,pre-Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2008-02-22,Western Bulldogs 0.8.11 (59) def. by Essendon 3.12.14 (113),172,54,,Essendon defeated Western Bulldogs by 54 points at Docklands.
+10,pre-Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,MC Labour Park,2008-02-22,North Melbourne 13.7 (85) def. Brisbane Lions 7.11 (53),138,32,,Melbourne defeated Brisbane Lions by 32 points at MC Labour Park.
+11,pre-Season,Richmond,Melbourne,Richmond,Melbourne,Cazaly's Stadium,2008-02-22,Richmond 14.10 (94) def. Melbourne 8.11 (59),153,35,,Richmond defeated Melbourne by 35 points at Cazaly's Stadium.
+12,pre-Season,St Kilda,Geelong,St Kilda,Geelong,Manuka Oval,2008-02-23,St Kilda 3.9.10 (91) def. Geelong 3.8.11 (86),177,5,,St Kilda defeated Geelong by 5 points at Manuka Oval.
+13,pre-Season,Hawthorn,Carlton,Hawthorn,Carlton,Docklands,2008-02-23,Hawthorn 4.9.13 (103) def. Carlton 4.3.15 (69),172,34,,Hawthorn defeated Carlton by 34 points at Docklands.
+14,pre-Season,West Coast,Collingwood,West Coast,Collingwood,"Collingwood Park, Albany)",2008-02-23,West Coast 14.15 (99) def. Collingwood 9.12 (66),165,33,,"West Coast defeated Collingwood by 33 points at Collingwood Park, Albany)."
+15,pre-Season,Sydney,Adelaide,Sydney,Adelaide,ANZ Stadium,2008-02-23,Sydney 15.17 (107) def. Port Adelaide 5.8 (38),145,69,,Sydney defeated Adelaide by 69 points at ANZ Stadium.
+16,pre-Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2008-02-24,Adelaide 1.14.11 (104) def. Fremantle 1.12.6 (87),191,17,,Adelaide defeated Fremantle by 17 points at Football Park.
+17,pre-Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2008-02-29,Essendon 1.12.10 (91) def. by St Kilda 1.12.13 (94),185,3,,St Kilda defeated Essendon by 3 points at Docklands.
+18,pre-Season,Sydney,Richmond,Sydney,Richmond,"Narrandera Sportsground, Narrandera",2008-02-29,Sydney 13.10 (88) def. by Richmond 17.11 (113),201,25,,"Richmond defeated Sydney by 25 points at Narrandera Sportsground, Narrandera."
+19,pre-Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,"Queen Elizabeth Oval, Bendigo",2008-02-29,Melbourne 9.9 (63) def. by Western Bulldogs 14.9 (93),156,30,,"Western Bulldogs defeated Melbourne by 30 points at Queen Elizabeth Oval, Bendigo."
+20,pre-Season,West Coast,Carlton,West Coast,Carlton,Traeger Park,2008-02-29,West Coast 15.13 (103) def. Carlton 9.8 (62),165,41,,West Coast defeated Carlton by 41 points at Traeger Park.
+21,pre-Season,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gold Coast Stadium,2008-02-29,Brisbane Lions 7.10 (52) def. by Geelong 13.14 (92),144,40,,Geelong defeated Brisbane Lions by 40 points at Gold Coast Stadium.
+22,pre-Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,2008-03-01,Adelaide 2.13.11 (107) def. Hawthorn 1.11.9 (84),191,23,,Adelaide defeated Hawthorn by 23 points at Football Park.
+23,pre-Season,Collingwood,Adelaide,Collingwood,Adelaide,MC Labour Park,2008-03-01,Collingwood 6.9 (45) def. by Port Adelaide 15.11 (101),146,56,,Adelaide defeated Collingwood by 56 points at MC Labour Park.
+24,pre-Season,Fremantle,Melbourne,Fremantle,Melbourne,Subiaco Oval,2008-03-01,Fremantle 6.9 (45) def. by North Melbourne 12.10 (82),127,37,,Melbourne defeated Fremantle by 37 points at Subiaco Oval.
+25,pre-Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,MC Labour Park,2008-03-07,Carlton 13.15 (93) def. Western Bulldogs 12.12 (84),177,9,,Carlton defeated Western Bulldogs by 9 points at MC Labour Park.
+26,pre-Season,Geelong,Richmond,Geelong,Richmond,Skilled Stadium,2008-03-07,Geelong 23.11 (155) def. Richmond 12.5 (77),232,78,,Geelong defeated Richmond by 78 points at Skilled Stadium.
+27,pre-Season,Collingwood,Hawthorn,Collingwood,Hawthorn,"Deakin Reserve, Shepparton",2008-03-07,Collingwood 16.12 (108) def. Hawthorn 13.12 (90),198,18,,"Collingwood defeated Hawthorn by 18 points at Deakin Reserve, Shepparton."
+28,pre-Season,West Coast,Essendon,West Coast,Essendon,Subiaco Oval,2008-03-07,West Coast 15.10 (100) def. Essendon 14.10 (94),194,6,,West Coast defeated Essendon by 6 points at Subiaco Oval.
+29,pre-Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,Manuka Oval,2008-03-08,Sydney 13.9 (87) def. by Brisbane Lions 14.13 (97),184,10,,Brisbane Lions defeated Sydney by 10 points at Manuka Oval.
+30,pre-Season,Melbourne,Melbourne,Melbourne,Melbourne,Casey Fields,2008-03-08,Melbourne 14.10 (94) def. by North Melbourne 22.13 (145),239,51,,Melbourne defeated Melbourne by 51 points at Casey Fields.
+31,pre-Season,Adelaide,Fremantle,Adelaide,Fremantle,Hickinbotham Oval,2008-03-08,Port Adelaide 16.15 (111) def. Fremantle 8.7 (55),166,56,,Adelaide defeated Fremantle by 56 points at Hickinbotham Oval.
+32,Regular Season,Carlton,Richmond,Carlton,Richmond,M.C.G.,2008-03-20,Richmond 17.7 (109) def. Carlton 11.13 (79),188,30,,Richmond defeated Carlton by 30 points at M.C.G..
+33,Regular Season,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,2008-03-20,Geelong 15.15 (105) def. Port Adelaide 14.12 (96),201,9,,Geelong defeated Port Adelaide by 9 points at Football Park.
+34,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,M.C.G.,2008-03-22,Collingwood 16.15 (111) def. Fremantle 13.7 (85),196,26,,Collingwood defeated Fremantle by 26 points at M.C.G..
+35,Regular Season,West Coast,Brisbane Lions,West Coast,Brisbane Lions,Subiaco,2008-03-22,West Coast 14.8 (92) def. Brisbane Lions 11.10 (76),168,16,,West Coast defeated Brisbane Lions by 16 points at Subiaco.
+36,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Docklands,2008-03-22,St Kilda 6.15 (51) def. Sydney 6.13 (49),100,2,,St Kilda defeated Sydney by 2 points at Docklands.
+37,Regular Season,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,Docklands,2008-03-23,Western Bulldogs 19.12 (126) def. Adelaide 18.15 (123),249,3,,Western Bulldogs defeated Adelaide by 3 points at Docklands.
+38,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2008-03-23,Hawthorn 23.16 (154) def. Melbourne 6.14 (50),204,104,,Hawthorn defeated Melbourne by 104 points at M.C.G..
+39,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Docklands,2008-03-24,Essendon 19.8 (122) def. North Melbourne 9.13 (67),189,55,,Essendon defeated North Melbourne by 55 points at Docklands.
+40,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2008-03-28,Brisbane Lions 13.18 (96) def. Collingwood 13.16 (94),190,2,,Brisbane Lions defeated Collingwood by 2 points at Gabba.
+41,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,2008-03-29,Western Bulldogs 24.17 (161) def. Melbourne 9.12 (66),227,95,,Western Bulldogs defeated Melbourne by 95 points at M.C.G..
+42,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2008-03-29,Adelaide 21.7 (133) def. West Coast 8.9 (57),190,76,,Adelaide defeated West Coast by 76 points at Football Park.
+43,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Subiaco,2008-03-29,Hawthorn 16.16 (112) def. Fremantle 14.13 (97),209,15,,Hawthorn defeated Fremantle by 15 points at Subiaco.
+44,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Docklands,2008-03-29,St Kilda 19.11 (125) def. Carlton 12.13 (85),210,40,,St Kilda defeated Carlton by 40 points at Docklands.
+45,Regular Season,Sydney,Port Adelaide,Sydney,Port Adelaide,S.C.G.,2008-03-30,Sydney 22.14 (146) def. Port Adelaide 11.12 (78),224,68,,Sydney defeated Port Adelaide by 68 points at S.C.G..
+46,Regular Season,Geelong,Essendon,Geelong,Essendon,Docklands,2008-03-30,Geelong 22.18 (150) def. Essendon 6.15 (51),201,99,,Geelong defeated Essendon by 99 points at Docklands.
+47,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,2008-03-30,North Melbourne 20.7 (127) def. Richmond 13.8 (86),213,41,,North Melbourne defeated Richmond by 41 points at M.C.G..
+48,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Docklands,2008-04-04,Western Bulldogs 19.11 (125) def. St Kilda 13.9 (87),212,38,,Western Bulldogs defeated St Kilda by 38 points at Docklands.
+49,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Docklands,2008-04-05,Hawthorn 15.12 (102) def. North Melbourne 13.8 (86),188,16,,Hawthorn defeated North Melbourne by 16 points at Docklands.
+50,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2008-04-05,Fremantle 12.15 (87) def. West Coast 10.13 (73),160,14,,Fremantle defeated West Coast by 14 points at Subiaco.
+51,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2008-04-05,Sydney 13.10 (88) def. Brisbane Lions 10.11 (71),159,17,,Sydney defeated Brisbane Lions by 17 points at Gabba.
+52,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2008-04-05,Essendon 23.12 (150) def. Carlton 21.8 (134),284,16,,Essendon defeated Carlton by 16 points at M.C.G..
+53,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,2008-04-06,Geelong 16.16 (112) def. Melbourne 12.10 (82),194,30,,Geelong defeated Melbourne by 30 points at Kardinia Park.
+54,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2008-04-06,Collingwood 18.14 (122) def. Richmond 11.12 (78),200,44,,Collingwood defeated Richmond by 44 points at M.C.G..
+55,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2008-04-06,Adelaide 12.13 (85) def. Port Adelaide 11.13 (79),164,6,,Adelaide defeated Port Adelaide by 6 points at Football Park.
+56,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2008-04-11,Western Bulldogs 19.14 (128) def. Essendon 14.14 (98),226,30,,Western Bulldogs defeated Essendon by 30 points at Docklands.
+57,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2008-04-12,Geelong 21.10 (136) def. St Kilda 13.16 (94),230,42,,Geelong defeated St Kilda by 42 points at Docklands.
+58,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,M.C.G.,2008-04-12,North Melbourne 18.19 (127) def. Melbourne 11.13 (79),206,48,,North Melbourne defeated Melbourne by 48 points at M.C.G..
+59,Regular Season,Sydney,West Coast,Sydney,West Coast,Stadium Australia,2008-04-12,Sydney 16.11 (107) def. West Coast 5.15 (45),152,62,,Sydney defeated West Coast by 62 points at Stadium Australia.
+60,Regular Season,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,Football Park,2008-04-12,Brisbane Lions 18.16 (124) def. Port Adelaide 16.8 (104),228,20,,Brisbane Lions defeated Port Adelaide by 20 points at Football Park.
+61,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,York Park,2008-04-13,Hawthorn 17.12 (114) def. Adelaide 10.10 (70),184,44,,Hawthorn defeated Adelaide by 44 points at York Park.
+62,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2008-04-13,Carlton 17.9 (111) def. Collingwood 13.10 (88),199,23,,Carlton defeated Collingwood by 23 points at M.C.G..
+63,Regular Season,Fremantle,Richmond,Fremantle,Richmond,Subiaco,2008-04-13,Richmond 20.17 (137) def. Fremantle 10.13 (73),210,64,,Richmond defeated Fremantle by 64 points at Subiaco.
+64,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2008-04-18,St Kilda 18.15 (123) def. Essendon 14.3 (87),210,36,,St Kilda defeated Essendon by 36 points at Docklands.
+65,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,2008-04-19,Geelong 16.18 (114) def. Sydney 10.12 (72),186,42,,Geelong defeated Sydney by 42 points at Kardinia Park.
+66,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2008-04-19,Adelaide 12.16 (88) def. Fremantle 10.11 (71),159,17,,Adelaide defeated Fremantle by 17 points at Football Park.
+67,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,M.C.G.,2008-04-19,North Melbourne 16.16 (112) def. Collingwood 15.15 (105),217,7,,North Melbourne defeated Collingwood by 7 points at M.C.G..
+68,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,2008-04-19,Hawthorn 19.16 (130) def. Brisbane Lions 17.16 (118),248,12,,Hawthorn defeated Brisbane Lions by 12 points at Gabba.
+69,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,2008-04-20,Carlton 15.11 (101) def. Melbourne 9.14 (68),169,33,,Carlton defeated Melbourne by 33 points at M.C.G..
+70,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2008-04-20,Western Bulldogs 19.16 (130) drew with Richmond 20.10 (130),260,0,,Western Bulldogs and Richmond played out a draw at Docklands.
+71,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2008-04-20,Port Adelaide 19.14 (128) def. West Coast 16.8 (104),232,24,,Port Adelaide defeated West Coast by 24 points at Subiaco.
+72,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2008-04-25,Collingwood 23.16 (154) def. Essendon 12.9 (81),235,73,,Collingwood defeated Essendon by 73 points at M.C.G..
+73,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2008-04-25,Geelong 13.11 (89) def. Fremantle 13.10 (88),177,1,,Geelong defeated Fremantle by 1 points at Subiaco.
+74,Regular Season,Carlton,Adelaide,Carlton,Adelaide,M.C.G.,2008-04-26,Adelaide 16.15 (111) def. Carlton 11.15 (81),192,30,,Adelaide defeated Carlton by 30 points at M.C.G..
+75,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Docklands,2008-04-26,Western Bulldogs 20.14 (134) def. West Coast 11.8 (74),208,60,,Western Bulldogs defeated West Coast by 60 points at Docklands.
+76,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,2008-04-26,Port Adelaide 12.10 (82) def. St Kilda 9.7 (61),143,21,,Port Adelaide defeated St Kilda by 21 points at Football Park.
+77,Regular Season,Brisbane Lions,Melbourne,Brisbane Lions,Melbourne,Gabba,2008-04-27,Brisbane Lions 19.23 (137) def. Melbourne 13.7 (85),222,52,,Brisbane Lions defeated Melbourne by 52 points at Gabba.
+78,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Docklands,2008-04-27,North Melbourne 9.10 (64) drew with Sydney 8.16 (64),128,0,,North Melbourne and Sydney played out a draw at Docklands.
+79,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,M.C.G.,2008-04-27,Hawthorn 14.22 (106) def. Richmond 15.4 (94),200,12,,Hawthorn defeated Richmond by 12 points at M.C.G..
+80,Regular Season,West Coast,Carlton,West Coast,Carlton,Subiaco,2008-05-02,Carlton 17.9 (111) def. West Coast 10.14 (74),185,37,,Carlton defeated West Coast by 37 points at Subiaco.
+81,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,M.C.G.,2008-05-03,Hawthorn 24.10 (154) def. Collingwood 13.11 (89),243,65,,Hawthorn defeated Collingwood by 65 points at M.C.G..
+82,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2008-05-03,Geelong 15.15 (105) def. Brisbane Lions 11.12 (78),183,27,,Geelong defeated Brisbane Lions by 27 points at Kardinia Park.
+83,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Docklands,2008-05-03,St Kilda 17.8 (110) def. Richmond 16.11 (107),217,3,,St Kilda defeated Richmond by 3 points at Docklands.
+84,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2008-05-03,Adelaide 15.17 (107) def. North Melbourne 11.8 (74),181,33,,Adelaide defeated North Melbourne by 33 points at Football Park.
+85,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,2008-05-04,Western Bulldogs 18.4 (112) def. Sydney 14.10 (94),206,18,,Western Bulldogs defeated Sydney by 18 points at S.C.G..
+86,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,M.C.G.,2008-05-04,Melbourne 17.17 (119) def. Fremantle 15.23 (113),232,6,,Melbourne defeated Fremantle by 6 points at M.C.G..
+87,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2008-05-04,Port Adelaide 24.14 (158) def. Essendon 15.4 (94),252,64,,Port Adelaide defeated Essendon by 64 points at Docklands.
+88,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Docklands,2008-05-16,Collingwood 16.7 (103) def. St Kilda 14.10 (94),197,9,,Collingwood defeated St Kilda by 9 points at Docklands.
+89,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,2008-05-17,Geelong 14.15 (99) def. Richmond 10.9 (69),168,30,,Geelong defeated Richmond by 30 points at M.C.G..
+90,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,York Park,2008-05-17,Hawthorn 17.15 (117) def. Port Adelaide 15.12 (102),219,15,,Hawthorn defeated Port Adelaide by 15 points at York Park.
+91,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Docklands,2008-05-17,Brisbane Lions 18.17 (125) def. Carlton 12.20 (92),217,33,,Brisbane Lions defeated Carlton by 33 points at Docklands.
+92,Regular Season,North Melbourne,West Coast,North Melbourne,West Coast,Carrara,2008-05-17,North Melbourne 13.11 (89) def. West Coast 12.11 (83),172,6,,North Melbourne defeated West Coast by 6 points at Carrara.
+93,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2008-05-18,Adelaide 22.18 (150) def. Melbourne 11.8 (74),224,76,,Adelaide defeated Melbourne by 76 points at Football Park.
+94,Regular Season,Sydney,Essendon,Sydney,Essendon,Stadium Australia,2008-05-18,Sydney 21.17 (143) def. Essendon 7.10 (52),195,91,,Sydney defeated Essendon by 91 points at Stadium Australia.
+95,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Subiaco,2008-05-18,Western Bulldogs 17.12 (114) def. Fremantle 17.9 (111),225,3,,Western Bulldogs defeated Fremantle by 3 points at Subiaco.
+96,Regular Season,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,2008-05-23,Collingwood 20.14 (134) def. Geelong 7.6 (48),182,86,,Collingwood defeated Geelong by 86 points at M.C.G..
+97,Regular Season,Carlton,Fremantle,Carlton,Fremantle,Docklands,2008-05-24,Carlton 14.13 (97) def. Fremantle 14.4 (88),185,9,,Carlton defeated Fremantle by 9 points at Docklands.
+98,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,2008-05-24,Sydney 16.9 (105) def. Port Adelaide 14.10 (94),199,11,,Sydney defeated Port Adelaide by 11 points at Football Park.
+99,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Subiaco,2008-05-24,West Coast 14.13 (97) def. Adelaide 5.17 (47),144,50,,West Coast defeated Adelaide by 50 points at Subiaco.
+100,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2008-05-24,Richmond 16.14 (110) def. Essendon 10.12 (72),182,38,,Richmond defeated Essendon by 38 points at M.C.G..
+101,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2008-05-25,Brisbane Lions 21.15 (141) def. St Kilda 14.11 (95),236,46,,Brisbane Lions defeated St Kilda by 46 points at Gabba.
+102,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2008-05-25,Hawthorn 14.13 (97) def. Melbourne 12.6 (78),175,19,,Hawthorn defeated Melbourne by 19 points at M.C.G..
+103,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2008-05-25,North Melbourne 16.17 (113) def. Western Bulldogs 16.14 (110),223,3,,North Melbourne defeated Western Bulldogs by 3 points at Docklands.
+104,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,2008-05-30,Adelaide 9.20 (74) def. Essendon 10.9 (69),143,5,,Adelaide defeated Essendon by 5 points at Football Park.
+105,Regular Season,Collingwood,West Coast,Collingwood,West Coast,M.C.G.,2008-05-31,Collingwood 27.11 (173) def. West Coast 10.13 (73),246,100,,Collingwood defeated West Coast by 100 points at M.C.G..
+106,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,York Park,2008-05-31,Western Bulldogs 15.16 (106) def. Hawthorn 12.2 (74),180,32,,Western Bulldogs defeated Hawthorn by 32 points at York Park.
+107,Regular Season,Geelong,Carlton,Geelong,Carlton,Docklands,2008-05-31,Geelong 19.19 (133) def. Carlton 12.5 (77),210,56,,Geelong defeated Carlton by 56 points at Docklands.
+108,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2008-05-31,Brisbane Lions 18.21 (129) def. North Melbourne 15.8 (98),227,31,,Brisbane Lions defeated North Melbourne by 31 points at Gabba.
+109,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,2008-06-01,Sydney 21.13 (139) def. Richmond 8.9 (57),196,82,,Sydney defeated Richmond by 82 points at S.C.G..
+110,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Docklands,2008-06-01,St Kilda 19.15 (129) def. Melbourne 7.8 (50),179,79,,St Kilda defeated Melbourne by 79 points at Docklands.
+111,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Subiaco,2008-06-01,Port Adelaide 16.7 (103) def. Fremantle 10.15 (75),178,28,,Port Adelaide defeated Fremantle by 28 points at Subiaco.
+112,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Docklands,2008-06-06,Geelong 19.13 (127) def. North Melbourne 17.12 (114),241,13,,Geelong defeated North Melbourne by 13 points at Docklands.
+113,Regular Season,Richmond,Adelaide,Richmond,Adelaide,M.C.G.,2008-06-07,Adelaide 22.14 (146) def. Richmond 14.12 (96),242,50,,Adelaide defeated Richmond by 50 points at M.C.G..
+114,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,2008-06-07,Sydney 12.11 (83) def. West Coast 11.12 (78),161,5,,Sydney defeated West Coast by 5 points at Subiaco.
+115,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Docklands,2008-06-07,Hawthorn 19.16 (130) def. Essendon 12.7 (79),209,51,,Hawthorn defeated Essendon by 51 points at Docklands.
+116,Regular Season,Brisbane Lions,Fremantle,Brisbane Lions,Fremantle,Gabba,2008-06-08,Brisbane Lions 14.12 (96) def. Fremantle 10.14 (74),170,22,,Brisbane Lions defeated Fremantle by 22 points at Gabba.
+117,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Docklands,2008-06-08,Western Bulldogs 15.16 (106) def. St Kilda 11.13 (79),185,27,,Western Bulldogs defeated St Kilda by 27 points at Docklands.
+118,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2008-06-08,Carlton 10.15 (75) def. Port Adelaide 8.15 (63),138,12,,Carlton defeated Port Adelaide by 12 points at Football Park.
+119,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2008-06-09,Collingwood 17.14 (116) def. Melbourne 13.17 (95),211,21,,Collingwood defeated Melbourne by 21 points at M.C.G..
+120,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2008-06-13,Essendon 16.17 (113) def. West Coast 13.13 (91),204,22,,Essendon defeated West Coast by 22 points at Docklands.
+121,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,M.C.G.,2008-06-14,Western Bulldogs 19.17 (131) def. Brisbane Lions 10.8 (68),199,63,,Western Bulldogs defeated Brisbane Lions by 63 points at M.C.G..
+122,Regular Season,Fremantle,North Melbourne,Fremantle,North Melbourne,Subiaco,2008-06-14,Fremantle 18.12 (120) def. North Melbourne 9.13 (67),187,53,,Fremantle defeated North Melbourne by 53 points at Subiaco.
+123,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2008-06-14,Sydney 14.18 (102) def. St Kilda 9.13 (67),169,35,,Sydney defeated St Kilda by 35 points at S.C.G..
+124,Regular Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,2008-06-14,Hawthorn 11.10 (76) def. Adelaide 10.12 (72),148,4,,Hawthorn defeated Adelaide by 4 points at Football Park.
+125,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Kardinia Park,2008-06-15,Geelong 15.18 (108) def. Port Adelaide 7.7 (49),157,59,,Geelong defeated Port Adelaide by 59 points at Kardinia Park.
+126,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2008-06-15,Carlton 17.17 (119) def. Collingwood 12.17 (89),208,30,,Carlton defeated Collingwood by 30 points at M.C.G..
+127,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Docklands,2008-06-15,Richmond 16.20 (116) def. Melbourne 14.10 (94),210,22,,Richmond defeated Melbourne by 22 points at Docklands.
+128,Regular Season,St Kilda,Fremantle,St Kilda,Fremantle,Docklands,2008-06-20,St Kilda 10.5 (65) def. Fremantle 8.9 (57),122,8,,St Kilda defeated Fremantle by 8 points at Docklands.
+129,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,M.C.G.,2008-06-21,North Melbourne 15.13 (103) def. Hawthorn 10.16 (76),179,27,,North Melbourne defeated Hawthorn by 27 points at M.C.G..
+130,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2008-06-21,Richmond 20.7 (127) def. Port Adelaide 19.9 (123),250,4,,Richmond defeated Port Adelaide by 4 points at Football Park.
+131,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2008-06-21,Geelong 28.14 (182) def. West Coast 5.17 (47),229,135,,Geelong defeated West Coast by 135 points at Subiaco.
+132,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2008-06-21,Brisbane Lions 11.17 (83) def. Adelaide 10.10 (70),153,13,,Brisbane Lions defeated Adelaide by 13 points at Gabba.
+133,Regular Season,Melbourne,Sydney,Melbourne,Sydney,Manuka Oval,2008-06-22,Sydney 17.12 (114) def. Melbourne 11.8 (74),188,40,,Sydney defeated Melbourne by 40 points at Manuka Oval.
+134,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2008-06-22,Essendon 20.16 (136) def. Carlton 15.11 (101),237,35,,Essendon defeated Carlton by 35 points at M.C.G..
+135,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Docklands,2008-06-22,Western Bulldogs 15.9 (99) def. Collingwood 13.11 (89),188,10,,Western Bulldogs defeated Collingwood by 10 points at Docklands.
+136,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,M.C.G.,2008-06-27,Hawthorn 18.18 (126) def. West Coast 9.15 (69),195,57,,Hawthorn defeated West Coast by 57 points at M.C.G..
+137,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2008-06-28,Carlton 17.16 (118) def. Richmond 12.16 (88),206,30,,Carlton defeated Richmond by 30 points at M.C.G..
+138,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Carrara,2008-06-28,St Kilda 12.12 (84) def. North Melbourne 9.15 (69),153,15,,St Kilda defeated North Melbourne by 15 points at Carrara.
+139,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Marrara Oval,2008-06-28,Western Bulldogs 20.15 (135) def. Port Adelaide 11.15 (81),216,54,,Western Bulldogs defeated Port Adelaide by 54 points at Marrara Oval.
+140,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,M.C.G.,2008-06-29,Melbourne 14.9 (93) def. Brisbane Lions 13.14 (92),185,1,,Melbourne defeated Brisbane Lions by 1 points at M.C.G..
+141,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2008-06-29,Essendon 14.11 (95) def. Fremantle 13.13 (91),186,4,,Essendon defeated Fremantle by 4 points at Subiaco.
+142,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2008-07-04,Geelong 18.16 (124) def. Adelaide 8.8 (56),180,68,,Geelong defeated Adelaide by 68 points at Football Park.
+143,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Stadium Australia,2008-07-05,Collingwood 11.13 (79) def. Sydney 6.14 (50),129,29,,Collingwood defeated Sydney by 29 points at Stadium Australia.
+144,Regular Season,Carlton,St Kilda,Carlton,St Kilda,M.C.G.,2008-07-11,St Kilda 18.11 (119) def. Carlton 12.15 (87),206,32,,St Kilda defeated Carlton by 32 points at M.C.G..
+145,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,M.C.G.,2008-07-12,Collingwood 15.16 (106) def. Adelaide 11.8 (74),180,32,,Collingwood defeated Adelaide by 32 points at M.C.G..
+146,Regular Season,Geelong,Fremantle,Geelong,Fremantle,Kardinia Park,2008-07-12,Geelong 18.10 (118) def. Fremantle 6.8 (44),162,74,,Geelong defeated Fremantle by 74 points at Kardinia Park.
+147,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Docklands,2008-07-12,Essendon 24.11 (155) def. Brisbane Lions 18.10 (118),273,37,,Essendon defeated Brisbane Lions by 37 points at Docklands.
+148,Regular Season,Port Adelaide,North Melbourne,Port Adelaide,North Melbourne,Football Park,2008-07-12,North Melbourne 10.16 (76) def. Port Adelaide 10.14 (74),150,2,,North Melbourne defeated Port Adelaide by 2 points at Football Park.
+149,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,M.C.G.,2008-07-13,Hawthorn 15.16 (106) def. Sydney 10.15 (75),181,31,,Hawthorn defeated Sydney by 31 points at M.C.G..
+150,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2008-07-13,Western Bulldogs 14.11 (95) def. Melbourne 9.10 (64),159,31,,Western Bulldogs defeated Melbourne by 31 points at Docklands.
+151,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2008-07-13,Richmond 24.8 (152) def. West Coast 11.9 (75),227,77,,Richmond defeated West Coast by 77 points at Subiaco.
+152,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2008-07-18,North Melbourne 17.12 (114) def. Collingwood 14.12 (96),210,18,,North Melbourne defeated Collingwood by 18 points at Docklands.
+153,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2008-07-19,Richmond 16.12 (108) def. Essendon 15.14 (104),212,4,,Richmond defeated Essendon by 4 points at M.C.G..
+154,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,2008-07-19,Geelong 19.17 (131) def. Western Bulldogs 10.10 (70),201,61,,Geelong defeated Western Bulldogs by 61 points at Kardinia Park.
+155,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Docklands,2008-07-19,St Kilda 18.11 (119) def. Hawthorn 13.11 (89),208,30,,St Kilda defeated Hawthorn by 30 points at Docklands.
+156,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2008-07-19,Brisbane Lions 17.11 (113) def. West Coast 9.13 (67),180,46,,Brisbane Lions defeated West Coast by 46 points at Gabba.
+157,Regular Season,Carlton,Sydney,Carlton,Sydney,Docklands,2008-07-20,Sydney 18.13 (121) def. Carlton 18.11 (119),240,2,,Sydney defeated Carlton by 2 points at Docklands.
+158,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2008-07-20,Port Adelaide 13.14 (92) def. Adelaide 11.14 (80),172,12,,Port Adelaide defeated Adelaide by 12 points at Football Park.
+159,Regular Season,Fremantle,Melbourne,Fremantle,Melbourne,Subiaco,2008-07-20,Fremantle 16.18 (114) def. Melbourne 10.8 (68),182,46,,Fremantle defeated Melbourne by 46 points at Subiaco.
+160,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,M.C.G.,2008-07-25,Geelong 12.16 (88) def. Hawthorn 11.11 (77),165,11,,Geelong defeated Hawthorn by 11 points at M.C.G..
+161,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2008-07-26,Essendon 19.14 (128) def. Collingwood 11.14 (80),208,48,,Essendon defeated Collingwood by 48 points at M.C.G..
+162,Regular Season,West Coast,St Kilda,West Coast,St Kilda,Subiaco,2008-07-26,West Coast 15.13 (103) def. St Kilda 12.14 (86),189,17,,West Coast defeated St Kilda by 17 points at Subiaco.
+163,Regular Season,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,2008-07-26,Adelaide 11.11 (77) def. Sydney 6.17 (53),130,24,,Adelaide defeated Sydney by 24 points at S.C.G..
+164,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,Docklands,2008-07-26,Richmond 18.9 (117) def. Brisbane Lions 16.18 (114),231,3,,Richmond defeated Brisbane Lions by 3 points at Docklands.
+165,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,2008-07-27,Fremantle 20.9 (129) def. Port Adelaide 15.11 (101),230,28,,Fremantle defeated Port Adelaide by 28 points at Football Park.
+166,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,2008-07-27,North Melbourne 14.14 (98) def. Melbourne 10.10 (70),168,28,,North Melbourne defeated Melbourne by 28 points at M.C.G..
+167,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Docklands,2008-07-27,Carlton 18.18 (126) def. Western Bulldogs 15.8 (98),224,28,,Carlton defeated Western Bulldogs by 28 points at Docklands.
+168,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2008-08-01,Hawthorn 17.14 (116) def. Collingwood 8.14 (62),178,54,,Hawthorn defeated Collingwood by 54 points at M.C.G..
+169,Regular Season,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,2008-08-02,Essendon 19.10 (124) def. Melbourne 17.6 (108),232,16,,Essendon defeated Melbourne by 16 points at M.C.G..
+170,Regular Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,2008-08-02,Adelaide 13.16 (94) def. Carlton 12.14 (86),180,8,,Adelaide defeated Carlton by 8 points at Football Park.
+171,Regular Season,Geelong,Richmond,Geelong,Richmond,Docklands,2008-08-02,Geelong 20.14 (134) def. Richmond 10.11 (71),205,63,,Geelong defeated Richmond by 63 points at Docklands.
+172,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Carrara,2008-08-02,North Melbourne 13.14 (92) def. Brisbane Lions 11.18 (84),176,8,,North Melbourne defeated Brisbane Lions by 8 points at Carrara.
+173,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Manuka Oval,2008-08-03,Western Bulldogs 17.11 (113) def. Sydney 14.13 (97),210,16,,Western Bulldogs defeated Sydney by 16 points at Manuka Oval.
+174,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,Docklands,2008-08-03,St Kilda 14.17 (101) def. Port Adelaide 14.9 (93),194,8,,St Kilda defeated Port Adelaide by 8 points at Docklands.
+175,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2008-08-03,Fremantle 17.14 (116) def. West Coast 12.11 (83),199,33,,Fremantle defeated West Coast by 33 points at Subiaco.
+176,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2008-08-08,Geelong 24.13 (157) def. Melbourne 5.11 (41),198,116,,Geelong defeated Melbourne by 116 points at M.C.G..
+177,Regular Season,Carlton,Port Adelaide,Carlton,Port Adelaide,Docklands,2008-08-09,Carlton 18.24 (132) def. Port Adelaide 9.12 (66),198,66,,Carlton defeated Port Adelaide by 66 points at Docklands.
+178,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,York Park,2008-08-09,Hawthorn 16.14 (110) def. Brisbane Lions 5.11 (41),151,69,,Hawthorn defeated Brisbane Lions by 69 points at York Park.
+179,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,2008-08-09,Collingwood 14.13 (97) def. St Kilda 12.11 (83),180,14,,Collingwood defeated St Kilda by 14 points at M.C.G..
+180,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2008-08-09,Sydney 17.10 (112) def. Fremantle 15.18 (108),220,4,,Sydney defeated Fremantle by 4 points at S.C.G..
+181,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Docklands,2008-08-10,North Melbourne 21.10 (136) def. Western Bulldogs 18.8 (116),252,20,,North Melbourne defeated Western Bulldogs by 20 points at Docklands.
+182,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,2008-08-10,Adelaide 16.12 (108) def. Richmond 6.9 (45),153,63,,Adelaide defeated Richmond by 63 points at Football Park.
+183,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,2008-08-10,West Coast 17.11 (113) def. Essendon 16.7 (103),216,10,,West Coast defeated Essendon by 10 points at Subiaco.
+184,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2008-08-15,Collingwood 16.10 (106) def. Port Adelaide 10.15 (75),181,31,,Collingwood defeated Port Adelaide by 31 points at Football Park.
+185,Regular Season,Essendon,Adelaide,Essendon,Adelaide,Docklands,2008-08-16,Adelaide 19.15 (129) def. Essendon 10.13 (73),202,56,,Adelaide defeated Essendon by 56 points at Docklands.
+186,Regular Season,Melbourne,West Coast,Melbourne,West Coast,M.C.G.,2008-08-16,Melbourne 11.13 (79) def. West Coast 5.15 (45),124,34,,Melbourne defeated West Coast by 34 points at M.C.G..
+187,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2008-08-16,Brisbane Lions 13.12 (90) def. Western Bulldogs 10.19 (79),169,11,,Brisbane Lions defeated Western Bulldogs by 11 points at Gabba.
+188,Regular Season,Sydney,Geelong,Sydney,Geelong,Stadium Australia,2008-08-16,Geelong 20.13 (133) def. Sydney 14.10 (94),227,39,,Geelong defeated Sydney by 39 points at Stadium Australia.
+189,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2008-08-17,Richmond 16.9 (105) def. Hawthorn 10.16 (76),181,29,,Richmond defeated Hawthorn by 29 points at M.C.G..
+190,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Docklands,2008-08-17,North Melbourne 22.9 (141) def. Carlton 14.6 (90),231,51,,North Melbourne defeated Carlton by 51 points at Docklands.
+191,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2008-08-17,St Kilda 17.10 (112) def. Fremantle 9.15 (69),181,43,,St Kilda defeated Fremantle by 43 points at Subiaco.
+192,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2008-08-22,Western Bulldogs 23.13 (151) def. Essendon 15.15 (105),256,46,,Western Bulldogs defeated Essendon by 46 points at Docklands.
+193,Regular Season,Richmond,Fremantle,Richmond,Fremantle,M.C.G.,2008-08-23,Richmond 15.15 (105) def. Fremantle 15.8 (98),203,7,,Richmond defeated Fremantle by 7 points at M.C.G..
+194,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2008-08-23,Port Adelaide 18.21 (129) def. Melbourne 7.9 (51),180,78,,Port Adelaide defeated Melbourne by 78 points at Football Park.
+195,Regular Season,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2008-08-23,Carlton 18.7 (115) def. Brisbane Lions 16.13 (109),224,6,,Carlton defeated Brisbane Lions by 6 points at Gabba.
+196,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Docklands,2008-08-23,Collingwood 18.10 (118) def. Sydney 10.13 (73),191,45,,Collingwood defeated Sydney by 45 points at Docklands.
+197,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,2008-08-24,Geelong 17.13 (115) def. North Melbourne 13.4 (82),197,33,,Geelong defeated North Melbourne by 33 points at Kardinia Park.
+198,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2008-08-24,St Kilda 13.17 (95) def. Adelaide 6.11 (47),142,48,,St Kilda defeated Adelaide by 48 points at Docklands.
+199,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco,2008-08-24,Hawthorn 19.19 (133) def. West Coast 9.8 (62),195,71,,Hawthorn defeated West Coast by 71 points at Subiaco.
+200,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Subiaco,2008-08-29,Fremantle 12.8 (80) def. Collingwood 8.8 (56),136,24,,Fremantle defeated Collingwood by 24 points at Subiaco.
+201,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,M.C.G.,2008-08-30,Port Adelaide 23.10 (148) def. North Melbourne 10.12 (72),220,76,,Port Adelaide defeated North Melbourne by 76 points at M.C.G..
+202,Regular Season,Geelong,West Coast,Geelong,West Coast,Kardinia Park,2008-08-30,Geelong 24.20 (164) def. West Coast 10.5 (65),229,99,,Geelong defeated West Coast by 99 points at Kardinia Park.
+203,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2008-08-30,Adelaide 10.16 (76) def. Western Bulldogs 9.13 (67),143,9,,Adelaide defeated Western Bulldogs by 9 points at Football Park.
+204,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Docklands,2008-08-30,Hawthorn 24.15 (159) def. Carlton 12.9 (81),240,78,,Hawthorn defeated Carlton by 78 points at Docklands.
+205,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2008-08-30,Sydney 17.12 (114) def. Brisbane Lions 6.17 (53),167,61,,Sydney defeated Brisbane Lions by 61 points at S.C.G..
+206,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2008-08-31,Richmond 18.13 (121) def. Melbourne 6.5 (41),162,80,,Richmond defeated Melbourne by 80 points at M.C.G..
+207,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2008-08-31,St Kilda 21.21 (147) def. Essendon 5.9 (39),186,108,,St Kilda defeated Essendon by 108 points at Docklands.
+208,Finals,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2008-09-05,Hawthorn 18.19 (127) def. Western Bulldogs 11.10 (76),203,51,,Hawthorn defeated Western Bulldogs by 51 points at M.C.G..
+209,Finals,Adelaide,Collingwood,Adelaide,Collingwood,Football Park,2008-09-06,Collingwood 19.11 (125) def. Adelaide 14.10 (94),219,31,,Collingwood defeated Adelaide by 31 points at Football Park.
+210,Finals,Sydney,North Melbourne,Sydney,North Melbourne,Stadium Australia,2008-09-06,Sydney 17.8 (110) def. North Melbourne 11.9 (75),185,35,,Sydney defeated North Melbourne by 35 points at Stadium Australia.
+211,Finals,Geelong,St Kilda,Geelong,St Kilda,M.C.G.,2008-09-07,Geelong 17.17 (119) def. St Kilda 8.13 (61),180,58,,Geelong defeated St Kilda by 58 points at M.C.G..
+212,Finals,Western Bulldogs,Sydney,Western Bulldogs,Sydney,M.C.G.,2008-09-12,Western Bulldogs 16.10 (106) def. Sydney 9.15 (69),175,37,,Western Bulldogs defeated Sydney by 37 points at M.C.G..
+213,Finals,St Kilda,Collingwood,St Kilda,Collingwood,M.C.G.,2008-09-13,St Kilda 17.4 (106) def. Collingwood 9.18 (72),178,34,,St Kilda defeated Collingwood by 34 points at M.C.G..
+214,Finals,Geelong,Western Bulldogs,Geelong,Western Bulldogs,M.C.G.,2008-09-19,Geelong 12.11 (83) def. Western Bulldogs 7.12 (54),137,29,,Geelong defeated Western Bulldogs by 29 points at M.C.G..
+215,Finals,Hawthorn,St Kilda,Hawthorn,St Kilda,M.C.G.,2008-09-20,Hawthorn 18.10 (118) def. St Kilda 9.10 (64),182,54,,Hawthorn defeated St Kilda by 54 points at M.C.G..
+216,Grand Final,Geelong,Hawthorn,Geelong,Hawthorn,M.C.G.,2008-09-27,Hawthorn 18.7 (115) def. Geelong 11.23 (89),204,26,,Hawthorn defeated Geelong by 26 points at M.C.G..

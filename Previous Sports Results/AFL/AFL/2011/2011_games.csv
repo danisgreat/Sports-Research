@@ -1,197 +1,241 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
-1,Regular Season,Carlton,Richmond,Carlton,Richmond,M.C.G.,2011-03-24,Carlton 14.20 (104) def. Richmond 13.6 (84),188,20,,Carlton defeated Richmond by 20 points at M.C.G..
-2,Regular Season,Geelong,St Kilda,Geelong,St Kilda,M.C.G.,2011-03-25,Geelong 6.12 (48) def. St Kilda 6.11 (47),95,1,,Geelong defeated St Kilda by 1 points at M.C.G..
-3,Regular Season,Collingwood,Port Adelaide,Collingwood,Port Adelaide,Docklands,2011-03-26,Collingwood 24.11 (155) def. Port Adelaide 12.8 (80),235,75,,Collingwood defeated Port Adelaide by 75 points at Docklands.
-4,Regular Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,2011-03-26,Adelaide 16.9 (105) def. Hawthorn 12.13 (85),190,20,,Adelaide defeated Hawthorn by 20 points at Football Park.
-5,Regular Season,Brisbane Lions,Fremantle,Brisbane Lions,Fremantle,Gabba,2011-03-26,Fremantle 13.16 (94) def. Brisbane Lions 14.8 (92),186,2,,Fremantle defeated Brisbane Lions by 2 points at Gabba.
-6,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2011-03-27,Essendon 16.17 (113) def. Western Bulldogs 8.10 (58),171,55,,Essendon defeated Western Bulldogs by 55 points at Docklands.
-7,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,2011-03-27,Melbourne 11.18 (84) drew with Sydney 11.18 (84),168,0,,Melbourne and Sydney played out a draw at M.C.G..
-8,Regular Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco,2011-03-27,West Coast 13.14 (92) def. North Melbourne 13.10 (88),180,4,,West Coast defeated North Melbourne by 4 points at Subiaco.
-9,Regular Season,St Kilda,Richmond,St Kilda,Richmond,M.C.G.,2011-04-01,St Kilda 13.17 (95) drew with Richmond 14.11 (95),190,0,,St Kilda and Richmond played out a draw at M.C.G..
-10,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2011-04-02,Collingwood 21.17 (143) def. North Melbourne 7.14 (56),199,87,,Collingwood defeated North Melbourne by 87 points at Docklands.
-11,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,2011-04-02,West Coast 16.20 (116) def. Port Adelaide 15.8 (98),214,18,,West Coast defeated Port Adelaide by 18 points at Football Park.
-12,Regular Season,Gold Coast,Carlton,Gold Coast,Carlton,Gabba,2011-04-02,Carlton 26.15 (171) def. Gold Coast 7.10 (52),223,119,,Carlton defeated Gold Coast by 119 points at Gabba.
-13,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2011-04-02,Geelong 13.11 (89) def. Fremantle 10.18 (78),167,11,,Geelong defeated Fremantle by 11 points at Subiaco.
-14,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Docklands,2011-04-03,Western Bulldogs 19.9 (123) def. Brisbane Lions 6.9 (45),168,78,,Western Bulldogs defeated Brisbane Lions by 78 points at Docklands.
-15,Regular Season,Sydney,Essendon,Sydney,Essendon,Stadium Australia,2011-04-03,Sydney 14.14 (98) def. Essendon 13.15 (93),191,5,,Sydney defeated Essendon by 5 points at Stadium Australia.
-16,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2011-04-03,Hawthorn 16.26 (122) def. Melbourne 12.5 (77),199,45,,Hawthorn defeated Melbourne by 45 points at M.C.G..
-17,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2011-04-08,Collingwood 15.12 (102) def. Carlton 11.8 (74),176,28,,Collingwood defeated Carlton by 28 points at M.C.G..
-18,Regular Season,Western Bulldogs,Gold Coast,Western Bulldogs,Gold Coast,Docklands,2011-04-09,Western Bulldogs 18.14 (122) def. Gold Coast 7.9 (51),173,71,,Western Bulldogs defeated Gold Coast by 71 points at Docklands.
-19,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2011-04-09,Fremantle 11.13 (79) def. Adelaide 7.12 (54),133,25,,Fremantle defeated Adelaide by 25 points at Football Park.
-20,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2011-04-09,Hawthorn 17.13 (115) def. Richmond 6.16 (52),167,63,,Hawthorn defeated Richmond by 63 points at M.C.G..
-21,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,2011-04-09,Sydney 15.11 (101) def. West Coast 13.10 (88),189,13,,Sydney defeated West Coast by 13 points at Subiaco.
-22,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,M.C.G.,2011-04-10,Melbourne 12.10 (82) def. Brisbane Lions 11.5 (71),153,11,,Melbourne defeated Brisbane Lions by 11 points at M.C.G..
-23,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,GMHBA Stadium,2011-04-10,Geelong 17.20 (122) def. Port Adelaide 6.7 (43),165,79,,Geelong defeated Port Adelaide by 79 points at GMHBA Stadium.
-24,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2011-04-10,Essendon 21.10 (136) def. St Kilda 12.12 (84),220,52,,Essendon defeated St Kilda by 52 points at Docklands.
-25,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2011-04-15,Collingwood 24.17 (161) def. Richmond 13.12 (90),251,71,,Collingwood defeated Richmond by 71 points at M.C.G..
-26,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,University of Tasmania Stadium,2011-04-16,Hawthorn 10.12 (72) def. West Coast 9.11 (65),137,7,,Hawthorn defeated West Coast by 7 points at University of Tasmania Stadium.
-27,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2011-04-16,Carlton 11.13 (79) drew with Essendon 11.13 (79),158,0,,Carlton and Essendon played out a draw at M.C.G..
-28,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,2011-04-16,Geelong 11.15 (81) def. Sydney 7.12 (54),135,27,,Geelong defeated Sydney by 27 points at S.C.G..
-29,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2011-04-16,Port Adelaide 14.14 (98) def. Adelaide 9.12 (66),164,32,,Port Adelaide defeated Adelaide by 32 points at Football Park.
-30,Regular Season,Gold Coast,Melbourne,Gold Coast,Melbourne,Gabba,2011-04-17,Melbourne 23.21 (159) def. Gold Coast 9.15 (69),228,90,,Melbourne defeated Gold Coast by 90 points at Gabba.
-31,Regular Season,Fremantle,North Melbourne,Fremantle,North Melbourne,Subiaco,2011-04-17,Fremantle 18.19 (127) def. North Melbourne 14.14 (98),225,29,,Fremantle defeated North Melbourne by 29 points at Subiaco.
-32,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2011-04-21,St Kilda 13.11 (89) def. Brisbane Lions 11.10 (76),165,13,,St Kilda defeated Brisbane Lions by 13 points at Gabba.
-33,Regular Season,Port Adelaide,Gold Coast,Port Adelaide,Gold Coast,Football Park,2011-04-23,Gold Coast 15.14 (104) def. Port Adelaide 15.11 (101),205,3,,Gold Coast defeated Port Adelaide by 3 points at Football Park.
-34,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Docklands,2011-04-23,Carlton 11.19 (85) def. Adelaide 12.7 (79),164,6,,Carlton defeated Adelaide by 6 points at Docklands.
-35,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Docklands,2011-04-24,Richmond 17.10 (112) def. North Melbourne 14.19 (103),215,9,,Richmond defeated North Melbourne by 9 points at Docklands.
-36,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2011-04-25,Collingwood 16.11 (107) def. Essendon 11.11 (77),184,30,,Collingwood defeated Essendon by 30 points at M.C.G..
-37,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Subiaco,2011-04-25,Fremantle 12.13 (85) def. Western Bulldogs 11.12 (78),163,7,,Fremantle defeated Western Bulldogs by 7 points at Subiaco.
-38,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,M.C.G.,2011-04-26,Geelong 17.15 (117) def. Hawthorn 15.8 (98),215,19,,Geelong defeated Hawthorn by 19 points at M.C.G..
-39,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2011-04-28,West Coast 15.16 (106) def. Melbourne 6.16 (52),158,54,,West Coast defeated Melbourne by 54 points at Subiaco.
-40,Regular Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,2011-04-29,Carlton 12.15 (87) def. Sydney 10.11 (71),158,16,,Carlton defeated Sydney by 16 points at S.C.G..
-41,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Docklands,2011-04-30,North Melbourne 18.25 (133) def. Port Adelaide 10.13 (73),206,60,,North Melbourne defeated Port Adelaide by 60 points at Docklands.
-42,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,M.C.G.,2011-04-30,Richmond 18.16 (124) def. Brisbane Lions 14.14 (98),222,26,,Richmond defeated Brisbane Lions by 26 points at M.C.G..
-43,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,2011-04-30,Adelaide 13.12 (90) def. St Kilda 9.17 (71),161,19,,Adelaide defeated St Kilda by 19 points at Football Park.
-44,Regular Season,Essendon,Gold Coast,Essendon,Gold Coast,Docklands,2011-05-01,Essendon 31.11 (197) def. Gold Coast 8.10 (58),255,139,,Essendon defeated Gold Coast by 139 points at Docklands.
-45,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,2011-05-01,Collingwood 15.15 (105) def. Western Bulldogs 8.9 (57),162,48,,Collingwood defeated Western Bulldogs by 48 points at M.C.G..
-46,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2011-05-06,Hawthorn 15.14 (104) def. Port Adelaide 10.12 (72),176,32,,Hawthorn defeated Port Adelaide by 32 points at Football Park.
-47,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,UNSW Canberra Oval,2011-05-07,Sydney 10.13 (73) def. Western Bulldogs 10.5 (65),138,8,,Sydney defeated Western Bulldogs by 8 points at UNSW Canberra Oval.
-48,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,GMHBA Stadium,2011-05-07,Geelong 19.13 (127) def. North Melbourne 9.7 (61),188,66,,Geelong defeated North Melbourne by 66 points at GMHBA Stadium.
-49,Regular Season,Richmond,Fremantle,Richmond,Fremantle,M.C.G.,2011-05-07,Richmond 23.10 (148) def. Fremantle 14.15 (99),247,49,,Richmond defeated Fremantle by 49 points at M.C.G..
-50,Regular Season,Gold Coast,Brisbane Lions,Gold Coast,Brisbane Lions,Gabba,2011-05-07,Gold Coast 18.16 (124) def. Brisbane Lions 17.14 (116),240,8,,Gold Coast defeated Brisbane Lions by 8 points at Gabba.
-51,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2011-05-08,Essendon 16.10 (106) def. West Coast 12.18 (90),196,16,,Essendon defeated West Coast by 16 points at Docklands.
-52,Regular Season,Melbourne,Adelaide,Melbourne,Adelaide,M.C.G.,2011-05-08,Melbourne 22.17 (149) def. Adelaide 8.5 (53),202,96,,Melbourne defeated Adelaide by 96 points at M.C.G..
-53,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Docklands,2011-05-09,Carlton 11.18 (84) def. St Kilda 12.9 (81),165,3,,Carlton defeated St Kilda by 3 points at Docklands.
-54,Regular Season,Geelong,Collingwood,Geelong,Collingwood,M.C.G.,2011-05-13,Geelong 8.17 (65) def. Collingwood 9.8 (62),127,3,,Geelong defeated Collingwood by 3 points at M.C.G..
-55,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Docklands,2011-05-14,North Melbourne 19.10 (124) def. Melbourne 12.11 (83),207,41,,North Melbourne defeated Melbourne by 41 points at Docklands.
-56,Regular Season,Adelaide,Gold Coast,Adelaide,Gold Coast,Football Park,2011-05-14,Adelaide 20.10 (130) def. Gold Coast 9.19 (73),203,57,,Adelaide defeated Gold Coast by 57 points at Football Park.
-57,Regular Season,Brisbane Lions,Essendon,Brisbane Lions,Essendon,Gabba,2011-05-14,Essendon 15.12 (102) def. Brisbane Lions 9.12 (66),168,36,,Essendon defeated Brisbane Lions by 36 points at Gabba.
-58,Regular Season,Sydney,Port Adelaide,Sydney,Port Adelaide,S.C.G.,2011-05-14,Sydney 18.13 (121) def. Port Adelaide 9.5 (59),180,62,,Sydney defeated Port Adelaide by 62 points at S.C.G..
-59,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,M.C.G.,2011-05-15,Hawthorn 14.15 (99) def. St Kilda 10.9 (69),168,30,,Hawthorn defeated St Kilda by 30 points at M.C.G..
-60,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2011-05-15,Western Bulldogs 23.15 (153) def. Richmond 18.10 (118),271,35,,Western Bulldogs defeated Richmond by 35 points at Docklands.
-61,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2011-05-15,West Coast 14.12 (96) def. Fremantle 9.9 (63),159,33,,West Coast defeated Fremantle by 33 points at Subiaco.
-62,Regular Season,Carlton,Geelong,Carlton,Geelong,Docklands,2011-05-20,Geelong 15.12 (102) def. Carlton 14.16 (100),202,2,,Geelong defeated Carlton by 2 points at Docklands.
-63,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Docklands,2011-05-21,St Kilda 16.10 (106) def. Melbourne 13.8 (86),192,20,,St Kilda defeated Melbourne by 20 points at Docklands.
-64,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,2011-05-21,Fremantle 21.16 (142) def. Port Adelaide 14.6 (90),232,52,,Fremantle defeated Port Adelaide by 52 points at Football Park.
-65,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2011-05-21,Brisbane Lions 10.13 (73) def. North Melbourne 8.11 (59),132,14,,Brisbane Lions defeated North Melbourne by 14 points at Gabba.
-66,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2011-05-21,Richmond 16.9 (105) def. Essendon 13.11 (89),194,16,,Richmond defeated Essendon by 16 points at M.C.G..
-67,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,Docklands,2011-05-22,Collingwood 20.15 (135) def. Adelaide 14.8 (92),227,43,,Collingwood defeated Adelaide by 43 points at Docklands.
-68,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,2011-05-22,Hawthorn 15.16 (106) def. Sydney 8.12 (60),166,46,,Hawthorn defeated Sydney by 46 points at S.C.G..
-69,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco,2011-05-22,West Coast 26.19 (175) def. Western Bulldogs 8.4 (52),227,123,,West Coast defeated Western Bulldogs by 123 points at Subiaco.
-70,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,2011-05-27,Carlton 13.15 (93) def. Melbourne 6.10 (46),139,47,,Carlton defeated Melbourne by 47 points at M.C.G..
-71,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Docklands,2011-05-28,Sydney 10.12 (72) def. North Melbourne 9.17 (71),143,1,,Sydney defeated North Melbourne by 1 points at Docklands.
-72,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2011-05-28,St Kilda 15.12 (102) def. Fremantle 7.14 (56),158,46,,St Kilda defeated Fremantle by 46 points at Subiaco.
-73,Regular Season,Gold Coast,Geelong,Gold Coast,Geelong,Carrara,2011-05-28,Geelong 21.13 (139) def. Gold Coast 10.13 (73),212,66,,Geelong defeated Gold Coast by 66 points at Carrara.
-74,Regular Season,Richmond,Port Adelaide,Richmond,Port Adelaide,Marrara Oval,2011-05-28,Port Adelaide 13.11 (89) def. Richmond 10.14 (74),163,15,,Port Adelaide defeated Richmond by 15 points at Marrara Oval.
-75,Regular Season,Adelaide,Brisbane Lions,Adelaide,Brisbane Lions,Football Park,2011-05-29,Brisbane Lions 15.11 (101) def. Adelaide 8.13 (61),162,40,,Brisbane Lions defeated Adelaide by 40 points at Football Park.
-76,Regular Season,Collingwood,West Coast,Collingwood,West Coast,M.C.G.,2011-05-29,Collingwood 16.9 (105) def. West Coast 7.11 (53),158,52,,Collingwood defeated West Coast by 52 points at M.C.G..
-77,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Docklands,2011-05-29,Hawthorn 13.13 (91) def. Western Bulldogs 9.8 (62),153,29,,Hawthorn defeated Western Bulldogs by 29 points at Docklands.
-78,Regular Season,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,2011-06-03,Melbourne 15.11 (101) def. Essendon 10.8 (68),169,33,,Melbourne defeated Essendon by 33 points at M.C.G..
-79,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,GMHBA Stadium,2011-06-04,Geelong 23.10 (148) def. Western Bulldogs 13.9 (87),235,61,,Geelong defeated Western Bulldogs by 61 points at GMHBA Stadium.
-80,Regular Season,West Coast,Gold Coast,West Coast,Gold Coast,Subiaco,2011-06-04,West Coast 13.7 (85) def. Gold Coast 10.7 (67),152,18,,West Coast defeated Gold Coast by 18 points at Subiaco.
-81,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,2011-06-04,Collingwood 16.12 (108) def. St Kilda 7.9 (51),159,57,,Collingwood defeated St Kilda by 57 points at M.C.G..
-82,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2011-06-04,Sydney 17.14 (116) def. Brisbane Lions 7.9 (51),167,65,,Sydney defeated Brisbane Lions by 65 points at Gabba.
-83,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,M.C.G.,2011-06-05,Hawthorn 17.9 (111) def. Fremantle 13.11 (89),200,22,,Hawthorn defeated Fremantle by 22 points at M.C.G..
-84,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,Docklands,2011-06-05,North Melbourne 18.7 (115) def. Adelaide 10.8 (68),183,47,,North Melbourne defeated Adelaide by 47 points at Docklands.
-85,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2011-06-05,Carlton 16.15 (111) def. Port Adelaide 7.7 (49),160,62,,Carlton defeated Port Adelaide by 62 points at Football Park.
-86,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Docklands,2011-06-10,St Kilda 12.9 (81) def. Western Bulldogs 8.9 (57),138,24,,St Kilda defeated Western Bulldogs by 24 points at Docklands.
-87,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2011-06-11,West Coast 15.16 (106) def. Adelaide 10.7 (67),173,39,,West Coast defeated Adelaide by 39 points at Football Park.
-88,Regular Season,Gold Coast,North Melbourne,Gold Coast,North Melbourne,Carrara,2011-06-11,North Melbourne 18.14 (122) def. Gold Coast 9.9 (63),185,59,,North Melbourne defeated Gold Coast by 59 points at Carrara.
-89,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,M.C.G.,2011-06-11,Geelong 13.10 (88) def. Hawthorn 13.5 (83),171,5,,Geelong defeated Hawthorn by 5 points at M.C.G..
-90,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Docklands,2011-06-12,Carlton 19.10 (124) def. Brisbane Lions 9.9 (63),187,61,,Carlton defeated Brisbane Lions by 61 points at Docklands.
-91,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,2011-06-12,Sydney 9.21 (75) def. Richmond 9.11 (65),140,10,,Sydney defeated Richmond by 10 points at S.C.G..
-92,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2011-06-12,Fremantle 15.8 (98) def. Essendon 9.10 (64),162,34,,Fremantle defeated Essendon by 34 points at Subiaco.
-93,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2011-06-13,Collingwood 19.15 (129) def. Melbourne 6.5 (41),170,88,,Collingwood defeated Melbourne by 88 points at M.C.G..
-94,Regular Season,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,Docklands,2011-06-17,Western Bulldogs 14.16 (100) def. Adelaide 10.10 (70),170,30,,Western Bulldogs defeated Adelaide by 30 points at Docklands.
-95,Regular Season,Hawthorn,Gold Coast,Hawthorn,Gold Coast,University of Tasmania Stadium,2011-06-18,Hawthorn 19.15 (129) def. Gold Coast 8.10 (58),187,71,,Hawthorn defeated Gold Coast by 71 points at University of Tasmania Stadium.
-96,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Docklands,2011-06-18,North Melbourne 17.9 (111) def. Essendon 12.18 (90),201,21,,North Melbourne defeated Essendon by 21 points at Docklands.
-97,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2011-06-18,Richmond 18.17 (125) def. Brisbane Lions 14.10 (94),219,31,,Richmond defeated Brisbane Lions by 31 points at Gabba.
-98,Regular Season,St Kilda,Geelong,St Kilda,Geelong,M.C.G.,2011-06-18,Geelong 15.10 (100) def. St Kilda 11.6 (72),172,28,,Geelong defeated St Kilda by 28 points at M.C.G..
-99,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,M.C.G.,2011-06-19,Melbourne 22.17 (149) def. Fremantle 8.12 (60),209,89,,Melbourne defeated Fremantle by 89 points at M.C.G..
-100,Regular Season,Carlton,Sydney,Carlton,Sydney,Docklands,2011-06-19,Carlton 15.10 (100) def. Sydney 10.6 (66),166,34,,Carlton defeated Sydney by 34 points at Docklands.
-101,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2011-06-19,West Coast 15.20 (110) def. Port Adelaide 13.10 (88),198,22,,West Coast defeated Port Adelaide by 22 points at Subiaco.
-102,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,2011-06-24,Hawthorn 23.8 (146) def. Essendon 12.9 (81),227,65,,Hawthorn defeated Essendon by 65 points at M.C.G..
-103,Regular Season,Gold Coast,Western Bulldogs,Gold Coast,Western Bulldogs,Carrara,2011-06-25,Western Bulldogs 17.8 (110) def. Gold Coast 13.10 (88),198,22,,Western Bulldogs defeated Gold Coast by 22 points at Carrara.
-104,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2011-06-25,Melbourne 17.16 (118) def. Richmond 13.13 (91),209,27,,Melbourne defeated Richmond by 27 points at M.C.G..
-105,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Stadium Australia,2011-06-25,Collingwood 13.21 (99) def. Sydney 14.9 (93),192,6,,Collingwood defeated Sydney by 6 points at Stadium Australia.
-106,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2011-06-25,Fremantle 12.16 (88) def. Brisbane Lions 10.5 (65),153,23,,Fremantle defeated Brisbane Lions by 23 points at Subiaco.
-107,Regular Season,Geelong,Adelaide,Geelong,Adelaide,GMHBA Stadium,2011-06-26,Geelong 19.11 (125) def. Adelaide 10.13 (73),198,52,,Geelong defeated Adelaide by 52 points at GMHBA Stadium.
-108,Regular Season,Carlton,West Coast,Carlton,West Coast,Docklands,2011-06-26,West Coast 15.13 (103) def. Carlton 10.7 (67),170,36,,West Coast defeated Carlton by 36 points at Docklands.
-109,Regular Season,Port Adelaide,North Melbourne,Port Adelaide,North Melbourne,Football Park,2011-06-26,North Melbourne 21.10 (136) def. Port Adelaide 14.7 (91),227,45,,North Melbourne defeated Port Adelaide by 45 points at Football Park.
-110,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2011-07-01,Western Bulldogs 19.13 (127) def. Melbourne 8.15 (63),190,64,,Western Bulldogs defeated Melbourne by 64 points at Docklands.
-111,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2011-07-02,Carlton 28.16 (184) def. Richmond 12.9 (81),265,103,,Carlton defeated Richmond by 103 points at M.C.G..
-112,Regular Season,Fremantle,Gold Coast,Fremantle,Gold Coast,Subiaco,2011-07-02,Fremantle 17.10 (112) def. Gold Coast 9.8 (62),174,50,,Fremantle defeated Gold Coast by 50 points at Subiaco.
-113,Regular Season,Essendon,Geelong,Essendon,Geelong,Docklands,2011-07-02,Essendon 18.7 (115) def. Geelong 16.15 (111),226,4,,Essendon defeated Geelong by 4 points at Docklands.
-114,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,2011-07-02,Adelaide 8.9 (57) def. Sydney 6.14 (50),107,7,,Adelaide defeated Sydney by 7 points at Football Park.
-115,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2011-07-03,Brisbane Lions 15.9 (99) def. Port Adelaide 13.10 (88),187,11,,Brisbane Lions defeated Port Adelaide by 11 points at Gabba.
-116,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2011-07-03,Collingwood 15.16 (106) def. Hawthorn 9.11 (65),171,41,,Collingwood defeated Hawthorn by 41 points at M.C.G..
-117,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Docklands,2011-07-03,St Kilda 12.7 (79) def. North Melbourne 10.10 (70),149,9,,St Kilda defeated North Melbourne by 9 points at Docklands.
-118,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2011-07-08,West Coast 14.12 (96) def. Geelong 13.10 (88),184,8,,West Coast defeated Geelong by 8 points at Subiaco.
-119,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,University of Tasmania Stadium,2011-07-09,Hawthorn 16.9 (105) def. Brisbane Lions 9.9 (63),168,42,,Hawthorn defeated Brisbane Lions by 42 points at University of Tasmania Stadium.
-120,Regular Season,Gold Coast,Sydney,Gold Coast,Sydney,Carrara,2011-07-09,Sydney 15.16 (106) def. Gold Coast 4.12 (36),142,70,,Sydney defeated Gold Coast by 70 points at Carrara.
-121,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2011-07-09,Essendon 15.15 (105) def. Richmond 9.12 (66),171,39,,Essendon defeated Richmond by 39 points at M.C.G..
-122,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,M.C.G.,2011-07-10,Collingwood 22.15 (147) def. North Melbourne 3.12 (30),177,117,,Collingwood defeated North Melbourne by 117 points at M.C.G..
-123,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,2011-07-10,St Kilda 17.7 (109) def. Port Adelaide 8.5 (53),162,56,,St Kilda defeated Port Adelaide by 56 points at Football Park.
-124,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Docklands,2011-07-10,Western Bulldogs 14.12 (96) def. Carlton 9.15 (69),165,27,,Western Bulldogs defeated Carlton by 27 points at Docklands.
-125,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,2011-07-15,Essendon 12.12 (84) def. Adelaide 10.13 (73),157,11,,Essendon defeated Adelaide by 11 points at Football Park.
-126,Regular Season,Richmond,Gold Coast,Richmond,Gold Coast,Cazaly's Stadium,2011-07-16,Gold Coast 12.13 (85) def. Richmond 9.16 (70),155,15,,Gold Coast defeated Richmond by 15 points at Cazaly's Stadium.
-127,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2011-07-16,Collingwood 13.20 (98) def. Carlton 11.13 (79),177,19,,Collingwood defeated Carlton by 19 points at M.C.G..
-128,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2011-07-16,St Kilda 13.4 (82) def. West Coast 9.7 (61),143,21,,St Kilda defeated West Coast by 21 points at Docklands.
-129,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,Marrara Oval,2011-07-16,Melbourne 17.11 (113) def. Port Adelaide 14.8 (92),205,21,,Melbourne defeated Port Adelaide by 21 points at Marrara Oval.
-130,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2011-07-17,Fremantle 15.8 (98) def. Sydney 13.9 (87),185,11,,Fremantle defeated Sydney by 11 points at S.C.G..
-131,Regular Season,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,2011-07-17,Geelong 20.13 (133) def. Brisbane Lions 15.14 (104),237,29,,Geelong defeated Brisbane Lions by 29 points at Gabba.
-132,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Docklands,2011-07-17,North Melbourne 21.16 (142) def. Western Bulldogs 17.9 (111),253,31,,North Melbourne defeated Western Bulldogs by 31 points at Docklands.
-133,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2011-07-22,St Kilda 19.13 (127) def. Adelaide 3.6 (24),151,103,,St Kilda defeated Adelaide by 103 points at Docklands.
-134,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2011-07-23,North Melbourne 17.20 (122) def. Brisbane Lions 11.11 (77),199,45,,North Melbourne defeated Brisbane Lions by 45 points at Docklands.
-135,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,2011-07-23,Sydney 16.18 (114) def. Western Bulldogs 11.9 (75),189,39,,Sydney defeated Western Bulldogs by 39 points at S.C.G..
-136,Regular Season,Gold Coast,Collingwood,Gold Coast,Collingwood,Carrara,2011-07-23,Collingwood 19.15 (129) def. Gold Coast 11.9 (75),204,54,,Collingwood defeated Gold Coast by 54 points at Carrara.
-137,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2011-07-23,Carlton 24.9 (153) def. Essendon 12.7 (79),232,74,,Carlton defeated Essendon by 74 points at M.C.G..
-138,Regular Season,Geelong,Richmond,Geelong,Richmond,Docklands,2011-07-24,Geelong 17.11 (113) def. Richmond 7.9 (51),164,62,,Geelong defeated Richmond by 62 points at Docklands.
-139,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2011-07-24,Hawthorn 20.12 (132) def. Melbourne 12.6 (78),210,54,,Hawthorn defeated Melbourne by 54 points at M.C.G..
-140,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2011-07-24,West Coast 8.17 (65) def. Fremantle 9.10 (64),129,1,,West Coast defeated Fremantle by 1 points at Subiaco.
-141,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Docklands,2011-07-29,Carlton 11.14 (80) def. North Melbourne 9.8 (62),142,18,,Carlton defeated North Melbourne by 18 points at Docklands.
-142,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Docklands,2011-07-30,West Coast 15.13 (103) def. Western Bulldogs 15.5 (95),198,8,,West Coast defeated Western Bulldogs by 8 points at Docklands.
-143,Regular Season,Geelong,Melbourne,Geelong,Melbourne,GMHBA Stadium,2011-07-30,Geelong 37.11 (233) def. Melbourne 7.5 (47),280,186,,Geelong defeated Melbourne by 186 points at GMHBA Stadium.
-144,Regular Season,Gold Coast,St Kilda,Gold Coast,St Kilda,Carrara,2011-07-30,St Kilda 10.14 (74) def. Gold Coast 6.18 (54),128,20,,St Kilda defeated Gold Coast by 20 points at Carrara.
-145,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Subiaco,2011-07-30,Hawthorn 13.17 (95) def. Fremantle 6.8 (44),139,51,,Hawthorn defeated Fremantle by 51 points at Subiaco.
-146,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2011-07-31,Collingwood 25.16 (166) def. Essendon 14.8 (92),258,74,,Collingwood defeated Essendon by 74 points at M.C.G..
-147,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2011-07-31,Adelaide 16.15 (111) def. Port Adelaide 11.13 (79),190,32,,Adelaide defeated Port Adelaide by 32 points at Football Park.
-148,Regular Season,St Kilda,Fremantle,St Kilda,Fremantle,Docklands,2011-08-05,St Kilda 16.17 (113) def. Fremantle 10.12 (72),185,41,,St Kilda defeated Fremantle by 41 points at Docklands.
-149,Regular Season,Geelong,Gold Coast,Geelong,Gold Coast,GMHBA Stadium,2011-08-06,Geelong 29.14 (188) def. Gold Coast 6.2 (38),226,150,,Geelong defeated Gold Coast by 150 points at GMHBA Stadium.
-150,Regular Season,Carlton,Melbourne,Carlton,Melbourne,M.C.G.,2011-08-06,Carlton 21.8 (134) def. Melbourne 7.16 (58),192,76,,Carlton defeated Melbourne by 76 points at M.C.G..
-151,Regular Season,Essendon,Sydney,Essendon,Sydney,Docklands,2011-08-06,Essendon 15.10 (100) def. Sydney 14.15 (99),199,1,,Essendon defeated Sydney by 1 points at Docklands.
-152,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2011-08-06,Collingwood 23.21 (159) def. Port Adelaide 3.3 (21),180,138,,Collingwood defeated Port Adelaide by 138 points at Football Park.
-153,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2011-08-07,Adelaide 16.14 (110) def. Brisbane Lions 16.9 (105),215,5,,Adelaide defeated Brisbane Lions by 5 points at Gabba.
-154,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,University of Tasmania Stadium,2011-08-07,Hawthorn 15.13 (103) def. North Melbourne 13.8 (86),189,17,,Hawthorn defeated North Melbourne by 17 points at University of Tasmania Stadium.
-155,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2011-08-07,West Coast 22.15 (147) def. Richmond 14.6 (90),237,57,,West Coast defeated Richmond by 57 points at Subiaco.
-156,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Docklands,2011-08-12,Collingwood 14.5 (89) def. St Kilda 10.10 (70),159,19,,Collingwood defeated St Kilda by 19 points at Docklands.
-157,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2011-08-13,Hawthorn 31.11 (197) def. Port Adelaide 5.2 (32),229,165,,Hawthorn defeated Port Adelaide by 165 points at M.C.G..
-158,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2011-08-13,Carlton 16.19 (115) def. Fremantle 12.13 (85),200,30,,Carlton defeated Fremantle by 30 points at Subiaco.
-159,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2011-08-13,Essendon 23.12 (150) def. Western Bulldogs 15.11 (101),251,49,,Essendon defeated Western Bulldogs by 49 points at Docklands.
-160,Regular Season,Brisbane Lions,Gold Coast,Brisbane Lions,Gold Coast,Gabba,2011-08-13,Brisbane Lions 18.15 (123) def. Gold Coast 8.13 (61),184,62,,Brisbane Lions defeated Gold Coast by 62 points at Gabba.
-161,Regular Season,Melbourne,West Coast,Melbourne,West Coast,Docklands,2011-08-14,West Coast 16.14 (110) def. Melbourne 9.8 (62),172,48,,West Coast defeated Melbourne by 48 points at Docklands.
-162,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,2011-08-14,Richmond 14.15 (99) def. Sydney 7.14 (56),155,43,,Richmond defeated Sydney by 43 points at M.C.G..
-163,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2011-08-14,Geelong 14.12 (96) def. Adelaide 12.13 (85),181,11,,Geelong defeated Adelaide by 11 points at Football Park.
-164,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Docklands,2011-08-19,Hawthorn 10.18 (78) def. Carlton 8.18 (66),144,12,,Hawthorn defeated Carlton by 12 points at Docklands.
-165,Regular Season,Gold Coast,Adelaide,Gold Coast,Adelaide,Carrara,2011-08-20,Adelaide 18.17 (125) def. Gold Coast 9.10 (64),189,61,,Adelaide defeated Gold Coast by 61 points at Carrara.
-166,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,2011-08-20,West Coast 20.14 (134) def. Essendon 11.11 (77),211,57,,West Coast defeated Essendon by 57 points at Subiaco.
-167,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,Docklands,2011-08-20,North Melbourne 21.17 (143) def. Fremantle 6.9 (45),188,98,,North Melbourne defeated Fremantle by 98 points at Docklands.
-168,Regular Season,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2011-08-20,Collingwood 14.18 (102) def. Brisbane Lions 13.6 (84),186,18,,Collingwood defeated Brisbane Lions by 18 points at M.C.G..
-169,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Stadium Australia,2011-08-21,Sydney 10.23 (83) def. St Kilda 10.8 (68),151,15,,Sydney defeated St Kilda by 15 points at Stadium Australia.
-170,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Football Park,2011-08-21,Western Bulldogs 24.13 (157) def. Port Adelaide 15.7 (97),254,60,,Western Bulldogs defeated Port Adelaide by 60 points at Football Park.
-171,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2011-08-21,Richmond 17.15 (117) def. Melbourne 17.8 (110),227,7,,Richmond defeated Melbourne by 7 points at M.C.G..
-172,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Subiaco,2011-08-26,Collingwood 20.12 (132) def. Fremantle 8.4 (52),184,80,,Collingwood defeated Fremantle by 80 points at Subiaco.
-173,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2011-08-27,Hawthorn 16.17 (113) def. Western Bulldogs 10.7 (67),180,46,,Hawthorn defeated Western Bulldogs by 46 points at M.C.G..
-174,Regular Season,Geelong,Sydney,Geelong,Sydney,GMHBA Stadium,2011-08-27,Sydney 15.9 (99) def. Geelong 12.14 (86),185,13,,Sydney defeated Geelong by 13 points at GMHBA Stadium.
-175,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Docklands,2011-08-27,St Kilda 19.21 (135) def. North Melbourne 10.10 (70),205,65,,St Kilda defeated North Melbourne by 65 points at Docklands.
-176,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2011-08-27,West Coast 13.11 (89) def. Brisbane Lions 11.15 (81),170,8,,West Coast defeated Brisbane Lions by 8 points at Gabba.
-177,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,2011-08-28,Richmond 17.19 (121) def. Adelaide 15.9 (99),220,22,,Richmond defeated Adelaide by 22 points at Football Park.
-178,Regular Season,Melbourne,Gold Coast,Melbourne,Gold Coast,M.C.G.,2011-08-28,Melbourne 17.10 (112) def. Gold Coast 12.10 (82),194,30,,Melbourne defeated Gold Coast by 30 points at M.C.G..
-179,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2011-08-28,Essendon 17.18 (120) def. Port Adelaide 17.11 (113),233,7,,Essendon defeated Port Adelaide by 7 points at Docklands.
-180,Regular Season,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,2011-09-02,Geelong 22.17 (149) def. Collingwood 8.5 (53),202,96,,Geelong defeated Collingwood by 96 points at M.C.G..
-181,Regular Season,Gold Coast,Hawthorn,Gold Coast,Hawthorn,Carrara,2011-09-03,Hawthorn 16.10 (106) def. Gold Coast 14.13 (97),203,9,,Hawthorn defeated Gold Coast by 9 points at Carrara.
-182,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Docklands,2011-09-03,Western Bulldogs 15.17 (107) def. Fremantle 8.13 (61),168,46,,Western Bulldogs defeated Fremantle by 46 points at Docklands.
-183,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2011-09-03,Sydney 18.11 (119) def. Brisbane Lions 9.13 (67),186,52,,Sydney defeated Brisbane Lions by 52 points at S.C.G..
-184,Regular Season,Carlton,St Kilda,Carlton,St Kilda,M.C.G.,2011-09-03,St Kilda 13.8 (86) def. Carlton 9.12 (66),152,20,,St Kilda defeated Carlton by 20 points at M.C.G..
-185,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Subiaco,2011-09-03,West Coast 22.13 (145) def. Adelaide 7.8 (50),195,95,,West Coast defeated Adelaide by 95 points at Subiaco.
-186,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Adelaide Oval,2011-09-04,Port Adelaide 17.10 (112) def. Melbourne 15.14 (104),216,8,,Port Adelaide defeated Melbourne by 8 points at Adelaide Oval.
-187,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Docklands,2011-09-04,North Melbourne 15.14 (104) def. Richmond 13.13 (91),195,13,,North Melbourne defeated Richmond by 13 points at Docklands.
-188,Finals,Geelong,Hawthorn,Geelong,Hawthorn,M.C.G.,2011-09-09,Geelong 14.14 (98) def. Hawthorn 9.13 (67),165,31,,Geelong defeated Hawthorn by 31 points at M.C.G..
-189,Finals,Collingwood,West Coast,Collingwood,West Coast,M.C.G.,2011-09-10,Collingwood 12.10 (82) def. West Coast 9.8 (62),144,20,,Collingwood defeated West Coast by 20 points at M.C.G..
-190,Finals,St Kilda,Sydney,St Kilda,Sydney,Docklands,2011-09-10,Sydney 12.10 (82) def. St Kilda 8.9 (57),139,25,,Sydney defeated St Kilda by 25 points at Docklands.
-191,Finals,Carlton,Essendon,Carlton,Essendon,M.C.G.,2011-09-11,Carlton 21.23 (149) def. Essendon 13.9 (87),236,62,,Carlton defeated Essendon by 62 points at M.C.G..
-192,Finals,Hawthorn,Sydney,Hawthorn,Sydney,M.C.G.,2011-09-16,Hawthorn 19.8 (122) def. Sydney 13.8 (86),208,36,,Hawthorn defeated Sydney by 36 points at M.C.G..
-193,Finals,West Coast,Carlton,West Coast,Carlton,Subiaco,2011-09-17,West Coast 15.11 (101) def. Carlton 15.8 (98),199,3,,West Coast defeated Carlton by 3 points at Subiaco.
-194,Finals,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2011-09-23,Collingwood 10.8 (68) def. Hawthorn 9.11 (65),133,3,,Collingwood defeated Hawthorn by 3 points at M.C.G..
-195,Finals,Geelong,West Coast,Geelong,West Coast,M.C.G.,2011-09-24,Geelong 17.15 (117) def. West Coast 10.9 (69),186,48,,Geelong defeated West Coast by 48 points at M.C.G..
-196,Grand Final,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,2011-10-01,Geelong 18.11 (119) def. Collingwood 12.9 (81),200,38,,Geelong defeated Collingwood by 38 points at M.C.G..
+1,pre-Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2011-02-11,Adelaide 0.3.6 (24) def. by Melbourne 0.5.4 (34),58,10,,Melbourne defeated Adelaide by 10 points at Football Park.
+2,pre-Season,Melbourne,Adelaide,Melbourne,Adelaide,Football Park,2011-02-11,Melbourne 0.5.6 (36) def. Port Adelaide 1.2.6 (27),63,9,,Melbourne defeated Adelaide by 9 points at Football Park.
+3,pre-Season,Adelaide,Adelaide,Adelaide,Adelaide,Football Park,2011-02-11,Adelaide 0.6.4 (40) def. Port Adelaide 0.1.2 (8),48,32,,Adelaide defeated Adelaide by 32 points at Football Park.
+4,pre-Season,Carlton,Richmond,Carlton,Richmond,Docklands,2011-02-12,Carlton 0.6.5 (41) def. Richmond 0.3.5 (23),64,18,,Carlton defeated Richmond by 18 points at Docklands.
+5,pre-Season,Richmond,Collingwood,Richmond,Collingwood,Docklands,2011-02-12,Richmond 0.1.1 (7) def. by Collingwood 0.7.8 (50),57,43,,Collingwood defeated Richmond by 43 points at Docklands.
+6,pre-Season,Carlton,Collingwood,Carlton,Collingwood,Docklands,2011-02-12,Carlton 0.3.8 (26) def. by Collingwood 0.5.3 (33),59,7,,Collingwood defeated Carlton by 7 points at Docklands.
+7,pre-Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco Oval,2011-02-13,West Coast 0.5.1 (31) def. Hawthorn 0.4.5 (29),60,2,,West Coast defeated Hawthorn by 2 points at Subiaco Oval.
+8,pre-Season,Hawthorn,Fremantle,Hawthorn,Fremantle,Subiaco Oval,2011-02-13,Hawthorn 1.4.4 (37) def. Fremantle 0.3.5 (23),60,14,,Hawthorn defeated Fremantle by 14 points at Subiaco Oval.
+9,pre-Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco Oval,2011-02-13,West Coast 0.5.7 (37) def. Fremantle 0.4.1 (25),62,12,,West Coast defeated Fremantle by 12 points at Subiaco Oval.
+10,pre-Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,Docklands,2011-02-18,Essendon 1.11.1 (76) def. Brisbane Lions 0.2.2 (14),90,62,,Essendon defeated Brisbane Lions by 62 points at Docklands.
+11,pre-Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Docklands,2011-02-18,Brisbane Lions 0.2.3 (15) def. by St Kilda 1.5.5 (44),59,29,,St Kilda defeated Brisbane Lions by 29 points at Docklands.
+12,pre-Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2011-02-18,Essendon 0.5.8 (38) drew with St Kilda 0.6.2 (38),76,0,,Essendon and St Kilda played out a draw at Docklands.
+13,pre-Season,Greater Western Sydney,Sydney,Greater Western Sydney,Sydney,Blacktown ISP Oval,2011-02-19,Greater Western Sydney 0.0.4 (4) def. by Sydney 0.13.5 (83),87,79,,Sydney defeated Greater Western Sydney by 79 points at Blacktown ISP Oval.
+14,pre-Season,Sydney,Gold Coast,Sydney,Gold Coast,Blacktown ISP Oval,2011-02-19,Sydney 0.3.4 (22) def. by Gold Coast 0.4.1 (25),47,3,,Gold Coast defeated Sydney by 3 points at Blacktown ISP Oval.
+15,pre-Season,Greater Western Sydney,Gold Coast,Greater Western Sydney,Gold Coast,Blacktown ISP Oval,2011-02-19,Greater Western Sydney 0.4.3 (27) def. by Gold Coast 0.8.4 (52),79,25,,Gold Coast defeated Greater Western Sydney by 25 points at Blacktown ISP Oval.
+16,pre-Season,Geelong,Melbourne,Geelong,Melbourne,Skilled Stadium,2011-02-20,Geelong 0.4.8 (32) def. North Melbourne 0.2.2 (14),46,18,,Geelong defeated Melbourne by 18 points at Skilled Stadium.
+17,pre-Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,Skilled Stadium,2011-02-20,North Melbourne 1.2.2 (23) def. by Western Bulldogs 0.8.6 (54),77,31,,Western Bulldogs defeated Melbourne by 31 points at Skilled Stadium.
+18,pre-Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Skilled Stadium,2011-02-20,Geelong 0.7.4 (46) def. Western Bulldogs 0.4.1 (25),71,21,,Geelong defeated Western Bulldogs by 21 points at Skilled Stadium.
+19,pre-Season,Melbourne,Essendon,Melbourne,Essendon,Docklands,2011-02-24,Melbourne 1.11.7 (82) def. by Essendon 1.17.10 (121),203,39,,Essendon defeated Melbourne by 39 points at Docklands.
+20,pre-Season,Collingwood,Sydney,Collingwood,Sydney,Docklands,2011-02-25,Collingwood 1.12.12 (93) def. Sydney 1.10.10 (79),172,14,,Collingwood defeated Sydney by 14 points at Docklands.
+21,pre-Season,Adelaide,Richmond,Adelaide,Richmond,Traeger Park,2011-02-25,Port Adelaide 13.11 (89) def. by Richmond 14.8 (92),181,3,,Richmond defeated Adelaide by 3 points at Traeger Park.
+22,pre-Season,Geelong,St Kilda,Geelong,St Kilda,Docklands,2011-02-26,Geelong 1.6.6 (51) def. by St Kilda 1.15.7 (106),157,55,,St Kilda defeated Geelong by 55 points at Docklands.
+23,pre-Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Skilled Stadium,2011-02-26,Hawthorn 15.9 (99) def. North Melbourne 10.10 (70),169,29,,Hawthorn defeated Melbourne by 29 points at Skilled Stadium.
+24,pre-Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Visy Park,2011-02-26,Western Bulldogs 20.8 (128) def. Brisbane Lions 8.10 (58),186,70,,Western Bulldogs defeated Brisbane Lions by 70 points at Visy Park.
+25,pre-Season,Adelaide,Fremantle,Adelaide,Fremantle,Thebarton Oval,2011-02-26,Adelaide 22.9 (141) def. Fremantle 10.6 (66),207,75,,Adelaide defeated Fremantle by 75 points at Thebarton Oval.
+26,pre-Season,Greater Western Sydney,Carlton,Greater Western Sydney,Carlton,Manuka Oval,2011-02-26,Greater Western Sydney 4.2 (26) def. by Carlton 29.9 (183),209,157,,Carlton defeated Greater Western Sydney by 157 points at Manuka Oval.
+27,pre-Season,West Coast,Gold Coast,West Coast,Gold Coast,Subiaco Oval,2011-02-27,West Coast 0.12.15 (87) def. Gold Coast 1.5.11 (50),137,37,,West Coast defeated Gold Coast by 37 points at Subiaco Oval.
+28,pre-Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2011-03-04,Essendon 0.12.12 (84) def. St Kilda 0.6.9 (45),129,39,,Essendon defeated St Kilda by 39 points at Docklands.
+29,pre-Season,Carlton,Adelaide,Carlton,Adelaide,Visy Park,2011-03-04,Carlton 15.10 (100) def. Adelaide 11.10 (76),176,24,,Carlton defeated Adelaide by 24 points at Visy Park.
+30,pre-Season,Hawthorn,Richmond,Hawthorn,Richmond,"Deakin Reserve, Shepparton",2011-03-04,Hawthorn 12.17 (89) def. Richmond 7.6 (48),137,41,,"Hawthorn defeated Richmond by 41 points at Deakin Reserve, Shepparton."
+31,pre-Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2011-03-04,Port Adelaide 19.21 (135) def. Geelong 7.9 (51),186,84,,Adelaide defeated Geelong by 84 points at Football Park.
+32,pre-Season,West Coast,Collingwood,West Coast,Collingwood,Subiaco Oval,2011-03-05,West Coast 0.8.8 (56) def. by Collingwood 1.9.17 (80),136,24,,Collingwood defeated West Coast by 24 points at Subiaco Oval.
+33,pre-Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Visy Park,2011-03-05,Melbourne 12.6 (78) def. by Brisbane Lions 16.11 (107),185,29,,Brisbane Lions defeated Melbourne by 29 points at Visy Park.
+34,pre-Season,Gold Coast,Sydney,Gold Coast,Sydney,Fankhauser Reserve,2011-03-05,Gold Coast 3.5 (23) def. by Sydney 14.11 (95),118,72,,Sydney defeated Gold Coast by 72 points at Fankhauser Reserve.
+35,pre-Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Hands Oval,2011-03-05,Fremantle 9.14 (68) def. by Western Bulldogs 14.14 (98),166,30,,Western Bulldogs defeated Fremantle by 30 points at Hands Oval.
+36,pre-Season,Greater Western Sydney,Melbourne,Greater Western Sydney,Melbourne,Lavington Oval,2011-03-05,Greater Western Sydney 8.2 (50) def. by North Melbourne 18.15 (123),173,73,,Melbourne defeated Greater Western Sydney by 73 points at Lavington Oval.
+37,pre-Season,Richmond,Adelaide,Richmond,Adelaide,Visy Park,2011-03-11,Richmond 8.6 (54) def. by Adelaide 18.14 (122),176,68,,Adelaide defeated Richmond by 68 points at Visy Park.
+38,pre-Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Aurora Stadium,2011-03-11,Hawthorn 15.14 (104) def. Melbourne 12.3 (75),179,29,,Hawthorn defeated Melbourne by 29 points at Aurora Stadium.
+39,pre-Season,Fremantle,West Coast,Fremantle,West Coast,Fremantle Oval,2011-03-12,Fremantle 13.12 (90) def. West Coast 11.15 (81),171,9,,Fremantle defeated West Coast by 9 points at Fremantle Oval.
+40,pre-Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,Eureka Stadium,2011-03-12,North Melbourne 18.10 (118) def. Western Bulldogs 16.9 (105),223,13,,Melbourne defeated Western Bulldogs by 13 points at Eureka Stadium.
+41,pre-Season,Carlton,Geelong,Carlton,Geelong,Visy Park,2011-03-12,Carlton 11.15 (81) def. by Geelong 14.8 (92),173,11,,Geelong defeated Carlton by 11 points at Visy Park.
+42,pre-Season,Adelaide,Greater Western Sydney,Adelaide,Greater Western Sydney,"Willaston Oval, Willaston, South Australia",2011-03-12,Port Adelaide 21.13 (139) def. Greater Western Sydney 6.8 (44),183,95,,"Adelaide defeated Greater Western Sydney by 95 points at Willaston Oval, Willaston, South Australia."
+43,pre-Season,Sydney,St Kilda,Sydney,St Kilda,"BCU International Stadium, Coffs Harbour",2011-03-12,Sydney 12.12 (84) def. St Kilda 8.5 (53),137,31,,"Sydney defeated St Kilda by 31 points at BCU International Stadium, Coffs Harbour."
+44,pre-Season,Gold Coast,Brisbane Lions,Gold Coast,Brisbane Lions,Fankhauser Reserve,2011-03-13,Gold Coast 7.12 (54) def. by Brisbane Lions 17.20 (122),176,68,,Brisbane Lions defeated Gold Coast by 68 points at Fankhauser Reserve.
+45,Regular Season,Carlton,Richmond,Carlton,Richmond,M.C.G.,2011-03-24,Carlton 14.20 (104) def. Richmond 13.6 (84),188,20,,Carlton defeated Richmond by 20 points at M.C.G..
+46,Regular Season,Geelong,St Kilda,Geelong,St Kilda,M.C.G.,2011-03-25,Geelong 6.12 (48) def. St Kilda 6.11 (47),95,1,,Geelong defeated St Kilda by 1 points at M.C.G..
+47,Regular Season,Collingwood,Port Adelaide,Collingwood,Port Adelaide,Docklands,2011-03-26,Collingwood 24.11 (155) def. Port Adelaide 12.8 (80),235,75,,Collingwood defeated Port Adelaide by 75 points at Docklands.
+48,Regular Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,2011-03-26,Adelaide 16.9 (105) def. Hawthorn 12.13 (85),190,20,,Adelaide defeated Hawthorn by 20 points at Football Park.
+49,Regular Season,Brisbane Lions,Fremantle,Brisbane Lions,Fremantle,Gabba,2011-03-26,Fremantle 13.16 (94) def. Brisbane Lions 14.8 (92),186,2,,Fremantle defeated Brisbane Lions by 2 points at Gabba.
+50,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2011-03-27,Essendon 16.17 (113) def. Western Bulldogs 8.10 (58),171,55,,Essendon defeated Western Bulldogs by 55 points at Docklands.
+51,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,2011-03-27,Melbourne 11.18 (84) drew with Sydney 11.18 (84),168,0,,Melbourne and Sydney played out a draw at M.C.G..
+52,Regular Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco,2011-03-27,West Coast 13.14 (92) def. North Melbourne 13.10 (88),180,4,,West Coast defeated North Melbourne by 4 points at Subiaco.
+53,Regular Season,St Kilda,Richmond,St Kilda,Richmond,M.C.G.,2011-04-01,St Kilda 13.17 (95) drew with Richmond 14.11 (95),190,0,,St Kilda and Richmond played out a draw at M.C.G..
+54,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2011-04-02,Collingwood 21.17 (143) def. North Melbourne 7.14 (56),199,87,,Collingwood defeated North Melbourne by 87 points at Docklands.
+55,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,2011-04-02,West Coast 16.20 (116) def. Port Adelaide 15.8 (98),214,18,,West Coast defeated Port Adelaide by 18 points at Football Park.
+56,Regular Season,Gold Coast,Carlton,Gold Coast,Carlton,Gabba,2011-04-02,Carlton 26.15 (171) def. Gold Coast 7.10 (52),223,119,,Carlton defeated Gold Coast by 119 points at Gabba.
+57,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2011-04-02,Geelong 13.11 (89) def. Fremantle 10.18 (78),167,11,,Geelong defeated Fremantle by 11 points at Subiaco.
+58,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Docklands,2011-04-03,Western Bulldogs 19.9 (123) def. Brisbane Lions 6.9 (45),168,78,,Western Bulldogs defeated Brisbane Lions by 78 points at Docklands.
+59,Regular Season,Sydney,Essendon,Sydney,Essendon,Stadium Australia,2011-04-03,Sydney 14.14 (98) def. Essendon 13.15 (93),191,5,,Sydney defeated Essendon by 5 points at Stadium Australia.
+60,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2011-04-03,Hawthorn 16.26 (122) def. Melbourne 12.5 (77),199,45,,Hawthorn defeated Melbourne by 45 points at M.C.G..
+61,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2011-04-08,Collingwood 15.12 (102) def. Carlton 11.8 (74),176,28,,Collingwood defeated Carlton by 28 points at M.C.G..
+62,Regular Season,Western Bulldogs,Gold Coast,Western Bulldogs,Gold Coast,Docklands,2011-04-09,Western Bulldogs 18.14 (122) def. Gold Coast 7.9 (51),173,71,,Western Bulldogs defeated Gold Coast by 71 points at Docklands.
+63,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2011-04-09,Fremantle 11.13 (79) def. Adelaide 7.12 (54),133,25,,Fremantle defeated Adelaide by 25 points at Football Park.
+64,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2011-04-09,Hawthorn 17.13 (115) def. Richmond 6.16 (52),167,63,,Hawthorn defeated Richmond by 63 points at M.C.G..
+65,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,2011-04-09,Sydney 15.11 (101) def. West Coast 13.10 (88),189,13,,Sydney defeated West Coast by 13 points at Subiaco.
+66,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,M.C.G.,2011-04-10,Melbourne 12.10 (82) def. Brisbane Lions 11.5 (71),153,11,,Melbourne defeated Brisbane Lions by 11 points at M.C.G..
+67,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,GMHBA Stadium,2011-04-10,Geelong 17.20 (122) def. Port Adelaide 6.7 (43),165,79,,Geelong defeated Port Adelaide by 79 points at GMHBA Stadium.
+68,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2011-04-10,Essendon 21.10 (136) def. St Kilda 12.12 (84),220,52,,Essendon defeated St Kilda by 52 points at Docklands.
+69,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2011-04-15,Collingwood 24.17 (161) def. Richmond 13.12 (90),251,71,,Collingwood defeated Richmond by 71 points at M.C.G..
+70,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,University of Tasmania Stadium,2011-04-16,Hawthorn 10.12 (72) def. West Coast 9.11 (65),137,7,,Hawthorn defeated West Coast by 7 points at University of Tasmania Stadium.
+71,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2011-04-16,Carlton 11.13 (79) drew with Essendon 11.13 (79),158,0,,Carlton and Essendon played out a draw at M.C.G..
+72,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,2011-04-16,Geelong 11.15 (81) def. Sydney 7.12 (54),135,27,,Geelong defeated Sydney by 27 points at S.C.G..
+73,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2011-04-16,Port Adelaide 14.14 (98) def. Adelaide 9.12 (66),164,32,,Port Adelaide defeated Adelaide by 32 points at Football Park.
+74,Regular Season,Gold Coast,Melbourne,Gold Coast,Melbourne,Gabba,2011-04-17,Melbourne 23.21 (159) def. Gold Coast 9.15 (69),228,90,,Melbourne defeated Gold Coast by 90 points at Gabba.
+75,Regular Season,Fremantle,North Melbourne,Fremantle,North Melbourne,Subiaco,2011-04-17,Fremantle 18.19 (127) def. North Melbourne 14.14 (98),225,29,,Fremantle defeated North Melbourne by 29 points at Subiaco.
+76,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2011-04-21,St Kilda 13.11 (89) def. Brisbane Lions 11.10 (76),165,13,,St Kilda defeated Brisbane Lions by 13 points at Gabba.
+77,Regular Season,Port Adelaide,Gold Coast,Port Adelaide,Gold Coast,Football Park,2011-04-23,Gold Coast 15.14 (104) def. Port Adelaide 15.11 (101),205,3,,Gold Coast defeated Port Adelaide by 3 points at Football Park.
+78,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Docklands,2011-04-23,Carlton 11.19 (85) def. Adelaide 12.7 (79),164,6,,Carlton defeated Adelaide by 6 points at Docklands.
+79,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Docklands,2011-04-24,Richmond 17.10 (112) def. North Melbourne 14.19 (103),215,9,,Richmond defeated North Melbourne by 9 points at Docklands.
+80,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2011-04-25,Collingwood 16.11 (107) def. Essendon 11.11 (77),184,30,,Collingwood defeated Essendon by 30 points at M.C.G..
+81,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Subiaco,2011-04-25,Fremantle 12.13 (85) def. Western Bulldogs 11.12 (78),163,7,,Fremantle defeated Western Bulldogs by 7 points at Subiaco.
+82,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,M.C.G.,2011-04-26,Geelong 17.15 (117) def. Hawthorn 15.8 (98),215,19,,Geelong defeated Hawthorn by 19 points at M.C.G..
+83,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2011-04-28,West Coast 15.16 (106) def. Melbourne 6.16 (52),158,54,,West Coast defeated Melbourne by 54 points at Subiaco.
+84,Regular Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,2011-04-29,Carlton 12.15 (87) def. Sydney 10.11 (71),158,16,,Carlton defeated Sydney by 16 points at S.C.G..
+85,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Docklands,2011-04-30,North Melbourne 18.25 (133) def. Port Adelaide 10.13 (73),206,60,,North Melbourne defeated Port Adelaide by 60 points at Docklands.
+86,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,M.C.G.,2011-04-30,Richmond 18.16 (124) def. Brisbane Lions 14.14 (98),222,26,,Richmond defeated Brisbane Lions by 26 points at M.C.G..
+87,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,2011-04-30,Adelaide 13.12 (90) def. St Kilda 9.17 (71),161,19,,Adelaide defeated St Kilda by 19 points at Football Park.
+88,Regular Season,Essendon,Gold Coast,Essendon,Gold Coast,Docklands,2011-05-01,Essendon 31.11 (197) def. Gold Coast 8.10 (58),255,139,,Essendon defeated Gold Coast by 139 points at Docklands.
+89,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,2011-05-01,Collingwood 15.15 (105) def. Western Bulldogs 8.9 (57),162,48,,Collingwood defeated Western Bulldogs by 48 points at M.C.G..
+90,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2011-05-06,Hawthorn 15.14 (104) def. Port Adelaide 10.12 (72),176,32,,Hawthorn defeated Port Adelaide by 32 points at Football Park.
+91,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,UNSW Canberra Oval,2011-05-07,Sydney 10.13 (73) def. Western Bulldogs 10.5 (65),138,8,,Sydney defeated Western Bulldogs by 8 points at UNSW Canberra Oval.
+92,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,GMHBA Stadium,2011-05-07,Geelong 19.13 (127) def. North Melbourne 9.7 (61),188,66,,Geelong defeated North Melbourne by 66 points at GMHBA Stadium.
+93,Regular Season,Richmond,Fremantle,Richmond,Fremantle,M.C.G.,2011-05-07,Richmond 23.10 (148) def. Fremantle 14.15 (99),247,49,,Richmond defeated Fremantle by 49 points at M.C.G..
+94,Regular Season,Gold Coast,Brisbane Lions,Gold Coast,Brisbane Lions,Gabba,2011-05-07,Gold Coast 18.16 (124) def. Brisbane Lions 17.14 (116),240,8,,Gold Coast defeated Brisbane Lions by 8 points at Gabba.
+95,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2011-05-08,Essendon 16.10 (106) def. West Coast 12.18 (90),196,16,,Essendon defeated West Coast by 16 points at Docklands.
+96,Regular Season,Melbourne,Adelaide,Melbourne,Adelaide,M.C.G.,2011-05-08,Melbourne 22.17 (149) def. Adelaide 8.5 (53),202,96,,Melbourne defeated Adelaide by 96 points at M.C.G..
+97,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Docklands,2011-05-09,Carlton 11.18 (84) def. St Kilda 12.9 (81),165,3,,Carlton defeated St Kilda by 3 points at Docklands.
+98,Regular Season,Geelong,Collingwood,Geelong,Collingwood,M.C.G.,2011-05-13,Geelong 8.17 (65) def. Collingwood 9.8 (62),127,3,,Geelong defeated Collingwood by 3 points at M.C.G..
+99,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Docklands,2011-05-14,North Melbourne 19.10 (124) def. Melbourne 12.11 (83),207,41,,North Melbourne defeated Melbourne by 41 points at Docklands.
+100,Regular Season,Adelaide,Gold Coast,Adelaide,Gold Coast,Football Park,2011-05-14,Adelaide 20.10 (130) def. Gold Coast 9.19 (73),203,57,,Adelaide defeated Gold Coast by 57 points at Football Park.
+101,Regular Season,Brisbane Lions,Essendon,Brisbane Lions,Essendon,Gabba,2011-05-14,Essendon 15.12 (102) def. Brisbane Lions 9.12 (66),168,36,,Essendon defeated Brisbane Lions by 36 points at Gabba.
+102,Regular Season,Sydney,Port Adelaide,Sydney,Port Adelaide,S.C.G.,2011-05-14,Sydney 18.13 (121) def. Port Adelaide 9.5 (59),180,62,,Sydney defeated Port Adelaide by 62 points at S.C.G..
+103,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,M.C.G.,2011-05-15,Hawthorn 14.15 (99) def. St Kilda 10.9 (69),168,30,,Hawthorn defeated St Kilda by 30 points at M.C.G..
+104,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2011-05-15,Western Bulldogs 23.15 (153) def. Richmond 18.10 (118),271,35,,Western Bulldogs defeated Richmond by 35 points at Docklands.
+105,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2011-05-15,West Coast 14.12 (96) def. Fremantle 9.9 (63),159,33,,West Coast defeated Fremantle by 33 points at Subiaco.
+106,Regular Season,Carlton,Geelong,Carlton,Geelong,Docklands,2011-05-20,Geelong 15.12 (102) def. Carlton 14.16 (100),202,2,,Geelong defeated Carlton by 2 points at Docklands.
+107,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Docklands,2011-05-21,St Kilda 16.10 (106) def. Melbourne 13.8 (86),192,20,,St Kilda defeated Melbourne by 20 points at Docklands.
+108,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,2011-05-21,Fremantle 21.16 (142) def. Port Adelaide 14.6 (90),232,52,,Fremantle defeated Port Adelaide by 52 points at Football Park.
+109,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2011-05-21,Brisbane Lions 10.13 (73) def. North Melbourne 8.11 (59),132,14,,Brisbane Lions defeated North Melbourne by 14 points at Gabba.
+110,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2011-05-21,Richmond 16.9 (105) def. Essendon 13.11 (89),194,16,,Richmond defeated Essendon by 16 points at M.C.G..
+111,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,Docklands,2011-05-22,Collingwood 20.15 (135) def. Adelaide 14.8 (92),227,43,,Collingwood defeated Adelaide by 43 points at Docklands.
+112,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,2011-05-22,Hawthorn 15.16 (106) def. Sydney 8.12 (60),166,46,,Hawthorn defeated Sydney by 46 points at S.C.G..
+113,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco,2011-05-22,West Coast 26.19 (175) def. Western Bulldogs 8.4 (52),227,123,,West Coast defeated Western Bulldogs by 123 points at Subiaco.
+114,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,2011-05-27,Carlton 13.15 (93) def. Melbourne 6.10 (46),139,47,,Carlton defeated Melbourne by 47 points at M.C.G..
+115,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Docklands,2011-05-28,Sydney 10.12 (72) def. North Melbourne 9.17 (71),143,1,,Sydney defeated North Melbourne by 1 points at Docklands.
+116,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2011-05-28,St Kilda 15.12 (102) def. Fremantle 7.14 (56),158,46,,St Kilda defeated Fremantle by 46 points at Subiaco.
+117,Regular Season,Gold Coast,Geelong,Gold Coast,Geelong,Carrara,2011-05-28,Geelong 21.13 (139) def. Gold Coast 10.13 (73),212,66,,Geelong defeated Gold Coast by 66 points at Carrara.
+118,Regular Season,Richmond,Port Adelaide,Richmond,Port Adelaide,Marrara Oval,2011-05-28,Port Adelaide 13.11 (89) def. Richmond 10.14 (74),163,15,,Port Adelaide defeated Richmond by 15 points at Marrara Oval.
+119,Regular Season,Adelaide,Brisbane Lions,Adelaide,Brisbane Lions,Football Park,2011-05-29,Brisbane Lions 15.11 (101) def. Adelaide 8.13 (61),162,40,,Brisbane Lions defeated Adelaide by 40 points at Football Park.
+120,Regular Season,Collingwood,West Coast,Collingwood,West Coast,M.C.G.,2011-05-29,Collingwood 16.9 (105) def. West Coast 7.11 (53),158,52,,Collingwood defeated West Coast by 52 points at M.C.G..
+121,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Docklands,2011-05-29,Hawthorn 13.13 (91) def. Western Bulldogs 9.8 (62),153,29,,Hawthorn defeated Western Bulldogs by 29 points at Docklands.
+122,Regular Season,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,2011-06-03,Melbourne 15.11 (101) def. Essendon 10.8 (68),169,33,,Melbourne defeated Essendon by 33 points at M.C.G..
+123,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,GMHBA Stadium,2011-06-04,Geelong 23.10 (148) def. Western Bulldogs 13.9 (87),235,61,,Geelong defeated Western Bulldogs by 61 points at GMHBA Stadium.
+124,Regular Season,West Coast,Gold Coast,West Coast,Gold Coast,Subiaco,2011-06-04,West Coast 13.7 (85) def. Gold Coast 10.7 (67),152,18,,West Coast defeated Gold Coast by 18 points at Subiaco.
+125,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,2011-06-04,Collingwood 16.12 (108) def. St Kilda 7.9 (51),159,57,,Collingwood defeated St Kilda by 57 points at M.C.G..
+126,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2011-06-04,Sydney 17.14 (116) def. Brisbane Lions 7.9 (51),167,65,,Sydney defeated Brisbane Lions by 65 points at Gabba.
+127,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,M.C.G.,2011-06-05,Hawthorn 17.9 (111) def. Fremantle 13.11 (89),200,22,,Hawthorn defeated Fremantle by 22 points at M.C.G..
+128,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,Docklands,2011-06-05,North Melbourne 18.7 (115) def. Adelaide 10.8 (68),183,47,,North Melbourne defeated Adelaide by 47 points at Docklands.
+129,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2011-06-05,Carlton 16.15 (111) def. Port Adelaide 7.7 (49),160,62,,Carlton defeated Port Adelaide by 62 points at Football Park.
+130,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Docklands,2011-06-10,St Kilda 12.9 (81) def. Western Bulldogs 8.9 (57),138,24,,St Kilda defeated Western Bulldogs by 24 points at Docklands.
+131,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2011-06-11,West Coast 15.16 (106) def. Adelaide 10.7 (67),173,39,,West Coast defeated Adelaide by 39 points at Football Park.
+132,Regular Season,Gold Coast,North Melbourne,Gold Coast,North Melbourne,Carrara,2011-06-11,North Melbourne 18.14 (122) def. Gold Coast 9.9 (63),185,59,,North Melbourne defeated Gold Coast by 59 points at Carrara.
+133,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,M.C.G.,2011-06-11,Geelong 13.10 (88) def. Hawthorn 13.5 (83),171,5,,Geelong defeated Hawthorn by 5 points at M.C.G..
+134,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Docklands,2011-06-12,Carlton 19.10 (124) def. Brisbane Lions 9.9 (63),187,61,,Carlton defeated Brisbane Lions by 61 points at Docklands.
+135,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,2011-06-12,Sydney 9.21 (75) def. Richmond 9.11 (65),140,10,,Sydney defeated Richmond by 10 points at S.C.G..
+136,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2011-06-12,Fremantle 15.8 (98) def. Essendon 9.10 (64),162,34,,Fremantle defeated Essendon by 34 points at Subiaco.
+137,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2011-06-13,Collingwood 19.15 (129) def. Melbourne 6.5 (41),170,88,,Collingwood defeated Melbourne by 88 points at M.C.G..
+138,Regular Season,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,Docklands,2011-06-17,Western Bulldogs 14.16 (100) def. Adelaide 10.10 (70),170,30,,Western Bulldogs defeated Adelaide by 30 points at Docklands.
+139,Regular Season,Hawthorn,Gold Coast,Hawthorn,Gold Coast,University of Tasmania Stadium,2011-06-18,Hawthorn 19.15 (129) def. Gold Coast 8.10 (58),187,71,,Hawthorn defeated Gold Coast by 71 points at University of Tasmania Stadium.
+140,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Docklands,2011-06-18,North Melbourne 17.9 (111) def. Essendon 12.18 (90),201,21,,North Melbourne defeated Essendon by 21 points at Docklands.
+141,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2011-06-18,Richmond 18.17 (125) def. Brisbane Lions 14.10 (94),219,31,,Richmond defeated Brisbane Lions by 31 points at Gabba.
+142,Regular Season,St Kilda,Geelong,St Kilda,Geelong,M.C.G.,2011-06-18,Geelong 15.10 (100) def. St Kilda 11.6 (72),172,28,,Geelong defeated St Kilda by 28 points at M.C.G..
+143,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,M.C.G.,2011-06-19,Melbourne 22.17 (149) def. Fremantle 8.12 (60),209,89,,Melbourne defeated Fremantle by 89 points at M.C.G..
+144,Regular Season,Carlton,Sydney,Carlton,Sydney,Docklands,2011-06-19,Carlton 15.10 (100) def. Sydney 10.6 (66),166,34,,Carlton defeated Sydney by 34 points at Docklands.
+145,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2011-06-19,West Coast 15.20 (110) def. Port Adelaide 13.10 (88),198,22,,West Coast defeated Port Adelaide by 22 points at Subiaco.
+146,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,2011-06-24,Hawthorn 23.8 (146) def. Essendon 12.9 (81),227,65,,Hawthorn defeated Essendon by 65 points at M.C.G..
+147,Regular Season,Gold Coast,Western Bulldogs,Gold Coast,Western Bulldogs,Carrara,2011-06-25,Western Bulldogs 17.8 (110) def. Gold Coast 13.10 (88),198,22,,Western Bulldogs defeated Gold Coast by 22 points at Carrara.
+148,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2011-06-25,Melbourne 17.16 (118) def. Richmond 13.13 (91),209,27,,Melbourne defeated Richmond by 27 points at M.C.G..
+149,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Stadium Australia,2011-06-25,Collingwood 13.21 (99) def. Sydney 14.9 (93),192,6,,Collingwood defeated Sydney by 6 points at Stadium Australia.
+150,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2011-06-25,Fremantle 12.16 (88) def. Brisbane Lions 10.5 (65),153,23,,Fremantle defeated Brisbane Lions by 23 points at Subiaco.
+151,Regular Season,Geelong,Adelaide,Geelong,Adelaide,GMHBA Stadium,2011-06-26,Geelong 19.11 (125) def. Adelaide 10.13 (73),198,52,,Geelong defeated Adelaide by 52 points at GMHBA Stadium.
+152,Regular Season,Carlton,West Coast,Carlton,West Coast,Docklands,2011-06-26,West Coast 15.13 (103) def. Carlton 10.7 (67),170,36,,West Coast defeated Carlton by 36 points at Docklands.
+153,Regular Season,Port Adelaide,North Melbourne,Port Adelaide,North Melbourne,Football Park,2011-06-26,North Melbourne 21.10 (136) def. Port Adelaide 14.7 (91),227,45,,North Melbourne defeated Port Adelaide by 45 points at Football Park.
+154,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2011-07-01,Western Bulldogs 19.13 (127) def. Melbourne 8.15 (63),190,64,,Western Bulldogs defeated Melbourne by 64 points at Docklands.
+155,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2011-07-02,Carlton 28.16 (184) def. Richmond 12.9 (81),265,103,,Carlton defeated Richmond by 103 points at M.C.G..
+156,Regular Season,Fremantle,Gold Coast,Fremantle,Gold Coast,Subiaco,2011-07-02,Fremantle 17.10 (112) def. Gold Coast 9.8 (62),174,50,,Fremantle defeated Gold Coast by 50 points at Subiaco.
+157,Regular Season,Essendon,Geelong,Essendon,Geelong,Docklands,2011-07-02,Essendon 18.7 (115) def. Geelong 16.15 (111),226,4,,Essendon defeated Geelong by 4 points at Docklands.
+158,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,2011-07-02,Adelaide 8.9 (57) def. Sydney 6.14 (50),107,7,,Adelaide defeated Sydney by 7 points at Football Park.
+159,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2011-07-03,Brisbane Lions 15.9 (99) def. Port Adelaide 13.10 (88),187,11,,Brisbane Lions defeated Port Adelaide by 11 points at Gabba.
+160,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2011-07-03,Collingwood 15.16 (106) def. Hawthorn 9.11 (65),171,41,,Collingwood defeated Hawthorn by 41 points at M.C.G..
+161,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Docklands,2011-07-03,St Kilda 12.7 (79) def. North Melbourne 10.10 (70),149,9,,St Kilda defeated North Melbourne by 9 points at Docklands.
+162,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2011-07-08,West Coast 14.12 (96) def. Geelong 13.10 (88),184,8,,West Coast defeated Geelong by 8 points at Subiaco.
+163,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,University of Tasmania Stadium,2011-07-09,Hawthorn 16.9 (105) def. Brisbane Lions 9.9 (63),168,42,,Hawthorn defeated Brisbane Lions by 42 points at University of Tasmania Stadium.
+164,Regular Season,Gold Coast,Sydney,Gold Coast,Sydney,Carrara,2011-07-09,Sydney 15.16 (106) def. Gold Coast 4.12 (36),142,70,,Sydney defeated Gold Coast by 70 points at Carrara.
+165,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2011-07-09,Essendon 15.15 (105) def. Richmond 9.12 (66),171,39,,Essendon defeated Richmond by 39 points at M.C.G..
+166,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,M.C.G.,2011-07-10,Collingwood 22.15 (147) def. North Melbourne 3.12 (30),177,117,,Collingwood defeated North Melbourne by 117 points at M.C.G..
+167,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,2011-07-10,St Kilda 17.7 (109) def. Port Adelaide 8.5 (53),162,56,,St Kilda defeated Port Adelaide by 56 points at Football Park.
+168,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Docklands,2011-07-10,Western Bulldogs 14.12 (96) def. Carlton 9.15 (69),165,27,,Western Bulldogs defeated Carlton by 27 points at Docklands.
+169,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,2011-07-15,Essendon 12.12 (84) def. Adelaide 10.13 (73),157,11,,Essendon defeated Adelaide by 11 points at Football Park.
+170,Regular Season,Richmond,Gold Coast,Richmond,Gold Coast,Cazaly's Stadium,2011-07-16,Gold Coast 12.13 (85) def. Richmond 9.16 (70),155,15,,Gold Coast defeated Richmond by 15 points at Cazaly's Stadium.
+171,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2011-07-16,Collingwood 13.20 (98) def. Carlton 11.13 (79),177,19,,Collingwood defeated Carlton by 19 points at M.C.G..
+172,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2011-07-16,St Kilda 13.4 (82) def. West Coast 9.7 (61),143,21,,St Kilda defeated West Coast by 21 points at Docklands.
+173,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,Marrara Oval,2011-07-16,Melbourne 17.11 (113) def. Port Adelaide 14.8 (92),205,21,,Melbourne defeated Port Adelaide by 21 points at Marrara Oval.
+174,Regular Season,Sydney,Fremantle,Sydney,Fremantle,S.C.G.,2011-07-17,Fremantle 15.8 (98) def. Sydney 13.9 (87),185,11,,Fremantle defeated Sydney by 11 points at S.C.G..
+175,Regular Season,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,2011-07-17,Geelong 20.13 (133) def. Brisbane Lions 15.14 (104),237,29,,Geelong defeated Brisbane Lions by 29 points at Gabba.
+176,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Docklands,2011-07-17,North Melbourne 21.16 (142) def. Western Bulldogs 17.9 (111),253,31,,North Melbourne defeated Western Bulldogs by 31 points at Docklands.
+177,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2011-07-22,St Kilda 19.13 (127) def. Adelaide 3.6 (24),151,103,,St Kilda defeated Adelaide by 103 points at Docklands.
+178,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2011-07-23,North Melbourne 17.20 (122) def. Brisbane Lions 11.11 (77),199,45,,North Melbourne defeated Brisbane Lions by 45 points at Docklands.
+179,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,2011-07-23,Sydney 16.18 (114) def. Western Bulldogs 11.9 (75),189,39,,Sydney defeated Western Bulldogs by 39 points at S.C.G..
+180,Regular Season,Gold Coast,Collingwood,Gold Coast,Collingwood,Carrara,2011-07-23,Collingwood 19.15 (129) def. Gold Coast 11.9 (75),204,54,,Collingwood defeated Gold Coast by 54 points at Carrara.
+181,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2011-07-23,Carlton 24.9 (153) def. Essendon 12.7 (79),232,74,,Carlton defeated Essendon by 74 points at M.C.G..
+182,Regular Season,Geelong,Richmond,Geelong,Richmond,Docklands,2011-07-24,Geelong 17.11 (113) def. Richmond 7.9 (51),164,62,,Geelong defeated Richmond by 62 points at Docklands.
+183,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,2011-07-24,Hawthorn 20.12 (132) def. Melbourne 12.6 (78),210,54,,Hawthorn defeated Melbourne by 54 points at M.C.G..
+184,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2011-07-24,West Coast 8.17 (65) def. Fremantle 9.10 (64),129,1,,West Coast defeated Fremantle by 1 points at Subiaco.
+185,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Docklands,2011-07-29,Carlton 11.14 (80) def. North Melbourne 9.8 (62),142,18,,Carlton defeated North Melbourne by 18 points at Docklands.
+186,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Docklands,2011-07-30,West Coast 15.13 (103) def. Western Bulldogs 15.5 (95),198,8,,West Coast defeated Western Bulldogs by 8 points at Docklands.
+187,Regular Season,Geelong,Melbourne,Geelong,Melbourne,GMHBA Stadium,2011-07-30,Geelong 37.11 (233) def. Melbourne 7.5 (47),280,186,,Geelong defeated Melbourne by 186 points at GMHBA Stadium.
+188,Regular Season,Gold Coast,St Kilda,Gold Coast,St Kilda,Carrara,2011-07-30,St Kilda 10.14 (74) def. Gold Coast 6.18 (54),128,20,,St Kilda defeated Gold Coast by 20 points at Carrara.
+189,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Subiaco,2011-07-30,Hawthorn 13.17 (95) def. Fremantle 6.8 (44),139,51,,Hawthorn defeated Fremantle by 51 points at Subiaco.
+190,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2011-07-31,Collingwood 25.16 (166) def. Essendon 14.8 (92),258,74,,Collingwood defeated Essendon by 74 points at M.C.G..
+191,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2011-07-31,Adelaide 16.15 (111) def. Port Adelaide 11.13 (79),190,32,,Adelaide defeated Port Adelaide by 32 points at Football Park.
+192,Regular Season,St Kilda,Fremantle,St Kilda,Fremantle,Docklands,2011-08-05,St Kilda 16.17 (113) def. Fremantle 10.12 (72),185,41,,St Kilda defeated Fremantle by 41 points at Docklands.
+193,Regular Season,Geelong,Gold Coast,Geelong,Gold Coast,GMHBA Stadium,2011-08-06,Geelong 29.14 (188) def. Gold Coast 6.2 (38),226,150,,Geelong defeated Gold Coast by 150 points at GMHBA Stadium.
+194,Regular Season,Carlton,Melbourne,Carlton,Melbourne,M.C.G.,2011-08-06,Carlton 21.8 (134) def. Melbourne 7.16 (58),192,76,,Carlton defeated Melbourne by 76 points at M.C.G..
+195,Regular Season,Essendon,Sydney,Essendon,Sydney,Docklands,2011-08-06,Essendon 15.10 (100) def. Sydney 14.15 (99),199,1,,Essendon defeated Sydney by 1 points at Docklands.
+196,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2011-08-06,Collingwood 23.21 (159) def. Port Adelaide 3.3 (21),180,138,,Collingwood defeated Port Adelaide by 138 points at Football Park.
+197,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2011-08-07,Adelaide 16.14 (110) def. Brisbane Lions 16.9 (105),215,5,,Adelaide defeated Brisbane Lions by 5 points at Gabba.
+198,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,University of Tasmania Stadium,2011-08-07,Hawthorn 15.13 (103) def. North Melbourne 13.8 (86),189,17,,Hawthorn defeated North Melbourne by 17 points at University of Tasmania Stadium.
+199,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2011-08-07,West Coast 22.15 (147) def. Richmond 14.6 (90),237,57,,West Coast defeated Richmond by 57 points at Subiaco.
+200,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Docklands,2011-08-12,Collingwood 14.5 (89) def. St Kilda 10.10 (70),159,19,,Collingwood defeated St Kilda by 19 points at Docklands.
+201,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2011-08-13,Hawthorn 31.11 (197) def. Port Adelaide 5.2 (32),229,165,,Hawthorn defeated Port Adelaide by 165 points at M.C.G..
+202,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2011-08-13,Carlton 16.19 (115) def. Fremantle 12.13 (85),200,30,,Carlton defeated Fremantle by 30 points at Subiaco.
+203,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2011-08-13,Essendon 23.12 (150) def. Western Bulldogs 15.11 (101),251,49,,Essendon defeated Western Bulldogs by 49 points at Docklands.
+204,Regular Season,Brisbane Lions,Gold Coast,Brisbane Lions,Gold Coast,Gabba,2011-08-13,Brisbane Lions 18.15 (123) def. Gold Coast 8.13 (61),184,62,,Brisbane Lions defeated Gold Coast by 62 points at Gabba.
+205,Regular Season,Melbourne,West Coast,Melbourne,West Coast,Docklands,2011-08-14,West Coast 16.14 (110) def. Melbourne 9.8 (62),172,48,,West Coast defeated Melbourne by 48 points at Docklands.
+206,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,2011-08-14,Richmond 14.15 (99) def. Sydney 7.14 (56),155,43,,Richmond defeated Sydney by 43 points at M.C.G..
+207,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2011-08-14,Geelong 14.12 (96) def. Adelaide 12.13 (85),181,11,,Geelong defeated Adelaide by 11 points at Football Park.
+208,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Docklands,2011-08-19,Hawthorn 10.18 (78) def. Carlton 8.18 (66),144,12,,Hawthorn defeated Carlton by 12 points at Docklands.
+209,Regular Season,Gold Coast,Adelaide,Gold Coast,Adelaide,Carrara,2011-08-20,Adelaide 18.17 (125) def. Gold Coast 9.10 (64),189,61,,Adelaide defeated Gold Coast by 61 points at Carrara.
+210,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,2011-08-20,West Coast 20.14 (134) def. Essendon 11.11 (77),211,57,,West Coast defeated Essendon by 57 points at Subiaco.
+211,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,Docklands,2011-08-20,North Melbourne 21.17 (143) def. Fremantle 6.9 (45),188,98,,North Melbourne defeated Fremantle by 98 points at Docklands.
+212,Regular Season,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2011-08-20,Collingwood 14.18 (102) def. Brisbane Lions 13.6 (84),186,18,,Collingwood defeated Brisbane Lions by 18 points at M.C.G..
+213,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Stadium Australia,2011-08-21,Sydney 10.23 (83) def. St Kilda 10.8 (68),151,15,,Sydney defeated St Kilda by 15 points at Stadium Australia.
+214,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Football Park,2011-08-21,Western Bulldogs 24.13 (157) def. Port Adelaide 15.7 (97),254,60,,Western Bulldogs defeated Port Adelaide by 60 points at Football Park.
+215,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2011-08-21,Richmond 17.15 (117) def. Melbourne 17.8 (110),227,7,,Richmond defeated Melbourne by 7 points at M.C.G..
+216,Regular Season,Fremantle,Collingwood,Fremantle,Collingwood,Subiaco,2011-08-26,Collingwood 20.12 (132) def. Fremantle 8.4 (52),184,80,,Collingwood defeated Fremantle by 80 points at Subiaco.
+217,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2011-08-27,Hawthorn 16.17 (113) def. Western Bulldogs 10.7 (67),180,46,,Hawthorn defeated Western Bulldogs by 46 points at M.C.G..
+218,Regular Season,Geelong,Sydney,Geelong,Sydney,GMHBA Stadium,2011-08-27,Sydney 15.9 (99) def. Geelong 12.14 (86),185,13,,Sydney defeated Geelong by 13 points at GMHBA Stadium.
+219,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Docklands,2011-08-27,St Kilda 19.21 (135) def. North Melbourne 10.10 (70),205,65,,St Kilda defeated North Melbourne by 65 points at Docklands.
+220,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2011-08-27,West Coast 13.11 (89) def. Brisbane Lions 11.15 (81),170,8,,West Coast defeated Brisbane Lions by 8 points at Gabba.
+221,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,2011-08-28,Richmond 17.19 (121) def. Adelaide 15.9 (99),220,22,,Richmond defeated Adelaide by 22 points at Football Park.
+222,Regular Season,Melbourne,Gold Coast,Melbourne,Gold Coast,M.C.G.,2011-08-28,Melbourne 17.10 (112) def. Gold Coast 12.10 (82),194,30,,Melbourne defeated Gold Coast by 30 points at M.C.G..
+223,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2011-08-28,Essendon 17.18 (120) def. Port Adelaide 17.11 (113),233,7,,Essendon defeated Port Adelaide by 7 points at Docklands.
+224,Regular Season,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,2011-09-02,Geelong 22.17 (149) def. Collingwood 8.5 (53),202,96,,Geelong defeated Collingwood by 96 points at M.C.G..
+225,Regular Season,Gold Coast,Hawthorn,Gold Coast,Hawthorn,Carrara,2011-09-03,Hawthorn 16.10 (106) def. Gold Coast 14.13 (97),203,9,,Hawthorn defeated Gold Coast by 9 points at Carrara.
+226,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Docklands,2011-09-03,Western Bulldogs 15.17 (107) def. Fremantle 8.13 (61),168,46,,Western Bulldogs defeated Fremantle by 46 points at Docklands.
+227,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2011-09-03,Sydney 18.11 (119) def. Brisbane Lions 9.13 (67),186,52,,Sydney defeated Brisbane Lions by 52 points at S.C.G..
+228,Regular Season,Carlton,St Kilda,Carlton,St Kilda,M.C.G.,2011-09-03,St Kilda 13.8 (86) def. Carlton 9.12 (66),152,20,,St Kilda defeated Carlton by 20 points at M.C.G..
+229,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Subiaco,2011-09-03,West Coast 22.13 (145) def. Adelaide 7.8 (50),195,95,,West Coast defeated Adelaide by 95 points at Subiaco.
+230,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Adelaide Oval,2011-09-04,Port Adelaide 17.10 (112) def. Melbourne 15.14 (104),216,8,,Port Adelaide defeated Melbourne by 8 points at Adelaide Oval.
+231,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Docklands,2011-09-04,North Melbourne 15.14 (104) def. Richmond 13.13 (91),195,13,,North Melbourne defeated Richmond by 13 points at Docklands.
+232,Finals,Geelong,Hawthorn,Geelong,Hawthorn,M.C.G.,2011-09-09,Geelong 14.14 (98) def. Hawthorn 9.13 (67),165,31,,Geelong defeated Hawthorn by 31 points at M.C.G..
+233,Finals,Collingwood,West Coast,Collingwood,West Coast,M.C.G.,2011-09-10,Collingwood 12.10 (82) def. West Coast 9.8 (62),144,20,,Collingwood defeated West Coast by 20 points at M.C.G..
+234,Finals,St Kilda,Sydney,St Kilda,Sydney,Docklands,2011-09-10,Sydney 12.10 (82) def. St Kilda 8.9 (57),139,25,,Sydney defeated St Kilda by 25 points at Docklands.
+235,Finals,Carlton,Essendon,Carlton,Essendon,M.C.G.,2011-09-11,Carlton 21.23 (149) def. Essendon 13.9 (87),236,62,,Carlton defeated Essendon by 62 points at M.C.G..
+236,Finals,Hawthorn,Sydney,Hawthorn,Sydney,M.C.G.,2011-09-16,Hawthorn 19.8 (122) def. Sydney 13.8 (86),208,36,,Hawthorn defeated Sydney by 36 points at M.C.G..
+237,Finals,West Coast,Carlton,West Coast,Carlton,Subiaco,2011-09-17,West Coast 15.11 (101) def. Carlton 15.8 (98),199,3,,West Coast defeated Carlton by 3 points at Subiaco.
+238,Finals,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2011-09-23,Collingwood 10.8 (68) def. Hawthorn 9.11 (65),133,3,,Collingwood defeated Hawthorn by 3 points at M.C.G..
+239,Finals,Geelong,West Coast,Geelong,West Coast,M.C.G.,2011-09-24,Geelong 17.15 (117) def. West Coast 10.9 (69),186,48,,Geelong defeated West Coast by 48 points at M.C.G..
+240,Grand Final,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,2011-10-01,Geelong 18.11 (119) def. Collingwood 12.9 (81),200,38,,Geelong defeated Collingwood by 38 points at M.C.G..
