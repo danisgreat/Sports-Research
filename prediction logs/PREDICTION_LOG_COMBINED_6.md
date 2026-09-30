@@ -1609,3 +1609,96 @@ The rule inventory is closed (`CURRENT_RULES.md` §D9). **No rule, control, flag
 2. P-522 — Liga Endesa, Casademont Zaragoza 81, La Laguna Tenerife 80 (ACB 105380; `LIVE_ISSUED`).
 
 **Entries still awaiting settlement, first to last:** none of the two requested. P-519, P-520 and P-521 were **not processed** because they were outside this instruction; each keeps its reconciliation status.
+
+---
+
+# Part 6 working continuation — 2026-09-30 (AEST): session opening, no prediction issued
+
+| Item | Value |
+|---|---|
+| Governing method | MDS-2026.09.29-v6.0 · CR-2026.09.29-P1 · SCV-2026.09.19-v2; copied from METHOD.md header at session read |
+| Freeze with every card | `CONTROL_MANIFEST_2026-09-29-3.md`, normalized-CRLF SHA-256 `d23995fd00020cb3a90dea4adf96c215b49b2e25fb535460e032c7b160e4b3d7`; name and SHA copied from the Current freeze receipt line in GAME_LOG_STATUS_CURRENT.md |
+| Session read (reading gate) | CURRENT_RULES.md in full; CARD_AND_LOG_TEMPLATES.md §1 (including §1A), §5; SOURCES.md §1 in full — read completed 2026-09-30 17:58:52 +10:00 AEST (Australia/Sydney) under receipt SHA `d23995fd0002`. Re-read when the receipt SHA changes. Session layout §3 and universe §4 also read |
+| Per-card reads | Before each card: RULES_<SPORT>.md §0 (+ relevant league rules); SOURCES.md §3.x; Part 6 custody note and unsettled section; Part 5 top canonical snapshot. No sport §0 page read for this opening |
+| Next new prediction ID | **P-523**. Part 6 top custody note authorizes P-523 onward; the complete continuation after the END marker contains settlement appends for P-518/P-522 but no new P-523+ card. Its prior session row still says P-523. Part 5 top snapshot and GAME_LOG_STATUS_CURRENT.md agree. P-518–P-522 remain reserved. This opening consumes no ID; recheck the tail before issuance |
+| Status | LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE |
+| Operating mode | SPORTS_ONLY / MARKET_BLIND |
+| Custody verification | Original block: 141,740 bytes, raw SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`, verified before append. Append only to this file, after END ORIGINAL P518 SOURCE BYTES; no other repository or Drive log created |
+| Handshake result | Verified METHOD.md method/control/scoring; verified current receipt name and normalized-CRLF SHA against the copied status-file value; verified pipeline file, Part 6 custody and reserved-ID sequence. The exact three steps and expected values referenced by the user's initial prompt were NOT_SUPPLIED: the supplied prompt-1 reference contains no explicit three-step handshake. These observed checks are not represented as a complete execution of an unspecified handshake |
+| Prompt conflict disposition | Supplied historical prompt-1 reference requests a separate Drive mini log, cited-section precedence, an obsolete guide, q ranking, TESTING candidates and full-log delivery. The user's current instruction controls: Part 6 only; current CURRENT_RULES.md precedence and P-523+ pipeline amendment; lessons parked for LEARNINGS_INDEX.md §10, never new TESTING rules; new-entry-only delivery after prediction queries. Drive fallback applies only if repository writing fails; it was not needed |
+
+## 0. Universe declarations
+
+PENDING — the user has not supplied the day's leagues. Before any card, declare every event in those leagues with feed IDs and verified start times under CARD_AND_LOG_TEMPLATES.md §4. Never edit a declared universe; append dispositions so every event is accounted for by settlement.
+
+## 1. Incomplete / Unsettled Logs
+
+State checks only; no contract grading, settlement correction or retrospective performed. Each fresh state below is supported by one field-owner page, not three terminal lineages. All three remain FINAL-UNSETTLED.
+
+| ID | Event / issued identity | Feed state / result observed | Checked (AEST) | Open item |
+|---|---|---|---|---|
+| P-519 | Gold Coast Suns(W) v St Kilda(W), AFLW 8942 | FINAL: exact match centre says Full Time; Gold Coast 69–39 St Kilda | 2026-09-30 17:54:57 | Working settlement cites 7412; append source-backed event-reference correction, check issue timing, injury/process claims, issued baseline literals and independent terminal lineages |
+| P-520 | Hanwha Eagles @ Lotte Giants, KBO, 2026-09-27, Sajik 17:00 KST; durable issued game ID NOT_PRESERVED | FINAL: date-specific KBO scoreboard says HANWHA 6 FINAL 2 LOTTE | 2026-09-30 17:55:17 | Bind exact fixture/cutoff and stable identity; audit process, baseline provenance and independent lineages; retain issued ranks and flag q-order conflict |
+| P-521 | Río Breogán v Asisa Joventut, ACB 105378 | FINAL: exact event section says Final; Breogán 110–104 Joventut | 2026-09-30 17:55:17 | Verify issue timing, process/stat claims and independent terminal lineages; preserve issued diagnostic/NOT_YET_DERIVED baseline literals |
+
+State sources (OPENED): [AFLW 8942](https://www.afl.com.au/aflw/matches/8942); [KBO 2026-09-27 scoreboard](https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-09-27); [ACB 105378](https://live.acb.com/es/partidos/rio-breogan-vs-asisa-joventut-105378/resumen). Check times are session observation timestamps; publication times NOT_RETRIEVED. The ACB page contains unrelated placeholder panels; only the exact 105378 event section was used.
+
+GAME_LOG_STATUS_CURRENT.md open follow-ups, transcribed at 2026-09-30 17:58:52 +10:00 AEST. These are historical register dispositions, not refreshed feed states. Its queue heading says 23; an earlier dated narrative says 22. The enumerated primary table has 23 active handles, listed below; no count or issued record was silently corrected.
+
+| Handle | Parent | Remaining item / recorded disposition |
+|---|---|---|
+| TMP-OPEN-20260917-01 | P-430-C05 | Al Ain corners O3.5: research LOSS, not booked; AFC field-owner record or explicitly reconciled approved provider needed |
+| TMP-OPEN-20260915-04 | P-418 | Drukpa v RTC result NOT_RECOVERED; kickoff conflict; dated second-round official/result source needed |
+| TMP-OPEN-20260915-01 | P-407-C01 | Club Brugge corners O4.5: provisional WIN; Pro League record missing |
+| TMP-OPEN-20260915-02 | P-409-C02 | Troyes corners O2.5: provisional WIN; LFP record missing |
+| TMP-OPEN-20260915-03 | P-410-C05 | Leipzig corners O4.5: provisional WIN; provider split 7/8, DFL record missing |
+| TMP-OPEN-20260915-05 | P-419-C05 | Total corners O7.5: provisional LOSS; Allsvenskan record missing |
+| TMP-OPEN-20260914-01 | P-399-C02 | Total corners O8.5: provisional WIN; Serie A record missing |
+| TMP-OPEN-20260914-02 | P-401-C01 | Total corners O8.5: provisional WIN; Allsvenskan record missing |
+| TMP-OPEN-20260914-03 | P-401-C03 | IFK corners O4.5: provisional WIN; controlling record still missing |
+| TMP-OPEN-20260912-01 | P-377-C02 | Total corners O8.5: provisional LOSS; ESPN has no statistics |
+| TMP-OPEN-20260911-01 | P-368-C02 | Total corners O7.5: provisional research WIN; independence/frozen-provider gap |
+| TMP-OPEN-20260911-02 | P-369-C01 | Total corners U10.5: provisional research LOSS; independence/frozen-provider gap |
+| TMP-OPEN-20260909-01 | P-341-C03 | Total corners O7.5: UNSETTLEABLE to frozen standard; stale ESPN Uganda route |
+| TMP-OPEN-20260909-02 | P-342-C03 | Total corners O8.5: provisional research WIN |
+| TMP-OPEN-20260909-03 | P-126 | Corners/event identity: IDENTITY_STATE_CONFLICT — UNRESOLVED |
+| TMP-OPEN-20260909-04 | P-148-C02 | Toluca team corners: provisional LOSS |
+| TMP-OPEN-20260909-05 | P-149-C02 | Ventura team corners: provisional WIN |
+| TMP-OPEN-20260909-06 | P-176-C05 | Amiens/Versailles corners U10.5: provisional WIN |
+| TMP-OPEN-20260909-07 | P-178-C05 | Cannes/Le Puy corners U10.5: provisional LOSS |
+| TMP-OPEN-20260909-08 | P-179-C05 | Thionville/Paris 13 corners U10.5: provisional WIN |
+| TMP-OPEN-20260909-09 | P-233 | Beijing/Lanzhou corners O8.5: provisional WIN |
+| TMP-OPEN-20260909-10 | P-234-C03 | Dalian/Shenhua corners O8.5: provisional WIN; disruption noted |
+| TMP-OPEN-20260909-11 | P-235 | Shandong/Shanghai Port corners O8.5: provisional WIN |
+
+| Documentary handle | Parent | Open follow-up |
+|---|---|---|
+| TMP-AUDIT-20260912-01 | P-250-C05 | China FA Cup field-owner/data-partner corner record; no route recovered |
+| TMP-AUDIT-20260912-02 | P-251-C05 | Lega Serie A record; ESPN research WIN not the frozen provider |
+| TMP-AUDIT-20260912-05 | P-265-C05 | Leagues Cup official corner record; threshold/provider sensitive |
+| TMP-AUDIT-20260912-03 | P-255-C05 | UNRESOLVED_PERIOD: regulation corner split or valid sourced bound; prior WIN withdrawn |
+| TMP-AUDIT-20260912-04 | P-256-C05 | UNRESOLVED_PERIOD: regulation corner split or valid sourced bound; prior WIN withdrawn |
+
+## 2. Temporary-ID / Canonical-ID Conflict Logs
+
+No new conflict or TMP record issued. P-518–P-522 remain reserved under reconciliation. Part 5 remains canonical through P-517. The status register has not incorporated the earlier 2026-09-30 P-518/P-522 settlement append: its broader five-card reconciliation language is not evidence that those two are still unsettled. Canonical custody/performance exclusion remains a separate issue.
+
+## 3. Fully Settled Logs
+
+No new settlements. The prior 2026-09-30 append settles P-518 and P-522 as LIVE_ISSUED learning-only records; that append remains the sourced record and their performance exclusion stands.
+
+## 4. General Learnings, Rule Changes, Observations and New Sources
+
+No prediction or retrospective; no new lesson promoted, rule or TESTING candidate created. Any later lesson is one parked line for LEARNINGS_INDEX.md §10 with its evidence pointer. No independent live-card skill claim follows from these state checks.
+
+## 5. Document Update Mapping
+
+| Item | Target file and section (or proposed new file and purpose) | Status |
+|---|---|---|
+| Session receipt, reading gate, next ID and queue readback | prediction logs/PREDICTION_LOG_COMBINED_6.md, this session block §§0–3 | DONE |
+| Reconcile current status register with P-518/P-522 sourced append and dated queue count | GAME_LOG_STATUS_CURRENT.md, current queue correction and primary follow-up queue; P518_P522_RECONCILIATION.md, P-518/P-522 rows | TODO, separate maintainer scope; no edits in this opening |
+| Future evidence-backed lessons | LEARNINGS_INDEX.md §10, parked lines only | No lesson generated in this opening |
+
+### Check-time correction (session opening only)
+
+The exact observation second for the P-520 and P-521 follow-up extraction was NOT_RECORDED. Their two `17:55:17` cells above were an unsupported timestamp and must not be used as exact retrieval receipts. The verified observation bound is **2026-09-30 17:54:57–17:58:52 AEST** (UTC clock sampled after the initial page retrievals, through the recorded session-read completion). Feed states and event identities are unchanged. P-519's initial read is timestamped by the 17:54:57 clock observation. No issued card or original source byte changed.
