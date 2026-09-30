@@ -1,97 +1,35 @@
-# AFL Grand Final — Rules, Code & Analytical Framework
+# AFL Grand Final — rules and procedures
 
-**Sport Discipline:** `AFL`  
-**Competition / League Subfolder:** `AFL Grand Final`  
-**Governing Body:** AFL Commission  
-**Inaugural Era / Foundation:** 1898  
-**Status:** Canonical Reference Framework & Operating Protocol
+**Scope:** the men's AFL premiership decider, 2026 rules era. **Checked:** 30 September 2026. For an earlier Grand Final, use that year's regulations; drawn Grand Finals historically had different procedures.
 
----
+## Complete governing text
 
-## 1. Annual Rules & Competition Audit Protocol (Mandatory Reminder)
+- [2026 Laws of Australian Football](https://resources.afl.com.au/afl/document/2026/02/13/8676d880-481a-4211-a479-305f138ce8b6/Laws-of-Australian-Football-Final-13-February-2026-.pdf) governs play, scoring, free kicks and score review. The whole Laws and their exceptions apply to this match.
+- [AFL Regulations, 11 February 2026](https://resources.afl.com.au/afl/document/2026/02/13/54c158af-15e9-483b-a195-62a0f4e33b11/AFL-Regulations-Final-11-February-2026-.pdf) governs the finals bracket and venue (2.6–2.7, Annexure 1), ties (2.8), match-day teams and interchange (11–12), interrupted matches (33), reports and tribunal (16–20). [AFL Rules](https://resources.afl.com.au/afl/document/2026/02/13/52922632-b4be-4c8d-82b8-3766b96c8a88/AFL-Rules-Final-11-February-2026-.pdf) covers club and player governance.
+- [AFL policy index](https://www.afl.com.au/policies) supplies current tribunal, medical, anti-doping and other instruments. For full wording, apply these originals, including the relevant annexures; this page is an operational index.
 
-> [!IMPORTANT]
-> ### 🚨 ANNUAL PRE-SEASON AUDIT REMINDER
-> **Target Audit Date:** **`August 25 (Annually, exactly one month prior to Grand Final week)`**  
-> **Standard Season Kickoff Window:** **`Last Saturday in September (or first Saturday in October)`**  
->
-> Exactly **one month prior to the commencement of every new season**, a full operational audit must be executed to determine whether the analytical parameters, league rules, or tournament structures require updating.
+## How the decider is reached
 
-### Pre-Season Audit Checklist
-Before issuing any forecast or recording historical results for an upcoming season:
-1. **Rulebook Amendments:** Audit newly ratified rule changes by AFL Commission (e.g. playing duration, clock rules, overtime procedures, substitution mechanics, penalty enforcement).
-2. **Mini-Competitions & In-Season Tournaments:** Check for newly introduced mini-competitions, in-season cups, showcase rounds, or altered playoff brackets (e.g., Grand Final Sprint, Longest Kick competition.).
-3. **Franchise & Conference Realignment:** Verify team expansion, relocation, division restructuring, or conference realignment.
-4. **Roster & Player Availability Governance:** Inspect changes to active roster limits, injury replacement protocols, concussion management bylaws, and substitute eligibility rules.
-5. **Officiating & Review Technology:** Review updates to video review systems, automated officiating (VAR, ARC, ABS, Hawk-Eye), and coaches' challenge allowances.
-6. **Model Baseline Recalibration:** Recompute league-wide scoring baselines, margin standard deviations, key-number masses, and team priors.
+The 2026 Final Ten first sends seventh against tenth and eighth against ninth through the wildcard round. The highest ranked winner becomes seventh and the other eighth. Those eight proceed through qualifying and elimination finals, semi-finals and preliminary finals. The two preliminary-final winners contest the Grand Final. This is a single match, not a best-of series. See regulations 2.6–2.7 and Annexure 1 and the [AFL wildcard announcement](https://www.afl.com.au/news/1451971/wildcard-finals-round). There is no separate Grand Final standings tiebreak: entry is decided by the bracket.
 
----
+Unless the AFL Commission determines otherwise, the Grand Final is at the Melbourne Cricket Ground (reg. 2.7(g)). Venue and designated home/away sides must be read from the official fixture. The MCG is a scheduled venue, not evidence that a Melbourne-based participant has ordinary home-field status. The match uses the AFL men's playing Laws, 18 on field and five interchange players on the 23-player team sheet, with the 75-interchange regulation subject to the specific finals/extra-time provisions.
 
-## 2. Core Playing Rules & Scoring Framework
+## Score, clock and a drawn final
 
-### Match Duration & Clock Governance
-- **Regulation Playing Time:** 4 quarters x 20 minutes plus time-on.
-- **Scoring Architecture:** Goal = 6 points, Behind = 1 point.
-- **Overtime & Tie Resolution:** Extra Time Protocol: If scores are tied at full time, two 3-minute halves (with time-on) are played. If still tied, the process repeats until a winner emerges. The historical Grand Final Replay rule was abolished post-2016.
+Four 20-minute quarters plus time-on apply. A goal is six points and a behind is one. Score reviews, after-siren scoring and all other scoring exceptions remain subject to the Laws. A Grand Final cannot finish tied under 2026 reg. 2.8:
 
----
+1. Goal umpires confirm equal scores and notify timekeepers. A 6-minute-30-second rest follows.
+2. Teams change ends. Play a three-minute period plus time-on; change ends without a break; play a second three-minute period plus time-on.
+3. If still level, repeat another pair of three-minute periods plus time-on, with changes of ends, until a winner is determined. Check reg. 2.8 for ready-to-play, accredited-person access, timekeeper and interchange provisions. The [AFL's finals additional-time procedure](https://www.afl.com.au/news/1409464/2025-toyota-afl-finals-series-drawn-match-playing-of-additional-time) explains the process; the 2026 regulation controls.
 
-## 3. Competition Structure & Tournament Framework
+An earlier Grand Final may have had a replay or a different additional-time system. Never project the current rule backward onto historical yearly breakdowns.
 
-### Regular Season & Format
-- **Format:** Single championship match contested between the winners of the two Preliminary Finals, traditionally staged at the Melbourne Cricket Ground (MCG).
-- **Standings & Tie-Breaking Criteria:**
-  - Standard standings calculated by championship points or winning percentage.
-  - Head-to-head records, differential percentages (e.g. percentage in AFL, run differential in baseball, point differential in football).
-- **Post-Season / Finals System:** Ultimate deciding fixture of the AFL season. Winner receives the AFL Premiership Cup, Premiership Medals, and the best-on-ground receives the Norm Smith Medal.
+## Match-day and result procedure
 
----
+Verify the official match ID, fixture, teams, venue, scheduled start, official team sheets, emergencies and late replacements under regs. 11–12. Record regulation and any additional-time scores separately, then the final goals, behinds and points from AFL match centre. If an interruption, abandonment or venue change occurs, use the AFL's specific ruling and reg. 33 before recording a final or winner. Reportable offences and player eligibility are governed by the regulations and tribunal process, not by the final score alone.
 
-## 4. Roster, Squad & Officiating Governance
+For analysis, identify this as a neutral scheduled championship context and a finals rules state. Determine whether a result or market includes additional time from its actual contract; AFL competition rules alone do not define private settlement terms. Keep the original official result and citation with the yearly result.
 
-### Squad Management & Substitutions
-- **Squad Size & Active Roster:** 22 named players + 1 tactical substitute selected from the final 26-man squads submitted Thursday night.
-- **Player Eligibility & Availability:** Team sheets and inactive lists must be re-verified against official feeds within 60 minutes of scheduled start time.
+## Repository analysis and settlement controls
 
-### Officiating & Video Review Framework
-- **Officiating Crew:** Senior senior panel: 4 field umpires, 4 boundary umpires, 2 goal umpires, full ARC review operations.
-- **Review Protocols:** Standardized review triggers for goal-line / boundary line disputes, scoring plays, turnovers, or challenged decisions.
-
----
-
-## 5. Analytical Modeling & Settlement Protocol
-
-### Mathematical Modeling Methodology
-- **Distributional Architecture:** Grand Final pricing applies venue prior (MCG ground dimensions 160m x 141m), neutral/home crowd distribution, and finals pressure metrics (clearance and contested possession differentials).
-- **Key Constraints:**
-  - Model must anchor on official league population base rates.
-  - Cushion lines (+k.5) and derivative handicap markets must be derived from the joint score/run distribution object, never estimated independently.
-  - Weather vectors (wind, temperature, precipitation, altitude) must be mapped to ground orientation and venue geometry.
-
-### Official Settlement Protocol
-- **Data Lineage:** Settled immediately upon final siren of regulation (or extra time if required). Official trophy presentation constitutes final record.
-- **Official Game Threshold:** Matches must meet the governing body's minimum completion threshold to be deemed official for full-game settlements.
-- **Postponements & Rescheduled Matches:** If a match is delayed, suspended, or moved, settlement follows official league completion rules; uncompleted events void under standard market rules.
-
----
-
-## 6. Machine-Readable Configuration Schema (JSON)
-
-```json
-{
-  "competition_name": "AFL Grand Final",
-  "sport_category": "AFL",
-  "subfolder_directory": "AFL Grand Final",
-  "governing_body": "AFL Commission",
-  "season_kickoff_window": "Last Saturday in September (or first Saturday in October)",
-  "annual_audit_reminder_date": "August 25 (Annually, exactly one month prior to Grand Final week)",
-  "audit_interval_days_prior": 30,
-  "match_duration": "4 quarters x 20 minutes plus time-on.",
-  "scoring_rules": "Goal = 6 points, Behind = 1 point.",
-  "overtime_protocol": "Extra Time Protocol: If scores are tied at full time, two 3-minute halves (with time-on) are played. If still tied, the process repeats until a winner emerges. The historical Grand Final Replay rule was abolished post-2016.",
-  "roster_rules": "22 named players + 1 tactical substitute selected from the final 26-man squads submitted Thursday night.",
-  "officiating": "Senior senior panel: 4 field umpires, 4 boundary umpires, 2 goal umpires, full ARC review operations.",
-  "settlement_source": "Settled immediately upon final siren of regulation (or extra time if required). Official trophy presentation constitutes final record."
-}
-```
+For a Sports Research forecast or settlement, also apply [current repository controls](../../../CURRENT_RULES.md) and the [Australian football analysis rules](../../../RULES_AFL.md). These documents govern evidence, modelling and prediction-card workflow; the official league texts above govern how the match is actually played and classified.

@@ -1,97 +1,35 @@
-# Australian Football League (AFL) Premiership — Rules, Code & Analytical Framework
+# AFL premiership — rules and competition procedures
 
-**Sport Discipline:** `AFL`  
-**Competition / League Subfolder:** `AFL`  
-**Governing Body:** AFL Commission  
-**Inaugural Era / Foundation:** 1897 (as VFL; national AFL era from 1990)  
-**Status:** Canonical Reference Framework & Operating Protocol
+**Scope:** men's AFL premiership, 2026 rules era. **Checked:** 30 September 2026. This file sits beside the annual results folders. For a historical result, use the laws and regulations in force on that match date, not the 2026 edition by default.
 
----
+## Complete controlling documents
 
-## 1. Annual Rules & Competition Audit Protocol (Mandatory Reminder)
+The complete enforceable wording, definitions, exceptions, diagrams, sanctions and procedures is in the AFL's published documents below. Read the relevant clause in the original document whenever a decision depends on precise wording. This index does not replace those texts.
 
-> [!IMPORTANT]
-> ### 🚨 ANNUAL PRE-SEASON AUDIT REMINDER
-> **Target Audit Date:** **`February 15 (Annually, exactly one month prior to season kickoff)`**  
-> **Standard Season Kickoff Window:** **`Mid-March (Round 1 / Opening Round)`**  
->
-> Exactly **one month prior to the commencement of every new season**, a full operational audit must be executed to determine whether the analytical parameters, league rules, or tournament structures require updating.
+1. [2026 Laws of Australian Football, 72-page PDF](https://resources.afl.com.au/afl/document/2026/02/13/8676d880-481a-4211-a479-305f138ce8b6/Laws-of-Australian-Football-Final-13-February-2026-.pdf): field and ball; teams, interchange and umpires; time; scoring; marks, disposals, out of bounds and stoppages; free kicks, advantage, 50-metre penalties; reporting, order-off and blood procedures. See Parts A–D and Laws 1–24.
+2. [AFL Regulations, 11 February 2026, 139-page PDF](https://resources.afl.com.au/afl/document/2026/02/13/54c158af-15e9-483b-a195-62a0f4e33b11/AFL-Regulations-Final-11-February-2026-.pdf): competition and ladder (reg. 2); grounds and equipment (3–10); lists and match-day teams (11–12); umpires, reporting, tribunal and appeals (15–20); interrupted matches (33); Final Ten bracket (Annexure 1). AFL rules and regulations prevail where the Laws expressly provide for a variation.
+3. [AFL Rules, 11 February 2026, PDF](https://resources.afl.com.au/afl/document/2026/02/13/52922632-b4be-4c8d-82b8-3766b96c8a88/AFL-Rules-Final-11-February-2026-.pdf): club and player governance, registration, lists, recruitment, draft and transfers, integrity and disciplinary powers. [AFL policies index](https://www.afl.com.au/policies) also links the current CBA, tribunal guidelines, medical and anti-doping policies. These are separate instruments; the playing Laws alone are not a complete league rule set.
 
-### Pre-Season Audit Checklist
-Before issuing any forecast or recording historical results for an upcoming season:
-1. **Rulebook Amendments:** Audit newly ratified rule changes by AFL Commission (e.g. playing duration, clock rules, overtime procedures, substitution mechanics, penalty enforcement).
-2. **Mini-Competitions & In-Season Tournaments:** Check for newly introduced mini-competitions, in-season cups, showcase rounds, or altered playoff brackets (e.g., Gather Round (all matches played in South Australia), Opening Round (northern states marquee fixtures).).
-3. **Franchise & Conference Realignment:** Verify team expansion, relocation, division restructuring, or conference realignment.
-4. **Roster & Player Availability Governance:** Inspect changes to active roster limits, injury replacement protocols, concussion management bylaws, and substitute eligibility rules.
-5. **Officiating & Review Technology:** Review updates to video review systems, automated officiating (VAR, ARC, ABS, Hawk-Eye), and coaches' challenge allowances.
-6. **Model Baseline Recalibration:** Recompute league-wide scoring baselines, margin standard deviations, key-number masses, and team priors.
+## Match rules that determine results
 
----
+- Eighteen players per side are on the field. In 2026 the tactical substitute was removed: five interchange players may be named, making a 23-player match team. The regulation defines a 75-interchange cap. Check reg. 12 for cap exclusions, head-injury assessment, emergencies, team sheets and late amendments. [AFL 2026 interchange announcement](https://www.afl.com.au/news/1435386/league-scraps-sup-rule-and-centre-bounce-in-major-shake-up).
+- Four 20-minute quarters plus time-on apply under Law 10 and AFL match conditions. Goals are six points and behinds one; total points are six times goals plus behinds. A touched ball, post contact, rushed behind, score review or after-siren kick requires the precise scoring Laws, not just this formula. A home-and-away draw stands.
+- The 2026 centre restart uses a ball-up instead of a bounce. The 2026 laws and interpretations also cover starting positions, last disposal out of bounds between the 50-metre arcs, ruck engagement at centre ball-ups, kick-in time, shrugging as prior opportunity, and the protected-area stand requirement. Apply the [2026 law-change explanation](https://www.afl.com.au/news/1464391/explainer-the-seven-afl-rule-changes-coming-in-for-2026) alongside the Laws and regulations.
+- Laws 12–18 govern starting positions, ball-up/throw-in, marks, scoring, kick-ins, tackles, holding the ball, out of bounds and free kicks. Law 19 covers 50-metre penalties; Law 20 covers disposal after a mark or free kick; Law 21 covers play-on and advantage. Score review is governed through the umpiring/scoring procedures and AFL regulations. Consult the original clause for exact triggers and exceptions.
 
-## 2. Core Playing Rules & Scoring Framework
+## Season, ladder and finals
 
-### Match Duration & Clock Governance
-- **Regulation Playing Time:** 4 quarters x 20 minutes plus time-on (stoppages, goals, ball out of bounds; ~30-33 mins actual per quarter)
-- **Scoring Architecture:** Goal = 6 points (kicked between middle tall posts without being touched); Behind = 1 point (kicked between tall and outer short post, hit post, or touched over line).
-- **Overtime & Tie Resolution:** Home-and-away season: Draws stand (2 points awarded to each team). Finals: Two 3-minute halves of extra time, repeated if still tied until a result is determined.
+- The fixture, including home designation, dates and venues, is set or changed by the AFL (reg. 2.5). Do not treat a fixed round count or calendar date as a standing rule.
+- Home-and-away ladder: four premiership points for a win, two each for a draw, zero for a loss or bye, subject to interrupted-match and disciplinary determinations. Ties are separated by points percentage (points for divided by points against, times 100), then premiership points in games between the tied clubs, then percentage in those games, then a lot (reg. 2.5). A cancelled or incomplete match has its own reg. 33 outcome; do not assume ordinary draw treatment.
+- **2026 Final Ten:** ranks 7–10 play wildcard finals (7 v 10; 8 v 9). The higher ranked wildcard winner becomes seed 7 and the other seed 8. The top six rest that week; the surviving eight then enter the qualifying/elimination, semi, preliminary and grand-final rounds. The full bracket and venue exceptions are in regs. 2.6–2.7 and Annexure 1. [AFL wildcard announcement](https://www.afl.com.au/news/1451971/wildcard-finals-round).
+- A tied final, including the Grand Final, has a 6-minute-30-second rest, then two three-minute periods plus time-on with a change of ends between them. If still tied, further pairs of three-minute periods are repeated until a winner exists; interchange and personnel conditions are in reg. 2.8. There is no current grand-final replay. The Grand Final is at the MCG unless the Commission determines otherwise (reg. 2.7(g)).
 
----
+## Administration and evidence procedure
 
-## 3. Competition Structure & Tournament Framework
+Before a match or result is recorded, identify season, competition, round, venue, official match ID, participant names, team sheet and later changes. Use AFL match centre for scheduled state, final status, period scores, goals/behinds and final result. For a suspension, injury substitute, abandoned match or changed venue, use the relevant AFL decision and regulation rather than an assumed generic rule. Preserve the official result and the source/date used. Keep AFL and AFLW records and scoring baselines separate.
 
-### Regular Season & Format
-- **Format:** 18 clubs playing 23 regular season matches plus Gather Round and Opening Round. Top 8 clubs qualify for the 4-week AFL Finals Series.
-- **Standings & Tie-Breaking Criteria:**
-  - Standard standings calculated by championship points or winning percentage.
-  - Head-to-head records, differential percentages (e.g. percentage in AFL, run differential in baseball, point differential in football).
-- **Post-Season / Finals System:** AFL Final Eight System: Week 1 features Qualifying Finals (1v4, 2v3; double chance) and Elimination Finals (5v8, 6v7; knockout). Week 2 features Semi-Finals. Week 3 features Preliminary Finals. Week 4 features the AFL Grand Final at the MCG.
+**Annual audit:** check the AFL policies index, current Laws, Rules, Regulations, tribunal guidelines, fixture and announcements before each season and again before finals. A fixed reminder date is not equivalent to one month before an annually variable kickoff.
 
----
+## Repository analysis and settlement controls
 
-## 4. Roster, Squad & Officiating Governance
-
-### Squad Management & Substitutions
-- **Squad Size & Active Roster:** Matchday squad: 22 on field/bench + 1 tactical substitute (introduced 2023 as 5-man bench with tactical sub). 75 interchange rotations cap per match.
-- **Player Eligibility & Availability:** Team sheets and inactive lists must be re-verified against official feeds within 60 minutes of scheduled start time.
-
-### Officiating & Video Review Framework
-- **Officiating Crew:** 4 field umpires, 2 boundary umpires, 2 goal umpires, plus the AFL Review Centre (ARC) for ball-tracking and goal-line edge detection review.
-- **Review Protocols:** Standardized review triggers for goal-line / boundary line disputes, scoring plays, turnovers, or challenged decisions.
-
----
-
-## 5. Analytical Modeling & Settlement Protocol
-
-### Mathematical Modeling Methodology
-- **Distributional Architecture:** Scoring shots (goals + behinds) decomposed into territory, inside-50 efficiency, marks inside 50, and conversion probability (p = goals/shots). Points modeled as S * (1 + 5p).
-- **Key Constraints:**
-  - Model must anchor on official league population base rates.
-  - Cushion lines (+k.5) and derivative handicap markets must be derived from the joint score/run distribution object, never estimated independently.
-  - Weather vectors (wind, temperature, precipitation, altitude) must be mapped to ground orientation and venue geometry.
-
-### Official Settlement Protocol
-- **Data Lineage:** Settled from AFL Official Match Centre / Champion Data feeds. Official completion requires 4 completed quarters. Push/draw terms follow contract rules.
-- **Official Game Threshold:** Matches must meet the governing body's minimum completion threshold to be deemed official for full-game settlements.
-- **Postponements & Rescheduled Matches:** If a match is delayed, suspended, or moved, settlement follows official league completion rules; uncompleted events void under standard market rules.
-
----
-
-## 6. Machine-Readable Configuration Schema (JSON)
-
-```json
-{
-  "competition_name": "Australian Football League (AFL) Premiership",
-  "sport_category": "AFL",
-  "subfolder_directory": "AFL",
-  "governing_body": "AFL Commission",
-  "season_kickoff_window": "Mid-March (Round 1 / Opening Round)",
-  "annual_audit_reminder_date": "February 15 (Annually, exactly one month prior to season kickoff)",
-  "audit_interval_days_prior": 30,
-  "match_duration": "4 quarters x 20 minutes plus time-on (stoppages, goals, ball out of bounds; ~30-33 mins actual per quarter)",
-  "scoring_rules": "Goal = 6 points (kicked between middle tall posts without being touched); Behind = 1 point (kicked between tall and outer short post, hit post, or touched over line).",
-  "overtime_protocol": "Home-and-away season: Draws stand (2 points awarded to each team). Finals: Two 3-minute halves of extra time, repeated if still tied until a result is determined.",
-  "roster_rules": "Matchday squad: 22 on field/bench + 1 tactical substitute (introduced 2023 as 5-man bench with tactical sub). 75 interchange rotations cap per match.",
-  "officiating": "4 field umpires, 2 boundary umpires, 2 goal umpires, plus the AFL Review Centre (ARC) for ball-tracking and goal-line edge detection review.",
-  "settlement_source": "Settled from AFL Official Match Centre / Champion Data feeds. Official completion requires 4 completed quarters. Push/draw terms follow contract rules."
-}
-```
+For a Sports Research forecast or settlement, also apply [current repository controls](../../../CURRENT_RULES.md) and the [Australian football analysis rules](../../../RULES_AFL.md). These documents govern evidence, modelling and prediction-card workflow; the official league texts above govern how the match is actually played and classified.

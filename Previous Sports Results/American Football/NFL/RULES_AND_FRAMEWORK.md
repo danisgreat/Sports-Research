@@ -1,97 +1,35 @@
-# National Football League (NFL) — Rules, Code & Analytical Framework
+# NFL — playing rules, season and postseason procedures
 
-**Sport Discipline:** `American Football`  
-**Competition / League Subfolder:** `NFL`  
-**Governing Body:** NFL Management Council / Competition Committee  
-**Inaugural Era / Foundation:** 1920 (as APFA; renamed NFL in 1922; merged with AFL in 1970)  
-**Status:** Canonical Reference Framework & Operating Protocol
+**Scope:** National Football League, 2026 playing-rule edition. **Checked:** 30 September 2026. For prior yearly results, use the rulebook, schedule and roster rules in force that season.
 
----
+## Complete official rules
 
-## 1. Annual Rules & Competition Audit Protocol (Mandatory Reminder)
+- [2026 NFL Rulebook, complete PDF](https://static.www.nfl.com/image/upload/fl_attachment/league/tqivdkzt9mu6wdgsh1ku.pdf) and [official HTML rulebook and 2026 amendment list](https://operations.nfl.com/rules-officiating/2026-nfl-rulebook). The PDF's Rules 1–3 cover field, ball and definitions; 4–5 timing, players and equipment; 6–10 kicks, downs, passing and catches; 11 scoring; 12–14 conduct and penalties; 15 replay; 16 overtime; 17–19 emergencies and officials. The penalty table and approved rulings are part of the source. Use the exact article and exceptions for a disputed play.
+- [NFL tiebreaking procedures](https://www.nfl.com/standings/tie-breaking-procedures) govern division and wild-card ties; do not use point differential as a universal first tiebreak. [NFL schedule formula](https://operations.nfl.com/calendar-events/nfl-schedule/making-the-schedule) and [2026 playoff picture](https://www.nfl.com/standings/playoff-picture) establish the fixture and postseason context. Roster and contract limits are separate from the playing rulebook; see [NFL Football Operations roster sizes](https://operations.nfl.com/calendar-events/nfl-free-agency/contract-language).
 
-> [!IMPORTANT]
-> ### 🚨 ANNUAL PRE-SEASON AUDIT REMINDER
-> **Target Audit Date:** **`August 5 (Annually, exactly one month prior to regular season kickoff / Hall of Fame game)`**  
-> **Standard Season Kickoff Window:** **`Thursday following first Monday in September`**  
->
-> Exactly **one month prior to the commencement of every new season**, a full operational audit must be executed to determine whether the analytical parameters, league rules, or tournament structures require updating.
+## Playing and scoring
 
-### Pre-Season Audit Checklist
-Before issuing any forecast or recording historical results for an upcoming season:
-1. **Rulebook Amendments:** Audit newly ratified rule changes by NFL Management Council / Competition Committee (e.g. playing duration, clock rules, overtime procedures, substitution mechanics, penalty enforcement).
-2. **Mini-Competitions & In-Season Tournaments:** Check for newly introduced mini-competitions, in-season cups, showcase rounds, or altered playoff brackets (e.g., NFL International Series (London, Munich, Frankfurt, São Paulo), Thanksgiving Tripleheader, Christmas Day games.).
-3. **Franchise & Conference Realignment:** Verify team expansion, relocation, division restructuring, or conference realignment.
-4. **Roster & Player Availability Governance:** Inspect changes to active roster limits, injury replacement protocols, concussion management bylaws, and substitute eligibility rules.
-5. **Officiating & Review Technology:** Review updates to video review systems, automated officiating (VAR, ARC, ABS, Hawk-Eye), and coaches' challenge allowances.
-6. **Model Baseline Recalibration:** Recompute league-wide scoring baselines, margin standard deviations, key-number masses, and team priors.
+Eleven players per side play four 15-minute quarters. Rule 4 controls game/play clocks, timeouts, two-minute warning, runoffs and period extension. Rule 5 controls substitutions and eligible personnel. Four downs to gain ten yards are governed by Rule 7 and definitions. A touchdown is six points; a placekick try one; a successful two-point scrimmage try two; a field goal three; a safety two. Rule 11 handles defensive scores and unusual try outcomes. A final score can include defensive and special-teams points. Rules 6, 9 and 10 distinguish free kicks, punts, fair catches and touchbacks; 2026 kickoff alignment, touchback and declared onside-kick changes are listed on the rulebook page. Catch/possession, pass interference and fouls must be determined from Rules 3, 8 and 12–14.
 
----
+Replay initiation, reviewable rulings, non-reviewable plays and consultation are in Rule 15. The existence of replay does not make every judgement or foul reviewable. Rule 17 governs extraordinary interruption and unfair acts; an incomplete event requires the league's actual decision.
 
-## 2. Core Playing Rules & Scoring Framework
+## Regulation ties and overtime — Rule 16
 
-### Match Duration & Clock Governance
-- **Regulation Playing Time:** 4 quarters x 15 minutes (60 minutes regulation). 12-minute halftime.
-- **Scoring Architecture:** Touchdown = 6 points; Field Goal = 3 points; Safety = 2 points; Try/PAT Kick = 1 point; 2-Point Conversion = 2 points.
-- **Overtime & Tie Resolution:** Regular season: 10-minute period. Both teams get a possession unless first team scores a TD, or defensive safety. If tied after 10 mins, game is a tie. Postseason: 15-minute periods until a winner is determined; both teams guaranteed a possession regardless of first-possession TD.
+- **Regular season:** one ten-minute overtime period. Each team normally gets a chance to possess, with the rulebook's opening-possession safety exception. Once each has had an opportunity, the higher score wins; otherwise the next score can win under Rule 16. If tied at the end of ten minutes, the result is a tie, even if a possession is unfinished.
+- **Postseason:** fifteen-minute periods continue until a winner. Each team normally has at least one chance to possess, with the same specified safety exception. If still tied or the second team's initial possession is unfinished after a period, another begins. Rule 16 has detailed turnover, kick, foul, timeout, coin-toss and replay exceptions. The opening team's touchdown alone does not automatically end the game.
 
----
+## League format and team eligibility
 
-## 3. Competition Structure & Tournament Framework
+The regular season is 17 games per team over 18 weeks, with one bye, subject to the official schedule. There are 32 clubs in two conferences and eight four-team divisions. Four division winners and three wild cards per conference make a 14-team, single-elimination playoff; the top seed in each conference gets a first-round bye. The AFC and NFC champions meet in the Super Bowl. Apply the NFL's separate division and wild-card tiebreak algorithms in order, restarting as instructed when teams are eliminated from a tie; do not reduce them to a generic head-to-head or point-differential shortcut.
 
-### Regular Season & Format
-- **Format:** 32 franchises divided into AFC and NFC (4 divisions of 4 teams each). 18-week regular season (17 games + 1 bye week).
-- **Standings & Tie-Breaking Criteria:**
-  - Standard standings calculated by championship points or winning percentage.
-  - Head-to-head records, differential percentages (e.g. percentage in AFL, run differential in baseball, point differential in football).
-- **Post-Season / Finals System:** 14-team postseason (7 per conference: 4 division winners + 3 wild cards). #1 seeds receive first-round bye. Single-elimination: Wild Card Weekend, Divisional Round, Conference Championships, Super Bowl.
+The standard active/inactive list is 53, with limited practice-squad elevations. Gameday active maximum is 48 when at least eight offensive linemen are active, otherwise 47; verify that season's [NFL Football Operations roster guidance](https://operations.nfl.com/calendar-events/nfl-free-agency/contract-language) and official game inactives. The published inactives, elevations and emergency quarterback status matter more than a projected depth chart. Do not assume a universal 48 active players or a 60-minute-before-kickoff finalization.
 
----
+## Results and annual control
 
-## 4. Roster, Squad & Officiating Governance
+Before storing a result, identify season, week or playoff round, official game ID, scheduled and actual venue, participants, regulation/overtime status and official final box score. Use NFL Gamebook or NFL.com game centre as the primary score and stats source. Keep forfeits, postponements and league corrections distinct from played finals. Rulebook and competition policy determine an official game; an external market's void or settlement terms require that market's own contract.
 
-### Squad Management & Substitutions
-- **Squad Size & Active Roster:** 53-man active roster (48 dressed on game day if 8 offensive linemen dressed), 16-man practice squad, emergency 3rd quarterback activation rule.
-- **Player Eligibility & Availability:** Team sheets and inactive lists must be re-verified against official feeds within 60 minutes of scheduled start time.
+At every season start, check the new rulebook, amendment list, schedule, tiebreaking page, roster/CBA updates and postseason bracket. NFL, UFL and IFAF are separate rules populations.
 
-### Officiating & Video Review Framework
-- **Officiating Crew:** 7 on-field officials (Referee, Umpire, Down Judge, Line Judge, Field Judge, Side Judge, Back Judge) + NFL Officiating Replay Command Center in New York. 2 coach's challenges per game (3rd awarded if both successful). Automatic review of all scoring plays, turnovers, and plays within 2 minutes of each half.
-- **Review Protocols:** Standardized review triggers for goal-line / boundary line disputes, scoring plays, turnovers, or challenged decisions.
+## Repository analysis and settlement controls
 
----
-
-## 5. Analytical Modeling & Settlement Protocol
-
-### Mathematical Modeling Methodology
-- **Distributional Architecture:** Key number anchoring on 3, 7, 6, 10, 4, 14. Margin residual width ~13.6 points. Weather (temperature, cross-winds >15 mph, precipitation) integrated into total and passing efficiency projections.
-- **Key Constraints:**
-  - Model must anchor on official league population base rates.
-  - Cushion lines (+k.5) and derivative handicap markets must be derived from the joint score/run distribution object, never estimated independently.
-  - Weather vectors (wind, temperature, precipitation, altitude) must be mapped to ground orientation and venue geometry.
-
-### Official Settlement Protocol
-- **Data Lineage:** Official settlement via NFL GSIS / Game Statistics and Information System. Minimum 55 completed minutes of play required for official game status.
-- **Official Game Threshold:** Matches must meet the governing body's minimum completion threshold to be deemed official for full-game settlements.
-- **Postponements & Rescheduled Matches:** If a match is delayed, suspended, or moved, settlement follows official league completion rules; uncompleted events void under standard market rules.
-
----
-
-## 6. Machine-Readable Configuration Schema (JSON)
-
-```json
-{
-  "competition_name": "National Football League (NFL)",
-  "sport_category": "American Football",
-  "subfolder_directory": "NFL",
-  "governing_body": "NFL Management Council / Competition Committee",
-  "season_kickoff_window": "Thursday following first Monday in September",
-  "annual_audit_reminder_date": "August 5 (Annually, exactly one month prior to regular season kickoff / Hall of Fame game)",
-  "audit_interval_days_prior": 30,
-  "match_duration": "4 quarters x 15 minutes (60 minutes regulation). 12-minute halftime.",
-  "scoring_rules": "Touchdown = 6 points; Field Goal = 3 points; Safety = 2 points; Try/PAT Kick = 1 point; 2-Point Conversion = 2 points.",
-  "overtime_protocol": "Regular season: 10-minute period. Both teams get a possession unless first team scores a TD, or defensive safety. If tied after 10 mins, game is a tie. Postseason: 15-minute periods until a winner is determined; both teams guaranteed a possession regardless of first-possession TD.",
-  "roster_rules": "53-man active roster (48 dressed on game day if 8 offensive linemen dressed), 16-man practice squad, emergency 3rd quarterback activation rule.",
-  "officiating": "7 on-field officials (Referee, Umpire, Down Judge, Line Judge, Field Judge, Side Judge, Back Judge) + NFL Officiating Replay Command Center in New York. 2 coach's challenges per game (3rd awarded if both successful). Automatic review of all scoring plays, turnovers, and plays within 2 minutes of each half.",
-  "settlement_source": "Official settlement via NFL GSIS / Game Statistics and Information System. Minimum 55 completed minutes of play required for official game status."
-}
-```
+For a Sports Research forecast or settlement, also apply [current repository controls](../../../CURRENT_RULES.md) and the [American football analysis rules](../../../RULES_AMERICAN_FOOTBALL.md). These documents govern evidence, modelling and prediction-card workflow; the official competition texts above govern how the match is actually played and classified.

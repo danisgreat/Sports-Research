@@ -1,97 +1,35 @@
-# United Football League (UFL) — Rules, Code & Analytical Framework
+# United Football League — 2026 rules and competition procedures
 
-**Sport Discipline:** `American Football`  
-**Competition / League Subfolder:** `UFL`  
-**Governing Body:** UFL Board of Directors / Football Operations  
-**Inaugural Era / Foundation:** 2024 (merger of modern USFL and XFL)  
-**Status:** Canonical Reference Framework & Operating Protocol
+**Scope:** the 2026 UFL season and postseason. **Checked:** 30 September 2026. Earlier UFL editions had materially different teams, tries and postseason structure; apply the rules of the actual season for historical results.
 
----
+## Complete official playing rules
 
-## 1. Annual Rules & Competition Audit Protocol (Mandatory Reminder)
+[2026 UFL Official Playing Rules, 146-page PDF](https://storage.googleapis.com/ufleague-prod/2026/04/16/bac19629-902f-4e21-864b-281baedd8888.pdf) is linked from the league's [official rules page](https://www.theufl.com/rules). Its preface gives UFL Football Operations final authority over intra-league interpretation. Rules 1–3 cover field, ball and definitions; 4–5 clock and players; 6–10 kicks, scrimmage, possession, passes and catches; 11 scoring; 12–14 conduct and enforcement; 15 replay; 16 overtime; 17–18 emergencies and officials. Read the full article, notes and exceptions for any exact decision. NFL rules are not a substitute.
 
-> [!IMPORTANT]
-> ### 🚨 ANNUAL PRE-SEASON AUDIT REMINDER
-> **Target Audit Date:** **`February 28 (Annually, one month prior to opening weekend)`**  
-> **Standard Season Kickoff Window:** **`Late March / Early April`**  
->
-> Exactly **one month prior to the commencement of every new season**, a full operational audit must be executed to determine whether the analytical parameters, league rules, or tournament structures require updating.
+## Field, time, play and scoring
 
-### Pre-Season Audit Checklist
-Before issuing any forecast or recording historical results for an upcoming season:
-1. **Rulebook Amendments:** Audit newly ratified rule changes by UFL Board of Directors / Football Operations (e.g. playing duration, clock rules, overtime procedures, substitution mechanics, penalty enforcement).
-2. **Mini-Competitions & In-Season Tournaments:** Check for newly introduced mini-competitions, in-season cups, showcase rounds, or altered playoff brackets (e.g., None.).
-3. **Franchise & Conference Realignment:** Verify team expansion, relocation, division restructuring, or conference realignment.
-4. **Roster & Player Availability Governance:** Inspect changes to active roster limits, injury replacement protocols, concussion management bylaws, and substitute eligibility rules.
-5. **Officiating & Review Technology:** Review updates to video review systems, automated officiating (VAR, ARC, ABS, Hawk-Eye), and coaches' challenge allowances.
-6. **Model Baseline Recalibration:** Recompute league-wide scoring baselines, margin standard deviations, key-number masses, and team priors.
+- Eleven players per side, four 15-minute quarters. UFL Rule 4 uses its own 35-second and 25-second play clocks and specific game-clock stops, including the two-minute warning. Do not copy an NFL timing rule into a UFL result.
+- Touchdown six; ordinary field goal three; a successful field goal from **60 yards or longer is four**. Rule 11 measures the kick at the rulebook's defined spot and conditions. Safety two.
+- After a touchdown, the 2026 choices are a **one-point kick** (line of scrimmage at the 15, producing the listed 33-yard attempt), a **two-point run/pass** from the two, or a **three-point run/pass** from the eight (Rule 11-3). Defensive try scores and one-point safety cases are governed by the full rule. The old assertion that 2026 has no kicked try is false.
+- A legal catch can be completed with one foot in bounds under the UFL's 2026 provision. The league prohibits the defined immediate quarterback push, or “tush push”; exact scope is in Rule 12. [League 2026 rule summary](https://www.theufl.com/rules).
+- A team may not punt when the ball is made ready inside the opponent's 50 (opponent's 49 or closer), except after the two-minute warning in either half. At midfield a punt is allowed. A later penalty that moves the ball back does not restore the punt option once the restriction attached. Apply Rule 9 and the official summary for full enforcement.
+- UFL 2026 kickoff and onside rules are in Rule 6: ordinary kickoffs use the 30-yard line, with formation, landing-zone, touchback and recovery provisions. Use Rule 6 for the exact dead-ball spot and exceptions. Do not carry forward an older fourth-quarter “4th-and-12” claim without a 2026 rulebook clause.
+- Rule 15 specifies replay, booth action and coach challenges. It allows the head coach to challenge on-field rulings, including some fouls, under the stated conditions; consult the complete article rather than assuming standard NFL challenge limits.
 
----
+## Tie resolution and season structure
 
-## 2. Core Playing Rules & Scoring Framework
+Rule 16 applies to both regular-season and postseason games tied after regulation. A new coin toss gives the winner choice of offense or defense first. Teams alternate three tries apiece from the five-yard line; if tied, further alternating tries continue until a winner. No field goals are permitted in this overtime. The defense cannot score after gaining possession on a try, and Rule 16 has specific timeout, foul and replay provisions. Do not model an NFL possession overtime or a possible regular-season tie.
 
-### Match Duration & Clock Governance
-- **Regulation Playing Time:** 4 quarters x 15 minutes. Running clock on incompletions outside 2 minutes of halves.
-- **Scoring Architecture:** Touchdown = 6 points. No kicked PATs: Tiered scrimmage conversions (1 point from 2-yd line, 2 points from 5-yd line, 3 points from 10-yd line). Field Goal = 3 points. Safety = 2 points.
-- **Overtime & Tie Resolution:** College/shootout hybrid: Best-of-3 single-play attempts from the 5-yard line for 2 points each. Sudden death if tied after 3 rounds.
+The [UFL's 2026 schedule announcement](https://www.theufl.com/news/ufl-announces-2026-full-season-schedule) establishes eight clubs, ten regular-season weeks and 40 regular-season games. The clubs are Birmingham Stallions, Columbus Aviators, Dallas Renegades, D.C. Defenders, Houston Gamblers, Louisville Kings, Orlando Storm and St. Louis Battlehawks. The **four best records** reach two playoff games; winners contest the UFL Championship (called the United Bowl in league coverage). This replaced the older USFL/XFL conference-championship description. The [official standings](https://www.theufl.com/standings) display wins, losses, percentage, points for/against and strength measures, but that display alone does not state the complete formal tiebreak procedure. Obtain a league-issued tiebreak instruction before adjudicating an equal-record qualification or seed.
 
----
+## Roster, result and audit procedure
 
-## 3. Competition Structure & Tournament Framework
+The playing rulebook's Rule 5 governs player/substitute/equipment restrictions; season roster size, transaction eligibility and active/inactive lists require separate official UFL personnel announcements and the actual game report. The league [announced 50-player rosters for all eight clubs at the start of 2026](https://www.theufl.com/news/ufl-on-the-cusp-of-2026-season-heres-what-to-know). The prior “42 active” figure is from a [2024 UFL announcement](https://www.theufl.com/news/the-united-football-league-to-hold-dispersal-draft-friday-jan-5), not a verified 2026 game-day rule. Confirm active/inactive status from each 2026 game report.
 
-### Regular Season & Format
-- **Format:** 8 franchises split into USFL Conference (Birmingham Stallions, Houston Roughnecks, Memphis Showboats, Michigan Panthers) and XFL Conference (Arlington Renegades, DC Defenders, San Antonio Brahmas, St. Louis Battlehawks). 10-week season.
-- **Standings & Tie-Breaking Criteria:**
-  - Standard standings calculated by championship points or winning percentage.
-  - Head-to-head records, differential percentages (e.g. percentage in AFL, run differential in baseball, point differential in football).
-- **Post-Season / Finals System:** Conference Championship games followed by UFL Championship Game.
+For each result, identify the UFL season, official matchup and game ID, team names, venue, stage, regulation and overtime scores, final status, and official [UFL Game Center](https://www.theufl.com/ufl-media-game-center-2026) or match report. Record any official postponement, forfeit or score correction from UFL communications. Do not infer an outside market's void or grading rule from the league rulebook.
 
----
+**Annual audit:** check the new UFL playing rules, official schedule, teams, playoff format, standings/tiebreak notice and personnel releases before each season. The 2026 franchise list and dates must not be propagated to 2027.
 
-## 4. Roster, Squad & Officiating Governance
+## Repository analysis and settlement controls
 
-### Squad Management & Substitutions
-- **Squad Size & Active Roster:** 50-man rosters (42 active, 8 inactive on game day). 4th-and-12 alternative onside kick option in fourth quarter.
-- **Player Eligibility & Availability:** Team sheets and inactive lists must be re-verified against official feeds within 60 minutes of scheduled start time.
-
-### Officiating & Video Review Framework
-- **Officiating Crew:** Transparent replay review with live broadcast audio from head of officiating (Dean Blandino / Mike Pereira framework).
-- **Review Protocols:** Standardized review triggers for goal-line / boundary line disputes, scoring plays, turnovers, or challenged decisions.
-
----
-
-## 5. Analytical Modeling & Settlement Protocol
-
-### Mathematical Modeling Methodology
-- **Distributional Architecture:** Conversion points distribution differs radically from NFL due to tiered conversion system. Key number 3 remains, but 7 is replaced by 6, 8, and 9.
-- **Key Constraints:**
-  - Model must anchor on official league population base rates.
-  - Cushion lines (+k.5) and derivative handicap markets must be derived from the joint score/run distribution object, never estimated independently.
-  - Weather vectors (wind, temperature, precipitation, altitude) must be mapped to ground orientation and venue geometry.
-
-### Official Settlement Protocol
-- **Data Lineage:** TheUFL.com official stats and Fox/ESPN verified box scores.
-- **Official Game Threshold:** Matches must meet the governing body's minimum completion threshold to be deemed official for full-game settlements.
-- **Postponements & Rescheduled Matches:** If a match is delayed, suspended, or moved, settlement follows official league completion rules; uncompleted events void under standard market rules.
-
----
-
-## 6. Machine-Readable Configuration Schema (JSON)
-
-```json
-{
-  "competition_name": "United Football League (UFL)",
-  "sport_category": "American Football",
-  "subfolder_directory": "UFL",
-  "governing_body": "UFL Board of Directors / Football Operations",
-  "season_kickoff_window": "Late March / Early April",
-  "annual_audit_reminder_date": "February 28 (Annually, one month prior to opening weekend)",
-  "audit_interval_days_prior": 30,
-  "match_duration": "4 quarters x 15 minutes. Running clock on incompletions outside 2 minutes of halves.",
-  "scoring_rules": "Touchdown = 6 points. No kicked PATs: Tiered scrimmage conversions (1 point from 2-yd line, 2 points from 5-yd line, 3 points from 10-yd line). Field Goal = 3 points. Safety = 2 points.",
-  "overtime_protocol": "College/shootout hybrid: Best-of-3 single-play attempts from the 5-yard line for 2 points each. Sudden death if tied after 3 rounds.",
-  "roster_rules": "50-man rosters (42 active, 8 inactive on game day). 4th-and-12 alternative onside kick option in fourth quarter.",
-  "officiating": "Transparent replay review with live broadcast audio from head of officiating (Dean Blandino / Mike Pereira framework).",
-  "settlement_source": "TheUFL.com official stats and Fox/ESPN verified box scores."
-}
-```
+For a Sports Research forecast or settlement, also apply [current repository controls](../../../CURRENT_RULES.md) and the [American football analysis rules](../../../RULES_AMERICAN_FOOTBALL.md). These documents govern evidence, modelling and prediction-card workflow; the official competition texts above govern how the match is actually played and classified.

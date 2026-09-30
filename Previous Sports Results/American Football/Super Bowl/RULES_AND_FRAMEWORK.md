@@ -1,97 +1,27 @@
-# NFL Super Bowl Championship — Rules, Code & Analytical Framework
+# Super Bowl — NFL championship rules and procedures
 
-**Sport Discipline:** `American Football`  
-**Competition / League Subfolder:** `Super Bowl`  
-**Governing Body:** NFL  
-**Inaugural Era / Foundation:** 1967 (Super Bowl I: Green Bay Packers vs. Kansas City Chiefs)  
-**Status:** Canonical Reference Framework & Operating Protocol
+**Scope:** NFL championship game, 2026 rulebook era. **Checked:** 30 September 2026. A Super Bowl belongs to the preceding NFL season; record both season and calendar-year game date. Historical games use their own season's rulebook.
 
----
+## Complete official sources
 
-## 1. Annual Rules & Competition Audit Protocol (Mandatory Reminder)
+- [2026 NFL Rulebook PDF](https://static.www.nfl.com/image/upload/fl_attachment/league/tqivdkzt9mu6wdgsh1ku.pdf) and [official HTML index](https://operations.nfl.com/rules-officiating/2026-nfl-rulebook). **Every NFL playing rule applies**: field, ball and definitions (1–3); timing and personnel (4–5); kicks and scrimmage (6–10); scoring (11); conduct and enforcement (12–14); replay (15); postseason overtime (16); emergencies and officiating (17–19). Use the full article and approved rulings for exceptions.
+- [NFL postseason format and official bracket](https://www.nfl.com/playoffs/bracket/2026), [playoff picture](https://www.nfl.com/standings/playoff-picture), and [NFL tiebreaking procedures](https://www.nfl.com/standings/tie-breaking-procedures) establish how the AFC and NFC representatives are reached. The game-specific NFL schedule and Gamebook establish venue, designation and result. The Super Bowl is the AFC champion against the NFC champion in one game; it has no separate standings table or head-to-head tiebreak.
+- [NFL roster guidance](https://operations.nfl.com/calendar-events/nfl-free-agency/contract-language) and the game's official active/inactive list control participation. The standard 53-player active/inactive list can be affected by permitted practice-squad elevations; game-day maximum is 48 with at least eight active offensive linemen, otherwise 47. Do not assume all 53 may play.
 
-> [!IMPORTANT]
-> ### 🚨 ANNUAL PRE-SEASON AUDIT REMINDER
-> **Target Audit Date:** **`January 11 (Annually, exactly one month prior to Super Bowl Sunday)`**  
-> **Standard Season Kickoff Window:** **`Second Sunday in February`**  
->
-> Exactly **one month prior to the commencement of every new season**, a full operational audit must be executed to determine whether the analytical parameters, league rules, or tournament structures require updating.
+## Game and overtime
 
-### Pre-Season Audit Checklist
-Before issuing any forecast or recording historical results for an upcoming season:
-1. **Rulebook Amendments:** Audit newly ratified rule changes by NFL (e.g. playing duration, clock rules, overtime procedures, substitution mechanics, penalty enforcement).
-2. **Mini-Competitions & In-Season Tournaments:** Check for newly introduced mini-competitions, in-season cups, showcase rounds, or altered playoff brackets (e.g., Super Bowl Opening Night, Walter Payton Man of the Year presentation.).
-3. **Franchise & Conference Realignment:** Verify team expansion, relocation, division restructuring, or conference realignment.
-4. **Roster & Player Availability Governance:** Inspect changes to active roster limits, injury replacement protocols, concussion management bylaws, and substitute eligibility rules.
-5. **Officiating & Review Technology:** Review updates to video review systems, automated officiating (VAR, ARC, ABS, Hawk-Eye), and coaches' challenge allowances.
-6. **Model Baseline Recalibration:** Recompute league-wide scoring baselines, margin standard deviations, key-number masses, and team priors.
+Eleven players per side; four 15-minute quarters. A touchdown is six points, kick try one, scrimmage try two, field goal three, safety two, subject to NFL Rule 11's exceptional scoring cases. The Super Bowl uses **postseason Rule 16**: if tied after regulation, one or more 15-minute periods are played until a winner. Each team normally gets an opportunity to possess, including when the first-possession team scores a touchdown, with the specific opening-possession safety exception. After both have had that opportunity, the score/next-score provisions apply. If a period ends with the second team's initial possession unfinished, play continues in another period. Rule 16 covers coin toss, ends, timeouts, turnovers, fouls and replay; coaches cannot challenge in overtime because replay is initiated by the replay official.
 
----
+The Super Bowl halftime show may make the real-time interval longer than a usual NFL halftime, but it does not change the four 15-minute playing quarters or create a special scoring code. Stadium roof, weather exposure, neutral designation, kickoff time and actual participants are game-specific facts, not universal rules.
 
-## 2. Core Playing Rules & Scoring Framework
+## Match-day and result procedure
 
-### Match Duration & Clock Governance
-- **Regulation Playing Time:** 4 quarters x 15 minutes. Extended 25-30 minute halftime show.
-- **Scoring Architecture:** Touchdown = 6 pts; Field Goal = 3 pts; Safety = 2 pts; PAT = 1 pt; 2-pt Conv = 2 pts.
-- **Overtime & Tie Resolution:** Postseason overtime rules: 15-minute sudden-death periods; both teams guaranteed an offensive possession even if a touchdown is scored on opening drive.
+Check the official NFL fixture and game ID; teams and conference titles; site, roof and designated home team; final Gamebook; active and inactive lists; late elevations or quarterback status; officials; regulation and any overtime score. The designated home club and venue are assigned by the NFL, so neither should be inferred from geography. Record final score and whether it includes overtime. Suspended, postponed or administratively changed games follow actual NFL decisions under Rule 17 and league policy.
 
----
+Use the correct historical overtime rule when examining past Super Bowls. A private bet's regulation-only, including-overtime or void terms come from that contract, not from the NFL rulebook. Do not copy a fixed early-February date, claimed 90-minute inactive release, or single 48-player active size into every season.
 
-## 3. Competition Structure & Tournament Framework
+**Annual audit:** after the conference championships and before the game, check the season's NFL rulebook, playoff bracket, official matchup, venue/gamebook and roster releases.
 
-### Regular Season & Format
-- **Format:** Neutral site championship game between AFC Champion and NFC Champion. Winner receives the Vince Lombardi Trophy.
-- **Standings & Tie-Breaking Criteria:**
-  - Standard standings calculated by championship points or winning percentage.
-  - Head-to-head records, differential percentages (e.g. percentage in AFL, run differential in baseball, point differential in football).
-- **Post-Season / Finals System:** Single-game world championship. Pete Rozelle Trophy awarded to Super Bowl MVP.
+## Repository analysis and settlement controls
 
----
-
-## 4. Roster, Squad & Officiating Governance
-
-### Squad Management & Substitutions
-- **Squad Size & Active Roster:** 53-man roster, strict 48-man active game-day list submitted 90 minutes prior to kickoff.
-- **Player Eligibility & Availability:** Team sheets and inactive lists must be re-verified against official feeds within 60 minutes of scheduled start time.
-
-### Officiating & Video Review Framework
-- **Officiating Crew:** All-Star officiating crew selected from the highest-rated NFL officials during the regular season, plus centralized replay command.
-- **Review Protocols:** Standardized review triggers for goal-line / boundary line disputes, scoring plays, turnovers, or challenged decisions.
-
----
-
-## 5. Analytical Modeling & Settlement Protocol
-
-### Mathematical Modeling Methodology
-- **Distributional Architecture:** Two-week preparation window; neutral stadium baseline; high public volume requiring strict market-blind prior adherence.
-- **Key Constraints:**
-  - Model must anchor on official league population base rates.
-  - Cushion lines (+k.5) and derivative handicap markets must be derived from the joint score/run distribution object, never estimated independently.
-  - Weather vectors (wind, temperature, precipitation, altitude) must be mapped to ground orientation and venue geometry.
-
-### Official Settlement Protocol
-- **Data Lineage:** Official NFL box score and final statistics feed.
-- **Official Game Threshold:** Matches must meet the governing body's minimum completion threshold to be deemed official for full-game settlements.
-- **Postponements & Rescheduled Matches:** If a match is delayed, suspended, or moved, settlement follows official league completion rules; uncompleted events void under standard market rules.
-
----
-
-## 6. Machine-Readable Configuration Schema (JSON)
-
-```json
-{
-  "competition_name": "NFL Super Bowl Championship",
-  "sport_category": "American Football",
-  "subfolder_directory": "Super Bowl",
-  "governing_body": "NFL",
-  "season_kickoff_window": "Second Sunday in February",
-  "annual_audit_reminder_date": "January 11 (Annually, exactly one month prior to Super Bowl Sunday)",
-  "audit_interval_days_prior": 30,
-  "match_duration": "4 quarters x 15 minutes. Extended 25-30 minute halftime show.",
-  "scoring_rules": "Touchdown = 6 pts; Field Goal = 3 pts; Safety = 2 pts; PAT = 1 pt; 2-pt Conv = 2 pts.",
-  "overtime_protocol": "Postseason overtime rules: 15-minute sudden-death periods; both teams guaranteed an offensive possession even if a touchdown is scored on opening drive.",
-  "roster_rules": "53-man roster, strict 48-man active game-day list submitted 90 minutes prior to kickoff.",
-  "officiating": "All-Star officiating crew selected from the highest-rated NFL officials during the regular season, plus centralized replay command.",
-  "settlement_source": "Official NFL box score and final statistics feed."
-}
-```
+For a Sports Research forecast or settlement, also apply [current repository controls](../../../CURRENT_RULES.md) and the [American football analysis rules](../../../RULES_AMERICAN_FOOTBALL.md). These documents govern evidence, modelling and prediction-card workflow; the official competition texts above govern how the match is actually played and classified.

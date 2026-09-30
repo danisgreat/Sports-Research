@@ -1,97 +1,43 @@
-# IFAF World Championship of American Football — Rules, Code & Analytical Framework
+# IFAF World Championship — tackle football rules and event controls
 
-**Sport Discipline:** `American Football`  
-**Competition / League Subfolder:** `IFAF World Championship`  
-**Governing Body:** International Federation of American Football (IFAF)  
-**Inaugural Era / Foundation:** 1999 (Palermo, Italy)  
-**Status:** Canonical Reference Framework & Operating Protocol
+**Scope of this folder:** international tackle football. The existing folder name does not identify men's senior, women's senior or men's U20, and must not be used for IFAF flag football. Record discipline, age category, gender, tournament edition and event rules for each yearly result. **Checked:** 30 September 2026.
 
----
+## Complete playing rules
 
-## 1. Annual Rules & Competition Audit Protocol (Mandatory Reminder)
+[IFAF Football Rules and Interpretations, 2026 edition, 222-page PDF](https://myiafoa.org/rules/ifaf2026/ifafrules.pdf) is published by the IFAF Rules Committee through the International American Football Officials Association. It states that it applies to IFAF-organised competitions from 1 March 2026, subject to permitted competition variations. [IFAF Rules Committee download/index](https://myiafoa.org/rules/printedrulebook.html). The complete text, approved rulings and exceptions in that document govern; this page is a map and result-handling guide.
 
-> [!IMPORTANT]
-> ### 🚨 ANNUAL PRE-SEASON AUDIT REMINDER
-> **Target Audit Date:** **`May 1 (One month prior to tournament summer launch)`**  
-> **Standard Season Kickoff Window:** **`Quadrennial tournament (summer months)`**  
->
-> Exactly **one month prior to the commencement of every new season**, a full operational audit must be executed to determine whether the analytical parameters, league rules, or tournament structures require updating.
+| Rulebook part | Subject |
+|---|---|
+| Introduction and pp. 9–12 | Football Code; competition-authority variations and how to apply the rules |
+| Rules 1–2 | Game, field, players, equipment, definitions |
+| Rules 3–5 | Periods, clock, substitutions, live/dead ball, downs and line to gain |
+| Rules 6–8 | Kicks, snap and passing, scoring and tries |
+| Rules 9–10 | Conduct, safety fouls and penalty enforcement |
+| Rules 11–12 | Officials' jurisdiction, duties and replay |
+| Appendices A–E | Injury, lightning, concussion, field diagrams and equipment guidance |
+| End matter | Penalty summary, signals, approved interpretations and index |
 
-### Pre-Season Audit Checklist
-Before issuing any forecast or recording historical results for an upcoming season:
-1. **Rulebook Amendments:** Audit newly ratified rule changes by International Federation of American Football (IFAF) (e.g. playing duration, clock rules, overtime procedures, substitution mechanics, penalty enforcement).
-2. **Mini-Competitions & In-Season Tournaments:** Check for newly introduced mini-competitions, in-season cups, showcase rounds, or altered playoff brackets (e.g., None.).
-3. **Franchise & Conference Realignment:** Verify team expansion, relocation, division restructuring, or conference realignment.
-4. **Roster & Player Availability Governance:** Inspect changes to active roster limits, injury replacement protocols, concussion management bylaws, and substitute eligibility rules.
-5. **Officiating & Review Technology:** Review updates to video review systems, automated officiating (VAR, ARC, ABS, Hawk-Eye), and coaches' challenge allowances.
-6. **Model Baseline Recalibration:** Recompute league-wide scoring baselines, margin standard deviations, key-number masses, and team priors.
+The rulebook expressly distinguishes IFAF from NCAA rules. Do not use the NFL rulebook or assume that NCAA wording is identical. IFAF's 2026 change list and NCAA-differences table are part of the same PDF.
 
----
+## Playing and result rules
 
-## 2. Core Playing Rules & Scoring Framework
+- The default game is four 12-minute periods, 48 minutes total. Rule 3-2-1 permits an authorised competition or national federation to choose a maximum game time of 60, 48, 40 or 32 minutes in four equal periods. Check the event's adopted option before recording a clock or modelling a total.
+- Eleven players per side play tackle football under Rule 1, subject to the complete equipment and participation conditions. Four downs to gain ten yards, touchdown six, field goal three, safety two, kick try one and scrimmage try two follow Rules 5 and 8. Rule 8 and its exceptions control any uncommon one-point or defensive try score.
+- If the event uses Rule 3-1-3 extra periods, each team begins a possession from the opponent's 25-yard line in early periods; a touchdown requires a two-point try from the second extra period, and from the third extra period each series is a single two-point try from the three-yard line. Each side ordinarily gets a corresponding series, with the rulebook's defensive-score and foul exceptions. Do not call this a timed NFL overtime period.
+- Game clock and play clock, first-down stoppages, running-clock provisions, halftime, timeouts, substitutions, kickoffs, forward passes, targeting, replay availability and penalty carryover must be taken from the IFAF text plus the event's accepted variation. Availability of a video judge is an event fact, not guaranteed by the presence of a replay rule.
 
-### Match Duration & Clock Governance
-- **Regulation Playing Time:** 4 quarters x 12 minutes (IFAF international rules).
-- **Scoring Architecture:** Standard gridiron scoring: TD = 6, FG = 3, Safety = 2, PAT = 1, 2-pt Conv = 2.
-- **Overtime & Tie Resolution:** NCAA-style tie-breaker from the 25-yard line.
+## Tournament rules require an edition-specific document
 
----
+[IFAF event schedule](https://americanfootball.sport/events/event-schedule/) distinguishes **2026 women's senior tackle World Championship**, **2027 men's senior tackle World Championship**, and **2028 men's U20 tackle World Championship** in its listed cycle. [IFAF continental tackle pathway](https://www.americanfootball.sport/events/continental-tackle-football-championships/) describes qualification pathways. The calendar is not a competition regulation and does not establish the bracket, host, team count, seeding, eligibility, roster limit, passport test, forfeit criteria, group tiebreakers or medal-match procedure for an edition.
 
-## 3. Competition Structure & Tournament Framework
+No public, edition-specific IFAF World Championship competition regulation was verified in this audit. Accordingly, do **not** carry forward the old file's assertions of a universal 45-player roster, group pools, bronze match, nationality test, fixed summer launch or quadrennial schedule. Mark those fields **not verified for the edition** until an official event bulletin/regulation or IFAF decision establishes them. A generic 2026 playing rulebook cannot fill that gap.
 
-### Regular Season & Format
-- **Format:** National teams qualifying through continental confederations (IFAF Americas, IFAF Europe, IFAF Asia, IFAF Oceania, IFAF Africa).
-- **Standings & Tie-Breaking Criteria:**
-  - Standard standings calculated by championship points or winning percentage.
-  - Head-to-head records, differential percentages (e.g. percentage in AFL, run differential in baseball, point differential in football).
-- **Post-Season / Finals System:** Group pool play followed by medal rounds (Gold, Silver, Bronze matches).
+## Recording procedure
 
----
+For every match, first resolve event discipline/category and official fixture/participant IDs. Then record the adopted rulebook edition, period length and authorised variations, tournament stage, team lists and eligibility if officially published, venue, regulation score, extra-period score, final/forfeit status and source. If a game is suspended or a score changed administratively, retain the IFAF decision and do not apply an assumed betting settlement rule. Use the official IFAF result or match report as the primary result and label any unavailable tournament regulations explicitly.
 
-## 4. Roster, Squad & Officiating Governance
+**Audit trigger:** at each tournament edition and after any IFAF rules revision, retrieve the event's own competition regulations and official decisions before treating bracket or eligibility details as known.
 
-### Squad Management & Substitutions
-- **Squad Size & Active Roster:** 45-man national rosters; national eligibility and passport rules strictly enforced.
-- **Player Eligibility & Availability:** Team sheets and inactive lists must be re-verified against official feeds within 60 minutes of scheduled start time.
+## Repository analysis and settlement controls
 
-### Officiating & Video Review Framework
-- **Officiating Crew:** IFAF international certified officiating crews.
-- **Review Protocols:** Standardized review triggers for goal-line / boundary line disputes, scoring plays, turnovers, or challenged decisions.
-
----
-
-## 5. Analytical Modeling & Settlement Protocol
-
-### Mathematical Modeling Methodology
-- **Distributional Architecture:** High scoring variance across international tiers; USA and Japan historically dominant.
-- **Key Constraints:**
-  - Model must anchor on official league population base rates.
-  - Cushion lines (+k.5) and derivative handicap markets must be derived from the joint score/run distribution object, never estimated independently.
-  - Weather vectors (wind, temperature, precipitation, altitude) must be mapped to ground orientation and venue geometry.
-
-### Official Settlement Protocol
-- **Data Lineage:** IFAF official match sheets.
-- **Official Game Threshold:** Matches must meet the governing body's minimum completion threshold to be deemed official for full-game settlements.
-- **Postponements & Rescheduled Matches:** If a match is delayed, suspended, or moved, settlement follows official league completion rules; uncompleted events void under standard market rules.
-
----
-
-## 6. Machine-Readable Configuration Schema (JSON)
-
-```json
-{
-  "competition_name": "IFAF World Championship of American Football",
-  "sport_category": "American Football",
-  "subfolder_directory": "IFAF World Championship",
-  "governing_body": "International Federation of American Football (IFAF)",
-  "season_kickoff_window": "Quadrennial tournament (summer months)",
-  "annual_audit_reminder_date": "May 1 (One month prior to tournament summer launch)",
-  "audit_interval_days_prior": 30,
-  "match_duration": "4 quarters x 12 minutes (IFAF international rules).",
-  "scoring_rules": "Standard gridiron scoring: TD = 6, FG = 3, Safety = 2, PAT = 1, 2-pt Conv = 2.",
-  "overtime_protocol": "NCAA-style tie-breaker from the 25-yard line.",
-  "roster_rules": "45-man national rosters; national eligibility and passport rules strictly enforced.",
-  "officiating": "IFAF international certified officiating crews.",
-  "settlement_source": "IFAF official match sheets."
-}
-```
+For a Sports Research forecast or settlement, also apply [current repository controls](../../../CURRENT_RULES.md) and the [American football analysis rules](../../../RULES_AMERICAN_FOOTBALL.md). These documents govern evidence, modelling and prediction-card workflow; the official competition texts above govern how the match is actually played and classified.
