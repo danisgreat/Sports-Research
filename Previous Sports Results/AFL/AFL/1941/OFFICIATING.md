@@ -4,8 +4,24 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1941
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Eric Hawkins
+
+## Senior Field Umpiring Panel (12 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Eric Hawkins | 19 | Grand Final |
+| Allan Coward | 18 | Regular Season / Finals |
+| Thomas Bride | 18 | Regular Season / Finals |
+| Percy Hutchinson | 15 | Regular Season / Finals |
+| Jack McMurray | 12 | Regular Season / Finals |
+| Albert Port | 9 | Regular Season / Finals |
+| David Sullivan | 6 | Regular Season / Finals |
+| Stanley Morgan | 6 | Regular Season / Finals |
+| Sydney OBrien | 4 | Regular Season / Finals |
+| Harry Clayton | 3 | Regular Season / Finals |
+| Eric Thomas | 1 | Regular Season / Finals |
+| Francis Leverett | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

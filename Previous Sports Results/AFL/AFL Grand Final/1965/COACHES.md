@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1965 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1965
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1965.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1965 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Essendon
+- **Premiership Coach:** Greg Sewell
+- **Runners-up:** St Kilda
+- **Runners-up Coach:** Allan Jeans
+- **Grand Final Result:** Essendon 14.21 (105) def. St Kilda 9.16 (70)
+- **Winning Margin:** 35 points
+- **Match Date:** 1965-09-25
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 104,846 spectators
+
+## Match Summary & Tactical Notes
+Essendon cruised to a 35-point win over St Kilda to claim the 1965 premiership.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

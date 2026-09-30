@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1912 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1912
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1912.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1912 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Essendon
+- **Premiership Coach:** John Worrall
+- **Runners-up:** South Melbourne
+- **Runners-up Coach:** Charlie Ricketts
+- **Grand Final Result:** Essendon 5.17 (47) def. South Melbourne 4.9 (33)
+- **Winning Margin:** 14 points
+- **Match Date:** 1912-09-28
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 54,536 spectators
+
+## Match Summary & Tactical Notes
+Essendon won back-to-back premierships, defeating South Melbourne by 14 points at the MCG.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

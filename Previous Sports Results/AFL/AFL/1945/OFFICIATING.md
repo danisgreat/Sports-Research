@@ -4,8 +4,22 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1945
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Frank Spokes
+
+## Senior Field Umpiring Panel (10 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Alfred Sawyer | 22 | Regular Season / Finals |
+| Frank Spokes | 22 | Grand Final |
+| James Jamieson | 20 | Regular Season / Finals |
+| Keith McLellan | 18 | Regular Season / Finals |
+| Henry Hooper | 16 | Regular Season / Finals |
+| Thomas McIntyre | 12 | Regular Season / Finals |
+| Phil Lane | 8 | Regular Season / Finals |
+| Jim Perry | 3 | Regular Season / Finals |
+| Owen Thomas | 2 | Regular Season / Finals |
+| Francis Jennings | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

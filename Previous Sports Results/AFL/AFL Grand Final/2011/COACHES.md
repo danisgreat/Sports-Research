@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 2011 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 2011
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 2011.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 2011 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Geelong
+- **Premiership Coach:** Chris Scott
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Mick Malthouse
+- **Grand Final Result:** Geelong 18.11 (119) def. Collingwood 12.9 (81)
+- **Winning Margin:** 38 points
+- **Match Date:** 2011-10-01
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 99,537 spectators
+
+## Match Summary & Tactical Notes
+Geelong outlasted Collingwood in an intense contest, pulling away in the final term to win by 38 points under Chris Scott.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

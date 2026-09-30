@@ -1,4 +1,4 @@
 # SANFLW Coaching Staff — 1961 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 2017. No official coaching staffs, managerial appointments, or teams existed in 1961.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** SANFLW not yet founded (inaugural season in 2017).

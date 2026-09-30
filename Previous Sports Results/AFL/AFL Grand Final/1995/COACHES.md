@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1995 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1995
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1995.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1995 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Carlton
+- **Premiership Coach:** David Parkin
+- **Runners-up:** Geelong
+- **Runners-up Coach:** Gary Ayres
+- **Grand Final Result:** Carlton 21.15 (141) def. Geelong 11.14 (80)
+- **Winning Margin:** 61 points
+- **Match Date:** 1995-09-30
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 93,670 spectators
+
+## Match Summary & Tactical Notes
+Carlton completed a dominant 23-win season with a 61-point demolition of Geelong, led by Greg Williams' five goals.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

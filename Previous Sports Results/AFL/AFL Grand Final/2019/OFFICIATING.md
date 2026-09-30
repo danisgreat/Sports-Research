@@ -1,12 +1,14 @@
 # AFL Grand Final Officiating & Refereeing Corps — 2019 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 2019
-- **Governing Body:** AFL / Australian Football League Commission
 
-## Officiating Structure & Adjudication
-- **Appointed Officials:** Senior Field, Boundary, Goal and Emergency Umpires.
-- **Championship Appointments:** Lead match adjudicators and senior officials selected for finals and marquee tournament fixtures based on merit and performance evaluations.
-- **Rule Framework & Interpretations:** Strict enforcement of the 2019 rules of the game, procedural updates, and points of emphasis issued by AFL / Australian Football League Commission.
-- **Technology & Review Systems:** Modern video adjudication systems (VAR / TMO / DRS / Video Review / Hawk-Eye / Replay Command Center) fully integrated with on-field communications.
+## Match Adjudicators & Officiating Appointments
+- **Grand Final Field Umpire(s):** Matt Stevic, Ray Chamberlain, Shaun Ryan
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 100,014 spectators
+- **Umpiring System:** Three field umpire system
+- **Adjudication Framework:** Officiated in accordance with the Laws of Australian Football and official VFL/AFL senior adjudication appointments.
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA); Official VFL/AFL Grand Final Records.

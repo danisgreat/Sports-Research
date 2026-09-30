@@ -4,8 +4,26 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1927
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jack McMurray
+
+## Senior Field Umpiring Panel (14 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Jack McMurray | 20 | Grand Final |
+| Leslie Netherton | 18 | Regular Season / Finals |
+| Bill Coffey | 17 | Regular Season / Finals |
+| Charles Lewis | 10 | Regular Season / Finals |
+| John Kain | 10 | Regular Season / Finals |
+| John Leheny | 8 | Regular Season / Finals |
+| Andrew Barlow | 6 | Regular Season / Finals |
+| William Osborne | 6 | Regular Season / Finals |
+| Reginald Devine | 5 | Regular Season / Finals |
+| Alex Mutch | 3 | Regular Season / Finals |
+| Italo Cesari | 3 | Regular Season / Finals |
+| Bob Scott | 2 | Regular Season / Finals |
+| William Wynne | 2 | Regular Season / Finals |
+| W Gibson | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

@@ -1,4 +1,4 @@
 # IFAF World Championship Officiating & Refereeing Corps — 1965 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 1999. No official match adjudicators or referee panels were appointed in 1965.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** IFAF World Championship not yet founded (inaugural championship in 1999).

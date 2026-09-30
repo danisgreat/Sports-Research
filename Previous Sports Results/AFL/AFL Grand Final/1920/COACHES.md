@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1920 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1920
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1920.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1920 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Richmond
+- **Premiership Coach:** Max Hislop
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Jock McHale
+- **Grand Final Result:** Richmond 7.10 (52) def. Collingwood 5.5 (35)
+- **Winning Margin:** 17 points
+- **Match Date:** 1920-10-02
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 53,908 spectators
+
+## Match Summary & Tactical Notes
+Richmond secured their inaugural VFL premiership, defeating Collingwood by 17 points.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

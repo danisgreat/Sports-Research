@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1972 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1972 Season (Super Bowl VI)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl VI)
 - **Season:** 1972
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1972.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1972 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** Dallas Cowboys
+- **Winning Head Coach:** Tom Landry
+- **Runners-up:** Miami Dolphins
+- **Runners-up Head Coach:** Don Shula
+- **Super Bowl Result:** Dallas Cowboys def. Miami Dolphins (24-3)
+- **Super Bowl MVP:** Roger Staubach (QB, Dallas)
+- **Venue:** Tulane Stadium (New Orleans)
+- **Official Attendance:** 81,023 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Tom Landry directing Dallas Cowboys to the Vince Lombardi Trophy over Don Shula's Miami Dolphins.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

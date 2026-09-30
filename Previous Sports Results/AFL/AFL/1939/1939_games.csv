@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1939-04-22,Carlton 20.22 (142) def. Sydney 13.10 (88),230,54,,Carlton defeated Sydney by 54 points at Princes Park.
+2,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1939-04-22,Collingwood 18.14 (122) def. Geelong 14.7 (91),213,31,,Collingwood defeated Geelong by 31 points at Victoria Park.
+3,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1939-04-22,Essendon 15.17 (107) def. Western Bulldogs 14.18 (102),209,5,,Essendon defeated Western Bulldogs by 5 points at Western Oval.
+4,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1939-04-22,North Melbourne 11.9 (75) def. Fitzroy 9.12 (66),141,9,,North Melbourne defeated Fitzroy by 9 points at Arden St.
+5,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1939-04-22,St Kilda 18.20 (128) def. Hawthorn 9.13 (67),195,61,,St Kilda defeated Hawthorn by 61 points at Junction Oval.
+6,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1939-04-22,Richmond 17.19 (121) def. Melbourne 11.18 (84),205,37,,Richmond defeated Melbourne by 37 points at M.C.G..
+7,Regular Season,Geelong,Carlton,Geelong,Carlton,Corio Oval,1939-04-29,Geelong 14.8 (92) def. Carlton 11.13 (79),171,13,,Geelong defeated Carlton by 13 points at Corio Oval.
+8,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1939-04-29,Collingwood 21.20 (146) def. Sydney 15.17 (107),253,39,,Collingwood defeated Sydney by 39 points at Lake Oval.
+9,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1939-04-29,Melbourne 21.15 (141) def. Essendon 19.21 (135),276,6,,Melbourne defeated Essendon by 6 points at Windy Hill.
+10,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1939-04-29,St Kilda 20.14 (134) def. Fitzroy 14.18 (102),236,32,,St Kilda defeated Fitzroy by 32 points at Brunswick St.
+11,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Punt Rd,1939-04-29,Richmond 20.19 (139) def. Western Bulldogs 17.8 (110),249,29,,Richmond defeated Western Bulldogs by 29 points at Punt Rd.
+12,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1939-04-29,Hawthorn 17.13 (115) def. North Melbourne 11.11 (77),192,38,,Hawthorn defeated North Melbourne by 38 points at Glenferrie Oval.
+13,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1939-05-06,Carlton 17.21 (123) def. North Melbourne 16.10 (106),229,17,,Carlton defeated North Melbourne by 17 points at Princes Park.
+14,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1939-05-06,Collingwood 17.11 (113) def. Western Bulldogs 14.14 (98),211,15,,Collingwood defeated Western Bulldogs by 15 points at Victoria Park.
+15,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1939-05-06,Richmond 15.16 (106) def. Essendon 16.8 (104),210,2,,Richmond defeated Essendon by 2 points at Windy Hill.
+16,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1939-05-06,Fitzroy 10.17 (77) def. Sydney 9.14 (68),145,9,,Fitzroy defeated Sydney by 9 points at Lake Oval.
+17,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1939-05-06,Hawthorn 17.14 (116) def. Geelong 8.18 (66),182,50,,Hawthorn defeated Geelong by 50 points at Glenferrie Oval.
+18,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1939-05-06,Melbourne 16.16 (112) def. St Kilda 10.21 (81),193,31,,Melbourne defeated St Kilda by 31 points at M.C.G..
+19,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1939-05-13,Carlton 14.16 (100) def. Western Bulldogs 5.12 (42),142,58,,Carlton defeated Western Bulldogs by 58 points at Western Oval.
+20,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1939-05-13,St Kilda 20.11 (131) def. Collingwood 13.16 (94),225,37,,St Kilda defeated Collingwood by 37 points at Junction Oval.
+21,Regular Season,Geelong,Essendon,Geelong,Essendon,Corio Oval,1939-05-13,Geelong 19.15 (129) def. Essendon 11.15 (81),210,48,,Geelong defeated Essendon by 48 points at Corio Oval.
+22,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1939-05-13,Fitzroy 10.17 (77) drew with Hawthorn 11.11 (77),154,0,,Fitzroy and Hawthorn played out a draw at Brunswick St.
+23,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1939-05-13,Melbourne 15.20 (110) def. North Melbourne 11.8 (74),184,36,,Melbourne defeated North Melbourne by 36 points at Arden St.
+24,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1939-05-13,Richmond 14.24 (108) def. Sydney 13.7 (85),193,23,,Richmond defeated Sydney by 23 points at Punt Rd.
+25,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Glenferrie Oval,1939-05-20,Hawthorn 13.8 (86) def. Carlton 11.17 (83),169,3,,Hawthorn defeated Carlton by 3 points at Glenferrie Oval.
+26,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1939-05-20,Collingwood 17.14 (116) def. Fitzroy 11.13 (79),195,37,,Collingwood defeated Fitzroy by 37 points at Brunswick St.
+27,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1939-05-20,Essendon 14.21 (105) def. St Kilda 8.18 (66),171,39,,Essendon defeated St Kilda by 39 points at Windy Hill.
+28,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Lake Oval,1939-05-20,Sydney 18.12 (120) def. Western Bulldogs 16.6 (102),222,18,,Sydney defeated Western Bulldogs by 18 points at Lake Oval.
+29,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Corio Oval,1939-05-20,Melbourne 15.16 (106) def. Geelong 12.18 (90),196,16,,Melbourne defeated Geelong by 16 points at Corio Oval.
+30,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Punt Rd,1939-05-20,Richmond 16.22 (118) def. North Melbourne 13.11 (89),207,29,,Richmond defeated North Melbourne by 29 points at Punt Rd.
+31,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1939-05-27,Richmond 9.14 (68) def. Carlton 8.13 (61),129,7,,Richmond defeated Carlton by 7 points at Princes Park.
+32,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1939-05-27,Collingwood 14.14 (98) def. Hawthorn 12.7 (79),177,19,,Collingwood defeated Hawthorn by 19 points at Victoria Park.
+33,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1939-05-27,North Melbourne 15.11 (101) def. Essendon 13.10 (88),189,13,,North Melbourne defeated Essendon by 13 points at Arden St.
+34,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1939-05-27,Fitzroy 15.10 (100) def. Western Bulldogs 11.13 (79),179,21,,Fitzroy defeated Western Bulldogs by 21 points at Western Oval.
+35,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1939-05-27,St Kilda 16.18 (114) def. Geelong 10.16 (76),190,38,,St Kilda defeated Geelong by 38 points at Junction Oval.
+36,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1939-05-27,Melbourne 19.23 (137) def. Sydney 3.12 (30),167,107,,Melbourne defeated Sydney by 107 points at M.C.G..
+37,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1939-06-03,Carlton 10.18 (78) def. Essendon 10.12 (72),150,6,,Carlton defeated Essendon by 6 points at Windy Hill.
+38,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1939-06-03,Collingwood 12.17 (89) def. Richmond 6.17 (53),142,36,,Collingwood defeated Richmond by 36 points at Punt Rd.
+39,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1939-06-03,Melbourne 18.14 (122) def. Fitzroy 14.15 (99),221,23,,Melbourne defeated Fitzroy by 23 points at Brunswick St.
+40,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1939-06-03,Hawthorn 12.15 (87) def. Western Bulldogs 7.23 (65),152,22,,Hawthorn defeated Western Bulldogs by 22 points at Glenferrie Oval.
+41,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Corio Oval,1939-06-03,Geelong 17.13 (115) def. North Melbourne 14.13 (97),212,18,,Geelong defeated North Melbourne by 18 points at Corio Oval.
+42,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1939-06-03,St Kilda 13.17 (95) def. Sydney 8.14 (62),157,33,,St Kilda defeated Sydney by 33 points at Lake Oval.
+43,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1939-06-10,Collingwood 18.15 (123) def. Carlton 12.12 (84),207,39,,Collingwood defeated Carlton by 39 points at Victoria Park.
+44,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Glenferrie Oval,1939-06-10,Richmond 12.21 (93) def. Hawthorn 7.13 (55),148,38,,Richmond defeated Hawthorn by 38 points at Glenferrie Oval.
+45,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1939-06-10,St Kilda 18.12 (120) def. North Melbourne 16.10 (106),226,14,,St Kilda defeated North Melbourne by 14 points at Junction Oval.
+46,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1939-06-12,Sydney 13.13 (91) def. Essendon 9.16 (70),161,21,,Sydney defeated Essendon by 21 points at Windy Hill.
+47,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Corio Oval,1939-06-12,Geelong 21.17 (143) def. Fitzroy 14.12 (96),239,47,,Geelong defeated Fitzroy by 47 points at Corio Oval.
+48,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1939-06-12,Melbourne 18.14 (122) def. Western Bulldogs 15.13 (103),225,19,,Melbourne defeated Western Bulldogs by 19 points at M.C.G..
+49,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1939-06-17,Carlton 19.19 (133) def. Melbourne 15.13 (103),236,30,,Carlton defeated Melbourne by 30 points at Princes Park.
+50,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1939-06-17,Collingwood 14.21 (105) def. North Melbourne 10.18 (78),183,27,,Collingwood defeated North Melbourne by 27 points at Arden St.
+51,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1939-06-17,Essendon 13.12 (90) def. Fitzroy 11.15 (81),171,9,,Essendon defeated Fitzroy by 9 points at Brunswick St.
+52,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1939-06-17,St Kilda 19.16 (130) def. Western Bulldogs 12.14 (86),216,44,,St Kilda defeated Western Bulldogs by 44 points at Western Oval.
+53,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1939-06-17,Richmond 12.22 (94) def. Geelong 9.15 (69),163,25,,Richmond defeated Geelong by 25 points at Punt Rd.
+54,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1939-06-17,Sydney 15.18 (108) def. Hawthorn 12.14 (86),194,22,,Sydney defeated Hawthorn by 22 points at Lake Oval.
+55,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1939-06-24,St Kilda 14.14 (98) def. Carlton 9.16 (70),168,28,,St Kilda defeated Carlton by 28 points at Junction Oval.
+56,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1939-06-24,Melbourne 22.22 (154) def. Collingwood 8.12 (60),214,94,,Melbourne defeated Collingwood by 94 points at M.C.G..
+57,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1939-06-24,Essendon 19.11 (125) def. Hawthorn 16.19 (115),240,10,,Essendon defeated Hawthorn by 10 points at Windy Hill.
+58,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1939-06-24,Fitzroy 17.13 (115) def. Richmond 10.13 (73),188,42,,Fitzroy defeated Richmond by 42 points at Brunswick St.
+59,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1939-06-24,North Melbourne 15.12 (102) def. Western Bulldogs 11.10 (76),178,26,,North Melbourne defeated Western Bulldogs by 26 points at Arden St.
+60,Regular Season,Geelong,Sydney,Geelong,Sydney,Corio Oval,1939-06-24,Geelong 16.15 (111) def. Sydney 7.14 (56),167,55,,Geelong defeated Sydney by 55 points at Corio Oval.
+61,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1939-07-01,Carlton 15.13 (103) def. Fitzroy 7.18 (60),163,43,,Carlton defeated Fitzroy by 43 points at Princes Park.
+62,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1939-07-01,Collingwood 18.9 (117) def. Essendon 7.18 (60),177,57,,Collingwood defeated Essendon by 57 points at Victoria Park.
+63,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1939-07-01,Western Bulldogs 5.10 (40) def. Geelong 3.7 (25),65,15,,Western Bulldogs defeated Geelong by 15 points at Western Oval.
+64,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1939-07-01,Melbourne 7.12 (54) def. Hawthorn 8.4 (52),106,2,,Melbourne defeated Hawthorn by 2 points at Glenferrie Oval.
+65,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1939-07-01,North Melbourne 14.12 (96) def. Sydney 7.6 (48),144,48,,North Melbourne defeated Sydney by 48 points at Lake Oval.
+66,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1939-07-01,St Kilda 9.12 (66) def. Richmond 7.9 (51),117,15,,St Kilda defeated Richmond by 15 points at Punt Rd.
+67,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1939-07-08,Carlton 16.17 (113) def. Sydney 12.16 (88),201,25,,Carlton defeated Sydney by 25 points at Lake Oval.
+68,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Corio Oval,1939-07-08,Geelong 18.12 (120) def. Collingwood 16.13 (109),229,11,,Geelong defeated Collingwood by 11 points at Corio Oval.
+69,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1939-07-08,Western Bulldogs 18.15 (123) def. Essendon 17.20 (122),245,1,,Western Bulldogs defeated Essendon by 1 points at Windy Hill.
+70,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1939-07-08,Fitzroy 10.20 (80) def. North Melbourne 9.16 (70),150,10,,Fitzroy defeated North Melbourne by 10 points at Brunswick St.
+71,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Glenferrie Oval,1939-07-08,St Kilda 15.17 (107) def. Hawthorn 11.18 (84),191,23,,St Kilda defeated Hawthorn by 23 points at Glenferrie Oval.
+72,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1939-07-08,Melbourne 15.16 (106) def. Richmond 13.21 (99),205,7,,Melbourne defeated Richmond by 7 points at Punt Rd.
+73,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1939-07-15,Carlton 14.14 (98) def. Geelong 12.5 (77),175,21,,Carlton defeated Geelong by 21 points at Princes Park.
+74,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1939-07-15,Collingwood 19.11 (125) def. Sydney 8.13 (61),186,64,,Collingwood defeated Sydney by 64 points at Victoria Park.
+75,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1939-07-15,Essendon 10.17 (77) def. Melbourne 7.18 (60),137,17,,Essendon defeated Melbourne by 17 points at M.C.G..
+76,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1939-07-15,St Kilda 16.19 (115) def. Fitzroy 13.6 (84),199,31,,St Kilda defeated Fitzroy by 31 points at Junction Oval.
+77,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1939-07-15,Richmond 13.25 (103) def. Western Bulldogs 7.7 (49),152,54,,Richmond defeated Western Bulldogs by 54 points at Western Oval.
+78,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1939-07-15,North Melbourne 18.11 (119) def. Hawthorn 11.16 (82),201,37,,North Melbourne defeated Hawthorn by 37 points at Arden St.
+79,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1939-07-22,Carlton 11.13 (79) def. North Melbourne 10.13 (73),152,6,,Carlton defeated North Melbourne by 6 points at Arden St.
+80,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1939-07-22,Collingwood 13.7 (85) def. Western Bulldogs 9.14 (68),153,17,,Collingwood defeated Western Bulldogs by 17 points at Western Oval.
+81,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1939-07-22,Richmond 18.14 (122) def. Essendon 10.8 (68),190,54,,Richmond defeated Essendon by 54 points at Punt Rd.
+82,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1939-07-22,Fitzroy 15.19 (109) def. Sydney 9.9 (63),172,46,,Fitzroy defeated Sydney by 46 points at Brunswick St.
+83,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Corio Oval,1939-07-22,Geelong 15.22 (112) def. Hawthorn 13.12 (90),202,22,,Geelong defeated Hawthorn by 22 points at Corio Oval.
+84,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1939-07-22,Melbourne 15.12 (102) def. St Kilda 10.18 (78),180,24,,Melbourne defeated St Kilda by 24 points at Junction Oval.
+85,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1939-08-05,Carlton 24.15 (159) def. Western Bulldogs 9.17 (71),230,88,,Carlton defeated Western Bulldogs by 88 points at Princes Park.
+86,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1939-08-05,Collingwood 18.8 (116) def. St Kilda 13.11 (89),205,27,,Collingwood defeated St Kilda by 27 points at Victoria Park.
+87,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1939-08-05,Essendon 15.17 (107) def. Geelong 6.11 (47),154,60,,Essendon defeated Geelong by 60 points at Windy Hill.
+88,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Glenferrie Oval,1939-08-05,Hawthorn 10.20 (80) def. Fitzroy 12.7 (79),159,1,,Hawthorn defeated Fitzroy by 1 points at Glenferrie Oval.
+89,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1939-08-05,Melbourne 14.18 (102) def. North Melbourne 9.6 (60),162,42,,Melbourne defeated North Melbourne by 42 points at M.C.G..
+90,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1939-08-05,Richmond 18.15 (123) def. Sydney 12.6 (78),201,45,,Richmond defeated Sydney by 45 points at Lake Oval.
+91,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1939-08-12,Carlton 18.16 (124) def. Hawthorn 7.20 (62),186,62,,Carlton defeated Hawthorn by 62 points at Princes Park.
+92,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1939-08-12,Collingwood 16.8 (104) def. Fitzroy 10.13 (73),177,31,,Collingwood defeated Fitzroy by 31 points at Victoria Park.
+93,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1939-08-12,Essendon 18.14 (122) def. St Kilda 13.13 (91),213,31,,Essendon defeated St Kilda by 31 points at Junction Oval.
+94,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1939-08-12,Western Bulldogs 19.15 (129) def. Sydney 12.10 (82),211,47,,Western Bulldogs defeated Sydney by 47 points at Western Oval.
+95,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1939-08-12,Melbourne 22.16 (148) def. Geelong 13.17 (95),243,53,,Melbourne defeated Geelong by 53 points at M.C.G..
+96,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1939-08-12,Richmond 18.8 (116) def. North Melbourne 15.11 (101),217,15,,Richmond defeated North Melbourne by 15 points at Arden St.
+97,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1939-08-19,Richmond 13.10 (88) def. Carlton 6.13 (49),137,39,,Richmond defeated Carlton by 39 points at Punt Rd.
+98,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1939-08-19,Collingwood 7.17 (59) def. Hawthorn 6.15 (51),110,8,,Collingwood defeated Hawthorn by 8 points at Glenferrie Oval.
+99,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1939-08-19,Essendon 14.17 (101) def. North Melbourne 9.7 (61),162,40,,Essendon defeated North Melbourne by 40 points at Windy Hill.
+100,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1939-08-19,Fitzroy 10.10 (70) def. Western Bulldogs 10.8 (68),138,2,,Fitzroy defeated Western Bulldogs by 2 points at Brunswick St.
+101,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Corio Oval,1939-08-19,St Kilda 12.12 (84) def. Geelong 7.17 (59),143,25,,St Kilda defeated Geelong by 25 points at Corio Oval.
+102,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1939-08-19,Melbourne 12.12 (84) def. Sydney 11.14 (80),164,4,,Melbourne defeated Sydney by 4 points at Lake Oval.
+103,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1939-09-02,Carlton 16.22 (118) def. Essendon 8.14 (62),180,56,,Carlton defeated Essendon by 56 points at Princes Park.
+104,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1939-09-02,Collingwood 13.13 (91) def. Richmond 8.11 (59),150,32,,Collingwood defeated Richmond by 32 points at Victoria Park.
+105,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1939-09-02,Melbourne 11.15 (81) def. Fitzroy 4.11 (35),116,46,,Melbourne defeated Fitzroy by 46 points at M.C.G..
+106,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1939-09-02,Western Bulldogs 11.17 (83) def. Hawthorn 6.7 (43),126,40,,Western Bulldogs defeated Hawthorn by 40 points at Western Oval.
+107,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1939-09-02,North Melbourne 11.10 (76) def. Geelong 9.11 (65),141,11,,North Melbourne defeated Geelong by 11 points at Arden St.
+108,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1939-09-02,St Kilda 11.13 (79) def. Sydney 6.16 (52),131,27,,St Kilda defeated Sydney by 27 points at Junction Oval.
+109,Finals,St Kilda,Richmond,St Kilda,Richmond,M.C.G.,1939-09-09,St Kilda 10.12 (72) def. Richmond 6.6 (42),114,30,,St Kilda defeated Richmond by 30 points at M.C.G..
+110,Finals,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1939-09-16,Melbourne 15.14 (104) def. Collingwood 12.18 (90),194,14,,Melbourne defeated Collingwood by 14 points at M.C.G..
+111,Finals,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,1939-09-23,Collingwood 20.14 (134) def. St Kilda 15.15 (105),239,29,,Collingwood defeated St Kilda by 29 points at M.C.G..
+112,Grand Final,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1939-09-30,Melbourne 21.22 (148) def. Collingwood 14.11 (95),243,53,,Melbourne defeated Collingwood by 53 points at M.C.G..

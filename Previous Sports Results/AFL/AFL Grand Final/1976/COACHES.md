@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1976 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1976
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1976.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1976 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Hawthorn
+- **Premiership Coach:** John Kennedy
+- **Runners-up:** North Melbourne
+- **Runners-up Coach:** Ray Jordon
+- **Grand Final Result:** Hawthorn 13.22 (100) def. North Melbourne 10.10 (70)
+- **Winning Margin:** 30 points
+- **Match Date:** 1976-09-25
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 110,143 spectators
+
+## Match Summary & Tactical Notes
+Hawthorn defeated North Melbourne by 30 points in front of 110,143 spectators at the MCG.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

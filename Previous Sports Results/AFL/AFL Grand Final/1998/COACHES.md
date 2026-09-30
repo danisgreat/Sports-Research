@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1998 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1998
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1998.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1998 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Adelaide Crows
+- **Premiership Coach:** Malcolm Blight
+- **Runners-up:** North Melbourne
+- **Runners-up Coach:** Denis Pagan
+- **Grand Final Result:** Adelaide Crows 15.15 (105) def. North Melbourne 8.22 (70)
+- **Winning Margin:** 35 points
+- **Match Date:** 1998-09-26
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 94,431 spectators
+
+## Match Summary & Tactical Notes
+Adelaide Crows went back-to-back from fifth on the ladder, upsetting minor premiers North Melbourne behind Andrew McLeod.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Green Bay Packers,New England Patriots,Green Bay Packers,New England Patriots,Louisiana Superdome,1997-01-26,Green Bay Packers 35 def. New England Patriots 21,56,14,,"Green Bay Packers won Super Bowl XXXI, defeating New England Patriots 35-21 at Louisiana Superdome."

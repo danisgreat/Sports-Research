@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Chicago Bears,Indianapolis Colts,Chicago Bears,Indianapolis Colts,Dolphin Stadium,2007-02-04,Indianapolis Colts 29 def. Chicago Bears 17,46,12,Referee: Tony Corrente,"Indianapolis Colts won Super Bowl XLI, defeating Chicago Bears 29-17 at Dolphin Stadium."

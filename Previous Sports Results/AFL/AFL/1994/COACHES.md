@@ -1,11 +1,32 @@
 # AFL Coaching Staff & Team Hierarchy — 1994 Season
 
 - **Sport:** Australian Rules Football
-- **League:** AFL
+- **League:** AFL (Victorian Football League 1897–1989, Australian Football League 1990–present)
 - **Season:** 1994
+- **Participating Clubs (15 Clubs):** Adelaide, Brisbane Bears, Carlton, Collingwood, Essendon, Fitzroy, Footscray, Geelong, Hawthorn, Melbourne, North Melbourne, Richmond, St Kilda, Sydney, West Coast
 
-## Coaching Overview
-- **Head Coaches:** Senior coaches overseeing all senior matchday tactics, player interchange rotations, and game plans.
-- **Premiership Coach:** The senior coach leading their side to victory in the 1994 AFL Grand Final.
-- **Assistant Coaches:** Line coaches responsible for forward structure, midfield/stoppage setups, and defensive transition.
-- **Coaching Trends:** Evolving tactical eras (from traditional position-and-kick football to zone defenses, high-press running, corridor ball movement, and surge football).
+## Senior Head Coaches by Club
+| Club | Senior Head Coach | Role |
+|---|---|---|
+| Adelaide | Graham Cornes | Senior Head Coach |
+| Brisbane Bears | Robert Walls | Senior Head Coach |
+| Carlton | David Parkin | Senior Head Coach |
+| Collingwood | Leigh Matthews | Senior Head Coach |
+| Essendon | Kevin Sheedy | Senior Head Coach |
+| Fitzroy | Robert Shaw | Senior Head Coach |
+| Footscray | Terry Wheeler | Senior Head Coach |
+| Geelong | Malcolm Blight | Senior Head Coach |
+| Hawthorn | Peter Knights | Senior Head Coach |
+| Melbourne | Neil Balme | Senior Head Coach |
+| North Melbourne | Denis Pagan | Senior Head Coach |
+| Richmond | John Northey | Senior Head Coach |
+| St Kilda | Stan Alves | Senior Head Coach |
+| Sydney | Ron Barassi | Senior Head Coach |
+| West Coast | Mick Malthouse | Senior Head Coach |
+
+## Season Premiership Outcome
+- **Grand Final Result:** West Coast Eagles 20.23 (143) def. Geelong 8.15 (63) (Margin: 80 pts, Venue: Melbourne Cricket Ground)
+- **Premiers:** West Coast Eagles (Coach: Mick Malthouse)
+- **Runners-up:** Geelong (Coach: Malcolm Blight)
+
+- **Sources:** AFL Tables (Coaches Index); Australian Football Historical Records.

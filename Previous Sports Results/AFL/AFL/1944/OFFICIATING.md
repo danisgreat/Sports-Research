@@ -4,8 +4,21 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1944
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Eric Hawkins
+
+## Senior Field Umpiring Panel (9 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Eric Hawkins | 22 | Grand Final |
+| Frank Spokes | 18 | Regular Season / Finals |
+| Henry Hooper | 16 | Regular Season / Finals |
+| Stanley Morgan | 16 | Regular Season / Finals |
+| Jim Perry | 12 | Regular Season / Finals |
+| Phil Lane | 11 | Regular Season / Finals |
+| James Jamieson | 7 | Regular Season / Finals |
+| Alfred Sawyer | 6 | Regular Season / Finals |
+| Sydney OBrien | 4 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Dallas Cowboys,Buffalo Bills,Dallas Cowboys,Buffalo Bills,Georgia Dome,1994-01-30,Dallas Cowboys 30 def. Buffalo Bills 13,43,17,,"Dallas Cowboys won Super Bowl XXVIII, defeating Buffalo Bills 30-13 at Georgia Dome."

@@ -1,11 +1,47 @@
 # NFL Coaching Staffs & Front Office Registry — 2015 Season
 
 - **Sport:** American Football
-- **League:** NFL
+- **League:** NFL (National Football League)
 - **Season:** 2015
+- **Active Franchises (32 Teams):** Arizona Cardinals, Atlanta Falcons, Baltimore Ravens, Buffalo Bills, Carolina Panthers, Chicago Bears, Cincinnati Bengals, Cleveland Browns, Dallas Cowboys, Denver Broncos, Detroit Lions, Green Bay Packers, Houston Texans, Indianapolis Colts, Jacksonville Jaguars, Kansas City Chiefs, Miami Dolphins, Minnesota Vikings, New England Patriots, New Orleans Saints, New York Giants, New York Jets, Oakland Raiders, Philadelphia Eagles, Pittsburgh Steelers, San Diego Chargers, San Francisco 49ers, Seattle Seahawks, St. Louis Rams, Tampa Bay Buccaneers, Tennessee Titans, Washington Commanders
 
-## Coaching Structure
-- **Head Coaches:** Head coaches across all active franchises.
-- **Coordinators:** Offensive Coordinators (OC), Defensive Coordinators (DC), and Special Teams Coordinators (STC).
-- **Championship Coach:** The head coach guiding their franchise to the 2015 NFL title / Super Bowl victory.
-- **Coaching Philosophy:** Scheme deployment (West Coast Offense, Air Coryell, Erhardt-Perkins, Cover 2, 3-4 vs 4-3 defense, Shanahan wide-zone system).
+## Head Coaches by Franchise
+| Franchise | Senior Head Coach | Role |
+|---|---|---|
+| Arizona Cardinals | Bruce Arians | Head Coach |
+| Atlanta Falcons | Dan Quinn | Head Coach |
+| Baltimore Ravens | John Harbaugh | Head Coach |
+| Buffalo Bills | Rex Ryan | Head Coach |
+| Carolina Panthers | Ron Rivera | Head Coach |
+| Chicago Bears | John Fox | Head Coach |
+| Cincinnati Bengals | Marvin Lewis | Head Coach |
+| Cleveland Browns | Mike Pettine | Head Coach |
+| Dallas Cowboys | Jason Garrett | Head Coach |
+| Denver Broncos | Gary Kubiak | Head Coach |
+| Detroit Lions | Jim Caldwell | Head Coach |
+| Green Bay Packers | Mike McCarthy | Head Coach |
+| Houston Texans | Bill O'Brien | Head Coach |
+| Indianapolis Colts | Chuck Pagano | Head Coach |
+| Jacksonville Jaguars | Gus Bradley | Head Coach |
+| Kansas City Chiefs | Andy Reid | Head Coach |
+| Miami Dolphins | Joe Philbin | Head Coach |
+| Minnesota Vikings | Mike Zimmer | Head Coach |
+| New England Patriots | Bill Belichick | Head Coach |
+| New Orleans Saints | Sean Payton | Head Coach |
+| New York Giants | Tom Coughlin | Head Coach |
+| New York Jets | Todd Bowles | Head Coach |
+| Oakland Raiders | Jack Del Rio | Head Coach |
+| Philadelphia Eagles | Pat Shurmur | Head Coach |
+| Pittsburgh Steelers | Mike Tomlin | Head Coach |
+| San Diego Chargers | Mike McCoy | Head Coach |
+| San Francisco 49ers | Jim Tomsula | Head Coach |
+| Seattle Seahawks | Pete Carroll | Head Coach |
+| St. Louis Rams | Jeff Fisher | Head Coach |
+| Tampa Bay Buccaneers | Lovie Smith | Head Coach |
+| Tennessee Titans | Ken Whisenhunt | Head Coach |
+| Washington Commanders | Jay Gruden | Head Coach |
+
+## Championship Matchup
+- **Super Bowl / Postseason Summary:** NFL Postseason & Super Bowl contested.
+
+- **Sources:** Pro-Football-Reference; Elias Sports Bureau; NFL Game Statistics & Information System (GSIS).

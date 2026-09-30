@@ -1,11 +1,23 @@
-# IFAF World Championship Coaching Staff & Team Hierarchy — 2003 Season
+# IFAF World Championship Coaching Staff & Team Hierarchy — 2003 Tournament
 
-- **Sport:** American Football
-- **Competition:** IFAF World Championship
-- **Season:** 2003
+- **Sport:** American Football (International)
+- **Competition:** IFAF World Championship of American Football
+- **Edition:** 2003 World Championship
+- **Participating National Teams (4 Nations):** Japan, Mexico, Germany, France
 
-## Coaching Overview & Management
-- **Senior Leadership:** National Team Head Coaches and Offensive/Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 2003.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 2003 season.
+## Participating National Head Coaches
+| National Team | Senior Head Coach & Staff | Tournament Placement |
+|---|---|---|
+| Japan | Toshiaki Abe (Head Coach) / Kiyoyuki Mori (OC) | Champions (Gold Medal) |
+| Mexico | Diego García Miravete (Head Coach) | Runners-up (Silver Medal) |
+| Germany | Martin Hanselmann (Head Coach) | 3rd Place (Bronze Medal) |
+| France | Patrick Esume (Head Coach) | 4th Place |
+
+## Championship Decider
+- **World Champions (Gold Medal):** Japan
+- **Runners-up (Silver Medal):** Mexico
+- **Gold Medal Game Score:** Japan def. Mexico (34-14)
+- **Tournament MVP:** Tetsuo Takata (QB, Japan)
+- **Host Venue:** Herbert-Dröse-Stadion (Hanau, Germany)
+
+- **Sources:** International Federation of American Football (IFAF); USA Football; JAFA.

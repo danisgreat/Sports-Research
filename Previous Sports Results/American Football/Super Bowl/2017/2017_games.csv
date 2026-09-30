@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Atlanta Falcons,New England Patriots,Atlanta Falcons,New England Patriots,NRG Stadium,2017-02-05,New England Patriots 34 def. Atlanta Falcons 28,62,6,Referee: Carl Cheffers,"New England Patriots won Super Bowl LI, defeating Atlanta Falcons 34-28 at NRG Stadium."

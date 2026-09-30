@@ -1,1 +1,72 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1904-05-07,Fitzroy 16.12 (108) def. Carlton 1.8 (14),122,94,,Fitzroy defeated Carlton by 94 points at Princes Park.
+2,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1904-05-07,Collingwood 9.15 (69) def. Geelong 7.9 (51),120,18,,Collingwood defeated Geelong by 18 points at Victoria Park.
+3,Regular Season,Essendon,Sydney,Essendon,Sydney,East Melbourne,1904-05-07,Essendon 8.10 (58) def. Sydney 2.5 (17),75,41,,Essendon defeated Sydney by 41 points at East Melbourne.
+4,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1904-05-07,St Kilda 12.13 (85) def. Melbourne 5.9 (39),124,46,,St Kilda defeated Melbourne by 46 points at Junction Oval.
+5,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1904-05-14,Carlton 5.6 (36) def. Sydney 1.13 (19),55,17,,Carlton defeated Sydney by 17 points at Lake Oval.
+6,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1904-05-14,Collingwood 7.13 (55) def. Melbourne 7.7 (49),104,6,,Collingwood defeated Melbourne by 6 points at M.C.G..
+7,Regular Season,Geelong,Essendon,Geelong,Essendon,Corio Oval,1904-05-14,Geelong 10.7 (67) def. Essendon 5.13 (43),110,24,,Geelong defeated Essendon by 24 points at Corio Oval.
+8,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1904-05-14,Fitzroy 11.17 (83) def. St Kilda 5.3 (33),116,50,,Fitzroy defeated St Kilda by 50 points at Brunswick St.
+9,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1904-05-21,Carlton 8.17 (65) def. Geelong 4.8 (32),97,33,,Carlton defeated Geelong by 33 points at Princes Park.
+10,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1904-05-21,Sydney 7.13 (55) def. Collingwood 4.5 (29),84,26,,Sydney defeated Collingwood by 26 points at Victoria Park.
+11,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1904-05-21,Essendon 10.9 (69) def. St Kilda 5.3 (33),102,36,,Essendon defeated St Kilda by 36 points at Junction Oval.
+12,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1904-05-21,Fitzroy 14.15 (99) def. Melbourne 3.5 (23),122,76,,Fitzroy defeated Melbourne by 76 points at M.C.G..
+13,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1904-05-28,Carlton 6.4 (40) def. St Kilda 4.7 (31),71,9,,Carlton defeated St Kilda by 9 points at Junction Oval.
+14,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1904-05-28,Collingwood 6.6 (42) def. Fitzroy 4.9 (33),75,9,,Collingwood defeated Fitzroy by 9 points at Brunswick St.
+15,Regular Season,Essendon,Melbourne,Essendon,Melbourne,S.C.G.,1904-05-28,Melbourne 9.17 (71) def. Essendon 6.3 (39),110,32,,Melbourne defeated Essendon by 32 points at S.C.G..
+16,Regular Season,Geelong,Sydney,Geelong,Sydney,Corio Oval,1904-05-28,Sydney 6.16 (52) def. Geelong 6.4 (40),92,12,,Sydney defeated Geelong by 12 points at Corio Oval.
+17,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1904-06-04,Carlton 8.5 (53) def. Collingwood 6.12 (48),101,5,,Carlton defeated Collingwood by 5 points at Victoria Park.
+18,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,East Melbourne,1904-06-04,Fitzroy 11.17 (83) def. Essendon 6.5 (41),124,42,,Fitzroy defeated Essendon by 42 points at East Melbourne.
+19,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Corio Oval,1904-06-04,Geelong 6.13 (49) def. St Kilda 4.10 (34),83,15,,Geelong defeated St Kilda by 15 points at Corio Oval.
+20,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1904-06-04,Sydney 8.16 (64) def. Melbourne 5.9 (39),103,25,,Sydney defeated Melbourne by 25 points at Lake Oval.
+21,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1904-06-06,Melbourne 8.10 (58) def. Carlton 5.5 (35),93,23,,Melbourne defeated Carlton by 23 points at M.C.G..
+22,Regular Season,Essendon,Collingwood,Essendon,Collingwood,East Melbourne,1904-06-06,Collingwood 6.7 (43) def. Essendon 6.5 (41),84,2,,Collingwood defeated Essendon by 2 points at East Melbourne.
+23,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1904-06-06,Fitzroy 12.6 (78) def. Geelong 6.18 (54),132,24,,Fitzroy defeated Geelong by 24 points at Brunswick St.
+24,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1904-06-06,Sydney 15.10 (100) def. St Kilda 9.4 (58),158,42,,Sydney defeated St Kilda by 42 points at Lake Oval.
+25,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1904-06-11,Essendon 7.11 (53) def. Carlton 7.5 (47),100,6,,Essendon defeated Carlton by 6 points at Princes Park.
+26,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1904-06-11,St Kilda 7.7 (49) def. Collingwood 4.10 (34),83,15,,St Kilda defeated Collingwood by 15 points at Junction Oval.
+27,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1904-06-11,Fitzroy 6.9 (45) def. Sydney 5.14 (44),89,1,,Fitzroy defeated Sydney by 1 points at Brunswick St.
+28,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Corio Oval,1904-06-11,Melbourne 15.7 (97) def. Geelong 9.12 (66),163,31,,Melbourne defeated Geelong by 31 points at Corio Oval.
+29,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1904-06-25,Fitzroy 8.8 (56) def. Carlton 7.10 (52),108,4,,Fitzroy defeated Carlton by 4 points at Brunswick St.
+30,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Corio Oval,1904-06-25,Collingwood 8.10 (58) def. Geelong 4.10 (34),92,24,,Collingwood defeated Geelong by 24 points at Corio Oval.
+31,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1904-06-25,Sydney 10.9 (69) def. Essendon 4.5 (29),98,40,,Sydney defeated Essendon by 40 points at Lake Oval.
+32,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1904-06-25,Melbourne 13.13 (91) def. St Kilda 4.2 (26),117,65,,Melbourne defeated St Kilda by 65 points at M.C.G..
+33,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1904-07-02,Carlton 9.7 (61) def. Sydney 5.7 (37),98,24,,Carlton defeated Sydney by 24 points at Princes Park.
+34,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1904-07-02,Melbourne 8.6 (54) def. Collingwood 4.5 (29),83,25,,Melbourne defeated Collingwood by 25 points at Victoria Park.
+35,Regular Season,Essendon,Geelong,Essendon,Geelong,East Melbourne,1904-07-02,Essendon 9.12 (66) def. Geelong 4.4 (28),94,38,,Essendon defeated Geelong by 38 points at East Melbourne.
+36,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1904-07-02,St Kilda 11.12 (78) def. Fitzroy 4.7 (31),109,47,,St Kilda defeated Fitzroy by 47 points at Junction Oval.
+37,Regular Season,Geelong,Carlton,Geelong,Carlton,Corio Oval,1904-07-09,Geelong 4.11 (35) drew with Carlton 5.5 (35),70,0,,Geelong and Carlton played out a draw at Corio Oval.
+38,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1904-07-09,Sydney 5.15 (45) def. Collingwood 6.6 (42),87,3,,Sydney defeated Collingwood by 3 points at Lake Oval.
+39,Regular Season,Essendon,St Kilda,Essendon,St Kilda,East Melbourne,1904-07-09,Essendon 6.8 (44) def. St Kilda 6.3 (39),83,5,,Essendon defeated St Kilda by 5 points at East Melbourne.
+40,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1904-07-09,Fitzroy 8.10 (58) def. Melbourne 5.13 (43),101,15,,Fitzroy defeated Melbourne by 15 points at Brunswick St.
+41,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1904-07-16,Carlton 9.7 (61) def. St Kilda 4.1 (25),86,36,,Carlton defeated St Kilda by 36 points at Princes Park.
+42,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1904-07-16,Collingwood 7.13 (55) def. Fitzroy 3.6 (24),79,31,,Collingwood defeated Fitzroy by 31 points at Victoria Park.
+43,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1904-07-16,Essendon 4.11 (35) def. Melbourne 3.12 (30),65,5,,Essendon defeated Melbourne by 5 points at M.C.G..
+44,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1904-07-16,Sydney 6.5 (41) def. Geelong 4.15 (39),80,2,,Sydney defeated Geelong by 2 points at Lake Oval.
+45,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1904-07-23,Carlton 6.10 (46) def. Collingwood 6.4 (40),86,6,,Carlton defeated Collingwood by 6 points at Princes Park.
+46,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1904-07-23,Fitzroy 6.8 (44) def. Essendon 3.9 (27),71,17,,Fitzroy defeated Essendon by 17 points at Brunswick St.
+47,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1904-07-23,Geelong 7.16 (58) def. St Kilda 5.5 (35),93,23,,Geelong defeated St Kilda by 23 points at Junction Oval.
+48,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1904-07-23,Sydney 11.7 (73) def. Melbourne 9.13 (67),140,6,,Sydney defeated Melbourne by 6 points at M.C.G..
+49,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1904-07-30,Carlton 6.14 (50) def. Melbourne 4.10 (34),84,16,,Carlton defeated Melbourne by 16 points at Princes Park.
+50,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1904-07-30,Essendon 7.10 (52) def. Collingwood 5.6 (36),88,16,,Essendon defeated Collingwood by 16 points at Victoria Park.
+51,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Corio Oval,1904-07-30,Geelong 5.12 (42) def. Fitzroy 4.13 (37),79,5,,Geelong defeated Fitzroy by 5 points at Corio Oval.
+52,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1904-07-30,Sydney 10.5 (65) def. St Kilda 6.10 (46),111,19,,Sydney defeated St Kilda by 19 points at Junction Oval.
+53,Regular Season,Essendon,Carlton,Essendon,Carlton,East Melbourne,1904-08-13,Carlton 5.9 (39) def. Essendon 5.5 (35),74,4,,Carlton defeated Essendon by 4 points at East Melbourne.
+54,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1904-08-13,Collingwood 14.12 (96) def. St Kilda 6.10 (46),142,50,,Collingwood defeated St Kilda by 50 points at Victoria Park.
+55,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1904-08-13,Fitzroy 8.10 (58) def. Sydney 5.16 (46),104,12,,Fitzroy defeated Sydney by 12 points at Lake Oval.
+56,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1904-08-13,Melbourne 11.10 (76) def. Geelong 6.4 (40),116,36,,Melbourne defeated Geelong by 36 points at M.C.G..
+57,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1904-08-20,Collingwood 8.11 (59) def. Carlton 7.7 (49),108,10,,Collingwood defeated Carlton by 10 points at Victoria Park.
+58,Regular Season,Essendon,Geelong,Essendon,Geelong,East Melbourne,1904-08-20,Essendon 8.9 (57) def. Geelong 5.9 (39),96,18,,Essendon defeated Geelong by 18 points at East Melbourne.
+59,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1904-08-20,Fitzroy 4.14 (38) def. Sydney 3.15 (33),71,5,,Fitzroy defeated Sydney by 5 points at Brunswick St.
+60,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1904-08-20,Melbourne 13.15 (93) def. St Kilda 3.3 (21),114,72,,Melbourne defeated St Kilda by 72 points at M.C.G..
+61,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1904-08-27,Melbourne 5.13 (43) def. Carlton 1.8 (14),57,29,,Melbourne defeated Carlton by 29 points at Princes Park.
+62,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1904-08-27,Collingwood 12.9 (81) def. St Kilda 2.8 (20),101,61,,Collingwood defeated St Kilda by 61 points at Junction Oval.
+63,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1904-08-27,Essendon 8.11 (59) def. Sydney 4.3 (27),86,32,,Essendon defeated Sydney by 32 points at Lake Oval.
+64,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Corio Oval,1904-08-27,Fitzroy 8.5 (53) def. Geelong 4.6 (30),83,23,,Fitzroy defeated Geelong by 23 points at Corio Oval.
+65,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1904-09-03,Carlton 16.11 (107) def. St Kilda 7.7 (49),156,58,,Carlton defeated St Kilda by 58 points at Princes Park.
+66,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1904-09-03,Collingwood 7.9 (51) def. Melbourne 5.10 (40),91,11,,Collingwood defeated Melbourne by 11 points at M.C.G..
+67,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,East Melbourne,1904-09-03,Essendon 13.9 (87) def. Fitzroy 4.2 (26),113,61,,Essendon defeated Fitzroy by 61 points at East Melbourne.
+68,Regular Season,Geelong,Sydney,Geelong,Sydney,Corio Oval,1904-09-03,Sydney 6.8 (44) def. Geelong 3.4 (22),66,22,,Sydney defeated Geelong by 22 points at Corio Oval.
+69,Finals,Carlton,Essendon,Carlton,Essendon,Victoria Park,1904-09-10,Carlton 6.7 (43) def. Essendon 6.4 (40),83,3,,Carlton defeated Essendon by 3 points at Victoria Park.
+70,Finals,Fitzroy,Collingwood,Fitzroy,Collingwood,M.C.G.,1904-09-10,Fitzroy 9.7 (61) def. Collingwood 7.8 (50),111,11,,Fitzroy defeated Collingwood by 11 points at M.C.G..
+71,Grand Final,Fitzroy,Carlton,Fitzroy,Carlton,M.C.G.,1904-09-17,Fitzroy 9.7 (61) def. Carlton 5.7 (37),98,24,,Fitzroy defeated Carlton by 24 points at M.C.G..

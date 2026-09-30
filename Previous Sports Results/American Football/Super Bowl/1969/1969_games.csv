@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Baltimore Colts,New York Jets,Baltimore Colts,New York Jets,Orange Bowl,1969-01-12,New York Jets 16 def. Baltimore Colts 7,23,9,,"New York Jets won Super Bowl III, defeating Baltimore Colts 16-7 at Orange Bowl."

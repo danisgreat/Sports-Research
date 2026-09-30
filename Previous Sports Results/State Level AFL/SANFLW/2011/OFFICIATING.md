@@ -1,4 +1,4 @@
 # SANFLW Officiating & Refereeing Corps — 2011 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 2017. No official match adjudicators or referee panels were appointed in 2011.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** SANFLW not yet founded (inaugural season in 2017).

@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Dallas Cowboys,Buffalo Bills,Dallas Cowboys,Buffalo Bills,Rose Bowl,1993-01-31,Dallas Cowboys 52 def. Buffalo Bills 17,69,35,,"Dallas Cowboys won Super Bowl XXVII, defeating Buffalo Bills 52-17 at Rose Bowl."

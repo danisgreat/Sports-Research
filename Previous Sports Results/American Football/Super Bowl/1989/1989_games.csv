@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,San Francisco 49ers,Cincinnati Bengals,San Francisco 49ers,Cincinnati Bengals,Joe Robbie Stadium,1989-01-22,San Francisco 49ers 20 def. Cincinnati Bengals 16,36,4,,"San Francisco 49ers won Super Bowl XXIII, defeating Cincinnati Bengals 20-16 at Joe Robbie Stadium."

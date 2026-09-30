@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1953-04-18,Western Bulldogs 9.11 (65) def. Carlton 7.18 (60),125,5,,Western Bulldogs defeated Carlton by 5 points at Princes Park.
+2,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1953-04-18,Collingwood 17.16 (118) def. Sydney 11.11 (77),195,41,,Collingwood defeated Sydney by 41 points at Victoria Park.
+3,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1953-04-18,Essendon 17.9 (111) def. Fitzroy 12.16 (88),199,23,,Essendon defeated Fitzroy by 23 points at Windy Hill.
+4,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1953-04-18,Geelong 12.15 (87) def. Hawthorn 5.8 (38),125,49,,Geelong defeated Hawthorn by 49 points at Kardinia Park.
+5,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1953-04-18,Richmond 11.7 (73) def. Melbourne 9.13 (67),140,6,,Richmond defeated Melbourne by 6 points at Punt Rd.
+6,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1953-04-18,North Melbourne 14.21 (105) def. St Kilda 8.9 (57),162,48,,North Melbourne defeated St Kilda by 48 points at Junction Oval.
+7,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1953-05-02,Carlton 13.12 (90) def. Melbourne 8.11 (59),149,31,,Carlton defeated Melbourne by 31 points at M.C.G..
+8,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1953-05-02,North Melbourne 18.10 (118) def. Collingwood 11.9 (75),193,43,,North Melbourne defeated Collingwood by 43 points at Arden St.
+9,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1953-05-02,Sydney 13.21 (99) def. Essendon 13.11 (89),188,10,,Sydney defeated Essendon by 10 points at Lake Oval.
+10,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1953-05-02,Fitzroy 12.9 (81) def. Richmond 11.14 (80),161,1,,Fitzroy defeated Richmond by 1 points at Brunswick St.
+11,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1953-05-02,Geelong 15.12 (102) def. Western Bulldogs 8.13 (61),163,41,,Geelong defeated Western Bulldogs by 41 points at Western Oval.
+12,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Glenferrie Oval,1953-05-02,St Kilda 13.14 (92) def. Hawthorn 8.9 (57),149,35,,St Kilda defeated Hawthorn by 35 points at Glenferrie Oval.
+13,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1953-05-09,Carlton 16.8 (104) def. Richmond 15.8 (98),202,6,,Carlton defeated Richmond by 6 points at Punt Rd.
+14,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1953-05-09,Geelong 14.14 (98) def. Collingwood 9.19 (73),171,25,,Geelong defeated Collingwood by 25 points at Victoria Park.
+15,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1953-05-09,Essendon 17.20 (122) def. St Kilda 7.16 (58),180,64,,Essendon defeated St Kilda by 64 points at Windy Hill.
+16,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1953-05-09,Fitzroy 12.14 (86) def. Sydney 10.15 (75),161,11,,Fitzroy defeated Sydney by 11 points at Lake Oval.
+17,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1953-05-09,Western Bulldogs 16.15 (111) def. Hawthorn 6.6 (42),153,69,,Western Bulldogs defeated Hawthorn by 69 points at Western Oval.
+18,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1953-05-09,North Melbourne 12.12 (84) def. Melbourne 11.17 (83),167,1,,North Melbourne defeated Melbourne by 1 points at Arden St.
+19,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1953-05-16,Collingwood 14.19 (103) def. Carlton 14.11 (95),198,8,,Collingwood defeated Carlton by 8 points at Princes Park.
+20,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1953-05-16,Geelong 12.7 (79) def. Essendon 9.11 (65),144,14,,Geelong defeated Essendon by 14 points at Kardinia Park.
+21,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1953-05-16,Fitzroy 12.14 (86) def. North Melbourne 10.15 (75),161,11,,Fitzroy defeated North Melbourne by 11 points at Brunswick St.
+22,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1953-05-16,Western Bulldogs 9.21 (75) def. Melbourne 4.6 (30),105,45,,Western Bulldogs defeated Melbourne by 45 points at M.C.G..
+23,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1953-05-16,Sydney 9.9 (63) def. Hawthorn 7.11 (53),116,10,,Sydney defeated Hawthorn by 10 points at Glenferrie Oval.
+24,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Junction Oval,1953-05-16,St Kilda 11.17 (83) def. Richmond 8.17 (65),148,18,,St Kilda defeated Richmond by 18 points at Junction Oval.
+25,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1953-05-23,Carlton 7.10 (52) def. St Kilda 6.7 (43),95,9,,Carlton defeated St Kilda by 9 points at Princes Park.
+26,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1953-05-23,Collingwood 13.18 (96) def. Hawthorn 3.8 (26),122,70,,Collingwood defeated Hawthorn by 70 points at Victoria Park.
+27,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1953-05-23,Melbourne 9.3 (57) def. Essendon 6.10 (46),103,11,,Melbourne defeated Essendon by 11 points at Windy Hill.
+28,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1953-05-23,Western Bulldogs 10.6 (66) def. Fitzroy 1.0 (6),72,60,,Western Bulldogs defeated Fitzroy by 60 points at Western Oval.
+29,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1953-05-23,Geelong 15.16 (106) def. Richmond 6.16 (52),158,54,,Geelong defeated Richmond by 54 points at Punt Rd.
+30,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1953-05-23,North Melbourne 9.8 (62) def. Sydney 8.10 (58),120,4,,North Melbourne defeated Sydney by 4 points at Lake Oval.
+31,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Glenferrie Oval,1953-05-30,Hawthorn 10.7 (67) def. Carlton 6.11 (47),114,20,,Hawthorn defeated Carlton by 20 points at Glenferrie Oval.
+32,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1953-05-30,Collingwood 9.8 (62) def. Richmond 5.9 (39),101,23,,Collingwood defeated Richmond by 23 points at Victoria Park.
+33,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1953-05-30,Essendon 9.14 (68) def. North Melbourne 7.9 (51),119,17,,Essendon defeated North Melbourne by 17 points at Arden St.
+34,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1953-05-30,Fitzroy 12.9 (81) def. Melbourne 10.11 (71),152,10,,Fitzroy defeated Melbourne by 10 points at M.C.G..
+35,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1953-05-30,Western Bulldogs 14.9 (93) def. St Kilda 10.9 (69),162,24,,Western Bulldogs defeated St Kilda by 24 points at Junction Oval.
+36,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1953-05-30,Geelong 14.16 (100) def. Sydney 7.5 (47),147,53,,Geelong defeated Sydney by 53 points at Kardinia Park.
+37,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1953-06-06,Carlton 14.16 (100) def. North Melbourne 7.6 (48),148,52,,Carlton defeated North Melbourne by 52 points at Princes Park.
+38,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1953-06-06,Collingwood 7.10 (52) def. Western Bulldogs 7.9 (51),103,1,,Collingwood defeated Western Bulldogs by 1 points at Western Oval.
+39,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1953-06-06,Essendon 11.18 (84) def. Richmond 7.6 (48),132,36,,Essendon defeated Richmond by 36 points at Windy Hill.
+40,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1953-06-06,Fitzroy 8.12 (60) def. Hawthorn 5.14 (44),104,16,,Fitzroy defeated Hawthorn by 16 points at Brunswick St.
+41,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1953-06-06,Geelong 11.16 (82) def. Melbourne 8.10 (58),140,24,,Geelong defeated Melbourne by 24 points at M.C.G..
+42,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1953-06-06,Sydney 18.16 (124) def. St Kilda 7.11 (53),177,71,,Sydney defeated St Kilda by 71 points at Junction Oval.
+43,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1953-06-13,Essendon 14.14 (98) def. Carlton 7.11 (53),151,45,,Essendon defeated Carlton by 45 points at Windy Hill.
+44,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1953-06-13,Collingwood 19.17 (131) def. St Kilda 8.8 (56),187,75,,Collingwood defeated St Kilda by 75 points at Victoria Park.
+45,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1953-06-13,Geelong 21.10 (136) def. Fitzroy 7.8 (50),186,86,,Geelong defeated Fitzroy by 86 points at Kardinia Park.
+46,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Punt Rd,1953-06-13,Western Bulldogs 9.14 (68) def. Richmond 8.11 (59),127,9,,Western Bulldogs defeated Richmond by 9 points at Punt Rd.
+47,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1953-06-13,North Melbourne 12.8 (80) def. Hawthorn 8.14 (62),142,18,,North Melbourne defeated Hawthorn by 18 points at Glenferrie Oval.
+48,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1953-06-13,Sydney 11.11 (77) def. Melbourne 9.17 (71),148,6,,Sydney defeated Melbourne by 6 points at Lake Oval.
+49,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1953-06-20,Carlton 7.18 (60) def. Fitzroy 7.12 (54),114,6,,Carlton defeated Fitzroy by 6 points at Brunswick St.
+50,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1953-06-20,Collingwood 9.9 (63) def. Melbourne 7.6 (48),111,15,,Collingwood defeated Melbourne by 15 points at M.C.G..
+51,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1953-06-20,Essendon 12.15 (87) def. Hawthorn 9.10 (64),151,23,,Essendon defeated Hawthorn by 23 points at Glenferrie Oval.
+52,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1953-06-20,Sydney 11.6 (72) def. Western Bulldogs 5.13 (43),115,29,,Sydney defeated Western Bulldogs by 29 points at Western Oval.
+53,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1953-06-20,Geelong 9.6 (60) def. St Kilda 6.8 (44),104,16,,Geelong defeated St Kilda by 16 points at Junction Oval.
+54,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1953-06-20,North Melbourne 6.9 (45) def. Richmond 5.12 (42),87,3,,North Melbourne defeated Richmond by 3 points at Arden St.
+55,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1953-06-27,Geelong 10.14 (74) def. Carlton 8.15 (63),137,11,,Geelong defeated Carlton by 11 points at Princes Park.
+56,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1953-06-27,Essendon 11.14 (80) def. Collingwood 6.16 (52),132,28,,Essendon defeated Collingwood by 28 points at Windy Hill.
+57,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1953-06-27,Fitzroy 11.9 (75) def. St Kilda 7.10 (52),127,23,,Fitzroy defeated St Kilda by 23 points at Brunswick St.
+58,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1953-06-27,Western Bulldogs 5.12 (42) def. North Melbourne 3.7 (25),67,17,,Western Bulldogs defeated North Melbourne by 17 points at Arden St.
+59,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1953-06-27,Hawthorn 16.6 (102) def. Melbourne 10.14 (74),176,28,,Hawthorn defeated Melbourne by 28 points at M.C.G..
+60,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1953-06-27,Sydney 12.7 (79) def. Richmond 6.14 (50),129,29,,Sydney defeated Richmond by 29 points at Lake Oval.
+61,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1953-07-04,Carlton 14.13 (97) def. Sydney 10.13 (73),170,24,,Carlton defeated Sydney by 24 points at Princes Park.
+62,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1953-07-04,Fitzroy 9.8 (62) def. Collingwood 7.19 (61),123,1,,Fitzroy defeated Collingwood by 1 points at Victoria Park.
+63,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1953-07-04,Western Bulldogs 9.15 (69) def. Essendon 7.11 (53),122,16,,Western Bulldogs defeated Essendon by 16 points at Western Oval.
+64,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1953-07-04,Geelong 12.14 (86) def. North Melbourne 13.7 (85),171,1,,Geelong defeated North Melbourne by 1 points at Kardinia Park.
+65,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1953-07-04,Richmond 12.10 (82) def. Hawthorn 7.6 (48),130,34,,Richmond defeated Hawthorn by 34 points at Punt Rd.
+66,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1953-07-04,St Kilda 11.7 (73) def. Melbourne 8.21 (69),142,4,,St Kilda defeated Melbourne by 4 points at Junction Oval.
+67,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1953-07-11,Western Bulldogs 13.12 (90) def. Carlton 8.18 (66),156,24,,Western Bulldogs defeated Carlton by 24 points at Western Oval.
+68,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1953-07-11,Geelong 12.14 (86) def. Hawthorn 9.8 (62),148,24,,Geelong defeated Hawthorn by 24 points at Glenferrie Oval.
+69,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1953-07-11,Melbourne 11.9 (75) drew with Richmond 11.9 (75),150,0,,Melbourne and Richmond played out a draw at M.C.G..
+70,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1953-07-18,Collingwood 17.17 (119) def. Sydney 12.9 (81),200,38,,Collingwood defeated Sydney by 38 points at Lake Oval.
+71,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1953-07-18,Essendon 14.13 (97) def. Fitzroy 7.20 (62),159,35,,Essendon defeated Fitzroy by 35 points at Brunswick St.
+72,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1953-07-18,North Melbourne 20.11 (131) def. St Kilda 5.16 (46),177,85,,North Melbourne defeated St Kilda by 85 points at Arden St.
+73,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1953-07-25,Carlton 12.24 (96) def. Melbourne 10.10 (70),166,26,,Carlton defeated Melbourne by 26 points at Princes Park.
+74,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1953-07-25,Collingwood 13.16 (94) def. North Melbourne 8.17 (65),159,29,,Collingwood defeated North Melbourne by 29 points at Victoria Park.
+75,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1953-07-25,Essendon 12.11 (83) def. Sydney 8.14 (62),145,21,,Essendon defeated Sydney by 21 points at Windy Hill.
+76,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1953-07-25,Fitzroy 13.12 (90) def. Richmond 13.7 (85),175,5,,Fitzroy defeated Richmond by 5 points at Punt Rd.
+77,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1953-07-25,Geelong 11.12 (78) def. Western Bulldogs 8.10 (58),136,20,,Geelong defeated Western Bulldogs by 20 points at Kardinia Park.
+78,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1953-07-25,St Kilda 9.13 (67) def. Hawthorn 4.14 (38),105,29,,St Kilda defeated Hawthorn by 29 points at Junction Oval.
+79,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1953-08-01,Carlton 15.16 (106) def. Richmond 10.19 (79),185,27,,Carlton defeated Richmond by 27 points at Princes Park.
+80,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1953-08-01,Collingwood 10.15 (75) def. Geelong 7.13 (55),130,20,,Collingwood defeated Geelong by 20 points at Kardinia Park.
+81,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1953-08-01,Essendon 14.15 (99) def. St Kilda 9.10 (64),163,35,,Essendon defeated St Kilda by 35 points at Junction Oval.
+82,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1953-08-01,Fitzroy 12.18 (90) def. Sydney 7.19 (61),151,29,,Fitzroy defeated Sydney by 29 points at Brunswick St.
+83,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1953-08-01,Western Bulldogs 11.10 (76) def. Hawthorn 3.10 (28),104,48,,Western Bulldogs defeated Hawthorn by 48 points at Glenferrie Oval.
+84,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1953-08-01,Melbourne 9.13 (67) def. North Melbourne 8.16 (64),131,3,,Melbourne defeated North Melbourne by 3 points at M.C.G..
+85,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1953-08-08,Collingwood 12.15 (87) def. Carlton 9.16 (70),157,17,,Collingwood defeated Carlton by 17 points at Victoria Park.
+86,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1953-08-08,Essendon 8.13 (61) def. Geelong 7.8 (50),111,11,,Essendon defeated Geelong by 11 points at Windy Hill.
+87,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1953-08-08,North Melbourne 17.19 (121) def. Fitzroy 7.9 (51),172,70,,North Melbourne defeated Fitzroy by 70 points at Arden St.
+88,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1953-08-08,Western Bulldogs 14.14 (98) def. Melbourne 9.7 (61),159,37,,Western Bulldogs defeated Melbourne by 37 points at Western Oval.
+89,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1953-08-08,Hawthorn 9.8 (62) def. Sydney 7.12 (54),116,8,,Hawthorn defeated Sydney by 8 points at Lake Oval.
+90,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1953-08-08,Richmond 13.16 (94) def. St Kilda 11.14 (80),174,14,,Richmond defeated St Kilda by 14 points at Punt Rd.
+91,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1953-08-15,St Kilda 8.15 (63) def. Carlton 7.16 (58),121,5,,St Kilda defeated Carlton by 5 points at Junction Oval.
+92,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1953-08-15,Collingwood 12.16 (88) def. Hawthorn 11.6 (72),160,16,,Collingwood defeated Hawthorn by 16 points at Glenferrie Oval.
+93,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1953-08-15,Essendon 12.10 (82) def. Melbourne 8.9 (57),139,25,,Essendon defeated Melbourne by 25 points at M.C.G..
+94,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1953-08-15,Western Bulldogs 14.14 (98) def. Fitzroy 7.11 (53),151,45,,Western Bulldogs defeated Fitzroy by 45 points at Brunswick St.
+95,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1953-08-15,Geelong 14.18 (102) def. Richmond 4.9 (33),135,69,,Geelong defeated Richmond by 69 points at Kardinia Park.
+96,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1953-08-15,Sydney 11.21 (87) def. North Melbourne 8.8 (56),143,31,,Sydney defeated North Melbourne by 31 points at Arden St.
+97,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1953-08-22,Carlton 12.15 (87) def. Hawthorn 6.9 (45),132,42,,Carlton defeated Hawthorn by 42 points at Princes Park.
+98,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1953-08-22,Collingwood 13.17 (95) def. Richmond 12.9 (81),176,14,,Collingwood defeated Richmond by 14 points at Punt Rd.
+99,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1953-08-22,North Melbourne 12.7 (79) def. Essendon 12.6 (78),157,1,,North Melbourne defeated Essendon by 1 points at Windy Hill.
+100,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1953-08-22,Melbourne 9.10 (64) def. Fitzroy 6.13 (49),113,15,,Melbourne defeated Fitzroy by 15 points at Brunswick St.
+101,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1953-08-22,Western Bulldogs 12.18 (90) def. St Kilda 4.5 (29),119,61,,Western Bulldogs defeated St Kilda by 61 points at Western Oval.
+102,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1953-08-22,Sydney 14.14 (98) def. Geelong 8.7 (55),153,43,,Sydney defeated Geelong by 43 points at Lake Oval.
+103,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1953-08-29,Carlton 15.15 (105) def. North Melbourne 14.10 (94),199,11,,Carlton defeated North Melbourne by 11 points at Arden St.
+104,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1953-08-29,Collingwood 10.14 (74) def. Western Bulldogs 8.7 (55),129,19,,Collingwood defeated Western Bulldogs by 19 points at Victoria Park.
+105,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1953-08-29,Essendon 19.12 (126) def. Richmond 13.7 (85),211,41,,Essendon defeated Richmond by 41 points at Punt Rd.
+106,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Glenferrie Oval,1953-08-29,Fitzroy 13.6 (84) def. Hawthorn 9.10 (64),148,20,,Fitzroy defeated Hawthorn by 20 points at Glenferrie Oval.
+107,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,1953-08-29,Geelong 16.14 (110) def. Melbourne 8.8 (56),166,54,,Geelong defeated Melbourne by 54 points at Kardinia Park.
+108,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1953-08-29,Sydney 13.20 (98) def. St Kilda 4.12 (36),134,62,,Sydney defeated St Kilda by 62 points at Lake Oval.
+109,Finals,Western Bulldogs,Essendon,Western Bulldogs,Essendon,M.C.G.,1953-09-05,Western Bulldogs 6.13 (49) def. Essendon 5.11 (41),90,8,,Western Bulldogs defeated Essendon by 8 points at M.C.G..
+110,Finals,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,1953-09-12,Collingwood 13.12 (90) def. Geelong 8.12 (60),150,30,,Collingwood defeated Geelong by 30 points at M.C.G..
+111,Finals,Geelong,Western Bulldogs,Geelong,Western Bulldogs,M.C.G.,1953-09-19,Geelong 8.15 (63) def. Western Bulldogs 5.7 (37),100,26,,Geelong defeated Western Bulldogs by 26 points at M.C.G..
+112,Grand Final,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,1953-09-26,Collingwood 11.11 (77) def. Geelong 8.17 (65),142,12,,Collingwood defeated Geelong by 12 points at M.C.G..

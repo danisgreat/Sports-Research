@@ -4,8 +4,23 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1970
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Don Jolley
+
+## Senior Field Umpiring Panel (11 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Ray Sleeth | 20 | Regular Season / Finals |
+| Don Jolley | 19 | Grand Final |
+| Jeff Crouch | 19 | Regular Season / Finals |
+| Ian Coates | 17 | Regular Season / Finals |
+| Bill Deller | 16 | Regular Season / Finals |
+| Ian Artso | 14 | Regular Season / Finals |
+| John Sutcliffe | 13 | Regular Season / Finals |
+| Peter Sheales | 10 | Regular Season / Finals |
+| Brian Marks | 3 | Regular Season / Finals |
+| Phillip Hayes | 3 | Regular Season / Finals |
+| Alan Thomson | 2 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

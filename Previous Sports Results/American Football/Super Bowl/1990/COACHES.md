@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1990 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1990 Season (Super Bowl XXIV)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl XXIV)
 - **Season:** 1990
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1990.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1990 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** San Francisco 49ers
+- **Winning Head Coach:** George Seifert
+- **Runners-up:** Denver Broncos
+- **Runners-up Head Coach:** Dan Reeves
+- **Super Bowl Result:** San Francisco 49ers def. Denver Broncos (55-10)
+- **Super Bowl MVP:** Joe Montana (QB, San Francisco)
+- **Venue:** Louisiana Superdome (New Orleans)
+- **Official Attendance:** 72,919 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with George Seifert directing San Francisco 49ers to the Vince Lombardi Trophy over Dan Reeves's Denver Broncos.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

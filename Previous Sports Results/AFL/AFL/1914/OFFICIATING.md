@@ -4,8 +4,27 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1914
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Henry Rawle
+
+## Senior Field Umpiring Panel (15 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Tim Lane | 18 | Regular Season / Finals |
+| Jack Elder | 17 | Regular Season / Finals |
+| Arthur Norden | 16 | Regular Season / Finals |
+| Arthur Wickham | 13 | Regular Season / Finals |
+| James Murphy | 11 | Regular Season / Finals |
+| Henry Rawle | 6 | Grand Final |
+| Edward McSherry | 3 | Regular Season / Finals |
+| Albert Kamm | 2 | Regular Season / Finals |
+| Bill Davies | 2 | Regular Season / Finals |
+| Francis Ayles | 1 | Regular Season / Finals |
+| Francis Winslow | 1 | Regular Season / Finals |
+| Herbert Elliott | 1 | Regular Season / Finals |
+| John Currie | 1 | Regular Season / Finals |
+| Les Whyte | 1 | Regular Season / Finals |
+| Richard Lecher | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

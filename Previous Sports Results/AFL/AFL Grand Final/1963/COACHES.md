@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1963 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1963
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1963.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1963 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Geelong
+- **Premiership Coach:** Neil Trezise
+- **Runners-up:** Hawthorn
+- **Runners-up Coach:** John Kennedy
+- **Grand Final Result:** Geelong 15.19 (109) def. Hawthorn 8.12 (60)
+- **Winning Margin:** 49 points
+- **Match Date:** 1963-10-05
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 101,209 spectators
+
+## Match Summary & Tactical Notes
+Geelong defeated Hawthorn by 49 points in an open, high-scoring decider behind Graham Farmer's ruck dominance.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

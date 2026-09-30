@@ -1,12 +1,4 @@
 # VFL Officiating & Refereeing Corps — 2013 Season
 
-- **Sport:** State Level AFL
-- **Competition:** VFL
-- **Season:** 2013
-- **Governing Body:** AFL Victoria
-
-## Officiating Structure & Adjudication
-- **Appointed Officials:** VFL Senior Umpiring Squad.
-- **Championship Appointments:** Lead match adjudicators and senior officials selected for finals and marquee tournament fixtures based on merit and performance evaluations.
-- **Rule Framework & Interpretations:** Strict enforcement of the 2013 rules of the game, procedural updates, and points of emphasis issued by AFL Victoria.
-- **Technology & Review Systems:** Early television broadcast reviews, fourth-official technology, and initial electronic decision support systems.
+- **Status:** HELD_DATA_UNAVAILABLE
+- **Reason:** Season contested, but comprehensive match and coaching/officiating registers are unavailable in open structured data.

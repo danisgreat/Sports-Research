@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1963-04-20,Carlton 14.11 (95) def. Fitzroy 10.12 (72),167,23,,Carlton defeated Fitzroy by 23 points at Brunswick St.
+2,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1963-04-20,Collingwood 18.16 (124) def. Richmond 11.14 (80),204,44,,Collingwood defeated Richmond by 44 points at Punt Rd.
+3,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1963-04-20,Essendon 13.7 (85) def. Hawthorn 8.12 (60),145,25,,Essendon defeated Hawthorn by 25 points at Glenferrie Oval.
+4,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1963-04-20,North Melbourne 11.11 (77) def. Western Bulldogs 5.10 (40),117,37,,North Melbourne defeated Western Bulldogs by 37 points at Arden St.
+5,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1963-04-20,Geelong 16.26 (122) def. Sydney 9.9 (63),185,59,,Geelong defeated Sydney by 59 points at Kardinia Park.
+6,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1963-04-20,St Kilda 13.5 (83) def. Melbourne 9.11 (65),148,18,,St Kilda defeated Melbourne by 18 points at Junction Oval.
+7,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1963-04-25,Melbourne 14.16 (100) def. Hawthorn 13.18 (96),196,4,,Melbourne defeated Hawthorn by 4 points at M.C.G..
+8,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1963-04-25,Richmond 17.7 (109) def. Sydney 12.14 (86),195,23,,Richmond defeated Sydney by 23 points at Lake Oval.
+9,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1963-04-27,Carlton 7.11 (53) def. St Kilda 6.15 (51),104,2,,Carlton defeated St Kilda by 2 points at Princes Park.
+10,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1963-04-27,North Melbourne 12.9 (81) def. Collingwood 8.14 (62),143,19,,North Melbourne defeated Collingwood by 19 points at Victoria Park.
+11,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1963-04-27,Essendon 16.13 (109) def. Geelong 6.14 (50),159,59,,Essendon defeated Geelong by 59 points at Windy Hill.
+12,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1963-04-27,Western Bulldogs 15.11 (101) def. Fitzroy 7.13 (55),156,46,,Western Bulldogs defeated Fitzroy by 46 points at Western Oval.
+13,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1963-05-04,Carlton 16.15 (111) def. Sydney 10.14 (74),185,37,,Carlton defeated Sydney by 37 points at Lake Oval.
+14,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1963-05-04,Hawthorn 13.22 (100) def. Collingwood 8.16 (64),164,36,,Hawthorn defeated Collingwood by 36 points at Victoria Park.
+15,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1963-05-04,Essendon 9.14 (68) def. Melbourne 9.9 (63),131,5,,Essendon defeated Melbourne by 5 points at Windy Hill.
+16,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1963-05-04,St Kilda 11.11 (77) def. Fitzroy 9.13 (67),144,10,,St Kilda defeated Fitzroy by 10 points at Brunswick St.
+17,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1963-05-04,Geelong 10.25 (85) def. Western Bulldogs 10.4 (64),149,21,,Geelong defeated Western Bulldogs by 21 points at Kardinia Park.
+18,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Punt Rd,1963-05-04,North Melbourne 10.9 (69) def. Richmond 6.12 (48),117,21,,North Melbourne defeated Richmond by 21 points at Punt Rd.
+19,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1963-05-11,Carlton 9.13 (67) def. Essendon 8.13 (61),128,6,,Carlton defeated Essendon by 6 points at Princes Park.
+20,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1963-05-11,St Kilda 14.13 (97) def. Collingwood 11.7 (73),170,24,,St Kilda defeated Collingwood by 24 points at Junction Oval.
+21,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1963-05-11,Melbourne 14.10 (94) def. Fitzroy 8.7 (55),149,39,,Melbourne defeated Fitzroy by 39 points at M.C.G..
+22,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1963-05-11,Western Bulldogs 14.12 (96) def. Richmond 11.11 (77),173,19,,Western Bulldogs defeated Richmond by 19 points at Western Oval.
+23,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1963-05-11,Geelong 7.19 (61) def. North Melbourne 3.7 (25),86,36,,Geelong defeated North Melbourne by 36 points at Arden St.
+24,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1963-05-11,Hawthorn 21.25 (151) def. Sydney 11.14 (80),231,71,,Hawthorn defeated Sydney by 71 points at Glenferrie Oval.
+25,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1963-05-18,Carlton 11.11 (77) def. Richmond 11.9 (75),152,2,,Carlton defeated Richmond by 2 points at Punt Rd.
+26,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1963-05-18,Collingwood 15.10 (100) def. Melbourne 7.10 (52),152,48,,Collingwood defeated Melbourne by 48 points at Victoria Park.
+27,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1963-05-18,Essendon 16.16 (112) def. Fitzroy 6.15 (51),163,61,,Essendon defeated Fitzroy by 61 points at Brunswick St.
+28,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1963-05-18,Hawthorn 11.10 (76) def. Western Bulldogs 8.9 (57),133,19,,Hawthorn defeated Western Bulldogs by 19 points at Western Oval.
+29,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1963-05-18,Geelong 10.12 (72) def. St Kilda 3.11 (29),101,43,,Geelong defeated St Kilda by 43 points at Kardinia Park.
+30,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1963-05-18,Sydney 17.11 (113) def. North Melbourne 11.9 (75),188,38,,Sydney defeated North Melbourne by 38 points at Lake Oval.
+31,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1963-05-25,Geelong 7.22 (64) def. Carlton 7.16 (58),122,6,,Geelong defeated Carlton by 6 points at Princes Park.
+32,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1963-05-25,Collingwood 12.14 (86) def. Fitzroy 9.5 (59),145,27,,Collingwood defeated Fitzroy by 27 points at Brunswick St.
+33,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1963-05-25,Essendon 13.16 (94) def. Western Bulldogs 6.18 (54),148,40,,Essendon defeated Western Bulldogs by 40 points at Windy Hill.
+34,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1963-05-25,Hawthorn 11.17 (83) def. North Melbourne 9.7 (61),144,22,,Hawthorn defeated North Melbourne by 22 points at Glenferrie Oval.
+35,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1963-05-25,Melbourne 20.15 (135) def. Richmond 7.14 (56),191,79,,Melbourne defeated Richmond by 79 points at M.C.G..
+36,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1963-05-25,St Kilda 13.16 (94) def. Sydney 8.5 (53),147,41,,St Kilda defeated Sydney by 41 points at Junction Oval.
+37,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1963-06-01,Carlton 8.9 (57) def. Western Bulldogs 7.7 (49),106,8,,Carlton defeated Western Bulldogs by 8 points at Western Oval.
+38,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1963-06-01,Essendon 13.9 (87) def. Collingwood 10.11 (71),158,16,,Essendon defeated Collingwood by 16 points at Victoria Park.
+39,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1963-06-01,Richmond 17.13 (115) def. Fitzroy 13.8 (86),201,29,,Richmond defeated Fitzroy by 29 points at Punt Rd.
+40,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1963-06-01,Geelong 9.12 (66) drew with Hawthorn 9.12 (66),132,0,,Geelong and Hawthorn played out a draw at Kardinia Park.
+41,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1963-06-01,Sydney 11.8 (74) def. Melbourne 8.22 (70),144,4,,Sydney defeated Melbourne by 4 points at Lake Oval.
+42,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1963-06-01,St Kilda 9.12 (66) def. North Melbourne 8.10 (58),124,8,,St Kilda defeated North Melbourne by 8 points at Arden St.
+43,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1963-06-08,Collingwood 6.10 (46) def. Carlton 6.8 (44),90,2,,Collingwood defeated Carlton by 2 points at Princes Park.
+44,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1963-06-08,Essendon 13.11 (89) def. Richmond 7.5 (47),136,42,,Essendon defeated Richmond by 42 points at Windy Hill.
+45,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1963-06-08,Hawthorn 9.11 (65) def. St Kilda 8.13 (61),126,4,,Hawthorn defeated St Kilda by 4 points at Junction Oval.
+46,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1963-06-10,North Melbourne 6.15 (51) def. Fitzroy 2.11 (23),74,28,,North Melbourne defeated Fitzroy by 28 points at Brunswick St.
+47,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1963-06-10,Western Bulldogs 6.16 (52) def. Sydney 5.9 (39),91,13,,Western Bulldogs defeated Sydney by 13 points at Western Oval.
+48,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1963-06-10,Melbourne 11.16 (82) def. Geelong 4.11 (35),117,47,,Melbourne defeated Geelong by 47 points at M.C.G..
+49,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Glenferrie Oval,1963-06-22,Hawthorn 9.6 (60) def. Carlton 7.12 (54),114,6,,Hawthorn defeated Carlton by 6 points at Glenferrie Oval.
+50,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1963-06-22,Collingwood 11.6 (72) def. Western Bulldogs 6.4 (40),112,32,,Collingwood defeated Western Bulldogs by 32 points at Victoria Park.
+51,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1963-06-22,St Kilda 8.8 (56) def. Essendon 4.16 (40),96,16,,St Kilda defeated Essendon by 16 points at Windy Hill.
+52,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1963-06-22,Sydney 8.10 (58) def. Fitzroy 5.9 (39),97,19,,Sydney defeated Fitzroy by 19 points at Lake Oval.
+53,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1963-06-22,Geelong 16.13 (109) def. Richmond 10.11 (71),180,38,,Geelong defeated Richmond by 38 points at Kardinia Park.
+54,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1963-06-22,Melbourne 18.6 (114) def. North Melbourne 9.10 (64),178,50,,Melbourne defeated North Melbourne by 50 points at M.C.G..
+55,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1963-06-29,Melbourne 12.12 (84) def. Carlton 8.8 (56),140,28,,Melbourne defeated Carlton by 28 points at Princes Park.
+56,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1963-06-29,Collingwood 19.11 (125) def. Sydney 11.8 (74),199,51,,Collingwood defeated Sydney by 51 points at Victoria Park.
+57,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1963-06-29,Western Bulldogs 15.11 (101) def. St Kilda 14.13 (97),198,4,,Western Bulldogs defeated St Kilda by 4 points at Junction Oval.
+58,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1963-07-06,Essendon 9.9 (63) def. North Melbourne 5.5 (35),98,28,,Essendon defeated North Melbourne by 28 points at Arden St.
+59,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1963-07-06,Fitzroy 9.13 (67) def. Geelong 3.13 (31),98,36,,Fitzroy defeated Geelong by 36 points at Brunswick St.
+60,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1963-07-06,Hawthorn 11.14 (80) def. Richmond 4.10 (34),114,46,,Hawthorn defeated Richmond by 46 points at Punt Rd.
+61,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1963-07-20,North Melbourne 8.14 (62) def. Carlton 5.9 (39),101,23,,North Melbourne defeated Carlton by 23 points at Arden St.
+62,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1963-07-20,Geelong 7.13 (55) def. Collingwood 5.13 (43),98,12,,Geelong defeated Collingwood by 12 points at Kardinia Park.
+63,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1963-07-20,Essendon 12.20 (92) def. Sydney 6.10 (46),138,46,,Essendon defeated Sydney by 46 points at Lake Oval.
+64,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Glenferrie Oval,1963-07-20,Hawthorn 9.17 (71) def. Fitzroy 6.2 (38),109,33,,Hawthorn defeated Fitzroy by 33 points at Glenferrie Oval.
+65,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1963-07-20,Melbourne 10.9 (69) def. Western Bulldogs 3.6 (24),93,45,,Melbourne defeated Western Bulldogs by 45 points at Western Oval.
+66,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1963-07-20,St Kilda 14.16 (100) def. Richmond 9.4 (58),158,42,,St Kilda defeated Richmond by 42 points at Punt Rd.
+67,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1963-07-27,Carlton 16.19 (115) def. Fitzroy 11.8 (74),189,41,,Carlton defeated Fitzroy by 41 points at Princes Park.
+68,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1963-07-27,Richmond 13.7 (85) def. Collingwood 12.12 (84),169,1,,Richmond defeated Collingwood by 1 points at Victoria Park.
+69,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1963-07-27,Essendon 11.17 (83) def. Hawthorn 7.10 (52),135,31,,Essendon defeated Hawthorn by 31 points at Windy Hill.
+70,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1963-07-27,Western Bulldogs 10.11 (71) def. North Melbourne 7.10 (52),123,19,,Western Bulldogs defeated North Melbourne by 19 points at Western Oval.
+71,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1963-07-27,Geelong 14.11 (95) def. Sydney 8.12 (60),155,35,,Geelong defeated Sydney by 35 points at Lake Oval.
+72,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1963-07-27,Melbourne 14.14 (98) def. St Kilda 5.9 (39),137,59,,Melbourne defeated St Kilda by 59 points at M.C.G..
+73,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1963-08-03,St Kilda 14.12 (96) def. Carlton 7.13 (55),151,41,,St Kilda defeated Carlton by 41 points at Junction Oval.
+74,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1963-08-03,North Melbourne 9.17 (71) def. Collingwood 8.10 (58),129,13,,North Melbourne defeated Collingwood by 13 points at Arden St.
+75,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1963-08-03,Geelong 14.15 (99) def. Essendon 9.8 (62),161,37,,Geelong defeated Essendon by 37 points at Kardinia Park.
+76,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1963-08-03,Western Bulldogs 10.20 (80) def. Fitzroy 7.7 (49),129,31,,Western Bulldogs defeated Fitzroy by 31 points at Brunswick St.
+77,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1963-08-03,Hawthorn 13.6 (84) def. Melbourne 8.14 (62),146,22,,Hawthorn defeated Melbourne by 22 points at Glenferrie Oval.
+78,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1963-08-03,Sydney 20.10 (130) def. Richmond 9.10 (64),194,66,,Sydney defeated Richmond by 66 points at Punt Rd.
+79,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1963-08-10,Carlton 17.13 (115) def. Sydney 8.9 (57),172,58,,Carlton defeated Sydney by 58 points at Princes Park.
+80,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1963-08-10,Hawthorn 15.9 (99) def. Collingwood 8.9 (57),156,42,,Hawthorn defeated Collingwood by 42 points at Glenferrie Oval.
+81,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1963-08-10,Melbourne 19.8 (122) def. Essendon 10.11 (71),193,51,,Melbourne defeated Essendon by 51 points at M.C.G..
+82,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1963-08-10,St Kilda 16.21 (117) def. Fitzroy 2.3 (15),132,102,,St Kilda defeated Fitzroy by 102 points at Junction Oval.
+83,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1963-08-10,Geelong 8.10 (58) def. Western Bulldogs 5.8 (38),96,20,,Geelong defeated Western Bulldogs by 20 points at Western Oval.
+84,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1963-08-10,North Melbourne 11.8 (74) def. Richmond 10.4 (64),138,10,,North Melbourne defeated Richmond by 10 points at Arden St.
+85,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1963-08-17,Carlton 11.10 (76) def. Essendon 10.10 (70),146,6,,Carlton defeated Essendon by 6 points at Windy Hill.
+86,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1963-08-17,St Kilda 14.20 (104) def. Collingwood 6.6 (42),146,62,,St Kilda defeated Collingwood by 62 points at Victoria Park.
+87,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1963-08-17,Melbourne 22.21 (153) def. Fitzroy 8.9 (57),210,96,,Melbourne defeated Fitzroy by 96 points at Brunswick St.
+88,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Punt Rd,1963-08-17,Western Bulldogs 16.21 (117) def. Richmond 7.10 (52),169,65,,Western Bulldogs defeated Richmond by 65 points at Punt Rd.
+89,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1963-08-17,Geelong 15.8 (98) def. North Melbourne 5.13 (43),141,55,,Geelong defeated North Melbourne by 55 points at Kardinia Park.
+90,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1963-08-17,Hawthorn 15.15 (105) def. Sydney 6.9 (45),150,60,,Hawthorn defeated Sydney by 60 points at Lake Oval.
+91,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1963-08-24,Richmond 12.13 (85) def. Carlton 10.18 (78),163,7,,Richmond defeated Carlton by 7 points at Princes Park.
+92,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1963-08-24,Melbourne 19.15 (129) def. Collingwood 10.8 (68),197,61,,Melbourne defeated Collingwood by 61 points at M.C.G..
+93,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1963-08-24,Essendon 16.21 (117) def. Fitzroy 5.6 (36),153,81,,Essendon defeated Fitzroy by 81 points at Windy Hill.
+94,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1963-08-24,Hawthorn 13.21 (99) def. Western Bulldogs 8.7 (55),154,44,,Hawthorn defeated Western Bulldogs by 44 points at Glenferrie Oval.
+95,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1963-08-24,St Kilda 12.18 (90) def. Geelong 8.21 (69),159,21,,St Kilda defeated Geelong by 21 points at Junction Oval.
+96,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1963-08-24,North Melbourne 12.12 (84) def. Sydney 5.9 (39),123,45,,North Melbourne defeated Sydney by 45 points at Arden St.
+97,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1963-08-31,Geelong 13.17 (95) def. Carlton 5.4 (34),129,61,,Geelong defeated Carlton by 61 points at Kardinia Park.
+98,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1963-08-31,Collingwood 20.14 (134) def. Fitzroy 12.15 (87),221,47,,Collingwood defeated Fitzroy by 47 points at Victoria Park.
+99,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1963-08-31,Essendon 12.12 (84) def. Western Bulldogs 4.4 (28),112,56,,Essendon defeated Western Bulldogs by 56 points at Western Oval.
+100,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1963-08-31,Hawthorn 12.14 (86) def. North Melbourne 6.9 (45),131,41,,Hawthorn defeated North Melbourne by 41 points at Arden St.
+101,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1963-08-31,Melbourne 14.13 (97) def. Richmond 7.8 (50),147,47,,Melbourne defeated Richmond by 47 points at Punt Rd.
+102,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1963-08-31,St Kilda 19.14 (128) def. Sydney 8.7 (55),183,73,,St Kilda defeated Sydney by 73 points at Lake Oval.
+103,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1963-09-07,Carlton 13.13 (91) def. Western Bulldogs 8.11 (59),150,32,,Carlton defeated Western Bulldogs by 32 points at Princes Park.
+104,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1963-09-07,Essendon 12.11 (83) def. Collingwood 8.8 (56),139,27,,Essendon defeated Collingwood by 27 points at Windy Hill.
+105,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1963-09-07,Richmond 16.13 (109) def. Fitzroy 8.8 (56),165,53,,Richmond defeated Fitzroy by 53 points at Brunswick St.
+106,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1963-09-07,Geelong 13.12 (90) def. Hawthorn 6.16 (52),142,38,,Geelong defeated Hawthorn by 38 points at Glenferrie Oval.
+107,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1963-09-07,Melbourne 12.19 (91) def. Sydney 8.8 (56),147,35,,Melbourne defeated Sydney by 35 points at M.C.G..
+108,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1963-09-07,St Kilda 17.14 (116) def. North Melbourne 4.8 (32),148,84,,St Kilda defeated North Melbourne by 84 points at Junction Oval.
+109,Finals,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1963-09-14,Melbourne 9.17 (71) def. St Kilda 8.16 (64),135,7,,Melbourne defeated St Kilda by 7 points at M.C.G..
+110,Finals,Geelong,Hawthorn,Geelong,Hawthorn,M.C.G.,1963-09-21,Geelong 14.17 (101) def. Hawthorn 11.16 (82),183,19,,Geelong defeated Hawthorn by 19 points at M.C.G..
+111,Finals,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,1963-09-28,Hawthorn 11.11 (77) def. Melbourne 10.8 (68),145,9,,Hawthorn defeated Melbourne by 9 points at M.C.G..
+112,Grand Final,Geelong,Hawthorn,Geelong,Hawthorn,M.C.G.,1963-10-05,Geelong 15.19 (109) def. Hawthorn 8.12 (60),169,49,,Geelong defeated Hawthorn by 49 points at M.C.G..

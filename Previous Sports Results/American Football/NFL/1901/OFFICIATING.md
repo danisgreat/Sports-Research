@@ -1,3 +1,4 @@
-# NFL Officiating Staff — 1901 Season
+# NFL Officiating & Refereeing Corps — 1901 Season
 
-- **Status:** INACTIVE. The NFL was founded in 1920. No NFL officiating corps existed in 1901.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** National Football League (originally APFA) not yet founded (inaugural season held in 1920).

@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Los Angeles Rams,Pittsburgh Steelers,Los Angeles Rams,Pittsburgh Steelers,Rose Bowl,1980-01-20,Pittsburgh Steelers 31 def. Los Angeles Rams 19,50,12,,"Pittsburgh Steelers won Super Bowl XIV, defeating Los Angeles Rams 31-19 at Rose Bowl."

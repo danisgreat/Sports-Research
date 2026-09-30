@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1970 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1970
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1970.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1970 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Carlton
+- **Premiership Coach:** Ron Barassi
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Bob Rose
+- **Grand Final Result:** Carlton 17.9 (111) def. Collingwood 14.17 (101)
+- **Winning Margin:** 10 points
+- **Match Date:** 1970-09-26
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 121,696 spectators
+
+## Match Summary & Tactical Notes
+Carlton staged the greatest comeback in Grand Final history from 44 points down, spurred by Alex Jesaulenko's famous mark.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

@@ -1,11 +1,15 @@
 # NFL Coaching Staffs & Front Office Registry — 1939 Season
 
 - **Sport:** American Football
-- **League:** NFL
+- **League:** NFL (APFA 1920–1921, National Football League 1922–present)
 - **Season:** 1939
+- **Active Franchises (10 Teams):** Brooklyn Dodgers, Chicago Bears, Chicago Cardinals, Cleveland Rams, Detroit Lions, Green Bay Packers, New York Giants, Philadelphia Eagles, Pittsburgh Steelers, Washington Redskins
 
-## Coaching Structure
-- **Head Coaches:** Head coaches across all active franchises.
-- **Coordinators:** Offensive Coordinators (OC), Defensive Coordinators (DC), and Special Teams Coordinators (STC).
-- **Championship Coach:** The head coach guiding their franchise to the 1939 NFL title / Super Bowl victory.
-- **Coaching Philosophy:** Scheme deployment (West Coast Offense, Air Coryell, Erhardt-Perkins, Cover 2, 3-4 vs 4-3 defense, Shanahan wide-zone system).
+## Championship Leadership & Outcome
+- **NFL Champions:** Green Bay Packers (9-2-0)
+- **Championship Head Coach:** Curly Lambeau
+- **Runners-up:** New York Giants (9-1-1)
+- **Runners-up Head Coach:** Steve Owen
+- **Season Decider / Championship Summary:** 1939 NFL Championship Game: Green Bay Packers 27 def. New York Giants 0 (Wisconsin State Fair Park, West Allis)
+
+- **Sources:** Pro-Football-Reference; Total Football: The Official Encyclopedia of the NFL; Elias Sports Bureau.

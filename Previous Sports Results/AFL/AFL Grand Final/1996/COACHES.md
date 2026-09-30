@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1996 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1996
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1996.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1996 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** North Melbourne
+- **Premiership Coach:** Denis Pagan
+- **Runners-up:** Sydney Swans
+- **Runners-up Coach:** Rodney Eade
+- **Grand Final Result:** North Melbourne 19.17 (131) def. Sydney Swans 13.10 (88)
+- **Winning Margin:** 43 points
+- **Match Date:** 1996-09-28
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 93,102 spectators
+
+## Match Summary & Tactical Notes
+North Melbourne celebrated their centenary season with a 43-point victory over Sydney, with Glenn Archer winning Norm Smith.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

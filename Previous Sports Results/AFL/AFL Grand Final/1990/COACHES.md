@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1990 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1990
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1990.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1990 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Collingwood
+- **Premiership Coach:** Leigh Matthews
+- **Runners-up:** Essendon
+- **Runners-up Coach:** Kevin Sheedy
+- **Grand Final Result:** Collingwood 13.11 (89) def. Essendon 5.11 (41)
+- **Winning Margin:** 48 points
+- **Match Date:** 1990-10-06
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 98,944 spectators
+
+## Match Summary & Tactical Notes
+Collingwood ended their 32-year 'Colliwobbles' premiership drought with a 48-point triumph over Essendon.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

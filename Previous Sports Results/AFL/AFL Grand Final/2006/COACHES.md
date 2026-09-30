@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 2006 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 2006
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 2006.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 2006 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** West Coast Eagles
+- **Premiership Coach:** John Worsfold
+- **Runners-up:** Sydney Swans
+- **Runners-up Coach:** Paul Roos
+- **Grand Final Result:** West Coast Eagles 12.13 (85) def. Sydney Swans 12.12 (84)
+- **Winning Margin:** 1 points
+- **Match Date:** 2006-09-30
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 97,431 spectators
+
+## Match Summary & Tactical Notes
+West Coast Eagles avenged their 2005 heartbreak, clinging on to defeat Sydney Swans by one solitary point in a classic.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

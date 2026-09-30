@@ -4,8 +4,25 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1924
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jack McMurray, J. Clarke
+
+## Senior Field Umpiring Panel (13 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Jack McMurray | 16 | Regular Season / Finals |
+| J Clarke | 14 | Regular Season / Finals |
+| Alexander McKinnon | 12 | Regular Season / Finals |
+| Arthur Wickham | 11 | Regular Season / Finals |
+| Humphrey Petrie | 5 | Regular Season / Finals |
+| Alex Mutch | 4 | Regular Season / Finals |
+| Vincent Maguire | 4 | Regular Season / Finals |
+| Bob Scott | 3 | Regular Season / Finals |
+| Charles Lewis | 3 | Regular Season / Finals |
+| William Orchard | 2 | Regular Season / Finals |
+| William Stanley | 2 | Regular Season / Finals |
+| Henry Rawle | 1 | Regular Season / Finals |
+| John Kain | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

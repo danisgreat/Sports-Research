@@ -1,2 +1,60 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
--,Not applicable,-,-,-,-,-,-,-,-,-,-,Season shortened due to World War I; eight clubs participated in a 14-round season before full competition resumed post-war.
+1,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1918-05-11,Collingwood 8.17 (65) def. Carlton 4.6 (30),95,35,,Collingwood defeated Carlton by 35 points at Victoria Park.
+2,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1918-05-11,Richmond 5.16 (46) def. Essendon 4.10 (34),80,12,,Richmond defeated Essendon by 12 points at Punt Rd.
+3,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1918-05-11,St Kilda 4.16 (40) def. Fitzroy 4.10 (34),74,6,,St Kilda defeated Fitzroy by 6 points at Junction Oval.
+4,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1918-05-11,Sydney 7.15 (57) def. Geelong 4.7 (31),88,26,,Sydney defeated Geelong by 26 points at Lake Oval.
+5,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1918-05-18,Richmond 7.16 (58) def. Carlton 8.5 (53),111,5,,Richmond defeated Carlton by 5 points at Princes Park.
+6,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Corio Oval,1918-05-18,Collingwood 7.6 (48) def. Geelong 5.6 (36),84,12,,Collingwood defeated Geelong by 12 points at Corio Oval.
+7,Regular Season,Essendon,St Kilda,Essendon,St Kilda,East Melbourne,1918-05-18,Essendon 8.13 (61) def. St Kilda 6.18 (54),115,7,,Essendon defeated St Kilda by 7 points at East Melbourne.
+8,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1918-05-18,Sydney 12.6 (78) def. Fitzroy 5.8 (38),116,40,,Sydney defeated Fitzroy by 40 points at Brunswick St.
+9,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1918-05-25,Carlton 11.11 (77) def. St Kilda 7.9 (51),128,26,,Carlton defeated St Kilda by 26 points at Princes Park.
+10,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1918-05-25,Sydney 12.13 (85) def. Collingwood 9.13 (67),152,18,,Sydney defeated Collingwood by 18 points at Lake Oval.
+11,Regular Season,Geelong,Essendon,Geelong,Essendon,Corio Oval,1918-05-25,Geelong 6.16 (52) def. Essendon 4.12 (36),88,16,,Geelong defeated Essendon by 16 points at Corio Oval.
+12,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1918-05-25,Fitzroy 10.12 (72) def. Richmond 6.8 (44),116,28,,Fitzroy defeated Richmond by 28 points at Punt Rd.
+13,Regular Season,Essendon,Carlton,Essendon,Carlton,East Melbourne,1918-06-01,Carlton 8.27 (75) def. Essendon 4.13 (37),112,38,,Carlton defeated Essendon by 38 points at East Melbourne.
+14,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1918-06-01,Collingwood 11.10 (76) def. Richmond 8.8 (56),132,20,,Collingwood defeated Richmond by 20 points at Victoria Park.
+15,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1918-06-03,Fitzroy 10.14 (74) def. Geelong 8.14 (62),136,12,,Fitzroy defeated Geelong by 12 points at Brunswick St.
+16,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1918-06-03,St Kilda 6.13 (49) def. Sydney 6.8 (44),93,5,,St Kilda defeated Sydney by 5 points at Junction Oval.
+17,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1918-06-08,Sydney 11.10 (76) def. Carlton 10.12 (72),148,4,,Sydney defeated Carlton by 4 points at Lake Oval.
+18,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1918-06-08,Collingwood 14.21 (105) def. St Kilda 6.9 (45),150,60,,Collingwood defeated St Kilda by 60 points at Victoria Park.
+19,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1918-06-08,Fitzroy 9.12 (66) def. Essendon 2.13 (25),91,41,,Fitzroy defeated Essendon by 41 points at Brunswick St.
+20,Regular Season,Geelong,Richmond,Geelong,Richmond,Corio Oval,1918-06-08,Richmond 7.18 (60) def. Geelong 6.13 (49),109,11,,Richmond defeated Geelong by 11 points at Corio Oval.
+21,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1918-06-15,Carlton 16.15 (111) def. Geelong 7.3 (45),156,66,,Carlton defeated Geelong by 66 points at Princes Park.
+22,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1918-06-15,Collingwood 7.11 (53) def. Fitzroy 3.6 (24),77,29,,Collingwood defeated Fitzroy by 29 points at Victoria Park.
+23,Regular Season,Essendon,Sydney,Essendon,Sydney,East Melbourne,1918-06-15,Sydney 7.10 (52) def. Essendon 4.8 (32),84,20,,Sydney defeated Essendon by 20 points at East Melbourne.
+24,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1918-06-15,St Kilda 7.18 (60) def. Richmond 5.13 (43),103,17,,St Kilda defeated Richmond by 17 points at Punt Rd.
+25,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1918-06-22,Carlton 12.11 (83) def. Fitzroy 6.15 (51),134,32,,Carlton defeated Fitzroy by 32 points at Brunswick St.
+26,Regular Season,Essendon,Collingwood,Essendon,Collingwood,East Melbourne,1918-06-22,Collingwood 14.14 (98) def. Essendon 4.9 (33),131,65,,Collingwood defeated Essendon by 65 points at East Melbourne.
+27,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1918-06-22,St Kilda 15.13 (103) def. Geelong 5.9 (39),142,64,,St Kilda defeated Geelong by 64 points at Junction Oval.
+28,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1918-06-22,Sydney 12.14 (86) def. Richmond 4.10 (34),120,52,,Sydney defeated Richmond by 52 points at Lake Oval.
+29,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1918-06-29,Carlton 6.13 (49) def. Collingwood 6.5 (41),90,8,,Carlton defeated Collingwood by 8 points at Princes Park.
+30,Regular Season,Essendon,Richmond,Essendon,Richmond,East Melbourne,1918-06-29,Richmond 5.15 (45) def. Essendon 3.4 (22),67,23,,Richmond defeated Essendon by 23 points at East Melbourne.
+31,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1918-06-29,Fitzroy 7.6 (48) def. St Kilda 3.5 (23),71,25,,Fitzroy defeated St Kilda by 25 points at Brunswick St.
+32,Regular Season,Geelong,Sydney,Geelong,Sydney,Corio Oval,1918-06-29,Sydney 7.13 (55) def. Geelong 7.8 (50),105,5,,Sydney defeated Geelong by 5 points at Corio Oval.
+33,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1918-07-06,Carlton 8.13 (61) def. Richmond 7.16 (58),119,3,,Carlton defeated Richmond by 3 points at Punt Rd.
+34,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1918-07-06,Collingwood 12.14 (86) def. Geelong 7.10 (52),138,34,,Collingwood defeated Geelong by 34 points at Victoria Park.
+35,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1918-07-06,St Kilda 6.14 (50) def. Essendon 6.6 (42),92,8,,St Kilda defeated Essendon by 8 points at Junction Oval.
+36,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1918-07-06,Sydney 12.14 (86) def. Fitzroy 8.13 (61),147,25,,Sydney defeated Fitzroy by 25 points at Lake Oval.
+37,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1918-07-13,St Kilda 4.20 (44) def. Carlton 2.5 (17),61,27,,St Kilda defeated Carlton by 27 points at Junction Oval.
+38,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1918-07-13,Sydney 7.9 (51) def. Collingwood 6.8 (44),95,7,,Sydney defeated Collingwood by 7 points at Victoria Park.
+39,Regular Season,Essendon,Geelong,Essendon,Geelong,East Melbourne,1918-07-13,Essendon 8.10 (58) def. Geelong 5.9 (39),97,19,,Essendon defeated Geelong by 19 points at East Melbourne.
+40,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1918-07-13,Fitzroy 10.11 (71) def. Richmond 6.7 (43),114,28,,Fitzroy defeated Richmond by 28 points at Brunswick St.
+41,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1918-07-20,Carlton 10.20 (80) def. Essendon 4.7 (31),111,49,,Carlton defeated Essendon by 49 points at Princes Park.
+42,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1918-07-20,Collingwood 11.10 (76) def. Richmond 6.13 (49),125,27,,Collingwood defeated Richmond by 27 points at Punt Rd.
+43,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Corio Oval,1918-07-20,Fitzroy 11.6 (72) def. Geelong 5.6 (36),108,36,,Fitzroy defeated Geelong by 36 points at Corio Oval.
+44,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1918-07-20,Sydney 14.17 (101) def. St Kilda 7.9 (51),152,50,,Sydney defeated St Kilda by 50 points at Lake Oval.
+45,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1918-07-27,Sydney 8.7 (55) def. Carlton 5.13 (43),98,12,,Sydney defeated Carlton by 12 points at Princes Park.
+46,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1918-07-27,St Kilda 9.9 (63) def. Collingwood 6.14 (50),113,13,,St Kilda defeated Collingwood by 13 points at Junction Oval.
+47,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,East Melbourne,1918-07-27,Essendon 8.10 (58) def. Fitzroy 6.6 (42),100,16,,Essendon defeated Fitzroy by 16 points at East Melbourne.
+48,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1918-07-27,Richmond 15.15 (105) def. Geelong 10.11 (71),176,34,,Richmond defeated Geelong by 34 points at Punt Rd.
+49,Regular Season,Geelong,Carlton,Geelong,Carlton,Corio Oval,1918-08-03,Geelong 10.7 (67) def. Carlton 4.13 (37),104,30,,Geelong defeated Carlton by 30 points at Corio Oval.
+50,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1918-08-03,Collingwood 10.19 (79) def. Fitzroy 8.12 (60),139,19,,Collingwood defeated Fitzroy by 19 points at Brunswick St.
+51,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1918-08-03,Sydney 12.13 (85) def. Essendon 7.10 (52),137,33,,Sydney defeated Essendon by 33 points at Lake Oval.
+52,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Junction Oval,1918-08-03,St Kilda 10.7 (67) def. Richmond 8.9 (57),124,10,,St Kilda defeated Richmond by 10 points at Junction Oval.
+53,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1918-08-10,Carlton 10.14 (74) def. Fitzroy 9.7 (61),135,13,,Carlton defeated Fitzroy by 13 points at Princes Park.
+54,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1918-08-10,Collingwood 9.14 (68) def. Essendon 3.8 (26),94,42,,Collingwood defeated Essendon by 42 points at Victoria Park.
+55,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Corio Oval,1918-08-10,Geelong 10.27 (87) def. St Kilda 6.6 (42),129,45,,Geelong defeated St Kilda by 45 points at Corio Oval.
+56,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1918-08-10,Sydney 7.17 (59) def. Richmond 7.12 (54),113,5,,Sydney defeated Richmond by 5 points at Punt Rd.
+57,Finals,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,1918-08-17,Collingwood 7.16 (58) def. St Kilda 7.7 (49),107,9,,Collingwood defeated St Kilda by 9 points at M.C.G..
+58,Finals,Sydney,Carlton,Sydney,Carlton,M.C.G.,1918-08-31,Sydney 8.10 (58) def. Carlton 7.11 (53),111,5,,Sydney defeated Carlton by 5 points at M.C.G..
+59,Grand Final,Sydney,Collingwood,Sydney,Collingwood,M.C.G.,1918-09-07,Sydney 9.8 (62) def. Collingwood 7.15 (57),119,5,,Sydney defeated Collingwood by 5 points at M.C.G..

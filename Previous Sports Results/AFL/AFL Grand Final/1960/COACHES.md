@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1960 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1960
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1960.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1960 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Melbourne
+- **Premiership Coach:** Norm Smith
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Neil Mann
+- **Grand Final Result:** Melbourne 8.14 (62) def. Collingwood 2.2 (14)
+- **Winning Margin:** 48 points
+- **Match Date:** 1960-09-24
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 97,457 spectators
+
+## Match Summary & Tactical Notes
+Melbourne suffocated Collingwood, holding the Magpies to just two goals in a 48-point wet-weather rout.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1967 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1967
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1967.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1967 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Richmond
+- **Premiership Coach:** Tom Hafey
+- **Runners-up:** Geelong
+- **Runners-up Coach:** Peter Pianto
+- **Grand Final Result:** Richmond 16.18 (114) def. Geelong 15.15 (105)
+- **Winning Margin:** 9 points
+- **Match Date:** 1967-09-23
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 109,396 spectators
+
+## Match Summary & Tactical Notes
+Richmond edged Geelong by 9 points in an electrifying, high-scoring classic featuring 11 lead changes.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

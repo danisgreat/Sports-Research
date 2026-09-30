@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1929 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1929
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1929.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1929 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Collingwood
+- **Premiership Coach:** Jock McHale
+- **Runners-up:** Richmond
+- **Runners-up Coach:** Frank Hughes
+- **Grand Final Result:** Collingwood 11.13 (79) def. Richmond 7.8 (50)
+- **Winning Margin:** 29 points
+- **Match Date:** 1929-09-28
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 63,336 spectators
+
+## Match Summary & Tactical Notes
+Collingwood completed a premiership three-peat, defeating Richmond by 29 points behind Gordon Coventry's two goals.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

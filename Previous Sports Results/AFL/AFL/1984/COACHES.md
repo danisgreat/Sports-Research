@@ -1,11 +1,29 @@
 # AFL Coaching Staff & Team Hierarchy — 1984 Season
 
 - **Sport:** Australian Rules Football
-- **League:** AFL
+- **League:** AFL (Victorian Football League 1897–1989, Australian Football League 1990–present)
 - **Season:** 1984
+- **Participating Clubs (12 Clubs):** Carlton, Collingwood, Essendon, Fitzroy, Footscray, Geelong, Hawthorn, Melbourne, North Melbourne, Richmond, St Kilda, Sydney
 
-## Coaching Overview
-- **Head Coaches:** Senior coaches overseeing all senior matchday tactics, player interchange rotations, and game plans.
-- **Premiership Coach:** The senior coach leading their side to victory in the 1984 AFL Grand Final.
-- **Assistant Coaches:** Line coaches responsible for forward structure, midfield/stoppage setups, and defensive transition.
-- **Coaching Trends:** Evolving tactical eras (from traditional position-and-kick football to zone defenses, high-press running, corridor ball movement, and surge football).
+## Senior Head Coaches by Club
+| Club | Senior Head Coach | Role |
+|---|---|---|
+| Carlton | David Parkin | Senior Head Coach |
+| Collingwood | John Cahill | Senior Head Coach |
+| Essendon | Kevin Sheedy | Senior Head Coach |
+| Fitzroy | Robert Walls | Senior Head Coach |
+| Footscray | Mick Malthouse | Senior Head Coach |
+| Geelong | Tom Hafey | Senior Head Coach |
+| Hawthorn | Allan Jeans | Senior Head Coach |
+| Melbourne | Ron Barassi | Senior Head Coach |
+| North Melbourne | Barry Cable | Senior Head Coach |
+| Richmond | Michael Patterson | Senior Head Coach |
+| St Kilda | Graeme Gellie | Senior Head Coach |
+| Sydney | Tony Franklin | Senior Head Coach |
+
+## Season Premiership Outcome
+- **Grand Final Result:** Essendon 14.21 (105) def. Hawthorn 12.9 (81) (Margin: 24 pts, Venue: Melbourne Cricket Ground)
+- **Premiers:** Essendon (Coach: Kevin Sheedy)
+- **Runners-up:** Hawthorn (Coach: Allan Jeans)
+
+- **Sources:** AFL Tables (Coaches Index); Australian Football Historical Records.

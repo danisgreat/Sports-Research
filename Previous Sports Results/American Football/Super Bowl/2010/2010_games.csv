@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Indianapolis Colts,New Orleans Saints,Indianapolis Colts,New Orleans Saints,Dolphin Stadium,2010-02-07,New Orleans Saints 31 def. Indianapolis Colts 17,48,14,Referee: Scott Green,"New Orleans Saints won Super Bowl XLIV, defeating Indianapolis Colts 31-17 at Dolphin Stadium."

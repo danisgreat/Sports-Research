@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1947 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1947
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1947.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1947 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Carlton
+- **Premiership Coach:** Perce Bentley
+- **Runners-up:** Essendon
+- **Runners-up Coach:** Dick Reynolds
+- **Grand Final Result:** Carlton 13.8 (86) def. Essendon 11.19 (85)
+- **Winning Margin:** 1 points
+- **Match Date:** 1947-09-27
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 85,793 spectators
+
+## Match Summary & Tactical Notes
+Carlton snatched the premiership with a behind on the final siren to edge Essendon by a single point.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

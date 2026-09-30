@@ -1,11 +1,4 @@
-# NTFL Coaching Staff & Team Hierarchy — 1974 Season
+# NTFL Coaching Staff — 1974 Season
 
-- **Sport:** State Level AFL
-- **Competition:** NTFL
-- **Season:** 1974
-
-## Coaching Overview & Management
-- **Senior Leadership:** NTFL Senior Coaches (St Mary's, Darwin Buffaloes, Wanderers, Nightcliff, Tiwi Bombers).
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1974.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1974 season.
+- **Status:** NOT_HELD
+- **Reason:** 1974-75 season abandoned following Cyclone Tracy.

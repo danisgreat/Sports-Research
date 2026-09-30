@@ -1,1 +1,10 @@
-Game Number,"Game Type (Group Stage, Placement Game, Bronze Medal Game, Gold Medal Game, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Group Stage,Japan,France,Japan,France,"Todoroki Athletics Stadium, Kawasaki",2007-07-07,Japan 48 def. France 0,48,48,,Japan defeated France 48-0 in Group 1.
+2,Group Stage,Germany,South Korea,Germany,South Korea,"Kawasaki Stadium, Kawasaki",2007-07-07,Germany 32 def. South Korea 2,34,30,,Germany defeated South Korea 32-2 in Group 2.
+3,Group Stage,Sweden,France,Sweden,France,"Kawasaki Stadium, Kawasaki",2007-07-10,Sweden 16 def. France 14,30,2,,Sweden edged France 16-14 in Group 1.
+4,Group Stage,United States,South Korea,United States,South Korea,"Kawasaki Stadium, Kawasaki",2007-07-10,United States 77 def. South Korea 0,77,77,,United States defeated South Korea 77-0 in Group 2.
+5,Group Stage,Japan,Sweden,Japan,Sweden,"Kawasaki Stadium, Kawasaki",2007-07-12,Japan 48 def. Sweden 0,48,48,,Japan defeated Sweden 48-0 in Group 1.
+6,Group Stage,United States,Germany,United States,Germany,"Kawasaki Stadium, Kawasaki",2007-07-12,United States 33 def. Germany 7,40,26,,United States defeated Germany 33-7 in Group 2.
+7,Placement Game,South Korea,France,South Korea,France,"Kawasaki Stadium, Kawasaki",2007-07-14,South Korea 3 def. France 0,3,3,,South Korea defeated France 3-0 for 5th place.
+8,Bronze Medal Game,Germany,Sweden,Germany,Sweden,"Kawasaki Stadium, Kawasaki",2007-07-14,Germany 7 def. Sweden 0,7,7,,Germany defeated Sweden 7-0 to win the bronze medal.
+9,Gold Medal Game,United States,Japan,United States,Japan,"Todoroki Athletics Stadium, Kawasaki",2007-07-15,United States 23 def. Japan 20,43,3,,United States defeated Japan 23-20 in double overtime to win their maiden IFAF World Championship.

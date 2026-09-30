@@ -1,11 +1,15 @@
 # NFL Coaching Staffs & Front Office Registry — 1922 Season
 
 - **Sport:** American Football
-- **League:** NFL
+- **League:** NFL (APFA 1920–1921, National Football League 1922–present)
 - **Season:** 1922
+- **Active Franchises (18 Teams):** Akron Pros, Buffalo All-Americans, Canton Bulldogs, Chicago Bears, Chicago Cardinals, Columbus Panhandles, Dayton Triangles, Evansville Crimson Giants, Green Bay Packers, Hammond Pros, Louisville Brecks, Milwaukee Badgers, Minneapolis Marines, Oorang Indians, Racine Legion, Rochester Jeffersons, Rock Island Independents, Toledo Maroons
 
-## Coaching Structure
-- **Head Coaches:** Head coaches across all active franchises.
-- **Coordinators:** Offensive Coordinators (OC), Defensive Coordinators (DC), and Special Teams Coordinators (STC).
-- **Championship Coach:** The head coach guiding their franchise to the 1922 NFL title / Super Bowl victory.
-- **Coaching Philosophy:** Scheme deployment (West Coast Offense, Air Coryell, Erhardt-Perkins, Cover 2, 3-4 vs 4-3 defense, Shanahan wide-zone system).
+## Championship Leadership & Outcome
+- **NFL Champions:** Canton Bulldogs (10-0-2)
+- **Championship Head Coach:** Guy Chamberlin
+- **Runners-up:** Chicago Bears (9-3-0)
+- **Runners-up Head Coach:** George Halas
+- **Season Decider / Championship Summary:** Canton Bulldogs finished undefeated atop the league standings.
+
+- **Sources:** Pro-Football-Reference; Total Football: The Official Encyclopedia of the NFL; Elias Sports Bureau.

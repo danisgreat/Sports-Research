@@ -1,4 +1,4 @@
 # Super Bowl Coaching Staff — 1959 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 1967. No official coaching staffs, managerial appointments, or teams existed in 1959.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** Super Bowl not yet established (Super Bowl I played on January 15, 1967).

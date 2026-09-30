@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Cincinnati Bengals,Los Angeles Rams,Cincinnati Bengals,Los Angeles Rams,SoFi Stadium,2022-02-13,Los Angeles Rams 23 def. Cincinnati Bengals 20,43,3,Referee: Ron Torbert,"Los Angeles Rams won Super Bowl LVI, defeating Cincinnati Bengals 23-20 at SoFi Stadium."

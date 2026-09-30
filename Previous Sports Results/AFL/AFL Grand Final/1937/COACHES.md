@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1937 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1937
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1937.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1937 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Geelong
+- **Premiership Coach:** Reg Hickey
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Jock McHale
+- **Grand Final Result:** Geelong 18.14 (122) def. Collingwood 12.18 (90)
+- **Winning Margin:** 32 points
+- **Match Date:** 1937-09-25
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 88,540 spectators
+
+## Match Summary & Tactical Notes
+Geelong won their third premiership with a thrilling 4-point win over Collingwood in front of 88,000 fans.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

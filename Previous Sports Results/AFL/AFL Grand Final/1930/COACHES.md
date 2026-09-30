@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1930 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1930
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1930.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1930 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Collingwood
+- **Premiership Coach:** Bob Rush
+- **Runners-up:** Geelong
+- **Runners-up Coach:** Arthur Coghlan
+- **Grand Final Result:** Collingwood 14.16 (100) def. Geelong 9.16 (70)
+- **Winning Margin:** 30 points
+- **Match Date:** 1930-10-11
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 45,022 spectators
+
+## Match Summary & Tactical Notes
+Collingwood made history as the only club to win four consecutive VFL premierships, defeating Geelong by 30 points.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Denver Broncos,Washington Redskins,Denver Broncos,Washington Redskins,Jack Murphy Stadium,1988-01-31,Washington Redskins 42 def. Denver Broncos 10,52,32,,"Washington Redskins won Super Bowl XXII, defeating Denver Broncos 42-10 at Jack Murphy Stadium."

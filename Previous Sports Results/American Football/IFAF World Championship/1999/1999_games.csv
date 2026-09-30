@@ -1,1 +1,10 @@
-Game Number,"Game Type (Group Stage, Placement Game, Bronze Medal Game, Gold Medal Game, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Group Stage,Italy,Finland,Italy,Finland,Palermo,1999-06-24,Italy 28 def. Finland 7,35,21,,Italy defeated Finland 28-7 in Group A.
+2,Group Stage,Sweden,Australia,Sweden,Australia,Palermo,1999-06-25,Sweden 22 def. Australia 6,28,16,,Sweden defeated Australia 22-6 in Group B.
+3,Group Stage,Japan,Sweden,Japan,Sweden,Palermo,1999-06-27,Japan 24 def. Sweden 14,38,10,,Japan defeated Sweden 24-14 in Group B.
+4,Group Stage,Mexico,Finland,Mexico,Finland,Palermo,1999-06-27,Mexico 89 def. Finland 0,89,89,,Mexico defeated Finland 89-0 in Group A.
+5,Group Stage,Mexico,Italy,Mexico,Italy,Palermo,1999-06-30,Mexico 54 def. Italy 0,54,54,,Mexico defeated Italy 54-0 in Group A.
+6,Group Stage,Japan,Australia,Japan,Australia,Palermo,1999-06-30,Japan 54 def. Australia 0,54,54,,Japan defeated Australia 54-0 in Group B.
+7,Placement Game,Australia,Finland,Australia,Finland,Palermo,1999-07-03,Australia 10 def. Finland 7,17,3,,Australia defeated Finland 10-7 in the 5th place game.
+8,Bronze Medal Game,Sweden,Italy,Sweden,Italy,Palermo,1999-07-03,Sweden 38 def. Italy 13,51,25,,Sweden defeated Italy 38-13 to win the bronze medal.
+9,Gold Medal Game,Japan,Mexico,Japan,Mexico,Palermo,1999-07-04,Japan 6 def. Mexico 0,6,6,,Japan defeated Mexico 6-0 in overtime to win the inaugural IFAF World Championship.

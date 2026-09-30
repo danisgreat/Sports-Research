@@ -1,4 +1,4 @@
 # VFLW Coaching Staff — 1938 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 2016. No official coaching staffs, managerial appointments, or teams existed in 1938.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** VFLW not yet founded (inaugural season in 2016).

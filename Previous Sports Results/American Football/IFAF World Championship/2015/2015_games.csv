@@ -1,1 +1,13 @@
-Game Number,"Game Type (Group Stage, Placement Game, Bronze Medal Game, Gold Medal Game, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Group Stage,Australia,South Korea,Australia,South Korea,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-09,Australia 47 def. South Korea 6,53,41,,Australia defeated South Korea 47-6.
+2,Group Stage,France,Brazil,France,Brazil,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-09,France 31 def. Brazil 6,37,25,,France defeated Brazil 31-6.
+3,Group Stage,United States,Mexico,United States,Mexico,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-09,United States 30 def. Mexico 6,36,24,,United States defeated Mexico 30-6.
+4,Group Stage,France,Australia,France,Australia,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-12,France 53 def. Australia 3,56,50,,France defeated Australia 53-3.
+5,Group Stage,Brazil,South Korea,Brazil,South Korea,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-12,Brazil 28 def. South Korea 0,28,28,,Brazil defeated South Korea 28-0.
+6,Group Stage,United States,Japan,United States,Japan,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-12,United States 43 def. Japan 18,61,25,,United States defeated Japan 43-18.
+7,Placement Game,Australia,Brazil,Australia,Brazil,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-15,Australia 16 def. Brazil 8,24,8,,Australia defeated Brazil 16-8 for 5th place.
+8,Group Stage,Mexico,Japan,Mexico,Japan,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-15,Japan 35 def. Mexico 7,42,28,,Japan defeated Mexico 35-7.
+9,Semi Final,United States,France,United States,France,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-15,United States 82 def. France 0,82,82,,United States defeated France 82-0 in the semifinals.
+10,Placement Game,France,Australia,France,Australia,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-18,France 42 def. Australia 14,56,28,,France defeated Australia 42-14 in the 4th/5th classification match.
+11,Bronze Medal Game,Mexico,France,Mexico,France,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-18,Mexico 20 def. France 7,27,13,,Mexico defeated France 20-7 to win the bronze medal.
+12,Gold Medal Game,United States,Japan,United States,Japan,"Tom Benson Hall of Fame Stadium, Canton, Ohio",2015-07-18,United States 59 def. Japan 12,71,47,,United States defeated Japan 59-12 to win the 2015 IFAF World Championship.

@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Oakland Raiders,Philadelphia Eagles,Oakland Raiders,Philadelphia Eagles,Louisiana Superdome,1981-01-25,Oakland Raiders 27 def. Philadelphia Eagles 10,37,17,,"Oakland Raiders won Super Bowl XV, defeating Philadelphia Eagles 27-10 at Louisiana Superdome."

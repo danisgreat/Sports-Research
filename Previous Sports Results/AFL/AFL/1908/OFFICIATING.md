@@ -4,8 +4,24 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1908
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jack Elder
+
+## Senior Field Umpiring Panel (12 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Herbert Coombes | 20 | Regular Season / Finals |
+| Lardie Tulloch | 17 | Regular Season / Finals |
+| Jack Elder | 12 | Grand Final |
+| Bert Wregg | 9 | Regular Season / Finals |
+| Jimmy Smith | 9 | Regular Season / Finals |
+| George Mackenzie | 8 | Regular Season / Finals |
+| Robert Boyle | 8 | Regular Season / Finals |
+| Robert Bain | 6 | Regular Season / Finals |
+| Francis Ayles | 1 | Regular Season / Finals |
+| George Hastings | 1 | Regular Season / Finals |
+| Percy Seyffarth | 1 | Regular Season / Finals |
+| William McNamara | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

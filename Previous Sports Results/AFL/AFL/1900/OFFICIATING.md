@@ -4,8 +4,20 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1900
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Ivo Crapp
+
+## Senior Field Umpiring Panel (8 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Ivo Crapp | 15 | Grand Final |
+| Dick Gibson | 14 | Regular Season / Finals |
+| William Freame | 13 | Regular Season / Finals |
+| James DHelin | 12 | Regular Season / Finals |
+| James Keenan | 11 | Regular Season / Finals |
+| Charles Cariss | 2 | Regular Season / Finals |
+| James Waters | 2 | Regular Season / Finals |
+| Edward Hall | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

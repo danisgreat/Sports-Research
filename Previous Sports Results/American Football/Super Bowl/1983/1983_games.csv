@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Miami Dolphins,Washington Redskins,Miami Dolphins,Washington Redskins,Rose Bowl,1983-01-30,Washington Redskins 27 def. Miami Dolphins 17,44,10,,"Washington Redskins won Super Bowl XVII, defeating Miami Dolphins 27-17 at Rose Bowl."

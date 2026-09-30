@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Los Angeles Rams,New England Patriots,Los Angeles Rams,New England Patriots,Mercedes-Benz Stadium,2019-02-03,New England Patriots 13 def. Los Angeles Rams 3,16,10,Referee: John Parry,"New England Patriots won Super Bowl LIII, defeating Los Angeles Rams 13-3 at Mercedes-Benz Stadium."

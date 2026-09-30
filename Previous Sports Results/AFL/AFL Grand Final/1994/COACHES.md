@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1994 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1994
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1994.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1994 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** West Coast Eagles
+- **Premiership Coach:** Mick Malthouse
+- **Runners-up:** Geelong
+- **Runners-up Coach:** Malcolm Blight
+- **Grand Final Result:** West Coast Eagles 20.23 (143) def. Geelong 8.15 (63)
+- **Winning Margin:** 80 points
+- **Match Date:** 1994-10-01
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 93,860 spectators
+
+## Match Summary & Tactical Notes
+West Coast Eagles claimed their second flag with an emphatic 47-point victory over Geelong.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

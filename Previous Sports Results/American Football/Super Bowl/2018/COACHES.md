@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 2018 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 2018 Season (Super Bowl LII)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl LII)
 - **Season:** 2018
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 2018.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 2018 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** Philadelphia Eagles
+- **Winning Head Coach:** Doug Pederson
+- **Runners-up:** New England Patriots
+- **Runners-up Head Coach:** Bill Belichick
+- **Super Bowl Result:** Philadelphia Eagles def. New England Patriots (41-33)
+- **Super Bowl MVP:** Nick Foles (QB, Philadelphia)
+- **Venue:** U.S. Bank Stadium (Minneapolis)
+- **Official Attendance:** 67,612 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Doug Pederson directing Philadelphia Eagles to the Vince Lombardi Trophy over Bill Belichick's New England Patriots.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

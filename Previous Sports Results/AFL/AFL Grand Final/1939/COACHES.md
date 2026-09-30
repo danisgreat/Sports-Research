@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1939 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1939
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1939.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1939 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Melbourne
+- **Premiership Coach:** Frank Hughes
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Jock McHale
+- **Grand Final Result:** Melbourne 21.22 (148) def. Collingwood 14.11 (95)
+- **Winning Margin:** 53 points
+- **Match Date:** 1939-09-30
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 78,110 spectators
+
+## Match Summary & Tactical Notes
+Melbourne claimed the premiership under legendary coach Checker Hughes, defeating Collingwood by 53 points.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

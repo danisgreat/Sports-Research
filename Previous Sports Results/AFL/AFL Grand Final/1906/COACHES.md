@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1906 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1906
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1906.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1906 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Carlton
+- **Premiership Coach:** Jack Worrall
+- **Runners-up:** Fitzroy
+- **Runners-up Coach:** Ern Jenkins (Captain-Coach)
+- **Grand Final Result:** Carlton 15.4 (94) def. Fitzroy 6.9 (45)
+- **Winning Margin:** 49 points
+- **Match Date:** 1906-09-22
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 44,437 spectators
+
+## Match Summary & Tactical Notes
+Carlton won their first VFL premiership by 20 points over Fitzroy, kickstarting the club's golden era.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

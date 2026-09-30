@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1979 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1979 Season (Super Bowl XIII)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl XIII)
 - **Season:** 1979
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1979.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1979 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** Pittsburgh Steelers
+- **Winning Head Coach:** Chuck Noll
+- **Runners-up:** Dallas Cowboys
+- **Runners-up Head Coach:** Tom Landry
+- **Super Bowl Result:** Pittsburgh Steelers def. Dallas Cowboys (35-31)
+- **Super Bowl MVP:** Terry Bradshaw (QB, Pittsburgh)
+- **Venue:** Orange Bowl (Miami)
+- **Official Attendance:** 79,484 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Chuck Noll directing Pittsburgh Steelers to the Vince Lombardi Trophy over Tom Landry's Dallas Cowboys.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

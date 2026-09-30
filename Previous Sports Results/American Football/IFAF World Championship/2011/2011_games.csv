@@ -1,1 +1,17 @@
-Game Number,"Game Type (Group Stage, Placement Game, Bronze Medal Game, Gold Medal Game, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Group Stage,United States,Australia,United States,Australia,"Tivoli-Neu, Innsbruck",2011-07-08,United States 61 def. Australia 0,61,61,,United States defeated Australia 61-0 in Group A.
+2,Group Stage,Mexico,Germany,Mexico,Germany,"Tivoli-Neu, Innsbruck",2011-07-08,Mexico 22 def. Germany 15,37,7,,Mexico defeated Germany 22-15 in Group A.
+3,Group Stage,Austria,Japan,Austria,Japan,"UPC-Arena, Graz",2011-07-09,Japan 24 def. Austria 6,30,18,,Japan defeated Austria 24-6 in Group B.
+4,Group Stage,Canada,France,Canada,France,"UPC-Arena, Graz",2011-07-09,Canada 45 def. France 10,55,35,,Canada defeated France 45-10 in Group B.
+5,Group Stage,Mexico,Australia,Mexico,Australia,"Tivoli-Neu, Innsbruck",2011-07-10,Mexico 65 def. Australia 0,65,65,,Mexico defeated Australia 65-0 in Group A.
+6,Group Stage,United States,Germany,United States,Germany,"Tivoli-Neu, Innsbruck",2011-07-10,United States 48 def. Germany 7,55,41,,United States defeated Germany 48-7 in Group A.
+7,Group Stage,Japan,France,Japan,France,"UPC-Arena, Graz",2011-07-11,Japan 35 def. France 10,45,25,,Japan defeated France 35-10 in Group B.
+8,Group Stage,Canada,Austria,Canada,Austria,"UPC-Arena, Graz",2011-07-11,Canada 36 def. Austria 14,50,22,,Canada defeated Austria 36-14 in Group B.
+9,Group Stage,Germany,Australia,Germany,Australia,"Tivoli-Neu, Innsbruck",2011-07-12,Germany 30 def. Australia 20,50,10,,Germany defeated Australia 30-20 in Group A.
+10,Group Stage,United States,Mexico,United States,Mexico,"Tivoli-Neu, Innsbruck",2011-07-12,United States 17 def. Mexico 7,24,10,,United States defeated Mexico 17-7 in Group A.
+11,Group Stage,Austria,France,Austria,France,"UPC-Arena, Graz",2011-07-13,France 24 def. Austria 16,40,8,,France defeated Austria 24-16 in Group B.
+12,Group Stage,Canada,Japan,Canada,Japan,"UPC-Arena, Graz",2011-07-13,Canada 31 def. Japan 27,58,4,,Canada defeated Japan 31-27 in Group B.
+13,Placement Game,Australia,Austria,Australia,Austria,"Ernst-Happel-Stadion, Vienna",2011-07-15,Austria 48 def. Australia 10,58,38,,Austria defeated Australia 48-10 for 7th place.
+14,Placement Game,Germany,France,Germany,France,"Ernst-Happel-Stadion, Vienna",2011-07-16,Germany 21 def. France 17,38,4,,Germany defeated France 21-17 for 5th place.
+15,Bronze Medal Game,Japan,Mexico,Japan,Mexico,"Ernst-Happel-Stadion, Vienna",2011-07-16,Japan 17 def. Mexico 14,31,3,,Japan defeated Mexico 17-14 to win the bronze medal.
+16,Gold Medal Game,United States,Canada,United States,Canada,"Ernst-Happel-Stadion, Vienna",2011-07-16,United States 50 def. Canada 7,57,43,,United States defeated Canada 50-7 to win their second consecutive IFAF World Championship.

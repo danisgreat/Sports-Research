@@ -4,8 +4,23 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1949
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jack McMurray
+
+## Senior Field Umpiring Panel (11 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Jack McMurray | 22 | Grand Final |
+| Alfred Sawyer | 19 | Regular Season / Finals |
+| John Cole | 18 | Regular Season / Finals |
+| Frank Spokes | 16 | Regular Season / Finals |
+| James Jamieson | 16 | Regular Season / Finals |
+| William Merrington | 15 | Regular Season / Finals |
+| Harry Beitzel | 3 | Regular Season / Finals |
+| Noel Egan | 3 | Regular Season / Finals |
+| Bernard Hogan | 2 | Regular Season / Finals |
+| Harry Male | 2 | Regular Season / Finals |
+| Thomas McIntyre | 2 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

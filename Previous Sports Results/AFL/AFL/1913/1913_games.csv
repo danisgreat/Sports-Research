@@ -1,1 +1,95 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Essendon,Carlton,Essendon,Carlton,East Melbourne,1913-04-26,Carlton 11.17 (83) def. Essendon 9.13 (67),150,16,,Carlton defeated Essendon by 16 points at East Melbourne.
+2,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1913-04-26,Collingwood 8.12 (60) def. Melbourne 5.7 (37),97,23,,Collingwood defeated Melbourne by 23 points at M.C.G..
+3,Regular Season,Fitzroy,University,Fitzroy,University,Brunswick St,1913-04-26,Fitzroy 10.19 (79) def. University 5.7 (37),116,42,,Fitzroy defeated University by 42 points at Brunswick St.
+4,Regular Season,Geelong,Richmond,Geelong,Richmond,Corio Oval,1913-04-26,Geelong 7.13 (55) def. Richmond 5.7 (37),92,18,,Geelong defeated Richmond by 18 points at Corio Oval.
+5,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1913-04-26,Sydney 8.15 (63) def. St Kilda 8.6 (54),117,9,,Sydney defeated St Kilda by 9 points at Lake Oval.
+6,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1913-05-03,Carlton 8.13 (61) drew with Sydney 9.7 (61),122,0,,Carlton and Sydney played out a draw at Princes Park.
+7,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1913-05-03,Collingwood 10.17 (77) def. Geelong 11.2 (68),145,9,,Collingwood defeated Geelong by 9 points at Victoria Park.
+8,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1913-05-03,Essendon 13.11 (89) def. Richmond 11.12 (78),167,11,,Essendon defeated Richmond by 11 points at Punt Rd.
+9,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1913-05-03,St Kilda 10.7 (67) def. Fitzroy 3.16 (34),101,33,,St Kilda defeated Fitzroy by 33 points at Junction Oval.
+10,Regular Season,University,Melbourne,University,Melbourne,M.C.G.,1913-05-03,Melbourne 14.15 (99) def. University 10.12 (72),171,27,,Melbourne defeated University by 27 points at M.C.G..
+11,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1913-05-10,Carlton 11.13 (79) def. Melbourne 7.11 (53),132,26,,Carlton defeated Melbourne by 26 points at Princes Park.
+12,Regular Season,Essendon,Collingwood,Essendon,Collingwood,East Melbourne,1913-05-10,Collingwood 10.10 (70) def. Essendon 10.5 (65),135,5,,Collingwood defeated Essendon by 5 points at East Melbourne.
+13,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1913-05-10,Fitzroy 8.14 (62) def. Geelong 6.7 (43),105,19,,Fitzroy defeated Geelong by 19 points at Brunswick St.
+14,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1913-05-10,Sydney 8.9 (57) def. Richmond 9.2 (56),113,1,,Sydney defeated Richmond by 1 points at Lake Oval.
+15,Regular Season,University,St Kilda,University,St Kilda,M.C.G.,1913-05-10,St Kilda 10.13 (73) def. University 9.11 (65),138,8,,St Kilda defeated University by 8 points at M.C.G..
+16,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1913-05-17,Collingwood 6.8 (44) def. Carlton 5.8 (38),82,6,,Collingwood defeated Carlton by 6 points at Victoria Park.
+17,Regular Season,Essendon,Sydney,Essendon,Sydney,East Melbourne,1913-05-17,Sydney 15.13 (103) def. Essendon 7.14 (56),159,47,,Sydney defeated Essendon by 47 points at East Melbourne.
+18,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1913-05-17,Fitzroy 7.11 (53) def. Melbourne 4.7 (31),84,22,,Fitzroy defeated Melbourne by 22 points at M.C.G..
+19,Regular Season,Geelong,University,Geelong,University,Corio Oval,1913-05-17,Geelong 14.14 (98) def. University 7.9 (51),149,47,,Geelong defeated University by 47 points at Corio Oval.
+20,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1913-05-17,Richmond 9.14 (68) def. St Kilda 7.12 (54),122,14,,Richmond defeated St Kilda by 14 points at Punt Rd.
+21,Regular Season,University,Carlton,University,Carlton,M.C.G.,1913-05-24,Carlton 10.12 (72) def. University 8.8 (56),128,16,,Carlton defeated University by 16 points at M.C.G..
+22,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1913-05-24,Collingwood 9.16 (70) def. Richmond 6.12 (48),118,22,,Collingwood defeated Richmond by 22 points at Victoria Park.
+23,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1913-05-24,Fitzroy 7.9 (51) def. Essendon 5.6 (36),87,15,,Fitzroy defeated Essendon by 15 points at Brunswick St.
+24,Regular Season,Geelong,Sydney,Geelong,Sydney,Corio Oval,1913-05-24,Sydney 9.17 (71) def. Geelong 7.15 (57),128,14,,Sydney defeated Geelong by 14 points at Corio Oval.
+25,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1913-05-24,St Kilda 8.13 (61) def. Melbourne 7.14 (56),117,5,,St Kilda defeated Melbourne by 5 points at Junction Oval.
+26,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1913-05-31,Carlton 4.13 (37) def. St Kilda 3.6 (24),61,13,,Carlton defeated St Kilda by 13 points at Princes Park.
+27,Regular Season,University,Collingwood,University,Collingwood,M.C.G.,1913-05-31,Collingwood 7.12 (54) def. University 2.8 (20),74,34,,Collingwood defeated University by 34 points at M.C.G..
+28,Regular Season,Essendon,Geelong,Essendon,Geelong,East Melbourne,1913-05-31,Geelong 6.11 (47) def. Essendon 3.5 (23),70,24,,Geelong defeated Essendon by 24 points at East Melbourne.
+29,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1913-05-31,Fitzroy 6.7 (43) def. Richmond 5.6 (36),79,7,,Fitzroy defeated Richmond by 7 points at Brunswick St.
+30,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1913-05-31,Sydney 6.16 (52) def. Melbourne 4.4 (28),80,24,,Sydney defeated Melbourne by 24 points at Lake Oval.
+31,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1913-06-07,Carlton 10.7 (67) def. Richmond 8.13 (61),128,6,,Carlton defeated Richmond by 6 points at Punt Rd.
+32,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1913-06-07,Collingwood 13.11 (89) def. St Kilda 7.12 (54),143,35,,Collingwood defeated St Kilda by 35 points at Victoria Park.
+33,Regular Season,Essendon,University,Essendon,University,East Melbourne,1913-06-07,Essendon 14.22 (106) def. University 6.5 (41),147,65,,Essendon defeated University by 65 points at East Melbourne.
+34,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1913-06-07,Fitzroy 11.17 (83) def. Sydney 7.8 (50),133,33,,Fitzroy defeated Sydney by 33 points at Lake Oval.
+35,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1913-06-07,Geelong 12.12 (84) def. Melbourne 7.10 (52),136,32,,Geelong defeated Melbourne by 32 points at M.C.G..
+36,Regular Season,Geelong,Carlton,Geelong,Carlton,Corio Oval,1913-06-09,Carlton 9.15 (69) def. Geelong 7.12 (54),123,15,,Carlton defeated Geelong by 15 points at Corio Oval.
+37,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1913-06-09,Fitzroy 6.11 (47) def. Collingwood 5.7 (37),84,10,,Fitzroy defeated Collingwood by 10 points at Victoria Park.
+38,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1913-06-09,St Kilda 9.11 (65) def. Essendon 7.13 (55),120,10,,St Kilda defeated Essendon by 10 points at Junction Oval.
+39,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1913-06-09,Richmond 7.10 (52) def. Melbourne 5.10 (40),92,12,,Richmond defeated Melbourne by 12 points at Punt Rd.
+40,Regular Season,University,Sydney,University,Sydney,M.C.G.,1913-06-09,Sydney 13.12 (90) def. University 10.9 (69),159,21,,Sydney defeated University by 21 points at M.C.G..
+41,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1913-06-14,Fitzroy 14.15 (99) def. Carlton 9.10 (64),163,35,,Fitzroy defeated Carlton by 35 points at Brunswick St.
+42,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1913-06-14,Sydney 10.15 (75) def. Collingwood 7.9 (51),126,24,,Sydney defeated Collingwood by 24 points at Lake Oval.
+43,Regular Season,Essendon,Melbourne,Essendon,Melbourne,East Melbourne,1913-06-14,Essendon 9.17 (71) def. Melbourne 3.12 (30),101,41,,Essendon defeated Melbourne by 41 points at East Melbourne.
+44,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1913-06-14,St Kilda 11.12 (78) def. Geelong 10.11 (71),149,7,,St Kilda defeated Geelong by 7 points at Junction Oval.
+45,Regular Season,University,Richmond,University,Richmond,M.C.G.,1913-06-14,Richmond 12.11 (83) def. University 5.10 (40),123,43,,Richmond defeated University by 43 points at M.C.G..
+46,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1913-06-21,Carlton 15.15 (105) def. Essendon 11.12 (78),183,27,,Carlton defeated Essendon by 27 points at Princes Park.
+47,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1913-06-21,Collingwood 14.11 (95) def. Melbourne 6.11 (47),142,48,,Collingwood defeated Melbourne by 48 points at Victoria Park.
+48,Regular Season,University,Fitzroy,University,Fitzroy,M.C.G.,1913-06-21,Fitzroy 10.15 (75) def. University 5.5 (35),110,40,,Fitzroy defeated University by 40 points at M.C.G..
+49,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1913-06-21,Richmond 12.9 (81) def. Geelong 8.15 (63),144,18,,Richmond defeated Geelong by 18 points at Punt Rd.
+50,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1913-06-21,Sydney 13.14 (92) def. St Kilda 9.11 (65),157,27,,Sydney defeated St Kilda by 27 points at Junction Oval.
+51,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1913-06-28,Sydney 12.16 (88) def. Carlton 5.11 (41),129,47,,Sydney defeated Carlton by 47 points at Lake Oval.
+52,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Corio Oval,1913-06-28,Collingwood 11.5 (71) def. Geelong 8.12 (60),131,11,,Collingwood defeated Geelong by 11 points at Corio Oval.
+53,Regular Season,Essendon,Richmond,Essendon,Richmond,East Melbourne,1913-06-28,Richmond 10.7 (67) def. Essendon 8.9 (57),124,10,,Richmond defeated Essendon by 10 points at East Melbourne.
+54,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1913-06-28,Fitzroy 7.11 (53) def. St Kilda 5.9 (39),92,14,,Fitzroy defeated St Kilda by 14 points at Brunswick St.
+55,Regular Season,Melbourne,University,Melbourne,University,M.C.G.,1913-06-28,Melbourne 7.20 (62) def. University 7.11 (53),115,9,,Melbourne defeated University by 9 points at M.C.G..
+56,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1913-07-05,Melbourne 10.7 (67) def. Carlton 7.12 (54),121,13,,Melbourne defeated Carlton by 13 points at M.C.G..
+57,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1913-07-05,Collingwood 10.12 (72) def. Essendon 7.12 (54),126,18,,Collingwood defeated Essendon by 18 points at Victoria Park.
+58,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Corio Oval,1913-07-05,Geelong 11.12 (78) def. Fitzroy 8.13 (61),139,17,,Geelong defeated Fitzroy by 17 points at Corio Oval.
+59,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1913-07-05,Sydney 8.11 (59) def. Richmond 3.17 (35),94,24,,Sydney defeated Richmond by 24 points at Punt Rd.
+60,Regular Season,St Kilda,University,St Kilda,University,Junction Oval,1913-07-05,St Kilda 18.20 (128) def. University 7.14 (56),184,72,,St Kilda defeated University by 72 points at Junction Oval.
+61,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1913-07-19,Collingwood 11.11 (77) def. Carlton 6.18 (54),131,23,,Collingwood defeated Carlton by 23 points at Princes Park.
+62,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1913-07-19,Essendon 7.20 (62) def. Sydney 5.12 (42),104,20,,Essendon defeated Sydney by 20 points at Lake Oval.
+63,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1913-07-19,Fitzroy 12.14 (86) def. Melbourne 3.10 (28),114,58,,Fitzroy defeated Melbourne by 58 points at Brunswick St.
+64,Regular Season,University,Geelong,University,Geelong,M.C.G.,1913-07-19,Geelong 17.18 (120) def. University 5.6 (36),156,84,,Geelong defeated University by 84 points at M.C.G..
+65,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Junction Oval,1913-07-19,St Kilda 9.8 (62) def. Richmond 5.6 (36),98,26,,St Kilda defeated Richmond by 26 points at Junction Oval.
+66,Regular Season,Carlton,University,Carlton,University,Princes Park,1913-07-26,Carlton 9.22 (76) def. University 3.8 (26),102,50,,Carlton defeated University by 50 points at Princes Park.
+67,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1913-07-26,Collingwood 10.9 (69) def. Richmond 5.15 (45),114,24,,Collingwood defeated Richmond by 24 points at Punt Rd.
+68,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,East Melbourne,1913-07-26,Fitzroy 7.12 (54) def. Essendon 4.12 (36),90,18,,Fitzroy defeated Essendon by 18 points at East Melbourne.
+69,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1913-07-26,Sydney 12.10 (82) def. Geelong 9.12 (66),148,16,,Sydney defeated Geelong by 16 points at Lake Oval.
+70,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1913-07-26,St Kilda 9.17 (71) def. Melbourne 5.5 (35),106,36,,St Kilda defeated Melbourne by 36 points at M.C.G..
+71,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1913-08-02,St Kilda 10.10 (70) def. Carlton 11.3 (69),139,1,,St Kilda defeated Carlton by 1 points at Junction Oval.
+72,Regular Season,Collingwood,University,Collingwood,University,Victoria Park,1913-08-02,Collingwood 12.15 (87) def. University 10.10 (70),157,17,,Collingwood defeated University by 17 points at Victoria Park.
+73,Regular Season,Geelong,Essendon,Geelong,Essendon,Corio Oval,1913-08-02,Geelong 11.10 (76) def. Essendon 8.5 (53),129,23,,Geelong defeated Essendon by 23 points at Corio Oval.
+74,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1913-08-02,Fitzroy 11.13 (79) def. Richmond 6.10 (46),125,33,,Fitzroy defeated Richmond by 33 points at Punt Rd.
+75,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1913-08-02,Sydney 5.18 (48) def. Melbourne 2.7 (19),67,29,,Sydney defeated Melbourne by 29 points at M.C.G..
+76,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1913-08-09,Carlton 9.9 (63) def. Richmond 7.9 (51),114,12,,Carlton defeated Richmond by 12 points at Princes Park.
+77,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1913-08-09,St Kilda 12.10 (82) def. Collingwood 6.8 (44),126,38,,St Kilda defeated Collingwood by 38 points at Junction Oval.
+78,Regular Season,University,Essendon,University,Essendon,M.C.G.,1913-08-09,Essendon 9.8 (62) def. University 8.12 (60),122,2,,Essendon defeated University by 2 points at M.C.G..
+79,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1913-08-09,Fitzroy 8.11 (59) def. Sydney 7.14 (56),115,3,,Fitzroy defeated Sydney by 3 points at Brunswick St.
+80,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Corio Oval,1913-08-09,Geelong 4.23 (47) def. Melbourne 4.2 (26),73,21,,Geelong defeated Melbourne by 21 points at Corio Oval.
+81,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1913-08-23,Geelong 9.15 (69) def. Carlton 6.10 (46),115,23,,Geelong defeated Carlton by 23 points at Princes Park.
+82,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1913-08-23,Fitzroy 9.10 (64) def. Collingwood 4.13 (37),101,27,,Fitzroy defeated Collingwood by 27 points at Brunswick St.
+83,Regular Season,Essendon,St Kilda,Essendon,St Kilda,East Melbourne,1913-08-23,St Kilda 9.8 (62) def. Essendon 7.8 (50),112,12,,St Kilda defeated Essendon by 12 points at East Melbourne.
+84,Regular Season,Melbourne,Richmond,Melbourne,Richmond,Punt Rd,1913-08-23,Melbourne 9.10 (64) def. Richmond 8.5 (53),117,11,,Melbourne defeated Richmond by 11 points at Punt Rd.
+85,Regular Season,Sydney,University,Sydney,University,Lake Oval,1913-08-23,Sydney 17.9 (111) def. University 8.13 (61),172,50,,Sydney defeated University by 50 points at Lake Oval.
+86,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1913-08-30,Fitzroy 7.13 (55) def. Carlton 4.8 (32),87,23,,Fitzroy defeated Carlton by 23 points at Princes Park.
+87,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1913-08-30,Sydney 8.8 (56) def. Collingwood 7.12 (54),110,2,,Sydney defeated Collingwood by 2 points at Victoria Park.
+88,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1913-08-30,Essendon 6.16 (52) def. Melbourne 6.6 (42),94,10,,Essendon defeated Melbourne by 10 points at M.C.G..
+89,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Corio Oval,1913-08-30,Geelong 15.18 (108) def. St Kilda 5.10 (40),148,68,,Geelong defeated St Kilda by 68 points at Corio Oval.
+90,Regular Season,Richmond,University,Richmond,University,Punt Rd,1913-08-30,Richmond 15.11 (101) def. University 8.11 (59),160,42,,Richmond defeated University by 42 points at Punt Rd.
+91,Finals,St Kilda,Sydney,St Kilda,Sydney,M.C.G.,1913-09-06,St Kilda 12.12 (84) def. Sydney 6.15 (51),135,33,,St Kilda defeated Sydney by 33 points at M.C.G..
+92,Finals,Fitzroy,Collingwood,Fitzroy,Collingwood,M.C.G.,1913-09-13,Fitzroy 11.14 (80) def. Collingwood 6.7 (43),123,37,,Fitzroy defeated Collingwood by 37 points at M.C.G..
+93,Finals,St Kilda,Fitzroy,St Kilda,Fitzroy,M.C.G.,1913-09-20,St Kilda 10.10 (70) def. Fitzroy 6.9 (45),115,25,,St Kilda defeated Fitzroy by 25 points at M.C.G..
+94,Grand Final,Fitzroy,St Kilda,Fitzroy,St Kilda,M.C.G.,1913-09-27,Fitzroy 7.14 (56) def. St Kilda 5.13 (43),99,13,,Fitzroy defeated St Kilda by 13 points at M.C.G..

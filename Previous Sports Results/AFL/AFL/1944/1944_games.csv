@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Sydney,Carlton,Sydney,Carlton,Junction Oval,1944-05-06,Sydney 13.10 (88) def. Carlton 9.7 (61),149,27,,Sydney defeated Carlton by 27 points at Junction Oval.
+2,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1944-05-06,Collingwood 14.17 (101) def. North Melbourne 9.11 (65),166,36,,Collingwood defeated North Melbourne by 36 points at Arden St.
+3,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1944-05-06,Essendon 15.16 (106) def. Hawthorn 9.14 (68),174,38,,Essendon defeated Hawthorn by 38 points at Glenferrie Oval.
+4,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1944-05-06,Fitzroy 11.16 (82) def. St Kilda 10.13 (73),155,9,,Fitzroy defeated St Kilda by 9 points at Brunswick St.
+5,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1944-05-06,Western Bulldogs 15.23 (113) def. Geelong 8.7 (55),168,58,,Western Bulldogs defeated Geelong by 58 points at Western Oval.
+6,Regular Season,Melbourne,Richmond,Melbourne,Richmond,Punt Rd,1944-05-06,Richmond 19.18 (132) def. Melbourne 14.8 (92),224,40,,Richmond defeated Melbourne by 40 points at Punt Rd.
+7,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1944-05-13,Carlton 18.16 (124) def. Hawthorn 9.14 (68),192,56,,Carlton defeated Hawthorn by 56 points at Princes Park.
+8,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1944-05-13,Fitzroy 19.17 (131) def. Collingwood 11.17 (83),214,48,,Fitzroy defeated Collingwood by 48 points at Victoria Park.
+9,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1944-05-13,Essendon 17.18 (120) def. Melbourne 16.4 (100),220,20,,Essendon defeated Melbourne by 20 points at Windy Hill.
+10,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1944-05-13,St Kilda 12.17 (89) def. Western Bulldogs 10.14 (74),163,15,,St Kilda defeated Western Bulldogs by 15 points at Junction Oval.
+11,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1944-05-13,Sydney 11.18 (84) def. Geelong 9.11 (65),149,19,,Sydney defeated Geelong by 19 points at Kardinia Park.
+12,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Punt Rd,1944-05-13,Richmond 18.11 (119) def. North Melbourne 15.9 (99),218,20,,Richmond defeated North Melbourne by 20 points at Punt Rd.
+13,Regular Season,Melbourne,Carlton,Melbourne,Carlton,Punt Rd,1944-05-20,Carlton 14.8 (92) def. Melbourne 12.5 (77),169,15,,Carlton defeated Melbourne by 15 points at Punt Rd.
+14,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1944-05-20,Western Bulldogs 16.9 (105) def. Collingwood 13.19 (97),202,8,,Western Bulldogs defeated Collingwood by 8 points at Western Oval.
+15,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1944-05-20,Richmond 22.19 (151) def. Essendon 16.14 (110),261,41,,Richmond defeated Essendon by 41 points at Windy Hill.
+16,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1944-05-20,Fitzroy 16.11 (107) def. North Melbourne 11.16 (82),189,25,,Fitzroy defeated North Melbourne by 25 points at Brunswick St.
+17,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1944-05-20,Hawthorn 22.12 (144) def. Geelong 13.13 (91),235,53,,Hawthorn defeated Geelong by 53 points at Glenferrie Oval.
+18,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Junction Oval,1944-05-20,Sydney 9.10 (64) def. St Kilda 7.10 (52),116,12,,Sydney defeated St Kilda by 12 points at Junction Oval.
+19,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1944-05-27,Carlton 13.17 (95) def. Essendon 14.9 (93),188,2,,Carlton defeated Essendon by 2 points at Princes Park.
+20,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1944-05-27,Sydney 12.18 (90) def. Collingwood 11.18 (84),174,6,,Sydney defeated Collingwood by 6 points at Victoria Park.
+21,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1944-05-27,Richmond 14.13 (97) def. Fitzroy 7.9 (51),148,46,,Richmond defeated Fitzroy by 46 points at Punt Rd.
+22,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1944-05-27,North Melbourne 15.14 (104) def. Western Bulldogs 9.16 (70),174,34,,North Melbourne defeated Western Bulldogs by 34 points at Arden St.
+23,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,1944-05-27,Melbourne 22.10 (142) def. Geelong 10.9 (69),211,73,,Melbourne defeated Geelong by 73 points at Kardinia Park.
+24,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1944-05-27,Hawthorn 11.7 (73) def. St Kilda 9.12 (66),139,7,,Hawthorn defeated St Kilda by 7 points at Junction Oval.
+25,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1944-06-03,Carlton 16.12 (108) def. Richmond 14.8 (92),200,16,,Carlton defeated Richmond by 16 points at Princes Park.
+26,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1944-06-03,Collingwood 10.13 (73) def. Hawthorn 8.9 (57),130,16,,Collingwood defeated Hawthorn by 16 points at Glenferrie Oval.
+27,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1944-06-03,Essendon 17.14 (116) def. Geelong 11.14 (80),196,36,,Essendon defeated Geelong by 36 points at Windy Hill.
+28,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1944-06-03,Western Bulldogs 8.15 (63) def. Fitzroy 8.10 (58),121,5,,Western Bulldogs defeated Fitzroy by 5 points at Western Oval.
+29,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,Punt Rd,1944-06-03,St Kilda 13.8 (86) def. Melbourne 10.13 (73),159,13,,St Kilda defeated Melbourne by 13 points at Punt Rd.
+30,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Junction Oval,1944-06-03,North Melbourne 10.13 (73) def. Sydney 10.12 (72),145,1,,North Melbourne defeated Sydney by 1 points at Junction Oval.
+31,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1944-06-10,Carlton 13.25 (103) def. Geelong 5.10 (40),143,63,,Carlton defeated Geelong by 63 points at Kardinia Park.
+32,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1944-06-10,Melbourne 15.9 (99) def. Collingwood 10.9 (69),168,30,,Melbourne defeated Collingwood by 30 points at Victoria Park.
+33,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1944-06-10,St Kilda 9.17 (71) drew with Essendon 9.17 (71),142,0,,St Kilda and Essendon played out a draw at Junction Oval.
+34,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1944-06-10,Fitzroy 14.7 (91) def. Sydney 10.17 (77),168,14,,Fitzroy defeated Sydney by 14 points at Brunswick St.
+35,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Punt Rd,1944-06-10,Richmond 19.11 (125) drew with Western Bulldogs 18.17 (125),250,0,,Richmond and Western Bulldogs played out a draw at Punt Rd.
+36,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1944-06-10,North Melbourne 21.16 (142) def. Hawthorn 17.11 (113),255,29,,North Melbourne defeated Hawthorn by 29 points at Arden St.
+37,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1944-06-17,Carlton 15.13 (103) def. St Kilda 6.12 (48),151,55,,Carlton defeated St Kilda by 55 points at Junction Oval.
+38,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1944-06-17,Collingwood 12.21 (93) def. Essendon 9.10 (64),157,29,,Collingwood defeated Essendon by 29 points at Victoria Park.
+39,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1944-06-17,Fitzroy 14.13 (97) def. Hawthorn 7.10 (52),149,45,,Fitzroy defeated Hawthorn by 45 points at Brunswick St.
+40,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1944-06-17,Western Bulldogs 9.13 (67) def. Sydney 8.10 (58),125,9,,Western Bulldogs defeated Sydney by 9 points at Western Oval.
+41,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1944-06-17,Richmond 25.23 (173) def. Geelong 9.2 (56),229,117,,Richmond defeated Geelong by 117 points at Punt Rd.
+42,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1944-06-17,North Melbourne 15.20 (110) def. Melbourne 12.10 (82),192,28,,North Melbourne defeated Melbourne by 28 points at Arden St.
+43,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1944-06-24,Carlton 17.12 (114) def. Collingwood 12.11 (83),197,31,,Carlton defeated Collingwood by 31 points at Princes Park.
+44,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1944-06-24,Essendon 21.18 (144) def. North Melbourne 8.12 (60),204,84,,Essendon defeated North Melbourne by 84 points at Windy Hill.
+45,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,Punt Rd,1944-06-24,Fitzroy 10.17 (77) def. Melbourne 7.10 (52),129,25,,Fitzroy defeated Melbourne by 25 points at Punt Rd.
+46,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1944-06-24,Western Bulldogs 14.18 (102) def. Hawthorn 9.10 (64),166,38,,Western Bulldogs defeated Hawthorn by 38 points at Glenferrie Oval.
+47,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1944-06-24,St Kilda 13.14 (92) def. Geelong 9.13 (67),159,25,,St Kilda defeated Geelong by 25 points at Kardinia Park.
+48,Regular Season,Sydney,Richmond,Sydney,Richmond,Junction Oval,1944-06-24,Richmond 17.10 (112) def. Sydney 11.11 (77),189,35,,Richmond defeated Sydney by 35 points at Junction Oval.
+49,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1944-07-01,North Melbourne 11.15 (81) def. Carlton 7.10 (52),133,29,,North Melbourne defeated Carlton by 29 points at Arden St.
+50,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1944-07-01,Collingwood 15.12 (102) def. Geelong 9.13 (67),169,35,,Collingwood defeated Geelong by 35 points at Victoria Park.
+51,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1944-07-01,Fitzroy 12.11 (83) drew with Essendon 11.17 (83),166,0,,Fitzroy and Essendon played out a draw at Brunswick St.
+52,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1944-07-01,Western Bulldogs 8.15 (63) def. Melbourne 8.13 (61),124,2,,Western Bulldogs defeated Melbourne by 2 points at Western Oval.
+53,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Junction Oval,1944-07-01,Sydney 15.12 (102) def. Hawthorn 11.11 (77),179,25,,Sydney defeated Hawthorn by 25 points at Junction Oval.
+54,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1944-07-01,Richmond 11.18 (84) def. St Kilda 7.11 (53),137,31,,Richmond defeated St Kilda by 31 points at Punt Rd.
+55,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1944-07-08,Carlton 11.15 (81) def. Fitzroy 6.15 (51),132,30,,Carlton defeated Fitzroy by 30 points at Princes Park.
+56,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1944-07-08,St Kilda 17.11 (113) def. Collingwood 6.9 (45),158,68,,St Kilda defeated Collingwood by 68 points at Junction Oval.
+57,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1944-07-08,Essendon 14.16 (100) def. Western Bulldogs 8.13 (61),161,39,,Essendon defeated Western Bulldogs by 39 points at Windy Hill.
+58,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1944-07-08,North Melbourne 21.14 (140) def. Geelong 13.9 (87),227,53,,North Melbourne defeated Geelong by 53 points at Kardinia Park.
+59,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Glenferrie Oval,1944-07-08,Richmond 13.16 (94) def. Hawthorn 11.9 (75),169,19,,Richmond defeated Hawthorn by 19 points at Glenferrie Oval.
+60,Regular Season,Melbourne,Sydney,Melbourne,Sydney,Punt Rd,1944-07-08,Melbourne 10.10 (70) def. Sydney 9.13 (67),137,3,,Melbourne defeated Sydney by 3 points at Punt Rd.
+61,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1944-07-15,Western Bulldogs 13.8 (86) def. Carlton 12.11 (83),169,3,,Western Bulldogs defeated Carlton by 3 points at Western Oval.
+62,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1944-07-15,Richmond 16.17 (113) def. Collingwood 9.13 (67),180,46,,Richmond defeated Collingwood by 46 points at Punt Rd.
+63,Regular Season,Sydney,Essendon,Sydney,Essendon,Junction Oval,1944-07-15,Essendon 15.16 (106) def. Sydney 7.15 (57),163,49,,Essendon defeated Sydney by 49 points at Junction Oval.
+64,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1944-07-15,Fitzroy 25.29 (179) def. Geelong 8.8 (56),235,123,,Fitzroy defeated Geelong by 123 points at Brunswick St.
+65,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1944-07-15,Melbourne 22.25 (157) def. Hawthorn 7.10 (52),209,105,,Melbourne defeated Hawthorn by 105 points at Glenferrie Oval.
+66,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1944-07-15,North Melbourne 11.20 (86) def. St Kilda 7.11 (53),139,33,,North Melbourne defeated St Kilda by 33 points at Arden St.
+67,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1944-07-22,Carlton 10.14 (74) def. Sydney 8.12 (60),134,14,,Carlton defeated Sydney by 14 points at Princes Park.
+68,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1944-07-22,Collingwood 13.11 (89) def. North Melbourne 10.10 (70),159,19,,Collingwood defeated North Melbourne by 19 points at Victoria Park.
+69,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1944-07-22,Essendon 19.18 (132) def. Hawthorn 3.7 (25),157,107,,Essendon defeated Hawthorn by 107 points at Windy Hill.
+70,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1944-07-22,St Kilda 12.16 (88) def. Fitzroy 8.14 (62),150,26,,St Kilda defeated Fitzroy by 26 points at Junction Oval.
+71,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1944-07-22,Western Bulldogs 14.17 (101) def. Geelong 11.11 (77),178,24,,Western Bulldogs defeated Geelong by 24 points at Kardinia Park.
+72,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1944-07-22,Richmond 17.8 (110) def. Melbourne 9.15 (69),179,41,,Richmond defeated Melbourne by 41 points at Punt Rd.
+73,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Glenferrie Oval,1944-07-29,Carlton 13.28 (106) def. Hawthorn 10.2 (62),168,44,,Carlton defeated Hawthorn by 44 points at Glenferrie Oval.
+74,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1944-07-29,Fitzroy 12.17 (89) def. Collingwood 4.14 (38),127,51,,Fitzroy defeated Collingwood by 51 points at Brunswick St.
+75,Regular Season,Melbourne,Essendon,Melbourne,Essendon,Punt Rd,1944-07-29,Essendon 14.14 (98) def. Melbourne 11.12 (78),176,20,,Essendon defeated Melbourne by 20 points at Punt Rd.
+76,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1944-07-29,Western Bulldogs 14.15 (99) def. St Kilda 11.10 (76),175,23,,Western Bulldogs defeated St Kilda by 23 points at Western Oval.
+77,Regular Season,Sydney,Geelong,Sydney,Geelong,Junction Oval,1944-07-29,Sydney 8.30 (78) def. Geelong 8.8 (56),134,22,,Sydney defeated Geelong by 22 points at Junction Oval.
+78,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1944-07-29,North Melbourne 11.21 (87) def. Richmond 14.2 (86),173,1,,North Melbourne defeated Richmond by 1 points at Arden St.
+79,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1944-08-05,Melbourne 8.6 (54) def. Carlton 4.14 (38),92,16,,Melbourne defeated Carlton by 16 points at Princes Park.
+80,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1944-08-05,Western Bulldogs 15.9 (99) def. Collingwood 8.12 (60),159,39,,Western Bulldogs defeated Collingwood by 39 points at Victoria Park.
+81,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1944-08-05,Essendon 12.15 (87) def. Richmond 11.17 (83),170,4,,Essendon defeated Richmond by 4 points at Punt Rd.
+82,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1944-08-05,Fitzroy 15.11 (101) def. North Melbourne 11.12 (78),179,23,,Fitzroy defeated North Melbourne by 23 points at Arden St.
+83,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1944-08-05,Geelong 11.20 (86) def. Hawthorn 9.7 (61),147,25,,Geelong defeated Hawthorn by 25 points at Kardinia Park.
+84,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1944-08-05,Sydney 10.19 (79) def. St Kilda 7.12 (54),133,25,,Sydney defeated St Kilda by 25 points at Junction Oval.
+85,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1944-08-12,Carlton 14.20 (104) def. Essendon 6.9 (45),149,59,,Carlton defeated Essendon by 59 points at Windy Hill.
+86,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Junction Oval,1944-08-12,Sydney 16.10 (106) def. Collingwood 8.22 (70),176,36,,Sydney defeated Collingwood by 36 points at Junction Oval.
+87,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1944-08-12,Fitzroy 16.10 (106) def. Richmond 7.14 (56),162,50,,Fitzroy defeated Richmond by 50 points at Brunswick St.
+88,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1944-08-12,Western Bulldogs 12.6 (78) def. North Melbourne 11.8 (74),152,4,,Western Bulldogs defeated North Melbourne by 4 points at Western Oval.
+89,Regular Season,Melbourne,Geelong,Melbourne,Geelong,Punt Rd,1944-08-12,Melbourne 8.21 (69) def. Geelong 8.8 (56),125,13,,Melbourne defeated Geelong by 13 points at Punt Rd.
+90,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Glenferrie Oval,1944-08-12,Hawthorn 12.16 (88) drew with St Kilda 12.16 (88),176,0,,Hawthorn and St Kilda played out a draw at Glenferrie Oval.
+91,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1944-08-19,Richmond 11.16 (82) def. Carlton 8.16 (64),146,18,,Richmond defeated Carlton by 18 points at Punt Rd.
+92,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1944-08-19,Collingwood 18.20 (128) def. Hawthorn 7.14 (56),184,72,,Collingwood defeated Hawthorn by 72 points at Victoria Park.
+93,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1944-08-19,Essendon 13.19 (97) def. Geelong 10.12 (72),169,25,,Essendon defeated Geelong by 25 points at Kardinia Park.
+94,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1944-08-19,Fitzroy 13.14 (92) def. Western Bulldogs 12.18 (90),182,2,,Fitzroy defeated Western Bulldogs by 2 points at Brunswick St.
+95,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1944-08-19,St Kilda 13.13 (91) def. Melbourne 7.10 (52),143,39,,St Kilda defeated Melbourne by 39 points at Junction Oval.
+96,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1944-08-19,Sydney 13.16 (94) def. North Melbourne 6.12 (48),142,46,,Sydney defeated North Melbourne by 46 points at Arden St.
+97,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1944-08-26,Carlton 23.28 (166) def. Geelong 8.12 (60),226,106,,Carlton defeated Geelong by 106 points at Princes Park.
+98,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,Punt Rd,1944-08-26,Collingwood 15.12 (102) def. Melbourne 11.17 (83),185,19,,Collingwood defeated Melbourne by 19 points at Punt Rd.
+99,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1944-08-26,Essendon 28.21 (189) def. St Kilda 12.11 (83),272,106,,Essendon defeated St Kilda by 106 points at Windy Hill.
+100,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Junction Oval,1944-08-26,Fitzroy 17.14 (116) def. Sydney 8.13 (61),177,55,,Fitzroy defeated Sydney by 55 points at Junction Oval.
+101,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1944-08-26,Richmond 9.15 (69) def. Western Bulldogs 5.14 (44),113,25,,Richmond defeated Western Bulldogs by 25 points at Western Oval.
+102,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1944-08-26,North Melbourne 15.19 (109) def. Hawthorn 12.12 (84),193,25,,North Melbourne defeated Hawthorn by 25 points at Glenferrie Oval.
+103,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1944-09-02,Western Bulldogs 12.17 (89) def. Carlton 13.10 (88),177,1,,Western Bulldogs defeated Carlton by 1 points at Princes Park.
+104,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1944-09-02,Richmond 15.18 (108) def. Collingwood 10.8 (68),176,40,,Richmond defeated Collingwood by 40 points at Victoria Park.
+105,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1944-09-02,Essendon 17.24 (126) def. Sydney 6.8 (44),170,82,,Essendon defeated Sydney by 82 points at Windy Hill.
+106,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1944-09-02,Fitzroy 15.15 (105) def. Geelong 10.10 (70),175,35,,Fitzroy defeated Geelong by 35 points at Kardinia Park.
+107,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,Punt Rd,1944-09-02,Melbourne 14.27 (111) def. Hawthorn 6.13 (49),160,62,,Melbourne defeated Hawthorn by 62 points at Punt Rd.
+108,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1944-09-02,North Melbourne 16.15 (111) def. St Kilda 12.10 (82),193,29,,North Melbourne defeated St Kilda by 29 points at Junction Oval.
+109,Finals,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Junction Oval,1944-09-09,Essendon 14.17 (101) def. Western Bulldogs 8.4 (52),153,49,,Essendon defeated Western Bulldogs by 49 points at Junction Oval.
+110,Finals,Fitzroy,Richmond,Fitzroy,Richmond,Junction Oval,1944-09-16,Fitzroy 11.15 (81) def. Richmond 10.10 (70),151,11,,Fitzroy defeated Richmond by 11 points at Junction Oval.
+111,Finals,Richmond,Essendon,Richmond,Essendon,Junction Oval,1944-09-23,Richmond 16.12 (108) def. Essendon 12.15 (87),195,21,,Richmond defeated Essendon by 21 points at Junction Oval.
+112,Grand Final,Fitzroy,Richmond,Fitzroy,Richmond,Junction Oval,1944-09-30,Fitzroy 9.12 (66) def. Richmond 7.9 (51),117,15,,Fitzroy defeated Richmond by 15 points at Junction Oval.

@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1961 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1961
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1961.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1961 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Hawthorn
+- **Premiership Coach:** John Kennedy Sr.
+- **Runners-up:** Footscray
+- **Runners-up Coach:** Ted Whitten
+- **Grand Final Result:** Hawthorn 13.16 (94) def. Footscray 7.9 (51)
+- **Winning Margin:** 43 points
+- **Match Date:** 1961-09-23
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 107,935 spectators
+
+## Match Summary & Tactical Notes
+Hawthorn captured their historic first VFL premiership, storming home to defeat Footscray by 43 points.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

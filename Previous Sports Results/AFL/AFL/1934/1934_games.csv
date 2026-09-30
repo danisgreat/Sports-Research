@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Glenferrie Oval,1934-05-05,Carlton 17.26 (128) def. Hawthorn 12.8 (80),208,48,,Carlton defeated Hawthorn by 48 points at Glenferrie Oval.
+2,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1934-05-05,Sydney 19.13 (127) def. Collingwood 13.14 (92),219,35,,Sydney defeated Collingwood by 35 points at Lake Oval.
+3,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1934-05-05,Essendon 19.11 (125) def. Western Bulldogs 16.18 (114),239,11,,Essendon defeated Western Bulldogs by 11 points at Windy Hill.
+4,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1934-05-05,Fitzroy 11.16 (82) def. North Melbourne 10.11 (71),153,11,,Fitzroy defeated North Melbourne by 11 points at Brunswick St.
+5,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Corio Oval,1934-05-05,Geelong 16.13 (109) def. St Kilda 11.7 (73),182,36,,Geelong defeated St Kilda by 36 points at Corio Oval.
+6,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1934-05-05,Richmond 18.14 (122) def. Melbourne 12.9 (81),203,41,,Richmond defeated Melbourne by 41 points at Punt Rd.
+7,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1934-05-12,Carlton 17.20 (122) def. Sydney 17.17 (119),241,3,,Carlton defeated Sydney by 3 points at Princes Park.
+8,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1934-05-12,Collingwood 17.12 (114) def. Essendon 13.8 (86),200,28,,Collingwood defeated Essendon by 28 points at Victoria Park.
+9,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1934-05-12,Western Bulldogs 14.12 (96) def. Fitzroy 9.18 (72),168,24,,Western Bulldogs defeated Fitzroy by 24 points at Western Oval.
+10,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1934-05-12,Geelong 10.17 (77) def. North Melbourne 10.10 (70),147,7,,Geelong defeated North Melbourne by 7 points at Arden St.
+11,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1934-05-12,Melbourne 20.13 (133) def. Hawthorn 6.8 (44),177,89,,Melbourne defeated Hawthorn by 89 points at M.C.G..
+12,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Junction Oval,1934-05-12,Richmond 13.9 (87) def. St Kilda 12.11 (83),170,4,,Richmond defeated St Kilda by 4 points at Junction Oval.
+13,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1934-05-19,Richmond 14.20 (104) def. Carlton 9.13 (67),171,37,,Richmond defeated Carlton by 37 points at Punt Rd.
+14,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1934-05-19,Collingwood 19.15 (129) def. Hawthorn 9.8 (62),191,67,,Collingwood defeated Hawthorn by 67 points at Glenferrie Oval.
+15,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1934-05-19,Sydney 23.10 (148) def. Essendon 15.16 (106),254,42,,Sydney defeated Essendon by 42 points at Lake Oval.
+16,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1934-05-19,St Kilda 13.15 (93) def. Fitzroy 11.14 (80),173,13,,St Kilda defeated Fitzroy by 13 points at Brunswick St.
+17,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1934-05-19,Western Bulldogs 10.17 (77) def. North Melbourne 8.14 (62),139,15,,Western Bulldogs defeated North Melbourne by 15 points at Arden St.
+18,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Corio Oval,1934-05-19,Geelong 12.14 (86) def. Melbourne 6.11 (47),133,39,,Geelong defeated Melbourne by 39 points at Corio Oval.
+19,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1934-05-26,Carlton 15.14 (104) def. Geelong 14.10 (94),198,10,,Carlton defeated Geelong by 10 points at Princes Park.
+20,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1934-05-26,Collingwood 13.13 (91) def. Richmond 9.9 (63),154,28,,Collingwood defeated Richmond by 28 points at Victoria Park.
+21,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1934-05-26,Essendon 15.13 (103) def. Hawthorn 13.11 (89),192,14,,Essendon defeated Hawthorn by 14 points at Windy Hill.
+22,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1934-05-26,Melbourne 9.11 (65) def. Fitzroy 8.11 (59),124,6,,Melbourne defeated Fitzroy by 6 points at M.C.G..
+23,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1934-05-26,Sydney 17.18 (120) def. Western Bulldogs 12.12 (84),204,36,,Sydney defeated Western Bulldogs by 36 points at Western Oval.
+24,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1934-05-26,St Kilda 14.18 (102) def. North Melbourne 10.20 (80),182,22,,St Kilda defeated North Melbourne by 22 points at Junction Oval.
+25,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1934-06-02,Fitzroy 15.12 (102) def. Carlton 12.15 (87),189,15,,Fitzroy defeated Carlton by 15 points at Brunswick St.
+26,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1934-06-02,St Kilda 22.23 (155) def. Western Bulldogs 11.18 (84),239,71,,St Kilda defeated Western Bulldogs by 71 points at Junction Oval.
+27,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1934-06-02,Sydney 22.12 (144) def. Hawthorn 13.14 (92),236,52,,Sydney defeated Hawthorn by 52 points at Glenferrie Oval.
+28,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Corio Oval,1934-06-04,Geelong 16.13 (109) drew with Collingwood 16.13 (109),218,0,,Geelong and Collingwood played out a draw at Corio Oval.
+29,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1934-06-04,Richmond 15.12 (102) def. Essendon 12.8 (80),182,22,,Richmond defeated Essendon by 22 points at Punt Rd.
+30,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1934-06-04,Melbourne 15.28 (118) def. North Melbourne 17.14 (116),234,2,,Melbourne defeated North Melbourne by 2 points at Arden St.
+31,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1934-06-09,Carlton 20.25 (145) def. North Melbourne 12.11 (83),228,62,,Carlton defeated North Melbourne by 62 points at Princes Park.
+32,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1934-06-09,Collingwood 16.15 (111) def. Fitzroy 13.18 (96),207,15,,Collingwood defeated Fitzroy by 15 points at Victoria Park.
+33,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1934-06-09,Essendon 14.11 (95) def. Geelong 11.16 (82),177,13,,Essendon defeated Geelong by 13 points at Windy Hill.
+34,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1934-06-09,Hawthorn 11.11 (77) def. Western Bulldogs 10.11 (71),148,6,,Hawthorn defeated Western Bulldogs by 6 points at Glenferrie Oval.
+35,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1934-06-09,St Kilda 20.14 (134) def. Melbourne 14.17 (101),235,33,,St Kilda defeated Melbourne by 33 points at M.C.G..
+36,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1934-06-09,Richmond 16.12 (108) def. Sydney 9.10 (64),172,44,,Richmond defeated Sydney by 44 points at Lake Oval.
+37,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1934-06-23,Carlton 24.22 (166) def. St Kilda 16.12 (108),274,58,,Carlton defeated St Kilda by 58 points at Junction Oval.
+38,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1934-06-23,Collingwood 16.16 (112) def. North Melbourne 12.14 (86),198,26,,Collingwood defeated North Melbourne by 26 points at Arden St.
+39,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1934-06-23,Fitzroy 15.12 (102) def. Essendon 14.13 (97),199,5,,Fitzroy defeated Essendon by 5 points at Brunswick St.
+40,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1934-06-23,Melbourne 13.13 (91) def. Western Bulldogs 6.8 (44),135,47,,Melbourne defeated Western Bulldogs by 47 points at Western Oval.
+41,Regular Season,Geelong,Sydney,Geelong,Sydney,Corio Oval,1934-06-23,Geelong 15.16 (106) def. Sydney 11.11 (77),183,29,,Geelong defeated Sydney by 29 points at Corio Oval.
+42,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1934-06-23,Richmond 16.14 (110) def. Hawthorn 11.15 (81),191,29,,Richmond defeated Hawthorn by 29 points at Punt Rd.
+43,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1934-06-30,Carlton 19.20 (134) def. Melbourne 11.19 (85),219,49,,Carlton defeated Melbourne by 49 points at Princes Park.
+44,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1934-06-30,Collingwood 12.12 (84) def. St Kilda 10.15 (75),159,9,,Collingwood defeated St Kilda by 9 points at Victoria Park.
+45,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1934-06-30,Essendon 29.16 (190) def. North Melbourne 15.13 (103),293,87,,Essendon defeated North Melbourne by 87 points at Windy Hill.
+46,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1934-06-30,Sydney 13.19 (97) def. Fitzroy 13.10 (88),185,9,,Sydney defeated Fitzroy by 9 points at Lake Oval.
+47,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Punt Rd,1934-06-30,Richmond 9.10 (64) def. Western Bulldogs 6.12 (48),112,16,,Richmond defeated Western Bulldogs by 16 points at Punt Rd.
+48,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1934-06-30,Geelong 17.17 (119) def. Hawthorn 11.12 (78),197,41,,Geelong defeated Hawthorn by 41 points at Glenferrie Oval.
+49,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1934-07-07,Carlton 15.17 (107) def. Western Bulldogs 12.11 (83),190,24,,Carlton defeated Western Bulldogs by 24 points at Western Oval.
+50,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1934-07-07,Collingwood 8.17 (65) def. Melbourne 8.15 (63),128,2,,Collingwood defeated Melbourne by 2 points at M.C.G..
+51,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1934-07-07,St Kilda 11.8 (74) def. Essendon 7.16 (58),132,16,,St Kilda defeated Essendon by 16 points at Junction Oval.
+52,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1934-07-07,Fitzroy 13.21 (99) def. Hawthorn 11.13 (79),178,20,,Fitzroy defeated Hawthorn by 20 points at Brunswick St.
+53,Regular Season,Geelong,Richmond,Geelong,Richmond,Corio Oval,1934-07-07,Geelong 7.13 (55) def. Richmond 4.9 (33),88,22,,Geelong defeated Richmond by 22 points at Corio Oval.
+54,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1934-07-07,Sydney 20.18 (138) def. North Melbourne 7.4 (46),184,92,,Sydney defeated North Melbourne by 92 points at Arden St.
+55,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1934-07-14,Collingwood 13.17 (95) def. Carlton 10.5 (65),160,30,,Collingwood defeated Carlton by 30 points at Victoria Park.
+56,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1934-07-14,Melbourne 8.12 (60) def. Essendon 6.15 (51),111,9,,Melbourne defeated Essendon by 9 points at Windy Hill.
+57,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1934-07-14,Richmond 10.16 (76) def. Fitzroy 9.9 (63),139,13,,Richmond defeated Fitzroy by 13 points at Punt Rd.
+58,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Corio Oval,1934-07-14,Geelong 13.15 (93) def. Western Bulldogs 9.10 (64),157,29,,Geelong defeated Western Bulldogs by 29 points at Corio Oval.
+59,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1934-07-14,Hawthorn 6.17 (53) def. North Melbourne 6.12 (48),101,5,,Hawthorn defeated North Melbourne by 5 points at Glenferrie Oval.
+60,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1934-07-14,Sydney 15.20 (110) def. St Kilda 7.4 (46),156,64,,Sydney defeated St Kilda by 64 points at Lake Oval.
+61,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1934-07-21,Carlton 22.16 (148) def. Essendon 16.13 (109),257,39,,Carlton defeated Essendon by 39 points at Princes Park.
+62,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1934-07-21,Collingwood 16.9 (105) def. Western Bulldogs 14.11 (95),200,10,,Collingwood defeated Western Bulldogs by 10 points at Western Oval.
+63,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1934-07-21,Geelong 14.18 (102) def. Fitzroy 10.11 (71),173,31,,Geelong defeated Fitzroy by 31 points at Brunswick St.
+64,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1934-07-21,St Kilda 13.10 (88) def. Hawthorn 10.12 (72),160,16,,St Kilda defeated Hawthorn by 16 points at Junction Oval.
+65,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1934-07-21,Sydney 22.23 (155) def. Melbourne 14.15 (99),254,56,,Sydney defeated Melbourne by 56 points at M.C.G..
+66,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1934-07-21,Richmond 15.9 (99) def. North Melbourne 11.12 (78),177,21,,Richmond defeated North Melbourne by 21 points at Arden St.
+67,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1934-07-28,Carlton 22.13 (145) def. Hawthorn 10.6 (66),211,79,,Carlton defeated Hawthorn by 79 points at Princes Park.
+68,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1934-07-28,Sydney 21.19 (145) def. Collingwood 13.19 (97),242,48,,Sydney defeated Collingwood by 48 points at Victoria Park.
+69,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1934-07-28,Western Bulldogs 15.9 (99) def. Essendon 8.9 (57),156,42,,Western Bulldogs defeated Essendon by 42 points at Western Oval.
+70,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1934-07-28,Fitzroy 21.16 (142) def. North Melbourne 15.8 (98),240,44,,Fitzroy defeated North Melbourne by 44 points at Arden St.
+71,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1934-07-28,Geelong 16.18 (114) def. St Kilda 13.6 (84),198,30,,Geelong defeated St Kilda by 30 points at Junction Oval.
+72,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1934-07-28,Melbourne 13.23 (101) def. Richmond 14.11 (95),196,6,,Melbourne defeated Richmond by 6 points at M.C.G..
+73,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1934-08-04,Sydney 23.13 (151) def. Carlton 17.8 (110),261,41,,Sydney defeated Carlton by 41 points at Lake Oval.
+74,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1934-08-04,Collingwood 22.18 (150) def. Essendon 15.12 (102),252,48,,Collingwood defeated Essendon by 48 points at Windy Hill.
+75,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1934-08-04,Fitzroy 10.18 (78) def. Western Bulldogs 10.12 (72),150,6,,Fitzroy defeated Western Bulldogs by 6 points at Brunswick St.
+76,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Corio Oval,1934-08-04,Geelong 18.15 (123) def. North Melbourne 5.12 (42),165,81,,Geelong defeated North Melbourne by 81 points at Corio Oval.
+77,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1934-08-04,Melbourne 10.16 (76) def. Hawthorn 11.7 (73),149,3,,Melbourne defeated Hawthorn by 3 points at Glenferrie Oval.
+78,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1934-08-04,Richmond 7.25 (67) def. St Kilda 5.8 (38),105,29,,Richmond defeated St Kilda by 29 points at Punt Rd.
+79,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1934-08-18,Richmond 16.13 (109) def. Carlton 14.12 (96),205,13,,Richmond defeated Carlton by 13 points at Princes Park.
+80,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1934-08-18,Collingwood 23.22 (160) def. Hawthorn 10.13 (73),233,87,,Collingwood defeated Hawthorn by 87 points at Victoria Park.
+81,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1934-08-18,Sydney 22.14 (146) def. Essendon 9.17 (71),217,75,,Sydney defeated Essendon by 75 points at Windy Hill.
+82,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1934-08-18,St Kilda 13.11 (89) def. Fitzroy 10.10 (70),159,19,,St Kilda defeated Fitzroy by 19 points at Junction Oval.
+83,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1934-08-18,Western Bulldogs 10.18 (78) def. North Melbourne 6.14 (50),128,28,,Western Bulldogs defeated North Melbourne by 28 points at Western Oval.
+84,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1934-08-18,Geelong 21.15 (141) def. Melbourne 13.10 (88),229,53,,Geelong defeated Melbourne by 53 points at M.C.G..
+85,Regular Season,Geelong,Carlton,Geelong,Carlton,Corio Oval,1934-08-25,Geelong 13.17 (95) def. Carlton 10.10 (70),165,25,,Geelong defeated Carlton by 25 points at Corio Oval.
+86,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1934-08-25,Richmond 12.14 (86) def. Collingwood 11.9 (75),161,11,,Richmond defeated Collingwood by 11 points at Punt Rd.
+87,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1934-08-25,Hawthorn 11.15 (81) def. Essendon 11.13 (79),160,2,,Hawthorn defeated Essendon by 2 points at Glenferrie Oval.
+88,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1934-08-25,Fitzroy 20.19 (139) def. Melbourne 16.10 (106),245,33,,Fitzroy defeated Melbourne by 33 points at Brunswick St.
+89,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Lake Oval,1934-08-25,Sydney 23.18 (156) def. Western Bulldogs 9.16 (70),226,86,,Sydney defeated Western Bulldogs by 86 points at Lake Oval.
+90,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1934-08-25,St Kilda 12.12 (84) def. North Melbourne 11.13 (79),163,5,,St Kilda defeated North Melbourne by 5 points at Arden St.
+91,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1934-09-01,Carlton 18.12 (120) def. Fitzroy 9.15 (69),189,51,,Carlton defeated Fitzroy by 51 points at Princes Park.
+92,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1934-09-01,Geelong 16.21 (117) def. Collingwood 16.16 (112),229,5,,Geelong defeated Collingwood by 5 points at Victoria Park.
+93,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1934-09-01,Richmond 15.23 (113) def. Essendon 13.12 (90),203,23,,Richmond defeated Essendon by 23 points at Windy Hill.
+94,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1934-09-01,Western Bulldogs 13.20 (98) def. St Kilda 10.17 (77),175,21,,Western Bulldogs defeated St Kilda by 21 points at Western Oval.
+95,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1934-09-01,Sydney 15.11 (101) def. Hawthorn 10.10 (70),171,31,,Sydney defeated Hawthorn by 31 points at Lake Oval.
+96,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1934-09-01,Melbourne 11.24 (90) def. North Melbourne 7.15 (57),147,33,,Melbourne defeated North Melbourne by 33 points at M.C.G..
+97,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1934-09-08,Carlton 7.16 (58) def. North Melbourne 8.8 (56),114,2,,Carlton defeated North Melbourne by 2 points at Arden St.
+98,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1934-09-08,Collingwood 16.10 (106) def. Fitzroy 14.17 (101),207,5,,Collingwood defeated Fitzroy by 5 points at Brunswick St.
+99,Regular Season,Geelong,Essendon,Geelong,Essendon,Corio Oval,1934-09-08,Geelong 21.31 (157) def. Essendon 6.5 (41),198,116,,Geelong defeated Essendon by 116 points at Corio Oval.
+100,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1934-09-08,Western Bulldogs 14.18 (102) def. Hawthorn 12.7 (79),181,23,,Western Bulldogs defeated Hawthorn by 23 points at Western Oval.
+101,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1934-09-08,St Kilda 13.12 (90) def. Melbourne 12.16 (88),178,2,,St Kilda defeated Melbourne by 2 points at Junction Oval.
+102,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1934-09-08,Richmond 14.14 (98) def. Sydney 13.14 (92),190,6,,Richmond defeated Sydney by 6 points at Punt Rd.
+103,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1934-09-15,Carlton 16.18 (114) def. St Kilda 15.9 (99),213,15,,Carlton defeated St Kilda by 15 points at Princes Park.
+104,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1934-09-15,Collingwood 15.18 (108) def. North Melbourne 2.8 (20),128,88,,Collingwood defeated North Melbourne by 88 points at Victoria Park.
+105,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1934-09-15,Essendon 14.11 (95) def. Fitzroy 12.4 (76),171,19,,Essendon defeated Fitzroy by 19 points at Windy Hill.
+106,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1934-09-15,Melbourne 19.17 (131) def. Western Bulldogs 9.11 (65),196,66,,Melbourne defeated Western Bulldogs by 66 points at M.C.G..
+107,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1934-09-15,Sydney 13.19 (97) def. Geelong 8.7 (55),152,42,,Sydney defeated Geelong by 42 points at Lake Oval.
+108,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Glenferrie Oval,1934-09-15,Richmond 11.16 (82) def. Hawthorn 7.9 (51),133,31,,Richmond defeated Hawthorn by 31 points at Glenferrie Oval.
+109,Finals,Sydney,Collingwood,Sydney,Collingwood,M.C.G.,1934-09-22,Sydney 11.12 (78) def. Collingwood 9.21 (75),153,3,,Sydney defeated Collingwood by 3 points at M.C.G..
+110,Finals,Richmond,Geelong,Richmond,Geelong,M.C.G.,1934-09-29,Richmond 19.20 (134) def. Geelong 7.8 (50),184,84,,Richmond defeated Geelong by 84 points at M.C.G..
+111,Finals,Sydney,Geelong,Sydney,Geelong,M.C.G.,1934-10-06,Sydney 15.18 (108) def. Geelong 7.6 (48),156,60,,Sydney defeated Geelong by 60 points at M.C.G..
+112,Grand Final,Richmond,Sydney,Richmond,Sydney,M.C.G.,1934-10-13,Richmond 19.14 (128) def. Sydney 12.17 (89),217,39,,Richmond defeated Sydney by 39 points at M.C.G..

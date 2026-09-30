@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1968 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1968
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1968.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1968 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Carlton
+- **Premiership Coach:** Ron Barassi
+- **Runners-up:** Essendon
+- **Runners-up Coach:** Jack Clarke
+- **Grand Final Result:** Carlton 7.14 (56) def. Essendon 8.5 (53)
+- **Winning Margin:** 3 points
+- **Match Date:** 1968-09-28
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 116,828 spectators
+
+## Match Summary & Tactical Notes
+Carlton defeated Essendon by 3 points despite kicking fewer goals, finishing 7.14 to 8.5.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

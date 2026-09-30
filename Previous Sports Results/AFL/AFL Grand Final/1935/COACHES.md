@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1935 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1935
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1935.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1935 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Collingwood
+- **Premiership Coach:** Jock McHale
+- **Runners-up:** South Melbourne
+- **Runners-up Coach:** Brighton Diggins
+- **Grand Final Result:** Collingwood 11.12 (78) def. South Melbourne 7.16 (58)
+- **Winning Margin:** 20 points
+- **Match Date:** 1935-10-05
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 54,154 spectators
+
+## Match Summary & Tactical Notes
+Collingwood defeated South Melbourne by 20 points, led by Gordon Coventry's four goals in wet conditions.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

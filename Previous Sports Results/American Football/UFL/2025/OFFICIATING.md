@@ -1,12 +1,13 @@
-# UFL Officiating & Refereeing Corps — 2025 Season
+# UFL Officiating & Referee Corps — 2025 Season
 
 - **Sport:** American Football
-- **Competition:** UFL
+- **League:** UFL (United Football League)
 - **Season:** 2025
-- **Governing Body:** United Football League Football Operations
 
-## Officiating Structure & Adjudication
-- **Appointed Officials:** UFL Professional Officiating Crew and Mike Pereira Replay Center.
-- **Championship Appointments:** Lead match adjudicators and senior officials selected for finals and marquee tournament fixtures based on merit and performance evaluations.
-- **Rule Framework & Interpretations:** Strict enforcement of the 2025 rules of the game, procedural updates, and points of emphasis issued by United Football League Football Operations.
-- **Technology & Review Systems:** Modern video adjudication systems (VAR / TMO / DRS / Video Review / Hawk-Eye / Replay Command Center) fully integrated with on-field communications.
+## Officiating Governance & Administration
+- **Head of Officiating:** Mike Pereira
+- **VP of Officiating:** Dean Blandino
+- **Officiating System:** Centralized video review in partnership with Fox Sports and ESPN broadcast operations; eight-official on-field crews.
+- **Senior Referee Crew Chiefs:** Bryan Banks, Adam Savoie, Derek Anderson, James Carter
+
+- **Sources:** UFL Operations; Football Zebras.

@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Seattle Seahawks,New England Patriots,Seattle Seahawks,New England Patriots,University of Phoenix Stadium,2015-02-01,New England Patriots 28 def. Seattle Seahawks 24,52,4,Referee: Bill Vinovich,"New England Patriots won Super Bowl XLIX, defeating Seattle Seahawks 28-24 at University of Phoenix Stadium."

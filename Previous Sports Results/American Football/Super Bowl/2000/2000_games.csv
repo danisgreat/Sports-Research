@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Tennessee Titans,St. Louis Rams,Tennessee Titans,St. Louis Rams,Georgia Dome,2000-01-30,St. Louis Rams 23 def. Tennessee Titans 16,39,7,Referee: Bob McElwee,"St. Louis Rams won Super Bowl XXXIV, defeating Tennessee Titans 23-16 at Georgia Dome."

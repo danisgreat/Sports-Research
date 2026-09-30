@@ -4,8 +4,25 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1915
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Arthur Norden
+
+## Senior Field Umpiring Panel (13 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Arthur Norden | 19 | Grand Final |
+| Jack Elder | 19 | Regular Season / Finals |
+| Arthur Wickham | 10 | Regular Season / Finals |
+| Henry Rawle | 9 | Regular Season / Finals |
+| Robert Boyle | 4 | Regular Season / Finals |
+| Alexander McKinnon | 3 | Regular Season / Finals |
+| James Murphy | 3 | Regular Season / Finals |
+| Edward McSherry | 2 | Regular Season / Finals |
+| Laurence Delaney | 2 | Regular Season / Finals |
+| Richard Lecher | 2 | Regular Season / Finals |
+| George Mackenzie | 1 | Regular Season / Finals |
+| John Currie | 1 | Regular Season / Finals |
+| Wally Naismith | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

@@ -1,1 +1,139 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1975-04-05,Carlton 13.16 (94) def. Geelong 8.14 (62),156,32,,Carlton defeated Geelong by 32 points at Kardinia Park.
+2,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1975-04-05,Collingwood 12.19 (91) def. Sydney 8.7 (55),146,36,,Collingwood defeated Sydney by 36 points at Victoria Park.
+3,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1975-04-05,Essendon 21.10 (136) def. St Kilda 9.13 (67),203,69,,Essendon defeated St Kilda by 69 points at Windy Hill.
+4,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Junction Oval,1975-04-05,Richmond 15.13 (103) def. Fitzroy 14.14 (98),201,5,,Richmond defeated Fitzroy by 5 points at Junction Oval.
+5,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1975-04-05,Melbourne 17.9 (111) def. Western Bulldogs 15.10 (100),211,11,,Melbourne defeated Western Bulldogs by 11 points at M.C.G..
+6,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Princes Park,1975-04-05,Hawthorn 15.15 (105) def. North Melbourne 11.10 (76),181,29,,Hawthorn defeated North Melbourne by 29 points at Princes Park.
+7,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1975-04-12,Carlton 27.10 (172) def. Collingwood 10.19 (79),251,93,,Carlton defeated Collingwood by 93 points at Princes Park.
+8,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1975-04-12,Essendon 19.17 (131) def. Sydney 15.12 (102),233,29,,Essendon defeated Sydney by 29 points at Lake Oval.
+9,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1975-04-12,Western Bulldogs 17.14 (116) def. Fitzroy 11.17 (83),199,33,,Western Bulldogs defeated Fitzroy by 33 points at Western Oval.
+10,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,1975-04-12,Richmond 15.22 (112) def. Geelong 10.12 (72),184,40,,Richmond defeated Geelong by 40 points at M.C.G..
+11,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Moorabbin Oval,1975-04-12,Hawthorn 17.19 (121) def. St Kilda 11.15 (81),202,40,,Hawthorn defeated St Kilda by 40 points at Moorabbin Oval.
+12,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1975-04-12,Melbourne 16.9 (105) def. North Melbourne 15.13 (103),208,2,,Melbourne defeated North Melbourne by 2 points at Arden St.
+13,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1975-04-19,Carlton 14.18 (102) def. North Melbourne 9.12 (66),168,36,,Carlton defeated North Melbourne by 36 points at Princes Park.
+14,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Junction Oval,1975-04-19,Collingwood 12.15 (87) def. Fitzroy 12.13 (85),172,2,,Collingwood defeated Fitzroy by 2 points at Junction Oval.
+15,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1975-04-19,Essendon 16.21 (117) def. Melbourne 15.10 (100),217,17,,Essendon defeated Melbourne by 17 points at Windy Hill.
+16,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1975-04-19,Western Bulldogs 14.14 (98) def. Geelong 13.12 (90),188,8,,Western Bulldogs defeated Geelong by 8 points at Kardinia Park.
+17,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Waverley Park,1975-04-19,Hawthorn 17.14 (116) def. Richmond 12.15 (87),203,29,,Hawthorn defeated Richmond by 29 points at Waverley Park.
+18,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Moorabbin Oval,1975-04-19,St Kilda 11.21 (87) def. Sydney 9.17 (71),158,16,,St Kilda defeated Sydney by 16 points at Moorabbin Oval.
+19,Regular Season,Carlton,Essendon,Carlton,Essendon,Waverley Park,1975-04-25,Essendon 16.8 (104) def. Carlton 12.15 (87),191,17,,Essendon defeated Carlton by 17 points at Waverley Park.
+20,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1975-04-25,St Kilda 18.25 (133) def. Melbourne 12.8 (80),213,53,,St Kilda defeated Melbourne by 53 points at M.C.G..
+21,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1975-04-26,Collingwood 17.10 (112) def. Geelong 14.15 (99),211,13,,Collingwood defeated Geelong by 13 points at Victoria Park.
+22,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1975-04-26,Fitzroy 17.13 (115) def. North Melbourne 11.19 (85),200,30,,Fitzroy defeated North Melbourne by 30 points at Arden St.
+23,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1975-04-26,Western Bulldogs 16.13 (109) def. Richmond 4.19 (43),152,66,,Western Bulldogs defeated Richmond by 66 points at Western Oval.
+24,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1975-04-26,Hawthorn 13.21 (99) def. Sydney 9.15 (69),168,30,,Hawthorn defeated Sydney by 30 points at Lake Oval.
+25,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Moorabbin Oval,1975-05-03,Carlton 12.19 (91) def. St Kilda 7.16 (58),149,33,,Carlton defeated St Kilda by 33 points at Moorabbin Oval.
+26,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Waverley Park,1975-05-03,Western Bulldogs 12.9 (81) def. Collingwood 9.16 (70),151,11,,Western Bulldogs defeated Collingwood by 11 points at Waverley Park.
+27,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Junction Oval,1975-05-03,Fitzroy 19.11 (125) def. Essendon 15.17 (107),232,18,,Fitzroy defeated Essendon by 18 points at Junction Oval.
+28,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1975-05-03,North Melbourne 12.15 (87) def. Geelong 11.5 (71),158,16,,North Melbourne defeated Geelong by 16 points at Kardinia Park.
+29,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Princes Park,1975-05-03,Hawthorn 19.22 (136) def. Melbourne 11.15 (81),217,55,,Hawthorn defeated Melbourne by 55 points at Princes Park.
+30,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,1975-05-03,Richmond 19.23 (137) def. Sydney 12.14 (86),223,51,,Richmond defeated Sydney by 51 points at M.C.G..
+31,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1975-05-10,Carlton 16.15 (111) def. Hawthorn 12.13 (85),196,26,,Carlton defeated Hawthorn by 26 points at Princes Park.
+32,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1975-05-10,Richmond 22.14 (146) def. Collingwood 14.12 (96),242,50,,Richmond defeated Collingwood by 50 points at Victoria Park.
+33,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1975-05-10,Geelong 15.14 (104) def. Essendon 12.21 (93),197,11,,Geelong defeated Essendon by 11 points at Windy Hill.
+34,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Waverley Park,1975-05-10,St Kilda 11.16 (82) def. Fitzroy 9.20 (74),156,8,,St Kilda defeated Fitzroy by 8 points at Waverley Park.
+35,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1975-05-10,North Melbourne 18.11 (119) def. Western Bulldogs 9.12 (66),185,53,,North Melbourne defeated Western Bulldogs by 53 points at Arden St.
+36,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1975-05-10,Melbourne 22.23 (155) def. Sydney 13.12 (90),245,65,,Melbourne defeated Sydney by 65 points at M.C.G..
+37,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1975-05-17,Carlton 19.14 (128) def. Sydney 11.11 (77),205,51,,Carlton defeated Sydney by 51 points at Lake Oval.
+38,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Waverley Park,1975-05-17,Collingwood 12.18 (90) def. North Melbourne 12.9 (81),171,9,,Collingwood defeated North Melbourne by 9 points at Waverley Park.
+39,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1975-05-17,Essendon 14.17 (101) def. Western Bulldogs 8.12 (60),161,41,,Essendon defeated Western Bulldogs by 41 points at Western Oval.
+40,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Princes Park,1975-05-17,Hawthorn 19.16 (130) def. Fitzroy 13.12 (90),220,40,,Hawthorn defeated Fitzroy by 40 points at Princes Park.
+41,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1975-05-17,Geelong 13.10 (88) def. St Kilda 11.14 (80),168,8,,Geelong defeated St Kilda by 8 points at Kardinia Park.
+42,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,1975-05-17,Richmond 19.18 (132) def. Melbourne 10.18 (78),210,54,,Richmond defeated Melbourne by 54 points at M.C.G..
+43,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1975-05-24,Carlton 16.14 (110) def. Melbourne 11.15 (81),191,29,,Carlton defeated Melbourne by 29 points at Princes Park.
+44,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1975-05-24,Collingwood 12.9 (81) def. Essendon 7.13 (55),136,26,,Collingwood defeated Essendon by 26 points at Windy Hill.
+45,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Junction Oval,1975-05-24,Fitzroy 13.13 (91) def. Sydney 11.12 (78),169,13,,Fitzroy defeated Sydney by 13 points at Junction Oval.
+46,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Moorabbin Oval,1975-05-24,St Kilda 7.23 (65) def. Western Bulldogs 7.12 (54),119,11,,St Kilda defeated Western Bulldogs by 11 points at Moorabbin Oval.
+47,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Waverley Park,1975-05-24,Hawthorn 17.11 (113) def. Geelong 5.10 (40),153,73,,Hawthorn defeated Geelong by 73 points at Waverley Park.
+48,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1975-05-24,North Melbourne 11.8 (74) def. Richmond 9.12 (66),140,8,,North Melbourne defeated Richmond by 8 points at Arden St.
+49,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1975-05-31,Carlton 16.19 (115) def. Richmond 9.13 (67),182,48,,Carlton defeated Richmond by 48 points at Princes Park.
+50,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1975-05-31,Collingwood 15.8 (98) def. St Kilda 13.11 (89),187,9,,Collingwood defeated St Kilda by 9 points at Victoria Park.
+51,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Waverley Park,1975-05-31,Essendon 15.8 (98) def. North Melbourne 11.17 (83),181,15,,Essendon defeated North Melbourne by 15 points at Waverley Park.
+52,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1975-05-31,Melbourne 18.15 (123) def. Fitzroy 17.10 (112),235,11,,Melbourne defeated Fitzroy by 11 points at M.C.G..
+53,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1975-05-31,Hawthorn 20.14 (134) def. Western Bulldogs 8.10 (58),192,76,,Hawthorn defeated Western Bulldogs by 76 points at Western Oval.
+54,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1975-05-31,Sydney 11.26 (92) def. Geelong 7.13 (55),147,37,,Sydney defeated Geelong by 37 points at Lake Oval.
+55,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Junction Oval,1975-06-07,Carlton 16.10 (106) def. Fitzroy 15.7 (97),203,9,,Carlton defeated Fitzroy by 9 points at Junction Oval.
+56,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Princes Park,1975-06-07,Hawthorn 19.24 (138) def. Collingwood 13.11 (89),227,49,,Hawthorn defeated Collingwood by 49 points at Princes Park.
+57,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,1975-06-07,Richmond 19.14 (128) def. Essendon 12.9 (81),209,47,,Richmond defeated Essendon by 47 points at M.C.G..
+58,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Waverley Park,1975-06-07,Western Bulldogs 13.11 (89) def. Sydney 12.15 (87),176,2,,Western Bulldogs defeated Sydney by 2 points at Waverley Park.
+59,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,1975-06-07,Geelong 14.20 (104) def. Melbourne 14.14 (98),202,6,,Geelong defeated Melbourne by 6 points at Kardinia Park.
+60,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Moorabbin Oval,1975-06-07,North Melbourne 17.19 (121) def. St Kilda 15.9 (99),220,22,,North Melbourne defeated St Kilda by 22 points at Moorabbin Oval.
+61,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1975-06-16,Carlton 19.13 (127) def. Western Bulldogs 17.13 (115),242,12,,Carlton defeated Western Bulldogs by 12 points at Princes Park.
+62,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1975-06-16,Melbourne 14.11 (95) def. Collingwood 9.19 (73),168,22,,Melbourne defeated Collingwood by 22 points at M.C.G..
+63,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1975-06-16,Hawthorn 21.20 (146) def. Essendon 13.12 (90),236,56,,Hawthorn defeated Essendon by 56 points at Windy Hill.
+64,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1975-06-16,Geelong 13.19 (97) def. Fitzroy 14.11 (95),192,2,,Geelong defeated Fitzroy by 2 points at Kardinia Park.
+65,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1975-06-16,North Melbourne 16.12 (108) def. Sydney 12.16 (88),196,20,,North Melbourne defeated Sydney by 20 points at Lake Oval.
+66,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Waverley Park,1975-06-16,St Kilda 14.18 (102) def. Richmond 13.12 (90),192,12,,St Kilda defeated Richmond by 12 points at Waverley Park.
+67,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1975-06-21,Carlton 23.19 (157) def. Geelong 12.14 (86),243,71,,Carlton defeated Geelong by 71 points at Princes Park.
+68,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Waverley Park,1975-06-21,Collingwood 12.13 (85) def. Sydney 11.11 (77),162,8,,Collingwood defeated Sydney by 8 points at Waverley Park.
+69,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Moorabbin Oval,1975-06-21,St Kilda 21.15 (141) def. Essendon 11.7 (73),214,68,,St Kilda defeated Essendon by 68 points at Moorabbin Oval.
+70,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,M.C.G.,1975-06-21,Fitzroy 13.20 (98) def. Richmond 13.18 (96),194,2,,Fitzroy defeated Richmond by 2 points at M.C.G..
+71,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1975-06-21,Western Bulldogs 20.11 (131) def. Melbourne 14.8 (92),223,39,,Western Bulldogs defeated Melbourne by 39 points at Western Oval.
+72,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1975-06-21,Hawthorn 18.12 (120) def. North Melbourne 13.17 (95),215,25,,Hawthorn defeated North Melbourne by 25 points at Arden St.
+73,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1975-06-28,Carlton 12.10 (82) def. Collingwood 9.12 (66),148,16,,Carlton defeated Collingwood by 16 points at Victoria Park.
+74,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1975-06-28,Essendon 19.18 (132) def. Sydney 17.12 (114),246,18,,Essendon defeated Sydney by 18 points at Windy Hill.
+75,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Junction Oval,1975-06-28,Western Bulldogs 12.17 (89) def. Fitzroy 11.10 (76),165,13,,Western Bulldogs defeated Fitzroy by 13 points at Junction Oval.
+76,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1975-06-28,Richmond 13.14 (92) def. Geelong 8.13 (61),153,31,,Richmond defeated Geelong by 31 points at Kardinia Park.
+77,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Princes Park,1975-06-28,Hawthorn 11.19 (85) def. St Kilda 7.19 (61),146,24,,Hawthorn defeated St Kilda by 24 points at Princes Park.
+78,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,Waverley Park,1975-06-28,North Melbourne 11.14 (80) def. Melbourne 6.10 (46),126,34,,North Melbourne defeated Melbourne by 34 points at Waverley Park.
+79,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1975-07-05,Carlton 27.13 (175) def. Essendon 15.5 (95),270,80,,Carlton defeated Essendon by 80 points at Windy Hill.
+80,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1975-07-05,Geelong 14.12 (96) def. Collingwood 9.11 (65),161,31,,Geelong defeated Collingwood by 31 points at Kardinia Park.
+81,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Junction Oval,1975-07-05,North Melbourne 15.15 (105) def. Fitzroy 14.12 (96),201,9,,North Melbourne defeated Fitzroy by 9 points at Junction Oval.
+82,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,1975-07-05,Richmond 17.18 (120) def. Western Bulldogs 12.10 (82),202,38,,Richmond defeated Western Bulldogs by 38 points at M.C.G..
+83,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Waverley Park,1975-07-05,Hawthorn 9.10 (64) def. Sydney 5.9 (39),103,25,,Hawthorn defeated Sydney by 25 points at Waverley Park.
+84,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Moorabbin Oval,1975-07-05,St Kilda 15.11 (101) def. Melbourne 6.13 (49),150,52,,St Kilda defeated Melbourne by 52 points at Moorabbin Oval.
+85,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Waverley Park,1975-07-12,North Melbourne 9.11 (65) def. Carlton 5.14 (44),109,21,,North Melbourne defeated Carlton by 21 points at Waverley Park.
+86,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1975-07-12,Collingwood 16.19 (115) def. Fitzroy 11.7 (73),188,42,,Collingwood defeated Fitzroy by 42 points at Victoria Park.
+87,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1975-07-12,Melbourne 19.20 (134) def. Essendon 16.13 (109),243,25,,Melbourne defeated Essendon by 25 points at M.C.G..
+88,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1975-07-12,Western Bulldogs 13.15 (93) def. Geelong 7.7 (49),142,44,,Western Bulldogs defeated Geelong by 44 points at Western Oval.
+89,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Princes Park,1975-07-12,Hawthorn 14.10 (94) def. Richmond 2.20 (32),126,62,,Hawthorn defeated Richmond by 62 points at Princes Park.
+90,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1975-07-12,St Kilda 19.16 (130) def. Sydney 10.10 (70),200,60,,St Kilda defeated Sydney by 60 points at Lake Oval.
+91,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1975-07-19,Carlton 11.22 (88) def. St Kilda 8.27 (75),163,13,,Carlton defeated St Kilda by 13 points at Princes Park.
+92,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1975-07-19,Collingwood 16.14 (110) def. Western Bulldogs 16.7 (103),213,7,,Collingwood defeated Western Bulldogs by 7 points at Victoria Park.
+93,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Waverley Park,1975-07-19,Fitzroy 16.19 (115) def. Essendon 11.11 (77),192,38,,Fitzroy defeated Essendon by 38 points at Waverley Park.
+94,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1975-07-19,North Melbourne 14.25 (109) def. Geelong 6.19 (55),164,54,,North Melbourne defeated Geelong by 54 points at Arden St.
+95,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1975-07-19,Hawthorn 17.17 (119) def. Melbourne 15.17 (107),226,12,,Hawthorn defeated Melbourne by 12 points at M.C.G..
+96,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1975-07-19,Richmond 26.11 (167) def. Sydney 8.12 (60),227,107,,Richmond defeated Sydney by 107 points at Lake Oval.
+97,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Princes Park,1975-07-26,Hawthorn 15.15 (105) def. Carlton 15.11 (101),206,4,,Hawthorn defeated Carlton by 4 points at Princes Park.
+98,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,1975-07-26,Richmond 16.19 (115) def. Collingwood 10.9 (69),184,46,,Richmond defeated Collingwood by 46 points at M.C.G..
+99,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1975-07-26,Essendon 16.13 (109) def. Geelong 13.16 (94),203,15,,Essendon defeated Geelong by 15 points at Kardinia Park.
+100,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Moorabbin Oval,1975-07-26,St Kilda 12.15 (87) def. Fitzroy 7.14 (56),143,31,,St Kilda defeated Fitzroy by 31 points at Moorabbin Oval.
+101,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1975-07-26,North Melbourne 17.15 (117) def. Western Bulldogs 9.14 (68),185,49,,North Melbourne defeated Western Bulldogs by 49 points at Western Oval.
+102,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Waverley Park,1975-07-26,Melbourne 13.13 (91) def. Sydney 11.9 (75),166,16,,Melbourne defeated Sydney by 16 points at Waverley Park.
+103,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1975-08-02,Carlton 19.17 (131) def. Sydney 15.13 (103),234,28,,Carlton defeated Sydney by 28 points at Princes Park.
+104,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1975-08-02,North Melbourne 15.20 (110) def. Collingwood 8.10 (58),168,52,,North Melbourne defeated Collingwood by 52 points at Arden St.
+105,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1975-08-02,Western Bulldogs 19.13 (127) def. Essendon 11.17 (83),210,44,,Western Bulldogs defeated Essendon by 44 points at Windy Hill.
+106,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Junction Oval,1975-08-02,Fitzroy 15.23 (113) def. Hawthorn 10.19 (79),192,34,,Fitzroy defeated Hawthorn by 34 points at Junction Oval.
+107,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Waverley Park,1975-08-02,St Kilda 11.18 (84) def. Geelong 11.14 (80),164,4,,St Kilda defeated Geelong by 4 points at Waverley Park.
+108,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1975-08-02,Melbourne 19.13 (127) def. Richmond 12.18 (90),217,37,,Melbourne defeated Richmond by 37 points at M.C.G..
+109,Regular Season,Melbourne,Carlton,Melbourne,Carlton,Waverley Park,1975-08-09,Melbourne 11.23 (89) def. Carlton 7.9 (51),140,38,,Melbourne defeated Carlton by 38 points at Waverley Park.
+110,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1975-08-09,Collingwood 20.18 (138) def. Essendon 15.9 (99),237,39,,Collingwood defeated Essendon by 39 points at Victoria Park.
+111,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1975-08-09,Fitzroy 16.19 (115) def. Sydney 13.20 (98),213,17,,Fitzroy defeated Sydney by 17 points at Lake Oval.
+112,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1975-08-09,St Kilda 16.18 (114) def. Western Bulldogs 5.16 (46),160,68,,St Kilda defeated Western Bulldogs by 68 points at Western Oval.
+113,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Princes Park,1975-08-09,Hawthorn 25.23 (173) def. Geelong 8.7 (55),228,118,,Hawthorn defeated Geelong by 118 points at Princes Park.
+114,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,1975-08-09,North Melbourne 13.23 (101) def. Richmond 13.18 (96),197,5,,North Melbourne defeated Richmond by 5 points at M.C.G..
+115,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,1975-08-16,Richmond 13.20 (98) def. Carlton 14.11 (95),193,3,,Richmond defeated Carlton by 3 points at M.C.G..
+116,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Moorabbin Oval,1975-08-16,Collingwood 24.12 (156) def. St Kilda 20.17 (137),293,19,,Collingwood defeated St Kilda by 19 points at Moorabbin Oval.
+117,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1975-08-16,Essendon 15.15 (105) def. North Melbourne 13.13 (91),196,14,,Essendon defeated North Melbourne by 14 points at Windy Hill.
+118,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Junction Oval,1975-08-16,Fitzroy 13.22 (100) def. Melbourne 13.11 (89),189,11,,Fitzroy defeated Melbourne by 11 points at Junction Oval.
+119,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Waverley Park,1975-08-16,Western Bulldogs 14.9 (93) def. Hawthorn 13.13 (91),184,2,,Western Bulldogs defeated Hawthorn by 2 points at Waverley Park.
+120,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1975-08-16,Sydney 15.15 (105) def. Geelong 12.16 (88),193,17,,Sydney defeated Geelong by 17 points at Kardinia Park.
+121,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1975-08-23,Fitzroy 11.13 (79) def. Carlton 10.14 (74),153,5,,Fitzroy defeated Carlton by 5 points at Princes Park.
+122,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1975-08-23,Collingwood 7.15 (57) def. Hawthorn 3.9 (27),84,30,,Collingwood defeated Hawthorn by 30 points at Victoria Park.
+123,Regular Season,Essendon,Richmond,Essendon,Richmond,Waverley Park,1975-08-23,Richmond 20.16 (136) def. Essendon 17.15 (117),253,19,,Richmond defeated Essendon by 19 points at Waverley Park.
+124,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Lake Oval,1975-08-23,Western Bulldogs 18.7 (115) def. Sydney 10.15 (75),190,40,,Western Bulldogs defeated Sydney by 40 points at Lake Oval.
+125,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1975-08-23,Geelong 10.10 (70) def. Melbourne 8.16 (64),134,6,,Geelong defeated Melbourne by 6 points at M.C.G..
+126,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1975-08-23,North Melbourne 16.15 (111) def. St Kilda 6.5 (41),152,70,,North Melbourne defeated St Kilda by 70 points at Arden St.
+127,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1975-08-30,Carlton 18.11 (119) def. Western Bulldogs 10.15 (75),194,44,,Carlton defeated Western Bulldogs by 44 points at Western Oval.
+128,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1975-08-30,Collingwood 14.14 (98) def. Melbourne 15.7 (97),195,1,,Collingwood defeated Melbourne by 1 points at Victoria Park.
+129,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Princes Park,1975-08-30,Essendon 17.8 (110) def. Hawthorn 14.19 (103),213,7,,Essendon defeated Hawthorn by 7 points at Princes Park.
+130,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Waverley Park,1975-08-30,Geelong 18.11 (119) def. Fitzroy 14.9 (93),212,26,,Geelong defeated Fitzroy by 26 points at Waverley Park.
+131,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1975-08-30,North Melbourne 15.19 (109) def. Sydney 12.15 (87),196,22,,North Melbourne defeated Sydney by 22 points at Arden St.
+132,Regular Season,Richmond,St Kilda,Richmond,St Kilda,M.C.G.,1975-08-30,Richmond 17.14 (116) def. St Kilda 8.20 (68),184,48,,Richmond defeated St Kilda by 48 points at M.C.G..
+133,Finals,North Melbourne,Carlton,North Melbourne,Carlton,M.C.G.,1975-09-06,North Melbourne 14.12 (96) def. Carlton 12.4 (76),172,20,,North Melbourne defeated Carlton by 20 points at M.C.G..
+134,Finals,Richmond,Collingwood,Richmond,Collingwood,Waverley Park,1975-09-06,Richmond 11.11 (77) def. Collingwood 10.13 (73),150,4,,Richmond defeated Collingwood by 4 points at Waverley Park.
+135,Finals,Richmond,Carlton,Richmond,Carlton,M.C.G.,1975-09-13,Richmond 9.17 (71) def. Carlton 9.8 (62),133,9,,Richmond defeated Carlton by 9 points at M.C.G..
+136,Finals,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Waverley Park,1975-09-13,Hawthorn 12.10 (82) def. North Melbourne 10.11 (71),153,11,,Hawthorn defeated North Melbourne by 11 points at Waverley Park.
+137,Finals,North Melbourne,Richmond,North Melbourne,Richmond,Waverley Park,1975-09-20,North Melbourne 10.16 (76) def. Richmond 8.11 (59),135,17,,North Melbourne defeated Richmond by 17 points at Waverley Park.
+138,Grand Final,North Melbourne,Hawthorn,North Melbourne,Hawthorn,M.C.G.,1975-09-27,North Melbourne 19.8 (122) def. Hawthorn 9.13 (67),189,55,,North Melbourne defeated Hawthorn by 55 points at M.C.G..

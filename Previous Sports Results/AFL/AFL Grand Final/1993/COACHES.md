@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1993 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1993
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1993.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1993 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Essendon
+- **Premiership Coach:** Kevin Sheedy
+- **Runners-up:** Carlton
+- **Runners-up Coach:** David Parkin
+- **Grand Final Result:** Essendon 20.13 (133) def. Carlton 13.11 (89)
+- **Winning Margin:** 44 points
+- **Match Date:** 1993-09-25
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 96,862 spectators
+
+## Match Summary & Tactical Notes
+Essendon's young 'Baby Bombers' side stunned Carlton by 44 points, ignited by Michael Long's dazzling run.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

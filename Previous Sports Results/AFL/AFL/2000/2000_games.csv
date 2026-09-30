@@ -1,1 +1,186 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2000-03-08,Richmond 14.10 (94) def. Melbourne 13.14 (92),186,2,,Richmond defeated Melbourne by 2 points at M.C.G..
+2,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,Docklands,2000-03-09,Essendon 24.12 (156) def. Port Adelaide 8.14 (62),218,94,,Essendon defeated Port Adelaide by 94 points at Docklands.
+3,Regular Season,North Melbourne,West Coast,North Melbourne,West Coast,M.C.G.,2000-03-10,West Coast 24.10 (154) def. North Melbourne 16.15 (111),265,43,,West Coast defeated North Melbourne by 43 points at M.C.G..
+4,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2000-03-11,Western Bulldogs 19.17 (131) def. Adelaide 15.18 (108),239,23,,Western Bulldogs defeated Adelaide by 23 points at Football Park.
+5,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2000-03-11,Geelong 19.15 (129) def. Fremantle 16.11 (107),236,22,,Geelong defeated Fremantle by 22 points at Subiaco.
+6,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Docklands,2000-03-12,Sydney 21.8 (134) def. St Kilda 15.10 (100),234,34,,Sydney defeated St Kilda by 34 points at Docklands.
+7,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Princes Park,2000-03-13,Carlton 22.20 (152) def. Brisbane Lions 16.16 (112),264,40,,Carlton defeated Brisbane Lions by 40 points at Princes Park.
+8,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,M.C.G.,2000-03-13,Collingwood 20.20 (140) def. Hawthorn 13.8 (86),226,54,,Collingwood defeated Hawthorn by 54 points at M.C.G..
+9,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2000-03-16,Essendon 20.10 (130) def. Richmond 12.15 (87),217,43,,Essendon defeated Richmond by 43 points at M.C.G..
+10,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,2000-03-17,Melbourne 23.7 (145) def. North Melbourne 17.18 (120),265,25,,Melbourne defeated North Melbourne by 25 points at M.C.G..
+11,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,2000-03-18,Geelong 21.13 (139) def. St Kilda 15.9 (99),238,40,,Geelong defeated St Kilda by 40 points at Kardinia Park.
+12,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,2000-03-18,Fremantle 19.11 (125) def. Port Adelaide 12.15 (87),212,38,,Fremantle defeated Port Adelaide by 38 points at Football Park.
+13,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,M.C.G.,2000-03-19,Collingwood 14.19 (103) def. Adelaide 13.14 (92),195,11,,Collingwood defeated Adelaide by 11 points at M.C.G..
+14,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,2000-03-19,Carlton 22.22 (154) def. Hawthorn 18.4 (112),266,42,,Carlton defeated Hawthorn by 42 points at Princes Park.
+15,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,2000-03-19,Sydney 12.10 (82) def. West Coast 10.10 (70),152,12,,Sydney defeated West Coast by 12 points at Subiaco.
+16,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Docklands,2000-03-19,Brisbane Lions 21.13 (139) def. Western Bulldogs 17.8 (110),249,29,,Brisbane Lions defeated Western Bulldogs by 29 points at Docklands.
+17,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,2000-03-24,North Melbourne 27.8 (170) def. Richmond 20.14 (134),304,36,,North Melbourne defeated Richmond by 36 points at M.C.G..
+18,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,M.C.G.,2000-03-25,Hawthorn 16.14 (110) def. Brisbane Lions 15.13 (103),213,7,,Hawthorn defeated Brisbane Lions by 7 points at M.C.G..
+19,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2000-03-25,Geelong 17.9 (111) def. Adelaide 14.16 (100),211,11,,Geelong defeated Adelaide by 11 points at Football Park.
+20,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2000-03-25,St Kilda 18.8 (116) drew with West Coast 17.14 (116),232,0,,St Kilda and West Coast played out a draw at Docklands.
+21,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2000-03-26,Collingwood 24.16 (160) def. Carlton 11.21 (87),247,73,,Collingwood defeated Carlton by 73 points at M.C.G..
+22,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Docklands,2000-03-26,Western Bulldogs 22.9 (141) def. Port Adelaide 14.10 (94),235,47,,Western Bulldogs defeated Port Adelaide by 47 points at Docklands.
+23,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,2000-03-26,Sydney 19.12 (126) def. Melbourne 17.12 (114),240,12,,Sydney defeated Melbourne by 12 points at S.C.G..
+24,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2000-03-26,Essendon 19.10 (124) def. Fremantle 12.16 (88),212,36,,Essendon defeated Fremantle by 36 points at Subiaco.
+25,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Docklands,2000-03-31,North Melbourne 15.14 (104) def. Geelong 15.9 (99),203,5,,North Melbourne defeated Geelong by 5 points at Docklands.
+26,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Docklands,2000-04-01,Western Bulldogs 14.14 (98) def. Carlton 8.11 (59),157,39,,Western Bulldogs defeated Carlton by 39 points at Docklands.
+27,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,2000-04-01,Essendon 20.17 (137) def. Hawthorn 14.6 (90),227,47,,Essendon defeated Hawthorn by 47 points at M.C.G..
+28,Regular Season,Sydney,Collingwood,Sydney,Collingwood,S.C.G.,2000-04-01,Collingwood 15.16 (106) def. Sydney 15.11 (101),207,5,,Collingwood defeated Sydney by 5 points at S.C.G..
+29,Regular Season,West Coast,Adelaide,West Coast,Adelaide,W.A.C.A.,2000-04-01,West Coast 29.13 (187) def. Adelaide 10.13 (73),260,114,,West Coast defeated Adelaide by 114 points at W.A.C.A..
+30,Regular Season,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,Football Park,2000-04-02,Port Adelaide 23.11 (149) def. Brisbane Lions 15.16 (106),255,43,,Port Adelaide defeated Brisbane Lions by 43 points at Football Park.
+31,Regular Season,Richmond,Fremantle,Richmond,Fremantle,Docklands,2000-04-02,Fremantle 12.16 (88) def. Richmond 13.9 (87),175,1,,Fremantle defeated Richmond by 1 points at Docklands.
+32,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,2000-04-02,Melbourne 25.15 (165) def. St Kilda 11.9 (75),240,90,,Melbourne defeated St Kilda by 90 points at M.C.G..
+33,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2000-04-07,Collingwood 17.16 (118) def. Western Bulldogs 16.14 (110),228,8,,Collingwood defeated Western Bulldogs by 8 points at Docklands.
+34,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2000-04-08,Essendon 18.15 (123) def. Carlton 15.9 (99),222,24,,Essendon defeated Carlton by 24 points at M.C.G..
+35,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2000-04-08,Brisbane Lions 17.20 (122) def. Adelaide 13.14 (92),214,30,,Brisbane Lions defeated Adelaide by 30 points at Gabba.
+36,Regular Season,Fremantle,Melbourne,Fremantle,Melbourne,W.A.C.A.,2000-04-08,Melbourne 14.22 (106) def. Fremantle 10.15 (75),181,31,,Melbourne defeated Fremantle by 31 points at W.A.C.A..
+37,Regular Season,Geelong,West Coast,Geelong,West Coast,Kardinia Park,2000-04-09,Geelong 24.18 (162) def. West Coast 11.15 (81),243,81,,Geelong defeated West Coast by 81 points at Kardinia Park.
+38,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,S.C.G.,2000-04-09,North Melbourne 19.14 (128) def. Sydney 18.12 (120),248,8,,North Melbourne defeated Sydney by 8 points at S.C.G..
+39,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2000-04-09,Richmond 17.8 (110) def. St Kilda 11.18 (84),194,26,,Richmond defeated St Kilda by 26 points at Docklands.
+40,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2000-04-09,Hawthorn 16.17 (113) def. Port Adelaide 10.14 (74),187,39,,Hawthorn defeated Port Adelaide by 39 points at Football Park.
+41,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Docklands,2000-04-14,Essendon 22.12 (144) def. Western Bulldogs 12.9 (81),225,63,,Essendon defeated Western Bulldogs by 63 points at Docklands.
+42,Regular Season,Carlton,Port Adelaide,Carlton,Port Adelaide,Princes Park,2000-04-15,Carlton 26.13 (169) def. Port Adelaide 12.6 (78),247,91,,Carlton defeated Port Adelaide by 91 points at Princes Park.
+43,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,M.C.G.,2000-04-15,North Melbourne 17.12 (114) def. Collingwood 11.16 (82),196,32,,North Melbourne defeated Collingwood by 32 points at M.C.G..
+44,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2000-04-15,West Coast 28.10 (178) def. Fremantle 9.7 (61),239,117,,West Coast defeated Fremantle by 117 points at Subiaco.
+45,Regular Season,St Kilda,Brisbane Lions,St Kilda,Brisbane Lions,Docklands,2000-04-15,Brisbane Lions 15.15 (105) def. St Kilda 9.12 (66),171,39,,Brisbane Lions defeated St Kilda by 39 points at Docklands.
+46,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,2000-04-16,Geelong 15.19 (109) def. Melbourne 12.12 (84),193,25,,Geelong defeated Melbourne by 25 points at Kardinia Park.
+47,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,2000-04-16,Richmond 17.10 (112) def. Sydney 16.10 (106),218,6,,Richmond defeated Sydney by 6 points at S.C.G..
+48,Regular Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,2000-04-16,Adelaide 22.11 (143) def. Hawthorn 8.9 (57),200,86,,Adelaide defeated Hawthorn by 86 points at Football Park.
+49,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,M.C.G.,2000-04-22,Hawthorn 19.9 (123) def. Western Bulldogs 14.8 (92),215,31,,Hawthorn defeated Western Bulldogs by 31 points at M.C.G..
+50,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,2000-04-22,Geelong 17.6 (108) def. Sydney 15.9 (99),207,9,,Geelong defeated Sydney by 9 points at S.C.G..
+51,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Docklands,2000-04-22,North Melbourne 19.15 (129) def. St Kilda 18.9 (117),246,12,,North Melbourne defeated St Kilda by 12 points at Docklands.
+52,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2000-04-23,Adelaide 14.14 (98) def. Port Adelaide 13.13 (91),189,7,,Adelaide defeated Port Adelaide by 7 points at Football Park.
+53,Regular Season,Melbourne,West Coast,Melbourne,West Coast,Docklands,2000-04-23,Melbourne 20.18 (138) def. West Coast 12.5 (77),215,61,,Melbourne defeated West Coast by 61 points at Docklands.
+54,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2000-04-24,Carlton 18.12 (120) def. Richmond 10.9 (69),189,51,,Carlton defeated Richmond by 51 points at M.C.G..
+55,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2000-04-25,Fremantle 17.9 (111) def. Brisbane Lions 15.10 (100),211,11,,Fremantle defeated Brisbane Lions by 11 points at Subiaco.
+56,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2000-04-25,Essendon 21.14 (140) def. Collingwood 15.10 (100),240,40,,Essendon defeated Collingwood by 40 points at M.C.G..
+57,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,M.C.G.,2000-04-28,Hawthorn 18.20 (128) def. North Melbourne 9.13 (67),195,61,,Hawthorn defeated North Melbourne by 61 points at M.C.G..
+58,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2000-04-29,Adelaide 14.24 (108) def. St Kilda 10.8 (68),176,40,,Adelaide defeated St Kilda by 40 points at Docklands.
+59,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,W.A.C.A.,2000-04-29,West Coast 15.18 (108) def. Western Bulldogs 15.12 (102),210,6,,West Coast defeated Western Bulldogs by 6 points at W.A.C.A..
+60,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2000-04-30,Melbourne 17.9 (111) def. Port Adelaide 12.14 (86),197,25,,Melbourne defeated Port Adelaide by 25 points at Football Park.
+61,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,2000-04-30,Carlton 16.13 (109) def. Sydney 9.10 (64),173,45,,Carlton defeated Sydney by 45 points at Princes Park.
+62,Regular Season,Geelong,Richmond,Geelong,Richmond,Docklands,2000-04-30,Richmond 23.9 (147) def. Geelong 11.11 (77),224,70,,Richmond defeated Geelong by 70 points at Docklands.
+63,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,Docklands,2000-05-01,Fremantle 15.17 (107) def. Collingwood 12.13 (85),192,22,,Fremantle defeated Collingwood by 22 points at Docklands.
+64,Regular Season,Brisbane Lions,Essendon,Brisbane Lions,Essendon,Gabba,2000-05-01,Essendon 19.13 (127) def. Brisbane Lions 9.9 (63),190,64,,Essendon defeated Brisbane Lions by 64 points at Gabba.
+65,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Docklands,2000-05-05,Western Bulldogs 16.9 (105) def. St Kilda 16.8 (104),209,1,,Western Bulldogs defeated St Kilda by 1 points at Docklands.
+66,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,M.C.G.,2000-05-06,Hawthorn 14.14 (98) def. Geelong 10.13 (73),171,25,,Hawthorn defeated Geelong by 25 points at M.C.G..
+67,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2000-05-06,North Melbourne 19.14 (128) def. Adelaide 19.11 (125),253,3,,North Melbourne defeated Adelaide by 3 points at Football Park.
+68,Regular Season,Richmond,West Coast,Richmond,West Coast,Docklands,2000-05-06,Richmond 11.13 (79) def. West Coast 9.16 (70),149,9,,Richmond defeated West Coast by 9 points at Docklands.
+69,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2000-05-07,Carlton 21.21 (147) def. Fremantle 13.4 (82),229,65,,Carlton defeated Fremantle by 65 points at Subiaco.
+70,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,2000-05-07,Essendon 15.16 (106) def. Melbourne 13.15 (93),199,13,,Essendon defeated Melbourne by 13 points at M.C.G..
+71,Regular Season,Sydney,Port Adelaide,Sydney,Port Adelaide,S.C.G.,2000-05-07,Sydney 16.15 (111) def. Port Adelaide 11.19 (85),196,26,,Sydney defeated Port Adelaide by 26 points at S.C.G..
+72,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2000-05-07,Brisbane Lions 22.14 (146) def. Collingwood 18.9 (117),263,29,,Brisbane Lions defeated Collingwood by 29 points at Gabba.
+73,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco,2000-05-12,West Coast 17.16 (118) def. Hawthorn 13.10 (88),206,30,,West Coast defeated Hawthorn by 30 points at Subiaco.
+74,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2000-05-13,Richmond 15.12 (102) def. Collingwood 7.12 (54),156,48,,Richmond defeated Collingwood by 48 points at M.C.G..
+75,Regular Season,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,2000-05-13,Port Adelaide 10.18 (78) drew with Geelong 12.6 (78),156,0,,Port Adelaide and Geelong played out a draw at Football Park.
+76,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Docklands,2000-05-13,Carlton 15.19 (109) def. St Kilda 11.16 (82),191,27,,Carlton defeated St Kilda by 27 points at Docklands.
+77,Regular Season,Essendon,Adelaide,Essendon,Adelaide,Docklands,2000-05-14,Essendon 20.12 (132) def. Adelaide 12.12 (84),216,48,,Essendon defeated Adelaide by 48 points at Docklands.
+78,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,S.C.G.,2000-05-14,Western Bulldogs 21.11 (137) def. Sydney 12.7 (79),216,58,,Western Bulldogs defeated Sydney by 58 points at S.C.G..
+79,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,M.C.G.,2000-05-14,North Melbourne 22.16 (148) def. Fremantle 8.12 (60),208,88,,North Melbourne defeated Fremantle by 88 points at M.C.G..
+80,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,Docklands,2000-05-15,Melbourne 15.12 (102) def. Brisbane Lions 11.18 (84),186,18,,Melbourne defeated Brisbane Lions by 18 points at Docklands.
+81,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,Docklands,2000-05-19,St Kilda 17.15 (117) def. Port Adelaide 8.7 (55),172,62,,St Kilda defeated Port Adelaide by 62 points at Docklands.
+82,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,2000-05-20,Carlton 20.9 (129) def. North Melbourne 15.9 (99),228,30,,Carlton defeated North Melbourne by 30 points at Princes Park.
+83,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,M.C.G.,2000-05-20,Richmond 11.14 (80) def. Hawthorn 11.11 (77),157,3,,Richmond defeated Hawthorn by 3 points at M.C.G..
+84,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Subiaco,2000-05-20,Western Bulldogs 27.12 (174) def. Fremantle 12.9 (81),255,93,,Western Bulldogs defeated Fremantle by 93 points at Subiaco.
+85,Regular Season,Geelong,Essendon,Geelong,Essendon,Docklands,2000-05-20,Essendon 22.13 (145) def. Geelong 13.9 (87),232,58,,Essendon defeated Geelong by 58 points at Docklands.
+86,Regular Season,Collingwood,West Coast,Collingwood,West Coast,Docklands,2000-05-21,West Coast 18.20 (128) def. Collingwood 13.14 (92),220,36,,West Coast defeated Collingwood by 36 points at Docklands.
+87,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,2000-05-21,Adelaide 15.15 (105) def. Melbourne 8.22 (70),175,35,,Adelaide defeated Melbourne by 35 points at Football Park.
+88,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2000-05-21,Brisbane Lions 16.14 (110) def. Sydney 15.17 (107),217,3,,Brisbane Lions defeated Sydney by 3 points at S.C.G..
+89,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2000-05-26,Essendon 25.19 (169) def. St Kilda 13.5 (83),252,86,,Essendon defeated St Kilda by 86 points at Docklands.
+90,Regular Season,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,2000-05-27,Geelong 10.11 (71) def. Collingwood 9.13 (67),138,4,,Geelong defeated Collingwood by 4 points at M.C.G..
+91,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,2000-05-27,Adelaide 14.14 (98) def. Sydney 7.6 (48),146,50,,Adelaide defeated Sydney by 50 points at Football Park.
+92,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,Docklands,2000-05-27,Hawthorn 19.7 (121) def. Fremantle 8.14 (62),183,59,,Hawthorn defeated Fremantle by 59 points at Docklands.
+93,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,2000-05-27,Richmond 17.9 (111) def. Brisbane Lions 14.15 (99),210,12,,Richmond defeated Brisbane Lions by 12 points at Gabba.
+94,Regular Season,West Coast,Carlton,West Coast,Carlton,Subiaco,2000-05-28,Carlton 20.8 (128) def. West Coast 11.12 (78),206,50,,Carlton defeated West Coast by 50 points at Subiaco.
+95,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Docklands,2000-05-28,Western Bulldogs 16.12 (108) def. Melbourne 13.5 (83),191,25,,Western Bulldogs defeated Melbourne by 25 points at Docklands.
+96,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,S.C.G.,2000-05-28,North Melbourne 10.16 (76) def. Port Adelaide 8.11 (59),135,17,,North Melbourne defeated Port Adelaide by 17 points at S.C.G..
+97,Regular Season,Richmond,Adelaide,Richmond,Adelaide,Docklands,2000-06-02,Adelaide 17.19 (121) def. Richmond 17.10 (112),233,9,,Adelaide defeated Richmond by 9 points at Docklands.
+98,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,2000-06-03,Carlton 25.9 (159) def. Melbourne 9.7 (61),220,98,,Carlton defeated Melbourne by 98 points at M.C.G..
+99,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,2000-06-03,Port Adelaide 12.17 (89) def. Collingwood 11.9 (75),164,14,,Port Adelaide defeated Collingwood by 14 points at Football Park.
+100,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2000-06-03,Brisbane Lions 27.11 (173) def. West Coast 13.11 (89),262,84,,Brisbane Lions defeated West Coast by 84 points at Gabba.
+101,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,2000-06-04,Fremantle 14.16 (100) def. St Kilda 8.8 (56),156,44,,Fremantle defeated St Kilda by 44 points at Subiaco.
+102,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,M.C.G.,2000-06-04,Essendon 17.17 (119) def. North Melbourne 11.4 (70),189,49,,Essendon defeated North Melbourne by 49 points at M.C.G..
+103,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Docklands,2000-06-04,Geelong 19.12 (126) def. Western Bulldogs 18.11 (119),245,7,,Geelong defeated Western Bulldogs by 7 points at Docklands.
+104,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,2000-06-04,Sydney 16.13 (109) def. Hawthorn 11.12 (78),187,31,,Sydney defeated Hawthorn by 31 points at S.C.G..
+105,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2000-06-09,North Melbourne 17.14 (116) def. Brisbane Lions 17.10 (112),228,4,,North Melbourne defeated Brisbane Lions by 4 points at Docklands.
+106,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2000-06-10,Melbourne 22.11 (143) def. Collingwood 12.6 (78),221,65,,Melbourne defeated Collingwood by 65 points at M.C.G..
+107,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2000-06-10,Port Adelaide 16.11 (107) def. West Coast 10.11 (71),178,36,,Port Adelaide defeated West Coast by 36 points at Subiaco.
+108,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,2000-06-11,Carlton 15.17 (107) def. Geelong 15.7 (97),204,10,,Carlton defeated Geelong by 10 points at Princes Park.
+109,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,2000-06-11,Essendon 12.17 (89) def. Sydney 11.10 (76),165,13,,Essendon defeated Sydney by 13 points at S.C.G..
+110,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,M.C.G.,2000-06-11,Hawthorn 27.9 (171) def. St Kilda 13.8 (86),257,85,,Hawthorn defeated St Kilda by 85 points at M.C.G..
+111,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2000-06-11,Adelaide 22.13 (145) def. Fremantle 11.6 (72),217,73,,Adelaide defeated Fremantle by 73 points at Football Park.
+112,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,2000-06-12,Richmond 12.15 (87) def. Western Bulldogs 7.10 (52),139,35,,Richmond defeated Western Bulldogs by 35 points at M.C.G..
+113,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,2000-06-16,Collingwood 17.13 (115) def. St Kilda 13.4 (82),197,33,,Collingwood defeated St Kilda by 33 points at M.C.G..
+114,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Princes Park,2000-06-17,Carlton 19.6 (120) def. Adelaide 14.12 (96),216,24,,Carlton defeated Adelaide by 24 points at Princes Park.
+115,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2000-06-17,Brisbane Lions 20.8 (128) def. Geelong 7.17 (59),187,69,,Brisbane Lions defeated Geelong by 69 points at Kardinia Park.
+116,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2000-06-17,Melbourne 22.9 (141) def. Hawthorn 10.12 (72),213,69,,Melbourne defeated Hawthorn by 69 points at M.C.G..
+117,Regular Season,Essendon,West Coast,Essendon,West Coast,Docklands,2000-06-17,Essendon 15.18 (108) def. West Coast 11.10 (76),184,32,,Essendon defeated West Coast by 32 points at Docklands.
+118,Regular Season,Fremantle,Sydney,Fremantle,Sydney,Subiaco,2000-06-18,Fremantle 20.3 (123) def. Sydney 14.12 (96),219,27,,Fremantle defeated Sydney by 27 points at Subiaco.
+119,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Docklands,2000-06-18,Western Bulldogs 16.10 (106) def. North Melbourne 15.12 (102),208,4,,Western Bulldogs defeated North Melbourne by 4 points at Docklands.
+120,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2000-06-18,Port Adelaide 15.13 (103) def. Richmond 11.9 (75),178,28,,Port Adelaide defeated Richmond by 28 points at Football Park.
+121,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Docklands,2000-06-23,Hawthorn 19.11 (125) def. Collingwood 10.8 (68),193,57,,Hawthorn defeated Collingwood by 57 points at Docklands.
+122,Regular Season,Geelong,Fremantle,Geelong,Fremantle,Kardinia Park,2000-06-24,Geelong 12.18 (90) def. Fremantle 12.12 (84),174,6,,Geelong defeated Fremantle by 6 points at Kardinia Park.
+123,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2000-06-24,Melbourne 16.14 (110) def. Richmond 14.16 (100),210,10,,Melbourne defeated Richmond by 10 points at M.C.G..
+124,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2000-06-24,Sydney 14.9 (93) def. St Kilda 10.5 (65),158,28,,Sydney defeated St Kilda by 28 points at S.C.G..
+125,Regular Season,Port Adelaide,Essendon,Port Adelaide,Essendon,Football Park,2000-06-24,Essendon 12.17 (89) def. Port Adelaide 7.16 (58),147,31,,Essendon defeated Port Adelaide by 31 points at Football Park.
+126,Regular Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco,2000-06-25,North Melbourne 16.17 (113) def. West Coast 7.10 (52),165,61,,North Melbourne defeated West Coast by 61 points at Subiaco.
+127,Regular Season,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,Docklands,2000-06-25,Western Bulldogs 21.9 (135) def. Adelaide 10.14 (74),209,61,,Western Bulldogs defeated Adelaide by 61 points at Docklands.
+128,Regular Season,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2000-06-25,Carlton 23.18 (156) def. Brisbane Lions 17.10 (112),268,44,,Carlton defeated Brisbane Lions by 44 points at Gabba.
+129,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2000-06-30,St Kilda 16.13 (109) def. Geelong 13.7 (85),194,24,,St Kilda defeated Geelong by 24 points at Docklands.
+130,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2000-07-01,Essendon 24.23 (167) def. Richmond 10.6 (66),233,101,,Essendon defeated Richmond by 101 points at M.C.G..
+131,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,W.A.C.A.,2000-07-01,Fremantle 12.10 (82) def. Port Adelaide 8.16 (64),146,18,,Fremantle defeated Port Adelaide by 18 points at W.A.C.A..
+132,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Docklands,2000-07-01,North Melbourne 14.19 (103) def. Melbourne 14.18 (102),205,1,,North Melbourne defeated Melbourne by 1 points at Docklands.
+133,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,M.C.G.,2000-07-02,Carlton 18.12 (120) def. Hawthorn 9.9 (63),183,57,,Carlton defeated Hawthorn by 57 points at M.C.G..
+134,Regular Season,Sydney,West Coast,Sydney,West Coast,S.C.G.,2000-07-02,Sydney 22.19 (151) def. West Coast 12.8 (80),231,71,,Sydney defeated West Coast by 71 points at S.C.G..
+135,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2000-07-02,Brisbane Lions 20.18 (138) def. Western Bulldogs 11.15 (81),219,57,,Brisbane Lions defeated Western Bulldogs by 57 points at Gabba.
+136,Regular Season,Adelaide,Collingwood,Adelaide,Collingwood,Football Park,2000-07-02,Adelaide 22.15 (147) def. Collingwood 16.13 (109),256,38,,Adelaide defeated Collingwood by 38 points at Football Park.
+137,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2000-07-07,Essendon 24.15 (159) def. Fremantle 11.6 (72),231,87,,Essendon defeated Fremantle by 87 points at Docklands.
+138,Regular Season,Geelong,Adelaide,Geelong,Adelaide,Kardinia Park,2000-07-08,Geelong 17.7 (109) def. Adelaide 14.18 (102),211,7,,Geelong defeated Adelaide by 7 points at Kardinia Park.
+139,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,2000-07-08,Melbourne 19.11 (125) def. Sydney 15.9 (99),224,26,,Melbourne defeated Sydney by 26 points at M.C.G..
+140,Regular Season,West Coast,St Kilda,West Coast,St Kilda,W.A.C.A.,2000-07-08,West Coast 17.13 (115) def. St Kilda 4.5 (29),144,86,,West Coast defeated St Kilda by 86 points at W.A.C.A..
+141,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,S.C.G.,2000-07-08,North Melbourne 20.14 (134) def. Richmond 7.14 (56),190,78,,North Melbourne defeated Richmond by 78 points at S.C.G..
+142,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,2000-07-09,Carlton 28.12 (180) def. Collingwood 10.9 (69),249,111,,Carlton defeated Collingwood by 111 points at Princes Park.
+143,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Football Park,2000-07-09,Port Adelaide 23.11 (149) def. Western Bulldogs 16.10 (106),255,43,,Port Adelaide defeated Western Bulldogs by 43 points at Football Park.
+144,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,2000-07-09,Hawthorn 18.16 (124) def. Brisbane Lions 16.10 (106),230,18,,Hawthorn defeated Brisbane Lions by 18 points at Gabba.
+145,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Docklands,2000-07-14,North Melbourne 18.16 (124) def. Geelong 13.7 (85),209,39,,North Melbourne defeated Geelong by 39 points at Docklands.
+146,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2000-07-14,Adelaide 15.17 (107) def. West Coast 13.12 (90),197,17,,Adelaide defeated West Coast by 17 points at Football Park.
+147,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,2000-07-15,Western Bulldogs 11.9 (75) def. Carlton 11.6 (72),147,3,,Western Bulldogs defeated Carlton by 3 points at Princes Park.
+148,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Docklands,2000-07-15,Essendon 25.15 (165) def. Hawthorn 13.4 (82),247,83,,Essendon defeated Hawthorn by 83 points at Docklands.
+149,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2000-07-16,Brisbane Lions 18.12 (120) def. Port Adelaide 7.11 (53),173,67,,Brisbane Lions defeated Port Adelaide by 67 points at Gabba.
+150,Regular Season,Fremantle,Richmond,Fremantle,Richmond,W.A.C.A.,2000-07-16,Richmond 15.16 (106) def. Fremantle 12.7 (79),185,27,,Richmond defeated Fremantle by 27 points at W.A.C.A..
+151,Regular Season,Collingwood,Sydney,Collingwood,Sydney,M.C.G.,2000-07-16,Sydney 15.14 (104) def. Collingwood 12.12 (84),188,20,,Sydney defeated Collingwood by 20 points at M.C.G..
+152,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Docklands,2000-07-16,Melbourne 17.14 (116) def. St Kilda 14.14 (98),214,18,,Melbourne defeated St Kilda by 18 points at Docklands.
+153,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2000-07-21,Essendon 16.13 (109) def. Carlton 12.11 (83),192,26,,Essendon defeated Carlton by 26 points at M.C.G..
+154,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2000-07-22,Hawthorn 15.11 (101) def. Port Adelaide 12.8 (80),181,21,,Hawthorn defeated Port Adelaide by 21 points at M.C.G..
+155,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2000-07-22,Geelong 14.24 (108) def. West Coast 12.6 (78),186,30,,Geelong defeated West Coast by 30 points at Subiaco.
+156,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Docklands,2000-07-22,Western Bulldogs 15.10 (100) def. Collingwood 13.13 (91),191,9,,Western Bulldogs defeated Collingwood by 9 points at Docklands.
+157,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,2000-07-22,Sydney 21.19 (145) def. North Melbourne 14.7 (91),236,54,,Sydney defeated North Melbourne by 54 points at S.C.G..
+158,Regular Season,Adelaide,Brisbane Lions,Adelaide,Brisbane Lions,Football Park,2000-07-23,Brisbane Lions 17.13 (115) def. Adelaide 11.12 (78),193,37,,Brisbane Lions defeated Adelaide by 37 points at Football Park.
+159,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,Docklands,2000-07-23,Melbourne 25.10 (160) def. Fremantle 11.11 (77),237,83,,Melbourne defeated Fremantle by 83 points at Docklands.
+160,Regular Season,Richmond,St Kilda,Richmond,St Kilda,M.C.G.,2000-07-23,Richmond 18.11 (119) def. St Kilda 12.7 (79),198,40,,Richmond defeated St Kilda by 40 points at M.C.G..
+161,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2000-07-28,Western Bulldogs 14.8 (92) def. Essendon 12.9 (81),173,11,,Western Bulldogs defeated Essendon by 11 points at Docklands.
+162,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,M.C.G.,2000-07-29,Hawthorn 15.8 (98) def. Adelaide 9.13 (67),165,31,,Hawthorn defeated Adelaide by 31 points at M.C.G..
+163,Regular Season,Richmond,Sydney,Richmond,Sydney,Docklands,2000-07-29,Sydney 12.12 (84) def. Richmond 12.11 (83),167,1,,Sydney defeated Richmond by 1 points at Docklands.
+164,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,2000-07-29,Brisbane Lions 23.15 (153) def. St Kilda 8.15 (63),216,90,,Brisbane Lions defeated St Kilda by 90 points at Gabba.
+165,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2000-07-30,Fremantle 15.11 (101) def. West Coast 15.10 (100),201,1,,Fremantle defeated West Coast by 1 points at Subiaco.
+166,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2000-07-30,Port Adelaide 12.16 (88) def. Carlton 12.11 (83),171,5,,Port Adelaide defeated Carlton by 5 points at Football Park.
+167,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2000-07-30,Collingwood 14.14 (98) def. North Melbourne 11.14 (80),178,18,,Collingwood defeated North Melbourne by 18 points at Docklands.
+168,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2000-07-30,Melbourne 18.18 (126) def. Geelong 17.6 (108),234,18,,Melbourne defeated Geelong by 18 points at M.C.G..
+169,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Docklands,2000-08-04,Hawthorn 11.15 (81) def. Western Bulldogs 9.12 (66),147,15,,Hawthorn defeated Western Bulldogs by 15 points at Docklands.
+170,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2000-08-05,Essendon 13.19 (97) def. Collingwood 11.12 (78),175,19,,Essendon defeated Collingwood by 19 points at M.C.G..
+171,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,2000-08-05,Geelong 18.16 (124) def. Sydney 18.12 (120),244,4,,Geelong defeated Sydney by 4 points at Kardinia Park.
+172,Regular Season,Brisbane Lions,Fremantle,Brisbane Lions,Fremantle,Gabba,2000-08-05,Brisbane Lions 23.18 (156) def. Fremantle 7.7 (49),205,107,,Brisbane Lions defeated Fremantle by 107 points at Gabba.
+173,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Docklands,2000-08-05,North Melbourne 18.12 (120) def. St Kilda 10.17 (77),197,43,,North Melbourne defeated St Kilda by 43 points at Docklands.
+174,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2000-08-06,Melbourne 26.14 (170) def. West Coast 15.10 (100),270,70,,Melbourne defeated West Coast by 70 points at Subiaco.
+175,Regular Season,Carlton,Richmond,Carlton,Richmond,M.C.G.,2000-08-06,Carlton 19.11 (125) def. Richmond 7.10 (52),177,73,,Carlton defeated Richmond by 73 points at M.C.G..
+176,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2000-08-06,Port Adelaide 20.19 (139) def. Adelaide 14.8 (92),231,47,,Port Adelaide defeated Adelaide by 47 points at Football Park.
+177,Finals,Geelong,Hawthorn,Geelong,Hawthorn,Docklands,2000-08-11,Hawthorn 14.8 (92) def. Geelong 12.11 (83),175,9,,Hawthorn defeated Geelong by 9 points at Docklands.
+178,Finals,Essendon,North Melbourne,Essendon,North Melbourne,M.C.G.,2000-08-12,Essendon 31.12 (198) def. North Melbourne 11.7 (73),271,125,,Essendon defeated North Melbourne by 125 points at M.C.G..
+179,Finals,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2000-08-12,Brisbane Lions 15.20 (110) def. Western Bulldogs 10.16 (76),186,34,,Brisbane Lions defeated Western Bulldogs by 34 points at Gabba.
+180,Finals,Carlton,Melbourne,Carlton,Melbourne,M.C.G.,2000-08-13,Melbourne 15.6 (96) def. Carlton 12.15 (87),183,9,,Melbourne defeated Carlton by 9 points at M.C.G..
+181,Finals,North Melbourne,Hawthorn,North Melbourne,Hawthorn,M.C.G.,2000-08-18,North Melbourne 16.14 (110) def. Hawthorn 15.10 (100),210,10,,North Melbourne defeated Hawthorn by 10 points at M.C.G..
+182,Finals,Carlton,Brisbane Lions,Carlton,Brisbane Lions,M.C.G.,2000-08-19,Carlton 23.13 (151) def. Brisbane Lions 10.9 (69),220,82,,Carlton defeated Brisbane Lions by 82 points at M.C.G..
+183,Finals,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,2000-08-25,Melbourne 23.18 (156) def. North Melbourne 17.4 (106),262,50,,Melbourne defeated North Melbourne by 50 points at M.C.G..
+184,Finals,Essendon,Carlton,Essendon,Carlton,M.C.G.,2000-08-26,Essendon 18.17 (125) def. Carlton 12.8 (80),205,45,,Essendon defeated Carlton by 45 points at M.C.G..
+185,Grand Final,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,2000-09-02,Essendon 19.21 (135) def. Melbourne 11.9 (75),210,60,,Essendon defeated Melbourne by 60 points at M.C.G..

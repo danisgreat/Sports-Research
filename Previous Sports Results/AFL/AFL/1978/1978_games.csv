@@ -1,1 +1,139 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,1978-04-01,Richmond 25.24 (174) def. Carlton 14.13 (97),271,77,,Richmond defeated Carlton by 77 points at M.C.G..
+2,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1978-04-01,Collingwood 17.16 (118) def. Geelong 11.10 (76),194,42,,Collingwood defeated Geelong by 42 points at Kardinia Park.
+3,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1978-04-01,Essendon 19.9 (123) def. Sydney 14.18 (102),225,21,,Essendon defeated Sydney by 21 points at Windy Hill.
+4,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Junction Oval,1978-04-01,St Kilda 16.13 (109) def. Fitzroy 15.11 (101),210,8,,St Kilda defeated Fitzroy by 8 points at Junction Oval.
+5,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1978-04-01,North Melbourne 23.11 (149) def. Western Bulldogs 11.14 (80),229,69,,North Melbourne defeated Western Bulldogs by 69 points at Western Oval.
+6,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Princes Park,1978-04-01,Hawthorn 22.15 (147) def. Melbourne 9.14 (68),215,79,,Hawthorn defeated Melbourne by 79 points at Princes Park.
+7,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1978-04-08,Geelong 15.19 (109) def. Carlton 13.17 (95),204,14,,Geelong defeated Carlton by 14 points at Princes Park.
+8,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1978-04-08,Collingwood 22.23 (155) def. Essendon 12.16 (88),243,67,,Collingwood defeated Essendon by 67 points at Victoria Park.
+9,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1978-04-08,Melbourne 24.23 (167) def. Fitzroy 23.19 (157),324,10,,Melbourne defeated Fitzroy by 10 points at M.C.G..
+10,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Moorabbin Oval,1978-04-08,St Kilda 20.17 (137) def. Western Bulldogs 19.16 (130),267,7,,St Kilda defeated Western Bulldogs by 7 points at Moorabbin Oval.
+11,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1978-04-08,Hawthorn 18.24 (132) def. Sydney 16.8 (104),236,28,,Hawthorn defeated Sydney by 28 points at Lake Oval.
+12,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1978-04-08,North Melbourne 25.16 (166) def. Richmond 14.9 (93),259,73,,North Melbourne defeated Richmond by 73 points at Arden St.
+13,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1978-04-15,Carlton 13.20 (98) def. Melbourne 11.19 (85),183,13,,Carlton defeated Melbourne by 13 points at Princes Park.
+14,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1978-04-15,Sydney 18.11 (119) def. Collingwood 14.18 (102),221,17,,Sydney defeated Collingwood by 17 points at Lake Oval.
+15,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1978-04-15,Essendon 15.15 (105) def. Fitzroy 14.17 (101),206,4,,Essendon defeated Fitzroy by 4 points at Windy Hill.
+16,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1978-04-15,Geelong 21.14 (140) def. Western Bulldogs 10.16 (76),216,64,,Geelong defeated Western Bulldogs by 64 points at Western Oval.
+17,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Waverley Park,1978-04-15,North Melbourne 16.15 (111) def. Hawthorn 12.14 (86),197,25,,North Melbourne defeated Hawthorn by 25 points at Waverley Park.
+18,Regular Season,Richmond,St Kilda,Richmond,St Kilda,M.C.G.,1978-04-15,Richmond 16.14 (110) drew with St Kilda 15.20 (110),220,0,,Richmond and St Kilda played out a draw at M.C.G..
+19,Regular Season,Carlton,Essendon,Carlton,Essendon,Waverley Park,1978-04-22,Essendon 19.17 (131) def. Carlton 16.8 (104),235,27,,Essendon defeated Carlton by 27 points at Waverley Park.
+20,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1978-04-22,Hawthorn 15.15 (105) def. Collingwood 14.19 (103),208,2,,Hawthorn defeated Collingwood by 2 points at Victoria Park.
+21,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Junction Oval,1978-04-22,Fitzroy 21.17 (143) def. Sydney 18.16 (124),267,19,,Fitzroy defeated Sydney by 19 points at Junction Oval.
+22,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1978-04-22,Melbourne 18.19 (127) def. Western Bulldogs 18.12 (120),247,7,,Melbourne defeated Western Bulldogs by 7 points at M.C.G..
+23,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1978-04-22,Geelong 18.17 (125) def. Richmond 15.8 (98),223,27,,Geelong defeated Richmond by 27 points at Kardinia Park.
+24,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Moorabbin Oval,1978-04-22,North Melbourne 17.17 (119) def. St Kilda 14.16 (100),219,19,,North Melbourne defeated St Kilda by 19 points at Moorabbin Oval.
+25,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Waverley Park,1978-04-25,St Kilda 14.14 (98) def. Geelong 9.11 (65),163,33,,St Kilda defeated Geelong by 33 points at Waverley Park.
+26,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,1978-04-25,Richmond 19.16 (130) def. Melbourne 8.11 (59),189,71,,Richmond defeated Melbourne by 71 points at M.C.G..
+27,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1978-04-29,Sydney 18.9 (117) def. Carlton 17.14 (116),233,1,,Sydney defeated Carlton by 1 points at Lake Oval.
+28,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1978-04-29,North Melbourne 19.10 (124) def. Collingwood 17.13 (115),239,9,,North Melbourne defeated Collingwood by 9 points at Arden St.
+29,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1978-04-29,Western Bulldogs 15.20 (110) def. Essendon 13.15 (93),203,17,,Western Bulldogs defeated Essendon by 17 points at Western Oval.
+30,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Princes Park,1978-04-29,Fitzroy 15.12 (102) def. Hawthorn 14.17 (101),203,1,,Fitzroy defeated Hawthorn by 1 points at Princes Park.
+31,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1978-05-06,Hawthorn 24.13 (157) def. Carlton 19.12 (126),283,31,,Hawthorn defeated Carlton by 31 points at Princes Park.
+32,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Junction Oval,1978-05-06,Collingwood 22.16 (148) def. Fitzroy 14.12 (96),244,52,,Collingwood defeated Fitzroy by 52 points at Junction Oval.
+33,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1978-05-06,Essendon 22.18 (150) def. Richmond 19.15 (129),279,21,,Essendon defeated Richmond by 21 points at Windy Hill.
+34,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Waverley Park,1978-05-06,Sydney 18.15 (123) def. Western Bulldogs 16.9 (105),228,18,,Sydney defeated Western Bulldogs by 18 points at Waverley Park.
+35,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1978-05-06,North Melbourne 16.14 (110) def. Geelong 12.16 (88),198,22,,North Melbourne defeated Geelong by 22 points at Kardinia Park.
+36,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1978-05-06,St Kilda 31.18 (204) def. Melbourne 21.15 (141),345,63,,St Kilda defeated Melbourne by 63 points at M.C.G..
+37,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1978-05-13,Carlton 12.13 (85) def. Collingwood 9.14 (68),153,17,,Carlton defeated Collingwood by 17 points at Victoria Park.
+38,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Moorabbin Oval,1978-05-13,St Kilda 17.11 (113) def. Essendon 16.11 (107),220,6,,St Kilda defeated Essendon by 6 points at Moorabbin Oval.
+39,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1978-05-13,North Melbourne 14.14 (98) def. Fitzroy 14.11 (95),193,3,,North Melbourne defeated Fitzroy by 3 points at Arden St.
+40,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Princes Park,1978-05-13,Hawthorn 27.15 (177) def. Western Bulldogs 13.13 (91),268,86,,Hawthorn defeated Western Bulldogs by 86 points at Princes Park.
+41,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Waverley Park,1978-05-13,Melbourne 21.13 (139) def. Geelong 18.18 (126),265,13,,Melbourne defeated Geelong by 13 points at Waverley Park.
+42,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,1978-05-13,Sydney 19.11 (125) def. Richmond 14.14 (98),223,27,,Sydney defeated Richmond by 27 points at M.C.G..
+43,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1978-05-20,Carlton 8.15 (63) def. Fitzroy 9.7 (61),124,2,,Carlton defeated Fitzroy by 2 points at Princes Park.
+44,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1978-05-20,Collingwood 14.9 (93) def. Western Bulldogs 14.5 (89),182,4,,Collingwood defeated Western Bulldogs by 4 points at Western Oval.
+45,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1978-05-20,Essendon 11.10 (76) def. Geelong 7.18 (60),136,16,,Essendon defeated Geelong by 16 points at Windy Hill.
+46,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Waverley Park,1978-05-20,Hawthorn 14.15 (99) def. Richmond 9.16 (70),169,29,,Hawthorn defeated Richmond by 29 points at Waverley Park.
+47,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1978-05-20,North Melbourne 20.17 (137) def. Melbourne 8.13 (61),198,76,,North Melbourne defeated Melbourne by 76 points at M.C.G..
+48,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1978-05-20,Sydney 20.16 (136) def. St Kilda 4.13 (37),173,99,,Sydney defeated St Kilda by 99 points at Lake Oval.
+49,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1978-05-27,Carlton 18.9 (117) def. North Melbourne 8.11 (59),176,58,,Carlton defeated North Melbourne by 58 points at Princes Park.
+50,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1978-05-27,Collingwood 12.20 (92) def. Richmond 10.16 (76),168,16,,Collingwood defeated Richmond by 16 points at Victoria Park.
+51,Regular Season,Melbourne,Essendon,Melbourne,Essendon,Waverley Park,1978-05-27,Essendon 15.12 (102) def. Melbourne 8.12 (60),162,42,,Essendon defeated Melbourne by 42 points at Waverley Park.
+52,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Junction Oval,1978-05-27,Western Bulldogs 18.9 (117) def. Fitzroy 13.14 (92),209,25,,Western Bulldogs defeated Fitzroy by 25 points at Junction Oval.
+53,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1978-05-27,Geelong 16.13 (109) def. Sydney 14.11 (95),204,14,,Geelong defeated Sydney by 14 points at Kardinia Park.
+54,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Moorabbin Oval,1978-05-27,Hawthorn 13.19 (97) def. St Kilda 8.9 (57),154,40,,Hawthorn defeated St Kilda by 40 points at Moorabbin Oval.
+55,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1978-06-03,North Melbourne 13.7 (85) def. Essendon 12.10 (82),167,3,,North Melbourne defeated Essendon by 3 points at Arden St.
+56,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,M.C.G.,1978-06-03,Richmond 12.14 (86) def. Fitzroy 11.14 (80),166,6,,Richmond defeated Fitzroy by 6 points at M.C.G..
+57,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Princes Park,1978-06-03,Hawthorn 12.24 (96) def. Geelong 8.13 (61),157,35,,Hawthorn defeated Geelong by 35 points at Princes Park.
+58,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1978-06-05,Western Bulldogs 19.11 (125) def. Carlton 15.14 (104),229,21,,Western Bulldogs defeated Carlton by 21 points at Western Oval.
+59,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Waverley Park,1978-06-05,Collingwood 18.23 (131) def. St Kilda 14.13 (97),228,34,,Collingwood defeated St Kilda by 34 points at Waverley Park.
+60,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1978-06-05,Sydney 24.18 (162) def. Melbourne 14.8 (92),254,70,,Sydney defeated Melbourne by 70 points at Lake Oval.
+61,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1978-06-17,Carlton 23.27 (165) def. St Kilda 8.17 (65),230,100,,Carlton defeated St Kilda by 100 points at Princes Park.
+62,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1978-06-17,Collingwood 17.25 (127) def. Melbourne 10.7 (67),194,60,,Collingwood defeated Melbourne by 60 points at Victoria Park.
+63,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1978-06-17,Hawthorn 19.19 (133) def. Essendon 16.8 (104),237,29,,Hawthorn defeated Essendon by 29 points at Windy Hill.
+64,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Junction Oval,1978-06-17,Geelong 16.18 (114) def. Fitzroy 16.15 (111),225,3,,Geelong defeated Fitzroy by 3 points at Junction Oval.
+65,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,1978-06-17,Richmond 23.17 (155) def. Western Bulldogs 14.13 (97),252,58,,Richmond defeated Western Bulldogs by 58 points at M.C.G..
+66,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Waverley Park,1978-06-17,North Melbourne 17.15 (117) def. Sydney 15.7 (97),214,20,,North Melbourne defeated Sydney by 20 points at Waverley Park.
+67,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1978-06-24,Carlton 20.17 (137) def. Richmond 13.16 (94),231,43,,Carlton defeated Richmond by 43 points at Princes Park.
+68,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Waverley Park,1978-06-24,Geelong 13.18 (96) def. Collingwood 7.14 (56),152,40,,Geelong defeated Collingwood by 40 points at Waverley Park.
+69,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1978-06-24,Essendon 17.18 (120) def. Sydney 13.19 (97),217,23,,Essendon defeated Sydney by 23 points at Lake Oval.
+70,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Moorabbin Oval,1978-06-24,Fitzroy 20.14 (134) def. St Kilda 17.9 (111),245,23,,Fitzroy defeated St Kilda by 23 points at Moorabbin Oval.
+71,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1978-06-24,Western Bulldogs 13.12 (90) def. North Melbourne 8.12 (60),150,30,,Western Bulldogs defeated North Melbourne by 30 points at Arden St.
+72,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1978-06-24,Hawthorn 18.20 (128) def. Melbourne 15.18 (108),236,20,,Hawthorn defeated Melbourne by 20 points at M.C.G..
+73,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1978-07-01,Carlton 9.13 (67) def. Geelong 8.9 (57),124,10,,Carlton defeated Geelong by 10 points at Kardinia Park.
+74,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1978-07-01,Collingwood 14.21 (105) def. Essendon 12.26 (98),203,7,,Collingwood defeated Essendon by 7 points at Windy Hill.
+75,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Waverley Park,1978-07-01,Fitzroy 19.27 (141) def. Melbourne 8.13 (61),202,80,,Fitzroy defeated Melbourne by 80 points at Waverley Park.
+76,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1978-07-01,Western Bulldogs 33.15 (213) def. St Kilda 16.10 (106),319,107,,Western Bulldogs defeated St Kilda by 107 points at Western Oval.
+77,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Princes Park,1978-07-01,Hawthorn 21.14 (140) def. Sydney 18.11 (119),259,21,,Hawthorn defeated Sydney by 21 points at Princes Park.
+78,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,1978-07-01,Richmond 21.16 (142) def. North Melbourne 17.15 (117),259,25,,Richmond defeated North Melbourne by 25 points at M.C.G..
+79,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1978-07-08,Essendon 13.24 (102) def. Carlton 14.11 (95),197,7,,Essendon defeated Carlton by 7 points at Windy Hill.
+80,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Waverley Park,1978-07-08,Collingwood 13.6 (84) def. Hawthorn 10.14 (74),158,10,,Collingwood defeated Hawthorn by 10 points at Waverley Park.
+81,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1978-07-08,Sydney 22.11 (143) def. Fitzroy 13.15 (93),236,50,,Sydney defeated Fitzroy by 50 points at Lake Oval.
+82,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1978-07-08,Western Bulldogs 20.7 (127) def. Melbourne 8.11 (59),186,68,,Western Bulldogs defeated Melbourne by 68 points at Western Oval.
+83,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,1978-07-08,Richmond 17.20 (122) def. Geelong 18.9 (117),239,5,,Richmond defeated Geelong by 5 points at M.C.G..
+84,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1978-07-08,St Kilda 18.16 (124) def. North Melbourne 19.7 (121),245,3,,St Kilda defeated North Melbourne by 3 points at Arden St.
+85,Regular Season,Melbourne,Carlton,Melbourne,Carlton,Waverley Park,1978-07-15,Carlton 17.13 (115) def. Melbourne 2.14 (26),141,89,,Carlton defeated Melbourne by 89 points at Waverley Park.
+86,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1978-07-15,Collingwood 17.12 (114) def. Sydney 12.22 (94),208,20,,Collingwood defeated Sydney by 20 points at Victoria Park.
+87,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Junction Oval,1978-07-15,Fitzroy 15.11 (101) def. Essendon 11.17 (83),184,18,,Fitzroy defeated Essendon by 18 points at Junction Oval.
+88,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1978-07-15,Geelong 12.12 (84) def. Western Bulldogs 10.12 (72),156,12,,Geelong defeated Western Bulldogs by 12 points at Kardinia Park.
+89,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Princes Park,1978-07-15,Hawthorn 10.14 (74) def. North Melbourne 7.13 (55),129,19,,Hawthorn defeated North Melbourne by 19 points at Princes Park.
+90,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Moorabbin Oval,1978-07-15,Richmond 19.11 (125) def. St Kilda 10.11 (71),196,54,,Richmond defeated St Kilda by 54 points at Moorabbin Oval.
+91,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1978-07-22,Carlton 16.16 (112) def. Sydney 9.17 (71),183,41,,Carlton defeated Sydney by 41 points at Princes Park.
+92,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1978-07-22,North Melbourne 15.11 (101) def. Collingwood 7.17 (59),160,42,,North Melbourne defeated Collingwood by 42 points at Victoria Park.
+93,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Waverley Park,1978-07-22,Western Bulldogs 15.17 (107) def. Essendon 13.8 (86),193,21,,Western Bulldogs defeated Essendon by 21 points at Waverley Park.
+94,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Junction Oval,1978-07-22,Fitzroy 18.14 (122) def. Hawthorn 17.19 (121),243,1,,Fitzroy defeated Hawthorn by 1 points at Junction Oval.
+95,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1978-07-22,Geelong 16.8 (104) def. St Kilda 12.20 (92),196,12,,Geelong defeated St Kilda by 12 points at Kardinia Park.
+96,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1978-07-22,Richmond 17.19 (121) def. Melbourne 14.9 (93),214,28,,Richmond defeated Melbourne by 28 points at M.C.G..
+97,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Princes Park,1978-07-29,Carlton 18.11 (119) def. Hawthorn 13.17 (95),214,24,,Carlton defeated Hawthorn by 24 points at Princes Park.
+98,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Waverley Park,1978-07-29,Collingwood 16.11 (107) def. Fitzroy 11.11 (77),184,30,,Collingwood defeated Fitzroy by 30 points at Waverley Park.
+99,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,1978-07-29,Richmond 20.16 (136) def. Essendon 13.18 (96),232,40,,Richmond defeated Essendon by 40 points at M.C.G..
+100,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Lake Oval,1978-07-29,Sydney 15.15 (105) def. Western Bulldogs 13.13 (91),196,14,,Sydney defeated Western Bulldogs by 14 points at Lake Oval.
+101,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1978-07-29,North Melbourne 18.14 (122) def. Geelong 10.16 (76),198,46,,North Melbourne defeated Geelong by 46 points at Arden St.
+102,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Moorabbin Oval,1978-07-29,St Kilda 20.21 (141) def. Melbourne 13.11 (89),230,52,,St Kilda defeated Melbourne by 52 points at Moorabbin Oval.
+103,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1978-08-05,Carlton 14.19 (103) def. Collingwood 8.14 (62),165,41,,Carlton defeated Collingwood by 41 points at Princes Park.
+104,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1978-08-05,St Kilda 18.13 (121) def. Essendon 11.16 (82),203,39,,St Kilda defeated Essendon by 39 points at Windy Hill.
+105,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Junction Oval,1978-08-05,North Melbourne 19.10 (124) def. Fitzroy 11.16 (82),206,42,,North Melbourne defeated Fitzroy by 42 points at Junction Oval.
+106,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1978-08-05,Hawthorn 17.16 (118) def. Western Bulldogs 17.10 (112),230,6,,Hawthorn defeated Western Bulldogs by 6 points at Western Oval.
+107,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1978-08-05,Geelong 14.17 (101) def. Melbourne 13.17 (95),196,6,,Geelong defeated Melbourne by 6 points at M.C.G..
+108,Regular Season,Sydney,Richmond,Sydney,Richmond,Waverley Park,1978-08-05,Sydney 14.9 (93) def. Richmond 9.16 (70),163,23,,Sydney defeated Richmond by 23 points at Waverley Park.
+109,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Waverley Park,1978-08-12,Carlton 9.15 (69) def. Fitzroy 8.10 (58),127,11,,Carlton defeated Fitzroy by 11 points at Waverley Park.
+110,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1978-08-12,Collingwood 11.16 (82) def. Western Bulldogs 10.6 (66),148,16,,Collingwood defeated Western Bulldogs by 16 points at Victoria Park.
+111,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1978-08-12,Geelong 14.8 (92) def. Essendon 13.7 (85),177,7,,Geelong defeated Essendon by 7 points at Kardinia Park.
+112,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Princes Park,1978-08-12,Hawthorn 18.19 (127) def. Richmond 10.10 (70),197,57,,Hawthorn defeated Richmond by 57 points at Princes Park.
+113,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1978-08-12,North Melbourne 26.18 (174) def. Melbourne 8.13 (61),235,113,,North Melbourne defeated Melbourne by 113 points at Arden St.
+114,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Moorabbin Oval,1978-08-12,St Kilda 13.7 (85) def. Sydney 3.19 (37),122,48,,St Kilda defeated Sydney by 48 points at Moorabbin Oval.
+115,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1978-08-19,Carlton 19.17 (131) def. North Melbourne 9.16 (70),201,61,,Carlton defeated North Melbourne by 61 points at Arden St.
+116,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,1978-08-19,Collingwood 19.9 (123) def. Richmond 16.13 (109),232,14,,Collingwood defeated Richmond by 14 points at M.C.G..
+117,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1978-08-19,Melbourne 21.10 (136) def. Essendon 19.16 (130),266,6,,Melbourne defeated Essendon by 6 points at Windy Hill.
+118,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1978-08-19,Fitzroy 21.13 (139) def. Western Bulldogs 9.17 (71),210,68,,Fitzroy defeated Western Bulldogs by 68 points at Western Oval.
+119,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1978-08-19,Geelong 26.11 (167) def. Sydney 24.11 (155),322,12,,Geelong defeated Sydney by 12 points at Lake Oval.
+120,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Waverley Park,1978-08-19,St Kilda 21.13 (139) def. Hawthorn 12.11 (83),222,56,,St Kilda defeated Hawthorn by 56 points at Waverley Park.
+121,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1978-08-26,Carlton 23.7 (145) def. Western Bulldogs 15.12 (102),247,43,,Carlton defeated Western Bulldogs by 43 points at Princes Park.
+122,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1978-08-26,Collingwood 22.15 (147) def. St Kilda 15.17 (107),254,40,,Collingwood defeated St Kilda by 40 points at Victoria Park.
+123,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Waverley Park,1978-08-26,North Melbourne 11.11 (77) def. Essendon 7.9 (51),128,26,,North Melbourne defeated Essendon by 26 points at Waverley Park.
+124,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Junction Oval,1978-08-26,Fitzroy 20.14 (134) def. Richmond 17.15 (117),251,17,,Fitzroy defeated Richmond by 17 points at Junction Oval.
+125,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1978-08-26,Hawthorn 13.10 (88) def. Geelong 13.8 (86),174,2,,Hawthorn defeated Geelong by 2 points at Kardinia Park.
+126,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1978-08-26,Melbourne 15.16 (106) def. Sydney 11.19 (85),191,21,,Melbourne defeated Sydney by 21 points at M.C.G..
+127,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Moorabbin Oval,1978-09-02,St Kilda 16.10 (106) def. Carlton 9.12 (66),172,40,,St Kilda defeated Carlton by 40 points at Moorabbin Oval.
+128,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1978-09-02,Collingwood 24.12 (156) def. Melbourne 19.11 (125),281,31,,Collingwood defeated Melbourne by 31 points at M.C.G..
+129,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Princes Park,1978-09-02,Hawthorn 17.16 (118) def. Essendon 16.13 (109),227,9,,Hawthorn defeated Essendon by 9 points at Princes Park.
+130,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1978-09-02,Geelong 13.22 (100) def. Fitzroy 5.8 (38),138,62,,Geelong defeated Fitzroy by 62 points at Kardinia Park.
+131,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Waverley Park,1978-09-02,Richmond 19.20 (134) def. Western Bulldogs 11.15 (81),215,53,,Richmond defeated Western Bulldogs by 53 points at Waverley Park.
+132,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1978-09-02,North Melbourne 16.15 (111) def. Sydney 12.15 (87),198,24,,North Melbourne defeated Sydney by 24 points at Arden St.
+133,Finals,Carlton,Geelong,Carlton,Geelong,Waverley Park,1978-09-09,Carlton 15.15 (105) def. Geelong 9.18 (72),177,33,,Carlton defeated Geelong by 33 points at Waverley Park.
+134,Finals,Hawthorn,Collingwood,Hawthorn,Collingwood,M.C.G.,1978-09-09,Hawthorn 23.16 (154) def. Collingwood 14.14 (98),252,56,,Hawthorn defeated Collingwood by 56 points at M.C.G..
+135,Finals,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,1978-09-16,Collingwood 15.18 (108) def. Carlton 13.15 (93),201,15,,Collingwood defeated Carlton by 15 points at M.C.G..
+136,Finals,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Waverley Park,1978-09-16,Hawthorn 12.15 (87) def. North Melbourne 10.13 (73),160,14,,Hawthorn defeated North Melbourne by 14 points at Waverley Park.
+137,Finals,North Melbourne,Collingwood,North Melbourne,Collingwood,Waverley Park,1978-09-23,North Melbourne 14.12 (96) def. Collingwood 12.12 (84),180,12,,North Melbourne defeated Collingwood by 12 points at Waverley Park.
+138,Grand Final,Hawthorn,North Melbourne,Hawthorn,North Melbourne,M.C.G.,1978-09-30,Hawthorn 18.13 (121) def. North Melbourne 15.13 (103),224,18,,Hawthorn defeated North Melbourne by 18 points at M.C.G..

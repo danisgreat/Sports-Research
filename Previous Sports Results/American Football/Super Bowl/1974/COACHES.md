@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1974 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1974 Season (Super Bowl VIII)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl VIII)
 - **Season:** 1974
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1974.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1974 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** Miami Dolphins
+- **Winning Head Coach:** Don Shula
+- **Runners-up:** Minnesota Vikings
+- **Runners-up Head Coach:** Bud Grant
+- **Super Bowl Result:** Miami Dolphins def. Minnesota Vikings (24-7)
+- **Super Bowl MVP:** Larry Csonka (FB, Miami)
+- **Venue:** Rice Stadium (Houston)
+- **Official Attendance:** 71,882 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Don Shula directing Miami Dolphins to the Vince Lombardi Trophy over Bud Grant's Minnesota Vikings.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

@@ -1,4 +1,4 @@
 # WAFLW Coaching Staff — 1952 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 2019. No official coaching staffs, managerial appointments, or teams existed in 1952.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** WAFLW not yet founded (inaugural season in 2019).

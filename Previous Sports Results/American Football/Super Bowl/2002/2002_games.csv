@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,New England Patriots,St. Louis Rams,New England Patriots,St. Louis Rams,Louisiana Superdome,2002-02-03,New England Patriots 20 def. St. Louis Rams 17,37,3,Referee: Bernie Kukar,"New England Patriots won Super Bowl XXXVI, defeating St. Louis Rams 20-17 at Louisiana Superdome."

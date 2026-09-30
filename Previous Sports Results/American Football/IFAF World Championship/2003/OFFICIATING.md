@@ -1,12 +1,13 @@
-# IFAF World Championship Officiating & Refereeing Corps — 2003 Season
+# IFAF World Championship Officiating & Referee Corps — 2003 Tournament
 
-- **Sport:** American Football
-- **Competition:** IFAF World Championship
-- **Season:** 2003
-- **Governing Body:** International Federation of American Football (IFAF)
+- **Sport:** American Football (International)
+- **Competition:** IFAF World Championship of American Football
+- **Edition:** 2003 World Championship
 
-## Officiating Structure & Adjudication
-- **Appointed Officials:** IFAF International Officiating Crew (Referee, Umpire, Linesman, Line Judge, Back/Field/Side Judge).
-- **Championship Appointments:** Lead match adjudicators and senior officials selected for finals and marquee tournament fixtures based on merit and performance evaluations.
-- **Rule Framework & Interpretations:** Strict enforcement of the 2003 rules of the game, procedural updates, and points of emphasis issued by International Federation of American Football (IFAF).
-- **Technology & Review Systems:** Traditional field adjudication relying exclusively on the primary on-field officials.
+## International Officiating Delegation & Governance
+- **Officiating Governance:** International Federation of American Football (IFAF) Officiating Committee
+- **Rules Adaptation:** Adjudicated under NCAA / IFAF modified football rules with multinational neutral referee crews.
+- **Host Location:** Herbert-Dröse-Stadion (Hanau, Germany)
+- **Gold Medal Game Adjudication:** Championship final officiated by an international senior officiating crew.
+
+- **Sources:** IFAF Technical and Officiating Committee; International American Football Referees Association.

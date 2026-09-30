@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Arizona Cardinals,Pittsburgh Steelers,Arizona Cardinals,Pittsburgh Steelers,Raymond James Stadium,2009-02-01,Pittsburgh Steelers 27 def. Arizona Cardinals 23,50,4,Referee: Terry McAulay,"Pittsburgh Steelers won Super Bowl XLIII, defeating Arizona Cardinals 27-23 at Raymond James Stadium."

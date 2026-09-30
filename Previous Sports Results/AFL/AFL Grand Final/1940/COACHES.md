@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1940 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1940
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1940.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1940 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Melbourne
+- **Premiership Coach:** Frank Hughes
+- **Runners-up:** Richmond
+- **Runners-up Coach:** Perce Bentley
+- **Grand Final Result:** Melbourne 15.17 (107) def. Richmond 10.8 (68)
+- **Winning Margin:** 39 points
+- **Match Date:** 1940-09-28
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 70,330 spectators
+
+## Match Summary & Tactical Notes
+Melbourne went back-to-back, comfortably defeating Richmond by 39 points at the MCG.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

@@ -1,4 +1,14 @@
 # AFL Grand Final Officiating & Refereeing Corps — 1916 Season
 
-- **Status:** INACTIVE / CANCELLED.
-- **Reason:** No competition matches were played in 1916 due to historical cancellation or league hiatus. No officiating panels were active.
+- **Sport:** Australian Rules Football
+- **Competition:** AFL Grand Final
+- **Season:** 1916
+
+## Match Adjudicators & Officiating Appointments
+- **Grand Final Field Umpire(s):** Arthur Norden
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 21,130 spectators
+- **Umpiring System:** Sole field umpire system
+- **Adjudication Framework:** Officiated in accordance with the Laws of Australian Football and official VFL/AFL senior adjudication appointments.
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA); Official VFL/AFL Grand Final Records.

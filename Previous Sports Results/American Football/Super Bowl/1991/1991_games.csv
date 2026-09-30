@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Buffalo Bills,New York Giants,Buffalo Bills,New York Giants,Tampa Stadium,1991-01-27,New York Giants 20 def. Buffalo Bills 19,39,1,,"New York Giants won Super Bowl XXV, defeating Buffalo Bills 20-19 at Tampa Stadium."

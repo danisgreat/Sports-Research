@@ -1,1 +1,67 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Claremont,East Perth,Claremont,East Perth,Showgrounds,1926-04-24,East Perth 16.21 (117) def. Claremont 6.10 (46),163,71,,East Perth defeated Claremont by 71 points at Showgrounds.
+2,Regular Season,East Fremantle,Perth,East Fremantle,Perth,Fremantle Oval,1926-04-24,East Fremantle 7.12 (54) def. Perth 6.8 (44),98,10,,East Fremantle defeated Perth by 10 points at Fremantle Oval.
+3,Regular Season,Subiaco,South Fremantle,Subiaco,South Fremantle,Subiaco Oval,1926-04-24,South Fremantle 11.10 (76) def. Subiaco 11.7 (73),149,3,,South Fremantle defeated Subiaco by 3 points at Subiaco Oval.
+4,Regular Season,Perth,East Perth,Perth,East Perth,WACA,1926-05-01,Perth 9.11 (65) def. East Perth 9.10 (64),129,1,,Perth defeated East Perth by 1 points at WACA.
+5,Regular Season,South Fremantle,East Fremantle,South Fremantle,East Fremantle,Fremantle Oval,1926-05-01,South Fremantle 9.10 (64) def. East Fremantle 8.10 (58),122,6,,South Fremantle defeated East Fremantle by 6 points at Fremantle Oval.
+6,Regular Season,Subiaco,West Perth,Subiaco,West Perth,Subiaco Oval,1926-05-01,Subiaco 11.14 (80) def. West Perth 7.14 (56),136,24,,Subiaco defeated West Perth by 24 points at Subiaco Oval.
+7,Regular Season,East Perth,South Fremantle,East Perth,South Fremantle,Perth Oval,1926-05-08,East Perth 7.17 (59) def. South Fremantle 5.9 (39),98,20,,East Perth defeated South Fremantle by 20 points at Perth Oval.
+8,Regular Season,Claremont,Subiaco,Claremont,Subiaco,Showgrounds,1926-05-08,Subiaco 15.19 (109) def. Claremont 7.8 (50),159,59,,Subiaco defeated Claremont by 59 points at Showgrounds.
+9,Regular Season,East Fremantle,West Perth,East Fremantle,West Perth,Fremantle Oval,1926-05-08,West Perth 9.4 (58) def. East Fremantle 7.8 (50),108,8,,West Perth defeated East Fremantle by 8 points at Fremantle Oval.
+10,Regular Season,Claremont,East Fremantle,Claremont,East Fremantle,Showgrounds,1926-05-15,East Fremantle 22.13 (145) def. Claremont 9.8 (62),207,83,,East Fremantle defeated Claremont by 83 points at Showgrounds.
+11,Regular Season,Perth,Subiaco,Perth,Subiaco,WACA,1926-05-15,Perth 11.6 (72) def. Subiaco 8.4 (52),124,20,,Perth defeated Subiaco by 20 points at WACA.
+12,Regular Season,West Perth,East Perth,West Perth,East Perth,Leederville Oval,1926-05-15,East Perth 8.11 (59) def. West Perth 7.9 (51),110,8,,East Perth defeated West Perth by 8 points at Leederville Oval.
+13,Regular Season,West Perth,Claremont,West Perth,Claremont,Leederville Oval,1926-05-22,West Perth 18.20 (128) def. Claremont 8.10 (58),186,70,,West Perth defeated Claremont by 70 points at Leederville Oval.
+14,Regular Season,East Perth,East Fremantle,East Perth,East Fremantle,Perth Oval,1926-05-22,East Fremantle 10.10 (70) def. East Perth 8.14 (62),132,8,,East Fremantle defeated East Perth by 8 points at Perth Oval.
+15,Regular Season,South Fremantle,Perth,South Fremantle,Perth,Fremantle Oval,1926-05-22,South Fremantle 8.12 (60) def. Perth 8.9 (57),117,3,,South Fremantle defeated Perth by 3 points at Fremantle Oval.
+16,Regular Season,Subiaco,East Fremantle,Subiaco,East Fremantle,Subiaco Oval,1926-05-29,East Fremantle 8.7 (55) def. Subiaco 5.13 (43),98,12,,East Fremantle defeated Subiaco by 12 points at Subiaco Oval.
+17,Regular Season,South Fremantle,Claremont,South Fremantle,Claremont,Fremantle Oval,1926-05-29,South Fremantle 11.11 (77) def. Claremont 7.2 (44),121,33,,South Fremantle defeated Claremont by 33 points at Fremantle Oval.
+18,Regular Season,Perth,West Perth,Perth,West Perth,WACA,1926-05-29,West Perth 13.18 (96) def. Perth 11.11 (77),173,19,,West Perth defeated Perth by 19 points at WACA.
+19,Regular Season,Claremont,Perth,Claremont,Perth,Showgrounds,1926-06-05,Perth 22.17 (149) def. Claremont 6.12 (48),197,101,,Perth defeated Claremont by 101 points at Showgrounds.
+20,Regular Season,West Perth,South Fremantle,West Perth,South Fremantle,Leederville Oval,1926-06-05,West Perth 11.10 (76) def. South Fremantle 11.8 (74),150,2,,West Perth defeated South Fremantle by 2 points at Leederville Oval.
+21,Regular Season,East Perth,Subiaco,East Perth,Subiaco,Perth Oval,1926-06-05,East Perth 8.6 (54) def. Subiaco 8.5 (53),107,1,,East Perth defeated Subiaco by 1 points at Perth Oval.
+22,Regular Season,South Fremantle,Subiaco,South Fremantle,Subiaco,Fremantle Oval,1926-06-07,South Fremantle 12.9 (81) def. Subiaco 10.14 (74),155,7,,South Fremantle defeated Subiaco by 7 points at Fremantle Oval.
+23,Regular Season,East Perth,Claremont,East Perth,Claremont,Perth Oval,1926-06-07,East Perth 9.20 (74) def. Claremont 7.11 (53),127,21,,East Perth defeated Claremont by 21 points at Perth Oval.
+24,Regular Season,Perth,East Fremantle,Perth,East Fremantle,WACA,1926-06-07,Perth 9.9 (63) def. East Fremantle 9.8 (62),125,1,,Perth defeated East Fremantle by 1 points at WACA.
+25,Regular Season,West Perth,Subiaco,West Perth,Subiaco,Leederville Oval,1926-06-12,West Perth 13.14 (92) def. Subiaco 9.11 (65),157,27,,West Perth defeated Subiaco by 27 points at Leederville Oval.
+26,Regular Season,East Fremantle,South Fremantle,East Fremantle,South Fremantle,Fremantle Oval,1926-06-12,East Fremantle 8.20 (68) def. South Fremantle 2.7 (19),87,49,,East Fremantle defeated South Fremantle by 49 points at Fremantle Oval.
+27,Regular Season,East Perth,Perth,East Perth,Perth,Perth Oval,1926-06-12,East Perth 15.18 (108) def. Perth 10.5 (65),173,43,,East Perth defeated Perth by 43 points at Perth Oval.
+28,Regular Season,West Perth,East Fremantle,West Perth,East Fremantle,Leederville Oval,1926-06-19,East Fremantle 9.9 (63) def. West Perth 7.14 (56),119,7,,East Fremantle defeated West Perth by 7 points at Leederville Oval.
+29,Regular Season,Subiaco,Claremont,Subiaco,Claremont,Subiaco Oval,1926-06-19,Subiaco 19.9 (123) def. Claremont 4.9 (33),156,90,,Subiaco defeated Claremont by 90 points at Subiaco Oval.
+30,Regular Season,South Fremantle,East Perth,South Fremantle,East Perth,Fremantle Oval,1926-06-19,East Perth 15.15 (105) def. South Fremantle 5.6 (36),141,69,,East Perth defeated South Fremantle by 69 points at Fremantle Oval.
+31,Regular Season,East Perth,West Perth,East Perth,West Perth,Perth Oval,1926-06-26,East Perth 14.9 (93) def. West Perth 11.10 (76),169,17,,East Perth defeated West Perth by 17 points at Perth Oval.
+32,Regular Season,East Fremantle,Claremont,East Fremantle,Claremont,Fremantle Oval,1926-06-26,East Fremantle 13.17 (95) def. Claremont 11.6 (72),167,23,,East Fremantle defeated Claremont by 23 points at Fremantle Oval.
+33,Regular Season,Subiaco,Perth,Subiaco,Perth,Subiaco Oval,1926-06-26,Subiaco 11.11 (77) def. Perth 10.15 (75),152,2,,Subiaco defeated Perth by 2 points at Subiaco Oval.
+34,Regular Season,Claremont,West Perth,Claremont,West Perth,Showgrounds,1926-07-03,West Perth 14.18 (102) def. Claremont 9.10 (64),166,38,,West Perth defeated Claremont by 38 points at Showgrounds.
+35,Regular Season,Perth,South Fremantle,Perth,South Fremantle,WACA,1926-07-03,Perth 12.15 (87) def. South Fremantle 4.7 (31),118,56,,Perth defeated South Fremantle by 56 points at WACA.
+36,Regular Season,East Fremantle,East Perth,East Fremantle,East Perth,Fremantle Oval,1926-07-03,East Fremantle 8.19 (67) def. East Perth 6.9 (45),112,22,,East Fremantle defeated East Perth by 22 points at Fremantle Oval.
+37,Regular Season,West Perth,Perth,West Perth,Perth,Leederville Oval,1926-07-10,West Perth 9.11 (65) def. Perth 6.10 (46),111,19,,West Perth defeated Perth by 19 points at Leederville Oval.
+38,Regular Season,East Fremantle,Subiaco,East Fremantle,Subiaco,Fremantle Oval,1926-07-10,East Fremantle 11.7 (73) def. Subiaco 9.10 (64),137,9,,East Fremantle defeated Subiaco by 9 points at Fremantle Oval.
+39,Regular Season,Claremont,South Fremantle,Claremont,South Fremantle,Showgrounds,1926-07-10,South Fremantle 16.10 (106) def. Claremont 8.17 (65),171,41,,South Fremantle defeated Claremont by 41 points at Showgrounds.
+40,Regular Season,Perth,Claremont,Perth,Claremont,WACA,1926-07-17,Perth 12.16 (88) def. Claremont 8.11 (59),147,29,,Perth defeated Claremont by 29 points at WACA.
+41,Regular Season,Subiaco,East Perth,Subiaco,East Perth,Subiaco Oval,1926-07-17,Subiaco 10.9 (69) drew with East Perth 9.15 (69),138,0,,Subiaco and East Perth played out a draw at Subiaco Oval.
+42,Regular Season,South Fremantle,West Perth,South Fremantle,West Perth,Fremantle Oval,1926-07-17,West Perth 7.11 (53) def. South Fremantle 5.14 (44),97,9,,West Perth defeated South Fremantle by 9 points at Fremantle Oval.
+43,Regular Season,South Fremantle,East Perth,South Fremantle,East Perth,Fremantle Oval,1926-07-31,South Fremantle 10.17 (77) def. East Perth 3.11 (29),106,48,,South Fremantle defeated East Perth by 48 points at Fremantle Oval.
+44,Regular Season,Subiaco,Claremont,Subiaco,Claremont,Subiaco Oval,1926-07-31,Subiaco 11.12 (78) def. Claremont 9.11 (65),143,13,,Subiaco defeated Claremont by 13 points at Subiaco Oval.
+45,Regular Season,West Perth,East Fremantle,West Perth,East Fremantle,Leederville Oval,1926-07-31,West Perth 12.13 (85) def. East Fremantle 5.9 (39),124,46,,West Perth defeated East Fremantle by 46 points at Leederville Oval.
+46,Regular Season,Perth,South Fremantle,Perth,South Fremantle,WACA,1926-08-07,South Fremantle 12.9 (81) def. Perth 7.10 (52),133,29,,South Fremantle defeated Perth by 29 points at WACA.
+47,Regular Season,Claremont,West Perth,Claremont,West Perth,Showgrounds,1926-08-07,West Perth 9.19 (73) def. Claremont 4.13 (37),110,36,,West Perth defeated Claremont by 36 points at Showgrounds.
+48,Regular Season,East Perth,East Fremantle,East Perth,East Fremantle,Subiaco Oval,1926-08-07,East Perth 10.8 (68) def. East Fremantle 8.6 (54),122,14,,East Perth defeated East Fremantle by 14 points at Subiaco Oval.
+49,Regular Season,Subiaco,East Fremantle,Subiaco,East Fremantle,Subiaco Oval,1926-08-14,Subiaco 7.18 (60) def. East Fremantle 6.4 (40),100,20,,Subiaco defeated East Fremantle by 20 points at Subiaco Oval.
+50,Regular Season,West Perth,Perth,West Perth,Perth,Leederville Oval,1926-08-14,West Perth 12.16 (88) def. Perth 12.7 (79),167,9,,West Perth defeated Perth by 9 points at Leederville Oval.
+51,Regular Season,South Fremantle,Claremont,South Fremantle,Claremont,Fremantle Oval,1926-08-14,Claremont 7.11 (53) def. South Fremantle 7.10 (52),105,1,,Claremont defeated South Fremantle by 1 points at Fremantle Oval.
+52,Regular Season,Perth,Claremont,Perth,Claremont,WACA,1926-08-21,Perth 11.19 (85) def. Claremont 9.10 (64),149,21,,Perth defeated Claremont by 21 points at WACA.
+53,Regular Season,Subiaco,East Perth,Subiaco,East Perth,Subiaco Oval,1926-08-21,East Perth 12.14 (86) def. Subiaco 8.6 (54),140,32,,East Perth defeated Subiaco by 32 points at Subiaco Oval.
+54,Regular Season,South Fremantle,West Perth,South Fremantle,West Perth,Fremantle Oval,1926-08-21,West Perth 15.12 (102) def. South Fremantle 10.8 (68),170,34,,West Perth defeated South Fremantle by 34 points at Fremantle Oval.
+55,Regular Season,East Fremantle,Claremont,East Fremantle,Claremont,Fremantle Oval,1926-09-04,East Fremantle 12.14 (86) def. Claremont 9.11 (65),151,21,,East Fremantle defeated Claremont by 21 points at Fremantle Oval.
+56,Regular Season,Perth,Subiaco,Perth,Subiaco,WACA,1926-09-04,Subiaco 4.13 (37) def. Perth 5.5 (35),72,2,,Subiaco defeated Perth by 2 points at WACA.
+57,Regular Season,East Perth,West Perth,East Perth,West Perth,Perth Oval,1926-09-04,East Perth 21.8 (134) def. West Perth 10.11 (71),205,63,,East Perth defeated West Perth by 63 points at Perth Oval.
+58,Regular Season,East Fremantle,Perth,East Fremantle,Perth,Fremantle Oval,1926-09-11,East Fremantle 9.12 (66) def. Perth 8.10 (58),124,8,,East Fremantle defeated Perth by 8 points at Fremantle Oval.
+59,Regular Season,Subiaco,South Fremantle,Subiaco,South Fremantle,Subiaco Oval,1926-09-11,Subiaco 19.18 (132) def. South Fremantle 8.7 (55),187,77,,Subiaco defeated South Fremantle by 77 points at Subiaco Oval.
+60,Regular Season,Claremont,East Perth,Claremont,East Perth,Showgrounds,1926-09-11,East Perth 16.14 (110) def. Claremont 9.7 (61),171,49,,East Perth defeated Claremont by 49 points at Showgrounds.
+61,Regular Season,East Perth,Perth,East Perth,Perth,Perth Oval,1926-09-18,East Perth 15.17 (107) def. Perth 10.11 (71),178,36,,East Perth defeated Perth by 36 points at Perth Oval.
+62,Regular Season,West Perth,Subiaco,West Perth,Subiaco,Leederville Oval,1926-09-18,Subiaco 9.16 (70) def. West Perth 4.13 (37),107,33,,Subiaco defeated West Perth by 33 points at Leederville Oval.
+63,Regular Season,East Fremantle,South Fremantle,East Fremantle,South Fremantle,Fremantle Oval,1926-09-18,East Fremantle 12.9 (81) def. South Fremantle 11.13 (79),160,2,,East Fremantle defeated South Fremantle by 2 points at Fremantle Oval.
+64,Finals,West Perth,Subiaco,West Perth,Subiaco,Perth Oval,1926-09-25,Subiaco 8.14 (62) def. West Perth 8.9 (57),119,5,,Subiaco defeated West Perth by 5 points at Perth Oval.
+65,Finals,East Perth,East Fremantle,East Perth,East Fremantle,Subiaco Oval,1926-10-02,East Perth 11.17 (83) def. East Fremantle 5.9 (39),122,44,,East Perth defeated East Fremantle by 44 points at Subiaco Oval.
+66,Grand Final,Subiaco,East Perth,Subiaco,East Perth,WACA,1926-10-09,East Perth 11.19 (85) def. Subiaco 5.5 (35),120,50,,East Perth defeated Subiaco by 50 points at WACA.

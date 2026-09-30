@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Dallas Cowboys,Pittsburgh Steelers,Dallas Cowboys,Pittsburgh Steelers,Orange Bowl,1979-01-21,Pittsburgh Steelers 35 def. Dallas Cowboys 31,66,4,,"Pittsburgh Steelers won Super Bowl XIII, defeating Dallas Cowboys 35-31 at Orange Bowl."

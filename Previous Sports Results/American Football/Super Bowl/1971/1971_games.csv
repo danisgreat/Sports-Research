@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Baltimore Colts,Dallas Cowboys,Baltimore Colts,Dallas Cowboys,Orange Bowl,1971-01-17,Baltimore Colts 16 def. Dallas Cowboys 13,29,3,,"Baltimore Colts won Super Bowl V, defeating Dallas Cowboys 16-13 at Orange Bowl."

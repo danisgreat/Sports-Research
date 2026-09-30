@@ -1,1 +1,49 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,East Fremantle,West Perth,East Fremantle,West Perth,Fremantle Oval,1920-05-01,East Fremantle 13.8 (86) def. West Perth 4.6 (30),116,56,,East Fremantle defeated West Perth by 56 points at Fremantle Oval.
+2,Regular Season,Perth,East Perth,Perth,East Perth,WACA,1920-05-01,East Perth 12.12 (84) def. Perth 6.5 (41),125,43,,East Perth defeated Perth by 43 points at WACA.
+3,Regular Season,Subiaco,South Fremantle,Subiaco,South Fremantle,Subiaco Oval,1920-05-01,Subiaco 13.16 (94) def. South Fremantle 2.7 (19),113,75,,Subiaco defeated South Fremantle by 75 points at Subiaco Oval.
+4,Regular Season,Perth,West Perth,Perth,West Perth,WACA,1920-05-08,West Perth 6.16 (52) def. Perth 6.13 (49),101,3,,West Perth defeated Perth by 3 points at WACA.
+5,Regular Season,Subiaco,East Fremantle,Subiaco,East Fremantle,Subiaco Oval,1920-05-08,Subiaco 10.8 (68) def. East Fremantle 6.12 (48),116,20,,Subiaco defeated East Fremantle by 20 points at Subiaco Oval.
+6,Regular Season,South Fremantle,East Perth,South Fremantle,East Perth,Fremantle Oval,1920-05-08,East Perth 7.16 (58) def. South Fremantle 5.8 (38),96,20,,East Perth defeated South Fremantle by 20 points at Fremantle Oval.
+7,Regular Season,Perth,East Fremantle,Perth,East Fremantle,WACA,1920-05-15,Perth 11.10 (76) def. East Fremantle 10.14 (74),150,2,,Perth defeated East Fremantle by 2 points at WACA.
+8,Regular Season,South Fremantle,West Perth,South Fremantle,West Perth,Fremantle Oval,1920-05-15,West Perth 5.12 (42) def. South Fremantle 5.10 (40),82,2,,West Perth defeated South Fremantle by 2 points at Fremantle Oval.
+9,Regular Season,East Perth,Subiaco,East Perth,Subiaco,Perth Oval,1920-05-15,Subiaco 4.3 (27) def. East Perth 2.12 (24),51,3,,Subiaco defeated East Perth by 3 points at Perth Oval.
+10,Regular Season,East Perth,East Fremantle,East Perth,East Fremantle,Perth Oval,1920-05-22,East Perth 11.8 (74) def. East Fremantle 6.11 (47),121,27,,East Perth defeated East Fremantle by 27 points at Perth Oval.
+11,Regular Season,South Fremantle,Perth,South Fremantle,Perth,Fremantle Oval,1920-05-22,Perth 7.14 (56) def. South Fremantle 7.11 (53),109,3,,Perth defeated South Fremantle by 3 points at Fremantle Oval.
+12,Regular Season,Subiaco,West Perth,Subiaco,West Perth,Subiaco Oval,1920-05-22,West Perth 4.16 (40) def. Subiaco 3.15 (33),73,7,,West Perth defeated Subiaco by 7 points at Subiaco Oval.
+13,Regular Season,East Perth,West Perth,East Perth,West Perth,Perth Oval,1920-05-29,East Perth 9.9 (63) def. West Perth 3.6 (24),87,39,,East Perth defeated West Perth by 39 points at Perth Oval.
+14,Regular Season,Subiaco,Perth,Subiaco,Perth,Subiaco Oval,1920-05-29,Subiaco 11.7 (73) def. Perth 8.19 (67),140,6,,Subiaco defeated Perth by 6 points at Subiaco Oval.
+15,Regular Season,East Fremantle,South Fremantle,East Fremantle,South Fremantle,Fremantle Oval,1920-05-29,South Fremantle 5.12 (42) def. East Fremantle 5.11 (41),83,1,,South Fremantle defeated East Fremantle by 1 points at Fremantle Oval.
+16,Regular Season,South Fremantle,Subiaco,South Fremantle,Subiaco,Fremantle Oval,1920-06-05,South Fremantle 9.19 (73) def. Subiaco 8.8 (56),129,17,,South Fremantle defeated Subiaco by 17 points at Fremantle Oval.
+17,Regular Season,West Perth,East Fremantle,West Perth,East Fremantle,Leederville Oval,1920-06-05,West Perth 10.7 (67) def. East Fremantle 7.16 (58),125,9,,West Perth defeated East Fremantle by 9 points at Leederville Oval.
+18,Regular Season,East Perth,Perth,East Perth,Perth,Perth Oval,1920-06-12,Perth 8.8 (56) def. East Perth 6.12 (48),104,8,,Perth defeated East Perth by 8 points at Perth Oval.
+19,Regular Season,East Fremantle,Subiaco,East Fremantle,Subiaco,Fremantle Oval,1920-06-19,East Fremantle 9.12 (66) def. Subiaco 4.8 (32),98,34,,East Fremantle defeated Subiaco by 34 points at Fremantle Oval.
+20,Regular Season,West Perth,Perth,West Perth,Perth,Leederville Oval,1920-06-19,Perth 8.15 (63) def. West Perth 8.9 (57),120,6,,Perth defeated West Perth by 6 points at Leederville Oval.
+21,Regular Season,East Perth,South Fremantle,East Perth,South Fremantle,Perth Oval,1920-06-19,East Perth 4.8 (32) def. South Fremantle 4.6 (30),62,2,,East Perth defeated South Fremantle by 2 points at Perth Oval.
+22,Regular Season,West Perth,South Fremantle,West Perth,South Fremantle,Leederville Oval,1920-06-26,West Perth 7.13 (55) def. South Fremantle 6.3 (39),94,16,,West Perth defeated South Fremantle by 16 points at Leederville Oval.
+23,Regular Season,East Fremantle,Perth,East Fremantle,Perth,Fremantle Oval,1920-06-26,East Fremantle 11.13 (79) def. Perth 7.7 (49),128,30,,East Fremantle defeated Perth by 30 points at Fremantle Oval.
+24,Regular Season,Subiaco,East Perth,Subiaco,East Perth,Subiaco Oval,1920-06-26,Subiaco 4.9 (33) def. East Perth 2.16 (28),61,5,,Subiaco defeated East Perth by 5 points at Subiaco Oval.
+25,Regular Season,Perth,South Fremantle,Perth,South Fremantle,WACA,1920-07-01,Perth 9.15 (69) def. South Fremantle 7.8 (50),119,19,,Perth defeated South Fremantle by 19 points at WACA.
+26,Regular Season,West Perth,Subiaco,West Perth,Subiaco,Leederville Oval,1920-07-03,West Perth 9.12 (66) drew with Subiaco 10.6 (66),132,0,,West Perth and Subiaco played out a draw at Leederville Oval.
+27,Regular Season,East Fremantle,East Perth,East Fremantle,East Perth,Fremantle Oval,1920-07-03,East Fremantle 12.7 (79) def. East Perth 5.8 (38),117,41,,East Fremantle defeated East Perth by 41 points at Fremantle Oval.
+28,Regular Season,Perth,Subiaco,Perth,Subiaco,WACA,1920-07-10,Subiaco 9.9 (63) def. Perth 7.9 (51),114,12,,Subiaco defeated Perth by 12 points at WACA.
+29,Regular Season,South Fremantle,East Fremantle,South Fremantle,East Fremantle,Fremantle Oval,1920-07-10,South Fremantle 10.12 (72) def. East Fremantle 4.11 (35),107,37,,South Fremantle defeated East Fremantle by 37 points at Fremantle Oval.
+30,Regular Season,West Perth,East Perth,West Perth,East Perth,Leederville Oval,1920-07-10,East Perth 13.11 (89) def. West Perth 4.10 (34),123,55,,East Perth defeated West Perth by 55 points at Leederville Oval.
+31,Regular Season,Subiaco,South Fremantle,Subiaco,South Fremantle,Subiaco Oval,1920-07-17,Subiaco 5.12 (42) def. South Fremantle 5.6 (36),78,6,,Subiaco defeated South Fremantle by 6 points at Subiaco Oval.
+32,Regular Season,East Fremantle,West Perth,East Fremantle,West Perth,Fremantle Oval,1920-07-17,East Fremantle 9.14 (68) def. West Perth 5.7 (37),105,31,,East Fremantle defeated West Perth by 31 points at Fremantle Oval.
+33,Regular Season,East Perth,Perth,East Perth,Perth,Perth Oval,1920-07-17,Perth 6.12 (48) def. East Perth 4.8 (32),80,16,,Perth defeated East Perth by 16 points at Perth Oval.
+34,Regular Season,Perth,West Perth,Perth,West Perth,WACA,1920-07-24,Perth 11.13 (79) def. West Perth 8.11 (59),138,20,,Perth defeated West Perth by 20 points at WACA.
+35,Regular Season,South Fremantle,East Perth,South Fremantle,East Perth,Fremantle Oval,1920-07-24,East Perth 5.18 (48) def. South Fremantle 7.5 (47),95,1,,East Perth defeated South Fremantle by 1 points at Fremantle Oval.
+36,Regular Season,Subiaco,East Fremantle,Subiaco,East Fremantle,Subiaco Oval,1920-07-24,East Fremantle 9.9 (63) def. Subiaco 6.9 (45),108,18,,East Fremantle defeated Subiaco by 18 points at Subiaco Oval.
+37,Regular Season,East Fremantle,Perth,East Fremantle,Perth,Fremantle Oval,1920-08-07,East Fremantle 8.10 (58) def. Perth 5.11 (41),99,17,,East Fremantle defeated Perth by 17 points at Fremantle Oval.
+38,Regular Season,East Perth,Subiaco,East Perth,Subiaco,Perth Oval,1920-08-07,East Perth 2.8 (20) def. Subiaco 0.2 (2),22,18,,East Perth defeated Subiaco by 18 points at Perth Oval.
+39,Regular Season,West Perth,South Fremantle,West Perth,South Fremantle,Leederville Oval,1920-08-07,West Perth 8.14 (62) def. South Fremantle 4.8 (32),94,30,,West Perth defeated South Fremantle by 30 points at Leederville Oval.
+40,Regular Season,Perth,South Fremantle,Perth,South Fremantle,WACA,1920-08-28,Perth 9.12 (66) def. South Fremantle 5.14 (44),110,22,,Perth defeated South Fremantle by 22 points at WACA.
+41,Regular Season,West Perth,Subiaco,West Perth,Subiaco,Leederville Oval,1920-08-28,West Perth 9.13 (67) def. Subiaco 10.6 (66),133,1,,West Perth defeated Subiaco by 1 points at Leederville Oval.
+42,Regular Season,East Perth,East Fremantle,East Perth,East Fremantle,Subiaco Oval,1920-08-28,East Fremantle 5.12 (42) def. East Perth 4.15 (39),81,3,,East Fremantle defeated East Perth by 3 points at Subiaco Oval.
+43,Regular Season,East Fremantle,South Fremantle,East Fremantle,South Fremantle,Fremantle Oval,1920-09-04,East Fremantle 11.21 (87) def. South Fremantle 8.4 (52),139,35,,East Fremantle defeated South Fremantle by 35 points at Fremantle Oval.
+44,Regular Season,East Perth,West Perth,East Perth,West Perth,Perth Oval,1920-09-04,East Perth 11.16 (82) def. West Perth 4.1 (25),107,57,,East Perth defeated West Perth by 57 points at Perth Oval.
+45,Regular Season,Subiaco,Perth,Subiaco,Perth,Subiaco Oval,1920-09-04,Perth 6.9 (45) def. Subiaco 5.7 (37),82,8,,Perth defeated Subiaco by 8 points at Subiaco Oval.
+46,Finals,Perth,East Perth,Perth,East Perth,Fremantle Oval,1920-09-11,East Perth 5.13 (43) def. Perth 5.9 (39),82,4,,East Perth defeated Perth by 4 points at Fremantle Oval.
+47,Finals,Subiaco,East Fremantle,Subiaco,East Fremantle,Perth Oval,1920-09-18,East Fremantle 8.10 (58) def. Subiaco 5.11 (41),99,17,,East Fremantle defeated Subiaco by 17 points at Perth Oval.
+48,Grand Final,East Perth,East Fremantle,East Perth,East Fremantle,WACA,1920-09-25,East Perth 6.16 (52) def. East Fremantle 4.6 (30),82,22,,East Perth defeated East Fremantle by 22 points at WACA.

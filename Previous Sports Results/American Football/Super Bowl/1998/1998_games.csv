@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Green Bay Packers,Denver Broncos,Green Bay Packers,Denver Broncos,Qualcomm Stadium,1998-01-25,Denver Broncos 31 def. Green Bay Packers 24,55,7,,"Denver Broncos won Super Bowl XXXII, defeating Green Bay Packers 31-24 at Qualcomm Stadium."

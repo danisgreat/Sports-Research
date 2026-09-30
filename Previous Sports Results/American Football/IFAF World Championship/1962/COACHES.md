@@ -1,4 +1,4 @@
 # IFAF World Championship Coaching Staff — 1962 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 1999. No official coaching staffs, managerial appointments, or teams existed in 1962.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** IFAF World Championship not yet founded (inaugural championship in 1999).

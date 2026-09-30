@@ -1,3 +1,4 @@
 # NFL Coaching Staff — 1904 Season
 
-- **Status:** INACTIVE. The NFL was founded in 1920. No NFL coaching staffs existed in 1904.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** National Football League (originally APFA) not yet founded (inaugural season held in 1920).

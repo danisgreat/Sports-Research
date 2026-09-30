@@ -1,1 +1,120 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Glenferrie Oval,1948-04-17,Carlton 17.15 (117) def. Hawthorn 11.10 (76),193,41,,Carlton defeated Hawthorn by 41 points at Glenferrie Oval.
+2,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1948-04-17,Collingwood 11.20 (86) def. North Melbourne 9.12 (66),152,20,,Collingwood defeated North Melbourne by 20 points at Arden St.
+3,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1948-04-17,Essendon 13.18 (96) def. Melbourne 12.5 (77),173,19,,Essendon defeated Melbourne by 19 points at M.C.G..
+4,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1948-04-17,Fitzroy 13.14 (92) def. Geelong 9.16 (70),162,22,,Fitzroy defeated Geelong by 22 points at Brunswick St.
+5,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1948-04-17,Western Bulldogs 21.19 (145) def. St Kilda 9.11 (65),210,80,,Western Bulldogs defeated St Kilda by 80 points at Western Oval.
+6,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1948-04-17,Sydney 18.15 (123) def. Richmond 17.6 (108),231,15,,Sydney defeated Richmond by 15 points at Lake Oval.
+7,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1948-04-24,Fitzroy 10.18 (78) def. Carlton 8.10 (58),136,20,,Fitzroy defeated Carlton by 20 points at Princes Park.
+8,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Punt Rd,1948-04-24,Richmond 20.12 (132) def. Western Bulldogs 8.9 (57),189,75,,Richmond defeated Western Bulldogs by 75 points at Punt Rd.
+9,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1948-04-24,Geelong 15.17 (107) def. North Melbourne 10.8 (68),175,39,,Geelong defeated North Melbourne by 39 points at Kardinia Park.
+10,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1948-04-24,Melbourne 11.13 (79) def. St Kilda 7.6 (48),127,31,,Melbourne defeated St Kilda by 31 points at Junction Oval.
+11,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1948-04-26,Collingwood 18.17 (125) def. Sydney 10.12 (72),197,53,,Collingwood defeated Sydney by 53 points at Victoria Park.
+12,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1948-04-26,Essendon 11.16 (82) def. Hawthorn 8.11 (59),141,23,,Essendon defeated Hawthorn by 23 points at Windy Hill.
+13,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1948-05-01,Carlton 13.11 (89) def. Geelong 12.15 (87),176,2,,Carlton defeated Geelong by 2 points at Kardinia Park.
+14,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1948-05-01,Essendon 16.12 (108) def. Collingwood 14.9 (93),201,15,,Essendon defeated Collingwood by 15 points at Windy Hill.
+15,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1948-05-01,Fitzroy 12.14 (86) def. Melbourne 6.12 (48),134,38,,Fitzroy defeated Melbourne by 38 points at M.C.G..
+16,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1948-05-01,Western Bulldogs 12.12 (84) def. Hawthorn 6.9 (45),129,39,,Western Bulldogs defeated Hawthorn by 39 points at Western Oval.
+17,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1948-05-01,Sydney 13.16 (94) def. North Melbourne 10.11 (71),165,23,,Sydney defeated North Melbourne by 23 points at Arden St.
+18,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Junction Oval,1948-05-01,Richmond 15.16 (106) def. St Kilda 11.12 (78),184,28,,Richmond defeated St Kilda by 28 points at Junction Oval.
+19,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1948-05-08,Western Bulldogs 15.8 (98) def. Carlton 12.24 (96),194,2,,Western Bulldogs defeated Carlton by 2 points at Princes Park.
+20,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1948-05-08,Collingwood 18.13 (121) def. Geelong 13.10 (88),209,33,,Collingwood defeated Geelong by 33 points at Victoria Park.
+21,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1948-05-08,Essendon 20.20 (140) def. Sydney 11.12 (78),218,62,,Essendon defeated Sydney by 62 points at Lake Oval.
+22,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1948-05-08,Fitzroy 19.14 (128) def. St Kilda 6.8 (44),172,84,,Fitzroy defeated St Kilda by 84 points at Brunswick St.
+23,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1948-05-08,Hawthorn 14.21 (105) def. North Melbourne 11.15 (81),186,24,,Hawthorn defeated North Melbourne by 24 points at Glenferrie Oval.
+24,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1948-05-08,Melbourne 13.11 (89) def. Richmond 12.12 (84),173,5,,Melbourne defeated Richmond by 5 points at Punt Rd.
+25,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1948-05-15,Collingwood 8.17 (65) def. Carlton 9.9 (63),128,2,,Collingwood defeated Carlton by 2 points at Victoria Park.
+26,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1948-05-15,Essendon 13.17 (95) drew with Richmond 14.11 (95),190,0,,Essendon and Richmond played out a draw at Windy Hill.
+27,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1948-05-15,Fitzroy 15.19 (109) def. Hawthorn 6.11 (47),156,62,,Fitzroy defeated Hawthorn by 62 points at Brunswick St.
+28,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1948-05-15,Geelong 11.13 (79) def. Western Bulldogs 8.10 (58),137,21,,Geelong defeated Western Bulldogs by 21 points at Kardinia Park.
+29,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1948-05-15,Melbourne 14.11 (95) def. North Melbourne 6.14 (50),145,45,,Melbourne defeated North Melbourne by 45 points at M.C.G..
+30,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1948-05-15,Sydney 14.23 (107) def. St Kilda 12.12 (84),191,23,,Sydney defeated St Kilda by 23 points at Junction Oval.
+31,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1948-05-22,Essendon 19.7 (121) def. Carlton 14.9 (93),214,28,,Essendon defeated Carlton by 28 points at Princes Park.
+32,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1948-05-22,Richmond 21.14 (140) def. Collingwood 9.21 (75),215,65,,Richmond defeated Collingwood by 65 points at Punt Rd.
+33,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1948-05-22,Western Bulldogs 10.11 (71) def. Fitzroy 9.10 (64),135,7,,Western Bulldogs defeated Fitzroy by 7 points at Western Oval.
+34,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1948-05-22,Hawthorn 17.10 (112) def. Geelong 12.3 (75),187,37,,Hawthorn defeated Geelong by 37 points at Glenferrie Oval.
+35,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1948-05-22,Melbourne 15.15 (105) def. Sydney 9.5 (59),164,46,,Melbourne defeated Sydney by 46 points at Lake Oval.
+36,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1948-05-22,North Melbourne 12.16 (88) def. St Kilda 9.10 (64),152,24,,North Melbourne defeated St Kilda by 24 points at Arden St.
+37,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1948-05-29,Melbourne 15.12 (102) def. Carlton 7.9 (51),153,51,,Melbourne defeated Carlton by 51 points at M.C.G..
+38,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1948-05-29,Collingwood 10.18 (78) def. St Kilda 4.12 (36),114,42,,Collingwood defeated St Kilda by 42 points at Junction Oval.
+39,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1948-05-29,Geelong 14.15 (99) def. Essendon 12.11 (83),182,16,,Geelong defeated Essendon by 16 points at Windy Hill.
+40,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1948-05-29,Fitzroy 9.20 (74) def. North Melbourne 7.8 (50),124,24,,Fitzroy defeated North Melbourne by 24 points at Brunswick St.
+41,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1948-05-29,Western Bulldogs 8.12 (60) def. Sydney 3.10 (28),88,32,,Western Bulldogs defeated Sydney by 32 points at Western Oval.
+42,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Glenferrie Oval,1948-05-29,Richmond 12.14 (86) def. Hawthorn 9.11 (65),151,21,,Richmond defeated Hawthorn by 21 points at Glenferrie Oval.
+43,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1948-06-05,Richmond 13.10 (88) def. Carlton 9.21 (75),163,13,,Richmond defeated Carlton by 13 points at Punt Rd.
+44,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1948-06-05,Collingwood 11.17 (83) def. Melbourne 11.10 (76),159,7,,Collingwood defeated Melbourne by 7 points at Victoria Park.
+45,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1948-06-05,Fitzroy 12.8 (80) def. Essendon 9.10 (64),144,16,,Fitzroy defeated Essendon by 16 points at Brunswick St.
+46,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1948-06-05,North Melbourne 11.6 (72) def. Western Bulldogs 8.9 (57),129,15,,North Melbourne defeated Western Bulldogs by 15 points at Arden St.
+47,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1948-06-05,Sydney 19.12 (126) def. Geelong 15.16 (106),232,20,,Sydney defeated Geelong by 20 points at Kardinia Park.
+48,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1948-06-05,Hawthorn 10.12 (72) def. St Kilda 7.12 (54),126,18,,Hawthorn defeated St Kilda by 18 points at Junction Oval.
+49,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1948-06-12,Collingwood 12.27 (99) def. Hawthorn 8.8 (56),155,43,,Collingwood defeated Hawthorn by 43 points at Glenferrie Oval.
+50,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1948-06-12,Essendon 12.14 (86) def. North Melbourne 4.8 (32),118,54,,Essendon defeated North Melbourne by 54 points at Windy Hill.
+51,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1948-06-12,Fitzroy 15.11 (101) def. Sydney 9.12 (66),167,35,,Fitzroy defeated Sydney by 35 points at Lake Oval.
+52,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1948-06-14,Carlton 12.12 (84) def. St Kilda 7.18 (60),144,24,,Carlton defeated St Kilda by 24 points at Princes Park.
+53,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1948-06-14,Western Bulldogs 11.9 (75) def. Melbourne 9.14 (68),143,7,,Western Bulldogs defeated Melbourne by 7 points at Western Oval.
+54,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1948-06-14,Richmond 15.14 (104) def. Geelong 14.19 (103),207,1,,Richmond defeated Geelong by 1 points at Punt Rd.
+55,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1948-06-19,Carlton 23.11 (149) def. Sydney 13.9 (87),236,62,,Carlton defeated Sydney by 62 points at Lake Oval.
+56,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1948-06-19,Collingwood 15.12 (102) def. Fitzroy 13.7 (85),187,17,,Collingwood defeated Fitzroy by 17 points at Victoria Park.
+57,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1948-06-19,Essendon 18.12 (120) def. Western Bulldogs 4.14 (38),158,82,,Essendon defeated Western Bulldogs by 82 points at Windy Hill.
+58,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1948-06-19,Geelong 21.13 (139) def. St Kilda 9.9 (63),202,76,,Geelong defeated St Kilda by 76 points at Kardinia Park.
+59,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1948-06-19,Melbourne 18.12 (120) def. Hawthorn 11.13 (79),199,41,,Melbourne defeated Hawthorn by 41 points at M.C.G..
+60,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1948-06-19,North Melbourne 14.6 (90) def. Richmond 9.16 (70),160,20,,North Melbourne defeated Richmond by 20 points at Arden St.
+61,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1948-07-03,North Melbourne 14.10 (94) def. Carlton 10.23 (83),177,11,,North Melbourne defeated Carlton by 11 points at Princes Park.
+62,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1948-07-03,Collingwood 19.9 (123) def. Western Bulldogs 10.11 (71),194,52,,Collingwood defeated Western Bulldogs by 52 points at Western Oval.
+63,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1948-07-03,Essendon 17.22 (124) def. St Kilda 11.6 (72),196,52,,Essendon defeated St Kilda by 52 points at Junction Oval.
+64,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1948-07-03,Fitzroy 19.20 (134) def. Richmond 14.11 (95),229,39,,Fitzroy defeated Richmond by 39 points at Brunswick St.
+65,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1948-07-03,Melbourne 9.17 (71) def. Geelong 8.9 (57),128,14,,Melbourne defeated Geelong by 14 points at M.C.G..
+66,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1948-07-03,Sydney 12.15 (87) def. Hawthorn 9.7 (61),148,26,,Sydney defeated Hawthorn by 26 points at Glenferrie Oval.
+67,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1948-07-10,Carlton 17.10 (112) def. Hawthorn 10.9 (69),181,43,,Carlton defeated Hawthorn by 43 points at Princes Park.
+68,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1948-07-10,Collingwood 19.13 (127) def. North Melbourne 10.11 (71),198,56,,Collingwood defeated North Melbourne by 56 points at Victoria Park.
+69,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1948-07-10,Essendon 13.13 (91) def. Melbourne 9.11 (65),156,26,,Essendon defeated Melbourne by 26 points at Windy Hill.
+70,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1948-07-10,Geelong 13.9 (87) def. Fitzroy 9.17 (71),158,16,,Geelong defeated Fitzroy by 16 points at Kardinia Park.
+71,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1948-07-10,Western Bulldogs 13.13 (91) def. St Kilda 7.11 (53),144,38,,Western Bulldogs defeated St Kilda by 38 points at Junction Oval.
+72,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1948-07-10,Richmond 21.18 (144) def. Sydney 9.13 (67),211,77,,Richmond defeated Sydney by 77 points at Punt Rd.
+73,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1948-07-17,Carlton 16.17 (113) def. Fitzroy 12.12 (84),197,29,,Carlton defeated Fitzroy by 29 points at Brunswick St.
+74,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1948-07-17,Collingwood 13.16 (94) def. Sydney 10.12 (72),166,22,,Collingwood defeated Sydney by 22 points at Lake Oval.
+75,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1948-07-17,Essendon 18.14 (122) def. Hawthorn 9.12 (66),188,56,,Essendon defeated Hawthorn by 56 points at Glenferrie Oval.
+76,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1948-07-17,Richmond 12.9 (81) def. Western Bulldogs 10.14 (74),155,7,,Richmond defeated Western Bulldogs by 7 points at Western Oval.
+77,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1948-07-17,Geelong 10.15 (75) def. North Melbourne 10.8 (68),143,7,,Geelong defeated North Melbourne by 7 points at Arden St.
+78,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1948-07-17,Melbourne 24.19 (163) def. St Kilda 8.10 (58),221,105,,Melbourne defeated St Kilda by 105 points at M.C.G..
+79,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1948-07-24,Carlton 24.9 (153) def. Geelong 9.8 (62),215,91,,Carlton defeated Geelong by 91 points at Princes Park.
+80,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1948-07-24,Essendon 16.11 (107) def. Collingwood 12.13 (85),192,22,,Essendon defeated Collingwood by 22 points at Victoria Park.
+81,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1948-07-24,Melbourne 17.11 (113) def. Fitzroy 11.11 (77),190,36,,Melbourne defeated Fitzroy by 36 points at Brunswick St.
+82,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1948-07-24,Western Bulldogs 11.12 (78) def. Hawthorn 11.7 (73),151,5,,Western Bulldogs defeated Hawthorn by 5 points at Glenferrie Oval.
+83,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1948-07-24,North Melbourne 15.14 (104) def. Sydney 14.18 (102),206,2,,North Melbourne defeated Sydney by 2 points at Lake Oval.
+84,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1948-07-24,Richmond 21.20 (146) def. St Kilda 5.9 (39),185,107,,Richmond defeated St Kilda by 107 points at Punt Rd.
+85,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1948-07-31,Geelong 10.18 (78) def. Collingwood 10.13 (73),151,5,,Geelong defeated Collingwood by 5 points at Kardinia Park.
+86,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1948-07-31,St Kilda 11.6 (72) def. Fitzroy 9.10 (64),136,8,,St Kilda defeated Fitzroy by 8 points at Junction Oval.
+87,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1948-07-31,North Melbourne 11.18 (84) def. Hawthorn 8.9 (57),141,27,,North Melbourne defeated Hawthorn by 27 points at Arden St.
+88,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1948-08-07,Carlton 15.19 (109) def. Western Bulldogs 4.17 (41),150,68,,Carlton defeated Western Bulldogs by 68 points at Western Oval.
+89,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1948-08-07,Essendon 11.21 (87) def. Sydney 8.11 (59),146,28,,Essendon defeated Sydney by 28 points at Windy Hill.
+90,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1948-08-07,Richmond 15.16 (106) def. Melbourne 6.8 (44),150,62,,Richmond defeated Melbourne by 62 points at M.C.G..
+91,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1948-08-14,Carlton 10.20 (80) def. Collingwood 10.10 (70),150,10,,Carlton defeated Collingwood by 10 points at Princes Park.
+92,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1948-08-14,Essendon 8.10 (58) def. Richmond 8.7 (55),113,3,,Essendon defeated Richmond by 3 points at Punt Rd.
+93,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Glenferrie Oval,1948-08-14,Hawthorn 6.7 (43) def. Fitzroy 4.16 (40),83,3,,Hawthorn defeated Fitzroy by 3 points at Glenferrie Oval.
+94,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1948-08-14,Western Bulldogs 11.25 (91) def. Geelong 7.15 (57),148,34,,Western Bulldogs defeated Geelong by 34 points at Western Oval.
+95,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1948-08-14,Melbourne 10.14 (74) def. North Melbourne 5.12 (42),116,32,,Melbourne defeated North Melbourne by 32 points at Arden St.
+96,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1948-08-14,Sydney 5.11 (41) def. St Kilda 5.9 (39),80,2,,Sydney defeated St Kilda by 2 points at Lake Oval.
+97,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1948-08-21,Essendon 16.15 (111) def. Carlton 11.11 (77),188,34,,Essendon defeated Carlton by 34 points at Windy Hill.
+98,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1948-08-21,Collingwood 15.18 (108) def. Richmond 10.12 (72),180,36,,Collingwood defeated Richmond by 36 points at Victoria Park.
+99,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1948-08-21,Western Bulldogs 11.15 (81) def. Fitzroy 9.9 (63),144,18,,Western Bulldogs defeated Fitzroy by 18 points at Brunswick St.
+100,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1948-08-21,Hawthorn 11.15 (81) def. Geelong 11.14 (80),161,1,,Hawthorn defeated Geelong by 1 points at Kardinia Park.
+101,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1948-08-21,Melbourne 15.13 (103) def. Sydney 7.12 (54),157,49,,Melbourne defeated Sydney by 49 points at M.C.G..
+102,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1948-08-21,North Melbourne 7.19 (61) def. St Kilda 8.10 (58),119,3,,North Melbourne defeated St Kilda by 3 points at Junction Oval.
+103,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1948-08-28,Melbourne 15.11 (101) def. Carlton 13.14 (92),193,9,,Melbourne defeated Carlton by 9 points at Princes Park.
+104,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1948-08-28,Collingwood 15.19 (109) def. St Kilda 11.4 (70),179,39,,Collingwood defeated St Kilda by 39 points at Victoria Park.
+105,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1948-08-28,Essendon 10.12 (72) def. Geelong 9.10 (64),136,8,,Essendon defeated Geelong by 8 points at Kardinia Park.
+106,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1948-08-28,North Melbourne 8.12 (60) def. Fitzroy 6.10 (46),106,14,,North Melbourne defeated Fitzroy by 14 points at Arden St.
+107,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Lake Oval,1948-08-28,Western Bulldogs 14.16 (100) def. Sydney 7.7 (49),149,51,,Western Bulldogs defeated Sydney by 51 points at Lake Oval.
+108,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1948-08-28,Richmond 17.11 (113) def. Hawthorn 9.6 (60),173,53,,Richmond defeated Hawthorn by 53 points at Punt Rd.
+109,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1948-09-04,Carlton 9.21 (75) def. Richmond 9.16 (70),145,5,,Carlton defeated Richmond by 5 points at Princes Park.
+110,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1948-09-04,Melbourne 13.11 (89) def. Collingwood 8.11 (59),148,30,,Melbourne defeated Collingwood by 30 points at M.C.G..
+111,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1948-09-04,Essendon 10.11 (71) def. Fitzroy 7.11 (53),124,18,,Essendon defeated Fitzroy by 18 points at Windy Hill.
+112,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1948-09-04,Western Bulldogs 18.21 (129) def. North Melbourne 11.10 (76),205,53,,Western Bulldogs defeated North Melbourne by 53 points at Western Oval.
+113,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1948-09-04,Sydney 21.15 (141) def. Geelong 6.9 (45),186,96,,Sydney defeated Geelong by 96 points at Lake Oval.
+114,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Glenferrie Oval,1948-09-04,St Kilda 9.13 (67) def. Hawthorn 7.12 (54),121,13,,St Kilda defeated Hawthorn by 13 points at Glenferrie Oval.
+115,Finals,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,1948-09-11,Collingwood 17.17 (119) def. Western Bulldogs 12.12 (84),203,35,,Collingwood defeated Western Bulldogs by 35 points at M.C.G..
+116,Finals,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,1948-09-18,Essendon 13.16 (94) def. Melbourne 8.10 (58),152,36,,Essendon defeated Melbourne by 36 points at M.C.G..
+117,Finals,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1948-09-25,Melbourne 25.16 (166) def. Collingwood 15.11 (101),267,65,,Melbourne defeated Collingwood by 65 points at M.C.G..
+118,Grand Final,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1948-10-02,Melbourne 10.9 (69) drew with Essendon 7.27 (69),138,0,,Melbourne and Essendon played out a draw at M.C.G..
+119,Grand Final,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1948-10-09,Melbourne 13.11 (89) def. Essendon 7.8 (50),139,39,,Melbourne defeated Essendon by 39 points at M.C.G..

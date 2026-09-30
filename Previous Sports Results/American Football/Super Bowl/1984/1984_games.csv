@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Washington Redskins,Los Angeles Raiders,Washington Redskins,Los Angeles Raiders,Tampa Stadium,1984-01-22,Los Angeles Raiders 38 def. Washington Redskins 9,47,29,,"Los Angeles Raiders won Super Bowl XVIII, defeating Washington Redskins 38-9 at Tampa Stadium."

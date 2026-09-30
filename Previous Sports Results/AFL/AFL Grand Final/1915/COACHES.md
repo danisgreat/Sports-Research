@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1915 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1915
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1915.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1915 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Carlton
+- **Premiership Coach:** Norman Clark
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Jock McHale
+- **Grand Final Result:** Carlton 11.12 (78) def. Collingwood 6.9 (45)
+- **Winning Margin:** 33 points
+- **Match Date:** 1915-09-18
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 39,343 spectators
+
+## Match Summary & Tactical Notes
+Carlton retained the premiership, overpowering rivals Collingwood by 33 points.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

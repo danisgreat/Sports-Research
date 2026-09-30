@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1991 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1991
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1991.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1991 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Hawthorn
+- **Premiership Coach:** Alan Joyce
+- **Runners-up:** West Coast Eagles
+- **Runners-up Coach:** Mick Malthouse
+- **Grand Final Result:** Hawthorn 20.19 (139) def. West Coast Eagles 13.8 (86)
+- **Winning Margin:** 53 points
+- **Match Date:** 1991-09-28
+- **Venue:** align=left | VFL Park
+- **Official Attendance:** 75,230 spectators
+
+## Match Summary & Tactical Notes
+Hawthorn won the only Grand Final played at Waverley Park, defeating West Coast by 53 points behind Paul Dear.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

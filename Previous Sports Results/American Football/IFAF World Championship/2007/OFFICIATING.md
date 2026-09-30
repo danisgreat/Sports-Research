@@ -1,12 +1,13 @@
-# IFAF World Championship Officiating & Refereeing Corps — 2007 Season
+# IFAF World Championship Officiating & Referee Corps — 2007 Tournament
 
-- **Sport:** American Football
-- **Competition:** IFAF World Championship
-- **Season:** 2007
-- **Governing Body:** International Federation of American Football (IFAF)
+- **Sport:** American Football (International)
+- **Competition:** IFAF World Championship of American Football
+- **Edition:** 2007 World Championship
 
-## Officiating Structure & Adjudication
-- **Appointed Officials:** IFAF International Officiating Crew (Referee, Umpire, Linesman, Line Judge, Back/Field/Side Judge).
-- **Championship Appointments:** Lead match adjudicators and senior officials selected for finals and marquee tournament fixtures based on merit and performance evaluations.
-- **Rule Framework & Interpretations:** Strict enforcement of the 2007 rules of the game, procedural updates, and points of emphasis issued by International Federation of American Football (IFAF).
-- **Technology & Review Systems:** Early television broadcast reviews, fourth-official technology, and initial electronic decision support systems.
+## International Officiating Delegation & Governance
+- **Officiating Governance:** International Federation of American Football (IFAF) Officiating Committee
+- **Rules Adaptation:** Adjudicated under NCAA / IFAF modified football rules with multinational neutral referee crews.
+- **Host Location:** Todoroki Athletics Stadium (Kawasaki, Japan)
+- **Gold Medal Game Adjudication:** Championship final officiated by an international senior officiating crew.
+
+- **Sources:** IFAF Technical and Officiating Committee; International American Football Referees Association.

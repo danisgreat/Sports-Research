@@ -1,1 +1,119 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1947-04-19,Carlton 17.20 (122) def. Melbourne 16.13 (109),231,13,,Carlton defeated Melbourne by 13 points at Princes Park.
+2,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1947-04-19,Collingwood 20.18 (138) def. Fitzroy 14.8 (92),230,46,,Collingwood defeated Fitzroy by 46 points at Victoria Park.
+3,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1947-04-19,Essendon 16.23 (119) def. Sydney 10.8 (68),187,51,,Essendon defeated Sydney by 51 points at Windy Hill.
+4,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1947-04-19,Western Bulldogs 22.17 (149) def. St Kilda 12.16 (88),237,61,,Western Bulldogs defeated St Kilda by 61 points at Junction Oval.
+5,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1947-04-19,Geelong 19.15 (129) def. Hawthorn 12.12 (84),213,45,,Geelong defeated Hawthorn by 45 points at Kardinia Park.
+6,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Punt Rd,1947-04-19,Richmond 18.27 (135) def. North Melbourne 15.14 (104),239,31,,Richmond defeated North Melbourne by 31 points at Punt Rd.
+7,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1947-04-26,Sydney 12.12 (84) def. Carlton 9.16 (70),154,14,,Sydney defeated Carlton by 14 points at Lake Oval.
+8,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1947-04-26,Collingwood 19.20 (134) def. Hawthorn 13.9 (87),221,47,,Collingwood defeated Hawthorn by 47 points at Glenferrie Oval.
+9,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1947-04-26,Western Bulldogs 15.13 (103) def. Essendon 13.11 (89),192,14,,Western Bulldogs defeated Essendon by 14 points at Western Oval.
+10,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1947-04-26,Fitzroy 13.22 (100) def. Richmond 11.11 (77),177,23,,Fitzroy defeated Richmond by 23 points at Brunswick St.
+11,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1947-04-26,Melbourne 14.25 (109) def. Geelong 11.7 (73),182,36,,Melbourne defeated Geelong by 36 points at M.C.G..
+12,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1947-04-26,St Kilda 8.13 (61) def. North Melbourne 8.11 (59),120,2,,St Kilda defeated North Melbourne by 2 points at Arden St.
+13,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1947-05-03,Carlton 17.19 (121) def. Richmond 5.18 (48),169,73,,Carlton defeated Richmond by 73 points at Punt Rd.
+14,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1947-05-03,Collingwood 14.24 (108) def. Geelong 12.17 (89),197,19,,Collingwood defeated Geelong by 19 points at Kardinia Park.
+15,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1947-05-03,Essendon 21.10 (136) def. St Kilda 19.11 (125),261,11,,Essendon defeated St Kilda by 11 points at Windy Hill.
+16,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1947-05-03,Fitzroy 12.20 (92) def. Melbourne 12.11 (83),175,9,,Fitzroy defeated Melbourne by 9 points at Brunswick St.
+17,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1947-05-03,Western Bulldogs 20.14 (134) def. Hawthorn 12.10 (82),216,52,,Western Bulldogs defeated Hawthorn by 52 points at Glenferrie Oval.
+18,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1947-05-03,North Melbourne 12.10 (82) def. Sydney 10.18 (78),160,4,,North Melbourne defeated Sydney by 4 points at Lake Oval.
+19,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1947-05-10,Carlton 16.16 (112) def. Western Bulldogs 7.16 (58),170,54,,Carlton defeated Western Bulldogs by 54 points at Princes Park.
+20,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1947-05-10,Collingwood 19.24 (138) def. Sydney 12.14 (86),224,52,,Collingwood defeated Sydney by 52 points at Victoria Park.
+21,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1947-05-10,Essendon 16.19 (115) def. Geelong 11.17 (83),198,32,,Essendon defeated Geelong by 32 points at Kardinia Park.
+22,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1947-05-10,Fitzroy 19.26 (140) def. North Melbourne 4.15 (39),179,101,,Fitzroy defeated North Melbourne by 101 points at Arden St.
+23,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1947-05-10,Hawthorn 12.12 (84) def. St Kilda 10.17 (77),161,7,,Hawthorn defeated St Kilda by 7 points at Junction Oval.
+24,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1947-05-10,Melbourne 18.12 (120) def. Richmond 10.12 (72),192,48,,Melbourne defeated Richmond by 48 points at Punt Rd.
+25,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1947-05-17,Carlton 14.7 (91) def. Essendon 8.16 (64),155,27,,Carlton defeated Essendon by 27 points at Windy Hill.
+26,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1947-05-17,Melbourne 15.5 (95) def. Collingwood 9.16 (70),165,25,,Melbourne defeated Collingwood by 25 points at M.C.G..
+27,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1947-05-17,Fitzroy 19.18 (132) def. St Kilda 7.14 (56),188,76,,Fitzroy defeated St Kilda by 76 points at Brunswick St.
+28,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1947-05-17,Western Bulldogs 17.18 (120) def. North Melbourne 11.13 (79),199,41,,Western Bulldogs defeated North Melbourne by 41 points at Western Oval.
+29,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1947-05-17,Geelong 15.16 (106) def. Sydney 13.9 (87),193,19,,Geelong defeated Sydney by 19 points at Lake Oval.
+30,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Glenferrie Oval,1947-05-17,Hawthorn 16.11 (107) def. Richmond 10.9 (69),176,38,,Hawthorn defeated Richmond by 38 points at Glenferrie Oval.
+31,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1947-05-24,Carlton 23.17 (155) def. St Kilda 7.11 (53),208,102,,Carlton defeated St Kilda by 102 points at Junction Oval.
+32,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1947-05-24,Western Bulldogs 13.12 (90) def. Collingwood 10.16 (76),166,14,,Western Bulldogs defeated Collingwood by 14 points at Western Oval.
+33,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1947-05-24,North Melbourne 15.12 (102) def. Essendon 14.10 (94),196,8,,North Melbourne defeated Essendon by 8 points at Arden St.
+34,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1947-05-24,Sydney 15.11 (101) def. Fitzroy 8.15 (63),164,38,,Sydney defeated Fitzroy by 38 points at Brunswick St.
+35,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1947-05-24,Richmond 18.18 (126) def. Geelong 11.11 (77),203,49,,Richmond defeated Geelong by 49 points at Punt Rd.
+36,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1947-05-24,Melbourne 12.9 (81) def. Hawthorn 9.12 (66),147,15,,Melbourne defeated Hawthorn by 15 points at Glenferrie Oval.
+37,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1947-05-31,Carlton 13.21 (99) def. North Melbourne 11.14 (80),179,19,,Carlton defeated North Melbourne by 19 points at Princes Park.
+38,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1947-05-31,Richmond 10.14 (74) def. Collingwood 10.13 (73),147,1,,Richmond defeated Collingwood by 1 points at Victoria Park.
+39,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1947-05-31,Essendon 11.17 (83) def. Fitzroy 10.14 (74),157,9,,Essendon defeated Fitzroy by 9 points at Windy Hill.
+40,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1947-05-31,Melbourne 17.3 (105) def. Western Bulldogs 15.8 (98),203,7,,Melbourne defeated Western Bulldogs by 7 points at M.C.G..
+41,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1947-05-31,Geelong 7.12 (54) def. St Kilda 6.13 (49),103,5,,Geelong defeated St Kilda by 5 points at Kardinia Park.
+42,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1947-05-31,Sydney 15.14 (104) def. Hawthorn 12.20 (92),196,12,,Sydney defeated Hawthorn by 12 points at Lake Oval.
+43,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1947-06-07,Carlton 16.21 (117) def. Geelong 7.10 (52),169,65,,Carlton defeated Geelong by 65 points at Princes Park.
+44,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1947-06-07,Collingwood 11.16 (82) def. Essendon 9.14 (68),150,14,,Collingwood defeated Essendon by 14 points at Windy Hill.
+45,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1947-06-07,Western Bulldogs 12.11 (83) def. Fitzroy 7.7 (49),132,34,,Western Bulldogs defeated Fitzroy by 34 points at Western Oval.
+46,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1947-06-07,Hawthorn 10.15 (75) def. North Melbourne 10.11 (71),146,4,,Hawthorn defeated North Melbourne by 4 points at Glenferrie Oval.
+47,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1947-06-07,Melbourne 15.15 (105) def. St Kilda 5.13 (43),148,62,,Melbourne defeated St Kilda by 62 points at M.C.G..
+48,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1947-06-07,Richmond 15.13 (103) def. Sydney 15.9 (99),202,4,,Richmond defeated Sydney by 4 points at Lake Oval.
+49,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1947-06-14,Essendon 18.17 (125) def. Richmond 7.14 (56),181,69,,Essendon defeated Richmond by 69 points at Punt Rd.
+50,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1947-06-14,Fitzroy 16.15 (111) def. Hawthorn 8.14 (62),173,49,,Fitzroy defeated Hawthorn by 49 points at Brunswick St.
+51,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1947-06-14,Geelong 16.7 (103) def. Western Bulldogs 11.20 (86),189,17,,Geelong defeated Western Bulldogs by 17 points at Kardinia Park.
+52,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1947-06-14,Melbourne 11.15 (81) def. North Melbourne 9.6 (60),141,21,,Melbourne defeated North Melbourne by 21 points at Arden St.
+53,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1947-06-16,Collingwood 16.16 (112) def. Carlton 13.8 (86),198,26,,Collingwood defeated Carlton by 26 points at Victoria Park.
+54,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1947-06-16,Sydney 18.13 (121) def. St Kilda 11.9 (75),196,46,,Sydney defeated St Kilda by 46 points at Junction Oval.
+55,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1947-06-21,Carlton 10.8 (68) def. Fitzroy 8.7 (55),123,13,,Carlton defeated Fitzroy by 13 points at Brunswick St.
+56,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1947-06-21,Collingwood 15.20 (110) def. St Kilda 9.13 (67),177,43,,Collingwood defeated St Kilda by 43 points at Junction Oval.
+57,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1947-06-21,Essendon 18.20 (128) def. Hawthorn 6.9 (45),173,83,,Essendon defeated Hawthorn by 83 points at Glenferrie Oval.
+58,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1947-06-21,Richmond 10.12 (72) def. Western Bulldogs 4.17 (41),113,31,,Richmond defeated Western Bulldogs by 31 points at Western Oval.
+59,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1947-06-21,Geelong 18.11 (119) def. North Melbourne 13.8 (86),205,33,,Geelong defeated North Melbourne by 33 points at Arden St.
+60,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1947-06-21,Sydney 9.15 (69) def. Melbourne 8.11 (59),128,10,,Sydney defeated Melbourne by 10 points at M.C.G..
+61,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1947-06-28,Carlton 18.17 (125) def. Hawthorn 8.14 (62),187,63,,Carlton defeated Hawthorn by 63 points at Princes Park.
+62,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1947-06-28,Collingwood 14.19 (103) def. North Melbourne 9.15 (69),172,34,,Collingwood defeated North Melbourne by 34 points at Victoria Park.
+63,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1947-06-28,Essendon 12.13 (85) def. Melbourne 10.15 (75),160,10,,Essendon defeated Melbourne by 10 points at Windy Hill.
+64,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1947-06-28,Fitzroy 11.15 (81) def. Geelong 10.10 (70),151,11,,Fitzroy defeated Geelong by 11 points at Kardinia Park.
+65,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Lake Oval,1947-06-28,Sydney 15.9 (99) def. Western Bulldogs 12.10 (82),181,17,,Sydney defeated Western Bulldogs by 17 points at Lake Oval.
+66,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1947-06-28,Richmond 23.15 (153) def. St Kilda 7.10 (52),205,101,,Richmond defeated St Kilda by 101 points at Punt Rd.
+67,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1947-07-05,Carlton 10.9 (69) def. Melbourne 9.10 (64),133,5,,Carlton defeated Melbourne by 5 points at M.C.G..
+68,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1947-07-05,Fitzroy 9.11 (65) def. Collingwood 7.6 (48),113,17,,Fitzroy defeated Collingwood by 17 points at Brunswick St.
+69,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1947-07-05,Essendon 11.17 (83) def. Sydney 8.14 (62),145,21,,Essendon defeated Sydney by 21 points at Lake Oval.
+70,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1947-07-05,Western Bulldogs 5.14 (44) drew with St Kilda 6.8 (44),88,0,,Western Bulldogs and St Kilda played out a draw at Western Oval.
+71,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1947-07-05,Geelong 16.21 (117) def. Hawthorn 12.11 (83),200,34,,Geelong defeated Hawthorn by 34 points at Glenferrie Oval.
+72,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1947-07-05,Richmond 12.11 (83) def. North Melbourne 4.10 (34),117,49,,Richmond defeated North Melbourne by 49 points at Arden St.
+73,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1947-07-12,Carlton 10.14 (74) def. Sydney 9.16 (70),144,4,,Carlton defeated Sydney by 4 points at Princes Park.
+74,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1947-07-12,Collingwood 8.17 (65) def. Hawthorn 6.9 (45),110,20,,Collingwood defeated Hawthorn by 20 points at Victoria Park.
+75,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1947-07-12,Essendon 10.18 (78) def. Western Bulldogs 8.11 (59),137,19,,Essendon defeated Western Bulldogs by 19 points at Windy Hill.
+76,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1947-07-12,Richmond 12.12 (84) def. Fitzroy 11.12 (78),162,6,,Richmond defeated Fitzroy by 6 points at Punt Rd.
+77,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,1947-07-12,Geelong 16.11 (107) def. Melbourne 5.16 (46),153,61,,Geelong defeated Melbourne by 61 points at Kardinia Park.
+78,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1947-07-12,North Melbourne 13.25 (103) def. St Kilda 8.15 (63),166,40,,North Melbourne defeated St Kilda by 40 points at Junction Oval.
+79,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1947-07-19,Carlton 10.10 (70) def. Richmond 9.9 (63),133,7,,Carlton defeated Richmond by 7 points at Princes Park.
+80,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1947-07-19,Collingwood 12.11 (83) def. Geelong 11.11 (77),160,6,,Collingwood defeated Geelong by 6 points at Victoria Park.
+81,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1947-07-19,Essendon 14.18 (102) def. St Kilda 7.13 (55),157,47,,Essendon defeated St Kilda by 47 points at Junction Oval.
+82,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1947-07-19,Fitzroy 11.8 (74) def. Melbourne 7.10 (52),126,22,,Fitzroy defeated Melbourne by 22 points at M.C.G..
+83,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1947-07-19,Western Bulldogs 13.18 (96) def. Hawthorn 10.7 (67),163,29,,Western Bulldogs defeated Hawthorn by 29 points at Western Oval.
+84,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1947-07-19,Sydney 8.18 (66) def. North Melbourne 8.14 (62),128,4,,Sydney defeated North Melbourne by 4 points at Arden St.
+85,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1947-07-26,Carlton 14.9 (93) def. Western Bulldogs 13.11 (89),182,4,,Carlton defeated Western Bulldogs by 4 points at Western Oval.
+86,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1947-07-26,Sydney 9.15 (69) drew with Collingwood 9.15 (69),138,0,,Sydney and Collingwood played out a draw at Lake Oval.
+87,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1947-07-26,Essendon 16.21 (117) def. Geelong 12.5 (77),194,40,,Essendon defeated Geelong by 40 points at Windy Hill.
+88,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1947-07-26,Fitzroy 16.7 (103) def. North Melbourne 7.14 (56),159,47,,Fitzroy defeated North Melbourne by 47 points at Brunswick St.
+89,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Glenferrie Oval,1947-07-26,Hawthorn 16.18 (114) def. St Kilda 10.9 (69),183,45,,Hawthorn defeated St Kilda by 45 points at Glenferrie Oval.
+90,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1947-07-26,Richmond 11.15 (81) def. Melbourne 10.12 (72),153,9,,Richmond defeated Melbourne by 9 points at M.C.G..
+91,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1947-08-02,Essendon 13.16 (94) def. Carlton 7.12 (54),148,40,,Essendon defeated Carlton by 40 points at Princes Park.
+92,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1947-08-02,Fitzroy 10.17 (77) def. St Kilda 9.9 (63),140,14,,Fitzroy defeated St Kilda by 14 points at Junction Oval.
+93,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1947-08-02,Richmond 13.18 (96) def. Hawthorn 8.7 (55),151,41,,Richmond defeated Hawthorn by 41 points at Punt Rd.
+94,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1947-08-09,Melbourne 7.19 (61) def. Collingwood 7.14 (56),117,5,,Melbourne defeated Collingwood by 5 points at Victoria Park.
+95,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1947-08-09,Western Bulldogs 11.10 (76) def. North Melbourne 10.12 (72),148,4,,Western Bulldogs defeated North Melbourne by 4 points at Arden St.
+96,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1947-08-09,Geelong 13.19 (97) def. Sydney 7.19 (61),158,36,,Geelong defeated Sydney by 36 points at Kardinia Park.
+97,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1947-08-16,Carlton 14.19 (103) def. St Kilda 3.12 (30),133,73,,Carlton defeated St Kilda by 73 points at Princes Park.
+98,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1947-08-16,Collingwood 17.10 (112) def. Western Bulldogs 12.12 (84),196,28,,Collingwood defeated Western Bulldogs by 28 points at Victoria Park.
+99,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1947-08-16,Essendon 19.12 (126) def. North Melbourne 12.14 (86),212,40,,Essendon defeated North Melbourne by 40 points at Windy Hill.
+100,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1947-08-16,Fitzroy 12.10 (82) def. Sydney 10.11 (71),153,11,,Fitzroy defeated Sydney by 11 points at Lake Oval.
+101,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1947-08-16,Geelong 16.19 (115) def. Richmond 13.9 (87),202,28,,Geelong defeated Richmond by 28 points at Kardinia Park.
+102,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1947-08-16,Melbourne 13.21 (99) def. Hawthorn 14.9 (93),192,6,,Melbourne defeated Hawthorn by 6 points at M.C.G..
+103,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1947-08-23,Carlton 14.13 (97) def. North Melbourne 10.12 (72),169,25,,Carlton defeated North Melbourne by 25 points at Arden St.
+104,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1947-08-23,Richmond 20.14 (134) def. Collingwood 8.12 (60),194,74,,Richmond defeated Collingwood by 74 points at Punt Rd.
+105,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1947-08-23,Fitzroy 18.22 (130) def. Essendon 8.14 (62),192,68,,Fitzroy defeated Essendon by 68 points at Brunswick St.
+106,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1947-08-23,Melbourne 24.11 (155) def. Western Bulldogs 11.14 (80),235,75,,Melbourne defeated Western Bulldogs by 75 points at Western Oval.
+107,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1947-08-23,Geelong 15.17 (107) def. St Kilda 10.13 (73),180,34,,Geelong defeated St Kilda by 34 points at Junction Oval.
+108,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1947-08-23,Sydney 19.14 (128) def. Hawthorn 12.11 (83),211,45,,Sydney defeated Hawthorn by 45 points at Glenferrie Oval.
+109,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1947-08-30,Geelong 17.7 (109) def. Carlton 16.11 (107),216,2,,Geelong defeated Carlton by 2 points at Kardinia Park.
+110,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1947-08-30,Essendon 16.12 (108) def. Collingwood 14.17 (101),209,7,,Essendon defeated Collingwood by 7 points at Victoria Park.
+111,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1947-08-30,Fitzroy 20.18 (138) def. Western Bulldogs 10.14 (74),212,64,,Fitzroy defeated Western Bulldogs by 64 points at Brunswick St.
+112,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1947-08-30,North Melbourne 10.14 (74) def. Hawthorn 10.10 (70),144,4,,North Melbourne defeated Hawthorn by 4 points at Arden St.
+113,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1947-08-30,Melbourne 27.9 (171) def. St Kilda 10.18 (78),249,93,,Melbourne defeated St Kilda by 93 points at Junction Oval.
+114,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1947-08-30,Richmond 16.17 (113) def. Sydney 11.13 (79),192,34,,Richmond defeated Sydney by 34 points at Punt Rd.
+115,Finals,Fitzroy,Richmond,Fitzroy,Richmond,M.C.G.,1947-09-06,Fitzroy 16.7 (103) def. Richmond 11.9 (75),178,28,,Fitzroy defeated Richmond by 28 points at M.C.G..
+116,Finals,Carlton,Essendon,Carlton,Essendon,M.C.G.,1947-09-13,Carlton 14.15 (99) def. Essendon 11.17 (83),182,16,,Carlton defeated Essendon by 16 points at M.C.G..
+117,Finals,Essendon,Fitzroy,Essendon,Fitzroy,M.C.G.,1947-09-20,Essendon 16.13 (109) def. Fitzroy 14.12 (96),205,13,,Essendon defeated Fitzroy by 13 points at M.C.G..
+118,Grand Final,Carlton,Essendon,Carlton,Essendon,M.C.G.,1947-09-27,Carlton 13.8 (86) def. Essendon 11.19 (85),171,1,,Carlton defeated Essendon by 1 points at M.C.G..

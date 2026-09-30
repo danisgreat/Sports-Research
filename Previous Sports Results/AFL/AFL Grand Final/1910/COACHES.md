@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1910 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1910
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1910.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1910 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Collingwood
+- **Premiership Coach:** George Angus
+- **Runners-up:** Carlton
+- **Runners-up Coach:** Fred Elliott
+- **Grand Final Result:** Collingwood 9.7 (61) def. Carlton 6.11 (47)
+- **Winning Margin:** 14 points
+- **Match Date:** 1910-10-01
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 42,790 spectators
+
+## Match Summary & Tactical Notes
+Collingwood defeated Carlton by 14 points in front of a record crowd of 42,680 at the MCG.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

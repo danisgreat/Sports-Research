@@ -4,8 +4,25 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1932
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Bob Scott
+
+## Senior Field Umpiring Panel (13 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Bob Scott | 19 | Grand Final |
+| Jack McMurray | 19 | Regular Season / Finals |
+| Gordon Batt | 18 | Regular Season / Finals |
+| Percy Ellingsen | 17 | Regular Season / Finals |
+| Bill Blackburn | 13 | Regular Season / Finals |
+| Reginald Devine | 9 | Regular Season / Finals |
+| William Macbean | 5 | Regular Season / Finals |
+| William Glasson | 3 | Regular Season / Finals |
+| Ernest Pawley | 2 | Regular Season / Finals |
+| Francis McDermott | 2 | Regular Season / Finals |
+| George Frood | 2 | Regular Season / Finals |
+| John Leheny | 2 | Regular Season / Finals |
+| William Waugh | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

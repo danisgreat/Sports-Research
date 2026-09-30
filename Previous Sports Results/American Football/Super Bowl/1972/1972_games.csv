@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Dallas Cowboys,Miami Dolphins,Dallas Cowboys,Miami Dolphins,Tulane Stadium,1972-01-16,Dallas Cowboys 24 def. Miami Dolphins 3,27,21,,"Dallas Cowboys won Super Bowl VI, defeating Miami Dolphins 24-3 at Tulane Stadium."

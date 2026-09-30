@@ -1,1 +1,49 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Perth,Subiaco,Perth,Subiaco,WACA,1922-05-06,Perth 9.16 (70) def. Subiaco 7.8 (50),120,20,,Perth defeated Subiaco by 20 points at WACA.
+2,Regular Season,East Fremantle,South Fremantle,East Fremantle,South Fremantle,Fremantle Oval,1922-05-06,East Fremantle 10.9 (69) def. South Fremantle 9.11 (65),134,4,,East Fremantle defeated South Fremantle by 4 points at Fremantle Oval.
+3,Regular Season,West Perth,East Perth,West Perth,East Perth,Leederville Oval,1922-05-06,East Perth 11.6 (72) def. West Perth 7.7 (49),121,23,,East Perth defeated West Perth by 23 points at Leederville Oval.
+4,Regular Season,Perth,South Fremantle,Perth,South Fremantle,WACA,1922-05-13,South Fremantle 7.4 (46) def. Perth 6.5 (41),87,5,,South Fremantle defeated Perth by 5 points at WACA.
+5,Regular Season,East Fremantle,West Perth,East Fremantle,West Perth,Fremantle Oval,1922-05-13,East Fremantle 6.10 (46) def. West Perth 4.5 (29),75,17,,East Fremantle defeated West Perth by 17 points at Fremantle Oval.
+6,Regular Season,Subiaco,East Perth,Subiaco,East Perth,Subiaco Oval,1922-05-13,Subiaco 6.3 (39) def. East Perth 5.8 (38),77,1,,Subiaco defeated East Perth by 1 points at Subiaco Oval.
+7,Regular Season,East Perth,South Fremantle,East Perth,South Fremantle,Perth Oval,1922-05-20,East Perth 8.15 (63) def. South Fremantle 6.4 (40),103,23,,East Perth defeated South Fremantle by 23 points at Perth Oval.
+8,Regular Season,West Perth,Subiaco,West Perth,Subiaco,Leederville Oval,1922-05-20,West Perth 6.7 (43) def. Subiaco 2.8 (20),63,23,,West Perth defeated Subiaco by 23 points at Leederville Oval.
+9,Regular Season,East Fremantle,Perth,East Fremantle,Perth,Fremantle Oval,1922-05-20,Perth 6.15 (51) def. East Fremantle 7.8 (50),101,1,,Perth defeated East Fremantle by 1 points at Fremantle Oval.
+10,Regular Season,West Perth,Perth,West Perth,Perth,Leederville Oval,1922-05-27,West Perth 10.14 (74) def. Perth 8.11 (59),133,15,,West Perth defeated Perth by 15 points at Leederville Oval.
+11,Regular Season,East Perth,East Fremantle,East Perth,East Fremantle,Perth Oval,1922-05-27,East Perth 11.10 (76) def. East Fremantle 5.8 (38),114,38,,East Perth defeated East Fremantle by 38 points at Perth Oval.
+12,Regular Season,South Fremantle,Subiaco,South Fremantle,Subiaco,Fremantle Oval,1922-05-27,South Fremantle 12.23 (95) def. Subiaco 6.11 (47),142,48,,South Fremantle defeated Subiaco by 48 points at Fremantle Oval.
+13,Regular Season,Subiaco,East Fremantle,Subiaco,East Fremantle,Subiaco Oval,1922-06-03,Subiaco 14.11 (95) def. East Fremantle 14.9 (93),188,2,,Subiaco defeated East Fremantle by 2 points at Subiaco Oval.
+14,Regular Season,South Fremantle,West Perth,South Fremantle,West Perth,Fremantle Oval,1922-06-03,West Perth 11.11 (77) def. South Fremantle 7.14 (56),133,21,,West Perth defeated South Fremantle by 21 points at Fremantle Oval.
+15,Regular Season,Perth,East Perth,Perth,East Perth,WACA,1922-06-05,East Perth 8.23 (71) def. Perth 5.11 (41),112,30,,East Perth defeated Perth by 30 points at WACA.
+16,Regular Season,East Fremantle,South Fremantle,East Fremantle,South Fremantle,Fremantle Oval,1922-06-10,South Fremantle 10.7 (67) def. East Fremantle 9.11 (65),132,2,,South Fremantle defeated East Fremantle by 2 points at Fremantle Oval.
+17,Regular Season,East Perth,West Perth,East Perth,West Perth,Perth Oval,1922-06-10,West Perth 10.9 (69) def. East Perth 6.12 (48),117,21,,West Perth defeated East Perth by 21 points at Perth Oval.
+18,Regular Season,Subiaco,Perth,Subiaco,Perth,Subiaco Oval,1922-06-10,Perth 8.17 (65) def. Subiaco 8.12 (60),125,5,,Perth defeated Subiaco by 5 points at Subiaco Oval.
+19,Regular Season,South Fremantle,Perth,South Fremantle,Perth,Fremantle Oval,1922-06-17,South Fremantle 9.18 (72) def. Perth 8.11 (59),131,13,,South Fremantle defeated Perth by 13 points at Fremantle Oval.
+20,Regular Season,West Perth,East Fremantle,West Perth,East Fremantle,Leederville Oval,1922-06-17,West Perth 10.14 (74) def. East Fremantle 10.5 (65),139,9,,West Perth defeated East Fremantle by 9 points at Leederville Oval.
+21,Regular Season,East Perth,Subiaco,East Perth,Subiaco,Perth Oval,1922-06-17,East Perth 11.18 (84) def. Subiaco 5.12 (42),126,42,,East Perth defeated Subiaco by 42 points at Perth Oval.
+22,Regular Season,Perth,East Fremantle,Perth,East Fremantle,WACA,1922-06-24,East Fremantle 9.15 (69) def. Perth 7.12 (54),123,15,,East Fremantle defeated Perth by 15 points at WACA.
+23,Regular Season,Subiaco,West Perth,Subiaco,West Perth,Subiaco Oval,1922-06-24,West Perth 9.5 (59) def. Subiaco 5.9 (39),98,20,,West Perth defeated Subiaco by 20 points at Subiaco Oval.
+24,Regular Season,South Fremantle,East Perth,South Fremantle,East Perth,Fremantle Oval,1922-06-24,East Perth 12.12 (84) def. South Fremantle 12.11 (83),167,1,,East Perth defeated South Fremantle by 1 points at Fremantle Oval.
+25,Regular Season,Perth,West Perth,Perth,West Perth,WACA,1922-07-01,West Perth 11.9 (75) def. Perth 7.12 (54),129,21,,West Perth defeated Perth by 21 points at WACA.
+26,Regular Season,Subiaco,South Fremantle,Subiaco,South Fremantle,Subiaco Oval,1922-07-01,South Fremantle 13.12 (90) def. Subiaco 6.4 (40),130,50,,South Fremantle defeated Subiaco by 50 points at Subiaco Oval.
+27,Regular Season,East Fremantle,East Perth,East Fremantle,East Perth,Fremantle Oval,1922-07-01,East Perth 12.11 (83) def. East Fremantle 9.8 (62),145,21,,East Perth defeated East Fremantle by 21 points at Fremantle Oval.
+28,Regular Season,Perth,East Perth,Perth,East Perth,Showgrounds,1922-07-08,East Perth 7.11 (53) def. Perth 6.9 (45),98,8,,East Perth defeated Perth by 8 points at Showgrounds.
+29,Regular Season,East Fremantle,Subiaco,East Fremantle,Subiaco,Fremantle Oval,1922-07-08,East Fremantle 12.13 (85) def. Subiaco 4.7 (31),116,54,,East Fremantle defeated Subiaco by 54 points at Fremantle Oval.
+30,Regular Season,South Fremantle,West Perth,South Fremantle,West Perth,Showgrounds,1922-07-08,West Perth 7.8 (50) def. South Fremantle 4.11 (35),85,15,,West Perth defeated South Fremantle by 15 points at Showgrounds.
+31,Regular Season,East Perth,West Perth,East Perth,West Perth,Perth Oval,1922-07-15,East Perth 7.14 (56) def. West Perth 3.5 (23),79,33,,East Perth defeated West Perth by 33 points at Perth Oval.
+32,Regular Season,Subiaco,Perth,Subiaco,Perth,Subiaco Oval,1922-07-15,Subiaco 12.11 (83) def. Perth 5.14 (44),127,39,,Subiaco defeated Perth by 39 points at Subiaco Oval.
+33,Regular Season,South Fremantle,East Fremantle,South Fremantle,East Fremantle,Fremantle Oval,1922-07-15,East Fremantle 7.13 (55) def. South Fremantle 6.11 (47),102,8,,East Fremantle defeated South Fremantle by 8 points at Fremantle Oval.
+34,Regular Season,East Perth,Subiaco,East Perth,Subiaco,Perth Oval,1922-07-22,East Perth 9.14 (68) def. Subiaco 7.12 (54),122,14,,East Perth defeated Subiaco by 14 points at Perth Oval.
+35,Regular Season,South Fremantle,Perth,South Fremantle,Perth,Fremantle Oval,1922-07-22,South Fremantle 17.12 (114) def. Perth 6.8 (44),158,70,,South Fremantle defeated Perth by 70 points at Fremantle Oval.
+36,Regular Season,West Perth,East Fremantle,West Perth,East Fremantle,Subiaco Oval,1922-07-22,East Fremantle 6.5 (41) def. West Perth 5.6 (36),77,5,,East Fremantle defeated West Perth by 5 points at Subiaco Oval.
+37,Regular Season,West Perth,Subiaco,West Perth,Subiaco,Leederville Oval,1922-07-29,West Perth 5.8 (38) def. Subiaco 3.17 (35),73,3,,West Perth defeated Subiaco by 3 points at Leederville Oval.
+38,Regular Season,South Fremantle,East Perth,South Fremantle,East Perth,Fremantle Oval,1922-07-29,East Perth 7.11 (53) def. South Fremantle 5.15 (45),98,8,,East Perth defeated South Fremantle by 8 points at Fremantle Oval.
+39,Regular Season,Perth,East Fremantle,Perth,East Fremantle,WACA,1922-07-29,East Fremantle 5.10 (40) def. Perth 3.4 (22),62,18,,East Fremantle defeated Perth by 18 points at WACA.
+40,Regular Season,Perth,West Perth,Perth,West Perth,WACA,1922-08-05,West Perth 5.12 (42) def. Perth 5.7 (37),79,5,,West Perth defeated Perth by 5 points at WACA.
+41,Regular Season,East Fremantle,East Perth,East Fremantle,East Perth,Fremantle Oval,1922-08-05,East Fremantle 4.6 (30) def. East Perth 4.5 (29),59,1,,East Fremantle defeated East Perth by 1 points at Fremantle Oval.
+42,Regular Season,Subiaco,South Fremantle,Subiaco,South Fremantle,Subiaco Oval,1922-08-05,Subiaco 9.16 (70) def. South Fremantle 8.7 (55),125,15,,Subiaco defeated South Fremantle by 15 points at Subiaco Oval.
+43,Regular Season,West Perth,South Fremantle,West Perth,South Fremantle,Leederville Oval,1922-08-26,West Perth 8.13 (61) def. South Fremantle 7.11 (53),114,8,,West Perth defeated South Fremantle by 8 points at Leederville Oval.
+44,Regular Season,East Fremantle,Subiaco,East Fremantle,Subiaco,Fremantle Oval,1922-08-26,East Fremantle 14.17 (101) def. Subiaco 7.9 (51),152,50,,East Fremantle defeated Subiaco by 50 points at Fremantle Oval.
+45,Finals,West Perth,East Fremantle,West Perth,East Fremantle,Subiaco Oval,1922-09-02,West Perth 12.10 (82) def. East Fremantle 4.8 (32),114,50,,West Perth defeated East Fremantle by 50 points at Subiaco Oval.
+46,Finals,South Fremantle,East Perth,South Fremantle,East Perth,Subiaco Oval,1922-09-09,South Fremantle 9.11 (65) def. East Perth 9.8 (62),127,3,,South Fremantle defeated East Perth by 3 points at Subiaco Oval.
+47,Finals,West Perth,South Fremantle,West Perth,South Fremantle,Subiaco Oval,1922-09-16,West Perth 13.8 (86) def. South Fremantle 8.10 (58),144,28,,West Perth defeated South Fremantle by 28 points at Subiaco Oval.
+48,Grand Final,East Perth,West Perth,East Perth,West Perth,Subiaco Oval,1922-09-23,East Perth 7.13 (55) def. West Perth 5.9 (39),94,16,,East Perth defeated West Perth by 16 points at Subiaco Oval.

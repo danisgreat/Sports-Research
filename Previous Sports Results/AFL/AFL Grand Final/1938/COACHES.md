@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1938 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1938
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1938.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1938 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Carlton
+- **Premiership Coach:** Brighton Diggins
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Jock McHale
+- **Grand Final Result:** Carlton 15.10 (100) def. Collingwood 13.7 (85)
+- **Winning Margin:** 15 points
+- **Match Date:** 1938-09-24
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 96,486 spectators
+
+## Match Summary & Tactical Notes
+Carlton defeated Collingwood by 15 points behind Harry Vallence's three goals in a high-intensity decider.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

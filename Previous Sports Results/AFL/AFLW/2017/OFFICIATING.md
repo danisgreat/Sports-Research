@@ -1,12 +1,13 @@
-# AFLW Officiating & Refereeing Corps — 2017 Season
+# AFLW Officiating & Umpiring Corps — 2017 Season
 
-- **Sport:** AFL
-- **Competition:** AFLW
+- **Sport:** Australian Rules Football
+- **League:** AFLW (AFL Women's)
 - **Season:** 2017
-- **Governing Body:** AFL Women's Football Operations
 
-## Officiating Structure & Adjudication
-- **Appointed Officials:** AFLW Umpiring Panel (Field, Boundary, Goal).
-- **Championship Appointments:** Lead match adjudicators and senior officials selected for finals and marquee tournament fixtures based on merit and performance evaluations.
-- **Rule Framework & Interpretations:** Strict enforcement of the 2017 rules of the game, procedural updates, and points of emphasis issued by AFL Women's Football Operations.
-- **Technology & Review Systems:** Early television broadcast reviews, fourth-official technology, and initial electronic decision support systems.
+## Officiating System & Match Adjudication
+- **Grand Final Field Umpire(s):** Justin Power, Gabby Simmonds, Nathan Williamson
+- **Grand Final Venue:** Metricon Stadium (Carrara)
+- **Attendance:** 15,610 spectators
+- **Umpiring Structure:** Official AFLW Senior Field Umpiring Panel appointed by the AFL Umpiring Department, combining senior AFL list adjudicators and top state-league pathway umpires.
+
+- **Sources:** AFL API; AFL Umpires Association; Official AFLW Match Records.

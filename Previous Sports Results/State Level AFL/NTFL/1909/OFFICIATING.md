@@ -1,4 +1,4 @@
 # NTFL Officiating & Refereeing Corps — 1909 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 1916. No official match adjudicators or referee panels were appointed in 1909.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** NTFL not yet founded (inaugural season 1916-17).

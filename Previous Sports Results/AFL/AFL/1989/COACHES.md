@@ -1,11 +1,31 @@
 # AFL Coaching Staff & Team Hierarchy — 1989 Season
 
 - **Sport:** Australian Rules Football
-- **League:** AFL
+- **League:** AFL (Victorian Football League 1897–1989, Australian Football League 1990–present)
 - **Season:** 1989
+- **Participating Clubs (14 Clubs):** Brisbane Bears, Carlton, Collingwood, Essendon, Fitzroy, Footscray, Geelong, Hawthorn, Melbourne, North Melbourne, Richmond, St Kilda, Sydney, West Coast
 
-## Coaching Overview
-- **Head Coaches:** Senior coaches overseeing all senior matchday tactics, player interchange rotations, and game plans.
-- **Premiership Coach:** The senior coach leading their side to victory in the 1989 AFL Grand Final.
-- **Assistant Coaches:** Line coaches responsible for forward structure, midfield/stoppage setups, and defensive transition.
-- **Coaching Trends:** Evolving tactical eras (from traditional position-and-kick football to zone defenses, high-press running, corridor ball movement, and surge football).
+## Senior Head Coaches by Club
+| Club | Senior Head Coach | Role |
+|---|---|---|
+| Brisbane Bears | Paul Feltham | Senior Head Coach |
+| Carlton | Alex Jesaulenko | Senior Head Coach |
+| Collingwood | Leigh Matthews | Senior Head Coach |
+| Essendon | Kevin Sheedy | Senior Head Coach |
+| Fitzroy | Rod Austin | Senior Head Coach |
+| Footscray | Mick Malthouse | Senior Head Coach |
+| Geelong | Malcolm Blight | Senior Head Coach |
+| Hawthorn | Allan Jeans | Senior Head Coach |
+| Melbourne | John Northey | Senior Head Coach |
+| North Melbourne | John Kennedy | Senior Head Coach |
+| Richmond | Kevin Bartlett | Senior Head Coach |
+| St Kilda | Darrel Baldock | Senior Head Coach |
+| Sydney | Col Kinnear | Senior Head Coach |
+| West Coast | John Todd | Senior Head Coach |
+
+## Season Premiership Outcome
+- **Grand Final Result:** Hawthorn 21.18 (144) def. Geelong 21.12 (138) (Margin: 6 pts, Venue: Melbourne Cricket Ground)
+- **Premiers:** Hawthorn (Coach: Allan Jeans)
+- **Runners-up:** Geelong (Coach: Malcolm Blight)
+
+- **Sources:** AFL Tables (Coaches Index); Australian Football Historical Records.

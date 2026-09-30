@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1970 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1970 Season (Super Bowl IV)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl IV)
 - **Season:** 1970
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1970.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1970 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** Kansas City Chiefs
+- **Winning Head Coach:** Hank Stram
+- **Runners-up:** Minnesota Vikings
+- **Runners-up Head Coach:** Bud Grant
+- **Super Bowl Result:** Kansas City Chiefs def. Minnesota Vikings (23-7)
+- **Super Bowl MVP:** Len Dawson (QB, Kansas City)
+- **Venue:** Tulane Stadium (New Orleans)
+- **Official Attendance:** 80,562 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Hank Stram directing Kansas City Chiefs to the Vince Lombardi Trophy over Bud Grant's Minnesota Vikings.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

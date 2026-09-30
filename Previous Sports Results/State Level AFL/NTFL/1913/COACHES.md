@@ -1,4 +1,4 @@
 # NTFL Coaching Staff — 1913 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 1916. No official coaching staffs, managerial appointments, or teams existed in 1913.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** NTFL not yet founded (inaugural season 1916-17).

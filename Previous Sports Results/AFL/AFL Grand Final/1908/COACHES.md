@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1908 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1908
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1908.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1908 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Carlton
+- **Premiership Coach:** John Worrall
+- **Runners-up:** Essendon
+- **Runners-up Coach:** Dave Smith
+- **Grand Final Result:** Carlton 5.5 (35) def. Essendon 3.8 (26)
+- **Winning Margin:** 9 points
+- **Match Date:** 1908-09-26
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 53,400 spectators
+
+## Match Summary & Tactical Notes
+Carlton completed a historic premiership three-peat with a tight 9-point triumph over Essendon.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

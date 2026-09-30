@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 2001 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 2001 Season (Super Bowl XXXV)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl XXXV)
 - **Season:** 2001
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 2001.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 2001 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** Baltimore Ravens
+- **Winning Head Coach:** Brian Billick
+- **Runners-up:** New York Giants
+- **Runners-up Head Coach:** Jim Fassel
+- **Super Bowl Result:** Baltimore Ravens def. New York Giants (34-7)
+- **Super Bowl MVP:** Ray Lewis (LB, Baltimore)
+- **Venue:** Raymond James Stadium (Tampa)
+- **Official Attendance:** 71,921 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Brian Billick directing Baltimore Ravens to the Vince Lombardi Trophy over Jim Fassel's New York Giants.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

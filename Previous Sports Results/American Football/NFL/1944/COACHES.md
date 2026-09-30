@@ -1,11 +1,15 @@
 # NFL Coaching Staffs & Front Office Registry — 1944 Season
 
 - **Sport:** American Football
-- **League:** NFL
+- **League:** NFL (APFA 1920–1921, National Football League 1922–present)
 - **Season:** 1944
+- **Active Franchises (10 Teams):** Boston Yanks, Brooklyn Tigers, Card-Pitt, Chicago Bears, Cleveland Rams, Detroit Lions, Green Bay Packers, New York Giants, Philadelphia Eagles, Washington Redskins
 
-## Coaching Structure
-- **Head Coaches:** Head coaches across all active franchises.
-- **Coordinators:** Offensive Coordinators (OC), Defensive Coordinators (DC), and Special Teams Coordinators (STC).
-- **Championship Coach:** The head coach guiding their franchise to the 1944 NFL title / Super Bowl victory.
-- **Coaching Philosophy:** Scheme deployment (West Coast Offense, Air Coryell, Erhardt-Perkins, Cover 2, 3-4 vs 4-3 defense, Shanahan wide-zone system).
+## Championship Leadership & Outcome
+- **NFL Champions:** Green Bay Packers (8-2-0)
+- **Championship Head Coach:** Curly Lambeau
+- **Runners-up:** New York Giants (8-1-1)
+- **Runners-up Head Coach:** Steve Owen
+- **Season Decider / Championship Summary:** 1944 NFL Championship Game: Green Bay Packers 14 def. New York Giants 7 (Polo Grounds, New York)
+
+- **Sources:** Pro-Football-Reference; Total Football: The Official Encyclopedia of the NFL; Elias Sports Bureau.

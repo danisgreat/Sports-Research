@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,New York Giants,Denver Broncos,New York Giants,Denver Broncos,Rose Bowl,1987-01-25,New York Giants 39 def. Denver Broncos 20,59,19,,"New York Giants won Super Bowl XXI, defeating Denver Broncos 39-20 at Rose Bowl."

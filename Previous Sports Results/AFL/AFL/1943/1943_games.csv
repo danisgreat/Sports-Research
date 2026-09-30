@@ -1,2 +1,85 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
--,Not applicable,-,-,-,-,-,-,-,-,-,-,"Season shortened due to World War II; Geelong remained in recess, resulting in a 15-round home-and-away season."
+1,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1943-05-08,Carlton 17.13 (115) def. Richmond 8.23 (71),186,44,,Carlton defeated Richmond by 44 points at Princes Park.
+2,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1943-05-08,Collingwood 6.22 (58) def. North Melbourne 7.12 (54),112,4,,Collingwood defeated North Melbourne by 4 points at Victoria Park.
+3,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1943-05-08,Essendon 18.9 (117) def. Sydney 13.14 (92),209,25,,Essendon defeated Sydney by 25 points at Windy Hill.
+4,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,Punt Rd,1943-05-08,Fitzroy 15.9 (99) def. Melbourne 14.12 (96),195,3,,Fitzroy defeated Melbourne by 3 points at Punt Rd.
+5,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Toorak Park,1943-05-08,Hawthorn 13.17 (95) def. St Kilda 14.9 (93),188,2,,Hawthorn defeated St Kilda by 2 points at Toorak Park.
+6,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1943-05-15,Carlton 8.18 (66) def. Western Bulldogs 6.10 (46),112,20,,Carlton defeated Western Bulldogs by 20 points at Western Oval.
+7,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1943-05-15,Richmond 13.7 (85) def. Collingwood 9.12 (66),151,19,,Richmond defeated Collingwood by 19 points at Punt Rd.
+8,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1943-05-15,Essendon 11.15 (81) def. Hawthorn 7.8 (50),131,31,,Essendon defeated Hawthorn by 31 points at Glenferrie Oval.
+9,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Princes Park,1943-05-15,Melbourne 15.19 (109) def. Sydney 12.14 (86),195,23,,Melbourne defeated Sydney by 23 points at Princes Park.
+10,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1943-05-15,North Melbourne 8.14 (62) drew with St Kilda 8.14 (62),124,0,,North Melbourne and St Kilda played out a draw at Arden St.
+11,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1943-05-22,Western Bulldogs 12.16 (88) def. Collingwood 11.14 (80),168,8,,Western Bulldogs defeated Collingwood by 8 points at Victoria Park.
+12,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1943-05-22,Essendon 11.12 (78) def. North Melbourne 9.11 (65),143,13,,Essendon defeated North Melbourne by 13 points at Windy Hill.
+13,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1943-05-22,Fitzroy 16.17 (113) def. Sydney 16.16 (112),225,1,,Fitzroy defeated Sydney by 1 points at Brunswick St.
+14,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,Punt Rd,1943-05-22,Hawthorn 17.15 (117) def. Melbourne 10.12 (72),189,45,,Hawthorn defeated Melbourne by 45 points at Punt Rd.
+15,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Toorak Park,1943-05-22,Richmond 17.12 (114) def. St Kilda 8.15 (63),177,51,,Richmond defeated St Kilda by 51 points at Toorak Park.
+16,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1943-05-29,Collingwood 15.14 (104) def. Carlton 12.5 (77),181,27,,Collingwood defeated Carlton by 27 points at Princes Park.
+17,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1943-05-29,Essendon 14.13 (97) def. Richmond 11.18 (84),181,13,,Essendon defeated Richmond by 13 points at Punt Rd.
+18,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Glenferrie Oval,1943-05-29,Hawthorn 13.8 (86) def. Fitzroy 9.21 (75),161,11,,Hawthorn defeated Fitzroy by 11 points at Glenferrie Oval.
+19,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1943-05-29,Western Bulldogs 13.11 (89) def. St Kilda 6.12 (48),137,41,,Western Bulldogs defeated St Kilda by 41 points at Western Oval.
+20,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1943-05-29,North Melbourne 15.14 (104) def. Melbourne 10.11 (71),175,33,,North Melbourne defeated Melbourne by 33 points at Arden St.
+21,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Toorak Park,1943-06-05,St Kilda 13.14 (92) def. Carlton 12.8 (80),172,12,,St Kilda defeated Carlton by 12 points at Toorak Park.
+22,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1943-06-05,Western Bulldogs 16.18 (114) def. Essendon 16.10 (106),220,8,,Western Bulldogs defeated Essendon by 8 points at Windy Hill.
+23,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1943-06-05,Fitzroy 23.12 (150) def. North Melbourne 10.13 (73),223,77,,Fitzroy defeated North Melbourne by 77 points at Brunswick St.
+24,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Princes Park,1943-06-05,Hawthorn 12.13 (85) def. Sydney 10.15 (75),160,10,,Hawthorn defeated Sydney by 10 points at Princes Park.
+25,Regular Season,Melbourne,Richmond,Melbourne,Richmond,Punt Rd,1943-06-05,Richmond 21.15 (141) def. Melbourne 17.11 (113),254,28,,Richmond defeated Melbourne by 28 points at Punt Rd.
+26,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1943-06-12,Essendon 11.16 (82) def. Carlton 9.22 (76),158,6,,Essendon defeated Carlton by 6 points at Princes Park.
+27,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1943-06-12,Collingwood 11.21 (87) def. St Kilda 5.12 (42),129,45,,Collingwood defeated St Kilda by 45 points at Victoria Park.
+28,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1943-06-12,Fitzroy 14.11 (95) def. Richmond 12.17 (89),184,6,,Fitzroy defeated Richmond by 6 points at Punt Rd.
+29,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1943-06-12,Western Bulldogs 21.17 (143) def. Melbourne 8.15 (63),206,80,,Western Bulldogs defeated Melbourne by 80 points at Western Oval.
+30,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1943-06-12,North Melbourne 14.7 (91) def. Sydney 12.18 (90),181,1,,North Melbourne defeated Sydney by 1 points at Arden St.
+31,Regular Season,Melbourne,Carlton,Melbourne,Carlton,Punt Rd,1943-06-19,Melbourne 13.14 (92) def. Carlton 11.21 (87),179,5,,Melbourne defeated Carlton by 5 points at Punt Rd.
+32,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1943-06-19,Essendon 15.13 (103) def. Collingwood 8.14 (62),165,41,,Essendon defeated Collingwood by 41 points at Windy Hill.
+33,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1943-06-19,Fitzroy 16.11 (107) def. Western Bulldogs 11.7 (73),180,34,,Fitzroy defeated Western Bulldogs by 34 points at Brunswick St.
+34,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1943-06-19,Hawthorn 20.16 (136) def. North Melbourne 13.17 (95),231,41,,Hawthorn defeated North Melbourne by 41 points at Glenferrie Oval.
+35,Regular Season,Sydney,Richmond,Sydney,Richmond,Princes Park,1943-06-19,Richmond 17.12 (114) def. Sydney 12.12 (84),198,30,,Richmond defeated Sydney by 30 points at Princes Park.
+36,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1943-06-26,Carlton 15.16 (106) def. Fitzroy 9.13 (67),173,39,,Carlton defeated Fitzroy by 39 points at Princes Park.
+37,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1943-06-26,Melbourne 13.9 (87) def. Collingwood 10.21 (81),168,6,,Melbourne defeated Collingwood by 6 points at Victoria Park.
+38,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Toorak Park,1943-06-26,Essendon 20.19 (139) def. St Kilda 15.8 (98),237,41,,Essendon defeated St Kilda by 41 points at Toorak Park.
+39,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1943-06-26,Western Bulldogs 10.11 (71) def. Sydney 6.14 (50),121,21,,Western Bulldogs defeated Sydney by 21 points at Western Oval.
+40,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1943-06-26,Richmond 15.16 (106) def. Hawthorn 8.14 (62),168,44,,Richmond defeated Hawthorn by 44 points at Punt Rd.
+41,Regular Season,Sydney,Carlton,Sydney,Carlton,Princes Park,1943-07-03,Carlton 15.13 (103) def. Sydney 10.13 (73),176,30,,Carlton defeated Sydney by 30 points at Princes Park.
+42,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1943-07-03,Fitzroy 15.18 (108) def. Collingwood 9.11 (65),173,43,,Fitzroy defeated Collingwood by 43 points at Brunswick St.
+43,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1943-07-03,Hawthorn 13.11 (89) def. Western Bulldogs 11.13 (79),168,10,,Hawthorn defeated Western Bulldogs by 10 points at Glenferrie Oval.
+44,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,Punt Rd,1943-07-03,Melbourne 16.14 (110) def. St Kilda 12.10 (82),192,28,,Melbourne defeated St Kilda by 28 points at Punt Rd.
+45,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1943-07-03,Richmond 13.7 (85) def. North Melbourne 9.2 (56),141,29,,Richmond defeated North Melbourne by 29 points at Arden St.
+46,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1943-07-10,Carlton 16.9 (105) def. Hawthorn 11.14 (80),185,25,,Carlton defeated Hawthorn by 25 points at Princes Park.
+47,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1943-07-10,Sydney 16.14 (110) def. Collingwood 9.6 (60),170,50,,Sydney defeated Collingwood by 50 points at Victoria Park.
+48,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1943-07-10,Melbourne 13.7 (85) def. Essendon 9.16 (70),155,15,,Melbourne defeated Essendon by 15 points at Windy Hill.
+49,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Toorak Park,1943-07-10,Fitzroy 14.14 (98) def. St Kilda 10.11 (71),169,27,,Fitzroy defeated St Kilda by 27 points at Toorak Park.
+50,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1943-07-10,North Melbourne 12.14 (86) def. Western Bulldogs 9.23 (77),163,9,,North Melbourne defeated Western Bulldogs by 9 points at Western Oval.
+51,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1943-07-17,North Melbourne 12.10 (82) def. Carlton 11.12 (78),160,4,,North Melbourne defeated Carlton by 4 points at Arden St.
+52,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1943-07-17,Hawthorn 16.14 (110) def. Collingwood 12.13 (85),195,25,,Hawthorn defeated Collingwood by 25 points at Glenferrie Oval.
+53,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1943-07-17,Essendon 9.24 (78) def. Fitzroy 7.14 (56),134,22,,Essendon defeated Fitzroy by 22 points at Brunswick St.
+54,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Punt Rd,1943-07-17,Richmond 10.19 (79) def. Western Bulldogs 8.9 (57),136,22,,Richmond defeated Western Bulldogs by 22 points at Punt Rd.
+55,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Princes Park,1943-07-17,Sydney 16.19 (115) def. St Kilda 11.14 (80),195,35,,Sydney defeated St Kilda by 35 points at Princes Park.
+56,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1943-07-31,Carlton 28.10 (178) def. Collingwood 11.8 (74),252,104,,Carlton defeated Collingwood by 104 points at Victoria Park.
+57,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1943-07-31,Essendon 9.12 (66) def. Hawthorn 7.13 (55),121,11,,Essendon defeated Hawthorn by 11 points at Glenferrie Oval.
+58,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1943-07-31,Fitzroy 10.10 (70) def. Richmond 7.17 (59),129,11,,Fitzroy defeated Richmond by 11 points at Brunswick St.
+59,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,Punt Rd,1943-07-31,Melbourne 23.16 (154) def. Western Bulldogs 11.8 (74),228,80,,Melbourne defeated Western Bulldogs by 80 points at Punt Rd.
+60,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Princes Park,1943-07-31,Sydney 14.11 (95) def. North Melbourne 6.6 (42),137,53,,Sydney defeated North Melbourne by 53 points at Princes Park.
+61,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1943-08-07,Carlton 13.19 (97) def. Hawthorn 10.15 (75),172,22,,Carlton defeated Hawthorn by 22 points at Princes Park.
+62,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1943-08-07,Collingwood 14.24 (108) def. North Melbourne 7.8 (50),158,58,,Collingwood defeated North Melbourne by 58 points at Victoria Park.
+63,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1943-08-07,Essendon 11.24 (90) def. Fitzroy 8.8 (56),146,34,,Essendon defeated Fitzroy by 34 points at Windy Hill.
+64,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1943-08-07,Richmond 19.19 (133) def. Western Bulldogs 7.17 (59),192,74,,Richmond defeated Western Bulldogs by 74 points at Western Oval.
+65,Regular Season,Melbourne,Sydney,Melbourne,Sydney,Punt Rd,1943-08-07,Sydney 21.13 (139) def. Melbourne 9.6 (60),199,79,,Sydney defeated Melbourne by 79 points at Punt Rd.
+66,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1943-08-14,Carlton 10.10 (70) def. Essendon 9.13 (67),137,3,,Carlton defeated Essendon by 3 points at Windy Hill.
+67,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Princes Park,1943-08-14,Sydney 12.18 (90) def. Collingwood 11.7 (73),163,17,,Sydney defeated Collingwood by 17 points at Princes Park.
+68,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1943-08-14,Fitzroy 15.14 (104) def. Melbourne 7.12 (54),158,50,,Fitzroy defeated Melbourne by 50 points at Brunswick St.
+69,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1943-08-14,Western Bulldogs 9.10 (64) def. North Melbourne 7.11 (53),117,11,,Western Bulldogs defeated North Melbourne by 11 points at Arden St.
+70,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1943-08-14,Hawthorn 11.7 (73) def. Richmond 9.14 (68),141,5,,Hawthorn defeated Richmond by 5 points at Punt Rd.
+71,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1943-08-21,Carlton 15.23 (113) def. North Melbourne 7.5 (47),160,66,,Carlton defeated North Melbourne by 66 points at Princes Park.
+72,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1943-08-21,Collingwood 16.17 (113) def. Fitzroy 9.9 (63),176,50,,Collingwood defeated Fitzroy by 50 points at Victoria Park.
+73,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1943-08-21,Western Bulldogs 9.10 (64) def. Essendon 6.15 (51),115,13,,Western Bulldogs defeated Essendon by 13 points at Western Oval.
+74,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1943-08-21,Hawthorn 13.10 (88) def. Sydney 7.14 (56),144,32,,Hawthorn defeated Sydney by 32 points at Glenferrie Oval.
+75,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1943-08-21,Richmond 15.19 (109) def. Melbourne 12.13 (85),194,24,,Richmond defeated Melbourne by 24 points at Punt Rd.
+76,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1943-08-28,Fitzroy 12.12 (84) def. Carlton 10.9 (69),153,15,,Fitzroy defeated Carlton by 15 points at Brunswick St.
+77,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,Punt Rd,1943-08-28,Melbourne 16.17 (113) def. Collingwood 14.17 (101),214,12,,Melbourne defeated Collingwood by 12 points at Punt Rd.
+78,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1943-08-28,Richmond 14.14 (98) def. Essendon 10.11 (71),169,27,,Richmond defeated Essendon by 27 points at Windy Hill.
+79,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Princes Park,1943-08-28,Sydney 10.19 (79) def. Western Bulldogs 10.6 (66),145,13,,Sydney defeated Western Bulldogs by 13 points at Princes Park.
+80,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1943-08-28,North Melbourne 8.11 (59) def. Hawthorn 7.16 (58),117,1,,North Melbourne defeated Hawthorn by 1 points at Arden St.
+81,Finals,Fitzroy,Carlton,Fitzroy,Carlton,Princes Park,1943-09-04,Fitzroy 13.16 (94) def. Carlton 5.13 (43),137,51,,Fitzroy defeated Carlton by 51 points at Princes Park.
+82,Finals,Essendon,Richmond,Essendon,Richmond,Princes Park,1943-09-11,Essendon 13.16 (94) def. Richmond 9.17 (71),165,23,,Essendon defeated Richmond by 23 points at Princes Park.
+83,Finals,Richmond,Fitzroy,Richmond,Fitzroy,Princes Park,1943-09-18,Richmond 12.14 (86) def. Fitzroy 8.13 (61),147,25,,Richmond defeated Fitzroy by 25 points at Princes Park.
+84,Grand Final,Richmond,Essendon,Richmond,Essendon,Princes Park,1943-09-25,Richmond 12.14 (86) def. Essendon 11.15 (81),167,5,,Richmond defeated Essendon by 5 points at Princes Park.

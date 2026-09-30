@@ -1,1 +1,77 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1919-05-03,Carlton 14.14 (98) def. Fitzroy 8.7 (55),153,43,,Carlton defeated Fitzroy by 43 points at Princes Park.
+2,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1919-05-03,Collingwood 9.8 (62) def. Sydney 6.13 (49),111,13,,Collingwood defeated Sydney by 13 points at Lake Oval.
+3,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1919-05-03,Richmond 12.19 (91) def. Essendon 10.11 (71),162,20,,Richmond defeated Essendon by 20 points at Punt Rd.
+4,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1919-05-03,St Kilda 12.14 (86) def. Melbourne 9.4 (58),144,28,,St Kilda defeated Melbourne by 28 points at Junction Oval.
+5,Regular Season,Essendon,Carlton,Essendon,Carlton,East Melbourne,1919-05-10,Essendon 9.11 (65) def. Carlton 7.11 (53),118,12,,Essendon defeated Carlton by 12 points at East Melbourne.
+6,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1919-05-10,St Kilda 5.18 (48) def. Collingwood 5.15 (45),93,3,,St Kilda defeated Collingwood by 3 points at Victoria Park.
+7,Regular Season,Geelong,Richmond,Geelong,Richmond,Corio Oval,1919-05-10,Richmond 10.6 (66) def. Geelong 7.9 (51),117,15,,Richmond defeated Geelong by 15 points at Corio Oval.
+8,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1919-05-10,Sydney 10.19 (79) def. Melbourne 3.10 (28),107,51,,Sydney defeated Melbourne by 51 points at M.C.G..
+9,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Corio Oval,1919-05-17,Collingwood 5.19 (49) def. Geelong 5.2 (32),81,17,,Collingwood defeated Geelong by 17 points at Corio Oval.
+10,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1919-05-17,Fitzroy 18.10 (118) def. Essendon 5.12 (42),160,76,,Fitzroy defeated Essendon by 76 points at Brunswick St.
+11,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1919-05-17,Richmond 11.14 (80) def. Melbourne 7.7 (49),129,31,,Richmond defeated Melbourne by 31 points at M.C.G..
+12,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1919-05-17,Sydney 9.13 (67) def. St Kilda 4.7 (31),98,36,,Sydney defeated St Kilda by 36 points at Junction Oval.
+13,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1919-05-24,Carlton 13.21 (99) def. Geelong 3.4 (22),121,77,,Carlton defeated Geelong by 77 points at Princes Park.
+14,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1919-05-24,Collingwood 11.8 (74) def. Richmond 8.6 (54),128,20,,Collingwood defeated Richmond by 20 points at Punt Rd.
+15,Regular Season,Essendon,St Kilda,Essendon,St Kilda,East Melbourne,1919-05-24,St Kilda 7.6 (48) def. Essendon 4.9 (33),81,15,,St Kilda defeated Essendon by 15 points at East Melbourne.
+16,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1919-05-24,Sydney 4.15 (39) def. Fitzroy 4.12 (36),75,3,,Sydney defeated Fitzroy by 3 points at Lake Oval.
+17,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1919-05-31,Carlton 18.15 (123) def. Melbourne 5.4 (34),157,89,,Carlton defeated Melbourne by 89 points at Princes Park.
+18,Regular Season,Essendon,Sydney,Essendon,Sydney,East Melbourne,1919-05-31,Sydney 9.16 (70) def. Essendon 7.8 (50),120,20,,Sydney defeated Essendon by 20 points at East Melbourne.
+19,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1919-05-31,Fitzroy 10.14 (74) def. Richmond 7.6 (48),122,26,,Fitzroy defeated Richmond by 26 points at Brunswick St.
+20,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Corio Oval,1919-05-31,St Kilda 6.10 (46) def. Geelong 0.18 (18),64,28,,St Kilda defeated Geelong by 28 points at Corio Oval.
+21,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1919-06-07,Collingwood 16.20 (116) def. Melbourne 8.7 (55),171,61,,Collingwood defeated Melbourne by 61 points at Victoria Park.
+22,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1919-06-07,Sydney 11.16 (82) def. Richmond 7.20 (62),144,20,,Sydney defeated Richmond by 20 points at Punt Rd.
+23,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1919-06-09,Carlton 11.9 (75) def. St Kilda 7.11 (53),128,22,,Carlton defeated St Kilda by 22 points at Junction Oval.
+24,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1919-06-09,Fitzroy 7.18 (60) def. Geelong 4.4 (28),88,32,,Fitzroy defeated Geelong by 32 points at Brunswick St.
+25,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1919-06-14,Carlton 9.16 (70) def. Collingwood 8.11 (59),129,11,,Carlton defeated Collingwood by 11 points at Princes Park.
+26,Regular Season,Geelong,Essendon,Geelong,Essendon,Corio Oval,1919-06-14,Essendon 8.8 (56) def. Geelong 6.8 (44),100,12,,Essendon defeated Geelong by 12 points at Corio Oval.
+27,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1919-06-14,Fitzroy 11.12 (78) def. Melbourne 6.6 (42),120,36,,Fitzroy defeated Melbourne by 36 points at M.C.G..
+28,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Junction Oval,1919-06-14,Richmond 7.9 (51) def. St Kilda 5.12 (42),93,9,,Richmond defeated St Kilda by 9 points at Junction Oval.
+29,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1919-06-21,Sydney 6.13 (49) def. Carlton 6.8 (44),93,5,,Sydney defeated Carlton by 5 points at Lake Oval.
+30,Regular Season,Essendon,Collingwood,Essendon,Collingwood,East Melbourne,1919-06-21,Collingwood 10.10 (70) def. Essendon 6.8 (44),114,26,,Collingwood defeated Essendon by 26 points at East Melbourne.
+31,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1919-06-21,Fitzroy 13.14 (92) def. St Kilda 7.5 (47),139,45,,Fitzroy defeated St Kilda by 45 points at Brunswick St.
+32,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1919-06-21,Geelong 10.12 (72) def. Melbourne 7.10 (52),124,20,,Geelong defeated Melbourne by 20 points at M.C.G..
+33,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1919-06-28,Richmond 14.11 (95) def. Carlton 9.15 (69),164,26,,Richmond defeated Carlton by 26 points at Princes Park.
+34,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1919-06-28,Fitzroy 10.11 (71) def. Collingwood 9.14 (68),139,3,,Fitzroy defeated Collingwood by 3 points at Victoria Park.
+35,Regular Season,Essendon,Melbourne,Essendon,Melbourne,East Melbourne,1919-06-28,Essendon 16.17 (113) def. Melbourne 6.8 (44),157,69,,Essendon defeated Melbourne by 69 points at East Melbourne.
+36,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1919-06-28,Sydney 5.22 (52) def. Geelong 5.4 (34),86,18,,Sydney defeated Geelong by 18 points at Lake Oval.
+37,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1919-07-12,Fitzroy 5.11 (41) def. Carlton 5.9 (39),80,2,,Fitzroy defeated Carlton by 2 points at Brunswick St.
+38,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1919-07-12,Collingwood 8.11 (59) def. Sydney 3.18 (36),95,23,,Collingwood defeated Sydney by 23 points at Victoria Park.
+39,Regular Season,Essendon,Richmond,Essendon,Richmond,East Melbourne,1919-07-12,Richmond 6.15 (51) def. Essendon 6.10 (46),97,5,,Richmond defeated Essendon by 5 points at East Melbourne.
+40,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1919-07-12,St Kilda 6.11 (47) def. Melbourne 5.7 (37),84,10,,St Kilda defeated Melbourne by 10 points at M.C.G..
+41,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1919-07-19,Essendon 9.11 (65) def. Carlton 7.8 (50),115,15,,Essendon defeated Carlton by 15 points at Princes Park.
+42,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1919-07-19,Collingwood 13.13 (91) def. St Kilda 5.9 (39),130,52,,Collingwood defeated St Kilda by 52 points at Junction Oval.
+43,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1919-07-19,Richmond 16.15 (111) def. Geelong 7.14 (56),167,55,,Richmond defeated Geelong by 55 points at Punt Rd.
+44,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1919-07-19,Sydney 13.16 (94) def. Melbourne 2.15 (27),121,67,,Sydney defeated Melbourne by 67 points at Lake Oval.
+45,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1919-07-26,Collingwood 12.11 (83) def. Geelong 4.7 (31),114,52,,Collingwood defeated Geelong by 52 points at Victoria Park.
+46,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,East Melbourne,1919-07-26,Essendon 9.13 (67) def. Fitzroy 8.8 (56),123,11,,Essendon defeated Fitzroy by 11 points at East Melbourne.
+47,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1919-07-26,Richmond 9.18 (72) def. Melbourne 7.6 (48),120,24,,Richmond defeated Melbourne by 24 points at Punt Rd.
+48,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1919-07-26,Sydney 29.15 (189) def. St Kilda 2.6 (18),207,171,,Sydney defeated St Kilda by 171 points at Lake Oval.
+49,Regular Season,Geelong,Carlton,Geelong,Carlton,Corio Oval,1919-08-09,Carlton 12.22 (94) def. Geelong 8.11 (59),153,35,,Carlton defeated Geelong by 35 points at Corio Oval.
+50,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1919-08-09,Collingwood 11.12 (78) def. Richmond 9.11 (65),143,13,,Collingwood defeated Richmond by 13 points at Victoria Park.
+51,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1919-08-09,St Kilda 6.10 (46) def. Essendon 4.10 (34),80,12,,St Kilda defeated Essendon by 12 points at Junction Oval.
+52,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1919-08-09,Sydney 14.10 (94) def. Fitzroy 7.5 (47),141,47,,Sydney defeated Fitzroy by 47 points at Brunswick St.
+53,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1919-08-16,Carlton 13.18 (96) def. Melbourne 5.6 (36),132,60,,Carlton defeated Melbourne by 60 points at M.C.G..
+54,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1919-08-16,Sydney 12.15 (87) def. Essendon 8.7 (55),142,32,,Sydney defeated Essendon by 32 points at Lake Oval.
+55,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1919-08-16,Richmond 6.21 (57) def. Fitzroy 3.13 (31),88,26,,Richmond defeated Fitzroy by 26 points at Punt Rd.
+56,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1919-08-16,St Kilda 12.18 (90) def. Geelong 10.17 (77),167,13,,St Kilda defeated Geelong by 13 points at Junction Oval.
+57,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1919-08-23,Carlton 10.14 (74) def. St Kilda 9.4 (58),132,16,,Carlton defeated St Kilda by 16 points at Princes Park.
+58,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1919-08-23,Collingwood 20.25 (145) def. Melbourne 5.6 (36),181,109,,Collingwood defeated Melbourne by 109 points at M.C.G..
+59,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Corio Oval,1919-08-23,Geelong 11.9 (75) drew with Fitzroy 11.9 (75),150,0,,Geelong and Fitzroy played out a draw at Corio Oval.
+60,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1919-08-23,Sydney 6.7 (43) def. Richmond 4.14 (38),81,5,,Sydney defeated Richmond by 5 points at Lake Oval.
+61,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1919-08-30,Collingwood 17.11 (113) def. Carlton 5.16 (46),159,67,,Collingwood defeated Carlton by 67 points at Victoria Park.
+62,Regular Season,Essendon,Geelong,Essendon,Geelong,East Melbourne,1919-08-30,Essendon 9.18 (72) def. Geelong 6.13 (49),121,23,,Essendon defeated Geelong by 23 points at East Melbourne.
+63,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1919-08-30,Fitzroy 21.16 (142) def. Melbourne 2.5 (17),159,125,,Fitzroy defeated Melbourne by 125 points at Brunswick St.
+64,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1919-08-30,Richmond 14.16 (100) def. St Kilda 5.11 (41),141,59,,Richmond defeated St Kilda by 59 points at Punt Rd.
+65,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1919-09-06,Carlton 8.11 (59) def. Sydney 8.7 (55),114,4,,Carlton defeated Sydney by 4 points at Princes Park.
+66,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1919-09-06,Collingwood 9.13 (67) def. Essendon 5.14 (44),111,23,,Collingwood defeated Essendon by 23 points at Victoria Park.
+67,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1919-09-06,Fitzroy 7.10 (52) def. St Kilda 3.14 (32),84,20,,Fitzroy defeated St Kilda by 20 points at Junction Oval.
+68,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Corio Oval,1919-09-06,Geelong 14.12 (96) def. Melbourne 6.15 (51),147,45,,Geelong defeated Melbourne by 45 points at Corio Oval.
+69,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1919-09-13,Carlton 7.19 (61) def. Richmond 5.12 (42),103,19,,Carlton defeated Richmond by 19 points at Punt Rd.
+70,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1919-09-13,Collingwood 9.10 (64) def. Fitzroy 6.10 (46),110,18,,Collingwood defeated Fitzroy by 18 points at Brunswick St.
+71,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1919-09-13,Essendon 10.7 (67) def. Melbourne 4.9 (33),100,34,,Essendon defeated Melbourne by 34 points at M.C.G..
+72,Regular Season,Geelong,Sydney,Geelong,Sydney,Corio Oval,1919-09-13,Geelong 6.14 (50) def. Sydney 3.8 (26),76,24,,Geelong defeated Sydney by 24 points at Corio Oval.
+73,Finals,Richmond,Sydney,Richmond,Sydney,M.C.G.,1919-09-20,Richmond 10.13 (73) def. Sydney 9.5 (59),132,14,,Richmond defeated Sydney by 14 points at M.C.G..
+74,Finals,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,1919-09-27,Collingwood 9.10 (64) def. Carlton 6.10 (46),110,18,,Collingwood defeated Carlton by 18 points at M.C.G..
+75,Finals,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,1919-10-04,Richmond 10.14 (74) def. Collingwood 6.9 (45),119,29,,Richmond defeated Collingwood by 29 points at M.C.G..
+76,Grand Final,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,1919-10-11,Collingwood 11.12 (78) def. Richmond 7.11 (53),131,25,,Collingwood defeated Richmond by 25 points at M.C.G..

@@ -1,11 +1,47 @@
 # NFL Coaching Staffs & Front Office Registry — 2025 Season
 
 - **Sport:** American Football
-- **League:** NFL
+- **League:** NFL (National Football League)
 - **Season:** 2025
+- **Active Franchises (32 Teams):** Arizona Cardinals, Atlanta Falcons, Baltimore Ravens, Buffalo Bills, Carolina Panthers, Chicago Bears, Cincinnati Bengals, Cleveland Browns, Dallas Cowboys, Denver Broncos, Detroit Lions, Green Bay Packers, Houston Texans, Indianapolis Colts, Jacksonville Jaguars, Kansas City Chiefs, Las Vegas Raiders, Los Angeles Chargers, Los Angeles Rams, Miami Dolphins, Minnesota Vikings, New England Patriots, New Orleans Saints, New York Giants, New York Jets, Philadelphia Eagles, Pittsburgh Steelers, San Francisco 49ers, Seattle Seahawks, Tampa Bay Buccaneers, Tennessee Titans, Washington Commanders
 
-## Coaching Structure
-- **Head Coaches:** Head coaches across all active franchises.
-- **Coordinators:** Offensive Coordinators (OC), Defensive Coordinators (DC), and Special Teams Coordinators (STC).
-- **Championship Coach:** The head coach guiding their franchise to the 2025 NFL title / Super Bowl victory.
-- **Coaching Philosophy:** Scheme deployment (West Coast Offense, Air Coryell, Erhardt-Perkins, Cover 2, 3-4 vs 4-3 defense, Shanahan wide-zone system).
+## Head Coaches by Franchise
+| Franchise | Senior Head Coach | Role |
+|---|---|---|
+| Arizona Cardinals | Jonathan Gannon | Head Coach |
+| Atlanta Falcons | Raheem Morris | Head Coach |
+| Baltimore Ravens | John Harbaugh | Head Coach |
+| Buffalo Bills | Sean McDermott | Head Coach |
+| Carolina Panthers | Dave Canales | Head Coach |
+| Chicago Bears | Ben Johnson | Head Coach |
+| Cincinnati Bengals | Zac Taylor | Head Coach |
+| Cleveland Browns | Kevin Stefanski | Head Coach |
+| Dallas Cowboys | Brian Schottenheimer | Head Coach |
+| Denver Broncos | Sean Payton | Head Coach |
+| Detroit Lions | Dan Campbell | Head Coach |
+| Green Bay Packers | Matt LaFleur | Head Coach |
+| Houston Texans | DeMeco Ryans | Head Coach |
+| Indianapolis Colts | Shane Steichen | Head Coach |
+| Jacksonville Jaguars | Liam Coen | Head Coach |
+| Kansas City Chiefs | Andy Reid | Head Coach |
+| Las Vegas Raiders | Pete Carroll | Head Coach |
+| Los Angeles Chargers | Jim Harbaugh | Head Coach |
+| Los Angeles Rams | Sean McVay | Head Coach |
+| Miami Dolphins | Mike McDaniel | Head Coach |
+| Minnesota Vikings | Kevin O'Connell | Head Coach |
+| New England Patriots | Mike Vrabel | Head Coach |
+| New Orleans Saints | Kellen Moore | Head Coach |
+| New York Giants | Brian Daboll | Head Coach |
+| New York Jets | Aaron Glenn | Head Coach |
+| Philadelphia Eagles | Nick Sirianni | Head Coach |
+| Pittsburgh Steelers | Mike Tomlin | Head Coach |
+| San Francisco 49ers | Kyle Shanahan | Head Coach |
+| Seattle Seahawks | Mike Macdonald | Head Coach |
+| Tampa Bay Buccaneers | Todd Bowles | Head Coach |
+| Tennessee Titans | Brian Callahan | Head Coach |
+| Washington Commanders | Dan Quinn | Head Coach |
+
+## Championship Matchup
+- **Super Bowl / Postseason Summary:** NFL Postseason & Super Bowl contested.
+
+- **Sources:** Pro-Football-Reference; Elias Sports Bureau; NFL Game Statistics & Information System (GSIS).

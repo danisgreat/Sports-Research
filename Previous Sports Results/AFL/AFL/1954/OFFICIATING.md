@@ -4,8 +4,23 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1954
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jack McMurray
+
+## Senior Field Umpiring Panel (11 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Jack McMurray | 16 | Grand Final |
+| James Jamieson | 16 | Regular Season / Finals |
+| Bill Barbour | 15 | Regular Season / Finals |
+| Geoff Robinson | 15 | Regular Season / Finals |
+| Warwick Roach | 15 | Regular Season / Finals |
+| Harry Beitzel | 14 | Regular Season / Finals |
+| Harry Rowe | 8 | Regular Season / Finals |
+| Allan Nash | 6 | Regular Season / Finals |
+| Max Blumfield | 4 | Regular Season / Finals |
+| John Frood | 2 | Regular Season / Finals |
+| Robert Flanagan | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

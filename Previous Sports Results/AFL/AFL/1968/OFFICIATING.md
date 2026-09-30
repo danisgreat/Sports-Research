@@ -4,8 +4,23 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1968
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jeff Crouch
+
+## Senior Field Umpiring Panel (11 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Jeff Crouch | 22 | Grand Final |
+| Ray Sleeth | 21 | Regular Season / Finals |
+| Don Jolley | 20 | Regular Season / Finals |
+| Bill Deller | 17 | Regular Season / Finals |
+| Brian Marks | 9 | Regular Season / Finals |
+| Peter Sheales | 9 | Regular Season / Finals |
+| Peter Matheson | 8 | Regular Season / Finals |
+| Raymond King | 7 | Regular Season / Finals |
+| Lance Perkins | 5 | Regular Season / Finals |
+| Graham Huggins | 4 | Regular Season / Finals |
+| Ian Coates | 2 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

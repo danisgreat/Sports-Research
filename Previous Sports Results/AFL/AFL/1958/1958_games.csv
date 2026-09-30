@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1958-04-12,Melbourne 11.13 (79) def. Carlton 9.11 (65),144,14,,Melbourne defeated Carlton by 14 points at M.C.G..
+2,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1958-04-12,Collingwood 12.11 (83) def. Western Bulldogs 4.5 (29),112,54,,Collingwood defeated Western Bulldogs by 54 points at Western Oval.
+3,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1958-04-12,Essendon 13.17 (95) def. Geelong 8.10 (58),153,37,,Essendon defeated Geelong by 37 points at Windy Hill.
+4,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1958-04-12,Fitzroy 23.21 (159) def. North Melbourne 5.9 (39),198,120,,Fitzroy defeated North Melbourne by 120 points at Arden St.
+5,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Glenferrie Oval,1958-04-12,Hawthorn 11.14 (80) def. St Kilda 11.13 (79),159,1,,Hawthorn defeated St Kilda by 1 points at Glenferrie Oval.
+6,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1958-04-12,Richmond 17.18 (120) def. Sydney 12.23 (95),215,25,,Richmond defeated Sydney by 25 points at Lake Oval.
+7,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1958-04-19,North Melbourne 11.7 (73) def. Carlton 9.13 (67),140,6,,North Melbourne defeated Carlton by 6 points at Princes Park.
+8,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1958-04-19,Collingwood 11.9 (75) def. Hawthorn 10.8 (68),143,7,,Collingwood defeated Hawthorn by 7 points at Victoria Park.
+9,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1958-04-19,St Kilda 17.18 (120) def. Essendon 11.16 (82),202,38,,St Kilda defeated Essendon by 38 points at Junction Oval.
+10,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1958-04-19,Fitzroy 11.18 (84) def. Sydney 10.15 (75),159,9,,Fitzroy defeated Sydney by 9 points at Brunswick St.
+11,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Punt Rd,1958-04-19,Richmond 21.12 (138) def. Western Bulldogs 14.12 (96),234,42,,Richmond defeated Western Bulldogs by 42 points at Punt Rd.
+12,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,1958-04-19,Melbourne 17.8 (110) def. Geelong 6.6 (42),152,68,,Melbourne defeated Geelong by 68 points at Kardinia Park.
+13,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1958-04-26,Carlton 18.7 (115) def. Geelong 9.11 (65),180,50,,Carlton defeated Geelong by 50 points at Princes Park.
+14,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1958-04-26,Collingwood 7.15 (57) def. Fitzroy 7.10 (52),109,5,,Collingwood defeated Fitzroy by 5 points at Victoria Park.
+15,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1958-04-26,Hawthorn 10.14 (74) def. Essendon 7.6 (48),122,26,,Hawthorn defeated Essendon by 26 points at Glenferrie Oval.
+16,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Lake Oval,1958-04-26,Western Bulldogs 24.13 (157) def. Sydney 13.18 (96),253,61,,Western Bulldogs defeated Sydney by 61 points at Lake Oval.
+17,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1958-04-26,Melbourne 12.18 (90) def. North Melbourne 7.9 (51),141,39,,Melbourne defeated North Melbourne by 39 points at Arden St.
+18,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1958-04-26,Richmond 11.17 (83) def. St Kilda 9.14 (68),151,15,,Richmond defeated St Kilda by 15 points at Punt Rd.
+19,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1958-05-03,St Kilda 12.21 (93) def. Carlton 8.7 (55),148,38,,St Kilda defeated Carlton by 38 points at Junction Oval.
+20,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1958-05-03,Essendon 13.9 (87) def. Collingwood 9.15 (69),156,18,,Essendon defeated Collingwood by 18 points at Windy Hill.
+21,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1958-05-03,Fitzroy 16.17 (113) def. Richmond 8.8 (56),169,57,,Fitzroy defeated Richmond by 57 points at Brunswick St.
+22,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1958-05-03,Western Bulldogs 7.12 (54) def. North Melbourne 6.4 (40),94,14,,Western Bulldogs defeated North Melbourne by 14 points at Western Oval.
+23,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1958-05-03,Sydney 8.12 (60) def. Geelong 8.11 (59),119,1,,Sydney defeated Geelong by 1 points at Kardinia Park.
+24,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1958-05-03,Melbourne 11.10 (76) def. Hawthorn 9.14 (68),144,8,,Melbourne defeated Hawthorn by 8 points at M.C.G..
+25,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1958-05-10,Collingwood 16.10 (106) def. Carlton 3.15 (33),139,73,,Collingwood defeated Carlton by 73 points at Victoria Park.
+26,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1958-05-10,Melbourne 15.12 (102) def. Essendon 12.15 (87),189,15,,Melbourne defeated Essendon by 15 points at M.C.G..
+27,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1958-05-10,Fitzroy 16.14 (110) def. Western Bulldogs 7.12 (54),164,56,,Fitzroy defeated Western Bulldogs by 56 points at Brunswick St.
+28,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1958-05-10,Richmond 14.13 (97) def. Geelong 11.15 (81),178,16,,Richmond defeated Geelong by 16 points at Kardinia Park.
+29,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1958-05-10,Hawthorn 17.18 (120) def. North Melbourne 9.4 (58),178,62,,Hawthorn defeated North Melbourne by 62 points at Glenferrie Oval.
+30,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1958-05-10,St Kilda 13.15 (93) def. Sydney 14.8 (92),185,1,,St Kilda defeated Sydney by 1 points at Lake Oval.
+31,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1958-05-17,Fitzroy 8.11 (59) def. Carlton 4.16 (40),99,19,,Fitzroy defeated Carlton by 19 points at Princes Park.
+32,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1958-05-17,Collingwood 13.17 (95) def. Richmond 8.8 (56),151,39,,Collingwood defeated Richmond by 39 points at Punt Rd.
+33,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1958-05-17,North Melbourne 9.10 (64) def. Essendon 7.13 (55),119,9,,North Melbourne defeated Essendon by 9 points at Arden St.
+34,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1958-05-17,Geelong 10.15 (75) def. Western Bulldogs 6.22 (58),133,17,,Geelong defeated Western Bulldogs by 17 points at Western Oval.
+35,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1958-05-17,Hawthorn 11.15 (81) def. Sydney 8.16 (64),145,17,,Hawthorn defeated Sydney by 17 points at Glenferrie Oval.
+36,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1958-05-17,St Kilda 12.7 (79) def. Melbourne 11.12 (78),157,1,,St Kilda defeated Melbourne by 1 points at Junction Oval.
+37,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1958-05-24,Sydney 10.19 (79) def. Carlton 7.15 (57),136,22,,Sydney defeated Carlton by 22 points at Lake Oval.
+38,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1958-05-24,North Melbourne 9.8 (62) def. Collingwood 7.17 (59),121,3,,North Melbourne defeated Collingwood by 3 points at Arden St.
+39,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1958-05-24,Essendon 11.16 (82) def. Richmond 9.14 (68),150,14,,Essendon defeated Richmond by 14 points at Windy Hill.
+40,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1958-05-24,Fitzroy 12.15 (87) def. Hawthorn 8.15 (63),150,24,,Fitzroy defeated Hawthorn by 24 points at Brunswick St.
+41,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1958-05-24,Melbourne 11.19 (85) def. Western Bulldogs 9.8 (62),147,23,,Melbourne defeated Western Bulldogs by 23 points at M.C.G..
+42,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1958-05-24,Geelong 9.16 (70) def. St Kilda 6.8 (44),114,26,,Geelong defeated St Kilda by 26 points at Kardinia Park.
+43,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1958-05-31,Carlton 9.14 (68) def. Hawthorn 9.6 (60),128,8,,Carlton defeated Hawthorn by 8 points at Princes Park.
+44,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1958-05-31,Collingwood 20.20 (140) def. Sydney 9.12 (66),206,74,,Collingwood defeated Sydney by 74 points at Victoria Park.
+45,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1958-05-31,Western Bulldogs 16.11 (107) def. Essendon 13.14 (92),199,15,,Western Bulldogs defeated Essendon by 15 points at Western Oval.
+46,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1958-05-31,St Kilda 12.17 (89) def. Fitzroy 6.14 (50),139,39,,St Kilda defeated Fitzroy by 39 points at Junction Oval.
+47,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1958-05-31,North Melbourne 14.18 (102) def. Geelong 4.11 (35),137,67,,North Melbourne defeated Geelong by 67 points at Kardinia Park.
+48,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1958-05-31,Melbourne 12.18 (90) def. Richmond 12.11 (83),173,7,,Melbourne defeated Richmond by 7 points at M.C.G..
+49,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1958-06-07,Carlton 7.8 (50) def. Essendon 5.19 (49),99,1,,Carlton defeated Essendon by 1 points at Windy Hill.
+50,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1958-06-07,Collingwood 12.23 (95) def. St Kilda 5.9 (39),134,56,,Collingwood defeated St Kilda by 56 points at Victoria Park.
+51,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1958-06-07,Fitzroy 8.18 (66) def. Geelong 6.15 (51),117,15,,Fitzroy defeated Geelong by 15 points at Brunswick St.
+52,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1958-06-07,Hawthorn 11.14 (80) def. Western Bulldogs 8.10 (58),138,22,,Hawthorn defeated Western Bulldogs by 22 points at Glenferrie Oval.
+53,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1958-06-07,Melbourne 16.12 (108) def. Sydney 11.10 (76),184,32,,Melbourne defeated Sydney by 32 points at Lake Oval.
+54,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Punt Rd,1958-06-07,North Melbourne 14.10 (94) def. Richmond 12.11 (83),177,11,,North Melbourne defeated Richmond by 11 points at Punt Rd.
+55,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1958-06-14,Carlton 6.15 (51) def. Richmond 2.9 (21),72,30,,Carlton defeated Richmond by 30 points at Princes Park.
+56,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1958-06-14,Essendon 16.11 (107) def. Fitzroy 8.8 (56),163,51,,Essendon defeated Fitzroy by 51 points at Windy Hill.
+57,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1958-06-14,Western Bulldogs 11.16 (82) def. St Kilda 8.15 (63),145,19,,Western Bulldogs defeated St Kilda by 19 points at Junction Oval.
+58,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1958-06-16,Melbourne 12.12 (84) def. Collingwood 10.13 (73),157,11,,Melbourne defeated Collingwood by 11 points at M.C.G..
+59,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1958-06-16,Hawthorn 14.19 (103) def. Geelong 8.6 (54),157,49,,Hawthorn defeated Geelong by 49 points at Glenferrie Oval.
+60,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1958-06-16,North Melbourne 12.15 (87) def. Sydney 8.9 (57),144,30,,North Melbourne defeated Sydney by 30 points at Arden St.
+61,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1958-06-21,Carlton 10.24 (84) def. Western Bulldogs 11.8 (74),158,10,,Carlton defeated Western Bulldogs by 10 points at Western Oval.
+62,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1958-06-21,Collingwood 14.15 (99) def. Geelong 9.12 (66),165,33,,Collingwood defeated Geelong by 33 points at Kardinia Park.
+63,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1958-06-21,Essendon 15.13 (103) def. Sydney 8.13 (61),164,42,,Essendon defeated Sydney by 42 points at Lake Oval.
+64,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1958-06-21,Fitzroy 12.16 (88) def. Melbourne 6.11 (47),135,41,,Fitzroy defeated Melbourne by 41 points at Brunswick St.
+65,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1958-06-21,Richmond 15.11 (101) def. Hawthorn 13.9 (87),188,14,,Richmond defeated Hawthorn by 14 points at Punt Rd.
+66,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1958-06-21,North Melbourne 8.12 (60) def. St Kilda 5.5 (35),95,25,,North Melbourne defeated St Kilda by 25 points at Arden St.
+67,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1958-06-28,Melbourne 12.12 (84) def. Carlton 9.14 (68),152,16,,Melbourne defeated Carlton by 16 points at Princes Park.
+68,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1958-06-28,Collingwood 12.13 (85) def. Western Bulldogs 10.14 (74),159,11,,Collingwood defeated Western Bulldogs by 11 points at Victoria Park.
+69,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1958-06-28,Geelong 15.9 (99) def. Essendon 12.12 (84),183,15,,Geelong defeated Essendon by 15 points at Kardinia Park.
+70,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1958-06-28,Fitzroy 12.17 (89) def. North Melbourne 7.16 (58),147,31,,Fitzroy defeated North Melbourne by 31 points at Brunswick St.
+71,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1958-06-28,Hawthorn 14.14 (98) def. St Kilda 11.14 (80),178,18,,Hawthorn defeated St Kilda by 18 points at Junction Oval.
+72,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1958-06-28,Richmond 12.13 (85) def. Sydney 11.8 (74),159,11,,Richmond defeated Sydney by 11 points at Punt Rd.
+73,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1958-07-19,North Melbourne 8.9 (57) def. Carlton 6.9 (45),102,12,,North Melbourne defeated Carlton by 12 points at Arden St.
+74,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1958-07-19,Collingwood 14.9 (93) def. Hawthorn 12.14 (86),179,7,,Collingwood defeated Hawthorn by 7 points at Glenferrie Oval.
+75,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1958-07-19,Essendon 17.30 (132) def. St Kilda 8.9 (57),189,75,,Essendon defeated St Kilda by 75 points at Windy Hill.
+76,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1958-07-19,Sydney 19.6 (120) def. Fitzroy 11.22 (88),208,32,,Sydney defeated Fitzroy by 32 points at Lake Oval.
+77,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1958-07-19,Western Bulldogs 14.12 (96) def. Richmond 2.11 (23),119,73,,Western Bulldogs defeated Richmond by 73 points at Western Oval.
+78,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1958-07-19,Melbourne 16.22 (118) def. Geelong 12.12 (84),202,34,,Melbourne defeated Geelong by 34 points at M.C.G..
+79,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1958-07-26,Carlton 8.21 (69) def. Geelong 7.11 (53),122,16,,Carlton defeated Geelong by 16 points at Kardinia Park.
+80,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1958-07-26,Fitzroy 15.15 (105) def. Collingwood 8.9 (57),162,48,,Fitzroy defeated Collingwood by 48 points at Brunswick St.
+81,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1958-07-26,Essendon 11.15 (81) def. Hawthorn 7.7 (49),130,32,,Essendon defeated Hawthorn by 32 points at Windy Hill.
+82,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1958-07-26,Sydney 14.12 (96) def. Western Bulldogs 8.15 (63),159,33,,Sydney defeated Western Bulldogs by 33 points at Western Oval.
+83,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1958-07-26,Melbourne 10.12 (72) def. North Melbourne 8.15 (63),135,9,,Melbourne defeated North Melbourne by 9 points at M.C.G..
+84,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Junction Oval,1958-07-26,St Kilda 10.12 (72) def. Richmond 9.10 (64),136,8,,St Kilda defeated Richmond by 8 points at Junction Oval.
+85,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1958-08-02,Carlton 8.11 (59) def. St Kilda 7.12 (54),113,5,,Carlton defeated St Kilda by 5 points at Princes Park.
+86,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1958-08-02,Essendon 12.14 (86) def. Collingwood 11.9 (75),161,11,,Essendon defeated Collingwood by 11 points at Victoria Park.
+87,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1958-08-02,Fitzroy 19.18 (132) def. Richmond 10.8 (68),200,64,,Fitzroy defeated Richmond by 64 points at Punt Rd.
+88,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1958-08-02,North Melbourne 11.13 (79) def. Western Bulldogs 9.8 (62),141,17,,North Melbourne defeated Western Bulldogs by 17 points at Arden St.
+89,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1958-08-02,Sydney 16.13 (109) def. Geelong 14.17 (101),210,8,,Sydney defeated Geelong by 8 points at Lake Oval.
+90,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1958-08-02,Melbourne 14.11 (95) def. Hawthorn 12.15 (87),182,8,,Melbourne defeated Hawthorn by 8 points at Glenferrie Oval.
+91,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1958-08-09,Collingwood 10.12 (72) def. Carlton 7.11 (53),125,19,,Collingwood defeated Carlton by 19 points at Princes Park.
+92,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1958-08-09,Essendon 11.12 (78) def. Melbourne 10.15 (75),153,3,,Essendon defeated Melbourne by 3 points at Windy Hill.
+93,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1958-08-09,Western Bulldogs 20.11 (131) def. Fitzroy 5.11 (41),172,90,,Western Bulldogs defeated Fitzroy by 90 points at Western Oval.
+94,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1958-08-09,Richmond 12.18 (90) def. Geelong 9.15 (69),159,21,,Richmond defeated Geelong by 21 points at Punt Rd.
+95,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1958-08-09,Hawthorn 13.14 (92) def. North Melbourne 7.18 (60),152,32,,Hawthorn defeated North Melbourne by 32 points at Arden St.
+96,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1958-08-09,Sydney 15.9 (99) def. St Kilda 9.23 (77),176,22,,Sydney defeated St Kilda by 22 points at Junction Oval.
+97,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1958-08-16,Fitzroy 15.11 (101) def. Carlton 13.18 (96),197,5,,Fitzroy defeated Carlton by 5 points at Brunswick St.
+98,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1958-08-16,Collingwood 16.11 (107) def. Richmond 13.10 (88),195,19,,Collingwood defeated Richmond by 19 points at Victoria Park.
+99,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1958-08-16,North Melbourne 11.14 (80) def. Essendon 8.14 (62),142,18,,North Melbourne defeated Essendon by 18 points at Windy Hill.
+100,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1958-08-16,Geelong 13.14 (92) def. Western Bulldogs 12.13 (85),177,7,,Geelong defeated Western Bulldogs by 7 points at Kardinia Park.
+101,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1958-08-16,Sydney 6.14 (50) def. Hawthorn 6.12 (48),98,2,,Sydney defeated Hawthorn by 2 points at Lake Oval.
+102,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1958-08-16,Melbourne 21.11 (137) def. St Kilda 13.9 (87),224,50,,Melbourne defeated St Kilda by 50 points at M.C.G..
+103,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1958-08-23,Carlton 12.11 (83) def. Sydney 10.21 (81),164,2,,Carlton defeated Sydney by 2 points at Princes Park.
+104,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1958-08-23,North Melbourne 14.17 (101) def. Collingwood 12.16 (88),189,13,,North Melbourne defeated Collingwood by 13 points at Victoria Park.
+105,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1958-08-23,Essendon 16.13 (109) def. Richmond 15.11 (101),210,8,,Essendon defeated Richmond by 8 points at Punt Rd.
+106,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Glenferrie Oval,1958-08-23,Hawthorn 11.9 (75) def. Fitzroy 10.11 (71),146,4,,Hawthorn defeated Fitzroy by 4 points at Glenferrie Oval.
+107,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1958-08-23,Melbourne 10.18 (78) def. Western Bulldogs 8.11 (59),137,19,,Melbourne defeated Western Bulldogs by 19 points at Western Oval.
+108,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1958-08-23,St Kilda 16.15 (111) def. Geelong 5.8 (38),149,73,,St Kilda defeated Geelong by 73 points at Junction Oval.
+109,Finals,North Melbourne,Fitzroy,North Melbourne,Fitzroy,M.C.G.,1958-08-30,North Melbourne 10.10 (70) def. Fitzroy 9.12 (66),136,4,,North Melbourne defeated Fitzroy by 4 points at M.C.G..
+110,Finals,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1958-09-06,Melbourne 11.12 (78) def. Collingwood 4.9 (33),111,45,,Melbourne defeated Collingwood by 45 points at M.C.G..
+111,Finals,Collingwood,North Melbourne,Collingwood,North Melbourne,M.C.G.,1958-09-13,Collingwood 14.12 (96) def. North Melbourne 10.16 (76),172,20,,Collingwood defeated North Melbourne by 20 points at M.C.G..
+112,Grand Final,Collingwood,Melbourne,Collingwood,Melbourne,M.C.G.,1958-09-20,Collingwood 12.10 (82) def. Melbourne 9.10 (64),146,18,,Collingwood defeated Melbourne by 18 points at M.C.G..

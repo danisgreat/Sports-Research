@@ -2,6 +2,12 @@
 
 An authoritative, comprehensive research directory and historical archive of competitive sports results, covering the modern era from **1900 through 2025** across 17 distinct sporting disciplines and two competition tiers.
 
+**Before populating any folder, read:**
+- [Data source implementation guide](DATA_SOURCES_IMPLEMENTATION.md): where to get games, players, coaching staff and officials for each competition, with every source tested on 2026-09-30.
+- [Coverage, blank years and why](COVERAGE_AND_BLANK_YEARS.md): which years had no competition, which fields cannot be recovered for which eras, the season-year convention, and the 48 folders whose current `INACTIVE`/active status disagrees with the record.
+
+The existing `COACHES.md`, `OFFICIATING.md` and `HISTORICAL_PLAYERS_AND_ROSTERS.md` text is generic placeholder, not sourced fact (see the coverage document §6).
+
 ---
 
 ## Directory Architecture

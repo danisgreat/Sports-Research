@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Denver Broncos,Seattle Seahawks,Denver Broncos,Seattle Seahawks,MetLife Stadium,2014-02-02,Seattle Seahawks 43 def. Denver Broncos 8,51,35,Referee: Terry McAulay,"Seattle Seahawks won Super Bowl XLVIII, defeating Denver Broncos 43-8 at MetLife Stadium."

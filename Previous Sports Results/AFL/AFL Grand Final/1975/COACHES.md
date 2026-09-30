@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1975 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1975
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1975.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1975 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** North Melbourne
+- **Premiership Coach:** Ron Barassi
+- **Runners-up:** Hawthorn
+- **Runners-up Coach:** John Kennedy
+- **Grand Final Result:** North Melbourne 19.8 (122) def. Hawthorn 9.13 (67)
+- **Winning Margin:** 55 points
+- **Match Date:** 1975-09-27
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 110,551 spectators
+
+## Match Summary & Tactical Notes
+North Melbourne captured their historic first VFL premiership, defeating Hawthorn by 55 points behind Barry Davis.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

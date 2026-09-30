@@ -1,1 +1,139 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1986-03-29,Essendon 19.19 (133) def. Collingwood 10.8 (68),201,65,,Essendon defeated Collingwood by 65 points at Victoria Park.
+2,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1986-03-29,Fitzroy 16.16 (112) def. Geelong 11.18 (84),196,28,,Fitzroy defeated Geelong by 28 points at Kardinia Park.
+3,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,1986-03-29,Melbourne 20.18 (138) def. Richmond 19.14 (128),266,10,,Melbourne defeated Richmond by 10 points at M.C.G..
+4,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Waverley Park,1986-03-31,Hawthorn 17.11 (113) def. Carlton 11.11 (77),190,36,,Hawthorn defeated Carlton by 36 points at Waverley Park.
+5,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1986-03-31,Western Bulldogs 14.23 (107) def. St Kilda 12.18 (90),197,17,,Western Bulldogs defeated St Kilda by 17 points at Western Oval.
+6,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,M.C.G.,1986-03-31,Sydney 20.6 (126) def. North Melbourne 15.11 (101),227,25,,Sydney defeated North Melbourne by 25 points at M.C.G..
+7,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,M.C.G.,1986-04-04,Hawthorn 17.9 (111) def. North Melbourne 16.12 (108),219,3,,Hawthorn defeated North Melbourne by 3 points at M.C.G..
+8,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1986-04-05,Carlton 18.17 (125) def. Richmond 15.5 (95),220,30,,Carlton defeated Richmond by 30 points at Princes Park.
+9,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1986-04-05,Essendon 21.22 (148) def. Geelong 7.9 (51),199,97,,Essendon defeated Geelong by 97 points at Windy Hill.
+10,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Waverley Park,1986-04-05,Fitzroy 10.19 (79) def. Western Bulldogs 10.9 (69),148,10,,Fitzroy defeated Western Bulldogs by 10 points at Waverley Park.
+11,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1986-04-05,Melbourne 21.10 (136) def. St Kilda 16.12 (108),244,28,,Melbourne defeated St Kilda by 28 points at M.C.G..
+12,Regular Season,Sydney,Collingwood,Sydney,Collingwood,S.C.G.,1986-04-06,Sydney 19.20 (134) def. Collingwood 15.10 (100),234,34,,Sydney defeated Collingwood by 34 points at S.C.G..
+13,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Moorabbin Oval,1986-04-12,Carlton 24.13 (157) def. St Kilda 10.9 (69),226,88,,Carlton defeated St Kilda by 88 points at Moorabbin Oval.
+14,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,M.C.G.,1986-04-12,North Melbourne 17.10 (112) def. Collingwood 9.15 (69),181,43,,North Melbourne defeated Collingwood by 43 points at M.C.G..
+15,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Waverley Park,1986-04-12,Essendon 13.11 (89) def. Western Bulldogs 11.15 (81),170,8,,Essendon defeated Western Bulldogs by 8 points at Waverley Park.
+16,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Victoria Park,1986-04-12,Fitzroy 14.20 (104) def. Melbourne 13.10 (88),192,16,,Fitzroy defeated Melbourne by 16 points at Victoria Park.
+17,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1986-04-12,Sydney 19.18 (132) def. Geelong 15.15 (105),237,27,,Sydney defeated Geelong by 27 points at Kardinia Park.
+18,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Princes Park,1986-04-12,Hawthorn 22.22 (154) def. Richmond 15.9 (99),253,55,,Hawthorn defeated Richmond by 55 points at Princes Park.
+19,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1986-04-19,Carlton 22.24 (156) def. Fitzroy 10.15 (75),231,81,,Carlton defeated Fitzroy by 81 points at Princes Park.
+20,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1986-04-19,Collingwood 20.16 (136) def. Geelong 13.13 (91),227,45,,Collingwood defeated Geelong by 45 points at Victoria Park.
+21,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1986-04-19,Essendon 27.8 (170) def. Melbourne 17.6 (108),278,62,,Essendon defeated Melbourne by 62 points at Windy Hill.
+22,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Moorabbin Oval,1986-04-19,Hawthorn 19.14 (128) def. St Kilda 17.14 (116),244,12,,Hawthorn defeated St Kilda by 12 points at Moorabbin Oval.
+23,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Waverley Park,1986-04-19,Richmond 17.11 (113) def. North Melbourne 14.12 (96),209,17,,Richmond defeated North Melbourne by 17 points at Waverley Park.
+24,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,1986-04-20,Sydney 20.22 (142) def. Western Bulldogs 9.12 (66),208,76,,Sydney defeated Western Bulldogs by 76 points at S.C.G..
+25,Regular Season,Carlton,Essendon,Carlton,Essendon,Waverley Park,1986-04-25,Carlton 10.11 (71) def. Essendon 8.7 (55),126,16,,Carlton defeated Essendon by 16 points at Waverley Park.
+26,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1986-04-25,Sydney 16.14 (110) def. Melbourne 14.17 (101),211,9,,Sydney defeated Melbourne by 9 points at M.C.G..
+27,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,M.C.G.,1986-04-25,North Melbourne 24.10 (154) def. Geelong 14.8 (92),246,62,,North Melbourne defeated Geelong by 62 points at M.C.G..
+28,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1986-04-26,Western Bulldogs 10.20 (80) def. Collingwood 10.13 (73),153,7,,Western Bulldogs defeated Collingwood by 7 points at Western Oval.
+29,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Victoria Park,1986-04-26,Fitzroy 13.26 (104) def. Hawthorn 13.12 (90),194,14,,Fitzroy defeated Hawthorn by 14 points at Victoria Park.
+30,Regular Season,Richmond,St Kilda,Richmond,St Kilda,M.C.G.,1986-04-26,Richmond 20.15 (135) def. St Kilda 11.18 (84),219,51,,Richmond defeated St Kilda by 51 points at M.C.G..
+31,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,M.C.G.,1986-05-02,North Melbourne 19.25 (139) def. St Kilda 15.13 (103),242,36,,North Melbourne defeated St Kilda by 36 points at M.C.G..
+32,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1986-05-03,Collingwood 17.19 (121) def. Melbourne 11.17 (83),204,38,,Collingwood defeated Melbourne by 38 points at M.C.G..
+33,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Waverley Park,1986-05-03,Hawthorn 19.12 (126) def. Essendon 15.12 (102),228,24,,Hawthorn defeated Essendon by 24 points at Waverley Park.
+34,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Princes Park,1986-05-03,Richmond 17.20 (122) def. Fitzroy 18.13 (121),243,1,,Richmond defeated Fitzroy by 1 points at Princes Park.
+35,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1986-05-03,Geelong 16.14 (110) def. Western Bulldogs 13.13 (91),201,19,,Geelong defeated Western Bulldogs by 19 points at Kardinia Park.
+36,Regular Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,1986-05-04,Sydney 18.12 (120) def. Carlton 13.20 (98),218,22,,Sydney defeated Carlton by 22 points at S.C.G..
+37,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1986-05-10,Carlton 16.13 (109) def. Collingwood 9.15 (69),178,40,,Carlton defeated Collingwood by 40 points at Victoria Park.
+38,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,1986-05-10,Essendon 21.19 (145) def. Richmond 16.9 (105),250,40,,Essendon defeated Richmond by 40 points at M.C.G..
+39,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Moorabbin Oval,1986-05-10,Fitzroy 12.15 (87) def. St Kilda 10.14 (74),161,13,,Fitzroy defeated St Kilda by 13 points at Moorabbin Oval.
+40,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1986-05-10,Western Bulldogs 14.11 (95) def. North Melbourne 10.17 (77),172,18,,Western Bulldogs defeated North Melbourne by 18 points at Western Oval.
+41,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Waverley Park,1986-05-10,Geelong 12.17 (89) def. Melbourne 7.16 (58),147,31,,Geelong defeated Melbourne by 31 points at Waverley Park.
+42,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Princes Park,1986-05-10,Hawthorn 18.25 (133) def. Sydney 15.10 (100),233,33,,Hawthorn defeated Sydney by 33 points at Princes Park.
+43,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1986-05-17,Carlton 20.14 (134) def. Geelong 16.9 (105),239,29,,Carlton defeated Geelong by 29 points at Princes Park.
+44,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Waverley Park,1986-05-17,Hawthorn 15.14 (104) def. Collingwood 8.11 (59),163,45,,Hawthorn defeated Collingwood by 45 points at Waverley Park.
+45,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1986-05-17,Essendon 22.14 (146) def. St Kilda 12.12 (84),230,62,,Essendon defeated St Kilda by 62 points at Windy Hill.
+46,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Victoria Park,1986-05-17,North Melbourne 18.12 (120) def. Fitzroy 14.13 (97),217,23,,North Melbourne defeated Fitzroy by 23 points at Victoria Park.
+47,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1986-05-17,Melbourne 20.12 (132) def. Western Bulldogs 11.14 (80),212,52,,Melbourne defeated Western Bulldogs by 52 points at M.C.G..
+48,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,1986-05-18,Richmond 16.16 (112) def. Sydney 16.15 (111),223,1,,Richmond defeated Sydney by 1 points at S.C.G..
+49,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1986-05-24,Western Bulldogs 7.8 (50) def. Carlton 4.12 (36),86,14,,Western Bulldogs defeated Carlton by 14 points at Western Oval.
+50,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,1986-05-24,Collingwood 16.16 (112) def. Richmond 11.10 (76),188,36,,Collingwood defeated Richmond by 36 points at M.C.G..
+51,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Victoria Park,1986-05-24,Fitzroy 18.7 (115) def. Essendon 10.10 (70),185,45,,Fitzroy defeated Essendon by 45 points at Victoria Park.
+52,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Waverley Park,1986-05-24,North Melbourne 12.11 (83) def. Melbourne 6.12 (48),131,35,,North Melbourne defeated Melbourne by 35 points at Waverley Park.
+53,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Moorabbin Oval,1986-05-24,Sydney 6.11 (47) def. St Kilda 5.8 (38),85,9,,Sydney defeated St Kilda by 9 points at Moorabbin Oval.
+54,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1986-05-25,Hawthorn 19.5 (119) def. Geelong 12.14 (86),205,33,,Hawthorn defeated Geelong by 33 points at Kardinia Park.
+55,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,M.C.G.,1986-05-30,North Melbourne 21.11 (137) def. Essendon 18.13 (121),258,16,,North Melbourne defeated Essendon by 16 points at M.C.G..
+56,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1986-05-31,Carlton 25.15 (165) def. Melbourne 6.13 (49),214,116,,Carlton defeated Melbourne by 116 points at M.C.G..
+57,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Waverley Park,1986-05-31,Collingwood 19.19 (133) def. St Kilda 14.7 (91),224,42,,Collingwood defeated St Kilda by 42 points at Waverley Park.
+58,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Princes Park,1986-05-31,Western Bulldogs 16.12 (108) def. Hawthorn 11.13 (79),187,29,,Western Bulldogs defeated Hawthorn by 29 points at Princes Park.
+59,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1986-05-31,Geelong 19.12 (126) def. Richmond 16.14 (110),236,16,,Geelong defeated Richmond by 16 points at Kardinia Park.
+60,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,S.C.G.,1986-06-01,Sydney 18.18 (126) def. Fitzroy 14.17 (101),227,25,,Sydney defeated Fitzroy by 25 points at S.C.G..
+61,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1986-06-07,Collingwood 18.14 (122) def. Fitzroy 11.12 (78),200,44,,Collingwood defeated Fitzroy by 44 points at Victoria Park.
+62,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Waverley Park,1986-06-07,Geelong 19.12 (126) def. St Kilda 13.10 (88),214,38,,Geelong defeated St Kilda by 38 points at Waverley Park.
+63,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Princes Park,1986-06-07,Hawthorn 21.19 (145) def. Melbourne 9.6 (60),205,85,,Hawthorn defeated Melbourne by 85 points at Princes Park.
+64,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1986-06-09,Carlton 22.10 (142) def. North Melbourne 9.10 (64),206,78,,Carlton defeated North Melbourne by 78 points at Princes Park.
+65,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1986-06-09,Sydney 10.18 (78) def. Essendon 9.4 (58),136,20,,Sydney defeated Essendon by 20 points at Windy Hill.
+66,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,1986-06-09,Richmond 15.7 (97) def. Western Bulldogs 12.8 (80),177,17,,Richmond defeated Western Bulldogs by 17 points at M.C.G..
+67,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,1986-06-13,North Melbourne 14.11 (95) def. Sydney 13.13 (91),186,4,,North Melbourne defeated Sydney by 4 points at S.C.G..
+68,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Waverley Park,1986-06-14,Collingwood 18.12 (120) def. Essendon 13.16 (94),214,26,,Collingwood defeated Essendon by 26 points at Waverley Park.
+69,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Victoria Park,1986-06-14,Fitzroy 22.13 (145) def. Geelong 11.11 (77),222,68,,Fitzroy defeated Geelong by 68 points at Victoria Park.
+70,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Moorabbin Oval,1986-06-14,Western Bulldogs 24.10 (154) def. St Kilda 10.15 (75),229,79,,Western Bulldogs defeated St Kilda by 79 points at Moorabbin Oval.
+71,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1986-06-14,Richmond 21.8 (134) def. Melbourne 17.23 (125),259,9,,Richmond defeated Melbourne by 9 points at M.C.G..
+72,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,M.C.G.,1986-06-15,Hawthorn 19.19 (133) def. Carlton 16.14 (110),243,23,,Hawthorn defeated Carlton by 23 points at M.C.G..
+73,Regular Season,Richmond,Carlton,Richmond,Carlton,Waverley Park,1986-06-21,Carlton 19.18 (132) def. Richmond 11.7 (73),205,59,,Carlton defeated Richmond by 59 points at Waverley Park.
+74,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1986-06-21,Sydney 14.12 (96) def. Collingwood 14.11 (95),191,1,,Sydney defeated Collingwood by 1 points at Victoria Park.
+75,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1986-06-21,Essendon 12.17 (89) def. Geelong 11.11 (77),166,12,,Essendon defeated Geelong by 12 points at Kardinia Park.
+76,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1986-06-21,Western Bulldogs 22.11 (143) def. Fitzroy 8.7 (55),198,88,,Western Bulldogs defeated Fitzroy by 88 points at Western Oval.
+77,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Princes Park,1986-06-21,Hawthorn 21.26 (152) def. North Melbourne 13.14 (92),244,60,,Hawthorn defeated North Melbourne by 60 points at Princes Park.
+78,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Moorabbin Oval,1986-06-21,St Kilda 15.11 (101) def. Melbourne 7.7 (49),150,52,,St Kilda defeated Melbourne by 52 points at Moorabbin Oval.
+79,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1986-06-28,Carlton 24.19 (163) def. St Kilda 11.10 (76),239,87,,Carlton defeated St Kilda by 87 points at Princes Park.
+80,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1986-06-28,Collingwood 17.13 (115) def. North Melbourne 9.14 (68),183,47,,Collingwood defeated North Melbourne by 47 points at Victoria Park.
+81,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1986-06-28,Western Bulldogs 12.13 (85) def. Essendon 8.8 (56),141,29,,Western Bulldogs defeated Essendon by 29 points at Windy Hill.
+82,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,Waverley Park,1986-06-28,Melbourne 17.13 (115) def. Fitzroy 11.5 (71),186,44,,Melbourne defeated Fitzroy by 44 points at Waverley Park.
+83,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,1986-06-28,Hawthorn 26.19 (175) def. Richmond 11.8 (74),249,101,,Hawthorn defeated Richmond by 101 points at M.C.G..
+84,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,1986-06-29,Sydney 17.11 (113) def. Geelong 13.13 (91),204,22,,Sydney defeated Geelong by 22 points at S.C.G..
+85,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,M.C.G.,1986-07-04,Richmond 16.18 (114) def. North Melbourne 13.8 (86),200,28,,Richmond defeated North Melbourne by 28 points at M.C.G..
+86,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Waverley Park,1986-07-05,Fitzroy 8.11 (59) def. Carlton 7.11 (53),112,6,,Fitzroy defeated Carlton by 6 points at Waverley Park.
+87,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1986-07-05,Collingwood 19.15 (129) def. Geelong 8.10 (58),187,71,,Collingwood defeated Geelong by 71 points at Kardinia Park.
+88,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1986-07-05,Essendon 27.20 (182) def. Melbourne 8.12 (60),242,122,,Essendon defeated Melbourne by 122 points at M.C.G..
+89,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1986-07-05,Sydney 12.14 (86) def. Western Bulldogs 11.4 (70),156,16,,Sydney defeated Western Bulldogs by 16 points at Western Oval.
+90,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Princes Park,1986-07-05,Hawthorn 8.11 (59) def. St Kilda 5.8 (38),97,21,,Hawthorn defeated St Kilda by 21 points at Princes Park.
+91,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,M.C.G.,1986-07-12,Carlton 22.17 (149) def. North Melbourne 13.14 (92),241,57,,Carlton defeated North Melbourne by 57 points at M.C.G..
+92,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1986-07-12,Geelong 16.16 (112) def. St Kilda 13.7 (85),197,27,,Geelong defeated St Kilda by 27 points at Kardinia Park.
+93,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,Waverley Park,1986-07-12,Hawthorn 17.15 (117) def. Melbourne 6.14 (50),167,67,,Hawthorn defeated Melbourne by 67 points at Waverley Park.
+94,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,1986-07-13,Sydney 24.18 (162) def. Essendon 15.13 (103),265,59,,Sydney defeated Essendon by 59 points at S.C.G..
+95,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Waverley Park,1986-07-19,Collingwood 20.12 (132) def. Fitzroy 12.13 (85),217,47,,Collingwood defeated Fitzroy by 47 points at Waverley Park.
+96,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1986-07-19,Western Bulldogs 17.20 (122) def. Richmond 14.11 (95),217,27,,Western Bulldogs defeated Richmond by 27 points at Western Oval.
+97,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,1986-07-20,Essendon 15.15 (105) def. Carlton 11.14 (80),185,25,,Essendon defeated Carlton by 25 points at M.C.G..
+98,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,1986-07-26,Collingwood 11.10 (76) def. Western Bulldogs 9.11 (65),141,11,,Collingwood defeated Western Bulldogs by 11 points at M.C.G..
+99,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Princes Park,1986-07-26,Fitzroy 14.12 (96) def. Hawthorn 6.9 (45),141,51,,Fitzroy defeated Hawthorn by 51 points at Princes Park.
+100,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Waverley Park,1986-07-26,North Melbourne 22.10 (142) def. Geelong 19.9 (123),265,19,,North Melbourne defeated Geelong by 19 points at Waverley Park.
+101,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Moorabbin Oval,1986-07-26,St Kilda 20.9 (129) def. Richmond 7.12 (54),183,75,,St Kilda defeated Richmond by 75 points at Moorabbin Oval.
+102,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,1986-07-27,Sydney 29.15 (189) def. Melbourne 9.11 (65),254,124,,Sydney defeated Melbourne by 124 points at S.C.G..
+103,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1986-08-02,Carlton 15.14 (104) def. Sydney 12.15 (87),191,17,,Carlton defeated Sydney by 17 points at Princes Park.
+104,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1986-08-02,Melbourne 16.9 (105) def. Collingwood 13.14 (92),197,13,,Melbourne defeated Collingwood by 13 points at Victoria Park.
+105,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1986-08-02,Essendon 21.11 (137) def. Hawthorn 6.14 (50),187,87,,Essendon defeated Hawthorn by 87 points at Windy Hill.
+106,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,M.C.G.,1986-08-02,Fitzroy 13.16 (94) def. Richmond 11.19 (85),179,9,,Fitzroy defeated Richmond by 9 points at M.C.G..
+107,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Waverley Park,1986-08-02,Western Bulldogs 11.13 (79) def. Geelong 10.16 (76),155,3,,Western Bulldogs defeated Geelong by 3 points at Waverley Park.
+108,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Moorabbin Oval,1986-08-02,North Melbourne 19.13 (127) def. St Kilda 13.12 (90),217,37,,North Melbourne defeated St Kilda by 37 points at Moorabbin Oval.
+109,Regular Season,Essendon,Richmond,Essendon,Richmond,Waverley Park,1986-08-09,Essendon 23.16 (154) def. Richmond 11.9 (75),229,79,,Essendon defeated Richmond by 79 points at Waverley Park.
+110,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Victoria Park,1986-08-09,Fitzroy 24.16 (160) def. St Kilda 11.9 (75),235,85,,Fitzroy defeated St Kilda by 85 points at Victoria Park.
+111,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1986-08-09,Melbourne 18.19 (127) def. Geelong 17.18 (120),247,7,,Melbourne defeated Geelong by 7 points at M.C.G..
+112,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,M.C.G.,1986-08-09,North Melbourne 20.20 (140) def. Western Bulldogs 10.23 (83),223,57,,North Melbourne defeated Western Bulldogs by 57 points at M.C.G..
+113,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,1986-08-10,Carlton 21.10 (136) def. Collingwood 12.15 (87),223,49,,Carlton defeated Collingwood by 49 points at M.C.G..
+114,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,1986-08-10,Hawthorn 27.9 (171) def. Sydney 10.13 (73),244,98,,Hawthorn defeated Sydney by 98 points at S.C.G..
+115,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1986-08-16,Geelong 16.12 (108) def. Carlton 10.19 (79),187,29,,Geelong defeated Carlton by 29 points at Kardinia Park.
+116,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Princes Park,1986-08-16,Hawthorn 20.24 (144) def. Collingwood 10.12 (72),216,72,,Hawthorn defeated Collingwood by 72 points at Princes Park.
+117,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Moorabbin Oval,1986-08-16,Essendon 11.16 (82) def. St Kilda 6.12 (48),130,34,,Essendon defeated St Kilda by 34 points at Moorabbin Oval.
+118,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Waverley Park,1986-08-16,North Melbourne 14.9 (93) def. Fitzroy 9.7 (61),154,32,,North Melbourne defeated Fitzroy by 32 points at Waverley Park.
+119,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1986-08-16,Western Bulldogs 19.14 (128) def. Melbourne 10.11 (71),199,57,,Western Bulldogs defeated Melbourne by 57 points at Western Oval.
+120,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,1986-08-16,Sydney 21.18 (144) def. Richmond 14.12 (96),240,48,,Sydney defeated Richmond by 48 points at M.C.G..
+121,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Waverley Park,1986-08-23,Carlton 23.13 (151) def. Western Bulldogs 10.12 (72),223,79,,Carlton defeated Western Bulldogs by 79 points at Waverley Park.
+122,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1986-08-23,Collingwood 23.18 (156) def. Richmond 8.7 (55),211,101,,Collingwood defeated Richmond by 101 points at Victoria Park.
+123,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1986-08-23,Fitzroy 14.12 (96) def. Essendon 8.13 (61),157,35,,Fitzroy defeated Essendon by 35 points at Windy Hill.
+124,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Princes Park,1986-08-23,Hawthorn 35.15 (225) def. Geelong 13.12 (90),315,135,,Hawthorn defeated Geelong by 135 points at Princes Park.
+125,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1986-08-23,Melbourne 28.14 (182) def. North Melbourne 14.13 (97),279,85,,Melbourne defeated North Melbourne by 85 points at M.C.G..
+126,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,1986-08-24,Sydney 20.20 (140) def. St Kilda 16.15 (111),251,29,,Sydney defeated St Kilda by 29 points at S.C.G..
+127,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1986-08-30,Carlton 20.19 (139) def. Melbourne 6.17 (53),192,86,,Carlton defeated Melbourne by 86 points at Princes Park.
+128,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Waverley Park,1986-08-30,Collingwood 18.17 (125) def. St Kilda 11.7 (73),198,52,,Collingwood defeated St Kilda by 52 points at Waverley Park.
+129,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1986-08-30,North Melbourne 15.11 (101) def. Essendon 10.19 (79),180,22,,North Melbourne defeated Essendon by 22 points at Windy Hill.
+130,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Victoria Park,1986-08-30,Fitzroy 9.19 (73) def. Sydney 8.15 (63),136,10,,Fitzroy defeated Sydney by 10 points at Victoria Park.
+131,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1986-08-30,Hawthorn 19.11 (125) def. Western Bulldogs 7.13 (55),180,70,,Hawthorn defeated Western Bulldogs by 70 points at Western Oval.
+132,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,1986-08-30,Geelong 20.16 (136) def. Richmond 15.14 (104),240,32,,Geelong defeated Richmond by 32 points at M.C.G..
+133,Finals,Fitzroy,Essendon,Fitzroy,Essendon,Waverley Park,1986-09-06,Fitzroy 8.10 (58) def. Essendon 8.9 (57),115,1,,Fitzroy defeated Essendon by 1 points at Waverley Park.
+134,Finals,Carlton,Sydney,Carlton,Sydney,M.C.G.,1986-09-07,Carlton 18.12 (120) def. Sydney 15.14 (104),224,16,,Carlton defeated Sydney by 16 points at M.C.G..
+135,Finals,Carlton,Hawthorn,Carlton,Hawthorn,Waverley Park,1986-09-13,Carlton 16.16 (112) def. Hawthorn 13.6 (84),196,28,,Carlton defeated Hawthorn by 28 points at Waverley Park.
+136,Finals,Fitzroy,Sydney,Fitzroy,Sydney,M.C.G.,1986-09-14,Fitzroy 13.16 (94) def. Sydney 13.11 (89),183,5,,Fitzroy defeated Sydney by 5 points at M.C.G..
+137,Finals,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Waverley Park,1986-09-20,Hawthorn 16.14 (110) def. Fitzroy 7.12 (54),164,56,,Hawthorn defeated Fitzroy by 56 points at Waverley Park.
+138,Grand Final,Hawthorn,Carlton,Hawthorn,Carlton,M.C.G.,1986-09-27,Hawthorn 16.14 (110) def. Carlton 9.14 (68),178,42,,Hawthorn defeated Carlton by 42 points at M.C.G..

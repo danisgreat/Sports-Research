@@ -4,8 +4,22 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1921
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jack McMurray
+
+## Senior Field Umpiring Panel (10 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Jack Elder | 19 | Regular Season / Finals |
+| Jack McMurray | 19 | Grand Final |
+| Edward Williamson | 14 | Regular Season / Finals |
+| Bob Scott | 6 | Regular Season / Finals |
+| Henry Beaumont | 6 | Regular Season / Finals |
+| Henry Rawle | 5 | Regular Season / Finals |
+| Arthur Norden | 3 | Regular Season / Finals |
+| Leslie Netherton | 2 | Regular Season / Finals |
+| Harold Dunning | 1 | Regular Season / Finals |
+| William Osborne | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

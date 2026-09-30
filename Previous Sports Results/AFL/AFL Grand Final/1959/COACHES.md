@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1959 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1959
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1959.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1959 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Melbourne
+- **Premiership Coach:** Norm Smith
+- **Runners-up:** Essendon
+- **Runners-up Coach:** Alan Thaw
+- **Grand Final Result:** Melbourne 17.13 (115) def. Essendon 11.12 (78)
+- **Winning Margin:** 37 points
+- **Match Date:** 1959-09-26
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 103,506 spectators
+
+## Match Summary & Tactical Notes
+Melbourne bounced back to claim the flag with a commanding 37-point win over Essendon.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

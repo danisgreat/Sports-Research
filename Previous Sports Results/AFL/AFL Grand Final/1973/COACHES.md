@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1973 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1973
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1973.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1973 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Richmond
+- **Premiership Coach:** Tom Hafey
+- **Runners-up:** Carlton
+- **Runners-up Coach:** John Nicholls
+- **Grand Final Result:** Richmond 16.20 (116) def. Carlton 12.14 (86)
+- **Winning Margin:** 30 points
+- **Match Date:** 1973-09-29
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 116,956 spectators
+
+## Match Summary & Tactical Notes
+Richmond avenged the previous year's loss with a physical, bruising 30-point win over Carlton.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

@@ -1,4 +1,4 @@
 # AFLW Coaching Staff — 2004 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 2017. No official coaching staffs, managerial appointments, or teams existed in 2004.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** Competition not yet founded (inaugural AFLW season held in 2017).

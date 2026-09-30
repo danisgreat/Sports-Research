@@ -1,1 +1,139 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Waverley Park,1984-03-31,Carlton 31.13 (199) def. North Melbourne 9.8 (62),261,137,,Carlton defeated North Melbourne by 137 points at Waverley Park.
+2,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1984-03-31,Collingwood 18.12 (120) def. Melbourne 15.17 (107),227,13,,Collingwood defeated Melbourne by 13 points at Victoria Park.
+3,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Moorabbin Oval,1984-03-31,Essendon 19.20 (134) def. St Kilda 14.13 (97),231,37,,Essendon defeated St Kilda by 37 points at Moorabbin Oval.
+4,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1984-03-31,Geelong 23.10 (148) def. Fitzroy 15.9 (99),247,49,,Geelong defeated Fitzroy by 49 points at Kardinia Park.
+5,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1984-03-31,Western Bulldogs 18.14 (122) def. Richmond 11.17 (83),205,39,,Western Bulldogs defeated Richmond by 39 points at Western Oval.
+6,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Princes Park,1984-03-31,Hawthorn 17.22 (124) def. Sydney 13.11 (89),213,35,,Hawthorn defeated Sydney by 35 points at Princes Park.
+7,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Junction Oval,1984-04-07,Carlton 18.13 (121) def. Fitzroy 16.15 (111),232,10,,Carlton defeated Fitzroy by 10 points at Junction Oval.
+8,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1984-04-07,Collingwood 22.17 (149) def. St Kilda 7.14 (56),205,93,,Collingwood defeated St Kilda by 93 points at Victoria Park.
+9,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1984-04-07,Hawthorn 17.14 (116) def. Essendon 16.14 (110),226,6,,Hawthorn defeated Essendon by 6 points at Windy Hill.
+10,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Waverley Park,1984-04-07,Geelong 16.9 (105) def. Western Bulldogs 9.11 (65),170,40,,Geelong defeated Western Bulldogs by 40 points at Waverley Park.
+11,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,1984-04-07,Richmond 15.17 (107) def. North Melbourne 14.9 (93),200,14,,Richmond defeated North Melbourne by 14 points at M.C.G..
+12,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,1984-04-08,Sydney 16.16 (112) def. Melbourne 13.20 (98),210,14,,Sydney defeated Melbourne by 14 points at S.C.G..
+13,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1984-04-14,Geelong 19.12 (126) def. Carlton 15.7 (97),223,29,,Geelong defeated Carlton by 29 points at Princes Park.
+14,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1984-04-14,Essendon 26.13 (169) def. Collingwood 16.10 (106),275,63,,Essendon defeated Collingwood by 63 points at Windy Hill.
+15,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Waverley Park,1984-04-14,Richmond 22.19 (151) def. Fitzroy 16.9 (105),256,46,,Richmond defeated Fitzroy by 46 points at Waverley Park.
+16,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1984-04-14,Western Bulldogs 25.14 (164) def. North Melbourne 14.17 (101),265,63,,Western Bulldogs defeated North Melbourne by 63 points at Arden St.
+17,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1984-04-14,Hawthorn 20.18 (138) def. Melbourne 20.12 (132),270,6,,Hawthorn defeated Melbourne by 6 points at M.C.G..
+18,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Moorabbin Oval,1984-04-14,Sydney 22.13 (145) def. St Kilda 18.8 (116),261,29,,Sydney defeated St Kilda by 29 points at Moorabbin Oval.
+19,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,1984-04-21,Carlton 23.13 (151) def. Richmond 14.13 (97),248,54,,Carlton defeated Richmond by 54 points at M.C.G..
+20,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1984-04-21,Sydney 17.4 (106) def. Collingwood 15.13 (103),209,3,,Sydney defeated Collingwood by 3 points at Victoria Park.
+21,Regular Season,Melbourne,Essendon,Melbourne,Essendon,Waverley Park,1984-04-21,Essendon 17.24 (126) def. Melbourne 14.7 (91),217,35,,Essendon defeated Melbourne by 35 points at Waverley Park.
+22,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Junction Oval,1984-04-23,Fitzroy 21.14 (140) def. Western Bulldogs 9.16 (70),210,70,,Fitzroy defeated Western Bulldogs by 70 points at Junction Oval.
+23,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1984-04-23,North Melbourne 11.13 (79) def. Geelong 9.11 (65),144,14,,North Melbourne defeated Geelong by 14 points at Kardinia Park.
+24,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Princes Park,1984-04-23,Hawthorn 23.21 (159) def. St Kilda 14.15 (99),258,60,,Hawthorn defeated St Kilda by 60 points at Princes Park.
+25,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Waverley Park,1984-04-25,Collingwood 10.16 (76) def. Carlton 9.17 (71),147,5,,Collingwood defeated Carlton by 5 points at Waverley Park.
+26,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,1984-04-25,Essendon 20.15 (135) def. Richmond 12.14 (86),221,49,,Essendon defeated Richmond by 49 points at M.C.G..
+27,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1984-04-28,Hawthorn 22.9 (141) def. Western Bulldogs 13.16 (94),235,47,,Hawthorn defeated Western Bulldogs by 47 points at Western Oval.
+28,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Moorabbin Oval,1984-04-28,Geelong 15.12 (102) def. St Kilda 10.11 (71),173,31,,Geelong defeated St Kilda by 31 points at Moorabbin Oval.
+29,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,M.C.G.,1984-04-28,North Melbourne 16.17 (113) def. Melbourne 14.14 (98),211,15,,North Melbourne defeated Melbourne by 15 points at M.C.G..
+30,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,S.C.G.,1984-04-29,Sydney 17.17 (119) def. Fitzroy 15.14 (104),223,15,,Sydney defeated Fitzroy by 15 points at S.C.G..
+31,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1984-05-05,Carlton 15.14 (104) def. St Kilda 13.12 (90),194,14,,Carlton defeated St Kilda by 14 points at Princes Park.
+32,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1984-05-05,Collingwood 15.18 (108) def. North Melbourne 12.15 (87),195,21,,Collingwood defeated North Melbourne by 21 points at Victoria Park.
+33,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Junction Oval,1984-05-05,Essendon 22.12 (144) def. Fitzroy 13.15 (93),237,51,,Essendon defeated Fitzroy by 51 points at Junction Oval.
+34,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1984-05-05,Western Bulldogs 11.18 (84) def. Sydney 11.11 (77),161,7,,Western Bulldogs defeated Sydney by 7 points at Western Oval.
+35,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1984-05-05,Melbourne 23.10 (148) def. Geelong 12.13 (85),233,63,,Melbourne defeated Geelong by 63 points at M.C.G..
+36,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Waverley Park,1984-05-05,Richmond 17.18 (120) def. Hawthorn 11.15 (81),201,39,,Richmond defeated Hawthorn by 39 points at Waverley Park.
+37,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1984-05-12,Carlton 18.14 (122) def. Melbourne 16.9 (105),227,17,,Carlton defeated Melbourne by 17 points at M.C.G..
+38,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1984-05-12,Collingwood 19.14 (128) def. Geelong 11.17 (83),211,45,,Collingwood defeated Geelong by 45 points at Kardinia Park.
+39,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1984-05-12,Western Bulldogs 16.8 (104) def. Essendon 12.10 (82),186,22,,Western Bulldogs defeated Essendon by 22 points at Windy Hill.
+40,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Princes Park,1984-05-12,Hawthorn 20.15 (135) def. Fitzroy 16.8 (104),239,31,,Hawthorn defeated Fitzroy by 31 points at Princes Park.
+41,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Waverley Park,1984-05-12,St Kilda 22.16 (148) def. North Melbourne 14.17 (101),249,47,,St Kilda defeated North Melbourne by 47 points at Waverley Park.
+42,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,1984-05-13,Richmond 18.21 (129) def. Sydney 17.20 (122),251,7,,Richmond defeated Sydney by 7 points at S.C.G..
+43,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1984-05-19,Hawthorn 23.13 (151) def. Carlton 12.11 (83),234,68,,Hawthorn defeated Carlton by 68 points at Princes Park.
+44,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,1984-05-19,Richmond 15.19 (109) def. Collingwood 13.17 (95),204,14,,Richmond defeated Collingwood by 14 points at M.C.G..
+45,Regular Season,Essendon,Geelong,Essendon,Geelong,Waverley Park,1984-05-19,Essendon 19.19 (133) def. Geelong 14.6 (90),223,43,,Essendon defeated Geelong by 43 points at Waverley Park.
+46,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Junction Oval,1984-05-19,Melbourne 13.14 (92) def. Fitzroy 12.9 (81),173,11,,Melbourne defeated Fitzroy by 11 points at Junction Oval.
+47,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Moorabbin Oval,1984-05-19,St Kilda 13.11 (89) def. Western Bulldogs 9.17 (71),160,18,,St Kilda defeated Western Bulldogs by 18 points at Moorabbin Oval.
+48,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1984-05-19,Sydney 19.20 (134) def. North Melbourne 18.19 (127),261,7,,Sydney defeated North Melbourne by 7 points at Arden St.
+49,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1984-05-26,Essendon 16.17 (113) def. Carlton 9.12 (66),179,47,,Essendon defeated Carlton by 47 points at Windy Hill.
+50,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1984-05-26,Collingwood 15.19 (109) def. Fitzroy 11.16 (82),191,27,,Collingwood defeated Fitzroy by 27 points at Victoria Park.
+51,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Waverley Park,1984-05-26,Melbourne 23.21 (159) def. Western Bulldogs 11.15 (81),240,78,,Melbourne defeated Western Bulldogs by 78 points at Waverley Park.
+52,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Princes Park,1984-05-26,Hawthorn 21.17 (143) def. North Melbourne 13.8 (86),229,57,,Hawthorn defeated North Melbourne by 57 points at Princes Park.
+53,Regular Season,Richmond,St Kilda,Richmond,St Kilda,M.C.G.,1984-05-26,Richmond 24.8 (152) def. St Kilda 12.16 (88),240,64,,Richmond defeated St Kilda by 64 points at M.C.G..
+54,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,1984-05-27,Sydney 16.15 (111) def. Geelong 7.27 (69),180,42,,Sydney defeated Geelong by 42 points at S.C.G..
+55,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1984-06-02,Western Bulldogs 15.10 (100) def. Collingwood 13.17 (95),195,5,,Western Bulldogs defeated Collingwood by 5 points at Western Oval.
+56,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1984-06-02,Essendon 16.12 (108) def. North Melbourne 15.16 (106),214,2,,Essendon defeated North Melbourne by 2 points at Arden St.
+57,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Waverley Park,1984-06-02,Fitzroy 22.15 (147) def. St Kilda 11.17 (83),230,64,,Fitzroy defeated St Kilda by 64 points at Waverley Park.
+58,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1984-06-02,Geelong 17.11 (113) def. Hawthorn 11.19 (85),198,28,,Geelong defeated Hawthorn by 28 points at Kardinia Park.
+59,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1984-06-02,Melbourne 15.13 (103) def. Richmond 11.10 (76),179,27,,Melbourne defeated Richmond by 27 points at M.C.G..
+60,Regular Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,1984-06-03,Carlton 20.19 (139) def. Sydney 12.15 (87),226,52,,Carlton defeated Sydney by 52 points at S.C.G..
+61,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1984-06-09,Essendon 20.15 (135) def. Sydney 14.10 (94),229,41,,Essendon defeated Sydney by 41 points at Windy Hill.
+62,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,1984-06-09,Geelong 17.21 (123) def. Richmond 16.15 (111),234,12,,Geelong defeated Richmond by 12 points at M.C.G..
+63,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Moorabbin Oval,1984-06-09,Melbourne 19.13 (127) def. St Kilda 13.13 (91),218,36,,Melbourne defeated St Kilda by 36 points at Moorabbin Oval.
+64,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1984-06-11,Carlton 22.11 (143) def. Western Bulldogs 16.13 (109),252,34,,Carlton defeated Western Bulldogs by 34 points at Princes Park.
+65,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Waverley Park,1984-06-11,Hawthorn 18.16 (124) def. Collingwood 14.8 (92),216,32,,Hawthorn defeated Collingwood by 32 points at Waverley Park.
+66,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Junction Oval,1984-06-11,Fitzroy 25.16 (166) def. North Melbourne 23.14 (152),318,14,,Fitzroy defeated North Melbourne by 14 points at Junction Oval.
+67,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Waverley Park,1984-06-16,Fitzroy 10.12 (72) def. Carlton 9.13 (67),139,5,,Fitzroy defeated Carlton by 5 points at Waverley Park.
+68,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Moorabbin Oval,1984-06-16,Collingwood 11.12 (78) def. St Kilda 11.6 (72),150,6,,Collingwood defeated St Kilda by 6 points at Moorabbin Oval.
+69,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Princes Park,1984-06-16,Hawthorn 12.21 (93) def. Essendon 6.10 (46),139,47,,Hawthorn defeated Essendon by 47 points at Princes Park.
+70,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1984-06-16,Western Bulldogs 13.11 (89) def. Geelong 10.13 (73),162,16,,Western Bulldogs defeated Geelong by 16 points at Western Oval.
+71,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1984-06-16,Melbourne 21.17 (143) def. Sydney 5.16 (46),189,97,,Melbourne defeated Sydney by 97 points at M.C.G..
+72,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1984-06-16,Richmond 16.14 (110) def. North Melbourne 14.10 (94),204,16,,Richmond defeated North Melbourne by 16 points at Arden St.
+73,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1984-06-23,Carlton 10.18 (78) def. Geelong 4.17 (41),119,37,,Carlton defeated Geelong by 37 points at Kardinia Park.
+74,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1984-06-23,Essendon 19.9 (123) def. Collingwood 12.17 (89),212,34,,Essendon defeated Collingwood by 34 points at Victoria Park.
+75,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,M.C.G.,1984-06-23,Fitzroy 14.14 (98) def. Richmond 11.15 (81),179,17,,Fitzroy defeated Richmond by 17 points at M.C.G..
+76,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Waverley Park,1984-06-23,Western Bulldogs 11.11 (77) def. North Melbourne 9.8 (62),139,15,,Western Bulldogs defeated North Melbourne by 15 points at Waverley Park.
+77,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Princes Park,1984-06-23,Melbourne 15.17 (107) def. Hawthorn 13.12 (90),197,17,,Melbourne defeated Hawthorn by 17 points at Princes Park.
+78,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,1984-06-24,St Kilda 19.12 (126) def. Sydney 15.11 (101),227,25,,St Kilda defeated Sydney by 25 points at S.C.G..
+79,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1984-06-30,Carlton 23.14 (152) def. Richmond 4.13 (37),189,115,,Carlton defeated Richmond by 115 points at Princes Park.
+80,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Waverley Park,1984-06-30,Essendon 14.15 (99) def. Melbourne 7.14 (56),155,43,,Essendon defeated Melbourne by 43 points at Waverley Park.
+81,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1984-06-30,Western Bulldogs 13.13 (91) def. Fitzroy 11.11 (77),168,14,,Western Bulldogs defeated Fitzroy by 14 points at Western Oval.
+82,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,M.C.G.,1984-06-30,Geelong 19.11 (125) def. North Melbourne 16.11 (107),232,18,,Geelong defeated North Melbourne by 18 points at M.C.G..
+83,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Moorabbin Oval,1984-06-30,Hawthorn 19.20 (134) def. St Kilda 4.6 (30),164,104,,Hawthorn defeated St Kilda by 104 points at Moorabbin Oval.
+84,Regular Season,Sydney,Collingwood,Sydney,Collingwood,S.C.G.,1984-07-01,Collingwood 19.17 (131) def. Sydney 14.16 (100),231,31,,Collingwood defeated Sydney by 31 points at S.C.G..
+85,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Waverley Park,1984-07-07,Carlton 14.13 (97) def. Collingwood 9.16 (70),167,27,,Carlton defeated Collingwood by 27 points at Waverley Park.
+86,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1984-07-07,Essendon 14.10 (94) def. Richmond 7.19 (61),155,33,,Essendon defeated Richmond by 33 points at Windy Hill.
+87,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Junction Oval,1984-07-07,Sydney 14.12 (96) def. Fitzroy 9.14 (68),164,28,,Sydney defeated Fitzroy by 28 points at Junction Oval.
+88,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Princes Park,1984-07-07,Hawthorn 16.14 (110) def. Western Bulldogs 10.16 (76),186,34,,Hawthorn defeated Western Bulldogs by 34 points at Princes Park.
+89,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1984-07-07,Geelong 15.12 (102) def. St Kilda 13.11 (89),191,13,,Geelong defeated St Kilda by 13 points at Kardinia Park.
+90,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1984-07-07,Melbourne 18.9 (117) def. North Melbourne 10.14 (74),191,43,,Melbourne defeated North Melbourne by 43 points at M.C.G..
+91,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1984-07-14,Essendon 20.7 (127) def. Fitzroy 9.12 (66),193,61,,Essendon defeated Fitzroy by 61 points at Windy Hill.
+92,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Waverley Park,1984-07-14,Hawthorn 28.17 (185) def. Richmond 14.13 (97),282,88,,Hawthorn defeated Richmond by 88 points at Waverley Park.
+93,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,1984-07-15,Sydney 16.17 (113) def. Western Bulldogs 12.15 (87),200,26,,Sydney defeated Western Bulldogs by 26 points at S.C.G..
+94,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Moorabbin Oval,1984-07-21,St Kilda 16.9 (105) def. Carlton 13.6 (84),189,21,,St Kilda defeated Carlton by 21 points at Moorabbin Oval.
+95,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,M.C.G.,1984-07-21,Collingwood 21.20 (146) def. North Melbourne 14.17 (101),247,45,,Collingwood defeated North Melbourne by 45 points at M.C.G..
+96,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,1984-07-21,Geelong 20.10 (130) def. Melbourne 15.18 (108),238,22,,Geelong defeated Melbourne by 22 points at Kardinia Park.
+97,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1984-07-28,Carlton 7.10 (52) def. Melbourne 3.8 (26),78,26,,Carlton defeated Melbourne by 26 points at Princes Park.
+98,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1984-07-28,Collingwood 6.19 (55) def. Geelong 4.5 (29),84,26,,Collingwood defeated Geelong by 26 points at Victoria Park.
+99,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1984-07-28,Essendon 4.10 (34) def. Western Bulldogs 3.14 (32),66,2,,Essendon defeated Western Bulldogs by 2 points at Western Oval.
+100,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Junction Oval,1984-07-28,Fitzroy 11.11 (77) def. Hawthorn 10.7 (67),144,10,,Fitzroy defeated Hawthorn by 10 points at Junction Oval.
+101,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Waverley Park,1984-07-28,North Melbourne 5.14 (44) def. St Kilda 5.12 (42),86,2,,North Melbourne defeated St Kilda by 2 points at Waverley Park.
+102,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,1984-07-28,Richmond 12.19 (91) def. Sydney 3.10 (28),119,63,,Richmond defeated Sydney by 63 points at M.C.G..
+103,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Princes Park,1984-08-04,Hawthorn 21.14 (140) def. Carlton 16.12 (108),248,32,,Hawthorn defeated Carlton by 32 points at Princes Park.
+104,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1984-08-04,Collingwood 19.14 (128) def. Richmond 12.20 (92),220,36,,Collingwood defeated Richmond by 36 points at Victoria Park.
+105,Regular Season,Geelong,Essendon,Geelong,Essendon,Waverley Park,1984-08-04,Essendon 19.22 (136) def. Geelong 12.17 (89),225,47,,Essendon defeated Geelong by 47 points at Waverley Park.
+106,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1984-08-04,Fitzroy 22.20 (152) def. Melbourne 17.18 (120),272,32,,Fitzroy defeated Melbourne by 32 points at M.C.G..
+107,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1984-08-04,Western Bulldogs 16.16 (112) def. St Kilda 11.13 (79),191,33,,Western Bulldogs defeated St Kilda by 33 points at Western Oval.
+108,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,1984-08-05,North Melbourne 18.15 (123) def. Sydney 17.6 (108),231,15,,North Melbourne defeated Sydney by 15 points at S.C.G..
+109,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1984-08-11,Essendon 15.12 (102) def. Carlton 12.18 (90),192,12,,Essendon defeated Carlton by 12 points at Princes Park.
+110,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Waverley Park,1984-08-11,Fitzroy 14.19 (103) def. Collingwood 9.7 (61),164,42,,Fitzroy defeated Collingwood by 42 points at Waverley Park.
+111,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1984-08-11,Western Bulldogs 20.15 (135) def. Melbourne 15.13 (103),238,32,,Western Bulldogs defeated Melbourne by 32 points at M.C.G..
+112,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1984-08-11,Geelong 16.17 (113) def. Sydney 14.8 (92),205,21,,Geelong defeated Sydney by 21 points at Kardinia Park.
+113,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1984-08-11,North Melbourne 17.20 (122) def. Hawthorn 7.9 (51),173,71,,North Melbourne defeated Hawthorn by 71 points at Arden St.
+114,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Moorabbin Oval,1984-08-11,St Kilda 11.15 (81) def. Richmond 10.14 (74),155,7,,St Kilda defeated Richmond by 7 points at Moorabbin Oval.
+115,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1984-08-18,Carlton 16.15 (111) def. North Melbourne 14.14 (98),209,13,,Carlton defeated North Melbourne by 13 points at Princes Park.
+116,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1984-08-18,Collingwood 15.13 (103) def. Melbourne 9.17 (71),174,32,,Collingwood defeated Melbourne by 32 points at M.C.G..
+117,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1984-08-18,Essendon 22.6 (138) def. St Kilda 13.5 (83),221,55,,Essendon defeated St Kilda by 55 points at Windy Hill.
+118,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Junction Oval,1984-08-18,Fitzroy 20.11 (131) def. Geelong 14.9 (93),224,38,,Fitzroy defeated Geelong by 38 points at Junction Oval.
+119,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Waverley Park,1984-08-18,Richmond 12.13 (85) def. Western Bulldogs 9.11 (65),150,20,,Richmond defeated Western Bulldogs by 20 points at Waverley Park.
+120,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,1984-08-19,Hawthorn 25.24 (174) def. Sydney 11.19 (85),259,89,,Hawthorn defeated Sydney by 89 points at S.C.G..
+121,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1984-08-25,Western Bulldogs 14.9 (93) def. Carlton 7.16 (58),151,35,,Western Bulldogs defeated Carlton by 35 points at Western Oval.
+122,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Princes Park,1984-08-25,Hawthorn 16.23 (119) def. Collingwood 15.14 (104),223,15,,Hawthorn defeated Collingwood by 15 points at Princes Park.
+123,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,M.C.G.,1984-08-25,Fitzroy 26.9 (165) def. North Melbourne 15.21 (111),276,54,,Fitzroy defeated North Melbourne by 54 points at M.C.G..
+124,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1984-08-25,Geelong 14.29 (113) def. Richmond 9.9 (63),176,50,,Geelong defeated Richmond by 50 points at Kardinia Park.
+125,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,Waverley Park,1984-08-25,Melbourne 14.16 (100) def. St Kilda 9.8 (62),162,38,,Melbourne defeated St Kilda by 38 points at Waverley Park.
+126,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,1984-08-26,Sydney 23.17 (155) def. Essendon 14.15 (99),254,56,,Sydney defeated Essendon by 56 points at S.C.G..
+127,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1984-09-01,Carlton 20.19 (139) def. Sydney 15.13 (103),242,36,,Carlton defeated Sydney by 36 points at Princes Park.
+128,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1984-09-01,Collingwood 16.18 (114) def. Western Bulldogs 9.17 (71),185,43,,Collingwood defeated Western Bulldogs by 43 points at Victoria Park.
+129,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1984-09-01,Essendon 27.7 (169) def. North Melbourne 19.17 (131),300,38,,Essendon defeated North Melbourne by 38 points at Windy Hill.
+130,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Junction Oval,1984-09-01,Fitzroy 24.20 (164) def. St Kilda 15.17 (107),271,57,,Fitzroy defeated St Kilda by 57 points at Junction Oval.
+131,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Waverley Park,1984-09-01,Hawthorn 25.14 (164) def. Geelong 14.11 (95),259,69,,Hawthorn defeated Geelong by 69 points at Waverley Park.
+132,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,1984-09-01,Richmond 21.19 (145) def. Melbourne 18.9 (117),262,28,,Richmond defeated Melbourne by 28 points at M.C.G..
+133,Finals,Hawthorn,Carlton,Hawthorn,Carlton,Waverley Park,1984-09-08,Hawthorn 18.14 (122) def. Carlton 13.14 (92),214,30,,Hawthorn defeated Carlton by 30 points at Waverley Park.
+134,Finals,Collingwood,Fitzroy,Collingwood,Fitzroy,M.C.G.,1984-09-09,Collingwood 23.15 (153) def. Fitzroy 15.17 (107),260,46,,Collingwood defeated Fitzroy by 46 points at M.C.G..
+135,Finals,Collingwood,Carlton,Collingwood,Carlton,Waverley Park,1984-09-15,Collingwood 17.16 (118) def. Carlton 14.9 (93),211,25,,Collingwood defeated Carlton by 25 points at Waverley Park.
+136,Finals,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,1984-09-16,Hawthorn 16.17 (113) def. Essendon 15.15 (105),218,8,,Hawthorn defeated Essendon by 8 points at M.C.G..
+137,Finals,Essendon,Collingwood,Essendon,Collingwood,Waverley Park,1984-09-22,Essendon 28.6 (174) def. Collingwood 5.11 (41),215,133,,Essendon defeated Collingwood by 133 points at Waverley Park.
+138,Grand Final,Essendon,Hawthorn,Essendon,Hawthorn,M.C.G.,1984-09-29,Essendon 14.21 (105) def. Hawthorn 12.9 (81),186,24,,Essendon defeated Hawthorn by 24 points at M.C.G..

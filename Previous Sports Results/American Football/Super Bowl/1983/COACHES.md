@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1983 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1983 Season (Super Bowl XVII)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl XVII)
 - **Season:** 1983
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1983.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1983 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** Washington Redskins
+- **Winning Head Coach:** Joe Gibbs
+- **Runners-up:** Miami Dolphins
+- **Runners-up Head Coach:** Don Shula
+- **Super Bowl Result:** Washington Redskins def. Miami Dolphins (27-17)
+- **Super Bowl MVP:** John Riggins (RB, Washington)
+- **Venue:** Rose Bowl (Pasadena)
+- **Official Attendance:** 103,667 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Joe Gibbs directing Washington Redskins to the Vince Lombardi Trophy over Don Shula's Miami Dolphins.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

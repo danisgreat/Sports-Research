@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1927 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1927
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1927.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1927 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Collingwood
+- **Premiership Coach:** Jock McHale
+- **Runners-up:** Richmond
+- **Runners-up Coach:** Frank Hughes
+- **Grand Final Result:** Collingwood 2.13 (25) def. Richmond 1.7 (13)
+- **Winning Margin:** 12 points
+- **Match Date:** 1927-10-01
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 34,551 spectators
+
+## Match Summary & Tactical Notes
+Collingwood defeated Richmond in torrential rain and heavy mud, scoring 2.13 (25) to 1.7 (13) in the lowest-scoring Grand Final.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

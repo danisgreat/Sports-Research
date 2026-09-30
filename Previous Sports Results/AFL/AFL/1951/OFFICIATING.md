@@ -4,8 +4,23 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1951
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** James Jamieson
+
+## Senior Field Umpiring Panel (11 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| James Jamieson | 20 | Grand Final |
+| Jack McMurray | 19 | Regular Season / Finals |
+| Bill Barbour | 18 | Regular Season / Finals |
+| Warwick Roach | 16 | Regular Season / Finals |
+| Harry Beitzel | 15 | Regular Season / Finals |
+| Douglas Lamb | 9 | Regular Season / Finals |
+| Geoff Robinson | 4 | Regular Season / Finals |
+| Allan Nash | 3 | Regular Season / Finals |
+| Harry Rowe | 3 | Regular Season / Finals |
+| Max Blumfield | 3 | Regular Season / Finals |
+| Noel Egan | 2 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

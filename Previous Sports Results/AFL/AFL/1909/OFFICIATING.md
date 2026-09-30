@@ -4,8 +4,25 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1909
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jack Elder
+
+## Senior Field Umpiring Panel (13 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Jack Elder | 22 | Grand Final |
+| Eddie Drohan | 14 | Regular Season / Finals |
+| Dick Gibson | 9 | Regular Season / Finals |
+| James James | 9 | Regular Season / Finals |
+| Robert Boyle | 8 | Regular Season / Finals |
+| Robert Bain | 7 | Regular Season / Finals |
+| Tammy Beauchamp | 7 | Regular Season / Finals |
+| Lardie Tulloch | 6 | Regular Season / Finals |
+| Victor Brown | 6 | Regular Season / Finals |
+| Ernest Clarke | 2 | Regular Season / Finals |
+| George Mackenzie | 2 | Regular Season / Finals |
+| David Dillon | 1 | Regular Season / Finals |
+| Henry Lampe | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

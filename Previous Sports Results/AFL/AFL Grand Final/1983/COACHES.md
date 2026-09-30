@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1983 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1983
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1983.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1983 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Hawthorn
+- **Premiership Coach:** Allan Jeans
+- **Runners-up:** Essendon
+- **Runners-up Coach:** Kevin Sheedy
+- **Grand Final Result:** Hawthorn 20.20 (140) def. Essendon 8.9 (57)
+- **Winning Margin:** 83 points
+- **Match Date:** 1983-09-24
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 110,332 spectators
+
+## Match Summary & Tactical Notes
+Hawthorn demolished Essendon by 83 points in warm conditions, inspired by Colin Robertson.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

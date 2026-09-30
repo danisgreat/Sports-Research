@@ -4,8 +4,23 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1948
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jack McMurray
+
+## Senior Field Umpiring Panel (11 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Jack McMurray | 22 | Grand Final |
+| Frank Spokes | 20 | Regular Season / Finals |
+| Alfred Sawyer | 19 | Regular Season / Finals |
+| James Jamieson | 16 | Regular Season / Finals |
+| John Cole | 13 | Regular Season / Finals |
+| John Jones | 9 | Regular Season / Finals |
+| Len Ireland | 6 | Regular Season / Finals |
+| George Hamid | 5 | Regular Season / Finals |
+| Keith Sparks | 5 | Regular Season / Finals |
+| Harry Beitzel | 2 | Regular Season / Finals |
+| Ian Cleland | 2 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

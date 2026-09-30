@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1995 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1995 Season (Super Bowl XXIX)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl XXIX)
 - **Season:** 1995
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1995.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1995 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** San Francisco 49ers
+- **Winning Head Coach:** George Seifert
+- **Runners-up:** San Diego Chargers
+- **Runners-up Head Coach:** Bobby Ross
+- **Super Bowl Result:** San Francisco 49ers def. San Diego Chargers (49-26)
+- **Super Bowl MVP:** Steve Young (QB, San Francisco)
+- **Venue:** Joe Robbie Stadium (Miami)
+- **Official Attendance:** 74,107 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with George Seifert directing San Francisco 49ers to the Vince Lombardi Trophy over Bobby Ross's San Diego Chargers.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

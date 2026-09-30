@@ -1,1 +1,186 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,2009-03-26,Carlton 23.12 (150) def. Richmond 9.13 (67),217,83,,Carlton defeated Richmond by 83 points at M.C.G..
+2,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,M.C.G.,2009-03-27,Geelong 15.21 (111) def. Hawthorn 16.7 (103),214,8,,Geelong defeated Hawthorn by 8 points at M.C.G..
+3,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,M.C.G.,2009-03-28,Adelaide 13.12 (90) def. Collingwood 13.8 (86),176,4,,Adelaide defeated Collingwood by 4 points at M.C.G..
+4,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,2009-03-28,Brisbane Lions 14.11 (95) def. West Coast 13.8 (86),181,9,,Brisbane Lions defeated West Coast by 9 points at Gabba.
+5,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Docklands,2009-03-28,St Kilda 12.8 (80) def. Sydney 9.11 (65),145,15,,St Kilda defeated Sydney by 15 points at Docklands.
+6,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,2009-03-29,North Melbourne 15.11 (101) def. Melbourne 10.7 (67),168,34,,North Melbourne defeated Melbourne by 34 points at M.C.G..
+7,Regular Season,Port Adelaide,Essendon,Port Adelaide,Essendon,Football Park,2009-03-29,Port Adelaide 15.17 (107) def. Essendon 9.12 (66),173,41,,Port Adelaide defeated Essendon by 41 points at Football Park.
+8,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Subiaco,2009-03-29,Western Bulldogs 25.7 (157) def. Fremantle 13.16 (94),251,63,,Western Bulldogs defeated Fremantle by 63 points at Subiaco.
+9,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,2009-04-03,St Kilda 15.11 (101) def. Adelaide 10.9 (69),170,32,,St Kilda defeated Adelaide by 32 points at Football Park.
+10,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,M.C.G.,2009-04-04,Collingwood 17.15 (117) def. Melbourne 10.4 (64),181,53,,Collingwood defeated Melbourne by 53 points at M.C.G..
+11,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,2009-04-04,Geelong 15.15 (105) def. Richmond 13.7 (85),190,20,,Geelong defeated Richmond by 20 points at Kardinia Park.
+12,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Docklands,2009-04-04,Carlton 18.11 (119) def. Brisbane Lions 15.10 (100),219,19,,Carlton defeated Brisbane Lions by 19 points at Docklands.
+13,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Stadium Australia,2009-04-04,Sydney 22.11 (143) def. Hawthorn 15.15 (105),248,38,,Sydney defeated Hawthorn by 38 points at Stadium Australia.
+14,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Docklands,2009-04-05,Essendon 16.13 (109) def. Fremantle 10.11 (71),180,38,,Essendon defeated Fremantle by 38 points at Docklands.
+15,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,M.C.G.,2009-04-05,Western Bulldogs 11.14 (80) def. North Melbourne 9.11 (65),145,15,,Western Bulldogs defeated North Melbourne by 15 points at M.C.G..
+16,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,2009-04-05,West Coast 19.11 (125) def. Port Adelaide 10.15 (75),200,50,,West Coast defeated Port Adelaide by 50 points at Subiaco.
+17,Regular Season,Geelong,Collingwood,Geelong,Collingwood,M.C.G.,2009-04-09,Geelong 18.14 (122) def. Collingwood 13.17 (95),217,27,,Geelong defeated Collingwood by 27 points at M.C.G..
+18,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Docklands,2009-04-11,St Kilda 25.11 (161) def. West Coast 9.10 (64),225,97,,St Kilda defeated West Coast by 97 points at Docklands.
+19,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,2009-04-11,Essendon 17.14 (116) def. Carlton 16.16 (112),228,4,,Essendon defeated Carlton by 4 points at M.C.G..
+20,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,2009-04-11,Brisbane Lions 15.10 (100) def. Sydney 9.13 (67),167,33,,Brisbane Lions defeated Sydney by 33 points at Gabba.
+21,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,2009-04-12,Port Adelaide 22.15 (147) def. Melbourne 14.6 (90),237,57,,Port Adelaide defeated Melbourne by 57 points at Football Park.
+22,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Docklands,2009-04-12,Hawthorn 19.9 (123) def. North Melbourne 10.9 (69),192,54,,Hawthorn defeated North Melbourne by 54 points at Docklands.
+23,Regular Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco,2009-04-12,Adelaide 15.14 (104) def. Fremantle 11.14 (80),184,24,,Adelaide defeated Fremantle by 24 points at Subiaco.
+24,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Docklands,2009-04-13,Western Bulldogs 16.14 (110) def. Richmond 8.15 (63),173,47,,Western Bulldogs defeated Richmond by 47 points at Docklands.
+25,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,2009-04-17,Collingwood 13.12 (90) def. Brisbane Lions 10.13 (73),163,17,,Collingwood defeated Brisbane Lions by 17 points at Gabba.
+26,Regular Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,2009-04-18,Sydney 12.12 (84) def. Carlton 9.13 (67),151,17,,Sydney defeated Carlton by 17 points at S.C.G..
+27,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,M.C.G.,2009-04-18,Port Adelaide 17.13 (115) def. Hawthorn 12.13 (85),200,30,,Port Adelaide defeated Hawthorn by 30 points at M.C.G..
+28,Regular Season,St Kilda,Fremantle,St Kilda,Fremantle,Docklands,2009-04-18,St Kilda 17.9 (111) def. Fremantle 4.4 (28),139,83,,St Kilda defeated Fremantle by 83 points at Docklands.
+29,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,2009-04-18,Geelong 21.8 (134) def. Adelaide 13.8 (86),220,48,,Geelong defeated Adelaide by 48 points at Football Park.
+30,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Docklands,2009-04-19,North Melbourne 10.9 (69) def. Essendon 7.15 (57),126,12,,North Melbourne defeated Essendon by 12 points at Docklands.
+31,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,2009-04-19,Melbourne 14.16 (100) def. Richmond 13.14 (92),192,8,,Melbourne defeated Richmond by 8 points at M.C.G..
+32,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,Subiaco,2009-04-19,West Coast 17.14 (116) def. Western Bulldogs 12.11 (83),199,33,,West Coast defeated Western Bulldogs by 33 points at Subiaco.
+33,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,2009-04-24,St Kilda 15.12 (102) def. Port Adelaide 5.6 (36),138,66,,St Kilda defeated Port Adelaide by 66 points at Football Park.
+34,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,2009-04-25,Essendon 13.15 (93) def. Collingwood 12.16 (88),181,5,,Essendon defeated Collingwood by 5 points at M.C.G..
+35,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,York Park,2009-04-25,Hawthorn 11.8 (74) def. West Coast 7.14 (56),130,18,,Hawthorn defeated West Coast by 18 points at York Park.
+36,Regular Season,Fremantle,Sydney,Fremantle,Sydney,Subiaco,2009-04-25,Fremantle 18.13 (121) def. Sydney 16.4 (100),221,21,,Fremantle defeated Sydney by 21 points at Subiaco.
+37,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Docklands,2009-04-25,Richmond 13.16 (94) def. North Melbourne 7.16 (58),152,36,,Richmond defeated North Melbourne by 36 points at Docklands.
+38,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,2009-04-26,Geelong 18.18 (126) def. Brisbane Lions 5.3 (33),159,93,,Geelong defeated Brisbane Lions by 93 points at Kardinia Park.
+39,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Docklands,2009-04-26,Carlton 21.7 (133) def. Western Bulldogs 13.12 (90),223,43,,Carlton defeated Western Bulldogs by 43 points at Docklands.
+40,Regular Season,Melbourne,Adelaide,Melbourne,Adelaide,M.C.G.,2009-04-26,Adelaide 7.9 (51) def. Melbourne 4.10 (34),85,17,,Adelaide defeated Melbourne by 17 points at M.C.G..
+41,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Docklands,2009-05-01,Collingwood 19.13 (127) def. North Melbourne 11.9 (75),202,52,,Collingwood defeated North Melbourne by 52 points at Docklands.
+42,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,M.C.G.,2009-05-02,Hawthorn 16.10 (106) def. Carlton 15.12 (102),208,4,,Hawthorn defeated Carlton by 4 points at M.C.G..
+43,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,2009-05-02,Fremantle 13.9 (87) def. West Coast 9.20 (74),161,13,,Fremantle defeated West Coast by 13 points at Subiaco.
+44,Regular Season,Brisbane Lions,Essendon,Brisbane Lions,Essendon,Gabba,2009-05-02,Brisbane Lions 17.9 (111) def. Essendon 9.14 (68),179,43,,Brisbane Lions defeated Essendon by 43 points at Gabba.
+45,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,2009-05-02,Port Adelaide 15.15 (105) def. Adelaide 12.7 (79),184,26,,Port Adelaide defeated Adelaide by 26 points at Football Park.
+46,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,2009-05-03,Sydney 14.10 (94) def. Richmond 11.9 (75),169,19,,Sydney defeated Richmond by 19 points at S.C.G..
+47,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,2009-05-03,Geelong 15.21 (111) def. Melbourne 10.8 (68),179,43,,Geelong defeated Melbourne by 43 points at M.C.G..
+48,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Docklands,2009-05-03,St Kilda 14.20 (104) def. Western Bulldogs 11.10 (76),180,28,,St Kilda defeated Western Bulldogs by 28 points at Docklands.
+49,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Docklands,2009-05-08,Essendon 17.14 (116) def. Hawthorn 10.12 (72),188,44,,Essendon defeated Hawthorn by 44 points at Docklands.
+50,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,2009-05-09,Geelong 17.14 (116) def. Sydney 10.5 (65),181,51,,Geelong defeated Sydney by 51 points at Kardinia Park.
+51,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,M.C.G.,2009-05-09,Brisbane Lions 15.7 (97) def. Richmond 10.11 (71),168,26,,Brisbane Lions defeated Richmond by 26 points at M.C.G..
+52,Regular Season,Carlton,Fremantle,Carlton,Fremantle,Carrara,2009-05-09,Fremantle 13.10 (88) def. Carlton 11.15 (81),169,7,,Fremantle defeated Carlton by 7 points at Carrara.
+53,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Docklands,2009-05-09,North Melbourne 20.5 (125) def. Port Adelaide 18.12 (120),245,5,,North Melbourne defeated Port Adelaide by 5 points at Docklands.
+54,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,2009-05-10,Western Bulldogs 17.16 (118) def. Adelaide 12.14 (86),204,32,,Western Bulldogs defeated Adelaide by 32 points at Football Park.
+55,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,2009-05-10,West Coast 12.18 (90) def. Melbourne 13.4 (82),172,8,,West Coast defeated Melbourne by 8 points at Subiaco.
+56,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Docklands,2009-05-11,St Kilda 20.8 (128) def. Collingwood 5.10 (40),168,88,,St Kilda defeated Collingwood by 88 points at Docklands.
+57,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Subiaco,2009-05-15,Hawthorn 13.9 (87) def. Fremantle 9.11 (65),152,22,,Hawthorn defeated Fremantle by 22 points at Subiaco.
+58,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,2009-05-16,Western Bulldogs 15.14 (104) def. Melbourne 15.7 (97),201,7,,Western Bulldogs defeated Melbourne by 7 points at M.C.G..
+59,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,2009-05-16,Geelong 18.11 (119) def. North Melbourne 7.7 (49),168,70,,Geelong defeated North Melbourne by 70 points at Kardinia Park.
+60,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,2009-05-16,Brisbane Lions 18.11 (119) def. Adelaide 12.11 (83),202,36,,Brisbane Lions defeated Adelaide by 36 points at Gabba.
+61,Regular Season,Sydney,West Coast,Sydney,West Coast,Stadium Australia,2009-05-16,Sydney 16.10 (106) def. West Coast 15.11 (101),207,5,,Sydney defeated West Coast by 5 points at Stadium Australia.
+62,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,2009-05-17,Port Adelaide 14.18 (102) def. Richmond 15.9 (99),201,3,,Port Adelaide defeated Richmond by 3 points at Football Park.
+63,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,2009-05-17,Carlton 16.8 (104) def. Collingwood 7.11 (53),157,51,,Carlton defeated Collingwood by 51 points at M.C.G..
+64,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Docklands,2009-05-17,St Kilda 13.12 (90) def. Essendon 10.11 (71),161,19,,St Kilda defeated Essendon by 19 points at Docklands.
+65,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Docklands,2009-05-22,Geelong 17.14 (116) def. Western Bulldogs 17.12 (114),230,2,,Geelong defeated Western Bulldogs by 2 points at Docklands.
+66,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,Docklands,2009-05-23,North Melbourne 14.14 (98) def. Fremantle 12.13 (85),183,13,,North Melbourne defeated Fremantle by 13 points at Docklands.
+67,Regular Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,2009-05-23,Adelaide 15.14 (104) def. Carlton 8.12 (60),164,44,,Adelaide defeated Carlton by 44 points at Football Park.
+68,Regular Season,West Coast,Collingwood,West Coast,Collingwood,Subiaco,2009-05-23,Collingwood 12.16 (88) def. West Coast 9.12 (66),154,22,,Collingwood defeated West Coast by 22 points at Subiaco.
+69,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,2009-05-23,Essendon 19.11 (125) def. Richmond 12.13 (85),210,40,,Essendon defeated Richmond by 40 points at M.C.G..
+70,Regular Season,Sydney,Port Adelaide,Sydney,Port Adelaide,S.C.G.,2009-05-24,Sydney 18.15 (123) def. Port Adelaide 10.8 (68),191,55,,Sydney defeated Port Adelaide by 55 points at S.C.G..
+71,Regular Season,St Kilda,Brisbane Lions,St Kilda,Brisbane Lions,Docklands,2009-05-24,St Kilda 14.13 (97) def. Brisbane Lions 13.3 (81),178,16,,St Kilda defeated Brisbane Lions by 16 points at Docklands.
+72,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,M.C.G.,2009-05-24,Hawthorn 17.12 (114) def. Melbourne 13.14 (92),206,22,,Hawthorn defeated Melbourne by 22 points at M.C.G..
+73,Regular Season,Carlton,West Coast,Carlton,West Coast,Docklands,2009-05-29,Carlton 16.15 (111) def. West Coast 10.10 (70),181,41,,Carlton defeated West Coast by 41 points at Docklands.
+74,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Manuka Oval,2009-05-30,Western Bulldogs 18.9 (117) def. Sydney 12.5 (77),194,40,,Western Bulldogs defeated Sydney by 40 points at Manuka Oval.
+75,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,Docklands,2009-05-30,Brisbane Lions 15.9 (99) def. North Melbourne 12.9 (81),180,18,,Brisbane Lions defeated North Melbourne by 18 points at Docklands.
+76,Regular Season,Fremantle,Richmond,Fremantle,Richmond,Subiaco,2009-05-30,Richmond 17.13 (115) def. Fremantle 17.10 (112),227,3,,Richmond defeated Fremantle by 3 points at Subiaco.
+77,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Carrara,2009-05-30,St Kilda 11.17 (83) def. Melbourne 6.10 (46),129,37,,St Kilda defeated Melbourne by 37 points at Carrara.
+78,Regular Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,2009-05-31,Adelaide 16.10 (106) def. Hawthorn 12.7 (79),185,27,,Adelaide defeated Hawthorn by 27 points at Football Park.
+79,Regular Season,Essendon,Geelong,Essendon,Geelong,Docklands,2009-05-31,Geelong 20.14 (134) def. Essendon 11.4 (70),204,64,,Geelong defeated Essendon by 64 points at Docklands.
+80,Regular Season,Collingwood,Port Adelaide,Collingwood,Port Adelaide,M.C.G.,2009-05-31,Collingwood 17.12 (114) def. Port Adelaide 11.10 (76),190,38,,Collingwood defeated Port Adelaide by 38 points at M.C.G..
+81,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Docklands,2009-06-05,Western Bulldogs 24.13 (157) def. Richmond 14.5 (89),246,68,,Western Bulldogs defeated Richmond by 68 points at Docklands.
+82,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Docklands,2009-06-06,St Kilda 15.13 (103) def. North Melbourne 9.3 (57),160,46,,St Kilda defeated North Melbourne by 46 points at Docklands.
+83,Regular Season,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2009-06-06,Carlton 16.16 (112) def. Brisbane Lions 16.10 (106),218,6,,Carlton defeated Brisbane Lions by 6 points at Gabba.
+84,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,2009-06-06,Port Adelaide 14.10 (94) def. Fremantle 11.4 (70),164,24,,Port Adelaide defeated Fremantle by 24 points at Football Park.
+85,Regular Season,Essendon,Adelaide,Essendon,Adelaide,Docklands,2009-06-07,Adelaide 21.4 (130) def. Essendon 18.6 (114),244,16,,Adelaide defeated Essendon by 16 points at Docklands.
+86,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,M.C.G.,2009-06-07,Hawthorn 12.14 (86) def. Sydney 11.9 (75),161,11,,Hawthorn defeated Sydney by 11 points at M.C.G..
+87,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,2009-06-07,Geelong 15.9 (99) def. West Coast 11.11 (77),176,22,,Geelong defeated West Coast by 22 points at Subiaco.
+88,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,2009-06-08,Collingwood 19.12 (126) def. Melbourne 8.12 (60),186,66,,Collingwood defeated Melbourne by 66 points at M.C.G..
+89,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Docklands,2009-06-12,St Kilda 16.8 (104) def. Carlton 14.11 (95),199,9,,St Kilda defeated Carlton by 9 points at Docklands.
+90,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Marrara Oval,2009-06-13,Western Bulldogs 21.11 (137) def. Port Adelaide 7.2 (44),181,93,,Western Bulldogs defeated Port Adelaide by 93 points at Marrara Oval.
+91,Regular Season,Richmond,West Coast,Richmond,West Coast,Docklands,2009-06-13,Richmond 13.14 (92) def. West Coast 11.11 (77),169,15,,Richmond defeated West Coast by 15 points at Docklands.
+92,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,York Park,2009-06-14,Brisbane Lions 13.15 (93) def. Hawthorn 7.9 (51),144,42,,Brisbane Lions defeated Hawthorn by 42 points at York Park.
+93,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,2009-06-14,Adelaide 9.14 (68) def. North Melbourne 3.6 (24),92,44,,Adelaide defeated North Melbourne by 44 points at Football Park.
+94,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Docklands,2009-06-19,Essendon 19.17 (131) def. Melbourne 13.5 (83),214,48,,Essendon defeated Melbourne by 48 points at Docklands.
+95,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Stadium Australia,2009-06-20,Collingwood 13.11 (89) def. Sydney 9.12 (66),155,23,,Collingwood defeated Sydney by 23 points at Stadium Australia.
+96,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,2009-06-21,Geelong 13.16 (94) def. Fremantle 11.9 (75),169,19,,Geelong defeated Fremantle by 19 points at Subiaco.
+97,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,2009-06-26,Essendon 21.10 (136) def. Carlton 9.13 (67),203,69,,Essendon defeated Carlton by 69 points at M.C.G..
+98,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,M.C.G.,2009-06-27,Collingwood 26.13 (169) def. Fremantle 13.7 (85),254,84,,Collingwood defeated Fremantle by 84 points at M.C.G..
+99,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,2009-06-27,Adelaide 12.13 (85) def. Sydney 10.9 (69),154,16,,Adelaide defeated Sydney by 16 points at Football Park.
+100,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco,2009-06-27,West Coast 16.11 (107) def. Hawthorn 13.9 (87),194,20,,West Coast defeated Hawthorn by 20 points at Subiaco.
+101,Regular Season,Brisbane Lions,Melbourne,Brisbane Lions,Melbourne,Gabba,2009-06-27,Brisbane Lions 16.15 (111) def. Melbourne 8.8 (56),167,55,,Brisbane Lions defeated Melbourne by 55 points at Gabba.
+102,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Kardinia Park,2009-06-28,Geelong 18.14 (122) def. Port Adelaide 13.10 (88),210,34,,Geelong defeated Port Adelaide by 34 points at Kardinia Park.
+103,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,M.C.G.,2009-06-28,Western Bulldogs 17.6 (108) def. North Melbourne 12.14 (86),194,22,,Western Bulldogs defeated North Melbourne by 22 points at M.C.G..
+104,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Docklands,2009-06-28,St Kilda 13.14 (92) def. Richmond 5.6 (36),128,56,,St Kilda defeated Richmond by 56 points at Docklands.
+105,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,2009-07-03,Collingwood 15.12 (102) def. Essendon 9.13 (67),169,35,,Collingwood defeated Essendon by 35 points at M.C.G..
+106,Regular Season,Melbourne,West Coast,Melbourne,West Coast,M.C.G.,2009-07-04,Melbourne 17.10 (112) def. West Coast 13.14 (92),204,20,,Melbourne defeated West Coast by 20 points at M.C.G..
+107,Regular Season,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,Football Park,2009-07-04,Port Adelaide 19.14 (128) def. Brisbane Lions 11.14 (80),208,48,,Port Adelaide defeated Brisbane Lions by 48 points at Football Park.
+108,Regular Season,Richmond,Adelaide,Richmond,Adelaide,Carrara,2009-07-04,Adelaide 15.12 (102) def. Richmond 13.7 (85),187,17,,Adelaide defeated Richmond by 17 points at Carrara.
+109,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Docklands,2009-07-04,Western Bulldogs 19.19 (133) def. Hawthorn 6.9 (45),178,88,,Western Bulldogs defeated Hawthorn by 88 points at Docklands.
+110,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,2009-07-05,Sydney 15.10 (100) def. North Melbourne 13.7 (85),185,15,,Sydney defeated North Melbourne by 15 points at S.C.G..
+111,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,2009-07-05,Carlton 16.19 (115) def. Fremantle 15.10 (100),215,15,,Carlton defeated Fremantle by 15 points at Subiaco.
+112,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Docklands,2009-07-05,St Kilda 14.7 (91) def. Geelong 13.7 (85),176,6,,St Kilda defeated Geelong by 6 points at Docklands.
+113,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Docklands,2009-07-10,Collingwood 17.9 (111) def. Western Bulldogs 16.14 (110),221,1,,Collingwood defeated Western Bulldogs by 1 points at Docklands.
+114,Regular Season,Carlton,Richmond,Carlton,Richmond,M.C.G.,2009-07-11,Carlton 16.13 (109) def. Richmond 12.17 (89),198,20,,Carlton defeated Richmond by 20 points at M.C.G..
+115,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,2009-07-11,Essendon 15.17 (107) def. Sydney 10.12 (72),179,35,,Essendon defeated Sydney by 35 points at S.C.G..
+116,Regular Season,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,2009-07-11,Brisbane Lions 16.12 (108) def. Geelong 9.11 (65),173,43,,Brisbane Lions defeated Geelong by 43 points at Gabba.
+117,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,2009-07-11,Adelaide 19.16 (130) def. Fremantle 1.7 (13),143,117,,Adelaide defeated Fremantle by 117 points at Football Park.
+118,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,York Park,2009-07-12,Hawthorn 10.13 (73) def. North Melbourne 9.10 (64),137,9,,Hawthorn defeated North Melbourne by 9 points at York Park.
+119,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,M.C.G.,2009-07-12,Melbourne 15.11 (101) def. Port Adelaide 13.12 (90),191,11,,Melbourne defeated Port Adelaide by 11 points at M.C.G..
+120,Regular Season,West Coast,St Kilda,West Coast,St Kilda,Subiaco,2009-07-12,St Kilda 13.12 (90) def. West Coast 11.4 (70),160,20,,St Kilda defeated West Coast by 20 points at Subiaco.
+121,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Docklands,2009-07-17,Western Bulldogs 15.13 (103) def. Essendon 11.4 (70),173,33,,Western Bulldogs defeated Essendon by 33 points at Docklands.
+122,Regular Season,Carlton,Sydney,Carlton,Sydney,Docklands,2009-07-18,Carlton 19.10 (124) def. Sydney 9.9 (63),187,61,,Carlton defeated Sydney by 61 points at Docklands.
+123,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,2009-07-18,Geelong 17.15 (117) def. Melbourne 11.5 (71),188,46,,Geelong defeated Melbourne by 46 points at Kardinia Park.
+124,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,2009-07-18,Brisbane Lions 9.8 (62) def. Fremantle 7.5 (47),109,15,,Brisbane Lions defeated Fremantle by 15 points at Subiaco.
+125,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,2009-07-18,Hawthorn 18.13 (121) def. Collingwood 11.10 (76),197,45,,Hawthorn defeated Collingwood by 45 points at M.C.G..
+126,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,2009-07-19,Port Adelaide 17.10 (112) def. West Coast 11.10 (76),188,36,,Port Adelaide defeated West Coast by 36 points at Football Park.
+127,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,2009-07-19,Richmond 12.13 (85) drew with North Melbourne 12.13 (85),170,0,,Richmond and North Melbourne played out a draw at M.C.G..
+128,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Docklands,2009-07-19,St Kilda 15.15 (105) def. Adelaide 7.6 (48),153,57,,St Kilda defeated Adelaide by 57 points at Docklands.
+129,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,2009-07-24,Collingwood 14.10 (94) def. Carlton 4.16 (40),134,54,,Collingwood defeated Carlton by 54 points at M.C.G..
+130,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,M.C.G.,2009-07-25,Geelong 15.9 (99) def. Hawthorn 14.14 (98),197,1,,Geelong defeated Hawthorn by 1 points at M.C.G..
+131,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,2009-07-25,Fremantle 10.11 (71) def. West Coast 8.18 (66),137,5,,Fremantle defeated West Coast by 5 points at Subiaco.
+132,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Docklands,2009-07-25,St Kilda 16.10 (106) def. Western Bulldogs 9.7 (61),167,45,,St Kilda defeated Western Bulldogs by 45 points at Docklands.
+133,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,2009-07-25,Brisbane Lions 17.14 (116) def. North Melbourne 11.9 (75),191,41,,Brisbane Lions defeated North Melbourne by 41 points at Gabba.
+134,Regular Season,Melbourne,Sydney,Melbourne,Sydney,Manuka Oval,2009-07-26,Sydney 10.8 (68) def. Melbourne 6.14 (50),118,18,,Sydney defeated Melbourne by 18 points at Manuka Oval.
+135,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,2009-07-26,Richmond 15.11 (101) def. Essendon 14.12 (96),197,5,,Richmond defeated Essendon by 5 points at M.C.G..
+136,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,2009-07-26,Adelaide 19.18 (132) def. Port Adelaide 9.8 (62),194,70,,Adelaide defeated Port Adelaide by 70 points at Football Park.
+137,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Docklands,2009-07-31,Carlton 14.10 (94) def. North Melbourne 11.18 (84),178,10,,Carlton defeated North Melbourne by 10 points at Docklands.
+138,Regular Season,Geelong,Adelaide,Geelong,Adelaide,Kardinia Park,2009-08-01,Geelong 14.9 (93) def. Adelaide 13.13 (91),184,2,,Geelong defeated Adelaide by 2 points at Kardinia Park.
+139,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Docklands,2009-08-01,Western Bulldogs 17.9 (111) def. Fremantle 11.14 (80),191,31,,Western Bulldogs defeated Fremantle by 31 points at Docklands.
+140,Regular Season,Collingwood,Brisbane Lions,Collingwood,Brisbane Lions,M.C.G.,2009-08-01,Collingwood 12.23 (95) def. Brisbane Lions 8.7 (55),150,40,,Collingwood defeated Brisbane Lions by 40 points at M.C.G..
+141,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,2009-08-01,St Kilda 13.16 (94) def. Sydney 13.15 (93),187,1,,St Kilda defeated Sydney by 1 points at S.C.G..
+142,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,2009-08-02,Richmond 12.14 (86) def. Melbourne 12.10 (82),168,4,,Richmond defeated Melbourne by 4 points at M.C.G..
+143,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,2009-08-02,Port Adelaide 18.13 (121) def. Hawthorn 14.19 (103),224,18,,Port Adelaide defeated Hawthorn by 18 points at Football Park.
+144,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,2009-08-02,West Coast 14.11 (95) def. Essendon 10.8 (68),163,27,,West Coast defeated Essendon by 27 points at Subiaco.
+145,Regular Season,Carlton,Geelong,Carlton,Geelong,M.C.G.,2009-08-07,Carlton 14.13 (97) def. Geelong 8.14 (62),159,35,,Carlton defeated Geelong by 35 points at M.C.G..
+146,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Docklands,2009-08-08,West Coast 16.6 (102) def. Western Bulldogs 13.19 (97),199,5,,West Coast defeated Western Bulldogs by 5 points at Docklands.
+147,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,York Park,2009-08-08,St Kilda 10.14 (74) def. Hawthorn 7.7 (49),123,25,,St Kilda defeated Hawthorn by 25 points at York Park.
+148,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,M.C.G.,2009-08-08,Essendon 13.9 (87) drew with Brisbane Lions 12.15 (87),174,0,,Essendon and Brisbane Lions played out a draw at M.C.G..
+149,Regular Season,Adelaide,Collingwood,Adelaide,Collingwood,Football Park,2009-08-08,Collingwood 13.11 (89) def. Adelaide 9.14 (68),157,21,,Collingwood defeated Adelaide by 21 points at Football Park.
+150,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Docklands,2009-08-09,North Melbourne 19.9 (123) def. Melbourne 8.13 (61),184,62,,North Melbourne defeated Melbourne by 62 points at Docklands.
+151,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,2009-08-09,Sydney 18.15 (123) def. Richmond 10.8 (68),191,55,,Sydney defeated Richmond by 55 points at M.C.G..
+152,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Subiaco,2009-08-09,Fremantle 17.14 (116) def. Port Adelaide 11.8 (74),190,42,,Fremantle defeated Port Adelaide by 42 points at Subiaco.
+153,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,M.C.G.,2009-08-14,Adelaide 13.16 (94) def. Hawthorn 9.13 (67),161,27,,Adelaide defeated Hawthorn by 27 points at M.C.G..
+154,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,2009-08-15,Collingwood 22.20 (152) def. Richmond 8.11 (59),211,93,,Collingwood defeated Richmond by 93 points at M.C.G..
+155,Regular Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco,2009-08-15,West Coast 17.8 (110) def. North Melbourne 10.12 (72),182,38,,West Coast defeated North Melbourne by 38 points at Subiaco.
+156,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,2009-08-15,Western Bulldogs 15.12 (102) def. Brisbane Lions 12.12 (84),186,18,,Western Bulldogs defeated Brisbane Lions by 18 points at Gabba.
+157,Regular Season,Sydney,Geelong,Sydney,Geelong,Stadium Australia,2009-08-15,Geelong 13.14 (92) def. Sydney 13.9 (87),179,5,,Geelong defeated Sydney by 5 points at Stadium Australia.
+158,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,M.C.G.,2009-08-16,Melbourne 20.7 (127) def. Fremantle 9.10 (64),191,63,,Melbourne defeated Fremantle by 63 points at M.C.G..
+159,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,2009-08-16,Carlton 18.13 (121) def. Port Adelaide 9.13 (67),188,54,,Carlton defeated Port Adelaide by 54 points at Football Park.
+160,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Docklands,2009-08-16,Essendon 16.14 (110) def. St Kilda 16.12 (108),218,2,,Essendon defeated St Kilda by 2 points at Docklands.
+161,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Docklands,2009-08-21,Western Bulldogs 16.14 (110) def. Geelong 14.12 (96),206,14,,Western Bulldogs defeated Geelong by 14 points at Docklands.
+162,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Docklands,2009-08-22,Carlton 24.9 (153) def. Melbourne 15.6 (96),249,57,,Carlton defeated Melbourne by 57 points at Docklands.
+163,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,2009-08-22,Adelaide 18.14 (122) def. West Coast 7.6 (48),170,74,,Adelaide defeated West Coast by 74 points at Football Park.
+164,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,2009-08-22,Hawthorn 20.15 (135) def. Richmond 14.9 (93),228,42,,Hawthorn defeated Richmond by 42 points at M.C.G..
+165,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,2009-08-22,Brisbane Lions 16.11 (107) def. Port Adelaide 14.8 (92),199,15,,Brisbane Lions defeated Port Adelaide by 15 points at Gabba.
+166,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Docklands,2009-08-23,North Melbourne 10.4 (64) def. St Kilda 8.11 (59),123,5,,North Melbourne defeated St Kilda by 5 points at Docklands.
+167,Regular Season,Collingwood,Sydney,Collingwood,Sydney,M.C.G.,2009-08-23,Collingwood 13.19 (97) def. Sydney 8.8 (56),153,41,,Collingwood defeated Sydney by 41 points at M.C.G..
+168,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,2009-08-23,Fremantle 21.15 (141) def. Essendon 13.9 (87),228,54,,Fremantle defeated Essendon by 54 points at Subiaco.
+169,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,2009-08-28,West Coast 17.23 (125) def. Richmond 6.9 (45),170,80,,West Coast defeated Richmond by 80 points at Subiaco.
+170,Regular Season,Geelong,Fremantle,Geelong,Fremantle,Kardinia Park,2009-08-29,Geelong 14.10 (94) def. Fremantle 8.6 (54),148,40,,Geelong defeated Fremantle by 40 points at Kardinia Park.
+171,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,2009-08-29,Essendon 16.20 (116) def. Hawthorn 14.15 (99),215,17,,Essendon defeated Hawthorn by 17 points at M.C.G..
+172,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Docklands,2009-08-29,Adelaide 27.14 (176) def. Carlton 16.8 (104),280,72,,Adelaide defeated Carlton by 72 points at Docklands.
+173,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,2009-08-29,Brisbane Lions 15.10 (100) def. Sydney 14.8 (92),192,8,,Brisbane Lions defeated Sydney by 8 points at S.C.G..
+174,Regular Season,Port Adelaide,North Melbourne,Port Adelaide,North Melbourne,Football Park,2009-08-29,North Melbourne 10.11 (71) def. Port Adelaide 9.13 (67),138,4,,North Melbourne defeated Port Adelaide by 4 points at Football Park.
+175,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,2009-08-30,St Kilda 17.12 (114) def. Melbourne 10.7 (67),181,47,,St Kilda defeated Melbourne by 47 points at M.C.G..
+176,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Docklands,2009-08-30,Western Bulldogs 14.16 (100) def. Collingwood 10.16 (76),176,24,,Western Bulldogs defeated Collingwood by 24 points at Docklands.
+177,Finals,Adelaide,Essendon,Adelaide,Essendon,Football Park,2009-09-04,Adelaide 26.10 (166) def. Essendon 10.10 (70),236,96,,Adelaide defeated Essendon by 96 points at Football Park.
+178,Finals,Geelong,Western Bulldogs,Geelong,Western Bulldogs,M.C.G.,2009-09-05,Geelong 14.12 (96) def. Western Bulldogs 12.10 (82),178,14,,Geelong defeated Western Bulldogs by 14 points at M.C.G..
+179,Finals,Brisbane Lions,Carlton,Brisbane Lions,Carlton,Gabba,2009-09-05,Brisbane Lions 16.15 (111) def. Carlton 15.14 (104),215,7,,Brisbane Lions defeated Carlton by 7 points at Gabba.
+180,Finals,St Kilda,Collingwood,St Kilda,Collingwood,M.C.G.,2009-09-06,St Kilda 12.8 (80) def. Collingwood 7.10 (52),132,28,,St Kilda defeated Collingwood by 28 points at M.C.G..
+181,Finals,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,M.C.G.,2009-09-11,Western Bulldogs 16.11 (107) def. Brisbane Lions 8.8 (56),163,51,,Western Bulldogs defeated Brisbane Lions by 51 points at M.C.G..
+182,Finals,Collingwood,Adelaide,Collingwood,Adelaide,M.C.G.,2009-09-12,Collingwood 12.11 (83) def. Adelaide 11.12 (78),161,5,,Collingwood defeated Adelaide by 5 points at M.C.G..
+183,Finals,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,M.C.G.,2009-09-18,St Kilda 9.6 (60) def. Western Bulldogs 7.11 (53),113,7,,St Kilda defeated Western Bulldogs by 7 points at M.C.G..
+184,Finals,Geelong,Collingwood,Geelong,Collingwood,M.C.G.,2009-09-19,Geelong 17.18 (120) def. Collingwood 6.11 (47),167,73,,Geelong defeated Collingwood by 73 points at M.C.G..
+185,Grand Final,St Kilda,Geelong,St Kilda,Geelong,M.C.G.,2009-09-26,Geelong 12.8 (80) def. St Kilda 9.14 (68),148,12,,Geelong defeated St Kilda by 12 points at M.C.G..

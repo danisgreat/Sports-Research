@@ -4,8 +4,22 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1939
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Allan Coward
+
+## Senior Field Umpiring Panel (10 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Allan Coward | 18 | Grand Final |
+| Bill Blackburn | 18 | Regular Season / Finals |
+| Eric Hawkins | 18 | Regular Season / Finals |
+| Stanley Morgan | 17 | Regular Season / Finals |
+| George Murphy | 16 | Regular Season / Finals |
+| Thomas Bride | 10 | Regular Season / Finals |
+| James Cummins | 7 | Regular Season / Finals |
+| Eric Thomas | 3 | Regular Season / Finals |
+| William Glasson | 3 | Regular Season / Finals |
+| Robert Kinnaird | 2 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

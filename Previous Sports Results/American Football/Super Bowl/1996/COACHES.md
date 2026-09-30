@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1996 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1996 Season (Super Bowl XXX)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl XXX)
 - **Season:** 1996
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1996.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1996 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** Dallas Cowboys
+- **Winning Head Coach:** Barry Switzer
+- **Runners-up:** Pittsburgh Steelers
+- **Runners-up Head Coach:** Bill Cowher
+- **Super Bowl Result:** Dallas Cowboys def. Pittsburgh Steelers (27-17)
+- **Super Bowl MVP:** Larry Brown (CB, Dallas)
+- **Venue:** Sun Devil Stadium (Tempe)
+- **Official Attendance:** 76,347 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Barry Switzer directing Dallas Cowboys to the Vince Lombardi Trophy over Bill Cowher's Pittsburgh Steelers.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

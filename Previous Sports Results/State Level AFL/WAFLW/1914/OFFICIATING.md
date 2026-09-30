@@ -1,4 +1,4 @@
 # WAFLW Officiating & Refereeing Corps — 1914 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 2019. No official match adjudicators or referee panels were appointed in 1914.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** WAFLW not yet founded (inaugural season in 2019).

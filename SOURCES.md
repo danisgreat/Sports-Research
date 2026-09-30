@@ -258,12 +258,12 @@ The **Role** column:
 | FIBA | `https://www.fiba.basketball/en/events/<event>/games/<id>-<HOME>-<AWAY>` | Final, quarters, box. Check the event date: pages can show an old head-to-head | FO | Browser or Proxy | 200 |
 | FIBA LiveStats competition link | Find the exact event's official match-centre link; product description: `https://about.fiba.basketball/en/services/data-and-video-solutions/fiba-live-stats` | Live box and player participation where the competition actually uses it; product page is discovery only | FO for that competition | Browser | Product page opened 2026-09-28; exact-game coverage untested |
 | Basketball-Reference (WNBA and NBA history, new) | `https://www.basketball-reference.com/wnba/years/YYYY.html` | Team and player history | S | API | 200 |
-| Proballers (new) | `https://www.proballers.com/` | International rosters and player lines | S | Browser | 200 |
+| Proballers (new) | `https://www.proballers.com/` | International rosters and player lines | S | Browser | 200 on 2026-09-28; **Cloudflare 403 on 2026-09-30** (browser user-agent and plain request) |
 | Eurobasket (new) | `https://basketball.eurobasket.com/` | International leagues, rosters, injuries | S | Browser | 200 |
 | BasketNews (LKL) | `r.jina.ai/https://www.basketnews.lt/…` | Finals, quarter lines | S | Proxy | earlier |
 | WNBA CDN live data (New (a)) | `https://cdn.wnba.com/static/json/liveData/scoreboard/todaysScoreboard_10.json` | Today's WNBA scoreboard in the NBA liveData schema | FO (same lineage as wnba.com) | Browser | 200 on 2026-09-28; exact-game fields untested (no game in the file at test time) |
-| RealGM, NBA CDN JSON (`cdn.nba.com` scoreboard and schedule), `stats.nba.com` | — | — | — | **Blocked** from here (403; `stats.nba.com` resets the connection, 2026-09-28) | — |
-| NBL `apicdn.nbl.com.au` Genius route; FIBA LiveStats host (`fibalivestats.dcd.shared.geniussports.com`) | — | — | — | 502 / 403 on 2026-09-28. Use the NBL match page and its `schedule.nbl.com.au` match API | — |
+| NBA CDN JSON (`cdn.nba.com` scoreboard and schedule), `stats.nba.com` | — | — | — | **Blocked** from here (403; `stats.nba.com` resets the connection, 2026-09-28 and again 2026-09-30) | — |
+| NBL `apicdn.nbl.com.au` Genius route | — | — | — | 502 / 403 on 2026-09-28. Use the NBL match page and its `schedule.nbl.com.au` match API | — |
 
 **Settlement lineages:** ESPN summary + the league's own box + an independent report (e.g. Basketball-Reference or BasketNews). The league site and its live-stats page count once.
 
@@ -331,7 +331,8 @@ The **Role** column:
 | Transfermarkt injuries (new) | `https://www.transfermarkt.com/<league>/verletztespieler/wettbewerb/<code>` (EPL GB1) | Injuries and suspensions | S | API | 200 |
 | openfootball (new) | `https://raw.githubusercontent.com/openfootball/football.json/master/<season>/<code>.json` | Historical fixtures and results | S (history) | API | 200 |
 | ClubElo | `http://api.clubelo.com/<date>` | European club Elo | S | — | **HTTP 502 on 2026-09-28** (unverified; retry) |
-| FBref, Sofascore, WorldFootball | — | — | — | **Blocked** (Cloudflare 403, even through the proxy) | — |
+| FBref, Sofascore | — | — | — | **Blocked** (Cloudflare 403, even through the proxy; FBref again 403 on 2026-09-30) | — |
+| WorldFootball | See §3.13 | — | — | **Reopened 2026-09-30:** 200 with a browser user-agent, 403 to a plain request | — |
 
 **Settlement lineages:** the league or competition official page + ESPN + FotMob or a named report.
 - Corners settle with the field owner: pulselive for the EPL, the UEFA API for UEFA competitions, ESPN `wonCorners` otherwise.
@@ -564,16 +565,39 @@ The toss and strip ladders in §3.3 still govern: a toss post from the board's o
 | Grand Slam sites | ESPN → the tour's page → the Slam's social account | Roland-Garros: Bluesky `rolandgarros.com` (verified; posts in season) |
 | Tennis Abstract Elo | Retry, then use the proxy route. There is **no substitute benchmark**: `RULES_TENNIS.md` TE-P5 is blocking, so without a dated snapshot the tennis card is not issued | — |
 
+### 3.13 Game-level detail: results, line-ups, coaches and officials (tested 2026-09-30)
+
+Routes added after a live request on 2026-09-30 that returned the named game-level fields (not just a home page). They serve settlement process records, lineup diffs and the `Previous Sports Results` game logs. The history-only sources and the per-competition map are in [`Previous Sports Results/DATA_SOURCES_IMPLEMENTATION.md`](Previous%20Sports%20Results/DATA_SOURCES_IMPLEMENTATION.md). Role and access codes as in §3.
+
+| Source | Route | Fields confirmed on 2026-09-30 | Role | Access | Verified |
+|---|---|---|---|---|---|
+| worldfootball.net | `https://www.worldfootball.net/all_matches/<competition>-<season>/`; match report `/report/<slug>/`; club season `/teams/<club>/<year>/2/`; `/referees/<competition>-<season>/1/` | Season fixtures and results; match report with both line-ups and the referee (Burnley v Man City 2023-24); club squad with coach; referee season table | S | Browser (plain request 403) | 200 |
+| Transfermarkt referees and staff | `https://www.transfermarkt.com/<league>/schiedsrichter/wettbewerb/<code>/saison_id/<YYYY>`; `https://www.transfermarkt.com/<club>/mitarbeiterhistorie/verein/<id>` | Referees used in a league season (EPL 2023-24); a club's coaching-staff history | S | Browser | 200 |
+| FIFA API | `https://api.fifa.com/api/v3/calendar/matches?idCompetition=<id>&idSeason=<id>&language=en` | FIFA tournament matches with stadium and an `Officials` block | FO (FIFA tournaments) | API | 200 |
+| Ultimate A-League | `https://www.ultimatealeague.com/match/?match_id=<n>`; `/referees/` | A-League match pages naming the referee; referee register | S | Browser | 200 |
+| FIBA LiveStats game JSON | `https://fibalivestats.dcd.shared.geniussports.com/data/<gameId>/data.json` (game ID from the league's match centre) | Box score, both rosters, `officials` block (referee1-3, commissioner) | FO for competitions that publish a LiveStats game ID | API (plain request works) | 200 (game 2382853); was 403 on 2026-09-28 |
+| EuroLeague live game header | `https://api-live.euroleague.net/v2/competitions/E/seasons/E<YYYY>/games/<n>`; EuroCup feed `…/competitions/U/seasons/U<YYYY>/games` | `referee1`-`referee4` per game (E2024 game 1); EuroCup season game list (U2023) | FO | API | 200 |
+| ABA League match page | `https://www.aba-liga.com/match/<…>/` (links from `/calendar/`) | Match page naming the referees | FO | Browser | 200 |
+| Basketball-Reference referees and coaches | `https://www.basketball-reference.com/referees/<YYYY>_register.html`; `/leagues/NBA_<YYYY>_coaches.html`; `/wnba/years/<YYYY>_coaches.html` | NBA referee register per season (from 1989-90; 1988-89 returns 404); coaches per season (BAA 1946-47, WNBA 1997) | S | Browser | 200 |
+| RealGM | `https://basketball.realgm.com/` | Team rosters and staff | S | Browser (plain request 403) | 200 |
+| MLB Stats API coaches and rosters | `https://statsapi.mlb.com/api/v1/teams/<id>/coaches?season=<YYYY>`; `…/teams/<id>/roster?rosterType=fullSeason&season=<YYYY>`; `…/schedule?sportId=23` (Mexican League), `sportId=51` (WBC) | Manager and coaches by season (1950 full staff; 1920 manager only); full-season roster (1927); LMB 2019 and WBC 2023 schedules | FO | API | 200 |
+| NHL game-centre right rail | `https://api-web.nhle.com/v1/gamecenter/<gameId>/right-rail` | `referees`, `linesmen`, `headCoach`, `scratches` (game 2023020001) | FO | API | 200 |
+| Liiga API | `https://liiga.fi/api/v2/games?tournament=runkosarja&season=<YYYY>`; game detail `https://liiga.fi/api/v2/games/<season>/<id>` | All Liiga games; game detail lists referees and linesmen by role | FO | API | 200 |
+| Elite Prospects | `https://www.eliteprospects.com/league/<league>/<YYYY-YYYY>`; team staff `https://www.eliteprospects.com/team/<id>/<slug>/<YYYY-YYYY>?tab=staff` | League-season rosters (KHL 2023-24 and historical seasons); team staff with head coach. AIHL and PWHL pages showed no roster | S | Browser | 200 |
+| Rugby League Project referees | `https://www.rugbyleagueproject.org/seasons/<comp>-<YYYY>/results.html`; `/referees/` | Results with the referee per game (NRL 2024); referee register | S | API | 200 |
+| nflverse rosters and officials | `https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_<YYYY>.csv`; `…/download/officials/officials.csv` | Season rosters (1920 onward); game officials with position, 2015-2026 (22,012 rows) | P (history) | API | 200 |
+| WAFL FootyFacts | `https://www.waflfootyfacts.net/season/games/results.php?Season=<YYYY>` | WAFL results with goals.behinds (points) for every season listed 1885-2026 (1917 and 2024 opened) | S | Browser | 200 |
+
 ---
 
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
 |---|---|
-| Fangraphs, Baseball-Reference, Pro-Football-Reference, FBref, WorldFootball, Natural Stat Trick, RealGM | HTTP 403 (Cloudflare), even through the proxy |
+| Fangraphs, Baseball-Reference, Pro-Football-Reference, College Football Reference, Stathead, FBref, BDFutbol, kicker, Natural Stat Trick | HTTP 403 (Cloudflare), even through the proxy (Baseball-, Pro-Football- and College Football Reference, BDFutbol and kicker re-tested 2026-09-30). WorldFootball and RealGM **reopened** on 2026-09-30 with a browser user-agent (§3.13) |
 | Sofascore API | 403 |
 | NBA CDN JSON | 403 |
-| ESPNcricinfo direct | 403; use the proxy |
+| ESPNcricinfo direct | 403; use the proxy. **2026-09-30: the proxy route also returned 403 (Cloudflare)**; re-test before relying on it |
 | MLS stats API | 404 |
 | Sackmann tennis (GitHub) | 404 |
 | ClubElo | 502 (again on 2026-09-28) |
@@ -581,7 +605,10 @@ The toss and strip ladders in §3.3 still govern: a toss post from the board's o
 | Reddit | Blocked on every route (re-tested 2026-09-28: `.json` and API 403; the RSS returns a block page) |
 | Instagram, Facebook, TikTok, Weibo, YouTube RSS | 429 / login wall / shell only / 403 / 404 (2026-09-28). YouTube itself works through the watch page (§1.8) |
 | AP News hub, Reuters sports | 403 / 401 |
-| `stats.nba.com`, NBA CDN, ESPNcricinfo consumer API, Cricket Australia `apiv2`, ATP app gateway, ITF API, NBL `apicdn`, FIBA LiveStats host | Blocked or erroring from here on 2026-09-28 (see the sport tables) |
+| `stats.nba.com`, NBA CDN, ESPNcricinfo consumer API, Cricket Australia `apiv2`, ATP app gateway, ITF API, NBL `apicdn` | Blocked or erroring from here on 2026-09-28 (see the sport tables). The FIBA LiveStats host answered on 2026-09-30 (§3.13) |
+| Full Points Footy (`fullpointsfooty.net`) | **Excluded (2026-09-30):** the domain now serves a betting-prediction spam site. Older citations to it resolve to that site; use archived copies only |
+| Chadwick Bureau `baseballdatabank` (GitHub), Proballers | 404 / Cloudflare 403 on 2026-09-30 |
+| Newspaper archives: Trove, Papers Past, Chronicling America, Gallica, British Newspaper Archive | Bot check or 403 to automated requests on 2026-09-30 (Trove's API needs a free key; the British Newspaper Archive is a subscription). History only; read manually |
 | NRL casualty ward | Login required |
 | football-data.co.uk | Historical score cross-check and post-settlement closing benchmark only, in the quarantined research workspace; never pre-issue evidence. Raw files local-only under the source's published use notice. |
 | Bookmakers, odds sites, tipsters, RotoWire, RotoGrinders, FPTrack, fantasy/DFS | **Prohibited** (§1.4) |

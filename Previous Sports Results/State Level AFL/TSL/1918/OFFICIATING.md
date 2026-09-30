@@ -1,4 +1,4 @@
 # TSL Officiating & Refereeing Corps — 1918 Season
 
-- **Status:** INACTIVE / CANCELLED.
-- **Reason:** No competition matches were played in 1918 due to historical cancellation or league hiatus. No officiating panels were active.
+- **Status:** HELD_DATA_UNAVAILABLE
+- **Reason:** Season contested, but comprehensive match and coaching/officiating registers are unavailable in open structured data.

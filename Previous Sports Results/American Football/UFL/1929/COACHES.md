@@ -1,4 +1,4 @@
 # UFL Coaching Staff — 1929 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 2024. No official coaching staffs, managerial appointments, or teams existed in 1929.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** United Football League (XFL-USFL merger) not yet founded (inaugural season in 2024).

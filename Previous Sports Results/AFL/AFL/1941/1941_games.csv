@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1941-04-26,Carlton 15.12 (102) def. Essendon 15.9 (99),201,3,,Carlton defeated Essendon by 3 points at Princes Park.
+2,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1941-04-26,Richmond 13.17 (95) def. Collingwood 11.11 (77),172,18,,Richmond defeated Collingwood by 18 points at Victoria Park.
+3,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1941-04-26,Fitzroy 17.12 (114) def. Melbourne 13.12 (90),204,24,,Fitzroy defeated Melbourne by 24 points at M.C.G..
+4,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1941-04-26,Western Bulldogs 13.15 (93) def. Hawthorn 7.10 (52),145,41,,Western Bulldogs defeated Hawthorn by 41 points at Western Oval.
+5,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1941-04-26,North Melbourne 15.18 (108) def. Geelong 15.17 (107),215,1,,North Melbourne defeated Geelong by 1 points at Arden St.
+6,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1941-04-26,St Kilda 12.20 (92) def. Sydney 12.15 (87),179,5,,St Kilda defeated Sydney by 5 points at Junction Oval.
+7,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1941-05-03,Richmond 13.12 (90) def. Carlton 12.8 (80),170,10,,Richmond defeated Carlton by 10 points at Punt Rd.
+8,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1941-05-03,Collingwood 17.16 (118) def. Hawthorn 13.17 (95),213,23,,Collingwood defeated Hawthorn by 23 points at Glenferrie Oval.
+9,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1941-05-03,Essendon 22.13 (145) def. North Melbourne 16.12 (108),253,37,,Essendon defeated North Melbourne by 37 points at Windy Hill.
+10,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1941-05-03,Western Bulldogs 16.17 (113) def. Fitzroy 10.15 (75),188,38,,Western Bulldogs defeated Fitzroy by 38 points at Brunswick St.
+11,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1941-05-03,Geelong 13.9 (87) def. St Kilda 11.19 (85),172,2,,Geelong defeated St Kilda by 2 points at Kardinia Park.
+12,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1941-05-03,Melbourne 14.17 (101) def. Sydney 13.15 (93),194,8,,Melbourne defeated Sydney by 8 points at Lake Oval.
+13,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1941-05-10,Carlton 18.12 (120) def. Hawthorn 10.13 (73),193,47,,Carlton defeated Hawthorn by 47 points at Princes Park.
+14,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1941-05-10,Collingwood 18.15 (123) def. Fitzroy 15.7 (97),220,26,,Collingwood defeated Fitzroy by 26 points at Brunswick St.
+15,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1941-05-10,Essendon 16.7 (103) def. St Kilda 7.16 (58),161,45,,Essendon defeated St Kilda by 45 points at Junction Oval.
+16,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1941-05-10,Western Bulldogs 16.4 (100) def. Sydney 7.16 (58),158,42,,Western Bulldogs defeated Sydney by 42 points at Western Oval.
+17,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,1941-05-10,Melbourne 16.12 (108) def. Geelong 13.19 (97),205,11,,Melbourne defeated Geelong by 11 points at Kardinia Park.
+18,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Punt Rd,1941-05-10,Richmond 18.15 (123) def. North Melbourne 14.11 (95),218,28,,Richmond defeated North Melbourne by 28 points at Punt Rd.
+19,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1941-05-17,Carlton 16.23 (119) def. North Melbourne 15.15 (105),224,14,,Carlton defeated North Melbourne by 14 points at Arden St.
+20,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1941-05-17,Collingwood 14.11 (95) def. Western Bulldogs 14.10 (94),189,1,,Collingwood defeated Western Bulldogs by 1 points at Victoria Park.
+21,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1941-05-17,Essendon 15.14 (104) def. Richmond 14.8 (92),196,12,,Essendon defeated Richmond by 12 points at Windy Hill.
+22,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1941-05-17,Sydney 15.19 (109) def. Fitzroy 12.10 (82),191,27,,Sydney defeated Fitzroy by 27 points at Lake Oval.
+23,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1941-05-17,Hawthorn 13.16 (94) def. Geelong 11.13 (79),173,15,,Hawthorn defeated Geelong by 15 points at Glenferrie Oval.
+24,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1941-05-17,Melbourne 13.15 (93) def. St Kilda 13.11 (89),182,4,,Melbourne defeated St Kilda by 4 points at M.C.G..
+25,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1941-05-31,Carlton 15.18 (108) def. St Kilda 13.12 (90),198,18,,Carlton defeated St Kilda by 18 points at Junction Oval.
+26,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1941-05-31,Melbourne 26.11 (167) def. Collingwood 19.13 (127),294,40,,Melbourne defeated Collingwood by 40 points at Victoria Park.
+27,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1941-05-31,Essendon 23.18 (156) def. Hawthorn 8.12 (60),216,96,,Essendon defeated Hawthorn by 96 points at Glenferrie Oval.
+28,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1941-05-31,Richmond 17.18 (120) def. Fitzroy 15.8 (98),218,22,,Richmond defeated Fitzroy by 22 points at Punt Rd.
+29,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1941-05-31,Western Bulldogs 14.21 (105) def. North Melbourne 8.8 (56),161,49,,Western Bulldogs defeated North Melbourne by 49 points at Western Oval.
+30,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1941-05-31,Sydney 13.25 (103) def. Geelong 14.12 (96),199,7,,Sydney defeated Geelong by 7 points at Kardinia Park.
+31,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1941-06-07,Carlton 13.21 (99) def. Collingwood 11.16 (82),181,17,,Carlton defeated Collingwood by 17 points at Princes Park.
+32,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1941-06-07,Essendon 13.18 (96) def. Sydney 8.13 (61),157,35,,Essendon defeated Sydney by 35 points at Lake Oval.
+33,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1941-06-07,Fitzroy 17.14 (116) def. Geelong 10.15 (75),191,41,,Fitzroy defeated Geelong by 41 points at Brunswick St.
+34,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1941-06-07,Western Bulldogs 20.12 (132) def. Melbourne 14.20 (104),236,28,,Western Bulldogs defeated Melbourne by 28 points at Western Oval.
+35,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1941-06-07,Richmond 17.15 (117) def. Hawthorn 8.14 (62),179,55,,Richmond defeated Hawthorn by 55 points at Punt Rd.
+36,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1941-06-07,North Melbourne 17.12 (114) def. St Kilda 8.14 (62),176,52,,North Melbourne defeated St Kilda by 52 points at Arden St.
+37,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1941-06-14,Collingwood 17.19 (121) def. North Melbourne 16.15 (111),232,10,,Collingwood defeated North Melbourne by 10 points at Victoria Park.
+38,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1941-06-14,Essendon 9.24 (78) def. Fitzroy 4.12 (36),114,42,,Essendon defeated Fitzroy by 42 points at Windy Hill.
+39,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1941-06-14,St Kilda 15.14 (104) def. Western Bulldogs 9.8 (62),166,42,,St Kilda defeated Western Bulldogs by 42 points at Junction Oval.
+40,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1941-06-14,Richmond 10.15 (75) def. Geelong 10.14 (74),149,1,,Richmond defeated Geelong by 1 points at Kardinia Park.
+41,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1941-06-14,Sydney 13.12 (90) def. Hawthorn 6.20 (56),146,34,,Sydney defeated Hawthorn by 34 points at Glenferrie Oval.
+42,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1941-06-16,Carlton 19.10 (124) def. Melbourne 14.13 (97),221,27,,Carlton defeated Melbourne by 27 points at M.C.G..
+43,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1941-06-21,Fitzroy 12.13 (85) def. Carlton 10.17 (77),162,8,,Fitzroy defeated Carlton by 8 points at Princes Park.
+44,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1941-06-21,Collingwood 8.12 (60) def. Essendon 7.10 (52),112,8,,Collingwood defeated Essendon by 8 points at Victoria Park.
+45,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1941-06-21,Western Bulldogs 13.15 (93) def. Geelong 10.18 (78),171,15,,Western Bulldogs defeated Geelong by 15 points at Kardinia Park.
+46,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1941-06-21,Melbourne 12.12 (84) def. Hawthorn 6.8 (44),128,40,,Melbourne defeated Hawthorn by 40 points at Glenferrie Oval.
+47,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1941-06-21,Sydney 8.16 (64) def. North Melbourne 6.6 (42),106,22,,Sydney defeated North Melbourne by 22 points at Lake Oval.
+48,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1941-06-21,Richmond 10.13 (73) def. St Kilda 6.11 (47),120,26,,Richmond defeated St Kilda by 26 points at Punt Rd.
+49,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1941-06-28,Carlton 15.11 (101) def. Western Bulldogs 12.14 (86),187,15,,Carlton defeated Western Bulldogs by 15 points at Western Oval.
+50,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1941-06-28,Collingwood 16.10 (106) def. St Kilda 12.11 (83),189,23,,Collingwood defeated St Kilda by 23 points at Junction Oval.
+51,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1941-06-28,Essendon 18.12 (120) def. Geelong 11.13 (79),199,41,,Essendon defeated Geelong by 41 points at Windy Hill.
+52,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1941-06-28,Fitzroy 21.19 (145) def. Hawthorn 10.20 (80),225,65,,Fitzroy defeated Hawthorn by 65 points at Brunswick St.
+53,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1941-06-28,Melbourne 20.9 (129) def. North Melbourne 17.14 (116),245,13,,Melbourne defeated North Melbourne by 13 points at Arden St.
+54,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1941-06-28,Richmond 15.13 (103) def. Sydney 9.16 (70),173,33,,Richmond defeated Sydney by 33 points at Punt Rd.
+55,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1941-07-05,Carlton 12.25 (97) def. Geelong 13.11 (89),186,8,,Carlton defeated Geelong by 8 points at Princes Park.
+56,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1941-07-05,Sydney 11.13 (79) def. Collingwood 10.12 (72),151,7,,Sydney defeated Collingwood by 7 points at Victoria Park.
+57,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1941-07-05,Melbourne 16.17 (113) def. Essendon 9.11 (65),178,48,,Melbourne defeated Essendon by 48 points at M.C.G..
+58,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1941-07-05,Fitzroy 12.6 (78) def. St Kilda 12.4 (76),154,2,,Fitzroy defeated St Kilda by 2 points at Junction Oval.
+59,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1941-07-05,Richmond 14.11 (95) def. Western Bulldogs 12.13 (85),180,10,,Richmond defeated Western Bulldogs by 10 points at Western Oval.
+60,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1941-07-05,North Melbourne 13.20 (98) def. Hawthorn 6.14 (50),148,48,,North Melbourne defeated Hawthorn by 48 points at Arden St.
+61,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1941-07-12,Sydney 16.13 (109) def. Carlton 14.9 (93),202,16,,Sydney defeated Carlton by 16 points at Lake Oval.
+62,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1941-07-12,Collingwood 14.12 (96) def. Geelong 7.16 (58),154,38,,Collingwood defeated Geelong by 38 points at Kardinia Park.
+63,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1941-07-12,Essendon 15.14 (104) def. Western Bulldogs 9.11 (65),169,39,,Essendon defeated Western Bulldogs by 39 points at Windy Hill.
+64,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1941-07-12,North Melbourne 18.16 (124) def. Fitzroy 18.15 (123),247,1,,North Melbourne defeated Fitzroy by 1 points at Brunswick St.
+65,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Glenferrie Oval,1941-07-12,Hawthorn 13.12 (90) def. St Kilda 9.15 (69),159,21,,Hawthorn defeated St Kilda by 21 points at Glenferrie Oval.
+66,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1941-07-12,Melbourne 14.24 (108) def. Richmond 8.13 (61),169,47,,Melbourne defeated Richmond by 47 points at M.C.G..
+67,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1941-07-19,Carlton 18.14 (122) def. Essendon 12.11 (83),205,39,,Carlton defeated Essendon by 39 points at Windy Hill.
+68,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1941-07-19,Collingwood 13.14 (92) def. Richmond 10.14 (74),166,18,,Collingwood defeated Richmond by 18 points at Punt Rd.
+69,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1941-07-19,Melbourne 18.18 (126) def. Fitzroy 16.8 (104),230,22,,Melbourne defeated Fitzroy by 22 points at Brunswick St.
+70,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1941-07-19,Western Bulldogs 15.12 (102) def. Hawthorn 11.14 (80),182,22,,Western Bulldogs defeated Hawthorn by 22 points at Glenferrie Oval.
+71,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1941-07-19,Geelong 13.21 (99) def. North Melbourne 14.11 (95),194,4,,Geelong defeated North Melbourne by 4 points at Kardinia Park.
+72,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1941-07-19,Sydney 14.12 (96) def. St Kilda 8.6 (54),150,42,,Sydney defeated St Kilda by 42 points at Lake Oval.
+73,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1941-07-26,Richmond 11.18 (84) def. Carlton 12.11 (83),167,1,,Richmond defeated Carlton by 1 points at Princes Park.
+74,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1941-07-26,Collingwood 22.20 (152) def. Hawthorn 12.13 (85),237,67,,Collingwood defeated Hawthorn by 67 points at Victoria Park.
+75,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1941-07-26,Essendon 17.8 (110) def. North Melbourne 12.14 (86),196,24,,Essendon defeated North Melbourne by 24 points at Arden St.
+76,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1941-07-26,Western Bulldogs 15.20 (110) def. Fitzroy 9.4 (58),168,52,,Western Bulldogs defeated Fitzroy by 52 points at Western Oval.
+77,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1941-07-26,St Kilda 18.14 (122) def. Geelong 11.15 (81),203,41,,St Kilda defeated Geelong by 41 points at Junction Oval.
+78,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1941-07-26,Melbourne 18.16 (124) def. Sydney 10.13 (73),197,51,,Melbourne defeated Sydney by 51 points at M.C.G..
+79,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Glenferrie Oval,1941-08-02,Carlton 16.25 (121) def. Hawthorn 11.15 (81),202,40,,Carlton defeated Hawthorn by 40 points at Glenferrie Oval.
+80,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1941-08-02,Collingwood 11.9 (75) def. Fitzroy 8.9 (57),132,18,,Collingwood defeated Fitzroy by 18 points at Victoria Park.
+81,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1941-08-02,Essendon 16.17 (113) def. St Kilda 6.13 (49),162,64,,Essendon defeated St Kilda by 64 points at Windy Hill.
+82,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Lake Oval,1941-08-02,Western Bulldogs 10.21 (81) def. Sydney 7.13 (55),136,26,,Western Bulldogs defeated Sydney by 26 points at Lake Oval.
+83,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1941-08-02,Melbourne 19.14 (128) def. Geelong 9.18 (72),200,56,,Melbourne defeated Geelong by 56 points at M.C.G..
+84,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1941-08-02,Richmond 10.7 (67) def. North Melbourne 9.10 (64),131,3,,Richmond defeated North Melbourne by 3 points at Arden St.
+85,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1941-08-09,Carlton 25.19 (169) def. North Melbourne 17.15 (117),286,52,,Carlton defeated North Melbourne by 52 points at Princes Park.
+86,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1941-08-09,Collingwood 10.21 (81) def. Western Bulldogs 7.10 (52),133,29,,Collingwood defeated Western Bulldogs by 29 points at Western Oval.
+87,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1941-08-09,Richmond 14.11 (95) def. Essendon 12.16 (88),183,7,,Richmond defeated Essendon by 7 points at Punt Rd.
+88,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1941-08-09,Fitzroy 16.17 (113) def. Sydney 11.14 (80),193,33,,Fitzroy defeated Sydney by 33 points at Brunswick St.
+89,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1941-08-09,Geelong 22.12 (144) def. Hawthorn 19.15 (129),273,15,,Geelong defeated Hawthorn by 15 points at Kardinia Park.
+90,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1941-08-09,Melbourne 14.17 (101) def. St Kilda 12.13 (85),186,16,,Melbourne defeated St Kilda by 16 points at Junction Oval.
+91,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1941-08-16,Carlton 20.17 (137) def. St Kilda 11.14 (80),217,57,,Carlton defeated St Kilda by 57 points at Princes Park.
+92,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1941-08-16,Melbourne 17.8 (110) def. Collingwood 11.21 (87),197,23,,Melbourne defeated Collingwood by 23 points at M.C.G..
+93,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1941-08-16,Essendon 19.17 (131) def. Hawthorn 14.9 (93),224,38,,Essendon defeated Hawthorn by 38 points at Windy Hill.
+94,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1941-08-16,Fitzroy 14.15 (99) def. Richmond 12.16 (88),187,11,,Fitzroy defeated Richmond by 11 points at Brunswick St.
+95,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1941-08-16,North Melbourne 15.14 (104) def. Western Bulldogs 11.22 (88),192,16,,North Melbourne defeated Western Bulldogs by 16 points at Arden St.
+96,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1941-08-16,Sydney 10.10 (70) def. Geelong 10.9 (69),139,1,,Sydney defeated Geelong by 1 points at Lake Oval.
+97,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1941-08-23,Carlton 11.17 (83) def. Collingwood 10.21 (81),164,2,,Carlton defeated Collingwood by 2 points at Victoria Park.
+98,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1941-08-23,Essendon 12.23 (95) def. Sydney 7.4 (46),141,49,,Essendon defeated Sydney by 49 points at Windy Hill.
+99,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1941-08-23,Fitzroy 16.13 (109) def. Geelong 13.16 (94),203,15,,Fitzroy defeated Geelong by 15 points at Kardinia Park.
+100,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1941-08-23,Melbourne 17.20 (122) def. Western Bulldogs 16.9 (105),227,17,,Melbourne defeated Western Bulldogs by 17 points at M.C.G..
+101,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Glenferrie Oval,1941-08-23,Richmond 18.22 (130) def. Hawthorn 8.12 (60),190,70,,Richmond defeated Hawthorn by 70 points at Glenferrie Oval.
+102,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1941-08-23,North Melbourne 21.10 (136) def. St Kilda 16.18 (114),250,22,,North Melbourne defeated St Kilda by 22 points at Junction Oval.
+103,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1941-08-30,Carlton 16.17 (113) def. Melbourne 11.22 (88),201,25,,Carlton defeated Melbourne by 25 points at Princes Park.
+104,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1941-08-30,Collingwood 13.20 (98) def. North Melbourne 12.8 (80),178,18,,Collingwood defeated North Melbourne by 18 points at Arden St.
+105,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1941-08-30,Essendon 18.14 (122) def. Fitzroy 15.16 (106),228,16,,Essendon defeated Fitzroy by 16 points at Brunswick St.
+106,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1941-08-30,Western Bulldogs 16.14 (110) def. St Kilda 13.17 (95),205,15,,Western Bulldogs defeated St Kilda by 15 points at Western Oval.
+107,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1941-08-30,Richmond 20.12 (132) def. Geelong 12.11 (83),215,49,,Richmond defeated Geelong by 49 points at Punt Rd.
+108,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1941-08-30,Hawthorn 11.17 (83) def. Sydney 7.12 (54),137,29,,Hawthorn defeated Sydney by 29 points at Lake Oval.
+109,Finals,Essendon,Richmond,Essendon,Richmond,M.C.G.,1941-09-06,Essendon 21.9 (135) def. Richmond 11.15 (81),216,54,,Essendon defeated Richmond by 54 points at M.C.G..
+110,Finals,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1941-09-13,Melbourne 16.13 (109) def. Carlton 11.16 (82),191,27,,Melbourne defeated Carlton by 27 points at M.C.G..
+111,Finals,Essendon,Carlton,Essendon,Carlton,M.C.G.,1941-09-20,Essendon 13.15 (93) def. Carlton 9.14 (68),161,25,,Essendon defeated Carlton by 25 points at M.C.G..
+112,Grand Final,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1941-09-27,Melbourne 19.13 (127) def. Essendon 13.20 (98),225,29,,Melbourne defeated Essendon by 29 points at M.C.G..

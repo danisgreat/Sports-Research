@@ -4,8 +4,21 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1905
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Ivo Crapp
+
+## Senior Field Umpiring Panel (9 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Ivo Crapp | 21 | Grand Final |
+| Arthur Norden | 14 | Regular Season / Finals |
+| James DHelin | 13 | Regular Season / Finals |
+| Thomas Murphy | 8 | Regular Season / Finals |
+| Dick Gibson | 6 | Regular Season / Finals |
+| Bert Wregg | 3 | Regular Season / Finals |
+| Lardie Tulloch | 3 | Regular Season / Finals |
+| Charles Cariss | 2 | Regular Season / Finals |
+| George Hastings | 2 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

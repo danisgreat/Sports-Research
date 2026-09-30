@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1969 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1969 Season (Super Bowl III)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl III)
 - **Season:** 1969
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1969.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1969 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** New York Jets
+- **Winning Head Coach:** Weeb Ewbank
+- **Runners-up:** Baltimore Colts
+- **Runners-up Head Coach:** Don Shula
+- **Super Bowl Result:** New York Jets def. Baltimore Colts (16-7)
+- **Super Bowl MVP:** Joe Namath (QB, NY Jets)
+- **Venue:** Orange Bowl (Miami)
+- **Official Attendance:** 75,389 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Weeb Ewbank directing New York Jets to the Vince Lombardi Trophy over Don Shula's Baltimore Colts.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

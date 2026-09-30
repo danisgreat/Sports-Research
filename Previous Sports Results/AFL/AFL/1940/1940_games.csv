@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Geelong,Carlton,Geelong,Carlton,Corio Oval,1940-04-27,Carlton 12.27 (99) def. Geelong 9.18 (72),171,27,,Carlton defeated Geelong by 27 points at Corio Oval.
+2,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1940-04-27,Collingwood 13.14 (92) def. Sydney 11.14 (80),172,12,,Collingwood defeated Sydney by 12 points at Lake Oval.
+3,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1940-04-27,Essendon 18.17 (125) def. Melbourne 16.12 (108),233,17,,Essendon defeated Melbourne by 17 points at Windy Hill.
+4,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1940-04-27,Fitzroy 13.13 (91) def. St Kilda 10.20 (80),171,11,,Fitzroy defeated St Kilda by 11 points at Brunswick St.
+5,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Punt Rd,1940-04-27,Western Bulldogs 17.13 (115) def. Richmond 14.19 (103),218,12,,Western Bulldogs defeated Richmond by 12 points at Punt Rd.
+6,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1940-04-27,Hawthorn 25.11 (161) def. North Melbourne 13.11 (89),250,72,,Hawthorn defeated North Melbourne by 72 points at Glenferrie Oval.
+7,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1940-05-04,Carlton 15.19 (109) def. Sydney 12.5 (77),186,32,,Carlton defeated Sydney by 32 points at Princes Park.
+8,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1940-05-04,Geelong 14.10 (94) def. Collingwood 11.13 (79),173,15,,Geelong defeated Collingwood by 15 points at Victoria Park.
+9,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1940-05-04,Western Bulldogs 17.9 (111) def. Essendon 9.12 (66),177,45,,Western Bulldogs defeated Essendon by 45 points at Western Oval.
+10,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1940-05-04,North Melbourne 15.16 (106) def. Fitzroy 7.9 (51),157,55,,North Melbourne defeated Fitzroy by 55 points at Arden St.
+11,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1940-05-04,St Kilda 12.25 (97) def. Hawthorn 7.13 (55),152,42,,St Kilda defeated Hawthorn by 42 points at Junction Oval.
+12,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1940-05-04,Melbourne 18.14 (122) def. Richmond 14.15 (99),221,23,,Melbourne defeated Richmond by 23 points at M.C.G..
+13,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1940-05-11,Collingwood 18.19 (127) def. Carlton 12.18 (90),217,37,,Collingwood defeated Carlton by 37 points at Victoria Park.
+14,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1940-05-11,Essendon 12.14 (86) def. Sydney 10.15 (75),161,11,,Essendon defeated Sydney by 11 points at Windy Hill.
+15,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Corio Oval,1940-05-11,Geelong 16.19 (115) def. Fitzroy 13.8 (86),201,29,,Geelong defeated Fitzroy by 29 points at Corio Oval.
+16,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1940-05-11,Melbourne 20.21 (141) def. Western Bulldogs 15.12 (102),243,39,,Melbourne defeated Western Bulldogs by 39 points at M.C.G..
+17,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Glenferrie Oval,1940-05-11,Richmond 19.15 (129) def. Hawthorn 15.12 (102),231,27,,Richmond defeated Hawthorn by 27 points at Glenferrie Oval.
+18,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1940-05-11,St Kilda 12.12 (84) def. North Melbourne 9.11 (65),149,19,,St Kilda defeated North Melbourne by 19 points at Junction Oval.
+19,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1940-05-18,Melbourne 16.20 (116) def. Carlton 13.12 (90),206,26,,Melbourne defeated Carlton by 26 points at Princes Park.
+20,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1940-05-18,North Melbourne 14.15 (99) def. Collingwood 10.15 (75),174,24,,North Melbourne defeated Collingwood by 24 points at Arden St.
+21,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1940-05-18,Fitzroy 12.15 (87) def. Essendon 10.16 (76),163,11,,Fitzroy defeated Essendon by 11 points at Brunswick St.
+22,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1940-05-18,St Kilda 13.14 (92) def. Western Bulldogs 9.16 (70),162,22,,St Kilda defeated Western Bulldogs by 22 points at Western Oval.
+23,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1940-05-18,Richmond 17.15 (117) def. Geelong 11.6 (72),189,45,,Richmond defeated Geelong by 45 points at Punt Rd.
+24,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1940-05-18,Sydney 22.13 (145) def. Hawthorn 16.10 (106),251,39,,Sydney defeated Hawthorn by 39 points at Lake Oval.
+25,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1940-05-25,Carlton 11.19 (85) def. St Kilda 6.18 (54),139,31,,Carlton defeated St Kilda by 31 points at Junction Oval.
+26,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1940-05-25,Melbourne 17.12 (114) def. Collingwood 13.20 (98),212,16,,Melbourne defeated Collingwood by 16 points at M.C.G..
+27,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1940-05-25,Essendon 12.18 (90) def. Hawthorn 9.19 (73),163,17,,Essendon defeated Hawthorn by 17 points at Windy Hill.
+28,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1940-05-25,Richmond 12.11 (83) def. Fitzroy 8.14 (62),145,21,,Richmond defeated Fitzroy by 21 points at Brunswick St.
+29,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1940-05-25,Western Bulldogs 9.12 (66) def. North Melbourne 7.11 (53),119,13,,Western Bulldogs defeated North Melbourne by 13 points at Arden St.
+30,Regular Season,Geelong,Sydney,Geelong,Sydney,Corio Oval,1940-05-25,Geelong 12.21 (93) def. Sydney 10.12 (72),165,21,,Geelong defeated Sydney by 21 points at Corio Oval.
+31,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1940-06-01,Carlton 10.16 (76) def. Fitzroy 8.14 (62),138,14,,Carlton defeated Fitzroy by 14 points at Princes Park.
+32,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1940-06-01,Collingwood 12.13 (85) def. Essendon 11.17 (83),168,2,,Collingwood defeated Essendon by 2 points at Victoria Park.
+33,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1940-06-01,Geelong 10.14 (74) def. Western Bulldogs 10.6 (66),140,8,,Geelong defeated Western Bulldogs by 8 points at Western Oval.
+34,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1940-06-01,Hawthorn 12.15 (87) def. Melbourne 11.15 (81),168,6,,Hawthorn defeated Melbourne by 6 points at Glenferrie Oval.
+35,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1940-06-01,Sydney 16.9 (105) def. North Melbourne 16.8 (104),209,1,,Sydney defeated North Melbourne by 1 points at Lake Oval.
+36,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1940-06-01,Richmond 17.10 (112) def. St Kilda 11.10 (76),188,36,,Richmond defeated St Kilda by 36 points at Punt Rd.
+37,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1940-06-08,Western Bulldogs 12.18 (90) def. Carlton 12.8 (80),170,10,,Western Bulldogs defeated Carlton by 10 points at Western Oval.
+38,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1940-06-08,Collingwood 13.14 (92) def. St Kilda 10.12 (72),164,20,,Collingwood defeated St Kilda by 20 points at Junction Oval.
+39,Regular Season,Geelong,Essendon,Geelong,Essendon,Corio Oval,1940-06-08,Essendon 10.22 (82) def. Geelong 9.13 (67),149,15,,Essendon defeated Geelong by 15 points at Corio Oval.
+40,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1940-06-08,Fitzroy 17.11 (113) def. Hawthorn 12.14 (86),199,27,,Fitzroy defeated Hawthorn by 27 points at Brunswick St.
+41,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1940-06-08,Melbourne 12.34 (106) def. North Melbourne 8.1 (49),155,57,,Melbourne defeated North Melbourne by 57 points at Arden St.
+42,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1940-06-08,Richmond 13.16 (94) def. Sydney 12.13 (85),179,9,,Richmond defeated Sydney by 9 points at Punt Rd.
+43,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1940-06-15,Essendon 12.14 (86) def. Carlton 8.15 (63),149,23,,Essendon defeated Carlton by 23 points at Windy Hill.
+44,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1940-06-15,Richmond 10.15 (75) def. Collingwood 6.13 (49),124,26,,Richmond defeated Collingwood by 26 points at Victoria Park.
+45,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1940-06-15,Western Bulldogs 15.20 (110) def. Hawthorn 8.17 (65),175,45,,Western Bulldogs defeated Hawthorn by 45 points at Glenferrie Oval.
+46,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1940-06-15,Geelong 13.20 (98) def. North Melbourne 8.15 (63),161,35,,Geelong defeated North Melbourne by 35 points at Arden St.
+47,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1940-06-15,Sydney 12.9 (81) def. St Kilda 10.16 (76),157,5,,Sydney defeated St Kilda by 5 points at Lake Oval.
+48,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1940-06-17,Melbourne 12.15 (87) def. Fitzroy 12.13 (85),172,2,,Melbourne defeated Fitzroy by 2 points at M.C.G..
+49,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1940-06-22,North Melbourne 18.12 (120) def. Carlton 16.20 (116),236,4,,North Melbourne defeated Carlton by 4 points at Princes Park.
+50,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1940-06-22,Western Bulldogs 15.10 (100) def. Collingwood 12.12 (84),184,16,,Western Bulldogs defeated Collingwood by 16 points at Western Oval.
+51,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1940-06-22,Essendon 12.10 (82) def. Richmond 12.5 (77),159,5,,Essendon defeated Richmond by 5 points at Punt Rd.
+52,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1940-06-22,Fitzroy 10.30 (90) def. Sydney 10.17 (77),167,13,,Fitzroy defeated Sydney by 13 points at Brunswick St.
+53,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Corio Oval,1940-06-22,Geelong 12.18 (90) def. Hawthorn 6.10 (46),136,44,,Geelong defeated Hawthorn by 44 points at Corio Oval.
+54,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Junction Oval,1940-06-22,Melbourne 17.21 (123) def. St Kilda 16.16 (112),235,11,,Melbourne defeated St Kilda by 11 points at Junction Oval.
+55,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1940-06-29,Hawthorn 13.18 (96) def. Carlton 13.11 (89),185,7,,Hawthorn defeated Carlton by 7 points at Princes Park.
+56,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1940-06-29,Fitzroy 15.13 (103) def. Collingwood 12.17 (89),192,14,,Fitzroy defeated Collingwood by 14 points at Victoria Park.
+57,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1940-06-29,Essendon 15.14 (104) def. St Kilda 14.18 (102),206,2,,Essendon defeated St Kilda by 2 points at Junction Oval.
+58,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1940-06-29,Western Bulldogs 15.15 (105) def. Sydney 6.10 (46),151,59,,Western Bulldogs defeated Sydney by 59 points at Western Oval.
+59,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1940-06-29,Geelong 24.10 (154) def. Melbourne 22.19 (151),305,3,,Geelong defeated Melbourne by 3 points at M.C.G..
+60,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1940-06-29,Richmond 17.16 (118) def. North Melbourne 13.11 (89),207,29,,Richmond defeated North Melbourne by 29 points at Arden St.
+61,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1940-07-06,Carlton 9.22 (76) def. Richmond 9.11 (65),141,11,,Carlton defeated Richmond by 11 points at Punt Rd.
+62,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1940-07-06,Collingwood 14.17 (101) def. Hawthorn 10.17 (77),178,24,,Collingwood defeated Hawthorn by 24 points at Glenferrie Oval.
+63,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1940-07-06,Essendon 19.14 (128) def. North Melbourne 16.9 (105),233,23,,Essendon defeated North Melbourne by 23 points at Windy Hill.
+64,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1940-07-06,Fitzroy 17.8 (110) def. Western Bulldogs 14.13 (97),207,13,,Fitzroy defeated Western Bulldogs by 13 points at Brunswick St.
+65,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Corio Oval,1940-07-06,Geelong 12.22 (94) def. St Kilda 11.10 (76),170,18,,Geelong defeated St Kilda by 18 points at Corio Oval.
+66,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1940-07-06,Melbourne 19.16 (130) def. Sydney 10.18 (78),208,52,,Melbourne defeated Sydney by 52 points at Lake Oval.
+67,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1940-07-13,Geelong 12.19 (91) def. Carlton 11.24 (90),181,1,,Geelong defeated Carlton by 1 points at Princes Park.
+68,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1940-07-13,Collingwood 19.14 (128) def. Sydney 4.18 (42),170,86,,Collingwood defeated Sydney by 86 points at Victoria Park.
+69,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1940-07-13,Melbourne 17.20 (122) def. Essendon 7.12 (54),176,68,,Melbourne defeated Essendon by 68 points at M.C.G..
+70,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Junction Oval,1940-07-13,St Kilda 8.11 (59) def. Fitzroy 6.12 (48),107,11,,St Kilda defeated Fitzroy by 11 points at Junction Oval.
+71,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1940-07-13,Richmond 15.10 (100) def. Western Bulldogs 12.10 (82),182,18,,Richmond defeated Western Bulldogs by 18 points at Western Oval.
+72,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1940-07-13,North Melbourne 11.11 (77) def. Hawthorn 9.16 (70),147,7,,North Melbourne defeated Hawthorn by 7 points at Arden St.
+73,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1940-07-20,Sydney 17.11 (113) def. Carlton 14.14 (98),211,15,,Sydney defeated Carlton by 15 points at Lake Oval.
+74,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Corio Oval,1940-07-20,Geelong 23.18 (156) def. Collingwood 12.19 (91),247,65,,Geelong defeated Collingwood by 65 points at Corio Oval.
+75,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1940-07-20,Essendon 13.17 (95) def. Western Bulldogs 13.13 (91),186,4,,Essendon defeated Western Bulldogs by 4 points at Windy Hill.
+76,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1940-07-20,Fitzroy 16.17 (113) def. North Melbourne 9.13 (67),180,46,,Fitzroy defeated North Melbourne by 46 points at Brunswick St.
+77,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Glenferrie Oval,1940-07-20,Hawthorn 17.17 (119) def. St Kilda 8.15 (63),182,56,,Hawthorn defeated St Kilda by 56 points at Glenferrie Oval.
+78,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1940-07-20,Melbourne 13.16 (94) def. Richmond 13.9 (87),181,7,,Melbourne defeated Richmond by 7 points at Punt Rd.
+79,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1940-07-27,Carlton 14.18 (102) def. Collingwood 13.9 (87),189,15,,Carlton defeated Collingwood by 15 points at Princes Park.
+80,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1940-07-27,Sydney 9.6 (60) def. Essendon 7.16 (58),118,2,,Sydney defeated Essendon by 2 points at Lake Oval.
+81,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1940-07-27,Fitzroy 10.27 (87) def. Geelong 8.12 (60),147,27,,Fitzroy defeated Geelong by 27 points at Brunswick St.
+82,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1940-07-27,Melbourne 15.20 (110) def. Western Bulldogs 12.19 (91),201,19,,Melbourne defeated Western Bulldogs by 19 points at Western Oval.
+83,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1940-07-27,Hawthorn 12.15 (87) def. Richmond 11.13 (79),166,8,,Hawthorn defeated Richmond by 8 points at Punt Rd.
+84,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1940-07-27,St Kilda 13.6 (84) def. North Melbourne 6.11 (47),131,37,,St Kilda defeated North Melbourne by 37 points at Arden St.
+85,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1940-08-10,Carlton 20.13 (133) def. Melbourne 14.12 (96),229,37,,Carlton defeated Melbourne by 37 points at M.C.G..
+86,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1940-08-10,Collingwood 12.21 (93) def. North Melbourne 6.17 (53),146,40,,Collingwood defeated North Melbourne by 40 points at Victoria Park.
+87,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1940-08-10,Fitzroy 10.15 (75) def. Essendon 10.12 (72),147,3,,Fitzroy defeated Essendon by 3 points at Windy Hill.
+88,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1940-08-10,Western Bulldogs 15.22 (112) def. St Kilda 13.9 (87),199,25,,Western Bulldogs defeated St Kilda by 25 points at Junction Oval.
+89,Regular Season,Geelong,Richmond,Geelong,Richmond,Corio Oval,1940-08-10,Richmond 16.11 (107) def. Geelong 12.15 (87),194,20,,Richmond defeated Geelong by 20 points at Corio Oval.
+90,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1940-08-10,Hawthorn 10.19 (79) def. Sydney 10.13 (73),152,6,,Hawthorn defeated Sydney by 6 points at Glenferrie Oval.
+91,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1940-08-17,Carlton 13.14 (92) def. St Kilda 6.16 (52),144,40,,Carlton defeated St Kilda by 40 points at Princes Park.
+92,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1940-08-17,Melbourne 16.8 (104) def. Collingwood 12.18 (90),194,14,,Melbourne defeated Collingwood by 14 points at Victoria Park.
+93,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1940-08-17,Essendon 18.12 (120) def. Hawthorn 11.18 (84),204,36,,Essendon defeated Hawthorn by 36 points at Glenferrie Oval.
+94,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,Punt Rd,1940-08-17,Richmond 14.15 (99) def. Fitzroy 10.11 (71),170,28,,Richmond defeated Fitzroy by 28 points at Punt Rd.
+95,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1940-08-17,Western Bulldogs 17.22 (124) def. North Melbourne 8.13 (61),185,63,,Western Bulldogs defeated North Melbourne by 63 points at Western Oval.
+96,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1940-08-17,Sydney 12.19 (91) def. Geelong 13.9 (87),178,4,,Sydney defeated Geelong by 4 points at Lake Oval.
+97,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1940-08-24,Carlton 21.14 (140) def. Fitzroy 10.11 (71),211,69,,Carlton defeated Fitzroy by 69 points at Brunswick St.
+98,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1940-08-24,Essendon 12.20 (92) def. Collingwood 6.16 (52),144,40,,Essendon defeated Collingwood by 40 points at Windy Hill.
+99,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Corio Oval,1940-08-24,Geelong 12.17 (89) def. Western Bulldogs 11.18 (84),173,5,,Geelong defeated Western Bulldogs by 5 points at Corio Oval.
+100,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1940-08-24,Melbourne 26.20 (176) def. Hawthorn 8.14 (62),238,114,,Melbourne defeated Hawthorn by 114 points at M.C.G..
+101,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1940-08-24,Sydney 16.23 (119) def. North Melbourne 8.5 (53),172,66,,Sydney defeated North Melbourne by 66 points at Arden St.
+102,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Junction Oval,1940-08-24,Richmond 20.15 (135) def. St Kilda 10.17 (77),212,58,,Richmond defeated St Kilda by 58 points at Junction Oval.
+103,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1940-08-31,Carlton 15.12 (102) def. Western Bulldogs 11.14 (80),182,22,,Carlton defeated Western Bulldogs by 22 points at Princes Park.
+104,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1940-08-31,Collingwood 15.19 (109) def. St Kilda 10.15 (75),184,34,,Collingwood defeated St Kilda by 34 points at Victoria Park.
+105,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1940-08-31,Essendon 16.16 (112) def. Geelong 7.10 (52),164,60,,Essendon defeated Geelong by 60 points at Windy Hill.
+106,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Glenferrie Oval,1940-08-31,Hawthorn 13.16 (94) def. Fitzroy 5.8 (38),132,56,,Hawthorn defeated Fitzroy by 56 points at Glenferrie Oval.
+107,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1940-08-31,Melbourne 18.21 (129) def. North Melbourne 11.15 (81),210,48,,Melbourne defeated North Melbourne by 48 points at M.C.G..
+108,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1940-08-31,Richmond 16.12 (108) def. Sydney 8.13 (61),169,47,,Richmond defeated Sydney by 47 points at Lake Oval.
+109,Finals,Essendon,Geelong,Essendon,Geelong,M.C.G.,1940-09-07,Essendon 13.14 (92) def. Geelong 10.14 (74),166,18,,Essendon defeated Geelong by 18 points at M.C.G..
+110,Finals,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,1940-09-14,Richmond 16.11 (107) def. Melbourne 14.17 (101),208,6,,Richmond defeated Melbourne by 6 points at M.C.G..
+111,Finals,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1940-09-21,Melbourne 12.18 (90) def. Essendon 12.13 (85),175,5,,Melbourne defeated Essendon by 5 points at M.C.G..
+112,Grand Final,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1940-09-28,Melbourne 15.17 (107) def. Richmond 10.8 (68),175,39,,Melbourne defeated Richmond by 39 points at M.C.G..

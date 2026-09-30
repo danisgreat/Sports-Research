@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Denver Broncos,Atlanta Falcons,Denver Broncos,Atlanta Falcons,Pro Player Stadium,1999-01-31,Denver Broncos 34 def. Atlanta Falcons 19,53,15,,"Denver Broncos won Super Bowl XXXIII, defeating Atlanta Falcons 34-19 at Pro Player Stadium."

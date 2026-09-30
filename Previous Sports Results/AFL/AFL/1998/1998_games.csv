@@ -1,1 +1,186 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,North Melbourne,West Coast,North Melbourne,West Coast,M.C.G.,1998-03-27,North Melbourne 15.13 (103) def. West Coast 15.11 (101),204,2,,North Melbourne defeated West Coast by 2 points at M.C.G..
+2,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Princes Park,1998-03-28,Carlton 10.13 (73) def. Adelaide 9.9 (63),136,10,,Carlton defeated Adelaide by 10 points at Princes Park.
+3,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Waverley Park,1998-03-28,St Kilda 17.7 (109) def. Geelong 13.13 (91),200,18,,St Kilda defeated Geelong by 18 points at Waverley Park.
+4,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,M.C.G.,1998-03-28,Collingwood 18.15 (123) def. Hawthorn 12.12 (84),207,39,,Collingwood defeated Hawthorn by 39 points at M.C.G..
+5,Regular Season,Brisbane Lions,Western Bulldogs,Brisbane Lions,Western Bulldogs,Gabba,1998-03-28,Western Bulldogs 17.16 (118) def. Brisbane Lions 10.12 (72),190,46,,Western Bulldogs defeated Brisbane Lions by 46 points at Gabba.
+6,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,1998-03-29,Richmond 14.19 (103) def. Essendon 13.11 (89),192,14,,Richmond defeated Essendon by 14 points at M.C.G..
+7,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,1998-03-29,Sydney 20.4 (124) def. Port Adelaide 17.15 (117),241,7,,Sydney defeated Port Adelaide by 7 points at Football Park.
+8,Regular Season,Fremantle,Melbourne,Fremantle,Melbourne,Subiaco,1998-03-29,Fremantle 13.6 (84) def. Melbourne 8.13 (61),145,23,,Fremantle defeated Melbourne by 23 points at Subiaco.
+9,Regular Season,West Coast,Collingwood,West Coast,Collingwood,Subiaco,1998-04-03,West Coast 17.14 (116) def. Collingwood 8.8 (56),172,60,,West Coast defeated Collingwood by 60 points at Subiaco.
+10,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1998-04-04,Geelong 14.15 (99) def. Richmond 11.14 (80),179,19,,Geelong defeated Richmond by 19 points at Kardinia Park.
+11,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,Waverley Park,1998-04-04,Port Adelaide 17.10 (112) def. Hawthorn 10.7 (67),179,45,,Port Adelaide defeated Hawthorn by 45 points at Waverley Park.
+12,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1998-04-04,Melbourne 19.11 (125) def. North Melbourne 15.10 (100),225,25,,Melbourne defeated North Melbourne by 25 points at M.C.G..
+13,Regular Season,Sydney,Brisbane Lions,Sydney,Brisbane Lions,S.C.G.,1998-04-04,Sydney 20.15 (135) def. Brisbane Lions 14.13 (97),232,38,,Sydney defeated Brisbane Lions by 38 points at S.C.G..
+14,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Princes Park,1998-04-05,Western Bulldogs 22.8 (140) def. Carlton 13.6 (84),224,56,,Western Bulldogs defeated Carlton by 56 points at Princes Park.
+15,Regular Season,Essendon,St Kilda,Essendon,St Kilda,M.C.G.,1998-04-05,Essendon 28.14 (182) def. St Kilda 13.15 (93),275,89,,Essendon defeated St Kilda by 89 points at M.C.G..
+16,Regular Season,Adelaide,Fremantle,Adelaide,Fremantle,Football Park,1998-04-05,Adelaide 25.17 (167) def. Fremantle 11.8 (74),241,93,,Adelaide defeated Fremantle by 93 points at Football Park.
+17,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Princes Park,1998-04-11,Western Bulldogs 16.23 (119) def. Collingwood 13.7 (85),204,34,,Western Bulldogs defeated Collingwood by 34 points at Princes Park.
+18,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,1998-04-11,Richmond 15.13 (103) def. Hawthorn 15.7 (97),200,6,,Richmond defeated Hawthorn by 6 points at M.C.G..
+19,Regular Season,Port Adelaide,North Melbourne,Port Adelaide,North Melbourne,Football Park,1998-04-11,North Melbourne 15.8 (98) def. Port Adelaide 10.9 (69),167,29,,North Melbourne defeated Port Adelaide by 29 points at Football Park.
+20,Regular Season,St Kilda,Adelaide,St Kilda,Adelaide,Waverley Park,1998-04-12,St Kilda 12.10 (82) def. Adelaide 8.12 (60),142,22,,St Kilda defeated Adelaide by 22 points at Waverley Park.
+21,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,1998-04-12,Sydney 24.16 (160) def. Geelong 7.15 (57),217,103,,Sydney defeated Geelong by 103 points at S.C.G..
+22,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,1998-04-12,West Coast 14.10 (94) def. Fremantle 10.7 (67),161,27,,West Coast defeated Fremantle by 27 points at Subiaco.
+23,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,1998-04-13,Essendon 14.15 (99) def. Carlton 14.14 (98),197,1,,Essendon defeated Carlton by 1 points at M.C.G..
+24,Regular Season,Brisbane Lions,Melbourne,Brisbane Lions,Melbourne,Gabba,1998-04-13,Melbourne 15.10 (100) def. Brisbane Lions 12.15 (87),187,13,,Melbourne defeated Brisbane Lions by 13 points at Gabba.
+25,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,1998-04-17,Collingwood 20.13 (133) def. Richmond 12.16 (88),221,45,,Collingwood defeated Richmond by 45 points at M.C.G..
+26,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1998-04-18,Western Bulldogs 14.10 (94) def. Geelong 11.13 (79),173,15,,Western Bulldogs defeated Geelong by 15 points at Kardinia Park.
+27,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Waverley Park,1998-04-18,St Kilda 20.9 (129) def. Hawthorn 18.13 (121),250,8,,St Kilda defeated Hawthorn by 8 points at Waverley Park.
+28,Regular Season,West Coast,Sydney,West Coast,Sydney,W.A.C.A.,1998-04-18,Sydney 18.10 (118) def. West Coast 14.15 (99),217,19,,Sydney defeated West Coast by 19 points at W.A.C.A..
+29,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1998-04-19,Melbourne 10.12 (72) def. Carlton 10.10 (70),142,2,,Melbourne defeated Carlton by 2 points at Princes Park.
+30,Regular Season,Essendon,Fremantle,Essendon,Fremantle,Waverley Park,1998-04-19,Fremantle 14.16 (100) def. Essendon 11.10 (76),176,24,,Fremantle defeated Essendon by 24 points at Waverley Park.
+31,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,M.C.G.,1998-04-19,North Melbourne 21.11 (137) def. Brisbane Lions 17.18 (120),257,17,,North Melbourne defeated Brisbane Lions by 17 points at M.C.G..
+32,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,1998-04-19,Port Adelaide 11.7 (73) def. Adelaide 8.16 (64),137,9,,Port Adelaide defeated Adelaide by 9 points at Football Park.
+33,Regular Season,Richmond,West Coast,Richmond,West Coast,M.C.G.,1998-04-24,Richmond 12.14 (86) def. West Coast 10.11 (71),157,15,,Richmond defeated West Coast by 15 points at M.C.G..
+34,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,Waverley Park,1998-04-25,Hawthorn 18.16 (124) def. Brisbane Lions 12.11 (83),207,41,,Hawthorn defeated Brisbane Lions by 41 points at Waverley Park.
+35,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,1998-04-25,Collingwood 15.18 (108) def. Essendon 12.16 (88),196,20,,Collingwood defeated Essendon by 20 points at M.C.G..
+36,Regular Season,Fremantle,North Melbourne,Fremantle,North Melbourne,W.A.C.A.,1998-04-25,Fremantle 16.8 (104) def. North Melbourne 12.15 (87),191,17,,Fremantle defeated North Melbourne by 17 points at W.A.C.A..
+37,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Waverley Park,1998-04-26,St Kilda 13.10 (88) def. Carlton 9.12 (66),154,22,,St Kilda defeated Carlton by 22 points at Waverley Park.
+38,Regular Season,Melbourne,Port Adelaide,Melbourne,Port Adelaide,M.C.G.,1998-04-26,Melbourne 14.18 (102) def. Port Adelaide 6.17 (53),155,49,,Melbourne defeated Port Adelaide by 49 points at M.C.G..
+39,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,1998-04-26,Sydney 14.15 (99) def. Western Bulldogs 12.11 (83),182,16,,Sydney defeated Western Bulldogs by 16 points at S.C.G..
+40,Regular Season,Adelaide,Geelong,Adelaide,Geelong,Football Park,1998-04-26,Adelaide 12.15 (87) def. Geelong 8.13 (61),148,26,,Adelaide defeated Geelong by 26 points at Football Park.
+41,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,1998-05-01,Brisbane Lions 13.8 (86) def. Richmond 7.9 (51),137,35,,Brisbane Lions defeated Richmond by 35 points at Gabba.
+42,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Princes Park,1998-05-02,Western Bulldogs 13.19 (97) def. Essendon 13.11 (89),186,8,,Western Bulldogs defeated Essendon by 8 points at Princes Park.
+43,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1998-05-02,Geelong 13.12 (90) def. Hawthorn 10.13 (73),163,17,,Geelong defeated Hawthorn by 17 points at Kardinia Park.
+44,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,1998-05-02,Collingwood 14.12 (96) def. Carlton 9.13 (67),163,29,,Collingwood defeated Carlton by 29 points at M.C.G..
+45,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,1998-05-02,Port Adelaide 13.18 (96) def. Fremantle 9.6 (60),156,36,,Port Adelaide defeated Fremantle by 36 points at Football Park.
+46,Regular Season,North Melbourne,Adelaide,North Melbourne,Adelaide,M.C.G.,1998-05-03,North Melbourne 15.16 (106) def. Adelaide 15.12 (102),208,4,,North Melbourne defeated Adelaide by 4 points at M.C.G..
+47,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,1998-05-03,Melbourne 12.8 (80) def. Sydney 8.13 (61),141,19,,Melbourne defeated Sydney by 19 points at S.C.G..
+48,Regular Season,West Coast,St Kilda,West Coast,St Kilda,Subiaco,1998-05-03,St Kilda 18.13 (121) def. West Coast 18.11 (119),240,2,,St Kilda defeated West Coast by 2 points at Subiaco.
+49,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,W.A.C.A.,1998-05-08,Hawthorn 15.9 (99) def. Fremantle 8.9 (57),156,42,,Hawthorn defeated Fremantle by 42 points at W.A.C.A..
+50,Regular Season,Collingwood,Sydney,Collingwood,Sydney,M.C.G.,1998-05-08,Sydney 18.7 (115) def. Collingwood 12.7 (79),194,36,,Sydney defeated Collingwood by 36 points at M.C.G..
+51,Regular Season,Carlton,Port Adelaide,Carlton,Port Adelaide,Princes Park,1998-05-09,Port Adelaide 25.15 (165) def. Carlton 11.10 (76),241,89,,Port Adelaide defeated Carlton by 89 points at Princes Park.
+52,Regular Season,St Kilda,Brisbane Lions,St Kilda,Brisbane Lions,Waverley Park,1998-05-09,Brisbane Lions 15.9 (99) def. St Kilda 11.16 (82),181,17,,Brisbane Lions defeated St Kilda by 17 points at Waverley Park.
+53,Regular Season,Essendon,Geelong,Essendon,Geelong,M.C.G.,1998-05-09,Geelong 12.7 (79) def. Essendon 11.4 (70),149,9,,Geelong defeated Essendon by 9 points at M.C.G..
+54,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,1998-05-10,Adelaide 11.13 (79) def. West Coast 10.11 (71),150,8,,Adelaide defeated West Coast by 8 points at Football Park.
+55,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Princes Park,1998-05-10,Western Bulldogs 16.15 (111) def. North Melbourne 12.11 (83),194,28,,Western Bulldogs defeated North Melbourne by 28 points at Princes Park.
+56,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,1998-05-10,Richmond 13.13 (91) def. Melbourne 7.7 (49),140,42,,Richmond defeated Melbourne by 42 points at M.C.G..
+57,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,M.C.G.,1998-05-15,Essendon 12.12 (84) def. Brisbane Lions 8.22 (70),154,14,,Essendon defeated Brisbane Lions by 14 points at M.C.G..
+58,Regular Season,Geelong,Fremantle,Geelong,Fremantle,Kardinia Park,1998-05-16,Geelong 12.4 (76) def. Fremantle 6.18 (54),130,22,,Geelong defeated Fremantle by 22 points at Kardinia Park.
+59,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,M.C.G.,1998-05-16,North Melbourne 15.15 (105) def. Sydney 14.11 (95),200,10,,North Melbourne defeated Sydney by 10 points at M.C.G..
+60,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,Waverley Park,1998-05-16,St Kilda 10.12 (72) def. Port Adelaide 5.15 (45),117,27,,St Kilda defeated Port Adelaide by 27 points at Waverley Park.
+61,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1998-05-17,Melbourne 17.12 (114) def. Collingwood 16.15 (111),225,3,,Melbourne defeated Collingwood by 3 points at M.C.G..
+62,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Waverley Park,1998-05-17,Western Bulldogs 21.10 (136) def. Hawthorn 14.12 (96),232,40,,Western Bulldogs defeated Hawthorn by 40 points at Waverley Park.
+63,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,1998-05-17,Richmond 14.8 (92) def. Adelaide 11.13 (79),171,13,,Richmond defeated Adelaide by 13 points at Football Park.
+64,Regular Season,West Coast,Carlton,West Coast,Carlton,Subiaco,1998-05-17,West Coast 12.20 (92) def. Carlton 12.12 (84),176,8,,West Coast defeated Carlton by 8 points at Subiaco.
+65,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,W.A.C.A.,1998-05-22,Fremantle 14.21 (105) def. St Kilda 13.12 (90),195,15,,Fremantle defeated St Kilda by 15 points at W.A.C.A..
+66,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1998-05-23,North Melbourne 17.13 (115) def. Carlton 10.14 (74),189,41,,North Melbourne defeated Carlton by 41 points at Princes Park.
+67,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Waverley Park,1998-05-23,Western Bulldogs 13.10 (88) def. Richmond 11.9 (75),163,13,,Western Bulldogs defeated Richmond by 13 points at Waverley Park.
+68,Regular Season,Geelong,West Coast,Geelong,West Coast,Kardinia Park,1998-05-23,West Coast 9.11 (65) def. Geelong 5.14 (44),109,21,,West Coast defeated Geelong by 21 points at Kardinia Park.
+69,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1998-05-23,Essendon 18.14 (122) def. Melbourne 12.12 (84),206,38,,Essendon defeated Melbourne by 38 points at M.C.G..
+70,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,1998-05-23,Adelaide 14.14 (98) def. Brisbane Lions 6.14 (50),148,48,,Adelaide defeated Brisbane Lions by 48 points at Gabba.
+71,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,1998-05-24,Sydney 17.15 (117) def. Hawthorn 11.14 (80),197,37,,Sydney defeated Hawthorn by 37 points at S.C.G..
+72,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,1998-05-24,Port Adelaide 11.14 (80) def. Collingwood 9.9 (63),143,17,,Port Adelaide defeated Collingwood by 17 points at Football Park.
+73,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,W.A.C.A.,1998-05-29,West Coast 16.17 (113) def. Western Bulldogs 15.10 (100),213,13,,West Coast defeated Western Bulldogs by 13 points at W.A.C.A..
+74,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Princes Park,1998-05-30,Carlton 17.9 (111) def. Brisbane Lions 12.15 (87),198,24,,Carlton defeated Brisbane Lions by 24 points at Princes Park.
+75,Regular Season,Richmond,Port Adelaide,Richmond,Port Adelaide,M.C.G.,1998-05-30,Richmond 13.19 (97) def. Port Adelaide 9.13 (67),164,30,,Richmond defeated Port Adelaide by 30 points at M.C.G..
+76,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Waverley Park,1998-05-30,Essendon 13.15 (93) def. Hawthorn 13.9 (87),180,6,,Essendon defeated Hawthorn by 6 points at Waverley Park.
+77,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,1998-05-30,St Kilda 24.10 (154) def. Sydney 8.5 (53),207,101,,St Kilda defeated Sydney by 101 points at S.C.G..
+78,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,Victoria Park,1998-05-31,Collingwood 19.5 (119) def. Fremantle 17.10 (112),231,7,,Collingwood defeated Fremantle by 7 points at Victoria Park.
+79,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,M.C.G.,1998-05-31,Geelong 17.12 (114) def. North Melbourne 13.13 (91),205,23,,Geelong defeated North Melbourne by 23 points at M.C.G..
+80,Regular Season,Adelaide,Melbourne,Adelaide,Melbourne,Football Park,1998-05-31,Adelaide 17.9 (111) def. Melbourne 8.10 (58),169,53,,Adelaide defeated Melbourne by 53 points at Football Park.
+81,Regular Season,Essendon,Sydney,Essendon,Sydney,M.C.G.,1998-06-05,Essendon 24.16 (160) def. Sydney 15.10 (100),260,60,,Essendon defeated Sydney by 60 points at M.C.G..
+82,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Waverley Park,1998-06-06,Melbourne 18.9 (117) def. Hawthorn 10.10 (70),187,47,,Melbourne defeated Hawthorn by 47 points at Waverley Park.
+83,Regular Season,Geelong,Carlton,Geelong,Carlton,M.C.G.,1998-06-06,Geelong 12.8 (80) def. Carlton 9.9 (63),143,17,,Geelong defeated Carlton by 17 points at M.C.G..
+84,Regular Season,Port Adelaide,West Coast,Port Adelaide,West Coast,Football Park,1998-06-06,West Coast 8.9 (57) def. Port Adelaide 7.13 (55),112,2,,West Coast defeated Port Adelaide by 2 points at Football Park.
+85,Regular Season,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,Princes Park,1998-06-07,Western Bulldogs 24.11 (155) def. Adelaide 13.10 (88),243,67,,Western Bulldogs defeated Adelaide by 67 points at Princes Park.
+86,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,1998-06-07,Fremantle 17.19 (121) def. Brisbane Lions 7.8 (50),171,71,,Fremantle defeated Brisbane Lions by 71 points at Subiaco.
+87,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,M.C.G.,1998-06-08,North Melbourne 19.12 (126) def. Collingwood 13.19 (97),223,29,,North Melbourne defeated Collingwood by 29 points at M.C.G..
+88,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Waverley Park,1998-06-08,St Kilda 21.11 (137) def. Richmond 16.14 (110),247,27,,St Kilda defeated Richmond by 27 points at Waverley Park.
+89,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,W.A.C.A.,1998-06-12,West Coast 19.9 (123) def. Hawthorn 17.6 (108),231,15,,West Coast defeated Hawthorn by 15 points at W.A.C.A..
+90,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1998-06-13,Carlton 14.16 (100) def. Sydney 11.8 (74),174,26,,Carlton defeated Sydney by 26 points at Princes Park.
+91,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1998-06-13,Geelong 22.9 (141) def. Melbourne 7.4 (46),187,95,,Geelong defeated Melbourne by 95 points at M.C.G..
+92,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,1998-06-13,Adelaide 15.18 (108) def. Essendon 15.16 (106),214,2,,Adelaide defeated Essendon by 2 points at Football Park.
+93,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Waverley Park,1998-06-14,St Kilda 17.15 (117) def. Collingwood 11.16 (82),199,35,,St Kilda defeated Collingwood by 35 points at Waverley Park.
+94,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Princes Park,1998-06-14,Western Bulldogs 18.14 (122) def. Fremantle 15.6 (96),218,26,,Western Bulldogs defeated Fremantle by 26 points at Princes Park.
+95,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,1998-06-14,Richmond 19.13 (127) def. North Melbourne 14.8 (92),219,35,,Richmond defeated North Melbourne by 35 points at M.C.G..
+96,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,1998-06-14,Brisbane Lions 18.15 (123) drew with Port Adelaide 18.15 (123),246,0,,Brisbane Lions and Port Adelaide played out a draw at Gabba.
+97,Regular Season,Essendon,West Coast,Essendon,West Coast,M.C.G.,1998-06-19,West Coast 11.17 (83) def. Essendon 11.6 (72),155,11,,West Coast defeated Essendon by 11 points at M.C.G..
+98,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,M.C.G.,1998-06-20,Adelaide 11.13 (79) def. Collingwood 10.10 (70),149,9,,Adelaide defeated Collingwood by 9 points at M.C.G..
+99,Regular Season,Geelong,Brisbane Lions,Geelong,Brisbane Lions,Kardinia Park,1998-06-20,Brisbane Lions 15.16 (106) def. Geelong 12.8 (80),186,26,,Brisbane Lions defeated Geelong by 26 points at Kardinia Park.
+100,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Waverley Park,1998-06-20,Hawthorn 17.12 (114) def. North Melbourne 17.10 (112),226,2,,Hawthorn defeated North Melbourne by 2 points at Waverley Park.
+101,Regular Season,Port Adelaide,Western Bulldogs,Port Adelaide,Western Bulldogs,Football Park,1998-06-20,Port Adelaide 11.7 (73) def. Western Bulldogs 5.9 (39),112,34,,Port Adelaide defeated Western Bulldogs by 34 points at Football Park.
+102,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1998-06-21,St Kilda 19.13 (127) def. Melbourne 5.12 (42),169,85,,St Kilda defeated Melbourne by 85 points at M.C.G..
+103,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,1998-06-21,Sydney 16.6 (102) def. Richmond 13.13 (91),193,11,,Sydney defeated Richmond by 11 points at S.C.G..
+104,Regular Season,Fremantle,Carlton,Fremantle,Carlton,Subiaco,1998-06-21,Fremantle 10.16 (76) def. Carlton 10.8 (68),144,8,,Fremantle defeated Carlton by 8 points at Subiaco.
+105,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,M.C.G.,1998-06-26,North Melbourne 19.13 (127) def. Essendon 16.13 (109),236,18,,North Melbourne defeated Essendon by 18 points at M.C.G..
+106,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1998-06-27,Carlton 13.14 (92) def. Hawthorn 11.10 (76),168,16,,Carlton defeated Hawthorn by 16 points at Princes Park.
+107,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Waverley Park,1998-06-27,St Kilda 12.15 (87) def. Western Bulldogs 10.12 (72),159,15,,St Kilda defeated Western Bulldogs by 15 points at Waverley Park.
+108,Regular Season,Richmond,Fremantle,Richmond,Fremantle,M.C.G.,1998-06-27,Richmond 23.7 (145) def. Fremantle 8.7 (55),200,90,,Richmond defeated Fremantle by 90 points at M.C.G..
+109,Regular Season,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,1998-06-27,Port Adelaide 13.13 (91) def. Geelong 10.13 (73),164,18,,Port Adelaide defeated Geelong by 18 points at Football Park.
+110,Regular Season,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,1998-06-28,Adelaide 18.16 (124) def. Sydney 12.15 (87),211,37,,Adelaide defeated Sydney by 37 points at S.C.G..
+111,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,1998-06-28,Brisbane Lions 19.21 (135) def. Collingwood 12.11 (83),218,52,,Brisbane Lions defeated Collingwood by 52 points at Gabba.
+112,Regular Season,West Coast,Melbourne,West Coast,Melbourne,Subiaco,1998-06-28,Melbourne 14.12 (96) def. West Coast 11.13 (79),175,17,,Melbourne defeated West Coast by 17 points at Subiaco.
+113,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,1998-07-03,Richmond 20.12 (132) def. Carlton 11.4 (70),202,62,,Richmond defeated Carlton by 62 points at M.C.G..
+114,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,M.C.G.,1998-07-04,Essendon 16.12 (108) def. Port Adelaide 12.9 (81),189,27,,Essendon defeated Port Adelaide by 27 points at M.C.G..
+115,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Princes Park,1998-07-04,Western Bulldogs 12.11 (83) def. Melbourne 9.11 (65),148,18,,Western Bulldogs defeated Melbourne by 18 points at Princes Park.
+116,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Waverley Park,1998-07-04,North Melbourne 22.13 (145) def. St Kilda 12.7 (79),224,66,,North Melbourne defeated St Kilda by 66 points at Waverley Park.
+117,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,1998-07-04,West Coast 11.10 (76) def. Brisbane Lions 6.13 (49),125,27,,West Coast defeated Brisbane Lions by 27 points at Gabba.
+118,Regular Season,Collingwood,Geelong,Collingwood,Geelong,M.C.G.,1998-07-05,Collingwood 10.11 (71) def. Geelong 9.7 (61),132,10,,Collingwood defeated Geelong by 10 points at M.C.G..
+119,Regular Season,Adelaide,Hawthorn,Adelaide,Hawthorn,Football Park,1998-07-05,Adelaide 9.14 (68) def. Hawthorn 4.11 (35),103,33,,Adelaide defeated Hawthorn by 33 points at Football Park.
+120,Regular Season,Fremantle,Sydney,Fremantle,Sydney,Subiaco,1998-07-05,Sydney 13.4 (82) def. Fremantle 10.9 (69),151,13,,Sydney defeated Fremantle by 13 points at Subiaco.
+121,Regular Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,1998-07-17,Carlton 16.9 (105) def. Adelaide 16.5 (101),206,4,,Carlton defeated Adelaide by 4 points at Football Park.
+122,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Princes Park,1998-07-18,Western Bulldogs 27.15 (177) def. Brisbane Lions 13.8 (86),263,91,,Western Bulldogs defeated Brisbane Lions by 91 points at Princes Park.
+123,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,M.C.G.,1998-07-18,Melbourne 16.10 (106) def. Fremantle 13.5 (83),189,23,,Melbourne defeated Fremantle by 23 points at M.C.G..
+124,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1998-07-18,St Kilda 15.10 (100) def. Geelong 10.16 (76),176,24,,St Kilda defeated Geelong by 24 points at Kardinia Park.
+125,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Waverley Park,1998-07-18,Collingwood 19.10 (124) def. Hawthorn 4.14 (38),162,86,,Collingwood defeated Hawthorn by 86 points at Waverley Park.
+126,Regular Season,Essendon,Richmond,Essendon,Richmond,M.C.G.,1998-07-19,Essendon 14.10 (94) def. Richmond 10.15 (75),169,19,,Essendon defeated Richmond by 19 points at M.C.G..
+127,Regular Season,Sydney,Port Adelaide,Sydney,Port Adelaide,S.C.G.,1998-07-19,Sydney 18.10 (118) def. Port Adelaide 12.12 (84),202,34,,Sydney defeated Port Adelaide by 34 points at S.C.G..
+128,Regular Season,West Coast,North Melbourne,West Coast,North Melbourne,Subiaco,1998-07-19,North Melbourne 13.16 (94) def. West Coast 11.14 (80),174,14,,North Melbourne defeated West Coast by 14 points at Subiaco.
+129,Regular Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco,1998-07-24,Fremantle 14.14 (98) def. Adelaide 15.7 (97),195,1,,Fremantle defeated Adelaide by 1 points at Subiaco.
+130,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1998-07-25,Carlton 29.11 (185) def. Western Bulldogs 15.15 (105),290,80,,Carlton defeated Western Bulldogs by 80 points at Princes Park.
+131,Regular Season,Collingwood,West Coast,Collingwood,West Coast,Victoria Park,1998-07-25,West Coast 13.8 (86) def. Collingwood 9.11 (65),151,21,,West Coast defeated Collingwood by 21 points at Victoria Park.
+132,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,M.C.G.,1998-07-25,North Melbourne 22.20 (152) def. Melbourne 13.9 (87),239,65,,North Melbourne defeated Melbourne by 65 points at M.C.G..
+133,Regular Season,Port Adelaide,Hawthorn,Port Adelaide,Hawthorn,Football Park,1998-07-25,Port Adelaide 18.11 (119) def. Hawthorn 15.8 (98),217,21,,Port Adelaide defeated Hawthorn by 21 points at Football Park.
+134,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Waverley Park,1998-07-26,Essendon 14.6 (90) def. St Kilda 13.9 (87),177,3,,Essendon defeated St Kilda by 3 points at Waverley Park.
+135,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,1998-07-26,Richmond 10.7 (67) def. Geelong 8.10 (58),125,9,,Richmond defeated Geelong by 9 points at M.C.G..
+136,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,1998-07-26,Sydney 22.17 (149) def. Brisbane Lions 14.5 (89),238,60,,Sydney defeated Brisbane Lions by 60 points at Gabba.
+137,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,1998-07-31,Western Bulldogs 16.14 (110) def. Collingwood 10.7 (67),177,43,,Western Bulldogs defeated Collingwood by 43 points at M.C.G..
+138,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Manuka Oval,1998-08-01,North Melbourne 18.23 (131) def. Port Adelaide 10.16 (76),207,55,,North Melbourne defeated Port Adelaide by 55 points at Manuka Oval.
+139,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1998-08-01,Sydney 19.7 (121) def. Geelong 12.15 (87),208,34,,Sydney defeated Geelong by 34 points at Kardinia Park.
+140,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,M.C.G.,1998-08-01,Melbourne 22.19 (151) def. Brisbane Lions 8.8 (56),207,95,,Melbourne defeated Brisbane Lions by 95 points at M.C.G..
+141,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,1998-08-01,Adelaide 19.23 (137) def. St Kilda 10.7 (67),204,70,,Adelaide defeated St Kilda by 70 points at Football Park.
+142,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,1998-08-02,Essendon 12.12 (84) def. Carlton 11.12 (78),162,6,,Essendon defeated Carlton by 6 points at M.C.G..
+143,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Waverley Park,1998-08-02,Hawthorn 10.10 (70) def. Richmond 4.10 (34),104,36,,Hawthorn defeated Richmond by 36 points at Waverley Park.
+144,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,1998-08-02,West Coast 15.9 (99) def. Fremantle 8.12 (60),159,39,,West Coast defeated Fremantle by 39 points at Subiaco.
+145,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,1998-08-07,North Melbourne 15.23 (113) def. Brisbane Lions 12.14 (86),199,27,,North Melbourne defeated Brisbane Lions by 27 points at Gabba.
+146,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1998-08-08,Melbourne 16.17 (113) def. Carlton 8.16 (64),177,49,,Melbourne defeated Carlton by 49 points at M.C.G..
+147,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Princes Park,1998-08-08,Geelong 14.13 (97) def. Western Bulldogs 13.18 (96),193,1,,Geelong defeated Western Bulldogs by 1 points at Princes Park.
+148,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Waverley Park,1998-08-08,Hawthorn 19.14 (128) def. St Kilda 10.9 (69),197,59,,Hawthorn defeated St Kilda by 59 points at Waverley Park.
+149,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,1998-08-08,Essendon 18.11 (119) def. Fremantle 12.14 (86),205,33,,Essendon defeated Fremantle by 33 points at Subiaco.
+150,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,1998-08-09,Richmond 12.14 (86) def. Collingwood 9.13 (67),153,19,,Richmond defeated Collingwood by 19 points at M.C.G..
+151,Regular Season,Sydney,West Coast,Sydney,West Coast,S.C.G.,1998-08-09,Sydney 10.14 (74) def. West Coast 9.14 (68),142,6,,Sydney defeated West Coast by 6 points at S.C.G..
+152,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,1998-08-09,Adelaide 22.12 (144) def. Port Adelaide 10.10 (70),214,74,,Adelaide defeated Port Adelaide by 74 points at Football Park.
+153,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,M.C.G.,1998-08-14,North Melbourne 22.19 (151) def. Fremantle 7.5 (47),198,104,,North Melbourne defeated Fremantle by 104 points at M.C.G..
+154,Regular Season,Geelong,Adelaide,Geelong,Adelaide,Kardinia Park,1998-08-15,Adelaide 18.10 (118) def. Geelong 6.8 (44),162,74,,Adelaide defeated Geelong by 74 points at Kardinia Park.
+155,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,1998-08-15,Essendon 16.13 (109) def. Collingwood 14.15 (99),208,10,,Essendon defeated Collingwood by 10 points at M.C.G..
+156,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Waverley Park,1998-08-15,Western Bulldogs 15.9 (99) def. Sydney 15.7 (97),196,2,,Western Bulldogs defeated Sydney by 2 points at Waverley Park.
+157,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,1998-08-15,Hawthorn 13.16 (94) def. Brisbane Lions 7.17 (59),153,35,,Hawthorn defeated Brisbane Lions by 35 points at Gabba.
+158,Regular Season,Carlton,St Kilda,Carlton,St Kilda,M.C.G.,1998-08-16,Carlton 19.20 (134) def. St Kilda 15.14 (104),238,30,,Carlton defeated St Kilda by 30 points at M.C.G..
+159,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,1998-08-16,Melbourne 14.10 (94) def. Port Adelaide 10.11 (71),165,23,,Melbourne defeated Port Adelaide by 23 points at Football Park.
+160,Regular Season,West Coast,Richmond,West Coast,Richmond,Subiaco,1998-08-16,West Coast 16.16 (112) def. Richmond 11.7 (73),185,39,,West Coast defeated Richmond by 39 points at Subiaco.
+161,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,M.C.G.,1998-08-21,Western Bulldogs 14.17 (101) def. Essendon 13.12 (90),191,11,,Western Bulldogs defeated Essendon by 11 points at M.C.G..
+162,Regular Season,Richmond,Brisbane Lions,Richmond,Brisbane Lions,M.C.G.,1998-08-22,Richmond 24.11 (155) def. Brisbane Lions 11.12 (78),233,77,,Richmond defeated Brisbane Lions by 77 points at M.C.G..
+163,Regular Season,St Kilda,West Coast,St Kilda,West Coast,Waverley Park,1998-08-22,St Kilda 9.9 (63) def. West Coast 7.13 (55),118,8,,St Kilda defeated West Coast by 8 points at Waverley Park.
+164,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,1998-08-22,North Melbourne 14.21 (105) def. Adelaide 13.14 (92),197,13,,North Melbourne defeated Adelaide by 13 points at Football Park.
+165,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,1998-08-23,Carlton 17.16 (118) def. Collingwood 8.15 (63),181,55,,Carlton defeated Collingwood by 55 points at M.C.G..
+166,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Waverley Park,1998-08-23,Hawthorn 11.18 (84) def. Geelong 8.15 (63),147,21,,Hawthorn defeated Geelong by 21 points at Waverley Park.
+167,Regular Season,Fremantle,Port Adelaide,Fremantle,Port Adelaide,Subiaco,1998-08-23,Port Adelaide 19.10 (124) def. Fremantle 10.11 (71),195,53,,Port Adelaide defeated Fremantle by 53 points at Subiaco.
+168,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1998-08-24,Melbourne 17.12 (114) def. Sydney 12.11 (83),197,31,,Melbourne defeated Sydney by 31 points at M.C.G..
+169,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,M.C.G.,1998-08-28,North Melbourne 17.11 (113) def. Western Bulldogs 16.12 (108),221,5,,North Melbourne defeated Western Bulldogs by 5 points at M.C.G..
+170,Regular Season,Geelong,Essendon,Geelong,Essendon,M.C.G.,1998-08-29,Geelong 19.13 (127) def. Essendon 18.9 (117),244,10,,Geelong defeated Essendon by 10 points at M.C.G..
+171,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,Waverley Park,1998-08-29,Hawthorn 22.17 (149) def. Fremantle 9.6 (60),209,89,,Hawthorn defeated Fremantle by 89 points at Waverley Park.
+172,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,1998-08-29,Brisbane Lions 12.20 (92) def. St Kilda 13.13 (91),183,1,,Brisbane Lions defeated St Kilda by 1 points at Gabba.
+173,Regular Season,West Coast,Adelaide,West Coast,Adelaide,Subiaco,1998-08-29,Adelaide 15.16 (106) def. West Coast 12.9 (81),187,25,,Adelaide defeated West Coast by 25 points at Subiaco.
+174,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1998-08-30,Melbourne 19.19 (133) def. Richmond 8.9 (57),190,76,,Melbourne defeated Richmond by 76 points at M.C.G..
+175,Regular Season,Sydney,Collingwood,Sydney,Collingwood,S.C.G.,1998-08-30,Sydney 18.11 (119) def. Collingwood 16.11 (107),226,12,,Sydney defeated Collingwood by 12 points at S.C.G..
+176,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,1998-08-30,Carlton 21.12 (138) def. Port Adelaide 12.12 (84),222,54,,Carlton defeated Port Adelaide by 54 points at Football Park.
+177,Finals,North Melbourne,Essendon,North Melbourne,Essendon,M.C.G.,1998-09-04,North Melbourne 11.16 (82) def. Essendon 8.12 (60),142,22,,North Melbourne defeated Essendon by 22 points at M.C.G..
+178,Finals,Melbourne,Adelaide,Melbourne,Adelaide,M.C.G.,1998-09-05,Melbourne 17.13 (115) def. Adelaide 9.13 (67),182,48,,Melbourne defeated Adelaide by 48 points at M.C.G..
+179,Finals,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,1998-09-05,Sydney 12.17 (89) def. St Kilda 13.9 (87),176,2,,Sydney defeated St Kilda by 2 points at S.C.G..
+180,Finals,Western Bulldogs,West Coast,Western Bulldogs,West Coast,M.C.G.,1998-09-06,Western Bulldogs 18.13 (121) def. West Coast 7.9 (51),172,70,,Western Bulldogs defeated West Coast by 70 points at M.C.G..
+181,Finals,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1998-09-12,Melbourne 15.17 (107) def. St Kilda 7.14 (56),163,51,,Melbourne defeated St Kilda by 51 points at M.C.G..
+182,Finals,Sydney,Adelaide,Sydney,Adelaide,S.C.G.,1998-09-12,Adelaide 14.10 (94) def. Sydney 10.7 (67),161,27,,Adelaide defeated Sydney by 27 points at S.C.G..
+183,Finals,North Melbourne,Melbourne,North Melbourne,Melbourne,M.C.G.,1998-09-18,North Melbourne 17.12 (114) def. Melbourne 12.12 (84),198,30,,North Melbourne defeated Melbourne by 30 points at M.C.G..
+184,Finals,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,M.C.G.,1998-09-19,Adelaide 24.17 (161) def. Western Bulldogs 13.15 (93),254,68,,Adelaide defeated Western Bulldogs by 68 points at M.C.G..
+185,Grand Final,North Melbourne,Adelaide,North Melbourne,Adelaide,M.C.G.,1998-09-26,Adelaide 15.15 (105) def. North Melbourne 8.22 (70),175,35,,Adelaide defeated North Melbourne by 35 points at M.C.G..

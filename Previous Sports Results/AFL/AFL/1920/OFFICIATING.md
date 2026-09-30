@@ -4,8 +4,21 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1920
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Jack Elder
+
+## Senior Field Umpiring Panel (9 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Jack Elder | 23 | Grand Final |
+| Arthur Norden | 19 | Regular Season / Finals |
+| Henry Beaumont | 13 | Regular Season / Finals |
+| Jack McMurray | 11 | Regular Season / Finals |
+| Tim Lane | 5 | Regular Season / Finals |
+| Humphrey Petrie | 2 | Regular Season / Finals |
+| Alfred Green | 1 | Regular Season / Finals |
+| Joseph Doran | 1 | Regular Season / Finals |
+| William Hempel | 1 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

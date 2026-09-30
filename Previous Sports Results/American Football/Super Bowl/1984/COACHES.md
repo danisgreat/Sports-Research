@@ -1,11 +1,20 @@
-# Super Bowl Coaching Staff & Team Hierarchy — 1984 Season
+# Super Bowl Coaching Staff & Team Hierarchy — 1984 Season (Super Bowl XVIII)
 
 - **Sport:** American Football
-- **Competition:** Super Bowl
+- **Competition:** Super Bowl (Super Bowl XVIII)
 - **Season:** 1984
 
-## Coaching Overview & Management
-- **Senior Leadership:** Super Bowl Head Coaches, Offensive Coordinators, and Defensive Coordinators.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1984.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1984 season.
+## Championship Matchup & Coaching Leadership
+- **Champions:** Los Angeles Raiders
+- **Winning Head Coach:** Tom Flores
+- **Runners-up:** Washington Redskins
+- **Runners-up Head Coach:** Joe Gibbs
+- **Super Bowl Result:** Los Angeles Raiders def. Washington Redskins (38-9)
+- **Super Bowl MVP:** Marcus Allen (RB, LA Raiders)
+- **Venue:** Tampa Stadium (Tampa)
+- **Official Attendance:** 72,920 spectators
+
+## Tactical Overview
+Championship clash contested under NFL postseason rules with Tom Flores directing Los Angeles Raiders to the Vince Lombardi Trophy over Joe Gibbs's Washington Redskins.
+
+- **Sources:** Pro-Football-Reference; NFL Official Game Books; Elias Sports Bureau.

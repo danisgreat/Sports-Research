@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1964 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1964
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1964.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1964 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Melbourne
+- **Premiership Coach:** Norm Smith
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Bob Rose
+- **Grand Final Result:** Melbourne 8.16 (64) def. Collingwood 8.12 (60)
+- **Winning Margin:** 4 points
+- **Match Date:** 1964-09-19
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 102,471 spectators
+
+## Match Summary & Tactical Notes
+Melbourne backman Neil Crompton kicked the decisive late goal to edge Collingwood by 4 points for the Demons' 12th flag.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

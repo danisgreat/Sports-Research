@@ -1,1 +1,186 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,M.C.G.,1997-03-27,Melbourne 10.10 (70) def. North Melbourne 7.13 (55),125,15,,Melbourne defeated North Melbourne by 15 points at M.C.G..
+2,Regular Season,Collingwood,Port Adelaide,Collingwood,Port Adelaide,M.C.G.,1997-03-29,Collingwood 26.10 (166) def. Port Adelaide 13.9 (87),253,79,,Collingwood defeated Port Adelaide by 79 points at M.C.G..
+3,Regular Season,Western Bulldogs,Fremantle,Western Bulldogs,Fremantle,Princes Park,1997-03-29,Fremantle 10.20 (80) def. Western Bulldogs 11.10 (76),156,4,,Fremantle defeated Western Bulldogs by 4 points at Princes Park.
+4,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Waverley Park,1997-03-29,Hawthorn 11.11 (77) def. St Kilda 10.11 (71),148,6,,Hawthorn defeated St Kilda by 6 points at Waverley Park.
+5,Regular Season,West Coast,Sydney,West Coast,Sydney,Subiaco,1997-03-29,West Coast 12.6 (78) def. Sydney 5.7 (37),115,41,,West Coast defeated Sydney by 41 points at Subiaco.
+6,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,1997-03-30,Richmond 15.14 (104) def. Geelong 13.17 (95),199,9,,Richmond defeated Geelong by 9 points at M.C.G..
+7,Regular Season,Adelaide,Brisbane Lions,Adelaide,Brisbane Lions,Football Park,1997-03-30,Adelaide 20.12 (132) def. Brisbane Lions 14.12 (96),228,36,,Adelaide defeated Brisbane Lions by 36 points at Football Park.
+8,Regular Season,Essendon,Carlton,Essendon,Carlton,M.C.G.,1997-03-31,Essendon 16.10 (106) def. Carlton 15.9 (99),205,7,,Essendon defeated Carlton by 7 points at M.C.G..
+9,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1997-04-04,Collingwood 24.19 (163) def. Melbourne 7.14 (56),219,107,,Collingwood defeated Melbourne by 107 points at M.C.G..
+10,Regular Season,Richmond,Adelaide,Richmond,Adelaide,M.C.G.,1997-04-05,Richmond 19.14 (128) def. Adelaide 15.10 (100),228,28,,Richmond defeated Adelaide by 28 points at M.C.G..
+11,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Princes Park,1997-04-05,Western Bulldogs 13.12 (90) def. Sydney 12.11 (83),173,7,,Western Bulldogs defeated Sydney by 7 points at Princes Park.
+12,Regular Season,Geelong,West Coast,Geelong,West Coast,Kardinia Park,1997-04-05,Geelong 11.12 (78) def. West Coast 11.6 (72),150,6,,Geelong defeated West Coast by 6 points at Kardinia Park.
+13,Regular Season,Brisbane Lions,St Kilda,Brisbane Lions,St Kilda,Gabba,1997-04-06,Brisbane Lions 23.16 (154) def. St Kilda 7.15 (57),211,97,,Brisbane Lions defeated St Kilda by 97 points at Gabba.
+14,Regular Season,Port Adelaide,Essendon,Port Adelaide,Essendon,Football Park,1997-04-06,Essendon 14.9 (93) def. Port Adelaide 8.12 (60),153,33,,Essendon defeated Port Adelaide by 33 points at Football Park.
+15,Regular Season,Fremantle,Hawthorn,Fremantle,Hawthorn,Subiaco,1997-04-06,Fremantle 13.9 (87) def. Hawthorn 10.13 (73),160,14,,Fremantle defeated Hawthorn by 14 points at Subiaco.
+16,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,M.C.G.,1997-04-07,North Melbourne 12.14 (86) def. Carlton 8.12 (60),146,26,,North Melbourne defeated Carlton by 26 points at M.C.G..
+17,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,1997-04-11,Sydney 15.9 (99) def. Melbourne 14.7 (91),190,8,,Sydney defeated Melbourne by 8 points at S.C.G..
+18,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Waverley Park,1997-04-12,St Kilda 19.11 (125) def. Collingwood 17.16 (118),243,7,,St Kilda defeated Collingwood by 7 points at Waverley Park.
+19,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,M.C.G.,1997-04-12,Western Bulldogs 16.9 (105) def. Richmond 12.14 (86),191,19,,Western Bulldogs defeated Richmond by 19 points at M.C.G..
+20,Regular Season,Port Adelaide,Geelong,Port Adelaide,Geelong,Football Park,1997-04-12,Port Adelaide 18.21 (129) def. Geelong 14.6 (90),219,39,,Port Adelaide defeated Geelong by 39 points at Football Park.
+21,Regular Season,Carlton,Adelaide,Carlton,Adelaide,Princes Park,1997-04-13,Carlton 15.18 (108) def. Adelaide 12.8 (80),188,28,,Carlton defeated Adelaide by 28 points at Princes Park.
+22,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,M.C.G.,1997-04-13,Essendon 18.14 (122) def. North Melbourne 12.8 (80),202,42,,Essendon defeated North Melbourne by 42 points at M.C.G..
+23,Regular Season,Hawthorn,Brisbane Lions,Hawthorn,Brisbane Lions,Waverley Park,1997-04-13,Hawthorn 12.15 (87) def. Brisbane Lions 11.9 (75),162,12,,Hawthorn defeated Brisbane Lions by 12 points at Waverley Park.
+24,Regular Season,West Coast,Fremantle,West Coast,Fremantle,Subiaco,1997-04-13,West Coast 16.15 (111) def. Fremantle 9.17 (71),182,40,,West Coast defeated Fremantle by 40 points at Subiaco.
+25,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1997-04-18,Western Bulldogs 13.11 (89) def. Melbourne 13.9 (87),176,2,,Western Bulldogs defeated Melbourne by 2 points at M.C.G..
+26,Regular Season,Collingwood,Carlton,Collingwood,Carlton,M.C.G.,1997-04-19,Carlton 15.11 (101) def. Collingwood 12.12 (84),185,17,,Carlton defeated Collingwood by 17 points at M.C.G..
+27,Regular Season,Richmond,Fremantle,Richmond,Fremantle,Princes Park,1997-04-19,Richmond 10.12 (72) def. Fremantle 10.7 (67),139,5,,Richmond defeated Fremantle by 5 points at Princes Park.
+28,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Waverley Park,1997-04-19,Sydney 18.19 (127) def. St Kilda 12.9 (81),208,46,,Sydney defeated St Kilda by 46 points at Waverley Park.
+29,Regular Season,West Coast,Hawthorn,West Coast,Hawthorn,Subiaco,1997-04-19,West Coast 17.10 (112) def. Hawthorn 13.10 (88),200,24,,West Coast defeated Hawthorn by 24 points at Subiaco.
+30,Regular Season,Geelong,Essendon,Geelong,Essendon,M.C.G.,1997-04-20,Geelong 11.19 (85) def. Essendon 11.12 (78),163,7,,Geelong defeated Essendon by 7 points at M.C.G..
+31,Regular Season,Brisbane Lions,North Melbourne,Brisbane Lions,North Melbourne,Gabba,1997-04-20,Brisbane Lions 15.19 (109) def. North Melbourne 12.11 (83),192,26,,Brisbane Lions defeated North Melbourne by 26 points at Gabba.
+32,Regular Season,Adelaide,Port Adelaide,Adelaide,Port Adelaide,Football Park,1997-04-20,Port Adelaide 11.17 (83) def. Adelaide 11.6 (72),155,11,,Port Adelaide defeated Adelaide by 11 points at Football Park.
+33,Regular Season,Essendon,Collingwood,Essendon,Collingwood,M.C.G.,1997-04-25,Collingwood 14.15 (99) def. Essendon 10.10 (70),169,29,,Collingwood defeated Essendon by 29 points at M.C.G..
+34,Regular Season,Fremantle,St Kilda,Fremantle,St Kilda,Subiaco,1997-04-25,Fremantle 16.11 (107) def. St Kilda 15.11 (101),208,6,,Fremantle defeated St Kilda by 6 points at Subiaco.
+35,Regular Season,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,Princes Park,1997-04-26,Adelaide 19.7 (121) def. Western Bulldogs 9.17 (71),192,50,,Adelaide defeated Western Bulldogs by 50 points at Princes Park.
+36,Regular Season,Melbourne,West Coast,Melbourne,West Coast,M.C.G.,1997-04-26,West Coast 19.12 (126) def. Melbourne 12.6 (78),204,48,,West Coast defeated Melbourne by 48 points at M.C.G..
+37,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Waverley Park,1997-04-26,Hawthorn 15.9 (99) def. Sydney 11.8 (74),173,25,,Hawthorn defeated Sydney by 25 points at Waverley Park.
+38,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1997-04-27,Geelong 13.16 (94) def. Carlton 12.14 (86),180,8,,Geelong defeated Carlton by 8 points at Princes Park.
+39,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,M.C.G.,1997-04-27,North Melbourne 21.15 (141) def. Richmond 7.4 (46),187,95,,North Melbourne defeated Richmond by 95 points at M.C.G..
+40,Regular Season,Port Adelaide,Brisbane Lions,Port Adelaide,Brisbane Lions,Football Park,1997-04-27,Port Adelaide 10.13 (73) def. Brisbane Lions 10.11 (71),144,2,,Port Adelaide defeated Brisbane Lions by 2 points at Football Park.
+41,Regular Season,West Coast,Western Bulldogs,West Coast,Western Bulldogs,W.A.C.A.,1997-05-02,Western Bulldogs 17.11 (113) def. West Coast 14.15 (99),212,14,,Western Bulldogs defeated West Coast by 14 points at W.A.C.A..
+42,Regular Season,Collingwood,Adelaide,Collingwood,Adelaide,Victoria Park,1997-05-03,Collingwood 13.6 (84) def. Adelaide 11.17 (83),167,1,,Collingwood defeated Adelaide by 1 points at Victoria Park.
+43,Regular Season,Essendon,Brisbane Lions,Essendon,Brisbane Lions,M.C.G.,1997-05-03,Essendon 15.12 (102) def. Brisbane Lions 9.17 (71),173,31,,Essendon defeated Brisbane Lions by 31 points at M.C.G..
+44,Regular Season,Geelong,Fremantle,Geelong,Fremantle,Kardinia Park,1997-05-03,Geelong 14.13 (97) def. Fremantle 6.7 (43),140,54,,Geelong defeated Fremantle by 54 points at Kardinia Park.
+45,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Waverley Park,1997-05-03,North Melbourne 16.7 (103) def. Hawthorn 14.9 (93),196,10,,North Melbourne defeated Hawthorn by 10 points at Waverley Park.
+46,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Waverley Park,1997-05-04,St Kilda 17.19 (121) def. Melbourne 4.11 (35),156,86,,St Kilda defeated Melbourne by 86 points at Waverley Park.
+47,Regular Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,1997-05-04,Sydney 21.16 (142) def. Carlton 11.17 (83),225,59,,Sydney defeated Carlton by 59 points at S.C.G..
+48,Regular Season,Port Adelaide,Richmond,Port Adelaide,Richmond,Football Park,1997-05-04,Port Adelaide 19.8 (122) def. Richmond 8.10 (58),180,64,,Port Adelaide defeated Richmond by 64 points at Football Park.
+49,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,M.C.G.,1997-05-09,Collingwood 17.9 (111) def. North Melbourne 9.14 (68),179,43,,Collingwood defeated North Melbourne by 43 points at M.C.G..
+50,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,1997-05-10,Carlton 14.14 (98) def. Richmond 10.16 (76),174,22,,Carlton defeated Richmond by 22 points at M.C.G..
+51,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Princes Park,1997-05-10,Western Bulldogs 19.19 (133) def. Hawthorn 13.10 (88),221,45,,Western Bulldogs defeated Hawthorn by 45 points at Princes Park.
+52,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1997-05-10,Geelong 11.10 (76) def. Sydney 6.8 (44),120,32,,Geelong defeated Sydney by 32 points at Kardinia Park.
+53,Regular Season,St Kilda,Port Adelaide,St Kilda,Port Adelaide,Waverley Park,1997-05-10,St Kilda 20.6 (126) def. Port Adelaide 8.13 (61),187,65,,St Kilda defeated Port Adelaide by 65 points at Waverley Park.
+54,Regular Season,Fremantle,Melbourne,Fremantle,Melbourne,W.A.C.A.,1997-05-10,Fremantle 17.22 (124) def. Melbourne 10.9 (69),193,55,,Fremantle defeated Melbourne by 55 points at W.A.C.A..
+55,Regular Season,Brisbane Lions,West Coast,Brisbane Lions,West Coast,Gabba,1997-05-11,West Coast 21.13 (139) def. Brisbane Lions 8.12 (60),199,79,,West Coast defeated Brisbane Lions by 79 points at Gabba.
+56,Regular Season,Adelaide,Essendon,Adelaide,Essendon,Football Park,1997-05-11,Adelaide 18.18 (126) def. Essendon 11.7 (73),199,53,,Adelaide defeated Essendon by 53 points at Football Park.
+57,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,M.C.G.,1997-05-16,Collingwood 19.15 (129) def. Western Bulldogs 11.17 (83),212,46,,Collingwood defeated Western Bulldogs by 46 points at M.C.G..
+58,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1997-05-17,Geelong 19.14 (128) def. Melbourne 7.7 (49),177,79,,Geelong defeated Melbourne by 79 points at M.C.G..
+59,Regular Season,North Melbourne,Port Adelaide,North Melbourne,Port Adelaide,Princes Park,1997-05-17,North Melbourne 19.14 (128) def. Port Adelaide 15.10 (100),228,28,,North Melbourne defeated Port Adelaide by 28 points at Princes Park.
+60,Regular Season,Adelaide,Sydney,Adelaide,Sydney,Football Park,1997-05-17,Adelaide 22.12 (144) def. Sydney 8.7 (55),199,89,,Adelaide defeated Sydney by 89 points at Football Park.
+61,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1997-05-18,Carlton 15.16 (106) def. Hawthorn 12.9 (81),187,25,,Carlton defeated Hawthorn by 25 points at Princes Park.
+62,Regular Season,Essendon,St Kilda,Essendon,St Kilda,M.C.G.,1997-05-18,St Kilda 18.16 (124) def. Essendon 14.16 (100),224,24,,St Kilda defeated Essendon by 24 points at M.C.G..
+63,Regular Season,Fremantle,Brisbane Lions,Fremantle,Brisbane Lions,Subiaco,1997-05-18,Fremantle 14.14 (98) def. Brisbane Lions 15.3 (93),191,5,,Fremantle defeated Brisbane Lions by 5 points at Subiaco.
+64,Regular Season,Richmond,West Coast,Richmond,West Coast,M.C.G.,1997-05-19,Richmond 18.11 (119) def. West Coast 9.13 (67),186,52,,Richmond defeated West Coast by 52 points at M.C.G..
+65,Regular Season,Port Adelaide,Melbourne,Port Adelaide,Melbourne,Football Park,1997-05-23,Port Adelaide 10.18 (78) def. Melbourne 3.9 (27),105,51,,Port Adelaide defeated Melbourne by 51 points at Football Park.
+66,Regular Season,Hawthorn,Adelaide,Hawthorn,Adelaide,Waverley Park,1997-05-24,Adelaide 14.18 (102) def. Hawthorn 13.10 (88),190,14,,Adelaide defeated Hawthorn by 14 points at Waverley Park.
+67,Regular Season,Carlton,Fremantle,Carlton,Fremantle,Princes Park,1997-05-24,Carlton 16.9 (105) def. Fremantle 14.4 (88),193,17,,Carlton defeated Fremantle by 17 points at Princes Park.
+68,Regular Season,Sydney,Collingwood,Sydney,Collingwood,S.C.G.,1997-05-24,Sydney 16.15 (111) def. Collingwood 11.8 (74),185,37,,Sydney defeated Collingwood by 37 points at S.C.G..
+69,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,M.C.G.,1997-05-25,Western Bulldogs 16.7 (103) def. North Melbourne 10.11 (71),174,32,,Western Bulldogs defeated North Melbourne by 32 points at M.C.G..
+70,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Waverley Park,1997-05-25,St Kilda 22.9 (141) def. Richmond 14.10 (94),235,47,,St Kilda defeated Richmond by 47 points at Waverley Park.
+71,Regular Season,West Coast,Essendon,West Coast,Essendon,Subiaco,1997-05-25,West Coast 16.14 (110) def. Essendon 13.7 (85),195,25,,West Coast defeated Essendon by 25 points at Subiaco.
+72,Regular Season,Brisbane Lions,Geelong,Brisbane Lions,Geelong,Gabba,1997-05-25,Brisbane Lions 19.12 (126) def. Geelong 15.8 (98),224,28,,Brisbane Lions defeated Geelong by 28 points at Gabba.
+73,Regular Season,Port Adelaide,Carlton,Port Adelaide,Carlton,Football Park,1997-05-30,Port Adelaide 14.9 (93) def. Carlton 7.13 (55),148,38,,Port Adelaide defeated Carlton by 38 points at Football Park.
+74,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Waverley Park,1997-05-31,Hawthorn 16.12 (108) def. Collingwood 8.7 (55),163,53,,Hawthorn defeated Collingwood by 53 points at Waverley Park.
+75,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1997-05-31,Geelong 16.11 (107) def. St Kilda 11.13 (79),186,28,,Geelong defeated St Kilda by 28 points at Kardinia Park.
+76,Regular Season,North Melbourne,West Coast,North Melbourne,West Coast,Princes Park,1997-05-31,North Melbourne 15.13 (103) def. West Coast 9.4 (58),161,45,,North Melbourne defeated West Coast by 45 points at Princes Park.
+77,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,1997-05-31,Melbourne 14.8 (92) def. Richmond 9.13 (67),159,25,,Melbourne defeated Richmond by 25 points at M.C.G..
+78,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,M.C.G.,1997-06-01,Western Bulldogs 20.16 (136) def. Essendon 17.12 (114),250,22,,Western Bulldogs defeated Essendon by 22 points at M.C.G..
+79,Regular Season,Brisbane Lions,Sydney,Brisbane Lions,Sydney,Gabba,1997-06-01,Brisbane Lions 13.14 (92) def. Sydney 13.11 (89),181,3,,Brisbane Lions defeated Sydney by 3 points at Gabba.
+80,Regular Season,Fremantle,Adelaide,Fremantle,Adelaide,Subiaco,1997-06-02,Adelaide 16.9 (105) def. Fremantle 10.12 (72),177,33,,Adelaide defeated Fremantle by 33 points at Subiaco.
+81,Regular Season,Collingwood,Richmond,Collingwood,Richmond,M.C.G.,1997-06-06,Richmond 11.11 (77) def. Collingwood 10.11 (71),148,6,,Richmond defeated Collingwood by 6 points at M.C.G..
+82,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,M.C.G.,1997-06-07,Hawthorn 17.22 (124) def. Essendon 13.13 (91),215,33,,Hawthorn defeated Essendon by 33 points at M.C.G..
+83,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Princes Park,1997-06-07,Western Bulldogs 14.12 (96) def. Geelong 11.9 (75),171,21,,Western Bulldogs defeated Geelong by 21 points at Princes Park.
+84,Regular Season,Port Adelaide,Sydney,Port Adelaide,Sydney,Football Park,1997-06-07,Sydney 10.16 (76) def. Port Adelaide 4.17 (41),117,35,,Sydney defeated Port Adelaide by 35 points at Football Park.
+85,Regular Season,Melbourne,Adelaide,Melbourne,Adelaide,M.C.G.,1997-06-08,Adelaide 14.13 (97) def. Melbourne 5.15 (45),142,52,,Adelaide defeated Melbourne by 52 points at M.C.G..
+86,Regular Season,West Coast,St Kilda,West Coast,St Kilda,Subiaco,1997-06-08,St Kilda 13.11 (89) def. West Coast 11.7 (73),162,16,,St Kilda defeated West Coast by 16 points at Subiaco.
+87,Regular Season,Carlton,Brisbane Lions,Carlton,Brisbane Lions,Princes Park,1997-06-09,Carlton 12.12 (84) def. Brisbane Lions 9.9 (63),147,21,,Carlton defeated Brisbane Lions by 21 points at Princes Park.
+88,Regular Season,North Melbourne,Fremantle,North Melbourne,Fremantle,M.C.G.,1997-06-09,North Melbourne 15.15 (105) def. Fremantle 12.7 (79),184,26,,North Melbourne defeated Fremantle by 26 points at M.C.G..
+89,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,1997-06-13,Sydney 26.8 (164) def. Richmond 16.14 (110),274,54,,Sydney defeated Richmond by 54 points at S.C.G..
+90,Regular Season,Collingwood,West Coast,Collingwood,West Coast,Victoria Park,1997-06-14,West Coast 11.5 (71) def. Collingwood 7.13 (55),126,16,,West Coast defeated Collingwood by 16 points at Victoria Park.
+91,Regular Season,Western Bulldogs,Port Adelaide,Western Bulldogs,Port Adelaide,Princes Park,1997-06-14,Port Adelaide 14.10 (94) def. Western Bulldogs 12.10 (82),176,12,,Port Adelaide defeated Western Bulldogs by 12 points at Princes Park.
+92,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1997-06-14,Hawthorn 13.10 (88) def. Geelong 12.10 (82),170,6,,Hawthorn defeated Geelong by 6 points at Kardinia Park.
+93,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Waverley Park,1997-06-15,St Kilda 16.20 (116) def. Carlton 12.13 (85),201,31,,St Kilda defeated Carlton by 31 points at Waverley Park.
+94,Regular Season,Melbourne,Brisbane Lions,Melbourne,Brisbane Lions,M.C.G.,1997-06-15,Brisbane Lions 21.9 (135) def. Melbourne 7.8 (50),185,85,,Brisbane Lions defeated Melbourne by 85 points at M.C.G..
+95,Regular Season,Fremantle,Essendon,Fremantle,Essendon,Subiaco,1997-06-15,Fremantle 24.13 (157) def. Essendon 9.6 (60),217,97,,Fremantle defeated Essendon by 97 points at Subiaco.
+96,Regular Season,Adelaide,North Melbourne,Adelaide,North Melbourne,Football Park,1997-06-15,North Melbourne 16.9 (105) def. Adelaide 12.11 (83),188,22,,North Melbourne defeated Adelaide by 22 points at Football Park.
+97,Regular Season,West Coast,Carlton,West Coast,Carlton,Subiaco,1997-06-27,Carlton 12.14 (86) def. West Coast 11.13 (79),165,7,,Carlton defeated West Coast by 7 points at Subiaco.
+98,Regular Season,Geelong,Adelaide,Geelong,Adelaide,Kardinia Park,1997-06-28,Geelong 17.8 (110) def. Adelaide 7.12 (54),164,56,,Geelong defeated Adelaide by 56 points at Kardinia Park.
+99,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,1997-06-28,Essendon 19.13 (127) def. Richmond 4.10 (34),161,93,,Essendon defeated Richmond by 93 points at M.C.G..
+100,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Waverley Park,1997-06-28,Western Bulldogs 15.11 (101) def. St Kilda 11.18 (84),185,17,,Western Bulldogs defeated St Kilda by 17 points at Waverley Park.
+101,Regular Season,Brisbane Lions,Collingwood,Brisbane Lions,Collingwood,Gabba,1997-06-28,Brisbane Lions 11.22 (88) def. Collingwood 11.7 (73),161,15,,Brisbane Lions defeated Collingwood by 15 points at Gabba.
+102,Regular Season,Port Adelaide,Fremantle,Port Adelaide,Fremantle,Football Park,1997-06-28,Port Adelaide 10.9 (69) def. Fremantle 7.12 (54),123,15,,Port Adelaide defeated Fremantle by 15 points at Football Park.
+103,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Waverley Park,1997-06-29,Hawthorn 17.16 (118) def. Melbourne 7.13 (55),173,63,,Hawthorn defeated Melbourne by 63 points at Waverley Park.
+104,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,1997-06-29,Sydney 8.17 (65) def. North Melbourne 7.13 (55),120,10,,Sydney defeated North Melbourne by 10 points at S.C.G..
+105,Regular Season,Adelaide,West Coast,Adelaide,West Coast,Football Park,1997-07-04,Adelaide 16.10 (106) def. West Coast 4.7 (31),137,75,,Adelaide defeated West Coast by 75 points at Football Park.
+106,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1997-07-05,Western Bulldogs 16.14 (110) def. Carlton 11.8 (74),184,36,,Western Bulldogs defeated Carlton by 36 points at Princes Park.
+107,Regular Season,Geelong,Collingwood,Geelong,Collingwood,M.C.G.,1997-07-05,Geelong 9.26 (80) def. Collingwood 10.12 (72),152,8,,Geelong defeated Collingwood by 8 points at M.C.G..
+108,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Waverley Park,1997-07-05,St Kilda 20.13 (133) def. North Melbourne 11.13 (79),212,54,,St Kilda defeated North Melbourne by 54 points at Waverley Park.
+109,Regular Season,Fremantle,Sydney,Fremantle,Sydney,W.A.C.A.,1997-07-05,Fremantle 6.12 (48) def. Sydney 3.15 (33),81,15,,Fremantle defeated Sydney by 15 points at W.A.C.A..
+110,Regular Season,Essendon,Melbourne,Essendon,Melbourne,M.C.G.,1997-07-06,Essendon 18.12 (120) def. Melbourne 8.9 (57),177,63,,Essendon defeated Melbourne by 63 points at M.C.G..
+111,Regular Season,Hawthorn,Port Adelaide,Hawthorn,Port Adelaide,Waverley Park,1997-07-06,Hawthorn 18.16 (124) def. Port Adelaide 13.14 (92),216,32,,Hawthorn defeated Port Adelaide by 32 points at Waverley Park.
+112,Regular Season,Brisbane Lions,Richmond,Brisbane Lions,Richmond,Gabba,1997-07-06,Brisbane Lions 7.26 (68) def. Richmond 7.8 (50),118,18,,Brisbane Lions defeated Richmond by 18 points at Gabba.
+113,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,M.C.G.,1997-07-11,Geelong 15.12 (102) def. North Melbourne 14.8 (92),194,10,,Geelong defeated North Melbourne by 10 points at M.C.G..
+114,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1997-07-12,Melbourne 18.11 (119) def. Carlton 15.10 (100),219,19,,Melbourne defeated Carlton by 19 points at M.C.G..
+115,Regular Season,Collingwood,Fremantle,Collingwood,Fremantle,Victoria Park,1997-07-12,Collingwood 25.10 (160) def. Fremantle 9.6 (60),220,100,,Collingwood defeated Fremantle by 100 points at Victoria Park.
+116,Regular Season,Western Bulldogs,Brisbane Lions,Western Bulldogs,Brisbane Lions,Princes Park,1997-07-12,Brisbane Lions 21.11 (137) def. Western Bulldogs 11.7 (73),210,64,,Brisbane Lions defeated Western Bulldogs by 64 points at Princes Park.
+117,Regular Season,Adelaide,St Kilda,Adelaide,St Kilda,Football Park,1997-07-12,Adelaide 10.16 (76) def. St Kilda 9.12 (66),142,10,,Adelaide defeated St Kilda by 10 points at Football Park.
+118,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,1997-07-13,Richmond 22.13 (145) def. Hawthorn 10.9 (69),214,76,,Richmond defeated Hawthorn by 76 points at M.C.G..
+119,Regular Season,West Coast,Port Adelaide,West Coast,Port Adelaide,Subiaco,1997-07-13,West Coast 12.13 (85) def. Port Adelaide 9.13 (67),152,18,,West Coast defeated Port Adelaide by 18 points at Subiaco.
+120,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,1997-07-13,Sydney 11.13 (79) def. Essendon 11.12 (78),157,1,,Sydney defeated Essendon by 1 points at S.C.G..
+121,Regular Season,Brisbane Lions,Adelaide,Brisbane Lions,Adelaide,Gabba,1997-07-18,Brisbane Lions 17.16 (118) def. Adelaide 13.9 (87),205,31,,Brisbane Lions defeated Adelaide by 31 points at Gabba.
+122,Regular Season,Carlton,Essendon,Carlton,Essendon,M.C.G.,1997-07-19,Carlton 25.15 (165) def. Essendon 13.9 (87),252,78,,Carlton defeated Essendon by 78 points at M.C.G..
+123,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1997-07-19,Geelong 16.14 (110) def. Richmond 12.6 (78),188,32,,Geelong defeated Richmond by 32 points at Kardinia Park.
+124,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Waverley Park,1997-07-19,St Kilda 20.21 (141) def. Hawthorn 9.8 (62),203,79,,St Kilda defeated Hawthorn by 79 points at Waverley Park.
+125,Regular Season,Sydney,West Coast,Sydney,West Coast,S.C.G.,1997-07-19,Sydney 15.22 (112) def. West Coast 11.9 (75),187,37,,Sydney defeated West Coast by 37 points at S.C.G..
+126,Regular Season,Port Adelaide,Collingwood,Port Adelaide,Collingwood,Football Park,1997-07-19,Port Adelaide 17.9 (111) def. Collingwood 8.10 (58),169,53,,Port Adelaide defeated Collingwood by 53 points at Football Park.
+127,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1997-07-20,North Melbourne 17.12 (114) def. Melbourne 7.16 (58),172,56,,North Melbourne defeated Melbourne by 56 points at M.C.G..
+128,Regular Season,Fremantle,Western Bulldogs,Fremantle,Western Bulldogs,Subiaco,1997-07-20,Fremantle 15.7 (97) def. Western Bulldogs 13.13 (91),188,6,,Fremantle defeated Western Bulldogs by 6 points at Subiaco.
+129,Regular Season,Essendon,Port Adelaide,Essendon,Port Adelaide,M.C.G.,1997-07-25,Port Adelaide 18.14 (122) def. Essendon 10.12 (72),194,50,,Port Adelaide defeated Essendon by 50 points at M.C.G..
+130,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1997-07-26,North Melbourne 14.12 (96) def. Carlton 7.16 (58),154,38,,North Melbourne defeated Carlton by 38 points at Princes Park.
+131,Regular Season,Hawthorn,Fremantle,Hawthorn,Fremantle,Waverley Park,1997-07-26,Fremantle 10.11 (71) def. Hawthorn 9.8 (62),133,9,,Fremantle defeated Hawthorn by 9 points at Waverley Park.
+132,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,1997-07-26,Sydney 22.17 (149) def. Western Bulldogs 7.10 (52),201,97,,Sydney defeated Western Bulldogs by 97 points at S.C.G..
+133,Regular Season,Adelaide,Richmond,Adelaide,Richmond,Football Park,1997-07-26,Adelaide 29.11 (185) def. Richmond 7.6 (48),233,137,,Adelaide defeated Richmond by 137 points at Football Park.
+134,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,M.C.G.,1997-07-27,Collingwood 20.14 (134) def. Melbourne 12.10 (82),216,52,,Collingwood defeated Melbourne by 52 points at M.C.G..
+135,Regular Season,St Kilda,Brisbane Lions,St Kilda,Brisbane Lions,Waverley Park,1997-07-27,St Kilda 12.20 (92) def. Brisbane Lions 5.14 (44),136,48,,St Kilda defeated Brisbane Lions by 48 points at Waverley Park.
+136,Regular Season,West Coast,Geelong,West Coast,Geelong,Subiaco,1997-07-27,West Coast 20.9 (129) def. Geelong 12.10 (82),211,47,,West Coast defeated Geelong by 47 points at Subiaco.
+137,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,M.C.G.,1997-08-01,North Melbourne 11.17 (83) def. Essendon 8.16 (64),147,19,,North Melbourne defeated Essendon by 19 points at M.C.G..
+138,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,Princes Park,1997-08-02,Richmond 17.13 (115) def. Western Bulldogs 15.10 (100),215,15,,Richmond defeated Western Bulldogs by 15 points at Princes Park.
+139,Regular Season,Geelong,Port Adelaide,Geelong,Port Adelaide,Kardinia Park,1997-08-02,Geelong 25.9 (159) def. Port Adelaide 11.8 (74),233,85,,Geelong defeated Port Adelaide by 85 points at Kardinia Park.
+140,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1997-08-02,Sydney 25.19 (169) def. Melbourne 7.11 (53),222,116,,Sydney defeated Melbourne by 116 points at M.C.G..
+141,Regular Season,Brisbane Lions,Hawthorn,Brisbane Lions,Hawthorn,Gabba,1997-08-02,Brisbane Lions 21.15 (141) def. Hawthorn 11.5 (71),212,70,,Brisbane Lions defeated Hawthorn by 70 points at Gabba.
+142,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,1997-08-03,St Kilda 15.21 (111) def. Collingwood 12.17 (89),200,22,,St Kilda defeated Collingwood by 22 points at M.C.G..
+143,Regular Season,Adelaide,Carlton,Adelaide,Carlton,Football Park,1997-08-03,Adelaide 18.19 (127) def. Carlton 13.8 (86),213,41,,Adelaide defeated Carlton by 41 points at Football Park.
+144,Regular Season,Fremantle,West Coast,Fremantle,West Coast,Subiaco,1997-08-03,West Coast 13.4 (82) def. Fremantle 7.7 (49),131,33,,West Coast defeated Fremantle by 33 points at Subiaco.
+145,Regular Season,North Melbourne,Brisbane Lions,North Melbourne,Brisbane Lions,M.C.G.,1997-08-08,North Melbourne 17.14 (116) def. Brisbane Lions 9.5 (59),175,57,,North Melbourne defeated Brisbane Lions by 57 points at M.C.G..
+146,Regular Season,Carlton,Collingwood,Carlton,Collingwood,M.C.G.,1997-08-09,Carlton 14.23 (107) def. Collingwood 13.13 (91),198,16,,Carlton defeated Collingwood by 16 points at M.C.G..
+147,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Princes Park,1997-08-09,Western Bulldogs 14.18 (102) def. Melbourne 9.10 (64),166,38,,Western Bulldogs defeated Melbourne by 38 points at Princes Park.
+148,Regular Season,Hawthorn,West Coast,Hawthorn,West Coast,Waverley Park,1997-08-09,West Coast 13.9 (87) def. Hawthorn 10.6 (66),153,21,,West Coast defeated Hawthorn by 21 points at Waverley Park.
+149,Regular Season,Fremantle,Richmond,Fremantle,Richmond,W.A.C.A.,1997-08-09,Fremantle 12.13 (85) def. Richmond 5.12 (42),127,43,,Fremantle defeated Richmond by 43 points at W.A.C.A..
+150,Regular Season,Essendon,Geelong,Essendon,Geelong,M.C.G.,1997-08-10,Essendon 11.7 (73) def. Geelong 9.14 (68),141,5,,Essendon defeated Geelong by 5 points at M.C.G..
+151,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,1997-08-10,St Kilda 18.20 (128) def. Sydney 17.17 (119),247,9,,St Kilda defeated Sydney by 9 points at S.C.G..
+152,Regular Season,Port Adelaide,Adelaide,Port Adelaide,Adelaide,Football Park,1997-08-10,Adelaide 9.11 (65) def. Port Adelaide 9.4 (58),123,7,,Adelaide defeated Port Adelaide by 7 points at Football Park.
+153,Regular Season,West Coast,Melbourne,West Coast,Melbourne,W.A.C.A.,1997-08-15,West Coast 15.7 (97) def. Melbourne 7.17 (59),156,38,,West Coast defeated Melbourne by 38 points at W.A.C.A..
+154,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1997-08-16,Geelong 13.17 (95) def. Carlton 9.13 (67),162,28,,Geelong defeated Carlton by 28 points at Kardinia Park.
+155,Regular Season,Collingwood,Essendon,Collingwood,Essendon,M.C.G.,1997-08-16,Collingwood 13.13 (91) def. Essendon 12.9 (81),172,10,,Collingwood defeated Essendon by 10 points at M.C.G..
+156,Regular Season,St Kilda,Fremantle,St Kilda,Fremantle,Waverley Park,1997-08-16,St Kilda 12.5 (77) def. Fremantle 9.10 (64),141,13,,St Kilda defeated Fremantle by 13 points at Waverley Park.
+157,Regular Season,Brisbane Lions,Port Adelaide,Brisbane Lions,Port Adelaide,Gabba,1997-08-16,Brisbane Lions 13.15 (93) drew with Port Adelaide 13.15 (93),186,0,,Brisbane Lions and Port Adelaide played out a draw at Gabba.
+158,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,1997-08-17,Richmond 14.13 (97) def. North Melbourne 14.12 (96),193,1,,Richmond defeated North Melbourne by 1 points at M.C.G..
+159,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,1997-08-17,Sydney 20.15 (135) def. Hawthorn 11.11 (77),212,58,,Sydney defeated Hawthorn by 58 points at S.C.G..
+160,Regular Season,Adelaide,Western Bulldogs,Adelaide,Western Bulldogs,Football Park,1997-08-17,Western Bulldogs 16.7 (103) def. Adelaide 7.18 (60),163,43,,Western Bulldogs defeated Adelaide by 43 points at Football Park.
+161,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1997-08-22,St Kilda 17.12 (114) def. Melbourne 8.14 (62),176,52,,St Kilda defeated Melbourne by 52 points at M.C.G..
+162,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1997-08-23,Carlton 11.10 (76) def. Sydney 5.11 (41),117,35,,Carlton defeated Sydney by 35 points at Princes Park.
+163,Regular Season,Western Bulldogs,West Coast,Western Bulldogs,West Coast,Western Oval,1997-08-23,Western Bulldogs 12.14 (86) def. West Coast 10.8 (68),154,18,,Western Bulldogs defeated West Coast by 18 points at Western Oval.
+164,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,M.C.G.,1997-08-23,North Melbourne 10.21 (81) def. Hawthorn 6.7 (43),124,38,,North Melbourne defeated Hawthorn by 38 points at M.C.G..
+165,Regular Season,Brisbane Lions,Essendon,Brisbane Lions,Essendon,Gabba,1997-08-23,Essendon 16.10 (106) def. Brisbane Lions 15.12 (102),208,4,,Essendon defeated Brisbane Lions by 4 points at Gabba.
+166,Regular Season,Richmond,Port Adelaide,Richmond,Port Adelaide,M.C.G.,1997-08-24,Richmond 22.14 (146) def. Port Adelaide 8.13 (61),207,85,,Richmond defeated Port Adelaide by 85 points at M.C.G..
+167,Regular Season,Fremantle,Geelong,Fremantle,Geelong,Subiaco,1997-08-24,Geelong 14.16 (100) def. Fremantle 9.14 (68),168,32,,Geelong defeated Fremantle by 32 points at Subiaco.
+168,Regular Season,Adelaide,Collingwood,Adelaide,Collingwood,Football Park,1997-08-25,Adelaide 6.12 (48) def. Collingwood 5.9 (39),87,9,,Adelaide defeated Collingwood by 9 points at Football Park.
+169,Regular Season,West Coast,Brisbane Lions,West Coast,Brisbane Lions,W.A.C.A.,1997-08-29,West Coast 18.12 (120) def. Brisbane Lions 11.15 (81),201,39,,West Coast defeated Brisbane Lions by 39 points at W.A.C.A..
+170,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1997-08-30,Richmond 13.13 (91) def. Carlton 13.11 (89),180,2,,Richmond defeated Carlton by 2 points at Princes Park.
+171,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Waverley Park,1997-08-30,Western Bulldogs 15.15 (105) def. Hawthorn 13.9 (87),192,18,,Western Bulldogs defeated Hawthorn by 18 points at Waverley Park.
+172,Regular Season,Melbourne,Fremantle,Melbourne,Fremantle,M.C.G.,1997-08-30,Melbourne 18.11 (119) def. Fremantle 11.13 (79),198,40,,Melbourne defeated Fremantle by 40 points at M.C.G..
+173,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,1997-08-30,Geelong 15.10 (100) def. Sydney 13.12 (90),190,10,,Geelong defeated Sydney by 10 points at S.C.G..
+174,Regular Season,Essendon,Adelaide,Essendon,Adelaide,Princes Park,1997-08-31,Essendon 16.6 (102) def. Adelaide 14.14 (98),200,4,,Essendon defeated Adelaide by 4 points at Princes Park.
+175,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,M.C.G.,1997-08-31,Collingwood 18.14 (122) def. North Melbourne 15.21 (111),233,11,,Collingwood defeated North Melbourne by 11 points at M.C.G..
+176,Regular Season,Port Adelaide,St Kilda,Port Adelaide,St Kilda,Football Park,1997-08-31,St Kilda 17.15 (117) def. Port Adelaide 12.12 (84),201,33,,St Kilda defeated Port Adelaide by 33 points at Football Park.
+177,Finals,Western Bulldogs,Sydney,Western Bulldogs,Sydney,M.C.G.,1997-09-06,Western Bulldogs 18.11 (119) def. Sydney 12.12 (84),203,35,,Western Bulldogs defeated Sydney by 35 points at M.C.G..
+178,Finals,St Kilda,Brisbane Lions,St Kilda,Brisbane Lions,Waverley Park,1997-09-07,St Kilda 20.15 (135) def. Brisbane Lions 13.11 (89),224,46,,St Kilda defeated Brisbane Lions by 46 points at Waverley Park.
+179,Finals,Adelaide,West Coast,Adelaide,West Coast,Football Park,1997-09-07,Adelaide 14.15 (99) def. West Coast 9.12 (66),165,33,,Adelaide defeated West Coast by 33 points at Football Park.
+180,Finals,Geelong,North Melbourne,Geelong,North Melbourne,M.C.G.,1997-09-07,North Melbourne 11.13 (79) def. Geelong 9.7 (61),140,18,,North Melbourne defeated Geelong by 18 points at M.C.G..
+181,Finals,North Melbourne,West Coast,North Melbourne,West Coast,M.C.G.,1997-09-13,North Melbourne 15.8 (98) def. West Coast 12.13 (85),183,13,,North Melbourne defeated West Coast by 13 points at M.C.G..
+182,Finals,Adelaide,Geelong,Adelaide,Geelong,Football Park,1997-09-13,Adelaide 11.10 (76) def. Geelong 9.14 (68),144,8,,Adelaide defeated Geelong by 8 points at Football Park.
+183,Finals,St Kilda,North Melbourne,St Kilda,North Melbourne,M.C.G.,1997-09-19,St Kilda 15.14 (104) def. North Melbourne 11.7 (73),177,31,,St Kilda defeated North Melbourne by 31 points at M.C.G..
+184,Finals,Western Bulldogs,Adelaide,Western Bulldogs,Adelaide,M.C.G.,1997-09-20,Adelaide 12.21 (93) def. Western Bulldogs 13.13 (91),184,2,,Adelaide defeated Western Bulldogs by 2 points at M.C.G..
+185,Grand Final,St Kilda,Adelaide,St Kilda,Adelaide,M.C.G.,1997-09-27,Adelaide 19.11 (125) def. St Kilda 13.16 (94),219,31,,Adelaide defeated St Kilda by 31 points at M.C.G..

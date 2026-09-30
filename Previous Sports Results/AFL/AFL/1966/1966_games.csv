@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1966-04-23,Collingwood 17.13 (115) def. Hawthorn 9.8 (62),177,53,,Collingwood defeated Hawthorn by 53 points at Victoria Park.
+2,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1966-04-23,Essendon 11.6 (72) def. Geelong 9.4 (58),130,14,,Essendon defeated Geelong by 14 points at Windy Hill.
+3,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1966-04-23,Sydney 16.19 (115) def. Fitzroy 9.8 (62),177,53,,Sydney defeated Fitzroy by 53 points at Lake Oval.
+4,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1966-04-25,Richmond 16.10 (106) def. Carlton 14.16 (100),206,6,,Richmond defeated Carlton by 6 points at Princes Park.
+5,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1966-04-25,North Melbourne 13.9 (87) def. Western Bulldogs 11.9 (75),162,12,,North Melbourne defeated Western Bulldogs by 12 points at Western Oval.
+6,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1966-04-25,St Kilda 17.7 (109) def. Melbourne 4.9 (33),142,76,,St Kilda defeated Melbourne by 76 points at M.C.G..
+7,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Moorabbin Oval,1966-04-30,St Kilda 15.17 (107) def. Carlton 7.12 (54),161,53,,St Kilda defeated Carlton by 53 points at Moorabbin Oval.
+8,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1966-04-30,Collingwood 9.17 (71) def. Fitzroy 5.12 (42),113,29,,Collingwood defeated Fitzroy by 29 points at Brunswick St.
+9,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1966-04-30,Essendon 12.20 (92) def. North Melbourne 5.13 (43),135,49,,Essendon defeated North Melbourne by 49 points at Arden St.
+10,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,1966-04-30,Richmond 17.15 (117) def. Western Bulldogs 5.17 (47),164,70,,Richmond defeated Western Bulldogs by 70 points at M.C.G..
+11,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1966-04-30,Geelong 13.16 (94) def. Sydney 11.8 (74),168,20,,Geelong defeated Sydney by 20 points at Kardinia Park.
+12,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1966-04-30,Hawthorn 7.14 (56) def. Melbourne 3.11 (29),85,27,,Hawthorn defeated Melbourne by 27 points at Glenferrie Oval.
+13,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1966-05-07,Carlton 10.16 (76) def. Fitzroy 6.8 (44),120,32,,Carlton defeated Fitzroy by 32 points at Brunswick St.
+14,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1966-05-07,Essendon 8.18 (66) def. Collingwood 8.6 (54),120,12,,Essendon defeated Collingwood by 12 points at Windy Hill.
+15,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Kardinia Park,1966-05-07,Geelong 12.14 (86) def. Western Bulldogs 7.4 (46),132,40,,Geelong defeated Western Bulldogs by 40 points at Kardinia Park.
+16,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1966-05-07,Sydney 14.22 (106) def. Hawthorn 7.15 (57),163,49,,Sydney defeated Hawthorn by 49 points at Lake Oval.
+17,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,1966-05-07,Richmond 18.15 (123) def. Melbourne 11.14 (80),203,43,,Richmond defeated Melbourne by 43 points at M.C.G..
+18,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1966-05-07,St Kilda 15.13 (103) def. North Melbourne 9.13 (67),170,36,,St Kilda defeated North Melbourne by 36 points at Arden St.
+19,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1966-05-14,Carlton 15.12 (102) def. Essendon 5.11 (41),143,61,,Carlton defeated Essendon by 61 points at Princes Park.
+20,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1966-05-14,Collingwood 12.13 (85) def. Richmond 5.18 (48),133,37,,Collingwood defeated Richmond by 37 points at Victoria Park.
+21,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1966-05-14,Western Bulldogs 12.12 (84) def. Fitzroy 5.16 (46),130,38,,Western Bulldogs defeated Fitzroy by 38 points at Western Oval.
+22,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Moorabbin Oval,1966-05-14,St Kilda 15.11 (101) def. Geelong 7.16 (58),159,43,,St Kilda defeated Geelong by 43 points at Moorabbin Oval.
+23,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1966-05-14,North Melbourne 14.15 (99) def. Hawthorn 9.13 (67),166,32,,North Melbourne defeated Hawthorn by 32 points at Glenferrie Oval.
+24,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1966-05-14,Sydney 17.17 (119) def. Melbourne 12.17 (89),208,30,,Sydney defeated Melbourne by 30 points at M.C.G..
+25,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1966-05-21,Carlton 11.13 (79) def. Melbourne 3.14 (32),111,47,,Carlton defeated Melbourne by 47 points at M.C.G..
+26,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Arden St,1966-05-21,Collingwood 11.15 (81) def. North Melbourne 7.4 (46),127,35,,Collingwood defeated North Melbourne by 35 points at Arden St.
+27,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1966-05-21,Essendon 17.11 (113) def. Fitzroy 9.10 (64),177,49,,Essendon defeated Fitzroy by 49 points at Brunswick St.
+28,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1966-05-21,Western Bulldogs 10.10 (70) def. Hawthorn 4.10 (34),104,36,,Western Bulldogs defeated Hawthorn by 36 points at Western Oval.
+29,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1966-05-21,Richmond 15.8 (98) def. Geelong 12.8 (80),178,18,,Richmond defeated Geelong by 18 points at Kardinia Park.
+30,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1966-05-21,St Kilda 13.17 (95) def. Sydney 7.11 (53),148,42,,St Kilda defeated Sydney by 42 points at Lake Oval.
+31,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1966-05-28,Carlton 11.13 (79) def. Western Bulldogs 6.10 (46),125,33,,Carlton defeated Western Bulldogs by 33 points at Princes Park.
+32,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1966-05-28,Collingwood 12.18 (90) def. Melbourne 8.9 (57),147,33,,Collingwood defeated Melbourne by 33 points at Victoria Park.
+33,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1966-05-28,Essendon 15.15 (105) def. Hawthorn 12.9 (81),186,24,,Essendon defeated Hawthorn by 24 points at Windy Hill.
+34,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Moorabbin Oval,1966-05-28,St Kilda 17.16 (118) def. Fitzroy 8.6 (54),172,64,,St Kilda defeated Fitzroy by 64 points at Moorabbin Oval.
+35,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1966-05-28,Geelong 12.20 (92) def. North Melbourne 8.7 (55),147,37,,Geelong defeated North Melbourne by 37 points at Arden St.
+36,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,1966-05-28,Richmond 12.16 (88) def. Sydney 9.9 (63),151,25,,Richmond defeated Sydney by 25 points at M.C.G..
+37,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1966-06-04,Geelong 8.9 (57) def. Carlton 8.8 (56),113,1,,Geelong defeated Carlton by 1 points at Kardinia Park.
+38,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1966-06-04,Collingwood 8.20 (68) def. Western Bulldogs 6.12 (48),116,20,,Collingwood defeated Western Bulldogs by 20 points at Western Oval.
+39,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1966-06-04,Melbourne 14.10 (94) def. Essendon 9.6 (60),154,34,,Melbourne defeated Essendon by 34 points at M.C.G..
+40,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1966-06-04,Richmond 15.12 (102) def. Fitzroy 12.6 (78),180,24,,Richmond defeated Fitzroy by 24 points at Brunswick St.
+41,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Glenferrie Oval,1966-06-04,St Kilda 15.12 (102) def. Hawthorn 11.12 (78),180,24,,St Kilda defeated Hawthorn by 24 points at Glenferrie Oval.
+42,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1966-06-04,Sydney 17.16 (118) def. North Melbourne 15.16 (106),224,12,,Sydney defeated North Melbourne by 12 points at Lake Oval.
+43,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1966-06-11,Carlton 7.15 (57) def. Sydney 8.6 (54),111,3,,Carlton defeated Sydney by 3 points at Princes Park.
+44,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1966-06-11,Collingwood 14.21 (105) def. Geelong 11.10 (76),181,29,,Collingwood defeated Geelong by 29 points at Victoria Park.
+45,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1966-06-11,Western Bulldogs 11.5 (71) def. Melbourne 7.8 (50),121,21,,Western Bulldogs defeated Melbourne by 21 points at Western Oval.
+46,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Moorabbin Oval,1966-06-13,St Kilda 8.8 (56) def. Essendon 7.7 (49),105,7,,St Kilda defeated Essendon by 7 points at Moorabbin Oval.
+47,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Brunswick St,1966-06-13,Hawthorn 11.14 (80) def. Fitzroy 8.13 (61),141,19,,Hawthorn defeated Fitzroy by 19 points at Brunswick St.
+48,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,1966-06-13,Richmond 10.11 (71) drew with North Melbourne 8.23 (71),142,0,,Richmond and North Melbourne played out a draw at M.C.G..
+49,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Glenferrie Oval,1966-06-18,Hawthorn 9.13 (67) def. Carlton 9.9 (63),130,4,,Hawthorn defeated Carlton by 4 points at Glenferrie Oval.
+50,Regular Season,Sydney,Collingwood,Sydney,Collingwood,Lake Oval,1966-06-18,Collingwood 13.20 (98) def. Sydney 11.7 (73),171,25,,Collingwood defeated Sydney by 25 points at Lake Oval.
+51,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1966-06-18,Essendon 9.17 (71) def. Western Bulldogs 4.13 (37),108,34,,Essendon defeated Western Bulldogs by 34 points at Windy Hill.
+52,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Kardinia Park,1966-06-18,Geelong 20.24 (144) def. Fitzroy 5.1 (31),175,113,,Geelong defeated Fitzroy by 113 points at Kardinia Park.
+53,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1966-06-18,North Melbourne 9.11 (65) def. Melbourne 4.12 (36),101,29,,North Melbourne defeated Melbourne by 29 points at Arden St.
+54,Regular Season,Richmond,St Kilda,Richmond,St Kilda,M.C.G.,1966-06-18,Richmond 16.13 (109) def. St Kilda 11.8 (74),183,35,,Richmond defeated St Kilda by 35 points at M.C.G..
+55,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1966-06-25,North Melbourne 8.17 (65) def. Carlton 6.6 (42),107,23,,North Melbourne defeated Carlton by 23 points at Arden St.
+56,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1966-06-25,Collingwood 17.15 (117) def. St Kilda 6.9 (45),162,72,,Collingwood defeated St Kilda by 72 points at Victoria Park.
+57,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1966-06-25,Essendon 14.16 (100) def. Richmond 15.6 (96),196,4,,Essendon defeated Richmond by 4 points at Windy Hill.
+58,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1966-06-25,Melbourne 11.17 (83) def. Fitzroy 3.7 (25),108,58,,Melbourne defeated Fitzroy by 58 points at M.C.G..
+59,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1966-06-25,Western Bulldogs 8.19 (67) def. Sydney 8.7 (55),122,12,,Western Bulldogs defeated Sydney by 12 points at Western Oval.
+60,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1966-06-25,Geelong 17.15 (117) def. Hawthorn 8.9 (57),174,60,,Geelong defeated Hawthorn by 60 points at Kardinia Park.
+61,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Brunswick St,1966-07-02,North Melbourne 22.8 (140) def. Fitzroy 10.7 (67),207,73,,North Melbourne defeated Fitzroy by 73 points at Brunswick St.
+62,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Moorabbin Oval,1966-07-02,St Kilda 15.15 (105) def. Western Bulldogs 7.12 (54),159,51,,St Kilda defeated Western Bulldogs by 51 points at Moorabbin Oval.
+63,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1966-07-02,Geelong 13.15 (93) def. Melbourne 9.21 (75),168,18,,Geelong defeated Melbourne by 18 points at M.C.G..
+64,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1966-07-09,Carlton 7.11 (53) def. Collingwood 6.6 (42),95,11,,Carlton defeated Collingwood by 11 points at Princes Park.
+65,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1966-07-09,Essendon 13.12 (90) def. Sydney 12.10 (82),172,8,,Essendon defeated Sydney by 8 points at Lake Oval.
+66,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Glenferrie Oval,1966-07-09,Richmond 11.13 (79) def. Hawthorn 6.13 (49),128,30,,Richmond defeated Hawthorn by 30 points at Glenferrie Oval.
+67,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,1966-07-16,Richmond 8.13 (61) def. Carlton 4.6 (30),91,31,,Richmond defeated Carlton by 31 points at M.C.G..
+68,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1966-07-16,Collingwood 16.14 (110) def. Hawthorn 5.7 (37),147,73,,Collingwood defeated Hawthorn by 73 points at Glenferrie Oval.
+69,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1966-07-16,Geelong 15.7 (97) def. Essendon 5.7 (37),134,60,,Geelong defeated Essendon by 60 points at Kardinia Park.
+70,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1966-07-16,Sydney 10.15 (75) def. Fitzroy 8.5 (53),128,22,,Sydney defeated Fitzroy by 22 points at Brunswick St.
+71,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1966-07-16,North Melbourne 10.15 (75) def. Western Bulldogs 6.6 (42),117,33,,North Melbourne defeated Western Bulldogs by 33 points at Arden St.
+72,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Moorabbin Oval,1966-07-16,St Kilda 12.13 (85) def. Melbourne 6.6 (42),127,43,,St Kilda defeated Melbourne by 43 points at Moorabbin Oval.
+73,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1966-07-23,Carlton 7.15 (57) def. St Kilda 5.11 (41),98,16,,Carlton defeated St Kilda by 16 points at Princes Park.
+74,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1966-07-23,Collingwood 19.14 (128) def. Fitzroy 9.7 (61),189,67,,Collingwood defeated Fitzroy by 67 points at Victoria Park.
+75,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1966-07-23,Essendon 6.16 (52) def. North Melbourne 6.6 (42),94,10,,Essendon defeated North Melbourne by 10 points at Windy Hill.
+76,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1966-07-23,Richmond 11.16 (82) def. Western Bulldogs 7.15 (57),139,25,,Richmond defeated Western Bulldogs by 25 points at Western Oval.
+77,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1966-07-23,Geelong 9.17 (71) def. Sydney 9.11 (65),136,6,,Geelong defeated Sydney by 6 points at Lake Oval.
+78,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1966-07-23,Melbourne 23.13 (151) def. Hawthorn 9.5 (59),210,92,,Melbourne defeated Hawthorn by 92 points at M.C.G..
+79,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1966-07-30,Carlton 12.15 (87) def. Fitzroy 9.6 (60),147,27,,Carlton defeated Fitzroy by 27 points at Princes Park.
+80,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1966-07-30,Essendon 18.9 (117) def. Collingwood 7.10 (52),169,65,,Essendon defeated Collingwood by 65 points at Victoria Park.
+81,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1966-07-30,Geelong 10.11 (71) def. Western Bulldogs 7.9 (51),122,20,,Geelong defeated Western Bulldogs by 20 points at Western Oval.
+82,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1966-07-30,Sydney 14.17 (101) def. Hawthorn 10.16 (76),177,25,,Sydney defeated Hawthorn by 25 points at Glenferrie Oval.
+83,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1966-07-30,Richmond 14.13 (97) def. Melbourne 10.12 (72),169,25,,Richmond defeated Melbourne by 25 points at M.C.G..
+84,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Moorabbin Oval,1966-07-30,St Kilda 10.18 (78) def. North Melbourne 4.16 (40),118,38,,St Kilda defeated North Melbourne by 38 points at Moorabbin Oval.
+85,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1966-08-06,Essendon 18.7 (115) def. Carlton 10.13 (73),188,42,,Essendon defeated Carlton by 42 points at Windy Hill.
+86,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,1966-08-06,Collingwood 16.9 (105) def. Richmond 13.8 (86),191,19,,Collingwood defeated Richmond by 19 points at M.C.G..
+87,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1966-08-06,Fitzroy 13.17 (95) def. Western Bulldogs 13.11 (89),184,6,,Fitzroy defeated Western Bulldogs by 6 points at Brunswick St.
+88,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1966-08-06,Geelong 14.11 (95) def. St Kilda 10.12 (72),167,23,,Geelong defeated St Kilda by 23 points at Kardinia Park.
+89,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1966-08-06,Hawthorn 12.11 (83) def. North Melbourne 11.16 (82),165,1,,Hawthorn defeated North Melbourne by 1 points at Arden St.
+90,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1966-08-06,Sydney 18.17 (125) def. Melbourne 15.19 (109),234,16,,Sydney defeated Melbourne by 16 points at Lake Oval.
+91,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1966-08-13,Carlton 14.15 (99) def. Melbourne 10.10 (70),169,29,,Carlton defeated Melbourne by 29 points at Princes Park.
+92,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1966-08-13,Collingwood 12.21 (93) def. North Melbourne 6.8 (44),137,49,,Collingwood defeated North Melbourne by 49 points at Victoria Park.
+93,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1966-08-13,Essendon 14.9 (93) def. Fitzroy 6.9 (45),138,48,,Essendon defeated Fitzroy by 48 points at Windy Hill.
+94,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1966-08-13,Hawthorn 18.11 (119) def. Western Bulldogs 9.13 (67),186,52,,Hawthorn defeated Western Bulldogs by 52 points at Glenferrie Oval.
+95,Regular Season,Richmond,Geelong,Richmond,Geelong,M.C.G.,1966-08-13,Geelong 11.16 (82) def. Richmond 6.12 (48),130,34,,Geelong defeated Richmond by 34 points at M.C.G..
+96,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Moorabbin Oval,1966-08-13,St Kilda 19.19 (133) def. Sydney 10.6 (66),199,67,,St Kilda defeated Sydney by 67 points at Moorabbin Oval.
+97,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1966-08-20,Carlton 12.14 (86) def. Western Bulldogs 4.1 (25),111,61,,Carlton defeated Western Bulldogs by 61 points at Western Oval.
+98,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1966-08-20,Collingwood 21.15 (141) def. Melbourne 12.12 (84),225,57,,Collingwood defeated Melbourne by 57 points at M.C.G..
+99,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Glenferrie Oval,1966-08-20,Essendon 15.10 (100) def. Hawthorn 11.13 (79),179,21,,Essendon defeated Hawthorn by 21 points at Glenferrie Oval.
+100,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1966-08-20,St Kilda 17.22 (124) def. Fitzroy 5.10 (40),164,84,,St Kilda defeated Fitzroy by 84 points at Brunswick St.
+101,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1966-08-20,Geelong 17.16 (118) def. North Melbourne 11.13 (79),197,39,,Geelong defeated North Melbourne by 39 points at Kardinia Park.
+102,Regular Season,Sydney,Richmond,Sydney,Richmond,Lake Oval,1966-08-20,Richmond 10.12 (72) def. Sydney 10.11 (71),143,1,,Richmond defeated Sydney by 1 points at Lake Oval.
+103,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1966-08-27,Geelong 16.14 (110) def. Carlton 5.10 (40),150,70,,Geelong defeated Carlton by 70 points at Princes Park.
+104,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1966-08-27,Collingwood 18.24 (132) def. Western Bulldogs 3.10 (28),160,104,,Collingwood defeated Western Bulldogs by 104 points at Victoria Park.
+105,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1966-08-27,Essendon 11.18 (84) def. Melbourne 7.7 (49),133,35,,Essendon defeated Melbourne by 35 points at Windy Hill.
+106,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,M.C.G.,1966-08-27,Richmond 20.23 (143) def. Fitzroy 11.10 (76),219,67,,Richmond defeated Fitzroy by 67 points at M.C.G..
+107,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Moorabbin Oval,1966-08-27,St Kilda 14.9 (93) def. Hawthorn 13.5 (83),176,10,,St Kilda defeated Hawthorn by 10 points at Moorabbin Oval.
+108,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1966-08-27,North Melbourne 12.16 (88) def. Sydney 11.5 (71),159,17,,North Melbourne defeated Sydney by 17 points at Arden St.
+109,Finals,Essendon,Geelong,Essendon,Geelong,M.C.G.,1966-09-03,Essendon 15.6 (96) def. Geelong 12.14 (86),182,10,,Essendon defeated Geelong by 10 points at M.C.G..
+110,Finals,Collingwood,St Kilda,Collingwood,St Kilda,M.C.G.,1966-09-10,Collingwood 15.9 (99) def. St Kilda 13.11 (89),188,10,,Collingwood defeated St Kilda by 10 points at M.C.G..
+111,Finals,St Kilda,Essendon,St Kilda,Essendon,M.C.G.,1966-09-17,St Kilda 15.4 (94) def. Essendon 7.10 (52),146,42,,St Kilda defeated Essendon by 42 points at M.C.G..
+112,Grand Final,St Kilda,Collingwood,St Kilda,Collingwood,M.C.G.,1966-09-24,St Kilda 10.14 (74) def. Collingwood 10.13 (73),147,1,,St Kilda defeated Collingwood by 1 points at M.C.G..

@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1958 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1958
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1958.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1958 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Collingwood
+- **Premiership Coach:** Phonse Kyne
+- **Runners-up:** Melbourne
+- **Runners-up Coach:** Norm Smith
+- **Grand Final Result:** Collingwood 12.10 (82) def. Melbourne 9.10 (64)
+- **Winning Margin:** 18 points
+- **Match Date:** 1958-09-20
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 97,956 spectators
+
+## Match Summary & Tactical Notes
+Collingwood pulled off a massive upset over Melbourne, winning by 18 points to preserve their famous four-in-a-row record.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

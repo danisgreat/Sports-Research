@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,San Francisco 49ers,Denver Broncos,San Francisco 49ers,Denver Broncos,Louisiana Superdome,1990-01-27,San Francisco 49ers 55 def. Denver Broncos 10,65,45,,"San Francisco 49ers won Super Bowl XXIV, defeating Denver Broncos 55-10 at Louisiana Superdome."

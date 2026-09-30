@@ -1,1 +1,139 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1983-03-26,Carlton 20.16 (136) def. Richmond 11.10 (76),212,60,,Carlton defeated Richmond by 60 points at Princes Park.
+2,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1983-03-26,Collingwood 20.15 (135) def. Melbourne 19.11 (125),260,10,,Collingwood defeated Melbourne by 10 points at M.C.G..
+3,Regular Season,Fitzroy,Hawthorn,Fitzroy,Hawthorn,Junction Oval,1983-03-26,Hawthorn 20.11 (131) def. Fitzroy 16.16 (112),243,19,,Hawthorn defeated Fitzroy by 19 points at Junction Oval.
+4,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Waverley Park,1983-03-26,Geelong 15.16 (106) def. Western Bulldogs 11.9 (75),181,31,,Geelong defeated Western Bulldogs by 31 points at Waverley Park.
+5,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1983-03-26,North Melbourne 14.16 (100) def. St Kilda 12.15 (87),187,13,,North Melbourne defeated St Kilda by 13 points at Arden St.
+6,Regular Season,Sydney,Essendon,Sydney,Essendon,S.C.G.,1983-03-27,Sydney 17.9 (111) def. Essendon 15.20 (110),221,1,,Sydney defeated Essendon by 1 points at S.C.G..
+7,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1983-04-02,Western Bulldogs 14.15 (99) def. Carlton 12.10 (82),181,17,,Western Bulldogs defeated Carlton by 17 points at Western Oval.
+8,Regular Season,Collingwood,Geelong,Collingwood,Geelong,Victoria Park,1983-04-02,Geelong 15.11 (101) def. Collingwood 14.12 (96),197,5,,Geelong defeated Collingwood by 5 points at Victoria Park.
+9,Regular Season,Richmond,Melbourne,Richmond,Melbourne,M.C.G.,1983-04-02,Melbourne 18.11 (119) def. Richmond 15.10 (100),219,19,,Melbourne defeated Richmond by 19 points at M.C.G..
+10,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1983-04-04,Essendon 20.11 (131) def. St Kilda 10.10 (70),201,61,,Essendon defeated St Kilda by 61 points at Windy Hill.
+11,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Waverley Park,1983-04-04,Fitzroy 12.16 (88) def. North Melbourne 6.7 (43),131,45,,Fitzroy defeated North Melbourne by 45 points at Waverley Park.
+12,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Princes Park,1983-04-04,Hawthorn 9.16 (70) def. Sydney 5.15 (45),115,25,,Hawthorn defeated Sydney by 25 points at Princes Park.
+13,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Waverley Park,1983-04-09,Carlton 13.19 (97) def. Collingwood 11.21 (87),184,10,,Carlton defeated Collingwood by 10 points at Waverley Park.
+14,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Junction Oval,1983-04-09,Fitzroy 14.13 (97) def. Essendon 7.14 (56),153,41,,Fitzroy defeated Essendon by 41 points at Junction Oval.
+15,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1983-04-09,Western Bulldogs 16.15 (111) def. Melbourne 11.13 (79),190,32,,Western Bulldogs defeated Melbourne by 32 points at Western Oval.
+16,Regular Season,Geelong,Richmond,Geelong,Richmond,Kardinia Park,1983-04-09,Geelong 13.16 (94) def. Richmond 6.10 (46),140,48,,Geelong defeated Richmond by 48 points at Kardinia Park.
+17,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Moorabbin Oval,1983-04-09,Hawthorn 26.15 (171) def. St Kilda 6.6 (42),213,129,,Hawthorn defeated St Kilda by 129 points at Moorabbin Oval.
+18,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,S.C.G.,1983-04-10,North Melbourne 27.23 (185) def. Sydney 5.15 (45),230,140,,North Melbourne defeated Sydney by 140 points at S.C.G..
+19,Regular Season,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1983-04-16,Carlton 14.15 (99) def. Melbourne 13.12 (90),189,9,,Carlton defeated Melbourne by 9 points at M.C.G..
+20,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1983-04-16,Essendon 20.21 (141) def. Collingwood 17.15 (117),258,24,,Essendon defeated Collingwood by 24 points at Windy Hill.
+21,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Junction Oval,1983-04-16,Fitzroy 17.23 (125) def. Sydney 6.16 (52),177,73,,Fitzroy defeated Sydney by 73 points at Junction Oval.
+22,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Princes Park,1983-04-16,Western Bulldogs 17.16 (118) def. Hawthorn 12.25 (97),215,21,,Western Bulldogs defeated Hawthorn by 21 points at Princes Park.
+23,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Waverley Park,1983-04-16,Geelong 13.12 (90) def. St Kilda 11.13 (79),169,11,,Geelong defeated St Kilda by 11 points at Waverley Park.
+24,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1983-04-16,North Melbourne 18.19 (127) def. Richmond 14.19 (103),230,24,,North Melbourne defeated Richmond by 24 points at Arden St.
+25,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1983-04-23,Fitzroy 18.17 (125) def. Carlton 9.11 (65),190,60,,Fitzroy defeated Carlton by 60 points at Princes Park.
+26,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1983-04-23,Hawthorn 14.11 (95) def. Collingwood 9.19 (73),168,22,,Hawthorn defeated Collingwood by 22 points at Victoria Park.
+27,Regular Season,Sydney,St Kilda,Sydney,St Kilda,S.C.G.,1983-04-24,Sydney 24.16 (160) def. St Kilda 21.11 (137),297,23,,Sydney defeated St Kilda by 23 points at S.C.G..
+28,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Waverley Park,1983-04-25,Essendon 20.8 (128) def. North Melbourne 17.21 (123),251,5,,Essendon defeated North Melbourne by 5 points at Waverley Park.
+29,Regular Season,Richmond,Western Bulldogs,Richmond,Western Bulldogs,M.C.G.,1983-04-25,Western Bulldogs 18.8 (116) def. Richmond 17.12 (114),230,2,,Western Bulldogs defeated Richmond by 2 points at M.C.G..
+30,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Kardinia Park,1983-04-25,Melbourne 18.13 (121) def. Geelong 16.14 (110),231,11,,Melbourne defeated Geelong by 11 points at Kardinia Park.
+31,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1983-04-30,Geelong 14.11 (95) def. Carlton 12.13 (85),180,10,,Geelong defeated Carlton by 10 points at Princes Park.
+32,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1983-04-30,Collingwood 19.16 (130) def. North Melbourne 15.18 (108),238,22,,Collingwood defeated North Melbourne by 22 points at Victoria Park.
+33,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1983-04-30,Essendon 27.19 (181) def. Western Bulldogs 7.7 (49),230,132,,Essendon defeated Western Bulldogs by 132 points at Windy Hill.
+34,Regular Season,St Kilda,Fitzroy,St Kilda,Fitzroy,Moorabbin Oval,1983-04-30,Fitzroy 22.11 (143) def. St Kilda 15.12 (102),245,41,,Fitzroy defeated St Kilda by 41 points at Moorabbin Oval.
+35,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Waverley Park,1983-04-30,Richmond 15.16 (106) def. Hawthorn 12.16 (88),194,18,,Richmond defeated Hawthorn by 18 points at Waverley Park.
+36,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1983-04-30,Melbourne 18.18 (126) def. Sydney 12.21 (93),219,33,,Melbourne defeated Sydney by 33 points at M.C.G..
+37,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1983-05-07,Collingwood 14.4 (88) def. Western Bulldogs 11.16 (82),170,6,,Collingwood defeated Western Bulldogs by 6 points at Western Oval.
+38,Regular Season,Richmond,Essendon,Richmond,Essendon,M.C.G.,1983-05-07,Essendon 21.11 (137) def. Richmond 16.16 (112),249,25,,Essendon defeated Richmond by 25 points at M.C.G..
+39,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Junction Oval,1983-05-07,Fitzroy 11.10 (76) def. Geelong 9.13 (67),143,9,,Fitzroy defeated Geelong by 9 points at Junction Oval.
+40,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Princes Park,1983-05-07,North Melbourne 21.16 (142) def. Hawthorn 13.13 (91),233,51,,North Melbourne defeated Hawthorn by 51 points at Princes Park.
+41,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,Waverley Park,1983-05-07,Melbourne 16.12 (108) def. St Kilda 11.9 (75),183,33,,Melbourne defeated St Kilda by 33 points at Waverley Park.
+42,Regular Season,Sydney,Carlton,Sydney,Carlton,S.C.G.,1983-05-08,Carlton 22.17 (149) def. Sydney 18.10 (118),267,31,,Carlton defeated Sydney by 31 points at S.C.G..
+43,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Moorabbin Oval,1983-05-14,Carlton 22.13 (145) def. St Kilda 12.17 (89),234,56,,Carlton defeated St Kilda by 56 points at Moorabbin Oval.
+44,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Waverley Park,1983-05-14,Collingwood 16.11 (107) def. Richmond 8.11 (59),166,48,,Collingwood defeated Richmond by 48 points at Waverley Park.
+45,Regular Season,Hawthorn,Essendon,Hawthorn,Essendon,Princes Park,1983-05-14,Hawthorn 20.17 (137) def. Essendon 14.11 (95),232,42,,Hawthorn defeated Essendon by 42 points at Princes Park.
+46,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1983-05-14,Fitzroy 18.18 (126) def. Melbourne 12.15 (87),213,39,,Fitzroy defeated Melbourne by 39 points at M.C.G..
+47,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1983-05-14,North Melbourne 29.15 (189) def. Western Bulldogs 11.8 (74),263,115,,North Melbourne defeated Western Bulldogs by 115 points at Arden St.
+48,Regular Season,Geelong,Sydney,Geelong,Sydney,Kardinia Park,1983-05-14,Sydney 16.14 (110) def. Geelong 11.18 (84),194,26,,Sydney defeated Geelong by 26 points at Kardinia Park.
+49,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1983-05-21,Carlton 15.14 (104) def. Hawthorn 14.12 (96),200,8,,Carlton defeated Hawthorn by 8 points at Princes Park.
+50,Regular Season,Essendon,Melbourne,Essendon,Melbourne,Windy Hill,1983-05-21,Essendon 22.17 (149) def. Melbourne 17.13 (115),264,34,,Essendon defeated Melbourne by 34 points at Windy Hill.
+51,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Waverley Park,1983-05-21,Western Bulldogs 22.13 (145) def. Fitzroy 13.21 (99),244,46,,Western Bulldogs defeated Fitzroy by 46 points at Waverley Park.
+52,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Kardinia Park,1983-05-21,North Melbourne 18.16 (124) def. Geelong 12.12 (84),208,40,,North Melbourne defeated Geelong by 40 points at Kardinia Park.
+53,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Moorabbin Oval,1983-05-21,St Kilda 16.12 (108) def. Richmond 13.15 (93),201,15,,St Kilda defeated Richmond by 15 points at Moorabbin Oval.
+54,Regular Season,Sydney,Collingwood,Sydney,Collingwood,S.C.G.,1983-05-22,Sydney 18.13 (121) def. Collingwood 14.16 (100),221,21,,Sydney defeated Collingwood by 21 points at S.C.G..
+55,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1983-05-28,North Melbourne 29.19 (193) def. Carlton 11.16 (82),275,111,,North Melbourne defeated Carlton by 111 points at Arden St.
+56,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1983-05-28,Fitzroy 13.15 (93) def. Collingwood 10.17 (77),170,16,,Fitzroy defeated Collingwood by 16 points at Victoria Park.
+57,Regular Season,Essendon,Geelong,Essendon,Geelong,Windy Hill,1983-05-28,Essendon 15.19 (109) def. Geelong 15.7 (97),206,12,,Essendon defeated Geelong by 12 points at Windy Hill.
+58,Regular Season,Western Bulldogs,St Kilda,Western Bulldogs,St Kilda,Western Oval,1983-05-28,Western Bulldogs 17.26 (128) def. St Kilda 11.16 (82),210,46,,Western Bulldogs defeated St Kilda by 46 points at Western Oval.
+59,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,Waverley Park,1983-05-28,Hawthorn 27.9 (171) def. Melbourne 16.13 (109),280,62,,Hawthorn defeated Melbourne by 62 points at Waverley Park.
+60,Regular Season,Richmond,Sydney,Richmond,Sydney,M.C.G.,1983-05-28,Richmond 16.10 (106) def. Sydney 14.10 (94),200,12,,Richmond defeated Sydney by 12 points at M.C.G..
+61,Regular Season,Carlton,Essendon,Carlton,Essendon,Waverley Park,1983-06-04,Essendon 19.12 (126) def. Carlton 15.11 (101),227,25,,Essendon defeated Carlton by 25 points at Waverley Park.
+62,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Moorabbin Oval,1983-06-04,Collingwood 24.16 (160) def. St Kilda 21.18 (144),304,16,,Collingwood defeated St Kilda by 16 points at Moorabbin Oval.
+63,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Junction Oval,1983-06-04,Fitzroy 20.16 (136) def. Richmond 16.18 (114),250,22,,Fitzroy defeated Richmond by 22 points at Junction Oval.
+64,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Princes Park,1983-06-04,Geelong 14.11 (95) def. Hawthorn 12.16 (88),183,7,,Geelong defeated Hawthorn by 7 points at Princes Park.
+65,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1983-06-04,North Melbourne 20.19 (139) def. Melbourne 18.17 (125),264,14,,North Melbourne defeated Melbourne by 14 points at M.C.G..
+66,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,S.C.G.,1983-06-05,Sydney 17.19 (121) def. Western Bulldogs 15.12 (102),223,19,,Sydney defeated Western Bulldogs by 19 points at S.C.G..
+67,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1983-06-11,Essendon 23.18 (156) def. Sydney 13.5 (83),239,73,,Essendon defeated Sydney by 73 points at Windy Hill.
+68,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Princes Park,1983-06-11,Hawthorn 25.17 (167) def. Fitzroy 21.8 (134),301,33,,Hawthorn defeated Fitzroy by 33 points at Princes Park.
+69,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Moorabbin Oval,1983-06-11,North Melbourne 20.15 (135) def. St Kilda 15.14 (104),239,31,,North Melbourne defeated St Kilda by 31 points at Moorabbin Oval.
+70,Regular Season,Richmond,Carlton,Richmond,Carlton,M.C.G.,1983-06-13,Richmond 21.15 (141) def. Carlton 13.13 (91),232,50,,Richmond defeated Carlton by 50 points at M.C.G..
+71,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Waverley Park,1983-06-13,Collingwood 12.15 (87) def. Melbourne 10.8 (68),155,19,,Collingwood defeated Melbourne by 19 points at Waverley Park.
+72,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1983-06-13,Western Bulldogs 15.12 (102) def. Geelong 14.7 (91),193,11,,Western Bulldogs defeated Geelong by 11 points at Western Oval.
+73,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1983-06-18,Carlton 26.15 (171) def. Western Bulldogs 12.10 (82),253,89,,Carlton defeated Western Bulldogs by 89 points at Princes Park.
+74,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Kardinia Park,1983-06-18,Geelong 15.11 (101) def. Collingwood 13.7 (85),186,16,,Geelong defeated Collingwood by 16 points at Kardinia Park.
+75,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Waverley Park,1983-06-18,Essendon 21.12 (138) def. St Kilda 13.13 (91),229,47,,Essendon defeated St Kilda by 47 points at Waverley Park.
+76,Regular Season,Fitzroy,North Melbourne,Fitzroy,North Melbourne,Junction Oval,1983-06-18,Fitzroy 34.16 (220) def. North Melbourne 10.10 (70),290,150,,Fitzroy defeated North Melbourne by 150 points at Junction Oval.
+77,Regular Season,Melbourne,Richmond,Melbourne,Richmond,M.C.G.,1983-06-18,Melbourne 18.15 (123) def. Richmond 15.19 (109),232,14,,Melbourne defeated Richmond by 14 points at M.C.G..
+78,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,S.C.G.,1983-06-19,Hawthorn 15.20 (110) def. Sydney 11.12 (78),188,32,,Hawthorn defeated Sydney by 32 points at S.C.G..
+79,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1983-06-25,Collingwood 15.10 (100) def. Carlton 6.9 (45),145,55,,Collingwood defeated Carlton by 55 points at Victoria Park.
+80,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1983-06-25,Fitzroy 9.11 (65) def. Essendon 8.10 (58),123,7,,Fitzroy defeated Essendon by 7 points at Windy Hill.
+81,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1983-06-25,Melbourne 14.15 (99) def. Western Bulldogs 12.13 (85),184,14,,Melbourne defeated Western Bulldogs by 14 points at M.C.G..
+82,Regular Season,Richmond,Geelong,Richmond,Geelong,Waverley Park,1983-06-25,Richmond 11.4 (70) def. Geelong 10.9 (69),139,1,,Richmond defeated Geelong by 1 points at Waverley Park.
+83,Regular Season,Hawthorn,St Kilda,Hawthorn,St Kilda,Princes Park,1983-06-25,Hawthorn 21.17 (143) def. St Kilda 9.20 (74),217,69,,Hawthorn defeated St Kilda by 69 points at Princes Park.
+84,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1983-06-25,North Melbourne 11.16 (82) def. Sydney 7.8 (50),132,32,,North Melbourne defeated Sydney by 32 points at Arden St.
+85,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1983-07-02,Melbourne 15.16 (106) def. Carlton 9.13 (67),173,39,,Melbourne defeated Carlton by 39 points at Princes Park.
+86,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1983-07-02,Collingwood 16.8 (104) def. Essendon 13.9 (87),191,17,,Collingwood defeated Essendon by 17 points at Victoria Park.
+87,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Waverley Park,1983-07-02,Hawthorn 13.11 (89) def. Western Bulldogs 9.6 (60),149,29,,Hawthorn defeated Western Bulldogs by 29 points at Waverley Park.
+88,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Kardinia Park,1983-07-02,St Kilda 18.12 (120) def. Geelong 9.14 (68),188,52,,St Kilda defeated Geelong by 52 points at Kardinia Park.
+89,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,M.C.G.,1983-07-02,North Melbourne 21.12 (138) def. Richmond 16.18 (114),252,24,,North Melbourne defeated Richmond by 24 points at M.C.G..
+90,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,S.C.G.,1983-07-03,Sydney 23.9 (147) def. Fitzroy 17.15 (117),264,30,,Sydney defeated Fitzroy by 30 points at S.C.G..
+91,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Waverley Park,1983-07-09,Carlton 18.16 (124) def. Fitzroy 13.11 (89),213,35,,Carlton defeated Fitzroy by 35 points at Waverley Park.
+92,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1983-07-09,North Melbourne 19.14 (128) def. Essendon 16.11 (107),235,21,,North Melbourne defeated Essendon by 21 points at Arden St.
+93,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1983-07-09,Richmond 15.14 (104) def. Western Bulldogs 12.12 (84),188,20,,Richmond defeated Western Bulldogs by 20 points at Western Oval.
+94,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Princes Park,1983-07-16,Hawthorn 19.23 (137) def. Collingwood 14.16 (100),237,37,,Hawthorn defeated Collingwood by 37 points at Princes Park.
+95,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1983-07-16,Melbourne 10.19 (79) def. Geelong 10.13 (73),152,6,,Melbourne defeated Geelong by 6 points at M.C.G..
+96,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Moorabbin Oval,1983-07-16,St Kilda 20.9 (129) def. Sydney 14.16 (100),229,29,,St Kilda defeated Sydney by 29 points at Moorabbin Oval.
+97,Regular Season,Geelong,Carlton,Geelong,Carlton,Kardinia Park,1983-07-23,Carlton 15.18 (108) def. Geelong 11.7 (73),181,35,,Carlton defeated Geelong by 35 points at Kardinia Park.
+98,Regular Season,North Melbourne,Collingwood,North Melbourne,Collingwood,Waverley Park,1983-07-23,North Melbourne 24.8 (152) def. Collingwood 14.14 (98),250,54,,North Melbourne defeated Collingwood by 54 points at Waverley Park.
+99,Regular Season,Western Bulldogs,Essendon,Western Bulldogs,Essendon,Western Oval,1983-07-23,Essendon 18.17 (125) def. Western Bulldogs 16.11 (107),232,18,,Essendon defeated Western Bulldogs by 18 points at Western Oval.
+100,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Junction Oval,1983-07-23,St Kilda 22.17 (149) def. Fitzroy 20.18 (138),287,11,,St Kilda defeated Fitzroy by 11 points at Junction Oval.
+101,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,M.C.G.,1983-07-23,Hawthorn 22.14 (146) def. Richmond 11.16 (82),228,64,,Hawthorn defeated Richmond by 64 points at M.C.G..
+102,Regular Season,Sydney,Melbourne,Sydney,Melbourne,S.C.G.,1983-07-24,Sydney 18.17 (125) def. Melbourne 16.16 (112),237,13,,Sydney defeated Melbourne by 13 points at S.C.G..
+103,Regular Season,Carlton,Sydney,Carlton,Sydney,Princes Park,1983-07-30,Carlton 17.17 (119) def. Sydney 11.9 (75),194,44,,Carlton defeated Sydney by 44 points at Princes Park.
+104,Regular Season,Collingwood,Western Bulldogs,Collingwood,Western Bulldogs,Victoria Park,1983-07-30,Collingwood 12.10 (82) def. Western Bulldogs 9.19 (73),155,9,,Collingwood defeated Western Bulldogs by 9 points at Victoria Park.
+105,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1983-07-30,Richmond 19.10 (124) def. Essendon 6.14 (50),174,74,,Richmond defeated Essendon by 74 points at Windy Hill.
+106,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Waverley Park,1983-07-30,Fitzroy 16.15 (111) def. Geelong 7.7 (49),160,62,,Fitzroy defeated Geelong by 62 points at Waverley Park.
+107,Regular Season,North Melbourne,Hawthorn,North Melbourne,Hawthorn,Arden St,1983-07-30,Hawthorn 15.7 (97) def. North Melbourne 12.18 (90),187,7,,Hawthorn defeated North Melbourne by 7 points at Arden St.
+108,Regular Season,St Kilda,Melbourne,St Kilda,Melbourne,Moorabbin Oval,1983-07-30,Melbourne 14.14 (98) def. St Kilda 11.15 (81),179,17,,Melbourne defeated St Kilda by 17 points at Moorabbin Oval.
+109,Regular Season,Sydney,Geelong,Sydney,Geelong,S.C.G.,1983-08-05,Geelong 20.21 (141) def. Sydney 10.15 (75),216,66,,Geelong defeated Sydney by 66 points at S.C.G..
+110,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1983-08-06,Carlton 25.18 (168) def. St Kilda 8.13 (61),229,107,,Carlton defeated St Kilda by 107 points at Princes Park.
+111,Regular Season,Richmond,Collingwood,Richmond,Collingwood,M.C.G.,1983-08-06,Collingwood 13.11 (89) def. Richmond 11.13 (79),168,10,,Collingwood defeated Richmond by 10 points at M.C.G..
+112,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1983-08-06,Essendon 23.18 (156) def. Hawthorn 16.14 (110),266,46,,Essendon defeated Hawthorn by 46 points at Windy Hill.
+113,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Junction Oval,1983-08-06,Fitzroy 22.29 (161) def. Melbourne 11.9 (75),236,86,,Fitzroy defeated Melbourne by 86 points at Junction Oval.
+114,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Waverley Park,1983-08-06,North Melbourne 25.14 (164) def. Western Bulldogs 10.11 (71),235,93,,North Melbourne defeated Western Bulldogs by 93 points at Waverley Park.
+115,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Princes Park,1983-08-13,Carlton 20.9 (129) def. Hawthorn 15.22 (112),241,17,,Carlton defeated Hawthorn by 17 points at Princes Park.
+116,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1983-08-13,Collingwood 28.14 (182) def. Sydney 18.12 (120),302,62,,Collingwood defeated Sydney by 62 points at Victoria Park.
+117,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1983-08-13,Essendon 21.15 (141) def. Melbourne 19.10 (124),265,17,,Essendon defeated Melbourne by 17 points at M.C.G..
+118,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1983-08-13,Western Bulldogs 19.11 (125) def. Fitzroy 14.15 (99),224,26,,Western Bulldogs defeated Fitzroy by 26 points at Western Oval.
+119,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1983-08-13,North Melbourne 16.20 (116) def. Geelong 11.18 (84),200,32,,North Melbourne defeated Geelong by 32 points at Arden St.
+120,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Waverley Park,1983-08-13,St Kilda 21.14 (140) def. Richmond 9.11 (65),205,75,,St Kilda defeated Richmond by 75 points at Waverley Park.
+121,Regular Season,Carlton,North Melbourne,Carlton,North Melbourne,Princes Park,1983-08-20,Carlton 18.18 (126) def. North Melbourne 13.15 (93),219,33,,Carlton defeated North Melbourne by 33 points at Princes Park.
+122,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Junction Oval,1983-08-20,Fitzroy 19.13 (127) def. Collingwood 7.21 (63),190,64,,Fitzroy defeated Collingwood by 64 points at Junction Oval.
+123,Regular Season,Geelong,Essendon,Geelong,Essendon,Kardinia Park,1983-08-20,Essendon 26.9 (165) def. Geelong 12.11 (83),248,82,,Essendon defeated Geelong by 82 points at Kardinia Park.
+124,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Moorabbin Oval,1983-08-20,Western Bulldogs 16.4 (100) def. St Kilda 13.16 (94),194,6,,Western Bulldogs defeated St Kilda by 6 points at Moorabbin Oval.
+125,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Waverley Park,1983-08-20,Hawthorn 25.22 (172) def. Melbourne 8.9 (57),229,115,,Hawthorn defeated Melbourne by 115 points at Waverley Park.
+126,Regular Season,Sydney,Richmond,Sydney,Richmond,S.C.G.,1983-08-21,Richmond 15.24 (114) def. Sydney 10.13 (73),187,41,,Richmond defeated Sydney by 41 points at S.C.G..
+127,Regular Season,Essendon,Carlton,Essendon,Carlton,Waverley Park,1983-08-27,Essendon 18.10 (118) def. Carlton 8.19 (67),185,51,,Essendon defeated Carlton by 51 points at Waverley Park.
+128,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1983-08-27,Collingwood 24.11 (155) def. St Kilda 14.8 (92),247,63,,Collingwood defeated St Kilda by 63 points at Victoria Park.
+129,Regular Season,Richmond,Fitzroy,Richmond,Fitzroy,M.C.G.,1983-08-27,Fitzroy 19.13 (127) def. Richmond 12.21 (93),220,34,,Fitzroy defeated Richmond by 34 points at M.C.G..
+130,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1983-08-27,Western Bulldogs 17.12 (114) def. Sydney 10.12 (72),186,42,,Western Bulldogs defeated Sydney by 42 points at Western Oval.
+131,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Kardinia Park,1983-08-27,Hawthorn 24.13 (157) def. Geelong 11.11 (77),234,80,,Hawthorn defeated Geelong by 80 points at Kardinia Park.
+132,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1983-08-27,North Melbourne 21.22 (148) def. Melbourne 10.15 (75),223,73,,North Melbourne defeated Melbourne by 73 points at Arden St.
+133,Finals,Essendon,Carlton,Essendon,Carlton,Waverley Park,1983-09-03,Essendon 17.12 (114) def. Carlton 12.9 (81),195,33,,Essendon defeated Carlton by 33 points at Waverley Park.
+134,Finals,Hawthorn,Fitzroy,Hawthorn,Fitzroy,M.C.G.,1983-09-03,Hawthorn 19.13 (127) def. Fitzroy 19.9 (123),250,4,,Hawthorn defeated Fitzroy by 4 points at M.C.G..
+135,Finals,Essendon,Fitzroy,Essendon,Fitzroy,M.C.G.,1983-09-10,Essendon 16.13 (109) def. Fitzroy 12.14 (86),195,23,,Essendon defeated Fitzroy by 23 points at M.C.G..
+136,Finals,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Waverley Park,1983-09-10,Hawthorn 13.10 (88) def. North Melbourne 6.12 (48),136,40,,Hawthorn defeated North Melbourne by 40 points at Waverley Park.
+137,Finals,Essendon,North Melbourne,Essendon,North Melbourne,Waverley Park,1983-09-17,Essendon 25.14 (164) def. North Melbourne 12.6 (78),242,86,,Essendon defeated North Melbourne by 86 points at Waverley Park.
+138,Grand Final,Hawthorn,Essendon,Hawthorn,Essendon,M.C.G.,1983-09-24,Hawthorn 20.20 (140) def. Essendon 8.9 (57),197,83,,Hawthorn defeated Essendon by 83 points at M.C.G..

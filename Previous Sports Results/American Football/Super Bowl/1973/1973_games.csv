@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Miami Dolphins,Washington Redskins,Miami Dolphins,Washington Redskins,Los Angeles Memorial Coliseum,1973-01-14,Miami Dolphins 14 def. Washington Redskins 7,21,7,,"Miami Dolphins won Super Bowl VII, defeating Washington Redskins 14-7 at Los Angeles Memorial Coliseum."

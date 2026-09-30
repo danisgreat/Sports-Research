@@ -1,4 +1,4 @@
 # QAFL Coaching Staff — 1902 Season
 
-- **Status:** INACTIVE.
-- **Reason:** The competition was not established until 1903. No official coaching staffs, managerial appointments, or teams existed in 1902.
+- **Status:** NOT_YET_FOUNDED
+- **Reason:** QAFL not yet founded (inaugural premiership in 1904).

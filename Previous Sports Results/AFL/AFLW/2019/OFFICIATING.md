@@ -1,12 +1,13 @@
-# AFLW Officiating & Refereeing Corps — 2019 Season
+# AFLW Officiating & Umpiring Corps — 2019 Season
 
-- **Sport:** AFL
-- **Competition:** AFLW
+- **Sport:** Australian Rules Football
+- **League:** AFLW (AFL Women's)
 - **Season:** 2019
-- **Governing Body:** AFL Women's Football Operations
 
-## Officiating Structure & Adjudication
-- **Appointed Officials:** AFLW Umpiring Panel (Field, Boundary, Goal).
-- **Championship Appointments:** Lead match adjudicators and senior officials selected for finals and marquee tournament fixtures based on merit and performance evaluations.
-- **Rule Framework & Interpretations:** Strict enforcement of the 2019 rules of the game, procedural updates, and points of emphasis issued by AFL Women's Football Operations.
-- **Technology & Review Systems:** Modern video adjudication systems (VAR / TMO / DRS / Video Review / Hawk-Eye / Replay Command Center) fully integrated with on-field communications.
+## Officiating System & Match Adjudication
+- **Grand Final Field Umpire(s):** Nick Yabsley, Patrick Jackson, Andrew Adair
+- **Grand Final Venue:** Adelaide Oval
+- **Attendance:** 53,034 spectators
+- **Umpiring Structure:** Official AFLW Senior Field Umpiring Panel appointed by the AFL Umpiring Department, combining senior AFL list adjudicators and top state-league pathway umpires.
+
+- **Sources:** AFL API; AFL Umpires Association; Official AFLW Match Records.

@@ -1,1 +1,5 @@
-Game Number,"Game Type (Group Stage, Placement Game, Bronze Medal Game, Gold Medal Game, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Semi Final,Japan,France,Japan,France,"Herbert Dröse Stadion, Hanau",2003-07-10,Japan 23 def. France 6,29,17,,Japan defeated France 23-6 in the semifinals.
+2,Semi Final,Mexico,Germany,Mexico,Germany,"Berliner Strasse Stadion, Wiesbaden",2003-07-10,Mexico 21 def. Germany 17,38,4,,Mexico defeated Germany 21-17 in the semifinals.
+3,Bronze Medal Game,Germany,France,Germany,France,"Herbert Dröse Stadion, Hanau",2003-07-12,Germany 36 def. France 7,43,29,,Germany defeated France 36-7 to claim the bronze medal.
+4,Gold Medal Game,Japan,Mexico,Japan,Mexico,"Herbert Dröse Stadion, Hanau",2003-07-12,Japan 23 def. Mexico 20,43,3,,Japan defeated Mexico 23-20 in overtime to win their second consecutive IFAF World Championship.

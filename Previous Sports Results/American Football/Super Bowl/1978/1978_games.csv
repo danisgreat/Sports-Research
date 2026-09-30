@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Dallas Cowboys,Denver Broncos,Dallas Cowboys,Denver Broncos,Louisiana Superdome,1978-01-15,Dallas Cowboys 27 def. Denver Broncos 10,37,17,,"Dallas Cowboys won Super Bowl XII, defeating Denver Broncos 27-10 at Louisiana Superdome."

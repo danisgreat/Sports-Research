@@ -1178,3 +1178,434 @@ SHADOW: NO_LANE tools/sport_models.py has no Liga ACB numerical shadow lane; no 
 | ACB Live Stats API validation | `DATA_SOURCE_REGISTER.md` | Register `https://live.acb.com` as primary Lineage 1 endpoint for Liga Endesa. |
 
 <!-- END ORIGINAL P518 SOURCE BYTES -->
+
+---
+
+# Part 6 working continuation — 2026-09-30 (AEST): P-518 and P-522 settlement and retrospective
+
+| Item | Value |
+|---|---|
+| Governing method | MDS-2026.09.29-v6.0 · CR-2026.09.29-P1 · SCV-2026.09.19-v2 (METHOD.md header at session read) |
+| Freeze receipt (current) | `CONTROL_MANIFEST_2026-09-29-3.md`, SHA-256 `d23995fd00020cb3a90dea4adf96c215b49b2e25fb535460e032c7b160e4b3d7`, copied from the top line of `GAME_LOG_STATUS_CURRENT.md`. `research.src.control_manifest verify` on 2026-09-30: 129 listed files, 0 mismatches. |
+| Handshake | METHOD.md header, the status-file receipt line, `PIPELINE_IMPLEMENTATION_2026-09-29.md` and this file all present and equal to the expected values. `PROMPT_CONFLICT`: none. |
+| Session read | `CURRENT_RULES.md`; `CARD_AND_LOG_TEMPLATES.md` §1–§7; `SOURCES.md` §1, §3.1, §3.2; `RULES_BASEBALL.md` §0 (0.1–0.5 before the first retrieval at 10:57 AEST, 0.6–0.9 after the MLB retrievals); `RULES_BASKETBALL.md` §0 (after the ACB retrievals, before drafting; `READ_ORDER_NOTE`: nothing read afterwards changed a retrieval route or a fact); `P518_P522_RECONCILIATION.md`; `VERIFICATION_PROTOCOL.md` §1; Part 5 top snapshot; Part 6 custody note, §1 and the P-518 and P-522 cards. Exact read timestamps were not logged. |
+| Scope | Settlement and retrospective append for **P-518 and P-522 only**, on the user's 2026-09-30 instruction. P-519, P-520 and P-521 were not processed. |
+| Write scope | This file only, after the END marker. The embedded block is unchanged: the bytes after the CRLF following the BEGIN marker and before the CRLF preceding the END marker are 141,740 bytes, SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`, verified before and after this append. |
+| Raw responses | Kept in the session scratchpad, not in the repository. Each is identified below by URL, retrieval time and response SHA-256. |
+| Next new prediction ID | P-523 (unchanged; no card was issued this session) |
+| Status | LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. The 2026-09-29 formal performance exclusion of P-518–P-522 is **not lifted** by this append (both cards are `LIVE_ISSUED`; `SKILL_BASELINE_LEDGER.md` rule 7 fails). |
+
+## 0. Universe declarations
+
+None. No new card was issued. P-518 and P-522 keep their issued universe lines (P-518 `OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN`; P-522 `OUT_OF_UNIVERSE`, no Liga ACB key). No retroactive declaration is made.
+
+## 1. Incomplete / Unsettled Logs
+
+| ID | Event | State this session | Reason |
+|---|---|---|---|
+| P-519 | AFLW Gold Coast Suns(W) v St Kilda(W) | NOT PROCESSED | Outside the instruction's scope. The last recorded result is in `P518_P522_RECONCILIATION.md`; it was not re-read from a feed in this session. Custody unchanged. |
+| P-520 | KBO Hanwha Eagles @ Lotte Giants | NOT PROCESSED | Same. The reconciliation's open items (no stable event ID; q-order conflict) stand. |
+| P-521 | Liga Endesa Río Breogán v Asisa Joventut | NOT PROCESSED | Same. |
+
+P-518 and P-522 are not unsettled: both are settled below.
+
+## 2. Temporary-ID / Canonical-ID Conflict Logs
+
+None. Checked on 2026-09-30: Part 5's top snapshot (canonical through P-517; P-518–P-522 reserved), `GAME_LOG_STATUS_CURRENT.md` and this file. No other event carries P-518 or P-522, and no `TMP-` alias exists for either event. The event-reference errors inside the embedded working settlements (ESPN 401696434, ACB 105379, a Baseball-Reference URL dated 20260927) are field corrections, not ID conflicts; they are itemised in each corrections register below.
+
+## 3. Fully Settled Logs
+
+Both entries were settled by an append. The issued cards, and the embedded working settlements, stay in the original source block exactly as they were. Where this append disagrees with the embedded working settlement, **this append is the sourced record** (`CARD_AND_LOG_TEMPLATES.md` §7.5). The formal performance exclusion stands for both.
+
+---
+
+### Settlement — P-518 (MLB, New York Mets @ Washington Nationals, gamePk 822678)
+
+**Retrievals:** 2026-09-30 10:57–11:11 AEST. **State:** FINAL.
+
+#### 3.1 Terminal state — three lineages (`SOURCES.md` §3.1: statsapi + ESPN + one independent box)
+
+| # | Lineage | Endpoint and retrieval (AEST) | Terminal marker | Score | Response SHA-256 |
+|---|---|---|---|---|---|
+| 1 | MLB StatsAPI gamefeed (field owner) | `https://statsapi.mlb.com/api/v1.1/game/822678/feed/live`, 2026-09-30 10:57:12; repeated by `research/src/feeds.py mlb_final(822678, "INCL_EXTRAS")` at 11:11:32 | `abstractGameState Final`, `codedGameState F`, `detailedState Final`; `gamePk 822678`, `officialDate 2026-09-26` | NYM 7, WSH 1 | `af9abb08fed9b5b848313c8146eb430779ab7234dbe0dc2d948c6acbadfd7584` (identical on both fetches) |
+| 2 | ESPN site API, **event 401817091** | `https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/summary?event=401817091`, 10:58:40. The event was resolved from `scoreboard?dates=20260926` (10:57:16, SHA `21bbda785803d36a5e12b28348f21fb9a62277ad3414aeb7c32280621468d234`). | `STATUS_FINAL`, `completed true`; header id 401817091, date 2026-09-26T16:35Z | NYM 7, WSH 1; linescore matches the feed; H 9/3, E 1/1 | `1f56c0aa0241b72b85759e6bf6be3d99587e0fad7f38e797e1774e2d2367385b` |
+| 3 | Yahoo Sports game page (independent publisher) | `https://sports.yahoo.com/mlb/new-york-mets-washington-nationals-460926120/`, 11:00:02 | Title "New York Mets 7 - Washington Nationals 1: Final"; JSON-LD `EventCompleted`, `finalScore WAS 1-7 NYM`, location Nationals Park | NYM 7, WSH 1 | `104d2490bc64f4d7c8aca29f990fdff99c90b5ea69fbb5dca906d46632bef966` |
+
+- **Corroboration only, not counted:** MLB.com Gameday page (`https://www.mlb.com/gameday/822678`, 10:59:18, title "Mets 7, Nationals 1 Final Score (09/26/2026)"): same lineage as statsapi (`SOURCES.md` §3.1).
+- **Independence caveat:** the three are different publishers; their upstream data vendors are not disclosed on the pages, so independence beyond publisher is `NOT_DEMONSTRATED`. The repository's defined MLB set (statsapi + ESPN + one independent box) is met.
+- **Attempt ledger (`SOURCES.md` §1.7):**
+  - ROUTE 1 | Baseball-Reference box | `…/boxes/WAS/WAS202609260.shtml` | 10:58:43 | `BLOCKED` (HTTP 403, Cloudflare challenge) | none | —
+  - ROUTE 2 | same, through `r.jina.ai` | 10:58:45 | `BLOCKED` (HTTP 403 `AbuseAlleviationError`) | none | —
+  - ROUTE 3 | Yahoo scoreboard `?date=2026-09-26` | 10:59:16 | `WRONG_EVENT`: the page keys on the caller's AEST date and lists Friday 25 September's game (WAS 7-6 NYM) | none | —
+  - ROUTE 4 | CBS `…/MLB_20260926_NYM@WSH/` | 10:59:09 | `WRONG_EVENT`: the response is the generic scores page and contains no data for this game | none | —
+  - ROUTE 5 | AP hub | 10:59:18 | `BLOCKED` (403 challenge) | none | —
+  - The Yahoo game page was then opened by its game URL; the Yahoo scoreboard for `date=2026-09-27` (11:00:06) also lists WAS 1-7 NYM.
+- **Wrong-event finding.** ESPN event **401696434**, cited by the embedded settlement, is **Los Angeles Angels at New York Mets, 2025-07-23** (NYM 6, LAA 3; response SHA `97e225ae7874499953883eaf12e9bf282552945c43a5fa6e4b91ea5acf450011`). It is not this game.
+
+#### 3.2 Issue state — verified from the feed
+
+| Fact | Value | Source |
+|---|---|---|
+| Scheduled start | 2026-09-26 16:35:00Z = 12:35 EDT = 2026-09-27 02:35 AEST | feed `gameData.datetime` |
+| Actual first pitch | 16:37:00Z (`gameInfo.firstPitch`); the first pitch event is stamped 16:37:23.972Z (= 02:37:24 AEST) | feed `gameInfo`; `liveData.plays` |
+| Issued card's freeze | 2026-09-26 16:37:50Z (from the card) | issued card, Field 8 |
+| Freeze minus first pitch | **+26 s** after the first pitch event (+50 s after `gameInfo.firstPitch`; +2 min 50 s after the scheduled start) | computed |
+
+The card was issued after the first pitch. The card's own label, `LIVE-ISSUED VIEW` (In Progress, 0-0, top 1st), is **confirmed**. It is excluded from pregame scoring and from every performance cohort. The card states that no in-game event entered the distribution; nothing in the record contradicts that.
+
+#### 3.3 Process record (read from statsapi feed and boxscore; box SHA `300aa35fd76e7fb64fa20154827bfaf9c4d1dddcd4c8f22d62c0bbdf5132b52e`, 10:57:14)
+
+- **Line score:** NYM 0-0-0-0-0-0-4-1-2 = 7; WSH 0-0-1-0-0-0-0-0-0 = 1. **R-H-E: NYM 7-9-1, WSH 1-3-1.** LOB NYM 7, WSH 5. The game ended after nine innings (no extras).
+- **Game facts:** time 2:43 (163 minutes); attendance 27,284; first pitch 12:37 PM; 67 degrees, Overcast; wind 16 mph, In From LF; umpires HP Austin Jones, 1B Jen Pawol, 2B James Hoye, 3B Sean Barber.
+- **Pitching (feed and ESPN agree):**
+  - NYM: Jonah Tong 5.0 IP, 3 H, 1 R, 1 ER, 1 BB, 9 K, 87 pitches; Dedniel Núñez 1.0 IP, 0 H, 3 K (W, 2-1); Nate Lavender 1.0 IP (H); Devin Williams 1.0 IP; Tobias Myers 1.0 IP, 2 K. The four relievers allowed no hit and no run.
+  - WSH: Connelly Early 3.0 IP, 1 H, 0 R, 0 BB, 1 K, 34 pitches, 10 batters faced; Jake Irvin 5.0 IP, 7 H, 5 R, 4 ER, 2 BB, 6 K, 2 HR, 101 pitches (L, 2-10); Richard Lovelady 1.0 IP, 1 H, 2 R, 2 ER, 2 BB, 1 K, 1 HR.
+  - Pitcher by half-inning: Early innings 1-3, Irvin 4-8, Lovelady 9 (WSH); Tong 1-5, Núñez 6, Lavender 7, Williams 8, Myers 9 (NYM).
+- **Scoring plays (feed):** B3 Ortiz sacrifice fly, Nuñez scores (WSH 1-0); T7 A.J. Ewing 3-run HR off Irvin (NYM 3-1); T7 Ronny Mauricio HR off Irvin (4-1); T8 Brett Baty reaches on a fielding error by shortstop Nasim Nuñez, Carson Benge scores (5-1); T9 Mauricio 2-run HR off Lovelady (7-1). WSH led 1-0 through six innings.
+- **Disruptions (feed `Game Advisory` events):** an On-field Delay in the bottom of the 3rd (17:14:39Z-17:14:53Z as stamped) and an Injury Delay in the top of the 9th (19:08:57Z-19:09:10Z) after Juan Soto was hit by a pitch by Lovelady; pinch-runner Nick Morabito replaced Soto. The reason for the first delay and the nature of the second are not in the feed (`UNKNOWN`). Both are hindsight facts.
+- **Substitutions:** WSH José Tena pinch-hit in the 5th slot (for Brady House); Jorbit Vivas took 2B in the 9th slot, with Abrams moving from 2B to SS.
+- **Classification:** endpoint and conversion facts are clean. The outcome is a variance and weighting case, not an endpoint problem (see 3.8).
+
+#### 3.4 Lineup diff (names as printed on the issued card; feed starters are the `…00` batting-order entries)
+
+- **NYM: 9 of 9 named starters started** (Lindor DH, Soto LF, Bichette 3B, Benge RF, Vientos 1B, Baty SS, Alvarez C, Ewing CF, Mauricio 2B).
+- **WSH: 9 of 9 named starters started** (Wood RF, Ortiz DH, Crews CF, Abrams **2B** [feed `allPositions` 2B then SS], House 3B, Lile LF, Morales 1B, Ruiz C, Nuñez SS). The card's printed positions match the feed.
+- **Starting pitchers:** Tong and Early started as named. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+- **Card facts re-checked against the record:** umpire crew equal; weather and wind equal to the gamefeed block at freeze; Early's Triple-A rehab lines exact (2026-09-15: 1.0 IP, 35 pitches, 3 ER; 2026-09-20: 1.2 IP, 40 pitches, 0 ER; `people/813349` game log, SHA `d4d02a62e5be48e9471d9ee951c413553a09487e0a76e1c3526ec5407b895c99`) and his last MLB start on 2026-06-30 exact; the previous day's bullpen usage exact (gamePk 822681, 2026-09-25: Yan 37, Pintaro 17, Pérez 22, Hagenman 70, Lavender 14; Varland 14, Cruz 7, Sinclair 18, Gray 18; SHA `111909eaf0e7fe2c14cd3a4d45f60ca45561e495033cd752de922ab5306b8682`). One mislabel: Andrew Alvarez (101 pitches) was that game's Nationals starter, listed on the card under bullpen.
+
+#### 3.5 z-scores (card centre and width as issued)
+
+- **z_total** = (8 − 10.00) / 4.50 = **−0.44**.
+- **z_margin** (WSH − NYM, the card's orientation; centre WSH +0.10, width 4.50) = (−6 − 0.10) / 4.50 = **−1.36**. From the Mets' side the same miss is +1.36.
+- Both are inside |z| 1.5.
+
+#### 3.6 Settlement table (copied from the issued Field 4; the repository adapter `settle()` returns the same results)
+
+| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---:|---|---|---:|---|
+| 1 | Mets +1.5 | Margin | 0.640 | 0.668 | 0.638 | 0.6249 (`TB1_NO_RES`) | **WIN** | 0.1296 | `LIVE_ISSUED` |
+| 2 | Nationals +1.5 | Margin | 0.635 | 0.661 | 0.638 | 0.6516 (`TB1_NO_RES`) | **LOSS** | 0.4032 | `LIVE_ISSUED` |
+| 3 | Over 8.5 | Total | 0.590 | 0.593 | 0.491 | 0.5332 (`TB1_NO_RES`) | **LOSS** | 0.3481 | `LIVE_ISSUED` |
+| 4 | Under 8.5 | Total | 0.410 | 0.407 | 0.509 | 0.4668 (`TB1_NO_RES`) | **WIN** | 0.3481 | `LIVE_ISSUED` |
+| Winner | Washington Nationals | — | 0.510 | — | not printed on the card | not printed on the card | **LOSS** | 0.2601 | — |
+
+- **Mean row Brier(p) (four rows): 0.3073.** Brier(p) on a `LIVE_ISSUED` card is descriptive and excluded from pregame scoring.
+- **Descriptive decision-level comparison** (covering pair counted as two rows, forced pair once as the higher-ranked row; n = 3): card 0.2936 against baseline 0.2597, difference +0.0339. One late-issued game: **no inference**; not entered in any ledger.
+- **Rank-1:** WIN (Mets +1.5). **Hit@2:** 1/2, **MECHANICAL** (R1 and R2 are opposite +1.5 lines, a `COVERING_PAIR`: at least one always wins). **Top over/under preferred side:** Over 8.5 (issued preferred side of the forced pair) LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Nationals at 0.510, wrong.
+- **Realised outcome state (issued family table):** F1b, Mets win by 2+ with Under 8.5, mass **0.1496**. The embedded working settlement's "F1 and F3 masses of 0.245 and 0.165" are not on the card.
+- **SHADOW:** as issued, `SHADOW: MISSED STARTED_OR_NOT_PREGAME` (frozen with the card). Under the current md-only regime the line would read `SHADOW: NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN` as issued; no change.
+
+#### 3.7 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Hits and errors | NYM 7-11-1; WSH 1-5-0 | NYM 7-9-1; WSH 1-3-1 | statsapi linescore; ESPN | |
+| 2 | Time of game | 2h 58m | 2:43 (163 min) | statsapi `info`, `gameInfo` | |
+| 3 | Attendance | 26,452 | 27,284 | statsapi; ESPN | |
+| 4 | Tong's line | 4.2 IP, 1 H, 6 K, 4 BB | 5.0 IP, 3 H, 1 R, 1 BB, 9 K, 87 pitches | statsapi box; ESPN | |
+| 5 | Early's line | 54 pitches, 2 H, 2 BB, 4 K | 34 pitches, 1 H, 0 BB, 1 K | statsapi box; ESPN | The card's ceiling was about 50-65 pitches (2.1-3.2 IP): the innings fit, the pitch count was below it |
+| 6 | Score through six innings | "locked in a 1-1 tie" | WSH 1-0 | linescore | |
+| 7 | Seventh-inning narrative | Irvin "turned to" as a reliever in the 7th; bases loaded; Alonso and Winker | Irvin pitched innings 4-8; the 7th was Ewing's 3-run HR and Mauricio's HR; **Alonso and Winker are not in either boxscore** | statsapi plays and box | The embedded text is unsupported |
+| 8 | Mets relievers | Núñez, Garrett, Díaz | Núñez, Lavender, Williams, Myers; **Garrett and Díaz did not pitch** | statsapi box; ESPN | |
+| 9 | Fielding error | implied 7th | 8th, by WSH shortstop Nasim Nuñez | statsapi plays | |
+| 10 | Disruption facts | "None" | Two `Game Advisory` events (bottom 3rd on-field delay; top 9th injury delay, Soto, replaced by pinch-runner Morabito) | statsapi plays | |
+| 11 | ESPN lineage | event 401696434 | That is LAA at NYM, 2025-07-23. Correct event: **401817091** | ESPN scoreboard and summaries | Wrong event |
+| 12 | Baseball-Reference lineage | box `WAS202609270`, shown as agreeing | The URL date is 2026-09-27 (a different game); the site returned 403 here on the correct date | attempt ledger | The lineage was not retrieved |
+| 13 | Settlement baseline | 0.500 for every row | 0.638 / 0.638 / 0.491 / 0.509 as issued | issued Field 4 | `M35` |
+| 14 | TEAM_BASELINE_P | `TB1_NO_RESOLUTION` (numbers dropped) | 0.6249 / 0.6516 / 0.5332 / 0.4668 as issued, with `TB1_NO_RES` | issued Field 4 | `M35`, `M29` |
+| 15 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10; `CARD_AND_LOG_TEMPLATES.md` §2 | q is scored only as the pre-registered diagnostic on pregame cards |
+| 16 | Section 1 table start | 2026-09-28 03:05 AEST | 2026-09-27 02:35 AEST (16:35Z) | feed `datetime` | |
+| 17 | Realised family masses | "0.245 and 0.165" | F1b 0.1496 | issued family table | |
+| 18 | Early "departed after 54 pitches" | 54 | 34 | statsapi box | |
+
+Items 7, 8, 9, 10, 11 and 12 also make the embedded `C-PROCESS-RECORD-PROVENANCE` line untrue as written: the process facts it lists were not all read from the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` where it disagrees with the feed.
+
+#### 3.8 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Mets +1.5) won; Rank 2 (Nationals +1.5) lost, mechanically; the top over/under (Over 8.5, Rank 3) lost; the projected winner was wrong.
+
+**B. Every pick.**
+1. *Mets +1.5, WIN.* Held: a near coin-flip side (issued winner probability 0.510 for WSH), so a +1.5 on either side was the likely cover. It covered through the win branch (mass 0.490) and not the lose-by-one branch.
+2. *Nationals +1.5, LOSS.* State F1 (Mets by 2+, issued mass 0.3650) is the named state that kills this row, and it occurred. Because the pair is covering, one row winning guaranteed the other's loss once the margin exceeded one. That is arithmetic, not skill or error.
+3. *Over 8.5, LOSS.* Total 8, half a run under the line, `z_total` −0.44, against an issued P(Under 8.5) of 0.410. **Held:** both probables started; both orders were exact; umpires, wind (16 mph in from LF) and weather matched; Early's short outing fell inside the modelled 2.1-3.2 innings; the Washington bullpen did concede runs (Irvin 5, Lovelady 2), so the exposure mechanism operated on the Nationals' pitching side. **Failed:** the Nationals scored once (3 hits) against Tong and four scoreless relievers, while the card's centre of 10.00 carried Washington's 5.09 R/G. **Cause:** genuine variance on a 41% outcome, plus one weighting question that is a check on the card's arithmetic (see G1). Not `predictable and missed`.
+4. *Under 8.5, WIN.* The non-preferred side of the forced pair; same event.
+5. *Projected winner, LOSS.* Issued 0.510 Nationals; the Mets won 7-1. A coin flip.
+
+**C. Enhanced review (`TOP_OU_REVIEW`, Over 8.5). Rank 1 did not lose, so no Rank-1 review is triggered.**
+- *Why Rank 3.* q 0.593, LEAN tier, below the two +1.5 rows.
+- *Did the evidence support q.* The card's own p reproduces: a negative binomial with mean 10.00 and SD 4.50 gives P(Over 8.5) 0.5915 by hand against the printed 0.5900. The evidence base was the game logs (M13 followed), the venue row (Nationals Park mean 10.83, n = 78) and a named wind adjustment.
+- *Another row above it.* Its issued p was 0.099 above `BASELINE_P` (0.491), and the departure ledger attributed it to venue and Early's bullpen exposure. No other row should have outranked it on the printed evidence.
+- *Which variable failed.* Washington's run scoring (1 run, 3 hits, 5 LOB).
+- *Rules.* `M14` and `M31` were followed (width 4.50 equals the 4.50 reference). `M3` (totals stacked off one factor) and `RULES_BASEBALL.md` control 26 (three or more same-signed adjustments are netted in one line) are the relevant checks: the card printed three positive adjustments (+0.45, +1.10, +0.65) and one negative (−0.60), but see G1.
+
+**D. Top two.** R1 and R2 are a `COVERING_PAIR`: Hit@2 1/2 is mechanical and excluded from top-two skill. P(R1 ∧ R2), the exactly-one-run game (issued 0.2750), did not occur (the margin was six). The order R1 over R2 (q 0.668 against 0.661) was a near-tie and carries no information.
+
+**E. Totals.** Scoring environment: the league mean is 8.95; Nationals Park ran 10.83 (n = 78); this game landed at 8, near the league mean and below the venue mean. Pace: 163 minutes, ordinary. Lineups and umpires as printed; weather as printed. The line (8.5) sat 0.33 SD under the card's centre; a 0.59 total at that distance is inherently near a coin flip and carries the `LEAN` tier. No rule proposal is made: an opposite-side rule would cover both sides.
+
+**F. What went right.** Identity, state and the `LIVE-ISSUED` disclosure were accurate (first pitch preceded the freeze). Eighteen of eighteen named starters, both starting pitchers, the umpire crew and the wind matched. Early's rehab log and the prior-day bullpen usage were exact. The family table sums to 1.0000, the total p reproduces by hand, and the covering pair and forced pair were labelled. The winner was called a coin flip at 0.510.
+
+**G. Blind spots.**
+
+| # | Blind spot | Available pre-game? | Mattered? | Concrete future check |
+|---|---|---|---|---|
+| 1 | The printed adjustments (+0.45, +1.10, +0.65, −0.60) sum to **+1.60**, not the printed net +1.05, so the printed centre 10.00 is not reproducible from the printed lines (an implied 10.55). | Yes, printed on the card. | It ran against the outcome: at 10.55 the same negative binomial gives P(Over 8.5) 0.6449, so it did not cause the loss. It is a `CORE_DEFECT` for reproducibility. | Run the core self-audit's "p reproducible from what is printed" check on the centre as well as each p (`CARD_AND_LOG_TEMPLATES.md` §5, B4). |
+| 2 | Andrew Alvarez, a starter, was listed under Washington's bullpen usage. | Yes. | No. | Label a prior-day starter as a starter. |
+| 3 | The core froze 26 s after the first pitch, so the card is `LIVE_ISSUED`. | Yes (a request-timing matter). | It removes the card from every pregame cohort. | Start the core at least 90 minutes before the start; freeze by 5 minutes before. |
+| 4 | No bench, IL or scratch list was printed for either side. | Yes (the boxscore lists them). | No. | Print the bench and IL lists with fetch time. |
+
+The Soto injury exit in the 9th, the on-field delay, and the Mets' 7th-9th scoring were not knowable before the start.
+
+**Kill paths that occurred (issued complements).** ¬R2 (Mets win by 2+, mass 0.3650): occurred. ¬R1 (Nationals win by 2+, mass 0.3600): did not occur. The card enumerated no total-side kill path.
+
+**The three questions.** (1) *Turned on:* Washington's offence stopped at one run while the Mets scored six late, three by home run off two Washington relievers. (2) *Knowable before issue:* the bullpen exposure was; the Washington offensive collapse was not. (3) *Smallest justified change:* none to a probability, rank, width or centre. The printed-arithmetic gap in G1 is a disclosure and reproducibility repair; nothing is promoted (`C-RULE-FREEZE`, `CURRENT_RULES.md` §D9).
+
+#### 3.9 The eight validation questions
+
+1. **Confirmed lineups obtained?** Yes: the statsapi orders at 2026-09-26 16:33:46Z (about 3.5 minutes before the first pitch), exact for both sides.
+2. **Bench, rotation, bullpen lists?** Bullpen usage yes, exact; bench and IL lists no.
+3. **Coaching information?** Managers named (Mendoza, Martinez); it did not matter to any row.
+4. **Injuries, suspensions, rest, late withdrawals?** Early's IL return and rehab ladder covered exactly; no late scratch occurred. The Soto exit came after the start.
+5. **Sources accurate and current?** Yes for every card fact I re-checked. The embedded settlement's sources were not (items 11 and 12).
+6. **Better sources available?** No for the pregame facts. For settlement, Yahoo Sports proved a usable third box; Baseball-Reference stayed blocked.
+7. **Blind spots?** Section G.
+8. **Future handling?** The G-table checks; nothing is promoted.
+
+---
+
+### Settlement — P-522 (Liga Endesa, La Laguna Tenerife v Casademont Zaragoza, ACB match 105380)
+
+**Retrievals:** 2026-09-30 11:01-11:09 AEST. **State:** FINAL (`FINALIZED`).
+
+#### 3.10 Terminal state — three lineages (`RULES_BASKETBALL.md` §0.5; `SOURCES.md` §3.2, §1.7)
+
+| # | Lineage | Endpoint and retrieval (AEST) | Terminal marker | Score | Response SHA-256 |
+|---|---|---|---|---|---|
+| 1 | ACB Live match centre (field owner) | `https://live.acb.com/es/partidos/la-laguna-tenerife-vs-casademont-zaragoza-105380/resumen`, 11:01:14; the statistics view `…/estadisticas` 11:01:18 | Embedded match header `matchId 105380`, `status FINALIZED`, `currentQuarter 4`, `timeLeft 00:00`, `start 2026-09-27T11:00:00Z` | LLT 80, CAZ 81; quarters 18-18, 20-26, 27-24, 15-13 | resumen `58dbe432749dd7f18bb8a757dfd780afda0c3ec16e905d709aaf28a60086de06`; estadisticas `5ea6195ce2c2cce6c3d13cc8e1cd3529d44942b2ca4f4a64370a54251c401352` |
+| 2 | CB Canarias official club report | `https://cbcanarias.net/2026/09/27/cruel-final-tras-un-gran-esfuerzo/`, 11:08:35 | Post-game report, "(80-81)", dated 2026-09-27 15:40 as printed on the page | LLT 80, CAZ 81 | `53656ca8386d05e9fa7793214d83c7005718e9affa61a3387b25c2ae1522a505` |
+| 3 | Sportaragon post-game crónica (independent regional media) | `https://www.sportaragon.com/articulo/basket-zaragoza/cronica-laguna-tenerife-80-81-casademont-zaragoza-otra-historia/20260927154519160141.html`, 11:04:06 | Title "La crónica de La Laguna Tenerife (80-81) Casademont Zaragoza" | LLT 80, CAZ 81 | `c96a658ad0864407a197d0991d413b89768d4cdc0ef2348a5db0d72a05dc6297` |
+
+- **Further corroboration:** El Periódico de Aragón post-game crónica (`…/2026/09/27/laguna-tenerife-casademont-directo-134715856.html`, 11:04:10, "80-81", SHA `3a0415a6a0e64c40ca3d2c8b7afc8c64a0402198ac500fbfa28548f943e37266`).
+- **Final-marker disclosure:** the explicit final marker (`FINALIZED`, 00:00, quarter 4) is in lineage 1. Lineages 2 and 3 are post-game reports that state the final score. `SOURCE_LINEAGE_NOTE`: the club report may draw on ACB statistics; it is counted as the official club source under `SOURCES.md` §1.7 and not as independent collection. No overtime: four quarters, 161 points in regulation.
+- **Same lineage, not counted:** `https://www.acb.com/partido/ver/id/105380` (11:03:33) renders the same "ACB Live Resumen del Partido" page (`SOURCES.md` §3.2: site and live stats are one lineage), SHA `6c47395bcc0a1b0b23ede73faa989b981ef1815a688eb513d1c67134b19f567b`.
+- **Wrong-event finding.** `https://www.acb.com/partido/ver/id/105379`, cited three times in the embedded settlement, is **Recoletas Salud San Pablo Burgos v Kosner Baskonia** (page title, 11:03:40, SHA `bbbcc8d5bdf827b48b5eb10533227ba978c27ca980183b20d4c681125254830b`). The issued event is 105380.
+- **Attempt ledger:**
+  - ROUTE 1 | ACB Live (resumen, estadisticas) | `OPENED` | final, quarters, starters, box, shot log | lineage 1.
+  - ROUTE 2 | Sofascore API | `https://api.sofascore.com/api/v1/sport/basketball/scheduled-events/2026-09-27`, 11:03:47 | `BLOCKED` (HTTP 403) | none.
+  - ROUTE 3 | Proballers match 866388 | 11:08:39 | `BLOCKED` (HTTP 403, Cloudflare challenge) | none.
+  - Discovery only (not evidence): a DuckDuckGo HTML search (11:03:48) found the club and media pages above.
+- **Not available from any retrieved page:** attendance, referees, game duration. The ACB pages carry only the labels; no value is printed. Tip wall-clock time: `NOT_RETRIEVED` (the payload has no wall-clock event time).
+
+#### 3.11 Issue state
+
+| Fact | Value | Source |
+|---|---|---|
+| Scheduled start | 2026-09-27 11:00:00Z = 12:00 WEST = 21:00 AEST | ACB match header `start` |
+| Issued card's evidence freeze | 2026-09-27 20:59:43 AEST = 10:59:43Z; the card records `NOT_STARTED` then | issued card |
+| Issued card's issuance check | 21:02 AEST = 11:02Z, `STARTED` | issued card |
+| Freeze minus scheduled start | −17 s (`CURRENT_RULES.md` §B asks for the freeze at least 5 minutes before the start) | computed |
+
+The card's own label, `LIVE_ISSUED`, stands: the issuance state was `STARTED`. The evidence freeze preceded the scheduled start by 17 seconds; the actual tip time is `NOT_RETRIEVED`. The card is excluded from pregame scoring and every performance cohort.
+
+#### 3.12 Process record (ACB Live statistics payload)
+
+- **Final:** La Laguna Tenerife 80, Casademont Zaragoza 81 (regulation, four quarters). Quarter scores (LLT-CAZ): 18-18, 20-26, 27-24, 15-13. Half-time 38-44; after three quarters 65-68.
+- **Team box (full game):**
+  - LLT: 2P 16/41, 3P 10/29, FT 18/21, rebounds 35 (12 offensive), assists 15, turnovers 6. Q4: 2P 3/12, 3P 0/4, FT 9/10, 15 points.
+  - CAZ: 2P 14/25, 3P 15/34, FT 8/15, rebounds 37 (7 offensive), assists 19, turnovers 18. Q4: 2P 1/3, 3P 3/9, FT 2/4, 13 points.
+  - Free throws: 36 attempted, 26 made. Player points sum to 80 and 81.
+- **Estimated possessions** (field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts; an estimate, not an ACB-published figure): LLT about 73.2, CAZ about 76.6; about 109.2 and 105.7 points per 100 possessions.
+- **Individuals (box):** Bell-Haynes 19 points; Blumbergs 16 points (3P 2/6, 10 rebounds); Jaworski 15; Happ 13 (5 rebounds); Huertas 12 (2 rebounds, 3 assists, bench); Guy 11 (3P 3/6); Abromaitis 7 (10 rebounds).
+- **Closing sequence (ACB shot log):** Jaworski's two-point basket made it 80-81 (logged at 0:02 of the fourth quarter); the last shot was **Tim Abromaitis's missed three-pointer at 0:00**. The club report says the same (Abromaitis "sobre la bocina"). The stated time of the winning basket differs by source (Sportaragon: six tenths; the club: eight tenths; the ACB log: 0:02); this does not affect settlement.
+- **Coaches (payload `headCoach`):** LLT Jaka Lakovic; CAZ Gonzalo García de Vitoria.
+
+#### 3.13 Lineup diff (names as printed on the issued card; ACB `isStarted`)
+
+- **LLT: 5 of 5 named starters started:** Kyle Guy, Bruno Fitipaldo, Xabi López-Arostegui, Ethan Happ, Aaron Doornekamp.
+- **CAZ: 5 of 5 named starters started:** Gabe (Gabriel) Olaseni, Trae Bell-Haynes, Roberts Blumbergs, Miguel González, Justin Jaworski.
+- **Benches:** both 12-player sheets equal the card's; Alderete and Kurucs (LLT) and Lukic (CAZ) barely or never played. Bango (absent per the card's medical note) and Giedraitis (out long term) are not in either box.
+- **Coaches** equal the card's. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+
+#### 3.14 z-scores (card centre and width as issued)
+
+- **z_total** = (161 − 177.50) / 18.50 = **−0.89**.
+- **z_margin** (LLT − CAZ = −1; centre LLT +5.50, width 15.00) = (−1 − 5.50) / 15.00 = **−0.43**.
+
+#### 3.15 Settlement table (copied from the issued Field 5 ranked table)
+
+| Rank | Contract | Class | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---|---|---|---:|---|
+| 1 | Combined Total: Over 169.5 Points | `total_over` | 0.667 | 0.708 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.4449 | `LIVE_ISSUED` |
+| 2 | Tenerife −3.5 | `hcp_minus` | 0.553 | 0.535 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.3058 | `LIVE_ISSUED` |
+| 3 | Combined Total: Over 179.5 Points | `total_over` | 0.457 | 0.480 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.2088 | `LIVE_ISSUED` |
+| 4 | Zaragoza +9.5 | `hcp_plus_nb` | 0.605 | 0.342 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **WIN** | 0.1560 | `LIVE_ISSUED` |
+| Winner | La Laguna Tenerife | — | 0.643 | — | not printed | not printed | **LOSS** | 0.4134 | — |
+
+- **Contract settlement:** the total was 161, so both Overs lost; the home margin was −1, so Tenerife −3.5 lost and Zaragoza +9.5 won. No push (all lines are half-points).
+- **Mean row Brier(p): 0.2789** (descriptive; `LIVE_ISSUED`). Baselines are `NOT_YET_DERIVED`, so no baseline comparison is made.
+- **Rank-1:** LOSS. **Hit@2:** 0/2, **real** (the top two, Over 169.5 and Tenerife −3.5, are not a covering pair; Tenerife −3.5 with Zaragoza +9.5 is, and they were Ranks 2 and 4). **Top over/under:** Over 169.5 LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Tenerife at 0.643, wrong.
+- **Realised outcome cell (issued nine-cell table):** total ≤ 169 with Tenerife margin ≤ 3, mass **0.1487**. This is also the issued P(¬R1 ∧ ¬R2) of 0.1487. The embedded settlement's "F3 (Zaragoza win, Under 169.5) carried 0.145" is not a cell on the card.
+- **SHADOW:** as issued, `SHADOW: NO_LANE` (no Liga ACB lane). Current regime: `NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE` as issued; no change.
+
+#### 3.16 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Event reference (all three lineages) | acb.com `…/id/105379` | That page is Burgos v Baskonia. The issued event is **105380** | acb.com 105379 and 105380 | Wrong event |
+| 2 | Third lineage | "Marca" and the "ACB Endesa Official Game Sheet", called independent | Not shown to be independent: the game sheet is the ACB lineage, and Marca was not retrieved in this session. Replaced by lineages 2 and 3 above | attempt ledger | |
+| 3 | Lineup diff | LLT: Huertas, Guy, **Sastre**, Doornekamp, Happ; CAZ: Bell-Haynes, **"Jordan" Homesley, Yusta**, Blumbergs, **Bango** | ACB `isStarted` equals the card's ten names; Huertas and Homesley (the ACB sheet lists Caleb, not "Jordan") were bench players; Sastre and Yusta are on neither sheet; **Bango did not play** | ACB stats payload | The embedded diff used names that are not on the card (audit `10n`) |
+| 4 | Tenerife coach | "Txus Vidorreta" | **Jaka Lakovic** | ACB payload `headCoach`; club report | |
+| 5 | Attendance 4,890 and duration 1h 56m | asserted | **Not present** in any retrieved page | pages listed above | `PROCESS_RECORD_UNVERIFIED` for both fields |
+| 6 | Q4 shooting | "5-of-17 from the field" | Q4 field goals 3/16 (2P 3/12, 3P 0/4) plus FT 9/10 | ACB Q4 team totals | |
+| 7 | Free throws | "only 32 total free throws" | 36 attempted, 26 made | ACB box | |
+| 8 | Pace | "68 possessions, ~19 seconds per possession" | About 73-77 possessions per side (estimate); 40 minutes over about 75 possessions is about 32 seconds each | ACB box; estimator above | The "pace suppression" thesis is unsupported: no ACB pace reference exists (`NOT_YET_DERIVED`) |
+| 9 | Final shot | "Kyle Guy missed a contested pull-up jumper at the buzzer" | **Tim Abromaitis's missed three-pointer at 0:00** | ACB shot log; club report | |
+| 10 | Blumbergs | "16 pts, 4/5 3PT" | 16 points, **3P 2/6** | ACB box | Points matched |
+| 11 | Individual lines | Huertas "12 pts, 6 ast"; Happ "13 pts, 8 reb" | Huertas 12 pts, **3 ast**; Happ 13 pts, **5 reb** | ACB box | |
+| 12 | Halftime orientation | mixed | 38-44 (LLT-CAZ) throughout | ACB quarters | |
+| 13 | Settlement baseline and TEAM_BASELINE_P | 0.500 and `TB1_NO_RESOLUTION` | `NOT_YET_DERIVED:acb` and `NOT_COVERED:acb` as issued | issued Field 5 | `M35`, `M29` |
+| 14 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10 | |
+| 15 | Realised state | "F3 … 0.145" | cell (T ≤ 169, M ≤ 3) = 0.1487 | issued nine-cell table | |
+| 16 | "Systemic Calibration Pathology" and "exempt basketball spreads from `hcp_plus_nb`" | asserted as a finding | One cushion row won at q 0.342 (n = 1 here, n = 2 with P-521, both cards excluded). No coefficient follows from one game (L-087, `M27`) | `CURRENT_RULES.md` §D6, §D9 | Parked below |
+| 17 | "Anchor Tenerife home games on lower baseline totals (~162-165) under Vidorreta" | asserted | Unsupported: wrong coach, one game | ACB payload | |
+
+The embedded `C-PROCESS-RECORD-PROVENANCE` line for P-522 is untrue as written: items 1, 3, 4, 6, 7, 9, 10 and 11 contradict the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` wherever it disagrees with the ACB record.
+
+#### 3.17 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Over 169.5) lost; Rank 2 (Tenerife −3.5) lost; Rank 3 (Over 179.5) lost; Rank 4 (Zaragoza +9.5) won; the projected winner (Tenerife, 0.643) was wrong. The top two both lost.
+
+**B. Every pick.**
+1. *Over 169.5, LOSS.* Total 161, 8.5 points under the line and 16.5 under the card's centre; `z_total` −0.89; issued P(T ≤ 169) 0.3327. **Held:** official starters (10 of 10), both benches, coaches, the medical absences (Bango and Giedraitis did not play), indoor venue. **Failed:** both teams scored under their 2025-26 reference lines: Tenerife 80 against a home reference of 90.18 points for (10.2 below), Zaragoza 81 against an away reference of 85.76 (4.8 below). Zaragoza turned the ball over 18 times to Tenerife's 6, and Tenerife shot 3/16 in the fourth quarter. **Cause:** variance in a LOW-grade, no-baseline opener (see C); not `predictable and missed`.
+2. *Tenerife −3.5, LOSS.* Tenerife lost by one; the kill path "Tenerife margin ≤ 3" (issued 0.4470) occurred. The issued P(both top-two rows fail), 0.1487, is the cell that occurred.
+3. *Over 179.5, LOSS.* Nested inside Over 169.5: it died in the same slow-game state.
+4. *Zaragoza +9.5, WIN.* Zaragoza won outright (a covering-pair partner of Tenerife −3.5). The issued cushion decomposition (Zaragoza win 0.3568 plus lose by 1-9 0.2483) was carried by the win branch. The card's stated reason (Zaragoza's changed roster) is an unproven mechanism; a one-point loss and a win are both inside the cover.
+5. *Projected winner, LOSS.* Issued 0.643, a 36% event.
+
+**C. Rank-1 loss: enhanced review.**
+- *Why Rank 1.* Issued p 0.667 (a total read from N(177.5, 18.5²)); q 0.708, tier STRONG. The card said in advance that the STRONG tier was formal only, that there is no ACB predictability row, that the grade was LOW, and that the second pick was near a coin flip.
+- *Did the evidence support q.* The card's reads reproduce exactly by hand (P(T ≥ 170) 0.6673, P(T ≥ 180) 0.4570, P(M ≥ 4) 0.5530, P(M ≤ 9) 0.6051). The centre 177.5 came from the official 2025-26 home and away logs (reference 178.91), shrunk toward the ACB league mean of 176.20. It rested on one season of 17 home and 17 away games and on rosters that had changed: the new Tenerife coach and Zaragoza's turnover. The pre-game evidence supported a probability of about two in three; it did not support more.
+- *Should another row have outranked it.* By the card's own p, Zaragoza +9.5 (0.605) sat above Tenerife −3.5 (0.553). RM-1's cushion penalty (a disclosed `SIDE_FLIP`, `LARGE_RECALIBRATION`) reversed them and put Zaragoza +9.5 last. On p, the top two would have been Over 169.5 and Zaragoza +9.5, a Hit@2 of 1/2. Under the current p-ranked pipeline (`CURRENT_RULES.md` header, U9) new cards order this way. **This is one game and does not show that the cushion penalty is wrong**: the held-out evidence in `CURRENT_RULES.md` §D6 is that flipped sides won at their q, and a q of 0.342 wins about one time in three.
+- *Which variable failed.* Total points: both teams under their reference scoring. The estimated possessions (about 75 per side) and about 107 points per 100 possessions cannot be compared with an ACB reference, because none exists in `BASE_RATES_REGISTER.md` §7 (`NOT_YET_DERIVED`).
+- *Existing rules and recurring mistakes.* Followed: `M13` (game logs before aggregates), `M14` (total p from the card's own centre and width, reproducible), `M19`/`M25` (official starters retrieved and matched, 10 of 10), `M31` (width 18.5 against the card's diagnostic 17.46, ratio 1.06), `M32` (the cushion priced as a non-baseball cushion, flip disclosed), `M28` (the covering pair labelled). Not applicable: `M4` (no overtime). No pre-game rule was violated by the issued card apart from what it disclosed (LIVE_ISSUED, universe, baselines).
+- *Variance or rule change.* Variance, within the LOW grade the card assigned. No rule change is proposed.
+
+**D. Top two.** Over 169.5 and Tenerife −3.5: P(R1 ∧ R2) 0.3690 and P(¬R1 ∧ ¬R2) 0.1487 as issued; the both-fail cell occurred. Their order was not justified by p (0.667, 0.553) over Zaragoza +9.5 (0.605); it was justified only by RM-1 q. Hit@2 0/2 is a real result, not mechanical.
+
+**E. Totals.** Indoor; no weather. Scoring environment: the card's centre 177.5 against a league mean of 176.20 (SD 17.46); the realised 161 is 0.87 league SDs below the mean. Pace and efficiency cannot be judged against a reference (none exists). Rosters and coaches as on the card. The line 169.5 sat 8.0 below the centre; 179.5 sat 2.0 above it and was a near coin flip (0.457). The total was inherently uncertain in an opening round with new coaching and rosters. A width of 18.5 was already at the reference scale; no rule proposal is made.
+
+**F. What went right.** Every pre-game fact matched the official record: ten of ten starters, both twelve-player benches, both head coaches, both medical absences, the venue and the start time. Every printed p reproduces by hand. The card disclosed its own limits (LOW grade, formal-only STRONG, no ACB baseline, a near-coin-flip second pick, the `SIDE_FLIP`). Of the two spread rows, the higher-p one (Zaragoza +9.5, 0.605) won. The covering pair and the nested Over rows were labelled correctly.
+
+**G. Blind spots.**
+
+| # | Blind spot | Available pre-game? | Mattered? | Concrete future check |
+|---|---|---|---|---|
+| 1 | No ACB pace or efficiency reference, and no turnover-rate input, so a 161-point game could not be decomposed against anything (Zaragoza had 18 turnovers). | Partly: the 306 official 2025-26 results were compiled by the P-521 card, and the ACB box carries turnovers. | It limits explanation, not the issued probability. | Derive the ACB total, margin, pace and turnover references from those official results before a further ACB card (`BASE_RATES_REGISTER.md` §7 `NOT_YET_DERIVED:acb`). |
+| 2 | The winner probability 0.643 used no continuity correction (P(M > 0) as Φ(5.5/15)). Under the convention the card used for its four contracts, P(M ≥ 1) is 0.6306. | Yes, printed. | Scored as issued; a 0.012 difference. | Apply one continuity convention to the winner row. `CORE_DEFECT`, minor. |
+| 3 | The evidence freeze was 17 s before the scheduled start and the card was issued after the tip. | Yes (request timing). | `LIVE_ISSUED`. | Start the core at least 90 minutes before the start. |
+| 4 | Two coaches new to the sample (Lakovic; a rebuilt Zaragoza) were flagged but not quantified. | Partly. | Unknown. | Keep them as width, never a lean (G-L2, `M11`). |
+
+**Kill paths that occurred (issued).** Slow game, total ≤ 169 (0.3327): occurred, killing both Overs. Tenerife margin ≤ 3 (0.4470): occurred, killing Tenerife −3.5. Tenerife margin ≥ 10 (0.3949): did not occur.
+
+**The three questions.** (1) *Turned on:* a total 16.5 points below the card's centre in a game decided by one basket, with 18 Zaragoza turnovers, Tenerife's 3/16 fourth-quarter shooting, and both teams under their reference scoring. (2) *Knowable before issue:* the roster and coaching uncertainty was; the scoring shortfall was not. (3) *Smallest justified change:* none to any probability, rank, width or centre. The winner-row continuity point (G2) is a presentation repair; nothing is promoted.
+
+#### 3.18 The eight validation questions
+
+1. **Confirmed lineups obtained?** Yes: the ACB match-sheet starters, fetched 20:57-20:59 AEST while `NOT_STARTED`, equal ACB's `isStarted` flags exactly.
+2. **Bench and rotation lists?** Yes: both 12-player sheets, equal to the final box.
+3. **Coaching information?** Yes: Lakovic and García de Vitoria, equal to the record.
+4. **Injuries, suspensions, rest, late withdrawals?** Yes: the ACB Jornada 1 medical report; Bango and Giedraitis absent, as stated.
+5. **Sources accurate and current?** Yes for the card's facts I re-checked (starters, benches, coaches, absences, start time, the arithmetic). I did not re-audit the 2025-26 game-log averages. The embedded settlement's citations were not accurate (items 1-11).
+6. **Better sources available?** For pregame, no gap in identity or availability. There was no ACB baseline source (a data gap, blind spot 1).
+7. **Blind spots?** Section G.
+8. **Future handling?** The G-table checks; nothing is promoted.
+
+---
+
+#### 3.19 Ledger rows (`CARD_AND_LOG_TEMPLATES.md` §6): listed for transparency, **NOT COUNTED**
+
+Not appended to `SKILL_BASELINE_LEDGER.md`: both cards are `LIVE_ISSUED` (rule 7 requires a verified pregame core freeze), and the 2026-09-29 formal exclusion stands. A forced pair counts once (P-518 Over 8.5); a covering pair counts as two rows.
+
+| Decision | Card | Rank | Contract (as issued) | Family | Card p | Baseline p | Baseline population (leak-free) | Result |
+|---|---|---:|---|---|---:|---|---|---|
+| P-518-R1 | P-518 | 1 | Mets +1.5 | handicap | 0.640 | 0.638 | provenance not printed on the card (`BASE_RATES_REGISTER.md` §7 MLB 2026) | W (NOT_COUNTED) |
+| P-518-R2 | P-518 | 2 | Nationals +1.5 | handicap | 0.635 | 0.638 | same | L (NOT_COUNTED) |
+| P-518-R3 | P-518 | 3 | Over 8.5 | total | 0.590 | 0.491 | same | L (NOT_COUNTED) |
+| P-522-R1 | P-522 | 1 | Combined Total: Over 169.5 Points | total | 0.667 | `NOT_YET_DERIVED` | — | L (NOT_COUNTED) |
+| P-522-R2 | P-522 | 2 | Tenerife −3.5 | handicap | 0.553 | `NOT_YET_DERIVED` | — | L (NOT_COUNTED) |
+| P-522-R3 | P-522 | 3 | Combined Total: Over 179.5 Points | total | 0.457 | `NOT_YET_DERIVED` | — | L (NOT_COUNTED) |
+| P-522-R4 | P-522 | 4 | Zaragoza +9.5 | handicap | 0.605 | `NOT_YET_DERIVED` | — | W (NOT_COUNTED) |
+
+## 4. General Learnings, Rule Changes, Observations and New Sources
+
+The rule inventory is closed (`CURRENT_RULES.md` §D9). **No rule, control, flag, weight, cap or TESTING row is created here.** No single game creates a coefficient.
+
+### Cross-sport
+- **The embedded working settlements were written, not read.** For both cards, the process narratives, lineup diff, lineage citations and player lines disagree with the official feeds (P-518 register items 1-12; P-522 items 1-11). The lineage links pointed to other games (ESPN 401696434 is a 2025 game; acb.com 105379 is Burgos v Baskonia; a Baseball-Reference URL was dated the next day, and the site is blocked from here). This is the `M26`, `M25`, `M21`, `M20`, `M29` and `M35` pattern (`C-PROCESS-RECORD-PROVENANCE`, `C-SETTLEMENT-FROM-FEED`). The existing controls cover it; the failure was execution. The repository adapter (`research/src/feeds.py`) and this append are the sourced replacement.
+- **Two cards issued after the start** (P-518 26 s after the first pitch; P-522 about two minutes after the scheduled start) were correctly labelled `LIVE_ISSUED`; the P-518 label was checked against the feed's first-pitch stamp, and P-522's rests on the card's own receipt (the tip time is `NOT_RETRIEVED`).
+- **Covering and forced pairs** made half of each top-two record arithmetic (P-518 Hit@2 1/2 is mechanical).
+
+### Sport-specific
+- **Baseball (P-518):** Early's rehab return produced 3.0 IP on 34 pitches against a modelled 50-65 pitch ceiling: innings in range, pitch count below (n = 1). Three Mets home runs (two by Mauricio) came in a game with 16 mph wind in from left field; one game, no inference. The Washington bullpen conceded all seven runs but the offence scored one.
+- **Basketball (P-522):** ACB box arithmetic (estimated possessions about 73-77 per side; 106-109 points per 100 possessions) is not comparable with any ACB reference because none is derived. Two ACB cushion rows flipped by RM-1 (P-521 Breogán +5.5, q 0.323; P-522 Zaragoza +9.5, q 0.342) both won; n = 2, both cards excluded.
+
+### Parked lessons (text for `LEARNINGS_INDEX.md` §10; **not applied**, because this session's write scope was Part 6 only)
+| Date | Card(s) | Observation | Evidence |
+|---|---|---|---|
+| 2026-09-30 | P-518 | The card's printed adjustments (+0.45, +1.10, +0.65, −0.60) sum to +1.60 while its printed net is +1.05; the centre 10.00 is not reproducible from them (an implied 10.55, which would have raised P(Over 8.5) from 0.5915 to 0.6449). It did not cause the loss. | This file, P-518 §3.8 G1 |
+| 2026-09-30 | P-518 | An ESPN event ID cited from memory was a 2025 game. The correct event resolves from `scoreboard?dates=YYYYMMDD` (401817091). | P-518 §3.1 wrong-event finding |
+| 2026-09-30 | P-522 | ACB match IDs are sequential inside a jornada: `acb.com/partido/ver/id/105379` is Burgos v Baskonia; the page title shows the teams and identifies a wrong event at once. | P-522 §3.10 |
+| 2026-09-30 | P-518 | Early (rehab return): 3.0 IP, 34 pitches, 1 H, 0 R against a modelled 50-65 pitch and 2.1-3.2 IP ceiling; the Washington bullpen then allowed 7 runs. n = 1. | P-518 §3.3, §3.8 |
+| 2026-09-30 | P-521, P-522 | Both RM-1 `SIDE_FLIP` ACB cushion rows (q 0.323 and 0.342) won. n = 2, both `LIVE_ISSUED`, both excluded; the pipeline ranks new cards by p, so this is a read-out item only. | P-522 §3.17 C |
+| 2026-09-30 | P-522 | An ACB pace, efficiency and turnover reference is `NOT_YET_DERIVED`; the embedded "pace suppression" claim (68 possessions) is contradicted by an estimate of 73-77. | P-522 §3.16 items 8, 11 |
+| 2026-09-30 | P-518, P-522 | Custody labelling: the Git blob at `753f0a9` hashes to `eea87ebd…`; the recorded "original raw-byte SHA `c4d497bf…`" is the SHA of the 141,740-byte CRLF working block that `VERIFICATION_PROTOCOL.md` §1 extracts. Both are reproducible; the label should say which. | Verified 2026-09-30; see the write-scope row above |
+
+### Source improvements (proposals; documentation only)
+- **ESPN MLB.** Resolve the event ID from `scoreboard?dates=YYYYMMDD`; the adapter list in `research/src/feeds.py` has no MLB ESPN route, so ESPN is a manual second lineage.
+- **Yahoo Sports MLB** (new, unpromoted): the game page `https://sports.yahoo.com/mlb/<away>-<home>-<gameid>/` carries JSON-LD (`EventCompleted`, `finalScore`, location). The scoreboard `?date=` follows the caller's timezone (Sunday 27 September AEST held the US Saturday game). Proposed tier: secondary. One good result never promotes a source.
+- **Baseball-Reference:** confirmed `BLOCKED` (403 direct; `r.jina.ai` `AbuseAlleviationError`). It cannot be listed as an opened lineage from here.
+- **ACB Live:** the match page embeds a JSON payload (match header with `status FINALIZED` and `quarterScores`; `statsByPeriods` with per-player `isStarted`, minutes and points; a shot log with running score). It carries no attendance, referee or duration value. `acb.com/partido/ver/id/N` renders the same page (one lineage). Working second and third routes: the club report (`cbcanarias.net`) and independent Aragón media. Sofascore's API and Proballers returned 403.
+- **CB Canarias official site:** worked; the report was posted about three hours after the game.
+
+### Data-quality issues
+- Embedded working settlements: P-518 register items 1-18; P-522 register items 1-17.
+- Custody label: see the last parked line.
+- The embedded Section 1 table lists P-518's start as 2026-09-28 03:05 AEST (verified 2026-09-27 02:35 AEST).
+- P-518's freeze (16:37:50Z) is 26 s after the first pitch event; the issued card's own label was correct.
+
+### Recurring blind spots
+- Printed arithmetic not reproducible in full (P-518 centre).
+- No league baseline for a new competition (ACB): the departure ledger and Brier comparison are unavailable.
+- Requests that leave no room for a pregame freeze (both cards).
+
+### Items needing more evidence
+- Whether RM-1 cushion flips in ACB and other European basketball are calibrated (n = 2 late-issued rows).
+- Whether Tong's and Early's outings say anything about rehab-return exposure (n = 1).
+
+## 5. Document Update Mapping
+
+| Item | Target file and section (or proposed new file and purpose) | Status |
+|---|---|---|
+| P-518 and P-522 sourced settlement, corrections registers, retrospectives | This file, §3 (this working continuation) | DONE |
+| Mark the P-518 and P-522 rows of the reconciliation table as "sourced settlement appended 2026-09-30; issue cutoff verified; exclusion unchanged" | `P518_P522_RECONCILIATION.md`, table rows P-518 and P-522 | TODO (maintainer; outside this session's write scope) |
+| Record that P-518 and P-522 now have a sourced settlement append, with the formal exclusion still in force | `GAME_LOG_STATUS_CURRENT.md` | TODO (maintainer) |
+| Add the seven parked lines above | `LEARNINGS_INDEX.md` §10 | TODO (maintainer) |
+| ESPN event-ID resolution; Yahoo Sports game page as a third structured MLB lineage; Baseball-Reference `BLOCKED` | `SOURCES.md` §3.1 | TODO (maintainer) |
+| ACB Live payload structure; the 105379 wrong-event trap; club and regional-media routes; Sofascore and Proballers 403 | `SOURCES.md` §3.2, ACB row | TODO (maintainer) |
+| Clarify the block-SHA label (Git blob `eea87ebd…` versus the 141,740-byte CRLF block `c4d497bf…`) | `P518_P522_RECONCILIATION.md` (header); `VERIFICATION_PROTOCOL.md` §1; the Part 6 top custody note | TODO (maintainer; documentation) |
+| Embedded row "Card P-518 settled" and "Card P-522 settled" (target `PREDICTION_LOG_COMBINED_5.md`) | Part 5 is closed to new cards and canonical import needs the reconciliation gates | DECLINED (superseded by this append; no canonical import made) |
+| Embedded row "Status update: next ID advances to P-523" | `GAME_LOG_STATUS_CURRENT.md` | DONE (the file already says P-523) |
+| Embedded `TESTING: C-BASKETBALL-CUSHION-GATE` and `TESTING: C-SEASON-OPENER-WIDTH-EXPANSION` (from P-521/P-522) | `RULES_BASKETBALL.md`; `BASE_RATES_REGISTER.md` §7.8; `LEARNING_REGISTER.md` | DECLINED as rules or tests: the inventory is closed (§D9) and one or two games create no coefficient (L-087, `M27`); parked as the P-521/P-522 and ACB-reference lines above |
+| Embedded "Rehab starter bullpen exposure observation" (P-518) | `RULES_BASEBALL.md` §0 and §4 control 25 | DECLINED as a rule; parked (Early, n = 1) |
+| Embedded "ACB Live Stats API validation" | `DATA_SOURCE_REGISTER.md` (no such file in the current tree) | DECLINED (file absent); the ACB row in `SOURCES.md` §3.2 is the target, see the source-improvement row above |
+| Ledger rows for P-518 and P-522 | `SKILL_BASELINE_LEDGER.md` prospective rows | DECLINED (`LIVE_ISSUED`; rule 7 fails; listed in §3.19 as NOT_COUNTED) |
+| Embedded `TESTING: C-STREAK-FADE-GATE`, the KBO and AFLW items | (P-519 and P-520 are outside this session) | NOT REVIEWED |
+
+## Lists
+
+**Settled entries, first to last:**
+1. P-518 — MLB, New York Mets 7, Washington Nationals 1 (gamePk 822678; `LIVE_ISSUED`).
+2. P-522 — Liga Endesa, Casademont Zaragoza 81, La Laguna Tenerife 80 (ACB 105380; `LIVE_ISSUED`).
+
+**Entries still awaiting settlement, first to last:** none of the two requested. P-519, P-520 and P-521 were **not processed** because they were outside this instruction; each keeps its reconciliation status.

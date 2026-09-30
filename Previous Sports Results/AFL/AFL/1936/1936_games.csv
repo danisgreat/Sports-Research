@@ -1,1 +1,113 @@
 Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Regular Season,Fitzroy,Carlton,Fitzroy,Carlton,Brunswick St,1936-05-02,Carlton 24.19 (163) def. Fitzroy 13.9 (87),250,76,,Carlton defeated Fitzroy by 76 points at Brunswick St.
+2,Regular Season,Hawthorn,Collingwood,Hawthorn,Collingwood,Glenferrie Oval,1936-05-02,Collingwood 15.14 (104) def. Hawthorn 12.11 (83),187,21,,Collingwood defeated Hawthorn by 21 points at Glenferrie Oval.
+3,Regular Season,Essendon,North Melbourne,Essendon,North Melbourne,Windy Hill,1936-05-02,Essendon 17.15 (117) def. North Melbourne 11.4 (70),187,47,,Essendon defeated North Melbourne by 47 points at Windy Hill.
+4,Regular Season,Geelong,Western Bulldogs,Geelong,Western Bulldogs,Corio Oval,1936-05-02,Geelong 20.24 (144) def. Western Bulldogs 10.9 (69),213,75,,Geelong defeated Western Bulldogs by 75 points at Corio Oval.
+5,Regular Season,Sydney,Melbourne,Sydney,Melbourne,Lake Oval,1936-05-02,Sydney 14.24 (108) def. Melbourne 13.9 (87),195,21,,Sydney defeated Melbourne by 21 points at Lake Oval.
+6,Regular Season,Richmond,St Kilda,Richmond,St Kilda,Punt Rd,1936-05-02,Richmond 15.17 (107) def. St Kilda 17.4 (106),213,1,,Richmond defeated St Kilda by 1 points at Punt Rd.
+7,Regular Season,Carlton,Essendon,Carlton,Essendon,Princes Park,1936-05-09,Carlton 21.19 (145) def. Essendon 5.13 (43),188,102,,Carlton defeated Essendon by 102 points at Princes Park.
+8,Regular Season,Collingwood,Richmond,Collingwood,Richmond,Victoria Park,1936-05-09,Collingwood 16.12 (108) def. Richmond 10.12 (72),180,36,,Collingwood defeated Richmond by 36 points at Victoria Park.
+9,Regular Season,Melbourne,Fitzroy,Melbourne,Fitzroy,M.C.G.,1936-05-09,Melbourne 15.17 (107) def. Fitzroy 8.11 (59),166,48,,Melbourne defeated Fitzroy by 48 points at M.C.G..
+10,Regular Season,Western Bulldogs,Hawthorn,Western Bulldogs,Hawthorn,Western Oval,1936-05-09,Hawthorn 11.7 (73) def. Western Bulldogs 8.20 (68),141,5,,Hawthorn defeated Western Bulldogs by 5 points at Western Oval.
+11,Regular Season,North Melbourne,Geelong,North Melbourne,Geelong,Arden St,1936-05-09,Geelong 11.8 (74) def. North Melbourne 9.14 (68),142,6,,Geelong defeated North Melbourne by 6 points at Arden St.
+12,Regular Season,St Kilda,Sydney,St Kilda,Sydney,Junction Oval,1936-05-09,Sydney 12.17 (89) def. St Kilda 10.11 (71),160,18,,Sydney defeated St Kilda by 18 points at Junction Oval.
+13,Regular Season,Hawthorn,Carlton,Hawthorn,Carlton,Glenferrie Oval,1936-05-16,Carlton 16.11 (107) def. Hawthorn 14.13 (97),204,10,,Carlton defeated Hawthorn by 10 points at Glenferrie Oval.
+14,Regular Season,Fitzroy,Collingwood,Fitzroy,Collingwood,Brunswick St,1936-05-16,Collingwood 25.14 (164) def. Fitzroy 12.12 (84),248,80,,Collingwood defeated Fitzroy by 80 points at Brunswick St.
+15,Regular Season,Essendon,St Kilda,Essendon,St Kilda,Windy Hill,1936-05-16,St Kilda 18.11 (119) def. Essendon 16.19 (115),234,4,,St Kilda defeated Essendon by 4 points at Windy Hill.
+16,Regular Season,Sydney,Western Bulldogs,Sydney,Western Bulldogs,Lake Oval,1936-05-16,Sydney 15.17 (107) def. Western Bulldogs 9.13 (67),174,40,,Sydney defeated Western Bulldogs by 40 points at Lake Oval.
+17,Regular Season,Geelong,Melbourne,Geelong,Melbourne,Corio Oval,1936-05-16,Geelong 14.18 (102) def. Melbourne 4.8 (32),134,70,,Geelong defeated Melbourne by 70 points at Corio Oval.
+18,Regular Season,Richmond,North Melbourne,Richmond,North Melbourne,Punt Rd,1936-05-16,Richmond 13.14 (92) def. North Melbourne 6.17 (53),145,39,,Richmond defeated North Melbourne by 39 points at Punt Rd.
+19,Regular Season,Carlton,Richmond,Carlton,Richmond,Princes Park,1936-05-23,Richmond 18.17 (125) def. Carlton 16.19 (115),240,10,,Richmond defeated Carlton by 10 points at Princes Park.
+20,Regular Season,Collingwood,Essendon,Collingwood,Essendon,Victoria Park,1936-05-23,Collingwood 20.17 (137) def. Essendon 13.10 (88),225,49,,Collingwood defeated Essendon by 49 points at Victoria Park.
+21,Regular Season,Western Bulldogs,Fitzroy,Western Bulldogs,Fitzroy,Western Oval,1936-05-23,Western Bulldogs 13.11 (89) def. Fitzroy 10.14 (74),163,15,,Western Bulldogs defeated Fitzroy by 15 points at Western Oval.
+22,Regular Season,St Kilda,Geelong,St Kilda,Geelong,Junction Oval,1936-05-23,St Kilda 19.11 (125) def. Geelong 12.10 (82),207,43,,St Kilda defeated Geelong by 43 points at Junction Oval.
+23,Regular Season,Melbourne,Hawthorn,Melbourne,Hawthorn,M.C.G.,1936-05-23,Melbourne 16.20 (116) def. Hawthorn 11.11 (77),193,39,,Melbourne defeated Hawthorn by 39 points at M.C.G..
+24,Regular Season,North Melbourne,Sydney,North Melbourne,Sydney,Arden St,1936-05-23,Sydney 18.21 (129) def. North Melbourne 7.18 (60),189,69,,Sydney defeated North Melbourne by 69 points at Arden St.
+25,Regular Season,Western Bulldogs,Carlton,Western Bulldogs,Carlton,Western Oval,1936-05-30,Carlton 13.16 (94) def. Western Bulldogs 7.17 (59),153,35,,Carlton defeated Western Bulldogs by 35 points at Western Oval.
+26,Regular Season,Collingwood,St Kilda,Collingwood,St Kilda,Victoria Park,1936-05-30,Collingwood 16.17 (113) def. St Kilda 9.14 (68),181,45,,Collingwood defeated St Kilda by 45 points at Victoria Park.
+27,Regular Season,Sydney,Essendon,Sydney,Essendon,Lake Oval,1936-05-30,Sydney 15.21 (111) def. Essendon 11.13 (79),190,32,,Sydney defeated Essendon by 32 points at Lake Oval.
+28,Regular Season,Fitzroy,Geelong,Fitzroy,Geelong,Brunswick St,1936-05-30,Fitzroy 17.19 (121) def. Geelong 17.13 (115),236,6,,Fitzroy defeated Geelong by 6 points at Brunswick St.
+29,Regular Season,Richmond,Hawthorn,Richmond,Hawthorn,Punt Rd,1936-05-30,Richmond 16.21 (117) def. Hawthorn 10.12 (72),189,45,,Richmond defeated Hawthorn by 45 points at Punt Rd.
+30,Regular Season,North Melbourne,Melbourne,North Melbourne,Melbourne,Arden St,1936-05-30,Melbourne 17.20 (122) def. North Melbourne 11.9 (75),197,47,,Melbourne defeated North Melbourne by 47 points at Arden St.
+31,Regular Season,Carlton,Collingwood,Carlton,Collingwood,Princes Park,1936-06-06,Collingwood 12.16 (88) def. Carlton 11.16 (82),170,6,,Collingwood defeated Carlton by 6 points at Princes Park.
+32,Regular Season,Essendon,Fitzroy,Essendon,Fitzroy,Windy Hill,1936-06-06,Essendon 18.19 (127) def. Fitzroy 12.14 (86),213,41,,Essendon defeated Fitzroy by 41 points at Windy Hill.
+33,Regular Season,Melbourne,Western Bulldogs,Melbourne,Western Bulldogs,M.C.G.,1936-06-06,Melbourne 13.18 (96) def. Western Bulldogs 11.14 (80),176,16,,Melbourne defeated Western Bulldogs by 16 points at M.C.G..
+34,Regular Season,Geelong,Richmond,Geelong,Richmond,Corio Oval,1936-06-06,Richmond 13.12 (90) def. Geelong 6.14 (50),140,40,,Richmond defeated Geelong by 40 points at Corio Oval.
+35,Regular Season,Hawthorn,Sydney,Hawthorn,Sydney,Glenferrie Oval,1936-06-06,Sydney 18.20 (128) def. Hawthorn 9.11 (65),193,63,,Sydney defeated Hawthorn by 63 points at Glenferrie Oval.
+36,Regular Season,St Kilda,North Melbourne,St Kilda,North Melbourne,Junction Oval,1936-06-06,St Kilda 22.15 (147) def. North Melbourne 14.24 (108),255,39,,St Kilda defeated North Melbourne by 39 points at Junction Oval.
+37,Regular Season,Carlton,St Kilda,Carlton,St Kilda,Princes Park,1936-06-13,Carlton 19.14 (128) def. St Kilda 11.9 (75),203,53,,Carlton defeated St Kilda by 53 points at Princes Park.
+38,Regular Season,Collingwood,Melbourne,Collingwood,Melbourne,Victoria Park,1936-06-13,Collingwood 14.5 (89) def. Melbourne 9.13 (67),156,22,,Collingwood defeated Melbourne by 22 points at Victoria Park.
+39,Regular Season,Richmond,Essendon,Richmond,Essendon,Punt Rd,1936-06-13,Richmond 10.18 (78) def. Essendon 10.11 (71),149,7,,Richmond defeated Essendon by 7 points at Punt Rd.
+40,Regular Season,Sydney,Fitzroy,Sydney,Fitzroy,Lake Oval,1936-06-13,Sydney 13.15 (93) def. Fitzroy 7.11 (53),146,40,,Sydney defeated Fitzroy by 40 points at Lake Oval.
+41,Regular Season,North Melbourne,Western Bulldogs,North Melbourne,Western Bulldogs,Arden St,1936-06-13,North Melbourne 12.19 (91) def. Western Bulldogs 13.7 (85),176,6,,North Melbourne defeated Western Bulldogs by 6 points at Arden St.
+42,Regular Season,Hawthorn,Geelong,Hawthorn,Geelong,Glenferrie Oval,1936-06-13,Hawthorn 12.19 (91) def. Geelong 7.6 (48),139,43,,Hawthorn defeated Geelong by 43 points at Glenferrie Oval.
+43,Regular Season,North Melbourne,Carlton,North Melbourne,Carlton,Arden St,1936-06-20,North Melbourne 13.8 (86) def. Carlton 9.13 (67),153,19,,North Melbourne defeated Carlton by 19 points at Arden St.
+44,Regular Season,Western Bulldogs,Collingwood,Western Bulldogs,Collingwood,Western Oval,1936-06-20,Collingwood 16.10 (106) def. Western Bulldogs 11.13 (79),185,27,,Collingwood defeated Western Bulldogs by 27 points at Western Oval.
+45,Regular Season,Essendon,Hawthorn,Essendon,Hawthorn,Windy Hill,1936-06-20,Essendon 12.19 (91) def. Hawthorn 8.18 (66),157,25,,Essendon defeated Hawthorn by 25 points at Windy Hill.
+46,Regular Season,Fitzroy,Richmond,Fitzroy,Richmond,Brunswick St,1936-06-20,Richmond 20.12 (132) def. Fitzroy 12.16 (88),220,44,,Richmond defeated Fitzroy by 44 points at Brunswick St.
+47,Regular Season,Sydney,Geelong,Sydney,Geelong,Lake Oval,1936-06-20,Sydney 16.21 (117) def. Geelong 15.14 (104),221,13,,Sydney defeated Geelong by 13 points at Lake Oval.
+48,Regular Season,Melbourne,St Kilda,Melbourne,St Kilda,M.C.G.,1936-06-20,Melbourne 20.11 (131) def. St Kilda 15.11 (101),232,30,,Melbourne defeated St Kilda by 30 points at M.C.G..
+49,Regular Season,Carlton,Melbourne,Carlton,Melbourne,Princes Park,1936-06-27,Melbourne 11.17 (83) def. Carlton 9.14 (68),151,15,,Melbourne defeated Carlton by 15 points at Princes Park.
+50,Regular Season,Collingwood,North Melbourne,Collingwood,North Melbourne,Victoria Park,1936-06-27,Collingwood 17.19 (121) def. North Melbourne 8.7 (55),176,66,,Collingwood defeated North Melbourne by 66 points at Victoria Park.
+51,Regular Season,Geelong,Essendon,Geelong,Essendon,Corio Oval,1936-06-27,Geelong 26.18 (174) def. Essendon 14.13 (97),271,77,,Geelong defeated Essendon by 77 points at Corio Oval.
+52,Regular Season,Hawthorn,Fitzroy,Hawthorn,Fitzroy,Glenferrie Oval,1936-06-27,Hawthorn 11.9 (75) def. Fitzroy 9.9 (63),138,12,,Hawthorn defeated Fitzroy by 12 points at Glenferrie Oval.
+53,Regular Season,St Kilda,Western Bulldogs,St Kilda,Western Bulldogs,Junction Oval,1936-06-27,St Kilda 20.17 (137) def. Western Bulldogs 16.13 (109),246,28,,St Kilda defeated Western Bulldogs by 28 points at Junction Oval.
+54,Regular Season,Richmond,Sydney,Richmond,Sydney,Punt Rd,1936-06-27,Richmond 14.14 (98) def. Sydney 11.11 (77),175,21,,Richmond defeated Sydney by 21 points at Punt Rd.
+55,Regular Season,Carlton,Geelong,Carlton,Geelong,Princes Park,1936-07-11,Carlton 14.21 (105) def. Geelong 12.17 (89),194,16,,Carlton defeated Geelong by 16 points at Princes Park.
+56,Regular Season,Collingwood,Sydney,Collingwood,Sydney,Victoria Park,1936-07-11,Sydney 14.18 (102) def. Collingwood 12.19 (91),193,11,,Sydney defeated Collingwood by 11 points at Victoria Park.
+57,Regular Season,Melbourne,Essendon,Melbourne,Essendon,M.C.G.,1936-07-11,Melbourne 16.15 (111) def. Essendon 9.13 (67),178,44,,Melbourne defeated Essendon by 44 points at M.C.G..
+58,Regular Season,North Melbourne,Fitzroy,North Melbourne,Fitzroy,Arden St,1936-07-11,North Melbourne 9.11 (65) def. Fitzroy 3.12 (30),95,35,,North Melbourne defeated Fitzroy by 35 points at Arden St.
+59,Regular Season,Western Bulldogs,Richmond,Western Bulldogs,Richmond,Western Oval,1936-07-11,Richmond 15.13 (103) def. Western Bulldogs 10.8 (68),171,35,,Richmond defeated Western Bulldogs by 35 points at Western Oval.
+60,Regular Season,St Kilda,Hawthorn,St Kilda,Hawthorn,Junction Oval,1936-07-11,St Kilda 16.9 (105) def. Hawthorn 12.16 (88),193,17,,St Kilda defeated Hawthorn by 17 points at Junction Oval.
+61,Regular Season,Sydney,Carlton,Sydney,Carlton,Lake Oval,1936-07-18,Sydney 16.11 (107) def. Carlton 14.16 (100),207,7,,Sydney defeated Carlton by 7 points at Lake Oval.
+62,Regular Season,Geelong,Collingwood,Geelong,Collingwood,Corio Oval,1936-07-18,Geelong 13.15 (93) def. Collingwood 11.9 (75),168,18,,Geelong defeated Collingwood by 18 points at Corio Oval.
+63,Regular Season,Essendon,Western Bulldogs,Essendon,Western Bulldogs,Windy Hill,1936-07-18,Western Bulldogs 16.18 (114) def. Essendon 12.15 (87),201,27,,Western Bulldogs defeated Essendon by 27 points at Windy Hill.
+64,Regular Season,Fitzroy,St Kilda,Fitzroy,St Kilda,Brunswick St,1936-07-18,St Kilda 19.15 (129) def. Fitzroy 16.9 (105),234,24,,St Kilda defeated Fitzroy by 24 points at Brunswick St.
+65,Regular Season,Hawthorn,North Melbourne,Hawthorn,North Melbourne,Glenferrie Oval,1936-07-18,Hawthorn 8.19 (67) def. North Melbourne 7.11 (53),120,14,,Hawthorn defeated North Melbourne by 14 points at Glenferrie Oval.
+66,Regular Season,Richmond,Melbourne,Richmond,Melbourne,Punt Rd,1936-07-18,Melbourne 17.10 (112) def. Richmond 15.13 (103),215,9,,Melbourne defeated Richmond by 9 points at Punt Rd.
+67,Regular Season,Carlton,Fitzroy,Carlton,Fitzroy,Princes Park,1936-07-25,Carlton 18.15 (123) def. Fitzroy 14.11 (95),218,28,,Carlton defeated Fitzroy by 28 points at Princes Park.
+68,Regular Season,Collingwood,Hawthorn,Collingwood,Hawthorn,Victoria Park,1936-07-25,Collingwood 14.18 (102) def. Hawthorn 6.12 (48),150,54,,Collingwood defeated Hawthorn by 54 points at Victoria Park.
+69,Regular Season,North Melbourne,Essendon,North Melbourne,Essendon,Arden St,1936-07-25,Essendon 10.10 (70) def. North Melbourne 6.14 (50),120,20,,Essendon defeated North Melbourne by 20 points at Arden St.
+70,Regular Season,Western Bulldogs,Geelong,Western Bulldogs,Geelong,Western Oval,1936-07-25,Western Bulldogs 14.9 (93) def. Geelong 10.22 (82),175,11,,Western Bulldogs defeated Geelong by 11 points at Western Oval.
+71,Regular Season,Melbourne,Sydney,Melbourne,Sydney,M.C.G.,1936-07-25,Melbourne 22.16 (148) def. Sydney 14.12 (96),244,52,,Melbourne defeated Sydney by 52 points at M.C.G..
+72,Regular Season,St Kilda,Richmond,St Kilda,Richmond,Junction Oval,1936-07-25,Richmond 18.6 (114) def. St Kilda 14.12 (96),210,18,,Richmond defeated St Kilda by 18 points at Junction Oval.
+73,Regular Season,Essendon,Carlton,Essendon,Carlton,Windy Hill,1936-08-01,Carlton 17.16 (118) def. Essendon 8.11 (59),177,59,,Carlton defeated Essendon by 59 points at Windy Hill.
+74,Regular Season,Richmond,Collingwood,Richmond,Collingwood,Punt Rd,1936-08-01,Collingwood 14.12 (96) def. Richmond 11.14 (80),176,16,,Collingwood defeated Richmond by 16 points at Punt Rd.
+75,Regular Season,Fitzroy,Melbourne,Fitzroy,Melbourne,Brunswick St,1936-08-01,Fitzroy 13.13 (91) def. Melbourne 12.13 (85),176,6,,Fitzroy defeated Melbourne by 6 points at Brunswick St.
+76,Regular Season,Hawthorn,Western Bulldogs,Hawthorn,Western Bulldogs,Glenferrie Oval,1936-08-01,Hawthorn 13.13 (91) def. Western Bulldogs 8.21 (69),160,22,,Hawthorn defeated Western Bulldogs by 22 points at Glenferrie Oval.
+77,Regular Season,Geelong,North Melbourne,Geelong,North Melbourne,Corio Oval,1936-08-01,Geelong 17.20 (122) def. North Melbourne 12.8 (80),202,42,,Geelong defeated North Melbourne by 42 points at Corio Oval.
+78,Regular Season,Sydney,St Kilda,Sydney,St Kilda,Lake Oval,1936-08-01,Sydney 14.19 (103) def. St Kilda 13.11 (89),192,14,,Sydney defeated St Kilda by 14 points at Lake Oval.
+79,Regular Season,Carlton,Hawthorn,Carlton,Hawthorn,Princes Park,1936-08-08,Carlton 11.17 (83) def. Hawthorn 8.16 (64),147,19,,Carlton defeated Hawthorn by 19 points at Princes Park.
+80,Regular Season,Collingwood,Fitzroy,Collingwood,Fitzroy,Victoria Park,1936-08-08,Collingwood 13.12 (90) def. Fitzroy 11.8 (74),164,16,,Collingwood defeated Fitzroy by 16 points at Victoria Park.
+81,Regular Season,St Kilda,Essendon,St Kilda,Essendon,Junction Oval,1936-08-08,St Kilda 16.23 (119) def. Essendon 14.14 (98),217,21,,St Kilda defeated Essendon by 21 points at Junction Oval.
+82,Regular Season,Western Bulldogs,Sydney,Western Bulldogs,Sydney,Western Oval,1936-08-08,Sydney 12.21 (93) def. Western Bulldogs 11.15 (81),174,12,,Sydney defeated Western Bulldogs by 12 points at Western Oval.
+83,Regular Season,Melbourne,Geelong,Melbourne,Geelong,M.C.G.,1936-08-08,Geelong 15.15 (105) def. Melbourne 14.16 (100),205,5,,Geelong defeated Melbourne by 5 points at M.C.G..
+84,Regular Season,North Melbourne,Richmond,North Melbourne,Richmond,Arden St,1936-08-08,North Melbourne 11.7 (73) def. Richmond 9.11 (65),138,8,,North Melbourne defeated Richmond by 8 points at Arden St.
+85,Regular Season,Richmond,Carlton,Richmond,Carlton,Punt Rd,1936-08-15,Carlton 14.6 (90) def. Richmond 9.12 (66),156,24,,Carlton defeated Richmond by 24 points at Punt Rd.
+86,Regular Season,Essendon,Collingwood,Essendon,Collingwood,Windy Hill,1936-08-15,Collingwood 14.16 (100) def. Essendon 8.10 (58),158,42,,Collingwood defeated Essendon by 42 points at Windy Hill.
+87,Regular Season,Fitzroy,Western Bulldogs,Fitzroy,Western Bulldogs,Brunswick St,1936-08-15,Western Bulldogs 12.17 (89) def. Fitzroy 9.10 (64),153,25,,Western Bulldogs defeated Fitzroy by 25 points at Brunswick St.
+88,Regular Season,Geelong,St Kilda,Geelong,St Kilda,Corio Oval,1936-08-15,Geelong 18.22 (130) def. St Kilda 10.7 (67),197,63,,Geelong defeated St Kilda by 63 points at Corio Oval.
+89,Regular Season,Hawthorn,Melbourne,Hawthorn,Melbourne,Glenferrie Oval,1936-08-15,Melbourne 17.10 (112) def. Hawthorn 9.8 (62),174,50,,Melbourne defeated Hawthorn by 50 points at Glenferrie Oval.
+90,Regular Season,Sydney,North Melbourne,Sydney,North Melbourne,Lake Oval,1936-08-15,Sydney 8.16 (64) def. North Melbourne 9.9 (63),127,1,,Sydney defeated North Melbourne by 1 points at Lake Oval.
+91,Regular Season,Carlton,Western Bulldogs,Carlton,Western Bulldogs,Princes Park,1936-08-22,Carlton 12.22 (94) def. Western Bulldogs 12.14 (86),180,8,,Carlton defeated Western Bulldogs by 8 points at Princes Park.
+92,Regular Season,St Kilda,Collingwood,St Kilda,Collingwood,Junction Oval,1936-08-22,Collingwood 14.13 (97) def. St Kilda 11.11 (77),174,20,,Collingwood defeated St Kilda by 20 points at Junction Oval.
+93,Regular Season,Essendon,Sydney,Essendon,Sydney,Windy Hill,1936-08-22,Sydney 11.30 (96) def. Essendon 12.16 (88),184,8,,Sydney defeated Essendon by 8 points at Windy Hill.
+94,Regular Season,Geelong,Fitzroy,Geelong,Fitzroy,Corio Oval,1936-08-22,Geelong 20.21 (141) def. Fitzroy 6.8 (44),185,97,,Geelong defeated Fitzroy by 97 points at Corio Oval.
+95,Regular Season,Hawthorn,Richmond,Hawthorn,Richmond,Glenferrie Oval,1936-08-22,Hawthorn 15.12 (102) def. Richmond 14.16 (100),202,2,,Hawthorn defeated Richmond by 2 points at Glenferrie Oval.
+96,Regular Season,Melbourne,North Melbourne,Melbourne,North Melbourne,M.C.G.,1936-08-22,Melbourne 14.23 (107) def. North Melbourne 5.15 (45),152,62,,Melbourne defeated North Melbourne by 62 points at M.C.G..
+97,Regular Season,Collingwood,Carlton,Collingwood,Carlton,Victoria Park,1936-08-29,Carlton 13.12 (90) def. Collingwood 13.11 (89),179,1,,Carlton defeated Collingwood by 1 points at Victoria Park.
+98,Regular Season,Fitzroy,Essendon,Fitzroy,Essendon,Brunswick St,1936-08-29,Essendon 17.16 (118) def. Fitzroy 9.16 (70),188,48,,Essendon defeated Fitzroy by 48 points at Brunswick St.
+99,Regular Season,Western Bulldogs,Melbourne,Western Bulldogs,Melbourne,Western Oval,1936-08-29,Melbourne 9.18 (72) def. Western Bulldogs 8.17 (65),137,7,,Melbourne defeated Western Bulldogs by 7 points at Western Oval.
+100,Regular Season,Richmond,Geelong,Richmond,Geelong,Punt Rd,1936-08-29,Geelong 12.9 (81) def. Richmond 8.7 (55),136,26,,Geelong defeated Richmond by 26 points at Punt Rd.
+101,Regular Season,Sydney,Hawthorn,Sydney,Hawthorn,Lake Oval,1936-08-29,Sydney 16.10 (106) def. Hawthorn 15.11 (101),207,5,,Sydney defeated Hawthorn by 5 points at Lake Oval.
+102,Regular Season,North Melbourne,St Kilda,North Melbourne,St Kilda,Arden St,1936-08-29,St Kilda 15.18 (108) def. North Melbourne 15.7 (97),205,11,,St Kilda defeated North Melbourne by 11 points at Arden St.
+103,Regular Season,St Kilda,Carlton,St Kilda,Carlton,Junction Oval,1936-09-05,St Kilda 16.10 (106) def. Carlton 15.15 (105),211,1,,St Kilda defeated Carlton by 1 points at Junction Oval.
+104,Regular Season,Melbourne,Collingwood,Melbourne,Collingwood,M.C.G.,1936-09-05,Collingwood 11.18 (84) def. Melbourne 9.13 (67),151,17,,Collingwood defeated Melbourne by 17 points at M.C.G..
+105,Regular Season,Essendon,Richmond,Essendon,Richmond,Windy Hill,1936-09-05,Essendon 14.8 (92) def. Richmond 11.10 (76),168,16,,Essendon defeated Richmond by 16 points at Windy Hill.
+106,Regular Season,Fitzroy,Sydney,Fitzroy,Sydney,Brunswick St,1936-09-05,Sydney 11.14 (80) def. Fitzroy 11.13 (79),159,1,,Sydney defeated Fitzroy by 1 points at Brunswick St.
+107,Regular Season,Western Bulldogs,North Melbourne,Western Bulldogs,North Melbourne,Western Oval,1936-09-05,Western Bulldogs 14.8 (92) def. North Melbourne 12.10 (82),174,10,,Western Bulldogs defeated North Melbourne by 10 points at Western Oval.
+108,Regular Season,Geelong,Hawthorn,Geelong,Hawthorn,Corio Oval,1936-09-05,Geelong 21.22 (148) def. Hawthorn 9.15 (69),217,79,,Geelong defeated Hawthorn by 79 points at Corio Oval.
+109,Finals,Melbourne,Carlton,Melbourne,Carlton,M.C.G.,1936-09-12,Melbourne 14.13 (97) def. Carlton 11.22 (88),185,9,,Melbourne defeated Carlton by 9 points at M.C.G..
+110,Finals,Collingwood,Sydney,Collingwood,Sydney,M.C.G.,1936-09-19,Collingwood 12.18 (90) def. Sydney 10.17 (77),167,13,,Collingwood defeated Sydney by 13 points at M.C.G..
+111,Finals,Sydney,Melbourne,Sydney,Melbourne,M.C.G.,1936-09-26,Sydney 13.11 (89) def. Melbourne 8.15 (63),152,26,,Sydney defeated Melbourne by 26 points at M.C.G..
+112,Grand Final,Collingwood,Sydney,Collingwood,Sydney,M.C.G.,1936-10-03,Collingwood 11.23 (89) def. Sydney 10.18 (78),167,11,,Collingwood defeated Sydney by 11 points at M.C.G..

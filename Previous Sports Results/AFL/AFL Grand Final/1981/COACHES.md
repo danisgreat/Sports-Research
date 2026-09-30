@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1981 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1981
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1981.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1981 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Carlton
+- **Premiership Coach:** David Parkin
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Tom Hafey
+- **Grand Final Result:** Carlton 12.20 (92) def. Collingwood 10.12 (72)
+- **Winning Margin:** 20 points
+- **Match Date:** 1981-09-26
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 112,964 spectators
+
+## Match Summary & Tactical Notes
+Carlton stormed home with a five-goal final quarter to defeat Collingwood by 20 points, led by Bruce Doull.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

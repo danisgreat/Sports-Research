@@ -4,8 +4,22 @@
 - **League:** AFL (Australian Football League)
 - **Season:** 1961
 
-## Officiating Structure
-- **Field Umpires:** Official VFL/AFL senior panel members appointed for home-and-away and finals matches.
-- **Grand Final Umpires:** Lead adjudicators selected based on end-of-season merit evaluations and performance ratings.
-- **Adjudication Framework:** Focus on holding the ball interpretations, protected area enforcement, dangerous tackle adjudication, and high-contact penalties.
-- **Technology & Video Review:** Field and goal umpire consensus on field (pre-video review era).
+## Officiating System & Appointments
+- **Umpiring Framework:** Sole field umpire system
+- **Grand Final Umpire(s):** Frank Schwab
+
+## Senior Field Umpiring Panel (10 Umpires)
+| Umpire | Season Matches Officiated | Appointment Level |
+|---|---|---|
+| Frank Schwab | 21 | Grand Final |
+| Bob Nunn | 18 | Regular Season / Finals |
+| Jack Irving | 18 | Regular Season / Finals |
+| Harold Hodgson | 14 | Regular Season / Finals |
+| Ron Brophy | 13 | Regular Season / Finals |
+| Walter Andrew | 13 | Regular Season / Finals |
+| John Leighton | 6 | Regular Season / Finals |
+| Eric Brewer | 5 | Regular Season / Finals |
+| Jeff Crouch | 2 | Regular Season / Finals |
+| Valentine Hocking | 2 | Regular Season / Finals |
+
+- **Sources:** AFL Tables (Umpires Index); AFL Umpires Association (AFLUA).

@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1943 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1943
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1943.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1943 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Richmond
+- **Premiership Coach:** Jack Dyer
+- **Runners-up:** Essendon
+- **Runners-up Coach:** Dick Reynolds
+- **Grand Final Result:** Richmond 12.14 (86) def. Essendon 11.15 (81)
+- **Winning Margin:** 5 points
+- **Match Date:** 1943-09-25
+- **Venue:** Princes Park
+- **Official Attendance:** 42,100 spectators
+
+## Match Summary & Tactical Notes
+Richmond edged Essendon by 5 points in a gripping Grand Final battle at Princes Park.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

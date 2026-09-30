@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 2003 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 2003
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 2003.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 2003 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Brisbane Lions
+- **Premiership Coach:** Leigh Matthews
+- **Runners-up:** Collingwood
+- **Runners-up Coach:** Mick Malthouse
+- **Grand Final Result:** Brisbane Lions 20.14 (134) def. Collingwood 12.12 (84)
+- **Winning Margin:** 50 points
+- **Match Date:** 2003-09-27
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 79,451 spectators
+
+## Match Summary & Tactical Notes
+Brisbane Lions completed a historic premiership three-peat, dismantling Collingwood by 50 points behind Simon Black.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,San Francisco 49ers,Baltimore Ravens,San Francisco 49ers,Baltimore Ravens,Mercedes-Benz Superdome,2013-02-03,Baltimore Ravens 34 def. San Francisco 49ers 31,65,3,Referee: Jerome Boger,"Baltimore Ravens won Super Bowl XLVII, defeating San Francisco 49ers 34-31 at Mercedes-Benz Superdome."

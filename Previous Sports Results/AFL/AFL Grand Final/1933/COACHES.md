@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1933 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1933
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1933.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1933 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** South Melbourne
+- **Premiership Coach:** Jack Bisset
+- **Runners-up:** Richmond
+- **Runners-up Coach:** Billy Schmidt
+- **Grand Final Result:** South Melbourne 9.17 (71) def. Richmond 4.5 (29)
+- **Winning Margin:** 42 points
+- **Match Date:** 1933-09-30
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 75,754 spectators
+
+## Match Summary & Tactical Notes
+South Melbourne's 'Foreign Legion' defeated Richmond by 42 points behind Bob Pratt's three goals.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

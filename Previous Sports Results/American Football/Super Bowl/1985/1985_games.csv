@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,San Francisco 49ers,Miami Dolphins,San Francisco 49ers,Miami Dolphins,Stanford Stadium,1985-01-20,San Francisco 49ers 38 def. Miami Dolphins 16,54,22,,"San Francisco 49ers won Super Bowl XIX, defeating Miami Dolphins 38-16 at Stanford Stadium."

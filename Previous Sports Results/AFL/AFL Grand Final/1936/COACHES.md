@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1936 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1936
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1936.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1936 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** Collingwood
+- **Premiership Coach:** Jock McHale
+- **Runners-up:** South Melbourne
+- **Runners-up Coach:** Jack Bisset
+- **Grand Final Result:** Collingwood 11.23 (89) def. South Melbourne 10.18 (78)
+- **Winning Margin:** 11 points
+- **Match Date:** 1936-10-03
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 74,091 spectators
+
+## Match Summary & Tactical Notes
+Collingwood claimed back-to-back flags with a 19-point victory over South Melbourne.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.

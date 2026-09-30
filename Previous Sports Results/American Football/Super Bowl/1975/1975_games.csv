@@ -1,1 +1,2 @@
-Game Number,"Game Type (Super Bowl, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+Game Number,"Game Type (pre-Season, Regular Season, Finals, Grand Final, Not applicable)",Team A,Team B,Home,Away,Venue,Date,Game Score,Total Points,Winning Margin,Notable Players,A Succint one line game comment to summarise that game
+1,Grand Final,Minnesota Vikings,Pittsburgh Steelers,Minnesota Vikings,Pittsburgh Steelers,Tulane Stadium,1975-01-12,Pittsburgh Steelers 16 def. Minnesota Vikings 6,22,10,,"Pittsburgh Steelers won Super Bowl IX, defeating Minnesota Vikings 16-6 at Tulane Stadium."

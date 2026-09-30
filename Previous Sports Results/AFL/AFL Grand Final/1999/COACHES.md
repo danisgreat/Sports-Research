@@ -1,11 +1,21 @@
 # AFL Grand Final Coaching Staff & Team Hierarchy — 1999 Season
 
-- **Sport:** AFL
+- **Sport:** Australian Rules Football
 - **Competition:** AFL Grand Final
 - **Season:** 1999
 
-## Coaching Overview & Management
-- **Senior Leadership:** Grand Final Senior Coaches and Matchday Box Staff.
-- **Tactical Strategy:** Formations, matchday substitutions, set-piece schemes, tactical game plans, and system execution adapted to the competitive environment of 1999.
-- **Specialist & Assistant Staff:** Dedicated line/positional coaches, physical performance and conditioning directors, medical and rehabilitation coordinators, and video/tactical analysts.
-- **Team-by-Team Records:** Complete head coach tenures, mid-season managerial changes, and championship-winning coaching staff recognized for the 1999 season.
+## Grand Final Matchup & Team Leadership
+- **Premiers:** North Melbourne
+- **Premiership Coach:** Denis Pagan
+- **Runners-up:** Carlton
+- **Runners-up Coach:** David Parkin
+- **Grand Final Result:** North Melbourne 19.10 (124) def. Carlton 12.17 (89)
+- **Winning Margin:** 35 points
+- **Match Date:** 1999-09-25
+- **Venue:** Melbourne Cricket Ground
+- **Official Attendance:** 94,228 spectators
+
+## Match Summary & Tactical Notes
+North Melbourne defeated Carlton by 35 points in front of 94,000 fans, inspired by Shannon Grant's four goals.
+
+- **Sources:** AFL Tables (Match Stats & Coaches Register); Australian Football Historical Records.
