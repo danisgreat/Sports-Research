@@ -1,0 +1,16 @@
+# College Football Officiating & Referee Corps — 1922 Season
+
+- **Sport:** American Football
+- **Competition:** College Football
+- **Season:** 1922
+
+## Championship Officiating Assignment
+- **Referee (Crew Chief):** Walter Camp
+- **Officiating Panel / Governance:** NCAA Rules Committee Panel
+- **Championship Decider / Matchup:** Cornell vs. Penn (Cornell 9 def. Penn 0)
+- **Venue:** Franklin Field (Philadelphia, PA)
+
+## Officiating Governance & Mechanics
+Administered under challenging weather conditions by senior NCAA rules officials. Championship and postseason assignments adhered to strict neutral-conference guidelines, ensuring officiating crews had no institutional affiliation with the participating universities.
+
+- **Sources:** Collegiate Commissioners Association (CCA); NCAA Football Officiating Department; Football Zebras; NCAA Rules Committee Archive.
