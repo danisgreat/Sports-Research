@@ -1,0 +1,30 @@
+[
+  {
+    "attrs": {
+      "class": "tbl",
+      "id": "tblAwayLineUp"
+    },
+    "rows": [
+      [
+        "타순",
+        "포지션",
+        "선수명",
+        "WAR"
+      ]
+    ]
+  },
+  {
+    "attrs": {
+      "class": "tbl",
+      "id": "tblHomeLineUp"
+    },
+    "rows": [
+      [
+        "타순",
+        "포지션",
+        "선수명",
+        "WAR"
+      ]
+    ]
+  }
+]

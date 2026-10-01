@@ -1,10 +1,10 @@
 # METHOD - current authority
 
-Status: **ACTIVE**. Method **MDS-2026.10.01-v7.0**. Control revision **CR-2026.10.01-I1**. Scoring **SCV-2026.10.01-v3**. Active freeze: [CONTROL_MANIFEST_2026-10-01-1.md](CONTROL_MANIFEST_2026-10-01-1.md). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
+Status: **ACTIVE**. Method **MDS-2026.10.01-v7.1**. Control revision **CR-2026.10.01-I2**. Scoring **SCV-2026.10.01-v3**. Active freeze: [CONTROL_MANIFEST_2026-10-01-5.md](CONTROL_MANIFEST_2026-10-01-5.md). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
 
 The user's October 1 instruction authorizes probability-model, source, process and related repository changes. [CURRENT_RULES.md](CURRENT_RULES.md) is the sole current operating manual. [research/README.md](research/README.md) describes executable workflows. [IMPLEMENTATION_2026-10-01.md](IMPLEMENTATION_2026-10-01.md) records verification and remaining evidence gates. The September pipeline document and earlier root instructions remain historical wherever they conflict with these files.
 
-Issued forecasts keep the method, ranking, probabilities, baseline literals and manifest under which they were frozen. Changes to future models never alter those issued values. Historical arithmetic references are not permissions to hand-enter a numeric forecast. P-518-P-522 remain reserved; P-523 is the next new ID in Part 6, consumed only by a successful issue transaction.
+Issued forecasts keep their original values and timestamps. The user's later October 1 instruction supersedes analysis/logging restrictions: research, qualitative ranks and explicitly uncalibrated scenarios are allowed for every sport, with late news and analysis after scheduled start. All requested cards receive canonical Part 6 IDs through `research.operations.log_card`, independently of calibration or certification. P-518–P-522 remain reserved. Read the current next ID from the ledger-backed workflow and status register.
 
 October changes include coherent EPL model ensembles, chronological NBL residual-width estimation, stronger baselines and family-level diagnostics, an audited historical CSV layer, source-body custody, immutable daily observations, evidence-derived eligibility, transactional issuance and settlement revisions, and persistent pilot decisions. These implemented controls do not themselves establish prospective predictive skill.
 
@@ -19,3 +19,5 @@ October changes include coherent EPL model ensembles, chronological NBL residual
 | Verification | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) |
 
 The previous root instructions are preserved byte-for-byte in the implementation custody snapshot. Historical manifests describe their original scopes; they are not current tree receipts.
+
+The earlier October 1 all-log settlement audit is retained in [its dated report](research/verification/settlement_2026-10-01/REPORT.md) and receipt 2. Receipt 3 governs the subsequent logging/policy repair and P-523–P-526 imports/analysis. Receipt 4 adds register refresh and continuous-integration commands; receipt 5 isolates synthetic fixtures from the changing production counter and distinguishes the new research queue from the frozen historical register format. The four cards retain receipt 3. [Repair report](research/verification/log_repair_2026-10-01/REPORT.md) controls that work. Original forecasts, all prior receipts and frozen model dependencies/builds remain unchanged; actual appends determine the current next ID.

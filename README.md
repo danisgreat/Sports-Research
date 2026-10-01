@@ -1,6 +1,6 @@
 # Sports Research
 
-Current method: **MDS-2026.10.01-v7.0**; controls: **CR-2026.10.01-I1**. This repository contains sports-only statistical research, historical competition records and preserved prediction logs. Numerical claims depend on exact model, family, endpoint, data cutoff and source evidence. No model currently has live qualification.
+Current method: **MDS-2026.10.01-v7.1**; controls: **CR-2026.10.01-I2**. Requested analyses and canonical Part 6 logging proceed regardless of calibration, with qualitative ranks or explicitly uncalibrated reproducible scenarios and honest live/late timestamps. Model qualification controls performance claims separately. This repository contains sports-only research, historical competition records and preserved prediction logs.
 
 ## Start here
 
@@ -14,7 +14,8 @@ Current method: **MDS-2026.10.01-v7.0**; controls: **CR-2026.10.01-I1**. This re
 python -B -m pytest -p no:cacheprovider research/tests -q
 python -B -m research.src.daily --window-hours 48
 python -B -m research.src.workflow status
-python -B -m research.src.control_manifest verify
+py -3.14 -B -m research.operations.log_card verify
+py -3.14 -B -m research.operations.control_freeze --verify
 ```
 
 The daily command creates dated immutable observations, model-only shadows, fixture coverage and diagnostic grades. It never issues a P-number or promotes a model. A source failure produces a recorded failure and a nonzero command exit.

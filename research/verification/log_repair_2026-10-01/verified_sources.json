@@ -1,0 +1,1044 @@
+{
+  "verified_source_bodies": 65,
+  "receipts": [
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_method": "POST",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20261001"
+      },
+      "retrieved_utc": "2026-10-01T09:26:30.224790+00:00",
+      "response_sha256": "6f662c45d369cbb82c747065194c00b44f2834da82ca982f34cadd3cd3ba5bdd",
+      "response_bytes": 6966,
+      "body_path": "research/verification/log_repair_2026-10-01/api_games.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "final_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "independence_status": "UNKNOWN",
+      "upstream_lineage_id": "KBO_OWNER",
+      "parser_id": "KBO_NATIVE_JSON_MANUAL_READBACK_V1"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetLineUpAnalysis",
+      "request_method": "POST",
+      "request_params": {
+        "leId": "1",
+        "srId": "0",
+        "seasonId": "2026",
+        "gameId": "20261001HHSS0"
+      },
+      "retrieved_utc": "2026-10-01T09:26:30.778838+00:00",
+      "response_sha256": "d95d2318142329c8bb176d45d974fd985759824c8d90bd8adfabec749c463e39",
+      "response_bytes": 22692,
+      "body_path": "research/verification/log_repair_2026-10-01/api_lineup.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "final_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetLineUpAnalysis",
+      "independence_status": "UNKNOWN",
+      "upstream_lineage_id": "KBO_OWNER",
+      "parser_id": "KBO_NATIVE_JSON_MANUAL_READBACK_V1"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetPitcherRecordAnalysis",
+      "request_method": "POST",
+      "request_params": {
+        "leId": "1",
+        "srId": "0",
+        "seasonId": "2026",
+        "gameId": "20261001HHSS0",
+        "awayTeamId": "HH",
+        "homeTeamId": "SS",
+        "awayPitId": "54729",
+        "homePitId": "69446",
+        "groupSc": "SEASON"
+      },
+      "retrieved_utc": "2026-10-01T09:26:30.276310+00:00",
+      "response_sha256": "b95407c40e48c5d01e41d54baa066fc8f462f3ab23f47ec3c954c8d455d0e09c",
+      "response_bytes": 7457,
+      "body_path": "research/verification/log_repair_2026-10-01/api_pitch.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "final_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetPitcherRecordAnalysis",
+      "independence_status": "UNKNOWN",
+      "upstream_lineage_id": "KBO_OWNER",
+      "parser_id": "KBO_NATIVE_JSON_MANUAL_READBACK_V1"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetBoxScoreScroll",
+      "request_method": "POST",
+      "request_params": {
+        "leId": "1",
+        "srId": "0",
+        "seasonId": "2026",
+        "gameId": "20260930HHSS0"
+      },
+      "retrieved_utc": "2026-10-01T09:26:31.072098+00:00",
+      "response_sha256": "8b1c8004bc55b56678d6555ceb2c7a0860a41412e5d886ff7fac26b540ca1b9b",
+      "response_bytes": 193101,
+      "body_path": "research/verification/log_repair_2026-10-01/api_previous_box.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "final_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetBoxScoreScroll",
+      "independence_status": "UNKNOWN",
+      "upstream_lineage_id": "KBO_OWNER",
+      "parser_id": "KBO_NATIVE_JSON_MANUAL_READBACK_V1"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetTeamRecord",
+      "request_method": "POST",
+      "request_params": {
+        "leId": "1",
+        "srId": "0",
+        "seasonId": "2026",
+        "gameId": "20261001HHSS0",
+        "groupSc": "SEASON"
+      },
+      "retrieved_utc": "2026-10-01T09:26:30.235335+00:00",
+      "response_sha256": "8e0a6f5f5d5a6c70507db42a885bec403b2c232bb982398b7928b5cef4b0e3fc",
+      "response_bytes": 3832,
+      "body_path": "research/verification/log_repair_2026-10-01/api_team.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "final_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetTeamRecord",
+      "independence_status": "UNKNOWN",
+      "upstream_lineage_id": "KBO_OWNER",
+      "parser_id": "KBO_NATIVE_JSON_MANUAL_READBACK_V1"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20261001"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:57:14.764551+00:00",
+      "response_sha256": "e0339e7e93c03aea15f8040692905bdfd23b5a2e0bef39b27b13704bc6b383cf",
+      "response_bytes": 6966,
+      "body_path": "research/verification/log_repair_2026-10-01/delivery_095713Z/kbo_game.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetLineUpAnalysis",
+      "request_params": {
+        "leId": "1",
+        "srId": "0",
+        "seasonId": "2026",
+        "gameId": "20261001HHSS0"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:57:16.393465+00:00",
+      "response_sha256": "d95d2318142329c8bb176d45d974fd985759824c8d90bd8adfabec749c463e39",
+      "response_bytes": 22692,
+      "body_path": "research/verification/log_repair_2026-10-01/delivery_095713Z/kbo_lineup.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/Kbo/League/GameManage2025.aspx",
+      "request_params": null,
+      "request_method": "GET",
+      "retrieved_utc": "2026-10-01T09:57:18.566367+00:00",
+      "response_sha256": "82fb7ed13b783c99b7ec3e3ff96bb2f3a46f5352a0fb90fdf8d99586f4e65bb1",
+      "response_bytes": 61217,
+      "body_path": "research/verification/log_repair_2026-10-01/delivery_095713Z/kbo_rules_2025.body",
+      "content_type": "text/html; charset=utf-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://npb.jp/scores/2026/1001/c-d-25/",
+      "request_params": null,
+      "request_method": "GET",
+      "retrieved_utc": "2026-10-01T09:57:17.363440+00:00",
+      "response_sha256": "1a64759edfe6e18de0058f87c43b6be20136fc335d85ef691fa446b14b4081ae",
+      "response_bytes": 37324,
+      "body_path": "research/verification/log_repair_2026-10-01/delivery_095713Z/npb_game.body",
+      "content_type": "text/html",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20261001"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T10:31:20.441891+00:00",
+      "response_sha256": "c145df5ae91a2770738afc7c81f77f9db12ec456662157a180f1d55130f0f61a",
+      "response_bytes": 6966,
+      "body_path": "research/verification/log_repair_2026-10-01/delivery_103119Z/kbo_game.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetLineUpAnalysis",
+      "request_params": {
+        "leId": "1",
+        "srId": "0",
+        "seasonId": "2026",
+        "gameId": "20261001HHSS0"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T10:31:21.165423+00:00",
+      "response_sha256": "d95d2318142329c8bb176d45d974fd985759824c8d90bd8adfabec749c463e39",
+      "response_bytes": 22692,
+      "body_path": "research/verification/log_repair_2026-10-01/delivery_103119Z/kbo_lineup.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/Kbo/League/GameManage2025.aspx",
+      "request_params": null,
+      "request_method": "GET",
+      "retrieved_utc": "2026-10-01T10:31:22.896117+00:00",
+      "response_sha256": "82fb7ed13b783c99b7ec3e3ff96bb2f3a46f5352a0fb90fdf8d99586f4e65bb1",
+      "response_bytes": 61217,
+      "body_path": "research/verification/log_repair_2026-10-01/delivery_103119Z/kbo_rules_2025.body",
+      "content_type": "text/html; charset=utf-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://npb.jp/scores/2026/1001/c-d-25/",
+      "request_params": null,
+      "request_method": "GET",
+      "retrieved_utc": "2026-10-01T10:31:22.033313+00:00",
+      "response_sha256": "b730182e4226437005c3431a85bd4f779419b6a5637b7de11d6d6e25ddd66e99",
+      "response_bytes": 37646,
+      "body_path": "research/verification/log_repair_2026-10-01/delivery_103119Z/npb_game.body",
+      "content_type": "text/html",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260831"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:55.069667+00:00",
+      "response_sha256": "b4a2a268814ae0195c393e7012091616475cc74d6524a67f1793f721b5e367ef",
+      "response_bytes": 56,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260831.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260901"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:54.938609+00:00",
+      "response_sha256": "e3bad8f7c4ada49f680cad97d937308ef8a19aca2b6e72ae9b74de3f7d4b6d81",
+      "response_bytes": 8804,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260901.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260902"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:54.889885+00:00",
+      "response_sha256": "636e16084ba1f59d5447127e2e9beaf53aa3774b08d0e33640ca7f1ab9bf1f86",
+      "response_bytes": 8801,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260902.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260903"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:54.818575+00:00",
+      "response_sha256": "09b2f37d7961bccd3c18e81e1381b5b5a5764ad022b84920df5d7c1f05f11391",
+      "response_bytes": 8793,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260903.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260904"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:54.185250+00:00",
+      "response_sha256": "62d1ff930c77108cc327d3a5494d7c035325783c6df71664c233ffd9bbc5393a",
+      "response_bytes": 8790,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260904.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260905"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:54.115085+00:00",
+      "response_sha256": "31ccd6fb7363ac0fc8c0774ca0fa188f03a064522d0bf6099f873f5effe49afd",
+      "response_bytes": 8826,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260905.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260906"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:54.038937+00:00",
+      "response_sha256": "7b13423f96eb8d02fbe25da3849df7acde82cecdf75565c6bef4509773b1bee4",
+      "response_bytes": 8805,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260906.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260907"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:53.915133+00:00",
+      "response_sha256": "b4a2a268814ae0195c393e7012091616475cc74d6524a67f1793f721b5e367ef",
+      "response_bytes": 56,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260907.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260908"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:53.274377+00:00",
+      "response_sha256": "2c3a73e1ecbfcbbf2a62fc14a9c811422b2da45b54bcd3e3067565b0c3587438",
+      "response_bytes": 8807,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260908.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260909"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:53.236629+00:00",
+      "response_sha256": "e325b46f43f3aed610b19a189e8522d4b06880b8ff2a1daa8c94c6b8002b70f8",
+      "response_bytes": 7073,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260909.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260910"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:53.158503+00:00",
+      "response_sha256": "1642a9e4b7560c3de58f73e842c29221f1bc4771008fa3f88f4fd3b82faaff2f",
+      "response_bytes": 7070,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260910.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260911"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:53.045400+00:00",
+      "response_sha256": "daeeac1814f69c0e3f889c193956afe58d5952a3e779436346b32dc7cc721aef",
+      "response_bytes": 7069,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260911.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260912"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:52.424354+00:00",
+      "response_sha256": "1209b3a65ad241d5e4bcbb4140bebd15a0c6b2bb68853793243fc85af8e395e9",
+      "response_bytes": 7086,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260912.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260913"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:52.390894+00:00",
+      "response_sha256": "af884c821f72a4305be24a7292949f5ad478dbb322a60cc459f84a3dee34f7bf",
+      "response_bytes": 7060,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260913.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260914"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:52.338294+00:00",
+      "response_sha256": "b4a2a268814ae0195c393e7012091616475cc74d6524a67f1793f721b5e367ef",
+      "response_bytes": 56,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260914.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260915"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:52.197322+00:00",
+      "response_sha256": "3dc1edb70d1eb39829a4fb07991c652baa993924d75f6fa95308457dcd1f3902",
+      "response_bytes": 7076,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260915.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260916"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:51.556582+00:00",
+      "response_sha256": "a0398c3727e7679561b7a5c64225f2eb78645ada4a5d0a1cc1a55613f71fde88",
+      "response_bytes": 7061,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260916.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260917"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:51.478680+00:00",
+      "response_sha256": "a7039f95e7782cafce4caedab56999ba3225f466c7d739e788fef0be88ac5b16",
+      "response_bytes": 3583,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260917.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260918"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:51.523956+00:00",
+      "response_sha256": "55388bb8d3fedc1a02fb3a78d17a902798c1b439f9db134537d0ce063860772f",
+      "response_bytes": 7074,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260918.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260919"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:51.324291+00:00",
+      "response_sha256": "cb1c5cf6a708c2419fc98098f4174fe94a7459a5b8b3e131ede1ff462ca1c9f3",
+      "response_bytes": 7067,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260919.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260920"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:50.631232+00:00",
+      "response_sha256": "bbc70a3712f4e43963b829ebc09eb842c792c8287806c53b85775e41591227a6",
+      "response_bytes": 8824,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260920.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260921"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:50.636595+00:00",
+      "response_sha256": "b4a2a268814ae0195c393e7012091616475cc74d6524a67f1793f721b5e367ef",
+      "response_bytes": 56,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260921.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260922"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:50.681852+00:00",
+      "response_sha256": "3d156e90cb5572a05b721a59410cfe15b4f1d56437fcdd7a8eaba06ae2e2c544",
+      "response_bytes": 7074,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260922.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260923"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:50.447614+00:00",
+      "response_sha256": "c98d66b985b9504639bc153589390c3911a5fe70df45ed2beccb24b6449b1613",
+      "response_bytes": 5309,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260923.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260924"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:49.802390+00:00",
+      "response_sha256": "15c0bef7c6e46252fca4d74f9d206d791ccd289452bca74c21c873d412d777c7",
+      "response_bytes": 5364,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260924.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260925"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:49.787954+00:00",
+      "response_sha256": "b286f3d3f58ca5554ed9df2d6e62f40ce9e05c8c752126292acfb638c55bd75e",
+      "response_bytes": 5282,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260925.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260926"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:49.588340+00:00",
+      "response_sha256": "f98a4fe99276ad3a8c2a1665e0f92ab598d3be78504ddda0fc89cc056e62fed9",
+      "response_bytes": 5309,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260926.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260927"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:49.596478+00:00",
+      "response_sha256": "d900c1a1b3533b27a830bd25566f39cf5ba1deff2ebbf738626aa92579d6b8b8",
+      "response_bytes": 7050,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260927.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260928"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:48.737335+00:00",
+      "response_sha256": "b4a2a268814ae0195c393e7012091616475cc74d6524a67f1793f721b5e367ef",
+      "response_bytes": 56,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260928.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260929"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:48.929243+00:00",
+      "response_sha256": "95e71de12d77e9be3f88bd6e79d1e06e7f459b98852637e750730c670b78fb47",
+      "response_bytes": 8808,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260929.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20260930"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:48.948094+00:00",
+      "response_sha256": "25ec61f9e5716d434eb4cf9b2b3338932510b17d21c8b2abe9e81db4c2dd41d6",
+      "response_bytes": 8805,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20260930.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+      "request_params": {
+        "leId": "1",
+        "srId": "0,1,3,4,5,6,7,8,9",
+        "date": "20261001"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:48.762334+00:00",
+      "response_sha256": "829030be6a63b84893972280b3bbbe2cde8358a15a97a7ba8c8f704b6f36f626",
+      "response_bytes": 6966,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/20261001.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetBoxScoreScroll",
+      "request_params": {
+        "leId": "1",
+        "srId": "0",
+        "seasonId": "2026",
+        "gameId": "20260929HHSS0"
+      },
+      "request_method": "POST",
+      "retrieved_utc": "2026-10-01T09:40:56.535326+00:00",
+      "response_sha256": "9d1052e63c538d4df250f9656a17a9e5c4d8b01f90a4e72f8092157aefe4395c",
+      "response_bytes": 231322,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/box_sep29.body",
+      "content_type": "text/plain; charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://npb.jp/scores/2026/1001/c-d-25/",
+      "request_params": null,
+      "request_method": "GET",
+      "retrieved_utc": "2026-10-01T09:40:55.814118+00:00",
+      "response_sha256": "17f98f636354651405bde414f3541ea65f429f215dddf75b5ae66ada4a9dfdf6",
+      "response_bytes": 38772,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/npb_current.body",
+      "content_type": "text/html",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/KBOHome/resources/images/sub/game_manage.png",
+      "request_params": null,
+      "request_method": "GET",
+      "retrieved_utc": "2026-10-01T09:40:56.771209+00:00",
+      "response_sha256": "fce20e12db7c4cdd2ac84e0e4259625dc14e60305caf98b39c00536b4b8814ba",
+      "response_bytes": 109999,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/operations_image.body",
+      "content_type": "image/png",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "source_url": "https://baseball.yahoo.co.jp/npb/game/2021048568/top",
+      "request_params": null,
+      "request_method": "GET",
+      "retrieved_utc": "2026-10-01T09:40:56.281930+00:00",
+      "response_sha256": "f00d554f8592a7061df722a6b5e965eadce634f0054f8dd5c7481cd08afdd674",
+      "response_bytes": 200003,
+      "body_path": "research/verification/log_repair_2026-10-01/updates_094047Z/yahoo_current.body",
+      "content_type": "text/html;charset=UTF-8",
+      "independence_status": "UNKNOWN"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx",
+      "final_url": "https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx",
+      "retrieved_utc": "2026-10-01T09:22:54.888971+00:00",
+      "response_sha256": "fd979752cf6bece015eb27e2980660b60875bd891530b42ae42c85f5a5e495f4",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092254888971Z_fd979752cf6b.body",
+      "response_bytes": 60556,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092254888971Z_fd979752cf6b.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Record/TeamRank/TeamRank.aspx",
+      "final_url": "https://www.koreabaseball.com/Record/TeamRank/TeamRank.aspx",
+      "retrieved_utc": "2026-10-01T09:22:54.334493+00:00",
+      "response_sha256": "7a1ac1f5b4a91eb13a01c1f298e9e2079a59c4c705dee077a659d02a104bb311",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092254334493Z_7a1ac1f5b4a9.body",
+      "response_bytes": 52767,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092254334493Z_7a1ac1f5b4a9.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=54729",
+      "final_url": "https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=54729",
+      "retrieved_utc": "2026-10-01T09:22:54.669948+00:00",
+      "response_sha256": "a4728c0290d860c201b7005a3b2af2d4e37a307b81e2196defd4713bdd8b8f8c",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092254669948Z_a4728c0290d8.body",
+      "response_bytes": 53200,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092254669948Z_a4728c0290d8.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=69446",
+      "final_url": "https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=69446",
+      "retrieved_utc": "2026-10-01T09:22:54.789982+00:00",
+      "response_sha256": "b4ce4f9c864304ccd4e7daa449004a06ef00f2b64bb5db52e7a4a75cfe8dd1ab",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092254789982Z_b4ce4f9c8643.body",
+      "response_bytes": 54419,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092254789982Z_b4ce4f9c8643.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Record/Team/Hitter/Basic1.aspx",
+      "final_url": "https://www.koreabaseball.com/Record/Team/Hitter/Basic1.aspx",
+      "retrieved_utc": "2026-10-01T09:22:54.327467+00:00",
+      "response_sha256": "f31e6ac91bb3b6b7ff8d739a207ff9ad84be39642d2075cb48daa4a9d6ffffb8",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092254327467Z_f31e6ac91bb3.body",
+      "response_bytes": 50176,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092254327467Z_f31e6ac91bb3.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Record/Team/Pitcher/Basic1.aspx",
+      "final_url": "https://www.koreabaseball.com/Record/Team/Pitcher/Basic1.aspx",
+      "retrieved_utc": "2026-10-01T09:22:54.851003+00:00",
+      "response_sha256": "03009e5bb5f02d3201fc514719eb104f1ece82d047424e692ecdcd0320a85130",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092254851003Z_03009e5bb5f0.body",
+      "response_bytes": 52046,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092254851003Z_03009e5bb5f0.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/MediaNews/News/BreakingNews/View.aspx?bdSe=62459",
+      "final_url": "https://www.koreabaseball.com/MediaNews/News/BreakingNews/View.aspx?bdSe=62459",
+      "retrieved_utc": "2026-10-01T09:22:55.481887+00:00",
+      "response_sha256": "87b11d80aa7096d1d95f7a4451d52ac1b6af0a128e7d23b8a8a8b3abe53e2bdc",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092255481887Z_87b11d80aa70.body",
+      "response_bytes": 41028,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092255481887Z_87b11d80aa70.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "samsung",
+      "publisher": "www.samsunglions.com",
+      "upstream_lineage_id": "samsung",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.samsunglions.com/index.asp",
+      "final_url": "https://www.samsunglions.com/index.asp",
+      "retrieved_utc": "2026-10-01T09:22:56.553413+00:00",
+      "response_sha256": "2d64ee44bec53712992ac942f6d9ecf8ae06fb45bedc919e22af0890400a62fa",
+      "body_path": "research/data/raw/source_snapshots/samsung_20261001T092256553413Z_2d64ee44bec5.body",
+      "response_bytes": 63284,
+      "content_type": "text/html; Charset=UTF-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/samsung_20261001T092256553413Z_2d64ee44bec5.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Kbo/Rule/RuleChange.aspx",
+      "final_url": "https://www.koreabaseball.com/Error/Error.html?aspxerrorpath=/Kbo/Rule/RuleChange.aspx",
+      "retrieved_utc": "2026-10-01T09:22:56.311064+00:00",
+      "response_sha256": "5f0a6c5e5345456410fcbc723872f67c673463b7446516ba35cfccdcd7b7c277",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092256311064Z_5f0a6c5e5345.body",
+      "response_bytes": 3533,
+      "content_type": "text/html",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092256311064Z_5f0a6c5e5345.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "weather",
+      "publisher": "api.open-meteo.com",
+      "upstream_lineage_id": "weather",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://api.open-meteo.com/v1/forecast?latitude=35.841&longitude=128.681&hourly=temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m,wind_direction_10m,wind_gusts_10m&timezone=Asia%2FSeoul&forecast_days=1",
+      "final_url": "https://api.open-meteo.com/v1/forecast?latitude=35.841&longitude=128.681&hourly=temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m,wind_direction_10m,wind_gusts_10m&timezone=Asia%2FSeoul&forecast_days=1",
+      "retrieved_utc": "2026-10-01T09:22:56.070490+00:00",
+      "response_sha256": "b3cb344b96abad7c0441d408d2ac3d21c435d4e042399e3d4050cc030d68bcba",
+      "body_path": "research/data/raw/source_snapshots/weather_20261001T092256070490Z_b3cb344b96ab.body",
+      "response_bytes": 1594,
+      "content_type": "application/json; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/weather_20261001T092256070490Z_b3cb344b96ab.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Schedule/GameCenter/Preview/StartPitcher.aspx?leId=1&srId=0&seasonId=2026&gameId=20261001HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+      "final_url": "https://www.koreabaseball.com/Schedule/GameCenter/Preview/StartPitcher.aspx?leId=1&srId=0&seasonId=2026&gameId=20261001HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+      "retrieved_utc": "2026-10-01T09:25:15.877992+00:00",
+      "response_sha256": "3a578d839aef5a1ac9b9a303b8603fb600823088efffb77a358bb6665f80e997",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092515877992Z_3a578d839aef.body",
+      "response_bytes": 7469,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092515877992Z_3a578d839aef.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Schedule/GameCenter/Preview/Team.aspx?leId=1&srId=0&seasonId=2026&gameId=20261001HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+      "final_url": "https://www.koreabaseball.com/Schedule/GameCenter/Preview/Team.aspx?leId=1&srId=0&seasonId=2026&gameId=20261001HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+      "retrieved_utc": "2026-10-01T09:25:16.080444+00:00",
+      "response_sha256": "b54ff7397f02c291827deb95eb20e91b0df45983bda32787e95341ca42f5213e",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092516080444Z_b54ff7397f02.body",
+      "response_bytes": 4892,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092516080444Z_b54ff7397f02.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Schedule/GameCenter/Preview/LineUp.aspx?leId=1&srId=0&seasonId=2026&gameId=20261001HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+      "final_url": "https://www.koreabaseball.com/Schedule/GameCenter/Preview/LineUp.aspx?leId=1&srId=0&seasonId=2026&gameId=20261001HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+      "retrieved_utc": "2026-10-01T09:25:15.877863+00:00",
+      "response_sha256": "7ec85157c7c4120fa2e20a3ab9a31fcfeb2fdf72b00fb4818f39111f448d7b1a",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092515877863Z_7ec85157c7c4.body",
+      "response_bytes": 8554,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092515877863Z_7ec85157c7c4.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Kbo/League/GameManage2026.aspx",
+      "final_url": "https://www.koreabaseball.com/Kbo/League/GameManage2026.aspx",
+      "retrieved_utc": "2026-10-01T09:25:16.080819+00:00",
+      "response_sha256": "54063a1140ac826ddfba2bc6beaed3477d37954f0220ab0c833f3380aaf38bdd",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092516080819Z_54063a1140ac.body",
+      "response_bytes": 59742,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092516080819Z_54063a1140ac.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Kbo/League/GameManageRule/GameManage.aspx",
+      "final_url": "https://www.koreabaseball.com/Kbo/League/GameManageRule/GameManage.aspx",
+      "retrieved_utc": "2026-10-01T09:25:16.393180+00:00",
+      "response_sha256": "ac1b4df3093caf7f18448fcbec6492b602ac6a4bc249ab82c12b2bd07a221225",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092516393180Z_ac1b4df3093c.body",
+      "response_bytes": 34450,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092516393180Z_ac1b4df3093c.json"
+    },
+    {
+      "schema_version": 1,
+      "source_id": "kbo",
+      "publisher": "www.koreabaseball.com",
+      "upstream_lineage_id": "kbo",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://www.koreabaseball.com/Schedule/GameCenter/ReviewNew.aspx?leId=1&srId=0&seasonId=2026&gameId=20260930HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+      "final_url": "https://www.koreabaseball.com/Schedule/GameCenter/ReviewNew.aspx?leId=1&srId=0&seasonId=2026&gameId=20260930HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+      "retrieved_utc": "2026-10-01T09:25:15.836930+00:00",
+      "response_sha256": "bca2aa8a993dab2fee3cf886b9d506f7d8dd9b5a4d6339c85d455ebacb1c5a71",
+      "body_path": "research/data/raw/source_snapshots/kbo_20261001T092515836930Z_bca2aa8a993d.body",
+      "response_bytes": 15141,
+      "content_type": "text/html; charset=utf-8",
+      "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+      "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+      "market_quarantined": false,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/kbo_20261001T092515836930Z_bca2aa8a993d.json"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "baseline-definition-1",
+  "status": "APPROVED",
+  "baseline_version": "epl-empirical-score-0.1.0",
+  "lane": "EPL",
+  "league": "EPL",
+  "endpoint": "REGULATION",
+  "families": [
+    "1X2",
+    "TOTAL",
+    "BTTS"
+  ],
+  "approved_utc": "2026-10-01T02:11:35.717504+00:00",
+  "reviewed_utc": "2026-10-01T02:11:35.717504+00:00",
+  "reviewed_by": "Codex implementation review of retained executable baseline definition",
+  "basis": "Frozen September baseline: empirical 21x21 distribution of the1140 matches in2023-24 through2025-26. No inferred0.500; original baseline snapshot and source hash remain unchanged.",
+  "code_artifacts": [
+    {
+      "path": "research/src/baselines.py",
+      "sha256": "6dee712ca36b14fb6261b8ab60f94690d3e2fe9085d8961933dd31a43d37d011"
+    },
+    {
+      "path": "research/src/emit_card.py",
+      "sha256": "e498109374de6160912233f00401551a5b7a0ba2a5e43fc4df835b3b710cbe81"
+    },
+    {
+      "path": "research/src/sports/base.py",
+      "sha256": "e778ed1ca9d2dd2cdaea205f82fa32367701f548444a9a8d3e5f388768fb5a82"
+    },
+    {
+      "path": "research/src/load.py",
+      "sha256": "647dea85c5ff32b64c80b356c61c784280a77362e3a958fea2ef73b5350229a4"
+    }
+  ],
+  "evidence_limit": "This is a versioned executable comparator definition. Raw input availability and semantic source truth need their own reviewed receipts. Future model qualification remains SHADOW_ONLY."
+}

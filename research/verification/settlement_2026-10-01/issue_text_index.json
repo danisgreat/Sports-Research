@@ -1,0 +1,38 @@
+{
+  "P-518": {
+    "path": "research/verification/settlement_2026-10-01/issue_text/P-518.md",
+    "retained_issue_text_sha256": "4122e68be21708c680439a0c1b22224e4859875eb965f9d804ebc9779b59a6a7",
+    "canonical_core_sha256": "NOT_RECOVERED",
+    "basis": "DERIVED_LITERAL_EXCERPT_OF_UNCHANGED_ORIGINAL; NOT_CERTIFIED_ISSUE_CORE"
+  },
+  "P-519": {
+    "path": "research/verification/settlement_2026-10-01/issue_text/P-519.md",
+    "retained_issue_text_sha256": "88043b670bef9319c1edeb765b823ce80532c555a430c7b42193d3cb60bb5f84",
+    "canonical_core_sha256": "NOT_RECOVERED",
+    "basis": "DERIVED_LITERAL_EXCERPT_OF_UNCHANGED_ORIGINAL; NOT_CERTIFIED_ISSUE_CORE"
+  },
+  "P-520": {
+    "path": "research/verification/settlement_2026-10-01/issue_text/P-520.md",
+    "retained_issue_text_sha256": "277ee1df3c2247ef4762670ffd4953189128bb324dcee415e8aac62a53a14053",
+    "canonical_core_sha256": "NOT_RECOVERED",
+    "basis": "DERIVED_LITERAL_EXCERPT_OF_UNCHANGED_ORIGINAL; NOT_CERTIFIED_ISSUE_CORE"
+  },
+  "P-521": {
+    "path": "research/verification/settlement_2026-10-01/issue_text/P-521.md",
+    "retained_issue_text_sha256": "405f53da5795aeb51cffe560ff94572e39f7f71f8cb8f07ed16e11e5eecf718c",
+    "canonical_core_sha256": "NOT_RECOVERED",
+    "basis": "DERIVED_LITERAL_EXCERPT_OF_UNCHANGED_ORIGINAL; NOT_CERTIFIED_ISSUE_CORE"
+  },
+  "P-522": {
+    "path": "research/verification/settlement_2026-10-01/issue_text/P-522.md",
+    "retained_issue_text_sha256": "1e0361f4ddb3eab7a70b96677a0f65d7b88998e337ea2aadc047229182b2bd45",
+    "canonical_core_sha256": "NOT_RECOVERED",
+    "basis": "DERIVED_LITERAL_EXCERPT_OF_UNCHANGED_ORIGINAL; NOT_CERTIFIED_ISSUE_CORE"
+  },
+  "CLAIMED_P-523": {
+    "path": "research/verification/settlement_2026-10-01/issue_text/CLAIMED_P-523.md",
+    "retained_issue_text_sha256": "3f1c528b95df810b6e629077619d52ed6049b92d0f791828dea7c8c8cec5553a",
+    "canonical_core_sha256": "NOT_RECOVERED",
+    "basis": "MANUAL_CLAIM_EXCERPT; NO_ISSUE_TRANSACTION"
+  }
+}

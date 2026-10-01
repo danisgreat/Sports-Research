@@ -1,0 +1,27 @@
+{
+  "label": "P521_EFE",
+  "url": "https://as.com/baloncesto/acb/el-breogan-tumba-al-supercampeon-f202609-n/",
+  "source_id": "audit_p521_efe",
+  "attempt_utc": "2026-10-01T07:32:06.081507+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_p521_efe",
+    "publisher": "as.com",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://as.com/baloncesto/acb/el-breogan-tumba-al-supercampeon-f202609-n/",
+    "final_url": "https://as.com/baloncesto/acb/el-breogan-tumba-al-supercampeon-f202609-n/",
+    "retrieved_utc": "2026-10-01T07:32:09.368031+00:00",
+    "response_sha256": "79ed0c1383ee3c8b53ff8f1d759fc629ce6986bd92a18acef1ae11d73a1bc796",
+    "body_path": "research/data/benchmark/source_snapshots/audit_p521_efe_20261001T073209368031Z_79ed0c1383ee.body",
+    "response_bytes": 280056,
+    "content_type": "text/html; charset=utf-8",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_p521_efe_20261001T073209368031Z_79ed0c1383ee.json"
+  },
+  "decoded_bytes": 280056
+}

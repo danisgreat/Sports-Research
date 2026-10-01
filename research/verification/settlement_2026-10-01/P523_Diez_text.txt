@@ -1,0 +1,99 @@
+Oriente y The Strongest no se sacan ventaja en el Tahuichi
+¿Quiere recibir notificaciones de alertas?
+No, gracias
+Aceptar
+{{dayName}} {{day}} de {{monthName}}, Santa Cruz de la Sierra, Bolivia
+{{#is_ed24}}
+{{/is_ed24}}
+{{#is_radio}}
+{{/is_radio}}
+Radio FM 103.3
+Portada
+Fútbol
+Tenis
+Multideportivo
+Fuera de juego
+Champions league
+Mundial 2026
+Inicio
+Fútbol
+Tenis
+Multideportivo
+Fuera De Juego
+Mundial 2026
+Champions League
+En El Recuerdo
+E-Paper
+ED Investiga
+PUBLICIDAD
+Fútbol
+Oriente y The Strongest no se sacan ventaja en el Tahuichi
+Miércoles, 30 de septiembre de 2026 a las 23:09
+Incidencias del partido en el Tahuichi. Foto: APG
+Por Jaime Paniagua
+Compartir
+El Tigre se adelantó con un gol de Carlos Ventura, pero Nacif puso el 1-1 definitivo sobre el cierre del primer tiempo.
+Oriente Petrolero no pudo hacerse fuerte en el Tahuichi y cedió un empate 1-1 ante The Strongest por la sexta jornada de la Copa Bolivia. El cuadro refinero comenzó perdiendo, pero reaccionó antes del descanso y logró igualar el marcador. En el complemento, ambos equipos tuvieron ocasiones, aunque no estuvieron finos en la definición.
+El equipo dirigido por Gustavo Florentín arrancó con todo y salió en busca de abrir el marcador. En los primeros minutos, Leonardo Vaca cabeceó dentro del área tras un centro largo, pero su remate no tuvo potencia. Más tarde, Nabil Nacif probó dentro del área, aunque su disparo terminó en las manos del arquero Guillermo Viscarra.
+The Strongest resistía y esperaba su momento para contragolpear, mientras Valdivia se convertía en una de las figuras del Tigre al evitar la caída de su arco. A los 26 minutos llegó la sorpresa. El exjugador de Oriente Carlos Ventura recibió un balón largo de derecha a izquierda, controló dentro del área y enganchó hacia el centro para sacarse de encima a varios rivales. Luego sacó un potente remate que venció a Alejandro Torres y puso el 0-1.
+Oriente no bajó los brazos y continuó buscando el empate, aunque nuevamente se encontró con la resistencia del arquero atigrado. Sin embargo, en el cierre del primer tiempo llegó la respuesta refinera. A los 45+2', Jorge Lovera ejecutó un tiro de esquina desde la derecha hacia el segundo palo, donde apareció Nabil Nacif sin marca para conectar de cabeza y establecer el 1-1.
+En el complemento, ninguno logró sacar ventaja pese a la insistencia de ambos equipos. Oriente y The Strongest tuvieron aproximaciones, pero fallaron en la definición. A los 88', Chiatti llegó a marcar de cabeza tras un tiro libre desde la izquierda, aunque la acción fue anulada por posición adelantada.
+Con este resultado, The Strongest se mantiene como líder del Grupo C con 11 puntos, seguido por Oriente Petrolero con 10. FC Universitario ocupa el tercer lugar con siete unidades y Guabirá cierra la serie con seis.
+Más noticias
+Fútbol
+Bolivia sigue sin encontrarse y cae goleada ante Argentina
+Fútbol
+Bolivia sigue sin encontrarse y cae goleada ante Argentina
+Fútbol
+Leonardo sostiene su segundo lugar en Marruecos y Suany sigue con problemas
+Fútbol
+Leonardo sostiene su segundo lugar en Marruecos y Suany sigue con problemas
+Fútbol
+¡Final del partido! Bolivia es ampliamente superada y cae ante Argentina (4-0)
+Fútbol
+¡Final del partido! Bolivia es ampliamente superada y cae ante Argentina (4-0)
+PUBLICIDAD
+PUBLICIDAD
+PUBLICIDAD
+Las más leídas
+{{contador}}
+{{#volanta}}
+{{volanta}}
+{{/volanta}}
+{{titulo}}
+Las más leídas
+{{contador}}
+{{#volanta}}
+{{volanta}}
+{{/volanta}}
+{{titulo}}
+Las más leídas
+{{contador}}
+{{#volanta}}
+{{volanta}}
+{{/volanta}}
+{{titulo}}
+Tags
+fútbol
+Últimas noticias
+{{titulo}}
+{{#introduccion}}
+{{introduccion}}
+{{/introduccion}}
+{{titulo}}
+{{#introduccion}}
+{{introduccion}}
+{{/introduccion}}
+{{titulo}}
+{{#introduccion}}
+{{introduccion}}
+{{/introduccion}}
+PUBLICIDAD
+Contacto
+Políticas de Privacidad
+Publicidad
+Términos de uso
+Suscripciones
+Mustang Cloud -
+CMS para portales de noticias
+Copyright (c) 1996-2026. Todos los derechos reservados.

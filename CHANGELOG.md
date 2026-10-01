@@ -6,6 +6,10 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-10-01 — requested-analysis and canonical-log repair (v7.1 / I2)
+
+The user's instruction removes calibration/model/quorum/universe/pre-start-buffer blockers from requested research and canonical IDs. Current rules, prompts, templates and default workflow now permit qualitative or transparent uncalibrated analysis for all sports, late news and after-start delivery with honest timestamps. Calibration/performance claims remain separately labelled. Added a journaled research-card writer sharing the canonical ledger hash chain and lock, with duplicate-import checks, exact readback and interrupted-append recovery. Imported the Oriente–The Strongest, KT–Kia and supplied Chunichi–Hiroshima records into Part 6; added dated live NPB assessment and the Hanwha–Samsung card. Current ID pointers are in GAME_LOG_STATUS_CURRENT.md. Corrected the KBO regular-season extra-innings limit from the official owner rule page. No new retrospective, old forecast rewrite, model promotion or publication is performed. [Repair report](research/verification/log_repair_2026-10-01/REPORT.md) and manifests 3–4 record verification. Receipt 4 includes the continuous-integration command update and a regression-tested correction preventing repeated history headings during register refresh. Prior manifests and frozen model dependencies remain unchanged.
+
 ### 2026-09-29(c) — NBL source repair, locked holdout and first prospective shadow
 
 The official NBL22–NBL26 score dataset now has an independent published score for every one of 738 games: 736 exact agreements with FixtureDownload and two explicit club/league-report adjudications. ESPN's 152 missing and 17 conflicting scores remain diagnostic. [NBL preregistration](research/NBL_PREREGISTRATION_2026-09-29.md) preceded tuning and holdout; the one-shot NBL26 moneyline log-loss comparison passed M2 versus population M0 (0.6063 versus 0.6957; 95% week-block difference interval [−0.1366, −0.0387]). NBL27 has 13 completed games cross-checked and two immutable model-only pregame shadow receipts. The official final adapter, source receipts and local-only raw-source quarantine are in `research/`. No card was issued and the live pilot remains closed. This is the same control revision, with a new freeze receipt `CONTROL_MANIFEST_2026-09-29-3.md`.
@@ -657,3 +661,23 @@ CR-3 removes residual active wording that conflicted with the CR-2 supersession 
 - Queries, scripts and results: [`research/base_rates_2026-09-25/`](research/base_rates_2026-09-25/README.md).
 - Custody: the stray root `PREDICTION_MINI_RUNNING_LOG_P474_ONWARD.md` was checked and moved intact into its archive folder.
 - Control receipt: [`CONTROL_MANIFEST_2026-09-25-2.md`](CONTROL_MANIFEST_2026-09-25-2.md).
+
+
+<!-- IMPLEMENTATION-2026-10-01-I1 -->
+## 2026-10-01 - user-authorized prediction, source, archive and operating overhaul
+
+Method MDS-2026.10.01-v7.0; control CR-2026.10.01-I1; scoring SCV-2026.10.01-v3. The user's instruction authorizes code, data, probability-model and process changes and supersedes conflicting older Markdown-only implementation restrictions. Issued forecasts and original numerical research outputs remain frozen.
+
+Implemented versioned EPL coherent-result and NBL chronological residual-width candidates, family-level chronological diagnostics, population and strong comparators, pinned baseline definitions and complete model dependency/runtime receipts. All four versions remain SHADOW_ONLY; development evidence does not qualify a live model. Totals/BTTS have not passed every comparator gate. No claim is made that the new candidates outperform their original numerical models.
+
+Added retained source-body fetching/receipts, a fifteen-route registry, immutable daily snapshots, full fixture coverage, model-only shadow freezes and diagnostic grades. Implemented evidence-derived qualification, exact native identity/endpoint checks, audited lineage requirements, immutable universe registration, journaled issuance/recovery, append-only settlement revisions and persistent scoped pilot decisions. Numerical issuance remains closed until actual qualification evidence exists.
+
+Normalized the 522-card historical view into 2,004 learning-only contracts without inventing baselines or cutoffs. Added sports-only EPL/NBL CSV views. Rebuilt the canonical archive with conservative labels, explicit missing coverage, source-body validation and journaled official-source corrections; 20,943 header-only files remain unfilled rather than falsely complete. Restored meaningful behavior to thirteen former empty archive helpers.
+
+Full offline suite: 107 passed in 64.39 seconds. Archive and custody acceptance passed. Three new NBL shadows were frozen in the first integrated daily run; no live card was issued and P-523 remains next. Current rules, schemas, prompts, verification instructions and freeze receipt are consolidated. The comprehensive implementation/evidence and remaining operating plan is [IMPLEMENTATION_2026-10-01.md](IMPLEMENTATION_2026-10-01.md).
+
+
+<!-- SETTLEMENT-AUDIT-20261001 -->
+## 2026-10-01 — all-log settlement and learning reconciliation
+
+Inventoried522historical slots plus one manual claim; reviewed115historicalIDs and the manual claim. Added34exact-endpoint diagnostic grades on8cards/claims,455documentarysource-pointer recoveries, five shadow dispositions,49append-only legacy correction fields, and dated status/learning/Part6/mini-log appends. No certified prospective settlement, operatorVOID, canonical issue, model coefficient or rank change. Original forecast cores/source bytes/normalized views/shadows remain unchanged. Exact source receipts, unresolved cases and reproducible readback: `research/verification/settlement_2026-10-01/REPORT.md`.

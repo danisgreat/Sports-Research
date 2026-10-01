@@ -1,0 +1,8 @@
+{
+  "label": "P521_stats",
+  "url": "https://live.acb.com/partidos/rio-breogan-vs-asisa-joventut-105378/estadisticas",
+  "source_id": "audit_p521_stats",
+  "attempt_utc": "2026-10-01T07:32:09.474218+00:00",
+  "status": "UNAVAILABLE",
+  "reason": "ValueError: redirect outside source allowlist"
+}

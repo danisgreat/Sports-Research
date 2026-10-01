@@ -65,6 +65,11 @@ def run():
     checks["historical_learning_rows"]=len(contracts)
     checks["historical_learning_cards"]=522
     checks["historical_source_anchors_verified"]=len(source_cache)
+    league_export=ROOT/"data/processed/league_csv"
+    for lane,ref in json.loads((league_export/"manifest.json").read_text())["leagues"].items():
+        if sha(league_export/(lane.lower()+"_results.csv"))!=ref["csv_sha256"]:
+            issues.append("LEAGUE_EXPORT_CHANGED:"+lane)
+    checks["active_league_csvs"]={"EPL":2280,"NBL":738}
     if (ROOT/"canonical_ledger.jsonl").exists():
         from .ledger import read_records,committed_issues
         if committed_issues(read_records(ROOT/"canonical_ledger.jsonl")):issues.append("UNEXPECTED_LIVE_ISSUE_DURING_IMPLEMENTATION")

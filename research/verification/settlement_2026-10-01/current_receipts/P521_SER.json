@@ -1,0 +1,27 @@
+{
+  "label": "P521_SER",
+  "url": "https://cadenaser.com/galicia/2026/09/28/paco-basanta-analiza-al-nuevo-rio-breogan-es-un-partido-para-ver-y-volver-a-ver-radio-lugo/",
+  "source_id": "audit_p521_ser",
+  "attempt_utc": "2026-10-01T07:32:07.520506+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_p521_ser",
+    "publisher": "cadenaser.com",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://cadenaser.com/galicia/2026/09/28/paco-basanta-analiza-al-nuevo-rio-breogan-es-un-partido-para-ver-y-volver-a-ver-radio-lugo/",
+    "final_url": "https://cadenaser.com/galicia/2026/09/28/paco-basanta-analiza-al-nuevo-rio-breogan-es-un-partido-para-ver-y-volver-a-ver-radio-lugo/",
+    "retrieved_utc": "2026-10-01T07:32:09.224555+00:00",
+    "response_sha256": "262a3e2b2a35ddbe63fa44260014baa1678781aee71c9bfeaa91ac44750d423b",
+    "body_path": "research/data/benchmark/source_snapshots/audit_p521_ser_20261001T073209224555Z_262a3e2b2a35.body",
+    "response_bytes": 216800,
+    "content_type": "text/html; charset=utf-8",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_p521_ser_20261001T073209224555Z_262a3e2b2a35.json"
+  },
+  "decoded_bytes": 216800
+}

@@ -4,6 +4,7 @@
   "cohort_version": "EPL-PILOT-2",
   "weights": {"EPL": 1.0},
   "model_versions": {"EPL": null},
+  "baseline_versions": {"EPL": null},
   "endpoints": {"EPL": "REGULATION"},
   "league_seasons": {"EPL": {"league": "EPL", "season": null}},
   "inclusion_rule": "FIRST_CHRONOLOGICAL_ADJUSTED_ISSUES",

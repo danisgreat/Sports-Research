@@ -3,6 +3,8 @@
   "lane": null,
   "league": null,
   "model_version": null,
+  "baseline_version": null,
+  "baseline_definition_ref": {"path": null, "sha256": null},
   "endpoint": null,
   "families": [],
   "model_artifacts": [],
@@ -16,5 +18,5 @@
   "shadow_manifest_ref": {"path": null, "sha256": null},
   "issuer_ref": {"path": null, "sha256": null},
   "terminal_adapter_ref": {"path": null, "sha256": null},
-  "notes": "A holdout must be ONE_SHOT_HOLDOUT with exact lane/league/model_version/endpoint, validated_families, and separate passing paired-logloss CI gates for each family. An opened development evaluation cannot qualify. Shadow count/duration is derived from unique retained receipt hashes with pregame timing and matching code/model scope. Review does not make legacy or reconstructed forecasts prospective."
+  "notes": "A holdout must be ONE_SHOT_HOLDOUT with exact lane/league/model_version/endpoint/baseline_version/baseline_definition_ref, validated_families, and separate passing paired-logloss CI gates for each family. An opened development evaluation cannot qualify. Shadow count/duration is derived from unique retained receipt hashes with pregame timing and matching code/model scope. Every shadow receipt additionally binds baseline_version, baseline_definition_ref and baseline_code_artifacts. Review does not make legacy or reconstructed forecasts prospective."
 }

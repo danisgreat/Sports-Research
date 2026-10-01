@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "kbo",
+  "publisher": "www.koreabaseball.com",
+  "upstream_lineage_id": "kbo",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx",
+  "final_url": "https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx",
+  "retrieved_utc": "2026-10-01T09:22:54.888971+00:00",
+  "response_sha256": "fd979752cf6bece015eb27e2980660b60875bd891530b42ae42c85f5a5e495f4",
+  "body_path": "research/data/raw/source_snapshots/kbo_20261001T092254888971Z_fd979752cf6b.body",
+  "response_bytes": 60556,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+  "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

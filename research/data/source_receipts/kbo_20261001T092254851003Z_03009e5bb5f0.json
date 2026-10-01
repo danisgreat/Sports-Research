@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "kbo",
+  "publisher": "www.koreabaseball.com",
+  "upstream_lineage_id": "kbo",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.koreabaseball.com/Record/Team/Pitcher/Basic1.aspx",
+  "final_url": "https://www.koreabaseball.com/Record/Team/Pitcher/Basic1.aspx",
+  "retrieved_utc": "2026-10-01T09:22:54.851003+00:00",
+  "response_sha256": "03009e5bb5f02d3201fc514719eb104f1ece82d047424e692ecdcd0320a85130",
+  "body_path": "research/data/raw/source_snapshots/kbo_20261001T092254851003Z_03009e5bb5f0.body",
+  "response_bytes": 52046,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+  "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

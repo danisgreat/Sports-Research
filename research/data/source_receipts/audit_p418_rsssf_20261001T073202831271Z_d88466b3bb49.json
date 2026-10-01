@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "audit_p418_rsssf",
+  "publisher": "www.rsssf.org",
+  "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.rsssf.org/tablesb/bhutan2026.html",
+  "final_url": "https://www.rsssf.org/tablesb/bhutan2026.html",
+  "retrieved_utc": "2026-10-01T07:32:02.831271+00:00",
+  "response_sha256": "d88466b3bb49bed563035c145df8f10887049046ec96c4166ebb22c1c0bc0b87",
+  "body_path": "research/data/benchmark/source_snapshots/audit_p418_rsssf_20261001T073202831271Z_d88466b3bb49.body",
+  "response_bytes": 10247,
+  "content_type": "text/html",
+  "parser_id": "AUDIT_READBACK_V1",
+  "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+  "market_quarantined": true,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

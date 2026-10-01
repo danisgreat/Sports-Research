@@ -1,0 +1,27 @@
+{
+  "label": "Guatemala_owner",
+  "url": "https://ligagt.com/",
+  "source_id": "audit_guatemala_owner",
+  "attempt_utc": "2026-10-01T07:31:54.119408+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_guatemala_owner",
+    "publisher": "ligagt.com",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://ligagt.com/",
+    "final_url": "https://ligagt.com/",
+    "retrieved_utc": "2026-10-01T07:31:55.298448+00:00",
+    "response_sha256": "9b351adf5b7d4d25ab950b6184ed523664256ad21b87335d5f72acd43a590246",
+    "body_path": "research/data/benchmark/source_snapshots/audit_guatemala_owner_20261001T073155298448Z_9b351adf5b7d.body",
+    "response_bytes": 303,
+    "content_type": "text/html",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_guatemala_owner_20261001T073155298448Z_9b351adf5b7d.json"
+  },
+  "decoded_bytes": 303
+}

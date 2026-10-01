@@ -1,0 +1,8 @@
+{
+  "label": "P341_ESPN",
+  "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uga.1/scoreboard?dates=20260908",
+  "source_id": "audit_p341_espn",
+  "attempt_utc": "2026-10-01T07:32:00.447687+00:00",
+  "status": "UNAVAILABLE",
+  "reason": "HTTPError: HTTP Error 403: Forbidden"
+}

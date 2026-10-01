@@ -1,0 +1,8 @@
+{
+  "label": "FFF_owner",
+  "url": "https://www.fff.fr/",
+  "source_id": "audit_fff_owner",
+  "attempt_utc": "2026-10-01T07:31:54.118418+00:00",
+  "status": "UNAVAILABLE",
+  "reason": "HTTPError: HTTP Error 403: Forbidden"
+}

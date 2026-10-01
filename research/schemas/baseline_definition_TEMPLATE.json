@@ -1,0 +1,15 @@
+{
+  "schema_version": "baseline-definition-1",
+  "status": "NOT_APPROVED",
+  "baseline_version": null,
+  "lane": null,
+  "league": null,
+  "endpoint": null,
+  "families": [],
+  "approved_utc": null,
+  "reviewed_utc": null,
+  "reviewed_by": null,
+  "basis": null,
+  "code_artifacts": [],
+  "notes": "Retain the exact comparator definition, method and code dependencies before approval. Admission registry baseline_definitions must repeat baseline_version/lane/league/endpoint/families/status/approved_utc/code_artifacts and include a definition_ref {path,sha256} to this artifact. Each model admission requires baseline_version. Approval must precede the forecast cutoff and every artifact hash must match. Baseline distribution wrappers require matching baseline_version, baseline_definition_ref, baseline_code_artifacts, event_id, endpoint, input_checksum, data_cutoff_utc and the same integer score support as model/card distributions. These joins prove identity and retained-byte custody; they do not independently recompute every baseline distribution or prove a declared input available_utc. Preserve and review original input source receipts and baseline construction. This template does not approve a baseline."
+}

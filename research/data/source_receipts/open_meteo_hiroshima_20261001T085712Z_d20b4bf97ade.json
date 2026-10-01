@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "source_id": "open_meteo_hiroshima",
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=34.39&longitude=132.48&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m,wind_direction_10m&timezone=Asia%2FTokyo",
+  "hostname": "api.open-meteo.com",
+  "parser_id": "OPEN_METEO_JSON_V1",
+  "retrieved_utc": "2026-10-01T08:57:12Z",
+  "content_sha256": "d20b4bf97ade6c04a6bb175f9cec163b1dbc5c5173411b24f51ba0d1356dbef4",
+  "byte_count": 561,
+  "stored_snapshot_path": "research\\data\\raw\\source_snapshots\\open_meteo_hiroshima_20261001T085712Z_d20b4bf97ade.body",
+  "event_id": "c-d-25",
+  "lane": "NPB",
+  "league": "NPB"
+}

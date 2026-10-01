@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "weather",
+  "publisher": "api.open-meteo.com",
+  "upstream_lineage_id": "weather",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://api.open-meteo.com/v1/forecast?latitude=35.841&longitude=128.681&hourly=temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m,wind_direction_10m,wind_gusts_10m&timezone=Asia%2FSeoul&forecast_days=1",
+  "final_url": "https://api.open-meteo.com/v1/forecast?latitude=35.841&longitude=128.681&hourly=temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m,wind_direction_10m,wind_gusts_10m&timezone=Asia%2FSeoul&forecast_days=1",
+  "retrieved_utc": "2026-10-01T09:22:56.070490+00:00",
+  "response_sha256": "b3cb344b96abad7c0441d408d2ac3d21c435d4e042399e3d4050cc030d68bcba",
+  "body_path": "research/data/raw/source_snapshots/weather_20261001T092256070490Z_b3cb344b96ab.body",
+  "response_bytes": 1594,
+  "content_type": "application/json; charset=utf-8",
+  "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+  "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

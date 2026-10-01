@@ -8,6 +8,9 @@
   "model_versions": {
     "EPL": null
   },
+  "baseline_versions": {
+    "EPL": null
+  },
   "endpoints": {
     "EPL": "REGULATION"
   },

@@ -21,6 +21,8 @@ CONTRACTS += [Contract("EPL_POP", "BTTS", side, None, "REGULATION") for side in 
 
 
 def build() -> list[dict]:
+    if (ROOT/"data/processed/epl_2026-27_population_states.json").exists() or (ROOT/"baselines.csv").exists():
+        raise FileExistsError("baseline snapshot already exists; use a new versioned path")
     df = pd.read_parquet(PROCESSED / "matches.parquet")
     prior = df.loc[df.season.isin(SEASONS)].copy()
     if len(prior) != 1140:

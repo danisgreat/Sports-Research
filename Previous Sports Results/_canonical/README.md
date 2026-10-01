@@ -4,7 +4,7 @@ This directory contains the conservative archive interface used for historical
 result labels. Raw yearly CSVs remain the input layer, with 230 corrected rows and
 two appended completed MLB results recorded under `../_custody/corrections.jsonl`.
 The exact original bytes are retained separately. Corrections include 222
-Brisbane Bears identities from 1987–1996, two transposed AFL dates in 1905,
+Brisbane Bears identities from 1987-1996, two transposed AFL dates in 1905,
 three AFLW team aliases, both copies of the 2025 Dublin college-football score,
 and the NFL Brazil game's neutral venue. All require retained field-owner evidence.
 
@@ -17,8 +17,8 @@ and the NFL Brazil game's neutral venue. All require retained field-owner eviden
 | `manifest.json` | All raw inputs, outputs, parser and transformation hashes, snapshot identity, all 1,615 source receipt hashes and their 1,614 retained-body hashes, measured counts and source-record errors |
 
 Run `python -B -m research.src.archive build` from the repository root to rebuild.
-The three bulky event/narrative/provenance exports are ignored build products;
-the manifest, coverage register, raw inputs and retained source custody make the
+The four bulky event/narrative/provenance/season exports are ignored build products;
+the manifest counts, raw inputs and retained source custody make the
 same local snapshot reconstructible. Source endpoints can change later: retain
 the exact bodies to reproduce a historical snapshot.
 

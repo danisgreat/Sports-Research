@@ -1,0 +1,24 @@
+{
+  "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetPitcherRecordAnalysis",
+  "request_method": "POST",
+  "request_params": {
+    "leId": "1",
+    "srId": "0",
+    "seasonId": "2026",
+    "gameId": "20261001HHSS0",
+    "awayTeamId": "HH",
+    "homeTeamId": "SS",
+    "awayPitId": "54729",
+    "homePitId": "69446",
+    "groupSc": "SEASON"
+  },
+  "retrieved_utc": "2026-10-01T09:26:30.276310+00:00",
+  "response_sha256": "b95407c40e48c5d01e41d54baa066fc8f462f3ab23f47ec3c954c8d455d0e09c",
+  "response_bytes": 7457,
+  "body_path": "research/verification/log_repair_2026-10-01/api_pitch.body",
+  "content_type": "text/plain; charset=UTF-8",
+  "final_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetPitcherRecordAnalysis",
+  "independence_status": "UNKNOWN",
+  "upstream_lineage_id": "KBO_OWNER",
+  "parser_id": "KBO_NATIVE_JSON_MANUAL_READBACK_V1"
+}

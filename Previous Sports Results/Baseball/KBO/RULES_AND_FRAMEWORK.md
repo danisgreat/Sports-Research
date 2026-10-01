@@ -33,7 +33,7 @@ Before issuing any forecast or recording historical results for an upcoming seas
 ### Match Duration & Clock Governance
 - **Regulation Playing Time:** 9 innings.
 - **Scoring Architecture:** Standard baseball scoring.
-- **Overtime & Tie Resolution:** Regular season: 12-inning tie limit (games declared official ties; no ghost runner). Postseason: 15-inning tie limit.
+- **Overtime & Tie Resolution:** From the 2025 rule change, regular-season games end after at most **11 innings**, with an official tie if still level. The previous 12-inning limit must be applied only to historical seasons where it governed. [Official KBO 2025 changes](https://www.koreabaseball.com/Kbo/League/GameManage2025.aspx), section 연장전 이닝 축소; [current 2026 changes](https://www.koreabaseball.com/Kbo/League/GameManage2026.aspx). October 1, 2026 source bodies retained in `research/verification/log_repair_2026-10-01/`. Postseason and other tie-break procedures require their separate season/stage audit; do not infer them from the regular-season limit.
 
 ---
 

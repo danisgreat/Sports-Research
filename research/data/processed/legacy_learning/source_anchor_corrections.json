@@ -327,6 +327,186 @@
       "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
       "line": 570,
       "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:1286",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 1286,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-1286"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:1287",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 1287,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-1287"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:1288",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 1288,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-1288"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:1289",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 1289,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-1289"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:490",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 490,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-490"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:491",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 491,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-491"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:492",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 492,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-492"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:493",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 493,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-493"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:715",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 715,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-715"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:716",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 716,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-716"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:717",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 717,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-717"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:718",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 718,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-718"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:928",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 928,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-928"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:929",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 929,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-929"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:930",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 930,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-930"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:931",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 931,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-931"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:1438",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 1438,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-1438"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:1439",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 1439,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-1439"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:1440",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 1440,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-1440"
+    },
+    {
+      "pointer": "PREDICTION_LOG_COMBINED_6.md:1441",
+      "original_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "retained_path": "research/verification/settlement_2026-10-01/originals/prediction logs/PREDICTION_LOG_COMBINED_6.md",
+      "sha256": "963f292a84f222a872086b88c6ea535389657c4afb0798de805f5d39ca0475c6",
+      "line": 1441,
+      "reason": "October1 authorized append changes living whole-file hash; original source line and complete pre-append file remain byte-identical in retained custody. No normalized probability, rank, contract or grade changes.",
+      "revision_id": "ANCHOR-20261001-PART6-1441"
     }
   ]
 }

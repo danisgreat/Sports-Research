@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "audit_p521_acb",
+  "publisher": "live.acb.com",
+  "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://live.acb.com/es/partidos/rio-breogan-vs-asisa-joventut-105378/resumen",
+  "final_url": "https://live.acb.com/es/partidos/rio-breogan-vs-asisa-joventut-105378/resumen",
+  "retrieved_utc": "2026-10-01T07:32:11.067574+00:00",
+  "response_sha256": "0bacbf25e942c2fe25f6a1de6c80d2396537dcc3cc4466767f44b4f559a6c606",
+  "body_path": "research/data/benchmark/source_snapshots/audit_p521_acb_20261001T073211067574Z_0bacbf25e942.body",
+  "response_bytes": 590610,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "AUDIT_READBACK_V1",
+  "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+  "market_quarantined": true,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

@@ -1,0 +1,8 @@
+{
+  "label": "P410_ESPN",
+  "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/summary?event=401884798",
+  "source_id": "audit_p410_espn",
+  "attempt_utc": "2026-10-01T07:32:01.212684+00:00",
+  "status": "UNAVAILABLE",
+  "reason": "HTTPError: HTTP Error 403: Forbidden"
+}

@@ -1,0 +1,27 @@
+{
+  "label": "P256_UEFA_event",
+  "url": "https://match.uefa.com/v5/matches/2049367",
+  "source_id": "audit_p256_uefa_event",
+  "attempt_utc": "2026-10-01T07:31:59.766528+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_p256_uefa_event",
+    "publisher": "match.uefa.com",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://match.uefa.com/v5/matches/2049367",
+    "final_url": "https://match.uefa.com/v5/matches/2049367",
+    "retrieved_utc": "2026-10-01T07:32:00.386131+00:00",
+    "response_sha256": "8ab608340185532bbe9691e5d934bd2ca80893ffd2797880e8474b428163cfce",
+    "body_path": "research/data/benchmark/source_snapshots/audit_p256_uefa_event_20261001T073200386131Z_8ab608340185.body",
+    "response_bytes": 39902,
+    "content_type": "application/json",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_p256_uefa_event_20261001T073200386131Z_8ab608340185.json"
+  },
+  "decoded_bytes": 39902
+}

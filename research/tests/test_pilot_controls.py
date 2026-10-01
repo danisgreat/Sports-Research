@@ -110,3 +110,21 @@ def test_actual_default_registries_cannot_start_a_live_pilot(evidence):
     with pytest.raises(ValueError,match="no live-qualified"):
         pilot.freeze_lock(evidence.root/"real-default-refused.json",definition,ledger_path=evidence.ledger_path,
             registry_path=eligibility.REGISTRY,evidence_root=evidence.root)
+
+
+def test_pilot_freeze_requires_registered_baseline_and_unchanged_code(evidence):
+    _,_,definition=locked_cohort(evidence,["GOOD"]*8)
+    missing={k:v for k,v in definition.items() if k!="baseline_versions"}
+    with pytest.raises(ValueError,match="model/baseline version"):
+        pilot.freeze_lock(evidence.root/"missing-baseline-lock.json",missing,ledger_path=evidence.ledger_path,
+            registry_path=evidence.registry_path,evidence_root=evidence.root)
+    changed={**definition,"baseline_versions":{"EPL":"unregistered"}}
+    with pytest.raises(ValueError,match="baseline version differs"):
+        pilot.freeze_lock(evidence.root/"wrong-baseline-lock.json",changed,ledger_path=evidence.ledger_path,
+            registry_path=evidence.registry_path,evidence_root=evidence.root)
+    (evidence.root/evidence.baseline_code_ref["path"]).write_text("changed comparator code")
+    with pytest.raises(ValueError,match="hash mismatch"):
+        pilot.freeze_lock(evidence.root/"drifted-baseline-lock.json",definition,ledger_path=evidence.ledger_path,
+            registry_path=evidence.registry_path,evidence_root=evidence.root)
+    for name in ("missing-baseline-lock.json","wrong-baseline-lock.json","drifted-baseline-lock.json"):
+        assert not (evidence.root/name).exists()

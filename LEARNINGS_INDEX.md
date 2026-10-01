@@ -515,3 +515,25 @@ Validity repairs and user-instructed changes are not parked; they are dispositio
 | Date | Card(s) | Observation | Evidence |
 |---|---|---|---|
 | — | — | None yet | — |
+
+
+<!-- IMPLEMENTATION-2026-10-01-I1 -->
+## 2026-10-01 - current implementation index
+
+The user-authorized overhaul is recorded in [LEARNING_REGISTER.md](LEARNING_REGISTER.md) under L-20261001-01 through L-20261001-07 and [CHANGELOG.md](CHANGELOG.md). [CURRENT_RULES.md](CURRENT_RULES.md) now governs new work. Older parked-rule and Markdown-only entries above retain historical scope.
+
+Implemented: audited evidence/identity/timing controls, family-specific development comparisons, chronological residual widths, versioned baseline provenance, learning-only historical views, measured archive coverage and persistent pilot custody. Not established: prospective predictive skill, independent real-source quorums, exact changed-model untouched qualification or a live adjustment pilot. All current model versions are SHADOW_ONLY. See the [implementation and remaining operating plan](IMPLEMENTATION_2026-10-01.md).
+
+
+<!-- SETTLEMENT-AUDIT-20261001 -->
+## October1 settlement audit index
+
+All entries PARKED_LEARNING_ONLY; full evidence and individual A–F reviews in the matching LEARNING_REGISTER append and audit report.
+
+| ObservationID | Scope | Cases | Observed evidence | Testable follow-up (parked) |
+|---|---|---|---|---|
+| OBS-20261001-AUDIT-01 | Source and period | P407/P410/P255/P256 | Exact owner fields can resolve arithmetic while independence/start/period custody stays open. | Check exact native event/period/provider tags; require zero endpoint substitutions. |
+| OBS-20261001-AUDIT-02 | Arithmetic and dependence | P520/manualP523 | Signed adjustments, printed Normal marginals and top-two joint probabilities do not reconcile in the retained cards. | Compare frozen scalar/grid/joint outputs with analytic reconstruction before any qualified future issue. |
+| OBS-20261001-AUDIT-03 | Baselines and timing | P518–P522/manualP523 | Unapproved numeric diagnostics and parenthesized0.500 were presented as settlement baselines; schedule crossing and canonical claims are unreconciled. | Require approved exact baseline artifacts and issue transaction before cohort enrollment. |
+| OBS-20261001-AUDIT-04 | Ranks and administration | Nine same-rank merged cards;P136/P445 | Merged rank variants, unknown retirement rules and conditional no-action slots create false performance trials. | Preserve original row IDs/ties/operator terms and reject duplicate/no-issue enrollment. |
+| OBS-20261001-AUDIT-05 | Mechanism validation | P519/P520/P521/P522 | Winning cushion or short-leash realization does not prove calibration or the causal adjustment. | Freeze paired model-only and adjusted distributions on identical endpoints, then test an untouched chronological eligible cohort. |

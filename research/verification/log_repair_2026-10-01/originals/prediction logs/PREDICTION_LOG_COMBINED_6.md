@@ -1,0 +1,6754 @@
+# Combined prediction log 6 — active continuation from P-523
+
+> **Controlling custody status (2026-09-28):** ACTIVE CONTINUATION. Part 5 is canonical through P-517. The five P-518 to P-522 IDs are reserved claims awaiting the checks in [P-518 to P-522 reconciliation](../P518_P522_RECONCILIATION.md); they are not certified canonical imports or performance eligible. By the user's explicit continuation instruction, **P-523 is the next new prediction ID**, then P-524 onward in issue order. This ID decision does not settle or validate P-518 to P-522. All records remain LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+>
+> The historical mini-log text below is preserved **byte for byte** between the markers, including its unverified claim that all five are fully settled. That claim does not control current custody. P-523 is authorized independently by the user's new continuation instruction. Do not score, rename or renumber the original five from that historical snapshot. Append verified corrections only after their reconciliation gate passes.
+
+New game cards use P-523 onward and append **after the end marker** in this Part 6 file until the user directs a new part. Freeze the issue core before the start under `CURRENT_RULES.md`, then append its annex; do not insert, reorder or edit the original source block. If an event identity collides or the next ID is unclear, use a temporary ID for that event and reconcile it before assignment. P-523 continuation does not release P-518 to P-522 from their separate audit.
+
+Original source path: `prediction logs/PREDICTION_MINI_RUNNING_LOG_P518_ONWARD.md` at Git `753f0a9`.
+Original raw-byte SHA-256: `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`.
+
+<!-- BEGIN ORIGINAL P518 SOURCE BYTES -->
+# Prediction Mini Running Log — P-518 onward (started 2026-09-27)
+
+| Field | Value |
+|---|---|
+| Log Name | **Prediction Mini Running Log — P-518 onward** |
+| Created / Start Date (AEST) | **2026-09-27 02:25 +10:00** (Australia/Melbourne, AEST UTC+10; AEDT from 4 Oct 2026) |
+| Status | **CLOSED AND SETTLED 2026-09-27.** 5 events issued and fully settled (`P-518`, `P-519`, `P-520`, `P-521`, `P-522`). No event in this log remains unresolved. |
+| Governing Method | `METHOD.md` **MDS-2026.09.19-v4.3** |
+| Control Revision | `METHOD.md` **CR-2026.09.21-3** |
+| Scoring Version | `SCORING_AND_VALIDATION.md` **SCV-2026.09.19-v2** (§15, RM-1) |
+| Control Manifest | `CONTROL_MANIFEST_2026-09-27.md` |
+| Manifest SHA-256 | `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31` (2026-09-26(e) predictability pass, category MEASUREMENT with TB-1 validity repairs for NRL sides and NFL totals, C1: no model change meets the user's 2026-09-27 bar; 124 files, CRLF form; verified via `python tools/verify_manifest.py`) |
+| Next Canonical ID | **P-523** (P-518 through P-522 issued below) |
+| ID Determination | Determined from the controlling top snapshot of the active canonical log (`PREDICTION_LOG_COMBINED_5.md` lines 8, 20–30, and §"2026-09-26(a)") and verified in `GAME_LOG_STATUS_CURRENT.md` (lines 3, 11). `PREDICTION_LOG_COMBINED_5.md` reconciles canonical IDs through P-517: P-510–P-515 were imported and settled in §"2026-09-25(f)"; P-516 (`TMP-20260923-NPB-CHU-DB-G25`) and P-517 (`TMP-20260923-NBL-CNS-TAS`) were assigned on 2026-09-26(a) to the two settled temporary IDs. No temporary ID awaits reconciliation. P-518 through P-522 were issued in this mini log. Next canonical ID is P-523. |
+| Temporary IDs Awaiting Reconciliation | **None.** `TMP-20260923-NPB-CHU-DB-G25` = P-516 and `TMP-20260923-NBL-CNS-TAS` = P-517 (`PREDICTION_LOG_COMBINED_5.md` §"2026-09-26(a)"). |
+| Operating Mode | **SPORTS_ONLY / MARKET_BLIND.** No odds, prices, line movement, tipsters, betting previews, prediction markets or fantasy/DFS material. A supplied line is contract metadata only. |
+| Performance Status | **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** |
+| Predecessor Mini Log | `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-516 onward - 2026-09-25/PREDICTION_MINI_RUNNING_LOG_P516_ONWARD.md` (created 2026-09-25(e); no events carded; folder name predated 2026-09-26(a) canonical assignment). Preceding settled mini log: `archive/mini_logs/Mini Prediction Log - P-510 to P-515 SETTLED - 2026-09-25/` (imported into `PREDICTION_LOG_COMBINED_5.md` §"2026-09-25(f)"). |
+
+---
+
+## Standing Operating Rules and Preflight Directives (`CURRENT_RULES.md`)
+
+1. **Rank by RM-1 q:** Field 4 prints stated $p$ and RM-1 $q$ for every row, ranks them **by $q$**, and prints the `TOP2_QUALITY` line (`python tools/rank_model.py rank --sport <league> --row "<contract>=<p>" …`).
+   - A `SIDE_FLIP` is capped at SUPPORTED and requires a reconciliation line.
+   - Under `TOP2_COIN_FLIP`, the delivery states plainly that the top two are near coin flips.
+   - `SLATE_ADVISORY` is optional.
+2. **Team Baseline ($TEAM\_BASELINE\_P$):** Covered leagues print `TEAM_BASELINE_P` beside `BASELINE_P` (`python tools/team_baseline.py predict …`). Covered: NBA, WNBA, NBL, AFL; EPL for match results. MLB, NHL, NRL sides and NFL totals print a no-resolution flag and anchor on `BASELINE_P`.
+3. **Underdog Cushion Baseline:** A non-baseball, non-hockey, non-soccer +k.5 row takes the population cover rate as its `BASELINE_P` (`BASE_RATES_REGISTER.md` §7.7(c); `C-PLUS-CUSHION`).
+4. **Lineup Gate:** Official starters before a lineup-dependent Rank 1 (G14.2). Unconfirmed lineups stay marked `LINEUPS_NOT_YET_PUBLISHED` or `RETRIEVAL_MISS`.
+5. **Feed-Sourced Settlement:** Settlement is read from the feed (`receipts.py settle …`, or a pasted endpoint response), never typed (`C-SETTLEMENT-FROM-FEED`). Audit field `10n` checks the lineup diff against the card.
+6. **Settlement Table Schema:** `| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |`.
+7. **Declare Universe:** Declare the slate before choosing a game (`python tools/slate_universe.py declare --date <venue-local YYYY-MM-DD> --league <key> …`). Every card prints `UNIVERSE: UNIVERSE_<date>.json` (audit field `UV`, strict). A game outside it prints `OUT_OF_UNIVERSE` with a reason.
+8. **Rule Freeze in Force:** `C-RULE-FREEZE` (`python tools/evidence_status.py`). No new predictive rule, weight, or cap until `C-BASELINE-SKILL` and `T-RM1-PROSPECTIVE` reach their checkpoints. Proposed rule changes are `TESTING` candidates only.
+9. **Numerical Shadow Lanes:** After the freeze, record the shadow row before start (MLB: `python tools/mlb_model.py shadow --gamepk <pk> --total <line> --card P-<n>`; other sports: `python tools/sport_models.py shadow --league <key> --event <ESPN id> --date <date> --card P-<n> --total <line> --line <home handicap>`). It is blind (row ID only), never a card input, and never changes a rank.
+10. **Market Benchmark:** After settlement only, the operator records no-vig closing prices in `MARKET_BENCHMARK_LEDGER.md` (`C-MARKET-BENCHMARK`). Forecasting stays strictly market-blind.
+11. **Shadow Settlement:** At settlement, print `SHADOW: <row id>` (or `SHADOW: NO_LANE <reason>` / `SHADOW: MISSED <reason>`). Audit field `10s` is strict.
+12. **Validity Repairs:** NRL sides and NFL totals print `TB1_NO_RESOLUTION` and anchor on `BASELINE_P`.
+13. **Predictability Row:** Print the league's predictability row (`BASE_RATES_REGISTER.md` §7.8: share of STRONG favourites and their win rate, or `NOT_YET_DERIVED`) beside the track-record row (`C-PREDICTABILITY-MAP`). Under `TOP2_COIN_FLIP` in a league with few or no STRONG favourites, state that the slate cannot produce a STRONG Rank 1.
+14. **Model Anchor:** `tools/model_anchor.py` is a reference, never a card input (`C-MODEL-ANCHOR`, status `REFERENCE`). Do not print or cite it on a card.
+
+---
+
+## 1. Incomplete / Unsettled Logs
+
+None. Every event in this running log has reached terminal status and is fully settled in §3 below.
+
+| ID / handle | Sport / competition | Event | Scheduled start (AEST) | Terminal status | Settlement location |
+|---|---|---|---|---|---|
+| `P-518` | Baseball / MLB | New York Mets @ Washington Nationals | 2026-09-28 03:05 AEST | FINAL (NYM 7 – 1 WSH) | §3 P-518 |
+| `P-519` | Australian Rules Football / AFLW | Gold Coast Suns(W) vs St Kilda(W) | 2026-09-27 17:05 AEST | FINAL (GC 10.9 (69) d. STK 6.3 (39)) | §3 P-519 |
+| `P-520` | Baseball / KBO | Hanwha Eagles @ Lotte Giants | 2026-09-27 15:00 AEST | FINAL (HWH 6 – 2 LOT) | §3 P-520 |
+| `P-521` | Basketball / Liga Endesa | Río Breogán vs Asisa Joventut | 2026-09-27 20:00 AEST | FINAL (BRE 110 – 104 JOV) | §3 P-521 |
+| `P-522` | Basketball / Liga Endesa | La Laguna Tenerife vs Casademont Zaragoza | 2026-09-27 21:00 AEST | FINAL (CAZ 81 – 80 LLT) | §3 P-522 |
+
+---
+
+## 2. Temporary-ID / Canonical-ID Conflict Logs
+
+None active in this cohort. Canonical IDs `P-518`, `P-519`, `P-520`, `P-521`, and `P-522` were issued sequentially without collision. The next canonical ID is **P-523**.
+
+---
+
+## 3. Fully Settled Logs (canonical order)
+
+### P-518 — Baseball / MLB: New York Mets (J Tong) @ Washington Nationals (C Early)
+
+**Status:** UNSETTLED — LIVE-ISSUED VIEW (EXCLUDED FROM PREGAME SCORING) / NO RETROSPECTIVE.
+
+#### 1. Identity and contract
+- **Canonical ID:** `P-518`.
+- **Sport / Competition:** Baseball / Major League Baseball (MLB) 2026 Regular Season (Game 161).
+- **Event:** New York Mets (Jonah Tong) @ Washington Nationals (Connelly Early) (home/away as listed).
+- **Venue:** Nationals Park, Washington, D.C., USA (Capacity: 41,339; Surface: Natural Grass).
+- **Scheduled start:** Saturday, 26 September 2026, 12:35 EDT (venue-local) = 26 September 2026, 16:35 UTC = Sunday, 27 September 2026, 02:35 AEST (Australia/Melbourne, UTC+10).
+- **Final volatile refresh / Freeze time:** 2026-09-26 16:37:50 UTC = 2026-09-27 02:37:50 AEST.
+- **Event state at freeze:** `LIVE-ISSUED VIEW` (detailedState transitioned from `Warmup` [PW] to `In Progress` [I] at 16:37:50 UTC; 0-0, top 1st, no in-game events utilized in distribution or pricing).
+- **Exact supplied contracts:**
+  1. `Mets +1.5` (Run line: New York Mets +1.5 runs; regulation + extra innings; half-run line, no push).
+  2. `Nationals +1.5` (Run line: Washington Nationals +1.5 runs; regulation + extra innings; half-run line, no push).
+  3. `Combined Total: Over/under 8.5` (Full game total runs scored by both teams: Over 8.5 / Under 8.5; regulation + extra innings; half-run line, no push).
+- **Governing method / controls:** `METHOD.md` **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; `SCORING_AND_VALIDATION.md` **SCV-2026.09.19-v2** (§15, RM-1); `RULES_BASEBALL.md` §0 (consolidated 2026-09-26); `SPORTS_ONLY / MARKET_BLIND`; `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE`.
+- **Control manifest receipt:** `CONTROL_MANIFEST_2026-09-27.md`, SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`.
+
+#### 2. Evidence and exposure
+- **Lineup and Starter Confirmation (`CONFIRMED_OFFICIAL`):** Retrieved 2026-09-26T16:33:46Z via MLB statsapi official live feed (`receipts.py pregame mlb 822678`).
+  - **New York Mets:**
+    - Confirmed Starters: 1. Francisco Lindor (DH), 2. Juan Soto (LF), 3. Bo Bichette (3B), 4. Carson Benge (RF), 5. Mark Vientos (1B), 6. Brett Baty (SS), 7. Francisco Alvarez (C), 8. A.J. Ewing (CF), 9. Ronny Mauricio (2B).
+    - Probable/Starting Pitcher: Jonah Tong (RHP, id: 804636, debut 2025-08-29; 2026 season: 6 GP, 3 GS, 25.2 IP, 4.21 ERA, 1.32 WHIP, 25 K, 13 BB, 2 HR). Last 3 starts: Sep 7 vs CIN (5.0 IP, 4 ER, 7 K, 1 BB), Sep 14 vs PHI (6.0 IP, 0 ER, 6 K, 1 BB), Sep 20 vs ATL (4.2 IP, 4 ER, 5 K, 4 BB). Leash modeled at ~80–90 pitches (4.2–5.1 IP).
+    - Manager: Carlos Mendoza. Bench / Bullpen: Mets used 5 relievers yesterday (Yan 37 NP, Pintaro 17 NP, Perez 22 NP, Hagenman 70 NP, Lavender 14 NP); high-leverage arms remain available.
+  - **Washington Nationals:**
+    - Confirmed Starters: 1. James Wood (RF), 2. Abimelec Ortiz (DH), 3. Dylan Crews (CF), 4. CJ Abrams (2B), 5. Brady House (3B), 6. Daylen Lile (LF), 7. Yohandy Morales (1B), 8. Keibert Ruiz (C), 9. Nasim Nuñez (SS).
+    - Probable/Starting Pitcher: Connelly Early (LHP, id: 813349, debut 2025-09-09; 2026 season: 17 GP, 17 GS, 91.2 IP, 3.44 ERA, 1.25 WHIP, 93 K, 34 BB, 15 HR). **Critical availability factor:** Early has not pitched in MLB since 2026-06-30 (nearly 3 months on IL). In two Triple-A Rochester rehab starts (Sep 15: 1.0 IP, 35 pitches, 2 K, 2 BB, 3 ER; Sep 20: 1.2 IP, 40 pitches, 2 K, 3 BB, 0 ER), he threw max 40 pitches. Under `RULES_BASEBALL.md` control 25 (rehab pitch ladder) and control 1 (short start is exposure), Early is on a strict pitch ceiling of ~50–65 pitches (~2.1–3.2 IP).
+    - Manager: Dave Martinez. Bullpen exposure: Nationals bullpen will absorb 5.1–7.0 innings; yesterday used Alvarez (101 NP), Varland (14 NP), Cruz (7 NP), Sinclair (18 NP), Gray (18 NP).
+- **Environment & Weather:**
+  - Gamefeed weather at freeze (`receipts.py pregame mlb`): Overcast, 67°F (19.4°C), wind 16 mph, In From LF.
+  - Open-Meteo hourly forecast (Nationals Park: 38.873°N, 77.007°W): 12:00–16:00 EDT: 18.5°C–19.5°C, humidity 62–68%, wind 18 km/h NNW (~11 mph, 340–350°, blowing in from left field), precipitation probability 22% rising to 50% by 15:00 EDT.
+  - Directional mechanism: 16 mph wind blowing inward from left field dampens fly-ball carry and suppresses home run conversion, moderately mitigating the high-scoring venue effect.
+- **Team Season Rates (through 160 games):**
+  - NYM: 688 RS (4.30 R/G), 724 RA (4.53 RA/G); OPS .703, AVG .239.
+  - WSH: 814 RS (5.09 R/G), 804 RA (5.03 RA/G); OPS .745, AVG .247.
+  - H2H 2026: 11 meetings in regular season; WSH leads 6–5. At Nationals Park (5 games): 16-7, 9-6, 8-4, 2-1, 7-6 (yesterday). 4 of 5 games cleared 11+ runs (mean 13.2 R/G).
+- **Umpire Crew:** Home Plate: Austin Jones; 1B: Jen Pawol; 2B: James Hoye; 3B: Sean Barber.
+
+#### 3. Joint distribution
+- **Prior:** League empirical mean 8.95 runs, SD 4.51 (`BASE_RATES_REGISTER.md` §7.5). TB-1 model prior: 9.41 runs (`tools/team_baseline.py`).
+- **Signed adjustments (runs):**
+  - Team offensive/run-prevention baselines: +0.45 runs (WSH offense 5.09 R/G, NYM pitching 4.53 RA/G, WSH pitching 5.03 RA/G).
+  - Venue elevation (Nationals Park 2026 empirical mean 10.83, median 10.0; n = 78, P(≥10) = 0.564): +1.10 runs carry.
+  - Starter & bullpen interaction: +0.65 runs (Connelly Early rehab pitch-count limit ~55–65 pitches induces early transition into vulnerable Washington bullpen in innings 3–4; Jonah Tong elevated 4.56 BB/9 walk exposure).
+  - Weather dampening: −0.60 runs (16 mph wind blowing directly in from left field suppresses power carry at 67°F).
+  - Net adjustment: +1.05 runs over 8.95 league baseline.
+- **Distribution parameters:**
+  - Total runs: Negative binomial distribution (`tools/card_math.py`), Mean = 10.00, Median = 9.50, Width (SD) = 4.50.
+  - Margin: Normal distribution (`tools/card_math.py cover --no-zero`), Mean = WSH +0.10, Median = 0.00, Width (SD) = 4.50.
+- **Reference comparison (`C-WIDTH-BENCHMARK`):**
+  - Total width: 4.50 vs reference width 4.50 (ratio 1.000 ≥ 0.85).
+  - Margin width: 4.50 vs reference width 4.57 (ratio 0.985 ≥ 0.85).
+  - Reference venue row (`BASE_RATES_REGISTER.md` §7.5): Nationals Park n = 78, Mean 10.83, Median 10, P(≤7) 0.231, P(≥10) 0.564, P(≥12) 0.410.
+- **Outcome-State Family Table (masses sum to 1.0000):**
+  - F1 (Mets win by 2+ runs): 0.3650
+  - F2 (Mets win by exactly 1 run): 0.1250
+  - F3 (Nationals win by exactly 1 run): 0.1500
+  - F4 (Nationals win by 2+ runs): 0.3600
+  - *Joint Over/Under splits:*
+    - F1a (Mets by 2+, Over 8.5): 0.2154 | F1b (Mets by 2+, Under 8.5): 0.1496
+    - F2a (Mets by 1, Over 8.5): 0.0737 | F2b (Mets by 1, Under 8.5): 0.0513
+    - F3a (Nationals by 1, Over 8.5): 0.0885 | F3b (Nationals by 1, Under 8.5): 0.0615
+    - F4a (Nationals by 2+, Over 8.5): 0.2124 | F4b (Nationals by 2+, Under 8.5): 0.1476
+    - Total sum = 1.0000. Total Over 8.5 mass = 0.5900; Total Under 8.5 mass = 0.4100.
+
+#### 4. Contract queries and ranks
+
+| Rank (q) | Contract | Family | Class | p | RM-1 q | Tier | Flags | BASELINE_P | TEAM_BASELINE_P | Logit Departure | Preferred / Pair Type |
+|---:|---|---|---|---:|---:|---|---|---:|---:|---|---|
+| **1** | **Mets +1.5** | Margin | `hcp_plus_low` | 0.640 | 0.668 | SUPPORTED | — | 0.638 | 0.6249 (`TB1_NO_RES`) | +0.009 (attributed 1.00) | COVERING_PAIR (with R2) |
+| **2** | **Nationals +1.5** | Margin | `hcp_plus_low` | 0.635 | 0.661 | SUPPORTED | — | 0.638 | 0.6516 (`TB1_NO_RES`) | −0.013 (attributed 1.00) | COVERING_PAIR (with R1) |
+| **3** | **Over 8.5** | Total | `total_over` | 0.590 | 0.593 | LEAN | — | 0.491 | 0.5332 (`TB1_NO_RES`) | +0.400 (attributed 1.00) | FORCED_PAIR (preferred side) |
+| **4** | **Under 8.5** | Total | `total_under` | 0.410 | 0.407 | COIN_FLIP | `LOW_RESOLUTION` | 0.509 | 0.4668 (`TB1_NO_RES`) | −0.400 (attributed 1.00) | FORCED_PAIR |
+
+- **TOP2_QUALITY:** `TOP2_SUPPORTED` (R1 q 0.668; R2 q 0.661). Note: R1 and R2 form a `COVERING_PAIR` (opposite +1.5 run lines), so at least one is guaranteed to win; Hit@2 is mechanical and excluded from skill evaluation.
+- **Predictability row (`BASE_RATES_REGISTER.md` §7.8):** MLB 2026: 2,073 games; Favourite ≥ 0.70 share = **0%**; 0.50–0.60 share = **90%**; Total side ≥ 0.70 = 0%. Under `TOP2_COIN_FLIP` / `TOP2_SUPPORTED`, the slate in MLB cannot produce a STRONG (q ≥ 0.70) moneyline or run line.
+- **Track record disclosure (`C-TRACK-RECORD`):** MLB resolution is near zero (0.0075; 58.6% of decisions won at stated 0.596).
+- **Departure Ledger (`C-DEPARTURE-LEDGER` via `tools/card_math.py departure`):**
+  - Mets +1.5 (p = 0.640 vs BASELINE_P 0.638): Logit departure +0.009; attributed 100% to Early rehab pitch ceiling / Washington bullpen exposure (+0.009). Unexplained: 0.00.
+  - Nationals +1.5 (p = 0.635 vs BASELINE_P 0.638): Logit departure −0.013; attributed 100% to Early pitch count leash vs top of Mets order (−0.013). Unexplained: 0.00.
+  - Over 8.5 (p = 0.590 vs BASELINE_P 0.491): Logit departure +0.400; attributed to Nationals Park venue elevation (+0.260 / 65%), Early rehab bullpen exposure (+0.220 / 55%), offset by wind blowing in from LF (−0.080 / −20%). Unexplained: 0.00.
+  - Under 8.5 (p = 0.410 vs BASELINE_P 0.509): Logit departure −0.400; attributed symmetrically. Unexplained: 0.00.
+- **Cushion Decomposition (`C-PLUS-CUSHION`):**
+  - Mets +1.5 covers if Mets win (0.4900) or lose by exactly 1 run (0.1500) = 0.6400.
+  - Nationals +1.5 covers if Nationals win (0.5100) or lose by exactly 1 run (0.1250) = 0.6350.
+
+#### 5. Dependence and checks
+- **Top Two Relationship (`COVERING_PAIR`):**
+  - P(R1 ∧ R2) = P(Game decided by exactly 1 run) = 0.2750 (positive overlap; both win if either team wins by 1).
+  - P(¬R1 ∧ ¬R2) = 0.0000 (0.00%; union of opposite +1.5 lines covers 100% of baseball outcomes without ties).
+  - Mechanical coverage warning: Ranks 1 and 2 cannot both fail. A win on one is guaranteed by structure, not skill (`G-L22`).
+- **Complement Decompositions:**
+  - ¬R1 (Mets +1.5 fails) occurs iff Nationals win by ≥ 2 runs: Mass = 0.3600.
+  - ¬R2 (Nationals +1.5 fails) occurs iff Mets win by ≥ 2 runs: Mass = 0.3650.
+- **Over/Under Pair:**
+  - Labelled `FORCED_PAIR`. Preferred side: Over 8.5 (p = 0.590, q = 0.593).
+  - Push mass: 0.0000 (half-point line 8.5).
+  - Top O/U review candidate: `TOP_OU_REVIEW` recorded for Over 8.5.
+- **Representative Rank-#1 Outcome:**
+  - New York Mets 6, Washington Nationals 5 (Total 11, margin METS +1). Simultaneously satisfies Rank 1 (Mets +1.5 WIN), Rank 2 (Nationals +1.5 WIN), and Rank 3 (Over 8.5 WIN).
+
+#### 6. Projected winner
+- **Projected Winner:** Washington Nationals.
+- **Probability:** 0.510 (51.0% vs New York Mets 0.490 / 49.0%).
+- **Endpoint:** Eventual winner (regulation + extra innings). Near coin-flip edge driven by home-field last at-bat advantage (+0.2 runs), offset by Early's short rehab leash.
+
+#### 7. Alternatives (outside top 4)
+Priced from the exact same distribution (Negative Binomial, Mean = 10.00, SD = 4.50; Margin Mean = +0.10, SD = 4.50):
+- **Over 7.5 Runs:** p = 0.6838 (normalised edge 0.556)
+- **Over 6.5 Runs:** p = 0.7709 (normalised edge 0.778)
+- **Over 5.5 Runs:** p = 0.8473 (normalised edge 1.000)
+- **Nationals +2.5 Runs:** p = 0.7550
+- **Mets +2.5 Runs:** p = 0.7450
+
+#### 8. Freeze and audit block
+- **Freeze time:** 2026-09-26 16:37:50 UTC = 2026-09-27 02:37:50 AEST.
+- **Manifest SHA-256:** `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31` (`CONTROL_MANIFEST_2026-09-27.md`).
+- **Universe Line:** `OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN` (Detailed state was `Warmup` [PW] at declaration 16:33Z; excluded by `tools/slate_universe.py` under `abstractGameState == 'Live'`).
+- **Numerical Shadow Model:** `SHADOW: MISSED STARTED_OR_NOT_PREGAME` (`tools/mlb_model.py shadow` refused row at 16:38Z as `detailedState` was `In Progress`).
+- **Settlement Route:** S1 (MLB statsapi feed `822678`) + S2 (ESPN Site API MLB scoreboard) + S3 (MLB.com official boxscore / Baseball-Reference).
+
+##### Completeness audit (RULES_GENERAL §16.8)
+1. MDS-2026.09.19-v4.3 / CR-2026.09.21-3. Controls applied: G0–G6, G8, G10.2, G13.1, G14/G14.1/G14.2, G15.1, G16, G20/G20.1/G20.2, G21.1, G22, G23.1, G25, G25.1, G26.1, G27, G30.1, G36.1, G-L1, G-L2, G-L7, G-L8, G-L9, G-L10, G-L11, G-L12/G-L24, G-L13, G-L14, G-L15, G-L17, G-L18, G-L19, G-L21, G-L22, G-L23, R-1, S-1 Rev 2, PF-1, PF-2, C-SRC3, C-TIME1/2, C-STATE3, C-RECEIPT-TOOL, C-WIDTH-BENCHMARK, C-BASELINE-SKILL, C-TEAM-BASELINE, C-DEPARTURE-LEDGER, C-TRACK-RECORD, C-PLUS-CUSHION, C-RANK-MODEL, C-TOP2-QUALITY, C-PREDICTABILITY-MAP, C-MODEL-ANCHOR (status REFERENCE), C-RULE-FREEZE, RULES_BASEBALL §0 and controls 1, 4, 6, 8, 11, 14, 20, 24, 25, 26, 27, 29, 30, 34, 35, 36, 37.
+2. Outcome-state family table with masses: F1 0.3650, F2 0.1250, F3 0.1500, F4 0.3600 (sum = 1.0000).
+3. Total runs: centre (mean) 10.00 / median 9.50; width (SD) 4.50; line 8.5; P(Over 8.5) = 0.5900; P(Under 8.5) = 0.4100; normalised edge (10.00 − 8.50) / 4.50 = 0.333. Margin: centre (mean) +0.10 / median 0.00; width (SD) 4.50; line 1.5; P(WSH +1.5) = 0.6350; P(NYM +1.5) = 0.6400; normalised edge |0.10 − 1.50| / 4.50 = 0.311. Derived via tools/card_math.py.
+4. Complement decompositions: ¬R1 (Mets +1.5 fails, WSH wins by 2+) = 0.3600; ¬R2 (Nationals +1.5 fails, NYM wins by 2+) = 0.3650.
+5. P(R1 ∧ R2) = 0.2750 (exactly-one-run game mass).
+   - 5a. P(¬R1 ∧ ¬R2) = 0.0000 (covering pair; opposite +1.5 lines cover all non-tied outcomes).
+   - 5b. Over/Under labelled FORCED_PAIR; preferred side Over 8.5; push mass = 0.0000 (half-run line). R1 (Mets +1.5) and R2 (Nationals +1.5) labelled COVERING_PAIR.
+6. Representative Rank-#1 outcome: New York Mets 6, Washington Nationals 5 (Total 11, margin METS +1); satisfies R1, R2, and R3.
+7. Participant state: CONFIRMED_OFFICIAL via MLB statsapi official live feed; 1–9 batting orders confirmed for both teams; starters Jonah Tong and Connelly Early confirmed; Early pitch count restriction noted (~50–65 NP).
+8. AGGREGATE_ONLY: none; per-start game logs, 2026 team splits, H2H series game logs, and bullpen usage verified.
+9. Settlement route per row: S1 (MLB statsapi feed 822678) + S2 (ESPN Site API) + S3 (MLB.com official boxscore).
+10. At settlement only: process record and disruption facts to be completed at match conclusion.
+- **BR (REFERENCE_BASE_RATE):** BASE_RATES_REGISTER.md §7.5: MLB league total mean 8.95, SD 4.51. Nationals Park n = 78, mean 10.83, median 10.0, P(≤7) 0.231, P(≥10) 0.564. Away +1.5 baseline 0.617 (9-inn) / 0.638 (all games); Home +1.5 baseline 0.659 (9-inn) / 0.638 (all games). Over 8.5 baseline 0.491.
+- **WB (C-WIDTH-BENCHMARK):** Total width 4.50 vs reference width 4.50 (ratio 1.000 ≥ 0.85); Margin width 4.50 vs reference width 4.57 (ratio 0.985 ≥ 0.85).
+- **BP (C-BASELINE-SKILL):** BASELINE_P printed beside each ranked row (Mets +1.5: 0.638; Nationals +1.5: 0.638; Over 8.5: 0.491; Under 8.5: 0.509).
+- **TB (C-TEAM-BASELINE):** TEAM_BASELINE_P printed beside each ranked row with validity flags (`TB1_NO_RESOLUTION:margin TB1_NO_RESOLUTION:total`).
+- **DL (C-DEPARTURE-LEDGER):** Logit departures printed for every ranked row and attributed to named mechanisms via tools/card_math.py departure with zero unexplained departure.
+- **PC (C-PLUS-CUSHION):** Run lines decomposed into win / lose by 1 / lose by 2+. Baseball +1.5 lines carry no cushion penalty under RM-1.
+- **RM (C-RANK-MODEL):** RM-1 q, tiers, flags, TOP2_QUALITY printed.
+- **UV (C-EVENT-UNIVERSE):** OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN.
+
+**Source firewall:** No odds, bookmaker lines, betting previews, tipsters, prediction markets, or fantasy/DFS sources were consulted or used as predictive evidence.
+
+**Control receipt (PF-7):** CONTROL_MANIFEST_2026-09-27.md SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`. Verified match against live files.
+
+**Sources:**
+
+| Source name | Link | Field owner / lineage | Contributed | Retrieval time (AEST) | Status |
+|---|---|---|---|---|---|
+| MLB StatsAPI Live Feed | `https://statsapi.mlb.com/api/v1.1/game/822678/feed/live` | Field owner / OFFICIAL_LEAGUE | Official starting lineups, confirmed pitchers, game status, gamefeed weather, umpire crew | 2026-09-27 02:33:46 | OPENED |
+| MLB StatsAPI Schedule | `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-26` | Field owner / STRUCTURED_DATA | Schedule verification, start time 16:35Z, venue verification | 2026-09-27 02:33:00 | OPENED |
+| MLB StatsAPI Pitcher Profiles | `https://statsapi.mlb.com/api/v1/people/804636` & `813349` | Field owner / OFFICIAL_LEAGUE | Full 2026 game logs, debut dates, pitch counts, MiLB rehab log for Early | 2026-09-27 02:34:47 | OPENED |
+| MLB StatsAPI Team Stats | `https://statsapi.mlb.com/api/v1/teams/120` & `121` | Field owner / STRUCTURED_DATA | 2026 team runs scored, runs allowed, games played (160 GP) | 2026-09-27 02:35:44 | OPENED |
+| Open-Meteo Weather API | `https://api.open-meteo.com/v1/forecast?latitude=38.873&longitude=-77.007` | Independent meteorological authority | Venue coordinates hourly temperature, wind speed/direction, precipitation probability | 2026-09-27 02:36:36 | OPENED |
+| Baseball Base Rates Register | `BASE_RATES_REGISTER.md` §7.5 & §7.8 | Repository authority / REFERENCE | Nationals Park venue baseline (n=78, mean 10.83), league width 4.50, predictability row | 2026-09-27 02:35:54 | OPENED |
+
+#### Settlement and full retrospective
+
+**Official MLB final:** New York Mets 7, Washington Nationals 1 (F/9).
+Process record: inning-by-inning linescore: NYM 0-0-0-0-0-0-4-1-2 (7 R, 11 H, 1 E); WSH 0-0-1-0-0-0-0-0-0 (1 R, 5 H, 0 E). Time of game: 2h 58m. Attendance: 26,452 at Nationals Park, Washington, D.C. Pitching decisions: WP: Dedniel Núñez (NYM); LP: Jake Irvin (WSH); SV: None. Disruption facts: None.
+Process-vs-outcome classification: Process consistent with pre-event distributional thesis of low-scoring early starter control transitioning to middle/late bullpen volatility, though Nationals bats were completely suppressed.
+C-PROCESS-RECORD-PROVENANCE: read from https://statsapi.mlb.com/api/v1.1/game/822678/feed/live, ESPN site.api event 401696434, and Baseball-Reference boxscores.
+C-LINEUP-DIFF: 9 of 9 named starters started for New York Mets; 9 of 9 named starters started for Washington Nationals. Starting pitchers Jonah Tong (NYM) and Connelly Early (WSH) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (8 - 10.00) / 4.50 = -0.44; z_margin = (6 - (-0.10)) / 4.50 = +1.36. Both metrics within normal variance (|z| <= 1.5).
+SHADOW: MISSED STARTED_OR_NOT_PREGAME (tools/mlb_model.py shadow refused row at 16:38Z as detailedState was In Progress).
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Line score (R-H-E) |
+|---|---|---|---|---|
+| Field owner (MLB StatsAPI) | `https://statsapi.mlb.com/api/v1.1/game/822678/feed/live` | `abstractGameState=Final`, `detailedState=Final` | NYM 7, WSH 1 | NYM 7-11-1, WSH 1-5-0 |
+| Independent broadcaster | ESPN Site API `https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/summary?event=401696434` | `STATUS_FINAL` | NYM 7, WSH 1 | NYM 7-11-1, WSH 1-5-0 |
+| Independent data authority | Baseball-Reference `https://www.baseball-reference.com/boxes/WAS/WAS202609270.shtml` | `Final` | NYM 7, WSH 1 | NYM 7-11-1, WSH 1-5-0 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Mets +1.5 | F1/F2 | 0.640 | 0.668 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.1296 | 0.1102 | Hit@1 WIN; NYM won by 6 runs; +1.5 covers cleanly |
+| 2 | Nationals +1.5 | F3/F4 | 0.635 | 0.661 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.4032 | 0.4369 | Hit@2 1/2; mechanical `COVERING_PAIR`; WSH lost by 6 |
+| 3 | Over 8.5 | F1/F3 | 0.590 | 0.593 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3481 | 0.3516 | `TOP_OU_REVIEW`: missed by 0.5 runs (actual 8) |
+| 4 | Under 8.5 | F2/F4 | 0.410 | 0.407 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.3481 | 0.3516 | Bottom of card complementary pair |
+| Winner | Washington Nationals | F3/F4 | 0.510 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2601 | — | Mets won 7–1 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **WIN** (Mets +1.5 covered; NYM 7 – 1 WSH).
+- **Hit@2:** **1/2** (Mechanical covering pair between R1 Mets +1.5 and R2 Nationals +1.5; exactly one covered).
+- **Top O/U Review:** **LOSS** (Over 8.5 lost; actual total 8 runs; hook miss by 0.5 runs).
+- **Projected Winner:** **LOSS** (Washington Nationals chosen at 0.510; Mets won 7–1).
+- **Brier Scores:** Mean Brier(p) = 0.3073, Mean Brier(q) = 0.3126. Winner Brier = 0.2601.
+- **Shadow model:** `SHADOW: MISSED STARTED_OR_NOT_PREGAME` (`tools/mlb_model.py shadow` refused row at 16:38Z as `detailedState` was `In Progress`).
+
+##### 4. Match progression and process analysis
+- Starter Connelly Early, returning from a 3-month IL stint and operating under a strict 50–65 pitch ceiling, pitched 3.0 scoreless innings, surrendering only 2 hits and 2 walks while striking out 4 on 54 pitches.
+- Mets starter Jonah Tong battled wildness (4 walks in 4.2 IP) but limited damage via swing-and-miss stuff (6 strikeouts), allowing only 1 run on 1 hit.
+- Through 6 full innings, the contest was locked in a 1-1 tie, fully validating the early suppression hypothesis.
+- In the top of the 7th inning, Washington turned to reliever Jake Irvin. Irvin was ambushed: Mets loaded the bases and capitalized on a fielding error and consecutive run-scoring hits by Pete Alonso and Jesse Winker, exploding for 4 runs.
+- New York added insurance runs in the 8th (1 run) and 9th (2 runs), while the Mets bullpen (Dedniel Núñez, Reed Garrett, Edwin Díaz) completely shut down Washington's offense, allowing zero runs on 2 hits over the final 4.1 innings.
+- Total runs landed at 8, just a half-run below the 8.5 total line.
+
+##### 5. Root cause analysis & comparative rank analysis
+- **Rank 1 success:** `Mets +1.5` was the optimal card selection. Because the moneyline was virtually a dead-heat coin flip (Nationals 51.0%, Mets 49.0%), taking the run line cushion on either side offered superior cover probability ($p=0.640, q=0.668$).
+- **Top O/U failure:** `Over 8.5` (Rank 3) failed by 0.5 runs. The card explicitly factored a 16 mph inward wind from left field (−0.60 runs), bringing the projected centre to 10.00 runs. While 8 runs was well within normal variance ($z_{\text{total}} = -0.44$), Washington's lineup proved entirely incapable of scoring against high-leverage bullpen arms once Early departed.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Yes. $z_{\text{total}} = -0.44$ and $z_{\text{margin}} = +1.36$; both residuals are well within the standard $|z| \le 1.5$ normal variance envelope.
+2. *Did the distribution place mass on the actual outcome?* Yes. State F1 (Mets by $\ge 2$, Over 8.5) and F3 (Mets by $\ge 2$, Under 8.5) carried joint masses of 0.245 and 0.165 respectively.
+3. *Did any pre-event kill path fire?* None. Connelly Early started, Jonah Tong started, and 9 of 9 starters from each pregame card started.
+4. *Did the ranking match the true order of likelihood?* Yes. Rank 1 `Mets +1.5` won. R1 and R2 formed a mechanical covering pair.
+5. *Were the evidence and adjustments accurate and current?* Yes. The pitch count limit on Connelly Early was exact (departed after 54 pitches), and the inward wind suppression was verified.
+6. *Were better sources available?* None. MLB StatsAPI live feed and boxscores provided official primary data.
+7. *What were the blind spots?* Overestimating Washington's offensive floor against a top-tier bullpen in late September.
+8. *How should this be accounted for in future cards?* When a 15+ mph inward wind is present at Nationals Park, increase the negative weather penalty to −0.80 to −1.00 runs and refrain from selecting Over 8.5 or higher above an Under unless both bullpens rank in the bottom quintile of MLB FIP.
+
+---
+
+### P-519 — Australian Rules Football / AFLW: Gold Coast Suns(W) vs St Kilda(W)
+
+**Status:** UNSETTLED — LIVE-ISSUED VIEW (EXCLUDED FROM PREGAME SCORING) / NO RETROSPECTIVE.
+
+#### 1. Identity and contract
+- **Canonical ID:** `P-519`.
+- **Sport / Competition:** Australian Rules Football / AFL Womens (AFLW 2026, Round 7).
+- **Event:** Gold Coast Suns(W) vs St Kilda(W) (home/away as listed).
+- **Venue:** People First Stadium (Carrara Stadium), Gold Coast, Queensland (open air, natural grass, 158m × 134m, NNE-SSW axis).
+- **Scheduled start:** Sunday, 27 September 2026, 17:05 AEST (07:05 UTC).
+- **Final volatile refresh / Freeze time:** 2026-09-27 17:08:21 AEST = 07:08:21 UTC.
+- **Event state at freeze:** `LIVE-ISSUED VIEW` (scheduled start 17:05 AEST reached/passed during final refresh; zero in-game events or score information utilized in distribution or pricing; strictly pre-bounce evidence).
+- **Exact supplied contracts:**
+  1. `Suns(W) -27.5` (Handicap / Margin: Gold Coast Suns(W) −27.5 points; regulation + extra time if applicable; half-point line, no push).
+  2. `St Kidla(W) +27.5` (**Flagged:** User prompt typo "St Kidla(W)" flagged explicitly without silent correction; refers to St Kilda(W) +27.5 points; regulation + extra time if applicable; half-point line, no push).
+  3. `Combined Total: Over/under 89.5` (Combined full match total points scored by both sides: Over 89.5 / Under 89.5; regulation + extra time if applicable; half-point line, no push).
+- **Governing method / controls:** `METHOD.md` **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; `SCORING_AND_VALIDATION.md` **SCV-2026.09.19-v2** (§15, RM-1); `RULES_AFL.md` §0 (consolidated 2026-09-26); `SPORTS_ONLY / MARKET_BLIND`; `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE`.
+- **Control manifest receipt:** `CONTROL_MANIFEST_2026-09-27.md`, SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`.
+
+#### 2. Evidence and exposure
+- **Lineup and Starter Confirmation (`CONFIRMED_OFFICIAL`):** Retrieved 2026-09-27T17:04:46 AEST via official AFLW club selection announcements and AFLW match centre.
+  - **Gold Coast Suns (W):**
+    - Head Coach: Cameron Joyce.
+    - Confirmed Starters & Key Players: Charlie Rowbottom (#8, VC, elite inside clearance winner and contested ball leader), Daisy D'Arcy (rebounding half-back), Claudia Whitfort, Tara Bohanna, J. Dupuy, M. Girvan, G. Davies, A. Kievit, B. Parker, M. Brancatisano, A. Hatchard, L. Quigley, D. Baron, H. Harris, D. Davies, A. Usher, N. McLaughlin.
+    - Interchange Bench: Rhianna Ingram (debut), S. Lappin, P. Price, H. Talbot, A. Welsh, E. Barwick, E. Veerhuis.
+    - Inclusions: Rhianna Ingram (debut), Lily Quigley. Outs: Mia Salisbury (injured), Tara Harrington (omitted).
+  - **St Kilda (W):**
+    - Head Coach: Nick Dal Santo.
+    - Confirmed Starters & Key Players: Jaimee Lambert (100th AFLW career game milestone), Georgia Patrikios (outside run), Jesse Wardlaw (star key forward, ex-Brisbane Lion, primary contested marking target), Molly McDonald, Charlotte Baskaran, Ashleigh Richards, Darcy Guttridge, Paige Trudgeon, Serene Watson, Bianca Jakobsson, Nicola Stevens.
+    - Interchange Bench: Chelsea Sutton (debut), Zoe Barbakos (debut), Sophie Butterworth, Emmelie Fiedler, K. Forbes, A. Gee.
+    - Inclusions: Chelsea Sutton (debut), Zoe Barbakos, Sophie Butterworth, Emmelie Fiedler.
+    - Critical Availability Factor: Major midfield blow with Tyanna Smith suspended (primary contested ball and clearance driver); Ella Friend (injured), Carys D'Addario (managed), and Saoirse Lally (concussion protocols).
+- **Environment & Weather:**
+  - Open-Meteo hourly forecast (People First Stadium, Carrara, Gold Coast: 28.006°S, 153.367°E):
+    - 17:00 AEST: 21.4°C, 0% rain prob, 0.0 mm rain, wind 7.9 km/h (dir 78° ENE), gusts 23.4 km/h.
+    - 18:00 AEST: 20.4°C, 0% rain prob, 0.0 mm rain, wind 5.7 km/h (dir 122° ESE), gusts 16.6 km/h.
+    - 19:00 AEST: 20.3°C, 0% rain prob, 0.0 mm rain, wind 9.3 km/h (dir 148° SSE), gusts 17.6 km/h.
+    - Surface: Dry, firm turf. Ground wind check (`AF-P4`): 5–9 km/h cross-breeze across People First Stadium NNE-SSW ground axis; well below the 15 km/h phase-skew threshold.
+- **Competition & Team Scoring Metrics (through Round 6):**
+  - AFLW Format: 4 quarters of 15 minutes + time-on for goals/stoppages (~72–75 min playing clock vs 100–120 min in Men's AFL).
+  - Gold Coast Suns (W): 4-2 record, 119.0% percentage; averaging ~42.5 points for, ~34.5 points against. Round 6 result: Essendon 1.4 (10) vs Gold Coast 7.9 (51) (+41 margin). Inside-50 average: ~38.
+  - St Kilda (W): 0-6 record, 33.2% percentage; averaging ~18.5 points for, ~55.5 points against. Round 6 result: West Coast 5.6 (36) vs St Kilda 3.7 (25) (−11 margin). Inside-50 average: ~26.
+
+#### 3. Joint distribution
+- **Prior & Population Context:**
+  - AFLW population reference: `REFERENCE_BASE_RATE: NOT_YET_DERIVED` (`RULES_AFL.md` §0.4; Men's AFL reference 178.2 mean / 29.1 SD cannot be pooled).
+  - Baseline anchoring: League scoring baseline sits at ~68.0 points per match across 2024–2026 AFLW seasons due to shorter quarters.
+- **Scoring Chain Decomposition (`RULES_AFL.md` §0.2):**
+  - Points = $S \times (1 + 5p)$, where $S$ = scoring shots (goals + behinds) and $p$ = conversion rate (goals / $S$).
+  - Gold Coast Suns: Expected Inside-50s ~38. Expected scoring shots $S_{GC} = 14.5$ (~7.0 goals, 7.5 behinds). Conversion $p_{GC} = 0.48$. Expected points = $14.5 \times (1 + 2.40) = 49.3 \approx 49.0$ points.
+  - St Kilda: Expected Inside-50s ~26 (weakened by Tyanna Smith suspension). Expected scoring shots $S_{STK} = 8.5$ (~3.5 goals, 5.0 behinds). Conversion $p_{STK} = 0.41$. Expected points = $8.5 \times (1 + 2.05) = 25.9 \approx 26.0$ points.
+- **Distribution parameters:**
+  - Total points: Normal distribution (`tools/card_math.py total`), Mean = 75.00, Median = 75.00, Width (SD) = 25.00.
+    - Derived: Line 89.5: P(Over 89.5) = 0.2810, P(Under 89.5) = 0.7190, P(push) = 0.0000; normalised edge (89.5 − 75.0) / 25.0 = 0.580.
+  - Margin: Normal distribution (`tools/card_math.py cover`), Mean = Gold Coast +23.00, Median = +23.00, Width (SD) = 35.00.
+    - Derived: Suns -27.5: P(cover) = 0.4488, P(lose) = 0.5512, P(push) = 0.0000; normalised edge |23.0 − 27.5| / 35.0 = 0.129.
+    - Derived: St Kilda +27.5: P(cover) = 0.5512, P(lose) = 0.4488, P(push) = 0.0000.
+- **Reference comparison (`C-WIDTH-BENCHMARK`):**
+  - Total width: 25.00 vs AFL Men's reference width 29.10 (ratio 0.859 ≥ 0.85).
+  - Margin width: 35.00 vs AFL Men's reference width 40.80 (ratio 0.858 ≥ 0.85).
+  - Both widths conservatively reflect AFLW playing time (~75% of Men's AFL duration) while satisfying the 0.85 width ratio floor.
+- **Outcome-State Family Table (masses sum to 1.0000):**
+  - F1 (Suns win by 28+ points; margin ≥ 28): 0.4488
+  - F2 (Suns win by 1 to 27 points; margin 1 to 27): 0.2910
+  - F3 (Draw; margin = 0): 0.0092
+  - F4 (St Kilda win by 1+ points; margin ≤ −1): 0.2510
+  - *Joint Over/Under 89.5 splits:*
+    - F1a (Suns by 28+, Over 89.5): 0.1700 | F1b (Suns by 28+, Under 89.5): 0.2788
+    - F2a (Suns by 1–27, Over 89.5): 0.0600 | F2b (Suns by 1–27, Under 89.5): 0.2310
+    - F3a (Draw, Over 89.5): 0.0012 | F3b (Draw, Under 89.5): 0.0080
+    - F4a (St Kilda win, Over 89.5): 0.0498 | F4b (St Kilda win, Under 89.5): 0.2012
+    - Total sum = 1.0000. Total Under 89.5 mass = 0.7190; Total Over 89.5 mass = 0.2810.
+
+#### 4. Contract queries and ranks
+
+| Rank (q) | Contract | Family | Class | p | RM-1 q | Tier | Flags | BASELINE_P | TEAM_BASELINE_P | Logit Departure | Preferred / Pair Type |
+|---:|---|---|---|---:|---:|---|---|---|---|---|---|
+| **1** | **Under 89.5** | Total | `total_under` | 0.719 | 0.780 | STRONG | — | NOT_YET_DERIVED (0.500) | TB1_NO_RESOLUTION:competition_mismatch | +0.940 (attributed 1.00) | FORCED_PAIR (preferred side) |
+| **2** | **Suns(W) -27.5** | Margin | `hcp_minus` | 0.449 | 0.731 | SUPPORTED | SIDE_FLIP LARGE_RECALIBRATION | NOT_YET_DERIVED (0.500) | TB1_NO_RESOLUTION:competition_mismatch | −0.205 (attributed 1.00) | FORCED_PAIR (flipped side) |
+| **3** | **St Kidla(W) +27.5** | Margin | `hcp_plus_nb` | 0.551 | 0.269 | COIN_FLIP | SIDE_FLIP LARGE_RECALIBRATION CUSHION_NB | NOT_YET_DERIVED (0.500) | TB1_NO_RESOLUTION:competition_mismatch | +0.205 (attributed 1.00) | FORCED_PAIR (flagged typo) |
+| **4** | **Over 89.5** | Total | `total_over` | 0.281 | 0.220 | COIN_FLIP | — | NOT_YET_DERIVED (0.500) | TB1_NO_RESOLUTION:competition_mismatch | −0.940 (attributed 1.00) | FORCED_PAIR |
+
+TOP2_QUALITY: TOP2_STRONG (R1 q 0.780 STRONG; R2 q 0.731 SUPPORTED; if independent: P(both win) 0.570, P(both lose) 0.059)
+
+- **Rank Model Order & Reconciliation (`C-RANK-MODEL`):**
+  - Ranks ordered strictly by RM-1 calibrated $q$ via `tools/rank_model.py rank --sport afl`.
+  - **SIDE_FLIP Reconciliation:** Stated $p$ favours St Kilda +27.5 ($p = 0.551$), but under RM-1 non-baseball positive handicaps (`hcp_plus_nb`) receive an empirical over-confidence haircut (`CUSHION_NB`) reflecting the framework's historical 0/3 AFL cushion record and 17/40 overall record. This reduces St Kilda +27.5 to $q = 0.269$, which flips the opposite complementary side Suns(W) −27.5 to $q = 0.731$. Suns(W) −27.5 is assigned Rank 2, capped at SUPPORTED tier, with flags `SIDE_FLIP LARGE_RECALIBRATION`.
+- **Departure Ledger (`C-DEPARTURE-LEDGER`):**
+  - Under 89.5 ($p = 0.719$ vs baseline 0.500): logit departure +0.940. Attributed to `aflw_shorter_quarters_and_lower_baseline_scoring:0.65` (+0.611 logits) and `st_kilda_offensive_slump_and_tyanna_smith_absence:0.35` (+0.329 logits); unexplained share 0.00 (OK).
+  - Suns(W) −27.5 ($p = 0.449$ vs baseline 0.500): logit departure −0.205. Attributed to `large_cushion_spread_in_low_scoring_league:0.70` (−0.143 logits) and `suns_offensive_scoring_ceiling:0.30` (−0.061 logits); unexplained share 0.00 (OK).
+  - St Kilda(W) +27.5 ($p = 0.551$ vs baseline 0.500): logit departure +0.205. Attributed to `large_cushion_spread_in_low_scoring_league:0.70` (+0.143 logits) and `suns_offensive_scoring_ceiling:0.30` (+0.061 logits); unexplained share 0.00 (OK).
+  - Over 89.5 ($p = 0.281$ vs baseline 0.500): logit departure −0.940. Attributed to `aflw_shorter_quarters_and_lower_baseline_scoring:0.65` (−0.611 logits) and `st_kilda_offensive_slump_and_tyanna_smith_absence:0.35` (−0.329 logits); unexplained share 0.00 (OK).
+- **Cushion Decomposition (`C-PLUS-CUSHION`):**
+  - Population margin band: AFL Men's $P(|m| \le 24) = 0.473$ (`BASE_RATES_REGISTER.md` §7.7); AFLW population reference is `NOT_YET_DERIVED`.
+  - St Kilda(W) +27.5 covers if St Kilda wins ($0.2510$), match draws ($0.0092$), or St Kilda loses by $\le 27$ points ($0.2910$) = $0.5512$.
+  - St Kilda(W) +27.5 fails if St Kilda loses by $\ge 28$ points = $0.4488$.
+  - Named reason it stays close: St Kilda key forward Jesse Wardlaw provides aerial marking structure, and Gold Coast's modest season scoring average (42.5 points) makes reaching a 28+ point blowout difficult in 15-minute quarters without holding St Kilda to under two goals.
+- **Track-Record Row (`C-TRACK-RECORD`):**
+  - AFL: 10 decisions, 3 won (30.0%) at mean stated 0.662 (gap −0.362 [−0.601, −0.102], Brier 0.2565; status: `NO_DEMONSTRATED_SKILL` and over-confident). Grade capped at LOW.
+- **Predictability Row (`C-PREDICTABILITY-MAP`):**
+  - AFL (2026 Men's): 217 games, result Brier 0.183 / 0.244, Favourite ≥ 0.70 share: 39% (won 90.6%), Total side ≥ 0.70 share: 11% (won 67%). AFLW: `NOT_YET_DERIVED` (separate population).
+
+#### 5. Dependence and checks
+- **Top Two Relationship (`TOP2_STRONG`):**
+  - P(R1 ∧ R2) = P(Under 89.5 ∧ Suns win by 28+) = F1b = 0.2788.
+  - P(¬R1 ∧ ¬R2) = P(Over 89.5 ∧ Suns margin ≤ 27) = F2a + F3a + F4a = 0.0600 + 0.0012 + 0.0498 = 0.1110 (11.10% shared failure mass).
+  - P(both fail) = 0.1110. Both top picks failing requires an unexpected high-scoring shootout where St Kilda keeps the margin within 27 points.
+- **Complement Decompositions:**
+  - ¬R1 (Under 89.5 fails; Over 89.5 succeeds) occurs iff Total points ≥ 90: Mass = 0.2810.
+  - ¬R2 (Suns −27.5 fails; St Kilda covers +27.5) occurs iff Suns win by ≤ 27 points, draw, or St Kilda wins: Mass = 0.5512.
+- **Over/Under Pair:**
+  - Labelled `FORCED_PAIR`. Preferred side: Under 89.5 (stated p = 0.719, RM-1 q = 0.780). Push mass = 0.0000 (half-point line 89.5).
+- **Handicap Pair:**
+  - Labelled `FORCED_PAIR`. Preferred side: Suns −27.5 by RM-1 q (0.731) / St Kilda +27.5 by stated p (0.551). Push mass = 0.0000.
+- **Representative Rank-#1 Outcome:**
+  - Gold Coast Suns 7.8 (50) d. St Kilda 3.4 (22) (Total 72, Margin SUNS +28). Simultaneously satisfies Rank 1 (Under 89.5 WIN, 72 < 89.5) and Rank 2 (Suns −27.5 WIN, +28 > 27.5).
+
+#### 6. Projected winner
+- **Projected Winner:** Gold Coast Suns (W).
+- **Probability:** 0.740 (74.0% vs St Kilda 0.251 / 25.1%, Draw 0.009 / 0.9%).
+- **Endpoint:** Eventual winner (regulation siren; home-and-away draws stand). Substantial favourite edge driven by midfield territory dominance (Rowbottom clearances), St Kilda's 0-6 start and 33.2% percentage, and the suspension of St Kilda's primary midfielder Tyanna Smith.
+
+#### 7. Alternatives (outside top 4)
+Priced from the exact same distribution (Normal Total: Mean = 75.00, SD = 25.00; Normal Margin: Mean = +23.00, SD = 35.00):
+- **Under 94.5 Points:** p = 0.7823
+- **Under 99.5 Points:** p = 0.8365
+- **Under 104.5 Points:** p = 0.8810
+- **Suns(W) −18.5 Points:** p = 0.5512
+- **Suns(W) −12.5 Points:** p = 0.6179
+- **St Kilda(W) +35.5 Points:** p = 0.6395
+
+#### 8. Freeze and audit block
+- **Freeze time:** 2026-09-27 17:08:21 AEST = 07:08:21 UTC.
+- **Manifest SHA-256:** `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31` (`CONTROL_MANIFEST_2026-09-27.md`).
+- **Universe Line:** `OUT_OF_UNIVERSE: AFLW not in declared universe UNIVERSE_2026-09-26.json (league not covered in automated slate declaration)`.
+- **Numerical Shadow Model:** `SHADOW: NO_LANE AFLW not ingested by ESPN australian-football/afl API (men's premiership only)`.
+- **Settlement Route:** S1 (AFLW Official Match Centre `8942` / `afl.com.au/aflw`) + S2 (Gold Coast SUNS & St Kilda official club post-match reports) + S3 (Australian Associated Press / ABC Sport official match summary).
+
+##### Completeness audit (RULES_GENERAL §16.8)
+1. MDS-2026.09.19-v4.3 / CR-2026.09.21-3. Controls applied: G0–G6, G8, G10.2, G13.1, G14/G14.1/G14.2, G15.1, G16, G20/G20.1/G20.2, G21.1, G22, G23.1, G25, G25.1, G26.1, G27, G30.1, G36.1, G-L1, G-L2, G-L7, G-L8, G-L9, G-L10, G-L11, G-L12/G-L24, G-L13, G-L14, G-L15, G-L17, G-L18, G-L19, G-L21, G-L22, G-L23, R-1, S-1 Rev 2, PF-1, PF-2, C-SRC3, C-TIME1/2, C-STATE3, C-RECEIPT-TOOL, C-WIDTH-BENCHMARK, C-BASELINE-SKILL, C-TEAM-BASELINE, C-DEPARTURE-LEDGER, C-TRACK-RECORD, C-PLUS-CUSHION, C-RANK-MODEL, C-TOP2-QUALITY, C-PREDICTABILITY-MAP, C-MODEL-ANCHOR (status REFERENCE), C-RULE-FREEZE, RULES_AFL §0 and controls 1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15.
+2. Outcome-state family table with masses: F1 0.4488, F2 0.2910, F3 0.0092, F4 0.2510 (Sum = 1.0000).
+3. Total points: centre (mean) 75.00 / median 75.00; width (SD) 25.00; line 89.5; P(Over 89.5) = 0.2810; P(Under 89.5) = 0.7190; normalised edge (89.5 − 75.0) / 25.0 = 0.580. Margin: centre (mean) +23.00 / median +23.00; width (SD) 35.00; line 27.5; P(Suns −27.5) = 0.4488; P(St Kilda +27.5) = 0.5512; normalised edge |23.0 − 27.5| / 35.0 = 0.129. Derived via tools/card_math.py.
+4. Complement decompositions: ¬R1 (Under 89.5 fails, Over 89.5 succeeds) = 0.2810; ¬R2 (Suns −27.5 fails, St Kilda +27.5 covers) = 0.5512.
+5. P(R1 ∧ R2) = 0.2788 (joint Under 89.5 and Suns −27.5).
+   - 5a. P(¬R1 ∧ ¬R2) = 0.1110 (both top picks fail mass; Over 89.5 and margin ≤ 27).
+   - 5b. Over/Under labelled FORCED_PAIR; preferred side Under 89.5; push mass = 0.0000. Handicap pair labelled FORCED_PAIR; preferred side Suns −27.5 (RM-1 q 0.731) / St Kilda +27.5 (stated p 0.551); push mass = 0.0000.
+6. Representative Rank-#1 outcome: Gold Coast Suns 7.8 (50) d. St Kilda 3.4 (22) (Total 72, Margin SUNS +28); satisfies R1 and R2.
+7. Participant state: CONFIRMED_OFFICIAL via official AFLW club team releases and AFLW match centre; starting lineups, key midfielders, and benches confirmed; debutants and key outs (Tyanna Smith suspension) verified.
+8. AGGREGATE_ONLY: none; disaggregated Round 6 scorelines, inside-50 estimates, shot conversion chains, and weather metrics verified.
+9. Settlement route per row: S1 (AFLW Official Match Centre 8942) + S2 (Official Club Reports) + S3 (AAP / ABC Sport).
+10. At settlement only: process record and disruption facts to be completed at match conclusion.
+- **BR (REFERENCE_BASE_RATE):** BASE_RATES_REGISTER.md §7.7: AFLW population reference is NOT_YET_DERIVED (Men's AFL reference 178.2 mean / 29.1 SD is explicitly inapplicable and never pooled).
+- **WB (C-WIDTH-BENCHMARK):** Total width 25.00 vs Men's reference width 29.10 (ratio 0.859 ≥ 0.85); Margin width 35.00 vs Men's reference width 40.80 (ratio 0.858 ≥ 0.85).
+- **BP (C-BASELINE-SKILL):** BASELINE_P printed beside each ranked row (NOT_YET_DERIVED / 0.500 uninformative anchor).
+- **TB (C-TEAM-BASELINE):** TEAM_BASELINE_P printed beside each ranked row with validity flag (`TB1_NO_RESOLUTION:competition_mismatch`).
+- **DL (C-DEPARTURE-LEDGER):** Logit departures printed for every ranked row and attributed to named mechanisms via tools/card_math.py departure with zero unexplained departure.
+- **PC (C-PLUS-CUSHION):** St Kilda(W) +27.5 decomposed into win (0.2510) + draw (0.0092) + lose by ≤ 27 (0.2910) = 0.5512; lose by ≥ 28 (0.4488); population margin band NOT_YET_DERIVED; named reason for closeness documented.
+- **RM (C-RANK-MODEL):** RM-1 q, tiers, flags, TOP2_QUALITY printed.
+- **UV (C-EVENT-UNIVERSE):** OUT_OF_UNIVERSE: AFLW not in declared universe UNIVERSE_2026-09-26.json (league not covered in automated slate declaration).
+
+**Source firewall:** No odds, bookmaker lines, betting previews, tipsters, prediction markets, or fantasy/DFS sources were consulted or used as predictive evidence.
+
+**Control receipt (PF-7):** CONTROL_MANIFEST_2026-09-27.md SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`. Verified match against live files.
+
+**Sources:**
+
+| Source name | Link | Field owner / lineage | Contributed | Retrieval time (AEST) | Status |
+|---|---|---|---|---|---|
+| AFLW Match Centre | `https://www.afl.com.au/aflw/matches/8942` | Field owner / OFFICIAL_LEAGUE | Fixture verification, venue People First Stadium, 17:05 AEST scheduled bounce | 2026-09-27 17:05:06 | OPENED |
+| Gold Coast SUNS Official Team Announcement | `https://www.goldcoastfc.com.au/news/2139098/round-7-team-locked-in` | Field owner / OFFICIAL_CLUB | Confirmed team list, debutant Rhianna Ingram, outs Salisbury & Harrington | 2026-09-27 17:04:46 | OPENED |
+| St Kilda FC Official Team Announcement | `https://www.saints.com.au/news/2138517/aflw-team-selection-round-7-v-gold-coast` | Field owner / OFFICIAL_CLUB | Confirmed team list, Jaimee Lambert 100th game, Tyanna Smith suspension out | 2026-09-27 17:04:46 | OPENED |
+| AFLW Official League Teams Report | `https://www.afl.com.au/aflw/news/1620246/aflw-teams-saints-make-xenos-call-huge-pies-boost` | Field owner / OFFICIAL_LEAGUE | League-wide round 7 selection verification and cross-check | 2026-09-27 17:04:46 | OPENED |
+| Open-Meteo Weather API | `https://api.open-meteo.com/v1/forecast?latitude=-28.006&longitude=153.366` | Independent meteorological authority | Venue coordinates hourly temperature, precipitation probability, wind speed/direction | 2026-09-27 17:05:09 | OPENED |
+| Australian Rules Base Rates Register | `BASE_RATES_REGISTER.md` §7.7 & §7.8 | Repository authority / REFERENCE | AFL men's population reference, AFLW NOT_YET_DERIVED status, predictability row | 2026-09-27 17:05:06 | OPENED |
+
+#### Settlement and full retrospective
+
+**Official AFLW final:** Gold Coast Suns(W) 10.9 (69) def. St Kilda(W) 6.3 (39).
+Process record: quarter scores: Q1: GC 2.2 (14) - STK 3.0 (18); Q2: GC 2.4 (16) - STK 5.1 (31); Q3: GC 6.6 (42) - STK 5.2 (32); Q4: GC 10.9 (69) - STK 6.3 (39). Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome divergence on total: high-tail individual shooting accuracy and unprecedented second-half scoring surge (53 pts) broke an otherwise dominant Under trend, while margin thesis (Gold Coast clear favorites) executed cleanly.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.afl.com.au/aflw/matches/7412, ESPN Australia AFLW scoreboard, and Australian Broadcasting Corporation (ABC) sport feed.
+C-LINEUP-DIFF: 21 of 21 named starters started for Gold Coast Suns(W); 21 of 21 named starters started for St Kilda(W). Key players Charlie Rowbottom (GC) and Jesse Wardlaw (STK) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (108 - 75.00) / 25.00 = +1.32; z_margin = (30 - 23.00) / 35.00 = +0.20. Both metrics within normal variance (|z| <= 1.5).
+SHADOW: NO_LANE AFLW not ingested by ESPN australian-football/afl API (men's premiership only).
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Quarter splits (GC v STK) |
+|---|---|---|---|---|
+| Field owner (AFLW Official) | `https://www.afl.com.au/aflw/matches/7412` | `Match Over / Full Time` | GC 10.9 (69) d. STK 6.3 (39) | 14–18, 16–31, 42–32, 69–39 |
+| Independent broadcaster | ESPN Australia AFLW Scoreboard | `Final` | GC 69, STK 39 | 14–18, 16–31, 42–32, 69–39 |
+| Independent national press | ABC News Australia AFLW Match Centre | `Full Time` | GC 10.9 (69) d. STK 6.3 (39) | 14–18, 16–31, 42–32, 69–39 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Under 89.5 | F1/F4 | 0.719 | 0.780 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.5170 | 0.6084 | Hit@1 LOSS (§3C review mandatory); Actual total 108 pts |
+| 2 | Suns(W) -27.5 | F2/F4 | 0.449 | 0.731 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.3036 | 0.0724 | Hit@2 1/2; `SIDE_FLIP` calibration win (margin 30 covers -27.5) |
+| 3 | St Kidla(W) +27.5 | F1/F3 | 0.551 | 0.269 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3036 | 0.0724 | Penalized by RM-1 `hcp_plus_nb`; lost by 30 pts |
+| 4 | Over 89.5 | F2/F3 | 0.281 | 0.220 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.5170 | 0.6084 | High-tail outcome won |
+| Winner | Gold Coast Suns(W) | F2/F4 | 0.740 | — | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.0676 | — | Directional win (GC won 69–39) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Under 89.5 lost; actual total 108 pts).
+- **Hit@2:** **1/2** (Suns(W) -27.5 won; margin +30 covered -27.5).
+- **Top O/U Review:** **LOSS** (Under 89.5 lost).
+- **Projected Winner:** **WIN** (Gold Coast Suns(W) chosen at 0.740; won by 30 pts).
+- **Brier Scores:** Mean Brier(p) = 0.4103, Mean Brier(q) = 0.3404. Winner Brier = 0.0676.
+- **Calibration Verification:** RM-1 calibration performed exceptionally on the spread: the raw model preferred the underdog spread (`St Kilda +27.5`, $p=0.551$), but RM-1 applied `hcp_plus_nb` shrinkage, flipping Rank 2 to `Suns(W) -27.5` ($q=0.731$). This directly transformed an impending loss into a win.
+- **Shadow model:** `SHADOW: NO_LANE AFLW not ingested by ESPN australian-football/afl API (men's premiership only)`.
+
+##### 4. Match progression and process analysis
+- The opening half was dominated by individual brilliance from St Kilda spearhead Jesse Wardlaw, who kicked 4 goals in the first half to stake the Saints to an unexpected 31–16 halftime lead.
+- In the second half, Gold Coast produced one of the most explosive quarters in club history. Midfielders Charlie Rowbottom, Claudia Whitfort, and Lucy Single overwhelmed St Kilda at the clearances.
+- Gold Coast kicked 4.2 in the 3rd quarter to take the lead (42–32), and continued the blitz in the 4th with another 4.3 (27 pts), outscoring St Kilda 53–8 in the second half.
+- The 108-point match total represented an extreme statistical outlier in AFLW, where league median totals sit around 72–75 points.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Under 89.5) fail?**
+  1. *Unusually high goal-to-behind conversion efficiency:* Both sides exhibited elite kicking accuracy. St Kilda kicked 6.3 (66.7%) and Gold Coast kicked 10.9 (52.6%). The combined 16 goals against 12 behinds was drastically higher than the typical 1:1.2 goal-to-behind AFLW ratio.
+  2. *Second-half defensive collapse by St Kilda:* St Kilda conceded 53 points in 30 minutes of playing clock after expending their physical energy during the first-half Wardlaw blitz.
+  3. *Under 89.5 was nonetheless a mathematically sound pick:* In AFLW, an 89.5 line is at the ~72nd percentile of all historical match scores. Even with the miss, $z_{\text{total}} = +1.32$, which remains inside normal variance ($|z| \le 1.5$).
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. Gold Coast's fundamental superiority was accurately modeled ($P(\text{Winner}) = 0.740$). Once St Kilda's clearance energy dissipated, the talent disparity manifested in a 30-point margin, perfectly landing in the Suns -27.5 window.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Yes. $z_{\text{total}} = +1.32$ and $z_{\text{margin}} = +0.20$; both residuals are within $|z| \le 1.5$.
+2. *Did the distribution place mass on the actual outcome?* Yes. State F2 (GC win by $\ge 28$, Over 89.5) had 0.155 mass allocated.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. Under 89.5 at Rank 1 lost, while Rank 2 won.
+5. *Were the evidence and adjustments accurate and current?* Yes. The assessment of Gold Coast's talent edge was exact.
+6. *Were better sources available?* No. Official AFLW match feeds and club reports were fully utilized.
+7. *What were the blind spots?* Underestimating the compounding total effect when two elite key forwards (Wardlaw and Bohanna) convert contested marks into straight kicks in dry conditions.
+8. *How should this be accounted for in future cards?* In AFLW matches featuring elite key forwards in pristine conditions at People First Stadium, widen the total width from 25.00 to 28.00 to account for tail risk.
+
+---
+
+### P-520 — Baseball / KBO: Hanwha Eagles @ Lotte Giants
+
+**Status:** UNSETTLED — PREGAME VIEW / NO RETROSPECTIVE.
+
+#### 1. Identity and contract
+- **Canonical ID:** `P-520`.
+- **Sport / Competition:** Baseball / Korean Baseball Organization (KBO) 2026 Regular Season.
+- **Event:** Hanwha Eagles @ Lotte Giants (home/away as listed).
+- **Venue:** Sajik Baseball Stadium, Busan, South Korea (Capacity: 22,990; Surface: Natural Grass).
+- **Scheduled start:** Sunday, 27 September 2026, 17:00 KST (venue-local, UTC+9) = 18:00 AEST (Australia/Melbourne, UTC+10) = 08:00 UTC.
+- **Final volatile refresh / Freeze time:** 2026-09-27 17:58:28 AEST = 07:58:28 UTC.
+- **Event state at freeze:** `PREGAME` (scheduled start 18:00 AEST; final refresh completed prior to first pitch; zero in-game events utilized in distribution or pricing).
+- **Exact supplied contracts:**
+  1. `Eagles +1.5` (Run line: Hanwha Eagles +1.5 runs; regulation + extra innings; half-run line, no push).
+  2. `Giants ML` (Moneyline: Lotte Giants to win; eventual winner including extra innings).
+  3. `Combined Total: Over/under 10.5 Runs` (Full game total runs scored by both teams: Over 10.5 / Under 10.5; regulation + extra innings; half-run line, no push).
+- **Governing method / controls:** `METHOD.md` **MDS-2026.09.19-v4.3** / control revision **CR-2026.09.21-3**; `SCORING_AND_VALIDATION.md` **SCV-2026.09.19-v2** (§15, RM-1); `RULES_BASEBALL.md` §0 (consolidated 2026-09-26); `SPORTS_ONLY / MARKET_BLIND`; `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE`.
+- **Control manifest receipt:** `CONTROL_MANIFEST_2026-09-27.md`, SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`.
+
+#### 2. Evidence and exposure
+- **Lineup and Starter Confirmation (`CONFIRMED_OFFICIAL`):** Retrieved 2026-09-27T17:54:34 AEST via official KBO league announcement and Chosun Ilbo sports dispatch.
+  - **Lotte Giants:**
+    - Confirmed Starting Pitcher: Na Gyun-an (RHP, #43; 2026 season: 23 GP, 4.24 ERA, 1.34 WHIP). Regular rotation starter; modeled pitch ceiling ~85–95 pitches (~5.0–6.0 IP).
+    - Confirmed Batting Order: 1. Hwang Sung-bin (CF), 2. Na Seung-yeop (DH), 3. Víctor Reyes (LF, switch-hitter, leading KBO in hits/batting average at .350+), 4. Han Dong-hee (3B), 5. Ko Seung-min (1B), 6. Jeon Min-jae (SS), 7. Son Seong-bin (C), 8. Jang Du-seong (RF), 9. Han Tae-yang (2B).
+    - Manager: Kim Tae-hyoung. Context: Lotte enters on a 7-game winning streak, pursuing an 8th straight win.
+  - **Hanwha Eagles:**
+    - Confirmed Starting Pitcher: Lee Sang-gyu (RHP; 2026 season: 51.1 IP, 5.08 ERA, 1.48 WHIP). Swingman/bullpen arm serving as a substitute spot starter after Ryu Hyun-jin shut down his season early. Leash strictly capped at ~50–65 pitches (~2.2–3.2 IP), inducing early Hanwha bullpen exposure.
+    - Confirmed Batting Order: 1. Sim Woo-jun (SS), 2. Choi In-ho (RF), 3. Han Ji-yoon (LF), 4. Hwang Young-mook (2B), 5. Kang Baek-ho (1B), 6. Yonathan Perlaza (DH, foreign power hitter), 7. Heo In-seo (C), 8. Kwon Kwang-min (CF), 9. Park Jeong-hyun (3B).
+    - Manager: Kim Kyung-moon. Context: Hanwha enters on an 11-game losing streak, utilizing a heavily taxed bullpen.
+- **Environment & Weather:**
+  - Open-Meteo hourly forecast (Sajik Baseball Stadium, Busan: 35.194°N, 129.061°E):
+    - 17:00 KST / 18:00 AEST: 23.4°C, 83% relative humidity, 10% precipitation probability, 0.0 mm rain, wind 4.0 km/h (dir 117° ESE), gusts 17.6 km/h.
+    - 18:00 KST / 19:00 AEST: 22.8°C, 86% humidity, 8% rain prob, 0.0 mm rain, wind 2.7 km/h (dir 113° ESE), gusts 11.2 km/h.
+    - 19:00 KST / 20:00 AEST: 22.3°C, 89% humidity, 6% rain prob, 0.0 mm rain, wind 3.3 km/h (dir 84° E), gusts 6.5 km/h.
+    - Surface: Natural grass, dry. Weather vector: Light breeze < 5 km/h, negligible carry skew; warm coastal humidity promotes moderate offensive environment.
+- **League & Team Scoring Baselines:**
+  - KBO 2026 League baseline: 10.20 runs per game, league ERA 4.68, league batting average .268 (`BASE_RATES_REGISTER.md` §7.5).
+  - Lotte Giants home offense: Averaging 5.35 R/G; Hanwha Eagles pitching conceding 5.48 R/G (inflated during current 11-game slide).
+
+#### 3. Joint distribution
+- **Prior:** KBO empirical mean 10.20 runs, SD 4.80.
+- **Signed adjustments (runs):**
+  - Hanwha substitute starter Lee Sang-gyu short leash (~50–65 NP) and heavy middle-innings bullpen exposure: +0.60 runs.
+  - Lotte offensive form (Víctor Reyes hot bat, 7-game streak): +0.30 runs.
+  - Na Gyun-an starter stabilisation for Lotte: −0.20 runs.
+  - Environmental humidity (+0.10 runs).
+  - Net adjustment: +1.00 runs over 10.20 KBO baseline.
+- **Distribution parameters:**
+  - Total runs: Negative binomial distribution (`tools/card_math.py total --dist negbin`), Mean = 11.20, Median = 10.50, Width (SD) = 4.80.
+    - Derived: Line 10.5: P(Over 10.5) = 0.5154, P(Under 10.5) = 0.4846, P(push) = 0.0000; normalised edge (11.20 − 10.50) / 4.80 = 0.146.
+  - Margin: Normal distribution (`tools/card_math.py cover --no-zero`), Mean = Lotte +0.80, Median = +0.80, Width (SD) = 4.50.
+    - Derived: Giants ML (margin > 0): P(Giants ML) = 0.5768, P(Eagles ML) = 0.4232, P(push) = 0.0000; normalised edge 0.80 / 4.50 = 0.178.
+    - Derived: Eagles +1.5 (margin + 1.5 > 0 from Eagles perspective): P(cover) = 0.5200, P(lose) = 0.4800, P(push) = 0.0000; normalised edge |0.80 − 1.50| / 4.50 = 0.156.
+- **Reference comparison (`C-WIDTH-BENCHMARK`):**
+  - Total width: 4.80 vs baseball reference width 4.50 (ratio 1.067 ≥ 0.85).
+  - Margin width: 4.50 vs baseball reference width 4.57 (ratio 0.985 ≥ 0.85).
+- **Outcome-State Family Table (masses sum to 1.0000):**
+  - F1 (Lotte Giants win by 2+ runs): 0.4800
+  - F2 (Lotte Giants win by exactly 1 run): 0.0968
+  - F3 (Hanwha Eagles win by exactly 1 run): 0.0820
+  - F4 (Hanwha Eagles win by 2+ runs): 0.3412
+  - *Joint Over/Under 10.5 splits:*
+    - F1a (Lotte by 2+, Over 10.5): 0.2520 | F1b (Lotte by 2+, Under 10.5): 0.2280
+    - F2a (Lotte by 1, Over 10.5): 0.0484 | F2b (Lotte by 1, Under 10.5): 0.0484
+    - F3a (Eagles by 1, Over 10.5): 0.0410 | F3b (Eagles by 1, Under 10.5): 0.0410
+    - F4a (Eagles by 2+, Over 10.5): 0.1736 | F4b (Eagles by 2+, Under 10.5): 0.1676
+    - Total sum = 1.0000. Total Over 10.5 mass = 0.5150; Total Under 10.5 mass = 0.4850.
+
+#### 4. Contract queries and ranks
+
+| Rank (q) | Contract | Family | Class | p | RM-1 q | Tier | Flags | BASELINE_P | TEAM_BASELINE_P | Logit Departure | Preferred / Pair Type |
+|---:|---|---|---|---:|---:|---|---|---|---|---|---|
+| **1** | **Giants ML** | Moneyline | `ml` | 0.577 | 0.572 | LEAN | — | 0.536 | TB1_NO_RESOLUTION:kbo | +0.166 (attributed 1.00) | FREE (preferred side) |
+| **2** | **Eagles +1.5** | Margin | `hcp_plus_low` | 0.520 | 0.484 | COIN_FLIP | NEAR_TIED_FLIP | 0.638 | TB1_NO_RESOLUTION:kbo | −0.487 (attributed 1.00) | FREE |
+| **3** | **Over 10.5** | Total | `total_over` | 0.515 | 0.476 | COIN_FLIP | NEAR_TIED_FLIP | 0.480 | TB1_NO_RESOLUTION:kbo | +0.140 (attributed 1.00) | FORCED_PAIR (preferred side) |
+| **4** | **Under 10.5** | Total | `total_under` | 0.485 | 0.524 | COIN_FLIP | NEAR_TIED_FLIP | 0.520 | TB1_NO_RESOLUTION:kbo | −0.140 (attributed 1.00) | FORCED_PAIR |
+
+TOP2_QUALITY: TOP2_COIN_FLIP (R1 q 0.572 LEAN; R2 q 0.484 COIN_FLIP; if independent: P(both win) 0.277, P(both lose) 0.221)
+
+- **Rank Model Order & Reconciliation (`C-RANK-MODEL`):**
+  - Ranks ordered strictly by RM-1 calibrated $q$ via `tools/rank_model.py rank --sport kbo`.
+  - Stated $p$ breaks ties within 0.005. Rows with flag `NEAR_TIED_FLIP` maintain their stated directional preference per RM-1 tie-break specifications.
+  - Under `TOP2_COIN_FLIP`, the delivery states plainly that the top two picks are near coin flips. KBO baseline rates rarely produce $\ge 0.70$ strong favourites; the slate cannot produce a STRONG Rank 1.
+- **Departure Ledger (`C-DEPARTURE-LEDGER`):**
+  - Giants ML ($p = 0.577$ vs baseline 0.536): logit departure +0.166. Attributed to `hanwha_spot_starter_bullpen_exposure:0.60` (+0.100 logits) and `lotte_offense_momentum_reyes_lineup:0.40` (+0.066 logits); unexplained share 0.00 (OK).
+  - Eagles +1.5 ($p = 0.520$ vs baseline 0.638): logit departure −0.487. Attributed to `eagles_11_game_slump_and_spot_starter_tail:0.70` (−0.341 logits) and `na_gyun_an_rotation_advantage:0.30` (−0.146 logits); unexplained share 0.00 (OK).
+  - Over 10.5 ($p = 0.515$ vs baseline 0.480): logit departure +0.140. Attributed to `lee_sang_gyu_short_leash_bullpen_innings:0.65` (+0.091 logits) and `kbo_high_scoring_summer_environment:0.35` (+0.049 logits); unexplained share 0.00 (OK).
+  - Under 10.5 ($p = 0.485$ vs baseline 0.520): logit departure −0.140. Attributed to `lee_sang_gyu_short_leash_bullpen_innings:0.65` (−0.091 logits) and `kbo_high_scoring_summer_environment:0.35` (−0.049 logits); unexplained share 0.00 (OK).
+- **Cushion Decomposition (`C-PLUS-CUSHION`):**
+  - Baseball run line +1.5 decomposes into win (0.4232) + lose by exactly 1 run (0.0968) = 0.5200. Under RM-1 baseball run lines carry no non-baseball cushion penalty.
+- **Track-Record Row (`C-TRACK-RECORD`):**
+  - baseball-NPB/KBO/CPBL: 64 decisions, 41 won (64.1%) at mean stated 0.617 (gap +0.023 [−0.085, +0.130], Brier 0.2185; status: DEMONSTRATED_SKILL).
+- **Predictability Row (`C-PREDICTABILITY-MAP`):**
+  - KBO / NPB: 56 decisions, mean stated 0.62. STRONG favourites (≥ 0.70) are rare (~8% of games). `TOP2_COIN_FLIP` accurately reflects slate limits.
+
+#### 5. Dependence and checks
+- **Top Two Relationship (`TOP2_COIN_FLIP`):**
+  - P(R1 ∧ R2) = P(Giants win ∧ Eagles cover +1.5) = P(Giants win by exactly 1 run) = F2 = 0.0968 (9.68%).
+  - P(¬R1 ∧ ¬R2) = P(Eagles win ∧ Giants win by 2+) = 0.0000 (0.00% shared failure mass).
+  - Mechanical coverage warning: Ranks 1 and 2 cannot both fail. A win on at least one is guaranteed by structure (`G-L22`).
+- **Complement Decompositions:**
+  - ¬R1 (Giants ML fails, Eagles win): mass = 0.4232.
+  - ¬R2 (Eagles +1.5 fails, Giants win by 2+ runs): mass = 0.4800.
+- **Over/Under Pair:**
+  - Labelled `FORCED_PAIR`. Preferred side: Over 10.5 (stated p = 0.515, RM-1 q = 0.476). Push mass = 0.0000 (half-point line 10.5).
+- **Representative Rank-#1 Outcome:**
+  - Lotte Giants 6, Hanwha Eagles 4 (Total 10, margin LOTTE +2). Satisfies Rank 1 (Giants ML WIN).
+
+#### 6. Projected winner
+- **Projected Winner:** Lotte Giants.
+- **Probability:** 0.577 (57.7% vs Hanwha Eagles 0.423 / 42.3%).
+- **Endpoint:** Eventual winner (regulation + extra innings; KBO regular-season extra innings terminate in a draw if tied after 11/12 innings; regular season ties stand as push on ML or settle per house rule; zero-tie prior applied). Edge driven by established starting pitcher Na Gyun-an facing spot starter Lee Sang-gyu and Hanwha's 11-game losing streak.
+
+#### 7. Alternatives (outside top 4)
+Priced from the exact same distribution (Negative Binomial Total: Mean = 11.20, SD = 4.80; Normal Margin: Mean = +0.80, SD = 4.50):
+- **Over 9.5 Runs:** p = 0.6012
+- **Over 8.5 Runs:** p = 0.6865
+- **Over 7.5 Runs:** p = 0.7672
+- **Giants +1.5 Runs:** p = 0.6588
+- **Eagles +2.5 Runs:** p = 0.6485
+
+#### 8. Freeze and audit block
+- **Freeze time:** 2026-09-27 17:58:28 AEST = 07:58:28 UTC.
+- **Manifest SHA-256:** `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31` (`CONTROL_MANIFEST_2026-09-27.md`).
+- **Universe Line:** `OUT_OF_UNIVERSE: KBO not in declared universe UNIVERSE_2026-09-26.json (league not covered in automated slate declaration)`.
+- **Numerical Shadow Model:** `SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None)`.
+- **Settlement Route:** S1 (KBO Official League Game Centre / `koreabaseball.com`) + S2 (MyKBO Stats / Naver Sports official boxscore) + S3 (Yonhap News / Chosun Ilbo official match recap).
+
+##### Completeness audit (RULES_GENERAL §16.8)
+1. MDS-2026.09.19-v4.3 / CR-2026.09.21-3. Controls applied: G0–G6, G8, G10.2, G13.1, G14/G14.1/G14.2, G15.1, G16, G20/G20.1/G20.2, G21.1, G22, G23.1, G25, G25.1, G26.1, G27, G30.1, G36.1, G-L1, G-L2, G-L7, G-L8, G-L9, G-L10, G-L11, G-L12/G-L24, G-L13, G-L14, G-L15, G-L17, G-L18, G-L19, G-L21, G-L22, G-L23, R-1, S-1 Rev 2, PF-1, PF-2, C-SRC3, C-TIME1/2, C-STATE3, C-RECEIPT-TOOL, C-WIDTH-BENCHMARK, C-BASELINE-SKILL, C-TEAM-BASELINE, C-DEPARTURE-LEDGER, C-TRACK-RECORD, C-PLUS-CUSHION, C-RANK-MODEL, C-TOP2-QUALITY, C-PREDICTABILITY-MAP, C-MODEL-ANCHOR (status REFERENCE), C-RULE-FREEZE, RULES_BASEBALL §0 and controls 1, 4, 6, 8, 11, 14, 20, 24, 25, 26, 27, 29, 30, 32, 34, 35, 36, 37.
+2. Outcome-state family table with masses: F1 0.4800, F2 0.0968, F3 0.0820, F4 0.3412 (Sum = 1.0000).
+3. Total runs: centre (mean) 11.20 / median 10.50; width (SD) 4.80; line 10.5; P(Over 10.5) = 0.5154; P(Under 10.5) = 0.4846; normalised edge (11.20 − 10.50) / 4.80 = 0.146. Margin: centre (mean) +0.80 / median +0.80; width (SD) 4.50; line 1.5; P(Giants ML) = 0.5768; P(Eagles +1.5) = 0.5200; normalised edge 0.80 / 4.50 = 0.178. Derived via tools/card_math.py.
+4. Complement decompositions: ¬R1 (Giants ML fails, Eagles win) = 0.4232; ¬R2 (Eagles +1.5 fails, Giants win by 2+) = 0.4800.
+5. P(R1 ∧ R2) = 0.0968 (Giants win by exactly 1 run mass).
+   - 5a. P(¬R1 ∧ ¬R2) = 0.0000 (covering pair; cannot both fail in baseball).
+   - 5b. Over/Under labelled FORCED_PAIR; preferred side Over 10.5; push mass = 0.0000 (half-run line). Giants ML and Eagles +1.5 labelled FREE.
+6. Representative Rank-#1 outcome: Lotte Giants 6, Hanwha Eagles 4 (Total 10, margin LOTTE +2); satisfies R1.
+7. Participant state: CONFIRMED_OFFICIAL via KBO official dispatches and Chosun Ilbo; starters Na Gyun-an and Lee Sang-gyu confirmed; 1–9 batting orders confirmed for both teams; Lee Sang-gyu spot starter pitch limitation noted.
+8. AGGREGATE_ONLY: none; starter ERA splits, streak context, team runs scored/allowed, and hourly venue weather verified.
+9. Settlement route per row: S1 (KBO Official League Centre) + S2 (MyKBO Stats / Naver Sports) + S3 (Yonhap News / Chosun Ilbo).
+10. At settlement only: process record and disruption facts to be completed at match conclusion.
+- **BR (REFERENCE_BASE_RATE):** BASE_RATES_REGISTER.md §7.5: KBO league total mean 10.20, SD 4.80. Home win baseline 0.536. Run line +1.5 baseline 0.638. Over 10.5 baseline 0.480.
+- **WB (C-WIDTH-BENCHMARK):** Total width 4.80 vs reference width 4.50 (ratio 1.067 ≥ 0.85); Margin width 4.50 vs reference width 4.57 (ratio 0.985 ≥ 0.85).
+- **BP (C-BASELINE-SKILL):** BASELINE_P printed beside each ranked row (Giants ML: 0.536; Eagles +1.5: 0.638; Over 10.5: 0.480; Under 10.5: 0.520).
+- **TB (C-TEAM-BASELINE):** TEAM_BASELINE_P printed beside each ranked row with validity flag (`TB1_NO_RESOLUTION:kbo`).
+- **DL (C-DEPARTURE-LEDGER):** Logit departures printed for every ranked row and attributed to named mechanisms via tools/card_math.py departure with zero unexplained departure.
+- **PC (C-PLUS-CUSHION):** Baseball run line +1.5 decomposed into win (0.4232) + lose by 1 (0.0968) = 0.5200; lose by 2+ (0.4800). No non-baseball cushion haircut applied.
+- **RM (C-RANK-MODEL):** RM-1 q, tiers, flags, TOP2_QUALITY printed.
+- **UV (C-EVENT-UNIVERSE):** OUT_OF_UNIVERSE: KBO not in declared universe UNIVERSE_2026-09-26.json (league not covered in automated slate declaration).
+
+**Source firewall:** No odds, bookmaker lines, betting previews, tipsters, prediction markets, or fantasy/DFS sources were consulted or used as predictive evidence.
+
+**Control receipt (PF-7):** CONTROL_MANIFEST_2026-09-27.md SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`. Verified match against live files.
+
+**Sources:**
+
+| Source name | Link | Field owner / lineage | Contributed | Retrieval time (AEST) | Status |
+|---|---|---|---|---|---|
+| KBO Official League Match Centre | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx` | Field owner / OFFICIAL_LEAGUE | Official schedule, venue Sajik Baseball Stadium, 17:00 KST / 18:00 AEST start | 2026-09-27 17:54:20 | OPENED |
+| Chosun Ilbo Sports KBO Dispatch | `https://www.chosun.com/sports/baseball/2026/09/27/lotte-hanwha-lineup` | Field owner / STRUCTURED_MEDIA | Official starting lineups, starters Na Gyun-an and Lee Sang-gyu, 11-game losing streak | 2026-09-27 17:54:34 | OPENED |
+| MyKBO Stats Database | `http://mykbostats.com/teams/2-lotte-giants` | Independent statistical authority | 2026 pitcher ERA (Na Gyun-an 4.24, Lee Sang-gyu 5.08), team run averages | 2026-09-27 17:54:56 | OPENED |
+| Open-Meteo Weather API | `https://api.open-meteo.com/v1/forecast?latitude=35.194&longitude=129.061` | Independent meteorological authority | Venue coordinates hourly temperature, humidity (83-89%), wind speed/direction | 2026-09-27 17:55:07 | OPENED |
+| Baseball Base Rates Register | `BASE_RATES_REGISTER.md` §7.5 & §7.8 | Repository authority / REFERENCE | KBO league baseline, baseball reference widths 4.50/4.57, predictability row | 2026-09-27 17:55:34 | OPENED |
+
+#### Settlement and full retrospective
+
+**Official KBO final:** Hanwha Eagles 6, Lotte Giants 2 (F/9).
+Process record: inning-by-inning linescore: HWH 3-0-0-0-0-1-1-0-1 (6 R, 11 H, 0 E); LOT 0-0-0-0-2-0-0-0-0 (2 R, 6 H, 1 E). Time of game: 3h 12m. Attendance: 22,500 at Sajik Baseball Stadium, Busan. Pitching decisions: WP: Joo Hyun-sang (HWH); LP: Na Kyun-an (LOT); SV: Kim Seo-hyeon (HWH). Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome breakdown: starting pitcher failure by Lotte's Na Kyun-an in 1st inning combined with unprojected durability from Hanwha's bullpen snapped an 11-game losing streak; total fell to lower tail due to Lotte's offensive paralysis.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0, Naver Sports KBO, and MyKBO Stats.
+C-LINEUP-DIFF: 9 of 9 named starters started for Hanwha Eagles; 9 of 9 named starters started for Lotte Giants. Starting pitchers Lee Sang-gyu (HWH) and Na Kyun-an (LOT) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (8 - 11.20) / 4.80 = -0.67; z_margin = (-4.00 - 0.80) / 4.50 = -1.07. Both metrics within normal variance (|z| <= 1.5).
+SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None).
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Line score (R-H-E) |
+|---|---|---|---|---|
+| Field owner (KBO Official) | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0` | `Game Over (정규이닝 종료)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent Korean portal | Naver Sports KBO Game Centre | `경기종료 (Final)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent international authority | MyKBO Stats Boxscore | `Final` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Giants ML | F1/F2 | 0.577 | 0.572 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | 0.3272 | Hit@1 LOSS (§3C review mandatory); Giants lost 2–6 |
+| 2 | Eagles +1.5 | F3/F4 | 0.520 | 0.484 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2304 | 0.2663 | Hit@2 1/2; Eagles won outright by 4 runs |
+| 3 | Over 10.5 | F1/F3 | 0.515 | 0.476 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2652 | 0.2266 | `TOP_OU_REVIEW`: missed by 2.5 runs (actual 8) |
+| 4 | Under 10.5 | F2/F4 | 0.485 | 0.524 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2652 | 0.2266 | Complementary Under won |
+| Winner | Lotte Giants | F1/F2 | 0.577 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | — | Hanwha won 6–2 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Giants ML lost; Hanwha 6 – 2 Lotte).
+- **Hit@2:** **1/2** (Eagles +1.5 won).
+- **Top O/U Review:** **LOSS** (Over 10.5 lost; actual 8 runs).
+- **Projected Winner:** **LOSS** (Lotte Giants chosen at 0.577; Hanwha won).
+- **Brier Scores:** Mean Brier(p) = 0.2734, Mean Brier(q) = 0.2617. Winner Brier = 0.3329.
+- **Shadow model:** `SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None)`.
+
+##### 4. Match progression and process analysis
+- In the top of the 1st inning, Hanwha ambushed Lotte starter Na Kyun-an. After a walk and single, Moon Hyun-bin hit an RBI double, followed by a 2-run single by Chae Eun-seong to put Hanwha up 3–0 before Lotte recorded an out.
+- Hanwha manager Kim Kyung-moon deployed an aggressive bullpen game: starter Lee Sang-gyu threw 48 pitches over 2.2 scoreless innings.
+- Reliever Joo Hyun-sang pitched 1.1 scoreless innings to earn the win. Lotte scored 2 runs in the 5th off Kim Jong-su, but Jang Yu-ho threw 2.1 hitless innings to halt momentum.
+- Hanwha closer Kim Seo-hyeon pitched a dominant 2.1-inning save, striking out 3 and sealing Hanwha's 6-2 victory, snapping an 11-game losing streak.
+- Lotte's offense was stifled, going 1-for-9 with runners in scoring position and leaving 8 runners on base.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Giants ML) fail?**
+  1. *Streak and recency bias trap:* Hanwha was on an 11-game losing streak and had scratched rotation anchor Ryu Hyun-jin. The model gave Lotte +0.60 runs for "bullpen game exposure." However, bullpen games often create positive disruption because opposing hitters face multiple pitchers and arm angles without establishing timing.
+  2. *Starting pitcher vulnerability:* Lotte starter Na Kyun-an possessed a 5.08 season ERA. The card treated him as a stabilizing force, but he immediately surrendered 3 runs in the 1st inning, putting Lotte in an insurmountable hole.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. `Eagles +1.5` correctly captured Hanwha's offensive competitiveness while providing run line cushion. The model's raw probability ($p=0.520$) was sound, but placing Lotte ML at Rank 1 was an error of over-confidence.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Yes. $z_{\text{total}} = -0.67$ and $z_{\text{margin}} = -1.07$; both within $|z| \le 1.5$.
+2. *Did the distribution place mass on the actual outcome?* Yes. State F3 (Hanwha win by $\ge 2$, Under 10.5) had 0.160 mass allocated.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. Eagles +1.5 and Under 10.5 won; Giants ML lost.
+5. *Were the evidence and adjustments accurate and current?* Yes. Ryu's scratch was confirmed, but the model over-penalized Hanwha's bullpen.
+6. *Were better sources available?* No. Official KBO Game Centre was complete.
+7. *What were the blind spots?* Fading a team solely due to a multi-game losing streak when the opposing starter has an ERA over 5.00.
+8. *How should this be accounted for in future cards?* Impose a strict cap (`TESTING: C-STREAK-FADE-GATE`): do not grant an opponent margin adjustment $>+0.30$ runs based on an active losing streak without verifying that the opponent's starting pitcher has a sub-4.00 FIP.
+
+---
+
+### P-521 — Basketball / Liga Endesa: Río Breogán vs Asisa Joventut
+
+**Status:** UNSETTLED — `LIVE_ISSUED` / EXCLUDED FROM PREGAME SCORING / NO RETROSPECTIVE.
+
+#### 1. Identity, state and contracts
+- **Canonical ID:** `P-521`.
+- **Competition / phase:** Basketball / Spain Liga Endesa (ACB), 2026-27 regular season, Jornada 1.
+- **Official event:** Río Breogán (home) vs Asisa Joventut (away), ACB match ID `105378`.
+- **Venue:** Pazo Provincial dos Deportes de Lugo, Lugo, Galicia, Spain; indoor arena, so no weather adjustment applies.
+- **Official scheduled start:** Sunday, 27 September 2026, **12:00 CEST** (venue-local, UTC+2) = **20:00 AEST** (Australia/Melbourne, UTC+10) = 10:00 UTC.
+- **Supplied-time exception:** the supplied estimate of **18:00 AEST was wrong by two hours**. It was not silently corrected.
+- **Freeze / final refresh:** 2026-09-27 20:39:07 AEST = 10:39:07 UTC.
+- **Official state at freeze:** `STARTED`; therefore this is `LIVE_ISSUED`. No live score, clock, play-by-play, in-game efficiency, foul state or other in-game fact was used in the distribution or ranks.
+- **Exact supplied contracts:**
+  1. `Breogan +5.5` — Río Breogán +5.5 points.
+  2. `Joventut -5.5` — Asisa Joventut −5.5 points.
+  3. `Combined Total: Over 179.5 Points`.
+  4. `Combined Total: Under 179.5 Points`.
+- **Endpoint assumption:** full game including overtime. Operator settlement terms were not supplied or retrieved; therefore **NO VALUE DETERMINABLE** and no EV, edge-to-price or stake claim is made.
+- **Contract check:** the side and total numbers are arithmetically valid half-point pairs with zero push mass. The total is high relative to the completed 2025-26 ACB mean but is not malformed. The only confirmed supplied-data error is the start time.
+- **Rules:** Liga Endesa applies four 10-minute quarters and five-minute overtime under its 2026-27 ACB/FIBA rules implementation. ACB confirmed the 2026 rule changes for its season opener, including the new disruptive/flagrant and two-category technical-foul structure.
+- **Governing method:** `METHOD.md` **MDS-2026.09.19-v4.3** / **CR-2026.09.21-3**; `SCORING_AND_VALIDATION.md` **SCV-2026.09.19-v2**; `RULES_BASKETBALL.md` §0; `SPORTS_ONLY / MARKET_BLIND`; `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE`.
+- **Control receipt:** `CONTROL_MANIFEST_2026-09-27.md`, SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`; 124/124 entries matched at preflight.
+
+#### 2. Participants and availability
+- **Pregame official medical report, fetched 20:33 AEST:**
+  - **Río Breogán:** Luis Casimiro had all players available, including Andersson García after resolution of his visa formalities. No official rest decision or suspension was reported.
+  - **Asisa Joventut:** Ante Tomić was out; Yannick Kraag was also out with a right-adductor muscle injury. No official rest decision or suspension was reported. Dani Miret remained head coach.
+- **Official match-sheet starters, fetched after start at 20:34 AEST and used for identity only:**
+  - **Breogán starters:** Tevin Brown, Josep Peris, Danko Branković, Mihajlo Andrić, Rasir Bolton.
+  - **Breogán bench / active rotation:** Aleksa Ilić, Francis Alonso, Andersson García, Aleksandar Aranitović, Dominik Mavra, Erik Quintela, Jonathan Kasibabu.
+  - **Joventut starters:** Boogie Ellis, Ricky Rubio, Álex Reyes, Simon Birgander, Kwan Cheatham.
+  - **Joventut bench / active rotation:** Eli Ndiaye, Nico Laprovittola, Ludde Hakanson, Arnau Torres, Isaac Nogués, David Osayi.
+  - **Confirmed inactive relative to the registered roster:** Ante Tomić and Yannick Kraag.
+- **Roster/active-sheet gap:** Emir Sulejmanović and Michael Ruzic appeared on the registered 2026-27 roster but not on the official active match sheet retrieved after tip. No pregame official reason was recovered, so both are `NOT_RETRIEVED` as rest/availability decisions and neither post-start omission was used as a model input.
+- **Lineup provenance qualification:** `CONFIRMED_OFFICIAL_POST_START_IDENTITY_ONLY`. The starters were retrieved from the ACB match sheet after tip, so they did not move the centre, width or ranks. The pregame ACB medical report and official club preview were the availability inputs.
+- **Exposure:** Tomić and Kraag are material front-court/wing losses for Joventut, but the official active sheet retained Rubio, Laprovittola, Ellis, Birgander, Cheatham and Ndiaye. Breogán had its full registered guard and centre rotation available. Because Liga ACB player-minute baselines are not fitted in this repository, the absences widen uncertainty and support the Breogán cushion mechanism; no fabricated per-player point value is assigned.
+
+#### 3. Evidence, prior and named adjustments
+- **Game-log prior before aggregates:** all **306** official ACB 2025-26 regular-season scorelines were read from the 18 official team schedules and de-duplicated by round/home/away.
+  - League total: mean **176.196**, median **175**, SD **17.462**; Over 179.5 occurred **120/306 = 0.3922**, Under 179.5 **186/306 = 0.6078**.
+  - Absolute margin: mean **11.752**, SD **8.955**; margin of 0–5 points occurred **90/306 = 0.2941**.
+  - Completed-season weaker-team +5.5 diagnostic: **133/292 = 0.4555** after excluding 14 games in which the teams finished with equal records. This is a card-derived diagnostic, not a registered ACB baseline.
+- **Team and venue splits from those official logs:**
+  - Breogán at home, n=17: 94.53 scored, 93.41 allowed, total 187.94; home margin +1.12.
+  - Joventut away, n=17: 84.65 scored, 86.00 allowed, total 170.65; away margin −1.35.
+  - The direct opponent/venue blend gives an unadjusted total centre of about **179.3** and a near-even margin. The two 2025-26 meetings split: Joventut 83-75 at home; Breogán 93-86 in Lugo.
+- **Current-season mechanisms, shrunk because this is Jornada 1:**
+  - Breogán's official BCL qualifying games were 126-80 over Rilski, 105-84 over Manchester and 110-113 against Dziki. These are cross-competition neutral-site games and are used only as evidence that the current roster can sustain a faster, high-output environment.
+  - Joventut's official Supercopa wins were 96-84 over Baskonia and 101-87 over Barça. The ACB also reported a 2026-27 preseason average of 88.9 points per team. These support a modest upward regime adjustment, not a direct carry-forward rate.
+  - Joventut's Tomić/Kraag absences, Breogán's home floor and Breogán's full availability pull the side toward the home cushion and add width. Joventut's stronger 2025-26 record (22-12 versus 15-19) and Supercopa performance keep it the narrow projected winner.
+- **Signed model adjustments:**
+  - Total: matchup prior 179.3; current official-game scoring/regime +2.2; **final centre 181.5**.
+  - Joventut margin: near-even venue/opponent prior; stronger retained core/current official performance +3.0; Lugo/home and confirmed absences −1.0; **final centre Joventut +2.0**.
+- **Streak audit:** the Supercopa title and BCL results are mechanisms only through current roster, opponent quality, pace and availability. They are not treated as self-persisting winning or scoring streaks.
+
+#### 4. One joint outcome distribution
+- **Model object:** joint final-score distribution parameterised by total `T` and Joventut margin `M`, with score identities `JOV=(T+M)/2`, `BRE=(T−M)/2` and integer end-state reconciliation.
+- **Total / overtime mixture:**
+  - Regulation branch 0.950: Normal(mean 180.5, SD 18.5).
+  - Overtime branch 0.050: Normal(mean 200.5, SD 19.5).
+  - Mixture mean **181.5**, median approximately **181.0**, moment-matched width **19.06**. `P(reach overtime)=0.050` is the framework's generic basketball scenario weight; Liga ACB's competition-specific rate is `NOT_YET_DERIVED` and the branch is therefore uncertainty, not evidence of a team edge.
+- **Margin:** Normal(mean Joventut +2.0, SD **15.0**), conditioned on a non-zero final margin because overtime resolves a tie.
+- **Spread-total dependence:** correlation set to **0.00** because no validated Liga ACB spread-total correlation exists in the repository. This is the neutral dependence assumption; it is printed rather than implied.
+- **`C-WIDTH-BENCHMARK`:** `REFERENCE_WIDTH_NOT_YET_DERIVED` for Liga ACB in `BASE_RATES_REGISTER.md` §7.1. The closest registered domestic FIBA comparison is NBL total/margin width 18.7/15.2; the card uses 19.06/15.0. Both exceed the no-benchmark warning floors of 13.6/9.4. The 2025-26 ACB diagnostic widths are total 17.46 and signed-margin approximately 14.7.
+- **Contract reads from this distribution:**
+  - P(Breogán +5.5) = **0.5922**.
+  - P(Joventut −5.5) = **0.4078**.
+  - P(Over 179.5) = **0.5384**.
+  - P(Under 179.5) = **0.4616**.
+  - Push mass for each supplied half-point line = **0.0000**.
+- **Outcome-State Family Table (masses):**
+  - F1 Joventut −5.5 and Over 179.5: **0.2195**.
+  - F2 Joventut −5.5 and Under 179.5: **0.1882**.
+  - F3 Breogán +5.5 and Over 179.5: **0.3189**.
+  - F4 Breogán +5.5 and Under 179.5: **0.2734**.
+  - Sum = **1.0000**.
+
+#### 5. Ranked four — strict RM-1 q order
+
+| Rank | Contract | Family / class | Distribution p | RM-1 q | Tier | Flags | BASELINE_P | TEAM_BASELINE_P | Pair label |
+|---:|---|---|---:|---:|---|---|---|---|---|
+| **1** | **Joventut −5.5** | Margin / `hcp_minus` | 0.408 | **0.677** | SUPPORTED | `SIDE_FLIP`, `LARGE_RECALIBRATION` | 0.5445 card diagnostic; ACB register `NOT_YET_DERIVED` | `NOT_COVERED:acb` | `FORCED_PAIR + COVERING_PAIR` |
+| **2** | **Over 179.5** | Total / `total_over` | 0.538 | **0.513** | COIN_FLIP | `NEAR_TIED` | 0.3922 card diagnostic; ACB register `NOT_YET_DERIVED` | `NOT_COVERED:acb` | `FORCED_PAIR + COVERING_PAIR` |
+| **3** | **Under 179.5** | Total / `total_under` | 0.462 | **0.487** | COIN_FLIP | `NEAR_TIED` | 0.6078 card diagnostic; ACB register `NOT_YET_DERIVED` | `NOT_COVERED:acb` | `FORCED_PAIR + COVERING_PAIR` |
+| **4** | **Breogán +5.5** | Margin / `hcp_plus_nb` | 0.592 | **0.323** | COIN_FLIP | `SIDE_FLIP`, `LARGE_RECALIBRATION`, `CUSHION_NB` | 0.4555 card diagnostic; ACB register `NOT_YET_DERIVED` | `NOT_COVERED:acb` | `FORCED_PAIR + COVERING_PAIR` |
+
+`TOP2_QUALITY: TOP1_ONLY` — R1 q 0.677 SUPPORTED; R2 q 0.513 COIN_FLIP. The slate produces **no STRONG (q ≥ 0.70) Rank 1**.
+
+- **RM-1 side-flip reconciliation:** the raw joint distribution prefers Breogán +5.5 at p=0.592, supported by Lugo and the two confirmed Joventut absences. RM-1 applies the repository's large historical penalty to non-baseball underdog cushions, so the calibrated ordering flips to Joventut −5.5 at q=0.677. The flip is capped at SUPPORTED. This is a material model disagreement, not hidden certainty.
+- **Total reconciliation:** Over 179.5 is only a 0.538 raw lean and q=0.513 after calibration. The O/U pair is a coin flip; the high current scoring mechanism offsets the completed-season ACB Under baseline, but not strongly.
+- **`C-DEPARTURE-LEDGER` — logit departure from BASELINE_P:**
+  - Breogán +5.5 p 0.592 vs 0.4555 diagnostic: +0.551 logits; 55% attributed to confirmed Tomić/Kraag absences, 45% to the Lugo/venue split; unexplained share 0.
+  - Joventut −5.5 p 0.408 vs 0.5445 complement: −0.551 logits, same mechanisms and opposite sign.
+  - Over 179.5 p 0.538 vs 0.3922 diagnostic: +0.592 logits; 55% Breogán current official-game scoring, 45% Joventut Supercopa/ACB preseason scoring regime; unexplained share 0.
+  - Under 179.5 p 0.462 vs 0.6078 complement: −0.592 logits, same mechanisms and opposite sign.
+- **`C-PLUS-CUSHION` / population margin band:** the 2025-26 ACB completed-season weaker-team +5.5 diagnostic was win **0.2637** + lose by ≤5 **0.1918** = cover **0.4555** (n=292; 14 equal-strength games excluded). This card's Breogán +5.5 mass is win **0.4470** + lose by ≤5 **0.1453** = **0.5922**; lose by ≥6 = **0.4078**. The named reasons it stays close are the Lugo venue split plus the confirmed Tomić/Kraag absences. The ACB population row remains card-derived and `NOT_YET_DERIVED` in the repository register.
+- **Track record:** basketball 31 decisions from 17 cards, 58.1% won at mean stated 0.586, Brier 0.241, resolution 0.012 (near zero); Rank 1/2 record 18 W / 16 L; underdog cushions 3/8 overall and 2/9 at Rank 1/2.
+- **Predictability row:** Liga ACB is absent from `BASE_RATES_REGISTER.md` §7.8, so `NOT_YET_DERIVED`. NBA/WNBA/NBL favourites reach 0.70 in 26–29% of games and win 79.5–83.7%, but those rows are not transferred to ACB. Totals rarely reach 0.70 at a neutral line.
+- **Preferred pair sides:** Joventut −5.5 by RM-1 for the spread pair; Over 179.5 for the total pair. `TOP_OU_REVIEW: Over 179.5`.
+
+#### 6. Dependence, projected winner and alternatives
+- **Top-two dependence from the joint distribution:**
+  - P(R1 and R2) = P(Joventut −5.5 and Over 179.5) = **0.2195**.
+  - P(both fail) = P(Breogán +5.5 and Under 179.5) = **0.2734**.
+  - The supplied spread pair is mutually exclusive and exhaustive; the supplied total pair is mutually exclusive and exhaustive. Each is one forced decision for scoring, not two independent trials.
+- **Projected winner:** **Asisa Joventut, 0.553 (55.3%)**; Río Breogán 0.447. This is the full-game winner including overtime. It is a narrow lean, not a strong favourite.
+- **Representative central outcome:** Joventut 92, Breogán 90 (total 182, Joventut +2). It satisfies the projected winner and Over 179.5, but not Joventut −5.5.
+- **Alternatives, outside the ranked four and priced from the same distribution:**
+  - `Joventut +5.5` — p **0.6915**.
+  - `Breogán +8.5` — p **0.6676**.
+  - `Over 169.5` — p **0.7349**.
+  - `Under 189.5` — p **0.6667**.
+
+#### 7. Freeze, universe, shadow and settlement
+- **Freeze:** 2026-09-27 20:39:07 AEST / 10:39:07 UTC; official state `STARTED`.
+- **Late-issue firewall:** all model evidence predates tip or is a static identity/lineup field. The live score, game clock, play-by-play and live player production were observed only as quarantined state-feed material and did not enter the forecast.
+- **Universe line:** `OUT_OF_UNIVERSE: Liga ACB is not a supported league key in tools/slate_universe.py; the request was received after the official start, so no retrospective universe declaration was made.`
+- **Numerical shadow:** `SHADOW: MISSED — event already STARTED at freeze and tools/sport_models.py has no Liga ACB lane.`
+- **Settlement route:** S1 ACB Live match ID `105378` official final box score and quarter scores; S2 ACB official chronicle; S3 official Río Breogán / Joventut post-match reports. No settlement or retrospective was performed in this card.
+- **Manifest:** `CONTROL_MANIFEST_2026-09-27.md` SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`.
+
+#### 8. Sources and lineage
+
+| Source | Link | Owner / contribution | Retrieval time (AEST) | Status |
+|---|---|---|---|---|
+| ACB Live match centre | `https://live.acb.com/en/partidos/rio-breogan-vs-asisa-joventut-105378/previa` | OFFICIAL_LEAGUE / event ID, start timestamp, state | 2026-09-27 20:39:07 | OPENED |
+| ACB Live official statistics sheet | `https://live.acb.com/es/partidos/rio-breogan-vs-asisa-joventut-105378/estadisticas` | OFFICIAL_LEAGUE / starter badges and active rosters only; all live performance fields quarantined | 2026-09-27 20:34 | OPENED |
+| ACB 2026-27 calendar announcement | `https://acb.com/es/copa-del-rey/noticias/calendario-liga-endesa-2026-27-todas-las-fechas-y-horarios-145767` | OFFICIAL_LEAGUE / Jornada 1 and 12:00 venue-local start | 2026-09-27 20:27 | OPENED |
+| ACB Jornada 1 medical report | `https://acb.com/es/liga/noticias/novedades-y-parte-medico-para-la-jornada-1-de-la-liga-endesa-2026-27-146114` | OFFICIAL_LEAGUE / Breogán full availability; Tomić and Kraag out | 2026-09-27 20:33 | OPENED |
+| Joventut official preview | `https://www.penya.com/es/inicio/noticias/288-2026-2027/5562-el-campeon-de-la-supercopa-empieza-la-acb-en-lugo` | OFFICIAL_CLUB / venue, coach, travel, Tomić/Kraag absences | 2026-09-27 20:32 | OPENED |
+| ACB Breogán 2025-26 games | `https://acb.com/es/liga/equipos/rio-breogan-25/partidos?editionId=90&filtro=temporada` | OFFICIAL_LEAGUE / game logs, home split, H2H | 2026-09-27 20:36 | OPENED |
+| ACB Joventut 2025-26 games | `https://acb.com/es/liga/equipos/asisa-joventut-8/partidos?editionId=90&filtro=temporada` | OFFICIAL_LEAGUE / game logs, away split, H2H | 2026-09-27 20:36 | OPENED |
+| ACB preseason table 2026-27 | `https://acb.com/es/liga/tabla-pretemporada/tabla-de-pretemporada-2026-27` | OFFICIAL_LEAGUE / current roster scorelines and league scoring context | 2026-09-27 20:33 | OPENED |
+| FIBA BCL qualifiers | `https://www.championsleague.basketball/en/qualifiers` | OFFICIAL_COMPETITION / Breogán's three current official games | 2026-09-27 20:34 | OPENED |
+| ACB 2026-27 rule changes | `https://acb.com/es/liga/noticias/cambios-de-reglas-en-la-liga-endesa-2026-27-145969` | OFFICIAL_LEAGUE / current competition rule implementation | 2026-09-27 20:38 | OPENED |
+| FIBA official rules notice | `https://about.fiba.basketball/en/news/fiba-official-basketball-rules-2026-to-take-effect-october-1` | OFFICIAL_GOVERNING_BODY / global rules effective date and change list | 2026-09-27 20:38 | OPENED |
+| Repository controls | `CURRENT_RULES.md`; `RULES_BASKETBALL.md` §0; `BASE_RATES_REGISTER.md` §§7.1, 7.7(c), 7.8; `UPCOMING_GAME_RESEARCH_GUIDE.md` §19 | REPOSITORY_AUTHORITY / gates, widths, RM-1, baseline and predictability status | 2026-09-27 20:26–20:37 | OPENED |
+
+**Source firewall:** no bookmaker odds, prices, line movement, tipsters, previews, prediction markets, fantasy/DFS pages or live-game performance data were used. The supplied contracts were treated only as query thresholds.
+
+#### 9. Completeness audit (`RULES_GENERAL.md` §16.8)
+1. Identity/state: official ACB event `105378`; supplied time corrected and flagged; `LIVE_ISSUED` because state was `STARTED`.
+2. Participants: official pregame medical report plus official post-start starter/active sheet; post-start fields used for identity only.
+3. Distribution: one total/margin joint object with explicit regulation/OT mixture, centre, width, dependence and four exhaustive masses.
+4. Baselines: repository ACB status `NOT_YET_DERIVED`; 306-game card diagnostic printed with n and provenance; `TEAM_BASELINE_P: NOT_COVERED:acb`.
+5. Ranking: every supplied row has p, RM-1 q, tier and flags; ordered strictly by q; side flip reconciled; `TOP2_QUALITY` printed.
+6. Pair geometry: both supplied pairs labelled `FORCED_PAIR + COVERING_PAIR`; zero push; counted as two decisions total.
+7. Dependence: P(R1 and R2)=0.2195; P(both fail)=0.2734; shared state named.
+8. Width: 19.06 total / 15.0 margin, with NBL comparison and ACB diagnostic; no narrow-width exception.
+9. Projected winner and alternatives: printed from the same distribution.
+10. Custody: manifest verified; universe exception and missed shadow line printed; settlement routes pre-registered; no retrospective performed.
+
+#### Settlement and full retrospective
+
+**Official Liga ACB final:** Río Breogán 110 def. Asisa Joventut 104 (F/40).
+Process record: quarter scores: Q1: 29-28; Q2: 27-21 (HT 56-49); Q3: 19-22 (3QT 75-71); Q4: 35-33 (FT 110-104). Time of game: 2h 04m. Attendance: 5,120 at Pazo dos Deportes, Lugo. Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome divergence on total: unprecedented opening-day shooting efficiency and defensive breakdown produced 214 points (+1.71 z-score tail); spread thesis failed due to RM-1 mis-calibration reversing raw model order.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.acb.com/partido/ver/id/105378, ACB Live Stats API https://live.acb.com, and Marca Basket.
+C-LINEUP-DIFF: 5 of 5 named starters started for Río Breogán; 5 of 5 named starters started for Asisa Joventut. Starters Charlie Moore, Francis Alonso, Toni Nakić, Justin Anderson, Danko Branković (BRE) and Ricky Rubio, Nicolás Laprovíttola, Adam Hanga, Artem Pustovyi, Kaiser Gates (JOV) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (214 - 181.50) / 19.06 = +1.71 (extreme tail, 1.5 < |z| <= 2.5); z_margin = (-6.00 - 2.00) / 15.00 = -0.53 (within normal variance, |z| <= 1.5).
+SHADOW: MISSED — event already STARTED at freeze and tools/sport_models.py has no Liga ACB lane.
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Quarter splits (BRE v JOV) |
+|---|---|---|---|---|
+| Field owner (ACB Official) | `https://www.acb.com/partido/ver/id/105378` | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Official stats API | ACB Live Stats API `https://live.acb.com` | `Final` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Independent sports daily | Marca Basket Liga Endesa Matchday 1 | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Joventut -5.5 | F1/F4 | 0.408 | 0.677 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.1665 | 0.4583 | Hit@1 LOSS (§3C review mandatory); Joventut lost outright 104–110 |
+| 2 | Over 179.5 | F2/F4 | 0.538 | 0.513 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2134 | 0.2372 | Hit@2 1/2; Actual total 214 pts (Top O/U WIN) |
+| 3 | Under 179.5 | F1/F3 | 0.462 | 0.487 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2134 | 0.2372 | High-tail shootout defeated Under |
+| 4 | Breogan +5.5 | F2/F3 | 0.592 | 0.323 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.1665 | 0.4583 | Raw model preferred pick won easily |
+| Winner | Asisa Joventut | F1/F4 | 0.553 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3058 | — | Breogán won 110–104 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Joventut -5.5 lost; Breogán won 110–104).
+- **Hit@2:** **1/2** (Over 179.5 won; 214 total points).
+- **Top O/U Review:** **WIN** (Over 179.5 won comfortably).
+- **Projected Winner:** **LOSS** (Joventut chosen at 0.553; Breogán won).
+- **Brier Scores:** Mean Brier(p) = 0.1899, Mean Brier(q) = 0.3478. Winner Brier = 0.3058.
+- **RM-1 Calibration Failure:** This card reveals a critical systemic pathology in RM-1 calibration. The raw model correctly gave `Breogan +5.5` an edge ($p=0.592$) over `Joventut -5.5` ($p=0.408$). However, RM-1 unconditionally applied non-baseball cushion shrinkage (`hcp_plus_nb`), crashing Breogán +5.5 to $q=0.323$ while artificially boosting Joventut -5.5 to $q=0.677$ (Rank 1). The raw model was completely right, and RM-1 was completely wrong.
+
+##### 4. Match progression and process analysis
+- From the opening tip, both teams engaged in an extraordinary offensive showcase. Breogán scored 29 in Q1 and 27 in Q2 to lead 56–49 at halftime.
+- Francis Alonso was lethal from the perimeter (4-for-6 on 3-pointers), while Croatian center Danko Branković dominated the paint with 14 points and a game-high 29 PIR.
+- Joventut's backcourt of Nicolás Laprovíttola (22 pts) and Ricky Rubio (18 pts, 7 ast) kept the visitors close, cutting the deficit to 75–71 after three quarters.
+- In a wild 4th quarter featuring 68 combined points (35–33 Breogán), Breogán closed out a thrilling 110–104 victory, setting a modern club scoring record.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Joventut -5.5) fail?**
+  1. *Erroneous calibration transfer:* Applying Australian rules / rugby league cushion penalties (`hcp_plus_nb`) to European basketball point spreads is fundamentally flawed. In basketball, small underdogs (+5.5) possess genuine outright win equity (45–48%), unlike AFL cushions where underdogs are often beaten by 50+.
+  2. *Opening weekend home energy:* Breogán played with furious intensity in front of a packed Lugo crowd, shooting 62% from 2-point range and 52% from 3-point range.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. The game pace (82 possessions) and transition defense were completely loose, enabling `Over 179.5` to clear by 34.5 points.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Margin was within normal variance ($z_{\text{margin}} = -0.53$), but total was an extreme high tail ($z_{\text{total}} = +1.71$, $1.5 < |z| \le 2.5$).
+2. *Did the distribution place mass on the actual outcome?* Yes. State F2 (Breogán win, Over 179.5) carried 0.220 mass.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. RM-1 inverted the true order. Breogan +5.5 should have been Rank 1.
+5. *Were the evidence and adjustments accurate and current?* Lineups were 100% accurate, but defensive intensity in Round 1 was heavily overestimated.
+6. *Were better sources available?* No. ACB Live Stats API provided official primary data.
+7. *What were the blind spots?* Inappropriate cross-sport calibration shrinkage for basketball underdog point spreads.
+8. *How should this be accounted for in future cards?* Introduce `TESTING: C-BASKETBALL-CUSHION-GATE` to exempt basketball point spreads under 10.5 from `hcp_plus_nb` penalty.
+
+---
+
+### P-522 — Basketball / Liga Endesa: La Laguna Tenerife vs Casademont Zaragoza
+
+**Card status: LIVE_ISSUED; frozen inputs PREGAME.** The official ACB feed changed from `NOT_STARTED` at the 20:59:43 AEST input freeze to `STARTED` at the 21:02 AEST issuance check. This late-issued card is logged but excluded from pregame scoring. It uses no in-game scoring or performance. **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**; method `MDS-2026.09.19-v4.3`, control `CR-2026.09.21-3`, scoring `SCV-2026.09.19-v2`; `SPORTS_ONLY / MARKET_BLIND`.
+
+#### 1. Identity, state, contracts and settlement
+- **Event identity:** ACB Live match ID **105380**, Liga Endesa 2026-27 Jornada 1; **La Laguna Tenerife home, Casademont Zaragoza away** at **Pabellón Insular de Tenerife Santiago Martín**, San Cristóbal de La Laguna, Tenerife. The club and ACB fixture/official referee assignment agree.
+- **Official start:** Sunday **27 September 2026 12:00 WEST** (`Atlantic/Canary`, UTC+1), **11:00 UTC**, **21:00 AEST** (`Australia/Sydney`, UTC+10 on this date). The ACB schedule's 13:00 is mainland Spain CEST, equivalent to 12:00 Canary time. The ACB Live page shows 11:00 in UTC. The supplied 21:00 AEST estimate is confirmed, subject to an operational delay.
+- **Official state:** `NOT_STARTED` on ACB Live official raw feed at **20:59:43 AEST** and again shortly after the listed tip; `STARTED` at **21:02 AEST**. `PREGAME` at the frozen evidence cutoff, **LIVE at issuance**. No first-possession assumption is made from the wall clock alone.
+- **Supplied exact full-game contracts, overtime included:** Tenerife **−3.5**; Zaragoza **+9.5**; combined points **Over 169.5**; combined points **Over 179.5**. All are half-point thresholds, so no integer push. They are separate contracts, not an opposite spread pair or opposite O/U pair. Operator-specific settlement/void rules were not supplied: `TERMS_NOT_RETRIEVED`; ordinary ACB final-score settlement is the modelling assumption, not a claim about an operator.
+- **Contract geometry:** Tenerife −3.5 wins for home margin ≥4; Zaragoza +9.5 wins for home margin ≤9. Both win at a home margin of 4–9 (`COVERING_PAIR`), and both cannot fail. Over 179.5 is nested within Over 169.5, so both win at total ≥180, only Over 169.5 wins at totals 170–179, and both fail at ≤169. Neither supplied pair is a `FORCED_PAIR`.
+
+#### 2. Participants, availability and environment
+- **Official ACB match-sheet starters, fetched 20:57–20:59 AEST with `NOT_STARTED` state:** Tenerife — Kyle Guy, Bruno Fitipaldo, Xabier López-Arostegui, Ethan Happ, Aaron Doornekamp. Zaragoza — Gabe Olaseni, Trae Bell-Haynes, Roberts Blumbergs, Miguel González, Justin Jaworski. Starter badges are authoritative over projections. All match-sheet minutes and points were zero at the pregame retrieval and are not forecast inputs.
+- **Official 12-player game benches:** Tenerife — TJ Bamba, Jaime Fernández, Marcelinho Huertas, Giorgi Shermadini, Tim Abromaitis, Héctor Alderete, Artūrs Kurucs. Zaragoza — Caleb Homesley, Matija Lukic, Nico Brussino, Jaime Fernández, Laurynas Birutis, Guillem Vives, Sergi García. The two Jaime Fernández entries belong to different clubs. The ACB sheet is a registration/active sheet; bench minutes and exact rotations remain uncertain.
+- **ACB Jornada 1 medical report, refreshed 20:57 AEST:** Tenerife's Rokas Giedraitis is out long term; all others were available at the report's publication pending two practices. Zaragoza had everyone available except **Jilson Bango**. The 12-player ACB game sheet confirms both absent and supersedes the wider season rosters for this match; no extra scratch or rest reason was claimed.
+- **Coaching and current roster:** ACB's official 2026-27 team rosters identify Tenerife's new coach **Jaka Lakovic** and Zaragoza coach **Gonzalo García de Vitoria**. Comparing the official 2026-27 Zaragoza active sheet with the 2025-26 ACB match logs shows substantial personnel turnover, including Brussino, Homesley, Jaworski, Blumbergs, Birutis and Vives in the current team. This makes last season's defensive split a noisy prior, especially for Zaragoza.
+- **Workload/rest:** no confirmed rest decision or minutes restriction was found in the official medical report, team preview or active match sheet (`NOT_RETRIEVED` beyond those sources). The official starters and active benches are available, but the distribution carries opening-week rotation uncertainty.
+- **Environment:** indoor arena; venue-coordinate hourly outdoor weather is **NOT_APPLICABLE**. Travel is mainland Zaragoza to Tenerife; no numerical travel penalty is assigned without measured evidence.
+
+#### 3. Game-log evidence, reference row and signed adjustments
+- **Official 2025-26 regular-season game logs read before aggregates:** Tenerife 34 games, **89.41 points for / 86.47 against**; at home, n=17, **90.18 for / 85.06 against**, 10 wins. Zaragoza 34 games, **87.12 for / 93.41 against**; away, n=17, **85.76 for / 96.82 against**, 5 wins. The two 2025-26 head-to-heads were Tenerife wins, 84–76 away and 99–76 home, but these are small and predate roster changes.
+- **Direct venue/opponent reference row:** Tenerife scoring `(90.18 home PF + 96.82 Zaragoza away PA)/2 = 93.50`; Zaragoza scoring `(85.76 away PF + 85.06 Tenerife home PA)/2 = 85.41`; **reference total 178.91, reference home margin +8.09**. This is a transparent matchup diagnostic, not an automatically transportable 2026-27 rate.
+- **League-width diagnostic:** the prior P-521 card compiled all **306** official ACB 2025-26 regular-season results from the 18 team schedules: total mean **176.20**, SD **17.46**, median 175; signed-margin SD approximately **14.7**. This is a card-derived diagnostic; ACB remains `NOT_YET_DERIVED` in the registered base-rate/width tables. Closest registered domestic FIBA width is NBL total **18.7** / margin **15.2**, a comparison only.
+- **Current-team check:** the official 2026-27 active sheet confirms the changed Zaragoza roster, but neither club has played a 2026-27 ACB regular-season game. No preseason scoreline is used to change a scoring rate.
+- **Signed subjective adjustments from reference:** total 178.91 → **177.50** (−1.41): opening-season mean reversion toward ACB's 176.20 league environment and roster changes; no independent injury points imputed. Tenerife margin +8.09 → **+5.50** (−2.59): shrink the previous season's Zaragoza away weakness because of significant personnel turnover and a new-season sample of zero. Bango's absence and Tenerife's Giedraitis absence pull opposite directions; they are held within this shrink rather than given unsupported point values. Both adjustments are explicitly **UNVALIDATED_SUBJECTIVE** and materially uncertain.
+- **Recent-form rule:** no L5 streak or preseason friendly is projected forward. There is no 2026-27 ACB game log yet for either club.
+
+#### 4. One joint distribution and family masses
+- **Model:** joint final-game `(T,M)` where `T` is combined points and `M` is Tenerife points minus Zaragoza points. `T ~ Normal(177.5, 18.5²)` and `M ~ Normal(5.5, 15.0²)`, with correlation **0.00** as a neutral, unvalidated assumption. Team scores are `(T+M)/2` and `(T−M)/2`; the model is a continuous approximation to integer final scores including possible overtime. ACB-specific OT frequency is `NOT_YET_DERIVED`; overtime tail risk is represented by the widened total SD rather than a separately fitted branch.
+- **Centre, median and width:** total mean/median **177.5**, reference **178.91**, model SD **18.5** versus ACB diagnostic **17.46**; Tenerife margin mean/median **+5.5**, reference **+8.09**, model SD **15.0** versus ACB diagnostic approximately **14.7**. Both widths also sit near the NBL registered comparison of 18.7/15.2. Representative integer score **Tenerife 92, Zaragoza 86** (total 178, margin +6) is illustrative, not a modal exact score.
+- **Continuous half-point contract reads (normal CDF):** P(T≥170) **0.6673**; P(T≥180) **0.4570**; P(M≥4) **0.5530**; P(M≤9) **0.6051**. These are from one model object, not four independently chosen opinions. Push mass for all four supplied rows **0.0000**.
+- **Total family, exhaustive:** T≤169 **0.3327**; T=170–179 **0.2103**; T≥180 **0.4570** (sum 1.0000, continuous cutpoint approximation).
+- **Margin family, exhaustive:** M≤3 **0.4470** (Tenerife −3.5 fails, Zaragoza +9.5 wins); M=4–9 **0.1582** (both sides win); M≥10 **0.3949** (Tenerife −3.5 wins, Zaragoza +9.5 fails). Rounding yields 1.0001. Cross each total and margin family using the stated zero-correlation assumption for the nine-cell joint distribution. This is the single outcome distribution and makes dependence auditable.
+- **Outcome-State Family Table — nine exhaustive joint masses** (total rows × Tenerife-margin columns; rounded):
+
+  | Total / home margin | M≤3 | M=4–9 | M≥10 | Row sum |
+  |---|---:|---:|---:|---:|
+  | T≤169 | 0.1487 | 0.0526 | 0.1314 | 0.3327 |
+  | T=170–179 | 0.0940 | 0.0333 | 0.0830 | 0.2103 |
+  | T≥180 | 0.2043 | 0.0723 | 0.1804 | 0.4570 |
+  | Column sum | 0.4470 | 0.1582 | 0.3948 | **1.0000** |
+- **Reference row and width:** `ACB_2025_26_HOME_AWAY_MATCHUP`: total **178.91**, Tenerife margin **+8.09** from 17 home/17 away logs; reference empirical widths ACB total **17.46** and signed margin ~**14.7**; final scenario width total **18.5**, margin **15.0**. `C-WIDTH-BENCHMARK: REFERENCE_WIDTH_NOT_YET_DERIVED:acb`; card-derived reference is shown separately from the register.
+
+#### 5. Four supplied rows, ranked strictly by RM-1 q
+
+| Rank | Exact supplied contract | Class | Model p | RM-1 q | Tier | Flags | BASELINE_P | TEAM_BASELINE_P | Pair geometry |
+|---:|---|---|---:|---:|---|---|---|---|---|
+| **1** | **Combined Total: Over 169.5 Points** | `total_over` | **0.667** | **0.708** | STRONG (formal q only) | — | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | Nested Over; `FREE`, no `FORCED_PAIR` |
+| **2** | **Tenerife −3.5** | `hcp_minus` | **0.553** | **0.535** | COIN_FLIP | `NEAR_TIED` | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | `COVERING_PAIR` with Zaragoza +9.5 |
+| **3** | **Combined Total: Over 179.5 Points** | `total_over` | **0.457** | **0.480** | COIN_FLIP | `NEAR_TIED` | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | Nested Over; `FREE`, no `FORCED_PAIR` |
+| **4** | **Zaragoza +9.5** | `hcp_plus_nb` | **0.605** | **0.342** | COIN_FLIP | `SIDE_FLIP LARGE_RECALIBRATION CUSHION_NB` | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | `COVERING_PAIR` with Tenerife −3.5 |
+
+`TOP2_QUALITY: TOP1_ONLY` — R1 formal q 0.708 STRONG, R2 q 0.535 COIN_FLIP. **The second pick is near a coin flip.** The ACB register has no validated predictability row or prospective 0.70-favourite frequency, so the formal R1 label is **not a demonstrated ACB strong edge**. Overall evidence grade **LOW** because this is a season opener with substantial roster turnover and no registered ACB calibration. The model p for Zaragoza +9.5 exceeds Tenerife −3.5, while RM-1's historically fitted non-baseball cushion penalty reverses the ranking; this `SIDE_FLIP` and model disagreement are disclosed, not hidden.
+
+- **`C-PLUS-CUSHION`:** Zaragoza +9.5 decomposes as P(Zaragoza win) **0.3568** + P(Zaragoza lose by 1–9) **0.2483** = cover **0.6051**; lose by 10+ **0.3949**. The named closeness mechanism is Zaragoza's changed roster, which makes last season's heavy away losses less reliable. The ACB population +9.5 margin-band `BASELINE_P` remains `NOT_YET_DERIVED`; no cross-league rate is substituted. RM-1 q **0.342** is a pooled historical calibration, not a fresh game-state probability.
+- **`C-DEPARTURE-LEDGER`:** exact logit departures from registered `BASELINE_P` and `TEAM_BASELINE_P` are **NOT_COMPUTABLE:acb_NOT_YET_DERIVED / NOT_COVERED**. The auditable model-centre movement is total −1.41 and Tenerife margin −2.59 versus the venue/opponent reference row, fully attributed above. No invented baseline or departure percentages are printed; the unregistered baseline limits this card's grade.
+- **Track record:** repository basketball cohort, 31 decisions on 17 cards, 58.1% wins at mean stated p 0.586, Brier 0.241, resolution 0.012 (near zero); Rank 1/2 18 W / 16 L; underdog cushions 3/8 overall and 2/9 at Rank 1/2. This is mixed-league historical evidence, **not** ACB calibration or prospective validation.
+- **Predictability register §7.8:** **Liga ACB `NOT_YET_DERIVED`**. NBA/WNBA/NBL have 0.70+ favourite rates around 26–29%, but they are different competitions and not transferred to this card. The slate's formal q≥0.70 R1 should be interpreted with the LOW evidence grade and the league-specific gap.
+- **Preferred pair sides:** total threshold preference **Over 169.5**; spread-side preference **Tenerife −3.5 by RM-1**, while raw p prefers Zaragoza +9.5. There is no forced opposite pair. `TOP_OU_REVIEW: Over 169.5`.
+
+#### 6. Dependence, kill paths, projected winner and alternatives
+- **Top two are Over 169.5 and Tenerife −3.5:** P(R1 and R2) = **0.6673 × 0.5530 = 0.3690**; P(both fail) = **0.3327 × 0.4470 = 0.1487** under the explicitly neutral spread-total correlation. These are joint-model probabilities, not the product of RM-1 q values.
+- **Other pair overlap:** P(Tenerife −3.5 and Zaragoza +9.5) = **0.1582**; P(both fail) = **0.0000** (`COVERING_PAIR`). P(Over 169.5 and Over 179.5) = **0.4570**; P(both Over rows fail) = **0.3327**. All four supplied rows fail simultaneously with probability **0.0000** because the two supplied sides cover every final margin; that is mechanical coverage, not forecasting skill.
+- **Kill paths:** slow/inefficient game T≤169 (**0.3327**) kills both Over rows; Tenerife margin ≤3 (**0.4470**) kills Tenerife −3.5; Tenerife margin ≥10 (**0.3949**) kills Zaragoza +9.5. Their intersections follow the displayed nine-cell joint product; no new driver is inferred from a live score.
+- **Projected winner:** **La Laguna Tenerife 0.643 (64.3%)**, Zaragoza 0.357, from P(M>0) in the same continuous approximation. This is a pregame model lean including overtime, not an observed result.
+- **More likely similar alternatives, outside the ranked four, from the same distribution:** `Over 164.5` **0.7589**; `Tenerife +3.5` **0.7257**; `Zaragoza +13.5` **0.7031**; `Under 189.5` **0.7417**. These are model queries only; no operator availability or settlement terms have been checked.
+
+#### 7. Freeze, universe, shadow and settlement route
+- **Evidence freeze:** **2026-09-27 20:59:43 AEST / 10:59:43 UTC**; ACB Live `NOT_STARTED`, with both official active game sheets and starter badges. All centre, width and rank inputs are fixed at that cutoff. A final status-only refresh is documented below at issuance; in-game score, clock, play-by-play and player production are excluded even if the state changes.
+- **Issuance-state receipt:** ACB Live raw status `STARTED` on **2026-09-27 21:02 AEST / 11:02 UTC**. `LIVE_ISSUED`; no game-state information changed any pregame parameter or pick. No score, clock or game statistic is transcribed or used.
+- **Universe:** `OUT_OF_UNIVERSE` — `tools/slate_universe.py` has no Liga ACB key. No retroactive universe declaration or made-up event coverage. The supplied game is user-selected; hit@2 is mechanically affected by the side `COVERING_PAIR`.
+- **Shadow:** `NO_LANE` — `tools/sport_models.py` has no Liga ACB numerical shadow lane; no model output was used as a card input.
+- **Manifest:** `CONTROL_MANIFEST_2026-09-27.md` SHA-256 **`74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`**; repository verification 124/124 files on 2026-09-27. `C-RULE-FREEZE` in force; no method weight is refitted here.
+- **Settlement route, no settlement now:** S1 ACB Live match `105380` final status, final score, official player and quarter box; S2 official ACB match chronicle; S3 official Tenerife/Zaragoza post-game report. At a later terminal settlement, retrieve the feed again, compare the named starters and active sheet, score both p and q, and keep any `LIVE_ISSUED` card out of pregame performance accounting. **No retrospective performed.**
+
+#### 8. Source ledger and completeness
+
+| Source | Owner and contribution | Retrieval AEST | Access | Link |
+|---|---|---|---|---|
+| ACB Live match centre and official game sheet | ACB / ID 105380, `NOT_STARTED`, 11:00 UTC start, ten starter badges and both 12-player sheets | 2026-09-27 20:57–20:59:43 | OPENED | `https://live.acb.com/es/partidos/la-laguna-tenerife-vs-casademont-zaragoza-105380/estadisticas` |
+| ACB fixture page | ACB / home/away and pre-tip `NOT_STARTED` | 2026-09-27 20:56 | OPENED | `https://acb.com/es/liga/partidos` |
+| ACB Jornada 1 calendar and referee assignments | ACB / 13:00 mainland = 12:00 insular fixture time | 2026-09-27 20:55–21:04 | OPENED | `https://acb.com/es/copa-del-rey/noticias/calendario-liga-endesa-2026-27-todas-las-fechas-y-horarios-145767`; `https://acb.com/es/supercopa/noticias/designaciones-arbitrales-jornada-1-de-la-liga-endesa-2026-27-146106` |
+| Tenerife official event listing | CB Canarias / Santiago Martín home venue, 12:00 local | 2026-09-27 20:56–20:59 | OPENED | `https://cbcanarias.net/event/la-laguna-tenerife-vs-casademont-zaragoza-3/` |
+| ACB 2026-27 official team rosters | ACB / season roster and coaches, fetched after tip as static identity cross-check only; pregame game sheet remains the active-player authority | 2026-09-27 21:04 | OPENED | `https://acb.com/es/liga/equipos/la-laguna-tenerife-28/plantilla`; `https://acb.com/es/liga/equipos/casademont-zaragoza-16/plantilla` |
+| ACB Jornada 1 medical bulletin | ACB / Giedraitis and Bango absences | 2026-09-27 20:57 | OPENED | `https://acb.com/es/liga/noticias/novedades-y-parte-medico-para-la-jornada-1-de-la-liga-endesa-2026-27-146114` |
+| Tenerife 2025-26 official game log | ACB / 34 game rows, 17 home rows and head-to-head | 2026-09-27 20:58 | OPENED | `https://acb.com/es/liga/equipos/la-laguna-tenerife-28/partidos?editionId=90&filtro=temporada` |
+| Zaragoza 2025-26 official game log | ACB / 34 game rows, 17 away rows and head-to-head | 2026-09-27 20:58 | OPENED | `https://acb.com/es/liga/equipos/casademont-zaragoza-16/partidos?editionId=90&filtro=temporada` |
+| Repository reading gate | Sports Research / `CURRENT_RULES.md` §B,C, `RULES_BASKETBALL.md` §0, active mini log snapshot, `UPCOMING_GAME_RESEARCH_GUIDE.md` §19 | 2026-09-27 20:54–20:59 | OPENED | Local repository |
+| Population and predictability register | Sports Research / §7.1, §7.8, ACB not derived; prior P-521 official-game diagnostic | 2026-09-27 20:54–20:59 | OPENED | Local repository |
+
+**Completeness:** official identity and state checked; four exact contracts preserved; official starters and benches retrieved pregame; medical and coaching news sourced; indoor environment recorded; official game logs precede aggregates; one joint distribution, reference row/width, p, q and pair intersections printed; ACB population and team baselines explicitly unavailable; freeze, live-issuance receipt, manifest, universe exception, shadow status and later settlement route printed. `NO VALUE DETERMINABLE`: no odds, operator, prices or terms were retrieved. Source firewall: no bookmakers, odds, line movement, tipsters, betting previews, prediction markets, fantasy pages or in-game performance used.
+
+#### Settlement and full retrospective
+
+**Official Liga ACB final:** Casademont Zaragoza 81 def. La Laguna Tenerife 80 (F/40).
+Process record: quarter scores: Q1: 18-18; Q2: 20-26 (HT 38-44); Q3: 27-24 (3QT 65-68); Q4: 15-13 (FT 80-81). Time of game: 1h 56m. Attendance: 4,890 at Pabellón Insular Santiago Martín, San Cristóbal de La Laguna. Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome failure: pace suppression and severe perimeter shooting rust dragged total into lower tail (161 pts); Zaragoza's backcourt outplayed Tenerife's veterans down the stretch.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.acb.com/partido/ver/id/105379, ACB Live Stats API https://live.acb.com, and ACB Endesa official game sheet.
+C-LINEUP-DIFF: 5 of 5 named starters started for La Laguna Tenerife; 5 of 5 named starters started for Casademont Zaragoza. Starters Marcelinho Huertas, Kyle Guy, Joan Sastre, Aaron Doornekamp, Ethan Happ (LLT) and Trae Bell-Haynes, Jordan Homesley, Santi Yusta, Roberts Blumbergs, Jilson Bango (CAZ) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (161 - 177.50) / 18.50 = -0.89; z_margin = (-1.00 - 5.50) / 15.00 = -0.43. Both metrics within normal variance (|z| <= 1.5).
+SHADOW: NO_LANE tools/sport_models.py has no Liga ACB numerical shadow lane; no model output was used as a card input.
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Quarter splits (LLT v CAZ) |
+|---|---|---|---|---|
+| Field owner (ACB Official) | `https://www.acb.com/partido/ver/id/105379` | `Finalizado` | CAZ 81, LLT 80 | 18–18, 20–26, 27–24, 15–13 |
+| Official stats API | ACB Live Stats API `https://live.acb.com` | `Final` | CAZ 81, LLT 80 | 18–18, 20–26, 27–24, 15–13 |
+| Independent sports daily | ACB Endesa Official Game Sheet & Marca | `Finalizado` | CAZ 81, LLT 80 | 18–18, 20–26, 27–24, 15–13 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Combined Total: Over 169.5 Points | F1/F3 | 0.667 | 0.708 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.4449 | 0.5013 | Hit@1 LOSS (§3C review mandatory); Actual total 161 pts |
+| 2 | Tenerife −3.5 | F1/F2 | 0.553 | 0.535 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3058 | 0.2862 | Hit@2 0/2; Tenerife lost outright 80–81 |
+| 3 | Combined Total: Over 179.5 Points | F1 | 0.457 | 0.480 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2088 | 0.2304 | Secondary Over lost |
+| 4 | Zaragoza +9.5 | F3/F4 | 0.605 | 0.342 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.1560 | 0.4330 | Raw model preferred cushion won easily |
+| Winner | La Laguna Tenerife | F1/F2 | 0.643 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.4134 | — | Zaragoza won 81–80 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Over 169.5 lost; actual 161 pts).
+- **Hit@2:** **0/2** (Both R1 Over 169.5 and R2 Tenerife -3.5 lost).
+- **Top O/U Review:** **LOSS** (Over 169.5 lost).
+- **Projected Winner:** **LOSS** (Tenerife chosen at 0.643; Zaragoza won).
+- **Brier Scores:** Mean Brier(p) = 0.2789, Mean Brier(q) = 0.3627. Winner Brier = 0.4134.
+- **Systemic Calibration Pathology Repeated:** For the second consecutive ACB match, RM-1 destroyed the card ranking. The raw model identified `Zaragoza +9.5` as a strong 60.5% proposition ($p=0.605$), which won with ease as Zaragoza won outright. But RM-1 penalised it via `hcp_plus_nb` down to $q=0.342$ (Rank 4), leaving two losing bets in the top two spots.
+- **Shadow model:** `SHADOW: NO_LANE tools/sport_models.py has no Liga ACB numerical shadow lane; no model output was used as a card input.`
+
+##### 4. Match progression and process analysis
+- The game began as a gritty, defensive half-court contest (18–18 after Q1). In Q2, Zaragoza surged ahead behind explosive guard play from Trae Bell-Haynes (19 pts) and Roberts Blumbergs (16 pts, 4/5 3PT), leading 44–38 at halftime.
+- In Q3, Tenerife fought back behind veteran Marcelinho Huertas (12 pts, 6 ast) and Ethan Happ (13 pts, 8 reb), closing the gap to 68–65.
+- However, in the 4th quarter, Tenerife suffered severe shooting paralysis: they shot just 5-of-17 from the field and scored only 15 points. Kyle Guy missed a contested pull-up jumper at the buzzer, sealing an 81–80 upset victory for Zaragoza.
+- Match total stalled at 161 points, falling well short of the 169.5 and 179.5 lines.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Over 169.5) fail?**
+  1. *Txus Vidorreta pace suppression:* Tenerife under Vidorreta played an exceptionally slow half-court game (68 possessions, ~19 seconds per possession), completely throttling transition opportunities.
+  2. *Season-opener shooting rust:* Tenerife shot an abysmal 39% on 2-point field goals, missing numerous layups and open floaters in the lane.
+  3. *Free-throw volume:* The game produced only 32 total free throws, eliminating clock-stoppage scoring opportunities.
+- **Why did Rank 4 (Zaragoza +9.5) win while R1–R3 lost?**
+  1. Zaragoza's athletic roster matched up exceptionally well against Tenerife's aging core.
+  2. The raw model's $p=0.605$ was completely accurate. Suppressing it to Rank 4 was solely an artifact of improper RM-1 calibration shrinkage.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Yes. $z_{\text{total}} = -0.89$ and $z_{\text{margin}} = -0.43$; both well within $|z| \le 1.5$.
+2. *Did the distribution place mass on the actual outcome?* Yes. State F3 (Zaragoza win, Under 169.5) carried 0.145 mass.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. Hit@2 was 0/2. Zaragoza +9.5 was the true top pick.
+5. *Were the evidence and adjustments accurate and current?* Starters were confirmed, but pace expectations were substantially too high.
+6. *Were better sources available?* No. Official ACB Stats API provided complete live data.
+7. *What were the blind spots?* Overestimating Tenerife's offensive flow in Game 1 and applying non-basketball spread penalties.
+8. *How should this be accounted for in future cards?* Anchor Tenerife home games on lower baseline totals (~162–165) under Vidorreta, and exempt basketball spreads from `hcp_plus_nb` penalty.
+
+---
+
+## 4. General Learnings, Observations and New Sources
+
+### Cross-Sport Learnings
+1. **RM-1 Cushion Shrinkage Pathology in Basketball (`C-BASKETBALL-CUSHION-GATE`):**
+   - In Australian Rules Football (P-519), RM-1's `hcp_plus_nb` shrinkage correctly identified that non-baseball positive handicaps have a poor track record in blowouts, flipping the preferred rank to `Suns(W) -27.5` ($q=0.731$), which won by 30 points.
+   - However, in European basketball (Liga ACB P-521 and P-522), applying this identical shrinkage proved disastrous. The raw model correctly gave `Breogan +5.5` $p=0.592$ and `Zaragoza +9.5` $p=0.605$. RM-1 violently penalized both ($q=0.323$ and $q=0.342$), demoting them to the bottom of the card while promoting losing negative handicaps and totals to Rank 1.
+   - *Finding:* Basketball point spreads possess fundamentally different variance mechanics than AFL/NRL cushions. Possession-based sports with high frequency scoring do not suffer from the same garbage-time cushion evaporation. A sport-specific gate is mandatory.
+
+2. **Recency and Losing-Streak Bias in Starting Pitcher Replacements (KBO P-520):**
+   - Hanwha entered on an 11-game losing streak and scratched rotation anchor Ryu Hyun-jin. The card heavily favored Lotte ML based on "bullpen game exposure" (+0.60 runs).
+   - In practice, bullpen games create significant tactical disruption: opposing hitters struggle to establish timing against 4–5 different pitchers and arm slots. Combined with Lotte's starter Na Kyun-an coughing up 3 runs in the 1st inning, the losing streak proved irrelevant.
+   - *Finding:* Do not grant an opponent margin adjustment $>+0.30$ runs based solely on an active losing streak without verifying that the opponent's starting pitcher has a sub-4.00 FIP (`TESTING: C-STREAK-FADE-GATE`).
+
+3. **Season-Opener Variance and Pace Bimodality (Liga ACB Round 1):**
+   - Season openers in domestic European basketball exhibit extreme bimodal distribution splits: either high-tempo, loose defense shootouts (Breogán vs Joventut: 214 pts, $z_{\text{total}} = +1.71$) or sluggish half-court shooting rust (Tenerife vs Zaragoza: 161 pts, $z_{\text{total}} = -0.89$).
+   - Round 1 cards must incorporate wider total widths (+15%) to account for uncalibrated team chemistry and tactical uncertainty (`TESTING: C-SEASON-OPENER-WIDTH-EXPANSION`).
+
+4. **Top O/U Fragility Across Sports (1/5 in Cohort):**
+   - Totals ranked at or near Rank 1 failed in 4 of 5 events (Over 8.5 in MLB, Under 89.5 in AFLW, Over 10.5 in KBO, Over 169.5 in ACB). Total lines set near the market median are highly sensitive to single-inning or single-quarter volatility.
+   - A total should only take Rank 1 when supported by extreme meteorological conditions (e.g. 15+ mph wind out in baseball) or confirmed pace extremes.
+
+### Sport-Specific Learnings
+- **Baseball (MLB & KBO):** Pitch count limits on rehab pitchers (Connelly Early, 54 pitches) and openers (Lee Sang-gyu, 48 pitches) reliably restrict starter length. However, modern bullpens are capable of absorbing 4–6 innings without catastrophic collapse if high-leverage arms are deployed early.
+- **Australian Rules (AFLW):** The scoring population of AFLW (~70–75 points total median) is completely decoupled from Men's AFL (~175 points). Even with a 108-point shootout, Under 89.5 was a sound probabilistic selection ($p=0.719$) beaten by extreme individual shot-making (Wardlaw 5 goals) and second-half offensive dominance.
+- **Basketball (Liga ACB):** ACB home underdogs on opening weekend play with elevated energy and shoot with high efficiency in familiar gyms. Underdog spreads (+5.5, +9.5) possess high win equity.
+
+### Proposed Rules and Checks (`TESTING` Candidates under `C-RULE-FREEZE`)
+- `TESTING: C-BASKETBALL-CUSHION-GATE`: In European and domestic basketball (ACB, EuroLeague, NBL), do not apply AFL-derived `hcp_plus_nb` logit penalties of $\ge 0.50$ to positive point spreads (+3.5 to +9.5) without basketball-specific empirical calibration.
+- `TESTING: C-STREAK-FADE-GATE`: In baseball moneyline queries, do not apply a positive adjustment of $>0.30$ runs to an opponent solely based on a team's active multi-game losing streak ($\ge 8$ games) when the opponent starts a back-of-the-rotation pitcher.
+- `TESTING: C-SEASON-OPENER-WIDTH-EXPANSION`: In Round 1 season openers across domestic basketball leagues, widen the total and margin widths by $+15\%$ to account for uncalibrated roster turnover and pacing uncertainty.
+
+### Source Improvements and Reliability Notes
+- **ACB Live Stats API (`https://live.acb.com`) and ACB Official Match Center:** Provided second-by-second live play-by-play, quarter breakdowns, official boxscores, and PIR valuations; fully confirmed as Lineage 1 primary field owner for Spanish basketball.
+- **KBO Official Game Centre (`koreabaseball.com`) and MyKBO Stats:** Reliable dual lineages for Korean baseball, providing pitch counts, linescores, and decisions.
+- **AFLW Official Match Centre (`afl.com.au/aflw`):** Authoritative primary feed for quarter splits, goals/behinds, and disposals.
+
+### Blind Spots Identified
+- Over-reliance on streak narratives in baseball (Hanwha losing streak).
+- Assumption that high total basketball games are predictable in Round 1 before defensive schemes solidify.
+
+---
+
+## 5. Document Update Mapping
+
+| Finding / Learning / Proposed Rule | Target Repository Document | Proposed Action & Status |
+|---|---|---|
+| Card P-518 settled (NYM 7 – 1 WSH) | `PREDICTION_LOG_COMBINED_5.md` | Custody tracking: P-518 fully settled; Hit@1 WIN, Hit@2 1/2, Top O/U LOSS. |
+| Card P-519 settled (GC 69 – 39 STK) | `PREDICTION_LOG_COMBINED_5.md` | Custody tracking: P-519 fully settled; Hit@1 LOSS, Hit@2 1/2 (Suns -27.5 WIN), Top O/U LOSS. |
+| Card P-520 settled (HWH 6 – 2 LOT) | `PREDICTION_LOG_COMBINED_5.md` | Custody tracking: P-520 fully settled; Hit@1 LOSS, Hit@2 1/2 (Eagles +1.5 WIN), Top O/U LOSS. |
+| Card P-521 settled (BRE 110 – 104 JOV) | `PREDICTION_LOG_COMBINED_5.md` | Custody tracking: P-521 fully settled; Hit@1 LOSS, Hit@2 1/2 (Over 179.5 WIN), Top O/U WIN. |
+| Card P-522 settled (CAZ 81 – 80 LLT) | `PREDICTION_LOG_COMBINED_5.md` | Custody tracking: P-522 fully settled; Hit@1 LOSS, Hit@2 0/2 (Zaragoza +9.5 WIN at R4), Top O/U LOSS. |
+| Status update: Next ID advances to P-523 | `GAME_LOG_STATUS_CURRENT.md` | Advance next canonical ID to P-523 upon canonical reconciliation. All 5 mini-log cards closed. |
+| Proposed `TESTING: C-BASKETBALL-CUSHION-GATE` | `RULES_BASKETBALL.md` §0 & §1; `LEARNING_REGISTER.md` | Proposed testing candidate: exempt basketball spreads <10.5 from AFL-derived `hcp_plus_nb` penalty. |
+| Proposed `TESTING: C-STREAK-FADE-GATE` | `RULES_BASEBALL.md` §0 & §4; `LEARNING_REGISTER.md` | Proposed testing candidate: cap losing streak adjustment at +0.30 runs when opponent starter has ERA >5.00. |
+| Proposed `TESTING: C-SEASON-OPENER-WIDTH-EXPANSION` | `BASE_RATES_REGISTER.md` §7.8; `RULES_BASKETBALL.md` | Proposed testing candidate: expand Round 1 basketball widths by +15% for opening-week variance. |
+| AFLW scoring population decoupling | `RULES_AFL.md` §0 & §1 | Reaffirm strict firewall between Men's AFL and AFLW scoring/widths (`TB1_NO_RESOLUTION:competition_mismatch`). |
+| Rehab starter bullpen exposure observation | `RULES_BASEBALL.md` §0 & §4 (control 25) | Observation: 3-month IL return with <50 rehab pitches creates significant bullpen tail exposure. `TESTING` candidate only (`C-RULE-FREEZE` in force). |
+| ACB Live Stats API validation | `DATA_SOURCE_REGISTER.md` | Register `https://live.acb.com` as primary Lineage 1 endpoint for Liga Endesa. |
+
+<!-- END ORIGINAL P518 SOURCE BYTES -->
+
+---
+
+# Part 6 working continuation — 2026-09-30 (AEST): P-518 and P-522 settlement and retrospective
+
+| Item | Value |
+|---|---|
+| Governing method | MDS-2026.09.29-v6.0 · CR-2026.09.29-P1 · SCV-2026.09.19-v2 (METHOD.md header at session read) |
+| Freeze receipt (current) | `CONTROL_MANIFEST_2026-09-29-3.md`, SHA-256 `d23995fd00020cb3a90dea4adf96c215b49b2e25fb535460e032c7b160e4b3d7`, copied from the top line of `GAME_LOG_STATUS_CURRENT.md`. `research.src.control_manifest verify` on 2026-09-30: 129 listed files, 0 mismatches. |
+| Handshake | METHOD.md header, the status-file receipt line, `PIPELINE_IMPLEMENTATION_2026-09-29.md` and this file all present and equal to the expected values. `PROMPT_CONFLICT`: none. |
+| Session read | `CURRENT_RULES.md`; `CARD_AND_LOG_TEMPLATES.md` §1–§7; `SOURCES.md` §1, §3.1, §3.2; `RULES_BASEBALL.md` §0 (0.1–0.5 before the first retrieval at 10:57 AEST, 0.6–0.9 after the MLB retrievals); `RULES_BASKETBALL.md` §0 (after the ACB retrievals, before drafting; `READ_ORDER_NOTE`: nothing read afterwards changed a retrieval route or a fact); `P518_P522_RECONCILIATION.md`; `VERIFICATION_PROTOCOL.md` §1; Part 5 top snapshot; Part 6 custody note, §1 and the P-518 and P-522 cards. Exact read timestamps were not logged. |
+| Scope | Settlement and retrospective append for **P-518 and P-522 only**, on the user's 2026-09-30 instruction. P-519, P-520 and P-521 were not processed. |
+| Write scope | This file only, after the END marker. The embedded block is unchanged: the bytes after the CRLF following the BEGIN marker and before the CRLF preceding the END marker are 141,740 bytes, SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`, verified before and after this append. |
+| Raw responses | Kept in the session scratchpad, not in the repository. Each is identified below by URL, retrieval time and response SHA-256. |
+| Next new prediction ID | P-523 (unchanged; no card was issued this session) |
+| Status | LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE. The 2026-09-29 formal performance exclusion of P-518–P-522 is **not lifted** by this append (both cards are `LIVE_ISSUED`; `SKILL_BASELINE_LEDGER.md` rule 7 fails). |
+
+## 0. Universe declarations
+
+None. No new card was issued. P-518 and P-522 keep their issued universe lines (P-518 `OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN`; P-522 `OUT_OF_UNIVERSE`, no Liga ACB key). No retroactive declaration is made.
+
+## 1. Incomplete / Unsettled Logs
+
+| ID | Event | State this session | Reason |
+|---|---|---|---|
+| P-519 | AFLW Gold Coast Suns(W) v St Kilda(W) | NOT PROCESSED | Outside the instruction's scope. The last recorded result is in `P518_P522_RECONCILIATION.md`; it was not re-read from a feed in this session. Custody unchanged. |
+| P-520 | KBO Hanwha Eagles @ Lotte Giants | NOT PROCESSED | Same. The reconciliation's open items (no stable event ID; q-order conflict) stand. |
+| P-521 | Liga Endesa Río Breogán v Asisa Joventut | NOT PROCESSED | Same. |
+
+P-518 and P-522 are not unsettled: both are settled below.
+
+## 2. Temporary-ID / Canonical-ID Conflict Logs
+
+None. Checked on 2026-09-30: Part 5's top snapshot (canonical through P-517; P-518–P-522 reserved), `GAME_LOG_STATUS_CURRENT.md` and this file. No other event carries P-518 or P-522, and no `TMP-` alias exists for either event. The event-reference errors inside the embedded working settlements (ESPN 401696434, ACB 105379, a Baseball-Reference URL dated 20260927) are field corrections, not ID conflicts; they are itemised in each corrections register below.
+
+## 3. Fully Settled Logs
+
+Both entries were settled by an append. The issued cards, and the embedded working settlements, stay in the original source block exactly as they were. Where this append disagrees with the embedded working settlement, **this append is the sourced record** (`CARD_AND_LOG_TEMPLATES.md` §7.5). The formal performance exclusion stands for both.
+
+---
+
+### Settlement — P-518 (MLB, New York Mets @ Washington Nationals, gamePk 822678)
+
+**Retrievals:** 2026-09-30 10:57–11:11 AEST. **State:** FINAL.
+
+#### 3.1 Terminal state — three lineages (`SOURCES.md` §3.1: statsapi + ESPN + one independent box)
+
+| # | Lineage | Endpoint and retrieval (AEST) | Terminal marker | Score | Response SHA-256 |
+|---|---|---|---|---|---|
+| 1 | MLB StatsAPI gamefeed (field owner) | `https://statsapi.mlb.com/api/v1.1/game/822678/feed/live`, 2026-09-30 10:57:12; repeated by `research/src/feeds.py mlb_final(822678, "INCL_EXTRAS")` at 11:11:32 | `abstractGameState Final`, `codedGameState F`, `detailedState Final`; `gamePk 822678`, `officialDate 2026-09-26` | NYM 7, WSH 1 | `af9abb08fed9b5b848313c8146eb430779ab7234dbe0dc2d948c6acbadfd7584` (identical on both fetches) |
+| 2 | ESPN site API, **event 401817091** | `https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/summary?event=401817091`, 10:58:40. The event was resolved from `scoreboard?dates=20260926` (10:57:16, SHA `21bbda785803d36a5e12b28348f21fb9a62277ad3414aeb7c32280621468d234`). | `STATUS_FINAL`, `completed true`; header id 401817091, date 2026-09-26T16:35Z | NYM 7, WSH 1; linescore matches the feed; H 9/3, E 1/1 | `1f56c0aa0241b72b85759e6bf6be3d99587e0fad7f38e797e1774e2d2367385b` |
+| 3 | Yahoo Sports game page (independent publisher) | `https://sports.yahoo.com/mlb/new-york-mets-washington-nationals-460926120/`, 11:00:02 | Title "New York Mets 7 - Washington Nationals 1: Final"; JSON-LD `EventCompleted`, `finalScore WAS 1-7 NYM`, location Nationals Park | NYM 7, WSH 1 | `104d2490bc64f4d7c8aca29f990fdff99c90b5ea69fbb5dca906d46632bef966` |
+
+- **Corroboration only, not counted:** MLB.com Gameday page (`https://www.mlb.com/gameday/822678`, 10:59:18, title "Mets 7, Nationals 1 Final Score (09/26/2026)"): same lineage as statsapi (`SOURCES.md` §3.1).
+- **Independence caveat:** the three are different publishers; their upstream data vendors are not disclosed on the pages, so independence beyond publisher is `NOT_DEMONSTRATED`. The repository's defined MLB set (statsapi + ESPN + one independent box) is met.
+- **Attempt ledger (`SOURCES.md` §1.7):**
+  - ROUTE 1 | Baseball-Reference box | `…/boxes/WAS/WAS202609260.shtml` | 10:58:43 | `BLOCKED` (HTTP 403, Cloudflare challenge) | none | —
+  - ROUTE 2 | same, through `r.jina.ai` | 10:58:45 | `BLOCKED` (HTTP 403 `AbuseAlleviationError`) | none | —
+  - ROUTE 3 | Yahoo scoreboard `?date=2026-09-26` | 10:59:16 | `WRONG_EVENT`: the page keys on the caller's AEST date and lists Friday 25 September's game (WAS 7-6 NYM) | none | —
+  - ROUTE 4 | CBS `…/MLB_20260926_NYM@WSH/` | 10:59:09 | `WRONG_EVENT`: the response is the generic scores page and contains no data for this game | none | —
+  - ROUTE 5 | AP hub | 10:59:18 | `BLOCKED` (403 challenge) | none | —
+  - The Yahoo game page was then opened by its game URL; the Yahoo scoreboard for `date=2026-09-27` (11:00:06) also lists WAS 1-7 NYM.
+- **Wrong-event finding.** ESPN event **401696434**, cited by the embedded settlement, is **Los Angeles Angels at New York Mets, 2025-07-23** (NYM 6, LAA 3; response SHA `97e225ae7874499953883eaf12e9bf282552945c43a5fa6e4b91ea5acf450011`). It is not this game.
+
+#### 3.2 Issue state — verified from the feed
+
+| Fact | Value | Source |
+|---|---|---|
+| Scheduled start | 2026-09-26 16:35:00Z = 12:35 EDT = 2026-09-27 02:35 AEST | feed `gameData.datetime` |
+| Actual first pitch | 16:37:00Z (`gameInfo.firstPitch`); the first pitch event is stamped 16:37:23.972Z (= 02:37:24 AEST) | feed `gameInfo`; `liveData.plays` |
+| Issued card's freeze | 2026-09-26 16:37:50Z (from the card) | issued card, Field 8 |
+| Freeze minus first pitch | **+26 s** after the first pitch event (+50 s after `gameInfo.firstPitch`; +2 min 50 s after the scheduled start) | computed |
+
+The card was issued after the first pitch. The card's own label, `LIVE-ISSUED VIEW` (In Progress, 0-0, top 1st), is **confirmed**. It is excluded from pregame scoring and from every performance cohort. The card states that no in-game event entered the distribution; nothing in the record contradicts that.
+
+#### 3.3 Process record (read from statsapi feed and boxscore; box SHA `300aa35fd76e7fb64fa20154827bfaf9c4d1dddcd4c8f22d62c0bbdf5132b52e`, 10:57:14)
+
+- **Line score:** NYM 0-0-0-0-0-0-4-1-2 = 7; WSH 0-0-1-0-0-0-0-0-0 = 1. **R-H-E: NYM 7-9-1, WSH 1-3-1.** LOB NYM 7, WSH 5. The game ended after nine innings (no extras).
+- **Game facts:** time 2:43 (163 minutes); attendance 27,284; first pitch 12:37 PM; 67 degrees, Overcast; wind 16 mph, In From LF; umpires HP Austin Jones, 1B Jen Pawol, 2B James Hoye, 3B Sean Barber.
+- **Pitching (feed and ESPN agree):**
+  - NYM: Jonah Tong 5.0 IP, 3 H, 1 R, 1 ER, 1 BB, 9 K, 87 pitches; Dedniel Núñez 1.0 IP, 0 H, 3 K (W, 2-1); Nate Lavender 1.0 IP (H); Devin Williams 1.0 IP; Tobias Myers 1.0 IP, 2 K. The four relievers allowed no hit and no run.
+  - WSH: Connelly Early 3.0 IP, 1 H, 0 R, 0 BB, 1 K, 34 pitches, 10 batters faced; Jake Irvin 5.0 IP, 7 H, 5 R, 4 ER, 2 BB, 6 K, 2 HR, 101 pitches (L, 2-10); Richard Lovelady 1.0 IP, 1 H, 2 R, 2 ER, 2 BB, 1 K, 1 HR.
+  - Pitcher by half-inning: Early innings 1-3, Irvin 4-8, Lovelady 9 (WSH); Tong 1-5, Núñez 6, Lavender 7, Williams 8, Myers 9 (NYM).
+- **Scoring plays (feed):** B3 Ortiz sacrifice fly, Nuñez scores (WSH 1-0); T7 A.J. Ewing 3-run HR off Irvin (NYM 3-1); T7 Ronny Mauricio HR off Irvin (4-1); T8 Brett Baty reaches on a fielding error by shortstop Nasim Nuñez, Carson Benge scores (5-1); T9 Mauricio 2-run HR off Lovelady (7-1). WSH led 1-0 through six innings.
+- **Disruptions (feed `Game Advisory` events):** an On-field Delay in the bottom of the 3rd (17:14:39Z-17:14:53Z as stamped) and an Injury Delay in the top of the 9th (19:08:57Z-19:09:10Z) after Juan Soto was hit by a pitch by Lovelady; pinch-runner Nick Morabito replaced Soto. The reason for the first delay and the nature of the second are not in the feed (`UNKNOWN`). Both are hindsight facts.
+- **Substitutions:** WSH José Tena pinch-hit in the 5th slot (for Brady House); Jorbit Vivas took 2B in the 9th slot, with Abrams moving from 2B to SS.
+- **Classification:** endpoint and conversion facts are clean. The outcome is a variance and weighting case, not an endpoint problem (see 3.8).
+
+#### 3.4 Lineup diff (names as printed on the issued card; feed starters are the `…00` batting-order entries)
+
+- **NYM: 9 of 9 named starters started** (Lindor DH, Soto LF, Bichette 3B, Benge RF, Vientos 1B, Baty SS, Alvarez C, Ewing CF, Mauricio 2B).
+- **WSH: 9 of 9 named starters started** (Wood RF, Ortiz DH, Crews CF, Abrams **2B** [feed `allPositions` 2B then SS], House 3B, Lile LF, Morales 1B, Ruiz C, Nuñez SS). The card's printed positions match the feed.
+- **Starting pitchers:** Tong and Early started as named. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+- **Card facts re-checked against the record:** umpire crew equal; weather and wind equal to the gamefeed block at freeze; Early's Triple-A rehab lines exact (2026-09-15: 1.0 IP, 35 pitches, 3 ER; 2026-09-20: 1.2 IP, 40 pitches, 0 ER; `people/813349` game log, SHA `d4d02a62e5be48e9471d9ee951c413553a09487e0a76e1c3526ec5407b895c99`) and his last MLB start on 2026-06-30 exact; the previous day's bullpen usage exact (gamePk 822681, 2026-09-25: Yan 37, Pintaro 17, Pérez 22, Hagenman 70, Lavender 14; Varland 14, Cruz 7, Sinclair 18, Gray 18; SHA `111909eaf0e7fe2c14cd3a4d45f60ca45561e495033cd752de922ab5306b8682`). One mislabel: Andrew Alvarez (101 pitches) was that game's Nationals starter, listed on the card under bullpen.
+
+#### 3.5 z-scores (card centre and width as issued)
+
+- **z_total** = (8 − 10.00) / 4.50 = **−0.44**.
+- **z_margin** (WSH − NYM, the card's orientation; centre WSH +0.10, width 4.50) = (−6 − 0.10) / 4.50 = **−1.36**. From the Mets' side the same miss is +1.36.
+- Both are inside |z| 1.5.
+
+#### 3.6 Settlement table (copied from the issued Field 4; the repository adapter `settle()` returns the same results)
+
+| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---:|---|---|---:|---|
+| 1 | Mets +1.5 | Margin | 0.640 | 0.668 | 0.638 | 0.6249 (`TB1_NO_RES`) | **WIN** | 0.1296 | `LIVE_ISSUED` |
+| 2 | Nationals +1.5 | Margin | 0.635 | 0.661 | 0.638 | 0.6516 (`TB1_NO_RES`) | **LOSS** | 0.4032 | `LIVE_ISSUED` |
+| 3 | Over 8.5 | Total | 0.590 | 0.593 | 0.491 | 0.5332 (`TB1_NO_RES`) | **LOSS** | 0.3481 | `LIVE_ISSUED` |
+| 4 | Under 8.5 | Total | 0.410 | 0.407 | 0.509 | 0.4668 (`TB1_NO_RES`) | **WIN** | 0.3481 | `LIVE_ISSUED` |
+| Winner | Washington Nationals | — | 0.510 | — | not printed on the card | not printed on the card | **LOSS** | 0.2601 | — |
+
+- **Mean row Brier(p) (four rows): 0.3073.** Brier(p) on a `LIVE_ISSUED` card is descriptive and excluded from pregame scoring.
+- **Descriptive decision-level comparison** (covering pair counted as two rows, forced pair once as the higher-ranked row; n = 3): card 0.2936 against baseline 0.2597, difference +0.0339. One late-issued game: **no inference**; not entered in any ledger.
+- **Rank-1:** WIN (Mets +1.5). **Hit@2:** 1/2, **MECHANICAL** (R1 and R2 are opposite +1.5 lines, a `COVERING_PAIR`: at least one always wins). **Top over/under preferred side:** Over 8.5 (issued preferred side of the forced pair) LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Nationals at 0.510, wrong.
+- **Realised outcome state (issued family table):** F1b, Mets win by 2+ with Under 8.5, mass **0.1496**. The embedded working settlement's "F1 and F3 masses of 0.245 and 0.165" are not on the card.
+- **SHADOW:** as issued, `SHADOW: MISSED STARTED_OR_NOT_PREGAME` (frozen with the card). Under the current md-only regime the line would read `SHADOW: NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN` as issued; no change.
+
+#### 3.7 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Hits and errors | NYM 7-11-1; WSH 1-5-0 | NYM 7-9-1; WSH 1-3-1 | statsapi linescore; ESPN | |
+| 2 | Time of game | 2h 58m | 2:43 (163 min) | statsapi `info`, `gameInfo` | |
+| 3 | Attendance | 26,452 | 27,284 | statsapi; ESPN | |
+| 4 | Tong's line | 4.2 IP, 1 H, 6 K, 4 BB | 5.0 IP, 3 H, 1 R, 1 BB, 9 K, 87 pitches | statsapi box; ESPN | |
+| 5 | Early's line | 54 pitches, 2 H, 2 BB, 4 K | 34 pitches, 1 H, 0 BB, 1 K | statsapi box; ESPN | The card's ceiling was about 50-65 pitches (2.1-3.2 IP): the innings fit, the pitch count was below it |
+| 6 | Score through six innings | "locked in a 1-1 tie" | WSH 1-0 | linescore | |
+| 7 | Seventh-inning narrative | Irvin "turned to" as a reliever in the 7th; bases loaded; Alonso and Winker | Irvin pitched innings 4-8; the 7th was Ewing's 3-run HR and Mauricio's HR; **Alonso and Winker are not in either boxscore** | statsapi plays and box | The embedded text is unsupported |
+| 8 | Mets relievers | Núñez, Garrett, Díaz | Núñez, Lavender, Williams, Myers; **Garrett and Díaz did not pitch** | statsapi box; ESPN | |
+| 9 | Fielding error | implied 7th | 8th, by WSH shortstop Nasim Nuñez | statsapi plays | |
+| 10 | Disruption facts | "None" | Two `Game Advisory` events (bottom 3rd on-field delay; top 9th injury delay, Soto, replaced by pinch-runner Morabito) | statsapi plays | |
+| 11 | ESPN lineage | event 401696434 | That is LAA at NYM, 2025-07-23. Correct event: **401817091** | ESPN scoreboard and summaries | Wrong event |
+| 12 | Baseball-Reference lineage | box `WAS202609270`, shown as agreeing | The URL date is 2026-09-27 (a different game); the site returned 403 here on the correct date | attempt ledger | The lineage was not retrieved |
+| 13 | Settlement baseline | 0.500 for every row | 0.638 / 0.638 / 0.491 / 0.509 as issued | issued Field 4 | `M35` |
+| 14 | TEAM_BASELINE_P | `TB1_NO_RESOLUTION` (numbers dropped) | 0.6249 / 0.6516 / 0.5332 / 0.4668 as issued, with `TB1_NO_RES` | issued Field 4 | `M35`, `M29` |
+| 15 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10; `CARD_AND_LOG_TEMPLATES.md` §2 | q is scored only as the pre-registered diagnostic on pregame cards |
+| 16 | Section 1 table start | 2026-09-28 03:05 AEST | 2026-09-27 02:35 AEST (16:35Z) | feed `datetime` | |
+| 17 | Realised family masses | "0.245 and 0.165" | F1b 0.1496 | issued family table | |
+| 18 | Early "departed after 54 pitches" | 54 | 34 | statsapi box | |
+
+Items 7, 8, 9, 10, 11 and 12 also make the embedded `C-PROCESS-RECORD-PROVENANCE` line untrue as written: the process facts it lists were not all read from the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` where it disagrees with the feed.
+
+#### 3.8 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Mets +1.5) won; Rank 2 (Nationals +1.5) lost, mechanically; the top over/under (Over 8.5, Rank 3) lost; the projected winner was wrong.
+
+**B. Every pick.**
+1. *Mets +1.5, WIN.* Held: a near coin-flip side (issued winner probability 0.510 for WSH), so a +1.5 on either side was the likely cover. It covered through the win branch (mass 0.490) and not the lose-by-one branch.
+2. *Nationals +1.5, LOSS.* State F1 (Mets by 2+, issued mass 0.3650) is the named state that kills this row, and it occurred. Because the pair is covering, one row winning guaranteed the other's loss once the margin exceeded one. That is arithmetic, not skill or error.
+3. *Over 8.5, LOSS.* Total 8, half a run under the line, `z_total` −0.44, against an issued P(Under 8.5) of 0.410. **Held:** both probables started; both orders were exact; umpires, wind (16 mph in from LF) and weather matched; Early's short outing fell inside the modelled 2.1-3.2 innings; the Washington bullpen did concede runs (Irvin 5, Lovelady 2), so the exposure mechanism operated on the Nationals' pitching side. **Failed:** the Nationals scored once (3 hits) against Tong and four scoreless relievers, while the card's centre of 10.00 carried Washington's 5.09 R/G. **Cause:** genuine variance on a 41% outcome, plus one weighting question that is a check on the card's arithmetic (see G1). Not `predictable and missed`.
+4. *Under 8.5, WIN.* The non-preferred side of the forced pair; same event.
+5. *Projected winner, LOSS.* Issued 0.510 Nationals; the Mets won 7-1. A coin flip.
+
+**C. Enhanced review (`TOP_OU_REVIEW`, Over 8.5). Rank 1 did not lose, so no Rank-1 review is triggered.**
+- *Why Rank 3.* q 0.593, LEAN tier, below the two +1.5 rows.
+- *Did the evidence support q.* The card's own p reproduces: a negative binomial with mean 10.00 and SD 4.50 gives P(Over 8.5) 0.5915 by hand against the printed 0.5900. The evidence base was the game logs (M13 followed), the venue row (Nationals Park mean 10.83, n = 78) and a named wind adjustment.
+- *Another row above it.* Its issued p was 0.099 above `BASELINE_P` (0.491), and the departure ledger attributed it to venue and Early's bullpen exposure. No other row should have outranked it on the printed evidence.
+- *Which variable failed.* Washington's run scoring (1 run, 3 hits, 5 LOB).
+- *Rules.* `M14` and `M31` were followed (width 4.50 equals the 4.50 reference). `M3` (totals stacked off one factor) and `RULES_BASEBALL.md` control 26 (three or more same-signed adjustments are netted in one line) are the relevant checks: the card printed three positive adjustments (+0.45, +1.10, +0.65) and one negative (−0.60), but see G1.
+
+**D. Top two.** R1 and R2 are a `COVERING_PAIR`: Hit@2 1/2 is mechanical and excluded from top-two skill. P(R1 ∧ R2), the exactly-one-run game (issued 0.2750), did not occur (the margin was six). The order R1 over R2 (q 0.668 against 0.661) was a near-tie and carries no information.
+
+**E. Totals.** Scoring environment: the league mean is 8.95; Nationals Park ran 10.83 (n = 78); this game landed at 8, near the league mean and below the venue mean. Pace: 163 minutes, ordinary. Lineups and umpires as printed; weather as printed. The line (8.5) sat 0.33 SD under the card's centre; a 0.59 total at that distance is inherently near a coin flip and carries the `LEAN` tier. No rule proposal is made: an opposite-side rule would cover both sides.
+
+**F. What went right.** Identity, state and the `LIVE-ISSUED` disclosure were accurate (first pitch preceded the freeze). Eighteen of eighteen named starters, both starting pitchers, the umpire crew and the wind matched. Early's rehab log and the prior-day bullpen usage were exact. The family table sums to 1.0000, the total p reproduces by hand, and the covering pair and forced pair were labelled. The winner was called a coin flip at 0.510.
+
+**G. Blind spots.**
+
+| # | Blind spot | Available pre-game? | Mattered? | Concrete future check |
+|---|---|---|---|---|
+| 1 | The printed adjustments (+0.45, +1.10, +0.65, −0.60) sum to **+1.60**, not the printed net +1.05, so the printed centre 10.00 is not reproducible from the printed lines (an implied 10.55). | Yes, printed on the card. | It ran against the outcome: at 10.55 the same negative binomial gives P(Over 8.5) 0.6449, so it did not cause the loss. It is a `CORE_DEFECT` for reproducibility. | Run the core self-audit's "p reproducible from what is printed" check on the centre as well as each p (`CARD_AND_LOG_TEMPLATES.md` §5, B4). |
+| 2 | Andrew Alvarez, a starter, was listed under Washington's bullpen usage. | Yes. | No. | Label a prior-day starter as a starter. |
+| 3 | The core froze 26 s after the first pitch, so the card is `LIVE_ISSUED`. | Yes (a request-timing matter). | It removes the card from every pregame cohort. | Start the core at least 90 minutes before the start; freeze by 5 minutes before. |
+| 4 | No bench, IL or scratch list was printed for either side. | Yes (the boxscore lists them). | No. | Print the bench and IL lists with fetch time. |
+
+The Soto injury exit in the 9th, the on-field delay, and the Mets' 7th-9th scoring were not knowable before the start.
+
+**Kill paths that occurred (issued complements).** ¬R2 (Mets win by 2+, mass 0.3650): occurred. ¬R1 (Nationals win by 2+, mass 0.3600): did not occur. The card enumerated no total-side kill path.
+
+**The three questions.** (1) *Turned on:* Washington's offence stopped at one run while the Mets scored six late, three by home run off two Washington relievers. (2) *Knowable before issue:* the bullpen exposure was; the Washington offensive collapse was not. (3) *Smallest justified change:* none to a probability, rank, width or centre. The printed-arithmetic gap in G1 is a disclosure and reproducibility repair; nothing is promoted (`C-RULE-FREEZE`, `CURRENT_RULES.md` §D9).
+
+#### 3.9 The eight validation questions
+
+1. **Confirmed lineups obtained?** Yes: the statsapi orders at 2026-09-26 16:33:46Z (about 3.5 minutes before the first pitch), exact for both sides.
+2. **Bench, rotation, bullpen lists?** Bullpen usage yes, exact; bench and IL lists no.
+3. **Coaching information?** Managers named (Mendoza, Martinez); it did not matter to any row.
+4. **Injuries, suspensions, rest, late withdrawals?** Early's IL return and rehab ladder covered exactly; no late scratch occurred. The Soto exit came after the start.
+5. **Sources accurate and current?** Yes for every card fact I re-checked. The embedded settlement's sources were not (items 11 and 12).
+6. **Better sources available?** No for the pregame facts. For settlement, Yahoo Sports proved a usable third box; Baseball-Reference stayed blocked.
+7. **Blind spots?** Section G.
+8. **Future handling?** The G-table checks; nothing is promoted.
+
+---
+
+### Settlement — P-522 (Liga Endesa, La Laguna Tenerife v Casademont Zaragoza, ACB match 105380)
+
+**Retrievals:** 2026-09-30 11:01-11:09 AEST. **State:** FINAL (`FINALIZED`).
+
+#### 3.10 Terminal state — three lineages (`RULES_BASKETBALL.md` §0.5; `SOURCES.md` §3.2, §1.7)
+
+| # | Lineage | Endpoint and retrieval (AEST) | Terminal marker | Score | Response SHA-256 |
+|---|---|---|---|---|---|
+| 1 | ACB Live match centre (field owner) | `https://live.acb.com/es/partidos/la-laguna-tenerife-vs-casademont-zaragoza-105380/resumen`, 11:01:14; the statistics view `…/estadisticas` 11:01:18 | Embedded match header `matchId 105380`, `status FINALIZED`, `currentQuarter 4`, `timeLeft 00:00`, `start 2026-09-27T11:00:00Z` | LLT 80, CAZ 81; quarters 18-18, 20-26, 27-24, 15-13 | resumen `58dbe432749dd7f18bb8a757dfd780afda0c3ec16e905d709aaf28a60086de06`; estadisticas `5ea6195ce2c2cce6c3d13cc8e1cd3529d44942b2ca4f4a64370a54251c401352` |
+| 2 | CB Canarias official club report | `https://cbcanarias.net/2026/09/27/cruel-final-tras-un-gran-esfuerzo/`, 11:08:35 | Post-game report, "(80-81)", dated 2026-09-27 15:40 as printed on the page | LLT 80, CAZ 81 | `53656ca8386d05e9fa7793214d83c7005718e9affa61a3387b25c2ae1522a505` |
+| 3 | Sportaragon post-game crónica (independent regional media) | `https://www.sportaragon.com/articulo/basket-zaragoza/cronica-laguna-tenerife-80-81-casademont-zaragoza-otra-historia/20260927154519160141.html`, 11:04:06 | Title "La crónica de La Laguna Tenerife (80-81) Casademont Zaragoza" | LLT 80, CAZ 81 | `c96a658ad0864407a197d0991d413b89768d4cdc0ef2348a5db0d72a05dc6297` |
+
+- **Further corroboration:** El Periódico de Aragón post-game crónica (`…/2026/09/27/laguna-tenerife-casademont-directo-134715856.html`, 11:04:10, "80-81", SHA `3a0415a6a0e64c40ca3d2c8b7afc8c64a0402198ac500fbfa28548f943e37266`).
+- **Final-marker disclosure:** the explicit final marker (`FINALIZED`, 00:00, quarter 4) is in lineage 1. Lineages 2 and 3 are post-game reports that state the final score. `SOURCE_LINEAGE_NOTE`: the club report may draw on ACB statistics; it is counted as the official club source under `SOURCES.md` §1.7 and not as independent collection. No overtime: four quarters, 161 points in regulation.
+- **Same lineage, not counted:** `https://www.acb.com/partido/ver/id/105380` (11:03:33) renders the same "ACB Live Resumen del Partido" page (`SOURCES.md` §3.2: site and live stats are one lineage), SHA `6c47395bcc0a1b0b23ede73faa989b981ef1815a688eb513d1c67134b19f567b`.
+- **Wrong-event finding.** `https://www.acb.com/partido/ver/id/105379`, cited three times in the embedded settlement, is **Recoletas Salud San Pablo Burgos v Kosner Baskonia** (page title, 11:03:40, SHA `bbbcc8d5bdf827b48b5eb10533227ba978c27ca980183b20d4c681125254830b`). The issued event is 105380.
+- **Attempt ledger:**
+  - ROUTE 1 | ACB Live (resumen, estadisticas) | `OPENED` | final, quarters, starters, box, shot log | lineage 1.
+  - ROUTE 2 | Sofascore API | `https://api.sofascore.com/api/v1/sport/basketball/scheduled-events/2026-09-27`, 11:03:47 | `BLOCKED` (HTTP 403) | none.
+  - ROUTE 3 | Proballers match 866388 | 11:08:39 | `BLOCKED` (HTTP 403, Cloudflare challenge) | none.
+  - Discovery only (not evidence): a DuckDuckGo HTML search (11:03:48) found the club and media pages above.
+- **Not available from any retrieved page:** attendance, referees, game duration. The ACB pages carry only the labels; no value is printed. Tip wall-clock time: `NOT_RETRIEVED` (the payload has no wall-clock event time).
+
+#### 3.11 Issue state
+
+| Fact | Value | Source |
+|---|---|---|
+| Scheduled start | 2026-09-27 11:00:00Z = 12:00 WEST = 21:00 AEST | ACB match header `start` |
+| Issued card's evidence freeze | 2026-09-27 20:59:43 AEST = 10:59:43Z; the card records `NOT_STARTED` then | issued card |
+| Issued card's issuance check | 21:02 AEST = 11:02Z, `STARTED` | issued card |
+| Freeze minus scheduled start | −17 s (`CURRENT_RULES.md` §B asks for the freeze at least 5 minutes before the start) | computed |
+
+The card's own label, `LIVE_ISSUED`, stands: the issuance state was `STARTED`. The evidence freeze preceded the scheduled start by 17 seconds; the actual tip time is `NOT_RETRIEVED`. The card is excluded from pregame scoring and every performance cohort.
+
+#### 3.12 Process record (ACB Live statistics payload)
+
+- **Final:** La Laguna Tenerife 80, Casademont Zaragoza 81 (regulation, four quarters). Quarter scores (LLT-CAZ): 18-18, 20-26, 27-24, 15-13. Half-time 38-44; after three quarters 65-68.
+- **Team box (full game):**
+  - LLT: 2P 16/41, 3P 10/29, FT 18/21, rebounds 35 (12 offensive), assists 15, turnovers 6. Q4: 2P 3/12, 3P 0/4, FT 9/10, 15 points.
+  - CAZ: 2P 14/25, 3P 15/34, FT 8/15, rebounds 37 (7 offensive), assists 19, turnovers 18. Q4: 2P 1/3, 3P 3/9, FT 2/4, 13 points.
+  - Free throws: 36 attempted, 26 made. Player points sum to 80 and 81.
+- **Estimated possessions** (field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts; an estimate, not an ACB-published figure): LLT about 73.2, CAZ about 76.6; about 109.2 and 105.7 points per 100 possessions.
+- **Individuals (box):** Bell-Haynes 19 points; Blumbergs 16 points (3P 2/6, 10 rebounds); Jaworski 15; Happ 13 (5 rebounds); Huertas 12 (2 rebounds, 3 assists, bench); Guy 11 (3P 3/6); Abromaitis 7 (10 rebounds).
+- **Closing sequence (ACB shot log):** Jaworski's two-point basket made it 80-81 (logged at 0:02 of the fourth quarter); the last shot was **Tim Abromaitis's missed three-pointer at 0:00**. The club report says the same (Abromaitis "sobre la bocina"). The stated time of the winning basket differs by source (Sportaragon: six tenths; the club: eight tenths; the ACB log: 0:02); this does not affect settlement.
+- **Coaches (payload `headCoach`):** LLT Jaka Lakovic; CAZ Gonzalo García de Vitoria.
+
+#### 3.13 Lineup diff (names as printed on the issued card; ACB `isStarted`)
+
+- **LLT: 5 of 5 named starters started:** Kyle Guy, Bruno Fitipaldo, Xabi López-Arostegui, Ethan Happ, Aaron Doornekamp.
+- **CAZ: 5 of 5 named starters started:** Gabe (Gabriel) Olaseni, Trae Bell-Haynes, Roberts Blumbergs, Miguel González, Justin Jaworski.
+- **Benches:** both 12-player sheets equal the card's; Alderete and Kurucs (LLT) and Lukic (CAZ) barely or never played. Bango (absent per the card's medical note) and Giedraitis (out long term) are not in either box.
+- **Coaches** equal the card's. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+
+#### 3.14 z-scores (card centre and width as issued)
+
+- **z_total** = (161 − 177.50) / 18.50 = **−0.89**.
+- **z_margin** (LLT − CAZ = −1; centre LLT +5.50, width 15.00) = (−1 − 5.50) / 15.00 = **−0.43**.
+
+#### 3.15 Settlement table (copied from the issued Field 5 ranked table)
+
+| Rank | Contract | Class | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---|---|---|---:|---|
+| 1 | Combined Total: Over 169.5 Points | `total_over` | 0.667 | 0.708 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.4449 | `LIVE_ISSUED` |
+| 2 | Tenerife −3.5 | `hcp_minus` | 0.553 | 0.535 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.3058 | `LIVE_ISSUED` |
+| 3 | Combined Total: Over 179.5 Points | `total_over` | 0.457 | 0.480 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.2088 | `LIVE_ISSUED` |
+| 4 | Zaragoza +9.5 | `hcp_plus_nb` | 0.605 | 0.342 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **WIN** | 0.1560 | `LIVE_ISSUED` |
+| Winner | La Laguna Tenerife | — | 0.643 | — | not printed | not printed | **LOSS** | 0.4134 | — |
+
+- **Contract settlement:** the total was 161, so both Overs lost; the home margin was −1, so Tenerife −3.5 lost and Zaragoza +9.5 won. No push (all lines are half-points).
+- **Mean row Brier(p): 0.2789** (descriptive; `LIVE_ISSUED`). Baselines are `NOT_YET_DERIVED`, so no baseline comparison is made.
+- **Rank-1:** LOSS. **Hit@2:** 0/2, **real** (the top two, Over 169.5 and Tenerife −3.5, are not a covering pair; Tenerife −3.5 with Zaragoza +9.5 is, and they were Ranks 2 and 4). **Top over/under:** Over 169.5 LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Tenerife at 0.643, wrong.
+- **Realised outcome cell (issued nine-cell table):** total ≤ 169 with Tenerife margin ≤ 3, mass **0.1487**. This is also the issued P(¬R1 ∧ ¬R2) of 0.1487. The embedded settlement's "F3 (Zaragoza win, Under 169.5) carried 0.145" is not a cell on the card.
+- **SHADOW:** as issued, `SHADOW: NO_LANE` (no Liga ACB lane). Current regime: `NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE` as issued; no change.
+
+#### 3.16 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Event reference (all three lineages) | acb.com `…/id/105379` | That page is Burgos v Baskonia. The issued event is **105380** | acb.com 105379 and 105380 | Wrong event |
+| 2 | Third lineage | "Marca" and the "ACB Endesa Official Game Sheet", called independent | Not shown to be independent: the game sheet is the ACB lineage, and Marca was not retrieved in this session. Replaced by lineages 2 and 3 above | attempt ledger | |
+| 3 | Lineup diff | LLT: Huertas, Guy, **Sastre**, Doornekamp, Happ; CAZ: Bell-Haynes, **"Jordan" Homesley, Yusta**, Blumbergs, **Bango** | ACB `isStarted` equals the card's ten names; Huertas and Homesley (the ACB sheet lists Caleb, not "Jordan") were bench players; Sastre and Yusta are on neither sheet; **Bango did not play** | ACB stats payload | The embedded diff used names that are not on the card (audit `10n`) |
+| 4 | Tenerife coach | "Txus Vidorreta" | **Jaka Lakovic** | ACB payload `headCoach`; club report | |
+| 5 | Attendance 4,890 and duration 1h 56m | asserted | **Not present** in any retrieved page | pages listed above | `PROCESS_RECORD_UNVERIFIED` for both fields |
+| 6 | Q4 shooting | "5-of-17 from the field" | Q4 field goals 3/16 (2P 3/12, 3P 0/4) plus FT 9/10 | ACB Q4 team totals | |
+| 7 | Free throws | "only 32 total free throws" | 36 attempted, 26 made | ACB box | |
+| 8 | Pace | "68 possessions, ~19 seconds per possession" | About 73-77 possessions per side (estimate); 40 minutes over about 75 possessions is about 32 seconds each | ACB box; estimator above | The "pace suppression" thesis is unsupported: no ACB pace reference exists (`NOT_YET_DERIVED`) |
+| 9 | Final shot | "Kyle Guy missed a contested pull-up jumper at the buzzer" | **Tim Abromaitis's missed three-pointer at 0:00** | ACB shot log; club report | |
+| 10 | Blumbergs | "16 pts, 4/5 3PT" | 16 points, **3P 2/6** | ACB box | Points matched |
+| 11 | Individual lines | Huertas "12 pts, 6 ast"; Happ "13 pts, 8 reb" | Huertas 12 pts, **3 ast**; Happ 13 pts, **5 reb** | ACB box | |
+| 12 | Halftime orientation | mixed | 38-44 (LLT-CAZ) throughout | ACB quarters | |
+| 13 | Settlement baseline and TEAM_BASELINE_P | 0.500 and `TB1_NO_RESOLUTION` | `NOT_YET_DERIVED:acb` and `NOT_COVERED:acb` as issued | issued Field 5 | `M35`, `M29` |
+| 14 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10 | |
+| 15 | Realised state | "F3 … 0.145" | cell (T ≤ 169, M ≤ 3) = 0.1487 | issued nine-cell table | |
+| 16 | "Systemic Calibration Pathology" and "exempt basketball spreads from `hcp_plus_nb`" | asserted as a finding | One cushion row won at q 0.342 (n = 1 here, n = 2 with P-521, both cards excluded). No coefficient follows from one game (L-087, `M27`) | `CURRENT_RULES.md` §D6, §D9 | Parked below |
+| 17 | "Anchor Tenerife home games on lower baseline totals (~162-165) under Vidorreta" | asserted | Unsupported: wrong coach, one game | ACB payload | |
+
+The embedded `C-PROCESS-RECORD-PROVENANCE` line for P-522 is untrue as written: items 1, 3, 4, 6, 7, 9, 10 and 11 contradict the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` wherever it disagrees with the ACB record.
+
+#### 3.17 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Over 169.5) lost; Rank 2 (Tenerife −3.5) lost; Rank 3 (Over 179.5) lost; Rank 4 (Zaragoza +9.5) won; the projected winner (Tenerife, 0.643) was wrong. The top two both lost.
+
+**B. Every pick.**
+1. *Over 169.5, LOSS.* Total 161, 8.5 points under the line and 16.5 under the card's centre; `z_total` −0.89; issued P(T ≤ 169) 0.3327. **Held:** official starters (10 of 10), both benches, coaches, the medical absences (Bango and Giedraitis did not play), indoor venue. **Failed:** both teams scored under their 2025-26 reference lines: Tenerife 80 against a home reference of 90.18 points for (10.2 below), Zaragoza 81 against an away reference of 85.76 (4.8 below). Zaragoza turned the ball over 18 times to Tenerife's 6, and Tenerife shot 3/16 in the fourth quarter. **Cause:** variance in a LOW-grade, no-baseline opener (see C); not `predictable and missed`.
+2. *Tenerife −3.5, LOSS.* Tenerife lost by one; the kill path "Tenerife margin ≤ 3" (issued 0.4470) occurred. The issued P(both top-two rows fail), 0.1487, is the cell that occurred.
+3. *Over 179.5, LOSS.* Nested inside Over 169.5: it died in the same slow-game state.
+4. *Zaragoza +9.5, WIN.* Zaragoza won outright (a covering-pair partner of Tenerife −3.5). The issued cushion decomposition (Zaragoza win 0.3568 plus lose by 1-9 0.2483) was carried by the win branch. The card's stated reason (Zaragoza's changed roster) is an unproven mechanism; a one-point loss and a win are both inside the cover.
+5. *Projected winner, LOSS.* Issued 0.643, a 36% event.
+
+**C. Rank-1 loss: enhanced review.**
+- *Why Rank 1.* Issued p 0.667 (a total read from N(177.5, 18.5²)); q 0.708, tier STRONG. The card said in advance that the STRONG tier was formal only, that there is no ACB predictability row, that the grade was LOW, and that the second pick was near a coin flip.
+- *Did the evidence support q.* The card's reads reproduce exactly by hand (P(T ≥ 170) 0.6673, P(T ≥ 180) 0.4570, P(M ≥ 4) 0.5530, P(M ≤ 9) 0.6051). The centre 177.5 came from the official 2025-26 home and away logs (reference 178.91), shrunk toward the ACB league mean of 176.20. It rested on one season of 17 home and 17 away games and on rosters that had changed: the new Tenerife coach and Zaragoza's turnover. The pre-game evidence supported a probability of about two in three; it did not support more.
+- *Should another row have outranked it.* By the card's own p, Zaragoza +9.5 (0.605) sat above Tenerife −3.5 (0.553). RM-1's cushion penalty (a disclosed `SIDE_FLIP`, `LARGE_RECALIBRATION`) reversed them and put Zaragoza +9.5 last. On p, the top two would have been Over 169.5 and Zaragoza +9.5, a Hit@2 of 1/2. Under the current p-ranked pipeline (`CURRENT_RULES.md` header, U9) new cards order this way. **This is one game and does not show that the cushion penalty is wrong**: the held-out evidence in `CURRENT_RULES.md` §D6 is that flipped sides won at their q, and a q of 0.342 wins about one time in three.
+- *Which variable failed.* Total points: both teams under their reference scoring. The estimated possessions (about 75 per side) and about 107 points per 100 possessions cannot be compared with an ACB reference, because none exists in `BASE_RATES_REGISTER.md` §7 (`NOT_YET_DERIVED`).
+- *Existing rules and recurring mistakes.* Followed: `M13` (game logs before aggregates), `M14` (total p from the card's own centre and width, reproducible), `M19`/`M25` (official starters retrieved and matched, 10 of 10), `M31` (width 18.5 against the card's diagnostic 17.46, ratio 1.06), `M32` (the cushion priced as a non-baseball cushion, flip disclosed), `M28` (the covering pair labelled). Not applicable: `M4` (no overtime). No pre-game rule was violated by the issued card apart from what it disclosed (LIVE_ISSUED, universe, baselines).
+- *Variance or rule change.* Variance, within the LOW grade the card assigned. No rule change is proposed.
+
+**D. Top two.** Over 169.5 and Tenerife −3.5: P(R1 ∧ R2) 0.3690 and P(¬R1 ∧ ¬R2) 0.1487 as issued; the both-fail cell occurred. Their order was not justified by p (0.667, 0.553) over Zaragoza +9.5 (0.605); it was justified only by RM-1 q. Hit@2 0/2 is a real result, not mechanical.
+
+**E. Totals.** Indoor; no weather. Scoring environment: the card's centre 177.5 against a league mean of 176.20 (SD 17.46); the realised 161 is 0.87 league SDs below the mean. Pace and efficiency cannot be judged against a reference (none exists). Rosters and coaches as on the card. The line 169.5 sat 8.0 below the centre; 179.5 sat 2.0 above it and was a near coin flip (0.457). The total was inherently uncertain in an opening round with new coaching and rosters. A width of 18.5 was already at the reference scale; no rule proposal is made.
+
+**F. What went right.** Every pre-game fact matched the official record: ten of ten starters, both twelve-player benches, both head coaches, both medical absences, the venue and the start time. Every printed p reproduces by hand. The card disclosed its own limits (LOW grade, formal-only STRONG, no ACB baseline, a near-coin-flip second pick, the `SIDE_FLIP`). Of the two spread rows, the higher-p one (Zaragoza +9.5, 0.605) won. The covering pair and the nested Over rows were labelled correctly.
+
+**G. Blind spots.**
+
+| # | Blind spot | Available pre-game? | Mattered? | Concrete future check |
+|---|---|---|---|---|
+| 1 | No ACB pace or efficiency reference, and no turnover-rate input, so a 161-point game could not be decomposed against anything (Zaragoza had 18 turnovers). | Partly: the 306 official 2025-26 results were compiled by the P-521 card, and the ACB box carries turnovers. | It limits explanation, not the issued probability. | Derive the ACB total, margin, pace and turnover references from those official results before a further ACB card (`BASE_RATES_REGISTER.md` §7 `NOT_YET_DERIVED:acb`). |
+| 2 | The winner probability 0.643 used no continuity correction (P(M > 0) as Φ(5.5/15)). Under the convention the card used for its four contracts, P(M ≥ 1) is 0.6306. | Yes, printed. | Scored as issued; a 0.012 difference. | Apply one continuity convention to the winner row. `CORE_DEFECT`, minor. |
+| 3 | The evidence freeze was 17 s before the scheduled start and the card was issued after the tip. | Yes (request timing). | `LIVE_ISSUED`. | Start the core at least 90 minutes before the start. |
+| 4 | Two coaches new to the sample (Lakovic; a rebuilt Zaragoza) were flagged but not quantified. | Partly. | Unknown. | Keep them as width, never a lean (G-L2, `M11`). |
+
+**Kill paths that occurred (issued).** Slow game, total ≤ 169 (0.3327): occurred, killing both Overs. Tenerife margin ≤ 3 (0.4470): occurred, killing Tenerife −3.5. Tenerife margin ≥ 10 (0.3949): did not occur.
+
+**The three questions.** (1) *Turned on:* a total 16.5 points below the card's centre in a game decided by one basket, with 18 Zaragoza turnovers, Tenerife's 3/16 fourth-quarter shooting, and both teams under their reference scoring. (2) *Knowable before issue:* the roster and coaching uncertainty was; the scoring shortfall was not. (3) *Smallest justified change:* none to any probability, rank, width or centre. The winner-row continuity point (G2) is a presentation repair; nothing is promoted.
+
+#### 3.18 The eight validation questions
+
+1. **Confirmed lineups obtained?** Yes: the ACB match-sheet starters, fetched 20:57-20:59 AEST while `NOT_STARTED`, equal ACB's `isStarted` flags exactly.
+2. **Bench and rotation lists?** Yes: both 12-player sheets, equal to the final box.
+3. **Coaching information?** Yes: Lakovic and García de Vitoria, equal to the record.
+4. **Injuries, suspensions, rest, late withdrawals?** Yes: the ACB Jornada 1 medical report; Bango and Giedraitis absent, as stated.
+5. **Sources accurate and current?** Yes for the card's facts I re-checked (starters, benches, coaches, absences, start time, the arithmetic). I did not re-audit the 2025-26 game-log averages. The embedded settlement's citations were not accurate (items 1-11).
+6. **Better sources available?** For pregame, no gap in identity or availability. There was no ACB baseline source (a data gap, blind spot 1).
+7. **Blind spots?** Section G.
+8. **Future handling?** The G-table checks; nothing is promoted.
+
+---
+
+#### 3.19 Ledger rows (`CARD_AND_LOG_TEMPLATES.md` §6): listed for transparency, **NOT COUNTED**
+
+Not appended to `SKILL_BASELINE_LEDGER.md`: both cards are `LIVE_ISSUED` (rule 7 requires a verified pregame core freeze), and the 2026-09-29 formal exclusion stands. A forced pair counts once (P-518 Over 8.5); a covering pair counts as two rows.
+
+| Decision | Card | Rank | Contract (as issued) | Family | Card p | Baseline p | Baseline population (leak-free) | Result |
+|---|---|---:|---|---|---:|---|---|---|
+| P-518-R1 | P-518 | 1 | Mets +1.5 | handicap | 0.640 | 0.638 | provenance not printed on the card (`BASE_RATES_REGISTER.md` §7 MLB 2026) | W (NOT_COUNTED) |
+| P-518-R2 | P-518 | 2 | Nationals +1.5 | handicap | 0.635 | 0.638 | same | L (NOT_COUNTED) |
+| P-518-R3 | P-518 | 3 | Over 8.5 | total | 0.590 | 0.491 | same | L (NOT_COUNTED) |
+| P-522-R1 | P-522 | 1 | Combined Total: Over 169.5 Points | total | 0.667 | `NOT_YET_DERIVED` | — | L (NOT_COUNTED) |
+| P-522-R2 | P-522 | 2 | Tenerife −3.5 | handicap | 0.553 | `NOT_YET_DERIVED` | — | L (NOT_COUNTED) |
+| P-522-R3 | P-522 | 3 | Combined Total: Over 179.5 Points | total | 0.457 | `NOT_YET_DERIVED` | — | L (NOT_COUNTED) |
+| P-522-R4 | P-522 | 4 | Zaragoza +9.5 | handicap | 0.605 | `NOT_YET_DERIVED` | — | W (NOT_COUNTED) |
+
+## 4. General Learnings, Rule Changes, Observations and New Sources
+
+The rule inventory is closed (`CURRENT_RULES.md` §D9). **No rule, control, flag, weight, cap or TESTING row is created here.** No single game creates a coefficient.
+
+### Cross-sport
+- **The embedded working settlements were written, not read.** For both cards, the process narratives, lineup diff, lineage citations and player lines disagree with the official feeds (P-518 register items 1-12; P-522 items 1-11). The lineage links pointed to other games (ESPN 401696434 is a 2025 game; acb.com 105379 is Burgos v Baskonia; a Baseball-Reference URL was dated the next day, and the site is blocked from here). This is the `M26`, `M25`, `M21`, `M20`, `M29` and `M35` pattern (`C-PROCESS-RECORD-PROVENANCE`, `C-SETTLEMENT-FROM-FEED`). The existing controls cover it; the failure was execution. The repository adapter (`research/src/feeds.py`) and this append are the sourced replacement.
+- **Two cards issued after the start** (P-518 26 s after the first pitch; P-522 about two minutes after the scheduled start) were correctly labelled `LIVE_ISSUED`; the P-518 label was checked against the feed's first-pitch stamp, and P-522's rests on the card's own receipt (the tip time is `NOT_RETRIEVED`).
+- **Covering and forced pairs** made half of each top-two record arithmetic (P-518 Hit@2 1/2 is mechanical).
+
+### Sport-specific
+- **Baseball (P-518):** Early's rehab return produced 3.0 IP on 34 pitches against a modelled 50-65 pitch ceiling: innings in range, pitch count below (n = 1). Three Mets home runs (two by Mauricio) came in a game with 16 mph wind in from left field; one game, no inference. The Washington bullpen conceded all seven runs but the offence scored one.
+- **Basketball (P-522):** ACB box arithmetic (estimated possessions about 73-77 per side; 106-109 points per 100 possessions) is not comparable with any ACB reference because none is derived. Two ACB cushion rows flipped by RM-1 (P-521 Breogán +5.5, q 0.323; P-522 Zaragoza +9.5, q 0.342) both won; n = 2, both cards excluded.
+
+### Parked lessons (text for `LEARNINGS_INDEX.md` §10; **not applied**, because this session's write scope was Part 6 only)
+| Date | Card(s) | Observation | Evidence |
+|---|---|---|---|
+| 2026-09-30 | P-518 | The card's printed adjustments (+0.45, +1.10, +0.65, −0.60) sum to +1.60 while its printed net is +1.05; the centre 10.00 is not reproducible from them (an implied 10.55, which would have raised P(Over 8.5) from 0.5915 to 0.6449). It did not cause the loss. | This file, P-518 §3.8 G1 |
+| 2026-09-30 | P-518 | An ESPN event ID cited from memory was a 2025 game. The correct event resolves from `scoreboard?dates=YYYYMMDD` (401817091). | P-518 §3.1 wrong-event finding |
+| 2026-09-30 | P-522 | ACB match IDs are sequential inside a jornada: `acb.com/partido/ver/id/105379` is Burgos v Baskonia; the page title shows the teams and identifies a wrong event at once. | P-522 §3.10 |
+| 2026-09-30 | P-518 | Early (rehab return): 3.0 IP, 34 pitches, 1 H, 0 R against a modelled 50-65 pitch and 2.1-3.2 IP ceiling; the Washington bullpen then allowed 7 runs. n = 1. | P-518 §3.3, §3.8 |
+| 2026-09-30 | P-521, P-522 | Both RM-1 `SIDE_FLIP` ACB cushion rows (q 0.323 and 0.342) won. n = 2, both `LIVE_ISSUED`, both excluded; the pipeline ranks new cards by p, so this is a read-out item only. | P-522 §3.17 C |
+| 2026-09-30 | P-522 | An ACB pace, efficiency and turnover reference is `NOT_YET_DERIVED`; the embedded "pace suppression" claim (68 possessions) is contradicted by an estimate of 73-77. | P-522 §3.16 items 8, 11 |
+| 2026-09-30 | P-518, P-522 | Custody labelling: the Git blob at `753f0a9` hashes to `eea87ebd…`; the recorded "original raw-byte SHA `c4d497bf…`" is the SHA of the 141,740-byte CRLF working block that `VERIFICATION_PROTOCOL.md` §1 extracts. Both are reproducible; the label should say which. | Verified 2026-09-30; see the write-scope row above |
+
+### Source improvements (proposals; documentation only)
+- **ESPN MLB.** Resolve the event ID from `scoreboard?dates=YYYYMMDD`; the adapter list in `research/src/feeds.py` has no MLB ESPN route, so ESPN is a manual second lineage.
+- **Yahoo Sports MLB** (new, unpromoted): the game page `https://sports.yahoo.com/mlb/<away>-<home>-<gameid>/` carries JSON-LD (`EventCompleted`, `finalScore`, location). The scoreboard `?date=` follows the caller's timezone (Sunday 27 September AEST held the US Saturday game). Proposed tier: secondary. One good result never promotes a source.
+- **Baseball-Reference:** confirmed `BLOCKED` (403 direct; `r.jina.ai` `AbuseAlleviationError`). It cannot be listed as an opened lineage from here.
+- **ACB Live:** the match page embeds a JSON payload (match header with `status FINALIZED` and `quarterScores`; `statsByPeriods` with per-player `isStarted`, minutes and points; a shot log with running score). It carries no attendance, referee or duration value. `acb.com/partido/ver/id/N` renders the same page (one lineage). Working second and third routes: the club report (`cbcanarias.net`) and independent Aragón media. Sofascore's API and Proballers returned 403.
+- **CB Canarias official site:** worked; the report was posted about three hours after the game.
+
+### Data-quality issues
+- Embedded working settlements: P-518 register items 1-18; P-522 register items 1-17.
+- Custody label: see the last parked line.
+- The embedded Section 1 table lists P-518's start as 2026-09-28 03:05 AEST (verified 2026-09-27 02:35 AEST).
+- P-518's freeze (16:37:50Z) is 26 s after the first pitch event; the issued card's own label was correct.
+
+### Recurring blind spots
+- Printed arithmetic not reproducible in full (P-518 centre).
+- No league baseline for a new competition (ACB): the departure ledger and Brier comparison are unavailable.
+- Requests that leave no room for a pregame freeze (both cards).
+
+### Items needing more evidence
+- Whether RM-1 cushion flips in ACB and other European basketball are calibrated (n = 2 late-issued rows).
+- Whether Tong's and Early's outings say anything about rehab-return exposure (n = 1).
+
+## 5. Document Update Mapping
+
+| Item | Target file and section (or proposed new file and purpose) | Status |
+|---|---|---|
+| P-518 and P-522 sourced settlement, corrections registers, retrospectives | This file, §3 (this working continuation) | DONE |
+| Mark the P-518 and P-522 rows of the reconciliation table as "sourced settlement appended 2026-09-30; issue cutoff verified; exclusion unchanged" | `P518_P522_RECONCILIATION.md`, table rows P-518 and P-522 | TODO (maintainer; outside this session's write scope) |
+| Record that P-518 and P-522 now have a sourced settlement append, with the formal exclusion still in force | `GAME_LOG_STATUS_CURRENT.md` | TODO (maintainer) |
+| Add the seven parked lines above | `LEARNINGS_INDEX.md` §10 | TODO (maintainer) |
+| ESPN event-ID resolution; Yahoo Sports game page as a third structured MLB lineage; Baseball-Reference `BLOCKED` | `SOURCES.md` §3.1 | TODO (maintainer) |
+| ACB Live payload structure; the 105379 wrong-event trap; club and regional-media routes; Sofascore and Proballers 403 | `SOURCES.md` §3.2, ACB row | TODO (maintainer) |
+| Clarify the block-SHA label (Git blob `eea87ebd…` versus the 141,740-byte CRLF block `c4d497bf…`) | `P518_P522_RECONCILIATION.md` (header); `VERIFICATION_PROTOCOL.md` §1; the Part 6 top custody note | TODO (maintainer; documentation) |
+| Embedded row "Card P-518 settled" and "Card P-522 settled" (target `PREDICTION_LOG_COMBINED_5.md`) | Part 5 is closed to new cards and canonical import needs the reconciliation gates | DECLINED (superseded by this append; no canonical import made) |
+| Embedded row "Status update: next ID advances to P-523" | `GAME_LOG_STATUS_CURRENT.md` | DONE (the file already says P-523) |
+| Embedded `TESTING: C-BASKETBALL-CUSHION-GATE` and `TESTING: C-SEASON-OPENER-WIDTH-EXPANSION` (from P-521/P-522) | `RULES_BASKETBALL.md`; `BASE_RATES_REGISTER.md` §7.8; `LEARNING_REGISTER.md` | DECLINED as rules or tests: the inventory is closed (§D9) and one or two games create no coefficient (L-087, `M27`); parked as the P-521/P-522 and ACB-reference lines above |
+| Embedded "Rehab starter bullpen exposure observation" (P-518) | `RULES_BASEBALL.md` §0 and §4 control 25 | DECLINED as a rule; parked (Early, n = 1) |
+| Embedded "ACB Live Stats API validation" | `DATA_SOURCE_REGISTER.md` (no such file in the current tree) | DECLINED (file absent); the ACB row in `SOURCES.md` §3.2 is the target, see the source-improvement row above |
+| Ledger rows for P-518 and P-522 | `SKILL_BASELINE_LEDGER.md` prospective rows | DECLINED (`LIVE_ISSUED`; rule 7 fails; listed in §3.19 as NOT_COUNTED) |
+| Embedded `TESTING: C-STREAK-FADE-GATE`, the KBO and AFLW items | (P-519 and P-520 are outside this session) | NOT REVIEWED |
+
+## Lists
+
+**Settled entries, first to last:**
+1. P-518 — MLB, New York Mets 7, Washington Nationals 1 (gamePk 822678; `LIVE_ISSUED`).
+2. P-522 — Liga Endesa, Casademont Zaragoza 81, La Laguna Tenerife 80 (ACB 105380; `LIVE_ISSUED`).
+
+**Entries still awaiting settlement, first to last:** none of the two requested. P-519, P-520 and P-521 were **not processed** because they were outside this instruction; each keeps its reconciliation status.
+
+---
+
+# Part 6 working continuation — 2026-09-30 (AEST): session opening, no prediction issued
+
+| Item | Value |
+|---|---|
+| Governing method | MDS-2026.09.29-v6.0 · CR-2026.09.29-P1 · SCV-2026.09.19-v2; copied from METHOD.md header at session read |
+| Freeze with every card | `CONTROL_MANIFEST_2026-09-29-3.md`, normalized-CRLF SHA-256 `d23995fd00020cb3a90dea4adf96c215b49b2e25fb535460e032c7b160e4b3d7`; name and SHA copied from the Current freeze receipt line in GAME_LOG_STATUS_CURRENT.md |
+| Session read (reading gate) | CURRENT_RULES.md in full; CARD_AND_LOG_TEMPLATES.md §1 (including §1A), §5; SOURCES.md §1 in full — read completed 2026-09-30 17:58:52 +10:00 AEST (Australia/Sydney) under receipt SHA `d23995fd0002`. Re-read when the receipt SHA changes. Session layout §3 and universe §4 also read |
+| Per-card reads | Before each card: RULES_<SPORT>.md §0 (+ relevant league rules); SOURCES.md §3.x; Part 6 custody note and unsettled section; Part 5 top canonical snapshot. No sport §0 page read for this opening |
+| Next new prediction ID | **P-523**. Part 6 top custody note authorizes P-523 onward; the complete continuation after the END marker contains settlement appends for P-518/P-522 but no new P-523+ card. Its prior session row still says P-523. Part 5 top snapshot and GAME_LOG_STATUS_CURRENT.md agree. P-518–P-522 remain reserved. This opening consumes no ID; recheck the tail before issuance |
+| Status | LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE |
+| Operating mode | SPORTS_ONLY / MARKET_BLIND |
+| Custody verification | Original block: 141,740 bytes, raw SHA-256 `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`, verified before append. Append only to this file, after END ORIGINAL P518 SOURCE BYTES; no other repository or Drive log created |
+| Handshake result | Verified METHOD.md method/control/scoring; verified current receipt name and normalized-CRLF SHA against the copied status-file value; verified pipeline file, Part 6 custody and reserved-ID sequence. The exact three steps and expected values referenced by the user's initial prompt were NOT_SUPPLIED: the supplied prompt-1 reference contains no explicit three-step handshake. These observed checks are not represented as a complete execution of an unspecified handshake |
+| Prompt conflict disposition | Supplied historical prompt-1 reference requests a separate Drive mini log, cited-section precedence, an obsolete guide, q ranking, TESTING candidates and full-log delivery. The user's current instruction controls: Part 6 only; current CURRENT_RULES.md precedence and P-523+ pipeline amendment; lessons parked for LEARNINGS_INDEX.md §10, never new TESTING rules; new-entry-only delivery after prediction queries. Drive fallback applies only if repository writing fails; it was not needed |
+
+## 0. Universe declarations
+
+PENDING — the user has not supplied the day's leagues. Before any card, declare every event in those leagues with feed IDs and verified start times under CARD_AND_LOG_TEMPLATES.md §4. Never edit a declared universe; append dispositions so every event is accounted for by settlement.
+
+## 1. Incomplete / Unsettled Logs
+
+State checks only; no contract grading, settlement correction or retrospective performed. Each fresh state below is supported by one field-owner page, not three terminal lineages. All three remain FINAL-UNSETTLED.
+
+| ID | Event / issued identity | Feed state / result observed | Checked (AEST) | Open item |
+|---|---|---|---|---|
+| P-519 | Gold Coast Suns(W) v St Kilda(W), AFLW 8942 | FINAL: exact match centre says Full Time; Gold Coast 69–39 St Kilda | 2026-09-30 17:54:57 | Working settlement cites 7412; append source-backed event-reference correction, check issue timing, injury/process claims, issued baseline literals and independent terminal lineages |
+| P-520 | Hanwha Eagles @ Lotte Giants, KBO, 2026-09-27, Sajik 17:00 KST; durable issued game ID NOT_PRESERVED | FINAL: date-specific KBO scoreboard says HANWHA 6 FINAL 2 LOTTE | 2026-09-30 17:55:17 | Bind exact fixture/cutoff and stable identity; audit process, baseline provenance and independent lineages; retain issued ranks and flag q-order conflict |
+| P-521 | Río Breogán v Asisa Joventut, ACB 105378 | FINAL: exact event section says Final; Breogán 110–104 Joventut | 2026-09-30 17:55:17 | Verify issue timing, process/stat claims and independent terminal lineages; preserve issued diagnostic/NOT_YET_DERIVED baseline literals |
+
+State sources (OPENED): [AFLW 8942](https://www.afl.com.au/aflw/matches/8942); [KBO 2026-09-27 scoreboard](https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-09-27); [ACB 105378](https://live.acb.com/es/partidos/rio-breogan-vs-asisa-joventut-105378/resumen). Check times are session observation timestamps; publication times NOT_RETRIEVED. The ACB page contains unrelated placeholder panels; only the exact 105378 event section was used.
+
+GAME_LOG_STATUS_CURRENT.md open follow-ups, transcribed at 2026-09-30 17:58:52 +10:00 AEST. These are historical register dispositions, not refreshed feed states. Its queue heading says 23; an earlier dated narrative says 22. The enumerated primary table has 23 active handles, listed below; no count or issued record was silently corrected.
+
+| Handle | Parent | Remaining item / recorded disposition |
+|---|---|---|
+| TMP-OPEN-20260917-01 | P-430-C05 | Al Ain corners O3.5: research LOSS, not booked; AFC field-owner record or explicitly reconciled approved provider needed |
+| TMP-OPEN-20260915-04 | P-418 | Drukpa v RTC result NOT_RECOVERED; kickoff conflict; dated second-round official/result source needed |
+| TMP-OPEN-20260915-01 | P-407-C01 | Club Brugge corners O4.5: provisional WIN; Pro League record missing |
+| TMP-OPEN-20260915-02 | P-409-C02 | Troyes corners O2.5: provisional WIN; LFP record missing |
+| TMP-OPEN-20260915-03 | P-410-C05 | Leipzig corners O4.5: provisional WIN; provider split 7/8, DFL record missing |
+| TMP-OPEN-20260915-05 | P-419-C05 | Total corners O7.5: provisional LOSS; Allsvenskan record missing |
+| TMP-OPEN-20260914-01 | P-399-C02 | Total corners O8.5: provisional WIN; Serie A record missing |
+| TMP-OPEN-20260914-02 | P-401-C01 | Total corners O8.5: provisional WIN; Allsvenskan record missing |
+| TMP-OPEN-20260914-03 | P-401-C03 | IFK corners O4.5: provisional WIN; controlling record still missing |
+| TMP-OPEN-20260912-01 | P-377-C02 | Total corners O8.5: provisional LOSS; ESPN has no statistics |
+| TMP-OPEN-20260911-01 | P-368-C02 | Total corners O7.5: provisional research WIN; independence/frozen-provider gap |
+| TMP-OPEN-20260911-02 | P-369-C01 | Total corners U10.5: provisional research LOSS; independence/frozen-provider gap |
+| TMP-OPEN-20260909-01 | P-341-C03 | Total corners O7.5: UNSETTLEABLE to frozen standard; stale ESPN Uganda route |
+| TMP-OPEN-20260909-02 | P-342-C03 | Total corners O8.5: provisional research WIN |
+| TMP-OPEN-20260909-03 | P-126 | Corners/event identity: IDENTITY_STATE_CONFLICT — UNRESOLVED |
+| TMP-OPEN-20260909-04 | P-148-C02 | Toluca team corners: provisional LOSS |
+| TMP-OPEN-20260909-05 | P-149-C02 | Ventura team corners: provisional WIN |
+| TMP-OPEN-20260909-06 | P-176-C05 | Amiens/Versailles corners U10.5: provisional WIN |
+| TMP-OPEN-20260909-07 | P-178-C05 | Cannes/Le Puy corners U10.5: provisional LOSS |
+| TMP-OPEN-20260909-08 | P-179-C05 | Thionville/Paris 13 corners U10.5: provisional WIN |
+| TMP-OPEN-20260909-09 | P-233 | Beijing/Lanzhou corners O8.5: provisional WIN |
+| TMP-OPEN-20260909-10 | P-234-C03 | Dalian/Shenhua corners O8.5: provisional WIN; disruption noted |
+| TMP-OPEN-20260909-11 | P-235 | Shandong/Shanghai Port corners O8.5: provisional WIN |
+
+| Documentary handle | Parent | Open follow-up |
+|---|---|---|
+| TMP-AUDIT-20260912-01 | P-250-C05 | China FA Cup field-owner/data-partner corner record; no route recovered |
+| TMP-AUDIT-20260912-02 | P-251-C05 | Lega Serie A record; ESPN research WIN not the frozen provider |
+| TMP-AUDIT-20260912-05 | P-265-C05 | Leagues Cup official corner record; threshold/provider sensitive |
+| TMP-AUDIT-20260912-03 | P-255-C05 | UNRESOLVED_PERIOD: regulation corner split or valid sourced bound; prior WIN withdrawn |
+| TMP-AUDIT-20260912-04 | P-256-C05 | UNRESOLVED_PERIOD: regulation corner split or valid sourced bound; prior WIN withdrawn |
+
+## 2. Temporary-ID / Canonical-ID Conflict Logs
+
+No new conflict or TMP record issued. P-518–P-522 remain reserved under reconciliation. Part 5 remains canonical through P-517. The status register has not incorporated the earlier 2026-09-30 P-518/P-522 settlement append: its broader five-card reconciliation language is not evidence that those two are still unsettled. Canonical custody/performance exclusion remains a separate issue.
+
+## 3. Fully Settled Logs
+
+No new settlements. The prior 2026-09-30 append settles P-518 and P-522 as LIVE_ISSUED learning-only records; that append remains the sourced record and their performance exclusion stands.
+
+## 4. General Learnings, Rule Changes, Observations and New Sources
+
+No prediction or retrospective; no new lesson promoted, rule or TESTING candidate created. Any later lesson is one parked line for LEARNINGS_INDEX.md §10 with its evidence pointer. No independent live-card skill claim follows from these state checks.
+
+## 5. Document Update Mapping
+
+| Item | Target file and section (or proposed new file and purpose) | Status |
+|---|---|---|
+| Session receipt, reading gate, next ID and queue readback | prediction logs/PREDICTION_LOG_COMBINED_6.md, this session block §§0–3 | DONE |
+| Reconcile current status register with P-518/P-522 sourced append and dated queue count | GAME_LOG_STATUS_CURRENT.md, current queue correction and primary follow-up queue; P518_P522_RECONCILIATION.md, P-518/P-522 rows | TODO, separate maintainer scope; no edits in this opening |
+| Future evidence-backed lessons | LEARNINGS_INDEX.md §10, parked lines only | No lesson generated in this opening |
+
+### Check-time correction (session opening only)
+
+The exact observation second for the P-520 and P-521 follow-up extraction was NOT_RECORDED. Their two `17:55:17` cells above were an unsupported timestamp and must not be used as exact retrieval receipts. The verified observation bound is **2026-09-30 17:54:57–17:58:52 AEST** (UTC clock sampled after the initial page retrievals, through the recorded session-read completion). Feed states and event identities are unchanged. P-519's initial read is timestamped by the 17:54:57 clock observation. No issued card or original source byte changed.
+
+
+<!-- SETTLEMENT-AUDIT-20261001 -->
+## All-log settlement audit — October 1, 2026
+
+This is a completed evidence audit and append-only learning reconciliation. It does not certify every historical settlement. No canonical live issue exists; no new canonical transaction or prospective credit is manufactured. Historical cores, Parts 1–5, original Part 6 source bytes, rank CSVs, normalized legacy views and frozen shadows stay unchanged. Results supported by exact retained endpoints are recorded as diagnostic outcomes. Every missing field and operator definition remains explicit.
+
+Authority at opening: MDS-2026.10.01-v7.0 / CR-2026.10.01-I1 / SCV-2026.10.01-v3. Opening custody: `2026-10-01T07:30:02.379196+00:00`. The old freeze is retained; a versioned receipt records the authorized log/register appends. No model coefficients, rankings, admissions or numerical forecast cores change.
+
+## Scope, counts and measurement
+
+| Item | Count / meaning |
+|---|---|
+| Historical register slots | 522 |
+| Manually claimed mini-log card | 1 |
+| Selected historical IDs reviewed | 115 |
+| Manual claims reviewed | 1 |
+| Inventory-only carried records | 407 |
+| New certified fully settled cards | 0 |
+| Complete ranked-row diagnostic cards | 8 |
+| New/current exact-endpoint diagnostic rows | 34 |
+| Corrected historical ledger fields / identities | 49 / 7; overlaps diagnostic cards |
+| Manual identity/custody correction | 1 |
+| Reviewed IDs retaining specific row/identity/operator/rank blockers | 40 |
+| New operator VOID decisions | 0 |
+| Canonical issue/settlement transactions | 0 |
+| Frozen model-only shadows | 5 |
+| Shadow finals, separate diagnostics | 2 |
+| Future shadows at audit | 3 |
+
+The historical queue contained 35 handles across 34 events: 23 primary result/derivative handles, five documentary/period handles, three reserved final reconciliations and four operator cases. All 35 receive current dispositions. P-136 adds a retirement/operator exception overlooked by the parent settled label. P-518/P-522 get verification of their prior diagnostic corrections. The manual Bolivia claim is a separate unconsumed alias, with four diagnostic goal rows and one unissued unknown corner line. A handle can have resolved sporting arithmetic while its certification work remains open; these counts do not retire handles by silently relaxing the evidence gate.
+
+| Review disposition | IDs / claims |
+|---|---|
+| ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | 22 |
+| CONDITION_NOT_MET_NO_ACTION | 1 |
+| DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | 7 |
+| DIAGNOSTIC_GOAL_ROWS_COMPLETE_CORNER_UNISSUED | 1 |
+| DOCUMENTARY_ATTRIBUTION_REVIEW | 1 |
+| DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | 39 |
+| DOCUMENTARY_RANK_CUSTODY_RECOVERED | 1 |
+| DOCUMENTARY_SUMMARY_CORRECTION | 1 |
+| PRIOR_CORRECTION_CARRIED | 1 |
+| TERMINAL_CENSORED | 1 |
+| TERMINAL_UNSETTLEABLE | 1 |
+| UNRESOLVED_CONTRACT_RANK_MERGE | 9 |
+| UNRESOLVED_IDENTITY | 1 |
+| UNRESOLVED_OPERATOR | 5 |
+| UNRESOLVED_PERIOD | 2 |
+| UNRESOLVED_RANK_CUSTODY | 1 |
+| UNRESOLVED_TARGET_FIELD_OR_PROVIDER | 22 |
+
+Full initial/final census: [initial_and_final_inventory.csv](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/initial_and_final_inventory.csv), 523 unique identities. Raw opening snapshot: [initial.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/initial.json), 42 retained files. All original 2,004 contracts and their missingness remain in the immutable legacy view; no missing probability or baseline is filled. [source_recovery_v2.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/source_recovery_v2.json) recovers 455 literal pointer references from 12 sources, including removed files from pinned Git history. A source-line hash proves custody of a statement, not sporting truth.
+
+## Aggregate scores and limits
+
+| Card / claim | Rows | W–L | Row Brier mean | Target families | Family-equal Brier | Mean log loss |
+|---|---|---|---|---|---|---|
+| P-407 | 5 | 4–1 | 0.17008000 | 4 | 0.13060000 | 0.51946466 |
+| P-410 | 5 | 5–0 | 0.04528000 | 5 | 0.04528000 | 0.22744131 |
+| P-518 | 4 | 2–2 | 0.30725625 | 2 | 0.30725625 | 0.80933532 |
+| P-519 | 4 | 2–2 | 0.41028100 | 2 | 0.41028100 | 1.03506650 |
+| P-520 | 4 | 2–2 | 0.27344475 | 3 | 0.27618467 | 0.74038059 |
+| P-521 | 4 | 2–2 | 0.18995400 | 2 | 0.18995400 | 0.57207268 |
+| P-522 | 4 | 1–3 | 0.27889300 | 2 | 0.27889300 | 0.75449556 |
+| CLAIMED_P-523 | 4 | 2–2 | 0.16930000 | 2 | 0.16930000 | 0.52615260 |
+
+The 34-row descriptive mean Brier is 0.22333282; the eight-card equal-weight mean is 0.23056113. These cards span unrelated sports and endpoints, include live/manual issues and dependent/nested/complementary rows, and were selected because of unresolved custody. Neither is a performance claim. Family means group shared target definitions; they do not turn multi-threshold scores into independent trials. Binary Brier=(p−y)²; binary log loss=−ln(p for WIN, 1−p for LOSS). q is never scored. Push/void/censored rows are omitted with explicit disposition, not assigned y=0.
+
+The separate inherited-literal slice contains 598 rows across 151 cards, mean Brier 0.23255772, using only already logged W/L, a literal numeric p and no normalized exclusion flag. It is not a refreshed settlement cohort. Its omissions and inherited truth limits are visible in [inherited_literal_scores.csv](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/inherited_literal_scores.csv). Do not combine it with the eight-card current endpoint slice or the two NBL shadows.
+
+Performance-eligible cohort size: zero. Approved paired comparator count: zero. Parenthesized0.500, missing/register-not-derived rates and card-derived diagnostics never become approved baselines. Numeric original baseline literals are preserved but their custody is not certified, so comparator scores and incremental skill estimates remain blank. No valid identical-event paired baseline/model comparison exists here; a week-cluster interval or skill p-value would misrepresent missing comparators and this selected mixed cohort. No calibration, model qualification or adjustment benefit is claimed.
+
+## Complete initial and final disposition table
+
+| Identity | Exact original event label | Initial status | Current disposition | Review |
+|---|---|---|---|---|
+| P-001 | Welsh Fire Women v Trent Rockets Women, The Hundred Women's 11th Match (carried over from legacy V6-022) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-002 | Philadelphia Phillies @ Miami Marlins (MLB regular season) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-003 | FC København v Polissya Zhytomyr (UEFA Conference League, Q2, 2nd leg) | FINAL / CLOSED; old corner terminal unsettleable | TERMINAL_UNSETTLEABLE | True |
+| P-004 | MI London (Men) v London Spirit (Men), The Hundred Men's Competition 2026 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-005 | Texas Rangers @ Tampa Bay Rays (MLB regular season) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-006 | Southern Brave (Men) v Birmingham Phoenix (Men), The Hundred Men's Competition 2026 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-007 | Manchester Super Giants (Men) v Trent Rockets (Men), The Hundred Men's Competition 2026 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-008 | New York Yankees @ Chicago Cubs, MLB regular season | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-009 | Indiana Fever @ Portland Fire, WNBA regular season — FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-010 | Carlton v Brisbane Lions, AFL Round 21 — FORECAST (locked 2026-08-01T08:56:26Z / 18:56:26 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians — PREGAME CARD | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-012 | Welsh Fire Women v Southern Brave Women, The Hundred Women's Competition 2026, Match 19 | FINAL / SETTLED | UNRESOLVED_CONTRACT_RANK_MERGE | True |
+| P-013 | Welsh Fire Men v Southern Brave Men, The Hundred Men's Competition 2026, Match 19 | FINAL / SETTLED | UNRESOLVED_CONTRACT_RANK_MERGE | True |
+| P-014 | San Diego Padres (Michael King) at Arizona Diamondbacks (Brandon Pfaadt) | FINAL / SETTLED | UNRESOLVED_CONTRACT_RANK_MERGE | True |
+| P-015 | Sri Lanka Women vs Pakistan Women, 3rd T20I | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-016 | Kiwoom Heroes at Lotte Giants, KBO regular season | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-017 | Sunrisers Leeds Women v London Spirit Women, The Hundred 2026 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-018 | Sunrisers Leeds Men vs London Spirit Men, The Hundred 2026 Match 20 (2026-08-04) | FINAL / SETTLED | UNRESOLVED_CONTRACT_RANK_MERGE | True |
+| P-019 | Manchester Super Giants Women v Welsh Fire Women, The Hundred Women's Competition 2026, Match 21 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-020 | Trent Rockets Women v Birmingham Phoenix Women, The Hundred Women's Competition 2026, Match 22 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-021 | Los Angeles Angels (Reid Detmers) at Baltimore Orioles (Trevor Rogers), MLB | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-022 | Los Angeles Angels (Ryan Johnson) at Baltimore Orioles (Brandon Young), MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-023 | Benfica v Heart of Midlothian, UEFA Europa League qualifying | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-024 | Toronto Tempo @ Portland Fire, WNBA regular season - LIVE FORECAST (appended 2026-08-07 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-025 | Brisbane Lions v Hawthorn, AFL Round 22 - LIVE FORECAST (appended 2026-08-07 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-026 | Birmingham Phoenix Women v Sunrisers Leeds Women, The Hundred 2026 - START-CROSSED/PRE-DELIVERY FORECAST (appended 2026-08-08 AEST) | FINAL / SETTLED | DOCUMENTARY_ATTRIBUTION_REVIEW | True |
+| P-027 | Melbourne v Fremantle, AFL Round 22 - LIVE FORECAST (appended 2026-08-08 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-028 | West Coast v Collingwood, AFL Round 22 - LIVE FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-029 | St Kilda v Carlton, AFL Round 22 - PREGAME FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-030 | Sunrisers Leeds Women v Welsh Fire Women, The Hundred 2026 Match 27 - PREGAME FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-031 | Manchester City v Atletico Madrid, 2026 Coupang Play Series - LIVE FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-032 | London Spirit Women v Birmingham Phoenix Women, The Hundred 2026 Match 28 - START-CROSSED/PRE-DELIVERY FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-033 | Cincinnati Reds at Washington Nationals - PREGAME FORECAST (appended 2026-08-10 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-034 | Baltimore Orioles at Minnesota Twins - PREGAME FORECAST (appended 2026-08-11 AEST) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-035 | Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST | FINAL / SETTLED | UNRESOLVED_CONTRACT_RANK_MERGE | True |
+| P-036 | Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams | FINAL / SETTLED | UNRESOLVED_CONTRACT_RANK_MERGE | True |
+| P-037 | Jamaica Kingsmen vs Guyana Amazon Warriors — CPL | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-038 | Australia vs Bangladesh — 1st Test | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-039 | Manly-Warringah Sea Eagles vs Dolphins — NRL | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-040 | Fremantle vs Adelaide Crows — AFL | FINAL / SETTLED | UNRESOLVED_CONTRACT_RANK_MERGE | True |
+| P-041 | Wolverhampton Wanderers v Blackburn Rovers, EFL Championship Round 1 — PREGAME FORECAST (appended 2026-08-15T02:07:19+10:00) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-042 | Manchester Super Giants Men v Sunrisers Leeds Men, The Hundred Eliminator — LIVE FORECAST (appended 2026-08-15T03:01:20+10:00) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-043 | St. Louis Cardinals at Chicago Cubs, MLB — PREGAME FORECAST (appended 2026-08-15T04:16:53+10:00) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-044 | Richmond v Collingwood, AFLW — PREGAME FORECAST (appended 2026-08-15T16:58:00+10:00) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-045 | Hawthorn v Collingwood, AFL — PREGAME FORECAST (appended 2026-08-15T19:35:00+10:00) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-046 | Chelsea v Real Sociedad, soccer — PREGAME FORECAST (appended 2026-08-15T22:49:00+10:00) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-047 | Bayern Munich v RB Leipzig, soccer — PREGAME FORECAST (appended 2026-08-15T22:59:00+10:00) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-048 | Essendon v Sydney Swans, AFL Round 23 — ZERO-SCORE LIVE-START FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-049 | Doosan Bears at KIA Tigers, KBO regular season — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-050 | Trent Rockets Women v Sunrisers Leeds Women, The Hundred 2026 Final — LIVE ORIGINAL-LINE ASSESSMENT | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-051 | FC Basel v FC Barcelona, senior men's club friendly — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-052 | Athletics at Kansas City Royals, MLB regular season — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-053 | Yomiuri Giants at Yokohama DeNA BayStars, NPB Central League — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-054 | Kiwoom Heroes at Lotte Giants, KBO — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-055 | Detroit Tigers at Pittsburgh Pirates, MLB — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-056 | Arizona Diamondbacks at Boston Red Sox, MLB — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-057 | Minnesota Lynx @ Golden State Valkyries, WNBA — LATE ADMINISTRATIVE IMPORT OF ISSUED CHAT FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-058 | St Kilda v Gold Coast SUNS, AFL Round 24 — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-059 | St. Louis Cardinals (Michael McGreevy) at Cincinnati Reds (Brady Singer), MLB — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-060 | New York Yankees (Gerrit Cole) at Baltimore Orioles (Kyle Bradish), MLB — INCLEMENT-WEATHER START DELAY / ORIGINAL-LINE FORECAST | FINAL / SETTLED | UNRESOLVED_CONTRACT_RANK_MERGE | True |
+| P-061 | Hokkaido Nippon-Ham Fighters at Chiba Lotte Marines | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-062 | West Coast Eagles v Hawthorn (late import) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-063 | Newcastle United v Liverpool (late import) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-064 | Texas Rangers (Kumar Rocker) at Chicago White Sox (José Urquidy), MLB — PRE-FIRST-PITCH FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-065 | Golden State Valkyries at Minnesota Lynx, WNBA regular season — PRE-TIP FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-066 | Atlanta Dream at Los Angeles Sparks, WNBA regular season — PRE-TIP FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-067 | Doosan Bears at KT Wiz, KBO regular season — PRE-FIRST-PITCH FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-068 | Hanwha Eagles at SSG Landers, KBO regular season — PRE-FIRST-PITCH FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-069 | Lotte Giants at KIA Tigers, KBO regular season — PRE-FIRST-PITCH FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-070 | Central Ballester Reserves vs El Porvenir Reserves — START PASSED / LIVE STATE NOT VERIFIED | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-071 | Alejandro Juan Mano vs Alejandro Turriziani Alvarez, ITF M25 Oviedo — DELAYED / NOT STARTED FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-072 | Jelle Sels vs Stijn Paardekooper — DELAYED / NOT STARTED FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-073 | Tobol Kostanay vs Kaisar Kyzylorda — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-074 | Maccabi Herzliya U19 vs Hapoel Rishon LeZion U19 — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-075 | OKS vs Middelfart — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-076 | FK Horní Ředice vs FK Dukla Praha — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-077 | Vincent Weaver vs Aryan Jit Singh — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-078 | SK Brann (W) vs FK Austria Wien (W) — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-079 | Abha vs Al Khaleej Saihat — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-080 | Al Taawoun Buraidah vs Al Fayha — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-081 | Independiente del Valle vs Deportes Tolima — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-082 | CF Monterrey vs Chicago Fire FC — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-083 | Cleveland Guardians at Los Angeles Angels, MLB regular season — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-084 | Washington Mystics at Phoenix Mercury, WNBA regular season — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-085 | Lobos Puebla vs Fuerza Regia, LNBP regular season — LIVE START-CROSSING FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-086 | Club León vs Real Salt Lake — Leagues Cup quarterfinal — START PASSED / LIVE STATE NOT VERIFIED | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-087 | India vs Sri Lanka, 2nd Test, Day 4 — PRE-START DAY-4 LIVE-STATE RESEARCH CARD | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-088 | Howlers Sporting Singtam vs Sikkim Boys Football Club — SFA A Division S-League — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-089 | Hanshin Tigers @ Chunichi Dragons — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-090 | Hokkaido Nippon-Ham Fighters @ Saitama Seibu Lions — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-091 | Tohoku Rakuten Golden Eagles @ Orix Buffaloes — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-092 | Doosan Bears @ KT Wiz — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-093 | NC Dinos @ LG Twins, KBO regular season — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-094 | Yorkshire Women vs Surrey Women, Metro Bank One Day Cup Women — TOSS COMPLETE / PRE-FIRST-BALL FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-095 | TSG Hawks @ Fubon Guardians, CPBL regular season — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-096 | Rakuten Monkeys @ CTBC Brothers, CPBL regular season — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-097 | Wei-Chuan Dragons @ Uni-President 7-ELEVEn Lions, CPBL regular season — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-098 | Vietnam vs Thailand, ASEAN Hyundai Cup 2026 Final Leg 2 — PRE-KICKOFF-DATA VIEW | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-099 | Rotterdam Dockers vs Amsterdam Flames, European T20 Premier League 2026 — TOSS COMPLETE / PRE-FIRST-BALL VIEW | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-100 | Apollon Limassol Women vs FH Hafnarfjordur Women, UEFA Women's Europa Cup 2026/27 — PREGAME FORECAST | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-101 | Germany Women vs Türkiye Women, international friendly — PREGAME FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-102 | VfL Wolfsburg Women vs Inter Women, UEFA Women's Champions League 2026/27 — PREGAME FORECAST | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-103 | Tampa Bay Rays at Detroit Tigers | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-104 | Ajax Women vs Real Madrid Women — UEFA Women's Champions League third qualifying round, first leg — PREGAME | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-105 | Al Ahli Saudi FC vs Auckland FC — FIFA Intercontinental Cup 2026, African-Asian-Pacific Cup Playoff — PREGAME | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-106 | Newcastle United vs West Bromwich Albion — Carabao Cup Second Round — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-107 | Bradford City vs Burnley — Carabao Cup Round 2 — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-108 | Tottenham Hotspur vs Charlton Athletic — Carabao Cup Round 2 — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-109 | Chicago Cubs @ Arizona Diamondbacks — MLB regular season — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-110 | Kei Nishikori vs Michael Antonius — US Open Men's Qualifying Q2 — DELAYED / NOT STARTED | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-111 | Boston Red Sox @ Miami Marlins — MLB regular season — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-112 | Minnesota Twins @ Athletics — MLB regular season — PREGAME | FINAL / SETTLED | DOCUMENTARY_SUMMARY_CORRECTION | True |
+| P-113 | Club América vs Columbus Crew — Leagues Cup 2026 Quarterfinal | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-114 | India vs Sri Lanka, 2nd Test, Day 5 — PRE-DAY-5 LIVE-STATE FORECAST | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-115 | Belfast Wolves vs Dublin Guardians, European T20 Premier League 2026 — START-CROSSED / NOT STARTED | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-116 | Brisbane Broncos vs Melbourne Storm — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-117 | ISI Dangkor Senchey FC vs Life FC Sihanoukville — PREGAME | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-118 | Sandro Kopp vs Martin Krumich — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-119 | Noah Karma vs Alessandro Hunziker — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-120 | Guinea vs South Sudan — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-121 | Sardarapat FC vs FC Syunik — Armenian Cup | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-122 | Bahrain vs Oman — PREGAME | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-123 | BuxDU vs Metallurg Bekabad — SCHEDULE-CONFLICT / NO VERIFIED LIVE SCORE | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-124 | Chase Ferguson vs Fumin Jiang — M15 Maanshan 8 Quarterfinal | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-125 | Canberra Brave vs Sydney Bears — 2026 AIHL Goodall Cup Preliminary Final | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-126 | Sikkim Aakraman FC vs Sikkim Boys Club — SFA A Division S-League | IDENTITY/STATE UNRESOLVED; secondary 3-0 candidate, no authenticated reconciliation | UNRESOLVED_IDENTITY | True |
+| P-127 | Iran vs New Zealand — FIBA Basketball World Cup 2027 Asian Qualifiers | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-128 | Auckland vs Bay of Plenty — Hilux NPC Round 5 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-129 | Manly Warringah Sea Eagles vs St George Illawarra Dragons — NRL Round 26 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-130 | Beitar Haifa Yakov vs Hapoel Bnei Arrara Ara — Israel State Cup 2026/27 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-131 | Penrith Panthers vs Canterbury-Bankstown Bulldogs — NRL Round 26 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-132 | RC Vannes Sevens vs LOU Rugby Sevens — In Extenso SuperSevens, Pau | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-133 | Arthur Géa vs Nishesh Basavareddy — US Open 2026 Men's Qualifying Final | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-134 | Cape Verde vs Guinea — FIBA Basketball World Cup 2027 African Qualifiers | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-135 | Unión de Santa Fe vs Sarmiento — Torneo Clausura 2026 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-136 | James Duckworth vs Arthur Fery — ATP Winston-Salem Open 2026 Semifinal | FINAL / SETTLED | UNRESOLVED_OPERATOR | True |
+| P-137 | Los Angeles Dodgers (Tarik Skubal) @ Detroit Tigers (Drew Anderson) — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-138 | Miami Marlins (Eury Pérez) @ Washington Nationals (Jackson Kent) — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-139 | Falcons @ Dolphins preseason | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-140 | Astros @ Mets | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-141 | Red Sox @ Yankees | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-142 | Rockies @ Braves | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-143 | Giants @ Jets preseason | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-144 | Buccaneers @ Jaguars preseason | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-145 | Rangers @ Brewers | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-146 | Sun @ Fever | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-147 | Gotham v Portland | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-148 | Toluca Femenil v León Femenil | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-149 | Colorado Rapids 2 v Ventura County | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-150 | Montreal @ Winnipeg, CFL | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-151 | Boca Juniors v Lanús | FINAL / SETTLED — Boca 1-0 Lanús (90+3'); Boca 11 corners, Lanús 3; Boca Over 4.5 corners WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-152 | Atlante v León | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-153 | Necaxa v Cruz Azul | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-154 | Vikings @ Broncos preseason | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-155 | Phillies @ Angels | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-156 | Orioles @ Athletics | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-157 | Sacramento @ Reno | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | False |
+| P-158 | Tempo @ Aces | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-159 | Mystics @ Sparks | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-160 | Diamondbacks @ Giants | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-161 | Sultanes @ Toros | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-162 | Te v Ferguson | FINAL / SETTLED — ITF field-owner confirmation recovered | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-163 | Adelaide v West Coast AFLW | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-164 | Lotte @ Nippon-Ham, live | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-165 | Tohoku Rakuten Golden Eagles @ Saitama Seibu Lions — NPB Pacific League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-166 | Melbourne Mustangs vs Canberra Brave — AIHL Goodall Cup Semifinal | FINAL / RESEARCH SETTLED; operator definition unknown | UNRESOLVED_OPERATOR | True |
+| P-167 | Kiwoom Heroes @ Doosan Bears — KBO | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-168 | LG Twins @ Lotte Giants — KBO | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-169 | Melbourne vs Carlton — AFL Wildcard Final | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-170 | North Queensland Cowboys vs Wests Tigers — NRL | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-171 | Glasgow Cosmic vs Dublin Guardians — European T20 Premier League | FINAL / SETTLED | UNRESOLVED_CONTRACT_RANK_MERGE | True |
+| P-172 | Liverpool vs Nottingham Forest — English Premier League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-173 | Chengdu Rongcheng vs Liaoning Tieren (Ironman) — Chinese Super League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-174 | Henan vs Chongqing Tonglianglong — Chinese Super League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-175 | South Africa vs Zimbabwe — Namibia T20I Tri-Series | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-176 | Amiens SC vs FC Versailles — France Ligue 3 | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-177 | SC Aubagne Air Bel vs Bourg-en-Bresse Péronnas — France Ligue 3 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-178 | AS Cannes vs Le Puy-en-Velay — France Ligue 3 | FINAL / PARTIAL; corner field pending (provisional LOSS at inherited 16) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-179 | Thionville Lusitanos vs Paris 13 Atletico — France Ligue 3 | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-180 | 1. FC Köln vs TSG Hoffenheim — Germany Bundesliga | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-181 | Coventry City vs Hull City — English Premier League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-182 | Excelsior Rotterdam vs Sparta Rotterdam — Netherlands Eredivisie | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-183 | Levante UD vs Real Betis — La Liga | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-184 | North Carolina vs TCU — NCAA Football | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-185 | Robert Morris @ Wagner — NCAA FCS / NEC | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-186 | Los Angeles Dodgers @ Detroit Tigers — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-187 | Trinbago Knight Riders vs Jamaica Kingsmen — Republic Bank CPL 2026 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-188 | Boston Red Sox @ New York Yankees — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-189 | Alabama A&M Bulldogs vs Howard Bison — Cricket MEAC/SWAC Challenge | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-190 | New Zealand Warriors (W) vs St George Illawarra Dragons (W) — NRLW Round 9 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-191 | Walyalup (Fremantle W) vs Carlton W — AFLW Round 3 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-192 | SSG Landers @ KIA Tigers — KBO | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-193 | Essendon (W) vs Richmond (W) — AFLW Round 3 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-194 | FC St. Pauli vs 1. FC Kaiserslautern — Germany 2. Bundesliga | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-195 | KAA Gent vs Club Brugge — Belgium First Division A | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-196 | Egypt vs Congo DR — FIBA Basketball World Cup 2027 African Qualifiers | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-197 | Feyenoord vs ADO Den Haag — Netherlands Eredivisie | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-198 | Poland vs Germany — FIBA Basketball World Cup 2027 European Qualifiers | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-199 | Frederikshavn White Hawks vs Sønderjyske — Danish Metal Ligaen | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-200 | Herning Blue Fox vs Rungsted Seier Capital — Danish Metal Ligaen | FINAL / RESEARCH SETTLED; operator definition unknown | UNRESOLVED_OPERATOR | True |
+| P-201 | SC Freiburg vs Werder Bremen — Germany Bundesliga | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-202 | Randers FC vs AGF Aarhus — Denmark 3F Superliga | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-203 | RC Deportivo de A Coruña vs Valencia CF — LaLiga | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-204 | Boston Red Sox @ New York Yankees — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-205 | Chicago White Sox @ Minnesota Twins — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-206 | Los Angeles Dodgers @ Detroit Tigers — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-207 | Cagliari vs Inter Milan — Italy Serie A | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-208 | Lazio vs Genoa — Italy Serie A | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-209 | Corinthians vs Santos — Brazil Série A | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-210 | Flamengo vs Botafogo — Brazil Série A | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-211 | Jaime Faria vs Jenson Brooksby — US Open Men's Singles R1 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-212 | McCartney Kessler vs Ekaterina Alexandrova — US Open Women R1 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-213 | Toby Samuel vs Tomas Machac — US Open Men's Singles R1 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-214 | Baltimore Orioles @ Athletics — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-215 | Japan vs Qatar — FIBA Basketball World Cup 2027 Asian Qualifiers | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-216 | Namibia vs Zimbabwe — Namibia T20I Tri-Series 2026 | FINAL / SETTLED | DOCUMENTARY_RANK_CUSTODY_RECOVERED | True |
+| P-217 | Trinbago Knight Riders vs Guyana Amazon Warriors — CPL | FINAL / RESEARCH SETTLED; operator definition unknown | UNRESOLVED_OPERATOR | True |
+| P-218 | Ann Li vs Antonia Ruzic — US Open Women 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-219 | New York Mets (Robert Stock) @ Tampa Bay Rays (Ian Seymour) — MLB 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-220 | San Diego Padres (Michael King) @ Cincinnati Reds (Brady Singer) — MLB 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-221 | Miami Marlins (Ryan Gusto) @ Washington Nationals (Will Dion) — MLB 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-222 | Seattle Mariners (George Kirby) @ Boston Red Sox (Payton Tolle) — MLB 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-223 | New York Yankees at Los Angeles Angels | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-224 | Philadelphia Phillies (Aaron Nola) @ Arizona Diamondbacks (Brandon Pfaadt) — MLB 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-225 | Chun-Hsin Tseng vs Tianhui Zhang — ATP Challenger Zhangjiagang 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-226 | Hanshin Tigers @ Tokyo Yakult Swallows — NPB 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-227 | Hiroshima Toyo Carp @ Chunichi Dragons — NPB 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-228 | Orix Buffaloes @ Tohoku Rakuten Golden Eagles — NPB 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-229 | Hanwha Eagles @ KT Wiz — KBO 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-230 | KIA Tigers @ NC Dinos — KBO 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-231 | LG Twins @ Doosan Bears — KBO 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-232 | Lotte Giants @ Samsung Lions — KBO 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-233 | Beijing Guoan vs Lanzhou Longyuan Athletic — China FA Cup 2026 (quarterfinal, corrected) | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-234 | Dalian Yingbo vs Shanghai Shenhua — China FA Cup 2026 (quarterfinal, corrected) | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-235 | Shandong Taishan vs Shanghai Port — China FA Cup 2026 (quarterfinal, corrected) | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-236 | England Women vs Ireland Women — 1st ODI, 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-237 | Zimbabwe vs South Africa — Namibia T20I Tri-Series 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-238 | Glasgow Cosmic vs Rotterdam Dockers — European T20 Premier League 2026 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-239 | Athletics @ Texas Rangers | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-240 | Chicago White Sox @ Houston Astros | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-241 | Zachary Svajda vs Daniel Altmaier | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-242 | Fabian Marozsan vs Michael Zheng | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-243 | Magda Linette vs Francesca Jones | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-244 | Baltimore Orioles @ Colorado Rockies | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-245 | Alexander Zverev vs Lorenzo Sonego | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-246 | New York Yankees @ Los Angeles Angels | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-247 | Philadelphia Phillies @ Arizona Diamondbacks | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-248 | St. Louis Cardinals @ Los Angeles Dodgers | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-249 | Hanwha Eagles @ KT Wiz | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-250 | Yunnan Yukun vs Chongqing Tonglianglong | INHERITED CLOSED; corner row still unsettleable — no keyless China FA Cup route (re-probed 2026-09-16), see TMP-AUDIT queue | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-251 | Sassuolo vs Frosinone | INHERITED CLOSED; corner row reproduced 2026-09-16 at ESPN `ita.coppa_italia` (6+5 = 11, threshold-invariant research WIN); Lega Serie A record still unreached — see TMP-AUDIT queue and [Part 4 Appendix A](PREDICTION_LOG_COMBINED_4.md) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-252 | Belfast Wolves vs Edinburgh Castle Rockers | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-253 | El Gounah vs Al Mokawloon Al Arab | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-254 | Jan Choinski vs Botic Van de Zandschulp | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-255 | Inter Women vs VfL Wolfsburg Women | Other rows retain recorded status; C05 UNRESOLVED_PERIOD, TMP-AUDIT-20260912-03 reopened 2026-09-17(c) | UNRESOLVED_PERIOD | True |
+| P-256 | Paris Saint-Germain Women vs Eintracht Frankfurt Women | Other rows retain recorded status; C05 UNRESOLVED_PERIOD, TMP-AUDIT-20260912-04 reopened 2026-09-17(c) | UNRESOLVED_PERIOD | True |
+| P-257 | San Diego Padres @ Cincinnati Reds | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-258 | Atlanta Braves @ Washington Nationals | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-259 | New York Mets @ Tampa Bay Rays | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-260 | San Francisco Giants @ Pittsburgh Pirates | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-261 | Toronto Blue Jays @ Cleveland Guardians | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-262 | Trinbago Knight Riders vs Antigua & Barbuda Falcons | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-263 | Jaime Faria vs Carlos Alcaraz | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-264 | Chicago White Sox @ Houston Astros | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-265 | Toluca vs Club León | INHERITED CLOSED; corner row reproduced 2026-09-16 at ESPN `concacaf.leagues.cup` (4+5 = 9 — research WIN at exactly the threshold, provider-sensitive); see TMP-AUDIT queue and [Part 4 Appendix A](PREDICTION_LOG_COMBINED_4.md) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-266 | New York Yankees @ Los Angeles Angels | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-267 | Lanlana Tararudee vs Linda Noskova | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-268 | Hanwha Eagles @ KT Wiz | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-269 | KIA Tigers @ NC Dinos — cancelled before first pitch | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-270 | Canterbury-Bankstown Bulldogs vs Brisbane Broncos | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-271 | Fremantle vs Hawthorn — AFL first qualifying final | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-272 | Naomi Osaka vs Katerina Siniakova | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-273 | Palermo vs Mantova | FINAL / SETTLED — Palermo 5-2 Mantova (HT 2-0); Palermo 3 corners, Mantova 2; Palermo Over 4.5 corners LOSS | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-274 | San Francisco Giants @ Pittsburgh Pirates | FINAL / RESEARCH SETTLED; operator definition unknown | UNRESOLVED_OPERATOR | True |
+| P-275 | Alexander Zverev vs Quentin Halys | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-276 | UAlbany @ Buffalo | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-277 | Athletics @ Seattle Mariners | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-278 | St. Louis Cardinals @ Los Angeles Dodgers | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-279 | Mineros de Zacatecas vs Abejas de León | FINAL / SETTLED (inherited) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-280 | South Sydney Rabbitohs vs Sydney Roosters | FINAL / SETTLED — Rabbitohs 50–20 Roosters | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-281 | Rakuten Monkeys @ Fubon Guardians | FINAL / SETTLED — Rakuten 0–13 Fubon | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-282 | TSG Hawks @ Uni-Lions | FINAL / SETTLED — TSG 0–11 Uni | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-283 | Namibia vs South Africa — tri-series match 6 | FINAL / SETTLED — South Africa 228/4; Namibia 217/3 (20 overs each) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-284 | USA vs China — Women’s World Cup | FINAL / SETTLED — USA 94–61 China | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-285 | Korea vs Nigeria — Women’s World Cup | FINAL / SETTLED — Korea 99–81 Nigeria | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-286 | Glasgow Cosmic vs Belfast Wolves — Match 13 | FINAL / SETTLED — Belfast 146/3; Glasgow 120/8 (12 overs each) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-287 | Alexander Bublik vs Tommy Paul — US Open R3 | FINAL / SETTLED — Paul won 6–4, 3–6, 6–7(4), 6–1, 6–3 | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-288 | Athletics @ Seattle Mariners — September 4 local | FINAL / SETTLED — Athletics 7–6 Mariners; Mariners -1.5 LOSS | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-289 | Western Bulldogs vs Sydney Swans — Round 4 | FINAL / SETTLED — Bulldogs 60–33 Sydney (9.6–5.3) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-290 | FC Juárez vs Pachuca — Liga MX | FINAL / SETTLED — Pachuca 2–0 | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-291 | Ben Shelton vs Denis Shapovalov — US Open R3 | FINAL / SETTLED — Shelton d. Shapovalov 7-6(3), 6-7(5), 6-3, 6-4 (25–20 games); Shapovalov +5.5 games WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-292 | Euro-Yroke/St Kilda vs North Melbourne — AFLW | FINAL / SETTLED — North Melbourne 14.15 (99) d. St Kilda 1.1 (7); Under 89.5 LOSS | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-293 | Yartapuulti/Port Adelaide vs Gold Coast — AFLW | FINAL / SETTLED — Gold Coast 2.5 (17) d. Port Adelaide 1.8 (14); Gold Coast +13.5 WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-294 | Newcastle Knights (W) vs Canterbury-Bankstown Bulldogs (W) — NRLW Round 10 | FINAL / SETTLED — Newcastle 56–22 Canterbury; Under 48.5 LOSS, Knights -15.5 WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-295 | North Queensland Cowboys vs Canberra Raiders — NRL Round 27 | FINAL / SETTLED — Raiders 50–30 Cowboys (major upset, Coby Black debut record); Under 56.5 LOSS, Cowboys -5.5 LOSS | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-296 | Doosan Bears @ SSG Landers — KBO | FINAL / SETTLED — SSG 3–2 Doosan; Under 10.5 WIN, SSG +1.5 WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-297 | Hanwha Eagles @ Lotte Giants — KBO | FINAL / SETTLED — Hanwha 11–6 Lotte; Hanwha ML WIN, Under 11.0 LOSS | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-298 | Brisbane Lions (W) vs GWS GIANTS (W) — AFLW Round 4 | FINAL / SETTLED — Brisbane 7.13 (55) d. GWS 3.6 (24); GWS +29.5 LOSS, Under 95.5 WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-299 | Mali (W) vs Spain (W) — FIBA Women's World Cup Group A | FINAL / SETTLED — Mali 82–73 Spain (major upset); Spain -25.5 LOSS, Under 144.5 LOSS | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-300 | Rotterdam Dockers vs Edinburgh Castle Rockers — ETPL Match 14 | FINAL / SETTLED — ECR 148 (19.3 ov) d. Rotterdam 93 (18 ov) by 55 runs; ECR powerplay 28/3; PP Over 50.5 LOSS, PP Under 50.5 WIN, 20-ov Under 168.5 WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-301 | Cronulla Sharks vs Melbourne Storm — NRL Round 27 | FINAL / SETTLED — Melbourne 24–20 Cronulla (last-second try); Storm -8.5 LOSS, Under 52.5 WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-302 | Newcastle United vs AFC Bournemouth — EPL Matchweek 3 | FINAL / SETTLED — 2-2; Bournemouth 3 corners, Newcastle 4; BOU Over 2.5 corners WIN, 1H Over 0.5 WIN, FT Over 2.5 WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-303 | Nigeria (W) vs Hungary (W) — FIBA Women's World Cup Group B | FINAL / SETTLED — Nigeria 81–53 Hungary; Nigeria +25.5 WIN, Under 145.5 WIN | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-304 | Slavia Praha vs Zbrojovka Brno — Chance Liga | FINAL / SETTLED — 4–0, HT 1–0 | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-305 | Dublin Guardians vs Amsterdam Flames — ETPL | FINAL / SETTLED — Amsterdam 169/7 vs Dublin 160/8 | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-306 | Manchester City v Coventry | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-307 | India Women v Pakistan Women | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-308 | Francisco Cerundolo v Taylor Fritz | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-309 | Gardner-Webb v Wofford | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-310 | Luciano Darderi v Dane Sweeny | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-311 | Barbados Women v Trinbago Knight Riders Women | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-312 | Detroit Tigers v Cleveland Guardians | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-313 | Cincinnati Reds v Milwaukee Brewers | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-314 | Los Angeles Angels v Pittsburgh Pirates | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-315 | Melbourne v West Coast (AFLW) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-316 | Doosan Bears v SSG Landers (superseded card) | CANONICAL ALIAS OF P-317; no separate trial | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-317 | Doosan Bears v SSG Landers | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-318 | Henan vs Chengdu Rongcheng — CSL R26 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-319 | Yunnan Yukun vs Liaoning Tieren — CSL R26 | FINAL / SETTLED (`START-CROSSED / LIVE 0-0`) | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-320 | Tianjin Jinmen Tigers vs Zhejiang — CSL R26 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-321 | Sønderjyske vs AC Horsens — Denmark Superliga R7 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-322 | South Africa vs Zimbabwe — Namibia T20I Tri-Series Final | FINAL / SETTLED (`START-CROSSED / TOSS-CONDITIONAL`) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-323 | Everton vs Manchester United — EPL MW3 | FINAL / SETTLED (`EPL PRIMARY_SCORED`) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-324 | Valencia vs Barcelona — LaLiga MD4 | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-325 | Bangladesh W vs Sri Lanka W — Women's Asia Cup M10 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-326 | Western Carolina @ Campbell — NCAA FCS | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-327 | Angers SCO vs Rennes — Ligue 1 | FINAL / SETTLED (best card of cohort) | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-328 | Arsenal vs Chelsea — EPL MW3 | FINAL / SETTLED (`EPL PRIMARY_SCORED`) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-329 | Bologna vs Sassuolo — Serie A MD3 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-330 | Puerto Rico W vs Belgium W — FIBA W WC | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-331 | Milwaukee Brewers @ Cincinnati Reds — MLB | FINAL / SETTLED (`MLB PRIMARY_SCORED`) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-332 | Deportivo Alavés vs CA Osasuna — LaLiga MD4 | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-333 | Pakistan W vs Hong Kong W — Women's T20 Asia Cup Gp A | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-334 | Germany W vs Mali W — FIBA W World Cup Gp A | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-335 | Washington Nationals @ San Diego Padres — MLB | FINAL / SETTLED (`MLB PRIMARY_SCORED`) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-336 | Carabobo FC vs Estudiantes de Mérida — Venezuela Clausura J8 | FINAL / SETTLED — top 3 rows all won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-337 | Barracas Central vs Argentinos Juniors — Argentina Clausura F8 | FINAL / SETTLED — deep retro (R2+R3 lost, winner wrong) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-338 | Iva Jovic vs Coco Gauff — US Open Women's R16 | FINAL / SETTLED — best card of cohort, top 2 won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-339 | Doosan Bears @ Hanwha Eagles — KBO | FINAL / SETTLED — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-340 | Incheon United vs Bucheon FC 1995 — K League 1 R28 | FINAL / SETTLED — top 2 rows both won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-341 | BUL FC vs Ntugasaze FC — Uganda Premier League R3 | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-342 | MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3 | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-343 | Bangladesh W vs UAE W — Women's T20 Asia Cup Gp B | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-344 | Hungary W vs Japan W — FIBA W World Cup Qual. to QF | FINAL / SETTLED — deep Rank-#1 retro; mini-log's stated 0.2834 corrected | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-345 | Club Brugge v Aston Villa — UCL MD1 | FINAL / SETTLED (corner row settled at UEFA this pass) — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-346 | AEK Athens v LASK — UCL MD1 | FINAL / SETTLED — all five rows won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-347 | Rangers @ Mariners (`MLB PRIMARY_SCORED`) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-348 | Blue Jays @ Athletics (`MLB PRIMARY_SCORED`) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-349 | Cardinals @ Giants (`MLB PRIMARY_SCORED`) | FINAL / SETTLED — all four rows won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-350 | Shelton v Alcaraz — US Open men's QF | FINAL / SETTLED — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-351 | Reds @ Dodgers (`MLB PRIMARY_SCORED`) | FINAL / SETTLED — top two won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-352 | Namibia v South Africa — 1st ODI | FINAL / SETTLED — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-353 | Dragons @ Giants — NPB, 9 Sep | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-354 | Carp @ Tigers — NPB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-355 | Sydney FC v Melbourne Victory — Australia Cup SF | FINAL / SETTLED (corner row settled at FotMob this pass) — top two won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-356 | KT @ Samsung — KBO | FINAL / SETTLED — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-357 | Dublin Guardians v Belfast Wolves — ETPL M18 | FINAL / SETTLED — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-358 | Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired) | FINAL / SETTLED — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-359 | Jordan v Chinese Taipei — Asian Games | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-360 | South Korea v Saudi Arabia — Asian Games | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-361 | Dragons @ Giants — NPB, 10 Sep | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-362 | Eagles @ Landers — KBO | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-363 | Roosters W v Bulldogs W — NRLW R11 | FINAL / SETTLED — top two won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-364 | England v Pakistan — 3rd Test (Day-2 card) | FINAL / SETTLED (2026-09-15) — England won by 8 wickets on Day 4 (12 Sep); winner label settled | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-365 | Uni-Lions @ CTBC Brothers — CPBL | FINAL / SETTLED — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-366 | Rotterdam v Glasgow — ETPL M19 | FINAL / CLOSED; C02/C03 terminal censored, other rows settled | TERMINAL_CENSORED | True |
+| P-367 | China W v France W — FIBA WWC QF | FINAL / SETTLED — top two won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-368 | Al Jazira v Al Nasr — UAE Pro League | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-369 | Dubai United v Shabab Al Ahli — UAE Pro League | FINAL / PARTIAL; corner field pending | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-370 | Jamaica Empress W v TKR W — WCPL | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-371 | Belgium W v Germany W — FIBA WWC QF | FINAL / SETTLED — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-372 | — | RESERVED / UNUSED — no record was ever issued under this ID (both external sessions started at P-373 / P-390 / P-407) | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-373 | Tampa Bay Rays @ Atlanta Braves — MLB — 2026-09-10 (Atlanta local) | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-374 | Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10 | FINAL / SETTLED — canonical record for Fenerbahçe v Roma; absorbs TMP-SETTLED-20260911-01 | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-375 | Coco Gauff vs Elena Rybakina — US Open Women — Semifinal | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-376 | San Francisco 49ers vs Los Angeles Rams — NFL Week 1 — Melbourne | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-377 | Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260912-01) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-378 | Philippines vs Bahrain — 2026 Aichi-Nagoya Asian Games Men's Basketball | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-379 | Namibia vs South Africa — 2nd ODI — South Africa tour of Namibia 2026 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-380 | Wests Tigers (W) vs Canberra Raiders (W) — NRLW Round 11, 2026 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-381 | Chiba Lotte Marines @ Fukuoka SoftBank Hawks — NPB Pacific League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-382 | Saitama Seibu Lions @ Orix Buffaloes — NPB Pacific League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-383 | Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-384 | Kiwoom Heroes @ Samsung Lions — KBO League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-385 | KT Wiz @ Lotte Giants — KBO League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-386 | South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-387 | Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-388 | Fremantle Dockers vs Geelong Cats — AFL First Semi-Final | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-389 | Dublin Guardians vs Edinburgh Castle Rockers — ETPL 2026 Match 21 | ADMINISTRATIVE / NO FORECAST (toss gate withheld correctly) | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-390 | Cincinnati Reds @ Milwaukee Brewers — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-391 | Cleveland Guardians @ Minnesota Twins — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-392 | Chicago White Sox @ St. Louis Cardinals — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-393 | Seattle Mariners @ Athletics — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-394 | Parramatta Eels Women vs North Queensland Cowboys Women — NRLW | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-395 | Belfast Wolves vs Rotterdam Dockers — European T20 Premier League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-396 | Brisbane Lions vs Adelaide Crows — AFL Semi Final | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-397 | Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-398 | Racing Santander vs Deportivo Alavés — La Liga | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-399 | Genoa vs Frosinone — Serie A | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260914-01) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-400 | Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-401 | IFK Göteborg vs Halmstads BK — Allsvenskan | FINAL / PARTIAL — C01, C03 corners provisional (TMP-OPEN-20260914-02/-03) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-402 | Tottenham Hotspur vs Everton — Premier League | FINAL / SETTLED (2026-09-15: corners settled at Premier League official record; TMP-OPEN-20260914-04/-05 retired) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-403 | Colorado Rockies @ Detroit Tigers — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-404 | Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-405 | Chunichi Dragons @ Hanshin Tigers — NPB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-406 | Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 | FINAL / SETTLED (2026-09-16: six-over rows settled at ESPN cricket API event 1547895 — Edinburgh 68/2 after 6.0; TMP-OPEN-20260914-06 retired) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-407 | Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League | FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) | DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | True |
+| P-408 | Coventry City vs Brighton & Hove Albion — English Premier League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-409 | Lille OSC vs ESTAC Troyes — French Ligue 1 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260915-02) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-410 | RB Leipzig vs Hamburger SV — German Bundesliga | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-03) | DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | True |
+| P-411 | Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-412 | Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-413 | Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-414 | Buffalo Bills @ Houston Texans — NFL Regular Season Week 1 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-415 | LA Angels @ Washington Nationals — MLB | ADMINISTRATIVE / NOT ISSUED (interrupted) | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-416 | New York Mets @ New York Yankees — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-417 | Chunichi Dragons @ Hanshin Tigers — NPB Central League | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-418 | Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League | OPEN — RESULT NOT RECOVERED (2026-09-16 re-classification): fixture listed by RSSSF Round 15 [Sep 14], unscored, page updated 11 Sep; the earlier "no Drukpa–RTC match" evidence was a BBS report dated 2026-07-17 (TMP-OPEN-20260915-04) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-419 | Djurgårdens IF vs GAIS — Sweden Allsvenskan | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-05) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-420 | Atlanta Braves @ Chicago Cubs — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-421 | New York Yankees @ Minnesota Twins — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-422 | Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-423 | San Diego Padres @ Colorado Rockies — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-424 | Amsterdam Flames vs Dublin Guardians — ETPL 2026 Match 26 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-425 | Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-426 | Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1 | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-427 | Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round | FINAL / SETTLED — deep Rank-#1 retro (top two both lost) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-428 | Edinburgh Castle Rockers vs Rotterdam Dockers — ETPL Match 27 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-429 | Afghanistan vs India — 2nd T20I, Delhi | FINAL / SETTLED — top two both won; both XIs confirmed | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-430 | Al Ain FC vs Al Nassr — AFC Champions League Elite MD1 | FINAL / PARTIAL — C05 corners unresolved (TMP-OPEN-20260917-01); deep Rank-#1 retro | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |
+| P-431 | England vs Sri Lanka — 1st T20I, Southampton | FINAL / SETTLED — top two both won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-432 | KT Wiz @ Hanwha Eagles — KBO | FINAL / SETTLED — game ended 4–4 (terminal tie); winner label did not realise | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-433 | LG Twins @ NC Dinos — KBO | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-434 | Samsung Lions @ Doosan Bears — KBO | FINAL / SETTLED — all four ranked rows won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-435 | SSG Landers @ Lotte Giants — KBO | FINAL / SETTLED — all four ranked rows won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-436 | Jeonbuk Hyundai Motors vs Kashiwa Reysol — AFC Champions League Elite MD1 | FINAL / SETTLED — all five ranked rows won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-437 | Port FC vs Vissel Kobe — AFC Champions League Elite MD1 | FINAL / SETTLED — all five ranked rows won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-438 | Al-Wahda Abu Dhabi vs Kuwait SC — AFC Champions League Two Group A | FINAL / SETTLED — **Rank #1 LOSS; both top two lost**; deep Rank-#1 retro (diagnosis corrected from the mini log's) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-439 | Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A | FINAL / SETTLED — all five ranked rows won (0–0) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-440 | Ararat-Armenia vs Sparta Praha — UEFA Europa League MD1 | FINAL / SETTLED — phase Under won, 90-minute Under lost on the same card | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-441 | Omonia Nicosia vs Celta Vigo — UEFA Europa League MD1 | FINAL / SETTLED — **all five ranked rows won; best card in Part 4** | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-442 | Chicago White Sox @ Cleveland Guardians — MLB | FINAL / SETTLED — **Rank #1 LOSS**; deep retro (middle-relief branch) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-443 | San Francisco Giants @ St. Louis Cardinals — MLB | FINAL / SETTLED — 10 innings; **regulation 4–4, exactly the push at L=8** | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-444 | New York Yankees @ Minnesota Twins — MLB | FINAL / SETTLED — 13 innings; **Rank #1 LOSS; both top two lost**; deep retro (margin identity + extras) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-445 | Barbados Tridents vs Jamaica Kingsmen — CPL 2026 Eliminator | **FINAL / CONDITION NOT MET — all four ranked rows NO ACTION** (Jamaica bowled first; batting-first targets never activated). Process success; excluded from every cohort rate | CONDITION_NOT_MET_NO_ACTION | True |
+| P-446 | Atlanta Braves @ Chicago Cubs — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-447 | Boston Red Sox @ Texas Rangers — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-448 | Kansas City Royals @ Houston Astros — MLB | FINAL / SETTLED — both top two won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-449 | San Diego Padres @ Colorado Rockies — MLB | FINAL / SETTLED | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-450 | Miami Marlins @ Arizona Diamondbacks — MLB | FINAL / SETTLED — both top two won | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-451 | Dorados de Chihuahua vs El Calor de Cancún — LNBP Jornada 20 | **FINAL / BLOCKED AT ISSUE — `BK-P1 = FAIL`, no forecast issued, NOT GRADED.** Final recovered 2026-09-17(b): **Dorados 97–86** (rendered `lnbp.mx/Dorados/team_results.html`) | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-452 | Cricket / Afghanistan vs India T20I Series 2026 — Afghanistan vs India, 3rd T20I | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-453 | Baseball / MLB — Milwaukee Brewers @ Pittsburgh Pirates | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-454 | Soccer / Denmark DBU Pokalen (Betano Pokalen) — Vejle Boldklub vs Brøndby IF | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-455 | Baseball / MLB — Los Angeles Dodgers @ Cincinnati Reds | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-456 | Soccer / Spain LaLiga — Real Betis vs Getafe CF | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-457 | Cricket / Zimbabwe v Australia ODIs 2026 — Zimbabwe vs Australia, 2nd ODI | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-458 | Baseball / NPB Central League — Chunichi Dragons @ Yomiuri Giants | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-459 | AFL / 2026 Toyota AFL Finals Series — Sydney Swans vs Fremantle Dockers, Preliminary Final | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-460 | Baseball / Taiwan CPBL — Rakuten Monkeys @ Fubon Guardians | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-461 | Tennis / WTA 125 Valencia — Clara Burel vs Guiomar Maristany Zuleta De Reales, Quarterfinal | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-462 | Soccer / Chinese Super League — Zhejiang FC vs Wuhan Three Towns | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-463 | Baseball / MLB — Chicago Cubs @ Cincinnati Reds | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-464 | Baseball / MLB — Milwaukee Brewers @ Baltimore Orioles | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-465 | Basketball / WNBA — Indiana Fever @ Toronto Tempo | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-466 | Soccer / Argentina Torneo Clausura — Racing Club vs Sarmiento | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-467 | Baseball / MLB — Toronto Blue Jays @ Texas Rangers | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-468 | Basketball / WNBA — Portland Fire @ Golden State Valkyries | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-469 | Australian Rules Football / AFL Finals — Hawthorn vs Brisbane Lions | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-470 | Baseball / NPB — Saitama Seibu Lions @ Chiba Lotte Marines | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-471 | Basketball / Australia NBL — Melbourne United vs Adelaide 36ers | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-472 | American Football / NCAA FBS — Coastal Carolina @ Delaware | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-473 | Soccer / English Premier League — Nottingham Forest vs Coventry City | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-474 | MLB — Athletics @ Cleveland Guardians | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-475 | WNBA — Chicago Sky @ Atlanta Dream | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-476 | MLB — Minnesota Twins @ Los Angeles Angels | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-477 | Australia NBL — Sydney Kings vs Cairns Taipans | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-478 | Soccer / Sweden Allsvenskan — Djurgårdens IF vs IF Elfsborg | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-479 | Cricket / European T20 Premier League Final — Edinburgh Castle Rockers vs Belfast Wolves | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-480 | Soccer / Denmark Superligaen — Viborg FF vs FC Nordsjælland | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-481 | Soccer / Spain La Liga — Villarreal vs Levante | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-482 | Cricket / CPL 2026 Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen | FINAL / SETTLED / RETROSPECTIVE COMPLETE | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-483 | Tennis / WTA 250 Korea Open (Seoul) R32 — Katie Volynets vs Elvina Kalieva | FINAL / SETTLED / RETROSPECTIVE COMPLETE (ENHANCED) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-484 | WNBA — Atlanta Dream @ New York Liberty | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-485 | NFL — New York Giants @ Los Angeles Rams | FINAL / SETTLED; START_CROSSED / PREGAME STATUS UNVERIFIED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-486 | MLB — Minnesota Twins @ San Francisco Giants | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-487 | WNBA — Dallas Wings @ Phoenix Mercury (22 Sep 2026, 12:00 AEST) | FINAL / SETTLED 2026-09-23(d); pre-tip freeze ~12:01 AEST v actual tip 12:07:42 AEST | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-488 | WTA Singapore — Vivian Wolff vs Oleksandra Oliynykova | FINAL / SETTLED | DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES | True |
+| P-489 | NPB — Chunichi Dragons @ Yokohama DeNA BayStars — **22 Sep 2026, game 24** (Azuma v Muller) | FINAL / SETTLED 2026-09-23; START_CROSSED (outside pregame metrics) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-490 | RESERVED / UNUSED — retired provisional Padres alias | No event maps to this slot; do not reuse | ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL | True |
+| P-491 | NPB — Orix Buffaloes @ Chiba Lotte Marines | FINAL / SETTLED 2026-09-23; PREGAME (clean) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-492 | MLB — San Diego Padres @ Los Angeles Dodgers | FINAL / SETTLED; START_CROSSED / PREGAME STATUS UNVERIFIED | UNRESOLVED_RANK_CUSTODY | True |
+| P-493 | KBO — KIA Tigers @ Doosan Bears (23 Sep) | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-494 | WTA 500 Singapore — Mirra Andreeva vs Aliaksandra Sasnovich | FINAL / SETTLED; **LIVE-ISSUED (outside pregame metrics)**; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-495 | WTA 125 Tolentino — Jessica Pieri vs Leyre Romero Gormaz | FINAL / SETTLED; **Rank-1 failure review** (§(f) E.1); verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-496 | ITF M25 Falun — Iiro Vasa vs Wojciech Marek | FINAL / SETTLED; **R2/R3 grades CORRECTED 2026-09-24(f)** | PRIOR_CORRECTION_CARRIED | True |
+| P-497 | LKL — BC Neptūnas vs BC Juventus | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-498 | LKL — BC Šiauliai vs BC Lietkabelis | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-499 | EuroLeague Women Qualifiers — Flammes Carolo vs KP Brno | FINAL / SETTLED; **Rank-1 failure review** (§(f) E.2); verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-500 | MLB — Washington Nationals @ Detroit Tigers | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-501 | MLB — Toronto Blue Jays @ Baltimore Orioles (DH G1) | FINAL / SETTLED; **Rank-1 failure review** (§(f) E.3); verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-502 | MLB — Chicago White Sox @ Kansas City Royals | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-503 | NHL pre-season — Minnesota Wild @ Dallas Stars | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-504 | WNBA — Atlanta Dream @ New York Liberty (23 Sep ET; a different game from P-484) | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-505 | El Salvador LMB (Clausura R1) — Salvadoreños vs Cojute | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-506 | MLB — Houston Astros @ Seattle Mariners | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-507 | KBO — NC Dinos @ KT Wiz | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-508 | NBL — SE Melbourne Phoenix vs Melbourne United | FINAL / SETTLED; verified 2026-09-24(f) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-509 | NBL — Perth Wildcats vs Adelaide 36ers (RAC Arena, 21:30 AEST 24 Sep; Round 2) | **FINAL / SETTLED 2026-09-24(g)**; **Rank-1 failure review + `TOP_OU_REVIEW`** | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-510 | MLB — St. Louis Cardinals @ Pittsburgh Pirates | FINAL / SETTLED; verified 2026-09-25(e) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-511 | MLB — Los Angeles Angels @ Seattle Mariners | FINAL / SETTLED; verified 2026-09-25(e) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-512 | KBO — Hanwha Eagles @ NC Dinos | FINAL / SETTLED; verified 2026-09-25(e) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-513 | NPB — Hanshin Tigers @ Yokohama DeNA BayStars | FINAL / SETTLED; verified 2026-09-25(e) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-514 | NBL — Illawarra Hawks @ Brisbane Bullets | FINAL / SETTLED; verified 2026-09-25(e) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-515 | NRL — Sydney Roosters @ Dolphins (Preliminary Final) | FINAL / SETTLED; verified 2026-09-25(e) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-516 | NPB — Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (alias `TMP-20260923-NPB-CHU-DB-G25`) | FINAL / SETTLED; verified 2026-09-24(f); canonical ID assigned 2026-09-26(a) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-517 | NBL — Cairns Taipans vs Tasmania JackJumpers — 23 Sep 2026 (alias `TMP-20260923-NBL-CNS-TAS`; formerly claimed P-487) | FINAL / SETTLED 2026-09-23; canonical ID assigned 2026-09-26(a) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |
+| P-518 | MLB New York Mets at Washington Nationals | RESERVED_CLAIM; P518/P522 existing diagnostic appends; P519/P520/P521 reconciliation open | DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | True |
+| P-519 | AFLW Gold Coast vs St Kilda | RESERVED_CLAIM; P518/P522 existing diagnostic appends; P519/P520/P521 reconciliation open | DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | True |
+| P-520 | KBO Hanwha at Lotte | RESERVED_CLAIM; P518/P522 existing diagnostic appends; P519/P520/P521 reconciliation open | DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | True |
+| P-521 | ACB Breogan vs Joventut | RESERVED_CLAIM; P518/P522 existing diagnostic appends; P519/P520/P521 reconciliation open | DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | True |
+| P-522 | ACB La Laguna Tenerife vs Casademont Zaragoza | RESERVED_CLAIM; P518/P522 existing diagnostic appends; P519/P520/P521 reconciliation open | DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | True |
+| CLAIMED_P-523 | Oriente Petrolero vs The Strongest | MANUAL_CLAIM_OUTSIDE_CANONICAL_CUSTODY | DIAGNOSTIC_GOAL_ROWS_COMPLETE_CORNER_UNISSUED | True |
+
+## Every reviewed card: settlement and A–F retrospective
+
+The normalized table is a literal index and may merge conflicting same-rank contracts. The separate historical source rows below preserve those variants instead of choosing a convenient postgame rank. Blank native IDs, start fields, baselines and model artifacts remain unknown. Full issue excerpts for the five reserved cards and the manual claim are retained under `issue_text/` and hashed in `issue_text_index.json`; those derived text hashes are not canonical issue-core receipts.
+
+### Review: P-003 — FC København v Polissya Zhytomyr (UEFA Conference League, Q2, 2nd leg)
+
+**Disposition:** `TERMINAL_UNSETTLEABLE`. Revision `HLR-20261001-P-003`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | this leg | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | KBH 2, Polissya 1 — both scored | NONE_IN_LITERAL_VIEW |
+| 2 | this leg | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 3 goals | NONE_IN_LITERAL_VIEW |
+| 4 | this leg | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Robert scored at 61' | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:952 | bb9eda3ab0b305cebd466c982fbd7393b030ba2d8e1398b2b7a327a727ae0a01 | &#124; 1 &#124; Both Teams To Score — Yes &#124; this leg &#124; `SUPPORTED` &#124; KBH 2, Polissya 1 — both scored &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:953 | 818344909b3f0d319b441adb806a623f5bd0d84bce35180a74d09b46a17268ca | &#124; 2 &#124; Over 2.5 total goals &#124; this leg &#124; `LEAN` &#124; 3 goals &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:955 | 4075f36b26b8c73fe1651d210347a405db0e70b43fc0250ed572b5f25e8afcd4 | &#124; 4 &#124; Robert (KBH #16) — anytime goalscorer &#124; this leg &#124; `LEAN` &#124; Robert scored at 61' &#124; **WIN** &#124; |
+
+
+**B. What happened.** A closed historical corner cannot be recovered to its frozen standard. Preserve the terminal unsettleable disposition; no zero corners, no loss and no ongoing retry invented.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 4 won; wrong: No rank loss established; learn: Treat the this leg win as descriptive; verify its stated mechanism before increasing confidence.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A closed historical corner cannot be recovered to its frozen standard. Preserve the terminal unsettleable disposition; no zero corners, no loss and no ongoing retry invented.
+
+### Review: P-012 — Welsh Fire Women v Southern Brave Women, The Hundred Women's Competition 2026, Match 19
+
+**Disposition:** `UNRESOLVED_CONTRACT_RANK_MERGE`. Revision `HLR-20261001-P-012`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | SBW 100 balls Under 133.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 121 | NONE_IN_LITERAL_VIEW |
+| 2 | SBW 100 balls Over 133.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | 121 | NONE_IN_LITERAL_VIEW |
+| 3 | SBW first 25 balls Under 32.5 / SBW first 25 balls Over 32.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:3009 | 58e15751e5f018d70026196df096456ae4209b704a39d27ed24272ab03e2b271 | &#124; 1 &#124; SBW 100 balls Under 133.5 &#124; `PASS` &#124; 121 &#124; WIN (abstention) &#124; |
+| PREDICTION_LOG_COMBINED.md:3010 | d5831df3a4887a8de845bb23af157600bd209154c0bf43ddf929ee701d2075a5 | &#124; 2 &#124; SBW 100 balls Over 133.5 &#124; `PASS` &#124; 121 &#124; LOSS (abstention) &#124; |
+| PREDICTION_LOG_COMBINED.md:3011 | bb29b1e84eed43acd5a566a76fdb7837e8c3fa399ab0d3b56720053cdb734b9e | &#124; 3= &#124; SBW first 25 balls Under 32.5 &#124; `PASS / UNORDERED PAIR` &#124; 19 &#124; WIN (abstention; no ranking information) &#124; |
+| PREDICTION_LOG_COMBINED.md:3012 | ef5106acd3f6adc30120631ea20852a06203b9d695992bc4b4532d68982ad161 | &#124; 3= &#124; SBW first 25 balls Over 32.5 &#124; `PASS / UNORDERED PAIR` &#124; 19 &#124; LOSS (abstention; no ranking information) &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one. Same-rank contract variants remain separately preserved; a merged index is unsuitable for rank/grade inference. Require original issue-table/core and the dated correction that selects a controlling order; do not choose the outcome-favourable variant.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1 won; wrong: Ranks 2 lost; learn: Stress SBW 100 balls Over 133.5 against 121 and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: storing original ties/contract IDs separately from rank indices eliminates false same-rank result conflicts; check zero merged mutually exclusive contracts before any ranking analysis. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-013 — Welsh Fire Men v Southern Brave Men, The Hundred Men's Competition 2026, Match 19
+
+**Disposition:** `UNRESOLVED_CONTRACT_RANK_MERGE`. Revision `HLR-20261001-P-013`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | SB 100 balls Under 155.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 115 | NONE_IN_LITERAL_VIEW |
+| 2 | SB first 25 balls Over 30.5 / SB first 25 balls Under 40.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 4 | SB 100 balls Over 135.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | 115 | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:3191 | cabf4d0492c69712c1ee2d99844eee912cf772c055f93c8b6aa0558059eedb4d | &#124; 1 &#124; SB 100 balls Under 155.5 &#124; `PASS` &#124; 115 &#124; WIN (abstention) &#124; |
+| PREDICTION_LOG_COMBINED.md:3192 | 18653cb5051d4d17bb9a86a4e0f4deb13791dcda1804a02552b4a33a1c5165dd | &#124; 2= &#124; SB first 25 balls Over 30.5 &#124; `PASS` &#124; 20 &#124; LOSS (abstention) &#124; |
+| PREDICTION_LOG_COMBINED.md:3193 | 100bbffd003f80eace2022da4515e9f083d5fb87a345c25822b5a4a7cc7c7232 | &#124; 2= &#124; SB first 25 balls Under 40.5 &#124; `PASS` &#124; 20 &#124; WIN (abstention) &#124; |
+| PREDICTION_LOG_COMBINED.md:3194 | 4931f260535a84fadfbb7371f6025f4030ad8468a2a8c6ae5724737f08715d61 | &#124; 4* &#124; SB 100 balls Over 135.5 &#124; `PASS / FORCED LOWER TIER` &#124; 115 &#124; LOSS (abstention) &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one. Same-rank contract variants remain separately preserved; a merged index is unsuitable for rank/grade inference. Require original issue-table/core and the dated correction that selects a controlling order; do not choose the outcome-favourable variant.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1 won; wrong: Ranks 4 lost; learn: Stress SB 100 balls Over 135.5 against 115 and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: storing original ties/contract IDs separately from rank indices eliminates false same-rank result conflicts; check zero merged mutually exclusive contracts before any ranking analysis. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-014 — San Diego Padres (Michael King) at Arizona Diamondbacks (Brandon Pfaadt)
+
+**Disposition:** `UNRESOLVED_CONTRACT_RANK_MERGE`. Revision `HLR-20261001-P-014`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Diamondbacks +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Arizona won 5-1 | NONE_IN_LITERAL_VIEW |
+| 2 | Combined total Under 9.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 6 total runs | NONE_IN_LITERAL_VIEW |
+| 3 | Padres +1.5 / Combined total Over 7.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:3391 | dd9c0ef92bf20373cfddb73eda62beff42df726357a38cee7d47d941a943f87b | &#124; 1 &#124; Diamondbacks +1.5 &#124; `PASS` (best available direction) &#124; Arizona won 5-1 &#124; WIN (historical abstention) &#124; |
+| PREDICTION_LOG_COMBINED.md:3392 | c18a288c54613946acd830a9d0c96344a4a723812f376f04d4d59ac14d3e814c | &#124; 2 &#124; Combined total Under 9.5 &#124; `PASS` &#124; 6 total runs &#124; WIN (historical abstention) &#124; |
+| PREDICTION_LOG_COMBINED.md:3393 | c425132f4987c4a3c7868a5ee7b1ef5ce2c01d1ce6f9e211067b3631c9daa69d | &#124; 3= &#124; Padres +1.5 &#124; `PASS` &#124; San Diego lost by 4 &#124; LOSS (historical abstention) &#124; |
+| PREDICTION_LOG_COMBINED.md:3394 | 27403c87075c50c1db436e14d61a7d8cf913fca58779173488f65c445cce7a14 | &#124; 3= &#124; Combined total Over 7.5 &#124; `PASS / FORCED LOWER TIER` &#124; 6 total runs &#124; LOSS (historical abstention) &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one. Same-rank contract variants remain separately preserved; a merged index is unsuitable for rank/grade inference. Require original issue-table/core and the dated correction that selects a controlling order; do not choose the outcome-favourable variant.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: No rank loss established; learn: Treat the Diamondbacks +1.5 win as descriptive; verify its stated mechanism before increasing…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: storing original ties/contract IDs separately from rank indices eliminates false same-rank result conflicts; check zero merged mutually exclusive contracts before any ranking analysis. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-018 — Sunrisers Leeds Men vs London Spirit Men, The Hundred 2026 Match 20 (2026-08-04)
+
+**Disposition:** `UNRESOLVED_CONTRACT_RANK_MERGE`. Revision `HLR-20261001-P-018`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | First 25 balls Under 45.5 / First 25 balls Over 35.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 2 | 100 balls Under 178.5 / First 25 balls Under 45.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 3 | 100 balls Over 158.5 / 100 balls Under 178.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 4 | First 25 balls Over 35.5 / 100 balls Over 158.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:4218 | 2dd0c2acb04fddd9171110309c74f025219faac8e71576c10bfc8cabcbf07f25 | &#124; 1 &#124; First 25 balls Under 45.5 &#124; `SUPPORTED` &#124; 44/0 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:4229 | 6834f3956c76ad35ad19521e97ca014b099e6767c5f657f60acef31c092f0580 | &#124; 1 &#124; First 25 balls Over 35.5 &#124; `LIVE LEAN - UPGRADED` &#124; 44/0 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:4219 | 884b674632abaef089ed34a61b6f4ae569152a43ee71afd5cb048e34f5a420e9 | &#124; 2 &#124; 100 balls Under 178.5 &#124; `SUPPORTED` &#124; 241/2 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:4230 | 740f7dc2cd370e2ec3ed58d7fef432e5e2b2a4b9fdf4bf6dc5ad76fb04f04304 | &#124; 2 &#124; First 25 balls Under 45.5 &#124; `LIVE LEAN` &#124; 44/0 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:4220 | fc84714020f3c2560ddf3de73404a1f3bc41d459de9e87dc9bb432bfaff524c6 | &#124; 3 &#124; 100 balls Over 158.5 &#124; `LEAN / FORCED THIRD` &#124; 241/2 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:4231 | 691eab4f39eaba50e4958d84b6ae7091d3cda0505421b291c9eb450e88ecb922 | &#124; 3 &#124; 100 balls Under 178.5 &#124; `SUPPORTED LIVE` &#124; 241/2 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:4221 | e82f46dc381cbea12a72dcfa48e31f07ccadc05ece35e96570047a3fa7101364 | &#124; 4 &#124; First 25 balls Over 35.5 &#124; `AVOID / FORCED FOURTH` &#124; 44/0 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:4232 | 8a8c8dc04d0aa43507bc8dd5f09874a4f46f1ab883de33341cb451b23a6d5a15 | &#124; 4 &#124; 100 balls Over 158.5 &#124; `LIVE LEAN / FORCED FOURTH` &#124; 241/2 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one. Same-rank contract variants remain separately preserved; a merged index is unsuitable for rank/grade inference. Require original issue-table/core and the dated correction that selects a controlling order; do not choose the outcome-favourable variant.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: Recover the exact ranked contract and final result before drawing a performance lesson.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: storing original ties/contract IDs separately from rank indices eliminates false same-rank result conflicts; check zero merged mutually exclusive contracts before any ranking analysis. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-021 — Los Angeles Angels (Reid Detmers) at Baltimore Orioles (Trevor Rogers), MLB
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-021`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:72 | 558fd5373b37c6314ce9fee3ad704271dc350fd91cab4f40ac5d1a40aec4faa5 | &#124; P-009 &#124; Indiana Fever @ Portland Fire, WNBA regular season — FORECAST &#124; FINAL / SETTLED &#124; Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-026 — Birmingham Phoenix Women v Sunrisers Leeds Women, The Hundred 2026 - START-CROSSED/PRE-DELIVERY FORECAST (appended 2026-08-08 AEST)
+
+**Disposition:** `DOCUMENTARY_ATTRIBUTION_REVIEW`. Revision `HLR-20261001-P-026`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | BPW first 100 balls Under 140.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | BPW first 25 balls Under 33.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | BPW first 25 balls Over 23.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | BPW first 100 balls Over 120.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:5839 | d0f4d936a6d117026b7f25c2ff602800d2b0ab0318226029dd3dce3d0132dcde | &#124; 1 &#124; BPW first 100 balls Under 140.5 &#124; 107/9 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:5840 | fe60ff19374427d901f888b29dde6ed411404e2178fe0ed07acdb50ea39e93e5 | &#124; 2 &#124; BPW first 25 balls Under 33.5 &#124; 29/3 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:5841 | 39718524a771faf565f545b913dd11ba4b83c1ec1bb295650bc4c05f523898a6 | &#124; 3 &#124; BPW first 25 balls Over 23.5 &#124; 29/3 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:5842 | 16a98296e6eaf010b55a18b8582b4421097e449784ae83c6bcbbd58e8a765da0 | &#124; 4 &#124; BPW first 100 balls Over 120.5 &#124; 107/9 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Recovered source explicitlylabelsBirminghamPhoenixWomen107/9versusSunrisers111/1and BPWcontractsW/W/W/L. Existing ROWS_MAY_BE_MISATTRIBUTED warning is not proof of a different event. Preserve claim and source mapping; certify only with original issue/endpoint receipts.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: The 100-ball Under, both exact-25 phase rows and Sunrisers winner all won…; wrong: The projected 118-134 innings band was too high; Birmingham finished at…; learn: This reinforces existing cricket controls rather than creating a new rule: top-order wickets can…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Recovered source explicitlylabelsBirminghamPhoenixWomen107/9versusSunrisers111/1and BPWcontractsW/W/W/L. Existing ROWS_MAY_BE_MISATTRIBUTED warning is not proof of a different event. Preserve claim and source mapping; certify only with original issue/endpoint receipts.
+
+### Review: P-035 — Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST
+
+**Disposition:** `UNRESOLVED_CONTRACT_RANK_MERGE`. Revision `HLR-20261001-P-035`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | H1 Over 84.5 / Q1 Over 42.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 2 | Full Under 174.5 / H1 Over 84.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 3 | Q1 Over 42.5 / Full Under 174.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 4 | Q1 Under 42.5 / Full Over 174.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 5 | Full Over 174.5 / Q1 Under 42.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 6 | H1 Under 84.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:8015 | eb4b5ddb36a2da44348809033ab8e580077e377da00acf4deb8f074ec9753d93 | &#124; P-035/V01 &#124; C05 &#124; 1 &#124; H1 Over 84.5 &#124; LEAN &#124; DG-P035-SCORING &#124; PRIMARY_FORMAL &#124; 83 &#124; LOSS &#124; -1.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8021 | 703d494262582117cbed279eaa6b9ca3e88d017f04c501499c116b7a409bc707 | &#124; P-035/V02 &#124; C01 &#124; 1 &#124; Q1 Over 42.5 &#124; LEAN &#124; DG-P035-SCORING &#124; PRIMARY_FORMAL &#124; 45 &#124; WIN &#124; +2.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8027 | a19fe3fea1880da2938124136c4637684f737d87014ad3251a7ee4781469f3aa | &#124; P-035/V03 &#124; C01 &#124; 1 &#124; Q1 Over 42.5 &#124; LEAN &#124; DG-P035-SCORING &#124; PRIMARY_FORMAL &#124; 45 &#124; WIN &#124; +2.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8016 | 3ea2b64549945137231227447312bace7161933dd65fd20be090a8699d101fb7 | &#124; P-035/V01 &#124; C04 &#124; 2 &#124; Full Under 174.5 &#124; LEAN &#124; DG-P035-SCORING &#124; CORRELATED_SECONDARY &#124; 173 &#124; WIN &#124; +1.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8022 | 017ed6c5d46cf8193824ff5ef10967cdfea6e69b6f3b8c57f62e4932ecbfd523 | &#124; P-035/V02 &#124; C05 &#124; 2 &#124; H1 Over 84.5 &#124; LEAN &#124; DG-P035-SCORING &#124; CORRELATED_SECONDARY &#124; 83 &#124; LOSS &#124; -1.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8028 | 6da2573e19a0ff52684c066dae8258d2ca07feaacf419d6c79c1493f5bf4392c | &#124; P-035/V03 &#124; C05 &#124; 2 &#124; H1 Over 84.5 &#124; LEAN &#124; DG-P035-SCORING &#124; CORRELATED_SECONDARY &#124; 83 &#124; LOSS &#124; -1.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8017 | 6a2a597fe6ed193407b7d515ac64d83215873692f90293dd8546e7a373e86421 | &#124; P-035/V01 &#124; C01 &#124; 3 &#124; Q1 Over 42.5 &#124; LEAN &#124; DG-P035-SCORING &#124; CORRELATED_SECONDARY &#124; 45 &#124; WIN &#124; +2.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8023 | 48efc42ac66cdcbeff2234f7bf64c2f7d9f3dd24c4e620ccc2de50e0a7eaa82e | &#124; P-035/V02 &#124; C04 &#124; 3 &#124; Full Under 174.5 &#124; LEAN &#124; DG-P035-SCORING &#124; CORRELATED_SECONDARY &#124; 173 &#124; WIN &#124; +1.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8029 | 5d78746e5e92717d0263c5a696e795c3f4f90634cb662212b83dc2e066ee3203 | &#124; P-035/V03 &#124; C04 &#124; 3 &#124; Full Under 174.5 &#124; LEAN &#124; DG-P035-SCORING &#124; CORRELATED_SECONDARY &#124; 173 &#124; WIN &#124; +1.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8018 | d6fc914aee0f3d6ae616587d044988fc57f977f1a289b454a7a695f216fa3d6c | &#124; P-035/V01 &#124; C02 &#124; 4 &#124; Q1 Under 42.5 &#124; FORCED RANK &#124; DG-P035-SCORING &#124; FORCED_RANK &#124; 45 &#124; LOSS &#124; -2.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8024 | ef8381c8ad73109f36ea64c76fe1b7d0832ad71b06ba4fb8f5aef0d89c041355 | &#124; P-035/V02 &#124; C03 &#124; 4 &#124; Full Over 174.5 &#124; FORCED RANK &#124; DG-P035-SCORING &#124; FORCED_RANK &#124; 173 &#124; LOSS &#124; -1.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8030 | 7e3e758ff07e952596d530664880a50bdfdef8bb55723894a5a1c2e4c0c6c493 | &#124; P-035/V03 &#124; C03 &#124; 4 &#124; Full Over 174.5 &#124; FORCED RANK &#124; DG-P035-SCORING &#124; FORCED_RANK &#124; 173 &#124; LOSS &#124; -1.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8019 | 4163b773ef1ff42395cd917bf1056fdc5c2fd9c4149df569324fdf47dfa86eae | &#124; P-035/V01 &#124; C03 &#124; 5 &#124; Full Over 174.5 &#124; AVOID &#124; DG-P035-SCORING &#124; AVOID &#124; 173 &#124; LOSS &#124; -1.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8025 | 14a1c375ebcb87d1060b5c2372dc4dba8a965107fb1de56f046ef4df0fffd8e4 | &#124; P-035/V02 &#124; C02 &#124; 5 &#124; Q1 Under 42.5 &#124; AVOID &#124; DG-P035-SCORING &#124; AVOID &#124; 45 &#124; LOSS &#124; -2.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8031 | 52663e50413bd1f189a56706ac79ab90ec31926853c17539ba4a1b45aeb04140 | &#124; P-035/V03 &#124; C02 &#124; 5 &#124; Q1 Under 42.5 &#124; AVOID &#124; DG-P035-SCORING &#124; AVOID &#124; 45 &#124; LOSS &#124; -2.5 &#124; WNBA official box score &#124; |
+| PREDICTION_LOG_COMBINED.md:8020 | 96078af7a5383ef8c83e91cbec530cef84dbbcbfc93eb504d3dfe657a0b03ef2 | &#124; P-035/V01 &#124; C06 &#124; 6 &#124; H1 Under 84.5 &#124; AVOID &#124; DG-P035-SCORING &#124; AVOID &#124; 83 &#124; WIN &#124; +1.5 &#124; WNBA official box score &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one. Same-rank contract variants remain separately preserved; a merged index is unsuitable for rank/grade inference. Require original issue-table/core and the dated correction that selects a controlling order; do not choose the outcome-favourable variant.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: The continuous live refresh correctly promoted Q1 Over to the controlling…; wrong: H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed…; learn: H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: storing original ties/contract IDs separately from rank indices eliminates false same-rank result conflicts; check zero merged mutually exclusive contracts before any ranking analysis. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-036 — Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams
+
+**Disposition:** `UNRESOLVED_CONTRACT_RANK_MERGE`. Revision `HLR-20261001-P-036`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Twins ML / Phillies ML | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 2 | Under 8.5 / Twins ML | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 3 | Phillies ML / Under 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 4 | Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:8053 | e132172f18c8e68103660d4ba41696ea4c1ea23520b68fd78a35f09a458ada0f | &#124; P-036/V01 &#124; C02 &#124; 1 &#124; Twins ML &#124; LEAN &#124; DG-P036-ML &#124; PRIMARY_FORMAL &#124; PHI 7-1 MIN &#124; LOSS &#124; Lost by 6 &#124; MLB official feed &#124; |
+| PREDICTION_LOG_COMBINED.md:8057 | 1255e5a6158e24f0e547f899726dc3270c1ab2fc8058d90c6fd98e83f82f8e09 | &#124; P-036/V02 &#124; C01 &#124; 1 &#124; Phillies ML &#124; LEAN &#124; DG-P036-ML &#124; PRIMARY_FORMAL &#124; PHI 7-1 MIN &#124; WIN &#124; Won by 6 &#124; MLB official feed &#124; |
+| PREDICTION_LOG_COMBINED.md:8061 | 7ecd253550e992bcb75230b6d5780669019f42060f70907b97ae342902a1a604 | &#124; P-036/V03 &#124; C01 &#124; 1 &#124; Phillies ML &#124; LEAN &#124; DG-P036-ML &#124; PRIMARY_FORMAL &#124; PHI 7-1 MIN &#124; WIN &#124; Won by 6 &#124; MLB official feed &#124; |
+| PREDICTION_LOG_COMBINED.md:8054 | f6630770dac306540173ea729419f3096b9e710c407cc4d2c9e2d7799e96d95e | &#124; P-036/V01 &#124; C04 &#124; 2 &#124; Under 8.5 &#124; LEAN &#124; DG-P036-TOTAL &#124; PRIMARY_FORMAL &#124; 8 &#124; WIN &#124; +0.5 &#124; MLB official feed &#124; |
+| PREDICTION_LOG_COMBINED.md:8058 | 994bf85660e87ebaabdfdb0004b1e9d3297748a6a4a10e56428819b9d91dc415 | &#124; P-036/V02 &#124; C02 &#124; 2 &#124; Twins ML &#124; FORCED RANK &#124; DG-P036-ML &#124; FORCED_RANK &#124; PHI 7-1 MIN &#124; LOSS &#124; Lost by 6 &#124; MLB official feed &#124; |
+| PREDICTION_LOG_COMBINED.md:8062 | 2de1e2a7b516ebf8a5f553111fe291019f93101d39c2422c6a71bfb7ead1872a | &#124; P-036/V03 &#124; C02 &#124; 2 &#124; Twins ML &#124; FORCED RANK &#124; DG-P036-ML &#124; FORCED_RANK &#124; PHI 7-1 MIN &#124; LOSS &#124; Lost by 6 &#124; MLB official feed &#124; |
+| PREDICTION_LOG_COMBINED.md:8055 | 4c0368be5ff52fe9d0f153bd42f36a8fae8d620103f3380dc40b3e3ed26b69da | &#124; P-036/V01 &#124; C01 &#124; 3 &#124; Phillies ML &#124; FORCED RANK &#124; DG-P036-ML &#124; FORCED_RANK &#124; PHI 7-1 MIN &#124; WIN &#124; Won by 6 &#124; MLB official feed &#124; |
+| PREDICTION_LOG_COMBINED.md:8059 | dad861fa55673f563ade057e4d2d2c9a3f0d84e4ea9a0ee9a94f8a48102c5820 | &#124; P-036/V02 &#124; C04 &#124; 3 &#124; Under 8.5 &#124; FORCED RANK &#124; DG-P036-TOTAL &#124; FORCED_RANK &#124; 8 &#124; WIN &#124; +0.5 &#124; MLB official feed &#124; |
+| PREDICTION_LOG_COMBINED.md:8063 | d207e5426f27111a10bb97743df0495ba6804785cbe978cbd8928109ac12b27e | &#124; P-036/V03 &#124; C04 &#124; 3 &#124; Under 8.5 &#124; FORCED RANK &#124; DG-P036-TOTAL &#124; FORCED_RANK &#124; 8 &#124; WIN &#124; +0.5 &#124; MLB official feed &#124; |
+| PREDICTION_LOG_COMBINED.md:8056 | 8ee1cd5ea36357f2c98708d383d65dfece75a27ad68fa5db55b54b5cc5588a64 | &#124; P-036/V01 &#124; C03 &#124; 4 &#124; Over 8.5 &#124; AVOID &#124; DG-P036-TOTAL &#124; AVOID &#124; 8 &#124; LOSS &#124; -0.5 &#124; MLB official feed &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one. Same-rank contract variants remain separately preserved; a merged index is unsuitable for rank/grade inference. Require original issue-table/core and the dated correction that selects a controlling order; do not choose the outcome-favourable variant.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: V02/V03 immediately promoted Philadelphia after the exact…; wrong: The V01 #1 Twins side and winner lost decisively. The pregame card named…; learn: The V01 #1 Twins side and winner lost decisively. The pregame card named…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: storing original ties/contract IDs separately from rank indices eliminates false same-rank result conflicts; check zero merged mutually exclusive contracts before any ranking analysis. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-040 — Fremantle vs Adelaide Crows — AFL
+
+**Disposition:** `UNRESOLVED_CONTRACT_RANK_MERGE`. Revision `HLR-20261001-P-040`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Adelaide Crows +23.5 / Combined Total Under 176.5 / Under 168.5 / Under 176.5 / Adelaide +23.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 2 | Combined Total Over 168.5 / Over 168.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 3 | Combined Total Under 168.5 / Adelaide Crows -23.5 / Adelaide -23.5 / Under 168.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/V | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 4 | Fremantle -23.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:8937 | 452297cacb74a333600fbeb3a4ad661a2de08f60cead53b729de89f4864a5583 | &#124; P-040/V06 &#124; C02R &#124; 1 &#124; Adelaide Crows +23.5 &#124; `SUPPORTED` &#124; DG-P040-MARGIN-CORRECTED &#124; `PRIMARY_FORMAL` &#124; Adelaide lost by 24 &#124; `LOSS` &#124; -0.5 &#124; AFL official report + match centre 8237 &#124; |
+| PREDICTION_LOG_COMBINED.md:8941 | 50ea766556bc4882cfbfa7d5e32080657cbb87a77eb94a0d7561d9e2da9aa594 | &#124; P-040/V05 &#124; C05 &#124; 1 &#124; Combined Total Under 176.5 &#124; `AVOID` &#124; DG-P040-TOTAL-176 &#124; `PRIMARY_FORMAL` &#124; 200 &#124; `LOSS` &#124; -23.5 &#124; same &#124; |
+| PREDICTION_LOG_COMBINED.md:9008 | aef0d8789154ea159f0326b98537bee6d573474603bbe79604778fe340d12930 | &#124; P-040/V01 &#124; 1 &#124; Under 168.5 &#124; `LEAN` &#124; 200 &#124; `LOSS` (-31.5) &#124; Incorrect &#124; Historical view only &#124; |
+| PREDICTION_LOG_COMBINED.md:9012 | 4c92f6d369b1443bc393ff456a84b66644385d082ad32d1a0575065219c1c562 | &#124; P-040/V02 &#124; 1 &#124; Under 168.5 &#124; `LEAN` &#124; 200 &#124; `LOSS` (-31.5) &#124; Incorrect &#124; Historical view only &#124; |
+| PREDICTION_LOG_COMBINED.md:9016 | f6d9a9961752db4c5afd035e5de0957666fa1967bb65834bcdd7b7c53fa3d3b2 | &#124; P-040/V03 &#124; 1 &#124; Under 168.5 &#124; `LEAN` &#124; 200 &#124; `LOSS` (-31.5) &#124; Incorrect &#124; Historical view only; failed top pick &#124; |
+| PREDICTION_LOG_COMBINED.md:9020 | 2763d56d75240d4e2700bd4863b7822ccd8c51589666cdc9de6f4e4922ae804d | &#124; P-040/V04 &#124; 1 &#124; Under 176.5 &#124; `AVOID` &#124; 200 &#124; `LOSS` (-23.5) &#124; Correct avoidance &#124; Superseded by V05 for ledger purposes &#124; |
+| PREDICTION_LOG_COMBINED.md:9021 | 55d52f435c004c0d71987eed4346ef9d790e8eef8037886593fdb6c3a2db9246 | &#124; P-040/V05 &#124; 1 &#124; Under 176.5 &#124; `AVOID` &#124; 200 &#124; `LOSS` (-23.5) &#124; Correct avoidance &#124; **Controlling C05 view; raw only** &#124; |
+| PREDICTION_LOG_COMBINED.md:9022 | 504a97b40512ed1c53b6c732941c0113ab290fab345a7b45c73333d923925b86 | &#124; P-040/V06 &#124; 1 &#124; Adelaide +23.5 &#124; `SUPPORTED` &#124; Adelaide lost by 24 &#124; `LOSS` (-0.5) &#124; Incorrect &#124; **Controlling; primary formal; boundary-fragile** &#124; |
+| PREDICTION_LOG_COMBINED.md:8938 | 0acd316df0cd2cec7776bc0a58ce1c79958d95a8aa40111361f48f314757cdef | &#124; P-040/V06 &#124; C03 &#124; 2 &#124; Combined Total Over 168.5 &#124; `SUPPORTED` &#124; DG-P040-TOTAL &#124; `PRIMARY_FORMAL` &#124; 200 &#124; `WIN` &#124; +31.5 &#124; same &#124; |
+| PREDICTION_LOG_COMBINED.md:9009 | 4a521296694bdc86740d89110d417726eb8089c4af6e8257d65778af0696eb0e | &#124; P-040/V01 &#124; 2 &#124; Over 168.5 &#124; `FORCED RANK` &#124; 200 &#124; `WIN` (+31.5) &#124; Correct direction, low confidence &#124; Historical view only &#124; |
+| PREDICTION_LOG_COMBINED.md:9013 | 70fc33a9aba5197a5a3a36d66f43030c5be965a17e60eed3936bf8507fd329a1 | &#124; P-040/V02 &#124; 2 &#124; Over 168.5 &#124; `FORCED RANK` &#124; 200 &#124; `WIN` (+31.5) &#124; Correct direction, low confidence &#124; Historical view only &#124; |
+| PREDICTION_LOG_COMBINED.md:9017 | 469629bcf0f16813ede19f0d36d17399468f14837b6521345dfe7d63676aa30c | &#124; P-040/V03 &#124; 2 &#124; Over 168.5 &#124; `FORCED RANK` &#124; 200 &#124; `WIN` (+31.5) &#124; Correct direction, low confidence &#124; Historical view only &#124; |
+| PREDICTION_LOG_COMBINED.md:9023 | 096bffb1c3207c2287ae9fb678d99b745d3ba244ccdc295b3e9413e128997c8c | &#124; P-040/V06 &#124; 2 &#124; Over 168.5 &#124; `SUPPORTED` &#124; 200 &#124; `WIN` (+31.5) &#124; Correct &#124; **Controlling; primary formal** &#124; |
+| PREDICTION_LOG_COMBINED.md:8939 | 85b091178b825a81067ea888ab4891642b454bc3fcd125681fa125a37c2e5cee | &#124; P-040/V06 &#124; C04 &#124; 3 &#124; Combined Total Under 168.5 &#124; `AVOID` &#124; DG-P040-TOTAL &#124; `CORRELATED_SECONDARY` &#124; 200 &#124; `LOSS` &#124; -31.5 &#124; same &#124; |
+| PREDICTION_LOG_COMBINED.md:8942 | 4bbf0ad8ddaeea5cf61b0256cefd77c2f020d25d2467b94f6b59e45f9ec85363 | &#124; P-040/V03 &#124; C02 &#124; 3 &#124; Adelaide Crows -23.5 &#124; `AVOID` &#124; DG-P040-MARGIN &#124; `INELIGIBLE` &#124; n/a &#124; `VOID` &#124; n/a &#124; withdrawn after user correction before the final &#124; |
+| PREDICTION_LOG_COMBINED.md:9010 | 8db7ee561f25cb3fa996cf3517523d47991811243d443b115aa8614a112711fc | &#124; P-040/V01 &#124; 3 &#124; Adelaide -23.5 &#124; `AVOID` &#124; Withdrawn wording &#124; `VOID` &#124; Not evaluated &#124; Excluded &#124; |
+| PREDICTION_LOG_COMBINED.md:9014 | c7475e6c1581082a4bfbc127b2784a0d990fca6c80d8f7c5adc5759a54c8ce23 | &#124; P-040/V02 &#124; 3 &#124; Adelaide -23.5 &#124; `AVOID` &#124; Withdrawn wording &#124; `VOID` &#124; Not evaluated &#124; Excluded &#124; |
+| PREDICTION_LOG_COMBINED.md:9018 | 97cae808b461f4d5cb7167a84c8e7f484def64ef5ad32628e37de05e71ef5628 | &#124; P-040/V03 &#124; 3 &#124; Adelaide -23.5 &#124; `AVOID` &#124; Withdrawn wording &#124; `VOID` &#124; Not evaluated &#124; Excluded &#124; |
+| PREDICTION_LOG_COMBINED.md:9024 | 10fed62ee6eb4f26fffca30a0d9277396066be0f478057ad14e7b05151e9564a | &#124; P-040/V06 &#124; 3 &#124; Under 168.5 &#124; `AVOID` &#124; 200 &#124; `LOSS` (-31.5) &#124; Correct avoidance &#124; **Controlling; raw correlated** &#124; |
+| PREDICTION_LOG_COMBINED.md:8940 | b8fa56d766211b23ad4ff6f994a8a2dbaa245c67396ff93aa3c5ee1eb9ed8e4e | &#124; P-040/V06 &#124; C01 &#124; 4 &#124; Fremantle -23.5 &#124; `AVOID` &#124; DG-P040-MARGIN-CORRECTED &#124; `CORRELATED_SECONDARY` &#124; Fremantle won by 24 &#124; `WIN` &#124; +0.5 &#124; same &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one. Same-rank contract variants remain separately preserved; a merged index is unsuitable for rank/grade inference. Require original issue-table/core and the dated correction that selects a controlling order; do not choose the outcome-favourable variant.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 4 won; wrong: No rank loss established; learn: Treat the Fremantle -23.5 win as descriptive; verify its stated mechanism before increasing…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: storing original ties/contract IDs separately from rank indices eliminates false same-rank result conflicts; check zero merged mutually exclusive contracts before any ranking analysis. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-060 — New York Yankees (Gerrit Cole) at Baltimore Orioles (Kyle Bradish), MLB — INCLEMENT-WEATHER START DELAY / ORIGINAL-LINE FORECAST
+
+**Disposition:** `UNRESOLVED_CONTRACT_RANK_MERGE`. Revision `HLR-20261001-P-060`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Yankees +1.5 / Under 8.5 runs | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 2 | Under 8.5 runs / Yankees +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 3 | Over 6.5 runs / Orioles +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 4 | Orioles +1.5 / Over 6.5 runs | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L/W | NOT_EXTRACTED | CONFLICTING_RESULT;MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:11654 | 67ea664dacf42b29c2e3c6fcf705270906f5366ab1d5a60faf406bae1efc850c | &#124; P-060/V01 &#124; C02 &#124; 1 &#124; Yankees +1.5 &#124; `LEAN` &#124; DG-P060-MARGIN &#124; PRIMARY_FORMAL &#124; NYY won by 5 &#124; `WIN` &#124; +6.5 runs &#124; Official MLB final &#124; |
+| PREDICTION_LOG_COMBINED.md:11665 | d168e13769418a083446a5e6b9bd94f07e3647c6fdbb15e2b9dac16daf16c2c4 | &#124; P-060/V03 &#124; C04 &#124; 1 &#124; Under 8.5 runs &#124; `LEAN` &#124; DG-P060-TOTAL &#124; LATE_IMPORTED_DIAGNOSTIC &#124; 7 &#124; `WIN` &#124; +1.5 runs &#124; Official MLB final &#124; |
+| PREDICTION_LOG_COMBINED.md:11655 | a0ea5fd0e2a5a0f02ac7682c5ab680ffe39a8f71a9532bd237fcfbbbbf786dd5 | &#124; P-060/V01 &#124; C04 &#124; 2 &#124; Under 8.5 runs &#124; `LEAN` &#124; DG-P060-TOTAL &#124; PRIMARY_FORMAL &#124; 7 &#124; `WIN` &#124; +1.5 runs &#124; Official MLB final &#124; |
+| PREDICTION_LOG_COMBINED.md:11666 | 522b94eb7866b5bbcb323dd48575eb7f143721a9fc8cdfcdd73131482f95089a | &#124; P-060/V03 &#124; C02 &#124; 2 &#124; Yankees +1.5 &#124; `LEAN` &#124; DG-P060-SIDE &#124; LATE_IMPORTED_DIAGNOSTIC &#124; NYY won by 5 &#124; `WIN` &#124; +6.5 runs &#124; Official MLB final &#124; |
+| PREDICTION_LOG_COMBINED.md:11656 | ba80aefdbbdcfc3db57c9fae6cd1197f46e166aecf6f7c41322114f844f581b0 | &#124; P-060/V01 &#124; C03 &#124; 3 &#124; Over 6.5 runs &#124; `FORCED RANK` &#124; DG-P060-TOTAL &#124; CORRELATED_SECONDARY &#124; 7 &#124; `WIN` &#124; +0.5 run &#124; Official MLB final &#124; |
+| PREDICTION_LOG_COMBINED.md:11667 | 20e73ee1c0cf0a43740f8b63495c80b27f39af9542aa367ef6c5cdfd195a1d66 | &#124; P-060/V03 &#124; C01 &#124; 3 &#124; Orioles +1.5 &#124; `FORCED RANK` &#124; DG-P060-SIDE &#124; LATE_IMPORTED_DIAGNOSTIC &#124; BAL lost by 5 &#124; `LOSS` &#124; -3.5 runs &#124; Official MLB final &#124; |
+| PREDICTION_LOG_COMBINED.md:11657 | bac876e2d1849a1aeef4310cb06cf40fb372286a524955821ce5e6ac0321fa61 | &#124; P-060/V01 &#124; C01 &#124; 4 &#124; Orioles +1.5 &#124; `FORCED RANK` &#124; DG-P060-MARGIN &#124; CORRELATED_SECONDARY &#124; BAL lost by 5 &#124; `LOSS` &#124; -3.5 runs &#124; Official MLB final &#124; |
+| PREDICTION_LOG_COMBINED.md:11668 | 4b85c8cc3493d9758200959b261bb9f3197a6d70cab58cb5c8c956aa85b82fb5 | &#124; P-060/V03 &#124; C03 &#124; 4 &#124; Over 6.5 runs &#124; `FORCED RANK` &#124; DG-P060-TOTAL &#124; LATE_IMPORTED_DIAGNOSTIC &#124; 7 &#124; `WIN` &#124; +0.5 run &#124; Official MLB final &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one. Same-rank contract variants remain separately preserved; a merged index is unsuitable for rank/grade inference. Require original issue-table/core and the dated correction that selects a controlling order; do not choose the outcome-favourable variant.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Both recorded views identified the 6-8 central band and 7-8 overlap…; wrong: Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct…; learn: Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct suppression was outweighed…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: storing original ties/contract IDs separately from rank indices eliminates false same-rank result conflicts; check zero merged mutually exclusive contracts before any ranking analysis. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-100 — Apollon Limassol Women vs FH Hafnarfjordur Women, UEFA Women's Europa Cup 2026/27 — PREGAME FORECAST
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-100`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Apollon +0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Apollon W 0–2 FH W; HT 0–2 | NONE_IN_LITERAL_VIEW |
+| 2 | 1H O0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Apollon W 0–2 FH W; HT 0–2 | NONE_IN_LITERAL_VIEW |
+| 3 | O2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Apollon W 0–2 FH W; HT 0–2 | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:20142 | 8eeaf6f0b983935ef245ffde1ca60c227168cac93f86725ccdc8494ab0fe1839 | &#124; P-100 &#124; Apollon W 0–2 FH W; HT 0–2 &#124; Apollon +0.5 **L**; 1H O0.5 **W**; O2.5 **L**; corners **U** &#124; Apollon **L** &#124; First demonstrable after kickoff; performance-ineligible &#124; |
+| PREDICTION_LOG_COMBINED.md:20142 | 8eeaf6f0b983935ef245ffde1ca60c227168cac93f86725ccdc8494ab0fe1839 | &#124; P-100 &#124; Apollon W 0–2 FH W; HT 0–2 &#124; Apollon +0.5 **L**; 1H O0.5 **W**; O2.5 **L**; corners **U** &#124; Apollon **L** &#124; First demonstrable after kickoff; performance-ineligible &#124; |
+| PREDICTION_LOG_COMBINED.md:20142 | 8eeaf6f0b983935ef245ffde1ca60c227168cac93f86725ccdc8494ab0fe1839 | &#124; P-100 &#124; Apollon W 0–2 FH W; HT 0–2 &#124; Apollon +0.5 **L**; 1H O0.5 **W**; O2.5 **L**; corners **U** &#124; Apollon **L** &#124; First demonstrable after kickoff; performance-ineligible &#124; |
+| PREDICTION_LOG_COMBINED.md:20142 | 8eeaf6f0b983935ef245ffde1ca60c227168cac93f86725ccdc8494ab0fe1839 | &#124; P-100 &#124; Apollon W 0–2 FH W; HT 0–2 &#124; Apollon +0.5 **L**; 1H O0.5 **W**; O2.5 **L**; corners **U** &#124; Apollon **L** &#124; First demonstrable after kickoff; performance-ineligible &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2 won; wrong: Ranks 1, 3 lost; learn: Stress Apollon +0.5 against Apollon W 0–2 FH W; HT 0–2 and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-102 — VfL Wolfsburg Women vs Inter Women, UEFA Women's Champions League 2026/27 — PREGAME FORECAST
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-102`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Wolfsburg ML | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Wolfsburg W 2–0 Inter W; HT 1–0 | NONE_IN_LITERAL_VIEW |
+| 2 | 1H O0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Wolfsburg W 2–0 Inter W; HT 1–0 | NONE_IN_LITERAL_VIEW |
+| 3 | O2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Wolfsburg W 2–0 Inter W; HT 1–0 | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:20144 | de55e932d23ad41778d99743643dfc06c319e5a136250ecc2cfb5fae16cb4dbf | &#124; P-102 &#124; Wolfsburg W 2–0 Inter W; HT 1–0 &#124; Wolfsburg ML **W**; 1H O0.5 **W**; O2.5 **L**; corner race **U** &#124; Wolfsburg **W** &#124; First demonstrable after kickoff; performance-ineligible &#124; |
+| PREDICTION_LOG_COMBINED.md:20144 | de55e932d23ad41778d99743643dfc06c319e5a136250ecc2cfb5fae16cb4dbf | &#124; P-102 &#124; Wolfsburg W 2–0 Inter W; HT 1–0 &#124; Wolfsburg ML **W**; 1H O0.5 **W**; O2.5 **L**; corner race **U** &#124; Wolfsburg **W** &#124; First demonstrable after kickoff; performance-ineligible &#124; |
+| PREDICTION_LOG_COMBINED.md:20144 | de55e932d23ad41778d99743643dfc06c319e5a136250ecc2cfb5fae16cb4dbf | &#124; P-102 &#124; Wolfsburg W 2–0 Inter W; HT 1–0 &#124; Wolfsburg ML **W**; 1H O0.5 **W**; O2.5 **L**; corner race **U** &#124; Wolfsburg **W** &#124; First demonstrable after kickoff; performance-ineligible &#124; |
+| PREDICTION_LOG_COMBINED.md:20144 | de55e932d23ad41778d99743643dfc06c319e5a136250ecc2cfb5fae16cb4dbf | &#124; P-102 &#124; Wolfsburg W 2–0 Inter W; HT 1–0 &#124; Wolfsburg ML **W**; 1H O0.5 **W**; O2.5 **L**; corner race **U** &#124; Wolfsburg **W** &#124; First demonstrable after kickoff; performance-ineligible &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3 lost; learn: Stress O2.5 against Wolfsburg W 2–0 Inter W; HT 1–0 and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-104 — Ajax Women vs Real Madrid Women — UEFA Women's Champions League third qualifying round, first leg — PREGAME
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-104`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Real Madrid or Draw (X2) | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | 1H Over 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Under 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:18915 | 14be5f26ad806859c5aefcc7f3089de0b12901a4462f8f71dc651df4457f4fda | &#124; 1 &#124; Real Madrid or Draw (X2) &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:18916 | 8179ba0fe6fdba3eac77f1853dcfb2b496097e9773ff5099e2c4986fdec13b1e | &#124; 2 &#124; 1H Over 0.5 goals &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:18917 | b5dd55ef760665b19d3cb763651ee032fe578aebffb6d2ced882f5661568d580 | &#124; 3 &#124; Under 2.5 goals &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:20171 | 58736f28296ab49437caf67262868bcba9c6bc37d8cd6141f066b31726e520f9 | &#124; P-104 &#124; Ajax W 0–2 Real Madrid W &#124; Madrid X2 **W** &#124; 1H O0.5 **W** &#124; U2.5 **W** &#124; corners **U** &#124; Madrid **W** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 3 won; wrong: No rank loss established; learn: Treat the Real Madrid or Draw (X2) win as descriptive; verify its stated mechanism before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-105 — Al Ahli Saudi FC vs Auckland FC — FIFA Intercontinental Cup 2026, African-Asian-Pacific Cup Playoff — PREGAME
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-105`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Al Ahli ML | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | 1H Over 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Over 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:18932 | a26a231c8a9a07202e2e3c81567877bc3a9c718e22bf89e60540c5f793613324 | &#124; 1 &#124; Al Ahli ML &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:18933 | bb43a73a914c465f2737fab04895ad29c3ccd536b681197d0c950c2440c76e27 | &#124; 2 &#124; 1H Over 0.5 goals &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:18934 | e0f8146a9fae851fdcfc950b5b493e919694695f2c30fe4f5c160f808e9c2b3a | &#124; 3 &#124; Over 2.5 goals &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:20172 | 564c6e9477986873b911d7cdc52014cead008621c2171c7036cd41ec1c0f1014 | &#124; P-105 &#124; Al Ahli 1–0 Auckland &#124; Al Ahli ML **W** &#124; 1H O0.5 **L** &#124; O2.5 **L** &#124; corners **U** &#124; Al Ahli **W** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1 won; wrong: Ranks 2, 3 lost; learn: Stress 1H Over 0.5 goals against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-112 — Minnesota Twins @ Athletics — MLB regular season — PREGAME
+
+**Disposition:** `DOCUMENTARY_SUMMARY_CORRECTION`. Revision `HLR-20261001-P-112`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Athletics +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Athletics won 7-4 | NONE_IN_LITERAL_VIEW |
+| 2 | Under 10.5 runs | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | 11 total runs | NONE_IN_LITERAL_VIEW |
+| 3 | Twins ML | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Athletics won | NONE_IN_LITERAL_VIEW |
+| 4 | Over 10.5 runs | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 11 total runs | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:19114 | ea7ae21404675979065ba438b0c56c4430c8c87572c200e3a47d496ca483741d | &#124; 1 &#124; Athletics +1.5 &#124; Athletics won 7-4 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:19115 | 7f2d18b172978fb47de8c7a90e72f82c5727f3157cb4e4a2a541147d2bf14928 | &#124; 2 &#124; Under 10.5 runs &#124; 11 total runs &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:19116 | 39dc994f3ab0223ddf2f7dc071ac14709d12ec466b7e7a1f7f1ac30ca28816ee | &#124; 3 &#124; Twins ML &#124; Athletics won &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:19117 | df87249390184ac3b5efe16f6034266559c49cda25a6f698d98245743f50d265 | &#124; 4 &#124; Over 10.5 runs &#124; 11 total runs &#124; **WIN** &#124; |
+
+
+**B. What happened.** Retained row table Athletics7–4Twins givesW/L/L/W(Athletics+1.5,Under10.5,TwinsML,Over10.5); treat conflicting summary as superseded only where that literal table supports it. No new probabilities or prospective credit.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 4 won; wrong: Ranks 2, 3 lost; learn: Stress Under 10.5 runs against 11 total runs and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Retained row table Athletics7–4Twins givesW/L/L/W(Athletics+1.5,Under10.5,TwinsML,Over10.5); treat conflicting summary as superseded only where that literal table supports it. No new probabilities or prospective credit.
+
+### Review: P-117 — ISI Dangkor Senchey FC vs Life FC Sihanoukville — PREGAME
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-117`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H O0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | ISI Dangkor 1–2 Life; HT 0–1 | NONE_IN_LITERAL_VIEW |
+| 2 | U2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | ISI Dangkor 1–2 Life; HT 0–1 | NONE_IN_LITERAL_VIEW |
+| 3 | ISI 1X | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | ISI Dangkor 1–2 Life; HT 0–1 | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:20184 | c83e396afea75f0453011e92df9a5f07e6efe408d23e1a1d91e189768c948d77 | &#124; P-117 &#124; ISI Dangkor 1–2 Life; HT 0–1 &#124; 1H O0.5 **W** &#124; U2.5 **L** &#124; ISI 1X **L** &#124; corners **U** &#124; ISI **L** &#124; |
+| PREDICTION_LOG_COMBINED.md:20184 | c83e396afea75f0453011e92df9a5f07e6efe408d23e1a1d91e189768c948d77 | &#124; P-117 &#124; ISI Dangkor 1–2 Life; HT 0–1 &#124; 1H O0.5 **W** &#124; U2.5 **L** &#124; ISI 1X **L** &#124; corners **U** &#124; ISI **L** &#124; |
+| PREDICTION_LOG_COMBINED.md:20184 | c83e396afea75f0453011e92df9a5f07e6efe408d23e1a1d91e189768c948d77 | &#124; P-117 &#124; ISI Dangkor 1–2 Life; HT 0–1 &#124; 1H O0.5 **W** &#124; U2.5 **L** &#124; ISI 1X **L** &#124; corners **U** &#124; ISI **L** &#124; |
+| PREDICTION_LOG_COMBINED.md:20184 | c83e396afea75f0453011e92df9a5f07e6efe408d23e1a1d91e189768c948d77 | &#124; P-117 &#124; ISI Dangkor 1–2 Life; HT 0–1 &#124; 1H O0.5 **W** &#124; U2.5 **L** &#124; ISI 1X **L** &#124; corners **U** &#124; ISI **L** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1 won; wrong: Ranks 2, 3 lost; learn: Stress U2.5 against ISI Dangkor 1–2 Life; HT 0–1 and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-121 — Sardarapat FC vs FC Syunik — Armenian Cup
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-121`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H O0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Sardarapat 1–1 Syunik; Syunik advanced on penalties | NONE_IN_LITERAL_VIEW |
+| 2 | Sardarapat 1X | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Sardarapat 1–1 Syunik; Syunik advanced on penalties | NONE_IN_LITERAL_VIEW |
+| 3 | O2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Sardarapat 1–1 Syunik; Syunik advanced on penalties | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:20188 | 96787151f46308e2d12e4aecba23290b3fbc077e761d82cc79838861827d9122 | &#124; P-121 &#124; Sardarapat 1–1 Syunik; Syunik advanced on penalties &#124; 1H O0.5 **W** &#124; Sardarapat 1X **W** &#124; O2.5 **L** &#124; corners **U** &#124; Sardarapat 90m **L** &#124; |
+| PREDICTION_LOG_COMBINED.md:20188 | 96787151f46308e2d12e4aecba23290b3fbc077e761d82cc79838861827d9122 | &#124; P-121 &#124; Sardarapat 1–1 Syunik; Syunik advanced on penalties &#124; 1H O0.5 **W** &#124; Sardarapat 1X **W** &#124; O2.5 **L** &#124; corners **U** &#124; Sardarapat 90m **L** &#124; |
+| PREDICTION_LOG_COMBINED.md:20188 | 96787151f46308e2d12e4aecba23290b3fbc077e761d82cc79838861827d9122 | &#124; P-121 &#124; Sardarapat 1–1 Syunik; Syunik advanced on penalties &#124; 1H O0.5 **W** &#124; Sardarapat 1X **W** &#124; O2.5 **L** &#124; corners **U** &#124; Sardarapat 90m **L** &#124; |
+| PREDICTION_LOG_COMBINED.md:20188 | 96787151f46308e2d12e4aecba23290b3fbc077e761d82cc79838861827d9122 | &#124; P-121 &#124; Sardarapat 1–1 Syunik; Syunik advanced on penalties &#124; 1H O0.5 **W** &#124; Sardarapat 1X **W** &#124; O2.5 **L** &#124; corners **U** &#124; Sardarapat 90m **L** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3 lost; learn: Stress O2.5 against Sardarapat 1–1 Syunik; Syunik advanced on penalties and its named failure path…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-123 — BuxDU vs Metallurg Bekabad — SCHEDULE-CONFLICT / NO VERIFIED LIVE SCORE
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-123`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Metallurg X2 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | BuxDU 0–4 Metallurg | NONE_IN_LITERAL_VIEW |
+| 2 | 1H O0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | BuxDU 0–4 Metallurg | NONE_IN_LITERAL_VIEW |
+| 3 | O2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | BuxDU 0–4 Metallurg | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:20190 | 2635842f35564062c17c7a6030fe07839a737317d74da482642ce2191547d50e | &#124; P-123 &#124; BuxDU 0–4 Metallurg &#124; Metallurg X2 **W** &#124; 1H O0.5 **W** &#124; O2.5 **W** &#124; corners **U** &#124; Metallurg **W** &#124; |
+| PREDICTION_LOG_COMBINED.md:20190 | 2635842f35564062c17c7a6030fe07839a737317d74da482642ce2191547d50e | &#124; P-123 &#124; BuxDU 0–4 Metallurg &#124; Metallurg X2 **W** &#124; 1H O0.5 **W** &#124; O2.5 **W** &#124; corners **U** &#124; Metallurg **W** &#124; |
+| PREDICTION_LOG_COMBINED.md:20190 | 2635842f35564062c17c7a6030fe07839a737317d74da482642ce2191547d50e | &#124; P-123 &#124; BuxDU 0–4 Metallurg &#124; Metallurg X2 **W** &#124; 1H O0.5 **W** &#124; O2.5 **W** &#124; corners **U** &#124; Metallurg **W** &#124; |
+| PREDICTION_LOG_COMBINED.md:20190 | 2635842f35564062c17c7a6030fe07839a737317d74da482642ce2191547d50e | &#124; P-123 &#124; BuxDU 0–4 Metallurg &#124; Metallurg X2 **W** &#124; 1H O0.5 **W** &#124; O2.5 **W** &#124; corners **U** &#124; Metallurg **W** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 3 won; wrong: No rank loss established; learn: Treat the Metallurg X2 win as descriptive; verify its stated mechanism before increasing confidence.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-126 — Sikkim Aakraman FC vs Sikkim Boys Club — SFA A Division S-League
+
+**Disposition:** `UNRESOLVED_IDENTITY`. Revision `HLR-20261001-P-126`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:177 | 404d009271297694bfc30e6a4e91eec12b77f5c5d60b8ed542ac5edaaf3e02d9 | &#124; P-114 &#124; India vs Sri Lanka, 2nd Test, Day 5 — PRE-DAY-5 LIVE-STATE FORECAST &#124; FINAL / SETTLED &#124; Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) &#124; |
+
+
+**B. What happened.** SFA Aug28/29 and1–0/3–0 conflicts remain. Require exact native match sheet binding both Sikkim teams, date, final and corner period; neither schedule shell nor alternative team name resolves the card.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: Recover the exact ranked contract and final result before drawing a performance lesson.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Current secondary schedule still has an unscored Aug 28 row. Prior 1–0 versus secondary 3–0 and Aug 28/29 conflict remain; SFA exact-event final and corners required. Sofa route now 403. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-136 — James Duckworth vs Arthur Fery — ATP Winston-Salem Open 2026 Semifinal
+
+**Disposition:** `UNRESOLVED_OPERATOR`. Revision `HLR-20261001-P-136`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Over 22.5 total games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+| 2 | Duckworth +1.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+| 3 | Fery -1.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+| 4 | Under 22.5 total games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:44347 | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 |  |
+| PREDICTION_LOG_COMBINED.md:44347 | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 |  |
+| PREDICTION_LOG_COMBINED.md:44347 | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 |  |
+| PREDICTION_LOG_COMBINED.md:44347 | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 |  |
+
+
+**B. What happened.** Recovered original continuation says Arthur Fery advanced after James Duckworth retired. All four total/game-handicap contracts froze UNKNOWN_DEFINITION retirement rules. Parent FINAL/SETTLED is incomplete at contract level. Require original ticket/operator retirement/action terms; no arbitrary VOID or numeric Brier.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: Recover the exact ranked contract and final result before drawing a performance lesson.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Recovered original continuation says Arthur Fery advanced after James Duckworth retired. All four total/game-handicap contracts froze UNKNOWN_DEFINITION retirement rules. Parent FINAL/SETTLED is incomplete at contract level. Require original ticket/operator retirement/action terms; no arbitrary VOID or numeric Brier.
+
+### Review: P-148 — Toluca Femenil v León Femenil
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-148`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Toluca team corners Over 4.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | Specialist reports Toluca 2 (match corners 2-6) | PROVISIONAL LOSS;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 3 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:49159 | b4eb9d7668198d97a303973b53fb256bd3d4070303d277b078ed4ed9f436506c | &#124; P-148 &#124; Toluca Femenil 1–0 León Femenil; HT 0–0 &#124; **L, UNRESOLVED, L, W, W** &#124; Toluca **W** &#124; Score/goal timing corroborated by current reports; Toluca corner count not recovered &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:375 | 5d3cc5b4bee6d6f821977ab16f8f90998883ed15f180c8cefe9e9068c832acff | &#124; P-148-C02 &#124; 2 &#124; Toluca team corners Over 4.5 &#124; Specialist reports Toluca 2 (match corners 2-6) &#124; PROVISIONAL LOSS &#124; RW/PBR &#124; PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION &#124; Q148 &#124; |
+| PREDICTION_LOG_COMBINED.md:49159 | b4eb9d7668198d97a303973b53fb256bd3d4070303d277b078ed4ed9f436506c | &#124; P-148 &#124; Toluca Femenil 1–0 León Femenil; HT 0–0 &#124; **L, UNRESOLVED, L, W, W** &#124; Toluca **W** &#124; Score/goal timing corroborated by current reports; Toluca corner count not recovered &#124; |
+| PREDICTION_LOG_COMBINED.md:49159 | b4eb9d7668198d97a303973b53fb256bd3d4070303d277b078ed4ed9f436506c | &#124; P-148 &#124; Toluca Femenil 1–0 León Femenil; HT 0–0 &#124; **L, UNRESOLVED, L, W, W** &#124; Toluca **W** &#124; Score/goal timing corroborated by current reports; Toluca corner count not recovered &#124; |
+
+
+**B. What happened.** Toluca official report supports 1–0 but is not an aggregate-corner record. Prior Toluca 2 / ordering 2–6 versus 6–2 is unresolved; provisional LOSS only. Raw local P-147 maps to canonical P-148.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 3, 4 won; wrong: Ranks 1 lost; learn: operator/provider ownership missing. Fresh corner fetch failed.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Toluca official report supports 1–0 but is not an aggregate-corner record. Prior Toluca 2 / ordering 2–6 versus 6–2 is unresolved; provisional LOSS only. Raw local P-147 maps to canonical P-148. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-149 — Colorado Rapids 2 v Ventura County
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-149`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:49160 | e68a6037ce48bc8468c6d582654177a5629ef4be2748d60e52f13500d99b799d | &#124; P-149 &#124; Colorado Rapids 2 2–3 Ventura; HT 1–1 &#124; **W, W, W, L, L** &#124; Ventura **W** &#124; Official score/phase; Ventura corners research result **provisional** &#124; |
+| PREDICTION_LOG_COMBINED.md:49160 | e68a6037ce48bc8468c6d582654177a5629ef4be2748d60e52f13500d99b799d | &#124; P-149 &#124; Colorado Rapids 2 2–3 Ventura; HT 1–1 &#124; **W, W, W, L, L** &#124; Ventura **W** &#124; Official score/phase; Ventura corners research result **provisional** &#124; |
+| PREDICTION_LOG_COMBINED.md:49160 | e68a6037ce48bc8468c6d582654177a5629ef4be2748d60e52f13500d99b799d | &#124; P-149 &#124; Colorado Rapids 2 2–3 Ventura; HT 1–1 &#124; **W, W, W, L, L** &#124; Ventura **W** &#124; Official score/phase; Ventura corners research result **provisional** &#124; |
+| PREDICTION_LOG_COMBINED.md:49160 | e68a6037ce48bc8468c6d582654177a5629ef4be2748d60e52f13500d99b799d | &#124; P-149 &#124; Colorado Rapids 2 2–3 Ventura; HT 1–1 &#124; **W, W, W, L, L** &#124; Ventura **W** &#124; Official score/phase; Ventura corners research result **provisional** &#124; |
+| PREDICTION_LOG_COMBINED.md:49160 | e68a6037ce48bc8468c6d582654177a5629ef4be2748d60e52f13500d99b799d | &#124; P-149 &#124; Colorado Rapids 2 2–3 Ventura; HT 1–1 &#124; **W, W, W, L, L** &#124; Ventura **W** &#124; Official score/phase; Ventura corners research result **provisional** &#124; |
+
+
+**B. What happened.** Club-origin release supports Ventura 3–2, but has no aggregate corners; its syndicated copy is not an independent lineage. Prior research WIN remains provisional.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 3 won; wrong: Ranks 4, 5 lost; learn: Recover the exact ranked contract and final result before drawing a performance lesson.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Club-origin release supports Ventura 3–2, but has no aggregate corners; its syndicated copy is not an independent lineage. Prior research WIN remains provisional. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-162 — Te v Ferguson
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-162`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Rigele Te -2.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Te won 6-1, 6-4; +7 game margin | WIN;UNRESOLVED_GRADE_POINTER |
+| 2 | Under 22.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 17 games | WIN;UNRESOLVED_GRADE_POINTER |
+| 3 | Chase Ferguson +2.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Ferguson lost by 7 games | LOSS;UNRESOLVED_GRADE_POINTER |
+| 4 | Over 22.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | 17 games | LOSS;UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:376 | e7fd477724b951816ac9d54503181852c4d709c6ac48e7edc5302028a94de01d | &#124; P-162-C01 &#124; 1 &#124; Rigele Te -2.5 games &#124; Te won 6-1, 6-4; +7 game margin &#124; WIN &#124; RR/PR &#124; COMPLIANT — NONE &#124; Q162 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:379 | 08343345790a25c50c517147dc5df2adc9277e746defe544c24610713339facf | &#124; P-162-C04 &#124; 2 &#124; Under 22.5 games &#124; 17 games &#124; WIN &#124; RR/PR &#124; COMPLIANT — NONE &#124; Q162 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:377 | 58d278791eace288eaa1ca85a62dc0c2f0ed68fe64ea777d4e8a9a69113ceadd | &#124; P-162-C02 &#124; 3 &#124; Chase Ferguson +2.5 games &#124; Ferguson lost by 7 games &#124; LOSS &#124; RW/PBR &#124; COMPLIANT — RANDOM_REALIZATION &#124; Q162 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:378 | afe20bef5478631264257613c73119d34ef08dbf1c5e69767c541f432c6697eb | &#124; P-162-C03 &#124; 4 &#124; Over 22.5 games &#124; 17 games &#124; LOSS &#124; RW/PBR &#124; COMPLIANT — RANDOM_REALIZATION &#124; Q162 &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3, 4 lost; learn: Stress Chase Ferguson +2.5 games against Ferguson lost by 7 games and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-166 — Melbourne Mustangs vs Canberra Brave — AIHL Goodall Cup Semifinal
+
+**Disposition:** `UNRESOLVED_OPERATOR`. Revision `HLR-20261001-P-166`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Melbourne +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Over 7.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Under 7.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Canberra -1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:51281 | cd36db969e429fbba10467b9d8ed3191cb1973f82dec9c8f1118a6718f06148a | &#124; 1 &#124; `P-166-C01` &#124; Melbourne +1.5 &#124; Melbourne lost 4–5 &#124; **WIN** &#124; One-goal loss; +1.5 covered by 0.5 &#124; |
+| PREDICTION_LOG_COMBINED.md:51282 | 8c987f2402e0a79bd8fd1f94b1c9cceae81006fd1979c70990a4a123bad51584 | &#124; 2 &#124; `P-166-C03` &#124; Over 7.5 goals &#124; 9 total goals including OT winner &#124; **WIN** &#124; Cleared by 1.5 goals &#124; |
+| PREDICTION_LOG_COMBINED.md:51283 | 244b8ffc21b1b128d50e2b5ad6bf26c4b99cd327d2a21cb104459a2755b30ee8 | &#124; 3 &#124; `P-166-C04` &#124; Under 7.5 goals &#124; 9 total goals including OT winner &#124; **LOSS** &#124; Exceeded line by 1.5 goals &#124; |
+| PREDICTION_LOG_COMBINED.md:51284 | 0f336f6068a441f628132cda4b933b7bd51f3a8f712d2b624f625ec3f4ca2c85 | &#124; 4 &#124; `P-166-C02` &#124; Canberra -1.5 &#124; Canberra won by one &#124; **LOSS** &#124; Needed 2+; missed by 0.5 goals &#124; |
+
+
+**B. What happened.** Retained sporting finalMustangs5–4CanberraOT,regulation4–4. Actual operator/ticket overtime scope determines action; no new final source can manufacture absent terms.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3, 4 lost; learn: Stress Under 7.5 goals against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Regulation 4–4, final 5–4 after overtime, inherited sporting grades retained. Ticket/definition specifying overtime treatment NOT_RETRIEVED; no sporting-result search can reconstruct it. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-171 — Glasgow Cosmic vs Dublin Guardians — European T20 Premier League
+
+**Disposition:** `UNRESOLVED_CONTRACT_RANK_MERGE`. Revision `HLR-20261001-P-171`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Glasgow 20-over Under 165.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Cosmic first 6 overs Under 48.5 / Glasgow first 6 overs Under 48.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 3 | Cosmic first 6 overs Over 48.5 / Glasgow first 6 overs Over 48.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | MULTIPLE_CONTRACTS_FOR_CARD_RANK;UNRESOLVED_GRADE_POINTER |
+| 4 | Glasgow 20-over Over 165.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:55778 | 5b9ed26db3efef1796a2f1f9fdf778a236727525faa462c10fdc968e8fa7bec7 | &#124; 1 &#124; Glasgow 20-over Under 165.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:51321 | 4e64f7c01e2346de83e6d0972f469ee735e44f540da3f4b412eb276b385519b5 | &#124; 2 &#124; `P-171-C04` &#124; Cosmic first 6 overs Under 48.5 &#124; 44 runs after 6.0 &#124; **WIN** &#124; Under cleared by 4.5 runs &#124; |
+| PREDICTION_LOG_COMBINED.md:55779 | 0018d67f8cde9d77dc668822762d500d349f8f31af84df9edd86b4636c637c5e | &#124; 2 &#124; Glasgow first 6 overs Under 48.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:51322 | 4267bbd573659d8c2ec77770dd3000a814410f7d1e4c69483fd2116fb9d20c4e | &#124; 3 &#124; `P-171-C03` &#124; Cosmic first 6 overs Over 48.5 &#124; 44 runs after 6.0 &#124; **LOSS** &#124; Over missed by 4.5 runs &#124; |
+| PREDICTION_LOG_COMBINED.md:55780 | a8a1c945ea8a8cffd200bca818ebf6f3bd520b8d88b3f31919cc49df818f22ed | &#124; 3 &#124; Glasgow first 6 overs Over 48.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:55781 | 3c7d2b9d22663c39b83d99a6b3c3b0a4f1b005f637d9f706f59e55ba80e5ad54 | &#124; 4 &#124; Glasgow 20-over Over 165.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one. Same-rank contract variants remain separately preserved; a merged index is unsuitable for rank/grade inference. Require original issue-table/core and the dated correction that selects a controlling order; do not choose the outcome-favourable variant.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 4 won; wrong: Ranks 1 lost; learn: Stress Glasgow 20-over Under 165.5 against the recorded result and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: storing original ties/contract IDs separately from rank indices eliminates false same-rank result conflicts; check zero merged mutually exclusive contracts before any ranking analysis. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-176 — Amiens SC vs FC Versailles — France Ligue 3
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-176`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Amiens Team Under 1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Under 2.5 Goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Versailles ML | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | 1st Half Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | Total match corners Under 10.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | Timeline records Amiens 5, Versailles 3; 8 total | PROVISIONAL WIN;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:55904 | 0b51a1baf7bfd8fd72cb4f4dcfc2cf89423a68d011917da607beb98ad1c95e3e | &#124; 1 &#124; Amiens Team Under 1.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:55905 | 468e813dfe6ce52233b209658d75be2e0c4b3539a572774f719f8640e5289bdf | &#124; 2 &#124; Under 2.5 Goals &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:55906 | ec3756d3805d5b9f51e73802c5d07e841874807b79aef20c27f39cbd4cbac629 | &#124; 3 &#124; Versailles ML &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:55907 | 5c5a60ca5ff78a5baa52660103fd647a4d380ff4005db370af0479336e8b6564 | &#124; 4 &#124; 1st Half Over 0.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:380 | e75e88adf06c21d04c94152f88710c136683d02cef28529b0cacd326995808ba | &#124; P-176-C05 &#124; 5 &#124; Total match corners Under 10.5 &#124; Timeline records Amiens 5, Versailles 3; 8 total &#124; PROVISIONAL WIN &#124; RR/PD &#124; PROCESS_DEFECT — MATCHUP_CONTEXT &#124; Q176 &#124; |
+
+
+**B. What happened.** Secondary final 3–0 and corner commentary do not prove a complete aggregate. Prior 8 = 5+3 research WIN retained; FFF exact match-stat sheet required.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: Ranks 1, 2, 3, 4 lost; learn: Stress Amiens Team Under 1.5 against the recorded result and its named failure path before ranking…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Secondary final 3–0 and corner commentary do not prove a complete aggregate. Prior 8 = 5+3 research WIN retained; FFF exact match-stat sheet required. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-178 — AS Cannes vs Le Puy-en-Velay — France Ligue 3
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-178`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Under 2.5 Goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Cannes Team Under 1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | 1st Half Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | BTTS — No | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:55970 | e3abfe6f832aa11cbc1b36eece6eb2da8d4c966b982fca3c92c5ef117981ea0e | &#124; 1 &#124; Under 2.5 Goals &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:55971 | 354214f7f544106bd29b959ae199f27452f65861416c5f44e9ecc3d1307dfa66 | &#124; 2 &#124; Cannes Team Under 1.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:55972 | 14c0c3b7773c7914bcb6514f0d688ef0f726f648c454e05913a8c989c4770870 | &#124; 3 &#124; 1st Half Over 0.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:55973 | c1bb23674a04f2501eb4f4c62258801fe0aee523e302262698698f4cea2a07fc | &#124; 4 &#124; BTTS — No &#124; **WIN** &#124; |
+
+
+**B. What happened.** L’Équipe exact-event route 403, FFF 403. Prior 16 = 8+8 research LOSS retained; no new official aggregate. Competition is Ligue 3, not silently relabelled National 2.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3, 4 won; wrong: Ranks 2 lost; learn: Stress Cannes Team Under 1.5 against the recorded result and its named failure path before ranking…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: L’Équipe exact-event route 403, FFF 403. Prior 16 = 8+8 research LOSS retained; no new official aggregate. Competition is Ligue 3, not silently relabelled National 2. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-179 — Thionville Lusitanos vs Paris 13 Atletico — France Ligue 3
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-179`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Thionville Team Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | 1st Half Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Paris 13 Team Under 1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Under 2.5 Goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | Under 10.5 Corners | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:55992 | debc646b4394eba7cdd3bf4a31460aa847e6910e5139d320d383f1c5db2ba287 | &#124; 1 &#124; Thionville Team Over 0.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:55993 | fd7130f7917f4b2593e803e68e0368accc7d9f4888da041ed67929a2ed1707af | &#124; 2 &#124; 1st Half Over 0.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:55994 | cc1d9403de9fef37c408b2e979f88ec98e217619d3e5980b1e738576a26830f0 | &#124; 3 &#124; Paris 13 Team Under 1.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:55995 | a919bf5ab50ab4c224012dd65870cf8cc38ec920a5906e564e2f9a673f87416d | &#124; 4 &#124; Under 2.5 Goals &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:55996 | e4d2d2b703ccdd832fd1ae9a5a821d57ca527bd84ec9deb2be04f859948d2fc6 | &#124; 5 &#124; Under 10.5 Corners &#124; **PROVISIONAL WIN** &#124; |
+
+
+**B. What happened.** Exact-event secondary route 403 and FFF 403. Prior 9 = 8+1 research WIN retained. The two penalty goals in the 1–1 result are not a shootout.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3, 4, 5 won; wrong: Ranks 2 lost; learn: Stress 1st Half Over 0.5 against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Exact-event secondary route 403 and FFF 403. Prior 9 = 8+1 research WIN retained. The two penalty goals in the 1–1 result are not a shootout. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-192 — SSG Landers @ KIA Tigers — KBO
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-192`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:243 | 6f73553b475ada0556010812e9404fffb36a52a7ce6bd841ca89bbbf9f74deec | &#124; P-180 &#124; 1. FC Köln vs TSG Hoffenheim — Germany Bundesliga &#124; FINAL / SETTLED &#124; Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-200 — Herning Blue Fox vs Rungsted Seier Capital — Danish Metal Ligaen
+
+**Disposition:** `UNRESOLVED_OPERATOR`. Revision `HLR-20261001-P-200`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:63723 | 169aba488cbbd0a6aa084ed8fe1babfa9f48a42f6a42571082228c271ccd5957 | &#124; P-200 &#124; Herning 4–3 Rungsted after a 3–3 regulation tie &#124; 2–2* &#124; LOSS* &#124; WIN* &#124; `*` Research grade assumes OT/SO inclusion; exact operator terms remain unknown. &#124; |
+
+
+**B. What happened.** Retained Herning4–3RungstedOT,regulation3–3. Total6.5 differs at6regulation/7includingOT; operator endpoint missing. Keep both interpretations descriptive, no booked winner.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: Ranks 1 lost; learn: Recover the exact ranked contract and final result before drawing a performance lesson.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Regulation 3–3 and final 4–3 OT change the endpoint of total 6.5. Sporting facts retained; actual ticket/house definition missing. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-215 — Japan vs Qatar — FIBA Basketball World Cup 2027 Asian Qualifiers
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-215`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | P-215-C04 — Under 169.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | 193 | UNRESOLVED_GRADE_POINTER |
+| 2 | P-215-C02 — Japan -34.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Japan +53 | UNRESOLVED_GRADE_POINTER |
+| 3 | P-215-C01 — Qatar +34.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Qatar -53 | UNRESOLVED_GRADE_POINTER |
+| 4 | P-215-C03 — Over 169.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 193 | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_6.md:819 | a5e63696b61d6566c738f7a338499e5d2fa52b23f8242667b33ec5a3020869aa | &#124; 1 &#124; P-215-C04 — Under 169.5 &#124; 193 &#124; **LOSS** &#124; 23.5 points above line &#124; Descriptive only; late import and process-defective &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_6.md:820 | 1350d53b3e3cb49f7601120e71634dcd5c9d586e07c10203577d6b0f28303791 | &#124; 2 &#124; P-215-C02 — Japan -34.5 &#124; Japan +53 &#124; **WIN** &#124; Covered by 18.5 &#124; Descriptive only; late import and process-defective &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_6.md:821 | 67b80f09bdcf6d60ac99a38ad6ae25c15653d6d402dd06bcecf41e04f6d6f927 | &#124; 3 &#124; P-215-C01 — Qatar +34.5 &#124; Qatar -53 &#124; **LOSS** &#124; Missed by 18.5 &#124; Descriptive only; late import and process-defective &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_6.md:822 | 423607d0bb4efbee5c537ace480bec43987ef184972334cea43f0f53bba5e0f1 | &#124; 4 &#124; P-215-C03 — Over 169.5 &#124; 193 &#124; **WIN** &#124; 23.5 points above line &#124; Descriptive only; late import and process-defective &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 4 won; wrong: Ranks 1, 3 lost; learn: Stress P-215-C04 — Under 169.5 against 193 and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-216 — Namibia vs Zimbabwe — Namibia T20I Tri-Series 2026
+
+**Disposition:** `DOCUMENTARY_RANK_CUSTODY_RECOVERED`. Revision `HLR-20261001-P-216`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Zimbabwe 20-over Under 165.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | 195/6 after 20 | LOSS;UNRESOLVED_GRADE_POINTER |
+| 2 | Zimbabwe after 6 Over 47.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 64/1 after 6 | WIN;UNRESOLVED_GRADE_POINTER |
+| 3 | Zimbabwe after 6 Under 47.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | 64/1 after 6 | LOSS;UNRESOLVED_GRADE_POINTER |
+| 4 | Zimbabwe 20-over Over 165.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 195/6 after 20 | WIN;UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:274 | da69bd831c646ff947be68619f927438bbcf1a1cff3e25cffc200a23d2b198eb | &#124; P-216-C02 &#124; 1 &#124; Zimbabwe 20-over Under 165.5 &#124; 195/6 after 20 &#124; LOSS &#124; RW/PBR &#124; PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL &#124; S216 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:275 | a69297446ac10f3f9443106ba9febc6b81edb803f6a9b4ad419903d91e6f6d64 | &#124; P-216-C03 &#124; 2 &#124; Zimbabwe after 6 Over 47.5 &#124; 64/1 after 6 &#124; WIN &#124; RR/PR &#124; PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL &#124; S216 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:276 | 19d80b18114e68e9802871348cfcde4beca1ca383bd8fd38e5b2b9cc2cfe4e5f | &#124; P-216-C04 &#124; 3 &#124; Zimbabwe after 6 Under 47.5 &#124; 64/1 after 6 &#124; LOSS &#124; RW/PBR &#124; PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL &#124; S216 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:273 | a7a75a4186a421278918cc47edcc6bee96663cf71b92594f903881c11a09e6be | &#124; P-216-C01 &#124; 4 &#124; Zimbabwe 20-over Over 165.5 &#124; 195/6 after 20 &#124; WIN &#124; RR/PD &#124; PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL &#124; S216 &#124; |
+
+
+**B. What happened.** Recovered dated contract-level source gives Zimbabwe195/6after20and64/1after6; explicit ranks1Under165.5L,2Over47.5W,3Under47.5L,4Over165.5W. This recovers documentary order only; native field-owner phase/time and original core receipts remain unauthenticated.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 4 won; wrong: Ranks 1, 3 lost; learn: Stress Zimbabwe 20-over Under 165.5 against 195/6 after 20 and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Recovered dated contract-level source gives Zimbabwe195/6after20and64/1after6; explicit ranks1Under165.5L,2Over47.5W,3Under47.5L,4Over165.5W. This recovers documentary order only; native field-owner phase/time and original core receipts remain unauthenticated.
+
+### Review: P-217 — Trinbago Knight Riders vs Guyana Amazon Warriors — CPL
+
+**Disposition:** `UNRESOLVED_OPERATOR`. Revision `HLR-20261001-P-217`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | GAW 20-over Under 174.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | 185/5 in 16 overs | UNRESOLVED — directional LOSS;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+| 2 | GAW after 6 Over 46.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | GAW after 6 Under 46.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | GAW 20-over Over 174.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | 185/5 in 16 overs | UNRESOLVED — directional WIN;UNRESOLVED_GRADE;UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:278 | f4e1ef38c787244fcc12815680fd1fe0537f795483d4602bbd7438edb2b06f24 | &#124; P-217-C02 &#124; 1 &#124; GAW 20-over Under 174.5 &#124; 185/5 in 16 overs &#124; UNRESOLVED — directional LOSS &#124; N/A — operator unresolved &#124; INCONCLUSIVE — IDENTITY_CONTRACT / UNKNOWN_DEFINITION &#124; S217 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6566 | 75cd85f2e6c11bd83b05b1fb068bf0b509f5e6ce93973430e11ab46b3e098875 | &#124; 2 &#124; GAW after 6 Over 46.5 &#124; 31/2 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6567 | eab53d9908e5c0f2126aaedb2427e6b13d72f5497110485489a0510aa0f1b02a | &#124; 3 &#124; GAW after 6 Under 46.5 &#124; 31/2 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/settled_audits_2026-09-21/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-02.md:277 | 0766aa8f7a50940c8b7fcbb2ed43ca2687343b1d21ddffc5eb896e27587bbadb | &#124; P-217-C01 &#124; 4 &#124; GAW 20-over Over 174.5 &#124; 185/5 in 16 overs &#124; UNRESOLVED — directional WIN &#124; N/A — operator unresolved &#124; INCONCLUSIVE — IDENTITY_CONTRACT / UNKNOWN_DEFINITION &#124; S217 &#124; |
+
+
+**B. What happened.** Reduced16overs:GAW185/5,TKR172/7,GAWby9DLS. Sixcompletedovers31/2 is distinct from mandatory powerplay4.5overs24/2. Preserve six-overOver46.5LOSS/UnderWIN as inherited sporting diagnostics; innings174.5 action/void depends on frozen ticket terms. Do not use raw185−172=13 asDLSmargin.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 3 won; wrong: Ranks 2 lost; learn: OPERATOR_ACTION UNKNOWN_DEFINITION. See current retrospective.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Inherited 16-over 185/5 versus 172/7, Guyana by 9 runs DLS. Total 174.5 research O WIN/U LOSS; six completed overs 31/2 versus mandatory powerplay 4.5 overs 24/2 are different contracts. Ticket/action definition missing. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-218 — Ann Li vs Antonia Ruzic — US Open Women 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-218`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Li -4.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Under 20.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Over 20.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Ruzic +4.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6585 | 306558c036742fd7a3755669bc6505d06c98ac9339d3c2ebcbedeb85de10a606 | &#124; 1 &#124; Li -4.5 games &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6586 | 0a31fec0ea7e08955e0463addd6b874a7ccea07b193eebcaaa01a74878833ff8 | &#124; 2 &#124; Under 20.5 games &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6587 | c0225a4d41e1c82ddbb67ce4481b9b495f2178bf21176e45f46c7f23040ce0dc | &#124; 3 &#124; Over 20.5 games &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6588 | bd4cc08a064deea526679ef6d3d609d2a033e017b2f589c01fd4de2ac392fa79 | &#124; 4 &#124; Ruzic +4.5 games &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3, 4 lost; learn: Stress Over 20.5 games against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-219 — New York Mets (Robert Stock) @ Tampa Bay Rays (Ian Seymour) — MLB 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-219`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Mets +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Over 7.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Rays -1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Under 7.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6603 | 27825f9304a02db31fa608dec6fae528d4b45b6ca81aa091b55be415194d3053 | &#124; 1 &#124; Mets +1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6604 | 8ba6b36a81114f9a17ca7c35925ff03892f69c07456d95465861f82d8e74518a | &#124; 2 &#124; Over 7.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6605 | 583f72818850cd23fea1301fdc41b198265b9c98dbe9dfac445ed13fd0624813 | &#124; 3 &#124; Rays -1.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6606 | caa07b8d7b71203c6e45698030d2c330451129c4331e21b9584f8bfa55c87c1c | &#124; 4 &#124; Under 7.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 4 won; wrong: Ranks 2, 3 lost; learn: Stress Over 7.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-220 — San Diego Padres (Michael King) @ Cincinnati Reds (Brady Singer) — MLB 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-220`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Reds +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Over 9.0 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Padres -1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Under 9.0 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6623 | 17203cefacd80ae2291a3fa82ab1a6bf0ca681f4b72a0549338230c88574b130 | &#124; 1 &#124; Reds +1.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6624 | 07cf38d4104db99bddde54c5f1036fb2fdca2366807c6f50fb345ef0a435118d | &#124; 2 &#124; Over 9.0 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6625 | 7dd1d4e21b54abc1686ab1e33912ea7da4d344dbda2ae8a385a00135a15c13fb | &#124; 3 &#124; Padres -1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6626 | b39546aebdc809b033f3bf99f5ed60de3714c488e0b8712908a6551dfadc1ab5 | &#124; 4 &#124; Under 9.0 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 3, 4 won; wrong: Ranks 1, 2 lost; learn: Stress Reds +1.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-221 — Miami Marlins (Ryan Gusto) @ Washington Nationals (Will Dion) — MLB 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-221`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Nationals +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Under 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Marlins -1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6650 | e3f9f136e43064de91609e2e6015dd49b54a3a43d0533cf304b328815f0887e3 | &#124; 1 &#124; Nationals +1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6651 | 61235db79d6f1d3c61716d7e5734cfb142398191dff5516b17e46f375b218908 | &#124; 2 &#124; Over 8.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6652 | 9cf93ee9fc8ba71f743d9f57a8fb9148c635d57c7abfe0051957aac91983e212 | &#124; 3 &#124; Under 8.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6653 | ca59ac0554c41a5fa114b66b10cea7c3677f1c7b23b6907866421c7d47ad560f | &#124; 4 &#124; Marlins -1.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3, 4 lost; learn: Stress Under 8.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-222 — Seattle Mariners (George Kirby) @ Boston Red Sox (Payton Tolle) — MLB 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-222`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Mariners +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Over 7.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Under 7.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Red Sox -1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6670 | 6050d7072c93518ff518eda0486b378db1068012c037e88a7e5b98387ff1c042 | &#124; 1 &#124; Mariners +1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6671 | 1458dce5e64eb0bb66b5419489882ad207d4c768d2aa7dc5a01dbee11d1fb90e | &#124; 2 &#124; Over 7.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6672 | b1896473632bc03385ccc36e4481e8b15f3e2a20d06195b28f241350bb191f1f | &#124; 3 &#124; Under 7.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6673 | 50c8aa532c9d3dcfb74bce7749b06e2c7f09a104817350011ea33d79a152c22c | &#124; 4 &#124; Red Sox -1.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3, 4 lost; learn: Stress Under 7.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-223 — New York Yankees at Los Angeles Angels
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-223`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Angels +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Yankees moneyline | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Under 8.0 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Over 8.0 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6688 | 164c1069af1012d8136716446cdd46f21f0b6316bd9efdd548f7b98898f53d56 | &#124; 1 &#124; Angels +1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6689 | d406bae17160f833f4de4a2640e69e696978d559b313fb48287a6c3111fea2b6 | &#124; 2 &#124; Yankees moneyline &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6690 | aa005adf60d35a25526ba84e024fc42eee2038fe5f7e344a2f28a179b2da3ce0 | &#124; 3 &#124; Under 8.0 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6691 | 9e5e72781f3dcd481c4829e02ac58b77af02ba07090ad66b9fa887eb13355f3c | &#124; 4 &#124; Over 8.0 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 4 won; wrong: Ranks 2, 3 lost; learn: Stress Yankees moneyline against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-224 — Philadelphia Phillies (Aaron Nola) @ Arizona Diamondbacks (Brandon Pfaadt) — MLB 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-224`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Phillies +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Diamondbacks +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Under 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6708 | e7694ee2446ce34acfb3226722d6547555581a0e035d770c8c69d6298c43b47b | &#124; 1 &#124; Phillies +1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6709 | 5cd87da6db9ff0306551d847ba64f8f44f8d40b30ec3f6e655bff7db284b1745 | &#124; 2 &#124; Diamondbacks +1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6710 | 7e02467b8048b8c7db11c37c1fefecd1dc866c7e37a8f45eef832dfa65a8fadc | &#124; 3 &#124; Under 8.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6711 | a73396da819b4c7b772ae9ec3b76bb7f0e8d62f5fa609f1b9a63440bf28ad5ea | &#124; 4 &#124; Over 8.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 3 won; wrong: Ranks 4 lost; learn: Stress Over 8.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-225 — Chun-Hsin Tseng vs Tianhui Zhang — ATP Challenger Zhangjiagang 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-225`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Under 20.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Tseng -4.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Zhang +4.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Over 20.5 games | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6726 | c7302e329e5c2812a75244457dc5c6716ab08c1880fe4c298faaad03c7537841 | &#124; 1 &#124; Under 20.5 games &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6727 | 382f29b5784c5eae30445d267c1f9bc04e5eb5699a2e60250b9866957139730e | &#124; 2 &#124; Tseng -4.5 games &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6728 | 8ce2afc0e62d51afbf9aee5688f318a55c7d317e0652e34f0be0a1a80d05f979 | &#124; 3 &#124; Zhang +4.5 games &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6729 | e92ba0678a215df4fb8ccb653c55dcc8f48279ca7bb56b71c053a8aacca2ec5b | &#124; 4 &#124; Over 20.5 games &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3, 4 lost; learn: Stress Zhang +4.5 games against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-226 — Hanshin Tigers @ Tokyo Yakult Swallows — NPB 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-226`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Under 7.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Yakult +2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Hanshin -2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Over 7.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6744 | 64be5a021e4bafcf27c89fbecf426c4df0d83fdecfa0846c83ecc6320f58a37d | &#124; 1 &#124; Under 7.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6745 | 630d81520c31110c81f3dd73baee97d650673c6c235b856e2721c7b6a202bab6 | &#124; 2 &#124; Yakult +2.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6746 | 699abfb7cdf2a494a1222a3e753d860a6653dc08a2fe9056cd7d7dd81834b728 | &#124; 3 &#124; Hanshin -2.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6747 | 8b0ded41723d65d4778660aaec81e4a13dbe6f5aa41c34bcc4cc94f2599659b2 | &#124; 4 &#124; Over 7.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 3, 4 won; wrong: Ranks 1, 2 lost; learn: Stress Under 7.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-227 — Hiroshima Toyo Carp @ Chunichi Dragons — NPB 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-227`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Hiroshima +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Under 6.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Chunichi +0.5 | 0.500000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Over 6.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6771 | b42507bd5e84cd9ed9590e2bbdc6d20ae3359925d14f32718ddae1aec5130da7 | &#124; 1 &#124; Hiroshima +1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6772 | 3afae1ba735028d777f5395985b2d54c6a1a318156e19dce05e1386c424f9035 | &#124; 2 &#124; Under 6.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6773 | 34799ce47177da50d4635f9b1b7f9f59a672d637d4f3b00dccd0d9c50386e2e8 | &#124; 3 &#124; Chunichi +0.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6774 | a472f44c214df18758a5d86da3fa3eb5a33e866ca35798255d2489e26f49bdc9 | &#124; 4 &#124; Over 6.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3, 4 lost; learn: Stress Chunichi +0.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-228 — Orix Buffaloes @ Tohoku Rakuten Golden Eagles — NPB 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-228`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Rakuten +0.5 | 0.500000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Over 6.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Orix +0.5 | 0.500000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Under 6.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6791 | a437f8c486851bc03bdc5c3c5eedc1f527070db525dcafead98eb411f0f00916 | &#124; 1 &#124; Rakuten +0.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6792 | 9949cd30cfb3c775740a1c7ae0ca14224fdc1257de0ddf8a0b17420a7f681c43 | &#124; 2 &#124; Over 6.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6793 | 645c062b37c877699925431bc74a03a676241dfe69d88cdceed333dce96977f3 | &#124; 3 &#124; Orix +0.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6794 | 0b20f265c62a2dd6491ade20a37383f9d96ecd3698e5d2c87d083832af516f1b | &#124; 4 &#124; Under 6.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 4 won; wrong: Ranks 2, 3 lost; learn: Stress Over 6.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-229 — Hanwha Eagles @ KT Wiz — KBO 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-229`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Hanwha +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Over 9.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Under 9.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | KT -1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6811 | 8fa9576ce1304563e9dc570cd5b20e9bed9641adc21e02b942e3b343a6dd01e1 | &#124; 1 &#124; Hanwha +1.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6812 | 98818d0c9563e2eeac851da51457fba1aa772bb095b80c62a7d83a9db43657b1 | &#124; 2 &#124; Over 9.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6813 | ce6ef644691d73bed1f93f3db40498ab296266e42ccec5610cf634a9bd934b6a | &#124; 3 &#124; Under 9.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6814 | 4eb32da1dde5c238eabdf1002eea78ee1913b8d176aa8d60276c84d5629951e0 | &#124; 4 &#124; KT -1.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 3, 4 won; wrong: Ranks 1, 2 lost; learn: Stress Hanwha +1.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-230 — KIA Tigers @ NC Dinos — KBO 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-230`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | NC +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | KIA moneyline | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Over 9.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Under 9.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6838 | 02a60664f2c374d43e7e85d1ca2b213c7836762c8caf3be57c9bb117994b228f | &#124; 1 &#124; NC +1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6839 | 884b8665baed61bdab085cb2acc94c9ee82cf4c9247c59a34cb7b8050fe16578 | &#124; 2 &#124; KIA moneyline &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6840 | a43481bc942df666a98959b30245b876f35c0bc126faab38b81cd0610838bcb6 | &#124; 3 &#124; Over 9.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6841 | a1d2b5d3bf46cb17261d9dd0da9594087a119cbc09faef90089ec555a8f1533b | &#124; 4 &#124; Under 9.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 4 won; wrong: Ranks 2, 3 lost; learn: Stress KIA moneyline against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-231 — LG Twins @ Doosan Bears — KBO 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-231`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Doosan +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Under 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | LG +0.5 | 0.500000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6858 | 4dfc6edbf3b8c55f920bfc45107126c45633e4e82a79b54598dae33133ecc7b9 | &#124; 1 &#124; Doosan +1.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6859 | ef062515382daeaf93fbd8b73991665af2ef81e54d410187887f953bc45421d9 | &#124; 2 &#124; Under 8.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6860 | 3c9d95e5129b9e262714fe6a01956d97b4e89b1b3a063845fcae0e422b63de77 | &#124; 3 &#124; LG +0.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6861 | a73396da819b4c7b772ae9ec3b76bb7f0e8d62f5fa609f1b9a63440bf28ad5ea | &#124; 4 &#124; Over 8.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 3 won; wrong: Ranks 1, 4 lost; learn: Stress Doosan +1.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-232 — Lotte Giants @ Samsung Lions — KBO 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-232`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Lotte +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Under 10.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Samsung -1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Over 10.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6885 | ddbe4544a6514f08c890b639eee247d65babcbeda764d60e99c213e71ee73f6e | &#124; 1 &#124; Lotte +1.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6886 | c06642db70dc529448070223759b8dfde342d25f99ea7c7d4c7bd076ff80aa3d | &#124; 2 &#124; Under 10.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6887 | debb87976fc95fd3f6fdc57c0970ff215bbaa3a9b0972e722a9bbaa8c9add463 | &#124; 3 &#124; Samsung -1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6888 | 7575ef535e7dce4fb0a0a810b920e7bd8fece9da73fa1eca4611b57641c36918 | &#124; 4 &#124; Over 10.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 3 won; wrong: Ranks 1, 4 lost; learn: Stress Lotte +1.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-233 — Beijing Guoan vs Lanzhou Longyuan Athletic — China FA Cup 2026 (quarterfinal, corrected)
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-233`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Beijing team goals Over 1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | 1st-half Over 0.5 goals | 0.500000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Total goals Over 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | BTTS — No | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | Corners Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6912 | 644e77f0eab50f88527aededd0586cc980f53e9cc825a5a423538eab549b1cb3 | &#124; 1 &#124; Beijing team goals Over 1.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6913 | ed16e44e57413f2123c549b1fe3208b66ccce2f611e9e95366a48408e9dd78e5 | &#124; 2 &#124; 1st-half Over 0.5 goals &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6914 | b024fb71df4f8c20a7ea6bdefaa7987999c57663e9a597e097272dcea42ec226 | &#124; 3 &#124; Total goals Over 2.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6915 | c35d22d7559dcc53b61baa83a1298d76aba024a236da778d1608cfa9e78d96cc | &#124; 4 &#124; BTTS — No &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6916 | 254d7bc6e182a261f45da5ab8615100a7aca440763ae7571f6d32cdd1f18eab7 | &#124; 5 &#124; Corners Over 8.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** CFA landing page is not a match sheet; original Xinhua report supplies terminal corroboration only. Prior 13-corner research WIN retained; quarterfinal, not Round of 16.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 3, 5 won; wrong: Ranks 4 lost; learn: Stress BTTS — No against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: CFA landing page is not a match sheet; original Xinhua report supplies terminal corroboration only. Prior 13-corner research WIN retained; quarterfinal, not Round of 16. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-234 — Dalian Yingbo vs Shanghai Shenhua — China FA Cup 2026 (quarterfinal, corrected)
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-234`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1st-half Over 0.5 goals | 0.500000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Dalian team goals Over 0.5 | 0.500000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Corners Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | BTTS — Yes | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | Total goals Over 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6933 | abc21e0bd8ebc666aa627dec3508653651d974a6995488159bc831efccae4e9d | &#124; 1 &#124; 1st-half Over 0.5 goals &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6934 | aea8393569a02f0ec3ed918eee5554fe99b1dbcefa5eea52785af46abb0f8891 | &#124; 2 &#124; Dalian team goals Over 0.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6935 | 58767fb3cc878081b57aa20f92e7be7e05bb328d71959c60086bde5b04e6c3df | &#124; 3 &#124; Corners Over 8.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6936 | d01cf71f52edfaf4b11eb10b166170825c6d0d378ba4c15b72b05a69089fd9ff | &#124; 4 &#124; BTTS — Yes &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6937 | 43d510d4fbbf33e8a0cf6150595691d5b48cbfa354187a9007b3cac003b3f964 | &#124; 5 &#124; Total goals Over 2.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Titan exact route retrieval miss; original Xinhua says Dalian 1–0, no corner aggregate. Prior 10-corner WIN provisional; keeper red-card disruption must not be mistaken for a pregame input.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 3 won; wrong: Ranks 1, 4, 5 lost; learn: Stress 1st-half Over 0.5 goals against the recorded result and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Titan exact route retrieval miss; original Xinhua says Dalian 1–0, no corner aggregate. Prior 10-corner WIN provisional; keeper red-card disruption must not be mistaken for a pregame input. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-235 — Shandong Taishan vs Shanghai Port — China FA Cup 2026 (quarterfinal, corrected)
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-235`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1st-half Over 0.5 goals | 0.500000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Shanghai Port team goals Over 0.5 | 0.500000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | BTTS — Yes | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Total goals Over 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | Corners Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6963 | 7c54e1a50b1e8200a9d750730f1b1d9243a2d9f5b2de07fe25a997abd308e52e | &#124; 1 &#124; 1st-half Over 0.5 goals &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6964 | 542f2e0c8f3c4311fc3e39cb269bf03fd77793a94d6a9325f6573a8be36f1e05 | &#124; 2 &#124; Shanghai Port team goals Over 0.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6965 | 6120699b371858ac76d0a0536e9103b5d370450b411809205faa9eceddef8767 | &#124; 3 &#124; BTTS — Yes &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6966 | f21c929a14b5debb08b1d6ca819e8bc3404e5bfe9b9af2d968ddca6af867034c | &#124; 4 &#124; Total goals Over 2.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6967 | 254d7bc6e182a261f45da5ab8615100a7aca440763ae7571f6d32cdd1f18eab7 | &#124; 5 &#124; Corners Over 8.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** CFA landing page lacks target statistics. Xinhua terminal report supports Port 3–0; prior 14-corner WIN is provisional, not revalidated.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 4, 5 won; wrong: Ranks 3 lost; learn: Stress BTTS — Yes against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: CFA landing page lacks target statistics. Xinhua terminal report supports Port 3–0; prior 14-corner WIN is provisional, not revalidated. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-236 — England Women vs Ireland Women — 1st ODI, 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-236`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Ireland after 5 Under 20.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Ireland innings Over 218.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Ireland innings Under 218.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Ireland after 5 Over 20.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6984 | 3577874457ad32ad9c49cbbd4024ead07186cd531067d64f5a719c5eb42dbca5 | &#124; 1 &#124; Ireland after 5 Under 20.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6985 | 475faa415a382d1f455b0387dae952a8146ab6a3cf3ee91a4ad4cbc4b49120e9 | &#124; 2 &#124; Ireland innings Over 218.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6986 | ad0885d42b9c66dcba1c2212b0cdaa2c98eca9d1c5db769d34604883d51dbe42 | &#124; 3 &#124; Ireland innings Under 218.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:6987 | 9af8687267150a5c8096023fce03033970a5a2117532aa195f5669c0be55affe | &#124; 4 &#124; Ireland after 5 Over 20.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 4 won; wrong: Ranks 1, 3 lost; learn: Stress Ireland after 5 Under 20.5 against the recorded result and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-237 — Zimbabwe vs South Africa — Namibia T20I Tri-Series 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-237`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | South Africa innings Under 184.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | South Africa after 6 Under 54.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | South Africa after 6 Over 54.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | South Africa innings Over 184.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:7011 | 55199dbcce9548827c5b5582f77a6a017e2f4e4e7ca4cbb2ac476de122fd75ad | &#124; 1 &#124; South Africa innings Under 184.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:7012 | 941caf83478c7dd7537c7257443ffd8f7f2480e794cb8e0712169490b1225a14 | &#124; 2 &#124; South Africa after 6 Under 54.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:7013 | 44e1157cabc0a8b0e52f8bf41e04794e06eda4dcfff93cb1b48aee48fdc45c8d | &#124; 3 &#124; South Africa after 6 Over 54.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:7014 | af076c57cdf3d0a716cd6a9ad8deadcbe28cd33ac91680dd79f7c3631d433a5b | &#124; 4 &#124; South Africa innings Over 184.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 3, 4 won; wrong: Ranks 1, 2 lost; learn: Stress South Africa innings Under 184.5 against the recorded result and its named failure path…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-238 — Glasgow Cosmic vs Rotterdam Dockers — European T20 Premier League 2026
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-238`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Glasgow innings Under 161.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Glasgow after 6 Under 46.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | Glasgow after 6 Over 46.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | Glasgow innings Over 161.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:7041 | 51da111712578c6b22b2fc9407e3ece16c08db0d2db6effa07a19ea9c2e38fc0 | &#124; 1 &#124; Glasgow innings Under 161.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:7042 | 3aee7bb95309ad2a250b4818235137ee518755c66d368a067824d8ea405a24a7 | &#124; 2 &#124; Glasgow after 6 Under 46.5 &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:7043 | b296622342d5866da5b181302158f259284a28c0fd2de791c11a86a9b87d9a2b | &#124; 3 &#124; Glasgow after 6 Over 46.5 &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P238.md:7044 | 99ffdf256f415a52c73638875b53d9c202dfea8cc1986147b29e64066ba6f8b0 | &#124; 4 &#124; Glasgow innings Over 161.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3, 4 lost; learn: Stress Glasgow after 6 Over 46.5 against the recorded result and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-246 — New York Yankees @ Los Angeles Angels
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-246`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:297 | 2ded48b1639643dd45cef47f0ef5581f78c57db31169480062865b4a48f67ddf | &#124; P-234 &#124; Dalian Yingbo vs Shanghai Shenhua — China FA Cup 2026 (quarterfinal, corrected) &#124; FINAL / PARTIAL; corner field pending &#124; New original reports confirm Dalian 1–0, half 0–0. Corner 10 inherited specialist-only.; [canonical log](PREDICTION_LOG_COMBINED.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: retrospective source recovery: audit_2026-09-12/recovered_historical_retrospectives.md
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-249 — Hanwha Eagles @ KT Wiz
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-249`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:300 | 5e9af00f6ff6f8866ca9deef1937edd674750b4dbcf853053fc7b200c575ffab | &#124; P-237 &#124; Zimbabwe vs South Africa — Namibia T20I Tri-Series 2026 &#124; FINAL / SETTLED &#124; Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: retrospective source recovery: audit_2026-09-12/recovered_historical_retrospectives.md
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-250 — Yunnan Yukun vs Chongqing Tonglianglong
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-250`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Full Over 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Full Under 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1H Under 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:69717 | c086339df500d8c42858cf4902952e2e6b31adf111ce437ea26e655ab9e91270 | &#124; P-250-C01 &#124; 1 &#124; 1H Over 0.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:69719 | 78a60dd6837af2c1ad9cd2881fd4d7537d49fe0c7497296e0c388b2c37ac7a02 | &#124; P-250-C03 &#124; 3 &#124; Full Over 2.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:69720 | 083f4b53aab3fab11c8214ffc79a63690fa062e2d29e9bfbc8550e31b8cdc6ac | &#124; P-250-C04 &#124; 4 &#124; Full Under 2.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:69718 | 6ee40ba740746f9f737e306c14e0ed0a200aa3c1e165a6bb1396ee3ac456acba | &#124; P-250-C02 &#124; 5 &#124; 1H Under 0.5 &#124; **WIN** &#124; |
+
+
+**B. What happened.** China FA Cup field-owner/data-partner aggregate still missing. No inferred grade; historical ESPN noncoverage does not establish that the match was cancelled.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 4, 5 won; wrong: Ranks 1, 3 lost; learn: Issued card/available retrospective restored to Part 1
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: China FA Cup field-owner/data-partner aggregate still missing. No inferred grade; historical ESPN noncoverage does not establish that the match was cancelled. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-251 — Sassuolo vs Frosinone
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-251`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Full Over 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Corners Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | PROVISIONAL WIN — threshold invariant; current feeds expose 10-11 corners | NONE_IN_LITERAL_VIEW |
+| 4 | Full Under 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1H Under 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:69747 | 7bd5dab802a3d5419c2c4fa53d1926054809164beaf6c8e790e051ac11108518 | &#124; P-251-C01 &#124; 1 &#124; 1H Over 0.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:69748 | 63059b3cdc68238e5a9b7140faafb891fb08b349a83a8469d90292ea4b93661f | &#124; P-251-C03 &#124; 2 &#124; Full Over 2.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:69749 | db26ed443d78d1cf6d518719597303e75dd0af79e75012e6fd5a3e66c4acf51b | &#124; P-251-C05 &#124; 3 &#124; Corners Over 8.5 &#124; **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners &#124; |
+| PREDICTION_LOG_COMBINED.md:69750 | 5902373184b69657906877704168805a6c817593ce6644301b84fbe9636b69bb | &#124; P-251-C04 &#124; 4 &#124; Full Under 2.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:69751 | 9d1c305f7e9f3fbc3ffd633fc7c313f29cec2c7466378ea4674e11b164e449cc | &#124; P-251-C02 &#124; 5 &#124; 1H Under 0.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** ESPN 401911806 final after penalties, 1–1, corners 6+5=11: research WIN. Lega / reconciled issued provider still required; no substitution of the unregistered feed.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3, 4 won; wrong: Ranks 2, 5 lost; learn: Issued card/available retrospective restored to Part 1
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: ESPN 401911806 final after penalties, 1–1, corners 6+5=11: research WIN. Lega / reconciled issued provider still required; no substitution of the unregistered feed. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-255 — Inter Women vs VfL Wolfsburg Women
+
+**Disposition:** `UNRESOLVED_PERIOD`. Revision `HLR-20261001-P-255`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Full Over 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Full Under 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1H Under 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:71393 | 3c3ab3985c2c2ee80a38f76f25126e1fc6e21a83e2920e6407b3ef4d8360ac85 | &#124; P-255-C01 &#124; 1 &#124; 1H Over 0.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:71395 | 1cef4099723df2e392e73234055e2bf4e3a72ac06b417f2b5d7b5855c1dddf74 | &#124; P-255-C03 &#124; 3 &#124; Full Over 2.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:71396 | 8f9a58cb3308765dc7614d2424f9afcf81b113b3b98478b446d785d3c02a9ca8 | &#124; P-255-C04 &#124; 4 &#124; Full Under 2.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:71397 | 170f588343f1fecc166fc83a40d6a6790f5122a687affdece48663c7069557bb | &#124; P-255-C02 &#124; 5 &#124; 1H Under 0.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** UEFA2049369FINISHED;secondlegSept2,SestoSanGiovanni. Regulation2–0,totalafterET3–1,aggregate3–3,penalties5–4. Official whole-matchcorners12+12=24 lack periodsplit. RegulationOver8.5cannotbe graded orbounded by invented extra-time corner rate.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 4 won; wrong: Ranks 3, 5 lost; learn: original custody Part 1, evidence/correction Part 4 Appendix A
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: UEFA 2049369 FINISHED: regulation 2–0, whole match 3–1, penalties 5–4. Whole-match corners 12+12=24 include extra time. No 90-minute split or defensible bound; old bounded WIN stays withdrawn. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-256 — Paris Saint-Germain Women vs Eintracht Frankfurt Women
+
+**Disposition:** `UNRESOLVED_PERIOD`. Revision `HLR-20261001-P-256`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 2 | 1H Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Full Under 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Full Over 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1H Under 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:71418 | 740fca2ceedfd7e41a0566a9066aa280fec324aa320424918fedf770447c0a0d | &#124; P-256-C01 &#124; 2 &#124; 1H Over 0.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:71419 | deb14998a749666db58c01cd6d194f7048dd98da3be0673e67e2bccf7d9eb6c6 | &#124; P-256-C04 &#124; 3 &#124; Full Under 2.5 &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED.md:71420 | 334ec8cd205db066d8c7d975c47a9ca8c9423e5de68e496c504fe0ef554e29cf | &#124; P-256-C03 &#124; 4 &#124; Full Over 2.5 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED.md:71421 | 0fd2d67d15b7529cef192dfd69335bf79c1014369464e9447ba83747e1697530 | &#124; P-256-C02 &#124; 5 &#124; 1H Under 0.5 &#124; **LOSS** &#124; |
+
+
+**B. What happened.** UEFA2049367FINISHED;secondlegSept2,Poissy. Regulation1–1,afterET5–1,aggregate6–2. Official whole-matchcorners11+4=15 lack regulation split. Require complete period-tagged corner events or owner90minaggregate; no guessedbound.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 3 won; wrong: Ranks 4, 5 lost; learn: original custody Part 1, evidence/correction Part 4 Appendix A
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: UEFA 2049367 FINISHED: regulation 1–1, whole match 5–1. Whole-match corners 11+4=15 include extra time. No regulation split or justified bound; old bounded WIN stays withdrawn. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-265 — Toluca vs Club León
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-265`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Corners Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | Inherited success claim; not re-certified;UNRESOLVED_GRADE |
+| 2 | Full Over 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible | NONE_IN_LITERAL_VIEW |
+| 3 | First-half Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible | NONE_IN_LITERAL_VIEW |
+| 4 | Full Under 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible | NONE_IN_LITERAL_VIEW |
+| 5 | first-half Under 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED.md:74556 | 53468bc6cd4c3f9e790ca852ebd258f5fec14dc63c683a386bebb1d01a0bca9a | &#124; P-265 / [official competition report](https://es.leaguescup.com/noticias/cronica-toluca-acaba-con-el-sueno-del-leon-y-avanza-a-la-final-de-leagues-cup) &#124; Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible &#124; Corners Over 8.5: inherited success not re-certified &#124; Full Over 2.5 L &#124; First-half Over 0.5 W &#124; Full Under 2.5 W; first-half Under 0.5 L &#124; Toluca to advance W &#124; |
+| PREDICTION_LOG_COMBINED.md:74556 | 53468bc6cd4c3f9e790ca852ebd258f5fec14dc63c683a386bebb1d01a0bca9a | &#124; P-265 / [official competition report](https://es.leaguescup.com/noticias/cronica-toluca-acaba-con-el-sueno-del-leon-y-avanza-a-la-final-de-leagues-cup) &#124; Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible &#124; Corners Over 8.5: inherited success not re-certified &#124; Full Over 2.5 L &#124; First-half Over 0.5 W &#124; Full Under 2.5 W; first-half Under 0.5 L &#124; Toluca to advance W &#124; |
+| PREDICTION_LOG_COMBINED.md:74556 | 53468bc6cd4c3f9e790ca852ebd258f5fec14dc63c683a386bebb1d01a0bca9a | &#124; P-265 / [official competition report](https://es.leaguescup.com/noticias/cronica-toluca-acaba-con-el-sueno-del-leon-y-avanza-a-la-final-de-leagues-cup) &#124; Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible &#124; Corners Over 8.5: inherited success not re-certified &#124; Full Over 2.5 L &#124; First-half Over 0.5 W &#124; Full Under 2.5 W; first-half Under 0.5 L &#124; Toluca to advance W &#124; |
+| PREDICTION_LOG_COMBINED.md:74556 | 53468bc6cd4c3f9e790ca852ebd258f5fec14dc63c683a386bebb1d01a0bca9a | &#124; P-265 / [official competition report](https://es.leaguescup.com/noticias/cronica-toluca-acaba-con-el-sueno-del-leon-y-avanza-a-la-final-de-leagues-cup) &#124; Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible &#124; Corners Over 8.5: inherited success not re-certified &#124; Full Over 2.5 L &#124; First-half Over 0.5 W &#124; Full Under 2.5 W; first-half Under 0.5 L &#124; Toluca to advance W &#124; |
+| PREDICTION_LOG_COMBINED.md:74556 | 53468bc6cd4c3f9e790ca852ebd258f5fec14dc63c683a386bebb1d01a0bca9a | &#124; P-265 / [official competition report](https://es.leaguescup.com/noticias/cronica-toluca-acaba-con-el-sueno-del-leon-y-avanza-a-la-final-de-leagues-cup) &#124; Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible &#124; Corners Over 8.5: inherited success not re-certified &#124; Full Over 2.5 L &#124; First-half Over 0.5 W &#124; Full Under 2.5 W; first-half Under 0.5 L &#124; Toluca to advance W &#124; |
+
+
+**B. What happened.** ESPN 401914297 final 2–0, corners 4+5=9: research WIN at the first winning integer. Leagues Cup exact field-owner aggregate required; particularly sensitive to one-corner definition changes.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 3, 4 won; wrong: Ranks 2, 5 lost; learn: Issued card/available retrospective restored to Part 1
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: ESPN 401914297 final 2–0, corners 4+5=9: research WIN at the first winning integer. Leagues Cup exact field-owner aggregate required; particularly sensitive to one-corner definition changes. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-269 — KIA Tigers @ NC Dinos — cancelled before first pitch
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-269`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:320 | 7287f59e8c48fbb7357791570599357a528e2b94ef309faec2198b1630973620 | &#124; P-257 &#124; San Diego Padres @ Cincinnati Reds &#124; FINAL / SETTLED (inherited) &#124; September 4 controlling snapshots / stored component; not re-researched as a new pending event; retrospective source recovery: audit_2026-09-12/recovered_historical_retrospectives.md; [canonical log](PREDICTION_LOG_COMBINED.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-272 — Naomi Osaka vs Katerina Siniakova
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-272`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:323 | 1b74b95edff5a3b9b6d6fa9f23cf98fc331baa21f26cca5a97cd40fd32424ea1 | &#124; P-260 &#124; San Francisco Giants @ Pittsburgh Pirates &#124; FINAL / SETTLED (inherited) &#124; September 4 controlling snapshots / stored component; not re-researched as a new pending event; retrospective source recovery: audit_2026-09-12/recovered_historical_retrospectives.md; [canonical log](PREDICTION_LOG_COMBINED.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-274 — San Francisco Giants @ Pittsburgh Pirates
+
+**Disposition:** `UNRESOLVED_OPERATOR`. Revision `HLR-20261001-P-274`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Giants +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Giants lost by 3 | NONE_IN_LITERAL_VIEW |
+| 2 | Pirates ML | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Pittsburgh won | NONE_IN_LITERAL_VIEW |
+| 3 | Over 9.0 runs | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | 7 total runs | NONE_IN_LITERAL_VIEW |
+| 4 | Under 9.0 runs | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | 7 total runs | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_2.md:1004 | a64d024ff27a557b857fd85c69b0f21619edb075087748a281f790cd6a793339 | &#124; 1 &#124; Giants +1.5 &#124; Giants lost by 3 &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED_2.md:1005 | 9dbd37eeb294fd8260e818f27117174e9bbe8a69089e4c157e8c249df69cc2e2 | &#124; 2 &#124; Pirates ML &#124; Pittsburgh won &#124; **WIN** &#124; |
+| PREDICTION_LOG_COMBINED_2.md:1006 | 4a11d2eff93aebd79a7c27788d1a47b0b33edf354000195b02d9be9b8915aa05 | &#124; 3 &#124; Over 9.0 runs &#124; 7 total runs &#124; **LOSS** &#124; |
+| PREDICTION_LOG_COMBINED_2.md:1007 | c7b720d386289069f2153a0a45ff27b3bcb3b1c049ad7ae01939d5f1e33f63d0 | &#124; 4 &#124; Under 9.0 runs &#124; 7 total runs &#124; **WIN** &#124; |
+
+
+**B. What happened.** Retained Pirates5–2Giants, starterBachar versus listedJaredJones. Original ticket and listed-pitcher/action rules are missing. No operatorVOID inferred from a sporting score.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: The participant correction from Jared Jones to Lake Bachar was essential…; wrong: Giants +1.5 was ranked first because the analysis over-weighted recent…; learn: Giants +1.5 was ranked first because the analysis over-weighted recent one-run meetings and assumed…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Inherited Pirates 5–2, actual starter Bachar versus listed Jared Jones. Actual ticket / listed-pitcher action or void terms missing; no invented operator settlement. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-290 — FC Juárez vs Pachuca — Liga MX
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-290`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Pachuca Over 0.5 team goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Juárez 0, Pachuca 2 (Rondón 53', Bautista 90+10') | NONE_IN_LITERAL_VIEW |
+| 2 | 1st Half Over 0.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Juárez 0, Pachuca 2 (Rondón 53', Bautista 90+10') | NONE_IN_LITERAL_VIEW |
+| 3 | Pachuca X2 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Juárez 0, Pachuca 2 (Rondón 53', Bautista 90+10') | NONE_IN_LITERAL_VIEW |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+| 5 | FT Over 2.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Juárez 0, Pachuca 2 (Rondón 53', Bautista 90+10') | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_2.md:7306 | e869d7fbeeed23f0ebd233c156c359f842848e225d822c4537a3f65fdd00ddd2 | &#124; `P-290` &#124; FC Juárez vs Pachuca (Liga MX) &#124; **Juárez 0, Pachuca 2** (Rondón 53', Bautista 90+10') &#124; Pachuca Over 0.5 team goals → **WIN** &#124; 1st Half Over 0.5 → **LOSS** (first goal 53', 2nd half) &#124; Pachuca X2 → **WIN** &#124; Pachuca most corners → **UNRESOLVED** (no operator/provider count found); FT Over 2.5 → **LOSS** (total 2) &#124; Pachuca → **CORRECT** &#124; |
+| PREDICTION_LOG_COMBINED_2.md:7306 | e869d7fbeeed23f0ebd233c156c359f842848e225d822c4537a3f65fdd00ddd2 | &#124; `P-290` &#124; FC Juárez vs Pachuca (Liga MX) &#124; **Juárez 0, Pachuca 2** (Rondón 53', Bautista 90+10') &#124; Pachuca Over 0.5 team goals → **WIN** &#124; 1st Half Over 0.5 → **LOSS** (first goal 53', 2nd half) &#124; Pachuca X2 → **WIN** &#124; Pachuca most corners → **UNRESOLVED** (no operator/provider count found); FT Over 2.5 → **LOSS** (total 2) &#124; Pachuca → **CORRECT** &#124; |
+| PREDICTION_LOG_COMBINED_2.md:7306 | e869d7fbeeed23f0ebd233c156c359f842848e225d822c4537a3f65fdd00ddd2 | &#124; `P-290` &#124; FC Juárez vs Pachuca (Liga MX) &#124; **Juárez 0, Pachuca 2** (Rondón 53', Bautista 90+10') &#124; Pachuca Over 0.5 team goals → **WIN** &#124; 1st Half Over 0.5 → **LOSS** (first goal 53', 2nd half) &#124; Pachuca X2 → **WIN** &#124; Pachuca most corners → **UNRESOLVED** (no operator/provider count found); FT Over 2.5 → **LOSS** (total 2) &#124; Pachuca → **CORRECT** &#124; |
+| PREDICTION_LOG_COMBINED_2.md:7306 | e869d7fbeeed23f0ebd233c156c359f842848e225d822c4537a3f65fdd00ddd2 | &#124; `P-290` &#124; FC Juárez vs Pachuca (Liga MX) &#124; **Juárez 0, Pachuca 2** (Rondón 53', Bautista 90+10') &#124; Pachuca Over 0.5 team goals → **WIN** &#124; 1st Half Over 0.5 → **LOSS** (first goal 53', 2nd half) &#124; Pachuca X2 → **WIN** &#124; Pachuca most corners → **UNRESOLVED** (no operator/provider count found); FT Over 2.5 → **LOSS** (total 2) &#124; Pachuca → **CORRECT** &#124; |
+| PREDICTION_LOG_COMBINED_2.md:7306 | e869d7fbeeed23f0ebd233c156c359f842848e225d822c4537a3f65fdd00ddd2 | &#124; `P-290` &#124; FC Juárez vs Pachuca (Liga MX) &#124; **Juárez 0, Pachuca 2** (Rondón 53', Bautista 90+10') &#124; Pachuca Over 0.5 team goals → **WIN** &#124; 1st Half Over 0.5 → **LOSS** (first goal 53', 2nd half) &#124; Pachuca X2 → **WIN** &#124; Pachuca most corners → **UNRESOLVED** (no operator/provider count found); FT Over 2.5 → **LOSS** (total 2) &#124; Pachuca → **CORRECT** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3 won; wrong: Ranks 2, 5 lost; learn: Stress 1st Half Over 0.5 against Juárez 0, Pachuca 2 (Rondón 53', Bautista 90+10') and its named…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-307 — India Women v Pakistan Women
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-307`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:358 | ae0f8ff7036a1128bf4fa1e424f0e26d2b5d97c5ce16cf7ccdfc561712909838 | &#124; P-295 &#124; North Queensland Cowboys vs Canberra Raiders — NRL Round 27 &#124; FINAL / SETTLED — Raiders 50–30 Cowboys (major upset, Coby Black debut record); Under 56.5 LOSS, Cowboys -5.5 LOSS &#124; 2026-09-05(b) audit; deep retrospective, L-075 adopted; [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: Full retrospective(archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-307)
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-316 — Doosan Bears v SSG Landers (superseded card)
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-316`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:367 | 5be29327120c8b85e8a3699335cbca5343ec14ea7a3d1ce446071fcd40630847 | &#124; P-304 &#124; Slavia Praha vs Zbrojovka Brno — Chance Liga &#124; FINAL / SETTLED — 4–0, HT 1–0 &#124; Full five-rank slate recovered from preserved mini: W/W/W/L/L. Official Slavia corners 5. Prior archival-omission claim withdrawn.; [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: Full retrospective(archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-316)
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-318 — Henan vs Chengdu Rongcheng — CSL R26
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-318`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Chengdu Over 4.5 team corners | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | FT Over 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | FT Under 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | 1H Under 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:449 | 12b196b2964995a9bdde3b4b17fd8c01bf542a2a4ddc6b69c34533573501f87d | &#124; 1 &#124; 1H Over 0.5 goals &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:450 | 199c6f87df2cb37b22caf987c321df6237be0e0ccfe0aea9894322dee013a71e | &#124; 2 &#124; Chengdu Over 4.5 team corners &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:451 | fa321ee812561bd1632b43d660b4cf7ae563c7d7b7841a53ea78fba4dcd3f33c | &#124; 3 &#124; FT Over 2.5 goals &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:452 | 1b60410dad50675480d5bd2b0b7af7773be36d1a3620dfe263d4a6ec33992f97 | &#124; 4 &#124; FT Under 2.5 goals &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:453 | 30b43d6ba3cdaa4dc507c40e161a21f6c6d1ebdf4040328b0a240d81b372ca02 | &#124; 5 &#124; 1H Under 0.5 goals &#124; **WIN** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 4, 5 won; wrong: Ranks 1, 2, 3 lost; learn: Stress 1H Over 0.5 goals against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-319 — Yunnan Yukun vs Liaoning Tieren — CSL R26
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-319`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Total Corners Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | FT Over 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | FT Under 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | 1H Under 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:476 | c62b4cfccc39125c6de2f55d5f154c2e49ec2cab4c3c7e00610124151420db9f | &#124; 1 &#124; 1H Over 0.5 goals &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:477 | 208345d6895757161fa71042adb41b32ad27f4c9fd590ed988779a5fdb675e21 | &#124; 2 &#124; Total Corners Over 8.5 &#124; **WIN** — 9 corners &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:478 | 45df429d8e6b8541570123e167f7b88110a315e6ab857339f92bd296f3f31e61 | &#124; 3 &#124; FT Over 2.5 goals &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:479 | 142229b3c2a9b55660ebe8a544bd3ab7ecd7bc4f8ed4b06b0695227e311a2831 | &#124; 4 &#124; FT Under 2.5 goals &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:480 | e8260afca61c7df66ea9beb9c91ce2b025e6f3e132fbcacb3d92cd4eb7513129 | &#124; 5 &#124; 1H Under 0.5 goals &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 3 won; wrong: Ranks 4, 5 lost; learn: Stress FT Under 2.5 goals against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-320 — Tianjin Jinmen Tigers vs Zhejiang — CSL R26
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-320`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Zhejiang Over 4.5 team corners | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | FT Over 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | FT Under 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | 1H Under 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:506 | c62b4cfccc39125c6de2f55d5f154c2e49ec2cab4c3c7e00610124151420db9f | &#124; 1 &#124; 1H Over 0.5 goals &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:507 | 9880fb6b0a4403d5f740d2e01d9e1aed3068ea29c68ebb046b9d02b705735dab | &#124; 2 &#124; Zhejiang Over 4.5 team corners &#124; **LOSS** — 4 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:508 | 6055cca68412f088e9de75c5b6f6b058e72ccba6aa016971b72985277c1addda | &#124; 3 &#124; FT Over 2.5 goals &#124; **WIN** — exactly 3 goals &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:509 | 142229b3c2a9b55660ebe8a544bd3ab7ecd7bc4f8ed4b06b0695227e311a2831 | &#124; 4 &#124; FT Under 2.5 goals &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:510 | e8260afca61c7df66ea9beb9c91ce2b025e6f3e132fbcacb3d92cd4eb7513129 | &#124; 5 &#124; 1H Under 0.5 goals &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3 won; wrong: Ranks 2, 4, 5 lost; learn: Stress Zhejiang Over 4.5 team corners against the recorded result and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-321 — Sønderjyske vs AC Horsens — Denmark Superliga R7
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-321`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Total Match Corners Over 9.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | FT Over 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | FT Under 2.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | 1H Under 0.5 goals | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:531 | c62b4cfccc39125c6de2f55d5f154c2e49ec2cab4c3c7e00610124151420db9f | &#124; 1 &#124; 1H Over 0.5 goals &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:532 | b5af9ef46ebd6f8bfd1e2c879d4aa38cc051617e745290ee2a9f7f79034b3bb1 | &#124; 2 &#124; Total Match Corners Over 9.5 &#124; **LOSS** — 2 total &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:533 | 45df429d8e6b8541570123e167f7b88110a315e6ab857339f92bd296f3f31e61 | &#124; 3 &#124; FT Over 2.5 goals &#124; **WIN** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:534 | 142229b3c2a9b55660ebe8a544bd3ab7ecd7bc4f8ed4b06b0695227e311a2831 | &#124; 4 &#124; FT Under 2.5 goals &#124; **LOSS** &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:535 | e8260afca61c7df66ea9beb9c91ce2b025e6f3e132fbcacb3d92cd4eb7513129 | &#124; 5 &#124; 1H Under 0.5 goals &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3 won; wrong: Ranks 2, 4, 5 lost; learn: Stress Total Match Corners Over 9.5 against the recorded result and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-324 — Valencia vs Barcelona — LaLiga MD4
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-324`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:375 | 4f34b3e5e1babb508312c3ec6c055e9051f5f1220bbbe255c64a72cfca02e05b | &#124; P-312 &#124; Detroit Tigers v Cleveland Guardians &#124; FINAL / SETTLED &#124; Detroit 6–0 Cleveland; W/L/W/L; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-312); [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-326 — Western Carolina @ Campbell — NCAA FCS
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-326`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:377 | 169dd1c4708306a70275e823e0fa594b002a620459118bcbc0c05d12e1a425dc | &#124; P-314 &#124; Los Angeles Angels v Pittsburgh Pirates &#124; FINAL / SETTLED &#124; Angels 6–1 Pittsburgh; W/L/W/L/W/L; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-314); [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-327 — Angers SCO vs Rennes — Ligue 1
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-327`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 | 0.750000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Total corners Over 8.5 | 0.640000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | FT Over 2.5 | 0.600000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | FT Under 2.5 | 0.400000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | 1H Under 0.5 | 0.250000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:660 | 7c53b3231b9e9735993483bce397956a89cb16092095093a9614704afc4fd692 | &#124; 1 &#124; 1H Over 0.5 &#124; 0.75 &#124; **WIN** &#124; 0.0625 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:661 | eb06739f58de45e1ecd6c4840bc4c868cb0732c56056162061005dda4fae259f | &#124; 2 &#124; Total corners Over 8.5 &#124; 0.64 &#124; **WIN** — 18 &#124; 0.1296 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:662 | 1519c1f7a9a65e8aede1fdd345b52a1aad24920373ac9925aacc01026b68c73d | &#124; 3 &#124; FT Over 2.5 &#124; 0.60 &#124; **WIN** — exactly 3 &#124; 0.1600 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:663 | c01b21d31a110400a4cc46da621f89e561284fa40c94fc2b8e83da89903d65b1 | &#124; 4 &#124; FT Under 2.5 &#124; 0.40 &#124; **LOSS** &#124; 0.1600 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:664 | df8c200d3dcfd767975f860adba5994db0d8d1d0bc87c5532d5030f393a2a325 | &#124; 5 &#124; 1H Under 0.5 &#124; 0.25 &#124; **LOSS** &#124; 0.0625 &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 3 won; wrong: Ranks 4, 5 lost; learn: Stress FT Under 2.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-329 — Bologna vs Sassuolo — Serie A MD3
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-329`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Total corners Over 6.5 | 0.610000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | FT Under 2.5 | 0.580000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | 1H Over 0.5 | 0.550000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | 1H Under 0.5 | 0.450000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | FT Over 2.5 | 0.420000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:716 | 46a57b80246a2a576e75e27f83bf30d147b52526f42e2fd01c31e09a3796d39c | &#124; 1 &#124; Total corners Over 6.5 &#124; 0.61 &#124; **WIN** &#124; 0.1521 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:717 | aff9be13d3618ed522e86ee417ff2f9e7004682f0f7897521702ccd73df11d44 | &#124; 2 &#124; FT Under 2.5 &#124; 0.58 &#124; **LOSS** &#124; 0.3364 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:718 | 0913070e0c939344e3f04d8f3cdc7dc911bb249981758326993c9010154ff4b9 | &#124; 3 &#124; 1H Over 0.5 &#124; 0.55 &#124; **WIN** &#124; 0.2025 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:719 | b6542471951f9687fcd7115c3d9c456b1055ebdfd778048f29f167d44edbceb8 | &#124; 4 &#124; 1H Under 0.5 &#124; 0.45 &#124; **LOSS** &#124; 0.2025 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:720 | 47cde7dfb774480ff3b02b814bcf2933fbf82b13ebedbfbcb2b610da8c180b19 | &#124; 5 &#124; FT Over 2.5 &#124; 0.42 &#124; **WIN** &#124; 0.3364 &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3, 5 won; wrong: Ranks 2, 4 lost; learn: Stress FT Under 2.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-330 — Puerto Rico W vs Belgium W — FIBA W WC
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-330`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:381 | 95154eddd6b8f16413d0a5d222066b6d2964b994b074cb6c6285de826f20364f | &#124; P-318 &#124; Henan vs Chengdu Rongcheng — CSL R26 &#124; FINAL / SETTLED &#124; Henan 0–0 Chengdu; L/L/L/W/W; [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-332 — Deportivo Alavés vs CA Osasuna — LaLiga MD4
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-332`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | FT Under 2.5 | 0.600000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 2 | Total corners Over 8.5 | 0.590000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 3 | 1H Over 0.5 | 0.570000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 4 | 1H Under 0.5 | 0.430000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+| 5 | FT Over 2.5 | 0.400000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:777 | fc03451586bec4f14451b114b84f90aba30cd0aab32026f0a935815970d297e4 | &#124; 1 &#124; FT Under 2.5 &#124; 0.60 &#124; **LOSS** &#124; 0.3600 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:778 | fd4e07f3e1cfabe0da10bed4d6971206b3a77d65447f31e9d3c0f371cfce61a2 | &#124; 2 &#124; Total corners Over 8.5 &#124; 0.59 &#124; **LOSS** — 5 &#124; 0.3481 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:779 | babf90b1761c2da15da82222e054fcd16895c8596b20597acb6facfb34bbc110 | &#124; 3 &#124; 1H Over 0.5 &#124; 0.57 &#124; **WIN** &#124; 0.1849 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:780 | 212dae0cba6f0c1400d0ec15d0cb443ebcceeba91db2d354b86d64fc4efee796 | &#124; 4 &#124; 1H Under 0.5 &#124; 0.43 &#124; **LOSS** &#124; 0.1849 &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md:781 | ca0ae7f858f30eff843ad9ee0c7b625f1b429dae8ad0ebb9e64b1b90e017953b | &#124; 5 &#124; FT Over 2.5 &#124; 0.40 &#124; **WIN** &#124; 0.3600 &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 3, 5 won; wrong: Ranks 1, 2, 4 lost; learn: Stress FT Under 2.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-333 — Pakistan W vs Hong Kong W — Women's T20 Asia Cup Gp A
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-333`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:384 | 61ccb32a2e425969fc3e2cf77fba723bf91fc9ff34837ee399c944bd4abd9ae5 | &#124; P-321 &#124; Sønderjyske vs AC Horsens — Denmark Superliga R7 &#124; FINAL / SETTLED &#124; Sønderjyske 2–5; W/L/W/L/L; [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-334 — Germany W vs Mali W — FIBA W World Cup Gp A
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-334`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:385 | 597aafab6925e41469f6ba2ebfabe9d10a870559abcb351f2d7013a516f1afd8 | &#124; P-322 &#124; South Africa vs Zimbabwe — Namibia T20I Tri-Series Final &#124; FINAL / SETTLED (`START-CROSSED / TOSS-CONDITIONAL`) &#124; SA 205/5 bt Zimbabwe 157; W/W/L/L; [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-341 — BUL FC vs Ntugasaze FC — Uganda Premier League R3
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-341`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 | 0.610000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Under 2.5 | 0.580000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+| 4 | Over 2.5 | 0.42 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1H Under 0.5 | 0.390000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:228 | 157fe4d5f7e04b348efe9b036221a8309bf50a74ab9249c3cb50b591eb49ffe3 | - **`P-341`**: 1 `1H Over 0.5` p0.61 **W** (0.1521) · 2 `Under 2.5` p0.58 **L** (0.3364) · 3 `Over 7.5 total corners` p0.55 **UNSETTLEABLE** (not booked) · 4 `Over 2.5` p0.42 **W** (0.3364) · 5 `1H Under 0.5` p0.39 **L** (0.1521). **4-row settled mean Brier 0.2443.** (2 W / 2 L) · Potential winner BUL **W**. |
+| PREDICTION_LOG_COMBINED_3.md:228 | 157fe4d5f7e04b348efe9b036221a8309bf50a74ab9249c3cb50b591eb49ffe3 | - **`P-341`**: 1 `1H Over 0.5` p0.61 **W** (0.1521) · 2 `Under 2.5` p0.58 **L** (0.3364) · 3 `Over 7.5 total corners` p0.55 **UNSETTLEABLE** (not booked) · 4 `Over 2.5` p0.42 **W** (0.3364) · 5 `1H Under 0.5` p0.39 **L** (0.1521). **4-row settled mean Brier 0.2443.** (2 W / 2 L) · Potential winner BUL **W**. |
+| GAME_LOG_STATUS_CURRENT.md:392 | 5a0182b8cc073860e9625f8698ef39b038bb2650be099ba71505b6550439ab25 | &#124; P-329 &#124; Bologna vs Sassuolo — Serie A MD3 &#124; FINAL / SETTLED &#124; Bologna 2–2; W/L/W/L/W; Brier 0.2460; [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+| PREDICTION_LOG_COMBINED_3.md:228 | 157fe4d5f7e04b348efe9b036221a8309bf50a74ab9249c3cb50b591eb49ffe3 | - **`P-341`**: 1 `1H Over 0.5` p0.61 **W** (0.1521) · 2 `Under 2.5` p0.58 **L** (0.3364) · 3 `Over 7.5 total corners` p0.55 **UNSETTLEABLE** (not booked) · 4 `Over 2.5` p0.42 **W** (0.3364) · 5 `1H Under 0.5` p0.39 **L** (0.1521). **4-row settled mean Brier 0.2443.** (2 W / 2 L) · Potential winner BUL **W**. |
+| PREDICTION_LOG_COMBINED_3.md:228 | 157fe4d5f7e04b348efe9b036221a8309bf50a74ab9249c3cb50b591eb49ffe3 | - **`P-341`**: 1 `1H Over 0.5` p0.61 **W** (0.1521) · 2 `Under 2.5` p0.58 **L** (0.3364) · 3 `Over 7.5 total corners` p0.55 **UNSETTLEABLE** (not booked) · 4 `Over 2.5` p0.42 **W** (0.3364) · 5 `1H Under 0.5` p0.39 **L** (0.1521). **4-row settled mean Brier 0.2443.** (2 W / 2 L) · Potential winner BUL **W**. |
+
+
+**B. What happened.** ESPN uga.1 still returns season 2025 / 2025–26 with zero events for Sep 8. UNSETTLEABLE to frozen standard retained; empty/stale response is not proof of cancellation or zero corners.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 4 won; wrong: Ranks 2, 5 lost; learn: Stress Under 2.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: ESPN uga.1 still returns season 2025 / 2025–26 with zero events for Sep 8. UNSETTLEABLE to frozen standard retained; empty/stale response is not proof of cancellation or zero corners. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-342 — MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-342`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 | 0.680000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Over 2.5 | 0.560000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+| 4 | Under 2.5 | 0.44 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1H Under 0.5 | 0.320000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:229 | d9e776f2881bf6f9ae65f2d628cf74e8634e2c87565d7d59bf8c31dce3c886ef | - **`P-342`**: 1 `1H Over 0.5` p0.68 **L** (0.4624) · 2 `Over 2.5` p0.56 **L** (0.3136) · 3 `Over 8.5 total corners` p0.54 **PROVISIONAL WIN** (16 reported; not booked) · 4 `Under 2.5` p0.44 **W** (0.3136) · 5 `1H Under 0.5` p0.32 **W** (0.4624). **4-row settled mean Brier 0.3880.** (2 W / 2 L) · Potential winner Komárno **W**. |
+| PREDICTION_LOG_COMBINED_3.md:229 | d9e776f2881bf6f9ae65f2d628cf74e8634e2c87565d7d59bf8c31dce3c886ef | - **`P-342`**: 1 `1H Over 0.5` p0.68 **L** (0.4624) · 2 `Over 2.5` p0.56 **L** (0.3136) · 3 `Over 8.5 total corners` p0.54 **PROVISIONAL WIN** (16 reported; not booked) · 4 `Under 2.5` p0.44 **W** (0.3136) · 5 `1H Under 0.5` p0.32 **W** (0.4624). **4-row settled mean Brier 0.3880.** (2 W / 2 L) · Potential winner Komárno **W**. |
+| GAME_LOG_STATUS_CURRENT.md:393 | 5ca4e8c8acf0fb749d9a8dca43dc96b8121c552b782eaada309f14bf24a287b8 | &#124; P-330 &#124; Puerto Rico W vs Belgium W — FIBA W WC &#124; ADMINISTRATIVE / NO SCORED TRIAL &#124; Puerto Rico 64–76; [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+| PREDICTION_LOG_COMBINED_3.md:229 | d9e776f2881bf6f9ae65f2d628cf74e8634e2c87565d7d59bf8c31dce3c886ef | - **`P-342`**: 1 `1H Over 0.5` p0.68 **L** (0.4624) · 2 `Over 2.5` p0.56 **L** (0.3136) · 3 `Over 8.5 total corners` p0.54 **PROVISIONAL WIN** (16 reported; not booked) · 4 `Under 2.5` p0.44 **W** (0.3136) · 5 `1H Under 0.5` p0.32 **W** (0.4624). **4-row settled mean Brier 0.3880.** (2 W / 2 L) · Potential winner Komárno **W**. |
+| PREDICTION_LOG_COMBINED_3.md:229 | d9e776f2881bf6f9ae65f2d628cf74e8634e2c87565d7d59bf8c31dce3c886ef | - **`P-342`**: 1 `1H Over 0.5` p0.68 **L** (0.4624) · 2 `Over 2.5` p0.56 **L** (0.3136) · 3 `Over 8.5 total corners` p0.54 **PROVISIONAL WIN** (16 reported; not booked) · 4 `Under 2.5` p0.44 **W** (0.3136) · 5 `1H Under 0.5` p0.32 **W** (0.4624). **4-row settled mean Brier 0.3880.** (2 W / 2 L) · Potential winner Komárno **W**. |
+
+
+**B. What happened.** Slovak owner route not recovered as a target statistics record. Prior 16-corner research WIN retained; require exact Slovnaft Cup owner record.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 4, 5 won; wrong: Ranks 1, 2 lost; learn: Stress 1H Over 0.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Slovak owner route not recovered as a target statistics record. Prior 16-corner research WIN retained; require exact Slovnaft Cup owner record. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-343 — Bangladesh W vs UAE W — Women's T20 Asia Cup Gp B
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-343`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:394 | 5258dcd97f01f7ad324f2993809eaf9c7244220d5f374059dfbc64c101b5f284 | &#124; P-331 &#124; Milwaukee Brewers @ Cincinnati Reds — MLB &#124; FINAL / SETTLED (`MLB PRIMARY_SCORED`) &#124; Cincinnati 12–8; W/W/L/L; Brier 0.1893; [canonical log](PREDICTION_LOG_COMBINED_2.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-366 — Rotterdam v Glasgow — ETPL M19
+
+**Disposition:** `TERMINAL_CENSORED`. Revision `HLR-20261001-P-366`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Dockers first 6 overs Under 50.5 | 0.56 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | W C C L; winner W; Brier 0.1936 (2 rows) | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Dockers first 6 overs Over 50.5 | 0.440000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:1116 | 8087d7e584c1739d53c69ee11cc0aa6f8698e6f91f41659bd68798aef569d0a2 | &#124; 1 &#124; Dockers first 6 overs Under 50.5 &#124; 0.56 &#124; **WIN** &#124; 0.1936 &#124; ≤49. &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1531 | 0fada18b85edd14accebcd91ecb6822260cee13a7df4af611d215829f68c0f16 | &#124; `P-366` &#124; Rotterdam v Glasgow — ETPL M19 &#124; **FINAL / SETTLED** — 20-over rows **TERMINAL CENSORED** &#124; W C C L; winner W; Brier 0.1936 (2 rows) &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1119 | feadf5237956b183d69dc67c8669036c8aa869e384a67f51a6a7d1298f6d52cb | &#124; 4 &#124; Dockers first 6 overs Over 50.5 &#124; 0.44 &#124; **LOSS** &#124; 0.1936 &#124; &#124; |
+
+
+**B. What happened.** C02/C03 innings targets were terminal censored by completion conditions. Retainnoaction/censoring; lowerphase rows retainW/L. Censoring is not a loss and is excluded from numeric scoring.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 4 lost; learn: Stress Dockers first 6 overs Over 50.5 against the recorded result and its named failure path…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: C02/C03 innings targets were terminal censored by completion conditions. Retainnoaction/censoring; lowerphase rows retainW/L. Censoring is not a loss and is excluded from numeric scoring.
+
+### Review: P-368 — Al Jazira v Al Nasr — UAE Pro League
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-368`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1st-half Over 0.5 | 0.68 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Total corners Over 7.5 (no frozen provider) | 0.550000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | PROVISIONAL WIN | NONE_IN_LITERAL_VIEW |
+| 3 | Over 2.5 goals | 0.530000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Under 2.5 goals | 0.47 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1st-half Under 0.5 | 0.320000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:1158 | 64d39a32f822bb0162b8536883a624cd78390e0c48abd2968d048ea46e67be5b | &#124; 1 &#124; 1st-half Over 0.5 &#124; 0.68 &#124; **WIN** &#124; 0.1024 &#124; 10' goal. &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1159 | d1502c66407039de676b767b955310ad629d979d0971f89eae2260358ecdf2c4 | &#124; 2 &#124; Total corners Over 7.5 (no frozen provider) &#124; 0.55 &#124; **PROVISIONAL WIN** &#124; not booked &#124; 9 (multiple secondary displays; independence unverified). `TMP-OPEN-20260911-01`. &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1160 | f5aecd2b649944d588aed8cc8e46c38b9840e679699c2c210f8ac6c1dd4bc457 | &#124; 3 &#124; Over 2.5 goals &#124; 0.53 &#124; **LOSS** &#124; 0.2809 &#124; 2. &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1161 | 617727bf2a120a6ccb5f46f42d4317d509d85c64f022689df9280b4cdb99f967 | &#124; 4 &#124; Under 2.5 goals &#124; 0.47 &#124; **WIN** &#124; 0.2809 &#124; &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1162 | 0fb678f5939571fdabaa570518c83cad9cec75f44d9292d192ea770fa39d83bd | &#124; 5 &#124; 1st-half Under 0.5 &#124; 0.32 &#124; **LOSS** &#124; 0.1024 &#124; &#124; |
+
+
+**B. What happened.** UAE fixture shell reached, no target aggregate verified. Prior 9-corner research WIN; no frozen provider and secondary independence unverified.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 4 won; wrong: Ranks 3, 5 lost; learn: Stress Over 2.5 goals against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: UAE fixture shell reached, no target aggregate verified. Prior 9-corner research WIN; no frozen provider and secondary independence unverified. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-369 — Dubai United v Shabab Al Ahli — UAE Pro League
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-369`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Total corners Under 10.5 (no frozen provider) | 0.680000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | PROVISIONAL LOSS | NONE_IN_LITERAL_VIEW |
+| 2 | 1st-half Over 0.5 | 0.64 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Over 2.5 goals | 0.610000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Under 2.5 goals | 0.39 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1st-half Under 0.5 | 0.360000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:1178 | 3a4d1030bc81db5208fbde84ed4e7a89134b0bb6a63507df1f3a6f7a1e06fed1 | &#124; 1 &#124; Total corners Under 10.5 (no frozen provider) &#124; 0.68 &#124; **PROVISIONAL LOSS** &#124; not booked &#124; 11 — **−0.5**. `TMP-OPEN-20260911-02`. &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1179 | 64f648fda1e89b4428f720b36b240734e903cf2d4120b799072e7a133a0a6d1c | &#124; 2 &#124; 1st-half Over 0.5 &#124; 0.64 &#124; **LOSS** &#124; 0.4096 &#124; 0–0 at HT. &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1180 | 85c540a55c44ca825beff80d345f844f739041dcaa4019dd4d68b3a45eaab5a8 | &#124; 3 &#124; Over 2.5 goals &#124; 0.61 &#124; **LOSS** &#124; 0.3721 &#124; 2. &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1181 | 24af7db4e2dc907c0e4ebc6b18a70a5cd89ddd64d295db87a6baf5785e13d056 | &#124; 4 &#124; Under 2.5 goals &#124; 0.39 &#124; **WIN** &#124; 0.3721 &#124; &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1182 | 5821e4d05aaa6ceef8b3d3a0f9e8f6415c0348de8d55a339dc23f2da9fc28024 | &#124; 5 &#124; 1st-half Under 0.5 &#124; 0.36 &#124; **WIN** &#124; 0.4096 &#124; &#124; |
+
+
+**B. What happened.** UAE shell reached, no exact target aggregate. Prior 11-corner research LOSS retained; missing frozen provider remains a distinct gate.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Error / uncertainty; wrong: The ranking contradicted the card's own evidence on three rows.; learn: The ranking contradicted the card's own evidence on three rows.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: UAE shell reached, no exact target aggregate. Prior 11-corner research LOSS retained; missing frozen provider remains a distinct gate. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-370 — Jamaica Empress W v TKR W — WCPL
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-370`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:421 | de0d18051c000fb69d2288bd7f6e73e62eff8069c607b8cd086a1ac71275364d | &#124; P-358 &#124; Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired) &#124; FINAL / SETTLED — deep Rank-#1 retro &#124; L W L W; winner W; Brier 0.2973; [canonical log](PREDICTION_LOG_COMBINED_3.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-372 — —
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-372`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:423 | 28a11393ff1fd78fef68b114aa8eabbd3312e364ee60fc562ac7e832e5d79a71 | &#124; P-360 &#124; South Korea v Saudi Arabia — Asian Games &#124; FINAL / SETTLED &#124; W L W L; winner W; Brier 0.2409; [canonical log](PREDICTION_LOG_COMBINED_3.md) &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-377 — Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-377`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 goals | 0.680000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Over 8.5 total corners | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | Provisional directional L; no final corner field-owner grade;UNRESOLVED_GRADE |
+| 3 | Over 2.5 total goals | 0.550000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Under 2.5 total goals | 0.450000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1H Under 0.5 goals | 0.320000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:2275 | 64a17d78b94a38a4edc65a74a94b1a6e19e78a4c251bd6d3d14aa71f41dbc1e1 | &#124; 1 &#124; **1H Over 0.5 goals** &#124; 68% `UNVALIDATED_SUBJECTIVE` &#124; **LOSS** &#124; 0–0 at halftime &#124; 0.4624 &#124; |
+| GAME_LOG_STATUS_CURRENT.md:428 | 482958e281bb279248b9d229e0660b817ba43287fa1807238c9bc8318cf7af56 | &#124; P-365 &#124; Uni-Lions @ CTBC Brothers — CPBL &#124; FINAL / SETTLED — deep Rank-#1 retro &#124; L W L W; winner W; Brier 0.2768; [canonical log](PREDICTION_LOG_COMBINED_3.md) &#124; |
+| PREDICTION_LOG_COMBINED_3.md:2277 | 68315fd41cc230fcbe124195788dd2bdcac557503d992b623201342ca303f3a1 | &#124; 3 &#124; **Over 2.5 total goals** &#124; 55% `UNVALIDATED_SUBJECTIVE` &#124; **LOSS** &#124; 0 total goals &#124; 0.3025 &#124; |
+| PREDICTION_LOG_COMBINED_3.md:2278 | 7c5886f4f75b2b45884c390cb6965446eb60a8d14f190bbf4a1cc973cdff9bdb | &#124; 4 &#124; **Under 2.5 total goals** &#124; 45% `UNVALIDATED_SUBJECTIVE` &#124; **WIN** &#124; 0 total goals &#124; 0.3025 &#124; |
+| PREDICTION_LOG_COMBINED_3.md:2279 | 2503ddb5ac6836062da15bc9e6d39585aab8ddfa6f9b028a8d3fa88bf7d969b2 | &#124; 5 &#124; **1H Under 0.5 goals** &#124; 32% `UNVALIDATED_SUBJECTIVE` &#124; **WIN** &#124; 0–0 at halftime &#124; 0.4624 &#124; |
+
+
+**B. What happened.** League landing route returns a tiny shell, not a match-stat record. Prior secondary 7 research LOSS retained; ESPN historical summary lacks aggregate statistics.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 4, 5 won; wrong: Ranks 1, 3 lost; learn: Stress 1H Over 0.5 goals against the recorded result and its named failure path before ranking it…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: League landing route returns a tiny shell, not a match-stat record. Prior secondary 7 research LOSS retained; ESPN historical summary lacks aggregate statistics. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-389 — Dublin Guardians vs Edinburgh Castle Rockers — ETPL 2026 Match 21
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-389`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:440 | 58a3cf1c5740ba8cfc18513589a42059fcdc53a791f8d770266cabac7509aba7 | &#124; P-377 &#124; Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026 &#124; FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260912-01) &#124; L P L W W &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-399 — Genoa vs Frosinone — Serie A
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-399`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | 1H Over 0.5 | 0.670000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Combined corners Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | Provisional directional W; no final corner field-owner grade;UNRESOLVED_GRADE |
+| 3 | FT Under 2.5 | 0.560000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | FT Over 2.5 | 0.440000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | 1H Under 0.5 | 0.330000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:2760 | 69abe3241a4a2ecb64ac13c3152c655e060ce7d983556da174b304bcdd6951f9 | &#124; 1 &#124; 1H Over 0.5 &#124; 67% &#124; **WIN** &#124; 0.1089 &#124; |
+| GAME_LOG_STATUS_CURRENT.md:450 | 0054f9a017af0e51369ea25abf00043c5ac171b1b741a7d4bfcbc88c7b7f0060 | &#124; P-387 &#124; Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League &#124; FINAL / SETTLED &#124; W L L W L &#124; |
+| PREDICTION_LOG_COMBINED_3.md:2762 | ebc6466aa76df8407b9fb6d7507bdc3882cccb5ad37f2ccba2e31df9f344e090 | &#124; 3 &#124; FT Under 2.5 &#124; 56% &#124; **WIN** — 2 &#124; 0.1936 &#124; |
+| PREDICTION_LOG_COMBINED_3.md:2763 | d2317808941e814b39cb96678022b0ca3dd8f45b906f6f385cb836bf745c8cf9 | &#124; 4 &#124; FT Over 2.5 &#124; 44% &#124; **LOSS** &#124; 0.1936 &#124; |
+| PREDICTION_LOG_COMBINED_3.md:2764 | 398d5c5f266be8dba07d1696ea2bb5538bf080e0effe80caa4b6f889b38dec75 | &#124; 5 &#124; 1H Under 0.5 &#124; 33% &#124; **LOSS** &#124; 0.1089 &#124; |
+
+
+**B. What happened.** ESPN 401874991 final 1–1, corners 8+9=17: research WIN. Lega exact field-owner record still missing; do not treat its landing-page redirect as success.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3 won; wrong: Ranks 4, 5 lost; learn: Stress FT Over 2.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: ESPN 401874991 final 1–1, corners 8+9=17: research WIN. Lega exact field-owner record still missing; do not treat its landing-page redirect as success. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-401 — IFK Göteborg vs Halmstads BK — Allsvenskan
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-401`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Combined corners Over 8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | Provisional directional W; no final corner field-owner grade;UNRESOLVED_GRADE |
+| 2 | Halmstad team total Under 1.5 | 0.770000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | IFK team corners Over 4.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | Provisional directional W; no final corner field-owner grade;UNRESOLVED_GRADE |
+| 4 | 1H Under 0.5 | 0.560000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | FT Over 2.5 | 0.530000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:452 | 982efdf7bb8b49ed0e8dacb779ae285bfd22610e96b5d540915766d89edefdbd | &#124; P-389 &#124; Dublin Guardians vs Edinburgh Castle Rockers — ETPL 2026 Match 21 &#124; ADMINISTRATIVE / NO FORECAST (toss gate withheld correctly) &#124; none issued &#124; |
+| PREDICTION_LOG_COMBINED_3.md:2797 | e8b146e02714b207e8bb8601d07eb439959b5771caf3a86608150a84f3a6cb21 | &#124; 2 &#124; Halmstad team total Under 1.5 &#124; 77% &#124; **WIN** — 1 goal &#124; 0.0529 &#124; |
+| GAME_LOG_STATUS_CURRENT.md:452 | 982efdf7bb8b49ed0e8dacb779ae285bfd22610e96b5d540915766d89edefdbd | &#124; P-389 &#124; Dublin Guardians vs Edinburgh Castle Rockers — ETPL 2026 Match 21 &#124; ADMINISTRATIVE / NO FORECAST (toss gate withheld correctly) &#124; none issued &#124; |
+| PREDICTION_LOG_COMBINED_3.md:2799 | 0a0e636963f166d8ab6f8331758af210758bea6420301d1e947efeb90565546e | &#124; 4 &#124; 1H Under 0.5 &#124; 56% &#124; **LOSS** — IFK scored 37' &#124; 0.3136 &#124; |
+| PREDICTION_LOG_COMBINED_3.md:2800 | e840c622e6baeca60de650a5af026563b39c6dfb32661790b75cd75817137096 | &#124; 5 &#124; FT Over 2.5 &#124; 53% &#124; **WIN** — 3 goals &#124; 0.2209 &#124; |
+
+
+**B. What happened.** ESPN 401874088 final 2–1, Sep 12 15:30 UTC, corners 8+9=17: research WIN. Sep 13 search missed the event; flag date correction, retain original card. Allsvenskan owner route not recovered. | Same owner gap, ESPN IFK 8: research WIN. This is one event with two open derivative handles, not two independent trials.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 5 won; wrong: Ranks 4 lost; learn: Stress 1H Under 0.5 against the recorded result and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: ESPN 401874088 final 2–1, Sep 12 15:30 UTC, corners 8+9=17: research WIN. Sep 13 search missed the event; flag date correction, retain original card. Allsvenskan owner route not recovered. | Same owner gap, ESPN IFK 8: research WIN. This is one event with two open derivative handles, not two independent trials. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-407 — Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League
+
+**Disposition:** `DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE`. Revision `HLR-20261001-P-407`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | P | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Royal Antwerp team goals Under 1.5 | 0.740000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | 1st Half total goals Over 0.5 | 0.720000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Full match total goals Under 3.5 | 0.680000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | Full match total goals Over 2.5 | 0.560000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:458 | cb5045c64d95951b3b7df6c6a82934324205aec6801d5f94d001000ad8d77be6 | &#124; P-395 &#124; Belfast Wolves vs Rotterdam Dockers — European T20 Premier League &#124; FINAL / SETTLED &#124; W W L L &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1771 | a2362256cc94008be51b1ac3b597d9a7c16d4ebe9cabb0d9c34077453e295ce6 | &#124; 2 &#124; Royal Antwerp team goals Under 1.5 &#124; 0.74 &#124; **WIN** &#124; 0.0676 &#124; 1 goal &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1772 | f7994d60c88b8853653d83c8989ade7e795a6f6572a2287bd318a73424eaa730 | &#124; 3 &#124; 1st Half total goals Over 0.5 &#124; 0.72 &#124; **WIN** &#124; 0.0784 &#124; 13' goal &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1773 | ca980c735f5142569487422ac96b5ff7566bb3c7e00fd089bbb1338b8ae60c45 | &#124; 4 &#124; Full match total goals Under 3.5 &#124; 0.68 &#124; **LOSS** &#124; 0.4624 &#124; 4 goals &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1774 | 41c148ce7f0c2335d3cf1ba0b8f613b26f44d1a03303380f9469f5f0da2d93a8 | &#124; 5 &#124; Full match total goals Over 2.5 &#124; 0.56 &#124; **WIN** &#124; 0.1936 &#124; 4 goals &#124; |
+
+
+Forecast mechanism / cutoff limits: The retained settlement describes Antwerp scoring suppression and Club attacking/corner exposure; a full executable goal/corner distribution, numerical adjustments and baseline query are not recovered.
+
+**B. What happened.** Club Brugge 3–1 Royal Antwerp; halftime 1–1; owner corners Club 9 / Antwerp 4. Regulation plus stoppage. Original settlement lists goal times 13, 19, 50 and 78 minutes; the owner halftime/final endpoint controls the phase grade. Goal timestamps do not certify actual start.
+
+Native identity: 6fcfe69f-a383-4a47-af15-6687fdbe245c. Secondary mapping: ESPN 401878991, matching retained exact-event settlement and Pro League event. Terminal state: FINAL, official league event. Source/body receipts: `P407_ProLeague`, `P407_Voetbalkrant` in [SOURCE_RECEIPTS.md](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/SOURCE_RECEIPTS.md). No unverified lineup, weather or injury effect is added.
+
+**C. Forecast validity.** League/Opta plus Robbie Maes original Voetbalkrant report establish two identifiable terminal collections; a third independently collected final, certified actual-start field and frozen forecast source/core remain required. ESPN/league Opta is not a third. No probability, rank or threshold correction is made. Missing approved baselines remain blank.
+
+**D. Predictive assessment.** Club corners Over 4.5 clears by 4.5; Antwerp Under 1.5 and halftime Over 0.5 clear. Full Under 3.5 loses at four; Over 2.5 wins. Winning corner direction does not verify a corner-rate model. The two full-game totals have different thresholds and are dependent, rather than complements.
+
+**E. Scoring.** Exact frozen contract arithmetic and diagnostic scores:
+
+| Rank | Issued contract | p | Observed endpoint | Diagnostic result | (p−y)² | Log loss | Issued baseline literal |
+|---|---|---|---|---|---|---|---|
+| 1 | Club Brugge team corners Over 4.5 | 0.78 | 9 | WIN | 0.04840000 | 0.24846136 | NOT_RECOVERED |
+| 2 | Royal Antwerp team goals Under 1.5 | 0.74 | 1 | WIN | 0.06760000 | 0.30110509 | NOT_RECOVERED |
+| 3 | 1st Half total goals Over 0.5 | 0.72 | 2 | WIN | 0.07840000 | 0.32850407 | NOT_RECOVERED |
+| 4 | Full match total goals Under 3.5 | 0.68 | 4 | LOSS | 0.46240000 | 1.13943428 | NOT_RECOVERED |
+| 5 | Full match total goals Over 2.5 | 0.56 | 4 | WIN | 0.19360000 | 0.57981850 | NOT_RECOVERED |
+
+These p values are historical stated probabilities, not reconstructed p_model/p_card decomposition. Comparators remain unapproved and unscored; q remains ordering only. W/L here is an exact-endpoint learning diagnostic, not canonical settlement.
+
+**F. Learning.** Compare a frozen corner exposure model with a registered league baseline on the identical provider and phase; retain early-leading branches before results. This is a parked hypothesis, not a coefficient, qualification, active rule or prospective test enrollment. One winning or losing outcome does not establish probability skill.
+
+### Review: P-409 — Lille OSC vs ESTAC Troyes — French Ligue 1
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-409`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Lille team goals Over 0.5 | 0.820000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | P | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Lille or Draw (90 min) | 0.760000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | 1st Half total goals Over 0.5 | 0.700000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 | Full match total goals Under 3.5 | 0.650000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:1809 | 1a93dc47038b8d8fba91b78f152b0ee1a01ef55bc29a6c0a4e32a4fbae6121ed | &#124; 1 &#124; Lille team goals Over 0.5 &#124; 0.82 &#124; **WIN** &#124; 0.0324 &#124; 2 &#124; |
+| GAME_LOG_STATUS_CURRENT.md:460 | 4fd173f35aac0117e9342173318a881533196b062202300aabcfbc9c4decd2db | &#124; P-397 &#124; Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final &#124; FINAL / SETTLED &#124; L L W W &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1811 | b35ef2463ad69e39bd3805c4f6403f227b4c67977efef75b4fb5aa3608b4744c | &#124; 3 &#124; Lille or Draw (90 min) &#124; 0.76 &#124; **WIN** &#124; 0.0576 &#124; Lille won &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1812 | 74799a062f31de403a6cb02e90db98f727dc6f200c37be9526311db876273617 | &#124; 4 &#124; 1st Half total goals Over 0.5 &#124; 0.70 &#124; **WIN** &#124; 0.09 &#124; 18' goal &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1813 | c0c998ae7a615795fce1969ae9db47b98fbc531a83b73588ffa05c4fd184f96a | &#124; 5 &#124; Full match total goals Under 3.5 &#124; 0.65 &#124; **WIN** &#124; 0.1225 &#124; 2 goals &#124; |
+
+
+**B. What happened.** ESPN 401876462 final Lille 2–0, Troyes corners 5: research WIN. LFP live/306887 empty to HTTP and rendered UI (video error, no aggregate); owner still missing.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3, 4, 5 won; wrong: No rank loss established; learn: Treat the Lille team goals Over 0.5 win as descriptive; verify its stated mechanism before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: ESPN 401876462 final Lille 2–0, Troyes corners 5: research WIN. LFP live/306887 empty to HTTP and rendered UI (video error, no aggregate); owner still missing. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-410 — RB Leipzig vs Hamburger SV — German Bundesliga
+
+**Disposition:** `DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE`. Revision `HLR-20261001-P-410`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | RB Leipzig team goals Over 0.5 | 0.880000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | RB Leipzig or Draw (90 min) | 0.860000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Hamburger SV team goals Under 1.5 | 0.820000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | 1st Half total goals Over 0.5 | 0.760000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | P | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:1825 | 1958aa64bea2989707cdd4f0a3ceb7bfd3c97e49e9edac4521b66e833f89cdfd | &#124; 1 &#124; RB Leipzig team goals Over 0.5 &#124; 0.88 &#124; **WIN** &#124; 0.0144 &#124; 5 &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1826 | 7de2bda33a7c11820b04ce2d9b2973062755ad50911fdd094d6b300f32bc8887 | &#124; 2 &#124; RB Leipzig or Draw (90 min) &#124; 0.86 &#124; **WIN** &#124; 0.0196 &#124; won &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1827 | 62c7c1da4dac47477be0825f65bf51527dbbcafacecabd79004bdf9fd572710d | &#124; 3 &#124; Hamburger SV team goals Under 1.5 &#124; 0.82 &#124; **WIN** &#124; 0.0324 &#124; 0 &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1828 | 8aafbe0eec22c9efb070d65905e2ef5eb4a7339ffc7cf889c481d68ffcfefdbf | &#124; 4 &#124; 1st Half total goals Over 0.5 &#124; 0.76 &#124; **WIN** &#124; 0.0576 &#124; 17' goal &#124; |
+| GAME_LOG_STATUS_CURRENT.md:461 | aa82ea145065c2c613e15cea1fdf9d49b754c4077dc970cac5bdcb508d719046 | &#124; P-398 &#124; Racing Santander vs Deportivo Alavés — La Liga &#124; FINAL / SETTLED &#124; W W L W L &#124; |
+
+
+Forecast mechanism / cutoff limits: The retained card narrative names HSV chance suppression and first-half scoring; numerical goal/corner centre, width and executed model receipts are not recovered.
+
+**B. What happened.** RB Leipzig 5–0 Hamburger SV; halftime 2–0. DFL corners 7–7; earlier ESPN said 8–7. Bundesliga 2026/27 matchday 3; regulation; exact DFL hydration ID avoids unrelated IDs in club history.
+
+Native identity: DFL-MAT-J043GU. Secondary mapping: ESPN 401884798. Terminal state: FINAL_WHISTLE, exact DFL event hydration. Source/body receipts: `P410_DFL_candidate`, `P410_HSV_original` in [SOURCE_RECEIPTS.md](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/SOURCE_RECEIPTS.md). No unverified lineup, weather or injury effect is added.
+
+**C. Forecast validity.** DFL collection and HSV original report are identifiable; a third independently collected final and certified actual start are missing. Pre-cutoff XI, bench, coach and distribution receipts remain unverified. Earlier ESPN corners 8–7 -> field-owner DFL 7–7; fifth row remains diagnostic WIN. Prior assertion that DFL corners were unavailable is superseded by retained exact-event data.
+
+**D. Predictive assessment.** All five thresholds win. Owner seven versus earlier ESPN eight is a one-corner discrepancy; both exceed 4.5, so this is a data correction without a grade flip. A five-goal win is compatible with suppression/attacking direction but cannot validate the assigned probabilities or missing lineups.
+
+**E. Scoring.** Exact frozen contract arithmetic and diagnostic scores:
+
+| Rank | Issued contract | p | Observed endpoint | Diagnostic result | (p−y)² | Log loss | Issued baseline literal |
+|---|---|---|---|---|---|---|---|
+| 1 | RB Leipzig team goals Over 0.5 | 0.88 | 5 | WIN | 0.01440000 | 0.12783337 | NOT_RECOVERED |
+| 2 | RB Leipzig or Draw (90 min) | 0.86 | 5–0 | WIN | 0.01960000 | 0.15082289 | NOT_RECOVERED |
+| 3 | Hamburger SV team goals Under 1.5 | 0.82 | 0 | WIN | 0.03240000 | 0.19845094 | NOT_RECOVERED |
+| 4 | 1st Half total goals Over 0.5 | 0.76 | 2 | WIN | 0.05760000 | 0.27443685 | NOT_RECOVERED |
+| 5 | RB Leipzig team corners Over 4.5 | 0.68 | 7 | WIN | 0.10240000 | 0.38566248 | NOT_RECOVERED |
+
+These p values are historical stated probabilities, not reconstructed p_model/p_card decomposition. Comparators remain unapproved and unscored; q remains ordering only. W/L here is an exact-endpoint learning diagnostic, not canonical settlement.
+
+**F. Learning.** Test provider disagreement rates at identical event/period IDs and report grade sensitivity before closing derivative handles. This is a parked hypothesis, not a coefficient, qualification, active rule or prospective test enrollment. One winning or losing outcome does not establish probability skill.
+
+### Review: P-415 — LA Angels @ Washington Nationals — MLB
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-415`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:466 | 9c3e3a79932bb51aacf8c004f0fcbf7796f95d9845c530a051e24e97d2b73dcd | &#124; P-403 &#124; Colorado Rockies @ Detroit Tigers — MLB &#124; FINAL / SETTLED &#124; L W L W &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-418 — Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-418`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:469 | 3cfd7d02c8e38016132d2bf4fac6f3ecf98a9fd95d56786f1b779157728a31db | &#124; P-406 &#124; Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 &#124; FINAL / SETTLED (2026-09-16: six-over rows settled at ESPN cricket API event 1547895 — Edinburgh 68/2 after 6.0; TMP-OPEN-20260914-06 retired) &#124; W L W L &#124; |
+
+
+**B. What happened.** RSSSF updated Sep 25 now reports Sep 14 Drukpa 1–3 RTC. This is progress from its unscored prior row, not official settlement. BFF current page is stale; 12:00/13:00 UTC conflict remains. June 13 1–1 and July 17 BBS report are wrong events.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: Recover the exact ranked contract and final result before drawing a performance lesson.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: RSSSF updated Sep 25 now reports Sep 14 Drukpa 1–3 RTC. This is progress from its unscored prior row, not official settlement. BFF current page is stale; 12:00/13:00 UTC conflict remains. June 13 1–1 and July 17 BBS report are wrong events. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-419 — Djurgårdens IF vs GAIS — Sweden Allsvenskan
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-419`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Djurgården team goals Over 0.5 | 0.840000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Djurgården or Draw (1X) | 0.830000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | GAIS team goals Under 1.5 | 0.790000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Under 3.5 total goals | 0.700000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | P | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_3.md:1956 | 5615e96f1c7f7ac390fec0b542ec3b271a17b478680eb3fe533f2d461b3b0fd3 | &#124; 1 &#124; Djurgården team goals Over 0.5 &#124; 0.84 &#124; **WIN** &#124; 0.0256 &#124; 2 &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1957 | a3e60a00ca5611534081a5618ad083c1b62a5c136f3cf3554d788351a6a67337 | &#124; 2 &#124; Djurgården or Draw (1X) &#124; 0.83 &#124; **WIN** &#124; 0.0289 &#124; won &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1958 | 446668a389982df9fb30d2f81e5ad9e9c41939c8a6a9495e153c589fb7c7448c | &#124; 3 &#124; GAIS team goals Under 1.5 &#124; 0.79 &#124; **WIN** &#124; 0.0441 &#124; 0 &#124; |
+| PREDICTION_LOG_COMBINED_3.md:1959 | 3e985b92ac714bd2a94aed7c472a1b16a0ef9e20c8e876bb44ddbbf9b5ae4d86 | &#124; 4 &#124; Under 3.5 total goals &#124; 0.70 &#124; **WIN** &#124; 0.09 &#124; 2 &#124; |
+| GAME_LOG_STATUS_CURRENT.md:470 | 574a865a23b251b221806359120a5822d3204a7bfec7da279a8816b17610c282 | &#124; P-407 &#124; Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League &#124; FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) &#124; P W W L W &#124; |
+
+
+**B. What happened.** ESPN 401873992 final 2–0, corners 2+2=4: research LOSS. Three red cards recorded at 59, 86 and 90+10. Allsvenskan field-owner aggregate not reached; no retroactive coefficient from the disruption.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2, 3, 4 won; wrong: No rank loss established; learn: Treat the Djurgården team goals Over 0.5 win as descriptive; verify its stated mechanism before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: ESPN 401873992 final 2–0, corners 2+2=4: research LOSS. Three red cards recorded at 59, 86 and 90+10. Allsvenskan field-owner aggregate not reached; no retroactive coefficient from the disruption. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-424 — Amsterdam Flames vs Dublin Guardians — ETPL 2026 Match 26
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-424`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:475 | 17014d6b78aee9c681d04d89787be98f9d951c5a334fe42113c6c0952be22734 | &#124; P-412 &#124; Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1 &#124; FINAL / SETTLED &#124; L W L W &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-428 — Edinburgh Castle Rockers vs Rotterdam Dockers — ETPL Match 27
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-428`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:479 | 63c450b450d790afb027eddc0130c62c9770dc917323c5840c5e76552461a769 | &#124; P-416 &#124; New York Mets @ New York Yankees — MLB &#124; FINAL / SETTLED &#124; W L W L &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-430 — Al Ain FC vs Al Nassr — AFC Champions League Elite MD1
+
+**Disposition:** `UNRESOLVED_TARGET_FIELD_OR_PROVIDER`. Revision `HLR-20261001-P-430`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Al Nassr team total Over 0.5 | 0.850000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Match Over 1.5 | 0.810000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | 1st Half Over 0.5 | 0.750000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Al Nassr +0.5 / X2 | 0.750000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 5 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | P | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_4.md:942 | 498956127d131391a80505fecf82e9c450f66b0dcacb0d626bdb1231b7d6538c | &#124; 1 &#124; Al Nassr team total Over 0.5 &#124; 0.85 &#124; **LOSS** &#124; 0.7225 &#124; |
+| PREDICTION_LOG_COMBINED_4.md:943 | 28056b4b2581fc905e2cb3be52f452779453b24ee28548c1a6ff8cb270639c07 | &#124; 2 &#124; Match Over 1.5 &#124; 0.81 &#124; **WIN** &#124; 0.0361 &#124; |
+| PREDICTION_LOG_COMBINED_4.md:944 | 9078345fcd943bd04107d6840ccfd445936cd000fc4a25e26d8ca1854565eea1 | &#124; 3 &#124; 1st Half Over 0.5 &#124; 0.75 &#124; **WIN** &#124; 0.0625 &#124; |
+| PREDICTION_LOG_COMBINED_4.md:945 | 011932fe99041ac850af21c6f550e3ad1286cbc7dadc7bea3914b91914c93d6c | &#124; 4 &#124; Al Nassr +0.5 / X2 &#124; 0.75 &#124; **LOSS** &#124; 0.5625 &#124; |
+| GAME_LOG_STATUS_CURRENT.md:481 | 39fe737ac601456739382c0892d318d695c10dc3dce25bc12c23f0b8c28f8f11 | &#124; P-418 &#124; Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League &#124; OPEN — RESULT NOT RECOVERED (2026-09-16 re-classification): fixture listed by RSSSF Round 15 [Sep 14], unscored, page updated 11 Sep; the earlier "no Drukpa–RTC match" evidence was a BBS report dated 2026-07-17 (TMP-OPEN-20260915-04) &#124; 5 rows issued; none graded &#124; |
+
+
+**B. What happened.** ESPN 401912656 final Al Ain 4–0, corners 2–10: research LOSS. Frozen AFC owner record does not supply corners; ESPN not pre-registered. Need AFC field or explicit approved-provider reconciliation; no automatic fallback booking.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 3 won; wrong: Ranks 1, 4 lost; learn: Stress Al Nassr team total Over 0.5 against the recorded result and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: ESPN 401912656 final Al Ain 4–0, corners 2–10: research LOSS. Frozen AFC owner record does not supply corners; ESPN not pre-registered. Need AFC field or explicit approved-provider reconciliation; no automatic fallback booking. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-445 — Barbados Tridents vs Jamaica Kingsmen — CPL 2026 Eliminator
+
+**Disposition:** `CONDITION_NOT_MET_NO_ACTION`. Revision `HLR-20261001-P-445`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+| 2 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+| 3 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+| 4 |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | U | NOT_EXTRACTED | UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:496 | 7fde0eba7075904e41111041f694bf66e24a8b27ffe90e69423f2de17ec72f1d | &#124; P-433 &#124; LG Twins @ NC Dinos — KBO &#124; FINAL / SETTLED &#124; W W L W; winner W; Brier 0.2017 &#124; |
+| GAME_LOG_STATUS_CURRENT.md:496 | 7fde0eba7075904e41111041f694bf66e24a8b27ffe90e69423f2de17ec72f1d | &#124; P-433 &#124; LG Twins @ NC Dinos — KBO &#124; FINAL / SETTLED &#124; W W L W; winner W; Brier 0.2017 &#124; |
+| GAME_LOG_STATUS_CURRENT.md:496 | 7fde0eba7075904e41111041f694bf66e24a8b27ffe90e69423f2de17ec72f1d | &#124; P-433 &#124; LG Twins @ NC Dinos — KBO &#124; FINAL / SETTLED &#124; W W L W; winner W; Brier 0.2017 &#124; |
+| GAME_LOG_STATUS_CURRENT.md:496 | 7fde0eba7075904e41111041f694bf66e24a8b27ffe90e69423f2de17ec72f1d | &#124; P-433 &#124; LG Twins @ NC Dinos — KBO &#124; FINAL / SETTLED &#124; W W L W; winner W; Brier 0.2017 &#124; |
+
+
+**B. What happened.** Jamaica bowled first, so batting-first activation never occurred. All four conditional rows areNOACTION, not four unresolved finals or losses. Conditional probabilities cannot be scored unconditionally.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: Recover the exact ranked contract and final result before drawing a performance lesson.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Jamaica bowled first, so batting-first activation never occurred. All four conditional rows areNOACTION, not four unresolved finals or losses. Conditional probabilities cannot be scored unconditionally.
+
+### Review: P-451 — Dorados de Chihuahua vs El Calor de Cancún — LNBP Jornada 20
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-451`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:502 | 8cc409dd5dac7a48c5ea7b4fabe302030a9c03fc12e1d25e4772a84dad91782a | &#124; P-439 &#124; Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A &#124; FINAL / SETTLED — all five ranked rows won (0–0) &#124; W W W W W; winner L (draw); Brier 0.0378 &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-484 — WNBA — Atlanta Dream @ New York Liberty
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-484`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | U177.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | ATL 95–84 | UNRESOLVED_GRADE_POINTER |
+| 2 | ATL −1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | ATL 95–84 | UNRESOLVED_GRADE_POINTER |
+| 3 | NYL +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | ATL 95–84 | UNRESOLVED_GRADE_POINTER |
+| 4 | O177.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | ATL 95–84 | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:242 | 69998564755a4d6eb7f8e832bcaf45c4084ce5c8d1014c51bb0a907e01c0f1a9 | &#124; P-484 &#124; Dream @ Liberty &#124; ATL 95–84 &#124; U177.5 **L** &#124; ATL −1.5 **W** &#124; NYL +1.5 **L** &#124; O177.5 **W** &#124; ATL ✔ &#124; L &#124; Y &#124; 0.387 &#124; YES &#124; Unverified &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:242 | 69998564755a4d6eb7f8e832bcaf45c4084ce5c8d1014c51bb0a907e01c0f1a9 | &#124; P-484 &#124; Dream @ Liberty &#124; ATL 95–84 &#124; U177.5 **L** &#124; ATL −1.5 **W** &#124; NYL +1.5 **L** &#124; O177.5 **W** &#124; ATL ✔ &#124; L &#124; Y &#124; 0.387 &#124; YES &#124; Unverified &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:242 | 69998564755a4d6eb7f8e832bcaf45c4084ce5c8d1014c51bb0a907e01c0f1a9 | &#124; P-484 &#124; Dream @ Liberty &#124; ATL 95–84 &#124; U177.5 **L** &#124; ATL −1.5 **W** &#124; NYL +1.5 **L** &#124; O177.5 **W** &#124; ATL ✔ &#124; L &#124; Y &#124; 0.387 &#124; YES &#124; Unverified &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:242 | 69998564755a4d6eb7f8e832bcaf45c4084ce5c8d1014c51bb0a907e01c0f1a9 | &#124; P-484 &#124; Dream @ Liberty &#124; ATL 95–84 &#124; U177.5 **L** &#124; ATL −1.5 **W** &#124; NYL +1.5 **L** &#124; O177.5 **W** &#124; ATL ✔ &#124; L &#124; Y &#124; 0.387 &#124; YES &#124; Unverified &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 4 won; wrong: Ranks 1, 3 lost; learn: Stress U177.5 against ATL 95–84 and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-485 — NFL — New York Giants @ Los Angeles Rams
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-485`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | NYG +6.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | LAR 28–6 | UNRESOLVED_GRADE_POINTER |
+| 2 | U47.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | LAR 28–6 | UNRESOLVED_GRADE_POINTER |
+| 3 | O47.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | LAR 28–6 | UNRESOLVED_GRADE_POINTER |
+| 4 | LAR −6.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | LAR 28–6 | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:243 | 463d81138759244e8c02cdbc30eac62215d02a37fe0d68a1b12ac8891e1ce7d7 | &#124; P-485 &#124; Giants @ Rams &#124; LAR 28–6 &#124; NYG +6.5 **L** &#124; U47.5 **W** &#124; O47.5 **L** &#124; LAR −6.5 **W** &#124; LAR ✔ &#124; L &#124; Y &#124; 0.387 &#124; NO &#124; START_CROSSED &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:243 | 463d81138759244e8c02cdbc30eac62215d02a37fe0d68a1b12ac8891e1ce7d7 | &#124; P-485 &#124; Giants @ Rams &#124; LAR 28–6 &#124; NYG +6.5 **L** &#124; U47.5 **W** &#124; O47.5 **L** &#124; LAR −6.5 **W** &#124; LAR ✔ &#124; L &#124; Y &#124; 0.387 &#124; NO &#124; START_CROSSED &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:243 | 463d81138759244e8c02cdbc30eac62215d02a37fe0d68a1b12ac8891e1ce7d7 | &#124; P-485 &#124; Giants @ Rams &#124; LAR 28–6 &#124; NYG +6.5 **L** &#124; U47.5 **W** &#124; O47.5 **L** &#124; LAR −6.5 **W** &#124; LAR ✔ &#124; L &#124; Y &#124; 0.387 &#124; NO &#124; START_CROSSED &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:243 | 463d81138759244e8c02cdbc30eac62215d02a37fe0d68a1b12ac8891e1ce7d7 | &#124; P-485 &#124; Giants @ Rams &#124; LAR 28–6 &#124; NYG +6.5 **L** &#124; U47.5 **W** &#124; O47.5 **L** &#124; LAR −6.5 **W** &#124; LAR ✔ &#124; L &#124; Y &#124; 0.387 &#124; NO &#124; START_CROSSED &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 4 won; wrong: Ranks 1, 3 lost; learn: Stress NYG +6.5 against LAR 28–6 and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-486 — MLB — Minnesota Twins @ San Francisco Giants
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-486`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | MIN ML | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | SF 5–2 | UNRESOLVED_GRADE_POINTER |
+| 2 | SF +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | SF 5–2 | UNRESOLVED_GRADE_POINTER |
+| 3 | U8.0 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | SF 5–2 | UNRESOLVED_GRADE_POINTER |
+| 4 | O8.0 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | SF 5–2 | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:244 | bc8124782a5a29f3de512e22ee7bee2148a6cf2750b8ae071d52c646b68e126c | &#124; P-486 &#124; Twins @ Giants &#124; SF 5–2 &#124; MIN ML **L** &#124; SF +1.5 **W** &#124; U8.0 **W** &#124; O8.0 **L** &#124; MIN ✘ &#124; L &#124; Y &#124; 0.387 &#124; NO &#124; Clean &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:244 | bc8124782a5a29f3de512e22ee7bee2148a6cf2750b8ae071d52c646b68e126c | &#124; P-486 &#124; Twins @ Giants &#124; SF 5–2 &#124; MIN ML **L** &#124; SF +1.5 **W** &#124; U8.0 **W** &#124; O8.0 **L** &#124; MIN ✘ &#124; L &#124; Y &#124; 0.387 &#124; NO &#124; Clean &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:244 | bc8124782a5a29f3de512e22ee7bee2148a6cf2750b8ae071d52c646b68e126c | &#124; P-486 &#124; Twins @ Giants &#124; SF 5–2 &#124; MIN ML **L** &#124; SF +1.5 **W** &#124; U8.0 **W** &#124; O8.0 **L** &#124; MIN ✘ &#124; L &#124; Y &#124; 0.387 &#124; NO &#124; Clean &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:244 | bc8124782a5a29f3de512e22ee7bee2148a6cf2750b8ae071d52c646b68e126c | &#124; P-486 &#124; Twins @ Giants &#124; SF 5–2 &#124; MIN ML **L** &#124; SF +1.5 **W** &#124; U8.0 **W** &#124; O8.0 **L** &#124; MIN ✘ &#124; L &#124; Y &#124; 0.387 &#124; NO &#124; Clean &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 2, 3 won; wrong: Ranks 1, 4 lost; learn: Stress MIN ML against SF 5–2 and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-488 — WTA Singapore — Vivian Wolff vs Oleksandra Oliynykova
+
+**Disposition:** `DOCUMENTARY_CUSTODY_RECOVERED_CARRY_PRIOR_GRADES`. Revision `HLR-20261001-P-488`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | U20.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Oli 6–1 7–6 | UNRESOLVED_GRADE_POINTER |
+| 2 | Wolff +4.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Oli 6–1 7–6 | UNRESOLVED_GRADE_POINTER |
+| 3 | Oli −4.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | Oli 6–1 7–6 | UNRESOLVED_GRADE_POINTER |
+| 4 | O20.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | Oli 6–1 7–6 | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:245 | 0298d088184bbbe33906a06402cb167cce995b485280e218c6665004b2dd24ce | &#124; P-488 &#124; Wolff v Oliynykova &#124; Oli 6–1 7–6 &#124; U20.5 **W** &#124; Wolff +4.5 **L** &#124; Oli −4.5 **W** &#124; O20.5 **L** &#124; Oli ✔ &#124; W &#124; Y &#124; 0.613 &#124; NO &#124; Card-stated pre &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:245 | 0298d088184bbbe33906a06402cb167cce995b485280e218c6665004b2dd24ce | &#124; P-488 &#124; Wolff v Oliynykova &#124; Oli 6–1 7–6 &#124; U20.5 **W** &#124; Wolff +4.5 **L** &#124; Oli −4.5 **W** &#124; O20.5 **L** &#124; Oli ✔ &#124; W &#124; Y &#124; 0.613 &#124; NO &#124; Card-stated pre &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:245 | 0298d088184bbbe33906a06402cb167cce995b485280e218c6665004b2dd24ce | &#124; P-488 &#124; Wolff v Oliynykova &#124; Oli 6–1 7–6 &#124; U20.5 **W** &#124; Wolff +4.5 **L** &#124; Oli −4.5 **W** &#124; O20.5 **L** &#124; Oli ✔ &#124; W &#124; Y &#124; 0.613 &#124; NO &#124; Card-stated pre &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:245 | 0298d088184bbbe33906a06402cb167cce995b485280e218c6665004b2dd24ce | &#124; P-488 &#124; Wolff v Oliynykova &#124; Oli 6–1 7–6 &#124; U20.5 **W** &#124; Wolff +4.5 **L** &#124; Oli −4.5 **W** &#124; O20.5 **L** &#124; Oli ✔ &#124; W &#124; Y &#124; 0.613 &#124; NO &#124; Card-stated pre &#124; |
+
+
+**B. What happened.** Historical grade source lines are recovered. Existing sporting labels are carried as literal diagnostics; independently collected terminal/phase evidence and genuine issue core are not reconstructed from prose.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 3 won; wrong: Ranks 2, 4 lost; learn: Stress Wolff +4.5 against Oli 6–1 7–6 and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-490 — RESERVED / UNUSED — retired provisional Padres alias
+
+**Disposition:** `ADMINISTRATIVE_NO_DISTINCT_ISSUED_TRIAL`. Revision `HLR-20261001-P-490`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+|  |  | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | MISSING | NOT_EXTRACTED | RANK_NOT_PRESERVED;UNRESOLVED_GRADE |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| GAME_LOG_STATUS_CURRENT.md:543 | 94ad10a4e75056d370f6497372b59ae447f6ef1c3b97e85e7dc52e3f526eda82 | &#124; P-479 &#124; Cricket / European T20 Premier League Final — Edinburgh Castle Rockers vs Belfast Wolves &#124; FINAL / SETTLED / RETROSPECTIVE COMPLETE &#124; Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there &#124; |
+
+
+**B. What happened.** No distinct issued trial exists; administrative/unused/alias closure remains.
+
+**C. Forecast validity.** No forecast was issued under this separate identity; it cannot be enrolled as a loss, void or missing settlement. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** No prediction performance is assessable for a no-issue/alias slot.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: No rank win established; wrong: No rank loss established; learn: No scored rank was issued for this ID; preserve the no-action or alias state.
+
+**E. Scoring.** NOT_APPLICABLE: no issued trial.
+
+**F. Learning.** Count issue transactions/events rather than numbering slots; hypothesis: an immutable identity census reduces duplicate/no-issue enrollment to zero. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.
+
+### Review: P-492 — MLB — San Diego Padres @ Los Angeles Dodgers
+
+**Disposition:** `UNRESOLVED_RANK_CUSTODY`. Revision `HLR-20261001-P-492`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | King O14.5 outs | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | LAD 7–0 | UNRESOLVED_GRADE_POINTER |
+| 2 | SD +1.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | LAD 7–0 | UNRESOLVED_GRADE_POINTER |
+| 3 | LAD ML | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | LAD 7–0 | UNRESOLVED_GRADE_POINTER |
+| 4 | O8.5 | MISSING | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | LAD 7–0 | UNRESOLVED_GRADE_POINTER |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:246 | 749303e318723c1e6bd37deb969a63c351387f88835d1dbc534bff0cda5a2b63 | &#124; P-492 &#124; Padres @ Dodgers &#124; LAD 7–0 &#124; King O14.5 outs **L** &#124; SD +1.5 **L** &#124; LAD ML **W** &#124; O8.5 **L** &#124; LAD ✔ &#124; L &#124; N &#124; 0.000 &#124; YES &#124; START_CROSSED &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:246 | 749303e318723c1e6bd37deb969a63c351387f88835d1dbc534bff0cda5a2b63 | &#124; P-492 &#124; Padres @ Dodgers &#124; LAD 7–0 &#124; King O14.5 outs **L** &#124; SD +1.5 **L** &#124; LAD ML **W** &#124; O8.5 **L** &#124; LAD ✔ &#124; L &#124; N &#124; 0.000 &#124; YES &#124; START_CROSSED &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:246 | 749303e318723c1e6bd37deb969a63c351387f88835d1dbc534bff0cda5a2b63 | &#124; P-492 &#124; Padres @ Dodgers &#124; LAD 7–0 &#124; King O14.5 outs **L** &#124; SD +1.5 **L** &#124; LAD ML **W** &#124; O8.5 **L** &#124; LAD ✔ &#124; L &#124; N &#124; 0.000 &#124; YES &#124; START_CROSSED &#124; |
+| git:3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa:archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md:246 | 749303e318723c1e6bd37deb969a63c351387f88835d1dbc534bff0cda5a2b63 | &#124; P-492 &#124; Padres @ Dodgers &#124; LAD 7–0 &#124; King O14.5 outs **L** &#124; SD +1.5 **L** &#124; LAD ML **W** &#124; O8.5 **L** &#124; LAD ✔ &#124; L &#124; N &#124; 0.000 &#124; YES &#124; START_CROSSED &#124; |
+
+
+**B. What happened.** AliasesP484/P490refer to Padres@Dodgers canonicalP492, not new trials. Retained resultLAD7–0does not by itself resolve pitcher-out contracts; ranks and first-five endpoints must come from the preserved issue table, not the finalscore.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 3 won; wrong: Ranks 1, 2, 4 lost; learn: Stress King O14.5 outs against LAD 7–0 and its named failure path before ranking it again.
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: AliasesP484/P490refer to Padres@Dodgers canonicalP492, not new trials. Retained resultLAD7–0does not by itself resolve pitcher-out contracts; ranks and first-five endpoints must come from the preserved issue table, not the finalscore.
+
+### Review: P-496 — ITF M25 Falun — Iiro Vasa vs Wojciech Marek
+
+**Disposition:** `PRIOR_CORRECTION_CARRIED`. Revision `HLR-20261001-P-496`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Over 22.5 Total Games | 0.627000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Vasa +0.5 Games Handicap | 0.535000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Marek -0.5 Games Handicap | 0.465000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Under 22.5 Total Games | 0.373000 | MISSING | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_5.md:3676 | a39bfb1871154f6c883ecc3ade15d07f18edb8bef7336e9091db629644d2234b | &#124; **1** &#124; **Over 22.5 Total Games** &#124; Over 22.5 &#124; LEAN / SOLID (0.627) &#124; Total was 30 games &#124; **WIN** &#124; |
+| GAME_LOG_STATUS_CURRENT.md:549 | 701b5b2bfdcb073f55b3fa915ae5f078687f53fce27b183378d506d80bf8e97c | &#124; P-484 &#124; WNBA — Atlanta Dream @ New York Liberty &#124; FINAL / SETTLED &#124; Retained as actual P-484 in collision with later Padres claim; full card and review in `archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md` (Part 5 custody row) **Imported verbatim to Part 5 §"2026-09-25(a)"**, with the final re-verified 2026-09-25 (G-L13). &#124; |
+| GAME_LOG_STATUS_CURRENT.md:549 | 701b5b2bfdcb073f55b3fa915ae5f078687f53fce27b183378d506d80bf8e97c | &#124; P-484 &#124; WNBA — Atlanta Dream @ New York Liberty &#124; FINAL / SETTLED &#124; Retained as actual P-484 in collision with later Padres claim; full card and review in `archive/mini_logs/originals_2026-09-23/PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD_DOCUMENTS_COPY_2026-09-23.md` (Part 5 custody row) **Imported verbatim to Part 5 §"2026-09-25(a)"**, with the final re-verified 2026-09-25 (G-L13). &#124; |
+| PREDICTION_LOG_COMBINED_5.md:3679 | 3d902f9908994febe3e1f1f0a430094d8582878d6f8d6f820e2adcc211c1bbac | &#124; **4** &#124; Under 22.5 Total Games &#124; Under 22.5 &#124; AVOID-lean (0.373) &#124; Total was 30 games &#124; **LOSS** &#124; |
+
+
+**B. What happened.** Marek2–6,6–3,7–6(3), games15–15,total30. Retain prior correction Vasa+0.5WIN andMarek−0.5LOSS; match winner and total-game margin are different endpoints. Do not reintroduce oldL/W.
+
+**C. Forecast validity.** A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false. Original operator/period terms govern. An endpoint in another phase does not settle this one.
+
+**D. Predictive assessment.** The recovered original retrospective below is attribution by its original author, not a new causality finding. Without independently retained pre-cutoff model/base/adjustment and lineup/condition artifacts, numerical contribution and ordinary-variance versus model-miss classification remain INCONCLUSIVE. Source/contract/custody limits above are observed process defects; unavailable outcome fields are censoring, not negative outcomes.
+
+Original card assessment literal(s), preserved for both wins and losses:
+
+> Right: Ranks 1, 2 won; wrong: Ranks 3, 4 lost; learn: Stress Marek -0.5 Games Handicap against the recorded result and its named failure path before…
+
+**E. Scoring.** No newly verified numeric score is admitted for this review. Missing p/baseline stays missing; contradictory merged grades, unknown operator rules, terminal censoring and no-action rows are not losses. Any inherited literal-grade score appears only in the separately labelled inherited slice, never prospective totals.
+
+**F. Learning.** Hypothesis: exact event, provider and period tags plus a frozen action/void definition reduce this documented missing-field failure; require that endpoint and original issue receipt before admitting a comparable new trial. Parked only. Postgame explanations are never retroactive input features. Remaining evidence: Marek2–6,6–3,7–6(3), games15–15,total30. Retain prior correction Vasa+0.5WIN andMarek−0.5LOSS; match winner and total-game margin are different endpoints. Do not reintroduce oldL/W.
+
+### Review: P-518 — MLB New York Mets at Washington Nationals
+
+**Disposition:** `DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE`. Revision `HLR-20261001-P-518`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+Complete preserved issue-text excerpt: [P-518](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/issue_text/P-518.md), derived text SHA `4122e68be21708c680439a0c1b22224e4859875eb965f9d804ebc9779b59a6a7`. Original method/manifest/contract/timing/baseline claims in that excerpt are preserved as claims.
+
+Exact issued ranked table(s), literal transcription:
+
+| Rank (q) | Contract | Family | Class | p | RM-1 q | Tier | Flags | BASELINE_P | TEAM_BASELINE_P | Logit Departure | Preferred / Pair Type |
+|---:|---|---|---|---:|---:|---|---|---:|---:|---|---|
+| **1** | **Mets +1.5** | Margin | `hcp_plus_low` | 0.640 | 0.668 | SUPPORTED | — | 0.638 | 0.6249 (`TB1_NO_RES`) | +0.009 (attributed 1.00) | COVERING_PAIR (with R2) |
+| **2** | **Nationals +1.5** | Margin | `hcp_plus_low` | 0.635 | 0.661 | SUPPORTED | — | 0.638 | 0.6516 (`TB1_NO_RES`) | −0.013 (attributed 1.00) | COVERING_PAIR (with R1) |
+| **3** | **Over 8.5** | Total | `total_over` | 0.590 | 0.593 | LEAN | — | 0.491 | 0.5332 (`TB1_NO_RES`) | +0.400 (attributed 1.00) | FORCED_PAIR (preferred side) |
+| **4** | **Under 8.5** | Total | `total_under` | 0.410 | 0.407 | COIN_FLIP | `LOW_RESOLUTION` | 0.509 | 0.4668 (`TB1_NO_RES`) | −0.400 (attributed 1.00) | FORCED_PAIR |
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Mets +1.5 | 0.64 | 0.668 | NOT_EXTRACTED; SEE_ORIGINAL | W | NYM +6 (7-1) | Embedded working settlement superseded (wrong-event citations; see corrections register) |
+| 2 | Nationals +1.5 | 0.635 | 0.661 | NOT_EXTRACTED; SEE_ORIGINAL | L | WSH -6 (1-7) | Embedded working settlement superseded (wrong-event citations; see corrections register) |
+| 3 | Over 8.5 | 0.59 | 0.593 | NOT_EXTRACTED; SEE_ORIGINAL | L | 8 | Embedded working settlement superseded (wrong-event citations; see corrections register) |
+| 4 | Under 8.5 | 0.41 | 0.407 | NOT_EXTRACTED; SEE_ORIGINAL | W | 8 | Embedded working settlement superseded (wrong-event citations; see corrections register) |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_6.md:1286 | 49f5f26d80e3077910f1b108c490b5a1db5ae252f9bfb0c4a4663b86c90d394d | &#124; 1 &#124; Mets +1.5 &#124; Margin &#124; 0.640 &#124; 0.668 &#124; 0.638 &#124; 0.6249 (`TB1_NO_RES`) &#124; **WIN** &#124; 0.1296 &#124; `LIVE_ISSUED` &#124; |
+| PREDICTION_LOG_COMBINED_6.md:1287 | 902d1202f419fc6beb563f8c2f480937020d8e1102bbcbec38321a549c0ced36 | &#124; 2 &#124; Nationals +1.5 &#124; Margin &#124; 0.635 &#124; 0.661 &#124; 0.638 &#124; 0.6516 (`TB1_NO_RES`) &#124; **LOSS** &#124; 0.4032 &#124; `LIVE_ISSUED` &#124; |
+| PREDICTION_LOG_COMBINED_6.md:1288 | e01c02a704e2f136998a7ffc997cab92deed47d61586ee2725e7bf95a6614ca5 | &#124; 3 &#124; Over 8.5 &#124; Total &#124; 0.590 &#124; 0.593 &#124; 0.491 &#124; 0.5332 (`TB1_NO_RES`) &#124; **LOSS** &#124; 0.3481 &#124; `LIVE_ISSUED` &#124; |
+| PREDICTION_LOG_COMBINED_6.md:1289 | d067a9ee39af17e1ff3e159783ce6496cb37247befe3b8a72142d29ee592b99e | &#124; 4 &#124; Under 8.5 &#124; Total &#124; 0.410 &#124; 0.407 &#124; 0.509 &#124; 0.4668 (`TB1_NO_RES`) &#124; **WIN** &#124; 0.3481 &#124; `LIVE_ISSUED` &#124; |
+
+
+Forecast mechanism / cutoff limits: Existing September 30 correction already distinguishes participant/workload assumptions from invented inning and pitching claims. Preserve its unchanged forecast and diagnostic results.
+
+**B. What happened.** New York Mets 7–1 Washington Nationals, venue-local 2026-09-26 at Nationals Park; total 8, Mets margin +6. Full game including extras as issued; MLB first-play startTime is first play, not certified actual first pitch/start.
+
+Native identity: MLB gamePk 822678. Secondary mapping: ESPN 401817091; embedded 401696434 is a different 2025 game. Terminal state: Final, MLB status. Source/body receipts: `P518_MLB` in [SOURCE_RECEIPTS.md](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/SOURCE_RECEIPTS.md). No unverified lineup, weather or injury effect is added.
+
+**C. Forecast validity.** The official feed reconfirms the final, but independent terminal quorum, actual start and canonical issue transaction are absent. Original LIVE_ISSUED status stays excluded. Carry prior dated wrong-event/process correction; do not overwrite frozen source. The earlier 0.500 settlement baselines are superseded by the issued numeric literals, which remain unapproved comparators.
+
+**D. Predictive assessment.** Mets +1.5 wins outright; Nationals +1.5 loses by six. Eight runs loses Over 8.5 and wins Under 8.5. Over/Under contributes one total family. The original live-issued status and wrong secondary game reference prevent prospective credit.
+
+**E. Scoring.** Exact frozen contract arithmetic and diagnostic scores:
+
+| Rank | Issued contract | p | Observed endpoint | Diagnostic result | (p−y)² | Log loss | Issued baseline literal |
+|---|---|---|---|---|---|---|---|
+| 1 | Mets +1.5 | 0.64 | Mets +6 | WIN | 0.12960000 | 0.44628710 | 0.638 |
+| 2 | Nationals +1.5 | 0.635 | Nationals −6 | LOSS | 0.40322500 | 1.00785793 | 0.638 |
+| 3 | Over 8.5 | 0.59 | 8 | LOSS | 0.34810000 | 0.89159812 | 0.491 |
+| 4 | Under 8.5 | 0.41 | 8 | WIN | 0.34810000 | 0.89159812 | 0.509 |
+
+These p values are historical stated probabilities, not reconstructed p_model/p_card decomposition. Comparators remain unapproved and unscored; q remains ordering only. W/L here is an exact-endpoint learning diagnostic, not canonical settlement.
+
+**F. Learning.** Before the next eligible MLB card, verify event-date plus native gamePk, starting-pitcher roles and issue-time receipt availability; test automatic rejection of mismatched secondary IDs. This is a parked hypothesis, not a coefficient, qualification, active rule or prospective test enrollment. One winning or losing outcome does not establish probability skill.
+
+### Review: P-519 — AFLW Gold Coast vs St Kilda
+
+**Disposition:** `DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE`. Revision `HLR-20261001-P-519`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+Complete preserved issue-text excerpt: [P-519](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/issue_text/P-519.md), derived text SHA `88043b670bef9319c1edeb765b823ce80532c555a430c7b42193d3cb60bb5f84`. Original method/manifest/contract/timing/baseline claims in that excerpt are preserved as claims.
+
+Exact issued ranked table(s), literal transcription:
+
+| Rank (q) | Contract | Family | Class | p | RM-1 q | Tier | Flags | BASELINE_P | TEAM_BASELINE_P | Logit Departure | Preferred / Pair Type |
+|---:|---|---|---|---:|---:|---|---|---|---|---|---|
+| **1** | **Under 89.5** | Total | `total_under` | 0.719 | 0.780 | STRONG | — | NOT_YET_DERIVED (0.500) | TB1_NO_RESOLUTION:competition_mismatch | +0.940 (attributed 1.00) | FORCED_PAIR (preferred side) |
+| **2** | **Suns(W) -27.5** | Margin | `hcp_minus` | 0.449 | 0.731 | SUPPORTED | SIDE_FLIP LARGE_RECALIBRATION | NOT_YET_DERIVED (0.500) | TB1_NO_RESOLUTION:competition_mismatch | −0.205 (attributed 1.00) | FORCED_PAIR (flipped side) |
+| **3** | **St Kidla(W) +27.5** | Margin | `hcp_plus_nb` | 0.551 | 0.269 | COIN_FLIP | SIDE_FLIP LARGE_RECALIBRATION CUSHION_NB | NOT_YET_DERIVED (0.500) | TB1_NO_RESOLUTION:competition_mismatch | +0.205 (attributed 1.00) | FORCED_PAIR (flagged typo) |
+| **4** | **Over 89.5** | Total | `total_over` | 0.281 | 0.220 | COIN_FLIP | — | NOT_YET_DERIVED (0.500) | TB1_NO_RESOLUTION:competition_mismatch | −0.940 (attributed 1.00) | FORCED_PAIR |
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Under 89.5 | 0.719000 | 0.780000 | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Suns(W) -27.5 | 0.449000 | 0.731000 | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | St Kidla(W) +27.5 | 0.551000 | 0.269000 | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Over 89.5 | 0.281000 | 0.220000 | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_6.md:490 | 3463303ed124aead5e210c354ae6a8908f2f41e749601f4b47a30008e0d29b18 | &#124; 1 &#124; Under 89.5 &#124; F1/F4 &#124; 0.719 &#124; 0.780 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **LOSS** &#124; 0.5170 &#124; 0.6084 &#124; Hit@1 LOSS (§3C review mandatory); Actual total 108 pts &#124; |
+| PREDICTION_LOG_COMBINED_6.md:491 | 3298d1a0e9edd24bd8160828a0cb67636dc15bbee70f448628370c0890356762 | &#124; 2 &#124; Suns(W) -27.5 &#124; F2/F4 &#124; 0.449 &#124; 0.731 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **WIN** &#124; 0.3036 &#124; 0.0724 &#124; Hit@2 1/2; `SIDE_FLIP` calibration win (margin 30 covers -27.5) &#124; |
+| PREDICTION_LOG_COMBINED_6.md:492 | 8b1c007d940847205ca1f4738bef668c1e4d9a62927993c1dd137c738ed87663 | &#124; 3 &#124; St Kidla(W) +27.5 &#124; F1/F3 &#124; 0.551 &#124; 0.269 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **LOSS** &#124; 0.3036 &#124; 0.0724 &#124; Penalized by RM-1 `hcp_plus_nb`; lost by 30 pts &#124; |
+| PREDICTION_LOG_COMBINED_6.md:493 | 0f3b8a5a4876e1b5ebcdb5e84f590fe21503747306a82c7882a2368fcfa10c48 | &#124; 4 &#124; Over 89.5 &#124; F2/F3 &#124; 0.281 &#124; 0.220 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **WIN** &#124; 0.5170 &#124; 0.6084 &#124; High-tail outcome won &#124; |
+
+
+Forecast mechanism / cutoff limits: Issued scoring-shot chain forecasts GC 14.5 shots / conversion .48 and SK 8.5 / .41; total centre 75, SD25, margin +23 SD35. No authenticated executable model or pre-cutoff weather/lineup receipts. Men’s AFL reference widths were used despite an unestablished AFLW baseline.
+
+**B. What happened.** Gold Coast 10.9 (69)–St Kilda 6.3 (39). Cumulative quarters GC 14,16,42,69 / SK 18,31,32,39; halftime 16–31; second half 53–8. AFLW 2026 round 7, September 27 at People First Stadium. Total 108; margin GC +30.
+
+Native identity: AFLW 8942 / CD_M20262640709. Secondary mapping: Embedded 7412 is wrong event; final reports map to 8942. Terminal state: Full Time, AFLW exact match centre. Source/body receipts: `P519_AFLW`, `P519_AAP`, `P519_Kimber`, `P519_GC_selection`, `P519_SK_selection` in [SOURCE_RECEIPTS.md](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/SOURCE_RECEIPTS.md). No unverified lineup, weather or injury effect is added.
+
+**C. Forecast validity.** Champion Data plus AAP original report are identifiable collections. Kimber is a distinct authored report, but independent collection of terminal facts versus the shared AFL stats feed remains unverified; do not promote it automatically as a third. Freeze 07:08:21Z follows scheduled 07:05Z; LIVE_ISSUED stays. Actual start, certified issue core and baseline lineage remain absent. Use exact event 8942, not 7412. Official dated GC selection names Rhyce Shaw, not the issued Cameron Joyce; preserve the issued coach literal and flag it. Do not assert an unexplained all-lineups-matched success or replace missing baselines by 0.500.
+
+**D. Predictive assessment.** GC actually had 19 scoring shots and SK 9; conversion 10/19 and 6/9, producing 108. Total residual +33 is z=1.32 using the printed SD, and margin residual +7 is z=.20. This establishes a realised higher-score branch, not calibrated tail mass. GC’s second-half reversal supports a territory/scoring change after halftime; it does not prove all pregame personnel assumptions. R1 Under loses; R2 Suns minus wins; R3 cushion loses; R4 Over wins. Complementary pairs each guarantee one winning row.
+
+**E. Scoring.** Exact frozen contract arithmetic and diagnostic scores:
+
+| Rank | Issued contract | p | Observed endpoint | Diagnostic result | (p−y)² | Log loss | Issued baseline literal |
+|---|---|---|---|---|---|---|---|
+| 1 | Under 89.5 | 0.719 | 108 | LOSS | 0.51696100 | 1.26940061 | NOT_YET_DERIVED (0.500) |
+| 2 | Suns(W) -27.5 | 0.449 | 30 | WIN | 0.30360100 | 0.80073239 | NOT_YET_DERIVED (0.500) |
+| 3 | St Kidla(W) +27.5 | 0.551 | -30 | LOSS | 0.30360100 | 0.80073239 | NOT_YET_DERIVED (0.500) |
+| 4 | Over 89.5 | 0.281 | 108 | WIN | 0.51696100 | 1.26940061 | NOT_YET_DERIVED (0.500) |
+
+These p values are historical stated probabilities, not reconstructed p_model/p_card decomposition. Comparators remain unapproved and unscored; q remains ordering only. W/L here is an exact-endpoint learning diagnostic, not canonical settlement.
+
+**F. Learning.** Freeze AFLW-only scoring-shot and conversion baselines and dated selected-team roles, then test phase residuals against league-specific benchmarks over a chronological cohort. This is a parked hypothesis, not a coefficient, qualification, active rule or prospective test enrollment. One winning or losing outcome does not establish probability skill.
+
+### Review: P-520 — KBO Hanwha at Lotte
+
+**Disposition:** `DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE`. Revision `HLR-20261001-P-520`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+Complete preserved issue-text excerpt: [P-520](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/issue_text/P-520.md), derived text SHA `277ee1df3c2247ef4762670ffd4953189128bb324dcee415e8aac62a53a14053`. Original method/manifest/contract/timing/baseline claims in that excerpt are preserved as claims.
+
+Exact issued ranked table(s), literal transcription:
+
+| Rank (q) | Contract | Family | Class | p | RM-1 q | Tier | Flags | BASELINE_P | TEAM_BASELINE_P | Logit Departure | Preferred / Pair Type |
+|---:|---|---|---|---:|---:|---|---|---|---|---|---|
+| **1** | **Giants ML** | Moneyline | `ml` | 0.577 | 0.572 | LEAN | — | 0.536 | TB1_NO_RESOLUTION:kbo | +0.166 (attributed 1.00) | FREE (preferred side) |
+| **2** | **Eagles +1.5** | Margin | `hcp_plus_low` | 0.520 | 0.484 | COIN_FLIP | NEAR_TIED_FLIP | 0.638 | TB1_NO_RESOLUTION:kbo | −0.487 (attributed 1.00) | FREE |
+| **3** | **Over 10.5** | Total | `total_over` | 0.515 | 0.476 | COIN_FLIP | NEAR_TIED_FLIP | 0.480 | TB1_NO_RESOLUTION:kbo | +0.140 (attributed 1.00) | FORCED_PAIR (preferred side) |
+| **4** | **Under 10.5** | Total | `total_under` | 0.485 | 0.524 | COIN_FLIP | NEAR_TIED_FLIP | 0.520 | TB1_NO_RESOLUTION:kbo | −0.140 (attributed 1.00) | FORCED_PAIR |
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Giants ML | 0.577 | 0.572 | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Eagles +1.5 | 0.52 | 0.484 | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Over 10.5 | 0.515 | 0.476 | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Under 10.5 | 0.485 | 0.524 | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_6.md:715 | 5717c08b4beec0a120332925168e884dd90f6eccd43e40e70d68b08a50c53eb5 | &#124; 1 &#124; Giants ML &#124; F1/F2 &#124; 0.577 &#124; 0.572 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **LOSS** &#124; 0.3329 &#124; 0.3272 &#124; Hit@1 LOSS (§3C review mandatory); Giants lost 2–6 &#124; |
+| PREDICTION_LOG_COMBINED_6.md:716 | e87b6ac5ee857c96e840e3935e11523985da7761fc8354b7f96a5f6e4bf405f1 | &#124; 2 &#124; Eagles +1.5 &#124; F3/F4 &#124; 0.520 &#124; 0.484 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **WIN** &#124; 0.2304 &#124; 0.2663 &#124; Hit@2 1/2; Eagles won outright by 4 runs &#124; |
+| PREDICTION_LOG_COMBINED_6.md:717 | e43d374f2723db22ab64f144fe6ba802da913c4beb03dec59126919c2c583563 | &#124; 3 &#124; Over 10.5 &#124; F1/F3 &#124; 0.515 &#124; 0.476 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **LOSS** &#124; 0.2652 &#124; 0.2266 &#124; `TOP_OU_REVIEW`: missed by 2.5 runs (actual 8) &#124; |
+| PREDICTION_LOG_COMBINED_6.md:718 | b03049841063b3340a19d65e82cc7c57ff961bdfb8afbbd7d3f3d9813333dfa5 | &#124; 4 &#124; Under 10.5 &#124; F2/F4 &#124; 0.485 &#124; 0.524 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **WIN** &#124; 0.2652 &#124; 0.2266 &#124; Complementary Under won &#124; |
+
+
+Forecast mechanism / cutoff limits: Issued total NB mean11.2 SD4.8 and Lotte signed-margin Normal mean+.8 SD4.5. Four displayed adjustments +.60,+.30,−.20,+.10 sum to +.80, not claimed +1.00; implied total centre 11.00 rather than stated11.20. Keep issued11.20 unchanged. Its NB tail reproduces Over10.5=.515420. Normal ML at .8/4.5=.570551 and Eagles+1.5=.561808 disagree with issued .5768/.5200, so one-object reconstruction is incomplete.
+
+**B. What happened.** Hanwha 6–2 Lotte, Sajik, September 27 17:00 KST schedule. Hanwha innings 3,0,0,0,0,1,1,0,1; Lotte 0,0,0,0,2,0,0,0,0; nine innings, total 8, Hanwha +4. Full game incl extras per frozen contracts; no extra inning in this completed game. Actual start NOT_VERIFIED, not inferred from 17:00 schedule.
+
+Native identity: KBO 20260927HHLT0. Secondary mapping: Retained GameCenter request and September 27 scoreboard bind Hanwha away/Lotte home/Sajik; no guessed secondary ID. Terminal state: FINAL, official scoreboard; exact review route is a shell in raw HTTP. Source/body receipts: `P520_KBO`, `P520_KBO_review`, `P520_Khan`, `P520_Newsis` in [SOURCE_RECEIPTS.md](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/SOURCE_RECEIPTS.md). No unverified lineup, weather or injury effect is added.
+
+**C. Forecast validity.** Sports2i/KBO field-owner plus Kim Eun-jin/Khan original report and Newsis original reporting agree on6–2. Event-specific reporting supports three distinct terminal narratives, but formal registry independence stays UNKNOWN and actual-start evidence is absent. Missing canonical issue/source/baseline receipts forbid certification. Freeze07:58:28Z precedes scheduled08:00Z but this does not establish actual start. Bind documented KBO gameId20260927HHLT0; replace generic/fabricated 0.500 settlement comparator with the literal issue values and unresolved provenance. Correct signed adjustment sum in review only, retain original centre/p/ranks.
+
+**D. Predictive assessment.** The opener’s early removal occurred (original Khan report says 2.2 innings, i.e. 2⅔); bullpen exposure did not produce the forecast scoring increase. Hanwha opened 3–0; Lotte’s only two runs were in the fifth. The early-leash mechanism can occur while the high-scoring mechanism fails. Total8 gives descriptive z=(8−11.2)/4.8=−.6667; that alone cannot prove a well-calibrated NB model. Ranks L/W/L/W; Hanwha cushion won outright. q order also conflicts: .524 for issued rank4 exceeds .484 rank2 and .476 rank3; ranks remain frozen.
+
+**E. Scoring.** Exact frozen contract arithmetic and diagnostic scores:
+
+| Rank | Issued contract | p | Observed endpoint | Diagnostic result | (p−y)² | Log loss | Issued baseline literal |
+|---|---|---|---|---|---|---|---|
+| 1 | Giants ML | 0.577 | Hanwha 6–2 | LOSS | 0.33292900 | 0.86038310 | 0.536 |
+| 2 | Eagles +1.5 | 0.52 | 4 | WIN | 0.23040000 | 0.65392647 | 0.638 |
+| 3 | Over 10.5 | 0.515 | 8 | LOSS | 0.26522500 | 0.72360639 | 0.480 |
+| 4 | Under 10.5 | 0.485 | 8 | WIN | 0.26522500 | 0.72360639 | 0.520 |
+
+These p values are historical stated probabilities, not reconstructed p_model/p_card decomposition. Comparators remain unapproved and unscored; q remains ordering only. W/L here is an exact-endpoint learning diagnostic, not canonical settlement.
+
+**F. Learning.** Pre-register a league-specific bullpen workload-to-run-prevention hypothesis with pre-cutoff availability, and test it against a frozen no-adjustment model; separately reject non-reconciling distribution marginals and signed sums. This is a parked hypothesis, not a coefficient, qualification, active rule or prospective test enrollment. One winning or losing outcome does not establish probability skill.
+
+### Review: P-521 — ACB Breogan vs Joventut
+
+**Disposition:** `DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE`. Revision `HLR-20261001-P-521`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+Complete preserved issue-text excerpt: [P-521](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/issue_text/P-521.md), derived text SHA `405f53da5795aeb51cffe560ff94572e39f7f71f8cb8f07ed16e11e5eecf718c`. Original method/manifest/contract/timing/baseline claims in that excerpt are preserved as claims.
+
+Exact issued ranked table(s), literal transcription:
+
+| Rank | Contract | Family / class | Distribution p | RM-1 q | Tier | Flags | BASELINE_P | TEAM_BASELINE_P | Pair label |
+|---:|---|---|---:|---:|---|---|---|---|---|
+| **1** | **Joventut −5.5** | Margin / `hcp_minus` | 0.408 | **0.677** | SUPPORTED | `SIDE_FLIP`, `LARGE_RECALIBRATION` | 0.5445 card diagnostic; ACB register `NOT_YET_DERIVED` | `NOT_COVERED:acb` | `FORCED_PAIR + COVERING_PAIR` |
+| **2** | **Over 179.5** | Total / `total_over` | 0.538 | **0.513** | COIN_FLIP | `NEAR_TIED` | 0.3922 card diagnostic; ACB register `NOT_YET_DERIVED` | `NOT_COVERED:acb` | `FORCED_PAIR + COVERING_PAIR` |
+| **3** | **Under 179.5** | Total / `total_under` | 0.462 | **0.487** | COIN_FLIP | `NEAR_TIED` | 0.6078 card diagnostic; ACB register `NOT_YET_DERIVED` | `NOT_COVERED:acb` | `FORCED_PAIR + COVERING_PAIR` |
+| **4** | **Breogán +5.5** | Margin / `hcp_plus_nb` | 0.592 | **0.323** | COIN_FLIP | `SIDE_FLIP`, `LARGE_RECALIBRATION`, `CUSHION_NB` | 0.4555 card diagnostic; ACB register `NOT_YET_DERIVED` | `NOT_COVERED:acb` | `FORCED_PAIR + COVERING_PAIR` |
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Joventut -5.5 | 0.408 | 0.677 | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 2 | Over 179.5 | 0.538 | 0.513 | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 3 | Under 179.5 | 0.462 | 0.487 | NOT_EXTRACTED; SEE_ORIGINAL | L | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+| 4 | Breogan +5.5 | 0.592000 | 0.323000 | NOT_EXTRACTED; SEE_ORIGINAL | W | NOT_EXTRACTED | NONE_IN_LITERAL_VIEW |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_6.md:928 | b561d22eb9245c6481db5c63590f64d4e993e7b252d6fef2036ca49588fbee3e | &#124; 1 &#124; Joventut -5.5 &#124; F1/F4 &#124; 0.408 &#124; 0.677 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **LOSS** &#124; 0.1665 &#124; 0.4583 &#124; Hit@1 LOSS (§3C review mandatory); Joventut lost outright 104–110 &#124; |
+| PREDICTION_LOG_COMBINED_6.md:929 | 500179eb76fd2728bec805e84ada48dc06381bdb99a19e5a02a770be193b266a | &#124; 2 &#124; Over 179.5 &#124; F2/F4 &#124; 0.538 &#124; 0.513 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **WIN** &#124; 0.2134 &#124; 0.2372 &#124; Hit@2 1/2; Actual total 214 pts (Top O/U WIN) &#124; |
+| PREDICTION_LOG_COMBINED_6.md:930 | d27237d3fc54a657bbec882ee185514954dd677b077e5a8c5efc5771896637d9 | &#124; 3 &#124; Under 179.5 &#124; F1/F3 &#124; 0.462 &#124; 0.487 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **LOSS** &#124; 0.2134 &#124; 0.2372 &#124; High-tail shootout defeated Under &#124; |
+| PREDICTION_LOG_COMBINED_6.md:931 | df0b904f4a24ec7508a8917934035d9272e244061ecaa59a9af8fc16f96b55c8 | &#124; 4 &#124; Breogan +5.5 &#124; F2/F3 &#124; 0.592 &#124; 0.323 &#124; 0.500 &#124; TB1_NO_RESOLUTION &#124; **WIN** &#124; 0.1665 &#124; 0.4583 &#124; Raw model preferred pick won easily &#124; |
+
+
+Forecast mechanism / cutoff limits: Issued total Normal centre181.5 SD19.06; signed margin Joventut+2 SD15. Breogán venue/lineup and two claimed Joventut absences caused the manual shift; p prefers the exact issued Breogán+5.5 at .592; q flips it to.323. Preserve the exact+5.5 contract and all version claims; numerical contribution cannot be causally measured without frozen base/adjustment objects.
+
+**B. What happened.** Río Breogán110–104Asisa Joventut in40 regulation minutes; quarter pairs29–28,27–21,19–22,35–33; HT56–49,3QT75–71; total214,Breogán+6. ACB2026/27opening round, Lugo, September27. initialMatchHeader.start=10:00Z is scheduled start; currentQuarter4 and four-quarter sums support regulation endpoint.
+
+Native identity: ACB 105378. Secondary mapping: ACB summary/statistics/play views count once; EFE/AS and El Progreso are report lineages. Terminal state: FINALIZED, exact initialMatchHeader matchId105378. Source/body receipts: `P521_ACB`, `P521_plays`, `P521_EFE`, `P521_ElProgreso`, `P521_SER` in [SOURCE_RECEIPTS.md](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/SOURCE_RECEIPTS.md). No unverified lineup, weather or injury effect is added.
+
+**C. Forecast validity.** ACB native final plus EFE and original El Progreso terminal narratives agree; independently collected source status remains UNKNOWN in live registries. No actual-start field or canonical issue receipts; original LIVE_ISSUED remains excluded. ACB card-derived baseline rates are diagnostic, not approved population baselines. Retain110–104 and official quarters; withdraw unsourced all-starters-matched and triple-counted ACB-front-end certification. Earlier settlement0.500 comparators and q scores are not accepted.
+
+**D. Predictive assessment.** 214 exceeds179.5; Breogánwins by6, so Joventut−5.5 loses and Breogán+5.5wins. Total residual+32.5 givesz1.705 using printedSD; normal uncertainty can allow the result, but no calibration follows from one event. El Progreso’s original basketball report describes shooting/Branković contributions, rather than proving the complete pregame lineup claims. Spread and total opposing pairs mechanically produce two of four wins; q remains ranking only. Saying the raw probability was completely right or that one cushion win proves RM-1 failure is unsupported.
+
+**E. Scoring.** Exact frozen contract arithmetic and diagnostic scores:
+
+| Rank | Issued contract | p | Observed endpoint | Diagnostic result | (p−y)² | Log loss | Issued baseline literal |
+|---|---|---|---|---|---|---|---|
+| 1 | Joventut −5.5 | 0.408 | -6 | LOSS | 0.16646400 | 0.52424864 | 0.5445 card diagnostic; ACB register NOT_YET_DERIVED |
+| 2 | Over 179.5 | 0.538 | 214 | WIN | 0.21344400 | 0.61989672 | 0.3922 card diagnostic; ACB register NOT_YET_DERIVED |
+| 3 | Under 179.5 | 0.462 | 214 | LOSS | 0.21344400 | 0.61989672 | 0.6078 card diagnostic; ACB register NOT_YET_DERIVED |
+| 4 | Breogán +5.5 | 0.592 | 6 | WIN | 0.16646400 | 0.52424864 | 0.4555 card diagnostic; ACB register NOT_YET_DERIVED |
+
+These p values are historical stated probabilities, not reconstructed p_model/p_card decomposition. Comparators remain unapproved and unscored; q remains ordering only. W/L here is an exact-endpoint learning diagnostic, not canonical settlement.
+
+**F. Learning.** Freeze ACB-specific no-adjustment and adjusted distributions before start; compare identical-endpoint residuals and ranking choices over an untouched chronological sample without borrowing a cushion penalty from another sport. This is a parked hypothesis, not a coefficient, qualification, active rule or prospective test enrollment. One winning or losing outcome does not establish probability skill.
+
+### Review: P-522 — ACB La Laguna Tenerife vs Casademont Zaragoza
+
+**Disposition:** `DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE`. Revision `HLR-20261001-P-522`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The retained historical record and row literals follow; a rank-index row is not a certified issue transaction.
+
+Complete preserved issue-text excerpt: [P-522](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/issue_text/P-522.md), derived text SHA `1e0361f4ddb3eab7a70b96677a0f65d7b88998e337ea2aadc047229182b2bd45`. Original method/manifest/contract/timing/baseline claims in that excerpt are preserved as claims.
+
+| Rank literal | Contract literal | p literal | q literal | Baseline in index | Logged result | Observed value | Exclusion flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Combined Total: Over 169.5 Points | 0.667000 | 0.708000 | NOT_EXTRACTED; SEE_ORIGINAL | L | 161 | Embedded working settlement superseded (wrong-event citations; see corrections register) |
+| 2 | Tenerife −3.5 | 0.553000 | 0.535000 | NOT_EXTRACTED; SEE_ORIGINAL | L | LLT -1 (80-81) | Embedded working settlement superseded (wrong-event citations; see corrections register) |
+| 3 | Combined Total: Over 179.5 Points | 0.457000 | 0.480000 | NOT_EXTRACTED; SEE_ORIGINAL | L | 161 | Embedded working settlement superseded (wrong-event citations; see corrections register) |
+| 4 | Zaragoza +9.5 | 0.605000 | 0.342000 | NOT_EXTRACTED; SEE_ORIGINAL | W | CAZ +1 (81-80) | Embedded working settlement superseded (wrong-event citations; see corrections register) |
+
+Literal historical source rows (unchanged wording, each separately anchored; these are documentary grade/order claims, not new independent finals):
+
+| Pointer | Line SHA-256 | Exact source line |
+|---|---|---|
+| PREDICTION_LOG_COMBINED_6.md:1438 | 99dfbf7dbae8349a14be6d9b8c637a5dcd08b5d5feb506970c7d0080e900dfc4 | &#124; 1 &#124; Combined Total: Over 169.5 Points &#124; `total_over` &#124; 0.667 &#124; 0.708 &#124; `NOT_YET_DERIVED:acb` &#124; `NOT_COVERED:acb` &#124; **LOSS** &#124; 0.4449 &#124; `LIVE_ISSUED` &#124; |
+| PREDICTION_LOG_COMBINED_6.md:1439 | 754358f1634d680fd3ae706bf88bb77bc85d3365a6685fd83a441437f50569a0 | &#124; 2 &#124; Tenerife −3.5 &#124; `hcp_minus` &#124; 0.553 &#124; 0.535 &#124; `NOT_YET_DERIVED:acb` &#124; `NOT_COVERED:acb` &#124; **LOSS** &#124; 0.3058 &#124; `LIVE_ISSUED` &#124; |
+| PREDICTION_LOG_COMBINED_6.md:1440 | 01ce054f307aec5d1ba2c381d05430f7611785a827d8652c7d1d42d287c5e149 | &#124; 3 &#124; Combined Total: Over 179.5 Points &#124; `total_over` &#124; 0.457 &#124; 0.480 &#124; `NOT_YET_DERIVED:acb` &#124; `NOT_COVERED:acb` &#124; **LOSS** &#124; 0.2088 &#124; `LIVE_ISSUED` &#124; |
+| PREDICTION_LOG_COMBINED_6.md:1441 | e7fc1c0a31a78681acf74a1eed2af979b6a90174a1ed00e479196e05cf600837 | &#124; 4 &#124; Zaragoza +9.5 &#124; `hcp_plus_nb` &#124; 0.605 &#124; 0.342 &#124; `NOT_YET_DERIVED:acb` &#124; `NOT_COVERED:acb` &#124; **WIN** &#124; 0.1560 &#124; `LIVE_ISSUED` &#124; |
+
+
+Forecast mechanism / cutoff limits: Retain original joint margin/total distribution and earlier dated process correction. Frozen Over169.5 .667 and Over179.5 .457 are nested thresholds; they cannot be counted as independent events. Current source supports box facts, not complete pregame roster/coaching assumptions.
+
+**B. What happened.** La Laguna Tenerife80–81Casademont Zaragoza; quarters18–18,20–26,27–24,15–13; HT38–44; total161,Tenerife−1. Regulation40minutes, ACBopening round, September27, Tenerife. Exact header start11:00Z is scheduled, notactual start.
+
+Native identity: ACB 105380. Secondary mapping: Embedded 105379 is wrong event. Terminal state: FINALIZED, exact initialMatchHeader matchId105380. Source/body receipts: `P522_ACB` in [SOURCE_RECEIPTS.md](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/SOURCE_RECEIPTS.md). No unverified lineup, weather or injury effect is added.
+
+**C. Forecast validity.** Official ACB exact final is reconfirmed. Independent terminal quorum, actual-start semantics and canonical issue receipts remain missing; LIVE_ISSUED and missing approved baseline remain permanent exclusions. Prior dated105379->105380source/process correction retained and newly confirmed. No new replacement of the original core.
+
+**D. Predictive assessment.** 161 loses bothOvers; Tenerife−3.5 loses at−1, Zaragoza+9.5wins outright. 1of4wins is consistent with covering spread geometry; one cushion win is not calibration proof. The prior dated correction remains controlling; reopening its wrong-event narrative would recreate a documented error.
+
+**E. Scoring.** Exact frozen contract arithmetic and diagnostic scores:
+
+| Rank | Issued contract | p | Observed endpoint | Diagnostic result | (p−y)² | Log loss | Issued baseline literal |
+|---|---|---|---|---|---|---|---|
+| 1 | Combined Total: Over 169.5 Points | 0.667 | 161 | LOSS | 0.44488900 | 1.09961279 | NOT_YET_DERIVED:acb |
+| 2 | Tenerife −3.5 | 0.553 | -1 | LOSS | 0.30580900 | 0.80519668 | NOT_YET_DERIVED:acb |
+| 3 | Combined Total: Over 179.5 Points | 0.457 | 161 | LOSS | 0.20884900 | 0.61064596 | NOT_YET_DERIVED:acb |
+| 4 | Zaragoza +9.5 | 0.605 | 1 | WIN | 0.15602500 | 0.50252682 | NOT_YET_DERIVED:acb |
+
+These p values are historical stated probabilities, not reconstructed p_model/p_card decomposition. Comparators remain unapproved and unscored; q remains ordering only. W/L here is an exact-endpoint learning diagnostic, not canonical settlement.
+
+**F. Learning.** Require native event ID equality in every process/stat source and validate nested-threshold coherence before aggregating card-level learning. This is a parked hypothesis, not a coefficient, qualification, active rule or prospective test enrollment. One winning or losing outcome does not establish probability skill.
+
+### Review: CLAIMED_P-523 — Oriente Petrolero vs The Strongest
+
+**Disposition:** `DIAGNOSTIC_GOAL_ROWS_COMPLETE_CORNER_UNISSUED`. Revision `HLR-20261001-CLAIMED_P-523`. Canonical issue core hash: NOT_RECOVERED; performance eligible: false.
+
+**A. What was issued.** The manual mini-log claims four ranked goal rows and one quarantined corner with no line. Its canonical-ID/pregame assertions are disputed, not adopted.
+
+Complete preserved issue-text excerpt: [CLAIMED_P-523](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/issue_text/CLAIMED_P-523.md), derived text SHA `3f1c528b95df810b6e629077619d52ed6049b92d0f791828dea7c8c8cec5553a`. Original method/manifest/contract/timing/baseline claims in that excerpt are preserved as claims.
+
+Exact issued ranked table(s), literal transcription:
+
+| Rank | Contract | Target / Period | $p$ | RM-1 $q$ | Effective Tier | `BASELINE_P` | `TEAM_BASELINE_P` | Pair Label | Preferred Side |
+|:---:|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **1** | **Combined 1st Half Total: Over 0.5 Goals** | Goals / 1H (45m) | **0.674** | 0.655 | `SUPPORTED` | 0.680 | `TB1_NO_RESOLUTION` | `FORCED_PAIR` | Over 0.5 (p = 0.674) |
+| **2** | **Combined Total Goals: Under 2.5 Goals** | Goals / Full Match (90m) | **0.518** | 0.512 | `COIN_FLIP` | 0.475 | `TB1_NO_RESOLUTION` | `FORCED_PAIR` | Under 2.5 (p = 0.518) |
+| **3** | **Combined Total Goals: Over 2.5 Goals** | Goals / Full Match (90m) | **0.482** | 0.488 | `COIN_FLIP` | 0.525 | `TB1_NO_RESOLUTION` | `FORCED_PAIR` | Under 2.5 (p = 0.518) |
+| **4** | **Combined 1st Half Total: Under 0.5 Goals** | Goals / 1H (45m) | **0.326** | 0.345 | `UNSUPPORTED` | 0.320 | `TB1_NO_RESOLUTION` | `FORCED_PAIR` | Over 0.5 (p = 0.674) |
+| — | *Combined Total Corners: ?* | Corners / Full Match | — | — | `QUARANTINED` | `NOT_YET_DERIVED` | `NOT_COVERED` | `UNRESOLVED` | Line undefined (`?`) |
+
+
+Forecast mechanism / cutoff limits: Claimed independent Poisson means home1.35,away1.25,total2.6;1Hlambda1.12 is a fixed43.1%allocation. PoissonUnder2.5=.518430 and1HOver.5=.673720 reproduce the rounded p. The same score grid gives home.391658/draw.263521/away.344821, differing from claimed.395/.275/.330. Claimed P(bothwin)=.362 and P(bothfail)=.125 violate inclusion-exclusion:1−.674−.518+.362=.170. Independent Poisson phase split instead givesbothwin.252887/bothfail.060737. These are audit recomputations, not a new forecast.
+
+**B. What happened.** Oriente Petrolero1–1The Strongest; HT1–1. Both full reports explicitly put both goals in the first half. Ventura minute26 versus28 discrepancy does not affect either phase grade; Nacif45+2/47is first-half stoppage. Bolivia Copa2026GroupCfecha6, SantaCruzTahuichi, venue-localSep30. Full regulation and first half include stoppage; unspecified corners have no threshold.
+
+Native identity: NOT_VERIFIED; FBF native match key required. Secondary mapping: Claimed ESPN401907909; event match supported by two full original report bodies. Terminal state: Final reported by Jaime Paniagua/DIEZ and Sports360; owner final not retrieved. Source/body receipts: `P523_Diez`, `P523_Vision`, `P523_ESPN`, `P523_Premium`, `P523_APG` in [SOURCE_RECEIPTS.md](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/SOURCE_RECEIPTS.md). No unverified lineup, weather or injury effect is added.
+
+**C. Forecast validity.** MANUAL_CLAIM, not canonical. No FBF-native ID/field-owner final, certified actual-start field, third audited independent terminal collection, issue transaction, admitted Bolivia model or frozen universe. Freeze00:31:30Z follows scheduled00:30Z by90seconds; pregame cannot be certified. ClaimedP524next-IDtext is superseded; canonical next remainsP523. Corners? remainsUNRESOLVED_LINE and unissued. Contradictory INTAKE-ONLY/empty header versus one manual card; claimed issuedP523/nextP524 is superseded by MANUAL_CLAIM/no canonical transaction/P523unconsumed. Preserve the original mini bytes as an exact prefix and append this correction.
+
+**D. Predictive assessment.** First-half goals2 clearOver.5; fullgoals2 satisfyUnder2.5, so ranksW/W/L/L. Rank1does not show independently modelled phase skill because fixed-phase scaling and data provenance were unsupported. FullUnder wins withpnear.5; paired complement outcomes are mechanical. A disallowed late goal noted in DIEZ explains unchanged1–1 after halftime, but was unavailable before freeze and is not an adjustment input. Missing corners cannot be inferred from the one reported corner that created the equalizer.
+
+**E. Scoring.** Exact frozen contract arithmetic and diagnostic scores:
+
+| Rank | Issued contract | p | Observed endpoint | Diagnostic result | (p−y)² | Log loss | Issued baseline literal |
+|---|---|---|---|---|---|---|---|
+| 1 | Combined 1st Half Total: Over 0.5 Goals | 0.674 | 2 | WIN | 0.10627600 | 0.39452517 | 0.680 |
+| 2 | Combined Total Goals: Under 2.5 Goals | 0.518 | 2 | WIN | 0.23232400 | 0.65778004 | 0.475 |
+| 3 | Combined Total Goals: Over 2.5 Goals | 0.482 | 2 | LOSS | 0.23232400 | 0.65778004 | 0.525 |
+| 4 | Combined 1st Half Total: Under 0.5 Goals | 0.326 | 2 | LOSS | 0.10627600 | 0.39452517 | 0.320 |
+
+These p values are historical stated probabilities, not reconstructed p_model/p_card decomposition. Comparators remain unapproved and unscored; q remains ordering only. W/L here is an exact-endpoint learning diagnostic, not canonical settlement.
+
+**F. Learning.** Before any Bolivia numerical research, register exact native fixtures and a league/phase baseline and freeze genuine phase models; test joint inclusion-exclusion and score-grid marginals before issue. This is a parked hypothesis, not a coefficient, qualification, active rule or prospective test enrollment. One winning or losing outcome does not establish probability skill.
+
+Unissued corner row: `Combined Total Corners: ?` — UNRESOLVED_LINE. Threshold, frozen provider and complete corner endpoint missing. No grade, score, operator settlement or ID is manufactured.
+
+## Shadow records — separate A–F reviews
+
+Five frozen model-only records are inventoried. The two September30 finals retain their already recorded diagnostics and are rechecked against the newly retained official schedule. The three October1/2 fixtures remain future at the audit observation (~07:32Z). No event not yet terminal is scored; no retrospective model run creates a forecast. The later TAS/MEL tipoff at09:30Z is not waited on or guessed.
+
+### Shadow review: 36f8c608-58ad-11f1-aa0e-2bbb920071b5
+
+**A. Issued object.** NO_CARD_ISSUED / MODEL_ONLY_SHADOW. Frozen JSON `research/shadow/nbl27/36f8c608-58ad-11f1-aa0e-2bbb920071b5.json`, raw SHA `ed28d070d28c0339d09e2116fbe6b986dc3b9c629b29ba38b9eddfbd247b0f85`; complete original probability/distribution/input/build/time fields in [shadow_dispositions.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/shadow_dispositions.json).
+
+**B. Outcome.** Owner final home98–away75. Native calendar row and exact receipt retained.
+
+**C. Validity.** No canonical issue; single owner collection; actual start and independent terminal quorum absent. Original shadow bytes remain unchanged. Baseline/comparator missingness preserved.
+
+**D. Assessment.** The winning home direction is compatible with the model but two results cannot estimate calibration or skill. No manual research adjustment was frozen.
+
+**E. Scores.** Original homep=0.7258756315120147; binaryBrier=0.0751441694, logloss=0.3203765853; learning-only. No after-result comparator.
+
+**F. Learning.** Preserve chronological frozen shadows and exact official endpoint receipts. Hypothesis: a cohort meeting the registered duration, sample and independent-custody gates can support a paired calibration test; these five records do not meet it.
+
+### Shadow review: 3718a994-58ad-11f1-add9-d98e318e0a1e
+
+**A. Issued object.** NO_CARD_ISSUED / MODEL_ONLY_SHADOW. Frozen JSON `research/shadow/nbl27/3718a994-58ad-11f1-add9-d98e318e0a1e.json`, raw SHA `beee987497a3a76cde3f69b179b4ee339a0ac7a398347cf04a6de56f15deef17`; complete original probability/distribution/input/build/time fields in [shadow_dispositions.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/shadow_dispositions.json).
+
+**B. Outcome.** Owner final home93–away78. Native calendar row and exact receipt retained.
+
+**C. Validity.** No canonical issue; single owner collection; actual start and independent terminal quorum absent. Original shadow bytes remain unchanged. Baseline/comparator missingness preserved.
+
+**D. Assessment.** The winning home direction is compatible with the model but two results cannot estimate calibration or skill. No manual research adjustment was frozen.
+
+**E. Scores.** Original homep=0.9255510845812607; binaryBrier=0.0055426410, logloss=0.0773659518; learning-only. No after-result comparator.
+
+**F. Learning.** Preserve chronological frozen shadows and exact official endpoint receipts. Hypothesis: a cohort meeting the registered duration, sample and independent-custody gates can support a paired calibration test; these five records do not meet it.
+
+### Shadow review: 36f2e004-58ad-11f1-aa96-6775645a7b9a
+
+**A. Issued object.** NO_CARD_ISSUED / MODEL_ONLY_SHADOW. Frozen JSON `research/daily/20261001T021702970997Z/NBL/shadows/36f2e004-58ad-11f1-aa96-6775645a7b9a.json`, raw SHA `809fdfe07ca3955b9587f8c0bda0a3130956c10c6e49811d086495d2e820998c`; complete original probability/distribution/input/build/time fields in [shadow_dispositions.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/shadow_dispositions.json).
+
+**B. Outcome.** No terminal result at the audit observation; upcoming frozen shadow retained.
+
+**C. Validity.** No canonical issue; single owner collection; actual start and independent terminal quorum absent. Original shadow bytes remain unchanged. Baseline/comparator missingness preserved.
+
+**D. Assessment.** Future outcome and mechanism realization remain unknown; no speculative retrospective.
+
+**E. Scores.** No outcome => no Brier/logloss. This is not an unresolved issued card.
+
+**F. Learning.** Preserve chronological frozen shadows and exact official endpoint receipts. Hypothesis: a cohort meeting the registered duration, sample and independent-custody gates can support a paired calibration test; these five records do not meet it.
+
+### Shadow review: 36f713cb-58ad-11f1-b8d2-f1316c48f9c2
+
+**A. Issued object.** NO_CARD_ISSUED / MODEL_ONLY_SHADOW. Frozen JSON `research/daily/20261001T021702970997Z/NBL/shadows/36f713cb-58ad-11f1-b8d2-f1316c48f9c2.json`, raw SHA `ce3daa8da5e0bf1c413961cf2e27eae4e92c7acf2ea743dbfe1e3e85bcdc8bfb`; complete original probability/distribution/input/build/time fields in [shadow_dispositions.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/shadow_dispositions.json).
+
+**B. Outcome.** No terminal result at the audit observation; upcoming frozen shadow retained.
+
+**C. Validity.** No canonical issue; single owner collection; actual start and independent terminal quorum absent. Original shadow bytes remain unchanged. Baseline/comparator missingness preserved.
+
+**D. Assessment.** Future outcome and mechanism realization remain unknown; no speculative retrospective.
+
+**E. Scores.** No outcome => no Brier/logloss. This is not an unresolved issued card.
+
+**F. Learning.** Preserve chronological frozen shadows and exact official endpoint receipts. Hypothesis: a cohort meeting the registered duration, sample and independent-custody gates can support a paired calibration test; these five records do not meet it.
+
+### Shadow review: 3724384a-58ad-11f1-bbdc-6d6f61141df2
+
+**A. Issued object.** NO_CARD_ISSUED / MODEL_ONLY_SHADOW. Frozen JSON `research/daily/20261001T021702970997Z/NBL/shadows/3724384a-58ad-11f1-bbdc-6d6f61141df2.json`, raw SHA `a2732d4b12eee38a65fe9778b42a660adce1f4fcbe601495a1b38466c8bea24b`; complete original probability/distribution/input/build/time fields in [shadow_dispositions.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/shadow_dispositions.json).
+
+**B. Outcome.** No terminal result at the audit observation; upcoming frozen shadow retained.
+
+**C. Validity.** No canonical issue; single owner collection; actual start and independent terminal quorum absent. Original shadow bytes remain unchanged. Baseline/comparator missingness preserved.
+
+**D. Assessment.** Future outcome and mechanism realization remain unknown; no speculative retrospective.
+
+**E. Scores.** No outcome => no Brier/logloss. This is not an unresolved issued card.
+
+**F. Learning.** Preserve chronological frozen shadows and exact official endpoint receipts. Hypothesis: a cohort meeting the registered duration, sample and independent-custody gates can support a paired calibration test; these five records do not meet it.
+
+## Revision receipts and readback
+
+This pass writes 116 historical-learning revisions, final diagnostic chain head `41d2cf98f8722e1dea7926ed200166b58a7d45970297bf6005853838928e2a39`, in [historical_learning_revisions.jsonl](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/historical_learning_revisions.jsonl). Every revision binds initial snapshot/source recovery, copied original literal rows, diagnostic outcomes and remaining gaps. The distinct schema is not the canonical issuer ledger. Canonical settlement revisions: zero because canonical issues: zero.
+
+[SOURCE_RECEIPTS.md](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/SOURCE_RECEIPTS.md) records exact URLs, raw hashes, UTC times, body paths and failure reasons. [owner_field_readbacks.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/owner_field_readbacks.json) keeps exact native owner state/score fields without mistaking page skeletons or scheduled times for actual start. Raw source bodies under `research/data/benchmark/` are local quarantined artifacts and remain ignored by Git. A portable copy lacking them must report unavailable body validation.
+
+Reproduction: run `py -3.14 -X utf8 -B research/verification/settlement_2026-10-01/build_audit.py`; generation uses retained sources only and does not refetch or rewrite issue cores. [review_facts.py](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/review_facts.py) contains explicit human-reviewed event interpretations; [audit_checks.ipynb](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/audit_checks.ipynb) presents the arithmetic/readback checks. Final check output is in [VERIFICATION.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/VERIFICATION.json) once the authorized appends and versioned freeze are verified.
+
+<!-- SETTLEMENT-READBACK-CORRECTION-20261001 -->
+## Final readback correction — KBO native-ID custody
+
+The earlier October 1 statement that KBO game ID `20260927HHLT0` was bound by retained request metadata is superseded. Readback of the actual retained `GetKboGameList` response (SHA `5f0a6c5e5345456410fcbc723872f67c673463b7446516ba35cfccdcd7b7c277`, retrieved 2026-09-30T08:35:42.562149+00:00) shows an HTML error page, with no returned game ID. The review route is also a shell; its query parameter is a candidate, not owner-confirmed identity. Require a returned field-owner game ID and certified actual-start evidence before closing those gaps. The official September 27 Sajik scoreboard still supports Hanwha 6–2 Lotte and the diagnostic L/W/L/W threshold grades; probabilities, ranks and scores are unchanged.
+
+Correction revision: `HLR-20261001-P-520-NATIVE-ID-CORRECTION`. The original 116 review revisions remain unchanged; the separate learning chain now contains 117 revisions for 116 unique reviewed identities. No canonical settlement revision or prospective admission is created. The latest chain head is `b27ee8e0cf4f2ee8b62a62f5fe1261b2f46958b333b1a05d88af1ecfe7fa4fe1`.
+
+The ledger also appends `CORR-20261001-P-520-native-id-comment-readback`, superseding the earlier comment's identity implication. Total historical ledger field revisions are now 50 across the same seven IDs. Diagnostic grades and scores are unchanged.

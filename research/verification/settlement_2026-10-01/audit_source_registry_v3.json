@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "scope": "AUDIT_ONLY_LEARNING; exact read-only URLs already documented in historical receipts plus current event checks; no live admission",
+  "sources": {
+    "audit_afc_owner": {
+      "publisher": "www.the-afc.com",
+      "allowed_url_prefixes": [
+        "https://www.the-afc.com/en/club/afc_champions_league_elite.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_allsvenskan_matches": {
+      "publisher": "allsvenskan.se",
+      "allowed_url_prefixes": [
+        "https://allsvenskan.se/matcher"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_bff_owner": {
+      "publisher": "bhutanfootball.org",
+      "allowed_url_prefixes": [
+        "https://bhutanfootball.org/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_cfa_owner": {
+      "publisher": "www.thecfa.cn",
+      "allowed_url_prefixes": [
+        "https://www.thecfa.cn/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_fff_owner": {
+      "publisher": "www.fff.fr",
+      "allowed_url_prefixes": [
+        "https://www.fff.fr/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_guatemala_owner": {
+      "publisher": "ligagt.com",
+      "allowed_url_prefixes": [
+        "https://ligagt.com/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_leaguescup_owner": {
+      "publisher": "www.leaguescup.com",
+      "allowed_url_prefixes": [
+        "https://www.leaguescup.com/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_lega_owner": {
+      "publisher": "www.legaseriea.it",
+      "allowed_url_prefixes": [
+        "https://www.legaseriea.it/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p126_sfa": {
+      "publisher": "theawayend.co",
+      "allowed_url_prefixes": [
+        "https://theawayend.co/sikkim-premier-division-league/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p148_toluca": {
+      "publisher": "www.tolucafc.com",
+      "allowed_url_prefixes": [
+        "https://www.tolucafc.com/noticias/estan-invictas"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p149_rapids": {
+      "publisher": "www.oursportscentral.com",
+      "allowed_url_prefixes": [
+        "https://www.oursportscentral.com/services/releases/colorado-rapids-2-fall-in-tight-battle-against-ventura-county-fc/n-6407094"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p176_f365": {
+      "publisher": "www.football365.fr",
+      "allowed_url_prefixes": [
+        "https://www.football365.fr/direct-foot/359214/359496/amiens-sc-versailles.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p178_equipe": {
+      "publisher": "www.lequipe.fr",
+      "allowed_url_prefixes": [
+        "https://www.lequipe.fr/Football/match-direct/ligue-3/2026-2027/cannes-le-puy-en-velay-live/693487"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p179_equipe": {
+      "publisher": "www.lequipe.fr",
+      "allowed_url_prefixes": [
+        "https://www.lequipe.fr/Football/match-direct/ligue-3/2026-2027/thionville-lusitanos-paris-13-atletico-live/693490"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p233_235_xinhua": {
+      "publisher": "www.news.cn",
+      "allowed_url_prefixes": [
+        "https://www.news.cn/sports/20260902/2f6c7e41328c4604b3525bf42ddd2ac5/c.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p234_titan": {
+      "publisher": "www.ttplus.cn",
+      "allowed_url_prefixes": [
+        "https://www.ttplus.cn/publish/app/data/2026/09/01/626066/os_news.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p251_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.coppa_italia/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p255_uefa_event": {
+      "publisher": "match.uefa.com",
+      "allowed_url_prefixes": [
+        "https://match.uefa.com/v5/matches/2049369"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p255_uefa_stats": {
+      "publisher": "matchstats.uefa.com",
+      "allowed_url_prefixes": [
+        "https://matchstats.uefa.com/v1/team-statistics/2049369"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p256_uefa_event": {
+      "publisher": "match.uefa.com",
+      "allowed_url_prefixes": [
+        "https://match.uefa.com/v5/matches/2049367"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p256_uefa_stats": {
+      "publisher": "matchstats.uefa.com",
+      "allowed_url_prefixes": [
+        "https://matchstats.uefa.com/v1/team-statistics/2049367"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p265_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/concacaf.leagues.cup/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p341_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uga.1/scoreboard"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p399_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p401_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p407_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bel.1/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p407_proleague": {
+      "publisher": "www.proleague.be",
+      "allowed_url_prefixes": [
+        "https://www.proleague.be/fr/matchs/saison-2026-2027-jupiler-pro-league-6-club-brugge-vs-royal-antwerp-fc-646"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p407_voetbalkrant": {
+      "publisher": "www.voetbalkrant.com",
+      "allowed_url_prefixes": [
+        "https://www.voetbalkrant.com/nieuws/2026-09-13/club-brugge-spoelt-europese-kater-door-met-klinkende-zege-tegen-antwerp/amp"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p409_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p409_lfp": {
+      "publisher": "plus.ligue1.com",
+      "allowed_url_prefixes": [
+        "https://plus.ligue1.com/live/306887"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p410_dfl_candidate": {
+      "publisher": "www.bundesliga.com",
+      "allowed_url_prefixes": [
+        "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/3/rb-leipzig-vs-hamburger-sv/stats"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p410_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p410_hsv_original": {
+      "publisher": "www.hsv.de",
+      "allowed_url_prefixes": [
+        "https://www.hsv.de/news/0-5-hsv-verliert-klar-bei-rb-leipzig"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p418_rsssf": {
+      "publisher": "www.rsssf.org",
+      "allowed_url_prefixes": [
+        "https://www.rsssf.org/tablesb/bhutan2026.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p419_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p430_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/afc.champions/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p519_aap": {
+      "publisher": "aapnews.aap.com.au",
+      "allowed_url_prefixes": [
+        "https://aapnews.aap.com.au/news/swans-hand-lions-more-aflw-misery-suns-storm-home"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p519_aflw": {
+      "publisher": "www.afl.com.au",
+      "allowed_url_prefixes": [
+        "https://www.afl.com.au/aflw/matches/8942"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p519_gc_selection": {
+      "publisher": "www.goldcoastfc.com.au",
+      "allowed_url_prefixes": [
+        "https://www.goldcoastfc.com.au/news/2139098/round-7-team-locked-in"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p519_sk_selection": {
+      "publisher": "www.saints.com.au",
+      "allowed_url_prefixes": [
+        "https://www.saints.com.au/news/2138517/aflw-team-selection-round-7-v-gold-coast"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p520_kbo": {
+      "publisher": "eng.koreabaseball.com",
+      "allowed_url_prefixes": [
+        "https://eng.koreabaseball.com/Schedule/Scoreboard.aspx"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p520_kbo_review": {
+      "publisher": "www.koreabaseball.com",
+      "allowed_url_prefixes": [
+        "https://www.koreabaseball.com/Schedule/GameCenter/ReviewNew.aspx"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p520_khan": {
+      "publisher": "sports.khan.co.kr",
+      "allowed_url_prefixes": [
+        "https://sports.khan.co.kr/article/202609272026013/amp"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p520_newsis": {
+      "publisher": "www.newsis.com",
+      "allowed_url_prefixes": [
+        "https://www.newsis.com/view/NISX20260927_0003804432"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p521_acb": {
+      "publisher": "live.acb.com",
+      "allowed_url_prefixes": [
+        "https://live.acb.com/es/partidos/rio-breogan-vs-asisa-joventut-105378/resumen"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p521_efe": {
+      "publisher": "as.com",
+      "allowed_url_prefixes": [
+        "https://as.com/baloncesto/acb/el-breogan-tumba-al-supercampeon-f202609-n/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p521_elprogreso": {
+      "publisher": "www.elprogreso.es",
+      "allowed_url_prefixes": [
+        "https://www.elprogreso.es/articulo/deporte-local-lugo/110-104-rio-breogan-logra-victoria-descomunal-joventut/202609271412382001307.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p521_plays": {
+      "publisher": "live.acb.com",
+      "allowed_url_prefixes": [
+        "https://live.acb.com/es/partidos/rio-breogan-vs-asisa-joventut-105378/jugadas"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p521_ser": {
+      "publisher": "cadenaser.com",
+      "allowed_url_prefixes": [
+        "https://cadenaser.com/galicia/2026/09/28/paco-basanta-analiza-al-nuevo-rio-breogan-es-un-partido-para-ver-y-volver-a-ver-radio-lugo/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p521_stats": {
+      "publisher": "live.acb.com",
+      "allowed_url_prefixes": [
+        "https://live.acb.com/partidos/rio-breogan-vs-asisa-joventut-105378/estadisticas"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_slovak_owner": {
+      "publisher": "futbalsfz.sk",
+      "allowed_url_prefixes": [
+        "https://futbalsfz.sk/slovnaft-cup/"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_uae_fixtures": {
+      "publisher": "www.uaeproleague.ae",
+      "allowed_url_prefixes": [
+        "https://www.uaeproleague.ae/en/fixtures"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p523_espn": {
+      "publisher": "site.api.espn.com",
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bol.copa/summary"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p518_mlb": {
+      "publisher": "statsapi.mlb.com",
+      "allowed_url_prefixes": [
+        "https://statsapi.mlb.com/api/v1.1/game/822678/feed/live"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p522_acb": {
+      "publisher": "live.acb.com",
+      "allowed_url_prefixes": [
+        "https://live.acb.com/es/partidos/la-laguna-tenerife-vs-casademont-zaragoza-105380/resumen"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_nbl_official": {
+      "publisher": "schedule.nbl.com.au",
+      "allowed_url_prefixes": [
+        "https://schedule.nbl.com.au/api/calendar/schedule"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false,
+      "source_truth_status": "FIELD_EVENT_LINEAGE_REVIEW_REQUIRED"
+    },
+    "audit_p523_diez": {
+      "publisher": "diez.bo",
+      "allowed_url_prefixes": [
+        "https://diez.bo/futbol/oriente-y-the-strongest-no-se-sacan-ventaja-en-el-tahuichi_1790824182"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false
+    },
+    "audit_p523_vision": {
+      "publisher": "www.vision360.bo",
+      "allowed_url_prefixes": [
+        "https://www.vision360.bo/noticias/2026/09/30/70320-the-strongest-empata-con-oriente-en-santa-cruz-y-da-otro-paso-rumbo-a-cuartos-de-final"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false
+    },
+    "audit_p523_apg": {
+      "publisher": "elpotosi.net",
+      "allowed_url_prefixes": [
+        "https://elpotosi.net/deporte/20260930_oriente-petrolero-y-the-strongest-empatan-en-el-tahuichi.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "AUDIT_READBACK_V1",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "official": false
+    }
+  }
+}

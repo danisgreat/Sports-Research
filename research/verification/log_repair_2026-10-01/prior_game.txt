@@ -1,0 +1,747 @@
+
+
+ 
+ 
+ 
+ 최신 뉴스 | 뉴스 | 미디어/뉴스 | KBO
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ $.ajaxSetup({
+ timeout: 10000 // 전역 타임아웃 설정
+ });
+
+ $(document).ajaxError(function (event, jqxhr, settings, thrownError) {
+ // 호출 지연 10초
+ if (thrownError === 'timeout') {
+ console.warn(`timeout: ${settings.url}`);
+ if(settings.url == "https://www.kborc.com/getKboRCList.ajax"){
+ $("#KBOMovie").remove();
+ }
+ if(settings.url == "https://www.kborc.com/getKboRCList2.ajax"){
+ $("#KBOCheckedSwing").remove();
+ }
+
+ } 
+ // 호출 오류
+ else {
+ console.warn(`error: ${settings.url}`, thrownError);
+ if(settings.url == "https://www.kborc.com/getKboRCList.ajax"){
+ $("#KBOMovie").remove();
+ }
+ if(settings.url == "https://www.kborc.com/getKboRCList2.ajax"){
+ $("#KBOCheckedSwing").remove();
+ }
+ }
+ });
+
+
+ (function (w, d, s, l, i) {
+ w[l] = w[l] || []; w[l].push({
+ 'gtm.start':
+ new Date().getTime(), event: 'gtm.js'
+ }); var f = d.getElementsByTagName(s)[0],
+ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+ 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+ })(window, document, 'script', 'dataLayer', 'GTM-K3BL64Q');
+
+ $(document).ready(function () {
+ var jbOffset = $('.lnb-wrap').offset();
+ $(window).scroll(function () {
+ if ($(document).scrollTop() > jbOffset.top) {
+ $('.lnb-wrap').addClass('fixed');
+ }
+ else {
+ $('.lnb-wrap').removeClass('fixed');
+ }
+ });
+ });
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 로그인 
+ 회원가입 
+ 
+ ENGLISH 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 검색 결과가 없습니다. -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 일정・결과 
+ 
+ 
+ 경기일정・결과 
+ 
+ 게임센터 
+ 스코어보드 
+ 올스타전 
+ 국제대회 
+ 야구장 날씨 
+ 
+ 
+ 
+ 
+ 기록・순위 
+ 
+ 
+ 기록실 
+ 팀 순위 
+ 선수 순위 
+ 역대 기록 
+ 예상 달성 기록 
+ 기록 정정 현황 
+ 관중 현황 
+ 
+ 
+ 
+ 
+ 
+ 선수 
+ 
+ 
+ 선수 조회 
+ 선수 등록 현황 
+ 선수 이동 현황 
+ 수상 현황 
+ 레전드 40 
+ 경력증명서 신청 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 미디어・뉴스 
+ 
+ 
+ 하이라이트 
+ 뉴스 
+ KBO 보도자료 
+ 
+ Z-CREW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ KBO 
+ 
+ 
+ KBO 
+ 
+ KBO 리그 
+ 
+ 2026 주요 규정∙규칙 
+ 경기운영제도 
+ 구단 소개 
+ 구단 변천사 
+ 티켓 안내 
+ 
+ 
+ 
+ 게시판 
+ 
+ NOTICE 
+ 자주 하는 질문 
+ 규정・자료실 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ABOUT KBO 
+ 
+ 조직・활동 
+ KBO 로고 
+ 기록위원회 
+ 의무위원회 
+ 
+ 
+ 
+ 
+ 
+ 
+ 주요 사업・행사 
+ 
+ 
+ 2025 KBO 시상식 
+ 2027 신인 드래프트 
+ 
+ 
+ KBO 경기장 안전정책 
+ KBO 리그 영상 구매 
+ 시각장애인 관람 지원 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 퓨처스리그 
+ 
+ 
+ 경기일정・결과 
+ 팀 순위 
+ TOP5 
+ 기록실 
+ 선수 등록 현황 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ KBO 마켓 
+ 
+ KBO 폰트 
+ 
+ 전체 메뉴 
+ 
+ 
+ 
+ 전체 메뉴 
+ 
+ 일정・결과 
+ 
+ 경기일정・결과 
+ 
+ 게임센터 
+ 스코어보드 
+ 올스타전 
+ 국제대회 
+ 야구장 날씨 
+ 
+ 
+ 
+ 기록・순위 
+ 
+ 기록실 
+ 팀 순위 
+ 선수 순위 
+ 역대 기록 
+ 예상 달성 기록 
+ 기록 정정 현황 
+ 관중 현황 
+ 
+ 
+ 
+ 
+ 선수 
+ 
+ 선수 조회 
+ 선수 등록 현황 
+ 선수 이동 현황 
+ 수상 현황 
+ 레전드 40 
+ 경력증명서 신청 
+ 
+ 
+ 
+ 미디어・뉴스 
+ 
+ 하이라이트 
+ 뉴스 
+ KBO 보도자료 
+ 
+ Z-CREW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 퓨처스리그 
+ 
+ 경기일정・결과 
+ 팀 순위 
+ TOP5 
+ 기록실 
+ 선수 등록 현황 
+ 
+ 
+ 
+ 
+ 
+ KBO 
+ 
+ KBO 리그 
+ 
+ 2026 주요 규정∙규칙 
+ 경기운영제도 
+ 구단 소개 
+ 구단 변천사 
+ 티켓 안내 
+ 
+ 
+ 
+ 게시판 
+ 
+ NOTICE 
+ 자주 하는 질문 
+ 규정・자료실 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ABOUT KBO 
+ 
+ 조직・활동 
+ KBO 로고 
+ 기록위원회 
+ 의무위원회 
+ 
+ 
+ 
+ 
+ 
+ 
+ 주요 사업・행사 
+ 
+ 2025 KBO 시상식 
+ 2027 신인 드래프트 
+ 
+ 
+ 
+ KBO 경기장 안전정책 
+ KBO 리그 영상 구매 
+ 시각장애인 관람 지원 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 닫기 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 미디어・뉴스 
+ 
+ 하이라이트 
+ 뉴스 
+ KBO 보도자료 
+ 
+ Z-CREW 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ >
+ 미디어・뉴스 >
+ 뉴스 
+ 
+ NEWS 
+ 
+ 
+ 
+ 
+ 
+ 최신 뉴스 
+ 프리뷰 
+ 스타 인터뷰 
+ KBO PHOTO 
+ 
+ 
+ 
+
+ 
+ 
+ 삼성 한화 꺾고 승승승승...KBO 최초 팀 5600홈런 폭발 
+ 
+ 
+ 
+ 또 이겼다. 
+
+ 삼성 라이온즈가 한화 이글스를 꺾고 4연승을 질주했다. 삼성은 30일 대구삼성라이온즈파크에서 열린 한화와의 홈경기에서 6-2로 승리했다. 선발 아리엘 후라도는 시즌 9승째를 거뒀다. 최형우의 홈런으로 KBO 최초 팀 5600홈런을 달성했다.  
+
+ 삼성은 김지찬(중견수)-김성윤(우익수)-구자욱(좌익수)-르윈 디아즈(1루수)-최형우(지명타자)-강민호(포수)-김영웅(3루수)-이재현(유격수)-류지혁(2루수)으로 선발 라인업을 구성했다. 1군 엔트리에 변화를 줬다. 내복사근 부상을 당한 우완 김백산을 엔트리에서 말소하고 좌완 베테랑 백정현을 1군에 콜업했다.  
+
+ 이에 맞서는 한화는 외국인 투수 오웬 화이트를 선발 투수로 내세웠고 중견수 최인호-우익수 요나단 페라자-좌익수 문현빈-지명타자 강백호-3루수 노시환-포수 허인서-1루수 김태연-2루수 정은원-유격수 심우준으로 타순을 짰다.  
+
+ 삼성은 1회 2사 주자 없는 가운데 구자욱이 한화 선발 화이트를 상대로 베이스를 맞고 굴절되는 행운의 안타를 만들어냈다. 구자욱은 지체 없이 2루까지 내달렸다. 슬라이딩 과정에 왼쪽 햄스트링 통증을 느껴 대주자 박승규와 교체됐다. 곧이어 디아즈의 적시타로 1점을 먼저 얻었다.  
+
+ 1점 차 앞선 2회 1사 1루서 이재현이 화이트에게서 좌중월 투런 아치를 빼앗으며 3-0으로 달아났다. 이 홈런으로 이재현은 개인 한 시즌 최다 홈런 타이 기록을 작성했다. 그러자 한화는 3회 심우준이 삼성 선발 후라도를 상대로 좌월 2점 홈런을 때려내며 1점 차로 압박했다.  
+
+ 이후 한화는 최인호와 페라자의 연속 안타, 강백호의 볼넷으로 2사 만루 기회를 잡았다. 노시환이 헛스윙 삼진으로 물러나며 뒤집기 실패. 삼성은 1점 차 앞선 5회 2사 1,3루서 최형우가 우중월 3점 아치를 작렬했다. 6-2.  
+
+ 삼성 선발 후라도는 7이닝 7피안타(1피홈런) 1볼넷 4탈삼진 2실점으로 잘 던졌다. 최형우는 5회 3점 홈런을 터뜨렸고 디아즈는 멀티히트 포함 1타점 1득점으로 힘을 보탰다.  
+
+ 반면 한화 선발로 나선 화이트는 5이닝 8피안타(2피홈런) 1볼넷 3탈삼진 6실점으로 고개를 떨궜다. 
+
+ [Copyright ⓒ KBO 홈페이지 뉴스, 기사, 사진은 KBO 홈페이지 자료 입니다. 무단전재 및 재배포는 금지되어 있으며 무단전재 및 재배포시 법적인 제재를 받을 수 있습니다.] 
+ 
+ 
+ 
+ 목록 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 개인정보 처리방침 
+ 이용약관 
+ 문자중계 
+ 고객질문 
+ 사이트맵 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (사)한국야구위원회 | 서울시 강남구 강남대로 278 | 02)3460-4600 
+ 
+ 
+ 
+ 
+ Copyrightⓒ KBO, All Rights Reserved. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ currentLnb("News");
+ 
+
+
+
+ 
+ $(document).ready(function () {
+
+ const ua = navigator.userAgent.toLowerCase();
+
+ // 모바일 체크
+ const isMobile = /iphone|android/i.test(ua) && ua.includes("mobile");
+
+ // 아이패드(iPadOS 포함) 체크
+ const isPad = /ipad/i.test(ua) || (ua.includes("macintosh") && navigator.maxTouchPoints > 1);
+
+ if ((isMobile && !isPad) && window.location.host.includes("www.koreabaseball.com")) {
+ window.location.href = "https://m.koreabaseball.com";
+ }
+
+
+ // 선수 검색
+ $(document).on("click", "#btnTopPlayerSearch", function (e) {
+ getPlayerSearch();
+ e.preventDefault();
+ });
+
+ // 선수 검색 엔터
+ $(document).on("keypress", "#txtTopPlayerWord", function (e) {
+ if (event.keyCode == 13) {
+ getPlayerSearch();
+ e.preventDefault();
+ }
+ });
+
+ //// 선수 검색 마우스 아웃
+ //$("body").click(function (e) {
+ // var container = $("#player_search_area");
+
+ // if (container.css("display") == "block") {
+ // if (!container.has(e.target).length) {
+ // container.hide();
+ // }
+ // }
+ //});
+
+ // 21.06.29 | veron | 나중에 탭들 다 지우고 배너 다시 원복 후 이부분 삭제해야함
+ // 8월 15일 00시 지나가면 삭제
+ //if (new Date().getTime() > new Date("2021/08/15 00:00:00").getTime()) {
+ // // 위에 탭 삭제
+ // $(".menu04 li:last").remove();
+ // $(".lnb-sub ul.lnb04 li:last").remove();
+ // // Player.master 삭제
+ // $("#liRookie").remove();
+ // // 메인 배너 교체
+ // $("#imgGijang").attr("href", "http://gijangcmc.or.kr/baseball/main/main.asp");
+ // $("#imgGijang img").attr("src", "//6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/KBOHome/resources/images/main/img_banner01.jpg");
+ //}
+
+ // 2026 미디어데이
+ if (new Date().getTime() new Date("2026/09/10 00:30:00")*/)
+ $('[data-tab=DraftApplication]').hide();
+ // KBO 시상식
+ if (new Date().getTime() new Date("2025/11/20 00:30:00"))
+ $('[data-tab=MvpApplication]').hide();
+ // KBO 골든글러브
+ if (new Date().getTime() new Date("2024/12/09 15:30:00"))
+ $('[data-tab=GGApplication]').hide();
+ });
+
+ // 선수 검색
+ function getPlayerSearch() {
+ if ($("#txtTopPlayerWord").val() == "") {
+ alert("선수명은 필수 입니다.");
+ $("#txtTopPlayerWord").focus();
+ return false;
+ } else {
+ //var searchWord = encodeURI($("#txtTopPlayerWord").val());
+
+ //if (searchWord != "") {
+ // location.href = "/Player/Search.aspx?searchWord=" + searchWord;
+ //}
+ var request = $.ajax({
+ type: "post"
+ , url: "/ws/Controls.asmx/GetSearchPlayer"
+ , dataType: "json"
+ , data: {
+ name: $("#txtTopPlayerWord").val()
+ }
+ , error: ajaxFailed
+ , async: true
+ });
+
+ request.done(function (data) {
+ if (data.code == "100") {
+ var container = $(".search-result");
+ container.children().remove();
+
+ container.hide();
+
+ if (data.now.length > 0 || data.retire.length > 0) {
+ // 2017-05-22 yeeun, 홍지희 사원 요청, 결과가 1명일 경우 바로 페이지 연결
+ if (data.now.length + data.retire.length == 1) {
+ var link = "";
+
+ if (data.now.length == 1) {
+ link = data.now[0]["P_LINK"];
+ } else {
+ link = data.retire[0]["P_LINK"];
+ }
+
+ location.href = link;
+ } else {
+ if (data.now.length > 0) {
+ container.append($(" 등록 선수 "));
+
+ var div = $(" ");
+ div.children().remove();
+
+ setPlayerDiv(data.now, div, true);
+
+ container.append(div);
+ }
+
+ if (data.retire.length > 0) {
+ container.append($(" 역대 선수 "));
+
+ var div = $(" ");
+ div.children().remove();
+
+ setPlayerDiv(data.retire, div, false);
+
+ container.append(div);
+ }
+
+ //container.append($(String.format(" '{0}' 검색결과 모두 보기 ", $("#txtTopPlayerWord").val())));
+ container.append($(" '" + $("#txtTopPlayerWord").val() + "' 검색결과 모두 보기 "));
+ container.show();
+ }
+ } else {
+ container.append($(" 검색 결과가 없습니다. "));
+ container.show();
+ }
+ }
+ });
+ }
+ }
+
+ // 선수 검색 div 
+ function setPlayerDiv(list, div, isActive) {
+ $.each(list, function (index, player) {
+ var aLink = $(" ");
+ aLink.attr("href", player["P_LINK"]);
+
+ var dl = $(" ");
+ var dt = $(" ");
+ var backNo = "";
+
+ if (isActive) {
+ //backNo = String.format("No.{0}", player["BACK_NO"]);
+ backNo = "No." + player["BACK_NO"];
+ }
+
+ //dt.text(String.format("{0} {1}", player["P_NM"], backNo));
+ dt.text(player["P_NM"] + " " + backNo);
+ dl.append(dt);
+
+ var dd = $(" ");
+ //dd.text(String.format("{0} {1}({2})", player["T_NM"], player["POS_NO"], player["P_TYPE"]));
+ dd.text(player["T_NM"] + " " + player["POS_NO"] + "(" + player["P_TYPE"] + ")");
+ dl.append(dd);
+
+ var ddImg = $(String.format(" ", "//6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/KBOHome"));
+ dl.append(ddImg);
+
+ aLink.append(dl);
+ div.append(aLink);
+ });
+ }
+ 
+ 
+ 

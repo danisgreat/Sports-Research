@@ -1,0 +1,8 @@
+{
+  "label": "Lega_owner",
+  "url": "https://www.legaseriea.it/",
+  "source_id": "audit_lega_owner",
+  "attempt_utc": "2026-10-01T07:31:55.310894+00:00",
+  "status": "UNAVAILABLE",
+  "reason": "HTTPError: HTTP Error 307: Temporary Redirect"
+}

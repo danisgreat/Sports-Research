@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetLineUpAnalysis",
+  "request_params": {
+    "leId": "1",
+    "srId": "0",
+    "seasonId": "2026",
+    "gameId": "20261001HHSS0"
+  },
+  "request_method": "POST",
+  "retrieved_utc": "2026-10-01T09:57:16.393465+00:00",
+  "response_sha256": "d95d2318142329c8bb176d45d974fd985759824c8d90bd8adfabec749c463e39",
+  "response_bytes": 22692,
+  "body_path": "research/verification/log_repair_2026-10-01/delivery_095713Z/kbo_lineup.body",
+  "content_type": "text/plain; charset=UTF-8",
+  "independence_status": "UNKNOWN"
+}

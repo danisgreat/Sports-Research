@@ -9,6 +9,7 @@
   "away": null,
   "endpoint": "REGULATION",
   "model_version": null,
+  "baseline_version": null,
   "data_cutoff_utc": null,
   "issued_utc": null,
   "scheduled_start_utc": null,
@@ -30,5 +31,5 @@
   "pregame_receipts": [],
   "terminal_receipts": [],
   "actual_start_receipt": null,
-  "notes": "Paths are repository-relative unless evidence_root is explicit. No flag confers eligibility. Every pregame/terminal receipt needs source_id, upstream_lineage_id, source_url, retrieved_utc, body_path, response_sha256 and event_lineage_audit {path,sha256}. Audits bind exact raw response, event and collector. Distribution artifacts use score-distribution-1 and bind event_id, endpoint, model_version, data_cutoff_utc, input_checksum and integer score states. Commit is disabled by default; native scheduled times never substitute for verified actual start."
+  "notes": "Paths are repository-relative unless evidence_root is explicit. No flag confers eligibility. Every pregame/terminal receipt needs source_id, upstream_lineage_id, source_url, retrieved_utc, body_path, response_sha256 and event_lineage_audit {path,sha256}. Audits bind exact raw response, event and collector. Distribution artifacts use score-distribution-1 and bind event_id, endpoint, model_version, data_cutoff_utc, input_checksum and integer score states. Baseline distributions must also bind baseline_version, baseline_definition_ref {path,sha256}, and baseline_code_artifacts [{path,sha256}] exactly to an approved baseline_definitions registration and the model admission baseline_version. Each input_artifacts entry requires path, sha256 and available_utc; this timestamp is a declared availability assertion attached to retained bytes. Hash custody verifies those bytes and chronology checks compare the declaration to cutoff; neither independently proves historical availability or semantic correctness. Operators must retain original source retrieval/publication receipts and review input construction; the current gate has no universal historical-input parser. Commit is disabled by default; native scheduled times never substitute for verified actual start."
 }

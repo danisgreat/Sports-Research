@@ -1,0 +1,27 @@
+{
+  "label": "P407_Voetbalkrant",
+  "url": "https://www.voetbalkrant.com/nieuws/2026-09-13/club-brugge-spoelt-europese-kater-door-met-klinkende-zege-tegen-antwerp/amp",
+  "source_id": "audit_p407_voetbalkrant",
+  "attempt_utc": "2026-10-01T07:32:00.834540+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_p407_voetbalkrant",
+    "publisher": "www.voetbalkrant.com",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://www.voetbalkrant.com/nieuws/2026-09-13/club-brugge-spoelt-europese-kater-door-met-klinkende-zege-tegen-antwerp/amp",
+    "final_url": "https://www.voetbalkrant.com/nieuws/2026-09-13/club-brugge-spoelt-europese-kater-door-met-klinkende-zege-tegen-antwerp/amp",
+    "retrieved_utc": "2026-10-01T07:32:04.771667+00:00",
+    "response_sha256": "e916f9407a95457fb05beaaec54492ff80a8167aed0a61349adce16442f44509",
+    "body_path": "research/data/benchmark/source_snapshots/audit_p407_voetbalkrant_20261001T073204771667Z_e916f9407a95.body",
+    "response_bytes": 74127,
+    "content_type": "text/html; charset=UTF-8",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_p407_voetbalkrant_20261001T073204771667Z_e916f9407a95.json"
+  },
+  "decoded_bytes": 74127
+}

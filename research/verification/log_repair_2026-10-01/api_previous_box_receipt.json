@@ -1,0 +1,19 @@
+{
+  "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetBoxScoreScroll",
+  "request_method": "POST",
+  "request_params": {
+    "leId": "1",
+    "srId": "0",
+    "seasonId": "2026",
+    "gameId": "20260930HHSS0"
+  },
+  "retrieved_utc": "2026-10-01T09:26:31.072098+00:00",
+  "response_sha256": "8b1c8004bc55b56678d6555ceb2c7a0860a41412e5d886ff7fac26b540ca1b9b",
+  "response_bytes": 193101,
+  "body_path": "research/verification/log_repair_2026-10-01/api_previous_box.body",
+  "content_type": "text/plain; charset=UTF-8",
+  "final_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetBoxScoreScroll",
+  "independence_status": "UNKNOWN",
+  "upstream_lineage_id": "KBO_OWNER",
+  "parser_id": "KBO_NATIVE_JSON_MANUAL_READBACK_V1"
+}

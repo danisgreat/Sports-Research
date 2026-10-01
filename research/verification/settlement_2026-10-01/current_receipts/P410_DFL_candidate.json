@@ -1,0 +1,27 @@
+{
+  "label": "P410_DFL_candidate",
+  "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/3/rb-leipzig-vs-hamburger-sv/stats",
+  "source_id": "audit_p410_dfl_candidate",
+  "attempt_utc": "2026-10-01T07:32:01.130800+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_p410_dfl_candidate",
+    "publisher": "www.bundesliga.com",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/3/rb-leipzig-vs-hamburger-sv/stats",
+    "final_url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/3/rb-leipzig-vs-hamburger-sv/stats",
+    "retrieved_utc": "2026-10-01T07:32:03.669996+00:00",
+    "response_sha256": "6701bec018f2d01a4d223b091f920ccdedf7aa2ca45da51349f17d142752a140",
+    "body_path": "research/data/benchmark/source_snapshots/audit_p410_dfl_candidate_20261001T073203669996Z_6701bec018f2.body",
+    "response_bytes": 922376,
+    "content_type": "text/html;charset=UTF-8",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_p410_dfl_candidate_20261001T073203669996Z_6701bec018f2.json"
+  },
+  "decoded_bytes": 922376
+}

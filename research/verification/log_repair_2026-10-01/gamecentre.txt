@@ -1,0 +1,1283 @@
+
+
+ 
+ 
+ 
+ 게임센터 | 일정/결과 | KBO
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ $.ajaxSetup({
+ timeout: 10000 // 전역 타임아웃 설정
+ });
+
+ $(document).ajaxError(function (event, jqxhr, settings, thrownError) {
+ // 호출 지연 10초
+ if (thrownError === 'timeout') {
+ console.warn(`timeout: ${settings.url}`);
+ if(settings.url == "https://www.kborc.com/getKboRCList.ajax"){
+ $("#KBOMovie").remove();
+ }
+ if(settings.url == "https://www.kborc.com/getKboRCList2.ajax"){
+ $("#KBOCheckedSwing").remove();
+ }
+
+ } 
+ // 호출 오류
+ else {
+ console.warn(`error: ${settings.url}`, thrownError);
+ if(settings.url == "https://www.kborc.com/getKboRCList.ajax"){
+ $("#KBOMovie").remove();
+ }
+ if(settings.url == "https://www.kborc.com/getKboRCList2.ajax"){
+ $("#KBOCheckedSwing").remove();
+ }
+ }
+ });
+
+
+ (function (w, d, s, l, i) {
+ w[l] = w[l] || []; w[l].push({
+ 'gtm.start':
+ new Date().getTime(), event: 'gtm.js'
+ }); var f = d.getElementsByTagName(s)[0],
+ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+ 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+ })(window, document, 'script', 'dataLayer', 'GTM-K3BL64Q');
+
+ $(document).ready(function () {
+ var jbOffset = $('.lnb-wrap').offset();
+ $(window).scroll(function () {
+ if ($(document).scrollTop() > jbOffset.top) {
+ $('.lnb-wrap').addClass('fixed');
+ }
+ else {
+ $('.lnb-wrap').removeClass('fixed');
+ }
+ });
+ });
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 로그인 
+ 회원가입 
+ 
+ ENGLISH 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 검색 결과가 없습니다. -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 일정・결과 
+ 
+ 
+ 경기일정・결과 
+ 
+ 게임센터 
+ 스코어보드 
+ 올스타전 
+ 국제대회 
+ 야구장 날씨 
+ 
+ 
+ 
+ 
+ 기록・순위 
+ 
+ 
+ 기록실 
+ 팀 순위 
+ 선수 순위 
+ 역대 기록 
+ 예상 달성 기록 
+ 기록 정정 현황 
+ 관중 현황 
+ 
+ 
+ 
+ 
+ 
+ 선수 
+ 
+ 
+ 선수 조회 
+ 선수 등록 현황 
+ 선수 이동 현황 
+ 수상 현황 
+ 레전드 40 
+ 경력증명서 신청 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 미디어・뉴스 
+ 
+ 
+ 하이라이트 
+ 뉴스 
+ KBO 보도자료 
+ 
+ Z-CREW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ KBO 
+ 
+ 
+ KBO 
+ 
+ KBO 리그 
+ 
+ 2026 주요 규정∙규칙 
+ 경기운영제도 
+ 구단 소개 
+ 구단 변천사 
+ 티켓 안내 
+ 
+ 
+ 
+ 게시판 
+ 
+ NOTICE 
+ 자주 하는 질문 
+ 규정・자료실 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ABOUT KBO 
+ 
+ 조직・활동 
+ KBO 로고 
+ 기록위원회 
+ 의무위원회 
+ 
+ 
+ 
+ 
+ 
+ 
+ 주요 사업・행사 
+ 
+ 
+ 2025 KBO 시상식 
+ 2027 신인 드래프트 
+ 
+ 
+ KBO 경기장 안전정책 
+ KBO 리그 영상 구매 
+ 시각장애인 관람 지원 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 퓨처스리그 
+ 
+ 
+ 경기일정・결과 
+ 팀 순위 
+ TOP5 
+ 기록실 
+ 선수 등록 현황 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ KBO 마켓 
+ 
+ KBO 폰트 
+ 
+ 전체 메뉴 
+ 
+ 
+ 
+ 전체 메뉴 
+ 
+ 일정・결과 
+ 
+ 경기일정・결과 
+ 
+ 게임센터 
+ 스코어보드 
+ 올스타전 
+ 국제대회 
+ 야구장 날씨 
+ 
+ 
+ 
+ 기록・순위 
+ 
+ 기록실 
+ 팀 순위 
+ 선수 순위 
+ 역대 기록 
+ 예상 달성 기록 
+ 기록 정정 현황 
+ 관중 현황 
+ 
+ 
+ 
+ 
+ 선수 
+ 
+ 선수 조회 
+ 선수 등록 현황 
+ 선수 이동 현황 
+ 수상 현황 
+ 레전드 40 
+ 경력증명서 신청 
+ 
+ 
+ 
+ 미디어・뉴스 
+ 
+ 하이라이트 
+ 뉴스 
+ KBO 보도자료 
+ 
+ Z-CREW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 퓨처스리그 
+ 
+ 경기일정・결과 
+ 팀 순위 
+ TOP5 
+ 기록실 
+ 선수 등록 현황 
+ 
+ 
+ 
+ 
+ 
+ KBO 
+ 
+ KBO 리그 
+ 
+ 2026 주요 규정∙규칙 
+ 경기운영제도 
+ 구단 소개 
+ 구단 변천사 
+ 티켓 안내 
+ 
+ 
+ 
+ 게시판 
+ 
+ NOTICE 
+ 자주 하는 질문 
+ 규정・자료실 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ABOUT KBO 
+ 
+ 조직・활동 
+ KBO 로고 
+ 기록위원회 
+ 의무위원회 
+ 
+ 
+ 
+ 
+ 
+ 
+ 주요 사업・행사 
+ 
+ 2025 KBO 시상식 
+ 2027 신인 드래프트 
+ 
+ 
+ 
+ KBO 경기장 안전정책 
+ KBO 리그 영상 구매 
+ 시각장애인 관람 지원 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 닫기 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 일정・결과 
+ 
+ 경기일정・결과 
+ 
+ 게임센터 
+ 스코어보드 
+ 올스타전 
+ 국제대회 
+ 야구장 날씨 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ >
+ 일정・결과 > 
+ 게임센터 
+ 
+ 게임센터 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 경기가 시작되면 활성화 됩니다. 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 개인정보 처리방침 
+ 이용약관 
+ 문자중계 
+ 고객질문 
+ 사이트맵 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (사)한국야구위원회 | 서울시 강남구 강남대로 278 | 02)3460-4600 
+ 
+ 
+ 
+ 
+ Copyrightⓒ KBO, All Rights Reserved. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ var gameId = "";
+ var section = "";
+ var minYear = 2001; //20180504 heokyunam 홍승규대리님 요청
+ var maxYear = getGameMaxYear("0,1,3,4,5,7,9"); //new Date().getFullYear();
+
+ $(document).ready(function () {
+ currentLnb("GameCenter");
+
+ var date = new Date();
+ $.datepicker.setDefaults($.datepicker.regional['ko']);
+ var nowDate = $.datepicker.formatDate('yymmdd', date);
+
+ // 경기 날짜 파라미터 체크
+ if (Request("gameDate") != undefined && Request("gameDate") != "") {
+ nowDate = Request("gameDate");
+ }
+
+ // 경기 아이디 파라미터 체크
+ if (Request("gameId") != undefined && Request("gameId") != "") {
+ gameId = Request("gameId");
+ }
+
+ // 탭 파라미터 체크
+ if (Request("section") != undefined && Request("section") != "") {
+ section = Request("section");
+ }
+
+ $('#txtGameDate').datepicker({
+ dateFormat: 'yymmdd'
+ , minDate: "20010405" // '20100306' 20180504 heokyunam 홍승규대리 요청
+ , showOn: "button"
+ , buttonImage: "//6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/KBOHome/resources/images/main/btn_calendar.png"
+ , buttonImageOnly: true
+ , beforeShow: function (textbox, instance) {
+ instance.dpDiv.css({
+ marginTop: '30px',
+ marginLeft: '-163px'
+ });
+ }, onSelect: function (selectedDate) {
+ getGameDate(selectedDate);
+ $(".tab-depth1").addClass("dp-none");
+ },
+ changeMonth: true,
+ changeYear: true,
+ yearRange: String.format("{0}:{1}", minYear, maxYear),
+ yearSuffix: ''
+ });
+
+ initControl();
+ getGameDate(nowDate); // 경기일정
+ });
+
+ $(document).on("click", ".list-review, .game-list", function (e) {
+ $(".tab-depth1").removeClass("dp-none");
+ });
+
+ // 경기 선택
+ $(document).on("click", "#contents .game-list-n > li:not([game_sc=4])", function (e) {
+ $(".tab-depth1").removeClass("dp-none");
+ $(this).addClass("on").siblings().removeClass("on");
+
+ setGameEtc();
+ });
+
+ // 경기(선발,키플레이어,NEWS,라인업 등) 탭 선택
+ $(document).on("click", "#tabDepth2 > li > a", function (e) {
+ var game = $("ul.game-list-n > li.on");
+
+ //if ($(".article_title").children("p").text() != "") {
+ // $(".article").remove();
+ //}
+
+ if (game.attr("result_ck") == "0" && $(this).text() == "리뷰") {
+ alert("기록 업데이트 전입니다.");
+ }
+ else {
+ $(this).parent().addClass("on").siblings().removeClass("on");
+ setGameDetail();
+ }
+ e.preventDefault();
+ });
+
+ // 초기화
+ function initControl() {
+ $("#txtGameDate").val($.datepicker.formatDate('yymmdd', new Date()));
+ $("#lblGameDate").text($.datepicker.formatDate('yy.mm.dd(D)', new Date()));
+ }
+
+ // 초기화 - 파라미터
+ function initParam() {
+ gameId = "";
+ section = "";
+ $(".tab-depth1").addClass("dp-none");
+ }
+
+ // 이전 버튼 클릭시
+ $(document).on("click", "#lnkPrev",
+ $.debounce(200, function (e) {
+ if ($("#BeforeDate").val() == "") {
+ alert('이전 경기 일정이 등록되지 않았습니다.');
+ } else {
+ getGameDate($("#BeforeDate").val());
+ }
+ })
+ );
+
+ // 다음 버튼 클릭시
+ $(document).on("click", "#lnkNext",
+ $.debounce(200, function (e) {
+ if ($("#AfterDate").val() == "") {
+ alert('다음 경기 일정이 등록되지 않았습니다.');
+ } else {
+ getGameDate($("#AfterDate").val());
+ }
+ })
+ );
+
+ // 경기날짜(이전,현재,다음)
+ function getGameDate(selectDate) {
+ var srId = "0,1,3,4,5,7,9";
+ if ($("#txtGameDate").val().substring(0, 4) >= "2021") {
+ srId = "0,1,3,4,5,6,7,8,9";
+ }
+
+ var request = $.ajax({
+ type: "post"
+ , url: "/ws/Main.asmx/GetKboGameDate"
+ , dataType: "json"
+ , data: {
+ leId: "1"
+ , srId: srId // 1군 전체시리즈
+ , date: selectDate
+ }
+ , error: ajaxFailed
+ , async: false
+ });
+
+ request.done(function (data) {
+ //if (data.BEFORE_G_DT == "") {
+ // $("#lnkPrev").attr("href", "javascript:alert('이전 경기 일정이 등록되지 않았습니다.');");
+ //} else {
+ // $("#lnkPrev").attr("href", String.format("javascript:initParam();getGameDate({0})", data.BEFORE_G_DT));
+ //}
+
+ //if (data.AFTER_G_DT == "") {
+ // $("#lnkNext").attr("href", "javascript:alert('다음 경기 일정이 등록되지 않았습니다.');");
+ //} else {
+ // $("#lnkNext").attr("href", String.format("javascript:initParam();getGameDate({0})", data.AFTER_G_DT));
+ //}
+
+ $("#txtGameDate").val(data.NOW_G_DT);
+ $("#lblGameDate").text(data.NOW_G_DT_TEXT);
+
+ // 날짜 저장
+ $("#nowDate").val(data.NOW_G_DT);
+ $("#BeforeDate").val(data.BEFORE_G_DT);
+ $("#AfterDate").val(data.AFTER_G_DT);
+
+ getGameList();
+ setGameEtc();
+ });
+ }
+
+ // 경기리스트
+ function getGameList() {
+ var srId = "0,1,3,4,5,7,9";
+ if ($("#txtGameDate").val().substring(0, 4) >= "2021") {
+ srId = "0,1,3,4,5,6,7,9";
+ }
+ /** 국가대표 평가전 출력 (임시) */
+ if ($("#txtGameDate").val() >= "20241026") {
+ srId = "0,1,3,4,5,6,7,8,9";
+ }
+
+ var request = $.ajax({
+ type: "post"
+ , url: "/ws/Main.asmx/GetKboGameList"
+ , dataType: "json"
+ , data: {
+ leId: "1"
+ , srId: srId // 1군 전체시리즈
+ , date: $("#txtGameDate").val()
+ }
+ , error: ajaxFailed
+ , async: false
+ });
+
+ request.done(function (data) {
+ var container = $(".today-game");
+ container.children().remove();
+ $("#tabDepth2").children().remove();
+ container.append($(" "));
+ var weatherData = setWeather("1", "0,1,3,4,5,7");
+ $(".game-list-n").S2iGameListGameCenter({ btnView: false, data: data.game, weatherText: false, weatherData: weatherData });
+ $('.game-list-n').bxSlider({ auto: false, pause: 4000, speed: 700, pager: false, controls: true, autoStart: true, autoControls: false, slideWidth: 160, minSlides: 5, maxSlides: 5, slideMargin: 9, infiniteLoop: false, hideControlOnEnd: true });
+ 
+ // 경기 아이디 파라미터 체크, 해당 경기 있는 경우만
+ if (gameId != "" && $(".game-list-n > li[g_id=" + gameId + "]").length > 0) {
+ $(".game-list-n > li").siblings().removeClass("on");
+ $(".game-list-n > li[g_id=" + gameId + "]").addClass("on");
+ }
+ });
+ }
+
+ // 경기상세 기타 내용
+ function setGameEtc() {
+ 
+ var game = $("ul.game-list-n > li.on");
+ //game.attr("game_sc", "2");
+ //game.attr("sr_id", "9");
+
+ var gameDate = game.attr("g_dt");
+ var leId = game.attr("le_id");
+ var srId = game.attr("sr_id");
+ var season = game.attr("season");
+ var gameSc = game.attr("game_sc");
+ var entry = game.attr("entry_ck");
+ var startPitcher = game.attr("start_ck");
+ var vodCheck = game.attr("vod_ck");
+ var gameScId = game.attr("game_sc_id");
+ 
+ if (game.html() == undefined) { // 전체 취소
+ $("#gameCenterContents").children().remove();
+
+ //$("#gameComment").text("당일 경기는 모두 취소되었습니다.");
+ //$("#gameComment").show();
+ } else {
+ if (leId == "1") {
+
+ // 하이라이트 영상 체크
+ if ($("object#player").length > 0 && getBrowserInfoStr() == "Explorer") {
+ //alert(getBrowserInfoStr())
+ this.player = document.getElementById("player");
+ this.player.url = "";
+ this.player.controls.pause();
+ }
+
+ // 정규시즌 또는 국제전의 경우 srId 변경
+ if (srId.indexOf("0") > -1 || srId.indexOf("8") > -1 || srId.indexOf("9") > -1) {
+ srId = "0,8,9";
+ }
+
+ if (srId == "1" && gameSc == "1") { // 시범경기는 경기전 프리뷰 미표출
+ $("#tabDepth2").children().remove();
+ $("#gameCenterContents").children().remove();
+
+ $("#gameComment").show();
+
+ } else if ((srId == "0,8,9" && game.attr("sr_id") == "9" && (gameSc == "1" || gameSc == "2")) || (game.attr("sr_id") == "8" && gameSc == "2" && gameScId == "41")) { // 올스타전, 평가전
+ $("#tabDepth2").children().remove();
+ $("#gameCenterContents").children().remove();
+
+ var comment = "";
+
+ if (gameSc == "1") { // 프리뷰
+ comment = "올스타전은 프리뷰가 제공되지 않습니다.";
+ } else if (gameSc == "2") { // 경기중
+ comment = "경기 종료 후 오늘 경기 기록을 확인하실 수 있습니다.";
+ }
+
+ $("#gameComment").text(comment);
+ $("#gameComment").show();
+ } else if (srId == "0,8,9" && game.attr("sr_id") == "8" && ((gameSc == "1" || gameSc == "2" || game.attr("g_id").indexOf("KR") == -1))) { // 국제경기
+ $("#tabDepth2").children().remove();
+ $("#gameCenterContents").children().remove();
+ 
+ var comment = "";
+
+ if (gameSc == "1") {
+ comment = "국제대회는 프리뷰를 제공하지 않습니다.";
+ } else if (gameSc == "2") {
+ comment = "국제대회는 키플레이어를 제공하지 않습니다.";
+ } else if (game.attr("g_id").indexOf("KR") == -1) {
+ comment = "리뷰는 한국 경기만 제공합니다.";
+ }
+
+ $("#gameComment").text(comment);
+ $("#gameComment").show();
+ } else if (srId == "0,8,9" && gameSc == "1" && new Date() -1 && gameScId != "41") { // 21.07.15 | veron | 국제대회 리뷰 미표출
+ // $("#tabDepth2").children().remove();
+ // $("#gameCenterContents").children().remove();
+ // $("#gameComment").text("국제대회는 리뷰를 제공하지 않습니다.");
+ // $("#gameComment").show();
+
+ //} else {
+ } else {
+ $("#gameComment").hide();
+ 
+ srId = game.attr("sr_id"); // 2017-07-14 yeeun, 올스타전 예외처리 위해서
+
+ setGameTab(leId, srId, season, gameSc, entry, startPitcher, vodCheck);
+
+ // 탭 파라미터 체크
+ if (section != "") {
+ $("#tabDepth2 > li").siblings().removeClass("on");
+ $("#tabDepth2 > li[section=" + Request("section") + "]").addClass("on");
+ setGameDetailSection(Request("section"));
+ section = "";
+
+ history.pushState(null, null, "/Schedule/GameCenter/Main.aspx"); // 기존 section 파라미터가 다른 경기 이동시 영향을 끼침
+ } else {
+ setGameDetail();
+ }
+ }
+ } else {
+ $("#gameCenterContents").children().remove();
+
+ $("#gameComment").hide();
+ }
+ }
+ }
+
+ // 경기(프리뷰/ 키플레이어 / 리뷰 / 하이라이트 등) 탭 선택
+ function setGameTab(leId, srId, season, gameSc, entry, startPitcher, vodCheck) {
+ var ul = $("#tabDepth2");
+ ul.removeClass();
+ ul.addClass("tab");
+ ul.children().remove();
+
+ if (gameSc == "1") { // 경기전 : 프리뷰
+ ul.append($(" 프리뷰 "));
+ } else if (gameSc == "2" || gameSc == "5") { // 경기중, 서스펜디드 : 키플레이어
+ ul.append($(" 키플레이어 "));
+ } else { // 경기종료 : 키플레이어 / 리뷰 / 하이라이트
+ if (srId != "8" && srId != "9" && parseInt(season) >= 2016) {
+ ul.append($(" 키플레이어 "));
+ }
+ ul.append($(" 리뷰 "));
+
+ if (vodCheck == 1 && season >= 2016)
+ {
+ ul.append($(" 하이라이트 "));
+ }
+ }
+
+ ul.addClass(String.format("tab{0}", ul.children("li").length));
+ ul.children("li").eq(0).addClass("on");
+ }
+
+ // 경기 상세 분석(프리뷰, LIVE, 리뷰)
+ function setGameDetail() {
+ var li = $(".game-list-n > li.on");
+ var leId = li.attr("le_id");
+ var srId = li.attr("sr_id");
+ var seasonId = li.attr("season");
+ var gameSc = li.attr("game_sc");
+ var gameId = li.attr("g_id");
+ var awayTeam = li.attr("away_id");
+ var homeTeam = li.attr("home_id");
+ var awayPit = li.attr("away_p_id");
+ var homePit = li.attr("home_p_id");
+
+ var tab = $("#tabDepth2 > li.on");
+ var section = tab.attr("section");
+ 
+ //alert($("#txtTitle").text().length)
+ if ($("object#player").length > 0 && getBrowserInfoStr() == "Explorer")
+ {
+ //alert(getBrowserInfoStr())
+ this.player = document.getElementById("player");
+ this.player.url = "";
+ this.player.controls.pause();
+ }
+
+ //if ($("object#player").length > 0) {
+ // this.player = document.getElementById("player");
+ // this.player.url = "";
+ // this.player.controls.pause();
+ //}
+ 
+ if (gameSc == "1") {
+ setPreview(section, leId, srId, seasonId, gameId, awayTeam, homeTeam, awayPit, homePit);
+ setPreviewTab(section, awayPit, homePit);
+ } else if (gameSc == "2" || gameSc == "5") {
+ setLive(section, leId, srId, seasonId, gameId);
+ } else if (gameSc == "3") {
+ setReview(section, leId, srId, seasonId, gameId);
+ }
+
+ $("#gameCenterContents").show();
+ }
+
+ // 브라우저확인
+ function getBrowserInfoStr() {
+ var strBrowser = '';
+ var ua = navigator.userAgent;
+ if (ua.indexOf("Firefox") != -1) strBrowser = "Firefox";
+ else if (ua.indexOf("Chrome") != -1) strBrowser = "Chrome";
+ else if (ua.indexOf("MSIE") != -1) strBrowser = "Explorer";
+ else strBrowser = "ETC";
+ return strBrowser;
+ }
+
+ // 경기 상세 분석(프리뷰, LIVE, 리뷰)
+ function setGameDetailSection(section) {
+ var li = $(".game-list-n > li.on");
+ var leId = li.attr("le_id");
+ var srId = li.attr("sr_id");
+ var seasonId = li.attr("season");
+ var gameSc = li.attr("game_sc");
+ var gameId = li.attr("g_id");
+ var awayTeam = li.attr("away_id");
+ var homeTeam = li.attr("home_id");
+ var awayPit = li.attr("away_p_id");
+ var homePit = li.attr("home_p_id");
+
+ if (gameSc == "1") {
+ setPreview(section, leId, srId, seasonId, gameId, awayTeam, homeTeam, awayPit, homePit);
+ setPreviewTab(section, awayPit, homePit);
+ } else if (gameSc == "2" || gameSc == "5") {
+ setLive(section, leId, srId, seasonId, gameId);
+ } else if (gameSc == "3") {
+ setReview(section, leId, srId, seasonId, gameId);
+ }
+
+ $("#gameCenterContents").show();
+ }
+
+ // 프리뷰
+ function setPreview(section, leId, srId, seasonId, gameId, awayTeam, homeTeam, awayPit, homePit) {
+ switch (section) {
+ case "START_PIT": // 선발투수 전력분석
+ if (awayPit == undefined){
+ //alert("선발투수 전력분석은 선발투수 등록 후 기록이 업데이트됩니다.");
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/Preview/Team.aspx", param: { leId: leId, srId: srId, seasonId: seasonId, awayTeam: awayTeam, homeTeam: homeTeam, gameId: gameId }, async:false });
+ }
+ else {
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/Preview/StartPitcher.aspx", param: { leId: leId, srId: srId, seasonId: seasonId, awayTeam: awayTeam, homeTeam: homeTeam, awayPit: awayPit, homePit: homePit, gameId: gameId }, async: false });
+ }
+ //$("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/Preview/StartPitcher.aspx", param: { leId: leId, srId: srId, seasonId: seasonId, awayTeam: awayTeam, homeTeam: homeTeam, awayPit: awayPit, homePit: homePit, gameId: gameId }, async: false });
+ break;
+ case "TEAM": // 팀 전력비교
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/Preview/Team.aspx", param: { leId: leId, srId: srId, seasonId: seasonId, awayTeam: awayTeam, homeTeam: homeTeam, gameId: gameId }, async: false });
+ break;
+ case "LINEUP": // 라인업 분석
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/Preview/LineUp.aspx", param: { leId: leId, srId: srId, seasonId: seasonId, gameId: gameId }, async: false });
+ break;
+ }
+ }
+
+ // LIVE
+ function setLive(section, leId, srId, seasonId, gameId) {
+ switch (section) {
+ case "KEY_PIT": // 키플레이어
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/KeyPlayerPitcher.aspx?version=20181219", param: { leId: leId, srId: srId, seasonId: seasonId, gameId: gameId } });
+ break;
+ case "KEY_HIT": // 키플레이어 : 타자
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/KeyPlayerHitter.aspx?version=20181219", param: { leId: leId, srId: srId, seasonId: seasonId, gameId: gameId } });
+ break;
+ }
+ }
+
+ // 리뷰
+ function setReview(section, leId, srId, seasonId, gameId) {
+ switch (section) {
+ case "REVIEW": // 리뷰
+ //$("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/Review.aspx", param: { leId: leId, srId: srId, seasonId: seasonId, gameId: gameId } });
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/ReviewNew.aspx", param: { leId: leId, srId: srId, seasonId: seasonId, gameId: gameId } });
+ break;
+ case "KEY_PIT": // 키플레이어 : 투수
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/KeyPlayerPitcher.aspx?version=20181219", param: { leId: leId, srId: srId, seasonId: seasonId, gameId: gameId } });
+ break;
+ case "KEY_HIT": // 키플레이어 : 타자
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/KeyPlayerHitter.aspx?version=20181219", param: { leId: leId, srId: srId, seasonId: seasonId, gameId: gameId } });
+ break;
+ case "HIGHLIGHT": // 하이라이트
+ $("#gameCenterContents").S2iAjaxHtml({ url: "/Schedule/GameCenter/Highlight.aspx", param: { leId: leId, srId: srId, seasonId: seasonId, gameId: gameId } });
+ break;
+ }
+ }
+
+ // 프리뷰 하단 TAB
+ function setPreviewTab(section, awayPit, homePit) {
+ var ul = $("#tabPreview");
+ ul.children().remove();
+
+ switch(section)
+ {
+ case "START_PIT": // 선발투수 전력분석
+ if (awayPit == undefined){
+ ul.append($(" 팀 전력비교 "));
+ }
+ else{
+ ul.append($(" 선발투수 전력분석 "));
+ ul.append($(" 팀 전력비교 "));
+ }
+
+ ul.append($(" 라인업 분석 "));
+ break;
+ case "TEAM": // 팀 전력비교
+ if (awayPit == undefined) {
+ ul.append($(" 팀 전력비교 "));
+ }
+ else {
+ ul.append($(" 선발투수 전력분석 "));
+ ul.append($(" 팀 전력비교 "));
+ }
+ ul.append($(" 라인업 분석 "));
+ break;
+ case "LINEUP": // 라인업 분석
+ if (awayPit == undefined) {
+ ul.append($(" 팀 전력비교 "));
+ } else {
+ ul.append($(" 선발투수 전력분석 "));
+ ul.append($(" 팀 전력비교 "));
+ }
+ ul.append($(" 라인업 분석 "));
+ break;
+ }
+
+ ul.show()
+ }
+
+ 
+
+
+ 
+ $(document).ready(function () {
+ //getScheduleBTogether119(); // B TOGETHER119
+
+ //$("#dvLink").click(function () {
+ // location.href = "/About/Etc/BTogether119.aspx"
+ //});
+ });
+ 
+ // B TOGETHER 119
+ function getScheduleBTogether119() {
+ var request = $.ajax({
+ type: "post"
+ , url: "/ws/About.asmx/GetBTogether"
+ , dataType: "json"
+ , data: {
+ leId: "1"
+ , srId: "0"
+ , seasonId: "2019"
+ }
+ , error: ajaxFailed
+ , async: true
+ });
+
+ request.done(function (data) {
+ 
+ if (data.code == "100") {
+ getSaveMoney(data, "dvScheduleMoney");
+ }
+ });
+ }
+ 
+
+
+ 
+ $(document).ready(function () {
+
+ const ua = navigator.userAgent.toLowerCase();
+
+ // 모바일 체크
+ const isMobile = /iphone|android/i.test(ua) && ua.includes("mobile");
+
+ // 아이패드(iPadOS 포함) 체크
+ const isPad = /ipad/i.test(ua) || (ua.includes("macintosh") && navigator.maxTouchPoints > 1);
+
+ if ((isMobile && !isPad) && window.location.host.includes("www.koreabaseball.com")) {
+ window.location.href = "https://m.koreabaseball.com";
+ }
+
+
+ // 선수 검색
+ $(document).on("click", "#btnTopPlayerSearch", function (e) {
+ getPlayerSearch();
+ e.preventDefault();
+ });
+
+ // 선수 검색 엔터
+ $(document).on("keypress", "#txtTopPlayerWord", function (e) {
+ if (event.keyCode == 13) {
+ getPlayerSearch();
+ e.preventDefault();
+ }
+ });
+
+ //// 선수 검색 마우스 아웃
+ //$("body").click(function (e) {
+ // var container = $("#player_search_area");
+
+ // if (container.css("display") == "block") {
+ // if (!container.has(e.target).length) {
+ // container.hide();
+ // }
+ // }
+ //});
+
+ // 21.06.29 | veron | 나중에 탭들 다 지우고 배너 다시 원복 후 이부분 삭제해야함
+ // 8월 15일 00시 지나가면 삭제
+ //if (new Date().getTime() > new Date("2021/08/15 00:00:00").getTime()) {
+ // // 위에 탭 삭제
+ // $(".menu04 li:last").remove();
+ // $(".lnb-sub ul.lnb04 li:last").remove();
+ // // Player.master 삭제
+ // $("#liRookie").remove();
+ // // 메인 배너 교체
+ // $("#imgGijang").attr("href", "http://gijangcmc.or.kr/baseball/main/main.asp");
+ // $("#imgGijang img").attr("src", "//6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/KBOHome/resources/images/main/img_banner01.jpg");
+ //}
+
+ // 2026 미디어데이
+ if (new Date().getTime() new Date("2026/09/10 00:30:00")*/)
+ $('[data-tab=DraftApplication]').hide();
+ // KBO 시상식
+ if (new Date().getTime() new Date("2025/11/20 00:30:00"))
+ $('[data-tab=MvpApplication]').hide();
+ // KBO 골든글러브
+ if (new Date().getTime() new Date("2024/12/09 15:30:00"))
+ $('[data-tab=GGApplication]').hide();
+ });
+
+ // 선수 검색
+ function getPlayerSearch() {
+ if ($("#txtTopPlayerWord").val() == "") {
+ alert("선수명은 필수 입니다.");
+ $("#txtTopPlayerWord").focus();
+ return false;
+ } else {
+ //var searchWord = encodeURI($("#txtTopPlayerWord").val());
+
+ //if (searchWord != "") {
+ // location.href = "/Player/Search.aspx?searchWord=" + searchWord;
+ //}
+ var request = $.ajax({
+ type: "post"
+ , url: "/ws/Controls.asmx/GetSearchPlayer"
+ , dataType: "json"
+ , data: {
+ name: $("#txtTopPlayerWord").val()
+ }
+ , error: ajaxFailed
+ , async: true
+ });
+
+ request.done(function (data) {
+ if (data.code == "100") {
+ var container = $(".search-result");
+ container.children().remove();
+
+ container.hide();
+
+ if (data.now.length > 0 || data.retire.length > 0) {
+ // 2017-05-22 yeeun, 홍지희 사원 요청, 결과가 1명일 경우 바로 페이지 연결
+ if (data.now.length + data.retire.length == 1) {
+ var link = "";
+
+ if (data.now.length == 1) {
+ link = data.now[0]["P_LINK"];
+ } else {
+ link = data.retire[0]["P_LINK"];
+ }
+
+ location.href = link;
+ } else {
+ if (data.now.length > 0) {
+ container.append($(" 등록 선수 "));
+
+ var div = $(" ");
+ div.children().remove();
+
+ setPlayerDiv(data.now, div, true);
+
+ container.append(div);
+ }
+
+ if (data.retire.length > 0) {
+ container.append($(" 역대 선수 "));
+
+ var div = $(" ");
+ div.children().remove();
+
+ setPlayerDiv(data.retire, div, false);
+
+ container.append(div);
+ }
+
+ //container.append($(String.format(" '{0}' 검색결과 모두 보기 ", $("#txtTopPlayerWord").val())));
+ container.append($(" '" + $("#txtTopPlayerWord").val() + "' 검색결과 모두 보기 "));
+ container.show();
+ }
+ } else {
+ container.append($(" 검색 결과가 없습니다. "));
+ container.show();
+ }
+ }
+ });
+ }
+ }
+
+ // 선수 검색 div 
+ function setPlayerDiv(list, div, isActive) {
+ $.each(list, function (index, player) {
+ var aLink = $(" ");
+ aLink.attr("href", player["P_LINK"]);
+
+ var dl = $(" ");
+ var dt = $(" ");
+ var backNo = "";
+
+ if (isActive) {
+ //backNo = String.format("No.{0}", player["BACK_NO"]);
+ backNo = "No." + player["BACK_NO"];
+ }
+
+ //dt.text(String.format("{0} {1}", player["P_NM"], backNo));
+ dt.text(player["P_NM"] + " " + backNo);
+ dl.append(dt);
+
+ var dd = $(" ");
+ //dd.text(String.format("{0} {1}({2})", player["T_NM"], player["POS_NO"], player["P_TYPE"]));
+ dd.text(player["T_NM"] + " " + player["POS_NO"] + "(" + player["P_TYPE"] + ")");
+ dl.append(dd);
+
+ var ddImg = $(String.format(" ", "//6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/KBOHome"));
+ dl.append(ddImg);
+
+ aLink.append(dl);
+ div.append(aLink);
+ });
+ }
+ 
+ 
+ 

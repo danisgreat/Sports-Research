@@ -1,0 +1,27 @@
+{
+  "label": "CFA_owner",
+  "url": "https://www.thecfa.cn/",
+  "source_id": "audit_cfa_owner",
+  "attempt_utc": "2026-10-01T07:31:54.117408+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_cfa_owner",
+    "publisher": "www.thecfa.cn",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://www.thecfa.cn/",
+    "final_url": "https://www.thecfa.cn/",
+    "retrieved_utc": "2026-10-01T07:31:57.777129+00:00",
+    "response_sha256": "c6a68a3870518c312c652d07b8ba8c0a3f3cceb2df73bb19113c981d0eee9cd4",
+    "body_path": "research/data/benchmark/source_snapshots/audit_cfa_owner_20261001T073157777129Z_c6a68a387051.body",
+    "response_bytes": 152936,
+    "content_type": "text/html",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_cfa_owner_20261001T073157777129Z_c6a68a387051.json"
+  },
+  "decoded_bytes": 152936
+}

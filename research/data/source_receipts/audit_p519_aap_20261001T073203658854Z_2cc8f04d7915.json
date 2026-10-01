@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "audit_p519_aap",
+  "publisher": "aapnews.aap.com.au",
+  "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://aapnews.aap.com.au/news/swans-hand-lions-more-aflw-misery-suns-storm-home",
+  "final_url": "https://aapnews.aap.com.au/news/swans-hand-lions-more-aflw-misery-suns-storm-home",
+  "retrieved_utc": "2026-10-01T07:32:03.658854+00:00",
+  "response_sha256": "2cc8f04d79153413cd589c5f93ff42d5a972773e92578f901dcc56eb96d53520",
+  "body_path": "research/data/benchmark/source_snapshots/audit_p519_aap_20261001T073203658854Z_2cc8f04d7915.body",
+  "response_bytes": 40918,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "AUDIT_READBACK_V1",
+  "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+  "market_quarantined": true,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

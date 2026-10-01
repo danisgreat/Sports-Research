@@ -1,0 +1,10 @@
+[
+  {
+    "attrs": {
+      "class": "tbl",
+      "id": "tblPitKind",
+      "summary": "주요 구종 분석 표 (직구, 싱커, 체인지업, 슬라이더)"
+    },
+    "rows": []
+  }
+]

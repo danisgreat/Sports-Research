@@ -1,0 +1,31 @@
+{
+  "lane": "EPL",
+  "snapshot_utc": "2026-10-01T02:17:03.407725+00:00",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "openfootball",
+    "publisher": "openfootball statistical archive",
+    "upstream_lineage_id": "OPENFOOTBALL_UNVERIFIED_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://raw.githubusercontent.com/openfootball/england/master/2026-27/1-premierleague.txt",
+    "final_url": "https://raw.githubusercontent.com/openfootball/england/master/2026-27/1-premierleague.txt",
+    "retrieved_utc": "2026-10-01T02:17:03.407725+00:00",
+    "response_sha256": "a2366ea9f7f55b8afd666e455666ba9019f9c62da8864f6bcf3adff65300b445",
+    "body_path": "research/data/raw/source_snapshots/openfootball_20261001T021703407725Z_a2366ea9f7f5.body",
+    "response_bytes": 22800,
+    "content_type": "text/plain; charset=utf-8",
+    "parser_id": "OPENFOOTBALL_V1",
+    "registry_sha256": "031ca77a5d8fb791c3f0dc9e8fecd62e7cba5647ba7ba63ddba11cd2817f4716",
+    "market_quarantined": false,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/openfootball_20261001T021703407725Z_a2366ea9f7f5.json"
+  },
+  "completed": 50,
+  "upcoming": 330,
+  "excluded": 0,
+  "scores_sha256": "9260ddf3b71b3deae019c7db4496d05231c15b9f8535d2ba0776728f604227f3",
+  "fixtures_sha256": "bf7b70171d54ad8d6812935973e9340045f2da4ae25a706188f4d7c215bf53ca",
+  "corroboration_status": "SINGLE_PUBLISHER_PROVISIONAL",
+  "live_admissible": false,
+  "market_fields_in_forecast_data": false
+}

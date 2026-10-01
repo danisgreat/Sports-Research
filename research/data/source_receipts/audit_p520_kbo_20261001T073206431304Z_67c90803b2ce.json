@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "audit_p520_kbo",
+  "publisher": "eng.koreabaseball.com",
+  "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-09-27",
+  "final_url": "https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-09-27",
+  "retrieved_utc": "2026-10-01T07:32:06.431304+00:00",
+  "response_sha256": "67c90803b2ce0263d1ff295b42a2e42087bb7cc9a24a9d5f4a0e67c67925c6b3",
+  "body_path": "research/data/benchmark/source_snapshots/audit_p520_kbo_20261001T073206431304Z_67c90803b2ce.body",
+  "response_bytes": 27708,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "AUDIT_READBACK_V1",
+  "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+  "market_quarantined": true,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

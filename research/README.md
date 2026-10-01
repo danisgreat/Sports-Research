@@ -2,6 +2,21 @@
 
 Current controls: [CURRENT_RULES.md](../CURRENT_RULES.md). No current model is live-qualified. Existing September evaluations and forecasts remain frozen; October's changed models are versioned SHADOW_ONLY candidates.
 
+## Requested analyses and canonical logging — current default
+
+Every requested sport receives evidence-based analysis and canonical Part 6 logging regardless of model qualification or calibration. Qualitative ranks and explicitly uncalibrated reproducible analyst scenarios are allowed. Late news and after-start analysis are allowed with honest observation/log times. Missing calibration, fixture-universe registration or independence audits are labels and limits, not analysis/logging blockers. The certified-issuer sections below describe a separate performance protocol.
+
+```powershell
+py -3.14 -B -m research.operations.log_card next-id
+py -3.14 -B -m research.operations.log_card commit path/to/card.json
+py -3.14 -B -m research.operations.log_card verify
+py -3.14 -B -m research.operations.log_card recover
+```
+
+Card JSON includes event_key, native_event_id, league, title, tracking_handle, analysis_status, original source_path and complete Markdown body. Research commits share the canonical ledger hash chain and writer lock, using distinct RESEARCH_LOG record types. Retained originals and exact Part 6 projections are hashed and read back. Duplicate imports return the same ID. Interrupted appends must be recovered before another ID; recovery refuses unrelated changes. Import minis into Part 6 and leave canonical pointers, without maintaining competing active copies. Do not backdate imports or manufacture previous predictions. No retrospective until requested.
+
+Use `py -3.14 -B -m research.operations.control_freeze --verify` for METHOD's selected receipt. `py -3.14 -B -m research.operations.verify_custody` additionally checks research-card projections and alternate imported source-receipt fields in memory. Original receipts, frozen acceptance code and model dependencies remain unchanged. Research source/projection stores have their own ledger hashes and are excluded from the static control freeze.
+
 ## Install and verify
 
 The implementation was tested with CPython 3.14.6 and the exact [dependency lock](requirements.lock.txt). Use an isolated environment when installing; do not replace unrelated project runtimes.
@@ -9,8 +24,8 @@ The implementation was tested with CPython 3.14.6 and the exact [dependency lock
 ```powershell
 python -m pip install -r research/requirements.lock.txt
 python -B -m pytest -p no:cacheprovider research/tests -q
-python -B -m research.src.acceptance
-python -B -m research.src.control_manifest verify
+py -3.14 -B -m research.operations.verify_custody
+py -3.14 -B -m research.operations.control_freeze --verify
 ```
 
 Tests are offline and check temporal leakage, contract coherence, source hashes, native parsers, evidence admission, transaction recovery, settlement revision custody and persistent pilot decisions. Live observations are separate from tests.
@@ -76,3 +91,7 @@ python -B -m research.src.archive build
 The archive guide explains canonical event grain, source receipt joins, season status, deduplication, mirrors/subsets and narrative separation. Use `research.src.archive.read_events(eligible_only=True, verify=True)` for source-checked historical labels, then apply `point_in_time` availability/endpoint gates before an as-of feature query. Most historical availability timestamps are unknown. Do not treat retrieval today as pregame availability years ago.
 
 Restricted Football-Data/FixtureDownload snapshots remain local under ignored `data/benchmark/`. The source registry prohibits automated retrieval through those restricted/manual routes. Forecast modules read processed sports-only columns; post-event market benchmark code is isolated. Raw historical rebuilds that require missing local restricted files fail clearly.
+
+Baseline provenance is mandatory for certified admission: exact lane/league/endpoint/families/version, a pinned approved definition and code artifacts, approval strictly before cutoff, and matching distribution/holdout/shadow/pilot comparator. Hash joins verify retained bytes and declared metadata; they do not independently prove every declared input availability time or recompute every distribution. Review the original source field and baseline construction. The point-in-time feature filter likewise labels declared metadata and cannot confer live admission by itself.
+
+Sports-only historical CSV exports for the active lanes are [EPL results](data/processed/league_csv/epl_results.csv), [NBL results](data/processed/league_csv/nbl_results.csv), and their [manifest](data/processed/league_csv/manifest.json). These retain 2,280 and 738 reconciled historical scores, with official IDs missing for EPL and availability/actual-start gaps explicitly preserved. Do not mistake them for populated Soccer/Basketball archive yearly files.

@@ -1,0 +1,27 @@
+{
+  "label": "NBL_OFFICIAL",
+  "url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+  "source_id": "audit_nbl_official",
+  "attempt_utc": "2026-10-01T07:32:11.439759+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_nbl_official",
+    "publisher": "schedule.nbl.com.au",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+    "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+    "retrieved_utc": "2026-10-01T07:32:12.019558+00:00",
+    "response_sha256": "51a0a57ae2f49a03de2e661f8954c96f3ae8aef69b9e47135e7dad0c2c5fc8be",
+    "body_path": "research/data/benchmark/source_snapshots/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.body",
+    "response_bytes": 320067,
+    "content_type": "application/json; charset=utf-8",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.json"
+  },
+  "decoded_bytes": 320067
+}

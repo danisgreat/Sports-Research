@@ -18,7 +18,7 @@ from .eligibility import (REGISTRY, _qualification, aware_time, canonical_bytes,
 from .ledger import (_append_locked, committed_issues, event_key, forecast_core,
                      locked, read_records, validate_universe)
 
-EVENT_COLUMNS = ["lane", "league", "season", "event_id", "week", "issued_utc", "actual_start_utc",
+EVENT_COLUMNS = ["lane", "league", "season", "event_id", "model_version", "baseline_version", "week", "issued_utc", "actual_start_utc",
                  "adjusted", "model_logloss", "card_logloss", "baseline_logloss", "model_brier", "card_brier", "baseline_brier"]
 
 
@@ -99,7 +99,7 @@ def score_events(path: Path, registry_path: Path = REGISTRY, *, sources_registry
             scores = {label: _score(*_probabilities(frame, f"p_{label}"), verified["score_home"], verified["score_away"])
                       for label in ("model", "card", "baseline")}
             start = aware_time(verified["actual_start_utc"])
-            row = {**{f: verified[f] for f in ("lane", "league", "season", "event_id", "issued_utc", "actual_start_utc")},
+            row = {**{f: verified[f] for f in ("lane", "league", "season", "event_id", "model_version", "baseline_version", "issued_utc", "actual_start_utc")},
                    "week": f"{start.isocalendar().year}-W{start.isocalendar().week:02}",
                    "adjusted": verified["adjustment_type"] != "NONE"}
             for label, (logloss, brier) in scores.items():

@@ -1,0 +1,20 @@
+{
+  "source_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetTeamRecord",
+  "request_method": "POST",
+  "request_params": {
+    "leId": "1",
+    "srId": "0",
+    "seasonId": "2026",
+    "gameId": "20261001HHSS0",
+    "groupSc": "SEASON"
+  },
+  "retrieved_utc": "2026-10-01T09:26:30.235335+00:00",
+  "response_sha256": "8e0a6f5f5d5a6c70507db42a885bec403b2c232bb982398b7928b5cef4b0e3fc",
+  "response_bytes": 3832,
+  "body_path": "research/verification/log_repair_2026-10-01/api_team.body",
+  "content_type": "text/plain; charset=UTF-8",
+  "final_url": "https://www.koreabaseball.com/ws/Schedule.asmx/GetTeamRecord",
+  "independence_status": "UNKNOWN",
+  "upstream_lineage_id": "KBO_OWNER",
+  "parser_id": "KBO_NATIVE_JSON_MANUAL_READBACK_V1"
+}

@@ -1,0 +1,8 @@
+{
+  "label": "P178_Equipe",
+  "url": "https://www.lequipe.fr/Football/match-direct/ligue-3/2026-2027/cannes-le-puy-en-velay-live/693487",
+  "source_id": "audit_p178_equipe",
+  "attempt_utc": "2026-10-01T07:31:58.222997+00:00",
+  "status": "UNAVAILABLE",
+  "reason": "HTTPError: HTTP Error 403: Forbidden"
+}

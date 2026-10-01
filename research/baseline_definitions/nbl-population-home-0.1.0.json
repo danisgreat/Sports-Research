@@ -1,0 +1,30 @@
+{
+  "schema_version": "baseline-definition-1",
+  "status": "APPROVED",
+  "baseline_version": "nbl-population-home-0.1.0",
+  "lane": "NBL",
+  "league": "NBL",
+  "endpoint": "INCL_OT",
+  "families": [
+    "ML"
+  ],
+  "approved_utc": "2026-10-01T02:11:35.717504+00:00",
+  "reviewed_utc": "2026-10-01T02:11:35.717504+00:00",
+  "reviewed_by": "Codex implementation review of retained executable baseline definition",
+  "basis": "Strictly pre-cutoff regular-season home ML wins with Beta(1,1) smoothing:(home_wins+1)/(n+2), minimum100 prior games and no tied final. Comparison definition only, not qualification.",
+  "code_artifacts": [
+    {
+      "path": "research/src/nbl_model.py",
+      "sha256": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe"
+    },
+    {
+      "path": "research/src/sports/basketball/joint.py",
+      "sha256": "f89d50cfcbcba80abae4a2a421fcd522f469c9b48bc757c7855f179992e90658"
+    },
+    {
+      "path": "research/src/load.py",
+      "sha256": "647dea85c5ff32b64c80b356c61c784280a77362e3a958fea2ef73b5350229a4"
+    }
+  ],
+  "evidence_limit": "This is a versioned executable comparator definition. Raw input availability and semantic source truth need their own reviewed receipts. Future model qualification remains SHADOW_ONLY."
+}

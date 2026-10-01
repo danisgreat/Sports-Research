@@ -1,5 +1,7 @@
 # Scoring and validation
 
+**October 1 v7.1 clarification:** Calibration, model qualification and prospective cohort controls determine the claims that may be made about performance. They do not prevent requested research, qualitative ranks, transparent uncalibrated analyst scenarios, late/live analysis or canonical Part 6 IDs. See CURRENT_RULES.md and research.operations.log_card. Preserve original forecasts and score each appropriate cohort separately. No retrospective when the user has deferred it.
+
 Current scoring: **SCV-2026.10.01-v3**. [CURRENT_RULES.md](CURRENT_RULES.md) controls admission. This file defines measurement; historical cards retain their original conventions.
 
 ## Units, cohorts and scales
@@ -26,7 +28,7 @@ Week-block paired bootstrap uses 10,000 replicates and the frozen seed. Report e
 
 `ledger.py` records frozen universe registration, abstention, issue preparation/commitment and append-only settlement revisions in a hash chain. `pilot.score_events` validates those records and frozen Part 6 projections, derives the contract outcomes and probabilities, and emits exclusions for every omitted event. No current canonical live issue exists.
 
-`pilot.freeze_lock` refuses a retrospective or overwritten lock and pins the model/source registries, universe, power plan and ledger head. `decision` enrols the chronological issued cohort, waits on unsettled earlier members and records a single interim even if a batch passes its exact count. Futility is terminal across future reads. Final decisions report paired card-vs-model and model/card-vs-baseline results. The current template is NOT_FROZEN; the live composite families and requisite power evidence are absent.
+`pilot.freeze_lock` refuses a retrospective or overwritten lock and pins the model/source registries, exact registered baseline definition/code, universe, power plan and ledger head. `decision` enrols the chronological issued cohort, waits on unsettled earlier members and records a single interim even if a batch passes its exact count. Futility is terminal across future reads. Final decisions report paired card-vs-model and model/card-vs-baseline results. The current template is NOT_FROZEN; the live composite families and requisite power evidence are absent.
 
 ## Historical learning
 
@@ -34,6 +36,8 @@ Week-block paired bootstrap uses 10,000 replicates and the frozen seed. Report e
 
 ## Release and failure policy
 
-Qualification is model-version/family/endpoint specific. A new model needs fresh qualified evidence, source lineage audit, checked temporal features and sufficiently large/long prospective shadows. A different sport starts with league-specific endpoint/source adapters and a simple baseline before complex models. Archive completeness is measured as verified event coverage, not files created.
+Qualification is model-version/family/endpoint specific. A new model needs fresh qualified evidence, source lineage audit, checked temporal features and at least 50 unique prospective shadows spanning at least 28 days. A different sport starts with league-specific endpoint/source adapters and a simple baseline before complex models. Archive completeness is measured as verified event coverage, not files created.
 
 Classify every learning case as one or more of: data/source/identity, contract/period, timing/availability, model/calibration, research adjustment, true random miss, and unresolved/censored. Review successes under the same checks. Append a versioned hypothesis and acceptance criterion before changing a model; evaluate it chronologically against a fixed baseline. Do not edit an old forecast to make a repair look successful.
+
+Baseline provenance is mandatory for certified admission: exact lane/league/endpoint/families/version, a pinned approved definition and code artifacts, approval strictly before cutoff, and matching distribution/holdout/shadow/pilot comparator. Hash joins verify retained bytes and declared metadata; they do not independently prove every declared input availability time or recompute every distribution. Review the original source field and baseline construction. The point-in-time feature filter likewise labels declared metadata and cannot confer live admission by itself.

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "kbo",
+  "publisher": "www.koreabaseball.com",
+  "upstream_lineage_id": "kbo",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.koreabaseball.com/Schedule/GameCenter/Preview/Team.aspx?leId=1&srId=0&seasonId=2026&gameId=20261001HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+  "final_url": "https://www.koreabaseball.com/Schedule/GameCenter/Preview/Team.aspx?leId=1&srId=0&seasonId=2026&gameId=20261001HHSS0&awayTeam=HH&homeTeam=SS&awayPit=54729&homePit=69446",
+  "retrieved_utc": "2026-10-01T09:25:16.080444+00:00",
+  "response_sha256": "b54ff7397f02c291827deb95eb20e91b0df45983bda32787e95341ca42f5213e",
+  "body_path": "research/data/raw/source_snapshots/kbo_20261001T092516080444Z_b54ff7397f02.body",
+  "response_bytes": 4892,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "RAW_HTML_OR_JSON_MANUAL_READBACK_V1",
+  "registry_sha256": "76ec1bfa626710d1096ab7c3932d3433722d20c827fe6fac8a5f663cbb850b56",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

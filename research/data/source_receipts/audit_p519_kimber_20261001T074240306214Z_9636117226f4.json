@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "audit_p519_kimber",
+  "publisher": "www.afl.com.au",
+  "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.afl.com.au/news/1623735/young-gold-coast-suns-turn-up-the-heat-against-winless-st-kilda-saints-despite-guns-return-to-form",
+  "final_url": "https://www.afl.com.au/news/1623735/young-gold-coast-suns-turn-up-the-heat-against-winless-st-kilda-saints-despite-guns-return-to-form",
+  "retrieved_utc": "2026-10-01T07:42:40.306214+00:00",
+  "response_sha256": "9636117226f42d4405452a0fcb3c4f286db32102ec3c48922babde4c376e594f",
+  "body_path": "research/data/benchmark/source_snapshots/audit_p519_kimber_20261001T074240306214Z_9636117226f4.body",
+  "response_bytes": 428932,
+  "content_type": "text/html;charset=utf-8",
+  "parser_id": "AUDIT_READBACK_V1",
+  "registry_sha256": "52fa6a3337ca19b1801ebed3f0c11e8f107bc2aba81b0e1501713896878fc6e1",
+  "market_quarantined": true,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

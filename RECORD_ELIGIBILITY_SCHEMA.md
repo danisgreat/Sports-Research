@@ -1,9 +1,10 @@
 # Record eligibility schema
 
-Machine implementation: [eligibility.py](research/src/eligibility.py), [ledger.py](research/src/ledger.py), [issue.py](research/src/issue.py). Current rules: [CURRENT_RULES.md](CURRENT_RULES.md).
+Current research logging: [log_card.py](research/operations/log_card.py). Frozen certification implementation: [eligibility.py](research/src/eligibility.py), [ledger.py](research/src/ledger.py), [issue.py](research/src/issue.py). Current rules: [CURRENT_RULES.md](CURRENT_RULES.md). Temporal/model/quorum gates below concern certification only; they do not block canonical research logging or analysis.
 
 | Record type | Eligibility | Required custody |
 |---|---|---|
+| Canonical requested research | Qualitative, uncalibrated, live/late and historical imports permitted; certification separately labelled | P-ID; RESEARCH_LOG_PREPARED/COMMITTED; original source/projection hashes; actual logging time; exact identity; explicit missingness; no retroactive pregame claim |
 | Historical literal learning | Always performance-ineligible | Original rank/log pointer; preserved missingness/conflicts |
 | Provisional current observation | Never a forecast | Immutable body, exact parse/field and retrieval hash |
 | Model-only shadow | Always performance-ineligible | Before-start forecast, input/build hashes, family/endpoint, full coverage |
@@ -20,3 +21,5 @@ All model/card/baseline probabilities are re-derived from retained distributions
 Canonical ledger records use a SHA-256 previous-record chain and file locks. Issue preparation is journaled before the append; commitment verifies the projection. A pending transaction blocks the next ID. Corrections append instead of overwriting. Historical rows can never acquire prospective eligibility through a correction.
 
 An excluded event carries a reason. Registered fixtures without decisions, abstentions, unresolved settlements, changed bodies, missing source fields and unavailable sources remain visible in coverage. Empty scored cohorts are reported as empty, never zero loss or perfect performance.
+
+Baseline provenance is mandatory for certified admission: exact lane/league/endpoint/families/version, a pinned approved definition and code artifacts, approval strictly before cutoff, and matching distribution/holdout/shadow/pilot comparator. Hash joins verify retained bytes and declared metadata; they do not independently prove every declared input availability time or recompute every distribution. Review the original source field and baseline construction. The point-in-time feature filter likewise labels declared metadata and cannot confer live admission by itself.

@@ -241,7 +241,7 @@ def _baseline_registration(bundle: dict, registry: dict, admission: dict, base: 
     if entry.get("status") != "APPROVED" or not families <= set(entry.get("families", [])):
         raise ValueError("baseline definition is not approved for every contract family")
     approved = aware_time(entry.get("approved_utc"), "baseline definition approval")
-    if approved > cutoff:
+    if approved >= cutoff:
         raise ValueError("baseline definition approval was unavailable at cutoff")
     if entry.get("expires_utc") and cutoff >= aware_time(entry["expires_utc"], "baseline expiry"):
         raise ValueError("baseline definition approval has expired")

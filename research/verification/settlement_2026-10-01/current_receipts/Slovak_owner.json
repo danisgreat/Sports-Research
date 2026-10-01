@@ -1,0 +1,8 @@
+{
+  "label": "Slovak_owner",
+  "url": "https://futbalsfz.sk/slovnaft-cup/",
+  "source_id": "audit_slovak_owner",
+  "attempt_utc": "2026-10-01T07:32:09.666263+00:00",
+  "status": "UNAVAILABLE",
+  "reason": "ValueError: redirect outside source allowlist"
+}

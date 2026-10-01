@@ -1,0 +1,10 @@
+{
+  "observed_utc": "2026-10-01T10:48:01+00:00",
+  "command": "py -3.14 -X utf8 -B -m pytest -p no:cacheprovider research\\tests research\\operations\\test_log_card.py -q",
+  "exit_code": 0,
+  "passed": 115,
+  "duration_seconds": 65.87,
+  "terminal_result": "115 passed in 65.87s (0:01:05)",
+  "logging_tests_included_in_total": 7,
+  "predictive_skill_claim": false
+}

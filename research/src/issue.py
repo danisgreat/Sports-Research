@@ -78,6 +78,7 @@ def markdown_core(verified: dict, card_id: str, *, transaction_id: str, draft: b
              f"- Input cutoff: {verified['data_cutoff_utc']}; frozen issue: {verified['issued_utc']}.",
              f"- Verified scheduled start: {verified['scheduled_start_utc']}; actual start: UNKNOWN until verified after play.",
              f"- Model: `{verified['model_version']}`; evidence SHA-256: `{verified['bundle_sha256']}`.",
+             f"- Baseline: `{verified['baseline_version']}`; definition SHA-256: `{verified['baseline_definition_ref']['sha256']}`.",
              f"- Admission registry: `{verified['registry_sha256']}`; source registry: `{verified['sources_registry_sha256']}`.",
              f"- Independent pregame lineages: {', '.join(verified['identity_lineages'])}.",
              f"- Adjustment: {verified['adjustment_type']}; transaction: `{transaction_id}`.",

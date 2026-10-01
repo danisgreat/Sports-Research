@@ -1,0 +1,24 @@
+{
+  "label": "P523_Diez",
+  "url": "https://diez.bo/futbol/oriente-y-the-strongest-no-se-sacan-ventaja-en-el-tahuichi_1790824182",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_p523_diez",
+    "publisher": "diez.bo",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://diez.bo/futbol/oriente-y-the-strongest-no-se-sacan-ventaja-en-el-tahuichi_1790824182",
+    "final_url": "https://diez.bo/futbol/oriente-y-the-strongest-no-se-sacan-ventaja-en-el-tahuichi_1790824182",
+    "retrieved_utc": "2026-10-01T07:44:03.800567+00:00",
+    "response_sha256": "dbd3e2cfb1098b8793f8a8a6e7c06ba3c13588cb8eface44401bc7f457027a56",
+    "body_path": "research/data/benchmark/source_snapshots/audit_p523_diez_20261001T074403800567Z_dbd3e2cfb109.body",
+    "response_bytes": 181376,
+    "content_type": "text/html; charset=utf-8",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "abfce9263b4ca2a3552c687b83ebb26dab971a48bc2e67c0af13810703215f7e",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_p523_diez_20261001T074403800567Z_dbd3e2cfb109.json"
+  }
+}

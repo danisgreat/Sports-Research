@@ -20,6 +20,16 @@ def prepare(evidence,bundle):
         evidence_root=evidence.root,ledger_path=evidence.ledger_path,part6_path=evidence.part6,reconciliation_path=evidence.reconciliation)
 
 
+def test_synthetic_fixture_ignores_later_production_cards(tmp_path,monkeypatch):
+    production = tmp_path/"production.md"
+    raw = issue.PART6.read_bytes()+b"\r\n## P-900 Synthetic future production card\r\n"
+    production.write_bytes(raw)
+    monkeypatch.setattr(issue,"PART6",production)
+    evidence=EvidenceFactory(tmp_path/"fixture",monkeypatch)
+    assert issue.next_card_id(evidence.part6,evidence.reconciliation,evidence.ledger_path)=="P-523"
+    assert production.read_bytes()==raw
+
+
 def test_preparation_is_read_only_and_real_issue_disabled_by_default(evidence):
     bundle=evidence.bundle();evidence.register([bundle])
     before=(evidence.part6.read_bytes(),evidence.ledger_path.read_bytes())

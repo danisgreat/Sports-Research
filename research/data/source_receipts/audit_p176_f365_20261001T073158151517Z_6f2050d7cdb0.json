@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "audit_p176_f365",
+  "publisher": "www.football365.fr",
+  "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.football365.fr/direct-foot/359214/359496/amiens-sc-versailles.html",
+  "final_url": "https://www.football365.fr/direct-foot/359214/359496/amiens-sc-versailles.html",
+  "retrieved_utc": "2026-10-01T07:31:58.151517+00:00",
+  "response_sha256": "6f2050d7cdb0a1aea72d8981f9bc90cb1c934cd9ae049cc2d44eba8e2499cc97",
+  "body_path": "research/data/benchmark/source_snapshots/audit_p176_f365_20261001T073158151517Z_6f2050d7cdb0.body",
+  "response_bytes": 152418,
+  "content_type": "text/html; charset=UTF-8",
+  "parser_id": "AUDIT_READBACK_V1",
+  "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+  "market_quarantined": true,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

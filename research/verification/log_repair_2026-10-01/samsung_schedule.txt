@@ -1,0 +1,1927 @@
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 삼성 라이온즈 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+ gtag('config', 'G-RB3SNWR58J');
+ 
+ 
+ (function(c,l,a,r,i,t,y){
+ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+ t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+ })(window, document, "clarity", "script", "wtvz2k9ppg");
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -->
+ 
+ 
+
+ 
+ (function() {
+ var w = window;
+ if (w.ChannelIO) {
+ return (window.console.error || window.console.log || function() {})("ChannelIO script included twice.");
+ }
+ var ch = function() {
+ ch.c(arguments);
+ };
+ ch.q = [];
+ ch.c = function(args) {
+ ch.q.push(args);
+ };
+ w.ChannelIO = ch;
+
+ function l() {
+ if (w.ChannelIOInitialized) {
+ return;
+ }
+ w.ChannelIOInitialized = true;
+ var s = document.createElement("script");
+ s.type = "text/javascript";
+ s.async = true;
+ s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+ var x = document.getElementsByTagName("script")[0];
+ x.parentNode.insertBefore(s, x);
+ }
+ if (document.readyState === "complete") {
+ l();
+ } else if (window.attachEvent) {
+ window.attachEvent("onload", l);
+ } else {
+ window.addEventListener("DOMContentLoaded", l, false);
+ window.addEventListener("load", l, false);
+ }
+
+ ChannelIO('boot', {
+ "pluginKey": "11c1e344-e431-4754-bb7f-3406aeb134a4" // Replace with your actual pluginKey
+ });
+ })();
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+-->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 로그인 
+ 
+ 
+ 회원가입 
+ 
+ 
+ 
+ ENGLISH 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 구단 
+ 
+ 
+ 
+ 구단 소개 
+ 
+ 
+ 
+ 구단 소식 
+ 
+ 
+ 히스토리 
+ 
+ 
+ 사회공헌활동 
+ -->
+ 
+ 엠블럼 캐릭터 
+ 
+ 
+ GO! 라팍 
+ 
+ 
+ 라이온즈 파트너 
+ 
+ 
+ 응원단 
+ -->
+ 
+ 
+ 
+ 
+ 선수단 
+ 
+ 
+ 박진만 감독 
+ 박진만 감독 -->
+ 
+ 
+ 코칭스텝 
+ 
+ 
+ 투수 
+ 
+ 
+ 타자 
+ 
+ 
+ 군입대선수 
+ 
+ 
+ 신입단선수 
+ 
+ 
+ 뎁스차트 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 경기정보 
+ 
+ 
+ 1군 일정 
+ 
+ 
+ 퓨처스 일정 
+ 
+ 
+ 블루멤버십 안내 
+ 
+ 
+ SUITE BOX 
+ 
+ 
+ 
+ 1군 엔트리 
+ 
+ 
+ 게임노트 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 기록실 
+ 
+ 
+ 팀 순위 
+ 
+ 
+ 선수별 성적 
+ 
+ 
+ 조건별 성적 
+ 
+ 
+ 
+ -->
+ 
+ 히스토리 
+ 
+ 
+ 미디어가이드 
+ 
+ 
+ 삼성라이온즈21 
+ 
+ 
+ 레전드 
+ 
+ 
+ 표창 및 수상 
+ 
+ 
+ 역대 성적 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 팬 
+ 
+ 
+ 
+ 사자후 
+ 
+ 
+ 
+ FAQ 
+ -->
+ 
+ 응원가 
+ 
+ -->
+ 
+ 라이온즈 스토리 
+ 
+ 
+ MVP 투데이 포토타임 
+ 
+ 포토자료실 
+ 
+ 
+ 응원가 
+ -->
+ 
+ 월페이퍼 
+ 
+ 
+ SNS 
+ 
+ 
+ 응원단 
+ 
+ 
+ 
+ 
+ 쇼핑 
+
+ 
+ 
+ 쇼핑 
+ 
+ 
+ 
+ 
+ 이벤트 
+ 
+ 
+ 진행 중 이벤트 
+ 
+ 
+ 종료된 이벤트 
+ 
+ 
+ 이벤트 안내 
+ 
+ 
+ 
+ -->
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 삼성라이온즈
+ -->
+ 
+ 
+ 
+ 
+ 구단 
+ 
+ 
+ 구단 소개 
+ 
+ -->
+ 
+ 구단 소식 
+ 
+ 
+ 히스토리 
+ 
+ 
+ 엠블럼 캐릭터 
+ 
+ 
+ GO! 라팍 
+ 
+ 
+ 라이온즈 파트너 
+ 
+ 
+ 사회공헌활동 
+ 
+ 
+ 
+ 라이온즈 파트너 
+ 
+ 
+ 응원단 
+ 
+ -->
+ 
+ 계열사 소개 
+ -->
+ 
+ 
+ 
+ 선수단 
+ 
+ 
+ 박진만 감독 
+ 
+ 박진만 감독 -->
+ 
+ 
+ 코칭스텝 
+ 
+ 
+ 투수 
+ 
+ 
+ 타자 
+ 
+ 
+ 군입대선수 
+ 
+ 
+ 신입단선수 
+ 
+ 
+ 응원단 
+ -->
+ 
+ 뎁스차트 
+ 
+ -->
+ 
+ 
+ 
+ 경기정보 
+ 
+ 
+ 1군 일정 
+ 
+ 
+ 퓨처스 일정 
+ 
+ 
+ 
+ 입장요금/좌석 안내 
+ 
+ 
+ SUITE BOX 
+ 
+ 
+ 
+ 1군 엔트리 
+ 
+ 
+ 게임노트 
+ -->
+ 
+ 
+ 
+ 
+ 기록실 
+ 
+ 
+ 팀 순위 
+ 
+ 
+ 선수별 성적 
+ 
+ 
+ 조건별 성적 
+ 
+ 
+ 
+ -->
+ 
+ 히스토리 
+ 
+ 
+ 미디어가이드 
+ 
+ 
+ 삼성라이온즈21 
+ 
+ 
+ 표창 및 수상 
+ 
+ 
+ 레전드 
+ 
+ 
+ 역대 성적 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 팬 
+ 
+ 
+ 
+ 사자후 
+ 
+ -->
+ 
+ 
+ FAQ 
+ -->
+ 
+ 응원가 
+ 
+ -->
+ 
+ 라이온즈 스토리 
+ 
+ 
+ MVP 투데이 포토타임 
+ 
+ 
+ 포토자료실 
+ 
+ 
+ 
+ 응원가 
+ 
+ -->
+ 
+ 월페이퍼 
+ 
+ 
+ SNS 
+ 
+ 
+ 응원단 
+ 
+ 
+ 
+ 
+ 쇼핑 
+ 
+ 
+ 쇼핑 
+ 
+ 
+ 
+ 
+ 이벤트 
+ 
+ 
+ 진행 중 이벤트 
+ 
+ 
+ 종료된 이벤트 
+ 
+ 
+ 이벤트 안내 
+ 
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -->
+ 
+ 
+
+ 
+ ㅤ ㅤ ㅤ ㅤ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Today’s Match 
+ Next Match 
+ Last Match -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ .swiper {
+ background: url('../resources/images/bg__slide.jpg?221011') no-repeat center center;
+ background-size: cover;
+ position: relative;
+ }
+
+ .swiper-wrapper {
+ position: relative;
+ z-index: 1;
+ /* 낮은 값 설정 */
+ }
+
+ .swiper-slide {
+ width: 1280px;
+ /* 필요할 경우 추가 */
+ position: relative;
+ flex: 1 0 auto;
+ margin-left: -1px;
+ z-index: 1;
+ }
+
+ .swiper-slide .photo_img {
+ position: relative;
+ /* height: 785px; */
+ }
+
+ .swiper-slide .photo_img::before {
+ content: '';
+ display: inline-block;
+ width: 100%;
+ height: 100%;
+ background: rgba(15, 23, 36, 0.9);
+ position: absolute;
+ top: 0;
+ left: 0;
+ }
+
+ .swiper-slide-active .photo_img::before {
+ height: 50%;
+ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(15, 23, 36, 0) 100%) !important;
+ bottom: 0;
+ margin-top: auto;
+ }
+
+ .slide_text {
+ background: rgba(15, 23, 36, 0.9);
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ z-index: 100;
+ height: 65px;
+ display:none;
+ }
+
+ .slide_text .item {
+ font-size: 38px;
+ font-weight: 500;
+ color: #fff;
+ width: 100%;
+ text-align: center;
+ padding: 10px 0;
+ }
+
+ .swiper-pagination-bullet {
+ font-size: 15px; 
+ color: #fff;
+ opacity: 1;
+ width: 20px; 
+ height: 20px; 
+ line-height: 20px;
+ margin: 0 5px !important;
+ background: transparent;
+ font-weight: 600; 
+ }
+
+ .swiper-pagination-bullet-active {
+ color: #0066b3;
+ background: transparent;
+ }
+
+ .swiper .stop,
+ .swiper .play {
+ margin-left: 8px;
+ }
+
+ .swiper .play {
+ display: none;
+ }
+
+ .swiper-button-prev,
+ .swiper-rtl .swiper-button-next {
+ width: 20px;
+ height: 20px;
+ background: url(https://www.samsunglions.com/img/swiper/btn_prev.png) center center no-repeat;
+ background-size: contain;
+ /*left: calc((100% - 1400px)/2);*/
+ top: 50%;
+ margin-top: -10px;
+ z-index: 100;
+ }
+
+ .swiper-button-next,
+ .swiper-rtl .swiper-button-prev {
+ width: 20px;
+ height: 20px;
+ background: url(https://www.samsunglions.com/img/swiper/btn_next.png) center center no-repeat;
+ background-size: contain;
+ /*left: calc((100% - 1400px)/2);*/
+ top: 50%;
+ margin-top: -10px;
+ z-index: 100;
+ }
+
+ .swiper-button-prev:after,
+ .swiper-rtl .swiper-button-next:after,
+ .swiper-button-next:after,
+ .swiper-rtl .swiper-button-prev:after {
+ display: none;
+ }
+
+
+ .pagination_psBtn {
+ display: flex;
+ align-items: center;
+ justify-content: end;
+ position: absolute;
+ bottom: 96px;
+ left: 50%;
+ transform: translateX(-50%);
+ z-index: 500;
+ width: 1280px; 
+ }
+ .pagination_psBtn .inner {
+ position: relative; 
+ }
+
+ .pagination_psBtn .swiper-pagination {
+ width: auto !important;
+ line-height: 100% !important;
+ position: static;
+ display: flex;
+ align-items: center;
+ padding: 0 30px;
+ }
+
+ button[type=button] {
+ cursor: pointer;
+ border: none;
+ background-color: transparent;
+ outline: none;
+ }
+
+ .main_slider_box::before {content: ''; display: block; width: 100%; text-align: center; width: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 130px; font-weight: 600; z-index: 100; color: #fff; text-shadow: 6px 9px 10px #000; background: url(images/main/main_txt01.png) no-repeat center; height: 100%; }
+
+ .pride_area {margin: 0; }
+ .fan_txt {text-align: center; color: #000; font-size: 30px; padding: 55px 0; background: #eee; }
+ .fan_txt strong {display: block; font-size: 30px; color:#005BAC; font-weight: 600; margin-bottom: 10px; }
+ .main_conten_box {width: 1000px; margin: 0 auto;}
+ .fan_txt02 {text-align: center; margin: 50px 0 80px 0; }
+ .champion_logp {text-align: center; padding: 0 0 120px 0;}
+ .champion_logp .tit {font-size: 24px; color: #000; font-weight: 600; text-transform: uppercase; display: flex; align-items: center; gap: 15px; margin-bottom: 20px; } 
+ .champion_logp .tit span {font-size: 18px; color: #005BAC; font-weight: 400; }
+
+ .main_item_area {margin-bottom: 120px; }
+ .main_item_area .tit {font-size: 24px; color: #000; font-weight: 600; text-transform: uppercase; display: flex; align-items: center; gap: 15px; margin-bottom: 20px; } 
+ .main_item_area .tit span {font-size: 18px; color: #005BAC; font-weight: 400;}
+ .main_box {display: flex; align-items: center; justify-content: space-between;}
+ .main_box .item {width: 457px; position: relative; } 
+ .main_box .item a {display: flex; align-items: center; justify-content: center; width: 100%; color: #fff; font-size: 20px; }
+
+ .main_box02 {display: flex; align-items: center; justify-content: space-between;}
+ .main_box02 .item {width: 457px; }
+ .main_box02 .item .tit01 {font-size: 24px; color: #000; font-weight: 600; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 15px;}
+ .main_box02 .item .tit01 span {display: block; font-size: 18px; color: #005BAC; font-weight: 400;}
+ .main_box02 .item .thum_box {position: relative; width: 100%; }
+ .main_box02 .item .thum_box a {display: flex; align-items: center; justify-content: center; width: 100%; color: #fff; font-size: 20px; }
+ 
+ .sns_area {display: flex; align-items: center; justify-content: center; width: 100%; padding: 47px 0; gap: 60px; background: #eee;}
+ .sns_area .item {display: flex; align-items: center; gap: 60px; }
+ .sns_area .item + .item::before {content: ''; width: 3px; height: 26px; background: #fff; }
+ .sns_area .item a {display: block; text-align: center; }
+ .sns_area .item a span {display: block; font-size: 14px; color: #000; margin-top: 16px;}
+
+ .new_samsung {background: rgb(0 0 0 / 50%) !important;}
+ .event_banner {text-align: center;}
+
+ @font-face {
+ font-family: 'Paperlogy';
+ src: url('font/Paperlogy-4Regular.woff2') format('woff2');
+ font-weight: 400;
+ font-style: normal;
+ }
+ @font-face {
+ font-family: 'Paperlogy';
+ src: url('font/Paperlogy-6SemiBold.woff2') format('woff2');
+ font-weight: 600;
+ font-style: normal;
+ }
+ @font-face {
+ font-family: 'Paperlogy';
+ src: url('font/Paperlogy-7Bold.woff2') format('woff2');
+ font-weight: 700;
+ font-style: normal;
+ }
+ .new_schedule_area {margin-bottom: 100px;}
+ .new_schedule_area .new_schedule_box {background: #001a41;height: 280px;display: flex;align-items: center;}
+ .new_schedule_box .bx_inner {width: 990px; margin: 0 auto; padding: 0 80px; position: relative;}
+ .new_schedule_box .bx_inner .tit_box {display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;}
+ .new_schedule_box .bx_inner .tit_box .tit {display: flex; font-size: 24px; font-family: 'Paperlogy'; font-weight: 700; color: #fff; align-items: baseline; line-height: 1; letter-spacing: -1px;}
+ .new_schedule_box .bx_inner .tit_box .tit span {display: block; font-size: 18px; margin-left: 20px; font-family: 'Paperlogy'; font-weight: 400;}
+ .new_schedule_box .bx_inner .tit_box a {display: flex; align-items: center; justify-content: center; font-size: 18px; font-family: 'Paperlogy'; font-weight: 700; width: 122px; height: 30px; text-align: center; background: #fff; color: #001a41;}
+
+ .new_schedule_box .bx_inner .game_box {display: flex;}
+ .new_schedule_box .bx_inner .game_box .item {width: 100%; height: 180px; background: #fff; margin: 0;}
+ .new_schedule_box .bx_inner .game_box .item .days {font-size: 21px; color: #001a41; text-align: center; height: 53px; line-height: 53px; background: #49b0ff; font-family: 'Paperlogy'; font-weight: 600; width: 100%;}
+ .new_schedule_box .bx_inner .game_box .item .days.sat {color: #002aff;}
+ .new_schedule_box .bx_inner .game_box .item .days.sun {color: #ce0000;}
+ .new_schedule_box .bx_inner .game_box .item .g_info {display: flex; align-items: center; justify-content: center; flex-direction: column; height: 125px;}
+ .new_schedule_box .bx_inner .game_box .item .team {display: flex; align-items: center; justify-content: center; gap: 20px;}
+ .new_schedule_box .bx_inner .game_box .item .team em {font-style: normal; font-size: 18px; font-weight: 700; color: #001a41;}
+ .new_schedule_box .bx_inner .game_box .item .team span {font-size: 22px; font-weight: 700; color: #001a41;}
+ .new_schedule_box .bx_inner .game_box .item .time {margin-top: 18px; font-size: 15px; color: #555; text-align: center; font-family: 'Paperlogy'; font-weight: 500;}
+ .new_schedule_box .bx_inner .game_box .item.pending_item .days {font-size: 21px;}
+ .new_schedule_box .bx_inner .game_box .item .pending_logo {display: flex;align-items: center;justify-content: center;height: 100%;}
+ .new_schedule_box .bx_inner .game_box .item .game_label {margin-top: 12px;display: inline-flex;align-items: center;justify-content: center;padding: 3px 10px;border-radius: 8px;background: #d86cff;color: #fff;font-size: 13px;line-height: 1;font-family: 'Paperlogy';font-weight: 600;}
+ .new_schedule_box .bx_inner .game_box .item .game_label_wrap {margin-top: 12px;text-align: center;}
+ .gam_slider {position: static;}
+ .gam_slider .swiper-button-prev,
+ .gam_slider .swiper-button-next {width: 180px; height: 42px; position: absolute; top: auto; bottom: 90px; margin: 0; z-index: 100; border: none;}
+ .gam_slider .swiper-button-prev {background: url(img/swiper/game_btn_prev.png) center center no-repeat; left: -50px;}
+ .gam_slider .swiper-button-next {background: url(img/swiper/game_btn_next.png) center center no-repeat; right: -50px;}
+ 
+ 
+ 
+ document.addEventListener("DOMContentLoaded", function () {
+ var swiper = new Swiper(".mySwiper", {
+ slidesPerView: "auto",
+ spaceBetween: 0,
+ loop: true,
+ centeredSlides: true,
+ observer: true,
+ observeParents: true,
+ watchSlidesVisibility: true,
+ watchSlidesProgress: true,
+ pagination: {
+ el: ".swiper-pagination",
+ clickable: true,
+ renderBullet: function (index, className) {
+ return ' ' + (index + 1) + " ";
+ },
+ },
+ navigation: {
+ nextEl: ".swiper-button-next",
+ prevEl: ".swiper-button-prev"
+ },
+ autoplay: {
+ delay: 5000,
+ disableOnInteraction: false,
+ },
+ on: {
+ slideChangeTransitionEnd: function () {
+ showActiveSlideText();
+ }
+ }
+ });
+
+ function showActiveSlideText() {
+ // 모든 텍스트 숨기기
+ document.querySelectorAll(".slide_text .item").forEach(text => {
+ text.style.display = "none";
+ });
+
+ // 현재 활성화된 슬라이드 찾기
+ let activeSlide = document.querySelector(".swiper-slide-active");
+
+ if (activeSlide) {
+ let textId = activeSlide.getAttribute("data-id");
+ let targetText = document.getElementById(textId);
+
+ if (targetText) {
+ targetText.style.display = "block"; // 해당 텍스트 보이기
+ }
+ }
+ }
+
+ // 정지 버튼
+ document.querySelector(".stop").addEventListener("click", function () {
+ document.querySelector(".stop").style.display = "none";
+ document.querySelector(".play").style.display = "block";
+ swiper.autoplay.stop();
+ });
+
+ // 재생 버튼
+ document.querySelector(".play").addEventListener("click", function () {
+ document.querySelector(".stop").style.display = "block";
+ document.querySelector(".play").style.display = "none";
+ swiper.autoplay.start();
+ });
+
+ // 초기 텍스트 표시
+ showActiveSlideText();
+ });
+
+ 
+ 
+ $(function(){
+ $('.new_samsung .fmenu > li, .new_samsung .dim').hover(function(){
+ $(this).parents('.new_samsung').addClass('hover');
+ }, function(){
+ $(this).parents('.new_samsung').removeClass('hover');
+ });
+
+ /*** 
+ $('.bxslider').bxSlider({
+ mode: 'fade',
+ //auto: true,
+ pause: 4000,
+ //autoControls: true,
+ pager:true,
+ captions: true
+ });
+ ***/
+ });
+
+ function popupClose(){
+ if($('#oneDayCheck:checked').val() == 1){
+ closeWinWithCookie('today_pop', 1);
+ } else {
+ closeWin('today_pop') ;
+ }
+ };
+ 
+ 
+ 
+ $(function(){
+ $('.new_samsung .fmenu > li, .new_samsung .dim').hover(function(){
+ $(this).parents('.new_samsung').addClass('hover');
+ }, function(){
+ $(this).parents('.new_samsung').removeClass('hover');
+ });
+ 
+ $('.bxslider').bxSlider({
+ mode: 'fade',
+ //auto: true,
+ pause: 4000,
+ //autoControls: true,
+ pager:true,
+ captions: true
+ });
+ });
+
+ function popupClose(){
+ if($('#oneDayCheck:checked').val() == 1){
+ closeWinWithCookie('today_pop', 1);
+ } else {
+ closeWin('today_pop') ;
+ }
+ };
+ -->
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -->
+ 
+ 
+ 
+ 삼성 라이온즈 SNS  이벤트 진행 중 
+ 2026.03.28 - 2026.04.12 | 지금 바로 참여해보세요
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ champions 삼성라이온즈 우승 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ LIONS SCHEDULE
+ 삼성라이온즈 경기 일정 
+ 
+ 전체 일정 보기 → 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 9/19 (토)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 사직17:00 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 9/20 (일)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 사직14:00 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 9/22 (화)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 대구18:30 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 9/24 (목)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 문학17:00 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 9/29 (화)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 대구18:30 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 9/30 (수)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 대구18:30 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/1 (목)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 대구18:30 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/3 (토)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 대구14:00 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/4 (일)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 대구14:00 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/5 (월)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 대구14:00 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/6 (화)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 광주18:30 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/7 (수)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 수원18:30 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/9 (금)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 문학14:00 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/11 (일)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 대구14:00 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 10/12 (월)
+ 
+ 
+ 
+ VS 
+ 
+ 
+ 대구18:30 
+
+ 
+ 
+ 
+ 
+ 
+ 준비중입니다 
+ 
+ 
+ 
+ 
+ 
+ 
+ 준비중입니다 
+ 
+ 
+ 
+ 
+ 
+ 
+ 준비중입니다 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ var gamSlider = new Swiper('.gam_slider', {
+ slidesPerView: 6,
+ slidesPerGroup: 6,
+ spaceBetween: 13,
+ initialSlide: 6,
+ navigation: {
+ nextEl: '.swiper-button-next',
+ prevEl: '.swiper-button-prev',
+ },
+ });
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ lions shop 삼성라이온즈 공식 판매샵 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ lions sns
+ 삼성라이온즈 공식 소셜미디어 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ lions ad
+ 삼성라이온즈 스폰서쉽 & 광고 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 인스타그램 
+ 
+ 
+ 
+ 
+ 
+ 페이스북 
+ 
+ 
+ 
+ 
+ 
+ X(구 트위터) 
+ 
+ 
+ 
+ 
+ 
+ 네이버 클립 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 라이온즈tv
+ 
+ 
+ -->
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 팬과 함께하는 라이온즈tv 
+ 더욱더 다양해진 기획 콘텐츠와 덕아웃의 생생함을 느껴볼 수 있는 콘텐츠! 라이온즈 tv에서 확인하세요!
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 2026 라이온즈 SNS
+ 
+ 
+ -->
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 삼성 라이온즈 공식 SNS 
+ 삼성 라이온즈 공식 인스타그램 바로가기 링크입니다. 라이온즈 소식을 바로 확인해보세요!
+ 
+ 
+
+ 
+ 
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 올 댓 라이온즈 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ https://www.youtube.com/@lionstv1982 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 구단
+ 
+ 
+ 구단 소개 
+ 
+ 
+ 구단 소식 
+ 
+ 
+ 히스토리 
+ 
+ 
+ 
+ 엠블럼 캐릭터 
+ 
+ 
+ GO! 라팍 
+ 
+ 
+ 라이온즈 파트너 
+ 
+ 
+ 사회공헌활동 
+ 
+ 
+ 
+ 
+ 응원단 
+ 
+ -->
+ 
+ 계열사 소개 
+ 
+ 
+ 
+ 
+ 선수단
+ 
+ 
+ 박진만 감독 
+ 박진만 감독 
+ 
+ 코칭스텝 
+ 
+ 
+ 투수 
+ 
+ 
+ 타자 
+ 
+ 
+ 군입대선수 
+ 
+ 
+ 신입단선수 
+ 
+ 
+ 응원단 
+ -->
+ 
+ 뎁스차트 
+ 
+ 
+ 
+ 
+ 경기정보
+ 
+ 
+ 1군 일정 
+ 
+ 
+ 퓨처스 일정 
+ 
+ 
+ 
+ 블루멤버십 안내 
+ 
+ 
+ SUITE BOX 
+ 
+ 
+ 1군 엔트리 
+ 
+ 
+ 게임노트 
+ 
+ 
+ 
+ 
+ 
+ 기록실
+ 
+ 
+ 팀 순위 
+ 
+ 
+ 선수별 성적 
+ 
+ 
+ 조건별 성적 
+ 
+ 
+ 
+ 
+ 
+ 히스토리
+ 
+ 
+ 레전드 
+ 
+ 
+ 표창 및 수상 
+ 
+ 
+ 역대 성적 
+ 
+ 
+ 
+ 미디어가이드 
+ 
+ 
+ 삼성라이온즈21 
+ 
+ 
+ 
+ 
+ 
+ 팬
+ 
+ 
+ 
+ 사자후 
+ 
+ 
+ 
+ FAQ 
+ 
+ 
+ 
+ 응원가 
+ 
+ 
+ 
+ 라이온즈 스토리 
+ 
+ 
+ MVP 투데이 포토타임 
+ 
+ 
+ 포토자료실 
+ 
+ 
+ 응원가 
+ 
+ 
+ 
+ 월페이퍼 
+ 
+ 
+ SNS 
+ 
+ 
+ 응원단 
+ 
+ 
+ 
+ 쇼핑 
+ 
+ 쇼핑 
+ 
+ 
+ 
+ 
+ 
+ 이벤트
+ 
+ 
+ 진행중 이벤트 
+ 
+ 
+ 종료된 이벤트 
+ 
+ 
+ 이벤트 안내 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 이용약관 -->
+ 
+ 
+ 개인정보처리방침 
+ -->
+ 
+ 개인정보처리방침 
+ 
+ 
+ 영상정보처리기기 운영관리방침 
+ 
+ 
+ 
+ 이메일무단수집거부 
+ 
+ 
+ Contact Us 
+ 
+ 
+ 광고문의 
+ 
+ 
+ Site Map 
+ 
+ 
+ 언론사진자료실 
+ 
+ 
+ 
+ 대표이사: 유정근 / 사업자번호: 504-81-03755 / 개인정보취급방침관리자: 삼성 라이온즈 / 전화번호: 053-780-3300 / 주소: 대구광역시 수성구 야구전설로 1 Copyright©Samsung Lions. All Right Reserved. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ $(function(){
+ //MatchToday 로딩
+ //getTodayMatch('20161008');
+ 
+
+ //투데이 매치 슬라이드
+ var liveEffSwiper = new Swiper('.live_effect_slide .swiper-container',{
+ paginationClickable: true,
+ calculateHeight:true,
+ slidesPerView: 1,
+ loop: true,
+ //autoplay:5000
+ });
+ 
+ //이전 슬라이더
+ $('.eff-button-prev').bind('click', function(e){ 
+ e.preventDefault(); 
+ //getTodayMatch(prevDay);
+ liveEffSwiper.swipePrev() 
+ 
+ });
+ 
+ //다음 슬라이더
+ $('.eff-button-next').bind('click', function(e){ 
+ e.preventDefault(); 
+ //getTodayMatch(nextDay);
+ liveEffSwiper.swipeNext() 
+ });
+
+ //로딩시 슬라이더 추가
+ //getTodayMatch('20160405');
+ //getTodayMatch('20261001');
+ 
+ }); 
+ 
+ //투데이 매치 로딩 
+ var prevDay; //최근 경기날짜
+ var nextDay; //다음 경기날짜
+
+ function getTodayMatch(today){
+ prevDay = '';
+ nextDay = '';
+ 
+
+
+ //get PrevDay 
+ $.get('/ajax/main/2017/getPrevDay.asp',{today:today}, function(response, status, xhr){
+ prevDay = response;
+ });
+
+ //get NextDay 
+ $.get('/ajax/main/2017/getNextDay.asp',{today:today}, function(response, status, xhr){
+ nextDay = response;
+ });
+ 
+ $('.swiper-slide').load('/ajax/main/2017/getMatchToday.asp',{today:today}, function(response, status, xhr){
+ $('.tit .matchDate').html($(this).find('.txtGameDate').html());
+ $('.tit .today_tit').text($(this).find('.txtMatchLable').html());
+
+ //console.log($(this).find('.txtMatchLable').html())
+ //console.log($(this).find('.txtGameDate').html())
+ });
+ 
+ }
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 

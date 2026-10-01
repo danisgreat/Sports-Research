@@ -1,0 +1,165 @@
+
+	
+<div class="tab-depth2">
+	<ul class="tab" id="tabPreview">
+		
+	</ul>
+</div>
+
+<h5 class="sub-tit">팀 전력비교</h5>
+					
+<div class="tab-depth3 mb0">
+	<ul class="tab">
+		<li class="on"><a href="#none" attr-value="SEASON">시즌</a>|</li>
+		<li><a href="#none" attr-value="HOMEAWAY">홈/원정</a>|</li>
+		<li><a href="#none" attr-value="VS">맞대결</a></li>
+	</ul>
+</div>
+<div class="sub-script row mb5">
+	
+</div>
+					
+<div class="tbl-type05 mb50">
+	<table class="tbl" id="tblRecord" summary="맞대결 성적 표(맞대결 성적, 시즌, 최근5경기, 팀 평균자책점, 팀 타율, 평균득점, 평균실점)">
+		<caption>라인업 분석 표</caption>
+		<colgroup>
+			<col width="16%" />
+			<col width="13%" />
+			<col width="13%" />
+			<col width="13%" />
+			<col width="13%" />
+			<col width="13%" />
+			<col width="13%" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th id="txtGroup">맞대결 성적</th>
+				<th>시즌</th>
+				<th>최근5경기</th>
+				<th>평균자책점</th>
+				<th>타율</th>
+				<th>평균득점</th>
+				<th>평균실점</th>
+			</tr>
+		</thead>										
+	</table>
+</div>
+
+<h6 class="mb10">맞대결 키플레이어</h6>
+					
+<div class="tbl-prev-keyplayer">
+	<table class="tbl" id="tblKeyPlayer" summary="맞대결 키플레이어">
+		<caption>맞대결 키플레이어</caption>
+		<colgroup>
+			<col width="15%" />
+			<col width="8%" />
+			<col width="35%" />
+			<col width="8%" />
+			<col width="35%" />
+		</colgroup>
+	</table>
+</div>
+
+<script type="text/javascript">
+    var group = "SEASON";
+
+    $(document).ready(function () {
+        getGroupTitle();    // 타이틀
+        getTeamTableGrid(); // 팀 기록비교
+        getKeyPlayerTableGrid();    // 키플레이어
+    });
+
+    // 구분선택
+    $(".tab-depth3 > ul > li").click(function (e) {
+        e.preventDefault();
+        $(this).addClass("on").siblings().removeClass("on");
+        group = $(this).find("> a").attr("attr-value");
+
+        getGroupTitle();    // 타이틀
+        getTeamTableGrid(); // 팀 기록비교
+    });
+
+    // 팀 기록비교 (추후작업진행, 리그, 시리즈 request)
+    function getTeamTableGrid() {
+        var gameId = $(".game-list-n > li.on").attr("g_id");
+        var leId = $(".game-list-n > li.on").attr("le_id");
+        var srId = $(".game-list-n > li.on").attr("sr_id");
+        var seasonId = $(".game-list-n > li.on").attr("season");
+
+        if (srId == 4 || srId == 3 || srId == 5 || srId == 7) { // 포스트시즌 : 정규시즌 기록 표출
+            srId = 0;
+        }
+
+        var request = $.ajax({
+            type: "post"
+            , url: "/ws/Schedule.asmx/GetTeamRecord"
+            , dataType: "json"
+            , data: {
+                leId: leId
+                , srId: srId
+                , seasonId: seasonId
+                , gameId: gameId
+                , groupSc: group
+            }
+            , async: false
+        });
+
+        request.done(function (data) {
+            $("#tblRecord").S2iGridTable(
+            {
+                rows: data.rows
+            });
+        });
+    }
+
+    // 키플레이어
+    function getKeyPlayerTableGrid() {
+        var leId = $(".game-list-n > li.on").attr("le_id");
+        var srId = $(".game-list-n > li.on").attr("sr_id");
+        var seasonId = $(".game-list-n > li.on").attr("season");
+        var awayTeamId = $(".game-list-n > li.on").attr("away_id");
+        var homeTeamId = $(".game-list-n > li.on").attr("home_id");
+        var vsGameCn = $(".game-list-n > li.on").attr("vs_game_cn");
+
+        if (srId == 4 || srId == 3 || srId == 5 || srId == 7) { // 시리즈 1차전은 정규시즌 키플레이어, 2차전부터는 포스트시즌 키플레이어 표출
+            if (vsGameCn == 1) {
+                srId = 0;
+            }
+        }
+
+        var request = $.ajax({
+            type: "post"
+            , url: "/ws/Schedule.asmx/GetTeamKeyPlayer"
+            , dataType: "json"
+            , data: {
+                leId: leId
+                , srId: srId
+                , seasonId: seasonId
+                , awayTeamId: awayTeamId
+                , homeTeamId: homeTeamId
+            }
+            , async: false
+        });
+
+        request.done(function (data) {
+            $("#tblKeyPlayer").S2iGridTable(
+            {
+                header: data.headers
+                ,rows: data.rows
+            });
+        });
+    }
+
+    // 타이틀
+    function getGroupTitle() {
+        if (group == "SEASON") {
+            $("#txtGroup").text("시즌 성적");
+        }
+        else if (group == "HOMEAWAY") {
+            $("#txtGroup").text("홈/원정 성적");
+        }
+        else {
+            $("#txtGroup").text("맞대결 성적");
+        }
+    }
+</script>

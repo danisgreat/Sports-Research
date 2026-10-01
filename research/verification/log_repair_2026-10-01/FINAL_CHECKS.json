@@ -1,0 +1,44 @@
+{
+  "observed_utc": "2026-10-01T10:48:17.462092+00:00",
+  "valid": true,
+  "checks": {
+    "original_snapshot_files": 89,
+    "frozen_original_research_files": 17,
+    "part6_original_source_block": "141740_BYTES_HASH_MATCHED",
+    "next_card_id": "P-527",
+    "verified_model_builds": 4,
+    "current_live_qualified_models": 0,
+    "source_receipt_bodies_verified": 73,
+    "historical_learning_rows": 2004,
+    "historical_learning_cards": 522,
+    "historical_source_anchors_verified": 7,
+    "active_league_csvs": {
+      "EPL": 2280,
+      "NBL": 738
+    },
+    "issued_cards_during_implementation": 0,
+    "canonical_research_cards": [
+      "P-523",
+      "P-524",
+      "P-525",
+      "P-526"
+    ],
+    "research_next_id": "P-527",
+    "receipt_schema_adapter": "IN_MEMORY_ONLY_NO_SOURCE_REWRITES",
+    "active_freeze": "CONTROL_MANIFEST_2026-10-01-5.md",
+    "active_manifest_files": 326,
+    "active_manifest_mismatches": [],
+    "part6_pre_repair_bytes_retained_contiguously": true,
+    "ledger_records": 8,
+    "pending_research_transactions": 0,
+    "ledger_head_sha256": "f4bafbb0aef9ea7b1211d2f05177de8130b83203254ba08a8aaedfd03a0b0fd3",
+    "status_register": "ONE_CURRENT_QUEUE_ONE_HISTORY_HEADING",
+    "mini": "RETIRED_EXACT_ORIGINAL_RETAINED",
+    "original_import_hashes_verified": 4,
+    "posted_lineup_names_unchanged_on_delivery_refresh": true,
+    "current_research_source_bodies_verified": 65,
+    "kbo_ranks_and_live_timing_readback": true
+  },
+  "issues": [],
+  "limitation": "Mechanics/custody verification does not establish future predictive skill. Archive validation and tests are separate recorded checks. Research IDs are canonical storage identities, not certified prospective ISSUE records."
+}

@@ -1,6 +1,12 @@
 # Card and log templates
 
-Current authority: [CURRENT_RULES.md](CURRENT_RULES.md). The canonical issuer renders the issued Markdown core from verified evidence; handwritten probabilities and validity flags cannot issue a card.
+Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.01-v7.1. Requested research uses the following template and receives a canonical ID regardless of calibration. Later sections describe the separate frozen certified-issuer protocol; its gates do not block requested research.
+
+## Requested research card — default workflow
+
+Prepare JSON with `event_key`, `native_event_id` (unknown if not verified), `league`, `title`, `tracking_handle`, `analysis_status`, `source_path` and full Markdown `body`. Body: exact fixture/time/state and source update time; supplied contracts and sporting/operator semantics; posted participants; season/recent/exposure/bullpen/environment evidence; ranked four picks and potential winner; rationale and failure routes; calibration/assumption/missingness labels; full sources and retained receipts. Use `UNCALIBRATED_QUALITATIVE` and `NOT_ESTIMATED` for unsupported percentages. Analyst scenarios may contain explicit uncalibrated reproducible estimates.
+
+Run `py -3.14 -m research.operations.log_card commit card.json`, then `verify`. Retain actual log time, original source bytes and exact projection. Import original cards literally beneath a dated canonical correction; do not retroactively rewrite probabilities, claim times or fabricate missing ranks. Part 6 is the destination; existing events retain their ID for dated additions. No retrospective until requested.
 
 ## Complete universe
 

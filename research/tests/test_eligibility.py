@@ -78,7 +78,11 @@ class EvidenceFactory:
         self.write(self.registry_path, self.registry)
         self.ledger_path = self.root/"canonical.jsonl"
         self.part6 = self.root/"part6.md"
-        self.part6.write_bytes(issue.PART6.read_bytes())
+        # Synthetic issuance starts after the reserved original source block;
+        # real later cards must not change this fixture's initial counter.
+        production_raw, _ = issue._custody(issue.PART6)
+        boundary = production_raw.index(issue.END_ORIGINAL)+len(issue.END_ORIGINAL)
+        self.part6.write_bytes(production_raw[:boundary]+b"\r\n")
         self.reconciliation = self.root/"reconciliation.md"
         self.reconciliation.write_bytes(issue.RECONCILIATION.read_bytes())
 
@@ -245,6 +249,57 @@ def test_retrospective_status_cannot_issue_and_code_hash_change_blocks(evidence)
     bundle=evidence.bundle();(evidence.root/evidence.model_ref["path"]).write_text("changed")
     result=eligibility.validate_evidence(bundle,evidence.registry_path,evidence_root=evidence.root)
     assert not result.eligible and "hash mismatch" in result.reasons[0]
+
+
+@pytest.mark.parametrize("change,phrase", [
+    (lambda registry: registry.pop("baseline_definitions"), "no unique exact-scope registration"),
+    (lambda registry: registry["baseline_definitions"].append(deepcopy(registry["baseline_definitions"][0])), "no unique exact-scope registration"),
+    (lambda registry: registry["admissions"][0].update(baseline_version="unregistered"), "baseline version differs"),
+    (lambda registry: registry["baseline_definitions"][0].update(endpoint="FINAL_SCORE"), "no unique exact-scope registration"),
+    (lambda registry: registry["baseline_definitions"][0].update(families=["1X2"]), "every contract family"),
+    (lambda registry: registry["baseline_definitions"][0].update(approved_utc="2030-01-01T09:00:00+00:00"), "unavailable at cutoff"),
+    (lambda registry: registry["baseline_definitions"][0].update(approved_utc="2030-01-01T08:59:59+00:00"), "unavailable at cutoff"),
+])
+def test_baseline_registration_is_unique_scoped_and_available_before_cutoff(evidence,change,phrase):
+    change(evidence.registry);evidence.refresh()
+    result=eligibility.validate_evidence(evidence.bundle(),evidence.registry_path,evidence_root=evidence.root)
+    assert not result.eligible and phrase in result.reasons[0]
+
+
+@pytest.mark.parametrize("field,value", [
+    ("baseline_version","another-baseline"),
+    ("baseline_definition_ref",{}),
+    ("baseline_code_artifacts",[]),
+    ("input_checksum","0"*64),
+])
+def test_baseline_distribution_cannot_change_version_definition_code_or_inputs(evidence,field,value):
+    bundle=evidence.bundle()
+    ref=bundle["distributions"]["baseline"]
+    artifact=json.loads((evidence.root/ref["path"]).read_text());artifact[field]=value
+    bundle["distributions"]["baseline"]=evidence.ref(ref["path"],artifact)
+    result=eligibility.validate_evidence(bundle,evidence.registry_path,evidence_root=evidence.root)
+    assert not result.eligible and "baseline distribution" in result.reasons[0]
+
+
+@pytest.mark.parametrize("ref_name", ["baseline_code_ref","baseline_ref"])
+def test_baseline_code_or_definition_drift_fails_closed(evidence,ref_name):
+    bundle=evidence.bundle();ref=getattr(evidence,ref_name)
+    (evidence.root/ref["path"]).write_bytes(b"changed retained baseline artifact")
+    result=eligibility.validate_evidence(bundle,evidence.registry_path,evidence_root=evidence.root)
+    assert not result.eligible and "hash mismatch" in result.reasons[0]
+
+
+def test_holdout_cannot_qualify_a_changed_baseline(evidence):
+    admission=evidence.registry["admissions"][0]
+    review_ref=admission["qualification_artifacts"][0]
+    review=json.loads((evidence.root/review_ref["path"]).read_text())
+    holdout_ref=review["holdout_ref"];holdout=json.loads((evidence.root/holdout_ref["path"]).read_text())
+    holdout["baseline_version"]="different-comparator"
+    review["holdout_ref"]=evidence.ref(holdout_ref["path"],holdout)
+    admission["qualification_artifacts"]=[{**evidence.ref(review_ref["path"],review),"kind":"live_qualification"}]
+    evidence.refresh()
+    result=eligibility.validate_evidence(evidence.bundle(),evidence.registry_path,evidence_root=evidence.root)
+    assert not result.eligible and "untouched exact-model/family holdout" in result.reasons[0]
 
 
 def test_native_nbl_parser_checks_id_pagination_state_and_integer_score(tmp_path):

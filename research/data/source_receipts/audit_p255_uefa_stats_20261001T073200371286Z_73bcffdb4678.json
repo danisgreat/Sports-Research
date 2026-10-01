@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "audit_p255_uefa_stats",
+  "publisher": "matchstats.uefa.com",
+  "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://matchstats.uefa.com/v1/team-statistics/2049369",
+  "final_url": "https://matchstats.uefa.com/v1/team-statistics/2049369",
+  "retrieved_utc": "2026-10-01T07:32:00.371286+00:00",
+  "response_sha256": "73bcffdb46788fd4551066f55625173d798d28b8ff1ca6ff676f4948631c4b2d",
+  "body_path": "research/data/benchmark/source_snapshots/audit_p255_uefa_stats_20261001T073200371286Z_73bcffdb4678.body",
+  "response_bytes": 15288,
+  "content_type": "application/json",
+  "parser_id": "AUDIT_READBACK_V1",
+  "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+  "market_quarantined": true,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

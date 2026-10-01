@@ -13,6 +13,9 @@ def test_opened_epl_tuning_and_holdout_cannot_be_overwritten():
         run_tuning()
     with pytest.raises(RuntimeError, match="already exists"):
         run_holdout()
+    from research.src.baselines import build
+    with pytest.raises(FileExistsError,match="baseline snapshot already exists"):
+        build()
 
 
 def test_one_distribution_all_families_and_half_scaled_brier():

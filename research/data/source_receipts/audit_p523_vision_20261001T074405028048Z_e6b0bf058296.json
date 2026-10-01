@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "audit_p523_vision",
+  "publisher": "www.vision360.bo",
+  "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.vision360.bo/noticias/2026/09/30/70320-the-strongest-empata-con-oriente-en-santa-cruz-y-da-otro-paso-rumbo-a-cuartos-de-final",
+  "final_url": "https://www.vision360.bo/noticias/2026/09/30/70320-the-strongest-empata-con-oriente-en-santa-cruz-y-da-otro-paso-rumbo-a-cuartos-de-final",
+  "retrieved_utc": "2026-10-01T07:44:05.028048+00:00",
+  "response_sha256": "e6b0bf058296864ed407a85e5bf116a282fd959acbffa29b465d725a1871253c",
+  "body_path": "research/data/benchmark/source_snapshots/audit_p523_vision_20261001T074405028048Z_e6b0bf058296.body",
+  "response_bytes": 146901,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "AUDIT_READBACK_V1",
+  "registry_sha256": "abfce9263b4ca2a3552c687b83ebb26dab971a48bc2e67c0af13810703215f7e",
+  "market_quarantined": true,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

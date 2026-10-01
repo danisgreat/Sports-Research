@@ -1,0 +1,1471 @@
+[
+  {
+    "event_id": "36f8c608-58ad-11f1-aa0e-2bbb920071b5",
+    "shadow_path": "research/shadow/nbl27/36f8c608-58ad-11f1-aa0e-2bbb920071b5.json",
+    "unchanged_shadow_sha256": "ed28d070d28c0339d09e2116fbe6b986dc3b9c629b29ba38b9eddfbd247b0f85",
+    "frozen_original": {
+      "stage": "MODEL_ONLY_SHADOW",
+      "shadow_only": true,
+      "performance_eligible": false,
+      "event_id": "36f8c608-58ad-11f1-aa0e-2bbb920071b5",
+      "season": "NBL27",
+      "official_event_url": "https://schedule.nbl.com.au/match?league=NBL&match=36f8c608-58ad-11f1-aa0e-2bbb920071b5",
+      "home": "NZL",
+      "away": "CNS",
+      "start_utc": "2026-09-30T07:30:00+00:00",
+      "forecast_utc": "2026-09-29T04:52:59.888286+00:00",
+      "data_cutoff_utc": "2026-09-29T04:52:01.159718+00:00",
+      "model_version": "nbl-joint-0.1.0",
+      "input_checksum": "1e7be5b5c61d4f4ffda8707f883696a89cb93db1965c1380caa28fd6fc2f3e74",
+      "current_snapshot_sha256": "8a334c6bfcb6358ad939c0b46ab363e8b99ef892ac3f3e86172eb689fdb8354f",
+      "holdout_report_sha256": "cacbda05740b13543d27facdf5771497be37866eb55f4a71c79c0fb554addabf",
+      "training_matches": 751,
+      "effective_matches": 211.2968709780337,
+      "p_model_home_ml": 0.7258756315120147,
+      "p_model_away_ml": 0.27412436848798527,
+      "joint_margin_total": {
+        "mean_margin": 8.64153987412584,
+        "mean_total": 180.29256603928656,
+        "sd_margin": 14.393296727111908,
+        "sd_total": 17.942499583759002,
+        "correlation": 0.11201209401689194
+      },
+      "issuance_status": "NO_CARD_ISSUED",
+      "adjustment_status": "NOT_RESEARCHED"
+    },
+    "current_owner_record": {
+      "id": "36f8c608-58ad-11f1-aa0e-2bbb920071b5",
+      "starts_at_ms": 1790753400000,
+      "round_label": "3",
+      "match_title": "NZ Breakers v Cairns Taipans men 30-09-2026",
+      "match_slug": "nz-breakers-v-cairns-taipans-men-30-09-2026",
+      "venue_name": "Spark Arena",
+      "home": {
+        "id": "bbae77db-317d-4c17-aa04-75d53d20ad15",
+        "name": "NZ Breakers",
+        "nickname": "NZL",
+        "team_code": "NZL",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/9c43694837504a4d8ec00f739bcfff0d?size=200&format=webp",
+        "ticket_url": "https://fans.nzbreakers.basketball/schedule",
+        "wins": 2,
+        "losses": 2,
+        "position": 6,
+        "form": [
+          "W",
+          "L",
+          "L",
+          "W",
+          "W"
+        ]
+      },
+      "away": {
+        "id": "6bf2a6e3-2626-491d-962b-48805205c06e",
+        "name": "Cairns Taipans",
+        "nickname": "CNS",
+        "team_code": "CNS",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/3e4bf5b806224c55b6bf4fc3ffb448c3?size=200&format=webp",
+        "ticket_url": "https://tickets.taipans.com/",
+        "wins": 1,
+        "losses": 3,
+        "position": 9,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "L",
+          "W"
+        ]
+      },
+      "home_score": 98,
+      "away_score": 75,
+      "status_raw": "CONFIRMED",
+      "phase": "complete",
+      "primary_broadcaster": {
+        "label": "ESPN on Disney",
+        "logo": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_light": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_dark": "https://nxs.nbl.com.au/assets/d82a6ca8-5b33-4bb1-aa60-e5f8caa542e6.png"
+      },
+      "secondary_broadcaster": null,
+      "match_logo_url": "https://nxs.nbl.com.au/assets/a5b5a0fc-c32e-4018-8e08-86e427e07612.webp",
+      "match_bg_url": "https://nxs.nbl.com.au/assets/e1f59f97-e1a4-4b02-9eb5-69a6706e42fe.png",
+      "division": null,
+      "division_line": null,
+      "season_type": "regular",
+      "season_id": "67d4a190-40bc-4bfb-a9a2-11bd0b93f020",
+      "related_links": []
+    },
+    "current_receipt": {
+      "schema_version": 1,
+      "source_id": "audit_nbl_official",
+      "publisher": "schedule.nbl.com.au",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "retrieved_utc": "2026-10-01T07:32:12.019558+00:00",
+      "response_sha256": "51a0a57ae2f49a03de2e661f8954c96f3ae8aef69b9e47135e7dad0c2c5fc8be",
+      "body_path": "research/data/benchmark/source_snapshots/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.body",
+      "response_bytes": 320067,
+      "content_type": "application/json; charset=utf-8",
+      "parser_id": "AUDIT_READBACK_V1",
+      "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+      "market_quarantined": true,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.json"
+    },
+    "performance_eligible": false,
+    "canonical_card_id": null,
+    "actual_start": "NOT_CERTIFIED",
+    "terminal_quorum": "SINGLE_OWNER_COLLECTION; INDEPENDENCE_UNKNOWN",
+    "baseline_status": "NO_NEW_AFTER_RESULT_BASELINE",
+    "disposition": "MODEL_ONLY_DIAGNOSTIC_GRADE_CARRIED_AND_RECHECKED",
+    "final_home": 98,
+    "final_away": 75,
+    "p_home": 0.7258756315120147,
+    "brier": 0.07514416939893673,
+    "logloss": 0.320376585289248
+  },
+  {
+    "event_id": "3718a994-58ad-11f1-add9-d98e318e0a1e",
+    "shadow_path": "research/shadow/nbl27/3718a994-58ad-11f1-add9-d98e318e0a1e.json",
+    "unchanged_shadow_sha256": "beee987497a3a76cde3f69b179b4ee339a0ac7a398347cf04a6de56f15deef17",
+    "frozen_original": {
+      "stage": "MODEL_ONLY_SHADOW",
+      "shadow_only": true,
+      "performance_eligible": false,
+      "event_id": "3718a994-58ad-11f1-add9-d98e318e0a1e",
+      "season": "NBL27",
+      "official_event_url": "https://schedule.nbl.com.au/match?league=NBL&match=3718a994-58ad-11f1-add9-d98e318e0a1e",
+      "home": "SYD",
+      "away": "BRI",
+      "start_utc": "2026-09-30T09:30:00+00:00",
+      "forecast_utc": "2026-09-29T04:52:59.888286+00:00",
+      "data_cutoff_utc": "2026-09-29T04:52:01.159718+00:00",
+      "model_version": "nbl-joint-0.1.0",
+      "input_checksum": "1e7be5b5c61d4f4ffda8707f883696a89cb93db1965c1380caa28fd6fc2f3e74",
+      "current_snapshot_sha256": "8a334c6bfcb6358ad939c0b46ab363e8b99ef892ac3f3e86172eb689fdb8354f",
+      "holdout_report_sha256": "cacbda05740b13543d27facdf5771497be37866eb55f4a71c79c0fb554addabf",
+      "training_matches": 751,
+      "effective_matches": 211.2968709780337,
+      "p_model_home_ml": 0.9255510845812607,
+      "p_model_away_ml": 0.07444891541873933,
+      "joint_margin_total": {
+        "mean_margin": 20.775795406046527,
+        "mean_total": 186.5325421499283,
+        "sd_margin": 14.393296727111908,
+        "sd_total": 17.942499583759002,
+        "correlation": 0.11201209401689194
+      },
+      "issuance_status": "NO_CARD_ISSUED",
+      "adjustment_status": "NOT_RESEARCHED"
+    },
+    "current_owner_record": {
+      "id": "3718a994-58ad-11f1-add9-d98e318e0a1e",
+      "starts_at_ms": 1790760600000,
+      "round_label": "3",
+      "match_title": "Sydney Kings v Brisbane Bullets men 30-09-2026",
+      "match_slug": "sydney-kings-v-brisbane-bullets-men-30-09-2026",
+      "venue_name": "Afterpay Arena",
+      "home": {
+        "id": "39fc4268-0cdf-455f-9ca1-12e344064000",
+        "name": "Sydney Kings",
+        "nickname": "SYD",
+        "team_code": "SYD",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/1b57cdaa77d54a9ba47a30fd32243352?size=200&format=webp",
+        "ticket_url": "https://premier.ticketek.com.au/shows/show.aspx?sh=KINGS27",
+        "wins": 3,
+        "losses": 0,
+        "position": 1,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "L",
+          "W"
+        ]
+      },
+      "away": {
+        "id": "f8185bc5-2674-4293-a2a7-aeb8c7549b30",
+        "name": "Brisbane Bullets",
+        "nickname": "BRI",
+        "team_code": "BRI",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/33f173b6b14a4f9f97093495704d489a?size=200&format=webp",
+        "ticket_url": "https://premier.ticketek.com.au/shows/show.aspx?sh=BULLETS27",
+        "wins": 2,
+        "losses": 1,
+        "position": 3,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "L",
+          "L"
+        ]
+      },
+      "home_score": 93,
+      "away_score": 78,
+      "status_raw": "CONFIRMED",
+      "phase": "complete",
+      "primary_broadcaster": {
+        "label": "ESPN on Disney",
+        "logo": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_light": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_dark": "https://nxs.nbl.com.au/assets/d82a6ca8-5b33-4bb1-aa60-e5f8caa542e6.png"
+      },
+      "secondary_broadcaster": null,
+      "match_logo_url": "https://nxs.nbl.com.au/assets/a5b5a0fc-c32e-4018-8e08-86e427e07612.webp",
+      "match_bg_url": "https://nxs.nbl.com.au/assets/e1f59f97-e1a4-4b02-9eb5-69a6706e42fe.png",
+      "division": null,
+      "division_line": null,
+      "season_type": "regular",
+      "season_id": "67d4a190-40bc-4bfb-a9a2-11bd0b93f020",
+      "related_links": []
+    },
+    "current_receipt": {
+      "schema_version": 1,
+      "source_id": "audit_nbl_official",
+      "publisher": "schedule.nbl.com.au",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "retrieved_utc": "2026-10-01T07:32:12.019558+00:00",
+      "response_sha256": "51a0a57ae2f49a03de2e661f8954c96f3ae8aef69b9e47135e7dad0c2c5fc8be",
+      "body_path": "research/data/benchmark/source_snapshots/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.body",
+      "response_bytes": 320067,
+      "content_type": "application/json; charset=utf-8",
+      "parser_id": "AUDIT_READBACK_V1",
+      "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+      "market_quarantined": true,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.json"
+    },
+    "performance_eligible": false,
+    "canonical_card_id": null,
+    "actual_start": "NOT_CERTIFIED",
+    "terminal_quorum": "SINGLE_OWNER_COLLECTION; INDEPENDENCE_UNKNOWN",
+    "baseline_status": "NO_NEW_AFTER_RESULT_BASELINE",
+    "disposition": "MODEL_ONLY_DIAGNOSTIC_GRADE_CARRIED_AND_RECHECKED",
+    "final_home": 93,
+    "final_away": 78,
+    "p_home": 0.9255510845812607,
+    "brier": 0.0055426410070266025,
+    "logloss": 0.07736595175360764
+  },
+  {
+    "event_id": "36f2e004-58ad-11f1-aa96-6775645a7b9a",
+    "shadow_path": "research/daily/20261001T021702970997Z/NBL/shadows/36f2e004-58ad-11f1-aa96-6775645a7b9a.json",
+    "unchanged_shadow_sha256": "809fdfe07ca3955b9587f8c0bda0a3130956c10c6e49811d086495d2e820998c",
+    "frozen_original": {
+      "event_id": "36f2e004-58ad-11f1-aa96-6775645a7b9a",
+      "start_utc": "2026-10-02T09:30:00+00:00",
+      "home": "ILL",
+      "away": "ADL",
+      "lane": "NBL",
+      "official_event_id": "36f2e004-58ad-11f1-aa96-6775645a7b9a",
+      "stage": "MODEL_ONLY_SHADOW",
+      "issuance_status": "NO_CARD_ISSUED",
+      "performance_eligible": false,
+      "family": "ML",
+      "endpoint": "INCL_OT",
+      "forecast_utc": "2026-10-01T02:17:04.630882+00:00",
+      "data_cutoff_utc": "2026-10-01T02:17:04.543174+00:00",
+      "probabilities": [
+        0.3929702031181543,
+        0.6070297968818457
+      ],
+      "model_version": "nbl-oof-width-0.2.0",
+      "shadow_only": true,
+      "league": "NBL",
+      "baseline_version": "nbl-population-home-0.1.0",
+      "baseline_probabilities": [
+        0.5364238410596026,
+        0.4635761589403974
+      ],
+      "strong_comparator": "nbl-fixed-elo-0.1.0",
+      "strong_comparator_probabilities": [
+        0.4548213855523813,
+        0.5451786144476187
+      ],
+      "model_artifacts": [
+        {
+          "path": "research/requirements.lock.txt",
+          "sha256": "508a508c3effa08821e9fe17d87ef1204ffd5c8aa9069e4788401906c7120301"
+        },
+        {
+          "path": "research/runs/epl_2025-26_holdout.json",
+          "sha256": "5cadf89505287a18a84f3db2db1bdabadb59431b9f225b1bc4ea9d5e397774dd"
+        },
+        {
+          "path": "research/runs/epl_tuning_lock.json",
+          "sha256": "adbe0390675be8da4e19176e52a6c7691b32b816084301a6741ce67e86aad553"
+        },
+        {
+          "path": "research/runs/implementation_2026-10-01/development_protocol.json",
+          "sha256": "beb2e2b8470f33da78e6ede346904584f22db612916d339c978f7dbe69b0f108"
+        },
+        {
+          "path": "research/runs/implementation_2026-10-01/family_diagnostics.json",
+          "sha256": "9a8f0cd7539129720510b932796ed16bd544634dffb37d2fd56b15b1aa64446e"
+        },
+        {
+          "path": "research/runs/implementation_2026-10-01/family_forecasts.csv",
+          "sha256": "17de2c5536f03a8e5005e0ec2af2c32ecd82f9efcbf430d230d5347306bdeac5"
+        },
+        {
+          "path": "research/runs/nbl_2025-26_holdout.json",
+          "sha256": "cacbda05740b13543d27facdf5771497be37866eb55f4a71c79c0fb554addabf"
+        },
+        {
+          "path": "research/runs/nbl_tuning_lock.json",
+          "sha256": "f0d4c03c65fabdabb49bb2eee6ef275c29f806c457943f7dc659692c3183e7e0"
+        },
+        {
+          "path": "research/src/__init__.py",
+          "sha256": "b23cde9797abfb99fe132a2d5b863c26e574bfe947c90c62b8586fdec8172661"
+        },
+        {
+          "path": "research/src/acceptance.py",
+          "sha256": "c3a6e80161d14506fac2c9cb1947a5140f4ca3d4cbbe1a21b63d2a4f8d7f83e7"
+        },
+        {
+          "path": "research/src/archive.py",
+          "sha256": "59399ef295a973520bd0a4a9e23cfaadf27bc3ff8175e1e9ef00358b72d11d8a"
+        },
+        {
+          "path": "research/src/archive_sources.py",
+          "sha256": "0ab83e2479c21e9b4c08725ebcbce556f2cda6466d0e05360296f75dfe73f2c3"
+        },
+        {
+          "path": "research/src/baselines.py",
+          "sha256": "6dee712ca36b14fb6261b8ab60f94690d3e2fe9085d8961933dd31a43d37d011"
+        },
+        {
+          "path": "research/src/benchmark.py",
+          "sha256": "9e5a0815ded279e0cd68b906472ba04bd428815c8cce58e5c064c89893000ab8"
+        },
+        {
+          "path": "research/src/build_afl_all_years.py",
+          "sha256": "e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d"
+        },
+        {
+          "path": "research/src/build_aflw_all_years.py",
+          "sha256": "e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d"
+        },
+        {
+          "path": "research/src/build_cfb_all_years.py",
+          "sha256": "e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d"
+        },
+        {
+          "path": "research/src/builds.py",
+          "sha256": "24243fc940516a8ac647e38173ec4cfda13d6bbe96c79ae5641c12554daf429b"
+        },
+        {
+          "path": "research/src/candidate_models.py",
+          "sha256": "54fc8cb4b6c80ec4ae517ccebc774dd47bab096c844f732254f22363cec320cf"
+        },
+        {
+          "path": "research/src/collect_cfb_postseason.py",
+          "sha256": "a7cdf97b9f459dcb96e34c9073008aefddfef661dbebd60f9e02e06d553c56e1"
+        },
+        {
+          "path": "research/src/control_manifest.py",
+          "sha256": "2bd5072a533571c549fa07c5c172d819cc23ecbece5936ed55abf27f20723cc6"
+        },
+        {
+          "path": "research/src/current.py",
+          "sha256": "8981ce6fabcd7133690f0b9691024895b0948ad27215bf414e7321cf65ada289"
+        },
+        {
+          "path": "research/src/daily.py",
+          "sha256": "4efe15f0e234f9fd706bb0998256d61bf8c84f7b3f7474d24bbf2faf8cf600f8"
+        },
+        {
+          "path": "research/src/dixon_coles.py",
+          "sha256": "3cb47e0845b558fecde03f9c1f4f14b730964f82a6b3cef79474962f73d02f1f"
+        },
+        {
+          "path": "research/src/draft_epl.py",
+          "sha256": "4eb2b0413b67f13a9eec0be027ab38e0e3601cda11196e01845f7c223ccee442"
+        },
+        {
+          "path": "research/src/eligibility.py",
+          "sha256": "fb99aea052d9e5a61c52b30de1545591876be3c142dfd792716ae97566028923"
+        },
+        {
+          "path": "research/src/emit_card.py",
+          "sha256": "e498109374de6160912233f00401551a5b7a0ba2a5e43fc4df835b3b710cbe81"
+        },
+        {
+          "path": "research/src/evaluate.py",
+          "sha256": "bbd6086a55dcd427f60dca6c06fbf6348600ed551096f40831cf015323c4d38c"
+        },
+        {
+          "path": "research/src/export_lanes.py",
+          "sha256": "dbd4434d2fdd46fe2bb35875260b34f7cc5e54692448eb486a9bd1b1fcc9e8b9"
+        },
+        {
+          "path": "research/src/features.py",
+          "sha256": "73b8ff815b9153b1f16d168613fd754df0bef4923cf0c9d09d80137e6017d006"
+        },
+        {
+          "path": "research/src/feeds.py",
+          "sha256": "8088078db9709fd6b353df69393574fcb91091a7a7c06ba4e54d0d4196278b96"
+        },
+        {
+          "path": "research/src/history.py",
+          "sha256": "a99f2f672e5c7b8109819d2b4c8d2cdab5357a63cf0dd4b840f208e609a8711e"
+        },
+        {
+          "path": "research/src/issue.py",
+          "sha256": "e3fa2f728b5972c30f1181c7d7be93ec16c805d9a9afcf6a537071b65f6c2cb5"
+        },
+        {
+          "path": "research/src/ledger.py",
+          "sha256": "93e6c2bc5719ebaaa683980dd93d0744bbb8039f9072852a3c7516d91ebe9f16"
+        },
+        {
+          "path": "research/src/legacy_ledger.py",
+          "sha256": "e2b013472443b120b39ea37ca4becf5b819a7b990b811ba92b5c8d3685e3fd9d"
+        },
+        {
+          "path": "research/src/load.py",
+          "sha256": "647dea85c5ff32b64c80b356c61c784280a77362e3a958fea2ef73b5350229a4"
+        },
+        {
+          "path": "research/src/model_custody.py",
+          "sha256": "5d8fbe259eb63a9626ab681714ef27e629b97cef4b2986e9b53dc0ad3f51c51b"
+        },
+        {
+          "path": "research/src/model_diagnostics.py",
+          "sha256": "5bce08f668b50979e8467b21e875b29477c597e787e6d46adfa9aeca00af99b6"
+        },
+        {
+          "path": "research/src/nbl_current.py",
+          "sha256": "beb82126b25fd642bd21995284e80f84299114b45a6e5f1deb4ece06199d36fe"
+        },
+        {
+          "path": "research/src/nbl_evaluate.py",
+          "sha256": "273d6d44160100d400534ac81a0146f901641530d3a50ad69f0d61655fa7328c"
+        },
+        {
+          "path": "research/src/nbl_load.py",
+          "sha256": "df16d1414b21bb375e3170c28f585ea7bd1a1369a8f8637e159c6f9e168a2bdd"
+        },
+        {
+          "path": "research/src/nbl_model.py",
+          "sha256": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe"
+        },
+        {
+          "path": "research/src/nbl_shadow.py",
+          "sha256": "3a0d67573d986ed5ff6619fcf887c7fa7419a91a86858c69ab3d959c0f2bf6ad"
+        },
+        {
+          "path": "research/src/pilot.py",
+          "sha256": "32d1bc35a532b11eeec07df91cba704036e76953699dfcac484c175bcdad40ce"
+        },
+        {
+          "path": "research/src/point_in_time.py",
+          "sha256": "0c0b145165ba7b95bb98ae7fb7b66f0b90909e4d8c43a618bd3c54b879e9fd04"
+        },
+        {
+          "path": "research/src/settle.py",
+          "sha256": "11832435f3fea9eb7226cb2e9002a18c75e1495c142d58ab2f891432e1545807"
+        },
+        {
+          "path": "research/src/sources.py",
+          "sha256": "4928f3cdbd8e16ef9719626c9c4253281c4e55426f556be6896daf4a40714757"
+        },
+        {
+          "path": "research/src/sports/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "research/src/sports/base.py",
+          "sha256": "e778ed1ca9d2dd2cdaea205f82fa32367701f548444a9a8d3e5f388768fb5a82"
+        },
+        {
+          "path": "research/src/sports/basketball/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "research/src/sports/basketball/joint.py",
+          "sha256": "f89d50cfcbcba80abae4a2a421fcd522f469c9b48bc757c7855f179992e90658"
+        },
+        {
+          "path": "research/src/sports/soccer/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "research/src/test_parsers.py",
+          "sha256": "367582248a108e164c96240a1e181d611552ee0ead6acf00cd0d70116a51cdd2"
+        },
+        {
+          "path": "research/src/workflow.py",
+          "sha256": "1efe59fea667920e33ebe8d203036709f6141cd1b4b0653dc8d427c4ad09ef53"
+        }
+      ],
+      "baseline_definition_ref": {
+        "path": "research/baseline_definitions/nbl-population-home-0.1.0.json",
+        "sha256": "7c782581c3a206d432c5a015f1e1f970bd5e9b15818378bfd3f573ff67e28cf6"
+      },
+      "baseline_code_artifacts": [
+        {
+          "path": "research/src/nbl_model.py",
+          "sha256": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe"
+        },
+        {
+          "path": "research/src/sports/basketball/joint.py",
+          "sha256": "f89d50cfcbcba80abae4a2a421fcd522f469c9b48bc757c7855f179992e90658"
+        },
+        {
+          "path": "research/src/load.py",
+          "sha256": "647dea85c5ff32b64c80b356c61c784280a77362e3a958fea2ef73b5350229a4"
+        }
+      ],
+      "model_metadata": {
+        "model_version": "nbl-oof-width-0.2.0",
+        "status": "SHADOW_ONLY",
+        "admitted_live": false,
+        "family_scope": [
+          "ML"
+        ],
+        "mean_margin": -4.101706184810041,
+        "sd_margin": 15.102792439794696,
+        "previous_sd_margin": 14.31063926938499,
+        "original_p_home": 0.38720189673278177,
+        "oof_residual_n": 590,
+        "training_matches": 753,
+        "width_source": "STRICTLY_EARLIER_CHRONOLOGICAL_FORECAST_ERRORS",
+        "development_report_sha256": "9a8f0cd7539129720510b932796ed16bd544634dffb37d2fd56b15b1aa64446e"
+      },
+      "score_states": null,
+      "model_build_receipt_sha256": "010d967885b384cd7798601f7e818d1a948551808433b273cb37af18fa7cf2a3",
+      "historical_input_sha256": "7c5100c8087864ce9cf9ad1187af171fd90636a2fdbbd58672664a774704bff1",
+      "current_input_sha256": "95896eb1a7133658081c409d1962f585f18b539baadd351f116680fdf19e8fb4",
+      "source_receipt": {
+        "schema_version": 1,
+        "source_id": "nbl_official",
+        "publisher": "National Basketball League",
+        "upstream_lineage_id": "NBL_OFFICIAL_COLLECTION",
+        "independence_status": "UNKNOWN",
+        "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+        "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+        "retrieved_utc": "2026-10-01T02:17:04.543174+00:00",
+        "response_sha256": "ff055aa28b81430371b8e33a652d1fc4df054c0f14b1a4c70400f872131a1aaf",
+        "body_path": "research/data/raw/source_snapshots/nbl_official_20261001T021704543174Z_ff055aa28b81.body",
+        "response_bytes": 320071,
+        "content_type": "application/json; charset=utf-8",
+        "parser_id": "NBL_SCHEDULE_V1",
+        "registry_sha256": "031ca77a5d8fb791c3f0dc9e8fecd62e7cba5647ba7ba63ddba11cd2817f4716",
+        "market_quarantined": false,
+        "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+        "receipt_path": "research/data/source_receipts/nbl_official_20261001T021704543174Z_ff055aa28b81.json"
+      },
+      "input_quality": "SINGLE_PUBLISHER_PROVISIONAL; NOT_LIVE_ADMISSIBLE",
+      "adjustment_status": "NONE",
+      "lineup_status": "NOT_RESEARCHED"
+    },
+    "current_owner_record": {
+      "id": "36f2e004-58ad-11f1-aa96-6775645a7b9a",
+      "starts_at_ms": 1790933400000,
+      "round_label": "3",
+      "match_title": "Illawarra Hawks v Adelaide 36ers men 02-10-2026",
+      "match_slug": "illawarra-hawks-v-adelaide-36ers-men-02-10-2026",
+      "venue_name": "WIN Entertainment Centre",
+      "home": {
+        "id": "105249a3-251d-4a9d-94f4-f57b8e0854b3",
+        "name": "Illawarra Hawks",
+        "nickname": "ILL",
+        "team_code": "ILL",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/399bdbc217764cdc81a96652899def1a?size=200&format=webp",
+        "ticket_url": "https://www.ticketmaster.com.au/illawarra-hawks-tickets/artist/1055493",
+        "wins": 0,
+        "losses": 3,
+        "position": 10,
+        "odds": "2.7",
+        "form": [
+          "L",
+          "L",
+          "L",
+          "L",
+          "W"
+        ]
+      },
+      "away": {
+        "id": "3164912c-7e74-463b-8fc3-5f7d45edfcc6",
+        "name": "Adelaide 36ers",
+        "nickname": "ADL",
+        "team_code": "ADL",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/03d18cf388f94760bd85f84f6a5d0a18?size=200&format=webp",
+        "ticket_url": "https://premier.ticketek.com.au/shows/show.aspx?sh=ADL36ERS27",
+        "wins": 2,
+        "losses": 1,
+        "position": 2,
+        "odds": "1.48",
+        "form": [
+          "W",
+          "L",
+          "W",
+          "W",
+          "W"
+        ]
+      },
+      "home_score": null,
+      "away_score": null,
+      "status_raw": "SCHEDULED",
+      "phase": "upcoming",
+      "primary_broadcaster": {
+        "label": "ESPN on Disney",
+        "logo": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_light": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_dark": "https://nxs.nbl.com.au/assets/d82a6ca8-5b33-4bb1-aa60-e5f8caa542e6.png"
+      },
+      "secondary_broadcaster": null,
+      "match_logo_url": null,
+      "match_bg_url": null,
+      "division": null,
+      "division_line": null,
+      "season_type": "regular",
+      "season_id": "67d4a190-40bc-4bfb-a9a2-11bd0b93f020",
+      "related_links": [],
+      "odds_event_deep_link": "https://dabble.onelink.me/i0P0?af_web_dp=https://join.dabble.com.au/?promo=NBLODDS&pid=NBL&deep_link_value=com.dabblesports://sport-fixture/01a0e68c-eb9f-72b4-8910-6be333c1e98e&af_xp=custom&af_sub1=NBLODDS&c=NBLODDS&deep_link_sub2=NBLODDS&af_force_deeplink=true"
+    },
+    "current_receipt": {
+      "schema_version": 1,
+      "source_id": "audit_nbl_official",
+      "publisher": "schedule.nbl.com.au",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "retrieved_utc": "2026-10-01T07:32:12.019558+00:00",
+      "response_sha256": "51a0a57ae2f49a03de2e661f8954c96f3ae8aef69b9e47135e7dad0c2c5fc8be",
+      "body_path": "research/data/benchmark/source_snapshots/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.body",
+      "response_bytes": 320067,
+      "content_type": "application/json; charset=utf-8",
+      "parser_id": "AUDIT_READBACK_V1",
+      "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+      "market_quarantined": true,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.json"
+    },
+    "performance_eligible": false,
+    "canonical_card_id": null,
+    "actual_start": "NOT_CERTIFIED",
+    "terminal_quorum": "SINGLE_OWNER_COLLECTION; INDEPENDENCE_UNKNOWN",
+    "baseline_status": "NO_NEW_AFTER_RESULT_BASELINE",
+    "disposition": "FROZEN_MODEL_ONLY_SHADOW; NOT_TERMINAL_AT_AUDIT"
+  },
+  {
+    "event_id": "36f713cb-58ad-11f1-b8d2-f1316c48f9c2",
+    "shadow_path": "research/daily/20261001T021702970997Z/NBL/shadows/36f713cb-58ad-11f1-b8d2-f1316c48f9c2.json",
+    "unchanged_shadow_sha256": "ce3daa8da5e0bf1c413961cf2e27eae4e92c7acf2ea743dbfe1e3e85bcdc8bfb",
+    "frozen_original": {
+      "event_id": "36f713cb-58ad-11f1-b8d2-f1316c48f9c2",
+      "start_utc": "2026-10-01T09:30:00+00:00",
+      "home": "TAS",
+      "away": "MEL",
+      "lane": "NBL",
+      "official_event_id": "36f713cb-58ad-11f1-b8d2-f1316c48f9c2",
+      "stage": "MODEL_ONLY_SHADOW",
+      "issuance_status": "NO_CARD_ISSUED",
+      "performance_eligible": false,
+      "family": "ML",
+      "endpoint": "INCL_OT",
+      "forecast_utc": "2026-10-01T02:17:04.630882+00:00",
+      "data_cutoff_utc": "2026-10-01T02:17:04.543174+00:00",
+      "probabilities": [
+        0.4041422888812839,
+        0.5958577111187161
+      ],
+      "model_version": "nbl-oof-width-0.2.0",
+      "shadow_only": true,
+      "league": "NBL",
+      "baseline_version": "nbl-population-home-0.1.0",
+      "baseline_probabilities": [
+        0.5364238410596026,
+        0.4635761589403974
+      ],
+      "strong_comparator": "nbl-fixed-elo-0.1.0",
+      "strong_comparator_probabilities": [
+        0.450843383601587,
+        0.549156616398413
+      ],
+      "model_artifacts": [
+        {
+          "path": "research/requirements.lock.txt",
+          "sha256": "508a508c3effa08821e9fe17d87ef1204ffd5c8aa9069e4788401906c7120301"
+        },
+        {
+          "path": "research/runs/epl_2025-26_holdout.json",
+          "sha256": "5cadf89505287a18a84f3db2db1bdabadb59431b9f225b1bc4ea9d5e397774dd"
+        },
+        {
+          "path": "research/runs/epl_tuning_lock.json",
+          "sha256": "adbe0390675be8da4e19176e52a6c7691b32b816084301a6741ce67e86aad553"
+        },
+        {
+          "path": "research/runs/implementation_2026-10-01/development_protocol.json",
+          "sha256": "beb2e2b8470f33da78e6ede346904584f22db612916d339c978f7dbe69b0f108"
+        },
+        {
+          "path": "research/runs/implementation_2026-10-01/family_diagnostics.json",
+          "sha256": "9a8f0cd7539129720510b932796ed16bd544634dffb37d2fd56b15b1aa64446e"
+        },
+        {
+          "path": "research/runs/implementation_2026-10-01/family_forecasts.csv",
+          "sha256": "17de2c5536f03a8e5005e0ec2af2c32ecd82f9efcbf430d230d5347306bdeac5"
+        },
+        {
+          "path": "research/runs/nbl_2025-26_holdout.json",
+          "sha256": "cacbda05740b13543d27facdf5771497be37866eb55f4a71c79c0fb554addabf"
+        },
+        {
+          "path": "research/runs/nbl_tuning_lock.json",
+          "sha256": "f0d4c03c65fabdabb49bb2eee6ef275c29f806c457943f7dc659692c3183e7e0"
+        },
+        {
+          "path": "research/src/__init__.py",
+          "sha256": "b23cde9797abfb99fe132a2d5b863c26e574bfe947c90c62b8586fdec8172661"
+        },
+        {
+          "path": "research/src/acceptance.py",
+          "sha256": "c3a6e80161d14506fac2c9cb1947a5140f4ca3d4cbbe1a21b63d2a4f8d7f83e7"
+        },
+        {
+          "path": "research/src/archive.py",
+          "sha256": "59399ef295a973520bd0a4a9e23cfaadf27bc3ff8175e1e9ef00358b72d11d8a"
+        },
+        {
+          "path": "research/src/archive_sources.py",
+          "sha256": "0ab83e2479c21e9b4c08725ebcbce556f2cda6466d0e05360296f75dfe73f2c3"
+        },
+        {
+          "path": "research/src/baselines.py",
+          "sha256": "6dee712ca36b14fb6261b8ab60f94690d3e2fe9085d8961933dd31a43d37d011"
+        },
+        {
+          "path": "research/src/benchmark.py",
+          "sha256": "9e5a0815ded279e0cd68b906472ba04bd428815c8cce58e5c064c89893000ab8"
+        },
+        {
+          "path": "research/src/build_afl_all_years.py",
+          "sha256": "e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d"
+        },
+        {
+          "path": "research/src/build_aflw_all_years.py",
+          "sha256": "e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d"
+        },
+        {
+          "path": "research/src/build_cfb_all_years.py",
+          "sha256": "e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d"
+        },
+        {
+          "path": "research/src/builds.py",
+          "sha256": "24243fc940516a8ac647e38173ec4cfda13d6bbe96c79ae5641c12554daf429b"
+        },
+        {
+          "path": "research/src/candidate_models.py",
+          "sha256": "54fc8cb4b6c80ec4ae517ccebc774dd47bab096c844f732254f22363cec320cf"
+        },
+        {
+          "path": "research/src/collect_cfb_postseason.py",
+          "sha256": "a7cdf97b9f459dcb96e34c9073008aefddfef661dbebd60f9e02e06d553c56e1"
+        },
+        {
+          "path": "research/src/control_manifest.py",
+          "sha256": "2bd5072a533571c549fa07c5c172d819cc23ecbece5936ed55abf27f20723cc6"
+        },
+        {
+          "path": "research/src/current.py",
+          "sha256": "8981ce6fabcd7133690f0b9691024895b0948ad27215bf414e7321cf65ada289"
+        },
+        {
+          "path": "research/src/daily.py",
+          "sha256": "4efe15f0e234f9fd706bb0998256d61bf8c84f7b3f7474d24bbf2faf8cf600f8"
+        },
+        {
+          "path": "research/src/dixon_coles.py",
+          "sha256": "3cb47e0845b558fecde03f9c1f4f14b730964f82a6b3cef79474962f73d02f1f"
+        },
+        {
+          "path": "research/src/draft_epl.py",
+          "sha256": "4eb2b0413b67f13a9eec0be027ab38e0e3601cda11196e01845f7c223ccee442"
+        },
+        {
+          "path": "research/src/eligibility.py",
+          "sha256": "fb99aea052d9e5a61c52b30de1545591876be3c142dfd792716ae97566028923"
+        },
+        {
+          "path": "research/src/emit_card.py",
+          "sha256": "e498109374de6160912233f00401551a5b7a0ba2a5e43fc4df835b3b710cbe81"
+        },
+        {
+          "path": "research/src/evaluate.py",
+          "sha256": "bbd6086a55dcd427f60dca6c06fbf6348600ed551096f40831cf015323c4d38c"
+        },
+        {
+          "path": "research/src/export_lanes.py",
+          "sha256": "dbd4434d2fdd46fe2bb35875260b34f7cc5e54692448eb486a9bd1b1fcc9e8b9"
+        },
+        {
+          "path": "research/src/features.py",
+          "sha256": "73b8ff815b9153b1f16d168613fd754df0bef4923cf0c9d09d80137e6017d006"
+        },
+        {
+          "path": "research/src/feeds.py",
+          "sha256": "8088078db9709fd6b353df69393574fcb91091a7a7c06ba4e54d0d4196278b96"
+        },
+        {
+          "path": "research/src/history.py",
+          "sha256": "a99f2f672e5c7b8109819d2b4c8d2cdab5357a63cf0dd4b840f208e609a8711e"
+        },
+        {
+          "path": "research/src/issue.py",
+          "sha256": "e3fa2f728b5972c30f1181c7d7be93ec16c805d9a9afcf6a537071b65f6c2cb5"
+        },
+        {
+          "path": "research/src/ledger.py",
+          "sha256": "93e6c2bc5719ebaaa683980dd93d0744bbb8039f9072852a3c7516d91ebe9f16"
+        },
+        {
+          "path": "research/src/legacy_ledger.py",
+          "sha256": "e2b013472443b120b39ea37ca4becf5b819a7b990b811ba92b5c8d3685e3fd9d"
+        },
+        {
+          "path": "research/src/load.py",
+          "sha256": "647dea85c5ff32b64c80b356c61c784280a77362e3a958fea2ef73b5350229a4"
+        },
+        {
+          "path": "research/src/model_custody.py",
+          "sha256": "5d8fbe259eb63a9626ab681714ef27e629b97cef4b2986e9b53dc0ad3f51c51b"
+        },
+        {
+          "path": "research/src/model_diagnostics.py",
+          "sha256": "5bce08f668b50979e8467b21e875b29477c597e787e6d46adfa9aeca00af99b6"
+        },
+        {
+          "path": "research/src/nbl_current.py",
+          "sha256": "beb82126b25fd642bd21995284e80f84299114b45a6e5f1deb4ece06199d36fe"
+        },
+        {
+          "path": "research/src/nbl_evaluate.py",
+          "sha256": "273d6d44160100d400534ac81a0146f901641530d3a50ad69f0d61655fa7328c"
+        },
+        {
+          "path": "research/src/nbl_load.py",
+          "sha256": "df16d1414b21bb375e3170c28f585ea7bd1a1369a8f8637e159c6f9e168a2bdd"
+        },
+        {
+          "path": "research/src/nbl_model.py",
+          "sha256": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe"
+        },
+        {
+          "path": "research/src/nbl_shadow.py",
+          "sha256": "3a0d67573d986ed5ff6619fcf887c7fa7419a91a86858c69ab3d959c0f2bf6ad"
+        },
+        {
+          "path": "research/src/pilot.py",
+          "sha256": "32d1bc35a532b11eeec07df91cba704036e76953699dfcac484c175bcdad40ce"
+        },
+        {
+          "path": "research/src/point_in_time.py",
+          "sha256": "0c0b145165ba7b95bb98ae7fb7b66f0b90909e4d8c43a618bd3c54b879e9fd04"
+        },
+        {
+          "path": "research/src/settle.py",
+          "sha256": "11832435f3fea9eb7226cb2e9002a18c75e1495c142d58ab2f891432e1545807"
+        },
+        {
+          "path": "research/src/sources.py",
+          "sha256": "4928f3cdbd8e16ef9719626c9c4253281c4e55426f556be6896daf4a40714757"
+        },
+        {
+          "path": "research/src/sports/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "research/src/sports/base.py",
+          "sha256": "e778ed1ca9d2dd2cdaea205f82fa32367701f548444a9a8d3e5f388768fb5a82"
+        },
+        {
+          "path": "research/src/sports/basketball/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "research/src/sports/basketball/joint.py",
+          "sha256": "f89d50cfcbcba80abae4a2a421fcd522f469c9b48bc757c7855f179992e90658"
+        },
+        {
+          "path": "research/src/sports/soccer/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "research/src/test_parsers.py",
+          "sha256": "367582248a108e164c96240a1e181d611552ee0ead6acf00cd0d70116a51cdd2"
+        },
+        {
+          "path": "research/src/workflow.py",
+          "sha256": "1efe59fea667920e33ebe8d203036709f6141cd1b4b0653dc8d427c4ad09ef53"
+        }
+      ],
+      "baseline_definition_ref": {
+        "path": "research/baseline_definitions/nbl-population-home-0.1.0.json",
+        "sha256": "7c782581c3a206d432c5a015f1e1f970bd5e9b15818378bfd3f573ff67e28cf6"
+      },
+      "baseline_code_artifacts": [
+        {
+          "path": "research/src/nbl_model.py",
+          "sha256": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe"
+        },
+        {
+          "path": "research/src/sports/basketball/joint.py",
+          "sha256": "f89d50cfcbcba80abae4a2a421fcd522f469c9b48bc757c7855f179992e90658"
+        },
+        {
+          "path": "research/src/load.py",
+          "sha256": "647dea85c5ff32b64c80b356c61c784280a77362e3a958fea2ef73b5350229a4"
+        }
+      ],
+      "model_metadata": {
+        "model_version": "nbl-oof-width-0.2.0",
+        "status": "SHADOW_ONLY",
+        "admitted_live": false,
+        "family_scope": [
+          "ML"
+        ],
+        "mean_margin": -3.6645359768644283,
+        "sd_margin": 15.102792439794696,
+        "previous_sd_margin": 14.31063926938499,
+        "original_p_home": 0.39894810778158407,
+        "oof_residual_n": 590,
+        "training_matches": 753,
+        "width_source": "STRICTLY_EARLIER_CHRONOLOGICAL_FORECAST_ERRORS",
+        "development_report_sha256": "9a8f0cd7539129720510b932796ed16bd544634dffb37d2fd56b15b1aa64446e"
+      },
+      "score_states": null,
+      "model_build_receipt_sha256": "010d967885b384cd7798601f7e818d1a948551808433b273cb37af18fa7cf2a3",
+      "historical_input_sha256": "7c5100c8087864ce9cf9ad1187af171fd90636a2fdbbd58672664a774704bff1",
+      "current_input_sha256": "95896eb1a7133658081c409d1962f585f18b539baadd351f116680fdf19e8fb4",
+      "source_receipt": {
+        "schema_version": 1,
+        "source_id": "nbl_official",
+        "publisher": "National Basketball League",
+        "upstream_lineage_id": "NBL_OFFICIAL_COLLECTION",
+        "independence_status": "UNKNOWN",
+        "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+        "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+        "retrieved_utc": "2026-10-01T02:17:04.543174+00:00",
+        "response_sha256": "ff055aa28b81430371b8e33a652d1fc4df054c0f14b1a4c70400f872131a1aaf",
+        "body_path": "research/data/raw/source_snapshots/nbl_official_20261001T021704543174Z_ff055aa28b81.body",
+        "response_bytes": 320071,
+        "content_type": "application/json; charset=utf-8",
+        "parser_id": "NBL_SCHEDULE_V1",
+        "registry_sha256": "031ca77a5d8fb791c3f0dc9e8fecd62e7cba5647ba7ba63ddba11cd2817f4716",
+        "market_quarantined": false,
+        "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+        "receipt_path": "research/data/source_receipts/nbl_official_20261001T021704543174Z_ff055aa28b81.json"
+      },
+      "input_quality": "SINGLE_PUBLISHER_PROVISIONAL; NOT_LIVE_ADMISSIBLE",
+      "adjustment_status": "NONE",
+      "lineup_status": "NOT_RESEARCHED"
+    },
+    "current_owner_record": {
+      "id": "36f713cb-58ad-11f1-b8d2-f1316c48f9c2",
+      "starts_at_ms": 1790847000000,
+      "round_label": "3",
+      "match_title": "Tasmania JackJumpers v Melbourne United men 01-10-2026",
+      "match_slug": "tasmania-jackjumpers-v-melbourne-united-men-01-10-2026",
+      "venue_name": "MyState Bank Arena",
+      "home": {
+        "id": "0602b1bc-8dfb-488c-ac11-7895de1a7556",
+        "name": "Tasmania JackJumpers",
+        "nickname": "TAS",
+        "team_code": "TAS",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/f921dab7d97b4402ae24678377b736b7?size=200&format=webp",
+        "ticket_url": "https://premier.ticketek.com.au/shows/show.aspx?sh=JACKJUMP27",
+        "wins": 1,
+        "losses": 1,
+        "position": 7,
+        "odds": "3",
+        "form": [
+          "L",
+          "W",
+          "L",
+          "L",
+          "L"
+        ]
+      },
+      "away": {
+        "id": "41c8f340-4d0a-4d68-a3c7-1b31f643f803",
+        "name": "Melbourne United",
+        "nickname": "MEL",
+        "team_code": "MEL",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/d1f78b86cef341219bf574e73c724103?size=200&format=webp",
+        "ticket_url": "https://pages.melbourneutd.com.au/nbl27-tickets-hub/?lid=0g7nc1z6h8fv",
+        "wins": 1,
+        "losses": 1,
+        "position": 5,
+        "odds": "1.4",
+        "form": [
+          "W",
+          "L",
+          "L",
+          "W",
+          "W"
+        ]
+      },
+      "home_score": null,
+      "away_score": null,
+      "status_raw": "SCHEDULED",
+      "phase": "upcoming",
+      "primary_broadcaster": {
+        "label": "ESPN on Disney",
+        "logo": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_light": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_dark": "https://nxs.nbl.com.au/assets/d82a6ca8-5b33-4bb1-aa60-e5f8caa542e6.png"
+      },
+      "secondary_broadcaster": null,
+      "match_logo_url": null,
+      "match_bg_url": null,
+      "division": null,
+      "division_line": null,
+      "season_type": "regular",
+      "season_id": "67d4a190-40bc-4bfb-a9a2-11bd0b93f020",
+      "related_links": [],
+      "odds_event_deep_link": "https://dabble.onelink.me/i0P0?af_web_dp=https://join.dabble.com.au/?promo=NBLODDS&pid=NBL&deep_link_value=com.dabblesports://sport-fixture/01a0e68b-6b3d-7755-8281-6ae4874f974e&af_xp=custom&af_sub1=NBLODDS&c=NBLODDS&deep_link_sub2=NBLODDS&af_force_deeplink=true"
+    },
+    "current_receipt": {
+      "schema_version": 1,
+      "source_id": "audit_nbl_official",
+      "publisher": "schedule.nbl.com.au",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "retrieved_utc": "2026-10-01T07:32:12.019558+00:00",
+      "response_sha256": "51a0a57ae2f49a03de2e661f8954c96f3ae8aef69b9e47135e7dad0c2c5fc8be",
+      "body_path": "research/data/benchmark/source_snapshots/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.body",
+      "response_bytes": 320067,
+      "content_type": "application/json; charset=utf-8",
+      "parser_id": "AUDIT_READBACK_V1",
+      "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+      "market_quarantined": true,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.json"
+    },
+    "performance_eligible": false,
+    "canonical_card_id": null,
+    "actual_start": "NOT_CERTIFIED",
+    "terminal_quorum": "SINGLE_OWNER_COLLECTION; INDEPENDENCE_UNKNOWN",
+    "baseline_status": "NO_NEW_AFTER_RESULT_BASELINE",
+    "disposition": "FROZEN_MODEL_ONLY_SHADOW; NOT_TERMINAL_AT_AUDIT"
+  },
+  {
+    "event_id": "3724384a-58ad-11f1-bbdc-6d6f61141df2",
+    "shadow_path": "research/daily/20261001T021702970997Z/NBL/shadows/3724384a-58ad-11f1-bbdc-6d6f61141df2.json",
+    "unchanged_shadow_sha256": "a2732d4b12eee38a65fe9778b42a660adce1f4fcbe601495a1b38466c8bea24b",
+    "frozen_original": {
+      "event_id": "3724384a-58ad-11f1-bbdc-6d6f61141df2",
+      "start_utc": "2026-10-02T11:30:00+00:00",
+      "home": "PER",
+      "away": "SEM",
+      "lane": "NBL",
+      "official_event_id": "3724384a-58ad-11f1-bbdc-6d6f61141df2",
+      "stage": "MODEL_ONLY_SHADOW",
+      "issuance_status": "NO_CARD_ISSUED",
+      "performance_eligible": false,
+      "family": "ML",
+      "endpoint": "INCL_OT",
+      "forecast_utc": "2026-10-01T02:17:04.630882+00:00",
+      "data_cutoff_utc": "2026-10-01T02:17:04.543174+00:00",
+      "probabilities": [
+        0.46957436214436127,
+        0.5304256378556387
+      ],
+      "model_version": "nbl-oof-width-0.2.0",
+      "shadow_only": true,
+      "league": "NBL",
+      "baseline_version": "nbl-population-home-0.1.0",
+      "baseline_probabilities": [
+        0.5364238410596026,
+        0.4635761589403974
+      ],
+      "strong_comparator": "nbl-fixed-elo-0.1.0",
+      "strong_comparator_probabilities": [
+        0.6450837888413268,
+        0.3549162111586732
+      ],
+      "model_artifacts": [
+        {
+          "path": "research/requirements.lock.txt",
+          "sha256": "508a508c3effa08821e9fe17d87ef1204ffd5c8aa9069e4788401906c7120301"
+        },
+        {
+          "path": "research/runs/epl_2025-26_holdout.json",
+          "sha256": "5cadf89505287a18a84f3db2db1bdabadb59431b9f225b1bc4ea9d5e397774dd"
+        },
+        {
+          "path": "research/runs/epl_tuning_lock.json",
+          "sha256": "adbe0390675be8da4e19176e52a6c7691b32b816084301a6741ce67e86aad553"
+        },
+        {
+          "path": "research/runs/implementation_2026-10-01/development_protocol.json",
+          "sha256": "beb2e2b8470f33da78e6ede346904584f22db612916d339c978f7dbe69b0f108"
+        },
+        {
+          "path": "research/runs/implementation_2026-10-01/family_diagnostics.json",
+          "sha256": "9a8f0cd7539129720510b932796ed16bd544634dffb37d2fd56b15b1aa64446e"
+        },
+        {
+          "path": "research/runs/implementation_2026-10-01/family_forecasts.csv",
+          "sha256": "17de2c5536f03a8e5005e0ec2af2c32ecd82f9efcbf430d230d5347306bdeac5"
+        },
+        {
+          "path": "research/runs/nbl_2025-26_holdout.json",
+          "sha256": "cacbda05740b13543d27facdf5771497be37866eb55f4a71c79c0fb554addabf"
+        },
+        {
+          "path": "research/runs/nbl_tuning_lock.json",
+          "sha256": "f0d4c03c65fabdabb49bb2eee6ef275c29f806c457943f7dc659692c3183e7e0"
+        },
+        {
+          "path": "research/src/__init__.py",
+          "sha256": "b23cde9797abfb99fe132a2d5b863c26e574bfe947c90c62b8586fdec8172661"
+        },
+        {
+          "path": "research/src/acceptance.py",
+          "sha256": "c3a6e80161d14506fac2c9cb1947a5140f4ca3d4cbbe1a21b63d2a4f8d7f83e7"
+        },
+        {
+          "path": "research/src/archive.py",
+          "sha256": "59399ef295a973520bd0a4a9e23cfaadf27bc3ff8175e1e9ef00358b72d11d8a"
+        },
+        {
+          "path": "research/src/archive_sources.py",
+          "sha256": "0ab83e2479c21e9b4c08725ebcbce556f2cda6466d0e05360296f75dfe73f2c3"
+        },
+        {
+          "path": "research/src/baselines.py",
+          "sha256": "6dee712ca36b14fb6261b8ab60f94690d3e2fe9085d8961933dd31a43d37d011"
+        },
+        {
+          "path": "research/src/benchmark.py",
+          "sha256": "9e5a0815ded279e0cd68b906472ba04bd428815c8cce58e5c064c89893000ab8"
+        },
+        {
+          "path": "research/src/build_afl_all_years.py",
+          "sha256": "e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d"
+        },
+        {
+          "path": "research/src/build_aflw_all_years.py",
+          "sha256": "e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d"
+        },
+        {
+          "path": "research/src/build_cfb_all_years.py",
+          "sha256": "e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d"
+        },
+        {
+          "path": "research/src/builds.py",
+          "sha256": "24243fc940516a8ac647e38173ec4cfda13d6bbe96c79ae5641c12554daf429b"
+        },
+        {
+          "path": "research/src/candidate_models.py",
+          "sha256": "54fc8cb4b6c80ec4ae517ccebc774dd47bab096c844f732254f22363cec320cf"
+        },
+        {
+          "path": "research/src/collect_cfb_postseason.py",
+          "sha256": "a7cdf97b9f459dcb96e34c9073008aefddfef661dbebd60f9e02e06d553c56e1"
+        },
+        {
+          "path": "research/src/control_manifest.py",
+          "sha256": "2bd5072a533571c549fa07c5c172d819cc23ecbece5936ed55abf27f20723cc6"
+        },
+        {
+          "path": "research/src/current.py",
+          "sha256": "8981ce6fabcd7133690f0b9691024895b0948ad27215bf414e7321cf65ada289"
+        },
+        {
+          "path": "research/src/daily.py",
+          "sha256": "4efe15f0e234f9fd706bb0998256d61bf8c84f7b3f7474d24bbf2faf8cf600f8"
+        },
+        {
+          "path": "research/src/dixon_coles.py",
+          "sha256": "3cb47e0845b558fecde03f9c1f4f14b730964f82a6b3cef79474962f73d02f1f"
+        },
+        {
+          "path": "research/src/draft_epl.py",
+          "sha256": "4eb2b0413b67f13a9eec0be027ab38e0e3601cda11196e01845f7c223ccee442"
+        },
+        {
+          "path": "research/src/eligibility.py",
+          "sha256": "fb99aea052d9e5a61c52b30de1545591876be3c142dfd792716ae97566028923"
+        },
+        {
+          "path": "research/src/emit_card.py",
+          "sha256": "e498109374de6160912233f00401551a5b7a0ba2a5e43fc4df835b3b710cbe81"
+        },
+        {
+          "path": "research/src/evaluate.py",
+          "sha256": "bbd6086a55dcd427f60dca6c06fbf6348600ed551096f40831cf015323c4d38c"
+        },
+        {
+          "path": "research/src/export_lanes.py",
+          "sha256": "dbd4434d2fdd46fe2bb35875260b34f7cc5e54692448eb486a9bd1b1fcc9e8b9"
+        },
+        {
+          "path": "research/src/features.py",
+          "sha256": "73b8ff815b9153b1f16d168613fd754df0bef4923cf0c9d09d80137e6017d006"
+        },
+        {
+          "path": "research/src/feeds.py",
+          "sha256": "8088078db9709fd6b353df69393574fcb91091a7a7c06ba4e54d0d4196278b96"
+        },
+        {
+          "path": "research/src/history.py",
+          "sha256": "a99f2f672e5c7b8109819d2b4c8d2cdab5357a63cf0dd4b840f208e609a8711e"
+        },
+        {
+          "path": "research/src/issue.py",
+          "sha256": "e3fa2f728b5972c30f1181c7d7be93ec16c805d9a9afcf6a537071b65f6c2cb5"
+        },
+        {
+          "path": "research/src/ledger.py",
+          "sha256": "93e6c2bc5719ebaaa683980dd93d0744bbb8039f9072852a3c7516d91ebe9f16"
+        },
+        {
+          "path": "research/src/legacy_ledger.py",
+          "sha256": "e2b013472443b120b39ea37ca4becf5b819a7b990b811ba92b5c8d3685e3fd9d"
+        },
+        {
+          "path": "research/src/load.py",
+          "sha256": "647dea85c5ff32b64c80b356c61c784280a77362e3a958fea2ef73b5350229a4"
+        },
+        {
+          "path": "research/src/model_custody.py",
+          "sha256": "5d8fbe259eb63a9626ab681714ef27e629b97cef4b2986e9b53dc0ad3f51c51b"
+        },
+        {
+          "path": "research/src/model_diagnostics.py",
+          "sha256": "5bce08f668b50979e8467b21e875b29477c597e787e6d46adfa9aeca00af99b6"
+        },
+        {
+          "path": "research/src/nbl_current.py",
+          "sha256": "beb82126b25fd642bd21995284e80f84299114b45a6e5f1deb4ece06199d36fe"
+        },
+        {
+          "path": "research/src/nbl_evaluate.py",
+          "sha256": "273d6d44160100d400534ac81a0146f901641530d3a50ad69f0d61655fa7328c"
+        },
+        {
+          "path": "research/src/nbl_load.py",
+          "sha256": "df16d1414b21bb375e3170c28f585ea7bd1a1369a8f8637e159c6f9e168a2bdd"
+        },
+        {
+          "path": "research/src/nbl_model.py",
+          "sha256": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe"
+        },
+        {
+          "path": "research/src/nbl_shadow.py",
+          "sha256": "3a0d67573d986ed5ff6619fcf887c7fa7419a91a86858c69ab3d959c0f2bf6ad"
+        },
+        {
+          "path": "research/src/pilot.py",
+          "sha256": "32d1bc35a532b11eeec07df91cba704036e76953699dfcac484c175bcdad40ce"
+        },
+        {
+          "path": "research/src/point_in_time.py",
+          "sha256": "0c0b145165ba7b95bb98ae7fb7b66f0b90909e4d8c43a618bd3c54b879e9fd04"
+        },
+        {
+          "path": "research/src/settle.py",
+          "sha256": "11832435f3fea9eb7226cb2e9002a18c75e1495c142d58ab2f891432e1545807"
+        },
+        {
+          "path": "research/src/sources.py",
+          "sha256": "4928f3cdbd8e16ef9719626c9c4253281c4e55426f556be6896daf4a40714757"
+        },
+        {
+          "path": "research/src/sports/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "research/src/sports/base.py",
+          "sha256": "e778ed1ca9d2dd2cdaea205f82fa32367701f548444a9a8d3e5f388768fb5a82"
+        },
+        {
+          "path": "research/src/sports/basketball/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "research/src/sports/basketball/joint.py",
+          "sha256": "f89d50cfcbcba80abae4a2a421fcd522f469c9b48bc757c7855f179992e90658"
+        },
+        {
+          "path": "research/src/sports/soccer/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "research/src/test_parsers.py",
+          "sha256": "367582248a108e164c96240a1e181d611552ee0ead6acf00cd0d70116a51cdd2"
+        },
+        {
+          "path": "research/src/workflow.py",
+          "sha256": "1efe59fea667920e33ebe8d203036709f6141cd1b4b0653dc8d427c4ad09ef53"
+        }
+      ],
+      "baseline_definition_ref": {
+        "path": "research/baseline_definitions/nbl-population-home-0.1.0.json",
+        "sha256": "7c782581c3a206d432c5a015f1e1f970bd5e9b15818378bfd3f573ff67e28cf6"
+      },
+      "baseline_code_artifacts": [
+        {
+          "path": "research/src/nbl_model.py",
+          "sha256": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe"
+        },
+        {
+          "path": "research/src/sports/basketball/joint.py",
+          "sha256": "f89d50cfcbcba80abae4a2a421fcd522f469c9b48bc757c7855f179992e90658"
+        },
+        {
+          "path": "research/src/load.py",
+          "sha256": "647dea85c5ff32b64c80b356c61c784280a77362e3a958fea2ef73b5350229a4"
+        }
+      ],
+      "model_metadata": {
+        "model_version": "nbl-oof-width-0.2.0",
+        "status": "SHADOW_ONLY",
+        "admitted_live": false,
+        "family_scope": [
+          "ML"
+        ],
+        "mean_margin": -1.152944877601982,
+        "sd_margin": 15.102792439794696,
+        "previous_sd_margin": 14.31063926938499,
+        "original_p_home": 0.46789372227784215,
+        "oof_residual_n": 590,
+        "training_matches": 753,
+        "width_source": "STRICTLY_EARLIER_CHRONOLOGICAL_FORECAST_ERRORS",
+        "development_report_sha256": "9a8f0cd7539129720510b932796ed16bd544634dffb37d2fd56b15b1aa64446e"
+      },
+      "score_states": null,
+      "model_build_receipt_sha256": "010d967885b384cd7798601f7e818d1a948551808433b273cb37af18fa7cf2a3",
+      "historical_input_sha256": "7c5100c8087864ce9cf9ad1187af171fd90636a2fdbbd58672664a774704bff1",
+      "current_input_sha256": "95896eb1a7133658081c409d1962f585f18b539baadd351f116680fdf19e8fb4",
+      "source_receipt": {
+        "schema_version": 1,
+        "source_id": "nbl_official",
+        "publisher": "National Basketball League",
+        "upstream_lineage_id": "NBL_OFFICIAL_COLLECTION",
+        "independence_status": "UNKNOWN",
+        "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+        "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+        "retrieved_utc": "2026-10-01T02:17:04.543174+00:00",
+        "response_sha256": "ff055aa28b81430371b8e33a652d1fc4df054c0f14b1a4c70400f872131a1aaf",
+        "body_path": "research/data/raw/source_snapshots/nbl_official_20261001T021704543174Z_ff055aa28b81.body",
+        "response_bytes": 320071,
+        "content_type": "application/json; charset=utf-8",
+        "parser_id": "NBL_SCHEDULE_V1",
+        "registry_sha256": "031ca77a5d8fb791c3f0dc9e8fecd62e7cba5647ba7ba63ddba11cd2817f4716",
+        "market_quarantined": false,
+        "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+        "receipt_path": "research/data/source_receipts/nbl_official_20261001T021704543174Z_ff055aa28b81.json"
+      },
+      "input_quality": "SINGLE_PUBLISHER_PROVISIONAL; NOT_LIVE_ADMISSIBLE",
+      "adjustment_status": "NONE",
+      "lineup_status": "NOT_RESEARCHED"
+    },
+    "current_owner_record": {
+      "id": "3724384a-58ad-11f1-bbdc-6d6f61141df2",
+      "starts_at_ms": 1790940600000,
+      "round_label": "3",
+      "match_title": "Perth Wildcats v South East Melbourne Phoenix men 02-10-2026",
+      "match_slug": "perth-wildcats-v-south-east-melbourne-phoenix-men-02-10-2026",
+      "venue_name": "RAC Arena",
+      "home": {
+        "id": "bc5327d5-322e-4796-b103-4c3b63869edb",
+        "name": "Perth Wildcats",
+        "nickname": "PER",
+        "team_code": "PER",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/3734277c6fc8484398d0e266b42d2f35?size=200&format=webp",
+        "ticket_url": "https://premier.ticketek.com.au/shows/show.aspx?sh=WILDCATS27",
+        "wins": 2,
+        "losses": 1,
+        "position": 4,
+        "odds": "2.15",
+        "form": [
+          "W",
+          "W",
+          "L",
+          "L",
+          "L"
+        ]
+      },
+      "away": {
+        "id": "3bdb8ad6-7cf0-464d-b62c-eaca9145d06e",
+        "name": "South East Melbourne Phoenix",
+        "nickname": "SEM",
+        "team_code": "SEM",
+        "logo": "https://images.dc.connect.sportradar.com/b1sjj/913068fd5d70460fb60dfb9c9c6d590f?size=200&format=webp",
+        "ticket_url": "https://www.axs.com/au/series/33674/s-e-melbourne-phoenix-2026-27-tickets-tickets",
+        "wins": 1,
+        "losses": 2,
+        "position": 8,
+        "odds": "1.72",
+        "form": [
+          "L",
+          "L",
+          "W",
+          "L",
+          "W"
+        ]
+      },
+      "home_score": null,
+      "away_score": null,
+      "status_raw": "SCHEDULED",
+      "phase": "upcoming",
+      "primary_broadcaster": {
+        "label": "ESPN on Disney",
+        "logo": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_light": "https://nxs.nbl.com.au/assets/c4014eab-af69-46cc-a9a3-40680f8b1277.png",
+        "logo_dark": "https://nxs.nbl.com.au/assets/d82a6ca8-5b33-4bb1-aa60-e5f8caa542e6.png"
+      },
+      "secondary_broadcaster": null,
+      "match_logo_url": null,
+      "match_bg_url": null,
+      "division": null,
+      "division_line": null,
+      "season_type": "regular",
+      "season_id": "67d4a190-40bc-4bfb-a9a2-11bd0b93f020",
+      "related_links": [],
+      "odds_event_deep_link": "https://dabble.onelink.me/i0P0?af_web_dp=https://join.dabble.com.au/?promo=NBLODDS&pid=NBL&deep_link_value=com.dabblesports://sport-fixture/01a0e692-f765-7427-9232-d03efafd44b3&af_xp=custom&af_sub1=NBLODDS&c=NBLODDS&deep_link_sub2=NBLODDS&af_force_deeplink=true"
+    },
+    "current_receipt": {
+      "schema_version": 1,
+      "source_id": "audit_nbl_official",
+      "publisher": "schedule.nbl.com.au",
+      "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "retrieved_utc": "2026-10-01T07:32:12.019558+00:00",
+      "response_sha256": "51a0a57ae2f49a03de2e661f8954c96f3ae8aef69b9e47135e7dad0c2c5fc8be",
+      "body_path": "research/data/benchmark/source_snapshots/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.body",
+      "response_bytes": 320067,
+      "content_type": "application/json; charset=utf-8",
+      "parser_id": "AUDIT_READBACK_V1",
+      "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+      "market_quarantined": true,
+      "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+      "receipt_path": "research/data/source_receipts/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.json"
+    },
+    "performance_eligible": false,
+    "canonical_card_id": null,
+    "actual_start": "NOT_CERTIFIED",
+    "terminal_quorum": "SINGLE_OWNER_COLLECTION; INDEPENDENCE_UNKNOWN",
+    "baseline_status": "NO_NEW_AFTER_RESULT_BASELINE",
+    "disposition": "FROZEN_MODEL_ONLY_SHADOW; NOT_TERMINAL_AT_AUDIT"
+  }
+]

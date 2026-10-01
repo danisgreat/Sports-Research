@@ -18,6 +18,8 @@ import pandas as pd
 from .load import ROOT, DATE_RE, MATCH_RE, V_MATCH_RE, parse_openfootball, team, sha
 from .sources import fetch_source, verified_body, read_registry
 from .candidate_models import epl, nbl, EPL_VERSION, NBL_VERSION
+from .model_diagnostics import empirical_matrix, tb1_matrix, elo_probability
+from .nbl_model import population_home
 
 DAILY = ROOT / "daily"
 
@@ -166,20 +168,39 @@ def freeze(lane, current, fixtures, manifest, directory, now, hours):
             if lane == "NBL":
                 p, metadata = nbl(data, cutoff, fixture["home"], fixture["away"])
                 probabilities = [p, 1-p]; family="ML"; endpoint="INCL_OT"
+                base_p=population_home(data,cutoff)
+                strong_p=elo_probability(data,cutoff,fixture["home"],fixture["away"])
+                baseline_probabilities=[base_p,1-base_p]
+                strong_probabilities=[strong_p,1-strong_p]
+                baseline_name="nbl-population-home-0.1.0";strong_name="nbl-fixed-elo-0.1.0"
                 states = None
             else:
                 _, matrix, metadata = epl(data, "2026-27", cutoff, fixture["home"], fixture["away"])
                 probabilities = [float(np.tril(matrix,-1).sum()), float(np.trace(matrix)), float(np.triu(matrix,1).sum())]
+                population=empirical_matrix(data,cutoff)
+                stronger=tb1_matrix(data,"2026-27",cutoff,fixture["home"],fixture["away"])
+                project=lambda m:[float(np.tril(m,-1).sum()),float(np.trace(m)),float(np.triu(m,1).sum())]
+                baseline_probabilities=project(population);strong_probabilities=project(stronger)
+                baseline_name="epl-population-score-0.2.0";strong_name="epl-tb1-md-0.1.0"
                 family="1X2"; endpoint="REGULATION"
                 states = matrix.tolist()
-            if min(probabilities)<=0 or max(probabilities)>=1 or abs(sum(probabilities)-1)>1e-9:
-                raise ValueError("invalid probability vector")
+            for vector in (probabilities,baseline_probabilities,strong_probabilities):
+                if not np.isfinite(vector).all() or min(vector)<=0 or max(vector)>=1 or abs(sum(vector)-1)>1e-9:
+                    raise ValueError("invalid probability vector")
             name = re.sub(r"[^A-Za-z0-9._-]", "_", fixture["event_id"])+".json"
+            admission=json.loads((ROOT/"admission_registry.json").read_text(encoding="utf-8"))
+            registered=next(a for a in admission["admissions"] if a["lane"]==lane and a["model_version"]==metadata["model_version"])
+            base_entry=next(b for b in admission["baseline_definitions"] if b["baseline_version"]==baseline_name)
             row = dict(**base, lane=lane, official_event_id=fixture.get("official_event_id"),
                        stage="MODEL_ONLY_SHADOW", issuance_status="NO_CARD_ISSUED",
                        performance_eligible=False, family=family, endpoint=endpoint,
                        forecast_utc=now.isoformat(), data_cutoff_utc=cutoff.isoformat(),
                        probabilities=probabilities, model_version=metadata["model_version"],
+                       shadow_only=True,league=lane,baseline_version=baseline_name,
+                       baseline_probabilities=baseline_probabilities,strong_comparator=strong_name,
+                       strong_comparator_probabilities=strong_probabilities,
+                       model_artifacts=registered["model_artifacts"],
+                       baseline_definition_ref=base_entry["definition_ref"],baseline_code_artifacts=base_entry["code_artifacts"],
                        model_metadata=metadata, score_states=states,
                        model_build_receipt_sha256=sha(ROOT/"model_builds/current.json"),
                        historical_input_sha256=sha(history_path), current_input_sha256=manifest["scores_sha256"],
@@ -218,12 +239,20 @@ def grade_nbl_shadows(finals, source_receipt, directory):
             outcomes.append(dict(event_id=event_id,status="IDENTITY_OR_RESCHEDULE_CONFLICT",shadow_path=path.relative_to(ROOT.parent).as_posix()))
             continue
         y = int(final.hg>final.ag)
-        outcomes.append(dict(event_id=event_id,status="MODEL_ONLY_DIAGNOSTIC_GRADE",performance_eligible=False,
+        grade=dict(event_id=event_id,status="MODEL_ONLY_DIAGNOSTIC_GRADE",performance_eligible=False,
                              official_final_verified=True, certified_settlement=False,
                              shadow_path=path.relative_to(ROOT.parent).as_posix(), shadow_sha256=sha(path),
                              final_home=int(final.hg),final_away=int(final.ag),p_home=p,
                              brier=(p-y)**2,logloss=float(-np.log(p if y else 1-p)),
-                             receipt=source_receipt, reason="SINGLE_TERMINAL_PUBLISHER; ACTUAL_START_AND_INDEPENDENT_LINEAGES_NOT_CERTIFIED"))
+                             receipt=source_receipt, reason="SINGLE_TERMINAL_PUBLISHER; ACTUAL_START_AND_INDEPENDENT_LINEAGES_NOT_CERTIFIED")
+        for label,key in (("baseline","baseline_probabilities"),("strong_comparator","strong_comparator_probabilities")):
+            if key in record:
+                bp=record[key][0]
+                grade[label+"_brier"]=(bp-y)**2
+                grade[label+"_logloss"]=float(-np.log(bp if y else 1-bp))
+            else:
+                grade[label+"_status"]="NOT_FROZEN_IN_ORIGINAL_SHADOW; NOT_RECONSTRUCTED_AFTER_RESULT"
+        outcomes.append(grade)
     put_json(directory/"nbl_shadow_diagnostic_grades.json", outcomes)
     return outcomes
 

@@ -1,0 +1,27 @@
+{
+  "label": "P234_Titan",
+  "url": "https://www.ttplus.cn/publish/app/data/2026/09/01/626066/os_news.html",
+  "source_id": "audit_p234_titan",
+  "attempt_utc": "2026-10-01T07:31:58.694015+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_p234_titan",
+    "publisher": "www.ttplus.cn",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://www.ttplus.cn/publish/app/data/2026/09/01/626066/os_news.html",
+    "final_url": "https://www.ttplus.cn/publish/app/data/2026/09/01/626066/os_news.html",
+    "retrieved_utc": "2026-10-01T07:32:00.073464+00:00",
+    "response_sha256": "0dc898a07e1cc4b85e1a84ecf76daf19391b8d2ebe2d467277e242e1af043aa9",
+    "body_path": "research/data/benchmark/source_snapshots/audit_p234_titan_20261001T073200073464Z_0dc898a07e1c.body",
+    "response_bytes": 12827,
+    "content_type": "text/html",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_p234_titan_20261001T073200073464Z_0dc898a07e1c.json"
+  },
+  "decoded_bytes": 12827
+}

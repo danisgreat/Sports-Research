@@ -1,0 +1,1156 @@
+
+
+ 
+ 
+ 
+ 투수 | 선수 기록 | 기록실 | 기록/순위 | KBO
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ $.ajaxSetup({
+ timeout: 10000 // 전역 타임아웃 설정
+ });
+
+ $(document).ajaxError(function (event, jqxhr, settings, thrownError) {
+ // 호출 지연 10초
+ if (thrownError === 'timeout') {
+ console.warn(`timeout: ${settings.url}`);
+ if(settings.url == "https://www.kborc.com/getKboRCList.ajax"){
+ $("#KBOMovie").remove();
+ }
+ if(settings.url == "https://www.kborc.com/getKboRCList2.ajax"){
+ $("#KBOCheckedSwing").remove();
+ }
+
+ } 
+ // 호출 오류
+ else {
+ console.warn(`error: ${settings.url}`, thrownError);
+ if(settings.url == "https://www.kborc.com/getKboRCList.ajax"){
+ $("#KBOMovie").remove();
+ }
+ if(settings.url == "https://www.kborc.com/getKboRCList2.ajax"){
+ $("#KBOCheckedSwing").remove();
+ }
+ }
+ });
+
+
+ (function (w, d, s, l, i) {
+ w[l] = w[l] || []; w[l].push({
+ 'gtm.start':
+ new Date().getTime(), event: 'gtm.js'
+ }); var f = d.getElementsByTagName(s)[0],
+ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+ 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+ })(window, document, 'script', 'dataLayer', 'GTM-K3BL64Q');
+
+ $(document).ready(function () {
+ var jbOffset = $('.lnb-wrap').offset();
+ $(window).scroll(function () {
+ if ($(document).scrollTop() > jbOffset.top) {
+ $('.lnb-wrap').addClass('fixed');
+ }
+ else {
+ $('.lnb-wrap').removeClass('fixed');
+ }
+ });
+ });
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 로그인 
+ 회원가입 
+ 
+ ENGLISH 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 검색 결과가 없습니다. -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 일정・결과 
+ 
+ 
+ 경기일정・결과 
+ 
+ 게임센터 
+ 스코어보드 
+ 올스타전 
+ 국제대회 
+ 야구장 날씨 
+ 
+ 
+ 
+ 
+ 기록・순위 
+ 
+ 
+ 기록실 
+ 팀 순위 
+ 선수 순위 
+ 역대 기록 
+ 예상 달성 기록 
+ 기록 정정 현황 
+ 관중 현황 
+ 
+ 
+ 
+ 
+ 
+ 선수 
+ 
+ 
+ 선수 조회 
+ 선수 등록 현황 
+ 선수 이동 현황 
+ 수상 현황 
+ 레전드 40 
+ 경력증명서 신청 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 미디어・뉴스 
+ 
+ 
+ 하이라이트 
+ 뉴스 
+ KBO 보도자료 
+ 
+ Z-CREW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ KBO 
+ 
+ 
+ KBO 
+ 
+ KBO 리그 
+ 
+ 2026 주요 규정∙규칙 
+ 경기운영제도 
+ 구단 소개 
+ 구단 변천사 
+ 티켓 안내 
+ 
+ 
+ 
+ 게시판 
+ 
+ NOTICE 
+ 자주 하는 질문 
+ 규정・자료실 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ABOUT KBO 
+ 
+ 조직・활동 
+ KBO 로고 
+ 기록위원회 
+ 의무위원회 
+ 
+ 
+ 
+ 
+ 
+ 
+ 주요 사업・행사 
+ 
+ 
+ 2025 KBO 시상식 
+ 2027 신인 드래프트 
+ 
+ 
+ KBO 경기장 안전정책 
+ KBO 리그 영상 구매 
+ 시각장애인 관람 지원 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 퓨처스리그 
+ 
+ 
+ 경기일정・결과 
+ 팀 순위 
+ TOP5 
+ 기록실 
+ 선수 등록 현황 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ KBO 마켓 
+ 
+ KBO 폰트 
+ 
+ 전체 메뉴 
+ 
+ 
+ 
+ 전체 메뉴 
+ 
+ 일정・결과 
+ 
+ 경기일정・결과 
+ 
+ 게임센터 
+ 스코어보드 
+ 올스타전 
+ 국제대회 
+ 야구장 날씨 
+ 
+ 
+ 
+ 기록・순위 
+ 
+ 기록실 
+ 팀 순위 
+ 선수 순위 
+ 역대 기록 
+ 예상 달성 기록 
+ 기록 정정 현황 
+ 관중 현황 
+ 
+ 
+ 
+ 
+ 선수 
+ 
+ 선수 조회 
+ 선수 등록 현황 
+ 선수 이동 현황 
+ 수상 현황 
+ 레전드 40 
+ 경력증명서 신청 
+ 
+ 
+ 
+ 미디어・뉴스 
+ 
+ 하이라이트 
+ 뉴스 
+ KBO 보도자료 
+ 
+ Z-CREW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 퓨처스리그 
+ 
+ 경기일정・결과 
+ 팀 순위 
+ TOP5 
+ 기록실 
+ 선수 등록 현황 
+ 
+ 
+ 
+ 
+ 
+ KBO 
+ 
+ KBO 리그 
+ 
+ 2026 주요 규정∙규칙 
+ 경기운영제도 
+ 구단 소개 
+ 구단 변천사 
+ 티켓 안내 
+ 
+ 
+ 
+ 게시판 
+ 
+ NOTICE 
+ 자주 하는 질문 
+ 규정・자료실 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ABOUT KBO 
+ 
+ 조직・활동 
+ KBO 로고 
+ 기록위원회 
+ 의무위원회 
+ 
+ 
+ 
+ 
+ 
+ 
+ 주요 사업・행사 
+ 
+ 2025 KBO 시상식 
+ 2027 신인 드래프트 
+ 
+ 
+ 
+ KBO 경기장 안전정책 
+ KBO 리그 영상 구매 
+ 시각장애인 관람 지원 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 닫기 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 기록・순위 
+ 
+ 기록실 
+ 팀 순위 
+ 선수 순위 
+ 역대 기록 
+ 예상 달성 기록 
+ 기록 정정 현황 
+ 관중 현황 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ >
+ 기록실 >
+ 선수페이지 (투수) 
+ 
+ 선수페이지 (투수) 
+ 
+ 
+ 
+ 
+ 한화 이글스 
+
+ 
+ 
+ 
+ 선수명: 황준서 
+ 등번호: No. 29 
+ 생년월일: 2005년 08월 22일 
+ 포지션: 투수(좌투좌타) 
+ 신장/체중: 185cm/78kg 
+ 경력: 면일초(중랑구리틀)-상명중-장충고 
+ 입단 계약금: 35000만원 
+ 연봉: 8200만원 
+ 지명순위: 24 한화 1라운드 1순위 
+ 입단년도: 24한화 
+ 
+ 
+
+ 
+ 
+ 
+ 타자 
+ 투수 
+ 
+ 기록용어 
+ 
+ 
+ 
+ 
+ 
+ 기본기록 
+ 통산기록 
+ 일자별기록 
+ 경기별기록 
+ 상황별기록 
+ 수상 
+ 등록일수 
+ 
+ 
+ 
+ 
+ 2026 성적 
+ 
+ KBO 퓨처스리그 기록 보기 
+ 
+ 
+ 
+ 
+ 
+ 
+ 팀명 
+ ERA 
+ G 
+ CG 
+ SHO 
+ W 
+ L 
+ SV 
+ HLD 
+ WPCT 
+ TBF 
+ NP 
+ IP 
+ H 
+ 2B 
+ 3B 
+ HR 
+ 
+ 
+ 
+ 한화 5.63 28 0 0 1 4 0 0 0.200 263 1083 56 61 6 1 7 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ SAC 
+ SF 
+ BB 
+ IBB 
+ SO 
+ WP 
+ BK 
+ R 
+ ER 
+ BSV 
+ WHIP 
+ AVG 
+ QS 
+ 
+ 
+ 
+ 
+ 6 2 37 0 59 0 0 37 35 0 1.75 0.284 0 
+ 
+ 
+ 
+
+ 최근 10경기 
+
+ 
+ 
+ 
+ 
+ 일자 
+ 구분 
+ 상대 
+ 결과 
+ ERA 
+ TBF 
+ IP 
+ H 
+ HR 
+ BB 
+ HBP 
+ SO 
+ R 
+ ER 
+ AVG 
+ 
+ 
+ 
+ 합계 7.00 131 27 32 5 19 2 30 22 21 0.299 
+ 
+ 
+ 
+ 
+ 08.11 
+ 방문 
+ 두산 
+ 
+ 0.00 
+ 5 
+ 1 
+ 1 
+ 0 
+ 1 
+ 0 
+ 2 
+ 0 
+ 0 
+ 0.250 
+ 
+ 
+ 
+ 08.13 
+ 방문 
+ 두산 
+ 
+ 0.00 
+ 5 
+ 1 2/3 
+ 1 
+ 0 
+ 0 
+ 0 
+ 3 
+ 0 
+ 0 
+ 0.200 
+ 
+ 
+ 
+ 08.19 
+ 홈 
+ KIA 
+ 
+ - 
+ 1 
+ 0 
+ 0 
+ 0 
+ 1 
+ 0 
+ 0 
+ 1 
+ 1 
+ - 
+ 
+ 
+ 
+ 08.20 
+ 홈 
+ KIA 
+ 
+ 13.50 
+ 4 
+ 2/3 
+ 1 
+ 0 
+ 0 
+ 0 
+ 2 
+ 2 
+ 1 
+ 0.250 
+ 
+ 
+ 
+ 08.23 
+ 홈 
+ LG 
+ 
+ 2.08 
+ 15 
+ 4 1/3 
+ 1 
+ 0 
+ 2 
+ 0 
+ 2 
+ 1 
+ 1 
+ 0.091 
+ 
+ 
+ 
+ 08.30 
+ 홈 
+ NC 
+ 
+ 12.00 
+ 17 
+ 3 
+ 7 
+ 1 
+ 1 
+ 0 
+ 2 
+ 4 
+ 4 
+ 0.438 
+ 
+ 
+ 
+ 09.05 
+ 방문 
+ 롯데 
+ 
+ 6.75 
+ 20 
+ 4 
+ 5 
+ 1 
+ 3 
+ 0 
+ 5 
+ 3 
+ 3 
+ 0.294 
+ 
+ 
+ 
+ 09.11 
+ 홈 
+ NC 
+ 
+ 11.25 
+ 22 
+ 4 
+ 8 
+ 2 
+ 2 
+ 1 
+ 5 
+ 5 
+ 5 
+ 0.421 
+ 
+ 
+ 
+ 09.20 
+ 방문 
+ LG 
+ 패 
+ 7.20 
+ 24 
+ 5 
+ 6 
+ 1 
+ 3 
+ 1 
+ 4 
+ 4 
+ 4 
+ 0.316 
+ 
+ 
+ 
+ 09.26 
+ 방문 
+ NC 
+ 패 
+ 5.40 
+ 18 
+ 3 1/3 
+ 2 
+ 0 
+ 6 
+ 0 
+ 5 
+ 2 
+ 2 
+ 0.167 
+ 
+ 
+ 
+ 
+ 
+
+ 연도별 TOP 10 
+ 
+ 
+ 
+ 
+ 연도 
+ 항목 
+ 기록 
+ 순위 
+ 
+ 
+ 
+ 
+
+ 기록이 없습니다. 
+ 
+ 
+ 
+
+ 
+ 
+ KBO 리그 엔트리 등록 일수 
+ 
+ 
+ 
+ 
+ 구분 
+ 시작 
+ 종료 
+ 일수 
+ 
+ 
+ 
+ 
+ 
+ 한화 
+ 2026-04-05 
+ 2026-04-29 
+ 25 
+ 25 -->
+ 
+ 
+ 
+ 한화 
+ 2026-05-27 
+ 2026-07-04 
+ 39 
+ 39 -->
+ 
+ 
+ 
+ 한화 
+ 2026-07-28 
+ 2026-10-01 
+ 66 
+ 66 -->
+ 
+ 
+
+ 
+ 
+ 
+ 시즌합계     130 
+ 
+ 
+ 
+
+ KBO 리그 엔트리 말소 일수 
+ 
+ 
+ 
+ 
+ 구분 
+ 시작 
+ 종료 
+ 일수 
+ 
+ 
+ 
+ 
+ 
+ 한화 
+ 2026-03-28 
+ 2026-04-04 
+ 8 
+ 
+ 
+ 
+ 한화 
+ 2026-04-30 
+ 2026-05-26 
+ 27 
+ 
+ 
+ 
+ 한화 
+ 2026-07-05 
+ 2026-07-27 
+ 23 
+ 
+ 
+
+ 
+ 
+ 
+ 시즌합계     58 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 개인정보 처리방침 
+ 이용약관 
+ 문자중계 
+ 고객질문 
+ 사이트맵 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (사)한국야구위원회 | 서울시 강남구 강남대로 278 | 02)3460-4600 
+ 
+ 
+ 
+ 
+ Copyrightⓒ KBO, All Rights Reserved. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ currentLnb("Record");
+
+ function tooltip(x) {
+ var title = $(x).attr("title");
+ $(x).append(" ");
+ $(".tooltip").html(title);
+ var cnt = $(".tooltip").text().length;
+ $(".tooltip").css("width", cnt * 12);
+ $(".tbl thead tr th:last-child").find("> a .tooltip").css({
+ right: 0,
+ });
+ return false;
+ }
+
+ function hideTip() {
+ $(".tooltip").remove();
+ }
+
+ $(".record-words a").on("click", function (e) {
+ e.preventDefault();
+ Words();
+ $(".words").show();
+ });
+ 
+
+
+
+ 
+ $(document).ready(function () {
+
+ const ua = navigator.userAgent.toLowerCase();
+
+ // 모바일 체크
+ const isMobile = /iphone|android/i.test(ua) && ua.includes("mobile");
+
+ // 아이패드(iPadOS 포함) 체크
+ const isPad = /ipad/i.test(ua) || (ua.includes("macintosh") && navigator.maxTouchPoints > 1);
+
+ if ((isMobile && !isPad) && window.location.host.includes("www.koreabaseball.com")) {
+ window.location.href = "https://m.koreabaseball.com";
+ }
+
+
+ // 선수 검색
+ $(document).on("click", "#btnTopPlayerSearch", function (e) {
+ getPlayerSearch();
+ e.preventDefault();
+ });
+
+ // 선수 검색 엔터
+ $(document).on("keypress", "#txtTopPlayerWord", function (e) {
+ if (event.keyCode == 13) {
+ getPlayerSearch();
+ e.preventDefault();
+ }
+ });
+
+ //// 선수 검색 마우스 아웃
+ //$("body").click(function (e) {
+ // var container = $("#player_search_area");
+
+ // if (container.css("display") == "block") {
+ // if (!container.has(e.target).length) {
+ // container.hide();
+ // }
+ // }
+ //});
+
+ // 21.06.29 | veron | 나중에 탭들 다 지우고 배너 다시 원복 후 이부분 삭제해야함
+ // 8월 15일 00시 지나가면 삭제
+ //if (new Date().getTime() > new Date("2021/08/15 00:00:00").getTime()) {
+ // // 위에 탭 삭제
+ // $(".menu04 li:last").remove();
+ // $(".lnb-sub ul.lnb04 li:last").remove();
+ // // Player.master 삭제
+ // $("#liRookie").remove();
+ // // 메인 배너 교체
+ // $("#imgGijang").attr("href", "http://gijangcmc.or.kr/baseball/main/main.asp");
+ // $("#imgGijang img").attr("src", "//6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/KBOHome/resources/images/main/img_banner01.jpg");
+ //}
+
+ // 2026 미디어데이
+ if (new Date().getTime() new Date("2026/09/10 00:30:00")*/)
+ $('[data-tab=DraftApplication]').hide();
+ // KBO 시상식
+ if (new Date().getTime() new Date("2025/11/20 00:30:00"))
+ $('[data-tab=MvpApplication]').hide();
+ // KBO 골든글러브
+ if (new Date().getTime() new Date("2024/12/09 15:30:00"))
+ $('[data-tab=GGApplication]').hide();
+ });
+
+ // 선수 검색
+ function getPlayerSearch() {
+ if ($("#txtTopPlayerWord").val() == "") {
+ alert("선수명은 필수 입니다.");
+ $("#txtTopPlayerWord").focus();
+ return false;
+ } else {
+ //var searchWord = encodeURI($("#txtTopPlayerWord").val());
+
+ //if (searchWord != "") {
+ // location.href = "/Player/Search.aspx?searchWord=" + searchWord;
+ //}
+ var request = $.ajax({
+ type: "post"
+ , url: "/ws/Controls.asmx/GetSearchPlayer"
+ , dataType: "json"
+ , data: {
+ name: $("#txtTopPlayerWord").val()
+ }
+ , error: ajaxFailed
+ , async: true
+ });
+
+ request.done(function (data) {
+ if (data.code == "100") {
+ var container = $(".search-result");
+ container.children().remove();
+
+ container.hide();
+
+ if (data.now.length > 0 || data.retire.length > 0) {
+ // 2017-05-22 yeeun, 홍지희 사원 요청, 결과가 1명일 경우 바로 페이지 연결
+ if (data.now.length + data.retire.length == 1) {
+ var link = "";
+
+ if (data.now.length == 1) {
+ link = data.now[0]["P_LINK"];
+ } else {
+ link = data.retire[0]["P_LINK"];
+ }
+
+ location.href = link;
+ } else {
+ if (data.now.length > 0) {
+ container.append($(" 등록 선수 "));
+
+ var div = $(" ");
+ div.children().remove();
+
+ setPlayerDiv(data.now, div, true);
+
+ container.append(div);
+ }
+
+ if (data.retire.length > 0) {
+ container.append($(" 역대 선수 "));
+
+ var div = $(" ");
+ div.children().remove();
+
+ setPlayerDiv(data.retire, div, false);
+
+ container.append(div);
+ }
+
+ //container.append($(String.format(" '{0}' 검색결과 모두 보기 ", $("#txtTopPlayerWord").val())));
+ container.append($(" '" + $("#txtTopPlayerWord").val() + "' 검색결과 모두 보기 "));
+ container.show();
+ }
+ } else {
+ container.append($(" 검색 결과가 없습니다. "));
+ container.show();
+ }
+ }
+ });
+ }
+ }
+
+ // 선수 검색 div 
+ function setPlayerDiv(list, div, isActive) {
+ $.each(list, function (index, player) {
+ var aLink = $(" ");
+ aLink.attr("href", player["P_LINK"]);
+
+ var dl = $(" ");
+ var dt = $(" ");
+ var backNo = "";
+
+ if (isActive) {
+ //backNo = String.format("No.{0}", player["BACK_NO"]);
+ backNo = "No." + player["BACK_NO"];
+ }
+
+ //dt.text(String.format("{0} {1}", player["P_NM"], backNo));
+ dt.text(player["P_NM"] + " " + backNo);
+ dl.append(dt);
+
+ var dd = $(" ");
+ //dd.text(String.format("{0} {1}({2})", player["T_NM"], player["POS_NO"], player["P_TYPE"]));
+ dd.text(player["T_NM"] + " " + player["POS_NO"] + "(" + player["P_TYPE"] + ")");
+ dl.append(dd);
+
+ var ddImg = $(String.format(" ", "//6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/KBOHome"));
+ dl.append(ddImg);
+
+ aLink.append(dl);
+ div.append(aLink);
+ });
+ }
+ 
+ 
+ 

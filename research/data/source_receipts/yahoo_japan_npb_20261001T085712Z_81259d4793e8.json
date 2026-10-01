@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "source_id": "yahoo_japan_npb",
+  "url": "https://baseball.yahoo.co.jp/npb/game/2021048568/top",
+  "hostname": "baseball.yahoo.co.jp",
+  "parser_id": "YAHOO_JAPAN_NPB_V1",
+  "retrieved_utc": "2026-10-01T08:57:12Z",
+  "content_sha256": "81259d4793e8f544f91ac86737a403d73b1a3c32f727780220f7b0e268b47519",
+  "byte_count": 202037,
+  "stored_snapshot_path": "research\\data\\raw\\source_snapshots\\yahoo_japan_npb_20261001T085712Z_81259d4793e8.body",
+  "event_id": "c-d-25",
+  "lane": "NPB",
+  "league": "NPB"
+}

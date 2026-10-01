@@ -1,0 +1,11 @@
+{
+  "source_url": "https://npb.jp/scores/2026/1001/c-d-25/",
+  "request_params": null,
+  "request_method": "GET",
+  "retrieved_utc": "2026-10-01T10:31:22.033313+00:00",
+  "response_sha256": "b730182e4226437005c3431a85bd4f779419b6a5637b7de11d6d6e25ddd66e99",
+  "response_bytes": 37646,
+  "body_path": "research/verification/log_repair_2026-10-01/delivery_103119Z/npb_game.body",
+  "content_type": "text/html",
+  "independence_status": "UNKNOWN"
+}

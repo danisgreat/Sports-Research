@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "nbl_official",
+  "publisher": "National Basketball League",
+  "upstream_lineage_id": "NBL_OFFICIAL_COLLECTION",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+  "final_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+  "retrieved_utc": "2026-10-01T02:17:04.543174+00:00",
+  "response_sha256": "ff055aa28b81430371b8e33a652d1fc4df054c0f14b1a4c70400f872131a1aaf",
+  "body_path": "research/data/raw/source_snapshots/nbl_official_20261001T021704543174Z_ff055aa28b81.body",
+  "response_bytes": 320071,
+  "content_type": "application/json; charset=utf-8",
+  "parser_id": "NBL_SCHEDULE_V1",
+  "registry_sha256": "031ca77a5d8fb791c3f0dc9e8fecd62e7cba5647ba7ba63ddba11cd2817f4716",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

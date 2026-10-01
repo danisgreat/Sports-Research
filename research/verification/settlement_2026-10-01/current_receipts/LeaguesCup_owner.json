@@ -1,0 +1,27 @@
+{
+  "label": "LeaguesCup_owner",
+  "url": "https://www.leaguescup.com/",
+  "source_id": "audit_leaguescup_owner",
+  "attempt_utc": "2026-10-01T07:31:55.045653+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_leaguescup_owner",
+    "publisher": "www.leaguescup.com",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://www.leaguescup.com/",
+    "final_url": "https://www.leaguescup.com/",
+    "retrieved_utc": "2026-10-01T07:31:57.719709+00:00",
+    "response_sha256": "19df5683fec3c56b94182716ee707498e7cea2a0d2cbaaeee97cf24db52219ff",
+    "body_path": "research/data/benchmark/source_snapshots/audit_leaguescup_owner_20261001T073157719709Z_19df5683fec3.body",
+    "response_bytes": 901185,
+    "content_type": "text/html",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_leaguescup_owner_20261001T073157719709Z_19df5683fec3.json"
+  },
+  "decoded_bytes": 901185
+}

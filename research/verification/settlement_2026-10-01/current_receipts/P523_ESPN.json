@@ -1,0 +1,8 @@
+{
+  "label": "P523_ESPN",
+  "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/bol.copa/summary?event=401907909",
+  "source_id": "audit_p523_espn",
+  "attempt_utc": "2026-10-01T07:32:11.153573+00:00",
+  "status": "UNAVAILABLE",
+  "reason": "HTTPError: HTTP Error 403: Forbidden"
+}

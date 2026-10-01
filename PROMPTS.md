@@ -1,14 +1,14 @@
 # Current operator prompts
 
-These prompts use the current method and executable controls. They do not change a frozen forecast or authorize a numerical model without qualified evidence.
+These prompts use MDS-2026.10.01-v7.1. Requested research is delivered and canonically logged regardless of calibration; qualified numerical performance claims require their own evidence. Existing forecast text is retained.
 
 ## Daily sports-only research
 
 > Read METHOD.md, CURRENT_RULES.md and research/README.md. Run the dated daily source/shadow workflow. Retain source bodies and hash receipts; record every fixture disposition and source failure. Use registered shadow builds only, keep provider IDs separate from official IDs, and exclude postgame/future features. Report source freshness, frozen shadows, abstentions and outstanding qualification evidence. Do not issue a P-number or claim a live pilot.
 
-## Research an event for future issuance
+## Research and canonically log a requested event
 
-> Resolve the exact official event ID, teams, competition/season, endpoint, period, void rule and scheduled start. Obtain field-specific native source bodies, collector and event lineage evidence, current lineups and pre-cutoff feature receipts. Validate the complete evidence bundle and exact model/family qualification. Register the full fixture universe. Prepare a reviewable immutable transaction; explain exclusions if the gate fails. Never hand-enter unsupported probabilities or turn UNKNOWN independence into VERIFIED.
+> Read METHOD.md and CURRENT_RULES.md; refer to requested Drive documents but apply current user instructions where older copies conflict. Research the exact event, official time and observed state, posted participants, season/recent statistics, player exposure, bullpen workload and environment from sports-only sources. Continue after scheduled start and use late news when requested; label actual timing and stale sources honestly. Provide four ranked picks and the potential winner with reasons, alternatives and missingness. An uncalibrated league still receives analysis, qualitative ranks or explicit reproducible analyst scenarios, and a canonical P-ID. Do not invent numeric confidence or certification. Preserve supplied contracts; unresolved operator semantics do not block sporting analysis. Append the complete card directly to Part 6 with research.operations.log_card, recover any pending append, verify the ledger/projection and update the next-ID register. No separate active mini log and no retrospective unless requested.
 
 ## Append a qualified real issue
 

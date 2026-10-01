@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-10-01T02:30:45.765750+00:00",
+  "source_path": "Previous Sports Results/_canonical/validation.json",
+  "source_file_sha256": "0fa63fed65c2ba1ddca7e2747fb8bb8fe555e324cf4bbee2ed9083f6a85fba9b",
+  "result": {
+    "valid": true,
+    "issues": [],
+    "counts": {
+      "yearly_files": 21799,
+      "header_only_files": 20943,
+      "raw_rows": 128768,
+      "duplicate_event": 331,
+      "subset_collection": 188,
+      "mirrored_collection": 790,
+      "canonical_events": 127460,
+      "verified_results": 94448,
+      "training_eligible": 84486,
+      "narratives_excluded_from_pregame": 128539,
+      "source_receipt_errors": 1
+    },
+    "data_snapshot_hash": "8deb26297c5d36149f4bb0493612f8711c58202864ad3ec1dad1d49ae1a4ed0e",
+    "used_receipt_count": 186,
+    "all_source_receipts": {
+      "receipt_count": 1615,
+      "retained_bodies_verified": 1614,
+      "body_not_retained": 1,
+      "errors": []
+    },
+    "original_backups_checked": 36,
+    "input_files_checked": 21799,
+    "implementation_files_checked": 2
+  }
+}

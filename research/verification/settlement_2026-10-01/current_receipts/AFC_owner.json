@@ -1,0 +1,27 @@
+{
+  "label": "AFC_owner",
+  "url": "https://www.the-afc.com/en/club/afc_champions_league_elite.html",
+  "source_id": "audit_afc_owner",
+  "attempt_utc": "2026-10-01T07:31:54.113905+00:00",
+  "status": "FETCHED",
+  "receipt": {
+    "schema_version": 1,
+    "source_id": "audit_afc_owner",
+    "publisher": "www.the-afc.com",
+    "upstream_lineage_id": "UNVERIFIED_EVENT_UPSTREAM",
+    "independence_status": "UNKNOWN",
+    "source_url": "https://www.the-afc.com/en/club/afc_champions_league_elite.html",
+    "final_url": "https://www.the-afc.com/en/club/afc_champions_league_elite.html",
+    "retrieved_utc": "2026-10-01T07:31:55.024971+00:00",
+    "response_sha256": "0336459b94411e312f405d0ca45aa4acb4ffb18a4985f6613673eeb0021128f3",
+    "body_path": "research/data/benchmark/source_snapshots/audit_afc_owner_20261001T073155024971Z_0336459b9441.body",
+    "response_bytes": 9333,
+    "content_type": "text/html; charset=utf-8",
+    "parser_id": "AUDIT_READBACK_V1",
+    "registry_sha256": "53b24174315f9c8eb0cf97f5d830f041530236567996650bc0708c079bf8d22c",
+    "market_quarantined": true,
+    "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required",
+    "receipt_path": "research/data/source_receipts/audit_afc_owner_20261001T073155024971Z_0336459b9441.json"
+  },
+  "decoded_bytes": 9333
+}
