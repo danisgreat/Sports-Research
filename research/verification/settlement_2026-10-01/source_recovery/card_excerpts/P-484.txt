@@ -1,0 +1,76 @@
+**Document mapping / candidate observations**
+- `RULES_BASEBALL.md`: no change. §9.3 tie handling is applied (Buffaloes +1.5 wins a tie; ML needs the operator's tie rule).
+- `DATA_SOURCE_REGISTER.md`: the NPB box page (`/scores/YYYY/MMDD/<home>-<away>-NN/box.html`) exposes pre-game 先発 and スタメン about an hour before first pitch. Use it as the BB-P1/BB-P2 lane. The `/announcement/starter/` and `/scores/.../` index routes redirect-loop through the fetch tool.
+- PR-1: this card is the first in the log with a verified pre-start freeze and both lineups posted.
+
+---
+
+## 2. Temporary-ID / Canonical-ID Conflict Logs
+
+- **No entry currently needs a temporary ID.** The P-484 collision is resolved by §0A. The WNBA, NFL, MLB-MIN-SF, WTA and NPB cards now carry their own provisional numbers. Their former TMP aliases are retained in the headings.
+- **Outstanding reconciliation items**, carried to canonical import:
+  1. **REVIEW-P487-ISSUE-TIME:** NBL source claims P-487 but its original freeze time is missing. Keep the TMP handle and P-487 reserved until a timestamp establishes canonical sequence.
+  2. **REVIEW-PART5-SNAPSHOT:** Part 5 still lists P-482 as next.
+     - P-482/P-483 are settled per `IMPLEMENTED_CHANGES_2026_09_23` but are not yet in canonical custody.
+     - P-484–P-493 in this log sit above them.
+       - Import this log in ID order, starting at P-482.
+  3. **REVIEW-HORIZON:** Several cards stay learning-only whatever their canonical number:
+     - P-483 (WTA Seoul), P-485 (NFL) and P-492 (Padres) are START_CROSSED / PREGAME STATUS UNVERIFIED.
+     - P-489 (NPB) is ISSUE_HORIZON_UNVERIFIED.
+  4. **REVIEW-P490-PROP-BOX:** Re-capture the official MLB box-score pitching line for Michael King (gamePk 823897) at import.
+     - The outs figure used below comes from two independent recaps, consistent with the official linescore.
+     - The official boxscore endpoint returned a stale cached snapshot at settlement time.
+  5. **REVIEW-P482-PHASE / REVIEW-P483-FINALITY:** re-capture the official CPL phase scorecard and the WTA official score at import. Settlement directions are unaffected.
+6. **Source-log retirement:** use byte-exact snapshots in archive/mini_logs/originals_2026-09-23/ for the two cleared temporary logs and prior merged log; do not append to temporary receipts or this predecessor.
+
+---
+
+## 3. Fully Settled Logs (ID order)
+
+### Summary table (all settled cards in this merged log)
+
+| ID | Event | Final | #1 | #2 | #3 | #4 | Winner call | Rank-1 | Hit@2 | NDCG@2 | TOP_OU_REVIEW | Horizon |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| P-482 | CPL Final ABF v JAK | ABF by 8 wkts; JAK PP 59/2 | JAK PP O47.5 **W** | U47.5 **L** | — | — | ABF ✔ | W | Y | 0.613 | NO | Clean |
+| P-483 | WTA Seoul Volynets v Kalieva | Volynets 6–3 6–0 | O19.5 **L** | Kalieva +4.5 **L** | Volynets −4.5 **W** | U19.5 **W** | Volynets ✔ | L | N | 0.000 | YES | START_CROSSED |
+| P-484 | Dream @ Liberty | ATL 95–84 | U177.5 **L** | ATL −1.5 **W** | NYL +1.5 **L** | O177.5 **W** | ATL ✔ | L | Y | 0.387 | YES | Unverified |
+| P-485 | Giants @ Rams | LAR 28–6 | NYG +6.5 **L** | U47.5 **W** | O47.5 **L** | LAR −6.5 **W** | LAR ✔ | L | Y | 0.387 | NO | START_CROSSED |
+| P-486 | Twins @ Giants | SF 5–2 | MIN ML **L** | SF +1.5 **W** | U8.0 **W** | O8.0 **L** | MIN ✘ | L | Y | 0.387 | NO | Clean |
+| P-488 | Wolff v Oliynykova | Oli 6–1 7–6 | U20.5 **W** | Wolff +4.5 **L** | Oli −4.5 **W** | O20.5 **L** | Oli ✔ | W | Y | 0.613 | NO | Card-stated pre |
+| P-492 | Padres @ Dodgers | LAD 7–0 | King O14.5 outs **L** | SD +1.5 **L** | LAD ML **W** | O8.5 **L** | LAD ✔ | L | N | 0.000 | YES | START_CROSSED |
+
+- Binary NDCG@2 = (rel₁ + rel₂/log₂3) / (1 + 1/log₂3).
+- Descriptive only; not performance evidence.
+
+---
+
+### P-482 - Cricket - CPL 2026 Final - Antigua & Barbuda Falcons vs Jamaica Kingsmen
+
+#### Settlement (added 2026-09-23 at merge; original card preserved verbatim below)
+
+| Field | Record |
+|---|---|
+| Terminal state | **COMPLETED.** Falcons won by 8 wickets with 20 balls remaining. |
+| Innings | Jamaica Kingsmen (batted first) **170/9** (20 ov). Falcons **173/2** (16.4 ov). |
+| Settlement target | Kingsmen runs in the first 6 overs = **59/2**. The line was 47.5, so it cleared by 11.5. |
+| Key performers | Maaz Sadaqat 100 off 49 balls (first century in a CPL final); Sufyan Moqim 4/14 (Player of the Match); Amir Jangoo 57* and Hasan Nawaz 47* in an unbeaten 89 stand |
+| Result lineages | (1) ESPNcricinfo match report and live page, "Falcons won by 8 wickets (with 20 balls remaining)"; (2) Barbados Today (170/9, 173/2, 8 wickets, Moqim 4/14); (3) CricTracker (170/9, **powerplay 59/2**, 173/2). ESPN's page shares the Cricinfo feed and is not a separate lineage. **The final result passes the three-lineage gate.** |
+| Phase-target lineage | 59/2 comes from **CricTracker only**. Cricinfo and ESPN full scorecards returned 403 or empty through the fetch tool. `IMPLEMENTED_CHANGES_2026_09_23` independently records "OVER 47.5 WIN". The direction is not in doubt: 59 clears 47.5 comfortably. **REVIEW-P482-PHASE:** re-capture the over-by-over total from the official CPL/Cricinfo scorecard at import. |
+| Settlement sources | [Cricinfo report](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/antigua-and-barbuda-falcons-vs-jamaica-kingsmen-final-1534217/match-report) · [Cricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/antigua-and-barbuda-falcons-vs-jamaica-kingsmen-final-1534217/full-scorecard) · [Barbados Today](https://barbadostoday.bb/2026/09/20/antigua-and-barbuda-falcons-win-cpl-title/) · [CricTracker](https://www.crictracker.com/cricket-reviews/cpl-2026-antigua-and-barbuda-falcons-beat-jamaica-to-win-maiden-championship/) |
+
+| Rank | Selection | Result | Settlement |
+|---|---|---|---|
+| #1 | Kingsmen first 6 overs OVER 47.5 (~59.9%) | 59/2 | **WIN** |
+| #2 | Kingsmen first 6 overs UNDER 47.5 (forced complement) | 59/2 | LOSS |
+| Winner | Antigua & Barbuda Falcons (~53%, LOW) | Falcons by 8 wickets | **CORRECT** |
+
+**Diagnostics.**
+- One distinct decision (the forced pair): 1/1.
+- Rank-1 WIN. Hit@2 YES. NDCG@2 0.613. TOP_OU_REVIEW NO.
+- Horizon clean: refresh 08:54:41 AEST, before the 09:00 AEST start.
+
+**Retrospective (concise; the full audit is referenced in `IMPLEMENTED_CHANGES_2026_09_23` as `SPORTS_RESEARCH_READ_ONLY_AUDIT_2026-09-23.md`, which is not present in Drive).**
+- **Why #1 won.** The card's current-role powerplay evidence (79/0 and 75/1 recent upside) was the correct regime. It rightly refused to let the older head-to-head's one-over-driven 54/1 define the centre. Two early wickets (59/2) did not stop Jamaica clearing the line.
+- **What went right.**
+  - The phase-target quarantine held: the line was queried after the distribution freeze.
+  - The phase-participant controls were applied.

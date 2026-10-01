@@ -1,0 +1,76 @@
+| P-342 | MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3 | FINAL / PARTIAL; corner field pending | Komárno 2–0 (HT 0–0); L/L/—/W/W; winner W; 4-row Brier 0.3880; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-343 | Bangladesh W vs UAE W — Women's T20 Asia Cup Gp B | ADMINISTRATIVE / NO SCORED TRIAL | Bangladesh 103/7 bt UAE 69/9 by 34 runs; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-344 | Hungary W vs Japan W — FIBA W World Cup Qual. to QF | FINAL / SETTLED — deep Rank-#1 retro; mini-log's stated 0.2834 corrected | Hungary 84–63 (total 147); L/W/L/W; winner W; Brier 0.3334; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-345 | Club Brugge v Aston Villa — UCL MD1 | FINAL / SETTLED (corner row settled at UEFA this pass) — deep Rank-#1 retro | R1 L, R2 W, R3 W, R4 W, R5 L; winner L; Brier 0.2466; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-346 | AEK Athens v LASK — UCL MD1 | FINAL / SETTLED — all five rows won | W W W W W; winner W; Brier 0.0816; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-347 | Rangers @ Mariners (`MLB PRIMARY_SCORED`) | FINAL / SETTLED | W L W L; winner W; Brier 0.2374; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-348 | Blue Jays @ Athletics (`MLB PRIMARY_SCORED`) | FINAL / SETTLED | W L L L; winner W; Brier 0.2803; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-349 | Cardinals @ Giants (`MLB PRIMARY_SCORED`) | FINAL / SETTLED — all four rows won | W W W W; winner L; Brier 0.1440; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-350 | Shelton v Alcaraz — US Open men's QF | FINAL / SETTLED — deep Rank-#1 retro | L W W W; winner = R1; Brier 0.2574; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-351 | Reds @ Dodgers (`MLB PRIMARY_SCORED`) | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.2460; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-352 | Namibia v South Africa — 1st ODI | FINAL / SETTLED — deep Rank-#1 retro | L W W W; winner W; Brier 0.2158; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-353 | Dragons @ Giants — NPB, 9 Sep | FINAL / SETTLED | W L W L; winner L; Brier 0.2549; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-354 | Carp @ Tigers — NPB | FINAL / SETTLED | W L L W; winner L; Brier 0.2968; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-355 | Sydney FC v Melbourne Victory — Australia Cup SF | FINAL / SETTLED (corner row settled at FotMob this pass) — top two won | W W L W W; winner L; Brier 0.1531; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-356 | KT @ Samsung — KBO | FINAL / SETTLED — deep Rank-#1 retro | L W W W; winner L; Brier 0.2418; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-357 | Dublin Guardians v Belfast Wolves — ETPL M18 | FINAL / SETTLED — deep Rank-#1 retro | L L W W; winner L; Brier 0.3377; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-358 | Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired) | FINAL / SETTLED — deep Rank-#1 retro | L W L W; winner W; Brier 0.2973; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-359 | Jordan v Chinese Taipei — Asian Games | FINAL / SETTLED | W L W L; winner L; Brier 0.2467; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-360 | South Korea v Saudi Arabia — Asian Games | FINAL / SETTLED | W L W L; winner W; Brier 0.2409; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-361 | Dragons @ Giants — NPB, 10 Sep | FINAL / SETTLED | W L W L; winner W; Brier 0.2493; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-362 | Eagles @ Landers — KBO | FINAL / SETTLED | W L W L; winner W; Brier 0.2450; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-363 | Roosters W v Bulldogs W — NRLW R11 | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.1773; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-364 | England v Pakistan — 3rd Test (Day-2 card) | FINAL / SETTLED (2026-09-15) — England won by 8 wickets on Day 4 (12 Sep); winner label settled | L L W W; winner **W**; Brier 0.3429 (4 ranked rows; winner label not a Brier row); [canonical log](PREDICTION_LOG_COMBINED_3.md) §"2026-09-15"; [combined log §"2026-09-15"](PREDICTION_LOG_COMBINED_3.md) |
+| P-365 | Uni-Lions @ CTBC Brothers — CPBL | FINAL / SETTLED — deep Rank-#1 retro | L W L W; winner W; Brier 0.2768; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-366 | Rotterdam v Glasgow — ETPL M19 | FINAL / CLOSED; C02/C03 terminal censored, other rows settled | W C C L; winner W; Brier 0.1936 (2 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-367 | China W v France W — FIBA WWC QF | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.2071; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-368 | Al Jazira v Al Nasr — UAE Pro League | FINAL / PARTIAL; corner field pending | W P L W L; winner L (draw); Brier 0.1917 (4 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-369 | Dubai United v Shabab Al Ahli — UAE Pro League | FINAL / PARTIAL; corner field pending | P L L W W; winner L (draw); Brier 0.3909 (4 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-370 | Jamaica Empress W v TKR W — WCPL | ADMINISTRATIVE / NO SCORED TRIAL | none issued; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-371 | Belgium W v Germany W — FIBA WWC QF | FINAL / SETTLED — deep Rank-#1 retro | L L W W; winner L; Brier 0.3145; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-372 | — | RESERVED / UNUSED — no record was ever issued under this ID (both external sessions started at P-373 / P-390 / P-407) | none |
+| P-373 | Tampa Bay Rays @ Atlanta Braves — MLB — 2026-09-10 (Atlanta local) | FINAL / SETTLED | L W L W |
+| P-374 | Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10 | FINAL / SETTLED — canonical record for Fenerbahçe v Roma; absorbs TMP-SETTLED-20260911-01 | W W W L L |
+| P-375 | Coco Gauff vs Elena Rybakina — US Open Women — Semifinal | FINAL / SETTLED | W W L L |
+| P-376 | San Francisco 49ers vs Los Angeles Rams — NFL Week 1 — Melbourne | FINAL / SETTLED | W L W L |
+| P-377 | Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260912-01) | L P L W W |
+| P-378 | Philippines vs Bahrain — 2026 Aichi-Nagoya Asian Games Men's Basketball | FINAL / SETTLED | L L W W |
+| P-379 | Namibia vs South Africa — 2nd ODI — South Africa tour of Namibia 2026 | FINAL / SETTLED | W W L L |
+| P-380 | Wests Tigers (W) vs Canberra Raiders (W) — NRLW Round 11, 2026 | FINAL / SETTLED | W W L L |
+| P-381 | Chiba Lotte Marines @ Fukuoka SoftBank Hawks — NPB Pacific League | FINAL / SETTLED | W W L L |
+| P-382 | Saitama Seibu Lions @ Orix Buffaloes — NPB Pacific League | FINAL / SETTLED | L W W L |
+| P-383 | Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League | FINAL / SETTLED | L L W W |
+| P-384 | Kiwoom Heroes @ Samsung Lions — KBO League | FINAL / SETTLED | W W L L |
+| P-385 | KT Wiz @ Lotte Giants — KBO League | FINAL / SETTLED | W L W L |
+| P-386 | South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final | FINAL / SETTLED | W L W L |
+| P-387 | Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League | FINAL / SETTLED | W L L W L |
+| P-388 | Fremantle Dockers vs Geelong Cats — AFL First Semi-Final | FINAL / SETTLED | L L W W |
+| P-389 | Dublin Guardians vs Edinburgh Castle Rockers — ETPL 2026 Match 21 | ADMINISTRATIVE / NO FORECAST (toss gate withheld correctly) | none issued |
+| P-390 | Cincinnati Reds @ Milwaukee Brewers — MLB | FINAL / SETTLED | W L W L |
+| P-391 | Cleveland Guardians @ Minnesota Twins — MLB | FINAL / SETTLED | L W L W |
+| P-392 | Chicago White Sox @ St. Louis Cardinals — MLB | FINAL / SETTLED | W W L L |
+| P-393 | Seattle Mariners @ Athletics — MLB | FINAL / SETTLED | L W L W |
+| P-394 | Parramatta Eels Women vs North Queensland Cowboys Women — NRLW | FINAL / SETTLED | W W L L |
+| P-395 | Belfast Wolves vs Rotterdam Dockers — European T20 Premier League | FINAL / SETTLED | W W L L |
+| P-396 | Brisbane Lions vs Adelaide Crows — AFL Semi Final | FINAL / SETTLED | L L W W |
+| P-397 | Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final | FINAL / SETTLED | L L W W |
+| P-398 | Racing Santander vs Deportivo Alavés — La Liga | FINAL / SETTLED | W W L W L |
+| P-399 | Genoa vs Frosinone — Serie A | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260914-01) | W P W L L |
+| P-400 | Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL | FINAL / SETTLED | W W L L |
+| P-401 | IFK Göteborg vs Halmstads BK — Allsvenskan | FINAL / PARTIAL — C01, C03 corners provisional (TMP-OPEN-20260914-02/-03) | P W P L W |
+| P-402 | Tottenham Hotspur vs Everton — Premier League | FINAL / SETTLED (2026-09-15: corners settled at Premier League official record; TMP-OPEN-20260914-04/-05 retired) | W W W L L |
+| P-403 | Colorado Rockies @ Detroit Tigers — MLB | FINAL / SETTLED | L W L W |
+| P-404 | Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB | FINAL / SETTLED | L L W W |
+| P-405 | Chunichi Dragons @ Hanshin Tigers — NPB | FINAL / SETTLED | W W L L |
+| P-406 | Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 | FINAL / SETTLED (2026-09-16: six-over rows settled at ESPN cricket API event 1547895 — Edinburgh 68/2 after 6.0; TMP-OPEN-20260914-06 retired) | W L W L |
+| P-407 | Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League | FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) | P W W L W |
+| P-408 | Coventry City vs Brighton & Hove Albion — English Premier League | FINAL / SETTLED | L W W W W |
+| P-409 | Lille OSC vs ESTAC Troyes — French Ligue 1 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260915-02) | W P W W W |
+| P-410 | RB Leipzig vs Hamburger SV — German Bundesliga | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-03) | W W W W P |
+| P-411 | Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place | FINAL / SETTLED | L W L W |
+| P-412 | Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1 | FINAL / SETTLED | L W L W |
+| P-413 | Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-414 | Buffalo Bills @ Houston Texans — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-415 | LA Angels @ Washington Nationals — MLB | ADMINISTRATIVE / NOT ISSUED (interrupted) | none issued |
+| P-416 | New York Mets @ New York Yankees — MLB | FINAL / SETTLED | W L W L |
+| P-417 | Chunichi Dragons @ Hanshin Tigers — NPB Central League | FINAL / SETTLED | W L W L |

@@ -1,0 +1,307 @@
+| 4 | GAW full innings Over 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis right |
+| — | Potential winner: GAW | GAW won | **WIN** |
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+| — | Potential winner: Rays | **LOSS** |
+
+What went right: the top-ranked cushion was robust and the Under branch existed in the original tree. Robert Stock delivered 5.1 scoreless innings; Ian Seymour struck out ten but allowed the three Mets runs. The game stayed close, exactly the environment in which Mets +1.5 was strongest.
+
+What went wrong: the potential-winner call over-weighted Tampa's broader team/starter baseline and under-weighted the chance that Stock's weak season line would not describe this single start. The Over rank also leaned too much on Stock's upper tail; his actual command suppressed that path.
+
+Learning: when the #1 pick is an underdog cushion and the opposing favourite's -1.5 is ranked below it, the winner call should carry only modest confidence. A starter with a poor baseline still needs an explicit quality-start probability branch.
+
+Source: [ESPN final and box score](https://www.espn.com/mlb/game/_/gameId/401816748/mets-rays).
+
+## P-220 settlement and deep rank-#1 retrospective — Padres @ Reds
+
+Verified outcome: **Padres 5, Reds 0; 5 total runs. Michael King threw six scoreless innings; Brady Singer allowed four runs on ten hits in 4.1 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Reds +1.5 | **LOSS** |
+| 2 | Over 9.0 | **LOSS** |
+| 3 | Padres -1.5 | **WIN** |
+| 4 | Under 9.0 | **WIN** |
+| — | Potential winner: Padres | **WIN** |
+
+What went right: the analysis correctly identified King as the strongest run-suppression component, Singer as the weaker starter, San Diego as the better winner side, and Cincinnati's bullpen as the more vulnerable late unit. It also explicitly named a 5-2/6-2 Padres separation branch. The winner call, Padres -1.5 and Under all came from those sound mechanisms.
+
+Why the “most likely” pick failed: the ranking let contract breadth and recent close-game counts outrank the strongest causal matchup. Cincinnati +1.5 was supported by the fact that it covers every Reds win and one-run loss, but the actual game was never a close-allocation problem. King extended his scoreless streak to 15.2 innings and recorded a fifth straight quality start. Singer then allowed six consecutive hits in a four-run fourth. Once Cincinnati produced zero, even a moderate Padres output created automatic separation.
+
+The pre-game evidence already contained the correction: King had a 3.23 ERA and strong recent form; Singer had a 4.72 ERA, 1.42 WHIP and five homers allowed in five August starts; Padres relief had been excellent; Reds relief was weak. The ranking understated the covariance of these edges. It also over-weighted Cincinnati's previous-day four-homer result, a noisy recency signal against a different starter.
+
+Required improvement:
+
+1. When favourite starter edge + bullpen edge + winner edge all align, compute a favourite shutout/one-run-conceded branch before promoting the dog cushion.
+2. Do not translate “many recent close games” across a materially different starting-pitcher matchup without opponent adjustment.
+3. For integer totals, rank the Under above the Over when the best starter and best bullpen sit on the same side and the opponent has a realistic 0–2 run distribution; hot weather alone is not enough to reverse it.
+4. In this card, the evidence-consistent order should have been closer to **Under 9 / Padres -1.5 / Reds +1.5 / Over 9**, with the exact first two order depending on the desired marginal target.
+
+Sources: [Reuters game report](https://www.reuters.com/sports/baseball/padres-pile-fourth-shut-down-reds-opener--flm-2026-09-01/); [ESPN recap and box score](https://www.espn.com/mlb/recap/_/gameId/401816749); [CBS box score](https://www.cbssports.com/mlb/gametracker/recap/MLB_20260831_SD%40CIN/).
+
+
+| — | Potential winner: GAW | GAW won | **WIN** |
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+| — | Potential winner: Rays | **LOSS** |
+
+What went right: the top-ranked cushion was robust and the Under branch existed in the original tree. Robert Stock delivered 5.1 scoreless innings; Ian Seymour struck out ten but allowed the three Mets runs. The game stayed close, exactly the environment in which Mets +1.5 was strongest.
+
+What went wrong: the potential-winner call over-weighted Tampa's broader team/starter baseline and under-weighted the chance that Stock's weak season line would not describe this single start. The Over rank also leaned too much on Stock's upper tail; his actual command suppressed that path.
+
+Learning: when the #1 pick is an underdog cushion and the opposing favourite's -1.5 is ranked below it, the winner call should carry only modest confidence. A starter with a poor baseline still needs an explicit quality-start probability branch.
+
+Source: [ESPN final and box score](https://www.espn.com/mlb/game/_/gameId/401816748/mets-rays).
+
+## P-220 settlement and deep rank-#1 retrospective — Padres @ Reds
+
+Verified outcome: **Padres 5, Reds 0; 5 total runs. Michael King threw six scoreless innings; Brady Singer allowed four runs on ten hits in 4.1 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Reds +1.5 | **LOSS** |
+| 2 | Over 9.0 | **LOSS** |
+| 3 | Padres -1.5 | **WIN** |
+| 4 | Under 9.0 | **WIN** |
+| — | Potential winner: Padres | **WIN** |
+
+What went right: the analysis correctly identified King as the strongest run-suppression component, Singer as the weaker starter, San Diego as the better winner side, and Cincinnati's bullpen as the more vulnerable late unit. It also explicitly named a 5-2/6-2 Padres separation branch. The winner call, Padres -1.5 and Under all came from those sound mechanisms.
+
+Why the “most likely” pick failed: the ranking let contract breadth and recent close-game counts outrank the strongest causal matchup. Cincinnati +1.5 was supported by the fact that it covers every Reds win and one-run loss, but the actual game was never a close-allocation problem. King extended his scoreless streak to 15.2 innings and recorded a fifth straight quality start. Singer then allowed six consecutive hits in a four-run fourth. Once Cincinnati produced zero, even a moderate Padres output created automatic separation.
+
+The pre-game evidence already contained the correction: King had a 3.23 ERA and strong recent form; Singer had a 4.72 ERA, 1.42 WHIP and five homers allowed in five August starts; Padres relief had been excellent; Reds relief was weak. The ranking understated the covariance of these edges. It also over-weighted Cincinnati's previous-day four-homer result, a noisy recency signal against a different starter.
+
+Required improvement:
+
+1. When favourite starter edge + bullpen edge + winner edge all align, compute a favourite shutout/one-run-conceded branch before promoting the dog cushion.
+2. Do not translate “many recent close games” across a materially different starting-pitcher matchup without opponent adjustment.
+3. For integer totals, rank the Under above the Over when the best starter and best bullpen sit on the same side and the opponent has a realistic 0–2 run distribution; hot weather alone is not enough to reverse it.
+4. In this card, the evidence-consistent order should have been closer to **Under 9 / Padres -1.5 / Reds +1.5 / Over 9**, with the exact first two order depending on the desired marginal target.
+
+Sources: [Reuters game report](https://www.reuters.com/sports/baseball/padres-pile-fourth-shut-down-reds-opener--flm-2026-09-01/); [ESPN recap and box score](https://www.espn.com/mlb/recap/_/gameId/401816749); [CBS box score](https://www.cbssports.com/mlb/gametracker/recap/MLB_20260831_SD%40CIN/).
+
+## P-221 settlement — Marlins @ Nationals
+
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+| — | Potential winner: Rays | **LOSS** |
+
+What went right: the top-ranked cushion was robust and the Under branch existed in the original tree. Robert Stock delivered 5.1 scoreless innings; Ian Seymour struck out ten but allowed the three Mets runs. The game stayed close, exactly the environment in which Mets +1.5 was strongest.
+
+What went wrong: the potential-winner call over-weighted Tampa's broader team/starter baseline and under-weighted the chance that Stock's weak season line would not describe this single start. The Over rank also leaned too much on Stock's upper tail; his actual command suppressed that path.
+
+Learning: when the #1 pick is an underdog cushion and the opposing favourite's -1.5 is ranked below it, the winner call should carry only modest confidence. A starter with a poor baseline still needs an explicit quality-start probability branch.
+
+Source: [ESPN final and box score](https://www.espn.com/mlb/game/_/gameId/401816748/mets-rays).
+
+## P-220 settlement and deep rank-#1 retrospective — Padres @ Reds
+
+Verified outcome: **Padres 5, Reds 0; 5 total runs. Michael King threw six scoreless innings; Brady Singer allowed four runs on ten hits in 4.1 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Reds +1.5 | **LOSS** |
+| 2 | Over 9.0 | **LOSS** |
+| 3 | Padres -1.5 | **WIN** |
+| 4 | Under 9.0 | **WIN** |
+| — | Potential winner: Padres | **WIN** |
+
+What went right: the analysis correctly identified King as the strongest run-suppression component, Singer as the weaker starter, San Diego as the better winner side, and Cincinnati's bullpen as the more vulnerable late unit. It also explicitly named a 5-2/6-2 Padres separation branch. The winner call, Padres -1.5 and Under all came from those sound mechanisms.
+
+Why the “most likely” pick failed: the ranking let contract breadth and recent close-game counts outrank the strongest causal matchup. Cincinnati +1.5 was supported by the fact that it covers every Reds win and one-run loss, but the actual game was never a close-allocation problem. King extended his scoreless streak to 15.2 innings and recorded a fifth straight quality start. Singer then allowed six consecutive hits in a four-run fourth. Once Cincinnati produced zero, even a moderate Padres output created automatic separation.
+
+The pre-game evidence already contained the correction: King had a 3.23 ERA and strong recent form; Singer had a 4.72 ERA, 1.42 WHIP and five homers allowed in five August starts; Padres relief had been excellent; Reds relief was weak. The ranking understated the covariance of these edges. It also over-weighted Cincinnati's previous-day four-homer result, a noisy recency signal against a different starter.
+
+Required improvement:
+
+1. When favourite starter edge + bullpen edge + winner edge all align, compute a favourite shutout/one-run-conceded branch before promoting the dog cushion.
+2. Do not translate “many recent close games” across a materially different starting-pitcher matchup without opponent adjustment.
+3. For integer totals, rank the Under above the Over when the best starter and best bullpen sit on the same side and the opponent has a realistic 0–2 run distribution; hot weather alone is not enough to reverse it.
+4. In this card, the evidence-consistent order should have been closer to **Under 9 / Padres -1.5 / Reds +1.5 / Over 9**, with the exact first two order depending on the desired marginal target.
+
+Sources: [Reuters game report](https://www.reuters.com/sports/baseball/padres-pile-fourth-shut-down-reds-opener--flm-2026-09-01/); [ESPN recap and box score](https://www.espn.com/mlb/recap/_/gameId/401816749); [CBS box score](https://www.cbssports.com/mlb/gametracker/recap/MLB_20260831_SD%40CIN/).
+
+## P-221 settlement — Marlins @ Nationals
+
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+| — | Potential winner: Rays | **LOSS** |
+
+What went right: the top-ranked cushion was robust and the Under branch existed in the original tree. Robert Stock delivered 5.1 scoreless innings; Ian Seymour struck out ten but allowed the three Mets runs. The game stayed close, exactly the environment in which Mets +1.5 was strongest.
+
+What went wrong: the potential-winner call over-weighted Tampa's broader team/starter baseline and under-weighted the chance that Stock's weak season line would not describe this single start. The Over rank also leaned too much on Stock's upper tail; his actual command suppressed that path.
+
+Learning: when the #1 pick is an underdog cushion and the opposing favourite's -1.5 is ranked below it, the winner call should carry only modest confidence. A starter with a poor baseline still needs an explicit quality-start probability branch.
+
+Source: [ESPN final and box score](https://www.espn.com/mlb/game/_/gameId/401816748/mets-rays).
+
+## P-220 settlement and deep rank-#1 retrospective — Padres @ Reds
+
+Verified outcome: **Padres 5, Reds 0; 5 total runs. Michael King threw six scoreless innings; Brady Singer allowed four runs on ten hits in 4.1 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Reds +1.5 | **LOSS** |
+| 2 | Over 9.0 | **LOSS** |
+| 3 | Padres -1.5 | **WIN** |
+| 4 | Under 9.0 | **WIN** |
+| — | Potential winner: Padres | **WIN** |
+
+What went right: the analysis correctly identified King as the strongest run-suppression component, Singer as the weaker starter, San Diego as the better winner side, and Cincinnati's bullpen as the more vulnerable late unit. It also explicitly named a 5-2/6-2 Padres separation branch. The winner call, Padres -1.5 and Under all came from those sound mechanisms.
+
+Why the “most likely” pick failed: the ranking let contract breadth and recent close-game counts outrank the strongest causal matchup. Cincinnati +1.5 was supported by the fact that it covers every Reds win and one-run loss, but the actual game was never a close-allocation problem. King extended his scoreless streak to 15.2 innings and recorded a fifth straight quality start. Singer then allowed six consecutive hits in a four-run fourth. Once Cincinnati produced zero, even a moderate Padres output created automatic separation.
+
+The pre-game evidence already contained the correction: King had a 3.23 ERA and strong recent form; Singer had a 4.72 ERA, 1.42 WHIP and five homers allowed in five August starts; Padres relief had been excellent; Reds relief was weak. The ranking understated the covariance of these edges. It also over-weighted Cincinnati's previous-day four-homer result, a noisy recency signal against a different starter.
+
+Required improvement:
+
+1. When favourite starter edge + bullpen edge + winner edge all align, compute a favourite shutout/one-run-conceded branch before promoting the dog cushion.
+2. Do not translate “many recent close games” across a materially different starting-pitcher matchup without opponent adjustment.
+3. For integer totals, rank the Under above the Over when the best starter and best bullpen sit on the same side and the opponent has a realistic 0–2 run distribution; hot weather alone is not enough to reverse it.
+4. In this card, the evidence-consistent order should have been closer to **Under 9 / Padres -1.5 / Reds +1.5 / Over 9**, with the exact first two order depending on the desired marginal target.
+
+Sources: [Reuters game report](https://www.reuters.com/sports/baseball/padres-pile-fourth-shut-down-reds-opener--flm-2026-09-01/); [ESPN recap and box score](https://www.espn.com/mlb/recap/_/gameId/401816749); [CBS box score](https://www.cbssports.com/mlb/gametracker/recap/MLB_20260831_SD%40CIN/).
+
+## P-221 settlement — Marlins @ Nationals
+
+Verified outcome: **Nationals 6, Marlins 3; 9 total runs.**

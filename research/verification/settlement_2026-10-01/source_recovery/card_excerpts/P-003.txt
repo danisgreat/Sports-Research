@@ -1,0 +1,230 @@
+| Rank | Row | Verdict | Result | Grade |
+|---|---|---|---|---|
+| 1 | Marlins +1.5 | `SUPPORTED` | MIA won outright, 8–6 | **WIN** |
+| 2 | Combined Under 7.5 | `LEAN` | 14 total runs | **LOSS** |
+| 3 | Combined Over 7.5 | `PASS` | 14 total runs | WIN (abstention) |
+| 4 | Phillies −1.5 | `AVOID` | PHI lost outright | correctly avoided |
+
+**Winner grade:** lean **Philadelphia Phillies** — **INCORRECT** (Miami won).
+**Ranking diagnostic:** two complementary pairs; higher-ranked branch of the run-line pair (Marlins +1.5) **WIN**; higher-ranked branch of the total pair (Under 7.5) **LOSS**. 1 of 2 higher-ranked branches correct.
+
+**Retrospective (AGENT_ROLE_AND_TASK §7):**
+1. *Event/market identity correct?* Yes.
+2. *Settled from a verified final under stated conventions?* Yes — statsapi official boxscore/linescore, single primary source (MLB's own feed), regulation game, no extra-innings question, no pushes possible on either .5 line.
+3. *Assumptions verified/unverified/wrong?* Verified: Schwarber sat the whole game (confirmed absent from the final box score); Miami's bullpen did have to cover most of the game (6.0 of 9 innings, as projected). **Wrong, specifically:** (a) Luzardo — the card's central pillar ("six consecutive starts ≤1 ER, seven straight ≤2 ER") did **not** hold an eighth time: he allowed 6 ER on 100 pitches, his worst start of the entire cited stretch. (b) The bullpen-strain thesis pointed at the wrong bullpen's failure mode: Miami's flagged tired arms (Faucher, Gibson) were **never used at all**; Miami instead rode a fresh Dax Fulton (2.0 IP, 0 R — a pitcher the original card explicitly filed under "lightly used, low leverage," not a risk) plus Zuber and Fairbanks for 4 combined shutout innings to close it out. Philadelphia's own pen — which the card treated as a stabilising factor (Duran rested and available, Kerkering/Bowlan "quality") — was the unit that actually leaked the decisive runs: Bowlan (2.70 season ERA) surrendered 2 runs in the 8th and took the loss. Duran was never used.
+4. *Right for the stated reason, right for a different reason, or wrong for a knowable reason?* The **Marlins +1.5 pick was correct, but not for the stated reason.** The card's mechanism was "a cold, Schwarber-less Philadelphia offense stays quiet." Philadelphia actually scored 6 runs — above their L20 (3.65) and L5 (3.80) averages, including a Turner home run — so the "cold offense" half of the thesis was wrong in isolation. The pick still cashed because Miami's own offense (8 runs, also above its L5/L10 baselines) and Philadelphia's bullpen collapse combined to outweigh it. This is a "right pick, wrong specific mechanism" case, not a clean vindication of the written reasoning. The **Under 7.5 / winner-lean miss is wrong for a partly-knowable reason**: the card's own two-branch failure path for the Under (§ "V6-013 low-total two-branch rule") explicitly named "the opponent-lineup branch (Miami's right-handed bats against a pitcher who has allowed 11 HR)" as a live risk — that is close to what actually happened (Miami's lineup, particularly Heriberto Hernández's homer, contributed to Luzardo's 6 ER) — the branch was named, just under-weighted relative to a pitcher who had thrown 90+ pitches in seven consecutive starts (a cumulative-workload signal the card never explicitly modelled as fatigue risk, only as a positive quality signal).
+5. *Which rule reinforces or is contradicted?* Reinforces the **existing V6-013 two-branch discipline** (the branch that beat the pick was one of the two named, just under-weighted) and **M5's logic held in its intended direction** on the row that won (Marlins +1.5). **New, not yet in the rules:** a starter's streak of excellent starts carries a cumulative-workload dimension that is separate from and not captured by the rate stats (ERA/ER-per-start) alone — Luzardo had thrown 90–106 pitches in every one of his prior seven starts; that workload was cited on the card only as evidence of durability/quality, never flagged as a fatigue-risk variable. **Also new:** recent bullpen-workload data (who pitched, how many pitches, how recently) predicts **availability**, not **performance** — the tired-arms-avoidance decision by Miami's manager (benching Faucher/Gibson entirely) meant the "strained bullpen" thesis never got tested the way the card modelled it, and the presumed-stable unit (Philadelphia's) is what actually broke.
+6. *Repeated evidence or one match?* Both new observations are **n=1** — logged as hypotheses, not promoted.
+
+**Lesson routing:** two new baseball hypotheses added to `RULES_BASEBALL.md` §9 (below); no change to `RULES_GENERAL.md` beyond the winner-lean tally update (see the consolidated update after all three settlements).
+
+**Result:** `SETTLED / CLOSED`.
+
+---
+
+## P-003 — SETTLEMENT (appended 2026-07-30T14:22Z)
+
+**Live-check first:** confirmed `Final` [ESPN summary API + direct browser read of espn.com match page + Sofascore, all cross-checked, OPENED, 2026-07-30T13:5x–14:0xZ] — proceeding to settle.
+**Source-conflict note, disclosed:** an initial WebFetch summarisation of the same ESPN endpoint returned an internally-inconsistent "Full-Time Score 3-3" headline alongside a goalscorer list that actually totalled 2–1 (the headline number was almost certainly cross-contaminated from the leg-1 head-to-head box shown on the same page). This was **not used**; a direct browser read of `espn.com/soccer/match/_/gameId/401877935` and an independent cross-check on Sofascore both returned the same clean result below, which is what is graded.
+
+**Official final [espn.com match page + sofascore.com, both OPENED, cross-checked, 2026-07-30T14:00Z]:** **F.C. København 2, Polissya Zhytomyr 1** (this leg, full time, no extra time or penalties needed). **Aggregate: København 5–4, København advance** to the third qualifying round. Goals: Mohamed Elyounoussi 27' (pen, KBH); Robert 61' (KBH, assist Madsen); Mykola Haiduchyk 90'+3 (Polissya, assist Krushynskyi). **Red card: Junnosuke Suzuki (KBH) 46'** — professional foul, last man — meaning København played the **entire second half a man down** and still won. Player of the match: Mads Emil Madsen. Referee: Marek Radina, as previously identified.
+
+**Row grades** (contract: "this leg, regulation + stoppage" for rows 1–4, as stated on the original card):
+
+| Rank | Row | Contract | Verdict | Result | Grade |
+|---|---|---|---|---|---|
+| 1 | Both Teams To Score — Yes | this leg | `SUPPORTED` | KBH 2, Polissya 1 — both scored | **WIN** |
+| 2 | Over 2.5 total goals | this leg | `LEAN` | 3 goals | **WIN** |
+| 3 | Copenhagen — more corners than Polissya | this leg | `LEAN` | **Not obtainable** — no corner count found on ESPN or Sofascore's match pages, and Sofascore's statistics API returned 403 Forbidden. Per `RULES_SOCCER.md` §5.3, this is declared **`NOT GRADED — unsettleable at cutoff`**, not guessed. | **NOT GRADED** |
+| 4 | Robert (KBH #16) — anytime goalscorer | this leg | `LEAN` | Robert scored at 61' | **WIN** |
+
+**Winner grade — two contracts, graded separately (RULES_SOCCER §5.1):**
+- **This leg, regulation + stoppage:** FC København — `LEAN` (~58%) → København won 2–1 → **CORRECT**.
+- **Tie/advance to Q3:** FC København — `LEAN` (~60%) → København advanced 5–4 on aggregate → **CORRECT**.
+
+**Ranking diagnostic:** all four rows were distinct, only partially-correlated markets (no forced complementary pair on this card, per the original card's own §8.6 note) — so there is no "higher-ranked branch" diagnostic to compute the way there is for a two-sided line; each row is graded on its own merits. **3 of 3 gradable formal rows correct; 1 declared unsettleable; both winner contracts correct.** This is the strongest single-card outcome in the fresh log to date.
+
+**Retrospective (AGENT_ROLE_AND_TASK §7):**
+1. *Event/market identity correct?* Yes — leg 2 of the exact tie, correct event ID cross-verified against elapsed-time sanity checks earlier in the live-monitoring pass.
+2. *Settled from a verified final under stated conventions?* Yes, from two independent primary/near-primary sources (ESPN direct browser render, Sofascore), after explicitly rejecting a garbled/self-contradictory automated summary of the same underlying page. This is a good, disclosed example of the freshness/verification discipline working as intended rather than being skipped for convenience.
+3. *Assumptions verified/unverified/wrong?* Verified: the unchanged-XI, leg-1-repeats-itself thesis (Fedor/Krasnopir-equivalent logic on the København side: Robert, who scored twice in leg 1, scored again in leg 2 — exactly the case argued for Row 4). **Notably strengthened by an event the card could not have priced:** a 46th-minute red card on København would, on priors, be expected to hurt a favourite's goal-scoring and winning chances — instead København scored their second goal *after* going down to ten men and held out from 46' onward. This is worth naming honestly: the card's evidence and reasoning were sound, but the actual game contained a large, unpredictable in-match event (the sending-off) that easily could have flipped the result, and didn't.
+4. *Right for the stated reason, or fortunate?* **Right for the stated reason on BTTS, Over 2.5, and the Robert prop** — the "this fixture, these largely-unchanged XIs, produces goals for both sides" thesis, and Robert specifically as København's most direct route to goal, both played out almost exactly as written, down to the same player scoring again. The **winner leans are right, but their margin of safety was thinner than the final scoreline suggests** — a team playing 44+ minutes with ten men winning by only one goal is a live result, not a comfortable one; the internal ~58–60% estimates were appropriately humble, not over-claimed, and this is a case where a thin, disclosed lean paid off rather than one that got lucky on a false premise.
+5. *Which rule reinforces or is contradicted?* Reinforces `RULES_GENERAL.md` §10's dependence framework — the card explicitly flagged that Rows 1/2/4 shared one attacking thesis and could fail together; here they succeeded together, which is the mirror-positive case and does not by itself validate treating them as independent (they still are not). Reinforces `RULES_SOCCER.md` §5.3 (corners unsettleability) exactly as designed — declared, not guessed, when the data genuinely was not obtainable after a real attempt (ESPN, Sofascore page, Sofascore API all tried). **New observation, cricket-and-soccer-crossing in spirit:** in-match red cards/dismissals are a major variance source that a pregame card cannot see coming and should be named as a generic "known unknown" on cards involving disciplinarily-live fixtures (both teams had a booking history flagged pregame on the original card's odds/context section) — logged as a hypothesis, not a rule, on n=1.
+6. *Repeated evidence or one match?* All new observations here are n=1. The **fresh-log winner-lean tally now stands at 3 correct (P-001, and both P-003 contracts) vs 2 incorrect (P-002, and — pending below — P-004)** — a material improvement on the legacy 0-for-3 pattern; still too small a sample (n=5) to claim a fixed skill, and the standing caution in `RULES_GENERAL.md` §11 is updated to reflect the current number rather than only the stale legacy figure (see consolidated update below).
+
+**Lesson routing:** one new soccer hypothesis (in-match red cards as an unpriceable variance source) logged to "Lessons pending promotion," n=1; `RULES_GENERAL.md` §11's winner-lean tally text updated for accuracy (not a new rule).
+
+**Result:** `SETTLED / CLOSED`.
+
+---
+
+## P-004 — SETTLEMENT (appended 2026-07-30T14:22Z)
+
+**Live-check first:** confirmed `RESULT` (final) [espncricinfo.com full scorecard, direct browser read, OPENED, 2026-07-30T13:4x–13:5xZ] — proceeding to settle.
+
+**Official final [espncricinfo.com full scorecard, OPENED, match ID 1521242 re-verified]:** **MI London (Men) 164/5 off 100 balls. London Spirit (Men) 165/3 off 89 balls (chasing 165). Spirit won by 7 wickets, 11 balls remaining.** Player of the match: **Lhuan-dre Pretorius (LS), 64 off 28 balls** (7 fours, 3 sixes, SR 228.57) — MIL's own confirmed-XI opener, not one of the reputational headline names (Bairstow/Livingstone/Brevis) the original card emphasised.
+**MI London's powerplay, confirmed on the completed scorecard's own "Match Flow" phase line:** "**Powerplay 1: Balls 1–25 (Mandatory) — 28 runs, 0 wicket**" — exactly matching the live browser-verified read captured during the original card's research (28/0 at 17:49Z), now doubly confirmed against the final, official phase line per RULES_CRICKET §5.5.
+**MI London's innings, key detail:** wicketless to 91/0 at ball 62 (a genuinely clean platform, as the original card's live read anticipated), then lost 4 wickets for 73 runs across the remaining 38 balls — **Jamie Overton took 3 of MI London's 5 wickets (3/30)**, including Jacks (65 off 44 — the top score), Pooran, and Roy in a short cluster between balls 66–81.
+**London Spirit's chase, key detail:** their own powerplay went **61/0 off 25 balls** — nearly double MI London's — driven by Pretorius, who reached 50 off 23 balls (3 fours, 5 sixes) before finishing 64.
+
+**Row grades** (convention: runs metric incl. extras, read from the scorecard's own totals and phase line; .5 lines cannot push):
+
+| Rank | Row | Verdict | Result | Grade |
+|---|---|---|---|---|
+| 1 | Powerplay (25b) Under 39.5 | `SUPPORTED` | 28 runs | **WIN** |
+| 2 | 100-ball Over 164.5 | `LEAN` | **164 runs — exactly 1 run / 0.5 short of the line** | **LOSS** |
+| 3 | 100-ball Under 164.5 | `LEAN` | 164 runs | **WIN** |
+
+|---|---|---|---|---|
+| 1 | Marlins +1.5 | `SUPPORTED` | MIA won outright, 8–6 | **WIN** |
+| 2 | Combined Under 7.5 | `LEAN` | 14 total runs | **LOSS** |
+| 3 | Combined Over 7.5 | `PASS` | 14 total runs | WIN (abstention) |
+| 4 | Phillies −1.5 | `AVOID` | PHI lost outright | correctly avoided |
+
+**Winner grade:** lean **Philadelphia Phillies** — **INCORRECT** (Miami won).
+**Ranking diagnostic:** two complementary pairs; higher-ranked branch of the run-line pair (Marlins +1.5) **WIN**; higher-ranked branch of the total pair (Under 7.5) **LOSS**. 1 of 2 higher-ranked branches correct.
+
+**Retrospective (AGENT_ROLE_AND_TASK §7):**
+1. *Event/market identity correct?* Yes.
+2. *Settled from a verified final under stated conventions?* Yes — statsapi official boxscore/linescore, single primary source (MLB's own feed), regulation game, no extra-innings question, no pushes possible on either .5 line.
+3. *Assumptions verified/unverified/wrong?* Verified: Schwarber sat the whole game (confirmed absent from the final box score); Miami's bullpen did have to cover most of the game (6.0 of 9 innings, as projected). **Wrong, specifically:** (a) Luzardo — the card's central pillar ("six consecutive starts ≤1 ER, seven straight ≤2 ER") did **not** hold an eighth time: he allowed 6 ER on 100 pitches, his worst start of the entire cited stretch. (b) The bullpen-strain thesis pointed at the wrong bullpen's failure mode: Miami's flagged tired arms (Faucher, Gibson) were **never used at all**; Miami instead rode a fresh Dax Fulton (2.0 IP, 0 R — a pitcher the original card explicitly filed under "lightly used, low leverage," not a risk) plus Zuber and Fairbanks for 4 combined shutout innings to close it out. Philadelphia's own pen — which the card treated as a stabilising factor (Duran rested and available, Kerkering/Bowlan "quality") — was the unit that actually leaked the decisive runs: Bowlan (2.70 season ERA) surrendered 2 runs in the 8th and took the loss. Duran was never used.
+4. *Right for the stated reason, right for a different reason, or wrong for a knowable reason?* The **Marlins +1.5 pick was correct, but not for the stated reason.** The card's mechanism was "a cold, Schwarber-less Philadelphia offense stays quiet." Philadelphia actually scored 6 runs — above their L20 (3.65) and L5 (3.80) averages, including a Turner home run — so the "cold offense" half of the thesis was wrong in isolation. The pick still cashed because Miami's own offense (8 runs, also above its L5/L10 baselines) and Philadelphia's bullpen collapse combined to outweigh it. This is a "right pick, wrong specific mechanism" case, not a clean vindication of the written reasoning. The **Under 7.5 / winner-lean miss is wrong for a partly-knowable reason**: the card's own two-branch failure path for the Under (§ "V6-013 low-total two-branch rule") explicitly named "the opponent-lineup branch (Miami's right-handed bats against a pitcher who has allowed 11 HR)" as a live risk — that is close to what actually happened (Miami's lineup, particularly Heriberto Hernández's homer, contributed to Luzardo's 6 ER) — the branch was named, just under-weighted relative to a pitcher who had thrown 90+ pitches in seven consecutive starts (a cumulative-workload signal the card never explicitly modelled as fatigue risk, only as a positive quality signal).
+5. *Which rule reinforces or is contradicted?* Reinforces the **existing V6-013 two-branch discipline** (the branch that beat the pick was one of the two named, just under-weighted) and **M5's logic held in its intended direction** on the row that won (Marlins +1.5). **New, not yet in the rules:** a starter's streak of excellent starts carries a cumulative-workload dimension that is separate from and not captured by the rate stats (ERA/ER-per-start) alone — Luzardo had thrown 90–106 pitches in every one of his prior seven starts; that workload was cited on the card only as evidence of durability/quality, never flagged as a fatigue-risk variable. **Also new:** recent bullpen-workload data (who pitched, how many pitches, how recently) predicts **availability**, not **performance** — the tired-arms-avoidance decision by Miami's manager (benching Faucher/Gibson entirely) meant the "strained bullpen" thesis never got tested the way the card modelled it, and the presumed-stable unit (Philadelphia's) is what actually broke.
+6. *Repeated evidence or one match?* Both new observations are **n=1** — logged as hypotheses, not promoted.
+
+**Lesson routing:** two new baseball hypotheses added to `RULES_BASEBALL.md` §9 (below); no change to `RULES_GENERAL.md` beyond the winner-lean tally update (see the consolidated update after all three settlements).
+
+**Result:** `SETTLED / CLOSED`.
+
+---
+
+## P-003 — SETTLEMENT (appended 2026-07-30T14:22Z)
+
+**Live-check first:** confirmed `Final` [ESPN summary API + direct browser read of espn.com match page + Sofascore, all cross-checked, OPENED, 2026-07-30T13:5x–14:0xZ] — proceeding to settle.
+**Source-conflict note, disclosed:** an initial WebFetch summarisation of the same ESPN endpoint returned an internally-inconsistent "Full-Time Score 3-3" headline alongside a goalscorer list that actually totalled 2–1 (the headline number was almost certainly cross-contaminated from the leg-1 head-to-head box shown on the same page). This was **not used**; a direct browser read of `espn.com/soccer/match/_/gameId/401877935` and an independent cross-check on Sofascore both returned the same clean result below, which is what is graded.
+
+**Official final [espn.com match page + sofascore.com, both OPENED, cross-checked, 2026-07-30T14:00Z]:** **F.C. København 2, Polissya Zhytomyr 1** (this leg, full time, no extra time or penalties needed). **Aggregate: København 5–4, København advance** to the third qualifying round. Goals: Mohamed Elyounoussi 27' (pen, KBH); Robert 61' (KBH, assist Madsen); Mykola Haiduchyk 90'+3 (Polissya, assist Krushynskyi). **Red card: Junnosuke Suzuki (KBH) 46'** — professional foul, last man — meaning København played the **entire second half a man down** and still won. Player of the match: Mads Emil Madsen. Referee: Marek Radina, as previously identified.
+
+**Row grades** (contract: "this leg, regulation + stoppage" for rows 1–4, as stated on the original card):
+
+| Rank | Row | Contract | Verdict | Result | Grade |
+|---|---|---|---|---|---|
+| 1 | Both Teams To Score — Yes | this leg | `SUPPORTED` | KBH 2, Polissya 1 — both scored | **WIN** |
+| 2 | Over 2.5 total goals | this leg | `LEAN` | 3 goals | **WIN** |
+| 3 | Copenhagen — more corners than Polissya | this leg | `LEAN` | **Not obtainable** — no corner count found on ESPN or Sofascore's match pages, and Sofascore's statistics API returned 403 Forbidden. Per `RULES_SOCCER.md` §5.3, this is declared **`NOT GRADED — unsettleable at cutoff`**, not guessed. | **NOT GRADED** |
+| 4 | Robert (KBH #16) — anytime goalscorer | this leg | `LEAN` | Robert scored at 61' | **WIN** |
+
+**Winner grade — two contracts, graded separately (RULES_SOCCER §5.1):**
+- **This leg, regulation + stoppage:** FC København — `LEAN` (~58%) → København won 2–1 → **CORRECT**.
+- **Tie/advance to Q3:** FC København — `LEAN` (~60%) → København advanced 5–4 on aggregate → **CORRECT**.
+
+**Ranking diagnostic:** all four rows were distinct, only partially-correlated markets (no forced complementary pair on this card, per the original card's own §8.6 note) — so there is no "higher-ranked branch" diagnostic to compute the way there is for a two-sided line; each row is graded on its own merits. **3 of 3 gradable formal rows correct; 1 declared unsettleable; both winner contracts correct.** This is the strongest single-card outcome in the fresh log to date.
+
+**Retrospective (AGENT_ROLE_AND_TASK §7):**
+1. *Event/market identity correct?* Yes — leg 2 of the exact tie, correct event ID cross-verified against elapsed-time sanity checks earlier in the live-monitoring pass.
+2. *Settled from a verified final under stated conventions?* Yes, from two independent primary/near-primary sources (ESPN direct browser render, Sofascore), after explicitly rejecting a garbled/self-contradictory automated summary of the same underlying page. This is a good, disclosed example of the freshness/verification discipline working as intended rather than being skipped for convenience.
+3. *Assumptions verified/unverified/wrong?* Verified: the unchanged-XI, leg-1-repeats-itself thesis (Fedor/Krasnopir-equivalent logic on the København side: Robert, who scored twice in leg 1, scored again in leg 2 — exactly the case argued for Row 4). **Notably strengthened by an event the card could not have priced:** a 46th-minute red card on København would, on priors, be expected to hurt a favourite's goal-scoring and winning chances — instead København scored their second goal *after* going down to ten men and held out from 46' onward. This is worth naming honestly: the card's evidence and reasoning were sound, but the actual game contained a large, unpredictable in-match event (the sending-off) that easily could have flipped the result, and didn't.
+4. *Right for the stated reason, or fortunate?* **Right for the stated reason on BTTS, Over 2.5, and the Robert prop** — the "this fixture, these largely-unchanged XIs, produces goals for both sides" thesis, and Robert specifically as København's most direct route to goal, both played out almost exactly as written, down to the same player scoring again. The **winner leans are right, but their margin of safety was thinner than the final scoreline suggests** — a team playing 44+ minutes with ten men winning by only one goal is a live result, not a comfortable one; the internal ~58–60% estimates were appropriately humble, not over-claimed, and this is a case where a thin, disclosed lean paid off rather than one that got lucky on a false premise.
+5. *Which rule reinforces or is contradicted?* Reinforces `RULES_GENERAL.md` §10's dependence framework — the card explicitly flagged that Rows 1/2/4 shared one attacking thesis and could fail together; here they succeeded together, which is the mirror-positive case and does not by itself validate treating them as independent (they still are not). Reinforces `RULES_SOCCER.md` §5.3 (corners unsettleability) exactly as designed — declared, not guessed, when the data genuinely was not obtainable after a real attempt (ESPN, Sofascore page, Sofascore API all tried). **New observation, cricket-and-soccer-crossing in spirit:** in-match red cards/dismissals are a major variance source that a pregame card cannot see coming and should be named as a generic "known unknown" on cards involving disciplinarily-live fixtures (both teams had a booking history flagged pregame on the original card's odds/context section) — logged as a hypothesis, not a rule, on n=1.
+6. *Repeated evidence or one match?* All new observations here are n=1. The **fresh-log winner-lean tally now stands at 3 correct (P-001, and both P-003 contracts) vs 2 incorrect (P-002, and — pending below — P-004)** — a material improvement on the legacy 0-for-3 pattern; still too small a sample (n=5) to claim a fixed skill, and the standing caution in `RULES_GENERAL.md` §11 is updated to reflect the current number rather than only the stale legacy figure (see consolidated update below).
+
+**Lesson routing:** one new soccer hypothesis (in-match red cards as an unpriceable variance source) logged to "Lessons pending promotion," n=1; `RULES_GENERAL.md` §11's winner-lean tally text updated for accuracy (not a new rule).
+
+**Result:** `SETTLED / CLOSED`.
+
+---
+
+## P-004 — SETTLEMENT (appended 2026-07-30T14:22Z)
+
+**Live-check first:** confirmed `RESULT` (final) [espncricinfo.com full scorecard, direct browser read, OPENED, 2026-07-30T13:4x–13:5xZ] — proceeding to settle.
+
+**Official final [espncricinfo.com full scorecard, OPENED, match ID 1521242 re-verified]:** **MI London (Men) 164/5 off 100 balls. London Spirit (Men) 165/3 off 89 balls (chasing 165). Spirit won by 7 wickets, 11 balls remaining.** Player of the match: **Lhuan-dre Pretorius (LS), 64 off 28 balls** (7 fours, 3 sixes, SR 228.57) — MIL's own confirmed-XI opener, not one of the reputational headline names (Bairstow/Livingstone/Brevis) the original card emphasised.
+**MI London's powerplay, confirmed on the completed scorecard's own "Match Flow" phase line:** "**Powerplay 1: Balls 1–25 (Mandatory) — 28 runs, 0 wicket**" — exactly matching the live browser-verified read captured during the original card's research (28/0 at 17:49Z), now doubly confirmed against the final, official phase line per RULES_CRICKET §5.5.
+**MI London's innings, key detail:** wicketless to 91/0 at ball 62 (a genuinely clean platform, as the original card's live read anticipated), then lost 4 wickets for 73 runs across the remaining 38 balls — **Jamie Overton took 3 of MI London's 5 wickets (3/30)**, including Jacks (65 off 44 — the top score), Pooran, and Roy in a short cluster between balls 66–81.
+**London Spirit's chase, key detail:** their own powerplay went **61/0 off 25 balls** — nearly double MI London's — driven by Pretorius, who reached 50 off 23 balls (3 fours, 5 sixes) before finishing 64.
+
+**Row grades** (convention: runs metric incl. extras, read from the scorecard's own totals and phase line; .5 lines cannot push):
+
+| Rank | Row | Verdict | Result | Grade |
+|---|---|---|---|---|
+| 1 | Powerplay (25b) Under 39.5 | `SUPPORTED` | 28 runs | **WIN** |
+| 2 | 100-ball Over 164.5 | `LEAN` | **164 runs — exactly 1 run / 0.5 short of the line** | **LOSS** |
+| 3 | 100-ball Under 164.5 | `LEAN` | 164 runs | **WIN** |
+| 4 | Powerplay (25b) Over 39.5 | `AVOID` | 28 runs | correctly avoided |
+
+| 2 | Combined Under 7.5 | `LEAN` | 14 total runs | **LOSS** |
+| 3 | Combined Over 7.5 | `PASS` | 14 total runs | WIN (abstention) |
+| 4 | Phillies −1.5 | `AVOID` | PHI lost outright | correctly avoided |
+
+**Winner grade:** lean **Philadelphia Phillies** — **INCORRECT** (Miami won).
+**Ranking diagnostic:** two complementary pairs; higher-ranked branch of the run-line pair (Marlins +1.5) **WIN**; higher-ranked branch of the total pair (Under 7.5) **LOSS**. 1 of 2 higher-ranked branches correct.
+
+**Retrospective (AGENT_ROLE_AND_TASK §7):**
+1. *Event/market identity correct?* Yes.
+2. *Settled from a verified final under stated conventions?* Yes — statsapi official boxscore/linescore, single primary source (MLB's own feed), regulation game, no extra-innings question, no pushes possible on either .5 line.
+3. *Assumptions verified/unverified/wrong?* Verified: Schwarber sat the whole game (confirmed absent from the final box score); Miami's bullpen did have to cover most of the game (6.0 of 9 innings, as projected). **Wrong, specifically:** (a) Luzardo — the card's central pillar ("six consecutive starts ≤1 ER, seven straight ≤2 ER") did **not** hold an eighth time: he allowed 6 ER on 100 pitches, his worst start of the entire cited stretch. (b) The bullpen-strain thesis pointed at the wrong bullpen's failure mode: Miami's flagged tired arms (Faucher, Gibson) were **never used at all**; Miami instead rode a fresh Dax Fulton (2.0 IP, 0 R — a pitcher the original card explicitly filed under "lightly used, low leverage," not a risk) plus Zuber and Fairbanks for 4 combined shutout innings to close it out. Philadelphia's own pen — which the card treated as a stabilising factor (Duran rested and available, Kerkering/Bowlan "quality") — was the unit that actually leaked the decisive runs: Bowlan (2.70 season ERA) surrendered 2 runs in the 8th and took the loss. Duran was never used.
+4. *Right for the stated reason, right for a different reason, or wrong for a knowable reason?* The **Marlins +1.5 pick was correct, but not for the stated reason.** The card's mechanism was "a cold, Schwarber-less Philadelphia offense stays quiet." Philadelphia actually scored 6 runs — above their L20 (3.65) and L5 (3.80) averages, including a Turner home run — so the "cold offense" half of the thesis was wrong in isolation. The pick still cashed because Miami's own offense (8 runs, also above its L5/L10 baselines) and Philadelphia's bullpen collapse combined to outweigh it. This is a "right pick, wrong specific mechanism" case, not a clean vindication of the written reasoning. The **Under 7.5 / winner-lean miss is wrong for a partly-knowable reason**: the card's own two-branch failure path for the Under (§ "V6-013 low-total two-branch rule") explicitly named "the opponent-lineup branch (Miami's right-handed bats against a pitcher who has allowed 11 HR)" as a live risk — that is close to what actually happened (Miami's lineup, particularly Heriberto Hernández's homer, contributed to Luzardo's 6 ER) — the branch was named, just under-weighted relative to a pitcher who had thrown 90+ pitches in seven consecutive starts (a cumulative-workload signal the card never explicitly modelled as fatigue risk, only as a positive quality signal).
+5. *Which rule reinforces or is contradicted?* Reinforces the **existing V6-013 two-branch discipline** (the branch that beat the pick was one of the two named, just under-weighted) and **M5's logic held in its intended direction** on the row that won (Marlins +1.5). **New, not yet in the rules:** a starter's streak of excellent starts carries a cumulative-workload dimension that is separate from and not captured by the rate stats (ERA/ER-per-start) alone — Luzardo had thrown 90–106 pitches in every one of his prior seven starts; that workload was cited on the card only as evidence of durability/quality, never flagged as a fatigue-risk variable. **Also new:** recent bullpen-workload data (who pitched, how many pitches, how recently) predicts **availability**, not **performance** — the tired-arms-avoidance decision by Miami's manager (benching Faucher/Gibson entirely) meant the "strained bullpen" thesis never got tested the way the card modelled it, and the presumed-stable unit (Philadelphia's) is what actually broke.
+6. *Repeated evidence or one match?* Both new observations are **n=1** — logged as hypotheses, not promoted.
+
+**Lesson routing:** two new baseball hypotheses added to `RULES_BASEBALL.md` §9 (below); no change to `RULES_GENERAL.md` beyond the winner-lean tally update (see the consolidated update after all three settlements).
+
+**Result:** `SETTLED / CLOSED`.
+
+---
+
+## P-003 — SETTLEMENT (appended 2026-07-30T14:22Z)
+
+**Live-check first:** confirmed `Final` [ESPN summary API + direct browser read of espn.com match page + Sofascore, all cross-checked, OPENED, 2026-07-30T13:5x–14:0xZ] — proceeding to settle.
+**Source-conflict note, disclosed:** an initial WebFetch summarisation of the same ESPN endpoint returned an internally-inconsistent "Full-Time Score 3-3" headline alongside a goalscorer list that actually totalled 2–1 (the headline number was almost certainly cross-contaminated from the leg-1 head-to-head box shown on the same page). This was **not used**; a direct browser read of `espn.com/soccer/match/_/gameId/401877935` and an independent cross-check on Sofascore both returned the same clean result below, which is what is graded.
+
+**Official final [espn.com match page + sofascore.com, both OPENED, cross-checked, 2026-07-30T14:00Z]:** **F.C. København 2, Polissya Zhytomyr 1** (this leg, full time, no extra time or penalties needed). **Aggregate: København 5–4, København advance** to the third qualifying round. Goals: Mohamed Elyounoussi 27' (pen, KBH); Robert 61' (KBH, assist Madsen); Mykola Haiduchyk 90'+3 (Polissya, assist Krushynskyi). **Red card: Junnosuke Suzuki (KBH) 46'** — professional foul, last man — meaning København played the **entire second half a man down** and still won. Player of the match: Mads Emil Madsen. Referee: Marek Radina, as previously identified.
+
+**Row grades** (contract: "this leg, regulation + stoppage" for rows 1–4, as stated on the original card):
+
+| Rank | Row | Contract | Verdict | Result | Grade |
+|---|---|---|---|---|---|
+| 1 | Both Teams To Score — Yes | this leg | `SUPPORTED` | KBH 2, Polissya 1 — both scored | **WIN** |
+| 2 | Over 2.5 total goals | this leg | `LEAN` | 3 goals | **WIN** |
+| 3 | Copenhagen — more corners than Polissya | this leg | `LEAN` | **Not obtainable** — no corner count found on ESPN or Sofascore's match pages, and Sofascore's statistics API returned 403 Forbidden. Per `RULES_SOCCER.md` §5.3, this is declared **`NOT GRADED — unsettleable at cutoff`**, not guessed. | **NOT GRADED** |
+| 4 | Robert (KBH #16) — anytime goalscorer | this leg | `LEAN` | Robert scored at 61' | **WIN** |
+
+**Winner grade — two contracts, graded separately (RULES_SOCCER §5.1):**
+- **This leg, regulation + stoppage:** FC København — `LEAN` (~58%) → København won 2–1 → **CORRECT**.
+- **Tie/advance to Q3:** FC København — `LEAN` (~60%) → København advanced 5–4 on aggregate → **CORRECT**.
+
+**Ranking diagnostic:** all four rows were distinct, only partially-correlated markets (no forced complementary pair on this card, per the original card's own §8.6 note) — so there is no "higher-ranked branch" diagnostic to compute the way there is for a two-sided line; each row is graded on its own merits. **3 of 3 gradable formal rows correct; 1 declared unsettleable; both winner contracts correct.** This is the strongest single-card outcome in the fresh log to date.
+
+**Retrospective (AGENT_ROLE_AND_TASK §7):**
+1. *Event/market identity correct?* Yes — leg 2 of the exact tie, correct event ID cross-verified against elapsed-time sanity checks earlier in the live-monitoring pass.
+2. *Settled from a verified final under stated conventions?* Yes, from two independent primary/near-primary sources (ESPN direct browser render, Sofascore), after explicitly rejecting a garbled/self-contradictory automated summary of the same underlying page. This is a good, disclosed example of the freshness/verification discipline working as intended rather than being skipped for convenience.
+3. *Assumptions verified/unverified/wrong?* Verified: the unchanged-XI, leg-1-repeats-itself thesis (Fedor/Krasnopir-equivalent logic on the København side: Robert, who scored twice in leg 1, scored again in leg 2 — exactly the case argued for Row 4). **Notably strengthened by an event the card could not have priced:** a 46th-minute red card on København would, on priors, be expected to hurt a favourite's goal-scoring and winning chances — instead København scored their second goal *after* going down to ten men and held out from 46' onward. This is worth naming honestly: the card's evidence and reasoning were sound, but the actual game contained a large, unpredictable in-match event (the sending-off) that easily could have flipped the result, and didn't.
+4. *Right for the stated reason, or fortunate?* **Right for the stated reason on BTTS, Over 2.5, and the Robert prop** — the "this fixture, these largely-unchanged XIs, produces goals for both sides" thesis, and Robert specifically as København's most direct route to goal, both played out almost exactly as written, down to the same player scoring again. The **winner leans are right, but their margin of safety was thinner than the final scoreline suggests** — a team playing 44+ minutes with ten men winning by only one goal is a live result, not a comfortable one; the internal ~58–60% estimates were appropriately humble, not over-claimed, and this is a case where a thin, disclosed lean paid off rather than one that got lucky on a false premise.
+5. *Which rule reinforces or is contradicted?* Reinforces `RULES_GENERAL.md` §10's dependence framework — the card explicitly flagged that Rows 1/2/4 shared one attacking thesis and could fail together; here they succeeded together, which is the mirror-positive case and does not by itself validate treating them as independent (they still are not). Reinforces `RULES_SOCCER.md` §5.3 (corners unsettleability) exactly as designed — declared, not guessed, when the data genuinely was not obtainable after a real attempt (ESPN, Sofascore page, Sofascore API all tried). **New observation, cricket-and-soccer-crossing in spirit:** in-match red cards/dismissals are a major variance source that a pregame card cannot see coming and should be named as a generic "known unknown" on cards involving disciplinarily-live fixtures (both teams had a booking history flagged pregame on the original card's odds/context section) — logged as a hypothesis, not a rule, on n=1.
+6. *Repeated evidence or one match?* All new observations here are n=1. The **fresh-log winner-lean tally now stands at 3 correct (P-001, and both P-003 contracts) vs 2 incorrect (P-002, and — pending below — P-004)** — a material improvement on the legacy 0-for-3 pattern; still too small a sample (n=5) to claim a fixed skill, and the standing caution in `RULES_GENERAL.md` §11 is updated to reflect the current number rather than only the stale legacy figure (see consolidated update below).
+
+**Lesson routing:** one new soccer hypothesis (in-match red cards as an unpriceable variance source) logged to "Lessons pending promotion," n=1; `RULES_GENERAL.md` §11's winner-lean tally text updated for accuracy (not a new rule).
+
+**Result:** `SETTLED / CLOSED`.
+
+---
+
+## P-004 — SETTLEMENT (appended 2026-07-30T14:22Z)
+
+**Live-check first:** confirmed `RESULT` (final) [espncricinfo.com full scorecard, direct browser read, OPENED, 2026-07-30T13:4x–13:5xZ] — proceeding to settle.
+
+**Official final [espncricinfo.com full scorecard, OPENED, match ID 1521242 re-verified]:** **MI London (Men) 164/5 off 100 balls. London Spirit (Men) 165/3 off 89 balls (chasing 165). Spirit won by 7 wickets, 11 balls remaining.** Player of the match: **Lhuan-dre Pretorius (LS), 64 off 28 balls** (7 fours, 3 sixes, SR 228.57) — MIL's own confirmed-XI opener, not one of the reputational headline names (Bairstow/Livingstone/Brevis) the original card emphasised.
+**MI London's powerplay, confirmed on the completed scorecard's own "Match Flow" phase line:** "**Powerplay 1: Balls 1–25 (Mandatory) — 28 runs, 0 wicket**" — exactly matching the live browser-verified read captured during the original card's research (28/0 at 17:49Z), now doubly confirmed against the final, official phase line per RULES_CRICKET §5.5.
+**MI London's innings, key detail:** wicketless to 91/0 at ball 62 (a genuinely clean platform, as the original card's live read anticipated), then lost 4 wickets for 73 runs across the remaining 38 balls — **Jamie Overton took 3 of MI London's 5 wickets (3/30)**, including Jacks (65 off 44 — the top score), Pooran, and Roy in a short cluster between balls 66–81.
+**London Spirit's chase, key detail:** their own powerplay went **61/0 off 25 balls** — nearly double MI London's — driven by Pretorius, who reached 50 off 23 balls (3 fours, 5 sixes) before finishing 64.
+
+**Row grades** (convention: runs metric incl. extras, read from the scorecard's own totals and phase line; .5 lines cannot push):
+
+| Rank | Row | Verdict | Result | Grade |
+|---|---|---|---|---|
+| 1 | Powerplay (25b) Under 39.5 | `SUPPORTED` | 28 runs | **WIN** |
+| 2 | 100-ball Over 164.5 | `LEAN` | **164 runs — exactly 1 run / 0.5 short of the line** | **LOSS** |
+| 3 | 100-ball Under 164.5 | `LEAN` | 164 runs | **WIN** |
+| 4 | Powerplay (25b) Over 39.5 | `AVOID` | 28 runs | correctly avoided |
+
+**Winner grade:** lean **MI London** — **INCORRECT** (London Spirit won by 7 wickets, with 11 balls in hand — a comfortable-looking margin driven by one exceptional individual innings, not a comfortable chase throughout).

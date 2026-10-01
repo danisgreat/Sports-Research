@@ -1,0 +1,1231 @@
+**Top-slot kill-path test:** the full Under is not `SUPPORTED`; Jamaica's 201 after a 36 powerplay and Sabina's 206 first innings two days earlier are direct, common failure paths.  
+**Bottom/swap test:** powerplay Over stays fourth because it requires Jamaica's volatile top order to clear a rate Guyana held 7/10 opponents below; full Over has the stronger Russell/death-overs recovery branch and therefore remains third.  
+**Model status:** qualitative / research-only; no validated calibrated CPL probability is published.  
+**Prices:** total/phase prices `NOT CAPTURED`. CricketWorld displayed bet365 match-winner fractions Guyana 4/6 (about 1.67 decimal) and Jamaica 6/5 (2.20) at the cutoff; this is discovery context only, not proof of value or a substitute for operator terms.  
+**Key unknowns:** operator shortening/DLS settlement, direct on-strip report, boundary dimensions in use, and whether the conflicting automated weather values reflect the venue correctly. `SOCIAL CHECK: unavailable`; no social claim is used.
+
+### Settlement instructions
+
+1. Check state first. If live, retain P-037 and move on.  
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+
+### Settlement instructions
+
+1. Check state first. If live, retain P-037 and move on.  
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+
+**Bottom/swap test:** powerplay Over stays fourth because it requires Jamaica's volatile top order to clear a rate Guyana held 7/10 opponents below; full Over has the stronger Russell/death-overs recovery branch and therefore remains third.  
+**Model status:** qualitative / research-only; no validated calibrated CPL probability is published.  
+**Prices:** total/phase prices `NOT CAPTURED`. CricketWorld displayed bet365 match-winner fractions Guyana 4/6 (about 1.67 decimal) and Jamaica 6/5 (2.20) at the cutoff; this is discovery context only, not proof of value or a substitute for operator terms.  
+**Key unknowns:** operator shortening/DLS settlement, direct on-strip report, boundary dimensions in use, and whether the conflicting automated weather values reflect the venue correctly. `SOCIAL CHECK: unavailable`; no social claim is used.
+
+### Settlement instructions
+
+1. Check state first. If live, retain P-037 and move on.  
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+
+
+1. Check state first. If live, retain P-037 and move on.  
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+
+**Model status:** qualitative / research-only; no validated calibrated CPL probability is published.  
+**Prices:** total/phase prices `NOT CAPTURED`. CricketWorld displayed bet365 match-winner fractions Guyana 4/6 (about 1.67 decimal) and Jamaica 6/5 (2.20) at the cutoff; this is discovery context only, not proof of value or a substitute for operator terms.  
+**Key unknowns:** operator shortening/DLS settlement, direct on-strip report, boundary dimensions in use, and whether the conflicting automated weather values reflect the venue correctly. `SOCIAL CHECK: unavailable`; no social claim is used.
+
+### Settlement instructions
+
+1. Check state first. If live, retain P-037 and move on.  
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+
+1. Check state first. If live, retain P-037 and move on.  
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+
+**Prices:** total/phase prices `NOT CAPTURED`. CricketWorld displayed bet365 match-winner fractions Guyana 4/6 (about 1.67 decimal) and Jamaica 6/5 (2.20) at the cutoff; this is discovery context only, not proof of value or a substitute for operator terms.  
+**Key unknowns:** operator shortening/DLS settlement, direct on-strip report, boundary dimensions in use, and whether the conflicting automated weather values reflect the venue correctly. `SOCIAL CHECK: unavailable`; no social claim is used.
+
+### Settlement instructions
+
+1. Check state first. If live, retain P-037 and move on.  
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+
+**Key unknowns:** operator shortening/DLS settlement, direct on-strip report, boundary dimensions in use, and whether the conflicting automated weather values reflect the venue correctly. `SOCIAL CHECK: unavailable`; no social claim is used.
+
+### Settlement instructions
+
+1. Check state first. If live, retain P-037 and move on.  
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+
+
+### Settlement instructions
+
+1. Check state first. If live, retain P-037 and move on.  
+2. At final, verify whether Jamaica completed 20 overs and whether any DLS/shortening applied before grading.  
+3. Grade the powerplay from Jamaica's score after exactly six completed overs, including extras; grade the innings pair from the verified first-innings final under the stated assumption.  
+4. Retrospect the separate mechanisms: early new-ball wickets/rate, wickets in hand at 15 overs, Russell/Powell death exposure, and whether the Providence-to-Sabina venue uplift was under- or overweighted.  
+5. Grade the Guyana winner separately from the total/phase contracts and do not treat correlated co-results as independent mechanism confirmations.
+
+## Open-event index - APPENDED UPDATE (2026-08-14T10:00:12+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-034 | Prior closed records | `CLOSED AS DOCUMENTED` |
+| P-035 | Atlanta Dream @ Connecticut Sun | `OPEN / LIVE - retained without settlement` |
+| P-036 | Philadelphia Phillies at Minnesota Twins | `OPEN / LIVE - retained without settlement` |
+| P-037 | Jamaica Kingsmen v Guyana Amazon Warriors | `OPEN / TOSS - PRE-FIRST-BALL AT P-037/V01 CUTOFF` |
+
+P-035 and P-036 remain live and P-037 had no completed delivery at the forecast cutoff. All three require state-first processing on the next request. Earlier open-index text remains immutable historical state and non-controlling.
+
+## P-037/V02 - DELIVERY-STATE CONFIRMATION (appended 2026-08-14T10:03:57+10:00)
+
+Cricbuzz had moved the administrative match state from `Toss` to `In Progress`, but still exposed **no innings scorecard, score, over or completed delivery** at the final refresh. State observed and opened 2026-08-14T10:03:57+10:00. No realized cricket evidence therefore changes P-037/V01: the controlling order remains **Jamaica first-innings Under 173.5; Jamaica first-six Under 50.5; Jamaica first-innings Over 173.5; Jamaica first-six Over 50.5**. Guyana Amazon Warriors remain the potential winner `LEAN`. P-037/V01 is the prospective forecast view; this V02 section only proves the delivery-state check.
+
+## P-035 SETTLEMENT - Atlanta Dream 104, Connecticut Sun 69 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, regulation; no overtime. Official WNBA game ID **1022600251**. Quarter scores were Atlanta **28-23-30-23** and Connecticut **17-15-19-18**. Therefore Q1 = **45**, first half = **83**, and full game = **173**. `[WNBA official box score, gameStatus 3 / Final, opened 2026-08-14T13:15+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-035/V01 | C05 | 1 | H1 Over 84.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C04 | 2 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V01 | C01 | 3 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |

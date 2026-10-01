@@ -1,0 +1,307 @@
+| P-221 | Miami Marlins (Ryan Gusto) @ Washington Nationals (Will Dion) — MLB 2026 | FINAL / SETTLED |
+| P-222 | Seattle Mariners (George Kirby) @ Boston Red Sox (Payton Tolle) — MLB 2026 | FINAL / SETTLED |
+| P-223 | New York Yankees at Los Angeles Angels | FINAL / SETTLED |
+| P-224 | Philadelphia Phillies (Aaron Nola) @ Arizona Diamondbacks (Brandon Pfaadt) — MLB 2026 | FINAL / SETTLED |
+| P-225 | Chun-Hsin Tseng vs Tianhui Zhang — ATP Challenger Zhangjiagang 2026 | FINAL / SETTLED |
+| P-226 | Hanshin Tigers @ Tokyo Yakult Swallows — NPB 2026 | FINAL / SETTLED |
+| P-227 | Hiroshima Toyo Carp @ Chunichi Dragons — NPB 2026 | FINAL / SETTLED |
+| P-228 | Orix Buffaloes @ Tohoku Rakuten Golden Eagles — NPB 2026 | FINAL / SETTLED |
+| P-229 | Hanwha Eagles @ KT Wiz — KBO 2026 | FINAL / SETTLED |
+| P-230 | KIA Tigers @ NC Dinos — KBO 2026 | FINAL / SETTLED |
+| P-231 | LG Twins @ Doosan Bears — KBO 2026 | FINAL / SETTLED |
+| P-232 | Lotte Giants @ Samsung Lions — KBO 2026 | FINAL / SETTLED |
+| P-233 | Beijing Guoan vs Lanzhou Longyuan Athletic — China FA Cup 2026 | FINAL / PROVISIONAL — no current CFA/club final recovered |
+| P-234 | Dalian Yingbo vs Shanghai Shenhua — China FA Cup 2026 | FINAL / PROVISIONAL — no current CFA/club final recovered |
+| P-235 | Shandong Taishan vs Shanghai Port — China FA Cup 2026 | FINAL / PROVISIONAL — no current CFA/club final recovered |
+| P-236 | England Women vs Ireland Women — 1st ODI, 2026 | FINAL / SETTLED |
+| P-237 | Zimbabwe vs South Africa — Namibia T20I Tri-Series 2026 | FINAL / SETTLED |
+| P-238 | Glasgow Cosmic vs Rotterdam Dockers — European T20 Premier League 2026 | FINAL / SETTLED |
+
+
+## 3. Contract-level settlement table — P-215 through P-238
+
+This table covers every newly or previously remaining ranked row in the active continuation. Administrative IDs added where a card omitted them preserve the frozen candidate order and rank; they do not rewrite the issued forecast. `RR/PR` = result right/process right; `RR/PD` = result right/process different; `RW/PBR` = result wrong/process broadly right; `RW/PW` = result wrong/process wrong.
+
+| Contract ID | Rank | Exact frozen endpoint | Official/retrieved endpoint | Settlement | Four-way verdict | Process grade / defect | Source |
+|---|---:|---|---|---|---|---|---|
+| P-215-C01 | 3 | Qatar +34.5 | Qatar lost by 53 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / CALIBRATION | S215 |
+| P-215-C02 | 2 | Japan -34.5 | Japan won by 53 | WIN | RR/PR | PROCESS_DEFECT — STATE_FRESHNESS / CALIBRATION | S215 |
+| P-215-C03 | 4 | Combined Over 169.5 | 193 points | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / CALIBRATION | S215 |
+| P-215-C04 | 1 | Combined Under 169.5 | 193 points | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / CALIBRATION | S215 |
+| P-216-C01 | 4 | Zimbabwe 20-over Over 165.5 | 195/6 after 20 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL | S216 |
+| P-216-C02 | 1 | Zimbabwe 20-over Under 165.5 | 195/6 after 20 | LOSS | RW/PBR | PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL | S216 |
+| P-216-C03 | 2 | Zimbabwe after 6 Over 47.5 | 64/1 after 6 | WIN | RR/PR | PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL | S216 |
+| P-216-C04 | 3 | Zimbabwe after 6 Under 47.5 | 64/1 after 6 | LOSS | RW/PBR | PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL | S216 |
+| P-217-C01 | 4 | GAW 20-over Over 174.5 | 185/5 in 16 overs | UNRESOLVED — directional WIN | N/A — operator unresolved | INCONCLUSIVE — IDENTITY_CONTRACT / UNKNOWN_DEFINITION | S217 |
+| P-217-C02 | 1 | GAW 20-over Under 174.5 | 185/5 in 16 overs | UNRESOLVED — directional LOSS | N/A — operator unresolved | INCONCLUSIVE — IDENTITY_CONTRACT / UNKNOWN_DEFINITION | S217 |
+| P-217-C03 | 2 | GAW after 6 Over 46.5 | 31/2 after 6 | LOSS | RW/PBR | PROCESS_DEFECT — DEPENDENCE_TAIL | S217 |
+| P-217-C04 | 3 | GAW after 6 Under 46.5 | 31/2 after 6 | WIN | RR/PD | PROCESS_DEFECT — DEPENDENCE_TAIL | S217 |
+| P-218-C01 | 4 | Ruzic +4.5 games | Ruzic lost by 7 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S218 |
+| P-218-C02 | 1 | Li -4.5 games | Li won by 7 games | WIN | RR/PR | COMPLIANT — NONE | S218 |
+| P-218-C03 | 3 | Over 20.5 games | 19 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S218 |
+| P-218-C04 | 2 | Under 20.5 games | 19 games | WIN | RR/PR | COMPLIANT — NONE | S218 |
+| P-219-C01 | 1 | Mets +1.5 | Mets won 3-2 | WIN | RR/PR | COMPLIANT — NONE | S219 |
+| P-219-C02 | 3 | Rays -1.5 | Rays lost 2-3 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S219 |
+| P-219-C03 | 2 | Over 7.5 | 5 runs | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S219 |
+| P-219-C04 | 4 | Under 7.5 | 5 runs | WIN | RR/PD | COMPLIANT — RANDOM_REALIZATION | S219 |
+| P-220-C01 | 3 | Padres -1.5 | Padres won by 5 | WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S220 |
+| P-220-C02 | 1 | Reds +1.5 | Reds lost by 5 | LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S220 |
+| P-220-C03 | 2 | Over 9.0 | 5 runs | LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S220 |
+| P-220-C04 | 4 | Under 9.0 | 5 runs | WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S220 |
+| P-221-C01 | 4 | Marlins -1.5 | Marlins lost by 3 | LOSS | RW/PBR | PROCESS_DEFECT — MATCHUP_CONTEXT | S221 |
+| P-221-C02 | 1 | Nationals +1.5 | Nationals won 6-3 | WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S221 |
+| P-221-C03 | 2 | Over 8.5 | 9 runs | WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S221 |
+| P-221-C04 | 3 | Under 8.5 | 9 runs | LOSS | RW/PBR | PROCESS_DEFECT — MATCHUP_CONTEXT | S221 |
+| P-222-C01 | 1 | Mariners +1.5 | Boston won by 1 in 10 innings | WIN | RR/PR | COMPLIANT — NONE | S222 |
+| P-222-C02 | 4 | Red Sox -1.5 | Boston won by 1 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S222 |
+| P-222-C03 | 2 | Over 7.5 | 17 runs | WIN | RR/PR | COMPLIANT — NONE | S222 |
+| P-222-C04 | 3 | Under 7.5 | 17 runs | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S222 |
+| P-223-C01 | 2 | Yankees ML | Yankees lost 1-10 | LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S223 |
+| P-223-C02 | 1 | Angels +1.5 | Angels won 10-1 | WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S223 |
+| P-223-C03 | 4 | Over 8.0 | 11 runs | WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT | S223 |
+| P-223-C04 | 3 | Under 8.0 | 11 runs | LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S223 |
+| P-224-C01 | 1 | Phillies +1.5 | Phillies won 2-1 | WIN | RR/PR | COMPLIANT — NONE | S224 |
+| P-224-C02 | 2 | Diamondbacks +1.5 | Diamondbacks lost by 1 | WIN | RR/PR | COMPLIANT — NONE | S224 |
+| P-224-C03 | 4 | Over 8.5 | 3 runs | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S224 |
+| P-224-C04 | 3 | Under 8.5 | 3 runs | WIN | RR/PR | COMPLIANT — NONE | S224 |
+| P-225-C01 | 3 | Tianhui Zhang +4.5 games | Zhang lost by 8 games | LOSS | RW/PBR | COMPLIANT — settlement identity corrected | S225 |
+| P-225-C02 | 2 | Tseng -4.5 games | Tseng won by 8 games | WIN | RR/PR | COMPLIANT — NONE | S225 |
+| P-225-C03 | 4 | Over 20.5 games | 16 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S225 |
+| P-225-C04 | 1 | Under 20.5 games | 16 games | WIN | RR/PR | COMPLIANT — NONE | S225 |
+| P-226-C01 | 3 | Hanshin -2.5 | Hanshin won by 4 | WIN | RR/PD | PROCESS_DEFECT — RATE_PROCESS / CALIBRATION | S226 |
+| P-226-C02 | 2 | Yakult +2.5 | Yakult lost by 4 | LOSS | RW/PW | PROCESS_DEFECT — RATE_PROCESS / CALIBRATION | S226 |
+| P-226-C03 | 4 | Over 7.5 | 8 runs | WIN | RR/PD | PROCESS_DEFECT — RATE_PROCESS / CALIBRATION | S226 |
+| P-226-C04 | 1 | Under 7.5 | 8 runs | LOSS | RW/PW | PROCESS_DEFECT — RATE_PROCESS / CALIBRATION | S226 |
+| P-227-C01 | 1 | Hiroshima +1.5 | Hiroshima won 5-1 | WIN | RR/PR | COMPLIANT — NONE | S227 |
+| P-227-C02 | 3 | Chunichi +0.5 | Chunichi lost 1-5 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S227 |
+
+| P-232 | Lotte Giants @ Samsung Lions | Final — Samsung 3, Lotte 0 | **FULLY SETTLED** |
+| P-233 | Beijing Guoan vs Lanzhou Longyuan | Final — Beijing 3, Lanzhou 1 (HT 1-0); 13 corners | **FULLY SETTLED** |
+| P-234 | Dalian Yingbo vs Shanghai Shenhua | Final — Dalian 1, Shenhua 0 (HT 0-0); 10 corners | **FULLY SETTLED** |
+| P-235 | Shandong Taishan vs Shanghai Port | Final — Shandong 0, Port 3 (HT 0-2); 14 corners | **FULLY SETTLED** |
+| P-236 | England Women vs Ireland Women, 1st ODI | Final — Ireland 281/5; England 283/4; England won by 6 wickets | **FULLY SETTLED** |
+| P-237 | South Africa vs Zimbabwe, 4th T20I | Final — South Africa 185/7; Zimbabwe 142; SA won by 43 runs | **FULLY SETTLED** |
+| P-238 | Glasgow Cosmic vs Rotterdam Dockers | Final — Glasgow 140/9; Rotterdam 141/5; Rotterdam won by 5 wickets | **FULLY SETTLED** |
+
+### Yet to be settled
+
+- **No game is live or awaiting a final result.**
+- **P-217-C01, GAW full-innings Under 174.5:** operator-dependent.
+- **P-217-C04, GAW full-innings Over 174.5:** operator-dependent.
+- Reason: the game was reduced to 16 overs. GAW actually scored 185, so the directional Under thesis missed and the directional Over thesis hit, but the book grade can be void or action depending on the sportsbook's shortened-innings rule. No operator or rule was supplied, so neither is entered in the formal W/L count.
+
+## General learnings promoted to the top of the prediction process
+
+| Learning | Evidence in this audit | Required future change |
+|---|---|---|
+| Separate **result truth**, **prediction correctness**, and **operator grade**. | P-217's actual 185 resolves the directional question but not the sportsbook grade after a 20-to-16-over reduction. | Every cricket market must store operator, exact market wording, minimum-overs/action rule and DLS/shortening rule before it can be called formally settled. |
+| A plus-run cushion is not automatically the safest pick when the favourite's separation mechanism is unusually strong. | P-220, P-229, P-231 and P-232 all produced favourite wins by 2+ in low or moderate totals. | Add a **separation-risk gate** using starter edge, bullpen edge, lineup direction, recent 2+ margins and direct H2H separation. If three or more agree, do not promote the underdog +1.5 merely because it covers all close games. |
+| Low total and close margin are different targets. | P-220 finished 5-0, P-229 6-1, P-231 3-1 and P-232 3-0. | Build score-allocation branches explicitly. An Under can coexist with a large favourite margin when one side is suppressed. |
+| Near-threshold cricket Unders need a boundary-risk audit, not just a central estimate. | P-237 U184.5 lost by 0.5; its paired powerplay Under also lost after 59/0. P-236 U20.5 lost at 23/1. | For a line within roughly 3 runs of a plausible corridor edge, report threshold distance, direct-opponent phase evidence, toss/bat-first state, wicket-resource ceiling and extras volatility. Downgrade when one boundary changes the grade. |
+| Direct matchup evidence must be used coherently, not merely acknowledged. | P-237 noted SA's prior 61-run powerplay against the same attack, yet ranked U54.5 second. P-229 documented KT -1.5 in 7/11 H2Hs and Hanwha +1.5 at 0/5, yet ranked Hanwha first. | Add a contradiction table: if the selected side opposes both direct-matchup and shortest-window evidence, it must have a stronger causal reason than market price/contract breadth. Otherwise rank it lower or mark AVOID. |
+| Team-strength and winner calls cannot be detached from derivative signals without explanation. | P-223 identified Ureña as the best starter but still chose Yankees; P-235 correctly backed Port to score and the game to go Over, yet selected Shandong to win. | Add a winner/derivative coherence check before issue. If a team-goal Over is high-ranked against a vulnerable opponent, explain why the opponent still wins or revise the winner call. |
+| Knockout soccer needs a competition-state adjustment separate from league/H2H scoring history. | P-234's four high-scoring H2Hs and both teams' recent 1H goal rates did not overcome a 0-0 first half and a 1-0 cup result. | Downweight league H2H, model regulation-time caution, and prefer team-specific or corner markets only when current match stats/lineups support them independently. |
+| Official score sources should lead; derivative providers should be cross-checked. | MLB, NPB, KBO, ATP and official/major cricket scorecards resolved most endpoints. Corners required specialist feeds. | Source order: official competition/game centre → official team/organizer → major licensed scorecard/data partner → two independent secondary providers. Exact corners or phases should not be graded from a generic result page. |
+
+## P-217 settlement — TKR vs Guyana Amazon Warriors
+
+Verified outcome: **GAW 185/5 in 16 overs; TKR 172/7 in 16; GAW won by 9 runs under DLS. GAW were 31/2 after 6 completed overs.**
+
+| Rank | Issued pick | Realized endpoint | Grade |
+|---:|---|---|---|
+| 1 | GAW full innings Under 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis wrong |
+| 2 | GAW after 6 Over 46.5 | 31/2 | **LOSS** |
+| 3 | GAW after 6 Under 46.5 | 31/2 | **WIN** |
+| 4 | GAW full innings Over 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis right |
+| — | Potential winner: GAW | GAW won | **WIN** |
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+
+| P-233 | Beijing Guoan vs Lanzhou Longyuan | Final — Beijing 3, Lanzhou 1 (HT 1-0); 13 corners | **FULLY SETTLED** |
+| P-234 | Dalian Yingbo vs Shanghai Shenhua | Final — Dalian 1, Shenhua 0 (HT 0-0); 10 corners | **FULLY SETTLED** |
+| P-235 | Shandong Taishan vs Shanghai Port | Final — Shandong 0, Port 3 (HT 0-2); 14 corners | **FULLY SETTLED** |
+| P-236 | England Women vs Ireland Women, 1st ODI | Final — Ireland 281/5; England 283/4; England won by 6 wickets | **FULLY SETTLED** |
+| P-237 | South Africa vs Zimbabwe, 4th T20I | Final — South Africa 185/7; Zimbabwe 142; SA won by 43 runs | **FULLY SETTLED** |
+| P-238 | Glasgow Cosmic vs Rotterdam Dockers | Final — Glasgow 140/9; Rotterdam 141/5; Rotterdam won by 5 wickets | **FULLY SETTLED** |
+
+### Yet to be settled
+
+- **No game is live or awaiting a final result.**
+- **P-217-C01, GAW full-innings Under 174.5:** operator-dependent.
+- **P-217-C04, GAW full-innings Over 174.5:** operator-dependent.
+- Reason: the game was reduced to 16 overs. GAW actually scored 185, so the directional Under thesis missed and the directional Over thesis hit, but the book grade can be void or action depending on the sportsbook's shortened-innings rule. No operator or rule was supplied, so neither is entered in the formal W/L count.
+
+## General learnings promoted to the top of the prediction process
+
+| Learning | Evidence in this audit | Required future change |
+|---|---|---|
+| Separate **result truth**, **prediction correctness**, and **operator grade**. | P-217's actual 185 resolves the directional question but not the sportsbook grade after a 20-to-16-over reduction. | Every cricket market must store operator, exact market wording, minimum-overs/action rule and DLS/shortening rule before it can be called formally settled. |
+| A plus-run cushion is not automatically the safest pick when the favourite's separation mechanism is unusually strong. | P-220, P-229, P-231 and P-232 all produced favourite wins by 2+ in low or moderate totals. | Add a **separation-risk gate** using starter edge, bullpen edge, lineup direction, recent 2+ margins and direct H2H separation. If three or more agree, do not promote the underdog +1.5 merely because it covers all close games. |
+| Low total and close margin are different targets. | P-220 finished 5-0, P-229 6-1, P-231 3-1 and P-232 3-0. | Build score-allocation branches explicitly. An Under can coexist with a large favourite margin when one side is suppressed. |
+| Near-threshold cricket Unders need a boundary-risk audit, not just a central estimate. | P-237 U184.5 lost by 0.5; its paired powerplay Under also lost after 59/0. P-236 U20.5 lost at 23/1. | For a line within roughly 3 runs of a plausible corridor edge, report threshold distance, direct-opponent phase evidence, toss/bat-first state, wicket-resource ceiling and extras volatility. Downgrade when one boundary changes the grade. |
+| Direct matchup evidence must be used coherently, not merely acknowledged. | P-237 noted SA's prior 61-run powerplay against the same attack, yet ranked U54.5 second. P-229 documented KT -1.5 in 7/11 H2Hs and Hanwha +1.5 at 0/5, yet ranked Hanwha first. | Add a contradiction table: if the selected side opposes both direct-matchup and shortest-window evidence, it must have a stronger causal reason than market price/contract breadth. Otherwise rank it lower or mark AVOID. |
+| Team-strength and winner calls cannot be detached from derivative signals without explanation. | P-223 identified Ureña as the best starter but still chose Yankees; P-235 correctly backed Port to score and the game to go Over, yet selected Shandong to win. | Add a winner/derivative coherence check before issue. If a team-goal Over is high-ranked against a vulnerable opponent, explain why the opponent still wins or revise the winner call. |
+| Knockout soccer needs a competition-state adjustment separate from league/H2H scoring history. | P-234's four high-scoring H2Hs and both teams' recent 1H goal rates did not overcome a 0-0 first half and a 1-0 cup result. | Downweight league H2H, model regulation-time caution, and prefer team-specific or corner markets only when current match stats/lineups support them independently. |
+| Official score sources should lead; derivative providers should be cross-checked. | MLB, NPB, KBO, ATP and official/major cricket scorecards resolved most endpoints. Corners required specialist feeds. | Source order: official competition/game centre → official team/organizer → major licensed scorecard/data partner → two independent secondary providers. Exact corners or phases should not be graded from a generic result page. |
+
+## P-217 settlement — TKR vs Guyana Amazon Warriors
+
+Verified outcome: **GAW 185/5 in 16 overs; TKR 172/7 in 16; GAW won by 9 runs under DLS. GAW were 31/2 after 6 completed overs.**
+
+| Rank | Issued pick | Realized endpoint | Grade |
+|---:|---|---|---|
+| 1 | GAW full innings Under 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis wrong |
+| 2 | GAW after 6 Over 46.5 | 31/2 | **LOSS** |
+| 3 | GAW after 6 Under 46.5 | 31/2 | **WIN** |
+| 4 | GAW full innings Over 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis right |
+| — | Potential winner: GAW | GAW won | **WIN** |
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+| — | Potential winner: Rays | **LOSS** |
+
+| P-220 | San Diego Padres (Michael King) @ Cincinnati Reds (Brady Singer) — MLB 2026 | FINAL / SETTLED |
+| P-221 | Miami Marlins (Ryan Gusto) @ Washington Nationals (Will Dion) — MLB 2026 | FINAL / SETTLED |
+| P-222 | Seattle Mariners (George Kirby) @ Boston Red Sox (Payton Tolle) — MLB 2026 | FINAL / SETTLED |
+| P-223 | New York Yankees at Los Angeles Angels | FINAL / SETTLED |
+| P-224 | Philadelphia Phillies (Aaron Nola) @ Arizona Diamondbacks (Brandon Pfaadt) — MLB 2026 | FINAL / SETTLED |
+| P-225 | Chun-Hsin Tseng vs Tianhui Zhang — ATP Challenger Zhangjiagang 2026 | FINAL / SETTLED |
+| P-226 | Hanshin Tigers @ Tokyo Yakult Swallows — NPB 2026 | FINAL / SETTLED |
+| P-227 | Hiroshima Toyo Carp @ Chunichi Dragons — NPB 2026 | FINAL / SETTLED |
+| P-228 | Orix Buffaloes @ Tohoku Rakuten Golden Eagles — NPB 2026 | FINAL / SETTLED |
+| P-229 | Hanwha Eagles @ KT Wiz — KBO 2026 | FINAL / SETTLED |
+| P-230 | KIA Tigers @ NC Dinos — KBO 2026 | FINAL / SETTLED |
+| P-231 | LG Twins @ Doosan Bears — KBO 2026 | FINAL / SETTLED |
+| P-232 | Lotte Giants @ Samsung Lions — KBO 2026 | FINAL / SETTLED |
+| P-233 | Beijing Guoan vs Lanzhou Longyuan Athletic — China FA Cup 2026 | FINAL / PROVISIONAL — no current CFA/club final recovered |
+| P-234 | Dalian Yingbo vs Shanghai Shenhua — China FA Cup 2026 | FINAL / PROVISIONAL — no current CFA/club final recovered |
+| P-235 | Shandong Taishan vs Shanghai Port — China FA Cup 2026 | FINAL / PROVISIONAL — no current CFA/club final recovered |
+| P-236 | England Women vs Ireland Women — 1st ODI, 2026 | FINAL / SETTLED |
+| P-237 | Zimbabwe vs South Africa — Namibia T20I Tri-Series 2026 | FINAL / SETTLED |
+| P-238 | Glasgow Cosmic vs Rotterdam Dockers — European T20 Premier League 2026 | FINAL / SETTLED |
+
+
+## 3. Contract-level settlement table — P-215 through P-238
+
+This table covers every newly or previously remaining ranked row in the active continuation. Administrative IDs added where a card omitted them preserve the frozen candidate order and rank; they do not rewrite the issued forecast. `RR/PR` = result right/process right; `RR/PD` = result right/process different; `RW/PBR` = result wrong/process broadly right; `RW/PW` = result wrong/process wrong.
+
+| Contract ID | Rank | Exact frozen endpoint | Official/retrieved endpoint | Settlement | Four-way verdict | Process grade / defect | Source |
+|---|---:|---|---|---|---|---|---|
+| P-215-C01 | 3 | Qatar +34.5 | Qatar lost by 53 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / CALIBRATION | S215 |
+| P-215-C02 | 2 | Japan -34.5 | Japan won by 53 | WIN | RR/PR | PROCESS_DEFECT — STATE_FRESHNESS / CALIBRATION | S215 |
+| P-215-C03 | 4 | Combined Over 169.5 | 193 points | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / CALIBRATION | S215 |
+| P-215-C04 | 1 | Combined Under 169.5 | 193 points | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / CALIBRATION | S215 |
+| P-216-C01 | 4 | Zimbabwe 20-over Over 165.5 | 195/6 after 20 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL | S216 |
+| P-216-C02 | 1 | Zimbabwe 20-over Under 165.5 | 195/6 after 20 | LOSS | RW/PBR | PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL | S216 |
+| P-216-C03 | 2 | Zimbabwe after 6 Over 47.5 | 64/1 after 6 | WIN | RR/PR | PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL | S216 |
+| P-216-C04 | 3 | Zimbabwe after 6 Under 47.5 | 64/1 after 6 | LOSS | RW/PBR | PROCESS_DEFECT — STATE_FRESHNESS / DEPENDENCE_TAIL | S216 |
+| P-217-C01 | 4 | GAW 20-over Over 174.5 | 185/5 in 16 overs | UNRESOLVED — directional WIN | N/A — operator unresolved | INCONCLUSIVE — IDENTITY_CONTRACT / UNKNOWN_DEFINITION | S217 |
+| P-217-C02 | 1 | GAW 20-over Under 174.5 | 185/5 in 16 overs | UNRESOLVED — directional LOSS | N/A — operator unresolved | INCONCLUSIVE — IDENTITY_CONTRACT / UNKNOWN_DEFINITION | S217 |
+| P-217-C03 | 2 | GAW after 6 Over 46.5 | 31/2 after 6 | LOSS | RW/PBR | PROCESS_DEFECT — DEPENDENCE_TAIL | S217 |
+| P-217-C04 | 3 | GAW after 6 Under 46.5 | 31/2 after 6 | WIN | RR/PD | PROCESS_DEFECT — DEPENDENCE_TAIL | S217 |
+| P-218-C01 | 4 | Ruzic +4.5 games | Ruzic lost by 7 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S218 |
+| P-218-C02 | 1 | Li -4.5 games | Li won by 7 games | WIN | RR/PR | COMPLIANT — NONE | S218 |
+| P-218-C03 | 3 | Over 20.5 games | 19 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S218 |
+| P-218-C04 | 2 | Under 20.5 games | 19 games | WIN | RR/PR | COMPLIANT — NONE | S218 |
+| P-219-C01 | 1 | Mets +1.5 | Mets won 3-2 | WIN | RR/PR | COMPLIANT — NONE | S219 |
+| P-219-C02 | 3 | Rays -1.5 | Rays lost 2-3 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S219 |
+| P-219-C03 | 2 | Over 7.5 | 5 runs | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S219 |
+| P-219-C04 | 4 | Under 7.5 | 5 runs | WIN | RR/PD | COMPLIANT — RANDOM_REALIZATION | S219 |
+| P-220-C01 | 3 | Padres -1.5 | Padres won by 5 | WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S220 |
+| P-220-C02 | 1 | Reds +1.5 | Reds lost by 5 | LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S220 |
+| P-220-C03 | 2 | Over 9.0 | 5 runs | LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S220 |
+| P-220-C04 | 4 | Under 9.0 | 5 runs | WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S220 |
+| P-221-C01 | 4 | Marlins -1.5 | Marlins lost by 3 | LOSS | RW/PBR | PROCESS_DEFECT — MATCHUP_CONTEXT | S221 |
+| P-221-C02 | 1 | Nationals +1.5 | Nationals won 6-3 | WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S221 |
+| P-221-C03 | 2 | Over 8.5 | 9 runs | WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S221 |
+| P-221-C04 | 3 | Under 8.5 | 9 runs | LOSS | RW/PBR | PROCESS_DEFECT — MATCHUP_CONTEXT | S221 |
+| P-222-C01 | 1 | Mariners +1.5 | Boston won by 1 in 10 innings | WIN | RR/PR | COMPLIANT — NONE | S222 |
+| P-222-C02 | 4 | Red Sox -1.5 | Boston won by 1 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S222 |
+| P-222-C03 | 2 | Over 7.5 | 17 runs | WIN | RR/PR | COMPLIANT — NONE | S222 |
+| P-222-C04 | 3 | Under 7.5 | 17 runs | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S222 |
+| P-223-C01 | 2 | Yankees ML | Yankees lost 1-10 | LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S223 |
+| P-223-C02 | 1 | Angels +1.5 | Angels won 10-1 | WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S223 |
+| P-223-C03 | 4 | Over 8.0 | 11 runs | WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT | S223 |
+| P-223-C04 | 3 | Under 8.0 | 11 runs | LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S223 |
+| P-224-C01 | 1 | Phillies +1.5 | Phillies won 2-1 | WIN | RR/PR | COMPLIANT — NONE | S224 |
+| P-224-C02 | 2 | Diamondbacks +1.5 | Diamondbacks lost by 1 | WIN | RR/PR | COMPLIANT — NONE | S224 |
+| P-224-C03 | 4 | Over 8.5 | 3 runs | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S224 |
+| P-224-C04 | 3 | Under 8.5 | 3 runs | WIN | RR/PR | COMPLIANT — NONE | S224 |
+| P-225-C01 | 3 | Tianhui Zhang +4.5 games | Zhang lost by 8 games | LOSS | RW/PBR | COMPLIANT — settlement identity corrected | S225 |
+| P-225-C02 | 2 | Tseng -4.5 games | Tseng won by 8 games | WIN | RR/PR | COMPLIANT — NONE | S225 |
+| P-225-C03 | 4 | Over 20.5 games | 16 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S225 |
+| P-225-C04 | 1 | Under 20.5 games | 16 games | WIN | RR/PR | COMPLIANT — NONE | S225 |
+| P-226-C01 | 3 | Hanshin -2.5 | Hanshin won by 4 | WIN | RR/PD | PROCESS_DEFECT — RATE_PROCESS / CALIBRATION | S226 |
+| P-226-C02 | 2 | Yakult +2.5 | Yakult lost by 4 | LOSS | RW/PW | PROCESS_DEFECT — RATE_PROCESS / CALIBRATION | S226 |
+| P-226-C03 | 4 | Over 7.5 | 8 runs | WIN | RR/PD | PROCESS_DEFECT — RATE_PROCESS / CALIBRATION | S226 |
+| P-226-C04 | 1 | Under 7.5 | 8 runs | LOSS | RW/PW | PROCESS_DEFECT — RATE_PROCESS / CALIBRATION | S226 |
+| P-227-C01 | 1 | Hiroshima +1.5 | Hiroshima won 5-1 | WIN | RR/PR | COMPLIANT — NONE | S227 |

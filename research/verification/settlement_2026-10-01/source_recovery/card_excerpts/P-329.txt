@@ -1,0 +1,384 @@
+
+### Settlement
+**Final:** Arsenal 2–1 Chelsea. **HT:** 1–1.  
+Chelsea scored after 77 seconds; Arsenal equalised at 25' and won at 50'. Guardian match stats: **Arsenal 5 corners, Chelsea 3**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+**Sources:**  
+- Guardian match page with score/corners: https://www.theguardian.com/football/match/2026/sep/06/arsenal-v-chelsea  
+- Guardian match report/live coverage: https://www.theguardian.com/football/live/2026/sep/06/arsenal-v-chelsea-premier-league-live
+
+---
+
+## P-329 — Bologna vs Sassuolo
+
+### Settlement
+**Final:** Bologna 2–2 Sassuolo. **HT:** 0–1.  
+Final corner count **Bologna 10, Sassuolo 7; total 17**. Bologna substitute Artem Dovbyk equalised at 90+1'.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Total corners Over 6.5 | 0.61 | **WIN** | 0.1521 |
+| 2 | FT Under 2.5 | 0.58 | **LOSS** | 0.3364 |
+| 3 | 1H Over 0.5 | 0.55 | **WIN** | 0.2025 |
+| 4 | 1H Under 0.5 | 0.45 | **LOSS** | 0.2025 |
+| 5 | FT Over 2.5 | 0.42 | **WIN** | 0.3364 |
+
+**Mean Brier:** **0.2460**.  
+**Potential winner:** Bologna — **LOSS**; draw.
+
+### Retrospective
+1. **Driver:** the match had high attempt/corner volume and two Sassuolo leads, then Bologna's bench supplied the 90+1 equaliser. Bologna's underlying attacking volume finally converted enough to break the preferred Under.
+2. **Knowability:** **Partly.** The frozen card explicitly knew Bologna's strong xG despite zero league goals and listed a credible high-event branch. It also knew Dovbyk was on the bench and Sassuolo's defence/rotation was incomplete. The precise stoppage-time substitute goal was unknowable. The main process weakness was giving the Under 58% while the same evidence acknowledged substantial Bologna shot creation and capable attacking reserves.
+3. **Smallest routine change:** whenever a high-impact striker/creator is **available from the bench**, include that role explicitly in the second-half scoring component rather than treating “not starting” as equivalent to unavailable.
+
+**Sources:**  
+- ZeroZero final stats, 10–7 corners and Dovbyk 90+1: https://www.zerozero.pt/jogo/2026-09-06-bologna-sassuolo/12240729  
+- StatMuse Bologna/Sassuolo corner cross-checks: https://www.statmuse.com/fc/ask/bologna-corner-stats-in-each-match?l=seriea and https://www.statmuse.com/fc/ask/sassuolo-last-10-matches-corner-stats
+
+---
+
+## P-330 — Puerto Rico Women vs Belgium Women
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official FIBA final: **Puerto Rico 64–76 Belgium**. The frozen log issued no rank and no winner because the live-state gate could not be verified at the time. No retrospective prediction or Brier score is fabricated.
+
+**Official source:** FIBA: https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128130-PUR-BEL
+
+---
+
+## P-331 — Milwaukee Brewers @ Cincinnati Reds — MLB
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+
+### Settlement
+**Final:** Arsenal 2–1 Chelsea. **HT:** 1–1.  
+Chelsea scored after 77 seconds; Arsenal equalised at 25' and won at 50'. Guardian match stats: **Arsenal 5 corners, Chelsea 3**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+**Sources:**  
+- Guardian match page with score/corners: https://www.theguardian.com/football/match/2026/sep/06/arsenal-v-chelsea  
+- Guardian match report/live coverage: https://www.theguardian.com/football/live/2026/sep/06/arsenal-v-chelsea-premier-league-live
+
+---
+
+## P-329 — Bologna vs Sassuolo
+
+### Settlement
+**Final:** Bologna 2–2 Sassuolo. **HT:** 0–1.  
+Final corner count **Bologna 10, Sassuolo 7; total 17**. Bologna substitute Artem Dovbyk equalised at 90+1'.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Total corners Over 6.5 | 0.61 | **WIN** | 0.1521 |
+| 2 | FT Under 2.5 | 0.58 | **LOSS** | 0.3364 |
+| 3 | 1H Over 0.5 | 0.55 | **WIN** | 0.2025 |
+| 4 | 1H Under 0.5 | 0.45 | **LOSS** | 0.2025 |
+| 5 | FT Over 2.5 | 0.42 | **WIN** | 0.3364 |
+
+**Mean Brier:** **0.2460**.  
+**Potential winner:** Bologna — **LOSS**; draw.
+
+### Retrospective
+1. **Driver:** the match had high attempt/corner volume and two Sassuolo leads, then Bologna's bench supplied the 90+1 equaliser. Bologna's underlying attacking volume finally converted enough to break the preferred Under.
+2. **Knowability:** **Partly.** The frozen card explicitly knew Bologna's strong xG despite zero league goals and listed a credible high-event branch. It also knew Dovbyk was on the bench and Sassuolo's defence/rotation was incomplete. The precise stoppage-time substitute goal was unknowable. The main process weakness was giving the Under 58% while the same evidence acknowledged substantial Bologna shot creation and capable attacking reserves.
+3. **Smallest routine change:** whenever a high-impact striker/creator is **available from the bench**, include that role explicitly in the second-half scoring component rather than treating “not starting” as equivalent to unavailable.
+
+**Sources:**  
+- ZeroZero final stats, 10–7 corners and Dovbyk 90+1: https://www.zerozero.pt/jogo/2026-09-06-bologna-sassuolo/12240729  
+- StatMuse Bologna/Sassuolo corner cross-checks: https://www.statmuse.com/fc/ask/bologna-corner-stats-in-each-match?l=seriea and https://www.statmuse.com/fc/ask/sassuolo-last-10-matches-corner-stats
+
+---
+
+## P-330 — Puerto Rico Women vs Belgium Women
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official FIBA final: **Puerto Rico 64–76 Belgium**. The frozen log issued no rank and no winner because the live-state gate could not be verified at the time. No retrospective prediction or Brier score is fabricated.
+
+**Official source:** FIBA: https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128130-PUR-BEL
+
+---
+
+## P-331 — Milwaukee Brewers @ Cincinnati Reds — MLB
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+**Mean Brier:** **0.1893**.  
+
+**Final:** Arsenal 2–1 Chelsea. **HT:** 1–1.  
+Chelsea scored after 77 seconds; Arsenal equalised at 25' and won at 50'. Guardian match stats: **Arsenal 5 corners, Chelsea 3**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+**Sources:**  
+- Guardian match page with score/corners: https://www.theguardian.com/football/match/2026/sep/06/arsenal-v-chelsea  
+- Guardian match report/live coverage: https://www.theguardian.com/football/live/2026/sep/06/arsenal-v-chelsea-premier-league-live
+
+---
+
+## P-329 — Bologna vs Sassuolo
+
+### Settlement
+**Final:** Bologna 2–2 Sassuolo. **HT:** 0–1.  
+Final corner count **Bologna 10, Sassuolo 7; total 17**. Bologna substitute Artem Dovbyk equalised at 90+1'.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Total corners Over 6.5 | 0.61 | **WIN** | 0.1521 |
+| 2 | FT Under 2.5 | 0.58 | **LOSS** | 0.3364 |
+| 3 | 1H Over 0.5 | 0.55 | **WIN** | 0.2025 |
+| 4 | 1H Under 0.5 | 0.45 | **LOSS** | 0.2025 |
+| 5 | FT Over 2.5 | 0.42 | **WIN** | 0.3364 |
+
+**Mean Brier:** **0.2460**.  
+**Potential winner:** Bologna — **LOSS**; draw.
+
+### Retrospective
+1. **Driver:** the match had high attempt/corner volume and two Sassuolo leads, then Bologna's bench supplied the 90+1 equaliser. Bologna's underlying attacking volume finally converted enough to break the preferred Under.
+2. **Knowability:** **Partly.** The frozen card explicitly knew Bologna's strong xG despite zero league goals and listed a credible high-event branch. It also knew Dovbyk was on the bench and Sassuolo's defence/rotation was incomplete. The precise stoppage-time substitute goal was unknowable. The main process weakness was giving the Under 58% while the same evidence acknowledged substantial Bologna shot creation and capable attacking reserves.
+3. **Smallest routine change:** whenever a high-impact striker/creator is **available from the bench**, include that role explicitly in the second-half scoring component rather than treating “not starting” as equivalent to unavailable.
+
+**Sources:**  
+- ZeroZero final stats, 10–7 corners and Dovbyk 90+1: https://www.zerozero.pt/jogo/2026-09-06-bologna-sassuolo/12240729  
+- StatMuse Bologna/Sassuolo corner cross-checks: https://www.statmuse.com/fc/ask/bologna-corner-stats-in-each-match?l=seriea and https://www.statmuse.com/fc/ask/sassuolo-last-10-matches-corner-stats
+
+---
+
+## P-330 — Puerto Rico Women vs Belgium Women
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official FIBA final: **Puerto Rico 64–76 Belgium**. The frozen log issued no rank and no winner because the live-state gate could not be verified at the time. No retrospective prediction or Brier score is fabricated.
+
+**Official source:** FIBA: https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128130-PUR-BEL
+
+---
+
+## P-331 — Milwaukee Brewers @ Cincinnati Reds — MLB
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+**Mean Brier:** **0.1893**.  
+**Potential winner:** Milwaukee — **LOSS**.
+
+Chelsea scored after 77 seconds; Arsenal equalised at 25' and won at 50'. Guardian match stats: **Arsenal 5 corners, Chelsea 3**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+**Sources:**  
+- Guardian match page with score/corners: https://www.theguardian.com/football/match/2026/sep/06/arsenal-v-chelsea  
+- Guardian match report/live coverage: https://www.theguardian.com/football/live/2026/sep/06/arsenal-v-chelsea-premier-league-live
+
+---
+
+## P-329 — Bologna vs Sassuolo
+
+### Settlement
+**Final:** Bologna 2–2 Sassuolo. **HT:** 0–1.  
+Final corner count **Bologna 10, Sassuolo 7; total 17**. Bologna substitute Artem Dovbyk equalised at 90+1'.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Total corners Over 6.5 | 0.61 | **WIN** | 0.1521 |
+| 2 | FT Under 2.5 | 0.58 | **LOSS** | 0.3364 |
+| 3 | 1H Over 0.5 | 0.55 | **WIN** | 0.2025 |
+| 4 | 1H Under 0.5 | 0.45 | **LOSS** | 0.2025 |
+| 5 | FT Over 2.5 | 0.42 | **WIN** | 0.3364 |
+
+**Mean Brier:** **0.2460**.  
+**Potential winner:** Bologna — **LOSS**; draw.
+
+### Retrospective
+1. **Driver:** the match had high attempt/corner volume and two Sassuolo leads, then Bologna's bench supplied the 90+1 equaliser. Bologna's underlying attacking volume finally converted enough to break the preferred Under.
+2. **Knowability:** **Partly.** The frozen card explicitly knew Bologna's strong xG despite zero league goals and listed a credible high-event branch. It also knew Dovbyk was on the bench and Sassuolo's defence/rotation was incomplete. The precise stoppage-time substitute goal was unknowable. The main process weakness was giving the Under 58% while the same evidence acknowledged substantial Bologna shot creation and capable attacking reserves.
+3. **Smallest routine change:** whenever a high-impact striker/creator is **available from the bench**, include that role explicitly in the second-half scoring component rather than treating “not starting” as equivalent to unavailable.
+
+**Sources:**  
+- ZeroZero final stats, 10–7 corners and Dovbyk 90+1: https://www.zerozero.pt/jogo/2026-09-06-bologna-sassuolo/12240729  
+- StatMuse Bologna/Sassuolo corner cross-checks: https://www.statmuse.com/fc/ask/bologna-corner-stats-in-each-match?l=seriea and https://www.statmuse.com/fc/ask/sassuolo-last-10-matches-corner-stats
+
+---
+
+## P-330 — Puerto Rico Women vs Belgium Women
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official FIBA final: **Puerto Rico 64–76 Belgium**. The frozen log issued no rank and no winner because the live-state gate could not be verified at the time. No retrospective prediction or Brier score is fabricated.
+
+**Official source:** FIBA: https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128130-PUR-BEL
+
+---
+
+## P-331 — Milwaukee Brewers @ Cincinnati Reds — MLB
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+**Mean Brier:** **0.1893**.  
+**Potential winner:** Milwaukee — **LOSS**.
+
+
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+**Sources:**  
+- Guardian match page with score/corners: https://www.theguardian.com/football/match/2026/sep/06/arsenal-v-chelsea  
+- Guardian match report/live coverage: https://www.theguardian.com/football/live/2026/sep/06/arsenal-v-chelsea-premier-league-live
+
+---
+
+## P-329 — Bologna vs Sassuolo
+
+### Settlement
+**Final:** Bologna 2–2 Sassuolo. **HT:** 0–1.  
+Final corner count **Bologna 10, Sassuolo 7; total 17**. Bologna substitute Artem Dovbyk equalised at 90+1'.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Total corners Over 6.5 | 0.61 | **WIN** | 0.1521 |
+| 2 | FT Under 2.5 | 0.58 | **LOSS** | 0.3364 |
+| 3 | 1H Over 0.5 | 0.55 | **WIN** | 0.2025 |
+| 4 | 1H Under 0.5 | 0.45 | **LOSS** | 0.2025 |
+| 5 | FT Over 2.5 | 0.42 | **WIN** | 0.3364 |
+
+**Mean Brier:** **0.2460**.  
+**Potential winner:** Bologna — **LOSS**; draw.
+
+### Retrospective
+1. **Driver:** the match had high attempt/corner volume and two Sassuolo leads, then Bologna's bench supplied the 90+1 equaliser. Bologna's underlying attacking volume finally converted enough to break the preferred Under.
+2. **Knowability:** **Partly.** The frozen card explicitly knew Bologna's strong xG despite zero league goals and listed a credible high-event branch. It also knew Dovbyk was on the bench and Sassuolo's defence/rotation was incomplete. The precise stoppage-time substitute goal was unknowable. The main process weakness was giving the Under 58% while the same evidence acknowledged substantial Bologna shot creation and capable attacking reserves.
+3. **Smallest routine change:** whenever a high-impact striker/creator is **available from the bench**, include that role explicitly in the second-half scoring component rather than treating “not starting” as equivalent to unavailable.
+
+**Sources:**  
+- ZeroZero final stats, 10–7 corners and Dovbyk 90+1: https://www.zerozero.pt/jogo/2026-09-06-bologna-sassuolo/12240729  
+- StatMuse Bologna/Sassuolo corner cross-checks: https://www.statmuse.com/fc/ask/bologna-corner-stats-in-each-match?l=seriea and https://www.statmuse.com/fc/ask/sassuolo-last-10-matches-corner-stats
+
+---
+
+## P-330 — Puerto Rico Women vs Belgium Women
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official FIBA final: **Puerto Rico 64–76 Belgium**. The frozen log issued no rank and no winner because the live-state gate could not be verified at the time. No retrospective prediction or Brier score is fabricated.
+
+**Official source:** FIBA: https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128130-PUR-BEL
+
+---
+
+## P-331 — Milwaukee Brewers @ Cincinnati Reds — MLB
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+**Mean Brier:** **0.1893**.  
+**Potential winner:** Milwaukee — **LOSS**.
+
+### Retrospective

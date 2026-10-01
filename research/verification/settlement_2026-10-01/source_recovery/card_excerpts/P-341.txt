@@ -1,0 +1,153 @@
+|---|---|
+| Supplied source | `PREDICTION_MINI_RUNNING_LOG_P344_RETROSPECTIVE_UPDATED.md` — external local running log, `P-333`–`P-344` plus governance carry-forward; local next slot `P-345` |
+| Stored as | `archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P344.md` |
+| Self-reported source fingerprint (from the log's §11) | predecessor `PREDICTION_MINI_RUNNING_LOG_P344_UPDATED - Copy.md`, 151,143 bytes, 2,394 lines, SHA-256 `72ae84b77c7588b2d495b8b55a9314fd044688f057d37dd47a9bfbe22f946307` |
+| Canonical mapping | `P-333`–`P-344` → `P-333`–`P-344`; Part 3's next ID at import was `P-333`; no collision; **no `TMP-SETTLED-*` identifier needed** for the main cohort |
+| Issuance-horizon notes | `P-333`, `P-343` (cricket) and `P-334` (FIBA) are `START-CROSSED / LIVE STATE NOT VERIFIED` — **no forecast issued**, no ranked rows, no probabilities, no winner. Correct fail-closed behaviour (`RULES_GENERAL.md` start-crossing invariant; cricket `CR-P3` innings-order gate). They contribute zero scored rows. The other nine cards were issued `PREGAME` with cutoff before scheduled start. |
+| Independent-verification pass | Every final below cross-checked 2026-09-09 against a public source outside the mini-log's own register (ESPN, SI, WTA, FIBA/TSN, SBS English, Sportnet, Kawowo/GHANAsoccernet, ESPNcricinfo, matchcalendar.football). All nine issued-card finals and all three admin-closure finals confirmed. |
+
+### Settlement table
+
+| ID | Event / competition | Official final (independently re-verified) | Rank #1 | Potential winner | Population / note |
+|---|---|---|---|---|---|
+| `P-333` | Pakistan Women vs Hong Kong Women — Women's T20 Asia Cup, Group A | **Pakistan 143/8 beat Hong Kong 71 by 72 runs** (Nashra Sandhu 6/7). Pakistan batted first. | — | — | **ADMIN CLOSED / NO FORECAST** — start crossed, toss/innings order unverified at cutoff. Non-scorable. |
+| `P-334` | Germany Women vs Mali Women — FIBA Women's Basketball World Cup, Group A | **Germany 83–58 Mali** (Frieda Bühner 21). | — | — | **ADMIN CLOSED / NO FORECAST** — live-state gate failed after tip. Non-scorable. |
+| `P-335` | Washington Nationals @ San Diego Padres — MLB | **San Diego 3–2 Washington.** Pivetta 5.0 scoreless IP in his return; Mason Miller 34th save. | `Washington +1.5` (p 0.59) — **WIN** | San Diego Padres — **WIN** | **`MLB — PRIMARY_SCORED`**; card mean Brier **0.2541** |
+| `P-336` | Carabobo FC vs Estudiantes de Mérida — Venezuela Primera, Clausura J8 | **Carabobo 1–0 Estudiantes** (HT 1–0; Eric Ramírez 30'). Post-final stats Carabobo 3 corners, Estudiantes 9 (12 total); Estudiantes ~27 shots / ~8 on target. | `Under 2.5 goals` (p 0.60) — **WIN** | Carabobo FC — **WIN** | `EXPLORATORY`; card mean Brier **0.1751**; **top 3 rows all WON** |
+| `P-337` | Barracas Central vs Argentinos Juniors — Argentina Liga Profesional, Clausura F8 | **Barracas 0–0 Argentinos** (HT 0–0). Corners Barracas 3, Argentinos 4. | `Under 2.5 goals` (p 0.65) — **WIN** | Argentinos Juniors — **LOSS** (draw) | `EXPLORATORY`; card mean Brier **0.2603**; **deep retro — R2 + R3 lost, winner wrong** |
+| `P-338` | Iva Jovic vs Coco Gauff — US Open Women's Singles, R16 | **Gauff def. Jovic 6–1, 6–4** (17 games; Gauff +7 aggregate). | `Gauff -4.5 games` (p 0.54) — **WIN** | Coco Gauff — **WIN** | `EXPLORATORY` (tennis); card mean Brier **0.2163**; **top 2 rows both WON — best card of cohort** |
+| `P-339` | Doosan Bears @ Hanwha Eagles — KBO | **Hanwha 6–1 Doosan.** Ryu Hyun-jin 6 IP / 1 R (9th win); Heo In-seo & Kang Baek-ho HR. | `Doosan +1.5` (p 0.60) — **LOSS** | Hanwha Eagles — **WIN** | `EXPLORATORY`; card mean Brier **0.3368**; **deep Rank-#1 retro** |
+| `P-340` | Incheon United vs Bucheon FC 1995 — K League 1, R28 | **Incheon 2–1 Bucheon** (HT 1–1; Bucheon 33', Mugoša 43', Ibiza 70'). 7 total corners. | `1H Over 0.5 goals` (p 0.61) — **WIN** | Incheon United — **WIN** | `EXPLORATORY`; card mean Brier **0.2155**; **top 2 rows both WON** |
+| `P-341` | BUL FC vs Ntugasaze FC — Uganda Premier League, R3 | **BUL 4–1 Ntugasaze** (HT 2–1; 10', 30', 43', + 2nd half). | `1H Over 0.5 goals` (p 0.61) — **WIN** | BUL FC — **WIN** | `EXPLORATORY`; 4-row partial mean Brier **0.2443**; **C03 corners unsettleable** |
+| `P-342` | MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup, R3 | **Komárno 2–0 Lučenec** (HT 0–0; goals 74', 90'). Reported corners 1–15 (16 total) from secondary aggregators only. | `1H Over 0.5 goals` (p 0.68) — **LOSS** | KFC Komárno — **WIN** | `EXPLORATORY`; 4-row settled mean Brier **0.3880**; **deep Rank-#1 retro; C03 provisional** |
+| `P-343` | Bangladesh Women vs UAE Women — Women's T20 Asia Cup, Group B | **Bangladesh 103/7 beat UAE 69/9 by 34 runs.** Bangladesh batted first. | — | — | **ADMIN CLOSED / NO FORECAST** — start crossed, innings order unverified. Non-scorable. |
+| `P-344` | Hungary Women vs Japan Women — FIBA Women's Basketball World Cup, Qual. to QF | **Hungary 84–63 Japan** (total 147; margin +21). Réka Lelik 23; Japan's Saki Hayashi off with a broken right arm after 8 min. | `Japan +3.0` (p 0.56 win) — **LOSS** | Hungary Women — **WIN** | `EXPLORATORY`; card mean Brier **0.3334** (mini-log's stated 0.2834 corrected — see note); **deep Rank-#1 retro** |
+
+**`P-344` Brier correction.** The mini-log's settlement table lists the four correct per-row Brier values (0.3136, 0.2116, 0.2116, 0.3969) but states a card mean of "0.2834". The arithmetic mean of those four values is **1.3337 / 4 = 0.3334**. The corrected figure is used in the scorecard below. No row result changes.
+
+### Full contract-row grades
+
+- **`P-335`** (`MLB PRIMARY_SCORED`): 1 `WSH +1.5` p0.59 **W** (0.1681) · 2 `Over 8.0` p0.52 **L** (0.2704) · 3 `SD -1.5` p0.41 **L** (0.1681) · 4 `Under 8.0` p0.36 **W** (0.4096). **Mean Brier 0.2541.** (2 W / 2 L) · Potential winner Padres **W**.
+- **`P-336`**: 1 `Under 2.5` p0.60 **W** (0.1600) · 2 `Over 7.5 total corners` p0.59 **W** (0.1681) · 3 `1H Over 0.5` p0.56 **W** (0.1936) · 4 `1H Under 0.5` p0.44 **L** (0.1936) · 5 `Over 2.5` p0.40 **L** (0.1600). **Mean Brier 0.1751.** (3 W / 2 L) · Potential winner Carabobo **W**.
+- **`P-337`**: 1 `Under 2.5` p0.65 **W** (0.1225) · 2 `1H Over 0.5` p0.60 **L** (0.3600) · 3 `Argentinos team corners Over 4.5` p0.58 **L** (0.3364; had 4 — missed by one) · 4 `1H Under 0.5` p0.40 **W** (0.3600) · 5 `Over 2.5` p0.35 **L** (0.1225). **Mean Brier 0.2603.** (2 W / 3 L) · Potential winner Argentinos **L** (0–0 draw).
+- **`P-338`** (tennis, `EXPLORATORY`): 1 `Gauff -4.5 games` p0.54 **W** (0.2116) · 2 `Under 21.5 games` p0.53 **W** (0.2209) · 3 `Over 21.5 games` p0.47 **L** (0.2209) · 4 `Jovic +4.5 games` p0.46 **L** (0.2116). **Mean Brier 0.2163.** (2 W / 2 L) · Potential winner Gauff **W**.
+- **`P-339`** (KBO, `EXPLORATORY`): 1 `Doosan +1.5` p0.60 **L** (0.3600) · 2 `Over 9.5` p0.56 **L** (0.3136) · 3 `Under 9.5` p0.44 **W** (0.3136) · 4 `Hanwha -1.5` p0.40 **W** (0.3600). **Mean Brier 0.3368.** (2 W / 2 L) · Potential winner Hanwha **W**.
+- **`P-340`**: 1 `1H Over 0.5` p0.61 **W** (0.1521) · 2 `Under 10.5 total corners` p0.59 **W** (0.1681) · 3 `Under 2.5` p0.55 **L** (0.3025) · 4 `Over 2.5` p0.45 **W** (0.3025) · 5 `1H Under 0.5` p0.39 **L** (0.1521). **Mean Brier 0.2155.** (3 W / 2 L) · Potential winner Incheon **W**.
+- **`P-341`**: 1 `1H Over 0.5` p0.61 **W** (0.1521) · 2 `Under 2.5` p0.58 **L** (0.3364) · 3 `Over 7.5 total corners` p0.55 **UNSETTLEABLE** (not booked) · 4 `Over 2.5` p0.42 **W** (0.3364) · 5 `1H Under 0.5` p0.39 **L** (0.1521). **4-row settled mean Brier 0.2443.** (2 W / 2 L) · Potential winner BUL **W**.
+- **`P-342`**: 1 `1H Over 0.5` p0.68 **L** (0.4624) · 2 `Over 2.5` p0.56 **L** (0.3136) · 3 `Over 8.5 total corners` p0.54 **PROVISIONAL WIN** (16 reported; not booked) · 4 `Under 2.5` p0.44 **W** (0.3136) · 5 `1H Under 0.5` p0.32 **W** (0.4624). **4-row settled mean Brier 0.3880.** (2 W / 2 L) · Potential winner Komárno **W**.
+- **`P-344`** (FIBA, `EXPLORATORY`): 1 `Japan +3.0` p0.56 **L** (0.3136) · 2 `Over 146.5` p0.54 **W** (0.2116) · 3 `Under 146.5` p0.46 **L** (0.2116) · 4 `Hungary -3.0` p0.37 **W** (0.3969). **Mean Brier 0.3334.** (2 W / 2 L) · Potential winner Hungary **W**.
+
+### v4.0 Brier / calibration scorecard — after `P-333`–`P-344`
+
+| Population | This cohort — cards | Scored binary rows | W / L | Mean Brier (method) | 0.5 baseline |
+|---|---|---:|---:|---:|---:|
+| **MLB — `PRIMARY_SCORED`** | `P-335` | 4 | 2 / 2 | **0.2541** | 0.2500 |
+| **EPL / NRL / AFL — `PRIMARY_SCORED`** | — | 0 | — | — | — |
+| `EXPLORATORY` (soccer `P-336`/`P-337`/`P-340`/`P-341`/`P-342`, KBO `P-339`, tennis `P-338`, FIBA `P-344`) | 8 | 35 | 18 / 17 | **0.2665** | 0.2500 |
+| **This cohort — all scored rows** | 9 | **39** | **20 / 19** | **0.2653** | **0.2500** |
+| **Running mixed total (prior 33 + this 39)** | 16 | **72** | **37 / 35** | **0.2436** | 0.2500 |
+| **Running `PRIMARY_SCORED` (EPL 10 + MLB 8)** | 4 | **18** | **9 / 9** | **0.2466** | 0.2500 |
+
+Combined calibration table (this cohort's 39 rows; buckets ≤ 0.50 are mostly the complement row on each card — a mirror of its pair, not independent evidence):
+
+| Probability bucket | Rows | Wins | Win rate |
+|---|---:|---:|---:|
+| 0.65–0.70 | 2 | 1 | 50% |
+| 0.60–0.64 | 5 | 3 | 60% |
+| 0.55–0.59 | 10 | 4 | 40% |
+| 0.50–0.54 | 4 | 3 | 75% |
+| 0.45–0.49 | 4 | 1 | 25% |
+| 0.40–0.44 | 8 | 5 | 63% |
+| 0.35–0.39 | 5 | 2 | 40% |
+| 0.30–0.34 | 1 | 1 | 100% |
+| **Total** | **39** | **20** | **51%** |
+
+**Sample size, stated prominently: 39 scored rows across 9 cards and ~8 competitions, with heavy within-card dependence, 8 of 9 cards `EXPLORATORY`.** The `EXPLORATORY` mean (0.2665) is *worse* than the 0.5 baseline; the single `PRIMARY_SCORED` card (0.2541) is essentially at baseline. The 0.55–0.64 band — where the cards put their "most likely" picks — went 7 W / 15 L this cohort (47%). **Nothing here supports a calibration, discrimination or superiority claim.** Per user direction this cohort is **learning-only, not performance-eligible evidence**; it is folded into the running scorecard for continuity but the running mean is not a quality verdict. `PRIMARY_SCORED` card count is **4**; the pattern/calibration review runs at 25 (`METHOD.md` §7.2).
+
+---
+
+### Per-card three-question retrospective (`METHOD.md` §7.2)
+
+**`P-333` — Pakistan Women 143/8 beat Hong Kong Women 71.** *Administrative closure — no forecast.* Pakistan batted first and cleared the user's 139.5 first-innings threshold at 143/8, then Sandhu's 6/7 dismantled Hong Kong. Those are post-issue facts; the card correctly refused to freeze a Pakistan-first-innings target while the toss was unverified after the scheduled start crossed (`CR-P3`, `RULES_GENERAL.md` start-crossing invariant). *Smallest change:* operational only — begin the toss / live-state handshake earlier when an innings-order-dependent cricket target is requested, so the pregame window is not lost. No sporting-model change; process worked as designed.
+
+**`P-334` — Germany Women 83–58 Mali Women.** *Administrative closure — no forecast.* A draft ranking existed during research but was not delivered before tip, and FIBA never exposed a verified live clock/score. Germany's defensive suppression and Mali's extreme (record 20-three) Japan shooting environment were both identified as uncertainty branches. *Smallest change:* obtain the official live/starting-five state faster on a live request; no retrospective model weight from an unpublished draft (`L-117`).
+
+**`P-335` — San Diego 3–2 Washington (`MLB PRIMARY_SCORED`).** *Driver:* the best-case branch of Nick Pivetta's return distribution — five scoreless innings on 63 pitches. Washington never reached the earlier-relief / upper-total branch that had lifted the total centre to 9.1; the game finished on 5 total runs, and San Diego won by exactly one, the state that made `WSH +1.5` Rank #1 correct and `SD -1.5` a loss. *Knowable:* **yes, more than the first reading allowed.** Second-pass research (2026-09-09) recovered the full rehab **pitch-count ladder**, which the card had retrieved only as innings: **14 pitches → 47 pitches (3 IP) → 64 pitches (4⅓ IP, scoreless, 7 K, 44 strikes)** at Triple-A El Paso on Aug 30. A starter who has just completed 64 pitches scorelessly is stretched to roughly five major-league innings — and he threw **63 pitches / 5.0 scoreless**. The "short start → early relief transition → Over" branch that received the visible **+0.20** net scoring adjustment was therefore **contradicted by evidence the card had partially retrieved**: it recorded the innings and omitted the pitch count, strike rate, strikeout total and scoreless result, which are the four fields that actually forecast the major-league workload ceiling. The exact five scoreless innings were not knowable; the *workload ceiling* was. *Smallest change:* print the **full rehab pitch-count ladder** (pitches / IP / ER / SO / strike rate per outing, in order) before any short-start branch takes a signed total adjustment — new `RULES_BASEBALL.md` control 25, under cross-sport gate **`G-L7`** (§16.5(c)). *What went right:* margin decomposition (control 4/17) and the one-run-favourite-win coexistence were correct; Rank #1 and the potential winner both won.
+
+
+| P-294 | Newcastle Knights (W) vs Canterbury-Bankstown Bulldogs (W) — NRLW Round 10 | FINAL / SETTLED — Newcastle 56–22 Canterbury; Under 48.5 LOSS, Knights -15.5 WIN | 2026-09-05(b) audit; ABC NRLW Score Centre verbatim quote; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-295 | North Queensland Cowboys vs Canberra Raiders — NRL Round 27 | FINAL / SETTLED — Raiders 50–30 Cowboys (major upset, Coby Black debut record); Under 56.5 LOSS, Cowboys -5.5 LOSS | 2026-09-05(b) audit; deep retrospective, L-075 adopted; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-296 | Doosan Bears @ SSG Landers — KBO | FINAL / SETTLED — SSG 3–2 Doosan; Under 10.5 WIN, SSG +1.5 WIN | 2026-09-05(b) audit; clean top-two win; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-297 | Hanwha Eagles @ Lotte Giants — KBO | FINAL / SETTLED — Hanwha 11–6 Lotte; Hanwha ML WIN, Under 11.0 LOSS | 2026-09-05(b) audit; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-298 | Brisbane Lions (W) vs GWS GIANTS (W) — AFLW Round 4 | FINAL / SETTLED — Brisbane 7.13 (55) d. GWS 3.6 (24); GWS +29.5 LOSS, Under 95.5 WIN | 2026-09-05(b) audit; L-077 adopted; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-299 | Mali (W) vs Spain (W) — FIBA Women's World Cup Group A | FINAL / SETTLED — Mali 82–73 Spain (major upset); Spain -25.5 LOSS, Under 144.5 LOSS | 2026-09-05(b) audit; deep retrospective, L-076 adopted; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-300 | Rotterdam Dockers vs Edinburgh Castle Rockers — ETPL Match 14 | FINAL / SETTLED — ECR 148 (19.3 ov) d. Rotterdam 93 (18 ov) by 55 runs; ECR powerplay 28/3; PP Over 50.5 LOSS, PP Under 50.5 WIN, 20-ov Under 168.5 WIN | 2026-09-06 audit closed the powerplay evidence gap from `SRC-ESPN-SITE-API-CRICKET`; cross-checked against ESPNcricinfo fall of wickets. Deep Rank-#1-loss retrospective recorded (L-083, bimodal phase totals); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-301 | Cronulla Sharks vs Melbourne Storm — NRL Round 27 | FINAL / SETTLED — Melbourne 24–20 Cronulla (last-second try); Storm -8.5 LOSS, Under 52.5 WIN | 2026-09-05(b) audit; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-302 | Newcastle United vs AFC Bournemouth — EPL Matchweek 3 | FINAL / SETTLED — 2-2; Bournemouth 3 corners, Newcastle 4; BOU Over 2.5 corners WIN, 1H Over 0.5 WIN, FT Over 2.5 WIN | 2026-09-06 audit closed the corners evidence gap from `SRC-ESPN-SITE-API-SOCCER` (`eng.1`/`401879286`, `wonCorners`). This settlement falsified L-073's stated premise; see L-081; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-303 | Nigeria (W) vs Hungary (W) — FIBA Women's World Cup Group B | FINAL / SETTLED — Nigeria 81–53 Hungary; Nigeria +25.5 WIN, Under 145.5 WIN | 2026-09-05(b) audit; clean top-two win; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-304 | Slavia Praha vs Zbrojovka Brno — Chance Liga | FINAL / SETTLED — 4–0, HT 1–0 | Full five-rank slate recovered from preserved mini: W/W/W/L/L. Official Slavia corners 5. Prior archival-omission claim withdrawn.; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-305 | Dublin Guardians vs Amsterdam Flames — ETPL | FINAL / SETTLED — Amsterdam 169/7 vs Dublin 160/8 | Full FOUR-rank slate recovered: W/L/W/L. PP 60/1; batting-first condition met. Prior archival-omission claim withdrawn.; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-306 | Manchester City v Coventry | FINAL / SETTLED | City 1–0 Coventry; W/L/L/W/L; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-306); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-307 | India Women v Pakistan Women | ADMINISTRATIVE / NO SCORED TRIAL | ADMINISTRATIVE / NO FORECAST ISSUED; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-307); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-308 | Francisco Cerundolo v Taylor Fritz | FINAL / SETTLED | Cerundolo 3–2 Fritz, games 25–23; W/W/L/L; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-308); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-309 | Gardner-Webb v Wofford | FINAL / SETTLED | Wofford 17–13 Gardner-Webb; W/L/W/L; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-309); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-310 | Luciano Darderi v Dane Sweeny | FINAL / SETTLED | Darderi 3–0 Sweeny, games 18–10; L/L/W/W; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-310); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-311 | Barbados Women v Trinbago Knight Riders Women | FINAL / SETTLED | TKR Women 155 beat Barbados 134, PP 71/1; L/L/W/W; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-311); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-312 | Detroit Tigers v Cleveland Guardians | FINAL / SETTLED | Detroit 6–0 Cleveland; W/L/W/L; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-312); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-313 | Cincinnati Reds v Milwaukee Brewers | FINAL / SETTLED | Cincinnati 5–3 Milwaukee; L/L/W/W; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-313); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-314 | Los Angeles Angels v Pittsburgh Pirates | FINAL / SETTLED | Angels 6–1 Pittsburgh; W/L/W/L/W/L; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-314); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-315 | Melbourne v West Coast (AFLW) | FINAL / SETTLED | Melbourne 81–44 West Coast; L/L/W/W; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-315); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-316 | Doosan Bears v SSG Landers (superseded card) | CANONICAL ALIAS OF P-317; no separate trial | SUPERSEDED / ARCHIVAL ONLY, same event as P-317; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-316); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-317 | Doosan Bears v SSG Landers | FINAL / SETTLED | Doosan 16–9 SSG; L/L/W/W; [Full retrospective](archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md#p-317); [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-318 | Henan vs Chengdu Rongcheng — CSL R26 | FINAL / SETTLED | Henan 0–0 Chengdu; L/L/L/W/W; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-319 | Yunnan Yukun vs Liaoning Tieren — CSL R26 | FINAL / SETTLED (`START-CROSSED / LIVE 0-0`) | Yunnan 5–0; W/W/W/L/L; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-320 | Tianjin Jinmen Tigers vs Zhejiang — CSL R26 | FINAL / SETTLED | Tianjin 2–1; W/L/W/L/L; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-321 | Sønderjyske vs AC Horsens — Denmark Superliga R7 | FINAL / SETTLED | Sønderjyske 2–5; W/L/W/L/L; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-322 | South Africa vs Zimbabwe — Namibia T20I Tri-Series Final | FINAL / SETTLED (`START-CROSSED / TOSS-CONDITIONAL`) | SA 205/5 bt Zimbabwe 157; W/W/L/L; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-323 | Everton vs Manchester United — EPL MW3 | FINAL / SETTLED (`EPL PRIMARY_SCORED`) | Everton 2–2; L/L/W/L/W; Brier 0.3749; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-324 | Valencia vs Barcelona — LaLiga MD4 | ADMINISTRATIVE / NO SCORED TRIAL | Valencia 0–5 Barcelona; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-325 | Bangladesh W vs Sri Lanka W — Women's Asia Cup M10 | FINAL / SETTLED | BAN 114/8; SL won by 4 wkts; W/W/L/L; Brier 0.1332; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-326 | Western Carolina @ Campbell — NCAA FCS | ADMINISTRATIVE / NO SCORED TRIAL | Campbell 28–19; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-327 | Angers SCO vs Rennes — Ligue 1 | FINAL / SETTLED (best card of cohort) | Angers 1–2; W/W/W/L/L; Brier 0.1149; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-328 | Arsenal vs Chelsea — EPL MW3 | FINAL / SETTLED (`EPL PRIMARY_SCORED`) | Arsenal 2–1; W/W/W/L/L; Brier 0.1582; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-329 | Bologna vs Sassuolo — Serie A MD3 | FINAL / SETTLED | Bologna 2–2; W/L/W/L/W; Brier 0.2460; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-330 | Puerto Rico W vs Belgium W — FIBA W WC | ADMINISTRATIVE / NO SCORED TRIAL | Puerto Rico 64–76; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-331 | Milwaukee Brewers @ Cincinnati Reds — MLB | FINAL / SETTLED (`MLB PRIMARY_SCORED`) | Cincinnati 12–8; W/W/L/L; Brier 0.1893; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-332 | Deportivo Alavés vs CA Osasuna — LaLiga MD4 | FINAL / SETTLED | Alavés 5–2; L/L/W/L/W; Brier 0.2876; [canonical log](PREDICTION_LOG_COMBINED_2.md) |
+| P-333 | Pakistan W vs Hong Kong W — Women's T20 Asia Cup Gp A | ADMINISTRATIVE / NO SCORED TRIAL | Pakistan 143/8 bt Hong Kong 71 by 72 runs; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-334 | Germany W vs Mali W — FIBA W World Cup Gp A | ADMINISTRATIVE / NO SCORED TRIAL | Germany 83–58 Mali; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-335 | Washington Nationals @ San Diego Padres — MLB | FINAL / SETTLED (`MLB PRIMARY_SCORED`) | SD 3–2 WSH; W/L/L/W; winner W; Brier 0.2541; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-336 | Carabobo FC vs Estudiantes de Mérida — Venezuela Clausura J8 | FINAL / SETTLED — top 3 rows all won | Carabobo 1–0 (HT 1–0); W/W/W/L/L; winner W; Brier 0.1751; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-337 | Barracas Central vs Argentinos Juniors — Argentina Clausura F8 | FINAL / SETTLED — deep retro (R2+R3 lost, winner wrong) | 0–0 (HT 0–0); W/L/L/W/L; winner L (draw); Brier 0.2603; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-338 | Iva Jovic vs Coco Gauff — US Open Women's R16 | FINAL / SETTLED — best card of cohort, top 2 won | Gauff 6–1, 6–4; W/W/L/L; winner W; Brier 0.2163; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-339 | Doosan Bears @ Hanwha Eagles — KBO | FINAL / SETTLED — deep Rank-#1 retro | Hanwha 6–1; L/L/W/W; winner W; Brier 0.3368; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-340 | Incheon United vs Bucheon FC 1995 — K League 1 R28 | FINAL / SETTLED — top 2 rows both won | Incheon 2–1 (HT 1–1); W/W/L/W/L; winner W; Brier 0.2155; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-341 | BUL FC vs Ntugasaze FC — Uganda Premier League R3 | FINAL / PARTIAL; corner field pending | BUL 4–1 (HT 2–1); W/L/—/W/L; winner W; 4-row Brier 0.2443; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-342 | MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3 | FINAL / PARTIAL; corner field pending | Komárno 2–0 (HT 0–0); L/L/—/W/W; winner W; 4-row Brier 0.3880; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-343 | Bangladesh W vs UAE W — Women's T20 Asia Cup Gp B | ADMINISTRATIVE / NO SCORED TRIAL | Bangladesh 103/7 bt UAE 69/9 by 34 runs; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-344 | Hungary W vs Japan W — FIBA W World Cup Qual. to QF | FINAL / SETTLED — deep Rank-#1 retro; mini-log's stated 0.2834 corrected | Hungary 84–63 (total 147); L/W/L/W; winner W; Brier 0.3334; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-345 | Club Brugge v Aston Villa — UCL MD1 | FINAL / SETTLED (corner row settled at UEFA this pass) — deep Rank-#1 retro | R1 L, R2 W, R3 W, R4 W, R5 L; winner L; Brier 0.2466; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-346 | AEK Athens v LASK — UCL MD1 | FINAL / SETTLED — all five rows won | W W W W W; winner W; Brier 0.0816; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-347 | Rangers @ Mariners (`MLB PRIMARY_SCORED`) | FINAL / SETTLED | W L W L; winner W; Brier 0.2374; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-348 | Blue Jays @ Athletics (`MLB PRIMARY_SCORED`) | FINAL / SETTLED | W L L L; winner W; Brier 0.2803; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-349 | Cardinals @ Giants (`MLB PRIMARY_SCORED`) | FINAL / SETTLED — all four rows won | W W W W; winner L; Brier 0.1440; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-350 | Shelton v Alcaraz — US Open men's QF | FINAL / SETTLED — deep Rank-#1 retro | L W W W; winner = R1; Brier 0.2574; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-351 | Reds @ Dodgers (`MLB PRIMARY_SCORED`) | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.2460; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-352 | Namibia v South Africa — 1st ODI | FINAL / SETTLED — deep Rank-#1 retro | L W W W; winner W; Brier 0.2158; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-353 | Dragons @ Giants — NPB, 9 Sep | FINAL / SETTLED | W L W L; winner L; Brier 0.2549; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-354 | Carp @ Tigers — NPB | FINAL / SETTLED | W L L W; winner L; Brier 0.2968; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-355 | Sydney FC v Melbourne Victory — Australia Cup SF | FINAL / SETTLED (corner row settled at FotMob this pass) — top two won | W W L W W; winner L; Brier 0.1531; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-356 | KT @ Samsung — KBO | FINAL / SETTLED — deep Rank-#1 retro | L W W W; winner L; Brier 0.2418; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-357 | Dublin Guardians v Belfast Wolves — ETPL M18 | FINAL / SETTLED — deep Rank-#1 retro | L L W W; winner L; Brier 0.3377; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-358 | Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired) | FINAL / SETTLED — deep Rank-#1 retro | L W L W; winner W; Brier 0.2973; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-359 | Jordan v Chinese Taipei — Asian Games | FINAL / SETTLED | W L W L; winner L; Brier 0.2467; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-360 | South Korea v Saudi Arabia — Asian Games | FINAL / SETTLED | W L W L; winner W; Brier 0.2409; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-361 | Dragons @ Giants — NPB, 10 Sep | FINAL / SETTLED | W L W L; winner W; Brier 0.2493; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-362 | Eagles @ Landers — KBO | FINAL / SETTLED | W L W L; winner W; Brier 0.2450; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-363 | Roosters W v Bulldogs W — NRLW R11 | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.1773; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-364 | England v Pakistan — 3rd Test (Day-2 card) | FINAL / SETTLED (2026-09-15) — England won by 8 wickets on Day 4 (12 Sep); winner label settled | L L W W; winner **W**; Brier 0.3429 (4 ranked rows; winner label not a Brier row); [canonical log](PREDICTION_LOG_COMBINED_3.md) §"2026-09-15"; [combined log §"2026-09-15"](PREDICTION_LOG_COMBINED_3.md) |
+| P-365 | Uni-Lions @ CTBC Brothers — CPBL | FINAL / SETTLED — deep Rank-#1 retro | L W L W; winner W; Brier 0.2768; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-366 | Rotterdam v Glasgow — ETPL M19 | FINAL / CLOSED; C02/C03 terminal censored, other rows settled | W C C L; winner W; Brier 0.1936 (2 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-367 | China W v France W — FIBA WWC QF | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.2071; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-368 | Al Jazira v Al Nasr — UAE Pro League | FINAL / PARTIAL; corner field pending | W P L W L; winner L (draw); Brier 0.1917 (4 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-369 | Dubai United v Shabab Al Ahli — UAE Pro League | FINAL / PARTIAL; corner field pending | P L L W W; winner L (draw); Brier 0.3909 (4 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |

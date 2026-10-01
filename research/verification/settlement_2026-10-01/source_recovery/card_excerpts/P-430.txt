@@ -1,0 +1,384 @@
+
+**Disposition:** `FINAL / ADMINISTRATIVELY CLOSED — NO ISSUED FORECAST / NO SCORED TRIAL`. Same start-crossing gate as `P-424`; both supplied contracts were activation-conditional on Rotterdam batting first and were never issued.
+
+**Official final (verified this pass):** Rotterdam 181/6 beat Edinburgh 176/5 by 5 runs; Rotterdam batted first; powerplay 54/2.
+
+| Frozen supplied contract | Realised | Grade |
+|---|---|---|
+| Dockers 20-over first-innings O/U 168.5 | Over (181/6) | `NOT GRADED` |
+| Dockers first 6 overs O/U 47.5 | Over (54/2) | `NOT GRADED` |
+
+The research-only **Under 168.5** direction would also have lost. **What went right:** the fail-close again prevented a post-start pseudo-pregame card. **Learning:** sparse venue medians do not cap a team-specific upper tail.
+
+---
+
+### `P-429` — Afghanistan 159/8 lost to India 163/3 (2nd T20I, Delhi)
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | Afghanistan lose 1+ wicket in first 6 overs | 0.79 | **WIN** | 0.0441 |
+| 2 | Arshdeep Singh 1+ wicket | 0.66 | **WIN** | 0.1156 |
+| 3 | Afghanistan first 6 overs Under 47.5 | 0.55 | **WIN** | 0.2025 |
+| 4 | Afghanistan 20-over innings Over 167.5 | 0.54 | **LOSS** | 0.2916 |
+
+**Winner:** India — WIN. **Card Brier 0.1635.** Rank #1 WIN · Hit@2 YES · **Wins@2 2/2.** Afghanistan powerplay 41/1; Arshdeep 2 wickets.
+
+**Why:** the card used *same-opponent, same-venue, unchanged-top-order* evidence (41/4 against this attack two days earlier) for the early-wicket rows rather than generic batting-first totals — the strongest single piece of reasoning in the batch. The innings Over failed because India squeezed overs 7–15 (64 runs, 5 wickets; Nitish Kumar Reddy 3/24). **Blind spot:** Varun Chakaravarthy's absence was treated as a simple scoring-ceiling positive instead of an `outgoing role → incoming bowler → residual attack` chain (`L-006`). → cricket control 31. **Line-ups: both XIs confirmed** — the only card in the batch where that is true.
+
+---
+
+### `P-430` — Al Ain 4–0 Al Nassr (ACLE MD1) — **Rank #1 LOSS; one row still open**
+
+**Verified here at ESPN:** 4–0, HT 1–0, goals 25', 63', 72', 85'; corners **Al Ain 2, Al Nassr 10**.
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | Al Nassr team total Over 0.5 | 0.85 | **LOSS** | 0.7225 |
+| 2 | Match Over 1.5 | 0.81 | **WIN** | 0.0361 |
+| 3 | 1st Half Over 0.5 | 0.75 | **WIN** | 0.0625 |
+| 4 | Al Nassr +0.5 / X2 | 0.75 | **LOSS** | 0.5625 |
+| 5 | Al Ain team corners Over 3.5 | 0.70 | **UNRESOLVED** | not booked |
+
+**Winner:** Al Nassr — LOSS. **Four-row Brier 0.3459** (not a final card mean while R5 is open). Rank #1 LOSS · Hit@2 YES · Wins@2 1/2. Supplied 1H Over 0.5 and full Over 2.5 both WIN.
+
+**`P-430-C05` stays open (`TMP-OPEN-20260917-01`).** The card pre-registered the AFC official match-stat record; the reachable AFC report carries the score but not the corner field. ESPN and two secondary displays agree on **Al Ain 2** — a research LOSS — but ESPN was not pre-registered, so under §16.10(j) the row is not booked. This is the correct outcome-independent application: the evidence points to a loss and the row still is not silently promoted.
+
+**Deep Rank-#1 review**
+
+| Question | Finding |
+|---|---|
+| Why it was ranked first | One Al Nassr goal was judged less demanding than a match total or side result, with Ronaldo/Félix/Mané/Ângelo in the latest confirmed attacking core and Al Nassr scoring in all five recent league matches |
+| Was 85% justified? | **No.** The mechanism was credible but the number was too assertive for `MEDIUM` evidence with **no official XI or bench**. Al Nassr had 15 shots and 10 corners and still did not score |
+| Should another row have ranked higher? | R2 (Match Over 1.5) had a genuinely two-sided path and won. The pregame gap between R1 (85%) and R2 (81%) was too wide given R1 depended on one specific team scoring |
+| Failure class | **Probability extremity under unresolved participant state** — over-conversion of a class prior into near-certainty, not missing availability data |
+| Existing rule | `G14.2` / `SO-P2` cap participant-sensitive rows; the cap was applied to *rank* (R2 was blocked from #1) but not to *probability extremity* |
+| Disposition | Evidence row for `C-PROB-EXTREMITY`; **no** automatic cap (the ≥0.70 band went 22/27 across this batch, so a blanket cap is unsupported). New soccer control 37 instead |
+
+**Over/under lesson:** the full-match Over won **entirely through Al Ain's four goals** while the Rank-#1 Al Nassr scoring thesis failed. A correct total does not validate the allocation that produced it.
+
+---
+
+### `P-431` — England 254/4 beat Sri Lanka 135 by 119 runs (1st T20I, Southampton)
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | England first innings Over 149.5 | 0.84 | **WIN** | 0.0256 |
+| 2 | Adil Rashid 1+ wicket | 0.76 | **WIN** | 0.0576 |
+| 3 | England first 6 overs Under 60.5 | 0.62 | **LOSS** | 0.3844 |
+| 4 | England first innings Under 193.5 | 0.55 | **LOSS** | 0.3025 |
+
+**Winner:** England — WIN. **Card Brier 0.1925.** Rank #1 WIN · Hit@2 YES · **Wins@2 2/2.** England powerplay 90/1; Rashid 1 wicket.
+
+**Why:** the low alternate Over and the opponent-specific wicket role both held, through different mechanisms. Both Unders lost to a right tail **the card had already documented**: England made 257/3 at the same venue in July, and still the card placed 55% on Under 193.5 and 62% on the powerplay Under. Brook 114*, Buttler 80, a 128-run second-wicket stand. **This is the same failure class as `P-411`** (basketball, where a same-competition 83–53 meeting was set aside) — a directly comparable current-regime performance that already cleared the line was not given explicit mass. → cricket control 30 and cross-sport `G-L18`.
+
+**Contract identity note preserved:** if an operator ticket literally named Afghanistan for these England first-innings lines, that ticket is void rather than an England contract.
+
+---
+
+**Disposition:** `FINAL / ADMINISTRATIVELY CLOSED — NO ISSUED FORECAST / NO SCORED TRIAL`. Same start-crossing gate as `P-424`; both supplied contracts were activation-conditional on Rotterdam batting first and were never issued.
+
+**Official final (verified this pass):** Rotterdam 181/6 beat Edinburgh 176/5 by 5 runs; Rotterdam batted first; powerplay 54/2.
+
+| Frozen supplied contract | Realised | Grade |
+|---|---|---|
+| Dockers 20-over first-innings O/U 168.5 | Over (181/6) | `NOT GRADED` |
+| Dockers first 6 overs O/U 47.5 | Over (54/2) | `NOT GRADED` |
+
+The research-only **Under 168.5** direction would also have lost. **What went right:** the fail-close again prevented a post-start pseudo-pregame card. **Learning:** sparse venue medians do not cap a team-specific upper tail.
+
+---
+
+### `P-429` — Afghanistan 159/8 lost to India 163/3 (2nd T20I, Delhi)
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | Afghanistan lose 1+ wicket in first 6 overs | 0.79 | **WIN** | 0.0441 |
+| 2 | Arshdeep Singh 1+ wicket | 0.66 | **WIN** | 0.1156 |
+| 3 | Afghanistan first 6 overs Under 47.5 | 0.55 | **WIN** | 0.2025 |
+| 4 | Afghanistan 20-over innings Over 167.5 | 0.54 | **LOSS** | 0.2916 |
+
+**Winner:** India — WIN. **Card Brier 0.1635.** Rank #1 WIN · Hit@2 YES · **Wins@2 2/2.** Afghanistan powerplay 41/1; Arshdeep 2 wickets.
+
+**Why:** the card used *same-opponent, same-venue, unchanged-top-order* evidence (41/4 against this attack two days earlier) for the early-wicket rows rather than generic batting-first totals — the strongest single piece of reasoning in the batch. The innings Over failed because India squeezed overs 7–15 (64 runs, 5 wickets; Nitish Kumar Reddy 3/24). **Blind spot:** Varun Chakaravarthy's absence was treated as a simple scoring-ceiling positive instead of an `outgoing role → incoming bowler → residual attack` chain (`L-006`). → cricket control 31. **Line-ups: both XIs confirmed** — the only card in the batch where that is true.
+
+---
+
+### `P-430` — Al Ain 4–0 Al Nassr (ACLE MD1) — **Rank #1 LOSS; one row still open**
+
+**Verified here at ESPN:** 4–0, HT 1–0, goals 25', 63', 72', 85'; corners **Al Ain 2, Al Nassr 10**.
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | Al Nassr team total Over 0.5 | 0.85 | **LOSS** | 0.7225 |
+| 2 | Match Over 1.5 | 0.81 | **WIN** | 0.0361 |
+| 3 | 1st Half Over 0.5 | 0.75 | **WIN** | 0.0625 |
+| 4 | Al Nassr +0.5 / X2 | 0.75 | **LOSS** | 0.5625 |
+| 5 | Al Ain team corners Over 3.5 | 0.70 | **UNRESOLVED** | not booked |
+
+**Winner:** Al Nassr — LOSS. **Four-row Brier 0.3459** (not a final card mean while R5 is open). Rank #1 LOSS · Hit@2 YES · Wins@2 1/2. Supplied 1H Over 0.5 and full Over 2.5 both WIN.
+
+**`P-430-C05` stays open (`TMP-OPEN-20260917-01`).** The card pre-registered the AFC official match-stat record; the reachable AFC report carries the score but not the corner field. ESPN and two secondary displays agree on **Al Ain 2** — a research LOSS — but ESPN was not pre-registered, so under §16.10(j) the row is not booked. This is the correct outcome-independent application: the evidence points to a loss and the row still is not silently promoted.
+
+**Deep Rank-#1 review**
+
+| Question | Finding |
+|---|---|
+| Why it was ranked first | One Al Nassr goal was judged less demanding than a match total or side result, with Ronaldo/Félix/Mané/Ângelo in the latest confirmed attacking core and Al Nassr scoring in all five recent league matches |
+| Was 85% justified? | **No.** The mechanism was credible but the number was too assertive for `MEDIUM` evidence with **no official XI or bench**. Al Nassr had 15 shots and 10 corners and still did not score |
+| Should another row have ranked higher? | R2 (Match Over 1.5) had a genuinely two-sided path and won. The pregame gap between R1 (85%) and R2 (81%) was too wide given R1 depended on one specific team scoring |
+| Failure class | **Probability extremity under unresolved participant state** — over-conversion of a class prior into near-certainty, not missing availability data |
+| Existing rule | `G14.2` / `SO-P2` cap participant-sensitive rows; the cap was applied to *rank* (R2 was blocked from #1) but not to *probability extremity* |
+| Disposition | Evidence row for `C-PROB-EXTREMITY`; **no** automatic cap (the ≥0.70 band went 22/27 across this batch, so a blanket cap is unsupported). New soccer control 37 instead |
+
+**Over/under lesson:** the full-match Over won **entirely through Al Ain's four goals** while the Rank-#1 Al Nassr scoring thesis failed. A correct total does not validate the allocation that produced it.
+
+---
+
+### `P-431` — England 254/4 beat Sri Lanka 135 by 119 runs (1st T20I, Southampton)
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | England first innings Over 149.5 | 0.84 | **WIN** | 0.0256 |
+| 2 | Adil Rashid 1+ wicket | 0.76 | **WIN** | 0.0576 |
+| 3 | England first 6 overs Under 60.5 | 0.62 | **LOSS** | 0.3844 |
+| 4 | England first innings Under 193.5 | 0.55 | **LOSS** | 0.3025 |
+
+**Winner:** England — WIN. **Card Brier 0.1925.** Rank #1 WIN · Hit@2 YES · **Wins@2 2/2.** England powerplay 90/1; Rashid 1 wicket.
+
+**Why:** the low alternate Over and the opponent-specific wicket role both held, through different mechanisms. Both Unders lost to a right tail **the card had already documented**: England made 257/3 at the same venue in July, and still the card placed 55% on Under 193.5 and 62% on the powerplay Under. Brook 114*, Buttler 80, a 128-run second-wicket stand. **This is the same failure class as `P-411`** (basketball, where a same-competition 83–53 meeting was set aside) — a directly comparable current-regime performance that already cleared the line was not given explicit mass. → cricket control 30 and cross-sport `G-L18`.
+
+**Contract identity note preserved:** if an operator ticket literally named Afghanistan for these England first-innings lines, that ticket is void rather than an England contract.
+
+---
+
+
+
+**Official final (verified this pass):** Rotterdam 181/6 beat Edinburgh 176/5 by 5 runs; Rotterdam batted first; powerplay 54/2.
+
+| Frozen supplied contract | Realised | Grade |
+|---|---|---|
+| Dockers 20-over first-innings O/U 168.5 | Over (181/6) | `NOT GRADED` |
+| Dockers first 6 overs O/U 47.5 | Over (54/2) | `NOT GRADED` |
+
+The research-only **Under 168.5** direction would also have lost. **What went right:** the fail-close again prevented a post-start pseudo-pregame card. **Learning:** sparse venue medians do not cap a team-specific upper tail.
+
+---
+
+### `P-429` — Afghanistan 159/8 lost to India 163/3 (2nd T20I, Delhi)
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | Afghanistan lose 1+ wicket in first 6 overs | 0.79 | **WIN** | 0.0441 |
+| 2 | Arshdeep Singh 1+ wicket | 0.66 | **WIN** | 0.1156 |
+| 3 | Afghanistan first 6 overs Under 47.5 | 0.55 | **WIN** | 0.2025 |
+| 4 | Afghanistan 20-over innings Over 167.5 | 0.54 | **LOSS** | 0.2916 |
+
+**Winner:** India — WIN. **Card Brier 0.1635.** Rank #1 WIN · Hit@2 YES · **Wins@2 2/2.** Afghanistan powerplay 41/1; Arshdeep 2 wickets.
+
+**Why:** the card used *same-opponent, same-venue, unchanged-top-order* evidence (41/4 against this attack two days earlier) for the early-wicket rows rather than generic batting-first totals — the strongest single piece of reasoning in the batch. The innings Over failed because India squeezed overs 7–15 (64 runs, 5 wickets; Nitish Kumar Reddy 3/24). **Blind spot:** Varun Chakaravarthy's absence was treated as a simple scoring-ceiling positive instead of an `outgoing role → incoming bowler → residual attack` chain (`L-006`). → cricket control 31. **Line-ups: both XIs confirmed** — the only card in the batch where that is true.
+
+---
+
+### `P-430` — Al Ain 4–0 Al Nassr (ACLE MD1) — **Rank #1 LOSS; one row still open**
+
+**Verified here at ESPN:** 4–0, HT 1–0, goals 25', 63', 72', 85'; corners **Al Ain 2, Al Nassr 10**.
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | Al Nassr team total Over 0.5 | 0.85 | **LOSS** | 0.7225 |
+| 2 | Match Over 1.5 | 0.81 | **WIN** | 0.0361 |
+| 3 | 1st Half Over 0.5 | 0.75 | **WIN** | 0.0625 |
+| 4 | Al Nassr +0.5 / X2 | 0.75 | **LOSS** | 0.5625 |
+| 5 | Al Ain team corners Over 3.5 | 0.70 | **UNRESOLVED** | not booked |
+
+**Winner:** Al Nassr — LOSS. **Four-row Brier 0.3459** (not a final card mean while R5 is open). Rank #1 LOSS · Hit@2 YES · Wins@2 1/2. Supplied 1H Over 0.5 and full Over 2.5 both WIN.
+
+**`P-430-C05` stays open (`TMP-OPEN-20260917-01`).** The card pre-registered the AFC official match-stat record; the reachable AFC report carries the score but not the corner field. ESPN and two secondary displays agree on **Al Ain 2** — a research LOSS — but ESPN was not pre-registered, so under §16.10(j) the row is not booked. This is the correct outcome-independent application: the evidence points to a loss and the row still is not silently promoted.
+
+**Deep Rank-#1 review**
+
+| Question | Finding |
+|---|---|
+| Why it was ranked first | One Al Nassr goal was judged less demanding than a match total or side result, with Ronaldo/Félix/Mané/Ângelo in the latest confirmed attacking core and Al Nassr scoring in all five recent league matches |
+| Was 85% justified? | **No.** The mechanism was credible but the number was too assertive for `MEDIUM` evidence with **no official XI or bench**. Al Nassr had 15 shots and 10 corners and still did not score |
+| Should another row have ranked higher? | R2 (Match Over 1.5) had a genuinely two-sided path and won. The pregame gap between R1 (85%) and R2 (81%) was too wide given R1 depended on one specific team scoring |
+| Failure class | **Probability extremity under unresolved participant state** — over-conversion of a class prior into near-certainty, not missing availability data |
+| Existing rule | `G14.2` / `SO-P2` cap participant-sensitive rows; the cap was applied to *rank* (R2 was blocked from #1) but not to *probability extremity* |
+| Disposition | Evidence row for `C-PROB-EXTREMITY`; **no** automatic cap (the ≥0.70 band went 22/27 across this batch, so a blanket cap is unsupported). New soccer control 37 instead |
+
+**Over/under lesson:** the full-match Over won **entirely through Al Ain's four goals** while the Rank-#1 Al Nassr scoring thesis failed. A correct total does not validate the allocation that produced it.
+
+---
+
+### `P-431` — England 254/4 beat Sri Lanka 135 by 119 runs (1st T20I, Southampton)
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | England first innings Over 149.5 | 0.84 | **WIN** | 0.0256 |
+| 2 | Adil Rashid 1+ wicket | 0.76 | **WIN** | 0.0576 |
+| 3 | England first 6 overs Under 60.5 | 0.62 | **LOSS** | 0.3844 |
+| 4 | England first innings Under 193.5 | 0.55 | **LOSS** | 0.3025 |
+
+**Winner:** England — WIN. **Card Brier 0.1925.** Rank #1 WIN · Hit@2 YES · **Wins@2 2/2.** England powerplay 90/1; Rashid 1 wicket.
+
+**Why:** the low alternate Over and the opponent-specific wicket role both held, through different mechanisms. Both Unders lost to a right tail **the card had already documented**: England made 257/3 at the same venue in July, and still the card placed 55% on Under 193.5 and 62% on the powerplay Under. Brook 114*, Buttler 80, a 128-run second-wicket stand. **This is the same failure class as `P-411`** (basketball, where a same-competition 83–53 meeting was set aside) — a directly comparable current-regime performance that already cleared the line was not given explicit mass. → cricket control 30 and cross-sport `G-L18`.
+
+**Contract identity note preserved:** if an operator ticket literally named Afghanistan for these England first-innings lines, that ticket is void rather than an England contract.
+
+---
+
+### `P-432` — KT Wiz 4–4 Hanwha Eagles (KBO; tied after 11 innings)
+
+**Official final (verified this pass):** Rotterdam 181/6 beat Edinburgh 176/5 by 5 runs; Rotterdam batted first; powerplay 54/2.
+
+| Frozen supplied contract | Realised | Grade |
+|---|---|---|
+| Dockers 20-over first-innings O/U 168.5 | Over (181/6) | `NOT GRADED` |
+| Dockers first 6 overs O/U 47.5 | Over (54/2) | `NOT GRADED` |
+
+The research-only **Under 168.5** direction would also have lost. **What went right:** the fail-close again prevented a post-start pseudo-pregame card. **Learning:** sparse venue medians do not cap a team-specific upper tail.
+
+---
+
+### `P-429` — Afghanistan 159/8 lost to India 163/3 (2nd T20I, Delhi)
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | Afghanistan lose 1+ wicket in first 6 overs | 0.79 | **WIN** | 0.0441 |
+| 2 | Arshdeep Singh 1+ wicket | 0.66 | **WIN** | 0.1156 |
+| 3 | Afghanistan first 6 overs Under 47.5 | 0.55 | **WIN** | 0.2025 |
+| 4 | Afghanistan 20-over innings Over 167.5 | 0.54 | **LOSS** | 0.2916 |
+
+**Winner:** India — WIN. **Card Brier 0.1635.** Rank #1 WIN · Hit@2 YES · **Wins@2 2/2.** Afghanistan powerplay 41/1; Arshdeep 2 wickets.
+
+**Why:** the card used *same-opponent, same-venue, unchanged-top-order* evidence (41/4 against this attack two days earlier) for the early-wicket rows rather than generic batting-first totals — the strongest single piece of reasoning in the batch. The innings Over failed because India squeezed overs 7–15 (64 runs, 5 wickets; Nitish Kumar Reddy 3/24). **Blind spot:** Varun Chakaravarthy's absence was treated as a simple scoring-ceiling positive instead of an `outgoing role → incoming bowler → residual attack` chain (`L-006`). → cricket control 31. **Line-ups: both XIs confirmed** — the only card in the batch where that is true.
+
+---
+
+### `P-430` — Al Ain 4–0 Al Nassr (ACLE MD1) — **Rank #1 LOSS; one row still open**
+
+**Verified here at ESPN:** 4–0, HT 1–0, goals 25', 63', 72', 85'; corners **Al Ain 2, Al Nassr 10**.
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | Al Nassr team total Over 0.5 | 0.85 | **LOSS** | 0.7225 |
+| 2 | Match Over 1.5 | 0.81 | **WIN** | 0.0361 |
+| 3 | 1st Half Over 0.5 | 0.75 | **WIN** | 0.0625 |
+| 4 | Al Nassr +0.5 / X2 | 0.75 | **LOSS** | 0.5625 |
+| 5 | Al Ain team corners Over 3.5 | 0.70 | **UNRESOLVED** | not booked |
+
+**Winner:** Al Nassr — LOSS. **Four-row Brier 0.3459** (not a final card mean while R5 is open). Rank #1 LOSS · Hit@2 YES · Wins@2 1/2. Supplied 1H Over 0.5 and full Over 2.5 both WIN.
+
+**`P-430-C05` stays open (`TMP-OPEN-20260917-01`).** The card pre-registered the AFC official match-stat record; the reachable AFC report carries the score but not the corner field. ESPN and two secondary displays agree on **Al Ain 2** — a research LOSS — but ESPN was not pre-registered, so under §16.10(j) the row is not booked. This is the correct outcome-independent application: the evidence points to a loss and the row still is not silently promoted.
+
+**Deep Rank-#1 review**
+
+| Question | Finding |
+|---|---|
+| Why it was ranked first | One Al Nassr goal was judged less demanding than a match total or side result, with Ronaldo/Félix/Mané/Ângelo in the latest confirmed attacking core and Al Nassr scoring in all five recent league matches |
+| Was 85% justified? | **No.** The mechanism was credible but the number was too assertive for `MEDIUM` evidence with **no official XI or bench**. Al Nassr had 15 shots and 10 corners and still did not score |
+| Should another row have ranked higher? | R2 (Match Over 1.5) had a genuinely two-sided path and won. The pregame gap between R1 (85%) and R2 (81%) was too wide given R1 depended on one specific team scoring |
+| Failure class | **Probability extremity under unresolved participant state** — over-conversion of a class prior into near-certainty, not missing availability data |
+| Existing rule | `G14.2` / `SO-P2` cap participant-sensitive rows; the cap was applied to *rank* (R2 was blocked from #1) but not to *probability extremity* |
+| Disposition | Evidence row for `C-PROB-EXTREMITY`; **no** automatic cap (the ≥0.70 band went 22/27 across this batch, so a blanket cap is unsupported). New soccer control 37 instead |
+
+**Over/under lesson:** the full-match Over won **entirely through Al Ain's four goals** while the Rank-#1 Al Nassr scoring thesis failed. A correct total does not validate the allocation that produced it.
+
+---
+
+### `P-431` — England 254/4 beat Sri Lanka 135 by 119 runs (1st T20I, Southampton)
+
+| Rank | Contract | `p` | Result | Brier |
+|---:|---|---:|---|---:|
+| 1 | England first innings Over 149.5 | 0.84 | **WIN** | 0.0256 |
+| 2 | Adil Rashid 1+ wicket | 0.76 | **WIN** | 0.0576 |
+| 3 | England first 6 overs Under 60.5 | 0.62 | **LOSS** | 0.3844 |
+| 4 | England first innings Under 193.5 | 0.55 | **LOSS** | 0.3025 |
+
+**Winner:** England — WIN. **Card Brier 0.1925.** Rank #1 WIN · Hit@2 YES · **Wins@2 2/2.** England powerplay 90/1; Rashid 1 wicket.
+
+**Why:** the low alternate Over and the opponent-specific wicket role both held, through different mechanisms. Both Unders lost to a right tail **the card had already documented**: England made 257/3 at the same venue in July, and still the card placed 55% on Under 193.5 and 62% on the powerplay Under. Brook 114*, Buttler 80, a 128-run second-wicket stand. **This is the same failure class as `P-411`** (basketball, where a same-competition 83–53 meeting was set aside) — a directly comparable current-regime performance that already cleared the line was not given explicit mass. → cricket control 30 and cross-sport `G-L18`.
+
+**Contract identity note preserved:** if an operator ticket literally named Afghanistan for these England first-innings lines, that ticket is void rather than an England contract.
+
+---
+
+### `P-432` — KT Wiz 4–4 Hanwha Eagles (KBO; tied after 11 innings)
+
+
+| P-383 | Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League | FINAL / SETTLED | L L W W |
+| P-384 | Kiwoom Heroes @ Samsung Lions — KBO League | FINAL / SETTLED | W W L L |
+| P-385 | KT Wiz @ Lotte Giants — KBO League | FINAL / SETTLED | W L W L |
+| P-386 | South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final | FINAL / SETTLED | W L W L |
+| P-387 | Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League | FINAL / SETTLED | W L L W L |
+| P-388 | Fremantle Dockers vs Geelong Cats — AFL First Semi-Final | FINAL / SETTLED | L L W W |
+| P-389 | Dublin Guardians vs Edinburgh Castle Rockers — ETPL 2026 Match 21 | ADMINISTRATIVE / NO FORECAST (toss gate withheld correctly) | none issued |
+| P-390 | Cincinnati Reds @ Milwaukee Brewers — MLB | FINAL / SETTLED | W L W L |
+| P-391 | Cleveland Guardians @ Minnesota Twins — MLB | FINAL / SETTLED | L W L W |
+| P-392 | Chicago White Sox @ St. Louis Cardinals — MLB | FINAL / SETTLED | W W L L |
+| P-393 | Seattle Mariners @ Athletics — MLB | FINAL / SETTLED | L W L W |
+| P-394 | Parramatta Eels Women vs North Queensland Cowboys Women — NRLW | FINAL / SETTLED | W W L L |
+| P-395 | Belfast Wolves vs Rotterdam Dockers — European T20 Premier League | FINAL / SETTLED | W W L L |
+| P-396 | Brisbane Lions vs Adelaide Crows — AFL Semi Final | FINAL / SETTLED | L L W W |
+| P-397 | Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final | FINAL / SETTLED | L L W W |
+| P-398 | Racing Santander vs Deportivo Alavés — La Liga | FINAL / SETTLED | W W L W L |
+| P-399 | Genoa vs Frosinone — Serie A | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260914-01) | W P W L L |
+| P-400 | Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL | FINAL / SETTLED | W W L L |
+| P-401 | IFK Göteborg vs Halmstads BK — Allsvenskan | FINAL / PARTIAL — C01, C03 corners provisional (TMP-OPEN-20260914-02/-03) | P W P L W |
+| P-402 | Tottenham Hotspur vs Everton — Premier League | FINAL / SETTLED (2026-09-15: corners settled at Premier League official record; TMP-OPEN-20260914-04/-05 retired) | W W W L L |
+| P-403 | Colorado Rockies @ Detroit Tigers — MLB | FINAL / SETTLED | L W L W |
+| P-404 | Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB | FINAL / SETTLED | L L W W |
+| P-405 | Chunichi Dragons @ Hanshin Tigers — NPB | FINAL / SETTLED | W W L L |
+| P-406 | Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 | FINAL / SETTLED (2026-09-16: six-over rows settled at ESPN cricket API event 1547895 — Edinburgh 68/2 after 6.0; TMP-OPEN-20260914-06 retired) | W L W L |
+| P-407 | Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League | FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) | P W W L W |
+| P-408 | Coventry City vs Brighton & Hove Albion — English Premier League | FINAL / SETTLED | L W W W W |
+| P-409 | Lille OSC vs ESTAC Troyes — French Ligue 1 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260915-02) | W P W W W |
+| P-410 | RB Leipzig vs Hamburger SV — German Bundesliga | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-03) | W W W W P |
+| P-411 | Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place | FINAL / SETTLED | L W L W |
+| P-412 | Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1 | FINAL / SETTLED | L W L W |
+| P-413 | Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-414 | Buffalo Bills @ Houston Texans — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-415 | LA Angels @ Washington Nationals — MLB | ADMINISTRATIVE / NOT ISSUED (interrupted) | none issued |
+| P-416 | New York Mets @ New York Yankees — MLB | FINAL / SETTLED | W L W L |
+| P-417 | Chunichi Dragons @ Hanshin Tigers — NPB Central League | FINAL / SETTLED | W L W L |
+| P-418 | Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League | OPEN — RESULT NOT RECOVERED (2026-09-16 re-classification): fixture listed by RSSSF Round 15 [Sep 14], unscored, page updated 11 Sep; the earlier "no Drukpa–RTC match" evidence was a BBS report dated 2026-07-17 (TMP-OPEN-20260915-04) | 5 rows issued; none graded |
+| P-419 | Djurgårdens IF vs GAIS — Sweden Allsvenskan | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-05) | W W W W P |
+| P-420 | Atlanta Braves @ Chicago Cubs — MLB | FINAL / SETTLED | L W L W |
+| P-421 | New York Yankees @ Minnesota Twins — MLB | FINAL / SETTLED | W W L L |
+| P-422 | Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1 | FINAL / SETTLED | L W L W |
+| P-423 | San Diego Padres @ Colorado Rockies — MLB | FINAL / SETTLED | L W W L |
+| P-424 | Amsterdam Flames vs Dublin Guardians — ETPL 2026 Match 26 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | none issued; final Amsterdam 214/5 bt Dublin 155/9, PP 48/2 |
+| P-425 | Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1 | FINAL / SETTLED | W L W L W; winner W; Brier 0.2416 |
+| P-426 | Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1 | FINAL / SETTLED | W L L L L; winner W; Brier 0.3816 |
+| P-427 | Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round | FINAL / SETTLED — deep Rank-#1 retro (top two both lost) | L L W W; winner L; Brier 0.3542 |
+| P-428 | Edinburgh Castle Rockers vs Rotterdam Dockers — ETPL Match 27 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | none issued; final Rotterdam 181/6 bt Edinburgh 176/5, PP 54/2 |
+| P-429 | Afghanistan vs India — 2nd T20I, Delhi | FINAL / SETTLED — top two both won; both XIs confirmed | W W W L; winner W; Brier 0.1635 |
+| P-430 | Al Ain FC vs Al Nassr — AFC Champions League Elite MD1 | FINAL / PARTIAL — C05 corners unresolved (TMP-OPEN-20260917-01); deep Rank-#1 retro | L W W L P; winner L; 4-row Brier 0.3459 |
+| P-431 | England vs Sri Lanka — 1st T20I, Southampton | FINAL / SETTLED — top two both won | W W L L; winner W; Brier 0.1925 |
+| P-432 | KT Wiz @ Hanwha Eagles — KBO | FINAL / SETTLED — game ended 4–4 (terminal tie); winner label did not realise | W W L L; winner tie; Brier 0.1525 |
+| P-433 | LG Twins @ NC Dinos — KBO | FINAL / SETTLED | W W L W; winner W; Brier 0.2017 |
+| P-434 | Samsung Lions @ Doosan Bears — KBO | FINAL / SETTLED — all four ranked rows won | W W W W; winner L; Brier 0.0809 |
+| P-435 | SSG Landers @ Lotte Giants — KBO | FINAL / SETTLED — all four ranked rows won | W W W W; winner W; Brier 0.0629 |
+| P-436 | Jeonbuk Hyundai Motors vs Kashiwa Reysol — AFC Champions League Elite MD1 | FINAL / SETTLED — all five ranked rows won | W W W W W; winner L; Brier 0.0579 |
+| P-437 | Port FC vs Vissel Kobe — AFC Champions League Elite MD1 | FINAL / SETTLED — all five ranked rows won | W W W W W; winner W; Brier 0.0439 |
+| P-438 | Al-Wahda Abu Dhabi vs Kuwait SC — AFC Champions League Two Group A | FINAL / SETTLED — **Rank #1 LOSS; both top two lost**; deep Rank-#1 retro (diagnosis corrected from the mini log's) | L L L W L; winner W; Brier 0.5053 |
+| P-439 | Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A | FINAL / SETTLED — all five ranked rows won (0–0) | W W W W W; winner L (draw); Brier 0.0378 |
+| P-440 | Ararat-Armenia vs Sparta Praha — UEFA Europa League MD1 | FINAL / SETTLED — phase Under won, 90-minute Under lost on the same card | W W W L W; winner W; Brier 0.1590 |
+| P-441 | Omonia Nicosia vs Celta Vigo — UEFA Europa League MD1 | FINAL / SETTLED — **all five ranked rows won; best card in Part 4** | W W W W W; winner L; Brier 0.0112 |
+| P-442 | Chicago White Sox @ Cleveland Guardians — MLB | FINAL / SETTLED — **Rank #1 LOSS**; deep retro (middle-relief branch) | L W L W; winner W; Brier 0.3131 |
+| P-443 | San Francisco Giants @ St. Louis Cardinals — MLB | FINAL / SETTLED — 10 innings; **regulation 4–4, exactly the push at L=8** | W W L L; winner L; Brier 0.1958 |
+| P-444 | New York Yankees @ Minnesota Twins — MLB | FINAL / SETTLED — 13 innings; **Rank #1 LOSS; both top two lost**; deep retro (margin identity + extras) | L L W W; winner L; Brier 0.2967 |
+| P-445 | Barbados Tridents vs Jamaica Kingsmen — CPL 2026 Eliminator | **FINAL / CONDITION NOT MET — all four ranked rows NO ACTION** (Jamaica bowled first; batting-first targets never activated). Process success; excluded from every cohort rate | — — — —; winner L; no Brier |
+| P-446 | Atlanta Braves @ Chicago Cubs — MLB | FINAL / SETTLED | W L W L; winner W; Brier 0.2373 |
+| P-447 | Boston Red Sox @ Texas Rangers — MLB | FINAL / SETTLED | W L W L; winner W; Brier 0.1903 |
+| P-448 | Kansas City Royals @ Houston Astros — MLB | FINAL / SETTLED — both top two won | W W L L; winner L; Brier 0.1587 |
+| P-449 | San Diego Padres @ Colorado Rockies — MLB | FINAL / SETTLED | W L L W; winner W; Brier 0.2513 |
+| P-450 | Miami Marlins @ Arizona Diamondbacks — MLB | FINAL / SETTLED — both top two won | W W L L; winner L; Brier 0.1910 |
+| P-451 | Dorados de Chihuahua vs El Calor de Cancún — LNBP Jornada 20 | **FINAL / BLOCKED AT ISSUE — `BK-P1 = FAIL`, no forecast issued, NOT GRADED.** Final recovered 2026-09-17(b): **Dorados 97–86** (rendered `lnbp.mx/Dorados/team_results.html`) | —; no winner issued; no Brier |
+
+| P-452 | Cricket / Afghanistan vs India T20I Series 2026 — Afghanistan vs India, 3rd T20I | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-453 | Baseball / MLB — Milwaukee Brewers @ Pittsburgh Pirates | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-454 | Soccer / Denmark DBU Pokalen (Betano Pokalen) — Vejle Boldklub vs Brøndby IF | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-455 | Baseball / MLB — Los Angeles Dodgers @ Cincinnati Reds | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-456 | Soccer / Spain LaLiga — Real Betis vs Getafe CF | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-457 | Cricket / Zimbabwe v Australia ODIs 2026 — Zimbabwe vs Australia, 2nd ODI | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |

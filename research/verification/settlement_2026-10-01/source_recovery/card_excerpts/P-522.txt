@@ -1,0 +1,307 @@
+| Scheduled start | 2026-09-27 11:00:00Z = 12:00 WEST = 21:00 AEST | ACB match header `start` |
+| Issued card's evidence freeze | 2026-09-27 20:59:43 AEST = 10:59:43Z; the card records `NOT_STARTED` then | issued card |
+| Issued card's issuance check | 21:02 AEST = 11:02Z, `STARTED` | issued card |
+| Freeze minus scheduled start | −17 s (`CURRENT_RULES.md` §B asks for the freeze at least 5 minutes before the start) | computed |
+
+The card's own label, `LIVE_ISSUED`, stands: the issuance state was `STARTED`. The evidence freeze preceded the scheduled start by 17 seconds; the actual tip time is `NOT_RETRIEVED`. The card is excluded from pregame scoring and every performance cohort.
+
+#### 3.12 Process record (ACB Live statistics payload)
+
+- **Final:** La Laguna Tenerife 80, Casademont Zaragoza 81 (regulation, four quarters). Quarter scores (LLT-CAZ): 18-18, 20-26, 27-24, 15-13. Half-time 38-44; after three quarters 65-68.
+- **Team box (full game):**
+  - LLT: 2P 16/41, 3P 10/29, FT 18/21, rebounds 35 (12 offensive), assists 15, turnovers 6. Q4: 2P 3/12, 3P 0/4, FT 9/10, 15 points.
+  - CAZ: 2P 14/25, 3P 15/34, FT 8/15, rebounds 37 (7 offensive), assists 19, turnovers 18. Q4: 2P 1/3, 3P 3/9, FT 2/4, 13 points.
+  - Free throws: 36 attempted, 26 made. Player points sum to 80 and 81.
+- **Estimated possessions** (field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts; an estimate, not an ACB-published figure): LLT about 73.2, CAZ about 76.6; about 109.2 and 105.7 points per 100 possessions.
+- **Individuals (box):** Bell-Haynes 19 points; Blumbergs 16 points (3P 2/6, 10 rebounds); Jaworski 15; Happ 13 (5 rebounds); Huertas 12 (2 rebounds, 3 assists, bench); Guy 11 (3P 3/6); Abromaitis 7 (10 rebounds).
+- **Closing sequence (ACB shot log):** Jaworski's two-point basket made it 80-81 (logged at 0:02 of the fourth quarter); the last shot was **Tim Abromaitis's missed three-pointer at 0:00**. The club report says the same (Abromaitis "sobre la bocina"). The stated time of the winning basket differs by source (Sportaragon: six tenths; the club: eight tenths; the ACB log: 0:02); this does not affect settlement.
+- **Coaches (payload `headCoach`):** LLT Jaka Lakovic; CAZ Gonzalo García de Vitoria.
+
+#### 3.13 Lineup diff (names as printed on the issued card; ACB `isStarted`)
+
+- **LLT: 5 of 5 named starters started:** Kyle Guy, Bruno Fitipaldo, Xabi López-Arostegui, Ethan Happ, Aaron Doornekamp.
+- **CAZ: 5 of 5 named starters started:** Gabe (Gabriel) Olaseni, Trae Bell-Haynes, Roberts Blumbergs, Miguel González, Justin Jaworski.
+- **Benches:** both 12-player sheets equal the card's; Alderete and Kurucs (LLT) and Lukic (CAZ) barely or never played. Bango (absent per the card's medical note) and Giedraitis (out long term) are not in either box.
+- **Coaches** equal the card's. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+
+#### 3.14 z-scores (card centre and width as issued)
+
+- **z_total** = (161 − 177.50) / 18.50 = **−0.89**.
+- **z_margin** (LLT − CAZ = −1; centre LLT +5.50, width 15.00) = (−1 − 5.50) / 15.00 = **−0.43**.
+
+#### 3.15 Settlement table (copied from the issued Field 5 ranked table)
+
+| Rank | Contract | Class | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---|---|---|---:|---|
+| 1 | Combined Total: Over 169.5 Points | `total_over` | 0.667 | 0.708 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.4449 | `LIVE_ISSUED` |
+| 2 | Tenerife −3.5 | `hcp_minus` | 0.553 | 0.535 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.3058 | `LIVE_ISSUED` |
+| 3 | Combined Total: Over 179.5 Points | `total_over` | 0.457 | 0.480 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.2088 | `LIVE_ISSUED` |
+| 4 | Zaragoza +9.5 | `hcp_plus_nb` | 0.605 | 0.342 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **WIN** | 0.1560 | `LIVE_ISSUED` |
+| Winner | La Laguna Tenerife | — | 0.643 | — | not printed | not printed | **LOSS** | 0.4134 | — |
+
+- **Contract settlement:** the total was 161, so both Overs lost; the home margin was −1, so Tenerife −3.5 lost and Zaragoza +9.5 won. No push (all lines are half-points).
+- **Mean row Brier(p): 0.2789** (descriptive; `LIVE_ISSUED`). Baselines are `NOT_YET_DERIVED`, so no baseline comparison is made.
+- **Rank-1:** LOSS. **Hit@2:** 0/2, **real** (the top two, Over 169.5 and Tenerife −3.5, are not a covering pair; Tenerife −3.5 with Zaragoza +9.5 is, and they were Ranks 2 and 4). **Top over/under:** Over 169.5 LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Tenerife at 0.643, wrong.
+- **Realised outcome cell (issued nine-cell table):** total ≤ 169 with Tenerife margin ≤ 3, mass **0.1487**. This is also the issued P(¬R1 ∧ ¬R2) of 0.1487. The embedded settlement's "F3 (Zaragoza win, Under 169.5) carried 0.145" is not a cell on the card.
+- **SHADOW:** as issued, `SHADOW: NO_LANE` (no Liga ACB lane). Current regime: `NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE` as issued; no change.
+
+#### 3.16 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Event reference (all three lineages) | acb.com `…/id/105379` | That page is Burgos v Baskonia. The issued event is **105380** | acb.com 105379 and 105380 | Wrong event |
+| 2 | Third lineage | "Marca" and the "ACB Endesa Official Game Sheet", called independent | Not shown to be independent: the game sheet is the ACB lineage, and Marca was not retrieved in this session. Replaced by lineages 2 and 3 above | attempt ledger | |
+| 3 | Lineup diff | LLT: Huertas, Guy, **Sastre**, Doornekamp, Happ; CAZ: Bell-Haynes, **"Jordan" Homesley, Yusta**, Blumbergs, **Bango** | ACB `isStarted` equals the card's ten names; Huertas and Homesley (the ACB sheet lists Caleb, not "Jordan") were bench players; Sastre and Yusta are on neither sheet; **Bango did not play** | ACB stats payload | The embedded diff used names that are not on the card (audit `10n`) |
+| 4 | Tenerife coach | "Txus Vidorreta" | **Jaka Lakovic** | ACB payload `headCoach`; club report | |
+| 5 | Attendance 4,890 and duration 1h 56m | asserted | **Not present** in any retrieved page | pages listed above | `PROCESS_RECORD_UNVERIFIED` for both fields |
+| 6 | Q4 shooting | "5-of-17 from the field" | Q4 field goals 3/16 (2P 3/12, 3P 0/4) plus FT 9/10 | ACB Q4 team totals | |
+| 7 | Free throws | "only 32 total free throws" | 36 attempted, 26 made | ACB box | |
+| 8 | Pace | "68 possessions, ~19 seconds per possession" | About 73-77 possessions per side (estimate); 40 minutes over about 75 possessions is about 32 seconds each | ACB box; estimator above | The "pace suppression" thesis is unsupported: no ACB pace reference exists (`NOT_YET_DERIVED`) |
+| 9 | Final shot | "Kyle Guy missed a contested pull-up jumper at the buzzer" | **Tim Abromaitis's missed three-pointer at 0:00** | ACB shot log; club report | |
+| 10 | Blumbergs | "16 pts, 4/5 3PT" | 16 points, **3P 2/6** | ACB box | Points matched |
+| 11 | Individual lines | Huertas "12 pts, 6 ast"; Happ "13 pts, 8 reb" | Huertas 12 pts, **3 ast**; Happ 13 pts, **5 reb** | ACB box | |
+| 12 | Halftime orientation | mixed | 38-44 (LLT-CAZ) throughout | ACB quarters | |
+| 13 | Settlement baseline and TEAM_BASELINE_P | 0.500 and `TB1_NO_RESOLUTION` | `NOT_YET_DERIVED:acb` and `NOT_COVERED:acb` as issued | issued Field 5 | `M35`, `M29` |
+| 14 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10 | |
+| 15 | Realised state | "F3 … 0.145" | cell (T ≤ 169, M ≤ 3) = 0.1487 | issued nine-cell table | |
+| 16 | "Systemic Calibration Pathology" and "exempt basketball spreads from `hcp_plus_nb`" | asserted as a finding | One cushion row won at q 0.342 (n = 1 here, n = 2 with P-521, both cards excluded). No coefficient follows from one game (L-087, `M27`) | `CURRENT_RULES.md` §D6, §D9 | Parked below |
+| 17 | "Anchor Tenerife home games on lower baseline totals (~162-165) under Vidorreta" | asserted | Unsupported: wrong coach, one game | ACB payload | |
+
+The embedded `C-PROCESS-RECORD-PROVENANCE` line for P-522 is untrue as written: items 1, 3, 4, 6, 7, 9, 10 and 11 contradict the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` wherever it disagrees with the ACB record.
+
+#### 3.17 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Over 169.5) lost; Rank 2 (Tenerife −3.5) lost; Rank 3 (Over 179.5) lost; Rank 4 (Zaragoza +9.5) won; the projected winner (Tenerife, 0.643) was wrong. The top two both lost.
+
+
+| Issued card's evidence freeze | 2026-09-27 20:59:43 AEST = 10:59:43Z; the card records `NOT_STARTED` then | issued card |
+| Issued card's issuance check | 21:02 AEST = 11:02Z, `STARTED` | issued card |
+| Freeze minus scheduled start | −17 s (`CURRENT_RULES.md` §B asks for the freeze at least 5 minutes before the start) | computed |
+
+The card's own label, `LIVE_ISSUED`, stands: the issuance state was `STARTED`. The evidence freeze preceded the scheduled start by 17 seconds; the actual tip time is `NOT_RETRIEVED`. The card is excluded from pregame scoring and every performance cohort.
+
+#### 3.12 Process record (ACB Live statistics payload)
+
+- **Final:** La Laguna Tenerife 80, Casademont Zaragoza 81 (regulation, four quarters). Quarter scores (LLT-CAZ): 18-18, 20-26, 27-24, 15-13. Half-time 38-44; after three quarters 65-68.
+- **Team box (full game):**
+  - LLT: 2P 16/41, 3P 10/29, FT 18/21, rebounds 35 (12 offensive), assists 15, turnovers 6. Q4: 2P 3/12, 3P 0/4, FT 9/10, 15 points.
+  - CAZ: 2P 14/25, 3P 15/34, FT 8/15, rebounds 37 (7 offensive), assists 19, turnovers 18. Q4: 2P 1/3, 3P 3/9, FT 2/4, 13 points.
+  - Free throws: 36 attempted, 26 made. Player points sum to 80 and 81.
+- **Estimated possessions** (field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts; an estimate, not an ACB-published figure): LLT about 73.2, CAZ about 76.6; about 109.2 and 105.7 points per 100 possessions.
+- **Individuals (box):** Bell-Haynes 19 points; Blumbergs 16 points (3P 2/6, 10 rebounds); Jaworski 15; Happ 13 (5 rebounds); Huertas 12 (2 rebounds, 3 assists, bench); Guy 11 (3P 3/6); Abromaitis 7 (10 rebounds).
+- **Closing sequence (ACB shot log):** Jaworski's two-point basket made it 80-81 (logged at 0:02 of the fourth quarter); the last shot was **Tim Abromaitis's missed three-pointer at 0:00**. The club report says the same (Abromaitis "sobre la bocina"). The stated time of the winning basket differs by source (Sportaragon: six tenths; the club: eight tenths; the ACB log: 0:02); this does not affect settlement.
+- **Coaches (payload `headCoach`):** LLT Jaka Lakovic; CAZ Gonzalo García de Vitoria.
+
+#### 3.13 Lineup diff (names as printed on the issued card; ACB `isStarted`)
+
+- **LLT: 5 of 5 named starters started:** Kyle Guy, Bruno Fitipaldo, Xabi López-Arostegui, Ethan Happ, Aaron Doornekamp.
+- **CAZ: 5 of 5 named starters started:** Gabe (Gabriel) Olaseni, Trae Bell-Haynes, Roberts Blumbergs, Miguel González, Justin Jaworski.
+- **Benches:** both 12-player sheets equal the card's; Alderete and Kurucs (LLT) and Lukic (CAZ) barely or never played. Bango (absent per the card's medical note) and Giedraitis (out long term) are not in either box.
+- **Coaches** equal the card's. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+
+#### 3.14 z-scores (card centre and width as issued)
+
+- **z_total** = (161 − 177.50) / 18.50 = **−0.89**.
+- **z_margin** (LLT − CAZ = −1; centre LLT +5.50, width 15.00) = (−1 − 5.50) / 15.00 = **−0.43**.
+
+#### 3.15 Settlement table (copied from the issued Field 5 ranked table)
+
+| Rank | Contract | Class | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---|---|---|---:|---|
+| 1 | Combined Total: Over 169.5 Points | `total_over` | 0.667 | 0.708 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.4449 | `LIVE_ISSUED` |
+| 2 | Tenerife −3.5 | `hcp_minus` | 0.553 | 0.535 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.3058 | `LIVE_ISSUED` |
+| 3 | Combined Total: Over 179.5 Points | `total_over` | 0.457 | 0.480 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.2088 | `LIVE_ISSUED` |
+| 4 | Zaragoza +9.5 | `hcp_plus_nb` | 0.605 | 0.342 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **WIN** | 0.1560 | `LIVE_ISSUED` |
+| Winner | La Laguna Tenerife | — | 0.643 | — | not printed | not printed | **LOSS** | 0.4134 | — |
+
+- **Contract settlement:** the total was 161, so both Overs lost; the home margin was −1, so Tenerife −3.5 lost and Zaragoza +9.5 won. No push (all lines are half-points).
+- **Mean row Brier(p): 0.2789** (descriptive; `LIVE_ISSUED`). Baselines are `NOT_YET_DERIVED`, so no baseline comparison is made.
+- **Rank-1:** LOSS. **Hit@2:** 0/2, **real** (the top two, Over 169.5 and Tenerife −3.5, are not a covering pair; Tenerife −3.5 with Zaragoza +9.5 is, and they were Ranks 2 and 4). **Top over/under:** Over 169.5 LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Tenerife at 0.643, wrong.
+- **Realised outcome cell (issued nine-cell table):** total ≤ 169 with Tenerife margin ≤ 3, mass **0.1487**. This is also the issued P(¬R1 ∧ ¬R2) of 0.1487. The embedded settlement's "F3 (Zaragoza win, Under 169.5) carried 0.145" is not a cell on the card.
+- **SHADOW:** as issued, `SHADOW: NO_LANE` (no Liga ACB lane). Current regime: `NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE` as issued; no change.
+
+#### 3.16 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Event reference (all three lineages) | acb.com `…/id/105379` | That page is Burgos v Baskonia. The issued event is **105380** | acb.com 105379 and 105380 | Wrong event |
+| 2 | Third lineage | "Marca" and the "ACB Endesa Official Game Sheet", called independent | Not shown to be independent: the game sheet is the ACB lineage, and Marca was not retrieved in this session. Replaced by lineages 2 and 3 above | attempt ledger | |
+| 3 | Lineup diff | LLT: Huertas, Guy, **Sastre**, Doornekamp, Happ; CAZ: Bell-Haynes, **"Jordan" Homesley, Yusta**, Blumbergs, **Bango** | ACB `isStarted` equals the card's ten names; Huertas and Homesley (the ACB sheet lists Caleb, not "Jordan") were bench players; Sastre and Yusta are on neither sheet; **Bango did not play** | ACB stats payload | The embedded diff used names that are not on the card (audit `10n`) |
+| 4 | Tenerife coach | "Txus Vidorreta" | **Jaka Lakovic** | ACB payload `headCoach`; club report | |
+| 5 | Attendance 4,890 and duration 1h 56m | asserted | **Not present** in any retrieved page | pages listed above | `PROCESS_RECORD_UNVERIFIED` for both fields |
+| 6 | Q4 shooting | "5-of-17 from the field" | Q4 field goals 3/16 (2P 3/12, 3P 0/4) plus FT 9/10 | ACB Q4 team totals | |
+| 7 | Free throws | "only 32 total free throws" | 36 attempted, 26 made | ACB box | |
+| 8 | Pace | "68 possessions, ~19 seconds per possession" | About 73-77 possessions per side (estimate); 40 minutes over about 75 possessions is about 32 seconds each | ACB box; estimator above | The "pace suppression" thesis is unsupported: no ACB pace reference exists (`NOT_YET_DERIVED`) |
+| 9 | Final shot | "Kyle Guy missed a contested pull-up jumper at the buzzer" | **Tim Abromaitis's missed three-pointer at 0:00** | ACB shot log; club report | |
+| 10 | Blumbergs | "16 pts, 4/5 3PT" | 16 points, **3P 2/6** | ACB box | Points matched |
+| 11 | Individual lines | Huertas "12 pts, 6 ast"; Happ "13 pts, 8 reb" | Huertas 12 pts, **3 ast**; Happ 13 pts, **5 reb** | ACB box | |
+| 12 | Halftime orientation | mixed | 38-44 (LLT-CAZ) throughout | ACB quarters | |
+| 13 | Settlement baseline and TEAM_BASELINE_P | 0.500 and `TB1_NO_RESOLUTION` | `NOT_YET_DERIVED:acb` and `NOT_COVERED:acb` as issued | issued Field 5 | `M35`, `M29` |
+| 14 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10 | |
+| 15 | Realised state | "F3 … 0.145" | cell (T ≤ 169, M ≤ 3) = 0.1487 | issued nine-cell table | |
+| 16 | "Systemic Calibration Pathology" and "exempt basketball spreads from `hcp_plus_nb`" | asserted as a finding | One cushion row won at q 0.342 (n = 1 here, n = 2 with P-521, both cards excluded). No coefficient follows from one game (L-087, `M27`) | `CURRENT_RULES.md` §D6, §D9 | Parked below |
+| 17 | "Anchor Tenerife home games on lower baseline totals (~162-165) under Vidorreta" | asserted | Unsupported: wrong coach, one game | ACB payload | |
+
+The embedded `C-PROCESS-RECORD-PROVENANCE` line for P-522 is untrue as written: items 1, 3, 4, 6, 7, 9, 10 and 11 contradict the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` wherever it disagrees with the ACB record.
+
+#### 3.17 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Over 169.5) lost; Rank 2 (Tenerife −3.5) lost; Rank 3 (Over 179.5) lost; Rank 4 (Zaragoza +9.5) won; the projected winner (Tenerife, 0.643) was wrong. The top two both lost.
+
+**B. Every pick.**
+
+| Issued card's issuance check | 21:02 AEST = 11:02Z, `STARTED` | issued card |
+| Freeze minus scheduled start | −17 s (`CURRENT_RULES.md` §B asks for the freeze at least 5 minutes before the start) | computed |
+
+The card's own label, `LIVE_ISSUED`, stands: the issuance state was `STARTED`. The evidence freeze preceded the scheduled start by 17 seconds; the actual tip time is `NOT_RETRIEVED`. The card is excluded from pregame scoring and every performance cohort.
+
+#### 3.12 Process record (ACB Live statistics payload)
+
+- **Final:** La Laguna Tenerife 80, Casademont Zaragoza 81 (regulation, four quarters). Quarter scores (LLT-CAZ): 18-18, 20-26, 27-24, 15-13. Half-time 38-44; after three quarters 65-68.
+- **Team box (full game):**
+  - LLT: 2P 16/41, 3P 10/29, FT 18/21, rebounds 35 (12 offensive), assists 15, turnovers 6. Q4: 2P 3/12, 3P 0/4, FT 9/10, 15 points.
+  - CAZ: 2P 14/25, 3P 15/34, FT 8/15, rebounds 37 (7 offensive), assists 19, turnovers 18. Q4: 2P 1/3, 3P 3/9, FT 2/4, 13 points.
+  - Free throws: 36 attempted, 26 made. Player points sum to 80 and 81.
+- **Estimated possessions** (field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts; an estimate, not an ACB-published figure): LLT about 73.2, CAZ about 76.6; about 109.2 and 105.7 points per 100 possessions.
+- **Individuals (box):** Bell-Haynes 19 points; Blumbergs 16 points (3P 2/6, 10 rebounds); Jaworski 15; Happ 13 (5 rebounds); Huertas 12 (2 rebounds, 3 assists, bench); Guy 11 (3P 3/6); Abromaitis 7 (10 rebounds).
+- **Closing sequence (ACB shot log):** Jaworski's two-point basket made it 80-81 (logged at 0:02 of the fourth quarter); the last shot was **Tim Abromaitis's missed three-pointer at 0:00**. The club report says the same (Abromaitis "sobre la bocina"). The stated time of the winning basket differs by source (Sportaragon: six tenths; the club: eight tenths; the ACB log: 0:02); this does not affect settlement.
+- **Coaches (payload `headCoach`):** LLT Jaka Lakovic; CAZ Gonzalo García de Vitoria.
+
+#### 3.13 Lineup diff (names as printed on the issued card; ACB `isStarted`)
+
+- **LLT: 5 of 5 named starters started:** Kyle Guy, Bruno Fitipaldo, Xabi López-Arostegui, Ethan Happ, Aaron Doornekamp.
+- **CAZ: 5 of 5 named starters started:** Gabe (Gabriel) Olaseni, Trae Bell-Haynes, Roberts Blumbergs, Miguel González, Justin Jaworski.
+- **Benches:** both 12-player sheets equal the card's; Alderete and Kurucs (LLT) and Lukic (CAZ) barely or never played. Bango (absent per the card's medical note) and Giedraitis (out long term) are not in either box.
+- **Coaches** equal the card's. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+
+#### 3.14 z-scores (card centre and width as issued)
+
+- **z_total** = (161 − 177.50) / 18.50 = **−0.89**.
+- **z_margin** (LLT − CAZ = −1; centre LLT +5.50, width 15.00) = (−1 − 5.50) / 15.00 = **−0.43**.
+
+#### 3.15 Settlement table (copied from the issued Field 5 ranked table)
+
+| Rank | Contract | Class | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---|---|---|---:|---|
+| 1 | Combined Total: Over 169.5 Points | `total_over` | 0.667 | 0.708 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.4449 | `LIVE_ISSUED` |
+| 2 | Tenerife −3.5 | `hcp_minus` | 0.553 | 0.535 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.3058 | `LIVE_ISSUED` |
+| 3 | Combined Total: Over 179.5 Points | `total_over` | 0.457 | 0.480 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.2088 | `LIVE_ISSUED` |
+| 4 | Zaragoza +9.5 | `hcp_plus_nb` | 0.605 | 0.342 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **WIN** | 0.1560 | `LIVE_ISSUED` |
+| Winner | La Laguna Tenerife | — | 0.643 | — | not printed | not printed | **LOSS** | 0.4134 | — |
+
+- **Contract settlement:** the total was 161, so both Overs lost; the home margin was −1, so Tenerife −3.5 lost and Zaragoza +9.5 won. No push (all lines are half-points).
+- **Mean row Brier(p): 0.2789** (descriptive; `LIVE_ISSUED`). Baselines are `NOT_YET_DERIVED`, so no baseline comparison is made.
+- **Rank-1:** LOSS. **Hit@2:** 0/2, **real** (the top two, Over 169.5 and Tenerife −3.5, are not a covering pair; Tenerife −3.5 with Zaragoza +9.5 is, and they were Ranks 2 and 4). **Top over/under:** Over 169.5 LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Tenerife at 0.643, wrong.
+- **Realised outcome cell (issued nine-cell table):** total ≤ 169 with Tenerife margin ≤ 3, mass **0.1487**. This is also the issued P(¬R1 ∧ ¬R2) of 0.1487. The embedded settlement's "F3 (Zaragoza win, Under 169.5) carried 0.145" is not a cell on the card.
+- **SHADOW:** as issued, `SHADOW: NO_LANE` (no Liga ACB lane). Current regime: `NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE` as issued; no change.
+
+#### 3.16 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Event reference (all three lineages) | acb.com `…/id/105379` | That page is Burgos v Baskonia. The issued event is **105380** | acb.com 105379 and 105380 | Wrong event |
+| 2 | Third lineage | "Marca" and the "ACB Endesa Official Game Sheet", called independent | Not shown to be independent: the game sheet is the ACB lineage, and Marca was not retrieved in this session. Replaced by lineages 2 and 3 above | attempt ledger | |
+| 3 | Lineup diff | LLT: Huertas, Guy, **Sastre**, Doornekamp, Happ; CAZ: Bell-Haynes, **"Jordan" Homesley, Yusta**, Blumbergs, **Bango** | ACB `isStarted` equals the card's ten names; Huertas and Homesley (the ACB sheet lists Caleb, not "Jordan") were bench players; Sastre and Yusta are on neither sheet; **Bango did not play** | ACB stats payload | The embedded diff used names that are not on the card (audit `10n`) |
+| 4 | Tenerife coach | "Txus Vidorreta" | **Jaka Lakovic** | ACB payload `headCoach`; club report | |
+| 5 | Attendance 4,890 and duration 1h 56m | asserted | **Not present** in any retrieved page | pages listed above | `PROCESS_RECORD_UNVERIFIED` for both fields |
+| 6 | Q4 shooting | "5-of-17 from the field" | Q4 field goals 3/16 (2P 3/12, 3P 0/4) plus FT 9/10 | ACB Q4 team totals | |
+| 7 | Free throws | "only 32 total free throws" | 36 attempted, 26 made | ACB box | |
+| 8 | Pace | "68 possessions, ~19 seconds per possession" | About 73-77 possessions per side (estimate); 40 minutes over about 75 possessions is about 32 seconds each | ACB box; estimator above | The "pace suppression" thesis is unsupported: no ACB pace reference exists (`NOT_YET_DERIVED`) |
+| 9 | Final shot | "Kyle Guy missed a contested pull-up jumper at the buzzer" | **Tim Abromaitis's missed three-pointer at 0:00** | ACB shot log; club report | |
+| 10 | Blumbergs | "16 pts, 4/5 3PT" | 16 points, **3P 2/6** | ACB box | Points matched |
+| 11 | Individual lines | Huertas "12 pts, 6 ast"; Happ "13 pts, 8 reb" | Huertas 12 pts, **3 ast**; Happ 13 pts, **5 reb** | ACB box | |
+| 12 | Halftime orientation | mixed | 38-44 (LLT-CAZ) throughout | ACB quarters | |
+| 13 | Settlement baseline and TEAM_BASELINE_P | 0.500 and `TB1_NO_RESOLUTION` | `NOT_YET_DERIVED:acb` and `NOT_COVERED:acb` as issued | issued Field 5 | `M35`, `M29` |
+| 14 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10 | |
+| 15 | Realised state | "F3 … 0.145" | cell (T ≤ 169, M ≤ 3) = 0.1487 | issued nine-cell table | |
+| 16 | "Systemic Calibration Pathology" and "exempt basketball spreads from `hcp_plus_nb`" | asserted as a finding | One cushion row won at q 0.342 (n = 1 here, n = 2 with P-521, both cards excluded). No coefficient follows from one game (L-087, `M27`) | `CURRENT_RULES.md` §D6, §D9 | Parked below |
+| 17 | "Anchor Tenerife home games on lower baseline totals (~162-165) under Vidorreta" | asserted | Unsupported: wrong coach, one game | ACB payload | |
+
+The embedded `C-PROCESS-RECORD-PROVENANCE` line for P-522 is untrue as written: items 1, 3, 4, 6, 7, 9, 10 and 11 contradict the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` wherever it disagrees with the ACB record.
+
+#### 3.17 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Over 169.5) lost; Rank 2 (Tenerife −3.5) lost; Rank 3 (Over 179.5) lost; Rank 4 (Zaragoza +9.5) won; the projected winner (Tenerife, 0.643) was wrong. The top two both lost.
+
+**B. Every pick.**
+1. *Over 169.5, LOSS.* Total 161, 8.5 points under the line and 16.5 under the card's centre; `z_total` −0.89; issued P(T ≤ 169) 0.3327. **Held:** official starters (10 of 10), both benches, coaches, the medical absences (Bango and Giedraitis did not play), indoor venue. **Failed:** both teams scored under their 2025-26 reference lines: Tenerife 80 against a home reference of 90.18 points for (10.2 below), Zaragoza 81 against an away reference of 85.76 (4.8 below). Zaragoza turned the ball over 18 times to Tenerife's 6, and Tenerife shot 3/16 in the fourth quarter. **Cause:** variance in a LOW-grade, no-baseline opener (see C); not `predictable and missed`.
+
+| Freeze minus scheduled start | −17 s (`CURRENT_RULES.md` §B asks for the freeze at least 5 minutes before the start) | computed |
+
+The card's own label, `LIVE_ISSUED`, stands: the issuance state was `STARTED`. The evidence freeze preceded the scheduled start by 17 seconds; the actual tip time is `NOT_RETRIEVED`. The card is excluded from pregame scoring and every performance cohort.
+
+#### 3.12 Process record (ACB Live statistics payload)
+
+- **Final:** La Laguna Tenerife 80, Casademont Zaragoza 81 (regulation, four quarters). Quarter scores (LLT-CAZ): 18-18, 20-26, 27-24, 15-13. Half-time 38-44; after three quarters 65-68.
+- **Team box (full game):**
+  - LLT: 2P 16/41, 3P 10/29, FT 18/21, rebounds 35 (12 offensive), assists 15, turnovers 6. Q4: 2P 3/12, 3P 0/4, FT 9/10, 15 points.
+  - CAZ: 2P 14/25, 3P 15/34, FT 8/15, rebounds 37 (7 offensive), assists 19, turnovers 18. Q4: 2P 1/3, 3P 3/9, FT 2/4, 13 points.
+  - Free throws: 36 attempted, 26 made. Player points sum to 80 and 81.
+- **Estimated possessions** (field-goal attempts − offensive rebounds + turnovers + 0.44 × free-throw attempts; an estimate, not an ACB-published figure): LLT about 73.2, CAZ about 76.6; about 109.2 and 105.7 points per 100 possessions.
+- **Individuals (box):** Bell-Haynes 19 points; Blumbergs 16 points (3P 2/6, 10 rebounds); Jaworski 15; Happ 13 (5 rebounds); Huertas 12 (2 rebounds, 3 assists, bench); Guy 11 (3P 3/6); Abromaitis 7 (10 rebounds).
+- **Closing sequence (ACB shot log):** Jaworski's two-point basket made it 80-81 (logged at 0:02 of the fourth quarter); the last shot was **Tim Abromaitis's missed three-pointer at 0:00**. The club report says the same (Abromaitis "sobre la bocina"). The stated time of the winning basket differs by source (Sportaragon: six tenths; the club: eight tenths; the ACB log: 0:02); this does not affect settlement.
+- **Coaches (payload `headCoach`):** LLT Jaka Lakovic; CAZ Gonzalo García de Vitoria.
+
+#### 3.13 Lineup diff (names as printed on the issued card; ACB `isStarted`)
+
+- **LLT: 5 of 5 named starters started:** Kyle Guy, Bruno Fitipaldo, Xabi López-Arostegui, Ethan Happ, Aaron Doornekamp.
+- **CAZ: 5 of 5 named starters started:** Gabe (Gabriel) Olaseni, Trae Bell-Haynes, Roberts Blumbergs, Miguel González, Justin Jaworski.
+- **Benches:** both 12-player sheets equal the card's; Alderete and Kurucs (LLT) and Lukic (CAZ) barely or never played. Bango (absent per the card's medical note) and Giedraitis (out long term) are not in either box.
+- **Coaches** equal the card's. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+
+#### 3.14 z-scores (card centre and width as issued)
+
+- **z_total** = (161 − 177.50) / 18.50 = **−0.89**.
+- **z_margin** (LLT − CAZ = −1; centre LLT +5.50, width 15.00) = (−1 − 5.50) / 15.00 = **−0.43**.
+
+#### 3.15 Settlement table (copied from the issued Field 5 ranked table)
+
+| Rank | Contract | Class | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---|---|---|---:|---|
+| 1 | Combined Total: Over 169.5 Points | `total_over` | 0.667 | 0.708 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.4449 | `LIVE_ISSUED` |
+| 2 | Tenerife −3.5 | `hcp_minus` | 0.553 | 0.535 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.3058 | `LIVE_ISSUED` |
+| 3 | Combined Total: Over 179.5 Points | `total_over` | 0.457 | 0.480 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **LOSS** | 0.2088 | `LIVE_ISSUED` |
+| 4 | Zaragoza +9.5 | `hcp_plus_nb` | 0.605 | 0.342 | `NOT_YET_DERIVED:acb` | `NOT_COVERED:acb` | **WIN** | 0.1560 | `LIVE_ISSUED` |
+| Winner | La Laguna Tenerife | — | 0.643 | — | not printed | not printed | **LOSS** | 0.4134 | — |
+
+- **Contract settlement:** the total was 161, so both Overs lost; the home margin was −1, so Tenerife −3.5 lost and Zaragoza +9.5 won. No push (all lines are half-points).
+- **Mean row Brier(p): 0.2789** (descriptive; `LIVE_ISSUED`). Baselines are `NOT_YET_DERIVED`, so no baseline comparison is made.
+- **Rank-1:** LOSS. **Hit@2:** 0/2, **real** (the top two, Over 169.5 and Tenerife −3.5, are not a covering pair; Tenerife −3.5 with Zaragoza +9.5 is, and they were Ranks 2 and 4). **Top over/under:** Over 169.5 LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Tenerife at 0.643, wrong.
+- **Realised outcome cell (issued nine-cell table):** total ≤ 169 with Tenerife margin ≤ 3, mass **0.1487**. This is also the issued P(¬R1 ∧ ¬R2) of 0.1487. The embedded settlement's "F3 (Zaragoza win, Under 169.5) carried 0.145" is not a cell on the card.
+- **SHADOW:** as issued, `SHADOW: NO_LANE` (no Liga ACB lane). Current regime: `NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE` as issued; no change.
+
+#### 3.16 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Event reference (all three lineages) | acb.com `…/id/105379` | That page is Burgos v Baskonia. The issued event is **105380** | acb.com 105379 and 105380 | Wrong event |
+| 2 | Third lineage | "Marca" and the "ACB Endesa Official Game Sheet", called independent | Not shown to be independent: the game sheet is the ACB lineage, and Marca was not retrieved in this session. Replaced by lineages 2 and 3 above | attempt ledger | |
+| 3 | Lineup diff | LLT: Huertas, Guy, **Sastre**, Doornekamp, Happ; CAZ: Bell-Haynes, **"Jordan" Homesley, Yusta**, Blumbergs, **Bango** | ACB `isStarted` equals the card's ten names; Huertas and Homesley (the ACB sheet lists Caleb, not "Jordan") were bench players; Sastre and Yusta are on neither sheet; **Bango did not play** | ACB stats payload | The embedded diff used names that are not on the card (audit `10n`) |
+| 4 | Tenerife coach | "Txus Vidorreta" | **Jaka Lakovic** | ACB payload `headCoach`; club report | |
+| 5 | Attendance 4,890 and duration 1h 56m | asserted | **Not present** in any retrieved page | pages listed above | `PROCESS_RECORD_UNVERIFIED` for both fields |
+| 6 | Q4 shooting | "5-of-17 from the field" | Q4 field goals 3/16 (2P 3/12, 3P 0/4) plus FT 9/10 | ACB Q4 team totals | |
+| 7 | Free throws | "only 32 total free throws" | 36 attempted, 26 made | ACB box | |
+| 8 | Pace | "68 possessions, ~19 seconds per possession" | About 73-77 possessions per side (estimate); 40 minutes over about 75 possessions is about 32 seconds each | ACB box; estimator above | The "pace suppression" thesis is unsupported: no ACB pace reference exists (`NOT_YET_DERIVED`) |
+| 9 | Final shot | "Kyle Guy missed a contested pull-up jumper at the buzzer" | **Tim Abromaitis's missed three-pointer at 0:00** | ACB shot log; club report | |
+| 10 | Blumbergs | "16 pts, 4/5 3PT" | 16 points, **3P 2/6** | ACB box | Points matched |
+| 11 | Individual lines | Huertas "12 pts, 6 ast"; Happ "13 pts, 8 reb" | Huertas 12 pts, **3 ast**; Happ 13 pts, **5 reb** | ACB box | |
+| 12 | Halftime orientation | mixed | 38-44 (LLT-CAZ) throughout | ACB quarters | |
+| 13 | Settlement baseline and TEAM_BASELINE_P | 0.500 and `TB1_NO_RESOLUTION` | `NOT_YET_DERIVED:acb` and `NOT_COVERED:acb` as issued | issued Field 5 | `M35`, `M29` |
+| 14 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10 | |
+| 15 | Realised state | "F3 … 0.145" | cell (T ≤ 169, M ≤ 3) = 0.1487 | issued nine-cell table | |
+| 16 | "Systemic Calibration Pathology" and "exempt basketball spreads from `hcp_plus_nb`" | asserted as a finding | One cushion row won at q 0.342 (n = 1 here, n = 2 with P-521, both cards excluded). No coefficient follows from one game (L-087, `M27`) | `CURRENT_RULES.md` §D6, §D9 | Parked below |
+| 17 | "Anchor Tenerife home games on lower baseline totals (~162-165) under Vidorreta" | asserted | Unsupported: wrong coach, one game | ACB payload | |
+
+The embedded `C-PROCESS-RECORD-PROVENANCE` line for P-522 is untrue as written: items 1, 3, 4, 6, 7, 9, 10 and 11 contradict the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` wherever it disagrees with the ACB record.
+
+#### 3.17 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Over 169.5) lost; Rank 2 (Tenerife −3.5) lost; Rank 3 (Over 179.5) lost; Rank 4 (Zaragoza +9.5) won; the projected winner (Tenerife, 0.643) was wrong. The top two both lost.
+
+**B. Every pick.**
+1. *Over 169.5, LOSS.* Total 161, 8.5 points under the line and 16.5 under the card's centre; `z_total` −0.89; issued P(T ≤ 169) 0.3327. **Held:** official starters (10 of 10), both benches, coaches, the medical absences (Bango and Giedraitis did not play), indoor venue. **Failed:** both teams scored under their 2025-26 reference lines: Tenerife 80 against a home reference of 90.18 points for (10.2 below), Zaragoza 81 against an away reference of 85.76 (4.8 below). Zaragoza turned the ball over 18 times to Tenerife's 6, and Tenerife shot 3/16 in the fourth quarter. **Cause:** variance in a LOW-grade, no-baseline opener (see C); not `predictable and missed`.
+2. *Tenerife −3.5, LOSS.* Tenerife lost by one; the kill path "Tenerife margin ≤ 3" (issued 0.4470) occurred. The issued P(both top-two rows fail), 0.1487, is the cell that occurred.

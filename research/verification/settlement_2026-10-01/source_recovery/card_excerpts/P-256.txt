@@ -1,0 +1,307 @@
+- No new tennis weight is promoted.
+
+## P-255 — Inter Women vs Wolfsburg Women — FINAL
+
+**90-minute result:** Inter **2-0** Wolfsburg.
+**HT:** Inter 1-0.
+Inter ultimately advanced after extra time and penalties.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-255-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-255-C05 | 2 | Corners Over 8.5 | **UNRESOLVED / provider-definition final not recovered** |
+| P-255-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-255-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-255-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Wolfsburg to advance:** **LOSS**.
+
+### Retrospective
+Process grade: **MIXED / PHASE-PROPAGATION CAUTION**.
+- Rank #1 early-goal direction was correct: Inter scored at 40'.
+- The card correctly preserved Full Under as a credible branch; regulation stopped at exactly two goals.
+- The Over branch overstated how much Inter's aggregate chase would propagate into a third 90-minute goal.
+- The advancement miss came from underweighting the exact `Inter wins by two in regulation -> extra-time/penalty variance` branch.
+- No new forecast weight; reinforce existing two-leg regime-switch and endpoint-separation controls.
+
+## P-256 — PSG Women vs Eintracht Frankfurt Women — FINAL
+
+**90-minute result:** PSG **1-1** Frankfurt.
+**HT:** PSG 0-1 Frankfurt.
+PSG ultimately advanced after extra time.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-256-C05 | 1 | Corners Over 8.5 | **UNRESOLVED / exact provider final not recovered** |
+| P-256-C01 | 2 | 1H Over 0.5 | **WIN** |
+| P-256-C04 | 3 | Full Under 2.5 | **WIN** |
+| P-256-C03 | 4 | Full Over 2.5 | **LOSS** |
+| P-256-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — PSG to advance:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- The forecast explicitly identified `1H Over + Full Under` as a coherent central family; the 90-minute result delivered exactly that structure.
+- Frankfurt scored before halftime, then regulation remained at two total goals.
+- PSG's advancement lean also won, but only after extra time, validating the distinction between 90-minute winner and qualification endpoint.
+- No new rule promoted.
+
+## P-257 — Padres @ Reds — FINAL
+
+**Final:** Cincinnati Reds **7-3** San Diego Padres.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-257-C03 | 1 | Over 9.5 | **WIN** |
+| P-257-C01 | 2 | Padres -1.5 | **LOSS** |
+| P-257-C04 | 3 | Under 9.5 | **LOSS** |
+| P-257-C02 | 4 | Reds +1.5 | **WIN** |
+
+**Potential winner — Padres:** **LOSS**.
+
+### Retrospective
+Process grade: **RANK-1 COMPLIANT / SIDE DEFECT**.
+- Rank #1 Over won through the identified wide starter distributions.
+- Brandon Williamson was better than the downside return-state feared, giving Cincinnati 5.1 innings and allowing three runs.
+- Mize's poor Padres regime persisted; Cincinnati hit three home runs and turned a 3-0 deficit into a 7-3 win.
+- The side call over-weighted Williamson's return uncertainty as a Padres advantage and under-weighted Mize's post-trade HR/run-volatility plus Cincinnati's hotter offense.
+- Return-from-IL uncertainty is two-sided variance, not an automatic opponent-side upgrade. No fitted weight change.
+
+## P-258 — Braves @ Nationals — FINAL
+
+**Final:** Atlanta Braves **7-0** Washington Nationals.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+
+
+## P-255 — Inter Women vs Wolfsburg Women — FINAL
+
+**90-minute result:** Inter **2-0** Wolfsburg.
+**HT:** Inter 1-0.
+Inter ultimately advanced after extra time and penalties.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-255-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-255-C05 | 2 | Corners Over 8.5 | **UNRESOLVED / provider-definition final not recovered** |
+| P-255-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-255-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-255-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Wolfsburg to advance:** **LOSS**.
+
+### Retrospective
+Process grade: **MIXED / PHASE-PROPAGATION CAUTION**.
+- Rank #1 early-goal direction was correct: Inter scored at 40'.
+- The card correctly preserved Full Under as a credible branch; regulation stopped at exactly two goals.
+- The Over branch overstated how much Inter's aggregate chase would propagate into a third 90-minute goal.
+- The advancement miss came from underweighting the exact `Inter wins by two in regulation -> extra-time/penalty variance` branch.
+- No new forecast weight; reinforce existing two-leg regime-switch and endpoint-separation controls.
+
+## P-256 — PSG Women vs Eintracht Frankfurt Women — FINAL
+
+**90-minute result:** PSG **1-1** Frankfurt.
+**HT:** PSG 0-1 Frankfurt.
+PSG ultimately advanced after extra time.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-256-C05 | 1 | Corners Over 8.5 | **UNRESOLVED / exact provider final not recovered** |
+| P-256-C01 | 2 | 1H Over 0.5 | **WIN** |
+| P-256-C04 | 3 | Full Under 2.5 | **WIN** |
+| P-256-C03 | 4 | Full Over 2.5 | **LOSS** |
+| P-256-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — PSG to advance:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- The forecast explicitly identified `1H Over + Full Under` as a coherent central family; the 90-minute result delivered exactly that structure.
+- Frankfurt scored before halftime, then regulation remained at two total goals.
+- PSG's advancement lean also won, but only after extra time, validating the distinction between 90-minute winner and qualification endpoint.
+- No new rule promoted.
+
+## P-257 — Padres @ Reds — FINAL
+
+**Final:** Cincinnati Reds **7-3** San Diego Padres.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-257-C03 | 1 | Over 9.5 | **WIN** |
+| P-257-C01 | 2 | Padres -1.5 | **LOSS** |
+| P-257-C04 | 3 | Under 9.5 | **LOSS** |
+| P-257-C02 | 4 | Reds +1.5 | **WIN** |
+
+**Potential winner — Padres:** **LOSS**.
+
+### Retrospective
+Process grade: **RANK-1 COMPLIANT / SIDE DEFECT**.
+- Rank #1 Over won through the identified wide starter distributions.
+- Brandon Williamson was better than the downside return-state feared, giving Cincinnati 5.1 innings and allowing three runs.
+- Mize's poor Padres regime persisted; Cincinnati hit three home runs and turned a 3-0 deficit into a 7-3 win.
+- The side call over-weighted Williamson's return uncertainty as a Padres advantage and under-weighted Mize's post-trade HR/run-volatility plus Cincinnati's hotter offense.
+- Return-from-IL uncertainty is two-sided variance, not an automatic opponent-side upgrade. No fitted weight change.
+
+## P-258 — Braves @ Nationals — FINAL
+
+**Final:** Atlanta Braves **7-0** Washington Nationals.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-258-C02 | 1 | Nationals +1.5 | **LOSS** |
+
+## P-255 — Inter Women vs Wolfsburg Women — FINAL
+
+**90-minute result:** Inter **2-0** Wolfsburg.
+**HT:** Inter 1-0.
+Inter ultimately advanced after extra time and penalties.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-255-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-255-C05 | 2 | Corners Over 8.5 | **UNRESOLVED / provider-definition final not recovered** |
+| P-255-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-255-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-255-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Wolfsburg to advance:** **LOSS**.
+
+### Retrospective
+Process grade: **MIXED / PHASE-PROPAGATION CAUTION**.
+- Rank #1 early-goal direction was correct: Inter scored at 40'.
+- The card correctly preserved Full Under as a credible branch; regulation stopped at exactly two goals.
+- The Over branch overstated how much Inter's aggregate chase would propagate into a third 90-minute goal.
+- The advancement miss came from underweighting the exact `Inter wins by two in regulation -> extra-time/penalty variance` branch.
+- No new forecast weight; reinforce existing two-leg regime-switch and endpoint-separation controls.
+
+## P-256 — PSG Women vs Eintracht Frankfurt Women — FINAL
+
+**90-minute result:** PSG **1-1** Frankfurt.
+**HT:** PSG 0-1 Frankfurt.
+PSG ultimately advanced after extra time.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-256-C05 | 1 | Corners Over 8.5 | **UNRESOLVED / exact provider final not recovered** |
+| P-256-C01 | 2 | 1H Over 0.5 | **WIN** |
+| P-256-C04 | 3 | Full Under 2.5 | **WIN** |
+| P-256-C03 | 4 | Full Over 2.5 | **LOSS** |
+| P-256-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — PSG to advance:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- The forecast explicitly identified `1H Over + Full Under` as a coherent central family; the 90-minute result delivered exactly that structure.
+- Frankfurt scored before halftime, then regulation remained at two total goals.
+- PSG's advancement lean also won, but only after extra time, validating the distinction between 90-minute winner and qualification endpoint.
+- No new rule promoted.
+
+## P-257 — Padres @ Reds — FINAL
+
+**Final:** Cincinnati Reds **7-3** San Diego Padres.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-257-C03 | 1 | Over 9.5 | **WIN** |
+| P-257-C01 | 2 | Padres -1.5 | **LOSS** |
+| P-257-C04 | 3 | Under 9.5 | **LOSS** |
+| P-257-C02 | 4 | Reds +1.5 | **WIN** |
+
+**Potential winner — Padres:** **LOSS**.
+
+### Retrospective
+Process grade: **RANK-1 COMPLIANT / SIDE DEFECT**.
+- Rank #1 Over won through the identified wide starter distributions.
+- Brandon Williamson was better than the downside return-state feared, giving Cincinnati 5.1 innings and allowing three runs.
+- Mize's poor Padres regime persisted; Cincinnati hit three home runs and turned a 3-0 deficit into a 7-3 win.
+- The side call over-weighted Williamson's return uncertainty as a Padres advantage and under-weighted Mize's post-trade HR/run-volatility plus Cincinnati's hotter offense.
+- Return-from-IL uncertainty is two-sided variance, not an automatic opponent-side upgrade. No fitted weight change.
+
+## P-258 — Braves @ Nationals — FINAL
+
+**Final:** Atlanta Braves **7-0** Washington Nationals.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-258-C02 | 1 | Nationals +1.5 | **LOSS** |
+| P-258-C01 | 2 | Braves ML | **WIN** |
+
+
+**90-minute result:** Inter **2-0** Wolfsburg.
+**HT:** Inter 1-0.
+Inter ultimately advanced after extra time and penalties.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-255-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-255-C05 | 2 | Corners Over 8.5 | **UNRESOLVED / provider-definition final not recovered** |
+| P-255-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-255-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-255-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Wolfsburg to advance:** **LOSS**.
+
+### Retrospective
+Process grade: **MIXED / PHASE-PROPAGATION CAUTION**.
+- Rank #1 early-goal direction was correct: Inter scored at 40'.
+- The card correctly preserved Full Under as a credible branch; regulation stopped at exactly two goals.
+- The Over branch overstated how much Inter's aggregate chase would propagate into a third 90-minute goal.
+- The advancement miss came from underweighting the exact `Inter wins by two in regulation -> extra-time/penalty variance` branch.
+- No new forecast weight; reinforce existing two-leg regime-switch and endpoint-separation controls.
+
+## P-256 — PSG Women vs Eintracht Frankfurt Women — FINAL
+
+**90-minute result:** PSG **1-1** Frankfurt.
+**HT:** PSG 0-1 Frankfurt.
+PSG ultimately advanced after extra time.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-256-C05 | 1 | Corners Over 8.5 | **UNRESOLVED / exact provider final not recovered** |
+| P-256-C01 | 2 | 1H Over 0.5 | **WIN** |
+| P-256-C04 | 3 | Full Under 2.5 | **WIN** |
+| P-256-C03 | 4 | Full Over 2.5 | **LOSS** |
+| P-256-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — PSG to advance:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- The forecast explicitly identified `1H Over + Full Under` as a coherent central family; the 90-minute result delivered exactly that structure.
+- Frankfurt scored before halftime, then regulation remained at two total goals.
+- PSG's advancement lean also won, but only after extra time, validating the distinction between 90-minute winner and qualification endpoint.
+- No new rule promoted.
+
+## P-257 — Padres @ Reds — FINAL
+
+**Final:** Cincinnati Reds **7-3** San Diego Padres.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-257-C03 | 1 | Over 9.5 | **WIN** |
+| P-257-C01 | 2 | Padres -1.5 | **LOSS** |
+| P-257-C04 | 3 | Under 9.5 | **LOSS** |
+| P-257-C02 | 4 | Reds +1.5 | **WIN** |
+
+**Potential winner — Padres:** **LOSS**.
+
+### Retrospective
+Process grade: **RANK-1 COMPLIANT / SIDE DEFECT**.
+- Rank #1 Over won through the identified wide starter distributions.
+- Brandon Williamson was better than the downside return-state feared, giving Cincinnati 5.1 innings and allowing three runs.
+- Mize's poor Padres regime persisted; Cincinnati hit three home runs and turned a 3-0 deficit into a 7-3 win.
+- The side call over-weighted Williamson's return uncertainty as a Padres advantage and under-weighted Mize's post-trade HR/run-volatility plus Cincinnati's hotter offense.
+- Return-from-IL uncertainty is two-sided variance, not an automatic opponent-side upgrade. No fitted weight change.
+
+## P-258 — Braves @ Nationals — FINAL
+
+**Final:** Atlanta Braves **7-0** Washington Nationals.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-258-C02 | 1 | Nationals +1.5 | **LOSS** |
+| P-258-C01 | 2 | Braves ML | **WIN** |
+| P-258-C04 | 3 | Under 9.5 | **WIN** |

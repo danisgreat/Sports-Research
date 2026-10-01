@@ -1,0 +1,307 @@
+Central score families:
+- PIT 5-4
+- PIT 5-3
+- SF 5-4
+- PIT 6-4
+
+Lower branch:
+- 4-3 / 4-2 either direction if Tidwell's Boston-type state and Bachar/middle relief suppress contact.
+
+Upper branch:
+- 6-5 / 7-4 / similar if Tidwell exits early, Pittsburgh's bullpen-game bridge leaks, or a weather interruption forces additional relief exposure.
+
+Tie-after-nine branch uses MLB's extra-inning runner environment rather than extrapolating the regulation scoring rate.
+
+#### Frozen ranked slate
+
+| Rank | Contract | Verdict | Evidence | Main mechanism |
+|---:|---|---|---|---|
+| 1 | **Giants +1.5** | LEAN | MEDIUM-LOW | Wins every SF victory plus a one-run PIT win; close-game branch is broad and overlaps the Pittsburgh-winner state. |
+| 2 | **Pirates ML** | LEAN | MEDIUM-LOW | Better home/right-hander baseline and deeper current team profile, but opener/bullpen exposure prevents strong confidence. |
+| 3 | **Over 9.0 runs** | FORCED RANK | MEDIUM-LOW | Bullpen-game exposure, prior-night 10-inning workload, hot SF middle order and weather-delay relief risk keep 10+ live. |
+| 4 | **Under 9.0 runs** | AVOID | MEDIUM-LOW | Tidwell's underlying contact profile and Bachar's recent run prevention preserve the low branch, but the joint relief/upper-tail state is stronger. |
+
+**Integer-total geometry:** exactly 9 runs is a PUSH for both total directions.
+
+**Potential winner:** **Pittsburgh Pirates — LEAN**.
+
+**Coherence check:** Rank 1 and winner are not contradictory. A representative shared state is **Pittsburgh 5-4**, which wins Pirates ML and Giants +1.5 while pushing the 9.0 total.
+
+**Evidence cap:** official batting orders were not populated at cutoff; all rows remain below SUPPORTED.#### Settlement — 2026-09-04
+
+**Official final:** Pittsburgh Pirates **5-2** San Francisco Giants.
+
+| Rank | Contract | Result | Settlement |
+|---:|---|---|---|
+| 1 | Giants +1.5 | Giants lost by 3 | **LOSS** |
+| 2 | Pirates ML | Pittsburgh won | **WIN** |
+| 3 | Over 9.0 runs | 7 total runs | **LOSS** |
+| 4 | Under 9.0 runs | 7 total runs | **WIN** |
+
+**Potential winner:** Pittsburgh Pirates — **WIN**.
+
+##### Deep Rank-1 retrospective
+
+| Question | Finding |
+|---|---|
+| What went right? | The participant correction from Jared Jones to Lake Bachar was essential and correct; Pirates ML correctly ranked above the total directions; the card recognized a Pittsburgh winner branch. |
+| What went wrong? | Giants +1.5 was ranked first because the analysis over-weighted recent one-run meetings and assumed Bachar/opener-bullpen exposure would widen San Francisco comeback and margin-compression paths. |
+| Actual mechanism | Pittsburgh manufactured five runs on only five hits through walks, a hit-by-pitch, sacrifice/ground-ball run creation and a Giants error. Tidwell walked five. Meanwhile six Pirates pitchers held San Francisco to only two hits; Bachar opened with 2.1 no-hit innings. |
+| Knowability | Materially knowable in process terms: underdog scoring floor, opponent bullpen depth, and non-hit run creation should have been explicit margin inputs. The exact five-walk/error sequence was not forecastable. |
+| Grade | **PROCESS_DEFECT** — rank construction underweighted the low-Giants-score / Pittsburgh-separation branch. |
+
+##### Retrospective driver table
+
+| Preissue expectation | Actual driver | Difference | Knowability | Process grade | Defect class | Lesson/test | Method change |
+|---|---|---|---|---|---|---|---|
+| Close-game branch broad enough for SF +1.5 | Pirates led throughout and won by 3 | Separation was larger despite modest total | Medium-High | PROCESS_DEFECT | Cushion/separation budget | For +1.5, solve an explicit underdog scoring-floor branch independently of the total | Candidate process tightening |
+| Bullpen game increases comeback variance | PIT bullpen allowed only 2 hits total; Bachar opened 2.1 no-hit | Bullpen depth suppressed SF rather than creating margin compression | High | PROCESS_DEFECT | Bullpen-quality/state mapping | Opener/bullpen structure is exposure, not a pro-underdog sign; map named chain quality and score-state availability | Reinforce existing baseball control |
+| Tidwell had both competent and damage branches | Command failed: 5 walks; 3 straight walks to open scoring sequence | Damage came through command/non-hit baserunners more than hard contact | Medium | COMPLIANT | Realisation path | Add BB/HBP/non-hit scoring pathway explicitly to separation branch | Candidate process tightening |
+| Over 9 had slight edge | Final total 7 | Low-contact state dominated | Medium | INCONCLUSIVE | Tail weighting | Prior 13-12/5-4 games should not outweigh current run-production mechanics | No single-game weight change |
+
+**Learning observation:** a bullpen game does not mechanically make an underdog +1.5 safer. The handicap must factorise underdog scoring floor, favourite non-hit run creation, relief-chain quality, and low-total separation.
+
+# Running change log
+
+## 2026-09-04 — Mini-log initialised
+
+- Started the new running mini-log from canonical **P-272**.
+- Adopted the current governing method **MDS-2026.09.04-v3.4**, not the stale v3.2 string retained in the opening header of `PREDICTION_LOG_COMBINED_2.md`.
+- Preserved all inherited unresolved historical follow-ups in a separate top section.
+- Established the rule that new incomplete/live P-272+ events remain at the top and move to chronological position only after settlement.
+- Established automatic pre-query state-check and retrospective processing for prior completed P-272+ events.
+- Preserved the no-probability/no-value claim boundary until the numerical validation gates are actually passed.
+
+
+## 2026-09-04 — P-272 start-crossing / no-action record
+
+- PIT 5-4
+- PIT 5-3
+- SF 5-4
+- PIT 6-4
+
+Lower branch:
+- 4-3 / 4-2 either direction if Tidwell's Boston-type state and Bachar/middle relief suppress contact.
+
+Upper branch:
+- 6-5 / 7-4 / similar if Tidwell exits early, Pittsburgh's bullpen-game bridge leaks, or a weather interruption forces additional relief exposure.
+
+Tie-after-nine branch uses MLB's extra-inning runner environment rather than extrapolating the regulation scoring rate.
+
+#### Frozen ranked slate
+
+| Rank | Contract | Verdict | Evidence | Main mechanism |
+|---:|---|---|---|---|
+| 1 | **Giants +1.5** | LEAN | MEDIUM-LOW | Wins every SF victory plus a one-run PIT win; close-game branch is broad and overlaps the Pittsburgh-winner state. |
+| 2 | **Pirates ML** | LEAN | MEDIUM-LOW | Better home/right-hander baseline and deeper current team profile, but opener/bullpen exposure prevents strong confidence. |
+| 3 | **Over 9.0 runs** | FORCED RANK | MEDIUM-LOW | Bullpen-game exposure, prior-night 10-inning workload, hot SF middle order and weather-delay relief risk keep 10+ live. |
+| 4 | **Under 9.0 runs** | AVOID | MEDIUM-LOW | Tidwell's underlying contact profile and Bachar's recent run prevention preserve the low branch, but the joint relief/upper-tail state is stronger. |
+
+**Integer-total geometry:** exactly 9 runs is a PUSH for both total directions.
+
+**Potential winner:** **Pittsburgh Pirates — LEAN**.
+
+**Coherence check:** Rank 1 and winner are not contradictory. A representative shared state is **Pittsburgh 5-4**, which wins Pirates ML and Giants +1.5 while pushing the 9.0 total.
+
+**Evidence cap:** official batting orders were not populated at cutoff; all rows remain below SUPPORTED.#### Settlement — 2026-09-04
+
+**Official final:** Pittsburgh Pirates **5-2** San Francisco Giants.
+
+| Rank | Contract | Result | Settlement |
+|---:|---|---|---|
+| 1 | Giants +1.5 | Giants lost by 3 | **LOSS** |
+| 2 | Pirates ML | Pittsburgh won | **WIN** |
+| 3 | Over 9.0 runs | 7 total runs | **LOSS** |
+| 4 | Under 9.0 runs | 7 total runs | **WIN** |
+
+**Potential winner:** Pittsburgh Pirates — **WIN**.
+
+##### Deep Rank-1 retrospective
+
+| Question | Finding |
+|---|---|
+| What went right? | The participant correction from Jared Jones to Lake Bachar was essential and correct; Pirates ML correctly ranked above the total directions; the card recognized a Pittsburgh winner branch. |
+| What went wrong? | Giants +1.5 was ranked first because the analysis over-weighted recent one-run meetings and assumed Bachar/opener-bullpen exposure would widen San Francisco comeback and margin-compression paths. |
+| Actual mechanism | Pittsburgh manufactured five runs on only five hits through walks, a hit-by-pitch, sacrifice/ground-ball run creation and a Giants error. Tidwell walked five. Meanwhile six Pirates pitchers held San Francisco to only two hits; Bachar opened with 2.1 no-hit innings. |
+| Knowability | Materially knowable in process terms: underdog scoring floor, opponent bullpen depth, and non-hit run creation should have been explicit margin inputs. The exact five-walk/error sequence was not forecastable. |
+| Grade | **PROCESS_DEFECT** — rank construction underweighted the low-Giants-score / Pittsburgh-separation branch. |
+
+##### Retrospective driver table
+
+| Preissue expectation | Actual driver | Difference | Knowability | Process grade | Defect class | Lesson/test | Method change |
+|---|---|---|---|---|---|---|---|
+| Close-game branch broad enough for SF +1.5 | Pirates led throughout and won by 3 | Separation was larger despite modest total | Medium-High | PROCESS_DEFECT | Cushion/separation budget | For +1.5, solve an explicit underdog scoring-floor branch independently of the total | Candidate process tightening |
+| Bullpen game increases comeback variance | PIT bullpen allowed only 2 hits total; Bachar opened 2.1 no-hit | Bullpen depth suppressed SF rather than creating margin compression | High | PROCESS_DEFECT | Bullpen-quality/state mapping | Opener/bullpen structure is exposure, not a pro-underdog sign; map named chain quality and score-state availability | Reinforce existing baseball control |
+| Tidwell had both competent and damage branches | Command failed: 5 walks; 3 straight walks to open scoring sequence | Damage came through command/non-hit baserunners more than hard contact | Medium | COMPLIANT | Realisation path | Add BB/HBP/non-hit scoring pathway explicitly to separation branch | Candidate process tightening |
+| Over 9 had slight edge | Final total 7 | Low-contact state dominated | Medium | INCONCLUSIVE | Tail weighting | Prior 13-12/5-4 games should not outweigh current run-production mechanics | No single-game weight change |
+
+**Learning observation:** a bullpen game does not mechanically make an underdog +1.5 safer. The handicap must factorise underdog scoring floor, favourite non-hit run creation, relief-chain quality, and low-total separation.
+
+# Running change log
+
+## 2026-09-04 — Mini-log initialised
+
+- Started the new running mini-log from canonical **P-272**.
+- Adopted the current governing method **MDS-2026.09.04-v3.4**, not the stale v3.2 string retained in the opening header of `PREDICTION_LOG_COMBINED_2.md`.
+- Preserved all inherited unresolved historical follow-ups in a separate top section.
+- Established the rule that new incomplete/live P-272+ events remain at the top and move to chronological position only after settlement.
+- Established automatic pre-query state-check and retrospective processing for prior completed P-272+ events.
+- Preserved the no-probability/no-value claim boundary until the numerical validation gates are actually passed.
+
+
+## 2026-09-04 — P-272 start-crossing / no-action record
+
+
+- PIT 5-3
+- SF 5-4
+- PIT 6-4
+
+Lower branch:
+- 4-3 / 4-2 either direction if Tidwell's Boston-type state and Bachar/middle relief suppress contact.
+
+Upper branch:
+- 6-5 / 7-4 / similar if Tidwell exits early, Pittsburgh's bullpen-game bridge leaks, or a weather interruption forces additional relief exposure.
+
+Tie-after-nine branch uses MLB's extra-inning runner environment rather than extrapolating the regulation scoring rate.
+
+#### Frozen ranked slate
+
+| Rank | Contract | Verdict | Evidence | Main mechanism |
+|---:|---|---|---|---|
+| 1 | **Giants +1.5** | LEAN | MEDIUM-LOW | Wins every SF victory plus a one-run PIT win; close-game branch is broad and overlaps the Pittsburgh-winner state. |
+| 2 | **Pirates ML** | LEAN | MEDIUM-LOW | Better home/right-hander baseline and deeper current team profile, but opener/bullpen exposure prevents strong confidence. |
+| 3 | **Over 9.0 runs** | FORCED RANK | MEDIUM-LOW | Bullpen-game exposure, prior-night 10-inning workload, hot SF middle order and weather-delay relief risk keep 10+ live. |
+| 4 | **Under 9.0 runs** | AVOID | MEDIUM-LOW | Tidwell's underlying contact profile and Bachar's recent run prevention preserve the low branch, but the joint relief/upper-tail state is stronger. |
+
+**Integer-total geometry:** exactly 9 runs is a PUSH for both total directions.
+
+**Potential winner:** **Pittsburgh Pirates — LEAN**.
+
+**Coherence check:** Rank 1 and winner are not contradictory. A representative shared state is **Pittsburgh 5-4**, which wins Pirates ML and Giants +1.5 while pushing the 9.0 total.
+
+**Evidence cap:** official batting orders were not populated at cutoff; all rows remain below SUPPORTED.#### Settlement — 2026-09-04
+
+**Official final:** Pittsburgh Pirates **5-2** San Francisco Giants.
+
+| Rank | Contract | Result | Settlement |
+|---:|---|---|---|
+| 1 | Giants +1.5 | Giants lost by 3 | **LOSS** |
+| 2 | Pirates ML | Pittsburgh won | **WIN** |
+| 3 | Over 9.0 runs | 7 total runs | **LOSS** |
+| 4 | Under 9.0 runs | 7 total runs | **WIN** |
+
+**Potential winner:** Pittsburgh Pirates — **WIN**.
+
+##### Deep Rank-1 retrospective
+
+| Question | Finding |
+|---|---|
+| What went right? | The participant correction from Jared Jones to Lake Bachar was essential and correct; Pirates ML correctly ranked above the total directions; the card recognized a Pittsburgh winner branch. |
+| What went wrong? | Giants +1.5 was ranked first because the analysis over-weighted recent one-run meetings and assumed Bachar/opener-bullpen exposure would widen San Francisco comeback and margin-compression paths. |
+| Actual mechanism | Pittsburgh manufactured five runs on only five hits through walks, a hit-by-pitch, sacrifice/ground-ball run creation and a Giants error. Tidwell walked five. Meanwhile six Pirates pitchers held San Francisco to only two hits; Bachar opened with 2.1 no-hit innings. |
+| Knowability | Materially knowable in process terms: underdog scoring floor, opponent bullpen depth, and non-hit run creation should have been explicit margin inputs. The exact five-walk/error sequence was not forecastable. |
+| Grade | **PROCESS_DEFECT** — rank construction underweighted the low-Giants-score / Pittsburgh-separation branch. |
+
+##### Retrospective driver table
+
+| Preissue expectation | Actual driver | Difference | Knowability | Process grade | Defect class | Lesson/test | Method change |
+|---|---|---|---|---|---|---|---|
+| Close-game branch broad enough for SF +1.5 | Pirates led throughout and won by 3 | Separation was larger despite modest total | Medium-High | PROCESS_DEFECT | Cushion/separation budget | For +1.5, solve an explicit underdog scoring-floor branch independently of the total | Candidate process tightening |
+| Bullpen game increases comeback variance | PIT bullpen allowed only 2 hits total; Bachar opened 2.1 no-hit | Bullpen depth suppressed SF rather than creating margin compression | High | PROCESS_DEFECT | Bullpen-quality/state mapping | Opener/bullpen structure is exposure, not a pro-underdog sign; map named chain quality and score-state availability | Reinforce existing baseball control |
+| Tidwell had both competent and damage branches | Command failed: 5 walks; 3 straight walks to open scoring sequence | Damage came through command/non-hit baserunners more than hard contact | Medium | COMPLIANT | Realisation path | Add BB/HBP/non-hit scoring pathway explicitly to separation branch | Candidate process tightening |
+| Over 9 had slight edge | Final total 7 | Low-contact state dominated | Medium | INCONCLUSIVE | Tail weighting | Prior 13-12/5-4 games should not outweigh current run-production mechanics | No single-game weight change |
+
+**Learning observation:** a bullpen game does not mechanically make an underdog +1.5 safer. The handicap must factorise underdog scoring floor, favourite non-hit run creation, relief-chain quality, and low-total separation.
+
+# Running change log
+
+## 2026-09-04 — Mini-log initialised
+
+- Started the new running mini-log from canonical **P-272**.
+- Adopted the current governing method **MDS-2026.09.04-v3.4**, not the stale v3.2 string retained in the opening header of `PREDICTION_LOG_COMBINED_2.md`.
+- Preserved all inherited unresolved historical follow-ups in a separate top section.
+- Established the rule that new incomplete/live P-272+ events remain at the top and move to chronological position only after settlement.
+- Established automatic pre-query state-check and retrospective processing for prior completed P-272+ events.
+- Preserved the no-probability/no-value claim boundary until the numerical validation gates are actually passed.
+
+
+## 2026-09-04 — P-272 start-crossing / no-action record
+
+- Assigned canonical ID **P-272** to Naomi Osaka vs Katerina Siniakova, 2026 US Open Women's Singles Round 2.
+
+- SF 5-4
+- PIT 6-4
+
+Lower branch:
+- 4-3 / 4-2 either direction if Tidwell's Boston-type state and Bachar/middle relief suppress contact.
+
+Upper branch:
+- 6-5 / 7-4 / similar if Tidwell exits early, Pittsburgh's bullpen-game bridge leaks, or a weather interruption forces additional relief exposure.
+
+Tie-after-nine branch uses MLB's extra-inning runner environment rather than extrapolating the regulation scoring rate.
+
+#### Frozen ranked slate
+
+| Rank | Contract | Verdict | Evidence | Main mechanism |
+|---:|---|---|---|---|
+| 1 | **Giants +1.5** | LEAN | MEDIUM-LOW | Wins every SF victory plus a one-run PIT win; close-game branch is broad and overlaps the Pittsburgh-winner state. |
+| 2 | **Pirates ML** | LEAN | MEDIUM-LOW | Better home/right-hander baseline and deeper current team profile, but opener/bullpen exposure prevents strong confidence. |
+| 3 | **Over 9.0 runs** | FORCED RANK | MEDIUM-LOW | Bullpen-game exposure, prior-night 10-inning workload, hot SF middle order and weather-delay relief risk keep 10+ live. |
+| 4 | **Under 9.0 runs** | AVOID | MEDIUM-LOW | Tidwell's underlying contact profile and Bachar's recent run prevention preserve the low branch, but the joint relief/upper-tail state is stronger. |
+
+**Integer-total geometry:** exactly 9 runs is a PUSH for both total directions.
+
+**Potential winner:** **Pittsburgh Pirates — LEAN**.
+
+**Coherence check:** Rank 1 and winner are not contradictory. A representative shared state is **Pittsburgh 5-4**, which wins Pirates ML and Giants +1.5 while pushing the 9.0 total.
+
+**Evidence cap:** official batting orders were not populated at cutoff; all rows remain below SUPPORTED.#### Settlement — 2026-09-04
+
+**Official final:** Pittsburgh Pirates **5-2** San Francisco Giants.
+
+| Rank | Contract | Result | Settlement |
+|---:|---|---|---|
+| 1 | Giants +1.5 | Giants lost by 3 | **LOSS** |
+| 2 | Pirates ML | Pittsburgh won | **WIN** |
+| 3 | Over 9.0 runs | 7 total runs | **LOSS** |
+| 4 | Under 9.0 runs | 7 total runs | **WIN** |
+
+**Potential winner:** Pittsburgh Pirates — **WIN**.
+
+##### Deep Rank-1 retrospective
+
+| Question | Finding |
+|---|---|
+| What went right? | The participant correction from Jared Jones to Lake Bachar was essential and correct; Pirates ML correctly ranked above the total directions; the card recognized a Pittsburgh winner branch. |
+| What went wrong? | Giants +1.5 was ranked first because the analysis over-weighted recent one-run meetings and assumed Bachar/opener-bullpen exposure would widen San Francisco comeback and margin-compression paths. |
+| Actual mechanism | Pittsburgh manufactured five runs on only five hits through walks, a hit-by-pitch, sacrifice/ground-ball run creation and a Giants error. Tidwell walked five. Meanwhile six Pirates pitchers held San Francisco to only two hits; Bachar opened with 2.1 no-hit innings. |
+| Knowability | Materially knowable in process terms: underdog scoring floor, opponent bullpen depth, and non-hit run creation should have been explicit margin inputs. The exact five-walk/error sequence was not forecastable. |
+| Grade | **PROCESS_DEFECT** — rank construction underweighted the low-Giants-score / Pittsburgh-separation branch. |
+
+##### Retrospective driver table
+
+| Preissue expectation | Actual driver | Difference | Knowability | Process grade | Defect class | Lesson/test | Method change |
+|---|---|---|---|---|---|---|---|
+| Close-game branch broad enough for SF +1.5 | Pirates led throughout and won by 3 | Separation was larger despite modest total | Medium-High | PROCESS_DEFECT | Cushion/separation budget | For +1.5, solve an explicit underdog scoring-floor branch independently of the total | Candidate process tightening |
+| Bullpen game increases comeback variance | PIT bullpen allowed only 2 hits total; Bachar opened 2.1 no-hit | Bullpen depth suppressed SF rather than creating margin compression | High | PROCESS_DEFECT | Bullpen-quality/state mapping | Opener/bullpen structure is exposure, not a pro-underdog sign; map named chain quality and score-state availability | Reinforce existing baseball control |
+| Tidwell had both competent and damage branches | Command failed: 5 walks; 3 straight walks to open scoring sequence | Damage came through command/non-hit baserunners more than hard contact | Medium | COMPLIANT | Realisation path | Add BB/HBP/non-hit scoring pathway explicitly to separation branch | Candidate process tightening |
+| Over 9 had slight edge | Final total 7 | Low-contact state dominated | Medium | INCONCLUSIVE | Tail weighting | Prior 13-12/5-4 games should not outweigh current run-production mechanics | No single-game weight change |
+
+**Learning observation:** a bullpen game does not mechanically make an underdog +1.5 safer. The handicap must factorise underdog scoring floor, favourite non-hit run creation, relief-chain quality, and low-total separation.
+
+# Running change log
+
+## 2026-09-04 — Mini-log initialised
+
+- Started the new running mini-log from canonical **P-272**.
+- Adopted the current governing method **MDS-2026.09.04-v3.4**, not the stale v3.2 string retained in the opening header of `PREDICTION_LOG_COMBINED_2.md`.
+- Preserved all inherited unresolved historical follow-ups in a separate top section.
+- Established the rule that new incomplete/live P-272+ events remain at the top and move to chronological position only after settlement.
+- Established automatic pre-query state-check and retrospective processing for prior completed P-272+ events.
+- Preserved the no-probability/no-value claim boundary until the numerical validation gates are actually passed.
+
+
+## 2026-09-04 — P-272 start-crossing / no-action record
+
+- Assigned canonical ID **P-272** to Naomi Osaka vs Katerina Siniakova, 2026 US Open Women's Singles Round 2.
+- Frozen the four user-supplied candidates and preserved their exact thresholds.

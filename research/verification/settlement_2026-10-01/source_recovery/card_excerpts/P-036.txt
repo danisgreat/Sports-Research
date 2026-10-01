@@ -1,0 +1,769 @@
+| P-035/V01 | C02 | 4 | Q1 Under 42.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+| P-036 controlling delivery P-036/V03 | 4 | 2-2-0 | 2/2 | 1-0 | 0 |
+| Combined controlling-delivery cohort | 10 | 5-5-0 | 4/5 | 2-0 | 0 |
+| All intermediate and delivery views, descriptive only | 30 | 15-15-0 | Not independent | View winners 4-2 | Not event-counted |
+
+
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+| P-036 controlling delivery P-036/V03 | 4 | 2-2-0 | 2/2 | 1-0 | 0 |
+| Combined controlling-delivery cohort | 10 | 5-5-0 | 4/5 | 2-0 | 0 |
+| All intermediate and delivery views, descriptive only | 30 | 15-15-0 | Not independent | View winners 4-2 | Not event-counted |
+
+The controlling-delivery primary-formal cohort is **2-0**: P-035 Q1 Over and P-036 Phillies ML. This is descriptive directional evidence, not profit or a calibrated edge. The legacy 59-30-1 baseline is not rewritten or merged with these new dependence-normalised rows.
+
+## Open-event index - APPENDED SETTLEMENT UPDATE (2026-08-14T13:20+10:00)
+
+
+| P-035/V01 | C03 | 5 | Full Over 174.5 | AVOID | DG-P035-SCORING | AVOID | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+| P-036 controlling delivery P-036/V03 | 4 | 2-2-0 | 2/2 | 1-0 | 0 |
+
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+| P-036 controlling delivery P-036/V03 | 4 | 2-2-0 | 2/2 | 1-0 | 0 |
+| Combined controlling-delivery cohort | 10 | 5-5-0 | 4/5 | 2-0 | 0 |
+| All intermediate and delivery views, descriptive only | 30 | 15-15-0 | Not independent | View winners 4-2 | Not event-counted |
+
+The controlling-delivery primary-formal cohort is **2-0**: P-035 Q1 Over and P-036 Phillies ML. This is descriptive directional evidence, not profit or a calibrated edge. The legacy 59-30-1 baseline is not rewritten or merged with these new dependence-normalised rows.
+
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+| P-036 controlling delivery P-036/V03 | 4 | 2-2-0 | 2/2 | 1-0 | 0 |
+| Combined controlling-delivery cohort | 10 | 5-5-0 | 4/5 | 2-0 | 0 |
+| All intermediate and delivery views, descriptive only | 30 | 15-15-0 | Not independent | View winners 4-2 | Not event-counted |
+
+The controlling-delivery primary-formal cohort is **2-0**: P-035 Q1 Over and P-036 Phillies ML. This is descriptive directional evidence, not profit or a calibrated edge. The legacy 59-30-1 baseline is not rewritten or merged with these new dependence-normalised rows.
+
+## Open-event index - APPENDED SETTLEMENT UPDATE (2026-08-14T13:20+10:00)
+
+| ID | Event | Status |
+
+| P-035/V01 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+| P-036 controlling delivery P-036/V03 | 4 | 2-2-0 | 2/2 | 1-0 | 0 |
+| Combined controlling-delivery cohort | 10 | 5-5-0 | 4/5 | 2-0 | 0 |
+
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+| P-036 controlling delivery P-036/V03 | 4 | 2-2-0 | 2/2 | 1-0 | 0 |
+| Combined controlling-delivery cohort | 10 | 5-5-0 | 4/5 | 2-0 | 0 |
+| All intermediate and delivery views, descriptive only | 30 | 15-15-0 | Not independent | View winners 4-2 | Not event-counted |
+
+The controlling-delivery primary-formal cohort is **2-0**: P-035 Q1 Over and P-036 Phillies ML. This is descriptive directional evidence, not profit or a calibrated edge. The legacy 59-30-1 baseline is not rewritten or merged with these new dependence-normalised rows.
+
+
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+| P-036 controlling delivery P-036/V03 | 4 | 2-2-0 | 2/2 | 1-0 | 0 |
+| Combined controlling-delivery cohort | 10 | 5-5-0 | 4/5 | 2-0 | 0 |
+| All intermediate and delivery views, descriptive only | 30 | 15-15-0 | Not independent | View winners 4-2 | Not event-counted |
+
+The controlling-delivery primary-formal cohort is **2-0**: P-035 Q1 Over and P-036 Phillies ML. This is descriptive directional evidence, not profit or a calibrated edge. The legacy 59-30-1 baseline is not rewritten or merged with these new dependence-normalised rows.
+
+## Open-event index - APPENDED SETTLEMENT UPDATE (2026-08-14T13:20+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+
+| P-035/V02 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V02 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V02 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V02 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V02 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C01 | 1 | Q1 Over 42.5 | LEAN | DG-P035-SCORING | PRIMARY_FORMAL | 45 | WIN | +2.5 | WNBA official box score |
+| P-035/V03 | C05 | 2 | H1 Over 84.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 83 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C04 | 3 | Full Under 174.5 | LEAN | DG-P035-SCORING | CORRELATED_SECONDARY | 173 | WIN | +1.5 | WNBA official box score |
+| P-035/V03 | C03 | 4 | Full Over 174.5 | FORCED RANK | DG-P035-SCORING | FORCED_RANK | 173 | LOSS | -1.5 | WNBA official box score |
+| P-035/V03 | C02 | 5 | Q1 Under 42.5 | AVOID | DG-P035-SCORING | AVOID | 45 | LOSS | -2.5 | WNBA official box score |
+| P-035/V03 | C06 | 6 | H1 Under 84.5 | AVOID | DG-P035-SCORING | AVOID | 83 | WIN | +1.5 | WNBA official box score |
+
+**Potential winner settlement:** Atlanta Dream `WIN` by 35. The independent record/lineup case and the verified live lead were directionally correct.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | From the P-035/V03 base of 39 combined with 1:40 left in Q1, the quarter finished at 45 and the Q1 Over won. Q2 then produced only 38 combined, leaving H1 at 83 and the H1 Over short by 1.5. The second half produced 90, but the final stopped at 173, so the full Under won by 1.5. Atlanta won every quarter and the game 104-69. |
+| What went right | The continuous live refresh correctly promoted Q1 Over to the controlling #1 before delivery; it won. The full Under and Atlanta winner also won. The P-009/P-024 dependence control correctly kept one primary formal row instead of counting all nested totals as independent. |
+| What went wrong | H1 Over was #1 in V01 and #2 in the controlling delivery view, but missed. The live calculation treated the remaining first-half scoring requirement as slightly favourable without modelling Q2 separately enough; the hot combined three-point start and low Connecticut offensive level had already been named but were not weighted strongly enough. |
+| Classification/why | Primary cause `CALIBRATION`; contributors `STATE_TIMING`, `DEPENDENCE`; knowability `known-underweighted`. This was not a genuine tail: shooting regression and a low-output Q2 were explicit pre-result kill paths. Full Under and both H1 outcomes are `BOUNDARY_FRAGILE` at 1.5 points from the line. |
+| Overweighted/ignored | Overweighted: current per-minute scoring and recent H1 Over counts. Underweighted: regression from 5-for-8 combined three-point shooting, Connecticut's weak recent offense, and Q2 rotation/bench possessions as a new segment rather than a continuation of late Q1. |
+| Concrete correction and falsification | For live basketball cards issued late in Q1, project Q2 as a separate segment using lineup/rotation, possession and shot-profile evidence; do not extrapolate the Q1 rate alone. T-011 will audit the next five eligible cards. Falsification: if separate-Q2 projections do not improve phase-boundary error or repeatedly demote correct H1 Overs, retire the ranking control and retain only the disclosure. |
+
+**T-009 progress:** 1/5 completed. P-035 used exactly one primary formal row for the shared phase/full-total thesis in every view. Status remains `OPEN`; dependent outcomes remain graded but not counted as independent confirmations.
+
+## P-036 SETTLEMENT - Philadelphia Phillies 7, Minnesota Twins 1 (appended 2026-08-14T13:20+10:00)
+
+**Official state/result:** `FINAL`, nine innings; MLB gamePk **823669**. Philadelphia won **7-1** and the combined total was **8**. `[Official MLB StatsAPI live/final feed, abstract and detailed state Final, opened 2026-08-14T13:13-13:18+10:00]`
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---|---|
+| P-036/V01 | C02 | 1 | Twins ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V01 | C04 | 2 | Under 8.5 | LEAN | DG-P036-TOTAL | PRIMARY_FORMAL | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V01 | C01 | 3 | Phillies ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V01 | C03 | 4 | Over 8.5 | AVOID | DG-P036-TOTAL | AVOID | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V02 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V02 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V02 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V02 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+| P-036/V03 | C01 | 1 | Phillies ML | LEAN | DG-P036-ML | PRIMARY_FORMAL | PHI 7-1 MIN | WIN | Won by 6 | MLB official feed |
+| P-036/V03 | C02 | 2 | Twins ML | FORCED RANK | DG-P036-ML | FORCED_RANK | PHI 7-1 MIN | LOSS | Lost by 6 | MLB official feed |
+| P-036/V03 | C04 | 3 | Under 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | WIN | +0.5 | MLB official feed |
+| P-036/V03 | C03 | 4 | Over 8.5 | FORCED RANK | DG-P036-TOTAL | FORCED_RANK | 8 | LOSS | -0.5 | MLB official feed |
+
+**Potential winner settlement:** pre-action V01 Minnesota `LOSS`; controlling delivery V02/V03 Philadelphia `WIN`. The live re-anchor after the leadoff home run corrected the side before delivery.
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Kyle Schwarber homered on Bradley's third pitch and homered again in the fourth. Philadelphia added a first-inning Stott RBI single, a fourth-inning Harper RBI single and a seventh-inning two-run Marsh homer. Minnesota's only run was Keaschall's second-inning solo homer. Nola allowed one run in five innings; Raley, Bowlan, Kerkering and Duran then supplied four scoreless relief innings. Bradley allowed five runs, seven hits, four walks and two homers in four innings. |
+| What went right | V02/V03 immediately promoted Philadelphia after the exact left-handed/top-order/four-seam kill path occurred, and the controlling winner won. The Under also won because Nola limited the damage and the projected fresh Philadelphia chain delivered four scoreless innings. Role-specific bullpen analysis was materially better than a generic workload label. |
+| What went wrong | The V01 #1 Twins side and winner lost decisively. The pregame card named Schwarber/Harper/Arraez/Stott as Bradley's strongest reversal path but still let Bradley's season line and Minnesota's last-bat/deeper-lineup case dominate. Bradley's actual four-inning, five-run failure showed the matchup tail was not remote. |
+| Classification/why | V01 side: primary cause `RANKING`; contributor `MODEL_SPEC`; knowability `known-underweighted`. It is not `GENUINE_TAIL` because the exact failure path was named. The controlling delivery #1 won, so no new event-level confidence strike is added. The total outcome is `BOUNDARY_FRAGILE`: Under 8.5 won by only 0.5, and its Bradley-suppression component was wrong even though the Philadelphia bullpen component was right. |
+| Overweighted/ignored | Overweighted: Bradley's broad season run prevention and Minnesota's raw lineup depth. Underweighted: how many of Philadelphia's first six hitters directly attacked Bradley's vulnerable four-seam/platoon shape, and the possibility that his 95-100 pitches would buy only four innings rather than five or six. |
+| Concrete correction and falsification | On baseball winner cards, when a named pitch-shape/platoon kill path applies to a cluster of at least four top-six hitters, quantify that cluster before allowing the opposing starter's aggregate ERA/strikeout edge to control the side. T-010 will audit five eligible cards. Falsification: if this cluster check repeatedly overreacts to handedness while pitch quality still controls contact/run outcomes, demote it to a disclosure rather than a rank mover. |
+
+**Prospective-test progress:** T-004 (starter length separate from run quality) is 1/5: projected Nola 5-6 and Bradley about 5-6; actual 5 and 4. T-005 (role-chain reconciliation) is 1/5: the projected fresh Philadelphia leverage path produced four scoreless relief innings; the Minnesota chain allowed two later runs. Both remain `OPEN`.
+
+## Prospective validation registry - APPENDED PROGRESS (2026-08-14T13:20+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-004 | P-034 | Under models need pitch-efficiency length separately from earned-run quality | Baseball full-game Unders with named starters | 5 | 1 | Expected exit/bullpen innings recorded on 5/5; misses classified | OPEN | Next eligible baseball card |
+| T-005 | P-033 | Availability-ranked opener/bulk/bridge/leverage chain beats generic bullpen workload | Bullpen games or expected short starts | 5 | 1 | Projected and actual chains reconciled on 5/5 | OPEN | Next eligible baseball card |
+| T-009 | P-009/P-024 | Only one primary formal row per shared basketball phase/full-total thesis | Basketball cards with nested same-direction totals | 5 | 1 | One PRIMARY_FORMAL; other rows independently justified or secondary | OPEN | Next eligible basketball card |
+| T-010 | P-036 | A top-six pitch-shape/platoon cluster must be quantified before aggregate starter quality controls a side | Baseball ML cards with confirmed lineup and named starters | 5 | 0 | Cluster exposure and contrary pitch-quality evidence logged before rank on 5/5 | OPEN | Next eligible baseball ML card |
+| T-011 | P-035 | Late-Q1 live H1 projections require a separate Q2 rotation/possession/shot-profile segment | Live basketball H1 cards issued after Q1 midpoint | 5 | 0 | Separate Q2 branch recorded on 5/5 and boundary error improves versus straight rate extrapolation | OPEN | Next eligible live basketball phase card |
+
+### Settlement-pass reconciliation
+
+| Cohort | Raw rows | W-L-P | Higher-ranked exact pairs | Potential winners | New event-level confidence strikes |
+|---|---:|---:|---:|---:|---:|
+| P-035 controlling delivery P-035/V03 | 6 | 3-3-0 | 2/3 | 1-0 | 0 |
+| P-036 controlling delivery P-036/V03 | 4 | 2-2-0 | 2/2 | 1-0 | 0 |
+| Combined controlling-delivery cohort | 10 | 5-5-0 | 4/5 | 2-0 | 0 |
+| All intermediate and delivery views, descriptive only | 30 | 15-15-0 | Not independent | View winners 4-2 | Not event-counted |

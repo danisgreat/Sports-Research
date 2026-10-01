@@ -1,0 +1,307 @@
+| Issued card's freeze | 2026-09-26 16:37:50Z (from the card) | issued card, Field 8 |
+| Freeze minus first pitch | **+26 s** after the first pitch event (+50 s after `gameInfo.firstPitch`; +2 min 50 s after the scheduled start) | computed |
+
+The card was issued after the first pitch. The card's own label, `LIVE-ISSUED VIEW` (In Progress, 0-0, top 1st), is **confirmed**. It is excluded from pregame scoring and from every performance cohort. The card states that no in-game event entered the distribution; nothing in the record contradicts that.
+
+#### 3.3 Process record (read from statsapi feed and boxscore; box SHA `300aa35fd76e7fb64fa20154827bfaf9c4d1dddcd4c8f22d62c0bbdf5132b52e`, 10:57:14)
+
+- **Line score:** NYM 0-0-0-0-0-0-4-1-2 = 7; WSH 0-0-1-0-0-0-0-0-0 = 1. **R-H-E: NYM 7-9-1, WSH 1-3-1.** LOB NYM 7, WSH 5. The game ended after nine innings (no extras).
+- **Game facts:** time 2:43 (163 minutes); attendance 27,284; first pitch 12:37 PM; 67 degrees, Overcast; wind 16 mph, In From LF; umpires HP Austin Jones, 1B Jen Pawol, 2B James Hoye, 3B Sean Barber.
+- **Pitching (feed and ESPN agree):**
+  - NYM: Jonah Tong 5.0 IP, 3 H, 1 R, 1 ER, 1 BB, 9 K, 87 pitches; Dedniel Núñez 1.0 IP, 0 H, 3 K (W, 2-1); Nate Lavender 1.0 IP (H); Devin Williams 1.0 IP; Tobias Myers 1.0 IP, 2 K. The four relievers allowed no hit and no run.
+  - WSH: Connelly Early 3.0 IP, 1 H, 0 R, 0 BB, 1 K, 34 pitches, 10 batters faced; Jake Irvin 5.0 IP, 7 H, 5 R, 4 ER, 2 BB, 6 K, 2 HR, 101 pitches (L, 2-10); Richard Lovelady 1.0 IP, 1 H, 2 R, 2 ER, 2 BB, 1 K, 1 HR.
+  - Pitcher by half-inning: Early innings 1-3, Irvin 4-8, Lovelady 9 (WSH); Tong 1-5, Núñez 6, Lavender 7, Williams 8, Myers 9 (NYM).
+- **Scoring plays (feed):** B3 Ortiz sacrifice fly, Nuñez scores (WSH 1-0); T7 A.J. Ewing 3-run HR off Irvin (NYM 3-1); T7 Ronny Mauricio HR off Irvin (4-1); T8 Brett Baty reaches on a fielding error by shortstop Nasim Nuñez, Carson Benge scores (5-1); T9 Mauricio 2-run HR off Lovelady (7-1). WSH led 1-0 through six innings.
+- **Disruptions (feed `Game Advisory` events):** an On-field Delay in the bottom of the 3rd (17:14:39Z-17:14:53Z as stamped) and an Injury Delay in the top of the 9th (19:08:57Z-19:09:10Z) after Juan Soto was hit by a pitch by Lovelady; pinch-runner Nick Morabito replaced Soto. The reason for the first delay and the nature of the second are not in the feed (`UNKNOWN`). Both are hindsight facts.
+- **Substitutions:** WSH José Tena pinch-hit in the 5th slot (for Brady House); Jorbit Vivas took 2B in the 9th slot, with Abrams moving from 2B to SS.
+- **Classification:** endpoint and conversion facts are clean. The outcome is a variance and weighting case, not an endpoint problem (see 3.8).
+
+#### 3.4 Lineup diff (names as printed on the issued card; feed starters are the `…00` batting-order entries)
+
+- **NYM: 9 of 9 named starters started** (Lindor DH, Soto LF, Bichette 3B, Benge RF, Vientos 1B, Baty SS, Alvarez C, Ewing CF, Mauricio 2B).
+- **WSH: 9 of 9 named starters started** (Wood RF, Ortiz DH, Crews CF, Abrams **2B** [feed `allPositions` 2B then SS], House 3B, Lile LF, Morales 1B, Ruiz C, Nuñez SS). The card's printed positions match the feed.
+- **Starting pitchers:** Tong and Early started as named. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+- **Card facts re-checked against the record:** umpire crew equal; weather and wind equal to the gamefeed block at freeze; Early's Triple-A rehab lines exact (2026-09-15: 1.0 IP, 35 pitches, 3 ER; 2026-09-20: 1.2 IP, 40 pitches, 0 ER; `people/813349` game log, SHA `d4d02a62e5be48e9471d9ee951c413553a09487e0a76e1c3526ec5407b895c99`) and his last MLB start on 2026-06-30 exact; the previous day's bullpen usage exact (gamePk 822681, 2026-09-25: Yan 37, Pintaro 17, Pérez 22, Hagenman 70, Lavender 14; Varland 14, Cruz 7, Sinclair 18, Gray 18; SHA `111909eaf0e7fe2c14cd3a4d45f60ca45561e495033cd752de922ab5306b8682`). One mislabel: Andrew Alvarez (101 pitches) was that game's Nationals starter, listed on the card under bullpen.
+
+#### 3.5 z-scores (card centre and width as issued)
+
+- **z_total** = (8 − 10.00) / 4.50 = **−0.44**.
+- **z_margin** (WSH − NYM, the card's orientation; centre WSH +0.10, width 4.50) = (−6 − 0.10) / 4.50 = **−1.36**. From the Mets' side the same miss is +1.36.
+- Both are inside |z| 1.5.
+
+#### 3.6 Settlement table (copied from the issued Field 4; the repository adapter `settle()` returns the same results)
+
+| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---:|---|---|---:|---|
+| 1 | Mets +1.5 | Margin | 0.640 | 0.668 | 0.638 | 0.6249 (`TB1_NO_RES`) | **WIN** | 0.1296 | `LIVE_ISSUED` |
+| 2 | Nationals +1.5 | Margin | 0.635 | 0.661 | 0.638 | 0.6516 (`TB1_NO_RES`) | **LOSS** | 0.4032 | `LIVE_ISSUED` |
+| 3 | Over 8.5 | Total | 0.590 | 0.593 | 0.491 | 0.5332 (`TB1_NO_RES`) | **LOSS** | 0.3481 | `LIVE_ISSUED` |
+| 4 | Under 8.5 | Total | 0.410 | 0.407 | 0.509 | 0.4668 (`TB1_NO_RES`) | **WIN** | 0.3481 | `LIVE_ISSUED` |
+| Winner | Washington Nationals | — | 0.510 | — | not printed on the card | not printed on the card | **LOSS** | 0.2601 | — |
+
+- **Mean row Brier(p) (four rows): 0.3073.** Brier(p) on a `LIVE_ISSUED` card is descriptive and excluded from pregame scoring.
+- **Descriptive decision-level comparison** (covering pair counted as two rows, forced pair once as the higher-ranked row; n = 3): card 0.2936 against baseline 0.2597, difference +0.0339. One late-issued game: **no inference**; not entered in any ledger.
+- **Rank-1:** WIN (Mets +1.5). **Hit@2:** 1/2, **MECHANICAL** (R1 and R2 are opposite +1.5 lines, a `COVERING_PAIR`: at least one always wins). **Top over/under preferred side:** Over 8.5 (issued preferred side of the forced pair) LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Nationals at 0.510, wrong.
+- **Realised outcome state (issued family table):** F1b, Mets win by 2+ with Under 8.5, mass **0.1496**. The embedded working settlement's "F1 and F3 masses of 0.245 and 0.165" are not on the card.
+- **SHADOW:** as issued, `SHADOW: MISSED STARTED_OR_NOT_PREGAME` (frozen with the card). Under the current md-only regime the line would read `SHADOW: NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN` as issued; no change.
+
+#### 3.7 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Hits and errors | NYM 7-11-1; WSH 1-5-0 | NYM 7-9-1; WSH 1-3-1 | statsapi linescore; ESPN | |
+| 2 | Time of game | 2h 58m | 2:43 (163 min) | statsapi `info`, `gameInfo` | |
+| 3 | Attendance | 26,452 | 27,284 | statsapi; ESPN | |
+| 4 | Tong's line | 4.2 IP, 1 H, 6 K, 4 BB | 5.0 IP, 3 H, 1 R, 1 BB, 9 K, 87 pitches | statsapi box; ESPN | |
+| 5 | Early's line | 54 pitches, 2 H, 2 BB, 4 K | 34 pitches, 1 H, 0 BB, 1 K | statsapi box; ESPN | The card's ceiling was about 50-65 pitches (2.1-3.2 IP): the innings fit, the pitch count was below it |
+| 6 | Score through six innings | "locked in a 1-1 tie" | WSH 1-0 | linescore | |
+| 7 | Seventh-inning narrative | Irvin "turned to" as a reliever in the 7th; bases loaded; Alonso and Winker | Irvin pitched innings 4-8; the 7th was Ewing's 3-run HR and Mauricio's HR; **Alonso and Winker are not in either boxscore** | statsapi plays and box | The embedded text is unsupported |
+| 8 | Mets relievers | Núñez, Garrett, Díaz | Núñez, Lavender, Williams, Myers; **Garrett and Díaz did not pitch** | statsapi box; ESPN | |
+| 9 | Fielding error | implied 7th | 8th, by WSH shortstop Nasim Nuñez | statsapi plays | |
+| 10 | Disruption facts | "None" | Two `Game Advisory` events (bottom 3rd on-field delay; top 9th injury delay, Soto, replaced by pinch-runner Morabito) | statsapi plays | |
+| 11 | ESPN lineage | event 401696434 | That is LAA at NYM, 2025-07-23. Correct event: **401817091** | ESPN scoreboard and summaries | Wrong event |
+| 12 | Baseball-Reference lineage | box `WAS202609270`, shown as agreeing | The URL date is 2026-09-27 (a different game); the site returned 403 here on the correct date | attempt ledger | The lineage was not retrieved |
+| 13 | Settlement baseline | 0.500 for every row | 0.638 / 0.638 / 0.491 / 0.509 as issued | issued Field 4 | `M35` |
+| 14 | TEAM_BASELINE_P | `TB1_NO_RESOLUTION` (numbers dropped) | 0.6249 / 0.6516 / 0.5332 / 0.4668 as issued, with `TB1_NO_RES` | issued Field 4 | `M35`, `M29` |
+| 15 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10; `CARD_AND_LOG_TEMPLATES.md` §2 | q is scored only as the pre-registered diagnostic on pregame cards |
+| 16 | Section 1 table start | 2026-09-28 03:05 AEST | 2026-09-27 02:35 AEST (16:35Z) | feed `datetime` | |
+| 17 | Realised family masses | "0.245 and 0.165" | F1b 0.1496 | issued family table | |
+| 18 | Early "departed after 54 pitches" | 54 | 34 | statsapi box | |
+
+Items 7, 8, 9, 10, 11 and 12 also make the embedded `C-PROCESS-RECORD-PROVENANCE` line untrue as written: the process facts it lists were not all read from the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` where it disagrees with the feed.
+
+#### 3.8 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Mets +1.5) won; Rank 2 (Nationals +1.5) lost, mechanically; the top over/under (Over 8.5, Rank 3) lost; the projected winner was wrong.
+
+| Freeze minus first pitch | **+26 s** after the first pitch event (+50 s after `gameInfo.firstPitch`; +2 min 50 s after the scheduled start) | computed |
+
+The card was issued after the first pitch. The card's own label, `LIVE-ISSUED VIEW` (In Progress, 0-0, top 1st), is **confirmed**. It is excluded from pregame scoring and from every performance cohort. The card states that no in-game event entered the distribution; nothing in the record contradicts that.
+
+#### 3.3 Process record (read from statsapi feed and boxscore; box SHA `300aa35fd76e7fb64fa20154827bfaf9c4d1dddcd4c8f22d62c0bbdf5132b52e`, 10:57:14)
+
+- **Line score:** NYM 0-0-0-0-0-0-4-1-2 = 7; WSH 0-0-1-0-0-0-0-0-0 = 1. **R-H-E: NYM 7-9-1, WSH 1-3-1.** LOB NYM 7, WSH 5. The game ended after nine innings (no extras).
+- **Game facts:** time 2:43 (163 minutes); attendance 27,284; first pitch 12:37 PM; 67 degrees, Overcast; wind 16 mph, In From LF; umpires HP Austin Jones, 1B Jen Pawol, 2B James Hoye, 3B Sean Barber.
+- **Pitching (feed and ESPN agree):**
+  - NYM: Jonah Tong 5.0 IP, 3 H, 1 R, 1 ER, 1 BB, 9 K, 87 pitches; Dedniel Núñez 1.0 IP, 0 H, 3 K (W, 2-1); Nate Lavender 1.0 IP (H); Devin Williams 1.0 IP; Tobias Myers 1.0 IP, 2 K. The four relievers allowed no hit and no run.
+  - WSH: Connelly Early 3.0 IP, 1 H, 0 R, 0 BB, 1 K, 34 pitches, 10 batters faced; Jake Irvin 5.0 IP, 7 H, 5 R, 4 ER, 2 BB, 6 K, 2 HR, 101 pitches (L, 2-10); Richard Lovelady 1.0 IP, 1 H, 2 R, 2 ER, 2 BB, 1 K, 1 HR.
+  - Pitcher by half-inning: Early innings 1-3, Irvin 4-8, Lovelady 9 (WSH); Tong 1-5, Núñez 6, Lavender 7, Williams 8, Myers 9 (NYM).
+- **Scoring plays (feed):** B3 Ortiz sacrifice fly, Nuñez scores (WSH 1-0); T7 A.J. Ewing 3-run HR off Irvin (NYM 3-1); T7 Ronny Mauricio HR off Irvin (4-1); T8 Brett Baty reaches on a fielding error by shortstop Nasim Nuñez, Carson Benge scores (5-1); T9 Mauricio 2-run HR off Lovelady (7-1). WSH led 1-0 through six innings.
+- **Disruptions (feed `Game Advisory` events):** an On-field Delay in the bottom of the 3rd (17:14:39Z-17:14:53Z as stamped) and an Injury Delay in the top of the 9th (19:08:57Z-19:09:10Z) after Juan Soto was hit by a pitch by Lovelady; pinch-runner Nick Morabito replaced Soto. The reason for the first delay and the nature of the second are not in the feed (`UNKNOWN`). Both are hindsight facts.
+- **Substitutions:** WSH José Tena pinch-hit in the 5th slot (for Brady House); Jorbit Vivas took 2B in the 9th slot, with Abrams moving from 2B to SS.
+- **Classification:** endpoint and conversion facts are clean. The outcome is a variance and weighting case, not an endpoint problem (see 3.8).
+
+#### 3.4 Lineup diff (names as printed on the issued card; feed starters are the `…00` batting-order entries)
+
+- **NYM: 9 of 9 named starters started** (Lindor DH, Soto LF, Bichette 3B, Benge RF, Vientos 1B, Baty SS, Alvarez C, Ewing CF, Mauricio 2B).
+- **WSH: 9 of 9 named starters started** (Wood RF, Ortiz DH, Crews CF, Abrams **2B** [feed `allPositions` 2B then SS], House 3B, Lile LF, Morales 1B, Ruiz C, Nuñez SS). The card's printed positions match the feed.
+- **Starting pitchers:** Tong and Early started as named. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+- **Card facts re-checked against the record:** umpire crew equal; weather and wind equal to the gamefeed block at freeze; Early's Triple-A rehab lines exact (2026-09-15: 1.0 IP, 35 pitches, 3 ER; 2026-09-20: 1.2 IP, 40 pitches, 0 ER; `people/813349` game log, SHA `d4d02a62e5be48e9471d9ee951c413553a09487e0a76e1c3526ec5407b895c99`) and his last MLB start on 2026-06-30 exact; the previous day's bullpen usage exact (gamePk 822681, 2026-09-25: Yan 37, Pintaro 17, Pérez 22, Hagenman 70, Lavender 14; Varland 14, Cruz 7, Sinclair 18, Gray 18; SHA `111909eaf0e7fe2c14cd3a4d45f60ca45561e495033cd752de922ab5306b8682`). One mislabel: Andrew Alvarez (101 pitches) was that game's Nationals starter, listed on the card under bullpen.
+
+#### 3.5 z-scores (card centre and width as issued)
+
+- **z_total** = (8 − 10.00) / 4.50 = **−0.44**.
+- **z_margin** (WSH − NYM, the card's orientation; centre WSH +0.10, width 4.50) = (−6 − 0.10) / 4.50 = **−1.36**. From the Mets' side the same miss is +1.36.
+- Both are inside |z| 1.5.
+
+#### 3.6 Settlement table (copied from the issued Field 4; the repository adapter `settle()` returns the same results)
+
+| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---:|---|---|---:|---|
+| 1 | Mets +1.5 | Margin | 0.640 | 0.668 | 0.638 | 0.6249 (`TB1_NO_RES`) | **WIN** | 0.1296 | `LIVE_ISSUED` |
+| 2 | Nationals +1.5 | Margin | 0.635 | 0.661 | 0.638 | 0.6516 (`TB1_NO_RES`) | **LOSS** | 0.4032 | `LIVE_ISSUED` |
+| 3 | Over 8.5 | Total | 0.590 | 0.593 | 0.491 | 0.5332 (`TB1_NO_RES`) | **LOSS** | 0.3481 | `LIVE_ISSUED` |
+| 4 | Under 8.5 | Total | 0.410 | 0.407 | 0.509 | 0.4668 (`TB1_NO_RES`) | **WIN** | 0.3481 | `LIVE_ISSUED` |
+| Winner | Washington Nationals | — | 0.510 | — | not printed on the card | not printed on the card | **LOSS** | 0.2601 | — |
+
+- **Mean row Brier(p) (four rows): 0.3073.** Brier(p) on a `LIVE_ISSUED` card is descriptive and excluded from pregame scoring.
+- **Descriptive decision-level comparison** (covering pair counted as two rows, forced pair once as the higher-ranked row; n = 3): card 0.2936 against baseline 0.2597, difference +0.0339. One late-issued game: **no inference**; not entered in any ledger.
+- **Rank-1:** WIN (Mets +1.5). **Hit@2:** 1/2, **MECHANICAL** (R1 and R2 are opposite +1.5 lines, a `COVERING_PAIR`: at least one always wins). **Top over/under preferred side:** Over 8.5 (issued preferred side of the forced pair) LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Nationals at 0.510, wrong.
+- **Realised outcome state (issued family table):** F1b, Mets win by 2+ with Under 8.5, mass **0.1496**. The embedded working settlement's "F1 and F3 masses of 0.245 and 0.165" are not on the card.
+- **SHADOW:** as issued, `SHADOW: MISSED STARTED_OR_NOT_PREGAME` (frozen with the card). Under the current md-only regime the line would read `SHADOW: NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN` as issued; no change.
+
+#### 3.7 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Hits and errors | NYM 7-11-1; WSH 1-5-0 | NYM 7-9-1; WSH 1-3-1 | statsapi linescore; ESPN | |
+| 2 | Time of game | 2h 58m | 2:43 (163 min) | statsapi `info`, `gameInfo` | |
+| 3 | Attendance | 26,452 | 27,284 | statsapi; ESPN | |
+| 4 | Tong's line | 4.2 IP, 1 H, 6 K, 4 BB | 5.0 IP, 3 H, 1 R, 1 BB, 9 K, 87 pitches | statsapi box; ESPN | |
+| 5 | Early's line | 54 pitches, 2 H, 2 BB, 4 K | 34 pitches, 1 H, 0 BB, 1 K | statsapi box; ESPN | The card's ceiling was about 50-65 pitches (2.1-3.2 IP): the innings fit, the pitch count was below it |
+| 6 | Score through six innings | "locked in a 1-1 tie" | WSH 1-0 | linescore | |
+| 7 | Seventh-inning narrative | Irvin "turned to" as a reliever in the 7th; bases loaded; Alonso and Winker | Irvin pitched innings 4-8; the 7th was Ewing's 3-run HR and Mauricio's HR; **Alonso and Winker are not in either boxscore** | statsapi plays and box | The embedded text is unsupported |
+| 8 | Mets relievers | Núñez, Garrett, Díaz | Núñez, Lavender, Williams, Myers; **Garrett and Díaz did not pitch** | statsapi box; ESPN | |
+| 9 | Fielding error | implied 7th | 8th, by WSH shortstop Nasim Nuñez | statsapi plays | |
+| 10 | Disruption facts | "None" | Two `Game Advisory` events (bottom 3rd on-field delay; top 9th injury delay, Soto, replaced by pinch-runner Morabito) | statsapi plays | |
+| 11 | ESPN lineage | event 401696434 | That is LAA at NYM, 2025-07-23. Correct event: **401817091** | ESPN scoreboard and summaries | Wrong event |
+| 12 | Baseball-Reference lineage | box `WAS202609270`, shown as agreeing | The URL date is 2026-09-27 (a different game); the site returned 403 here on the correct date | attempt ledger | The lineage was not retrieved |
+| 13 | Settlement baseline | 0.500 for every row | 0.638 / 0.638 / 0.491 / 0.509 as issued | issued Field 4 | `M35` |
+| 14 | TEAM_BASELINE_P | `TB1_NO_RESOLUTION` (numbers dropped) | 0.6249 / 0.6516 / 0.5332 / 0.4668 as issued, with `TB1_NO_RES` | issued Field 4 | `M35`, `M29` |
+| 15 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10; `CARD_AND_LOG_TEMPLATES.md` §2 | q is scored only as the pre-registered diagnostic on pregame cards |
+| 16 | Section 1 table start | 2026-09-28 03:05 AEST | 2026-09-27 02:35 AEST (16:35Z) | feed `datetime` | |
+| 17 | Realised family masses | "0.245 and 0.165" | F1b 0.1496 | issued family table | |
+| 18 | Early "departed after 54 pitches" | 54 | 34 | statsapi box | |
+
+Items 7, 8, 9, 10, 11 and 12 also make the embedded `C-PROCESS-RECORD-PROVENANCE` line untrue as written: the process facts it lists were not all read from the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` where it disagrees with the feed.
+
+#### 3.8 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Mets +1.5) won; Rank 2 (Nationals +1.5) lost, mechanically; the top over/under (Over 8.5, Rank 3) lost; the projected winner was wrong.
+
+
+
+The card was issued after the first pitch. The card's own label, `LIVE-ISSUED VIEW` (In Progress, 0-0, top 1st), is **confirmed**. It is excluded from pregame scoring and from every performance cohort. The card states that no in-game event entered the distribution; nothing in the record contradicts that.
+
+#### 3.3 Process record (read from statsapi feed and boxscore; box SHA `300aa35fd76e7fb64fa20154827bfaf9c4d1dddcd4c8f22d62c0bbdf5132b52e`, 10:57:14)
+
+- **Line score:** NYM 0-0-0-0-0-0-4-1-2 = 7; WSH 0-0-1-0-0-0-0-0-0 = 1. **R-H-E: NYM 7-9-1, WSH 1-3-1.** LOB NYM 7, WSH 5. The game ended after nine innings (no extras).
+- **Game facts:** time 2:43 (163 minutes); attendance 27,284; first pitch 12:37 PM; 67 degrees, Overcast; wind 16 mph, In From LF; umpires HP Austin Jones, 1B Jen Pawol, 2B James Hoye, 3B Sean Barber.
+- **Pitching (feed and ESPN agree):**
+  - NYM: Jonah Tong 5.0 IP, 3 H, 1 R, 1 ER, 1 BB, 9 K, 87 pitches; Dedniel Núñez 1.0 IP, 0 H, 3 K (W, 2-1); Nate Lavender 1.0 IP (H); Devin Williams 1.0 IP; Tobias Myers 1.0 IP, 2 K. The four relievers allowed no hit and no run.
+  - WSH: Connelly Early 3.0 IP, 1 H, 0 R, 0 BB, 1 K, 34 pitches, 10 batters faced; Jake Irvin 5.0 IP, 7 H, 5 R, 4 ER, 2 BB, 6 K, 2 HR, 101 pitches (L, 2-10); Richard Lovelady 1.0 IP, 1 H, 2 R, 2 ER, 2 BB, 1 K, 1 HR.
+  - Pitcher by half-inning: Early innings 1-3, Irvin 4-8, Lovelady 9 (WSH); Tong 1-5, Núñez 6, Lavender 7, Williams 8, Myers 9 (NYM).
+- **Scoring plays (feed):** B3 Ortiz sacrifice fly, Nuñez scores (WSH 1-0); T7 A.J. Ewing 3-run HR off Irvin (NYM 3-1); T7 Ronny Mauricio HR off Irvin (4-1); T8 Brett Baty reaches on a fielding error by shortstop Nasim Nuñez, Carson Benge scores (5-1); T9 Mauricio 2-run HR off Lovelady (7-1). WSH led 1-0 through six innings.
+- **Disruptions (feed `Game Advisory` events):** an On-field Delay in the bottom of the 3rd (17:14:39Z-17:14:53Z as stamped) and an Injury Delay in the top of the 9th (19:08:57Z-19:09:10Z) after Juan Soto was hit by a pitch by Lovelady; pinch-runner Nick Morabito replaced Soto. The reason for the first delay and the nature of the second are not in the feed (`UNKNOWN`). Both are hindsight facts.
+- **Substitutions:** WSH José Tena pinch-hit in the 5th slot (for Brady House); Jorbit Vivas took 2B in the 9th slot, with Abrams moving from 2B to SS.
+- **Classification:** endpoint and conversion facts are clean. The outcome is a variance and weighting case, not an endpoint problem (see 3.8).
+
+#### 3.4 Lineup diff (names as printed on the issued card; feed starters are the `…00` batting-order entries)
+
+- **NYM: 9 of 9 named starters started** (Lindor DH, Soto LF, Bichette 3B, Benge RF, Vientos 1B, Baty SS, Alvarez C, Ewing CF, Mauricio 2B).
+- **WSH: 9 of 9 named starters started** (Wood RF, Ortiz DH, Crews CF, Abrams **2B** [feed `allPositions` 2B then SS], House 3B, Lile LF, Morales 1B, Ruiz C, Nuñez SS). The card's printed positions match the feed.
+- **Starting pitchers:** Tong and Early started as named. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+- **Card facts re-checked against the record:** umpire crew equal; weather and wind equal to the gamefeed block at freeze; Early's Triple-A rehab lines exact (2026-09-15: 1.0 IP, 35 pitches, 3 ER; 2026-09-20: 1.2 IP, 40 pitches, 0 ER; `people/813349` game log, SHA `d4d02a62e5be48e9471d9ee951c413553a09487e0a76e1c3526ec5407b895c99`) and his last MLB start on 2026-06-30 exact; the previous day's bullpen usage exact (gamePk 822681, 2026-09-25: Yan 37, Pintaro 17, Pérez 22, Hagenman 70, Lavender 14; Varland 14, Cruz 7, Sinclair 18, Gray 18; SHA `111909eaf0e7fe2c14cd3a4d45f60ca45561e495033cd752de922ab5306b8682`). One mislabel: Andrew Alvarez (101 pitches) was that game's Nationals starter, listed on the card under bullpen.
+
+#### 3.5 z-scores (card centre and width as issued)
+
+- **z_total** = (8 − 10.00) / 4.50 = **−0.44**.
+- **z_margin** (WSH − NYM, the card's orientation; centre WSH +0.10, width 4.50) = (−6 − 0.10) / 4.50 = **−1.36**. From the Mets' side the same miss is +1.36.
+- Both are inside |z| 1.5.
+
+#### 3.6 Settlement table (copied from the issued Field 4; the repository adapter `settle()` returns the same results)
+
+| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---:|---|---|---:|---|
+| 1 | Mets +1.5 | Margin | 0.640 | 0.668 | 0.638 | 0.6249 (`TB1_NO_RES`) | **WIN** | 0.1296 | `LIVE_ISSUED` |
+| 2 | Nationals +1.5 | Margin | 0.635 | 0.661 | 0.638 | 0.6516 (`TB1_NO_RES`) | **LOSS** | 0.4032 | `LIVE_ISSUED` |
+| 3 | Over 8.5 | Total | 0.590 | 0.593 | 0.491 | 0.5332 (`TB1_NO_RES`) | **LOSS** | 0.3481 | `LIVE_ISSUED` |
+| 4 | Under 8.5 | Total | 0.410 | 0.407 | 0.509 | 0.4668 (`TB1_NO_RES`) | **WIN** | 0.3481 | `LIVE_ISSUED` |
+| Winner | Washington Nationals | — | 0.510 | — | not printed on the card | not printed on the card | **LOSS** | 0.2601 | — |
+
+- **Mean row Brier(p) (four rows): 0.3073.** Brier(p) on a `LIVE_ISSUED` card is descriptive and excluded from pregame scoring.
+- **Descriptive decision-level comparison** (covering pair counted as two rows, forced pair once as the higher-ranked row; n = 3): card 0.2936 against baseline 0.2597, difference +0.0339. One late-issued game: **no inference**; not entered in any ledger.
+- **Rank-1:** WIN (Mets +1.5). **Hit@2:** 1/2, **MECHANICAL** (R1 and R2 are opposite +1.5 lines, a `COVERING_PAIR`: at least one always wins). **Top over/under preferred side:** Over 8.5 (issued preferred side of the forced pair) LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Nationals at 0.510, wrong.
+- **Realised outcome state (issued family table):** F1b, Mets win by 2+ with Under 8.5, mass **0.1496**. The embedded working settlement's "F1 and F3 masses of 0.245 and 0.165" are not on the card.
+- **SHADOW:** as issued, `SHADOW: MISSED STARTED_OR_NOT_PREGAME` (frozen with the card). Under the current md-only regime the line would read `SHADOW: NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN` as issued; no change.
+
+#### 3.7 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Hits and errors | NYM 7-11-1; WSH 1-5-0 | NYM 7-9-1; WSH 1-3-1 | statsapi linescore; ESPN | |
+| 2 | Time of game | 2h 58m | 2:43 (163 min) | statsapi `info`, `gameInfo` | |
+| 3 | Attendance | 26,452 | 27,284 | statsapi; ESPN | |
+| 4 | Tong's line | 4.2 IP, 1 H, 6 K, 4 BB | 5.0 IP, 3 H, 1 R, 1 BB, 9 K, 87 pitches | statsapi box; ESPN | |
+| 5 | Early's line | 54 pitches, 2 H, 2 BB, 4 K | 34 pitches, 1 H, 0 BB, 1 K | statsapi box; ESPN | The card's ceiling was about 50-65 pitches (2.1-3.2 IP): the innings fit, the pitch count was below it |
+| 6 | Score through six innings | "locked in a 1-1 tie" | WSH 1-0 | linescore | |
+| 7 | Seventh-inning narrative | Irvin "turned to" as a reliever in the 7th; bases loaded; Alonso and Winker | Irvin pitched innings 4-8; the 7th was Ewing's 3-run HR and Mauricio's HR; **Alonso and Winker are not in either boxscore** | statsapi plays and box | The embedded text is unsupported |
+| 8 | Mets relievers | Núñez, Garrett, Díaz | Núñez, Lavender, Williams, Myers; **Garrett and Díaz did not pitch** | statsapi box; ESPN | |
+| 9 | Fielding error | implied 7th | 8th, by WSH shortstop Nasim Nuñez | statsapi plays | |
+| 10 | Disruption facts | "None" | Two `Game Advisory` events (bottom 3rd on-field delay; top 9th injury delay, Soto, replaced by pinch-runner Morabito) | statsapi plays | |
+| 11 | ESPN lineage | event 401696434 | That is LAA at NYM, 2025-07-23. Correct event: **401817091** | ESPN scoreboard and summaries | Wrong event |
+| 12 | Baseball-Reference lineage | box `WAS202609270`, shown as agreeing | The URL date is 2026-09-27 (a different game); the site returned 403 here on the correct date | attempt ledger | The lineage was not retrieved |
+| 13 | Settlement baseline | 0.500 for every row | 0.638 / 0.638 / 0.491 / 0.509 as issued | issued Field 4 | `M35` |
+| 14 | TEAM_BASELINE_P | `TB1_NO_RESOLUTION` (numbers dropped) | 0.6249 / 0.6516 / 0.5332 / 0.4668 as issued, with `TB1_NO_RES` | issued Field 4 | `M35`, `M29` |
+| 15 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10; `CARD_AND_LOG_TEMPLATES.md` §2 | q is scored only as the pre-registered diagnostic on pregame cards |
+| 16 | Section 1 table start | 2026-09-28 03:05 AEST | 2026-09-27 02:35 AEST (16:35Z) | feed `datetime` | |
+| 17 | Realised family masses | "0.245 and 0.165" | F1b 0.1496 | issued family table | |
+| 18 | Early "departed after 54 pitches" | 54 | 34 | statsapi box | |
+
+Items 7, 8, 9, 10, 11 and 12 also make the embedded `C-PROCESS-RECORD-PROVENANCE` line untrue as written: the process facts it lists were not all read from the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` where it disagrees with the feed.
+
+#### 3.8 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Mets +1.5) won; Rank 2 (Nationals +1.5) lost, mechanically; the top over/under (Over 8.5, Rank 3) lost; the projected winner was wrong.
+
+**B. Every pick.**
+
+The card was issued after the first pitch. The card's own label, `LIVE-ISSUED VIEW` (In Progress, 0-0, top 1st), is **confirmed**. It is excluded from pregame scoring and from every performance cohort. The card states that no in-game event entered the distribution; nothing in the record contradicts that.
+
+#### 3.3 Process record (read from statsapi feed and boxscore; box SHA `300aa35fd76e7fb64fa20154827bfaf9c4d1dddcd4c8f22d62c0bbdf5132b52e`, 10:57:14)
+
+- **Line score:** NYM 0-0-0-0-0-0-4-1-2 = 7; WSH 0-0-1-0-0-0-0-0-0 = 1. **R-H-E: NYM 7-9-1, WSH 1-3-1.** LOB NYM 7, WSH 5. The game ended after nine innings (no extras).
+- **Game facts:** time 2:43 (163 minutes); attendance 27,284; first pitch 12:37 PM; 67 degrees, Overcast; wind 16 mph, In From LF; umpires HP Austin Jones, 1B Jen Pawol, 2B James Hoye, 3B Sean Barber.
+- **Pitching (feed and ESPN agree):**
+  - NYM: Jonah Tong 5.0 IP, 3 H, 1 R, 1 ER, 1 BB, 9 K, 87 pitches; Dedniel Núñez 1.0 IP, 0 H, 3 K (W, 2-1); Nate Lavender 1.0 IP (H); Devin Williams 1.0 IP; Tobias Myers 1.0 IP, 2 K. The four relievers allowed no hit and no run.
+  - WSH: Connelly Early 3.0 IP, 1 H, 0 R, 0 BB, 1 K, 34 pitches, 10 batters faced; Jake Irvin 5.0 IP, 7 H, 5 R, 4 ER, 2 BB, 6 K, 2 HR, 101 pitches (L, 2-10); Richard Lovelady 1.0 IP, 1 H, 2 R, 2 ER, 2 BB, 1 K, 1 HR.
+  - Pitcher by half-inning: Early innings 1-3, Irvin 4-8, Lovelady 9 (WSH); Tong 1-5, Núñez 6, Lavender 7, Williams 8, Myers 9 (NYM).
+- **Scoring plays (feed):** B3 Ortiz sacrifice fly, Nuñez scores (WSH 1-0); T7 A.J. Ewing 3-run HR off Irvin (NYM 3-1); T7 Ronny Mauricio HR off Irvin (4-1); T8 Brett Baty reaches on a fielding error by shortstop Nasim Nuñez, Carson Benge scores (5-1); T9 Mauricio 2-run HR off Lovelady (7-1). WSH led 1-0 through six innings.
+- **Disruptions (feed `Game Advisory` events):** an On-field Delay in the bottom of the 3rd (17:14:39Z-17:14:53Z as stamped) and an Injury Delay in the top of the 9th (19:08:57Z-19:09:10Z) after Juan Soto was hit by a pitch by Lovelady; pinch-runner Nick Morabito replaced Soto. The reason for the first delay and the nature of the second are not in the feed (`UNKNOWN`). Both are hindsight facts.
+- **Substitutions:** WSH José Tena pinch-hit in the 5th slot (for Brady House); Jorbit Vivas took 2B in the 9th slot, with Abrams moving from 2B to SS.
+- **Classification:** endpoint and conversion facts are clean. The outcome is a variance and weighting case, not an endpoint problem (see 3.8).
+
+#### 3.4 Lineup diff (names as printed on the issued card; feed starters are the `…00` batting-order entries)
+
+- **NYM: 9 of 9 named starters started** (Lindor DH, Soto LF, Bichette 3B, Benge RF, Vientos 1B, Baty SS, Alvarez C, Ewing CF, Mauricio 2B).
+- **WSH: 9 of 9 named starters started** (Wood RF, Ortiz DH, Crews CF, Abrams **2B** [feed `allPositions` 2B then SS], House 3B, Lile LF, Morales 1B, Ruiz C, Nuñez SS). The card's printed positions match the feed.
+- **Starting pitchers:** Tong and Early started as named. No Rank-1 driver was absent; `PROCESS_DEFECT: LINEUP_CLAIM_FALSE` does not apply to the issued card.
+- **Card facts re-checked against the record:** umpire crew equal; weather and wind equal to the gamefeed block at freeze; Early's Triple-A rehab lines exact (2026-09-15: 1.0 IP, 35 pitches, 3 ER; 2026-09-20: 1.2 IP, 40 pitches, 0 ER; `people/813349` game log, SHA `d4d02a62e5be48e9471d9ee951c413553a09487e0a76e1c3526ec5407b895c99`) and his last MLB start on 2026-06-30 exact; the previous day's bullpen usage exact (gamePk 822681, 2026-09-25: Yan 37, Pintaro 17, Pérez 22, Hagenman 70, Lavender 14; Varland 14, Cruz 7, Sinclair 18, Gray 18; SHA `111909eaf0e7fe2c14cd3a4d45f60ca45561e495033cd752de922ab5306b8682`). One mislabel: Andrew Alvarez (101 pitches) was that game's Nationals starter, listed on the card under bullpen.
+
+#### 3.5 z-scores (card centre and width as issued)
+
+- **z_total** = (8 − 10.00) / 4.50 = **−0.44**.
+- **z_margin** (WSH − NYM, the card's orientation; centre WSH +0.10, width 4.50) = (−6 − 0.10) / 4.50 = **−1.36**. From the Mets' side the same miss is +1.36.
+- Both are inside |z| 1.5.
+
+#### 3.6 Settlement table (copied from the issued Field 4; the repository adapter `settle()` returns the same results)
+
+| Rank | Contract | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) |
+|---:|---|---|---:|---:|---:|---|---|---:|---|
+| 1 | Mets +1.5 | Margin | 0.640 | 0.668 | 0.638 | 0.6249 (`TB1_NO_RES`) | **WIN** | 0.1296 | `LIVE_ISSUED` |
+| 2 | Nationals +1.5 | Margin | 0.635 | 0.661 | 0.638 | 0.6516 (`TB1_NO_RES`) | **LOSS** | 0.4032 | `LIVE_ISSUED` |
+| 3 | Over 8.5 | Total | 0.590 | 0.593 | 0.491 | 0.5332 (`TB1_NO_RES`) | **LOSS** | 0.3481 | `LIVE_ISSUED` |
+| 4 | Under 8.5 | Total | 0.410 | 0.407 | 0.509 | 0.4668 (`TB1_NO_RES`) | **WIN** | 0.3481 | `LIVE_ISSUED` |
+| Winner | Washington Nationals | — | 0.510 | — | not printed on the card | not printed on the card | **LOSS** | 0.2601 | — |
+
+- **Mean row Brier(p) (four rows): 0.3073.** Brier(p) on a `LIVE_ISSUED` card is descriptive and excluded from pregame scoring.
+- **Descriptive decision-level comparison** (covering pair counted as two rows, forced pair once as the higher-ranked row; n = 3): card 0.2936 against baseline 0.2597, difference +0.0339. One late-issued game: **no inference**; not entered in any ledger.
+- **Rank-1:** WIN (Mets +1.5). **Hit@2:** 1/2, **MECHANICAL** (R1 and R2 are opposite +1.5 lines, a `COVERING_PAIR`: at least one always wins). **Top over/under preferred side:** Over 8.5 (issued preferred side of the forced pair) LOSS, so `TOP_OU_REVIEW` applies. **Projected winner:** Nationals at 0.510, wrong.
+- **Realised outcome state (issued family table):** F1b, Mets win by 2+ with Under 8.5, mass **0.1496**. The embedded working settlement's "F1 and F3 masses of 0.245 and 0.165" are not on the card.
+- **SHADOW:** as issued, `SHADOW: MISSED STARTED_OR_NOT_PREGAME` (frozen with the card). Under the current md-only regime the line would read `SHADOW: NO_LANE (md-only)`.
+- **Universe:** `OUT_OF_UNIVERSE: EXCLUDED_AT_DECLARATION:STATE_IN` as issued; no change.
+
+#### 3.7 Corrections register (embedded working settlement → verified value; source; reason)
+
+| # | Field in the embedded working settlement | Embedded value | Verified value | Source | Note |
+|---|---|---|---|---|---|
+| 1 | Hits and errors | NYM 7-11-1; WSH 1-5-0 | NYM 7-9-1; WSH 1-3-1 | statsapi linescore; ESPN | |
+| 2 | Time of game | 2h 58m | 2:43 (163 min) | statsapi `info`, `gameInfo` | |
+| 3 | Attendance | 26,452 | 27,284 | statsapi; ESPN | |
+| 4 | Tong's line | 4.2 IP, 1 H, 6 K, 4 BB | 5.0 IP, 3 H, 1 R, 1 BB, 9 K, 87 pitches | statsapi box; ESPN | |
+| 5 | Early's line | 54 pitches, 2 H, 2 BB, 4 K | 34 pitches, 1 H, 0 BB, 1 K | statsapi box; ESPN | The card's ceiling was about 50-65 pitches (2.1-3.2 IP): the innings fit, the pitch count was below it |
+| 6 | Score through six innings | "locked in a 1-1 tie" | WSH 1-0 | linescore | |
+| 7 | Seventh-inning narrative | Irvin "turned to" as a reliever in the 7th; bases loaded; Alonso and Winker | Irvin pitched innings 4-8; the 7th was Ewing's 3-run HR and Mauricio's HR; **Alonso and Winker are not in either boxscore** | statsapi plays and box | The embedded text is unsupported |
+| 8 | Mets relievers | Núñez, Garrett, Díaz | Núñez, Lavender, Williams, Myers; **Garrett and Díaz did not pitch** | statsapi box; ESPN | |
+| 9 | Fielding error | implied 7th | 8th, by WSH shortstop Nasim Nuñez | statsapi plays | |
+| 10 | Disruption facts | "None" | Two `Game Advisory` events (bottom 3rd on-field delay; top 9th injury delay, Soto, replaced by pinch-runner Morabito) | statsapi plays | |
+| 11 | ESPN lineage | event 401696434 | That is LAA at NYM, 2025-07-23. Correct event: **401817091** | ESPN scoreboard and summaries | Wrong event |
+| 12 | Baseball-Reference lineage | box `WAS202609270`, shown as agreeing | The URL date is 2026-09-27 (a different game); the site returned 403 here on the correct date | attempt ledger | The lineage was not retrieved |
+| 13 | Settlement baseline | 0.500 for every row | 0.638 / 0.638 / 0.491 / 0.509 as issued | issued Field 4 | `M35` |
+| 14 | TEAM_BASELINE_P | `TB1_NO_RESOLUTION` (numbers dropped) | 0.6249 / 0.6516 / 0.5332 / 0.4668 as issued, with `TB1_NO_RES` | issued Field 4 | `M35`, `M29` |
+| 15 | Brier(q) | numeric values | `LIVE_ISSUED` | `PROBABILITY_TOOLKIT.md` §10; `CARD_AND_LOG_TEMPLATES.md` §2 | q is scored only as the pre-registered diagnostic on pregame cards |
+| 16 | Section 1 table start | 2026-09-28 03:05 AEST | 2026-09-27 02:35 AEST (16:35Z) | feed `datetime` | |
+| 17 | Realised family masses | "0.245 and 0.165" | F1b 0.1496 | issued family table | |
+| 18 | Early "departed after 54 pitches" | 54 | 34 | statsapi box | |
+
+Items 7, 8, 9, 10, 11 and 12 also make the embedded `C-PROCESS-RECORD-PROVENANCE` line untrue as written: the process facts it lists were not all read from the endpoints it cites. The embedded process record is `PROCESS_RECORD_UNVERIFIED` where it disagrees with the feed.
+
+#### 3.8 Retrospective (judged on what was knowable before the start)
+
+**A. Outcome.** Rank 1 (Mets +1.5) won; Rank 2 (Nationals +1.5) lost, mechanically; the top over/under (Over 8.5, Rank 3) lost; the projected winner was wrong.
+
+**B. Every pick.**
+1. *Mets +1.5, WIN.* Held: a near coin-flip side (issued winner probability 0.510 for WSH), so a +1.5 on either side was the likely cover. It covered through the win branch (mass 0.490) and not the lose-by-one branch.

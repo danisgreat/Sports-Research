@@ -657,6 +657,53 @@ Traps found and handled while building the KBO files:
 
 ---
 
+### 3.16 NPB (Nippon Professional Baseball) game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/NPB/<YEAR>/<YEAR>_games.csv and NPB_CSVs/NPB_<YEAR>.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in both the structured multi-sport directory and standalone download directory. Season = the calendar year in which the season is played (pre-season open games in February–March, regular season March/April–October, Interleague in May–June, All-Star Series in July, and postseason Climax Series / Japan Series in October–November).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| NPB Official Match Center & Calendar | https://npb.jp/bis/eng/<YYYY>/calendar/index_<MM>.html and …/bis/<YYYY>/calendar/index_<MM>.html | Full game-by-game schedules, dates, away/home team codes, scores, cancellations (* - *), and box score URLs (s<gameId>.html). | FO (NPB League) | API / HTML (Keyless) | 200 (2005–2025 verified) |
+| NPB Official Preseason Schedule | https://npb.jp/preseason/<YYYY>/schedule_detail.html | Spring exhibition (open games) schedule, dates, venues, start times, scores, winning and losing pitchers. | FO | API / HTML | 200 (Verified) |
+| 2689web.com Professional Baseball Records Archive (日本プロ野球記録資料館) | https://2689web.com/<YYYY>/<TEAM>.html and …/<YYYY>/<YYYY>.html | Comprehensive game-by-game box scores, outcomes (○/●/△), deciding pitchers, venues, attendances, home runs, linescores, All-Star series (s/), and Japan Series (series/). | S (Historical Archive) | API / HTML (Shift_JIS/UTF-8) | 200 (1936–2025 archive verified) |
+| Japanese Wikipedia NPB Archives | https://ja.wikipedia.org/wiki/<YYYY>年の日本プロ野球 and …/wiki/<YYYY>年の日本シリーズ | Historic game dates, playoff series results, 2004 NPB strike cancellations, and expansion/merger timeline records. | S (Cross-check) | API (/w/api.php) | 200 (2000–2025 verified) |
+
+Traps found and handled while building the NPB files:
+
+- **Historical Expansion, Mergers & Rebranding:**
+  - **2004 Merger & Creation of Rakuten (2005):** Following the 2004 season, Osaka Kintetsu Buffaloes merged with ORIX BlueWave to form the **ORIX Buffaloes**. The **Tohoku Rakuten Golden Eagles** joined as a brand-new expansion franchise in 2005.
+  - **2004 NPB Player Strike:** On September 18–19, 2004, the Japan Professional Baseball Players Association held the first strike in NPB history to protest the merger, resulting in 12 cancelled games that were never replayed.
+  - **Franchise Name & Ballpark Shifts:** Yokohama BayStars became Yokohama DeNA BayStars in 2012; Fukuoka Daiei Hawks became Fukuoka SoftBank Hawks in 2005; Seibu Lions became Saitama Seibu Lions in 2008; Nippon-Ham Fighters relocated from Tokyo Dome to Sapporo Dome in 2004, and to ES CON FIELD HOKKAIDO in 2023. All bilingual names and venues are dynamically resolved by season.
+- **Introduction of Interleague Play (2005):** In 2005, NPB introduced Interleague Play (Nippon Life Interleague / 交流戦), initially featuring 36 games per team (6 against each team of the other league), reduced to 24 games in 2007, and 18 games in 2015. Interleague games are automatically flagged when Central and Pacific League teams meet during the regular season.
+- **Postseason System Evolution:**
+  - **2000–2003:** Direct qualification: Central League and Pacific League pennant winners advanced directly to the best-of-7 Japan Series.
+  - **2004–2006:** Pacific League introduced a playoff system (1st vs winner of 2nd/3rd).
+  - **2007–Present:** Both leagues adopted the **Climax Series** (First Stage: 2nd vs 3rd, best-of-3; Final Stage: 1st vs First Stage winner, best-of-6 with a 1-win advantage for the pennant winner).
+- **Extra Innings & Tie Rules:** NPB enforces strict extra-inning limits (historically 12 innings in regular season; capped at 9 or 10 innings during pandemic/curfew seasons like 2020–2021; 15 innings in postseason). Games tied after limit are officially recorded as ties.
+
+---
+
+### 3.17 Minor League Baseball (MiLB / Triple-A) game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/Minor Leagues/<YEAR>/<YEAR>_games.csv, Minor_League_Baseball_CSVs/Minor_League_Baseball_<YEAR>.csv, and MiLB_CSVs/MiLB_<YEAR>.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in both the structured multi-sport directory and standalone download directories. Season = the calendar year in which the season is played (regular season April–September, Triple-A All-Star Game in July, Governors' Cup / PCL Championship in September, and Triple-A National Championship Game in late September).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| MLB Stats API Schedule Endpoint (sportId=11) | https://statsapi.mlb.com/api/v1/schedule?sportId=11&startDate=<YYYY-MM-DD>&endDate=<YYYY-MM-DD>&hydrate=linescore,decisions | Full Triple-A game schedules (International League, Pacific Coast League), gamePk, statuses, line scores, home/away scores, hits, errors, doubleheaders, cancellations, and pitcher decisions (winner, loser, save). | FO (MLB / MiLB) | API (JSON, keyless) | 200 (2005–2025 verified) |
+| MLB Stats API Teams & Affiliations Endpoint | https://statsapi.mlb.com/api/v1/teams?sportId=11&season=<YYYY> | Team names, historical parent MLB clubs (parentOrgName), leagues, and official home ballparks dynamically mapped per season. | FO | API (JSON, keyless) | 200 (2005–2025 verified) |
+| SABR & Baseball-Reference Minor League Championship Archives | Historical registers for Governors' Cup (IL), PCL Championship Series, Triple-A World Series (Cashman Field, Las Vegas), and Triple-A All-Star Games. | Championship boxscores, series champions, dates, venues, and scores for 2000–2004 pre-digital era. | S (Historical Archive) | Curated Records | Verified |
+| Minor League Baseball Official League Notices | https://www.milb.com/ | Formal cancellation announcement for the 2020 Minor League Baseball season (June 30, 2020) due to the COVID-19 pandemic; 2021 PDL restructuring documentation. | FO | Web / News Archive | Verified |
+
+Traps found and handled while building the Minor League Baseball files:
+
+- **Electronic API Coverage Bounds:** Digital Gameday tracking in MLB Stats API begins in **2005** (sportId=11). 2000–2004 seasons reflect verified historical championship series, All-Star games, and opening day showcase matchups.
+- **The 2020 COVID-19 Total Cancellation:** On June 30, 2020, Minor League Baseball officially cancelled the entire 2020 season across all levels due to the COVID-19 pandemic. A formal cancellation benchmark record is cataloged for 2020 to prevent erroneous synthetic data.
+- **2021 Professional Development League (PDL) Reorganization:** In 2021, MLB restructured Minor League Baseball from the historical NAPBL structure into the 120-team PDL system. Triple-A was reorganized into two 15-team leagues (temporarily named Triple-A East and Triple-A West in 2021 before restoring the International League and Pacific Coast League branding in 2022).
+- **Dynamic Parent Club Affiliations:** Minor League affiliations change frequently (e.g. Buffalo Bisons were affiliated with Cleveland until 2008, NY Mets 2009–2012, and Toronto Blue Jays 2013–present). Every team's parent club is dynamically resolved from the official season team registry.
+- **Doubleheader & Inning Regulations:** Minor League Baseball frequently plays 7-inning doubleheaders (scheduledInnings=7) and utilizes the automatic runner on second base in extra innings. Scheduled innings and extra-inning indicators are explicitly tracked.
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |

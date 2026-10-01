@@ -1,0 +1,307 @@
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Aubagne Team Under 1.5 | **LOSS** |
+| 2 | Under 2.5 Goals | **WIN** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **WIN** |
+| — | Potential winner: Bourg-en-Bresse | **LOSS** |
+
+#### Deep Rank #1 retrospective
+
+**Pregame thesis:** Aubagne had scored zero in the first three league games, so keeping them to 0–1 was treated as safer than the global match Under.
+
+**Actual path:** Aubagne broke the drought twice by the 11th minute and then the match completely compressed, finishing 2–0.
+
+**Primary defect:** `TEAM-SCORE ALLOCATION ERROR`. The global low-total/BTTS state was largely correct; the forecast allocated too little of the limited scoring mass to Aubagne.
+
+**Small-sample problem:** a three-match zero-goal streak was allowed to behave too much like a stable attack ceiling. One or two early high-leverage attacks were enough to cross 1.5 even though the match remained low-event thereafter.
+
+**Ranking lesson:** when total-event suppression is stronger than which team scores those limited goals, the full-match Under can be more robust than a team Under.
+
+**What went right:** ranks #2–#5 all won. The first-half Over correctly preserved an early-goal branch despite the low total, BTTS No correctly captured one-sided scoring, and the corner Under held.
+
+**Prospective lesson candidate:** shrink zero-goal streaks to chance-creation priors; separate *total-event state* from *team allocation*.
+
+---
+
+### P-178 — Cannes vs Le Puy — Ligue 3
+
+**Final:** Cannes 2–0 Le Puy. Both goals arose from corner/set-piece sequences in current match reporting.  
+**Corner aggregate:** not recovered from a trusted final provider.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 2.5 Goals | **WIN** |
+| 2 | Cannes Team Under 1.5 | **LOSS** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **UNRESOLVED** |
+| — | Potential winner: Cannes | **WIN** |
+
+**What went right:** the low-total and BTTS state was excellent, and the winner call was correct.
+
+**What went wrong:** again, the team-score allocation was a half-goal too low. A 2–0 final wins Under 2.5 while losing Cannes Under 1.5; these are not contradictory outcomes.
+
+**Source note:** the two scoring sequences being corner-related is useful mechanism evidence but cannot by itself recover the final number of corners. C05 stays unresolved.
+
+---
+
+### P-179 — Thionville Lusitanos vs Paris 13 Atletico — Ligue 3
+
+**Final:** 1–1; halftime 0–0.  
+**Corners:** a current specialist result page reports Thionville 8–1 Paris 13 (9 total); this row remains provider-provisional.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Thionville Team Over 0.5 | **WIN** |
+| 2 | 1st Half Over 0.5 | **LOSS** |
+| 3 | Paris 13 Team Under 1.5 | **WIN** |
+| 4 | Under 2.5 Goals | **WIN** |
+| 5 | Under 10.5 Corners | **PROVISIONAL WIN** |
+| — | Potential winner: Thionville | **LOSS — DRAW** |
+
+**Retrospective:** the goal-volume/team-total structure was sound. The winner call was less robust than the two team-total/Under rows because a 1–1 state satisfied the core scoring thesis while defeating the side.
+
+---
+
+### P-180 — 1. FC Köln vs TSG Hoffenheim — Bundesliga
+
+**Official final:** Köln 3–2 Hoffenheim.  
+**Retrieved current stats:** Hoffenheim won the corner count 7–6.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 | **WIN** |
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Aubagne Team Under 1.5 | **LOSS** |
+| 2 | Under 2.5 Goals | **WIN** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **WIN** |
+| — | Potential winner: Bourg-en-Bresse | **LOSS** |
+
+#### Deep Rank #1 retrospective
+
+**Pregame thesis:** Aubagne had scored zero in the first three league games, so keeping them to 0–1 was treated as safer than the global match Under.
+
+**Actual path:** Aubagne broke the drought twice by the 11th minute and then the match completely compressed, finishing 2–0.
+
+**Primary defect:** `TEAM-SCORE ALLOCATION ERROR`. The global low-total/BTTS state was largely correct; the forecast allocated too little of the limited scoring mass to Aubagne.
+
+**Small-sample problem:** a three-match zero-goal streak was allowed to behave too much like a stable attack ceiling. One or two early high-leverage attacks were enough to cross 1.5 even though the match remained low-event thereafter.
+
+**Ranking lesson:** when total-event suppression is stronger than which team scores those limited goals, the full-match Under can be more robust than a team Under.
+
+**What went right:** ranks #2–#5 all won. The first-half Over correctly preserved an early-goal branch despite the low total, BTTS No correctly captured one-sided scoring, and the corner Under held.
+
+**Prospective lesson candidate:** shrink zero-goal streaks to chance-creation priors; separate *total-event state* from *team allocation*.
+
+---
+
+### P-178 — Cannes vs Le Puy — Ligue 3
+
+**Final:** Cannes 2–0 Le Puy. Both goals arose from corner/set-piece sequences in current match reporting.  
+**Corner aggregate:** not recovered from a trusted final provider.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 2.5 Goals | **WIN** |
+| 2 | Cannes Team Under 1.5 | **LOSS** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **UNRESOLVED** |
+| — | Potential winner: Cannes | **WIN** |
+
+**What went right:** the low-total and BTTS state was excellent, and the winner call was correct.
+
+**What went wrong:** again, the team-score allocation was a half-goal too low. A 2–0 final wins Under 2.5 while losing Cannes Under 1.5; these are not contradictory outcomes.
+
+**Source note:** the two scoring sequences being corner-related is useful mechanism evidence but cannot by itself recover the final number of corners. C05 stays unresolved.
+
+---
+
+### P-179 — Thionville Lusitanos vs Paris 13 Atletico — Ligue 3
+
+**Final:** 1–1; halftime 0–0.  
+**Corners:** a current specialist result page reports Thionville 8–1 Paris 13 (9 total); this row remains provider-provisional.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Thionville Team Over 0.5 | **WIN** |
+| 2 | 1st Half Over 0.5 | **LOSS** |
+| 3 | Paris 13 Team Under 1.5 | **WIN** |
+| 4 | Under 2.5 Goals | **WIN** |
+| 5 | Under 10.5 Corners | **PROVISIONAL WIN** |
+| — | Potential winner: Thionville | **LOSS — DRAW** |
+
+**Retrospective:** the goal-volume/team-total structure was sound. The winner call was less robust than the two team-total/Under rows because a 1–1 state satisfied the core scoring thesis while defeating the side.
+
+---
+
+### P-180 — 1. FC Köln vs TSG Hoffenheim — Bundesliga
+
+**Official final:** Köln 3–2 Hoffenheim.  
+**Retrieved current stats:** Hoffenheim won the corner count 7–6.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 | **WIN** |
+| 2 | Hoffenheim Team Over 0.5 | **WIN** |
+
+|---:|---|---|
+| 1 | Aubagne Team Under 1.5 | **LOSS** |
+| 2 | Under 2.5 Goals | **WIN** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **WIN** |
+| — | Potential winner: Bourg-en-Bresse | **LOSS** |
+
+#### Deep Rank #1 retrospective
+
+**Pregame thesis:** Aubagne had scored zero in the first three league games, so keeping them to 0–1 was treated as safer than the global match Under.
+
+**Actual path:** Aubagne broke the drought twice by the 11th minute and then the match completely compressed, finishing 2–0.
+
+**Primary defect:** `TEAM-SCORE ALLOCATION ERROR`. The global low-total/BTTS state was largely correct; the forecast allocated too little of the limited scoring mass to Aubagne.
+
+**Small-sample problem:** a three-match zero-goal streak was allowed to behave too much like a stable attack ceiling. One or two early high-leverage attacks were enough to cross 1.5 even though the match remained low-event thereafter.
+
+**Ranking lesson:** when total-event suppression is stronger than which team scores those limited goals, the full-match Under can be more robust than a team Under.
+
+**What went right:** ranks #2–#5 all won. The first-half Over correctly preserved an early-goal branch despite the low total, BTTS No correctly captured one-sided scoring, and the corner Under held.
+
+**Prospective lesson candidate:** shrink zero-goal streaks to chance-creation priors; separate *total-event state* from *team allocation*.
+
+---
+
+### P-178 — Cannes vs Le Puy — Ligue 3
+
+**Final:** Cannes 2–0 Le Puy. Both goals arose from corner/set-piece sequences in current match reporting.  
+**Corner aggregate:** not recovered from a trusted final provider.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 2.5 Goals | **WIN** |
+| 2 | Cannes Team Under 1.5 | **LOSS** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **UNRESOLVED** |
+| — | Potential winner: Cannes | **WIN** |
+
+**What went right:** the low-total and BTTS state was excellent, and the winner call was correct.
+
+**What went wrong:** again, the team-score allocation was a half-goal too low. A 2–0 final wins Under 2.5 while losing Cannes Under 1.5; these are not contradictory outcomes.
+
+**Source note:** the two scoring sequences being corner-related is useful mechanism evidence but cannot by itself recover the final number of corners. C05 stays unresolved.
+
+---
+
+### P-179 — Thionville Lusitanos vs Paris 13 Atletico — Ligue 3
+
+**Final:** 1–1; halftime 0–0.  
+**Corners:** a current specialist result page reports Thionville 8–1 Paris 13 (9 total); this row remains provider-provisional.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Thionville Team Over 0.5 | **WIN** |
+| 2 | 1st Half Over 0.5 | **LOSS** |
+| 3 | Paris 13 Team Under 1.5 | **WIN** |
+| 4 | Under 2.5 Goals | **WIN** |
+| 5 | Under 10.5 Corners | **PROVISIONAL WIN** |
+| — | Potential winner: Thionville | **LOSS — DRAW** |
+
+**Retrospective:** the goal-volume/team-total structure was sound. The winner call was less robust than the two team-total/Under rows because a 1–1 state satisfied the core scoring thesis while defeating the side.
+
+---
+
+### P-180 — 1. FC Köln vs TSG Hoffenheim — Bundesliga
+
+**Official final:** Köln 3–2 Hoffenheim.  
+**Retrieved current stats:** Hoffenheim won the corner count 7–6.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 | **WIN** |
+| 2 | Hoffenheim Team Over 0.5 | **WIN** |
+| 3 | Hoffenheim or Draw X2 | **LOSS** |
+
+| 1 | Aubagne Team Under 1.5 | **LOSS** |
+| 2 | Under 2.5 Goals | **WIN** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **WIN** |
+| — | Potential winner: Bourg-en-Bresse | **LOSS** |
+
+#### Deep Rank #1 retrospective
+
+**Pregame thesis:** Aubagne had scored zero in the first three league games, so keeping them to 0–1 was treated as safer than the global match Under.
+
+**Actual path:** Aubagne broke the drought twice by the 11th minute and then the match completely compressed, finishing 2–0.
+
+**Primary defect:** `TEAM-SCORE ALLOCATION ERROR`. The global low-total/BTTS state was largely correct; the forecast allocated too little of the limited scoring mass to Aubagne.
+
+**Small-sample problem:** a three-match zero-goal streak was allowed to behave too much like a stable attack ceiling. One or two early high-leverage attacks were enough to cross 1.5 even though the match remained low-event thereafter.
+
+**Ranking lesson:** when total-event suppression is stronger than which team scores those limited goals, the full-match Under can be more robust than a team Under.
+
+**What went right:** ranks #2–#5 all won. The first-half Over correctly preserved an early-goal branch despite the low total, BTTS No correctly captured one-sided scoring, and the corner Under held.
+
+**Prospective lesson candidate:** shrink zero-goal streaks to chance-creation priors; separate *total-event state* from *team allocation*.
+
+---
+
+### P-178 — Cannes vs Le Puy — Ligue 3
+
+**Final:** Cannes 2–0 Le Puy. Both goals arose from corner/set-piece sequences in current match reporting.  
+**Corner aggregate:** not recovered from a trusted final provider.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 2.5 Goals | **WIN** |
+| 2 | Cannes Team Under 1.5 | **LOSS** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **UNRESOLVED** |
+| — | Potential winner: Cannes | **WIN** |
+
+**What went right:** the low-total and BTTS state was excellent, and the winner call was correct.
+
+**What went wrong:** again, the team-score allocation was a half-goal too low. A 2–0 final wins Under 2.5 while losing Cannes Under 1.5; these are not contradictory outcomes.
+
+**Source note:** the two scoring sequences being corner-related is useful mechanism evidence but cannot by itself recover the final number of corners. C05 stays unresolved.
+
+---
+
+### P-179 — Thionville Lusitanos vs Paris 13 Atletico — Ligue 3
+
+**Final:** 1–1; halftime 0–0.  
+**Corners:** a current specialist result page reports Thionville 8–1 Paris 13 (9 total); this row remains provider-provisional.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Thionville Team Over 0.5 | **WIN** |
+| 2 | 1st Half Over 0.5 | **LOSS** |
+| 3 | Paris 13 Team Under 1.5 | **WIN** |
+| 4 | Under 2.5 Goals | **WIN** |
+| 5 | Under 10.5 Corners | **PROVISIONAL WIN** |
+| — | Potential winner: Thionville | **LOSS — DRAW** |
+
+**Retrospective:** the goal-volume/team-total structure was sound. The winner call was less robust than the two team-total/Under rows because a 1–1 state satisfied the core scoring thesis while defeating the side.
+
+---
+
+### P-180 — 1. FC Köln vs TSG Hoffenheim — Bundesliga
+
+**Official final:** Köln 3–2 Hoffenheim.  
+**Retrieved current stats:** Hoffenheim won the corner count 7–6.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 | **WIN** |
+| 2 | Hoffenheim Team Over 0.5 | **WIN** |
+| 3 | Hoffenheim or Draw X2 | **LOSS** |
+| 4 | Over 2.5 Goals | **WIN** |

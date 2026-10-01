@@ -1,0 +1,307 @@
+Source: [ATP Zhangjiagang results](https://www.atptour.com/en/scores/current-challenger/zhangjiagang/7783/results).
+
+## P-226 settlement and deep rank-#1 retrospective — Hanshin @ Yakult
+
+Verified outcome: **Hanshin 6, Yakult 2; 8 total runs; Hanshin won by four.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 7.5 | **LOSS** |
+| 2 | Yakult +2.5 | **LOSS** |
+| 3 | Hanshin -2.5 | **WIN** |
+| 4 | Over 7.5 | **WIN** |
+| — | Potential winner: Hanshin | **WIN** |
+
+What went right: the team-quality and starter-direction analysis correctly preferred Hanshin. The original card explicitly identified Hanshin's 67-49-1 record, Takahashi's large starter advantage, league-best team ERA and Hanshin's 12-6 season H2H edge. Those signals supported both the winner and the 2+ separation path.
+
+Why rank #1 failed: the Under was based on strong historical counts—Hanshin games 9/10 Under and recent H2H 8/9 Under—but the 7.5 threshold left no margin for an ordinary 6-2 favourite win. Jingu's hitter-friendly environment and Yoshimura's 4.39 ERA/5.10 recent-five ERA were known upper-tail factors. The analysis treated the favourite's run-production ceiling as a remote tail even though the same team-quality evidence used for the winner supported a 5–7 run Hanshin output.
+
+Why rank #2 also failed: Yakult +2.5 was paired too tightly with the Under. A low or moderate total does not imply a close score. Hanshin's superior starter could suppress Yakult while Yoshimura allowed enough for separation—the exact 6-2 state.
+
+Required improvement:
+
+1. At totals of 7.5 or lower, calculate one-sided 5-1/6-1/6-2 states separately; do not equate a low league environment with close margins.
+2. When winner confidence is strong and the underdog +2.5 has only a thin offensive ceiling against an elite starter, the favourite run line should move above the dog cushion.
+3. Downweight raw H2H Under frequency when today's weaker starter and park environment create a plausible favourite-only scoring expansion.
+4. A better pre-game order from the stated evidence would have been **Hanshin -2.5 / Under 7.5 / Over 7.5 / Yakult +2.5**, with all still capped because exact probabilities were unavailable.
+
+Source: [official NPB September 1 scores](https://npb.jp/bis/eng/2026/games/).
+
+## P-227 settlement — Hiroshima @ Chunichi
+
+Verified outcome: **Hiroshima 5, Chunichi 1; 6 total runs. The game was 0-0 through six before Hiroshima scored five in the seventh.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hiroshima +1.5 | **WIN** |
+| 2 | Under 6.5 | **WIN** |
+| 3 | Chunichi +0.5 | **LOSS** |
+| 4 | Over 6.5 | **LOSS** |
+| — | Potential winner: Chunichi | **LOSS** |
+
+What went right: the top cushion was robust and the starter/park suppression case was correct for most of the game. Six total runs stayed just below 6.5.
+
+What went wrong: the winner call did not survive the post-starter transition. The 0-0 start validated the pitching analysis; Hiroshima's five-run seventh showed that bullpen/defensive cluster risk—not the starter matchup—decided the side.
+
+Learning: split winner forecasting into starter innings and relief innings. A low total can still contain one decisive multi-run bullpen inning; that state should be reflected in side rankings.
+
+Source: [official NPB game result](https://npb.jp/scores/2026/0901/d-c-20/).
+
+## P-228 settlement — Orix @ Rakuten
+
+Verified outcome: **Rakuten 5, Orix 1; 6 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Rakuten +0.5 | **WIN** |
+| 2 | Over 6.5 | **LOSS** |
+| 3 | Orix +0.5 | **LOSS** |
+| 4 | Under 6.5 | **WIN** |
+| — | Potential winner: Rakuten | **WIN** |
+
+What went right: Rakuten's same-event winner baseline, season-series position and recent success in the identical starter matchup supported the top pick. The Under branch also correctly respected the 5-1 prior starter-pair result.
+
+What went wrong: the Over was ranked above an Under that had the more directly comparable starter-pair evidence. The final repeated that 5-1 score exactly.
+
+Learning: an exact recent starter-pair comparator at the same matchup deserves more weight than broad bullpen/league Over patterns when no material lineup or park-state change is verified.
+
+Source: [official NPB September 1 scores](https://npb.jp/bis/eng/2026/games/).
+
+## P-229 settlement and deep rank-#1 retrospective — Hanwha @ KT
+
+Verified outcome: **KT 6, Hanwha 1; 7 total runs; KT won by five.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hanwha +1.5 | **LOSS** |
+
+
+## P-226 settlement and deep rank-#1 retrospective — Hanshin @ Yakult
+
+Verified outcome: **Hanshin 6, Yakult 2; 8 total runs; Hanshin won by four.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 7.5 | **LOSS** |
+| 2 | Yakult +2.5 | **LOSS** |
+| 3 | Hanshin -2.5 | **WIN** |
+| 4 | Over 7.5 | **WIN** |
+| — | Potential winner: Hanshin | **WIN** |
+
+What went right: the team-quality and starter-direction analysis correctly preferred Hanshin. The original card explicitly identified Hanshin's 67-49-1 record, Takahashi's large starter advantage, league-best team ERA and Hanshin's 12-6 season H2H edge. Those signals supported both the winner and the 2+ separation path.
+
+Why rank #1 failed: the Under was based on strong historical counts—Hanshin games 9/10 Under and recent H2H 8/9 Under—but the 7.5 threshold left no margin for an ordinary 6-2 favourite win. Jingu's hitter-friendly environment and Yoshimura's 4.39 ERA/5.10 recent-five ERA were known upper-tail factors. The analysis treated the favourite's run-production ceiling as a remote tail even though the same team-quality evidence used for the winner supported a 5–7 run Hanshin output.
+
+Why rank #2 also failed: Yakult +2.5 was paired too tightly with the Under. A low or moderate total does not imply a close score. Hanshin's superior starter could suppress Yakult while Yoshimura allowed enough for separation—the exact 6-2 state.
+
+Required improvement:
+
+1. At totals of 7.5 or lower, calculate one-sided 5-1/6-1/6-2 states separately; do not equate a low league environment with close margins.
+2. When winner confidence is strong and the underdog +2.5 has only a thin offensive ceiling against an elite starter, the favourite run line should move above the dog cushion.
+3. Downweight raw H2H Under frequency when today's weaker starter and park environment create a plausible favourite-only scoring expansion.
+4. A better pre-game order from the stated evidence would have been **Hanshin -2.5 / Under 7.5 / Over 7.5 / Yakult +2.5**, with all still capped because exact probabilities were unavailable.
+
+Source: [official NPB September 1 scores](https://npb.jp/bis/eng/2026/games/).
+
+## P-227 settlement — Hiroshima @ Chunichi
+
+Verified outcome: **Hiroshima 5, Chunichi 1; 6 total runs. The game was 0-0 through six before Hiroshima scored five in the seventh.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hiroshima +1.5 | **WIN** |
+| 2 | Under 6.5 | **WIN** |
+| 3 | Chunichi +0.5 | **LOSS** |
+| 4 | Over 6.5 | **LOSS** |
+| — | Potential winner: Chunichi | **LOSS** |
+
+What went right: the top cushion was robust and the starter/park suppression case was correct for most of the game. Six total runs stayed just below 6.5.
+
+What went wrong: the winner call did not survive the post-starter transition. The 0-0 start validated the pitching analysis; Hiroshima's five-run seventh showed that bullpen/defensive cluster risk—not the starter matchup—decided the side.
+
+Learning: split winner forecasting into starter innings and relief innings. A low total can still contain one decisive multi-run bullpen inning; that state should be reflected in side rankings.
+
+Source: [official NPB game result](https://npb.jp/scores/2026/0901/d-c-20/).
+
+## P-228 settlement — Orix @ Rakuten
+
+Verified outcome: **Rakuten 5, Orix 1; 6 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Rakuten +0.5 | **WIN** |
+| 2 | Over 6.5 | **LOSS** |
+| 3 | Orix +0.5 | **LOSS** |
+| 4 | Under 6.5 | **WIN** |
+| — | Potential winner: Rakuten | **WIN** |
+
+What went right: Rakuten's same-event winner baseline, season-series position and recent success in the identical starter matchup supported the top pick. The Under branch also correctly respected the 5-1 prior starter-pair result.
+
+What went wrong: the Over was ranked above an Under that had the more directly comparable starter-pair evidence. The final repeated that 5-1 score exactly.
+
+Learning: an exact recent starter-pair comparator at the same matchup deserves more weight than broad bullpen/league Over patterns when no material lineup or park-state change is verified.
+
+Source: [official NPB September 1 scores](https://npb.jp/bis/eng/2026/games/).
+
+## P-229 settlement and deep rank-#1 retrospective — Hanwha @ KT
+
+Verified outcome: **KT 6, Hanwha 1; 7 total runs; KT won by five.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hanwha +1.5 | **LOSS** |
+| 2 | Over 9.5 | **LOSS** |
+
+## P-226 settlement and deep rank-#1 retrospective — Hanshin @ Yakult
+
+Verified outcome: **Hanshin 6, Yakult 2; 8 total runs; Hanshin won by four.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 7.5 | **LOSS** |
+| 2 | Yakult +2.5 | **LOSS** |
+| 3 | Hanshin -2.5 | **WIN** |
+| 4 | Over 7.5 | **WIN** |
+| — | Potential winner: Hanshin | **WIN** |
+
+What went right: the team-quality and starter-direction analysis correctly preferred Hanshin. The original card explicitly identified Hanshin's 67-49-1 record, Takahashi's large starter advantage, league-best team ERA and Hanshin's 12-6 season H2H edge. Those signals supported both the winner and the 2+ separation path.
+
+Why rank #1 failed: the Under was based on strong historical counts—Hanshin games 9/10 Under and recent H2H 8/9 Under—but the 7.5 threshold left no margin for an ordinary 6-2 favourite win. Jingu's hitter-friendly environment and Yoshimura's 4.39 ERA/5.10 recent-five ERA were known upper-tail factors. The analysis treated the favourite's run-production ceiling as a remote tail even though the same team-quality evidence used for the winner supported a 5–7 run Hanshin output.
+
+Why rank #2 also failed: Yakult +2.5 was paired too tightly with the Under. A low or moderate total does not imply a close score. Hanshin's superior starter could suppress Yakult while Yoshimura allowed enough for separation—the exact 6-2 state.
+
+Required improvement:
+
+1. At totals of 7.5 or lower, calculate one-sided 5-1/6-1/6-2 states separately; do not equate a low league environment with close margins.
+2. When winner confidence is strong and the underdog +2.5 has only a thin offensive ceiling against an elite starter, the favourite run line should move above the dog cushion.
+3. Downweight raw H2H Under frequency when today's weaker starter and park environment create a plausible favourite-only scoring expansion.
+4. A better pre-game order from the stated evidence would have been **Hanshin -2.5 / Under 7.5 / Over 7.5 / Yakult +2.5**, with all still capped because exact probabilities were unavailable.
+
+Source: [official NPB September 1 scores](https://npb.jp/bis/eng/2026/games/).
+
+## P-227 settlement — Hiroshima @ Chunichi
+
+Verified outcome: **Hiroshima 5, Chunichi 1; 6 total runs. The game was 0-0 through six before Hiroshima scored five in the seventh.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hiroshima +1.5 | **WIN** |
+| 2 | Under 6.5 | **WIN** |
+| 3 | Chunichi +0.5 | **LOSS** |
+| 4 | Over 6.5 | **LOSS** |
+| — | Potential winner: Chunichi | **LOSS** |
+
+What went right: the top cushion was robust and the starter/park suppression case was correct for most of the game. Six total runs stayed just below 6.5.
+
+What went wrong: the winner call did not survive the post-starter transition. The 0-0 start validated the pitching analysis; Hiroshima's five-run seventh showed that bullpen/defensive cluster risk—not the starter matchup—decided the side.
+
+Learning: split winner forecasting into starter innings and relief innings. A low total can still contain one decisive multi-run bullpen inning; that state should be reflected in side rankings.
+
+Source: [official NPB game result](https://npb.jp/scores/2026/0901/d-c-20/).
+
+## P-228 settlement — Orix @ Rakuten
+
+Verified outcome: **Rakuten 5, Orix 1; 6 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Rakuten +0.5 | **WIN** |
+| 2 | Over 6.5 | **LOSS** |
+| 3 | Orix +0.5 | **LOSS** |
+| 4 | Under 6.5 | **WIN** |
+| — | Potential winner: Rakuten | **WIN** |
+
+What went right: Rakuten's same-event winner baseline, season-series position and recent success in the identical starter matchup supported the top pick. The Under branch also correctly respected the 5-1 prior starter-pair result.
+
+What went wrong: the Over was ranked above an Under that had the more directly comparable starter-pair evidence. The final repeated that 5-1 score exactly.
+
+Learning: an exact recent starter-pair comparator at the same matchup deserves more weight than broad bullpen/league Over patterns when no material lineup or park-state change is verified.
+
+Source: [official NPB September 1 scores](https://npb.jp/bis/eng/2026/games/).
+
+## P-229 settlement and deep rank-#1 retrospective — Hanwha @ KT
+
+Verified outcome: **KT 6, Hanwha 1; 7 total runs; KT won by five.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hanwha +1.5 | **LOSS** |
+| 2 | Over 9.5 | **LOSS** |
+| 3 | Under 9.5 | **WIN** |
+
+
+Verified outcome: **Hanshin 6, Yakult 2; 8 total runs; Hanshin won by four.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 7.5 | **LOSS** |
+| 2 | Yakult +2.5 | **LOSS** |
+| 3 | Hanshin -2.5 | **WIN** |
+| 4 | Over 7.5 | **WIN** |
+| — | Potential winner: Hanshin | **WIN** |
+
+What went right: the team-quality and starter-direction analysis correctly preferred Hanshin. The original card explicitly identified Hanshin's 67-49-1 record, Takahashi's large starter advantage, league-best team ERA and Hanshin's 12-6 season H2H edge. Those signals supported both the winner and the 2+ separation path.
+
+Why rank #1 failed: the Under was based on strong historical counts—Hanshin games 9/10 Under and recent H2H 8/9 Under—but the 7.5 threshold left no margin for an ordinary 6-2 favourite win. Jingu's hitter-friendly environment and Yoshimura's 4.39 ERA/5.10 recent-five ERA were known upper-tail factors. The analysis treated the favourite's run-production ceiling as a remote tail even though the same team-quality evidence used for the winner supported a 5–7 run Hanshin output.
+
+Why rank #2 also failed: Yakult +2.5 was paired too tightly with the Under. A low or moderate total does not imply a close score. Hanshin's superior starter could suppress Yakult while Yoshimura allowed enough for separation—the exact 6-2 state.
+
+Required improvement:
+
+1. At totals of 7.5 or lower, calculate one-sided 5-1/6-1/6-2 states separately; do not equate a low league environment with close margins.
+2. When winner confidence is strong and the underdog +2.5 has only a thin offensive ceiling against an elite starter, the favourite run line should move above the dog cushion.
+3. Downweight raw H2H Under frequency when today's weaker starter and park environment create a plausible favourite-only scoring expansion.
+4. A better pre-game order from the stated evidence would have been **Hanshin -2.5 / Under 7.5 / Over 7.5 / Yakult +2.5**, with all still capped because exact probabilities were unavailable.
+
+Source: [official NPB September 1 scores](https://npb.jp/bis/eng/2026/games/).
+
+## P-227 settlement — Hiroshima @ Chunichi
+
+Verified outcome: **Hiroshima 5, Chunichi 1; 6 total runs. The game was 0-0 through six before Hiroshima scored five in the seventh.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hiroshima +1.5 | **WIN** |
+| 2 | Under 6.5 | **WIN** |
+| 3 | Chunichi +0.5 | **LOSS** |
+| 4 | Over 6.5 | **LOSS** |
+| — | Potential winner: Chunichi | **LOSS** |
+
+What went right: the top cushion was robust and the starter/park suppression case was correct for most of the game. Six total runs stayed just below 6.5.
+
+What went wrong: the winner call did not survive the post-starter transition. The 0-0 start validated the pitching analysis; Hiroshima's five-run seventh showed that bullpen/defensive cluster risk—not the starter matchup—decided the side.
+
+Learning: split winner forecasting into starter innings and relief innings. A low total can still contain one decisive multi-run bullpen inning; that state should be reflected in side rankings.
+
+Source: [official NPB game result](https://npb.jp/scores/2026/0901/d-c-20/).
+
+## P-228 settlement — Orix @ Rakuten
+
+Verified outcome: **Rakuten 5, Orix 1; 6 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Rakuten +0.5 | **WIN** |
+| 2 | Over 6.5 | **LOSS** |
+| 3 | Orix +0.5 | **LOSS** |
+| 4 | Under 6.5 | **WIN** |
+| — | Potential winner: Rakuten | **WIN** |
+
+What went right: Rakuten's same-event winner baseline, season-series position and recent success in the identical starter matchup supported the top pick. The Under branch also correctly respected the 5-1 prior starter-pair result.
+
+What went wrong: the Over was ranked above an Under that had the more directly comparable starter-pair evidence. The final repeated that 5-1 score exactly.
+
+Learning: an exact recent starter-pair comparator at the same matchup deserves more weight than broad bullpen/league Over patterns when no material lineup or park-state change is verified.
+
+Source: [official NPB September 1 scores](https://npb.jp/bis/eng/2026/games/).
+
+## P-229 settlement and deep rank-#1 retrospective — Hanwha @ KT
+
+Verified outcome: **KT 6, Hanwha 1; 7 total runs; KT won by five.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hanwha +1.5 | **LOSS** |
+| 2 | Over 9.5 | **LOSS** |
+| 3 | Under 9.5 | **WIN** |
+| 4 | KT -1.5 | **WIN** |

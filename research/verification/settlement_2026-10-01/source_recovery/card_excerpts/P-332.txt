@@ -1,0 +1,383 @@
+
+---
+
+## P-331 — Milwaukee Brewers @ Cincinnati Reds — MLB
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+**Mean Brier:** **0.1893**.  
+**Potential winner:** Milwaukee — **LOSS**.
+
+### Retrospective
+1. **Driver:** Cincinnati's offence overwhelmed the Brewers in the middle innings. Elly De La Cruz drove in four, Cincinnati stacked multiple-hit performances, and Milwaukee defensive errors compounded the run environment. Singer allowed six runs but was supported by 12 Cincinnati runs, showing why the winner call and starter comparison were separable from the total.
+2. **Knowability:** **Partly.** The frozen card already had GABP homer volatility, Cincinnati's right-handed matchup path, Harrison's severe prior-start HR failure and a 10-run-ish upper state. It nevertheless leaned Milwaukee 64% on the stronger season/starter profile. The exact De La Cruz production, error sequence and 20-run final were unknowable.
+3. **Smallest routine change:** in hitter-friendly parks, keep **defence/error and multi-inning bullpen exposure** as separate run components rather than allowing the starting-pitcher comparison to dominate the winner allocation. This is not a blanket Over rule.
+
+**Source:** Reuters, “Elly De La Cruz (4 RBIs) powers Reds to series win over Brewers”: https://www.reuters.com/sports/baseball/elly-de-la-cruz-4-rbis-powers-reds-series-win-over-brewers--flm-2026-09-06/
+
+---
+
+## P-332 — Deportivo Alavés vs CA Osasuna
+
+### Settlement
+**Final:** Alavés 5–2 Osasuna. **HT:** Alavés 2–0.  
+Final corner displays: **Alavés 4, Osasuna 1; total 5**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | FT Under 2.5 | 0.60 | **LOSS** | 0.3600 |
+| 2 | Total corners Over 8.5 | 0.59 | **LOSS** — 5 | 0.3481 |
+| 3 | 1H Over 0.5 | 0.57 | **WIN** | 0.1849 |
+| 4 | 1H Under 0.5 | 0.43 | **LOSS** | 0.1849 |
+| 5 | FT Over 2.5 | 0.40 | **WIN** | 0.3600 |
+
+**Mean Brier:** **0.2876**.  
+**Potential winner:** Alavés — **WIN**.
+
+### Retrospective
+1. **Driver:** Alavés converted an even-looking opening into a 2–0 halftime lead, Osasuna immediately responded after halftime, and the match expanded to seven goals. Lucas Boyé scored a hat-trick. Despite the goal explosion, the match produced only five corners.
+2. **Knowability:** **Partly.** The frozen card had Alavés' strong current xG profile, Osasuna's Budimir threat, and a 2–1/1–2 upper-tail branch. But it made low-event 0–0/1–0/1–1 score families central and put Under 2.5 at 60%. Alavés lineup evidence was also conflicted, which should have widened the tails rather than supporting a narrow low-event centre. The exact hat-trick and seven-goal output were unknowable.
+3. **Smallest routine change:** when both teams have credible attacking xG/finishing routes and the participant state is conflicted, widen the **score-distribution tail** explicitly before assigning a 60% Under. Separately, do not infer corners from goal volume: seven goals occurred with only five corners.
+
+**Sources:**  
+- Official LaLiga final/timeline: https://www.laliga.com/es-CO/partido/temporada-2026-2027-laliga-ea-sports-deportivo-alaves-ca-osasuna-4  
+- Official Osasuna match report: https://www.osasuna.es/en/match-recap-alavesosasuna-2026/27  
+- OFStats final/corners cross-check: https://ofstats.com/matches/view/deportivo-alaves-osasuna-2026-09-06
+
+---
+
+# P-318–P-332 DESCRIPTIVE SETTLEMENT SUMMARY
+
+Issued sporting cards: **12** (`P-318, P-319, P-320, P-321, P-322, P-323, P-325, P-327, P-328, P-329, P-331, P-332`).  
+Administrative no-forecast closures: **3** (`P-324, P-326, P-330`).  
+Ranked rows issued and now settled: **57 = 28 W / 29 L**.  
+Potential-winner calls on issued cards: **7 W / 5 L**.
+
+These are mixed sports, mixed horizons and mixed target families. The raw 28/57 is **descriptive only** and is not a model accuracy claim, ROI, edge or calibration estimate.
+
+## v4.0 subjective-probability scorecard
+
+Cards with issued `UNVALIDATED_SUBJECTIVE` ranked-row probabilities: **P-323, P-325, P-327, P-328, P-329, P-331, P-332**.  
+Total scored binary ranked rows: **33**, with **17 W / 16 L**.  
+Mean Brier across those mixed populations: **0.2181** versus **0.2500** for a 0.5 baseline. This mixed-population figure is **not** the primary performance claim.
+
+`PRIMARY_SCORED` populations represented here:
+- **EPL (P-323 + P-328):** 10 rows, 5 W / 5 L, mean Brier **0.2666** vs 0.2500 baseline.
+- **MLB (P-331):** 4 rows, 2 W / 2 L, mean Brier **0.1893** vs 0.2500 baseline.
+- **Combined primary rows in this small continuation only:** 14 rows, 7 W / 7 L, mean Brier **0.2445** vs 0.2500 baseline.
+
+
+---
+
+## P-331 — Milwaukee Brewers @ Cincinnati Reds — MLB
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+**Mean Brier:** **0.1893**.  
+**Potential winner:** Milwaukee — **LOSS**.
+
+### Retrospective
+1. **Driver:** Cincinnati's offence overwhelmed the Brewers in the middle innings. Elly De La Cruz drove in four, Cincinnati stacked multiple-hit performances, and Milwaukee defensive errors compounded the run environment. Singer allowed six runs but was supported by 12 Cincinnati runs, showing why the winner call and starter comparison were separable from the total.
+2. **Knowability:** **Partly.** The frozen card already had GABP homer volatility, Cincinnati's right-handed matchup path, Harrison's severe prior-start HR failure and a 10-run-ish upper state. It nevertheless leaned Milwaukee 64% on the stronger season/starter profile. The exact De La Cruz production, error sequence and 20-run final were unknowable.
+3. **Smallest routine change:** in hitter-friendly parks, keep **defence/error and multi-inning bullpen exposure** as separate run components rather than allowing the starting-pitcher comparison to dominate the winner allocation. This is not a blanket Over rule.
+
+**Source:** Reuters, “Elly De La Cruz (4 RBIs) powers Reds to series win over Brewers”: https://www.reuters.com/sports/baseball/elly-de-la-cruz-4-rbis-powers-reds-series-win-over-brewers--flm-2026-09-06/
+
+---
+
+## P-332 — Deportivo Alavés vs CA Osasuna
+
+### Settlement
+**Final:** Alavés 5–2 Osasuna. **HT:** Alavés 2–0.  
+Final corner displays: **Alavés 4, Osasuna 1; total 5**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | FT Under 2.5 | 0.60 | **LOSS** | 0.3600 |
+| 2 | Total corners Over 8.5 | 0.59 | **LOSS** — 5 | 0.3481 |
+| 3 | 1H Over 0.5 | 0.57 | **WIN** | 0.1849 |
+| 4 | 1H Under 0.5 | 0.43 | **LOSS** | 0.1849 |
+| 5 | FT Over 2.5 | 0.40 | **WIN** | 0.3600 |
+
+**Mean Brier:** **0.2876**.  
+**Potential winner:** Alavés — **WIN**.
+
+### Retrospective
+1. **Driver:** Alavés converted an even-looking opening into a 2–0 halftime lead, Osasuna immediately responded after halftime, and the match expanded to seven goals. Lucas Boyé scored a hat-trick. Despite the goal explosion, the match produced only five corners.
+2. **Knowability:** **Partly.** The frozen card had Alavés' strong current xG profile, Osasuna's Budimir threat, and a 2–1/1–2 upper-tail branch. But it made low-event 0–0/1–0/1–1 score families central and put Under 2.5 at 60%. Alavés lineup evidence was also conflicted, which should have widened the tails rather than supporting a narrow low-event centre. The exact hat-trick and seven-goal output were unknowable.
+3. **Smallest routine change:** when both teams have credible attacking xG/finishing routes and the participant state is conflicted, widen the **score-distribution tail** explicitly before assigning a 60% Under. Separately, do not infer corners from goal volume: seven goals occurred with only five corners.
+
+**Sources:**  
+- Official LaLiga final/timeline: https://www.laliga.com/es-CO/partido/temporada-2026-2027-laliga-ea-sports-deportivo-alaves-ca-osasuna-4  
+- Official Osasuna match report: https://www.osasuna.es/en/match-recap-alavesosasuna-2026/27  
+- OFStats final/corners cross-check: https://ofstats.com/matches/view/deportivo-alaves-osasuna-2026-09-06
+
+---
+
+# P-318–P-332 DESCRIPTIVE SETTLEMENT SUMMARY
+
+Issued sporting cards: **12** (`P-318, P-319, P-320, P-321, P-322, P-323, P-325, P-327, P-328, P-329, P-331, P-332`).  
+Administrative no-forecast closures: **3** (`P-324, P-326, P-330`).  
+Ranked rows issued and now settled: **57 = 28 W / 29 L**.  
+Potential-winner calls on issued cards: **7 W / 5 L**.
+
+These are mixed sports, mixed horizons and mixed target families. The raw 28/57 is **descriptive only** and is not a model accuracy claim, ROI, edge or calibration estimate.
+
+## v4.0 subjective-probability scorecard
+
+Cards with issued `UNVALIDATED_SUBJECTIVE` ranked-row probabilities: **P-323, P-325, P-327, P-328, P-329, P-331, P-332**.  
+Total scored binary ranked rows: **33**, with **17 W / 16 L**.  
+Mean Brier across those mixed populations: **0.2181** versus **0.2500** for a 0.5 baseline. This mixed-population figure is **not** the primary performance claim.
+
+`PRIMARY_SCORED` populations represented here:
+- **EPL (P-323 + P-328):** 10 rows, 5 W / 5 L, mean Brier **0.2666** vs 0.2500 baseline.
+- **MLB (P-331):** 4 rows, 2 W / 2 L, mean Brier **0.1893** vs 0.2500 baseline.
+- **Combined primary rows in this small continuation only:** 14 rows, 7 W / 7 L, mean Brier **0.2445** vs 0.2500 baseline.
+
+The samples are far too small for calibration or superiority claims. Complementary rows also create dependence, so row counts are not independent event trials.
+
+
+## P-331 — Milwaukee Brewers @ Cincinnati Reds — MLB
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+**Mean Brier:** **0.1893**.  
+**Potential winner:** Milwaukee — **LOSS**.
+
+### Retrospective
+1. **Driver:** Cincinnati's offence overwhelmed the Brewers in the middle innings. Elly De La Cruz drove in four, Cincinnati stacked multiple-hit performances, and Milwaukee defensive errors compounded the run environment. Singer allowed six runs but was supported by 12 Cincinnati runs, showing why the winner call and starter comparison were separable from the total.
+2. **Knowability:** **Partly.** The frozen card already had GABP homer volatility, Cincinnati's right-handed matchup path, Harrison's severe prior-start HR failure and a 10-run-ish upper state. It nevertheless leaned Milwaukee 64% on the stronger season/starter profile. The exact De La Cruz production, error sequence and 20-run final were unknowable.
+3. **Smallest routine change:** in hitter-friendly parks, keep **defence/error and multi-inning bullpen exposure** as separate run components rather than allowing the starting-pitcher comparison to dominate the winner allocation. This is not a blanket Over rule.
+
+**Source:** Reuters, “Elly De La Cruz (4 RBIs) powers Reds to series win over Brewers”: https://www.reuters.com/sports/baseball/elly-de-la-cruz-4-rbis-powers-reds-series-win-over-brewers--flm-2026-09-06/
+
+---
+
+## P-332 — Deportivo Alavés vs CA Osasuna
+
+### Settlement
+**Final:** Alavés 5–2 Osasuna. **HT:** Alavés 2–0.  
+Final corner displays: **Alavés 4, Osasuna 1; total 5**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | FT Under 2.5 | 0.60 | **LOSS** | 0.3600 |
+| 2 | Total corners Over 8.5 | 0.59 | **LOSS** — 5 | 0.3481 |
+| 3 | 1H Over 0.5 | 0.57 | **WIN** | 0.1849 |
+| 4 | 1H Under 0.5 | 0.43 | **LOSS** | 0.1849 |
+| 5 | FT Over 2.5 | 0.40 | **WIN** | 0.3600 |
+
+**Mean Brier:** **0.2876**.  
+**Potential winner:** Alavés — **WIN**.
+
+### Retrospective
+1. **Driver:** Alavés converted an even-looking opening into a 2–0 halftime lead, Osasuna immediately responded after halftime, and the match expanded to seven goals. Lucas Boyé scored a hat-trick. Despite the goal explosion, the match produced only five corners.
+2. **Knowability:** **Partly.** The frozen card had Alavés' strong current xG profile, Osasuna's Budimir threat, and a 2–1/1–2 upper-tail branch. But it made low-event 0–0/1–0/1–1 score families central and put Under 2.5 at 60%. Alavés lineup evidence was also conflicted, which should have widened the tails rather than supporting a narrow low-event centre. The exact hat-trick and seven-goal output were unknowable.
+3. **Smallest routine change:** when both teams have credible attacking xG/finishing routes and the participant state is conflicted, widen the **score-distribution tail** explicitly before assigning a 60% Under. Separately, do not infer corners from goal volume: seven goals occurred with only five corners.
+
+**Sources:**  
+- Official LaLiga final/timeline: https://www.laliga.com/es-CO/partido/temporada-2026-2027-laliga-ea-sports-deportivo-alaves-ca-osasuna-4  
+- Official Osasuna match report: https://www.osasuna.es/en/match-recap-alavesosasuna-2026/27  
+- OFStats final/corners cross-check: https://ofstats.com/matches/view/deportivo-alaves-osasuna-2026-09-06
+
+---
+
+# P-318–P-332 DESCRIPTIVE SETTLEMENT SUMMARY
+
+Issued sporting cards: **12** (`P-318, P-319, P-320, P-321, P-322, P-323, P-325, P-327, P-328, P-329, P-331, P-332`).  
+Administrative no-forecast closures: **3** (`P-324, P-326, P-330`).  
+Ranked rows issued and now settled: **57 = 28 W / 29 L**.  
+Potential-winner calls on issued cards: **7 W / 5 L**.
+
+These are mixed sports, mixed horizons and mixed target families. The raw 28/57 is **descriptive only** and is not a model accuracy claim, ROI, edge or calibration estimate.
+
+## v4.0 subjective-probability scorecard
+
+Cards with issued `UNVALIDATED_SUBJECTIVE` ranked-row probabilities: **P-323, P-325, P-327, P-328, P-329, P-331, P-332**.  
+Total scored binary ranked rows: **33**, with **17 W / 16 L**.  
+Mean Brier across those mixed populations: **0.2181** versus **0.2500** for a 0.5 baseline. This mixed-population figure is **not** the primary performance claim.
+
+`PRIMARY_SCORED` populations represented here:
+- **EPL (P-323 + P-328):** 10 rows, 5 W / 5 L, mean Brier **0.2666** vs 0.2500 baseline.
+- **MLB (P-331):** 4 rows, 2 W / 2 L, mean Brier **0.1893** vs 0.2500 baseline.
+- **Combined primary rows in this small continuation only:** 14 rows, 7 W / 7 L, mean Brier **0.2445** vs 0.2500 baseline.
+
+The samples are far too small for calibration or superiority claims. Complementary rows also create dependence, so row counts are not independent event trials.
+
+
+## P-331 — Milwaukee Brewers @ Cincinnati Reds — MLB
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+**Mean Brier:** **0.1893**.  
+**Potential winner:** Milwaukee — **LOSS**.
+
+### Retrospective
+1. **Driver:** Cincinnati's offence overwhelmed the Brewers in the middle innings. Elly De La Cruz drove in four, Cincinnati stacked multiple-hit performances, and Milwaukee defensive errors compounded the run environment. Singer allowed six runs but was supported by 12 Cincinnati runs, showing why the winner call and starter comparison were separable from the total.
+2. **Knowability:** **Partly.** The frozen card already had GABP homer volatility, Cincinnati's right-handed matchup path, Harrison's severe prior-start HR failure and a 10-run-ish upper state. It nevertheless leaned Milwaukee 64% on the stronger season/starter profile. The exact De La Cruz production, error sequence and 20-run final were unknowable.
+3. **Smallest routine change:** in hitter-friendly parks, keep **defence/error and multi-inning bullpen exposure** as separate run components rather than allowing the starting-pitcher comparison to dominate the winner allocation. This is not a blanket Over rule.
+
+**Source:** Reuters, “Elly De La Cruz (4 RBIs) powers Reds to series win over Brewers”: https://www.reuters.com/sports/baseball/elly-de-la-cruz-4-rbis-powers-reds-series-win-over-brewers--flm-2026-09-06/
+
+---
+
+## P-332 — Deportivo Alavés vs CA Osasuna
+
+### Settlement
+**Final:** Alavés 5–2 Osasuna. **HT:** Alavés 2–0.  
+Final corner displays: **Alavés 4, Osasuna 1; total 5**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | FT Under 2.5 | 0.60 | **LOSS** | 0.3600 |
+| 2 | Total corners Over 8.5 | 0.59 | **LOSS** — 5 | 0.3481 |
+| 3 | 1H Over 0.5 | 0.57 | **WIN** | 0.1849 |
+| 4 | 1H Under 0.5 | 0.43 | **LOSS** | 0.1849 |
+| 5 | FT Over 2.5 | 0.40 | **WIN** | 0.3600 |
+
+**Mean Brier:** **0.2876**.  
+**Potential winner:** Alavés — **WIN**.
+
+### Retrospective
+1. **Driver:** Alavés converted an even-looking opening into a 2–0 halftime lead, Osasuna immediately responded after halftime, and the match expanded to seven goals. Lucas Boyé scored a hat-trick. Despite the goal explosion, the match produced only five corners.
+2. **Knowability:** **Partly.** The frozen card had Alavés' strong current xG profile, Osasuna's Budimir threat, and a 2–1/1–2 upper-tail branch. But it made low-event 0–0/1–0/1–1 score families central and put Under 2.5 at 60%. Alavés lineup evidence was also conflicted, which should have widened the tails rather than supporting a narrow low-event centre. The exact hat-trick and seven-goal output were unknowable.
+3. **Smallest routine change:** when both teams have credible attacking xG/finishing routes and the participant state is conflicted, widen the **score-distribution tail** explicitly before assigning a 60% Under. Separately, do not infer corners from goal volume: seven goals occurred with only five corners.
+
+**Sources:**  
+- Official LaLiga final/timeline: https://www.laliga.com/es-CO/partido/temporada-2026-2027-laliga-ea-sports-deportivo-alaves-ca-osasuna-4  
+- Official Osasuna match report: https://www.osasuna.es/en/match-recap-alavesosasuna-2026/27  
+- OFStats final/corners cross-check: https://ofstats.com/matches/view/deportivo-alaves-osasuna-2026-09-06
+
+---
+
+# P-318–P-332 DESCRIPTIVE SETTLEMENT SUMMARY
+
+Issued sporting cards: **12** (`P-318, P-319, P-320, P-321, P-322, P-323, P-325, P-327, P-328, P-329, P-331, P-332`).  
+Administrative no-forecast closures: **3** (`P-324, P-326, P-330`).  
+Ranked rows issued and now settled: **57 = 28 W / 29 L**.  
+Potential-winner calls on issued cards: **7 W / 5 L**.
+
+These are mixed sports, mixed horizons and mixed target families. The raw 28/57 is **descriptive only** and is not a model accuracy claim, ROI, edge or calibration estimate.
+
+## v4.0 subjective-probability scorecard
+
+Cards with issued `UNVALIDATED_SUBJECTIVE` ranked-row probabilities: **P-323, P-325, P-327, P-328, P-329, P-331, P-332**.  
+Total scored binary ranked rows: **33**, with **17 W / 16 L**.  
+Mean Brier across those mixed populations: **0.2181** versus **0.2500** for a 0.5 baseline. This mixed-population figure is **not** the primary performance claim.
+
+`PRIMARY_SCORED` populations represented here:
+- **EPL (P-323 + P-328):** 10 rows, 5 W / 5 L, mean Brier **0.2666** vs 0.2500 baseline.
+- **MLB (P-331):** 4 rows, 2 W / 2 L, mean Brier **0.1893** vs 0.2500 baseline.
+- **Combined primary rows in this small continuation only:** 14 rows, 7 W / 7 L, mean Brier **0.2445** vs 0.2500 baseline.
+
+The samples are far too small for calibration or superiority claims. Complementary rows also create dependence, so row counts are not independent event trials.
+
+---
+
+
+### Settlement
+**Final:** Cincinnati Reds 12–8 Milwaukee Brewers.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | Combined Total Over 8.5 | 0.57 | **WIN** | 0.1849 |
+| 2 | Cincinnati +1.5 | 0.56 | **WIN** | 0.1936 |
+| 3 | Milwaukee -1.5 | 0.44 | **LOSS** | 0.1936 |
+| 4 | Combined Total Under 8.5 | 0.43 | **LOSS** | 0.1849 |
+
+**Mean Brier:** **0.1893**.  
+**Potential winner:** Milwaukee — **LOSS**.
+
+### Retrospective
+1. **Driver:** Cincinnati's offence overwhelmed the Brewers in the middle innings. Elly De La Cruz drove in four, Cincinnati stacked multiple-hit performances, and Milwaukee defensive errors compounded the run environment. Singer allowed six runs but was supported by 12 Cincinnati runs, showing why the winner call and starter comparison were separable from the total.
+2. **Knowability:** **Partly.** The frozen card already had GABP homer volatility, Cincinnati's right-handed matchup path, Harrison's severe prior-start HR failure and a 10-run-ish upper state. It nevertheless leaned Milwaukee 64% on the stronger season/starter profile. The exact De La Cruz production, error sequence and 20-run final were unknowable.
+3. **Smallest routine change:** in hitter-friendly parks, keep **defence/error and multi-inning bullpen exposure** as separate run components rather than allowing the starting-pitcher comparison to dominate the winner allocation. This is not a blanket Over rule.
+
+**Source:** Reuters, “Elly De La Cruz (4 RBIs) powers Reds to series win over Brewers”: https://www.reuters.com/sports/baseball/elly-de-la-cruz-4-rbis-powers-reds-series-win-over-brewers--flm-2026-09-06/
+
+---
+
+## P-332 — Deportivo Alavés vs CA Osasuna
+
+### Settlement
+**Final:** Alavés 5–2 Osasuna. **HT:** Alavés 2–0.  
+Final corner displays: **Alavés 4, Osasuna 1; total 5**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | FT Under 2.5 | 0.60 | **LOSS** | 0.3600 |
+| 2 | Total corners Over 8.5 | 0.59 | **LOSS** — 5 | 0.3481 |
+| 3 | 1H Over 0.5 | 0.57 | **WIN** | 0.1849 |
+| 4 | 1H Under 0.5 | 0.43 | **LOSS** | 0.1849 |
+| 5 | FT Over 2.5 | 0.40 | **WIN** | 0.3600 |
+
+**Mean Brier:** **0.2876**.  
+**Potential winner:** Alavés — **WIN**.
+
+### Retrospective
+1. **Driver:** Alavés converted an even-looking opening into a 2–0 halftime lead, Osasuna immediately responded after halftime, and the match expanded to seven goals. Lucas Boyé scored a hat-trick. Despite the goal explosion, the match produced only five corners.
+2. **Knowability:** **Partly.** The frozen card had Alavés' strong current xG profile, Osasuna's Budimir threat, and a 2–1/1–2 upper-tail branch. But it made low-event 0–0/1–0/1–1 score families central and put Under 2.5 at 60%. Alavés lineup evidence was also conflicted, which should have widened the tails rather than supporting a narrow low-event centre. The exact hat-trick and seven-goal output were unknowable.
+3. **Smallest routine change:** when both teams have credible attacking xG/finishing routes and the participant state is conflicted, widen the **score-distribution tail** explicitly before assigning a 60% Under. Separately, do not infer corners from goal volume: seven goals occurred with only five corners.
+
+**Sources:**  
+- Official LaLiga final/timeline: https://www.laliga.com/es-CO/partido/temporada-2026-2027-laliga-ea-sports-deportivo-alaves-ca-osasuna-4  
+- Official Osasuna match report: https://www.osasuna.es/en/match-recap-alavesosasuna-2026/27  
+- OFStats final/corners cross-check: https://ofstats.com/matches/view/deportivo-alaves-osasuna-2026-09-06
+
+---
+
+# P-318–P-332 DESCRIPTIVE SETTLEMENT SUMMARY
+
+Issued sporting cards: **12** (`P-318, P-319, P-320, P-321, P-322, P-323, P-325, P-327, P-328, P-329, P-331, P-332`).  
+Administrative no-forecast closures: **3** (`P-324, P-326, P-330`).  
+Ranked rows issued and now settled: **57 = 28 W / 29 L**.  
+Potential-winner calls on issued cards: **7 W / 5 L**.
+
+These are mixed sports, mixed horizons and mixed target families. The raw 28/57 is **descriptive only** and is not a model accuracy claim, ROI, edge or calibration estimate.
+
+## v4.0 subjective-probability scorecard
+
+Cards with issued `UNVALIDATED_SUBJECTIVE` ranked-row probabilities: **P-323, P-325, P-327, P-328, P-329, P-331, P-332**.  
+Total scored binary ranked rows: **33**, with **17 W / 16 L**.  
+Mean Brier across those mixed populations: **0.2181** versus **0.2500** for a 0.5 baseline. This mixed-population figure is **not** the primary performance claim.
+
+`PRIMARY_SCORED` populations represented here:
+- **EPL (P-323 + P-328):** 10 rows, 5 W / 5 L, mean Brier **0.2666** vs 0.2500 baseline.
+- **MLB (P-331):** 4 rows, 2 W / 2 L, mean Brier **0.1893** vs 0.2500 baseline.
+- **Combined primary rows in this small continuation only:** 14 rows, 7 W / 7 L, mean Brier **0.2445** vs 0.2500 baseline.
+
+The samples are far too small for calibration or superiority claims. Complementary rows also create dependence, so row counts are not independent event trials.
+
+---

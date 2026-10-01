@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-01T02:17:02.970997+00:00",
+  "status": "COMPLETE",
+  "no_cards_issued": true,
+  "lanes": {
+    "EPL": {
+      "status": "SHADOW_ONLY",
+      "completed": 50,
+      "upcoming": 330,
+      "frozen": 0,
+      "abstained": 0,
+      "diagnostic_grades": 0
+    },
+    "NBL": {
+      "status": "SHADOW_ONLY",
+      "completed": 15,
+      "upcoming": 150,
+      "frozen": 3,
+      "abstained": 0,
+      "diagnostic_grades": 2
+    }
+  }
+}

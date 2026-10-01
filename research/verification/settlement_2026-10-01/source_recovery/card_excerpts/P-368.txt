@@ -1,0 +1,384 @@
+- **Q1:** **No** — the XI was not retrieved at the freeze, and the toss was reported only by a secondary thread. (Glasgow's actual attack was not re-examined this pass.)
+- **Q2:** The ETPL first-party page stayed a **stale "Yet to bat" shell for more than 24 hours** after the match — it read that way at 23:12 AEST on 11 Sep and COMPLETED by ~23:30. Settlement correctly ran through the independent scorecards. → the stale-shell rule and the fallback ladder (`RULES_SOCCER.md` control 17 generalised; `SOURCES.md` §"2026-09-11").
+- **Q3:** None material. This is the **worked example of target-by-target settlement**: a reached phase target grades; an unreached endpoint is censored and not remapped (cricket control 15).
+
+**Three-question retrospective.** 1. *Driver:* a cautious new-ball phase, then middle/death acceleration — exactly the joint path the card wrote (≈48/1 after six, then acceleration). 2. *Knowable?* **Yes, and on the card.** 3. *Smallest change:* none for the forecast; settlement routing only.
+
+#### P-367 — Settlement
+
+**Event:** China (W) v France (W) — FIBA WWC quarter-final, Berlin · **Official final:** France 90–61 (quarters FRA 25-23-22-20, CHN 20-11-17-13). China shot **better** — FG 46% v 44%, 3P 43.8% v 37.8% — and still lost by 29 · **Source:** FIBA game page `128149` · **Population:** EXPLORATORY · **Issued:** 2026-09-10 22:21
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | France −24.5 | 0.55 | **WIN** | 0.2025 | +29. |
+| 2 | Under 153.5 | 0.54 | **WIN** | 0.2116 | 151. **Positively coupled with R1** (France's defence drives both). |
+| 3 | Over 153.5 | 0.46 | **LOSS** | 0.2116 | |
+| 4 | China +24.5 | 0.45 | **LOSS** | 0.2025 | |
+
+**Potential winner:** France ~94% · **CORRECT** · **Card mean Brier:** 0.2071 — top two both won.
+
+- **Q1:** Starting fives not confirmed; both final 12s and both coaches (Gong Luming, Jean-Aimé Toupane) retrieved, and **China's absence of Li Yueru (passport) was established from the Chinese Olympic Committee** — the kind of availability fact that matters.
+- **Q2:** Accurate. A leaked closed-door scrimmage result was correctly held to low weight.
+- **Q3:** None material. The issued centre, **89–63**, against the actual **90–61** — the most accurate basketball centre in the repository's P-333+ record. Winning by 29 while shooting worse is the signature of the possession-volume mechanism the card relied on (turnovers and rest asymmetry).
+
+**Three-question retrospective.** 1. *Driver:* French pressure and depth on a ~21-hour China turnaround. 2. *Knowable?* **Yes, and used.** 3. *Smallest change:* none — keep as the positive basketball model: both rows derived from one score tree whose coupling was positive.
+
+##### 2026-09-12 evidence supplement
+
+Retain the successful France side and full-game Under. Their joint success does not prove all of the proposed possession/rotation mechanisms or the dependence sign; seek full player/possession evidence for that claim. See [opened sources and field limits](audit_2026-09-12/sport_evidence.md).
+
+#### P-368 — Settlement (score rows final; corner row provisional)
+
+**Event:** Al Jazira v Al Nasr — UAE Pro League MW5, Abu Dhabi · **Official final:** 1–1 (HT 1–0; Bruno de Oliveira 10', Ghayedi 61'). FotMob: shots 15–11, **on target 4–1**, possession 61–39, corners **6–3** · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:08
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | 1st-half Over 0.5 | 0.68 | **WIN** | 0.1024 | 10' goal. |
+| 2 | Total corners Over 7.5 (no frozen provider) | 0.55 | **PROVISIONAL WIN** | not booked | 9 (multiple secondary displays; independence unverified). `TMP-OPEN-20260911-01`. |
+| 3 | Over 2.5 goals | 0.53 | **LOSS** | 0.2809 | 2. |
+| 4 | Under 2.5 goals | 0.47 | **WIN** | 0.2809 | |
+| 5 | 1st-half Under 0.5 | 0.32 | **LOSS** | 0.1024 | |
+
+**Potential winner:** Al Jazira ~65% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.1917.
+
+- **Q1:** XIs not confirmed (probable XIs were rightly not promoted); Al Nasr's coach (Milojević) named, Al Jazira's not.
+- **Q2:** Accurate; the UAE Pro League's own match centre shows corners as "–", so no field-owner corner lane exists for this league yet.
+- **Q3:** The early-goal thesis worked and the full-match Over then failed — a clean case of phase/full decoupling (soccer control 5: the leading-state slowdown). Al Nasr equalised from its **only** shot on target.
+
+**Three-question retrospective.** 1. *Driver:* an early goal, then a leading-state slowdown and a one-shot equaliser. 2. *Knowable?* **Yes** — the 1–1 and 1–0 families were on the card. 3. *Smallest change:* propagate the post-goal slowdown into the full-match distribution; a 1H hit is not evidence that the full-match Over process holds.
+
+#### P-369 — Settlement (score rows final; Rank #1 corner row provisional LOSS)
+
+**Event:** Dubai United v Shabab Al Ahli — UAE Pro League MW5 · **Official final:** 1–1 (HT 0–0; Maouhoub 58', Ezatolahi 74' pen). FotMob: shots 7–17, on target 3–4, corners **5–6 = 11**, possession 44–56 · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:16
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | Total corners Under 10.5 (no frozen provider) | 0.68 | **PROVISIONAL LOSS** | not booked | 11 — **−0.5**. `TMP-OPEN-20260911-02`. |
+| 2 | 1st-half Over 0.5 | 0.64 | **LOSS** | 0.4096 | 0–0 at HT. |
+| 3 | Over 2.5 goals | 0.61 | **LOSS** | 0.3721 | 2. |
+| 4 | Under 2.5 goals | 0.39 | **WIN** | 0.3721 | |
+| 5 | 1st-half Under 0.5 | 0.36 | **WIN** | 0.4096 | |
+
+**Potential winner:** Shabab Al Ahli ~60% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.3909 — the worst card of the import.
+
+- **Q1:** XIs not confirmed; both coaches (Andrea Pirlo, André Jardine) named.
+- **Q2:** Accurate as far as used.
+- **Q3:** Three failures of already-existing rules, all visible on the card itself: (a) **1st-half Over at 64%** against the card's own finding that Shabab had scored **one first-half goal in four league games** and United's only home game was 0–0 at HT — soccer control 20's **third instance** (after `P-323` and `P-337`); (b) full-match **Over at 61%** despite the card noting United's 30% conversion was unsustainable (`G-L2`/`G-L11`: a finishing rate over ~37 shots needs uncertainty and opponent/context checks; no automatic noise label); (c) **corners Under at 68%** on an 8.0 centre with **no width** — an 8.0 centre against a 10.5 line supports a lean, not 0.68, without a stated width (`G-L8`).
+
+**Three-question retrospective.** 1. *Driver:* the suppressed first half the card had documented; one goal each after the break; corners reached 11. 2. *Knowable?* **Yes — all three mechanisms were printed.** 3. *Smallest change:* derive the 1H probability from both teams' current first-half rates (not one team's event hit-rate); print widths on every total.
+
+| Deep Rank-#1 question (provisional) | Finding |
+|---|---|
+| What went right? | The Under 2.5 and 1H Under complements won; the card did retrieve the right suppression evidence. |
+| What went wrong? | The ranking contradicted the card's own evidence on three rows. |
+| Actual mechanism | 0–0 HT; 1–1 on a second-half goal and a penalty; 11 corners. |
+| Improvement | Control 20 reinforced (both teams' 1H rates); `G-L8` widths; `G-L11`. |
+| Grade (background) | D+. |
+
+- **Q2:** The ETPL first-party page stayed a **stale "Yet to bat" shell for more than 24 hours** after the match — it read that way at 23:12 AEST on 11 Sep and COMPLETED by ~23:30. Settlement correctly ran through the independent scorecards. → the stale-shell rule and the fallback ladder (`RULES_SOCCER.md` control 17 generalised; `SOURCES.md` §"2026-09-11").
+- **Q3:** None material. This is the **worked example of target-by-target settlement**: a reached phase target grades; an unreached endpoint is censored and not remapped (cricket control 15).
+
+**Three-question retrospective.** 1. *Driver:* a cautious new-ball phase, then middle/death acceleration — exactly the joint path the card wrote (≈48/1 after six, then acceleration). 2. *Knowable?* **Yes, and on the card.** 3. *Smallest change:* none for the forecast; settlement routing only.
+
+#### P-367 — Settlement
+
+**Event:** China (W) v France (W) — FIBA WWC quarter-final, Berlin · **Official final:** France 90–61 (quarters FRA 25-23-22-20, CHN 20-11-17-13). China shot **better** — FG 46% v 44%, 3P 43.8% v 37.8% — and still lost by 29 · **Source:** FIBA game page `128149` · **Population:** EXPLORATORY · **Issued:** 2026-09-10 22:21
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | France −24.5 | 0.55 | **WIN** | 0.2025 | +29. |
+| 2 | Under 153.5 | 0.54 | **WIN** | 0.2116 | 151. **Positively coupled with R1** (France's defence drives both). |
+| 3 | Over 153.5 | 0.46 | **LOSS** | 0.2116 | |
+| 4 | China +24.5 | 0.45 | **LOSS** | 0.2025 | |
+
+**Potential winner:** France ~94% · **CORRECT** · **Card mean Brier:** 0.2071 — top two both won.
+
+- **Q1:** Starting fives not confirmed; both final 12s and both coaches (Gong Luming, Jean-Aimé Toupane) retrieved, and **China's absence of Li Yueru (passport) was established from the Chinese Olympic Committee** — the kind of availability fact that matters.
+- **Q2:** Accurate. A leaked closed-door scrimmage result was correctly held to low weight.
+- **Q3:** None material. The issued centre, **89–63**, against the actual **90–61** — the most accurate basketball centre in the repository's P-333+ record. Winning by 29 while shooting worse is the signature of the possession-volume mechanism the card relied on (turnovers and rest asymmetry).
+
+**Three-question retrospective.** 1. *Driver:* French pressure and depth on a ~21-hour China turnaround. 2. *Knowable?* **Yes, and used.** 3. *Smallest change:* none — keep as the positive basketball model: both rows derived from one score tree whose coupling was positive.
+
+##### 2026-09-12 evidence supplement
+
+Retain the successful France side and full-game Under. Their joint success does not prove all of the proposed possession/rotation mechanisms or the dependence sign; seek full player/possession evidence for that claim. See [opened sources and field limits](audit_2026-09-12/sport_evidence.md).
+
+#### P-368 — Settlement (score rows final; corner row provisional)
+
+**Event:** Al Jazira v Al Nasr — UAE Pro League MW5, Abu Dhabi · **Official final:** 1–1 (HT 1–0; Bruno de Oliveira 10', Ghayedi 61'). FotMob: shots 15–11, **on target 4–1**, possession 61–39, corners **6–3** · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:08
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | 1st-half Over 0.5 | 0.68 | **WIN** | 0.1024 | 10' goal. |
+| 2 | Total corners Over 7.5 (no frozen provider) | 0.55 | **PROVISIONAL WIN** | not booked | 9 (multiple secondary displays; independence unverified). `TMP-OPEN-20260911-01`. |
+| 3 | Over 2.5 goals | 0.53 | **LOSS** | 0.2809 | 2. |
+| 4 | Under 2.5 goals | 0.47 | **WIN** | 0.2809 | |
+| 5 | 1st-half Under 0.5 | 0.32 | **LOSS** | 0.1024 | |
+
+**Potential winner:** Al Jazira ~65% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.1917.
+
+- **Q1:** XIs not confirmed (probable XIs were rightly not promoted); Al Nasr's coach (Milojević) named, Al Jazira's not.
+- **Q2:** Accurate; the UAE Pro League's own match centre shows corners as "–", so no field-owner corner lane exists for this league yet.
+- **Q3:** The early-goal thesis worked and the full-match Over then failed — a clean case of phase/full decoupling (soccer control 5: the leading-state slowdown). Al Nasr equalised from its **only** shot on target.
+
+**Three-question retrospective.** 1. *Driver:* an early goal, then a leading-state slowdown and a one-shot equaliser. 2. *Knowable?* **Yes** — the 1–1 and 1–0 families were on the card. 3. *Smallest change:* propagate the post-goal slowdown into the full-match distribution; a 1H hit is not evidence that the full-match Over process holds.
+
+#### P-369 — Settlement (score rows final; Rank #1 corner row provisional LOSS)
+
+**Event:** Dubai United v Shabab Al Ahli — UAE Pro League MW5 · **Official final:** 1–1 (HT 0–0; Maouhoub 58', Ezatolahi 74' pen). FotMob: shots 7–17, on target 3–4, corners **5–6 = 11**, possession 44–56 · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:16
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | Total corners Under 10.5 (no frozen provider) | 0.68 | **PROVISIONAL LOSS** | not booked | 11 — **−0.5**. `TMP-OPEN-20260911-02`. |
+| 2 | 1st-half Over 0.5 | 0.64 | **LOSS** | 0.4096 | 0–0 at HT. |
+| 3 | Over 2.5 goals | 0.61 | **LOSS** | 0.3721 | 2. |
+| 4 | Under 2.5 goals | 0.39 | **WIN** | 0.3721 | |
+| 5 | 1st-half Under 0.5 | 0.36 | **WIN** | 0.4096 | |
+
+**Potential winner:** Shabab Al Ahli ~60% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.3909 — the worst card of the import.
+
+- **Q1:** XIs not confirmed; both coaches (Andrea Pirlo, André Jardine) named.
+- **Q2:** Accurate as far as used.
+- **Q3:** Three failures of already-existing rules, all visible on the card itself: (a) **1st-half Over at 64%** against the card's own finding that Shabab had scored **one first-half goal in four league games** and United's only home game was 0–0 at HT — soccer control 20's **third instance** (after `P-323` and `P-337`); (b) full-match **Over at 61%** despite the card noting United's 30% conversion was unsustainable (`G-L2`/`G-L11`: a finishing rate over ~37 shots needs uncertainty and opponent/context checks; no automatic noise label); (c) **corners Under at 68%** on an 8.0 centre with **no width** — an 8.0 centre against a 10.5 line supports a lean, not 0.68, without a stated width (`G-L8`).
+
+**Three-question retrospective.** 1. *Driver:* the suppressed first half the card had documented; one goal each after the break; corners reached 11. 2. *Knowable?* **Yes — all three mechanisms were printed.** 3. *Smallest change:* derive the 1H probability from both teams' current first-half rates (not one team's event hit-rate); print widths on every total.
+
+| Deep Rank-#1 question (provisional) | Finding |
+|---|---|
+| What went right? | The Under 2.5 and 1H Under complements won; the card did retrieve the right suppression evidence. |
+| What went wrong? | The ranking contradicted the card's own evidence on three rows. |
+| Actual mechanism | 0–0 HT; 1–1 on a second-half goal and a penalty; 11 corners. |
+| Improvement | Control 20 reinforced (both teams' 1H rates); `G-L8` widths; `G-L11`. |
+| Grade (background) | D+. |
+
+
+- **Q3:** None material. This is the **worked example of target-by-target settlement**: a reached phase target grades; an unreached endpoint is censored and not remapped (cricket control 15).
+
+**Three-question retrospective.** 1. *Driver:* a cautious new-ball phase, then middle/death acceleration — exactly the joint path the card wrote (≈48/1 after six, then acceleration). 2. *Knowable?* **Yes, and on the card.** 3. *Smallest change:* none for the forecast; settlement routing only.
+
+#### P-367 — Settlement
+
+**Event:** China (W) v France (W) — FIBA WWC quarter-final, Berlin · **Official final:** France 90–61 (quarters FRA 25-23-22-20, CHN 20-11-17-13). China shot **better** — FG 46% v 44%, 3P 43.8% v 37.8% — and still lost by 29 · **Source:** FIBA game page `128149` · **Population:** EXPLORATORY · **Issued:** 2026-09-10 22:21
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | France −24.5 | 0.55 | **WIN** | 0.2025 | +29. |
+| 2 | Under 153.5 | 0.54 | **WIN** | 0.2116 | 151. **Positively coupled with R1** (France's defence drives both). |
+| 3 | Over 153.5 | 0.46 | **LOSS** | 0.2116 | |
+| 4 | China +24.5 | 0.45 | **LOSS** | 0.2025 | |
+
+**Potential winner:** France ~94% · **CORRECT** · **Card mean Brier:** 0.2071 — top two both won.
+
+- **Q1:** Starting fives not confirmed; both final 12s and both coaches (Gong Luming, Jean-Aimé Toupane) retrieved, and **China's absence of Li Yueru (passport) was established from the Chinese Olympic Committee** — the kind of availability fact that matters.
+- **Q2:** Accurate. A leaked closed-door scrimmage result was correctly held to low weight.
+- **Q3:** None material. The issued centre, **89–63**, against the actual **90–61** — the most accurate basketball centre in the repository's P-333+ record. Winning by 29 while shooting worse is the signature of the possession-volume mechanism the card relied on (turnovers and rest asymmetry).
+
+**Three-question retrospective.** 1. *Driver:* French pressure and depth on a ~21-hour China turnaround. 2. *Knowable?* **Yes, and used.** 3. *Smallest change:* none — keep as the positive basketball model: both rows derived from one score tree whose coupling was positive.
+
+##### 2026-09-12 evidence supplement
+
+Retain the successful France side and full-game Under. Their joint success does not prove all of the proposed possession/rotation mechanisms or the dependence sign; seek full player/possession evidence for that claim. See [opened sources and field limits](audit_2026-09-12/sport_evidence.md).
+
+#### P-368 — Settlement (score rows final; corner row provisional)
+
+**Event:** Al Jazira v Al Nasr — UAE Pro League MW5, Abu Dhabi · **Official final:** 1–1 (HT 1–0; Bruno de Oliveira 10', Ghayedi 61'). FotMob: shots 15–11, **on target 4–1**, possession 61–39, corners **6–3** · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:08
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | 1st-half Over 0.5 | 0.68 | **WIN** | 0.1024 | 10' goal. |
+| 2 | Total corners Over 7.5 (no frozen provider) | 0.55 | **PROVISIONAL WIN** | not booked | 9 (multiple secondary displays; independence unverified). `TMP-OPEN-20260911-01`. |
+| 3 | Over 2.5 goals | 0.53 | **LOSS** | 0.2809 | 2. |
+| 4 | Under 2.5 goals | 0.47 | **WIN** | 0.2809 | |
+| 5 | 1st-half Under 0.5 | 0.32 | **LOSS** | 0.1024 | |
+
+**Potential winner:** Al Jazira ~65% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.1917.
+
+- **Q1:** XIs not confirmed (probable XIs were rightly not promoted); Al Nasr's coach (Milojević) named, Al Jazira's not.
+- **Q2:** Accurate; the UAE Pro League's own match centre shows corners as "–", so no field-owner corner lane exists for this league yet.
+- **Q3:** The early-goal thesis worked and the full-match Over then failed — a clean case of phase/full decoupling (soccer control 5: the leading-state slowdown). Al Nasr equalised from its **only** shot on target.
+
+**Three-question retrospective.** 1. *Driver:* an early goal, then a leading-state slowdown and a one-shot equaliser. 2. *Knowable?* **Yes** — the 1–1 and 1–0 families were on the card. 3. *Smallest change:* propagate the post-goal slowdown into the full-match distribution; a 1H hit is not evidence that the full-match Over process holds.
+
+#### P-369 — Settlement (score rows final; Rank #1 corner row provisional LOSS)
+
+**Event:** Dubai United v Shabab Al Ahli — UAE Pro League MW5 · **Official final:** 1–1 (HT 0–0; Maouhoub 58', Ezatolahi 74' pen). FotMob: shots 7–17, on target 3–4, corners **5–6 = 11**, possession 44–56 · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:16
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | Total corners Under 10.5 (no frozen provider) | 0.68 | **PROVISIONAL LOSS** | not booked | 11 — **−0.5**. `TMP-OPEN-20260911-02`. |
+| 2 | 1st-half Over 0.5 | 0.64 | **LOSS** | 0.4096 | 0–0 at HT. |
+| 3 | Over 2.5 goals | 0.61 | **LOSS** | 0.3721 | 2. |
+| 4 | Under 2.5 goals | 0.39 | **WIN** | 0.3721 | |
+| 5 | 1st-half Under 0.5 | 0.36 | **WIN** | 0.4096 | |
+
+**Potential winner:** Shabab Al Ahli ~60% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.3909 — the worst card of the import.
+
+- **Q1:** XIs not confirmed; both coaches (Andrea Pirlo, André Jardine) named.
+- **Q2:** Accurate as far as used.
+- **Q3:** Three failures of already-existing rules, all visible on the card itself: (a) **1st-half Over at 64%** against the card's own finding that Shabab had scored **one first-half goal in four league games** and United's only home game was 0–0 at HT — soccer control 20's **third instance** (after `P-323` and `P-337`); (b) full-match **Over at 61%** despite the card noting United's 30% conversion was unsustainable (`G-L2`/`G-L11`: a finishing rate over ~37 shots needs uncertainty and opponent/context checks; no automatic noise label); (c) **corners Under at 68%** on an 8.0 centre with **no width** — an 8.0 centre against a 10.5 line supports a lean, not 0.68, without a stated width (`G-L8`).
+
+**Three-question retrospective.** 1. *Driver:* the suppressed first half the card had documented; one goal each after the break; corners reached 11. 2. *Knowable?* **Yes — all three mechanisms were printed.** 3. *Smallest change:* derive the 1H probability from both teams' current first-half rates (not one team's event hit-rate); print widths on every total.
+
+| Deep Rank-#1 question (provisional) | Finding |
+|---|---|
+| What went right? | The Under 2.5 and 1H Under complements won; the card did retrieve the right suppression evidence. |
+| What went wrong? | The ranking contradicted the card's own evidence on three rows. |
+| Actual mechanism | 0–0 HT; 1–1 on a second-half goal and a penalty; 11 corners. |
+| Improvement | Control 20 reinforced (both teams' 1H rates); `G-L8` widths; `G-L11`. |
+| Grade (background) | D+. |
+
+##### 2026-09-12 retrospective correction
+
+
+**Three-question retrospective.** 1. *Driver:* a cautious new-ball phase, then middle/death acceleration — exactly the joint path the card wrote (≈48/1 after six, then acceleration). 2. *Knowable?* **Yes, and on the card.** 3. *Smallest change:* none for the forecast; settlement routing only.
+
+#### P-367 — Settlement
+
+**Event:** China (W) v France (W) — FIBA WWC quarter-final, Berlin · **Official final:** France 90–61 (quarters FRA 25-23-22-20, CHN 20-11-17-13). China shot **better** — FG 46% v 44%, 3P 43.8% v 37.8% — and still lost by 29 · **Source:** FIBA game page `128149` · **Population:** EXPLORATORY · **Issued:** 2026-09-10 22:21
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | France −24.5 | 0.55 | **WIN** | 0.2025 | +29. |
+| 2 | Under 153.5 | 0.54 | **WIN** | 0.2116 | 151. **Positively coupled with R1** (France's defence drives both). |
+| 3 | Over 153.5 | 0.46 | **LOSS** | 0.2116 | |
+| 4 | China +24.5 | 0.45 | **LOSS** | 0.2025 | |
+
+**Potential winner:** France ~94% · **CORRECT** · **Card mean Brier:** 0.2071 — top two both won.
+
+- **Q1:** Starting fives not confirmed; both final 12s and both coaches (Gong Luming, Jean-Aimé Toupane) retrieved, and **China's absence of Li Yueru (passport) was established from the Chinese Olympic Committee** — the kind of availability fact that matters.
+- **Q2:** Accurate. A leaked closed-door scrimmage result was correctly held to low weight.
+- **Q3:** None material. The issued centre, **89–63**, against the actual **90–61** — the most accurate basketball centre in the repository's P-333+ record. Winning by 29 while shooting worse is the signature of the possession-volume mechanism the card relied on (turnovers and rest asymmetry).
+
+**Three-question retrospective.** 1. *Driver:* French pressure and depth on a ~21-hour China turnaround. 2. *Knowable?* **Yes, and used.** 3. *Smallest change:* none — keep as the positive basketball model: both rows derived from one score tree whose coupling was positive.
+
+##### 2026-09-12 evidence supplement
+
+Retain the successful France side and full-game Under. Their joint success does not prove all of the proposed possession/rotation mechanisms or the dependence sign; seek full player/possession evidence for that claim. See [opened sources and field limits](audit_2026-09-12/sport_evidence.md).
+
+#### P-368 — Settlement (score rows final; corner row provisional)
+
+**Event:** Al Jazira v Al Nasr — UAE Pro League MW5, Abu Dhabi · **Official final:** 1–1 (HT 1–0; Bruno de Oliveira 10', Ghayedi 61'). FotMob: shots 15–11, **on target 4–1**, possession 61–39, corners **6–3** · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:08
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | 1st-half Over 0.5 | 0.68 | **WIN** | 0.1024 | 10' goal. |
+| 2 | Total corners Over 7.5 (no frozen provider) | 0.55 | **PROVISIONAL WIN** | not booked | 9 (multiple secondary displays; independence unverified). `TMP-OPEN-20260911-01`. |
+| 3 | Over 2.5 goals | 0.53 | **LOSS** | 0.2809 | 2. |
+| 4 | Under 2.5 goals | 0.47 | **WIN** | 0.2809 | |
+| 5 | 1st-half Under 0.5 | 0.32 | **LOSS** | 0.1024 | |
+
+**Potential winner:** Al Jazira ~65% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.1917.
+
+- **Q1:** XIs not confirmed (probable XIs were rightly not promoted); Al Nasr's coach (Milojević) named, Al Jazira's not.
+- **Q2:** Accurate; the UAE Pro League's own match centre shows corners as "–", so no field-owner corner lane exists for this league yet.
+- **Q3:** The early-goal thesis worked and the full-match Over then failed — a clean case of phase/full decoupling (soccer control 5: the leading-state slowdown). Al Nasr equalised from its **only** shot on target.
+
+**Three-question retrospective.** 1. *Driver:* an early goal, then a leading-state slowdown and a one-shot equaliser. 2. *Knowable?* **Yes** — the 1–1 and 1–0 families were on the card. 3. *Smallest change:* propagate the post-goal slowdown into the full-match distribution; a 1H hit is not evidence that the full-match Over process holds.
+
+#### P-369 — Settlement (score rows final; Rank #1 corner row provisional LOSS)
+
+**Event:** Dubai United v Shabab Al Ahli — UAE Pro League MW5 · **Official final:** 1–1 (HT 0–0; Maouhoub 58', Ezatolahi 74' pen). FotMob: shots 7–17, on target 3–4, corners **5–6 = 11**, possession 44–56 · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:16
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | Total corners Under 10.5 (no frozen provider) | 0.68 | **PROVISIONAL LOSS** | not booked | 11 — **−0.5**. `TMP-OPEN-20260911-02`. |
+| 2 | 1st-half Over 0.5 | 0.64 | **LOSS** | 0.4096 | 0–0 at HT. |
+| 3 | Over 2.5 goals | 0.61 | **LOSS** | 0.3721 | 2. |
+| 4 | Under 2.5 goals | 0.39 | **WIN** | 0.3721 | |
+| 5 | 1st-half Under 0.5 | 0.36 | **WIN** | 0.4096 | |
+
+**Potential winner:** Shabab Al Ahli ~60% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.3909 — the worst card of the import.
+
+- **Q1:** XIs not confirmed; both coaches (Andrea Pirlo, André Jardine) named.
+- **Q2:** Accurate as far as used.
+- **Q3:** Three failures of already-existing rules, all visible on the card itself: (a) **1st-half Over at 64%** against the card's own finding that Shabab had scored **one first-half goal in four league games** and United's only home game was 0–0 at HT — soccer control 20's **third instance** (after `P-323` and `P-337`); (b) full-match **Over at 61%** despite the card noting United's 30% conversion was unsustainable (`G-L2`/`G-L11`: a finishing rate over ~37 shots needs uncertainty and opponent/context checks; no automatic noise label); (c) **corners Under at 68%** on an 8.0 centre with **no width** — an 8.0 centre against a 10.5 line supports a lean, not 0.68, without a stated width (`G-L8`).
+
+**Three-question retrospective.** 1. *Driver:* the suppressed first half the card had documented; one goal each after the break; corners reached 11. 2. *Knowable?* **Yes — all three mechanisms were printed.** 3. *Smallest change:* derive the 1H probability from both teams' current first-half rates (not one team's event hit-rate); print widths on every total.
+
+| Deep Rank-#1 question (provisional) | Finding |
+|---|---|
+| What went right? | The Under 2.5 and 1H Under complements won; the card did retrieve the right suppression evidence. |
+| What went wrong? | The ranking contradicted the card's own evidence on three rows. |
+| Actual mechanism | 0–0 HT; 1–1 on a second-half goal and a penalty; 11 corners. |
+| Improvement | Control 20 reinforced (both teams' 1H rates); `G-L8` widths; `G-L11`. |
+| Grade (background) | D+. |
+
+##### 2026-09-12 retrospective correction
+
+
+**Three-question retrospective.** 1. *Driver:* a cautious new-ball phase, then middle/death acceleration — exactly the joint path the card wrote (≈48/1 after six, then acceleration). 2. *Knowable?* **Yes, and on the card.** 3. *Smallest change:* none for the forecast; settlement routing only.
+
+#### P-367 — Settlement
+
+**Event:** China (W) v France (W) — FIBA WWC quarter-final, Berlin · **Official final:** France 90–61 (quarters FRA 25-23-22-20, CHN 20-11-17-13). China shot **better** — FG 46% v 44%, 3P 43.8% v 37.8% — and still lost by 29 · **Source:** FIBA game page `128149` · **Population:** EXPLORATORY · **Issued:** 2026-09-10 22:21
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | France −24.5 | 0.55 | **WIN** | 0.2025 | +29. |
+| 2 | Under 153.5 | 0.54 | **WIN** | 0.2116 | 151. **Positively coupled with R1** (France's defence drives both). |
+| 3 | Over 153.5 | 0.46 | **LOSS** | 0.2116 | |
+| 4 | China +24.5 | 0.45 | **LOSS** | 0.2025 | |
+
+**Potential winner:** France ~94% · **CORRECT** · **Card mean Brier:** 0.2071 — top two both won.
+
+- **Q1:** Starting fives not confirmed; both final 12s and both coaches (Gong Luming, Jean-Aimé Toupane) retrieved, and **China's absence of Li Yueru (passport) was established from the Chinese Olympic Committee** — the kind of availability fact that matters.
+- **Q2:** Accurate. A leaked closed-door scrimmage result was correctly held to low weight.
+- **Q3:** None material. The issued centre, **89–63**, against the actual **90–61** — the most accurate basketball centre in the repository's P-333+ record. Winning by 29 while shooting worse is the signature of the possession-volume mechanism the card relied on (turnovers and rest asymmetry).
+
+**Three-question retrospective.** 1. *Driver:* French pressure and depth on a ~21-hour China turnaround. 2. *Knowable?* **Yes, and used.** 3. *Smallest change:* none — keep as the positive basketball model: both rows derived from one score tree whose coupling was positive.
+
+##### 2026-09-12 evidence supplement
+
+Retain the successful France side and full-game Under. Their joint success does not prove all of the proposed possession/rotation mechanisms or the dependence sign; seek full player/possession evidence for that claim. See [opened sources and field limits](audit_2026-09-12/sport_evidence.md).
+
+#### P-368 — Settlement (score rows final; corner row provisional)
+
+**Event:** Al Jazira v Al Nasr — UAE Pro League MW5, Abu Dhabi · **Official final:** 1–1 (HT 1–0; Bruno de Oliveira 10', Ghayedi 61'). FotMob: shots 15–11, **on target 4–1**, possession 61–39, corners **6–3** · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:08
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | 1st-half Over 0.5 | 0.68 | **WIN** | 0.1024 | 10' goal. |
+| 2 | Total corners Over 7.5 (no frozen provider) | 0.55 | **PROVISIONAL WIN** | not booked | 9 (multiple secondary displays; independence unverified). `TMP-OPEN-20260911-01`. |
+| 3 | Over 2.5 goals | 0.53 | **LOSS** | 0.2809 | 2. |
+| 4 | Under 2.5 goals | 0.47 | **WIN** | 0.2809 | |
+| 5 | 1st-half Under 0.5 | 0.32 | **LOSS** | 0.1024 | |
+
+**Potential winner:** Al Jazira ~65% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.1917.
+
+- **Q1:** XIs not confirmed (probable XIs were rightly not promoted); Al Nasr's coach (Milojević) named, Al Jazira's not.
+- **Q2:** Accurate; the UAE Pro League's own match centre shows corners as "–", so no field-owner corner lane exists for this league yet.
+- **Q3:** The early-goal thesis worked and the full-match Over then failed — a clean case of phase/full decoupling (soccer control 5: the leading-state slowdown). Al Nasr equalised from its **only** shot on target.
+
+**Three-question retrospective.** 1. *Driver:* an early goal, then a leading-state slowdown and a one-shot equaliser. 2. *Knowable?* **Yes** — the 1–1 and 1–0 families were on the card. 3. *Smallest change:* propagate the post-goal slowdown into the full-match distribution; a 1H hit is not evidence that the full-match Over process holds.
+
+#### P-369 — Settlement (score rows final; Rank #1 corner row provisional LOSS)
+
+**Event:** Dubai United v Shabab Al Ahli — UAE Pro League MW5 · **Official final:** 1–1 (HT 0–0; Maouhoub 58', Ezatolahi 74' pen). FotMob: shots 7–17, on target 3–4, corners **5–6 = 11**, possession 44–56 · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:16
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | Total corners Under 10.5 (no frozen provider) | 0.68 | **PROVISIONAL LOSS** | not booked | 11 — **−0.5**. `TMP-OPEN-20260911-02`. |
+| 2 | 1st-half Over 0.5 | 0.64 | **LOSS** | 0.4096 | 0–0 at HT. |
+| 3 | Over 2.5 goals | 0.61 | **LOSS** | 0.3721 | 2. |
+| 4 | Under 2.5 goals | 0.39 | **WIN** | 0.3721 | |
+| 5 | 1st-half Under 0.5 | 0.36 | **WIN** | 0.4096 | |
+
+**Potential winner:** Shabab Al Ahli ~60% · **WRONG** (draw) · **Card mean Brier (4 graded):** 0.3909 — the worst card of the import.
+
+- **Q1:** XIs not confirmed; both coaches (Andrea Pirlo, André Jardine) named.
+- **Q2:** Accurate as far as used.
+- **Q3:** Three failures of already-existing rules, all visible on the card itself: (a) **1st-half Over at 64%** against the card's own finding that Shabab had scored **one first-half goal in four league games** and United's only home game was 0–0 at HT — soccer control 20's **third instance** (after `P-323` and `P-337`); (b) full-match **Over at 61%** despite the card noting United's 30% conversion was unsustainable (`G-L2`/`G-L11`: a finishing rate over ~37 shots needs uncertainty and opponent/context checks; no automatic noise label); (c) **corners Under at 68%** on an 8.0 centre with **no width** — an 8.0 centre against a 10.5 line supports a lean, not 0.68, without a stated width (`G-L8`).
+
+**Three-question retrospective.** 1. *Driver:* the suppressed first half the card had documented; one goal each after the break; corners reached 11. 2. *Knowable?* **Yes — all three mechanisms were printed.** 3. *Smallest change:* derive the 1H probability from both teams' current first-half rates (not one team's event hit-rate); print widths on every total.
+
+| Deep Rank-#1 question (provisional) | Finding |
+|---|---|
+| What went right? | The Under 2.5 and 1H Under complements won; the card did retrieve the right suppression evidence. |
+| What went wrong? | The ranking contradicted the card's own evidence on three rows. |
+| Actual mechanism | 0–0 HT; 1–1 on a second-half goal and a penalty; 11 corners. |
+| Improvement | Control 20 reinforced (both teams' 1H rates); `G-L8` widths; `G-L11`. |
+| Grade (background) | D+. |
+
+##### 2026-09-12 retrospective correction
+
+| What went right | Error / uncertainty | Routine change and evidence |

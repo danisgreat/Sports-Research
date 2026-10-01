@@ -1,0 +1,383 @@
+
+1. Use recent pitcher trend as a modifier with skill indicators, not ERA alone. Voth's strikeout/command improvement was a real regime signal.
+2. When the favourite has team, bullpen, home, form and winner alignment, an underdog cushion needs a verified offensive floor before it can rank first.
+3. Explicitly pair Under with both close and separated allocations. Here 3-0/4-1 was at least as coherent as 4-3/5-4.
+4. A better order was **Under 10.5 / Samsung -1.5 / Lotte +1.5 / Over 10.5**.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13895-Lotte-vs-Samsung-20260901).
+
+## P-233 settlement — Beijing Guoan vs Lanzhou Longyuan
+
+Verified outcome: **Beijing 3, Lanzhou 1; halftime 1-0; 13 corners (Beijing 9, Lanzhou 4).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Beijing team goals Over 1.5 | **WIN** |
+| 2 | 1st-half Over 0.5 goals | **WIN** |
+| 3 | Total goals Over 2.5 | **WIN** |
+| 4 | BTTS — No | **LOSS** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Beijing | **WIN** |
+
+What went right: the core mismatch and Beijing scoring ceiling were correctly prioritized. Beijing scored three, an early goal landed the first-half derivative, and sustained attack volume produced 13 corners.
+
+What went wrong: BTTS No treated Beijing dominance as if it guaranteed a clean sheet. Lanzhou's single goal did not contradict the mismatch; it only showed that winner/team-total strength and clean-sheet probability are different.
+
+Learning: avoid using a large favourite's attacking superiority as direct evidence for BTTS No. Model the underdog's one-goal route separately through transition, set piece and late game-state relaxation.
+
+Sources: [Flashscore result](https://www.flashscoreusa.com/game/soccer/beijing-guoan-WSLjVBLN/lanzhou-longyuan-athletic-vq7b83U1/); [SoccerPunter match data](https://www.soccerpunter.com/match/19726928/Beijing-Guoan-vs-Lanzhou-Longyuan).
+
+## P-234 settlement and deep rank-#1 retrospective — Dalian Yingbo vs Shanghai Shenhua
+
+Verified outcome: **Dalian 1, Shanghai Shenhua 0; halftime 0-0; goal in the 54th minute; 10 corners (5-5).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **LOSS** |
+| 2 | Dalian team goals Over 0.5 | **WIN** |
+| 3 | Corners Over 8.5 | **WIN** |
+| 4 | BTTS — Yes | **LOSS** |
+| 5 | Total goals Over 2.5 | **LOSS** |
+| — | Potential winner: Shanghai Shenhua | **LOSS** |
+
+What went right: Dalian's team-goal line was a strong, target-specific read. The pre-game log noted Dalian had scored in 5/5 and Shanghai had conceded in 4/5. Dalian scored once, exactly matching that modest team-specific thesis. The corner model was also independent and correct: both sides took five.
+
+Why the “most likely” pick failed: the 1H Over relied on 4/5 recent first-half hit rates for each team, 4/4 H2Hs, and short market pricing. Those facts were real but overfit a league/H2H scoring regime to a knockout quarter-final. Dalian's own full-match state was low-event—only 1/5 recent matches went Over 2.5—and the log acknowledged cup caution as the kill path. That kill path was more central than the rank implied.
+
+Why the wider goal view failed: high-scoring H2Hs (5-3, 4-1, 2-2, 3-0) were not sufficiently adjusted for current competition state. Shanghai had more possession/territorial expectation but did not score; the only goal was a 54th-minute Dalian penalty. BTTS and Over 2.5 therefore shared the same unsupported assumption that Shanghai's volatile attack would convert.
+
+Why the winner call failed: the analysis made Shanghai a modest favourite based on H2H and team quality, but Dalian's current home scoring floor and compact recent form deserved more weight in regulation-time cup play. “To advance” and 90-minute winner also needed sharper separation.
+
+Required improvement:
+
+1. Apply a knockout-regulation modifier before using league/H2H first-half frequencies.
+2. When one team's recent full-match state is strongly low-event, do not allow the opponent's volatile Over history to dominate all goal derivatives.
+3. Keep team-goal and corner targets independent; this card demonstrates that Dalian O0.5 and corners O8.5 can win while 1H Over, BTTS and full Over all lose.
+4. A more evidence-balanced order was **Dalian team O0.5 / corners O8.5 / 1H O0.5 / BTTS Yes / O2.5**, with Shanghai regulation winner only a low-confidence lean.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/dalian-yingbo-fc-shanghai-shenhua/yrbsRZOd); [BeSoccer match statistics](https://www.besoccer.com/match/dalian-zhixing/shanghai-shenhua/2026345784).
+
+## P-235 settlement — Shandong Taishan vs Shanghai Port
+
+Verified outcome: **Shandong 0, Shanghai Port 3; halftime 0-2; goals in the 18th, 22nd and 79th minutes; 14 corners.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **WIN** |
+| 2 | Shanghai Port team goals Over 0.5 | **WIN** |
+| 3 | BTTS — Yes | **LOSS** |
+| 4 | Total goals Over 2.5 | **WIN** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Shandong | **LOSS** |
+
+What went right: Port's team-goal line, first-half goal signal, full Over and corner volume all captured the visitors' attacking control. Two early Port goals made the phase read decisive; a third completed the Over.
+
+What went wrong: BTTS assumed Shandong would contribute, but Port's clean sheet created a one-sided Over. The Shandong winner call was especially incoherent with a high-ranked Port team-goal and high-event game view. Port scoring was not merely compatible with a Shandong win; it was evidence against it once combined with Shandong's vulnerability.
+
+
+1. Use recent pitcher trend as a modifier with skill indicators, not ERA alone. Voth's strikeout/command improvement was a real regime signal.
+2. When the favourite has team, bullpen, home, form and winner alignment, an underdog cushion needs a verified offensive floor before it can rank first.
+3. Explicitly pair Under with both close and separated allocations. Here 3-0/4-1 was at least as coherent as 4-3/5-4.
+4. A better order was **Under 10.5 / Samsung -1.5 / Lotte +1.5 / Over 10.5**.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13895-Lotte-vs-Samsung-20260901).
+
+## P-233 settlement — Beijing Guoan vs Lanzhou Longyuan
+
+Verified outcome: **Beijing 3, Lanzhou 1; halftime 1-0; 13 corners (Beijing 9, Lanzhou 4).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Beijing team goals Over 1.5 | **WIN** |
+| 2 | 1st-half Over 0.5 goals | **WIN** |
+| 3 | Total goals Over 2.5 | **WIN** |
+| 4 | BTTS — No | **LOSS** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Beijing | **WIN** |
+
+What went right: the core mismatch and Beijing scoring ceiling were correctly prioritized. Beijing scored three, an early goal landed the first-half derivative, and sustained attack volume produced 13 corners.
+
+What went wrong: BTTS No treated Beijing dominance as if it guaranteed a clean sheet. Lanzhou's single goal did not contradict the mismatch; it only showed that winner/team-total strength and clean-sheet probability are different.
+
+Learning: avoid using a large favourite's attacking superiority as direct evidence for BTTS No. Model the underdog's one-goal route separately through transition, set piece and late game-state relaxation.
+
+Sources: [Flashscore result](https://www.flashscoreusa.com/game/soccer/beijing-guoan-WSLjVBLN/lanzhou-longyuan-athletic-vq7b83U1/); [SoccerPunter match data](https://www.soccerpunter.com/match/19726928/Beijing-Guoan-vs-Lanzhou-Longyuan).
+
+## P-234 settlement and deep rank-#1 retrospective — Dalian Yingbo vs Shanghai Shenhua
+
+Verified outcome: **Dalian 1, Shanghai Shenhua 0; halftime 0-0; goal in the 54th minute; 10 corners (5-5).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **LOSS** |
+| 2 | Dalian team goals Over 0.5 | **WIN** |
+| 3 | Corners Over 8.5 | **WIN** |
+| 4 | BTTS — Yes | **LOSS** |
+| 5 | Total goals Over 2.5 | **LOSS** |
+| — | Potential winner: Shanghai Shenhua | **LOSS** |
+
+What went right: Dalian's team-goal line was a strong, target-specific read. The pre-game log noted Dalian had scored in 5/5 and Shanghai had conceded in 4/5. Dalian scored once, exactly matching that modest team-specific thesis. The corner model was also independent and correct: both sides took five.
+
+Why the “most likely” pick failed: the 1H Over relied on 4/5 recent first-half hit rates for each team, 4/4 H2Hs, and short market pricing. Those facts were real but overfit a league/H2H scoring regime to a knockout quarter-final. Dalian's own full-match state was low-event—only 1/5 recent matches went Over 2.5—and the log acknowledged cup caution as the kill path. That kill path was more central than the rank implied.
+
+Why the wider goal view failed: high-scoring H2Hs (5-3, 4-1, 2-2, 3-0) were not sufficiently adjusted for current competition state. Shanghai had more possession/territorial expectation but did not score; the only goal was a 54th-minute Dalian penalty. BTTS and Over 2.5 therefore shared the same unsupported assumption that Shanghai's volatile attack would convert.
+
+Why the winner call failed: the analysis made Shanghai a modest favourite based on H2H and team quality, but Dalian's current home scoring floor and compact recent form deserved more weight in regulation-time cup play. “To advance” and 90-minute winner also needed sharper separation.
+
+Required improvement:
+
+1. Apply a knockout-regulation modifier before using league/H2H first-half frequencies.
+2. When one team's recent full-match state is strongly low-event, do not allow the opponent's volatile Over history to dominate all goal derivatives.
+3. Keep team-goal and corner targets independent; this card demonstrates that Dalian O0.5 and corners O8.5 can win while 1H Over, BTTS and full Over all lose.
+4. A more evidence-balanced order was **Dalian team O0.5 / corners O8.5 / 1H O0.5 / BTTS Yes / O2.5**, with Shanghai regulation winner only a low-confidence lean.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/dalian-yingbo-fc-shanghai-shenhua/yrbsRZOd); [BeSoccer match statistics](https://www.besoccer.com/match/dalian-zhixing/shanghai-shenhua/2026345784).
+
+## P-235 settlement — Shandong Taishan vs Shanghai Port
+
+Verified outcome: **Shandong 0, Shanghai Port 3; halftime 0-2; goals in the 18th, 22nd and 79th minutes; 14 corners.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **WIN** |
+| 2 | Shanghai Port team goals Over 0.5 | **WIN** |
+| 3 | BTTS — Yes | **LOSS** |
+| 4 | Total goals Over 2.5 | **WIN** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Shandong | **LOSS** |
+
+What went right: Port's team-goal line, first-half goal signal, full Over and corner volume all captured the visitors' attacking control. Two early Port goals made the phase read decisive; a third completed the Over.
+
+What went wrong: BTTS assumed Shandong would contribute, but Port's clean sheet created a one-sided Over. The Shandong winner call was especially incoherent with a high-ranked Port team-goal and high-event game view. Port scoring was not merely compatible with a Shandong win; it was evidence against it once combined with Shandong's vulnerability.
+
+Learning: add a winner/derivative coherence audit. A team-goal Over plus opponent defensive concerns should move the scoring team upward in winner probability unless the home side has a clearly larger scoring projection.
+
+2. When the favourite has team, bullpen, home, form and winner alignment, an underdog cushion needs a verified offensive floor before it can rank first.
+3. Explicitly pair Under with both close and separated allocations. Here 3-0/4-1 was at least as coherent as 4-3/5-4.
+4. A better order was **Under 10.5 / Samsung -1.5 / Lotte +1.5 / Over 10.5**.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13895-Lotte-vs-Samsung-20260901).
+
+## P-233 settlement — Beijing Guoan vs Lanzhou Longyuan
+
+Verified outcome: **Beijing 3, Lanzhou 1; halftime 1-0; 13 corners (Beijing 9, Lanzhou 4).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Beijing team goals Over 1.5 | **WIN** |
+| 2 | 1st-half Over 0.5 goals | **WIN** |
+| 3 | Total goals Over 2.5 | **WIN** |
+| 4 | BTTS — No | **LOSS** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Beijing | **WIN** |
+
+What went right: the core mismatch and Beijing scoring ceiling were correctly prioritized. Beijing scored three, an early goal landed the first-half derivative, and sustained attack volume produced 13 corners.
+
+What went wrong: BTTS No treated Beijing dominance as if it guaranteed a clean sheet. Lanzhou's single goal did not contradict the mismatch; it only showed that winner/team-total strength and clean-sheet probability are different.
+
+Learning: avoid using a large favourite's attacking superiority as direct evidence for BTTS No. Model the underdog's one-goal route separately through transition, set piece and late game-state relaxation.
+
+Sources: [Flashscore result](https://www.flashscoreusa.com/game/soccer/beijing-guoan-WSLjVBLN/lanzhou-longyuan-athletic-vq7b83U1/); [SoccerPunter match data](https://www.soccerpunter.com/match/19726928/Beijing-Guoan-vs-Lanzhou-Longyuan).
+
+## P-234 settlement and deep rank-#1 retrospective — Dalian Yingbo vs Shanghai Shenhua
+
+Verified outcome: **Dalian 1, Shanghai Shenhua 0; halftime 0-0; goal in the 54th minute; 10 corners (5-5).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **LOSS** |
+| 2 | Dalian team goals Over 0.5 | **WIN** |
+| 3 | Corners Over 8.5 | **WIN** |
+| 4 | BTTS — Yes | **LOSS** |
+| 5 | Total goals Over 2.5 | **LOSS** |
+| — | Potential winner: Shanghai Shenhua | **LOSS** |
+
+What went right: Dalian's team-goal line was a strong, target-specific read. The pre-game log noted Dalian had scored in 5/5 and Shanghai had conceded in 4/5. Dalian scored once, exactly matching that modest team-specific thesis. The corner model was also independent and correct: both sides took five.
+
+Why the “most likely” pick failed: the 1H Over relied on 4/5 recent first-half hit rates for each team, 4/4 H2Hs, and short market pricing. Those facts were real but overfit a league/H2H scoring regime to a knockout quarter-final. Dalian's own full-match state was low-event—only 1/5 recent matches went Over 2.5—and the log acknowledged cup caution as the kill path. That kill path was more central than the rank implied.
+
+Why the wider goal view failed: high-scoring H2Hs (5-3, 4-1, 2-2, 3-0) were not sufficiently adjusted for current competition state. Shanghai had more possession/territorial expectation but did not score; the only goal was a 54th-minute Dalian penalty. BTTS and Over 2.5 therefore shared the same unsupported assumption that Shanghai's volatile attack would convert.
+
+Why the winner call failed: the analysis made Shanghai a modest favourite based on H2H and team quality, but Dalian's current home scoring floor and compact recent form deserved more weight in regulation-time cup play. “To advance” and 90-minute winner also needed sharper separation.
+
+Required improvement:
+
+1. Apply a knockout-regulation modifier before using league/H2H first-half frequencies.
+2. When one team's recent full-match state is strongly low-event, do not allow the opponent's volatile Over history to dominate all goal derivatives.
+3. Keep team-goal and corner targets independent; this card demonstrates that Dalian O0.5 and corners O8.5 can win while 1H Over, BTTS and full Over all lose.
+4. A more evidence-balanced order was **Dalian team O0.5 / corners O8.5 / 1H O0.5 / BTTS Yes / O2.5**, with Shanghai regulation winner only a low-confidence lean.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/dalian-yingbo-fc-shanghai-shenhua/yrbsRZOd); [BeSoccer match statistics](https://www.besoccer.com/match/dalian-zhixing/shanghai-shenhua/2026345784).
+
+## P-235 settlement — Shandong Taishan vs Shanghai Port
+
+Verified outcome: **Shandong 0, Shanghai Port 3; halftime 0-2; goals in the 18th, 22nd and 79th minutes; 14 corners.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **WIN** |
+| 2 | Shanghai Port team goals Over 0.5 | **WIN** |
+| 3 | BTTS — Yes | **LOSS** |
+| 4 | Total goals Over 2.5 | **WIN** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Shandong | **LOSS** |
+
+What went right: Port's team-goal line, first-half goal signal, full Over and corner volume all captured the visitors' attacking control. Two early Port goals made the phase read decisive; a third completed the Over.
+
+What went wrong: BTTS assumed Shandong would contribute, but Port's clean sheet created a one-sided Over. The Shandong winner call was especially incoherent with a high-ranked Port team-goal and high-event game view. Port scoring was not merely compatible with a Shandong win; it was evidence against it once combined with Shandong's vulnerability.
+
+Learning: add a winner/derivative coherence audit. A team-goal Over plus opponent defensive concerns should move the scoring team upward in winner probability unless the home side has a clearly larger scoring projection.
+
+
+3. Explicitly pair Under with both close and separated allocations. Here 3-0/4-1 was at least as coherent as 4-3/5-4.
+4. A better order was **Under 10.5 / Samsung -1.5 / Lotte +1.5 / Over 10.5**.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13895-Lotte-vs-Samsung-20260901).
+
+## P-233 settlement — Beijing Guoan vs Lanzhou Longyuan
+
+Verified outcome: **Beijing 3, Lanzhou 1; halftime 1-0; 13 corners (Beijing 9, Lanzhou 4).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Beijing team goals Over 1.5 | **WIN** |
+| 2 | 1st-half Over 0.5 goals | **WIN** |
+| 3 | Total goals Over 2.5 | **WIN** |
+| 4 | BTTS — No | **LOSS** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Beijing | **WIN** |
+
+What went right: the core mismatch and Beijing scoring ceiling were correctly prioritized. Beijing scored three, an early goal landed the first-half derivative, and sustained attack volume produced 13 corners.
+
+What went wrong: BTTS No treated Beijing dominance as if it guaranteed a clean sheet. Lanzhou's single goal did not contradict the mismatch; it only showed that winner/team-total strength and clean-sheet probability are different.
+
+Learning: avoid using a large favourite's attacking superiority as direct evidence for BTTS No. Model the underdog's one-goal route separately through transition, set piece and late game-state relaxation.
+
+Sources: [Flashscore result](https://www.flashscoreusa.com/game/soccer/beijing-guoan-WSLjVBLN/lanzhou-longyuan-athletic-vq7b83U1/); [SoccerPunter match data](https://www.soccerpunter.com/match/19726928/Beijing-Guoan-vs-Lanzhou-Longyuan).
+
+## P-234 settlement and deep rank-#1 retrospective — Dalian Yingbo vs Shanghai Shenhua
+
+Verified outcome: **Dalian 1, Shanghai Shenhua 0; halftime 0-0; goal in the 54th minute; 10 corners (5-5).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **LOSS** |
+| 2 | Dalian team goals Over 0.5 | **WIN** |
+| 3 | Corners Over 8.5 | **WIN** |
+| 4 | BTTS — Yes | **LOSS** |
+| 5 | Total goals Over 2.5 | **LOSS** |
+| — | Potential winner: Shanghai Shenhua | **LOSS** |
+
+What went right: Dalian's team-goal line was a strong, target-specific read. The pre-game log noted Dalian had scored in 5/5 and Shanghai had conceded in 4/5. Dalian scored once, exactly matching that modest team-specific thesis. The corner model was also independent and correct: both sides took five.
+
+Why the “most likely” pick failed: the 1H Over relied on 4/5 recent first-half hit rates for each team, 4/4 H2Hs, and short market pricing. Those facts were real but overfit a league/H2H scoring regime to a knockout quarter-final. Dalian's own full-match state was low-event—only 1/5 recent matches went Over 2.5—and the log acknowledged cup caution as the kill path. That kill path was more central than the rank implied.
+
+Why the wider goal view failed: high-scoring H2Hs (5-3, 4-1, 2-2, 3-0) were not sufficiently adjusted for current competition state. Shanghai had more possession/territorial expectation but did not score; the only goal was a 54th-minute Dalian penalty. BTTS and Over 2.5 therefore shared the same unsupported assumption that Shanghai's volatile attack would convert.
+
+Why the winner call failed: the analysis made Shanghai a modest favourite based on H2H and team quality, but Dalian's current home scoring floor and compact recent form deserved more weight in regulation-time cup play. “To advance” and 90-minute winner also needed sharper separation.
+
+Required improvement:
+
+1. Apply a knockout-regulation modifier before using league/H2H first-half frequencies.
+2. When one team's recent full-match state is strongly low-event, do not allow the opponent's volatile Over history to dominate all goal derivatives.
+3. Keep team-goal and corner targets independent; this card demonstrates that Dalian O0.5 and corners O8.5 can win while 1H Over, BTTS and full Over all lose.
+4. A more evidence-balanced order was **Dalian team O0.5 / corners O8.5 / 1H O0.5 / BTTS Yes / O2.5**, with Shanghai regulation winner only a low-confidence lean.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/dalian-yingbo-fc-shanghai-shenhua/yrbsRZOd); [BeSoccer match statistics](https://www.besoccer.com/match/dalian-zhixing/shanghai-shenhua/2026345784).
+
+## P-235 settlement — Shandong Taishan vs Shanghai Port
+
+Verified outcome: **Shandong 0, Shanghai Port 3; halftime 0-2; goals in the 18th, 22nd and 79th minutes; 14 corners.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **WIN** |
+| 2 | Shanghai Port team goals Over 0.5 | **WIN** |
+| 3 | BTTS — Yes | **LOSS** |
+| 4 | Total goals Over 2.5 | **WIN** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Shandong | **LOSS** |
+
+What went right: Port's team-goal line, first-half goal signal, full Over and corner volume all captured the visitors' attacking control. Two early Port goals made the phase read decisive; a third completed the Over.
+
+What went wrong: BTTS assumed Shandong would contribute, but Port's clean sheet created a one-sided Over. The Shandong winner call was especially incoherent with a high-ranked Port team-goal and high-event game view. Port scoring was not merely compatible with a Shandong win; it was evidence against it once combined with Shandong's vulnerability.
+
+Learning: add a winner/derivative coherence audit. A team-goal Over plus opponent defensive concerns should move the scoring team upward in winner probability unless the home side has a clearly larger scoring projection.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/shanghai-port-shandong-taishan/wrbsMFq); [Scoremer event timeline](https://www.scoremer.com/match_live/1636436).
+
+4. A better order was **Under 10.5 / Samsung -1.5 / Lotte +1.5 / Over 10.5**.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13895-Lotte-vs-Samsung-20260901).
+
+## P-233 settlement — Beijing Guoan vs Lanzhou Longyuan
+
+Verified outcome: **Beijing 3, Lanzhou 1; halftime 1-0; 13 corners (Beijing 9, Lanzhou 4).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Beijing team goals Over 1.5 | **WIN** |
+| 2 | 1st-half Over 0.5 goals | **WIN** |
+| 3 | Total goals Over 2.5 | **WIN** |
+| 4 | BTTS — No | **LOSS** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Beijing | **WIN** |
+
+What went right: the core mismatch and Beijing scoring ceiling were correctly prioritized. Beijing scored three, an early goal landed the first-half derivative, and sustained attack volume produced 13 corners.
+
+What went wrong: BTTS No treated Beijing dominance as if it guaranteed a clean sheet. Lanzhou's single goal did not contradict the mismatch; it only showed that winner/team-total strength and clean-sheet probability are different.
+
+Learning: avoid using a large favourite's attacking superiority as direct evidence for BTTS No. Model the underdog's one-goal route separately through transition, set piece and late game-state relaxation.
+
+Sources: [Flashscore result](https://www.flashscoreusa.com/game/soccer/beijing-guoan-WSLjVBLN/lanzhou-longyuan-athletic-vq7b83U1/); [SoccerPunter match data](https://www.soccerpunter.com/match/19726928/Beijing-Guoan-vs-Lanzhou-Longyuan).
+
+## P-234 settlement and deep rank-#1 retrospective — Dalian Yingbo vs Shanghai Shenhua
+
+Verified outcome: **Dalian 1, Shanghai Shenhua 0; halftime 0-0; goal in the 54th minute; 10 corners (5-5).**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **LOSS** |
+| 2 | Dalian team goals Over 0.5 | **WIN** |
+| 3 | Corners Over 8.5 | **WIN** |
+| 4 | BTTS — Yes | **LOSS** |
+| 5 | Total goals Over 2.5 | **LOSS** |
+| — | Potential winner: Shanghai Shenhua | **LOSS** |
+
+What went right: Dalian's team-goal line was a strong, target-specific read. The pre-game log noted Dalian had scored in 5/5 and Shanghai had conceded in 4/5. Dalian scored once, exactly matching that modest team-specific thesis. The corner model was also independent and correct: both sides took five.
+
+Why the “most likely” pick failed: the 1H Over relied on 4/5 recent first-half hit rates for each team, 4/4 H2Hs, and short market pricing. Those facts were real but overfit a league/H2H scoring regime to a knockout quarter-final. Dalian's own full-match state was low-event—only 1/5 recent matches went Over 2.5—and the log acknowledged cup caution as the kill path. That kill path was more central than the rank implied.
+
+Why the wider goal view failed: high-scoring H2Hs (5-3, 4-1, 2-2, 3-0) were not sufficiently adjusted for current competition state. Shanghai had more possession/territorial expectation but did not score; the only goal was a 54th-minute Dalian penalty. BTTS and Over 2.5 therefore shared the same unsupported assumption that Shanghai's volatile attack would convert.
+
+Why the winner call failed: the analysis made Shanghai a modest favourite based on H2H and team quality, but Dalian's current home scoring floor and compact recent form deserved more weight in regulation-time cup play. “To advance” and 90-minute winner also needed sharper separation.
+
+Required improvement:
+
+1. Apply a knockout-regulation modifier before using league/H2H first-half frequencies.
+2. When one team's recent full-match state is strongly low-event, do not allow the opponent's volatile Over history to dominate all goal derivatives.
+3. Keep team-goal and corner targets independent; this card demonstrates that Dalian O0.5 and corners O8.5 can win while 1H Over, BTTS and full Over all lose.
+4. A more evidence-balanced order was **Dalian team O0.5 / corners O8.5 / 1H O0.5 / BTTS Yes / O2.5**, with Shanghai regulation winner only a low-confidence lean.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/dalian-yingbo-fc-shanghai-shenhua/yrbsRZOd); [BeSoccer match statistics](https://www.besoccer.com/match/dalian-zhixing/shanghai-shenhua/2026345784).
+
+## P-235 settlement — Shandong Taishan vs Shanghai Port
+
+Verified outcome: **Shandong 0, Shanghai Port 3; halftime 0-2; goals in the 18th, 22nd and 79th minutes; 14 corners.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **WIN** |
+| 2 | Shanghai Port team goals Over 0.5 | **WIN** |
+| 3 | BTTS — Yes | **LOSS** |
+| 4 | Total goals Over 2.5 | **WIN** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Shandong | **LOSS** |
+
+What went right: Port's team-goal line, first-half goal signal, full Over and corner volume all captured the visitors' attacking control. Two early Port goals made the phase read decisive; a third completed the Over.
+
+What went wrong: BTTS assumed Shandong would contribute, but Port's clean sheet created a one-sided Over. The Shandong winner call was especially incoherent with a high-ranked Port team-goal and high-event game view. Port scoring was not merely compatible with a Shandong win; it was evidence against it once combined with Shandong's vulnerability.
+
+Learning: add a winner/derivative coherence audit. A team-goal Over plus opponent defensive concerns should move the scoring team upward in winner probability unless the home side has a clearly larger scoring projection.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/shanghai-port-shandong-taishan/wrbsMFq); [Scoremer event timeline](https://www.scoremer.com/match_live/1636436).

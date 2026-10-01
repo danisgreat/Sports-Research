@@ -1,0 +1,153 @@
+| P-150 | P-149 | Montreal @ Winnipeg | canonical alias |
+| P-151 | P-150 | Boca Juniors v Lanús | canonical alias |
+| P-152 | P-151 | Atlante v León | canonical alias |
+| P-153 | P-152 | Necaxa v Cruz Azul | canonical alias |
+| P-154 | P-153 | Vikings @ Broncos | canonical alias |
+| P-155 | P-154 | Phillies @ Angels | canonical alias |
+| P-156 | P-155 | Orioles @ Athletics | canonical alias |
+| P-157 | P-156 | Sacramento @ Reno | canonical alias; issued as no actionable live forecast |
+| P-158 | P-157 | Toronto Tempo @ Las Vegas Aces | canonical alias |
+| P-159 | P-158 | Mystics @ Sparks | canonical alias |
+| P-160 | P-159 | Diamondbacks @ Giants | canonical alias |
+| P-161 | P-160 | Sultanes @ Toros | fills the unused canonical number |
+| P-162 | P-162 | Rigele Te v Chase Ferguson | unchanged |
+| P-163 | P-163 | Adelaide v West Coast | unchanged |
+| P-164 | P-164 | Lotte @ Nippon-Ham | unchanged; live at audit cutoff |
+
+The next canonical ID is therefore **P-165**. Issued/local labels remain searchable aliases forever. Duplicate storage is excluded from event, contract, rank and winner counts.
+
+## C. Settlement ledger
+
+`Official` means the competition, league, club or field-owning match page supplied the final. `Provisional` means the result or niche field is supported by specialist/secondary evidence pending an official-provider confirmation. Rows with unknown operator definitions are research settlements only.
+
+| Canonical ID | Verified result / state | Ranked contract outcomes in issued rank order | Winner call | Settlement/source status |
+|---|---|---|---|---|
+| P-137 | Dodgers 2–1 Tigers | **W, W, W, L** | Dodgers **W** | Official MLB recap/game story |
+| P-138 | Nationals 9–2 Marlins | **L, L, W, W** | Marlins **L** | Official MLB recap |
+| P-139 | Falcons 17–12 Dolphins; total 29 | **W, L, L, W** | Falcons **W** | Official NFL/team report |
+| P-140 | Astros 3–1 Mets | **W, L, L, W** | Astros **W** | Official MLB game story |
+| P-141 | Yankees 1–0 Red Sox | **W, W, W, L** | Yankees **W** | Official MLB recap |
+| P-142 | Braves 6–4 Rockies | **W, W, L, W** | Braves **W** | Official MLB recap |
+| P-143 | Giants 23–6 Jets; total 29 | **W, L, W, L** | Giants **W** | Official Giants report |
+| P-144 | Jaguars 19–0 Buccaneers; total 19 | **L, L, W, W** | Buccaneers **L** | Official team report |
+| P-145 | Brewers 6–1 Rangers | **L, L, W, W** | Brewers **W** | Official MLB recap |
+| P-146 | Fever 111–91 Sun; total 202 | **W, W, L, L** | Fever **W** | Official WNBA/team result |
+| P-147 | Gotham 1–1 Portland; HT 0–0; corners 4–3 | **L, L, L, W, W** | Gotham regulation winner **L** | Official Gotham recap and official stats summary |
+| P-148 | Toluca Femenil 1–0 León Femenil; HT 0–0 | **L, UNRESOLVED, L, W, W** | Toluca **W** | Score/goal timing corroborated by current reports; Toluca corner count not recovered |
+| P-149 | Colorado Rapids 2 2–3 Ventura; HT 1–1 | **W, W, W, L, L** | Ventura **W** | Official score/phase; Ventura corners research result **provisional** |
+| P-150 | Winnipeg 44–28 Montreal; total 72 | **L, L, W, W** | Montreal **L** | Official CFL report |
+| P-151 | Boca Juniors 1–0 Lanús; HT 0–0 | **W, W, W, L, L** | Boca **W** | Official score/phase; Boca corners research result **provisional** |
+| P-152 | Atlante 1–1 León; HT 0–0; corners 3–3 | **L, L, L, W, W** | León **L** | Current result/stat corroboration; corner field provisional |
+| P-153 | Necaxa 1–3 Cruz Azul; HT 0–1; corners 7–7 | **W, W, W, L, L** | Cruz Azul **W** | Current result/stat corroboration |
+| P-154 | Broncos 34–6 Vikings; total 40 | **L, W, L, W** | Broncos **W** | Official Vikings report |
+| P-155 | Phillies 5–3 Angels; total 8 | **W, L, W, L** | Phillies **W** | Official MLB recap |
+| P-156 | Orioles 4–3 Athletics; total 7 | **W, W, L, L** | Orioles **W** | Official MLB report/story |
+| P-157 | Reno 6–1 Sacramento | `NO ACTIONABLE LIVE FORECAST`; frozen descriptive order would read **W, W, L, L** | none actionable | Official MiLB scoreboard; excluded from forecast performance |
+| P-158 | Aces 93–73 Tempo; total 166 | **W, L, W, L** | Aces **W** | Official WNBA game page; specialist box cross-check |
+| P-159 | Sparks 88–82 Mystics; total 170 | **L, W, L, W** | Mystics **L** | Official WNBA game page/current report |
+| P-160 | Diamondbacks 10–6 Giants; total 16 | **W, L, L, W** | Diamondbacks **W** | Official MLB recap |
+| P-161 | Toros 2–0 Sultanes; total 2 | **L, W, L, W** | Toros **W** | Official Sultanes report |
+| P-162 | Rigele Te d. Chase Ferguson 6–1, 6–4; 17 games | **W, W, L, L** | Te **W** | Specialist scoreboard only; all rows provisional pending official ITF/event confirmation |
+| P-163 | Adelaide 60–43 West Coast; margin 17, total 103 | **W, L, L, W** | Adelaide **W** | Official AFLW report |
+| P-164 | Nippon-Ham 9–7 Lotte, **live top 6th** at last refresh | rank 3 Under 8.5 **mathematically lost**; rank 4 Over 8.5 **mathematically won**; both +1.5 sides and winner remain **OPEN** | Nippon-Ham **OPEN** | Official NPB live page; whole event stays open until official final |
+
+### Descriptive accounting only
+
+Across the 27 canonical P-137–P-163 events:
+
+- 26 carried actionable pregame rankings; P-157 explicitly issued no actionable live forecast.
+- Excluding P-157, there are 110 closed research-contract rows: **58 WIN / 51 LOSS / 1 UNRESOLVED**.
+- Rank slots are: rank 1 **16–10**; rank 2 **12–13–1 unresolved**; rank 3 **12–14**; rank 4 **15–11**; rank 5 **3–3**.
+- Potential-winner calls are **20–6**.
+- P-164 currently adds one mathematically decided win and one loss, but it remains an open event and is not included above.
+
+These are correlated, user-selected, late-import directional rows without issued probabilities or prices. They are **not** independent trials, calibration evidence, a betting record, profit/ROI evidence, or proof that any rank slot has stable skill. The unexpectedly strong rank-4 count is a useful ordinal-process warning, not a reason to reverse ranks retrospectively.
+
+## D. Event-level retrospective
+
+### P-137 — Dodgers @ Tigers
+
+What went right: the top Tigers +2.5 cushion, Dodgers winner, and Under 7.5 all came from a coherent close, low-scoring branch. The official 2–1 final—with the winning run in the eighth—matched the intended distinction between outright winner and broad underdog cushion.
+
+What to retain: model winner, run line and total from one joint run distribution. A strong favourite can win without clearing a large margin. Do not convert this one success into a new weight.
+
+### P-138 — Marlins @ Nationals
+
+What failed: Marlins ML and Under 8.5 ranked first and second; Washington won 9–2. The official recap records home runs by Brady House and Harry Ford behind Jackson Kent's first career win. The card let Eury Pérez/Miami starter quality and Kent's poor surface line suppress the Washington power/cluster and young-starter-good-tail branches too aggressively.
+
+| P-232-C04 | 2 | Under 10.5 | 3 runs | WIN | RR/PR | PROCESS_DEFECT — RATE_PROCESS / MATCHUP_CONTEXT | S232 |
+| P-233-C01 | 1 | Beijing team goals Over 1.5 | Beijing scored 3 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C02 | 2 | 1H Over 0.5 goals | HT 1-0 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C03 | 3 | Over 2.5 goals | 4 goals | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C04 | 4 | BTTS — No | Final 3-1 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C05 | 5 | Corners Over 8.5 | 13 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S233 |
+| P-234-C01 | 1 | 1H Over 0.5 goals | HT 0-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C02 | 2 | Dalian team goals Over 0.5 | Dalian scored 1 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C03 | 3 | Corners Over 8.5 | 10 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S234 |
+| P-234-C04 | 4 | BTTS — Yes | Final 1-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C05 | 5 | Over 2.5 goals | 1 goal | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-235-C01 | 1 | 1H Over 0.5 goals | HT 0-2 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C02 | 2 | Shanghai Port team goals Over 0.5 | Port scored 3 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C03 | 3 | BTTS — Yes | Final 0-3 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C04 | 4 | Over 2.5 goals | 3 goals | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C05 | 5 | Corners Over 8.5 | 14 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S235 |
+| P-236-C01 | 2 | Ireland innings Over 218.5 | 281/5 after 50 | WIN | RR/PR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C02 | 3 | Ireland innings Under 218.5 | 281/5 after 50 | LOSS | RW/PBR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C03 | 4 | Ireland after 5 Over 20.5 | 23/1 after 5 | WIN | RR/PD | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C04 | 1 | Ireland after 5 Under 20.5 | 23/1 after 5 | LOSS | RW/PW | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-237-C01 | 4 | South Africa innings Over 184.5 | 185/7 after 20 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C02 | 1 | South Africa innings Under 184.5 | 185/7 after 20 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C03 | 3 | South Africa after 6 Over 54.5 | 59/0 after 6 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C04 | 2 | South Africa after 6 Under 54.5 | 59/0 after 6 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-238-C01 | 4 | Glasgow innings Over 161.5 | 140/9 after 20 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C02 | 1 | Glasgow innings Under 161.5 | 140/9 after 20 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+| P-238-C03 | 3 | Glasgow after 6 Over 46.5 | 39/2 after 6 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C04 | 2 | Glasgow after 6 Under 46.5 | 39/2 after 6 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+
+### Queue-row contract corrections outside P-215–P-238
+
+These rows changed status in this audit and are not added to the 99-row continuation count.
+
+| Contract ID | Rank | Exact frozen endpoint | Official/retrieved endpoint | Settlement | Four-way verdict | Process grade / defect | Source |
+|---|---:|---|---|---|---|---|---|
+| P-148-C02 | 2 | Toluca team corners Over 4.5 | Specialist reports Toluca 2 (match corners 2-6) | PROVISIONAL LOSS | RW/PBR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | Q148 |
+| P-162-C01 | 1 | Rigele Te -2.5 games | Te won 6-1, 6-4; +7 game margin | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-162-C02 | 3 | Chase Ferguson +2.5 games | Ferguson lost by 7 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C03 | 4 | Over 22.5 games | 17 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C04 | 2 | Under 22.5 games | 17 games | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-176-C05 | 5 | Total match corners Under 10.5 | Timeline records Amiens 5, Versailles 3; 8 total | PROVISIONAL WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT | Q176 |
+
+### Contract-level settlement controls
+
+Each row below applies to every contract ID in its stated range. Direct result/source access occurred during the **2026-09-02 Australia/Sydney audit session**. Exact per-page wall-clock minutes were not captured, are immaterial to already-final endpoints, and are not invented.
+
+| Contract IDs | State/source check | Operator-rule dependency | Threshold/provider invariance |
+|---|---|---|---|
+| P-215-C01–C04 | FINAL; S215 official FIBA | None outcome-changing for the completed score endpoints | Yes; half-point lines |
+| P-216-C01–C04 | FINAL; S216 ICC final plus separate six-over scorecard field | No DLS/shortening realised; operator does not alter completed run endpoints | Yes; half-point lines |
+| P-217-C01/C02 | FINAL event; S217 confirms 185/5 in 16 | **Material and missing**: actual reduced-overs/DLS/action/void rule | **No formal invariance** across possible operator rules; remain UNRESOLVED |
+| P-217-C03/C04 | FINAL phase; S217 confirms 31/2 after six completed overs | No uncompleted-phase issue | Yes; half-point line and phase completed |
+| P-218-C01–C04 | FINAL; S218 official USTA | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-219-C01–C04 | FINAL; S219 official MLB | No extra inning or listed-pitcher condition affected the completed endpoints | Yes; half-point lines |
+| P-220-C01–C04 | FINAL; S220 official MLB | No extra inning affected the endpoints; total price/action unavailable but not needed for directional grade | Yes; side lines are half points and five runs is below either side of the integer 9.0 total without push ambiguity |
+| P-221-C01–C04 | FINAL; S221 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-222-C01–C04 | FINAL in 10 innings; S222 official MLB | Extra-inning treatment was not supplied, but the regulation tie and 9-8 final leave all four contracts on the same winning/losing side | **Yes across regulation-only and extra-inning-inclusive endpoints** |
+| P-223-C01–C04 | FINAL; S223 official MLB | No extra inning affected the endpoints | Yes; ML/half-point sides and 11 is above integer 8.0 without push ambiguity |
+| P-224-C01–C04 | FINAL; S224 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-225-C01–C04 | FINAL; S225 official ATP | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-226-C01–C04 | FINAL; S226 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-227-C01–C04 | FINAL; S227 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-228-C01–C04 | FINAL; S228 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-229-C01–C04 | FINAL; S229 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-230-C01–C04 | FINAL; S230 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; ML/half-point/half-run endpoints |
+| P-231-C01–C04 | FINAL; S231 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-232-C01–C04 | FINAL; S232 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-233-C01–C05 | Specialist final only; S233 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-234-C01–C05 | Specialist final only; S234 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-235-C01–C05 | Specialist final only; S235 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-236-C01–C04 | FINAL; S236 ECB result narrative plus specialist five-over/innings fields | No DLS/shortening affected Ireland's completed 50-over innings | Yes; half-point lines |
+| P-237-C01–C04 | FINAL; S237 specialist scorecards agree | No DLS/shortening affected the completed innings/phase endpoints | Yes; half-point lines |
+| P-238-C01–C04 | FINAL; S238 official ETPL | No DLS/shortening affected Glasgow's completed innings/phase endpoints | Yes; half-point lines |
+| P-148-C02 | FINAL event; Q148 official club score plus specialist corner field | Named sportsbook/provider corner definition remains missing | Endpoint is below 4.5 on the retrieved field, but ownership is unproved; PROVISIONAL LOSS |
+| P-162-C01–C04 | FINAL; Q162 official ITF printable draw | No retirement/walkover occurred; missing retirement wording is not outcome-changing | Yes; normal completion and half-point lines |
+| P-176-C05 | FINAL event; Q176 complete specialist timeline | Named sportsbook/provider corner definition remains missing | Eight is below 10.5 on the retrieved timeline, but ownership is unproved; PROVISIONAL WIN |

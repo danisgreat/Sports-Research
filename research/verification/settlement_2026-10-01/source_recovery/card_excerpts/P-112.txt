@@ -1,0 +1,307 @@
+**India — `LEAN`.** India remain only four wickets from setting up a chase and the central innings-total branch leaves a small-to-moderate target. The principal threat is **weather/time**, not Sri Lanka currently controlling the match. A Sri Lanka outright win requires both a major tail extension and then enough time/wickets to defend the resulting target, making it materially less plausible than either India or Draw in the qualitative state map.
+
+### Dependence / honesty boundary
+
+- C01 Under and C02 India Win are positively related but not identical. India can win after Sri Lanka reaches 292+, and Under can occur in a rain-drawn match (subject to operator settlement terms).
+- C02 India Win and C03 Draw are mutually exclusive match-result branches.
+- C01/C04 are exact complements only **if** the innings-total market is action and the official innings total is settleable. Rain/unfinished-innings void rules can break sportsbook complementarity.
+- No internal probabilities are generated. Any external win-probability display is diagnostic only and not an internal model output.
+
+**Result at append:** `OPEN — PRE-DAY-5 / NOT YET RESUMED`.
+
+## Controlling continuation snapshot — UPDATE after P-114 append
+
+| Field | Current value |
+|---|---|
+| As of | 2026-08-27 13:40 Australia/Melbourne / 09:10 Sri Lanka local |
+| Next canonical ID | `P-115` |
+| Newly closed this pass | `P-103`, `P-104`, `P-105`, `P-106`, `P-107`, `P-108` |
+| Open / unresolved | `P-087` same Test match-result target; `P-112` live; `P-113` live; `P-114` pre-Day-5 live-state view; older unresolved records pending authoritative settlement |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+
+---
+
+## Settlement / live-state sweep before P-115 — appended 2026-08-27 19:39 Australia/Melbourne
+
+This pass settles only outcomes that are now authoritative or mechanically fixed. Live unresolved match-result branches remain open. Issued forecasts are not rewritten.
+
+### P-112 settlement — Athletics 7, Minnesota Twins 4
+
+**Verified final:** Athletics 7-4 Minnesota, 26 August 2026. J.T. Ginn allowed four earned runs over six innings after three early solo home runs; Connor Prielipp allowed three runs in 5.1 innings, and Minnesota's bullpen conceded four runs in the sixth plus one in the seventh.
+
+| Rank | Frozen contract | Verified result | Grade |
+|---:|---|---:|---|
+| 1 | Athletics +1.5 | Athletics won 7-4 | **WIN** |
+| 2 | Under 10.5 runs | 11 total runs | **LOSS** |
+| 3 | Twins ML | Athletics won | **LOSS** |
+| 4 | Over 10.5 runs | 11 total runs | **WIN** |
+
+**Potential winner:** Athletics — **WIN**.
+
+**Retrospective:** The #1 cushion survived comfortably, but the realised mechanism was not primarily the anticipated Ginn-over-Prielipp starter edge. Ginn was tagged for four runs and three homers; Prielipp kept Minnesota competitive into the sixth. The decisive separation came from Minnesota's relief chain, exactly the late-scoring uncertainty that had been named as the Under's main kill path. Under 10.5 lost at the first possible integer total above the line (11), so the central 8-10 corridor was boundary-close but still wrong. **Process grade: COMPLIANT; outcome mechanism only partially matched.** No method/weight change.
+
+Primary sources: MLB game story (game 824963); CBS Sports final box score/recap; Athletics postgame coverage.
+
+### P-113 settlement — Club América 2, Columbus Crew 0
+
+**Verified final:** Club América 2-0 Columbus Crew. Goals: Raphael Veiga 11', Brian Rodríguez 45+6'. Final corners: Club América 2, Columbus 10 (12 total).
+
+| Rank | Frozen contract | Verified result | Grade |
+|---:|---|---:|---|
+| 1 | Club América or Draw (1X), 90 min | América won 2-0 | **WIN** |
+| 2 | 1H Over 0.5 goals | Goals at 11' and 45+6' | **WIN** |
+| 3 | Over 2.5 total goals | 2 total goals | **LOSS** |
+| 4 | Over 7.5 total corners | 12 total corners | **WIN** |
+
+**Potential winner:** Club América — **WIN**.
+
+**Retrospective:** The side and early-goal mechanisms expressed strongly. The full-match Over lost through the exact control branch identified preissue: América converted early but the game never required a second-half scoring chase. Columbus still generated 10 corners while remaining scoreless, reinforcing the active soccer rule that corner volume and goals are distinct target processes. **Process grade: COMPLIANT.** No method/weight change.
+
+Primary sources: Leagues Cup official match recap; MLS official recap; final match-stat sources showing 2-10 corners.
+
+### P-114 live target settlement / Rank-1 audit — India vs Sri Lanka, 2nd Test Day 5
+
+**Current verified live checkpoint:** Sri Lanka **329/6 at lunch after 104 overs**, leading India by 116. Sonal Dinusha 55* and Keshara Nuwantha 46* had added 111 for the seventh wicket. The match result remains LIVE.
+
+The supplied Sri Lanka second-innings 291.5 target is already mechanically crossed:
+
+| Rank | Frozen contract | Current fixed status | Grade |
+|---:|---|---|---|
+| 1 | Sri Lanka 2nd innings Under 291.5 | Sri Lanka reached 292+ | **LOSS — TARGET FIXED** |
+| 2 | India match win | Match still live | **OPEN** |
+| 3 | Draw | Match still live | **OPEN** |
+| 4 | Sri Lanka 2nd innings Over 291.5 | Sri Lanka reached 292+ | **WIN — TARGET FIXED** |
+
+
+
+### Dependence / honesty boundary
+
+- C01 Under and C02 India Win are positively related but not identical. India can win after Sri Lanka reaches 292+, and Under can occur in a rain-drawn match (subject to operator settlement terms).
+- C02 India Win and C03 Draw are mutually exclusive match-result branches.
+- C01/C04 are exact complements only **if** the innings-total market is action and the official innings total is settleable. Rain/unfinished-innings void rules can break sportsbook complementarity.
+- No internal probabilities are generated. Any external win-probability display is diagnostic only and not an internal model output.
+
+**Result at append:** `OPEN — PRE-DAY-5 / NOT YET RESUMED`.
+
+## Controlling continuation snapshot — UPDATE after P-114 append
+
+| Field | Current value |
+|---|---|
+| As of | 2026-08-27 13:40 Australia/Melbourne / 09:10 Sri Lanka local |
+| Next canonical ID | `P-115` |
+| Newly closed this pass | `P-103`, `P-104`, `P-105`, `P-106`, `P-107`, `P-108` |
+| Open / unresolved | `P-087` same Test match-result target; `P-112` live; `P-113` live; `P-114` pre-Day-5 live-state view; older unresolved records pending authoritative settlement |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+
+---
+
+## Settlement / live-state sweep before P-115 — appended 2026-08-27 19:39 Australia/Melbourne
+
+This pass settles only outcomes that are now authoritative or mechanically fixed. Live unresolved match-result branches remain open. Issued forecasts are not rewritten.
+
+### P-112 settlement — Athletics 7, Minnesota Twins 4
+
+**Verified final:** Athletics 7-4 Minnesota, 26 August 2026. J.T. Ginn allowed four earned runs over six innings after three early solo home runs; Connor Prielipp allowed three runs in 5.1 innings, and Minnesota's bullpen conceded four runs in the sixth plus one in the seventh.
+
+| Rank | Frozen contract | Verified result | Grade |
+|---:|---|---:|---|
+| 1 | Athletics +1.5 | Athletics won 7-4 | **WIN** |
+| 2 | Under 10.5 runs | 11 total runs | **LOSS** |
+| 3 | Twins ML | Athletics won | **LOSS** |
+| 4 | Over 10.5 runs | 11 total runs | **WIN** |
+
+**Potential winner:** Athletics — **WIN**.
+
+**Retrospective:** The #1 cushion survived comfortably, but the realised mechanism was not primarily the anticipated Ginn-over-Prielipp starter edge. Ginn was tagged for four runs and three homers; Prielipp kept Minnesota competitive into the sixth. The decisive separation came from Minnesota's relief chain, exactly the late-scoring uncertainty that had been named as the Under's main kill path. Under 10.5 lost at the first possible integer total above the line (11), so the central 8-10 corridor was boundary-close but still wrong. **Process grade: COMPLIANT; outcome mechanism only partially matched.** No method/weight change.
+
+Primary sources: MLB game story (game 824963); CBS Sports final box score/recap; Athletics postgame coverage.
+
+### P-113 settlement — Club América 2, Columbus Crew 0
+
+**Verified final:** Club América 2-0 Columbus Crew. Goals: Raphael Veiga 11', Brian Rodríguez 45+6'. Final corners: Club América 2, Columbus 10 (12 total).
+
+| Rank | Frozen contract | Verified result | Grade |
+|---:|---|---:|---|
+| 1 | Club América or Draw (1X), 90 min | América won 2-0 | **WIN** |
+| 2 | 1H Over 0.5 goals | Goals at 11' and 45+6' | **WIN** |
+| 3 | Over 2.5 total goals | 2 total goals | **LOSS** |
+| 4 | Over 7.5 total corners | 12 total corners | **WIN** |
+
+**Potential winner:** Club América — **WIN**.
+
+**Retrospective:** The side and early-goal mechanisms expressed strongly. The full-match Over lost through the exact control branch identified preissue: América converted early but the game never required a second-half scoring chase. Columbus still generated 10 corners while remaining scoreless, reinforcing the active soccer rule that corner volume and goals are distinct target processes. **Process grade: COMPLIANT.** No method/weight change.
+
+Primary sources: Leagues Cup official match recap; MLS official recap; final match-stat sources showing 2-10 corners.
+
+### P-114 live target settlement / Rank-1 audit — India vs Sri Lanka, 2nd Test Day 5
+
+**Current verified live checkpoint:** Sri Lanka **329/6 at lunch after 104 overs**, leading India by 116. Sonal Dinusha 55* and Keshara Nuwantha 46* had added 111 for the seventh wicket. The match result remains LIVE.
+
+The supplied Sri Lanka second-innings 291.5 target is already mechanically crossed:
+
+| Rank | Frozen contract | Current fixed status | Grade |
+|---:|---|---|---|
+| 1 | Sri Lanka 2nd innings Under 291.5 | Sri Lanka reached 292+ | **LOSS — TARGET FIXED** |
+| 2 | India match win | Match still live | **OPEN** |
+| 3 | Draw | Match still live | **OPEN** |
+| 4 | Sri Lanka 2nd innings Over 291.5 | Sri Lanka reached 292+ | **WIN — TARGET FIXED** |
+
+**Rank-1 audit:** The issued view correctly identified the exact kill path — Dinusha surviving and another lower-order stand extending the innings — but underweighted it. At the freeze, Sri Lanka needed 63 runs with four wickets left, yet the same batting resources had already shown unusually high crease-time resistance in the first innings: Dinusha made 103; Nuwantha and the tail consumed substantial balls. On Day 5, Dinusha/Nuwantha added 100 runs in the morning session without losing a wicket, and India took the second new ball without a breakthrough. This is not an identity, arithmetic or leakage defect; it is a qualitative weighting miss. In a future comparable state, direct same-match tail survival plus an already-set overnight partnership must be treated as a larger tail-extension branch, especially when the surface has not produced rapid lower-order dismissals. This remains an observation/candidate lesson only; **no automatic method or weight change** follows from one result. **Process grade: COMPLIANT; rank-order outcome incorrect.**
+
+### Dependence / honesty boundary
+
+- C01 Under and C02 India Win are positively related but not identical. India can win after Sri Lanka reaches 292+, and Under can occur in a rain-drawn match (subject to operator settlement terms).
+- C02 India Win and C03 Draw are mutually exclusive match-result branches.
+- C01/C04 are exact complements only **if** the innings-total market is action and the official innings total is settleable. Rain/unfinished-innings void rules can break sportsbook complementarity.
+- No internal probabilities are generated. Any external win-probability display is diagnostic only and not an internal model output.
+
+**Result at append:** `OPEN — PRE-DAY-5 / NOT YET RESUMED`.
+
+## Controlling continuation snapshot — UPDATE after P-114 append
+
+| Field | Current value |
+|---|---|
+| As of | 2026-08-27 13:40 Australia/Melbourne / 09:10 Sri Lanka local |
+| Next canonical ID | `P-115` |
+| Newly closed this pass | `P-103`, `P-104`, `P-105`, `P-106`, `P-107`, `P-108` |
+| Open / unresolved | `P-087` same Test match-result target; `P-112` live; `P-113` live; `P-114` pre-Day-5 live-state view; older unresolved records pending authoritative settlement |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+
+---
+
+## Settlement / live-state sweep before P-115 — appended 2026-08-27 19:39 Australia/Melbourne
+
+This pass settles only outcomes that are now authoritative or mechanically fixed. Live unresolved match-result branches remain open. Issued forecasts are not rewritten.
+
+### P-112 settlement — Athletics 7, Minnesota Twins 4
+
+**Verified final:** Athletics 7-4 Minnesota, 26 August 2026. J.T. Ginn allowed four earned runs over six innings after three early solo home runs; Connor Prielipp allowed three runs in 5.1 innings, and Minnesota's bullpen conceded four runs in the sixth plus one in the seventh.
+
+| Rank | Frozen contract | Verified result | Grade |
+|---:|---|---:|---|
+| 1 | Athletics +1.5 | Athletics won 7-4 | **WIN** |
+| 2 | Under 10.5 runs | 11 total runs | **LOSS** |
+| 3 | Twins ML | Athletics won | **LOSS** |
+| 4 | Over 10.5 runs | 11 total runs | **WIN** |
+
+**Potential winner:** Athletics — **WIN**.
+
+**Retrospective:** The #1 cushion survived comfortably, but the realised mechanism was not primarily the anticipated Ginn-over-Prielipp starter edge. Ginn was tagged for four runs and three homers; Prielipp kept Minnesota competitive into the sixth. The decisive separation came from Minnesota's relief chain, exactly the late-scoring uncertainty that had been named as the Under's main kill path. Under 10.5 lost at the first possible integer total above the line (11), so the central 8-10 corridor was boundary-close but still wrong. **Process grade: COMPLIANT; outcome mechanism only partially matched.** No method/weight change.
+
+Primary sources: MLB game story (game 824963); CBS Sports final box score/recap; Athletics postgame coverage.
+
+### P-113 settlement — Club América 2, Columbus Crew 0
+
+**Verified final:** Club América 2-0 Columbus Crew. Goals: Raphael Veiga 11', Brian Rodríguez 45+6'. Final corners: Club América 2, Columbus 10 (12 total).
+
+| Rank | Frozen contract | Verified result | Grade |
+|---:|---|---:|---|
+| 1 | Club América or Draw (1X), 90 min | América won 2-0 | **WIN** |
+| 2 | 1H Over 0.5 goals | Goals at 11' and 45+6' | **WIN** |
+| 3 | Over 2.5 total goals | 2 total goals | **LOSS** |
+| 4 | Over 7.5 total corners | 12 total corners | **WIN** |
+
+**Potential winner:** Club América — **WIN**.
+
+**Retrospective:** The side and early-goal mechanisms expressed strongly. The full-match Over lost through the exact control branch identified preissue: América converted early but the game never required a second-half scoring chase. Columbus still generated 10 corners while remaining scoreless, reinforcing the active soccer rule that corner volume and goals are distinct target processes. **Process grade: COMPLIANT.** No method/weight change.
+
+Primary sources: Leagues Cup official match recap; MLS official recap; final match-stat sources showing 2-10 corners.
+
+### P-114 live target settlement / Rank-1 audit — India vs Sri Lanka, 2nd Test Day 5
+
+**Current verified live checkpoint:** Sri Lanka **329/6 at lunch after 104 overs**, leading India by 116. Sonal Dinusha 55* and Keshara Nuwantha 46* had added 111 for the seventh wicket. The match result remains LIVE.
+
+The supplied Sri Lanka second-innings 291.5 target is already mechanically crossed:
+
+| Rank | Frozen contract | Current fixed status | Grade |
+|---:|---|---|---|
+| 1 | Sri Lanka 2nd innings Under 291.5 | Sri Lanka reached 292+ | **LOSS — TARGET FIXED** |
+| 2 | India match win | Match still live | **OPEN** |
+| 3 | Draw | Match still live | **OPEN** |
+| 4 | Sri Lanka 2nd innings Over 291.5 | Sri Lanka reached 292+ | **WIN — TARGET FIXED** |
+
+**Rank-1 audit:** The issued view correctly identified the exact kill path — Dinusha surviving and another lower-order stand extending the innings — but underweighted it. At the freeze, Sri Lanka needed 63 runs with four wickets left, yet the same batting resources had already shown unusually high crease-time resistance in the first innings: Dinusha made 103; Nuwantha and the tail consumed substantial balls. On Day 5, Dinusha/Nuwantha added 100 runs in the morning session without losing a wicket, and India took the second new ball without a breakthrough. This is not an identity, arithmetic or leakage defect; it is a qualitative weighting miss. In a future comparable state, direct same-match tail survival plus an already-set overnight partnership must be treated as a larger tail-extension branch, especially when the surface has not produced rapid lower-order dismissals. This remains an observation/candidate lesson only; **no automatic method or weight change** follows from one result. **Process grade: COMPLIANT; rank-order outcome incorrect.**
+
+
+
+- C01 Under and C02 India Win are positively related but not identical. India can win after Sri Lanka reaches 292+, and Under can occur in a rain-drawn match (subject to operator settlement terms).
+- C02 India Win and C03 Draw are mutually exclusive match-result branches.
+- C01/C04 are exact complements only **if** the innings-total market is action and the official innings total is settleable. Rain/unfinished-innings void rules can break sportsbook complementarity.
+- No internal probabilities are generated. Any external win-probability display is diagnostic only and not an internal model output.
+
+**Result at append:** `OPEN — PRE-DAY-5 / NOT YET RESUMED`.
+
+## Controlling continuation snapshot — UPDATE after P-114 append
+
+| Field | Current value |
+|---|---|
+| As of | 2026-08-27 13:40 Australia/Melbourne / 09:10 Sri Lanka local |
+| Next canonical ID | `P-115` |
+| Newly closed this pass | `P-103`, `P-104`, `P-105`, `P-106`, `P-107`, `P-108` |
+| Open / unresolved | `P-087` same Test match-result target; `P-112` live; `P-113` live; `P-114` pre-Day-5 live-state view; older unresolved records pending authoritative settlement |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+
+---
+
+## Settlement / live-state sweep before P-115 — appended 2026-08-27 19:39 Australia/Melbourne
+
+This pass settles only outcomes that are now authoritative or mechanically fixed. Live unresolved match-result branches remain open. Issued forecasts are not rewritten.
+
+### P-112 settlement — Athletics 7, Minnesota Twins 4
+
+**Verified final:** Athletics 7-4 Minnesota, 26 August 2026. J.T. Ginn allowed four earned runs over six innings after three early solo home runs; Connor Prielipp allowed three runs in 5.1 innings, and Minnesota's bullpen conceded four runs in the sixth plus one in the seventh.
+
+| Rank | Frozen contract | Verified result | Grade |
+|---:|---|---:|---|
+| 1 | Athletics +1.5 | Athletics won 7-4 | **WIN** |
+| 2 | Under 10.5 runs | 11 total runs | **LOSS** |
+| 3 | Twins ML | Athletics won | **LOSS** |
+| 4 | Over 10.5 runs | 11 total runs | **WIN** |
+
+**Potential winner:** Athletics — **WIN**.
+
+**Retrospective:** The #1 cushion survived comfortably, but the realised mechanism was not primarily the anticipated Ginn-over-Prielipp starter edge. Ginn was tagged for four runs and three homers; Prielipp kept Minnesota competitive into the sixth. The decisive separation came from Minnesota's relief chain, exactly the late-scoring uncertainty that had been named as the Under's main kill path. Under 10.5 lost at the first possible integer total above the line (11), so the central 8-10 corridor was boundary-close but still wrong. **Process grade: COMPLIANT; outcome mechanism only partially matched.** No method/weight change.
+
+Primary sources: MLB game story (game 824963); CBS Sports final box score/recap; Athletics postgame coverage.
+
+### P-113 settlement — Club América 2, Columbus Crew 0
+
+**Verified final:** Club América 2-0 Columbus Crew. Goals: Raphael Veiga 11', Brian Rodríguez 45+6'. Final corners: Club América 2, Columbus 10 (12 total).
+
+| Rank | Frozen contract | Verified result | Grade |
+|---:|---|---:|---|
+| 1 | Club América or Draw (1X), 90 min | América won 2-0 | **WIN** |
+| 2 | 1H Over 0.5 goals | Goals at 11' and 45+6' | **WIN** |
+| 3 | Over 2.5 total goals | 2 total goals | **LOSS** |
+| 4 | Over 7.5 total corners | 12 total corners | **WIN** |
+
+**Potential winner:** Club América — **WIN**.
+
+**Retrospective:** The side and early-goal mechanisms expressed strongly. The full-match Over lost through the exact control branch identified preissue: América converted early but the game never required a second-half scoring chase. Columbus still generated 10 corners while remaining scoreless, reinforcing the active soccer rule that corner volume and goals are distinct target processes. **Process grade: COMPLIANT.** No method/weight change.
+
+Primary sources: Leagues Cup official match recap; MLS official recap; final match-stat sources showing 2-10 corners.
+
+### P-114 live target settlement / Rank-1 audit — India vs Sri Lanka, 2nd Test Day 5
+
+**Current verified live checkpoint:** Sri Lanka **329/6 at lunch after 104 overs**, leading India by 116. Sonal Dinusha 55* and Keshara Nuwantha 46* had added 111 for the seventh wicket. The match result remains LIVE.
+
+The supplied Sri Lanka second-innings 291.5 target is already mechanically crossed:
+
+| Rank | Frozen contract | Current fixed status | Grade |
+|---:|---|---|---|
+| 1 | Sri Lanka 2nd innings Under 291.5 | Sri Lanka reached 292+ | **LOSS — TARGET FIXED** |
+| 2 | India match win | Match still live | **OPEN** |
+| 3 | Draw | Match still live | **OPEN** |
+| 4 | Sri Lanka 2nd innings Over 291.5 | Sri Lanka reached 292+ | **WIN — TARGET FIXED** |
+
+**Rank-1 audit:** The issued view correctly identified the exact kill path — Dinusha surviving and another lower-order stand extending the innings — but underweighted it. At the freeze, Sri Lanka needed 63 runs with four wickets left, yet the same batting resources had already shown unusually high crease-time resistance in the first innings: Dinusha made 103; Nuwantha and the tail consumed substantial balls. On Day 5, Dinusha/Nuwantha added 100 runs in the morning session without losing a wicket, and India took the second new ball without a breakthrough. This is not an identity, arithmetic or leakage defect; it is a qualitative weighting miss. In a future comparable state, direct same-match tail survival plus an already-set overnight partnership must be treated as a larger tail-extension branch, especially when the surface has not produced rapid lower-order dismissals. This remains an observation/candidate lesson only; **no automatic method or weight change** follows from one result. **Process grade: COMPLIANT; rank-order outcome incorrect.**
+
+Primary sources: Cricbuzz live scorecard/commentary; NDTV live scorecard; India Today live commentary at lunch.

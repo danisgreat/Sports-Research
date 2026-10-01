@@ -1,0 +1,307 @@
+Source: [official NPB September 1 scores](https://npb.jp/bis/eng/2026/games/).
+
+## P-229 settlement and deep rank-#1 retrospective — Hanwha @ KT
+
+Verified outcome: **KT 6, Hanwha 1; 7 total runs; KT won by five.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hanwha +1.5 | **LOSS** |
+| 2 | Over 9.5 | **LOSS** |
+| 3 | Under 9.5 | **WIN** |
+| 4 | KT -1.5 | **WIN** |
+| — | Potential winner: KT | **WIN** |
+
+What went right: the research found almost every decisive mechanism. KT was 66-43-3 against Hanwha's 49-62-3, led the H2H 8-3, had the stronger/rested bullpen, returned Sam Hilliard, and faced a Hanwha team on a six-game losing streak. The card explicitly described KT's 5-2/6-2 low-total separation branch—the realized 6-1 score was nearly identical.
+
+Why the “most likely” pick failed: Hanwha +1.5 was elevated mainly because it was the shortest-priced and broadest mathematical contract. That ignored the evidence's direction and severity. The log itself recorded Hanwha +1.5 at **0/5 and 5/20**, KT -1.5 at **7/11 H2Hs**, and a major late-inning edge for KT. A contract cannot be called the most robust merely because it covers one-run outcomes when the matchup repeatedly produces multi-run KT wins.
+
+Why rank #2 failed: the Over leaned heavily on 9/11 H2H Overs and team season scoring, but the current starter state pointed Under: Daniel had a 2.81 ERA, White was much better than Hanwha's team ERA, and KT's latest ten were 8/10 Under. Once KT controlled Hanwha, the weak Hanwha offense could not contribute enough to reach 10.
+
+Required improvement:
+
+1. Treat market price as a baseline, not a veto over strong matchup evidence. Document when the model view disagrees with price instead of mechanically ranking the shortest price first.
+2. Add a contradiction penalty: a pick opposed by L5, L20, direct H2H, winner direction and bullpen direction cannot rank first without a specific new causal change.
+3. Score one-sided totals. A weak bullpen can help KT separation while the game remains Under if Hanwha scores only 0–2.
+4. The evidence-consistent order should have been **KT -1.5 / Under 9.5 / Hanwha +1.5 / Over 9.5**. The original analysis contained that answer but the ranking did not follow it.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13892-Hanwha-vs-KT-20260901).
+
+## P-230 settlement — KIA @ NC
+
+Verified outcome: **NC 7, KIA 2; 9 total runs; NC scored four in the seventh.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | NC +1.5 | **WIN** |
+| 2 | KIA moneyline | **LOSS** |
+| 3 | Over 9.5 | **LOSS** |
+| 4 | Under 9.5 | **WIN** |
+| — | Potential winner: KIA | **LOSS** |
+
+What went right: NC +1.5 correctly captured the matchup-specific left-handed starter/H2H risk, and the Under survived at nine runs.
+
+What went wrong: the KIA winner call overrode the same NC-specific evidence that made NC the top handicap. The four-run seventh again shows how the relief transition can turn a competitive game into separation without pushing a 9.5 total Over.
+
+Learning: if a team's cushion is #1 because the opponent has a specific matchup problem, the opposite winner call needs a stronger, explicit reason. Otherwise align the winner with the highest-ranked side or lower its confidence.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13893-Kia-vs-NC-20260901).
+
+## P-231 settlement and deep rank-#1 retrospective — LG @ Doosan
+
+Verified outcome: **LG 3, Doosan 1; 4 total runs; LG won by exactly two.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Doosan +1.5 | **LOSS** |
+| 2 | Under 8.5 | **WIN** |
+| 3 | LG +0.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: LG | **WIN** |
+
+What went right: the starter/H2H/park analysis was strong. Im Chan-kyu's current form and 2.04 ERA versus Doosan, Logue's credible but weaker state, Jamsil's run suppression and a user total above the market centre all pointed to LG plus Under. The winner, Under and LG +0.5 all won.
+
+Why rank #1 failed: Doosan +1.5 was promoted on recent cover counts (18/20) and contract breadth even though the best game-specific evidence pointed to a low-scoring LG win. At low totals, a two-run margin is not rare: 3-1, 4-2 and 5-3 are natural results. The exact 3-1 final was already represented by the original “LG controlled separation” logic, yet that branch was not weighted enough.
+
+This was a threshold failure by the minimum margin: Doosan +1.5 needed a one-run loss and lost by two. That does not make the underlying close-game logic absurd, but it does show the ranking was too confident relative to the line's sensitivity.
+
+Required improvement:
+
+1. For +1.5 at a low total, measure the probability of the favourite winning by exactly two; do not bundle all low-score outcomes into “close.”
+2. Use opponent-adjusted cover windows. Doosan's 18/20 record was not conditioned on facing the hottest starter in the matchup.
+3. When winner + starter + Under all align, elevate the winner-aligned side above the opposing cushion unless the dog has a clear scoring floor.
+4. A better order was **Under 8.5 / LG +0.5 / Doosan +1.5 / Over 8.5**.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13894-LG-vs-Doosan-20260901).
+
+
+
+## P-229 settlement and deep rank-#1 retrospective — Hanwha @ KT
+
+Verified outcome: **KT 6, Hanwha 1; 7 total runs; KT won by five.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hanwha +1.5 | **LOSS** |
+| 2 | Over 9.5 | **LOSS** |
+| 3 | Under 9.5 | **WIN** |
+| 4 | KT -1.5 | **WIN** |
+| — | Potential winner: KT | **WIN** |
+
+What went right: the research found almost every decisive mechanism. KT was 66-43-3 against Hanwha's 49-62-3, led the H2H 8-3, had the stronger/rested bullpen, returned Sam Hilliard, and faced a Hanwha team on a six-game losing streak. The card explicitly described KT's 5-2/6-2 low-total separation branch—the realized 6-1 score was nearly identical.
+
+Why the “most likely” pick failed: Hanwha +1.5 was elevated mainly because it was the shortest-priced and broadest mathematical contract. That ignored the evidence's direction and severity. The log itself recorded Hanwha +1.5 at **0/5 and 5/20**, KT -1.5 at **7/11 H2Hs**, and a major late-inning edge for KT. A contract cannot be called the most robust merely because it covers one-run outcomes when the matchup repeatedly produces multi-run KT wins.
+
+Why rank #2 failed: the Over leaned heavily on 9/11 H2H Overs and team season scoring, but the current starter state pointed Under: Daniel had a 2.81 ERA, White was much better than Hanwha's team ERA, and KT's latest ten were 8/10 Under. Once KT controlled Hanwha, the weak Hanwha offense could not contribute enough to reach 10.
+
+Required improvement:
+
+1. Treat market price as a baseline, not a veto over strong matchup evidence. Document when the model view disagrees with price instead of mechanically ranking the shortest price first.
+2. Add a contradiction penalty: a pick opposed by L5, L20, direct H2H, winner direction and bullpen direction cannot rank first without a specific new causal change.
+3. Score one-sided totals. A weak bullpen can help KT separation while the game remains Under if Hanwha scores only 0–2.
+4. The evidence-consistent order should have been **KT -1.5 / Under 9.5 / Hanwha +1.5 / Over 9.5**. The original analysis contained that answer but the ranking did not follow it.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13892-Hanwha-vs-KT-20260901).
+
+## P-230 settlement — KIA @ NC
+
+Verified outcome: **NC 7, KIA 2; 9 total runs; NC scored four in the seventh.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | NC +1.5 | **WIN** |
+| 2 | KIA moneyline | **LOSS** |
+| 3 | Over 9.5 | **LOSS** |
+| 4 | Under 9.5 | **WIN** |
+| — | Potential winner: KIA | **LOSS** |
+
+What went right: NC +1.5 correctly captured the matchup-specific left-handed starter/H2H risk, and the Under survived at nine runs.
+
+What went wrong: the KIA winner call overrode the same NC-specific evidence that made NC the top handicap. The four-run seventh again shows how the relief transition can turn a competitive game into separation without pushing a 9.5 total Over.
+
+Learning: if a team's cushion is #1 because the opponent has a specific matchup problem, the opposite winner call needs a stronger, explicit reason. Otherwise align the winner with the highest-ranked side or lower its confidence.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13893-Kia-vs-NC-20260901).
+
+## P-231 settlement and deep rank-#1 retrospective — LG @ Doosan
+
+Verified outcome: **LG 3, Doosan 1; 4 total runs; LG won by exactly two.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Doosan +1.5 | **LOSS** |
+| 2 | Under 8.5 | **WIN** |
+| 3 | LG +0.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: LG | **WIN** |
+
+What went right: the starter/H2H/park analysis was strong. Im Chan-kyu's current form and 2.04 ERA versus Doosan, Logue's credible but weaker state, Jamsil's run suppression and a user total above the market centre all pointed to LG plus Under. The winner, Under and LG +0.5 all won.
+
+Why rank #1 failed: Doosan +1.5 was promoted on recent cover counts (18/20) and contract breadth even though the best game-specific evidence pointed to a low-scoring LG win. At low totals, a two-run margin is not rare: 3-1, 4-2 and 5-3 are natural results. The exact 3-1 final was already represented by the original “LG controlled separation” logic, yet that branch was not weighted enough.
+
+This was a threshold failure by the minimum margin: Doosan +1.5 needed a one-run loss and lost by two. That does not make the underlying close-game logic absurd, but it does show the ranking was too confident relative to the line's sensitivity.
+
+Required improvement:
+
+1. For +1.5 at a low total, measure the probability of the favourite winning by exactly two; do not bundle all low-score outcomes into “close.”
+2. Use opponent-adjusted cover windows. Doosan's 18/20 record was not conditioned on facing the hottest starter in the matchup.
+3. When winner + starter + Under all align, elevate the winner-aligned side above the opposing cushion unless the dog has a clear scoring floor.
+4. A better order was **Under 8.5 / LG +0.5 / Doosan +1.5 / Over 8.5**.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13894-LG-vs-Doosan-20260901).
+
+## P-232 settlement and deep rank-#1 retrospective — Lotte @ Samsung
+
+## P-229 settlement and deep rank-#1 retrospective — Hanwha @ KT
+
+Verified outcome: **KT 6, Hanwha 1; 7 total runs; KT won by five.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hanwha +1.5 | **LOSS** |
+| 2 | Over 9.5 | **LOSS** |
+| 3 | Under 9.5 | **WIN** |
+| 4 | KT -1.5 | **WIN** |
+| — | Potential winner: KT | **WIN** |
+
+What went right: the research found almost every decisive mechanism. KT was 66-43-3 against Hanwha's 49-62-3, led the H2H 8-3, had the stronger/rested bullpen, returned Sam Hilliard, and faced a Hanwha team on a six-game losing streak. The card explicitly described KT's 5-2/6-2 low-total separation branch—the realized 6-1 score was nearly identical.
+
+Why the “most likely” pick failed: Hanwha +1.5 was elevated mainly because it was the shortest-priced and broadest mathematical contract. That ignored the evidence's direction and severity. The log itself recorded Hanwha +1.5 at **0/5 and 5/20**, KT -1.5 at **7/11 H2Hs**, and a major late-inning edge for KT. A contract cannot be called the most robust merely because it covers one-run outcomes when the matchup repeatedly produces multi-run KT wins.
+
+Why rank #2 failed: the Over leaned heavily on 9/11 H2H Overs and team season scoring, but the current starter state pointed Under: Daniel had a 2.81 ERA, White was much better than Hanwha's team ERA, and KT's latest ten were 8/10 Under. Once KT controlled Hanwha, the weak Hanwha offense could not contribute enough to reach 10.
+
+Required improvement:
+
+1. Treat market price as a baseline, not a veto over strong matchup evidence. Document when the model view disagrees with price instead of mechanically ranking the shortest price first.
+2. Add a contradiction penalty: a pick opposed by L5, L20, direct H2H, winner direction and bullpen direction cannot rank first without a specific new causal change.
+3. Score one-sided totals. A weak bullpen can help KT separation while the game remains Under if Hanwha scores only 0–2.
+4. The evidence-consistent order should have been **KT -1.5 / Under 9.5 / Hanwha +1.5 / Over 9.5**. The original analysis contained that answer but the ranking did not follow it.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13892-Hanwha-vs-KT-20260901).
+
+## P-230 settlement — KIA @ NC
+
+Verified outcome: **NC 7, KIA 2; 9 total runs; NC scored four in the seventh.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | NC +1.5 | **WIN** |
+| 2 | KIA moneyline | **LOSS** |
+| 3 | Over 9.5 | **LOSS** |
+| 4 | Under 9.5 | **WIN** |
+| — | Potential winner: KIA | **LOSS** |
+
+What went right: NC +1.5 correctly captured the matchup-specific left-handed starter/H2H risk, and the Under survived at nine runs.
+
+What went wrong: the KIA winner call overrode the same NC-specific evidence that made NC the top handicap. The four-run seventh again shows how the relief transition can turn a competitive game into separation without pushing a 9.5 total Over.
+
+Learning: if a team's cushion is #1 because the opponent has a specific matchup problem, the opposite winner call needs a stronger, explicit reason. Otherwise align the winner with the highest-ranked side or lower its confidence.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13893-Kia-vs-NC-20260901).
+
+## P-231 settlement and deep rank-#1 retrospective — LG @ Doosan
+
+Verified outcome: **LG 3, Doosan 1; 4 total runs; LG won by exactly two.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Doosan +1.5 | **LOSS** |
+| 2 | Under 8.5 | **WIN** |
+| 3 | LG +0.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: LG | **WIN** |
+
+What went right: the starter/H2H/park analysis was strong. Im Chan-kyu's current form and 2.04 ERA versus Doosan, Logue's credible but weaker state, Jamsil's run suppression and a user total above the market centre all pointed to LG plus Under. The winner, Under and LG +0.5 all won.
+
+Why rank #1 failed: Doosan +1.5 was promoted on recent cover counts (18/20) and contract breadth even though the best game-specific evidence pointed to a low-scoring LG win. At low totals, a two-run margin is not rare: 3-1, 4-2 and 5-3 are natural results. The exact 3-1 final was already represented by the original “LG controlled separation” logic, yet that branch was not weighted enough.
+
+This was a threshold failure by the minimum margin: Doosan +1.5 needed a one-run loss and lost by two. That does not make the underlying close-game logic absurd, but it does show the ranking was too confident relative to the line's sensitivity.
+
+Required improvement:
+
+1. For +1.5 at a low total, measure the probability of the favourite winning by exactly two; do not bundle all low-score outcomes into “close.”
+2. Use opponent-adjusted cover windows. Doosan's 18/20 record was not conditioned on facing the hottest starter in the matchup.
+3. When winner + starter + Under all align, elevate the winner-aligned side above the opposing cushion unless the dog has a clear scoring floor.
+4. A better order was **Under 8.5 / LG +0.5 / Doosan +1.5 / Over 8.5**.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13894-LG-vs-Doosan-20260901).
+
+## P-232 settlement and deep rank-#1 retrospective — Lotte @ Samsung
+
+
+
+Verified outcome: **KT 6, Hanwha 1; 7 total runs; KT won by five.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Hanwha +1.5 | **LOSS** |
+| 2 | Over 9.5 | **LOSS** |
+| 3 | Under 9.5 | **WIN** |
+| 4 | KT -1.5 | **WIN** |
+| — | Potential winner: KT | **WIN** |
+
+What went right: the research found almost every decisive mechanism. KT was 66-43-3 against Hanwha's 49-62-3, led the H2H 8-3, had the stronger/rested bullpen, returned Sam Hilliard, and faced a Hanwha team on a six-game losing streak. The card explicitly described KT's 5-2/6-2 low-total separation branch—the realized 6-1 score was nearly identical.
+
+Why the “most likely” pick failed: Hanwha +1.5 was elevated mainly because it was the shortest-priced and broadest mathematical contract. That ignored the evidence's direction and severity. The log itself recorded Hanwha +1.5 at **0/5 and 5/20**, KT -1.5 at **7/11 H2Hs**, and a major late-inning edge for KT. A contract cannot be called the most robust merely because it covers one-run outcomes when the matchup repeatedly produces multi-run KT wins.
+
+Why rank #2 failed: the Over leaned heavily on 9/11 H2H Overs and team season scoring, but the current starter state pointed Under: Daniel had a 2.81 ERA, White was much better than Hanwha's team ERA, and KT's latest ten were 8/10 Under. Once KT controlled Hanwha, the weak Hanwha offense could not contribute enough to reach 10.
+
+Required improvement:
+
+1. Treat market price as a baseline, not a veto over strong matchup evidence. Document when the model view disagrees with price instead of mechanically ranking the shortest price first.
+2. Add a contradiction penalty: a pick opposed by L5, L20, direct H2H, winner direction and bullpen direction cannot rank first without a specific new causal change.
+3. Score one-sided totals. A weak bullpen can help KT separation while the game remains Under if Hanwha scores only 0–2.
+4. The evidence-consistent order should have been **KT -1.5 / Under 9.5 / Hanwha +1.5 / Over 9.5**. The original analysis contained that answer but the ranking did not follow it.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13892-Hanwha-vs-KT-20260901).
+
+## P-230 settlement — KIA @ NC
+
+Verified outcome: **NC 7, KIA 2; 9 total runs; NC scored four in the seventh.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | NC +1.5 | **WIN** |
+| 2 | KIA moneyline | **LOSS** |
+| 3 | Over 9.5 | **LOSS** |
+| 4 | Under 9.5 | **WIN** |
+| — | Potential winner: KIA | **LOSS** |
+
+What went right: NC +1.5 correctly captured the matchup-specific left-handed starter/H2H risk, and the Under survived at nine runs.
+
+What went wrong: the KIA winner call overrode the same NC-specific evidence that made NC the top handicap. The four-run seventh again shows how the relief transition can turn a competitive game into separation without pushing a 9.5 total Over.
+
+Learning: if a team's cushion is #1 because the opponent has a specific matchup problem, the opposite winner call needs a stronger, explicit reason. Otherwise align the winner with the highest-ranked side or lower its confidence.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13893-Kia-vs-NC-20260901).
+
+## P-231 settlement and deep rank-#1 retrospective — LG @ Doosan
+
+Verified outcome: **LG 3, Doosan 1; 4 total runs; LG won by exactly two.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Doosan +1.5 | **LOSS** |
+| 2 | Under 8.5 | **WIN** |
+| 3 | LG +0.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: LG | **WIN** |
+
+What went right: the starter/H2H/park analysis was strong. Im Chan-kyu's current form and 2.04 ERA versus Doosan, Logue's credible but weaker state, Jamsil's run suppression and a user total above the market centre all pointed to LG plus Under. The winner, Under and LG +0.5 all won.
+
+Why rank #1 failed: Doosan +1.5 was promoted on recent cover counts (18/20) and contract breadth even though the best game-specific evidence pointed to a low-scoring LG win. At low totals, a two-run margin is not rare: 3-1, 4-2 and 5-3 are natural results. The exact 3-1 final was already represented by the original “LG controlled separation” logic, yet that branch was not weighted enough.
+
+This was a threshold failure by the minimum margin: Doosan +1.5 needed a one-run loss and lost by two. That does not make the underlying close-game logic absurd, but it does show the ranking was too confident relative to the line's sensitivity.
+
+Required improvement:
+
+1. For +1.5 at a low total, measure the probability of the favourite winning by exactly two; do not bundle all low-score outcomes into “close.”
+2. Use opponent-adjusted cover windows. Doosan's 18/20 record was not conditioned on facing the hottest starter in the matchup.
+3. When winner + starter + Under all align, elevate the winner-aligned side above the opposing cushion unless the dog has a clear scoring floor.
+4. A better order was **Under 8.5 / LG +0.5 / Doosan +1.5 / Over 8.5**.
+
+Sources: [official KBO results](https://eng.koreabaseball.com/Schedule/DailySchedule.aspx); [MyKBO game box](https://mykbostats.com/games/13894-LG-vs-Doosan-20260901).
+
+## P-232 settlement and deep rank-#1 retrospective — Lotte @ Samsung
+
+Verified outcome: **Samsung 3, Lotte 0; 3 total runs; Samsung won by three.**

@@ -1,0 +1,615 @@
+|---:|---|---|---|---|
+| 1 | **First 25 balls Over 35.5** | `LIVE LEAN - UPGRADED` | Need **22 more from 20 balls** (1.10 runs/ball) to reach 36. | The low remaining rate plus ten off Marsh's bat makes this the clearest live side. Three dots and the swinging ball prevent promotion to certainty. |
+| 2 | **First 25 balls Under 45.5** | `LIVE LEAN` | Can add **no more than 31 from 20 balls** (1.55 runs/ball) to finish at 45 or below. | The 36-45 shared corridor needs 22-31 from 20. That remains the central live band; London's swing and three dots in the first set support the cap. |
+| 3 | **100 balls Under 178.5** | `SUPPORTED LIVE` | Can add **no more than 164 from 95 balls** (1.726 runs/ball) to finish at 178 or below. | Four leg byes inflate the team start without demonstrating repeatable bat control; London's pace/spin depth and the damp surface still support the upper cap. |
+| 4 | **100 balls Over 158.5** | `LIVE LEAN / FORCED FOURTH` | Need **145 more from 95 balls** (1.526 runs/ball) to reach 159. | The wicketless start and Headingley ceiling keep the 159-178 shared corridor live, but the required rest-of-innings rate is materially higher than the phase Over requirement. |
+
+**Updated winner:** Sunrisers Leeds remain the `LIVE LEAN`, mildly strengthened by the wicketless 14-run first set. Five balls are far too few for a high-confidence reversal or declaration.
+
+**Dependence:** 36-45 wins both phase rows; 159-178 wins both full-innings rows. The rankings are an immediate live ordering, not four independent recommendations.
+
+Source: `https://www.cricbuzz.com/live-cricket-scores/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`
+
+### Open-event index - LIVE UPDATE (2026-08-04T17:56:47Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-017 | `CLOSED` |
+| P-018 | `OPEN / LIVE - SUNRISERS 14/0 AFTER 5; ALL FOUR MARKETS PENDING` |
+
+**One open record: P-018.** The comprehensive retrospective remains deferred until a verified final.
+
+---
+
+## P-018 - SETTLEMENT, COMPREHENSIVE RETROSPECTIVE AND PENDING-LOG CLEANUP (appended 2026-08-05T01:52:22Z)
+
+### Live-state gate and verified final
+
+P-018 was checked for live status before settlement. It is **FINAL**, not live. Cricbuzz's completed scorecard records Sunrisers Leeds **241/2 from 100 balls** and London Spirit **204/6 from 100 balls**; Sunrisers won by 37 runs. ESPNcricinfo's explicit phase section records Sunrisers **44/0 after exactly 25 balls**. The full innings was completed, so no shortened-match or operator-void ambiguity applies. `[Cricbuzz final scorecard, opened 2026-08-05T01:38Z, OPENED; ESPNcricinfo full scorecard, opened 2026-08-05T01:43Z, OPENED]`
+
+Sources: `https://www.cricbuzz.com/live-cricket-scorecard/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`; `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/full-scorecard`
+
+### Original pre-first-ball card grading
+
+| Original rank | Sunrisers proposition | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Under 45.5 | `SUPPORTED` | 44/0 | **WIN** |
+| 2 | 100 balls Under 178.5 | `SUPPORTED` | 241/2 | **LOSS** |
+| 3 | 100 balls Over 158.5 | `LEAN / FORCED THIRD` | 241/2 | **WIN** |
+| 4 | First 25 balls Over 35.5 | `AVOID / FORCED FOURTH` | 44/0 | **WIN** |
+
+**Original potential winner:** Sunrisers Leeds Men `LEAN` - **WIN** by 37 runs.
+
+### Controlling five-ball live-update grading
+
+| Live rank | Sunrisers proposition at 14/0 after 5 | Live verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Over 35.5 | `LIVE LEAN - UPGRADED` | 44/0 | **WIN** |
+| 2 | First 25 balls Under 45.5 | `LIVE LEAN` | 44/0 | **WIN** |
+| 3 | 100 balls Under 178.5 | `SUPPORTED LIVE` | 241/2 | **LOSS** |
+| 4 | 100 balls Over 158.5 | `LIVE LEAN / FORCED FOURTH` | 241/2 | **WIN** |
+
+**Updated live winner:** Sunrisers Leeds Men `LIVE LEAN` - **WIN** by 37 runs.
+
+Both alternate phase rows won because 44 landed in the **36-45** shared corridor. The full-innings shared corridor of **159-178** failed high: only Over 158.5 won. These were overlapping alternate bands, not exact complementary pairs, so no exact-complement diagnostic trial is added.
+
+### Decisive match sequence
+
+- Sunrisers were 44/0 after 25. The pregame Under 45.5 won by only one run; this is a correct grade but not robust validation of the low-phase mechanism. The live update correctly promoted Over 35.5 after the 14-run opening set, and the remaining 20 balls supplied 30 runs.
+- Marsh and Rickelton extended the opening stand to **148 from 65 balls**. Sunrisers were **119/0 after 50**, the highest halfway score reported in Hundred history. Marsh made 76 from 37 and Rickelton 94 not out from 42.
+- Brook then made 55 from 18, equalling the competition's fastest fifty at 15 balls. Sunrisers reached 200 at ball 85 and finished with a competition-record **241/2 and 21 sixes**. The final 75 balls produced 197 runs: the phase cap did not transfer to the full-innings Under.
+- London still reached 204/6, confirming that the surface level was extremely high. Their chase lost four wickets in the first 20 balls; David Willey's unbeaten 83 reduced the margin but could not repair the required-rate damage. Sunrisers' winner case was therefore right through batting dominance plus early chase wickets, not through the forecasted low-total route.
+
+Source: `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/match-report`
+
+### What went right
+
+1. **Identity and contract:** correct men's match, correct first innings, London fielding first, explicit 25-ball and 100-ball settlement boundaries, and no rain-shortening ambiguity.
+2. **Phase band:** the current Marsh-Rickelton phase evidence produced a central 36-45 corridor, and the actual 44 landed inside it. Both the original higher-cap Under and the live lower-cap Over won.
+3. **Live re-anchor:** after 14/0 from five, Over 35.5 was promoted to live rank #1 and won. The exact remaining-exposure calculation was sound.
+4. **Lower full-innings line:** the contest's established Headingley ceiling and Sunrisers' elite top five supported Over 158.5, which won by 82 runs.
+5. **Winner independence:** Sunrisers were selected from their 2-0 home record, stronger current batting and H2H edge, not solely from the Under thesis. They won despite London scoring 204, so the two-innings reasoning mattered.
+
+### What went wrong
+
+1. **Pitch-source qualification error:** the card marked the mandatory gate as met using Cricket World's unattributed `Pitch Condition` fields. An exact-match automated label is not an attributed toss-window inspection, curator/captain comment or accredited observation under `RULES_CRICKET.md` section 2.1. The hard gate should have been recorded **FAILED**, and the pitch-sensitive Under 178.5 should not have been `SUPPORTED`.
+2. **Surface interpretation:** the low-total reasoning cited average batting, swing and slow spin. Accredited post-match reporting instead called it a belting pitch; Rickelton described it as clearly batter-favouring. Early swing generated three dots in the first set but no wicket and no durable scoring suppression.
+
+
+### Open-event index - LIVE UPDATE (2026-08-04T17:56:47Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-017 | `CLOSED` |
+| P-018 | `OPEN / LIVE - SUNRISERS 14/0 AFTER 5; ALL FOUR MARKETS PENDING` |
+
+**One open record: P-018.** The comprehensive retrospective remains deferred until a verified final.
+
+---
+
+## P-018 - SETTLEMENT, COMPREHENSIVE RETROSPECTIVE AND PENDING-LOG CLEANUP (appended 2026-08-05T01:52:22Z)
+
+### Live-state gate and verified final
+
+P-018 was checked for live status before settlement. It is **FINAL**, not live. Cricbuzz's completed scorecard records Sunrisers Leeds **241/2 from 100 balls** and London Spirit **204/6 from 100 balls**; Sunrisers won by 37 runs. ESPNcricinfo's explicit phase section records Sunrisers **44/0 after exactly 25 balls**. The full innings was completed, so no shortened-match or operator-void ambiguity applies. `[Cricbuzz final scorecard, opened 2026-08-05T01:38Z, OPENED; ESPNcricinfo full scorecard, opened 2026-08-05T01:43Z, OPENED]`
+
+Sources: `https://www.cricbuzz.com/live-cricket-scorecard/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`; `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/full-scorecard`
+
+### Original pre-first-ball card grading
+
+| Original rank | Sunrisers proposition | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Under 45.5 | `SUPPORTED` | 44/0 | **WIN** |
+| 2 | 100 balls Under 178.5 | `SUPPORTED` | 241/2 | **LOSS** |
+| 3 | 100 balls Over 158.5 | `LEAN / FORCED THIRD` | 241/2 | **WIN** |
+| 4 | First 25 balls Over 35.5 | `AVOID / FORCED FOURTH` | 44/0 | **WIN** |
+
+**Original potential winner:** Sunrisers Leeds Men `LEAN` - **WIN** by 37 runs.
+
+### Controlling five-ball live-update grading
+
+| Live rank | Sunrisers proposition at 14/0 after 5 | Live verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Over 35.5 | `LIVE LEAN - UPGRADED` | 44/0 | **WIN** |
+| 2 | First 25 balls Under 45.5 | `LIVE LEAN` | 44/0 | **WIN** |
+| 3 | 100 balls Under 178.5 | `SUPPORTED LIVE` | 241/2 | **LOSS** |
+| 4 | 100 balls Over 158.5 | `LIVE LEAN / FORCED FOURTH` | 241/2 | **WIN** |
+
+**Updated live winner:** Sunrisers Leeds Men `LIVE LEAN` - **WIN** by 37 runs.
+
+Both alternate phase rows won because 44 landed in the **36-45** shared corridor. The full-innings shared corridor of **159-178** failed high: only Over 158.5 won. These were overlapping alternate bands, not exact complementary pairs, so no exact-complement diagnostic trial is added.
+
+### Decisive match sequence
+
+- Sunrisers were 44/0 after 25. The pregame Under 45.5 won by only one run; this is a correct grade but not robust validation of the low-phase mechanism. The live update correctly promoted Over 35.5 after the 14-run opening set, and the remaining 20 balls supplied 30 runs.
+- Marsh and Rickelton extended the opening stand to **148 from 65 balls**. Sunrisers were **119/0 after 50**, the highest halfway score reported in Hundred history. Marsh made 76 from 37 and Rickelton 94 not out from 42.
+- Brook then made 55 from 18, equalling the competition's fastest fifty at 15 balls. Sunrisers reached 200 at ball 85 and finished with a competition-record **241/2 and 21 sixes**. The final 75 balls produced 197 runs: the phase cap did not transfer to the full-innings Under.
+- London still reached 204/6, confirming that the surface level was extremely high. Their chase lost four wickets in the first 20 balls; David Willey's unbeaten 83 reduced the margin but could not repair the required-rate damage. Sunrisers' winner case was therefore right through batting dominance plus early chase wickets, not through the forecasted low-total route.
+
+Source: `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/match-report`
+
+### What went right
+
+1. **Identity and contract:** correct men's match, correct first innings, London fielding first, explicit 25-ball and 100-ball settlement boundaries, and no rain-shortening ambiguity.
+2. **Phase band:** the current Marsh-Rickelton phase evidence produced a central 36-45 corridor, and the actual 44 landed inside it. Both the original higher-cap Under and the live lower-cap Over won.
+3. **Live re-anchor:** after 14/0 from five, Over 35.5 was promoted to live rank #1 and won. The exact remaining-exposure calculation was sound.
+4. **Lower full-innings line:** the contest's established Headingley ceiling and Sunrisers' elite top five supported Over 158.5, which won by 82 runs.
+5. **Winner independence:** Sunrisers were selected from their 2-0 home record, stronger current batting and H2H edge, not solely from the Under thesis. They won despite London scoring 204, so the two-innings reasoning mattered.
+
+### What went wrong
+
+1. **Pitch-source qualification error:** the card marked the mandatory gate as met using Cricket World's unattributed `Pitch Condition` fields. An exact-match automated label is not an attributed toss-window inspection, curator/captain comment or accredited observation under `RULES_CRICKET.md` section 2.1. The hard gate should have been recorded **FAILED**, and the pitch-sensitive Under 178.5 should not have been `SUPPORTED`.
+2. **Surface interpretation:** the low-total reasoning cited average batting, swing and slow spin. Accredited post-match reporting instead called it a belting pitch; Rickelton described it as clearly batter-favouring. Early swing generated three dots in the first set but no wicket and no durable scoring suppression.
+3. **Evidence weighting/ranking:** the card's own latest-five Sunrisers Headingley first-innings sample was 187, 193, 198, 139 and 167. Four of five cleared 158.5 and three cleared 178.5, yet Under 178.5 ranked above Over 158.5. London's two bowl-first restrictions of 138 and 164 were overweighted relative to venue, current top-order quality and boundary ceiling.
+4. **Attack-control assumption:** London conceded only two wickets. The projected Willey-Milne early control and Zampa middle-phase braking did not materialise as an innings-level mechanism: Sunrisers retained ten wickets through 64 balls and all four batters scored above 200 strike rate.
+5. **Phase-to-innings leakage:** the phase Under winning at 44 did not support the full Under. This reinforces `RULES_GENERAL.md` section 10 and `RULES_CRICKET.md` section 5.6: phase and full-innings markets are correlated but distinct, and retained wickets can produce extreme later acceleration.
+
+### Comparable prior research and classification
+
+- **P-001/P-004:** established that a venue prior must be contest-adjusted. P-018 named that rule but applied it in the wrong direction: it adjusted a high Headingley baseline downward from two London bowling samples without giving enough weight to Sunrisers' demonstrated home ceiling. This is a **model-specification and weighting error**.
+- **P-006/P-017:** established that current openers and exact phase rows matter. P-018 applied the current-pair correction and the actual 44 sat inside the predicted phase overlap. However, the phase Under's one-run margin means it is supporting evidence only, not proof of calibration.
+- **P-004's clean-platform lesson:** P-018 is the opposite realised branch. Instead of a wicket cluster resetting the innings, the first wicket did not fall until ball 65 and Brook accelerated immediately. The existing rule correctly contains both branches and is not changed.
+- **Source discipline:** the pitch-gate mistake is an **identity/data-quality and release-integrity error**, not sporting variance. Match-specific and timestamped did not make an unattributed generated field admissible.
+
+
+| 1 | **First 25 balls Over 35.5** | `LIVE LEAN - UPGRADED` | Need **22 more from 20 balls** (1.10 runs/ball) to reach 36. | The low remaining rate plus ten off Marsh's bat makes this the clearest live side. Three dots and the swinging ball prevent promotion to certainty. |
+| 2 | **First 25 balls Under 45.5** | `LIVE LEAN` | Can add **no more than 31 from 20 balls** (1.55 runs/ball) to finish at 45 or below. | The 36-45 shared corridor needs 22-31 from 20. That remains the central live band; London's swing and three dots in the first set support the cap. |
+| 3 | **100 balls Under 178.5** | `SUPPORTED LIVE` | Can add **no more than 164 from 95 balls** (1.726 runs/ball) to finish at 178 or below. | Four leg byes inflate the team start without demonstrating repeatable bat control; London's pace/spin depth and the damp surface still support the upper cap. |
+| 4 | **100 balls Over 158.5** | `LIVE LEAN / FORCED FOURTH` | Need **145 more from 95 balls** (1.526 runs/ball) to reach 159. | The wicketless start and Headingley ceiling keep the 159-178 shared corridor live, but the required rest-of-innings rate is materially higher than the phase Over requirement. |
+
+**Updated winner:** Sunrisers Leeds remain the `LIVE LEAN`, mildly strengthened by the wicketless 14-run first set. Five balls are far too few for a high-confidence reversal or declaration.
+
+**Dependence:** 36-45 wins both phase rows; 159-178 wins both full-innings rows. The rankings are an immediate live ordering, not four independent recommendations.
+
+Source: `https://www.cricbuzz.com/live-cricket-scores/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`
+
+### Open-event index - LIVE UPDATE (2026-08-04T17:56:47Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-017 | `CLOSED` |
+| P-018 | `OPEN / LIVE - SUNRISERS 14/0 AFTER 5; ALL FOUR MARKETS PENDING` |
+
+**One open record: P-018.** The comprehensive retrospective remains deferred until a verified final.
+
+---
+
+## P-018 - SETTLEMENT, COMPREHENSIVE RETROSPECTIVE AND PENDING-LOG CLEANUP (appended 2026-08-05T01:52:22Z)
+
+### Live-state gate and verified final
+
+P-018 was checked for live status before settlement. It is **FINAL**, not live. Cricbuzz's completed scorecard records Sunrisers Leeds **241/2 from 100 balls** and London Spirit **204/6 from 100 balls**; Sunrisers won by 37 runs. ESPNcricinfo's explicit phase section records Sunrisers **44/0 after exactly 25 balls**. The full innings was completed, so no shortened-match or operator-void ambiguity applies. `[Cricbuzz final scorecard, opened 2026-08-05T01:38Z, OPENED; ESPNcricinfo full scorecard, opened 2026-08-05T01:43Z, OPENED]`
+
+Sources: `https://www.cricbuzz.com/live-cricket-scorecard/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`; `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/full-scorecard`
+
+### Original pre-first-ball card grading
+
+| Original rank | Sunrisers proposition | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Under 45.5 | `SUPPORTED` | 44/0 | **WIN** |
+| 2 | 100 balls Under 178.5 | `SUPPORTED` | 241/2 | **LOSS** |
+| 3 | 100 balls Over 158.5 | `LEAN / FORCED THIRD` | 241/2 | **WIN** |
+| 4 | First 25 balls Over 35.5 | `AVOID / FORCED FOURTH` | 44/0 | **WIN** |
+
+**Original potential winner:** Sunrisers Leeds Men `LEAN` - **WIN** by 37 runs.
+
+### Controlling five-ball live-update grading
+
+| Live rank | Sunrisers proposition at 14/0 after 5 | Live verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Over 35.5 | `LIVE LEAN - UPGRADED` | 44/0 | **WIN** |
+| 2 | First 25 balls Under 45.5 | `LIVE LEAN` | 44/0 | **WIN** |
+| 3 | 100 balls Under 178.5 | `SUPPORTED LIVE` | 241/2 | **LOSS** |
+| 4 | 100 balls Over 158.5 | `LIVE LEAN / FORCED FOURTH` | 241/2 | **WIN** |
+
+**Updated live winner:** Sunrisers Leeds Men `LIVE LEAN` - **WIN** by 37 runs.
+
+Both alternate phase rows won because 44 landed in the **36-45** shared corridor. The full-innings shared corridor of **159-178** failed high: only Over 158.5 won. These were overlapping alternate bands, not exact complementary pairs, so no exact-complement diagnostic trial is added.
+
+### Decisive match sequence
+
+- Sunrisers were 44/0 after 25. The pregame Under 45.5 won by only one run; this is a correct grade but not robust validation of the low-phase mechanism. The live update correctly promoted Over 35.5 after the 14-run opening set, and the remaining 20 balls supplied 30 runs.
+- Marsh and Rickelton extended the opening stand to **148 from 65 balls**. Sunrisers were **119/0 after 50**, the highest halfway score reported in Hundred history. Marsh made 76 from 37 and Rickelton 94 not out from 42.
+- Brook then made 55 from 18, equalling the competition's fastest fifty at 15 balls. Sunrisers reached 200 at ball 85 and finished with a competition-record **241/2 and 21 sixes**. The final 75 balls produced 197 runs: the phase cap did not transfer to the full-innings Under.
+- London still reached 204/6, confirming that the surface level was extremely high. Their chase lost four wickets in the first 20 balls; David Willey's unbeaten 83 reduced the margin but could not repair the required-rate damage. Sunrisers' winner case was therefore right through batting dominance plus early chase wickets, not through the forecasted low-total route.
+
+Source: `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/match-report`
+
+### What went right
+
+1. **Identity and contract:** correct men's match, correct first innings, London fielding first, explicit 25-ball and 100-ball settlement boundaries, and no rain-shortening ambiguity.
+2. **Phase band:** the current Marsh-Rickelton phase evidence produced a central 36-45 corridor, and the actual 44 landed inside it. Both the original higher-cap Under and the live lower-cap Over won.
+3. **Live re-anchor:** after 14/0 from five, Over 35.5 was promoted to live rank #1 and won. The exact remaining-exposure calculation was sound.
+4. **Lower full-innings line:** the contest's established Headingley ceiling and Sunrisers' elite top five supported Over 158.5, which won by 82 runs.
+5. **Winner independence:** Sunrisers were selected from their 2-0 home record, stronger current batting and H2H edge, not solely from the Under thesis. They won despite London scoring 204, so the two-innings reasoning mattered.
+
+### What went wrong
+
+1. **Pitch-source qualification error:** the card marked the mandatory gate as met using Cricket World's unattributed `Pitch Condition` fields. An exact-match automated label is not an attributed toss-window inspection, curator/captain comment or accredited observation under `RULES_CRICKET.md` section 2.1. The hard gate should have been recorded **FAILED**, and the pitch-sensitive Under 178.5 should not have been `SUPPORTED`.
+2. **Surface interpretation:** the low-total reasoning cited average batting, swing and slow spin. Accredited post-match reporting instead called it a belting pitch; Rickelton described it as clearly batter-favouring. Early swing generated three dots in the first set but no wicket and no durable scoring suppression.
+3. **Evidence weighting/ranking:** the card's own latest-five Sunrisers Headingley first-innings sample was 187, 193, 198, 139 and 167. Four of five cleared 158.5 and three cleared 178.5, yet Under 178.5 ranked above Over 158.5. London's two bowl-first restrictions of 138 and 164 were overweighted relative to venue, current top-order quality and boundary ceiling.
+
+### Open-event index - LIVE UPDATE (2026-08-04T17:56:47Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-017 | `CLOSED` |
+| P-018 | `OPEN / LIVE - SUNRISERS 14/0 AFTER 5; ALL FOUR MARKETS PENDING` |
+
+**One open record: P-018.** The comprehensive retrospective remains deferred until a verified final.
+
+---
+
+## P-018 - SETTLEMENT, COMPREHENSIVE RETROSPECTIVE AND PENDING-LOG CLEANUP (appended 2026-08-05T01:52:22Z)
+
+### Live-state gate and verified final
+
+P-018 was checked for live status before settlement. It is **FINAL**, not live. Cricbuzz's completed scorecard records Sunrisers Leeds **241/2 from 100 balls** and London Spirit **204/6 from 100 balls**; Sunrisers won by 37 runs. ESPNcricinfo's explicit phase section records Sunrisers **44/0 after exactly 25 balls**. The full innings was completed, so no shortened-match or operator-void ambiguity applies. `[Cricbuzz final scorecard, opened 2026-08-05T01:38Z, OPENED; ESPNcricinfo full scorecard, opened 2026-08-05T01:43Z, OPENED]`
+
+Sources: `https://www.cricbuzz.com/live-cricket-scorecard/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`; `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/full-scorecard`
+
+### Original pre-first-ball card grading
+
+| Original rank | Sunrisers proposition | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Under 45.5 | `SUPPORTED` | 44/0 | **WIN** |
+| 2 | 100 balls Under 178.5 | `SUPPORTED` | 241/2 | **LOSS** |
+| 3 | 100 balls Over 158.5 | `LEAN / FORCED THIRD` | 241/2 | **WIN** |
+| 4 | First 25 balls Over 35.5 | `AVOID / FORCED FOURTH` | 44/0 | **WIN** |
+
+**Original potential winner:** Sunrisers Leeds Men `LEAN` - **WIN** by 37 runs.
+
+### Controlling five-ball live-update grading
+
+| Live rank | Sunrisers proposition at 14/0 after 5 | Live verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Over 35.5 | `LIVE LEAN - UPGRADED` | 44/0 | **WIN** |
+| 2 | First 25 balls Under 45.5 | `LIVE LEAN` | 44/0 | **WIN** |
+| 3 | 100 balls Under 178.5 | `SUPPORTED LIVE` | 241/2 | **LOSS** |
+| 4 | 100 balls Over 158.5 | `LIVE LEAN / FORCED FOURTH` | 241/2 | **WIN** |
+
+**Updated live winner:** Sunrisers Leeds Men `LIVE LEAN` - **WIN** by 37 runs.
+
+Both alternate phase rows won because 44 landed in the **36-45** shared corridor. The full-innings shared corridor of **159-178** failed high: only Over 158.5 won. These were overlapping alternate bands, not exact complementary pairs, so no exact-complement diagnostic trial is added.
+
+### Decisive match sequence
+
+- Sunrisers were 44/0 after 25. The pregame Under 45.5 won by only one run; this is a correct grade but not robust validation of the low-phase mechanism. The live update correctly promoted Over 35.5 after the 14-run opening set, and the remaining 20 balls supplied 30 runs.
+- Marsh and Rickelton extended the opening stand to **148 from 65 balls**. Sunrisers were **119/0 after 50**, the highest halfway score reported in Hundred history. Marsh made 76 from 37 and Rickelton 94 not out from 42.
+- Brook then made 55 from 18, equalling the competition's fastest fifty at 15 balls. Sunrisers reached 200 at ball 85 and finished with a competition-record **241/2 and 21 sixes**. The final 75 balls produced 197 runs: the phase cap did not transfer to the full-innings Under.
+- London still reached 204/6, confirming that the surface level was extremely high. Their chase lost four wickets in the first 20 balls; David Willey's unbeaten 83 reduced the margin but could not repair the required-rate damage. Sunrisers' winner case was therefore right through batting dominance plus early chase wickets, not through the forecasted low-total route.
+
+Source: `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/match-report`
+
+### What went right
+
+1. **Identity and contract:** correct men's match, correct first innings, London fielding first, explicit 25-ball and 100-ball settlement boundaries, and no rain-shortening ambiguity.
+2. **Phase band:** the current Marsh-Rickelton phase evidence produced a central 36-45 corridor, and the actual 44 landed inside it. Both the original higher-cap Under and the live lower-cap Over won.
+3. **Live re-anchor:** after 14/0 from five, Over 35.5 was promoted to live rank #1 and won. The exact remaining-exposure calculation was sound.
+4. **Lower full-innings line:** the contest's established Headingley ceiling and Sunrisers' elite top five supported Over 158.5, which won by 82 runs.
+5. **Winner independence:** Sunrisers were selected from their 2-0 home record, stronger current batting and H2H edge, not solely from the Under thesis. They won despite London scoring 204, so the two-innings reasoning mattered.
+
+### What went wrong
+
+1. **Pitch-source qualification error:** the card marked the mandatory gate as met using Cricket World's unattributed `Pitch Condition` fields. An exact-match automated label is not an attributed toss-window inspection, curator/captain comment or accredited observation under `RULES_CRICKET.md` section 2.1. The hard gate should have been recorded **FAILED**, and the pitch-sensitive Under 178.5 should not have been `SUPPORTED`.
+2. **Surface interpretation:** the low-total reasoning cited average batting, swing and slow spin. Accredited post-match reporting instead called it a belting pitch; Rickelton described it as clearly batter-favouring. Early swing generated three dots in the first set but no wicket and no durable scoring suppression.
+3. **Evidence weighting/ranking:** the card's own latest-five Sunrisers Headingley first-innings sample was 187, 193, 198, 139 and 167. Four of five cleared 158.5 and three cleared 178.5, yet Under 178.5 ranked above Over 158.5. London's two bowl-first restrictions of 138 and 164 were overweighted relative to venue, current top-order quality and boundary ceiling.
+4. **Attack-control assumption:** London conceded only two wickets. The projected Willey-Milne early control and Zampa middle-phase braking did not materialise as an innings-level mechanism: Sunrisers retained ten wickets through 64 balls and all four batters scored above 200 strike rate.
+5. **Phase-to-innings leakage:** the phase Under winning at 44 did not support the full Under. This reinforces `RULES_GENERAL.md` section 10 and `RULES_CRICKET.md` section 5.6: phase and full-innings markets are correlated but distinct, and retained wickets can produce extreme later acceleration.
+
+### Comparable prior research and classification
+
+- **P-001/P-004:** established that a venue prior must be contest-adjusted. P-018 named that rule but applied it in the wrong direction: it adjusted a high Headingley baseline downward from two London bowling samples without giving enough weight to Sunrisers' demonstrated home ceiling. This is a **model-specification and weighting error**.
+- **P-006/P-017:** established that current openers and exact phase rows matter. P-018 applied the current-pair correction and the actual 44 sat inside the predicted phase overlap. However, the phase Under's one-run margin means it is supporting evidence only, not proof of calibration.
+- **P-004's clean-platform lesson:** P-018 is the opposite realised branch. Instead of a wicket cluster resetting the innings, the first wicket did not fall until ball 65 and Brook accelerated immediately. The existing rule correctly contains both branches and is not changed.
+- **Source discipline:** the pitch-gate mistake is an **identity/data-quality and release-integrity error**, not sporting variance. Match-specific and timestamped did not make an unattributed generated field admissible.
+
+### Concrete corrections and falsification
+
+| 2 | **First 25 balls Under 45.5** | `LIVE LEAN` | Can add **no more than 31 from 20 balls** (1.55 runs/ball) to finish at 45 or below. | The 36-45 shared corridor needs 22-31 from 20. That remains the central live band; London's swing and three dots in the first set support the cap. |
+| 3 | **100 balls Under 178.5** | `SUPPORTED LIVE` | Can add **no more than 164 from 95 balls** (1.726 runs/ball) to finish at 178 or below. | Four leg byes inflate the team start without demonstrating repeatable bat control; London's pace/spin depth and the damp surface still support the upper cap. |
+| 4 | **100 balls Over 158.5** | `LIVE LEAN / FORCED FOURTH` | Need **145 more from 95 balls** (1.526 runs/ball) to reach 159. | The wicketless start and Headingley ceiling keep the 159-178 shared corridor live, but the required rest-of-innings rate is materially higher than the phase Over requirement. |
+
+**Updated winner:** Sunrisers Leeds remain the `LIVE LEAN`, mildly strengthened by the wicketless 14-run first set. Five balls are far too few for a high-confidence reversal or declaration.
+
+**Dependence:** 36-45 wins both phase rows; 159-178 wins both full-innings rows. The rankings are an immediate live ordering, not four independent recommendations.
+
+Source: `https://www.cricbuzz.com/live-cricket-scores/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`
+
+### Open-event index - LIVE UPDATE (2026-08-04T17:56:47Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-017 | `CLOSED` |
+| P-018 | `OPEN / LIVE - SUNRISERS 14/0 AFTER 5; ALL FOUR MARKETS PENDING` |
+
+**One open record: P-018.** The comprehensive retrospective remains deferred until a verified final.
+
+---
+
+## P-018 - SETTLEMENT, COMPREHENSIVE RETROSPECTIVE AND PENDING-LOG CLEANUP (appended 2026-08-05T01:52:22Z)
+
+### Live-state gate and verified final
+
+P-018 was checked for live status before settlement. It is **FINAL**, not live. Cricbuzz's completed scorecard records Sunrisers Leeds **241/2 from 100 balls** and London Spirit **204/6 from 100 balls**; Sunrisers won by 37 runs. ESPNcricinfo's explicit phase section records Sunrisers **44/0 after exactly 25 balls**. The full innings was completed, so no shortened-match or operator-void ambiguity applies. `[Cricbuzz final scorecard, opened 2026-08-05T01:38Z, OPENED; ESPNcricinfo full scorecard, opened 2026-08-05T01:43Z, OPENED]`
+
+Sources: `https://www.cricbuzz.com/live-cricket-scorecard/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`; `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/full-scorecard`
+
+### Original pre-first-ball card grading
+
+| Original rank | Sunrisers proposition | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Under 45.5 | `SUPPORTED` | 44/0 | **WIN** |
+| 2 | 100 balls Under 178.5 | `SUPPORTED` | 241/2 | **LOSS** |
+| 3 | 100 balls Over 158.5 | `LEAN / FORCED THIRD` | 241/2 | **WIN** |
+| 4 | First 25 balls Over 35.5 | `AVOID / FORCED FOURTH` | 44/0 | **WIN** |
+
+**Original potential winner:** Sunrisers Leeds Men `LEAN` - **WIN** by 37 runs.
+
+### Controlling five-ball live-update grading
+
+| Live rank | Sunrisers proposition at 14/0 after 5 | Live verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Over 35.5 | `LIVE LEAN - UPGRADED` | 44/0 | **WIN** |
+| 2 | First 25 balls Under 45.5 | `LIVE LEAN` | 44/0 | **WIN** |
+| 3 | 100 balls Under 178.5 | `SUPPORTED LIVE` | 241/2 | **LOSS** |
+| 4 | 100 balls Over 158.5 | `LIVE LEAN / FORCED FOURTH` | 241/2 | **WIN** |
+
+**Updated live winner:** Sunrisers Leeds Men `LIVE LEAN` - **WIN** by 37 runs.
+
+Both alternate phase rows won because 44 landed in the **36-45** shared corridor. The full-innings shared corridor of **159-178** failed high: only Over 158.5 won. These were overlapping alternate bands, not exact complementary pairs, so no exact-complement diagnostic trial is added.
+
+### Decisive match sequence
+
+- Sunrisers were 44/0 after 25. The pregame Under 45.5 won by only one run; this is a correct grade but not robust validation of the low-phase mechanism. The live update correctly promoted Over 35.5 after the 14-run opening set, and the remaining 20 balls supplied 30 runs.
+- Marsh and Rickelton extended the opening stand to **148 from 65 balls**. Sunrisers were **119/0 after 50**, the highest halfway score reported in Hundred history. Marsh made 76 from 37 and Rickelton 94 not out from 42.
+- Brook then made 55 from 18, equalling the competition's fastest fifty at 15 balls. Sunrisers reached 200 at ball 85 and finished with a competition-record **241/2 and 21 sixes**. The final 75 balls produced 197 runs: the phase cap did not transfer to the full-innings Under.
+- London still reached 204/6, confirming that the surface level was extremely high. Their chase lost four wickets in the first 20 balls; David Willey's unbeaten 83 reduced the margin but could not repair the required-rate damage. Sunrisers' winner case was therefore right through batting dominance plus early chase wickets, not through the forecasted low-total route.
+
+Source: `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/match-report`
+
+### What went right
+
+1. **Identity and contract:** correct men's match, correct first innings, London fielding first, explicit 25-ball and 100-ball settlement boundaries, and no rain-shortening ambiguity.
+2. **Phase band:** the current Marsh-Rickelton phase evidence produced a central 36-45 corridor, and the actual 44 landed inside it. Both the original higher-cap Under and the live lower-cap Over won.
+3. **Live re-anchor:** after 14/0 from five, Over 35.5 was promoted to live rank #1 and won. The exact remaining-exposure calculation was sound.
+4. **Lower full-innings line:** the contest's established Headingley ceiling and Sunrisers' elite top five supported Over 158.5, which won by 82 runs.
+5. **Winner independence:** Sunrisers were selected from their 2-0 home record, stronger current batting and H2H edge, not solely from the Under thesis. They won despite London scoring 204, so the two-innings reasoning mattered.
+
+### What went wrong
+
+1. **Pitch-source qualification error:** the card marked the mandatory gate as met using Cricket World's unattributed `Pitch Condition` fields. An exact-match automated label is not an attributed toss-window inspection, curator/captain comment or accredited observation under `RULES_CRICKET.md` section 2.1. The hard gate should have been recorded **FAILED**, and the pitch-sensitive Under 178.5 should not have been `SUPPORTED`.
+2. **Surface interpretation:** the low-total reasoning cited average batting, swing and slow spin. Accredited post-match reporting instead called it a belting pitch; Rickelton described it as clearly batter-favouring. Early swing generated three dots in the first set but no wicket and no durable scoring suppression.
+3. **Evidence weighting/ranking:** the card's own latest-five Sunrisers Headingley first-innings sample was 187, 193, 198, 139 and 167. Four of five cleared 158.5 and three cleared 178.5, yet Under 178.5 ranked above Over 158.5. London's two bowl-first restrictions of 138 and 164 were overweighted relative to venue, current top-order quality and boundary ceiling.
+4. **Attack-control assumption:** London conceded only two wickets. The projected Willey-Milne early control and Zampa middle-phase braking did not materialise as an innings-level mechanism: Sunrisers retained ten wickets through 64 balls and all four batters scored above 200 strike rate.
+
+
+| ID range | Status |
+|---|---|
+| P-001 through P-017 | `CLOSED` |
+| P-018 | `OPEN / LIVE - SUNRISERS 14/0 AFTER 5; ALL FOUR MARKETS PENDING` |
+
+**One open record: P-018.** The comprehensive retrospective remains deferred until a verified final.
+
+---
+
+## P-018 - SETTLEMENT, COMPREHENSIVE RETROSPECTIVE AND PENDING-LOG CLEANUP (appended 2026-08-05T01:52:22Z)
+
+### Live-state gate and verified final
+
+P-018 was checked for live status before settlement. It is **FINAL**, not live. Cricbuzz's completed scorecard records Sunrisers Leeds **241/2 from 100 balls** and London Spirit **204/6 from 100 balls**; Sunrisers won by 37 runs. ESPNcricinfo's explicit phase section records Sunrisers **44/0 after exactly 25 balls**. The full innings was completed, so no shortened-match or operator-void ambiguity applies. `[Cricbuzz final scorecard, opened 2026-08-05T01:38Z, OPENED; ESPNcricinfo full scorecard, opened 2026-08-05T01:43Z, OPENED]`
+
+Sources: `https://www.cricbuzz.com/live-cricket-scorecard/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`; `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/full-scorecard`
+
+### Original pre-first-ball card grading
+
+| Original rank | Sunrisers proposition | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Under 45.5 | `SUPPORTED` | 44/0 | **WIN** |
+| 2 | 100 balls Under 178.5 | `SUPPORTED` | 241/2 | **LOSS** |
+| 3 | 100 balls Over 158.5 | `LEAN / FORCED THIRD` | 241/2 | **WIN** |
+| 4 | First 25 balls Over 35.5 | `AVOID / FORCED FOURTH` | 44/0 | **WIN** |
+
+**Original potential winner:** Sunrisers Leeds Men `LEAN` - **WIN** by 37 runs.
+
+### Controlling five-ball live-update grading
+
+| Live rank | Sunrisers proposition at 14/0 after 5 | Live verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Over 35.5 | `LIVE LEAN - UPGRADED` | 44/0 | **WIN** |
+| 2 | First 25 balls Under 45.5 | `LIVE LEAN` | 44/0 | **WIN** |
+| 3 | 100 balls Under 178.5 | `SUPPORTED LIVE` | 241/2 | **LOSS** |
+| 4 | 100 balls Over 158.5 | `LIVE LEAN / FORCED FOURTH` | 241/2 | **WIN** |
+
+**Updated live winner:** Sunrisers Leeds Men `LIVE LEAN` - **WIN** by 37 runs.
+
+Both alternate phase rows won because 44 landed in the **36-45** shared corridor. The full-innings shared corridor of **159-178** failed high: only Over 158.5 won. These were overlapping alternate bands, not exact complementary pairs, so no exact-complement diagnostic trial is added.
+
+### Decisive match sequence
+
+- Sunrisers were 44/0 after 25. The pregame Under 45.5 won by only one run; this is a correct grade but not robust validation of the low-phase mechanism. The live update correctly promoted Over 35.5 after the 14-run opening set, and the remaining 20 balls supplied 30 runs.
+- Marsh and Rickelton extended the opening stand to **148 from 65 balls**. Sunrisers were **119/0 after 50**, the highest halfway score reported in Hundred history. Marsh made 76 from 37 and Rickelton 94 not out from 42.
+- Brook then made 55 from 18, equalling the competition's fastest fifty at 15 balls. Sunrisers reached 200 at ball 85 and finished with a competition-record **241/2 and 21 sixes**. The final 75 balls produced 197 runs: the phase cap did not transfer to the full-innings Under.
+- London still reached 204/6, confirming that the surface level was extremely high. Their chase lost four wickets in the first 20 balls; David Willey's unbeaten 83 reduced the margin but could not repair the required-rate damage. Sunrisers' winner case was therefore right through batting dominance plus early chase wickets, not through the forecasted low-total route.
+
+Source: `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/match-report`
+
+### What went right
+
+1. **Identity and contract:** correct men's match, correct first innings, London fielding first, explicit 25-ball and 100-ball settlement boundaries, and no rain-shortening ambiguity.
+2. **Phase band:** the current Marsh-Rickelton phase evidence produced a central 36-45 corridor, and the actual 44 landed inside it. Both the original higher-cap Under and the live lower-cap Over won.
+3. **Live re-anchor:** after 14/0 from five, Over 35.5 was promoted to live rank #1 and won. The exact remaining-exposure calculation was sound.
+4. **Lower full-innings line:** the contest's established Headingley ceiling and Sunrisers' elite top five supported Over 158.5, which won by 82 runs.
+5. **Winner independence:** Sunrisers were selected from their 2-0 home record, stronger current batting and H2H edge, not solely from the Under thesis. They won despite London scoring 204, so the two-innings reasoning mattered.
+
+### What went wrong
+
+1. **Pitch-source qualification error:** the card marked the mandatory gate as met using Cricket World's unattributed `Pitch Condition` fields. An exact-match automated label is not an attributed toss-window inspection, curator/captain comment or accredited observation under `RULES_CRICKET.md` section 2.1. The hard gate should have been recorded **FAILED**, and the pitch-sensitive Under 178.5 should not have been `SUPPORTED`.
+2. **Surface interpretation:** the low-total reasoning cited average batting, swing and slow spin. Accredited post-match reporting instead called it a belting pitch; Rickelton described it as clearly batter-favouring. Early swing generated three dots in the first set but no wicket and no durable scoring suppression.
+3. **Evidence weighting/ranking:** the card's own latest-five Sunrisers Headingley first-innings sample was 187, 193, 198, 139 and 167. Four of five cleared 158.5 and three cleared 178.5, yet Under 178.5 ranked above Over 158.5. London's two bowl-first restrictions of 138 and 164 were overweighted relative to venue, current top-order quality and boundary ceiling.
+4. **Attack-control assumption:** London conceded only two wickets. The projected Willey-Milne early control and Zampa middle-phase braking did not materialise as an innings-level mechanism: Sunrisers retained ten wickets through 64 balls and all four batters scored above 200 strike rate.
+5. **Phase-to-innings leakage:** the phase Under winning at 44 did not support the full Under. This reinforces `RULES_GENERAL.md` section 10 and `RULES_CRICKET.md` section 5.6: phase and full-innings markets are correlated but distinct, and retained wickets can produce extreme later acceleration.
+
+### Comparable prior research and classification
+
+- **P-001/P-004:** established that a venue prior must be contest-adjusted. P-018 named that rule but applied it in the wrong direction: it adjusted a high Headingley baseline downward from two London bowling samples without giving enough weight to Sunrisers' demonstrated home ceiling. This is a **model-specification and weighting error**.
+- **P-006/P-017:** established that current openers and exact phase rows matter. P-018 applied the current-pair correction and the actual 44 sat inside the predicted phase overlap. However, the phase Under's one-run margin means it is supporting evidence only, not proof of calibration.
+- **P-004's clean-platform lesson:** P-018 is the opposite realised branch. Instead of a wicket cluster resetting the innings, the first wicket did not fall until ball 65 and Brook accelerated immediately. The existing rule correctly contains both branches and is not changed.
+- **Source discipline:** the pitch-gate mistake is an **identity/data-quality and release-integrity error**, not sporting variance. Match-specific and timestamped did not make an unattributed generated field admissible.
+
+### Concrete corrections and falsification
+
+
+| 3 | **100 balls Under 178.5** | `SUPPORTED LIVE` | Can add **no more than 164 from 95 balls** (1.726 runs/ball) to finish at 178 or below. | Four leg byes inflate the team start without demonstrating repeatable bat control; London's pace/spin depth and the damp surface still support the upper cap. |
+| 4 | **100 balls Over 158.5** | `LIVE LEAN / FORCED FOURTH` | Need **145 more from 95 balls** (1.526 runs/ball) to reach 159. | The wicketless start and Headingley ceiling keep the 159-178 shared corridor live, but the required rest-of-innings rate is materially higher than the phase Over requirement. |
+
+**Updated winner:** Sunrisers Leeds remain the `LIVE LEAN`, mildly strengthened by the wicketless 14-run first set. Five balls are far too few for a high-confidence reversal or declaration.
+
+**Dependence:** 36-45 wins both phase rows; 159-178 wins both full-innings rows. The rankings are an immediate live ordering, not four independent recommendations.
+
+Source: `https://www.cricbuzz.com/live-cricket-scores/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`
+
+### Open-event index - LIVE UPDATE (2026-08-04T17:56:47Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-017 | `CLOSED` |
+| P-018 | `OPEN / LIVE - SUNRISERS 14/0 AFTER 5; ALL FOUR MARKETS PENDING` |
+
+**One open record: P-018.** The comprehensive retrospective remains deferred until a verified final.
+
+---
+
+## P-018 - SETTLEMENT, COMPREHENSIVE RETROSPECTIVE AND PENDING-LOG CLEANUP (appended 2026-08-05T01:52:22Z)
+
+### Live-state gate and verified final
+
+P-018 was checked for live status before settlement. It is **FINAL**, not live. Cricbuzz's completed scorecard records Sunrisers Leeds **241/2 from 100 balls** and London Spirit **204/6 from 100 balls**; Sunrisers won by 37 runs. ESPNcricinfo's explicit phase section records Sunrisers **44/0 after exactly 25 balls**. The full innings was completed, so no shortened-match or operator-void ambiguity applies. `[Cricbuzz final scorecard, opened 2026-08-05T01:38Z, OPENED; ESPNcricinfo full scorecard, opened 2026-08-05T01:43Z, OPENED]`
+
+Sources: `https://www.cricbuzz.com/live-cricket-scorecard/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`; `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/full-scorecard`
+
+### Original pre-first-ball card grading
+
+| Original rank | Sunrisers proposition | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Under 45.5 | `SUPPORTED` | 44/0 | **WIN** |
+| 2 | 100 balls Under 178.5 | `SUPPORTED` | 241/2 | **LOSS** |
+| 3 | 100 balls Over 158.5 | `LEAN / FORCED THIRD` | 241/2 | **WIN** |
+| 4 | First 25 balls Over 35.5 | `AVOID / FORCED FOURTH` | 44/0 | **WIN** |
+
+**Original potential winner:** Sunrisers Leeds Men `LEAN` - **WIN** by 37 runs.
+
+### Controlling five-ball live-update grading
+
+| Live rank | Sunrisers proposition at 14/0 after 5 | Live verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Over 35.5 | `LIVE LEAN - UPGRADED` | 44/0 | **WIN** |
+| 2 | First 25 balls Under 45.5 | `LIVE LEAN` | 44/0 | **WIN** |
+| 3 | 100 balls Under 178.5 | `SUPPORTED LIVE` | 241/2 | **LOSS** |
+| 4 | 100 balls Over 158.5 | `LIVE LEAN / FORCED FOURTH` | 241/2 | **WIN** |
+
+**Updated live winner:** Sunrisers Leeds Men `LIVE LEAN` - **WIN** by 37 runs.
+
+Both alternate phase rows won because 44 landed in the **36-45** shared corridor. The full-innings shared corridor of **159-178** failed high: only Over 158.5 won. These were overlapping alternate bands, not exact complementary pairs, so no exact-complement diagnostic trial is added.
+
+### Decisive match sequence
+
+- Sunrisers were 44/0 after 25. The pregame Under 45.5 won by only one run; this is a correct grade but not robust validation of the low-phase mechanism. The live update correctly promoted Over 35.5 after the 14-run opening set, and the remaining 20 balls supplied 30 runs.
+- Marsh and Rickelton extended the opening stand to **148 from 65 balls**. Sunrisers were **119/0 after 50**, the highest halfway score reported in Hundred history. Marsh made 76 from 37 and Rickelton 94 not out from 42.
+- Brook then made 55 from 18, equalling the competition's fastest fifty at 15 balls. Sunrisers reached 200 at ball 85 and finished with a competition-record **241/2 and 21 sixes**. The final 75 balls produced 197 runs: the phase cap did not transfer to the full-innings Under.
+- London still reached 204/6, confirming that the surface level was extremely high. Their chase lost four wickets in the first 20 balls; David Willey's unbeaten 83 reduced the margin but could not repair the required-rate damage. Sunrisers' winner case was therefore right through batting dominance plus early chase wickets, not through the forecasted low-total route.
+
+Source: `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/match-report`
+
+### What went right
+
+1. **Identity and contract:** correct men's match, correct first innings, London fielding first, explicit 25-ball and 100-ball settlement boundaries, and no rain-shortening ambiguity.
+2. **Phase band:** the current Marsh-Rickelton phase evidence produced a central 36-45 corridor, and the actual 44 landed inside it. Both the original higher-cap Under and the live lower-cap Over won.
+3. **Live re-anchor:** after 14/0 from five, Over 35.5 was promoted to live rank #1 and won. The exact remaining-exposure calculation was sound.
+4. **Lower full-innings line:** the contest's established Headingley ceiling and Sunrisers' elite top five supported Over 158.5, which won by 82 runs.
+5. **Winner independence:** Sunrisers were selected from their 2-0 home record, stronger current batting and H2H edge, not solely from the Under thesis. They won despite London scoring 204, so the two-innings reasoning mattered.
+
+### What went wrong
+
+1. **Pitch-source qualification error:** the card marked the mandatory gate as met using Cricket World's unattributed `Pitch Condition` fields. An exact-match automated label is not an attributed toss-window inspection, curator/captain comment or accredited observation under `RULES_CRICKET.md` section 2.1. The hard gate should have been recorded **FAILED**, and the pitch-sensitive Under 178.5 should not have been `SUPPORTED`.
+2. **Surface interpretation:** the low-total reasoning cited average batting, swing and slow spin. Accredited post-match reporting instead called it a belting pitch; Rickelton described it as clearly batter-favouring. Early swing generated three dots in the first set but no wicket and no durable scoring suppression.
+3. **Evidence weighting/ranking:** the card's own latest-five Sunrisers Headingley first-innings sample was 187, 193, 198, 139 and 167. Four of five cleared 158.5 and three cleared 178.5, yet Under 178.5 ranked above Over 158.5. London's two bowl-first restrictions of 138 and 164 were overweighted relative to venue, current top-order quality and boundary ceiling.
+4. **Attack-control assumption:** London conceded only two wickets. The projected Willey-Milne early control and Zampa middle-phase braking did not materialise as an innings-level mechanism: Sunrisers retained ten wickets through 64 balls and all four batters scored above 200 strike rate.
+5. **Phase-to-innings leakage:** the phase Under winning at 44 did not support the full Under. This reinforces `RULES_GENERAL.md` section 10 and `RULES_CRICKET.md` section 5.6: phase and full-innings markets are correlated but distinct, and retained wickets can produce extreme later acceleration.
+
+| ID range | Status |
+|---|---|
+| P-001 through P-017 | `CLOSED` |
+| P-018 | `OPEN / LIVE - SUNRISERS 14/0 AFTER 5; ALL FOUR MARKETS PENDING` |
+
+**One open record: P-018.** The comprehensive retrospective remains deferred until a verified final.
+
+---
+
+## P-018 - SETTLEMENT, COMPREHENSIVE RETROSPECTIVE AND PENDING-LOG CLEANUP (appended 2026-08-05T01:52:22Z)
+
+### Live-state gate and verified final
+
+P-018 was checked for live status before settlement. It is **FINAL**, not live. Cricbuzz's completed scorecard records Sunrisers Leeds **241/2 from 100 balls** and London Spirit **204/6 from 100 balls**; Sunrisers won by 37 runs. ESPNcricinfo's explicit phase section records Sunrisers **44/0 after exactly 25 balls**. The full innings was completed, so no shortened-match or operator-void ambiguity applies. `[Cricbuzz final scorecard, opened 2026-08-05T01:38Z, OPENED; ESPNcricinfo full scorecard, opened 2026-08-05T01:43Z, OPENED]`
+
+Sources: `https://www.cricbuzz.com/live-cricket-scorecard/144860/sul-vs-ldn-20th-match-the-hundred-mens-competition-2026`; `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/full-scorecard`
+
+### Original pre-first-ball card grading
+
+| Original rank | Sunrisers proposition | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Under 45.5 | `SUPPORTED` | 44/0 | **WIN** |
+| 2 | 100 balls Under 178.5 | `SUPPORTED` | 241/2 | **LOSS** |
+| 3 | 100 balls Over 158.5 | `LEAN / FORCED THIRD` | 241/2 | **WIN** |
+| 4 | First 25 balls Over 35.5 | `AVOID / FORCED FOURTH` | 44/0 | **WIN** |
+
+**Original potential winner:** Sunrisers Leeds Men `LEAN` - **WIN** by 37 runs.
+
+### Controlling five-ball live-update grading
+
+| Live rank | Sunrisers proposition at 14/0 after 5 | Live verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | First 25 balls Over 35.5 | `LIVE LEAN - UPGRADED` | 44/0 | **WIN** |
+| 2 | First 25 balls Under 45.5 | `LIVE LEAN` | 44/0 | **WIN** |
+| 3 | 100 balls Under 178.5 | `SUPPORTED LIVE` | 241/2 | **LOSS** |
+| 4 | 100 balls Over 158.5 | `LIVE LEAN / FORCED FOURTH` | 241/2 | **WIN** |
+
+**Updated live winner:** Sunrisers Leeds Men `LIVE LEAN` - **WIN** by 37 runs.
+
+Both alternate phase rows won because 44 landed in the **36-45** shared corridor. The full-innings shared corridor of **159-178** failed high: only Over 158.5 won. These were overlapping alternate bands, not exact complementary pairs, so no exact-complement diagnostic trial is added.
+
+### Decisive match sequence
+
+- Sunrisers were 44/0 after 25. The pregame Under 45.5 won by only one run; this is a correct grade but not robust validation of the low-phase mechanism. The live update correctly promoted Over 35.5 after the 14-run opening set, and the remaining 20 balls supplied 30 runs.
+- Marsh and Rickelton extended the opening stand to **148 from 65 balls**. Sunrisers were **119/0 after 50**, the highest halfway score reported in Hundred history. Marsh made 76 from 37 and Rickelton 94 not out from 42.
+- Brook then made 55 from 18, equalling the competition's fastest fifty at 15 balls. Sunrisers reached 200 at ball 85 and finished with a competition-record **241/2 and 21 sixes**. The final 75 balls produced 197 runs: the phase cap did not transfer to the full-innings Under.
+- London still reached 204/6, confirming that the surface level was extremely high. Their chase lost four wickets in the first 20 balls; David Willey's unbeaten 83 reduced the margin but could not repair the required-rate damage. Sunrisers' winner case was therefore right through batting dominance plus early chase wickets, not through the forecasted low-total route.
+
+Source: `https://www.cricinfo.com/series/the-hundred-men-s-competition-2026-1521176/sunrisers-leeds-men-vs-london-spirit-men-20th-match-1521250/match-report`
+
+### What went right
+
+1. **Identity and contract:** correct men's match, correct first innings, London fielding first, explicit 25-ball and 100-ball settlement boundaries, and no rain-shortening ambiguity.
+2. **Phase band:** the current Marsh-Rickelton phase evidence produced a central 36-45 corridor, and the actual 44 landed inside it. Both the original higher-cap Under and the live lower-cap Over won.
+3. **Live re-anchor:** after 14/0 from five, Over 35.5 was promoted to live rank #1 and won. The exact remaining-exposure calculation was sound.
+4. **Lower full-innings line:** the contest's established Headingley ceiling and Sunrisers' elite top five supported Over 158.5, which won by 82 runs.
+5. **Winner independence:** Sunrisers were selected from their 2-0 home record, stronger current batting and H2H edge, not solely from the Under thesis. They won despite London scoring 204, so the two-innings reasoning mattered.
+
+### What went wrong
+
+1. **Pitch-source qualification error:** the card marked the mandatory gate as met using Cricket World's unattributed `Pitch Condition` fields. An exact-match automated label is not an attributed toss-window inspection, curator/captain comment or accredited observation under `RULES_CRICKET.md` section 2.1. The hard gate should have been recorded **FAILED**, and the pitch-sensitive Under 178.5 should not have been `SUPPORTED`.
+2. **Surface interpretation:** the low-total reasoning cited average batting, swing and slow spin. Accredited post-match reporting instead called it a belting pitch; Rickelton described it as clearly batter-favouring. Early swing generated three dots in the first set but no wicket and no durable scoring suppression.
+3. **Evidence weighting/ranking:** the card's own latest-five Sunrisers Headingley first-innings sample was 187, 193, 198, 139 and 167. Four of five cleared 158.5 and three cleared 178.5, yet Under 178.5 ranked above Over 158.5. London's two bowl-first restrictions of 138 and 164 were overweighted relative to venue, current top-order quality and boundary ceiling.
+4. **Attack-control assumption:** London conceded only two wickets. The projected Willey-Milne early control and Zampa middle-phase braking did not materialise as an innings-level mechanism: Sunrisers retained ten wickets through 64 balls and all four batters scored above 200 strike rate.
+5. **Phase-to-innings leakage:** the phase Under winning at 44 did not support the full Under. This reinforces `RULES_GENERAL.md` section 10 and `RULES_CRICKET.md` section 5.6: phase and full-innings markets are correlated but distinct, and retained wickets can produce extreme later acceleration.
+
+### Comparable prior research and classification
+
+- **P-001/P-004:** established that a venue prior must be contest-adjusted. P-018 named that rule but applied it in the wrong direction: it adjusted a high Headingley baseline downward from two London bowling samples without giving enough weight to Sunrisers' demonstrated home ceiling. This is a **model-specification and weighting error**.
+- **P-006/P-017:** established that current openers and exact phase rows matter. P-018 applied the current-pair correction and the actual 44 sat inside the predicted phase overlap. However, the phase Under's one-run margin means it is supporting evidence only, not proof of calibration.
+- **P-004's clean-platform lesson:** P-018 is the opposite realised branch. Instead of a wicket cluster resetting the innings, the first wicket did not fall until ball 65 and Brook accelerated immediately. The existing rule correctly contains both branches and is not changed.
+- **Source discipline:** the pitch-gate mistake is an **identity/data-quality and release-integrity error**, not sporting variance. Match-specific and timestamped did not make an unattributed generated field admissible.
+
+### Concrete corrections and falsification
+
+1. A generated pitch-condition widget without a named observer, attributed quotation or described inspection is rejected even when it is attached to the exact live match. If no qualifying source remains, record `PITCH/CONDITIONS HARD GATE FAILED` and cap every pitch-sensitive total below `SUPPORTED`.

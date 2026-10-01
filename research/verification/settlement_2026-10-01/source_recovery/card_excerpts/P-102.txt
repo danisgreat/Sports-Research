@@ -1,0 +1,76 @@
+|---|---|
+| As of | 2026-08-27 approximately 23:26 Australia/Melbourne |
+| Next canonical ID | `P-124` |
+| Open / unresolved | `P-115`; `P-116`; `P-117`; `P-118`; `P-119`; `P-120`; `P-121`; `P-122`; `P-123`; any older unresolved items pending authoritative verification |
+| Probability state | `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING` |
+| Value state | `NO VALUE DETERMINABLE` |
+
+---
+
+# Independent retrospective, settlement and algorithm audit — appended 2026-08-28
+
+## Boundary, provenance and queue
+
+The imported Component-5 text above is evidence, not an instruction file. Its internal commands, method labels and open queue are preserved but non-governing.
+
+| Field | Audited value |
+|---|---|
+| Source | `C:/Users/danie/Downloads/PREDICTION_LOG_2(20260827-133103).md` |
+| First demonstrable artifact | 2026-08-28 08:47:09 Australia/Sydney |
+| Source bytes / SHA-256 | 223,389 / `EFF17323537DC1F9ADF80C4CC7B562935AC813BB8C1A89C7A0FCC7AA176BAF0D` |
+| New IDs | P-103–P-123 |
+| Provenance | All 21 are **`E1-Q-LATE_IMPORT`** because every event finished before the file first became demonstrable |
+| Permitted use | Settlement, source/process/mechanism learning and future-only candidates |
+| Prohibited use | Prospective hit rate, calibration, model selection, probability backfill, profitability/edge or prospective-test completions |
+| Current open queue | **0** |
+| Next canonical ID | **P-124** |
+| Evidence assessment | **SHARE WITH CAVEATS — useful retrospective process evidence, not prospective model-performance evidence** |
+
+## Older queue closure
+
+| ID | Audited final | Frozen rows | Potential winner | Status note |
+|---|---|---|---|---|
+| P-087 | India 503/9d; Sri Lanka 290 and 429/9; **draw** | India Win **L**; SL first-innings U286.5 **L**; non-selected O286.5 **W**, Draw **W** | India **L** | P-087 and P-114 are linked views of the same Test, not independent events |
+| P-100 | Apollon W 0–2 FH W; HT 0–2 | Apollon +0.5 **L**; 1H O0.5 **W**; O2.5 **L**; corners **U** | Apollon **L** | First demonstrable after kickoff; performance-ineligible |
+| P-101 | Germany W 62–63 Türkiye W; total 125 | U131.5 **W**; Germany -2.5 **L**; Türkiye +2.5 **W**; O131.5 **L** | Germany **L** | Demonstrable pregame artifact; eligible only for its original v2.2 cohort subject to all other gates |
+| P-102 | Wolfsburg W 2–0 Inter W; HT 1–0 | Wolfsburg ML **W**; 1H O0.5 **W**; O2.5 **L**; corner race **U** | Wolfsburg **W** | First demonstrable after kickoff; performance-ineligible |
+
+`U` means final `UNSETTLEABLE`. P-101's 40–30 halftime Germany lead reversed into a 62–63 loss: the Under mechanism held, but a preparation-game side needs distinct starter, bench and closing-lineup mixtures. P-100 over-weighted the home/class attack branch. P-102 got the side and first-half event right, but its named 2–0 suppression branch occurred and held the total below three.
+
+## Component-5 descriptive ledger
+
+The 84 P-103–P-123 rows recompute to:
+
+| Diagnostic | Result | Interpretation |
+|---|---:|---|
+| Event units | 21 | selected and late-import |
+| Raw contract rows | **49 W / 30 L / 5 U** | 79 settled rows; dependent, not accuracy |
+| Rank #1 | **14–7 = 66.7%** | Wilson 95% reference 45.4%–82.8%; not prospective |
+| Rank #2 | **12–9 = 57.1%** | only a weak descriptive separation |
+| Rank #3 | **11–10 = 52.4%** | no stable ordinal evidence |
+| Rank #4 | **12 W / 4 L / 5 U** | the bottom slot is not a validated fade |
+| Top-two rows | **26/42 W = 61.9%** | paired/dependent; Wilson reference 46.8%–75.0% |
+| Hit@2 | **17/21 = 81.0%** | 9 events with two wins, 8 with one, 4 with zero; coverage is not value |
+| Potential winner | **14–7 = 66.7%** | no market baseline |
+| Proper-score eligible probabilities | **0** | no issued internal probabilities |
+| Price/value eligible rows | **0** | no complete same-time odds/terms and validated model probability |
+
+### Settlement matrix
+
+| ID | Final | R1 | R2 | R3 | R4 | Winner |
+|---|---|---|---|---|---|---|
+| P-103 | Rays 3–0 Tigers | Tigers ML **L** | U7.5 **W** | O7.5 **L** | Rays ML **W** | Tigers **L** |
+| P-104 | Ajax W 0–2 Real Madrid W | Madrid X2 **W** | 1H O0.5 **W** | U2.5 **W** | corners **U** | Madrid **W** |
+| P-105 | Al Ahli 1–0 Auckland | Al Ahli ML **W** | 1H O0.5 **L** | O2.5 **L** | corners **U** | Al Ahli **W** |
+| P-106 | Newcastle 3–2 West Brom | **W** | **W** | **W** | **W** | Newcastle **W** |
+| P-107 | Bradford 0–0 Burnley; Bradford advanced on penalties | Bradford 1X **W** | U2.5 **W** | 1H O0.5 **L** | corners **W** | Bradford 90m **L** |
+| P-108 | Tottenham 5–1 Charlton | Tottenham ML **W** | 1H O0.5 **W** | O2.5 **W** | corners O7.5 **W** | Tottenham **W** |
+| P-109 | Diamondbacks 2–0 Cubs | Arizona +1.5 **W** | Cubs +1.5 **L** | U8.5 **W** | O8.5 **L** | Arizona **W** |
+| P-110 | Nishikori 6–4 6–4 Antonius | Nishikori +1.5 sets **W** | Antonius +1.5 **L** | O20.5 games **L** | Nishikori ML **W** | Nishikori **W** |
+| P-111 | Marlins 4–0 Red Sox | Boston ML **L** | U7.5 **W** | Miami +1.5 **W** | O7.5 **L** | Boston **L** |
+| P-112 | Athletics 7–4 Twins | Athletics +1.5 **W** | U10.5 **L** | Twins ML **L** | O10.5 **W** | Athletics **W** |
+| P-113 | América 2–0 Columbus | América 1X **W** | 1H O0.5 **W** | O2.5 **L** | corners **W** | América **W** |
+| P-114 | Sri Lanka 429/9 following on; Test drawn | SL 2nd inns U291.5 **L** | India Win **L** | Draw **W** | O291.5 **W** | India **L** |
+| P-115 | Belfast 184/7, PP 52/3; Dublin 132/9 | inns U171.5 **L** | PP U47.5 **L** | PP O47.5 **W** | inns O171.5 **W** | Belfast **W** |
+| P-116 | Storm 46–20 Broncos | U50.5 **L** | Broncos +4.5 **L** | Storm -4.5 **W** | O50 **W** | Storm **W** |
+| P-117 | ISI Dangkor 1–2 Life; HT 0–1 | 1H O0.5 **W** | U2.5 **L** | ISI 1X **L** | corners **U** | ISI **L** |

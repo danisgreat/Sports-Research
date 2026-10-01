@@ -1,0 +1,306 @@
+| P-233-C01 | 1 | Beijing team goals Over 1.5 | Beijing scored 3 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C02 | 2 | 1H Over 0.5 goals | HT 1-0 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C03 | 3 | Over 2.5 goals | 4 goals | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C04 | 4 | BTTS — No | Final 3-1 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C05 | 5 | Corners Over 8.5 | 13 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S233 |
+| P-234-C01 | 1 | 1H Over 0.5 goals | HT 0-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C02 | 2 | Dalian team goals Over 0.5 | Dalian scored 1 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C03 | 3 | Corners Over 8.5 | 10 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S234 |
+| P-234-C04 | 4 | BTTS — Yes | Final 1-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C05 | 5 | Over 2.5 goals | 1 goal | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-235-C01 | 1 | 1H Over 0.5 goals | HT 0-2 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C02 | 2 | Shanghai Port team goals Over 0.5 | Port scored 3 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C03 | 3 | BTTS — Yes | Final 0-3 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C04 | 4 | Over 2.5 goals | 3 goals | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C05 | 5 | Corners Over 8.5 | 14 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S235 |
+| P-236-C01 | 2 | Ireland innings Over 218.5 | 281/5 after 50 | WIN | RR/PR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C02 | 3 | Ireland innings Under 218.5 | 281/5 after 50 | LOSS | RW/PBR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C03 | 4 | Ireland after 5 Over 20.5 | 23/1 after 5 | WIN | RR/PD | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C04 | 1 | Ireland after 5 Under 20.5 | 23/1 after 5 | LOSS | RW/PW | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-237-C01 | 4 | South Africa innings Over 184.5 | 185/7 after 20 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C02 | 1 | South Africa innings Under 184.5 | 185/7 after 20 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C03 | 3 | South Africa after 6 Over 54.5 | 59/0 after 6 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C04 | 2 | South Africa after 6 Under 54.5 | 59/0 after 6 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-238-C01 | 4 | Glasgow innings Over 161.5 | 140/9 after 20 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C02 | 1 | Glasgow innings Under 161.5 | 140/9 after 20 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+| P-238-C03 | 3 | Glasgow after 6 Over 46.5 | 39/2 after 6 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C04 | 2 | Glasgow after 6 Under 46.5 | 39/2 after 6 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+
+### Queue-row contract corrections outside P-215–P-238
+
+These rows changed status in this audit and are not added to the 99-row continuation count.
+
+| Contract ID | Rank | Exact frozen endpoint | Official/retrieved endpoint | Settlement | Four-way verdict | Process grade / defect | Source |
+|---|---:|---|---|---|---|---|---|
+| P-148-C02 | 2 | Toluca team corners Over 4.5 | Specialist reports Toluca 2 (match corners 2-6) | PROVISIONAL LOSS | RW/PBR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | Q148 |
+| P-162-C01 | 1 | Rigele Te -2.5 games | Te won 6-1, 6-4; +7 game margin | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-162-C02 | 3 | Chase Ferguson +2.5 games | Ferguson lost by 7 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C03 | 4 | Over 22.5 games | 17 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C04 | 2 | Under 22.5 games | 17 games | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-176-C05 | 5 | Total match corners Under 10.5 | Timeline records Amiens 5, Versailles 3; 8 total | PROVISIONAL WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT | Q176 |
+
+### Contract-level settlement controls
+
+Each row below applies to every contract ID in its stated range. Direct result/source access occurred during the **2026-09-02 Australia/Sydney audit session**. Exact per-page wall-clock minutes were not captured, are immaterial to already-final endpoints, and are not invented.
+
+| Contract IDs | State/source check | Operator-rule dependency | Threshold/provider invariance |
+|---|---|---|---|
+| P-215-C01–C04 | FINAL; S215 official FIBA | None outcome-changing for the completed score endpoints | Yes; half-point lines |
+| P-216-C01–C04 | FINAL; S216 ICC final plus separate six-over scorecard field | No DLS/shortening realised; operator does not alter completed run endpoints | Yes; half-point lines |
+| P-217-C01/C02 | FINAL event; S217 confirms 185/5 in 16 | **Material and missing**: actual reduced-overs/DLS/action/void rule | **No formal invariance** across possible operator rules; remain UNRESOLVED |
+| P-217-C03/C04 | FINAL phase; S217 confirms 31/2 after six completed overs | No uncompleted-phase issue | Yes; half-point line and phase completed |
+| P-218-C01–C04 | FINAL; S218 official USTA | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-219-C01–C04 | FINAL; S219 official MLB | No extra inning or listed-pitcher condition affected the completed endpoints | Yes; half-point lines |
+| P-220-C01–C04 | FINAL; S220 official MLB | No extra inning affected the endpoints; total price/action unavailable but not needed for directional grade | Yes; side lines are half points and five runs is below either side of the integer 9.0 total without push ambiguity |
+| P-221-C01–C04 | FINAL; S221 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-222-C01–C04 | FINAL in 10 innings; S222 official MLB | Extra-inning treatment was not supplied, but the regulation tie and 9-8 final leave all four contracts on the same winning/losing side | **Yes across regulation-only and extra-inning-inclusive endpoints** |
+| P-223-C01–C04 | FINAL; S223 official MLB | No extra inning affected the endpoints | Yes; ML/half-point sides and 11 is above integer 8.0 without push ambiguity |
+| P-224-C01–C04 | FINAL; S224 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-225-C01–C04 | FINAL; S225 official ATP | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-226-C01–C04 | FINAL; S226 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-227-C01–C04 | FINAL; S227 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-228-C01–C04 | FINAL; S228 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-229-C01–C04 | FINAL; S229 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-230-C01–C04 | FINAL; S230 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; ML/half-point/half-run endpoints |
+| P-231-C01–C04 | FINAL; S231 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-232-C01–C04 | FINAL; S232 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-233-C01–C05 | Specialist final only; S233 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-234-C01–C05 | Specialist final only; S234 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-235-C01–C05 | Specialist final only; S235 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-236-C01–C04 | FINAL; S236 ECB result narrative plus specialist five-over/innings fields | No DLS/shortening affected Ireland's completed 50-over innings | Yes; half-point lines |
+| P-237-C01–C04 | FINAL; S237 specialist scorecards agree | No DLS/shortening affected the completed innings/phase endpoints | Yes; half-point lines |
+| P-238-C01–C04 | FINAL; S238 official ETPL | No DLS/shortening affected Glasgow's completed innings/phase endpoints | Yes; half-point lines |
+| P-148-C02 | FINAL event; Q148 official club score plus specialist corner field | Named sportsbook/provider corner definition remains missing | Endpoint is below 4.5 on the retrieved field, but ownership is unproved; PROVISIONAL LOSS |
+| P-162-C01–C04 | FINAL; Q162 official ITF printable draw | No retirement/walkover occurred; missing retirement wording is not outcome-changing | Yes; normal completion and half-point lines |
+| P-176-C05 | FINAL event; Q176 complete specialist timeline | Named sportsbook/provider corner definition remains missing | Eight is below 10.5 on the retrieved timeline, but ownership is unproved; PROVISIONAL WIN |
+
+
+| P-233-C04 | 4 | BTTS — No | Final 3-1 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C05 | 5 | Corners Over 8.5 | 13 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S233 |
+| P-234-C01 | 1 | 1H Over 0.5 goals | HT 0-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C02 | 2 | Dalian team goals Over 0.5 | Dalian scored 1 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C03 | 3 | Corners Over 8.5 | 10 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S234 |
+| P-234-C04 | 4 | BTTS — Yes | Final 1-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C05 | 5 | Over 2.5 goals | 1 goal | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-235-C01 | 1 | 1H Over 0.5 goals | HT 0-2 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C02 | 2 | Shanghai Port team goals Over 0.5 | Port scored 3 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C03 | 3 | BTTS — Yes | Final 0-3 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C04 | 4 | Over 2.5 goals | 3 goals | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C05 | 5 | Corners Over 8.5 | 14 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S235 |
+| P-236-C01 | 2 | Ireland innings Over 218.5 | 281/5 after 50 | WIN | RR/PR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C02 | 3 | Ireland innings Under 218.5 | 281/5 after 50 | LOSS | RW/PBR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C03 | 4 | Ireland after 5 Over 20.5 | 23/1 after 5 | WIN | RR/PD | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C04 | 1 | Ireland after 5 Under 20.5 | 23/1 after 5 | LOSS | RW/PW | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-237-C01 | 4 | South Africa innings Over 184.5 | 185/7 after 20 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C02 | 1 | South Africa innings Under 184.5 | 185/7 after 20 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C03 | 3 | South Africa after 6 Over 54.5 | 59/0 after 6 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C04 | 2 | South Africa after 6 Under 54.5 | 59/0 after 6 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-238-C01 | 4 | Glasgow innings Over 161.5 | 140/9 after 20 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C02 | 1 | Glasgow innings Under 161.5 | 140/9 after 20 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+| P-238-C03 | 3 | Glasgow after 6 Over 46.5 | 39/2 after 6 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C04 | 2 | Glasgow after 6 Under 46.5 | 39/2 after 6 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+
+### Queue-row contract corrections outside P-215–P-238
+
+These rows changed status in this audit and are not added to the 99-row continuation count.
+
+| Contract ID | Rank | Exact frozen endpoint | Official/retrieved endpoint | Settlement | Four-way verdict | Process grade / defect | Source |
+|---|---:|---|---|---|---|---|---|
+| P-148-C02 | 2 | Toluca team corners Over 4.5 | Specialist reports Toluca 2 (match corners 2-6) | PROVISIONAL LOSS | RW/PBR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | Q148 |
+| P-162-C01 | 1 | Rigele Te -2.5 games | Te won 6-1, 6-4; +7 game margin | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-162-C02 | 3 | Chase Ferguson +2.5 games | Ferguson lost by 7 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C03 | 4 | Over 22.5 games | 17 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C04 | 2 | Under 22.5 games | 17 games | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-176-C05 | 5 | Total match corners Under 10.5 | Timeline records Amiens 5, Versailles 3; 8 total | PROVISIONAL WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT | Q176 |
+
+### Contract-level settlement controls
+
+Each row below applies to every contract ID in its stated range. Direct result/source access occurred during the **2026-09-02 Australia/Sydney audit session**. Exact per-page wall-clock minutes were not captured, are immaterial to already-final endpoints, and are not invented.
+
+| Contract IDs | State/source check | Operator-rule dependency | Threshold/provider invariance |
+|---|---|---|---|
+| P-215-C01–C04 | FINAL; S215 official FIBA | None outcome-changing for the completed score endpoints | Yes; half-point lines |
+| P-216-C01–C04 | FINAL; S216 ICC final plus separate six-over scorecard field | No DLS/shortening realised; operator does not alter completed run endpoints | Yes; half-point lines |
+| P-217-C01/C02 | FINAL event; S217 confirms 185/5 in 16 | **Material and missing**: actual reduced-overs/DLS/action/void rule | **No formal invariance** across possible operator rules; remain UNRESOLVED |
+| P-217-C03/C04 | FINAL phase; S217 confirms 31/2 after six completed overs | No uncompleted-phase issue | Yes; half-point line and phase completed |
+| P-218-C01–C04 | FINAL; S218 official USTA | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-219-C01–C04 | FINAL; S219 official MLB | No extra inning or listed-pitcher condition affected the completed endpoints | Yes; half-point lines |
+| P-220-C01–C04 | FINAL; S220 official MLB | No extra inning affected the endpoints; total price/action unavailable but not needed for directional grade | Yes; side lines are half points and five runs is below either side of the integer 9.0 total without push ambiguity |
+| P-221-C01–C04 | FINAL; S221 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-222-C01–C04 | FINAL in 10 innings; S222 official MLB | Extra-inning treatment was not supplied, but the regulation tie and 9-8 final leave all four contracts on the same winning/losing side | **Yes across regulation-only and extra-inning-inclusive endpoints** |
+| P-223-C01–C04 | FINAL; S223 official MLB | No extra inning affected the endpoints | Yes; ML/half-point sides and 11 is above integer 8.0 without push ambiguity |
+| P-224-C01–C04 | FINAL; S224 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-225-C01–C04 | FINAL; S225 official ATP | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-226-C01–C04 | FINAL; S226 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-227-C01–C04 | FINAL; S227 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-228-C01–C04 | FINAL; S228 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-229-C01–C04 | FINAL; S229 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-230-C01–C04 | FINAL; S230 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; ML/half-point/half-run endpoints |
+| P-231-C01–C04 | FINAL; S231 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-232-C01–C04 | FINAL; S232 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-233-C01–C05 | Specialist final only; S233 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-234-C01–C05 | Specialist final only; S234 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-235-C01–C05 | Specialist final only; S235 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-236-C01–C04 | FINAL; S236 ECB result narrative plus specialist five-over/innings fields | No DLS/shortening affected Ireland's completed 50-over innings | Yes; half-point lines |
+| P-237-C01–C04 | FINAL; S237 specialist scorecards agree | No DLS/shortening affected the completed innings/phase endpoints | Yes; half-point lines |
+| P-238-C01–C04 | FINAL; S238 official ETPL | No DLS/shortening affected Glasgow's completed innings/phase endpoints | Yes; half-point lines |
+| P-148-C02 | FINAL event; Q148 official club score plus specialist corner field | Named sportsbook/provider corner definition remains missing | Endpoint is below 4.5 on the retrieved field, but ownership is unproved; PROVISIONAL LOSS |
+| P-162-C01–C04 | FINAL; Q162 official ITF printable draw | No retirement/walkover occurred; missing retirement wording is not outcome-changing | Yes; normal completion and half-point lines |
+| P-176-C05 | FINAL event; Q176 complete specialist timeline | Named sportsbook/provider corner definition remains missing | Eight is below 10.5 on the retrieved timeline, but ownership is unproved; PROVISIONAL WIN |
+
+P-233–P-235 remain PROVISIONAL because no current CFA/club final was recovered; agreeing specialist values may share an upstream lineage. This table records endpoint invariance separately from source authority—agreement does not turn a provisional source into a field owner.
+
+
+
+| P-233-C02 | 2 | 1H Over 0.5 goals | HT 1-0 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C03 | 3 | Over 2.5 goals | 4 goals | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C04 | 4 | BTTS — No | Final 3-1 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C05 | 5 | Corners Over 8.5 | 13 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S233 |
+| P-234-C01 | 1 | 1H Over 0.5 goals | HT 0-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C02 | 2 | Dalian team goals Over 0.5 | Dalian scored 1 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C03 | 3 | Corners Over 8.5 | 10 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S234 |
+| P-234-C04 | 4 | BTTS — Yes | Final 1-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C05 | 5 | Over 2.5 goals | 1 goal | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-235-C01 | 1 | 1H Over 0.5 goals | HT 0-2 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C02 | 2 | Shanghai Port team goals Over 0.5 | Port scored 3 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C03 | 3 | BTTS — Yes | Final 0-3 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C04 | 4 | Over 2.5 goals | 3 goals | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C05 | 5 | Corners Over 8.5 | 14 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S235 |
+| P-236-C01 | 2 | Ireland innings Over 218.5 | 281/5 after 50 | WIN | RR/PR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C02 | 3 | Ireland innings Under 218.5 | 281/5 after 50 | LOSS | RW/PBR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C03 | 4 | Ireland after 5 Over 20.5 | 23/1 after 5 | WIN | RR/PD | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C04 | 1 | Ireland after 5 Under 20.5 | 23/1 after 5 | LOSS | RW/PW | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-237-C01 | 4 | South Africa innings Over 184.5 | 185/7 after 20 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C02 | 1 | South Africa innings Under 184.5 | 185/7 after 20 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C03 | 3 | South Africa after 6 Over 54.5 | 59/0 after 6 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C04 | 2 | South Africa after 6 Under 54.5 | 59/0 after 6 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-238-C01 | 4 | Glasgow innings Over 161.5 | 140/9 after 20 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C02 | 1 | Glasgow innings Under 161.5 | 140/9 after 20 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+| P-238-C03 | 3 | Glasgow after 6 Over 46.5 | 39/2 after 6 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C04 | 2 | Glasgow after 6 Under 46.5 | 39/2 after 6 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+
+### Queue-row contract corrections outside P-215–P-238
+
+These rows changed status in this audit and are not added to the 99-row continuation count.
+
+| Contract ID | Rank | Exact frozen endpoint | Official/retrieved endpoint | Settlement | Four-way verdict | Process grade / defect | Source |
+|---|---:|---|---|---|---|---|---|
+| P-148-C02 | 2 | Toluca team corners Over 4.5 | Specialist reports Toluca 2 (match corners 2-6) | PROVISIONAL LOSS | RW/PBR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | Q148 |
+| P-162-C01 | 1 | Rigele Te -2.5 games | Te won 6-1, 6-4; +7 game margin | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-162-C02 | 3 | Chase Ferguson +2.5 games | Ferguson lost by 7 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C03 | 4 | Over 22.5 games | 17 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C04 | 2 | Under 22.5 games | 17 games | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-176-C05 | 5 | Total match corners Under 10.5 | Timeline records Amiens 5, Versailles 3; 8 total | PROVISIONAL WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT | Q176 |
+
+### Contract-level settlement controls
+
+Each row below applies to every contract ID in its stated range. Direct result/source access occurred during the **2026-09-02 Australia/Sydney audit session**. Exact per-page wall-clock minutes were not captured, are immaterial to already-final endpoints, and are not invented.
+
+| Contract IDs | State/source check | Operator-rule dependency | Threshold/provider invariance |
+|---|---|---|---|
+| P-215-C01–C04 | FINAL; S215 official FIBA | None outcome-changing for the completed score endpoints | Yes; half-point lines |
+| P-216-C01–C04 | FINAL; S216 ICC final plus separate six-over scorecard field | No DLS/shortening realised; operator does not alter completed run endpoints | Yes; half-point lines |
+| P-217-C01/C02 | FINAL event; S217 confirms 185/5 in 16 | **Material and missing**: actual reduced-overs/DLS/action/void rule | **No formal invariance** across possible operator rules; remain UNRESOLVED |
+| P-217-C03/C04 | FINAL phase; S217 confirms 31/2 after six completed overs | No uncompleted-phase issue | Yes; half-point line and phase completed |
+| P-218-C01–C04 | FINAL; S218 official USTA | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-219-C01–C04 | FINAL; S219 official MLB | No extra inning or listed-pitcher condition affected the completed endpoints | Yes; half-point lines |
+| P-220-C01–C04 | FINAL; S220 official MLB | No extra inning affected the endpoints; total price/action unavailable but not needed for directional grade | Yes; side lines are half points and five runs is below either side of the integer 9.0 total without push ambiguity |
+| P-221-C01–C04 | FINAL; S221 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-222-C01–C04 | FINAL in 10 innings; S222 official MLB | Extra-inning treatment was not supplied, but the regulation tie and 9-8 final leave all four contracts on the same winning/losing side | **Yes across regulation-only and extra-inning-inclusive endpoints** |
+| P-223-C01–C04 | FINAL; S223 official MLB | No extra inning affected the endpoints | Yes; ML/half-point sides and 11 is above integer 8.0 without push ambiguity |
+| P-224-C01–C04 | FINAL; S224 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-225-C01–C04 | FINAL; S225 official ATP | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-226-C01–C04 | FINAL; S226 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-227-C01–C04 | FINAL; S227 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-228-C01–C04 | FINAL; S228 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-229-C01–C04 | FINAL; S229 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-230-C01–C04 | FINAL; S230 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; ML/half-point/half-run endpoints |
+| P-231-C01–C04 | FINAL; S231 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-232-C01–C04 | FINAL; S232 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-233-C01–C05 | Specialist final only; S233 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-234-C01–C05 | Specialist final only; S234 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-235-C01–C05 | Specialist final only; S235 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-236-C01–C04 | FINAL; S236 ECB result narrative plus specialist five-over/innings fields | No DLS/shortening affected Ireland's completed 50-over innings | Yes; half-point lines |
+| P-237-C01–C04 | FINAL; S237 specialist scorecards agree | No DLS/shortening affected the completed innings/phase endpoints | Yes; half-point lines |
+| P-238-C01–C04 | FINAL; S238 official ETPL | No DLS/shortening affected Glasgow's completed innings/phase endpoints | Yes; half-point lines |
+| P-148-C02 | FINAL event; Q148 official club score plus specialist corner field | Named sportsbook/provider corner definition remains missing | Endpoint is below 4.5 on the retrieved field, but ownership is unproved; PROVISIONAL LOSS |
+| P-162-C01–C04 | FINAL; Q162 official ITF printable draw | No retirement/walkover occurred; missing retirement wording is not outcome-changing | Yes; normal completion and half-point lines |
+| P-176-C05 | FINAL event; Q176 complete specialist timeline | Named sportsbook/provider corner definition remains missing | Eight is below 10.5 on the retrieved timeline, but ownership is unproved; PROVISIONAL WIN |
+
+P-233–P-235 remain PROVISIONAL because no current CFA/club final was recovered; agreeing specialist values may share an upstream lineage. This table records endpoint invariance separately from source authority—agreement does not turn a provisional source into a field owner.
+
+| P-233-C03 | 3 | Over 2.5 goals | 4 goals | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C04 | 4 | BTTS — No | Final 3-1 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S233 |
+| P-233-C05 | 5 | Corners Over 8.5 | 13 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S233 |
+| P-234-C01 | 1 | 1H Over 0.5 goals | HT 0-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C02 | 2 | Dalian team goals Over 0.5 | Dalian scored 1 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C03 | 3 | Corners Over 8.5 | 10 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S234 |
+| P-234-C04 | 4 | BTTS — Yes | Final 1-0 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-234-C05 | 5 | Over 2.5 goals | 1 goal | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | S234 |
+| P-235-C01 | 1 | 1H Over 0.5 goals | HT 0-2 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C02 | 2 | Shanghai Port team goals Over 0.5 | Port scored 3 | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C03 | 3 | BTTS — Yes | Final 0-3 | PROVISIONAL LOSS | RW/PW | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C04 | 4 | Over 2.5 goals | 3 goals | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — MATCHUP_CONTEXT | S235 |
+| P-235-C05 | 5 | Corners Over 8.5 | 14 reported corners | PROVISIONAL WIN | RR/PR | PROCESS_DEFECT — SOURCE_TRANSFORMATION | S235 |
+| P-236-C01 | 2 | Ireland innings Over 218.5 | 281/5 after 50 | WIN | RR/PR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C02 | 3 | Ireland innings Under 218.5 | 281/5 after 50 | LOSS | RW/PBR | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C03 | 4 | Ireland after 5 Over 20.5 | 23/1 after 5 | WIN | RR/PD | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-236-C04 | 1 | Ireland after 5 Under 20.5 | 23/1 after 5 | LOSS | RW/PW | PROCESS_DEFECT — CALIBRATION / RATE_PROCESS | S236 |
+| P-237-C01 | 4 | South Africa innings Over 184.5 | 185/7 after 20 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C02 | 1 | South Africa innings Under 184.5 | 185/7 after 20 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C03 | 3 | South Africa after 6 Over 54.5 | 59/0 after 6 | WIN | RR/PD | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-237-C04 | 2 | South Africa after 6 Under 54.5 | 59/0 after 6 | LOSS | RW/PW | PROCESS_DEFECT — STATE_FRESHNESS / MATCHUP_CONTEXT | S237 |
+| P-238-C01 | 4 | Glasgow innings Over 161.5 | 140/9 after 20 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C02 | 1 | Glasgow innings Under 161.5 | 140/9 after 20 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+| P-238-C03 | 3 | Glasgow after 6 Over 46.5 | 39/2 after 6 | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | S238 |
+| P-238-C04 | 2 | Glasgow after 6 Under 46.5 | 39/2 after 6 | WIN | RR/PR | COMPLIANT — NONE | S238 |
+
+### Queue-row contract corrections outside P-215–P-238
+
+These rows changed status in this audit and are not added to the 99-row continuation count.
+
+| Contract ID | Rank | Exact frozen endpoint | Official/retrieved endpoint | Settlement | Four-way verdict | Process grade / defect | Source |
+|---|---:|---|---|---|---|---|---|
+| P-148-C02 | 2 | Toluca team corners Over 4.5 | Specialist reports Toluca 2 (match corners 2-6) | PROVISIONAL LOSS | RW/PBR | PROCESS_DEFECT — MATCHUP_CONTEXT / CALIBRATION | Q148 |
+| P-162-C01 | 1 | Rigele Te -2.5 games | Te won 6-1, 6-4; +7 game margin | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-162-C02 | 3 | Chase Ferguson +2.5 games | Ferguson lost by 7 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C03 | 4 | Over 22.5 games | 17 games | LOSS | RW/PBR | COMPLIANT — RANDOM_REALIZATION | Q162 |
+| P-162-C04 | 2 | Under 22.5 games | 17 games | WIN | RR/PR | COMPLIANT — NONE | Q162 |
+| P-176-C05 | 5 | Total match corners Under 10.5 | Timeline records Amiens 5, Versailles 3; 8 total | PROVISIONAL WIN | RR/PD | PROCESS_DEFECT — MATCHUP_CONTEXT | Q176 |
+
+### Contract-level settlement controls
+
+Each row below applies to every contract ID in its stated range. Direct result/source access occurred during the **2026-09-02 Australia/Sydney audit session**. Exact per-page wall-clock minutes were not captured, are immaterial to already-final endpoints, and are not invented.
+
+| Contract IDs | State/source check | Operator-rule dependency | Threshold/provider invariance |
+|---|---|---|---|
+| P-215-C01–C04 | FINAL; S215 official FIBA | None outcome-changing for the completed score endpoints | Yes; half-point lines |
+| P-216-C01–C04 | FINAL; S216 ICC final plus separate six-over scorecard field | No DLS/shortening realised; operator does not alter completed run endpoints | Yes; half-point lines |
+| P-217-C01/C02 | FINAL event; S217 confirms 185/5 in 16 | **Material and missing**: actual reduced-overs/DLS/action/void rule | **No formal invariance** across possible operator rules; remain UNRESOLVED |
+| P-217-C03/C04 | FINAL phase; S217 confirms 31/2 after six completed overs | No uncompleted-phase issue | Yes; half-point line and phase completed |
+| P-218-C01–C04 | FINAL; S218 official USTA | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-219-C01–C04 | FINAL; S219 official MLB | No extra inning or listed-pitcher condition affected the completed endpoints | Yes; half-point lines |
+| P-220-C01–C04 | FINAL; S220 official MLB | No extra inning affected the endpoints; total price/action unavailable but not needed for directional grade | Yes; side lines are half points and five runs is below either side of the integer 9.0 total without push ambiguity |
+| P-221-C01–C04 | FINAL; S221 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-222-C01–C04 | FINAL in 10 innings; S222 official MLB | Extra-inning treatment was not supplied, but the regulation tie and 9-8 final leave all four contracts on the same winning/losing side | **Yes across regulation-only and extra-inning-inclusive endpoints** |
+| P-223-C01–C04 | FINAL; S223 official MLB | No extra inning affected the endpoints | Yes; ML/half-point sides and 11 is above integer 8.0 without push ambiguity |
+| P-224-C01–C04 | FINAL; S224 official MLB | No extra inning affected the endpoints | Yes; half-point lines |
+| P-225-C01–C04 | FINAL; S225 official ATP | No retirement/walkover occurred | Yes; normal-completion half-point lines |
+| P-226-C01–C04 | FINAL; S226 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-227-C01–C04 | FINAL; S227 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-228-C01–C04 | FINAL; S228 official NPB | No draw/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-229-C01–C04 | FINAL; S229 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-230-C01–C04 | FINAL; S230 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; ML/half-point/half-run endpoints |
+| P-231-C01–C04 | FINAL; S231 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-232-C01–C04 | FINAL; S232 official KBO plus specialist box | No action/extra-inning treatment affected the completed endpoints | Yes; half-point lines |
+| P-233-C01–C05 | Specialist final only; S233 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-234-C01–C05 | Specialist final only; S234 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-235-C01–C05 | Specialist final only; S235 | Corners provider/operator definition unproved; official field owner absent | Reported values agree and are on the same side of each threshold, but source ownership is unproved; all rows PROVISIONAL |
+| P-236-C01–C04 | FINAL; S236 ECB result narrative plus specialist five-over/innings fields | No DLS/shortening affected Ireland's completed 50-over innings | Yes; half-point lines |
+| P-237-C01–C04 | FINAL; S237 specialist scorecards agree | No DLS/shortening affected the completed innings/phase endpoints | Yes; half-point lines |
+| P-238-C01–C04 | FINAL; S238 official ETPL | No DLS/shortening affected Glasgow's completed innings/phase endpoints | Yes; half-point lines |
+| P-148-C02 | FINAL event; Q148 official club score plus specialist corner field | Named sportsbook/provider corner definition remains missing | Endpoint is below 4.5 on the retrieved field, but ownership is unproved; PROVISIONAL LOSS |
+| P-162-C01–C04 | FINAL; Q162 official ITF printable draw | No retirement/walkover occurred; missing retirement wording is not outcome-changing | Yes; normal completion and half-point lines |
+| P-176-C05 | FINAL event; Q176 complete specialist timeline | Named sportsbook/provider corner definition remains missing | Eight is below 10.5 on the retrieved timeline, but ownership is unproved; PROVISIONAL WIN |
+
+P-233–P-235 remain PROVISIONAL because no current CFA/club final was recovered; agreeing specialist values may share an upstream lineage. This table records endpoint invariance separately from source authority—agreement does not turn a provisional source into a field owner.

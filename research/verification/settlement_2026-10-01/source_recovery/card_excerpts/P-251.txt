@@ -1,0 +1,384 @@
+
+**Verified final:** Yunnan Yukun 1-0 Chongqing Tonglianglong; **HT 0-0**. Yunnan advanced.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+Corner raw counts conflict (10 vs 11), but every credible retrieved value is above 8.5. Preserve the raw conflict and retain **PROVISIONAL WIN** because the user's exact operator/provider definition was never supplied.
+
+---
+
+## P-252 — Belfast Wolves vs Edinburgh Castle Rockers — OPEN
+
+ETPL's current field-owner page still lists Match 11 as **UPCOMING / yet to bat** with no completed score, despite the scheduled start having passed. Treat this as a source-state defect, not a final.
+
+**Settlement/retrospective deferred.**
+
+## P-253 — El Gounah vs Al Mokawloon — OPEN
+
+The Egyptian Professional Clubs Association still exposes the Round 3 fixture as `VS`, without a field-owner final. No sufficiently trustworthy final was recovered.
+
+**Settlement/retrospective deferred.**
+
+---
+
+# P-254 — Jan Choinski vs Botic Van de Zandschulp — 2026 US Open Men's Singles R1 — PREGAME
+
+## A. Identity / state / contract freeze
+- **Canonical ID:** P-254
+- **Round:** R128 / Round 1
+- **Surface:** outdoor hard
+- **Format:** best of five sets
+- **Court:** Court 5 on the current order of play
+- **Scheduled:** 2026-09-02 16:30 UTC / 12:30 EDT / 2026-09-03 02:30 Australia/Melbourne
+- **State at cutoff:** NOT STARTED
+- Sep 1 outdoor play was disrupted by rain, explaining the delayed first-round slot.
+- **Method:** MDS-2026.09.02-v3.1 / GFA-2 / SFA-TENNIS
+
+**Verified final:** Yunnan Yukun 1-0 Chongqing Tonglianglong; **HT 0-0**. Yunnan advanced.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+Corner raw counts conflict (10 vs 11), but every credible retrieved value is above 8.5. Preserve the raw conflict and retain **PROVISIONAL WIN** because the user's exact operator/provider definition was never supplied.
+
+---
+
+## P-252 — Belfast Wolves vs Edinburgh Castle Rockers — OPEN
+
+ETPL's current field-owner page still lists Match 11 as **UPCOMING / yet to bat** with no completed score, despite the scheduled start having passed. Treat this as a source-state defect, not a final.
+
+**Settlement/retrospective deferred.**
+
+## P-253 — El Gounah vs Al Mokawloon — OPEN
+
+The Egyptian Professional Clubs Association still exposes the Round 3 fixture as `VS`, without a field-owner final. No sufficiently trustworthy final was recovered.
+
+**Settlement/retrospective deferred.**
+
+---
+
+# P-254 — Jan Choinski vs Botic Van de Zandschulp — 2026 US Open Men's Singles R1 — PREGAME
+
+## A. Identity / state / contract freeze
+- **Canonical ID:** P-254
+- **Round:** R128 / Round 1
+- **Surface:** outdoor hard
+- **Format:** best of five sets
+- **Court:** Court 5 on the current order of play
+- **Scheduled:** 2026-09-02 16:30 UTC / 12:30 EDT / 2026-09-03 02:30 Australia/Melbourne
+- **State at cutoff:** NOT STARTED
+- Sep 1 outdoor play was disrupted by rain, explaining the delayed first-round slot.
+- **Method:** MDS-2026.09.02-v3.1 / GFA-2 / SFA-TENNIS
+- **Operator retirement terms:** NOT SUPPLIED -> `UNKNOWN_DEFINITION`
+
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+Corner raw counts conflict (10 vs 11), but every credible retrieved value is above 8.5. Preserve the raw conflict and retain **PROVISIONAL WIN** because the user's exact operator/provider definition was never supplied.
+
+---
+
+## P-252 — Belfast Wolves vs Edinburgh Castle Rockers — OPEN
+
+ETPL's current field-owner page still lists Match 11 as **UPCOMING / yet to bat** with no completed score, despite the scheduled start having passed. Treat this as a source-state defect, not a final.
+
+**Settlement/retrospective deferred.**
+
+## P-253 — El Gounah vs Al Mokawloon — OPEN
+
+The Egyptian Professional Clubs Association still exposes the Round 3 fixture as `VS`, without a field-owner final. No sufficiently trustworthy final was recovered.
+
+**Settlement/retrospective deferred.**
+
+---
+
+# P-254 — Jan Choinski vs Botic Van de Zandschulp — 2026 US Open Men's Singles R1 — PREGAME
+
+## A. Identity / state / contract freeze
+- **Canonical ID:** P-254
+- **Round:** R128 / Round 1
+- **Surface:** outdoor hard
+- **Format:** best of five sets
+- **Court:** Court 5 on the current order of play
+- **Scheduled:** 2026-09-02 16:30 UTC / 12:30 EDT / 2026-09-03 02:30 Australia/Melbourne
+- **State at cutoff:** NOT STARTED
+- Sep 1 outdoor play was disrupted by rain, explaining the delayed first-round slot.
+- **Method:** MDS-2026.09.02-v3.1 / GFA-2 / SFA-TENNIS
+- **Operator retirement terms:** NOT SUPPLIED -> `UNKNOWN_DEFINITION`
+- **Probability:** NOT_GENERATED / NOT PUBLISHED
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+Corner raw counts conflict (10 vs 11), but every credible retrieved value is above 8.5. Preserve the raw conflict and retain **PROVISIONAL WIN** because the user's exact operator/provider definition was never supplied.
+
+---
+
+## P-252 — Belfast Wolves vs Edinburgh Castle Rockers — OPEN
+
+ETPL's current field-owner page still lists Match 11 as **UPCOMING / yet to bat** with no completed score, despite the scheduled start having passed. Treat this as a source-state defect, not a final.
+
+**Settlement/retrospective deferred.**
+
+## P-253 — El Gounah vs Al Mokawloon — OPEN
+
+The Egyptian Professional Clubs Association still exposes the Round 3 fixture as `VS`, without a field-owner final. No sufficiently trustworthy final was recovered.
+
+**Settlement/retrospective deferred.**
+
+---
+
+# P-254 — Jan Choinski vs Botic Van de Zandschulp — 2026 US Open Men's Singles R1 — PREGAME
+
+## A. Identity / state / contract freeze
+- **Canonical ID:** P-254
+- **Round:** R128 / Round 1
+- **Surface:** outdoor hard
+- **Format:** best of five sets
+- **Court:** Court 5 on the current order of play
+- **Scheduled:** 2026-09-02 16:30 UTC / 12:30 EDT / 2026-09-03 02:30 Australia/Melbourne
+- **State at cutoff:** NOT STARTED
+- Sep 1 outdoor play was disrupted by rain, explaining the delayed first-round slot.
+- **Method:** MDS-2026.09.02-v3.1 / GFA-2 / SFA-TENNIS
+- **Operator retirement terms:** NOT SUPPLIED -> `UNKNOWN_DEFINITION`
+- **Probability:** NOT_GENERATED / NOT PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+Corner raw counts conflict (10 vs 11), but every credible retrieved value is above 8.5. Preserve the raw conflict and retain **PROVISIONAL WIN** because the user's exact operator/provider definition was never supplied.
+
+---
+
+## P-252 — Belfast Wolves vs Edinburgh Castle Rockers — OPEN
+
+ETPL's current field-owner page still lists Match 11 as **UPCOMING / yet to bat** with no completed score, despite the scheduled start having passed. Treat this as a source-state defect, not a final.
+
+**Settlement/retrospective deferred.**
+
+## P-253 — El Gounah vs Al Mokawloon — OPEN
+
+The Egyptian Professional Clubs Association still exposes the Round 3 fixture as `VS`, without a field-owner final. No sufficiently trustworthy final was recovered.
+
+**Settlement/retrospective deferred.**
+
+---
+
+# P-254 — Jan Choinski vs Botic Van de Zandschulp — 2026 US Open Men's Singles R1 — PREGAME
+
+## A. Identity / state / contract freeze
+- **Canonical ID:** P-254
+- **Round:** R128 / Round 1
+- **Surface:** outdoor hard
+- **Format:** best of five sets
+- **Court:** Court 5 on the current order of play
+- **Scheduled:** 2026-09-02 16:30 UTC / 12:30 EDT / 2026-09-03 02:30 Australia/Melbourne
+- **State at cutoff:** NOT STARTED
+- Sep 1 outdoor play was disrupted by rain, explaining the delayed first-round slot.
+- **Method:** MDS-2026.09.02-v3.1 / GFA-2 / SFA-TENNIS
+- **Operator retirement terms:** NOT SUPPLIED -> `UNKNOWN_DEFINITION`
+- **Probability:** NOT_GENERATED / NOT PUBLISHED
+- **Value:** NO VALUE DETERMINABLE
+- **Forecast lane:** SPORTS_ONLY / MARKET_BLIND

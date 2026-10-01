@@ -1,0 +1,383 @@
+---
+
+## P-320 — Tianjin Jinmen Tigers vs Zhejiang
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+3. **Smallest routine change:** for team-corner rows, supplement season corner averages with a current **opponent-conditioned route profile** and keep an explicit efficiency-vs-corner tradeoff; do not treat general attacking strength or possession as sufficient evidence for a team-corner threshold.
+
+**Source:** TotalCorner Tianjin current results, including 2–1 and 10–4 corners: https://www.totalcorner.com/team/view/82046
+
+---
+
+## P-321 — Sønderjyske vs AC Horsens
+
+### Settlement
+**Final:** Sønderjyske 2–5 AC Horsens. **HT:** 1–2.  
+TotalCorner and WinDrawWin independently display **1–1 corners (2 total)**. Sønderjyske's official recap supports the 5–2 final and the match's reversal after a bright home start.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Match Corners Over 9.5 | **LOSS** — 2 total |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** AC Horsens — **WIN**.
+
+### Retrospective
+1. **Driver:** early scoring became a seven-goal game, but that scoring did **not** generate a high-corner environment. The available event records also show a major first-half disciplinary disruption to Sønderjyske, which materially changed the match state; the exact downstream score sequence was post-issue information.
+2. **Knowability:** the strong first-half-goal and Horsens-winner paths were in the frozen card. A red-card/man-down event was not knowable as a specific occurrence. More importantly, the corner forecast was built from ~11-corner historical match environments and did not survive the actual goal-rich/low-corner path.
+3. **Smallest routine change:** preserve a **goal-rich / corner-poor branch** in soccer derivative analysis and flag red-card matches as disrupted when later using them for baseline learning. Do not use the red card as retrospective proof that the pre-game total should have been Over; settle the issued contracts but isolate the disruption in later model comparisons.
+
+**Sources:**  
+- Sønderjyske official recap: https://soenderjyskefodbold.dk/droemmestart-endte-i-nedtur-mod-ac-horsens/  
+- TotalCorner final/corners: https://www.totalcorner.com/team/view/710  
+- WinDrawWin result/stat cross-check: https://www.windrawwin.com/us/results/sonderjyske/
+
+---
+
+## P-322 — South Africa vs Zimbabwe — Namibia T20I Tri-Series Final
+
+### Settlement
+South Africa won the toss and **batted first**, so all four conditional rows activated. **South Africa 205/5; Zimbabwe 157 all out; South Africa won by 48 runs.** Official ICC reporting records **South Africa 67/0 after the first six-over powerplay**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | SA 6-over PP Over 54.5 | **WIN** — 67/0 |
+| 2 | SA 20-over Over 186.5 | **WIN** — 205 |
+| 3 | SA 20-over Under 186.5 | **LOSS** |
+| 4 | SA 6-over PP Under 54.5 | **LOSS** |
+
+**Potential winner:** South Africa — **WIN**.
+
+### Retrospective
+1. **Driver:** the opening pair immediately validated the high-phase branch, reaching 67/0, and South Africa sustained enough middle/death output to reach 205. Zimbabwe then failed to chase.
+2. **Knowability:** **Yes, directionally and unusually clearly.** The frozen card had South Africa powerplays of 61 and 59 against Zimbabwe plus 70 in the latest relevant game, which is why the PP Over was Rank 1. It also had the 228-run ceiling and a current batting-process argument for the innings Over. The exact 67/0 and 205 were not knowable.
+3. **Smallest routine change:** none beyond retaining the existing phase-specific evidence chain. This event is useful **positive process evidence**: PP and full-innings targets were assessed separately and happened to align; the result does not justify inferring full-innings Over from every strong powerplay.
+
+**Official source:** ICC, “Relentless South Africa secure tri-series title in Windhoek”: https://www.icc-cricket.com/news/relentless-south-africa-secure-tri-series-title-in-windhoek
+
+
+
+## P-320 — Tianjin Jinmen Tigers vs Zhejiang
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+3. **Smallest routine change:** for team-corner rows, supplement season corner averages with a current **opponent-conditioned route profile** and keep an explicit efficiency-vs-corner tradeoff; do not treat general attacking strength or possession as sufficient evidence for a team-corner threshold.
+
+**Source:** TotalCorner Tianjin current results, including 2–1 and 10–4 corners: https://www.totalcorner.com/team/view/82046
+
+---
+
+## P-321 — Sønderjyske vs AC Horsens
+
+### Settlement
+**Final:** Sønderjyske 2–5 AC Horsens. **HT:** 1–2.  
+TotalCorner and WinDrawWin independently display **1–1 corners (2 total)**. Sønderjyske's official recap supports the 5–2 final and the match's reversal after a bright home start.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Match Corners Over 9.5 | **LOSS** — 2 total |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** AC Horsens — **WIN**.
+
+### Retrospective
+1. **Driver:** early scoring became a seven-goal game, but that scoring did **not** generate a high-corner environment. The available event records also show a major first-half disciplinary disruption to Sønderjyske, which materially changed the match state; the exact downstream score sequence was post-issue information.
+2. **Knowability:** the strong first-half-goal and Horsens-winner paths were in the frozen card. A red-card/man-down event was not knowable as a specific occurrence. More importantly, the corner forecast was built from ~11-corner historical match environments and did not survive the actual goal-rich/low-corner path.
+3. **Smallest routine change:** preserve a **goal-rich / corner-poor branch** in soccer derivative analysis and flag red-card matches as disrupted when later using them for baseline learning. Do not use the red card as retrospective proof that the pre-game total should have been Over; settle the issued contracts but isolate the disruption in later model comparisons.
+
+**Sources:**  
+- Sønderjyske official recap: https://soenderjyskefodbold.dk/droemmestart-endte-i-nedtur-mod-ac-horsens/  
+- TotalCorner final/corners: https://www.totalcorner.com/team/view/710  
+- WinDrawWin result/stat cross-check: https://www.windrawwin.com/us/results/sonderjyske/
+
+---
+
+## P-322 — South Africa vs Zimbabwe — Namibia T20I Tri-Series Final
+
+### Settlement
+South Africa won the toss and **batted first**, so all four conditional rows activated. **South Africa 205/5; Zimbabwe 157 all out; South Africa won by 48 runs.** Official ICC reporting records **South Africa 67/0 after the first six-over powerplay**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | SA 6-over PP Over 54.5 | **WIN** — 67/0 |
+| 2 | SA 20-over Over 186.5 | **WIN** — 205 |
+| 3 | SA 20-over Under 186.5 | **LOSS** |
+| 4 | SA 6-over PP Under 54.5 | **LOSS** |
+
+**Potential winner:** South Africa — **WIN**.
+
+### Retrospective
+1. **Driver:** the opening pair immediately validated the high-phase branch, reaching 67/0, and South Africa sustained enough middle/death output to reach 205. Zimbabwe then failed to chase.
+2. **Knowability:** **Yes, directionally and unusually clearly.** The frozen card had South Africa powerplays of 61 and 59 against Zimbabwe plus 70 in the latest relevant game, which is why the PP Over was Rank 1. It also had the 228-run ceiling and a current batting-process argument for the innings Over. The exact 67/0 and 205 were not knowable.
+3. **Smallest routine change:** none beyond retaining the existing phase-specific evidence chain. This event is useful **positive process evidence**: PP and full-innings targets were assessed separately and happened to align; the result does not justify inferring full-innings Over from every strong powerplay.
+
+**Official source:** ICC, “Relentless South Africa secure tri-series title in Windhoek”: https://www.icc-cricket.com/news/relentless-south-africa-secure-tri-series-title-in-windhoek
+
+---
+
+## P-320 — Tianjin Jinmen Tigers vs Zhejiang
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+3. **Smallest routine change:** for team-corner rows, supplement season corner averages with a current **opponent-conditioned route profile** and keep an explicit efficiency-vs-corner tradeoff; do not treat general attacking strength or possession as sufficient evidence for a team-corner threshold.
+
+**Source:** TotalCorner Tianjin current results, including 2–1 and 10–4 corners: https://www.totalcorner.com/team/view/82046
+
+---
+
+## P-321 — Sønderjyske vs AC Horsens
+
+### Settlement
+**Final:** Sønderjyske 2–5 AC Horsens. **HT:** 1–2.  
+TotalCorner and WinDrawWin independently display **1–1 corners (2 total)**. Sønderjyske's official recap supports the 5–2 final and the match's reversal after a bright home start.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Match Corners Over 9.5 | **LOSS** — 2 total |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** AC Horsens — **WIN**.
+
+### Retrospective
+1. **Driver:** early scoring became a seven-goal game, but that scoring did **not** generate a high-corner environment. The available event records also show a major first-half disciplinary disruption to Sønderjyske, which materially changed the match state; the exact downstream score sequence was post-issue information.
+2. **Knowability:** the strong first-half-goal and Horsens-winner paths were in the frozen card. A red-card/man-down event was not knowable as a specific occurrence. More importantly, the corner forecast was built from ~11-corner historical match environments and did not survive the actual goal-rich/low-corner path.
+3. **Smallest routine change:** preserve a **goal-rich / corner-poor branch** in soccer derivative analysis and flag red-card matches as disrupted when later using them for baseline learning. Do not use the red card as retrospective proof that the pre-game total should have been Over; settle the issued contracts but isolate the disruption in later model comparisons.
+
+**Sources:**  
+- Sønderjyske official recap: https://soenderjyskefodbold.dk/droemmestart-endte-i-nedtur-mod-ac-horsens/  
+- TotalCorner final/corners: https://www.totalcorner.com/team/view/710  
+- WinDrawWin result/stat cross-check: https://www.windrawwin.com/us/results/sonderjyske/
+
+---
+
+## P-322 — South Africa vs Zimbabwe — Namibia T20I Tri-Series Final
+
+### Settlement
+South Africa won the toss and **batted first**, so all four conditional rows activated. **South Africa 205/5; Zimbabwe 157 all out; South Africa won by 48 runs.** Official ICC reporting records **South Africa 67/0 after the first six-over powerplay**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | SA 6-over PP Over 54.5 | **WIN** — 67/0 |
+| 2 | SA 20-over Over 186.5 | **WIN** — 205 |
+| 3 | SA 20-over Under 186.5 | **LOSS** |
+| 4 | SA 6-over PP Under 54.5 | **LOSS** |
+
+**Potential winner:** South Africa — **WIN**.
+
+### Retrospective
+1. **Driver:** the opening pair immediately validated the high-phase branch, reaching 67/0, and South Africa sustained enough middle/death output to reach 205. Zimbabwe then failed to chase.
+2. **Knowability:** **Yes, directionally and unusually clearly.** The frozen card had South Africa powerplays of 61 and 59 against Zimbabwe plus 70 in the latest relevant game, which is why the PP Over was Rank 1. It also had the 228-run ceiling and a current batting-process argument for the innings Over. The exact 67/0 and 205 were not knowable.
+3. **Smallest routine change:** none beyond retaining the existing phase-specific evidence chain. This event is useful **positive process evidence**: PP and full-innings targets were assessed separately and happened to align; the result does not justify inferring full-innings Over from every strong powerplay.
+
+**Official source:** ICC, “Relentless South Africa secure tri-series title in Windhoek”: https://www.icc-cricket.com/news/relentless-south-africa-secure-tri-series-title-in-windhoek
+
+---
+
+
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+3. **Smallest routine change:** for team-corner rows, supplement season corner averages with a current **opponent-conditioned route profile** and keep an explicit efficiency-vs-corner tradeoff; do not treat general attacking strength or possession as sufficient evidence for a team-corner threshold.
+
+**Source:** TotalCorner Tianjin current results, including 2–1 and 10–4 corners: https://www.totalcorner.com/team/view/82046
+
+---
+
+## P-321 — Sønderjyske vs AC Horsens
+
+### Settlement
+**Final:** Sønderjyske 2–5 AC Horsens. **HT:** 1–2.  
+TotalCorner and WinDrawWin independently display **1–1 corners (2 total)**. Sønderjyske's official recap supports the 5–2 final and the match's reversal after a bright home start.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Match Corners Over 9.5 | **LOSS** — 2 total |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** AC Horsens — **WIN**.
+
+### Retrospective
+1. **Driver:** early scoring became a seven-goal game, but that scoring did **not** generate a high-corner environment. The available event records also show a major first-half disciplinary disruption to Sønderjyske, which materially changed the match state; the exact downstream score sequence was post-issue information.
+2. **Knowability:** the strong first-half-goal and Horsens-winner paths were in the frozen card. A red-card/man-down event was not knowable as a specific occurrence. More importantly, the corner forecast was built from ~11-corner historical match environments and did not survive the actual goal-rich/low-corner path.
+3. **Smallest routine change:** preserve a **goal-rich / corner-poor branch** in soccer derivative analysis and flag red-card matches as disrupted when later using them for baseline learning. Do not use the red card as retrospective proof that the pre-game total should have been Over; settle the issued contracts but isolate the disruption in later model comparisons.
+
+**Sources:**  
+- Sønderjyske official recap: https://soenderjyskefodbold.dk/droemmestart-endte-i-nedtur-mod-ac-horsens/  
+- TotalCorner final/corners: https://www.totalcorner.com/team/view/710  
+- WinDrawWin result/stat cross-check: https://www.windrawwin.com/us/results/sonderjyske/
+
+---
+
+## P-322 — South Africa vs Zimbabwe — Namibia T20I Tri-Series Final
+
+### Settlement
+South Africa won the toss and **batted first**, so all four conditional rows activated. **South Africa 205/5; Zimbabwe 157 all out; South Africa won by 48 runs.** Official ICC reporting records **South Africa 67/0 after the first six-over powerplay**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | SA 6-over PP Over 54.5 | **WIN** — 67/0 |
+| 2 | SA 20-over Over 186.5 | **WIN** — 205 |
+| 3 | SA 20-over Under 186.5 | **LOSS** |
+| 4 | SA 6-over PP Under 54.5 | **LOSS** |
+
+**Potential winner:** South Africa — **WIN**.
+
+### Retrospective
+1. **Driver:** the opening pair immediately validated the high-phase branch, reaching 67/0, and South Africa sustained enough middle/death output to reach 205. Zimbabwe then failed to chase.
+2. **Knowability:** **Yes, directionally and unusually clearly.** The frozen card had South Africa powerplays of 61 and 59 against Zimbabwe plus 70 in the latest relevant game, which is why the PP Over was Rank 1. It also had the 228-run ceiling and a current batting-process argument for the innings Over. The exact 67/0 and 205 were not knowable.
+3. **Smallest routine change:** none beyond retaining the existing phase-specific evidence chain. This event is useful **positive process evidence**: PP and full-innings targets were assessed separately and happened to align; the result does not justify inferring full-innings Over from every strong powerplay.
+
+**Official source:** ICC, “Relentless South Africa secure tri-series title in Windhoek”: https://www.icc-cricket.com/news/relentless-south-africa-secure-tri-series-title-in-windhoek
+
+---
+
+## P-323 — Everton vs Manchester United — EPL
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+3. **Smallest routine change:** for team-corner rows, supplement season corner averages with a current **opponent-conditioned route profile** and keep an explicit efficiency-vs-corner tradeoff; do not treat general attacking strength or possession as sufficient evidence for a team-corner threshold.
+
+**Source:** TotalCorner Tianjin current results, including 2–1 and 10–4 corners: https://www.totalcorner.com/team/view/82046
+
+---
+
+## P-321 — Sønderjyske vs AC Horsens
+
+### Settlement
+**Final:** Sønderjyske 2–5 AC Horsens. **HT:** 1–2.  
+TotalCorner and WinDrawWin independently display **1–1 corners (2 total)**. Sønderjyske's official recap supports the 5–2 final and the match's reversal after a bright home start.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Match Corners Over 9.5 | **LOSS** — 2 total |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** AC Horsens — **WIN**.
+
+### Retrospective
+1. **Driver:** early scoring became a seven-goal game, but that scoring did **not** generate a high-corner environment. The available event records also show a major first-half disciplinary disruption to Sønderjyske, which materially changed the match state; the exact downstream score sequence was post-issue information.
+2. **Knowability:** the strong first-half-goal and Horsens-winner paths were in the frozen card. A red-card/man-down event was not knowable as a specific occurrence. More importantly, the corner forecast was built from ~11-corner historical match environments and did not survive the actual goal-rich/low-corner path.
+3. **Smallest routine change:** preserve a **goal-rich / corner-poor branch** in soccer derivative analysis and flag red-card matches as disrupted when later using them for baseline learning. Do not use the red card as retrospective proof that the pre-game total should have been Over; settle the issued contracts but isolate the disruption in later model comparisons.
+
+**Sources:**  
+- Sønderjyske official recap: https://soenderjyskefodbold.dk/droemmestart-endte-i-nedtur-mod-ac-horsens/  
+- TotalCorner final/corners: https://www.totalcorner.com/team/view/710  
+- WinDrawWin result/stat cross-check: https://www.windrawwin.com/us/results/sonderjyske/
+
+---
+
+## P-322 — South Africa vs Zimbabwe — Namibia T20I Tri-Series Final
+
+### Settlement
+South Africa won the toss and **batted first**, so all four conditional rows activated. **South Africa 205/5; Zimbabwe 157 all out; South Africa won by 48 runs.** Official ICC reporting records **South Africa 67/0 after the first six-over powerplay**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | SA 6-over PP Over 54.5 | **WIN** — 67/0 |
+| 2 | SA 20-over Over 186.5 | **WIN** — 205 |
+| 3 | SA 20-over Under 186.5 | **LOSS** |
+| 4 | SA 6-over PP Under 54.5 | **LOSS** |
+
+**Potential winner:** South Africa — **WIN**.
+
+### Retrospective
+1. **Driver:** the opening pair immediately validated the high-phase branch, reaching 67/0, and South Africa sustained enough middle/death output to reach 205. Zimbabwe then failed to chase.
+2. **Knowability:** **Yes, directionally and unusually clearly.** The frozen card had South Africa powerplays of 61 and 59 against Zimbabwe plus 70 in the latest relevant game, which is why the PP Over was Rank 1. It also had the 228-run ceiling and a current batting-process argument for the innings Over. The exact 67/0 and 205 were not knowable.
+3. **Smallest routine change:** none beyond retaining the existing phase-specific evidence chain. This event is useful **positive process evidence**: PP and full-innings targets were assessed separately and happened to align; the result does not justify inferring full-innings Over from every strong powerplay.
+
+**Official source:** ICC, “Relentless South Africa secure tri-series title in Windhoek”: https://www.icc-cricket.com/news/relentless-south-africa-secure-tri-series-title-in-windhoek
+
+---
+
+## P-323 — Everton vs Manchester United — EPL

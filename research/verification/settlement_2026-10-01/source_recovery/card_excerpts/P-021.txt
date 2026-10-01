@@ -1,0 +1,76 @@
+**2026-09-15 update:** P-364 is FINAL (England won by 8 wickets, 12 Sep; ESPNcricinfo full scorecard via r.jina.ai, corroborated by Wikipedia) and its winner label is settled — `TMP-OPEN-20260911-03` retired. **No live event remains.** The primary queue is now **13**: one identity conflict and twelve corner fields. No new mini log was supplied or found on 2026-09-15 (local tree and Google Drive searched), so no new canonical or temporary IDs were created. [combined log §"2026-09-15"](PREDICTION_LOG_COMBINED_3.md).
+
+*(Historical, 2026-09-12:)* The fourteen result/derivative follow-ups include one live event (P-364), one identity conflict and twelve other corner fields. Five additional historical documentary-audit tasks were exposed during mini-log recovery. Four operator-only exceptions remain research settled. Historical grades are carried unless the dated evidence explicitly says they were independently rechecked; a final label alone does not mean every original input or retrospective source was revalidated.
+
+[Detailed current audit](archive/audit_documents_implemented_2026-09-25/COMPREHENSIVE_SETTLEMENT_AUDIT_2026-09-12.md) | Recent queue evidence (`audit_2026-09-12/recent_queue_evidence.md`, not present in this repository) | Historical queue evidence (`audit_2026-09-12/historical_queue_evidence.md`, not present in this repository) | Recovered historical tables and retrospectives (`audit_2026-09-12/recovered_historical_retrospectives.md`, not present in this repository)
+
+## Historical canonical-record category snapshot — superseded for totals by the 2026-09-21 rollover
+
+| Category | Records |
+|---|---:|
+| SETTLED | 383 |
+| TERMINAL FIELD GAP | 1 |
+| ADMINISTRATIVE / NO SCORED TRIAL | 19 |
+| OPEN RESULT OR FIELD | 22 |
+| RESEARCH SETTLED | 4 |
+| INHERITED CLOSED / AUDIT GAP | 5 |
+| ALIAS | 1 |
+| CENSORED TARGETS | 1 |
+| RESERVED / UNUSED | 1 |
+| Total | 437 |
+
+This category table was computed before the P-452–P-481 rollover and is retained as historical evidence; use the 2026-09-21 header for the current total of 481 canonical IDs. Counts describe record custody, not performance, independent events or the number of contracts. OPEN RESULT OR FIELD includes the 14 primary follow-ups. INHERITED CLOSED / AUDIT GAP preserves prior closure while explicitly qualifying evidence completeness.
+
+## Every canonical record from the first
+
+| ID | Event | Current status | Evidence / remaining requirement |
+|---|---|---|---|
+| P-001 | Welsh Fire Women v Trent Rockets Women, The Hundred Women's 11th Match (carried over from legacy V6-022) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-002 | Philadelphia Phillies @ Miami Marlins (MLB regular season) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-003 | FC København v Polissya Zhytomyr (UEFA Conference League, Q2, 2nd leg) | FINAL / CLOSED; old corner terminal unsettleable | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-004 | MI London (Men) v London Spirit (Men), The Hundred Men's Competition 2026 | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-005 | Texas Rangers @ Tampa Bay Rays (MLB regular season) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-006 | Southern Brave (Men) v Birmingham Phoenix (Men), The Hundred Men's Competition 2026 | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-007 | Manchester Super Giants (Men) v Trent Rockets (Men), The Hundred Men's Competition 2026 | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-008 | New York Yankees @ Chicago Cubs, MLB regular season | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-009 | Indiana Fever @ Portland Fire, WNBA regular season — FORECAST | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-010 | Carlton v Brisbane Lions, AFL Round 21 — FORECAST (locked 2026-08-01T08:56:26Z / 18:56:26 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians — PREGAME CARD | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-012 | Welsh Fire Women v Southern Brave Women, The Hundred Women's Competition 2026, Match 19 | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-013 | Welsh Fire Men v Southern Brave Men, The Hundred Men's Competition 2026, Match 19 | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-014 | San Diego Padres (Michael King) at Arizona Diamondbacks (Brandon Pfaadt) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-015 | Sri Lanka Women vs Pakistan Women, 3rd T20I | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-016 | Kiwoom Heroes at Lotte Giants, KBO regular season | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-017 | Sunrisers Leeds Women v London Spirit Women, The Hundred 2026 | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-018 | Sunrisers Leeds Men vs London Spirit Men, The Hundred 2026 Match 20 (2026-08-04) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-019 | Manchester Super Giants Women v Welsh Fire Women, The Hundred Women's Competition 2026, Match 21 | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-020 | Trent Rockets Women v Birmingham Phoenix Women, The Hundred Women's Competition 2026, Match 22 | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-021 | Los Angeles Angels (Reid Detmers) at Baltimore Orioles (Trevor Rogers), MLB | ADMINISTRATIVE / NO SCORED TRIAL | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-022 | Los Angeles Angels (Ryan Johnson) at Baltimore Orioles (Brandon Young), MLB | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-023 | Benfica v Heart of Midlothian, UEFA Europa League qualifying | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-024 | Toronto Tempo @ Portland Fire, WNBA regular season - LIVE FORECAST (appended 2026-08-07 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-025 | Brisbane Lions v Hawthorn, AFL Round 22 - LIVE FORECAST (appended 2026-08-07 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-026 | Birmingham Phoenix Women v Sunrisers Leeds Women, The Hundred 2026 - START-CROSSED/PRE-DELIVERY FORECAST (appended 2026-08-08 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-027 | Melbourne v Fremantle, AFL Round 22 - LIVE FORECAST (appended 2026-08-08 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-028 | West Coast v Collingwood, AFL Round 22 - LIVE FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-029 | St Kilda v Carlton, AFL Round 22 - PREGAME FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-030 | Sunrisers Leeds Women v Welsh Fire Women, The Hundred 2026 Match 27 - PREGAME FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-031 | Manchester City v Atletico Madrid, 2026 Coupang Play Series - LIVE FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-032 | London Spirit Women v Birmingham Phoenix Women, The Hundred 2026 Match 28 - START-CROSSED/PRE-DELIVERY FORECAST (appended 2026-08-09 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-033 | Cincinnati Reds at Washington Nationals - PREGAME FORECAST (appended 2026-08-10 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-034 | Baltimore Orioles at Minnesota Twins - PREGAME FORECAST (appended 2026-08-11 AEST) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-035 | Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-036 | Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-037 | Jamaica Kingsmen vs Guyana Amazon Warriors — CPL | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-038 | Australia vs Bangladesh — 1st Test | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-039 | Manly-Warringah Sea Eagles vs Dolphins — NRL | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-040 | Fremantle vs Adelaide Crows — AFL | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-041 | Wolverhampton Wanderers v Blackburn Rovers, EFL Championship Round 1 — PREGAME FORECAST (appended 2026-08-15T02:07:19+10:00) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-042 | Manchester Super Giants Men v Sunrisers Leeds Men, The Hundred Eliminator — LIVE FORECAST (appended 2026-08-15T03:01:20+10:00) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-043 | St. Louis Cardinals at Chicago Cubs, MLB — PREGAME FORECAST (appended 2026-08-15T04:16:53+10:00) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-044 | Richmond v Collingwood, AFLW — PREGAME FORECAST (appended 2026-08-15T16:58:00+10:00) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-045 | Hawthorn v Collingwood, AFL — PREGAME FORECAST (appended 2026-08-15T19:35:00+10:00) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-046 | Chelsea v Real Sociedad, soccer — PREGAME FORECAST (appended 2026-08-15T22:49:00+10:00) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-047 | Bayern Munich v RB Leipzig, soccer — PREGAME FORECAST (appended 2026-08-15T22:59:00+10:00) | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-048 | Essendon v Sydney Swans, AFL Round 23 — ZERO-SCORE LIVE-START FORECAST | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |
+| P-049 | Doosan Bears at KIA Tigers, KBO regular season — PREGAME FORECAST | FINAL / SETTLED | Inherited September 2 full canonical index; later controlling snapshots applied; [canonical log](PREDICTION_LOG_COMBINED.md) |

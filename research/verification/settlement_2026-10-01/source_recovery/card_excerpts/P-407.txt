@@ -1,0 +1,383 @@
+| P-360 | South Korea v Saudi Arabia — Asian Games | FINAL / SETTLED | W L W L; winner W; Brier 0.2409; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-361 | Dragons @ Giants — NPB, 10 Sep | FINAL / SETTLED | W L W L; winner W; Brier 0.2493; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-362 | Eagles @ Landers — KBO | FINAL / SETTLED | W L W L; winner W; Brier 0.2450; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-363 | Roosters W v Bulldogs W — NRLW R11 | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.1773; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-364 | England v Pakistan — 3rd Test (Day-2 card) | FINAL / SETTLED (2026-09-15) — England won by 8 wickets on Day 4 (12 Sep); winner label settled | L L W W; winner **W**; Brier 0.3429 (4 ranked rows; winner label not a Brier row); [canonical log](PREDICTION_LOG_COMBINED_3.md) §"2026-09-15"; [combined log §"2026-09-15"](PREDICTION_LOG_COMBINED_3.md) |
+| P-365 | Uni-Lions @ CTBC Brothers — CPBL | FINAL / SETTLED — deep Rank-#1 retro | L W L W; winner W; Brier 0.2768; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-366 | Rotterdam v Glasgow — ETPL M19 | FINAL / CLOSED; C02/C03 terminal censored, other rows settled | W C C L; winner W; Brier 0.1936 (2 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-367 | China W v France W — FIBA WWC QF | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.2071; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-368 | Al Jazira v Al Nasr — UAE Pro League | FINAL / PARTIAL; corner field pending | W P L W L; winner L (draw); Brier 0.1917 (4 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-369 | Dubai United v Shabab Al Ahli — UAE Pro League | FINAL / PARTIAL; corner field pending | P L L W W; winner L (draw); Brier 0.3909 (4 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-370 | Jamaica Empress W v TKR W — WCPL | ADMINISTRATIVE / NO SCORED TRIAL | none issued; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-371 | Belgium W v Germany W — FIBA WWC QF | FINAL / SETTLED — deep Rank-#1 retro | L L W W; winner L; Brier 0.3145; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-372 | — | RESERVED / UNUSED — no record was ever issued under this ID (both external sessions started at P-373 / P-390 / P-407) | none |
+| P-373 | Tampa Bay Rays @ Atlanta Braves — MLB — 2026-09-10 (Atlanta local) | FINAL / SETTLED | L W L W |
+| P-374 | Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10 | FINAL / SETTLED — canonical record for Fenerbahçe v Roma; absorbs TMP-SETTLED-20260911-01 | W W W L L |
+| P-375 | Coco Gauff vs Elena Rybakina — US Open Women — Semifinal | FINAL / SETTLED | W W L L |
+| P-376 | San Francisco 49ers vs Los Angeles Rams — NFL Week 1 — Melbourne | FINAL / SETTLED | W L W L |
+| P-377 | Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260912-01) | L P L W W |
+| P-378 | Philippines vs Bahrain — 2026 Aichi-Nagoya Asian Games Men's Basketball | FINAL / SETTLED | L L W W |
+| P-379 | Namibia vs South Africa — 2nd ODI — South Africa tour of Namibia 2026 | FINAL / SETTLED | W W L L |
+| P-380 | Wests Tigers (W) vs Canberra Raiders (W) — NRLW Round 11, 2026 | FINAL / SETTLED | W W L L |
+| P-381 | Chiba Lotte Marines @ Fukuoka SoftBank Hawks — NPB Pacific League | FINAL / SETTLED | W W L L |
+| P-382 | Saitama Seibu Lions @ Orix Buffaloes — NPB Pacific League | FINAL / SETTLED | L W W L |
+| P-383 | Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League | FINAL / SETTLED | L L W W |
+| P-384 | Kiwoom Heroes @ Samsung Lions — KBO League | FINAL / SETTLED | W W L L |
+| P-385 | KT Wiz @ Lotte Giants — KBO League | FINAL / SETTLED | W L W L |
+| P-386 | South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final | FINAL / SETTLED | W L W L |
+| P-387 | Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League | FINAL / SETTLED | W L L W L |
+| P-388 | Fremantle Dockers vs Geelong Cats — AFL First Semi-Final | FINAL / SETTLED | L L W W |
+| P-389 | Dublin Guardians vs Edinburgh Castle Rockers — ETPL 2026 Match 21 | ADMINISTRATIVE / NO FORECAST (toss gate withheld correctly) | none issued |
+| P-390 | Cincinnati Reds @ Milwaukee Brewers — MLB | FINAL / SETTLED | W L W L |
+| P-391 | Cleveland Guardians @ Minnesota Twins — MLB | FINAL / SETTLED | L W L W |
+| P-392 | Chicago White Sox @ St. Louis Cardinals — MLB | FINAL / SETTLED | W W L L |
+| P-393 | Seattle Mariners @ Athletics — MLB | FINAL / SETTLED | L W L W |
+| P-394 | Parramatta Eels Women vs North Queensland Cowboys Women — NRLW | FINAL / SETTLED | W W L L |
+| P-395 | Belfast Wolves vs Rotterdam Dockers — European T20 Premier League | FINAL / SETTLED | W W L L |
+| P-396 | Brisbane Lions vs Adelaide Crows — AFL Semi Final | FINAL / SETTLED | L L W W |
+| P-397 | Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final | FINAL / SETTLED | L L W W |
+| P-398 | Racing Santander vs Deportivo Alavés — La Liga | FINAL / SETTLED | W W L W L |
+| P-399 | Genoa vs Frosinone — Serie A | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260914-01) | W P W L L |
+| P-400 | Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL | FINAL / SETTLED | W W L L |
+| P-401 | IFK Göteborg vs Halmstads BK — Allsvenskan | FINAL / PARTIAL — C01, C03 corners provisional (TMP-OPEN-20260914-02/-03) | P W P L W |
+| P-402 | Tottenham Hotspur vs Everton — Premier League | FINAL / SETTLED (2026-09-15: corners settled at Premier League official record; TMP-OPEN-20260914-04/-05 retired) | W W W L L |
+| P-403 | Colorado Rockies @ Detroit Tigers — MLB | FINAL / SETTLED | L W L W |
+| P-404 | Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB | FINAL / SETTLED | L L W W |
+| P-405 | Chunichi Dragons @ Hanshin Tigers — NPB | FINAL / SETTLED | W W L L |
+| P-406 | Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 | FINAL / SETTLED (2026-09-16: six-over rows settled at ESPN cricket API event 1547895 — Edinburgh 68/2 after 6.0; TMP-OPEN-20260914-06 retired) | W L W L |
+| P-407 | Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League | FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) | P W W L W |
+| P-408 | Coventry City vs Brighton & Hove Albion — English Premier League | FINAL / SETTLED | L W W W W |
+| P-409 | Lille OSC vs ESTAC Troyes — French Ligue 1 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260915-02) | W P W W W |
+| P-410 | RB Leipzig vs Hamburger SV — German Bundesliga | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-03) | W W W W P |
+| P-411 | Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place | FINAL / SETTLED | L W L W |
+| P-412 | Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1 | FINAL / SETTLED | L W L W |
+| P-413 | Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-414 | Buffalo Bills @ Houston Texans — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-415 | LA Angels @ Washington Nationals — MLB | ADMINISTRATIVE / NOT ISSUED (interrupted) | none issued |
+| P-416 | New York Mets @ New York Yankees — MLB | FINAL / SETTLED | W L W L |
+| P-417 | Chunichi Dragons @ Hanshin Tigers — NPB Central League | FINAL / SETTLED | W L W L |
+| P-418 | Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League | OPEN — RESULT NOT RECOVERED (2026-09-16 re-classification): fixture listed by RSSSF Round 15 [Sep 14], unscored, page updated 11 Sep; the earlier "no Drukpa–RTC match" evidence was a BBS report dated 2026-07-17 (TMP-OPEN-20260915-04) | 5 rows issued; none graded |
+| P-419 | Djurgårdens IF vs GAIS — Sweden Allsvenskan | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-05) | W W W W P |
+| P-420 | Atlanta Braves @ Chicago Cubs — MLB | FINAL / SETTLED | L W L W |
+| P-421 | New York Yankees @ Minnesota Twins — MLB | FINAL / SETTLED | W W L L |
+| P-422 | Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1 | FINAL / SETTLED | L W L W |
+| P-423 | San Diego Padres @ Colorado Rockies — MLB | FINAL / SETTLED | L W W L |
+| P-424 | Amsterdam Flames vs Dublin Guardians — ETPL 2026 Match 26 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | none issued; final Amsterdam 214/5 bt Dublin 155/9, PP 48/2 |
+| P-425 | Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1 | FINAL / SETTLED | W L W L W; winner W; Brier 0.2416 |
+| P-426 | Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1 | FINAL / SETTLED | W L L L L; winner W; Brier 0.3816 |
+| P-427 | Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round | FINAL / SETTLED — deep Rank-#1 retro (top two both lost) | L L W W; winner L; Brier 0.3542 |
+| P-428 | Edinburgh Castle Rockers vs Rotterdam Dockers — ETPL Match 27 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | none issued; final Rotterdam 181/6 bt Edinburgh 176/5, PP 54/2 |
+| P-429 | Afghanistan vs India — 2nd T20I, Delhi | FINAL / SETTLED — top two both won; both XIs confirmed | W W W L; winner W; Brier 0.1635 |
+| P-430 | Al Ain FC vs Al Nassr — AFC Champions League Elite MD1 | FINAL / PARTIAL — C05 corners unresolved (TMP-OPEN-20260917-01); deep Rank-#1 retro | L W W L P; winner L; 4-row Brier 0.3459 |
+| P-431 | England vs Sri Lanka — 1st T20I, Southampton | FINAL / SETTLED — top two both won | W W L L; winner W; Brier 0.1925 |
+| P-432 | KT Wiz @ Hanwha Eagles — KBO | FINAL / SETTLED — game ended 4–4 (terminal tie); winner label did not realise | W W L L; winner tie; Brier 0.1525 |
+| P-433 | LG Twins @ NC Dinos — KBO | FINAL / SETTLED | W W L W; winner W; Brier 0.2017 |
+| P-434 | Samsung Lions @ Doosan Bears — KBO | FINAL / SETTLED — all four ranked rows won | W W W W; winner L; Brier 0.0809 |
+| P-435 | SSG Landers @ Lotte Giants — KBO | FINAL / SETTLED — all four ranked rows won | W W W W; winner W; Brier 0.0629 |
+
+
+### Component fingerprints
+
+The files appeared in the working folder at 2026-09-15 16:20–16:21 AEST, after the 2026-09-15(a) pass, together with byte-identical copies in `archive/mini_logs/originals_2026-09-15/`. A pre-change snapshot folder (`audit_2026-09-15/before/`) created at the same time was deleted on 2026-09-15 at the user's direction; only archived mini logs are kept outside the MD documents. Reconciled the same session — inside `METHOD.md` §10's 24-hour window.
+
+| Log | File | Bytes | SHA-256 | Range | State on arrival |
+|---|---|---:|---|---|---|
+| A | `PREDICTION_MINI_RUNNING_LOG_P373_P389_RETROSPECTIVE_2026-09-12.md` | 294,562 | `640b33dc3bde39208a5596f479331537f0fbea9a4f66313d403021d753de8d41` | P-373–P-389 | settled 2026-09-12 by its session |
+| A′ | `… 2026-09-12 (1).md` | 294,562 | identical to A | — | duplicate upload; not a second record — removed from the archive after the hash check |
+| B | `PREDICTION_MINI_RUNNING_LOG_P390_P406_RETROSPECTIVE_2026-09-14.md` | 287,817 | `2f51d4561d2aa20440feb478a10fbc09b5b18b5f708fda26c738a620d7249dc5` | P-390–P-406 | settled 2026-09-14 by its session |
+| C | `PREDICTION_MINI_RUNNING_LOG_THROUGH_P423.md` | 218,707 | `404903fc25c67b3ca74a86265aeed16127ce75c8a68f2cbbb2225f51278b7bbc` | P-407–P-423 | all unsettled |
+
+### Canonical-ID reconciliation
+
+| Item | Finding | Disposition |
+|---|---|---|
+| `P-372` | Never issued — log A started at P-373 by user instruction; logs B and C at P-390 and P-407 | **RESERVED / UNUSED.** Recorded in the register; never reused |
+| `P-373`–`P-423` | No collision with any canonical ID (Part 3 ended at P-371) | Issued labels become canonical as issued |
+| `P-374` Fenerbahçe v Roma | Same sporting event as the no-forecast collision record `TMP-SETTLED-20260911-01` | **P-374 is the canonical record** (a genuine pregame forecast); `TMP-SETTLED-20260911-01` and the external `TMP-RECON-20260912-01` are retired into it — not scored twice |
+| `P-389`, `P-415` | No forecast issued (toss gate withheld; interrupted) | Administrative, non-scorable |
+| Next ID | — | **`P-424`** |
+
+### Live-state check (first step)
+
+Every issued event in logs A, B and C had finished before this pass. **No event is live.** One card cannot be settled for an identity reason, not a live one: **P-418** (Drukpa v RTC) — the fixture is not verified as having been played (`TMP-OPEN-20260915-04`).
+
+### Log C settlement tables (`P-407`–`P-423`)
+
+#### P-407 — Settlement
+
+**Event:** Club Brugge 3–1 Royal Antwerp (Jupiler Pro League MD6) · **Source:** ESPN soccer/bel.1 event 401878991 (goals 13', 19', 50', 78'; corners 9–4; both XIs + benches) · **Settled:** 2026-09-15 · **Population:** EXPLORATORY
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Club Brugge team corners Over 4.5 | 0.78 | **PROVISIONAL — not booked** | — | ESPN (Opta lineage) 9 — PROVISIONAL WIN; the card's named provider (Pro League match centre) not reached |
+| 2 | Royal Antwerp team goals Under 1.5 | 0.74 | **WIN** | 0.0676 | 1 goal |
+| 3 | 1st Half total goals Over 0.5 | 0.72 | **WIN** | 0.0784 | 13' goal |
+| 4 | Full match total goals Under 3.5 | 0.68 | **LOSS** | 0.4624 | 4 goals |
+| 5 | Full match total goals Over 2.5 | 0.56 | **WIN** | 0.1936 | 4 goals |
+
+**Potential winner:** Club Brugge 60% · **CORRECT** · **Card mean Brier (4 graded rows):** 0.2005
+
+**Retrospective:**
+- *Driver:* Brugge's chance volume (23 shots, 9 on target) and an early goal took the match to four goals.
+- *What went right:* the goal-process rows and the winner, built on current shots and xG.
+- *What went wrong:* Under 3.5 (68%) was ranked above Over 2.5; both win only on exactly three goals, and four killed the higher row.
+- *Knowable?* The 4+ family existed but its mass was not printed.
+- *Smallest change:* print exact-goal masses (0, 1, 2, 3, 4+) whenever two overlapping totals are ranked (`G-L1`).
+
+Rank #1 (Brugge corners Over 4.5, ESPN 9) is provisional — the named Pro League record was not reached. **Validation:** line-ups No (probable XIs only; coaches not named); sources accurate; blind spot = the exact-three overlapping state.
+
+#### P-408 — Settlement
+
+**Event:** Coventry City 0–5 Brighton & Hove Albion (EPL MW4) · **Source:** Premier League official data API, fixture 128956 (won_corners Brighton 3, Coventry 5); ESPN eng.1 401879282 agrees · **Settled:** 2026-09-15 · **Population:** PRIMARY_SCORED (EPL)
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Brighton team corners Over 3.5 | 0.75 | **LOSS** | 0.5625 | 3 at the Premier League official record — lost by 0.5 |
+| 2 | Brighton or Draw (90 min) | 0.74 | **WIN** | 0.0676 | Brighton won |
+| 3 | 1st Half total goals Over 0.5 | 0.72 | **WIN** | 0.0784 | 35' goal |
+| 4 | Coventry team goals Under 1.5 | 0.68 | **WIN** | 0.1024 | 0 |
+| 5 | Full match total goals Over 2.5 | 0.55 | **WIN** | 0.2025 | 5 goals |
+
+**Potential winner:** Brighton 48% · **CORRECT** · **Card mean Brier (5 graded rows):** 0.2027
+
+**Retrospective:** Rank #1 lost — see the P-408 row of the deep Rank-#1 table below. Brighton led from 35' with 69% possession and 22 shots but won 3 corners; the card had noted the absence of Mitoma and Minteh and the early-lead kill path, yet trimmed the centre only to 5.4 (soccer control 33). Ranks 2–5 and the winner won. **Validation:** XIs and full benches yes; coaches not named (No); sources accurate (Premier League data is the field owner); blind spot = personnel-driven corner generation.
+
+#### P-409 — Settlement
+
+**Event:** Lille 2–0 Troyes (Ligue 1 MW4) · **Source:** ESPN soccer/fra.1 event 401876462 (goals 18', 90+3'; corners Lille 2, Troyes 5) · **Settled:** 2026-09-15 · **Population:** EXPLORATORY
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Lille team goals Over 0.5 | 0.82 | **WIN** | 0.0324 | 2 |
+| 2 | Troyes team corners Over 2.5 | 0.79 | **PROVISIONAL — not booked** | — | ESPN 5 — PROVISIONAL WIN; LFP official record not reached |
+| 3 | Lille or Draw (90 min) | 0.76 | **WIN** | 0.0576 | Lille won |
+
+### Component fingerprints
+
+The files appeared in the working folder at 2026-09-15 16:20–16:21 AEST, after the 2026-09-15(a) pass, together with byte-identical copies in `archive/mini_logs/originals_2026-09-15/`. A pre-change snapshot folder (`audit_2026-09-15/before/`) created at the same time was deleted on 2026-09-15 at the user's direction; only archived mini logs are kept outside the MD documents. Reconciled the same session — inside `METHOD.md` §10's 24-hour window.
+
+| Log | File | Bytes | SHA-256 | Range | State on arrival |
+|---|---|---:|---|---|---|
+| A | `PREDICTION_MINI_RUNNING_LOG_P373_P389_RETROSPECTIVE_2026-09-12.md` | 294,562 | `640b33dc3bde39208a5596f479331537f0fbea9a4f66313d403021d753de8d41` | P-373–P-389 | settled 2026-09-12 by its session |
+| A′ | `… 2026-09-12 (1).md` | 294,562 | identical to A | — | duplicate upload; not a second record — removed from the archive after the hash check |
+| B | `PREDICTION_MINI_RUNNING_LOG_P390_P406_RETROSPECTIVE_2026-09-14.md` | 287,817 | `2f51d4561d2aa20440feb478a10fbc09b5b18b5f708fda26c738a620d7249dc5` | P-390–P-406 | settled 2026-09-14 by its session |
+| C | `PREDICTION_MINI_RUNNING_LOG_THROUGH_P423.md` | 218,707 | `404903fc25c67b3ca74a86265aeed16127ce75c8a68f2cbbb2225f51278b7bbc` | P-407–P-423 | all unsettled |
+
+### Canonical-ID reconciliation
+
+| Item | Finding | Disposition |
+|---|---|---|
+| `P-372` | Never issued — log A started at P-373 by user instruction; logs B and C at P-390 and P-407 | **RESERVED / UNUSED.** Recorded in the register; never reused |
+| `P-373`–`P-423` | No collision with any canonical ID (Part 3 ended at P-371) | Issued labels become canonical as issued |
+| `P-374` Fenerbahçe v Roma | Same sporting event as the no-forecast collision record `TMP-SETTLED-20260911-01` | **P-374 is the canonical record** (a genuine pregame forecast); `TMP-SETTLED-20260911-01` and the external `TMP-RECON-20260912-01` are retired into it — not scored twice |
+| `P-389`, `P-415` | No forecast issued (toss gate withheld; interrupted) | Administrative, non-scorable |
+| Next ID | — | **`P-424`** |
+
+### Live-state check (first step)
+
+Every issued event in logs A, B and C had finished before this pass. **No event is live.** One card cannot be settled for an identity reason, not a live one: **P-418** (Drukpa v RTC) — the fixture is not verified as having been played (`TMP-OPEN-20260915-04`).
+
+### Log C settlement tables (`P-407`–`P-423`)
+
+#### P-407 — Settlement
+
+**Event:** Club Brugge 3–1 Royal Antwerp (Jupiler Pro League MD6) · **Source:** ESPN soccer/bel.1 event 401878991 (goals 13', 19', 50', 78'; corners 9–4; both XIs + benches) · **Settled:** 2026-09-15 · **Population:** EXPLORATORY
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Club Brugge team corners Over 4.5 | 0.78 | **PROVISIONAL — not booked** | — | ESPN (Opta lineage) 9 — PROVISIONAL WIN; the card's named provider (Pro League match centre) not reached |
+| 2 | Royal Antwerp team goals Under 1.5 | 0.74 | **WIN** | 0.0676 | 1 goal |
+| 3 | 1st Half total goals Over 0.5 | 0.72 | **WIN** | 0.0784 | 13' goal |
+| 4 | Full match total goals Under 3.5 | 0.68 | **LOSS** | 0.4624 | 4 goals |
+| 5 | Full match total goals Over 2.5 | 0.56 | **WIN** | 0.1936 | 4 goals |
+
+**Potential winner:** Club Brugge 60% · **CORRECT** · **Card mean Brier (4 graded rows):** 0.2005
+
+**Retrospective:**
+- *Driver:* Brugge's chance volume (23 shots, 9 on target) and an early goal took the match to four goals.
+- *What went right:* the goal-process rows and the winner, built on current shots and xG.
+- *What went wrong:* Under 3.5 (68%) was ranked above Over 2.5; both win only on exactly three goals, and four killed the higher row.
+- *Knowable?* The 4+ family existed but its mass was not printed.
+- *Smallest change:* print exact-goal masses (0, 1, 2, 3, 4+) whenever two overlapping totals are ranked (`G-L1`).
+
+Rank #1 (Brugge corners Over 4.5, ESPN 9) is provisional — the named Pro League record was not reached. **Validation:** line-ups No (probable XIs only; coaches not named); sources accurate; blind spot = the exact-three overlapping state.
+
+#### P-408 — Settlement
+
+**Event:** Coventry City 0–5 Brighton & Hove Albion (EPL MW4) · **Source:** Premier League official data API, fixture 128956 (won_corners Brighton 3, Coventry 5); ESPN eng.1 401879282 agrees · **Settled:** 2026-09-15 · **Population:** PRIMARY_SCORED (EPL)
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Brighton team corners Over 3.5 | 0.75 | **LOSS** | 0.5625 | 3 at the Premier League official record — lost by 0.5 |
+| 2 | Brighton or Draw (90 min) | 0.74 | **WIN** | 0.0676 | Brighton won |
+| 3 | 1st Half total goals Over 0.5 | 0.72 | **WIN** | 0.0784 | 35' goal |
+| 4 | Coventry team goals Under 1.5 | 0.68 | **WIN** | 0.1024 | 0 |
+| 5 | Full match total goals Over 2.5 | 0.55 | **WIN** | 0.2025 | 5 goals |
+
+**Potential winner:** Brighton 48% · **CORRECT** · **Card mean Brier (5 graded rows):** 0.2027
+
+**Retrospective:** Rank #1 lost — see the P-408 row of the deep Rank-#1 table below. Brighton led from 35' with 69% possession and 22 shots but won 3 corners; the card had noted the absence of Mitoma and Minteh and the early-lead kill path, yet trimmed the centre only to 5.4 (soccer control 33). Ranks 2–5 and the winner won. **Validation:** XIs and full benches yes; coaches not named (No); sources accurate (Premier League data is the field owner); blind spot = personnel-driven corner generation.
+
+#### P-409 — Settlement
+
+**Event:** Lille 2–0 Troyes (Ligue 1 MW4) · **Source:** ESPN soccer/fra.1 event 401876462 (goals 18', 90+3'; corners Lille 2, Troyes 5) · **Settled:** 2026-09-15 · **Population:** EXPLORATORY
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Lille team goals Over 0.5 | 0.82 | **WIN** | 0.0324 | 2 |
+| 2 | Troyes team corners Over 2.5 | 0.79 | **PROVISIONAL — not booked** | — | ESPN 5 — PROVISIONAL WIN; LFP official record not reached |
+| 3 | Lille or Draw (90 min) | 0.76 | **WIN** | 0.0576 | Lille won |
+| 4 | 1st Half total goals Over 0.5 | 0.70 | **WIN** | 0.09 | 18' goal |
+
+
+The files appeared in the working folder at 2026-09-15 16:20–16:21 AEST, after the 2026-09-15(a) pass, together with byte-identical copies in `archive/mini_logs/originals_2026-09-15/`. A pre-change snapshot folder (`audit_2026-09-15/before/`) created at the same time was deleted on 2026-09-15 at the user's direction; only archived mini logs are kept outside the MD documents. Reconciled the same session — inside `METHOD.md` §10's 24-hour window.
+
+| Log | File | Bytes | SHA-256 | Range | State on arrival |
+|---|---|---:|---|---|---|
+| A | `PREDICTION_MINI_RUNNING_LOG_P373_P389_RETROSPECTIVE_2026-09-12.md` | 294,562 | `640b33dc3bde39208a5596f479331537f0fbea9a4f66313d403021d753de8d41` | P-373–P-389 | settled 2026-09-12 by its session |
+| A′ | `… 2026-09-12 (1).md` | 294,562 | identical to A | — | duplicate upload; not a second record — removed from the archive after the hash check |
+| B | `PREDICTION_MINI_RUNNING_LOG_P390_P406_RETROSPECTIVE_2026-09-14.md` | 287,817 | `2f51d4561d2aa20440feb478a10fbc09b5b18b5f708fda26c738a620d7249dc5` | P-390–P-406 | settled 2026-09-14 by its session |
+| C | `PREDICTION_MINI_RUNNING_LOG_THROUGH_P423.md` | 218,707 | `404903fc25c67b3ca74a86265aeed16127ce75c8a68f2cbbb2225f51278b7bbc` | P-407–P-423 | all unsettled |
+
+### Canonical-ID reconciliation
+
+| Item | Finding | Disposition |
+|---|---|---|
+| `P-372` | Never issued — log A started at P-373 by user instruction; logs B and C at P-390 and P-407 | **RESERVED / UNUSED.** Recorded in the register; never reused |
+| `P-373`–`P-423` | No collision with any canonical ID (Part 3 ended at P-371) | Issued labels become canonical as issued |
+| `P-374` Fenerbahçe v Roma | Same sporting event as the no-forecast collision record `TMP-SETTLED-20260911-01` | **P-374 is the canonical record** (a genuine pregame forecast); `TMP-SETTLED-20260911-01` and the external `TMP-RECON-20260912-01` are retired into it — not scored twice |
+| `P-389`, `P-415` | No forecast issued (toss gate withheld; interrupted) | Administrative, non-scorable |
+| Next ID | — | **`P-424`** |
+
+### Live-state check (first step)
+
+Every issued event in logs A, B and C had finished before this pass. **No event is live.** One card cannot be settled for an identity reason, not a live one: **P-418** (Drukpa v RTC) — the fixture is not verified as having been played (`TMP-OPEN-20260915-04`).
+
+### Log C settlement tables (`P-407`–`P-423`)
+
+#### P-407 — Settlement
+
+**Event:** Club Brugge 3–1 Royal Antwerp (Jupiler Pro League MD6) · **Source:** ESPN soccer/bel.1 event 401878991 (goals 13', 19', 50', 78'; corners 9–4; both XIs + benches) · **Settled:** 2026-09-15 · **Population:** EXPLORATORY
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Club Brugge team corners Over 4.5 | 0.78 | **PROVISIONAL — not booked** | — | ESPN (Opta lineage) 9 — PROVISIONAL WIN; the card's named provider (Pro League match centre) not reached |
+| 2 | Royal Antwerp team goals Under 1.5 | 0.74 | **WIN** | 0.0676 | 1 goal |
+| 3 | 1st Half total goals Over 0.5 | 0.72 | **WIN** | 0.0784 | 13' goal |
+| 4 | Full match total goals Under 3.5 | 0.68 | **LOSS** | 0.4624 | 4 goals |
+| 5 | Full match total goals Over 2.5 | 0.56 | **WIN** | 0.1936 | 4 goals |
+
+**Potential winner:** Club Brugge 60% · **CORRECT** · **Card mean Brier (4 graded rows):** 0.2005
+
+**Retrospective:**
+- *Driver:* Brugge's chance volume (23 shots, 9 on target) and an early goal took the match to four goals.
+- *What went right:* the goal-process rows and the winner, built on current shots and xG.
+- *What went wrong:* Under 3.5 (68%) was ranked above Over 2.5; both win only on exactly three goals, and four killed the higher row.
+- *Knowable?* The 4+ family existed but its mass was not printed.
+- *Smallest change:* print exact-goal masses (0, 1, 2, 3, 4+) whenever two overlapping totals are ranked (`G-L1`).
+
+Rank #1 (Brugge corners Over 4.5, ESPN 9) is provisional — the named Pro League record was not reached. **Validation:** line-ups No (probable XIs only; coaches not named); sources accurate; blind spot = the exact-three overlapping state.
+
+#### P-408 — Settlement
+
+**Event:** Coventry City 0–5 Brighton & Hove Albion (EPL MW4) · **Source:** Premier League official data API, fixture 128956 (won_corners Brighton 3, Coventry 5); ESPN eng.1 401879282 agrees · **Settled:** 2026-09-15 · **Population:** PRIMARY_SCORED (EPL)
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Brighton team corners Over 3.5 | 0.75 | **LOSS** | 0.5625 | 3 at the Premier League official record — lost by 0.5 |
+| 2 | Brighton or Draw (90 min) | 0.74 | **WIN** | 0.0676 | Brighton won |
+| 3 | 1st Half total goals Over 0.5 | 0.72 | **WIN** | 0.0784 | 35' goal |
+| 4 | Coventry team goals Under 1.5 | 0.68 | **WIN** | 0.1024 | 0 |
+| 5 | Full match total goals Over 2.5 | 0.55 | **WIN** | 0.2025 | 5 goals |
+
+**Potential winner:** Brighton 48% · **CORRECT** · **Card mean Brier (5 graded rows):** 0.2027
+
+**Retrospective:** Rank #1 lost — see the P-408 row of the deep Rank-#1 table below. Brighton led from 35' with 69% possession and 22 shots but won 3 corners; the card had noted the absence of Mitoma and Minteh and the early-lead kill path, yet trimmed the centre only to 5.4 (soccer control 33). Ranks 2–5 and the winner won. **Validation:** XIs and full benches yes; coaches not named (No); sources accurate (Premier League data is the field owner); blind spot = personnel-driven corner generation.
+
+#### P-409 — Settlement
+
+**Event:** Lille 2–0 Troyes (Ligue 1 MW4) · **Source:** ESPN soccer/fra.1 event 401876462 (goals 18', 90+3'; corners Lille 2, Troyes 5) · **Settled:** 2026-09-15 · **Population:** EXPLORATORY
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Lille team goals Over 0.5 | 0.82 | **WIN** | 0.0324 | 2 |
+| 2 | Troyes team corners Over 2.5 | 0.79 | **PROVISIONAL — not booked** | — | ESPN 5 — PROVISIONAL WIN; LFP official record not reached |
+| 3 | Lille or Draw (90 min) | 0.76 | **WIN** | 0.0576 | Lille won |
+| 4 | 1st Half total goals Over 0.5 | 0.70 | **WIN** | 0.09 | 18' goal |
+| 5 | Full match total goals Under 3.5 | 0.65 | **WIN** | 0.1225 | 2 goals |
+
+The files appeared in the working folder at 2026-09-15 16:20–16:21 AEST, after the 2026-09-15(a) pass, together with byte-identical copies in `archive/mini_logs/originals_2026-09-15/`. A pre-change snapshot folder (`audit_2026-09-15/before/`) created at the same time was deleted on 2026-09-15 at the user's direction; only archived mini logs are kept outside the MD documents. Reconciled the same session — inside `METHOD.md` §10's 24-hour window.
+
+| Log | File | Bytes | SHA-256 | Range | State on arrival |
+|---|---|---:|---|---|---|
+| A | `PREDICTION_MINI_RUNNING_LOG_P373_P389_RETROSPECTIVE_2026-09-12.md` | 294,562 | `640b33dc3bde39208a5596f479331537f0fbea9a4f66313d403021d753de8d41` | P-373–P-389 | settled 2026-09-12 by its session |
+| A′ | `… 2026-09-12 (1).md` | 294,562 | identical to A | — | duplicate upload; not a second record — removed from the archive after the hash check |
+| B | `PREDICTION_MINI_RUNNING_LOG_P390_P406_RETROSPECTIVE_2026-09-14.md` | 287,817 | `2f51d4561d2aa20440feb478a10fbc09b5b18b5f708fda26c738a620d7249dc5` | P-390–P-406 | settled 2026-09-14 by its session |
+| C | `PREDICTION_MINI_RUNNING_LOG_THROUGH_P423.md` | 218,707 | `404903fc25c67b3ca74a86265aeed16127ce75c8a68f2cbbb2225f51278b7bbc` | P-407–P-423 | all unsettled |
+
+### Canonical-ID reconciliation
+
+| Item | Finding | Disposition |
+|---|---|---|
+| `P-372` | Never issued — log A started at P-373 by user instruction; logs B and C at P-390 and P-407 | **RESERVED / UNUSED.** Recorded in the register; never reused |
+| `P-373`–`P-423` | No collision with any canonical ID (Part 3 ended at P-371) | Issued labels become canonical as issued |
+| `P-374` Fenerbahçe v Roma | Same sporting event as the no-forecast collision record `TMP-SETTLED-20260911-01` | **P-374 is the canonical record** (a genuine pregame forecast); `TMP-SETTLED-20260911-01` and the external `TMP-RECON-20260912-01` are retired into it — not scored twice |
+| `P-389`, `P-415` | No forecast issued (toss gate withheld; interrupted) | Administrative, non-scorable |
+| Next ID | — | **`P-424`** |
+
+### Live-state check (first step)
+
+Every issued event in logs A, B and C had finished before this pass. **No event is live.** One card cannot be settled for an identity reason, not a live one: **P-418** (Drukpa v RTC) — the fixture is not verified as having been played (`TMP-OPEN-20260915-04`).
+
+### Log C settlement tables (`P-407`–`P-423`)
+
+#### P-407 — Settlement
+
+**Event:** Club Brugge 3–1 Royal Antwerp (Jupiler Pro League MD6) · **Source:** ESPN soccer/bel.1 event 401878991 (goals 13', 19', 50', 78'; corners 9–4; both XIs + benches) · **Settled:** 2026-09-15 · **Population:** EXPLORATORY
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Club Brugge team corners Over 4.5 | 0.78 | **PROVISIONAL — not booked** | — | ESPN (Opta lineage) 9 — PROVISIONAL WIN; the card's named provider (Pro League match centre) not reached |
+| 2 | Royal Antwerp team goals Under 1.5 | 0.74 | **WIN** | 0.0676 | 1 goal |
+| 3 | 1st Half total goals Over 0.5 | 0.72 | **WIN** | 0.0784 | 13' goal |
+| 4 | Full match total goals Under 3.5 | 0.68 | **LOSS** | 0.4624 | 4 goals |
+| 5 | Full match total goals Over 2.5 | 0.56 | **WIN** | 0.1936 | 4 goals |
+
+**Potential winner:** Club Brugge 60% · **CORRECT** · **Card mean Brier (4 graded rows):** 0.2005
+
+**Retrospective:**
+- *Driver:* Brugge's chance volume (23 shots, 9 on target) and an early goal took the match to four goals.
+- *What went right:* the goal-process rows and the winner, built on current shots and xG.
+- *What went wrong:* Under 3.5 (68%) was ranked above Over 2.5; both win only on exactly three goals, and four killed the higher row.
+- *Knowable?* The 4+ family existed but its mass was not printed.
+- *Smallest change:* print exact-goal masses (0, 1, 2, 3, 4+) whenever two overlapping totals are ranked (`G-L1`).
+
+Rank #1 (Brugge corners Over 4.5, ESPN 9) is provisional — the named Pro League record was not reached. **Validation:** line-ups No (probable XIs only; coaches not named); sources accurate; blind spot = the exact-three overlapping state.
+
+#### P-408 — Settlement
+
+**Event:** Coventry City 0–5 Brighton & Hove Albion (EPL MW4) · **Source:** Premier League official data API, fixture 128956 (won_corners Brighton 3, Coventry 5); ESPN eng.1 401879282 agrees · **Settled:** 2026-09-15 · **Population:** PRIMARY_SCORED (EPL)
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Brighton team corners Over 3.5 | 0.75 | **LOSS** | 0.5625 | 3 at the Premier League official record — lost by 0.5 |
+| 2 | Brighton or Draw (90 min) | 0.74 | **WIN** | 0.0676 | Brighton won |
+| 3 | 1st Half total goals Over 0.5 | 0.72 | **WIN** | 0.0784 | 35' goal |
+| 4 | Coventry team goals Under 1.5 | 0.68 | **WIN** | 0.1024 | 0 |
+| 5 | Full match total goals Over 2.5 | 0.55 | **WIN** | 0.2025 | 5 goals |
+
+**Potential winner:** Brighton 48% · **CORRECT** · **Card mean Brier (5 graded rows):** 0.2027
+
+**Retrospective:** Rank #1 lost — see the P-408 row of the deep Rank-#1 table below. Brighton led from 35' with 69% possession and 22 shots but won 3 corners; the card had noted the absence of Mitoma and Minteh and the early-lead kill path, yet trimmed the centre only to 5.4 (soccer control 33). Ranks 2–5 and the winner won. **Validation:** XIs and full benches yes; coaches not named (No); sources accurate (Premier League data is the field owner); blind spot = personnel-driven corner generation.
+
+#### P-409 — Settlement
+
+**Event:** Lille 2–0 Troyes (Ligue 1 MW4) · **Source:** ESPN soccer/fra.1 event 401876462 (goals 18', 90+3'; corners Lille 2, Troyes 5) · **Settled:** 2026-09-15 · **Population:** EXPLORATORY
+
+| Rank | Contract | `p` | Result | Brier | Boundary / note |
+|---:|---|---:|---|---:|---|
+| 1 | Lille team goals Over 0.5 | 0.82 | **WIN** | 0.0324 | 2 |
+| 2 | Troyes team corners Over 2.5 | 0.79 | **PROVISIONAL — not booked** | — | ESPN 5 — PROVISIONAL WIN; LFP official record not reached |
+| 3 | Lille or Draw (90 min) | 0.76 | **WIN** | 0.0576 | Lille won |
+| 4 | 1st Half total goals Over 0.5 | 0.70 | **WIN** | 0.09 | 18' goal |
+| 5 | Full match total goals Under 3.5 | 0.65 | **WIN** | 0.1225 | 2 goals |

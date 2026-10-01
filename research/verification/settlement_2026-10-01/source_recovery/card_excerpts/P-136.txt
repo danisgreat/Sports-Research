@@ -1,0 +1,76 @@
+**`RANKED FORECAST — NO BET ENDORSED`**
+
+This record follows `UPCOMING_GAME_RESEARCH_GUIDE.md` (`UGR-2026.08.25-v1`) and the current `RULES_BASEBALL.md`.
+
+**Method:** `MDS-2026.08.29-v2.5 — qualitative champion`  
+**Numerical specification:** `NTS-2026.08.25-v0.2 — Stage 0 / pre-fit`  
+**Probability state:** `NOT_GENERATED / NOT PUBLISHED — VALIDATION PENDING`  
+**Value state:** `NO VALUE DETERMINABLE`  
+**Candidate policy:** `USER_SUPPLIED`  
+**Operator / exact book rules:** `NOT SUPPLIED`  
+**Logging mode:** research + forecast + local Markdown log  
+**Canonical Drive note:** the read-only Drive snapshot still names `P-137` as the next canonical ID. This is a conversation-local continuation and does not claim to update that Drive file.
+
+---
+
+# 1. Previous-log / queue gate
+
+The active Drive guide requires the canonical open queue to be refreshed before a new forecast.
+
+| ID | Event | Refreshed disposition |
+|---|---|---|
+| `P-126` | Sikkim Aakraman FC vs Sikkim Boys Club | **OPEN — PREGAME / SCHEDULE FIELD-OWNER UNRESOLVED**; current stronger schedule branch remains later on 29 Aug Melbourne time |
+| `P-135` | Unión de Santa Fe vs Sarmiento | **FINAL — Unión 4-1 Sarmiento**; locally settled in the immediately preceding guide-format continuation |
+| `P-136` | James Duckworth vs Arthur Fery | **FINAL — Fery advanced after Duckworth retired** |
+
+## P-136 settlement / retrospective gate
+
+ATP's official report confirms **Arthur Fery advanced to the Winston-Salem final after James Duckworth retired**.
+
+The original P-136 contract set was:
+1. Over 22.5 total games
+2. Duckworth +1.5 games
+3. Fery -1.5 games
+4. Under 22.5 total games
+Potential winner: Arthur Fery.
+
+The original log explicitly froze retirement settlement as:
+
+`UNKNOWN_DEFINITION`
+
+because no sportsbook/operator was supplied.
+
+Therefore:
+
+| Original item | Settlement |
+|---|---|
+| Over 22.5 games | **UNSETTLEABLE — operator retirement rule unknown** |
+| Duckworth +1.5 games | **UNSETTLEABLE — operator retirement rule unknown** |
+| Fery -1.5 games | **UNSETTLEABLE — operator retirement rule unknown** |
+| Under 22.5 games | **UNSETTLEABLE — operator retirement rule unknown** |
+| Potential match winner: Fery | **Descriptive direction correct — Fery officially advanced/won by retirement** |
+
+### P-136 retrospective
+
+| Preissue expectation | Actual driver | Difference | Knowability | Process grade | Defect class | Lesson/test | Method change |
+|---|---|---|---|---|---|---|---|
+| Competitive long-match tree with Fery preferred outright and Duckworth competitive on game handicap | Match ended through Duckworth retirement | The central tennis scoring tree was censored by retirement, so totals/handicap process cannot be judged honestly | Retirement is a known structural tail but its occurrence was not established as forecastable preissue | `INCONCLUSIVE` | Censoring / retirement realization | Preserve retirement-rule freeze and do not grade bookmaker rows without terms | **None** |
+
+P-154 — Phillies @ Angels — remains a separate conversation-local pregame record at the time this new research begins; it is not part of the canonical Drive queue.
+
+---
+
+# 2. Event, target, candidate and time freeze
+
+## Official event
+
+| Field | Frozen value |
+|---|---|
+| Sport | Baseball |
+| Competition | Major League Baseball — 2026 regular season |
+| Official event | Baltimore Orioles @ Athletics |
+| MLB gamePk | `824960` |
+| Venue | Sutter Health Park, West Sacramento, California |
+| Away / home | Baltimore away; Athletics home |
+| Scheduled start | 2026-08-28 18:40 PDT / 21:40 EDT |
+| Melbourne start | 2026-08-29 11:40 AEST |

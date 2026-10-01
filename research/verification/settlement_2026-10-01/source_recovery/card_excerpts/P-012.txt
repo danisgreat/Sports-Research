@@ -1,0 +1,307 @@
+### Open-event index — UPDATE (2026-08-03T14:02:59Z)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 | Welsh Fire W v Trent Rockets W | `CLOSED` |
+| P-002 | Philadelphia Phillies @ Miami Marlins | `CLOSED` |
+| P-003 | FC København v Polissya Zhytomyr | `CLOSED` |
+| P-004 | MI London Men v London Spirit Men | `CLOSED` |
+| P-005 | Texas Rangers @ Tampa Bay Rays | `CLOSED` |
+| P-006 | Southern Brave Men v Birmingham Phoenix Men | `CLOSED` |
+| P-007 | Manchester Super Giants Men v Trent Rockets Men | `CLOSED` |
+| P-008 | New York Yankees @ Chicago Cubs | `CLOSED` |
+| P-009 | Indiana Fever @ Portland Fire | `CLOSED` |
+| P-010 | Carlton v Brisbane Lions | `CLOSED` |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians | `CLOSED` |
+| P-012 | Welsh Fire W v Southern Brave W | `OPEN / PENDING` — frozen late-pregame card; event now live |
+
+**One open record: P-012.** Earlier index tables are immutable historical state; this newest index controls status.
+
+---
+
+## P-012 — SETTLEMENT (appended 2026-08-03T17:30:55Z)
+
+### Final-state and source gate
+
+ESPNcricinfo's final scorecard identified match 1521215 as complete: Southern Brave Women 121/5 from 100 balls; Welsh Fire Women 122/6 from 100 balls. Welsh Fire won by four wickets from the final scheduled ball. The explicit innings-phase section records Southern Brave's Powerplay 1 as **19/2 after balls 1–25**. The reader-proxy title and match date were verified as 3 August 2026 before use. `[ESPNcricinfo final scorecard, 2026-08-03T17:29Z, RENDERED-PROXY / DATE-VERIFIED]`
+
+Source: `https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/welsh-fire-women-vs-southern-brave-women-19th-match-1521215/full-scorecard`
+
+### Grades
+
+The frozen settlement contracts are unchanged: 100-ball totals include extras and compare Southern Brave's completed 121 to 133.5; the phase markets use the scorecard's explicit 19-run first-25 line. Half-run lines cannot push.
+
+| Original rank | Original row | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | SBW 100 balls Under 133.5 | `PASS` | 121 | WIN (abstention) |
+| 2 | SBW 100 balls Over 133.5 | `PASS` | 121 | LOSS (abstention) |
+| 3= | SBW first 25 balls Under 32.5 | `PASS / UNORDERED PAIR` | 19 | WIN (abstention; no ranking information) |
+| 3= | SBW first 25 balls Over 32.5 | `PASS / UNORDERED PAIR` | 19 | LOSS (abstention; no ranking information) |
+
+**Potential winner:** original formal verdict was `NO WINNER PICK`; therefore no winner grade enters the record. The disclosed watch-only direction, Southern Brave Women, was wrong.  
+**Formal selections:** none.  
+**Complementary-pair ranking:** the higher-ranked branch of the full-innings pair, Under 133.5, won (1 of 1). The explicitly unordered phase pair contributes no ranking trial.  
+**Top-pick penalty:** not triggered. The first row was a `PASS`, and it won in any case.
+
+### Retrospective
+
+1. **Identity and settlement:** correct. Women's Match 19, Cardiff, 100-ball format, Southern Brave batting first; explicit ESPNcricinfo full and phase totals used.
+2. **What went right:** the card resisted Cardiff's raw n=2 average of 153 and instead weighted Southern Brave's captured target-setting center (130.7), the fresh 126 direct meeting and Welsh Fire's opponent-specific wicket mechanism. The actual 121 was below both 133.5 and that 130.7 center. This is the contest-adjusted venue correction from **P-001/P-004** working prospectively, not evidence that Cardiff is generically low scoring.
+3. **Decisive sequence:** Grace Potts dismissed Lizelle Lee at ball 6 and Maia Bouchier at ball 16, leaving Brave 9/2; the explicit powerplay finished 19/2. Wolvaardt's 48 from 45 and Rodrigues' 25 from 21 rebuilt, but Brave never recovered to the line. Potts finished 2/14; Heather Graham took 2/23. This was a new-ball wicket/dot-ball mechanism, not merely a late collapse.
+4. **What remained incomplete:** the frozen card did not capture confirmed XIs or the recent phase stack before first ball, so all rows correctly stayed `PASS` and the phase pair stayed unordered. The Under branches winning does not retroactively cure those evidence gaps or upgrade abstentions into picks.
+5. **Winner audit:** withholding a winner was correct process. The watch-only Southern Brave direction failed when Welsh Fire chased 122 on the final ball, led by Graham's unbeaten 35. This reinforces **RULES_CRICKET §5.10 winner independence** and the general rule that an informational direction does not deserve a lower evidence standard.
+6. **Comparable prior:** unlike P-001, where two Cardiff Overs expressed one unadjusted venue thesis and lost together, P-012 separated the raw ground prior from the current batting-side/opposing-attack matchup. That adjustment was directionally useful here. It remains a supported mechanism, not a calibrated model.
+7. **Classification:** sound directional ordering with disciplined abstention; no identity, settlement, arithmetic or result-leak error. The watch-only winner direction was an acknowledged below-gate opinion and was wrong.
+8. **Correction/falsification:** no new rule is promoted from one result. Continue requiring the confirmed XI and exact first-25 rows. The contest-adjusted venue control would be failing if future cards again let a raw ground mean override a materially different current batting/attack matchup without explanation.
+
+### Running record — UPDATE (2026-08-03T17:30:55Z)
+
+Directional/ranking accuracy only—not ROI, profit, or evidence of an edge.
+
+| Measure | Count |
+|---|---:|
+| Records settled | 12 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 7 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+**Reconciliation:** P-012 adds no formal selection and no formal winner trial. It adds one correct higher-ranked complementary branch; the unordered phase pair is excluded from ranking diagnostics.
+
+### Lessons pending promotion — UPDATE (2026-08-03T17:30:55Z)
+
+| Origin | Finding | Disposition |
+|---|---|---|
+
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 | Welsh Fire W v Trent Rockets W | `CLOSED` |
+| P-002 | Philadelphia Phillies @ Miami Marlins | `CLOSED` |
+| P-003 | FC København v Polissya Zhytomyr | `CLOSED` |
+| P-004 | MI London Men v London Spirit Men | `CLOSED` |
+| P-005 | Texas Rangers @ Tampa Bay Rays | `CLOSED` |
+| P-006 | Southern Brave Men v Birmingham Phoenix Men | `CLOSED` |
+| P-007 | Manchester Super Giants Men v Trent Rockets Men | `CLOSED` |
+| P-008 | New York Yankees @ Chicago Cubs | `CLOSED` |
+| P-009 | Indiana Fever @ Portland Fire | `CLOSED` |
+| P-010 | Carlton v Brisbane Lions | `CLOSED` |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians | `CLOSED` |
+| P-012 | Welsh Fire W v Southern Brave W | `OPEN / PENDING` — frozen late-pregame card; event now live |
+
+**One open record: P-012.** Earlier index tables are immutable historical state; this newest index controls status.
+
+---
+
+## P-012 — SETTLEMENT (appended 2026-08-03T17:30:55Z)
+
+### Final-state and source gate
+
+ESPNcricinfo's final scorecard identified match 1521215 as complete: Southern Brave Women 121/5 from 100 balls; Welsh Fire Women 122/6 from 100 balls. Welsh Fire won by four wickets from the final scheduled ball. The explicit innings-phase section records Southern Brave's Powerplay 1 as **19/2 after balls 1–25**. The reader-proxy title and match date were verified as 3 August 2026 before use. `[ESPNcricinfo final scorecard, 2026-08-03T17:29Z, RENDERED-PROXY / DATE-VERIFIED]`
+
+Source: `https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/welsh-fire-women-vs-southern-brave-women-19th-match-1521215/full-scorecard`
+
+### Grades
+
+The frozen settlement contracts are unchanged: 100-ball totals include extras and compare Southern Brave's completed 121 to 133.5; the phase markets use the scorecard's explicit 19-run first-25 line. Half-run lines cannot push.
+
+| Original rank | Original row | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | SBW 100 balls Under 133.5 | `PASS` | 121 | WIN (abstention) |
+| 2 | SBW 100 balls Over 133.5 | `PASS` | 121 | LOSS (abstention) |
+| 3= | SBW first 25 balls Under 32.5 | `PASS / UNORDERED PAIR` | 19 | WIN (abstention; no ranking information) |
+| 3= | SBW first 25 balls Over 32.5 | `PASS / UNORDERED PAIR` | 19 | LOSS (abstention; no ranking information) |
+
+**Potential winner:** original formal verdict was `NO WINNER PICK`; therefore no winner grade enters the record. The disclosed watch-only direction, Southern Brave Women, was wrong.  
+**Formal selections:** none.  
+**Complementary-pair ranking:** the higher-ranked branch of the full-innings pair, Under 133.5, won (1 of 1). The explicitly unordered phase pair contributes no ranking trial.  
+**Top-pick penalty:** not triggered. The first row was a `PASS`, and it won in any case.
+
+### Retrospective
+
+1. **Identity and settlement:** correct. Women's Match 19, Cardiff, 100-ball format, Southern Brave batting first; explicit ESPNcricinfo full and phase totals used.
+2. **What went right:** the card resisted Cardiff's raw n=2 average of 153 and instead weighted Southern Brave's captured target-setting center (130.7), the fresh 126 direct meeting and Welsh Fire's opponent-specific wicket mechanism. The actual 121 was below both 133.5 and that 130.7 center. This is the contest-adjusted venue correction from **P-001/P-004** working prospectively, not evidence that Cardiff is generically low scoring.
+3. **Decisive sequence:** Grace Potts dismissed Lizelle Lee at ball 6 and Maia Bouchier at ball 16, leaving Brave 9/2; the explicit powerplay finished 19/2. Wolvaardt's 48 from 45 and Rodrigues' 25 from 21 rebuilt, but Brave never recovered to the line. Potts finished 2/14; Heather Graham took 2/23. This was a new-ball wicket/dot-ball mechanism, not merely a late collapse.
+4. **What remained incomplete:** the frozen card did not capture confirmed XIs or the recent phase stack before first ball, so all rows correctly stayed `PASS` and the phase pair stayed unordered. The Under branches winning does not retroactively cure those evidence gaps or upgrade abstentions into picks.
+5. **Winner audit:** withholding a winner was correct process. The watch-only Southern Brave direction failed when Welsh Fire chased 122 on the final ball, led by Graham's unbeaten 35. This reinforces **RULES_CRICKET §5.10 winner independence** and the general rule that an informational direction does not deserve a lower evidence standard.
+6. **Comparable prior:** unlike P-001, where two Cardiff Overs expressed one unadjusted venue thesis and lost together, P-012 separated the raw ground prior from the current batting-side/opposing-attack matchup. That adjustment was directionally useful here. It remains a supported mechanism, not a calibrated model.
+7. **Classification:** sound directional ordering with disciplined abstention; no identity, settlement, arithmetic or result-leak error. The watch-only winner direction was an acknowledged below-gate opinion and was wrong.
+8. **Correction/falsification:** no new rule is promoted from one result. Continue requiring the confirmed XI and exact first-25 rows. The contest-adjusted venue control would be failing if future cards again let a raw ground mean override a materially different current batting/attack matchup without explanation.
+
+### Running record — UPDATE (2026-08-03T17:30:55Z)
+
+Directional/ranking accuracy only—not ROI, profit, or evidence of an edge.
+
+| Measure | Count |
+|---|---:|
+| Records settled | 12 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 7 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+**Reconciliation:** P-012 adds no formal selection and no formal winner trial. It adds one correct higher-ranked complementary branch; the unordered phase pair is excluded from ranking diagnostics.
+
+### Lessons pending promotion — UPDATE (2026-08-03T17:30:55Z)
+
+| Origin | Finding | Disposition |
+|---|---|---|
+| P-012 | Raw Cardiff n=2 scoring level pointed higher, but the current Brave batting/Fire attack adjustment pointed lower and bracketed the 121 result | Second prospective application after promotion; reinforces `RULES_CRICKET.md` §5.9, no new rule |
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 | Welsh Fire W v Trent Rockets W | `CLOSED` |
+| P-002 | Philadelphia Phillies @ Miami Marlins | `CLOSED` |
+| P-003 | FC København v Polissya Zhytomyr | `CLOSED` |
+| P-004 | MI London Men v London Spirit Men | `CLOSED` |
+| P-005 | Texas Rangers @ Tampa Bay Rays | `CLOSED` |
+| P-006 | Southern Brave Men v Birmingham Phoenix Men | `CLOSED` |
+| P-007 | Manchester Super Giants Men v Trent Rockets Men | `CLOSED` |
+| P-008 | New York Yankees @ Chicago Cubs | `CLOSED` |
+| P-009 | Indiana Fever @ Portland Fire | `CLOSED` |
+| P-010 | Carlton v Brisbane Lions | `CLOSED` |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians | `CLOSED` |
+| P-012 | Welsh Fire W v Southern Brave W | `OPEN / PENDING` — frozen late-pregame card; event now live |
+
+**One open record: P-012.** Earlier index tables are immutable historical state; this newest index controls status.
+
+---
+
+## P-012 — SETTLEMENT (appended 2026-08-03T17:30:55Z)
+
+### Final-state and source gate
+
+ESPNcricinfo's final scorecard identified match 1521215 as complete: Southern Brave Women 121/5 from 100 balls; Welsh Fire Women 122/6 from 100 balls. Welsh Fire won by four wickets from the final scheduled ball. The explicit innings-phase section records Southern Brave's Powerplay 1 as **19/2 after balls 1–25**. The reader-proxy title and match date were verified as 3 August 2026 before use. `[ESPNcricinfo final scorecard, 2026-08-03T17:29Z, RENDERED-PROXY / DATE-VERIFIED]`
+
+Source: `https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/welsh-fire-women-vs-southern-brave-women-19th-match-1521215/full-scorecard`
+
+### Grades
+
+The frozen settlement contracts are unchanged: 100-ball totals include extras and compare Southern Brave's completed 121 to 133.5; the phase markets use the scorecard's explicit 19-run first-25 line. Half-run lines cannot push.
+
+| Original rank | Original row | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | SBW 100 balls Under 133.5 | `PASS` | 121 | WIN (abstention) |
+| 2 | SBW 100 balls Over 133.5 | `PASS` | 121 | LOSS (abstention) |
+| 3= | SBW first 25 balls Under 32.5 | `PASS / UNORDERED PAIR` | 19 | WIN (abstention; no ranking information) |
+| 3= | SBW first 25 balls Over 32.5 | `PASS / UNORDERED PAIR` | 19 | LOSS (abstention; no ranking information) |
+
+**Potential winner:** original formal verdict was `NO WINNER PICK`; therefore no winner grade enters the record. The disclosed watch-only direction, Southern Brave Women, was wrong.  
+**Formal selections:** none.  
+**Complementary-pair ranking:** the higher-ranked branch of the full-innings pair, Under 133.5, won (1 of 1). The explicitly unordered phase pair contributes no ranking trial.  
+**Top-pick penalty:** not triggered. The first row was a `PASS`, and it won in any case.
+
+### Retrospective
+
+1. **Identity and settlement:** correct. Women's Match 19, Cardiff, 100-ball format, Southern Brave batting first; explicit ESPNcricinfo full and phase totals used.
+2. **What went right:** the card resisted Cardiff's raw n=2 average of 153 and instead weighted Southern Brave's captured target-setting center (130.7), the fresh 126 direct meeting and Welsh Fire's opponent-specific wicket mechanism. The actual 121 was below both 133.5 and that 130.7 center. This is the contest-adjusted venue correction from **P-001/P-004** working prospectively, not evidence that Cardiff is generically low scoring.
+3. **Decisive sequence:** Grace Potts dismissed Lizelle Lee at ball 6 and Maia Bouchier at ball 16, leaving Brave 9/2; the explicit powerplay finished 19/2. Wolvaardt's 48 from 45 and Rodrigues' 25 from 21 rebuilt, but Brave never recovered to the line. Potts finished 2/14; Heather Graham took 2/23. This was a new-ball wicket/dot-ball mechanism, not merely a late collapse.
+4. **What remained incomplete:** the frozen card did not capture confirmed XIs or the recent phase stack before first ball, so all rows correctly stayed `PASS` and the phase pair stayed unordered. The Under branches winning does not retroactively cure those evidence gaps or upgrade abstentions into picks.
+5. **Winner audit:** withholding a winner was correct process. The watch-only Southern Brave direction failed when Welsh Fire chased 122 on the final ball, led by Graham's unbeaten 35. This reinforces **RULES_CRICKET §5.10 winner independence** and the general rule that an informational direction does not deserve a lower evidence standard.
+6. **Comparable prior:** unlike P-001, where two Cardiff Overs expressed one unadjusted venue thesis and lost together, P-012 separated the raw ground prior from the current batting-side/opposing-attack matchup. That adjustment was directionally useful here. It remains a supported mechanism, not a calibrated model.
+7. **Classification:** sound directional ordering with disciplined abstention; no identity, settlement, arithmetic or result-leak error. The watch-only winner direction was an acknowledged below-gate opinion and was wrong.
+8. **Correction/falsification:** no new rule is promoted from one result. Continue requiring the confirmed XI and exact first-25 rows. The contest-adjusted venue control would be failing if future cards again let a raw ground mean override a materially different current batting/attack matchup without explanation.
+
+### Running record — UPDATE (2026-08-03T17:30:55Z)
+
+Directional/ranking accuracy only—not ROI, profit, or evidence of an edge.
+
+| Measure | Count |
+|---|---:|
+| Records settled | 12 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 7 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+**Reconciliation:** P-012 adds no formal selection and no formal winner trial. It adds one correct higher-ranked complementary branch; the unordered phase pair is excluded from ranking diagnostics.
+
+### Lessons pending promotion — UPDATE (2026-08-03T17:30:55Z)
+
+| Origin | Finding | Disposition |
+|---|---|---|
+| P-012 | Raw Cardiff n=2 scoring level pointed higher, but the current Brave batting/Fire attack adjustment pointed lower and bracketed the 121 result | Second prospective application after promotion; reinforces `RULES_CRICKET.md` §5.9, no new rule |
+| P-012 | Two new-ball wickets produced a 19/2 powerplay and controlled the completed total | Reinforces exposure-unit and wicket-resource analysis; retain confirmed-XI/new-ball-matchup gate |
+
+|---|---|---|
+| P-001 | Welsh Fire W v Trent Rockets W | `CLOSED` |
+| P-002 | Philadelphia Phillies @ Miami Marlins | `CLOSED` |
+| P-003 | FC København v Polissya Zhytomyr | `CLOSED` |
+| P-004 | MI London Men v London Spirit Men | `CLOSED` |
+| P-005 | Texas Rangers @ Tampa Bay Rays | `CLOSED` |
+| P-006 | Southern Brave Men v Birmingham Phoenix Men | `CLOSED` |
+| P-007 | Manchester Super Giants Men v Trent Rockets Men | `CLOSED` |
+| P-008 | New York Yankees @ Chicago Cubs | `CLOSED` |
+| P-009 | Indiana Fever @ Portland Fire | `CLOSED` |
+| P-010 | Carlton v Brisbane Lions | `CLOSED` |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians | `CLOSED` |
+| P-012 | Welsh Fire W v Southern Brave W | `OPEN / PENDING` — frozen late-pregame card; event now live |
+
+**One open record: P-012.** Earlier index tables are immutable historical state; this newest index controls status.
+
+---
+
+## P-012 — SETTLEMENT (appended 2026-08-03T17:30:55Z)
+
+### Final-state and source gate
+
+ESPNcricinfo's final scorecard identified match 1521215 as complete: Southern Brave Women 121/5 from 100 balls; Welsh Fire Women 122/6 from 100 balls. Welsh Fire won by four wickets from the final scheduled ball. The explicit innings-phase section records Southern Brave's Powerplay 1 as **19/2 after balls 1–25**. The reader-proxy title and match date were verified as 3 August 2026 before use. `[ESPNcricinfo final scorecard, 2026-08-03T17:29Z, RENDERED-PROXY / DATE-VERIFIED]`
+
+Source: `https://www.espncricinfo.com/series/the-hundred-women-s-competition-2026-1521193/welsh-fire-women-vs-southern-brave-women-19th-match-1521215/full-scorecard`
+
+### Grades
+
+The frozen settlement contracts are unchanged: 100-ball totals include extras and compare Southern Brave's completed 121 to 133.5; the phase markets use the scorecard's explicit 19-run first-25 line. Half-run lines cannot push.
+
+| Original rank | Original row | Verdict | Verified result | Grade |
+|---:|---|---|---:|---|
+| 1 | SBW 100 balls Under 133.5 | `PASS` | 121 | WIN (abstention) |
+| 2 | SBW 100 balls Over 133.5 | `PASS` | 121 | LOSS (abstention) |
+| 3= | SBW first 25 balls Under 32.5 | `PASS / UNORDERED PAIR` | 19 | WIN (abstention; no ranking information) |
+| 3= | SBW first 25 balls Over 32.5 | `PASS / UNORDERED PAIR` | 19 | LOSS (abstention; no ranking information) |
+
+**Potential winner:** original formal verdict was `NO WINNER PICK`; therefore no winner grade enters the record. The disclosed watch-only direction, Southern Brave Women, was wrong.  
+**Formal selections:** none.  
+**Complementary-pair ranking:** the higher-ranked branch of the full-innings pair, Under 133.5, won (1 of 1). The explicitly unordered phase pair contributes no ranking trial.  
+**Top-pick penalty:** not triggered. The first row was a `PASS`, and it won in any case.
+
+### Retrospective
+
+1. **Identity and settlement:** correct. Women's Match 19, Cardiff, 100-ball format, Southern Brave batting first; explicit ESPNcricinfo full and phase totals used.
+2. **What went right:** the card resisted Cardiff's raw n=2 average of 153 and instead weighted Southern Brave's captured target-setting center (130.7), the fresh 126 direct meeting and Welsh Fire's opponent-specific wicket mechanism. The actual 121 was below both 133.5 and that 130.7 center. This is the contest-adjusted venue correction from **P-001/P-004** working prospectively, not evidence that Cardiff is generically low scoring.
+3. **Decisive sequence:** Grace Potts dismissed Lizelle Lee at ball 6 and Maia Bouchier at ball 16, leaving Brave 9/2; the explicit powerplay finished 19/2. Wolvaardt's 48 from 45 and Rodrigues' 25 from 21 rebuilt, but Brave never recovered to the line. Potts finished 2/14; Heather Graham took 2/23. This was a new-ball wicket/dot-ball mechanism, not merely a late collapse.
+4. **What remained incomplete:** the frozen card did not capture confirmed XIs or the recent phase stack before first ball, so all rows correctly stayed `PASS` and the phase pair stayed unordered. The Under branches winning does not retroactively cure those evidence gaps or upgrade abstentions into picks.
+5. **Winner audit:** withholding a winner was correct process. The watch-only Southern Brave direction failed when Welsh Fire chased 122 on the final ball, led by Graham's unbeaten 35. This reinforces **RULES_CRICKET §5.10 winner independence** and the general rule that an informational direction does not deserve a lower evidence standard.
+6. **Comparable prior:** unlike P-001, where two Cardiff Overs expressed one unadjusted venue thesis and lost together, P-012 separated the raw ground prior from the current batting-side/opposing-attack matchup. That adjustment was directionally useful here. It remains a supported mechanism, not a calibrated model.
+7. **Classification:** sound directional ordering with disciplined abstention; no identity, settlement, arithmetic or result-leak error. The watch-only winner direction was an acknowledged below-gate opinion and was wrong.
+8. **Correction/falsification:** no new rule is promoted from one result. Continue requiring the confirmed XI and exact first-25 rows. The contest-adjusted venue control would be failing if future cards again let a raw ground mean override a materially different current batting/attack matchup without explanation.
+
+### Running record — UPDATE (2026-08-03T17:30:55Z)
+
+Directional/ranking accuracy only—not ROI, profit, or evidence of an edge.
+
+| Measure | Count |
+|---|---:|
+| Records settled | 12 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 7 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+**Reconciliation:** P-012 adds no formal selection and no formal winner trial. It adds one correct higher-ranked complementary branch; the unordered phase pair is excluded from ranking diagnostics.
+
+### Lessons pending promotion — UPDATE (2026-08-03T17:30:55Z)
+
+| Origin | Finding | Disposition |
+|---|---|---|
+| P-012 | Raw Cardiff n=2 scoring level pointed higher, but the current Brave batting/Fire attack adjustment pointed lower and bracketed the 121 result | Second prospective application after promotion; reinforces `RULES_CRICKET.md` §5.9, no new rule |
+| P-012 | Two new-ball wickets produced a 19/2 powerplay and controlled the completed total | Reinforces exposure-unit and wicket-resource analysis; retain confirmed-XI/new-ball-matchup gate |
+| P-012 | Watch-only Brave direction lost while `NO WINNER PICK` was the formal call | Reinforces winner-independence/equal-evidence standard; no record change |

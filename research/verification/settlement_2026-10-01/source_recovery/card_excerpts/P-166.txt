@@ -1,0 +1,307 @@
+| Winner alias | Issued selection | Final | Outcome |
+|---|---|---|---|
+| P-165 winner | Seibu Lions | Seibu 1–0 Rakuten | **WIN** |
+
+### Closure state
+
+- **Event state:** `FINAL`
+- **Research settlement:** `SETTLED / CLOSED`
+- **Rows closed:** 4/4
+- **Winner alias:** closed
+- No retrospective appended per current user instruction.
+
+---
+
+## S-166 — P-166 Melbourne Mustangs vs Canberra Brave
+
+### Completed event result
+
+**Canberra Brave 5–4 Melbourne Mustangs (OT)**
+
+Current result support:
+- detailed contemporaneous AIHL Finals Mega Thread records 4–4 at the end of regulation, Peter Bates' overtime winner, review confirmation, and Canberra advancing to the Grand Final;
+- at this refresh, an official AIHL archival game-result page for the semifinal was not yet indexed in the available search results.
+
+### Definition boundary
+
+No sportsbook/operator was supplied at issue. Therefore:
+- the rows below are **research-geometry settlements using the completed 5–4 OT final score**;
+- sportsbook-specific treatment of overtime for puck lines/totals remains **`UNKNOWN_DEFINITION`**;
+- this is **not** represented as a confirmed bookmaker settlement.
+
+### Contract-by-contract research settlement
+
+| Issued rank | Contract ID | Frozen contract | Completed-event basis | Research outcome | Exact research margin |
+|---:|---|---|---|---|---|
+| 1 | `P-166-C01` | Melbourne +1.5 | Melbourne lost 4–5 | **WIN** | One-goal loss; +1.5 covered by 0.5 |
+| 2 | `P-166-C03` | Over 7.5 goals | 9 total goals including OT winner | **WIN** | Cleared by 1.5 goals |
+| 3 | `P-166-C04` | Under 7.5 goals | 9 total goals including OT winner | **LOSS** | Exceeded line by 1.5 goals |
+| 4 | `P-166-C02` | Canberra -1.5 | Canberra won by one | **LOSS** | Needed 2+; missed by 0.5 goals |
+
+### Potential winner
+
+| Winner alias | Issued selection | Completed event | Research outcome |
+|---|---|---|---|
+| P-166 winner | Melbourne Mustangs | Canberra won 5–4 OT | **LOSS** |
+
+### Closure / provenance state
+
+- **Event state:** `FINAL / COMPLETED`
+- **Research settlement:** `PROVISIONALLY SETTLED`
+- **Rows research-graded:** 4/4
+- **Winner alias:** research-graded
+- **Official field-owner archival confirmation:** `PENDING`
+- **Operator-specific puck-line/total treatment:** `UNKNOWN_DEFINITION`
+- **Performance eligibility:** remains `QUARANTINED / START-CROSSING` from the issued view.
+
+---
+
+## S-171-PHASE — P-171 Glasgow Cosmic vs Dublin Guardians
+
+### Six-over checkpoint
+
+Latest detailed scorecard gives:
+
+**Glasgow Cosmic 44/2 after 6.0 overs**
+
+Scorecard source currently available:
+`TheTopBookies` live ETPL ball-by-ball / scorecard, which explicitly records `END OF OVER 6` and `GLC: 44/2 in 6.0`.
+
+No official ETPL field-owner phase archive was recovered at this refresh, so these exact phase rows are recorded as **provisional research settlements** pending archival/provider confirmation.
+
+### Six-over contract settlement
+
+| Issued rank | Contract ID | Frozen contract | Exact phase result | Research outcome | Exact margin |
+|---:|---|---|---|---|---|
+| 2 | `P-171-C04` | Cosmic first 6 overs Under 48.5 | 44 runs after 6.0 | **WIN** | Under cleared by 4.5 runs |
+
+|---|---|---|---|
+| P-165 winner | Seibu Lions | Seibu 1–0 Rakuten | **WIN** |
+
+### Closure state
+
+- **Event state:** `FINAL`
+- **Research settlement:** `SETTLED / CLOSED`
+- **Rows closed:** 4/4
+- **Winner alias:** closed
+- No retrospective appended per current user instruction.
+
+---
+
+## S-166 — P-166 Melbourne Mustangs vs Canberra Brave
+
+### Completed event result
+
+**Canberra Brave 5–4 Melbourne Mustangs (OT)**
+
+Current result support:
+- detailed contemporaneous AIHL Finals Mega Thread records 4–4 at the end of regulation, Peter Bates' overtime winner, review confirmation, and Canberra advancing to the Grand Final;
+- at this refresh, an official AIHL archival game-result page for the semifinal was not yet indexed in the available search results.
+
+### Definition boundary
+
+No sportsbook/operator was supplied at issue. Therefore:
+- the rows below are **research-geometry settlements using the completed 5–4 OT final score**;
+- sportsbook-specific treatment of overtime for puck lines/totals remains **`UNKNOWN_DEFINITION`**;
+- this is **not** represented as a confirmed bookmaker settlement.
+
+### Contract-by-contract research settlement
+
+| Issued rank | Contract ID | Frozen contract | Completed-event basis | Research outcome | Exact research margin |
+|---:|---|---|---|---|---|
+| 1 | `P-166-C01` | Melbourne +1.5 | Melbourne lost 4–5 | **WIN** | One-goal loss; +1.5 covered by 0.5 |
+| 2 | `P-166-C03` | Over 7.5 goals | 9 total goals including OT winner | **WIN** | Cleared by 1.5 goals |
+| 3 | `P-166-C04` | Under 7.5 goals | 9 total goals including OT winner | **LOSS** | Exceeded line by 1.5 goals |
+| 4 | `P-166-C02` | Canberra -1.5 | Canberra won by one | **LOSS** | Needed 2+; missed by 0.5 goals |
+
+### Potential winner
+
+| Winner alias | Issued selection | Completed event | Research outcome |
+|---|---|---|---|
+| P-166 winner | Melbourne Mustangs | Canberra won 5–4 OT | **LOSS** |
+
+### Closure / provenance state
+
+- **Event state:** `FINAL / COMPLETED`
+- **Research settlement:** `PROVISIONALLY SETTLED`
+- **Rows research-graded:** 4/4
+- **Winner alias:** research-graded
+- **Official field-owner archival confirmation:** `PENDING`
+- **Operator-specific puck-line/total treatment:** `UNKNOWN_DEFINITION`
+- **Performance eligibility:** remains `QUARANTINED / START-CROSSING` from the issued view.
+
+---
+
+## S-171-PHASE — P-171 Glasgow Cosmic vs Dublin Guardians
+
+### Six-over checkpoint
+
+Latest detailed scorecard gives:
+
+**Glasgow Cosmic 44/2 after 6.0 overs**
+
+Scorecard source currently available:
+`TheTopBookies` live ETPL ball-by-ball / scorecard, which explicitly records `END OF OVER 6` and `GLC: 44/2 in 6.0`.
+
+No official ETPL field-owner phase archive was recovered at this refresh, so these exact phase rows are recorded as **provisional research settlements** pending archival/provider confirmation.
+
+### Six-over contract settlement
+
+| Issued rank | Contract ID | Frozen contract | Exact phase result | Research outcome | Exact margin |
+|---:|---|---|---|---|---|
+| 2 | `P-171-C04` | Cosmic first 6 overs Under 48.5 | 44 runs after 6.0 | **WIN** | Under cleared by 4.5 runs |
+| 3 | `P-171-C03` | Cosmic first 6 overs Over 48.5 | 44 runs after 6.0 | **LOSS** | Over missed by 4.5 runs |
+
+| P-165 winner | Seibu Lions | Seibu 1–0 Rakuten | **WIN** |
+
+### Closure state
+
+- **Event state:** `FINAL`
+- **Research settlement:** `SETTLED / CLOSED`
+- **Rows closed:** 4/4
+- **Winner alias:** closed
+- No retrospective appended per current user instruction.
+
+---
+
+## S-166 — P-166 Melbourne Mustangs vs Canberra Brave
+
+### Completed event result
+
+**Canberra Brave 5–4 Melbourne Mustangs (OT)**
+
+Current result support:
+- detailed contemporaneous AIHL Finals Mega Thread records 4–4 at the end of regulation, Peter Bates' overtime winner, review confirmation, and Canberra advancing to the Grand Final;
+- at this refresh, an official AIHL archival game-result page for the semifinal was not yet indexed in the available search results.
+
+### Definition boundary
+
+No sportsbook/operator was supplied at issue. Therefore:
+- the rows below are **research-geometry settlements using the completed 5–4 OT final score**;
+- sportsbook-specific treatment of overtime for puck lines/totals remains **`UNKNOWN_DEFINITION`**;
+- this is **not** represented as a confirmed bookmaker settlement.
+
+### Contract-by-contract research settlement
+
+| Issued rank | Contract ID | Frozen contract | Completed-event basis | Research outcome | Exact research margin |
+|---:|---|---|---|---|---|
+| 1 | `P-166-C01` | Melbourne +1.5 | Melbourne lost 4–5 | **WIN** | One-goal loss; +1.5 covered by 0.5 |
+| 2 | `P-166-C03` | Over 7.5 goals | 9 total goals including OT winner | **WIN** | Cleared by 1.5 goals |
+| 3 | `P-166-C04` | Under 7.5 goals | 9 total goals including OT winner | **LOSS** | Exceeded line by 1.5 goals |
+| 4 | `P-166-C02` | Canberra -1.5 | Canberra won by one | **LOSS** | Needed 2+; missed by 0.5 goals |
+
+### Potential winner
+
+| Winner alias | Issued selection | Completed event | Research outcome |
+|---|---|---|---|
+| P-166 winner | Melbourne Mustangs | Canberra won 5–4 OT | **LOSS** |
+
+### Closure / provenance state
+
+- **Event state:** `FINAL / COMPLETED`
+- **Research settlement:** `PROVISIONALLY SETTLED`
+- **Rows research-graded:** 4/4
+- **Winner alias:** research-graded
+- **Official field-owner archival confirmation:** `PENDING`
+- **Operator-specific puck-line/total treatment:** `UNKNOWN_DEFINITION`
+- **Performance eligibility:** remains `QUARANTINED / START-CROSSING` from the issued view.
+
+---
+
+## S-171-PHASE — P-171 Glasgow Cosmic vs Dublin Guardians
+
+### Six-over checkpoint
+
+Latest detailed scorecard gives:
+
+**Glasgow Cosmic 44/2 after 6.0 overs**
+
+Scorecard source currently available:
+`TheTopBookies` live ETPL ball-by-ball / scorecard, which explicitly records `END OF OVER 6` and `GLC: 44/2 in 6.0`.
+
+No official ETPL field-owner phase archive was recovered at this refresh, so these exact phase rows are recorded as **provisional research settlements** pending archival/provider confirmation.
+
+### Six-over contract settlement
+
+| Issued rank | Contract ID | Frozen contract | Exact phase result | Research outcome | Exact margin |
+|---:|---|---|---|---|---|
+| 2 | `P-171-C04` | Cosmic first 6 overs Under 48.5 | 44 runs after 6.0 | **WIN** | Under cleared by 4.5 runs |
+| 3 | `P-171-C03` | Cosmic first 6 overs Over 48.5 | 44 runs after 6.0 | **LOSS** | Over missed by 4.5 runs |
+
+
+
+### Closure state
+
+- **Event state:** `FINAL`
+- **Research settlement:** `SETTLED / CLOSED`
+- **Rows closed:** 4/4
+- **Winner alias:** closed
+- No retrospective appended per current user instruction.
+
+---
+
+## S-166 — P-166 Melbourne Mustangs vs Canberra Brave
+
+### Completed event result
+
+**Canberra Brave 5–4 Melbourne Mustangs (OT)**
+
+Current result support:
+- detailed contemporaneous AIHL Finals Mega Thread records 4–4 at the end of regulation, Peter Bates' overtime winner, review confirmation, and Canberra advancing to the Grand Final;
+- at this refresh, an official AIHL archival game-result page for the semifinal was not yet indexed in the available search results.
+
+### Definition boundary
+
+No sportsbook/operator was supplied at issue. Therefore:
+- the rows below are **research-geometry settlements using the completed 5–4 OT final score**;
+- sportsbook-specific treatment of overtime for puck lines/totals remains **`UNKNOWN_DEFINITION`**;
+- this is **not** represented as a confirmed bookmaker settlement.
+
+### Contract-by-contract research settlement
+
+| Issued rank | Contract ID | Frozen contract | Completed-event basis | Research outcome | Exact research margin |
+|---:|---|---|---|---|---|
+| 1 | `P-166-C01` | Melbourne +1.5 | Melbourne lost 4–5 | **WIN** | One-goal loss; +1.5 covered by 0.5 |
+| 2 | `P-166-C03` | Over 7.5 goals | 9 total goals including OT winner | **WIN** | Cleared by 1.5 goals |
+| 3 | `P-166-C04` | Under 7.5 goals | 9 total goals including OT winner | **LOSS** | Exceeded line by 1.5 goals |
+| 4 | `P-166-C02` | Canberra -1.5 | Canberra won by one | **LOSS** | Needed 2+; missed by 0.5 goals |
+
+### Potential winner
+
+| Winner alias | Issued selection | Completed event | Research outcome |
+|---|---|---|---|
+| P-166 winner | Melbourne Mustangs | Canberra won 5–4 OT | **LOSS** |
+
+### Closure / provenance state
+
+- **Event state:** `FINAL / COMPLETED`
+- **Research settlement:** `PROVISIONALLY SETTLED`
+- **Rows research-graded:** 4/4
+- **Winner alias:** research-graded
+- **Official field-owner archival confirmation:** `PENDING`
+- **Operator-specific puck-line/total treatment:** `UNKNOWN_DEFINITION`
+- **Performance eligibility:** remains `QUARANTINED / START-CROSSING` from the issued view.
+
+---
+
+## S-171-PHASE — P-171 Glasgow Cosmic vs Dublin Guardians
+
+### Six-over checkpoint
+
+Latest detailed scorecard gives:
+
+**Glasgow Cosmic 44/2 after 6.0 overs**
+
+Scorecard source currently available:
+`TheTopBookies` live ETPL ball-by-ball / scorecard, which explicitly records `END OF OVER 6` and `GLC: 44/2 in 6.0`.
+
+No official ETPL field-owner phase archive was recovered at this refresh, so these exact phase rows are recorded as **provisional research settlements** pending archival/provider confirmation.
+
+### Six-over contract settlement
+
+| Issued rank | Contract ID | Frozen contract | Exact phase result | Research outcome | Exact margin |
+|---:|---|---|---|---|---|
+| 2 | `P-171-C04` | Cosmic first 6 overs Under 48.5 | 44 runs after 6.0 | **WIN** | Under cleared by 4.5 runs |
+| 3 | `P-171-C03` | Cosmic first 6 overs Over 48.5 | 44 runs after 6.0 | **LOSS** | Over missed by 4.5 runs |
+
+### Rows still open

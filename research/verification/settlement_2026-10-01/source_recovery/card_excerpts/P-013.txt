@@ -1,0 +1,307 @@
+- Schedule/start cross-check: `https://www.whathifi.com/streaming-entertainment/watch-the-hundred-2026-free`
+- Local governing evidence and prior retrospective: `RULES_CRICKET.md` §5/§9 and P-006/P-012 in this log.
+
+### Open-event index — UPDATE (2026-08-03T17:34:37Z)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 | Welsh Fire W v Trent Rockets W | `CLOSED` |
+| P-002 | Philadelphia Phillies @ Miami Marlins | `CLOSED` |
+| P-003 | FC København v Polissya Zhytomyr | `CLOSED` |
+| P-004 | MI London Men v London Spirit Men | `CLOSED` |
+| P-005 | Texas Rangers @ Tampa Bay Rays | `CLOSED` |
+| P-006 | Southern Brave Men v Birmingham Phoenix Men | `CLOSED` |
+| P-007 | Manchester Super Giants Men v Trent Rockets Men | `CLOSED` |
+| P-008 | New York Yankees @ Chicago Cubs | `CLOSED` |
+| P-009 | Indiana Fever @ Portland Fire | `CLOSED` |
+| P-010 | Carlton v Brisbane Lions | `CLOSED` |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians | `CLOSED` |
+| P-012 | Welsh Fire W v Southern Brave W | `CLOSED` |
+| P-013 | Welsh Fire M v Southern Brave M | `OPEN / PENDING` — frozen late-pregame card; live developments excluded |
+
+**One open record: P-013.** Earlier index tables remain immutable historical state; this newest index controls status.
+
+---
+
+## P-013 — SETTLEMENT (appended 2026-08-04T01:35:35Z)
+
+### Verified final and grading
+
+ESPNcricinfo's date-verified final scorecard records Southern Brave Men **115/8 from 100 balls**, including an explicit **Powerplay 1 of 20/2 after balls 1–25**. Welsh Fire reached 116/4 after 95 balls and won by six wickets. `[ESPNcricinfo final scorecard, 2026-08-04T01:35Z, RENDERED-PROXY / DATE-VERIFIED]`
+
+Source: `https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/welsh-fire-men-vs-southern-brave-men-19th-match-1521249/full-scorecard`
+
+| Original tier | Original proposition | Verdict | Result | Grade |
+|---:|---|---|---:|---|
+| 1 | SB 100 balls Under 155.5 | `PASS` | 115 | WIN (abstention) |
+| 2= | SB first 25 balls Over 30.5 | `PASS` | 20 | LOSS (abstention) |
+| 2= | SB first 25 balls Under 40.5 | `PASS` | 20 | WIN (abstention) |
+| 4* | SB 100 balls Over 135.5 | `PASS / FORCED LOWER TIER` | 115 | LOSS (abstention) |
+
+**Potential winner:** `NO WINNER PICK`; no winner trial enters the record. Welsh Fire won.  
+**Formal selections:** none.  
+**Ranking trial:** the top evidence direction won. The markets were overlapping alternates rather than exact complements, so no complementary-pair trial is added.  
+**Top-pick penalty:** not triggered; the top direction won and was a `PASS`.
+
+### Retrospective
+
+1. **Identity/settlement:** correct men's Match 19 at Cardiff; full innings and explicit Southern Brave powerplay line verified.
+2. **What transferred:** the 135/129/128 target-setting cluster supported the wide Under 155.5; actual 115 landed lower still. The card's contest adjustment named Welsh Fire's Woakes/Cook/Jansen/Ferguson new-ball group as the downside mechanism.
+3. **Decisive path:** McKinney fell at ball 3 and Jamie Smith at ball 7, leaving Brave 2/2. The powerplay closed 20/2. Sam Cook took 3/14, Woakes 1/15 and Jansen conceded 16 from 20 balls; the early wicket/dot-ball path suppressed both phase and innings output. Stoinis' 55 could not restore the prior scoring level.
+4. **What failed:** the previous 32/38/38 phase sample did not transfer to Over 30.5. This was not an unexamined surprise: the row's strongest failure path explicitly named an early wicket/dot-ball cluster from the Fire pace attack, which occurred. The phase row correctly stayed `PASS` because the current venue stack was missing.
+5. **Threshold audit:** P-006's arithmetic correction was followed correctly—20 is Under 40.5 and Under 30.5, so the supplied Over 30.5 lost while supplied Under 40.5 won. No average was substituted for row classification.
+6. **Winner independence:** `NO WINNER PICK` was disciplined. Fire won through Matt Short's unbeaten 60 after the card explicitly found both innings credible but lacked the complete form/H2H work to separate them.
+7. **Classification:** sound top directional ordering; one below-gate phase direction failed through its named mechanism. No identity, settlement, arithmetic or live-result leakage error.
+8. **Lesson status/falsification:** one more datapoint reinforces new-ball wicket/resource analysis and the contest-adjusted venue rule; no new rule is promoted. The correction fails if future phase Overs are upgraded from small historical samples without current openers-versus-new-ball matchup and venue phase data.
+
+### Running record — UPDATE (2026-08-04T01:35:35Z)
+
+| Measure | Count |
+|---|---:|
+| Records settled | 13 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 7 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+P-013 adds no formal selection, formal winner or exact-complement trial.
+
+### Open-event index — UPDATE (2026-08-04T01:35:35Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-013 | `CLOSED` |
+
+
+- Local governing evidence and prior retrospective: `RULES_CRICKET.md` §5/§9 and P-006/P-012 in this log.
+
+### Open-event index — UPDATE (2026-08-03T17:34:37Z)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 | Welsh Fire W v Trent Rockets W | `CLOSED` |
+| P-002 | Philadelphia Phillies @ Miami Marlins | `CLOSED` |
+| P-003 | FC København v Polissya Zhytomyr | `CLOSED` |
+| P-004 | MI London Men v London Spirit Men | `CLOSED` |
+| P-005 | Texas Rangers @ Tampa Bay Rays | `CLOSED` |
+| P-006 | Southern Brave Men v Birmingham Phoenix Men | `CLOSED` |
+| P-007 | Manchester Super Giants Men v Trent Rockets Men | `CLOSED` |
+| P-008 | New York Yankees @ Chicago Cubs | `CLOSED` |
+| P-009 | Indiana Fever @ Portland Fire | `CLOSED` |
+| P-010 | Carlton v Brisbane Lions | `CLOSED` |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians | `CLOSED` |
+| P-012 | Welsh Fire W v Southern Brave W | `CLOSED` |
+| P-013 | Welsh Fire M v Southern Brave M | `OPEN / PENDING` — frozen late-pregame card; live developments excluded |
+
+**One open record: P-013.** Earlier index tables remain immutable historical state; this newest index controls status.
+
+---
+
+## P-013 — SETTLEMENT (appended 2026-08-04T01:35:35Z)
+
+### Verified final and grading
+
+ESPNcricinfo's date-verified final scorecard records Southern Brave Men **115/8 from 100 balls**, including an explicit **Powerplay 1 of 20/2 after balls 1–25**. Welsh Fire reached 116/4 after 95 balls and won by six wickets. `[ESPNcricinfo final scorecard, 2026-08-04T01:35Z, RENDERED-PROXY / DATE-VERIFIED]`
+
+Source: `https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/welsh-fire-men-vs-southern-brave-men-19th-match-1521249/full-scorecard`
+
+| Original tier | Original proposition | Verdict | Result | Grade |
+|---:|---|---|---:|---|
+| 1 | SB 100 balls Under 155.5 | `PASS` | 115 | WIN (abstention) |
+| 2= | SB first 25 balls Over 30.5 | `PASS` | 20 | LOSS (abstention) |
+| 2= | SB first 25 balls Under 40.5 | `PASS` | 20 | WIN (abstention) |
+| 4* | SB 100 balls Over 135.5 | `PASS / FORCED LOWER TIER` | 115 | LOSS (abstention) |
+
+**Potential winner:** `NO WINNER PICK`; no winner trial enters the record. Welsh Fire won.  
+**Formal selections:** none.  
+**Ranking trial:** the top evidence direction won. The markets were overlapping alternates rather than exact complements, so no complementary-pair trial is added.  
+**Top-pick penalty:** not triggered; the top direction won and was a `PASS`.
+
+### Retrospective
+
+1. **Identity/settlement:** correct men's Match 19 at Cardiff; full innings and explicit Southern Brave powerplay line verified.
+2. **What transferred:** the 135/129/128 target-setting cluster supported the wide Under 155.5; actual 115 landed lower still. The card's contest adjustment named Welsh Fire's Woakes/Cook/Jansen/Ferguson new-ball group as the downside mechanism.
+3. **Decisive path:** McKinney fell at ball 3 and Jamie Smith at ball 7, leaving Brave 2/2. The powerplay closed 20/2. Sam Cook took 3/14, Woakes 1/15 and Jansen conceded 16 from 20 balls; the early wicket/dot-ball path suppressed both phase and innings output. Stoinis' 55 could not restore the prior scoring level.
+4. **What failed:** the previous 32/38/38 phase sample did not transfer to Over 30.5. This was not an unexamined surprise: the row's strongest failure path explicitly named an early wicket/dot-ball cluster from the Fire pace attack, which occurred. The phase row correctly stayed `PASS` because the current venue stack was missing.
+5. **Threshold audit:** P-006's arithmetic correction was followed correctly—20 is Under 40.5 and Under 30.5, so the supplied Over 30.5 lost while supplied Under 40.5 won. No average was substituted for row classification.
+6. **Winner independence:** `NO WINNER PICK` was disciplined. Fire won through Matt Short's unbeaten 60 after the card explicitly found both innings credible but lacked the complete form/H2H work to separate them.
+7. **Classification:** sound top directional ordering; one below-gate phase direction failed through its named mechanism. No identity, settlement, arithmetic or live-result leakage error.
+8. **Lesson status/falsification:** one more datapoint reinforces new-ball wicket/resource analysis and the contest-adjusted venue rule; no new rule is promoted. The correction fails if future phase Overs are upgraded from small historical samples without current openers-versus-new-ball matchup and venue phase data.
+
+### Running record — UPDATE (2026-08-04T01:35:35Z)
+
+| Measure | Count |
+|---|---:|
+| Records settled | 13 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 7 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+P-013 adds no formal selection, formal winner or exact-complement trial.
+
+### Open-event index — UPDATE (2026-08-04T01:35:35Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-013 | `CLOSED` |
+
+**No open records remain.** Earlier P-013 pending text remains immutable historical evidence; this newest index controls status.
+
+
+### Open-event index — UPDATE (2026-08-03T17:34:37Z)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 | Welsh Fire W v Trent Rockets W | `CLOSED` |
+| P-002 | Philadelphia Phillies @ Miami Marlins | `CLOSED` |
+| P-003 | FC København v Polissya Zhytomyr | `CLOSED` |
+| P-004 | MI London Men v London Spirit Men | `CLOSED` |
+| P-005 | Texas Rangers @ Tampa Bay Rays | `CLOSED` |
+| P-006 | Southern Brave Men v Birmingham Phoenix Men | `CLOSED` |
+| P-007 | Manchester Super Giants Men v Trent Rockets Men | `CLOSED` |
+| P-008 | New York Yankees @ Chicago Cubs | `CLOSED` |
+| P-009 | Indiana Fever @ Portland Fire | `CLOSED` |
+| P-010 | Carlton v Brisbane Lions | `CLOSED` |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians | `CLOSED` |
+| P-012 | Welsh Fire W v Southern Brave W | `CLOSED` |
+| P-013 | Welsh Fire M v Southern Brave M | `OPEN / PENDING` — frozen late-pregame card; live developments excluded |
+
+**One open record: P-013.** Earlier index tables remain immutable historical state; this newest index controls status.
+
+---
+
+## P-013 — SETTLEMENT (appended 2026-08-04T01:35:35Z)
+
+### Verified final and grading
+
+ESPNcricinfo's date-verified final scorecard records Southern Brave Men **115/8 from 100 balls**, including an explicit **Powerplay 1 of 20/2 after balls 1–25**. Welsh Fire reached 116/4 after 95 balls and won by six wickets. `[ESPNcricinfo final scorecard, 2026-08-04T01:35Z, RENDERED-PROXY / DATE-VERIFIED]`
+
+Source: `https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/welsh-fire-men-vs-southern-brave-men-19th-match-1521249/full-scorecard`
+
+| Original tier | Original proposition | Verdict | Result | Grade |
+|---:|---|---|---:|---|
+| 1 | SB 100 balls Under 155.5 | `PASS` | 115 | WIN (abstention) |
+| 2= | SB first 25 balls Over 30.5 | `PASS` | 20 | LOSS (abstention) |
+| 2= | SB first 25 balls Under 40.5 | `PASS` | 20 | WIN (abstention) |
+| 4* | SB 100 balls Over 135.5 | `PASS / FORCED LOWER TIER` | 115 | LOSS (abstention) |
+
+**Potential winner:** `NO WINNER PICK`; no winner trial enters the record. Welsh Fire won.  
+**Formal selections:** none.  
+**Ranking trial:** the top evidence direction won. The markets were overlapping alternates rather than exact complements, so no complementary-pair trial is added.  
+**Top-pick penalty:** not triggered; the top direction won and was a `PASS`.
+
+### Retrospective
+
+1. **Identity/settlement:** correct men's Match 19 at Cardiff; full innings and explicit Southern Brave powerplay line verified.
+2. **What transferred:** the 135/129/128 target-setting cluster supported the wide Under 155.5; actual 115 landed lower still. The card's contest adjustment named Welsh Fire's Woakes/Cook/Jansen/Ferguson new-ball group as the downside mechanism.
+3. **Decisive path:** McKinney fell at ball 3 and Jamie Smith at ball 7, leaving Brave 2/2. The powerplay closed 20/2. Sam Cook took 3/14, Woakes 1/15 and Jansen conceded 16 from 20 balls; the early wicket/dot-ball path suppressed both phase and innings output. Stoinis' 55 could not restore the prior scoring level.
+4. **What failed:** the previous 32/38/38 phase sample did not transfer to Over 30.5. This was not an unexamined surprise: the row's strongest failure path explicitly named an early wicket/dot-ball cluster from the Fire pace attack, which occurred. The phase row correctly stayed `PASS` because the current venue stack was missing.
+5. **Threshold audit:** P-006's arithmetic correction was followed correctly—20 is Under 40.5 and Under 30.5, so the supplied Over 30.5 lost while supplied Under 40.5 won. No average was substituted for row classification.
+6. **Winner independence:** `NO WINNER PICK` was disciplined. Fire won through Matt Short's unbeaten 60 after the card explicitly found both innings credible but lacked the complete form/H2H work to separate them.
+7. **Classification:** sound top directional ordering; one below-gate phase direction failed through its named mechanism. No identity, settlement, arithmetic or live-result leakage error.
+8. **Lesson status/falsification:** one more datapoint reinforces new-ball wicket/resource analysis and the contest-adjusted venue rule; no new rule is promoted. The correction fails if future phase Overs are upgraded from small historical samples without current openers-versus-new-ball matchup and venue phase data.
+
+### Running record — UPDATE (2026-08-04T01:35:35Z)
+
+| Measure | Count |
+|---|---:|
+| Records settled | 13 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 7 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+P-013 adds no formal selection, formal winner or exact-complement trial.
+
+### Open-event index — UPDATE (2026-08-04T01:35:35Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-013 | `CLOSED` |
+
+**No open records remain.** Earlier P-013 pending text remains immutable historical evidence; this newest index controls status.
+
+
+### Open-event index — UPDATE (2026-08-03T17:34:37Z)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 | Welsh Fire W v Trent Rockets W | `CLOSED` |
+| P-002 | Philadelphia Phillies @ Miami Marlins | `CLOSED` |
+| P-003 | FC København v Polissya Zhytomyr | `CLOSED` |
+| P-004 | MI London Men v London Spirit Men | `CLOSED` |
+| P-005 | Texas Rangers @ Tampa Bay Rays | `CLOSED` |
+| P-006 | Southern Brave Men v Birmingham Phoenix Men | `CLOSED` |
+| P-007 | Manchester Super Giants Men v Trent Rockets Men | `CLOSED` |
+| P-008 | New York Yankees @ Chicago Cubs | `CLOSED` |
+| P-009 | Indiana Fever @ Portland Fire | `CLOSED` |
+| P-010 | Carlton v Brisbane Lions | `CLOSED` |
+| P-011 | Arizona Diamondbacks @ Cleveland Guardians | `CLOSED` |
+| P-012 | Welsh Fire W v Southern Brave W | `CLOSED` |
+| P-013 | Welsh Fire M v Southern Brave M | `OPEN / PENDING` — frozen late-pregame card; live developments excluded |
+
+**One open record: P-013.** Earlier index tables remain immutable historical state; this newest index controls status.
+
+---
+
+## P-013 — SETTLEMENT (appended 2026-08-04T01:35:35Z)
+
+### Verified final and grading
+
+ESPNcricinfo's date-verified final scorecard records Southern Brave Men **115/8 from 100 balls**, including an explicit **Powerplay 1 of 20/2 after balls 1–25**. Welsh Fire reached 116/4 after 95 balls and won by six wickets. `[ESPNcricinfo final scorecard, 2026-08-04T01:35Z, RENDERED-PROXY / DATE-VERIFIED]`
+
+Source: `https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/welsh-fire-men-vs-southern-brave-men-19th-match-1521249/full-scorecard`
+
+| Original tier | Original proposition | Verdict | Result | Grade |
+|---:|---|---|---:|---|
+| 1 | SB 100 balls Under 155.5 | `PASS` | 115 | WIN (abstention) |
+| 2= | SB first 25 balls Over 30.5 | `PASS` | 20 | LOSS (abstention) |
+| 2= | SB first 25 balls Under 40.5 | `PASS` | 20 | WIN (abstention) |
+| 4* | SB 100 balls Over 135.5 | `PASS / FORCED LOWER TIER` | 115 | LOSS (abstention) |
+
+**Potential winner:** `NO WINNER PICK`; no winner trial enters the record. Welsh Fire won.  
+**Formal selections:** none.  
+**Ranking trial:** the top evidence direction won. The markets were overlapping alternates rather than exact complements, so no complementary-pair trial is added.  
+**Top-pick penalty:** not triggered; the top direction won and was a `PASS`.
+
+### Retrospective
+
+1. **Identity/settlement:** correct men's Match 19 at Cardiff; full innings and explicit Southern Brave powerplay line verified.
+2. **What transferred:** the 135/129/128 target-setting cluster supported the wide Under 155.5; actual 115 landed lower still. The card's contest adjustment named Welsh Fire's Woakes/Cook/Jansen/Ferguson new-ball group as the downside mechanism.
+3. **Decisive path:** McKinney fell at ball 3 and Jamie Smith at ball 7, leaving Brave 2/2. The powerplay closed 20/2. Sam Cook took 3/14, Woakes 1/15 and Jansen conceded 16 from 20 balls; the early wicket/dot-ball path suppressed both phase and innings output. Stoinis' 55 could not restore the prior scoring level.
+4. **What failed:** the previous 32/38/38 phase sample did not transfer to Over 30.5. This was not an unexamined surprise: the row's strongest failure path explicitly named an early wicket/dot-ball cluster from the Fire pace attack, which occurred. The phase row correctly stayed `PASS` because the current venue stack was missing.
+5. **Threshold audit:** P-006's arithmetic correction was followed correctly—20 is Under 40.5 and Under 30.5, so the supplied Over 30.5 lost while supplied Under 40.5 won. No average was substituted for row classification.
+6. **Winner independence:** `NO WINNER PICK` was disciplined. Fire won through Matt Short's unbeaten 60 after the card explicitly found both innings credible but lacked the complete form/H2H work to separate them.
+7. **Classification:** sound top directional ordering; one below-gate phase direction failed through its named mechanism. No identity, settlement, arithmetic or live-result leakage error.
+8. **Lesson status/falsification:** one more datapoint reinforces new-ball wicket/resource analysis and the contest-adjusted venue rule; no new rule is promoted. The correction fails if future phase Overs are upgraded from small historical samples without current openers-versus-new-ball matchup and venue phase data.
+
+### Running record — UPDATE (2026-08-04T01:35:35Z)
+
+| Measure | Count |
+|---|---:|
+| Records settled | 13 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 7 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+P-013 adds no formal selection, formal winner or exact-complement trial.
+
+### Open-event index — UPDATE (2026-08-04T01:35:35Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-013 | `CLOSED` |
+
+**No open records remain.** Earlier P-013 pending text remains immutable historical evidence; this newest index controls status.
+
+---

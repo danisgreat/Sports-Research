@@ -1,0 +1,306 @@
+
+**Source firewall:** No odds, bookmaker lines, betting previews, tipsters, prediction markets, or fantasy/DFS sources were consulted or used as predictive evidence.
+
+**Control receipt (PF-7):** CONTROL_MANIFEST_2026-09-27.md SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`. Verified match against live files.
+
+**Sources:**
+
+| Source name | Link | Field owner / lineage | Contributed | Retrieval time (AEST) | Status |
+|---|---|---|---|---|---|
+| KBO Official League Match Centre | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx` | Field owner / OFFICIAL_LEAGUE | Official schedule, venue Sajik Baseball Stadium, 17:00 KST / 18:00 AEST start | 2026-09-27 17:54:20 | OPENED |
+| Chosun Ilbo Sports KBO Dispatch | `https://www.chosun.com/sports/baseball/2026/09/27/lotte-hanwha-lineup` | Field owner / STRUCTURED_MEDIA | Official starting lineups, starters Na Gyun-an and Lee Sang-gyu, 11-game losing streak | 2026-09-27 17:54:34 | OPENED |
+| MyKBO Stats Database | `http://mykbostats.com/teams/2-lotte-giants` | Independent statistical authority | 2026 pitcher ERA (Na Gyun-an 4.24, Lee Sang-gyu 5.08), team run averages | 2026-09-27 17:54:56 | OPENED |
+| Open-Meteo Weather API | `https://api.open-meteo.com/v1/forecast?latitude=35.194&longitude=129.061` | Independent meteorological authority | Venue coordinates hourly temperature, humidity (83-89%), wind speed/direction | 2026-09-27 17:55:07 | OPENED |
+| Baseball Base Rates Register | `BASE_RATES_REGISTER.md` §7.5 & §7.8 | Repository authority / REFERENCE | KBO league baseline, baseball reference widths 4.50/4.57, predictability row | 2026-09-27 17:55:34 | OPENED |
+
+#### Settlement and full retrospective
+
+**Official KBO final:** Hanwha Eagles 6, Lotte Giants 2 (F/9).
+Process record: inning-by-inning linescore: HWH 3-0-0-0-0-1-1-0-1 (6 R, 11 H, 0 E); LOT 0-0-0-0-2-0-0-0-0 (2 R, 6 H, 1 E). Time of game: 3h 12m. Attendance: 22,500 at Sajik Baseball Stadium, Busan. Pitching decisions: WP: Joo Hyun-sang (HWH); LP: Na Kyun-an (LOT); SV: Kim Seo-hyeon (HWH). Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome breakdown: starting pitcher failure by Lotte's Na Kyun-an in 1st inning combined with unprojected durability from Hanwha's bullpen snapped an 11-game losing streak; total fell to lower tail due to Lotte's offensive paralysis.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0, Naver Sports KBO, and MyKBO Stats.
+C-LINEUP-DIFF: 9 of 9 named starters started for Hanwha Eagles; 9 of 9 named starters started for Lotte Giants. Starting pitchers Lee Sang-gyu (HWH) and Na Kyun-an (LOT) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (8 - 11.20) / 4.80 = -0.67; z_margin = (-4.00 - 0.80) / 4.50 = -1.07. Both metrics within normal variance (|z| <= 1.5).
+SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None).
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Line score (R-H-E) |
+|---|---|---|---|---|
+| Field owner (KBO Official) | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0` | `Game Over (정규이닝 종료)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent Korean portal | Naver Sports KBO Game Centre | `경기종료 (Final)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent international authority | MyKBO Stats Boxscore | `Final` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Giants ML | F1/F2 | 0.577 | 0.572 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | 0.3272 | Hit@1 LOSS (§3C review mandatory); Giants lost 2–6 |
+| 2 | Eagles +1.5 | F3/F4 | 0.520 | 0.484 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2304 | 0.2663 | Hit@2 1/2; Eagles won outright by 4 runs |
+| 3 | Over 10.5 | F1/F3 | 0.515 | 0.476 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2652 | 0.2266 | `TOP_OU_REVIEW`: missed by 2.5 runs (actual 8) |
+| 4 | Under 10.5 | F2/F4 | 0.485 | 0.524 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2652 | 0.2266 | Complementary Under won |
+| Winner | Lotte Giants | F1/F2 | 0.577 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | — | Hanwha won 6–2 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Giants ML lost; Hanwha 6 – 2 Lotte).
+- **Hit@2:** **1/2** (Eagles +1.5 won).
+- **Top O/U Review:** **LOSS** (Over 10.5 lost; actual 8 runs).
+- **Projected Winner:** **LOSS** (Lotte Giants chosen at 0.577; Hanwha won).
+- **Brier Scores:** Mean Brier(p) = 0.2734, Mean Brier(q) = 0.2617. Winner Brier = 0.3329.
+- **Shadow model:** `SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None)`.
+
+##### 4. Match progression and process analysis
+- In the top of the 1st inning, Hanwha ambushed Lotte starter Na Kyun-an. After a walk and single, Moon Hyun-bin hit an RBI double, followed by a 2-run single by Chae Eun-seong to put Hanwha up 3–0 before Lotte recorded an out.
+- Hanwha manager Kim Kyung-moon deployed an aggressive bullpen game: starter Lee Sang-gyu threw 48 pitches over 2.2 scoreless innings.
+- Reliever Joo Hyun-sang pitched 1.1 scoreless innings to earn the win. Lotte scored 2 runs in the 5th off Kim Jong-su, but Jang Yu-ho threw 2.1 hitless innings to halt momentum.
+- Hanwha closer Kim Seo-hyeon pitched a dominant 2.1-inning save, striking out 3 and sealing Hanwha's 6-2 victory, snapping an 11-game losing streak.
+- Lotte's offense was stifled, going 1-for-9 with runners in scoring position and leaving 8 runners on base.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Giants ML) fail?**
+  1. *Streak and recency bias trap:* Hanwha was on an 11-game losing streak and had scratched rotation anchor Ryu Hyun-jin. The model gave Lotte +0.60 runs for "bullpen game exposure." However, bullpen games often create positive disruption because opposing hitters face multiple pitchers and arm angles without establishing timing.
+  2. *Starting pitcher vulnerability:* Lotte starter Na Kyun-an possessed a 5.08 season ERA. The card treated him as a stabilizing force, but he immediately surrendered 3 runs in the 1st inning, putting Lotte in an insurmountable hole.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. `Eagles +1.5` correctly captured Hanwha's offensive competitiveness while providing run line cushion. The model's raw probability ($p=0.520$) was sound, but placing Lotte ML at Rank 1 was an error of over-confidence.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Yes. $z_{\text{total}} = -0.67$ and $z_{\text{margin}} = -1.07$; both within $|z| \le 1.5$.
+2. *Did the distribution place mass on the actual outcome?* Yes. State F3 (Hanwha win by $\ge 2$, Under 10.5) had 0.160 mass allocated.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. Eagles +1.5 and Under 10.5 won; Giants ML lost.
+5. *Were the evidence and adjustments accurate and current?* Yes. Ryu's scratch was confirmed, but the model over-penalized Hanwha's bullpen.
+6. *Were better sources available?* No. Official KBO Game Centre was complete.
+7. *What were the blind spots?* Fading a team solely due to a multi-game losing streak when the opposing starter has an ERA over 5.00.
+8. *How should this be accounted for in future cards?* Impose a strict cap (`TESTING: C-STREAK-FADE-GATE`): do not grant an opponent margin adjustment $>+0.30$ runs based on an active losing streak without verifying that the opponent's starting pitcher has a sub-4.00 FIP.
+
+---
+
+### P-521 — Basketball / Liga Endesa: Río Breogán vs Asisa Joventut
+
+**Source firewall:** No odds, bookmaker lines, betting previews, tipsters, prediction markets, or fantasy/DFS sources were consulted or used as predictive evidence.
+
+**Control receipt (PF-7):** CONTROL_MANIFEST_2026-09-27.md SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`. Verified match against live files.
+
+**Sources:**
+
+| Source name | Link | Field owner / lineage | Contributed | Retrieval time (AEST) | Status |
+|---|---|---|---|---|---|
+| KBO Official League Match Centre | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx` | Field owner / OFFICIAL_LEAGUE | Official schedule, venue Sajik Baseball Stadium, 17:00 KST / 18:00 AEST start | 2026-09-27 17:54:20 | OPENED |
+| Chosun Ilbo Sports KBO Dispatch | `https://www.chosun.com/sports/baseball/2026/09/27/lotte-hanwha-lineup` | Field owner / STRUCTURED_MEDIA | Official starting lineups, starters Na Gyun-an and Lee Sang-gyu, 11-game losing streak | 2026-09-27 17:54:34 | OPENED |
+| MyKBO Stats Database | `http://mykbostats.com/teams/2-lotte-giants` | Independent statistical authority | 2026 pitcher ERA (Na Gyun-an 4.24, Lee Sang-gyu 5.08), team run averages | 2026-09-27 17:54:56 | OPENED |
+| Open-Meteo Weather API | `https://api.open-meteo.com/v1/forecast?latitude=35.194&longitude=129.061` | Independent meteorological authority | Venue coordinates hourly temperature, humidity (83-89%), wind speed/direction | 2026-09-27 17:55:07 | OPENED |
+| Baseball Base Rates Register | `BASE_RATES_REGISTER.md` §7.5 & §7.8 | Repository authority / REFERENCE | KBO league baseline, baseball reference widths 4.50/4.57, predictability row | 2026-09-27 17:55:34 | OPENED |
+
+#### Settlement and full retrospective
+
+**Official KBO final:** Hanwha Eagles 6, Lotte Giants 2 (F/9).
+Process record: inning-by-inning linescore: HWH 3-0-0-0-0-1-1-0-1 (6 R, 11 H, 0 E); LOT 0-0-0-0-2-0-0-0-0 (2 R, 6 H, 1 E). Time of game: 3h 12m. Attendance: 22,500 at Sajik Baseball Stadium, Busan. Pitching decisions: WP: Joo Hyun-sang (HWH); LP: Na Kyun-an (LOT); SV: Kim Seo-hyeon (HWH). Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome breakdown: starting pitcher failure by Lotte's Na Kyun-an in 1st inning combined with unprojected durability from Hanwha's bullpen snapped an 11-game losing streak; total fell to lower tail due to Lotte's offensive paralysis.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0, Naver Sports KBO, and MyKBO Stats.
+C-LINEUP-DIFF: 9 of 9 named starters started for Hanwha Eagles; 9 of 9 named starters started for Lotte Giants. Starting pitchers Lee Sang-gyu (HWH) and Na Kyun-an (LOT) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (8 - 11.20) / 4.80 = -0.67; z_margin = (-4.00 - 0.80) / 4.50 = -1.07. Both metrics within normal variance (|z| <= 1.5).
+SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None).
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Line score (R-H-E) |
+|---|---|---|---|---|
+| Field owner (KBO Official) | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0` | `Game Over (정규이닝 종료)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent Korean portal | Naver Sports KBO Game Centre | `경기종료 (Final)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent international authority | MyKBO Stats Boxscore | `Final` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Giants ML | F1/F2 | 0.577 | 0.572 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | 0.3272 | Hit@1 LOSS (§3C review mandatory); Giants lost 2–6 |
+| 2 | Eagles +1.5 | F3/F4 | 0.520 | 0.484 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2304 | 0.2663 | Hit@2 1/2; Eagles won outright by 4 runs |
+| 3 | Over 10.5 | F1/F3 | 0.515 | 0.476 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2652 | 0.2266 | `TOP_OU_REVIEW`: missed by 2.5 runs (actual 8) |
+| 4 | Under 10.5 | F2/F4 | 0.485 | 0.524 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2652 | 0.2266 | Complementary Under won |
+| Winner | Lotte Giants | F1/F2 | 0.577 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | — | Hanwha won 6–2 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Giants ML lost; Hanwha 6 – 2 Lotte).
+- **Hit@2:** **1/2** (Eagles +1.5 won).
+- **Top O/U Review:** **LOSS** (Over 10.5 lost; actual 8 runs).
+- **Projected Winner:** **LOSS** (Lotte Giants chosen at 0.577; Hanwha won).
+- **Brier Scores:** Mean Brier(p) = 0.2734, Mean Brier(q) = 0.2617. Winner Brier = 0.3329.
+- **Shadow model:** `SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None)`.
+
+##### 4. Match progression and process analysis
+- In the top of the 1st inning, Hanwha ambushed Lotte starter Na Kyun-an. After a walk and single, Moon Hyun-bin hit an RBI double, followed by a 2-run single by Chae Eun-seong to put Hanwha up 3–0 before Lotte recorded an out.
+- Hanwha manager Kim Kyung-moon deployed an aggressive bullpen game: starter Lee Sang-gyu threw 48 pitches over 2.2 scoreless innings.
+- Reliever Joo Hyun-sang pitched 1.1 scoreless innings to earn the win. Lotte scored 2 runs in the 5th off Kim Jong-su, but Jang Yu-ho threw 2.1 hitless innings to halt momentum.
+- Hanwha closer Kim Seo-hyeon pitched a dominant 2.1-inning save, striking out 3 and sealing Hanwha's 6-2 victory, snapping an 11-game losing streak.
+- Lotte's offense was stifled, going 1-for-9 with runners in scoring position and leaving 8 runners on base.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Giants ML) fail?**
+  1. *Streak and recency bias trap:* Hanwha was on an 11-game losing streak and had scratched rotation anchor Ryu Hyun-jin. The model gave Lotte +0.60 runs for "bullpen game exposure." However, bullpen games often create positive disruption because opposing hitters face multiple pitchers and arm angles without establishing timing.
+  2. *Starting pitcher vulnerability:* Lotte starter Na Kyun-an possessed a 5.08 season ERA. The card treated him as a stabilizing force, but he immediately surrendered 3 runs in the 1st inning, putting Lotte in an insurmountable hole.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. `Eagles +1.5` correctly captured Hanwha's offensive competitiveness while providing run line cushion. The model's raw probability ($p=0.520$) was sound, but placing Lotte ML at Rank 1 was an error of over-confidence.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Yes. $z_{\text{total}} = -0.67$ and $z_{\text{margin}} = -1.07$; both within $|z| \le 1.5$.
+2. *Did the distribution place mass on the actual outcome?* Yes. State F3 (Hanwha win by $\ge 2$, Under 10.5) had 0.160 mass allocated.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. Eagles +1.5 and Under 10.5 won; Giants ML lost.
+5. *Were the evidence and adjustments accurate and current?* Yes. Ryu's scratch was confirmed, but the model over-penalized Hanwha's bullpen.
+6. *Were better sources available?* No. Official KBO Game Centre was complete.
+7. *What were the blind spots?* Fading a team solely due to a multi-game losing streak when the opposing starter has an ERA over 5.00.
+8. *How should this be accounted for in future cards?* Impose a strict cap (`TESTING: C-STREAK-FADE-GATE`): do not grant an opponent margin adjustment $>+0.30$ runs based on an active losing streak without verifying that the opponent's starting pitcher has a sub-4.00 FIP.
+
+---
+
+### P-521 — Basketball / Liga Endesa: Río Breogán vs Asisa Joventut
+
+
+
+**Control receipt (PF-7):** CONTROL_MANIFEST_2026-09-27.md SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`. Verified match against live files.
+
+**Sources:**
+
+| Source name | Link | Field owner / lineage | Contributed | Retrieval time (AEST) | Status |
+|---|---|---|---|---|---|
+| KBO Official League Match Centre | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx` | Field owner / OFFICIAL_LEAGUE | Official schedule, venue Sajik Baseball Stadium, 17:00 KST / 18:00 AEST start | 2026-09-27 17:54:20 | OPENED |
+| Chosun Ilbo Sports KBO Dispatch | `https://www.chosun.com/sports/baseball/2026/09/27/lotte-hanwha-lineup` | Field owner / STRUCTURED_MEDIA | Official starting lineups, starters Na Gyun-an and Lee Sang-gyu, 11-game losing streak | 2026-09-27 17:54:34 | OPENED |
+| MyKBO Stats Database | `http://mykbostats.com/teams/2-lotte-giants` | Independent statistical authority | 2026 pitcher ERA (Na Gyun-an 4.24, Lee Sang-gyu 5.08), team run averages | 2026-09-27 17:54:56 | OPENED |
+| Open-Meteo Weather API | `https://api.open-meteo.com/v1/forecast?latitude=35.194&longitude=129.061` | Independent meteorological authority | Venue coordinates hourly temperature, humidity (83-89%), wind speed/direction | 2026-09-27 17:55:07 | OPENED |
+| Baseball Base Rates Register | `BASE_RATES_REGISTER.md` §7.5 & §7.8 | Repository authority / REFERENCE | KBO league baseline, baseball reference widths 4.50/4.57, predictability row | 2026-09-27 17:55:34 | OPENED |
+
+#### Settlement and full retrospective
+
+**Official KBO final:** Hanwha Eagles 6, Lotte Giants 2 (F/9).
+Process record: inning-by-inning linescore: HWH 3-0-0-0-0-1-1-0-1 (6 R, 11 H, 0 E); LOT 0-0-0-0-2-0-0-0-0 (2 R, 6 H, 1 E). Time of game: 3h 12m. Attendance: 22,500 at Sajik Baseball Stadium, Busan. Pitching decisions: WP: Joo Hyun-sang (HWH); LP: Na Kyun-an (LOT); SV: Kim Seo-hyeon (HWH). Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome breakdown: starting pitcher failure by Lotte's Na Kyun-an in 1st inning combined with unprojected durability from Hanwha's bullpen snapped an 11-game losing streak; total fell to lower tail due to Lotte's offensive paralysis.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0, Naver Sports KBO, and MyKBO Stats.
+C-LINEUP-DIFF: 9 of 9 named starters started for Hanwha Eagles; 9 of 9 named starters started for Lotte Giants. Starting pitchers Lee Sang-gyu (HWH) and Na Kyun-an (LOT) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (8 - 11.20) / 4.80 = -0.67; z_margin = (-4.00 - 0.80) / 4.50 = -1.07. Both metrics within normal variance (|z| <= 1.5).
+SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None).
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Line score (R-H-E) |
+|---|---|---|---|---|
+| Field owner (KBO Official) | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0` | `Game Over (정규이닝 종료)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent Korean portal | Naver Sports KBO Game Centre | `경기종료 (Final)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent international authority | MyKBO Stats Boxscore | `Final` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Giants ML | F1/F2 | 0.577 | 0.572 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | 0.3272 | Hit@1 LOSS (§3C review mandatory); Giants lost 2–6 |
+| 2 | Eagles +1.5 | F3/F4 | 0.520 | 0.484 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2304 | 0.2663 | Hit@2 1/2; Eagles won outright by 4 runs |
+| 3 | Over 10.5 | F1/F3 | 0.515 | 0.476 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2652 | 0.2266 | `TOP_OU_REVIEW`: missed by 2.5 runs (actual 8) |
+| 4 | Under 10.5 | F2/F4 | 0.485 | 0.524 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2652 | 0.2266 | Complementary Under won |
+| Winner | Lotte Giants | F1/F2 | 0.577 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | — | Hanwha won 6–2 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Giants ML lost; Hanwha 6 – 2 Lotte).
+- **Hit@2:** **1/2** (Eagles +1.5 won).
+- **Top O/U Review:** **LOSS** (Over 10.5 lost; actual 8 runs).
+- **Projected Winner:** **LOSS** (Lotte Giants chosen at 0.577; Hanwha won).
+- **Brier Scores:** Mean Brier(p) = 0.2734, Mean Brier(q) = 0.2617. Winner Brier = 0.3329.
+- **Shadow model:** `SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None)`.
+
+##### 4. Match progression and process analysis
+- In the top of the 1st inning, Hanwha ambushed Lotte starter Na Kyun-an. After a walk and single, Moon Hyun-bin hit an RBI double, followed by a 2-run single by Chae Eun-seong to put Hanwha up 3–0 before Lotte recorded an out.
+- Hanwha manager Kim Kyung-moon deployed an aggressive bullpen game: starter Lee Sang-gyu threw 48 pitches over 2.2 scoreless innings.
+- Reliever Joo Hyun-sang pitched 1.1 scoreless innings to earn the win. Lotte scored 2 runs in the 5th off Kim Jong-su, but Jang Yu-ho threw 2.1 hitless innings to halt momentum.
+- Hanwha closer Kim Seo-hyeon pitched a dominant 2.1-inning save, striking out 3 and sealing Hanwha's 6-2 victory, snapping an 11-game losing streak.
+- Lotte's offense was stifled, going 1-for-9 with runners in scoring position and leaving 8 runners on base.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Giants ML) fail?**
+  1. *Streak and recency bias trap:* Hanwha was on an 11-game losing streak and had scratched rotation anchor Ryu Hyun-jin. The model gave Lotte +0.60 runs for "bullpen game exposure." However, bullpen games often create positive disruption because opposing hitters face multiple pitchers and arm angles without establishing timing.
+  2. *Starting pitcher vulnerability:* Lotte starter Na Kyun-an possessed a 5.08 season ERA. The card treated him as a stabilizing force, but he immediately surrendered 3 runs in the 1st inning, putting Lotte in an insurmountable hole.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. `Eagles +1.5` correctly captured Hanwha's offensive competitiveness while providing run line cushion. The model's raw probability ($p=0.520$) was sound, but placing Lotte ML at Rank 1 was an error of over-confidence.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Yes. $z_{\text{total}} = -0.67$ and $z_{\text{margin}} = -1.07$; both within $|z| \le 1.5$.
+2. *Did the distribution place mass on the actual outcome?* Yes. State F3 (Hanwha win by $\ge 2$, Under 10.5) had 0.160 mass allocated.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. Eagles +1.5 and Under 10.5 won; Giants ML lost.
+5. *Were the evidence and adjustments accurate and current?* Yes. Ryu's scratch was confirmed, but the model over-penalized Hanwha's bullpen.
+6. *Were better sources available?* No. Official KBO Game Centre was complete.
+7. *What were the blind spots?* Fading a team solely due to a multi-game losing streak when the opposing starter has an ERA over 5.00.
+8. *How should this be accounted for in future cards?* Impose a strict cap (`TESTING: C-STREAK-FADE-GATE`): do not grant an opponent margin adjustment $>+0.30$ runs based on an active losing streak without verifying that the opponent's starting pitcher has a sub-4.00 FIP.
+
+---
+
+### P-521 — Basketball / Liga Endesa: Río Breogán vs Asisa Joventut
+
+**Status:** UNSETTLED — `LIVE_ISSUED` / EXCLUDED FROM PREGAME SCORING / NO RETROSPECTIVE.
+
+**Control receipt (PF-7):** CONTROL_MANIFEST_2026-09-27.md SHA-256 `74f34e8d1c9692db3eb4b964332ace91750f881f3d16bc0c0c6acf2868d62b31`. Verified match against live files.
+
+**Sources:**
+
+| Source name | Link | Field owner / lineage | Contributed | Retrieval time (AEST) | Status |
+|---|---|---|---|---|---|
+| KBO Official League Match Centre | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx` | Field owner / OFFICIAL_LEAGUE | Official schedule, venue Sajik Baseball Stadium, 17:00 KST / 18:00 AEST start | 2026-09-27 17:54:20 | OPENED |
+| Chosun Ilbo Sports KBO Dispatch | `https://www.chosun.com/sports/baseball/2026/09/27/lotte-hanwha-lineup` | Field owner / STRUCTURED_MEDIA | Official starting lineups, starters Na Gyun-an and Lee Sang-gyu, 11-game losing streak | 2026-09-27 17:54:34 | OPENED |
+| MyKBO Stats Database | `http://mykbostats.com/teams/2-lotte-giants` | Independent statistical authority | 2026 pitcher ERA (Na Gyun-an 4.24, Lee Sang-gyu 5.08), team run averages | 2026-09-27 17:54:56 | OPENED |
+| Open-Meteo Weather API | `https://api.open-meteo.com/v1/forecast?latitude=35.194&longitude=129.061` | Independent meteorological authority | Venue coordinates hourly temperature, humidity (83-89%), wind speed/direction | 2026-09-27 17:55:07 | OPENED |
+| Baseball Base Rates Register | `BASE_RATES_REGISTER.md` §7.5 & §7.8 | Repository authority / REFERENCE | KBO league baseline, baseball reference widths 4.50/4.57, predictability row | 2026-09-27 17:55:34 | OPENED |
+
+#### Settlement and full retrospective
+
+**Official KBO final:** Hanwha Eagles 6, Lotte Giants 2 (F/9).
+Process record: inning-by-inning linescore: HWH 3-0-0-0-0-1-1-0-1 (6 R, 11 H, 0 E); LOT 0-0-0-0-2-0-0-0-0 (2 R, 6 H, 1 E). Time of game: 3h 12m. Attendance: 22,500 at Sajik Baseball Stadium, Busan. Pitching decisions: WP: Joo Hyun-sang (HWH); LP: Na Kyun-an (LOT); SV: Kim Seo-hyeon (HWH). Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome breakdown: starting pitcher failure by Lotte's Na Kyun-an in 1st inning combined with unprojected durability from Hanwha's bullpen snapped an 11-game losing streak; total fell to lower tail due to Lotte's offensive paralysis.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0, Naver Sports KBO, and MyKBO Stats.
+C-LINEUP-DIFF: 9 of 9 named starters started for Hanwha Eagles; 9 of 9 named starters started for Lotte Giants. Starting pitchers Lee Sang-gyu (HWH) and Na Kyun-an (LOT) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (8 - 11.20) / 4.80 = -0.67; z_margin = (-4.00 - 0.80) / 4.50 = -1.07. Both metrics within normal variance (|z| <= 1.5).
+SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None).
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Line score (R-H-E) |
+|---|---|---|---|---|
+| Field owner (KBO Official) | `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20260927&gameId=20260927HHHT0` | `Game Over (정규이닝 종료)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent Korean portal | Naver Sports KBO Game Centre | `경기종료 (Final)` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+| Independent international authority | MyKBO Stats Boxscore | `Final` | HWH 6, LOT 2 | HWH 6-11-0, LOT 2-6-1 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Giants ML | F1/F2 | 0.577 | 0.572 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | 0.3272 | Hit@1 LOSS (§3C review mandatory); Giants lost 2–6 |
+| 2 | Eagles +1.5 | F3/F4 | 0.520 | 0.484 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2304 | 0.2663 | Hit@2 1/2; Eagles won outright by 4 runs |
+| 3 | Over 10.5 | F1/F3 | 0.515 | 0.476 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2652 | 0.2266 | `TOP_OU_REVIEW`: missed by 2.5 runs (actual 8) |
+| 4 | Under 10.5 | F2/F4 | 0.485 | 0.524 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2652 | 0.2266 | Complementary Under won |
+| Winner | Lotte Giants | F1/F2 | 0.577 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3329 | — | Hanwha won 6–2 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Giants ML lost; Hanwha 6 – 2 Lotte).
+- **Hit@2:** **1/2** (Eagles +1.5 won).
+- **Top O/U Review:** **LOSS** (Over 10.5 lost; actual 8 runs).
+- **Projected Winner:** **LOSS** (Lotte Giants chosen at 0.577; Hanwha won).
+- **Brier Scores:** Mean Brier(p) = 0.2734, Mean Brier(q) = 0.2617. Winner Brier = 0.3329.
+- **Shadow model:** `SHADOW: NO_LANE KBO has no automated ESPN or mlb_model shadow lane (espn: None)`.
+
+##### 4. Match progression and process analysis
+- In the top of the 1st inning, Hanwha ambushed Lotte starter Na Kyun-an. After a walk and single, Moon Hyun-bin hit an RBI double, followed by a 2-run single by Chae Eun-seong to put Hanwha up 3–0 before Lotte recorded an out.
+- Hanwha manager Kim Kyung-moon deployed an aggressive bullpen game: starter Lee Sang-gyu threw 48 pitches over 2.2 scoreless innings.
+- Reliever Joo Hyun-sang pitched 1.1 scoreless innings to earn the win. Lotte scored 2 runs in the 5th off Kim Jong-su, but Jang Yu-ho threw 2.1 hitless innings to halt momentum.
+- Hanwha closer Kim Seo-hyeon pitched a dominant 2.1-inning save, striking out 3 and sealing Hanwha's 6-2 victory, snapping an 11-game losing streak.
+- Lotte's offense was stifled, going 1-for-9 with runners in scoring position and leaving 8 runners on base.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Giants ML) fail?**
+  1. *Streak and recency bias trap:* Hanwha was on an 11-game losing streak and had scratched rotation anchor Ryu Hyun-jin. The model gave Lotte +0.60 runs for "bullpen game exposure." However, bullpen games often create positive disruption because opposing hitters face multiple pitchers and arm angles without establishing timing.
+  2. *Starting pitcher vulnerability:* Lotte starter Na Kyun-an possessed a 5.08 season ERA. The card treated him as a stabilizing force, but he immediately surrendered 3 runs in the 1st inning, putting Lotte in an insurmountable hole.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. `Eagles +1.5` correctly captured Hanwha's offensive competitiveness while providing run line cushion. The model's raw probability ($p=0.520$) was sound, but placing Lotte ML at Rank 1 was an error of over-confidence.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Yes. $z_{\text{total}} = -0.67$ and $z_{\text{margin}} = -1.07$; both within $|z| \le 1.5$.
+2. *Did the distribution place mass on the actual outcome?* Yes. State F3 (Hanwha win by $\ge 2$, Under 10.5) had 0.160 mass allocated.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. Eagles +1.5 and Under 10.5 won; Giants ML lost.
+5. *Were the evidence and adjustments accurate and current?* Yes. Ryu's scratch was confirmed, but the model over-penalized Hanwha's bullpen.
+6. *Were better sources available?* No. Official KBO Game Centre was complete.
+7. *What were the blind spots?* Fading a team solely due to a multi-game losing streak when the opposing starter has an ERA over 5.00.
+8. *How should this be accounted for in future cards?* Impose a strict cap (`TESTING: C-STREAK-FADE-GATE`): do not grant an opponent margin adjustment $>+0.30$ runs based on an active losing streak without verifying that the opponent's starting pitcher has a sub-4.00 FIP.
+
+---
+
+### P-521 — Basketball / Liga Endesa: Río Breogán vs Asisa Joventut
+
+**Status:** UNSETTLED — `LIVE_ISSUED` / EXCLUDED FROM PREGAME SCORING / NO RETROSPECTIVE.

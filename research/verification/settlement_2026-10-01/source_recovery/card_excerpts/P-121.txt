@@ -1,0 +1,76 @@
+|---|---:|---|
+| Event units | 21 | selected and late-import |
+| Raw contract rows | **49 W / 30 L / 5 U** | 79 settled rows; dependent, not accuracy |
+| Rank #1 | **14–7 = 66.7%** | Wilson 95% reference 45.4%–82.8%; not prospective |
+| Rank #2 | **12–9 = 57.1%** | only a weak descriptive separation |
+| Rank #3 | **11–10 = 52.4%** | no stable ordinal evidence |
+| Rank #4 | **12 W / 4 L / 5 U** | the bottom slot is not a validated fade |
+| Top-two rows | **26/42 W = 61.9%** | paired/dependent; Wilson reference 46.8%–75.0% |
+| Hit@2 | **17/21 = 81.0%** | 9 events with two wins, 8 with one, 4 with zero; coverage is not value |
+| Potential winner | **14–7 = 66.7%** | no market baseline |
+| Proper-score eligible probabilities | **0** | no issued internal probabilities |
+| Price/value eligible rows | **0** | no complete same-time odds/terms and validated model probability |
+
+### Settlement matrix
+
+| ID | Final | R1 | R2 | R3 | R4 | Winner |
+|---|---|---|---|---|---|---|
+| P-103 | Rays 3–0 Tigers | Tigers ML **L** | U7.5 **W** | O7.5 **L** | Rays ML **W** | Tigers **L** |
+| P-104 | Ajax W 0–2 Real Madrid W | Madrid X2 **W** | 1H O0.5 **W** | U2.5 **W** | corners **U** | Madrid **W** |
+| P-105 | Al Ahli 1–0 Auckland | Al Ahli ML **W** | 1H O0.5 **L** | O2.5 **L** | corners **U** | Al Ahli **W** |
+| P-106 | Newcastle 3–2 West Brom | **W** | **W** | **W** | **W** | Newcastle **W** |
+| P-107 | Bradford 0–0 Burnley; Bradford advanced on penalties | Bradford 1X **W** | U2.5 **W** | 1H O0.5 **L** | corners **W** | Bradford 90m **L** |
+| P-108 | Tottenham 5–1 Charlton | Tottenham ML **W** | 1H O0.5 **W** | O2.5 **W** | corners O7.5 **W** | Tottenham **W** |
+| P-109 | Diamondbacks 2–0 Cubs | Arizona +1.5 **W** | Cubs +1.5 **L** | U8.5 **W** | O8.5 **L** | Arizona **W** |
+| P-110 | Nishikori 6–4 6–4 Antonius | Nishikori +1.5 sets **W** | Antonius +1.5 **L** | O20.5 games **L** | Nishikori ML **W** | Nishikori **W** |
+| P-111 | Marlins 4–0 Red Sox | Boston ML **L** | U7.5 **W** | Miami +1.5 **W** | O7.5 **L** | Boston **L** |
+| P-112 | Athletics 7–4 Twins | Athletics +1.5 **W** | U10.5 **L** | Twins ML **L** | O10.5 **W** | Athletics **W** |
+| P-113 | América 2–0 Columbus | América 1X **W** | 1H O0.5 **W** | O2.5 **L** | corners **W** | América **W** |
+| P-114 | Sri Lanka 429/9 following on; Test drawn | SL 2nd inns U291.5 **L** | India Win **L** | Draw **W** | O291.5 **W** | India **L** |
+| P-115 | Belfast 184/7, PP 52/3; Dublin 132/9 | inns U171.5 **L** | PP U47.5 **L** | PP O47.5 **W** | inns O171.5 **W** | Belfast **W** |
+| P-116 | Storm 46–20 Broncos | U50.5 **L** | Broncos +4.5 **L** | Storm -4.5 **W** | O50 **W** | Storm **W** |
+| P-117 | ISI Dangkor 1–2 Life; HT 0–1 | 1H O0.5 **W** | U2.5 **L** | ISI 1X **L** | corners **U** | ISI **L** |
+| P-118 | Kopp 6–2 6–4 Krumich | Krumich +1.5 sets **L** | Kopp +1.5 **W** | O21.5 games **L** | Krumich ML **L** | Krumich **L** |
+| P-119 | Karma 6–3 5–7 6–2 Hunziker | **W** | **W** | **W** | **W** | Karma **W** |
+| P-120 | Guinea 71–81 South Sudan | Guinea +11.5 **W** | U159.5 **W** | SSD -11.5 **L** | O159.5 **L** | SSD **W** |
+| P-121 | Sardarapat 1–1 Syunik; Syunik advanced on penalties | 1H O0.5 **W** | Sardarapat 1X **W** | O2.5 **L** | corners **U** | Sardarapat 90m **L** |
+| P-122 | Bahrain 106–62 Oman | Oman +42.5 **L** | U156.5 **L** | O156.5 **W** | Bahrain -42.5 **W** | Bahrain **W** |
+| P-123 | BuxDU 0–4 Metallurg | Metallurg X2 **W** | 1H O0.5 **W** | O2.5 **W** | corners **U** | Metallurg **W** |
+
+## Rank-1 loss audit
+
+The seven rank-1 losses are P-103, P-111, P-114, P-115, P-116, P-118 and P-122.
+
+| ID | Forecast centre | Actual driver | Knowability / process | Disposition |
+|---|---|---|---|---|
+| P-103 | Detroit side plus low total | Peralta threw six scoreless; Tampa won 3–0 | Current starter capability was knowable; magnitude an ordinary tail; late-import. **COMPLIANT / INELIGIBLE** | Cross-sport regime candidate; no coefficient |
+| P-111 | Gray/season form gave Boston the side | Gusto threw 5.2 scoreless; Boston made four errors | Gusto's current improvement was recorded but underweighted; error cluster was tail. **MODEL-SPEC WEAKNESS** | Current-starter/season reconciliation; no backfit error penalty |
+| P-114 | India lead/wickets plus low SL second innings | Dinusha made 103 and 133*; Sri Lanka survived 243.4 overs across innings | Batter/partnership survival, weather/time and follow-on workload were knowable. **MODEL-SPEC WEAKNESS** | Test-rearguard candidate |
+| P-115 | One venue game and weather favoured innings/PP Unders | Belfast scored 184/7 and 52/3 in the PP | Inaugural sample and unresolved toss/XI were too weak; start had crossed without verified state. **STATE/PROVENANCE INCONCLUSIVE** | Sparse-competition shrinkage and state cap |
+| P-116 | Season averages/close H2H favoured U50.5 | Storm led 30–10 HT, won 46–20; Brisbane missed 44 tackles | Brisbane's 140 conceded in four games and Hughes' return were known and underweighted. **MODEL-SPEC WEAKNESS** | Current defence/spine mixture plus blowout branch |
+| P-118 | Ranking and old indoor-hard H2H supported Krumich | Kopp dominated current clay, 6–2 6–4, saving 3/3 break points | Surface mismatch/current clay evidence were knowable. **MODEL-SPEC WEAKNESS** | Dedicated tennis surface/H2H rule and future test |
+| P-122 | Oman +42.5 and Under looked robust | Rested Bahrain won by 44; line missed by 1.5 | Schedule/depth mismatch and 45–55 kill branch were identifiable. **MODEL-SPEC WEAKNESS** | Maximum-lead/bench/closing-margin candidate |
+
+## Source audit and new future lanes
+
+1. Official sources verified key finals: MLB for P-103/P-109/P-111/P-112; ICC for P-087/P-114; NRL for P-116; FIBA for P-120/P-122; Türkiye's federation for P-101; Wolfsburg/Inter for P-102.
+2. Cricket Ireland's association-branded CricketArchive scorecard exposed P-115's innings and powerplay totals. It is useful field-specific research evidence, not blanket ingestion approval.
+3. Tennis.com's P-118 match page exposed current set, serve and break-point statistics. It is a specialist field source, not governing-tour authority.
+4. Life FC's official Telegram posts established P-117 at 0–1 HT and 1–2 FT, but not corners.
+5. P-121 is source-caveated: no accessible FFA final was recovered. Forebet and SoccerPunter independently agree on 1–1 at halftime/full time, with additional result pages reporting Syunik's penalty advancement. Regulation rows are provisional; corners are U.
+6. P-123 exposed a source-state defect. Uzbekistan PFL remained at an all-zero 0–0 placeholder, while two current independent Uzbek reports documented BuxDU 0–4 Metallurg. The score is provisional from corroboration; the official zero-stat block is rejected and corners are U.
+7. No niche count was invented: P-100, P-102, P-104, P-105, P-117, P-121 and P-123 corners close U.
+
+Retained high-quality/source-audit references:
+
+- ICC: https://www.icc-cricket.com/news/dinusha-leads-sri-lanka-to-remarkable-wtc-draw-against-india
+- MLB: https://www.mlb.com/schedule/2026-08-26
+- NRL: https://www.nrl.com/news/2026/08/27/thursday-night-footy-broncos-v-storm/
+- FIBA Guinea–South Sudan: https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-african-qualifiers/games/127218-GUI-SSD
+- FIBA Bahrain–Oman: https://www.fiba.basketball/en/events/fiba-asia-cup-2029-pre-qualifiers/news/group-a-uae-move-closer-to-progress-bahrain-begin-with-a-blaze
+- Türkiye federation: https://tbf.org.tr/ligler/13503/haber/a-kadin-milli-takimimiz-son-hazirlik-macinda-almanya-yi-maglup-etti-2026-08-27
+- Wolfsburg: https://www.vfl-wolfsburg.de/matchcenter/matchcenter-frauen/uwcl-spieltag-1-2026/2027/abpfiff
+- Inter: https://www.inter.it/en/matches?category=results&competition=all&teams=women
+- Tennis.com: https://www.tennis.com/tournaments/schwaben-open/matches/s-kopp-vs-m-krumich-2026-08-27
+- Life FC: https://t.me/lifefc_shv/6030
+- Cricket Ireland: https://cricketarchive.com/CricketIreland/Scorecards/1458/1458955.html

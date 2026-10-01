@@ -1,0 +1,384 @@
+**What went right:** ranks #2–#5 all won. The first-half Over correctly preserved an early-goal branch despite the low total, BTTS No correctly captured one-sided scoring, and the corner Under held.
+
+**Prospective lesson candidate:** shrink zero-goal streaks to chance-creation priors; separate *total-event state* from *team allocation*.
+
+---
+
+### P-178 — Cannes vs Le Puy — Ligue 3
+
+**Final:** Cannes 2–0 Le Puy. Both goals arose from corner/set-piece sequences in current match reporting.  
+**Corner aggregate:** not recovered from a trusted final provider.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 2.5 Goals | **WIN** |
+| 2 | Cannes Team Under 1.5 | **LOSS** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **UNRESOLVED** |
+| — | Potential winner: Cannes | **WIN** |
+
+**What went right:** the low-total and BTTS state was excellent, and the winner call was correct.
+
+**What went wrong:** again, the team-score allocation was a half-goal too low. A 2–0 final wins Under 2.5 while losing Cannes Under 1.5; these are not contradictory outcomes.
+
+**Source note:** the two scoring sequences being corner-related is useful mechanism evidence but cannot by itself recover the final number of corners. C05 stays unresolved.
+
+---
+
+### P-179 — Thionville Lusitanos vs Paris 13 Atletico — Ligue 3
+
+**Final:** 1–1; halftime 0–0.  
+**Corners:** a current specialist result page reports Thionville 8–1 Paris 13 (9 total); this row remains provider-provisional.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Thionville Team Over 0.5 | **WIN** |
+| 2 | 1st Half Over 0.5 | **LOSS** |
+| 3 | Paris 13 Team Under 1.5 | **WIN** |
+| 4 | Under 2.5 Goals | **WIN** |
+| 5 | Under 10.5 Corners | **PROVISIONAL WIN** |
+| — | Potential winner: Thionville | **LOSS — DRAW** |
+
+**Retrospective:** the goal-volume/team-total structure was sound. The winner call was less robust than the two team-total/Under rows because a 1–1 state satisfied the core scoring thesis while defeating the side.
+
+---
+
+### P-180 — 1. FC Köln vs TSG Hoffenheim — Bundesliga
+
+**Official final:** Köln 3–2 Hoffenheim.  
+**Retrieved current stats:** Hoffenheim won the corner count 7–6.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 | **WIN** |
+| 2 | Hoffenheim Team Over 0.5 | **WIN** |
+| 3 | Hoffenheim or Draw X2 | **LOSS** |
+| 4 | Over 2.5 Goals | **WIN** |
+| 5 | Hoffenheim Most Corners — 3-way | **WIN** |
+| — | Potential winner: Hoffenheim | **LOSS** |
+
+**What went right:** early goal, Hoffenheim scoring, match Over and corner direction all landed.
+
+**What went wrong:** the side/winner was vulnerable to the late substitution/finishing phase. The game illustrates why scoring-event models can be right while a 1X2 result is wrong.
+
+**Learning candidate:** late substitution and finishing tails should remain explicit in close sides, especially when derivative scoring contracts are already preferred.
+
+---
+
+### P-181 — Coventry City vs Hull City — Premier League
+
+**Final:** Hull City 1–0 Coventry City; halftime 0–0.  
+**Retrieved current stats:** Coventry held roughly two-thirds possession, won corners 6–2 and generated more territory; Hull produced only a small shot/xG volume but converted the decisive late chance.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Coventry or Draw 1X | **LOSS** |
+
+
+**Prospective lesson candidate:** shrink zero-goal streaks to chance-creation priors; separate *total-event state* from *team allocation*.
+
+---
+
+### P-178 — Cannes vs Le Puy — Ligue 3
+
+**Final:** Cannes 2–0 Le Puy. Both goals arose from corner/set-piece sequences in current match reporting.  
+**Corner aggregate:** not recovered from a trusted final provider.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 2.5 Goals | **WIN** |
+| 2 | Cannes Team Under 1.5 | **LOSS** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **UNRESOLVED** |
+| — | Potential winner: Cannes | **WIN** |
+
+**What went right:** the low-total and BTTS state was excellent, and the winner call was correct.
+
+**What went wrong:** again, the team-score allocation was a half-goal too low. A 2–0 final wins Under 2.5 while losing Cannes Under 1.5; these are not contradictory outcomes.
+
+**Source note:** the two scoring sequences being corner-related is useful mechanism evidence but cannot by itself recover the final number of corners. C05 stays unresolved.
+
+---
+
+### P-179 — Thionville Lusitanos vs Paris 13 Atletico — Ligue 3
+
+**Final:** 1–1; halftime 0–0.  
+**Corners:** a current specialist result page reports Thionville 8–1 Paris 13 (9 total); this row remains provider-provisional.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Thionville Team Over 0.5 | **WIN** |
+| 2 | 1st Half Over 0.5 | **LOSS** |
+| 3 | Paris 13 Team Under 1.5 | **WIN** |
+| 4 | Under 2.5 Goals | **WIN** |
+| 5 | Under 10.5 Corners | **PROVISIONAL WIN** |
+| — | Potential winner: Thionville | **LOSS — DRAW** |
+
+**Retrospective:** the goal-volume/team-total structure was sound. The winner call was less robust than the two team-total/Under rows because a 1–1 state satisfied the core scoring thesis while defeating the side.
+
+---
+
+### P-180 — 1. FC Köln vs TSG Hoffenheim — Bundesliga
+
+**Official final:** Köln 3–2 Hoffenheim.  
+**Retrieved current stats:** Hoffenheim won the corner count 7–6.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 | **WIN** |
+| 2 | Hoffenheim Team Over 0.5 | **WIN** |
+| 3 | Hoffenheim or Draw X2 | **LOSS** |
+| 4 | Over 2.5 Goals | **WIN** |
+| 5 | Hoffenheim Most Corners — 3-way | **WIN** |
+| — | Potential winner: Hoffenheim | **LOSS** |
+
+**What went right:** early goal, Hoffenheim scoring, match Over and corner direction all landed.
+
+**What went wrong:** the side/winner was vulnerable to the late substitution/finishing phase. The game illustrates why scoring-event models can be right while a 1X2 result is wrong.
+
+**Learning candidate:** late substitution and finishing tails should remain explicit in close sides, especially when derivative scoring contracts are already preferred.
+
+---
+
+### P-181 — Coventry City vs Hull City — Premier League
+
+**Final:** Hull City 1–0 Coventry City; halftime 0–0.  
+**Retrieved current stats:** Coventry held roughly two-thirds possession, won corners 6–2 and generated more territory; Hull produced only a small shot/xG volume but converted the decisive late chance.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Coventry or Draw 1X | **LOSS** |
+| 2 | Hull Team Under 1.5 | **WIN** |
+
+**Prospective lesson candidate:** shrink zero-goal streaks to chance-creation priors; separate *total-event state* from *team allocation*.
+
+---
+
+### P-178 — Cannes vs Le Puy — Ligue 3
+
+**Final:** Cannes 2–0 Le Puy. Both goals arose from corner/set-piece sequences in current match reporting.  
+**Corner aggregate:** not recovered from a trusted final provider.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 2.5 Goals | **WIN** |
+| 2 | Cannes Team Under 1.5 | **LOSS** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **UNRESOLVED** |
+| — | Potential winner: Cannes | **WIN** |
+
+**What went right:** the low-total and BTTS state was excellent, and the winner call was correct.
+
+**What went wrong:** again, the team-score allocation was a half-goal too low. A 2–0 final wins Under 2.5 while losing Cannes Under 1.5; these are not contradictory outcomes.
+
+**Source note:** the two scoring sequences being corner-related is useful mechanism evidence but cannot by itself recover the final number of corners. C05 stays unresolved.
+
+---
+
+### P-179 — Thionville Lusitanos vs Paris 13 Atletico — Ligue 3
+
+**Final:** 1–1; halftime 0–0.  
+**Corners:** a current specialist result page reports Thionville 8–1 Paris 13 (9 total); this row remains provider-provisional.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Thionville Team Over 0.5 | **WIN** |
+| 2 | 1st Half Over 0.5 | **LOSS** |
+| 3 | Paris 13 Team Under 1.5 | **WIN** |
+| 4 | Under 2.5 Goals | **WIN** |
+| 5 | Under 10.5 Corners | **PROVISIONAL WIN** |
+| — | Potential winner: Thionville | **LOSS — DRAW** |
+
+**Retrospective:** the goal-volume/team-total structure was sound. The winner call was less robust than the two team-total/Under rows because a 1–1 state satisfied the core scoring thesis while defeating the side.
+
+---
+
+### P-180 — 1. FC Köln vs TSG Hoffenheim — Bundesliga
+
+**Official final:** Köln 3–2 Hoffenheim.  
+**Retrieved current stats:** Hoffenheim won the corner count 7–6.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 | **WIN** |
+| 2 | Hoffenheim Team Over 0.5 | **WIN** |
+| 3 | Hoffenheim or Draw X2 | **LOSS** |
+| 4 | Over 2.5 Goals | **WIN** |
+| 5 | Hoffenheim Most Corners — 3-way | **WIN** |
+| — | Potential winner: Hoffenheim | **LOSS** |
+
+**What went right:** early goal, Hoffenheim scoring, match Over and corner direction all landed.
+
+**What went wrong:** the side/winner was vulnerable to the late substitution/finishing phase. The game illustrates why scoring-event models can be right while a 1X2 result is wrong.
+
+**Learning candidate:** late substitution and finishing tails should remain explicit in close sides, especially when derivative scoring contracts are already preferred.
+
+---
+
+### P-181 — Coventry City vs Hull City — Premier League
+
+**Final:** Hull City 1–0 Coventry City; halftime 0–0.  
+**Retrieved current stats:** Coventry held roughly two-thirds possession, won corners 6–2 and generated more territory; Hull produced only a small shot/xG volume but converted the decisive late chance.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Coventry or Draw 1X | **LOSS** |
+| 2 | Hull Team Under 1.5 | **WIN** |
+| 3 | Under 2.5 Goals | **WIN** |
+
+
+---
+
+### P-178 — Cannes vs Le Puy — Ligue 3
+
+**Final:** Cannes 2–0 Le Puy. Both goals arose from corner/set-piece sequences in current match reporting.  
+**Corner aggregate:** not recovered from a trusted final provider.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 2.5 Goals | **WIN** |
+| 2 | Cannes Team Under 1.5 | **LOSS** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **UNRESOLVED** |
+| — | Potential winner: Cannes | **WIN** |
+
+**What went right:** the low-total and BTTS state was excellent, and the winner call was correct.
+
+**What went wrong:** again, the team-score allocation was a half-goal too low. A 2–0 final wins Under 2.5 while losing Cannes Under 1.5; these are not contradictory outcomes.
+
+**Source note:** the two scoring sequences being corner-related is useful mechanism evidence but cannot by itself recover the final number of corners. C05 stays unresolved.
+
+---
+
+### P-179 — Thionville Lusitanos vs Paris 13 Atletico — Ligue 3
+
+**Final:** 1–1; halftime 0–0.  
+**Corners:** a current specialist result page reports Thionville 8–1 Paris 13 (9 total); this row remains provider-provisional.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Thionville Team Over 0.5 | **WIN** |
+| 2 | 1st Half Over 0.5 | **LOSS** |
+| 3 | Paris 13 Team Under 1.5 | **WIN** |
+| 4 | Under 2.5 Goals | **WIN** |
+| 5 | Under 10.5 Corners | **PROVISIONAL WIN** |
+| — | Potential winner: Thionville | **LOSS — DRAW** |
+
+**Retrospective:** the goal-volume/team-total structure was sound. The winner call was less robust than the two team-total/Under rows because a 1–1 state satisfied the core scoring thesis while defeating the side.
+
+---
+
+### P-180 — 1. FC Köln vs TSG Hoffenheim — Bundesliga
+
+**Official final:** Köln 3–2 Hoffenheim.  
+**Retrieved current stats:** Hoffenheim won the corner count 7–6.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 | **WIN** |
+| 2 | Hoffenheim Team Over 0.5 | **WIN** |
+| 3 | Hoffenheim or Draw X2 | **LOSS** |
+| 4 | Over 2.5 Goals | **WIN** |
+| 5 | Hoffenheim Most Corners — 3-way | **WIN** |
+| — | Potential winner: Hoffenheim | **LOSS** |
+
+**What went right:** early goal, Hoffenheim scoring, match Over and corner direction all landed.
+
+**What went wrong:** the side/winner was vulnerable to the late substitution/finishing phase. The game illustrates why scoring-event models can be right while a 1X2 result is wrong.
+
+**Learning candidate:** late substitution and finishing tails should remain explicit in close sides, especially when derivative scoring contracts are already preferred.
+
+---
+
+### P-181 — Coventry City vs Hull City — Premier League
+
+**Final:** Hull City 1–0 Coventry City; halftime 0–0.  
+**Retrieved current stats:** Coventry held roughly two-thirds possession, won corners 6–2 and generated more territory; Hull produced only a small shot/xG volume but converted the decisive late chance.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Coventry or Draw 1X | **LOSS** |
+| 2 | Hull Team Under 1.5 | **WIN** |
+| 3 | Under 2.5 Goals | **WIN** |
+| 4 | Coventry Most Corners | **WIN** |
+
+---
+
+### P-178 — Cannes vs Le Puy — Ligue 3
+
+**Final:** Cannes 2–0 Le Puy. Both goals arose from corner/set-piece sequences in current match reporting.  
+**Corner aggregate:** not recovered from a trusted final provider.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 2.5 Goals | **WIN** |
+| 2 | Cannes Team Under 1.5 | **LOSS** |
+| 3 | 1st Half Over 0.5 | **WIN** |
+| 4 | BTTS — No | **WIN** |
+| 5 | Under 10.5 Corners | **UNRESOLVED** |
+| — | Potential winner: Cannes | **WIN** |
+
+**What went right:** the low-total and BTTS state was excellent, and the winner call was correct.
+
+**What went wrong:** again, the team-score allocation was a half-goal too low. A 2–0 final wins Under 2.5 while losing Cannes Under 1.5; these are not contradictory outcomes.
+
+**Source note:** the two scoring sequences being corner-related is useful mechanism evidence but cannot by itself recover the final number of corners. C05 stays unresolved.
+
+---
+
+### P-179 — Thionville Lusitanos vs Paris 13 Atletico — Ligue 3
+
+**Final:** 1–1; halftime 0–0.  
+**Corners:** a current specialist result page reports Thionville 8–1 Paris 13 (9 total); this row remains provider-provisional.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Thionville Team Over 0.5 | **WIN** |
+| 2 | 1st Half Over 0.5 | **LOSS** |
+| 3 | Paris 13 Team Under 1.5 | **WIN** |
+| 4 | Under 2.5 Goals | **WIN** |
+| 5 | Under 10.5 Corners | **PROVISIONAL WIN** |
+| — | Potential winner: Thionville | **LOSS — DRAW** |
+
+**Retrospective:** the goal-volume/team-total structure was sound. The winner call was less robust than the two team-total/Under rows because a 1–1 state satisfied the core scoring thesis while defeating the side.
+
+---
+
+### P-180 — 1. FC Köln vs TSG Hoffenheim — Bundesliga
+
+**Official final:** Köln 3–2 Hoffenheim.  
+**Retrieved current stats:** Hoffenheim won the corner count 7–6.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 | **WIN** |
+| 2 | Hoffenheim Team Over 0.5 | **WIN** |
+| 3 | Hoffenheim or Draw X2 | **LOSS** |
+| 4 | Over 2.5 Goals | **WIN** |
+| 5 | Hoffenheim Most Corners — 3-way | **WIN** |
+| — | Potential winner: Hoffenheim | **LOSS** |
+
+**What went right:** early goal, Hoffenheim scoring, match Over and corner direction all landed.
+
+**What went wrong:** the side/winner was vulnerable to the late substitution/finishing phase. The game illustrates why scoring-event models can be right while a 1X2 result is wrong.
+
+**Learning candidate:** late substitution and finishing tails should remain explicit in close sides, especially when derivative scoring contracts are already preferred.
+
+---
+
+### P-181 — Coventry City vs Hull City — Premier League
+
+**Final:** Hull City 1–0 Coventry City; halftime 0–0.  
+**Retrieved current stats:** Coventry held roughly two-thirds possession, won corners 6–2 and generated more territory; Hull produced only a small shot/xG volume but converted the decisive late chance.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Coventry or Draw 1X | **LOSS** |
+| 2 | Hull Team Under 1.5 | **WIN** |
+| 3 | Under 2.5 Goals | **WIN** |
+| 4 | Coventry Most Corners | **WIN** |
+| 5 | 1st Half Over 0.5 | **LOSS** |

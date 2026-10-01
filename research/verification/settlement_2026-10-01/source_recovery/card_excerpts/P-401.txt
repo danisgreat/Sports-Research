@@ -1,0 +1,307 @@
+| P-354 | Carp @ Tigers — NPB | FINAL / SETTLED | W L L W; winner L; Brier 0.2968; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-355 | Sydney FC v Melbourne Victory — Australia Cup SF | FINAL / SETTLED (corner row settled at FotMob this pass) — top two won | W W L W W; winner L; Brier 0.1531; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-356 | KT @ Samsung — KBO | FINAL / SETTLED — deep Rank-#1 retro | L W W W; winner L; Brier 0.2418; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-357 | Dublin Guardians v Belfast Wolves — ETPL M18 | FINAL / SETTLED — deep Rank-#1 retro | L L W W; winner L; Brier 0.3377; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-358 | Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired) | FINAL / SETTLED — deep Rank-#1 retro | L W L W; winner W; Brier 0.2973; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-359 | Jordan v Chinese Taipei — Asian Games | FINAL / SETTLED | W L W L; winner L; Brier 0.2467; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-360 | South Korea v Saudi Arabia — Asian Games | FINAL / SETTLED | W L W L; winner W; Brier 0.2409; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-361 | Dragons @ Giants — NPB, 10 Sep | FINAL / SETTLED | W L W L; winner W; Brier 0.2493; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-362 | Eagles @ Landers — KBO | FINAL / SETTLED | W L W L; winner W; Brier 0.2450; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-363 | Roosters W v Bulldogs W — NRLW R11 | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.1773; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-364 | England v Pakistan — 3rd Test (Day-2 card) | FINAL / SETTLED (2026-09-15) — England won by 8 wickets on Day 4 (12 Sep); winner label settled | L L W W; winner **W**; Brier 0.3429 (4 ranked rows; winner label not a Brier row); [canonical log](PREDICTION_LOG_COMBINED_3.md) §"2026-09-15"; [combined log §"2026-09-15"](PREDICTION_LOG_COMBINED_3.md) |
+| P-365 | Uni-Lions @ CTBC Brothers — CPBL | FINAL / SETTLED — deep Rank-#1 retro | L W L W; winner W; Brier 0.2768; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-366 | Rotterdam v Glasgow — ETPL M19 | FINAL / CLOSED; C02/C03 terminal censored, other rows settled | W C C L; winner W; Brier 0.1936 (2 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-367 | China W v France W — FIBA WWC QF | FINAL / SETTLED — top two won | W W L L; winner W; Brier 0.2071; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-368 | Al Jazira v Al Nasr — UAE Pro League | FINAL / PARTIAL; corner field pending | W P L W L; winner L (draw); Brier 0.1917 (4 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-369 | Dubai United v Shabab Al Ahli — UAE Pro League | FINAL / PARTIAL; corner field pending | P L L W W; winner L (draw); Brier 0.3909 (4 rows); [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-370 | Jamaica Empress W v TKR W — WCPL | ADMINISTRATIVE / NO SCORED TRIAL | none issued; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-371 | Belgium W v Germany W — FIBA WWC QF | FINAL / SETTLED — deep Rank-#1 retro | L L W W; winner L; Brier 0.3145; [canonical log](PREDICTION_LOG_COMBINED_3.md) |
+| P-372 | — | RESERVED / UNUSED — no record was ever issued under this ID (both external sessions started at P-373 / P-390 / P-407) | none |
+| P-373 | Tampa Bay Rays @ Atlanta Braves — MLB — 2026-09-10 (Atlanta local) | FINAL / SETTLED | L W L W |
+| P-374 | Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10 | FINAL / SETTLED — canonical record for Fenerbahçe v Roma; absorbs TMP-SETTLED-20260911-01 | W W W L L |
+| P-375 | Coco Gauff vs Elena Rybakina — US Open Women — Semifinal | FINAL / SETTLED | W W L L |
+| P-376 | San Francisco 49ers vs Los Angeles Rams — NFL Week 1 — Melbourne | FINAL / SETTLED | W L W L |
+| P-377 | Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260912-01) | L P L W W |
+| P-378 | Philippines vs Bahrain — 2026 Aichi-Nagoya Asian Games Men's Basketball | FINAL / SETTLED | L L W W |
+| P-379 | Namibia vs South Africa — 2nd ODI — South Africa tour of Namibia 2026 | FINAL / SETTLED | W W L L |
+| P-380 | Wests Tigers (W) vs Canberra Raiders (W) — NRLW Round 11, 2026 | FINAL / SETTLED | W W L L |
+| P-381 | Chiba Lotte Marines @ Fukuoka SoftBank Hawks — NPB Pacific League | FINAL / SETTLED | W W L L |
+| P-382 | Saitama Seibu Lions @ Orix Buffaloes — NPB Pacific League | FINAL / SETTLED | L W W L |
+| P-383 | Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League | FINAL / SETTLED | L L W W |
+| P-384 | Kiwoom Heroes @ Samsung Lions — KBO League | FINAL / SETTLED | W W L L |
+| P-385 | KT Wiz @ Lotte Giants — KBO League | FINAL / SETTLED | W L W L |
+| P-386 | South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final | FINAL / SETTLED | W L W L |
+| P-387 | Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League | FINAL / SETTLED | W L L W L |
+| P-388 | Fremantle Dockers vs Geelong Cats — AFL First Semi-Final | FINAL / SETTLED | L L W W |
+| P-389 | Dublin Guardians vs Edinburgh Castle Rockers — ETPL 2026 Match 21 | ADMINISTRATIVE / NO FORECAST (toss gate withheld correctly) | none issued |
+| P-390 | Cincinnati Reds @ Milwaukee Brewers — MLB | FINAL / SETTLED | W L W L |
+| P-391 | Cleveland Guardians @ Minnesota Twins — MLB | FINAL / SETTLED | L W L W |
+| P-392 | Chicago White Sox @ St. Louis Cardinals — MLB | FINAL / SETTLED | W W L L |
+| P-393 | Seattle Mariners @ Athletics — MLB | FINAL / SETTLED | L W L W |
+| P-394 | Parramatta Eels Women vs North Queensland Cowboys Women — NRLW | FINAL / SETTLED | W W L L |
+| P-395 | Belfast Wolves vs Rotterdam Dockers — European T20 Premier League | FINAL / SETTLED | W W L L |
+| P-396 | Brisbane Lions vs Adelaide Crows — AFL Semi Final | FINAL / SETTLED | L L W W |
+| P-397 | Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final | FINAL / SETTLED | L L W W |
+| P-398 | Racing Santander vs Deportivo Alavés — La Liga | FINAL / SETTLED | W W L W L |
+| P-399 | Genoa vs Frosinone — Serie A | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260914-01) | W P W L L |
+| P-400 | Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL | FINAL / SETTLED | W W L L |
+| P-401 | IFK Göteborg vs Halmstads BK — Allsvenskan | FINAL / PARTIAL — C01, C03 corners provisional (TMP-OPEN-20260914-02/-03) | P W P L W |
+| P-402 | Tottenham Hotspur vs Everton — Premier League | FINAL / SETTLED (2026-09-15: corners settled at Premier League official record; TMP-OPEN-20260914-04/-05 retired) | W W W L L |
+| P-403 | Colorado Rockies @ Detroit Tigers — MLB | FINAL / SETTLED | L W L W |
+| P-404 | Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB | FINAL / SETTLED | L L W W |
+| P-405 | Chunichi Dragons @ Hanshin Tigers — NPB | FINAL / SETTLED | W W L L |
+| P-406 | Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 | FINAL / SETTLED (2026-09-16: six-over rows settled at ESPN cricket API event 1547895 — Edinburgh 68/2 after 6.0; TMP-OPEN-20260914-06 retired) | W L W L |
+| P-407 | Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League | FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) | P W W L W |
+| P-408 | Coventry City vs Brighton & Hove Albion — English Premier League | FINAL / SETTLED | L W W W W |
+| P-409 | Lille OSC vs ESTAC Troyes — French Ligue 1 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260915-02) | W P W W W |
+| P-410 | RB Leipzig vs Hamburger SV — German Bundesliga | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-03) | W W W W P |
+| P-411 | Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place | FINAL / SETTLED | L W L W |
+| P-412 | Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1 | FINAL / SETTLED | L W L W |
+| P-413 | Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-414 | Buffalo Bills @ Houston Texans — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-415 | LA Angels @ Washington Nationals — MLB | ADMINISTRATIVE / NOT ISSUED (interrupted) | none issued |
+| P-416 | New York Mets @ New York Yankees — MLB | FINAL / SETTLED | W L W L |
+| P-417 | Chunichi Dragons @ Hanshin Tigers — NPB Central League | FINAL / SETTLED | W L W L |
+| P-418 | Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League | OPEN — RESULT NOT RECOVERED (2026-09-16 re-classification): fixture listed by RSSSF Round 15 [Sep 14], unscored, page updated 11 Sep; the earlier "no Drukpa–RTC match" evidence was a BBS report dated 2026-07-17 (TMP-OPEN-20260915-04) | 5 rows issued; none graded |
+| P-419 | Djurgårdens IF vs GAIS — Sweden Allsvenskan | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-05) | W W W W P |
+| P-420 | Atlanta Braves @ Chicago Cubs — MLB | FINAL / SETTLED | L W L W |
+| P-421 | New York Yankees @ Minnesota Twins — MLB | FINAL / SETTLED | W W L L |
+| P-422 | Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1 | FINAL / SETTLED | L W L W |
+| P-423 | San Diego Padres @ Colorado Rockies — MLB | FINAL / SETTLED | L W W L |
+| P-424 | Amsterdam Flames vs Dublin Guardians — ETPL 2026 Match 26 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | none issued; final Amsterdam 214/5 bt Dublin 155/9, PP 48/2 |
+| P-425 | Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1 | FINAL / SETTLED | W L W L W; winner W; Brier 0.2416 |
+| P-426 | Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1 | FINAL / SETTLED | W L L L L; winner W; Brier 0.3816 |
+| P-427 | Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round | FINAL / SETTLED — deep Rank-#1 retro (top two both lost) | L L W W; winner L; Brier 0.3542 |
+| P-428 | Edinburgh Castle Rockers vs Rotterdam Dockers — ETPL Match 27 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | none issued; final Rotterdam 181/6 bt Edinburgh 176/5, PP 54/2 |
+| P-429 | Afghanistan vs India — 2nd T20I, Delhi | FINAL / SETTLED — top two both won; both XIs confirmed | W W W L; winner W; Brier 0.1635 |
+
+| 3 | FT Under 2.5 | 56% | **WIN** — 2 | 0.1936 |
+| 4 | FT Over 2.5 | 44% | **LOSS** | 0.1936 |
+| 5 | 1H Under 0.5 | 33% | **LOSS** | 0.1089 |
+
+**Potential regulation winner:** Genoa 40% — **LOSS** (draw). Original 1X2 also reserved 27% for the draw.
+
+**What went right:** early-goal and Under directions. The match also generated very high corner volume while staying Under 2.5, directly supporting the framework's separation of goal and corner processes.
+
+**What could improve:** Genoa missed a first-half penalty and later played the final minutes with ten men after Johan Vásquez's second yellow. Those realised events are not pregame misses. The winner call at 40% should not be over-interpreted against a 27% draw band.
+
+**Source/settlement issue:** OFStats and PlayerStats independently report 8-9 corners, and their event timelines enumerate corner events. However the original card explicitly had `UNKNOWN_DEFINITION` for the exact corner provider and no field-owning Lega Serie A corner endpoint was recovered in this pass. Per `RULES_SOCCER.md`, this remains provisional rather than silently upgraded.
+
+**Learning / proposed placement:** reinforce existing `RULES_SOCCER.md` derivative-settlement and “goals are not corners” controls. No new predictive rule. Source lane candidates (`OFStats`, `PlayerStats`) may be recorded in `DATA_SOURCE_REGISTER.md` as **secondary corroboration only**, not field owners.
+
+**Settlement sources:** OFStats `https://ofstats.com/matches/view/genoa-frosinone-2026-09-12`; PlayerStats `https://playerstats.football/fixture/genoa/frosinone/2026-09-12`.
+
+**Open handle:** `TMP-OPEN-20260914-01` — `P-399-C02`, combined corners O8.5; retry only if a Lega Serie A/official data-partner field or frozen-provider-equivalent record is recovered.
+
+**Disposition:** **PARTIALLY SETTLED / EVENT REMAINS OPEN ONLY FOR C02**.
+
+
+##### 2026-09-15 canonical settlement audit — P-399
+
+- **Final re-verified:** ESPN `ita.1` 401874991 (1–1; ESPN corners 8+9 = 17).
+- **Corner row:** C02 stays provisional (`TMP-OPEN-20260914-01`) — no Serie A record reached.
+- **What went right:** Rank #1 1H Over and the Under 2.5 won. 1–1 with 17 corners is the "corners are not goals" counterexample.
+
+#### P-401 — IFK Göteborg vs Halmstads BK — Allsvenskan
+
+
+**Verified final:** IFK Göteborg **2**, Halmstads BK **1**. Goals: 37', 52', 73', so half-time was **1-0**. Multiple current statistical feeds report **IFK 8, Halmstad 9 corners = 17**.
+
+| Rank | Frozen contract | Issued `p` | Settlement | Brier/status |
+|---:|---|---:|---|---|
+| 1 | Combined corners Over 8.5 | 80% | **PROVISIONAL RESEARCH WIN** — 17; not owner-standard booked | — |
+| 2 | Halmstad team total Under 1.5 | 77% | **WIN** — 1 goal | 0.0529 |
+| 3 | IFK team corners Over 4.5 | 76% | **PROVISIONAL RESEARCH WIN** — 8; not owner-standard booked | — |
+| 4 | 1H Under 0.5 | 56% | **LOSS** — IFK scored 37' | 0.3136 |
+| 5 | FT Over 2.5 | 53% | **WIN** — 3 goals | 0.2209 |
+
+**Potential regulation winner:** IFK Göteborg 67% — **WIN**.
+
+**What went right:** winner, Halmstad scoring suppression, and the full-match Over. The corner mechanism also appears directionally strong: 17 total and eight IFK corners across independent displays.
+
+**What went wrong:** the early-goal Under was only a modest 56% but still ranked above the full-match Over. IFK scored at 37', so the first-half no-goal branch failed without invalidating the separate corner or team-total logic.
+
+**Settlement/source lesson:** Statz and FootyMetrics agree on 8-9 corners, with ScoreBat also reporting 8-9. That is strong research corroboration, but the card's provider definition was not frozen and no Allsvenskan field-owner/data-partner record has been recovered. Per the Drive rule, agreement among secondary feeds does not itself create a frozen field owner.
+
+**Learning / proposed placement:** reinforce `RULES_SOCCER.md` derivative completeness/settleability. Candidate source registration: Statz/FotMob/FootyMetrics/ScoreBat as secondary Opta/statistical lanes for Allsvenskan discovery/corroboration, not definitive settlement unless provider equivalence is documented.
+
+**Settlement sources:** Statz `https://statz.ai/h2h/ifk-gteborg-vs-halmstad/19635884`; FootyMetrics Allsvenskan corner table `https://www.footymetrics.com/statistics/corners/sweden-allsvenskan`; ScoreBat match page `https://www.scorebat.com/goteborg-vs-halmstad-live-stream/`.
+
+**Open handles:** `TMP-OPEN-20260914-02` — `P-401-C01` combined corners O8.5; `TMP-OPEN-20260914-03` — `P-401-C03` IFK team corners O4.5.
+
+**Disposition:** **PARTIALLY SETTLED / EVENT REMAINS OPEN FOR C01 AND C03 ONLY**.
+
+
+##### 2026-09-15 canonical settlement audit — P-401
+
+- **Final re-verified:** ESPN `swe.1` 401874088 (2–1; ESPN corners 8+9 = 17, IFK 8).
+- **Corner rows:** C01 and C03 stay provisional (`TMP-OPEN-20260914-02`/`-03`), so Rank #1 is not booked.
+- **Additional learning:** the 56% 1H Under lost at 37' — recorded in the `C-PHASE-VS-FULL-TOTAL` update.
+
+#### P-402 — Tottenham Hotspur vs Everton — Premier League
+
+
+**Verified final:** Tottenham Hotspur **0**, Everton **0**. Secondary Opta/event-stat lanes agree on **Tottenham 5, Everton 6 corners = 11**.
+
+| Rank | Frozen contract | Issued `p` | Settlement | Brier/status |
+|---:|---|---:|---|---|
+| 1 | Everton +1.5 | 81% | **WIN** | 0.0361 |
+| 2 | Combined corners Over 8.5 | 74% | **PROVISIONAL RESEARCH WIN** — 11; provider unresolved | — |
+| 3 | Tottenham team corners Over 4.5 | 71% | **PROVISIONAL RESEARCH WIN** — 5; provider unresolved | — |
+| 4 | 1H Over 0.5 | 63% | **LOSS** — 0-0 HT | 0.3969 |
+| 5 | FT Over 2.5 | 52% | **LOSS** — 0 goals | 0.2704 |
+
+
+| 5 | 1H Under 0.5 | 33% | **LOSS** | 0.1089 |
+
+**Potential regulation winner:** Genoa 40% — **LOSS** (draw). Original 1X2 also reserved 27% for the draw.
+
+**What went right:** early-goal and Under directions. The match also generated very high corner volume while staying Under 2.5, directly supporting the framework's separation of goal and corner processes.
+
+**What could improve:** Genoa missed a first-half penalty and later played the final minutes with ten men after Johan Vásquez's second yellow. Those realised events are not pregame misses. The winner call at 40% should not be over-interpreted against a 27% draw band.
+
+**Source/settlement issue:** OFStats and PlayerStats independently report 8-9 corners, and their event timelines enumerate corner events. However the original card explicitly had `UNKNOWN_DEFINITION` for the exact corner provider and no field-owning Lega Serie A corner endpoint was recovered in this pass. Per `RULES_SOCCER.md`, this remains provisional rather than silently upgraded.
+
+**Learning / proposed placement:** reinforce existing `RULES_SOCCER.md` derivative-settlement and “goals are not corners” controls. No new predictive rule. Source lane candidates (`OFStats`, `PlayerStats`) may be recorded in `DATA_SOURCE_REGISTER.md` as **secondary corroboration only**, not field owners.
+
+**Settlement sources:** OFStats `https://ofstats.com/matches/view/genoa-frosinone-2026-09-12`; PlayerStats `https://playerstats.football/fixture/genoa/frosinone/2026-09-12`.
+
+**Open handle:** `TMP-OPEN-20260914-01` — `P-399-C02`, combined corners O8.5; retry only if a Lega Serie A/official data-partner field or frozen-provider-equivalent record is recovered.
+
+**Disposition:** **PARTIALLY SETTLED / EVENT REMAINS OPEN ONLY FOR C02**.
+
+
+##### 2026-09-15 canonical settlement audit — P-399
+
+- **Final re-verified:** ESPN `ita.1` 401874991 (1–1; ESPN corners 8+9 = 17).
+- **Corner row:** C02 stays provisional (`TMP-OPEN-20260914-01`) — no Serie A record reached.
+- **What went right:** Rank #1 1H Over and the Under 2.5 won. 1–1 with 17 corners is the "corners are not goals" counterexample.
+
+#### P-401 — IFK Göteborg vs Halmstads BK — Allsvenskan
+
+
+**Verified final:** IFK Göteborg **2**, Halmstads BK **1**. Goals: 37', 52', 73', so half-time was **1-0**. Multiple current statistical feeds report **IFK 8, Halmstad 9 corners = 17**.
+
+| Rank | Frozen contract | Issued `p` | Settlement | Brier/status |
+|---:|---|---:|---|---|
+| 1 | Combined corners Over 8.5 | 80% | **PROVISIONAL RESEARCH WIN** — 17; not owner-standard booked | — |
+| 2 | Halmstad team total Under 1.5 | 77% | **WIN** — 1 goal | 0.0529 |
+| 3 | IFK team corners Over 4.5 | 76% | **PROVISIONAL RESEARCH WIN** — 8; not owner-standard booked | — |
+| 4 | 1H Under 0.5 | 56% | **LOSS** — IFK scored 37' | 0.3136 |
+| 5 | FT Over 2.5 | 53% | **WIN** — 3 goals | 0.2209 |
+
+**Potential regulation winner:** IFK Göteborg 67% — **WIN**.
+
+**What went right:** winner, Halmstad scoring suppression, and the full-match Over. The corner mechanism also appears directionally strong: 17 total and eight IFK corners across independent displays.
+
+**What went wrong:** the early-goal Under was only a modest 56% but still ranked above the full-match Over. IFK scored at 37', so the first-half no-goal branch failed without invalidating the separate corner or team-total logic.
+
+**Settlement/source lesson:** Statz and FootyMetrics agree on 8-9 corners, with ScoreBat also reporting 8-9. That is strong research corroboration, but the card's provider definition was not frozen and no Allsvenskan field-owner/data-partner record has been recovered. Per the Drive rule, agreement among secondary feeds does not itself create a frozen field owner.
+
+**Learning / proposed placement:** reinforce `RULES_SOCCER.md` derivative completeness/settleability. Candidate source registration: Statz/FotMob/FootyMetrics/ScoreBat as secondary Opta/statistical lanes for Allsvenskan discovery/corroboration, not definitive settlement unless provider equivalence is documented.
+
+**Settlement sources:** Statz `https://statz.ai/h2h/ifk-gteborg-vs-halmstad/19635884`; FootyMetrics Allsvenskan corner table `https://www.footymetrics.com/statistics/corners/sweden-allsvenskan`; ScoreBat match page `https://www.scorebat.com/goteborg-vs-halmstad-live-stream/`.
+
+**Open handles:** `TMP-OPEN-20260914-02` — `P-401-C01` combined corners O8.5; `TMP-OPEN-20260914-03` — `P-401-C03` IFK team corners O4.5.
+
+**Disposition:** **PARTIALLY SETTLED / EVENT REMAINS OPEN FOR C01 AND C03 ONLY**.
+
+
+##### 2026-09-15 canonical settlement audit — P-401
+
+- **Final re-verified:** ESPN `swe.1` 401874088 (2–1; ESPN corners 8+9 = 17, IFK 8).
+- **Corner rows:** C01 and C03 stay provisional (`TMP-OPEN-20260914-02`/`-03`), so Rank #1 is not booked.
+- **Additional learning:** the 56% 1H Under lost at 37' — recorded in the `C-PHASE-VS-FULL-TOTAL` update.
+
+#### P-402 — Tottenham Hotspur vs Everton — Premier League
+
+
+**Verified final:** Tottenham Hotspur **0**, Everton **0**. Secondary Opta/event-stat lanes agree on **Tottenham 5, Everton 6 corners = 11**.
+
+| Rank | Frozen contract | Issued `p` | Settlement | Brier/status |
+|---:|---|---:|---|---|
+| 1 | Everton +1.5 | 81% | **WIN** | 0.0361 |
+| 2 | Combined corners Over 8.5 | 74% | **PROVISIONAL RESEARCH WIN** — 11; provider unresolved | — |
+| 3 | Tottenham team corners Over 4.5 | 71% | **PROVISIONAL RESEARCH WIN** — 5; provider unresolved | — |
+| 4 | 1H Over 0.5 | 63% | **LOSS** — 0-0 HT | 0.3969 |
+| 5 | FT Over 2.5 | 52% | **LOSS** — 0 goals | 0.2704 |
+
+**Potential regulation winner:** Tottenham 41% — **LOSS** (draw).
+
+
+
+**Potential regulation winner:** Genoa 40% — **LOSS** (draw). Original 1X2 also reserved 27% for the draw.
+
+**What went right:** early-goal and Under directions. The match also generated very high corner volume while staying Under 2.5, directly supporting the framework's separation of goal and corner processes.
+
+**What could improve:** Genoa missed a first-half penalty and later played the final minutes with ten men after Johan Vásquez's second yellow. Those realised events are not pregame misses. The winner call at 40% should not be over-interpreted against a 27% draw band.
+
+**Source/settlement issue:** OFStats and PlayerStats independently report 8-9 corners, and their event timelines enumerate corner events. However the original card explicitly had `UNKNOWN_DEFINITION` for the exact corner provider and no field-owning Lega Serie A corner endpoint was recovered in this pass. Per `RULES_SOCCER.md`, this remains provisional rather than silently upgraded.
+
+**Learning / proposed placement:** reinforce existing `RULES_SOCCER.md` derivative-settlement and “goals are not corners” controls. No new predictive rule. Source lane candidates (`OFStats`, `PlayerStats`) may be recorded in `DATA_SOURCE_REGISTER.md` as **secondary corroboration only**, not field owners.
+
+**Settlement sources:** OFStats `https://ofstats.com/matches/view/genoa-frosinone-2026-09-12`; PlayerStats `https://playerstats.football/fixture/genoa/frosinone/2026-09-12`.
+
+**Open handle:** `TMP-OPEN-20260914-01` — `P-399-C02`, combined corners O8.5; retry only if a Lega Serie A/official data-partner field or frozen-provider-equivalent record is recovered.
+
+**Disposition:** **PARTIALLY SETTLED / EVENT REMAINS OPEN ONLY FOR C02**.
+
+
+##### 2026-09-15 canonical settlement audit — P-399
+
+- **Final re-verified:** ESPN `ita.1` 401874991 (1–1; ESPN corners 8+9 = 17).
+- **Corner row:** C02 stays provisional (`TMP-OPEN-20260914-01`) — no Serie A record reached.
+- **What went right:** Rank #1 1H Over and the Under 2.5 won. 1–1 with 17 corners is the "corners are not goals" counterexample.
+
+#### P-401 — IFK Göteborg vs Halmstads BK — Allsvenskan
+
+
+**Verified final:** IFK Göteborg **2**, Halmstads BK **1**. Goals: 37', 52', 73', so half-time was **1-0**. Multiple current statistical feeds report **IFK 8, Halmstad 9 corners = 17**.
+
+| Rank | Frozen contract | Issued `p` | Settlement | Brier/status |
+|---:|---|---:|---|---|
+| 1 | Combined corners Over 8.5 | 80% | **PROVISIONAL RESEARCH WIN** — 17; not owner-standard booked | — |
+| 2 | Halmstad team total Under 1.5 | 77% | **WIN** — 1 goal | 0.0529 |
+| 3 | IFK team corners Over 4.5 | 76% | **PROVISIONAL RESEARCH WIN** — 8; not owner-standard booked | — |
+| 4 | 1H Under 0.5 | 56% | **LOSS** — IFK scored 37' | 0.3136 |
+| 5 | FT Over 2.5 | 53% | **WIN** — 3 goals | 0.2209 |
+
+**Potential regulation winner:** IFK Göteborg 67% — **WIN**.
+
+**What went right:** winner, Halmstad scoring suppression, and the full-match Over. The corner mechanism also appears directionally strong: 17 total and eight IFK corners across independent displays.
+
+**What went wrong:** the early-goal Under was only a modest 56% but still ranked above the full-match Over. IFK scored at 37', so the first-half no-goal branch failed without invalidating the separate corner or team-total logic.
+
+**Settlement/source lesson:** Statz and FootyMetrics agree on 8-9 corners, with ScoreBat also reporting 8-9. That is strong research corroboration, but the card's provider definition was not frozen and no Allsvenskan field-owner/data-partner record has been recovered. Per the Drive rule, agreement among secondary feeds does not itself create a frozen field owner.
+
+**Learning / proposed placement:** reinforce `RULES_SOCCER.md` derivative completeness/settleability. Candidate source registration: Statz/FotMob/FootyMetrics/ScoreBat as secondary Opta/statistical lanes for Allsvenskan discovery/corroboration, not definitive settlement unless provider equivalence is documented.
+
+**Settlement sources:** Statz `https://statz.ai/h2h/ifk-gteborg-vs-halmstad/19635884`; FootyMetrics Allsvenskan corner table `https://www.footymetrics.com/statistics/corners/sweden-allsvenskan`; ScoreBat match page `https://www.scorebat.com/goteborg-vs-halmstad-live-stream/`.
+
+**Open handles:** `TMP-OPEN-20260914-02` — `P-401-C01` combined corners O8.5; `TMP-OPEN-20260914-03` — `P-401-C03` IFK team corners O4.5.
+
+**Disposition:** **PARTIALLY SETTLED / EVENT REMAINS OPEN FOR C01 AND C03 ONLY**.
+
+
+##### 2026-09-15 canonical settlement audit — P-401
+
+- **Final re-verified:** ESPN `swe.1` 401874088 (2–1; ESPN corners 8+9 = 17, IFK 8).
+- **Corner rows:** C01 and C03 stay provisional (`TMP-OPEN-20260914-02`/`-03`), so Rank #1 is not booked.
+- **Additional learning:** the 56% 1H Under lost at 37' — recorded in the `C-PHASE-VS-FULL-TOTAL` update.
+
+#### P-402 — Tottenham Hotspur vs Everton — Premier League
+
+
+**Verified final:** Tottenham Hotspur **0**, Everton **0**. Secondary Opta/event-stat lanes agree on **Tottenham 5, Everton 6 corners = 11**.
+
+| Rank | Frozen contract | Issued `p` | Settlement | Brier/status |
+|---:|---|---:|---|---|
+| 1 | Everton +1.5 | 81% | **WIN** | 0.0361 |
+| 2 | Combined corners Over 8.5 | 74% | **PROVISIONAL RESEARCH WIN** — 11; provider unresolved | — |
+| 3 | Tottenham team corners Over 4.5 | 71% | **PROVISIONAL RESEARCH WIN** — 5; provider unresolved | — |
+| 4 | 1H Over 0.5 | 63% | **LOSS** — 0-0 HT | 0.3969 |
+| 5 | FT Over 2.5 | 52% | **LOSS** — 0 goals | 0.2704 |
+
+**Potential regulation winner:** Tottenham 41% — **LOSS** (draw).
+
+**What went right:** the strongest row, Everton +1.5, was robust to the draw. The corner exposure also appears correct: Spurs reached five and the match eleven despite no goals.

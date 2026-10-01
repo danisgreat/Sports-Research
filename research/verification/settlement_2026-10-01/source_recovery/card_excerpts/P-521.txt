@@ -1,0 +1,307 @@
+
+**Source firewall:** no bookmaker odds, prices, line movement, tipsters, previews, prediction markets, fantasy/DFS pages or live-game performance data were used. The supplied contracts were treated only as query thresholds.
+
+#### 9. Completeness audit (`RULES_GENERAL.md` §16.8)
+1. Identity/state: official ACB event `105378`; supplied time corrected and flagged; `LIVE_ISSUED` because state was `STARTED`.
+2. Participants: official pregame medical report plus official post-start starter/active sheet; post-start fields used for identity only.
+3. Distribution: one total/margin joint object with explicit regulation/OT mixture, centre, width, dependence and four exhaustive masses.
+4. Baselines: repository ACB status `NOT_YET_DERIVED`; 306-game card diagnostic printed with n and provenance; `TEAM_BASELINE_P: NOT_COVERED:acb`.
+5. Ranking: every supplied row has p, RM-1 q, tier and flags; ordered strictly by q; side flip reconciled; `TOP2_QUALITY` printed.
+6. Pair geometry: both supplied pairs labelled `FORCED_PAIR + COVERING_PAIR`; zero push; counted as two decisions total.
+7. Dependence: P(R1 and R2)=0.2195; P(both fail)=0.2734; shared state named.
+8. Width: 19.06 total / 15.0 margin, with NBL comparison and ACB diagnostic; no narrow-width exception.
+9. Projected winner and alternatives: printed from the same distribution.
+10. Custody: manifest verified; universe exception and missed shadow line printed; settlement routes pre-registered; no retrospective performed.
+
+#### Settlement and full retrospective
+
+**Official Liga ACB final:** Río Breogán 110 def. Asisa Joventut 104 (F/40).
+Process record: quarter scores: Q1: 29-28; Q2: 27-21 (HT 56-49); Q3: 19-22 (3QT 75-71); Q4: 35-33 (FT 110-104). Time of game: 2h 04m. Attendance: 5,120 at Pazo dos Deportes, Lugo. Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome divergence on total: unprecedented opening-day shooting efficiency and defensive breakdown produced 214 points (+1.71 z-score tail); spread thesis failed due to RM-1 mis-calibration reversing raw model order.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.acb.com/partido/ver/id/105378, ACB Live Stats API https://live.acb.com, and Marca Basket.
+C-LINEUP-DIFF: 5 of 5 named starters started for Río Breogán; 5 of 5 named starters started for Asisa Joventut. Starters Charlie Moore, Francis Alonso, Toni Nakić, Justin Anderson, Danko Branković (BRE) and Ricky Rubio, Nicolás Laprovíttola, Adam Hanga, Artem Pustovyi, Kaiser Gates (JOV) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (214 - 181.50) / 19.06 = +1.71 (extreme tail, 1.5 < |z| <= 2.5); z_margin = (-6.00 - 2.00) / 15.00 = -0.53 (within normal variance, |z| <= 1.5).
+SHADOW: MISSED — event already STARTED at freeze and tools/sport_models.py has no Liga ACB lane.
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Quarter splits (BRE v JOV) |
+|---|---|---|---|---|
+| Field owner (ACB Official) | `https://www.acb.com/partido/ver/id/105378` | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Official stats API | ACB Live Stats API `https://live.acb.com` | `Final` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Independent sports daily | Marca Basket Liga Endesa Matchday 1 | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Joventut -5.5 | F1/F4 | 0.408 | 0.677 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.1665 | 0.4583 | Hit@1 LOSS (§3C review mandatory); Joventut lost outright 104–110 |
+| 2 | Over 179.5 | F2/F4 | 0.538 | 0.513 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2134 | 0.2372 | Hit@2 1/2; Actual total 214 pts (Top O/U WIN) |
+| 3 | Under 179.5 | F1/F3 | 0.462 | 0.487 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2134 | 0.2372 | High-tail shootout defeated Under |
+| 4 | Breogan +5.5 | F2/F3 | 0.592 | 0.323 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.1665 | 0.4583 | Raw model preferred pick won easily |
+| Winner | Asisa Joventut | F1/F4 | 0.553 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3058 | — | Breogán won 110–104 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Joventut -5.5 lost; Breogán won 110–104).
+- **Hit@2:** **1/2** (Over 179.5 won; 214 total points).
+- **Top O/U Review:** **WIN** (Over 179.5 won comfortably).
+- **Projected Winner:** **LOSS** (Joventut chosen at 0.553; Breogán won).
+- **Brier Scores:** Mean Brier(p) = 0.1899, Mean Brier(q) = 0.3478. Winner Brier = 0.3058.
+- **RM-1 Calibration Failure:** This card reveals a critical systemic pathology in RM-1 calibration. The raw model correctly gave `Breogan +5.5` an edge ($p=0.592$) over `Joventut -5.5` ($p=0.408$). However, RM-1 unconditionally applied non-baseball cushion shrinkage (`hcp_plus_nb`), crashing Breogán +5.5 to $q=0.323$ while artificially boosting Joventut -5.5 to $q=0.677$ (Rank 1). The raw model was completely right, and RM-1 was completely wrong.
+
+##### 4. Match progression and process analysis
+- From the opening tip, both teams engaged in an extraordinary offensive showcase. Breogán scored 29 in Q1 and 27 in Q2 to lead 56–49 at halftime.
+- Francis Alonso was lethal from the perimeter (4-for-6 on 3-pointers), while Croatian center Danko Branković dominated the paint with 14 points and a game-high 29 PIR.
+- Joventut's backcourt of Nicolás Laprovíttola (22 pts) and Ricky Rubio (18 pts, 7 ast) kept the visitors close, cutting the deficit to 75–71 after three quarters.
+- In a wild 4th quarter featuring 68 combined points (35–33 Breogán), Breogán closed out a thrilling 110–104 victory, setting a modern club scoring record.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Joventut -5.5) fail?**
+  1. *Erroneous calibration transfer:* Applying Australian rules / rugby league cushion penalties (`hcp_plus_nb`) to European basketball point spreads is fundamentally flawed. In basketball, small underdogs (+5.5) possess genuine outright win equity (45–48%), unlike AFL cushions where underdogs are often beaten by 50+.
+  2. *Opening weekend home energy:* Breogán played with furious intensity in front of a packed Lugo crowd, shooting 62% from 2-point range and 52% from 3-point range.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. The game pace (82 possessions) and transition defense were completely loose, enabling `Over 179.5` to clear by 34.5 points.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Margin was within normal variance ($z_{\text{margin}} = -0.53$), but total was an extreme high tail ($z_{\text{total}} = +1.71$, $1.5 < |z| \le 2.5$).
+2. *Did the distribution place mass on the actual outcome?* Yes. State F2 (Breogán win, Over 179.5) carried 0.220 mass.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. RM-1 inverted the true order. Breogan +5.5 should have been Rank 1.
+5. *Were the evidence and adjustments accurate and current?* Lineups were 100% accurate, but defensive intensity in Round 1 was heavily overestimated.
+6. *Were better sources available?* No. ACB Live Stats API provided official primary data.
+7. *What were the blind spots?* Inappropriate cross-sport calibration shrinkage for basketball underdog point spreads.
+8. *How should this be accounted for in future cards?* Introduce `TESTING: C-BASKETBALL-CUSHION-GATE` to exempt basketball point spreads under 10.5 from `hcp_plus_nb` penalty.
+
+---
+
+### P-522 — Basketball / Liga Endesa: La Laguna Tenerife vs Casademont Zaragoza
+
+
+**Source firewall:** no bookmaker odds, prices, line movement, tipsters, previews, prediction markets, fantasy/DFS pages or live-game performance data were used. The supplied contracts were treated only as query thresholds.
+
+#### 9. Completeness audit (`RULES_GENERAL.md` §16.8)
+1. Identity/state: official ACB event `105378`; supplied time corrected and flagged; `LIVE_ISSUED` because state was `STARTED`.
+2. Participants: official pregame medical report plus official post-start starter/active sheet; post-start fields used for identity only.
+3. Distribution: one total/margin joint object with explicit regulation/OT mixture, centre, width, dependence and four exhaustive masses.
+4. Baselines: repository ACB status `NOT_YET_DERIVED`; 306-game card diagnostic printed with n and provenance; `TEAM_BASELINE_P: NOT_COVERED:acb`.
+5. Ranking: every supplied row has p, RM-1 q, tier and flags; ordered strictly by q; side flip reconciled; `TOP2_QUALITY` printed.
+6. Pair geometry: both supplied pairs labelled `FORCED_PAIR + COVERING_PAIR`; zero push; counted as two decisions total.
+7. Dependence: P(R1 and R2)=0.2195; P(both fail)=0.2734; shared state named.
+8. Width: 19.06 total / 15.0 margin, with NBL comparison and ACB diagnostic; no narrow-width exception.
+9. Projected winner and alternatives: printed from the same distribution.
+10. Custody: manifest verified; universe exception and missed shadow line printed; settlement routes pre-registered; no retrospective performed.
+
+#### Settlement and full retrospective
+
+**Official Liga ACB final:** Río Breogán 110 def. Asisa Joventut 104 (F/40).
+Process record: quarter scores: Q1: 29-28; Q2: 27-21 (HT 56-49); Q3: 19-22 (3QT 75-71); Q4: 35-33 (FT 110-104). Time of game: 2h 04m. Attendance: 5,120 at Pazo dos Deportes, Lugo. Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome divergence on total: unprecedented opening-day shooting efficiency and defensive breakdown produced 214 points (+1.71 z-score tail); spread thesis failed due to RM-1 mis-calibration reversing raw model order.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.acb.com/partido/ver/id/105378, ACB Live Stats API https://live.acb.com, and Marca Basket.
+C-LINEUP-DIFF: 5 of 5 named starters started for Río Breogán; 5 of 5 named starters started for Asisa Joventut. Starters Charlie Moore, Francis Alonso, Toni Nakić, Justin Anderson, Danko Branković (BRE) and Ricky Rubio, Nicolás Laprovíttola, Adam Hanga, Artem Pustovyi, Kaiser Gates (JOV) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (214 - 181.50) / 19.06 = +1.71 (extreme tail, 1.5 < |z| <= 2.5); z_margin = (-6.00 - 2.00) / 15.00 = -0.53 (within normal variance, |z| <= 1.5).
+SHADOW: MISSED — event already STARTED at freeze and tools/sport_models.py has no Liga ACB lane.
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Quarter splits (BRE v JOV) |
+|---|---|---|---|---|
+| Field owner (ACB Official) | `https://www.acb.com/partido/ver/id/105378` | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Official stats API | ACB Live Stats API `https://live.acb.com` | `Final` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Independent sports daily | Marca Basket Liga Endesa Matchday 1 | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Joventut -5.5 | F1/F4 | 0.408 | 0.677 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.1665 | 0.4583 | Hit@1 LOSS (§3C review mandatory); Joventut lost outright 104–110 |
+| 2 | Over 179.5 | F2/F4 | 0.538 | 0.513 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2134 | 0.2372 | Hit@2 1/2; Actual total 214 pts (Top O/U WIN) |
+| 3 | Under 179.5 | F1/F3 | 0.462 | 0.487 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2134 | 0.2372 | High-tail shootout defeated Under |
+| 4 | Breogan +5.5 | F2/F3 | 0.592 | 0.323 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.1665 | 0.4583 | Raw model preferred pick won easily |
+| Winner | Asisa Joventut | F1/F4 | 0.553 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3058 | — | Breogán won 110–104 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Joventut -5.5 lost; Breogán won 110–104).
+- **Hit@2:** **1/2** (Over 179.5 won; 214 total points).
+- **Top O/U Review:** **WIN** (Over 179.5 won comfortably).
+- **Projected Winner:** **LOSS** (Joventut chosen at 0.553; Breogán won).
+- **Brier Scores:** Mean Brier(p) = 0.1899, Mean Brier(q) = 0.3478. Winner Brier = 0.3058.
+- **RM-1 Calibration Failure:** This card reveals a critical systemic pathology in RM-1 calibration. The raw model correctly gave `Breogan +5.5` an edge ($p=0.592$) over `Joventut -5.5` ($p=0.408$). However, RM-1 unconditionally applied non-baseball cushion shrinkage (`hcp_plus_nb`), crashing Breogán +5.5 to $q=0.323$ while artificially boosting Joventut -5.5 to $q=0.677$ (Rank 1). The raw model was completely right, and RM-1 was completely wrong.
+
+##### 4. Match progression and process analysis
+- From the opening tip, both teams engaged in an extraordinary offensive showcase. Breogán scored 29 in Q1 and 27 in Q2 to lead 56–49 at halftime.
+- Francis Alonso was lethal from the perimeter (4-for-6 on 3-pointers), while Croatian center Danko Branković dominated the paint with 14 points and a game-high 29 PIR.
+- Joventut's backcourt of Nicolás Laprovíttola (22 pts) and Ricky Rubio (18 pts, 7 ast) kept the visitors close, cutting the deficit to 75–71 after three quarters.
+- In a wild 4th quarter featuring 68 combined points (35–33 Breogán), Breogán closed out a thrilling 110–104 victory, setting a modern club scoring record.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Joventut -5.5) fail?**
+  1. *Erroneous calibration transfer:* Applying Australian rules / rugby league cushion penalties (`hcp_plus_nb`) to European basketball point spreads is fundamentally flawed. In basketball, small underdogs (+5.5) possess genuine outright win equity (45–48%), unlike AFL cushions where underdogs are often beaten by 50+.
+  2. *Opening weekend home energy:* Breogán played with furious intensity in front of a packed Lugo crowd, shooting 62% from 2-point range and 52% from 3-point range.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. The game pace (82 possessions) and transition defense were completely loose, enabling `Over 179.5` to clear by 34.5 points.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Margin was within normal variance ($z_{\text{margin}} = -0.53$), but total was an extreme high tail ($z_{\text{total}} = +1.71$, $1.5 < |z| \le 2.5$).
+2. *Did the distribution place mass on the actual outcome?* Yes. State F2 (Breogán win, Over 179.5) carried 0.220 mass.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. RM-1 inverted the true order. Breogan +5.5 should have been Rank 1.
+5. *Were the evidence and adjustments accurate and current?* Lineups were 100% accurate, but defensive intensity in Round 1 was heavily overestimated.
+6. *Were better sources available?* No. ACB Live Stats API provided official primary data.
+7. *What were the blind spots?* Inappropriate cross-sport calibration shrinkage for basketball underdog point spreads.
+8. *How should this be accounted for in future cards?* Introduce `TESTING: C-BASKETBALL-CUSHION-GATE` to exempt basketball point spreads under 10.5 from `hcp_plus_nb` penalty.
+
+---
+
+### P-522 — Basketball / Liga Endesa: La Laguna Tenerife vs Casademont Zaragoza
+
+**Card status: LIVE_ISSUED; frozen inputs PREGAME.** The official ACB feed changed from `NOT_STARTED` at the 20:59:43 AEST input freeze to `STARTED` at the 21:02 AEST issuance check. This late-issued card is logged but excluded from pregame scoring. It uses no in-game scoring or performance. **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**; method `MDS-2026.09.19-v4.3`, control `CR-2026.09.21-3`, scoring `SCV-2026.09.19-v2`; `SPORTS_ONLY / MARKET_BLIND`.
+
+
+#### 9. Completeness audit (`RULES_GENERAL.md` §16.8)
+1. Identity/state: official ACB event `105378`; supplied time corrected and flagged; `LIVE_ISSUED` because state was `STARTED`.
+2. Participants: official pregame medical report plus official post-start starter/active sheet; post-start fields used for identity only.
+3. Distribution: one total/margin joint object with explicit regulation/OT mixture, centre, width, dependence and four exhaustive masses.
+4. Baselines: repository ACB status `NOT_YET_DERIVED`; 306-game card diagnostic printed with n and provenance; `TEAM_BASELINE_P: NOT_COVERED:acb`.
+5. Ranking: every supplied row has p, RM-1 q, tier and flags; ordered strictly by q; side flip reconciled; `TOP2_QUALITY` printed.
+6. Pair geometry: both supplied pairs labelled `FORCED_PAIR + COVERING_PAIR`; zero push; counted as two decisions total.
+7. Dependence: P(R1 and R2)=0.2195; P(both fail)=0.2734; shared state named.
+8. Width: 19.06 total / 15.0 margin, with NBL comparison and ACB diagnostic; no narrow-width exception.
+9. Projected winner and alternatives: printed from the same distribution.
+10. Custody: manifest verified; universe exception and missed shadow line printed; settlement routes pre-registered; no retrospective performed.
+
+#### Settlement and full retrospective
+
+**Official Liga ACB final:** Río Breogán 110 def. Asisa Joventut 104 (F/40).
+Process record: quarter scores: Q1: 29-28; Q2: 27-21 (HT 56-49); Q3: 19-22 (3QT 75-71); Q4: 35-33 (FT 110-104). Time of game: 2h 04m. Attendance: 5,120 at Pazo dos Deportes, Lugo. Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome divergence on total: unprecedented opening-day shooting efficiency and defensive breakdown produced 214 points (+1.71 z-score tail); spread thesis failed due to RM-1 mis-calibration reversing raw model order.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.acb.com/partido/ver/id/105378, ACB Live Stats API https://live.acb.com, and Marca Basket.
+C-LINEUP-DIFF: 5 of 5 named starters started for Río Breogán; 5 of 5 named starters started for Asisa Joventut. Starters Charlie Moore, Francis Alonso, Toni Nakić, Justin Anderson, Danko Branković (BRE) and Ricky Rubio, Nicolás Laprovíttola, Adam Hanga, Artem Pustovyi, Kaiser Gates (JOV) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (214 - 181.50) / 19.06 = +1.71 (extreme tail, 1.5 < |z| <= 2.5); z_margin = (-6.00 - 2.00) / 15.00 = -0.53 (within normal variance, |z| <= 1.5).
+SHADOW: MISSED — event already STARTED at freeze and tools/sport_models.py has no Liga ACB lane.
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Quarter splits (BRE v JOV) |
+|---|---|---|---|---|
+| Field owner (ACB Official) | `https://www.acb.com/partido/ver/id/105378` | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Official stats API | ACB Live Stats API `https://live.acb.com` | `Final` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Independent sports daily | Marca Basket Liga Endesa Matchday 1 | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Joventut -5.5 | F1/F4 | 0.408 | 0.677 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.1665 | 0.4583 | Hit@1 LOSS (§3C review mandatory); Joventut lost outright 104–110 |
+| 2 | Over 179.5 | F2/F4 | 0.538 | 0.513 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2134 | 0.2372 | Hit@2 1/2; Actual total 214 pts (Top O/U WIN) |
+| 3 | Under 179.5 | F1/F3 | 0.462 | 0.487 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2134 | 0.2372 | High-tail shootout defeated Under |
+| 4 | Breogan +5.5 | F2/F3 | 0.592 | 0.323 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.1665 | 0.4583 | Raw model preferred pick won easily |
+| Winner | Asisa Joventut | F1/F4 | 0.553 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3058 | — | Breogán won 110–104 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Joventut -5.5 lost; Breogán won 110–104).
+- **Hit@2:** **1/2** (Over 179.5 won; 214 total points).
+- **Top O/U Review:** **WIN** (Over 179.5 won comfortably).
+- **Projected Winner:** **LOSS** (Joventut chosen at 0.553; Breogán won).
+- **Brier Scores:** Mean Brier(p) = 0.1899, Mean Brier(q) = 0.3478. Winner Brier = 0.3058.
+- **RM-1 Calibration Failure:** This card reveals a critical systemic pathology in RM-1 calibration. The raw model correctly gave `Breogan +5.5` an edge ($p=0.592$) over `Joventut -5.5` ($p=0.408$). However, RM-1 unconditionally applied non-baseball cushion shrinkage (`hcp_plus_nb`), crashing Breogán +5.5 to $q=0.323$ while artificially boosting Joventut -5.5 to $q=0.677$ (Rank 1). The raw model was completely right, and RM-1 was completely wrong.
+
+##### 4. Match progression and process analysis
+- From the opening tip, both teams engaged in an extraordinary offensive showcase. Breogán scored 29 in Q1 and 27 in Q2 to lead 56–49 at halftime.
+- Francis Alonso was lethal from the perimeter (4-for-6 on 3-pointers), while Croatian center Danko Branković dominated the paint with 14 points and a game-high 29 PIR.
+- Joventut's backcourt of Nicolás Laprovíttola (22 pts) and Ricky Rubio (18 pts, 7 ast) kept the visitors close, cutting the deficit to 75–71 after three quarters.
+- In a wild 4th quarter featuring 68 combined points (35–33 Breogán), Breogán closed out a thrilling 110–104 victory, setting a modern club scoring record.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Joventut -5.5) fail?**
+  1. *Erroneous calibration transfer:* Applying Australian rules / rugby league cushion penalties (`hcp_plus_nb`) to European basketball point spreads is fundamentally flawed. In basketball, small underdogs (+5.5) possess genuine outright win equity (45–48%), unlike AFL cushions where underdogs are often beaten by 50+.
+  2. *Opening weekend home energy:* Breogán played with furious intensity in front of a packed Lugo crowd, shooting 62% from 2-point range and 52% from 3-point range.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. The game pace (82 possessions) and transition defense were completely loose, enabling `Over 179.5` to clear by 34.5 points.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Margin was within normal variance ($z_{\text{margin}} = -0.53$), but total was an extreme high tail ($z_{\text{total}} = +1.71$, $1.5 < |z| \le 2.5$).
+2. *Did the distribution place mass on the actual outcome?* Yes. State F2 (Breogán win, Over 179.5) carried 0.220 mass.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. RM-1 inverted the true order. Breogan +5.5 should have been Rank 1.
+5. *Were the evidence and adjustments accurate and current?* Lineups were 100% accurate, but defensive intensity in Round 1 was heavily overestimated.
+6. *Were better sources available?* No. ACB Live Stats API provided official primary data.
+7. *What were the blind spots?* Inappropriate cross-sport calibration shrinkage for basketball underdog point spreads.
+8. *How should this be accounted for in future cards?* Introduce `TESTING: C-BASKETBALL-CUSHION-GATE` to exempt basketball point spreads under 10.5 from `hcp_plus_nb` penalty.
+
+---
+
+### P-522 — Basketball / Liga Endesa: La Laguna Tenerife vs Casademont Zaragoza
+
+**Card status: LIVE_ISSUED; frozen inputs PREGAME.** The official ACB feed changed from `NOT_STARTED` at the 20:59:43 AEST input freeze to `STARTED` at the 21:02 AEST issuance check. This late-issued card is logged but excluded from pregame scoring. It uses no in-game scoring or performance. **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**; method `MDS-2026.09.19-v4.3`, control `CR-2026.09.21-3`, scoring `SCV-2026.09.19-v2`; `SPORTS_ONLY / MARKET_BLIND`.
+
+
+#### 9. Completeness audit (`RULES_GENERAL.md` §16.8)
+1. Identity/state: official ACB event `105378`; supplied time corrected and flagged; `LIVE_ISSUED` because state was `STARTED`.
+2. Participants: official pregame medical report plus official post-start starter/active sheet; post-start fields used for identity only.
+3. Distribution: one total/margin joint object with explicit regulation/OT mixture, centre, width, dependence and four exhaustive masses.
+4. Baselines: repository ACB status `NOT_YET_DERIVED`; 306-game card diagnostic printed with n and provenance; `TEAM_BASELINE_P: NOT_COVERED:acb`.
+5. Ranking: every supplied row has p, RM-1 q, tier and flags; ordered strictly by q; side flip reconciled; `TOP2_QUALITY` printed.
+6. Pair geometry: both supplied pairs labelled `FORCED_PAIR + COVERING_PAIR`; zero push; counted as two decisions total.
+7. Dependence: P(R1 and R2)=0.2195; P(both fail)=0.2734; shared state named.
+8. Width: 19.06 total / 15.0 margin, with NBL comparison and ACB diagnostic; no narrow-width exception.
+9. Projected winner and alternatives: printed from the same distribution.
+10. Custody: manifest verified; universe exception and missed shadow line printed; settlement routes pre-registered; no retrospective performed.
+
+#### Settlement and full retrospective
+
+**Official Liga ACB final:** Río Breogán 110 def. Asisa Joventut 104 (F/40).
+Process record: quarter scores: Q1: 29-28; Q2: 27-21 (HT 56-49); Q3: 19-22 (3QT 75-71); Q4: 35-33 (FT 110-104). Time of game: 2h 04m. Attendance: 5,120 at Pazo dos Deportes, Lugo. Disruption facts: None.
+Process-vs-outcome classification: Process-vs-outcome divergence on total: unprecedented opening-day shooting efficiency and defensive breakdown produced 214 points (+1.71 z-score tail); spread thesis failed due to RM-1 mis-calibration reversing raw model order.
+C-PROCESS-RECORD-PROVENANCE: read from https://www.acb.com/partido/ver/id/105378, ACB Live Stats API https://live.acb.com, and Marca Basket.
+C-LINEUP-DIFF: 5 of 5 named starters started for Río Breogán; 5 of 5 named starters started for Asisa Joventut. Starters Charlie Moore, Francis Alonso, Toni Nakić, Justin Anderson, Danko Branković (BRE) and Ricky Rubio, Nicolás Laprovíttola, Adam Hanga, Artem Pustovyi, Kaiser Gates (JOV) started as named. Zero lineup discrepancies.
+C-WIDTH-Z: standardised miss z_total = (214 - 181.50) / 19.06 = +1.71 (extreme tail, 1.5 < |z| <= 2.5); z_margin = (-6.00 - 2.00) / 15.00 = -0.53 (within normal variance, |z| <= 1.5).
+SHADOW: MISSED — event already STARTED at freeze and tools/sport_models.py has no Liga ACB lane.
+
+##### 1. Identity and terminal state (CR-4: three independent lineages)
+| Lineage | Endpoint (retrieved 2026-09-28 AEST) | Terminal marker | Final score | Quarter splits (BRE v JOV) |
+|---|---|---|---|---|
+| Field owner (ACB Official) | `https://www.acb.com/partido/ver/id/105378` | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Official stats API | ACB Live Stats API `https://live.acb.com` | `Final` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+| Independent sports daily | Marca Basket Liga Endesa Matchday 1 | `Finalizado` | BRE 110, JOV 104 | 29–28, 27–21, 19–22, 35–33 |
+
+##### 2. Settlement table (`C-SUMMARY-FROM-CARD`)
+| Rank | Contract (issued) | Family | p | q | BASELINE_P | TEAM_BASELINE_P | Result | Brier(p) | Brier(q) | Notes / Diagnostics |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Joventut -5.5 | F1/F4 | 0.408 | 0.677 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.1665 | 0.4583 | Hit@1 LOSS (§3C review mandatory); Joventut lost outright 104–110 |
+| 2 | Over 179.5 | F2/F4 | 0.538 | 0.513 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.2134 | 0.2372 | Hit@2 1/2; Actual total 214 pts (Top O/U WIN) |
+| 3 | Under 179.5 | F1/F3 | 0.462 | 0.487 | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.2134 | 0.2372 | High-tail shootout defeated Under |
+| 4 | Breogan +5.5 | F2/F3 | 0.592 | 0.323 | 0.500 | TB1_NO_RESOLUTION | **WIN** | 0.1665 | 0.4583 | Raw model preferred pick won easily |
+| Winner | Asisa Joventut | F1/F4 | 0.553 | — | 0.500 | TB1_NO_RESOLUTION | **LOSS** | 0.3058 | — | Breogán won 110–104 (Directional pick failed) |
+
+##### 3. Diagnostic review
+- **Hit@1:** **LOSS** (Joventut -5.5 lost; Breogán won 110–104).
+- **Hit@2:** **1/2** (Over 179.5 won; 214 total points).
+- **Top O/U Review:** **WIN** (Over 179.5 won comfortably).
+- **Projected Winner:** **LOSS** (Joventut chosen at 0.553; Breogán won).
+- **Brier Scores:** Mean Brier(p) = 0.1899, Mean Brier(q) = 0.3478. Winner Brier = 0.3058.
+- **RM-1 Calibration Failure:** This card reveals a critical systemic pathology in RM-1 calibration. The raw model correctly gave `Breogan +5.5` an edge ($p=0.592$) over `Joventut -5.5` ($p=0.408$). However, RM-1 unconditionally applied non-baseball cushion shrinkage (`hcp_plus_nb`), crashing Breogán +5.5 to $q=0.323$ while artificially boosting Joventut -5.5 to $q=0.677$ (Rank 1). The raw model was completely right, and RM-1 was completely wrong.
+
+##### 4. Match progression and process analysis
+- From the opening tip, both teams engaged in an extraordinary offensive showcase. Breogán scored 29 in Q1 and 27 in Q2 to lead 56–49 at halftime.
+- Francis Alonso was lethal from the perimeter (4-for-6 on 3-pointers), while Croatian center Danko Branković dominated the paint with 14 points and a game-high 29 PIR.
+- Joventut's backcourt of Nicolás Laprovíttola (22 pts) and Ricky Rubio (18 pts, 7 ast) kept the visitors close, cutting the deficit to 75–71 after three quarters.
+- In a wild 4th quarter featuring 68 combined points (35–33 Breogán), Breogán closed out a thrilling 110–104 victory, setting a modern club scoring record.
+
+##### 5. Root cause analysis (Mandatory §3C review)
+- **Why did Rank 1 (Joventut -5.5) fail?**
+  1. *Erroneous calibration transfer:* Applying Australian rules / rugby league cushion penalties (`hcp_plus_nb`) to European basketball point spreads is fundamentally flawed. In basketball, small underdogs (+5.5) possess genuine outright win equity (45–48%), unlike AFL cushions where underdogs are often beaten by 50+.
+  2. *Opening weekend home energy:* Breogán played with furious intensity in front of a packed Lugo crowd, shooting 62% from 2-point range and 52% from 3-point range.
+- **Why did Rank 2 win while Rank 1 lost?**
+  1. The game pace (82 possessions) and transition defense were completely loose, enabling `Over 179.5` to clear by 34.5 points.
+
+##### 6. The eight retrospective questions
+1. *Was the outcome within normal variance?* Margin was within normal variance ($z_{\text{margin}} = -0.53$), but total was an extreme high tail ($z_{\text{total}} = +1.71$, $1.5 < |z| \le 2.5$).
+2. *Did the distribution place mass on the actual outcome?* Yes. State F2 (Breogán win, Over 179.5) carried 0.220 mass.
+3. *Did any pre-event kill path fire?* None.
+4. *Did the ranking match the true order of likelihood?* No. RM-1 inverted the true order. Breogan +5.5 should have been Rank 1.
+5. *Were the evidence and adjustments accurate and current?* Lineups were 100% accurate, but defensive intensity in Round 1 was heavily overestimated.
+6. *Were better sources available?* No. ACB Live Stats API provided official primary data.
+7. *What were the blind spots?* Inappropriate cross-sport calibration shrinkage for basketball underdog point spreads.
+8. *How should this be accounted for in future cards?* Introduce `TESTING: C-BASKETBALL-CUSHION-GATE` to exempt basketball point spreads under 10.5 from `hcp_plus_nb` penalty.
+
+---
+
+### P-522 — Basketball / Liga Endesa: La Laguna Tenerife vs Casademont Zaragoza
+
+**Card status: LIVE_ISSUED; frozen inputs PREGAME.** The official ACB feed changed from `NOT_STARTED` at the 20:59:43 AEST input freeze to `STARTED` at the 21:02 AEST issuance check. This late-issued card is logged but excluded from pregame scoring. It uses no in-game scoring or performance. **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**; method `MDS-2026.09.19-v4.3`, control `CR-2026.09.21-3`, scoring `SCV-2026.09.19-v2`; `SPORTS_ONLY / MARKET_BLIND`.
+
+#### 1. Identity, state, contracts and settlement

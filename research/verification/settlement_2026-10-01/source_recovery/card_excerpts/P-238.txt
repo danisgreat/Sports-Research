@@ -1,0 +1,307 @@
+
+Verified outcome: **South Africa 59/0 after 6 and 185/7 after 20; Zimbabwe 142; South Africa won by 43 runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | South Africa innings Under 184.5 | **LOSS** |
+| 2 | South Africa after 6 Under 54.5 | **LOSS** |
+| 3 | South Africa after 6 Over 54.5 | **WIN** |
+| 4 | South Africa innings Over 184.5 | **WIN** |
+| — | Potential winner: South Africa | **WIN** |
+
+What went right: the winner call was strong. South Africa's batting ceiling, rest advantage and Zimbabwe's recent run-prevention volatility were correctly identified. The card also documented the decisive direct evidence: the same batting group had made 61 in the powerplay against the same opponent at the same venue three days earlier.
+
+Why the “most likely” pick failed: Under 184.5 lost by only **0.5 run**, but the closeness of the grade does not excuse the ranking. The line was just 2.5 runs below a recent South Africa 187 and the venue had just produced 195 and 190. Zimbabwe had less than 24 hours' recovery, and South Africa batted first—the exposure state most dangerous to an innings Under. After a 59/0 powerplay, the full resource ceiling was high. South Africa reached 154/1 after 15.1 overs and still finished 185 despite a late collapse to 185/7.
+
+Why rank #2 failed: recent aggregate powerplays (5/6 Under) were allowed to outweigh the most comparable observation: 61 against this exact attack at this exact venue. That is a source-weighting error. Direct opponent/venue/role continuity should outrank a six-match cross-opponent mean when the current bowling fatigue state is also worse.
+
+The result links to the prior cricket lesson: wicket resources matter as much as run rate. At 59/0, South Africa had all ten wickets intact, which made sustained acceleration possible. The late wickets nearly rescued the Under but did not erase the earlier resource advantage.
+
+Required improvement:
+
+1. After toss confirmation that South Africa bat first, re-rank the full-innings Over upward; remove the chase-cap concern that had supported Under/action uncertainty.
+2. Give exact opponent + venue phase evidence the highest weight when lineups/roles remain materially continuous.
+3. For a half-run line at the edge of the upper corridor, run a boundary audit. A central 160–180 corridor is not enough when credible states 185–195 are recent and directly relevant.
+4. Add wicket-resource state to linked phase trees: 55/0 is substantially more dangerous for an innings Under than 55/3.
+5. The evidence-consistent order after toss should have been **SA after 6 Over 54.5 / SA innings Over 184.5 / U184.5 / U54.5**, all capped for small samples.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/namibia-t20i-tri-series-aug-2026-2026-1549518/south-africa-vs-zimbabwe-4th-match-1549527/full-scorecard); [Hindustan Times scorecard and match flow](https://www.hindustantimes.com/cricket/live-full-scorecard-zim-vs-sa-t20i-tri-series-in-namibia-2026-match-4-zimbabwe-vs-south-africa-t20-zmsa09012026273843); [CricketWorld scorecard](https://www.cricketworld.com/cricket/south-africa-vs-zimbabwe/match/scorecard/98364).
+
+## P-238 settlement — Glasgow Cosmic vs Rotterdam Dockers
+
+Verified outcome: **Glasgow 39/2 after 6 and 140/9 after 20; Rotterdam 141/5 in 19.5 and won by five wickets.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Glasgow innings Under 161.5 | **WIN** |
+| 2 | Glasgow after 6 Under 46.5 | **WIN** |
+| 3 | Glasgow after 6 Over 46.5 | **LOSS** |
+| 4 | Glasgow innings Over 161.5 | **LOSS** |
+| — | Potential winner: Rotterdam | **WIN** |
+
+Why it worked: the phase and full-innings Unders were aligned with Glasgow's limited sample, Rotterdam's bowling resources and the uncertainty around a new competition. Glasgow lost two powerplay wickets, never created a sustained acceleration state, and finished 21.5 runs below the innings line. Rotterdam then completed the expected chase.
+
+Learning: this is the desired cricket structure—phase, wickets and innings resource path all agreed. The evidence was still sample-capped, but the ranking did not overstate a fragile boundary line.
+
+Sources: [ESPN scorecard](https://www.espn.com/cricket/series/24698/scorecard/1547880/glasgow-cosmic-vs-rotterdam-dockers-9th-match-european-t20-premier-league-2026); [official ETPL match page](https://www.etplofficial.com/matches/6a688c61b30844b0969df8ab).
+
+## Source-quality audit and improved source plan
+
+| Sport / market | Best sources used here | Reliability assessment | Better future practice |
+|---|---|---|---|
+| MLB finals, innings, player lines | MLB, ESPN/AP, Reuters, CBS | **High** when MLB/box score leads; reports explain mechanism | Store MLB game ID and official box/play-by-play first; use Reuters/AP only for narrative context. |
+| NPB finals | Official NPB daily/game pages | **High** | Use exact official game page rather than only the day index when inning/bullpen mechanism matters. |
+| KBO finals | Official English KBO schedule; MyKBO boxes | **High for final score; medium-high for detailed secondary box** | Make official KBO GameCenter the first endpoint and retain MyKBO only for accessible inning/player detail. |
+| Tennis | ATP official results; established tournament match pages | **High** | Prefer ATP/WTA/ITF official draw and completed score; use a second source only for retirement/stat detail. |
+| Cricket final/phase | ESPNcricinfo, official competition page, CricketWorld ball-by-ball | **High for score/phase when feeds agree** | Save exact innings/over endpoint plus toss and revised overs. For operator settlement, capture book rules separately; a scorecard cannot determine a void rule. |
+| Chinese FA Cup goals | Sofascore/Flashscore plus secondary match-stat pages | **Medium-high for final score; medium for derivatives** | Seek CFA/club official match report first. Cross-check corners with two licensed/stat providers because generic result pages often omit or revise derivatives. |
+| Corners | BeSoccer, SoccerPunter, Scoremer cross-checks | **Medium** | Record provider and retrieval time. Do not grade if providers disagree; exact sportsbook provider rules may still control. |
+
+## Final audit conclusions
+
+1. **No pending event remains live.**
+2. **P-218 through P-238 are fully settled.**
+3. **P-217 is only partially settled** because its two full-innings selections require an operator's shortened-match rule; its actual innings and six-over outcome are fully known.
+4. The largest process weakness was not missing research but **ranking incoherence**: contract breadth/short price sometimes overrode the strongest starter, bullpen, direct-matchup and winner mechanisms.
+5. The most important sport-specific correction is to treat **one-sided low-score separation** as ordinary in baseball and to treat **wicket resources, toss/exposure, direct-opponent phase evidence and threshold distance** as mandatory in cricket.
+6. The strongest positive pattern was target separation: several cards correctly distinguished winner from handicap, or phase from innings. That structure should be retained while improving the weighting and coherence gates above.
+
+**Settlement logging confirmation:** audit appended without altering any frozen pre-game card. Formal aggregate: **48 wins, 41 losses, 2 operator-dependent ranked selections; rank #1 = 13-8 with 1 operator-dependent; potential winners = 15-7.**
+
+---
+
+# Corrective audit addendum — 2026-09-02 Australia/Sydney
+
+Status: **SUPERSEDING ADMINISTRATIVE/SETTLEMENT LAYER ONLY — all frozen V01 forecast cards above remain unchanged**
+
+
+Verified outcome: **South Africa 59/0 after 6 and 185/7 after 20; Zimbabwe 142; South Africa won by 43 runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | South Africa innings Under 184.5 | **LOSS** |
+| 2 | South Africa after 6 Under 54.5 | **LOSS** |
+| 3 | South Africa after 6 Over 54.5 | **WIN** |
+| 4 | South Africa innings Over 184.5 | **WIN** |
+| — | Potential winner: South Africa | **WIN** |
+
+What went right: the winner call was strong. South Africa's batting ceiling, rest advantage and Zimbabwe's recent run-prevention volatility were correctly identified. The card also documented the decisive direct evidence: the same batting group had made 61 in the powerplay against the same opponent at the same venue three days earlier.
+
+Why the “most likely” pick failed: Under 184.5 lost by only **0.5 run**, but the closeness of the grade does not excuse the ranking. The line was just 2.5 runs below a recent South Africa 187 and the venue had just produced 195 and 190. Zimbabwe had less than 24 hours' recovery, and South Africa batted first—the exposure state most dangerous to an innings Under. After a 59/0 powerplay, the full resource ceiling was high. South Africa reached 154/1 after 15.1 overs and still finished 185 despite a late collapse to 185/7.
+
+Why rank #2 failed: recent aggregate powerplays (5/6 Under) were allowed to outweigh the most comparable observation: 61 against this exact attack at this exact venue. That is a source-weighting error. Direct opponent/venue/role continuity should outrank a six-match cross-opponent mean when the current bowling fatigue state is also worse.
+
+The result links to the prior cricket lesson: wicket resources matter as much as run rate. At 59/0, South Africa had all ten wickets intact, which made sustained acceleration possible. The late wickets nearly rescued the Under but did not erase the earlier resource advantage.
+
+Required improvement:
+
+1. After toss confirmation that South Africa bat first, re-rank the full-innings Over upward; remove the chase-cap concern that had supported Under/action uncertainty.
+2. Give exact opponent + venue phase evidence the highest weight when lineups/roles remain materially continuous.
+3. For a half-run line at the edge of the upper corridor, run a boundary audit. A central 160–180 corridor is not enough when credible states 185–195 are recent and directly relevant.
+4. Add wicket-resource state to linked phase trees: 55/0 is substantially more dangerous for an innings Under than 55/3.
+5. The evidence-consistent order after toss should have been **SA after 6 Over 54.5 / SA innings Over 184.5 / U184.5 / U54.5**, all capped for small samples.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/namibia-t20i-tri-series-aug-2026-2026-1549518/south-africa-vs-zimbabwe-4th-match-1549527/full-scorecard); [Hindustan Times scorecard and match flow](https://www.hindustantimes.com/cricket/live-full-scorecard-zim-vs-sa-t20i-tri-series-in-namibia-2026-match-4-zimbabwe-vs-south-africa-t20-zmsa09012026273843); [CricketWorld scorecard](https://www.cricketworld.com/cricket/south-africa-vs-zimbabwe/match/scorecard/98364).
+
+## P-238 settlement — Glasgow Cosmic vs Rotterdam Dockers
+
+Verified outcome: **Glasgow 39/2 after 6 and 140/9 after 20; Rotterdam 141/5 in 19.5 and won by five wickets.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Glasgow innings Under 161.5 | **WIN** |
+| 2 | Glasgow after 6 Under 46.5 | **WIN** |
+| 3 | Glasgow after 6 Over 46.5 | **LOSS** |
+| 4 | Glasgow innings Over 161.5 | **LOSS** |
+| — | Potential winner: Rotterdam | **WIN** |
+
+Why it worked: the phase and full-innings Unders were aligned with Glasgow's limited sample, Rotterdam's bowling resources and the uncertainty around a new competition. Glasgow lost two powerplay wickets, never created a sustained acceleration state, and finished 21.5 runs below the innings line. Rotterdam then completed the expected chase.
+
+Learning: this is the desired cricket structure—phase, wickets and innings resource path all agreed. The evidence was still sample-capped, but the ranking did not overstate a fragile boundary line.
+
+Sources: [ESPN scorecard](https://www.espn.com/cricket/series/24698/scorecard/1547880/glasgow-cosmic-vs-rotterdam-dockers-9th-match-european-t20-premier-league-2026); [official ETPL match page](https://www.etplofficial.com/matches/6a688c61b30844b0969df8ab).
+
+## Source-quality audit and improved source plan
+
+| Sport / market | Best sources used here | Reliability assessment | Better future practice |
+|---|---|---|---|
+| MLB finals, innings, player lines | MLB, ESPN/AP, Reuters, CBS | **High** when MLB/box score leads; reports explain mechanism | Store MLB game ID and official box/play-by-play first; use Reuters/AP only for narrative context. |
+| NPB finals | Official NPB daily/game pages | **High** | Use exact official game page rather than only the day index when inning/bullpen mechanism matters. |
+| KBO finals | Official English KBO schedule; MyKBO boxes | **High for final score; medium-high for detailed secondary box** | Make official KBO GameCenter the first endpoint and retain MyKBO only for accessible inning/player detail. |
+| Tennis | ATP official results; established tournament match pages | **High** | Prefer ATP/WTA/ITF official draw and completed score; use a second source only for retirement/stat detail. |
+| Cricket final/phase | ESPNcricinfo, official competition page, CricketWorld ball-by-ball | **High for score/phase when feeds agree** | Save exact innings/over endpoint plus toss and revised overs. For operator settlement, capture book rules separately; a scorecard cannot determine a void rule. |
+| Chinese FA Cup goals | Sofascore/Flashscore plus secondary match-stat pages | **Medium-high for final score; medium for derivatives** | Seek CFA/club official match report first. Cross-check corners with two licensed/stat providers because generic result pages often omit or revise derivatives. |
+| Corners | BeSoccer, SoccerPunter, Scoremer cross-checks | **Medium** | Record provider and retrieval time. Do not grade if providers disagree; exact sportsbook provider rules may still control. |
+
+## Final audit conclusions
+
+1. **No pending event remains live.**
+2. **P-218 through P-238 are fully settled.**
+3. **P-217 is only partially settled** because its two full-innings selections require an operator's shortened-match rule; its actual innings and six-over outcome are fully known.
+4. The largest process weakness was not missing research but **ranking incoherence**: contract breadth/short price sometimes overrode the strongest starter, bullpen, direct-matchup and winner mechanisms.
+5. The most important sport-specific correction is to treat **one-sided low-score separation** as ordinary in baseball and to treat **wicket resources, toss/exposure, direct-opponent phase evidence and threshold distance** as mandatory in cricket.
+6. The strongest positive pattern was target separation: several cards correctly distinguished winner from handicap, or phase from innings. That structure should be retained while improving the weighting and coherence gates above.
+
+**Settlement logging confirmation:** audit appended without altering any frozen pre-game card. Formal aggregate: **48 wins, 41 losses, 2 operator-dependent ranked selections; rank #1 = 13-8 with 1 operator-dependent; potential winners = 15-7.**
+
+---
+
+# Corrective audit addendum — 2026-09-02 Australia/Sydney
+
+Status: **SUPERSEDING ADMINISTRATIVE/SETTLEMENT LAYER ONLY — all frozen V01 forecast cards above remain unchanged**
+
+This addendum supersedes only the earlier audit's identity labels, contract-ID mapping, formal/provisional status, aggregate bookkeeping and learning-governance claims where listed below. It does not rewrite an issued selection or use the outcome to create a new forecast.
+
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | South Africa innings Under 184.5 | **LOSS** |
+| 2 | South Africa after 6 Under 54.5 | **LOSS** |
+| 3 | South Africa after 6 Over 54.5 | **WIN** |
+| 4 | South Africa innings Over 184.5 | **WIN** |
+| — | Potential winner: South Africa | **WIN** |
+
+What went right: the winner call was strong. South Africa's batting ceiling, rest advantage and Zimbabwe's recent run-prevention volatility were correctly identified. The card also documented the decisive direct evidence: the same batting group had made 61 in the powerplay against the same opponent at the same venue three days earlier.
+
+Why the “most likely” pick failed: Under 184.5 lost by only **0.5 run**, but the closeness of the grade does not excuse the ranking. The line was just 2.5 runs below a recent South Africa 187 and the venue had just produced 195 and 190. Zimbabwe had less than 24 hours' recovery, and South Africa batted first—the exposure state most dangerous to an innings Under. After a 59/0 powerplay, the full resource ceiling was high. South Africa reached 154/1 after 15.1 overs and still finished 185 despite a late collapse to 185/7.
+
+Why rank #2 failed: recent aggregate powerplays (5/6 Under) were allowed to outweigh the most comparable observation: 61 against this exact attack at this exact venue. That is a source-weighting error. Direct opponent/venue/role continuity should outrank a six-match cross-opponent mean when the current bowling fatigue state is also worse.
+
+The result links to the prior cricket lesson: wicket resources matter as much as run rate. At 59/0, South Africa had all ten wickets intact, which made sustained acceleration possible. The late wickets nearly rescued the Under but did not erase the earlier resource advantage.
+
+Required improvement:
+
+1. After toss confirmation that South Africa bat first, re-rank the full-innings Over upward; remove the chase-cap concern that had supported Under/action uncertainty.
+2. Give exact opponent + venue phase evidence the highest weight when lineups/roles remain materially continuous.
+3. For a half-run line at the edge of the upper corridor, run a boundary audit. A central 160–180 corridor is not enough when credible states 185–195 are recent and directly relevant.
+4. Add wicket-resource state to linked phase trees: 55/0 is substantially more dangerous for an innings Under than 55/3.
+5. The evidence-consistent order after toss should have been **SA after 6 Over 54.5 / SA innings Over 184.5 / U184.5 / U54.5**, all capped for small samples.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/namibia-t20i-tri-series-aug-2026-2026-1549518/south-africa-vs-zimbabwe-4th-match-1549527/full-scorecard); [Hindustan Times scorecard and match flow](https://www.hindustantimes.com/cricket/live-full-scorecard-zim-vs-sa-t20i-tri-series-in-namibia-2026-match-4-zimbabwe-vs-south-africa-t20-zmsa09012026273843); [CricketWorld scorecard](https://www.cricketworld.com/cricket/south-africa-vs-zimbabwe/match/scorecard/98364).
+
+## P-238 settlement — Glasgow Cosmic vs Rotterdam Dockers
+
+Verified outcome: **Glasgow 39/2 after 6 and 140/9 after 20; Rotterdam 141/5 in 19.5 and won by five wickets.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Glasgow innings Under 161.5 | **WIN** |
+| 2 | Glasgow after 6 Under 46.5 | **WIN** |
+| 3 | Glasgow after 6 Over 46.5 | **LOSS** |
+| 4 | Glasgow innings Over 161.5 | **LOSS** |
+| — | Potential winner: Rotterdam | **WIN** |
+
+Why it worked: the phase and full-innings Unders were aligned with Glasgow's limited sample, Rotterdam's bowling resources and the uncertainty around a new competition. Glasgow lost two powerplay wickets, never created a sustained acceleration state, and finished 21.5 runs below the innings line. Rotterdam then completed the expected chase.
+
+Learning: this is the desired cricket structure—phase, wickets and innings resource path all agreed. The evidence was still sample-capped, but the ranking did not overstate a fragile boundary line.
+
+Sources: [ESPN scorecard](https://www.espn.com/cricket/series/24698/scorecard/1547880/glasgow-cosmic-vs-rotterdam-dockers-9th-match-european-t20-premier-league-2026); [official ETPL match page](https://www.etplofficial.com/matches/6a688c61b30844b0969df8ab).
+
+## Source-quality audit and improved source plan
+
+| Sport / market | Best sources used here | Reliability assessment | Better future practice |
+|---|---|---|---|
+| MLB finals, innings, player lines | MLB, ESPN/AP, Reuters, CBS | **High** when MLB/box score leads; reports explain mechanism | Store MLB game ID and official box/play-by-play first; use Reuters/AP only for narrative context. |
+| NPB finals | Official NPB daily/game pages | **High** | Use exact official game page rather than only the day index when inning/bullpen mechanism matters. |
+| KBO finals | Official English KBO schedule; MyKBO boxes | **High for final score; medium-high for detailed secondary box** | Make official KBO GameCenter the first endpoint and retain MyKBO only for accessible inning/player detail. |
+| Tennis | ATP official results; established tournament match pages | **High** | Prefer ATP/WTA/ITF official draw and completed score; use a second source only for retirement/stat detail. |
+| Cricket final/phase | ESPNcricinfo, official competition page, CricketWorld ball-by-ball | **High for score/phase when feeds agree** | Save exact innings/over endpoint plus toss and revised overs. For operator settlement, capture book rules separately; a scorecard cannot determine a void rule. |
+| Chinese FA Cup goals | Sofascore/Flashscore plus secondary match-stat pages | **Medium-high for final score; medium for derivatives** | Seek CFA/club official match report first. Cross-check corners with two licensed/stat providers because generic result pages often omit or revise derivatives. |
+| Corners | BeSoccer, SoccerPunter, Scoremer cross-checks | **Medium** | Record provider and retrieval time. Do not grade if providers disagree; exact sportsbook provider rules may still control. |
+
+## Final audit conclusions
+
+1. **No pending event remains live.**
+2. **P-218 through P-238 are fully settled.**
+3. **P-217 is only partially settled** because its two full-innings selections require an operator's shortened-match rule; its actual innings and six-over outcome are fully known.
+4. The largest process weakness was not missing research but **ranking incoherence**: contract breadth/short price sometimes overrode the strongest starter, bullpen, direct-matchup and winner mechanisms.
+5. The most important sport-specific correction is to treat **one-sided low-score separation** as ordinary in baseball and to treat **wicket resources, toss/exposure, direct-opponent phase evidence and threshold distance** as mandatory in cricket.
+6. The strongest positive pattern was target separation: several cards correctly distinguished winner from handicap, or phase from innings. That structure should be retained while improving the weighting and coherence gates above.
+
+**Settlement logging confirmation:** audit appended without altering any frozen pre-game card. Formal aggregate: **48 wins, 41 losses, 2 operator-dependent ranked selections; rank #1 = 13-8 with 1 operator-dependent; potential winners = 15-7.**
+
+---
+
+# Corrective audit addendum — 2026-09-02 Australia/Sydney
+
+Status: **SUPERSEDING ADMINISTRATIVE/SETTLEMENT LAYER ONLY — all frozen V01 forecast cards above remain unchanged**
+
+This addendum supersedes only the earlier audit's identity labels, contract-ID mapping, formal/provisional status, aggregate bookkeeping and learning-governance claims where listed below. It does not rewrite an issued selection or use the outcome to create a new forecast.
+
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | South Africa innings Under 184.5 | **LOSS** |
+| 2 | South Africa after 6 Under 54.5 | **LOSS** |
+| 3 | South Africa after 6 Over 54.5 | **WIN** |
+| 4 | South Africa innings Over 184.5 | **WIN** |
+| — | Potential winner: South Africa | **WIN** |
+
+What went right: the winner call was strong. South Africa's batting ceiling, rest advantage and Zimbabwe's recent run-prevention volatility were correctly identified. The card also documented the decisive direct evidence: the same batting group had made 61 in the powerplay against the same opponent at the same venue three days earlier.
+
+Why the “most likely” pick failed: Under 184.5 lost by only **0.5 run**, but the closeness of the grade does not excuse the ranking. The line was just 2.5 runs below a recent South Africa 187 and the venue had just produced 195 and 190. Zimbabwe had less than 24 hours' recovery, and South Africa batted first—the exposure state most dangerous to an innings Under. After a 59/0 powerplay, the full resource ceiling was high. South Africa reached 154/1 after 15.1 overs and still finished 185 despite a late collapse to 185/7.
+
+Why rank #2 failed: recent aggregate powerplays (5/6 Under) were allowed to outweigh the most comparable observation: 61 against this exact attack at this exact venue. That is a source-weighting error. Direct opponent/venue/role continuity should outrank a six-match cross-opponent mean when the current bowling fatigue state is also worse.
+
+The result links to the prior cricket lesson: wicket resources matter as much as run rate. At 59/0, South Africa had all ten wickets intact, which made sustained acceleration possible. The late wickets nearly rescued the Under but did not erase the earlier resource advantage.
+
+Required improvement:
+
+1. After toss confirmation that South Africa bat first, re-rank the full-innings Over upward; remove the chase-cap concern that had supported Under/action uncertainty.
+2. Give exact opponent + venue phase evidence the highest weight when lineups/roles remain materially continuous.
+3. For a half-run line at the edge of the upper corridor, run a boundary audit. A central 160–180 corridor is not enough when credible states 185–195 are recent and directly relevant.
+4. Add wicket-resource state to linked phase trees: 55/0 is substantially more dangerous for an innings Under than 55/3.
+5. The evidence-consistent order after toss should have been **SA after 6 Over 54.5 / SA innings Over 184.5 / U184.5 / U54.5**, all capped for small samples.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/namibia-t20i-tri-series-aug-2026-2026-1549518/south-africa-vs-zimbabwe-4th-match-1549527/full-scorecard); [Hindustan Times scorecard and match flow](https://www.hindustantimes.com/cricket/live-full-scorecard-zim-vs-sa-t20i-tri-series-in-namibia-2026-match-4-zimbabwe-vs-south-africa-t20-zmsa09012026273843); [CricketWorld scorecard](https://www.cricketworld.com/cricket/south-africa-vs-zimbabwe/match/scorecard/98364).
+
+## P-238 settlement — Glasgow Cosmic vs Rotterdam Dockers
+
+Verified outcome: **Glasgow 39/2 after 6 and 140/9 after 20; Rotterdam 141/5 in 19.5 and won by five wickets.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Glasgow innings Under 161.5 | **WIN** |
+| 2 | Glasgow after 6 Under 46.5 | **WIN** |
+| 3 | Glasgow after 6 Over 46.5 | **LOSS** |
+| 4 | Glasgow innings Over 161.5 | **LOSS** |
+| — | Potential winner: Rotterdam | **WIN** |
+
+Why it worked: the phase and full-innings Unders were aligned with Glasgow's limited sample, Rotterdam's bowling resources and the uncertainty around a new competition. Glasgow lost two powerplay wickets, never created a sustained acceleration state, and finished 21.5 runs below the innings line. Rotterdam then completed the expected chase.
+
+Learning: this is the desired cricket structure—phase, wickets and innings resource path all agreed. The evidence was still sample-capped, but the ranking did not overstate a fragile boundary line.
+
+Sources: [ESPN scorecard](https://www.espn.com/cricket/series/24698/scorecard/1547880/glasgow-cosmic-vs-rotterdam-dockers-9th-match-european-t20-premier-league-2026); [official ETPL match page](https://www.etplofficial.com/matches/6a688c61b30844b0969df8ab).
+
+## Source-quality audit and improved source plan
+
+| Sport / market | Best sources used here | Reliability assessment | Better future practice |
+|---|---|---|---|
+| MLB finals, innings, player lines | MLB, ESPN/AP, Reuters, CBS | **High** when MLB/box score leads; reports explain mechanism | Store MLB game ID and official box/play-by-play first; use Reuters/AP only for narrative context. |
+| NPB finals | Official NPB daily/game pages | **High** | Use exact official game page rather than only the day index when inning/bullpen mechanism matters. |
+| KBO finals | Official English KBO schedule; MyKBO boxes | **High for final score; medium-high for detailed secondary box** | Make official KBO GameCenter the first endpoint and retain MyKBO only for accessible inning/player detail. |
+| Tennis | ATP official results; established tournament match pages | **High** | Prefer ATP/WTA/ITF official draw and completed score; use a second source only for retirement/stat detail. |
+| Cricket final/phase | ESPNcricinfo, official competition page, CricketWorld ball-by-ball | **High for score/phase when feeds agree** | Save exact innings/over endpoint plus toss and revised overs. For operator settlement, capture book rules separately; a scorecard cannot determine a void rule. |
+| Chinese FA Cup goals | Sofascore/Flashscore plus secondary match-stat pages | **Medium-high for final score; medium for derivatives** | Seek CFA/club official match report first. Cross-check corners with two licensed/stat providers because generic result pages often omit or revise derivatives. |
+| Corners | BeSoccer, SoccerPunter, Scoremer cross-checks | **Medium** | Record provider and retrieval time. Do not grade if providers disagree; exact sportsbook provider rules may still control. |
+
+## Final audit conclusions
+
+1. **No pending event remains live.**
+2. **P-218 through P-238 are fully settled.**
+3. **P-217 is only partially settled** because its two full-innings selections require an operator's shortened-match rule; its actual innings and six-over outcome are fully known.
+4. The largest process weakness was not missing research but **ranking incoherence**: contract breadth/short price sometimes overrode the strongest starter, bullpen, direct-matchup and winner mechanisms.
+5. The most important sport-specific correction is to treat **one-sided low-score separation** as ordinary in baseball and to treat **wicket resources, toss/exposure, direct-opponent phase evidence and threshold distance** as mandatory in cricket.
+6. The strongest positive pattern was target separation: several cards correctly distinguished winner from handicap, or phase from innings. That structure should be retained while improving the weighting and coherence gates above.
+
+**Settlement logging confirmation:** audit appended without altering any frozen pre-game card. Formal aggregate: **48 wins, 41 losses, 2 operator-dependent ranked selections; rank #1 = 13-8 with 1 operator-dependent; potential winners = 15-7.**
+
+---
+
+# Corrective audit addendum — 2026-09-02 Australia/Sydney
+
+Status: **SUPERSEDING ADMINISTRATIVE/SETTLEMENT LAYER ONLY — all frozen V01 forecast cards above remain unchanged**
+
+This addendum supersedes only the earlier audit's identity labels, contract-ID mapping, formal/provisional status, aggregate bookkeeping and learning-governance claims where listed below. It does not rewrite an issued selection or use the outcome to create a new forecast.
+
+## A. Provenance and evaluation boundary

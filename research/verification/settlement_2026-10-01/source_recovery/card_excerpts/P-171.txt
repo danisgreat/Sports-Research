@@ -1,0 +1,460 @@
+**What went right:** Carlton's defensive/current-regime thesis and the broad Under both landed comfortably.
+
+**Mechanism check:** Melbourne still generated territory/clearance opportunities but could not turn them into enough score. That is exactly why the AFL module separates territory → inside-50 → scoring shot → quality/conversion. Territory dominance is not itself points.
+
+**Learning:** this reinforces existing AFL conversion-chain controls; it does not justify a generic future Under bias.
+
+---
+
+### P-170 — Wests Tigers vs North Queensland Cowboys — NRL
+
+**Official final:** North Queensland Cowboys 24–10 Wests Tigers. Tigers led 10–8 at halftime; North Queensland won the second half 16–0.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 57.5 | **WIN** |
+| 2 | Wests Tigers +12.5 | **LOSS** |
+| 3 | Cowboys -12.5 | **WIN** |
+| 4 | Over 57.5 | **LOSS** |
+| — | Potential winner: Cowboys | **WIN** |
+
+**What went right:** the broad Under was robust and the Cowboys winner call was correct.
+
+**What went wrong:** +12.5 was ranked too safely from the Tigers' recent close-game form. A low total does not guarantee a narrow margin. The favourite's restored spine and second-half possession/territory control created a 14-point separation while the total stayed only 34.
+
+**Learning candidate:** in NRL, explicitly separate the *total* state from the favourite's *second-half separation* state. A favourite can cover a large line by suppressing the opponent rather than creating an Over.
+
+---
+
+### P-171 — Glasgow Cosmic vs Dublin Guardians — European T20 Premier League
+
+**Final:** Glasgow Cosmic 183/5; Dublin Guardians 150 all out. Glasgow won by 33 runs.  
+**Six-over checkpoint:** Glasgow 44/2.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Glasgow 20-over Under 165.5 | **LOSS** |
+| 2 | Glasgow first 6 overs Under 48.5 | **WIN** |
+| 3 | Glasgow first 6 overs Over 48.5 | **LOSS** |
+| 4 | Glasgow 20-over Over 165.5 | **WIN** |
+| — | Potential winner: Dublin | **LOSS** |
+
+#### Deep Rank #1 retrospective
+
+**Pregame thesis:** observed moisture/new-ball help plus a pitch estimate near 160 supported both early suppression and a below-166 completed innings.
+
+**Actual path:** the powerplay read was correct — Glasgow were only 44/2 after six — but the full-innings inference was wrong. Glasgow rebuilt and accelerated sufficiently through the middle/death phases to reach 183/5.
+
+**Primary defect:** `PHASE-TRANSFER ERROR`. A correct first-six distribution was allowed to pull the completed-innings distribution too far downward. The two targets are linked but not interchangeable.
+
+**Resource-state miss:** losing two wickets by six overs did not imply a collapse. Glasgow retained enough batting resources to accelerate. The middle-overs and death-overs scoring/wicket states needed their own branches.
+
+**Winner miss:** Dublin's chase-later/toss advantage was overweighted relative to the risk of chasing a 180+ target and Glasgow's bowling response. Glasgow's attack, including a four-wicket Ngidi performance in available reporting, converted the large target into a comfortable win.
+
+**What went right:** first-six Under 48.5 was correctly identified and won by 4.5 runs; the card also retained the full-innings Over as a live branch.
+
+**Learning disposition:** strong reinforcement of existing cricket phase separation (`L-009`): powerplay, overs 7–15 and death overs are separate distributions. No new numerical weight is promoted.
+
+---
+
+### P-172 — Liverpool vs Nottingham Forest — Premier League
+
+**Final:** Liverpool 2–2 Nottingham Forest.  
+**Current stat sources:** Forest generated a materially stronger transition/chance state than the pregame suppression thesis and won the corner count 5–3 in the retrieved match-stat source.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 Goals | **WIN** |
+| 2 | Liverpool ML | **LOSS** |
+| 3 | Nottingham Forest Team Under 1.5 Goals | **LOSS** |
+| 4 | Nottingham Forest Team Corners Under 3.5 | **LOSS** |
+| 5 | Under 2.5 Goals | **LOSS** |
+| — | Potential winner: Liverpool | **LOSS** |
+
+**What went right:** the least demanding early-scoring contract ranked first and landed.
+
+**What went wrong:** low possession / counter-attacking intent was treated too much like suppression of both Forest goals and corners. Forest's transition quality and end-product created two goals and five corners despite Liverpool holding more of the ball.
+
+### Potential winner
+
+| Winner alias | Issued selection | Completed event | Research outcome |
+|---|---|---|---|
+| P-166 winner | Melbourne Mustangs | Canberra won 5–4 OT | **LOSS** |
+
+### Closure / provenance state
+
+- **Event state:** `FINAL / COMPLETED`
+- **Research settlement:** `PROVISIONALLY SETTLED`
+- **Rows research-graded:** 4/4
+- **Winner alias:** research-graded
+- **Official field-owner archival confirmation:** `PENDING`
+- **Operator-specific puck-line/total treatment:** `UNKNOWN_DEFINITION`
+- **Performance eligibility:** remains `QUARANTINED / START-CROSSING` from the issued view.
+
+---
+
+## S-171-PHASE — P-171 Glasgow Cosmic vs Dublin Guardians
+
+### Six-over checkpoint
+
+Latest detailed scorecard gives:
+
+**Glasgow Cosmic 44/2 after 6.0 overs**
+
+Scorecard source currently available:
+`TheTopBookies` live ETPL ball-by-ball / scorecard, which explicitly records `END OF OVER 6` and `GLC: 44/2 in 6.0`.
+
+No official ETPL field-owner phase archive was recovered at this refresh, so these exact phase rows are recorded as **provisional research settlements** pending archival/provider confirmation.
+
+### Six-over contract settlement
+
+| Issued rank | Contract ID | Frozen contract | Exact phase result | Research outcome | Exact margin |
+|---:|---|---|---|---|---|
+| 2 | `P-171-C04` | Cosmic first 6 overs Under 48.5 | 44 runs after 6.0 | **WIN** | Under cleared by 4.5 runs |
+| 3 | `P-171-C03` | Cosmic first 6 overs Over 48.5 | 44 runs after 6.0 | **LOSS** | Over missed by 4.5 runs |
+
+### Rows still open
+
+| Contract ID / alias | State at refresh | Settlement state |
+|---|---|---|
+| `P-171-C01` | Cosmic 20-over Over 165.5 | **OPEN** — first innings still in progress |
+| `P-171-C02` | Cosmic 20-over Under 165.5 | **OPEN** — first innings still in progress |
+| P-171 potential winner | Dublin Guardians | **OPEN** — match still in progress |
+
+Latest completed-over score at the final refresh: **Glasgow 145/4 after 16.0 overs**.
+
+### Event state
+
+`LIVE / PARTIALLY SETTLED`
+
+The completed six-over target is closed at research level; the 20-over target and game winner remain open.
+
+---
+
+# Open-event / unresolved queue after settlement refresh
+
+| Item | Current state | Settlement instruction |
+|---|---|---|
+| P-126 | Provider/field-owner conflict remains | `UNRESOLVED` |
+| P-148-C02 | Exact Toluca corners not established | `UNRESOLVED` |
+| P-149-C02 | Ventura corners remain provisional | Keep `PROVISIONAL`; provider-owner follow-up |
+| P-151-C02 | Boca corner result independently corroborated but provider owner still unconfirmed | Keep `PROVISIONAL`; do not silently upgrade |
+| P-162 | Tennis final specialist-confirmed but ITF/event owner not recovered | Keep `PROVISIONAL` |
+| P-166 archival follow-up | Event research-settled 5–4 OT | Official AIHL archive + operator-definition follow-up only |
+| P-167 | Kiwoom 2–1 Doosan, bottom 5th on official KBO scoreboard | `LIVE` |
+| P-168 | LG 3–2 Lotte, bottom 4th on official KBO scoreboard | `LIVE` |
+| P-169 | AFL official match centre live | `LIVE` |
+| P-170 | Tigers 10–8 Cowboys at halftime on NRL official feed | `LIVE` |
+| P-171-C01/C02 + winner | Glasgow innings/match ongoing | `LIVE` |
+
+## Administrative note
+
+This settlement refresh **does not consume a new canonical forecast ID**.
+
+
+
+**Mechanism check:** Melbourne still generated territory/clearance opportunities but could not turn them into enough score. That is exactly why the AFL module separates territory → inside-50 → scoring shot → quality/conversion. Territory dominance is not itself points.
+
+**Learning:** this reinforces existing AFL conversion-chain controls; it does not justify a generic future Under bias.
+
+---
+
+### P-170 — Wests Tigers vs North Queensland Cowboys — NRL
+
+**Official final:** North Queensland Cowboys 24–10 Wests Tigers. Tigers led 10–8 at halftime; North Queensland won the second half 16–0.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 57.5 | **WIN** |
+| 2 | Wests Tigers +12.5 | **LOSS** |
+| 3 | Cowboys -12.5 | **WIN** |
+| 4 | Over 57.5 | **LOSS** |
+| — | Potential winner: Cowboys | **WIN** |
+
+**What went right:** the broad Under was robust and the Cowboys winner call was correct.
+
+**What went wrong:** +12.5 was ranked too safely from the Tigers' recent close-game form. A low total does not guarantee a narrow margin. The favourite's restored spine and second-half possession/territory control created a 14-point separation while the total stayed only 34.
+
+**Learning candidate:** in NRL, explicitly separate the *total* state from the favourite's *second-half separation* state. A favourite can cover a large line by suppressing the opponent rather than creating an Over.
+
+---
+
+### P-171 — Glasgow Cosmic vs Dublin Guardians — European T20 Premier League
+
+**Final:** Glasgow Cosmic 183/5; Dublin Guardians 150 all out. Glasgow won by 33 runs.  
+**Six-over checkpoint:** Glasgow 44/2.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Glasgow 20-over Under 165.5 | **LOSS** |
+| 2 | Glasgow first 6 overs Under 48.5 | **WIN** |
+| 3 | Glasgow first 6 overs Over 48.5 | **LOSS** |
+| 4 | Glasgow 20-over Over 165.5 | **WIN** |
+| — | Potential winner: Dublin | **LOSS** |
+
+#### Deep Rank #1 retrospective
+
+**Pregame thesis:** observed moisture/new-ball help plus a pitch estimate near 160 supported both early suppression and a below-166 completed innings.
+
+**Actual path:** the powerplay read was correct — Glasgow were only 44/2 after six — but the full-innings inference was wrong. Glasgow rebuilt and accelerated sufficiently through the middle/death phases to reach 183/5.
+
+**Primary defect:** `PHASE-TRANSFER ERROR`. A correct first-six distribution was allowed to pull the completed-innings distribution too far downward. The two targets are linked but not interchangeable.
+
+**Resource-state miss:** losing two wickets by six overs did not imply a collapse. Glasgow retained enough batting resources to accelerate. The middle-overs and death-overs scoring/wicket states needed their own branches.
+
+**Winner miss:** Dublin's chase-later/toss advantage was overweighted relative to the risk of chasing a 180+ target and Glasgow's bowling response. Glasgow's attack, including a four-wicket Ngidi performance in available reporting, converted the large target into a comfortable win.
+
+**What went right:** first-six Under 48.5 was correctly identified and won by 4.5 runs; the card also retained the full-innings Over as a live branch.
+
+**Learning disposition:** strong reinforcement of existing cricket phase separation (`L-009`): powerplay, overs 7–15 and death overs are separate distributions. No new numerical weight is promoted.
+
+---
+
+### P-172 — Liverpool vs Nottingham Forest — Premier League
+
+**Final:** Liverpool 2–2 Nottingham Forest.  
+**Current stat sources:** Forest generated a materially stronger transition/chance state than the pregame suppression thesis and won the corner count 5–3 in the retrieved match-stat source.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 Goals | **WIN** |
+| 2 | Liverpool ML | **LOSS** |
+| 3 | Nottingham Forest Team Under 1.5 Goals | **LOSS** |
+| 4 | Nottingham Forest Team Corners Under 3.5 | **LOSS** |
+| 5 | Under 2.5 Goals | **LOSS** |
+| — | Potential winner: Liverpool | **LOSS** |
+
+**What went right:** the least demanding early-scoring contract ranked first and landed.
+
+**What went wrong:** low possession / counter-attacking intent was treated too much like suppression of both Forest goals and corners. Forest's transition quality and end-product created two goals and five corners despite Liverpool holding more of the ball.
+
+
+
+| Winner alias | Issued selection | Completed event | Research outcome |
+|---|---|---|---|
+| P-166 winner | Melbourne Mustangs | Canberra won 5–4 OT | **LOSS** |
+
+### Closure / provenance state
+
+- **Event state:** `FINAL / COMPLETED`
+- **Research settlement:** `PROVISIONALLY SETTLED`
+- **Rows research-graded:** 4/4
+- **Winner alias:** research-graded
+- **Official field-owner archival confirmation:** `PENDING`
+- **Operator-specific puck-line/total treatment:** `UNKNOWN_DEFINITION`
+- **Performance eligibility:** remains `QUARANTINED / START-CROSSING` from the issued view.
+
+---
+
+## S-171-PHASE — P-171 Glasgow Cosmic vs Dublin Guardians
+
+### Six-over checkpoint
+
+Latest detailed scorecard gives:
+
+**Glasgow Cosmic 44/2 after 6.0 overs**
+
+Scorecard source currently available:
+`TheTopBookies` live ETPL ball-by-ball / scorecard, which explicitly records `END OF OVER 6` and `GLC: 44/2 in 6.0`.
+
+No official ETPL field-owner phase archive was recovered at this refresh, so these exact phase rows are recorded as **provisional research settlements** pending archival/provider confirmation.
+
+### Six-over contract settlement
+
+| Issued rank | Contract ID | Frozen contract | Exact phase result | Research outcome | Exact margin |
+|---:|---|---|---|---|---|
+| 2 | `P-171-C04` | Cosmic first 6 overs Under 48.5 | 44 runs after 6.0 | **WIN** | Under cleared by 4.5 runs |
+| 3 | `P-171-C03` | Cosmic first 6 overs Over 48.5 | 44 runs after 6.0 | **LOSS** | Over missed by 4.5 runs |
+
+### Rows still open
+
+| Contract ID / alias | State at refresh | Settlement state |
+|---|---|---|
+| `P-171-C01` | Cosmic 20-over Over 165.5 | **OPEN** — first innings still in progress |
+| `P-171-C02` | Cosmic 20-over Under 165.5 | **OPEN** — first innings still in progress |
+| P-171 potential winner | Dublin Guardians | **OPEN** — match still in progress |
+
+Latest completed-over score at the final refresh: **Glasgow 145/4 after 16.0 overs**.
+
+### Event state
+
+`LIVE / PARTIALLY SETTLED`
+
+The completed six-over target is closed at research level; the 20-over target and game winner remain open.
+
+---
+
+# Open-event / unresolved queue after settlement refresh
+
+| Item | Current state | Settlement instruction |
+|---|---|---|
+| P-126 | Provider/field-owner conflict remains | `UNRESOLVED` |
+| P-148-C02 | Exact Toluca corners not established | `UNRESOLVED` |
+| P-149-C02 | Ventura corners remain provisional | Keep `PROVISIONAL`; provider-owner follow-up |
+| P-151-C02 | Boca corner result independently corroborated but provider owner still unconfirmed | Keep `PROVISIONAL`; do not silently upgrade |
+| P-162 | Tennis final specialist-confirmed but ITF/event owner not recovered | Keep `PROVISIONAL` |
+| P-166 archival follow-up | Event research-settled 5–4 OT | Official AIHL archive + operator-definition follow-up only |
+| P-167 | Kiwoom 2–1 Doosan, bottom 5th on official KBO scoreboard | `LIVE` |
+| P-168 | LG 3–2 Lotte, bottom 4th on official KBO scoreboard | `LIVE` |
+| P-169 | AFL official match centre live | `LIVE` |
+| P-170 | Tigers 10–8 Cowboys at halftime on NRL official feed | `LIVE` |
+| P-171-C01/C02 + winner | Glasgow innings/match ongoing | `LIVE` |
+
+## Administrative note
+
+This settlement refresh **does not consume a new canonical forecast ID**.
+
+**Next canonical forecast ID remains:** `P-172`
+
+**Mechanism check:** Melbourne still generated territory/clearance opportunities but could not turn them into enough score. That is exactly why the AFL module separates territory → inside-50 → scoring shot → quality/conversion. Territory dominance is not itself points.
+
+**Learning:** this reinforces existing AFL conversion-chain controls; it does not justify a generic future Under bias.
+
+---
+
+### P-170 — Wests Tigers vs North Queensland Cowboys — NRL
+
+**Official final:** North Queensland Cowboys 24–10 Wests Tigers. Tigers led 10–8 at halftime; North Queensland won the second half 16–0.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 57.5 | **WIN** |
+| 2 | Wests Tigers +12.5 | **LOSS** |
+| 3 | Cowboys -12.5 | **WIN** |
+| 4 | Over 57.5 | **LOSS** |
+| — | Potential winner: Cowboys | **WIN** |
+
+**What went right:** the broad Under was robust and the Cowboys winner call was correct.
+
+**What went wrong:** +12.5 was ranked too safely from the Tigers' recent close-game form. A low total does not guarantee a narrow margin. The favourite's restored spine and second-half possession/territory control created a 14-point separation while the total stayed only 34.
+
+**Learning candidate:** in NRL, explicitly separate the *total* state from the favourite's *second-half separation* state. A favourite can cover a large line by suppressing the opponent rather than creating an Over.
+
+---
+
+### P-171 — Glasgow Cosmic vs Dublin Guardians — European T20 Premier League
+
+**Final:** Glasgow Cosmic 183/5; Dublin Guardians 150 all out. Glasgow won by 33 runs.  
+**Six-over checkpoint:** Glasgow 44/2.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Glasgow 20-over Under 165.5 | **LOSS** |
+| 2 | Glasgow first 6 overs Under 48.5 | **WIN** |
+| 3 | Glasgow first 6 overs Over 48.5 | **LOSS** |
+| 4 | Glasgow 20-over Over 165.5 | **WIN** |
+| — | Potential winner: Dublin | **LOSS** |
+
+#### Deep Rank #1 retrospective
+
+**Pregame thesis:** observed moisture/new-ball help plus a pitch estimate near 160 supported both early suppression and a below-166 completed innings.
+
+**Actual path:** the powerplay read was correct — Glasgow were only 44/2 after six — but the full-innings inference was wrong. Glasgow rebuilt and accelerated sufficiently through the middle/death phases to reach 183/5.
+
+**Primary defect:** `PHASE-TRANSFER ERROR`. A correct first-six distribution was allowed to pull the completed-innings distribution too far downward. The two targets are linked but not interchangeable.
+
+**Resource-state miss:** losing two wickets by six overs did not imply a collapse. Glasgow retained enough batting resources to accelerate. The middle-overs and death-overs scoring/wicket states needed their own branches.
+
+**Winner miss:** Dublin's chase-later/toss advantage was overweighted relative to the risk of chasing a 180+ target and Glasgow's bowling response. Glasgow's attack, including a four-wicket Ngidi performance in available reporting, converted the large target into a comfortable win.
+
+**What went right:** first-six Under 48.5 was correctly identified and won by 4.5 runs; the card also retained the full-innings Over as a live branch.
+
+**Learning disposition:** strong reinforcement of existing cricket phase separation (`L-009`): powerplay, overs 7–15 and death overs are separate distributions. No new numerical weight is promoted.
+
+---
+
+### P-172 — Liverpool vs Nottingham Forest — Premier League
+
+**Final:** Liverpool 2–2 Nottingham Forest.  
+**Current stat sources:** Forest generated a materially stronger transition/chance state than the pregame suppression thesis and won the corner count 5–3 in the retrieved match-stat source.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 Goals | **WIN** |
+| 2 | Liverpool ML | **LOSS** |
+| 3 | Nottingham Forest Team Under 1.5 Goals | **LOSS** |
+| 4 | Nottingham Forest Team Corners Under 3.5 | **LOSS** |
+| 5 | Under 2.5 Goals | **LOSS** |
+| — | Potential winner: Liverpool | **LOSS** |
+
+**What went right:** the least demanding early-scoring contract ranked first and landed.
+
+**What went wrong:** low possession / counter-attacking intent was treated too much like suppression of both Forest goals and corners. Forest's transition quality and end-product created two goals and five corners despite Liverpool holding more of the ball.
+
+**Learning candidate:** low possession is not low attacking-event exposure. Soccer corner and goal models must trace transitions, width/end-line entries, blocked actions and score state directly.
+
+
+**Learning:** this reinforces existing AFL conversion-chain controls; it does not justify a generic future Under bias.
+
+---
+
+### P-170 — Wests Tigers vs North Queensland Cowboys — NRL
+
+**Official final:** North Queensland Cowboys 24–10 Wests Tigers. Tigers led 10–8 at halftime; North Queensland won the second half 16–0.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Under 57.5 | **WIN** |
+| 2 | Wests Tigers +12.5 | **LOSS** |
+| 3 | Cowboys -12.5 | **WIN** |
+| 4 | Over 57.5 | **LOSS** |
+| — | Potential winner: Cowboys | **WIN** |
+
+**What went right:** the broad Under was robust and the Cowboys winner call was correct.
+
+**What went wrong:** +12.5 was ranked too safely from the Tigers' recent close-game form. A low total does not guarantee a narrow margin. The favourite's restored spine and second-half possession/territory control created a 14-point separation while the total stayed only 34.
+
+**Learning candidate:** in NRL, explicitly separate the *total* state from the favourite's *second-half separation* state. A favourite can cover a large line by suppressing the opponent rather than creating an Over.
+
+---
+
+### P-171 — Glasgow Cosmic vs Dublin Guardians — European T20 Premier League
+
+**Final:** Glasgow Cosmic 183/5; Dublin Guardians 150 all out. Glasgow won by 33 runs.  
+**Six-over checkpoint:** Glasgow 44/2.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | Glasgow 20-over Under 165.5 | **LOSS** |
+| 2 | Glasgow first 6 overs Under 48.5 | **WIN** |
+| 3 | Glasgow first 6 overs Over 48.5 | **LOSS** |
+| 4 | Glasgow 20-over Over 165.5 | **WIN** |
+| — | Potential winner: Dublin | **LOSS** |
+
+#### Deep Rank #1 retrospective
+
+**Pregame thesis:** observed moisture/new-ball help plus a pitch estimate near 160 supported both early suppression and a below-166 completed innings.
+
+**Actual path:** the powerplay read was correct — Glasgow were only 44/2 after six — but the full-innings inference was wrong. Glasgow rebuilt and accelerated sufficiently through the middle/death phases to reach 183/5.
+
+**Primary defect:** `PHASE-TRANSFER ERROR`. A correct first-six distribution was allowed to pull the completed-innings distribution too far downward. The two targets are linked but not interchangeable.
+
+**Resource-state miss:** losing two wickets by six overs did not imply a collapse. Glasgow retained enough batting resources to accelerate. The middle-overs and death-overs scoring/wicket states needed their own branches.
+
+**Winner miss:** Dublin's chase-later/toss advantage was overweighted relative to the risk of chasing a 180+ target and Glasgow's bowling response. Glasgow's attack, including a four-wicket Ngidi performance in available reporting, converted the large target into a comfortable win.
+
+**What went right:** first-six Under 48.5 was correctly identified and won by 4.5 runs; the card also retained the full-innings Over as a live branch.
+
+**Learning disposition:** strong reinforcement of existing cricket phase separation (`L-009`): powerplay, overs 7–15 and death overs are separate distributions. No new numerical weight is promoted.
+
+---
+
+### P-172 — Liverpool vs Nottingham Forest — Premier League
+
+**Final:** Liverpool 2–2 Nottingham Forest.  
+**Current stat sources:** Forest generated a materially stronger transition/chance state than the pregame suppression thesis and won the corner count 5–3 in the retrieved match-stat source.
+
+| Rank | Frozen pick | Outcome |
+|---:|---|---|
+| 1 | 1st Half Over 0.5 Goals | **WIN** |
+| 2 | Liverpool ML | **LOSS** |
+| 3 | Nottingham Forest Team Under 1.5 Goals | **LOSS** |
+| 4 | Nottingham Forest Team Corners Under 3.5 | **LOSS** |
+| 5 | Under 2.5 Goals | **LOSS** |
+| — | Potential winner: Liverpool | **LOSS** |
+
+**What went right:** the least demanding early-scoring contract ranked first and landed.
+
+**What went wrong:** low possession / counter-attacking intent was treated too much like suppression of both Forest goals and corners. Forest's transition quality and end-product created two goals and five corners despite Liverpool holding more of the ball.
+
+**Learning candidate:** low possession is not low attacking-event exposure. Soccer corner and goal models must trace transitions, width/end-line entries, blocked actions and score state directly.

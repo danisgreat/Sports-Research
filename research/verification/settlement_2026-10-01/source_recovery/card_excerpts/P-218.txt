@@ -1,0 +1,306 @@
+| Separate **result truth**, **prediction correctness**, and **operator grade**. | P-217's actual 185 resolves the directional question but not the sportsbook grade after a 20-to-16-over reduction. | Every cricket market must store operator, exact market wording, minimum-overs/action rule and DLS/shortening rule before it can be called formally settled. |
+| A plus-run cushion is not automatically the safest pick when the favourite's separation mechanism is unusually strong. | P-220, P-229, P-231 and P-232 all produced favourite wins by 2+ in low or moderate totals. | Add a **separation-risk gate** using starter edge, bullpen edge, lineup direction, recent 2+ margins and direct H2H separation. If three or more agree, do not promote the underdog +1.5 merely because it covers all close games. |
+| Low total and close margin are different targets. | P-220 finished 5-0, P-229 6-1, P-231 3-1 and P-232 3-0. | Build score-allocation branches explicitly. An Under can coexist with a large favourite margin when one side is suppressed. |
+| Near-threshold cricket Unders need a boundary-risk audit, not just a central estimate. | P-237 U184.5 lost by 0.5; its paired powerplay Under also lost after 59/0. P-236 U20.5 lost at 23/1. | For a line within roughly 3 runs of a plausible corridor edge, report threshold distance, direct-opponent phase evidence, toss/bat-first state, wicket-resource ceiling and extras volatility. Downgrade when one boundary changes the grade. |
+| Direct matchup evidence must be used coherently, not merely acknowledged. | P-237 noted SA's prior 61-run powerplay against the same attack, yet ranked U54.5 second. P-229 documented KT -1.5 in 7/11 H2Hs and Hanwha +1.5 at 0/5, yet ranked Hanwha first. | Add a contradiction table: if the selected side opposes both direct-matchup and shortest-window evidence, it must have a stronger causal reason than market price/contract breadth. Otherwise rank it lower or mark AVOID. |
+| Team-strength and winner calls cannot be detached from derivative signals without explanation. | P-223 identified Ureña as the best starter but still chose Yankees; P-235 correctly backed Port to score and the game to go Over, yet selected Shandong to win. | Add a winner/derivative coherence check before issue. If a team-goal Over is high-ranked against a vulnerable opponent, explain why the opponent still wins or revise the winner call. |
+| Knockout soccer needs a competition-state adjustment separate from league/H2H scoring history. | P-234's four high-scoring H2Hs and both teams' recent 1H goal rates did not overcome a 0-0 first half and a 1-0 cup result. | Downweight league H2H, model regulation-time caution, and prefer team-specific or corner markets only when current match stats/lineups support them independently. |
+| Official score sources should lead; derivative providers should be cross-checked. | MLB, NPB, KBO, ATP and official/major cricket scorecards resolved most endpoints. Corners required specialist feeds. | Source order: official competition/game centre → official team/organizer → major licensed scorecard/data partner → two independent secondary providers. Exact corners or phases should not be graded from a generic result page. |
+
+## P-217 settlement — TKR vs Guyana Amazon Warriors
+
+Verified outcome: **GAW 185/5 in 16 overs; TKR 172/7 in 16; GAW won by 9 runs under DLS. GAW were 31/2 after 6 completed overs.**
+
+| Rank | Issued pick | Realized endpoint | Grade |
+|---:|---|---|---|
+| 1 | GAW full innings Under 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis wrong |
+| 2 | GAW after 6 Over 46.5 | 31/2 | **LOSS** |
+| 3 | GAW after 6 Under 46.5 | 31/2 | **WIN** |
+| 4 | GAW full innings Over 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis right |
+| — | Potential winner: GAW | GAW won | **WIN** |
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+| — | Potential winner: Rays | **LOSS** |
+
+What went right: the top-ranked cushion was robust and the Under branch existed in the original tree. Robert Stock delivered 5.1 scoreless innings; Ian Seymour struck out ten but allowed the three Mets runs. The game stayed close, exactly the environment in which Mets +1.5 was strongest.
+
+What went wrong: the potential-winner call over-weighted Tampa's broader team/starter baseline and under-weighted the chance that Stock's weak season line would not describe this single start. The Over rank also leaned too much on Stock's upper tail; his actual command suppressed that path.
+
+Learning: when the #1 pick is an underdog cushion and the opposing favourite's -1.5 is ranked below it, the winner call should carry only modest confidence. A starter with a poor baseline still needs an explicit quality-start probability branch.
+
+Source: [ESPN final and box score](https://www.espn.com/mlb/game/_/gameId/401816748/mets-rays).
+
+## P-220 settlement and deep rank-#1 retrospective — Padres @ Reds
+
+Verified outcome: **Padres 5, Reds 0; 5 total runs. Michael King threw six scoreless innings; Brady Singer allowed four runs on ten hits in 4.1 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Reds +1.5 | **LOSS** |
+| 2 | Over 9.0 | **LOSS** |
+| 3 | Padres -1.5 | **WIN** |
+
+| A plus-run cushion is not automatically the safest pick when the favourite's separation mechanism is unusually strong. | P-220, P-229, P-231 and P-232 all produced favourite wins by 2+ in low or moderate totals. | Add a **separation-risk gate** using starter edge, bullpen edge, lineup direction, recent 2+ margins and direct H2H separation. If three or more agree, do not promote the underdog +1.5 merely because it covers all close games. |
+| Low total and close margin are different targets. | P-220 finished 5-0, P-229 6-1, P-231 3-1 and P-232 3-0. | Build score-allocation branches explicitly. An Under can coexist with a large favourite margin when one side is suppressed. |
+| Near-threshold cricket Unders need a boundary-risk audit, not just a central estimate. | P-237 U184.5 lost by 0.5; its paired powerplay Under also lost after 59/0. P-236 U20.5 lost at 23/1. | For a line within roughly 3 runs of a plausible corridor edge, report threshold distance, direct-opponent phase evidence, toss/bat-first state, wicket-resource ceiling and extras volatility. Downgrade when one boundary changes the grade. |
+| Direct matchup evidence must be used coherently, not merely acknowledged. | P-237 noted SA's prior 61-run powerplay against the same attack, yet ranked U54.5 second. P-229 documented KT -1.5 in 7/11 H2Hs and Hanwha +1.5 at 0/5, yet ranked Hanwha first. | Add a contradiction table: if the selected side opposes both direct-matchup and shortest-window evidence, it must have a stronger causal reason than market price/contract breadth. Otherwise rank it lower or mark AVOID. |
+| Team-strength and winner calls cannot be detached from derivative signals without explanation. | P-223 identified Ureña as the best starter but still chose Yankees; P-235 correctly backed Port to score and the game to go Over, yet selected Shandong to win. | Add a winner/derivative coherence check before issue. If a team-goal Over is high-ranked against a vulnerable opponent, explain why the opponent still wins or revise the winner call. |
+| Knockout soccer needs a competition-state adjustment separate from league/H2H scoring history. | P-234's four high-scoring H2Hs and both teams' recent 1H goal rates did not overcome a 0-0 first half and a 1-0 cup result. | Downweight league H2H, model regulation-time caution, and prefer team-specific or corner markets only when current match stats/lineups support them independently. |
+| Official score sources should lead; derivative providers should be cross-checked. | MLB, NPB, KBO, ATP and official/major cricket scorecards resolved most endpoints. Corners required specialist feeds. | Source order: official competition/game centre → official team/organizer → major licensed scorecard/data partner → two independent secondary providers. Exact corners or phases should not be graded from a generic result page. |
+
+## P-217 settlement — TKR vs Guyana Amazon Warriors
+
+Verified outcome: **GAW 185/5 in 16 overs; TKR 172/7 in 16; GAW won by 9 runs under DLS. GAW were 31/2 after 6 completed overs.**
+
+| Rank | Issued pick | Realized endpoint | Grade |
+|---:|---|---|---|
+| 1 | GAW full innings Under 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis wrong |
+| 2 | GAW after 6 Over 46.5 | 31/2 | **LOSS** |
+| 3 | GAW after 6 Under 46.5 | 31/2 | **WIN** |
+| 4 | GAW full innings Over 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis right |
+| — | Potential winner: GAW | GAW won | **WIN** |
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+| — | Potential winner: Rays | **LOSS** |
+
+What went right: the top-ranked cushion was robust and the Under branch existed in the original tree. Robert Stock delivered 5.1 scoreless innings; Ian Seymour struck out ten but allowed the three Mets runs. The game stayed close, exactly the environment in which Mets +1.5 was strongest.
+
+What went wrong: the potential-winner call over-weighted Tampa's broader team/starter baseline and under-weighted the chance that Stock's weak season line would not describe this single start. The Over rank also leaned too much on Stock's upper tail; his actual command suppressed that path.
+
+Learning: when the #1 pick is an underdog cushion and the opposing favourite's -1.5 is ranked below it, the winner call should carry only modest confidence. A starter with a poor baseline still needs an explicit quality-start probability branch.
+
+Source: [ESPN final and box score](https://www.espn.com/mlb/game/_/gameId/401816748/mets-rays).
+
+## P-220 settlement and deep rank-#1 retrospective — Padres @ Reds
+
+Verified outcome: **Padres 5, Reds 0; 5 total runs. Michael King threw six scoreless innings; Brady Singer allowed four runs on ten hits in 4.1 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Reds +1.5 | **LOSS** |
+| 2 | Over 9.0 | **LOSS** |
+| 3 | Padres -1.5 | **WIN** |
+| 4 | Under 9.0 | **WIN** |
+
+| Low total and close margin are different targets. | P-220 finished 5-0, P-229 6-1, P-231 3-1 and P-232 3-0. | Build score-allocation branches explicitly. An Under can coexist with a large favourite margin when one side is suppressed. |
+| Near-threshold cricket Unders need a boundary-risk audit, not just a central estimate. | P-237 U184.5 lost by 0.5; its paired powerplay Under also lost after 59/0. P-236 U20.5 lost at 23/1. | For a line within roughly 3 runs of a plausible corridor edge, report threshold distance, direct-opponent phase evidence, toss/bat-first state, wicket-resource ceiling and extras volatility. Downgrade when one boundary changes the grade. |
+| Direct matchup evidence must be used coherently, not merely acknowledged. | P-237 noted SA's prior 61-run powerplay against the same attack, yet ranked U54.5 second. P-229 documented KT -1.5 in 7/11 H2Hs and Hanwha +1.5 at 0/5, yet ranked Hanwha first. | Add a contradiction table: if the selected side opposes both direct-matchup and shortest-window evidence, it must have a stronger causal reason than market price/contract breadth. Otherwise rank it lower or mark AVOID. |
+| Team-strength and winner calls cannot be detached from derivative signals without explanation. | P-223 identified Ureña as the best starter but still chose Yankees; P-235 correctly backed Port to score and the game to go Over, yet selected Shandong to win. | Add a winner/derivative coherence check before issue. If a team-goal Over is high-ranked against a vulnerable opponent, explain why the opponent still wins or revise the winner call. |
+| Knockout soccer needs a competition-state adjustment separate from league/H2H scoring history. | P-234's four high-scoring H2Hs and both teams' recent 1H goal rates did not overcome a 0-0 first half and a 1-0 cup result. | Downweight league H2H, model regulation-time caution, and prefer team-specific or corner markets only when current match stats/lineups support them independently. |
+| Official score sources should lead; derivative providers should be cross-checked. | MLB, NPB, KBO, ATP and official/major cricket scorecards resolved most endpoints. Corners required specialist feeds. | Source order: official competition/game centre → official team/organizer → major licensed scorecard/data partner → two independent secondary providers. Exact corners or phases should not be graded from a generic result page. |
+
+## P-217 settlement — TKR vs Guyana Amazon Warriors
+
+Verified outcome: **GAW 185/5 in 16 overs; TKR 172/7 in 16; GAW won by 9 runs under DLS. GAW were 31/2 after 6 completed overs.**
+
+| Rank | Issued pick | Realized endpoint | Grade |
+|---:|---|---|---|
+| 1 | GAW full innings Under 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis wrong |
+| 2 | GAW after 6 Over 46.5 | 31/2 | **LOSS** |
+| 3 | GAW after 6 Under 46.5 | 31/2 | **WIN** |
+| 4 | GAW full innings Over 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis right |
+| — | Potential winner: GAW | GAW won | **WIN** |
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+| — | Potential winner: Rays | **LOSS** |
+
+What went right: the top-ranked cushion was robust and the Under branch existed in the original tree. Robert Stock delivered 5.1 scoreless innings; Ian Seymour struck out ten but allowed the three Mets runs. The game stayed close, exactly the environment in which Mets +1.5 was strongest.
+
+What went wrong: the potential-winner call over-weighted Tampa's broader team/starter baseline and under-weighted the chance that Stock's weak season line would not describe this single start. The Over rank also leaned too much on Stock's upper tail; his actual command suppressed that path.
+
+Learning: when the #1 pick is an underdog cushion and the opposing favourite's -1.5 is ranked below it, the winner call should carry only modest confidence. A starter with a poor baseline still needs an explicit quality-start probability branch.
+
+Source: [ESPN final and box score](https://www.espn.com/mlb/game/_/gameId/401816748/mets-rays).
+
+## P-220 settlement and deep rank-#1 retrospective — Padres @ Reds
+
+Verified outcome: **Padres 5, Reds 0; 5 total runs. Michael King threw six scoreless innings; Brady Singer allowed four runs on ten hits in 4.1 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Reds +1.5 | **LOSS** |
+| 2 | Over 9.0 | **LOSS** |
+| 3 | Padres -1.5 | **WIN** |
+| 4 | Under 9.0 | **WIN** |
+| — | Potential winner: Padres | **WIN** |
+
+| Near-threshold cricket Unders need a boundary-risk audit, not just a central estimate. | P-237 U184.5 lost by 0.5; its paired powerplay Under also lost after 59/0. P-236 U20.5 lost at 23/1. | For a line within roughly 3 runs of a plausible corridor edge, report threshold distance, direct-opponent phase evidence, toss/bat-first state, wicket-resource ceiling and extras volatility. Downgrade when one boundary changes the grade. |
+| Direct matchup evidence must be used coherently, not merely acknowledged. | P-237 noted SA's prior 61-run powerplay against the same attack, yet ranked U54.5 second. P-229 documented KT -1.5 in 7/11 H2Hs and Hanwha +1.5 at 0/5, yet ranked Hanwha first. | Add a contradiction table: if the selected side opposes both direct-matchup and shortest-window evidence, it must have a stronger causal reason than market price/contract breadth. Otherwise rank it lower or mark AVOID. |
+| Team-strength and winner calls cannot be detached from derivative signals without explanation. | P-223 identified Ureña as the best starter but still chose Yankees; P-235 correctly backed Port to score and the game to go Over, yet selected Shandong to win. | Add a winner/derivative coherence check before issue. If a team-goal Over is high-ranked against a vulnerable opponent, explain why the opponent still wins or revise the winner call. |
+| Knockout soccer needs a competition-state adjustment separate from league/H2H scoring history. | P-234's four high-scoring H2Hs and both teams' recent 1H goal rates did not overcome a 0-0 first half and a 1-0 cup result. | Downweight league H2H, model regulation-time caution, and prefer team-specific or corner markets only when current match stats/lineups support them independently. |
+| Official score sources should lead; derivative providers should be cross-checked. | MLB, NPB, KBO, ATP and official/major cricket scorecards resolved most endpoints. Corners required specialist feeds. | Source order: official competition/game centre → official team/organizer → major licensed scorecard/data partner → two independent secondary providers. Exact corners or phases should not be graded from a generic result page. |
+
+## P-217 settlement — TKR vs Guyana Amazon Warriors
+
+Verified outcome: **GAW 185/5 in 16 overs; TKR 172/7 in 16; GAW won by 9 runs under DLS. GAW were 31/2 after 6 completed overs.**
+
+| Rank | Issued pick | Realized endpoint | Grade |
+|---:|---|---|---|
+| 1 | GAW full innings Under 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis wrong |
+| 2 | GAW after 6 Over 46.5 | 31/2 | **LOSS** |
+| 3 | GAW after 6 Under 46.5 | 31/2 | **WIN** |
+| 4 | GAW full innings Over 174.5 | 185 in a shortened 16-over innings | **OPERATOR-DEPENDENT**; directional thesis right |
+| — | Potential winner: GAW | GAW won | **WIN** |
+
+What went right: the winner call survived the rain-adjusted format, and the low early-phase branch was correct. GAW lost two early wickets and were only 31 after six, validating the warning about early restraint/wicket pressure.
+
+What went wrong: the full-innings Under thesis treated a nominal 20-over total as if shortening would merely reduce exposure. In practice, a 16-over game changed batting intent, and Hetmyer produced 111 not out from 43 balls. The same innings therefore had a slow six-over phase and an extreme late acceleration. This is a direct example of the prior cricket lesson that phase and innings totals are separate targets: early wickets did not cap the finisher ceiling.
+
+Process correction: on any shortened T20, freeze the revised overs before interpreting a pre-match full-innings line. Model the new balls-per-wicket/resource state and acceleration ceiling; do not infer the full total from the powerplay. Store the sportsbook's minimum-overs rule before grading.
+
+Sources: [ESPNcricinfo scorecard](https://www.cricinfo.com/series/caribbean-premier-league-2026-1534175/trinbago-knight-riders-vs-guyana-amazon-warriors-22nd-match-1534200/full-scorecard); [CricketWorld scorecard](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/scorecard/96829); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/trinbago-knight-riders-vs-guyana-amazon-warriors/match/commentary/96829).
+
+## P-218 settlement — Ann Li vs Antonia Ruzic
+
+Verified outcome: **Li won 7-5, 6-1; 19 total games; Li margin +7.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Li -4.5 games | **WIN** |
+| 2 | Under 20.5 games | **WIN** |
+| 3 | Over 20.5 games | **LOSS** |
+| 4 | Ruzic +4.5 games | **LOSS** |
+| — | Potential winner: Li | **WIN** |
+
+Why it worked: the first set was competitive, but Li's stronger sustained level appeared in the second set. A 6-1 second set simultaneously created the handicap cover and kept the match below 20.5. The joint-score reasoning was coherent: the same straight-sets separation branch carried both top picks.
+
+Learning: for tennis spread/total pairs, identify whether the primary route is one lopsided set or two moderate breaks. Here, the lopsided-set route was decisive and should continue to be mapped explicitly.
+
+Source: [Tennis.com completed match page](https://www.tennis.com/tournaments/us-open/matches/a-li-vs-a-ruzic-2026-08-31).
+
+## P-219 settlement — Mets @ Rays
+
+Verified outcome: **Mets 3, Rays 2; 5 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mets +1.5 | **WIN** |
+| 2 | Over 7.5 | **LOSS** |
+| 3 | Rays -1.5 | **LOSS** |
+| 4 | Under 7.5 | **WIN** |
+| — | Potential winner: Rays | **LOSS** |
+
+What went right: the top-ranked cushion was robust and the Under branch existed in the original tree. Robert Stock delivered 5.1 scoreless innings; Ian Seymour struck out ten but allowed the three Mets runs. The game stayed close, exactly the environment in which Mets +1.5 was strongest.
+
+What went wrong: the potential-winner call over-weighted Tampa's broader team/starter baseline and under-weighted the chance that Stock's weak season line would not describe this single start. The Over rank also leaned too much on Stock's upper tail; his actual command suppressed that path.
+
+Learning: when the #1 pick is an underdog cushion and the opposing favourite's -1.5 is ranked below it, the winner call should carry only modest confidence. A starter with a poor baseline still needs an explicit quality-start probability branch.
+
+Source: [ESPN final and box score](https://www.espn.com/mlb/game/_/gameId/401816748/mets-rays).
+
+## P-220 settlement and deep rank-#1 retrospective — Padres @ Reds
+
+Verified outcome: **Padres 5, Reds 0; 5 total runs. Michael King threw six scoreless innings; Brady Singer allowed four runs on ten hits in 4.1 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Reds +1.5 | **LOSS** |
+| 2 | Over 9.0 | **LOSS** |
+| 3 | Padres -1.5 | **WIN** |
+| 4 | Under 9.0 | **WIN** |
+| — | Potential winner: Padres | **WIN** |

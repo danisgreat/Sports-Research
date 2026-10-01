@@ -1,0 +1,230 @@
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | CTBC Brothers +1.5 | 0.60 | **LOSS** | 0.3600 | Lost by 6. **Anti-coupled with R2 in the low-total-separation state.** |
+| 2 | Under 6.5 | 0.56 | **WIN** | 0.1936 | Exactly 6 — **+0.5**. |
+| 3 | Over 6.5 | 0.44 | **LOSS** | 0.1936 | |
+| 4 | Uni-Lions −1.5 | 0.40 | **WIN** | 0.3600 | |
+
+**Potential winner:** Uni-Lions ~59% · **CORRECT** · **Card mean Brier:** 0.2768.
+
+- **Q1:** **No.** Batting orders not retrieved (front-end rendering), bench not recorded, managers not named. **`G14.2` application failure:** a margin row ranked #1 with `BENCH_NOT_RETRIEVED`.
+- **Q2:** Accurate (CPBL official and Advanced Stats).
+- **Q3:** The card wrote "a 4–1 or 5–1 Uni win stays Under while covering −1.5" — the exact result shape — and still ranked the Brothers' cushion first. Yu's sample was 12 first-team innings with **1 strikeout in his last 7 innings** — contact-fragile, and exactly what control 11 (small-sample mixture) and `G-L11` exist to widen.
+
+**Three-question retrospective.** 1. *Driver:* Dykxhoorn's shutout innings plus a Uni-Lions scoring cluster — low-total separation. 2. *Knowable?* **Yes, in the card.** 3. *Smallest change:* baseball control 17 with explicit shutout/one-sided mass; enforce `G14.2`.
+
+| Deep Rank-#1 question | Finding |
+|---|---|
+| What went right? | The Under (R2) and the winner. |
+| What went wrong? | The cushion ranked above the separation state the card itself wrote down, and the bench/lineup gate was not respected. |
+| Actual mechanism | 7 scoreless innings against a contact-fragile small-sample starter. |
+| Improvement | Control 17 with mass; `G14.2` enforced; `G-L9`, `G-L11`. |
+| Grade (background) | C−. |
+
+##### 2026-09-12 retrospective correction
+
+| What went right | Error / uncertainty | Routine change and evidence |
+|---|---|---|
+| Under 6.5 won at six; Uni's winner call was correct | Brothers +1.5 lost by six. The original card already named a low-total separation state, but its occurrence does not identify the correct pregame mass. Dykxhoorn delivered seven scoreless; Yu allowed seven hits, **five walks and four runs/three earned** in 4.2 innings. Missing lineups/bench/coaches remain a process defect | Model control-loss/early-hook as well as contact variance; show full-game scoring after the starter exits. A long strong start is not itself a guaranteed full-game Under. Baseball 17/28 and G14.2. [CPBL gamebook](https://stats.cpbl.com.tw/schedule/2026-A-321) |
+
+#### P-366 — Settlement (6-over rows graded; 20-over rows terminal censored)
+
+**Event:** Rotterdam Dockers v Glasgow Cosmic — ETPL Match 19, Malahide (rain-delayed; reduced to 19 overs a side) · **Official final:** Rotterdam 172/4 (19) bt Glasgow 141/9 (19) by 31. Rotterdam passed 50 at 6.2 overs, so they were **≤49 at 6.0** (Faf du Plessis 71, Vikramjit 33, Klaasen 30*) · **Source:** ETPL first-party page (now COMPLETED) + CricketEurope / Cricket Ireland archive / Cricbuzz / CricketWorld · **Population:** EXPLORATORY · **Issued:** 2026-09-10 20:25 (pre-ball; start delayed)
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | Dockers first 6 overs Under 50.5 | 0.56 | **WIN** | 0.1936 | ≤49. |
+| 2 | Dockers Over 166.5 after 20 overs | 0.53 | **CENSORED** | — | Innings reduced to 19 overs; the endpoint was never reached. |
+| 3 | Dockers Under 166.5 after 20 overs | 0.47 | **CENSORED** | — | same |
+| 4 | Dockers first 6 overs Over 50.5 | 0.44 | **LOSS** | 0.1936 | |
+
+**Potential winner:** Rotterdam ~62% · **CORRECT** · **Card mean Brier (2 rows):** 0.1936.
+
+- **Q1:** **No** — the XI was not retrieved at the freeze, and the toss was reported only by a secondary thread. (Glasgow's actual attack was not re-examined this pass.)
+- **Q2:** The ETPL first-party page stayed a **stale "Yet to bat" shell for more than 24 hours** after the match — it read that way at 23:12 AEST on 11 Sep and COMPLETED by ~23:30. Settlement correctly ran through the independent scorecards. → the stale-shell rule and the fallback ladder (`RULES_SOCCER.md` control 17 generalised; `SOURCES.md` §"2026-09-11").
+- **Q3:** None material. This is the **worked example of target-by-target settlement**: a reached phase target grades; an unreached endpoint is censored and not remapped (cricket control 15).
+
+**Three-question retrospective.** 1. *Driver:* a cautious new-ball phase, then middle/death acceleration — exactly the joint path the card wrote (≈48/1 after six, then acceleration). 2. *Knowable?* **Yes, and on the card.** 3. *Smallest change:* none for the forecast; settlement routing only.
+
+#### P-367 — Settlement
+
+**Event:** China (W) v France (W) — FIBA WWC quarter-final, Berlin · **Official final:** France 90–61 (quarters FRA 25-23-22-20, CHN 20-11-17-13). China shot **better** — FG 46% v 44%, 3P 43.8% v 37.8% — and still lost by 29 · **Source:** FIBA game page `128149` · **Population:** EXPLORATORY · **Issued:** 2026-09-10 22:21
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | France −24.5 | 0.55 | **WIN** | 0.2025 | +29. |
+| 2 | Under 153.5 | 0.54 | **WIN** | 0.2116 | 151. **Positively coupled with R1** (France's defence drives both). |
+| 3 | Over 153.5 | 0.46 | **LOSS** | 0.2116 | |
+| 4 | China +24.5 | 0.45 | **LOSS** | 0.2025 | |
+
+**Potential winner:** France ~94% · **CORRECT** · **Card mean Brier:** 0.2071 — top two both won.
+
+- **Q1:** Starting fives not confirmed; both final 12s and both coaches (Gong Luming, Jean-Aimé Toupane) retrieved, and **China's absence of Li Yueru (passport) was established from the Chinese Olympic Committee** — the kind of availability fact that matters.
+- **Q2:** Accurate. A leaked closed-door scrimmage result was correctly held to low weight.
+- **Q3:** None material. The issued centre, **89–63**, against the actual **90–61** — the most accurate basketball centre in the repository's P-333+ record. Winning by 29 while shooting worse is the signature of the possession-volume mechanism the card relied on (turnovers and rest asymmetry).
+
+**Three-question retrospective.** 1. *Driver:* French pressure and depth on a ~21-hour China turnaround. 2. *Knowable?* **Yes, and used.** 3. *Smallest change:* none — keep as the positive basketball model: both rows derived from one score tree whose coupling was positive.
+
+##### 2026-09-12 evidence supplement
+
+Retain the successful France side and full-game Under. Their joint success does not prove all of the proposed possession/rotation mechanisms or the dependence sign; seek full player/possession evidence for that claim. See [opened sources and field limits](audit_2026-09-12/sport_evidence.md).
+
+#### P-368 — Settlement (score rows final; corner row provisional)
+
+**Event:** Al Jazira v Al Nasr — UAE Pro League MW5, Abu Dhabi · **Official final:** 1–1 (HT 1–0; Bruno de Oliveira 10', Ghayedi 61'). FotMob: shots 15–11, **on target 4–1**, possession 61–39, corners **6–3** · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:08
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+
+| `P-339` | **FINAL / SETTLED** | R1 L, R2 L, R3 W, R4 W; winner W; Brier 0.3368 |
+| `P-340` | **FINAL / SETTLED** | R1 W, R2 W, R3 L, R4 W, R5 L; winner W; Brier 0.2155 |
+| `P-341` | **FINAL / PARTIAL** — C03 corners `UNSETTLEABLE` | R1 W, R2 L, R4 W, R5 L; winner W; 4-row Brier 0.2443 |
+| `P-342` | **FINAL / PARTIAL** — C03 corners PROVISIONAL WIN | R1 L, R2 L, R4 W, R5 W; winner W; 4-row Brier 0.3880 |
+| `P-343` | **ADMIN CLOSED / NO FORECAST** | none issued |
+| `P-344` | **FINAL / SETTLED** | R1 L, R2 W, R3 L, R4 W; winner W; Brier 0.3334 |
+
+**This cohort:** 9 issued cards, 3 admin closures. Ranked rows (settled): **20 W / 19 L**. Rank #1: **6 W / 3 L** (`P-339`, `P-342`, `P-344` lost). Top-two both won: **`P-336`, `P-338`, `P-340`** (3 of 9). Potential winners: **8 / 9 correct** (`P-337` a 0–0 draw). Preferred full-match total O/U: **4 W / 5 L**. **Descriptive only — mixed populations, mixed horizons, complementary-pair geometry; not an accuracy, ROI, edge or calibration claim.**
+
+
+### `P-345`–`P-371` (this file — settled 2026-09-11)
+
+| ID | Event | Status | Ranked-row result |
+|---|---|---|---|
+| `P-345` | Club Brugge v Aston Villa — UCL MD1 | **FINAL / SETTLED** (corner row settled at UEFA this pass) — deep Rank-#1 retro | R1 L, R2 W, R3 W, R4 W, R5 L; winner L; Brier 0.2466 |
+| `P-346` | AEK Athens v LASK — UCL MD1 | **FINAL / SETTLED** — all five rows won | W W W W W; winner W; Brier 0.0816 |
+| `P-347` | Rangers @ Mariners (`MLB PRIMARY_SCORED`) | **FINAL / SETTLED** | W L W L; winner W; Brier 0.2374 |
+| `P-348` | Blue Jays @ Athletics (`MLB PRIMARY_SCORED`) | **FINAL / SETTLED** | W L L L; winner W; Brier 0.2803 |
+| `P-349` | Cardinals @ Giants (`MLB PRIMARY_SCORED`) | **FINAL / SETTLED** — all four rows won | W W W W; winner L; Brier 0.1440 |
+| `P-350` | Shelton v Alcaraz — US Open men's QF | **FINAL / SETTLED** — deep Rank-#1 retro | L W W W; winner = R1; Brier 0.2574 |
+| `P-351` | Reds @ Dodgers (`MLB PRIMARY_SCORED`) | **FINAL / SETTLED** — top two won | W W L L; winner W; Brier 0.2460 |
+| `P-352` | Namibia v South Africa — 1st ODI | **FINAL / SETTLED** — deep Rank-#1 retro | L W W W; winner W; Brier 0.2158 |
+| `P-353` | Dragons @ Giants — NPB, 9 Sep | **FINAL / SETTLED** | W L W L; winner L; Brier 0.2549 |
+| `P-354` | Carp @ Tigers — NPB | **FINAL / SETTLED** | W L L W; winner L; Brier 0.2968 |
+| `P-355` | Sydney FC v Melbourne Victory — Australia Cup SF | **FINAL / SETTLED** (corner row settled at FotMob this pass) — top two won | W W L W W; winner L; Brier 0.1531 |
+| `P-356` | KT @ Samsung — KBO | **FINAL / SETTLED** — deep Rank-#1 retro | L W W W; winner L; Brier 0.2418 |
+| `P-357` | Dublin Guardians v Belfast Wolves — ETPL M18 | **FINAL / SETTLED** — deep Rank-#1 retro | L L W W; winner L; Brier 0.3377 |
+| `P-358` | Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired) | **FINAL / SETTLED** — deep Rank-#1 retro | L W L W; winner W; Brier 0.2973 |
+| `P-359` | Jordan v Chinese Taipei — Asian Games | **FINAL / SETTLED** | W L W L; winner L; Brier 0.2467 |
+| `P-360` | South Korea v Saudi Arabia — Asian Games | **FINAL / SETTLED** | W L W L; winner W; Brier 0.2409 |
+| `P-361` | Dragons @ Giants — NPB, 10 Sep | **FINAL / SETTLED** | W L W L; winner W; Brier 0.2493 |
+| `P-362` | Eagles @ Landers — KBO | **FINAL / SETTLED** | W L W L; winner W; Brier 0.2450 |
+| `P-363` | Roosters W v Bulldogs W — NRLW R11 | **FINAL / SETTLED** — top two won | W W L L; winner W; Brier 0.1773 |
+| `P-364` | England v Pakistan — 3rd Test (Day-2 card) | **FINAL / SETTLED (2026-09-15)** — England won by 8 wickets; winner label settled, `TMP-OPEN-20260911-03` retired — deep Rank-#1 retro | L L W W; winner **W**; Brier 0.3429 |
+| `P-365` | Uni-Lions @ CTBC Brothers — CPBL | **FINAL / SETTLED** — deep Rank-#1 retro | L W L W; winner W; Brier 0.2768 |
+| `P-366` | Rotterdam v Glasgow — ETPL M19 | **FINAL / SETTLED** — 20-over rows **TERMINAL CENSORED** | W C C L; winner W; Brier 0.1936 (2 rows) |
+| `P-367` | China W v France W — FIBA WWC QF | **FINAL / SETTLED** — top two won | W W L L; winner W; Brier 0.2071 |
+| `P-368` | Al Jazira v Al Nasr — UAE Pro League | **FINAL / PARTIAL** — C02 corners provisional WIN (`TMP-OPEN-20260911-01`) | W P L W L; winner L (draw); Brier 0.1917 (4 rows) |
+| `P-369` | Dubai United v Shabab Al Ahli — UAE Pro League | **FINAL / PARTIAL** — C01 corners provisional LOSS (`TMP-OPEN-20260911-02`) — deep Rank-#1 retro (provisional) | P L L W W; winner L (draw); Brier 0.3909 (4 rows) |
+| `P-370` | Jamaica Empress W v TKR W — WCPL | **ADMINISTRATIVE CLOSED / NO FORECAST** (`CR-P3` fail-closed) | none issued |
+| `P-371` | Belgium W v Germany W — FIBA WWC QF | **FINAL / SETTLED** — deep Rank-#1 retro | L L W W; winner L; Brier 0.3145 |
+| `TMP-SETTLED-20260911-01` | Fenerbahçe v Roma — UCL (unsupplied external "P-358" no-forecast record) | **ADMIN / NON-SCORABLE** | none issued; final 1–1 |
+
+**This import:** 26 issued cards, 1 administrative closure, 1 collision record. Graded ranked rows **61 W / 44 L** (mean Brier 0.2434). Rank #1 **16 W / 9 L** plus one provisional loss. Top two both won on **6 of 25** decidable cards. Potential winners **13 / 25** (one pending). Preferred main-line totals **13 W / 13 L**; phase totals (favoured side) **7 W / 2 L**. **Descriptive only — learning-only per user direction; not an accuracy, ROI, edge or calibration claim.**
+
+---
+
+# Next forecast slot
+
+**Next canonical ID: `P-424`.** (`P-372` is RESERVED / UNUSED; `P-373`–`P-423` imported 2026-09-15(b).)
+
+For the next sports query: refresh `METHOD.md`, `RULES_GENERAL.md` §16 (now including §16.5(e)–(g) and the **§16.8 card completeness block**), the relevant `RULES_<SPORT>.md` (each carries a §"2026-09-11" section), `CONTROLS.md` and this snapshot.
+
+1. **Queue first.** Settle `P-364`'s potential-winner label once the Test has finished (official result: ECB / PCB / ESPNcricinfo scorecard). Retry the four corner rows (`P-341-C03`, `P-342-C03`, `P-368-C02`, `P-369-C01`) only if a new field-owning provider appears; none blocks a new forecast.
+2. **Freeze** identity, contract, target, time and participants. **Retrieve published lineups before freezing**: a cricket XI exists once the toss is recorded; baseball, soccer and rugby league line-ups are normally published before the start. `NOT_RETRIEVED` after publication is a `RETRIEVAL_MISS`, not an unavailability — and `G14.2` still blocks a margin or full-game total from Rank #1 when the bench is not retrieved.
+3. **Build the joint event object** with the outcome-family mass table (`G-L1`), a numeric width and the normalised edge for every total (`G-L8`; for right-skewed run and goal totals, locate the line against the median). Itemise the complement of Rank #1 and Rank #2 across their named kill paths (`G-L9`). Print **P(R1 ∧ R2)** and the pair's coupling (`G-L10`). Run the sampling-noise check on every small-sample rate that carries a signed adjustment (`G-L11`).
+4. **Finish with the §16.8 completeness block**, append the card before delivery, and update this snapshot — including the running Brier scorecard — in the same edit.
+
+
+## 2026-09-12 controlling audit and learning supplement
+
+Twenty raw mini logs were moved byte-exact to archive/mini_logs; P-345-P-371 were already imported, so no duplicate forecasts or fresh IDs were created. Next ID P-372. [Archive manifest](audit_2026-09-12/archive_manifest.md). Current all-log eligibility is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+**Corrected denominators:** 109 issued rows =105 graded +2 provisional +2 censored; 61 W/44 L, mean Brier 0.243439. Top two: 6/23 with both rows graded, 6/24 logically decidable including P-369 failure through its settled rank 2. P-368 unresolved and P-366 censored. The earlier 6/25 and unreconciled 13W/13L main-line O/U headline are superseded. The 7+6+12 lineup roll-up is withdrawn; use the 26-card matrix below.
+
+## Starting lineups, bench and coaching audit
+
+This matrix reports **what the issued card says it captured**, checked against the preserved mini/canonical text; it does not backdate later source retrieval. A roster is not a confirmed starting lineup. Exact complete-match publication times were not independently recovered for every card. P-370 is administrative and excluded from the 26-card denominator.
+
+| ID | Both starting lineups | Bench/reserves | Both coaches/managers | Combined answer |
+|---|---|---|---|---|
+| P-345 | Recorded official XIs | Both recorded | Both named | Recorded complete; source-time qualification retained |
+| P-346 | Recorded official XIs | Secondary only | Both named | Partial source quality |
+| P-347 | Pitchers official; batting orders secondary | Bullpen names, full reserves not demonstrated | Not named | Partial |
+| P-348 | Pitchers official; batting orders secondary | Full reserves not demonstrated | Not named | Partial |
+| P-349 | Pitchers official; orders mixed/TBD | Full reserves not demonstrated | Not named | Partial |
+
+| 2 | Under 6.5 | 0.56 | **WIN** | 0.1936 | Exactly 6 — **+0.5**. |
+| 3 | Over 6.5 | 0.44 | **LOSS** | 0.1936 | |
+| 4 | Uni-Lions −1.5 | 0.40 | **WIN** | 0.3600 | |
+
+**Potential winner:** Uni-Lions ~59% · **CORRECT** · **Card mean Brier:** 0.2768.
+
+- **Q1:** **No.** Batting orders not retrieved (front-end rendering), bench not recorded, managers not named. **`G14.2` application failure:** a margin row ranked #1 with `BENCH_NOT_RETRIEVED`.
+- **Q2:** Accurate (CPBL official and Advanced Stats).
+- **Q3:** The card wrote "a 4–1 or 5–1 Uni win stays Under while covering −1.5" — the exact result shape — and still ranked the Brothers' cushion first. Yu's sample was 12 first-team innings with **1 strikeout in his last 7 innings** — contact-fragile, and exactly what control 11 (small-sample mixture) and `G-L11` exist to widen.
+
+**Three-question retrospective.** 1. *Driver:* Dykxhoorn's shutout innings plus a Uni-Lions scoring cluster — low-total separation. 2. *Knowable?* **Yes, in the card.** 3. *Smallest change:* baseball control 17 with explicit shutout/one-sided mass; enforce `G14.2`.
+
+| Deep Rank-#1 question | Finding |
+|---|---|
+| What went right? | The Under (R2) and the winner. |
+| What went wrong? | The cushion ranked above the separation state the card itself wrote down, and the bench/lineup gate was not respected. |
+| Actual mechanism | 7 scoreless innings against a contact-fragile small-sample starter. |
+| Improvement | Control 17 with mass; `G14.2` enforced; `G-L9`, `G-L11`. |
+| Grade (background) | C−. |
+
+##### 2026-09-12 retrospective correction
+
+| What went right | Error / uncertainty | Routine change and evidence |
+|---|---|---|
+| Under 6.5 won at six; Uni's winner call was correct | Brothers +1.5 lost by six. The original card already named a low-total separation state, but its occurrence does not identify the correct pregame mass. Dykxhoorn delivered seven scoreless; Yu allowed seven hits, **five walks and four runs/three earned** in 4.2 innings. Missing lineups/bench/coaches remain a process defect | Model control-loss/early-hook as well as contact variance; show full-game scoring after the starter exits. A long strong start is not itself a guaranteed full-game Under. Baseball 17/28 and G14.2. [CPBL gamebook](https://stats.cpbl.com.tw/schedule/2026-A-321) |
+
+#### P-366 — Settlement (6-over rows graded; 20-over rows terminal censored)
+
+**Event:** Rotterdam Dockers v Glasgow Cosmic — ETPL Match 19, Malahide (rain-delayed; reduced to 19 overs a side) · **Official final:** Rotterdam 172/4 (19) bt Glasgow 141/9 (19) by 31. Rotterdam passed 50 at 6.2 overs, so they were **≤49 at 6.0** (Faf du Plessis 71, Vikramjit 33, Klaasen 30*) · **Source:** ETPL first-party page (now COMPLETED) + CricketEurope / Cricket Ireland archive / Cricbuzz / CricketWorld · **Population:** EXPLORATORY · **Issued:** 2026-09-10 20:25 (pre-ball; start delayed)
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | Dockers first 6 overs Under 50.5 | 0.56 | **WIN** | 0.1936 | ≤49. |
+| 2 | Dockers Over 166.5 after 20 overs | 0.53 | **CENSORED** | — | Innings reduced to 19 overs; the endpoint was never reached. |
+| 3 | Dockers Under 166.5 after 20 overs | 0.47 | **CENSORED** | — | same |
+| 4 | Dockers first 6 overs Over 50.5 | 0.44 | **LOSS** | 0.1936 | |
+
+**Potential winner:** Rotterdam ~62% · **CORRECT** · **Card mean Brier (2 rows):** 0.1936.
+
+- **Q1:** **No** — the XI was not retrieved at the freeze, and the toss was reported only by a secondary thread. (Glasgow's actual attack was not re-examined this pass.)
+- **Q2:** The ETPL first-party page stayed a **stale "Yet to bat" shell for more than 24 hours** after the match — it read that way at 23:12 AEST on 11 Sep and COMPLETED by ~23:30. Settlement correctly ran through the independent scorecards. → the stale-shell rule and the fallback ladder (`RULES_SOCCER.md` control 17 generalised; `SOURCES.md` §"2026-09-11").
+- **Q3:** None material. This is the **worked example of target-by-target settlement**: a reached phase target grades; an unreached endpoint is censored and not remapped (cricket control 15).
+
+**Three-question retrospective.** 1. *Driver:* a cautious new-ball phase, then middle/death acceleration — exactly the joint path the card wrote (≈48/1 after six, then acceleration). 2. *Knowable?* **Yes, and on the card.** 3. *Smallest change:* none for the forecast; settlement routing only.
+
+#### P-367 — Settlement
+
+**Event:** China (W) v France (W) — FIBA WWC quarter-final, Berlin · **Official final:** France 90–61 (quarters FRA 25-23-22-20, CHN 20-11-17-13). China shot **better** — FG 46% v 44%, 3P 43.8% v 37.8% — and still lost by 29 · **Source:** FIBA game page `128149` · **Population:** EXPLORATORY · **Issued:** 2026-09-10 22:21
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | France −24.5 | 0.55 | **WIN** | 0.2025 | +29. |
+| 2 | Under 153.5 | 0.54 | **WIN** | 0.2116 | 151. **Positively coupled with R1** (France's defence drives both). |
+| 3 | Over 153.5 | 0.46 | **LOSS** | 0.2116 | |
+| 4 | China +24.5 | 0.45 | **LOSS** | 0.2025 | |
+
+**Potential winner:** France ~94% · **CORRECT** · **Card mean Brier:** 0.2071 — top two both won.
+
+- **Q1:** Starting fives not confirmed; both final 12s and both coaches (Gong Luming, Jean-Aimé Toupane) retrieved, and **China's absence of Li Yueru (passport) was established from the Chinese Olympic Committee** — the kind of availability fact that matters.
+- **Q2:** Accurate. A leaked closed-door scrimmage result was correctly held to low weight.
+- **Q3:** None material. The issued centre, **89–63**, against the actual **90–61** — the most accurate basketball centre in the repository's P-333+ record. Winning by 29 while shooting worse is the signature of the possession-volume mechanism the card relied on (turnovers and rest asymmetry).
+
+**Three-question retrospective.** 1. *Driver:* French pressure and depth on a ~21-hour China turnaround. 2. *Knowable?* **Yes, and used.** 3. *Smallest change:* none — keep as the positive basketball model: both rows derived from one score tree whose coupling was positive.
+
+##### 2026-09-12 evidence supplement
+
+Retain the successful France side and full-game Under. Their joint success does not prove all of the proposed possession/rotation mechanisms or the dependence sign; seek full player/possession evidence for that claim. See [opened sources and field limits](audit_2026-09-12/sport_evidence.md).
+
+#### P-368 — Settlement (score rows final; corner row provisional)
+
+**Event:** Al Jazira v Al Nasr — UAE Pro League MW5, Abu Dhabi · **Official final:** 1–1 (HT 1–0; Bruno de Oliveira 10', Ghayedi 61'). FotMob: shots 15–11, **on target 4–1**, possession 61–39, corners **6–3** · **Source:** FotMob via proxy; The Sports Encounter · **Population:** EXPLORATORY · **Issued:** 2026-09-10 23:08
+
+| Rank | Contract | `p` | Result | Brier | Boundary / dependence note |
+|---:|---|---:|---|---:|---|
+| 1 | 1st-half Over 0.5 | 0.68 | **WIN** | 0.1024 | 10' goal. |
+| 2 | Total corners Over 7.5 (no frozen provider) | 0.55 | **PROVISIONAL WIN** | not booked | 9 (multiple secondary displays; independence unverified). `TMP-OPEN-20260911-01`. |

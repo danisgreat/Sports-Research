@@ -1,0 +1,75 @@
+- H2H: 0-0
+- Surface/level adjustment explicit: YES
+- Two-set / three-set mixture explicit: YES
+- Two-sided quick/close/deciding branches explicit: YES
+- Handicap separation budget solved: YES
+- Rank-1 games interval stated: YES
+- Retirement terms: UNKNOWN_DEFINITION
+- No bookmaker odds / implied probabilities / market movement used: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probability generated: NO
+- New fitted forecast-weight rule created: NO
+- **NEXT CANONICAL ID: P-268**
+
+
+
+# 2026-09-12 recovered historical retrospectives and evidence tasks
+
+
+The separately named P267 settlement artifact remains absent. The supplied mini log 8 is present and contains the issued P-249-P-267 cards and eleven earlier event settlement/process blocks (P-249-P-258 plus P-261; P-249 administrative, ten issued events). Those sections have now been restored to Part 1. Mini log 7 already supplied the P-241-P-243 forecasts and the detailed P-244-P-248 settlements. The blanket claim that no per-event detail is recoverable for P-241-P-267 is therefore narrowed. New evidence below fills eleven remaining event narratives; it does not recreate the missing artifact or its undocumented corner adjudications.
+
+No new probability is generated. These cards predate the mandatory probability format. Do not put them into the later Brier cohort. Rank order below is copied from the archived issued table; W/L/PUSH is arithmetic on the named completed target. Existing cohort aggregates remain quarantined until all field-specific differences are reconciled.
+
+## Reconstructed ranked-row table
+
+| ID / evidence | Completed target | Original rank 1 | Original rank 2 | Original rank 3 | Original rank 4 / 5 | Winner label |
+|---|---|---|---|---|---|---|
+| P-241 / [Tennis Majors exact dated result](https://www.tennismajors.com/people/zachary-svajda) | Svajda 6-3, 6-1, 6-7, 6-2; games 24-13, total 37. Specialist source; official draw not recovered in this retry | Under 39.5 W | Altmaier +2.5 L | Svajda -2.5 W | Over 39.5 L | Svajda W |
+| P-242 / [Tennis.com exact match](https://www.tennis.com/tournaments/us-open/matches/f-marozsan-vs-m-zheng-2026-09-02) | Zheng 6-4, 6-4, 6-2; games 18-10, total 28. Specialist match page | Marozsan +2.5 L | Over 38.5 L | Zheng -2.5 W | Under 38.5 W | Zheng W |
+| P-243 / [WTA exact match](https://www.wtatennis.com/tournaments/us-open/scores/LS74150432), [LTA player record](https://www.lta.org.uk/fan-zone/british-tennis-players/francesca-jones/) | Jones 6-4, 1-6, 6-3; games 13-13, total 26 | Over 21.5 W | Linette -0.5 L | Jones +0.5 W | Under 21.5 L | Linette L |
+| P-259 / [official MLB feed](https://statsapi.mlb.com/api/v1.1/game/822931/feed/live) | Mets 10-4, total 14 | Rays ML L | Under 8.0 L | Mets +1.5 W | Over 8.0 W | Rays L |
+| P-260 / [official MLB feed](https://statsapi.mlb.com/api/v1.1/game/823339/feed/live) | Giants 5-4 after 10 innings, total 9 | Giants +1.5 W | Pirates ML L | Over 9.0 PUSH | Under 9.0 PUSH | Pirates L |
+| P-262 / [official CPL newsroom](https://cplt20.prezly.com/falcons-close-in-on-playoffs) | Falcons 43/1 after six; 183/4 after 20; TKR 175/7 | Falcons six-over Over 45.5 L | Falcons innings Under 165.5 L | Falcons innings Over 165.5 W | Falcons six-over Under 45.5 W | Falcons W |
+| P-263 / [USTA event report](https://www.usopen.org/amp/en_US/news/articles/2026-09-02/carlos_alcaraz_advances_at_2026_us_open_after_dropping_first_set.html) | Alcaraz 4-6, 6-0, 6-3, 6-2; games 22-11, total 33 | Under 31.5 L | Alcaraz -7.5 W | Faria +7.5 L | Over 31.5 W | Alcaraz W |
+| P-264 / [official MLB feed](https://statsapi.mlb.com/api/v1.1/game/824147/feed/live) | Astros 2-0, total 2 | Under 8.5 W | White Sox +1.5 L | Astros ML W | Over 8.5 L | Astros W |
+| P-265 / [official competition report](https://es.leaguescup.com/noticias/cronica-toluca-acaba-con-el-sueno-del-leon-y-avanza-a-la-final-de-leagues-cup) | Toluca 2-0 Leon, advanced. HT 1-0 (Pereira 41 minutes); corner grade not newly reproducible | Corners Over 8.5: inherited success not re-certified | Full Over 2.5 L | First-half Over 0.5 W | Full Under 2.5 W; first-half Under 0.5 L | Toluca to advance W |
+| P-266 / [official MLB feed](https://statsapi.mlb.com/api/v1.1/game/823983/feed/live) | Yankees 6-3 after 10 innings; 1-1 after nine, total 9 | Angels +1.5 L | Under 6.5 L | Yankees -1.5 W | Over 6.5 W | Yankees W |
+| P-267 / [USTA event report](https://www.usopen.org/amp/en_US/news/articles/2026-09-02/linda_noskova_vs_lanlana_tararudee_at_the_2026_us_open.html) | Noskova 6-4, 6-2; games 12-6, total 18 | Under 31.5 W | Noskova -4.5 W | Tararudee +4.5 L | Over 31.5 L | Noskova W |
+
+P-260's two pushes are a direct counterexample to any unconditional promise that one O/U side must win. P-243's tied aggregate games despite a match winner also illustrates why games-handicap grading must use actual games. Tennis results P-241/P-242 are specialist-supported, not newly owner-certified; no missing tiebreak point score is invented.
+
+## Detailed top-pick failures
+
+| ID | What was right and why | Failure mechanism / pregame blind spot | Knowability, prior lesson and next-game improvement |
+|---|---|---|---|
+| P-242 | Zheng winner was the issued winner lean and won; the Zheng handicap and Under alternatives match straight-set separation | The top two assumed Marozsan resistance and an extended match. The final was a clean eight-game Zheng margin in 28 games. The same specialist page reports Zheng winning 38/47 first-serve points versus Marozsan 32/52; the serving asymmetry supports separation, not an evenly matched extension | The recent Zheng H2H win was already known; its closeness was not a guarantee of another close score. Cross-check serve/return denominators, opponent level and a straight-set Zheng branch. Connect to tennis score-family and separation controls, plus P-267's successful short-match scenario. Do not add an arbitrary upset or college-player weight. Exact realized serve rates were postgame, not known before play |
+| P-259 | Mets +1.5 and Over retained the losing favourite's alternatives; both won. The card explicitly named Jax's return workload as uncertainty | Official feed: Jax 2.2 innings, six earned runs, seven hits, two walks; Hagenman three innings, one run. The return/early-run-loss branch realized on the favourite's side. Recent bullpen ERA did not prevent a 14-run game. The sixth Mets run arrived in the third; Tampa's fourth-inning three runs took the full total past eight | Distinguish role, recent starter workload and projected innings from reputation. A stronger overall team or relief unit cannot erase early deficit states. Reuse G-L2 and baseball return/workload/score-state controls from P-257/P-261/P-335. Estimate both teams' early traffic and relief usage jointly. This outcome shows a scenario occurred; it does not identify its correct pregame probability |
+| P-262 | Falcons winner and the two lower opposing total directions won. Separating powerplay from innings was conceptually right | The first six stopped at 43/1, below 45.5, yet the innings reached 183/4. Official CPL reporting records dropped chances and later accumulation. A slow start with one wicket down left substantial resources. The pregame 3/4 powerplay Over sample included a 46, barely over, and its direct opponent comparator was 33; two below-line bat-first totals were a weak basis for a strong ceiling | Retain toss/XI mixture only until reliable pre-ball confirmation; after batting first is confirmed remove chase-censoring. Print wickets/resources and boundary distances, and condition on attack composition. This anticipates the repeated issue in P-352 and P-364. Dropped catches are realized variance; do not rewrite the forecast as if they were predicted. No universal uplift to innings totals follows |
+| P-263 | Alcaraz winner and -7.5 won comfortably; his eventual superiority was real | Losing the opening set added enough exposure for 33 games even with a 6-0 second set. Under 31.5 failed while the favourite covered by 11 games. The original narrow games band did not absorb the four-set extension well enough | Enumerate games within each set-count branch, including an early underdog set followed by a rout. A heavy favourite can cover and still go Over. Tie this to P-350's later long-match/Alcaraz-loss distinction and tennis endpoint controls. The official report supports the score; its seed wording differs from the archived card, so it is not used to adjudicate seed identity. No historical probability or medical recovery certainty is inferred |
+| P-266 | Starter suppression and Yankees winner were correctly anticipated. The official feed has Schlittler eight innings/one run and Detmers seven/one, both without a walk; the game was 1-1 after nine | Both leading picks survived regulation but failed after five Yankees and two Angels runs in the tenth. This is an extension failure of the full-game contracts, not evidence that the starter analysis was wrong. Luke Murphy was charged five runs/four earned in two-thirds of an inning; the distinction matters because all runs settle totals | Explicitly model ties, additional innings, remaining relief availability and the competition's extension scoring environment. Keep full-game versus regulation targets distinct. Link to the existing CL-P267 extension lesson and P-365 low-total separation. Do not raise every baseball total or demote every cushion; stress the exact endpoint and conditional extension branch |
+
+## Successful first picks and lower-rank misses
+
+| ID | Detailed retrospective and next-game lesson |
+|---|---|
+| P-241 | Four sets with an uneven allocation finished at 37, so the Under succeeded while Altmaier's cushion failed by a wide margin. This supports the card's distinction between four sets and a long four-set total. Its claim that a positive games handicap covers every match win is mathematically unsafe; the set-based counterexample in tennis L-068 still applies. No injury or treatment causality is inferred from the specialist score alone. |
+| P-243 | The three-set structure supported Over 21.5. Linette and Jones each won 13 games, so experience did not produce the slight game separation required by rank 2. The original mention of external consensus is not admissible future MARKET_BLIND evidence. The WTA page exposes incompatible generic Upcoming/Finished/Suspended labels and only nine service games per player despite 26 total games; accept the final with LTA corroboration, quarantine that statistical panel's phase/completeness until resolved. Official branding does not certify every returned field. |
+| P-260 | Roupp's five innings/one run helped the Giants cushion win, but the Pirates winner call failed. Extra innings took a six-run regulation game to exactly nine: both total directions pushed. Recent offensive averages and taxed bullpens supported a tail, not a win at the integer threshold. Print win/loss/push mass separately and do not count a push as a successful O/U selection. |
+| P-264 | Wesneski's seven scoreless innings and Martin's 5.2 scoreless supported Under 8.5. Houston's two eighth-inning runs still defeated White Sox +1.5. Starter quality, total suppression and cushion protection require distinct conditions. The late scoring settled the side without invalidating the low-total analysis. No relief-fatigue cause is asserted from timing alone. |
+| P-265 | Toluca's 2-0 advancement supports its defensive-control branch; recent 2.2 goals per game on each side and high-scoring H2Hs did not force a match Over. The official competition report and club account are useful score/coaching routes, but source-field agreement must precede exact phase/corner adjudication. Both teams eventually playing with ten is post-issue state, not a generic semifinal coefficient. Rank-1 corner success remains an inherited claim awaiting documentary recovery. |
+| P-267 | The issued Noskova separation and short-match scenario produced both top-two wins. Eighteen games is comfortably below 31.5. Credit the broad win region and correct level/serve-risk direction; a comfortable outcome alone does not demonstrate a calibrated model. The phrase that any ordinary three-set match covers an underdog +4.5 is too broad: enumerate aggregate games rather than using set count as a proxy. |
+
+## Starting, bench and coaching answers
+
+For P-241/P-242/P-243/P-263/P-267, team starters and bench are N/A; player identity was captured, but this recovery does not establish both coaches or complete pre-cutoff health evidence. For P-259/P-260/P-264/P-266, the original cards identified pitchers; complete pregame starters, reserves and both managers are **not demonstrated by this recovery**. The current MLB feeds expose the final starting batting order and remaining bench, not proof of what was saved before issue. P-262 explicitly lacked toss and confirmed XIs at cutoff. P-265's [official club report](https://www.tolucafc.com/noticias/merecido-finalista) now supplies both XIs, used substitutes and coaches Mohamed/Gandolfi. Unused bench completeness and pregame publication are unproved. It corroborates the 41-minute opener; one-minute dismissal differences remain between club and competition reports. Therefore none of these eleven is newly labelled fully complete on all three questions.
+
+## Remaining historical evidence tasks (not duplicate forecasts)
+
+| Temporary audit handle | Existing event | Missing evidence / next action |
+|---|---|---|
+| TMP-AUDIT-20260912-01 | P-250-C05 | Restored mini says corners unresolved; missing later settlement artifact claims all graded. Recover field-owner/provider adjudication and exact count before certifying the inherited closure. |
+| TMP-AUDIT-20260912-02 | P-251-C05 | Restored mini has provisional 10-11 corners. Recover the later definition/owner decision; threshold invariance alone does not establish provider validity. |
+| TMP-AUDIT-20260912-03 | P-255-C05 | Restored mini has unresolved corners; recover later exact regulation-only adjudication. |
+| TMP-AUDIT-20260912-04 | P-256-C05 | Same gap, and this was rank 1. Full process retrospective present; outcome-specific corner explanation is not certified without the missing field. |
+| TMP-AUDIT-20260912-05 | P-265-C05 | Supplied pregame provider unknown. A secondary nine-corner display exists, but it cannot reconstruct the missing later settlement decision. Recover corner owner and later settlement decision. The official competition/club reports now verify the first-half goal. |

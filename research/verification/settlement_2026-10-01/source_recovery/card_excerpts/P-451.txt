@@ -1,0 +1,76 @@
+| P-404 | Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB | FINAL / SETTLED | L L W W |
+| P-405 | Chunichi Dragons @ Hanshin Tigers — NPB | FINAL / SETTLED | W W L L |
+| P-406 | Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 | FINAL / SETTLED (2026-09-16: six-over rows settled at ESPN cricket API event 1547895 — Edinburgh 68/2 after 6.0; TMP-OPEN-20260914-06 retired) | W L W L |
+| P-407 | Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League | FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) | P W W L W |
+| P-408 | Coventry City vs Brighton & Hove Albion — English Premier League | FINAL / SETTLED | L W W W W |
+| P-409 | Lille OSC vs ESTAC Troyes — French Ligue 1 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260915-02) | W P W W W |
+| P-410 | RB Leipzig vs Hamburger SV — German Bundesliga | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-03) | W W W W P |
+| P-411 | Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place | FINAL / SETTLED | L W L W |
+| P-412 | Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1 | FINAL / SETTLED | L W L W |
+| P-413 | Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-414 | Buffalo Bills @ Houston Texans — NFL Regular Season Week 1 | FINAL / SETTLED | L L W W |
+| P-415 | LA Angels @ Washington Nationals — MLB | ADMINISTRATIVE / NOT ISSUED (interrupted) | none issued |
+| P-416 | New York Mets @ New York Yankees — MLB | FINAL / SETTLED | W L W L |
+| P-417 | Chunichi Dragons @ Hanshin Tigers — NPB Central League | FINAL / SETTLED | W L W L |
+| P-418 | Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League | OPEN — RESULT NOT RECOVERED (2026-09-16 re-classification): fixture listed by RSSSF Round 15 [Sep 14], unscored, page updated 11 Sep; the earlier "no Drukpa–RTC match" evidence was a BBS report dated 2026-07-17 (TMP-OPEN-20260915-04) | 5 rows issued; none graded |
+| P-419 | Djurgårdens IF vs GAIS — Sweden Allsvenskan | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-05) | W W W W P |
+| P-420 | Atlanta Braves @ Chicago Cubs — MLB | FINAL / SETTLED | L W L W |
+| P-421 | New York Yankees @ Minnesota Twins — MLB | FINAL / SETTLED | W W L L |
+| P-422 | Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1 | FINAL / SETTLED | L W L W |
+| P-423 | San Diego Padres @ Colorado Rockies — MLB | FINAL / SETTLED | L W W L |
+| P-424 | Amsterdam Flames vs Dublin Guardians — ETPL 2026 Match 26 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | none issued; final Amsterdam 214/5 bt Dublin 155/9, PP 48/2 |
+| P-425 | Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1 | FINAL / SETTLED | W L W L W; winner W; Brier 0.2416 |
+| P-426 | Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1 | FINAL / SETTLED | W L L L L; winner W; Brier 0.3816 |
+| P-427 | Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round | FINAL / SETTLED — deep Rank-#1 retro (top two both lost) | L L W W; winner L; Brier 0.3542 |
+| P-428 | Edinburgh Castle Rockers vs Rotterdam Dockers — ETPL Match 27 | ADMINISTRATIVE / NO SCORED TRIAL — start-crossing fail-close; no forecast issued | none issued; final Rotterdam 181/6 bt Edinburgh 176/5, PP 54/2 |
+| P-429 | Afghanistan vs India — 2nd T20I, Delhi | FINAL / SETTLED — top two both won; both XIs confirmed | W W W L; winner W; Brier 0.1635 |
+| P-430 | Al Ain FC vs Al Nassr — AFC Champions League Elite MD1 | FINAL / PARTIAL — C05 corners unresolved (TMP-OPEN-20260917-01); deep Rank-#1 retro | L W W L P; winner L; 4-row Brier 0.3459 |
+| P-431 | England vs Sri Lanka — 1st T20I, Southampton | FINAL / SETTLED — top two both won | W W L L; winner W; Brier 0.1925 |
+| P-432 | KT Wiz @ Hanwha Eagles — KBO | FINAL / SETTLED — game ended 4–4 (terminal tie); winner label did not realise | W W L L; winner tie; Brier 0.1525 |
+| P-433 | LG Twins @ NC Dinos — KBO | FINAL / SETTLED | W W L W; winner W; Brier 0.2017 |
+| P-434 | Samsung Lions @ Doosan Bears — KBO | FINAL / SETTLED — all four ranked rows won | W W W W; winner L; Brier 0.0809 |
+| P-435 | SSG Landers @ Lotte Giants — KBO | FINAL / SETTLED — all four ranked rows won | W W W W; winner W; Brier 0.0629 |
+| P-436 | Jeonbuk Hyundai Motors vs Kashiwa Reysol — AFC Champions League Elite MD1 | FINAL / SETTLED — all five ranked rows won | W W W W W; winner L; Brier 0.0579 |
+| P-437 | Port FC vs Vissel Kobe — AFC Champions League Elite MD1 | FINAL / SETTLED — all five ranked rows won | W W W W W; winner W; Brier 0.0439 |
+| P-438 | Al-Wahda Abu Dhabi vs Kuwait SC — AFC Champions League Two Group A | FINAL / SETTLED — **Rank #1 LOSS; both top two lost**; deep Rank-#1 retro (diagnosis corrected from the mini log's) | L L L W L; winner W; Brier 0.5053 |
+| P-439 | Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A | FINAL / SETTLED — all five ranked rows won (0–0) | W W W W W; winner L (draw); Brier 0.0378 |
+| P-440 | Ararat-Armenia vs Sparta Praha — UEFA Europa League MD1 | FINAL / SETTLED — phase Under won, 90-minute Under lost on the same card | W W W L W; winner W; Brier 0.1590 |
+| P-441 | Omonia Nicosia vs Celta Vigo — UEFA Europa League MD1 | FINAL / SETTLED — **all five ranked rows won; best card in Part 4** | W W W W W; winner L; Brier 0.0112 |
+| P-442 | Chicago White Sox @ Cleveland Guardians — MLB | FINAL / SETTLED — **Rank #1 LOSS**; deep retro (middle-relief branch) | L W L W; winner W; Brier 0.3131 |
+| P-443 | San Francisco Giants @ St. Louis Cardinals — MLB | FINAL / SETTLED — 10 innings; **regulation 4–4, exactly the push at L=8** | W W L L; winner L; Brier 0.1958 |
+| P-444 | New York Yankees @ Minnesota Twins — MLB | FINAL / SETTLED — 13 innings; **Rank #1 LOSS; both top two lost**; deep retro (margin identity + extras) | L L W W; winner L; Brier 0.2967 |
+| P-445 | Barbados Tridents vs Jamaica Kingsmen — CPL 2026 Eliminator | **FINAL / CONDITION NOT MET — all four ranked rows NO ACTION** (Jamaica bowled first; batting-first targets never activated). Process success; excluded from every cohort rate | — — — —; winner L; no Brier |
+| P-446 | Atlanta Braves @ Chicago Cubs — MLB | FINAL / SETTLED | W L W L; winner W; Brier 0.2373 |
+| P-447 | Boston Red Sox @ Texas Rangers — MLB | FINAL / SETTLED | W L W L; winner W; Brier 0.1903 |
+| P-448 | Kansas City Royals @ Houston Astros — MLB | FINAL / SETTLED — both top two won | W W L L; winner L; Brier 0.1587 |
+| P-449 | San Diego Padres @ Colorado Rockies — MLB | FINAL / SETTLED | W L L W; winner W; Brier 0.2513 |
+| P-450 | Miami Marlins @ Arizona Diamondbacks — MLB | FINAL / SETTLED — both top two won | W W L L; winner L; Brier 0.1910 |
+| P-451 | Dorados de Chihuahua vs El Calor de Cancún — LNBP Jornada 20 | **FINAL / BLOCKED AT ISSUE — `BK-P1 = FAIL`, no forecast issued, NOT GRADED.** Final recovered 2026-09-17(b): **Dorados 97–86** (rendered `lnbp.mx/Dorados/team_results.html`) | —; no winner issued; no Brier |
+
+| P-452 | Cricket / Afghanistan vs India T20I Series 2026 — Afghanistan vs India, 3rd T20I | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-453 | Baseball / MLB — Milwaukee Brewers @ Pittsburgh Pirates | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-454 | Soccer / Denmark DBU Pokalen (Betano Pokalen) — Vejle Boldklub vs Brøndby IF | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-455 | Baseball / MLB — Los Angeles Dodgers @ Cincinnati Reds | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-456 | Soccer / Spain LaLiga — Real Betis vs Getafe CF | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-457 | Cricket / Zimbabwe v Australia ODIs 2026 — Zimbabwe vs Australia, 2nd ODI | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-458 | Baseball / NPB Central League — Chunichi Dragons @ Yomiuri Giants | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-459 | AFL / 2026 Toyota AFL Finals Series — Sydney Swans vs Fremantle Dockers, Preliminary Final | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-460 | Baseball / Taiwan CPBL — Rakuten Monkeys @ Fubon Guardians | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-461 | Tennis / WTA 125 Valencia — Clara Burel vs Guiomar Maristany Zuleta De Reales, Quarterfinal | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-462 | Soccer / Chinese Super League — Zhejiang FC vs Wuhan Three Towns | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-463 | Baseball / MLB — Chicago Cubs @ Cincinnati Reds | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-464 | Baseball / MLB — Milwaukee Brewers @ Baltimore Orioles | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-465 | Basketball / WNBA — Indiana Fever @ Toronto Tempo | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-466 | Soccer / Argentina Torneo Clausura — Racing Club vs Sarmiento | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-467 | Baseball / MLB — Toronto Blue Jays @ Texas Rangers | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-468 | Basketball / WNBA — Portland Fire @ Golden State Valkyries | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-469 | Australian Rules Football / AFL Finals — Hawthorn vs Brisbane Lions | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-470 | Baseball / NPB — Saitama Seibu Lions @ Chiba Lotte Marines | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-471 | Basketball / Australia NBL — Melbourne United vs Adelaide 36ers | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-472 | American Football / NCAA FBS — Coastal Carolina @ Delaware | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-473 | Soccer / English Premier League — Nottingham Forest vs Coventry City | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-474 | MLB — Athletics @ Cleveland Guardians | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-475 | WNBA — Chicago Sky @ Atlanta Dream | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-476 | MLB — Minnesota Twins @ Los Angeles Angels | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-477 | Australia NBL — Sydney Kings vs Cairns Taipans | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |
+| P-478 | Soccer / Sweden Allsvenskan — Djurgårdens IF vs IF Elfsborg | FINAL / SETTLED / RETROSPECTIVE COMPLETE | Canonical source: `PREDICTION_LOG_COMBINED_4.md` 2026-09-21 rollover import; original mini-log reasoning, source register and retrospective preserved there |

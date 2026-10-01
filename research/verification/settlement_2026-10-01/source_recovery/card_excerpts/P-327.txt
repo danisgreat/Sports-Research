@@ -1,0 +1,384 @@
+| 4 | BAN PP Over 42.5 | 0.27 | **LOSS** | 0.0729 |
+
+**Mean Brier:** **0.1332**.  
+**Potential winner:** Sri Lanka Women — **WIN**.
+
+### Retrospective
+1. **Driver:** Bangladesh's powerplay stayed below the line and the full innings finished only 2.5 runs below 116.5. Sri Lanka then survived a difficult chase to win.
+2. **Knowability:** **Yes, directionally.** The frozen card explicitly preferred Bangladesh's slower powerplay and lower innings ceiling, with current personnel/injury context and phase-specific evidence. The exact 37/1 and 114/8 were not knowable, and the innings result was **boundary-sensitive**, not a dominant Under.
+3. **Smallest routine change:** preserve the existing phase/innings separation and label a 114 result against 116.5 as a **narrow boundary validation**, not proof of a broad low-scoring regime.
+
+**Sources:**  
+- Hindustan Times match stats, including Bangladesh PP 37/1 and innings 114/8: https://www.hindustantimes.com/cricket/match-stats-sl-w-vs-ban-w-women%E2%80%99s-asia-cup-t20-2026-match-10-sri-lanka-women-vs-bangladesh-women-t20-slwbw09062026273829  
+- Wisden match report/scorecard search result was used as a score/toss cross-check in the research pass.
+
+---
+
+## P-326 — Western Carolina @ Campbell
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official Campbell final: **Campbell 28–19 Western Carolina**. The frozen record crossed the start while exact live-state ownership remained unresolved, and explicitly issued **no rank and no winner call**. No historical prediction is inferred.
+
+**Process note:** the fail-closed state gate is retained. The post-match result is useful only for event-state closure, not performance accounting.
+
+**Official source:** Campbell University: https://gocamels.com/news/2026/9/6/football-worth-the-wait-camels-down-no-24-wcu-28-19-in-home-opener.aspx
+
+---
+
+## P-327 — Angers SCO vs Rennes
+
+### Settlement
+**Final:** Angers 1–2 Rennes. **HT:** 1–2.  
+Recovered stat displays: **Angers 12 corners, Rennes 6; total 18**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.75 | **WIN** | 0.0625 |
+| 2 | Total corners Over 8.5 | 0.64 | **WIN** — 18 | 0.1296 |
+| 3 | FT Over 2.5 | 0.60 | **WIN** — exactly 3 | 0.1600 |
+| 4 | FT Under 2.5 | 0.40 | **LOSS** | 0.1600 |
+| 5 | 1H Under 0.5 | 0.25 | **LOSS** | 0.0625 |
+
+**Mean Brier:** **0.1149**.  
+**Potential winner:** Rennes — **WIN**.
+
+### Retrospective
+1. **Driver:** Rennes scored at 9' and benefited from a 17' own goal; Angers replied at 35'. All three goals came before halftime, while Angers' sustained chase later generated a very large corner count.
+2. **Knowability:** the frozen card's early-goal, Rennes-attacking and high-corner branches were all present. The exact own goal was not knowable. The result supports the **mechanism direction**, but the total Over was only one goal beyond the threshold and should not be treated as an extreme scoring success.
+3. **Smallest routine change:** none beyond explicitly preserving **trailing-team corner accumulation** as a separate mechanism from goal conversion; this match is a clean example of that distinction.
+
+**Sources:**  
+- OFStats final/timeline and 12–6 corners: https://ofstats.com/matches/view/angers-sco-rennes-2026-09-06  
+- Football.fr match report: https://www.football.fr/direct-foot/337762/338173/angers-rennes.shtml
+
+---
+
+## P-328 — Arsenal vs Chelsea — EPL
+
+### Settlement
+**Final:** Arsenal 2–1 Chelsea. **HT:** 1–1.  
+Chelsea scored after 77 seconds; Arsenal equalised at 25' and won at 50'. Guardian match stats: **Arsenal 5 corners, Chelsea 3**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+
+**Mean Brier:** **0.1332**.  
+**Potential winner:** Sri Lanka Women — **WIN**.
+
+### Retrospective
+1. **Driver:** Bangladesh's powerplay stayed below the line and the full innings finished only 2.5 runs below 116.5. Sri Lanka then survived a difficult chase to win.
+2. **Knowability:** **Yes, directionally.** The frozen card explicitly preferred Bangladesh's slower powerplay and lower innings ceiling, with current personnel/injury context and phase-specific evidence. The exact 37/1 and 114/8 were not knowable, and the innings result was **boundary-sensitive**, not a dominant Under.
+3. **Smallest routine change:** preserve the existing phase/innings separation and label a 114 result against 116.5 as a **narrow boundary validation**, not proof of a broad low-scoring regime.
+
+**Sources:**  
+- Hindustan Times match stats, including Bangladesh PP 37/1 and innings 114/8: https://www.hindustantimes.com/cricket/match-stats-sl-w-vs-ban-w-women%E2%80%99s-asia-cup-t20-2026-match-10-sri-lanka-women-vs-bangladesh-women-t20-slwbw09062026273829  
+- Wisden match report/scorecard search result was used as a score/toss cross-check in the research pass.
+
+---
+
+## P-326 — Western Carolina @ Campbell
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official Campbell final: **Campbell 28–19 Western Carolina**. The frozen record crossed the start while exact live-state ownership remained unresolved, and explicitly issued **no rank and no winner call**. No historical prediction is inferred.
+
+**Process note:** the fail-closed state gate is retained. The post-match result is useful only for event-state closure, not performance accounting.
+
+**Official source:** Campbell University: https://gocamels.com/news/2026/9/6/football-worth-the-wait-camels-down-no-24-wcu-28-19-in-home-opener.aspx
+
+---
+
+## P-327 — Angers SCO vs Rennes
+
+### Settlement
+**Final:** Angers 1–2 Rennes. **HT:** 1–2.  
+Recovered stat displays: **Angers 12 corners, Rennes 6; total 18**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.75 | **WIN** | 0.0625 |
+| 2 | Total corners Over 8.5 | 0.64 | **WIN** — 18 | 0.1296 |
+| 3 | FT Over 2.5 | 0.60 | **WIN** — exactly 3 | 0.1600 |
+| 4 | FT Under 2.5 | 0.40 | **LOSS** | 0.1600 |
+| 5 | 1H Under 0.5 | 0.25 | **LOSS** | 0.0625 |
+
+**Mean Brier:** **0.1149**.  
+**Potential winner:** Rennes — **WIN**.
+
+### Retrospective
+1. **Driver:** Rennes scored at 9' and benefited from a 17' own goal; Angers replied at 35'. All three goals came before halftime, while Angers' sustained chase later generated a very large corner count.
+2. **Knowability:** the frozen card's early-goal, Rennes-attacking and high-corner branches were all present. The exact own goal was not knowable. The result supports the **mechanism direction**, but the total Over was only one goal beyond the threshold and should not be treated as an extreme scoring success.
+3. **Smallest routine change:** none beyond explicitly preserving **trailing-team corner accumulation** as a separate mechanism from goal conversion; this match is a clean example of that distinction.
+
+**Sources:**  
+- OFStats final/timeline and 12–6 corners: https://ofstats.com/matches/view/angers-sco-rennes-2026-09-06  
+- Football.fr match report: https://www.football.fr/direct-foot/337762/338173/angers-rennes.shtml
+
+---
+
+## P-328 — Arsenal vs Chelsea — EPL
+
+### Settlement
+**Final:** Arsenal 2–1 Chelsea. **HT:** 1–1.  
+Chelsea scored after 77 seconds; Arsenal equalised at 25' and won at 50'. Guardian match stats: **Arsenal 5 corners, Chelsea 3**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+
+**Mean Brier:** **0.1332**.  
+**Potential winner:** Sri Lanka Women — **WIN**.
+
+### Retrospective
+1. **Driver:** Bangladesh's powerplay stayed below the line and the full innings finished only 2.5 runs below 116.5. Sri Lanka then survived a difficult chase to win.
+2. **Knowability:** **Yes, directionally.** The frozen card explicitly preferred Bangladesh's slower powerplay and lower innings ceiling, with current personnel/injury context and phase-specific evidence. The exact 37/1 and 114/8 were not knowable, and the innings result was **boundary-sensitive**, not a dominant Under.
+3. **Smallest routine change:** preserve the existing phase/innings separation and label a 114 result against 116.5 as a **narrow boundary validation**, not proof of a broad low-scoring regime.
+
+**Sources:**  
+- Hindustan Times match stats, including Bangladesh PP 37/1 and innings 114/8: https://www.hindustantimes.com/cricket/match-stats-sl-w-vs-ban-w-women%E2%80%99s-asia-cup-t20-2026-match-10-sri-lanka-women-vs-bangladesh-women-t20-slwbw09062026273829  
+- Wisden match report/scorecard search result was used as a score/toss cross-check in the research pass.
+
+---
+
+## P-326 — Western Carolina @ Campbell
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official Campbell final: **Campbell 28–19 Western Carolina**. The frozen record crossed the start while exact live-state ownership remained unresolved, and explicitly issued **no rank and no winner call**. No historical prediction is inferred.
+
+**Process note:** the fail-closed state gate is retained. The post-match result is useful only for event-state closure, not performance accounting.
+
+**Official source:** Campbell University: https://gocamels.com/news/2026/9/6/football-worth-the-wait-camels-down-no-24-wcu-28-19-in-home-opener.aspx
+
+---
+
+## P-327 — Angers SCO vs Rennes
+
+### Settlement
+**Final:** Angers 1–2 Rennes. **HT:** 1–2.  
+Recovered stat displays: **Angers 12 corners, Rennes 6; total 18**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.75 | **WIN** | 0.0625 |
+| 2 | Total corners Over 8.5 | 0.64 | **WIN** — 18 | 0.1296 |
+| 3 | FT Over 2.5 | 0.60 | **WIN** — exactly 3 | 0.1600 |
+| 4 | FT Under 2.5 | 0.40 | **LOSS** | 0.1600 |
+| 5 | 1H Under 0.5 | 0.25 | **LOSS** | 0.0625 |
+
+**Mean Brier:** **0.1149**.  
+**Potential winner:** Rennes — **WIN**.
+
+### Retrospective
+1. **Driver:** Rennes scored at 9' and benefited from a 17' own goal; Angers replied at 35'. All three goals came before halftime, while Angers' sustained chase later generated a very large corner count.
+2. **Knowability:** the frozen card's early-goal, Rennes-attacking and high-corner branches were all present. The exact own goal was not knowable. The result supports the **mechanism direction**, but the total Over was only one goal beyond the threshold and should not be treated as an extreme scoring success.
+3. **Smallest routine change:** none beyond explicitly preserving **trailing-team corner accumulation** as a separate mechanism from goal conversion; this match is a clean example of that distinction.
+
+**Sources:**  
+- OFStats final/timeline and 12–6 corners: https://ofstats.com/matches/view/angers-sco-rennes-2026-09-06  
+- Football.fr match report: https://www.football.fr/direct-foot/337762/338173/angers-rennes.shtml
+
+---
+
+## P-328 — Arsenal vs Chelsea — EPL
+
+### Settlement
+**Final:** Arsenal 2–1 Chelsea. **HT:** 1–1.  
+Chelsea scored after 77 seconds; Arsenal equalised at 25' and won at 50'. Guardian match stats: **Arsenal 5 corners, Chelsea 3**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+**Sources:**  
+
+**Potential winner:** Sri Lanka Women — **WIN**.
+
+### Retrospective
+1. **Driver:** Bangladesh's powerplay stayed below the line and the full innings finished only 2.5 runs below 116.5. Sri Lanka then survived a difficult chase to win.
+2. **Knowability:** **Yes, directionally.** The frozen card explicitly preferred Bangladesh's slower powerplay and lower innings ceiling, with current personnel/injury context and phase-specific evidence. The exact 37/1 and 114/8 were not knowable, and the innings result was **boundary-sensitive**, not a dominant Under.
+3. **Smallest routine change:** preserve the existing phase/innings separation and label a 114 result against 116.5 as a **narrow boundary validation**, not proof of a broad low-scoring regime.
+
+**Sources:**  
+- Hindustan Times match stats, including Bangladesh PP 37/1 and innings 114/8: https://www.hindustantimes.com/cricket/match-stats-sl-w-vs-ban-w-women%E2%80%99s-asia-cup-t20-2026-match-10-sri-lanka-women-vs-bangladesh-women-t20-slwbw09062026273829  
+- Wisden match report/scorecard search result was used as a score/toss cross-check in the research pass.
+
+---
+
+## P-326 — Western Carolina @ Campbell
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official Campbell final: **Campbell 28–19 Western Carolina**. The frozen record crossed the start while exact live-state ownership remained unresolved, and explicitly issued **no rank and no winner call**. No historical prediction is inferred.
+
+**Process note:** the fail-closed state gate is retained. The post-match result is useful only for event-state closure, not performance accounting.
+
+**Official source:** Campbell University: https://gocamels.com/news/2026/9/6/football-worth-the-wait-camels-down-no-24-wcu-28-19-in-home-opener.aspx
+
+---
+
+## P-327 — Angers SCO vs Rennes
+
+### Settlement
+**Final:** Angers 1–2 Rennes. **HT:** 1–2.  
+Recovered stat displays: **Angers 12 corners, Rennes 6; total 18**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.75 | **WIN** | 0.0625 |
+| 2 | Total corners Over 8.5 | 0.64 | **WIN** — 18 | 0.1296 |
+| 3 | FT Over 2.5 | 0.60 | **WIN** — exactly 3 | 0.1600 |
+| 4 | FT Under 2.5 | 0.40 | **LOSS** | 0.1600 |
+| 5 | 1H Under 0.5 | 0.25 | **LOSS** | 0.0625 |
+
+**Mean Brier:** **0.1149**.  
+**Potential winner:** Rennes — **WIN**.
+
+### Retrospective
+1. **Driver:** Rennes scored at 9' and benefited from a 17' own goal; Angers replied at 35'. All three goals came before halftime, while Angers' sustained chase later generated a very large corner count.
+2. **Knowability:** the frozen card's early-goal, Rennes-attacking and high-corner branches were all present. The exact own goal was not knowable. The result supports the **mechanism direction**, but the total Over was only one goal beyond the threshold and should not be treated as an extreme scoring success.
+3. **Smallest routine change:** none beyond explicitly preserving **trailing-team corner accumulation** as a separate mechanism from goal conversion; this match is a clean example of that distinction.
+
+**Sources:**  
+- OFStats final/timeline and 12–6 corners: https://ofstats.com/matches/view/angers-sco-rennes-2026-09-06  
+- Football.fr match report: https://www.football.fr/direct-foot/337762/338173/angers-rennes.shtml
+
+---
+
+## P-328 — Arsenal vs Chelsea — EPL
+
+### Settlement
+**Final:** Arsenal 2–1 Chelsea. **HT:** 1–1.  
+Chelsea scored after 77 seconds; Arsenal equalised at 25' and won at 50'. Guardian match stats: **Arsenal 5 corners, Chelsea 3**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+**Sources:**  
+- Guardian match page with score/corners: https://www.theguardian.com/football/match/2026/sep/06/arsenal-v-chelsea  
+
+
+### Retrospective
+1. **Driver:** Bangladesh's powerplay stayed below the line and the full innings finished only 2.5 runs below 116.5. Sri Lanka then survived a difficult chase to win.
+2. **Knowability:** **Yes, directionally.** The frozen card explicitly preferred Bangladesh's slower powerplay and lower innings ceiling, with current personnel/injury context and phase-specific evidence. The exact 37/1 and 114/8 were not knowable, and the innings result was **boundary-sensitive**, not a dominant Under.
+3. **Smallest routine change:** preserve the existing phase/innings separation and label a 114 result against 116.5 as a **narrow boundary validation**, not proof of a broad low-scoring regime.
+
+**Sources:**  
+- Hindustan Times match stats, including Bangladesh PP 37/1 and innings 114/8: https://www.hindustantimes.com/cricket/match-stats-sl-w-vs-ban-w-women%E2%80%99s-asia-cup-t20-2026-match-10-sri-lanka-women-vs-bangladesh-women-t20-slwbw09062026273829  
+- Wisden match report/scorecard search result was used as a score/toss cross-check in the research pass.
+
+---
+
+## P-326 — Western Carolina @ Campbell
+
+**Administrative disposition:** **CLOSED / NO ACTIONABLE FORECAST ISSUED.**  
+Official Campbell final: **Campbell 28–19 Western Carolina**. The frozen record crossed the start while exact live-state ownership remained unresolved, and explicitly issued **no rank and no winner call**. No historical prediction is inferred.
+
+**Process note:** the fail-closed state gate is retained. The post-match result is useful only for event-state closure, not performance accounting.
+
+**Official source:** Campbell University: https://gocamels.com/news/2026/9/6/football-worth-the-wait-camels-down-no-24-wcu-28-19-in-home-opener.aspx
+
+---
+
+## P-327 — Angers SCO vs Rennes
+
+### Settlement
+**Final:** Angers 1–2 Rennes. **HT:** 1–2.  
+Recovered stat displays: **Angers 12 corners, Rennes 6; total 18**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.75 | **WIN** | 0.0625 |
+| 2 | Total corners Over 8.5 | 0.64 | **WIN** — 18 | 0.1296 |
+| 3 | FT Over 2.5 | 0.60 | **WIN** — exactly 3 | 0.1600 |
+| 4 | FT Under 2.5 | 0.40 | **LOSS** | 0.1600 |
+| 5 | 1H Under 0.5 | 0.25 | **LOSS** | 0.0625 |
+
+**Mean Brier:** **0.1149**.  
+**Potential winner:** Rennes — **WIN**.
+
+### Retrospective
+1. **Driver:** Rennes scored at 9' and benefited from a 17' own goal; Angers replied at 35'. All three goals came before halftime, while Angers' sustained chase later generated a very large corner count.
+2. **Knowability:** the frozen card's early-goal, Rennes-attacking and high-corner branches were all present. The exact own goal was not knowable. The result supports the **mechanism direction**, but the total Over was only one goal beyond the threshold and should not be treated as an extreme scoring success.
+3. **Smallest routine change:** none beyond explicitly preserving **trailing-team corner accumulation** as a separate mechanism from goal conversion; this match is a clean example of that distinction.
+
+**Sources:**  
+- OFStats final/timeline and 12–6 corners: https://ofstats.com/matches/view/angers-sco-rennes-2026-09-06  
+- Football.fr match report: https://www.football.fr/direct-foot/337762/338173/angers-rennes.shtml
+
+---
+
+## P-328 — Arsenal vs Chelsea — EPL
+
+### Settlement
+**Final:** Arsenal 2–1 Chelsea. **HT:** 1–1.  
+Chelsea scored after 77 seconds; Arsenal equalised at 25' and won at 50'. Guardian match stats: **Arsenal 5 corners, Chelsea 3**.
+
+| Rank | Frozen contract | p | Grade | Brier |
+|---:|---|---:|---|---:|
+| 1 | 1H Over 0.5 | 0.68 | **WIN** | 0.1024 |
+| 2 | Arsenal Over 4.5 team corners | 0.62 | **WIN** — 5 | 0.1444 |
+| 3 | FT Over 2.5 | 0.53 | **WIN** — exactly 3 | 0.2209 |
+| 4 | FT Under 2.5 | 0.47 | **LOSS** | 0.2209 |
+| 5 | 1H Under 0.5 | 0.32 | **LOSS** | 0.1024 |
+
+**Mean Brier:** **0.1582**.  
+**Potential winner:** Arsenal — **WIN**.
+
+### Retrospective
+1. **Driver:** Chelsea's 77-second opener immediately created the high-tempo chase state. Arsenal produced heavy first-half pressure, equalised, then completed the comeback early in the second half. The corner line cleared by one.
+2. **Knowability:** **Yes, directionally.** Both current attacks, Chelsea's midfield absence, Arsenal's home edge, and an early-goal route were all in the card. The exact first-77-seconds goal was unknowable. The Arsenal corner result was boundary-sensitive rather than dominant.
+3. **Smallest routine change:** no structural change. Retain the current rule that an early goal changes the subsequent exposure state; when evaluating the corner row later, record that it cleared **5 vs 4.5**, not as evidence of a large corner edge.
+
+**Sources:**  
+- Guardian match page with score/corners: https://www.theguardian.com/football/match/2026/sep/06/arsenal-v-chelsea  
+- Guardian match report/live coverage: https://www.theguardian.com/football/live/2026/sep/06/arsenal-v-chelsea-premier-league-live

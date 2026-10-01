@@ -1,0 +1,307 @@
+
+# Settlement / retrospective sweep before P-259 — 2026-09-03
+
+## P-254 — Choinski vs Van de Zandschulp — FINAL
+
+**Official final:** Botic Van de Zandschulp def. Jan Choinski **6-3, 6-1, 7-6(5)**.
+
+- Total games: **29**
+- Net game margin: Botic **+9**
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-254-C02 | 1 | Van de Zandschulp -5.5 | **WIN** |
+| P-254-C04 | 2 | Under 38.5 | **WIN** |
+| P-254-C01 | 3 | Choinski +5.5 | **LOSS** |
+| P-254-C03 | 4 | Over 38.5 | **LOSS** |
+
+**Potential winner — Botic:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- Rank #1 won through the exact predeclared mechanism: Botic's stronger current hard return profile created real break separation.
+- Botic held in all 14 service games and broke Choinski four times.
+- Choinski's serve-resistance branch appeared only late, producing the third-set tiebreak; it was not large enough to rescue +5.5 or the Over.
+- The central scoreline `6-3, 6-4, 6-4` was directionally close to the actual 6-3, 6-1, 7-6.
+- No new tennis weight is promoted.
+
+## P-255 — Inter Women vs Wolfsburg Women — FINAL
+
+**90-minute result:** Inter **2-0** Wolfsburg.
+**HT:** Inter 1-0.
+Inter ultimately advanced after extra time and penalties.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-255-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-255-C05 | 2 | Corners Over 8.5 | **UNRESOLVED / provider-definition final not recovered** |
+| P-255-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-255-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-255-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Wolfsburg to advance:** **LOSS**.
+
+### Retrospective
+Process grade: **MIXED / PHASE-PROPAGATION CAUTION**.
+- Rank #1 early-goal direction was correct: Inter scored at 40'.
+- The card correctly preserved Full Under as a credible branch; regulation stopped at exactly two goals.
+- The Over branch overstated how much Inter's aggregate chase would propagate into a third 90-minute goal.
+- The advancement miss came from underweighting the exact `Inter wins by two in regulation -> extra-time/penalty variance` branch.
+- No new forecast weight; reinforce existing two-leg regime-switch and endpoint-separation controls.
+
+## P-256 — PSG Women vs Eintracht Frankfurt Women — FINAL
+
+**90-minute result:** PSG **1-1** Frankfurt.
+**HT:** PSG 0-1 Frankfurt.
+PSG ultimately advanced after extra time.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-256-C05 | 1 | Corners Over 8.5 | **UNRESOLVED / exact provider final not recovered** |
+| P-256-C01 | 2 | 1H Over 0.5 | **WIN** |
+| P-256-C04 | 3 | Full Under 2.5 | **WIN** |
+| P-256-C03 | 4 | Full Over 2.5 | **LOSS** |
+| P-256-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — PSG to advance:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- The forecast explicitly identified `1H Over + Full Under` as a coherent central family; the 90-minute result delivered exactly that structure.
+- Frankfurt scored before halftime, then regulation remained at two total goals.
+- PSG's advancement lean also won, but only after extra time, validating the distinction between 90-minute winner and qualification endpoint.
+- No new rule promoted.
+
+## P-257 — Padres @ Reds — FINAL
+
+
+
+## P-254 — Choinski vs Van de Zandschulp — FINAL
+
+**Official final:** Botic Van de Zandschulp def. Jan Choinski **6-3, 6-1, 7-6(5)**.
+
+- Total games: **29**
+- Net game margin: Botic **+9**
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-254-C02 | 1 | Van de Zandschulp -5.5 | **WIN** |
+| P-254-C04 | 2 | Under 38.5 | **WIN** |
+| P-254-C01 | 3 | Choinski +5.5 | **LOSS** |
+| P-254-C03 | 4 | Over 38.5 | **LOSS** |
+
+**Potential winner — Botic:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- Rank #1 won through the exact predeclared mechanism: Botic's stronger current hard return profile created real break separation.
+- Botic held in all 14 service games and broke Choinski four times.
+- Choinski's serve-resistance branch appeared only late, producing the third-set tiebreak; it was not large enough to rescue +5.5 or the Over.
+- The central scoreline `6-3, 6-4, 6-4` was directionally close to the actual 6-3, 6-1, 7-6.
+- No new tennis weight is promoted.
+
+## P-255 — Inter Women vs Wolfsburg Women — FINAL
+
+**90-minute result:** Inter **2-0** Wolfsburg.
+**HT:** Inter 1-0.
+Inter ultimately advanced after extra time and penalties.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-255-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-255-C05 | 2 | Corners Over 8.5 | **UNRESOLVED / provider-definition final not recovered** |
+| P-255-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-255-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-255-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Wolfsburg to advance:** **LOSS**.
+
+### Retrospective
+Process grade: **MIXED / PHASE-PROPAGATION CAUTION**.
+- Rank #1 early-goal direction was correct: Inter scored at 40'.
+- The card correctly preserved Full Under as a credible branch; regulation stopped at exactly two goals.
+- The Over branch overstated how much Inter's aggregate chase would propagate into a third 90-minute goal.
+- The advancement miss came from underweighting the exact `Inter wins by two in regulation -> extra-time/penalty variance` branch.
+- No new forecast weight; reinforce existing two-leg regime-switch and endpoint-separation controls.
+
+## P-256 — PSG Women vs Eintracht Frankfurt Women — FINAL
+
+**90-minute result:** PSG **1-1** Frankfurt.
+**HT:** PSG 0-1 Frankfurt.
+PSG ultimately advanced after extra time.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-256-C05 | 1 | Corners Over 8.5 | **UNRESOLVED / exact provider final not recovered** |
+| P-256-C01 | 2 | 1H Over 0.5 | **WIN** |
+| P-256-C04 | 3 | Full Under 2.5 | **WIN** |
+| P-256-C03 | 4 | Full Over 2.5 | **LOSS** |
+| P-256-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — PSG to advance:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- The forecast explicitly identified `1H Over + Full Under` as a coherent central family; the 90-minute result delivered exactly that structure.
+- Frankfurt scored before halftime, then regulation remained at two total goals.
+- PSG's advancement lean also won, but only after extra time, validating the distinction between 90-minute winner and qualification endpoint.
+- No new rule promoted.
+
+## P-257 — Padres @ Reds — FINAL
+
+**Final:** Cincinnati Reds **7-3** San Diego Padres.
+
+
+## P-254 — Choinski vs Van de Zandschulp — FINAL
+
+**Official final:** Botic Van de Zandschulp def. Jan Choinski **6-3, 6-1, 7-6(5)**.
+
+- Total games: **29**
+- Net game margin: Botic **+9**
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-254-C02 | 1 | Van de Zandschulp -5.5 | **WIN** |
+| P-254-C04 | 2 | Under 38.5 | **WIN** |
+| P-254-C01 | 3 | Choinski +5.5 | **LOSS** |
+| P-254-C03 | 4 | Over 38.5 | **LOSS** |
+
+**Potential winner — Botic:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- Rank #1 won through the exact predeclared mechanism: Botic's stronger current hard return profile created real break separation.
+- Botic held in all 14 service games and broke Choinski four times.
+- Choinski's serve-resistance branch appeared only late, producing the third-set tiebreak; it was not large enough to rescue +5.5 or the Over.
+- The central scoreline `6-3, 6-4, 6-4` was directionally close to the actual 6-3, 6-1, 7-6.
+- No new tennis weight is promoted.
+
+## P-255 — Inter Women vs Wolfsburg Women — FINAL
+
+**90-minute result:** Inter **2-0** Wolfsburg.
+**HT:** Inter 1-0.
+Inter ultimately advanced after extra time and penalties.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-255-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-255-C05 | 2 | Corners Over 8.5 | **UNRESOLVED / provider-definition final not recovered** |
+| P-255-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-255-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-255-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Wolfsburg to advance:** **LOSS**.
+
+### Retrospective
+Process grade: **MIXED / PHASE-PROPAGATION CAUTION**.
+- Rank #1 early-goal direction was correct: Inter scored at 40'.
+- The card correctly preserved Full Under as a credible branch; regulation stopped at exactly two goals.
+- The Over branch overstated how much Inter's aggregate chase would propagate into a third 90-minute goal.
+- The advancement miss came from underweighting the exact `Inter wins by two in regulation -> extra-time/penalty variance` branch.
+- No new forecast weight; reinforce existing two-leg regime-switch and endpoint-separation controls.
+
+## P-256 — PSG Women vs Eintracht Frankfurt Women — FINAL
+
+**90-minute result:** PSG **1-1** Frankfurt.
+**HT:** PSG 0-1 Frankfurt.
+PSG ultimately advanced after extra time.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-256-C05 | 1 | Corners Over 8.5 | **UNRESOLVED / exact provider final not recovered** |
+| P-256-C01 | 2 | 1H Over 0.5 | **WIN** |
+| P-256-C04 | 3 | Full Under 2.5 | **WIN** |
+| P-256-C03 | 4 | Full Over 2.5 | **LOSS** |
+| P-256-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — PSG to advance:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- The forecast explicitly identified `1H Over + Full Under` as a coherent central family; the 90-minute result delivered exactly that structure.
+- Frankfurt scored before halftime, then regulation remained at two total goals.
+- PSG's advancement lean also won, but only after extra time, validating the distinction between 90-minute winner and qualification endpoint.
+- No new rule promoted.
+
+## P-257 — Padres @ Reds — FINAL
+
+**Final:** Cincinnati Reds **7-3** San Diego Padres.
+
+| ID | Rank | Contract | Outcome |
+
+
+**Official final:** Botic Van de Zandschulp def. Jan Choinski **6-3, 6-1, 7-6(5)**.
+
+- Total games: **29**
+- Net game margin: Botic **+9**
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|
+| P-254-C02 | 1 | Van de Zandschulp -5.5 | **WIN** |
+| P-254-C04 | 2 | Under 38.5 | **WIN** |
+| P-254-C01 | 3 | Choinski +5.5 | **LOSS** |
+| P-254-C03 | 4 | Over 38.5 | **LOSS** |
+
+**Potential winner — Botic:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- Rank #1 won through the exact predeclared mechanism: Botic's stronger current hard return profile created real break separation.
+- Botic held in all 14 service games and broke Choinski four times.
+- Choinski's serve-resistance branch appeared only late, producing the third-set tiebreak; it was not large enough to rescue +5.5 or the Over.
+- The central scoreline `6-3, 6-4, 6-4` was directionally close to the actual 6-3, 6-1, 7-6.
+- No new tennis weight is promoted.
+
+## P-255 — Inter Women vs Wolfsburg Women — FINAL
+
+**90-minute result:** Inter **2-0** Wolfsburg.
+**HT:** Inter 1-0.
+Inter ultimately advanced after extra time and penalties.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-255-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-255-C05 | 2 | Corners Over 8.5 | **UNRESOLVED / provider-definition final not recovered** |
+| P-255-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-255-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-255-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Wolfsburg to advance:** **LOSS**.
+
+### Retrospective
+Process grade: **MIXED / PHASE-PROPAGATION CAUTION**.
+- Rank #1 early-goal direction was correct: Inter scored at 40'.
+- The card correctly preserved Full Under as a credible branch; regulation stopped at exactly two goals.
+- The Over branch overstated how much Inter's aggregate chase would propagate into a third 90-minute goal.
+- The advancement miss came from underweighting the exact `Inter wins by two in regulation -> extra-time/penalty variance` branch.
+- No new forecast weight; reinforce existing two-leg regime-switch and endpoint-separation controls.
+
+## P-256 — PSG Women vs Eintracht Frankfurt Women — FINAL
+
+**90-minute result:** PSG **1-1** Frankfurt.
+**HT:** PSG 0-1 Frankfurt.
+PSG ultimately advanced after extra time.
+
+| ID | Rank | Contract | 90-minute outcome |
+|---|---:|---|---|
+| P-256-C05 | 1 | Corners Over 8.5 | **UNRESOLVED / exact provider final not recovered** |
+| P-256-C01 | 2 | 1H Over 0.5 | **WIN** |
+| P-256-C04 | 3 | Full Under 2.5 | **WIN** |
+| P-256-C03 | 4 | Full Over 2.5 | **LOSS** |
+| P-256-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — PSG to advance:** **WIN**.
+
+### Retrospective
+Process grade: **COMPLIANT**.
+- The forecast explicitly identified `1H Over + Full Under` as a coherent central family; the 90-minute result delivered exactly that structure.
+- Frankfurt scored before halftime, then regulation remained at two total goals.
+- PSG's advancement lean also won, but only after extra time, validating the distinction between 90-minute winner and qualification endpoint.
+- No new rule promoted.
+
+## P-257 — Padres @ Reds — FINAL
+
+**Final:** Cincinnati Reds **7-3** San Diego Padres.
+
+| ID | Rank | Contract | Outcome |
+|---|---:|---|---|

@@ -1,0 +1,383 @@
+## P-318 — Henan vs Chengdu Rongcheng
+
+### Settlement
+**Final:** Henan 0–0 Chengdu Rongcheng. **HT:** 0–0.  
+Fresh secondary structured displays report **Henan 9 corners, Chengdu 0**, with Henan 16–9 in total shots and 4–0 in shots on target.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **LOSS** |
+| 2 | Chengdu Over 4.5 team corners | **LOSS** |
+| 3 | FT Over 2.5 goals | **LOSS** |
+| 4 | FT Under 2.5 goals | **WIN** |
+| 5 | 1H Under 0.5 goals | **WIN** |
+
+**Potential winner:** Chengdu Rongcheng — **LOSS**; regulation match was drawn.
+
+### Retrospective
+1. **What did the result turn on?** Chengdu produced possession without effective terminal threat. The most important sporting fact is not merely the 0–0 score: the recovered stat line has Chengdu at **zero shots on target and zero corners**, while Henan generated the stronger shot/corner volume. The pre-game “Felipe absence → pressure without enough finishing” low-output branch occurred much more strongly than the central Chengdu attacking branch.
+2. **Was it knowable before issue, and was it in the card?** **Partly.** Felipe's suspension, Henan's recent low-scoring home states, unresolved Chengdu XI/bench depth, and an explicit “territory, low finishing” / 0–0-to-0–1 branch were in the frozen card. What was not knowable was the extreme endpoint of **zero Chengdu corners and zero shots on target**. The card nevertheless over-weighted H2H first-half-goal frequency and historical Chengdu corner averages relative to the current striker/lineup uncertainty.
+3. **Smallest routine change:** when a major central finisher is absent and the current attacking XI is incomplete, require one current **route-to-corner / route-to-shot-on-target** check (width, crosses, box entries, blocked attempts or current-role evidence) before letting historical team-corner averages outrank the low-conversion branch. This is a research-routine note, **not a new fitted coefficient or automatic corner downgrade**.
+
+**Source checks:**  
+- Offside Scores, final/stat line: https://offsidescores.com/br/futebol/jogo/henan-chengdu-rongcheng-20260906/db16d476-6821-4752-ac77-fcdd75ad1141/detalhe  
+- HooFoot match-stat recap: https://hoofoot.net/pt/full-matches/chinese-super-league/henan-vs-chengdu-rongcheng-highlights-september-06-2026/
+
+---
+
+## P-319 — Yunnan Yukun vs Liaoning Tieren
+
+### Settlement
+**Final:** Yunnan Yukun 5–0 Liaoning Tieren. **HT:** 2–0.  
+Recovered final stats: **Yunnan 3 corners, Liaoning 6; total 9**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Corners Over 8.5 | **WIN** — 9 corners |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Yunnan Yukun — **WIN**.
+
+### Retrospective
+1. **Driver:** Yunnan converted its home attacking edge early (32' and 40') and then separated decisively after halftime. The match became a one-sided five-goal result despite Liaoning having slightly more possession and six corners.
+2. **Knowability:** **Yes, directionally.** The frozen card already had Yunnan's 7-2-3 home record, Liaoning's 1-3-7 away record, Liaoning's weak away scoring/defence, Kunimoto's suspension, and a Yunnan territorial/high-goal branch. Yunnan's congested week and recent 1–0 home games were valid counters, but they did not erase the much wider season scoring environment. The precise 5–0 and Cléber hat-trick were not knowable.
+3. **Smallest routine change:** when short recent low-score samples conflict sharply with a season/home scoring environment, keep an explicit **high-conversion favourite tail** in the component budget instead of letting the two most recent 1–0s act as an implicit ceiling.
+
+**Observation:** the corner Over won only by the minimum possible margin while Yunnan itself had just three corners. This is another reminder that **goal dominance, possession and total corners are separate targets**.
+
+**Sources:**  
+- Sofascore final/timeline: https://www.sofascore.com/football/match/yunnan-yukun-liaoning-tieren-fc/PzNbsQZOd  
+- HooFoot final statistics (3–6 corners): https://hoofoot.net/es/full-matches/chinese-super-league/yunnan-yukun-vs-liaoning-tieren-highlights-september-06-2026/  
+- FotMob final/timeline: https://www.fotmob.com/matches/liaoning-tieren-vs-yunnan-yukun/va1fhk9b
+
+---
+
+## P-320 — Tianjin Jinmen Tigers vs Zhejiang
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+
+
+### Settlement
+**Final:** Henan 0–0 Chengdu Rongcheng. **HT:** 0–0.  
+Fresh secondary structured displays report **Henan 9 corners, Chengdu 0**, with Henan 16–9 in total shots and 4–0 in shots on target.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **LOSS** |
+| 2 | Chengdu Over 4.5 team corners | **LOSS** |
+| 3 | FT Over 2.5 goals | **LOSS** |
+| 4 | FT Under 2.5 goals | **WIN** |
+| 5 | 1H Under 0.5 goals | **WIN** |
+
+**Potential winner:** Chengdu Rongcheng — **LOSS**; regulation match was drawn.
+
+### Retrospective
+1. **What did the result turn on?** Chengdu produced possession without effective terminal threat. The most important sporting fact is not merely the 0–0 score: the recovered stat line has Chengdu at **zero shots on target and zero corners**, while Henan generated the stronger shot/corner volume. The pre-game “Felipe absence → pressure without enough finishing” low-output branch occurred much more strongly than the central Chengdu attacking branch.
+2. **Was it knowable before issue, and was it in the card?** **Partly.** Felipe's suspension, Henan's recent low-scoring home states, unresolved Chengdu XI/bench depth, and an explicit “territory, low finishing” / 0–0-to-0–1 branch were in the frozen card. What was not knowable was the extreme endpoint of **zero Chengdu corners and zero shots on target**. The card nevertheless over-weighted H2H first-half-goal frequency and historical Chengdu corner averages relative to the current striker/lineup uncertainty.
+3. **Smallest routine change:** when a major central finisher is absent and the current attacking XI is incomplete, require one current **route-to-corner / route-to-shot-on-target** check (width, crosses, box entries, blocked attempts or current-role evidence) before letting historical team-corner averages outrank the low-conversion branch. This is a research-routine note, **not a new fitted coefficient or automatic corner downgrade**.
+
+**Source checks:**  
+- Offside Scores, final/stat line: https://offsidescores.com/br/futebol/jogo/henan-chengdu-rongcheng-20260906/db16d476-6821-4752-ac77-fcdd75ad1141/detalhe  
+- HooFoot match-stat recap: https://hoofoot.net/pt/full-matches/chinese-super-league/henan-vs-chengdu-rongcheng-highlights-september-06-2026/
+
+---
+
+## P-319 — Yunnan Yukun vs Liaoning Tieren
+
+### Settlement
+**Final:** Yunnan Yukun 5–0 Liaoning Tieren. **HT:** 2–0.  
+Recovered final stats: **Yunnan 3 corners, Liaoning 6; total 9**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Corners Over 8.5 | **WIN** — 9 corners |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Yunnan Yukun — **WIN**.
+
+### Retrospective
+1. **Driver:** Yunnan converted its home attacking edge early (32' and 40') and then separated decisively after halftime. The match became a one-sided five-goal result despite Liaoning having slightly more possession and six corners.
+2. **Knowability:** **Yes, directionally.** The frozen card already had Yunnan's 7-2-3 home record, Liaoning's 1-3-7 away record, Liaoning's weak away scoring/defence, Kunimoto's suspension, and a Yunnan territorial/high-goal branch. Yunnan's congested week and recent 1–0 home games were valid counters, but they did not erase the much wider season scoring environment. The precise 5–0 and Cléber hat-trick were not knowable.
+3. **Smallest routine change:** when short recent low-score samples conflict sharply with a season/home scoring environment, keep an explicit **high-conversion favourite tail** in the component budget instead of letting the two most recent 1–0s act as an implicit ceiling.
+
+**Observation:** the corner Over won only by the minimum possible margin while Yunnan itself had just three corners. This is another reminder that **goal dominance, possession and total corners are separate targets**.
+
+**Sources:**  
+- Sofascore final/timeline: https://www.sofascore.com/football/match/yunnan-yukun-liaoning-tieren-fc/PzNbsQZOd  
+- HooFoot final statistics (3–6 corners): https://hoofoot.net/es/full-matches/chinese-super-league/yunnan-yukun-vs-liaoning-tieren-highlights-september-06-2026/  
+- FotMob final/timeline: https://www.fotmob.com/matches/liaoning-tieren-vs-yunnan-yukun/va1fhk9b
+
+---
+
+## P-320 — Tianjin Jinmen Tigers vs Zhejiang
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+3. **Smallest routine change:** for team-corner rows, supplement season corner averages with a current **opponent-conditioned route profile** and keep an explicit efficiency-vs-corner tradeoff; do not treat general attacking strength or possession as sufficient evidence for a team-corner threshold.
+
+### Settlement
+**Final:** Henan 0–0 Chengdu Rongcheng. **HT:** 0–0.  
+Fresh secondary structured displays report **Henan 9 corners, Chengdu 0**, with Henan 16–9 in total shots and 4–0 in shots on target.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **LOSS** |
+| 2 | Chengdu Over 4.5 team corners | **LOSS** |
+| 3 | FT Over 2.5 goals | **LOSS** |
+| 4 | FT Under 2.5 goals | **WIN** |
+| 5 | 1H Under 0.5 goals | **WIN** |
+
+**Potential winner:** Chengdu Rongcheng — **LOSS**; regulation match was drawn.
+
+### Retrospective
+1. **What did the result turn on?** Chengdu produced possession without effective terminal threat. The most important sporting fact is not merely the 0–0 score: the recovered stat line has Chengdu at **zero shots on target and zero corners**, while Henan generated the stronger shot/corner volume. The pre-game “Felipe absence → pressure without enough finishing” low-output branch occurred much more strongly than the central Chengdu attacking branch.
+2. **Was it knowable before issue, and was it in the card?** **Partly.** Felipe's suspension, Henan's recent low-scoring home states, unresolved Chengdu XI/bench depth, and an explicit “territory, low finishing” / 0–0-to-0–1 branch were in the frozen card. What was not knowable was the extreme endpoint of **zero Chengdu corners and zero shots on target**. The card nevertheless over-weighted H2H first-half-goal frequency and historical Chengdu corner averages relative to the current striker/lineup uncertainty.
+3. **Smallest routine change:** when a major central finisher is absent and the current attacking XI is incomplete, require one current **route-to-corner / route-to-shot-on-target** check (width, crosses, box entries, blocked attempts or current-role evidence) before letting historical team-corner averages outrank the low-conversion branch. This is a research-routine note, **not a new fitted coefficient or automatic corner downgrade**.
+
+**Source checks:**  
+- Offside Scores, final/stat line: https://offsidescores.com/br/futebol/jogo/henan-chengdu-rongcheng-20260906/db16d476-6821-4752-ac77-fcdd75ad1141/detalhe  
+- HooFoot match-stat recap: https://hoofoot.net/pt/full-matches/chinese-super-league/henan-vs-chengdu-rongcheng-highlights-september-06-2026/
+
+---
+
+## P-319 — Yunnan Yukun vs Liaoning Tieren
+
+### Settlement
+**Final:** Yunnan Yukun 5–0 Liaoning Tieren. **HT:** 2–0.  
+Recovered final stats: **Yunnan 3 corners, Liaoning 6; total 9**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Corners Over 8.5 | **WIN** — 9 corners |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Yunnan Yukun — **WIN**.
+
+### Retrospective
+1. **Driver:** Yunnan converted its home attacking edge early (32' and 40') and then separated decisively after halftime. The match became a one-sided five-goal result despite Liaoning having slightly more possession and six corners.
+2. **Knowability:** **Yes, directionally.** The frozen card already had Yunnan's 7-2-3 home record, Liaoning's 1-3-7 away record, Liaoning's weak away scoring/defence, Kunimoto's suspension, and a Yunnan territorial/high-goal branch. Yunnan's congested week and recent 1–0 home games were valid counters, but they did not erase the much wider season scoring environment. The precise 5–0 and Cléber hat-trick were not knowable.
+3. **Smallest routine change:** when short recent low-score samples conflict sharply with a season/home scoring environment, keep an explicit **high-conversion favourite tail** in the component budget instead of letting the two most recent 1–0s act as an implicit ceiling.
+
+**Observation:** the corner Over won only by the minimum possible margin while Yunnan itself had just three corners. This is another reminder that **goal dominance, possession and total corners are separate targets**.
+
+**Sources:**  
+- Sofascore final/timeline: https://www.sofascore.com/football/match/yunnan-yukun-liaoning-tieren-fc/PzNbsQZOd  
+- HooFoot final statistics (3–6 corners): https://hoofoot.net/es/full-matches/chinese-super-league/yunnan-yukun-vs-liaoning-tieren-highlights-september-06-2026/  
+- FotMob final/timeline: https://www.fotmob.com/matches/liaoning-tieren-vs-yunnan-yukun/va1fhk9b
+
+---
+
+## P-320 — Tianjin Jinmen Tigers vs Zhejiang
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+3. **Smallest routine change:** for team-corner rows, supplement season corner averages with a current **opponent-conditioned route profile** and keep an explicit efficiency-vs-corner tradeoff; do not treat general attacking strength or possession as sufficient evidence for a team-corner threshold.
+
+
+**Final:** Henan 0–0 Chengdu Rongcheng. **HT:** 0–0.  
+Fresh secondary structured displays report **Henan 9 corners, Chengdu 0**, with Henan 16–9 in total shots and 4–0 in shots on target.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **LOSS** |
+| 2 | Chengdu Over 4.5 team corners | **LOSS** |
+| 3 | FT Over 2.5 goals | **LOSS** |
+| 4 | FT Under 2.5 goals | **WIN** |
+| 5 | 1H Under 0.5 goals | **WIN** |
+
+**Potential winner:** Chengdu Rongcheng — **LOSS**; regulation match was drawn.
+
+### Retrospective
+1. **What did the result turn on?** Chengdu produced possession without effective terminal threat. The most important sporting fact is not merely the 0–0 score: the recovered stat line has Chengdu at **zero shots on target and zero corners**, while Henan generated the stronger shot/corner volume. The pre-game “Felipe absence → pressure without enough finishing” low-output branch occurred much more strongly than the central Chengdu attacking branch.
+2. **Was it knowable before issue, and was it in the card?** **Partly.** Felipe's suspension, Henan's recent low-scoring home states, unresolved Chengdu XI/bench depth, and an explicit “territory, low finishing” / 0–0-to-0–1 branch were in the frozen card. What was not knowable was the extreme endpoint of **zero Chengdu corners and zero shots on target**. The card nevertheless over-weighted H2H first-half-goal frequency and historical Chengdu corner averages relative to the current striker/lineup uncertainty.
+3. **Smallest routine change:** when a major central finisher is absent and the current attacking XI is incomplete, require one current **route-to-corner / route-to-shot-on-target** check (width, crosses, box entries, blocked attempts or current-role evidence) before letting historical team-corner averages outrank the low-conversion branch. This is a research-routine note, **not a new fitted coefficient or automatic corner downgrade**.
+
+**Source checks:**  
+- Offside Scores, final/stat line: https://offsidescores.com/br/futebol/jogo/henan-chengdu-rongcheng-20260906/db16d476-6821-4752-ac77-fcdd75ad1141/detalhe  
+- HooFoot match-stat recap: https://hoofoot.net/pt/full-matches/chinese-super-league/henan-vs-chengdu-rongcheng-highlights-september-06-2026/
+
+---
+
+## P-319 — Yunnan Yukun vs Liaoning Tieren
+
+### Settlement
+**Final:** Yunnan Yukun 5–0 Liaoning Tieren. **HT:** 2–0.  
+Recovered final stats: **Yunnan 3 corners, Liaoning 6; total 9**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Corners Over 8.5 | **WIN** — 9 corners |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Yunnan Yukun — **WIN**.
+
+### Retrospective
+1. **Driver:** Yunnan converted its home attacking edge early (32' and 40') and then separated decisively after halftime. The match became a one-sided five-goal result despite Liaoning having slightly more possession and six corners.
+2. **Knowability:** **Yes, directionally.** The frozen card already had Yunnan's 7-2-3 home record, Liaoning's 1-3-7 away record, Liaoning's weak away scoring/defence, Kunimoto's suspension, and a Yunnan territorial/high-goal branch. Yunnan's congested week and recent 1–0 home games were valid counters, but they did not erase the much wider season scoring environment. The precise 5–0 and Cléber hat-trick were not knowable.
+3. **Smallest routine change:** when short recent low-score samples conflict sharply with a season/home scoring environment, keep an explicit **high-conversion favourite tail** in the component budget instead of letting the two most recent 1–0s act as an implicit ceiling.
+
+**Observation:** the corner Over won only by the minimum possible margin while Yunnan itself had just three corners. This is another reminder that **goal dominance, possession and total corners are separate targets**.
+
+**Sources:**  
+- Sofascore final/timeline: https://www.sofascore.com/football/match/yunnan-yukun-liaoning-tieren-fc/PzNbsQZOd  
+- HooFoot final statistics (3–6 corners): https://hoofoot.net/es/full-matches/chinese-super-league/yunnan-yukun-vs-liaoning-tieren-highlights-september-06-2026/  
+- FotMob final/timeline: https://www.fotmob.com/matches/liaoning-tieren-vs-yunnan-yukun/va1fhk9b
+
+---
+
+## P-320 — Tianjin Jinmen Tigers vs Zhejiang
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+3. **Smallest routine change:** for team-corner rows, supplement season corner averages with a current **opponent-conditioned route profile** and keep an explicit efficiency-vs-corner tradeoff; do not treat general attacking strength or possession as sufficient evidence for a team-corner threshold.
+
+**Source:** TotalCorner Tianjin current results, including 2–1 and 10–4 corners: https://www.totalcorner.com/team/view/82046
+
+Fresh secondary structured displays report **Henan 9 corners, Chengdu 0**, with Henan 16–9 in total shots and 4–0 in shots on target.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **LOSS** |
+| 2 | Chengdu Over 4.5 team corners | **LOSS** |
+| 3 | FT Over 2.5 goals | **LOSS** |
+| 4 | FT Under 2.5 goals | **WIN** |
+| 5 | 1H Under 0.5 goals | **WIN** |
+
+**Potential winner:** Chengdu Rongcheng — **LOSS**; regulation match was drawn.
+
+### Retrospective
+1. **What did the result turn on?** Chengdu produced possession without effective terminal threat. The most important sporting fact is not merely the 0–0 score: the recovered stat line has Chengdu at **zero shots on target and zero corners**, while Henan generated the stronger shot/corner volume. The pre-game “Felipe absence → pressure without enough finishing” low-output branch occurred much more strongly than the central Chengdu attacking branch.
+2. **Was it knowable before issue, and was it in the card?** **Partly.** Felipe's suspension, Henan's recent low-scoring home states, unresolved Chengdu XI/bench depth, and an explicit “territory, low finishing” / 0–0-to-0–1 branch were in the frozen card. What was not knowable was the extreme endpoint of **zero Chengdu corners and zero shots on target**. The card nevertheless over-weighted H2H first-half-goal frequency and historical Chengdu corner averages relative to the current striker/lineup uncertainty.
+3. **Smallest routine change:** when a major central finisher is absent and the current attacking XI is incomplete, require one current **route-to-corner / route-to-shot-on-target** check (width, crosses, box entries, blocked attempts or current-role evidence) before letting historical team-corner averages outrank the low-conversion branch. This is a research-routine note, **not a new fitted coefficient or automatic corner downgrade**.
+
+**Source checks:**  
+- Offside Scores, final/stat line: https://offsidescores.com/br/futebol/jogo/henan-chengdu-rongcheng-20260906/db16d476-6821-4752-ac77-fcdd75ad1141/detalhe  
+- HooFoot match-stat recap: https://hoofoot.net/pt/full-matches/chinese-super-league/henan-vs-chengdu-rongcheng-highlights-september-06-2026/
+
+---
+
+## P-319 — Yunnan Yukun vs Liaoning Tieren
+
+### Settlement
+**Final:** Yunnan Yukun 5–0 Liaoning Tieren. **HT:** 2–0.  
+Recovered final stats: **Yunnan 3 corners, Liaoning 6; total 9**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Total Corners Over 8.5 | **WIN** — 9 corners |
+| 3 | FT Over 2.5 goals | **WIN** |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Yunnan Yukun — **WIN**.
+
+### Retrospective
+1. **Driver:** Yunnan converted its home attacking edge early (32' and 40') and then separated decisively after halftime. The match became a one-sided five-goal result despite Liaoning having slightly more possession and six corners.
+2. **Knowability:** **Yes, directionally.** The frozen card already had Yunnan's 7-2-3 home record, Liaoning's 1-3-7 away record, Liaoning's weak away scoring/defence, Kunimoto's suspension, and a Yunnan territorial/high-goal branch. Yunnan's congested week and recent 1–0 home games were valid counters, but they did not erase the much wider season scoring environment. The precise 5–0 and Cléber hat-trick were not knowable.
+3. **Smallest routine change:** when short recent low-score samples conflict sharply with a season/home scoring environment, keep an explicit **high-conversion favourite tail** in the component budget instead of letting the two most recent 1–0s act as an implicit ceiling.
+
+**Observation:** the corner Over won only by the minimum possible margin while Yunnan itself had just three corners. This is another reminder that **goal dominance, possession and total corners are separate targets**.
+
+**Sources:**  
+- Sofascore final/timeline: https://www.sofascore.com/football/match/yunnan-yukun-liaoning-tieren-fc/PzNbsQZOd  
+- HooFoot final statistics (3–6 corners): https://hoofoot.net/es/full-matches/chinese-super-league/yunnan-yukun-vs-liaoning-tieren-highlights-september-06-2026/  
+- FotMob final/timeline: https://www.fotmob.com/matches/liaoning-tieren-vs-yunnan-yukun/va1fhk9b
+
+---
+
+## P-320 — Tianjin Jinmen Tigers vs Zhejiang
+
+### Settlement
+**Final:** Tianjin Jinmen Tigers 2–1 Zhejiang. **HT:** 1–1.  
+TotalCorner reports **Tianjin 10 corners, Zhejiang 4**.
+
+| Rank | Frozen contract | Grade |
+|---:|---|---|
+| 1 | 1H Over 0.5 goals | **WIN** |
+| 2 | Zhejiang Over 4.5 team corners | **LOSS** — 4 |
+| 3 | FT Over 2.5 goals | **WIN** — exactly 3 goals |
+| 4 | FT Under 2.5 goals | **LOSS** |
+| 5 | 1H Under 0.5 goals | **LOSS** |
+
+**Potential winner:** Zhejiang — **LOSS**.
+
+### Retrospective
+1. **Driver:** the early-event/three-goal branch occurred, but the allocation was wrong. Tianjin, not Zhejiang, converted the match into the stronger territory/corner result. Zhejiang's pre-game attacking reputation and corner baseline did not translate to five corners or the win.
+2. **Knowability:** **Partly.** The card explicitly contained the Tianjin home/relegation-pressure upset path, Zhejiang's poor away record, Cardoso's absence and Tianjin's Schettine absence. It also stated the exact corner kill path: efficient attacks can terminate as shots/goals rather than blocks/clearances. The current exact XIs/benches were unresolved, so the winner and team-corner conclusions were already evidence-capped.
+3. **Smallest routine change:** for team-corner rows, supplement season corner averages with a current **opponent-conditioned route profile** and keep an explicit efficiency-vs-corner tradeoff; do not treat general attacking strength or possession as sufficient evidence for a team-corner threshold.
+
+**Source:** TotalCorner Tianjin current results, including 2–1 and 10–4 corners: https://www.totalcorner.com/team/view/82046

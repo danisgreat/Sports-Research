@@ -1,0 +1,307 @@
+**Key unknowns:** complete pre-start IL/day-to-day and bench availability; full H2H 5/10/15 stack; umpire tendency; verified market prices; exact house settlement rules.  
+**Dependence warning:** this is not a four-independent-pick card. A one-run finish cashes both +1.5 rows; a total of eight or nine cashes both total rows. Arizona +1.5 and the Arizona winner lean also share Pfaadt/bullpen mechanisms.  
+**Bottom line:** every row remains `PASS` because the mandatory injury/availability and complete H2H stack were not frozen before first pitch. If forced to choose one supplied direction, **Diamondbacks +1.5** is the least fragile; **Arizona** is the narrow potential winner. No numerical confidence or price edge is claimed.
+
+### Frozen sources
+
+- Official MLB pre-start schedule/game identity: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-08-03&hydrate=probablePitcher,lineups,team`
+- Official MLB game feed used only through the frozen pre-start snapshot: `https://statsapi.mlb.com/api/v1.1/game/825095/feed/live`
+- Michael King official MLB game log: `https://statsapi.mlb.com/api/v1/people/650633/stats?stats=gameLog&group=pitching&season=2026`
+- Brandon Pfaadt official MLB game log: `https://statsapi.mlb.com/api/v1/people/694297/stats?stats=gameLog&group=pitching&season=2026`
+- Padres official MLB completed-game schedule: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=135&startDate=2026-06-20&endDate=2026-08-02&hydrate=linescore`
+- Diamondbacks official MLB completed-game schedule: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=109&startDate=2026-06-20&endDate=2026-08-02&hydrate=linescore`
+- Local controls: `RULES_GENERAL.md`, `RULES_BASEBALL.md`, `AGENT_ROLE_AND_TASK.md`; P-011 and the Boston-Los Angeles retrospective.
+
+### Open-event index - UPDATE (2026-08-04T01:43:48Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-013 | `CLOSED` |
+| P-014 | `OPEN / PENDING` - frozen late-pregame card; live developments excluded |
+
+**One open record: P-014.** Earlier index tables remain immutable historical state; this newest index controls status.
+
+---
+
+## P-014 - SETTLEMENT (appended 2026-08-04T04:21:34Z)
+
+### Verified final and grading
+
+Official MLB gamePk 825095 records Arizona **5, San Diego 1**. Brandon Pfaadt allowed one unearned run across 6.2 innings; Juan Morillo and Brandyn Garcia completed 2.1 scoreless relief innings. Michael King allowed three earned runs in five innings, including Tim Tawa's three-run fourth-inning homer, and Wandy Peralta allowed two insurance runs in the eighth. `[MLB StatsAPI final feed, 2026-08-04T04:21:34Z, OPENED]`
+
+Source: `https://statsapi.mlb.com/api/v1.1/game/825095/feed/live`
+
+| Original rank | Original proposition | Original verdict | Result | Grade |
+|---:|---|---|---:|---|
+| 1 | Diamondbacks +1.5 | `PASS` (best available direction) | Arizona won 5-1 | WIN (historical abstention) |
+| 2 | Combined total Under 9.5 | `PASS` | 6 total runs | WIN (historical abstention) |
+| 3= | Padres +1.5 | `PASS` | San Diego lost by 4 | LOSS (historical abstention) |
+| 3= | Combined total Over 7.5 | `PASS / FORCED LOWER TIER` | 6 total runs | LOSS (historical abstention) |
+
+**Potential winner:** Arizona Diamondbacks weak directional lean - correct. It enters the winner-lean directional record.  
+**Formal selections:** none under the card's then-governing verdicts. The later mandatory-ranking directive is not applied retroactively.  
+**Complement trials:** none. The two +1.5 markets overlap on a one-run result and the total markets overlap at eight or nine; neither pair is an exact complement.  
+**Top-pick penalty:** not triggered; ordinal #1 won.
+
+### Retrospective
+
+1. **Identity and settlement:** correct MLB game, starters, venue and full-game contracts. Official final and pitcher lines resolve every row.
+2. **What went right:** the P-011 correction worked prospectively. Arizona +1.5 was supported by an outright-win branch built on Pfaadt, home position and the fresher relief configuration rather than by the non-discriminating raw 16/20 cover rate. Arizona won by four.
+3. **Decisive starter path:** Pfaadt delivered 6.2 innings, five hits, one unearned run, one walk and no home runs. King delivered five innings, three earned runs, four walks and one homer. The card's explicit King downside branch named a homer/command cluster and an exit near five innings; Tawa's three-run homer created the decisive margin and King stopped after exactly five.
+4. **Bullpen mechanism:** Arizona's forecasted cleaner bridge converted: Morillo and Garcia allowed no runs. San Diego's more-worked chain did not collapse immediately - Matsui and Estrada were scoreless - but Peralta allowed two eighth-inning insurance runs, turning a two-run deficit into a four-run final margin. Workload predicted availability/configuration, not automatic failure, consistent with the existing control.
+5. **Total stress test:** the Under survived the identified home-run cluster because it was the game's only major scoring burst and Pfaadt plus Arizona's bullpen suppressed San Diego. The Over 7.5 failure path - efficient Pfaadt innings followed by scoreless Arizona relief - occurred. The short-start/HR-tail correction was therefore applied correctly without automatically forcing an Over.
+6. **Padres cushion:** Padres +1.5 failed through its named multi-run-loss branch: King allowed the three-run homer and San Diego's late relief conceded insurance. This confirms why identical raw cushion rates were not independent evidence.
+7. **Data gaps and verdict:** the pre-start injury/H2H omissions correctly reduced the old card's actionability under the rules then in force, but the user's later 2026-08-04 directive now requires actual rankings with `FORCED RANK` rather than `PASS`. Historical text remains unchanged.
+8. **Classification:** correct selection ordering and mechanism; no identity, arithmetic, settlement or hindsight error. No new baseball rule is required. This is one prospective validation of the existing P-011 run-line decomposition and full-total downside-tail controls.
+
+### Running record - UPDATE (2026-08-04T04:21:34Z)
+
+| Measure | Count |
+|---|---:|
+| Records settled | 14 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 8 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+P-014 adds no formal market selection or exact-complement trial. Its potential-winner lean was correct.
+
+### Open-event index - UPDATE (2026-08-04T04:21:34Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-014 | `CLOSED` |
+
+
+**Dependence warning:** this is not a four-independent-pick card. A one-run finish cashes both +1.5 rows; a total of eight or nine cashes both total rows. Arizona +1.5 and the Arizona winner lean also share Pfaadt/bullpen mechanisms.  
+**Bottom line:** every row remains `PASS` because the mandatory injury/availability and complete H2H stack were not frozen before first pitch. If forced to choose one supplied direction, **Diamondbacks +1.5** is the least fragile; **Arizona** is the narrow potential winner. No numerical confidence or price edge is claimed.
+
+### Frozen sources
+
+- Official MLB pre-start schedule/game identity: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-08-03&hydrate=probablePitcher,lineups,team`
+- Official MLB game feed used only through the frozen pre-start snapshot: `https://statsapi.mlb.com/api/v1.1/game/825095/feed/live`
+- Michael King official MLB game log: `https://statsapi.mlb.com/api/v1/people/650633/stats?stats=gameLog&group=pitching&season=2026`
+- Brandon Pfaadt official MLB game log: `https://statsapi.mlb.com/api/v1/people/694297/stats?stats=gameLog&group=pitching&season=2026`
+- Padres official MLB completed-game schedule: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=135&startDate=2026-06-20&endDate=2026-08-02&hydrate=linescore`
+- Diamondbacks official MLB completed-game schedule: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=109&startDate=2026-06-20&endDate=2026-08-02&hydrate=linescore`
+- Local controls: `RULES_GENERAL.md`, `RULES_BASEBALL.md`, `AGENT_ROLE_AND_TASK.md`; P-011 and the Boston-Los Angeles retrospective.
+
+### Open-event index - UPDATE (2026-08-04T01:43:48Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-013 | `CLOSED` |
+| P-014 | `OPEN / PENDING` - frozen late-pregame card; live developments excluded |
+
+**One open record: P-014.** Earlier index tables remain immutable historical state; this newest index controls status.
+
+---
+
+## P-014 - SETTLEMENT (appended 2026-08-04T04:21:34Z)
+
+### Verified final and grading
+
+Official MLB gamePk 825095 records Arizona **5, San Diego 1**. Brandon Pfaadt allowed one unearned run across 6.2 innings; Juan Morillo and Brandyn Garcia completed 2.1 scoreless relief innings. Michael King allowed three earned runs in five innings, including Tim Tawa's three-run fourth-inning homer, and Wandy Peralta allowed two insurance runs in the eighth. `[MLB StatsAPI final feed, 2026-08-04T04:21:34Z, OPENED]`
+
+Source: `https://statsapi.mlb.com/api/v1.1/game/825095/feed/live`
+
+| Original rank | Original proposition | Original verdict | Result | Grade |
+|---:|---|---|---:|---|
+| 1 | Diamondbacks +1.5 | `PASS` (best available direction) | Arizona won 5-1 | WIN (historical abstention) |
+| 2 | Combined total Under 9.5 | `PASS` | 6 total runs | WIN (historical abstention) |
+| 3= | Padres +1.5 | `PASS` | San Diego lost by 4 | LOSS (historical abstention) |
+| 3= | Combined total Over 7.5 | `PASS / FORCED LOWER TIER` | 6 total runs | LOSS (historical abstention) |
+
+**Potential winner:** Arizona Diamondbacks weak directional lean - correct. It enters the winner-lean directional record.  
+**Formal selections:** none under the card's then-governing verdicts. The later mandatory-ranking directive is not applied retroactively.  
+**Complement trials:** none. The two +1.5 markets overlap on a one-run result and the total markets overlap at eight or nine; neither pair is an exact complement.  
+**Top-pick penalty:** not triggered; ordinal #1 won.
+
+### Retrospective
+
+1. **Identity and settlement:** correct MLB game, starters, venue and full-game contracts. Official final and pitcher lines resolve every row.
+2. **What went right:** the P-011 correction worked prospectively. Arizona +1.5 was supported by an outright-win branch built on Pfaadt, home position and the fresher relief configuration rather than by the non-discriminating raw 16/20 cover rate. Arizona won by four.
+3. **Decisive starter path:** Pfaadt delivered 6.2 innings, five hits, one unearned run, one walk and no home runs. King delivered five innings, three earned runs, four walks and one homer. The card's explicit King downside branch named a homer/command cluster and an exit near five innings; Tawa's three-run homer created the decisive margin and King stopped after exactly five.
+4. **Bullpen mechanism:** Arizona's forecasted cleaner bridge converted: Morillo and Garcia allowed no runs. San Diego's more-worked chain did not collapse immediately - Matsui and Estrada were scoreless - but Peralta allowed two eighth-inning insurance runs, turning a two-run deficit into a four-run final margin. Workload predicted availability/configuration, not automatic failure, consistent with the existing control.
+5. **Total stress test:** the Under survived the identified home-run cluster because it was the game's only major scoring burst and Pfaadt plus Arizona's bullpen suppressed San Diego. The Over 7.5 failure path - efficient Pfaadt innings followed by scoreless Arizona relief - occurred. The short-start/HR-tail correction was therefore applied correctly without automatically forcing an Over.
+6. **Padres cushion:** Padres +1.5 failed through its named multi-run-loss branch: King allowed the three-run homer and San Diego's late relief conceded insurance. This confirms why identical raw cushion rates were not independent evidence.
+7. **Data gaps and verdict:** the pre-start injury/H2H omissions correctly reduced the old card's actionability under the rules then in force, but the user's later 2026-08-04 directive now requires actual rankings with `FORCED RANK` rather than `PASS`. Historical text remains unchanged.
+8. **Classification:** correct selection ordering and mechanism; no identity, arithmetic, settlement or hindsight error. No new baseball rule is required. This is one prospective validation of the existing P-011 run-line decomposition and full-total downside-tail controls.
+
+### Running record - UPDATE (2026-08-04T04:21:34Z)
+
+| Measure | Count |
+|---|---:|
+| Records settled | 14 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 8 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+P-014 adds no formal market selection or exact-complement trial. Its potential-winner lean was correct.
+
+### Open-event index - UPDATE (2026-08-04T04:21:34Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-014 | `CLOSED` |
+
+**No open records remain.** Earlier P-014 pending text remains immutable historical evidence; this newest index controls status.
+
+**Bottom line:** every row remains `PASS` because the mandatory injury/availability and complete H2H stack were not frozen before first pitch. If forced to choose one supplied direction, **Diamondbacks +1.5** is the least fragile; **Arizona** is the narrow potential winner. No numerical confidence or price edge is claimed.
+
+### Frozen sources
+
+- Official MLB pre-start schedule/game identity: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-08-03&hydrate=probablePitcher,lineups,team`
+- Official MLB game feed used only through the frozen pre-start snapshot: `https://statsapi.mlb.com/api/v1.1/game/825095/feed/live`
+- Michael King official MLB game log: `https://statsapi.mlb.com/api/v1/people/650633/stats?stats=gameLog&group=pitching&season=2026`
+- Brandon Pfaadt official MLB game log: `https://statsapi.mlb.com/api/v1/people/694297/stats?stats=gameLog&group=pitching&season=2026`
+- Padres official MLB completed-game schedule: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=135&startDate=2026-06-20&endDate=2026-08-02&hydrate=linescore`
+- Diamondbacks official MLB completed-game schedule: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=109&startDate=2026-06-20&endDate=2026-08-02&hydrate=linescore`
+- Local controls: `RULES_GENERAL.md`, `RULES_BASEBALL.md`, `AGENT_ROLE_AND_TASK.md`; P-011 and the Boston-Los Angeles retrospective.
+
+### Open-event index - UPDATE (2026-08-04T01:43:48Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-013 | `CLOSED` |
+| P-014 | `OPEN / PENDING` - frozen late-pregame card; live developments excluded |
+
+**One open record: P-014.** Earlier index tables remain immutable historical state; this newest index controls status.
+
+---
+
+## P-014 - SETTLEMENT (appended 2026-08-04T04:21:34Z)
+
+### Verified final and grading
+
+Official MLB gamePk 825095 records Arizona **5, San Diego 1**. Brandon Pfaadt allowed one unearned run across 6.2 innings; Juan Morillo and Brandyn Garcia completed 2.1 scoreless relief innings. Michael King allowed three earned runs in five innings, including Tim Tawa's three-run fourth-inning homer, and Wandy Peralta allowed two insurance runs in the eighth. `[MLB StatsAPI final feed, 2026-08-04T04:21:34Z, OPENED]`
+
+Source: `https://statsapi.mlb.com/api/v1.1/game/825095/feed/live`
+
+| Original rank | Original proposition | Original verdict | Result | Grade |
+|---:|---|---|---:|---|
+| 1 | Diamondbacks +1.5 | `PASS` (best available direction) | Arizona won 5-1 | WIN (historical abstention) |
+| 2 | Combined total Under 9.5 | `PASS` | 6 total runs | WIN (historical abstention) |
+| 3= | Padres +1.5 | `PASS` | San Diego lost by 4 | LOSS (historical abstention) |
+| 3= | Combined total Over 7.5 | `PASS / FORCED LOWER TIER` | 6 total runs | LOSS (historical abstention) |
+
+**Potential winner:** Arizona Diamondbacks weak directional lean - correct. It enters the winner-lean directional record.  
+**Formal selections:** none under the card's then-governing verdicts. The later mandatory-ranking directive is not applied retroactively.  
+**Complement trials:** none. The two +1.5 markets overlap on a one-run result and the total markets overlap at eight or nine; neither pair is an exact complement.  
+**Top-pick penalty:** not triggered; ordinal #1 won.
+
+### Retrospective
+
+1. **Identity and settlement:** correct MLB game, starters, venue and full-game contracts. Official final and pitcher lines resolve every row.
+2. **What went right:** the P-011 correction worked prospectively. Arizona +1.5 was supported by an outright-win branch built on Pfaadt, home position and the fresher relief configuration rather than by the non-discriminating raw 16/20 cover rate. Arizona won by four.
+3. **Decisive starter path:** Pfaadt delivered 6.2 innings, five hits, one unearned run, one walk and no home runs. King delivered five innings, three earned runs, four walks and one homer. The card's explicit King downside branch named a homer/command cluster and an exit near five innings; Tawa's three-run homer created the decisive margin and King stopped after exactly five.
+4. **Bullpen mechanism:** Arizona's forecasted cleaner bridge converted: Morillo and Garcia allowed no runs. San Diego's more-worked chain did not collapse immediately - Matsui and Estrada were scoreless - but Peralta allowed two eighth-inning insurance runs, turning a two-run deficit into a four-run final margin. Workload predicted availability/configuration, not automatic failure, consistent with the existing control.
+5. **Total stress test:** the Under survived the identified home-run cluster because it was the game's only major scoring burst and Pfaadt plus Arizona's bullpen suppressed San Diego. The Over 7.5 failure path - efficient Pfaadt innings followed by scoreless Arizona relief - occurred. The short-start/HR-tail correction was therefore applied correctly without automatically forcing an Over.
+6. **Padres cushion:** Padres +1.5 failed through its named multi-run-loss branch: King allowed the three-run homer and San Diego's late relief conceded insurance. This confirms why identical raw cushion rates were not independent evidence.
+7. **Data gaps and verdict:** the pre-start injury/H2H omissions correctly reduced the old card's actionability under the rules then in force, but the user's later 2026-08-04 directive now requires actual rankings with `FORCED RANK` rather than `PASS`. Historical text remains unchanged.
+8. **Classification:** correct selection ordering and mechanism; no identity, arithmetic, settlement or hindsight error. No new baseball rule is required. This is one prospective validation of the existing P-011 run-line decomposition and full-total downside-tail controls.
+
+### Running record - UPDATE (2026-08-04T04:21:34Z)
+
+| Measure | Count |
+|---|---:|
+| Records settled | 14 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 8 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+P-014 adds no formal market selection or exact-complement trial. Its potential-winner lean was correct.
+
+### Open-event index - UPDATE (2026-08-04T04:21:34Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-014 | `CLOSED` |
+
+**No open records remain.** Earlier P-014 pending text remains immutable historical evidence; this newest index controls status.
+
+
+
+### Frozen sources
+
+- Official MLB pre-start schedule/game identity: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-08-03&hydrate=probablePitcher,lineups,team`
+- Official MLB game feed used only through the frozen pre-start snapshot: `https://statsapi.mlb.com/api/v1.1/game/825095/feed/live`
+- Michael King official MLB game log: `https://statsapi.mlb.com/api/v1/people/650633/stats?stats=gameLog&group=pitching&season=2026`
+- Brandon Pfaadt official MLB game log: `https://statsapi.mlb.com/api/v1/people/694297/stats?stats=gameLog&group=pitching&season=2026`
+- Padres official MLB completed-game schedule: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=135&startDate=2026-06-20&endDate=2026-08-02&hydrate=linescore`
+- Diamondbacks official MLB completed-game schedule: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=109&startDate=2026-06-20&endDate=2026-08-02&hydrate=linescore`
+- Local controls: `RULES_GENERAL.md`, `RULES_BASEBALL.md`, `AGENT_ROLE_AND_TASK.md`; P-011 and the Boston-Los Angeles retrospective.
+
+### Open-event index - UPDATE (2026-08-04T01:43:48Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-013 | `CLOSED` |
+| P-014 | `OPEN / PENDING` - frozen late-pregame card; live developments excluded |
+
+**One open record: P-014.** Earlier index tables remain immutable historical state; this newest index controls status.
+
+---
+
+## P-014 - SETTLEMENT (appended 2026-08-04T04:21:34Z)
+
+### Verified final and grading
+
+Official MLB gamePk 825095 records Arizona **5, San Diego 1**. Brandon Pfaadt allowed one unearned run across 6.2 innings; Juan Morillo and Brandyn Garcia completed 2.1 scoreless relief innings. Michael King allowed three earned runs in five innings, including Tim Tawa's three-run fourth-inning homer, and Wandy Peralta allowed two insurance runs in the eighth. `[MLB StatsAPI final feed, 2026-08-04T04:21:34Z, OPENED]`
+
+Source: `https://statsapi.mlb.com/api/v1.1/game/825095/feed/live`
+
+| Original rank | Original proposition | Original verdict | Result | Grade |
+|---:|---|---|---:|---|
+| 1 | Diamondbacks +1.5 | `PASS` (best available direction) | Arizona won 5-1 | WIN (historical abstention) |
+| 2 | Combined total Under 9.5 | `PASS` | 6 total runs | WIN (historical abstention) |
+| 3= | Padres +1.5 | `PASS` | San Diego lost by 4 | LOSS (historical abstention) |
+| 3= | Combined total Over 7.5 | `PASS / FORCED LOWER TIER` | 6 total runs | LOSS (historical abstention) |
+
+**Potential winner:** Arizona Diamondbacks weak directional lean - correct. It enters the winner-lean directional record.  
+**Formal selections:** none under the card's then-governing verdicts. The later mandatory-ranking directive is not applied retroactively.  
+**Complement trials:** none. The two +1.5 markets overlap on a one-run result and the total markets overlap at eight or nine; neither pair is an exact complement.  
+**Top-pick penalty:** not triggered; ordinal #1 won.
+
+### Retrospective
+
+1. **Identity and settlement:** correct MLB game, starters, venue and full-game contracts. Official final and pitcher lines resolve every row.
+2. **What went right:** the P-011 correction worked prospectively. Arizona +1.5 was supported by an outright-win branch built on Pfaadt, home position and the fresher relief configuration rather than by the non-discriminating raw 16/20 cover rate. Arizona won by four.
+3. **Decisive starter path:** Pfaadt delivered 6.2 innings, five hits, one unearned run, one walk and no home runs. King delivered five innings, three earned runs, four walks and one homer. The card's explicit King downside branch named a homer/command cluster and an exit near five innings; Tawa's three-run homer created the decisive margin and King stopped after exactly five.
+4. **Bullpen mechanism:** Arizona's forecasted cleaner bridge converted: Morillo and Garcia allowed no runs. San Diego's more-worked chain did not collapse immediately - Matsui and Estrada were scoreless - but Peralta allowed two eighth-inning insurance runs, turning a two-run deficit into a four-run final margin. Workload predicted availability/configuration, not automatic failure, consistent with the existing control.
+5. **Total stress test:** the Under survived the identified home-run cluster because it was the game's only major scoring burst and Pfaadt plus Arizona's bullpen suppressed San Diego. The Over 7.5 failure path - efficient Pfaadt innings followed by scoreless Arizona relief - occurred. The short-start/HR-tail correction was therefore applied correctly without automatically forcing an Over.
+6. **Padres cushion:** Padres +1.5 failed through its named multi-run-loss branch: King allowed the three-run homer and San Diego's late relief conceded insurance. This confirms why identical raw cushion rates were not independent evidence.
+7. **Data gaps and verdict:** the pre-start injury/H2H omissions correctly reduced the old card's actionability under the rules then in force, but the user's later 2026-08-04 directive now requires actual rankings with `FORCED RANK` rather than `PASS`. Historical text remains unchanged.
+8. **Classification:** correct selection ordering and mechanism; no identity, arithmetic, settlement or hindsight error. No new baseball rule is required. This is one prospective validation of the existing P-011 run-line decomposition and full-total downside-tail controls.
+
+### Running record - UPDATE (2026-08-04T04:21:34Z)
+
+| Measure | Count |
+|---|---:|
+| Records settled | 14 |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 15 |
+| Formal selections graded incorrect | 14 |
+| Winner picks/leans correct | 8 |
+| Winner picks/leans incorrect | 5 |
+| Higher-ranked branch of complementary pairs correct | 7 of 19 |
+| Records `NOT GRADED` | 1 |
+
+P-014 adds no formal market selection or exact-complement trial. Its potential-winner lean was correct.
+
+### Open-event index - UPDATE (2026-08-04T04:21:34Z)
+
+| ID range | Status |
+|---|---|
+| P-001 through P-014 | `CLOSED` |
+
+**No open records remain.** Earlier P-014 pending text remains immutable historical evidence; this newest index controls status.
+
+---

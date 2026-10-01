@@ -1,0 +1,307 @@
+
+1. Apply a knockout-regulation modifier before using league/H2H first-half frequencies.
+2. When one team's recent full-match state is strongly low-event, do not allow the opponent's volatile Over history to dominate all goal derivatives.
+3. Keep team-goal and corner targets independent; this card demonstrates that Dalian O0.5 and corners O8.5 can win while 1H Over, BTTS and full Over all lose.
+4. A more evidence-balanced order was **Dalian team O0.5 / corners O8.5 / 1H O0.5 / BTTS Yes / O2.5**, with Shanghai regulation winner only a low-confidence lean.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/dalian-yingbo-fc-shanghai-shenhua/yrbsRZOd); [BeSoccer match statistics](https://www.besoccer.com/match/dalian-zhixing/shanghai-shenhua/2026345784).
+
+## P-235 settlement — Shandong Taishan vs Shanghai Port
+
+Verified outcome: **Shandong 0, Shanghai Port 3; halftime 0-2; goals in the 18th, 22nd and 79th minutes; 14 corners.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **WIN** |
+| 2 | Shanghai Port team goals Over 0.5 | **WIN** |
+| 3 | BTTS — Yes | **LOSS** |
+| 4 | Total goals Over 2.5 | **WIN** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Shandong | **LOSS** |
+
+What went right: Port's team-goal line, first-half goal signal, full Over and corner volume all captured the visitors' attacking control. Two early Port goals made the phase read decisive; a third completed the Over.
+
+What went wrong: BTTS assumed Shandong would contribute, but Port's clean sheet created a one-sided Over. The Shandong winner call was especially incoherent with a high-ranked Port team-goal and high-event game view. Port scoring was not merely compatible with a Shandong win; it was evidence against it once combined with Shandong's vulnerability.
+
+Learning: add a winner/derivative coherence audit. A team-goal Over plus opponent defensive concerns should move the scoring team upward in winner probability unless the home side has a clearly larger scoring projection.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/shanghai-port-shandong-taishan/wrbsMFq); [Scoremer event timeline](https://www.scoremer.com/match_live/1636436).
+
+## P-236 settlement and deep rank-#1 retrospective — England Women vs Ireland Women, 1st ODI
+
+Verified outcome: **Ireland 23/1 after 5 overs and 281/5 after 50; England 283/4 in 38.1 and won by six wickets.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Ireland after 5 Under 20.5 | **LOSS** |
+| 2 | Ireland innings Over 218.5 | **WIN** |
+| 3 | Ireland innings Under 218.5 | **LOSS** |
+| 4 | Ireland after 5 Over 20.5 | **WIN** |
+| — | Potential winner: England | **WIN** |
+
+What went right: the innings-total analysis correctly placed 218.5 below Ireland's recent batting-first centre. Ireland's Lewis/Hunter/Prendergast core and England's understrength attack supported a recovery/acceleration route, and Ireland went well beyond the line at 281/5. England's depth and chase advantage supported the winner call.
+
+Why the “most likely” pick failed: the 5-over Under had weak exact-sample support and a very tight threshold—21 runs from 30 balls. Ireland were 13/0 after four; Issy Wong then produced a costly fifth over containing four wides plus a boundary, and the score reached 23/1. The prediction correctly named extras and one expensive over as the kill path, but still ranked the Under first with only medium-low evidence.
+
+This is a calibration/ranking error more than a research omission. The log admitted that an L5/L10 exact phase sample could not be reconstructed and set a central corridor of 17–24, which straddled both sides of 20.5. A pick whose own central corridor crosses the line and whose evidence is medium-low should not be called the strongest selection ahead of the better-supported innings Over.
+
+Required improvement:
+
+1. A phase pick cannot rank #1 when the central interval spans both sides of the line unless one side has materially greater modeled mass.
+2. Add an extras-risk term for new/understrength bowling attacks; wides count fully toward phase totals and can invalidate otherwise sound-ball suppression.
+3. Prefer the higher-evidence innings target when the phase sample is sparse. Here **Ireland innings Over 218.5** should have ranked first.
+4. Preserve the valuable phase/innings distinction: the quick fifth over did not cause England to lose; Ireland's 281 and England's successful chase were separate resource questions.
+
+Sources: [CricketWorld scorecard](https://www.cricketworld.com/cricket/england-women-vs-ireland-women/match/scorecard/95250); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/england-women-vs-ireland-women/match/commentary/95250); [Guardian match report](https://www.theguardian.com/sport/2026/sep/01/maia-bouchier-powers-england-to-record-odi-run-chase-against-ireland).
+
+## P-237 settlement and deep rank-#1 retrospective — South Africa vs Zimbabwe
+
+Verified outcome: **South Africa 59/0 after 6 and 185/7 after 20; Zimbabwe 142; South Africa won by 43 runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | South Africa innings Under 184.5 | **LOSS** |
+| 2 | South Africa after 6 Under 54.5 | **LOSS** |
+| 3 | South Africa after 6 Over 54.5 | **WIN** |
+| 4 | South Africa innings Over 184.5 | **WIN** |
+| — | Potential winner: South Africa | **WIN** |
+
+What went right: the winner call was strong. South Africa's batting ceiling, rest advantage and Zimbabwe's recent run-prevention volatility were correctly identified. The card also documented the decisive direct evidence: the same batting group had made 61 in the powerplay against the same opponent at the same venue three days earlier.
+
+Why the “most likely” pick failed: Under 184.5 lost by only **0.5 run**, but the closeness of the grade does not excuse the ranking. The line was just 2.5 runs below a recent South Africa 187 and the venue had just produced 195 and 190. Zimbabwe had less than 24 hours' recovery, and South Africa batted first—the exposure state most dangerous to an innings Under. After a 59/0 powerplay, the full resource ceiling was high. South Africa reached 154/1 after 15.1 overs and still finished 185 despite a late collapse to 185/7.
+
+Why rank #2 failed: recent aggregate powerplays (5/6 Under) were allowed to outweigh the most comparable observation: 61 against this exact attack at this exact venue. That is a source-weighting error. Direct opponent/venue/role continuity should outrank a six-match cross-opponent mean when the current bowling fatigue state is also worse.
+
+The result links to the prior cricket lesson: wicket resources matter as much as run rate. At 59/0, South Africa had all ten wickets intact, which made sustained acceleration possible. The late wickets nearly rescued the Under but did not erase the earlier resource advantage.
+
+
+1. Apply a knockout-regulation modifier before using league/H2H first-half frequencies.
+2. When one team's recent full-match state is strongly low-event, do not allow the opponent's volatile Over history to dominate all goal derivatives.
+3. Keep team-goal and corner targets independent; this card demonstrates that Dalian O0.5 and corners O8.5 can win while 1H Over, BTTS and full Over all lose.
+4. A more evidence-balanced order was **Dalian team O0.5 / corners O8.5 / 1H O0.5 / BTTS Yes / O2.5**, with Shanghai regulation winner only a low-confidence lean.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/dalian-yingbo-fc-shanghai-shenhua/yrbsRZOd); [BeSoccer match statistics](https://www.besoccer.com/match/dalian-zhixing/shanghai-shenhua/2026345784).
+
+## P-235 settlement — Shandong Taishan vs Shanghai Port
+
+Verified outcome: **Shandong 0, Shanghai Port 3; halftime 0-2; goals in the 18th, 22nd and 79th minutes; 14 corners.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **WIN** |
+| 2 | Shanghai Port team goals Over 0.5 | **WIN** |
+| 3 | BTTS — Yes | **LOSS** |
+| 4 | Total goals Over 2.5 | **WIN** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Shandong | **LOSS** |
+
+What went right: Port's team-goal line, first-half goal signal, full Over and corner volume all captured the visitors' attacking control. Two early Port goals made the phase read decisive; a third completed the Over.
+
+What went wrong: BTTS assumed Shandong would contribute, but Port's clean sheet created a one-sided Over. The Shandong winner call was especially incoherent with a high-ranked Port team-goal and high-event game view. Port scoring was not merely compatible with a Shandong win; it was evidence against it once combined with Shandong's vulnerability.
+
+Learning: add a winner/derivative coherence audit. A team-goal Over plus opponent defensive concerns should move the scoring team upward in winner probability unless the home side has a clearly larger scoring projection.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/shanghai-port-shandong-taishan/wrbsMFq); [Scoremer event timeline](https://www.scoremer.com/match_live/1636436).
+
+## P-236 settlement and deep rank-#1 retrospective — England Women vs Ireland Women, 1st ODI
+
+Verified outcome: **Ireland 23/1 after 5 overs and 281/5 after 50; England 283/4 in 38.1 and won by six wickets.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Ireland after 5 Under 20.5 | **LOSS** |
+| 2 | Ireland innings Over 218.5 | **WIN** |
+| 3 | Ireland innings Under 218.5 | **LOSS** |
+| 4 | Ireland after 5 Over 20.5 | **WIN** |
+| — | Potential winner: England | **WIN** |
+
+What went right: the innings-total analysis correctly placed 218.5 below Ireland's recent batting-first centre. Ireland's Lewis/Hunter/Prendergast core and England's understrength attack supported a recovery/acceleration route, and Ireland went well beyond the line at 281/5. England's depth and chase advantage supported the winner call.
+
+Why the “most likely” pick failed: the 5-over Under had weak exact-sample support and a very tight threshold—21 runs from 30 balls. Ireland were 13/0 after four; Issy Wong then produced a costly fifth over containing four wides plus a boundary, and the score reached 23/1. The prediction correctly named extras and one expensive over as the kill path, but still ranked the Under first with only medium-low evidence.
+
+This is a calibration/ranking error more than a research omission. The log admitted that an L5/L10 exact phase sample could not be reconstructed and set a central corridor of 17–24, which straddled both sides of 20.5. A pick whose own central corridor crosses the line and whose evidence is medium-low should not be called the strongest selection ahead of the better-supported innings Over.
+
+Required improvement:
+
+1. A phase pick cannot rank #1 when the central interval spans both sides of the line unless one side has materially greater modeled mass.
+2. Add an extras-risk term for new/understrength bowling attacks; wides count fully toward phase totals and can invalidate otherwise sound-ball suppression.
+3. Prefer the higher-evidence innings target when the phase sample is sparse. Here **Ireland innings Over 218.5** should have ranked first.
+4. Preserve the valuable phase/innings distinction: the quick fifth over did not cause England to lose; Ireland's 281 and England's successful chase were separate resource questions.
+
+Sources: [CricketWorld scorecard](https://www.cricketworld.com/cricket/england-women-vs-ireland-women/match/scorecard/95250); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/england-women-vs-ireland-women/match/commentary/95250); [Guardian match report](https://www.theguardian.com/sport/2026/sep/01/maia-bouchier-powers-england-to-record-odi-run-chase-against-ireland).
+
+## P-237 settlement and deep rank-#1 retrospective — South Africa vs Zimbabwe
+
+Verified outcome: **South Africa 59/0 after 6 and 185/7 after 20; Zimbabwe 142; South Africa won by 43 runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | South Africa innings Under 184.5 | **LOSS** |
+| 2 | South Africa after 6 Under 54.5 | **LOSS** |
+| 3 | South Africa after 6 Over 54.5 | **WIN** |
+| 4 | South Africa innings Over 184.5 | **WIN** |
+| — | Potential winner: South Africa | **WIN** |
+
+What went right: the winner call was strong. South Africa's batting ceiling, rest advantage and Zimbabwe's recent run-prevention volatility were correctly identified. The card also documented the decisive direct evidence: the same batting group had made 61 in the powerplay against the same opponent at the same venue three days earlier.
+
+Why the “most likely” pick failed: Under 184.5 lost by only **0.5 run**, but the closeness of the grade does not excuse the ranking. The line was just 2.5 runs below a recent South Africa 187 and the venue had just produced 195 and 190. Zimbabwe had less than 24 hours' recovery, and South Africa batted first—the exposure state most dangerous to an innings Under. After a 59/0 powerplay, the full resource ceiling was high. South Africa reached 154/1 after 15.1 overs and still finished 185 despite a late collapse to 185/7.
+
+Why rank #2 failed: recent aggregate powerplays (5/6 Under) were allowed to outweigh the most comparable observation: 61 against this exact attack at this exact venue. That is a source-weighting error. Direct opponent/venue/role continuity should outrank a six-match cross-opponent mean when the current bowling fatigue state is also worse.
+
+The result links to the prior cricket lesson: wicket resources matter as much as run rate. At 59/0, South Africa had all ten wickets intact, which made sustained acceleration possible. The late wickets nearly rescued the Under but did not erase the earlier resource advantage.
+
+Required improvement:
+
+2. When one team's recent full-match state is strongly low-event, do not allow the opponent's volatile Over history to dominate all goal derivatives.
+3. Keep team-goal and corner targets independent; this card demonstrates that Dalian O0.5 and corners O8.5 can win while 1H Over, BTTS and full Over all lose.
+4. A more evidence-balanced order was **Dalian team O0.5 / corners O8.5 / 1H O0.5 / BTTS Yes / O2.5**, with Shanghai regulation winner only a low-confidence lean.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/dalian-yingbo-fc-shanghai-shenhua/yrbsRZOd); [BeSoccer match statistics](https://www.besoccer.com/match/dalian-zhixing/shanghai-shenhua/2026345784).
+
+## P-235 settlement — Shandong Taishan vs Shanghai Port
+
+Verified outcome: **Shandong 0, Shanghai Port 3; halftime 0-2; goals in the 18th, 22nd and 79th minutes; 14 corners.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **WIN** |
+| 2 | Shanghai Port team goals Over 0.5 | **WIN** |
+| 3 | BTTS — Yes | **LOSS** |
+| 4 | Total goals Over 2.5 | **WIN** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Shandong | **LOSS** |
+
+What went right: Port's team-goal line, first-half goal signal, full Over and corner volume all captured the visitors' attacking control. Two early Port goals made the phase read decisive; a third completed the Over.
+
+What went wrong: BTTS assumed Shandong would contribute, but Port's clean sheet created a one-sided Over. The Shandong winner call was especially incoherent with a high-ranked Port team-goal and high-event game view. Port scoring was not merely compatible with a Shandong win; it was evidence against it once combined with Shandong's vulnerability.
+
+Learning: add a winner/derivative coherence audit. A team-goal Over plus opponent defensive concerns should move the scoring team upward in winner probability unless the home side has a clearly larger scoring projection.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/shanghai-port-shandong-taishan/wrbsMFq); [Scoremer event timeline](https://www.scoremer.com/match_live/1636436).
+
+## P-236 settlement and deep rank-#1 retrospective — England Women vs Ireland Women, 1st ODI
+
+Verified outcome: **Ireland 23/1 after 5 overs and 281/5 after 50; England 283/4 in 38.1 and won by six wickets.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Ireland after 5 Under 20.5 | **LOSS** |
+| 2 | Ireland innings Over 218.5 | **WIN** |
+| 3 | Ireland innings Under 218.5 | **LOSS** |
+| 4 | Ireland after 5 Over 20.5 | **WIN** |
+| — | Potential winner: England | **WIN** |
+
+What went right: the innings-total analysis correctly placed 218.5 below Ireland's recent batting-first centre. Ireland's Lewis/Hunter/Prendergast core and England's understrength attack supported a recovery/acceleration route, and Ireland went well beyond the line at 281/5. England's depth and chase advantage supported the winner call.
+
+Why the “most likely” pick failed: the 5-over Under had weak exact-sample support and a very tight threshold—21 runs from 30 balls. Ireland were 13/0 after four; Issy Wong then produced a costly fifth over containing four wides plus a boundary, and the score reached 23/1. The prediction correctly named extras and one expensive over as the kill path, but still ranked the Under first with only medium-low evidence.
+
+This is a calibration/ranking error more than a research omission. The log admitted that an L5/L10 exact phase sample could not be reconstructed and set a central corridor of 17–24, which straddled both sides of 20.5. A pick whose own central corridor crosses the line and whose evidence is medium-low should not be called the strongest selection ahead of the better-supported innings Over.
+
+Required improvement:
+
+1. A phase pick cannot rank #1 when the central interval spans both sides of the line unless one side has materially greater modeled mass.
+2. Add an extras-risk term for new/understrength bowling attacks; wides count fully toward phase totals and can invalidate otherwise sound-ball suppression.
+3. Prefer the higher-evidence innings target when the phase sample is sparse. Here **Ireland innings Over 218.5** should have ranked first.
+4. Preserve the valuable phase/innings distinction: the quick fifth over did not cause England to lose; Ireland's 281 and England's successful chase were separate resource questions.
+
+Sources: [CricketWorld scorecard](https://www.cricketworld.com/cricket/england-women-vs-ireland-women/match/scorecard/95250); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/england-women-vs-ireland-women/match/commentary/95250); [Guardian match report](https://www.theguardian.com/sport/2026/sep/01/maia-bouchier-powers-england-to-record-odi-run-chase-against-ireland).
+
+## P-237 settlement and deep rank-#1 retrospective — South Africa vs Zimbabwe
+
+Verified outcome: **South Africa 59/0 after 6 and 185/7 after 20; Zimbabwe 142; South Africa won by 43 runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | South Africa innings Under 184.5 | **LOSS** |
+| 2 | South Africa after 6 Under 54.5 | **LOSS** |
+| 3 | South Africa after 6 Over 54.5 | **WIN** |
+| 4 | South Africa innings Over 184.5 | **WIN** |
+| — | Potential winner: South Africa | **WIN** |
+
+What went right: the winner call was strong. South Africa's batting ceiling, rest advantage and Zimbabwe's recent run-prevention volatility were correctly identified. The card also documented the decisive direct evidence: the same batting group had made 61 in the powerplay against the same opponent at the same venue three days earlier.
+
+Why the “most likely” pick failed: Under 184.5 lost by only **0.5 run**, but the closeness of the grade does not excuse the ranking. The line was just 2.5 runs below a recent South Africa 187 and the venue had just produced 195 and 190. Zimbabwe had less than 24 hours' recovery, and South Africa batted first—the exposure state most dangerous to an innings Under. After a 59/0 powerplay, the full resource ceiling was high. South Africa reached 154/1 after 15.1 overs and still finished 185 despite a late collapse to 185/7.
+
+Why rank #2 failed: recent aggregate powerplays (5/6 Under) were allowed to outweigh the most comparable observation: 61 against this exact attack at this exact venue. That is a source-weighting error. Direct opponent/venue/role continuity should outrank a six-match cross-opponent mean when the current bowling fatigue state is also worse.
+
+The result links to the prior cricket lesson: wicket resources matter as much as run rate. At 59/0, South Africa had all ten wickets intact, which made sustained acceleration possible. The late wickets nearly rescued the Under but did not erase the earlier resource advantage.
+
+Required improvement:
+
+
+3. Keep team-goal and corner targets independent; this card demonstrates that Dalian O0.5 and corners O8.5 can win while 1H Over, BTTS and full Over all lose.
+4. A more evidence-balanced order was **Dalian team O0.5 / corners O8.5 / 1H O0.5 / BTTS Yes / O2.5**, with Shanghai regulation winner only a low-confidence lean.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/dalian-yingbo-fc-shanghai-shenhua/yrbsRZOd); [BeSoccer match statistics](https://www.besoccer.com/match/dalian-zhixing/shanghai-shenhua/2026345784).
+
+## P-235 settlement — Shandong Taishan vs Shanghai Port
+
+Verified outcome: **Shandong 0, Shanghai Port 3; halftime 0-2; goals in the 18th, 22nd and 79th minutes; 14 corners.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | 1st-half Over 0.5 goals | **WIN** |
+| 2 | Shanghai Port team goals Over 0.5 | **WIN** |
+| 3 | BTTS — Yes | **LOSS** |
+| 4 | Total goals Over 2.5 | **WIN** |
+| 5 | Corners Over 8.5 | **WIN** |
+| — | Potential winner: Shandong | **LOSS** |
+
+What went right: Port's team-goal line, first-half goal signal, full Over and corner volume all captured the visitors' attacking control. Two early Port goals made the phase read decisive; a third completed the Over.
+
+What went wrong: BTTS assumed Shandong would contribute, but Port's clean sheet created a one-sided Over. The Shandong winner call was especially incoherent with a high-ranked Port team-goal and high-event game view. Port scoring was not merely compatible with a Shandong win; it was evidence against it once combined with Shandong's vulnerability.
+
+Learning: add a winner/derivative coherence audit. A team-goal Over plus opponent defensive concerns should move the scoring team upward in winner probability unless the home side has a clearly larger scoring projection.
+
+Sources: [Sofascore event page](https://www.sofascore.com/football/match/shanghai-port-shandong-taishan/wrbsMFq); [Scoremer event timeline](https://www.scoremer.com/match_live/1636436).
+
+## P-236 settlement and deep rank-#1 retrospective — England Women vs Ireland Women, 1st ODI
+
+Verified outcome: **Ireland 23/1 after 5 overs and 281/5 after 50; England 283/4 in 38.1 and won by six wickets.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Ireland after 5 Under 20.5 | **LOSS** |
+| 2 | Ireland innings Over 218.5 | **WIN** |
+| 3 | Ireland innings Under 218.5 | **LOSS** |
+| 4 | Ireland after 5 Over 20.5 | **WIN** |
+| — | Potential winner: England | **WIN** |
+
+What went right: the innings-total analysis correctly placed 218.5 below Ireland's recent batting-first centre. Ireland's Lewis/Hunter/Prendergast core and England's understrength attack supported a recovery/acceleration route, and Ireland went well beyond the line at 281/5. England's depth and chase advantage supported the winner call.
+
+Why the “most likely” pick failed: the 5-over Under had weak exact-sample support and a very tight threshold—21 runs from 30 balls. Ireland were 13/0 after four; Issy Wong then produced a costly fifth over containing four wides plus a boundary, and the score reached 23/1. The prediction correctly named extras and one expensive over as the kill path, but still ranked the Under first with only medium-low evidence.
+
+This is a calibration/ranking error more than a research omission. The log admitted that an L5/L10 exact phase sample could not be reconstructed and set a central corridor of 17–24, which straddled both sides of 20.5. A pick whose own central corridor crosses the line and whose evidence is medium-low should not be called the strongest selection ahead of the better-supported innings Over.
+
+Required improvement:
+
+1. A phase pick cannot rank #1 when the central interval spans both sides of the line unless one side has materially greater modeled mass.
+2. Add an extras-risk term for new/understrength bowling attacks; wides count fully toward phase totals and can invalidate otherwise sound-ball suppression.
+3. Prefer the higher-evidence innings target when the phase sample is sparse. Here **Ireland innings Over 218.5** should have ranked first.
+4. Preserve the valuable phase/innings distinction: the quick fifth over did not cause England to lose; Ireland's 281 and England's successful chase were separate resource questions.
+
+Sources: [CricketWorld scorecard](https://www.cricketworld.com/cricket/england-women-vs-ireland-women/match/scorecard/95250); [CricketWorld ball-by-ball](https://www.cricketworld.com/cricket/england-women-vs-ireland-women/match/commentary/95250); [Guardian match report](https://www.theguardian.com/sport/2026/sep/01/maia-bouchier-powers-england-to-record-odi-run-chase-against-ireland).
+
+## P-237 settlement and deep rank-#1 retrospective — South Africa vs Zimbabwe
+
+Verified outcome: **South Africa 59/0 after 6 and 185/7 after 20; Zimbabwe 142; South Africa won by 43 runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | South Africa innings Under 184.5 | **LOSS** |
+| 2 | South Africa after 6 Under 54.5 | **LOSS** |
+| 3 | South Africa after 6 Over 54.5 | **WIN** |
+| 4 | South Africa innings Over 184.5 | **WIN** |
+| — | Potential winner: South Africa | **WIN** |
+
+What went right: the winner call was strong. South Africa's batting ceiling, rest advantage and Zimbabwe's recent run-prevention volatility were correctly identified. The card also documented the decisive direct evidence: the same batting group had made 61 in the powerplay against the same opponent at the same venue three days earlier.
+
+Why the “most likely” pick failed: Under 184.5 lost by only **0.5 run**, but the closeness of the grade does not excuse the ranking. The line was just 2.5 runs below a recent South Africa 187 and the venue had just produced 195 and 190. Zimbabwe had less than 24 hours' recovery, and South Africa batted first—the exposure state most dangerous to an innings Under. After a 59/0 powerplay, the full resource ceiling was high. South Africa reached 154/1 after 15.1 overs and still finished 185 despite a late collapse to 185/7.
+
+Why rank #2 failed: recent aggregate powerplays (5/6 Under) were allowed to outweigh the most comparable observation: 61 against this exact attack at this exact venue. That is a source-weighting error. Direct opponent/venue/role continuity should outrank a six-match cross-opponent mean when the current bowling fatigue state is also worse.
+
+The result links to the prior cricket lesson: wicket resources matter as much as run rate. At 59/0, South Africa had all ten wickets intact, which made sustained acceleration possible. The late wickets nearly rescued the Under but did not erase the earlier resource advantage.
+
+Required improvement:
+
+1. After toss confirmation that South Africa bat first, re-rank the full-innings Over upward; remove the chase-cap concern that had supported Under/action uncertainty.

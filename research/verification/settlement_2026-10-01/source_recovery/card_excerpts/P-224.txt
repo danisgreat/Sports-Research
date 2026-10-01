@@ -1,0 +1,306 @@
+| 4 | Red Sox -1.5 | **LOSS** |
+| — | Potential winner: Red Sox | **WIN** |
+
+Why it worked: the best parts of the forecast separated winner from margin. Boston's stronger late-game side won, but only by one, so Seattle +1.5 remained robust. Kirby and Tolle both allowed substantial damage, Seattle led 8-5, and Boston's rally/extra-inning win produced the high-total branch.
+
+Learning: this is a positive example of contract geometry used correctly. A favourite winner and underdog +1.5 can coexist when the forecast explicitly expects a competitive, volatile game and treats -1.5 as the hardest condition.
+
+Source: [MLB game story](https://www.mlb.com/stories/game/824719).
+
+## P-223 settlement — Yankees @ Angels
+
+Verified outcome: **Angels 10, Yankees 1; 11 total runs. Walbert Ureña allowed one run over seven innings; Elmer Rodríguez allowed four runs in 3.2 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Angels +1.5 | **WIN** |
+| 2 | Yankees moneyline | **LOSS** |
+| 3 | Under 8.0 | **LOSS** |
+| 4 | Over 8.0 | **WIN** |
+| — | Potential winner: Yankees | **LOSS** |
+
+What went right: Angels +1.5 respected the game's best established starter. The Over branch also correctly captured the rookie-starter/bullpen failure tail.
+
+What went wrong: the winner call privileged overall team strength over the most important game-specific variable even though the original text said Ureña was the strongest established starter. Rodríguez's short outing exposed the Yankees' run-prevention tail, while Ureña removed the comeback route.
+
+Learning: if the underdog owns a large confirmed starter edge and is already rank #1 with +1.5, a favourite moneyline/winner call requires a clearly superior bullpen and lineup edge large enough to overcome that starter gap. Otherwise the card is internally incoherent.
+
+Source: [ESPN recap](https://www.espn.com/mlb/recap/_/gameId/401816756).
+
+## P-224 settlement — Phillies @ Diamondbacks
+
+Verified outcome: **Phillies 2, Diamondbacks 1; 3 total runs; one-run margin.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Phillies +1.5 | **WIN** |
+| 2 | Diamondbacks +1.5 | **WIN** |
+| 3 | Under 8.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: Phillies | **WIN** |
+
+Why it worked: the forecast recognized overlapping +1.5 contracts and a close-game distribution. Both cushions won in a one-run game, the controlled roof/starter branch delivered the Under, and the stronger Phillies side won.
+
+Learning: overlapping contracts should continue to be disclosed and evaluated marginally, but portfolio-style hit rates must not treat both as independent wins.
+
+Sources: [MLB game story](https://www.mlb.com/stories/game/825040); [ESPN final](https://www.espn.com/mlb/game/_/gameId/401816757/phillies-diamondbacks).
+
+## P-225 settlement — Chun-Hsin Tseng vs Zhizhen Zhang
+
+Verified outcome: **Tseng won 6-4, 6-0; 16 total games; Tseng margin +8.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 20.5 games | **WIN** |
+| 2 | Tseng -4.5 games | **WIN** |
+| 3 | Zhang +4.5 games | **LOSS** |
+| 4 | Over 20.5 games | **LOSS** |
+| — | Potential winner: Tseng | **WIN** |
+
+Why it worked: the second-set bagel converted the same straight-sets separation branch into both an Under and a Tseng spread cover. The forecast correctly prioritized the stronger player and the compressed match-length path.
+
+Learning: as in P-218, the spread and total were highly dependent. Record the shared “lopsided straight sets” driver so aggregate evaluation does not overstate two wins as two independent confirmations.
+
+Source: [ATP Zhangjiagang results](https://www.atptour.com/en/scores/current-challenger/zhangjiagang/7783/results).
+
+## P-226 settlement and deep rank-#1 retrospective — Hanshin @ Yakult
+
+Verified outcome: **Hanshin 6, Yakult 2; 8 total runs; Hanshin won by four.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 7.5 | **LOSS** |
+| 2 | Yakult +2.5 | **LOSS** |
+| 3 | Hanshin -2.5 | **WIN** |
+| 4 | Over 7.5 | **WIN** |
+| — | Potential winner: Hanshin | **WIN** |
+
+| — | Potential winner: Red Sox | **WIN** |
+
+Why it worked: the best parts of the forecast separated winner from margin. Boston's stronger late-game side won, but only by one, so Seattle +1.5 remained robust. Kirby and Tolle both allowed substantial damage, Seattle led 8-5, and Boston's rally/extra-inning win produced the high-total branch.
+
+Learning: this is a positive example of contract geometry used correctly. A favourite winner and underdog +1.5 can coexist when the forecast explicitly expects a competitive, volatile game and treats -1.5 as the hardest condition.
+
+Source: [MLB game story](https://www.mlb.com/stories/game/824719).
+
+## P-223 settlement — Yankees @ Angels
+
+Verified outcome: **Angels 10, Yankees 1; 11 total runs. Walbert Ureña allowed one run over seven innings; Elmer Rodríguez allowed four runs in 3.2 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Angels +1.5 | **WIN** |
+| 2 | Yankees moneyline | **LOSS** |
+| 3 | Under 8.0 | **LOSS** |
+| 4 | Over 8.0 | **WIN** |
+| — | Potential winner: Yankees | **LOSS** |
+
+What went right: Angels +1.5 respected the game's best established starter. The Over branch also correctly captured the rookie-starter/bullpen failure tail.
+
+What went wrong: the winner call privileged overall team strength over the most important game-specific variable even though the original text said Ureña was the strongest established starter. Rodríguez's short outing exposed the Yankees' run-prevention tail, while Ureña removed the comeback route.
+
+Learning: if the underdog owns a large confirmed starter edge and is already rank #1 with +1.5, a favourite moneyline/winner call requires a clearly superior bullpen and lineup edge large enough to overcome that starter gap. Otherwise the card is internally incoherent.
+
+Source: [ESPN recap](https://www.espn.com/mlb/recap/_/gameId/401816756).
+
+## P-224 settlement — Phillies @ Diamondbacks
+
+Verified outcome: **Phillies 2, Diamondbacks 1; 3 total runs; one-run margin.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Phillies +1.5 | **WIN** |
+| 2 | Diamondbacks +1.5 | **WIN** |
+| 3 | Under 8.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: Phillies | **WIN** |
+
+Why it worked: the forecast recognized overlapping +1.5 contracts and a close-game distribution. Both cushions won in a one-run game, the controlled roof/starter branch delivered the Under, and the stronger Phillies side won.
+
+Learning: overlapping contracts should continue to be disclosed and evaluated marginally, but portfolio-style hit rates must not treat both as independent wins.
+
+Sources: [MLB game story](https://www.mlb.com/stories/game/825040); [ESPN final](https://www.espn.com/mlb/game/_/gameId/401816757/phillies-diamondbacks).
+
+## P-225 settlement — Chun-Hsin Tseng vs Zhizhen Zhang
+
+Verified outcome: **Tseng won 6-4, 6-0; 16 total games; Tseng margin +8.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 20.5 games | **WIN** |
+| 2 | Tseng -4.5 games | **WIN** |
+| 3 | Zhang +4.5 games | **LOSS** |
+| 4 | Over 20.5 games | **LOSS** |
+| — | Potential winner: Tseng | **WIN** |
+
+Why it worked: the second-set bagel converted the same straight-sets separation branch into both an Under and a Tseng spread cover. The forecast correctly prioritized the stronger player and the compressed match-length path.
+
+Learning: as in P-218, the spread and total were highly dependent. Record the shared “lopsided straight sets” driver so aggregate evaluation does not overstate two wins as two independent confirmations.
+
+Source: [ATP Zhangjiagang results](https://www.atptour.com/en/scores/current-challenger/zhangjiagang/7783/results).
+
+## P-226 settlement and deep rank-#1 retrospective — Hanshin @ Yakult
+
+Verified outcome: **Hanshin 6, Yakult 2; 8 total runs; Hanshin won by four.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 7.5 | **LOSS** |
+| 2 | Yakult +2.5 | **LOSS** |
+| 3 | Hanshin -2.5 | **WIN** |
+| 4 | Over 7.5 | **WIN** |
+| — | Potential winner: Hanshin | **WIN** |
+
+
+
+Why it worked: the best parts of the forecast separated winner from margin. Boston's stronger late-game side won, but only by one, so Seattle +1.5 remained robust. Kirby and Tolle both allowed substantial damage, Seattle led 8-5, and Boston's rally/extra-inning win produced the high-total branch.
+
+Learning: this is a positive example of contract geometry used correctly. A favourite winner and underdog +1.5 can coexist when the forecast explicitly expects a competitive, volatile game and treats -1.5 as the hardest condition.
+
+Source: [MLB game story](https://www.mlb.com/stories/game/824719).
+
+## P-223 settlement — Yankees @ Angels
+
+Verified outcome: **Angels 10, Yankees 1; 11 total runs. Walbert Ureña allowed one run over seven innings; Elmer Rodríguez allowed four runs in 3.2 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Angels +1.5 | **WIN** |
+| 2 | Yankees moneyline | **LOSS** |
+| 3 | Under 8.0 | **LOSS** |
+| 4 | Over 8.0 | **WIN** |
+| — | Potential winner: Yankees | **LOSS** |
+
+What went right: Angels +1.5 respected the game's best established starter. The Over branch also correctly captured the rookie-starter/bullpen failure tail.
+
+What went wrong: the winner call privileged overall team strength over the most important game-specific variable even though the original text said Ureña was the strongest established starter. Rodríguez's short outing exposed the Yankees' run-prevention tail, while Ureña removed the comeback route.
+
+Learning: if the underdog owns a large confirmed starter edge and is already rank #1 with +1.5, a favourite moneyline/winner call requires a clearly superior bullpen and lineup edge large enough to overcome that starter gap. Otherwise the card is internally incoherent.
+
+Source: [ESPN recap](https://www.espn.com/mlb/recap/_/gameId/401816756).
+
+## P-224 settlement — Phillies @ Diamondbacks
+
+Verified outcome: **Phillies 2, Diamondbacks 1; 3 total runs; one-run margin.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Phillies +1.5 | **WIN** |
+| 2 | Diamondbacks +1.5 | **WIN** |
+| 3 | Under 8.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: Phillies | **WIN** |
+
+Why it worked: the forecast recognized overlapping +1.5 contracts and a close-game distribution. Both cushions won in a one-run game, the controlled roof/starter branch delivered the Under, and the stronger Phillies side won.
+
+Learning: overlapping contracts should continue to be disclosed and evaluated marginally, but portfolio-style hit rates must not treat both as independent wins.
+
+Sources: [MLB game story](https://www.mlb.com/stories/game/825040); [ESPN final](https://www.espn.com/mlb/game/_/gameId/401816757/phillies-diamondbacks).
+
+## P-225 settlement — Chun-Hsin Tseng vs Zhizhen Zhang
+
+Verified outcome: **Tseng won 6-4, 6-0; 16 total games; Tseng margin +8.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 20.5 games | **WIN** |
+| 2 | Tseng -4.5 games | **WIN** |
+| 3 | Zhang +4.5 games | **LOSS** |
+| 4 | Over 20.5 games | **LOSS** |
+| — | Potential winner: Tseng | **WIN** |
+
+Why it worked: the second-set bagel converted the same straight-sets separation branch into both an Under and a Tseng spread cover. The forecast correctly prioritized the stronger player and the compressed match-length path.
+
+Learning: as in P-218, the spread and total were highly dependent. Record the shared “lopsided straight sets” driver so aggregate evaluation does not overstate two wins as two independent confirmations.
+
+Source: [ATP Zhangjiagang results](https://www.atptour.com/en/scores/current-challenger/zhangjiagang/7783/results).
+
+## P-226 settlement and deep rank-#1 retrospective — Hanshin @ Yakult
+
+Verified outcome: **Hanshin 6, Yakult 2; 8 total runs; Hanshin won by four.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 7.5 | **LOSS** |
+| 2 | Yakult +2.5 | **LOSS** |
+| 3 | Hanshin -2.5 | **WIN** |
+| 4 | Over 7.5 | **WIN** |
+| — | Potential winner: Hanshin | **WIN** |
+
+What went right: the team-quality and starter-direction analysis correctly preferred Hanshin. The original card explicitly identified Hanshin's 67-49-1 record, Takahashi's large starter advantage, league-best team ERA and Hanshin's 12-6 season H2H edge. Those signals supported both the winner and the 2+ separation path.
+
+Why it worked: the best parts of the forecast separated winner from margin. Boston's stronger late-game side won, but only by one, so Seattle +1.5 remained robust. Kirby and Tolle both allowed substantial damage, Seattle led 8-5, and Boston's rally/extra-inning win produced the high-total branch.
+
+Learning: this is a positive example of contract geometry used correctly. A favourite winner and underdog +1.5 can coexist when the forecast explicitly expects a competitive, volatile game and treats -1.5 as the hardest condition.
+
+Source: [MLB game story](https://www.mlb.com/stories/game/824719).
+
+## P-223 settlement — Yankees @ Angels
+
+Verified outcome: **Angels 10, Yankees 1; 11 total runs. Walbert Ureña allowed one run over seven innings; Elmer Rodríguez allowed four runs in 3.2 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Angels +1.5 | **WIN** |
+| 2 | Yankees moneyline | **LOSS** |
+| 3 | Under 8.0 | **LOSS** |
+| 4 | Over 8.0 | **WIN** |
+| — | Potential winner: Yankees | **LOSS** |
+
+What went right: Angels +1.5 respected the game's best established starter. The Over branch also correctly captured the rookie-starter/bullpen failure tail.
+
+What went wrong: the winner call privileged overall team strength over the most important game-specific variable even though the original text said Ureña was the strongest established starter. Rodríguez's short outing exposed the Yankees' run-prevention tail, while Ureña removed the comeback route.
+
+Learning: if the underdog owns a large confirmed starter edge and is already rank #1 with +1.5, a favourite moneyline/winner call requires a clearly superior bullpen and lineup edge large enough to overcome that starter gap. Otherwise the card is internally incoherent.
+
+Source: [ESPN recap](https://www.espn.com/mlb/recap/_/gameId/401816756).
+
+## P-224 settlement — Phillies @ Diamondbacks
+
+Verified outcome: **Phillies 2, Diamondbacks 1; 3 total runs; one-run margin.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Phillies +1.5 | **WIN** |
+| 2 | Diamondbacks +1.5 | **WIN** |
+| 3 | Under 8.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: Phillies | **WIN** |
+
+Why it worked: the forecast recognized overlapping +1.5 contracts and a close-game distribution. Both cushions won in a one-run game, the controlled roof/starter branch delivered the Under, and the stronger Phillies side won.
+
+Learning: overlapping contracts should continue to be disclosed and evaluated marginally, but portfolio-style hit rates must not treat both as independent wins.
+
+Sources: [MLB game story](https://www.mlb.com/stories/game/825040); [ESPN final](https://www.espn.com/mlb/game/_/gameId/401816757/phillies-diamondbacks).
+
+## P-225 settlement — Chun-Hsin Tseng vs Zhizhen Zhang
+
+Verified outcome: **Tseng won 6-4, 6-0; 16 total games; Tseng margin +8.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 20.5 games | **WIN** |
+| 2 | Tseng -4.5 games | **WIN** |
+| 3 | Zhang +4.5 games | **LOSS** |
+| 4 | Over 20.5 games | **LOSS** |
+| — | Potential winner: Tseng | **WIN** |
+
+Why it worked: the second-set bagel converted the same straight-sets separation branch into both an Under and a Tseng spread cover. The forecast correctly prioritized the stronger player and the compressed match-length path.
+
+Learning: as in P-218, the spread and total were highly dependent. Record the shared “lopsided straight sets” driver so aggregate evaluation does not overstate two wins as two independent confirmations.
+
+Source: [ATP Zhangjiagang results](https://www.atptour.com/en/scores/current-challenger/zhangjiagang/7783/results).
+
+## P-226 settlement and deep rank-#1 retrospective — Hanshin @ Yakult
+
+Verified outcome: **Hanshin 6, Yakult 2; 8 total runs; Hanshin won by four.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Under 7.5 | **LOSS** |
+| 2 | Yakult +2.5 | **LOSS** |
+| 3 | Hanshin -2.5 | **WIN** |
+| 4 | Over 7.5 | **WIN** |
+| — | Potential winner: Hanshin | **WIN** |
+
+What went right: the team-quality and starter-direction analysis correctly preferred Hanshin. The original card explicitly identified Hanshin's 67-49-1 record, Takahashi's large starter advantage, league-best team ERA and Hanshin's 12-6 season H2H edge. Those signals supported both the winner and the 2+ separation path.

@@ -1,0 +1,307 @@
+
+## P. Final delivery
+
+1. **Full Match Under 2.5 Goals**
+2. **Total Corners Over 8.5**
+3. **1st Half Under 0.5 Goals**
+4. **1st Half Over 0.5 Goals**
+5. **Full Match Over 2.5 Goals**
+
+**Potential winner:** El Gounah — slight 90-minute lean.
+
+## Q. Append confirmation
+
+- All currently incomplete local events state-checked before P-253: YES
+- Newly completed P-249 settled/reviewed first: YES
+- P-250/P-251/P-252 still unresolved and preserved open: YES
+- P-253 competition corrected from user label to field-owner Premier League Round 3: YES
+- P-253 frozen before kickoff: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probabilities generated: NO
+- Learning register changed: NO new forecast rule
+- **NEXT CANONICAL ID: P-254**
+
+
+---
+
+# Settlement / retrospective sweep before P-254 — 2026-09-03
+
+## P-250 — Yunnan Yukun vs Chongqing Tonglianglong — FINAL
+
+**Verified final:** Yunnan Yukun 1-0 Chongqing Tonglianglong; **HT 0-0**. Yunnan advanced.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+
+
+1. **Full Match Under 2.5 Goals**
+2. **Total Corners Over 8.5**
+3. **1st Half Under 0.5 Goals**
+4. **1st Half Over 0.5 Goals**
+5. **Full Match Over 2.5 Goals**
+
+**Potential winner:** El Gounah — slight 90-minute lean.
+
+## Q. Append confirmation
+
+- All currently incomplete local events state-checked before P-253: YES
+- Newly completed P-249 settled/reviewed first: YES
+- P-250/P-251/P-252 still unresolved and preserved open: YES
+- P-253 competition corrected from user label to field-owner Premier League Round 3: YES
+- P-253 frozen before kickoff: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probabilities generated: NO
+- Learning register changed: NO new forecast rule
+- **NEXT CANONICAL ID: P-254**
+
+
+---
+
+# Settlement / retrospective sweep before P-254 — 2026-09-03
+
+## P-250 — Yunnan Yukun vs Chongqing Tonglianglong — FINAL
+
+**Verified final:** Yunnan Yukun 1-0 Chongqing Tonglianglong; **HT 0-0**. Yunnan advanced.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+Corner raw counts conflict (10 vs 11), but every credible retrieved value is above 8.5. Preserve the raw conflict and retain **PROVISIONAL WIN** because the user's exact operator/provider definition was never supplied.
+
+
+1. **Full Match Under 2.5 Goals**
+2. **Total Corners Over 8.5**
+3. **1st Half Under 0.5 Goals**
+4. **1st Half Over 0.5 Goals**
+5. **Full Match Over 2.5 Goals**
+
+**Potential winner:** El Gounah — slight 90-minute lean.
+
+## Q. Append confirmation
+
+- All currently incomplete local events state-checked before P-253: YES
+- Newly completed P-249 settled/reviewed first: YES
+- P-250/P-251/P-252 still unresolved and preserved open: YES
+- P-253 competition corrected from user label to field-owner Premier League Round 3: YES
+- P-253 frozen before kickoff: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probabilities generated: NO
+- Learning register changed: NO new forecast rule
+- **NEXT CANONICAL ID: P-254**
+
+
+---
+
+# Settlement / retrospective sweep before P-254 — 2026-09-03
+
+## P-250 — Yunnan Yukun vs Chongqing Tonglianglong — FINAL
+
+**Verified final:** Yunnan Yukun 1-0 Chongqing Tonglianglong; **HT 0-0**. Yunnan advanced.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+Corner raw counts conflict (10 vs 11), but every credible retrieved value is above 8.5. Preserve the raw conflict and retain **PROVISIONAL WIN** because the user's exact operator/provider definition was never supplied.
+
+---
+
+## P. Final delivery
+
+1. **Full Match Under 2.5 Goals**
+2. **Total Corners Over 8.5**
+3. **1st Half Under 0.5 Goals**
+4. **1st Half Over 0.5 Goals**
+5. **Full Match Over 2.5 Goals**
+
+**Potential winner:** El Gounah — slight 90-minute lean.
+
+## Q. Append confirmation
+
+- All currently incomplete local events state-checked before P-253: YES
+- Newly completed P-249 settled/reviewed first: YES
+- P-250/P-251/P-252 still unresolved and preserved open: YES
+- P-253 competition corrected from user label to field-owner Premier League Round 3: YES
+- P-253 frozen before kickoff: YES
+- Drive modified: NO
+- Prior forecasts rewritten: NO
+- Numerical probabilities generated: NO
+- Learning register changed: NO new forecast rule
+- **NEXT CANONICAL ID: P-254**
+
+
+---
+
+# Settlement / retrospective sweep before P-254 — 2026-09-03
+
+## P-250 — Yunnan Yukun vs Chongqing Tonglianglong — FINAL
+
+**Verified final:** Yunnan Yukun 1-0 Chongqing Tonglianglong; **HT 0-0**. Yunnan advanced.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-250-C01 | 1 | 1H Over 0.5 | **LOSS** |
+| P-250-C02 | 5 | 1H Under 0.5 | **WIN** |
+| P-250-C03 | 3 | Full Over 2.5 | **LOSS** |
+| P-250-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-250-C05 | 2 | Corners Over 8.5 | **UNRESOLVED** — no trustworthy current provider final |
+
+**Potential winner — Yunnan to advance:** **WIN**.
+
+### Deep Rank-1 retrospective
+Rank #1 (1H Over 0.5) lost. The card correctly named a 0-0 HT as the strongest kill path, but the broad recent first-half-goal frequency was allowed to outweigh the more matchup-specific low-event evidence: the current-season H2H had been 0-0 at HT/full time, Chongqing's recent regime was low-event, and knockout caution was knowable. The first-half rank therefore receives **PROCESS_DEFECT — early-goal/opponent-conditioning**.
+
+What was right:
+- Yunnan advancement direction won.
+- Full Under 2.5 remained a clearly represented branch and won.
+- The losing Rank-1 mechanism was predeclared rather than invented after the result.
+
+What improves:
+- first-half goal outcomes must be supported by opponent-conditioned first-half *creation* (shots/xG/entries), not just historical goal occurrence;
+- a continuity-qualified 0-0 H2H plus current low-event opponent cannot be described as the main kill path and then functionally underweighted.
+
+**Learning disposition:** reinforces existing `RULES_SOCCER` early-goal reconciliation control; **no new forecast weight**.
+
+---
+
+## P-251 — Sassuolo vs Frosinone — FINAL
+
+**90 minutes:** 1-1. **HT:** 1-1. Sassuolo advanced on penalties.
+
+| ID | Original rank | Contract | Result |
+|---|---:|---|---|
+| P-251-C01 | 1 | 1H Over 0.5 | **WIN** |
+| P-251-C03 | 2 | Full Over 2.5 | **LOSS** |
+| P-251-C05 | 3 | Corners Over 8.5 | **PROVISIONAL WIN — threshold invariant**; current feeds expose 10-11 corners |
+| P-251-C04 | 4 | Full Under 2.5 | **WIN** |
+| P-251-C02 | 5 | 1H Under 0.5 | **LOSS** |
+
+**Potential winner — Sassuolo to advance:** **WIN**.
+
+### Retrospective
+Rank #1 won for the stated early-attacking reason: both teams scored before halftime. Rank #2 Full Over 2.5 failed because the two first-half goals did **not** propagate into a third regulation goal despite attacking substitutions. This is a **COMPLIANT forecast with calibration/phase-propagation caution**, not a new rule. It reinforces the existing control that an early goal changes the later state but does not mechanically imply a full-match Over.
+
+Corner raw counts conflict (10 vs 11), but every credible retrieved value is above 8.5. Preserve the raw conflict and retain **PROVISIONAL WIN** because the user's exact operator/provider definition was never supplied.

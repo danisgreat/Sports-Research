@@ -1,0 +1,75 @@
+
+All events in this component have been checked first for live status. **There are no live P-187–P-214 events.** P-192 was cancelled before first pitch and had no actionable V01; a rescheduled fixture must receive a fresh state/participant/contract freeze and a new canonical distinct-event card rather than being carried as a live P-192 forecast.
+
+The active follow-up queue after this audit contains no live event and ten final-event evidence/definition items:
+
+1. P-126 field-owner result/phase confirmation and P-126-C06 corners unresolved;
+2. P-148-C02 unresolved;
+3. P-149-C02 provisional win;
+4. P-151-C02 strong provisional win;
+5. P-162 provisional final pending field owner;
+6. P-166 operator overtime/action definition unknown;
+7. P-176-C05 unresolved;
+8. P-178-C05 unresolved;
+9. P-179-C05 provisional win;
+10. P-200 operator overtime/shootout/action definition unknown.
+
+**Next canonical distinct event ID: `P-215`.**
+
+## C. Reconciled descriptive ledger
+
+| ID | Verified final / state | Rows | Rank #1 | Potential winner | Settlement/process note |
+|---|---|---:|---|---|---|
+| P-187 | Jamaica Kingsmen won by 7 runs, DLS; TKR 180/6, PP 60/0 | 2–2 | LOSS | LOSS | Both Overs won. DLS affected the chase, not the frozen TKR phase totals. |
+| P-188 | Yankees 9–2 Red Sox | 2–2 | LOSS | WIN | Five-run eighth realised the one-sided relief/separation tail. |
+| P-189 | Howard 31–24 Alabama A&M | 2–2 | LOSS | LOSS | A&M led late; Howard's 51-yard TD realised the underweighted explosive branch. |
+| P-190 | Dragons 22–18 Warriors | 2–2 | WIN | LOSS | Under and Dragons cushion were right; two late tries flipped winner allocation. |
+| P-191 | Carlton 48–42 Fremantle | 2–2 | LOSS | WIN | Winner right; margin and total allocation wrong in strongly directional wind. |
+| P-192 | Cancelled before first pitch because of rain | N/A | N/A | N/A | `EXCLUDED — NO ACTIONABLE V01`; not live and not unsettled. |
+| P-193 | Richmond 38–33 Essendon | 2–2 | LOSS | LOSS | Under won but favourite covered through late territory. |
+| P-194 | Kaiserslautern 2–1 St. Pauli; HT 0–1; St. Pauli corners 4–5 Kaiserslautern | 2–3 | LOSS | LOSS | Scoreless streak was over-weighted; St. Pauli volume did not imply result or 6+ corners. |
+| P-195 | Gent 2–1 Club Brugge; HT 1–1; Gent corners 1–5 Club Brugge | 2–3 | WIN | LOSS | First-half mechanism succeeded; Club corner and winner allocation failed. |
+| P-196 | DR Congo 77–75 Egypt | 2–2 | LOSS | LOSS | Large-favourite centre failed; total crossed 151.5 by 0.5. |
+| P-197 | Feyenoord 2–2 ADO; HT 0–1; Feyenoord corners 11–3 ADO | 2–3 | WIN | LOSS/draw | Goal branches worked; trailing-state attack destroyed the Feyenoord corner Under. |
+| P-198 | Germany 96–94 Poland after OT; regulation 83–83 | 2–2 | WIN | WIN | Side/winner right; Over 180.5 won only through overtime. |
+| P-199 | Frederikshavn 7–3 Sønderjyske | 2–2 | LOSS | LOSS | Unconfirmed goalie/early-season uncertainty was incompatible with a top-ranked Under. |
+| P-200 | Herning 4–3 Rungsted after a 3–3 regulation tie | 2–2* | LOSS* | WIN* | `*` Research grade assumes OT/SO inclusion; exact operator terms remain unknown. |
+| P-201 | Freiburg 4–1 Werder; HT 2–0; 11 corners | 3–2 | WIN | WIN | Goal process was coherent; corner Under missed by one. |
+| P-202 | Randers 2–1 AGF; HT 2–0; AGF 5 corners | 2–3 | WIN | LOSS | Early-goal branch worked; AGF winner/corner allocation did not. |
+| P-203 | Deportivo 3–1 Valencia; HT 2–1; Deportivo corners 5–5 Valencia | 3–2 | LOSS | WIN | Verified halftime was 2–1, not 3–0. Under 10.5 corners won on a verified total of 10. |
+| P-204 | Yankees 16–1 Red Sox | 2–2 | WIN | LOSS | Broad Yankees +1.5 survived a badly wrong Boston winner call; cluster tail dominated. |
+| P-205 | Twins 5–1 White Sox | 2–2 | WIN | WIN | Starter-length/opener-bulk distinction and low-total direction both held. |
+| P-206 | Dodgers 6–1 Tigers | 2–2 | LOSS | WIN | Under 7.5 won while Tigers +1.5 lost: low total did not imply close margin. |
+| P-207 | Inter 1–0 Cagliari; Inter 6 corners | 3–2 | LOSS | WIN | Inter chance/territory dominance was real, but the full-match Over required conversion and opponent contribution. |
+| P-208 | Lazio 1–0 Genoa; HT 1–0; Lazio corners 4–2 Genoa | 2–3 | WIN | WIN | Low-score/winner read held; generic corner Over failed. |
+| P-209 | Santos 1–0 Corinthians; HT 0–1; Corinthians corners 8–1 Santos | 3–2 | WIN | LOSS | Early goal and total-corner row won; possession/territory did not secure Corinthians. |
+| P-210 | Flamengo 3–0 Botafogo; HT 1–0; Flamengo corners 5–3 Botafogo | 2–3 | WIN | WIN | Goal/winner mechanisms held; eight corners left Over 8.5 short. |
+| P-211 | Faria d. Brooksby 6–3, 7–6(4), 4–6, 1–6, 6–2; 47 games | 2–2 | LOSS | WIN | Best-of-five extension was underweighted. |
+| P-212 | Alexandrova d. Kessler 6–2, 6–2; 16 games | 2–2 | LOSS | WIN | Winner/handicap thesis conflicted with the top-ranked Over absent a competitive-set mechanism. |
+| P-213 | Samuel d. Macháč 6–2, 6–3, 6–2 | 2–2 | WIN | WIN | Current surface/form and return pressure coherently supported winner, handicap and Under. |
+| P-214 | Orioles 8–5 Athletics | 2–2 | LOSS | WIN | Oakland led 5–1; Baltimore's HR/middle-relief cluster produced seven unanswered and separation. |
+| **Total** | **27 actionable finals; P-192 excluded** | **58–60** | **12–15** | **15–12** | **Descriptive late-import ledger only.** |
+
+Row arithmetic was recomputed from every frozen contract and its settlement geometry. P-211's later administrative re-check is not a second forecast or event. No unresolved result was converted to a win or loss merely to make the totals reconcile.
+
+## D. Detailed retrospective: failures, successes and honest process grading
+
+### Rank #1 failures
+
+**P-187 — result wrong / process wrong.** The card let a single same-opponent 38/1 powerplay anchor the Under while current phase participants were unresolved. Narine opened and made 53 from 24; Munro made 52, producing 60/0 after six. Availability was not enough: batting position and expected exposure to the first 36 balls were the decisive variables. Full-innings Over remained a correctly identified counterbranch and won, but that does not rescue the top-rank process.
+
+**P-188 — result wrong / process incomplete.** “Rested bullpen” was too coarse. A closer does not protect a +1.5 line while his club trails and lower-leverage arms face the relevant innings. The five-run eighth shows that the forecast needed a score-state ladder—tied/ahead, one behind, multiple runs behind—plus inherited-runner and multi-run-HR paths.
+
+**P-189 — result wrong / process partly right.** Brown's continuity helped A&M recover and lead late, so the underdog case was real. The error was translating Howard's new coach/QB uncertainty mainly downward. A regime with little current data should first widen the distribution; it shifts the centre only when a directional mechanism is supported. Scroggins' explosive passing ceiling was underweighted.
+
+**P-191 — result wrong / process wrong for spread/total.** Carlton won, but the exposed venue's strong, directional breeze shaped scoring end by end and Fremantle competed through ruck/midfield resistance. Generic city weather was not enough. Ground-level vector, venue orientation and end switching must enter the quarter tree before a double-digit AFLW spread is ranked.
+
+**P-193 — result wrong / process incomplete.** Under 83.5 won, yet Essendon +2.5 failed after Richmond's late territorial surge. A low total did not protect the underdog. Fourth-quarter repeat-entry resistance, rotations/interchange availability and conditioning in Darwin were not sufficiently separated from the total centre.
+
+**P-194 — result wrong / process wrong.** Kaiserslautern's short scoreless sequence was treated too much like a stable suppression regime. It needed decomposition into chance creation, finishing, goalkeeping and opponent quality. St. Pauli's 21–11 shot edge also demonstrates that territory, conversion, final result and corners are distinct.
+
+**P-196 — result wrong / process wrong.** Egypt -14.5 relied too heavily on two recent DR Congo blowout outcomes. Large-spread analysis must separately estimate possessions, shooting-efficiency edge, turnover/rebound conversion, bench/rotation separation and true blowout probability. Ugly recent finals expand downside risk; they do not by themselves locate the next game's centre.
+
+**P-199 — result wrong / process wrong.** One 2–1 Sønderjyske opener could not resolve early-season roster and unconfirmed-goalie uncertainty. Because goalie identity directly controls conversion, the unresolved starter should have prevented the total from receiving the strongest rank absent unusually deep defensive-process evidence.
+
+**P-200 — result wrong / process wrong for margin, definition-limited for settlement.** Herning won, but only after a 3–3 regulation tie; the -2.5 thesis relied too much on a 7–1 opener and old H2H across roster change. Winner and separation needed different branches. The research outcome is descriptive under the frozen OT/SO-inclusive assumption; sportsbook grading remains `UNKNOWN_DEFINITION` until the actual operator terms are supplied.

@@ -1,0 +1,1538 @@
+## P-040/V06 — USER CONTRACT CORRECTION AND LIVE RE-RANK (appended 2026-08-14T22:25:18+10:00)
+
+**User correction:** “instead of -23.5 crows, i actually meant +23.5.” The intended second handicap is therefore **Adelaide Crows +23.5**, not Adelaide -23.5. The original request and P-040/V01–V03 remain immutable evidence of what was supplied and analysed; they are not silently rewritten. Original C02 (`Adelaide -23.5`) is now **WITHDRAWN / research grade `VOID` / performance-ineligible** because the user clarified the input before the match ended. Corrected contract **C02R** becomes active only from this timestamp and will be graded from the official final score.
+
+This correction changes the market topology: C01 Fremantle -23.5 and C02R Adelaide +23.5 are now exact half-point complements. C02R wins if Adelaide wins, draws, or loses by 23 or fewer; C01 wins only if Fremantle wins by 24+.
+
+**Official correction-cutoff state:** Fremantle **11.10 (76)**, Adelaide **11.10 (76)**, combined 152, Q4 **4:59 elapsed**, last updated 22:25:15 AEST and observed 22:25:18 AEST. Inside-50s were 44–36, clearances 31–37, centre clearances 11–11, scoring shots 21–21 and disposals 273–247. `[Official AFL CFS match item and team stats, directly queried 2026-08-14T22:25:18+10:00]`
+
+At a tied score, C02R has its full 23.5-point cushion; Fremantle -23.5 requires a 24-point margin from the remainder. Over 168.5 needs 17 more match points; Under 168.5 permits only 16. Under 176.5 permits 24 more.
+
+| Rank | View ID | Contract ID | Selection | Verdict | Confidence/caveat | Dependence group | Performance eligibility |
+|---:|---|---|---|---|---|---|---|
+| 1 | P-040/V06 | C02R | **Adelaide Crows +23.5** | `SUPPORTED` | Tied in Q4 with even scoring shots and a 23.5-point cushion; ordinary kill path is a late Fremantle 24+ breakaway | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` |
+| 2 | P-040/V06 | C03 | **Combined Total Over 168.5** | `SUPPORTED` | Needs 17 more with most of Q4 remaining; close-game pressure and 42 scoring shots support continued scoring | DG-P040-TOTAL | `PRIMARY_FORMAL` |
+| 3 | P-040/V06 | C04 | **Combined Total Under 168.5** | `AVOID` | Only 16 further points allowed; exact complement of C03 | DG-P040-TOTAL | `CORRELATED_SECONDARY` |
+| 4 | P-040/V06 | C01 | **Fremantle -23.5** | `AVOID` | Requires Fremantle to create a 24-point margin from a Q4 tie | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` |
+
+**Corrected decision:** Adelaide +23.5 is the best of the four original intended markets at this live cutoff. It is not backdated to the earlier views. Potential winner remains too close for a strong call; prior Adelaide lean is retained with low separation because its clearance edge offsets Fremantle's inside-50/home edge.
+
+### Corrected settlement instruction
+
+At final, grade C01/C02R as exact complements. Record original C02 as `VOID — withdrawn after user input correction`, not as a win/loss. C03/C04 and later C05 retain their existing official-total boundaries.
+
+## Settlement — P-040 Fremantle v Adelaide Crows, AFL Round 23 (appended 2026-08-15T01:55+10:00)
+
+**Queue pass:** P-038 checked first. Cricbuzz still listed **Bangladesh 351/6 (110 overs)** versus Australia **198**, Mehidy Hasan Miraz 32* (73) and Hasan Mahmud 13* (76), match page title/canonical unchanged from day-two stumps. Day 3 is scheduled 10:00 ACST / 10:30 AEST on 15 August, after this settlement timestamp. **P-038 remains `OPEN / LIVE`; no partial settlement.** `[Cricbuzz match 148316, directly OPENED 2026-08-15T01:48+10:00]`  
+P-040 was `FINAL` and is settled below.
+
+**Settlement recorded:** 2026-08-15T01:55+10:00  
+**Official final:** Fremantle **16.16 (112)** defeated Adelaide **13.10 (88)** by **24 points** at Optus Stadium. Combined total **200**. Quarter scores: Fremantle 5.4 / 7.5 / 11.10 / 16.16; Adelaide 3.3 / 6.6 / 10.9 / 13.10. Ordinary home-and-away finish; no additional time. Injuries listed nil-nil. Crowd 55,010. `[Official AFL match report, OPENED 2026-08-15T01:50+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)` · `[Official AFL match centre 8237, OPENED 2026-08-15T01:51+10:00](https://www.afl.com.au/afl/matches/8237)` · ESPN official-partner feed event `1133680` independently `STATUS_FINAL`, 112–88, same quarter point totals `[ESPN summary API, OPENED 2026-08-15T01:47+10:00](https://site.api.espn.com/apis/site/v2/sports/australian-football/afl/summary?event=1133680)`.
+
+P-040/V06 is the controlling delivery view for C01/C02R/C03/C04. P-040/V05 is the controlling delivery view for C05. P-040/V01–V03 remain immutable earlier evidence and are not double-counted in the controlling cohort. Original C02 is `VOID`.
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-040/V06 | C02R | 1 | Adelaide Crows +23.5 | `SUPPORTED` | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` | Adelaide lost by 24 | `LOSS` | -0.5 | AFL official report + match centre 8237 |
+| P-040/V06 | C03 | 2 | Combined Total Over 168.5 | `SUPPORTED` | DG-P040-TOTAL | `PRIMARY_FORMAL` | 200 | `WIN` | +31.5 | same |
+| P-040/V06 | C04 | 3 | Combined Total Under 168.5 | `AVOID` | DG-P040-TOTAL | `CORRELATED_SECONDARY` | 200 | `LOSS` | -31.5 | same |
+| P-040/V06 | C01 | 4 | Fremantle -23.5 | `AVOID` | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` | Fremantle won by 24 | `WIN` | +0.5 | same |
+| P-040/V05 | C05 | 1 | Combined Total Under 176.5 | `AVOID` | DG-P040-TOTAL-176 | `PRIMARY_FORMAL` | 200 | `LOSS` | -23.5 | same |
+| P-040/V03 | C02 | 3 | Adelaide Crows -23.5 | `AVOID` | DG-P040-MARGIN | `INELIGIBLE` | n/a | `VOID` | n/a | withdrawn after user correction before the final |
+
+**Potential winner:** Adelaide Crows `LEAN` at V03/V06 — `LOSS`. Fremantle won and locked the minor premiership.  
+**Controlling raw rows:** 2-3 (C03 WIN, C01 WIN; C02R LOSS, C04 LOSS, C05 LOSS). **Primary formal (non-AVOID):** 1-1. **C05 decision evaluation:** `AVOID` correctly declined a losing Under; contract outcome remains `LOSS` and is not rewritten. **Higher-ranked exact-complement branches:** 1/2 (Over 168.5 correct; Adelaide +23.5 incorrect). C01/C02R are `BOUNDARY_FRAGILE` (24 versus 23.5). Rank #1 at controlling delivery lost → **one AFL live-handicap confidence strike**; six-field audit below.
+
+Final structural stats used in the retrospective, from the ESPN official-partner box (cross-checked against the AFL report's narrative): inside-50s **60–46**, clearances **44–38**, centre clearances **17–12**, scoring shots **32–23**, disposals **353–320**. Jye Amiss 5 goals; Caleb Serong 29 disposals / 12 clearances; Izak Rankine 39 disposals. `[ESPN summary API, OPENED 2026-08-15T01:47+10:00; AFL official report, OPENED 2026-08-15T01:50+10:00]`
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Adelaide led early (Laird, Fogarty, Ah Chee) and the game was tied early in Q4 (Thilthorpe). Fremantle then produced the named late-breakaway: Amiss' fifth, Dudley's snap, a 7-1 last-quarter centre-clearance indicator, and five late goals. Final margin 24 on a 36–19 Q4. Combined scoring never slowed: Q1 55, Q2 34, Q3 56, Q4 55 = 200. |
+| What went right | V06 correctly flipped the original total to Over 168.5 once only 16 further Under points remained. V05 correctly `AVOID`ed Under 176.5: remaining allowance was 56 then 24 from a still two-way shot profile, and 48 more points were scored after the V06 152-point cutoff. The original V01 warning that both −23.5 rows could lose in a 1–23 corridor was conceptually right even though the final landed one point outside it. P-027's remaining-exposure maths, once applied at V04/V05, pointed the right way on 176.5. |
+| What went wrong | Controlling #1 Adelaide +23.5 was `SUPPORTED` from a Q4 tie because the 23.5 cushion looked huge. The card named the late Fremantle 24+ burst as the ordinary kill path and still promoted confidence. That path occurred. Separately, V03 had ranked Under 168.5 #1 on H2H/venue suppression while Q1 already had 26 points and Adelaide's 7–4 inside-50 / 7–3 clearance edge — the P-027 failure mode. H2H Overs of 1/5 did not survive a 200-point, 32–23 scoring-shot game. The Adelaide winner lean treated live clearance as a match-long identity and underweighted Fremantle's Optus late-game stoppage pattern. |
+| Classification / why | Primary cause `RANKING`; contributors `CALIBRATION`, `MODEL_SPEC`; knowability `known-underweighted`. Named kill path occurred, so not `GENUINE_TAIL`. Margin is `BOUNDARY_FRAGILE` and is weak promotion evidence; the 200-point total miss on the early Under is not fragile. |
+| Overweighted / ignored | Overweighted: H2H/Optus Under rates, the raw 23.5-point Q4 cushion, and Adelaide's early clearance lead as a full-match winner mechanism. Underweighted: remaining-points versus current scoring-shot volume (P-027), Fremantle's documented late centre-square control, Amiss/Bolton inside-50 creation (Bolton 15 inside-50s), and how a home favourite can manufacture a 24-point Q4 burst from a tie. |
+| Concrete correction and falsification | For AFL live cushions of +20 or more in Q4, require the cushioned side to be winning the current-quarter centre-clearance/inside-50 chain before using `SUPPORTED`; otherwise cap at `LEAN`/`FORCED RANK`. For live Unders, do not leave them #1 when remaining allowance needs a slowdown and both sides are still generating scoring shots. Track the next five Q4-tied 20+ handicap cards and the next T-007 live-Under cards. Falsification: if those cushions repeatedly hold because the favourite cannot win remaining stoppages, narrow the handicap correction to Optus/home-fortress spots. |
+
+### Running-record and queue reconciliation
+
+| Ledger | P-040 contribution | New post-audit value |
+|---|---:|---:|
+| Controlling-delivery primary formal | 1-1 | 6-2 |
+| Controlling-delivery raw rows | 2-3 | **11-12** |
+| Higher-ranked exact-complement branch | 1/2 | 8/11 |
+| Controlling potential winner | 0-1 | 4-1 |
+
+| Open ID | State at settlement pass | Action |
+|---|---|---|
+| P-038 | LIVE — stumps, Bangladesh 351/6 after 110 overs; Australia 198; Day 3 not started | Retained open; no partial settlement (Over 250.5 and Tanzid 100+ are mechanically past their lines but the event and remaining 356.5/winner contracts are still live) |
+| P-040 | FINAL — Fremantle 112, Adelaide 88 | Settled and closed |
+
+P-040 is closed. **P-038 is the only open record.** The mutable snapshot at the top controls.
+
+## Prospective validation registry — APPENDED P-040 TEST (2026-08-15T01:55+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+
+This correction changes the market topology: C01 Fremantle -23.5 and C02R Adelaide +23.5 are now exact half-point complements. C02R wins if Adelaide wins, draws, or loses by 23 or fewer; C01 wins only if Fremantle wins by 24+.
+
+**Official correction-cutoff state:** Fremantle **11.10 (76)**, Adelaide **11.10 (76)**, combined 152, Q4 **4:59 elapsed**, last updated 22:25:15 AEST and observed 22:25:18 AEST. Inside-50s were 44–36, clearances 31–37, centre clearances 11–11, scoring shots 21–21 and disposals 273–247. `[Official AFL CFS match item and team stats, directly queried 2026-08-14T22:25:18+10:00]`
+
+At a tied score, C02R has its full 23.5-point cushion; Fremantle -23.5 requires a 24-point margin from the remainder. Over 168.5 needs 17 more match points; Under 168.5 permits only 16. Under 176.5 permits 24 more.
+
+| Rank | View ID | Contract ID | Selection | Verdict | Confidence/caveat | Dependence group | Performance eligibility |
+|---:|---|---|---|---|---|---|---|
+| 1 | P-040/V06 | C02R | **Adelaide Crows +23.5** | `SUPPORTED` | Tied in Q4 with even scoring shots and a 23.5-point cushion; ordinary kill path is a late Fremantle 24+ breakaway | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` |
+| 2 | P-040/V06 | C03 | **Combined Total Over 168.5** | `SUPPORTED` | Needs 17 more with most of Q4 remaining; close-game pressure and 42 scoring shots support continued scoring | DG-P040-TOTAL | `PRIMARY_FORMAL` |
+| 3 | P-040/V06 | C04 | **Combined Total Under 168.5** | `AVOID` | Only 16 further points allowed; exact complement of C03 | DG-P040-TOTAL | `CORRELATED_SECONDARY` |
+| 4 | P-040/V06 | C01 | **Fremantle -23.5** | `AVOID` | Requires Fremantle to create a 24-point margin from a Q4 tie | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` |
+
+**Corrected decision:** Adelaide +23.5 is the best of the four original intended markets at this live cutoff. It is not backdated to the earlier views. Potential winner remains too close for a strong call; prior Adelaide lean is retained with low separation because its clearance edge offsets Fremantle's inside-50/home edge.
+
+### Corrected settlement instruction
+
+At final, grade C01/C02R as exact complements. Record original C02 as `VOID — withdrawn after user input correction`, not as a win/loss. C03/C04 and later C05 retain their existing official-total boundaries.
+
+## Settlement — P-040 Fremantle v Adelaide Crows, AFL Round 23 (appended 2026-08-15T01:55+10:00)
+
+**Queue pass:** P-038 checked first. Cricbuzz still listed **Bangladesh 351/6 (110 overs)** versus Australia **198**, Mehidy Hasan Miraz 32* (73) and Hasan Mahmud 13* (76), match page title/canonical unchanged from day-two stumps. Day 3 is scheduled 10:00 ACST / 10:30 AEST on 15 August, after this settlement timestamp. **P-038 remains `OPEN / LIVE`; no partial settlement.** `[Cricbuzz match 148316, directly OPENED 2026-08-15T01:48+10:00]`  
+P-040 was `FINAL` and is settled below.
+
+**Settlement recorded:** 2026-08-15T01:55+10:00  
+**Official final:** Fremantle **16.16 (112)** defeated Adelaide **13.10 (88)** by **24 points** at Optus Stadium. Combined total **200**. Quarter scores: Fremantle 5.4 / 7.5 / 11.10 / 16.16; Adelaide 3.3 / 6.6 / 10.9 / 13.10. Ordinary home-and-away finish; no additional time. Injuries listed nil-nil. Crowd 55,010. `[Official AFL match report, OPENED 2026-08-15T01:50+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)` · `[Official AFL match centre 8237, OPENED 2026-08-15T01:51+10:00](https://www.afl.com.au/afl/matches/8237)` · ESPN official-partner feed event `1133680` independently `STATUS_FINAL`, 112–88, same quarter point totals `[ESPN summary API, OPENED 2026-08-15T01:47+10:00](https://site.api.espn.com/apis/site/v2/sports/australian-football/afl/summary?event=1133680)`.
+
+P-040/V06 is the controlling delivery view for C01/C02R/C03/C04. P-040/V05 is the controlling delivery view for C05. P-040/V01–V03 remain immutable earlier evidence and are not double-counted in the controlling cohort. Original C02 is `VOID`.
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-040/V06 | C02R | 1 | Adelaide Crows +23.5 | `SUPPORTED` | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` | Adelaide lost by 24 | `LOSS` | -0.5 | AFL official report + match centre 8237 |
+| P-040/V06 | C03 | 2 | Combined Total Over 168.5 | `SUPPORTED` | DG-P040-TOTAL | `PRIMARY_FORMAL` | 200 | `WIN` | +31.5 | same |
+| P-040/V06 | C04 | 3 | Combined Total Under 168.5 | `AVOID` | DG-P040-TOTAL | `CORRELATED_SECONDARY` | 200 | `LOSS` | -31.5 | same |
+| P-040/V06 | C01 | 4 | Fremantle -23.5 | `AVOID` | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` | Fremantle won by 24 | `WIN` | +0.5 | same |
+| P-040/V05 | C05 | 1 | Combined Total Under 176.5 | `AVOID` | DG-P040-TOTAL-176 | `PRIMARY_FORMAL` | 200 | `LOSS` | -23.5 | same |
+| P-040/V03 | C02 | 3 | Adelaide Crows -23.5 | `AVOID` | DG-P040-MARGIN | `INELIGIBLE` | n/a | `VOID` | n/a | withdrawn after user correction before the final |
+
+**Potential winner:** Adelaide Crows `LEAN` at V03/V06 — `LOSS`. Fremantle won and locked the minor premiership.  
+**Controlling raw rows:** 2-3 (C03 WIN, C01 WIN; C02R LOSS, C04 LOSS, C05 LOSS). **Primary formal (non-AVOID):** 1-1. **C05 decision evaluation:** `AVOID` correctly declined a losing Under; contract outcome remains `LOSS` and is not rewritten. **Higher-ranked exact-complement branches:** 1/2 (Over 168.5 correct; Adelaide +23.5 incorrect). C01/C02R are `BOUNDARY_FRAGILE` (24 versus 23.5). Rank #1 at controlling delivery lost → **one AFL live-handicap confidence strike**; six-field audit below.
+
+Final structural stats used in the retrospective, from the ESPN official-partner box (cross-checked against the AFL report's narrative): inside-50s **60–46**, clearances **44–38**, centre clearances **17–12**, scoring shots **32–23**, disposals **353–320**. Jye Amiss 5 goals; Caleb Serong 29 disposals / 12 clearances; Izak Rankine 39 disposals. `[ESPN summary API, OPENED 2026-08-15T01:47+10:00; AFL official report, OPENED 2026-08-15T01:50+10:00]`
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Adelaide led early (Laird, Fogarty, Ah Chee) and the game was tied early in Q4 (Thilthorpe). Fremantle then produced the named late-breakaway: Amiss' fifth, Dudley's snap, a 7-1 last-quarter centre-clearance indicator, and five late goals. Final margin 24 on a 36–19 Q4. Combined scoring never slowed: Q1 55, Q2 34, Q3 56, Q4 55 = 200. |
+| What went right | V06 correctly flipped the original total to Over 168.5 once only 16 further Under points remained. V05 correctly `AVOID`ed Under 176.5: remaining allowance was 56 then 24 from a still two-way shot profile, and 48 more points were scored after the V06 152-point cutoff. The original V01 warning that both −23.5 rows could lose in a 1–23 corridor was conceptually right even though the final landed one point outside it. P-027's remaining-exposure maths, once applied at V04/V05, pointed the right way on 176.5. |
+| What went wrong | Controlling #1 Adelaide +23.5 was `SUPPORTED` from a Q4 tie because the 23.5 cushion looked huge. The card named the late Fremantle 24+ burst as the ordinary kill path and still promoted confidence. That path occurred. Separately, V03 had ranked Under 168.5 #1 on H2H/venue suppression while Q1 already had 26 points and Adelaide's 7–4 inside-50 / 7–3 clearance edge — the P-027 failure mode. H2H Overs of 1/5 did not survive a 200-point, 32–23 scoring-shot game. The Adelaide winner lean treated live clearance as a match-long identity and underweighted Fremantle's Optus late-game stoppage pattern. |
+| Classification / why | Primary cause `RANKING`; contributors `CALIBRATION`, `MODEL_SPEC`; knowability `known-underweighted`. Named kill path occurred, so not `GENUINE_TAIL`. Margin is `BOUNDARY_FRAGILE` and is weak promotion evidence; the 200-point total miss on the early Under is not fragile. |
+| Overweighted / ignored | Overweighted: H2H/Optus Under rates, the raw 23.5-point Q4 cushion, and Adelaide's early clearance lead as a full-match winner mechanism. Underweighted: remaining-points versus current scoring-shot volume (P-027), Fremantle's documented late centre-square control, Amiss/Bolton inside-50 creation (Bolton 15 inside-50s), and how a home favourite can manufacture a 24-point Q4 burst from a tie. |
+| Concrete correction and falsification | For AFL live cushions of +20 or more in Q4, require the cushioned side to be winning the current-quarter centre-clearance/inside-50 chain before using `SUPPORTED`; otherwise cap at `LEAN`/`FORCED RANK`. For live Unders, do not leave them #1 when remaining allowance needs a slowdown and both sides are still generating scoring shots. Track the next five Q4-tied 20+ handicap cards and the next T-007 live-Under cards. Falsification: if those cushions repeatedly hold because the favourite cannot win remaining stoppages, narrow the handicap correction to Optus/home-fortress spots. |
+
+### Running-record and queue reconciliation
+
+| Ledger | P-040 contribution | New post-audit value |
+|---|---:|---:|
+| Controlling-delivery primary formal | 1-1 | 6-2 |
+| Controlling-delivery raw rows | 2-3 | **11-12** |
+| Higher-ranked exact-complement branch | 1/2 | 8/11 |
+| Controlling potential winner | 0-1 | 4-1 |
+
+| Open ID | State at settlement pass | Action |
+|---|---|---|
+| P-038 | LIVE — stumps, Bangladesh 351/6 after 110 overs; Australia 198; Day 3 not started | Retained open; no partial settlement (Over 250.5 and Tanzid 100+ are mechanically past their lines but the event and remaining 356.5/winner contracts are still live) |
+| P-040 | FINAL — Fremantle 112, Adelaide 88 | Settled and closed |
+
+P-040 is closed. **P-038 is the only open record.** The mutable snapshot at the top controls.
+
+## Prospective validation registry — APPENDED P-040 TEST (2026-08-15T01:55+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |
+
+T-007 observation 1: V03 promoted Under 168.5 to #1 with 26 early points and no suppression chain; final 200 is a miss. V04/V05 later logged remaining-allowance maths and correctly avoided 176.5. The logging criterion passed on the later views; the ranking criterion failed on V03.
+
+
+## Prospective validation registry — APPENDED P-040 TEST (2026-08-15T01:55+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |
+
+T-007 observation 1: V03 promoted Under 168.5 to #1 with 26 early points and no suppression chain; final 200 is a miss. V04/V05 later logged remaining-allowance maths and correctly avoided 176.5. The logging criterion passed on the later views; the ranking criterion failed on V03.
+
+## Open-event index — APPENDED P-040 SETTLEMENT UPDATE (2026-08-15T01:55+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+
+|---|---|---|---|---:|---:|---|---|---|
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |
+
+T-007 observation 1: V03 promoted Under 168.5 to #1 with 26 early points and no suppression chain; final 200 is a miss. V04/V05 later logged remaining-allowance maths and correctly avoided 176.5. The logging criterion passed on the later views; the ranking criterion failed on V03.
+
+## Open-event index — APPENDED P-040 SETTLEMENT UPDATE (2026-08-15T01:55+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+
+T-007 observation 1: V03 promoted Under 168.5 to #1 with 26 early points and no suppression chain; final 200 is a miss. V04/V05 later logged remaining-allowance maths and correctly avoided 176.5. The logging criterion passed on the later views; the ranking criterion failed on V03.
+
+## Open-event index — APPENDED P-040 SETTLEMENT UPDATE (2026-08-15T01:55+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+| V04 | 114 points, Q3 12:35 | Under 176.5 allowed 62 more | 86 more were scored; avoiding it was correct |
+| V05 | 120 points, Q3 14:30 | Under 176.5 allowed 56 more | 80 more were scored; avoiding it was correct |
+| V06 | 152 points, Q4 4:59, scores tied | Over 168.5 needed 17; Adelaide +23.5 allowed a 23-point loss | 48 more points and a 24-point Fremantle margin: Over won, cushion lost by 0.5 |
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+| V04 | 114 points, Q3 12:35 | Under 176.5 allowed 62 more | 86 more were scored; avoiding it was correct |
+| V05 | 120 points, Q3 14:30 | Under 176.5 allowed 56 more | 80 more were scored; avoiding it was correct |
+| V06 | 152 points, Q4 4:59, scores tied | Over 168.5 needed 17; Adelaide +23.5 allowed a 23-point loss | 48 more points and a 24-point Fremantle margin: Over won, cushion lost by 0.5 |
+
+The result reinforces P-027/T-007: a live Under cannot be led by old H2H suppression when current scoring-shot and territory production do not show the necessary slowdown. It also creates the P-040/T-013 hypothesis already recorded in `RULES_AFL.md`: from a Q4 tie, even a +23.5 cushion is not strong enough for `SUPPORTED` when the opposing home favourite can dominate the remaining centre-clearance → inside-50 chain. The exact margin was fragile, but the named failure mechanism was real and occurred; this is a ranking/calibration miss, not an unknowable tail.
+
+Late-season motivation was relevant but non-discriminating: Fremantle could seal the minor premiership and Adelaide was playing for top-six/top-four positioning. The winner was decided by execution—five late goals and a 7–1 final-quarter centre-clearance result—not by merely assigning one side more desire. No further AFL rule is promoted from this single match because the existing P-040 lesson and prospective five-event test already capture the mechanism without overfitting.
+
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+| V04 | 114 points, Q3 12:35 | Under 176.5 allowed 62 more | 86 more were scored; avoiding it was correct |
+| V05 | 120 points, Q3 14:30 | Under 176.5 allowed 56 more | 80 more were scored; avoiding it was correct |
+| V06 | 152 points, Q4 4:59, scores tied | Over 168.5 needed 17; Adelaide +23.5 allowed a 23-point loss | 48 more points and a 24-point Fremantle margin: Over won, cushion lost by 0.5 |
+
+The result reinforces P-027/T-007: a live Under cannot be led by old H2H suppression when current scoring-shot and territory production do not show the necessary slowdown. It also creates the P-040/T-013 hypothesis already recorded in `RULES_AFL.md`: from a Q4 tie, even a +23.5 cushion is not strong enough for `SUPPORTED` when the opposing home favourite can dominate the remaining centre-clearance → inside-50 chain. The exact margin was fragile, but the named failure mechanism was real and occurred; this is a ranking/calibration miss, not an unknowable tail.
+
+Late-season motivation was relevant but non-discriminating: Fremantle could seal the minor premiership and Adelaide was playing for top-six/top-four positioning. The winner was decided by execution—five late goals and a 7–1 final-quarter centre-clearance result—not by merely assigning one side more desire. No further AFL rule is promoted from this single match because the existing P-040 lesson and prospective five-event test already capture the mechanism without overfitting.
+
+
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+| V04 | 114 points, Q3 12:35 | Under 176.5 allowed 62 more | 86 more were scored; avoiding it was correct |
+| V05 | 120 points, Q3 14:30 | Under 176.5 allowed 56 more | 80 more were scored; avoiding it was correct |
+| V06 | 152 points, Q4 4:59, scores tied | Over 168.5 needed 17; Adelaide +23.5 allowed a 23-point loss | 48 more points and a 24-point Fremantle margin: Over won, cushion lost by 0.5 |
+
+The result reinforces P-027/T-007: a live Under cannot be led by old H2H suppression when current scoring-shot and territory production do not show the necessary slowdown. It also creates the P-040/T-013 hypothesis already recorded in `RULES_AFL.md`: from a Q4 tie, even a +23.5 cushion is not strong enough for `SUPPORTED` when the opposing home favourite can dominate the remaining centre-clearance → inside-50 chain. The exact margin was fragile, but the named failure mechanism was real and occurred; this is a ranking/calibration miss, not an unknowable tail.
+
+Late-season motivation was relevant but non-discriminating: Fremantle could seal the minor premiership and Adelaide was playing for top-six/top-four positioning. The winner was decided by execution—five late goals and a 7–1 final-quarter centre-clearance result—not by merely assigning one side more desire. No further AFL rule is promoted from this single match because the existing P-040 lesson and prospective five-event test already capture the mechanism without overfitting.
+
+### Queue state after audit
+
+
+**User correction:** “instead of -23.5 crows, i actually meant +23.5.” The intended second handicap is therefore **Adelaide Crows +23.5**, not Adelaide -23.5. The original request and P-040/V01–V03 remain immutable evidence of what was supplied and analysed; they are not silently rewritten. Original C02 (`Adelaide -23.5`) is now **WITHDRAWN / research grade `VOID` / performance-ineligible** because the user clarified the input before the match ended. Corrected contract **C02R** becomes active only from this timestamp and will be graded from the official final score.
+
+This correction changes the market topology: C01 Fremantle -23.5 and C02R Adelaide +23.5 are now exact half-point complements. C02R wins if Adelaide wins, draws, or loses by 23 or fewer; C01 wins only if Fremantle wins by 24+.
+
+**Official correction-cutoff state:** Fremantle **11.10 (76)**, Adelaide **11.10 (76)**, combined 152, Q4 **4:59 elapsed**, last updated 22:25:15 AEST and observed 22:25:18 AEST. Inside-50s were 44–36, clearances 31–37, centre clearances 11–11, scoring shots 21–21 and disposals 273–247. `[Official AFL CFS match item and team stats, directly queried 2026-08-14T22:25:18+10:00]`
+
+At a tied score, C02R has its full 23.5-point cushion; Fremantle -23.5 requires a 24-point margin from the remainder. Over 168.5 needs 17 more match points; Under 168.5 permits only 16. Under 176.5 permits 24 more.
+
+| Rank | View ID | Contract ID | Selection | Verdict | Confidence/caveat | Dependence group | Performance eligibility |
+|---:|---|---|---|---|---|---|---|
+| 1 | P-040/V06 | C02R | **Adelaide Crows +23.5** | `SUPPORTED` | Tied in Q4 with even scoring shots and a 23.5-point cushion; ordinary kill path is a late Fremantle 24+ breakaway | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` |
+| 2 | P-040/V06 | C03 | **Combined Total Over 168.5** | `SUPPORTED` | Needs 17 more with most of Q4 remaining; close-game pressure and 42 scoring shots support continued scoring | DG-P040-TOTAL | `PRIMARY_FORMAL` |
+| 3 | P-040/V06 | C04 | **Combined Total Under 168.5** | `AVOID` | Only 16 further points allowed; exact complement of C03 | DG-P040-TOTAL | `CORRELATED_SECONDARY` |
+| 4 | P-040/V06 | C01 | **Fremantle -23.5** | `AVOID` | Requires Fremantle to create a 24-point margin from a Q4 tie | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` |
+
+**Corrected decision:** Adelaide +23.5 is the best of the four original intended markets at this live cutoff. It is not backdated to the earlier views. Potential winner remains too close for a strong call; prior Adelaide lean is retained with low separation because its clearance edge offsets Fremantle's inside-50/home edge.
+
+### Corrected settlement instruction
+
+At final, grade C01/C02R as exact complements. Record original C02 as `VOID — withdrawn after user input correction`, not as a win/loss. C03/C04 and later C05 retain their existing official-total boundaries.
+
+## Settlement — P-040 Fremantle v Adelaide Crows, AFL Round 23 (appended 2026-08-15T01:55+10:00)
+
+**Queue pass:** P-038 checked first. Cricbuzz still listed **Bangladesh 351/6 (110 overs)** versus Australia **198**, Mehidy Hasan Miraz 32* (73) and Hasan Mahmud 13* (76), match page title/canonical unchanged from day-two stumps. Day 3 is scheduled 10:00 ACST / 10:30 AEST on 15 August, after this settlement timestamp. **P-038 remains `OPEN / LIVE`; no partial settlement.** `[Cricbuzz match 148316, directly OPENED 2026-08-15T01:48+10:00]`  
+P-040 was `FINAL` and is settled below.
+
+**Settlement recorded:** 2026-08-15T01:55+10:00  
+**Official final:** Fremantle **16.16 (112)** defeated Adelaide **13.10 (88)** by **24 points** at Optus Stadium. Combined total **200**. Quarter scores: Fremantle 5.4 / 7.5 / 11.10 / 16.16; Adelaide 3.3 / 6.6 / 10.9 / 13.10. Ordinary home-and-away finish; no additional time. Injuries listed nil-nil. Crowd 55,010. `[Official AFL match report, OPENED 2026-08-15T01:50+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)` · `[Official AFL match centre 8237, OPENED 2026-08-15T01:51+10:00](https://www.afl.com.au/afl/matches/8237)` · ESPN official-partner feed event `1133680` independently `STATUS_FINAL`, 112–88, same quarter point totals `[ESPN summary API, OPENED 2026-08-15T01:47+10:00](https://site.api.espn.com/apis/site/v2/sports/australian-football/afl/summary?event=1133680)`.
+
+P-040/V06 is the controlling delivery view for C01/C02R/C03/C04. P-040/V05 is the controlling delivery view for C05. P-040/V01–V03 remain immutable earlier evidence and are not double-counted in the controlling cohort. Original C02 is `VOID`.
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-040/V06 | C02R | 1 | Adelaide Crows +23.5 | `SUPPORTED` | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` | Adelaide lost by 24 | `LOSS` | -0.5 | AFL official report + match centre 8237 |
+| P-040/V06 | C03 | 2 | Combined Total Over 168.5 | `SUPPORTED` | DG-P040-TOTAL | `PRIMARY_FORMAL` | 200 | `WIN` | +31.5 | same |
+| P-040/V06 | C04 | 3 | Combined Total Under 168.5 | `AVOID` | DG-P040-TOTAL | `CORRELATED_SECONDARY` | 200 | `LOSS` | -31.5 | same |
+| P-040/V06 | C01 | 4 | Fremantle -23.5 | `AVOID` | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` | Fremantle won by 24 | `WIN` | +0.5 | same |
+| P-040/V05 | C05 | 1 | Combined Total Under 176.5 | `AVOID` | DG-P040-TOTAL-176 | `PRIMARY_FORMAL` | 200 | `LOSS` | -23.5 | same |
+| P-040/V03 | C02 | 3 | Adelaide Crows -23.5 | `AVOID` | DG-P040-MARGIN | `INELIGIBLE` | n/a | `VOID` | n/a | withdrawn after user correction before the final |
+
+**Potential winner:** Adelaide Crows `LEAN` at V03/V06 — `LOSS`. Fremantle won and locked the minor premiership.  
+**Controlling raw rows:** 2-3 (C03 WIN, C01 WIN; C02R LOSS, C04 LOSS, C05 LOSS). **Primary formal (non-AVOID):** 1-1. **C05 decision evaluation:** `AVOID` correctly declined a losing Under; contract outcome remains `LOSS` and is not rewritten. **Higher-ranked exact-complement branches:** 1/2 (Over 168.5 correct; Adelaide +23.5 incorrect). C01/C02R are `BOUNDARY_FRAGILE` (24 versus 23.5). Rank #1 at controlling delivery lost → **one AFL live-handicap confidence strike**; six-field audit below.
+
+Final structural stats used in the retrospective, from the ESPN official-partner box (cross-checked against the AFL report's narrative): inside-50s **60–46**, clearances **44–38**, centre clearances **17–12**, scoring shots **32–23**, disposals **353–320**. Jye Amiss 5 goals; Caleb Serong 29 disposals / 12 clearances; Izak Rankine 39 disposals. `[ESPN summary API, OPENED 2026-08-15T01:47+10:00; AFL official report, OPENED 2026-08-15T01:50+10:00]`
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Adelaide led early (Laird, Fogarty, Ah Chee) and the game was tied early in Q4 (Thilthorpe). Fremantle then produced the named late-breakaway: Amiss' fifth, Dudley's snap, a 7-1 last-quarter centre-clearance indicator, and five late goals. Final margin 24 on a 36–19 Q4. Combined scoring never slowed: Q1 55, Q2 34, Q3 56, Q4 55 = 200. |
+| What went right | V06 correctly flipped the original total to Over 168.5 once only 16 further Under points remained. V05 correctly `AVOID`ed Under 176.5: remaining allowance was 56 then 24 from a still two-way shot profile, and 48 more points were scored after the V06 152-point cutoff. The original V01 warning that both −23.5 rows could lose in a 1–23 corridor was conceptually right even though the final landed one point outside it. P-027's remaining-exposure maths, once applied at V04/V05, pointed the right way on 176.5. |
+| What went wrong | Controlling #1 Adelaide +23.5 was `SUPPORTED` from a Q4 tie because the 23.5 cushion looked huge. The card named the late Fremantle 24+ burst as the ordinary kill path and still promoted confidence. That path occurred. Separately, V03 had ranked Under 168.5 #1 on H2H/venue suppression while Q1 already had 26 points and Adelaide's 7–4 inside-50 / 7–3 clearance edge — the P-027 failure mode. H2H Overs of 1/5 did not survive a 200-point, 32–23 scoring-shot game. The Adelaide winner lean treated live clearance as a match-long identity and underweighted Fremantle's Optus late-game stoppage pattern. |
+| Classification / why | Primary cause `RANKING`; contributors `CALIBRATION`, `MODEL_SPEC`; knowability `known-underweighted`. Named kill path occurred, so not `GENUINE_TAIL`. Margin is `BOUNDARY_FRAGILE` and is weak promotion evidence; the 200-point total miss on the early Under is not fragile. |
+| Overweighted / ignored | Overweighted: H2H/Optus Under rates, the raw 23.5-point Q4 cushion, and Adelaide's early clearance lead as a full-match winner mechanism. Underweighted: remaining-points versus current scoring-shot volume (P-027), Fremantle's documented late centre-square control, Amiss/Bolton inside-50 creation (Bolton 15 inside-50s), and how a home favourite can manufacture a 24-point Q4 burst from a tie. |
+| Concrete correction and falsification | For AFL live cushions of +20 or more in Q4, require the cushioned side to be winning the current-quarter centre-clearance/inside-50 chain before using `SUPPORTED`; otherwise cap at `LEAN`/`FORCED RANK`. For live Unders, do not leave them #1 when remaining allowance needs a slowdown and both sides are still generating scoring shots. Track the next five Q4-tied 20+ handicap cards and the next T-007 live-Under cards. Falsification: if those cushions repeatedly hold because the favourite cannot win remaining stoppages, narrow the handicap correction to Optus/home-fortress spots. |
+
+### Running-record and queue reconciliation
+
+| Ledger | P-040 contribution | New post-audit value |
+|---|---:|---:|
+| Controlling-delivery primary formal | 1-1 | 6-2 |
+| Controlling-delivery raw rows | 2-3 | **11-12** |
+| Higher-ranked exact-complement branch | 1/2 | 8/11 |
+| Controlling potential winner | 0-1 | 4-1 |
+
+| Open ID | State at settlement pass | Action |
+|---|---|---|
+| P-038 | LIVE — stumps, Bangladesh 351/6 after 110 overs; Australia 198; Day 3 not started | Retained open; no partial settlement (Over 250.5 and Tanzid 100+ are mechanically past their lines but the event and remaining 356.5/winner contracts are still live) |
+| P-040 | FINAL — Fremantle 112, Adelaide 88 | Settled and closed |
+
+P-040 is closed. **P-038 is the only open record.** The mutable snapshot at the top controls.
+
+## Prospective validation registry — APPENDED P-040 TEST (2026-08-15T01:55+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+
+## Prospective validation registry — APPENDED P-040 TEST (2026-08-15T01:55+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |
+
+T-007 observation 1: V03 promoted Under 168.5 to #1 with 26 early points and no suppression chain; final 200 is a miss. V04/V05 later logged remaining-allowance maths and correctly avoided 176.5. The logging criterion passed on the later views; the ranking criterion failed on V03.
+
+## Open-event index — APPENDED P-040 SETTLEMENT UPDATE (2026-08-15T01:55+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |
+
+T-007 observation 1: V03 promoted Under 168.5 to #1 with 26 early points and no suppression chain; final 200 is a miss. V04/V05 later logged remaining-allowance maths and correctly avoided 176.5. The logging criterion passed on the later views; the ranking criterion failed on V03.
+
+## Open-event index — APPENDED P-040 SETTLEMENT UPDATE (2026-08-15T01:55+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+
+
+## Open-event index — APPENDED P-040 SETTLEMENT UPDATE (2026-08-15T01:55+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+| V04 | 114 points, Q3 12:35 | Under 176.5 allowed 62 more | 86 more were scored; avoiding it was correct |
+| V05 | 120 points, Q3 14:30 | Under 176.5 allowed 56 more | 80 more were scored; avoiding it was correct |
+| V06 | 152 points, Q4 4:59, scores tied | Over 168.5 needed 17; Adelaide +23.5 allowed a 23-point loss | 48 more points and a 24-point Fremantle margin: Over won, cushion lost by 0.5 |
+
+
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+| V04 | 114 points, Q3 12:35 | Under 176.5 allowed 62 more | 86 more were scored; avoiding it was correct |
+| V05 | 120 points, Q3 14:30 | Under 176.5 allowed 56 more | 80 more were scored; avoiding it was correct |
+| V06 | 152 points, Q4 4:59, scores tied | Over 168.5 needed 17; Adelaide +23.5 allowed a 23-point loss | 48 more points and a 24-point Fremantle margin: Over won, cushion lost by 0.5 |
+
+The result reinforces P-027/T-007: a live Under cannot be led by old H2H suppression when current scoring-shot and territory production do not show the necessary slowdown. It also creates the P-040/T-013 hypothesis already recorded in `RULES_AFL.md`: from a Q4 tie, even a +23.5 cushion is not strong enough for `SUPPORTED` when the opposing home favourite can dominate the remaining centre-clearance → inside-50 chain. The exact margin was fragile, but the named failure mechanism was real and occurred; this is a ranking/calibration miss, not an unknowable tail.
+
+Late-season motivation was relevant but non-discriminating: Fremantle could seal the minor premiership and Adelaide was playing for top-six/top-four positioning. The winner was decided by execution—five late goals and a 7–1 final-quarter centre-clearance result—not by merely assigning one side more desire. No further AFL rule is promoted from this single match because the existing P-040 lesson and prospective five-event test already capture the mechanism without overfitting.
+
+### Queue state after audit
+
+
+**User correction:** “instead of -23.5 crows, i actually meant +23.5.” The intended second handicap is therefore **Adelaide Crows +23.5**, not Adelaide -23.5. The original request and P-040/V01–V03 remain immutable evidence of what was supplied and analysed; they are not silently rewritten. Original C02 (`Adelaide -23.5`) is now **WITHDRAWN / research grade `VOID` / performance-ineligible** because the user clarified the input before the match ended. Corrected contract **C02R** becomes active only from this timestamp and will be graded from the official final score.
+
+This correction changes the market topology: C01 Fremantle -23.5 and C02R Adelaide +23.5 are now exact half-point complements. C02R wins if Adelaide wins, draws, or loses by 23 or fewer; C01 wins only if Fremantle wins by 24+.
+
+**Official correction-cutoff state:** Fremantle **11.10 (76)**, Adelaide **11.10 (76)**, combined 152, Q4 **4:59 elapsed**, last updated 22:25:15 AEST and observed 22:25:18 AEST. Inside-50s were 44–36, clearances 31–37, centre clearances 11–11, scoring shots 21–21 and disposals 273–247. `[Official AFL CFS match item and team stats, directly queried 2026-08-14T22:25:18+10:00]`
+
+At a tied score, C02R has its full 23.5-point cushion; Fremantle -23.5 requires a 24-point margin from the remainder. Over 168.5 needs 17 more match points; Under 168.5 permits only 16. Under 176.5 permits 24 more.
+
+| Rank | View ID | Contract ID | Selection | Verdict | Confidence/caveat | Dependence group | Performance eligibility |
+|---:|---|---|---|---|---|---|---|
+| 1 | P-040/V06 | C02R | **Adelaide Crows +23.5** | `SUPPORTED` | Tied in Q4 with even scoring shots and a 23.5-point cushion; ordinary kill path is a late Fremantle 24+ breakaway | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` |
+| 2 | P-040/V06 | C03 | **Combined Total Over 168.5** | `SUPPORTED` | Needs 17 more with most of Q4 remaining; close-game pressure and 42 scoring shots support continued scoring | DG-P040-TOTAL | `PRIMARY_FORMAL` |
+| 3 | P-040/V06 | C04 | **Combined Total Under 168.5** | `AVOID` | Only 16 further points allowed; exact complement of C03 | DG-P040-TOTAL | `CORRELATED_SECONDARY` |
+| 4 | P-040/V06 | C01 | **Fremantle -23.5** | `AVOID` | Requires Fremantle to create a 24-point margin from a Q4 tie | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` |
+
+**Corrected decision:** Adelaide +23.5 is the best of the four original intended markets at this live cutoff. It is not backdated to the earlier views. Potential winner remains too close for a strong call; prior Adelaide lean is retained with low separation because its clearance edge offsets Fremantle's inside-50/home edge.
+
+### Corrected settlement instruction
+
+At final, grade C01/C02R as exact complements. Record original C02 as `VOID — withdrawn after user input correction`, not as a win/loss. C03/C04 and later C05 retain their existing official-total boundaries.
+
+## Settlement — P-040 Fremantle v Adelaide Crows, AFL Round 23 (appended 2026-08-15T01:55+10:00)
+
+**Queue pass:** P-038 checked first. Cricbuzz still listed **Bangladesh 351/6 (110 overs)** versus Australia **198**, Mehidy Hasan Miraz 32* (73) and Hasan Mahmud 13* (76), match page title/canonical unchanged from day-two stumps. Day 3 is scheduled 10:00 ACST / 10:30 AEST on 15 August, after this settlement timestamp. **P-038 remains `OPEN / LIVE`; no partial settlement.** `[Cricbuzz match 148316, directly OPENED 2026-08-15T01:48+10:00]`  
+P-040 was `FINAL` and is settled below.
+
+**Settlement recorded:** 2026-08-15T01:55+10:00  
+**Official final:** Fremantle **16.16 (112)** defeated Adelaide **13.10 (88)** by **24 points** at Optus Stadium. Combined total **200**. Quarter scores: Fremantle 5.4 / 7.5 / 11.10 / 16.16; Adelaide 3.3 / 6.6 / 10.9 / 13.10. Ordinary home-and-away finish; no additional time. Injuries listed nil-nil. Crowd 55,010. `[Official AFL match report, OPENED 2026-08-15T01:50+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)` · `[Official AFL match centre 8237, OPENED 2026-08-15T01:51+10:00](https://www.afl.com.au/afl/matches/8237)` · ESPN official-partner feed event `1133680` independently `STATUS_FINAL`, 112–88, same quarter point totals `[ESPN summary API, OPENED 2026-08-15T01:47+10:00](https://site.api.espn.com/apis/site/v2/sports/australian-football/afl/summary?event=1133680)`.
+
+P-040/V06 is the controlling delivery view for C01/C02R/C03/C04. P-040/V05 is the controlling delivery view for C05. P-040/V01–V03 remain immutable earlier evidence and are not double-counted in the controlling cohort. Original C02 is `VOID`.
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-040/V06 | C02R | 1 | Adelaide Crows +23.5 | `SUPPORTED` | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` | Adelaide lost by 24 | `LOSS` | -0.5 | AFL official report + match centre 8237 |
+| P-040/V06 | C03 | 2 | Combined Total Over 168.5 | `SUPPORTED` | DG-P040-TOTAL | `PRIMARY_FORMAL` | 200 | `WIN` | +31.5 | same |
+| P-040/V06 | C04 | 3 | Combined Total Under 168.5 | `AVOID` | DG-P040-TOTAL | `CORRELATED_SECONDARY` | 200 | `LOSS` | -31.5 | same |
+| P-040/V06 | C01 | 4 | Fremantle -23.5 | `AVOID` | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` | Fremantle won by 24 | `WIN` | +0.5 | same |
+| P-040/V05 | C05 | 1 | Combined Total Under 176.5 | `AVOID` | DG-P040-TOTAL-176 | `PRIMARY_FORMAL` | 200 | `LOSS` | -23.5 | same |
+| P-040/V03 | C02 | 3 | Adelaide Crows -23.5 | `AVOID` | DG-P040-MARGIN | `INELIGIBLE` | n/a | `VOID` | n/a | withdrawn after user correction before the final |
+
+**Potential winner:** Adelaide Crows `LEAN` at V03/V06 — `LOSS`. Fremantle won and locked the minor premiership.  
+**Controlling raw rows:** 2-3 (C03 WIN, C01 WIN; C02R LOSS, C04 LOSS, C05 LOSS). **Primary formal (non-AVOID):** 1-1. **C05 decision evaluation:** `AVOID` correctly declined a losing Under; contract outcome remains `LOSS` and is not rewritten. **Higher-ranked exact-complement branches:** 1/2 (Over 168.5 correct; Adelaide +23.5 incorrect). C01/C02R are `BOUNDARY_FRAGILE` (24 versus 23.5). Rank #1 at controlling delivery lost → **one AFL live-handicap confidence strike**; six-field audit below.
+
+Final structural stats used in the retrospective, from the ESPN official-partner box (cross-checked against the AFL report's narrative): inside-50s **60–46**, clearances **44–38**, centre clearances **17–12**, scoring shots **32–23**, disposals **353–320**. Jye Amiss 5 goals; Caleb Serong 29 disposals / 12 clearances; Izak Rankine 39 disposals. `[ESPN summary API, OPENED 2026-08-15T01:47+10:00; AFL official report, OPENED 2026-08-15T01:50+10:00]`
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Adelaide led early (Laird, Fogarty, Ah Chee) and the game was tied early in Q4 (Thilthorpe). Fremantle then produced the named late-breakaway: Amiss' fifth, Dudley's snap, a 7-1 last-quarter centre-clearance indicator, and five late goals. Final margin 24 on a 36–19 Q4. Combined scoring never slowed: Q1 55, Q2 34, Q3 56, Q4 55 = 200. |
+| What went right | V06 correctly flipped the original total to Over 168.5 once only 16 further Under points remained. V05 correctly `AVOID`ed Under 176.5: remaining allowance was 56 then 24 from a still two-way shot profile, and 48 more points were scored after the V06 152-point cutoff. The original V01 warning that both −23.5 rows could lose in a 1–23 corridor was conceptually right even though the final landed one point outside it. P-027's remaining-exposure maths, once applied at V04/V05, pointed the right way on 176.5. |
+| What went wrong | Controlling #1 Adelaide +23.5 was `SUPPORTED` from a Q4 tie because the 23.5 cushion looked huge. The card named the late Fremantle 24+ burst as the ordinary kill path and still promoted confidence. That path occurred. Separately, V03 had ranked Under 168.5 #1 on H2H/venue suppression while Q1 already had 26 points and Adelaide's 7–4 inside-50 / 7–3 clearance edge — the P-027 failure mode. H2H Overs of 1/5 did not survive a 200-point, 32–23 scoring-shot game. The Adelaide winner lean treated live clearance as a match-long identity and underweighted Fremantle's Optus late-game stoppage pattern. |
+| Classification / why | Primary cause `RANKING`; contributors `CALIBRATION`, `MODEL_SPEC`; knowability `known-underweighted`. Named kill path occurred, so not `GENUINE_TAIL`. Margin is `BOUNDARY_FRAGILE` and is weak promotion evidence; the 200-point total miss on the early Under is not fragile. |
+| Overweighted / ignored | Overweighted: H2H/Optus Under rates, the raw 23.5-point Q4 cushion, and Adelaide's early clearance lead as a full-match winner mechanism. Underweighted: remaining-points versus current scoring-shot volume (P-027), Fremantle's documented late centre-square control, Amiss/Bolton inside-50 creation (Bolton 15 inside-50s), and how a home favourite can manufacture a 24-point Q4 burst from a tie. |
+| Concrete correction and falsification | For AFL live cushions of +20 or more in Q4, require the cushioned side to be winning the current-quarter centre-clearance/inside-50 chain before using `SUPPORTED`; otherwise cap at `LEAN`/`FORCED RANK`. For live Unders, do not leave them #1 when remaining allowance needs a slowdown and both sides are still generating scoring shots. Track the next five Q4-tied 20+ handicap cards and the next T-007 live-Under cards. Falsification: if those cushions repeatedly hold because the favourite cannot win remaining stoppages, narrow the handicap correction to Optus/home-fortress spots. |
+
+### Running-record and queue reconciliation
+
+| Ledger | P-040 contribution | New post-audit value |
+|---|---:|---:|
+| Controlling-delivery primary formal | 1-1 | 6-2 |
+| Controlling-delivery raw rows | 2-3 | **11-12** |
+| Higher-ranked exact-complement branch | 1/2 | 8/11 |
+| Controlling potential winner | 0-1 | 4-1 |
+
+| Open ID | State at settlement pass | Action |
+|---|---|---|
+| P-038 | LIVE — stumps, Bangladesh 351/6 after 110 overs; Australia 198; Day 3 not started | Retained open; no partial settlement (Over 250.5 and Tanzid 100+ are mechanically past their lines but the event and remaining 356.5/winner contracts are still live) |
+| P-040 | FINAL — Fremantle 112, Adelaide 88 | Settled and closed |
+
+P-040 is closed. **P-038 is the only open record.** The mutable snapshot at the top controls.
+
+## Prospective validation registry — APPENDED P-040 TEST (2026-08-15T01:55+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |
+
+
+**Official correction-cutoff state:** Fremantle **11.10 (76)**, Adelaide **11.10 (76)**, combined 152, Q4 **4:59 elapsed**, last updated 22:25:15 AEST and observed 22:25:18 AEST. Inside-50s were 44–36, clearances 31–37, centre clearances 11–11, scoring shots 21–21 and disposals 273–247. `[Official AFL CFS match item and team stats, directly queried 2026-08-14T22:25:18+10:00]`
+
+At a tied score, C02R has its full 23.5-point cushion; Fremantle -23.5 requires a 24-point margin from the remainder. Over 168.5 needs 17 more match points; Under 168.5 permits only 16. Under 176.5 permits 24 more.
+
+| Rank | View ID | Contract ID | Selection | Verdict | Confidence/caveat | Dependence group | Performance eligibility |
+|---:|---|---|---|---|---|---|---|
+| 1 | P-040/V06 | C02R | **Adelaide Crows +23.5** | `SUPPORTED` | Tied in Q4 with even scoring shots and a 23.5-point cushion; ordinary kill path is a late Fremantle 24+ breakaway | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` |
+| 2 | P-040/V06 | C03 | **Combined Total Over 168.5** | `SUPPORTED` | Needs 17 more with most of Q4 remaining; close-game pressure and 42 scoring shots support continued scoring | DG-P040-TOTAL | `PRIMARY_FORMAL` |
+| 3 | P-040/V06 | C04 | **Combined Total Under 168.5** | `AVOID` | Only 16 further points allowed; exact complement of C03 | DG-P040-TOTAL | `CORRELATED_SECONDARY` |
+| 4 | P-040/V06 | C01 | **Fremantle -23.5** | `AVOID` | Requires Fremantle to create a 24-point margin from a Q4 tie | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` |
+
+**Corrected decision:** Adelaide +23.5 is the best of the four original intended markets at this live cutoff. It is not backdated to the earlier views. Potential winner remains too close for a strong call; prior Adelaide lean is retained with low separation because its clearance edge offsets Fremantle's inside-50/home edge.
+
+### Corrected settlement instruction
+
+At final, grade C01/C02R as exact complements. Record original C02 as `VOID — withdrawn after user input correction`, not as a win/loss. C03/C04 and later C05 retain their existing official-total boundaries.
+
+## Settlement — P-040 Fremantle v Adelaide Crows, AFL Round 23 (appended 2026-08-15T01:55+10:00)
+
+**Queue pass:** P-038 checked first. Cricbuzz still listed **Bangladesh 351/6 (110 overs)** versus Australia **198**, Mehidy Hasan Miraz 32* (73) and Hasan Mahmud 13* (76), match page title/canonical unchanged from day-two stumps. Day 3 is scheduled 10:00 ACST / 10:30 AEST on 15 August, after this settlement timestamp. **P-038 remains `OPEN / LIVE`; no partial settlement.** `[Cricbuzz match 148316, directly OPENED 2026-08-15T01:48+10:00]`  
+P-040 was `FINAL` and is settled below.
+
+**Settlement recorded:** 2026-08-15T01:55+10:00  
+**Official final:** Fremantle **16.16 (112)** defeated Adelaide **13.10 (88)** by **24 points** at Optus Stadium. Combined total **200**. Quarter scores: Fremantle 5.4 / 7.5 / 11.10 / 16.16; Adelaide 3.3 / 6.6 / 10.9 / 13.10. Ordinary home-and-away finish; no additional time. Injuries listed nil-nil. Crowd 55,010. `[Official AFL match report, OPENED 2026-08-15T01:50+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)` · `[Official AFL match centre 8237, OPENED 2026-08-15T01:51+10:00](https://www.afl.com.au/afl/matches/8237)` · ESPN official-partner feed event `1133680` independently `STATUS_FINAL`, 112–88, same quarter point totals `[ESPN summary API, OPENED 2026-08-15T01:47+10:00](https://site.api.espn.com/apis/site/v2/sports/australian-football/afl/summary?event=1133680)`.
+
+P-040/V06 is the controlling delivery view for C01/C02R/C03/C04. P-040/V05 is the controlling delivery view for C05. P-040/V01–V03 remain immutable earlier evidence and are not double-counted in the controlling cohort. Original C02 is `VOID`.
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-040/V06 | C02R | 1 | Adelaide Crows +23.5 | `SUPPORTED` | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` | Adelaide lost by 24 | `LOSS` | -0.5 | AFL official report + match centre 8237 |
+| P-040/V06 | C03 | 2 | Combined Total Over 168.5 | `SUPPORTED` | DG-P040-TOTAL | `PRIMARY_FORMAL` | 200 | `WIN` | +31.5 | same |
+| P-040/V06 | C04 | 3 | Combined Total Under 168.5 | `AVOID` | DG-P040-TOTAL | `CORRELATED_SECONDARY` | 200 | `LOSS` | -31.5 | same |
+| P-040/V06 | C01 | 4 | Fremantle -23.5 | `AVOID` | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` | Fremantle won by 24 | `WIN` | +0.5 | same |
+| P-040/V05 | C05 | 1 | Combined Total Under 176.5 | `AVOID` | DG-P040-TOTAL-176 | `PRIMARY_FORMAL` | 200 | `LOSS` | -23.5 | same |
+| P-040/V03 | C02 | 3 | Adelaide Crows -23.5 | `AVOID` | DG-P040-MARGIN | `INELIGIBLE` | n/a | `VOID` | n/a | withdrawn after user correction before the final |
+
+**Potential winner:** Adelaide Crows `LEAN` at V03/V06 — `LOSS`. Fremantle won and locked the minor premiership.  
+**Controlling raw rows:** 2-3 (C03 WIN, C01 WIN; C02R LOSS, C04 LOSS, C05 LOSS). **Primary formal (non-AVOID):** 1-1. **C05 decision evaluation:** `AVOID` correctly declined a losing Under; contract outcome remains `LOSS` and is not rewritten. **Higher-ranked exact-complement branches:** 1/2 (Over 168.5 correct; Adelaide +23.5 incorrect). C01/C02R are `BOUNDARY_FRAGILE` (24 versus 23.5). Rank #1 at controlling delivery lost → **one AFL live-handicap confidence strike**; six-field audit below.
+
+Final structural stats used in the retrospective, from the ESPN official-partner box (cross-checked against the AFL report's narrative): inside-50s **60–46**, clearances **44–38**, centre clearances **17–12**, scoring shots **32–23**, disposals **353–320**. Jye Amiss 5 goals; Caleb Serong 29 disposals / 12 clearances; Izak Rankine 39 disposals. `[ESPN summary API, OPENED 2026-08-15T01:47+10:00; AFL official report, OPENED 2026-08-15T01:50+10:00]`
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Adelaide led early (Laird, Fogarty, Ah Chee) and the game was tied early in Q4 (Thilthorpe). Fremantle then produced the named late-breakaway: Amiss' fifth, Dudley's snap, a 7-1 last-quarter centre-clearance indicator, and five late goals. Final margin 24 on a 36–19 Q4. Combined scoring never slowed: Q1 55, Q2 34, Q3 56, Q4 55 = 200. |
+| What went right | V06 correctly flipped the original total to Over 168.5 once only 16 further Under points remained. V05 correctly `AVOID`ed Under 176.5: remaining allowance was 56 then 24 from a still two-way shot profile, and 48 more points were scored after the V06 152-point cutoff. The original V01 warning that both −23.5 rows could lose in a 1–23 corridor was conceptually right even though the final landed one point outside it. P-027's remaining-exposure maths, once applied at V04/V05, pointed the right way on 176.5. |
+| What went wrong | Controlling #1 Adelaide +23.5 was `SUPPORTED` from a Q4 tie because the 23.5 cushion looked huge. The card named the late Fremantle 24+ burst as the ordinary kill path and still promoted confidence. That path occurred. Separately, V03 had ranked Under 168.5 #1 on H2H/venue suppression while Q1 already had 26 points and Adelaide's 7–4 inside-50 / 7–3 clearance edge — the P-027 failure mode. H2H Overs of 1/5 did not survive a 200-point, 32–23 scoring-shot game. The Adelaide winner lean treated live clearance as a match-long identity and underweighted Fremantle's Optus late-game stoppage pattern. |
+| Classification / why | Primary cause `RANKING`; contributors `CALIBRATION`, `MODEL_SPEC`; knowability `known-underweighted`. Named kill path occurred, so not `GENUINE_TAIL`. Margin is `BOUNDARY_FRAGILE` and is weak promotion evidence; the 200-point total miss on the early Under is not fragile. |
+| Overweighted / ignored | Overweighted: H2H/Optus Under rates, the raw 23.5-point Q4 cushion, and Adelaide's early clearance lead as a full-match winner mechanism. Underweighted: remaining-points versus current scoring-shot volume (P-027), Fremantle's documented late centre-square control, Amiss/Bolton inside-50 creation (Bolton 15 inside-50s), and how a home favourite can manufacture a 24-point Q4 burst from a tie. |
+| Concrete correction and falsification | For AFL live cushions of +20 or more in Q4, require the cushioned side to be winning the current-quarter centre-clearance/inside-50 chain before using `SUPPORTED`; otherwise cap at `LEAN`/`FORCED RANK`. For live Unders, do not leave them #1 when remaining allowance needs a slowdown and both sides are still generating scoring shots. Track the next five Q4-tied 20+ handicap cards and the next T-007 live-Under cards. Falsification: if those cushions repeatedly hold because the favourite cannot win remaining stoppages, narrow the handicap correction to Optus/home-fortress spots. |
+
+### Running-record and queue reconciliation
+
+| Ledger | P-040 contribution | New post-audit value |
+|---|---:|---:|
+| Controlling-delivery primary formal | 1-1 | 6-2 |
+| Controlling-delivery raw rows | 2-3 | **11-12** |
+| Higher-ranked exact-complement branch | 1/2 | 8/11 |
+| Controlling potential winner | 0-1 | 4-1 |
+
+| Open ID | State at settlement pass | Action |
+|---|---|---|
+| P-038 | LIVE — stumps, Bangladesh 351/6 after 110 overs; Australia 198; Day 3 not started | Retained open; no partial settlement (Over 250.5 and Tanzid 100+ are mechanically past their lines but the event and remaining 356.5/winner contracts are still live) |
+| P-040 | FINAL — Fremantle 112, Adelaide 88 | Settled and closed |
+
+P-040 is closed. **P-038 is the only open record.** The mutable snapshot at the top controls.
+
+## Prospective validation registry — APPENDED P-040 TEST (2026-08-15T01:55+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |
+
+T-007 observation 1: V03 promoted Under 168.5 to #1 with 26 early points and no suppression chain; final 200 is a miss. V04/V05 later logged remaining-allowance maths and correctly avoided 176.5. The logging criterion passed on the later views; the ranking criterion failed on V03.
+
+
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |
+
+T-007 observation 1: V03 promoted Under 168.5 to #1 with 26 early points and no suppression chain; final 200 is a miss. V04/V05 later logged remaining-allowance maths and correctly avoided 176.5. The logging criterion passed on the later views; the ranking criterion failed on V03.
+
+## Open-event index — APPENDED P-040 SETTLEMENT UPDATE (2026-08-15T01:55+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |
+
+T-007 observation 1: V03 promoted Under 168.5 to #1 with 26 early points and no suppression chain; final 200 is a miss. V04/V05 later logged remaining-allowance maths and correctly avoided 176.5. The logging criterion passed on the later views; the ranking criterion failed on V03.
+
+## Open-event index — APPENDED P-040 SETTLEMENT UPDATE (2026-08-15T01:55+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+| V04 | 114 points, Q3 12:35 | Under 176.5 allowed 62 more | 86 more were scored; avoiding it was correct |
+
+## Open-event index — APPENDED P-040 SETTLEMENT UPDATE (2026-08-15T01:55+10:00)
+
+| ID | Event | Status |
+|---|---|---|
+| P-001 through P-037; P-039; P-040 | Prior records | `CLOSED AS DOCUMENTED` (P-021 remains the documented no-forecast closure) |
+| P-038 | Australia v Bangladesh, first Test | `OPEN / LIVE — retained at stumps, Bangladesh 351/6 after 110 overs` |
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+| V04 | 114 points, Q3 12:35 | Under 176.5 allowed 62 more | 86 more were scored; avoiding it was correct |
+| V05 | 120 points, Q3 14:30 | Under 176.5 allowed 56 more | 80 more were scored; avoiding it was correct |
+| V06 | 152 points, Q4 4:59, scores tied | Over 168.5 needed 17; Adelaide +23.5 allowed a 23-point loss | 48 more points and a 24-point Fremantle margin: Over won, cushion lost by 0.5 |
+
+The result reinforces P-027/T-007: a live Under cannot be led by old H2H suppression when current scoring-shot and territory production do not show the necessary slowdown. It also creates the P-040/T-013 hypothesis already recorded in `RULES_AFL.md`: from a Q4 tie, even a +23.5 cushion is not strong enough for `SUPPORTED` when the opposing home favourite can dominate the remaining centre-clearance → inside-50 chain. The exact margin was fragile, but the named failure mechanism was real and occurred; this is a ranking/calibration miss, not an unknowable tail.
+
+
+P-038 is the only open event. Earlier open-index text remains historical and non-controlling.
+
+## P-040 SETTLEMENT AUDIT AND COMPLETE VIEW RECONCILIATION (appended 2026-08-15T02:43:46+10:00)
+
+**Reason for audit:** the 01:55 settlement correctly graded the controlling delivery contracts, but its result table did not explicitly dispose of every row issued in V01–V06. This append-only audit supplies the missing view-level settlement, separates market outcome from the quality of an `AVOID` decision, and confirms that repeated live refreshes are not independent trials. It does not rewrite any forecast or inflate the controlling performance ledger.
+
+### Official outcome re-verification
+
+The AFL official match centre again showed **Full Time: Fremantle 16.16 (112), Adelaide 13.10 (88), Dockers won by 24**. The official match report independently states that the game was tied early in Q4 before Fremantle kicked five late goals; the Dockers won the final-quarter centre-clearance indicator **7–1**. Quarter scores were Fremantle 5.4 / 7.5 / 11.10 / 16.16 and Adelaide 3.3 / 6.6 / 10.9 / 13.10. Combined total: **200**. `[AFL official match centre 8237, re-OPENED 2026-08-15T02:35+10:00](https://www.afl.com.au/afl/matches/8237)` · `[AFL official match report, re-OPENED 2026-08-15T02:36+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)`
+
+**Settlement assumptions:** ordinary home-and-away regulation result; no operator-specific terms or prices were supplied. Half-point contracts cannot push. Original C02 (`Adelaide -23.5`) is `VOID` at every appearance because the user corrected that input to `Adelaide +23.5` before the match finished. It is not silently regraded or backdated. For transparency only, the withdrawn wording would also have failed on the final, but that counterfactual is excluded from every ledger.
+
+### Every issued ranked row
+
+`Decision evaluation` judges the issued direction: a losing market correctly labelled `AVOID` is a correct avoidance, while a winning market labelled `AVOID` is an incorrect avoidance. `Contract outcome` remains the literal result of the market and is never rewritten to make the decision look better.
+
+| View | Rank | Contract | Issued verdict | Final value | Contract outcome | Decision evaluation | Ledger treatment |
+|---|---:|---|---|---:|---|---|---|
+| P-040/V01 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V01 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V01 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V01 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V02 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only |
+| P-040/V02 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V02 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V02 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V03 | 1 | Under 168.5 | `LEAN` | 200 | `LOSS` (-31.5) | Incorrect | Historical view only; failed top pick |
+| P-040/V03 | 2 | Over 168.5 | `FORCED RANK` | 200 | `WIN` (+31.5) | Correct direction, low confidence | Historical view only |
+| P-040/V03 | 3 | Adelaide -23.5 | `AVOID` | Withdrawn wording | `VOID` | Not evaluated | Excluded |
+| P-040/V03 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | Historical view only; boundary-fragile |
+| P-040/V04 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | Superseded by V05 for ledger purposes |
+| P-040/V05 | 1 | Under 176.5 | `AVOID` | 200 | `LOSS` (-23.5) | Correct avoidance | **Controlling C05 view; raw only** |
+| P-040/V06 | 1 | Adelaide +23.5 | `SUPPORTED` | Adelaide lost by 24 | `LOSS` (-0.5) | Incorrect | **Controlling; primary formal; boundary-fragile** |
+| P-040/V06 | 2 | Over 168.5 | `SUPPORTED` | 200 | `WIN` (+31.5) | Correct | **Controlling; primary formal** |
+| P-040/V06 | 3 | Under 168.5 | `AVOID` | 200 | `LOSS` (-31.5) | Correct avoidance | **Controlling; raw correlated** |
+| P-040/V06 | 4 | Fremantle -23.5 | `AVOID` | Fremantle by 24 | `WIN` (+0.5) | Incorrect avoidance | **Controlling; raw correlated; boundary-fragile** |
+
+### Potential-winner views
+
+| View | Winner call | Official winner | Outcome | Ledger treatment |
+|---|---|---|---|---|
+| P-040/V01 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V02 | Fremantle `LEAN` | Fremantle | `WIN` | Historical view only |
+| P-040/V03 | Adelaide `LEAN` | Fremantle | `LOSS` | Historical view only |
+| P-040/V06 | Adelaide `LEAN`, retained | Fremantle | `LOSS` | **Controlling winner view** |
+
+### Denominator reconciliation
+
+| Cohort | Result | Explanation |
+|---|---:|---|
+| All issued non-void view rows | 8-7 | Audit completeness only; contains repeated, highly dependent refreshes and must not enter the performance snapshot |
+| Withdrawn original C02 appearances | 3 `VOID` | V01–V03; one corrected input repeated across views, not three independent void contracts |
+| Controlling contract rows | 2-3 | V06 C01/C02R/C03/C04 plus V05 C05; unchanged from the original settlement |
+| Controlling non-`AVOID` primary formal | 1-1 | Adelaide +23.5 loss; Over 168.5 win; unchanged |
+| Controlling decision evaluation, including avoids | 3 correct / 2 incorrect | Correct: Over 168.5, avoid Under 168.5, avoid Under 176.5. Incorrect: Adelaide +23.5, avoid Fremantle -23.5 |
+| Controlling potential winner | 0-1 | Adelaide lean lost; unchanged |
+
+The current performance snapshot therefore requires **no numerical correction**. The earlier settlement's 2-3 raw, 1-1 primary-formal and 0-1 winner contributions were correct; the defect was incomplete row-by-row disclosure, now repaired.
+
+### Final retrospective and durable lesson check
+
+| Cutoff | State | Required after cutoff | What actually happened |
+|---|---|---|---|
+| V03 | 26 points, Q1 10:35 | Under 168.5 allowed 142 more | 174 more were scored; Under lost decisively |
+| V04 | 114 points, Q3 12:35 | Under 176.5 allowed 62 more | 86 more were scored; avoiding it was correct |
+| V05 | 120 points, Q3 14:30 | Under 176.5 allowed 56 more | 80 more were scored; avoiding it was correct |
+| V06 | 152 points, Q4 4:59, scores tied | Over 168.5 needed 17; Adelaide +23.5 allowed a 23-point loss | 48 more points and a 24-point Fremantle margin: Over won, cushion lost by 0.5 |
+
+The result reinforces P-027/T-007: a live Under cannot be led by old H2H suppression when current scoring-shot and territory production do not show the necessary slowdown. It also creates the P-040/T-013 hypothesis already recorded in `RULES_AFL.md`: from a Q4 tie, even a +23.5 cushion is not strong enough for `SUPPORTED` when the opposing home favourite can dominate the remaining centre-clearance → inside-50 chain. The exact margin was fragile, but the named failure mechanism was real and occurred; this is a ranking/calibration miss, not an unknowable tail.
+
+Late-season motivation was relevant but non-discriminating: Fremantle could seal the minor premiership and Adelaide was playing for top-six/top-four positioning. The winner was decided by execution—five late goals and a 7–1 final-quarter centre-clearance result—not by merely assigning one side more desire. No further AFL rule is promoted from this single match because the existing P-040 lesson and prospective five-event test already capture the mechanism without overfitting.
+
+### Queue state after audit
+
+| ID | Event | Status |
+
+
+This correction changes the market topology: C01 Fremantle -23.5 and C02R Adelaide +23.5 are now exact half-point complements. C02R wins if Adelaide wins, draws, or loses by 23 or fewer; C01 wins only if Fremantle wins by 24+.
+
+**Official correction-cutoff state:** Fremantle **11.10 (76)**, Adelaide **11.10 (76)**, combined 152, Q4 **4:59 elapsed**, last updated 22:25:15 AEST and observed 22:25:18 AEST. Inside-50s were 44–36, clearances 31–37, centre clearances 11–11, scoring shots 21–21 and disposals 273–247. `[Official AFL CFS match item and team stats, directly queried 2026-08-14T22:25:18+10:00]`
+
+At a tied score, C02R has its full 23.5-point cushion; Fremantle -23.5 requires a 24-point margin from the remainder. Over 168.5 needs 17 more match points; Under 168.5 permits only 16. Under 176.5 permits 24 more.
+
+| Rank | View ID | Contract ID | Selection | Verdict | Confidence/caveat | Dependence group | Performance eligibility |
+|---:|---|---|---|---|---|---|---|
+| 1 | P-040/V06 | C02R | **Adelaide Crows +23.5** | `SUPPORTED` | Tied in Q4 with even scoring shots and a 23.5-point cushion; ordinary kill path is a late Fremantle 24+ breakaway | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` |
+| 2 | P-040/V06 | C03 | **Combined Total Over 168.5** | `SUPPORTED` | Needs 17 more with most of Q4 remaining; close-game pressure and 42 scoring shots support continued scoring | DG-P040-TOTAL | `PRIMARY_FORMAL` |
+| 3 | P-040/V06 | C04 | **Combined Total Under 168.5** | `AVOID` | Only 16 further points allowed; exact complement of C03 | DG-P040-TOTAL | `CORRELATED_SECONDARY` |
+| 4 | P-040/V06 | C01 | **Fremantle -23.5** | `AVOID` | Requires Fremantle to create a 24-point margin from a Q4 tie | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` |
+
+**Corrected decision:** Adelaide +23.5 is the best of the four original intended markets at this live cutoff. It is not backdated to the earlier views. Potential winner remains too close for a strong call; prior Adelaide lean is retained with low separation because its clearance edge offsets Fremantle's inside-50/home edge.
+
+### Corrected settlement instruction
+
+At final, grade C01/C02R as exact complements. Record original C02 as `VOID — withdrawn after user input correction`, not as a win/loss. C03/C04 and later C05 retain their existing official-total boundaries.
+
+## Settlement — P-040 Fremantle v Adelaide Crows, AFL Round 23 (appended 2026-08-15T01:55+10:00)
+
+**Queue pass:** P-038 checked first. Cricbuzz still listed **Bangladesh 351/6 (110 overs)** versus Australia **198**, Mehidy Hasan Miraz 32* (73) and Hasan Mahmud 13* (76), match page title/canonical unchanged from day-two stumps. Day 3 is scheduled 10:00 ACST / 10:30 AEST on 15 August, after this settlement timestamp. **P-038 remains `OPEN / LIVE`; no partial settlement.** `[Cricbuzz match 148316, directly OPENED 2026-08-15T01:48+10:00]`  
+P-040 was `FINAL` and is settled below.
+
+**Settlement recorded:** 2026-08-15T01:55+10:00  
+**Official final:** Fremantle **16.16 (112)** defeated Adelaide **13.10 (88)** by **24 points** at Optus Stadium. Combined total **200**. Quarter scores: Fremantle 5.4 / 7.5 / 11.10 / 16.16; Adelaide 3.3 / 6.6 / 10.9 / 13.10. Ordinary home-and-away finish; no additional time. Injuries listed nil-nil. Crowd 55,010. `[Official AFL match report, OPENED 2026-08-15T01:50+10:00](https://www.afl.com.au/news/1583975/top-of-the-docks-fremantle-dockers-clinch-minor-premiership-with-win-over-adelaide-crows)` · `[Official AFL match centre 8237, OPENED 2026-08-15T01:51+10:00](https://www.afl.com.au/afl/matches/8237)` · ESPN official-partner feed event `1133680` independently `STATUS_FINAL`, 112–88, same quarter point totals `[ESPN summary API, OPENED 2026-08-15T01:47+10:00](https://site.api.espn.com/apis/site/v2/sports/australian-football/afl/summary?event=1133680)`.
+
+P-040/V06 is the controlling delivery view for C01/C02R/C03/C04. P-040/V05 is the controlling delivery view for C05. P-040/V01–V03 remain immutable earlier evidence and are not double-counted in the controlling cohort. Original C02 is `VOID`.
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-040/V06 | C02R | 1 | Adelaide Crows +23.5 | `SUPPORTED` | DG-P040-MARGIN-CORRECTED | `PRIMARY_FORMAL` | Adelaide lost by 24 | `LOSS` | -0.5 | AFL official report + match centre 8237 |
+| P-040/V06 | C03 | 2 | Combined Total Over 168.5 | `SUPPORTED` | DG-P040-TOTAL | `PRIMARY_FORMAL` | 200 | `WIN` | +31.5 | same |
+| P-040/V06 | C04 | 3 | Combined Total Under 168.5 | `AVOID` | DG-P040-TOTAL | `CORRELATED_SECONDARY` | 200 | `LOSS` | -31.5 | same |
+| P-040/V06 | C01 | 4 | Fremantle -23.5 | `AVOID` | DG-P040-MARGIN-CORRECTED | `CORRELATED_SECONDARY` | Fremantle won by 24 | `WIN` | +0.5 | same |
+| P-040/V05 | C05 | 1 | Combined Total Under 176.5 | `AVOID` | DG-P040-TOTAL-176 | `PRIMARY_FORMAL` | 200 | `LOSS` | -23.5 | same |
+| P-040/V03 | C02 | 3 | Adelaide Crows -23.5 | `AVOID` | DG-P040-MARGIN | `INELIGIBLE` | n/a | `VOID` | n/a | withdrawn after user correction before the final |
+
+**Potential winner:** Adelaide Crows `LEAN` at V03/V06 — `LOSS`. Fremantle won and locked the minor premiership.  
+**Controlling raw rows:** 2-3 (C03 WIN, C01 WIN; C02R LOSS, C04 LOSS, C05 LOSS). **Primary formal (non-AVOID):** 1-1. **C05 decision evaluation:** `AVOID` correctly declined a losing Under; contract outcome remains `LOSS` and is not rewritten. **Higher-ranked exact-complement branches:** 1/2 (Over 168.5 correct; Adelaide +23.5 incorrect). C01/C02R are `BOUNDARY_FRAGILE` (24 versus 23.5). Rank #1 at controlling delivery lost → **one AFL live-handicap confidence strike**; six-field audit below.
+
+Final structural stats used in the retrospective, from the ESPN official-partner box (cross-checked against the AFL report's narrative): inside-50s **60–46**, clearances **44–38**, centre clearances **17–12**, scoring shots **32–23**, disposals **353–320**. Jye Amiss 5 goals; Caleb Serong 29 disposals / 12 clearances; Izak Rankine 39 disposals. `[ESPN summary API, OPENED 2026-08-15T01:47+10:00; AFL official report, OPENED 2026-08-15T01:50+10:00]`
+
+| Field | Finding |
+|---|---|
+| Decisive sequence | Adelaide led early (Laird, Fogarty, Ah Chee) and the game was tied early in Q4 (Thilthorpe). Fremantle then produced the named late-breakaway: Amiss' fifth, Dudley's snap, a 7-1 last-quarter centre-clearance indicator, and five late goals. Final margin 24 on a 36–19 Q4. Combined scoring never slowed: Q1 55, Q2 34, Q3 56, Q4 55 = 200. |
+| What went right | V06 correctly flipped the original total to Over 168.5 once only 16 further Under points remained. V05 correctly `AVOID`ed Under 176.5: remaining allowance was 56 then 24 from a still two-way shot profile, and 48 more points were scored after the V06 152-point cutoff. The original V01 warning that both −23.5 rows could lose in a 1–23 corridor was conceptually right even though the final landed one point outside it. P-027's remaining-exposure maths, once applied at V04/V05, pointed the right way on 176.5. |
+| What went wrong | Controlling #1 Adelaide +23.5 was `SUPPORTED` from a Q4 tie because the 23.5 cushion looked huge. The card named the late Fremantle 24+ burst as the ordinary kill path and still promoted confidence. That path occurred. Separately, V03 had ranked Under 168.5 #1 on H2H/venue suppression while Q1 already had 26 points and Adelaide's 7–4 inside-50 / 7–3 clearance edge — the P-027 failure mode. H2H Overs of 1/5 did not survive a 200-point, 32–23 scoring-shot game. The Adelaide winner lean treated live clearance as a match-long identity and underweighted Fremantle's Optus late-game stoppage pattern. |
+| Classification / why | Primary cause `RANKING`; contributors `CALIBRATION`, `MODEL_SPEC`; knowability `known-underweighted`. Named kill path occurred, so not `GENUINE_TAIL`. Margin is `BOUNDARY_FRAGILE` and is weak promotion evidence; the 200-point total miss on the early Under is not fragile. |
+| Overweighted / ignored | Overweighted: H2H/Optus Under rates, the raw 23.5-point Q4 cushion, and Adelaide's early clearance lead as a full-match winner mechanism. Underweighted: remaining-points versus current scoring-shot volume (P-027), Fremantle's documented late centre-square control, Amiss/Bolton inside-50 creation (Bolton 15 inside-50s), and how a home favourite can manufacture a 24-point Q4 burst from a tie. |
+| Concrete correction and falsification | For AFL live cushions of +20 or more in Q4, require the cushioned side to be winning the current-quarter centre-clearance/inside-50 chain before using `SUPPORTED`; otherwise cap at `LEAN`/`FORCED RANK`. For live Unders, do not leave them #1 when remaining allowance needs a slowdown and both sides are still generating scoring shots. Track the next five Q4-tied 20+ handicap cards and the next T-007 live-Under cards. Falsification: if those cushions repeatedly hold because the favourite cannot win remaining stoppages, narrow the handicap correction to Optus/home-fortress spots. |
+
+### Running-record and queue reconciliation
+
+| Ledger | P-040 contribution | New post-audit value |
+|---|---:|---:|
+| Controlling-delivery primary formal | 1-1 | 6-2 |
+| Controlling-delivery raw rows | 2-3 | **11-12** |
+| Higher-ranked exact-complement branch | 1/2 | 8/11 |
+| Controlling potential winner | 0-1 | 4-1 |
+
+| Open ID | State at settlement pass | Action |
+|---|---|---|
+| P-038 | LIVE — stumps, Bangladesh 351/6 after 110 overs; Australia 198; Day 3 not started | Retained open; no partial settlement (Over 250.5 and Tanzid 100+ are mechanically past their lines but the event and remaining 356.5/winner contracts are still live) |
+| P-040 | FINAL — Fremantle 112, Adelaide 88 | Settled and closed |
+
+P-040 is closed. **P-038 is the only open record.** The mutable snapshot at the top controls.
+
+## Prospective validation registry — APPENDED P-040 TEST (2026-08-15T01:55+10:00)
+
+| Test ID | Origin | Hypothesis/control | Eligible population | Target n | Completed n | Pass criterion | Status | Next review |
+|---|---|---|---|---:|---:|---|---|---|
+| T-007 | P-027 | Sustained AFL scoring-shot volume must be modelled before a live Under is promoted | Live totals after a high-scoring opening with shot counts | 5 | 1 | Remaining-points and territory/shot suppression branch logged | OPEN | Next eligible AFL live-total card |
+| T-013 | P-040 | A Q4-tied AFL +20 or larger cushion is not `SUPPORTED` unless the cushioned side currently controls centre clearances/inside-50s | Live Q4 handicap cards with the game inside one goal and a 20+ cushion | 5 | 0 | Current-quarter stoppage/territory chain recorded before any `SUPPORTED` cushion; outcomes logged | OPEN | Next eligible AFL live-handicap card |

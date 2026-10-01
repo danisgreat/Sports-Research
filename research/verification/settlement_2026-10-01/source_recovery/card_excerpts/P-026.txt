@@ -1,0 +1,307 @@
+| 3 | **BPW first 25 balls Over 23.5 runs** | `LEAN - LOWER CONFIDENCE` | Hit 2/3 exact current-season samples (28 and 31), and the research phase band is 27-32. | The 14/5 collapse shows the tail; Cross/McCarthy/Sutherland can take early wickets, and a wicket-heavy start can stay at 23 or fewer. |
+| 4 | **BPW first 100 balls Over 120.5 runs** | `FORCED RANK - LOW CONFIDENCE; FORCED BOTTOM` | Hit 10/18 completed innings, the contest centre is just above 120, and Birmingham made 122 two days ago. | Only 3/9 recent L10 completed innings cleared 120; Sunrisers' current attack has limited four of five opponents below 141, and early wickets can hold BPW to 120 or fewer. |
+
+**Settlement map:** at 100 balls, 0-120 means only Under 140.5 wins; 121-140 means both full-innings rows win; 141-plus means only Over 120.5 wins. At exactly 25 legal balls, 0-23 means only Under 33.5 wins; 24-33 means both phase rows win; 34-plus means only Over 23.5 wins. Half-point lines cannot push.
+
+**Potential winner: Sunrisers Leeds - `LEAN`.** The winner is independent from the Birmingham totals. Sunrisers are only 2-3 this season, but their nested franchise record is 7-3 L10, 10-5 L15 and 12-7-1NR L20; they are defending champions, have won the newest three H2Hs, and chose to chase with depth through Jonassen, Litchfield, Sutherland, Winfield-Hill, Gibson and Deepti. The opposing path is substantial: Birmingham beat Welsh at Edgbaston, have Perry plus a strong Sana/King/Smith/Filer attack, and a 135-plus innings can be defended.
+
+**Dependence:** the two Unders share an early-wicket/tempo mechanism, and the two Overs share a clean-start mechanism; they are not four independent confirmations. Both rows in either pair can win inside its overlap corridor. **Validation disposition:** `SHARE WITH CAVEATS` - exact identity, toss, XIs, match-window conditions and recency arithmetic are verified; no strip-specific report was found, the exact-25 sample is n=3, and no odds/value or calibrated-probability claim is made. `SOCIAL CHECK: unavailable/not used`.
+
+### Settlement instructions and open-event index
+
+1. Check match state first; do not settle while live.
+2. At final, record Birmingham's exact score after 25 legal deliveries and its official innings score after 100 balls (or operator settlement if shortened).
+3. Grade all four original contracts and the Sunrisers winner separately.
+4. Audit the overlap corridors, early-wicket mechanism, Sunrisers bowling depth, venue uplift and chase advantage; promote only a falsifiable repeatable lesson.
+
+| ID range | Status |
+|---|---|
+| P-001 through P-025 | `CLOSED` |
+| P-026 | `OPEN / PENDING - START CROSSED, PRE-DELIVERY AT LOCK` |
+
+**One open record: P-026.** Earlier status tables are immutable snapshots; this newest index controls current status.
+
+### P-026 final delivery-state refresh - 2026-08-08T00:06:38+10:00
+
+Cricbuzz still displayed **Sunrisers Leeds opt to bowl**, both confirmed XIs and no score, batter, bowler or legal-ball count. The match remained start-crossed but pre-delivery at the final cutoff. The ranked order and winner lean above therefore remained unchanged.
+
+## P-026 SETTLEMENT - Birmingham Phoenix Women 107/9; Sunrisers Leeds Women 111/1 (appended 2026-08-08 AEST)
+
+### Verified result and grading
+
+Cricbuzz verified the match final: Birmingham scored **107/9 after 100 balls** and Sunrisers chased 108 with **111/1 after 69 balls**, winning by nine wickets. ESPN's exact ball-by-ball core feed recorded Birmingham **29/3 after exactly 25 legal deliveries**: the 25th legal ball was Kate Cross to Ellyse Perry for two runs.
+
+| Original rank | Contract | Official boundary | Grade |
+|---:|---|---:|---|
+| 1 | BPW first 100 balls Under 140.5 | 107/9 | **WIN** |
+| 2 | BPW first 25 balls Under 33.5 | 29/3 | **WIN** |
+| 3 | BPW first 25 balls Over 23.5 | 29/3 | **WIN** |
+| 4 | BPW first 100 balls Over 120.5 | 107/9 | **LOSS** |
+| Winner | Sunrisers Leeds | won by 9 wickets | **WIN** |
+
+Card result: **3/4 supplied contracts won; rank #1 won; winner lean won.** The exact 24-33 phase overlap corridor behaved as mapped: both 25-ball rows won. No confidence strike is added.
+
+### Six-field retrospective
+
+| Field | Finding |
+|---|---|
+| What went right | The 100-ball Under, both exact-25 phase rows and Sunrisers winner all won. The exact legal-ball rule prevented substitution of a later powerplay endpoint. Sunrisers' bowling depth and chase advantage were real mechanisms. |
+| What went wrong | The projected 118-134 innings band was too high; Birmingham finished at 107. The bottom-ranked Over 120.5 lost through its stated early-wicket failure path. |
+| Why | Birmingham were 0/1 after six balls, 9/2 after 15 and 26/3 after 22. Perry and Emma Lamb recovered to 89/4 after 80, but five late wickets left only 18 further runs. Cross took 2/14 and Deepti Sharma 3/11. Phoebe Litchfield then made 71 not out from 33 balls as Sunrisers completed the chase with 31 balls unused. |
+| Evidence calibration | The Under's 15/18 completed-innings record and Sunrisers' opponent suppression correctly controlled direction. The venue median of 144 was properly treated as a failure path, not a trump card. The exact-phase sample was small but used only for ordering. |
+| Repeatable lesson | This reinforces existing cricket controls rather than creating a new rule: top-order wickets can coexist with a winning 24-33 phase Over while still suppressing the full innings, and phase/full markets must remain separate axes. |
+| Falsification/next check | Continue recording the exact 25-ball score. If clean-start/wicket-state information repeatedly fails to distinguish phase from full-innings outcomes, reassess the phase-to-total mechanism; one result is not enough for promotion. |
+
+Sources: Cricbuzz result/scorecard `https://www.cricbuzz.com/live-cricket-scorecard/145267/brmw-vs-sulw-24th-match-the-hundred-womens-competition-2026`; ESPN event 1521220 and its core ball-by-ball detail feed, verified 2026-08-08 AEST.
+
+### Running record - UPDATE
+
+| Measure | Previous count | P-026 change | New count |
+|---|---:|---:|---:|
+| Forecast records settled | 24 | +1 | **25** |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 38 | +3 | **41** |
+| Formal selections graded incorrect | 23 | +0 | **23** |
+| Winner picks/leans correct | 16 | +1 | **17** |
+| Winner picks/leans incorrect | 10 | +0 | **10** |
+
+The forced #4 row remains in the card audit but is not added to the formal-selection count. The supplied lines overlap and do not add an exact-complement trial. No price, profit or ROI claim is made.
+
+### Open-event index - CONTROLLING SETTLEMENT UPDATE
+
+| ID range | Status |
+|---|---|
+| P-001 through P-026 | `CLOSED` |
+
+**No open or pending records remain at this point.** Earlier P-026 open lines remain immutable forecast history; this settlement controls current status.
+
+
+| 4 | **BPW first 100 balls Over 120.5 runs** | `FORCED RANK - LOW CONFIDENCE; FORCED BOTTOM` | Hit 10/18 completed innings, the contest centre is just above 120, and Birmingham made 122 two days ago. | Only 3/9 recent L10 completed innings cleared 120; Sunrisers' current attack has limited four of five opponents below 141, and early wickets can hold BPW to 120 or fewer. |
+
+**Settlement map:** at 100 balls, 0-120 means only Under 140.5 wins; 121-140 means both full-innings rows win; 141-plus means only Over 120.5 wins. At exactly 25 legal balls, 0-23 means only Under 33.5 wins; 24-33 means both phase rows win; 34-plus means only Over 23.5 wins. Half-point lines cannot push.
+
+**Potential winner: Sunrisers Leeds - `LEAN`.** The winner is independent from the Birmingham totals. Sunrisers are only 2-3 this season, but their nested franchise record is 7-3 L10, 10-5 L15 and 12-7-1NR L20; they are defending champions, have won the newest three H2Hs, and chose to chase with depth through Jonassen, Litchfield, Sutherland, Winfield-Hill, Gibson and Deepti. The opposing path is substantial: Birmingham beat Welsh at Edgbaston, have Perry plus a strong Sana/King/Smith/Filer attack, and a 135-plus innings can be defended.
+
+**Dependence:** the two Unders share an early-wicket/tempo mechanism, and the two Overs share a clean-start mechanism; they are not four independent confirmations. Both rows in either pair can win inside its overlap corridor. **Validation disposition:** `SHARE WITH CAVEATS` - exact identity, toss, XIs, match-window conditions and recency arithmetic are verified; no strip-specific report was found, the exact-25 sample is n=3, and no odds/value or calibrated-probability claim is made. `SOCIAL CHECK: unavailable/not used`.
+
+### Settlement instructions and open-event index
+
+1. Check match state first; do not settle while live.
+2. At final, record Birmingham's exact score after 25 legal deliveries and its official innings score after 100 balls (or operator settlement if shortened).
+3. Grade all four original contracts and the Sunrisers winner separately.
+4. Audit the overlap corridors, early-wicket mechanism, Sunrisers bowling depth, venue uplift and chase advantage; promote only a falsifiable repeatable lesson.
+
+| ID range | Status |
+|---|---|
+| P-001 through P-025 | `CLOSED` |
+| P-026 | `OPEN / PENDING - START CROSSED, PRE-DELIVERY AT LOCK` |
+
+**One open record: P-026.** Earlier status tables are immutable snapshots; this newest index controls current status.
+
+### P-026 final delivery-state refresh - 2026-08-08T00:06:38+10:00
+
+Cricbuzz still displayed **Sunrisers Leeds opt to bowl**, both confirmed XIs and no score, batter, bowler or legal-ball count. The match remained start-crossed but pre-delivery at the final cutoff. The ranked order and winner lean above therefore remained unchanged.
+
+## P-026 SETTLEMENT - Birmingham Phoenix Women 107/9; Sunrisers Leeds Women 111/1 (appended 2026-08-08 AEST)
+
+### Verified result and grading
+
+Cricbuzz verified the match final: Birmingham scored **107/9 after 100 balls** and Sunrisers chased 108 with **111/1 after 69 balls**, winning by nine wickets. ESPN's exact ball-by-ball core feed recorded Birmingham **29/3 after exactly 25 legal deliveries**: the 25th legal ball was Kate Cross to Ellyse Perry for two runs.
+
+| Original rank | Contract | Official boundary | Grade |
+|---:|---|---:|---|
+| 1 | BPW first 100 balls Under 140.5 | 107/9 | **WIN** |
+| 2 | BPW first 25 balls Under 33.5 | 29/3 | **WIN** |
+| 3 | BPW first 25 balls Over 23.5 | 29/3 | **WIN** |
+| 4 | BPW first 100 balls Over 120.5 | 107/9 | **LOSS** |
+| Winner | Sunrisers Leeds | won by 9 wickets | **WIN** |
+
+Card result: **3/4 supplied contracts won; rank #1 won; winner lean won.** The exact 24-33 phase overlap corridor behaved as mapped: both 25-ball rows won. No confidence strike is added.
+
+### Six-field retrospective
+
+| Field | Finding |
+|---|---|
+| What went right | The 100-ball Under, both exact-25 phase rows and Sunrisers winner all won. The exact legal-ball rule prevented substitution of a later powerplay endpoint. Sunrisers' bowling depth and chase advantage were real mechanisms. |
+| What went wrong | The projected 118-134 innings band was too high; Birmingham finished at 107. The bottom-ranked Over 120.5 lost through its stated early-wicket failure path. |
+| Why | Birmingham were 0/1 after six balls, 9/2 after 15 and 26/3 after 22. Perry and Emma Lamb recovered to 89/4 after 80, but five late wickets left only 18 further runs. Cross took 2/14 and Deepti Sharma 3/11. Phoebe Litchfield then made 71 not out from 33 balls as Sunrisers completed the chase with 31 balls unused. |
+| Evidence calibration | The Under's 15/18 completed-innings record and Sunrisers' opponent suppression correctly controlled direction. The venue median of 144 was properly treated as a failure path, not a trump card. The exact-phase sample was small but used only for ordering. |
+| Repeatable lesson | This reinforces existing cricket controls rather than creating a new rule: top-order wickets can coexist with a winning 24-33 phase Over while still suppressing the full innings, and phase/full markets must remain separate axes. |
+| Falsification/next check | Continue recording the exact 25-ball score. If clean-start/wicket-state information repeatedly fails to distinguish phase from full-innings outcomes, reassess the phase-to-total mechanism; one result is not enough for promotion. |
+
+Sources: Cricbuzz result/scorecard `https://www.cricbuzz.com/live-cricket-scorecard/145267/brmw-vs-sulw-24th-match-the-hundred-womens-competition-2026`; ESPN event 1521220 and its core ball-by-ball detail feed, verified 2026-08-08 AEST.
+
+### Running record - UPDATE
+
+| Measure | Previous count | P-026 change | New count |
+|---|---:|---:|---:|
+| Forecast records settled | 24 | +1 | **25** |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 38 | +3 | **41** |
+| Formal selections graded incorrect | 23 | +0 | **23** |
+| Winner picks/leans correct | 16 | +1 | **17** |
+| Winner picks/leans incorrect | 10 | +0 | **10** |
+
+The forced #4 row remains in the card audit but is not added to the formal-selection count. The supplied lines overlap and do not add an exact-complement trial. No price, profit or ROI claim is made.
+
+### Open-event index - CONTROLLING SETTLEMENT UPDATE
+
+| ID range | Status |
+|---|---|
+| P-001 through P-026 | `CLOSED` |
+
+**No open or pending records remain at this point.** Earlier P-026 open lines remain immutable forecast history; this settlement controls current status.
+
+## P-027 - Melbourne v Fremantle, AFL Round 22 - LIVE FORECAST (appended 2026-08-08 AEST)
+
+
+**Settlement map:** at 100 balls, 0-120 means only Under 140.5 wins; 121-140 means both full-innings rows win; 141-plus means only Over 120.5 wins. At exactly 25 legal balls, 0-23 means only Under 33.5 wins; 24-33 means both phase rows win; 34-plus means only Over 23.5 wins. Half-point lines cannot push.
+
+**Potential winner: Sunrisers Leeds - `LEAN`.** The winner is independent from the Birmingham totals. Sunrisers are only 2-3 this season, but their nested franchise record is 7-3 L10, 10-5 L15 and 12-7-1NR L20; they are defending champions, have won the newest three H2Hs, and chose to chase with depth through Jonassen, Litchfield, Sutherland, Winfield-Hill, Gibson and Deepti. The opposing path is substantial: Birmingham beat Welsh at Edgbaston, have Perry plus a strong Sana/King/Smith/Filer attack, and a 135-plus innings can be defended.
+
+**Dependence:** the two Unders share an early-wicket/tempo mechanism, and the two Overs share a clean-start mechanism; they are not four independent confirmations. Both rows in either pair can win inside its overlap corridor. **Validation disposition:** `SHARE WITH CAVEATS` - exact identity, toss, XIs, match-window conditions and recency arithmetic are verified; no strip-specific report was found, the exact-25 sample is n=3, and no odds/value or calibrated-probability claim is made. `SOCIAL CHECK: unavailable/not used`.
+
+### Settlement instructions and open-event index
+
+1. Check match state first; do not settle while live.
+2. At final, record Birmingham's exact score after 25 legal deliveries and its official innings score after 100 balls (or operator settlement if shortened).
+3. Grade all four original contracts and the Sunrisers winner separately.
+4. Audit the overlap corridors, early-wicket mechanism, Sunrisers bowling depth, venue uplift and chase advantage; promote only a falsifiable repeatable lesson.
+
+| ID range | Status |
+|---|---|
+| P-001 through P-025 | `CLOSED` |
+| P-026 | `OPEN / PENDING - START CROSSED, PRE-DELIVERY AT LOCK` |
+
+**One open record: P-026.** Earlier status tables are immutable snapshots; this newest index controls current status.
+
+### P-026 final delivery-state refresh - 2026-08-08T00:06:38+10:00
+
+Cricbuzz still displayed **Sunrisers Leeds opt to bowl**, both confirmed XIs and no score, batter, bowler or legal-ball count. The match remained start-crossed but pre-delivery at the final cutoff. The ranked order and winner lean above therefore remained unchanged.
+
+## P-026 SETTLEMENT - Birmingham Phoenix Women 107/9; Sunrisers Leeds Women 111/1 (appended 2026-08-08 AEST)
+
+### Verified result and grading
+
+Cricbuzz verified the match final: Birmingham scored **107/9 after 100 balls** and Sunrisers chased 108 with **111/1 after 69 balls**, winning by nine wickets. ESPN's exact ball-by-ball core feed recorded Birmingham **29/3 after exactly 25 legal deliveries**: the 25th legal ball was Kate Cross to Ellyse Perry for two runs.
+
+| Original rank | Contract | Official boundary | Grade |
+|---:|---|---:|---|
+| 1 | BPW first 100 balls Under 140.5 | 107/9 | **WIN** |
+| 2 | BPW first 25 balls Under 33.5 | 29/3 | **WIN** |
+| 3 | BPW first 25 balls Over 23.5 | 29/3 | **WIN** |
+| 4 | BPW first 100 balls Over 120.5 | 107/9 | **LOSS** |
+| Winner | Sunrisers Leeds | won by 9 wickets | **WIN** |
+
+Card result: **3/4 supplied contracts won; rank #1 won; winner lean won.** The exact 24-33 phase overlap corridor behaved as mapped: both 25-ball rows won. No confidence strike is added.
+
+### Six-field retrospective
+
+| Field | Finding |
+|---|---|
+| What went right | The 100-ball Under, both exact-25 phase rows and Sunrisers winner all won. The exact legal-ball rule prevented substitution of a later powerplay endpoint. Sunrisers' bowling depth and chase advantage were real mechanisms. |
+| What went wrong | The projected 118-134 innings band was too high; Birmingham finished at 107. The bottom-ranked Over 120.5 lost through its stated early-wicket failure path. |
+| Why | Birmingham were 0/1 after six balls, 9/2 after 15 and 26/3 after 22. Perry and Emma Lamb recovered to 89/4 after 80, but five late wickets left only 18 further runs. Cross took 2/14 and Deepti Sharma 3/11. Phoebe Litchfield then made 71 not out from 33 balls as Sunrisers completed the chase with 31 balls unused. |
+| Evidence calibration | The Under's 15/18 completed-innings record and Sunrisers' opponent suppression correctly controlled direction. The venue median of 144 was properly treated as a failure path, not a trump card. The exact-phase sample was small but used only for ordering. |
+| Repeatable lesson | This reinforces existing cricket controls rather than creating a new rule: top-order wickets can coexist with a winning 24-33 phase Over while still suppressing the full innings, and phase/full markets must remain separate axes. |
+| Falsification/next check | Continue recording the exact 25-ball score. If clean-start/wicket-state information repeatedly fails to distinguish phase from full-innings outcomes, reassess the phase-to-total mechanism; one result is not enough for promotion. |
+
+Sources: Cricbuzz result/scorecard `https://www.cricbuzz.com/live-cricket-scorecard/145267/brmw-vs-sulw-24th-match-the-hundred-womens-competition-2026`; ESPN event 1521220 and its core ball-by-ball detail feed, verified 2026-08-08 AEST.
+
+### Running record - UPDATE
+
+| Measure | Previous count | P-026 change | New count |
+|---|---:|---:|---:|
+| Forecast records settled | 24 | +1 | **25** |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 38 | +3 | **41** |
+| Formal selections graded incorrect | 23 | +0 | **23** |
+| Winner picks/leans correct | 16 | +1 | **17** |
+| Winner picks/leans incorrect | 10 | +0 | **10** |
+
+The forced #4 row remains in the card audit but is not added to the formal-selection count. The supplied lines overlap and do not add an exact-complement trial. No price, profit or ROI claim is made.
+
+### Open-event index - CONTROLLING SETTLEMENT UPDATE
+
+| ID range | Status |
+|---|---|
+| P-001 through P-026 | `CLOSED` |
+
+**No open or pending records remain at this point.** Earlier P-026 open lines remain immutable forecast history; this settlement controls current status.
+
+## P-027 - Melbourne v Fremantle, AFL Round 22 - LIVE FORECAST (appended 2026-08-08 AEST)
+
+
+**Settlement map:** at 100 balls, 0-120 means only Under 140.5 wins; 121-140 means both full-innings rows win; 141-plus means only Over 120.5 wins. At exactly 25 legal balls, 0-23 means only Under 33.5 wins; 24-33 means both phase rows win; 34-plus means only Over 23.5 wins. Half-point lines cannot push.
+
+**Potential winner: Sunrisers Leeds - `LEAN`.** The winner is independent from the Birmingham totals. Sunrisers are only 2-3 this season, but their nested franchise record is 7-3 L10, 10-5 L15 and 12-7-1NR L20; they are defending champions, have won the newest three H2Hs, and chose to chase with depth through Jonassen, Litchfield, Sutherland, Winfield-Hill, Gibson and Deepti. The opposing path is substantial: Birmingham beat Welsh at Edgbaston, have Perry plus a strong Sana/King/Smith/Filer attack, and a 135-plus innings can be defended.
+
+**Dependence:** the two Unders share an early-wicket/tempo mechanism, and the two Overs share a clean-start mechanism; they are not four independent confirmations. Both rows in either pair can win inside its overlap corridor. **Validation disposition:** `SHARE WITH CAVEATS` - exact identity, toss, XIs, match-window conditions and recency arithmetic are verified; no strip-specific report was found, the exact-25 sample is n=3, and no odds/value or calibrated-probability claim is made. `SOCIAL CHECK: unavailable/not used`.
+
+### Settlement instructions and open-event index
+
+1. Check match state first; do not settle while live.
+2. At final, record Birmingham's exact score after 25 legal deliveries and its official innings score after 100 balls (or operator settlement if shortened).
+3. Grade all four original contracts and the Sunrisers winner separately.
+4. Audit the overlap corridors, early-wicket mechanism, Sunrisers bowling depth, venue uplift and chase advantage; promote only a falsifiable repeatable lesson.
+
+| ID range | Status |
+|---|---|
+| P-001 through P-025 | `CLOSED` |
+| P-026 | `OPEN / PENDING - START CROSSED, PRE-DELIVERY AT LOCK` |
+
+**One open record: P-026.** Earlier status tables are immutable snapshots; this newest index controls current status.
+
+### P-026 final delivery-state refresh - 2026-08-08T00:06:38+10:00
+
+Cricbuzz still displayed **Sunrisers Leeds opt to bowl**, both confirmed XIs and no score, batter, bowler or legal-ball count. The match remained start-crossed but pre-delivery at the final cutoff. The ranked order and winner lean above therefore remained unchanged.
+
+## P-026 SETTLEMENT - Birmingham Phoenix Women 107/9; Sunrisers Leeds Women 111/1 (appended 2026-08-08 AEST)
+
+### Verified result and grading
+
+Cricbuzz verified the match final: Birmingham scored **107/9 after 100 balls** and Sunrisers chased 108 with **111/1 after 69 balls**, winning by nine wickets. ESPN's exact ball-by-ball core feed recorded Birmingham **29/3 after exactly 25 legal deliveries**: the 25th legal ball was Kate Cross to Ellyse Perry for two runs.
+
+| Original rank | Contract | Official boundary | Grade |
+|---:|---|---:|---|
+| 1 | BPW first 100 balls Under 140.5 | 107/9 | **WIN** |
+| 2 | BPW first 25 balls Under 33.5 | 29/3 | **WIN** |
+| 3 | BPW first 25 balls Over 23.5 | 29/3 | **WIN** |
+| 4 | BPW first 100 balls Over 120.5 | 107/9 | **LOSS** |
+| Winner | Sunrisers Leeds | won by 9 wickets | **WIN** |
+
+Card result: **3/4 supplied contracts won; rank #1 won; winner lean won.** The exact 24-33 phase overlap corridor behaved as mapped: both 25-ball rows won. No confidence strike is added.
+
+### Six-field retrospective
+
+| Field | Finding |
+|---|---|
+| What went right | The 100-ball Under, both exact-25 phase rows and Sunrisers winner all won. The exact legal-ball rule prevented substitution of a later powerplay endpoint. Sunrisers' bowling depth and chase advantage were real mechanisms. |
+| What went wrong | The projected 118-134 innings band was too high; Birmingham finished at 107. The bottom-ranked Over 120.5 lost through its stated early-wicket failure path. |
+| Why | Birmingham were 0/1 after six balls, 9/2 after 15 and 26/3 after 22. Perry and Emma Lamb recovered to 89/4 after 80, but five late wickets left only 18 further runs. Cross took 2/14 and Deepti Sharma 3/11. Phoebe Litchfield then made 71 not out from 33 balls as Sunrisers completed the chase with 31 balls unused. |
+| Evidence calibration | The Under's 15/18 completed-innings record and Sunrisers' opponent suppression correctly controlled direction. The venue median of 144 was properly treated as a failure path, not a trump card. The exact-phase sample was small but used only for ordering. |
+| Repeatable lesson | This reinforces existing cricket controls rather than creating a new rule: top-order wickets can coexist with a winning 24-33 phase Over while still suppressing the full innings, and phase/full markets must remain separate axes. |
+| Falsification/next check | Continue recording the exact 25-ball score. If clean-start/wicket-state information repeatedly fails to distinguish phase from full-innings outcomes, reassess the phase-to-total mechanism; one result is not enough for promotion. |
+
+Sources: Cricbuzz result/scorecard `https://www.cricbuzz.com/live-cricket-scorecard/145267/brmw-vs-sulw-24th-match-the-hundred-womens-competition-2026`; ESPN event 1521220 and its core ball-by-ball detail feed, verified 2026-08-08 AEST.
+
+### Running record - UPDATE
+
+| Measure | Previous count | P-026 change | New count |
+|---|---:|---:|---:|
+| Forecast records settled | 24 | +1 | **25** |
+| Formal selections (`SUPPORTED`/`LEAN`) graded correct | 38 | +3 | **41** |
+| Formal selections graded incorrect | 23 | +0 | **23** |
+| Winner picks/leans correct | 16 | +1 | **17** |
+| Winner picks/leans incorrect | 10 | +0 | **10** |
+
+The forced #4 row remains in the card audit but is not added to the formal-selection count. The supplied lines overlap and do not add an exact-complement trial. No price, profit or ROI claim is made.
+
+### Open-event index - CONTROLLING SETTLEMENT UPDATE
+
+| ID range | Status |
+|---|---|
+| P-001 through P-026 | `CLOSED` |
+
+**No open or pending records remain at this point.** Earlier P-026 open lines remain immutable forecast history; this settlement controls current status.
+
+## P-027 - Melbourne v Fremantle, AFL Round 22 - LIVE FORECAST (appended 2026-08-08 AEST)
+
+### Prior-log gate and AFL lesson carry-forward

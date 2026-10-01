@@ -1,0 +1,614 @@
+---
+## P-060/V03 — LATE-IMPORTED ALTERNATE ISSUED VIEW (source-local ID P-059)
+
+**Imported:** 2026-08-22T02:14:00+10:00  
+**Source-local identity:** The attachment calls this event `P-059/V01`. That ID cannot be canonical here because this log already binds P-059 to St. Louis at Cincinnati and P-060 to Yankees at Orioles. Its decision fields are therefore preserved in a compact canonical mapping to **P-060/V03**.  
+**Duplicate-count control:** P-060/V01/V02 is the controlling delivery already present in this log. V03 is an externally supplied alternate issued view of the same event and is graded as a view-level diagnostic only; it does not add a second event or duplicate the controlling aggregate.
+
+**Administrative duplicate cleanup — 2026-08-22:** the repeated full attachment body was removed because it duplicated the same Yankees–Orioles event, included stale source-local queue IDs, and caused naïve searches to find false P-059 forecasts and statuses. The source attachment remains at C:\Users\danie\.codex\attachments\5871eb02-5c5b-45cc-a8db-6264173edd20\pasted-text.txt. Its issue cutoff, four ranks, verdicts, winner, final, and source-local identity are preserved in the canonical mapping and settlement below. This changes storage only; no issued decision or grade was altered.
+
+### Canonical mapping of the imported ranking
+
+| Canonical view | Source-local view | Original rank | Contract | Source verdict | Normalised ledger eligibility |
+|---|---|---:|---|---|---|
+| P-060/V03 | P-059/V01 | 1 | Under 8.5 runs | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 2 | Yankees +1.5 | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 3 | Orioles +1.5 | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 4 | Over 6.5 runs | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+
+**Imported potential winner:** New York Yankees — `LEAN`.  
+**Imported source result:** Yankees 6, Orioles 1; source-local record marked settled.
+
+---
+
+## P-060 SETTLEMENT — New York Yankees 6, Baltimore Orioles 1 (canonical append 2026-08-22T02:14:00+10:00)
+
+### Official final and decisive sequence
+
+MLB's official feed is `Final`: New York defeated Baltimore **6-1 in nine innings**, total **7**. Gerrit Cole threw 6.0 innings on 93 pitches, allowing four hits, one walk and one earned run with eight strikeouts. Ryan Yarbrough supplied 3.0 perfect relief innings with four strikeouts. Kyle Bradish allowed five runs, three earned, on eight hits, two walks and two home runs in 5.2 innings/100 pitches. [Official MLB final, box score and play-by-play](https://statsapi.mlb.com/api/v1.1/game/824802/feed/live)
+
+New York scored three in the third after a Gunnar Henderson missed-catch error, Ben Rice single and Heliot Ramos double. Dylan Beavers' fifth-inning solo homer was Baltimore's only run. Luis García Jr. and Spencer Jones homered in the sixth, and García scored on Jazz Chisholm Jr.'s eighth-inning triple.
+
+### Controlling-view settlement — P-060/V01
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V01 | C02 | 1 | Yankees +1.5 | `LEAN` | DG-P060-MARGIN | PRIMARY_FORMAL | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V01 | C04 | 2 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | PRIMARY_FORMAL | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V01 | C03 | 3 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | CORRELATED_SECONDARY | 7 | `WIN` | +0.5 run | Official MLB final |
+| P-060/V01 | C01 | 4 | Orioles +1.5 | `FORCED RANK` | DG-P060-MARGIN | CORRELATED_SECONDARY | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+
+**Potential winner:** New York Yankees `WIN`.
+
+### Imported alternate-view settlement — P-060/V03
+
+| View ID | Contract ID | Original rank | Contract | Source verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V03 | C04 | 1 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V03 | C02 | 2 | Yankees +1.5 | `LEAN` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V03 | C01 | 3 | Orioles +1.5 | `FORCED RANK` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+| P-060/V03 | C03 | 4 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +0.5 run | Official MLB final |
+
+The imported view grades **3-1 raw**, with its #1 Under and winner correct. It remains excluded from controlling-delivery aggregates because the same event and contracts were already recorded in V01. Over 6.5 is `BOUNDARY_FRAGILE` at +0.5 and is not an independent confirmation of Under 8.5; both won in the deliberately identified seven-run overlap corridor.
+
+### Retrospective and learning audit
+
+| Audit field | Finding |
+|---|---|
+| **Identity / settlement** | Correct MLB event, starters and four half-run contracts. Nine innings completed; no extra-inning or push ambiguity. The imported source-local P-059 ID was remapped to canonical P-060/V03 without overwriting canonical P-059. |
+| **What went right** | Both recorded views identified the 6-8 central band and 7-8 overlap corridor; the final total was exactly seven. Cole's suppression and the Yankees winner/+1.5 mechanisms transferred. The controlling V01 correctly placed Over above Orioles +1.5; the imported V03 correctly made Under ordinal #1. |
+| **What went wrong** | Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct suppression was outweighed by the starter-downside branch: an early error-assisted three-run inning, eight hits and two sixth-inning homers. |
+| **Trend-cause audit** | The recent low-total evidence succeeded for current causes, not because an Under streak had to continue: Cole dominated, the depleted Baltimore order produced one run, and fresh Yarbrough covered three relief innings so the worked Yankees high-leverage cluster was avoided. |
+| **Right for stated reason** | Under and Yankees were correct substantially through the stated starter/lineup mechanisms. Over also won inside the stated overlap corridor but by only half a run, so it is BOUNDARY_SENSITIVE directional evidence; no calibration inference is possible because no probability was issued. |
+| **Classification** | Orioles +1.5 miss: primary `RANKING`, contributor `MODEL_SPEC`, knowability `known-underweighted`. No failed-#1 strike: V01 #1 Yankees +1.5 won and imported V03 #1 Under won. |
+| **Concrete correction** | Reinforce existing baseball +1.5 decomposition: a low-total centre does not imply a close margin. Explicitly retain the dominant-starter/multi-run branch even when both totals centre low. No new permanent rule is warranted from one game. |
+| **Falsification test** | On the next five low-total cards offering both teams +1.5, record the probability-free win/one-run-loss/2+-run-loss mechanisms separately. Reassess if this decomposition does not improve the relative ordering of the cushions. |
+| **Prospective registry impact** | P-060 is completion 1/10 for `T-P059-TREND-CAUSE`: at least three causes were stored and current persistence/non-persistence was explicitly audited before ranking. Status remains `ACTIVE`. |
+
+### P-060 controlling performance reconciliation
+
+| Measure | Through P-059 | P-060 controlling V01 | Through P-060 |
+|---|---:|---:|---:|
+| Post-audit controlling-delivery primary formal | 37-14 | 2-0 | **39-14** |
+| Post-audit controlling-delivery raw rows | 58-45 | 3-1 | **61-46** |
+| Post-audit higher-ranked exact-complement branch | 24/36 | 0/0 | **24/36** |
+| Post-audit controlling potential winners | 18-7 | 1-0 | **19-7** |
+
+
+| Canonical view | Source-local view | Original rank | Contract | Source verdict | Normalised ledger eligibility |
+|---|---|---:|---|---|---|
+| P-060/V03 | P-059/V01 | 1 | Under 8.5 runs | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 2 | Yankees +1.5 | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 3 | Orioles +1.5 | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 4 | Over 6.5 runs | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+
+**Imported potential winner:** New York Yankees — `LEAN`.  
+**Imported source result:** Yankees 6, Orioles 1; source-local record marked settled.
+
+---
+
+## P-060 SETTLEMENT — New York Yankees 6, Baltimore Orioles 1 (canonical append 2026-08-22T02:14:00+10:00)
+
+### Official final and decisive sequence
+
+MLB's official feed is `Final`: New York defeated Baltimore **6-1 in nine innings**, total **7**. Gerrit Cole threw 6.0 innings on 93 pitches, allowing four hits, one walk and one earned run with eight strikeouts. Ryan Yarbrough supplied 3.0 perfect relief innings with four strikeouts. Kyle Bradish allowed five runs, three earned, on eight hits, two walks and two home runs in 5.2 innings/100 pitches. [Official MLB final, box score and play-by-play](https://statsapi.mlb.com/api/v1.1/game/824802/feed/live)
+
+New York scored three in the third after a Gunnar Henderson missed-catch error, Ben Rice single and Heliot Ramos double. Dylan Beavers' fifth-inning solo homer was Baltimore's only run. Luis García Jr. and Spencer Jones homered in the sixth, and García scored on Jazz Chisholm Jr.'s eighth-inning triple.
+
+### Controlling-view settlement — P-060/V01
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V01 | C02 | 1 | Yankees +1.5 | `LEAN` | DG-P060-MARGIN | PRIMARY_FORMAL | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V01 | C04 | 2 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | PRIMARY_FORMAL | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V01 | C03 | 3 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | CORRELATED_SECONDARY | 7 | `WIN` | +0.5 run | Official MLB final |
+| P-060/V01 | C01 | 4 | Orioles +1.5 | `FORCED RANK` | DG-P060-MARGIN | CORRELATED_SECONDARY | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+
+**Potential winner:** New York Yankees `WIN`.
+
+### Imported alternate-view settlement — P-060/V03
+
+| View ID | Contract ID | Original rank | Contract | Source verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V03 | C04 | 1 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V03 | C02 | 2 | Yankees +1.5 | `LEAN` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V03 | C01 | 3 | Orioles +1.5 | `FORCED RANK` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+| P-060/V03 | C03 | 4 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +0.5 run | Official MLB final |
+
+The imported view grades **3-1 raw**, with its #1 Under and winner correct. It remains excluded from controlling-delivery aggregates because the same event and contracts were already recorded in V01. Over 6.5 is `BOUNDARY_FRAGILE` at +0.5 and is not an independent confirmation of Under 8.5; both won in the deliberately identified seven-run overlap corridor.
+
+### Retrospective and learning audit
+
+| Audit field | Finding |
+|---|---|
+| **Identity / settlement** | Correct MLB event, starters and four half-run contracts. Nine innings completed; no extra-inning or push ambiguity. The imported source-local P-059 ID was remapped to canonical P-060/V03 without overwriting canonical P-059. |
+| **What went right** | Both recorded views identified the 6-8 central band and 7-8 overlap corridor; the final total was exactly seven. Cole's suppression and the Yankees winner/+1.5 mechanisms transferred. The controlling V01 correctly placed Over above Orioles +1.5; the imported V03 correctly made Under ordinal #1. |
+| **What went wrong** | Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct suppression was outweighed by the starter-downside branch: an early error-assisted three-run inning, eight hits and two sixth-inning homers. |
+| **Trend-cause audit** | The recent low-total evidence succeeded for current causes, not because an Under streak had to continue: Cole dominated, the depleted Baltimore order produced one run, and fresh Yarbrough covered three relief innings so the worked Yankees high-leverage cluster was avoided. |
+| **Right for stated reason** | Under and Yankees were correct substantially through the stated starter/lineup mechanisms. Over also won inside the stated overlap corridor but by only half a run, so it is BOUNDARY_SENSITIVE directional evidence; no calibration inference is possible because no probability was issued. |
+| **Classification** | Orioles +1.5 miss: primary `RANKING`, contributor `MODEL_SPEC`, knowability `known-underweighted`. No failed-#1 strike: V01 #1 Yankees +1.5 won and imported V03 #1 Under won. |
+| **Concrete correction** | Reinforce existing baseball +1.5 decomposition: a low-total centre does not imply a close margin. Explicitly retain the dominant-starter/multi-run branch even when both totals centre low. No new permanent rule is warranted from one game. |
+| **Falsification test** | On the next five low-total cards offering both teams +1.5, record the probability-free win/one-run-loss/2+-run-loss mechanisms separately. Reassess if this decomposition does not improve the relative ordering of the cushions. |
+| **Prospective registry impact** | P-060 is completion 1/10 for `T-P059-TREND-CAUSE`: at least three causes were stored and current persistence/non-persistence was explicitly audited before ranking. Status remains `ACTIVE`. |
+
+### P-060 controlling performance reconciliation
+
+| Measure | Through P-059 | P-060 controlling V01 | Through P-060 |
+|---|---:|---:|---:|
+| Post-audit controlling-delivery primary formal | 37-14 | 2-0 | **39-14** |
+| Post-audit controlling-delivery raw rows | 58-45 | 3-1 | **61-46** |
+| Post-audit higher-ranked exact-complement branch | 24/36 | 0/0 | **24/36** |
+| Post-audit controlling potential winners | 18-7 | 1-0 | **19-7** |
+
+The gapped totals and opposite-team +1.5 contracts are overlapping corridors, not exact complements; they do not enter the exact-complement denominator. P-060/V03 is a diagnostic imported view and adds no second controlling count.
+
+**Result:** `SETTLED / CLOSED`.
+
+## Open-event index — APPENDED P-060 IMPORT/SETTLEMENT UPDATE (2026-08-22T02:14:00+10:00)
+
+| ID | Controlling status |
+|---|---|
+| P-001 through P-060 | `CLOSED AS DOCUMENTED` (P-021 is the no-forecast closure; P-003 retains one final UNSETTLEABLE row) |
+
+There are no open events after this settlement. **Next canonical ID: `P-061`.**
+
+## P-060/V03 — LATE-IMPORTED ALTERNATE ISSUED VIEW (source-local ID P-059)
+
+**Imported:** 2026-08-22T02:14:00+10:00  
+**Source-local identity:** The attachment calls this event `P-059/V01`. That ID cannot be canonical here because this log already binds P-059 to St. Louis at Cincinnati and P-060 to Yankees at Orioles. Its decision fields are therefore preserved in a compact canonical mapping to **P-060/V03**.  
+**Duplicate-count control:** P-060/V01/V02 is the controlling delivery already present in this log. V03 is an externally supplied alternate issued view of the same event and is graded as a view-level diagnostic only; it does not add a second event or duplicate the controlling aggregate.
+
+**Administrative duplicate cleanup — 2026-08-22:** the repeated full attachment body was removed because it duplicated the same Yankees–Orioles event, included stale source-local queue IDs, and caused naïve searches to find false P-059 forecasts and statuses. The source attachment remains at C:\Users\danie\.codex\attachments\5871eb02-5c5b-45cc-a8db-6264173edd20\pasted-text.txt. Its issue cutoff, four ranks, verdicts, winner, final, and source-local identity are preserved in the canonical mapping and settlement below. This changes storage only; no issued decision or grade was altered.
+
+### Canonical mapping of the imported ranking
+
+| Canonical view | Source-local view | Original rank | Contract | Source verdict | Normalised ledger eligibility |
+|---|---|---:|---|---|---|
+| P-060/V03 | P-059/V01 | 1 | Under 8.5 runs | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 2 | Yankees +1.5 | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 3 | Orioles +1.5 | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 4 | Over 6.5 runs | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+
+**Imported potential winner:** New York Yankees — `LEAN`.  
+**Imported source result:** Yankees 6, Orioles 1; source-local record marked settled.
+
+---
+
+## P-060 SETTLEMENT — New York Yankees 6, Baltimore Orioles 1 (canonical append 2026-08-22T02:14:00+10:00)
+
+### Official final and decisive sequence
+
+MLB's official feed is `Final`: New York defeated Baltimore **6-1 in nine innings**, total **7**. Gerrit Cole threw 6.0 innings on 93 pitches, allowing four hits, one walk and one earned run with eight strikeouts. Ryan Yarbrough supplied 3.0 perfect relief innings with four strikeouts. Kyle Bradish allowed five runs, three earned, on eight hits, two walks and two home runs in 5.2 innings/100 pitches. [Official MLB final, box score and play-by-play](https://statsapi.mlb.com/api/v1.1/game/824802/feed/live)
+
+New York scored three in the third after a Gunnar Henderson missed-catch error, Ben Rice single and Heliot Ramos double. Dylan Beavers' fifth-inning solo homer was Baltimore's only run. Luis García Jr. and Spencer Jones homered in the sixth, and García scored on Jazz Chisholm Jr.'s eighth-inning triple.
+
+### Controlling-view settlement — P-060/V01
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V01 | C02 | 1 | Yankees +1.5 | `LEAN` | DG-P060-MARGIN | PRIMARY_FORMAL | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V01 | C04 | 2 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | PRIMARY_FORMAL | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V01 | C03 | 3 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | CORRELATED_SECONDARY | 7 | `WIN` | +0.5 run | Official MLB final |
+| P-060/V01 | C01 | 4 | Orioles +1.5 | `FORCED RANK` | DG-P060-MARGIN | CORRELATED_SECONDARY | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+
+**Potential winner:** New York Yankees `WIN`.
+
+### Imported alternate-view settlement — P-060/V03
+
+| View ID | Contract ID | Original rank | Contract | Source verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V03 | C04 | 1 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V03 | C02 | 2 | Yankees +1.5 | `LEAN` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V03 | C01 | 3 | Orioles +1.5 | `FORCED RANK` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+| P-060/V03 | C03 | 4 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +0.5 run | Official MLB final |
+
+The imported view grades **3-1 raw**, with its #1 Under and winner correct. It remains excluded from controlling-delivery aggregates because the same event and contracts were already recorded in V01. Over 6.5 is `BOUNDARY_FRAGILE` at +0.5 and is not an independent confirmation of Under 8.5; both won in the deliberately identified seven-run overlap corridor.
+
+### Retrospective and learning audit
+
+| Audit field | Finding |
+|---|---|
+| **Identity / settlement** | Correct MLB event, starters and four half-run contracts. Nine innings completed; no extra-inning or push ambiguity. The imported source-local P-059 ID was remapped to canonical P-060/V03 without overwriting canonical P-059. |
+| **What went right** | Both recorded views identified the 6-8 central band and 7-8 overlap corridor; the final total was exactly seven. Cole's suppression and the Yankees winner/+1.5 mechanisms transferred. The controlling V01 correctly placed Over above Orioles +1.5; the imported V03 correctly made Under ordinal #1. |
+| **What went wrong** | Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct suppression was outweighed by the starter-downside branch: an early error-assisted three-run inning, eight hits and two sixth-inning homers. |
+| **Trend-cause audit** | The recent low-total evidence succeeded for current causes, not because an Under streak had to continue: Cole dominated, the depleted Baltimore order produced one run, and fresh Yarbrough covered three relief innings so the worked Yankees high-leverage cluster was avoided. |
+| **Right for stated reason** | Under and Yankees were correct substantially through the stated starter/lineup mechanisms. Over also won inside the stated overlap corridor but by only half a run, so it is BOUNDARY_SENSITIVE directional evidence; no calibration inference is possible because no probability was issued. |
+| **Classification** | Orioles +1.5 miss: primary `RANKING`, contributor `MODEL_SPEC`, knowability `known-underweighted`. No failed-#1 strike: V01 #1 Yankees +1.5 won and imported V03 #1 Under won. |
+| **Concrete correction** | Reinforce existing baseball +1.5 decomposition: a low-total centre does not imply a close margin. Explicitly retain the dominant-starter/multi-run branch even when both totals centre low. No new permanent rule is warranted from one game. |
+| **Falsification test** | On the next five low-total cards offering both teams +1.5, record the probability-free win/one-run-loss/2+-run-loss mechanisms separately. Reassess if this decomposition does not improve the relative ordering of the cushions. |
+| **Prospective registry impact** | P-060 is completion 1/10 for `T-P059-TREND-CAUSE`: at least three causes were stored and current persistence/non-persistence was explicitly audited before ranking. Status remains `ACTIVE`. |
+
+### P-060 controlling performance reconciliation
+
+| Measure | Through P-059 | P-060 controlling V01 | Through P-060 |
+|---|---:|---:|---:|
+| Post-audit controlling-delivery primary formal | 37-14 | 2-0 | **39-14** |
+| Post-audit controlling-delivery raw rows | 58-45 | 3-1 | **61-46** |
+| Post-audit higher-ranked exact-complement branch | 24/36 | 0/0 | **24/36** |
+| Post-audit controlling potential winners | 18-7 | 1-0 | **19-7** |
+
+The gapped totals and opposite-team +1.5 contracts are overlapping corridors, not exact complements; they do not enter the exact-complement denominator. P-060/V03 is a diagnostic imported view and adds no second controlling count.
+
+|---|---|---:|---|---|---|
+| P-060/V03 | P-059/V01 | 1 | Under 8.5 runs | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 2 | Yankees +1.5 | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 3 | Orioles +1.5 | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 4 | Over 6.5 runs | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+
+**Imported potential winner:** New York Yankees — `LEAN`.  
+**Imported source result:** Yankees 6, Orioles 1; source-local record marked settled.
+
+---
+
+## P-060 SETTLEMENT — New York Yankees 6, Baltimore Orioles 1 (canonical append 2026-08-22T02:14:00+10:00)
+
+### Official final and decisive sequence
+
+MLB's official feed is `Final`: New York defeated Baltimore **6-1 in nine innings**, total **7**. Gerrit Cole threw 6.0 innings on 93 pitches, allowing four hits, one walk and one earned run with eight strikeouts. Ryan Yarbrough supplied 3.0 perfect relief innings with four strikeouts. Kyle Bradish allowed five runs, three earned, on eight hits, two walks and two home runs in 5.2 innings/100 pitches. [Official MLB final, box score and play-by-play](https://statsapi.mlb.com/api/v1.1/game/824802/feed/live)
+
+New York scored three in the third after a Gunnar Henderson missed-catch error, Ben Rice single and Heliot Ramos double. Dylan Beavers' fifth-inning solo homer was Baltimore's only run. Luis García Jr. and Spencer Jones homered in the sixth, and García scored on Jazz Chisholm Jr.'s eighth-inning triple.
+
+### Controlling-view settlement — P-060/V01
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V01 | C02 | 1 | Yankees +1.5 | `LEAN` | DG-P060-MARGIN | PRIMARY_FORMAL | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V01 | C04 | 2 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | PRIMARY_FORMAL | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V01 | C03 | 3 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | CORRELATED_SECONDARY | 7 | `WIN` | +0.5 run | Official MLB final |
+| P-060/V01 | C01 | 4 | Orioles +1.5 | `FORCED RANK` | DG-P060-MARGIN | CORRELATED_SECONDARY | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+
+**Potential winner:** New York Yankees `WIN`.
+
+### Imported alternate-view settlement — P-060/V03
+
+| View ID | Contract ID | Original rank | Contract | Source verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V03 | C04 | 1 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V03 | C02 | 2 | Yankees +1.5 | `LEAN` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V03 | C01 | 3 | Orioles +1.5 | `FORCED RANK` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+| P-060/V03 | C03 | 4 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +0.5 run | Official MLB final |
+
+The imported view grades **3-1 raw**, with its #1 Under and winner correct. It remains excluded from controlling-delivery aggregates because the same event and contracts were already recorded in V01. Over 6.5 is `BOUNDARY_FRAGILE` at +0.5 and is not an independent confirmation of Under 8.5; both won in the deliberately identified seven-run overlap corridor.
+
+### Retrospective and learning audit
+
+| Audit field | Finding |
+|---|---|
+| **Identity / settlement** | Correct MLB event, starters and four half-run contracts. Nine innings completed; no extra-inning or push ambiguity. The imported source-local P-059 ID was remapped to canonical P-060/V03 without overwriting canonical P-059. |
+| **What went right** | Both recorded views identified the 6-8 central band and 7-8 overlap corridor; the final total was exactly seven. Cole's suppression and the Yankees winner/+1.5 mechanisms transferred. The controlling V01 correctly placed Over above Orioles +1.5; the imported V03 correctly made Under ordinal #1. |
+| **What went wrong** | Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct suppression was outweighed by the starter-downside branch: an early error-assisted three-run inning, eight hits and two sixth-inning homers. |
+| **Trend-cause audit** | The recent low-total evidence succeeded for current causes, not because an Under streak had to continue: Cole dominated, the depleted Baltimore order produced one run, and fresh Yarbrough covered three relief innings so the worked Yankees high-leverage cluster was avoided. |
+| **Right for stated reason** | Under and Yankees were correct substantially through the stated starter/lineup mechanisms. Over also won inside the stated overlap corridor but by only half a run, so it is BOUNDARY_SENSITIVE directional evidence; no calibration inference is possible because no probability was issued. |
+| **Classification** | Orioles +1.5 miss: primary `RANKING`, contributor `MODEL_SPEC`, knowability `known-underweighted`. No failed-#1 strike: V01 #1 Yankees +1.5 won and imported V03 #1 Under won. |
+| **Concrete correction** | Reinforce existing baseball +1.5 decomposition: a low-total centre does not imply a close margin. Explicitly retain the dominant-starter/multi-run branch even when both totals centre low. No new permanent rule is warranted from one game. |
+| **Falsification test** | On the next five low-total cards offering both teams +1.5, record the probability-free win/one-run-loss/2+-run-loss mechanisms separately. Reassess if this decomposition does not improve the relative ordering of the cushions. |
+| **Prospective registry impact** | P-060 is completion 1/10 for `T-P059-TREND-CAUSE`: at least three causes were stored and current persistence/non-persistence was explicitly audited before ranking. Status remains `ACTIVE`. |
+
+### P-060 controlling performance reconciliation
+
+| Measure | Through P-059 | P-060 controlling V01 | Through P-060 |
+|---|---:|---:|---:|
+| Post-audit controlling-delivery primary formal | 37-14 | 2-0 | **39-14** |
+| Post-audit controlling-delivery raw rows | 58-45 | 3-1 | **61-46** |
+| Post-audit higher-ranked exact-complement branch | 24/36 | 0/0 | **24/36** |
+| Post-audit controlling potential winners | 18-7 | 1-0 | **19-7** |
+
+The gapped totals and opposite-team +1.5 contracts are overlapping corridors, not exact complements; they do not enter the exact-complement denominator. P-060/V03 is a diagnostic imported view and adds no second controlling count.
+
+**Result:** `SETTLED / CLOSED`.
+
+## Open-event index — APPENDED P-060 IMPORT/SETTLEMENT UPDATE (2026-08-22T02:14:00+10:00)
+
+| ID | Controlling status |
+|---|---|
+| P-001 through P-060 | `CLOSED AS DOCUMENTED` (P-021 is the no-forecast closure; P-003 retains one final UNSETTLEABLE row) |
+
+There are no open events after this settlement. **Next canonical ID: `P-061`.**
+
+
+
+**Imported:** 2026-08-22T02:14:00+10:00  
+**Source-local identity:** The attachment calls this event `P-059/V01`. That ID cannot be canonical here because this log already binds P-059 to St. Louis at Cincinnati and P-060 to Yankees at Orioles. Its decision fields are therefore preserved in a compact canonical mapping to **P-060/V03**.  
+**Duplicate-count control:** P-060/V01/V02 is the controlling delivery already present in this log. V03 is an externally supplied alternate issued view of the same event and is graded as a view-level diagnostic only; it does not add a second event or duplicate the controlling aggregate.
+
+**Administrative duplicate cleanup — 2026-08-22:** the repeated full attachment body was removed because it duplicated the same Yankees–Orioles event, included stale source-local queue IDs, and caused naïve searches to find false P-059 forecasts and statuses. The source attachment remains at C:\Users\danie\.codex\attachments\5871eb02-5c5b-45cc-a8db-6264173edd20\pasted-text.txt. Its issue cutoff, four ranks, verdicts, winner, final, and source-local identity are preserved in the canonical mapping and settlement below. This changes storage only; no issued decision or grade was altered.
+
+### Canonical mapping of the imported ranking
+
+| Canonical view | Source-local view | Original rank | Contract | Source verdict | Normalised ledger eligibility |
+|---|---|---:|---|---|---|
+| P-060/V03 | P-059/V01 | 1 | Under 8.5 runs | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 2 | Yankees +1.5 | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 3 | Orioles +1.5 | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 4 | Over 6.5 runs | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+
+**Imported potential winner:** New York Yankees — `LEAN`.  
+**Imported source result:** Yankees 6, Orioles 1; source-local record marked settled.
+
+---
+
+## P-060 SETTLEMENT — New York Yankees 6, Baltimore Orioles 1 (canonical append 2026-08-22T02:14:00+10:00)
+
+### Official final and decisive sequence
+
+MLB's official feed is `Final`: New York defeated Baltimore **6-1 in nine innings**, total **7**. Gerrit Cole threw 6.0 innings on 93 pitches, allowing four hits, one walk and one earned run with eight strikeouts. Ryan Yarbrough supplied 3.0 perfect relief innings with four strikeouts. Kyle Bradish allowed five runs, three earned, on eight hits, two walks and two home runs in 5.2 innings/100 pitches. [Official MLB final, box score and play-by-play](https://statsapi.mlb.com/api/v1.1/game/824802/feed/live)
+
+New York scored three in the third after a Gunnar Henderson missed-catch error, Ben Rice single and Heliot Ramos double. Dylan Beavers' fifth-inning solo homer was Baltimore's only run. Luis García Jr. and Spencer Jones homered in the sixth, and García scored on Jazz Chisholm Jr.'s eighth-inning triple.
+
+### Controlling-view settlement — P-060/V01
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V01 | C02 | 1 | Yankees +1.5 | `LEAN` | DG-P060-MARGIN | PRIMARY_FORMAL | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V01 | C04 | 2 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | PRIMARY_FORMAL | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V01 | C03 | 3 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | CORRELATED_SECONDARY | 7 | `WIN` | +0.5 run | Official MLB final |
+| P-060/V01 | C01 | 4 | Orioles +1.5 | `FORCED RANK` | DG-P060-MARGIN | CORRELATED_SECONDARY | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+
+**Potential winner:** New York Yankees `WIN`.
+
+### Imported alternate-view settlement — P-060/V03
+
+| View ID | Contract ID | Original rank | Contract | Source verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V03 | C04 | 1 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V03 | C02 | 2 | Yankees +1.5 | `LEAN` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V03 | C01 | 3 | Orioles +1.5 | `FORCED RANK` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+| P-060/V03 | C03 | 4 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +0.5 run | Official MLB final |
+
+The imported view grades **3-1 raw**, with its #1 Under and winner correct. It remains excluded from controlling-delivery aggregates because the same event and contracts were already recorded in V01. Over 6.5 is `BOUNDARY_FRAGILE` at +0.5 and is not an independent confirmation of Under 8.5; both won in the deliberately identified seven-run overlap corridor.
+
+### Retrospective and learning audit
+
+| Audit field | Finding |
+|---|---|
+| **Identity / settlement** | Correct MLB event, starters and four half-run contracts. Nine innings completed; no extra-inning or push ambiguity. The imported source-local P-059 ID was remapped to canonical P-060/V03 without overwriting canonical P-059. |
+| **What went right** | Both recorded views identified the 6-8 central band and 7-8 overlap corridor; the final total was exactly seven. Cole's suppression and the Yankees winner/+1.5 mechanisms transferred. The controlling V01 correctly placed Over above Orioles +1.5; the imported V03 correctly made Under ordinal #1. |
+| **What went wrong** | Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct suppression was outweighed by the starter-downside branch: an early error-assisted three-run inning, eight hits and two sixth-inning homers. |
+| **Trend-cause audit** | The recent low-total evidence succeeded for current causes, not because an Under streak had to continue: Cole dominated, the depleted Baltimore order produced one run, and fresh Yarbrough covered three relief innings so the worked Yankees high-leverage cluster was avoided. |
+| **Right for stated reason** | Under and Yankees were correct substantially through the stated starter/lineup mechanisms. Over also won inside the stated overlap corridor but by only half a run, so it is BOUNDARY_SENSITIVE directional evidence; no calibration inference is possible because no probability was issued. |
+| **Classification** | Orioles +1.5 miss: primary `RANKING`, contributor `MODEL_SPEC`, knowability `known-underweighted`. No failed-#1 strike: V01 #1 Yankees +1.5 won and imported V03 #1 Under won. |
+| **Concrete correction** | Reinforce existing baseball +1.5 decomposition: a low-total centre does not imply a close margin. Explicitly retain the dominant-starter/multi-run branch even when both totals centre low. No new permanent rule is warranted from one game. |
+| **Falsification test** | On the next five low-total cards offering both teams +1.5, record the probability-free win/one-run-loss/2+-run-loss mechanisms separately. Reassess if this decomposition does not improve the relative ordering of the cushions. |
+| **Prospective registry impact** | P-060 is completion 1/10 for `T-P059-TREND-CAUSE`: at least three causes were stored and current persistence/non-persistence was explicitly audited before ranking. Status remains `ACTIVE`. |
+
+### P-060 controlling performance reconciliation
+
+| Measure | Through P-059 | P-060 controlling V01 | Through P-060 |
+|---|---:|---:|---:|
+| Post-audit controlling-delivery primary formal | 37-14 | 2-0 | **39-14** |
+| Post-audit controlling-delivery raw rows | 58-45 | 3-1 | **61-46** |
+| Post-audit higher-ranked exact-complement branch | 24/36 | 0/0 | **24/36** |
+| Post-audit controlling potential winners | 18-7 | 1-0 | **19-7** |
+
+The gapped totals and opposite-team +1.5 contracts are overlapping corridors, not exact complements; they do not enter the exact-complement denominator. P-060/V03 is a diagnostic imported view and adds no second controlling count.
+
+
+| P-060/V03 | P-059/V01 | 1 | Under 8.5 runs | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 2 | Yankees +1.5 | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 3 | Orioles +1.5 | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 4 | Over 6.5 runs | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+
+**Imported potential winner:** New York Yankees — `LEAN`.  
+**Imported source result:** Yankees 6, Orioles 1; source-local record marked settled.
+
+---
+
+## P-060 SETTLEMENT — New York Yankees 6, Baltimore Orioles 1 (canonical append 2026-08-22T02:14:00+10:00)
+
+### Official final and decisive sequence
+
+MLB's official feed is `Final`: New York defeated Baltimore **6-1 in nine innings**, total **7**. Gerrit Cole threw 6.0 innings on 93 pitches, allowing four hits, one walk and one earned run with eight strikeouts. Ryan Yarbrough supplied 3.0 perfect relief innings with four strikeouts. Kyle Bradish allowed five runs, three earned, on eight hits, two walks and two home runs in 5.2 innings/100 pitches. [Official MLB final, box score and play-by-play](https://statsapi.mlb.com/api/v1.1/game/824802/feed/live)
+
+New York scored three in the third after a Gunnar Henderson missed-catch error, Ben Rice single and Heliot Ramos double. Dylan Beavers' fifth-inning solo homer was Baltimore's only run. Luis García Jr. and Spencer Jones homered in the sixth, and García scored on Jazz Chisholm Jr.'s eighth-inning triple.
+
+### Controlling-view settlement — P-060/V01
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V01 | C02 | 1 | Yankees +1.5 | `LEAN` | DG-P060-MARGIN | PRIMARY_FORMAL | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V01 | C04 | 2 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | PRIMARY_FORMAL | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V01 | C03 | 3 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | CORRELATED_SECONDARY | 7 | `WIN` | +0.5 run | Official MLB final |
+| P-060/V01 | C01 | 4 | Orioles +1.5 | `FORCED RANK` | DG-P060-MARGIN | CORRELATED_SECONDARY | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+
+**Potential winner:** New York Yankees `WIN`.
+
+### Imported alternate-view settlement — P-060/V03
+
+| View ID | Contract ID | Original rank | Contract | Source verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V03 | C04 | 1 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V03 | C02 | 2 | Yankees +1.5 | `LEAN` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V03 | C01 | 3 | Orioles +1.5 | `FORCED RANK` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+| P-060/V03 | C03 | 4 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +0.5 run | Official MLB final |
+
+The imported view grades **3-1 raw**, with its #1 Under and winner correct. It remains excluded from controlling-delivery aggregates because the same event and contracts were already recorded in V01. Over 6.5 is `BOUNDARY_FRAGILE` at +0.5 and is not an independent confirmation of Under 8.5; both won in the deliberately identified seven-run overlap corridor.
+
+### Retrospective and learning audit
+
+| Audit field | Finding |
+|---|---|
+| **Identity / settlement** | Correct MLB event, starters and four half-run contracts. Nine innings completed; no extra-inning or push ambiguity. The imported source-local P-059 ID was remapped to canonical P-060/V03 without overwriting canonical P-059. |
+| **What went right** | Both recorded views identified the 6-8 central band and 7-8 overlap corridor; the final total was exactly seven. Cole's suppression and the Yankees winner/+1.5 mechanisms transferred. The controlling V01 correctly placed Over above Orioles +1.5; the imported V03 correctly made Under ordinal #1. |
+| **What went wrong** | Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct suppression was outweighed by the starter-downside branch: an early error-assisted three-run inning, eight hits and two sixth-inning homers. |
+| **Trend-cause audit** | The recent low-total evidence succeeded for current causes, not because an Under streak had to continue: Cole dominated, the depleted Baltimore order produced one run, and fresh Yarbrough covered three relief innings so the worked Yankees high-leverage cluster was avoided. |
+| **Right for stated reason** | Under and Yankees were correct substantially through the stated starter/lineup mechanisms. Over also won inside the stated overlap corridor but by only half a run, so it is BOUNDARY_SENSITIVE directional evidence; no calibration inference is possible because no probability was issued. |
+| **Classification** | Orioles +1.5 miss: primary `RANKING`, contributor `MODEL_SPEC`, knowability `known-underweighted`. No failed-#1 strike: V01 #1 Yankees +1.5 won and imported V03 #1 Under won. |
+| **Concrete correction** | Reinforce existing baseball +1.5 decomposition: a low-total centre does not imply a close margin. Explicitly retain the dominant-starter/multi-run branch even when both totals centre low. No new permanent rule is warranted from one game. |
+| **Falsification test** | On the next five low-total cards offering both teams +1.5, record the probability-free win/one-run-loss/2+-run-loss mechanisms separately. Reassess if this decomposition does not improve the relative ordering of the cushions. |
+| **Prospective registry impact** | P-060 is completion 1/10 for `T-P059-TREND-CAUSE`: at least three causes were stored and current persistence/non-persistence was explicitly audited before ranking. Status remains `ACTIVE`. |
+
+### P-060 controlling performance reconciliation
+
+| Measure | Through P-059 | P-060 controlling V01 | Through P-060 |
+|---|---:|---:|---:|
+| Post-audit controlling-delivery primary formal | 37-14 | 2-0 | **39-14** |
+| Post-audit controlling-delivery raw rows | 58-45 | 3-1 | **61-46** |
+| Post-audit higher-ranked exact-complement branch | 24/36 | 0/0 | **24/36** |
+| Post-audit controlling potential winners | 18-7 | 1-0 | **19-7** |
+
+The gapped totals and opposite-team +1.5 contracts are overlapping corridors, not exact complements; they do not enter the exact-complement denominator. P-060/V03 is a diagnostic imported view and adds no second controlling count.
+
+**Result:** `SETTLED / CLOSED`.
+
+## Open-event index — APPENDED P-060 IMPORT/SETTLEMENT UPDATE (2026-08-22T02:14:00+10:00)
+
+| ID | Controlling status |
+|---|---|
+| P-001 through P-060 | `CLOSED AS DOCUMENTED` (P-021 is the no-forecast closure; P-003 retains one final UNSETTLEABLE row) |
+
+There are no open events after this settlement. **Next canonical ID: `P-061`.**
+
+---
+
+**Imported:** 2026-08-22T02:14:00+10:00  
+**Source-local identity:** The attachment calls this event `P-059/V01`. That ID cannot be canonical here because this log already binds P-059 to St. Louis at Cincinnati and P-060 to Yankees at Orioles. Its decision fields are therefore preserved in a compact canonical mapping to **P-060/V03**.  
+**Duplicate-count control:** P-060/V01/V02 is the controlling delivery already present in this log. V03 is an externally supplied alternate issued view of the same event and is graded as a view-level diagnostic only; it does not add a second event or duplicate the controlling aggregate.
+
+**Administrative duplicate cleanup — 2026-08-22:** the repeated full attachment body was removed because it duplicated the same Yankees–Orioles event, included stale source-local queue IDs, and caused naïve searches to find false P-059 forecasts and statuses. The source attachment remains at C:\Users\danie\.codex\attachments\5871eb02-5c5b-45cc-a8db-6264173edd20\pasted-text.txt. Its issue cutoff, four ranks, verdicts, winner, final, and source-local identity are preserved in the canonical mapping and settlement below. This changes storage only; no issued decision or grade was altered.
+
+### Canonical mapping of the imported ranking
+
+| Canonical view | Source-local view | Original rank | Contract | Source verdict | Normalised ledger eligibility |
+|---|---|---:|---|---|---|
+| P-060/V03 | P-059/V01 | 1 | Under 8.5 runs | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 2 | Yankees +1.5 | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 3 | Orioles +1.5 | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 4 | Over 6.5 runs | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+
+**Imported potential winner:** New York Yankees — `LEAN`.  
+**Imported source result:** Yankees 6, Orioles 1; source-local record marked settled.
+
+---
+
+## P-060 SETTLEMENT — New York Yankees 6, Baltimore Orioles 1 (canonical append 2026-08-22T02:14:00+10:00)
+
+### Official final and decisive sequence
+
+MLB's official feed is `Final`: New York defeated Baltimore **6-1 in nine innings**, total **7**. Gerrit Cole threw 6.0 innings on 93 pitches, allowing four hits, one walk and one earned run with eight strikeouts. Ryan Yarbrough supplied 3.0 perfect relief innings with four strikeouts. Kyle Bradish allowed five runs, three earned, on eight hits, two walks and two home runs in 5.2 innings/100 pitches. [Official MLB final, box score and play-by-play](https://statsapi.mlb.com/api/v1.1/game/824802/feed/live)
+
+New York scored three in the third after a Gunnar Henderson missed-catch error, Ben Rice single and Heliot Ramos double. Dylan Beavers' fifth-inning solo homer was Baltimore's only run. Luis García Jr. and Spencer Jones homered in the sixth, and García scored on Jazz Chisholm Jr.'s eighth-inning triple.
+
+### Controlling-view settlement — P-060/V01
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V01 | C02 | 1 | Yankees +1.5 | `LEAN` | DG-P060-MARGIN | PRIMARY_FORMAL | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V01 | C04 | 2 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | PRIMARY_FORMAL | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V01 | C03 | 3 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | CORRELATED_SECONDARY | 7 | `WIN` | +0.5 run | Official MLB final |
+| P-060/V01 | C01 | 4 | Orioles +1.5 | `FORCED RANK` | DG-P060-MARGIN | CORRELATED_SECONDARY | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+
+**Potential winner:** New York Yankees `WIN`.
+
+### Imported alternate-view settlement — P-060/V03
+
+| View ID | Contract ID | Original rank | Contract | Source verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V03 | C04 | 1 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V03 | C02 | 2 | Yankees +1.5 | `LEAN` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V03 | C01 | 3 | Orioles +1.5 | `FORCED RANK` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+| P-060/V03 | C03 | 4 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +0.5 run | Official MLB final |
+
+The imported view grades **3-1 raw**, with its #1 Under and winner correct. It remains excluded from controlling-delivery aggregates because the same event and contracts were already recorded in V01. Over 6.5 is `BOUNDARY_FRAGILE` at +0.5 and is not an independent confirmation of Under 8.5; both won in the deliberately identified seven-run overlap corridor.
+
+### Retrospective and learning audit
+
+| Audit field | Finding |
+|---|---|
+| **Identity / settlement** | Correct MLB event, starters and four half-run contracts. Nine innings completed; no extra-inning or push ambiguity. The imported source-local P-059 ID was remapped to canonical P-060/V03 without overwriting canonical P-059. |
+| **What went right** | Both recorded views identified the 6-8 central band and 7-8 overlap corridor; the final total was exactly seven. Cole's suppression and the Yankees winner/+1.5 mechanisms transferred. The controlling V01 correctly placed Over above Orioles +1.5; the imported V03 correctly made Under ordinal #1. |
+| **What went wrong** | Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct suppression was outweighed by the starter-downside branch: an early error-assisted three-run inning, eight hits and two sixth-inning homers. |
+| **Trend-cause audit** | The recent low-total evidence succeeded for current causes, not because an Under streak had to continue: Cole dominated, the depleted Baltimore order produced one run, and fresh Yarbrough covered three relief innings so the worked Yankees high-leverage cluster was avoided. |
+| **Right for stated reason** | Under and Yankees were correct substantially through the stated starter/lineup mechanisms. Over also won inside the stated overlap corridor but by only half a run, so it is BOUNDARY_SENSITIVE directional evidence; no calibration inference is possible because no probability was issued. |
+| **Classification** | Orioles +1.5 miss: primary `RANKING`, contributor `MODEL_SPEC`, knowability `known-underweighted`. No failed-#1 strike: V01 #1 Yankees +1.5 won and imported V03 #1 Under won. |
+| **Concrete correction** | Reinforce existing baseball +1.5 decomposition: a low-total centre does not imply a close margin. Explicitly retain the dominant-starter/multi-run branch even when both totals centre low. No new permanent rule is warranted from one game. |
+| **Falsification test** | On the next five low-total cards offering both teams +1.5, record the probability-free win/one-run-loss/2+-run-loss mechanisms separately. Reassess if this decomposition does not improve the relative ordering of the cushions. |
+| **Prospective registry impact** | P-060 is completion 1/10 for `T-P059-TREND-CAUSE`: at least three causes were stored and current persistence/non-persistence was explicitly audited before ranking. Status remains `ACTIVE`. |
+
+### P-060 controlling performance reconciliation
+
+| Measure | Through P-059 | P-060 controlling V01 | Through P-060 |
+|---|---:|---:|---:|
+| Post-audit controlling-delivery primary formal | 37-14 | 2-0 | **39-14** |
+| Post-audit controlling-delivery raw rows | 58-45 | 3-1 | **61-46** |
+| Post-audit higher-ranked exact-complement branch | 24/36 | 0/0 | **24/36** |
+| Post-audit controlling potential winners | 18-7 | 1-0 | **19-7** |
+
+The gapped totals and opposite-team +1.5 contracts are overlapping corridors, not exact complements; they do not enter the exact-complement denominator. P-060/V03 is a diagnostic imported view and adds no second controlling count.
+
+**Result:** `SETTLED / CLOSED`.
+
+| P-060/V03 | P-059/V01 | 2 | Yankees +1.5 | `LEAN` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 3 | Orioles +1.5 | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+| P-060/V03 | P-059/V01 | 4 | Over 6.5 runs | `FORCED RANK` | LATE_IMPORTED_DIAGNOSTIC |
+
+**Imported potential winner:** New York Yankees — `LEAN`.  
+**Imported source result:** Yankees 6, Orioles 1; source-local record marked settled.
+
+---
+
+## P-060 SETTLEMENT — New York Yankees 6, Baltimore Orioles 1 (canonical append 2026-08-22T02:14:00+10:00)
+
+### Official final and decisive sequence
+
+MLB's official feed is `Final`: New York defeated Baltimore **6-1 in nine innings**, total **7**. Gerrit Cole threw 6.0 innings on 93 pitches, allowing four hits, one walk and one earned run with eight strikeouts. Ryan Yarbrough supplied 3.0 perfect relief innings with four strikeouts. Kyle Bradish allowed five runs, three earned, on eight hits, two walks and two home runs in 5.2 innings/100 pitches. [Official MLB final, box score and play-by-play](https://statsapi.mlb.com/api/v1.1/game/824802/feed/live)
+
+New York scored three in the third after a Gunnar Henderson missed-catch error, Ben Rice single and Heliot Ramos double. Dylan Beavers' fifth-inning solo homer was Baltimore's only run. Luis García Jr. and Spencer Jones homered in the sixth, and García scored on Jazz Chisholm Jr.'s eighth-inning triple.
+
+### Controlling-view settlement — P-060/V01
+
+| View ID | Contract ID | Original rank | Contract | Verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V01 | C02 | 1 | Yankees +1.5 | `LEAN` | DG-P060-MARGIN | PRIMARY_FORMAL | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V01 | C04 | 2 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | PRIMARY_FORMAL | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V01 | C03 | 3 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | CORRELATED_SECONDARY | 7 | `WIN` | +0.5 run | Official MLB final |
+| P-060/V01 | C01 | 4 | Orioles +1.5 | `FORCED RANK` | DG-P060-MARGIN | CORRELATED_SECONDARY | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+
+**Potential winner:** New York Yankees `WIN`.
+
+### Imported alternate-view settlement — P-060/V03
+
+| View ID | Contract ID | Original rank | Contract | Source verdict | Dependence group | Eligibility | Final value | Contract outcome | Margin to line | Source |
+|---|---|---:|---|---|---|---|---:|---|---:|---|
+| P-060/V03 | C04 | 1 | Under 8.5 runs | `LEAN` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +1.5 runs | Official MLB final |
+| P-060/V03 | C02 | 2 | Yankees +1.5 | `LEAN` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | NYY won by 5 | `WIN` | +6.5 runs | Official MLB final |
+| P-060/V03 | C01 | 3 | Orioles +1.5 | `FORCED RANK` | DG-P060-SIDE | LATE_IMPORTED_DIAGNOSTIC | BAL lost by 5 | `LOSS` | -3.5 runs | Official MLB final |
+| P-060/V03 | C03 | 4 | Over 6.5 runs | `FORCED RANK` | DG-P060-TOTAL | LATE_IMPORTED_DIAGNOSTIC | 7 | `WIN` | +0.5 run | Official MLB final |
+
+The imported view grades **3-1 raw**, with its #1 Under and winner correct. It remains excluded from controlling-delivery aggregates because the same event and contracts were already recorded in V01. Over 6.5 is `BOUNDARY_FRAGILE` at +0.5 and is not an independent confirmation of Under 8.5; both won in the deliberately identified seven-run overlap corridor.
+
+### Retrospective and learning audit
+
+| Audit field | Finding |
+|---|---|
+| **Identity / settlement** | Correct MLB event, starters and four half-run contracts. Nine innings completed; no extra-inning or push ambiguity. The imported source-local P-059 ID was remapped to canonical P-060/V03 without overwriting canonical P-059. |
+| **What went right** | Both recorded views identified the 6-8 central band and 7-8 overlap corridor; the final total was exactly seven. Cole's suppression and the Yankees winner/+1.5 mechanisms transferred. The controlling V01 correctly placed Over above Orioles +1.5; the imported V03 correctly made Under ordinal #1. |
+| **What went wrong** | Orioles +1.5 lost by 3.5 runs beyond the line. Bradish's recent/direct suppression was outweighed by the starter-downside branch: an early error-assisted three-run inning, eight hits and two sixth-inning homers. |
+| **Trend-cause audit** | The recent low-total evidence succeeded for current causes, not because an Under streak had to continue: Cole dominated, the depleted Baltimore order produced one run, and fresh Yarbrough covered three relief innings so the worked Yankees high-leverage cluster was avoided. |
+| **Right for stated reason** | Under and Yankees were correct substantially through the stated starter/lineup mechanisms. Over also won inside the stated overlap corridor but by only half a run, so it is BOUNDARY_SENSITIVE directional evidence; no calibration inference is possible because no probability was issued. |
+| **Classification** | Orioles +1.5 miss: primary `RANKING`, contributor `MODEL_SPEC`, knowability `known-underweighted`. No failed-#1 strike: V01 #1 Yankees +1.5 won and imported V03 #1 Under won. |
+| **Concrete correction** | Reinforce existing baseball +1.5 decomposition: a low-total centre does not imply a close margin. Explicitly retain the dominant-starter/multi-run branch even when both totals centre low. No new permanent rule is warranted from one game. |
+| **Falsification test** | On the next five low-total cards offering both teams +1.5, record the probability-free win/one-run-loss/2+-run-loss mechanisms separately. Reassess if this decomposition does not improve the relative ordering of the cushions. |
+| **Prospective registry impact** | P-060 is completion 1/10 for `T-P059-TREND-CAUSE`: at least three causes were stored and current persistence/non-persistence was explicitly audited before ranking. Status remains `ACTIVE`. |
+
+### P-060 controlling performance reconciliation
+
+| Measure | Through P-059 | P-060 controlling V01 | Through P-060 |
+|---|---:|---:|---:|
+| Post-audit controlling-delivery primary formal | 37-14 | 2-0 | **39-14** |
+| Post-audit controlling-delivery raw rows | 58-45 | 3-1 | **61-46** |
+| Post-audit higher-ranked exact-complement branch | 24/36 | 0/0 | **24/36** |
+| Post-audit controlling potential winners | 18-7 | 1-0 | **19-7** |
+
+The gapped totals and opposite-team +1.5 contracts are overlapping corridors, not exact complements; they do not enter the exact-complement denominator. P-060/V03 is a diagnostic imported view and adds no second controlling count.
+
+**Result:** `SETTLED / CLOSED`.
+
+## Open-event index — APPENDED P-060 IMPORT/SETTLEMENT UPDATE (2026-08-22T02:14:00+10:00)
+
+| ID | Controlling status |
+|---|---|
+| P-001 through P-060 | `CLOSED AS DOCUMENTED` (P-021 is the no-forecast closure; P-003 retains one final UNSETTLEABLE row) |
+
+There are no open events after this settlement. **Next canonical ID: `P-061`.**
+
+---

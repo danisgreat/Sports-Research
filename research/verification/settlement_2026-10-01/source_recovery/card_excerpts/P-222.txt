@@ -1,0 +1,306 @@
+Required improvement:
+
+1. When favourite starter edge + bullpen edge + winner edge all align, compute a favourite shutout/one-run-conceded branch before promoting the dog cushion.
+2. Do not translate “many recent close games” across a materially different starting-pitcher matchup without opponent adjustment.
+3. For integer totals, rank the Under above the Over when the best starter and best bullpen sit on the same side and the opponent has a realistic 0–2 run distribution; hot weather alone is not enough to reverse it.
+4. In this card, the evidence-consistent order should have been closer to **Under 9 / Padres -1.5 / Reds +1.5 / Over 9**, with the exact first two order depending on the desired marginal target.
+
+Sources: [Reuters game report](https://www.reuters.com/sports/baseball/padres-pile-fourth-shut-down-reds-opener--flm-2026-09-01/); [ESPN recap and box score](https://www.espn.com/mlb/recap/_/gameId/401816749); [CBS box score](https://www.cbssports.com/mlb/gametracker/recap/MLB_20260831_SD%40CIN/).
+
+## P-221 settlement — Marlins @ Nationals
+
+Verified outcome: **Nationals 6, Marlins 3; 9 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Nationals +1.5 | **WIN** |
+| 2 | Over 8.5 | **WIN** |
+| 3 | Under 8.5 | **LOSS** |
+| 4 | Marlins -1.5 | **LOSS** |
+| — | Potential winner: Marlins | **LOSS** |
+
+What went right: the Washington cushion and Over were aligned with the pre-game concern about unusual pitching architecture and bullpen exposure. Nine runs cleared the line by the minimum half-run, and Washington won outright.
+
+What went wrong: the Marlins winner call was inconsistent with the higher-ranked Nationals +1.5 and with the identified Washington offensive upside. The log correctly warned that the Nationals' starter/bullpen uncertainty widened both tails, but it treated that mainly as Miami upside rather than two-sided variance.
+
+Learning: when a dog cushion ranks first and the total is expected high, the dog outright branch deserves more weight because variance makes separation against it less reliable. Winner confidence should be reduced or the winner should follow the top side signal.
+
+Sources: [ESPN final](https://www.espn.com/mlb/game/_/gameId/401816747/marlins-nationals); [MLB game story](https://www.mlb.com/stories/game/822689).
+
+## P-222 settlement — Mariners @ Red Sox
+
+Verified outcome: **Red Sox 9, Mariners 8 in 10 innings; 17 total runs; Boston won by one.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mariners +1.5 | **WIN** |
+| 2 | Over 7.5 | **WIN** |
+| 3 | Under 7.5 | **LOSS** |
+| 4 | Red Sox -1.5 | **LOSS** |
+| — | Potential winner: Red Sox | **WIN** |
+
+Why it worked: the best parts of the forecast separated winner from margin. Boston's stronger late-game side won, but only by one, so Seattle +1.5 remained robust. Kirby and Tolle both allowed substantial damage, Seattle led 8-5, and Boston's rally/extra-inning win produced the high-total branch.
+
+Learning: this is a positive example of contract geometry used correctly. A favourite winner and underdog +1.5 can coexist when the forecast explicitly expects a competitive, volatile game and treats -1.5 as the hardest condition.
+
+Source: [MLB game story](https://www.mlb.com/stories/game/824719).
+
+## P-223 settlement — Yankees @ Angels
+
+Verified outcome: **Angels 10, Yankees 1; 11 total runs. Walbert Ureña allowed one run over seven innings; Elmer Rodríguez allowed four runs in 3.2 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Angels +1.5 | **WIN** |
+| 2 | Yankees moneyline | **LOSS** |
+| 3 | Under 8.0 | **LOSS** |
+| 4 | Over 8.0 | **WIN** |
+| — | Potential winner: Yankees | **LOSS** |
+
+What went right: Angels +1.5 respected the game's best established starter. The Over branch also correctly captured the rookie-starter/bullpen failure tail.
+
+What went wrong: the winner call privileged overall team strength over the most important game-specific variable even though the original text said Ureña was the strongest established starter. Rodríguez's short outing exposed the Yankees' run-prevention tail, while Ureña removed the comeback route.
+
+Learning: if the underdog owns a large confirmed starter edge and is already rank #1 with +1.5, a favourite moneyline/winner call requires a clearly superior bullpen and lineup edge large enough to overcome that starter gap. Otherwise the card is internally incoherent.
+
+Source: [ESPN recap](https://www.espn.com/mlb/recap/_/gameId/401816756).
+
+## P-224 settlement — Phillies @ Diamondbacks
+
+Verified outcome: **Phillies 2, Diamondbacks 1; 3 total runs; one-run margin.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Phillies +1.5 | **WIN** |
+| 2 | Diamondbacks +1.5 | **WIN** |
+| 3 | Under 8.5 | **WIN** |
+
+
+1. When favourite starter edge + bullpen edge + winner edge all align, compute a favourite shutout/one-run-conceded branch before promoting the dog cushion.
+2. Do not translate “many recent close games” across a materially different starting-pitcher matchup without opponent adjustment.
+3. For integer totals, rank the Under above the Over when the best starter and best bullpen sit on the same side and the opponent has a realistic 0–2 run distribution; hot weather alone is not enough to reverse it.
+4. In this card, the evidence-consistent order should have been closer to **Under 9 / Padres -1.5 / Reds +1.5 / Over 9**, with the exact first two order depending on the desired marginal target.
+
+Sources: [Reuters game report](https://www.reuters.com/sports/baseball/padres-pile-fourth-shut-down-reds-opener--flm-2026-09-01/); [ESPN recap and box score](https://www.espn.com/mlb/recap/_/gameId/401816749); [CBS box score](https://www.cbssports.com/mlb/gametracker/recap/MLB_20260831_SD%40CIN/).
+
+## P-221 settlement — Marlins @ Nationals
+
+Verified outcome: **Nationals 6, Marlins 3; 9 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Nationals +1.5 | **WIN** |
+| 2 | Over 8.5 | **WIN** |
+| 3 | Under 8.5 | **LOSS** |
+| 4 | Marlins -1.5 | **LOSS** |
+| — | Potential winner: Marlins | **LOSS** |
+
+What went right: the Washington cushion and Over were aligned with the pre-game concern about unusual pitching architecture and bullpen exposure. Nine runs cleared the line by the minimum half-run, and Washington won outright.
+
+What went wrong: the Marlins winner call was inconsistent with the higher-ranked Nationals +1.5 and with the identified Washington offensive upside. The log correctly warned that the Nationals' starter/bullpen uncertainty widened both tails, but it treated that mainly as Miami upside rather than two-sided variance.
+
+Learning: when a dog cushion ranks first and the total is expected high, the dog outright branch deserves more weight because variance makes separation against it less reliable. Winner confidence should be reduced or the winner should follow the top side signal.
+
+Sources: [ESPN final](https://www.espn.com/mlb/game/_/gameId/401816747/marlins-nationals); [MLB game story](https://www.mlb.com/stories/game/822689).
+
+## P-222 settlement — Mariners @ Red Sox
+
+Verified outcome: **Red Sox 9, Mariners 8 in 10 innings; 17 total runs; Boston won by one.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mariners +1.5 | **WIN** |
+| 2 | Over 7.5 | **WIN** |
+| 3 | Under 7.5 | **LOSS** |
+| 4 | Red Sox -1.5 | **LOSS** |
+| — | Potential winner: Red Sox | **WIN** |
+
+Why it worked: the best parts of the forecast separated winner from margin. Boston's stronger late-game side won, but only by one, so Seattle +1.5 remained robust. Kirby and Tolle both allowed substantial damage, Seattle led 8-5, and Boston's rally/extra-inning win produced the high-total branch.
+
+Learning: this is a positive example of contract geometry used correctly. A favourite winner and underdog +1.5 can coexist when the forecast explicitly expects a competitive, volatile game and treats -1.5 as the hardest condition.
+
+Source: [MLB game story](https://www.mlb.com/stories/game/824719).
+
+## P-223 settlement — Yankees @ Angels
+
+Verified outcome: **Angels 10, Yankees 1; 11 total runs. Walbert Ureña allowed one run over seven innings; Elmer Rodríguez allowed four runs in 3.2 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Angels +1.5 | **WIN** |
+| 2 | Yankees moneyline | **LOSS** |
+| 3 | Under 8.0 | **LOSS** |
+| 4 | Over 8.0 | **WIN** |
+| — | Potential winner: Yankees | **LOSS** |
+
+What went right: Angels +1.5 respected the game's best established starter. The Over branch also correctly captured the rookie-starter/bullpen failure tail.
+
+What went wrong: the winner call privileged overall team strength over the most important game-specific variable even though the original text said Ureña was the strongest established starter. Rodríguez's short outing exposed the Yankees' run-prevention tail, while Ureña removed the comeback route.
+
+Learning: if the underdog owns a large confirmed starter edge and is already rank #1 with +1.5, a favourite moneyline/winner call requires a clearly superior bullpen and lineup edge large enough to overcome that starter gap. Otherwise the card is internally incoherent.
+
+Source: [ESPN recap](https://www.espn.com/mlb/recap/_/gameId/401816756).
+
+## P-224 settlement — Phillies @ Diamondbacks
+
+Verified outcome: **Phillies 2, Diamondbacks 1; 3 total runs; one-run margin.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Phillies +1.5 | **WIN** |
+| 2 | Diamondbacks +1.5 | **WIN** |
+| 3 | Under 8.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+
+1. When favourite starter edge + bullpen edge + winner edge all align, compute a favourite shutout/one-run-conceded branch before promoting the dog cushion.
+2. Do not translate “many recent close games” across a materially different starting-pitcher matchup without opponent adjustment.
+3. For integer totals, rank the Under above the Over when the best starter and best bullpen sit on the same side and the opponent has a realistic 0–2 run distribution; hot weather alone is not enough to reverse it.
+4. In this card, the evidence-consistent order should have been closer to **Under 9 / Padres -1.5 / Reds +1.5 / Over 9**, with the exact first two order depending on the desired marginal target.
+
+Sources: [Reuters game report](https://www.reuters.com/sports/baseball/padres-pile-fourth-shut-down-reds-opener--flm-2026-09-01/); [ESPN recap and box score](https://www.espn.com/mlb/recap/_/gameId/401816749); [CBS box score](https://www.cbssports.com/mlb/gametracker/recap/MLB_20260831_SD%40CIN/).
+
+## P-221 settlement — Marlins @ Nationals
+
+Verified outcome: **Nationals 6, Marlins 3; 9 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Nationals +1.5 | **WIN** |
+| 2 | Over 8.5 | **WIN** |
+| 3 | Under 8.5 | **LOSS** |
+| 4 | Marlins -1.5 | **LOSS** |
+| — | Potential winner: Marlins | **LOSS** |
+
+What went right: the Washington cushion and Over were aligned with the pre-game concern about unusual pitching architecture and bullpen exposure. Nine runs cleared the line by the minimum half-run, and Washington won outright.
+
+What went wrong: the Marlins winner call was inconsistent with the higher-ranked Nationals +1.5 and with the identified Washington offensive upside. The log correctly warned that the Nationals' starter/bullpen uncertainty widened both tails, but it treated that mainly as Miami upside rather than two-sided variance.
+
+Learning: when a dog cushion ranks first and the total is expected high, the dog outright branch deserves more weight because variance makes separation against it less reliable. Winner confidence should be reduced or the winner should follow the top side signal.
+
+Sources: [ESPN final](https://www.espn.com/mlb/game/_/gameId/401816747/marlins-nationals); [MLB game story](https://www.mlb.com/stories/game/822689).
+
+## P-222 settlement — Mariners @ Red Sox
+
+Verified outcome: **Red Sox 9, Mariners 8 in 10 innings; 17 total runs; Boston won by one.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mariners +1.5 | **WIN** |
+| 2 | Over 7.5 | **WIN** |
+| 3 | Under 7.5 | **LOSS** |
+| 4 | Red Sox -1.5 | **LOSS** |
+| — | Potential winner: Red Sox | **WIN** |
+
+Why it worked: the best parts of the forecast separated winner from margin. Boston's stronger late-game side won, but only by one, so Seattle +1.5 remained robust. Kirby and Tolle both allowed substantial damage, Seattle led 8-5, and Boston's rally/extra-inning win produced the high-total branch.
+
+Learning: this is a positive example of contract geometry used correctly. A favourite winner and underdog +1.5 can coexist when the forecast explicitly expects a competitive, volatile game and treats -1.5 as the hardest condition.
+
+Source: [MLB game story](https://www.mlb.com/stories/game/824719).
+
+## P-223 settlement — Yankees @ Angels
+
+Verified outcome: **Angels 10, Yankees 1; 11 total runs. Walbert Ureña allowed one run over seven innings; Elmer Rodríguez allowed four runs in 3.2 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Angels +1.5 | **WIN** |
+| 2 | Yankees moneyline | **LOSS** |
+| 3 | Under 8.0 | **LOSS** |
+| 4 | Over 8.0 | **WIN** |
+| — | Potential winner: Yankees | **LOSS** |
+
+What went right: Angels +1.5 respected the game's best established starter. The Over branch also correctly captured the rookie-starter/bullpen failure tail.
+
+What went wrong: the winner call privileged overall team strength over the most important game-specific variable even though the original text said Ureña was the strongest established starter. Rodríguez's short outing exposed the Yankees' run-prevention tail, while Ureña removed the comeback route.
+
+Learning: if the underdog owns a large confirmed starter edge and is already rank #1 with +1.5, a favourite moneyline/winner call requires a clearly superior bullpen and lineup edge large enough to overcome that starter gap. Otherwise the card is internally incoherent.
+
+Source: [ESPN recap](https://www.espn.com/mlb/recap/_/gameId/401816756).
+
+## P-224 settlement — Phillies @ Diamondbacks
+
+Verified outcome: **Phillies 2, Diamondbacks 1; 3 total runs; one-run margin.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Phillies +1.5 | **WIN** |
+| 2 | Diamondbacks +1.5 | **WIN** |
+| 3 | Under 8.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: Phillies | **WIN** |
+
+2. Do not translate “many recent close games” across a materially different starting-pitcher matchup without opponent adjustment.
+3. For integer totals, rank the Under above the Over when the best starter and best bullpen sit on the same side and the opponent has a realistic 0–2 run distribution; hot weather alone is not enough to reverse it.
+4. In this card, the evidence-consistent order should have been closer to **Under 9 / Padres -1.5 / Reds +1.5 / Over 9**, with the exact first two order depending on the desired marginal target.
+
+Sources: [Reuters game report](https://www.reuters.com/sports/baseball/padres-pile-fourth-shut-down-reds-opener--flm-2026-09-01/); [ESPN recap and box score](https://www.espn.com/mlb/recap/_/gameId/401816749); [CBS box score](https://www.cbssports.com/mlb/gametracker/recap/MLB_20260831_SD%40CIN/).
+
+## P-221 settlement — Marlins @ Nationals
+
+Verified outcome: **Nationals 6, Marlins 3; 9 total runs.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Nationals +1.5 | **WIN** |
+| 2 | Over 8.5 | **WIN** |
+| 3 | Under 8.5 | **LOSS** |
+| 4 | Marlins -1.5 | **LOSS** |
+| — | Potential winner: Marlins | **LOSS** |
+
+What went right: the Washington cushion and Over were aligned with the pre-game concern about unusual pitching architecture and bullpen exposure. Nine runs cleared the line by the minimum half-run, and Washington won outright.
+
+What went wrong: the Marlins winner call was inconsistent with the higher-ranked Nationals +1.5 and with the identified Washington offensive upside. The log correctly warned that the Nationals' starter/bullpen uncertainty widened both tails, but it treated that mainly as Miami upside rather than two-sided variance.
+
+Learning: when a dog cushion ranks first and the total is expected high, the dog outright branch deserves more weight because variance makes separation against it less reliable. Winner confidence should be reduced or the winner should follow the top side signal.
+
+Sources: [ESPN final](https://www.espn.com/mlb/game/_/gameId/401816747/marlins-nationals); [MLB game story](https://www.mlb.com/stories/game/822689).
+
+## P-222 settlement — Mariners @ Red Sox
+
+Verified outcome: **Red Sox 9, Mariners 8 in 10 innings; 17 total runs; Boston won by one.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Mariners +1.5 | **WIN** |
+| 2 | Over 7.5 | **WIN** |
+| 3 | Under 7.5 | **LOSS** |
+| 4 | Red Sox -1.5 | **LOSS** |
+| — | Potential winner: Red Sox | **WIN** |
+
+Why it worked: the best parts of the forecast separated winner from margin. Boston's stronger late-game side won, but only by one, so Seattle +1.5 remained robust. Kirby and Tolle both allowed substantial damage, Seattle led 8-5, and Boston's rally/extra-inning win produced the high-total branch.
+
+Learning: this is a positive example of contract geometry used correctly. A favourite winner and underdog +1.5 can coexist when the forecast explicitly expects a competitive, volatile game and treats -1.5 as the hardest condition.
+
+Source: [MLB game story](https://www.mlb.com/stories/game/824719).
+
+## P-223 settlement — Yankees @ Angels
+
+Verified outcome: **Angels 10, Yankees 1; 11 total runs. Walbert Ureña allowed one run over seven innings; Elmer Rodríguez allowed four runs in 3.2 innings.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Angels +1.5 | **WIN** |
+| 2 | Yankees moneyline | **LOSS** |
+| 3 | Under 8.0 | **LOSS** |
+| 4 | Over 8.0 | **WIN** |
+| — | Potential winner: Yankees | **LOSS** |
+
+What went right: Angels +1.5 respected the game's best established starter. The Over branch also correctly captured the rookie-starter/bullpen failure tail.
+
+What went wrong: the winner call privileged overall team strength over the most important game-specific variable even though the original text said Ureña was the strongest established starter. Rodríguez's short outing exposed the Yankees' run-prevention tail, while Ureña removed the comeback route.
+
+Learning: if the underdog owns a large confirmed starter edge and is already rank #1 with +1.5, a favourite moneyline/winner call requires a clearly superior bullpen and lineup edge large enough to overcome that starter gap. Otherwise the card is internally incoherent.
+
+Source: [ESPN recap](https://www.espn.com/mlb/recap/_/gameId/401816756).
+
+## P-224 settlement — Phillies @ Diamondbacks
+
+Verified outcome: **Phillies 2, Diamondbacks 1; 3 total runs; one-run margin.**
+
+| Rank | Issued pick | Grade |
+|---:|---|---|
+| 1 | Phillies +1.5 | **WIN** |
+| 2 | Diamondbacks +1.5 | **WIN** |
+| 3 | Under 8.5 | **WIN** |
+| 4 | Over 8.5 | **LOSS** |
+| — | Potential winner: Phillies | **WIN** |

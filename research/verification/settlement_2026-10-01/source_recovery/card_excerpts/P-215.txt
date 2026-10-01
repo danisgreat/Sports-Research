@@ -1,0 +1,307 @@
+
+## A. Artifact and evaluation boundary
+
+| Field | Independent finding |
+|---|---|
+| Supplied artifact | `PREDICTION_MINI_LOG_6_P217_READY.md` |
+| Supplied bytes / SHA-256 | 33,806 / `2E07ED17178A4CBD6AEA090804695E805AB59B4A375E4B47B36C126981041CFA` |
+| First locally demonstrable artifact time | 2026-08-31 22:16:43 Australia/Sydney |
+| Source-card issue claims | P-215 final refresh about 20:11 Australia/Melbourne; P-216 final research refresh 21:49 Australia/Melbourne |
+| Eligibility | Both cards are `E1-Q-LATE_IMPORT`: the recoverable section-inclusive artifact first appears after P-215 was final and after P-216's scheduled start |
+| Permitted use | Descriptive settlement, process audit, source audit and candidate generation only |
+| Prohibited inference | No prospective hit rate, calibration, ranking skill, model-selection completion, forecast-weight promotion, profit or edge claim |
+| Numerical state | No model ran; no probabilities, proper scores, EV or CLV can be reconstructed |
+
+The source issue-time claims are preserved, but they are not an immutable pre-result receipt. P-215 has an additional independent process defect: its stated final refresh was about one minute after scheduled tip, yet the card retained a pregame view instead of transitioning to a verified live target or failing closed.
+
+## B. Event-state disposition at this audit
+
+State was checked before retrospective work.
+
+| Event | State observed | Disposition |
+|---|---|---|
+| P-215 Japan–Qatar | `FINAL` — Japan 123, Qatar 70 | Settle all frozen rows and perform full retrospective |
+| P-216 Namibia–Zimbabwe | `LIVE` — at 2026-08-31 22:39:37 Australia/Sydney, Zimbabwe 74/3 after 8.0 overs, batting first after Namibia won the toss and chose to field | Keep the entire event open; do not grade any row, winner, phase or innings target; defer outcome retrospective until a field-owning final is available |
+
+P-216 is now the sole newly imported live event in the controlling queue. The live toss, innings order, XI and score are post-cutoff information. They establish state and future settlement identity only; they do not repair or revise the P-216 frozen rationale.
+
+## C. P-215 official settlement
+
+Official field owner: [FIBA game page](https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/games/126960-JPN-QAT), event ID `126960`. Structured box-score/detail cross-check: [FIBA live-detail record](https://www.fiba.basketball/en/events/api/game-live-info/126960/detail). Retrieved during the independent audit on 2026-08-31.
+
+Official final: **Japan 123–70 Qatar**; combined total **193**; Japan margin **53**.
+
+| Rank | Contract | Official value | Outcome | Margin to line | Evaluation status |
+|---:|---|---:|---|---:|---|
+| 1 | P-215-C04 — Under 169.5 | 193 | **LOSS** | 23.5 points above line | Descriptive only; late import and process-defective |
+| 2 | P-215-C02 — Japan -34.5 | Japan +53 | **WIN** | Covered by 18.5 | Descriptive only; late import and process-defective |
+| 3 | P-215-C01 — Qatar +34.5 | Qatar -53 | **LOSS** | Missed by 18.5 | Descriptive only; late import and process-defective |
+| 4 | P-215-C03 — Over 169.5 | 193 | **WIN** | 23.5 points above line | Descriptive only; late import and process-defective |
+| — | Potential winner — Japan | Japan won 123–70 | **CORRECT** | 53-point win | Descriptive only; not a fifth independent row |
+
+Descriptive row ledger: **2 WIN / 2 LOSS**. The rank-1 row lost. The outright winner annotation was correct. These facts do not become a prospective performance record.
+
+### Official game-path evidence
+
+| Evidence | Japan | Qatar / game comparison |
+|---|---:|---:|
+| Quarter scores | 29, 24, 40, 30 | 11, 23, 11, 25 |
+| Field goals | 42/71, 59.15% | 23/57, 40.35% |
+| Two-pointers | 22/33, 66.67% | 17/38, 44.74% |
+| Three-pointers | 20/38, 52.63% | 6/19, 31.58% |
+| Free throws | 19/25, 76.0% | 18/24, 75.0% |
+| Assists | 39 | 11 |
+| Turnovers | 9 | 21 |
+| Points off turnovers | 33 | 13 |
+| Fast-break points | 29 | 7 |
+| Bench points | 56 | 49 |
+| Rebounds | 36 | 29 |
+
+Japan led for 39:42, never trailed, reached a largest lead of 59 and won Q3 40–11. Japan first moved beyond -34.5 at 73–37 with 5:33 left in Q3 and never returned inside the line. The total crossed 169.5 at 114–57 with 3:23 left. Every Japan starter played fewer than 29 minutes, yet the fourth quarter still produced 55 points and Japan scored 30 of them.
+
+Rui Hachimura scored 30 in 28:54 and made 6/8 threes; Keisei Tominaga scored 23 in 18:58 and made 4/5 threes; Joshua Hawkinson scored 16 in 27:09; Yuta Watanabe scored 12 in 16:38; Yuki Kawamura supplied 10 assists in 18:27. This matters because the pregame card treated roster presence largely as a team-level state. Actual exposure shows that Japan's scoring did not require full starter minutes: efficient starting stints and productive bench minutes both sustained the upper tail.
+
+## D. P-215 retrospective
+
+### D1. What the card got right
+
+1. **Event, participants and contract geometry were intelligible.** The two spread rows and two total rows were exact half-point complements and were not falsely treated as independent probabilities.
+2. **The main directional mismatch was real.** Japan won comfortably, covered -34.5 and controlled essentially the entire game. The roster/depth and turnover/transition thesis had genuine mechanism content.
+3. **The card named the decisive adverse path.** Its Under kill path said Japan's pressure could create short fields, Japan could reach 110+, and Qatar could still reach the mid-60s. The final was exactly that family, but more extreme: Japan 123 and Qatar 70.
+4. **The card acknowledged large-spread late-rotation risk.** That is a legitimate branch to model even though it did not occur as margin compression here.
+
+These are useful descriptive observations. They do not erase the process defects below.
+
+### D2. Start-state defect
+
+
+## A. Artifact and evaluation boundary
+
+| Field | Independent finding |
+|---|---|
+| Supplied artifact | `PREDICTION_MINI_LOG_6_P217_READY.md` |
+| Supplied bytes / SHA-256 | 33,806 / `2E07ED17178A4CBD6AEA090804695E805AB59B4A375E4B47B36C126981041CFA` |
+| First locally demonstrable artifact time | 2026-08-31 22:16:43 Australia/Sydney |
+| Source-card issue claims | P-215 final refresh about 20:11 Australia/Melbourne; P-216 final research refresh 21:49 Australia/Melbourne |
+| Eligibility | Both cards are `E1-Q-LATE_IMPORT`: the recoverable section-inclusive artifact first appears after P-215 was final and after P-216's scheduled start |
+| Permitted use | Descriptive settlement, process audit, source audit and candidate generation only |
+| Prohibited inference | No prospective hit rate, calibration, ranking skill, model-selection completion, forecast-weight promotion, profit or edge claim |
+| Numerical state | No model ran; no probabilities, proper scores, EV or CLV can be reconstructed |
+
+The source issue-time claims are preserved, but they are not an immutable pre-result receipt. P-215 has an additional independent process defect: its stated final refresh was about one minute after scheduled tip, yet the card retained a pregame view instead of transitioning to a verified live target or failing closed.
+
+## B. Event-state disposition at this audit
+
+State was checked before retrospective work.
+
+| Event | State observed | Disposition |
+|---|---|---|
+| P-215 Japan–Qatar | `FINAL` — Japan 123, Qatar 70 | Settle all frozen rows and perform full retrospective |
+| P-216 Namibia–Zimbabwe | `LIVE` — at 2026-08-31 22:39:37 Australia/Sydney, Zimbabwe 74/3 after 8.0 overs, batting first after Namibia won the toss and chose to field | Keep the entire event open; do not grade any row, winner, phase or innings target; defer outcome retrospective until a field-owning final is available |
+
+P-216 is now the sole newly imported live event in the controlling queue. The live toss, innings order, XI and score are post-cutoff information. They establish state and future settlement identity only; they do not repair or revise the P-216 frozen rationale.
+
+## C. P-215 official settlement
+
+Official field owner: [FIBA game page](https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/games/126960-JPN-QAT), event ID `126960`. Structured box-score/detail cross-check: [FIBA live-detail record](https://www.fiba.basketball/en/events/api/game-live-info/126960/detail). Retrieved during the independent audit on 2026-08-31.
+
+Official final: **Japan 123–70 Qatar**; combined total **193**; Japan margin **53**.
+
+| Rank | Contract | Official value | Outcome | Margin to line | Evaluation status |
+|---:|---|---:|---|---:|---|
+| 1 | P-215-C04 — Under 169.5 | 193 | **LOSS** | 23.5 points above line | Descriptive only; late import and process-defective |
+| 2 | P-215-C02 — Japan -34.5 | Japan +53 | **WIN** | Covered by 18.5 | Descriptive only; late import and process-defective |
+| 3 | P-215-C01 — Qatar +34.5 | Qatar -53 | **LOSS** | Missed by 18.5 | Descriptive only; late import and process-defective |
+| 4 | P-215-C03 — Over 169.5 | 193 | **WIN** | 23.5 points above line | Descriptive only; late import and process-defective |
+| — | Potential winner — Japan | Japan won 123–70 | **CORRECT** | 53-point win | Descriptive only; not a fifth independent row |
+
+Descriptive row ledger: **2 WIN / 2 LOSS**. The rank-1 row lost. The outright winner annotation was correct. These facts do not become a prospective performance record.
+
+### Official game-path evidence
+
+| Evidence | Japan | Qatar / game comparison |
+|---|---:|---:|
+| Quarter scores | 29, 24, 40, 30 | 11, 23, 11, 25 |
+| Field goals | 42/71, 59.15% | 23/57, 40.35% |
+| Two-pointers | 22/33, 66.67% | 17/38, 44.74% |
+| Three-pointers | 20/38, 52.63% | 6/19, 31.58% |
+| Free throws | 19/25, 76.0% | 18/24, 75.0% |
+| Assists | 39 | 11 |
+| Turnovers | 9 | 21 |
+| Points off turnovers | 33 | 13 |
+| Fast-break points | 29 | 7 |
+| Bench points | 56 | 49 |
+| Rebounds | 36 | 29 |
+
+Japan led for 39:42, never trailed, reached a largest lead of 59 and won Q3 40–11. Japan first moved beyond -34.5 at 73–37 with 5:33 left in Q3 and never returned inside the line. The total crossed 169.5 at 114–57 with 3:23 left. Every Japan starter played fewer than 29 minutes, yet the fourth quarter still produced 55 points and Japan scored 30 of them.
+
+Rui Hachimura scored 30 in 28:54 and made 6/8 threes; Keisei Tominaga scored 23 in 18:58 and made 4/5 threes; Joshua Hawkinson scored 16 in 27:09; Yuta Watanabe scored 12 in 16:38; Yuki Kawamura supplied 10 assists in 18:27. This matters because the pregame card treated roster presence largely as a team-level state. Actual exposure shows that Japan's scoring did not require full starter minutes: efficient starting stints and productive bench minutes both sustained the upper tail.
+
+## D. P-215 retrospective
+
+### D1. What the card got right
+
+1. **Event, participants and contract geometry were intelligible.** The two spread rows and two total rows were exact half-point complements and were not falsely treated as independent probabilities.
+2. **The main directional mismatch was real.** Japan won comfortably, covered -34.5 and controlled essentially the entire game. The roster/depth and turnover/transition thesis had genuine mechanism content.
+3. **The card named the decisive adverse path.** Its Under kill path said Japan's pressure could create short fields, Japan could reach 110+, and Qatar could still reach the mid-60s. The final was exactly that family, but more extreme: Japan 123 and Qatar 70.
+4. **The card acknowledged large-spread late-rotation risk.** That is a legitimate branch to model even though it did not occur as margin compression here.
+
+These are useful descriptive observations. They do not erase the process defects below.
+
+### D2. Start-state defect
+
+Scheduled tip was 20:10 Australia/Melbourne. The source says its final state refresh was about 20:11 and labels the state `PREGAME / OFFICIAL LIVE GAME NOT YET VERIFIED` because a schedule page showed zero live games. Under the existing start-crossing rule, once scheduled tip passed the analysis had to do one of three things:
+
+
+| Field | Independent finding |
+|---|---|
+| Supplied artifact | `PREDICTION_MINI_LOG_6_P217_READY.md` |
+| Supplied bytes / SHA-256 | 33,806 / `2E07ED17178A4CBD6AEA090804695E805AB59B4A375E4B47B36C126981041CFA` |
+| First locally demonstrable artifact time | 2026-08-31 22:16:43 Australia/Sydney |
+| Source-card issue claims | P-215 final refresh about 20:11 Australia/Melbourne; P-216 final research refresh 21:49 Australia/Melbourne |
+| Eligibility | Both cards are `E1-Q-LATE_IMPORT`: the recoverable section-inclusive artifact first appears after P-215 was final and after P-216's scheduled start |
+| Permitted use | Descriptive settlement, process audit, source audit and candidate generation only |
+| Prohibited inference | No prospective hit rate, calibration, ranking skill, model-selection completion, forecast-weight promotion, profit or edge claim |
+| Numerical state | No model ran; no probabilities, proper scores, EV or CLV can be reconstructed |
+
+The source issue-time claims are preserved, but they are not an immutable pre-result receipt. P-215 has an additional independent process defect: its stated final refresh was about one minute after scheduled tip, yet the card retained a pregame view instead of transitioning to a verified live target or failing closed.
+
+## B. Event-state disposition at this audit
+
+State was checked before retrospective work.
+
+| Event | State observed | Disposition |
+|---|---|---|
+| P-215 Japan–Qatar | `FINAL` — Japan 123, Qatar 70 | Settle all frozen rows and perform full retrospective |
+| P-216 Namibia–Zimbabwe | `LIVE` — at 2026-08-31 22:39:37 Australia/Sydney, Zimbabwe 74/3 after 8.0 overs, batting first after Namibia won the toss and chose to field | Keep the entire event open; do not grade any row, winner, phase or innings target; defer outcome retrospective until a field-owning final is available |
+
+P-216 is now the sole newly imported live event in the controlling queue. The live toss, innings order, XI and score are post-cutoff information. They establish state and future settlement identity only; they do not repair or revise the P-216 frozen rationale.
+
+## C. P-215 official settlement
+
+Official field owner: [FIBA game page](https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/games/126960-JPN-QAT), event ID `126960`. Structured box-score/detail cross-check: [FIBA live-detail record](https://www.fiba.basketball/en/events/api/game-live-info/126960/detail). Retrieved during the independent audit on 2026-08-31.
+
+Official final: **Japan 123–70 Qatar**; combined total **193**; Japan margin **53**.
+
+| Rank | Contract | Official value | Outcome | Margin to line | Evaluation status |
+|---:|---|---:|---|---:|---|
+| 1 | P-215-C04 — Under 169.5 | 193 | **LOSS** | 23.5 points above line | Descriptive only; late import and process-defective |
+| 2 | P-215-C02 — Japan -34.5 | Japan +53 | **WIN** | Covered by 18.5 | Descriptive only; late import and process-defective |
+| 3 | P-215-C01 — Qatar +34.5 | Qatar -53 | **LOSS** | Missed by 18.5 | Descriptive only; late import and process-defective |
+| 4 | P-215-C03 — Over 169.5 | 193 | **WIN** | 23.5 points above line | Descriptive only; late import and process-defective |
+| — | Potential winner — Japan | Japan won 123–70 | **CORRECT** | 53-point win | Descriptive only; not a fifth independent row |
+
+Descriptive row ledger: **2 WIN / 2 LOSS**. The rank-1 row lost. The outright winner annotation was correct. These facts do not become a prospective performance record.
+
+### Official game-path evidence
+
+| Evidence | Japan | Qatar / game comparison |
+|---|---:|---:|
+| Quarter scores | 29, 24, 40, 30 | 11, 23, 11, 25 |
+| Field goals | 42/71, 59.15% | 23/57, 40.35% |
+| Two-pointers | 22/33, 66.67% | 17/38, 44.74% |
+| Three-pointers | 20/38, 52.63% | 6/19, 31.58% |
+| Free throws | 19/25, 76.0% | 18/24, 75.0% |
+| Assists | 39 | 11 |
+| Turnovers | 9 | 21 |
+| Points off turnovers | 33 | 13 |
+| Fast-break points | 29 | 7 |
+| Bench points | 56 | 49 |
+| Rebounds | 36 | 29 |
+
+Japan led for 39:42, never trailed, reached a largest lead of 59 and won Q3 40–11. Japan first moved beyond -34.5 at 73–37 with 5:33 left in Q3 and never returned inside the line. The total crossed 169.5 at 114–57 with 3:23 left. Every Japan starter played fewer than 29 minutes, yet the fourth quarter still produced 55 points and Japan scored 30 of them.
+
+Rui Hachimura scored 30 in 28:54 and made 6/8 threes; Keisei Tominaga scored 23 in 18:58 and made 4/5 threes; Joshua Hawkinson scored 16 in 27:09; Yuta Watanabe scored 12 in 16:38; Yuki Kawamura supplied 10 assists in 18:27. This matters because the pregame card treated roster presence largely as a team-level state. Actual exposure shows that Japan's scoring did not require full starter minutes: efficient starting stints and productive bench minutes both sustained the upper tail.
+
+## D. P-215 retrospective
+
+### D1. What the card got right
+
+1. **Event, participants and contract geometry were intelligible.** The two spread rows and two total rows were exact half-point complements and were not falsely treated as independent probabilities.
+2. **The main directional mismatch was real.** Japan won comfortably, covered -34.5 and controlled essentially the entire game. The roster/depth and turnover/transition thesis had genuine mechanism content.
+3. **The card named the decisive adverse path.** Its Under kill path said Japan's pressure could create short fields, Japan could reach 110+, and Qatar could still reach the mid-60s. The final was exactly that family, but more extreme: Japan 123 and Qatar 70.
+4. **The card acknowledged large-spread late-rotation risk.** That is a legitimate branch to model even though it did not occur as margin compression here.
+
+These are useful descriptive observations. They do not erase the process defects below.
+
+### D2. Start-state defect
+
+Scheduled tip was 20:10 Australia/Melbourne. The source says its final state refresh was about 20:11 and labels the state `PREGAME / OFFICIAL LIVE GAME NOT YET VERIFIED` because a schedule page showed zero live games. Under the existing start-crossing rule, once scheduled tip passed the analysis had to do one of three things:
+
+
+| Field | Independent finding |
+|---|---|
+| Supplied artifact | `PREDICTION_MINI_LOG_6_P217_READY.md` |
+| Supplied bytes / SHA-256 | 33,806 / `2E07ED17178A4CBD6AEA090804695E805AB59B4A375E4B47B36C126981041CFA` |
+| First locally demonstrable artifact time | 2026-08-31 22:16:43 Australia/Sydney |
+| Source-card issue claims | P-215 final refresh about 20:11 Australia/Melbourne; P-216 final research refresh 21:49 Australia/Melbourne |
+| Eligibility | Both cards are `E1-Q-LATE_IMPORT`: the recoverable section-inclusive artifact first appears after P-215 was final and after P-216's scheduled start |
+| Permitted use | Descriptive settlement, process audit, source audit and candidate generation only |
+| Prohibited inference | No prospective hit rate, calibration, ranking skill, model-selection completion, forecast-weight promotion, profit or edge claim |
+| Numerical state | No model ran; no probabilities, proper scores, EV or CLV can be reconstructed |
+
+The source issue-time claims are preserved, but they are not an immutable pre-result receipt. P-215 has an additional independent process defect: its stated final refresh was about one minute after scheduled tip, yet the card retained a pregame view instead of transitioning to a verified live target or failing closed.
+
+## B. Event-state disposition at this audit
+
+State was checked before retrospective work.
+
+| Event | State observed | Disposition |
+|---|---|---|
+| P-215 Japan–Qatar | `FINAL` — Japan 123, Qatar 70 | Settle all frozen rows and perform full retrospective |
+| P-216 Namibia–Zimbabwe | `LIVE` — at 2026-08-31 22:39:37 Australia/Sydney, Zimbabwe 74/3 after 8.0 overs, batting first after Namibia won the toss and chose to field | Keep the entire event open; do not grade any row, winner, phase or innings target; defer outcome retrospective until a field-owning final is available |
+
+P-216 is now the sole newly imported live event in the controlling queue. The live toss, innings order, XI and score are post-cutoff information. They establish state and future settlement identity only; they do not repair or revise the P-216 frozen rationale.
+
+## C. P-215 official settlement
+
+Official field owner: [FIBA game page](https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/games/126960-JPN-QAT), event ID `126960`. Structured box-score/detail cross-check: [FIBA live-detail record](https://www.fiba.basketball/en/events/api/game-live-info/126960/detail). Retrieved during the independent audit on 2026-08-31.
+
+Official final: **Japan 123–70 Qatar**; combined total **193**; Japan margin **53**.
+
+| Rank | Contract | Official value | Outcome | Margin to line | Evaluation status |
+|---:|---|---:|---|---:|---|
+| 1 | P-215-C04 — Under 169.5 | 193 | **LOSS** | 23.5 points above line | Descriptive only; late import and process-defective |
+| 2 | P-215-C02 — Japan -34.5 | Japan +53 | **WIN** | Covered by 18.5 | Descriptive only; late import and process-defective |
+| 3 | P-215-C01 — Qatar +34.5 | Qatar -53 | **LOSS** | Missed by 18.5 | Descriptive only; late import and process-defective |
+| 4 | P-215-C03 — Over 169.5 | 193 | **WIN** | 23.5 points above line | Descriptive only; late import and process-defective |
+| — | Potential winner — Japan | Japan won 123–70 | **CORRECT** | 53-point win | Descriptive only; not a fifth independent row |
+
+Descriptive row ledger: **2 WIN / 2 LOSS**. The rank-1 row lost. The outright winner annotation was correct. These facts do not become a prospective performance record.
+
+### Official game-path evidence
+
+| Evidence | Japan | Qatar / game comparison |
+|---|---:|---:|
+| Quarter scores | 29, 24, 40, 30 | 11, 23, 11, 25 |
+| Field goals | 42/71, 59.15% | 23/57, 40.35% |
+| Two-pointers | 22/33, 66.67% | 17/38, 44.74% |
+| Three-pointers | 20/38, 52.63% | 6/19, 31.58% |
+| Free throws | 19/25, 76.0% | 18/24, 75.0% |
+| Assists | 39 | 11 |
+| Turnovers | 9 | 21 |
+| Points off turnovers | 33 | 13 |
+| Fast-break points | 29 | 7 |
+| Bench points | 56 | 49 |
+| Rebounds | 36 | 29 |
+
+Japan led for 39:42, never trailed, reached a largest lead of 59 and won Q3 40–11. Japan first moved beyond -34.5 at 73–37 with 5:33 left in Q3 and never returned inside the line. The total crossed 169.5 at 114–57 with 3:23 left. Every Japan starter played fewer than 29 minutes, yet the fourth quarter still produced 55 points and Japan scored 30 of them.
+
+Rui Hachimura scored 30 in 28:54 and made 6/8 threes; Keisei Tominaga scored 23 in 18:58 and made 4/5 threes; Joshua Hawkinson scored 16 in 27:09; Yuta Watanabe scored 12 in 16:38; Yuki Kawamura supplied 10 assists in 18:27. This matters because the pregame card treated roster presence largely as a team-level state. Actual exposure shows that Japan's scoring did not require full starter minutes: efficient starting stints and productive bench minutes both sustained the upper tail.
+
+## D. P-215 retrospective
+
+### D1. What the card got right
+
+1. **Event, participants and contract geometry were intelligible.** The two spread rows and two total rows were exact half-point complements and were not falsely treated as independent probabilities.
+2. **The main directional mismatch was real.** Japan won comfortably, covered -34.5 and controlled essentially the entire game. The roster/depth and turnover/transition thesis had genuine mechanism content.
+3. **The card named the decisive adverse path.** Its Under kill path said Japan's pressure could create short fields, Japan could reach 110+, and Qatar could still reach the mid-60s. The final was exactly that family, but more extreme: Japan 123 and Qatar 70.
+4. **The card acknowledged large-spread late-rotation risk.** That is a legitimate branch to model even though it did not occur as margin compression here.
+
+These are useful descriptive observations. They do not erase the process defects below.
+
+### D2. Start-state defect
+
+Scheduled tip was 20:10 Australia/Melbourne. The source says its final state refresh was about 20:11 and labels the state `PREGAME / OFFICIAL LIVE GAME NOT YET VERIFIED` because a schedule page showed zero live games. Under the existing start-crossing rule, once scheduled tip passed the analysis had to do one of three things:
+
+1. verify the exact live state and issue a new live target with remaining exposure;
