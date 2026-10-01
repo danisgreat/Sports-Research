@@ -7,3 +7,7 @@ research/.pytest_cache/
 Previous Sports Results/_football_research/*.json
 Previous Sports Results/_football_research/sources/
 Previous Sports Results/_football_research/__pycache__/
+
+__pycache__/
+*.py[cod]
+
