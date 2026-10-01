@@ -704,6 +704,62 @@ Traps found and handled while building the Minor League Baseball files:
 
 ---
 
+### 3.18 EuroLeague Basketball game-by-game history, 2000-2025 (used to build Previous Sports Results/Basketball/EuroLeague/<YEAR>/<YEAR>_games.csv, Euroleague_CSVs/Euroleague_<YEAR>.csv, and EuroLeague_CSVs/EuroLeague_<YEAR>.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025, season codes `E2000` through `E2025`, covering 6,685 total games). The built files, column dictionary, and season game counts are stored in both the structured multi-sport directory and standalone download directories. Season = the calendar starting year (e.g. 2000 represents the 2000–01 season, 2024 represents 2024–25, and 2025 represents 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| EuroLeague Enterprise REST API (Season Games) | `https://api-live.euroleague.net/v2/competitions/E/seasons/E<YYYY>/games` | Complete schedule of games, gameCode, identifier, round, phaseType (RS, TS, PO, PI, FF), date/time (local and UTC), home/away clubs, scores, quarter partials (Q1–Q4, extraPeriods), arena venue, capacity, confirmed audience, referees 1–3, gameStatus, and winner club. | FO (Euroleague Basketball) | API (JSON, keyless) | 200 (all seasons E2000–E2025 verified) |
+| EuroLeague Live Game Engine (Header) | `https://live.euroleague.net/api/Header?gamecode=<gameCode>&seasoncode=E<YYYY>` | Real-time and archival game metadata, line score by quarter/overtime, venue, attendance, head coaches, and officiating crew. | FO | API (JSON, keyless) | 200 (E2000–E2025 verified) |
+| EuroLeague Live Game Engine (Boxscore) | `https://live.euroleague.net/api/Boxscore?gamecode=<gameCode>&seasoncode=E<YYYY>` | Full player and team boxscores: minutes, 2PT/3PT/FT shooting, offensive/defensive rebounds, assists, steals, turnovers, blocks, fouls, PIR valuation, and plus-minus. | FO | API (JSON, keyless) | 200 (E2000–E2025 verified) |
+| EuroLeague Official Regulations & Announcements | `https://www.euroleaguebasketball.net/` | Historical records of format changes, 2019–20 COVID-19 pandemic shutdown resolution (March 2020), 2021–22 ECA shareholder decisions regarding suspension/annulment of Russian club fixtures (CSKA, UNICS, Zenit), and 2023–24 Play-In Showdown format rules. | FO | Web / Official Notices | Verified |
+
+Traps found and handled while building the EuroLeague Basketball files:
+
+- **Historical Season Scope & Coverage:** Modern Euroleague Basketball broke away from FIBA in summer 2000. Digital coverage begins with the inaugural modern game on October 16, 2000 (Real Madrid vs. Olympiacos, Gamecode 1 of `E2000`). Note: In 2000–01, a rival tournament (FIBA SuproLeague) ran concurrently; the tournaments merged under Euroleague Basketball starting in 2001–02 (`E2001`).
+- **The 2019–20 COVID-19 Season Shutdown:** In mid-March 2020 after Round 28, Euroleague Basketball suspended operations due to the COVID-19 pandemic and officially cancelled the remaining 54 regular season games and entire postseason on May 25, 2020. These 54 unplayed games are explicitly recorded with status `Unplayed / Scheduled` and cancellation reason `Cancelled due to COVID-19 pandemic shutdown`.
+- **2021–22 Suspension of Russian Clubs:** Following the Ukraine conflict in February 2022, Euroleague Basketball suspended CSKA Moscow, UNICS Kazan, and Zenit St Petersburg, subsequently annulling their regular-season results (28 unplayed games). These are tracked with explicit cancellation status and reason.
+- **Tournament Phase Evolutions (2000–2025):**
+  - **2000–01 (E2000):** Regular Season groups followed by best-of-3 Eighth-Finals and Quarterfinals, and best-of-5 Semifinals and Finals (Kinder Bologna defeated Tau Cerámica 3–2; no single-site Final Four).
+  - **2001–02 to 2015–16:** Multi-group Regular Season, Top 16 group stage, best-of-5 Playoffs/Quarterfinals, and single-elimination Final Four (Semifinals, 3rd Place, Championship Game).
+  - **2016–17 to 2022–23:** True round-robin 16-team (expanded to 18-team in 2019) unified league followed by Top 8 best-of-5 Playoffs and Final Four.
+  - **2023–24 to Present:** 18-team round-robin with the newly introduced **Play-In Showdown** (seeds 7–10) preceding the best-of-5 Quarterfinals and Final Four.
+- **Overtime & Quarter Partials:** In EuroLeague basketball, games cannot end in a tie; 5-minute extra periods are played until a winner is determined. Quarter scores (Q1–Q4) and aggregated overtime points are parsed from the official `partials` structure.
+
+---
+
+### 3.19 EuroBasket (FIBA European Championship for Men) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/EuroBasket/<YEAR>/<YEAR>_games.csv, Eurobasket_CSVs/Eurobasket_<YEAR>.csv, and EuroBasket_CSVs/EuroBasket_<YEAR>.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 51 years (1975–2025, covering 24 tournament editions, 1,319 total game records). The built files, column dictionary, and tournament game counts are stored in both the structured multi-sport directory and standalone download directories. Season = the calendar year of the competition.
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| FIBA Official Historical Archive | `https://www.fiba.basketball/en/history/208-fiba-eurobasket/<edition_id>` | Historical tournament registers, official match results, host nations, dates, final standings, and tournament brackets (edition IDs mapped from 1855 for 1975 through 208210 for 2022). | FO (FIBA Europe) | Web / API (JSON) | 200 (all 24 editions 1975–2025 verified) |
+| FIBA LiveStats / Digital API | `https://fibalivestats.com/data/<game_id>/data.json` & `header.json` | Modern tournament play-by-play, box scores, shot chart coordinates, referee assignments, official attendance, and quarter line scores. | FO | API (JSON, keyless) | 200 (2015–2022 verified) |
+| FIBA EuroBasket Official Event Sites | `https://www.fiba.basketball/eurobasket/2022`, `https://www.fiba.basketball/eurobasket/2025` | Current and scheduled tournament schedules, pool draws, venue allocations, and confirmed qualification rosters. | FO | Web / REST | 200 (2022 & 2025 verified) |
+| FIBA Historical Championship Registers & Media Guides | Curated FIBA Europe archives and national federation records | Pre-digital game results, half-time scores, referee crews, and tournament MVP/top scorer records for 1975–1999 editions. | S (Historical Archive) | Curated Records | Verified |
+
+Traps found and handled while building the EuroBasket files:
+
+- **Tournament Cycle Shifts & Off-Years:** EuroBasket was held strictly biennially (every odd year) from 1975 through 2017 (22 editions). Following 2017, FIBA restructured the international calendar to a 4-year cycle. EuroBasket 2021 was postponed to September 1–18, 2022 due to the COVID-19 pandemic and Olympic rescheduling. The 42nd edition is scheduled for August 27 – September 14, 2025. In the 27 off-years where no final tournament took place, official off-cycle records are cataloged explaining the qualification windows and calendar context.
+- **Period Format Rule Change (Halves vs. Quarters):** From 1975 through 1999, FIBA games were played in **two 20-minute halves**. Score records capture Half 1 and Half 2 scores. Beginning with EuroBasket 2001, FIBA transitioned to **four 10-minute quarters** (Q1–Q4). The dataset dynamically assigns and records both formats.
+- **3-Point Shot Introduction (1985):** FIBA officially introduced the 3-point field goal internationally in 1984; EuroBasket 1985 in West Germany was the first edition featuring the 3-point line (initially at 6.25m, expanded to 6.75m in October 2010 prior to EuroBasket 2011).
+- **Multi-Host Co-Hosting Format (2015–2025):** Starting in 2015, FIBA introduced a multi-host model where four different countries host the preliminary groups, with the entire knockout phase consolidated in one host city (2015: Lille, France; 2017: Istanbul, Turkey; 2022: Berlin, Germany; 2025: Riga, Latvia).
+- **Format & Team Count Expansions:**
+  - 1975–1987: 12 teams (2 groups of 6 + classification 5th–12th + SF/F = 42–46 games).
+  - 1989 & 1991: 8 teams (2 groups of 4 + classification + SF/F = 20 games).
+  - 1993: 16 teams (54–56 games).
+  - 1995: 14 teams (52–54 games).
+  - 1997 & 1999: 16 teams (62–64 games).
+  - 2001, 2003, 2005: 16 teams (elimination play-offs + QF/SF/F = 40 games).
+  - 2007 & 2009: 16 teams (qualifying second round + QF/SF/F = 54 games).
+  - 2011 & 2013: 24 teams (preliminary + second round + QF/SF/F = 90 games).
+  - 2015: 24 teams with Round of 16 and 5th–8th Olympic classification (79–80 games).
+  - 2017, 2022, 2025: 24 teams with Round of 16 single elimination (classification games discontinued = exactly 76 games).
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
