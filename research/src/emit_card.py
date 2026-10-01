@@ -20,6 +20,11 @@ from .sports.base import Contract
 def states(spec: list[dict]) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     if not spec:
         raise ValueError("empty joint distribution")
+    for row in spec:
+        for field in ("home","away"):
+            value=row[field]
+            if isinstance(value,bool) or not isinstance(value,(int,float)) or not np.isfinite(value) or value<0 or int(value)!=value:
+                raise ValueError("score states require nonnegative integers")
     home = np.array([s["home"] for s in spec], dtype=int)
     away = np.array([s["away"] for s in spec], dtype=int)
     mass = np.array([s["p"] for s in spec], dtype=float)

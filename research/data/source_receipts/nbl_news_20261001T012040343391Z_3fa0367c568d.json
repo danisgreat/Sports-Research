@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "nbl_news",
+  "publisher": "National Basketball League",
+  "upstream_lineage_id": "NBL_OFFICIAL_COLLECTION",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.nbl.com.au/news/kings-take-care-of-wounded-jackjumpers",
+  "final_url": "https://www.nbl.com.au/news/kings-take-care-of-wounded-jackjumpers",
+  "retrieved_utc": "2026-10-01T01:20:40.343391+00:00",
+  "response_sha256": "3fa0367c568db9943e0952cc24b8cf26119c39d1bb42b8453b7c9bc5bbd8b018",
+  "body_path": "research/data/raw/source_snapshots/nbl_news_20261001T012040343391Z_3fa0367c568d.body",
+  "response_bytes": 255164,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "REVIEWED_HTML_V1",
+  "registry_sha256": "dcca91a8ce7d87b14b070fd0c08115dd215bad6b8022f8eb6959bf9438435bed",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

@@ -1,0 +1,13 @@
+{
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2017-01-01&endDate=2017-12-31",
+  "source_profile": "mlb_stats_api_schedule",
+  "owner": "MLB",
+  "retrieved_utc": "2026-10-01T01:20:00.324773+00:00",
+  "http_status": 200,
+  "content_type": "application/json;charset=UTF-8",
+  "transport_sha256": "4efc27924d1594a5b5c3023476356499d4a6c5d4ee462a918cee2c393583de38",
+  "stored_sha256": "4efc27924d1594a5b5c3023476356499d4a6c5d4ee462a918cee2c393583de38",
+  "stored_body": "42bf0da4ef52daf8820b58cc1431d4c2d7f198a5bb90b371029eb3b74fb0ca4c.gz",
+  "historical_pregame_availability": "unknown",
+  "parser_version": "archive-sources-v1"
+}

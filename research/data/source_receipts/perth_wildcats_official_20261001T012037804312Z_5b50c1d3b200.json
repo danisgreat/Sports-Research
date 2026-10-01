@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "perth_wildcats_official",
+  "publisher": "Perth Wildcats",
+  "upstream_lineage_id": "PERTH_CLUB_REPORT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.wildcats.com.au/news/wildcats-with-a-record-breaking-night-in-cairns",
+  "final_url": "https://www.wildcats.com.au/news/wildcats-with-a-record-breaking-night-in-cairns",
+  "retrieved_utc": "2026-10-01T01:20:37.804312+00:00",
+  "response_sha256": "5b50c1d3b20032b45718a70797add055134a5394a8331834573fffa8ff1d7e66",
+  "body_path": "research/data/raw/source_snapshots/perth_wildcats_official_20261001T012037804312Z_5b50c1d3b200.body",
+  "response_bytes": 129426,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "REVIEWED_HTML_V1",
+  "registry_sha256": "dcca91a8ce7d87b14b070fd0c08115dd215bad6b8022f8eb6959bf9438435bed",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

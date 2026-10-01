@@ -1,3 +1,5 @@
+> **Current research controls (2026-10-01):** [CURRENT_RULES.md](CURRENT_RULES.md) controls new numerical work, source evidence, p_card ranking, availability and admission. The sport mechanics/reference below remain applicable only to their exact competition/season/endpoint after current official verification. Historical q/manual-method instructions or freeze pointers do not qualify a new model. No unregistered league/family can receive an issued numerical forecast.
+
 # Cricket analysis rules
 
 **Live rules for Cricket. Markdown-only operation, 2026-09-28.** Read §0 in full for every card: it governs this file.

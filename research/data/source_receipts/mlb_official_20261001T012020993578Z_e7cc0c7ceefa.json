@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "mlb_official",
+  "publisher": "Major League Baseball",
+  "upstream_lineage_id": "MLB_OFFICIAL_COLLECTION",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-30&hydrate=linescore",
+  "final_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-30&hydrate=linescore",
+  "retrieved_utc": "2026-10-01T01:20:20.993578+00:00",
+  "response_sha256": "e7cc0c7ceefa7227a2c27dc430c80227627c7ae9173a36db49cf79a86d9140e5",
+  "body_path": "research/data/raw/source_snapshots/mlb_official_20261001T012020993578Z_e7cc0c7ceefa.body",
+  "response_bytes": 16082,
+  "content_type": "application/json;charset=UTF-8",
+  "parser_id": "MLB_STATSAPI_V1",
+  "registry_sha256": "dcca91a8ce7d87b14b070fd0c08115dd215bad6b8022f8eb6959bf9438435bed",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

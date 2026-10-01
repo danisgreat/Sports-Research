@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "premierleague_official",
+  "publisher": "Premier League",
+  "upstream_lineage_id": "EPL_OFFICIAL_COLLECTION",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.premierleague.com/en/fixtures",
+  "final_url": "https://www.premierleague.com/en/matches/premier-league/2026-27",
+  "retrieved_utc": "2026-10-01T01:20:24.132562+00:00",
+  "response_sha256": "c86dec399a05baaf6c025ac6a08a0936c31253030717e4295848b985f516588e",
+  "body_path": "research/data/raw/source_snapshots/premierleague_official_20261001T012024132562Z_c86dec399a05.body",
+  "response_bytes": 85213,
+  "content_type": "text/html;charset=utf-8",
+  "parser_id": "REVIEWED_HTML_V1",
+  "registry_sha256": "dcca91a8ce7d87b14b070fd0c08115dd215bad6b8022f8eb6959bf9438435bed",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

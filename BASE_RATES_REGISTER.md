@@ -1,3 +1,11 @@
+# Current baseline authority - 2026-10-01
+
+For new numerical experiments/cards, baselines come from cutoff-restricted population score distributions and declared stronger comparators in [research/src/model_diagnostics.py](research/src/model_diagnostics.py). Every baseline distribution binds its input checksum, event and endpoint. Never replace an unresolved historical baseline with 0.500 or a diagnostic literal. Archive labels require canonical deduplication/source validation and explicit availability assumptions before an as-of query.
+
+The historical register below retains earlier descriptive population estimates and missing cells. It does not establish current predictive skill, universal probability widths or qualification of another competition. New family-specific comparisons and uncertainty are recorded in the October development report; opened data remain development evidence.
+
+---
+
 # Base-rates register
 
 **Opened 2026-09-17(b).** Single home for **published base rates used as identity inputs** to a card's arithmetic.

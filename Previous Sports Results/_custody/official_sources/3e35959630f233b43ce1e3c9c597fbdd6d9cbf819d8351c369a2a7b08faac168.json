@@ -1,0 +1,13 @@
+{
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2001-01-01&endDate=2001-12-31",
+  "source_profile": "mlb_stats_api_schedule",
+  "owner": "MLB",
+  "retrieved_utc": "2026-10-01T01:19:45.015932+00:00",
+  "http_status": 200,
+  "content_type": "application/json;charset=UTF-8",
+  "transport_sha256": "33274d2ce14eb9cd3f7b3cce3b198643c04f89783cfe6ab5cd89c2b86d6bdfe6",
+  "stored_sha256": "33274d2ce14eb9cd3f7b3cce3b198643c04f89783cfe6ab5cd89c2b86d6bdfe6",
+  "stored_body": "3e35959630f233b43ce1e3c9c597fbdd6d9cbf819d8351c369a2a7b08faac168.gz",
+  "historical_pregame_availability": "unknown",
+  "parser_version": "archive-sources-v1"
+}

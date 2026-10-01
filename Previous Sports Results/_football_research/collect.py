@@ -20,7 +20,16 @@ def get(url, headers=None, persist=True):
     key = hashlib.sha256(url.encode()).hexdigest()
     path = CACHE / (key + '.gz')
     if path.exists():
-        return gzip.decompress(path.read_bytes()).decode('utf-8')
+        receipt_path = CACHE / (key + '.json')
+        if not receipt_path.exists():
+            raise RuntimeError(f'Cached source has no receipt: {url}')
+        receipt = json.loads(receipt_path.read_text(encoding='utf-8'))
+        retained = gzip.decompress(path.read_bytes())
+        if receipt.get('url') != url or receipt.get('stored_body') != path.name:
+            raise RuntimeError(f'Cached source identity mismatch: {url}')
+        if not receipt.get('stored_sha256') or hashlib.sha256(retained).hexdigest() != receipt['stored_sha256']:
+            raise RuntimeError(f'Cached source body SHA-256 mismatch: {url}')
+        return retained.decode('utf-8')
     last = None
     for attempt in range(3):
         try:

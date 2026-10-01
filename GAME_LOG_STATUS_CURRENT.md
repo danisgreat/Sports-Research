@@ -1,3 +1,15 @@
+**Current freeze receipt:** CONTROL_MANIFEST_2026-10-01-1.md; normalized-CRLF SHA-256 PENDING_FINAL_FREEZE. Method MDS-2026.10.01-v7.0 / CR-2026.10.01-I1. [Current rules](CURRENT_RULES.md) and [implementation evidence](IMPLEMENTATION_2026-10-01.md) govern new work.
+
+## Current queue and qualification - 2026-10-01
+
+P-518/P-522 have existing dated learning-only settlement appends in Part 6. P-519/P-520/P-521 retain open reconciliation requirements. All five IDs remain reserved and performance-ineligible; none becomes prospective through repair. P-523 is the next unconsumed new issued ID and Part 6 is the sole canonical destination. Parts 1-5 remain frozen. Empty mini-log headers and model-only shadows consume no ID.
+
+All four registered EPL/NBL model versions remain SHADOW_ONLY. No model is LIVE_QUALIFIED, no canonical prospective issue exists, and no adjustment pilot is frozen. Current collector independence remains UNKNOWN pending actual audits. October model comparisons use opened development data; official-source diagnostic grades are not certified prospective settlements.
+
+The status snapshots below are historical. Their old current-freeze lines and all-five-unsettled descriptions do not override this dated correction. Historical one-row-per-ID entries remain unchanged for index custody.
+
+---
+
 **Current freeze receipt (copy onto every new card):** `CONTROL_MANIFEST_2026-09-29-3.md`, normalized-CRLF SHA-256 `d23995fd00020cb3a90dea4adf96c215b49b2e25fb535460e032c7b160e4b3d7`. Method MDS-2026.09.29-v6.0, control revision CR-2026.09.29-P1 (2026-09-29(c)). **New cards take P-523 onward, sequential in issue order, appended in Part 6 after the end marker** until the user directs a new part. P-518–P-522 stay reserved under reconciliation; use a TMP ID only for an actual collision or unresolved event identity. The p-ranked pipeline rules and lane gates are in `PIPELINE_IMPLEMENTATION_2026-09-29.md`. Freeze each card's core before the start (`CURRENT_RULES.md` §B). Previous receipt: `CONTROL_MANIFEST_2026-09-29-2.md` (`a1727278…9d90e6`), kept by cards frozen under it.
 
 ## Current queue correction — 2026-09-28

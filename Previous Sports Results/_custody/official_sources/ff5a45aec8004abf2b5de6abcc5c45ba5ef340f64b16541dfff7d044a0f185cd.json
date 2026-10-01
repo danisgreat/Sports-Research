@@ -1,0 +1,13 @@
+{
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2004-01-01&endDate=2004-12-31",
+  "source_profile": "mlb_stats_api_schedule",
+  "owner": "MLB",
+  "retrieved_utc": "2026-10-01T01:19:47.854280+00:00",
+  "http_status": 200,
+  "content_type": "application/json;charset=UTF-8",
+  "transport_sha256": "5214294457ce0c6ffdf667a1c5534fb905d2ee61bf9708a45c344ccb5e301039",
+  "stored_sha256": "5214294457ce0c6ffdf667a1c5534fb905d2ee61bf9708a45c344ccb5e301039",
+  "stored_body": "ff5a45aec8004abf2b5de6abcc5c45ba5ef340f64b16541dfff7d044a0f185cd.gz",
+  "historical_pregame_availability": "unknown",
+  "parser_version": "archive-sources-v1"
+}

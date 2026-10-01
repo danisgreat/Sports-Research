@@ -1,20 +1,13 @@
-# Contributing to the Markdown repository
+# Contribution procedure
 
-The published repository has one branch, `main`, and every file in its current tree ends in `.md`. Files live at the root or directly in `prediction logs/`. Git's internal data is outside that file rule.
+Read [CURRENT_RULES.md](CURRENT_RULES.md) and [research/README.md](research/README.md). Preserve issued forecast bytes, original source receipts and unrelated dirty files. Model/process edits require explicit versioning and before/after evidence.
 
-## Before changing a record
+1. Inventory branch and dirty work before edits. Snapshot any historical artifact whose working file must change.
+2. Keep identity, endpoint and time contracts explicit. Never replace missing data with guesses or q with a probability.
+3. Use retained allowlisted source bodies; record source failure and unknown independence. Keep restricted/odds-bearing bytes quarantined.
+4. Use new experiment paths. Never overwrite locked tuning or holdout outputs, prior shadows or issued cores.
+5. Run meaningful admission/custody/parser/model tests, archive validation and frozen-byte checks. Update active build receipts after an intentional versioned code change; rerun the affected model experiment when numerical dependencies change.
+6. Write the current method and implementation evidence, then regenerate and verify the active manifest. The living status/verification receipt and derived archive exports have explicit custody exclusions.
+7. If publication is requested, inspect the full diff and stage only intended files; verify remote and clean state before claiming publication. No publication is implied by local implementation.
 
-1. Read `CURRENT_RULES.md`, the relevant sport file, `METHOD.md`, the canonical snapshot in `prediction logs/PREDICTION_LOG_COMBINED_5.md`, and the working custody note in `prediction logs/PREDICTION_LOG_COMBINED_6.md`.
-2. Check `GAME_LOG_STATUS_CURRENT.md` and Part 6 for IDs, event state, and the freeze receipt.
-3. Keep issued cards and probabilities intact. Append corrections and settlement evidence; do not rewrite the frozen issue.
-4. Use official source records and preserve `SPORTS_ONLY / MARKET_BLIND`. Record missing evidence as missing.
-
-## Before updating `main`
-
-1. Run the [Markdown verification protocol](VERIFICATION_PROTOCOL.md). Review changed Markdown files and check current operating links. Historical removed targets are indexed in [Historical Link Index](HISTORICAL_LINK_INDEX.md).
-2. Check Parts 5 and 6 and their ID/queue state against `GAME_LOG_STATUS_CURRENT.md`.
-3. For governance edits, update the current Markdown control manifest with SHA-256 hashes of its listed files in CRLF form. Point `METHOD.md` to it and place its own SHA-256 in the current freeze receipt line of `GAME_LOG_STATUS_CURRENT.md`.
-4. Check that the current file tree contains only root-level `.md` files and Markdown logs directly in `prediction logs/`.
-5. Review the staged changes before committing and pushing `main`.
-
-Retired files and prior executable checks remain in Git history. [Validation Evidence](VALIDATION_EVIDENCE.md) embeds historical outputs and code, but missing game-level data prevents full independent rerun. A historical test result does not certify later Markdown-only changes. The current forecasting procedures and hand calculations are in `CURRENT_RULES.md`, `PROBABILITY_TOOLKIT.md`, and `CARD_AND_LOG_TEMPLATES.md`.
+Scientific and process failures must be visible. A green test checks tested mechanics; it cannot certify a source's truth, future predictive skill or a missing actual-start receipt.

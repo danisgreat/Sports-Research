@@ -1,0 +1,13 @@
+{
+  "url": "https://static.www.nfl.com/image/upload/v1757158720/gamecenter/f5919071-311e-11f0-b670-ae1250fadad1.pdf",
+  "source_profile": "nfl_2025_brazil",
+  "owner": "NFL",
+  "retrieved_utc": "2026-10-01T01:15:08.399117+00:00",
+  "http_status": 200,
+  "content_type": "application/pdf",
+  "transport_sha256": "f95ca2d7f8adb6d196853cd3c0a93c005011480ad4e8a37d73eb4cdf3d49fb0c",
+  "stored_sha256": "f95ca2d7f8adb6d196853cd3c0a93c005011480ad4e8a37d73eb4cdf3d49fb0c",
+  "stored_body": "9538291cf86769eead15ed0a9f685f30500e86fc779364a884e23e9a85990109.gz",
+  "historical_pregame_availability": "unknown",
+  "parser_version": "archive-sources-v1"
+}

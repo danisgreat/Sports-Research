@@ -8,6 +8,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Literal
+import re
 
 from .sports.base import Contract
 
@@ -30,10 +31,10 @@ class FinalReceipt:
     def __post_init__(self) -> None:
         if self.retrieved_utc.tzinfo is None or self.retrieved_utc.utcoffset() is None:
             raise ValueError("receipt time must be timezone aware")
-        if not self.event_id or not self.source_url or len(self.response_sha256) != 64:
+        if not self.event_id or not self.source_url.startswith("https://") or not re.fullmatch(r"[0-9a-f]{64}",self.response_sha256):
             raise ValueError("receipt lacks event, URL, or response checksum")
-        if self.home_score < 0 or self.away_score < 0:
-            raise ValueError("negative score")
+        if any(isinstance(v,bool) or not isinstance(v,int) or v<0 for v in (self.home_score,self.away_score)):
+            raise ValueError("nonnegative integer scores required")
 
 
 @dataclass(frozen=True)

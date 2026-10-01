@@ -1,12 +1,14 @@
 # Previous Sports Results (1900–2025)
 
-An authoritative, comprehensive research directory and historical archive of competitive sports results, covering the modern era from **1900 through 2025** across 17 distinct sporting disciplines and two competition tiers.
+A developing historical research archive covering folders from **1900 through 2025**, with MLB extended to 2026. Folder existence does not imply complete or verified data. The canonical [result and coverage interface](_canonical/README.md) separates sourced outcomes from unsupported prose and explicitly records missingness.
+
+**Implementation updated 2026-10-01 (Australia/Sydney).** The measured archive contains 21,799 yearly result CSVs, 20,943 header-only files and 128,768 input rows including duplicated and subset records. Current verified-result and training-admission counts are in [_canonical/manifest.json](_canonical/manifest.json); the season register is [_canonical/seasons.csv](_canonical/seasons.csv). Basketball and Soccer archive CSVs remain empty; the separate research histories serve their current models. Historical-result admission does not prove forecasting skill.
 
 **Before populating any folder, read:**
 - [Data source implementation guide](DATA_SOURCES_IMPLEMENTATION.md): where to get games, players, coaching staff and officials for each competition, with every source tested on 2026-09-30.
 - [Coverage, blank years and why](COVERAGE_AND_BLANK_YEARS.md): which years had no competition, which fields cannot be recovered for which eras, the season-year convention, and the 48 folders whose current `INACTIVE`/active status disagrees with the record.
 
-The existing `COACHES.md`, `OFFICIATING.md` and `HISTORICAL_PLAYERS_AND_ROSTERS.md` text is generic placeholder, not sourced fact (see the coverage document §6).
+The existing `COACHES.md`, `OFFICIATING.md` and `HISTORICAL_PLAYERS_AND_ROSTERS.md` text varies in sourcing and contains placeholders. These documents and game prose are excluded from pregame features until exact evidence and historical availability are established. Former award/roster enrichment is retired; see [_football_research/PIPELINE_STATUS.md](_football_research/PIPELINE_STATUS.md).
 
 ---
 
@@ -16,13 +18,13 @@ The archive is organized with **sport categories** at the root, containing dedic
 
 ```
 Previous Sports Results/
-  └── <Sport>/                        # 17 sport disciplines
+  └── <Sport>/                        # 16 sport category directories
         └── <Competition or League>/  # Dedicated tournament / competition folder
               └── <Year>/             # 1900 through 2025 (126 years)
                     └── .gitkeep      # Git-tracked archive placeholder
 ```
 
-### The 17 Sport Categories & Documented Competitions
+### The 16 Sport Categories & Documented Competitions
 1. **`Soccer`** (World Cups, Continental Euros/Copa/AFCON/Asian/Gold Cups, Champions League, Premier League, La Liga, Serie A, etc.)
 2. **`Basketball`** (FIBA World Cup, Olympics, NBA, WNBA, EuroLeague, NBL, domestic leagues)
 3. **`Rugby League`** (World Cups, NRL, NRLW, State of Origin, Super League)

@@ -1,3 +1,17 @@
+# Current source access controls - 2026-10-01
+
+The executable [source registry](research/sources_registry.json) controls retrieval, league/parser/endpoint scope, market quarantine and permitted access. Use [sources.py](research/src/sources.py) for immutable bodies and receipts. The current source observation report is [source_observations.json](research/runs/implementation_2026-10-01/source_observations.json): ten routes returned the specified content; both ESPN probes returned HTTP 403; three entries require manual/local access or are excluded. Accessibility is not exact-event truth or independent collection.
+
+Official league, club, university and gamebook sources are available alongside public statistical archives. The registry and archive receipts materially expand retained source evidence. Every current collector remains UNKNOWN independence pending a supported audit. Same upstream API, embedded provider, club syndication or copied report cannot count as a new lineage. For live evidence, retain both a collector audit and event/body-specific audit before the issue cutoff. Native JSON parsing and reviewed manual field mapping must verify the actual field owner and endpoint.
+
+NBL uses the league schedule UUID and regular-season overtime-inclusive final. EPL openfootball supplies publisher score/schedule observations with a derived research ID; official IDs remain unknown until matched to a verified league event. MLB uses gamePk. NFL gamebooks and official CFB/AFLW source bodies support specific archive corrections. Increased source breadth does not authorize a model in an unvalidated sport.
+
+Football-Data and FixtureDownload local raw snapshots keep their prior access/redistribution restrictions; automated source retrieval through those routes is blocked. Odds-bearing ESPN bodies, when retrievable, stay in the benchmark quarantine and only sports fields may be parsed through an audited adapter. Fantasy data remain excluded. Source errors are recorded without circumventing access controls.
+
+The earlier provider directory below is historical routing guidance. Its access observations, active-manifest references and procedural claims are superseded by the current registry and CURRENT_RULES.md. Verify current official rules and exact fields whenever a route is used; a directory entry is not a receipt.
+
+---
+
 # Sources — the single source register
 
 **Rebuilt 2026-09-28 for md-only operation; expanded 2026-09-28(f) and 2026-09-29(a).** This page merges the old quick reference and full register, and adds the sources verified on 2026-09-28/29. It is the only source document the model reads.
@@ -588,9 +602,9 @@ Routes added after a live request on 2026-09-30 that returned the named game-lev
 | nflverse rosters and officials | `https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_<YYYY>.csv`; `…/download/officials/officials.csv` | Season rosters (1920 onward); game officials with position, 2015-2026 (22,012 rows) | P (history) | API | 200 |
 | WAFL FootyFacts | `https://www.waflfootyfacts.net/season/games/results.php?Season=<YYYY>` | WAFL results with goals.behinds (points) for every season listed 1885-2026 (1917 and 2024 opened) | S | Browser | 200 |
 
-### 3.14 MLB game-by-game history, 2000-2026 (used to build `MLB_CSVs/MLB_<YEAR>.csv`; tested 2026-10-01)
+### 3.14 MLB game-by-game history, 2000-2026 (used to build `Previous Sports Results/Baseball/MLB/<YEAR>/<YEAR>_games.csv`; tested 2026-10-01)
 
-Every route below was requested live on 2026-10-01 and returned the named fields for all 27 seasons. The built files, column dictionary and per-game check status are in [`MLB_CSVs/README_MLB_DATA.md`](MLB_CSVs/README_MLB_DATA.md). Season = the calendar year in which the season is played (spring training, regular season and postseason all sit in one year).
+Every route below was requested live on 2026-10-01 and returned the named fields for all 27 seasons. The built files, column dictionary and per-game check status are in [the MLB data guide](Previous%20Sports%20Results/Baseball/MLB/README_MLB_DATA.md). Season = the calendar year in which the season is played (spring training, regular season and postseason all sit in one year).
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|

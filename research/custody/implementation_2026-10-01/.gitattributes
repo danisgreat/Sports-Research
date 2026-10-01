@@ -1,0 +1,5 @@
+.gitattributes -text
+.gitignore -text
+research/** -text whitespace=cr-at-eol
+research/data/raw/openfootball/*.txt binary
+research/**/*.parquet binary

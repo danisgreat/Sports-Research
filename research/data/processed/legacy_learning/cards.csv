@@ -1,0 +1,523 @@
+card_id,event,n_rank_rows,logged_wins,logged_losses,logged_pushes,rank1_logged_result,top2_logged_wins,best_logged_winning_rank,rank_pairs_concordant,rank_pairs_discordant,diagnostic_mean_brier_p,n_diagnostic_p,performance_eligible,status
+P-001,"Welsh Fire Women v Trent Rockets Women, The Hundred Women's 11th Match (carried over from legacy V6-022)",4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-002,Philadelphia Phillies @ Miami Marlins (MLB regular season),3,2,1,0,W,1,1,1,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-003,"FC København v Polissya Zhytomyr (UEFA Conference League, Q2, 2nd leg)",3,3,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-004,"MI London (Men) v London Spirit (Men), The Hundred Men's Competition 2026",3,2,1,0,W,1,1,1,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-005,Texas Rangers @ Tampa Bay Rays (MLB regular season),4,3,1,0,W,1,1,1,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-006,"Southern Brave (Men) v Birmingham Phoenix (Men), The Hundred Men's Competition 2026",4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-007,"Manchester Super Giants (Men) v Trent Rockets (Men), The Hundred Men's Competition 2026",4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-008,"New York Yankees @ Chicago Cubs, MLB regular season",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-009,"Indiana Fever @ Portland Fire, WNBA regular season — FORECAST",6,3,3,0,L,0,4,0,9,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-010,"Carlton v Brisbane Lions, AFL Round 21 — FORECAST (locked 2026-08-01T08:56:26Z / 18:56:26 AEST)",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-011,Arizona Diamondbacks @ Cleveland Guardians — PREGAME CARD,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-012,"Welsh Fire Women v Southern Brave Women, The Hundred Women's Competition 2026, Match 19",3,1,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-013,"Welsh Fire Men v Southern Brave Men, The Hundred Men's Competition 2026, Match 19",3,1,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-014,San Diego Padres (Michael King) at Arizona Diamondbacks (Brandon Pfaadt),3,2,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-015,"Sri Lanka Women vs Pakistan Women, 3rd T20I",4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-016,"Kiwoom Heroes at Lotte Giants, KBO regular season",4,3,1,0,W,2,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-017,"Sunrisers Leeds Women v London Spirit Women, The Hundred 2026",4,3,1,0,L,1,2,0,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-018,"Sunrisers Leeds Men vs London Spirit Men, The Hundred 2026 Match 20 (2026-08-04)",4,2,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-019,"Manchester Super Giants Women v Welsh Fire Women, The Hundred Women's Competition 2026, Match 21",4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-020,"Trent Rockets Women v Birmingham Phoenix Women, The Hundred Women's Competition 2026, Match 22",4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-021,"Los Angeles Angels (Reid Detmers) at Baltimore Orioles (Trevor Rogers), MLB",1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-022,"Los Angeles Angels (Ryan Johnson) at Baltimore Orioles (Brandon Young), MLB",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-023,"Benfica v Heart of Midlothian, UEFA Europa League qualifying",4,3,1,0,W,2,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-024,"Toronto Tempo @ Portland Fire, WNBA regular season - LIVE FORECAST (appended 2026-08-07 AEST)",6,4,2,0,W,2,1,8,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-025,"Brisbane Lions v Hawthorn, AFL Round 22 - LIVE FORECAST (appended 2026-08-07 AEST)",4,3,1,0,W,1,1,1,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-026,"Birmingham Phoenix Women v Sunrisers Leeds Women, The Hundred 2026 - START-CROSSED/PRE-DELIVERY FORECAST (appended 2026-08-08 AEST)",4,3,1,0,W,2,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-027,"Melbourne v Fremantle, AFL Round 22 - LIVE FORECAST (appended 2026-08-08 AEST)",4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-028,"West Coast v Collingwood, AFL Round 22 - LIVE FORECAST (appended 2026-08-09 AEST)",4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-029,"St Kilda v Carlton, AFL Round 22 - PREGAME FORECAST (appended 2026-08-09 AEST)",4,3,1,0,W,2,1,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-030,"Sunrisers Leeds Women v Welsh Fire Women, The Hundred 2026 Match 27 - PREGAME FORECAST (appended 2026-08-09 AEST)",4,3,1,0,L,1,2,0,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-031,"Manchester City v Atletico Madrid, 2026 Coupang Play Series - LIVE FORECAST (appended 2026-08-09 AEST)",4,3,1,0,W,2,1,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-032,"London Spirit Women v Birmingham Phoenix Women, The Hundred 2026 Match 28 - START-CROSSED/PRE-DELIVERY FORECAST (appended 2026-08-09 AEST)",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-033,Cincinnati Reds at Washington Nationals - PREGAME FORECAST (appended 2026-08-10 AEST),4,2,1,1,W,1,1,2,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-034,Baltimore Orioles at Minnesota Twins - PREGAME FORECAST (appended 2026-08-11 AEST),4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-035,"Atlanta Dream @ Connecticut Sun, WNBA regular season - LIVE FORECAST",6,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-036,Philadelphia Phillies at Minnesota Twins — MLB Field of Dreams,4,1,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-037,Jamaica Kingsmen vs Guyana Amazon Warriors — CPL,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-038,Australia vs Bangladesh — 1st Test,4,3,1,0,W,2,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-039,Manly-Warringah Sea Eagles vs Dolphins — NRL,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-040,Fremantle vs Adelaide Crows — AFL,4,2,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-041,"Wolverhampton Wanderers v Blackburn Rovers, EFL Championship Round 1 — PREGAME FORECAST (appended 2026-08-15T02:07:19+10:00)",4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-042,"Manchester Super Giants Men v Sunrisers Leeds Men, The Hundred Eliminator — LIVE FORECAST (appended 2026-08-15T03:01:20+10:00)",4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-043,"St. Louis Cardinals at Chicago Cubs, MLB — PREGAME FORECAST (appended 2026-08-15T04:16:53+10:00)",4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-044,"Richmond v Collingwood, AFLW — PREGAME FORECAST (appended 2026-08-15T16:58:00+10:00)",4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-045,"Hawthorn v Collingwood, AFL — PREGAME FORECAST (appended 2026-08-15T19:35:00+10:00)",4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-046,"Chelsea v Real Sociedad, soccer — PREGAME FORECAST (appended 2026-08-15T22:49:00+10:00)",4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-047,"Bayern Munich v RB Leipzig, soccer — PREGAME FORECAST (appended 2026-08-15T22:59:00+10:00)",4,3,1,0,W,1,1,1,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-048,"Essendon v Sydney Swans, AFL Round 23 — ZERO-SCORE LIVE-START FORECAST",4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-049,"Doosan Bears at KIA Tigers, KBO regular season — PREGAME FORECAST",4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-050,"Trent Rockets Women v Sunrisers Leeds Women, The Hundred 2026 Final — LIVE ORIGINAL-LINE ASSESSMENT",2,1,1,0,W,1,1,1,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-051,"FC Basel v FC Barcelona, senior men's club friendly — PREGAME FORECAST",4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-052,"Athletics at Kansas City Royals, MLB regular season — PREGAME FORECAST",4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-053,"Yomiuri Giants at Yokohama DeNA BayStars, NPB Central League — PREGAME FORECAST",4,2,2,0,L,1,2,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-054,"Kiwoom Heroes at Lotte Giants, KBO — PREGAME FORECAST",4,3,1,0,W,2,1,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-055,"Detroit Tigers at Pittsburgh Pirates, MLB — PREGAME FORECAST",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-056,"Arizona Diamondbacks at Boston Red Sox, MLB — PREGAME FORECAST",4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-057,"Minnesota Lynx @ Golden State Valkyries, WNBA — LATE ADMINISTRATIVE IMPORT OF ISSUED CHAT FORECAST",6,3,3,0,W,1,1,4,5,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-058,"St Kilda v Gold Coast SUNS, AFL Round 24 — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECAST",4,2,2,0,L,0,3,0,4,0.28090000000000004,2,False,SOURCE_LINKED_LEARNING_ONLY
+P-059,"St. Louis Cardinals (Michael McGreevy) at Cincinnati Reds (Brady Singer), MLB — ZERO-SCORE WARMUP / ORIGINAL-LINE FORECAST",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-060,"New York Yankees (Gerrit Cole) at Baltimore Orioles (Kyle Bradish), MLB — INCLEMENT-WEATHER START DELAY / ORIGINAL-LINE FORECAST",4,2,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-061,Hokkaido Nippon-Ham Fighters at Chiba Lotte Marines,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-062,West Coast Eagles v Hawthorn (late import),4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-063,Newcastle United v Liverpool (late import),4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-064,"Texas Rangers (Kumar Rocker) at Chicago White Sox (José Urquidy), MLB — PRE-FIRST-PITCH FORECAST",4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-065,"Golden State Valkyries at Minnesota Lynx, WNBA regular season — PRE-TIP FORECAST",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-066,"Atlanta Dream at Los Angeles Sparks, WNBA regular season — PRE-TIP FORECAST",4,2,2,0,L,1,2,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-067,"Doosan Bears at KT Wiz, KBO regular season — PRE-FIRST-PITCH FORECAST",4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-068,"Hanwha Eagles at SSG Landers, KBO regular season — PRE-FIRST-PITCH FORECAST",4,2,2,0,L,1,2,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-069,"Lotte Giants at KIA Tigers, KBO regular season — PRE-FIRST-PITCH FORECAST",4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-070,Central Ballester Reserves vs El Porvenir Reserves — START PASSED / LIVE STATE NOT VERIFIED,3,3,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-071,"Alejandro Juan Mano vs Alejandro Turriziani Alvarez, ITF M25 Oviedo — DELAYED / NOT STARTED FORECAST",4,2,1,1,W,2,1,2,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-072,Jelle Sels vs Stijn Paardekooper — DELAYED / NOT STARTED FORECAST,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-073,Tobol Kostanay vs Kaisar Kyzylorda — PREGAME FORECAST,3,1,2,0,W,1,1,2,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-074,Maccabi Herzliya U19 vs Hapoel Rishon LeZion U19 — PREGAME FORECAST,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-075,OKS vs Middelfart — PREGAME FORECAST,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-076,FK Horní Ředice vs FK Dukla Praha — PREGAME FORECAST,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-077,Vincent Weaver vs Aryan Jit Singh — PREGAME FORECAST,4,1,3,0,L,0,4,0,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-078,SK Brann (W) vs FK Austria Wien (W) — PREGAME FORECAST,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-079,Abha vs Al Khaleej Saihat — PREGAME,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-080,Al Taawoun Buraidah vs Al Fayha — PREGAME,4,1,3,0,W,1,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-081,Independiente del Valle vs Deportes Tolima — PREGAME,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-082,CF Monterrey vs Chicago Fire FC — PREGAME,4,3,1,0,W,2,1,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-083,"Cleveland Guardians at Los Angeles Angels, MLB regular season — PREGAME FORECAST",4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-084,"Washington Mystics at Phoenix Mercury, WNBA regular season — PREGAME FORECAST",4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-085,"Lobos Puebla vs Fuerza Regia, LNBP regular season — LIVE START-CROSSING FORECAST",4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-086,Club León vs Real Salt Lake — Leagues Cup quarterfinal — START PASSED / LIVE STATE NOT VERIFIED,4,3,1,0,W,2,1,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-087,"India vs Sri Lanka, 2nd Test, Day 4 — PRE-START DAY-4 LIVE-STATE RESEARCH CARD",2,0,2,0,L,0,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-088,Howlers Sporting Singtam vs Sikkim Boys Football Club — SFA A Division S-League — PREGAME FORECAST,3,2,1,0,L,1,2,0,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-089,Hanshin Tigers @ Chunichi Dragons — PREGAME,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-090,Hokkaido Nippon-Ham Fighters @ Saitama Seibu Lions — PREGAME,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-091,Tohoku Rakuten Golden Eagles @ Orix Buffaloes — PREGAME,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-092,Doosan Bears @ KT Wiz — PREGAME,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-093,"NC Dinos @ LG Twins, KBO regular season — PREGAME FORECAST",4,3,1,0,W,1,1,1,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-094,"Yorkshire Women vs Surrey Women, Metro Bank One Day Cup Women — TOSS COMPLETE / PRE-FIRST-BALL FORECAST",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-095,"TSG Hawks @ Fubon Guardians, CPBL regular season — PREGAME FORECAST",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-096,"Rakuten Monkeys @ CTBC Brothers, CPBL regular season — PREGAME FORECAST",4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-097,"Wei-Chuan Dragons @ Uni-President 7-ELEVEn Lions, CPBL regular season — PREGAME FORECAST",4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-098,"Vietnam vs Thailand, ASEAN Hyundai Cup 2026 Final Leg 2 — PRE-KICKOFF-DATA VIEW",4,3,1,0,L,1,2,0,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-099,"Rotterdam Dockers vs Amsterdam Flames, European T20 Premier League 2026 — TOSS COMPLETE / PRE-FIRST-BALL VIEW",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-100,"Apollon Limassol Women vs FH Hafnarfjordur Women, UEFA Women's Europa Cup 2026/27 — PREGAME FORECAST",4,1,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-101,"Germany Women vs Türkiye Women, international friendly — PREGAME FORECAST",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-102,"VfL Wolfsburg Women vs Inter Women, UEFA Women's Champions League 2026/27 — PREGAME FORECAST",4,2,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-103,Tampa Bay Rays at Detroit Tigers,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-104,"Ajax Women vs Real Madrid Women — UEFA Women's Champions League third qualifying round, first leg — PREGAME",4,3,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-105,"Al Ahli Saudi FC vs Auckland FC — FIFA Intercontinental Cup 2026, African-Asian-Pacific Cup Playoff — PREGAME",4,1,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-106,Newcastle United vs West Bromwich Albion — Carabao Cup Second Round — PREGAME,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-107,Bradford City vs Burnley — Carabao Cup Round 2 — PREGAME,4,3,1,0,W,2,1,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-108,Tottenham Hotspur vs Charlton Athletic — Carabao Cup Round 2 — PREGAME,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-109,Chicago Cubs @ Arizona Diamondbacks — MLB regular season — PREGAME,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-110,Kei Nishikori vs Michael Antonius — US Open Men's Qualifying Q2 — DELAYED / NOT STARTED,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-111,Boston Red Sox @ Miami Marlins — MLB regular season — PREGAME,4,2,2,0,L,1,2,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-112,Minnesota Twins @ Athletics — MLB regular season — PREGAME,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-113,Club América vs Columbus Crew — Leagues Cup 2026 Quarterfinal,4,3,1,0,W,2,1,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-114,"India vs Sri Lanka, 2nd Test, Day 5 — PRE-DAY-5 LIVE-STATE FORECAST",4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-115,"Belfast Wolves vs Dublin Guardians, European T20 Premier League 2026 — START-CROSSED / NOT STARTED",4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-116,Brisbane Broncos vs Melbourne Storm — PREGAME,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-117,ISI Dangkor Senchey FC vs Life FC Sihanoukville — PREGAME,4,1,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-118,Sandro Kopp vs Martin Krumich — PREGAME,4,1,3,0,L,1,2,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-119,Noah Karma vs Alessandro Hunziker — PREGAME,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-120,Guinea vs South Sudan — PREGAME,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-121,Sardarapat FC vs FC Syunik — Armenian Cup,4,2,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-122,Bahrain vs Oman — PREGAME,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-123,BuxDU vs Metallurg Bekabad — SCHEDULE-CONFLICT / NO VERIFIED LIVE SCORE,4,3,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-124,Chase Ferguson vs Fumin Jiang — M15 Maanshan 8 Quarterfinal,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-125,Canberra Brave vs Sydney Bears — 2026 AIHL Goodall Cup Preliminary Final,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-126,Sikkim Aakraman FC vs Sikkim Boys Club — SFA A Division S-League,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-127,Iran vs New Zealand — FIBA Basketball World Cup 2027 Asian Qualifiers,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-128,Auckland vs Bay of Plenty — Hilux NPC Round 5,4,2,2,0,L,1,2,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-129,Manly Warringah Sea Eagles vs St George Illawarra Dragons — NRL Round 26,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-130,Beitar Haifa Yakov vs Hapoel Bnei Arrara Ara — Israel State Cup 2026/27,3,2,1,0,W,2,1,2,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-131,Penrith Panthers vs Canterbury-Bankstown Bulldogs — NRL Round 26,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-132,"RC Vannes Sevens vs LOU Rugby Sevens — In Extenso SuperSevens, Pau",4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-133,Arthur Géa vs Nishesh Basavareddy — US Open 2026 Men's Qualifying Final,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-134,Cape Verde vs Guinea — FIBA Basketball World Cup 2027 African Qualifiers,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-135,Unión de Santa Fe vs Sarmiento — Torneo Clausura 2026,4,3,1,0,W,2,1,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-136,James Duckworth vs Arthur Fery — ATP Winston-Salem Open 2026 Semifinal,4,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-137,Los Angeles Dodgers (Tarik Skubal) @ Detroit Tigers (Drew Anderson) — MLB,4,3,1,0,W,2,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-138,Miami Marlins (Eury Pérez) @ Washington Nationals (Jackson Kent) — MLB,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-139,Falcons @ Dolphins preseason,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-140,Astros @ Mets,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-141,Red Sox @ Yankees,4,3,1,0,W,2,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-142,Rockies @ Braves,4,3,1,0,W,2,1,2,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-143,Giants @ Jets preseason,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-144,Buccaneers @ Jaguars preseason,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-145,Rangers @ Brewers,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-146,Sun @ Fever,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-147,Gotham v Portland,5,2,3,0,L,0,4,0,6,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-148,Toluca Femenil v León Femenil,4,2,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-149,Colorado Rapids 2 v Ventura County,5,3,2,0,W,2,1,6,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-150,"Montreal @ Winnipeg, CFL",4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-151,Boca Juniors v Lanús,5,3,2,0,W,2,1,6,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-152,Atlante v León,5,2,3,0,L,0,4,0,6,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-153,Necaxa v Cruz Azul,5,3,2,0,W,2,1,6,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-154,Vikings @ Broncos preseason,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-155,Phillies @ Angels,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-156,Orioles @ Athletics,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-157,Sacramento @ Reno,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-158,Tempo @ Aces,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-159,Mystics @ Sparks,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-160,Diamondbacks @ Giants,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-161,Sultanes @ Toros,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-162,Te v Ferguson,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-163,Adelaide v West Coast AFLW,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-164,"Lotte @ Nippon-Ham, live",4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-165,Tohoku Rakuten Golden Eagles @ Saitama Seibu Lions — NPB Pacific League,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-166,Melbourne Mustangs vs Canberra Brave — AIHL Goodall Cup Semifinal,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-167,Kiwoom Heroes @ Doosan Bears — KBO,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-168,LG Twins @ Lotte Giants — KBO,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-169,Melbourne vs Carlton — AFL Wildcard Final,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-170,North Queensland Cowboys vs Wests Tigers — NRL,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-171,Glasgow Cosmic vs Dublin Guardians — European T20 Premier League,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-172,Liverpool vs Nottingham Forest — English Premier League,5,1,4,0,W,1,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-173,Chengdu Rongcheng vs Liaoning Tieren (Ironman) — Chinese Super League,5,4,1,0,W,2,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-174,Henan vs Chongqing Tonglianglong — Chinese Super League,5,4,1,0,L,1,2,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-175,South Africa vs Zimbabwe — Namibia T20I Tri-Series,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-176,Amiens SC vs FC Versailles — France Ligue 3,5,0,4,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-177,SC Aubagne Air Bel vs Bourg-en-Bresse Péronnas — France Ligue 3,5,4,1,0,L,1,2,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-178,AS Cannes vs Le Puy-en-Velay — France Ligue 3,4,3,1,0,W,1,1,1,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-179,Thionville Lusitanos vs Paris 13 Atletico — France Ligue 3,5,4,1,0,W,1,1,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-180,1. FC Köln vs TSG Hoffenheim — Germany Bundesliga,5,4,1,0,W,2,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-181,Coventry City vs Hull City — English Premier League,5,3,2,0,L,1,2,3,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-182,Excelsior Rotterdam vs Sparta Rotterdam — Netherlands Eredivisie,5,5,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-183,Levante UD vs Real Betis — La Liga,5,1,4,0,L,0,4,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-184,North Carolina vs TCU — NCAA Football,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-185,Robert Morris @ Wagner — NCAA FCS / NEC,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-186,Los Angeles Dodgers @ Detroit Tigers — MLB,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-187,Trinbago Knight Riders vs Jamaica Kingsmen — Republic Bank CPL 2026,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-188,Boston Red Sox @ New York Yankees — MLB,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-189,Alabama A&M Bulldogs vs Howard Bison — Cricket MEAC/SWAC Challenge,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-190,New Zealand Warriors (W) vs St George Illawarra Dragons (W) — NRLW Round 9,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-191,Walyalup (Fremantle W) vs Carlton W — AFLW Round 3,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-192,SSG Landers @ KIA Tigers — KBO,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-193,Essendon (W) vs Richmond (W) — AFLW Round 3,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-194,FC St. Pauli vs 1. FC Kaiserslautern — Germany 2. Bundesliga,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-195,KAA Gent vs Club Brugge — Belgium First Division A,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-196,Egypt vs Congo DR — FIBA Basketball World Cup 2027 African Qualifiers,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-197,Feyenoord vs ADO Den Haag — Netherlands Eredivisie,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-198,Poland vs Germany — FIBA Basketball World Cup 2027 European Qualifiers,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-199,Frederikshavn White Hawks vs Sønderjyske — Danish Metal Ligaen,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-200,Herning Blue Fox vs Rungsted Seier Capital — Danish Metal Ligaen,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-201,SC Freiburg vs Werder Bremen — Germany Bundesliga,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-202,Randers FC vs AGF Aarhus — Denmark 3F Superliga,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-203,RC Deportivo de A Coruña vs Valencia CF — LaLiga,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-204,Boston Red Sox @ New York Yankees — MLB,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-205,Chicago White Sox @ Minnesota Twins — MLB,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-206,Los Angeles Dodgers @ Detroit Tigers — MLB,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-207,Cagliari vs Inter Milan — Italy Serie A,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-208,Lazio vs Genoa — Italy Serie A,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-209,Corinthians vs Santos — Brazil Série A,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-210,Flamengo vs Botafogo — Brazil Série A,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-211,Jaime Faria vs Jenson Brooksby — US Open Men's Singles R1,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-212,McCartney Kessler vs Ekaterina Alexandrova — US Open Women R1,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-213,Toby Samuel vs Tomas Machac — US Open Men's Singles R1,1,1,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-214,Baltimore Orioles @ Athletics — MLB,1,0,1,0,L,,,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-215,Japan vs Qatar — FIBA Basketball World Cup 2027 Asian Qualifiers,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-216,Namibia vs Zimbabwe — Namibia T20I Tri-Series 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-217,Trinbago Knight Riders vs Guyana Amazon Warriors — CPL,4,1,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-218,Ann Li vs Antonia Ruzic — US Open Women 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-219,New York Mets (Robert Stock) @ Tampa Bay Rays (Ian Seymour) — MLB 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-220,San Diego Padres (Michael King) @ Cincinnati Reds (Brady Singer) — MLB 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-221,Miami Marlins (Ryan Gusto) @ Washington Nationals (Will Dion) — MLB 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-222,Seattle Mariners (George Kirby) @ Boston Red Sox (Payton Tolle) — MLB 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-223,New York Yankees at Los Angeles Angels,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-224,Philadelphia Phillies (Aaron Nola) @ Arizona Diamondbacks (Brandon Pfaadt) — MLB 2026,4,3,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-225,Chun-Hsin Tseng vs Tianhui Zhang — ATP Challenger Zhangjiagang 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-226,Hanshin Tigers @ Tokyo Yakult Swallows — NPB 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-227,Hiroshima Toyo Carp @ Chunichi Dragons — NPB 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-228,Orix Buffaloes @ Tohoku Rakuten Golden Eagles — NPB 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-229,Hanwha Eagles @ KT Wiz — KBO 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-230,KIA Tigers @ NC Dinos — KBO 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-231,LG Twins @ Doosan Bears — KBO 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-232,Lotte Giants @ Samsung Lions — KBO 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-233,"Beijing Guoan vs Lanzhou Longyuan Athletic — China FA Cup 2026 (quarterfinal, corrected)",5,4,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-234,"Dalian Yingbo vs Shanghai Shenhua — China FA Cup 2026 (quarterfinal, corrected)",5,2,3,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-235,"Shandong Taishan vs Shanghai Port — China FA Cup 2026 (quarterfinal, corrected)",5,4,1,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-236,"England Women vs Ireland Women — 1st ODI, 2026",4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-237,Zimbabwe vs South Africa — Namibia T20I Tri-Series 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-238,Glasgow Cosmic vs Rotterdam Dockers — European T20 Premier League 2026,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-239,Athletics @ Texas Rangers,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-240,Chicago White Sox @ Houston Astros,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-241,Zachary Svajda vs Daniel Altmaier,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-242,Fabian Marozsan vs Michael Zheng,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-243,Magda Linette vs Francesca Jones,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-244,Baltimore Orioles @ Colorado Rockies,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-245,Alexander Zverev vs Lorenzo Sonego,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-246,New York Yankees @ Los Angeles Angels,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-247,Philadelphia Phillies @ Arizona Diamondbacks,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-248,St. Louis Cardinals @ Los Angeles Dodgers,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-249,Hanwha Eagles @ KT Wiz,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-250,Yunnan Yukun vs Chongqing Tonglianglong,4,2,2,0,L,,4,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-251,Sassuolo vs Frosinone,5,3,2,0,W,1,1,4,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-252,Belfast Wolves vs Edinburgh Castle Rockers,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-253,El Gounah vs Al Mokawloon Al Arab,5,3,2,0,W,2,1,5,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-254,Jan Choinski vs Botic Van de Zandschulp,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-255,Inter Women vs VfL Wolfsburg Women,4,2,2,0,W,,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-256,Paris Saint-Germain Women vs Eintracht Frankfurt Women,4,2,2,0,,,2,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-257,San Diego Padres @ Cincinnati Reds,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-258,Atlanta Braves @ Washington Nationals,4,2,2,0,L,1,2,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-259,New York Mets @ Tampa Bay Rays,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-260,San Francisco Giants @ Pittsburgh Pirates,4,1,1,2,W,1,1,1,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-261,Toronto Blue Jays @ Cleveland Guardians,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-262,Trinbago Knight Riders vs Antigua & Barbuda Falcons,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-263,Jaime Faria vs Carlos Alcaraz,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-264,Chicago White Sox @ Houston Astros,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-265,Toluca vs Club León,5,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-266,New York Yankees @ Los Angeles Angels,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-267,Lanlana Tararudee vs Linda Noskova,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-268,Hanwha Eagles @ KT Wiz,2,2,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-269,KIA Tigers @ NC Dinos — cancelled before first pitch,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-270,Canterbury-Bankstown Bulldogs vs Brisbane Broncos,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-271,Fremantle vs Hawthorn — AFL first qualifying final,2,2,0,0,W,,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-272,Naomi Osaka vs Katerina Siniakova,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-273,Palermo vs Mantova,5,2,3,0,W,1,1,4,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-274,San Francisco Giants @ Pittsburgh Pirates,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-275,Alexander Zverev vs Quentin Halys,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-276,UAlbany @ Buffalo,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-277,Athletics @ Seattle Mariners,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-278,St. Louis Cardinals @ Los Angeles Dodgers,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-279,Mineros de Zacatecas vs Abejas de León,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-280,South Sydney Rabbitohs vs Sydney Roosters,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-281,Rakuten Monkeys @ Fubon Guardians,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-282,TSG Hawks @ Uni-Lions,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-283,Namibia vs South Africa — tri-series match 6,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-284,USA vs China — Women’s World Cup,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-285,Korea vs Nigeria — Women’s World Cup,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-286,Glasgow Cosmic vs Belfast Wolves — Match 13,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-287,Alexander Bublik vs Tommy Paul — US Open R3,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-288,Athletics @ Seattle Mariners — September 4 local,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-289,Western Bulldogs vs Sydney Swans — Round 4,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-290,FC Juárez vs Pachuca — Liga MX,5,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-291,Ben Shelton vs Denis Shapovalov — US Open R3,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-292,Euro-Yroke/St Kilda vs North Melbourne — AFLW,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-293,Yartapuulti/Port Adelaide vs Gold Coast — AFLW,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-294,Newcastle Knights (W) vs Canterbury-Bankstown Bulldogs (W) — NRLW Round 10,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-295,North Queensland Cowboys vs Canberra Raiders — NRL Round 27,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-296,Doosan Bears @ SSG Landers — KBO,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-297,Hanwha Eagles @ Lotte Giants — KBO,4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-298,Brisbane Lions (W) vs GWS GIANTS (W) — AFLW Round 4,4,2,2,0,L,1,2,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-299,Mali (W) vs Spain (W) — FIBA Women's World Cup Group A,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-300,Rotterdam Dockers vs Edinburgh Castle Rockers — ETPL Match 14,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-301,Cronulla Sharks vs Melbourne Storm — NRL Round 27,4,2,2,0,L,1,2,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-302,Newcastle United vs AFC Bournemouth — EPL Matchweek 3,5,3,2,0,W,2,1,6,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-303,Nigeria (W) vs Hungary (W) — FIBA Women's World Cup Group B,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-304,Slavia Praha vs Zbrojovka Brno — Chance Liga,5,3,2,0,W,2,1,6,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-305,Dublin Guardians vs Amsterdam Flames — ETPL,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-306,Manchester City v Coventry,5,2,3,0,W,1,1,4,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-307,India Women v Pakistan Women,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-308,Francisco Cerundolo v Taylor Fritz,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-309,Gardner-Webb v Wofford,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-310,Luciano Darderi v Dane Sweeny,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-311,Barbados Women v Trinbago Knight Riders Women,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-312,Detroit Tigers v Cleveland Guardians,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-313,Cincinnati Reds v Milwaukee Brewers,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-314,Los Angeles Angels v Pittsburgh Pirates,6,3,3,0,W,1,1,6,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-315,Melbourne v West Coast (AFLW),4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-316,Doosan Bears v SSG Landers (superseded card),1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-317,Doosan Bears v SSG Landers,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-318,Henan vs Chengdu Rongcheng — CSL R26,5,2,3,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-319,Yunnan Yukun vs Liaoning Tieren — CSL R26,5,3,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-320,Tianjin Jinmen Tigers vs Zhejiang — CSL R26,5,2,3,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-321,Sønderjyske vs AC Horsens — Denmark Superliga R7,5,2,3,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-322,South Africa vs Zimbabwe — Namibia T20I Tri-Series Final,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-323,Everton vs Manchester United — EPL MW3,5,2,3,0,L,0,3,1,5,0.37492000000000003,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-324,Valencia vs Barcelona — LaLiga MD4,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-325,Bangladesh W vs Sri Lanka W — Women's Asia Cup M10,4,2,2,0,W,2,1,4,0,0.13324999999999998,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-326,Western Carolina @ Campbell — NCAA FCS,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-327,Angers SCO vs Rennes — Ligue 1,5,3,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-328,Arsenal vs Chelsea — EPL MW3,5,3,2,0,W,2,1,6,0,0.15819999999999998,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-329,Bologna vs Sassuolo — Serie A MD3,5,3,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-330,Puerto Rico W vs Belgium W — FIBA W WC,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-331,Milwaukee Brewers @ Cincinnati Reds — MLB,4,2,2,0,W,2,1,4,0,0.18925,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-332,Deportivo Alavés vs CA Osasuna — LaLiga MD4,5,2,3,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-333,Pakistan W vs Hong Kong W — Women's T20 Asia Cup Gp A,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-334,Germany W vs Mali W — FIBA W World Cup Gp A,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-335,Washington Nationals @ San Diego Padres — MLB,4,2,2,0,W,1,1,2,2,0.25405,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-336,Carabobo FC vs Estudiantes de Mérida — Venezuela Clausura J8,5,3,2,0,W,2,1,6,0,0.17506000000000002,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-337,Barracas Central vs Argentinos Juniors — Argentina Clausura F8,5,2,3,0,W,1,1,4,2,0.26027999999999996,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-338,Iva Jovic vs Coco Gauff — US Open Women's R16,4,2,2,0,W,2,1,4,0,0.21625,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-339,Doosan Bears @ Hanwha Eagles — KBO,4,2,2,0,L,0,3,0,4,0.3368,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-340,Incheon United vs Bucheon FC 1995 — K League 1 R28,5,3,2,0,W,2,1,5,1,0.21546000000000004,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-341,BUL FC vs Ntugasaze FC — Uganda Premier League R3,5,2,2,0,,,,,,0.24425000000000002,4,False,CONFLICT_OR_GAP
+P-342,MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3,5,2,2,0,,,,,,0.388,4,False,CONFLICT_OR_GAP
+P-343,Bangladesh W vs UAE W — Women's T20 Asia Cup Gp B,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-344,Hungary W vs Japan W — FIBA W World Cup Qual. to QF,4,2,2,0,L,1,2,1,3,0.28342500000000004,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-345,Club Brugge v Aston Villa — UCL MD1,5,3,2,0,L,1,2,3,3,0.2466,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-346,AEK Athens v LASK — UCL MD1,5,5,0,0,W,2,1,0,0,0.08156,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-347,Rangers @ Mariners (MLB PRIMARY_SCORED),4,2,2,0,W,1,1,3,1,0.23735,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-348,Blue Jays @ Athletics (MLB PRIMARY_SCORED),4,1,3,0,W,1,1,3,0,0.28025,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-349,Cardinals @ Giants (MLB PRIMARY_SCORED),4,4,0,0,W,2,1,0,0,0.14394999999999997,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-350,Shelton v Alcaraz — US Open men's QF,4,3,1,0,L,1,2,0,3,0.2574,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-351,Reds @ Dodgers (MLB PRIMARY_SCORED),4,2,2,0,W,2,1,4,0,0.246025,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-352,Namibia v South Africa — 1st ODI,4,3,1,0,L,1,2,0,3,0.21582500000000002,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-353,"Dragons @ Giants — NPB, 9 Sep",4,2,2,0,W,1,1,3,1,0.25484999999999997,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-354,Carp @ Tigers — NPB,4,2,2,0,W,1,1,2,2,0.29675,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-355,Sydney FC v Melbourne Victory — Australia Cup SF,5,4,1,0,W,2,1,2,2,0.15308,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-356,KT @ Samsung — KBO,4,3,1,0,L,1,2,0,3,0.24182499999999998,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-357,Dublin Guardians v Belfast Wolves — ETPL M18,4,2,2,0,L,0,3,0,4,0.3377,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-358,"Puerto Rico W v China W — FIBA WWC (mini-log alias TMP-CANON-20260911-01, retired)",4,2,2,0,L,1,2,1,3,0.29725,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-359,Jordan v Chinese Taipei — Asian Games,4,2,2,0,W,1,1,3,1,0.24665,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-360,South Korea v Saudi Arabia — Asian Games,4,2,2,0,W,1,1,3,1,0.24085,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-361,"Dragons @ Giants — NPB, 10 Sep",4,2,2,0,W,1,1,3,1,0.24925000000000003,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-362,Eagles @ Landers — KBO,4,2,2,0,W,1,1,3,1,0.24500000000000002,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-363,Roosters W v Bulldogs W — NRLW R11,4,2,2,0,W,2,1,4,0,0.1773,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-364,England v Pakistan — 3rd Test (Day-2 card),4,2,2,0,L,0,3,0,4,0.34285,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-365,Uni-Lions @ CTBC Brothers — CPBL,4,2,2,0,L,1,2,1,3,0.2768,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-366,Rotterdam v Glasgow — ETPL M19,3,2,1,0,W,2,1,2,0,0.1936,2,False,SOURCE_LINKED_LEARNING_ONLY
+P-367,China W v France W — FIBA WWC QF,4,2,2,0,W,2,1,4,0,0.20704999999999998,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-368,Al Jazira v Al Nasr — UAE Pro League,5,3,2,0,W,2,1,5,1,0.19382,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-369,Dubai United v Shabab Al Ahli — UAE Pro League,5,2,3,0,L,0,4,0,6,0.4051600000000001,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-370,Jamaica Empress W v TKR W — WCPL,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-371,Belgium W v Germany W — FIBA WWC QF,4,2,2,0,L,0,3,0,4,0.3145,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-372,—,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-373,Tampa Bay Rays @ Atlanta Braves — MLB — 2026-09-10 (Atlanta local),4,2,2,0,L,1,2,1,3,0.30805,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-374,Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10,5,3,2,0,W,2,1,6,0,0.1605,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-375,Coco Gauff vs Elena Rybakina — US Open Women — Semifinal,4,2,2,0,W,2,1,4,0,0.18945,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-376,San Francisco 49ers vs Los Angeles Rams — NFL Week 1 — Melbourne,4,2,2,0,W,1,1,3,1,0.2426,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-377,Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026,5,2,2,0,,,,,,0.38245,4,False,CONFLICT_OR_GAP
+P-378,Philippines vs Bahrain — 2026 Aichi-Nagoya Asian Games Men's Basketball,4,2,2,0,L,0,3,0,4,0.33085000000000003,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-379,Namibia vs South Africa — 2nd ODI — South Africa tour of Namibia 2026,4,2,2,0,W,2,1,4,0,0.18065,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-380,"Wests Tigers (W) vs Canberra Raiders (W) — NRLW Round 11, 2026",4,2,2,0,W,2,1,4,0,0.20259999999999997,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-381,Chiba Lotte Marines @ Fukuoka SoftBank Hawks — NPB Pacific League,4,2,2,0,W,2,1,4,0,0.2034,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-382,Saitama Seibu Lions @ Orix Buffaloes — NPB Pacific League,4,2,2,0,L,1,2,2,2,0.25405,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-383,Yokohama DeNA BayStars @ Hiroshima Toyo Carp — NPB Central League,4,2,2,0,L,0,3,0,4,0.33085000000000003,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-384,Kiwoom Heroes @ Samsung Lions — KBO League,4,2,2,0,W,2,1,4,0,0.1448,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-385,KT Wiz @ Lotte Giants — KBO League,4,2,2,0,W,1,1,3,1,0.22685,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-386,South Sydney Rabbitohs vs Newcastle Knights — NRL Finals Week 1 Elimination Final,4,2,2,0,W,1,1,3,1,0.20890000000000003,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-387,Kyoto Sanga F.C. vs Kashiwa Reysol — J1 League,5,2,3,0,W,1,1,4,2,0.24230000000000002,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-388,Fremantle Dockers vs Geelong Cats — AFL First Semi-Final,4,2,2,0,L,0,3,0,4,0.33125000000000004,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-389,Dublin Guardians vs Edinburgh Castle Rockers — ETPL 2026 Match 21,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-390,Cincinnati Reds @ Milwaukee Brewers — MLB,4,2,2,0,W,1,1,3,1,0.23025000000000004,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-391,Cleveland Guardians @ Minnesota Twins — MLB,4,2,2,0,L,1,2,1,3,0.2858,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-392,Chicago White Sox @ St. Louis Cardinals — MLB,4,2,2,0,W,2,1,4,0,0.1373,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-393,Seattle Mariners @ Athletics — MLB,4,2,2,0,L,1,2,1,3,0.3194,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-394,Parramatta Eels Women vs North Queensland Cowboys Women — NRLW,4,2,2,0,W,2,1,4,0,0.18945,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-395,Belfast Wolves vs Rotterdam Dockers — European T20 Premier League,4,2,2,0,W,2,1,4,0,0.16465000000000002,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-396,Brisbane Lions vs Adelaide Crows — AFL Semi Final,4,2,2,0,L,0,3,0,4,0.373,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-397,Cronulla-Sutherland Sharks vs North Queensland Cowboys — NRL Elimination Final,4,2,2,0,L,0,3,0,4,0.30805000000000005,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-398,Racing Santander vs Deportivo Alavés — La Liga,5,3,2,0,W,2,1,5,1,0.17458,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-399,Genoa vs Frosinone — Serie A,5,2,2,0,,,,,,0.15125,4,False,CONFLICT_OR_GAP
+P-400,Trinbago Knight Riders Women vs Guyana Amazon Warriors Women — WCPL,4,2,2,0,W,2,1,4,0,0.1448,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-401,IFK Göteborg vs Halmstads BK — Allsvenskan,5,2,1,0,,,,,,0.1958,3,False,CONFLICT_OR_GAP
+P-402,Tottenham Hotspur vs Everton — Premier League,5,3,2,0,W,2,1,6,0,0.17102,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-403,Colorado Rockies @ Detroit Tigers — MLB,4,2,2,0,L,1,2,1,3,0.26825,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-404,Seattle Mariners (Bryan Woo) @ Athletics (Gage Jump) — MLB,4,2,2,0,L,0,3,0,4,0.33730000000000004,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-405,Chunichi Dragons @ Hanshin Tigers — NPB,4,2,2,0,W,2,1,4,0,0.18125000000000002,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-406,Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24,4,2,2,0,W,1,1,3,1,0.2106,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-407,Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League,5,3,1,1,P,1,2,2,1,0.2005,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-408,Coventry City vs Brighton & Hove Albion — English Premier League,5,4,1,0,L,1,2,0,4,0.20267999999999997,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-409,Lille OSC vs ESTAC Troyes — French Ligue 1,5,4,0,1,W,1,1,0,0,0.07562500000000001,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-410,RB Leipzig vs Hamburger SV — German Bundesliga,5,4,0,1,W,2,1,0,0,0.031000000000000007,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-411,"Spain (W) vs Germany (W) — FIBA Women's Basketball World Cup 2026, 3rd Place",4,2,2,0,L,1,2,1,3,0.26725,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-412,Atlanta Falcons @ Pittsburgh Steelers — NFL Regular Season Week 1,4,2,2,0,L,1,2,1,3,0.26170000000000004,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-413,Baltimore Ravens @ Indianapolis Colts — NFL Regular Season Week 1,4,2,2,0,L,0,3,0,4,0.29845,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-414,Buffalo Bills @ Houston Texans — NFL Regular Season Week 1,4,2,2,0,L,0,3,0,4,0.29170000000000007,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-415,LA Angels @ Washington Nationals — MLB,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-416,New York Mets @ New York Yankees — MLB,4,2,2,0,W,1,1,3,1,0.221875,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-417,Chunichi Dragons @ Hanshin Tigers — NPB Central League,4,2,2,0,W,1,1,3,1,0.22345000000000004,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-418,Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-419,Djurgårdens IF vs GAIS — Sweden Allsvenskan,5,4,0,1,W,2,1,0,0,0.04715000000000001,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-420,Atlanta Braves @ Chicago Cubs — MLB,4,2,2,0,L,1,2,1,3,0.27290000000000003,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-421,New York Yankees @ Minnesota Twins — MLB,4,2,2,0,W,2,1,4,0,0.2138,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-422,Denver Broncos @ Kansas City Chiefs — NFL Regular Season Week 1,4,2,2,0,L,1,2,1,3,0.26725,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-423,San Diego Padres @ Colorado Rockies — MLB,4,2,2,0,L,1,2,2,2,0.2575,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-424,Amsterdam Flames vs Dublin Guardians — ETPL 2026 Match 26,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-425,Daejeon Hana Citizen vs Kyoto Sanga — AFC Champions League Elite MD1,5,3,2,0,W,1,1,3,3,0.24158,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-426,Gamba Osaka vs Cong An Ha Noi — AFC Champions League Elite MD1,5,1,4,0,W,1,1,4,0,0.3816,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-427,Biotekno Körfez Basket vs Kolossos H Hotels — BCL Qualification Round,4,2,2,0,L,0,3,0,4,0.35425,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-428,Edinburgh Castle Rockers vs Rotterdam Dockers — ETPL Match 27,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-429,"Afghanistan vs India — 2nd T20I, Delhi",4,3,1,0,W,2,1,3,0,0.16344999999999998,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-430,Al Ain FC vs Al Nassr — AFC Champions League Elite MD1,5,2,2,1,L,1,2,2,2,0.3459,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-431,"England vs Sri Lanka — 1st T20I, Southampton",4,2,2,0,W,2,1,4,0,0.19252500000000003,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-432,KT Wiz @ Hanwha Eagles — KBO,4,2,2,0,W,2,1,4,0,0.15244999999999997,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-433,LG Twins @ NC Dinos — KBO,4,3,1,0,W,2,1,2,1,0.201675,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-434,Samsung Lions @ Doosan Bears — KBO,4,4,0,0,W,2,1,0,0,0.08085,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-435,SSG Landers @ Lotte Giants — KBO,4,4,0,0,W,2,1,0,0,0.06285000000000002,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-436,Jeonbuk Hyundai Motors vs Kashiwa Reysol — AFC Champions League Elite MD1,5,5,0,0,W,2,1,0,0,0.05786,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-437,Port FC vs Vissel Kobe — AFC Champions League Elite MD1,5,5,0,0,W,2,1,0,0,0.04394,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-438,Al-Wahda Abu Dhabi vs Kuwait SC — AFC Champions League Two Group A,5,1,4,0,L,0,4,1,3,0.50526,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-439,Al Khaldiya vs Nasaf Qarshi — AFC Champions League Two Group A,5,5,0,0,W,2,1,0,0,0.03776,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-440,Ararat-Armenia vs Sparta Praha — UEFA Europa League MD1,5,4,1,0,W,2,1,3,1,0.15902,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-441,Omonia Nicosia vs Celta Vigo — UEFA Europa League MD1,5,5,0,0,W,2,1,0,0,0.011239999999999997,5,False,SOURCE_LINKED_LEARNING_ONLY
+P-442,Chicago White Sox @ Cleveland Guardians — MLB,4,2,2,0,L,1,2,1,3,0.31307500000000005,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-443,San Francisco Giants @ St. Louis Cardinals — MLB,4,2,2,0,W,2,1,4,0,0.195775,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-444,New York Yankees @ Minnesota Twins — MLB,4,2,2,0,L,0,3,0,4,0.296725,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-445,Barbados Tridents vs Jamaica Kingsmen — CPL 2026 Eliminator,4,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-446,Atlanta Braves @ Chicago Cubs — MLB,4,2,2,0,W,1,1,3,1,0.23725000000000002,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-447,Boston Red Sox @ Texas Rangers — MLB,4,2,2,0,W,1,1,3,1,0.19030000000000002,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-448,Kansas City Royals @ Houston Astros — MLB,4,2,2,0,W,2,1,4,0,0.15867499999999998,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-449,San Diego Padres @ Colorado Rockies — MLB,4,2,2,0,W,1,1,2,2,0.25127499999999997,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-450,Miami Marlins @ Arizona Diamondbacks — MLB,4,2,2,0,W,2,1,4,0,0.19095,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-451,Dorados de Chihuahua vs El Calor de Cancún — LNBP Jornada 20,1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-452,"Cricket / Afghanistan vs India T20I Series 2026 — Afghanistan vs India, 3rd T20I",4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-453,Baseball / MLB — Milwaukee Brewers @ Pittsburgh Pirates,4,2,2,0,W,2,1,4,0,0.1849,2,False,SOURCE_LINKED_LEARNING_ONLY
+P-454,Soccer / Denmark DBU Pokalen (Betano Pokalen) — Vejle Boldklub vs Brøndby IF,5,5,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-455,Baseball / MLB — Los Angeles Dodgers @ Cincinnati Reds,4,1,1,2,L,0,3,0,1,0.30250000000000005,2,False,SOURCE_LINKED_LEARNING_ONLY
+P-456,Soccer / Spain LaLiga — Real Betis vs Getafe CF,5,5,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-457,"Cricket / Zimbabwe v Australia ODIs 2026 — Zimbabwe vs Australia, 2nd ODI",4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-458,Baseball / NPB Central League — Chunichi Dragons @ Yomiuri Giants,4,2,2,0,L,0,3,0,4,0.3844,2,False,SOURCE_LINKED_LEARNING_ONLY
+P-459,"AFL / 2026 Toyota AFL Finals Series — Sydney Swans vs Fremantle Dockers, Preliminary Final",4,3,1,0,W,2,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-460,Baseball / Taiwan CPBL — Rakuten Monkeys @ Fubon Guardians,4,1,3,0,L,1,2,2,1,0.32489999999999997,1,False,SOURCE_LINKED_LEARNING_ONLY
+P-461,"Tennis / WTA 125 Valencia — Clara Burel vs Guiomar Maristany Zuleta De Reales, Quarterfinal",4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-462,Soccer / Chinese Super League — Zhejiang FC vs Wuhan Three Towns,5,5,0,0,W,2,1,0,0,0.10889999999999997,1,False,SOURCE_LINKED_LEARNING_ONLY
+P-463,Baseball / MLB — Chicago Cubs @ Cincinnati Reds,4,2,2,0,W,1,1,3,1,0.21159999999999998,2,False,SOURCE_LINKED_LEARNING_ONLY
+P-464,Baseball / MLB — Milwaukee Brewers @ Baltimore Orioles,4,3,1,0,W,2,1,3,0,0.17345,2,False,SOURCE_LINKED_LEARNING_ONLY
+P-465,Basketball / WNBA — Indiana Fever @ Toronto Tempo,3,2,1,0,W,,1,2,0,0.008099999999999994,1,False,SOURCE_LINKED_LEARNING_ONLY
+P-466,Soccer / Argentina Torneo Clausura — Racing Club vs Sarmiento,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-467,Baseball / MLB — Toronto Blue Jays @ Texas Rangers,3,2,1,0,L,1,2,0,2,0.3106,2,False,SOURCE_LINKED_LEARNING_ONLY
+P-468,Basketball / WNBA — Portland Fire @ Golden State Valkyries,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-469,Australian Rules Football / AFL Finals — Hawthorn vs Brisbane Lions,4,2,2,0,L,0,3,0,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-470,Baseball / NPB — Saitama Seibu Lions @ Chiba Lotte Marines,4,2,2,0,L,1,2,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-471,Basketball / Australia NBL — Melbourne United vs Adelaide 36ers,4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-472,American Football / NCAA FBS — Coastal Carolina @ Delaware,4,2,2,0,L,0,3,0,4,0.3166165,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-473,Soccer / English Premier League — Nottingham Forest vs Coventry City,5,2,3,0,L,1,2,2,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-474,MLB — Athletics @ Cleveland Guardians,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-475,WNBA — Chicago Sky @ Atlanta Dream,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-476,MLB — Minnesota Twins @ Los Angeles Angels,4,3,1,0,W,2,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-477,Australia NBL — Sydney Kings vs Cairns Taipans,4,2,2,0,W,2,1,4,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-478,Soccer / Sweden Allsvenskan — Djurgårdens IF vs IF Elfsborg,5,3,2,0,W,1,1,2,4,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-479,Cricket / European T20 Premier League Final — Edinburgh Castle Rockers vs Belfast Wolves,4,4,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-480,Soccer / Denmark Superligaen — Viborg FF vs FC Nordsjælland,5,2,3,0,L,1,2,3,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-481,Soccer / Spain La Liga — Villarreal vs Levante,5,5,0,0,W,2,1,0,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-482,Cricket / CPL 2026 Final — Antigua & Barbuda Falcons vs Jamaica Kingsmen,2,1,1,0,W,1,1,1,0,0.16080100000000003,2,False,SOURCE_LINKED_LEARNING_ONLY
+P-483,Tennis / WTA 250 Korea Open (Seoul) R32 — Katie Volynets vs Elvina Kalieva,4,2,2,0,L,0,3,0,4,0.38308000000000003,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-484,WNBA — Atlanta Dream @ New York Liberty,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-485,NFL — New York Giants @ Los Angeles Rams,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-486,MLB — Minnesota Twins @ San Francisco Giants,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-487,"WNBA — Dallas Wings @ Phoenix Mercury (22 Sep 2026, 12:00 AEST)",4,2,2,0,W,1,1,3,1,0.21002500000000002,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-488,WTA Singapore — Vivian Wolff vs Oleksandra Oliynykova,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-489,"NPB — Chunichi Dragons @ Yokohama DeNA BayStars — **22 Sep 2026, game 24** (Azuma v Muller)",4,2,2,0,L,1,2,1,3,0.313425,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-490,RESERVED / UNUSED (retired provisional Padres alias),1,0,0,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-491,NPB — Orix Buffaloes @ Chiba Lotte Marines,4,2,2,0,W,2,1,4,0,0.18975,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-492,MLB — San Diego Padres @ Los Angeles Dodgers,4,1,3,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-493,KBO — KIA Tigers @ Doosan Bears (23 Sep),4,2,2,0,W,1,1,2,2,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-494,WTA 500 Singapore — Mirra Andreeva vs Aliaksandra Sasnovich,4,2,2,0,W,1,1,3,1,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-495,WTA 125 Tolentino — Jessica Pieri vs Leyre Romero Gormaz,4,2,2,0,L,0,3,0,4,0.3405285,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-496,ITF M25 Falun — Iiro Vasa vs Wojciech Marek,4,2,2,0,W,2,1,4,0,0.177677,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-497,LKL — BC Neptūnas vs BC Juventus,4,2,2,0,W,2,1,4,0,0.22137049999999997,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-498,LKL — BC Šiauliai vs BC Lietkabelis,4,2,2,0,W,1,1,3,1,0.25082,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-499,EuroLeague Women Qualifiers — Flammes Carolo vs KP Brno,4,2,2,0,L,1,2,1,3,0.2812225,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-500,MLB — Washington Nationals @ Detroit Tigers,4,2,2,0,W,1,1,2,2,0.26525125000000005,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-501,MLB — Toronto Blue Jays @ Baltimore Orioles (DH G1),4,2,2,0,L,1,2,1,3,0.340795,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-502,MLB — Chicago White Sox @ Kansas City Royals,4,3,1,0,W,2,1,3,0,0.1712455,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-503,NHL pre-season — Minnesota Wild @ Dallas Stars,4,2,2,0,W,2,1,4,0,0.17222850000000003,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-504,WNBA — Atlanta Dream @ New York Liberty (23 Sep ET; a different game from P-484),4,2,2,0,W,2,1,4,0,0.18354499999999999,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-505,El Salvador LMB (Clausura R1) — Salvadoreños vs Cojute,4,2,2,0,W,2,1,4,0,0.17140675,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-506,MLB — Houston Astros @ Seattle Mariners,4,3,1,0,W,2,1,2,1,0.1818945,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-507,KBO — NC Dinos @ KT Wiz,4,3,1,0,W,2,1,3,0,0.20301875,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-508,NBL — SE Melbourne Phoenix vs Melbourne United,4,2,2,0,W,1,1,3,1,0.180353,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-509,"NBL — Perth Wildcats vs Adelaide 36ers (RAC Arena, 21:30 AEST 24 Sep; Round 2)",4,2,2,0,L,0,3,0,4,0.3027603333333333,3,False,SOURCE_LINKED_LEARNING_ONLY
+P-510,MLB — St. Louis Cardinals @ Pittsburgh Pirates,4,3,1,0,W,1,1,1,2,0.26605,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-511,MLB — Los Angeles Angels @ Seattle Mariners,4,2,2,0,L,1,2,2,2,0.25787099999999996,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-512,KBO — Hanwha Eagles @ NC Dinos,4,3,1,0,W,2,1,2,1,0.2275925,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-513,NPB — Hanshin Tigers @ Yokohama DeNA BayStars,4,2,2,0,W,2,1,4,0,0.18621875,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-514,NBL — Illawarra Hawks @ Brisbane Bullets,4,2,2,0,L,0,3,0,4,0.35445800000000005,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-515,NRL — Sydney Roosters @ Dolphins (Preliminary Final),4,2,2,0,L,0,3,0,4,0.3337105,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-516,"NPB — Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (alias TMP-20260923-NPB-CHU-DB-G25)",4,3,1,0,W,2,1,3,0,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-517,NBL — Cairns Taipans vs Tasmania JackJumpers — 23 Sep 2026 (alias TMP-20260923-NBL-CNS-TAS; formerly claimed P-487),4,2,2,0,L,1,2,1,3,,0,False,SOURCE_LINKED_LEARNING_ONLY
+P-518,MLB New York Mets at Washington Nationals,4,2,2,0,,,,,,,0,False,CONFLICT_OR_GAP
+P-519,AFLW Gold Coast vs St Kilda,4,2,2,0,L,1,2,1,3,0.410281,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-520,KBO Hanwha at Lotte,4,2,2,0,L,1,2,1,3,0.27344475,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-521,ACB Breogan vs Joventut,4,2,2,0,L,1,2,1,3,0.189954,4,False,SOURCE_LINKED_LEARNING_ONLY
+P-522,ACB La Laguna Tenerife vs Casademont Zaragoza,4,1,3,0,,,,,,,0,False,CONFLICT_OR_GAP

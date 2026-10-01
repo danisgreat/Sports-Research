@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-01T01:20:15.492377+00:00",
+  "admissions": [
+    {
+      "lane": "EPL",
+      "league": "EPL",
+      "model_version": "epl-dc-0.1.0",
+      "endpoint": "REGULATION",
+      "families": [
+        "1X2"
+      ],
+      "status": "SHADOW_ONLY",
+      "qualified_utc": null,
+      "model_artifacts": [
+        {
+          "path": "research/src/dixon_coles.py",
+          "sha256": "3cb47e0845b558fecde03f9c1f4f14b730964f82a6b3cef79474962f73d02f1f"
+        },
+        {
+          "path": "research/src/features.py",
+          "sha256": "73b8ff815b9153b1f16d168613fd754df0bef4923cf0c9d09d80137e6017d006"
+        }
+      ],
+      "qualification_artifacts": [],
+      "reason": "Retrospective evidence only; no completed prospective card cohort or independent full issuance corroboration."
+    },
+    {
+      "lane": "NBL",
+      "league": "NBL",
+      "model_version": "nbl-joint-0.1.0",
+      "endpoint": "INCL_OT",
+      "families": [
+        "ML"
+      ],
+      "status": "SHADOW_ONLY",
+      "qualified_utc": null,
+      "model_artifacts": [
+        {
+          "path": "research/src/nbl_model.py",
+          "sha256": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe"
+        },
+        {
+          "path": "research/src/sports/basketball/joint.py",
+          "sha256": "f89d50cfcbcba80abae4a2a421fcd522f469c9b48bc757c7855f179992e90658"
+        }
+      ],
+      "qualification_artifacts": [],
+      "reason": "Retrospective evidence only; no completed prospective card cohort or independent full issuance corroboration."
+    }
+  ],
+  "policy": "Admissions are scoped by competition/model/endpoint/family. No live admission is inferred from a retrospective pass."
+}

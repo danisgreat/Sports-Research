@@ -1,46 +1,78 @@
-# Sports Research pipeline
+# Research workspace
 
-This is the code and data workspace authorized on 2026-09-29. Issued prediction cards remain in `prediction logs/PREDICTION_LOG_COMBINED_6.md` from P-523 onward. Scripts may create drafts and evidence receipts; they do not rewrite frozen cards or certify historical card skill.
+Current controls: [CURRENT_RULES.md](../CURRENT_RULES.md). No current model is live-qualified. Existing September evaluations and forecasts remain frozen; October's changed models are versioned SHADOW_ONLY candidates.
 
-## Reproduce the completed EPL test
+## Install and verify
+
+The implementation was tested with CPython 3.14.6 and the exact [dependency lock](requirements.lock.txt). Use an isolated environment when installing; do not replace unrelated project runtimes.
 
 ```powershell
-python -m pip install -r research/requirements.txt
-python -m research.src.legacy_ledger
-python -m research.src.load
-python -m pytest research/tests -q
+python -m pip install -r research/requirements.lock.txt
+python -B -m pytest -p no:cacheprovider research/tests -q
+python -B -m research.src.acceptance
+python -B -m research.src.control_manifest verify
 ```
 
-The raw openfootball season files are in `research/data/raw/openfootball/`. Football-Data CSVs contain closing odds, so their untouched bytes are stored locally under ignored `research/data/benchmark/football_data/`; the checked source hashes remain in `research/data/processed/data_manifest.json`. A fresh checkout needs those six season CSVs supplied through an authorized route and checked against the recorded hashes. Football-Data describes its free files as intended for private use and restricts automated bot/AI reuse, so this repository does not redistribute the raw CSVs or ship an automated downloader. The builder copies only identity, final score, date and time into `matches.parquet`, then stops on any mismatch. No forecast module imports `benchmark.py` or reads `data/benchmark/`.
+Tests are offline and check temporal leakage, contract coherence, source hashes, native parsers, evidence admission, transaction recovery, settlement revision custody and persistent pilot decisions. Live observations are separate from tests.
 
-The one-shot results from 2026-09-29 are preserved in `research/runs/`. **Do not rerun `holdout`**: the command refuses to overwrite it. The tuning and holdout protocol is frozen in [EPL preregistration](EPL_PREREGISTRATION_2026-09-29.md). `python -m research.src.benchmark` uses closing prices only after the fully settled holdout exists. Its output is informational.
+## Daily observations and shadows
 
-## Historical ledger
+```powershell
+python -B -m research.src.daily --window-hours 48
+python -B -m research.src.workflow status
+python -B -m research.src.workflow score
+```
 
-`SETTLED_OUTCOMES_LEDGER.csv` contains exactly one row per ID P-001 through P-522. It is a conservative index reconstructed from the current register because the 522-row CSV cited in the supplied plan was not attached. Blank rank, probability, date or grade cells mean **not extracted**, never zero. Every row is `performance_eligible=false`; P-518–P-522 stay `RESERVED_UNDER_RECONCILIATION`. Corrections append to `SETTLED_OUTCOMES_CORRECTIONS.csv` with an event and source receipt. The generator refuses a silent overwrite.
+A unique `research/daily/<UTC>/` directory contains each lane's raw-source receipt, processed scores, upcoming and excluded fixtures, snapshot hash, model shadows, complete fixture coverage and run status. Fresh score inputs are single-publisher provisional observations; this is model research, not certified issuance. EPL retains provider-derived IDs separately from missing official IDs. NBL uses the league's exact UUID. Failed sources or parsers create recorded FAILED_CLOSED lanes and a nonzero exit.
 
-## Settlement and cards
+The daily job records new coherent EPL 1X2 and NBL ML shadows within 48 hours. It checks the complete model-build and historical-input receipts before fitting. New NBL terminal results can produce diagnostic grades for the unchanged September shadows; a single final source does not certify actual start or three independent lineages. Old shadows are never overwritten.
 
-`src/feeds.py` fetches exact-event terminal MLB StatsAPI, ESPN, or official NBL receipts; `src/settle.py` refuses a nonfinal, wrong event, or wrong endpoint and returns W/L/P/VOID with the response hash and score. One feed is one lineage. Other sport adapters and all three independent terminal lineages remain a release gate.
+`current.py` and `nbl_current.py` are compatibility commands for dated immutable source snapshots. They cannot backdate source retrieval or rewrite the September 29 static files. `draft_epl.py` and `nbl_shadow.py` preserve older shadow bridges for reproducibility; their output is not canonical issuance. Prefer the dated daily workflow for new v2 candidate research.
 
-`src/emit_card.py` validates a model-produced score-state JSON and emits a ranked draft with contract probabilities from one joint distribution, a baseline for each row, endpoint, input cutoff, lineup status, recency check and two-row dependence. The script enforces a whole-distribution 0.5 baseline mixture for an unvalidated lane. It will not issue a `NO_MODEL` numerical pilot card. It is not an auto-append to Part 6. The output remains learning-only unless the specific lane and prospective record gates pass.
+## Models and experiments
 
-For an EPL shadow draft, fill [the event receipt template](EPL_EVENT_RECEIPT_TEMPLATE.json) with an exact official event ID, three checked identity/state publishers, current lineups and recency evidence. Refresh `2026-27.txt` and the local-only `2026-27.csv`, run `python -m research.src.current`, then run `python -m research.src.draft_epl <receipt.json> <new-output.json>` within 24 hours of that score snapshot and before the actual start. The script fits the locked model to completed pre-cutoff games, applies only named goal-rate adjustments, mixes with a pre-cutoff baseline while the lane is unvalidated, and writes immutable JSON/Markdown drafts. The operator still audits and appends an issued core to Part 6; the script never assigns P-523 automatically.
-
-`src/pilot.py` is an **EPL-only** event-level scorer for the seven fixed 1X2/total-2.5/BTTS contracts. It refuses to decide anything until a separate `PILOT_LOCK_TEMPLATE.json` copy is frozen with a sample, one futility look and lane weight. A second sport needs a versioned family score and its own frozen lock; it cannot be slipped into the EPL cohort.
-
-## Lane states
-
-| Lane | Data/holdout state | Issuance state |
+| Model | Description | Operational status |
 |---|---|---|
-| EPL 1X2 | 2025–26 holdout `M2_PASS`; 380 matches, locked tuning. A separate 2026–27 snapshot has 50 completed scores cross-checked as of 2026-09-29 UTC. | Shadow forecasts required; no prospective pilot row yet |
-| NBL | NBL22–NBL26: 738 official regular-season scores; 736 agree with FixtureDownload at exact event grain, two conflicts are resolved by club/league reports. ESPN's 152 missing and 17 conflicting results remain diagnostics. Locked NBL26 moneyline holdout `M2_PASS` on 165 games. NBL27 snapshot has 13 cross-checked finals and two immutable pregame model-only shadow receipts. | Shadow only; no model card or eligible pilot row |
-| Other sports | Shared contract/settlement interface exists; league-specific data and holdouts still required | `NO_MODEL` or learning-only under current rules |
+| epl-dc-0.1.0 | Original Dixon-Coles comparison model | Historical 1X2 holdout; SHADOW_ONLY |
+| epl-coherent-ensemble-0.2.0 | 0.75 DC + 0.25 TB1 score matrix; coherent family arithmetic | Development-selected 1X2 candidate; SHADOW_ONLY |
+| nbl-joint-0.1.0 | Original joint margin/total ridge model | Historical overtime-inclusive ML holdout; SHADOW_ONLY |
+| nbl-oof-width-0.2.0 | Joint-model margin mean; width from strictly earlier out-of-fold residuals | Development-selected overtime-inclusive ML candidate; SHADOW_ONLY |
 
-Do not call a lane `VALIDATED` for live issuance solely because a retrospective holdout passed. It also needs 50 independent shadow events or four weeks, a current-feed adapter, a full issuer, and the exact prospective receipt contract.
+The [October protocol](runs/implementation_2026-10-01/development_protocol.json), [family results](runs/implementation_2026-10-01/family_diagnostics.json) and forecast CSV record five EPL candidates across 1X2/total-2.5/BTTS and four NBL ML candidates over chronological folds. Comparators include population scores, TB1-MD and fixed Elo. Calibration is reported with uncertainty; no calibrator trained on final test outcomes is deployed. October experiments use already opened data and do not create new untouched holdout evidence.
 
-## NBL lane and current shadow
+The old tuning and holdout commands refuse overwrite. Previous evaluation code and run bytes are retained in [implementation custody](custody/implementation_2026-10-01/manifest.json). [Model-build receipts](model_builds/current.json) pin all numerical and operational dependencies and exact runtime packages. An intentional numerical edit requires a new version, fresh dated experiment and rebuilt receipt.
 
-The [NBL preregistration](NBL_PREREGISTRATION_2026-09-29.md), [source reconciliation](data/processed/nbl_source_manifest.json), [two adjudications](data/processed/nbl_fixture_adjudications.json), [tuning lock](runs/nbl_tuning_lock.json), and [one-shot holdout](runs/nbl_2025-26_holdout.json) record the fixed test. `python -m research.src.nbl_load` rebuilds the 738-match score table from local source snapshots; FixtureDownload raw files are ignored under `data/benchmark/nbl_fixturedownload/` because its [terms](https://fixturedownload.com/terms) restrict redistribution. A fresh checkout must obtain those raw snapshots for personal use and verify their SHA-256 receipts. `python -m research.src.nbl_evaluate tune` and `holdout` both refuse to overwrite the locked runs.
+## Evidence and real issuance
 
-`python -m research.src.nbl_current` refreshes the official NBL27 schedule and compares every completed regular-season score with the current FixtureDownload feed. `python -m research.src.nbl_shadow` freezes model-only forecasts for games within 48 hours, requiring a current snapshot less than 24 hours old and a passed holdout. It skips unchanged existing receipts and blocks a changed event identity without overwriting the frozen file. These JSON files contain no issued card, adjustment, lineup claim, or performance-eligible pilot row. Run the current snapshot immediately before future shadow batches; never rewrite a prior event receipt.
+The canonical ledger is `research/canonical_ledger.jsonl`, created only when a genuine universe/action is registered. `sources_registry.json` defines allowed routes, parser/league/endpoint scope, official ownership and collector independence. UNKNOWN independence fails live admission. `admission_registry.json` scopes each model version and contract family. Neither a handwritten VALIDATED flag nor a generic M2_PASS promotes a model.
+
+```powershell
+python -B -m research.src.workflow validate-bundle <bundle.json>
+python -B -m research.src.workflow register-universe <universe.json>
+python -B -m research.src.workflow prepare-issue <bundle.json> <new-transaction.json>
+python -B -m research.src.workflow commit-issue <transaction.json> --real
+python -B -m research.src.workflow settle <terminal-bundle.json> --reason "Exact terminal evidence appended"
+```
+
+These are operator commands for future qualified real events. Preparation writes a concrete draft without consuming an ID. Commit defaults to disabled unless `--real` is passed; it revalidates exact cached evidence under a lock and appends a journaled core to Part 6. Source-state freshness is capped at five minutes. All three independently audited pregame lineages must agree, including one official source. Native NBL/MLB/ESPN JSON parsers check actual body identity. Other source mappings require a retained parser audit. Event-specific collector audits bind the event, body hash and upstream lineage.
+
+Terminal admission additionally requires final-score agreement across three independent lineages and a source field explicitly audited as actual start. Schedule time and first play are not silently substituted. Corrections append chained revisions against the unchanged issue core. Recovery completes an exact pending projection and prevents ID reuse; it never edits issued bytes.
+
+## Pilot and remaining evidence
+
+The [pilot template](PILOT_LOCK_TEMPLATE.json) is NOT_FROZEN. `pilot.py` supports the fixed seven-contract EPL composite only after all those families are LIVE_QUALIFIED. It validates the frozen universe and source-backed power plan, enrols the first chronological adjusted issues, waits on earlier unsettled cohort members, uses at least four week blocks, records a single interim and makes futility terminal. NBL or a different family score needs a separately versioned scoring protocol.
+
+No live pilot is started by this implementation. Existing family evidence, source independence and actual-start coverage are insufficient for that claim. Missing future shadows and real outcomes cannot be implemented by inventing records.
+
+## Historical learning and archive
+
+The frozen 522-slot `SETTLED_OUTCOMES_LEDGER.csv` remains an original index; missing fields remain blank. The original rank CSV is richer. [Normalized contracts](data/processed/legacy_learning/contracts.csv), [cards](data/processed/legacy_learning/cards.csv) and [manifest](data/processed/legacy_learning/manifest.json) retain all 2,004 literal rank rows, 630 probabilities and uncertainty/conflict dispositions. All rows remain performance-ineligible. Historical source pointers reference preserved logs; a path/line check is not independent result truth.
+
+```powershell
+python -B -m research.src.archive validate
+python -B -m research.src.archive build
+```
+
+The archive guide explains canonical event grain, source receipt joins, season status, deduplication, mirrors/subsets and narrative separation. Use `research.src.archive.read_events(eligible_only=True, verify=True)` for source-checked historical labels, then apply `point_in_time` availability/endpoint gates before an as-of feature query. Most historical availability timestamps are unknown. Do not treat retrieval today as pregame availability years ago.
+
+Restricted Football-Data/FixtureDownload snapshots remain local under ignored `data/benchmark/`. The source registry prohibits automated retrieval through those restricted/manual routes. Forecast modules read processed sports-only columns; post-event market benchmark code is isolated. Raw historical rebuilds that require missing local restricted files fail clearly.

@@ -1,0 +1,13 @@
+{
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2024-01-01&endDate=2024-12-31",
+  "source_profile": "mlb_stats_api_schedule",
+  "owner": "MLB",
+  "retrieved_utc": "2026-10-01T01:20:08.234785+00:00",
+  "http_status": 200,
+  "content_type": "application/json;charset=UTF-8",
+  "transport_sha256": "9ffde84d7977f4c803ca6fdeadb515a25cfcf009571c7ac8ee6ea61a2cd93a2d",
+  "stored_sha256": "9ffde84d7977f4c803ca6fdeadb515a25cfcf009571c7ac8ee6ea61a2cd93a2d",
+  "stored_body": "ee33606721dfb9a5bfa4ed3883fcde5aa4dd6423f42f03b3215ee6e0241b0dad.gz",
+  "historical_pregame_availability": "unknown",
+  "parser_version": "archive-sources-v1"
+}

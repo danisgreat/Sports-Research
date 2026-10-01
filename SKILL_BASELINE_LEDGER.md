@@ -1,3 +1,9 @@
+# Current skill evidence status - 2026-10-01
+
+The seed ledger below remains historical. Its probability/grade rows are not newly qualified by this implementation. Original seed Brier was 0.24606162069 versus baseline 0.23600413793; that seed does not show incremental baseline skill. Current experimental and prospective admissions are separate in [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md), the family development report and canonical evidence ledger. q is not an event probability. All historical cards remain performance-ineligible unless explicitly defined as a separate historical diagnostic; no retrospective edit makes them prospective.
+
+---
+
 # Skill-versus-baseline ledger (`C-BASELINE-SKILL`)
 
 **Opened 2026-09-25(c).** **Status: LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.** This is a descriptive diagnostic, not a performance, calibration or value claim. The current eligibility contract is [`RECORD_ELIGIBILITY_SCHEMA.md`](RECORD_ELIGIBILITY_SCHEMA.md). The former policy was in the removed `archive/superseded_2026-09-28/` ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)).

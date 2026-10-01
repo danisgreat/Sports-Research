@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "kansas_state_official",
+  "publisher": "Kansas State Athletics",
+  "upstream_lineage_id": "KANSAS_STATE_OFFICIAL_REPORT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.kstatesports.com/news/2025/8/23/football-17-20-k-state-falls-to-22-21-iowa-state-24-21",
+  "final_url": "https://www.kstatesports.com/news/2025/8/23/football-17-20-k-state-falls-to-22-21-iowa-state-24-21",
+  "retrieved_utc": "2026-10-01T01:20:34.862000+00:00",
+  "response_sha256": "9af8a8e759dce385fd3ebc0ce19a53d2bba1318f8050ec2ccd709775372f882d",
+  "body_path": "research/data/raw/source_snapshots/kansas_state_official_20261001T012034862000Z_9af8a8e759dc.body",
+  "response_bytes": 939210,
+  "content_type": "text/html;charset=utf-8",
+  "parser_id": "REVIEWED_HTML_V1",
+  "registry_sha256": "dcca91a8ce7d87b14b070fd0c08115dd215bad6b8022f8eb6959bf9438435bed",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

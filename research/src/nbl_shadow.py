@@ -13,6 +13,7 @@ import pandas as pd
 from .load import ROOT, sha
 from .nbl_evaluate import MODEL_CODE, checked_data
 from .nbl_model import fit, predict
+from .model_custody import verify_model_build
 
 PROCESSED = ROOT / "data/processed"
 SHADOW = ROOT / "shadow/nbl27"
@@ -20,6 +21,7 @@ SHADOW = ROOT / "shadow/nbl27"
 
 def freeze(now: datetime | None = None, window_hours: int = 48) -> list[Path]:
     now = now or datetime.now(timezone.utc)
+    verify_model_build("NBL", "nbl-joint-0.1.0")
     if now.tzinfo is None or not 0 < window_hours <= 48:
         raise ValueError("shadow requires aware time and 1-48 hour window")
     holdout_path = ROOT / "runs/nbl_2025-26_holdout.json"

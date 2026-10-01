@@ -1,0 +1,27 @@
+{
+  "valid": true,
+  "issues": [],
+  "counts": {
+    "yearly_files": 21799,
+    "header_only_files": 20943,
+    "raw_rows": 128766,
+    "duplicate_event": 331,
+    "subset_collection": 188,
+    "mirrored_collection": 790,
+    "canonical_events": 127458,
+    "verified_results": 94222,
+    "training_eligible": 84260,
+    "narratives_excluded_from_pregame": 128763,
+    "source_receipt_errors": 1
+  },
+  "data_snapshot_hash": "c4db4970640492c77624638e84009af0ebd62d23d8c17df520ea47937a92659a",
+  "used_receipt_count": 186,
+  "all_source_receipts": {
+    "receipt_count": 1615,
+    "retained_bodies_verified": 1614,
+    "body_not_retained": 1,
+    "errors": []
+  },
+  "input_files_checked": 21799,
+  "implementation_files_checked": 2
+}

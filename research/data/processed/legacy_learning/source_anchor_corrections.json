@@ -1,0 +1,332 @@
+{
+  "revisions": [
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:72",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 72,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:177",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 177,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:243",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 243,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:297",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 297,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:300",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 300,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:320",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 320,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:323",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 323,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:355",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 355,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:356",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 356,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:357",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 357,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:358",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 358,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:367",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 367,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:375",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 375,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:377",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 377,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:381",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 381,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:384",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 384,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:385",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 385,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:392",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 392,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:393",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 393,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:394",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 394,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:421",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 421,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:423",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 423,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:428",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 428,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:440",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 440,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:450",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 450,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:452",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 452,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:458",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 458,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:460",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 460,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:461",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 461,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:466",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 466,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:469",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 469,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:470",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 470,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:475",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 475,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:479",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 479,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:481",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 481,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:496",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 496,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:502",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 502,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:543",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 543,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:549",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 549,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:562",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 562,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    },
+    {
+      "pointer": "GAME_LOG_STATUS_CURRENT.md:570",
+      "original_path": "GAME_LOG_STATUS_CURRENT.md",
+      "retained_path": "research/custody/implementation_2026-10-01/GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "f9b9899635f49b5be7dac46d104fc0ff618fe0dae14d0085a174267d8af52e9b",
+      "line": 570,
+      "reason": "Current header changed; original source pointer remains anchored to preserved pre-overhaul bytes"
+    }
+  ]
+}

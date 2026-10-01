@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "openfootball",
+  "publisher": "openfootball statistical archive",
+  "upstream_lineage_id": "OPENFOOTBALL_UNVERIFIED_UPSTREAM",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://raw.githubusercontent.com/openfootball/england/master/2026-27/1-premierleague.txt",
+  "final_url": "https://raw.githubusercontent.com/openfootball/england/master/2026-27/1-premierleague.txt",
+  "retrieved_utc": "2026-10-01T01:20:21.676376+00:00",
+  "response_sha256": "a2366ea9f7f55b8afd666e455666ba9019f9c62da8864f6bcf3adff65300b445",
+  "body_path": "research/data/raw/source_snapshots/openfootball_20261001T012021676376Z_a2366ea9f7f5.body",
+  "response_bytes": 22800,
+  "content_type": "text/plain; charset=utf-8",
+  "parser_id": "OPENFOOTBALL_V1",
+  "registry_sha256": "dcca91a8ce7d87b14b070fd0c08115dd215bad6b8022f8eb6959bf9438435bed",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

@@ -1,0 +1,473 @@
+# American football analysis rules
+
+**Live rules for American football (NFL, NCAA, CFL). Markdown-only operation, 2026-09-28.** Read §0 in full for every card: it governs this file.
+- §1 onward is the reference algorithm and the competition rules; it is consulted by citation.
+- The dated history (settlement learnings and the evidence behind every numbered control) was moved verbatim to `archive/superseded_2026-09-28/sport_history/RULES_AMERICAN_FOOTBALL_history_to_2026-09-28.md`, which is no longer in the Markdown tree. A maintainer can recover it from the pinned commit ([Git 3fbf0c981b40](https://github.com/danisgreat/Sports-Research/blob/3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa/archive/superseded_2026-09-28/sport_history/RULES_AMERICAN_FOOTBALL_history_to_2026-09-28.md); [index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) when a control's full text or evidence is needed. The model works from §0 and the sections below.
+- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.8. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `CURRENT_RULES.md`, which outranks this file.
+- No sport, competition or target is prospectively validated. Every card is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
+
+<!-- LIVE-RULES-PAGE-2026-09-26 -->
+## 0. Live rules — one page (consolidated 2026-09-26)
+
+**Status (md-only, 2026-09-28).** This page is the live rule set for this sport and governs the rest of the file. It was consolidated on 2026-09-26 from the numbered controls, the SFA algorithm and the dated sections through 2026-09-25(e). Those dated sections are now archived (see the header). Where a control below is one line, that line is the operative rule, and the archived history is its evidence.
+
+**NFL/NCAA is `NO_DEMONSTRATED_SKILL` and over-confident.** 12 decisions won 25% at a stated 0.544 (gap −0.29, card-cluster interval −0.47 to −0.12). Every Rank-1 loss was an underdog cushion of +1.5 to +6.5 stated at 0.53–0.58 (P-412, P-413, P-414, P-422, P-472). The evidence grade is capped at LOW and the departure ledger is required. NFL, NCAA, CFL and UFL are separate populations.
+
+### 0.1 Blocking preconditions (§8.1)
+| Gate | Requirement | If it fails |
+|---|---|---|
+| AM-P1 code and rules | Downs, field, regulation, overtime and tie terms, and each row's phase | Stop |
+| AM-P2 quarterback | Starter with release status, backup branch, health and mobility, re-handshaken after the inactive release | QB mixture; dependent rows capped |
+| AM-P3 units | Offensive-line combination, skill snaps, defensive front and coverage absences, kickers where a row depends on them | Widen side and total; cap unit-dependent claims |
+| AM-P4 preseason rep plan | QB, line, skill and defensive rotation by quarter | Never project a starter or one reserve sample through four quarters (controls 9, 11) |
+| AM-P5 college availability | The absence of an NFL-style report is not evidence of health | Missingness code (control 10) |
+
+### 0.2 Building the score distribution
+1. **Anchor.** NFL: `TEAM_BASELINE_P` (TB-1-MD (`PROBABILITY_TOOLKIT.md` §4)) for sides (0.231 v 0.252). Totals anchor on the population: TB-1's marginal total gain (0.246 v 0.254) is not significant (corrected 2026-09-26(e); `TB1_NO_RESOLUTION:total`). Weeks 1–3 are flagged `TB1_EARLY_SEASON`. NCAA has no TB-1 lane (`NOT_COVERED`).
+2. **Margin prior and width (control 17, G-L12).** Print the margin prior (prior-season differential adjusted for QB status) and a width no narrower than the residual SD (**13.6**, TB-1 2025) unless the card shows why. New-regime uncertainty widens; it does not centre the margin toward pick'em (controls 15, 16). Prior-season unit ratings are width in a new season (control 19).
+3. **Discrete scoring.** Key numbers and pushes come from score combinations (control 6). Every handicap row prints the exact masses at 3 and 7 (control 18); a card without a margin table caps its handicap rows at FORCED RANK.
+4. **Non-offensive scores (control 20).** A handicap row within one score of the centre carries a defensive or special-teams TD branch: 0.217 per game, at least one in 18.8% of games (2025), adjusted only with named evidence (backup QB, sack or turnover rates).
+5. **Game script and dependence.** A leading favourite drains clock; a trailing team adds yards, sacks and garbage-time points (control 3). Low total ≠ close spread (control 13). When a handicap and a total are both in the top two, print P(favourite covers ∧ Under) and P(underdog covers ∧ Over) from the joint table (control 21).
+6. **Shrink turnovers and one-score records** without a pressure, decision or ball-security mechanism (control 4). Weather is matchup-specific; rain is not an automatic Under (control 5).
+7. **One joint score object → every row.** Overtime follows the exact competition rules (control 7).
+
+### 0.3 Row rules
+- **Cushions (C-PLUS-CUSHION).** The TB-1 underdog covered +1.5 at 0.35–0.42, +2.5 at 0.38–0.46, +3.5 at 0.45–0.54, +6.5 at 0.57–0.60, +7.5 at 0.61–0.66. A cushion at or above that without a receipted mechanism is `PLUS_CUSHION_UNSUPPORTED`, and RM-1 flips it. A +2.5/+3.5 prints the mass at 3 (0.14–0.15); a +6.5/+7.5 prints the mass at 7 (0.07–0.10).
+- **Aligned current-regime uncertainty caps a favourite** (control 15): several uncertainties supporting the favourite's kill path keep its spread below SUPPORTED.
+- **CFL** uses its own possession-to-points chain (control 14). **Preseason** is a quarter-by-quarter unit mixture with reserve-sample shrinkage and explosive tails (controls 11, 12).
+
+### 0.4 Reference rows (NFL regular season, n = 272 each; `BASE_RATES_REGISTER.md` §7.7)
+| Row | 2024 | 2025 |
+|---|---:|---:|
+| Home win | 0.524 | 0.536 |
+| Total mean (SD) | 45.8 (13.1) | 46.0 (13.8) |
+| Home margin; margin SD | +1.7; 14.5 | +2.2; 14.2 |
+| TB-1 residual width, total / margin | 13.1 / 13.7 | 13.4 / 13.6 |
+| P(\|m\| = 3); P(\|m\| = 7) | 0.136; 0.074 | 0.151; 0.096 |
+| P(\|m\| ≤ 3); P(\|m\| ≤ 7) | 0.24; 0.52 | 0.27; 0.50 |
+
+Margin bands (2025): 0–6 40.1%, 7–13 24.6%, 14+ 35.3%; mean absolute margin 11.15.
+
+### 0.5 Ranking and settlement
+Rank by RM-1 q; its cushion term applies to gridiron +k.5 rows. Settle from ESPN `football/nfl` summaries (with `scoringPlays`) plus two further lineages; record non-offensive scores, turnovers and sacks as process facts.
+
+### 0.6 Withdrawn in gridiron — never apply
+A universal 13.9 SD floor (the residual benchmark is a disclosure reference, not a floor); a hand-picked healthy-QB window as the prior; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
+
+### Numerical shadow model (2026-09-26(c); suspended for md-only operation, 2026-09-28)
+
+The NFL model (A1) is ridge ratings with the league's own key-number weights (3, 7, …). On the NFL 2021–2025 it beat the league baseline on results and margins. It was ahead of TB-1 on results, but the interval crosses 0. It gave **no gain on totals**. It is maintainer Python, never a card input, and the model does not run it: print `SHADOW: NO_LANE (md-only)` at settlement (`research/sport_models_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))). The hand-computable team baseline that does feed cards is TB-1-MD (`PROBABILITY_TOOLKIT.md` §4).
+
+**Predictability and cards (2026-09-26(e)).** In the NFL 2025, the model's favourite reached 0.70 in 27% of games and won **73.1%**. The 0.70–0.80 band won only 67% at a stated 0.747, so it is over-confident. This replicated on 2021–24 (66.7% at 0.744, 177 games; C1, 2026-09-27). A uniform shrink did not improve the Brier score, so the model is unchanged: read an NFL favourite at 0.70–0.80 as about a two-in-three row. Totals reach 0.70 in only 8% of games. The side reference is TB-1, because A1 was not separated from it. On the cards' own NFL contracts (9, from 5 cards): card 0.266, A1 0.274, population 0.301 (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `BASE_RATES_REGISTER.md` §7.8).
+
+### 0.7 Control index (full text in §4 and the dated sections)
+1 QB identity is a regime · 2 line continuity is combinatorial · 3 game script creates dependence · 4 turnovers and one-score records shrink · 5 weather is matchup-specific · 6 key numbers and pushes are discrete · 7 OT matches the competition · 8 special teams are field position · 9 preseason is a separate phase · 10 college availability is asymmetric · 11 preseason quarter-by-quarter unit mixture · 12 reserve-sample shrinkage and explosive tails · 13 low total ≠ close spread · 14 CFL possession chain · 15 aligned regime uncertainty caps a favourite · 16 new-regime uncertainty two-sided · 17 margin prior and width · 18 key numbers at 3 and 7 · 19 prior-season ratings are width · 20 non-offensive score branch · 21 favourite covers inside the Under.
+
+
+## 1. Identity and contract
+
+
+Resolve NFL preseason/regular/postseason, NCAA level/conference/bowl/playoff, UFL, high school, CFL, or another code. These are different rules and data environments. Record regulation/OT/tie terms, spread/total/team/player phase, stat provider, and listed-player/action terms.
+
+
+Verify the current governing rulebook. Relevant 2026 regime checks include NFL kickoff/onside/overtime rules, NCAA timing/overtime and conference availability systems, and UFL four-point field goal, 1/2/3-point try, punt, catch, and shootout-style overtime rules. Never transfer NFL key numbers or possession rules to NCAA/UFL/CFL.
+
+
+## 2. High-value inputs
+
+
+### Quarterback and expected snaps
+
+
+- Confirm starting quarterback, backup branch, health/mobility, expected snaps, and scheme.
+- For side, total, passing, rushing, or pressure-sensitive markets, map the material offensive-line combination and replacements. Do not require irrelevant roster detail for an unrelated contract.
+- Estimate expected snaps/routes/carries/targets for material skill players and replacement roles.
+- Record defensive front, coverage, and sub-package absences that affect the matchup; confirm kicker/punter/long snapper when the contract depends on them.
+- Preseason requires quarterback/unit rotation and expected reps, not regular-season power ratings.
+
+
+### Drive process
+
+
+Use opponent- and quarterback-regime-adjusted:
+
+
+- expected drives and neutral pace;
+- starting field position;
+- early-down EPA/success;
+- pass/run rate and play action;
+- pressure, sack, scramble and explosive rates;
+- coverage and protection matchup;
+- third/fourth-down and red-zone process;
+- turnovers with shrinkage;
+- special-teams field position and scoring.
+
+
+Raw points, one-score record, turnover margin, and defensive touchdowns are outcomes, not stable abilities by default.
+
+
+### Context
+
+
+Record rest/bye/short week, travel/time zones, surface/roof, venue-local weather, altitude, opponent quality, and verified roster/coach changes. College homecoming, exams, rivalry, bowl, portal or opt-out context matters only when verified and connected to participation or tactics.
+
+
+## 3. Model
+
+
+Exposure units are drives, plays within drives, starting field position, and expected snaps. Map drive outcomes to touchdown, field goal, no score, safety, and non-offensive score, then add dependent tries/kicks.
+
+
+Use quarterback-regime dynamic strength, trench and coverage interactions, and explicit explosive/turnover/non-offensive-score tails. Points cluster around football scoring values and are not a homogeneous Poisson process. Derive side, total, team, phase and player contracts from one joint score distribution.
+
+
+For numerical training, retain empirical and simple drive-rate baselines, then challenge them with a drive/possession A2 simulator. It samples remaining drives, start field position, plays, TD/FG/safety/no-score/turnover outcomes, dependent tries, non-offensive-score tails, clock/game script and competition-specific overtime. Tree or distributional models estimate state components or a coherent score grid; they do not fit one independent classifier per spread/total. Exact football key values and push mass come from the discrete joint score distribution. All candidates remain unfit and unvalidated.
+
+
+## 4. Structural controls
+
+
+1. **Quarterback identity is a regime change.** Rebuild pace, pass/run, pressure, scramble and receiver distribution.
+2. **Line continuity is combinatorial.** One returning tackle does not repair every pressure path.
+3. **Game script creates dependence.** A leading favourite may drain clock; a trailing team can add yards, sacks, turnovers and garbage-time points.
+4. **Turnovers and one-score records shrink.** Require pressure, decision, ball-security or coaching mechanisms.
+5. **Weather is matchup-specific.** Wind, cold/heat, snow, footing and roof affect passing/kicking/tempo differently; rain is not an automatic Under.
+6. **Key numbers and pushes are discrete.** Model score combinations and exact integer boundaries.
+7. **Overtime matches the competition/contract.** NFL regular/postseason, NCAA and UFL rules differ.
+8. **Special teams are field-position mechanisms.** Use current kickoff and return rules.
+9. **Preseason is a separate phase model.** Starter quality matters only for expected reps.
+10. **College availability is asymmetric.** Absence of an NFL-style report does not mean healthy.
+11. **Preseason is a quarter-by-quarter unit mixture.** Freeze expected quarterback, offensive-line, skill-unit and defensive-rotation reps by phase. If rep plans are missing, widen the side and total distributions and cap unit-dependent claims; never project a starter or one reserve sample through four quarters.
+12. **Reserve-sample shrinkage and explosive tails.** Pool tiny backup/deep-reserve quarterback samples toward the relevant role/competition prior. Retain coverage busts, return/non-offensive scores, short fields, long conversion drives and fourth-down/red-zone variance even when the central reserve efficiency is low.
+13. **Low total does not imply close spread.** Preserve low-underdog-score and shutout branches before ranking a positive underdog cushion over the favourite.
+14. **CFL possession-to-points chain is code-specific.** For Canadian football, model expected rushing workload, second-down conversion, protection/explosives, red-zone touchdown conversion and possession share under CFL downs, field and timing rules. A supported underdog-control branch can defeat both favourite and Under and must be reconciled with their ranks.
+15. **Aligned current-regime uncertainty caps a favourite.** In openers and transitions, separately branch new quarterback/coordinator, protection, availability, neutral-site, weather and opponent-upgrade states. When several current uncertainties all support the favourite's ordinary kill path, a prior-season power rating, reputation or broad market direction cannot leave the favourite spread `SUPPORTED`; lower evidence or rank the robust opposing spread/total branch unless current matchup evidence resolves the conflict.
+16. **New-regime uncertainty is two-sided before it is directional.** A new coach, quarterback or scheme expands drive-efficiency, pace, explosive and turnover tails. Apply a directional downgrade only after current personnel, role, protection, installation or matchup evidence identifies the sign; lack of observations alone does not suppress the offence or total.
+
+
+## 5. Live state
+
+
+Store score, quarter/clock, possession, ball spot, down/distance, timeouts, drive origin/count, opening/second-half possession, penalties, turnovers/short fields, fourth-down decisions, QB/line status, injuries/ejections, snap/route/carry distribution, roof/weather, and scoring type.
+
+
+Recalculate remaining drives from clock, pace, timeouts, game script, field position, fourth-down aggression, onside/kneel-down branches, and competition rules.
+
+
+## 6. Sources and settlement
+
+
+- [NFL rules and operations](https://operations.nfl.com/rules-officiating/), NFL official injury reports, match centres and gamebooks control NFL.
+- [NCAA football playing rules](https://www.ncaa.org/championships/playing-rules/football-playing-rules), official conference/school availability, schedules and gamebooks control college.
+- Official UFL rules, match centres, transactions and team releases control UFL.
+- NFHS/state associations control high school; CFL official sources control Canadian football.
+- Government weather services and venue/airport observations control conditions.
+
+
+Settle from the official final/gamebook and named stat provider. Reconcile kneel-downs, sacks, laterals, returns, defensive scores and stat corrections under the competition's conventions.
+
+
+## 7. Upcoming-game research sequence
+
+
+1. Freeze code/competition, current rules, regulation/OT/tie terms, phase, listed-player/action rules and candidate slate.
+2. Retrieve official QB, injury/availability, roster/inactive and weather/roof facts before historical trends; refresh after the applicable inactive/availability release and just before issue.
+3. Model QB/regime and line/skill exposure, expected drives/plays/field position, drive outcome probabilities, red-zone/fourth-down process, special teams and turnover/explosive tails. In preseason, do this by expected unit and quarter; in CFL, include rushing possession, second-down and red-zone conversion explicitly.
+4. Preserve football's discrete scoring combinations and exact key-value/push mass. Competition-specific OT and try rules are part of the target, not a display adjustment.
+5. Derive winner, total, margin and team scores from one joint score object. Props use snaps/routes/carries/targets/kicking opportunities and their own provider labels.
+
+
+nflverse/nflfastR-style data is a candidate NFL play-by-play lane, not the official owner of current availability or rules and not approved for H0 until the source card passes.
+
+
+## 8. SFA-AMERICAN-FOOTBALL — sport forecast algorithm
+
+
+Algorithm ID: `SFA-AMERICAN-FOOTBALL`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with gridiron content. Process composition only; no fitted weight, scenario weight or published probability is introduced. NFL regular season, NFL preseason, NFL postseason, NCAA, UFL, CFL and high school are separate populations with different downs, field, timing and overtime rules.
+
+
+### 8.1 Blocking preconditions
+
+
+| Precondition | Requirement | Failure output |
+|---|---|---|
+| `AM-P1` code and rules | Code, competition, current rules, downs and field dimensions, regulation, overtime and tie terms, and the phase each row settles on | `GATE-TARGET` failure; do not proceed |
+| `AM-P2` quarterback | Starting quarterback with release status, backup branch, health and mobility, re-handshaken at G31 after the applicable inactive or availability release | Quarterback mixture; dependent rows cap at `FORCED RANK` / `MEDIUM-LOW` |
+| `AM-P3` unit exposure | Material offensive-line combination, skill-player snap expectation, defensive front, coverage and sub-package absences, and the kicking specialists when a row depends on them | Widen the side and total distributions; cap unit-dependent claims |
+| `AM-P4` preseason rep plan | For preseason, the expected quarterback, offensive-line, skill and defensive rotation by quarter | Without a rep plan, never project a starter or one reserve sample through four quarters; widen and cap instead |
+| `AM-P5` college availability | Note that the absence of an NFL-style report is not evidence of health | Record the missingness code; do not infer availability |
+
+
+### 8.2 Exposure chain
+
+
+| Step | Output |
+|---|---|
+| `AM-S1` | Expected snaps, routes, carries and targets by player and by quarter, with the replacement tree |
+| `AM-S2` | Expected drives for each side from neutral pace, clock state and game script |
+| `AM-S3` | Starting field position from special teams, turnovers and punt/return outcomes |
+| `AM-S4` | Within-drive efficiency under the current quarterback regime: early-down success, pass/run rate, play action, pressure, sack, scramble and explosive rates, trench and coverage matchups |
+| `AM-S5` | Drive-outcome mapping: touchdown, field goal, no score, safety, turnover, and non-offensive score |
+| `AM-S6` | Dependent tries and kicks: extra point, two-point decision by score state, field-goal range and accuracy |
+| `AM-S7` | Game-script feedback: a leading side draining clock, a trailing side adding plays, yards, sacks, turnovers and late points |
+| `AM-S8` | One discrete joint score object that preserves football scoring combinations, key values and exact push mass |
+
+
+### 8.3 Mandatory branch set
+
+
+| Branch | Content |
+|---|---|
+| `AM-B1` | Central drives with central efficiency for both sides |
+| `AM-B2` | Explosive branch: coverage bust, long completion or long run producing points from a single snap |
+| `AM-B3` | Long-drive branch: sustained conversion including fourth-down and red-zone variance |
+| `AM-B4` | Non-offensive branch: return, defensive or special-teams score, and short fields from turnovers |
+| `AM-B5` | Low-underdog-score and shutout branch, held explicitly before any positive cushion is ranked |
+| `AM-B6` | Game-script branch: clock drain by the leader, and garbage-time accumulation by the trailer |
+| `AM-B7` | Weather and surface branch, with passing, kicking, footing and tempo each signed separately |
+| `AM-B8` | Overtime or tie under the exact competition and operator rules |
+
+
+For preseason, `AM-B1`–`AM-B6` are constructed quarter by quarter, per unit, not once for the whole game.
+
+
+### 8.4 Contract derivation map
+
+
+| Contract | Queried from | Extra condition the mechanism must predict |
+|---|---|---|
+| Total | Sum marginal of the discrete score object | The component budget at the opponent's floor, centre and high, with `AM-B2`/`AM-B4` included |
+| Spread | Margin marginal | Exact key values and push mass at integer lines |
+| Winner | Margin sign | Not inferable from the total |
+| Team total | Team marginal | That side's own drives and efficiency, not the game's pace |
+| Quarter or half | The segment's own drive count and unit rotation | A prior segment is neither a ceiling nor a continuation rule |
+| Player props | Snaps, routes, carries, targets or kicking opportunities | The provider's own definition |
+
+
+### 8.5 Kill-path library
+
+
+| Kill path | Defeats | Evidence origin |
+|---|---|---|
+| A coverage bust or single explosive play, plus sustained reserve-unit drives | A preseason Under built on low central reserve efficiency | C-PL7-AF-PRESEASON-UNIT-TAIL, §4 control 12 |
+| A new coach or quarterback regime with a real upside ceiling | A directional downgrade applied because observations are few | §4 control 16, C-PL9-AF-REGIME-WIDTH |
+| Several current-regime uncertainties all pointing at the favourite's ordinary kill path | A favourite spread left `SUPPORTED` on a prior-season rating or market direction | §4 control 15, C-PL8-AF-ALIGNED-REGIME |
+| An underdog controlling possession through rushing workload and second-down conversion | A favourite side and an Under held simultaneously without reconciliation, particularly in CFL | §4 control 14, C-PL7-CFL-POSSESSION-CONVERSION |
+| A low underdog score or shutout | A positive underdog cushion ranked above the favourite because the total is low | §4 control 13 |
+| Garbage-time points from a trailing offence | An Under justified by a leading team's clock drain | §4 control 3 |
+| Turnover and one-score records treated as stable ability | A side or total ranked on outcome history without a pressure, decision or ball-security mechanism | §4 control 4 |
+| Competition-specific overtime supplying points or changing the endpoint | A total or spread settled under the wrong overtime rule | §4 control 7 |
+
+
+### 8.6 Sport ordering overrides
+
+
+1. New-regime uncertainty is two-sided before it is directional. A downgrade requires an identified sign from personnel, role, protection, installation or matchup evidence.
+2. In preseason, a full-game central projection may not be a decisive term in the G23.1 marginal-likelihood comparison. Winning states are counted quarter by quarter and unit by unit.
+3. Key values and push mass are part of the contract geometry at G4, not a display adjustment. An integer spread or total row records its push interval before ranking.
+4. Special teams and non-offensive scores remain in the total's `states` count even when the offensive centre is low.
+5. Raw points, one-score records, turnover margin and defensive touchdowns are `E — diagnostic only`.
+
+
+### 8.7 Pre-issue checklist
+
+
+1. `AM-P1`–`AM-P5` status printed, with the quarterback release status and inactive-report time.
+2. Competition and matchup drive baseline stated before any line.
+3. Expected drives, starting field position and drive-outcome mapping written before any points figure.
+4. All eight `AM-B*` branches represented; in preseason, by quarter and unit.
+5. Component budget solved at the supplied total; push mass recorded at every integer line.
+6. Kill-path rows selected from §8.5 and reconciled against the issued order.
+7. Overtime and tie treatment stated for every total, spread and winner row.
+8. Quarterback, inactives, roster and weather refreshed at G31 before the view is appended.
+9. Recency block complete per §8.8: L5/L10/L15/L20 for both sides and for head-to-head, continuity count stated, trend verdict per metric, unique-event de-duplication done.
+10. Environment block complete per §8.9: Roof/dome state and kick-window wind gusts and direction recorded against stadium orientation.
+11. `REFERENCE_BASE_RATE`, exact threshold, population and denominator recorded for every supplied row per §8.10 as a descriptive diagnostic only; no reference-band, trend or slot-frequency adjustment may move an ordinal (G23.1).
+12. Extra-condition support audit (G24) recorded for every handicap, team-total and cushion row; no retrospective contract-family penalty is applied.
+13. Separation budget (G20.1) solved for every margin, handicap and cushion row by quarter and by remaining possession count, with reserve-unit, explosive-play and non-offensive scoring states held separately.
+14. Rank-1 implied-target interval (G25.1) stated in the unit of every other supplied line, each remaining row classified `COHERENT`/`PARTIAL_OVERLAP`/`DISJOINT`, and every aggregate budget re-solved conditional on the Rank-1 state.
+15. Winner-and-cushion reconciliation (G30.1) whenever Rank #1 is an underdog cushion, with the outright-win and narrow-loss branch ordering stated. Example separation kill path for this sport: a late explosive or non-offensive score.
+16. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
+
+
+### 8.8 Recency, head-to-head and trend windows
+
+
+Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
+
+
+Populate one windowed table per side with these metrics, and one head-to-head table:
+
+
+| Window metric | Content |
+|---|---|
+| Drive efficiency | Expected points added per play and early-down success rate, opponent-adjusted |
+| Pace and volume | Drives per game and neutral situation pace |
+| Explosives and pressure | Explosive-play rate, pressure and sack rate for and against |
+| Conversion | Third and fourth-down conversion and red-zone touchdown rate |
+| Quarterback window | The starting quarterback's own last 5/10/15/20 starts, and the backup's if the branch is live |
+
+
+**Head-to-head continuity.** Continuity means the same quarterback, coordinators and material line. In preseason, head-to-head carries no weight at all because participation is a rotation decision, not a contest.
+
+
+**Descriptive recency windows (G13.1; revised 2026-09-17).** Retrieve L5/L10/L15/L20 and continuity-qualified H2H with unique-event counts. These windows overlap. Monotonicity and dispersion among their averages are not a statistical trend/noise test. Report direction descriptively; estimate recency decay and opponent/regime effects using time-ordered validation. See SCORING_AND_VALIDATION section 5.
+
+
+**De-duplication.** The windows overlap by construction and share matches with the head-to-head and venue series. Shrink from unique underlying events under G9; never treat L5, L10, L15 and L20 as four confirmations.
+
+
+### 8.9 Environment and conditions
+
+
+Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **OUTDOOR unless the venue has a dome or a closed roof**.
+
+
+| Field | Use in this sport |
+|---|---|
+| Wind speed, gusts and direction | Kicking, deep passing and field-goal range; resolved against stadium orientation. Gusts matter more than mean speed for kicking |
+| Roof and dome state | Official club or venue source |
+| Hourly precipitation and temperature | Footing, handling and tempo; rain is not an automatic Under |
+| Surface | Turf or grass, from the official venue source |
+
+
+Failure to obtain the match-window forecast for an outdoor or open-roof event yields `WEATHER_NOT_AVAILABLE`, widened total and margin distributions, and a `LEAN` cap on every weather-dependent row. No factor above carries an automatic total direction.
+
+
+### 8.10 Base-rate anchors and derived stat lanes
+
+
+**Anchoring (G12.1).** Anchor spreads on the frequency of covering at that number, respecting the key values at 3 and 7 and their push mass, and totals on the competition scoring environment for that phase.
+
+
+StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, using the verified query patterns recorded there. Every returned row is date-checked and reconciled against the official league source before it is decision-driving, and StatMuse never controls participants, availability, rules, state or settlement.
+
+
+**Derived and low-salience fields that are available and routinely skipped:**
+
+
+| Field | Note |
+|---|---|
+| Kicker range and recent attempt distribution | Interacts directly with the wind vector |
+| Starting field position and special-teams net | Feeds `AM-S3` and the `AM-B4` non-offensive branch |
+| Rest, bye, short week and time-zone travel | Entered through a named mechanism |
+| Snap counts by unit | Required for preseason quarter-by-quarter mixtures |
+
+
+## 9. Sport and competition rules reference
+
+
+Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of American/Canadian football and the competition-specific rules of every gridiron competition in the prediction logs. Supports `AM-P` identity and §6 settlement; introduces no rate, weight or ordering rule. Where a 2026 rule is cited it is the rule in force for the 2026 seasons the current log covers.
+
+
+**Maintenance (RULES_GENERAL (archived) §3, `G2`).** Before the first card of a new NFL/CFL/UFL season, a new preseason, a new college-football season, or a new bowl/playoff cycle, re-verify the overtime rule, the kickoff rule, the playoff/CFP/FCS-bracket format and size, roster rules, and any new playing-rule package against the league/NCAA source, and update this section **before** issuing the card — the NFL and NCAA change rules every offseason (kickoff, OT, CFP field size, two-minute warning). The first time a new gridiron competition is forecast, document its full rules here first.
+
+
+### 9.1 Universal gridiron rules
+
+
+**Objective.** Two teams. The offence has a set number of **downs** (plays) to advance the ball **10 yards** for a new set of downs; failing that, possession turns over. Score by **touchdown** (6, ball into the opponent's end zone), **extra point** (1, kick after a TD) or **two-point conversion** (2, a play from close range after a TD), **field goal** (3, a kick through the uprights), or **safety** (2 to the defence, offence tackled in its own end zone).
+
+
+**Structure of play.** The ball is put in play by a **snap**. A play ends when the ball-carrier is tackled/down, goes out of bounds, scores, or an incomplete pass. A **play clock** (40 seconds, or 25 after certain stoppages) limits time between plays. The team on offence may **punt** (kick possession away, usually on 4th/3rd down) or attempt a field goal.
+
+
+**Turnovers.** Interception (defence catches a pass), fumble recovery (loose ball recovered by the defence), turnover on downs (offence fails to gain 10 yards), or a blocked/missed kick.
+
+
+**Game clock.** Four quarters. The clock runs during play and between many plays, but **stops** on incomplete passes, out-of-bounds (rules vary — see §9.2), scores, penalties, timeouts, change of possession (temporarily), and the two-minute warning. Each team has **three timeouts per half**. This stop-start structure is why the number of **possessions** — not raw time — is the exposure unit (`AM-S1`).
+
+
+**Penalties.** Enforced in yards (5, 10 or 15) and sometimes an automatic first down or loss of down. Pre-snap (false start, offside, delay of game), during the play (holding, pass interference, block in the back), and dead-ball / personal fouls (unnecessary roughness, unsportsmanlike, **targeting** in college → ejection).
+
+
+**Overtime.** Rule-set-specific (§9.2) — this is a major settlement variable. A full-game bet **includes overtime** unless the operator says "regulation only."
+
+
+### 9.2 Rule-set differences — NFL vs NCAA vs CFL vs UFL
+
+
+| Element | NFL | NCAA (FBS/FCS) | CFL | UFL |
+|---|---|---|---|---|
+| Players per side | 11 | 11 | **12** | 11 |
+| Downs to make 10 yards | 4 | 4 | **3** | 4 |
+| Field | 100 yд + two 10-yд end zones; 53⅓ yд wide | Same as NFL; **wider hash marks** | **110 yд** + two **20-yд** end zones; **65 yд** wide | NFL dimensions |
+| Goalposts | Back of end zone | Back of end zone | **On the goal line** | Back of end zone |
+| Play clock | 40 / 25 sec | 40 / 25 sec | **35 sec**, drops to **20** inside the last 3 min of a half (2026) | 35 sec |
+| Pre-snap motion | One player, moving laterally/backward at the snap | One player, not toward the line at the snap | **Multiple backs may run full-speed toward the line** ("the waggle") | Motion allowed; NFL-style |
+| Catch (feet in bounds) | **Two feet** | **One foot** | One foot | One foot |
+| Clock after a first down | Runs | **Runs** (since 2023), except last 2 min of each half | Runs | Runs |
+| Clock after out of bounds | Stops until snap in the last 2 min of half / 5 min of Q4; otherwise restarts on the ready | Stops, restarts on the ready except last 2 min of each half | **Stops** (Canadian rule keeps the clock stopped more) | NFL-style |
+| Two-minute warning | Yes, each half | Yes, each half (added 2024) | **Three-minute warning**, each half | Yes |
+| Pass interference | **Spot foul** (defensive) | **15-yard** maximum (defensive) | Spot foul | 15-yard max |
+| Kickoff | Dynamic kickoff; touchback to the 35 (to the 20 if kicked from midfield out of bounds, 2026); onside can be **declared any time** (2026) | Fair catch inside the 25 or touchback → ball at the **25**; touchback to the 25 | Kickoffs from the 35; **no fair catch** — the "rouge"/single point applies | Modified — no traditional onside; a 4th-and-12 "scrimmage" alternative |
+| The "rouge" (single point) | No | No | **Yes** — 1 point if a kick (punt/missed FG/kickoff) is not returned out of the end zone | No |
+| Overtime — regular season | One **10-minute** period; **both teams get a possession** even after a first-drive TD; a tie stands if still level (2025 rule) | See §9.3 — 25-yard-line possessions, then 2-point shootout; **no ties** | Two possession series from the opponent's 35; 2-point converts mandatory from OT2; regular-season OT can end in a tie | 25-yard-line possession shootout, best-of-3 rounds |
+| Overtime — playoffs | **15-minute** periods, both possess, repeated **until a winner** | Same as college regular season (no ties) | Same format, played until a winner | Played until a winner |
+| Roster (game day) | 53 roster / 48 active | 85 scholarship (FBS) / 63 (FCS); large travel roster | 45-ish active + practice roster; **national vs global player ratio rules** | ~50 |
+| Regular-season length | 17 games + 3 preseason | 12 games + conference title game + bowls/CFP | 18 games | 10 games |
+
+
+### 9.3 NCAA college football overtime (FBS and FCS — same rulebook)
+
+
+- **1st OT:** each team gets one possession starting at the opponent's **25-yard line**. Touchdown → a PAT kick **or** a two-point try. Highest score after both possessions wins; still tied → next OT.
+- **2nd OT:** same, but after a touchdown the **two-point try is mandatory**.
+- **3rd OT and beyond:** teams **alternate two-point conversion attempts** from the 3-yard line only — no more full possessions. First team to out-score the other in a round wins. This makes long college OT games a **rapid, high-variance** scoring environment — a very different total-scoring regime from regulation.
+- Applies identically to bowl games and the College Football Playoff.
+
+
+### 9.4 NFL
+
+
+**Structure (2026).** 32 clubs, AFC/NFC, four divisions each. **17-game** regular season (+ 3 preseason). **Playoffs:** 7 teams per conference — 4 division winners (seeded 1–4) + 3 wild cards (5–7). **The No. 1 seed gets a first-round bye**; Wild Card round is 2v7 / 3v6 / 4v5; then Divisional, Conference Championship, and the **Super Bowl** at a neutral site. Home team = higher seed at every round except the Super Bowl.
+
+
+**Overtime.** Regular season: a single **10-minute** period; since 2025 **both teams are guaranteed a possession** (a first-possession touchdown no longer ends it); if still tied after 10 minutes the game is a **tie**. Postseason: **15-minute** periods, both possess, and play continues until someone leads at the end of a period.
+
+
+**2026 rule changes.** Onside kick may be **declared at any point** in the game (no longer 4th-quarter-trailing only); a touchback on a kickoff **from the 50-yard line that goes out of bounds** is spotted at the **20** (deep in-bounds kicks otherwise go to the 35); receiving-team setup-zone alignment eased (5 on the line, 4 in the setup zone); league may consult on missed disqualification fouls.
+
+
+**Preseason.** Three games. Starters play limited, escalating snaps (often none in Week 1, a quarter or two by Week 3); **outcomes are close to coin-flips** and depth-chart-dependent. `SFA-AMERICAN-FOOTBALL` treats preseason as a snap-count mixture, not competitive form (§8.3, `AM-B` preseason branches). No overtime is played in the preseason — a tie stands.
+
+
+**Settlement (NFL).** Full-game spread/total **includes overtime**. A game is "official" once it starts for most books but individual-game markets may void on postponement. Player props: OT counts unless the provider says otherwise. Team totals and the moneyline include OT; the **regular-season tie** pushes the spread at "pick" and settles the moneyline as a push / "tie no bet" depending on the book.
+
+
+### 9.5 NCAA — FBS and FCS
+
+
+**Same playing rules** (NCAA football rulebook); the divisions differ in **postseason** and **scholarship limits**.
+
+
+- **FBS (Bowl Subdivision):** ~134 teams in ten conferences. Season = 12 games + conference championship games. Postseason = **bowl games** plus the **12-team College Football Playoff** (2024 onward; **12 teams for 2026**, straight-seeded from the CFP committee rankings — the **four highest-ranked** teams get first-round byes; conference champions get automatic bids but **not** guaranteed a top-4 seed; seeds 5–8 host first-round games vs 12–9). Examples in the log: "NCAA FBS — 2026 regular season opener / Aer Lingus College Football Classic" (a neutral-site opener in Dublin).
+- **FCS (Championship Subdivision):** ~128 teams. Postseason = a **24-team single-elimination bracket**; the **top 8 seeds get a first-round bye**; culminates in the FCS National Championship. Conferences in the log: MEAC, SWAC (which send their champions to the separate **Celebration Bowl** rather than the FCS playoff), Northeast Conference. The **MEAC/SWAC Challenge** is a season-opening showcase game, not a playoff fixture.
+- **Neutral-site "Classic" games** (Aer Lingus College Football Classic, MEAC/SWAC Challenge) are regular-season games that count toward records and bowl/playoff eligibility; no OT distinction.
+
+
+### 9.6 CFL (Canadian Football League)
+
+
+**Structure.** 9 clubs, East and West divisions. **18-game** regular season (June–October). **Playoffs:** top three per division (plus a **crossover** — a fourth-place team from one division can take the other division's third seed if it has a better record). Division Semi-Final → Division Final → the **Grey Cup** (championship).
+
+
+**Canadian rules (vs NFL — see §9.2).** **12 players**, **three downs**, a **110 × 65-yard** field with **20-yard end zones**, goalposts **on the goal line**, unlimited backfield motion toward the line at the snap, **no fair catch** (with a 5-yard no-yards halo around the returner), **one foot in bounds** for a catch, and the **rouge** (single point) for an unreturned kick into the end zone. Three downs and the wide field make the CFL a **higher-tempo, more pass-heavy, more field-position-driven** game than the NFL — do not transfer NFL drive-efficiency or scoring baselines.
+
+
+**Roster ratio.** CFL rosters must carry a minimum number of **Canadian ("national") players**, with limits on **American ("global"/international)** starters — this constrains roster construction and depth in a way with no NFL analogue.
+
+
+**Overtime.** Not sudden death: each team gets a possession from the opponent's **35-yard line**; from the **second** OT round a **two-point convert is mandatory**; regular-season games may still **end in a tie** after one full round if level; playoff games continue until a winner.
+
+
+### 9.7 UFL (spring league — in scope per README, not yet in the log)
+
+
+A single spring league (2024 merger of the USFL and XFL). NFL-style 11-a-side, 4 downs, but with distinct rules: a **three-point** distance option is not used, there is a **two-forward-pass** rule (a second forward pass allowed from behind the line if the first is also behind the line), a **3rd-and-long "scrimmage kick" alternative to the onside kick** (4th-and-12 from your own 28), a **defensive PAT/two-point return** for points, a shorter play clock, and a 25-yard-line overtime shootout. 10-game season, then playoffs and the **UFL Championship**. Its own scoring environment — keep a separate population.
+
+
+### 9.8 Identity checklist (gridiron)
+
+
+Resolve before any rate work: **league and therefore rule set** (downs, players, field, motion, catch rule, clock rules); stage (**preseason** / regular season / conference title / bowl / playoff / Grey Cup / championship) and whether starters play a full game; the **overtime rule** and whether the contract includes overtime; whether a **regular-season tie** is possible (NFL, CFL — yes; NCAA, UFL — no); playoff seeding/bye structure if the card touches qualification; and the operator's postponement/abandonment rule. Neutral-site "Classic" and "Challenge" games are ordinary regular-season fixtures.

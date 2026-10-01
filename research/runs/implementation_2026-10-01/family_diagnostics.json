@@ -1,0 +1,3581 @@
+{
+  "status": "CHRONOLOGICAL_DEVELOPMENT_ONLY",
+  "live_admission": false,
+  "note": "Opened historical holdouts are not untouched validation for these changes.",
+  "families": {
+    "EPL:1X2": {
+      "models": {
+        "Dixon-Coles": {
+          "n": 1900,
+          "logloss": 0.9843229440530101,
+          "brier": 0.2927284321360551,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 251,
+                  "mean_p": 0.13632689837645418,
+                  "observed_rate": 0.17131474103585656,
+                  "observed_rate_ci95": [
+                    0.12974479025024974,
+                    0.2227938399885073
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 640,
+                  "mean_p": 0.30831365880060463,
+                  "observed_rate": 0.334375,
+                  "observed_rate_ci95": [
+                    0.29890879575758705,
+                    0.3718175964379165
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 600,
+                  "mean_p": 0.48913126124416856,
+                  "observed_rate": 0.49333333333333335,
+                  "observed_rate_ci95": [
+                    0.45349913110256507,
+                    0.5332523582442844
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 343,
+                  "mean_p": 0.681253838825555,
+                  "observed_rate": 0.6676384839650146,
+                  "observed_rate_ci95": [
+                    0.6161725060613288,
+                    0.7153910861084622
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 66,
+                  "mean_p": 0.8527653244977955,
+                  "observed_rate": 0.8636363636363636,
+                  "observed_rate_ci95": [
+                    0.7607040702832047,
+                    0.9265667973433106
+                  ]
+                }
+              ],
+              "intercept": 0.0358013162873114,
+              "slope": 0.9044053848076917,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 415,
+                  "mean_p": 0.15880371521442876,
+                  "observed_rate": 0.16626506024096385,
+                  "observed_rate_ci95": [
+                    0.13353839322277458,
+                    0.20511351392144248
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 1483,
+                  "mean_p": 0.250086133555408,
+                  "observed_rate": 0.2589345920431558,
+                  "observed_rate_ci95": [
+                    0.23728286923272443,
+                    0.28183196593799337
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 2,
+                  "mean_p": 0.4271361355475569,
+                  "observed_rate": 0.5,
+                  "observed_rate_ci95": [
+                    0.09453120573423074,
+                    0.9054687942657693
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": -0.1988639541800681,
+              "slope": 0.7915354354219374,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "2": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 475,
+                  "mean_p": 0.12608547667918243,
+                  "observed_rate": 0.11157894736842106,
+                  "observed_rate_ci95": [
+                    0.08632314218378126,
+                    0.14306689244524848
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 776,
+                  "mean_p": 0.2984956831129642,
+                  "observed_rate": 0.28865979381443296,
+                  "observed_rate_ci95": [
+                    0.257880175805536,
+                    0.32152151374298554
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 453,
+                  "mean_p": 0.48588557948461086,
+                  "observed_rate": 0.4613686534216336,
+                  "observed_rate_ci95": [
+                    0.41597981716563265,
+                    0.5074071711993242
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 175,
+                  "mean_p": 0.6739880521828424,
+                  "observed_rate": 0.6,
+                  "observed_rate_ci95": [
+                    0.5260207078841934,
+                    0.6696833544221361
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 21,
+                  "mean_p": 0.8484282709548102,
+                  "observed_rate": 0.7619047619047619,
+                  "observed_rate_ci95": [
+                    0.5490882631704924,
+                    0.8937198697736354
+                  ]
+                }
+              ],
+              "intercept": -0.1706091406740317,
+              "slope": 0.8928126031920399,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "TB1-MD": {
+          "n": 1900,
+          "logloss": 1.009741535933309,
+          "brier": 0.30196880663434783,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 42,
+                  "mean_p": 0.17602634953479024,
+                  "observed_rate": 0.047619047619047616,
+                  "observed_rate_ci95": [
+                    0.013157524908905607,
+                    0.15789852396958842
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 775,
+                  "mean_p": 0.3242632083299527,
+                  "observed_rate": 0.3096774193548387,
+                  "observed_rate_ci95": [
+                    0.2781309254488983,
+                    0.34310135917205276
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 933,
+                  "mean_p": 0.48017843813480204,
+                  "observed_rate": 0.5198285101822079,
+                  "observed_rate_ci95": [
+                    0.4877549627139858,
+                    0.5517394465605311
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 150,
+                  "mean_p": 0.6455139445329724,
+                  "observed_rate": 0.7466666666666667,
+                  "observed_rate_ci95": [
+                    0.6715059067359275,
+                    0.8095087727091548
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 87,
+                  "mean_p": 0.1868582635440033,
+                  "observed_rate": 0.11494252873563218,
+                  "observed_rate_ci95": [
+                    0.06364547795653458,
+                    0.19880582049468454
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 1813,
+                  "mean_p": 0.24297151812559373,
+                  "observed_rate": 0.24489795918367346,
+                  "observed_rate_ci95": [
+                    0.22565641667117117,
+                    0.26521825733565463
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": -0.45156189091982757,
+              "slope": 0.613602623404605,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "2": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 197,
+                  "mean_p": 0.16364809212470652,
+                  "observed_rate": 0.09644670050761421,
+                  "observed_rate_ci95": [
+                    0.06261566304597915,
+                    0.14571512217326715
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 1193,
+                  "mean_p": 0.30531608885607925,
+                  "observed_rate": 0.2757753562447611,
+                  "observed_rate_ci95": [
+                    0.25116595510685974,
+                    0.30182412887037696
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 488,
+                  "mean_p": 0.47002788727389866,
+                  "observed_rate": 0.48975409836065575,
+                  "observed_rate_ci95": [
+                    0.44565520827233834,
+                    0.5340130368081448
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 22,
+                  "mean_p": 0.6295874532066927,
+                  "observed_rate": 0.9090909090909091,
+                  "observed_rate_ci95": [
+                    0.7218505315839417,
+                    0.9747045710090046
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": 0.19174350550839103,
+              "slope": 1.444852506294357,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "coherent_DC_TB1_mixture_0.5": {
+          "n": 1900,
+          "logloss": 0.9879377395036355,
+          "brier": 0.294282420137219,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 115,
+                  "mean_p": 0.15920468109516936,
+                  "observed_rate": 0.11304347826086956,
+                  "observed_rate_ci95": [
+                    0.06726407637851248,
+                    0.18383902448226022
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 759,
+                  "mean_p": 0.3142563353534507,
+                  "observed_rate": 0.3069828722002635,
+                  "observed_rate_ci95": [
+                    0.2752093693543491,
+                    0.3407003368997395
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 758,
+                  "mean_p": 0.49046348212839197,
+                  "observed_rate": 0.5290237467018469,
+                  "observed_rate_ci95": [
+                    0.4934322687506092,
+                    0.564322529824032
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 259,
+                  "mean_p": 0.6688286099996925,
+                  "observed_rate": 0.7104247104247104,
+                  "observed_rate_ci95": [
+                    0.6524302879261191,
+                    0.7622683691619087
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 9,
+                  "mean_p": 0.8248190553543698,
+                  "observed_rate": 0.8888888888888888,
+                  "observed_rate_ci95": [
+                    0.5650002944233439,
+                    0.9801091123614551
+                  ]
+                }
+              ],
+              "intercept": 0.1344911154176838,
+              "slope": 1.2288015955401266,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 253,
+                  "mean_p": 0.1739368376718928,
+                  "observed_rate": 0.12648221343873517,
+                  "observed_rate_ci95": [
+                    0.09103614533965212,
+                    0.17310134684012687
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 1647,
+                  "mean_p": 0.24480496101269125,
+                  "observed_rate": 0.2562234365513054,
+                  "observed_rate_ci95": [
+                    0.23572462414422105,
+                    0.2778567705381998
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": 0.03698561547518716,
+              "slope": 1.014618513043462,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "2": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 328,
+                  "mean_p": 0.14941546313800055,
+                  "observed_rate": 0.10060975609756098,
+                  "observed_rate_ci95": [
+                    0.07253951183198357,
+                    0.13792683275587572
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 984,
+                  "mean_p": 0.30042559425931986,
+                  "observed_rate": 0.2804878048780488,
+                  "observed_rate_ci95": [
+                    0.25331407916910514,
+                    0.3093687823948034
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 500,
+                  "mean_p": 0.4817255048509653,
+                  "observed_rate": 0.47,
+                  "observed_rate_ci95": [
+                    0.4266480518519465,
+                    0.5138094085757468
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 87,
+                  "mean_p": 0.6580668933122935,
+                  "observed_rate": 0.7126436781609196,
+                  "observed_rate_ci95": [
+                    0.6101602906798939,
+                    0.7971427236082388
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 1,
+                  "mean_p": 0.8081826763772297,
+                  "observed_rate": 1.0,
+                  "observed_rate_ci95": [
+                    0.20654931437723745,
+                    1.0
+                  ]
+                }
+              ],
+              "intercept": 0.036075484046238386,
+              "slope": 1.2267649657512745,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "coherent_DC_TB1_mixture_0.75": {
+          "n": 1900,
+          "logloss": 0.9833205244767703,
+          "brier": 0.2927388763246414,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 174,
+                  "mean_p": 0.1481395101774046,
+                  "observed_rate": 0.14942528735632185,
+                  "observed_rate_ci95": [
+                    0.10405726954201304,
+                    0.20993846121160953
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 707,
+                  "mean_p": 0.30888623606931537,
+                  "observed_rate": 0.32107496463932106,
+                  "observed_rate_ci95": [
+                    0.2877060181988619,
+                    0.35637776889519135
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 678,
+                  "mean_p": 0.49034293534440726,
+                  "observed_rate": 0.5147492625368731,
+                  "observed_rate_ci95": [
+                    0.47715259365644913,
+                    0.5521797382826967
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 311,
+                  "mean_p": 0.6766541966758406,
+                  "observed_rate": 0.6752411575562701,
+                  "observed_rate_ci95": [
+                    0.6213324449649628,
+                    0.7248735483889074
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 30,
+                  "mean_p": 0.8353151300484052,
+                  "observed_rate": 0.9,
+                  "observed_rate_ci95": [
+                    0.7437891742081593,
+                    0.9654001112526658
+                  ]
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 329,
+                  "mean_p": 0.16544756867002183,
+                  "observed_rate": 0.16109422492401215,
+                  "observed_rate_ci95": [
+                    0.12531892103023232,
+                    0.20469242794617956
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 1570,
+                  "mean_p": 0.24685697288380906,
+                  "observed_rate": 0.2554140127388535,
+                  "observed_rate_ci95": [
+                    0.23445768875285172,
+                    0.2775643159441937
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1,
+                  "mean_p": 0.4199729133048583,
+                  "observed_rate": 0.0,
+                  "observed_rate_ci95": [
+                    0.0,
+                    0.7934506856227626
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": -0.06570764448553879,
+              "slope": 0.9152190383464341,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "2": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 406,
+                  "mean_p": 0.13885804765312085,
+                  "observed_rate": 0.11330049261083744,
+                  "observed_rate_ci95": [
+                    0.0860254409699031,
+                    0.14782464119717412
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 865,
+                  "mean_p": 0.2984267241080062,
+                  "observed_rate": 0.28208092485549136,
+                  "observed_rate_ci95": [
+                    0.25310610127963956,
+                    0.3129827447663192
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 491,
+                  "mean_p": 0.4840835814943885,
+                  "observed_rate": 0.45621181262729127,
+                  "observed_rate_ci95": [
+                    0.4126657175865944,
+                    0.500437763874968
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 130,
+                  "mean_p": 0.6666526066721052,
+                  "observed_rate": 0.676923076923077,
+                  "observed_rate_ci95": [
+                    0.5924551452601903,
+                    0.7512350715479341
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 8,
+                  "mean_p": 0.8258381977432192,
+                  "observed_rate": 0.625,
+                  "observed_rate_ci95": [
+                    0.30574239460262737,
+                    0.8631557141764026
+                  ]
+                }
+              ],
+              "intercept": -0.07122921831403932,
+              "slope": 1.057471348543045,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "population": {
+          "n": 1900,
+          "logloss": 1.071292280940161,
+          "brier": 0.32424117841506117,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 345,
+                  "mean_p": 0.3881066325569434,
+                  "observed_rate": 0.43768115942028984,
+                  "observed_rate_ci95": [
+                    0.3863028796836267,
+                    0.49043195526011146
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1555,
+                  "mean_p": 0.42920238708839237,
+                  "observed_rate": 0.442443729903537,
+                  "observed_rate_ci95": [
+                    0.41792927898243715,
+                    0.46724185308674826
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": -0.3310676504119896,
+              "slope": -0.3045841327656321,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 1900,
+                  "mean_p": 0.2275551248691532,
+                  "observed_rate": 0.23894736842105263,
+                  "observed_rate_ci95": [
+                    0.22031146655213818,
+                    0.25863674344509585
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            },
+            "2": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 1890,
+                  "mean_p": 0.35043034227404457,
+                  "observed_rate": 0.31957671957671957,
+                  "observed_rate_ci95": [
+                    0.2989378501927384,
+                    0.3409475283728543
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 10,
+                  "mean_p": 0.4025415696069031,
+                  "observed_rate": 0.3,
+                  "observed_rate_ci95": [
+                    0.10779126740630099,
+                    0.6032218525388546
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": -0.8982677727652255,
+              "slope": -0.23024460833951352,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "population_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": 0.061550745006851995,
+          "ci95": [
+            0.05149618229142158,
+            0.07137680895274572
+          ]
+        },
+        "TB1-MD_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.061550745006851995,
+          "ci95": [
+            -0.07137680895274572,
+            -0.05149618229142158
+          ]
+        },
+        "Dixon-Coles_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.08696933688715089,
+          "ci95": [
+            -0.10707900336214893,
+            -0.06637421124818574
+          ]
+        },
+        "Dixon-Coles_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.025418591880298876,
+          "ci95": [
+            -0.03912352855228652,
+            -0.011639405502553832
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.75_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.08797175646339075,
+          "ci95": [
+            -0.10446751366951325,
+            -0.071156064277689
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.75_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.026421011456538752,
+          "ci95": [
+            -0.0362995348786656,
+            -0.01668970232395264
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.5_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.08335454143652561,
+          "ci95": [
+            -0.09691912080790548,
+            -0.06942240313460285
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.5_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.02180379642967363,
+          "ci95": [
+            -0.02833105766351493,
+            -0.01543836186311841
+          ]
+        }
+      },
+      "periods": {
+        "selection_periods": {
+          "seasons": [
+            "2021-22",
+            "2022-23",
+            "2023-24"
+          ],
+          "mean_logloss": {
+            "Dixon-Coles": 0.9701647705391465,
+            "TB1-MD": 0.9930590140262934,
+            "coherent_DC_TB1_mixture_0.5": 0.971496242741458,
+            "coherent_DC_TB1_mixture_0.75": 0.9676537287331349,
+            "population": 1.0636854031536411
+          }
+        },
+        "later_development_check_periods": {
+          "seasons": [
+            "2024-25",
+            "2025-26"
+          ],
+          "mean_logloss": {
+            "Dixon-Coles": 1.0055602043238054,
+            "TB1-MD": 1.034765318793833,
+            "coherent_DC_TB1_mixture_0.5": 1.0125999846469016,
+            "coherent_DC_TB1_mixture_0.75": 1.0068207180922233,
+            "population": 1.0827025976199414
+          }
+        }
+      },
+      "selected_on_earlier_periods": "coherent_DC_TB1_mixture_0.75",
+      "later_selected_comparisons": {
+        "population": {
+          "events": 760,
+          "blocks": 72,
+          "mean": -0.07588187952771794,
+          "ci95": [
+            -0.09783422116053886,
+            -0.053016200883909494
+          ]
+        },
+        "TB1-MD": {
+          "events": 760,
+          "blocks": 72,
+          "mean": -0.027944600701609396,
+          "ci95": [
+            -0.04119083057953339,
+            -0.014813442878522426
+          ]
+        }
+      }
+    },
+    "EPL:BTTS": {
+      "models": {
+        "Dixon-Coles": {
+          "n": 1900,
+          "logloss": 0.6909557123048472,
+          "brier": 0.24865490319875094,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 5,
+                  "mean_p": 0.15079038416568719,
+                  "observed_rate": 0.4,
+                  "observed_rate_ci95": [
+                    0.11762077423264783,
+                    0.769275718723987
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 144,
+                  "mean_p": 0.34589073761643846,
+                  "observed_rate": 0.4930555555555556,
+                  "observed_rate_ci95": [
+                    0.4126463655407692,
+                    0.5738256294195508
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1351,
+                  "mean_p": 0.5126965359414103,
+                  "observed_rate": 0.5447816432272391,
+                  "observed_rate_ci95": [
+                    0.5181373319205085,
+                    0.5711720106687883
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 400,
+                  "mean_p": 0.6376840062682425,
+                  "observed_rate": 0.605,
+                  "observed_rate_ci95": [
+                    0.5563126557323714,
+                    0.6516897624574263
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": 0.16960878106089006,
+              "slope": 0.43882836243279316,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 400,
+                  "mean_p": 0.3623159937317576,
+                  "observed_rate": 0.395,
+                  "observed_rate_ci95": [
+                    0.3483102375425738,
+                    0.4436873442676285
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1351,
+                  "mean_p": 0.4873034640585897,
+                  "observed_rate": 0.4552183567727609,
+                  "observed_rate_ci95": [
+                    0.42882798933121175,
+                    0.48186266807949146
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 144,
+                  "mean_p": 0.6541092623835616,
+                  "observed_rate": 0.5069444444444444,
+                  "observed_rate_ci95": [
+                    0.4261743705804492,
+                    0.5873536344592308
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 5,
+                  "mean_p": 0.8492096158343128,
+                  "observed_rate": 0.6,
+                  "observed_rate_ci95": [
+                    0.2307242812760128,
+                    0.882379225767352
+                  ]
+                }
+              ],
+              "intercept": -0.16960879224809614,
+              "slope": 0.4388283679184215,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "TB1-MD": {
+          "n": 1900,
+          "logloss": 0.690263308993917,
+          "brier": 0.24845238891906055,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 21,
+                  "mean_p": 0.3688522228465945,
+                  "observed_rate": 0.5714285714285714,
+                  "observed_rate_ci95": [
+                    0.3654655436930671,
+                    0.7553003107462404
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1387,
+                  "mean_p": 0.5372703986862011,
+                  "observed_rate": 0.5407354001441961,
+                  "observed_rate_ci95": [
+                    0.514432789412492,
+                    0.566812991178355
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 492,
+                  "mean_p": 0.6339144784828216,
+                  "observed_rate": 0.5873983739837398,
+                  "observed_rate_ci95": [
+                    0.5433840003867431,
+                    0.630058535468451
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": 0.13320415117693452,
+              "slope": 0.32711745748262533,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 492,
+                  "mean_p": 0.36608552151717844,
+                  "observed_rate": 0.41260162601626016,
+                  "observed_rate_ci95": [
+                    0.36994146453154897,
+                    0.45661599961325694
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1387,
+                  "mean_p": 0.46272960131379887,
+                  "observed_rate": 0.45926459985580387,
+                  "observed_rate_ci95": [
+                    0.43318700882164485,
+                    0.48556721058750785
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 21,
+                  "mean_p": 0.6311477771534056,
+                  "observed_rate": 0.42857142857142855,
+                  "observed_rate_ci95": [
+                    0.2446996892537596,
+                    0.6345344563069328
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": -0.133204187845496,
+              "slope": 0.3271174015641755,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "coherent_DC_TB1_mixture_0.5": {
+          "n": 1900,
+          "logloss": 0.6873761784314336,
+          "brier": 0.2470504786064332,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 47,
+                  "mean_p": 0.3618309085884356,
+                  "observed_rate": 0.5957446808510638,
+                  "observed_rate_ci95": [
+                    0.4534212295011096,
+                    0.7235996548079124
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1467,
+                  "mean_p": 0.5253893875378031,
+                  "observed_rate": 0.5391956373551465,
+                  "observed_rate_ci95": [
+                    0.5136190926218391,
+                    0.5645674442821489
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 386,
+                  "mean_p": 0.631619346281863,
+                  "observed_rate": 0.6010362694300518,
+                  "observed_rate_ci95": [
+                    0.5514209763850437,
+                    0.6486603598482987
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 386,
+                  "mean_p": 0.36838065371813694,
+                  "observed_rate": 0.39896373056994816,
+                  "observed_rate_ci95": [
+                    0.35133964015170127,
+                    0.4485790236149564
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1467,
+                  "mean_p": 0.47461061246219693,
+                  "observed_rate": 0.4608043626448534,
+                  "observed_rate_ci95": [
+                    0.435432555717851,
+                    0.48638090737816075
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 47,
+                  "mean_p": 0.6381690914115644,
+                  "observed_rate": 0.40425531914893614,
+                  "observed_rate_ci95": [
+                    0.27640034519208756,
+                    0.5465787704988904
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": -0.12451600296507341,
+              "slope": 0.5147184914027473,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "coherent_DC_TB1_mixture_0.75": {
+          "n": 1900,
+          "logloss": 0.6883180598579014,
+          "brier": 0.24747689903947395,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 2,
+                  "mean_p": 0.19228150991563708,
+                  "observed_rate": 0.5,
+                  "observed_rate_ci95": [
+                    0.09453120573423074,
+                    0.9054687942657693
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 99,
+                  "mean_p": 0.35803919769792053,
+                  "observed_rate": 0.5050505050505051,
+                  "observed_rate_ci95": [
+                    0.4082317028425853,
+                    0.6014920020860226
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1418,
+                  "mean_p": 0.5200970827244513,
+                  "observed_rate": 0.5430183356840621,
+                  "observed_rate_ci95": [
+                    0.5170090428050342,
+                    0.5687951790673464
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 381,
+                  "mean_p": 0.6341075837240887,
+                  "observed_rate": 0.6036745406824147,
+                  "observed_rate_ci95": [
+                    0.5537595859327188,
+                    0.6515197523227984
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": 0.14607259837782174,
+              "slope": 0.4931430844885538,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 381,
+                  "mean_p": 0.3658924162759113,
+                  "observed_rate": 0.3963254593175853,
+                  "observed_rate_ci95": [
+                    0.34848024767720154,
+                    0.4462404140672811
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1418,
+                  "mean_p": 0.4799029172755486,
+                  "observed_rate": 0.45698166431593795,
+                  "observed_rate_ci95": [
+                    0.43120482093265367,
+                    0.48299095719496576
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 99,
+                  "mean_p": 0.6419608023020794,
+                  "observed_rate": 0.494949494949495,
+                  "observed_rate_ci95": [
+                    0.39850799791397756,
+                    0.5917682971574147
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 2,
+                  "mean_p": 0.8077184900843629,
+                  "observed_rate": 0.5,
+                  "observed_rate_ci95": [
+                    0.09453120573423074,
+                    0.9054687942657693
+                  ]
+                }
+              ],
+              "intercept": -0.1460726031436671,
+              "slope": 0.493143177159952,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "population": {
+          "n": 1900,
+          "logloss": 0.6893855290557029,
+          "brier": 0.2481214140549995,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1900,
+                  "mean_p": 0.5161266940581017,
+                  "observed_rate": 0.5531578947368421,
+                  "observed_rate_ci95": [
+                    0.5307180345996121,
+                    0.5753832371549834
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": 0.14891293577490244,
+              "slope": 1.003928705752818,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1900,
+                  "mean_p": 0.4838733059418983,
+                  "observed_rate": 0.4468421052631579,
+                  "observed_rate_ci95": [
+                    0.4246167628450166,
+                    0.469281965400388
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": -0.14891307942108453,
+              "slope": 1.0039266124577404,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "population_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.0008777799382140353,
+          "ci95": [
+            -0.008154660468332546,
+            0.006227589627057519
+          ]
+        },
+        "TB1-MD_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": 0.0008777799382140353,
+          "ci95": [
+            -0.006227589627057521,
+            0.00815466046833254
+          ]
+        },
+        "Dixon-Coles_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": 0.0015701832491442625,
+          "ci95": [
+            -0.005819905256098202,
+            0.009536012842854135
+          ]
+        },
+        "Dixon-Coles_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": 0.0006924033109302273,
+          "ci95": [
+            -0.007145249713254288,
+            0.008406431956318967
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.75_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.00106746919780163,
+          "ci95": [
+            -0.007617024536649186,
+            0.005906378939821973
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.75_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.0019452491360156658,
+          "ci95": [
+            -0.007798304205343516,
+            0.0037136910086552196
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.5_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.002009350624269313,
+          "ci95": [
+            -0.008083540747893778,
+            0.004435247894048368
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.5_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.0028871305624833484,
+          "ci95": [
+            -0.006841427738198855,
+            0.0008690714988142939
+          ]
+        }
+      },
+      "periods": {
+        "selection_periods": {
+          "seasons": [
+            "2021-22",
+            "2022-23",
+            "2023-24"
+          ],
+          "mean_logloss": {
+            "Dixon-Coles": 0.6916896305027025,
+            "TB1-MD": 0.6876760583701953,
+            "coherent_DC_TB1_mixture_0.5": 0.6857535878046864,
+            "coherent_DC_TB1_mixture_0.75": 0.6876725192819753,
+            "population": 0.691521500496383
+          }
+        },
+        "later_development_check_periods": {
+          "seasons": [
+            "2024-25",
+            "2025-26"
+          ],
+          "mean_logloss": {
+            "Dixon-Coles": 0.6898548350080644,
+            "TB1-MD": 0.6941441849294995,
+            "coherent_DC_TB1_mixture_0.5": 0.6898100643715545,
+            "coherent_DC_TB1_mixture_0.75": 0.6892863707217906,
+            "population": 0.6861815718946829
+          }
+        }
+      },
+      "selected_on_earlier_periods": "coherent_DC_TB1_mixture_0.5",
+      "later_selected_comparisons": {
+        "population": {
+          "events": 760,
+          "blocks": 72,
+          "mean": 0.003628492476871601,
+          "ci95": [
+            -0.0054536323506321795,
+            0.012668270702591737
+          ]
+        },
+        "TB1-MD": {
+          "events": 760,
+          "blocks": 72,
+          "mean": -0.004334120557944988,
+          "ci95": [
+            -0.009594869914138653,
+            0.000633293456097058
+          ]
+        }
+      }
+    },
+    "EPL:TOTAL_2_5": {
+      "models": {
+        "Dixon-Coles": {
+          "n": 1900,
+          "logloss": 0.6868237562436674,
+          "brier": 0.24658956833750345,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 6,
+                  "mean_p": 0.14363352681905975,
+                  "observed_rate": 0.16666666666666666,
+                  "observed_rate_ci95": [
+                    0.030053369748306635,
+                    0.5635028221864702
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 203,
+                  "mean_p": 0.3468281641937571,
+                  "observed_rate": 0.4729064039408867,
+                  "observed_rate_ci95": [
+                    0.4053682805038392,
+                    0.5414508917128118
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1090,
+                  "mean_p": 0.5162785215067794,
+                  "observed_rate": 0.5651376146788991,
+                  "observed_rate_ci95": [
+                    0.535529852225546,
+                    0.5942878639113929
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 592,
+                  "mean_p": 0.6574136017964246,
+                  "observed_rate": 0.5996621621621622,
+                  "observed_rate_ci95": [
+                    0.5596730214984831,
+                    0.6383662358461617
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 9,
+                  "mean_p": 0.8250904734341736,
+                  "observed_rate": 0.7777777777777778,
+                  "observed_rate_ci95": [
+                    0.45258896910698887,
+                    0.9367748928821533
+                  ]
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 9,
+                  "mean_p": 0.1749095265658263,
+                  "observed_rate": 0.2222222222222222,
+                  "observed_rate_ci95": [
+                    0.06322510711784671,
+                    0.5474110308930111
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 592,
+                  "mean_p": 0.34258639820357545,
+                  "observed_rate": 0.40033783783783783,
+                  "observed_rate_ci95": [
+                    0.36163376415383824,
+                    0.44032697850151686
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1090,
+                  "mean_p": 0.4837214784932205,
+                  "observed_rate": 0.43486238532110094,
+                  "observed_rate_ci95": [
+                    0.40571213608860723,
+                    0.46447014777445406
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 203,
+                  "mean_p": 0.6531718358062428,
+                  "observed_rate": 0.5270935960591133,
+                  "observed_rate_ci95": [
+                    0.4585491082871882,
+                    0.5946317194961608
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 6,
+                  "mean_p": 0.8563664731809403,
+                  "observed_rate": 0.8333333333333334,
+                  "observed_rate_ci95": [
+                    0.43649717781352987,
+                    0.9699466302516935
+                  ]
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            }
+          }
+        },
+        "TB1-MD": {
+          "n": 1900,
+          "logloss": 0.687862102003342,
+          "brier": 0.2472534418399961,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 72,
+                  "mean_p": 0.3610065270931742,
+                  "observed_rate": 0.5416666666666666,
+                  "observed_rate_ci95": [
+                    0.4273986728598905,
+                    0.651713729423738
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1389,
+                  "mean_p": 0.5247718277808934,
+                  "observed_rate": 0.556515478761699,
+                  "observed_rate_ci95": [
+                    0.5302690817157478,
+                    0.5824501362582277
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 439,
+                  "mean_p": 0.6403489431849652,
+                  "observed_rate": 0.5990888382687927,
+                  "observed_rate_ci95": [
+                    0.5525761474760692,
+                    0.6438824231186641
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 439,
+                  "mean_p": 0.3596510568150349,
+                  "observed_rate": 0.4009111617312073,
+                  "observed_rate_ci95": [
+                    0.35611757688133594,
+                    0.4474238525239307
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1389,
+                  "mean_p": 0.4752281722191066,
+                  "observed_rate": 0.44348452123830095,
+                  "observed_rate_ci95": [
+                    0.4175498637417723,
+                    0.4697309182842522
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 72,
+                  "mean_p": 0.6389934729068258,
+                  "observed_rate": 0.4583333333333333,
+                  "observed_rate_ci95": [
+                    0.34828627057626194,
+                    0.5726013271401095
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            }
+          }
+        },
+        "coherent_DC_TB1_mixture_0.5": {
+          "n": 1900,
+          "logloss": 0.6836503278210921,
+          "brier": 0.24522904291905565,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 1,
+                  "mean_p": 0.17184052178627118,
+                  "observed_rate": 0.0,
+                  "observed_rate_ci95": [
+                    0.0,
+                    0.7934506856227626
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 110,
+                  "mean_p": 0.36166698542475856,
+                  "observed_rate": 0.4818181818181818,
+                  "observed_rate_ci95": [
+                    0.39064279126942547,
+                    0.5742206245595985
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1298,
+                  "mean_p": 0.5217137257098153,
+                  "observed_rate": 0.5577812018489985,
+                  "observed_rate_ci95": [
+                    0.5306315524391451,
+                    0.5845898510456397
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 491,
+                  "mean_p": 0.6439517805253532,
+                  "observed_rate": 0.6069246435845214,
+                  "observed_rate_ci95": [
+                    0.5630517270421025,
+                    0.6491374461331523
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 491,
+                  "mean_p": 0.3560482194746468,
+                  "observed_rate": 0.39307535641547864,
+                  "observed_rate_ci95": [
+                    0.3508625538668477,
+                    0.4369482729578975
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1298,
+                  "mean_p": 0.4782862742901848,
+                  "observed_rate": 0.4422187981510015,
+                  "observed_rate_ci95": [
+                    0.4154101489543603,
+                    0.4693684475608549
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 110,
+                  "mean_p": 0.6383330145752413,
+                  "observed_rate": 0.5181818181818182,
+                  "observed_rate_ci95": [
+                    0.4257793754404014,
+                    0.6093572087305745
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 1,
+                  "mean_p": 0.8281594782137289,
+                  "observed_rate": 1.0,
+                  "observed_rate_ci95": [
+                    0.20654931437723745,
+                    1.0
+                  ]
+                }
+              ],
+              "intercept": -0.1665047517570179,
+              "slope": 0.5581970914746486,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "coherent_DC_TB1_mixture_0.75": {
+          "n": 1900,
+          "logloss": 0.6842670678316647,
+          "brier": 0.24548619008585607,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 3,
+                  "mean_p": 0.17196686972042796,
+                  "observed_rate": 0.0,
+                  "observed_rate_ci95": [
+                    5.551115123125783e-17,
+                    0.5614970317550454
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 146,
+                  "mean_p": 0.35290066809279874,
+                  "observed_rate": 0.4863013698630137,
+                  "observed_rate_ci95": [
+                    0.4066243264247194,
+                    0.5666807919885594
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1200,
+                  "mean_p": 0.5181490971860886,
+                  "observed_rate": 0.5658333333333333,
+                  "observed_rate_ci95": [
+                    0.5376238949091201,
+                    0.5936226233448532
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 550,
+                  "mean_p": 0.6497264743849614,
+                  "observed_rate": 0.5890909090909091,
+                  "observed_rate_ci95": [
+                    0.5474932721654141,
+                    0.6294526722726809
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 1,
+                  "mean_p": 0.8051856076680657,
+                  "observed_rate": 1.0,
+                  "observed_rate_ci95": [
+                    0.20654931437723745,
+                    1.0
+                  ]
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 1,
+                  "mean_p": 0.19481439233193432,
+                  "observed_rate": 0.0,
+                  "observed_rate_ci95": [
+                    0.0,
+                    0.7934506856227626
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 550,
+                  "mean_p": 0.3502735256150386,
+                  "observed_rate": 0.4109090909090909,
+                  "observed_rate_ci95": [
+                    0.37054732772731924,
+                    0.4525067278345859
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1200,
+                  "mean_p": 0.48185090281391146,
+                  "observed_rate": 0.43416666666666665,
+                  "observed_rate_ci95": [
+                    0.4063773766551468,
+                    0.46237610509087984
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 146,
+                  "mean_p": 0.6470993319072014,
+                  "observed_rate": 0.5136986301369864,
+                  "observed_rate_ci95": [
+                    0.4333192080114407,
+                    0.5933756735752806
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 3,
+                  "mean_p": 0.8280331302795719,
+                  "observed_rate": 1.0,
+                  "observed_rate_ci95": [
+                    0.4385029682449546,
+                    1.0
+                  ]
+                }
+              ],
+              "intercept": -0.17329904059682247,
+              "slope": 0.5284202664022445,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "population": {
+          "n": 1900,
+          "logloss": 0.6864342092182242,
+          "brier": 0.24664971506651698,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1900,
+                  "mean_p": 0.5352697461021488,
+                  "observed_rate": 0.5657894736842105,
+                  "observed_rate_ci95": [
+                    0.5433919671829475,
+                    0.5879214879588786
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": 0.2018537830308695,
+              "slope": 0.44458431225250944,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 1900,
+                  "mean_p": 0.46473025389785116,
+                  "observed_rate": 0.4342105263157895,
+                  "observed_rate_ci95": [
+                    0.41207851204112145,
+                    0.45660803281705253
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": null,
+              "slope": null,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": false
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "population_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.001427892785117684,
+          "ci95": [
+            -0.008539227110465342,
+            0.0055507695553831116
+          ]
+        },
+        "TB1-MD_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": 0.001427892785117684,
+          "ci95": [
+            -0.0055507695553831116,
+            0.008539227110465338
+          ]
+        },
+        "Dixon-Coles_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": 0.000389547025443169,
+          "ci95": [
+            -0.010028218253090517,
+            0.010860107953230313
+          ]
+        },
+        "Dixon-Coles_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.0010383457596745138,
+          "ci95": [
+            -0.00976205270493133,
+            0.007591320647685051
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.75_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.0021671413865596047,
+          "ci95": [
+            -0.010950037395812729,
+            0.006729966546120364
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.75_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.0035950341716772874,
+          "ci95": [
+            -0.010191198921346869,
+            0.0028328869100393934
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.5_minus_population": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.002783881397132088,
+          "ci95": [
+            -0.010457997723784303,
+            0.004917119929922817
+          ]
+        },
+        "coherent_DC_TB1_mixture_0.5_minus_TB1-MD": {
+          "events": 1900,
+          "blocks": 179,
+          "mean": -0.004211774182249771,
+          "ci95": [
+            -0.008665657933255836,
+            0.00011233110749377395
+          ]
+        }
+      },
+      "periods": {
+        "selection_periods": {
+          "seasons": [
+            "2021-22",
+            "2022-23",
+            "2023-24"
+          ],
+          "mean_logloss": {
+            "Dixon-Coles": 0.6829644909906342,
+            "TB1-MD": 0.6799594410694206,
+            "coherent_DC_TB1_mixture_0.5": 0.6776916459666102,
+            "coherent_DC_TB1_mixture_0.75": 0.6793237955926086,
+            "population": 0.6862662284942022
+          }
+        },
+        "later_development_check_periods": {
+          "seasons": [
+            "2024-25",
+            "2025-26"
+          ],
+          "mean_logloss": {
+            "Dixon-Coles": 0.6926126541232173,
+            "TB1-MD": 0.6997160934042238,
+            "coherent_DC_TB1_mixture_0.5": 0.6925883506028152,
+            "coherent_DC_TB1_mixture_0.75": 0.6916819761902487,
+            "population": 0.6866861803042575
+          }
+        }
+      },
+      "selected_on_earlier_periods": "coherent_DC_TB1_mixture_0.5",
+      "later_selected_comparisons": {
+        "population": {
+          "events": 760,
+          "blocks": 72,
+          "mean": 0.005902170298557793,
+          "ci95": [
+            -0.004727908324851898,
+            0.016759386359279677
+          ]
+        },
+        "TB1-MD": {
+          "events": 760,
+          "blocks": 72,
+          "mean": -0.0071277428014086056,
+          "ci95": [
+            -0.013858927914911823,
+            -0.0005913433756519007
+          ]
+        }
+      }
+    },
+    "NBL:ML": {
+      "models": {
+        "Elo_fixed_K20_home70": {
+          "n": 590,
+          "logloss": 0.6768699710284104,
+          "brier": 0.2410428172080678,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 49,
+                  "mean_p": 0.34638089383576465,
+                  "observed_rate": 0.30612244897959184,
+                  "observed_rate_ci95": [
+                    0.19515491268006566,
+                    0.44527893558910636
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 247,
+                  "mean_p": 0.5123648377173541,
+                  "observed_rate": 0.4939271255060729,
+                  "observed_rate_ci95": [
+                    0.4321491620432067,
+                    0.5558910924900583
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 262,
+                  "mean_p": 0.6893375481449413,
+                  "observed_rate": 0.6145038167938931,
+                  "observed_rate_ci95": [
+                    0.5543186566407906,
+                    0.6713797737927748
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 32,
+                  "mean_p": 0.8254518322033115,
+                  "observed_rate": 0.6875,
+                  "observed_rate_ci95": [
+                    0.5143332169904459,
+                    0.8204745836639026
+                  ]
+                }
+              ],
+              "intercept": -0.1228648564783117,
+              "slope": 0.7295076241922415,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 32,
+                  "mean_p": 0.17454816779668847,
+                  "observed_rate": 0.3125,
+                  "observed_rate_ci95": [
+                    0.17952541633609734,
+                    0.4856667830095541
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 262,
+                  "mean_p": 0.31066245185505864,
+                  "observed_rate": 0.38549618320610685,
+                  "observed_rate_ci95": [
+                    0.32862022620722514,
+                    0.44568134335920934
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 247,
+                  "mean_p": 0.487635162282646,
+                  "observed_rate": 0.5060728744939271,
+                  "observed_rate_ci95": [
+                    0.44410890750994175,
+                    0.5678508379567934
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 49,
+                  "mean_p": 0.6536191061642355,
+                  "observed_rate": 0.6938775510204082,
+                  "observed_rate_ci95": [
+                    0.5547210644108935,
+                    0.8048450873199342
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": 0.12286493385378316,
+              "slope": 0.729507768054138,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "joint_score_model": {
+          "n": 590,
+          "logloss": 0.6579308691394714,
+          "brier": 0.23278507058433032,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 3,
+                  "mean_p": 0.13850591415913824,
+                  "observed_rate": 0.0,
+                  "observed_rate_ci95": [
+                    5.551115123125783e-17,
+                    0.5614970317550454
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 113,
+                  "mean_p": 0.3293881133883721,
+                  "observed_rate": 0.36283185840707965,
+                  "observed_rate_ci95": [
+                    0.2800425427544222,
+                    0.4546406740344673
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 254,
+                  "mean_p": 0.5058215265618536,
+                  "observed_rate": 0.5196850393700787,
+                  "observed_rate_ci95": [
+                    0.458408604292898,
+                    0.5803749181310661
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 200,
+                  "mean_p": 0.6805020174890123,
+                  "observed_rate": 0.65,
+                  "observed_rate_ci95": [
+                    0.5816346433604008,
+                    0.7127117587264192
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 20,
+                  "mean_p": 0.8315751429688778,
+                  "observed_rate": 0.85,
+                  "observed_rate_ci95": [
+                    0.6395811352592431,
+                    0.9476312541037835
+                  ]
+                }
+              ],
+              "intercept": 0.03449819840628384,
+              "slope": 0.8272192127404643,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 20,
+                  "mean_p": 0.16842485703112228,
+                  "observed_rate": 0.15,
+                  "observed_rate_ci95": [
+                    0.052368745896216595,
+                    0.36041886474075696
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 200,
+                  "mean_p": 0.31949798251098754,
+                  "observed_rate": 0.35,
+                  "observed_rate_ci95": [
+                    0.28728824127358077,
+                    0.4183653566395992
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 254,
+                  "mean_p": 0.49417847343814647,
+                  "observed_rate": 0.48031496062992124,
+                  "observed_rate_ci95": [
+                    0.4196250818689339,
+                    0.541591395707102
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 113,
+                  "mean_p": 0.670611886611628,
+                  "observed_rate": 0.6371681415929203,
+                  "observed_rate_ci95": [
+                    0.5453593259655327,
+                    0.7199574572455778
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 3,
+                  "mean_p": 0.8614940858408618,
+                  "observed_rate": 1.0,
+                  "observed_rate_ci95": [
+                    0.4385029682449546,
+                    1.0
+                  ]
+                }
+              ],
+              "intercept": -0.03449818569304289,
+              "slope": 0.8272192508290225,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "joint_with_chronological_residual_variance": {
+          "n": 590,
+          "logloss": 0.6566713587611379,
+          "brier": 0.23226936271743046,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 4,
+                  "mean_p": 0.158694685466934,
+                  "observed_rate": 0.0,
+                  "observed_rate_ci95": [
+                    0.0,
+                    0.4898908364545973
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 108,
+                  "mean_p": 0.33489735796899006,
+                  "observed_rate": 0.37037037037037035,
+                  "observed_rate_ci95": [
+                    0.28521534777174484,
+                    0.46443026401439946
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 269,
+                  "mean_p": 0.5077880206094983,
+                  "observed_rate": 0.5204460966542751,
+                  "observed_rate_ci95": [
+                    0.4608787142814684,
+                    0.5794377392646511
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 193,
+                  "mean_p": 0.6784382933176052,
+                  "observed_rate": 0.6580310880829016,
+                  "observed_rate_ci95": [
+                    0.5886069322750124,
+                    0.7212871335658927
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 16,
+                  "mean_p": 0.8318955132755841,
+                  "observed_rate": 0.8125,
+                  "observed_rate_ci95": [
+                    0.5699111903802586,
+                    0.9340840092857187
+                  ]
+                }
+              ],
+              "intercept": 0.03481707248963618,
+              "slope": 0.8773843266781979,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 16,
+                  "mean_p": 0.1681044867244159,
+                  "observed_rate": 0.1875,
+                  "observed_rate_ci95": [
+                    0.06591599071428142,
+                    0.4300888096197414
+                  ]
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 193,
+                  "mean_p": 0.32156170668239475,
+                  "observed_rate": 0.34196891191709844,
+                  "observed_rate_ci95": [
+                    0.27871286643410725,
+                    0.41139306772498757
+                  ]
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 269,
+                  "mean_p": 0.49221197939050165,
+                  "observed_rate": 0.4795539033457249,
+                  "observed_rate_ci95": [
+                    0.42056226073534886,
+                    0.5391212857185315
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 108,
+                  "mean_p": 0.6651026420310098,
+                  "observed_rate": 0.6296296296296297,
+                  "observed_rate_ci95": [
+                    0.5355697359856005,
+                    0.7147846522282552
+                  ]
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 4,
+                  "mean_p": 0.841305314533066,
+                  "observed_rate": 1.0,
+                  "observed_rate_ci95": [
+                    0.5101091635454027,
+                    1.0
+                  ]
+                }
+              ],
+              "intercept": -0.03481710256934954,
+              "slope": 0.8773843606306118,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        },
+        "population": {
+          "n": 590,
+          "logloss": 0.6922036510928952,
+          "brier": 0.2495273095641915,
+          "calibration": {
+            "0": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 590,
+                  "mean_p": 0.5218814191141536,
+                  "observed_rate": 0.5423728813559322,
+                  "observed_rate_ci95": [
+                    0.5020279930738544,
+                    0.5821695637947663
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": 0.23206841181670898,
+              "slope": -0.7075313262606215,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            },
+            "1": {
+              "bins": [
+                {
+                  "bin": [
+                    0.0,
+                    0.2
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.2,
+                    0.4
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.4,
+                    0.6
+                  ],
+                  "n": 590,
+                  "mean_p": 0.4781185808858464,
+                  "observed_rate": 0.4576271186440678,
+                  "observed_rate_ci95": [
+                    0.41783043620523375,
+                    0.4979720069261456
+                  ]
+                },
+                {
+                  "bin": [
+                    0.6,
+                    0.8
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                },
+                {
+                  "bin": [
+                    0.8,
+                    1.0
+                  ],
+                  "n": 0,
+                  "mean_p": null,
+                  "observed_rate": null,
+                  "observed_rate_ci95": null
+                }
+              ],
+              "intercept": -0.23206839919741573,
+              "slope": -0.7075310896668862,
+              "coefficient_status": "DESCRIPTIVE_IN_SAMPLE_NOT_A_CALIBRATOR",
+              "calibration_fit_success": true
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "population_minus_Elo_fixed_K20_home70": {
+          "events": 590,
+          "blocks": 80,
+          "mean": 0.015333680064484783,
+          "ci95": [
+            -0.0165194470994467,
+            0.045732405676295315
+          ]
+        },
+        "Elo_fixed_K20_home70_minus_population": {
+          "events": 590,
+          "blocks": 80,
+          "mean": -0.015333680064484783,
+          "ci95": [
+            -0.04573240567629532,
+            0.01651944709944669
+          ]
+        },
+        "joint_score_model_minus_population": {
+          "events": 590,
+          "blocks": 80,
+          "mean": -0.03427278195342376,
+          "ci95": [
+            -0.06263860749815714,
+            -0.005504797318511477
+          ]
+        },
+        "joint_score_model_minus_Elo_fixed_K20_home70": {
+          "events": 590,
+          "blocks": 80,
+          "mean": -0.01893910188893897,
+          "ci95": [
+            -0.03212036204983732,
+            -0.006148973228020363
+          ]
+        },
+        "joint_with_chronological_residual_variance_minus_population": {
+          "events": 590,
+          "blocks": 80,
+          "mean": -0.03553229233175717,
+          "ci95": [
+            -0.06235108946233166,
+            -0.00825564815040502
+          ]
+        },
+        "joint_with_chronological_residual_variance_minus_Elo_fixed_K20_home70": {
+          "events": 590,
+          "blocks": 80,
+          "mean": -0.02019861226727239,
+          "ci95": [
+            -0.033688963744639394,
+            -0.007340910977417068
+          ]
+        }
+      },
+      "periods": {
+        "selection_periods": {
+          "seasons": [
+            "NBL23",
+            "NBL24"
+          ],
+          "mean_logloss": {
+            "Elo_fixed_K20_home70": 0.6973252544879589,
+            "joint_score_model": 0.6879046143527081,
+            "joint_with_chronological_residual_variance": 0.6853991338845142,
+            "population": 0.6916878114023124
+          }
+        },
+        "later_development_check_periods": {
+          "seasons": [
+            "NBL25",
+            "NBL26"
+          ],
+          "mean_logloss": {
+            "Elo_fixed_K20_home70": 0.6583942311294633,
+            "joint_score_model": 0.6308578089468705,
+            "joint_with_chronological_residual_variance": 0.6307236909077659,
+            "population": 0.6926695708134215
+          }
+        }
+      },
+      "selected_on_earlier_periods": "joint_with_chronological_residual_variance",
+      "later_selected_comparisons": {
+        "population": {
+          "events": 310,
+          "blocks": 42,
+          "mean": -0.06194587990565561,
+          "ci95": [
+            -0.09901445795229519,
+            -0.023370951102921336
+          ]
+        },
+        "Elo_fixed_K20_home70": {
+          "events": 310,
+          "blocks": 42,
+          "mean": -0.027670540221697317,
+          "ci95": [
+            -0.043827569023837366,
+            -0.012939717351573822
+          ]
+        }
+      }
+    }
+  },
+  "created_utc": "2026-10-01T01:18:20.000114+00:00",
+  "protocol_sha256": "beb2e2b8470f33da78e6ede346904584f22db612916d339c978f7dbe69b0f108",
+  "evaluator_sha256": "5bce08f668b50979e8467b21e875b29477c597e787e6d46adfa9aeca00af99b6",
+  "code_inputs": {
+    "model_diagnostics.py": "5bce08f668b50979e8467b21e875b29477c597e787e6d46adfa9aeca00af99b6",
+    "dixon_coles.py": "3cb47e0845b558fecde03f9c1f4f14b730964f82a6b3cef79474962f73d02f1f",
+    "nbl_model.py": "3fb4df6ee26c8405b2d633edfbe4911acdbfd739dad55bf480214b9c3de10ffe"
+  },
+  "forecasts_sha256": "17de2c5536f03a8e5005e0ec2af2c32ecd82f9efcbf430d230d5347306bdeac5"
+}

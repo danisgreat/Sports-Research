@@ -1,14 +1,35 @@
 {
+  "schema_version": "pilot-lock-2",
   "status": "NOT_FROZEN",
-  "cohort_version": "EPL-PILOT-1",
-  "primary_score": "mean of 1X2 multiclass log-loss, Over/Under 2.5 binary log-loss, and BTTS binary log-loss per event",
-  "secondary_score": "mean of half-scaled 1X2 Brier, total 2.5 Brier, and BTTS Brier per event",
+  "cohort_version": "EPL-COMPOSITE-PILOT-2",
+  "weights": {
+    "EPL": 1.0
+  },
+  "model_versions": {
+    "EPL": null
+  },
+  "endpoints": {
+    "EPL": "REGULATION"
+  },
+  "league_seasons": {
+    "EPL": {
+      "league": "EPL",
+      "season": null
+    }
+  },
+  "primary_score": "mean event log-loss of regulation 1X2, total 2.5 and BTTS",
+  "secondary_score": "mean half-scaled multiclass and binary Brier",
   "mwi_brier": 0.01,
   "target_adjusted_events": null,
   "futility_look_events": null,
-  "weights": {},
-  "seed": 20260929,
+  "minimum_week_blocks": 4,
+  "seed": 20261001,
+  "bootstrap_reps": 10000,
   "lock_created_utc": null,
-  "first_eligible_event_utc": null,
-  "notes": "EPL-only pilot v1. Freeze weight EPL=1, sample and futility look before the first eligible event. A new sport needs its own versioned family score and lock; do not retrofit this cohort."
+  "cohort_issue_from_utc": null,
+  "cohort_issue_to_utc": null,
+  "inclusion_rule": "FIRST_CHRONOLOGICAL_ADJUSTED_ISSUES",
+  "power_plan_ref": null,
+  "universe_refs": [],
+  "notes": "Blueprint only. All fixed families must qualify and source-backed sample/power evidence must exist before pilot.freeze_lock can freeze. No current live pilot exists."
 }

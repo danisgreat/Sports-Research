@@ -1,5 +1,9 @@
 # Previous Sports Results — data source implementation guide
 
+**Implemented status, 2026-10-01 (Australia/Sydney).** The source catalogue below is routing guidance with historical access tests. HTTP 200 alone is not event verification. The live canonical implementation is documented in [_canonical/README.md](_canonical/README.md), with supported field-owner profiles in `research/src/archive_sources.py`. It verifies cached body hashes and exact result identities for AFL season tables, retained official AFL fixtures and newly retained official MLB season schedules. Fixed official NFL, college-football and AFLW reports support the journaled corrections. Most other source routes remain unimplemented collectors.
+
+Every admitted result references its exact URL, receipt/body hash, parser and input snapshot. Unknown source or timing stays missing. Raw people, comments and season awards are quarantined from pregame inputs. Coaching/official/roster documents are not automatically trustworthy because a source was reachable. Source receipts and original-byte correction custody are retained under `_custody/`; the earlier football cache remains hash-checked under `_football_research/sources/`.
+
 **Written 2026-09-30 (AEST).** Every access status below comes from a live request made on 2026-09-30 from the research environment, not from memory. A source marked VERIFIED returned HTTP 200 with the expected content. Re-test before relying on any route: sites change.
 
 This guide says **where** to get each field for each competition folder. The companion [explanation document](COVERAGE_AND_BLANK_YEARS.md) says **which years** have no competition, which fields cannot be recovered for which eras, and where the current folder statuses are wrong.

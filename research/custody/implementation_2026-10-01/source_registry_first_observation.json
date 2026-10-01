@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-01T01:20:15.492377+00:00",
+  "policy": "SPORTS_ONLY / MARKET_BLIND; publisher multiplicity does not establish independent collection; event-specific lineage audits required for live admission.",
+  "sources": {
+    "nbl_official": {
+      "publisher": "National Basketball League",
+      "hostname": "schedule.nbl.com.au",
+      "parser_id": "NBL_SCHEDULE_V1",
+      "upstream_lineage_id": "NBL_OFFICIAL_COLLECTION",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://schedule.nbl.com.au/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE",
+        "INCL_OT",
+        "SCHEDULE"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+      "probe_expected_text": [
+        "matches",
+        "starts_at_ms"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "mlb_official": {
+      "publisher": "Major League Baseball",
+      "hostname": "statsapi.mlb.com",
+      "parser_id": "MLB_STATSAPI_V1",
+      "upstream_lineage_id": "MLB_OFFICIAL_COLLECTION",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://statsapi.mlb.com/"
+      ],
+      "endpoints": [
+        "INCL_EXTRAS",
+        "REGULATION_9",
+        "SCHEDULE"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-30&hydrate=linescore",
+      "probe_expected_text": [
+        "dates",
+        "gamePk"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "espn_epl": {
+      "publisher": "ESPN",
+      "hostname": "site.api.espn.com",
+      "parser_id": "ESPN_SUMMARY_V1",
+      "upstream_lineage_id": "ESPN_COLLECTION_UNVERIFIED",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE",
+        "SCHEDULE"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "probe_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260930",
+      "probe_expected_text": [
+        "events"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "espn_nbl": {
+      "publisher": "ESPN",
+      "hostname": "site.api.espn.com",
+      "parser_id": "ESPN_SUMMARY_V1",
+      "upstream_lineage_id": "ESPN_COLLECTION_UNVERIFIED",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://site.api.espn.com/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE",
+        "SCHEDULE"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "probe_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nbl/scoreboard?dates=20260930",
+      "probe_expected_text": [
+        "events"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "openfootball": {
+      "publisher": "openfootball statistical archive",
+      "hostname": "raw.githubusercontent.com",
+      "parser_id": "OPENFOOTBALL_V1",
+      "upstream_lineage_id": "OPENFOOTBALL_UNVERIFIED_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://raw.githubusercontent.com/"
+      ],
+      "endpoints": [
+        "REGULATION",
+        "SCHEDULE"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://raw.githubusercontent.com/openfootball/england/master/2026-27/1-premierleague.txt",
+      "probe_expected_text": [
+        "Premier League"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "premierleague_official": {
+      "publisher": "Premier League",
+      "hostname": "www.premierleague.com",
+      "parser_id": "REVIEWED_HTML_V1",
+      "upstream_lineage_id": "EPL_OFFICIAL_COLLECTION",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://www.premierleague.com/"
+      ],
+      "endpoints": [
+        "REGULATION",
+        "SCHEDULE",
+        "LINEUPS"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://www.premierleague.com/en/fixtures",
+      "probe_expected_text": [
+        "Premier League"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "aflw_official": {
+      "publisher": "Australian Football League",
+      "hostname": "www.afl.com.au",
+      "parser_id": "REVIEWED_HTML_V1",
+      "upstream_lineage_id": "AFL_OFFICIAL_COLLECTION",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://www.afl.com.au/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE",
+        "LINEUPS"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://www.afl.com.au/aflw/matches/5748",
+      "probe_expected_text": [
+        "North Melbourne"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "iowa_state_official": {
+      "publisher": "Iowa State Athletics",
+      "hostname": "cyclones.com",
+      "parser_id": "REVIEWED_HTML_V1",
+      "upstream_lineage_id": "IOWA_STATE_OFFICIAL_REPORT",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://cyclones.com/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE",
+        "OFFICIALS",
+        "PARTICIPANTS"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://cyclones.com/sports/football/stats/2025/kansas-state/boxscore/17234",
+      "probe_expected_text": [
+        "08/23/2025"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "kansas_state_official": {
+      "publisher": "Kansas State Athletics",
+      "hostname": "www.kstatesports.com",
+      "parser_id": "REVIEWED_HTML_V1",
+      "upstream_lineage_id": "KANSAS_STATE_OFFICIAL_REPORT",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://www.kstatesports.com/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://www.kstatesports.com/news/2025/8/23/football-17-20-k-state-falls-to-22-21-iowa-state-24-21",
+      "probe_expected_text": [
+        "24-21"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "nfl_gamebooks": {
+      "publisher": "National Football League gamebooks",
+      "hostname": "static.www.nfl.com",
+      "parser_id": "REVIEWED_PDF_V1",
+      "upstream_lineage_id": "NFL_OFFICIAL_COLLECTION",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://static.www.nfl.com/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE",
+        "VENUE",
+        "OFFICIALS",
+        "PARTICIPANTS"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://static.www.nfl.com/image/upload/v1757158720/gamecenter/f5919071-311e-11f0-b670-ae1250fadad1.pdf",
+      "probe_expected_text": [
+        "%PDF"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "perth_wildcats_official": {
+      "publisher": "Perth Wildcats",
+      "hostname": "www.wildcats.com.au",
+      "parser_id": "REVIEWED_HTML_V1",
+      "upstream_lineage_id": "PERTH_CLUB_REPORT",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://www.wildcats.com.au/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE",
+        "LINEUPS"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://www.wildcats.com.au/news/wildcats-with-a-record-breaking-night-in-cairns",
+      "probe_expected_text": [
+        "Wildcats"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "nbl_news": {
+      "publisher": "National Basketball League",
+      "hostname": "www.nbl.com.au",
+      "parser_id": "REVIEWED_HTML_V1",
+      "upstream_lineage_id": "NBL_OFFICIAL_COLLECTION",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://www.nbl.com.au/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE",
+        "LINEUPS"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "probe_url": "https://www.nbl.com.au/news/kings-take-care-of-wounded-jackjumpers",
+      "probe_expected_text": [
+        "Kings"
+      ],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "football_data": {
+      "publisher": "Football-Data",
+      "hostname": "www.football-data.co.uk",
+      "parser_id": "MANUAL_SCORE_CSV_V1",
+      "upstream_lineage_id": "FOOTBALL_DATA_UNVERIFIED_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://www.football-data.co.uk/"
+      ],
+      "endpoints": [
+        "REGULATION"
+      ],
+      "access_mode": "MANUAL_ONLY",
+      "market_fields_possible": true,
+      "probe_url": null,
+      "probe_expected_text": [],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "fixture_download": {
+      "publisher": "FixtureDownload",
+      "hostname": "fixturedownload.com",
+      "parser_id": "FIXTUREDOWNLOAD_V1",
+      "upstream_lineage_id": "FIXTUREDOWNLOAD_UNVERIFIED_UPSTREAM",
+      "independence_status": "UNKNOWN",
+      "lineage_audit": null,
+      "allowed_url_prefixes": [
+        "https://fixturedownload.com/"
+      ],
+      "endpoints": [
+        "FINAL_SCORE"
+      ],
+      "access_mode": "PERSONAL_USE_LOCAL_ONLY",
+      "market_fields_possible": false,
+      "probe_url": null,
+      "probe_expected_text": [],
+      "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED"
+    },
+    "fantasy_premierleague": {
+      "publisher": "Fantasy Premier League",
+      "access_mode": "EXCLUDED_FANTASY",
+      "allowed_url_prefixes": [],
+      "upstream_lineage_id": "EXCLUDED",
+      "independence_status": "UNKNOWN",
+      "parser_id": "EXCLUDED",
+      "endpoints": [],
+      "market_fields_possible": true
+    }
+  }
+}

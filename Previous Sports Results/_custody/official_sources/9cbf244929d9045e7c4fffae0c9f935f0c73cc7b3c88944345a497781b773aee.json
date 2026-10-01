@@ -1,0 +1,13 @@
+{
+  "url": "https://cyclones.com/sports/football/stats/2025/kansas-state/boxscore/17234",
+  "source_profile": "cfb_2025_dublin",
+  "owner": "Iowa State Athletics",
+  "retrieved_utc": "2026-10-01T01:15:06.731762+00:00",
+  "http_status": 200,
+  "content_type": "text/html;charset=utf-8",
+  "transport_sha256": "33f4ce5489cf51d1c6f720cb9ee17ea421d11a7142caa5050a85e7cdfa6dfc8e",
+  "stored_sha256": "33f4ce5489cf51d1c6f720cb9ee17ea421d11a7142caa5050a85e7cdfa6dfc8e",
+  "stored_body": "9cbf244929d9045e7c4fffae0c9f935f0c73cc7b3c88944345a497781b773aee.gz",
+  "historical_pregame_availability": "unknown",
+  "parser_version": "archive-sources-v1"
+}

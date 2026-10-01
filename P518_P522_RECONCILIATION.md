@@ -1,3 +1,13 @@
+# Current custody reconciliation - 2026-10-01
+
+P-518-P-522 remain **reserved / LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. The dated 2026-09-30 append after the frozen source marker in [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) records learning-only settlements for P-518 (Mets 7-1 Nationals, issued gamePk 822678) and P-522 (Tenerife 80-81 Zaragoza, issued ACB 105380). Those two are no longer awaiting that learning settlement append. This acknowledges the existing sourced append; it does not certify prospective issue timing, canonical import, baseline eligibility or future skill.
+
+P-519/P-520/P-521 retain open field/identity/process/independent-lineage reconciliation requirements. Earlier all-five-unsettled or all-five-certified language is superseded by this split state. The original 141,740-byte source block and every issued p/q/baseline literal remain unchanged. P-523 is the next new issue ID in Part 6; no implementation/shadow/empty mini-log consumes it.
+
+The historical reconciliation record below explains the original defects. Corrections remain append-only and cannot lift historical performance exclusion.
+
+---
+
 # P-518–P-522 custody and source reconciliation
 
 **Audit date:** 2026-09-28. **State:** OPEN. Part 5 is canonical through P-517. P-518–P-522 are reserved claims in the original source block embedded in [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md), not certified canonical imports. The embedded original block's raw-byte SHA-256 is `c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30`; its original issue text and settlement text remain unchanged. The former mini-log path was removed during six-part consolidation; Git `753f0a9` retains that file. All five remain **LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE**. The user has independently directed the new prediction sequence to continue at **P-523** in Part 6; that does not resolve these five records.

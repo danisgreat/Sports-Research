@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "nfl_gamebooks",
+  "publisher": "National Football League gamebooks",
+  "upstream_lineage_id": "NFL_OFFICIAL_COLLECTION",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://static.www.nfl.com/image/upload/v1757158720/gamecenter/f5919071-311e-11f0-b670-ae1250fadad1.pdf",
+  "final_url": "https://static.www.nfl.com/image/upload/v1757158720/gamecenter/f5919071-311e-11f0-b670-ae1250fadad1.pdf",
+  "retrieved_utc": "2026-10-01T01:20:35.283121+00:00",
+  "response_sha256": "f95ca2d7f8adb6d196853cd3c0a93c005011480ad4e8a37d73eb4cdf3d49fb0c",
+  "body_path": "research/data/raw/source_snapshots/nfl_gamebooks_20261001T012035283121Z_f95ca2d7f8ad.body",
+  "response_bytes": 337314,
+  "content_type": "application/pdf",
+  "parser_id": "REVIEWED_PDF_V1",
+  "registry_sha256": "dcca91a8ce7d87b14b070fd0c08115dd215bad6b8022f8eb6959bf9438435bed",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

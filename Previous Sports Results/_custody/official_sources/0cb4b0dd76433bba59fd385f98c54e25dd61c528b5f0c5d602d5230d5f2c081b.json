@@ -1,0 +1,13 @@
+{
+  "url": "https://www.nmfc.com.au/news/1846772/aflw-practice-match-report-north-melbourne-essendon",
+  "source_profile": "aflw_2025_north_practice",
+  "owner": "North Melbourne",
+  "retrieved_utc": "2026-10-01T01:19:41.917966+00:00",
+  "http_status": 200,
+  "content_type": "text/html;charset=utf-8",
+  "transport_sha256": "d5ec7298cf2d4614a73afd6711978022ec494abb57e149f8f51ab45b91800923",
+  "stored_sha256": "d5ec7298cf2d4614a73afd6711978022ec494abb57e149f8f51ab45b91800923",
+  "stored_body": "0cb4b0dd76433bba59fd385f98c54e25dd61c528b5f0c5d602d5230d5f2c081b.gz",
+  "historical_pregame_availability": "unknown",
+  "parser_version": "archive-sources-v1"
+}

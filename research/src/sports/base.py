@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Protocol
+import math
 
 
 @dataclass(frozen=True)
@@ -21,6 +22,16 @@ class Contract:
             raise ValueError("this market needs a line")
         if self.market not in {"ML", "1X2", "SPREAD", "TOTAL", "BTTS"}:
             raise ValueError(f"unsupported market {self.market}")
+        sides={"ML":{"HOME","AWAY"},"1X2":{"HOME","DRAW","AWAY"},
+               "SPREAD":{"HOME","AWAY"},"TOTAL":{"OVER","UNDER"},"BTTS":{"YES","NO"}}
+        if self.side not in sides[self.market]:
+            raise ValueError("invalid contract side")
+        if self.line is not None and (isinstance(self.line,bool) or not isinstance(self.line,(int,float)) or not math.isfinite(self.line)):
+            raise ValueError("line must be finite numeric contract metadata")
+        if self.market not in {"SPREAD","TOTAL"} and self.line is not None:
+            raise ValueError("this family has no line")
+        if not self.period or self.void_rule not in {"VOID_IF_NOT_COMPLETED"}:
+            raise ValueError("explicit period and supported void rule required")
 
 
 class SportModel(Protocol):

@@ -8,6 +8,8 @@ Previous Sports Results/_football_research/*.json
 Previous Sports Results/_football_research/sources/
 Previous Sports Results/_football_research/__pycache__/
 
+# Regenerable bulk canonical exports; retained manifests and journals are tracked.
+Previous Sports Results/_canonical/*.csv
+Previous Sports Results/_canonical/.stage*/
 __pycache__/
-*.py[cod]
-
+.pytest_cache/

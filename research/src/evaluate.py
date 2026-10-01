@@ -106,6 +106,9 @@ def summarize(frame: pd.DataFrame) -> dict:
 
 
 def run_tuning() -> dict:
+    lock_path = RUNS / "epl_tuning_lock.json"
+    if lock_path.exists() or any(RUNS.glob("epl_tuning_xi_*.csv")):
+        raise RuntimeError("EPL tuning already locked; create a new versioned development protocol, never overwrite")
     df = pd.read_parquet(PROCESSED / "matches.parquet")
     RUNS.mkdir(exist_ok=True)
     results = {}
@@ -119,21 +122,31 @@ def run_tuning() -> dict:
                     data_sha256=sha(PROCESSED / "matches.parquet"), seasons=TUNING_SEASONS,
                     xi_grid=XI_GRID, selected_xi=best, criterion="minimum mean 1X2 log-loss",
                     model_version="epl-dc-0.1.0", fixed_bootstrap_reps=BOOTSTRAP_REPS,
-                    seed=SEED, results=results)
-    (RUNS / "epl_tuning_lock.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")
+                    seed=SEED, results=results,
+                    code_sha256={str(p.relative_to(ROOT.parent)).replace('\\','/'):sha(p)
+                        for p in (Path(__file__), Path(__file__).with_name("dixon_coles.py"),
+                                  Path(__file__).with_name("features.py"), Path(__file__).with_name("load.py"))})
+    with lock_path.open("x", encoding="utf-8") as handle:
+        handle.write(json.dumps(manifest, indent=2)+"\n")
     return manifest
 
 
 def run_holdout() -> dict:
+    result_path = RUNS / "epl_2025-26_holdout.csv"
+    report_path = RUNS / "epl_2025-26_holdout.json"
+    if result_path.exists() or report_path.exists():
+        raise RuntimeError("one-shot holdout already exists; do not overwrite")
     lock_path = RUNS / "epl_tuning_lock.json"
     if not lock_path.exists():
         raise RuntimeError("tuning lock is required before holdout")
     lock = json.loads(lock_path.read_text(encoding="utf-8"))
     if sha(PROCESSED / "matches.parquet") != lock["data_sha256"]:
         raise RuntimeError("data changed after tuning lock")
-    result_path = RUNS / "epl_2025-26_holdout.csv"
-    if result_path.exists():
-        raise RuntimeError("one-shot holdout already exists; do not overwrite")
+    if not lock.get("code_sha256"):
+        raise RuntimeError("new holdouts require code hashes frozen before evaluation; historical lock is read-only")
+    for name, digest in lock["code_sha256"].items():
+        if sha(ROOT.parent / name) != digest:
+            raise RuntimeError("code changed after tuning lock: "+name)
     df = pd.read_parquet(PROCESSED / "matches.parquet")
     frame = forecast(df, (HOLDOUT,), lock["selected_xi"], result_path)
     report = summarize(frame)
@@ -146,7 +159,8 @@ def run_holdout() -> dict:
         report["lane_decision"] = "M1_ONLY_PASS"
     else:
         report["lane_decision"] = "STOP"
-    (RUNS / "epl_2025-26_holdout.json").write_text(json.dumps(report, indent=2)+"\n", encoding="utf-8")
+    with report_path.open("x", encoding="utf-8") as handle:
+        handle.write(json.dumps(report, indent=2)+"\n")
     return report
 
 

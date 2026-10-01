@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "iowa_state_official",
+  "publisher": "Iowa State Athletics",
+  "upstream_lineage_id": "IOWA_STATE_OFFICIAL_REPORT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://cyclones.com/sports/football/stats/2025/kansas-state/boxscore/17234",
+  "final_url": "https://cyclones.com/sports/football/stats/2025/kansas-state/boxscore/17234",
+  "retrieved_utc": "2026-10-01T01:20:32.346669+00:00",
+  "response_sha256": "cc840f03997fecb056f5b5df46653df19ccd1c00a3f33165adbfa2cde62b8bac",
+  "body_path": "research/data/raw/source_snapshots/iowa_state_official_20261001T012032346669Z_cc840f03997f.body",
+  "response_bytes": 1940560,
+  "content_type": "text/html;charset=utf-8",
+  "parser_id": "REVIEWED_HTML_V1",
+  "registry_sha256": "dcca91a8ce7d87b14b070fd0c08115dd215bad6b8022f8eb6959bf9438435bed",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

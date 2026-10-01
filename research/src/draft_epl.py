@@ -18,6 +18,7 @@ import pandas as pd
 from .dixon_coles import fit_dc, rates, score_matrix
 from .emit_card import build, markdown
 from .load import PROCESSED, ROOT, sha
+from .model_custody import verify_model_build
 
 
 def _states(matrix):
@@ -27,6 +28,7 @@ def _states(matrix):
 
 def draft(event_path: Path, output: Path, now: datetime | None = None) -> dict:
     now=now or datetime.now(timezone.utc)
+    build_receipt=verify_model_build("EPL", "epl-dc-0.1.0")
     event=json.loads(event_path.read_text(encoding="utf-8"))
     if event.get("state")!="PREGAME":
         raise ValueError("event is not confirmed pregame")
@@ -88,6 +90,11 @@ def draft(event_path: Path, output: Path, now: datetime | None = None) -> dict:
     output_data["identity_sources"]=sources
     output_data["event_receipt_sha256"]=sha(event_path)
     output_data["shadow_only"]=True
+    output_data["issuance_status"]="READ_ONLY_DRAFT / NOT_ISSUED"
+    output_data["performance_eligible"]=False
+    output_data["model_build_receipt_sha256"]=sha(ROOT/"model_builds/current.json")
+    output_data["qualified_families"]=build_receipt.get("retrospective_families", [])
+    output_data["unvalidated_families"]=["TOTAL_2_5", "BTTS"]
     output.parent.mkdir(parents=True,exist_ok=True)
     if output.exists() or output.with_suffix(".md").exists():
         raise FileExistsError("draft output already exists; use a new immutable name")

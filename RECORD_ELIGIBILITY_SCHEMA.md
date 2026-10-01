@@ -1,41 +1,22 @@
-# Prospective record and eligibility contract
+# Record eligibility schema
 
-**As recorded on 2026-09-28:** zero verified performance-eligible decisions. All issued cards are `LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE`; `C-RULE-FREEZE` remains in force. This Markdown contract replaces the current-tree pointers to deleted `research/settled_rows_2026-09-28/RECORD_SCHEMA.md` and `CAPABILITY_STATUS.md` (parent Git blobs `587c7e39cca30fef3dd62c6d90e0b047888d2f00` and `a6ef62b0d5ccf016bfb0358686939253470c3f04`; [recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). It states what must be recorded; it does not claim that a machine validator or a prospective dataset exists in the then Markdown-only tree.
+Machine implementation: [eligibility.py](research/src/eligibility.py), [ledger.py](research/src/ledger.py), [issue.py](research/src/issue.py). Current rules: [CURRENT_RULES.md](CURRENT_RULES.md).
 
-## Grain and required fields
-
-**2026-09-29 pipeline status.** The EPL 2025–26 model-only holdout passed its declared M2-versus-population log-loss gate, as recorded in [the pipeline gate register](PIPELINE_IMPLEMENTATION_2026-09-29.md). This is retrospective model evidence. There are still zero eligible prospective **card** decisions. The 522-slot historical ledger under `research/` is learning-only and sparse by design; its blank cells cannot satisfy the admission decision below.
-
-One row is one **issued target decision at one forecast freeze and one settlement revision**. A card can have several rows, and a sporting event can have several cards. Do not count correlated rows as independent events. Every prospective row needs:
-
-| Group | Required content |
-|---|---|
-| Identity | Schema version; official event ID; event-cluster ID; immutable forecast ID; card ID; decision ID; target ID; contract ID; sport, competition, season, and official participant IDs. Names alone are insufficient identity keys. |
-| Contract | Measure, period, line, side, units, overtime, draw, push, void, action and version terms, including exact settlement rules. |
-| Freeze and selection | Timezone-aware input cutoff, latest input availability, issue time, verified actual start, rank, horizon, selection-policy version and `preferred_at_issue` frozen before the result. Do not derive preference from p or outcome later. |
-| Forecast object | Distribution identity/type/SHA-256; exhaustive W/P/L masses and V when applicable; each mass in [0,1], total 1; stated p; q and its declared semantics. RM-1 q is `ROW_CALIBRATED_NOT_JOINT`. |
-| Baseline and build | Literal issue-time `BASELINE_P` status, probability/vector if actually derived, exact event/target/contract/horizon/cutoff match, training cutoff, method/control/manifest/build hashes and ranking-model version/hash. Missing remains `NOT_YET_DERIVED`. |
-| Source receipts | Issue and terminal reference/URL, retrieval timestamp, response hash, exact event/state/result and upstream lineage. Three pages copying one feed are one lineage. |
-| Settlement revision | Observed value, W/P/L/V result, terminal state, revision ID, superseded revision when corrected, field-level source map, and missingness reasons. Issued p/q/rank/distribution are immutable. |
-| Pairing and cohort | Complementary-pair ID, covering-pair ID, target weight, event-cluster weight and exclusions. Score a forced pair's frozen preferred choice once. |
-
-## Admission decision
-
-Require latest available input ≤ cutoff < issue < actual start for a pregame record, plus at least three independent pre-issue identity/state lineages and three independent post-start terminal lineages. A live-issued card retains its actual horizon and cannot be converted to pregame. Confirm exact contract, event and settlement revisions; compare every number and rank with the frozen issue. Require a same-contract baseline measured without future information. A valid-looking row alone never grants eligibility. Any missing timestamp, identity, baseline, independent lineage, or build receipt fails closed with an explicit reason.
-
-Push-capable contracts need a vector-aware scoring method. Until one is specified, they are excluded, and counted, from the binary q-versus-p comparison.
-
-RM-1 q is a row-calibrated ranking score (`ROW_CALIBRATED_NOT_JOINT`). It is scored in one place only: `T-RM1-PROSPECTIVE`'s paired Brier(q) against Brier(p), as a row-level diagnostic of the ranking model, under the admission rules in `SCORING_AND_VALIDATION.md` §15. Treating q as the card's event probability, multiplying q values, or using q for joint numbers is invalid.
-
-The 100 decisions / 30 cards (`C-BASELINE-SKILL`) and the 25 RM-1 cards (`T-RM1-PROSPECTIVE`) are **preregistered read-out points**. When a count is reached, its preregistered decision rule is applied once (`SKILL_BASELINE_LEDGER.md` rule 7; `CURRENT_RULES.md` §D9). A read-out is not a proof threshold and grants no eligibility under this contract. The 150 shadow games in historical plans belong to lanes suspended in md-only operation. Evidence of prospective skill additionally needs a point-in-time cohort, a frozen comparator, chronological evaluation, calibration and uncertainty, critical-slice checks, and untouched blind shadow observations.
-
-## Current capability by scope
-
-| Scope | Historical evidence | Prospective approved state |
+| Record type | Eligibility | Required custody |
 |---|---|---|
-| Human card method and RM-1 | Historical mixed and selected diagnostics; 29 hindsight seed decisions in [Skill Baseline Ledger](SKILL_BASELINE_LEDGER.md), Brier 0.2461 versus population 0.2360 | None; zero eligible prospective rows |
-| TB-1-MD | Aggregate historical evaluation and preregistration in [Validation Evidence](VALIDATION_EVIDENCE.md); game-level rerun inputs absent in current tree | Provisional reference only; no card performance claim |
-| Reduced-feature sport models | Dated retrospective work for selected league/target cohorts in Git history, with mixed outcomes and selection limitations | No approved issued or performance model; no transfer to neighboring leagues |
-| AFLW, ACB, NPB/KBO and other unsupported competition targets | Some card diagnostics or nearby-sport constants; no exact validated population baseline in the disputed P-518–P-522 record | `NOT_YET_DERIVED` where missing; no prospective scoring admission |
+| Historical literal learning | Always performance-ineligible | Original rank/log pointer; preserved missingness/conflicts |
+| Provisional current observation | Never a forecast | Immutable body, exact parse/field and retrieval hash |
+| Model-only shadow | Always performance-ineligible | Before-start forecast, input/build hashes, family/endpoint, full coverage |
+| Prepared live draft | No issued trial yet | Complete evidence-derived admission and unconsumed proposed ID |
+| Committed live issue | Pending terminal admission | Frozen universe, three independent pregame lineages, exact qualification, transaction/core/bundle hashes |
+| Settlement revision | Eligible only if all gates pass | Unchanged issue core, three independent finals, audited actual start, chained correction reason |
 
-The deleted historical extractor reported 1,188 non-conflicted rows from 308 cards, including 556 probability rows, plus 72 unattributed rows and 83 card/rank conflicts. Those are parser counts, **not** verified unique decisions; its strict gate yielded zero eligible rows. The old `0.2268` retrospective score must not be called a prospective decision Brier. These historical counts are not regenerated in this tree.
+The bundle schema is `forecast-evidence-1`; the lock schema is `pilot-lock-2`. Required source admissions bind league/parser/endpoint, upstream collector audit and event/body-specific lineage audit. Required model admissions bind exact version and family plus untouched holdout and prospective-shadow/issuer/adapter evidence. An old generic holdout pass does not qualify a new model or totals/BTTS. Current registries retain SHADOW_ONLY model status and UNKNOWN independent collectors.
+
+Temporal gates are strict: input/artifact availability <= cutoff < issue < verified scheduled start. Pregame receipts and lineage review must be available before cutoff and sufficiently fresh. Terminal scoring additionally proves issue < actual_start and final observation after that start. A scheduled start alone is not actual start. Naive timestamps fail.
+
+All model/card/baseline probabilities are re-derived from retained distributions joined to the exact input checksum and contract. Direct per-row p edits, mismatched state hashes, duplicate contracts, endpoint changes and unsupported adjustments fail. Integer score states and finite lines are checked. NONE adjustments cannot change state mass.
+
+Canonical ledger records use a SHA-256 previous-record chain and file locks. Issue preparation is journaled before the append; commitment verifies the projection. A pending transaction blocks the next ID. Corrections append instead of overwriting. Historical rows can never acquire prospective eligibility through a correction.
+
+An excluded event carries a reason. Registered fixtures without decisions, abstentions, unresolved settlements, changed bodies, missing source fields and unavailable sources remain visible in coverage. Empty scored cohorts are reported as empty, never zero loss or perfect performance.

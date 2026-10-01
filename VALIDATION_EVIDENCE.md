@@ -1,3 +1,9 @@
+# Current validation authority - 2026-10-01
+
+The historical evidence below is preserved for learning. Current results and limitations are in [IMPLEMENTATION_2026-10-01.md](IMPLEMENTATION_2026-10-01.md) and [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md). Original September holdouts remain unchanged; October candidate comparisons use opened chronological development data. Every current model is SHADOW_ONLY and prospective skill is not established. A q transform, a file hash, a historical grade or passing mechanics tests cannot confer live qualification.
+
+---
+
 # Validation evidence and historical source bundle
 
 **Preserved 2026-09-28; current status: historical evaluation evidence, not a new validation run.** The old research directory was removed to satisfy the Markdown-only repository rule. The original preregistration, aggregate outputs, inputs, and implementation text are embedded below, with line endings normalized for Markdown. The original Git blobs remain in parent commit `3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa`.

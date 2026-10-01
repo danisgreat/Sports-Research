@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 from datetime import datetime, timezone
-from urllib.request import Request, urlopen
+from .sources import fetch_source, verified_body, read_registry, allowed_url
 
 from .settle import FinalReceipt
 
@@ -17,9 +17,14 @@ ESPN_PATHS = {
 
 
 def _fetch(url: str) -> tuple[dict, str, datetime]:
-    with urlopen(Request(url), timeout=25) as reply:
-        raw = reply.read()
-    return json.loads(raw), hashlib.sha256(raw).hexdigest(), datetime.now(timezone.utc)
+    candidates=[sid for sid,source in read_registry().items() if allowed_url(url,source)]
+    if url.startswith("https://site.api.espn.com/"):
+        candidates=[sid for sid in candidates if (sid=="espn_epl" and "/soccer/eng.1/" in url)
+                    or (sid=="espn_nbl" and "/basketball/nbl/" in url)]
+    if len(candidates)!=1:
+        raise ValueError("exact approved source adapter is required")
+    receipt=fetch_source(candidates[0],url)
+    return json.loads(verified_body(receipt)),receipt["response_sha256"],datetime.fromisoformat(receipt["retrieved_utc"])
 
 
 def mlb_final(game_pk: int, endpoint: str = "INCL_EXTRAS") -> FinalReceipt:

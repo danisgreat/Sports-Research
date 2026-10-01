@@ -1,3 +1,5 @@
+> **Current research controls (2026-10-01):** [CURRENT_RULES.md](CURRENT_RULES.md) governs data/model/issuance eligibility. Verify current official competition rules and endpoint before applying the reference below. Historical operating-method pointers are superseded for new work.
+
 # Soccer — sport and competition rules reference
 
 > **Status (md-only, 2026-09-28):** reference material for identity, format and settlement. No scope is prospectively validated; every card is LEARNING_ONLY. Live rules: `CURRENT_RULES.md` and the sport file's §0.

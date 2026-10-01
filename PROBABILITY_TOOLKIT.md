@@ -1,3 +1,11 @@
+# Current model authority - 2026-10-01
+
+New numerical work uses [CURRENT_RULES.md](CURRENT_RULES.md), [registered executable model builds](research/model_builds/current.json), and [current scoring](SCORING_AND_VALIDATION.md). The arithmetic reference below preserves the older method. RM-1 q is historical ordering only; it cannot substitute for a coherent event probability or baseline. New cards rank p_card from a single supported distribution. Legacy manual distributions, widths and q instructions cannot qualify a new forecast.
+
+Current candidates are the coherent EPL 0.75 DC/0.25 TB1 ensemble for regulation 1X2 and NBL joint-margin mean with chronological out-of-fold residual width for overtime-inclusive ML. Population distributions, TB1 and fixed Elo are tested comparators. Source-backed feature availability, exact family gates, dependency hashes and prospective evidence remain mandatory. Totals/BTTS are coherent diagnostics with no current live qualification. See the frozen October development protocol and family report in research/runs/implementation_2026-10-01/.
+
+---
+
 # Probability toolkit — every number a card needs, by hand
 
 **Opened 2026-09-28 (md-only operation).** The forecasting model reads Markdown files only. It never runs Python or opens a JSON, CSV or other non-Markdown file. This page gives it everything the old tools computed:

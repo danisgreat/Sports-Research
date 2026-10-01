@@ -242,7 +242,7 @@ def test_epl_model_to_shadow_draft_bridge(tmp_path):
     assert output.exists() and output.with_suffix(".md").exists()
 
 
-def test_pilot_scores_one_complete_event_once(tmp_path):
+def test_pilot_rejects_unbacked_csv_eligibility_flags(tmp_path):
     import csv
     fields=next(csv.reader((ROOT/"PILOT_LEDGER_TEMPLATE.csv").open(encoding="utf-8")))
     values=[("1X2","HOME","",.5,"W"),("1X2","DRAW","",.25,"L"),
@@ -260,7 +260,5 @@ def test_pilot_scores_one_complete_event_once(tmp_path):
                        data_cutoff_utc="2026-10-01T08:00:00Z",issued_utc="2026-10-01T09:00:00Z",
                        actual_start_utc="2026-10-01T10:00:00Z",adjustment_type="NONE")
             writer.writerow(row)
-    events=score_events(path)
-    assert len(events)==1
-    assert events.iloc[0].model_logloss==pytest.approx(events.iloc[0].card_logloss)
-    assert events.iloc[0].adjusted==False
+    with pytest.raises((ValueError, RuntimeError),match="(?i)(csv|canonical|ledger|bare|json)"):
+        score_events(path)

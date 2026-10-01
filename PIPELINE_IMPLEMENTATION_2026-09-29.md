@@ -1,3 +1,9 @@
+# Historical pipeline plan - superseded for current procedures
+
+The September plan and results below are retained as historical context. [CURRENT_RULES.md](CURRENT_RULES.md), [research/README.md](research/README.md) and [IMPLEMENTATION_2026-10-01.md](IMPLEMENTATION_2026-10-01.md) control new model/source/process work. Earlier holdouts and forecast bytes remain frozen; new development candidates, eligibility and issuer/pilot controls have separate versioned receipts.
+
+---
+
 # Forecast pipeline implementation decision and gate register
 
 **Decision date:** 2026-09-29. **Authority:** the user's instruction to implement the supplied plan fully, followed by explicit permission for non-Markdown files in this repository and for closing odds **after settlement only**. The older Markdown-only directive is superseded for `research/`. Issued source bytes and P-518–P-522 custody are unchanged. New card IDs still begin at P-523 in combined Part 6.

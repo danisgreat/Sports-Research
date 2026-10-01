@@ -3,3 +3,6 @@
 research/** -text whitespace=cr-at-eol
 research/data/raw/openfootball/*.txt binary
 research/**/*.parquet binary
+"Previous Sports Results/_canonical/**" -text
+"Previous Sports Results/_custody/**" -text
+"Previous Sports Results/_football_research/*.py" -text
