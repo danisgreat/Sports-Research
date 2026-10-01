@@ -760,6 +760,36 @@ Traps found and handled while building the EuroBasket files:
 
 ---
 
+### 3.20 Australia National Basketball League (NBL) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/NBL/<YEAR>/<YEAR>_games.csv and NBL_CSVs/NBL_<YEAR>.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 51 years (1975–2025, covering 8,095 total game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `NBL_CSVs/`. Season = start calendar year of the competition.
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| NBL Official Rosetta API (Seasons) | `https://prod.rosetta.nbl.com.au/get/nbl/seasons` | Full league season registry (1979 through 2026+), UUIDs, year labels, start/end dates, season types (`regular`, `preseason`, `in_season`), and match UUID arrays. | FO (NBL Australia) | API (JSON, keyless with origin header) | 200 (all 75 seasonal datasets verified) |
+| NBL Official Rosetta API (Matches) | `https://prod.rosetta.nbl.com.au/get/nbl/matches/in/season/<YYYY>?limit=500&offset=0` | Seasonal match schedules, dates, venue UUIDs, team rosters, home/away scores, and match status (1979 to present). | FO | API (JSON, keyless) | 200 (all seasons verified) |
+| NBL Official Rosetta API (Live/Boxscore) | `https://prod.rosetta.nbl.com.au/get/match/<match_id>/live/all` | Match play-by-play, quarter partials, player boxscores, attendance, venue data, referee crews, and official status. | FO | API (JSON, keyless) | 200 (modern era verified) |
+| NBL Match Results Repository (`nblR` / Jason Zivkovic) | `https://github.com/JaseZiv/nblr_data/releases/download/match_results/results_wide.csv` | Comprehensive historical match results from the inaugural February 24, 1979 game through 2024–25 and future fixtures: date, venue, home/away teams, scores, match type, attendance. | S (Curated NBL Archive) | Open Data (CSV, HTTPS) | 200 (8,079 matches verified) |
+| NBL Team Boxscores Repository (`nblR`) | `https://github.com/JaseZiv/nblr_data/releases/download/box_team/box_team.csv` | Full team boxscores for 2015–16 to 2025–26: quarter partials (P1–P4, OT), 2PT/3PT/FT shooting, rebounds, assists, steals, turnovers, blocks, points in paint. | S (Curated NBL Archive) | Open Data (CSV, HTTPS) | 200 (3,194 team rows verified) |
+| SpatialJam / SpatialEC Historical Analytics | `https://spatialjam.com/nbl-historical-stats` | Historical boxscores, shot charts, advanced analytics, and franchise lineage mappings. | S (Analytics Partner) | Web / Tableau | Verified |
+
+Traps found and handled while building the Australia NBL files:
+
+- **Pre-NBL Era (1975–1978):** The National Basketball League (originally founded as the National Invitation Basketball League in August 1978) commenced its inaugural season in February 1979 with 10 foundation clubs. Prior to 1979, national club basketball was contested via the Australian Club Championships (ACC) and National Titles. The 1975 to 1978 records are cataloged with official pre-establishment annotations.
+- **The 1998 Transition Year (Two Seasons in One Calendar Year):** From 1979 through 1998, the NBL was played during the Australian winter/autumn (Feb/Apr to Jul/Sep). In 1998, the league staged its 20th season from January to July 1998 (Adelaide 36ers champions), and then shifted to a summer schedule (October to April) beginning with the 1998–99 season (October 1998 to April 1999, Adelaide 36ers repeated). Both seasons began in 1998 and are recorded chronologically in `1998_games.csv` and `NBL_1998.csv` (331 total games).
+- **Rule Changes & Period Durations:**
+  - **1979–1983 (FIBA Halves Era):** 40-minute games consisting of **two 20-minute halves**; no 3-point field goal line existed.
+  - **1984–2008/09 (NBA 48-Minute Era):** The 3-point line was introduced in 1984, and game duration switched to **four 12-minute quarters (48 minutes total)**, resulting in high scoring outputs.
+  - **2009–10 to Present (Modern FIBA 40-Minute Era):** Switched back to **four 10-minute quarters (40 minutes total)** to align with international FIBA standards.
+- **Pre-Season & Mid-Season In-Season Tournaments:**
+  - **NBL Blitz:** Pre-season tournament introduced in 2004 awarding the Loggins-Bruton Cup and Ray Borner Medal.
+  - **NBL Cup (2020–21):** A 36-game mid-season hub held at Melbourne's John Cain Arena during COVID-19 border disruptions; all games counted towards regular-season standings.
+  - **NBL Ignite Cup (2025–26):** Mid-season Wednesday night tournament starting in Round 4.
+  - **NBLxNBA Series:** Pre-season exhibition games against NBA franchises introduced in October 2017.
+- **Postseason & Finals Evolution:** Single-game Grand Final (1979); Top 4 single elimination (1980–1983); Elimination finals + SF + GF (1984–1985); Best-of-3 Grand Final series introduced in 1986; Top 6/Top 8 formats (1987–2008); Top 4 format (2009–2022, Grand Final expanded to Best-of-5 in 2017); **Modern Play-In Tournament** introduced in 2022–23 for seeds 3–6 preceding best-of-3 Semifinals and best-of-5 Grand Final.
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
