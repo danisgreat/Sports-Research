@@ -24,6 +24,14 @@ class EvidenceFactory:
         monkeypatch.setattr(pilot, "_utc_now", lambda: owner.clock)
         monkeypatch.setattr(issue, "_utc_now", lambda: owner.clock)
         self.model_ref = self.ref("model.py", {"test_only": True})
+        self.baseline_code_ref = self.ref("baseline.py", {"test_only": True, "method": "synthetic fixed population"})
+        self.baseline_version = "fixture-population-1"
+        self.baseline_approval = (self.clock-timedelta(days=90)).isoformat()
+        self.baseline_definition = dict(schema_version="baseline-definition-1", status="APPROVED", lane="EPL", league="EPL",
+            endpoint="REGULATION", families=["1X2", "TOTAL", "BTTS"], baseline_version=self.baseline_version,
+            approved_utc=self.baseline_approval, reviewed_utc=self.baseline_approval, reviewed_by="SYNTHETIC TEST",
+            basis="Fixed synthetic comparator, not a real baseline", code_artifacts=[self.baseline_code_ref])
+        self.baseline_ref = self.ref("baseline-definition.json", self.baseline_definition)
         evidence = self.ref("lineage-basis.json", {"test_only": True, "basis": "Synthetic independent collection records"})
         self.sources = {"sources": {}}
         fields = {k: f"/event/{k}" for k in ("event_id", "league", "home", "away", "scheduled_start_utc", "actual_start_utc", "state", "endpoint", "score_home", "score_away")}
@@ -42,6 +50,7 @@ class EvidenceFactory:
         self.write(self.sources_path, self.sources)
         holdout = self.ref("holdout.json", {"stage":"ONE_SHOT_HOLDOUT", "lane":"EPL", "league":"EPL", "model_version":"fixture-1", "endpoint":"REGULATION",
             "lane_decision": "M2_PASS", "validated_families": ["1X2", "TOTAL", "BTTS"],
+            "baseline_version": self.baseline_version, "baseline_definition_ref": self.baseline_ref,
             "family_gates": {family:{"lane_decision":"M2_PASS","paired_logloss_ci95":[-.2,-.1]} for family in ("1X2","TOTAL","BTTS")}})
         shadow = self.ref("shadow.json", dict(independent_events=50,
             first_forecast_utc=(self.clock-timedelta(days=50)).isoformat(), last_forecast_utc=(self.clock-timedelta(days=20)).isoformat()))
@@ -50,16 +59,21 @@ class EvidenceFactory:
             forecast=self.clock-timedelta(days=50)+timedelta(days=30*i/49)
             shadow_refs.append(self.ref(f"qualification-shadow-{i}.json",dict(event_id=f"qualification-fixture-{i}",lane="EPL",league="EPL",
                 model_version="fixture-1",endpoint="REGULATION",model_artifacts=[self.model_ref],shadow_only=True,performance_eligible=False,
+                baseline_version=self.baseline_version,baseline_definition_ref=self.baseline_ref,baseline_code_artifacts=[self.baseline_code_ref],
                 forecast_utc=forecast.isoformat(),data_cutoff_utc=(forecast-timedelta(seconds=1)).isoformat(),start_utc=(forecast+timedelta(hours=1)).isoformat())))
         shadow_manifest=self.ref("shadow-manifest.json",dict(schema_version="shadow-manifest-1",receipts=shadow_refs))
         qualification = self.ref("qualification.json", dict(status="APPROVED", lane="EPL", league="EPL", model_version="fixture-1",
             endpoint="REGULATION", families=["1X2", "TOTAL", "BTTS"], reviewed_utc=(self.clock-timedelta(days=10)).isoformat(),
             reviewed_by="SYNTHETIC TEST", basis="Synthetic admission tests", holdout_ref=holdout, shadow_ref=shadow,
-            issuer_ref=evidence, terminal_adapter_ref=evidence, shadow_manifest_ref=shadow_manifest,model_artifacts=[self.model_ref]))
+            issuer_ref=evidence, terminal_adapter_ref=evidence, shadow_manifest_ref=shadow_manifest,model_artifacts=[self.model_ref],
+            baseline_version=self.baseline_version,baseline_definition_ref=self.baseline_ref))
         self.registry = {"admissions": [dict(lane="EPL", league="EPL", model_version="fixture-1", endpoint="REGULATION",
             families=["1X2", "TOTAL", "BTTS"], status="LIVE_QUALIFIED", qualified_utc=(self.clock-timedelta(days=9)).isoformat(),
+            baseline_version=self.baseline_version,
             model_artifacts=[self.model_ref], qualification_artifacts=[{**qualification, "kind": "live_qualification"}],
-            adjustment_methods=[dict(method_version="fixture-adjustment-1",status="APPROVED",approved_utc=(self.clock-timedelta(days=9)).isoformat(),artifact_ref=evidence)]) ]}
+            adjustment_methods=[dict(method_version="fixture-adjustment-1",status="APPROVED",approved_utc=(self.clock-timedelta(days=9)).isoformat(),artifact_ref=evidence)]) ],
+            "baseline_definitions": [{k:self.baseline_definition[k] for k in ("baseline_version", "lane", "league", "endpoint", "families", "status", "approved_utc", "code_artifacts")}]}
+        self.registry["baseline_definitions"][0]["definition_ref"] = self.baseline_ref
         self.registry_path = self.root/"admission_registry.json"
         self.write(self.registry_path, self.registry)
         self.ledger_path = self.root/"canonical.jsonl"
@@ -101,13 +115,14 @@ class EvidenceFactory:
         distributions = {}
         for label, probs in masses.items():
             distributions[label] = self.ref(f"{event_id}-{label}.json", dict(schema_version="score-distribution-1", event_id=event_id,
-                endpoint="REGULATION", model_version="fixture-1", baseline_version="fixture-population-1", data_cutoff_utc=cutoff.isoformat(),
+                endpoint="REGULATION", model_version="fixture-1", baseline_version=self.baseline_version,
+                baseline_definition_ref=self.baseline_ref,baseline_code_artifacts=[self.baseline_code_ref],data_cutoff_utc=cutoff.isoformat(),
                 input_checksum=checksum, states=[dict(home=h,away=a,p=p) for (h,a),p in zip(scores,probs)]))
         contracts = [dict(market="1X2", side=s, line=None, endpoint="REGULATION") for s in ("HOME","DRAW","AWAY")]
         contracts += [dict(market="TOTAL", side=s, line=2.5, endpoint="REGULATION") for s in ("OVER","UNDER")]
         contracts += [dict(market="BTTS", side=s, line=None, endpoint="REGULATION") for s in ("YES","NO")]
         bundle = dict(schema_version=eligibility.SCHEMA_VERSION, event_id=event_id, lane="EPL", league="EPL", season="TEST2030",
-            home="HOME", away="AWAY", endpoint="REGULATION", model_version="fixture-1", issued_utc=when.isoformat(),
+            home="HOME", away="AWAY", endpoint="REGULATION", model_version="fixture-1", baseline_version=self.baseline_version,issued_utc=when.isoformat(),
             data_cutoff_utc=cutoff.isoformat(), scheduled_start_utc=start.isoformat(), input_artifacts=[artifact], input_checksum=checksum,
             registry_sha256=eligibility.file_sha(self.registry_path), sources_registry_sha256=eligibility.file_sha(self.sources_path),
             distributions=distributions, contracts=contracts, adjustment_type="NONE" if adjustment == "NONE" else "SYNTHETIC_TEST",

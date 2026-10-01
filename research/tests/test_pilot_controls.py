@@ -22,7 +22,8 @@ def locked_cohort(evidence,adjustments):
     power=evidence.ref("power-plan.json",dict(target_adjusted_events=8,futility_look_events=4,mwi_brier=.01,
         minimum_week_blocks=4,method="Synthetic tests only: four interim and eight final week blocks",basis_refs=[basis]))
     definition=dict(cohort_version="SYNTHETIC_TEST_ONLY",weights={"EPL":1.0},target_adjusted_events=8,
-        model_versions={"EPL":"fixture-1"},endpoints={"EPL":"REGULATION"},league_seasons={"EPL":{"league":"EPL","season":"TEST2030"}},
+        model_versions={"EPL":"fixture-1"},baseline_versions={"EPL":evidence.baseline_version},
+        endpoints={"EPL":"REGULATION"},league_seasons={"EPL":{"league":"EPL","season":"TEST2030"}},
         futility_look_events=4,mwi_brier=.01,minimum_week_blocks=4,seed=1,bootstrap_reps=10000,
         cohort_issue_from_utc=(first-timedelta(minutes=1)).isoformat(),cohort_issue_to_utc=(first+timedelta(days=100)).isoformat(),
         inclusion_rule="FIRST_CHRONOLOGICAL_ADJUSTED_ISSUES",power_plan_ref=power,universe_refs=[universe])

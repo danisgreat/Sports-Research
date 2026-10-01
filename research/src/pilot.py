@@ -154,10 +154,11 @@ def _validate_lock(lock: dict, *, root: Path):
     if lock.get("weights") != {"EPL": 1.0}:
         raise ValueError("pilot v2 is EPL-only with a fixed weight of one")
     if (set(lock.get("model_versions", {})) != {"EPL"} or not lock["model_versions"]["EPL"]
+            or set(lock.get("baseline_versions", {})) != {"EPL"} or not lock["baseline_versions"]["EPL"]
             or lock.get("endpoints") != {"EPL": "REGULATION"}
             or set(lock.get("league_seasons", {})) != {"EPL"}
             or lock["league_seasons"]["EPL"].get("league") != "EPL" or not lock["league_seasons"]["EPL"].get("season")):
-        raise ValueError("exact model version, competition, season and endpoint must be frozen")
+        raise ValueError("exact model/baseline version, competition, season and endpoint must be frozen")
     target, interim = lock.get("target_adjusted_events"), lock.get("futility_look_events")
     if isinstance(target, bool) or not isinstance(target, int) or isinstance(interim, bool) or not isinstance(interim, int) or not 0 < interim < target:
         raise ValueError("fixed positive integer target and earlier single interim required")
@@ -205,12 +206,14 @@ def freeze_lock(lock_path: Path, definition: dict, *, ledger_path: Path,
             "sources_registry_path": str(source_path), "sources_registry_sha256": file_sha(source_path),
             "evidence_root": str(root), "state_path": str(state_path.resolve())}
     _, first, last = _validate_lock(lock, root=root)
-    admissions = json.loads(registry_path.read_text(encoding="utf-8")).get("admissions", [])
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    admissions = registry.get("admissions", [])
     if not any(e.get("lane") == "EPL" and e.get("model_version") == lock["model_versions"]["EPL"] and e.get("status") == "LIVE_QUALIFIED" and {"1X2", "TOTAL", "BTTS"} <= set(e.get("families", [])) for e in admissions):
         raise ValueError("no live-qualified EPL composite scope; a retrospective pass cannot start this pilot")
-    _qualification(dict(lane="EPL",league="EPL",model_version=lock["model_versions"]["EPL"],endpoint="REGULATION",
+    _qualification(dict(lane="EPL",league="EPL",model_version=lock["model_versions"]["EPL"],
+                        baseline_version=lock["baseline_versions"]["EPL"],endpoint="REGULATION",
                         contracts=[{"market":f} for f in ("1X2","TOTAL","BTTS")]),
-                   {"admissions":admissions},root,now,False)
+                   registry,root,now,False)
     if any(first <= aware_time(p["bundle"]["issued_utc"]) < last for p in committed_issues(records)):
         raise ValueError("pilot cohort already contains issued events; lock is retrospective")
     if lock_path.exists() or state_path.exists():
@@ -259,7 +262,8 @@ def decision(path: Path, lock_path: Path) -> dict:
         window_issues = [p for p in events.attrs["issues"] if p["lane"] in lock["weights"] and first <= aware_time(p["bundle"]["issued_utc"]) < last]
         def in_scope(p):
             b=p["bundle"]
-            return (b["model_version"]==lock["model_versions"][b["lane"]] and b["endpoint"]==lock["endpoints"][b["lane"]]
+            return (b["model_version"]==lock["model_versions"][b["lane"]]
+                    and b.get("baseline_version")==lock["baseline_versions"][b["lane"]] and b["endpoint"]==lock["endpoints"][b["lane"]]
                     and all(b[k]==lock["league_seasons"][b["lane"]][k] for k in ("league","season")))
         issues = [p for p in window_issues if in_scope(p)]
         if any(registered.get(event_key(p), {}).get("universe_sha256") not in declared for p in issues):
@@ -274,7 +278,7 @@ def decision(path: Path, lock_path: Path) -> dict:
                        cohort_membership=membership, membership_sha256=digest(membership),
                        exclusions=events.attrs["exclusions"], abstentions=events.attrs["abstentions"],
                        all_events_logloss=None)
-        summary["exclusions"] += [{"identity":list(event_key(p)),"reason":"OUTSIDE_PREREGISTERED_MODEL_COMPETITION_SEASON_ENDPOINT"} for p in window_issues if not in_scope(p)]
+        summary["exclusions"] += [{"identity":list(event_key(p)),"reason":"OUTSIDE_PREREGISTERED_MODEL_BASELINE_COMPETITION_SEASON_ENDPOINT"} for p in window_issues if not in_scope(p)]
         all_keys={event_key(p) for p in issues}
         all_scores=events.loc[[event_key(row) in all_keys for row in events.to_dict("records")]]
         if not all_scores.empty and all_scores.week.nunique()>=lock["minimum_week_blocks"]:
