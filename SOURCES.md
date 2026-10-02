@@ -882,6 +882,42 @@ Traps found and handled while building the NBA files:
 
 ---
 
+### 3.24 National Rugby League (NRL / NSWRL / ARL / Super League) game-by-game history, 1975-2025 (used to build Previous Sports Results/Rugby League/NRL/<YEAR>/<YEAR>_games.csv and NRL_CSVs/NRL_<YEAR>.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 9,583 total verified game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `NRL_CSVs/`. Season = calendar year of the competition (single calendar year, March to October).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Rugby League Project (RLP) Statistical Archive | `https://www.rugbyleagueproject.org/competitions/nrl-<YYYY>/rounds.html` (via curated `uselessnrlstats` RLP mirrors) | Complete first-grade match database (1908 to 2026): Match ID, date, round, special round, venue ID, crowd, home/away teams, home/away scores, halftime scores, penalties, and referee IDs. | S (Authoritative Historical Rugby League Archive) | Open Data (CSV, HTTPS) | 200 (14,967 matches cataloged, 9,583 matches in 1975–2025 window) |
+| Official NRL Draw & Score API | `https://www.nrl.com/draw/data?competition=111&season=<YYYY>&round=<round>` | Official NRL Premiership schedules, kickoff times (UTC and local), venue, city, team IDs, match mode, status, and scores from 1908 to present. | FO (Governing Body / National Rugby League) | API (JSON, keyless HTTPS) | 200 (seasons 1908–2026 confirmed in filterSeasons) |
+| RLP Player Match Scoring Archive | `https://raw.githubusercontent.com/uselessnrlstats/uselessnrlstats/main/cleaned_data/nrl/player_match_data.csv` | Player-level tries, penalty tries, goals, goal attempts, 1pt field goals, 2pt field goals, and points for every match (1908 to 2026). Used to aggregate team-level tries, goals, field goals, and identify top match scorers. | S (Player Scoring Archive) | Open Data (CSV, HTTPS) | 200 (36.8 MB, 9,582/9,583 matches covered 1975–2025) |
+| RLP Venue & Officiating Directories | `venue_data.csv`, `ref_data.csv`, `ref_match_data.csv` | Standardized venue names, cities, states, countries; match referee full names and assignments for all 51 seasons. | S (Reference Metadata) | Open Data (CSV, HTTPS) | 200 (102 venues, 243 referees, 14,957 match links) |
+
+Traps found and handled while building the NRL files:
+
+- **Era Transitions & Competition Rebranding (1975–2025):**
+  - **1975–1994 (NSWRL):** Governed by the New South Wales Rugby League. Began with 12 traditional Sydney clubs; expanded in 1982 to Canberra and Illawarra (14 teams); reduced to 13 in 1984 after Newtown departed; expanded interstate in 1988 with Brisbane, Newcastle, and Gold Coast (16 teams).
+  - **1995–1996 (ARL):** Administered nationally by the Australian Rugby League; expanded to 20 teams in 1995 with Auckland Warriors, North Queensland Cowboys, South Queensland Crushers, and Western Reds (Perth).
+  - **1997 (Super League War Split):** Two separate parallel first-grade premierships were conducted in 1997: the 12-team ARL Optus Cup (won by Newcastle Knights) and the 10-team Australasian Super League Telstra Cup (won by Brisbane Broncos). All 237 combined matches across both competitions are fully preserved and cataloged in the 1997 dataset with competition markers.
+  - **1998–Present (NRL):** Unified National Rugby League partnership between the ARL and News Limited, commencing with 20 teams in 1998 (including the debut of Melbourne Storm), rationalized via club mergers in 1999–2002 (St George Illawarra, Wests Tigers, Northern Eagles), Gold Coast Titans entry in 2007 (16 teams), and Dolphins entry in 2023 (17 teams).
+- **Point Scoring Rule Evolution:**
+  - **1975 to 1982:** Try = 3 points; Goal = 2 points; Field Goal = 1 point.
+  - **1983 to Present:** Try = 4 points; Goal = 2 points; Field Goal = 1 point.
+  - **2021 Addition:** 2-point field goal introduced for drop goals kicked from beyond the 40-metre line.
+- **Extra Time, Replays & Golden Point:**
+  - **Pre-2003:** Regular season games tied at 80 minutes ended as Draws (1 point each). Finals matches tied at 80 minutes played 20 minutes of extra time (two 10-minute halves); if still level, a full replay match was conducted (e.g. 1977 Grand Final replay won by St George over Parramatta; 1978 Grand Final replay won by Manly over Cronulla).
+  - **2003 to 2015:** Golden Point extra time introduced for regular season and finals (up to 10 minutes; sudden death).
+  - **2016 to Present:** Regular season maintains 10-minute Golden Point; Finals series play 10 minutes of extra time in full before moving to sudden-death Golden Point.
+- **Shortened & Disrupted Seasons:**
+  - **1996 Round 1 Super League Boycott:** The 8 Super League-aligned clubs boycotted Round 1 of the 1996 ARL premiership. The unplayed North Queensland Cowboys vs Canterbury-Bankstown Bulldogs fixture is accurately documented as a walkover/forfeit.
+  - **2020 COVID-19 Disruption:** Season suspended after Round 2 on March 23, 2020; resumed May 28, 2020 with an altered 20-round schedule and full 4-week finals series (169 total matches).
+- **Finals Series Evolution:**
+  - 1975–1994: Top 5 system (6 finals matches plus occasional mid-week 5th-place tiebreaker playoffs, e.g. 1975, 1984, 1987, 1988, 1989, 1991, 1992, 1993).
+  - 1995–2011: McIntyre Final Eight system (9 finals matches).
+  - 2012–Present: Current AFL/NRL Final Eight system (9 finals matches: 2 Qualifying, 2 Elimination, 2 Semi-Finals, 2 Preliminary Finals, 1 Grand Final).
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
