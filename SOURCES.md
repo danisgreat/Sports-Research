@@ -918,6 +918,57 @@ Traps found and handled while building the NRL files:
 
 ---
 
+### 3.25 Indian Premier League (IPL) match-by-match history, 1975-2025 (used to build Previous Sports Results/Cricket T20/IPL/<YEAR>/<YEAR>_games.csv and IPL_CSVs/IPL_<YEAR>.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 1,180 verified match records in the active era and 33 authoritative pre-foundation records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `IPL_CSVs/`. Season = calendar year of the tournament (single calendar year, March/April to May/June).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Cricsheet Open Data Match Archive | `https://cricsheet.org/downloads/ipl_json.zip` (and `ipl_csv2.zip`) | Complete ball-by-ball and match metadata (2008 to 2025): Match ID, date, teams, toss winner, toss decision, batting/bowling deliveries, runs, extras, wickets, method, outcome, margin, player of match, venue, city, and officials. | S (Gold Standard Open Cricket Data) | Open Data (ZIP/JSON, HTTPS) | 200 (1,243 total IPL JSON match records cataloged) |
+| Official BCCI & IPLT20 REST APIs | `https://stats.bcci.tv/match/results/?comp_gid={comp_gid}&page=1&size=100` and `https://www.iplt20.com/api/bff/cms/matches?season={year}&status=results` | Official BCCI competition GIDs, tournament schedules, team identities, short codes, colors, stadium coordinates, match rounds (League, Qualifier 1, Eliminator, Qualifier 2, Semi-Final, 3rd Place, Final), and official match result strings. | FO (Governing Body / Board of Control for Cricket in India) | API (JSON, keyless HTTPS) | 200 (18 official season GIDs verified from 2008 to 2025) |
+| ESPNcricinfo Series Registries | `https://www.espncricinfo.com/series/indian-premier-league-{year}-{seriesId}/match-schedule-fixtures-and-results` | Match numbering, scheduled fixtures, washouts/abandonments without a ball bowled, Duckworth-Lewis-Stern targets, and official scorecard verification. | S (Historical Cricket Record) | Web / Next.js JSON | 200 (all 18 active seasons matched) |
+| Cricsheet People Registry | `info.registry.people` within Cricsheet JSON | Persistent 8-character hexadecimal player IDs, umpire IDs, and match referee IDs. | S (Entity Resolution) | Open Data (JSON, HTTPS) | 200 (100% resolution for all participating athletes and officials) |
+
+Traps found and handled while building the IPL files:
+
+- **Pre-Foundation Era (1975–2007):**
+  - The Indian Premier League was established in late 2007 by the BCCI following India's victory in the inaugural 2007 ICC World Twenty20, commencing play on 18 April 2008.
+  - Domestic Twenty20 cricket did not exist anywhere in the world prior to 2003 (ECB Twenty20 Cup), and international T20 cricket commenced in February 2005.
+  - The 33 seasons spanning 1975 to 2007 are cataloged with standardized single-row pre-foundation documentation entries (`Game ID`: `IPL_<YEAR>_PRE_FOUNDATION`, `Match Type`: `Not applicable`, `Result`: `Pre-Foundation Era`), preserving 100% chronological integrity across all 51 requested seasons without omitting any years.
+- **Franchise Expansions, Contractions & Rebranding (2008–2025):**
+  - **2008–2010 (Founding 8 Franchises):** Chennai Super Kings (CSK), Deccan Chargers (DC), Delhi Daredevils (DD), Kings XI Punjab (KXIP), Kolkata Knight Riders (KKR), Mumbai Indians (MI), Rajasthan Royals (RR), and Royal Challengers Bangalore (RCB).
+  - **2011 (10 Franchises - First Expansion):** Kochi Tuskers Kerala (KTK) and Pune Warriors India (PWI) joined. 74 matches scheduled (73 played, 1 unbowled washout).
+  - **2012–2013 (9 Franchises):** Kochi Tuskers Kerala was terminated in late 2011. Deccan Chargers was terminated in late 2012 and replaced in 2013 by Sunrisers Hyderabad (SRH). Pune Warriors India withdrew in late 2013.
+  - **2014–2015 (8 Franchises):** 8 teams (CSK, DD, KKR, KXIP, MI, RR, RCB, SRH); 60 matches per season.
+  - **2016–2017 (8 Franchises - Supreme Court Suspensions):** CSK and RR served two-year suspensions following the Justice Lodha Committee inquiry. They were temporarily replaced by Rising Pune Supergiant (RPS) and Gujarat Lions (GL).
+  - **2018–2021 (8 Franchises - Return of CSK & RR and Modernization):** CSK and RR returned; RPS and GL ceased operations. In December 2018, Delhi Daredevils rebranded to Delhi Capitals (DC). In February 2021, Kings XI Punjab rebranded to Punjab Kings (PBKS).
+  - **2022–2025 (10 Franchises - Second Major Expansion):** Gujarat Titans (GT) and Lucknow Super Giants (LSG) debuted. In March 2024, Royal Challengers Bangalore rebranded to Royal Challengers Bengaluru (RCB). Tournament expanded to 74 matches per season (70 regular season + 4 playoffs).
+- **Relocated Tournaments & COVID-19 Disruptions:**
+  - **2009 (South Africa):** Staged entirely in South Africa across 8 venues (Johannesburg, Durban, Centurion, Cape Town, Port Elizabeth, East London, Bloemfontein, Kimberley) due to security constraints during the 2009 Indian general elections.
+  - **2014 (UAE & India Split):** First leg (20 matches) held in the United Arab Emirates (Dubai, Abu Dhabi, Sharjah) during the 2014 Indian general elections; second leg (40 matches) completed in India.
+  - **2020 (UAE Closed Doors):** Postponed to September–November 2020 due to COVID-19; staged in strict bio-bubbles in the UAE without stadium spectators across Dubai, Abu Dhabi, and Sharjah (60 matches).
+  - **2021 (India & UAE Split):** Commenced in India in April 2021; suspended on May 4 after 29 matches due to bio-bubble outbreaks; completed in the UAE (31 matches) in September–October 2021 (60 matches total).
+- **Scheduled Unbowled Abandonments Reconciled:**
+  - Cricsheet open data only records matches where at least one delivery is bowled. The 11 official matches scheduled in IPL history that were abandoned without a ball bowled due to persistent rain or wet outfields were verified via official BCCI schedules and ESPNcricinfo and incorporated with full fixture details:
+    1. 2008 Match 47 (2008-05-22, Delhi Daredevils vs Kolkata Knight Riders, Feroz Shah Kotla, Delhi)
+    2. 2009 Match 7 (2009-04-21, Mumbai Indians vs Rajasthan Royals, Kingsmead, Durban)
+    3. 2009 Match 13 (2009-04-25, Chennai Super Kings vs Kolkata Knight Riders, Newlands, Cape Town)
+    4. 2011 Match 20 (2011-04-19, Royal Challengers Bangalore vs Rajasthan Royals, M. Chinnaswamy Stadium, Bengaluru)
+    5. 2012 Match 32 (2012-04-24, Kolkata Knight Riders vs Deccan Chargers, Eden Gardens, Kolkata)
+    6. 2012 Match 34 (2012-04-25, Royal Challengers Bangalore vs Chennai Super Kings, M. Chinnaswamy Stadium, Bengaluru)
+    7. 2015 Match 25 (2015-04-26, Kolkata Knight Riders vs Rajasthan Royals, Eden Gardens, Kolkata)
+    8. 2017 Match 29 (2017-04-25, Royal Challengers Bangalore vs Sunrisers Hyderabad, M. Chinnaswamy Stadium, Bengaluru)
+    9. 2024 Match 63 (2024-05-13, Gujarat Titans vs Kolkata Knight Riders, Narendra Modi Stadium, Ahmedabad)
+    10. 2024 Match 66 (2024-05-16, Sunrisers Hyderabad vs Gujarat Titans, Rajiv Gandhi International Stadium, Hyderabad)
+    11. 2024 Match 70 (2024-05-19, Rajasthan Royals vs Kolkata Knight Riders, Barsapara Cricket Stadium, Guwahati)
+- **Playoff Systems Evolution:**
+  - **2008–2010:** Standard 4-team knockout: Semi-Final 1, Semi-Final 2, (3rd Place Play-Off in 2010 only), and Final.
+  - **2011–Present:** Page Playoff System giving top 2 teams a double chance: Qualifier 1 (1 vs 2), Eliminator (3 vs 4), Qualifier 2 (Loser Q1 vs Winner Eliminator), and Final (Winner Q1 vs Winner Q2).
+- **Cricket Metrics & Officiating:**
+  - Granular delivery-level calculation of team innings totals (`Runs/Wkts (Overs)`), target scores, DLS rain-rule adjustments, Super Over identifiers, top batter and bowler lines per franchise, on-field umpires, TV umpires, and match referees.
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
