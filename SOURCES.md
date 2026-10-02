@@ -818,6 +818,31 @@ Traps found and handled while building the NHL files:
 
 ---
 
+### 3.22 Women's National Basketball Association (WNBA) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/WNBA/<YEAR>/<YEAR>_games.csv and WNBA_CSVs/WNBA_<YEAR>.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 6,676 total verified game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `WNBA_CSVs/`. Season = calendar year of the competition (summer league, single calendar year).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| SportsDataVerse `wehoop` WNBA Repository | `https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_wnba_schedules/wnba_games_in_data_repo.csv` | Full WNBA schedule and box metadata (2002 through 2025+): Game ID, season, season_type, game_date, start_date, home/away teams, home/away scores, venue_full_name, venue_address_city, venue_address_state, attendance, format_regulation_periods, status_type_description. | S (Curated Open WNBA Analytics) | Open Data (CSV, HTTPS) | 200 (5,972 games cataloged) |
+| FiveThirtyEight WNBA Elo Ratings Archive | `https://raw.githubusercontent.com/fivethirtyeight/WNBA-stats/master/wnba-team-elo-ratings.csv` | Complete historical match results from the inaugural June 21, 1997 game through 2019: season, date, team1, team2, name1, name2, scores, neutral, playoff indicator, pre/post Elo ratings. | S (Curated Statistical Archive) | Open Data (CSV, HTTPS) | 200 (10,488 historical team records verified) |
+| ESPN WNBA Hidden Scoreboard API | `https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=<YYYY>` | Seasonal schedules, dates, venue information, status, home/away scores, and line scores. | FO (Broadcast Rights Holder) | API (JSON, keyless HTTPS) | 200 (modern era verified) |
+| WNBA Official League Archives & Historical Directory | `https://www.wnba.com/history` & `https://stats.wnba.com/` | Pre-foundation league governance records (chartered April 24, 1996; play began June 21, 1997), franchise relocations, rule change registers, and Commissioner's Cup tournament records. | FO (WNBA / NBA Properties) | Web / Reference | Verified |
+
+Traps found and handled while building the WNBA files:
+
+- **Pre-WNBA Era (1975–1996):** The Women's National Basketball Association was officially approved by the NBA Board of Governors on April 24, 1996 and commenced play on June 21, 1997 with 8 foundation franchises. Years 1975 to 1996 pre-date the league's existence and are recorded as authoritative single-row pre-establishment entries (`Game ID`: `WNBA_<YEAR>_PRE_FOUNDATION`, `Result`: `Competition Not Yet Founded`, `Game Type`: `Not applicable`). (Earlier independent leagues such as the WBL 1978–81 and ABL 1996–98 are separate legal/statistical entities and excluded).
+- **Single Calendar Year (Summer League):** Unlike the NBA (which spans across two calendar years, e.g. 2024–25), the WNBA operates strictly as a summer league within a single calendar year (May to October). `Season Year` is 1:1 with the calendar year.
+- **Rule Changes & Period Durations:**
+  - **1997–2005 (Halves Era):** 40-minute regulation consisting of **two 20-minute halves**; 30-second shot clock (NCAA/FIBA standard at the time). Overtime periods were 5 minutes.
+  - **2006–Present (Quarters Era):** Switched to **four 10-minute quarters (40 minutes total)** and a **24-second shot clock** to align with NBA and modern FIBA international standards. (In 2019, offensive rebound resets were reduced to 14 seconds).
+- **Special Environments & Tournament Formats:**
+  - **2020 COVID-19 "Wubble":** The entire 2020 season was relocated to an isolated sanitary bubble at IMG Academy in Bradenton, Florida; regular season was compressed to 22 games per team (132 regular season games + 14 playoff games = 146 total games).
+  - **Commissioner's Cup (2021–Present):** Inaugural in-season tournament introduced in 2021. Designated regular-season intra-conference games serve as Cup qualifiers, concluding in a standalone Commissioner's Cup Championship Game (e.g. Seattle Storm in 2021, Las Vegas Aces in 2022, New York Liberty in 2023, Minnesota Lynx in 2024).
+- **Playoff Structure Evolution:** Single-elimination semifinals and single-game championship (1997); Best-of-3 series (1998–2004); Best-of-5 WNBA Finals introduced in 2005; Single-elimination early rounds for seeds 5–8 introduced in 2016; 8-team bracket with Best-of-3 first round and Best-of-5 Semifinals/Finals (2022–2024); WNBA Finals expanding to Best-of-7 in 2025.
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
