@@ -790,6 +790,34 @@ Traps found and handled while building the Australia NBL files:
 
 ---
 
+### 3.21 National Hockey League (NHL) game-by-game history, 1975-2025 (used to build Previous Sports Results/Ice Hockey/NHL/<YEAR>/<YEAR>_games.csv and NHL_CSVs/NHL_<YEAR>.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 58,379 total verified game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `NHL_CSVs/`. Season = start calendar year of the competition (e.g., 1975 = 1975–76, 2024 = 2024–25, 2025 = 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| NHL Official REST API (Season Schedule) | `https://api-web.nhle.com/v1/club-schedule-season/<team_abbr>/<season_id>` | Complete franchise schedules across all 109 NHL seasons (19751976 through 20252026): 10-digit Game ID, gameType (1=Preseason, 2=Regular Season, 3=Playoffs, 4=All-Star, 18=Special Exhibition), gameDate, startTimeUTC, venue, neutralSite, home/away scores, lastPeriodType (REG, OT, SO), winningGoalie, winningGoalScorer, seriesStatus (round, seriesTitle, gameNumberOfSeries), gameState. | FO (National Hockey League) | API (JSON, keyless HTTPS) | 200 (all 51 seasons verified, 58,379 games) |
+| NHL Official Stats REST API (Season Metadata) | `https://api.nhle.com/stats/rest/en/season` | Authoritative season registry containing exact regular season and playoff game counts, start/end dates, and tie/overtime rule configurations for all seasons. | FO | API (JSON, keyless) | 200 (109 seasons cataloged) |
+| NHL Official Game Center API | `https://api-web.nhle.com/v1/gamecenter/<game_id>/landing` | Comprehensive game landing pages: period-by-period scoring, shots on goal, shootout attempts, 3 stars of the game, attendance, and official referee crews. | FO | API (JSON, keyless) | 200 (all sample games verified) |
+| Hockey-Reference & NHL Official Historical Registers | `https://www.hockey-reference.com/leagues/` & `https://records.nhl.com/` | Historical rule shifts, franchise relocation mappings (e.g. California Golden Seals, Kansas City Scouts, Atlanta Flames, Quebec Nordiques, Hartford Whalers, Minnesota North Stars), and lockout histories. | S (Curated Statistical Archive) | Web / Reference | Verified |
+
+Traps found and handled while building the NHL files:
+
+- **Season Year Mapping & Calendar Conventions:** NHL seasons span two calendar years (autumn to following spring). Per instruction, each season is filed under its start year: e.g., 1975 represents the 1975–76 season; 1994 represents the 1994–95 season; 2004 represents the 2004–05 season; 2024 represents the 2024–25 season; 2025 represents the 2025–26 season.
+- **Shortened and Cancelled Seasons:**
+  - **1994–95 Lockout:** Season delayed to January 1995; shortened to 48 regular-season games per team (624 regular season games + 81 playoff games + 2 pre-season games = 707 total games).
+  - **2004–05 Full Season Lockout:** The entire 2004–05 season was officially cancelled on February 16, 2005 due to an unresolved collective bargaining dispute (the first time a major North American professional sports league cancelled an entire season due to a labor dispute). Recorded as an authoritative single-row cancellation manifest (`Game ID`: `NHL_20042005_LOCKOUT`, `Result`: `Season Cancelled Due to Lockout`, `Game State`: `CANCELLED`).
+  - **2012–13 Lockout:** Season shortened to 48 regular season games per team beginning in January 2013 (720 regular season games + 86 playoff games = 806 total games).
+  - **2019–20 COVID-19 Disruption & Return to Play:** Regular season paused on March 12, 2020 after ~70 games per team (1,082 regular season games); resumed in August 2020 with a modified 24-team Return to Play tournament in centralized bubbles in Toronto and Edmonton (130 playoff / qualifier games + 118 pre-season games = 1,330 total games).
+  - **2020–21 COVID-19 Realignment:** Shortened 56-game intra-division schedule with 4 newly aligned divisions (including an all-Canadian North Division) (868 regular season games + 84 playoff games = 952 total games).
+- **Evolution of Overtime, Shootouts, and Ties:**
+  - **Pre-1983 (No Regular Season Overtime):** Games tied after 60 minutes of regulation ended in a draw/tie. Both teams were awarded 1 point in standings. Decision Type: `Tie`, Result: `Tie (X-X)`, Overtime: `No`, Shootout: `No`.
+  - **1983–84 to 2003–04 (5-Minute Sudden-Death Overtime with Ties):** A 5-minute regular season overtime was introduced. If neither team scored, the game ended in a tie. (In 1999–2000, the "loser point" was introduced for OT losses).
+  - **2005–06 to Present (Shootout Era — Elimination of Ties):** Ties were completely eliminated following the 2004–05 lockout. Games tied after 5 minutes of 4-on-4 overtime proceed to a penalty shootout (SO). In 2015–16, regular season overtime transitioned from 4-on-4 to 3-on-3 sudden death.
+- **Dynamic BFS Discovery for Franchise Relocations:** Historical expansions and relocations (e.g. California Golden Seals `CGS`, Kansas City Scouts `KCS`, Atlanta Flames `AFM`, Quebec Nordiques `QUE`, Hartford Whalers `HFD`, Minnesota North Stars `MNS`, Winnipeg Jets [1979-96] `WIN`, Colorado Rockies `CLR`, Arizona Coyotes `ARI`, Utah Hockey Club `UTA`) are discovered dynamically via reciprocal schedule expansion seeded with original six and continuous anchor franchises.
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
