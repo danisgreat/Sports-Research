@@ -1,0 +1,62 @@
+{
+  "observed_utc": "2026-10-02T04:01:42.162988+00:00",
+  "next_card_id": "P-527",
+  "canonical_records": 8,
+  "canonical_issued_events": 0,
+  "admissions": [
+    {
+      "lane": "EPL",
+      "model_version": "epl-dc-0.1.0",
+      "families": [
+        "1X2"
+      ],
+      "endpoint": "REGULATION",
+      "status": "SHADOW_ONLY"
+    },
+    {
+      "lane": "NBL",
+      "model_version": "nbl-joint-0.1.0",
+      "families": [
+        "ML"
+      ],
+      "endpoint": "INCL_OT",
+      "status": "SHADOW_ONLY"
+    },
+    {
+      "lane": "EPL",
+      "model_version": "epl-coherent-ensemble-0.2.0",
+      "families": [
+        "1X2"
+      ],
+      "endpoint": "REGULATION",
+      "status": "SHADOW_ONLY"
+    },
+    {
+      "lane": "NBL",
+      "model_version": "nbl-oof-width-0.2.0",
+      "families": [
+        "ML"
+      ],
+      "endpoint": "INCL_OT",
+      "status": "SHADOW_ONLY"
+    }
+  ],
+  "source_independence": {
+    "nbl_official": "UNKNOWN",
+    "mlb_official": "UNKNOWN",
+    "espn_epl": "UNKNOWN",
+    "espn_nbl": "UNKNOWN",
+    "openfootball": "UNKNOWN",
+    "premierleague_official": "UNKNOWN",
+    "aflw_official": "UNKNOWN",
+    "iowa_state_official": "UNKNOWN",
+    "kansas_state_official": "UNKNOWN",
+    "nfl_gamebooks": "UNKNOWN",
+    "perth_wildcats_official": "UNKNOWN",
+    "nbl_news": "UNKNOWN",
+    "football_data": "UNKNOWN",
+    "fixture_download": "UNKNOWN",
+    "fantasy_premierleague": "UNKNOWN"
+  },
+  "prospective_skill": "NOT_ESTABLISHED"
+}

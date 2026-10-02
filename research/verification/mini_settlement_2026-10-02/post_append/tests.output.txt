@@ -1,0 +1,109 @@
+........................................................................ [ 62%]
+................F.................F........                              [100%]
+================================== FAILURES ===================================
+_____________ test_nbl_shadow_receipts_are_pregame_and_immutable ______________
+
+    def test_nbl_shadow_receipts_are_pregame_and_immutable():
+        import json
+        receipts = sorted((ROOT / "shadow/nbl27").glob("*.json"))
+        assert len(receipts) == 2
+        for path in receipts:
+            row = json.loads(path.read_text(encoding="utf-8"))
+            assert datetime.fromisoformat(row["data_cutoff_utc"]) <= datetime.fromisoformat(row["forecast_utc"]) < datetime.fromisoformat(row["start_utc"])
+            assert row["shadow_only"] and not row["performance_eligible"]
+            assert row["issuance_status"] == "NO_CARD_ISSUED"
+            assert row["p_model_home_ml"] + row["p_model_away_ml"] == pytest.approx(1)
+        original = [path.read_bytes() for path in receipts]
+>       assert freeze_nbl_shadow(now=datetime.fromisoformat(json.loads(receipts[0].read_text(encoding="utf-8"))["forecast_utc"])) == []
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\tests\test_pipeline.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\src\nbl_shadow.py:24: in freeze
+    verify_model_build("NBL", "nbl-joint-0.1.0")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+lane = 'NBL', model_version = 'nbl-joint-0.1.0'
+path = WindowsPath('C:/Users/danie/Desktop/Sports Research/research/model_builds/current.json')
+
+    def verify_model_build(lane: str, model_version: str, path: Path = BUILDS) -> dict:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        matches = [b for b in data["builds"] if b["lane"]==lane and b["model_version"]==model_version]
+        if len(matches) != 1:
+            raise ValueError("exact lane/model build is not registered")
+        build = matches[0]
+        if not build.get("artifacts"):
+            raise ValueError("empty model dependency receipt")
+        if platform.python_version()!=build.get("python_version"):
+            raise ValueError("Python runtime differs from the frozen model build")
+        for package,expected in build.get("packages",{}).items():
+            if version(package)!=expected:
+                raise ValueError("runtime dependency changed: "+package)
+        for item in build["artifacts"]:
+            target = (ROOT.parent / item["path"]).resolve()
+            if not target.is_relative_to(ROOT.parent.resolve()):
+                raise ValueError("model artifact escapes repository")
+            if hashlib.sha256(target.read_bytes()).hexdigest() != item["sha256"]:
+>               raise ValueError("model build changed: "+item["path"])
+E               ValueError: model build changed: research/src/control_manifest.py
+
+research\src\model_custody.py:30: ValueError
+____________________ test_epl_model_to_shadow_draft_bridge ____________________
+
+tmp_path = WindowsPath('C:/Users/danie/AppData/Local/Temp/pytest-of-danie/pytest-37/test_epl_model_to_shadow_draft0')
+
+    def test_epl_model_to_shadow_draft_bridge(tmp_path):
+        import json
+        from datetime import timedelta
+        manifest=json.loads((ROOT/"data/processed/epl_2026-27_current_manifest.json").read_text(encoding="utf-8"))
+        snapshot=datetime.fromisoformat(manifest["snapshot_utc"])
+        now=snapshot+timedelta(hours=1)
+        event=dict(official_event_id="TEST-NOT-REAL",card_id="DRAFT",home="Arsenal",away="Chelsea",
+                   start_utc=(snapshot+timedelta(hours=3)).isoformat(),state="PREGAME",
+                   state_source_url="https://league.example/event",state_retrieved_utc=(snapshot+timedelta(minutes=20)).isoformat(),
+                   identity_sources=["https://league.example/event","https://club.example/event","https://media.example/event"],
+                   lineup_status="PROJECTED",lineup_source_url="https://club.example/lineup",
+                   lineup_retrieved_utc=(snapshot+timedelta(minutes=25)).isoformat(),
+                   recency_check="NOT_RETRIEVED",recency_retrieved_utc=(snapshot+timedelta(minutes=30)).isoformat(),
+                   adjustment_factors={"home":1.0,"away":1.0},adjustment_type="NONE",adjustment_reason="")
+        receipt=tmp_path/"fixture.json";output=tmp_path/"draft.json"
+        receipt.write_text(json.dumps(event),encoding="utf-8")
+>       result=draft(receipt,output,now)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\tests\test_pipeline.py:238: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\src\draft_epl.py:31: in draft
+    build_receipt=verify_model_build("EPL", "epl-dc-0.1.0")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+lane = 'EPL', model_version = 'epl-dc-0.1.0'
+path = WindowsPath('C:/Users/danie/Desktop/Sports Research/research/model_builds/current.json')
+
+    def verify_model_build(lane: str, model_version: str, path: Path = BUILDS) -> dict:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        matches = [b for b in data["builds"] if b["lane"]==lane and b["model_version"]==model_version]
+        if len(matches) != 1:
+            raise ValueError("exact lane/model build is not registered")
+        build = matches[0]
+        if not build.get("artifacts"):
+            raise ValueError("empty model dependency receipt")
+        if platform.python_version()!=build.get("python_version"):
+            raise ValueError("Python runtime differs from the frozen model build")
+        for package,expected in build.get("packages",{}).items():
+            if version(package)!=expected:
+                raise ValueError("runtime dependency changed: "+package)
+        for item in build["artifacts"]:
+            target = (ROOT.parent / item["path"]).resolve()
+            if not target.is_relative_to(ROOT.parent.resolve()):
+                raise ValueError("model artifact escapes repository")
+            if hashlib.sha256(target.read_bytes()).hexdigest() != item["sha256"]:
+>               raise ValueError("model build changed: "+item["path"])
+E               ValueError: model build changed: research/src/control_manifest.py
+
+research\src\model_custody.py:30: ValueError
+=========================== short test summary info ===========================
+FAILED research/tests/test_pipeline.py::test_nbl_shadow_receipts_are_pregame_and_immutable
+FAILED research/tests/test_pipeline.py::test_epl_model_to_shadow_draft_bridge
+2 failed, 113 passed in 63.64s (0:01:03)

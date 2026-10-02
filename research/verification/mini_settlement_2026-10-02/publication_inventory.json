@@ -1,0 +1,296 @@
+{
+  "observed_utc": "2026-10-02T05:05:34.346966+00:00",
+  "files": [
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/acceptance.output.txt",
+      "bytes": 1370,
+      "sha256": "af1301b0c8d3fcb38ec580a8f2eee833ee37b896a3fd6c367b886cec75a91dfc"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/append_receipt.json",
+      "bytes": 844,
+      "sha256": "78cfaa1106c9f358b3cd669f83786cd35997251cef3d0bdb9af07973498029dd"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/apply_addendum.py",
+      "bytes": 2978,
+      "sha256": "952580088f588e0a8cc20f381c26ac138cb09bd622240091e4b00d0cd6e81085"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/archive.output.txt",
+      "bytes": 41754,
+      "sha256": "8369b84b3bf3696332c168f343ca8c200bd560aac761616e8b09496f7e5e6868"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/archive_validation_generated.json",
+      "bytes": 41264,
+      "sha256": "34b9c41d89262323abf93d243ec3fc1f7a8b66cc97a9f4788ea57e8832ab2f91"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/build_evidence.py",
+      "bytes": 6908,
+      "sha256": "94398e6591d5b9f24fba480b3aaac543111a7cd1c88b1ef0a670a082902dda5e"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/canonical_log.output.txt",
+      "bytes": 103,
+      "sha256": "d5a8f87b55056a65672bfe7a1b04a4eb5b43b2a1d62b02bfb398957c901be932"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/combined_projection.bin",
+      "bytes": 43814,
+      "sha256": "947252c43715aeaeb45571f27ce3cc142a93ff18b8e6f1436aeaba07821129fd"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/combined_projection_formatted.bin",
+      "bytes": 43806,
+      "sha256": "aeec18f44a664897228093101ddb84f6c1b0607b0c1809a1f45eaea57abd084c"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/command_output_hash_audit.json",
+      "bytes": 2634,
+      "sha256": "a607ae650bafe57bb9d199041e7df05d787b2bf5afe0f4bb94e0fc6967e119ec"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/command_results.json",
+      "bytes": 4043,
+      "sha256": "cddb02119e3cfe29927c491b96133c1ba52c1088d2885d13ba0299843d92d985"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/conditional_diagnostic_grades.json",
+      "bytes": 9703,
+      "sha256": "0b9b4b2bde8ff4e63a9dad375221bd8e92bb95eff588bc46c801b3352af91a28"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/custody.output.txt",
+      "bytes": 1514,
+      "sha256": "7db2d7fd935a6408bf2601e8b782c8c8234df28eef60a406ef22ea37793ea30f"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/diagnostic_revisions.jsonl",
+      "bytes": 10827,
+      "sha256": "7ca9566e440f16f9488d11fbd27991f7f97539d0ae138ab2dbc6bec46b45b252"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/final_inventory.json",
+      "bytes": 8941,
+      "sha256": "d7109dc54fcbe9650ac4149d3446ebb3496e88c75939908d01c8cbc72b79b999"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/final_readback.json",
+      "bytes": 2831,
+      "sha256": "7edf6f6dee2f4792e2d0e0e8da8f7d60b704acb85b7d92c8063e3ecdc1602419"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/finish_audit.py",
+      "bytes": 21348,
+      "sha256": "b5b29a1e1074114e73a91394a1cab2aa04c71a96be0921b43d00a65c6fb9d53d"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/format_publication_projection.py",
+      "bytes": 1956,
+      "sha256": "2a0bd0b37a1492340bd1b0a7be7e81c184b0bdee0d0ebb0e9cfd82de6d62b51d"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/freeze.output.txt",
+      "bytes": 1100,
+      "sha256": "2c3a5b8f4b32613a9cdbfcde79938ee93bb8a173a15b3aba3e916517b8b19796"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/implementation_snapshot_gaps.json",
+      "bytes": 1102,
+      "sha256": "6cdcef736cd4f619274f6e8b4bc296b041d3e58b7d3c7608cad0d4f9084167e3"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/independent_custody_readback.json",
+      "bytes": 250,
+      "sha256": "fc5636fee81efea2ed5e2fb9e3076b73ff4244d5c7304f25dc31d097fecd423d"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/mlb_owner_fields.json",
+      "bytes": 39633,
+      "sha256": "973c594ac42423fdab95693112cbabe6180f6fc2d55a8c3e3f7068b776e8a09d"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/opening_custody.json",
+      "bytes": 3404,
+      "sha256": "784b55bdf96d1145544acd362454c384158f56fb8bfac1ce61c2fdbee888b1f1"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/original_mini_evidence.txt",
+      "bytes": 7831,
+      "sha256": "3da1ef7437d05f70e2a36b6ed7e66d848e04d48c16b1aba5d802c923b8c7e5b8"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/post_append/acceptance.output.txt",
+      "bytes": 1370,
+      "sha256": "af1301b0c8d3fcb38ec580a8f2eee833ee37b896a3fd6c367b886cec75a91dfc"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/post_append/archive.output.txt",
+      "bytes": 41754,
+      "sha256": "8369b84b3bf3696332c168f343ca8c200bd560aac761616e8b09496f7e5e6868"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/post_append/canonical_log.output.txt",
+      "bytes": 103,
+      "sha256": "d5a8f87b55056a65672bfe7a1b04a4eb5b43b2a1d62b02bfb398957c901be932"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/post_append/command_results.json",
+      "bytes": 4043,
+      "sha256": "a3a4e7e15d0109a5b66fbcf3a1337ac5db72e1dcb64431eb9d13c7d170e68abf"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/post_append/custody.output.txt",
+      "bytes": 1514,
+      "sha256": "7db2d7fd935a6408bf2601e8b782c8c8234df28eef60a406ef22ea37793ea30f"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/post_append/freeze.output.txt",
+      "bytes": 1100,
+      "sha256": "2c3a5b8f4b32613a9cdbfcde79938ee93bb8a173a15b3aba3e916517b8b19796"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/post_append/tests.output.txt",
+      "bytes": 6902,
+      "sha256": "ce54f982ba74c2aa1ade94b877c133b196fc648d7ef45f9512e4e2ad6565d495"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/post_append/workflow_score.output.txt",
+      "bytes": 257,
+      "sha256": "93aa98256440f9e28fc1c5cd73448b4d552cb2dd52711a0996d8d406c90d38d7"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/post_append/workflow_status.output.txt",
+      "bytes": 1534,
+      "sha256": "8770be98260cb9102b091ab72edc4118548cb412ccc063402d66bda663276ff7"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/acceptance.output.txt",
+      "bytes": 1352,
+      "sha256": "d17912e11743fbc1c20a63c1ea321e931a12c0f4c72660f592fdf5b8dbfc5102"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/archive.output.txt",
+      "bytes": 41264,
+      "sha256": "34b9c41d89262323abf93d243ec3fc1f7a8b66cc97a9f4788ea57e8832ab2f91"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/archive_validation_generated.json",
+      "bytes": 41264,
+      "sha256": "34b9c41d89262323abf93d243ec3fc1f7a8b66cc97a9f4788ea57e8832ab2f91"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/canonical_log.output.txt",
+      "bytes": 94,
+      "sha256": "c4d8ce0a3b1ab9d79fede569db744338bf643f68ab9f2fae5b93641e58733c99"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/command_results.json",
+      "bytes": 4043,
+      "sha256": "0f66441c7e4af074bf2324a4e9f64445cd6f22c98109146744131a7a8465e2f1"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/custody.output.txt",
+      "bytes": 1494,
+      "sha256": "a702c6d8d9964519b495692f5988fcbc98c2012c357af7dbc4fa61c5119c4803"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/freeze.output.txt",
+      "bytes": 1079,
+      "sha256": "77ceb33cf00f378a2ec3311dcb857622dadf0e6ab4f5a0f4ba95fcc3acde2e96"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/tests.output.txt",
+      "bytes": 6793,
+      "sha256": "5c911fea580de3ecbb0c69cd5f0f943e8722d9ce9a98a1396d821b4c6f3ab276"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/workflow_score.output.txt",
+      "bytes": 246,
+      "sha256": "16b85c1455c983c9bf868672a30f0d5ab07efe99191a84fe6c2be1d8d004c883"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication/workflow_status.output.txt",
+      "bytes": 1472,
+      "sha256": "f3bc52a50580a9179a3ecf6606e0ae6211c5cc27119a10637fdad6c2863660a9"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication_append_receipt.json",
+      "bytes": 1071,
+      "sha256": "a4856758c77b8e7a59f077586e762cb19353b4520db5a52a54211bca087ab089"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication_format_revision.json",
+      "bytes": 768,
+      "sha256": "07eb46aba065a326836ef0b6259dd2f088bc9cdfaa85d1be8908bfbd35c565d4"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication_prepared.json",
+      "bytes": 892,
+      "sha256": "e1e0b94a40e6e8b8aa8720b4a29bcb292519b27aa146fb8ad0a9341fc4f0f5ce"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication_readback.json",
+      "bytes": 1143,
+      "sha256": "fd8e13d6c2d5e7eb05572570034331e0430b64ba73396b29d83c62c39326e60d"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publication_readback.py",
+      "bytes": 7126,
+      "sha256": "adb672bb68bc8a3485b218d6b239e08c96748c1b42e267b0214307f2aa4d5a76"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/publish_addendum.py",
+      "bytes": 7274,
+      "sha256": "ed8a99f310e675a7a0d0e6cfa365dfeade9368ab5ea405014b540bf64e25cb3e"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/REPORT.md",
+      "bytes": 15180,
+      "sha256": "f5399fbe9b06b357668dbf0416f7a842c314e081f1233b7f807e5df83589bcfe"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/run_checks.py",
+      "bytes": 3436,
+      "sha256": "c2b991a0f473ccc21cbd4ca650a8cdedc9a8176582fe43045f9670e294848390"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/settlement_addendum.txt",
+      "bytes": 32764,
+      "sha256": "0bbf5137e85811ab4c0c927334ac27a5fd6610db0c3334af89ce9ea7014cb9b0"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/source_body_validation.json",
+      "bytes": 18728,
+      "sha256": "48b4ed696c4c28d401ef4e65c584c93045e9bd6affa054dabc5c16c3ff6b38f5"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/source_event_audit.json",
+      "bytes": 24425,
+      "sha256": "2dc06cf216f5235f7a1b8684b19077744f1e51c89a1755eb8bd671a32899507b"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/tests.output.txt",
+      "bytes": 6902,
+      "sha256": "4169e33bbd900746327027c08a371c4fff673c4632c4d66b802d6bc9dac6d66c"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/web_extract_manifest.json",
+      "bytes": 26717,
+      "sha256": "e79ff3e31e120700a179f9f874cf1322e6dd313b263708ab895a08773f900133"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/workflow_score.output.txt",
+      "bytes": 257,
+      "sha256": "93aa98256440f9e28fc1c5cd73448b4d552cb2dd52711a0996d8d406c90d38d7"
+    },
+    {
+      "path": "research/verification/mini_settlement_2026-10-02/workflow_status.output.txt",
+      "bytes": 1534,
+      "sha256": "21e51e17538334ce227cf237e61222c7c2876cd68fba027bde943f3560e7aba1"
+    }
+  ],
+  "report_scope": "Supersedes earlier local-only file inventory for this later publication step"
+}

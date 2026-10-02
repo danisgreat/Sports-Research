@@ -1,0 +1,50 @@
+[
+  {
+    "path": "post_append/tests.output.txt",
+    "raw_file_sha256": "ce54f982ba74c2aa1ade94b877c133b196fc648d7ef45f9512e4e2ad6565d495",
+    "normalized_lf_utf8_sha256": "b6f51f8215b2c4c52f729cd09c6cb6ba1ee056a0e9b386cc0415eed34e4a8b43",
+    "original_hash_field_scope": "CAPTURED_LF_TEXT_BEFORE_WINDOWS_WRITE"
+  },
+  {
+    "path": "post_append/archive.output.txt",
+    "raw_file_sha256": "8369b84b3bf3696332c168f343ca8c200bd560aac761616e8b09496f7e5e6868",
+    "normalized_lf_utf8_sha256": "34b9c41d89262323abf93d243ec3fc1f7a8b66cc97a9f4788ea57e8832ab2f91",
+    "original_hash_field_scope": "CAPTURED_LF_TEXT_BEFORE_WINDOWS_WRITE"
+  },
+  {
+    "path": "post_append/custody.output.txt",
+    "raw_file_sha256": "7db2d7fd935a6408bf2601e8b782c8c8234df28eef60a406ef22ea37793ea30f",
+    "normalized_lf_utf8_sha256": "a702c6d8d9964519b495692f5988fcbc98c2012c357af7dbc4fa61c5119c4803",
+    "original_hash_field_scope": "CAPTURED_LF_TEXT_BEFORE_WINDOWS_WRITE"
+  },
+  {
+    "path": "post_append/acceptance.output.txt",
+    "raw_file_sha256": "af1301b0c8d3fcb38ec580a8f2eee833ee37b896a3fd6c367b886cec75a91dfc",
+    "normalized_lf_utf8_sha256": "d17912e11743fbc1c20a63c1ea321e931a12c0f4c72660f592fdf5b8dbfc5102",
+    "original_hash_field_scope": "CAPTURED_LF_TEXT_BEFORE_WINDOWS_WRITE"
+  },
+  {
+    "path": "post_append/canonical_log.output.txt",
+    "raw_file_sha256": "d5a8f87b55056a65672bfe7a1b04a4eb5b43b2a1d62b02bfb398957c901be932",
+    "normalized_lf_utf8_sha256": "c4d8ce0a3b1ab9d79fede569db744338bf643f68ab9f2fae5b93641e58733c99",
+    "original_hash_field_scope": "CAPTURED_LF_TEXT_BEFORE_WINDOWS_WRITE"
+  },
+  {
+    "path": "post_append/freeze.output.txt",
+    "raw_file_sha256": "2c3a5b8f4b32613a9cdbfcde79938ee93bb8a173a15b3aba3e916517b8b19796",
+    "normalized_lf_utf8_sha256": "77ceb33cf00f378a2ec3311dcb857622dadf0e6ab4f5a0f4ba95fcc3acde2e96",
+    "original_hash_field_scope": "CAPTURED_LF_TEXT_BEFORE_WINDOWS_WRITE"
+  },
+  {
+    "path": "post_append/workflow_status.output.txt",
+    "raw_file_sha256": "8770be98260cb9102b091ab72edc4118548cb412ccc063402d66bda663276ff7",
+    "normalized_lf_utf8_sha256": "fe5ec49d271ae22f8fe9c84f7f8e21f13e76321a69a39bc0cee47e1e4fb41f14",
+    "original_hash_field_scope": "CAPTURED_LF_TEXT_BEFORE_WINDOWS_WRITE"
+  },
+  {
+    "path": "post_append/workflow_score.output.txt",
+    "raw_file_sha256": "93aa98256440f9e28fc1c5cd73448b4d552cb2dd52711a0996d8d406c90d38d7",
+    "normalized_lf_utf8_sha256": "16b85c1455c983c9bf868672a30f0d5ab07efe99191a84fe6c2be1d8d004c883",
+    "original_hash_field_scope": "CAPTURED_LF_TEXT_BEFORE_WINDOWS_WRITE"
+  }
+]

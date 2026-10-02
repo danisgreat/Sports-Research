@@ -1,0 +1,42 @@
+{
+  "observed_utc": "2026-10-02T04:07:14.722619+00:00",
+  "files": 89,
+  "gaps": [
+    {
+      "path": "CONTROL_MANIFEST_2026-09-28-4.md",
+      "problem": "MISSING_RETAINED_SNAPSHOT"
+    },
+    {
+      "path": "CONTROL_MANIFEST_2026-09-28-5.md",
+      "problem": "MISSING_RETAINED_SNAPSHOT"
+    },
+    {
+      "path": "CONTROL_MANIFEST_2026-09-28-6.md",
+      "problem": "MISSING_RETAINED_SNAPSHOT"
+    },
+    {
+      "path": "CONTROL_MANIFEST_2026-09-28-7.md",
+      "problem": "MISSING_RETAINED_SNAPSHOT"
+    },
+    {
+      "path": "CONTROL_MANIFEST_2026-09-28-8.md",
+      "problem": "MISSING_RETAINED_SNAPSHOT"
+    },
+    {
+      "path": "CONTROL_MANIFEST_2026-09-28-9.md",
+      "problem": "MISSING_RETAINED_SNAPSHOT"
+    },
+    {
+      "path": "CONTROL_MANIFEST_2026-09-29-1.md",
+      "problem": "MISSING_RETAINED_SNAPSHOT"
+    },
+    {
+      "path": "CONTROL_MANIFEST_2026-09-29-2.md",
+      "problem": "MISSING_RETAINED_SNAPSHOT"
+    },
+    {
+      "path": "CONTROL_MANIFEST_2026-09-29-3.md",
+      "problem": "MISSING_RETAINED_SNAPSHOT"
+    }
+  ]
+}

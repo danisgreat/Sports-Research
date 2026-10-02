@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\danie\Desktop\Sports Research\research\operations\verify_custody.py", line 32, in <module>
+    result=run();print(json.dumps(result,indent=2));raise SystemExit(not result['valid'])
+  File "C:\Users\danie\Desktop\Sports Research\research\operations\verify_custody.py", line 23, in run
+    result=acceptance.run()
+  File "C:\Users\danie\Desktop\Sports Research\research\src\acceptance.py", line 22, in run
+    if sha(retained)!=item["sha256"]:issues.append("ORIGINAL_SNAPSHOT_CHANGED:"+item["path"])
+       ~~~^^^^^^^^^^
+  File "C:\Users\danie\Desktop\Sports Research\research\src\load.py", line 49, in sha
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+                          ~~~~~~~~~~~~~~~^^
+  File "C:\Users\danie\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\danie\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\danie\\Desktop\\Sports Research\\research\\custody\\implementation_2026-10-01\\CONTROL_MANIFEST_2026-09-28-4.md'

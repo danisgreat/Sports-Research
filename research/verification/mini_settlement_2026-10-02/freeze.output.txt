@@ -1,0 +1,21 @@
+CONTROL_MANIFEST_2026-10-01-5.md: 374 files; 20 mismatches
+SOURCES.md
+research/data/ipl_cache/ipl_json.zip
+research/data/nrl_cache/match_data.csv
+research/data/nrl_cache/player_data.csv
+research/data/nrl_cache/player_match_data.csv
+research/data/nrl_cache/ref_data.csv
+research/data/nrl_cache/ref_match_data.csv
+research/data/nrl_cache/team_data.csv
+research/data/nrl_cache/test_download.csv
+research/data/nrl_cache/venue_data.csv
+research/issued_research/P-523-0fd247ea4c6b4450a37b7bd6e32e1101.md
+research/issued_research/P-523-0fd247ea4c6b4450a37b7bd6e32e1101.original.txt
+research/issued_research/P-524-427e10b469894624b66263c57b5b4561.md
+research/issued_research/P-524-427e10b469894624b66263c57b5b4561.original.txt
+research/issued_research/P-525-86ae2a4dd237491d9f37cfce0da5f9fd.md
+research/issued_research/P-525-86ae2a4dd237491d9f37cfce0da5f9fd.original.txt
+research/issued_research/P-526-0676a2a79b094ceab6433c33bd800263.md
+research/issued_research/P-526-0676a2a79b094ceab6433c33bd800263.original.txt
+research/src/build_ipl_all_years.py
+research/src/build_nrl_all_years.py

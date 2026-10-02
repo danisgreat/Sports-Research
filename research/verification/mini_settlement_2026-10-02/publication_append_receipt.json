@@ -1,0 +1,21 @@
+{
+  "schema": "diagnostic-publication-1",
+  "recorded_utc": "2026-10-02T05:00:57.957682+00:00",
+  "exact_part6_prefix_preserved": true,
+  "part6_before_bytes": 887152,
+  "part6_before_sha256": "af5b89758e0ad06ab0ac75124885b3d8d777eb44e8aab15cf907ce7975ecc41e",
+  "projection_bytes": 43814,
+  "projection_sha256": "947252c43715aeaeb45571f27ce3cc142a93ff18b8e6f1436aeaba07821129fd",
+  "part6_after_sha256": "422dca310994c4bc2104c3c747a2059bc1f13262479e9d03a89978160b8f6971",
+  "part6_after_bytes": 930966,
+  "original_frozen_source_bytes": 141740,
+  "original_frozen_source_sha256": "c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30",
+  "ledger_unchanged": true,
+  "ledger_sha256": "1d6f24994f233246ab613d98847c0f433554d806e958852c0f5f54b4d979b6da",
+  "canonical_ids_affected": [],
+  "canonical_next_id": "P-527",
+  "status_append_bytes": 814,
+  "status_after_sha256": "a2e14fb05639a71a7136c446c753e66703b51a38e37809f9d9b82938361a93ca",
+  "original_mini_unchanged": true,
+  "push_status": "NOT_YET_PUSHED; VERIFY_REMOTE_AFTER_COMMIT"
+}

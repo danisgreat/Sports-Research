@@ -1,0 +1,16 @@
+{
+  "schema": "diagnostic-publication-1",
+  "prepared_utc": "2026-10-02T05:00:57.524535+00:00",
+  "base_git_commit": "5ce5de3ed9a70ecae173dbe4e9a05445ca97e1d9",
+  "part6_before_bytes": 887152,
+  "part6_before_sha256": "af5b89758e0ad06ab0ac75124885b3d8d777eb44e8aab15cf907ce7975ecc41e",
+  "ledger_sha256": "1d6f24994f233246ab613d98847c0f433554d806e958852c0f5f54b4d979b6da",
+  "status_before_bytes": 187396,
+  "status_before_sha256": "07be41777c3ed761b3bb7694c067400c52e56c57606233c43b4910dbba7ce100",
+  "projection_sha256": "947252c43715aeaeb45571f27ce3cc142a93ff18b8e6f1436aeaba07821129fd",
+  "original_mini_sha256": "3da1ef7437d05f70e2a36b6ed7e66d848e04d48c16b1aba5d802c923b8c7e5b8",
+  "mini_after_audit_sha256": "cdc1ea60dfa29d270d2922c9a3cc8166b4979f17e59a0bf94acd3b4aa548d8a6",
+  "canonical_ids_added": 0,
+  "canonical_next_id": "P-527",
+  "performance_eligible": false
+}

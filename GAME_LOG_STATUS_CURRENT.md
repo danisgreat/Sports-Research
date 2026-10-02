@@ -845,3 +845,8 @@ The complete research test suite passed: 107 tests in 64.39 seconds. Custody, so
 Final audit counts: 523 inventoried identities; 116 detailed historical/manual reviews; 34 diagnostic rows on eight cards/claims; 50 historical ledger field corrections across seven IDs; 117 separate learning revisions. Newly certified full settlements: zero; new operator voids: zero; canonical transactions: zero. Forty reviewed identities retain specific row/identity/operator/rank/period/provider blockers, and the diagnostic cards retain certification gaps. These are learning results, not admitted predictive performance.
 
 Full mechanical readback: [FINAL_CHECKS.json](C:/Users/danie/Desktop/Sports Research/research/verification/settlement_2026-10-01/FINAL_CHECKS.json). Per-card evidence requirements and A–F reviews remain in the audit report.
+
+
+## October 2 local-mini diagnostic addendum — combined-log reference
+
+User-requested append at 2026-10-02T05:00:57.524535+00:00: [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) now retains the local mini forecast exhibit and four twelve-part sporting diagnostic retrospectives. Source labels P-527–P-531 remain local reservations, not assigned canonical IDs. Zero certified settlements; all formal rows remain unresolved, with P-528 unplayed at the original observation and P-531 secondary-only provisional. No renumbering or new issuance occurs. **Next canonical ID remains P-527.** Original ledger and existing cards are unchanged. [Audit and verification](research/verification/mini_settlement_2026-10-02/REPORT.md); pre-existing full-suite/custody/freeze/archive failures remain disclosed.

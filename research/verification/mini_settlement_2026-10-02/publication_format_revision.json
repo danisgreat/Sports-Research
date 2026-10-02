@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-02T05:03:05.826383+00:00",
+  "reason": "Quoted display whitespace only: empty blockquotes use > and original Markdown hard breaks render with <br>. Exact original evidence files/mini remain unchanged.",
+  "prior_projection_sha256": "947252c43715aeaeb45571f27ce3cc142a93ff18b8e6f1436aeaba07821129fd",
+  "formatted_projection_sha256": "aeec18f44a664897228093101ddb84f6c1b0607b0c1809a1f45eaea57abd084c",
+  "formatted_projection_bytes": 43806,
+  "part6_before_bytes": 887152,
+  "part6_before_sha256": "af5b89758e0ad06ab0ac75124885b3d8d777eb44e8aab15cf907ce7975ecc41e",
+  "part6_after_sha256": "66c62cfaa97130ca35920b08f81933a633aa3d9ced63696c8fb965e04da0fdb0",
+  "original_prefix_preserved": true,
+  "canonical_next_id": "P-527"
+}

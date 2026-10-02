@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "mlb_official",
+  "publisher": "Major League Baseball",
+  "upstream_lineage_id": "MLB_OFFICIAL_COLLECTION",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+  "final_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+  "retrieved_utc": "2026-10-02T03:48:28.704675+00:00",
+  "response_sha256": "e28f14e4f1f7680f57d1ee5d2a1fbc11040aa707d7caf6abb0a9197ddfdb9d08",
+  "body_path": "research/data/raw/source_snapshots/mlb_official_20261002T034828704675Z_e28f14e4f1f7.body",
+  "response_bytes": 773687,
+  "content_type": "application/json;charset=UTF-8",
+  "parser_id": "MLB_STATSAPI_V1",
+  "registry_sha256": "031ca77a5d8fb791c3f0dc9e8fecd62e7cba5647ba7ba63ddba11cd2817f4716",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

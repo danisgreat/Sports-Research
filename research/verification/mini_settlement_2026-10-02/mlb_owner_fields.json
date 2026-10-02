@@ -1,0 +1,1453 @@
+{
+  "native_id": 849844,
+  "game": {
+    "pk": 849844,
+    "type": "F",
+    "doubleHeader": "N",
+    "id": "2026/10/01/phimlb-atlmlb-1",
+    "gamedayType": "P",
+    "tiebreaker": "N",
+    "gameNumber": 1,
+    "calendarEventID": "14-849844-2026-10-01",
+    "season": "2026",
+    "seasonDisplay": "2026"
+  },
+  "datetime": {
+    "dateTime": "2026-10-02T00:00:00Z",
+    "originalDate": "2026-10-01",
+    "officialDate": "2026-10-01",
+    "dayNight": "night",
+    "time": "8:00",
+    "ampm": "PM"
+  },
+  "status": {
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "statusCode": "F",
+    "startTimeTBD": false,
+    "abstractGameCode": "F"
+  },
+  "venue": {
+    "id": 4705,
+    "name": "Truist Park",
+    "link": "/api/v1/venues/4705",
+    "location": {
+      "address1": "755 Battery Avenue",
+      "city": "Atlanta",
+      "state": "Georgia",
+      "stateAbbrev": "GA",
+      "postalCode": "30339",
+      "defaultCoordinates": {
+        "latitude": 33.890672,
+        "longitude": -84.467641
+      },
+      "azimuthAngle": 145.0,
+      "elevation": 1001,
+      "country": "USA"
+    },
+    "timeZone": {
+      "tz": "EDT",
+      "id": "America/New_York",
+      "offset": -4,
+      "offsetAtGameTime": -4
+    },
+    "fieldInfo": {
+      "capacity": 40819,
+      "turfType": "Grass",
+      "roofType": "Open",
+      "leftLine": 335,
+      "left": 375,
+      "leftCenter": 385,
+      "center": 400,
+      "rightCenter": 375,
+      "rightLine": 325
+    },
+    "active": true,
+    "season": "2026"
+  },
+  "linescore": {
+    "currentInning": 9,
+    "currentInningOrdinal": "9th",
+    "inningState": "Top",
+    "inningHalf": "Top",
+    "isTopInning": true,
+    "scheduledInnings": 9,
+    "innings": [
+      {
+        "num": 1,
+        "ordinalNum": "1st",
+        "home": {
+          "runs": 3,
+          "hits": 1,
+          "errors": 0,
+          "leftOnBase": 0
+        },
+        "away": {
+          "runs": 0,
+          "hits": 1,
+          "errors": 0,
+          "leftOnBase": 1
+        }
+      },
+      {
+        "num": 2,
+        "ordinalNum": "2nd",
+        "home": {
+          "runs": 0,
+          "hits": 1,
+          "errors": 0,
+          "leftOnBase": 1
+        },
+        "away": {
+          "runs": 0,
+          "hits": 0,
+          "errors": 0,
+          "leftOnBase": 0
+        }
+      },
+      {
+        "num": 3,
+        "ordinalNum": "3rd",
+        "home": {
+          "runs": 0,
+          "hits": 1,
+          "errors": 0,
+          "leftOnBase": 1
+        },
+        "away": {
+          "runs": 0,
+          "hits": 0,
+          "errors": 0,
+          "leftOnBase": 0
+        }
+      },
+      {
+        "num": 4,
+        "ordinalNum": "4th",
+        "home": {
+          "runs": 2,
+          "hits": 2,
+          "errors": 0,
+          "leftOnBase": 0
+        },
+        "away": {
+          "runs": 0,
+          "hits": 0,
+          "errors": 0,
+          "leftOnBase": 1
+        }
+      },
+      {
+        "num": 5,
+        "ordinalNum": "5th",
+        "home": {
+          "runs": 0,
+          "hits": 0,
+          "errors": 0,
+          "leftOnBase": 0
+        },
+        "away": {
+          "runs": 0,
+          "hits": 1,
+          "errors": 0,
+          "leftOnBase": 1
+        }
+      },
+      {
+        "num": 6,
+        "ordinalNum": "6th",
+        "home": {
+          "runs": 0,
+          "hits": 0,
+          "errors": 0,
+          "leftOnBase": 2
+        },
+        "away": {
+          "runs": 1,
+          "hits": 2,
+          "errors": 0,
+          "leftOnBase": 1
+        }
+      },
+      {
+        "num": 7,
+        "ordinalNum": "7th",
+        "home": {
+          "runs": 1,
+          "hits": 1,
+          "errors": 0,
+          "leftOnBase": 1
+        },
+        "away": {
+          "runs": 0,
+          "hits": 0,
+          "errors": 0,
+          "leftOnBase": 0
+        }
+      },
+      {
+        "num": 8,
+        "ordinalNum": "8th",
+        "home": {
+          "runs": 0,
+          "hits": 0,
+          "errors": 0,
+          "leftOnBase": 0
+        },
+        "away": {
+          "runs": 1,
+          "hits": 1,
+          "errors": 0,
+          "leftOnBase": 0
+        }
+      },
+      {
+        "num": 9,
+        "ordinalNum": "9th",
+        "home": {
+          "hits": 0,
+          "errors": 0,
+          "leftOnBase": 0
+        },
+        "away": {
+          "runs": 0,
+          "hits": 1,
+          "errors": 0,
+          "leftOnBase": 1
+        }
+      }
+    ],
+    "teams": {
+      "home": {
+        "runs": 6,
+        "hits": 6,
+        "errors": 0,
+        "leftOnBase": 5
+      },
+      "away": {
+        "runs": 2,
+        "hits": 6,
+        "errors": 0,
+        "leftOnBase": 5
+      }
+    },
+    "defense": {
+      "pitcher": {
+        "id": 519242,
+        "fullName": "Chris Sale",
+        "link": "/api/v1/people/519242"
+      },
+      "catcher": {
+        "id": 686948,
+        "fullName": "Drake Baldwin",
+        "link": "/api/v1/people/686948"
+      },
+      "first": {
+        "id": 621566,
+        "fullName": "Matt Olson",
+        "link": "/api/v1/people/621566"
+      },
+      "second": {
+        "id": 645277,
+        "fullName": "Ozzie Albies",
+        "link": "/api/v1/people/645277"
+      },
+      "third": {
+        "id": 663586,
+        "fullName": "Austin Riley",
+        "link": "/api/v1/people/663586"
+      },
+      "shortstop": {
+        "id": 643289,
+        "fullName": "Mauricio Dubón",
+        "link": "/api/v1/people/643289"
+      },
+      "left": {
+        "id": 573262,
+        "fullName": "Mike Yastrzemski",
+        "link": "/api/v1/people/573262"
+      },
+      "center": {
+        "id": 671739,
+        "fullName": "Michael Harris II",
+        "link": "/api/v1/people/671739"
+      },
+      "right": {
+        "id": 660670,
+        "fullName": "Ronald Acuña Jr.",
+        "link": "/api/v1/people/660670"
+      },
+      "batter": {
+        "id": 642086,
+        "fullName": "Dominic Smith",
+        "link": "/api/v1/people/642086"
+      },
+      "onDeck": {
+        "id": 686948,
+        "fullName": "Drake Baldwin",
+        "link": "/api/v1/people/686948"
+      },
+      "inHole": {
+        "id": 660670,
+        "fullName": "Ronald Acuña Jr.",
+        "link": "/api/v1/people/660670"
+      },
+      "battingOrder": 9,
+      "team": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      }
+    },
+    "offense": {
+      "batter": {
+        "id": 805249,
+        "fullName": "Otto Kemp",
+        "link": "/api/v1/people/805249"
+      },
+      "onDeck": {
+        "id": 592663,
+        "fullName": "J.T. Realmuto",
+        "link": "/api/v1/people/592663"
+      },
+      "inHole": {
+        "id": 656537,
+        "fullName": "Derek Hill",
+        "link": "/api/v1/people/656537"
+      },
+      "pitcher": {
+        "id": 661395,
+        "fullName": "Jhoan Duran",
+        "link": "/api/v1/people/661395"
+      },
+      "battingOrder": 7,
+      "team": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      }
+    },
+    "balls": 2,
+    "strikes": 3,
+    "outs": 3
+  },
+  "boxscore": {
+    "home": {
+      "team": {
+        "springLeague": {
+          "id": 115,
+          "name": "Grapefruit League",
+          "link": "/api/v1/league/115",
+          "abbreviation": "GL"
+        },
+        "allStarStatus": "N",
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "teamStats": {
+        "batting": {
+          "flyOuts": 3,
+          "groundOuts": 5,
+          "airOuts": 12,
+          "runs": 6,
+          "doubles": 0,
+          "triples": 0,
+          "homeRuns": 3,
+          "strikeOuts": 6,
+          "baseOnBalls": 5,
+          "intentionalWalks": 0,
+          "hits": 6,
+          "hitByPitch": 1,
+          "avg": ".232",
+          "atBats": 29,
+          "obp": ".339",
+          "slg": ".411",
+          "ops": ".750",
+          "caughtStealing": 0,
+          "stolenBases": 0,
+          "stolenBasePercentage": ".---",
+          "groundIntoDoublePlay": 1,
+          "groundIntoTriplePlay": 0,
+          "plateAppearances": 35,
+          "totalBases": 15,
+          "rbi": 6,
+          "leftOnBase": 8,
+          "sacBunts": 0,
+          "sacFlies": 0,
+          "catchersInterference": 0,
+          "pickoffs": 0,
+          "atBatsPerHomeRun": "9.67",
+          "popOuts": 5,
+          "lineOuts": 4
+        },
+        "pitching": {
+          "flyOuts": 7,
+          "groundOuts": 10,
+          "airOuts": 10,
+          "runs": 2,
+          "doubles": 1,
+          "triples": 1,
+          "homeRuns": 0,
+          "strikeOuts": 6,
+          "baseOnBalls": 2,
+          "intentionalWalks": 0,
+          "hits": 6,
+          "hitByPitch": 0,
+          "atBats": 31,
+          "obp": ".235",
+          "caughtStealing": 0,
+          "stolenBases": 0,
+          "stolenBasePercentage": ".---",
+          "caughtStealingPercentage": ".---",
+          "numberOfPitches": 134,
+          "era": "2.89",
+          "inningsPitched": "9.0",
+          "saveOpportunities": 0,
+          "earnedRuns": 2,
+          "whip": "1.00",
+          "battersFaced": 34,
+          "outs": 27,
+          "completeGames": 0,
+          "shutouts": 0,
+          "pitchesThrown": 134,
+          "balls": 48,
+          "strikes": 86,
+          "strikePercentage": ".640",
+          "hitBatsmen": 0,
+          "balks": 0,
+          "wildPitches": 1,
+          "pickoffs": 0,
+          "groundOutsToAirouts": "1.00",
+          "rbi": 2,
+          "pitchesPerInning": "14.89",
+          "runsScoredPer9": "2.00",
+          "homeRunsPer9": "0.00",
+          "inheritedRunners": 0,
+          "inheritedRunnersScored": 0,
+          "catchersInterference": 0,
+          "sacBunts": 0,
+          "sacFlies": 1,
+          "passedBall": 0,
+          "popOuts": 1,
+          "lineOuts": 2
+        },
+        "fielding": {
+          "caughtStealing": 0,
+          "stolenBases": 0,
+          "stolenBasePercentage": ".---",
+          "caughtStealingPercentage": ".---",
+          "assists": 13,
+          "putOuts": 27,
+          "errors": 0,
+          "chances": 40,
+          "passedBall": 0,
+          "pickoffs": 0
+        }
+      },
+      "starting_order": [
+        {
+          "name": "Drake Baldwin",
+          "battingOrder": "100",
+          "position": {
+            "code": "2",
+            "name": "Catcher",
+            "type": "Catcher",
+            "abbreviation": "C"
+          }
+        },
+        {
+          "name": "Ronald Acuña Jr.",
+          "battingOrder": "200",
+          "position": {
+            "code": "9",
+            "name": "Outfielder",
+            "type": "Outfielder",
+            "abbreviation": "RF"
+          }
+        },
+        {
+          "name": "Matt Olson",
+          "battingOrder": "300",
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "name": "Michael Harris II",
+          "battingOrder": "400",
+          "position": {
+            "code": "8",
+            "name": "Outfielder",
+            "type": "Outfielder",
+            "abbreviation": "CF"
+          }
+        },
+        {
+          "name": "Mauricio Dubón",
+          "battingOrder": "500",
+          "position": {
+            "code": "6",
+            "name": "Shortstop",
+            "type": "Infielder",
+            "abbreviation": "SS"
+          }
+        },
+        {
+          "name": "Mike Yastrzemski",
+          "battingOrder": "600",
+          "position": {
+            "code": "7",
+            "name": "Outfielder",
+            "type": "Outfielder",
+            "abbreviation": "LF"
+          }
+        },
+        {
+          "name": "Austin Riley",
+          "battingOrder": "700",
+          "position": {
+            "code": "5",
+            "name": "Third Base",
+            "type": "Infielder",
+            "abbreviation": "3B"
+          }
+        },
+        {
+          "name": "Ozzie Albies",
+          "battingOrder": "800",
+          "position": {
+            "code": "4",
+            "name": "Second Base",
+            "type": "Infielder",
+            "abbreviation": "2B"
+          }
+        },
+        {
+          "name": "Dominic Smith",
+          "battingOrder": "900",
+          "position": {
+            "code": "10",
+            "name": "Designated Hitter",
+            "type": "Hitter",
+            "abbreviation": "DH"
+          }
+        }
+      ],
+      "pitchers": [
+        {
+          "name": "Ray Kerr",
+          "stats": {
+            "summary": "3.1 IP, 0 ER, 2 K, BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 1,
+            "flyOuts": 3,
+            "groundOuts": 4,
+            "airOuts": 4,
+            "runs": 0,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 2,
+            "baseOnBalls": 1,
+            "intentionalWalks": 0,
+            "hits": 1,
+            "hitByPitch": 0,
+            "atBats": 11,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 47,
+            "inningsPitched": "3.1",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 0,
+            "battersFaced": 12,
+            "outs": 10,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 47,
+            "balls": 18,
+            "strikes": 29,
+            "strikePercentage": ".620",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 0,
+            "gamesFinished": 0,
+            "runsScoredPer9": "0.00",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 0,
+            "lineOuts": 1
+          }
+        },
+        {
+          "name": "Grant Holmes",
+          "stats": {
+            "note": "(W, 1-0)",
+            "summary": "2.0 IP, ER, K, BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "flyOuts": 1,
+            "groundOuts": 3,
+            "airOuts": 1,
+            "runs": 1,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 1,
+            "baseOnBalls": 1,
+            "intentionalWalks": 0,
+            "hits": 2,
+            "hitByPitch": 0,
+            "atBats": 7,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 28,
+            "inningsPitched": "2.0",
+            "wins": 1,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 1,
+            "battersFaced": 8,
+            "outs": 6,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 28,
+            "balls": 11,
+            "strikes": 17,
+            "strikePercentage": ".610",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "rbi": 0,
+            "gamesFinished": 0,
+            "runsScoredPer9": "4.50",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 0,
+            "lineOuts": 0
+          }
+        },
+        {
+          "name": "Robert Suarez",
+          "stats": {
+            "summary": "0.2 IP, 0 ER, 0 K, 0 BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "flyOuts": 1,
+            "groundOuts": 1,
+            "airOuts": 1,
+            "runs": 0,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 0,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 1,
+            "hitByPitch": 0,
+            "atBats": 3,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 11,
+            "inningsPitched": "0.2",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 0,
+            "battersFaced": 3,
+            "outs": 2,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 11,
+            "balls": 2,
+            "strikes": 9,
+            "strikePercentage": ".820",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 1,
+            "gamesFinished": 0,
+            "runsScoredPer9": "0.00",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 0,
+            "lineOuts": 0
+          }
+        },
+        {
+          "name": "Didier Fuentes",
+          "stats": {
+            "summary": "1.0 IP, 0 ER, 0 K, 0 BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "flyOuts": 0,
+            "groundOuts": 2,
+            "airOuts": 1,
+            "runs": 0,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 0,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 0,
+            "hitByPitch": 0,
+            "atBats": 3,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 13,
+            "inningsPitched": "1.0",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 0,
+            "battersFaced": 3,
+            "outs": 3,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 13,
+            "balls": 4,
+            "strikes": 9,
+            "strikePercentage": ".690",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 0,
+            "gamesFinished": 0,
+            "runsScoredPer9": "0.00",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 0,
+            "lineOuts": 1
+          }
+        },
+        {
+          "name": "Dylan Dodd",
+          "stats": {
+            "summary": "0.2 IP, ER, 0 K, 0 BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "flyOuts": 2,
+            "groundOuts": 0,
+            "airOuts": 2,
+            "runs": 1,
+            "doubles": 0,
+            "triples": 1,
+            "homeRuns": 0,
+            "strikeOuts": 0,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 1,
+            "hitByPitch": 0,
+            "atBats": 2,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 14,
+            "inningsPitched": "0.2",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 1,
+            "battersFaced": 3,
+            "outs": 2,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 14,
+            "balls": 6,
+            "strikes": 8,
+            "strikePercentage": ".570",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 1,
+            "gamesFinished": 0,
+            "runsScoredPer9": "13.50",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "passedBall": 0,
+            "popOuts": 0,
+            "lineOuts": 0
+          }
+        },
+        {
+          "name": "Chris Sale",
+          "stats": {
+            "summary": "1.1 IP, 0 ER, 3 K, 0 BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "flyOuts": 0,
+            "groundOuts": 0,
+            "airOuts": 1,
+            "runs": 0,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 3,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 1,
+            "hitByPitch": 0,
+            "atBats": 5,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 21,
+            "inningsPitched": "1.1",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 0,
+            "battersFaced": 5,
+            "outs": 4,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 21,
+            "balls": 7,
+            "strikes": 14,
+            "strikePercentage": ".670",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 0,
+            "gamesFinished": 1,
+            "runsScoredPer9": "0.00",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 1,
+            "lineOuts": 0
+          }
+        }
+      ]
+    },
+    "away": {
+      "team": {
+        "springLeague": {
+          "id": 115,
+          "name": "Grapefruit League",
+          "link": "/api/v1/league/115",
+          "abbreviation": "GL"
+        },
+        "allStarStatus": "N",
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "teamStats": {
+        "batting": {
+          "flyOuts": 7,
+          "groundOuts": 10,
+          "airOuts": 10,
+          "runs": 2,
+          "doubles": 1,
+          "triples": 1,
+          "homeRuns": 0,
+          "strikeOuts": 6,
+          "baseOnBalls": 2,
+          "intentionalWalks": 0,
+          "hits": 6,
+          "hitByPitch": 0,
+          "avg": ".231",
+          "atBats": 31,
+          "obp": ".270",
+          "slg": ".394",
+          "ops": ".664",
+          "caughtStealing": 0,
+          "stolenBases": 0,
+          "stolenBasePercentage": ".---",
+          "groundIntoDoublePlay": 1,
+          "groundIntoTriplePlay": 0,
+          "plateAppearances": 34,
+          "totalBases": 9,
+          "rbi": 2,
+          "leftOnBase": 14,
+          "sacBunts": 0,
+          "sacFlies": 1,
+          "catchersInterference": 0,
+          "pickoffs": 0,
+          "atBatsPerHomeRun": "-.--",
+          "popOuts": 1,
+          "lineOuts": 2
+        },
+        "pitching": {
+          "flyOuts": 3,
+          "groundOuts": 5,
+          "airOuts": 12,
+          "runs": 6,
+          "doubles": 0,
+          "triples": 0,
+          "homeRuns": 3,
+          "strikeOuts": 6,
+          "baseOnBalls": 5,
+          "intentionalWalks": 0,
+          "hits": 6,
+          "hitByPitch": 1,
+          "atBats": 29,
+          "obp": ".343",
+          "caughtStealing": 0,
+          "stolenBases": 0,
+          "stolenBasePercentage": ".---",
+          "caughtStealingPercentage": ".---",
+          "numberOfPitches": 143,
+          "era": "4.85",
+          "inningsPitched": "8.0",
+          "saveOpportunities": 0,
+          "earnedRuns": 6,
+          "whip": "1.31",
+          "battersFaced": 35,
+          "outs": 24,
+          "completeGames": 0,
+          "shutouts": 0,
+          "pitchesThrown": 143,
+          "balls": 59,
+          "strikes": 84,
+          "strikePercentage": ".590",
+          "hitBatsmen": 1,
+          "balks": 0,
+          "wildPitches": 0,
+          "pickoffs": 0,
+          "groundOutsToAirouts": "0.42",
+          "rbi": 6,
+          "pitchesPerInning": "17.88",
+          "runsScoredPer9": "6.75",
+          "homeRunsPer9": "3.38",
+          "inheritedRunners": 0,
+          "inheritedRunnersScored": 0,
+          "catchersInterference": 0,
+          "sacBunts": 0,
+          "sacFlies": 0,
+          "passedBall": 0,
+          "popOuts": 5,
+          "lineOuts": 4
+        },
+        "fielding": {
+          "caughtStealing": 0,
+          "stolenBases": 0,
+          "stolenBasePercentage": ".---",
+          "caughtStealingPercentage": ".---",
+          "assists": 4,
+          "putOuts": 24,
+          "errors": 0,
+          "chances": 28,
+          "passedBall": 0,
+          "pickoffs": 0
+        }
+      },
+      "starting_order": [
+        {
+          "name": "Trea Turner",
+          "battingOrder": "100",
+          "position": {
+            "code": "6",
+            "name": "Shortstop",
+            "type": "Infielder",
+            "abbreviation": "SS"
+          }
+        },
+        {
+          "name": "Kyle Schwarber",
+          "battingOrder": "200",
+          "position": {
+            "code": "10",
+            "name": "Designated Hitter",
+            "type": "Hitter",
+            "abbreviation": "DH"
+          }
+        },
+        {
+          "name": "Bryce Harper",
+          "battingOrder": "300",
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "name": "Alec Bohm",
+          "battingOrder": "400",
+          "position": {
+            "code": "5",
+            "name": "Third Base",
+            "type": "Infielder",
+            "abbreviation": "3B"
+          }
+        },
+        {
+          "name": "Bryson Stott",
+          "battingOrder": "500",
+          "position": {
+            "code": "4",
+            "name": "Second Base",
+            "type": "Infielder",
+            "abbreviation": "2B"
+          }
+        },
+        {
+          "name": "Bryan De La Cruz",
+          "battingOrder": "600",
+          "position": {
+            "code": "9",
+            "name": "Outfielder",
+            "type": "Outfielder",
+            "abbreviation": "RF"
+          }
+        },
+        {
+          "name": "Edmundo Sosa",
+          "battingOrder": "700",
+          "position": {
+            "code": "5",
+            "name": "Third Base",
+            "type": "Infielder",
+            "abbreviation": "3B"
+          }
+        },
+        {
+          "name": "J.T. Realmuto",
+          "battingOrder": "800",
+          "position": {
+            "code": "2",
+            "name": "Catcher",
+            "type": "Catcher",
+            "abbreviation": "C"
+          }
+        },
+        {
+          "name": "Justin Crawford",
+          "battingOrder": "900",
+          "position": {
+            "code": "8",
+            "name": "Outfielder",
+            "type": "Outfielder",
+            "abbreviation": "CF"
+          }
+        }
+      ],
+      "pitchers": [
+        {
+          "name": "Aaron Nola",
+          "stats": {
+            "note": "(L, 0-1)",
+            "summary": "1.2 IP, 3 ER, K, 2 BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 1,
+            "flyOuts": 2,
+            "groundOuts": 0,
+            "airOuts": 4,
+            "runs": 3,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 1,
+            "baseOnBalls": 2,
+            "intentionalWalks": 0,
+            "hits": 2,
+            "hitByPitch": 0,
+            "atBats": 7,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 38,
+            "inningsPitched": "1.2",
+            "wins": 0,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 3,
+            "battersFaced": 9,
+            "outs": 5,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 38,
+            "balls": 19,
+            "strikes": 19,
+            "strikePercentage": ".500",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 3,
+            "gamesFinished": 0,
+            "runsScoredPer9": "16.20",
+            "homeRunsPer9": "5.40",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 0,
+            "lineOuts": 2
+          }
+        },
+        {
+          "name": "Tim Mayza",
+          "stats": {
+            "summary": "0.1 IP, 0 ER, 0 K, 0 BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "flyOuts": 0,
+            "groundOuts": 1,
+            "airOuts": 0,
+            "runs": 0,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 0,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 0,
+            "hitByPitch": 0,
+            "atBats": 1,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 6,
+            "inningsPitched": "0.1",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 0,
+            "battersFaced": 1,
+            "outs": 1,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 6,
+            "balls": 3,
+            "strikes": 3,
+            "strikePercentage": ".500",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 0,
+            "gamesFinished": 0,
+            "runsScoredPer9": "0.00",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 0,
+            "lineOuts": 0
+          }
+        },
+        {
+          "name": "Zack Wheeler",
+          "stats": {
+            "summary": "4.0 IP, 2 ER, 3 K, 3 BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "flyOuts": 0,
+            "groundOuts": 2,
+            "airOuts": 6,
+            "runs": 2,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 3,
+            "baseOnBalls": 3,
+            "intentionalWalks": 0,
+            "hits": 3,
+            "hitByPitch": 0,
+            "atBats": 14,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 68,
+            "inningsPitched": "4.0",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 2,
+            "battersFaced": 17,
+            "outs": 12,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 68,
+            "balls": 26,
+            "strikes": 42,
+            "strikePercentage": ".620",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 2,
+            "gamesFinished": 0,
+            "runsScoredPer9": "4.50",
+            "homeRunsPer9": "2.25",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 4,
+            "lineOuts": 2
+          }
+        },
+        {
+          "name": "Jonathan Bowlan",
+          "stats": {
+            "summary": "1.0 IP, ER, 0 K, 0 BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "flyOuts": 0,
+            "groundOuts": 2,
+            "airOuts": 1,
+            "runs": 1,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 0,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 1,
+            "hitByPitch": 1,
+            "atBats": 4,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 16,
+            "inningsPitched": "1.0",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 1,
+            "battersFaced": 5,
+            "outs": 3,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 16,
+            "balls": 6,
+            "strikes": 10,
+            "strikePercentage": ".630",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 1,
+            "gamesFinished": 0,
+            "runsScoredPer9": "9.00",
+            "homeRunsPer9": "9.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 1,
+            "lineOuts": 0
+          }
+        },
+        {
+          "name": "Jhoan Duran",
+          "stats": {
+            "summary": "1.0 IP, 0 ER, 2 K, 0 BB",
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "flyOuts": 1,
+            "groundOuts": 0,
+            "airOuts": 1,
+            "runs": 0,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 2,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 0,
+            "hitByPitch": 0,
+            "atBats": 3,
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "numberOfPitches": 15,
+            "inningsPitched": "1.0",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 0,
+            "battersFaced": 3,
+            "outs": 3,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "pitchesThrown": 15,
+            "balls": 5,
+            "strikes": 10,
+            "strikePercentage": ".670",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "rbi": 0,
+            "gamesFinished": 1,
+            "runsScoredPer9": "0.00",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "passedBall": 0,
+            "popOuts": 0,
+            "lineOuts": 0
+          }
+        }
+      ]
+    }
+  },
+  "first_plate_appearance_start": "2026-10-02T00:15:37.265Z",
+  "first_pitch_candidate": {
+    "startTime": "2026-10-02T00:15:39.355Z",
+    "endTime": "2026-10-02T00:15:43.247Z",
+    "isPitch": true,
+    "index": 3
+  },
+  "actual_start_audit": "NOT_ADMITTED; FIRST_PLAY_NOT_SUBSTITUTED",
+  "scoring_plays": [
+    {
+      "type": "atBat",
+      "event": "Home Run",
+      "eventType": "home_run",
+      "description": "Michael Harris II homers (1) on a fly ball to right center field. Ronald Acuña Jr. scores. Matt Olson scores.",
+      "rbi": 3,
+      "awayScore": 0,
+      "homeScore": 3,
+      "isOut": false
+    },
+    {
+      "type": "atBat",
+      "event": "Home Run",
+      "eventType": "home_run",
+      "description": "Ozzie Albies homers (1) on a fly ball to right center field. Austin Riley scores.",
+      "rbi": 2,
+      "awayScore": 0,
+      "homeScore": 5,
+      "isOut": false
+    },
+    {
+      "type": "atBat",
+      "event": "Groundout",
+      "eventType": "field_out",
+      "description": "Alec Bohm grounds out, shortstop Mauricio Dubón to first baseman Matt Olson. Kyle Schwarber scores. Bryce Harper to 3rd.",
+      "rbi": 1,
+      "awayScore": 1,
+      "homeScore": 5,
+      "isOut": true
+    },
+    {
+      "type": "atBat",
+      "event": "Home Run",
+      "eventType": "home_run",
+      "description": "Matt Olson homers (1) on a fly ball to center field.",
+      "rbi": 1,
+      "awayScore": 1,
+      "homeScore": 6,
+      "isOut": false
+    },
+    {
+      "type": "atBat",
+      "event": "Sac Fly",
+      "eventType": "sac_fly",
+      "description": "Trea Turner out on a sacrifice fly to center fielder Michael Harris II. Derek Hill scores.",
+      "rbi": 1,
+      "awayScore": 2,
+      "homeScore": 6,
+      "isOut": true
+    }
+  ]
+}
