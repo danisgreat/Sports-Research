@@ -10,9 +10,7 @@ Generates complete verified game datasets across all 51 seasons/years from 1975 
   Documented with official cycle status (Biennial 1975-2017; Quadrennial 2017-present; Olympic/World Cup years, Qualifiers).
 
 Populates:
-1. Previous Sports Results/Basketball/EuroBasket/<YEAR>/<YEAR>_games.csv
-2. Eurobasket_CSVs/Eurobasket_<YEAR>.csv
-3. EuroBasket_CSVs/EuroBasket_<YEAR>.csv
+Previous Sports Results/Basketball/EuroBasket/<YEAR>/<YEAR>_games.csv
 """
 
 import os
@@ -425,11 +423,7 @@ def format_2025_rows():
 
 def process_all_years():
     base_dir = os.path.abspath("Previous Sports Results/Basketball/EuroBasket")
-    root_eurobasket = os.path.abspath("Eurobasket_CSVs")
-    root_eurobasket_cap = os.path.abspath("EuroBasket_CSVs")
     
-    os.makedirs(root_eurobasket, exist_ok=True)
-    os.makedirs(root_eurobasket_cap, exist_ok=True)
     
     # Load cache
     cache_file = os.path.abspath("research/data/eurobasket_cache.json")
@@ -462,10 +456,8 @@ def process_all_years():
         os.makedirs(year_folder, exist_ok=True)
         
         p_prev = os.path.join(year_folder, f"{year}_games.csv")
-        p_root1 = os.path.join(root_eurobasket, f"Eurobasket_{year}.csv")
-        p_root2 = os.path.join(root_eurobasket_cap, f"EuroBasket_{year}.csv")
         
-        for p in [p_prev, p_root1, p_root2]:
+        for p in [p_prev]:
             with open(p, "w", newline="", encoding="utf-8") as f:
                 writer = csv.writer(f)
                 writer.writerow(HEADERS)

@@ -9,10 +9,8 @@ RESULTS_CSV = "research/data/nbl_results_wide.csv"
 BOX_TEAM_CSV = "research/data/nbl_box_team.csv"
 PRESEASON_JSON = "research/data/nbl_rosetta_preseason.json"
 
-ROOT_OUTPUT_DIR = "NBL_CSVs"
 ARCHIVE_OUTPUT_BASE = os.path.join("Previous Sports Results", "Basketball", "NBL")
 
-os.makedirs(ROOT_OUTPUT_DIR, exist_ok=True)
 os.makedirs(ARCHIVE_OUTPUT_BASE, exist_ok=True)
 
 CSV_HEADERS = [
@@ -437,19 +435,18 @@ def build_all_seasons():
         for g_idx, g in enumerate(games, 1):
             g["Game Number"] = g_idx
 
-        # Write to both target paths
-        root_path = os.path.join(ROOT_OUTPUT_DIR, f"NBL_{year_str}.csv")
+        # Write only the canonical yearly archive
         archive_year_dir = os.path.join(ARCHIVE_OUTPUT_BASE, year_str)
         os.makedirs(archive_year_dir, exist_ok=True)
         archive_path = os.path.join(archive_year_dir, f"{year_str}_games.csv")
 
-        for out_file in [root_path, archive_path]:
+        for out_file in [archive_path]:
             with open(out_file, "w", encoding="utf-8", newline="") as f_out:
                 writer = csv.DictWriter(f_out, fieldnames=CSV_HEADERS)
                 writer.writeheader()
                 writer.writerows(games)
 
-        print(f"[{year_str}] Written {len(games)} games -> {root_path} and {archive_path}")
+        print(f"[{year_str}] Written {len(games)} games -> {archive_path}")
 
 if __name__ == "__main__":
     build_all_seasons()

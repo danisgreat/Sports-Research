@@ -14,8 +14,7 @@ Generates complete, verified game logs across all 51 seasons (1975 to 2025):
 - 2021 to 2025: Commissioner's Cup in-season tournament championships & expansion eras
 
 Outputs to:
-1. WNBA_CSVs/WNBA_<YEAR>.csv
-2. Previous Sports Results/Basketball/WNBA/<YEAR>/<YEAR>_games.csv
+Previous Sports Results/Basketball/WNBA/<YEAR>/<YEAR>_games.csv
 """
 
 import os
@@ -59,11 +58,9 @@ HEADERS = [
     "Primary Data Source"
 ]
 
-ROOT_OUTPUT_DIR = "WNBA_CSVs"
 ARCHIVE_OUTPUT_BASE = os.path.join("Previous Sports Results", "Basketball", "WNBA")
 CACHE_DIR = os.path.join("research", "data", "wnba_cache")
 
-os.makedirs(ROOT_OUTPUT_DIR, exist_ok=True)
 os.makedirs(ARCHIVE_OUTPUT_BASE, exist_ok=True)
 os.makedirs(CACHE_DIR, exist_ok=True)
 
@@ -514,9 +511,6 @@ def main():
         else:
             rows = build_2002_2025_year(year, sdv_data)
 
-        # Write root CSV
-        root_csv = os.path.join(ROOT_OUTPUT_DIR, f"WNBA_{year}.csv")
-        write_csv(root_csv, rows)
 
         # Write archive CSV
         archive_csv = os.path.join(ARCHIVE_OUTPUT_BASE, str(year), f"{year}_games.csv")

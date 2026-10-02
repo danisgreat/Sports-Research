@@ -8,9 +8,7 @@ Parses game details, phases (Regular Season, Top 16, Top 24, Play-In, Playoffs, 
 quarter partial scores (Q1-Q4, OT), venue, attendance, referees, winning margins, and comments.
 
 Populates:
-1. Euroleague_CSVs/Euroleague_<YEAR>.csv
-2. EuroLeague_CSVs/EuroLeague_<YEAR>.csv
-3. Previous Sports Results/Basketball/EuroLeague/<YEAR>/<YEAR>_games.csv
+Previous Sports Results/Basketball/EuroLeague/<YEAR>/<YEAR>_games.csv
 """
 
 import os
@@ -296,11 +294,7 @@ def parse_game(g, idx):
 
 def process_all_seasons():
     base_dir = os.path.abspath("Previous Sports Results/Basketball/EuroLeague")
-    root_euroleague = os.path.abspath("Euroleague_CSVs")
-    root_euroleague_cap = os.path.abspath("EuroLeague_CSVs")
     
-    os.makedirs(root_euroleague, exist_ok=True)
-    os.makedirs(root_euroleague_cap, exist_ok=True)
     
     total_games_all = 0
     total_seasons = 0
@@ -340,10 +334,8 @@ def process_all_seasons():
         os.makedirs(year_folder, exist_ok=True)
         
         target_path_previous = os.path.join(year_folder, f"{year}_games.csv")
-        target_path_root1 = os.path.join(root_euroleague, f"Euroleague_{year}.csv")
-        target_path_root2 = os.path.join(root_euroleague_cap, f"EuroLeague_{year}.csv")
         
-        for p in [target_path_previous, target_path_root1, target_path_root2]:
+        for p in [target_path_previous]:
             with open(p, "w", newline="", encoding="utf-8") as f:
                 writer = csv.writer(f)
                 writer.writerow(HEADERS)
@@ -352,8 +344,6 @@ def process_all_seasons():
         played_count = sum(1 for r in rows if r[41] == "Played")
         print(f"  -> Generated {len(rows)} games ({played_count} played) written to:")
         print(f"     1. {target_path_previous}")
-        print(f"     2. {target_path_root1}")
-        print(f"     3. {target_path_root2}")
         
         total_games_all += len(rows)
         total_seasons += 1

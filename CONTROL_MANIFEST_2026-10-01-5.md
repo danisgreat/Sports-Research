@@ -9,30 +9,19 @@ CRLF entries decode optional UTF-8 BOM, normalize newline forms, then hash UTF-8
 
 The archive's canonical manifest and source-custody manifest chain its complete indexed CSV/receipt/output scope. Bulk derived CSVs need not be duplicated here. Sport yearly narrative documents outside that archive hash scope remain reference documentation; they are not admitted forecast inputs. Do not infer unlisted source truth or procedural completeness from this receipt.
 
-Listed files: **326**.
+Listed files: **374**.
+
+User-authorized cleanup refreshed this retained receipt on 2026-10-02 (Australia/Sydney). Removed 385 byte-identical standalone CSV copies in 10 folders and 24 superseded control-manifest files. All 359 retained canonical season CSVs were hash-checked and are unchanged. Season builders now write only under Previous Sports Results. Superseded manifests remain recoverable from Git history. This refresh records file custody, not an independent audit of historical game-data completeness.
 
 | File | Mode | SHA-256 | Bytes |
 |---|---|---|---:|
 | `.gitattributes` | RAW | `c1c236f8579e8ff9cdd7cdd89fc59b3b604921ca898957c3a6d89d35533df02e` | 296 |
 | `.github/workflows/research.yml` | RAW | `851fa151823a2a1a58bc27240f01db4afbb27ab4f17cb0b0228cc320c427a55a` | 1050 |
-| `.gitignore` | RAW | `a1150a7001fa5c9c2ae1bd61f91a56c23d79f01e6fc25d57c2da444aeb15e41a` | 577 |
+| `.gitignore` | RAW | `6727bf657383c5fc0457d727e7933d4c8b273a17b741fe759b2d409021f02bf1` | 600 |
 | `BASE_RATES_REGISTER.md` | CRLF | `13e3245a8d3d5aa61b595a703ecaf8a77ac0baaeaa700836a096cfedcedfbd7a` | 37325 |
 | `CARD_AND_LOG_TEMPLATES.md` | CRLF | `42d27e224f3e829475af9132a1d8ec7ee65966d9d76e085513fd69f5d2a39cc5` | 5160 |
 | `CHANGELOG.md` | CRLF | `a8e7c23ed8e3174c8989169d4a36096fae05922b795e324097008fa119deccdd` | 65676 |
 | `CONTRIBUTING.md` | CRLF | `e13458b408c63a1024e736e3c7ed9e56e5908885c10caa55ad83f8e509b58423` | 1599 |
-| `CONTROL_MANIFEST_2026-09-28-4.md` | CRLF | `533af3b585c5a1d766d6adcee4cfc3f660abc3720a6d3727c8a5f6a5a6df3be7` | 20033 |
-| `CONTROL_MANIFEST_2026-09-28-5.md` | CRLF | `77eed529422a0d4ff3132ce256c934d22cc2ae13b9f448463d97fc27b097e40a` | 4692 |
-| `CONTROL_MANIFEST_2026-09-28-6.md` | CRLF | `f74d0369cd91770c54ee32a9c548467023ee19fa3cd2de26114795c6ef26b392` | 7381 |
-| `CONTROL_MANIFEST_2026-09-28-7.md` | CRLF | `a25f89fa04ef02d80e985f3f9f3a829a2a2780922923de9cfbabc339bb6df969` | 7943 |
-| `CONTROL_MANIFEST_2026-09-28-8.md` | CRLF | `6dc64b2d74178335b76dc8180983a8d51b104c1cbe50f463148927d675bf6a0f` | 7845 |
-| `CONTROL_MANIFEST_2026-09-28-9.md` | CRLF | `ee7a8ee9481eb6a8c8085bb4fcde9e55560f163f5ec78af11259a7cd55f0e7b0` | 6535 |
-| `CONTROL_MANIFEST_2026-09-29-1.md` | CRLF | `69b0cb02ca498be86669c8231a94ac0029125207e62ac3a03e5a0d42a413f7b1` | 6586 |
-| `CONTROL_MANIFEST_2026-09-29-2.md` | CRLF | `a1727278c6d8d662408be09d36d3d6a715cdcee0261b5e2ff4502bd639ed90e6` | 13803 |
-| `CONTROL_MANIFEST_2026-09-29-3.md` | CRLF | `d23995fd00020cb3a90dea4adf96c215b49b2e25fb535460e032c7b160e4b3d7` | 16959 |
-| `CONTROL_MANIFEST_2026-10-01-1.md` | CRLF | `b5ab1804012de12455e8b199c63ac4e9cb42d051f000665a3550328001bb72f1` | 44625 |
-| `CONTROL_MANIFEST_2026-10-01-2.md` | CRLF | `9c8f8f1d3250abb7105031db8a0be7e97c8b762145cfbc52593baa1eb923617b` | 45136 |
-| `CONTROL_MANIFEST_2026-10-01-3.md` | CRLF | `b24229412d29ea33b9dc6b90e30ab91805e9b68346c442a7e16c46f19318c03f` | 45976 |
-| `CONTROL_MANIFEST_2026-10-01-4.md` | CRLF | `d382496270a9df0ef0b23ad08dba9dea1453aba57a9175f1ee6aca0f2b92ee05` | 46100 |
 | `CURRENT_RULES.md` | CRLF | `f2ef75ce17be91f2bcbdd13ae4084d37d776987750e5adeb29311cada5580b15` | 13033 |
 | `GAME_PREDICTION_RANK_LOG.csv` | RAW | `4bb0592221b7c9c94a75f13559eb9a233055a436b8a2e880cfe9d96bff3a97d7` | 1523097 |
 | `HISTORICAL_LINK_INDEX.md` | CRLF | `d88da53952d78ee205d7511e2be20f474ab83acc627bf1d8f3a6860738426ab9` | 68536 |
@@ -90,15 +79,6 @@ Listed files: **326**.
 | `research/custody/implementation_2026-10-01/CARD_AND_LOG_TEMPLATES.md` | CRLF | `93dd416fe642147c61df3240e2bfc6a2a8aa930b4e19ea35b86bd2da555d8141` | 20587 |
 | `research/custody/implementation_2026-10-01/CHANGELOG.md` | CRLF | `234ad8f71ed14740a0ac89ab2ab2caaaa258af3310b83468d0e9a0404b014a1a` | 61287 |
 | `research/custody/implementation_2026-10-01/CONTRIBUTING.md` | CRLF | `bac7a3ba9e228762d3eff57b253b5191195bfe6eb2cab8bd06885cd7dbe4401a` | 2044 |
-| `research/custody/implementation_2026-10-01/CONTROL_MANIFEST_2026-09-28-4.md` | CRLF | `533af3b585c5a1d766d6adcee4cfc3f660abc3720a6d3727c8a5f6a5a6df3be7` | 20033 |
-| `research/custody/implementation_2026-10-01/CONTROL_MANIFEST_2026-09-28-5.md` | CRLF | `77eed529422a0d4ff3132ce256c934d22cc2ae13b9f448463d97fc27b097e40a` | 4692 |
-| `research/custody/implementation_2026-10-01/CONTROL_MANIFEST_2026-09-28-6.md` | CRLF | `f74d0369cd91770c54ee32a9c548467023ee19fa3cd2de26114795c6ef26b392` | 7381 |
-| `research/custody/implementation_2026-10-01/CONTROL_MANIFEST_2026-09-28-7.md` | CRLF | `a25f89fa04ef02d80e985f3f9f3a829a2a2780922923de9cfbabc339bb6df969` | 7943 |
-| `research/custody/implementation_2026-10-01/CONTROL_MANIFEST_2026-09-28-8.md` | CRLF | `6dc64b2d74178335b76dc8180983a8d51b104c1cbe50f463148927d675bf6a0f` | 7845 |
-| `research/custody/implementation_2026-10-01/CONTROL_MANIFEST_2026-09-28-9.md` | CRLF | `ee7a8ee9481eb6a8c8085bb4fcde9e55560f163f5ec78af11259a7cd55f0e7b0` | 6535 |
-| `research/custody/implementation_2026-10-01/CONTROL_MANIFEST_2026-09-29-1.md` | CRLF | `69b0cb02ca498be86669c8231a94ac0029125207e62ac3a03e5a0d42a413f7b1` | 6586 |
-| `research/custody/implementation_2026-10-01/CONTROL_MANIFEST_2026-09-29-2.md` | CRLF | `a1727278c6d8d662408be09d36d3d6a715cdcee0261b5e2ff4502bd639ed90e6` | 13803 |
-| `research/custody/implementation_2026-10-01/CONTROL_MANIFEST_2026-09-29-3.md` | CRLF | `d23995fd00020cb3a90dea4adf96c215b49b2e25fb535460e032c7b160e4b3d7` | 16959 |
 | `research/custody/implementation_2026-10-01/CURRENT_RULES.md` | CRLF | `c9cd50462cdc731d979d852eda46f74898e329043f8394410d5e2e3e75834c04` | 42420 |
 | `research/custody/implementation_2026-10-01/extra_intake_snapshot/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md` | CRLF | `621789c49f8cb542f646e7f0281a1dcd429ba589ed695ae33fdf0852bc3abd64` | 20129 |
 | `research/custody/implementation_2026-10-01/extra_intake_snapshot/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md.sha256` | RAW | `1a23b3baee5e42d1ea63a6ab551f5a35a50fd55cf9ccd2634025cbd7cb0bf5ff` | 66 |
@@ -177,6 +157,62 @@ Listed files: **326**.
 | `research/custody/implementation_2026-10-01/VALIDATION_EVIDENCE.md` | CRLF | `986f353d216aefd2221058c8aea927f3d9b2dc3c92dcc03cdbde41345cfe997a` | 50646 |
 | `research/custody/implementation_2026-10-01/VERIFICATION_PROTOCOL.md` | CRLF | `2830ffbdefd968b729df1d40f89d47a10c6e39558a586ad1f208d0a59e8a5ede` | 7413 |
 | `research/custody/implementation_2026-10-01/VERIFICATION_RECEIPT_2026-09-28.md` | CRLF | `28b19eab7bafc552f19ac18e02ef7131b5885f141e8084eb8e30ab1932ff1c57` | 14471 |
+| `research/data/eurobasket_cache.json` | RAW | `b6bb4f0ca8cc42a922e37fe12d68313caa51e95ce10a55035b9f10f8a46d8a28` | 431553 |
+| `research/data/nba_cache/nbaallelo.json` | RAW | `1e2d58cf6bc0579154603ea213f038e27352acf8596d32fb57a473ced01c6a57` | 61118766 |
+| `research/data/nba_cache/sdv_nba_schedules.json` | RAW | `1bd921127ae63f9d33d385d45b2a1ba3112e9e96594fa6b8a4a7dca2c6da9523` | 84515617 |
+| `research/data/nbl_box_team.csv` | RAW | `d4f5ff92a4fff426a5065b9a9373cb04a1c3cb16482ed2a803edb7f103093905` | 957665 |
+| `research/data/nbl_results_wide.csv` | RAW | `f366a1892382ff9217f3a4df05cffa76c9c56b2b8887aec8df0391f777d15db1` | 2003973 |
+| `research/data/nbl_rosetta_preseason.json` | RAW | `944c797e3904dc5a7e8d8eafb738d9b782a5577dbd63d10d0e148d3550fb80d0` | 237573 |
+| `research/data/nhl_cache/nhl_1975_19751976.json` | RAW | `2f800cb1a0f6909cdfcc65cb95904ff55f9fbdaa56e86fda5ed60efc08535647` | 1145645 |
+| `research/data/nhl_cache/nhl_1976_19761977.json` | RAW | `971eca02ae900f82de3e3c0bb6ddc3783a0d5570ece97e4d3137ce04ca78da9e` | 1113068 |
+| `research/data/nhl_cache/nhl_1977_19771978.json` | RAW | `ec7a65f4443752b38aee41c327e46dd9c81281e9e48f137de09de626666422c1` | 1114408 |
+| `research/data/nhl_cache/nhl_1978_19781979.json` | RAW | `6bd847a6b5ec7d09bac08065c83968a864c0f7a2b41d2dd3a99f3c978447113b` | 1057187 |
+| `research/data/nhl_cache/nhl_1979_19791980.json` | RAW | `4c4909a5d33db321cc9ac865fe2fe8e6f8b171c4dd3fd2e4bc670c87ef80fd4d` | 1333828 |
+| `research/data/nhl_cache/nhl_1980_19801981.json` | RAW | `c2c0e7ca4fa292d385ba82e1fb581ce8ebf9b6fe40cc49d5eee7d2d8b6d4e953` | 1341936 |
+| `research/data/nhl_cache/nhl_1981_19811982.json` | RAW | `f46e91198c5cd16d8b3db3c76dc33b00935ff294e669d8b6edd469867f81e6ce` | 1352636 |
+| `research/data/nhl_cache/nhl_1982_19821983.json` | RAW | `c136e20c05fe1521e2e6c498dfdb472dcb3b5ad3d2e046c598cfbb9567ca354d` | 1331592 |
+| `research/data/nhl_cache/nhl_1983_19831984.json` | RAW | `64589b098528799f692a93454acf42e7ded899aab1d77532370eaf79fd42d77e` | 1338996 |
+| `research/data/nhl_cache/nhl_1984_19841985.json` | RAW | `0dea52dc4fe4a458f3f6c6ead9039fdabe3d04fa84c4f6077427b50fddb974ba` | 1340632 |
+| `research/data/nhl_cache/nhl_1985_19851986.json` | RAW | `1bad246d24d4cbf1adaddabbce4587a54aad43b065a0d3192671dbb394da8c94` | 1342134 |
+| `research/data/nhl_cache/nhl_1986_19861987.json` | RAW | `95cf2ca311a51368fb05edfdc44131442e29c48b0b4892f405f6370f0b00bcfc` | 1368638 |
+| `research/data/nhl_cache/nhl_1987_19871988.json` | RAW | `84af23373170cbc7e89147a308b61dcdb5d09dcd8c59f7e5c8c3ba36a5a3f0f2` | 1358004 |
+| `research/data/nhl_cache/nhl_1988_19881989.json` | RAW | `98728e53e3b7c72380d212acba0fc7997541762e63ab6d9b2f906ccb25f4a428` | 1358646 |
+| `research/data/nhl_cache/nhl_1989_19891990.json` | RAW | `4614875bacc5b05e08e841076d6fd7468c21ee0f2f4c783cb7d43be8b1c7982e` | 1379138 |
+| `research/data/nhl_cache/nhl_1990_19901991.json` | RAW | `8fb38a18d5c6ce1a66b58fb0240794f9d4e22d79cfb7c8e1ec67fc84211b2a21` | 1392637 |
+| `research/data/nhl_cache/nhl_1991_19911992.json` | RAW | `667868e7ed1e1e36efb70c54589d24676629a3eaf8e893a8863e6386695bc4fa` | 1422552 |
+| `research/data/nhl_cache/nhl_1992_19921993.json` | RAW | `f11069bc8de7f6bf37a1e99ba47c199b7d97a8d69fe8ac746d23a3416cf7f282` | 1611486 |
+| `research/data/nhl_cache/nhl_1993_19931994.json` | RAW | `45dd8ea436845fd87a71bb93c0d17e71da66f7c7caf8808274d0529c30c4b654` | 1737503 |
+| `research/data/nhl_cache/nhl_1994_19941995.json` | RAW | `c242833008fc9f8f4c7745434c5ce10768e30826624d7426b13f0588d77b05c0` | 1045583 |
+| `research/data/nhl_cache/nhl_1995_19951996.json` | RAW | `972722d017a39174a6fb48f228f1e29a1353d2f4c8969c7e78212f78aecf5175` | 1683867 |
+| `research/data/nhl_cache/nhl_1996_19961997.json` | RAW | `27f343a20a396b646a29ed22d3a9ae56d97f369323f0e4ff81fc7d8a0dac71da` | 1675039 |
+| `research/data/nhl_cache/nhl_1997_19971998.json` | RAW | `cc5293005b418a1f23bac6f8ca1275a6dd8f417366c1c41b95b90df560ef10be` | 1677945 |
+| `research/data/nhl_cache/nhl_1998_19981999.json` | RAW | `44acbd975110b5508d88ae8469353c97047a5e9f011bec94d8ae79e2512b3ace` | 1746027 |
+| `research/data/nhl_cache/nhl_1999_19992000.json` | RAW | `1b7d234e536fed5e1ee5121255c8d2e902ac94bc228f536d5ae1495f3d880e0d` | 1779306 |
+| `research/data/nhl_cache/nhl_2000_20002001.json` | RAW | `9369dbe52b71576893d2137926f23040d202dda76d1d094cce72c97d9670a094` | 1909760 |
+| `research/data/nhl_cache/nhl_2001_20012002.json` | RAW | `90a2a67236d524abbeb6f60faeb56e4fb25b19912ac3de8a9aedd0ebed94afd7` | 1919314 |
+| `research/data/nhl_cache/nhl_2002_20022003.json` | RAW | `b818965fa8d5c44771c1229717f6060a5c3f7c4241c137ffdaa5e8630ffb5728` | 1911532 |
+| `research/data/nhl_cache/nhl_2003_20032004.json` | RAW | `ba4467fd32bd84b846cc23c25607c4bce74513cd9fffc5d6a54a355d8ef16c39` | 1915868 |
+| `research/data/nhl_cache/nhl_2005_20052006.json` | RAW | `875d7da5229cbd8312006cbaaa47ca0b8bd022bf2c3854d1816757a625f8d98c` | 2047878 |
+| `research/data/nhl_cache/nhl_2006_20062007.json` | RAW | `9af434d874058b0ec5ff706bb459e6a991f5a3ad401797d2f8392f3450d1d26d` | 2277994 |
+| `research/data/nhl_cache/nhl_2007_20072008.json` | RAW | `2da823e63d02f355d3e7f016836c71e136fe36100486fd48c79f4761f49afa0c` | 2420154 |
+| `research/data/nhl_cache/nhl_2008_20082009.json` | RAW | `5e226a6314adf627993b552db78ee7237081c6a274689b2121a64ae6e29ccea0` | 2549224 |
+| `research/data/nhl_cache/nhl_2009_20092010.json` | RAW | `9cc3b4b16be0d216931651733f905bc5b5ce5cdc93af8b82592626c5c45d1dc8` | 2536290 |
+| `research/data/nhl_cache/nhl_2010_20102011.json` | RAW | `53ecb99dcd09adcd85e116d73b2c8c4f0ec74c8c904fa74cb3dc3e8299fc3a60` | 2468639 |
+| `research/data/nhl_cache/nhl_2011_20112012.json` | RAW | `9c122e0d02b208ff6e472cbb19271ebab3736db8b4d8e65ab7302b78c383f696` | 2457019 |
+| `research/data/nhl_cache/nhl_2012_20122013.json` | RAW | `bb8936544097d700f130b7255db8c898102f39f819fff9ea2a9baa249729f799` | 1435432 |
+| `research/data/nhl_cache/nhl_2013_20132014.json` | RAW | `aba9556d37e696a50fe149f6120142adf5606fa7d2b822ff975df399fc28364e` | 2472196 |
+| `research/data/nhl_cache/nhl_2014_20142015.json` | RAW | `971c2d8187ee19a0a2aca1392db16df5578044d9c7206f132a7fa3fa58cf051f` | 2480257 |
+| `research/data/nhl_cache/nhl_2015_20152016.json` | RAW | `864cd754dd7d8de6737fa74a7ed390784f5b92224a6b11660c2ae4ace7bed5a8` | 2499075 |
+| `research/data/nhl_cache/nhl_2016_20162017.json` | RAW | `1affd4b78a700d547e83a8ef78a80173db6bbc4c93295fef5efd3ffe818e519c` | 2468865 |
+| `research/data/nhl_cache/nhl_2017_20172018.json` | RAW | `163c1fd16a0272639a3310a30bb0cebe8c7114cea4eeea270c0d4325037ab173` | 2397367 |
+| `research/data/nhl_cache/nhl_2018_20182019.json` | RAW | `fdf099b00dfa154f95faac7ad23e56567c177b3a5a938cd48d56eb6f416b6273` | 2679171 |
+| `research/data/nhl_cache/nhl_2019_20192020.json` | RAW | `d27722ccf76e6e106cdd647092577aab4765cf38a719771324936b623d23fb55` | 2505838 |
+| `research/data/nhl_cache/nhl_2020_20202021.json` | RAW | `a5dfb117c13f1c7362f0ad11e25a409b9cef6b1275147cf84bbbac220b468c8f` | 1808474 |
+| `research/data/nhl_cache/nhl_2021_20212022.json` | RAW | `76cec3c0ee32f3bb72ae5a1cd1e9315c2aab968b2c21e939c2aca648251dba1e` | 2789163 |
+| `research/data/nhl_cache/nhl_2022_20222023.json` | RAW | `25ed87a10d0b6b849910233ba7151ead9ad674d036e1e432c8fdd45587db894d` | 2740305 |
+| `research/data/nhl_cache/nhl_2023_20232024.json` | RAW | `5899ff0cc53a2e0304109af6719e89c41eb71be38b83d584a6513c991e5a9133` | 3044295 |
+| `research/data/nhl_cache/nhl_2024_20242025.json` | RAW | `0a25056ee756ed53051b7b66ee7f4e073edd8e62ddeed29adcd1b842fc47a3ee` | 3192075 |
+| `research/data/nhl_cache/nhl_2025_20252026.json` | RAW | `5ba5a6b603a5c72d09d7d94f65f10c35f88ebd1fcd3628bcc1d22439f02cf5ce` | 3235733 |
 | `research/data/processed/data_manifest.json` | RAW | `129458f7aa9a8bbc776cc1da9038ac916de5601f14138a799a66a63f2212ab41` | 5240 |
 | `research/data/processed/epl_2026-27_current.parquet` | RAW | `4d68693c465442168dded8082041dace555b07134b9191dd5ff7ed1e1b221f8c` | 6723 |
 | `research/data/processed/epl_2026-27_current_manifest.json` | RAW | `4142ab5fafa4d3d59453ab2c23a21f1c34b332042e19e71d34657084baac4067` | 612 |
@@ -226,8 +262,18 @@ Listed files: **326**.
 | `research/data/wiki_cache/Rose_Bowl_Game.json` | RAW | `069dd53ee6be70dffb2cb3f0603824ba5b124cec69d60527bc12d44e231a9ad8` | 145909 |
 | `research/data/wiki_cache/SEC_Championship_Game.json` | RAW | `9a2b86e628b08a837b97ed86dbf6174b6c59125037f471989b05892563946909` | 36286 |
 | `research/data/wiki_cache/Sugar_Bowl.json` | RAW | `28d2743b14283a818d2019210825a2814d4fa90af41b555fdd1125da16180028` | 70957 |
+| `research/data/wnba_cache/fivethirtyeight_wnba_elo.json` | RAW | `fb7f11f6b5cd4712f1ea5ebe67e576bdc5f20ff5b0fd6a819b6e29418fe295d7` | 3242558 |
+| `research/data/wnba_cache/sdv_wnba_schedule.json` | RAW | `0b72d7d23580271ea56fa094b8ba9539cd2c5ae16bf1e5b4687228ff76191794` | 16373432 |
 | `research/EPL_EVENT_RECEIPT_TEMPLATE.json` | RAW | `25f25678011b2f9150d815994ba786803c99b4d3db21d5fc85490ad825c8ffe8` | 444 |
 | `research/EPL_PREREGISTRATION_2026-09-29.md` | CRLF | `ad08fbaa6436d90aaee89948fc1347d99b3c6eb1eef787f96faa34e974157637` | 4134 |
+| `research/issued_research/P-523-0fd247ea4c6b4450a37b7bd6e32e1101.md` | CRLF | `3eb0170377235649de31838e7131d3d4f972fdcd63cdca76c7987e325a238fd3` | 13996 |
+| `research/issued_research/P-523-0fd247ea4c6b4450a37b7bd6e32e1101.original.txt` | RAW | `f7082acc7acf00d452ab05511c1b23f29e21615c1247d2ea5fe9fb9d52a15c6c` | 11938 |
+| `research/issued_research/P-524-427e10b469894624b66263c57b5b4561.md` | CRLF | `1d77974347c5d352ff88a9884b92265409a8408cb8f4b53e543d28e2c8029f9c` | 8932 |
+| `research/issued_research/P-524-427e10b469894624b66263c57b5b4561.original.txt` | RAW | `555aa41eeedd9c7d8c84850940a93287fad1cc8e7264cf3b063178bf9eb5f47e` | 6803 |
+| `research/issued_research/P-525-86ae2a4dd237491d9f37cfce0da5f9fd.md` | CRLF | `01dfce60537e960af6310f1d0aa5b4720842ff8e7f9428e69896467acc2c011d` | 14448 |
+| `research/issued_research/P-525-86ae2a4dd237491d9f37cfce0da5f9fd.original.txt` | RAW | `516cecdbf710d01ed00dbc2b89135e8f9970961c82e6177303946aae65efcbda` | 9657 |
+| `research/issued_research/P-526-0676a2a79b094ceab6433c33bd800263.md` | CRLF | `6730a6a46b2901715a7a3aa6552a708c2ccbd10062bbf8d86b082a9c239ed7e7` | 18725 |
+| `research/issued_research/P-526-0676a2a79b094ceab6433c33bd800263.original.txt` | RAW | `ab237649f6f9e753df6a9edb25f9cb55cf2ee9a3ae55e582e86de71c97aa9ff7` | 17890 |
 | `research/model_builds/build_2026-10-01.json` | RAW | `010d967885b384cd7798601f7e818d1a948551808433b273cb37af18fa7cf2a3` | 37808 |
 | `research/model_builds/current.json` | RAW | `010d967885b384cd7798601f7e818d1a948551808433b273cb37af18fa7cf2a3` | 37808 |
 | `research/NBL_PREREGISTRATION_2026-09-29.md` | CRLF | `54e648ef5b5be9a0c57e010064af2b8083c53cc90c2857f5967e51f1cfcbffba` | 3659 |
@@ -276,11 +322,16 @@ Listed files: **326**.
 | `research/src/build_afl_all_years.py` | RAW | `e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d` | 794 |
 | `research/src/build_aflw_all_years.py` | RAW | `e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d` | 794 |
 | `research/src/build_cfb_all_years.py` | RAW | `e3778a500a3b9bdb15b40dc2c319e15ff361c15e1ddf81c3daf5d6aea3feeb8d` | 794 |
-| `research/src/build_kbo_all_years.py` | RAW | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 0 |
+| `research/src/build_eurobasket_all_years.py` | RAW | `db8e53a73ebe88b345db8f154564bd07dbad3c4448d27c2f826bfad769223c31` | 18278 |
+| `research/src/build_euroleague_all_years.py` | RAW | `24d9d1b5d37f2fdb4bfa0108582842c2fdff81ca7e228085b1943a4396901d1d` | 12708 |
+| `research/src/build_nba_all_years.py` | RAW | `4f9ad25bb5b3804bfe5dcfd4b321acb7142733b6c1b62a9f1f310f39d1206566` | 22346 |
+| `research/src/build_nbl_all_years.py` | RAW | `a11a03b9473e9850281be475408c59ab4abcf9f40a21deac196538e8ae76a993` | 19505 |
+| `research/src/build_nhl_all_years.py` | RAW | `0ba602fe7b1d47709dca3da479913bc01f536e18e0f1438e26132b4953c47b32` | 18000 |
+| `research/src/build_wnba_all_years.py` | RAW | `37bb3717557bf278c6d4c9a937d88ddbbe748c21f228af74c30571a8cc7018d5` | 21563 |
 | `research/src/builds.py` | RAW | `24243fc940516a8ac647e38173ec4cfda13d6bbe96c79ae5641c12554daf429b` | 2523 |
 | `research/src/candidate_models.py` | RAW | `54fc8cb4b6c80ec4ae517ccebc774dd47bab096c844f732254f22363cec320cf` | 3768 |
 | `research/src/collect_cfb_postseason.py` | RAW | `a7cdf97b9f459dcb96e34c9073008aefddfef661dbebd60f9e02e06d553c56e1` | 358 |
-| `research/src/control_manifest.py` | RAW | `2bd5072a533571c549fa07c5c172d819cc23ecbece5936ed55abf27f20723cc6` | 4765 |
+| `research/src/control_manifest.py` | RAW | `ce751b7d61445f1795cd8f483ebe40db428115472ed90fb7339ac197efb59458` | 4844 |
 | `research/src/current.py` | RAW | `8981ce6fabcd7133690f0b9691024895b0948ad27215bf414e7321cf65ada289` | 816 |
 | `research/src/daily.py` | RAW | `4efe15f0e234f9fd706bb0998256d61bf8c84f7b3f7474d24bbf2faf8cf600f8` | 16508 |
 | `research/src/dixon_coles.py` | RAW | `3cb47e0845b558fecde03f9c1f4f14b730964f82a6b3cef79474962f73d02f1f` | 6062 |
@@ -291,6 +342,7 @@ Listed files: **326**.
 | `research/src/export_lanes.py` | RAW | `dbd4434d2fdd46fe2bb35875260b34f7cc5e54692448eb486a9bd1b1fcc9e8b9` | 3331 |
 | `research/src/features.py` | RAW | `73b8ff815b9153b1f16d168613fd754df0bef4923cf0c9d09d80137e6017d006` | 2321 |
 | `research/src/feeds.py` | RAW | `8088078db9709fd6b353df69393574fcb91091a7a7c06ba4e54d0d4196278b96` | 5343 |
+| `research/src/fetch_all_eurobasket_data.py` | RAW | `1de39513d359a6456a5d4784bea6c456c2894a2ea9e27bb425a816d7ef0428d4` | 12582 |
 | `research/src/history.py` | RAW | `a99f2f672e5c7b8109819d2b4c8d2cdab5357a63cf0dd4b840f208e609a8711e` | 7619 |
 | `research/src/issue.py` | RAW | `e3fa2f728b5972c30f1181c7d7be93ec16c805d9a9afcf6a537071b65f6c2cb5` | 17728 |
 | `research/src/ledger.py` | RAW | `93e6c2bc5719ebaaa683980dd93d0744bbb8039f9072852a3c7516d91ebe9f16` | 17397 |
@@ -312,8 +364,6 @@ Listed files: **326**.
 | `research/src/sports/basketball/__init__.py` | RAW | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 0 |
 | `research/src/sports/basketball/joint.py` | RAW | `f89d50cfcbcba80abae4a2a421fcd522f469c9b48bc757c7855f179992e90658` | 2791 |
 | `research/src/sports/soccer/__init__.py` | RAW | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 0 |
-| `research/src/test_kbo.py` | RAW | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 0 |
-| `research/src/test_kbo_ranges.py` | RAW | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 0 |
 | `research/src/test_parsers.py` | RAW | `367582248a108e164c96240a1e181d611552ee0ead6acf00cd0d70116a51cdd2` | 444 |
 | `research/src/workflow.py` | RAW | `1efe59fea667920e33ebe8d203036709f6141cd1b4b0653dc8d427c4ad09ef53` | 4430 |
 | `research/tests/test_archive.py` | RAW | `f56538d21c6309d29312244bc5939a011e4083978ef53d78e967c5117b9910c4` | 16298 |
@@ -336,6 +386,6 @@ Listed files: **326**.
 | `RULES_TENNIS.md` | CRLF | `7a20d6e49f970d8a43f70927d97c9ddcaf58d1393ab4878d1887a733366be1e7` | 44547 |
 | `SCORING_AND_VALIDATION.md` | CRLF | `a7fb8687a0009cd99b3cfdd3395fdee8943723efb4747c7e7d161aee192d14ab` | 6797 |
 | `SKILL_BASELINE_LEDGER.md` | CRLF | `b73977044b45d1bd0269e2017093a144ce0ceea484a909ac01c2eedd17e765c5` | 13159 |
-| `SOURCES.md` | CRLF | `9c2a692baf1708c551d1e920cc6356fe6424fb82107b12ed825ea410388d3a2c` | 92332 |
+| `SOURCES.md` | CRLF | `781d603b379b5bfc58fb8495c57dc4df956c0d21b4fb8ccdba721b465897e9ed` | 130931 |
 | `VALIDATION_EVIDENCE.md` | CRLF | `9021401cc30d19d4276db8b49887a833ffa2d69b9871362686d66ef1fac07294` | 51224 |
 | `VERIFICATION_PROTOCOL.md` | CRLF | `621be3c63d0af1e0a86a88ecfcdedd078be4350969c5ee30df57c7ab16566837` | 3160 |

@@ -629,9 +629,9 @@ Traps found while building the files (each one changed the output):
 
 ---
 
-### 3.15 KBO League game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/KBO/<YEAR>/<YEAR>_games.csv and KBO_CSVs/KBO_<YEAR>.csv; tested 2026-10-01)
+### 3.15 KBO League game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/KBO/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
 
-Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in both the structured multi-sport directory and standalone download directory. Season = the calendar year in which the season is played (pre-season exhibition games in March, regular season April–October, All-Star game in July, and postseason wild card/semi-playoff/playoff/Korean Series in October–November).
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in the structured multi-sport directory. Season = the calendar year in which the season is played (pre-season exhibition games in March, regular season April–October, All-Star game in July, and postseason wild card/semi-playoff/playoff/Korean Series in October–November).
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|
@@ -657,9 +657,9 @@ Traps found and handled while building the KBO files:
 
 ---
 
-### 3.16 NPB (Nippon Professional Baseball) game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/NPB/<YEAR>/<YEAR>_games.csv and NPB_CSVs/NPB_<YEAR>.csv; tested 2026-10-01)
+### 3.16 NPB (Nippon Professional Baseball) game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/NPB/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
 
-Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in both the structured multi-sport directory and standalone download directory. Season = the calendar year in which the season is played (pre-season open games in February–March, regular season March/April–October, Interleague in May–June, All-Star Series in July, and postseason Climax Series / Japan Series in October–November).
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in the structured multi-sport directory. Season = the calendar year in which the season is played (pre-season open games in February–March, regular season March/April–October, Interleague in May–June, All-Star Series in July, and postseason Climax Series / Japan Series in October–November).
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|
@@ -683,9 +683,9 @@ Traps found and handled while building the NPB files:
 
 ---
 
-### 3.17 Minor League Baseball (MiLB / Triple-A) game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/Minor Leagues/<YEAR>/<YEAR>_games.csv, Minor_League_Baseball_CSVs/Minor_League_Baseball_<YEAR>.csv, and MiLB_CSVs/MiLB_<YEAR>.csv; tested 2026-10-01)
+### 3.17 Minor League Baseball (MiLB / Triple-A) game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/Minor Leagues/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
 
-Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in both the structured multi-sport directory and standalone download directories. Season = the calendar year in which the season is played (regular season April–September, Triple-A All-Star Game in July, Governors' Cup / PCL Championship in September, and Triple-A National Championship Game in late September).
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in the structured multi-sport directory. Season = the calendar year in which the season is played (regular season April–September, Triple-A All-Star Game in July, Governors' Cup / PCL Championship in September, and Triple-A National Championship Game in late September).
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|
@@ -704,9 +704,9 @@ Traps found and handled while building the Minor League Baseball files:
 
 ---
 
-### 3.18 EuroLeague Basketball game-by-game history, 2000-2025 (used to build Previous Sports Results/Basketball/EuroLeague/<YEAR>/<YEAR>_games.csv, Euroleague_CSVs/Euroleague_<YEAR>.csv, and EuroLeague_CSVs/EuroLeague_<YEAR>.csv; tested 2026-10-01)
+### 3.18 EuroLeague Basketball game-by-game history, 2000-2025 (used to build Previous Sports Results/Basketball/EuroLeague/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
 
-Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025, season codes `E2000` through `E2025`, covering 6,685 total games). The built files, column dictionary, and season game counts are stored in both the structured multi-sport directory and standalone download directories. Season = the calendar starting year (e.g. 2000 represents the 2000–01 season, 2024 represents 2024–25, and 2025 represents 2025–26).
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025, season codes `E2000` through `E2025`, covering 6,685 total games). The built files, column dictionary, and season game counts are stored in the structured multi-sport directory. Season = the calendar starting year (e.g. 2000 represents the 2000–01 season, 2024 represents 2024–25, and 2025 represents 2025–26).
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|
@@ -729,9 +729,9 @@ Traps found and handled while building the EuroLeague Basketball files:
 
 ---
 
-### 3.19 EuroBasket (FIBA European Championship for Men) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/EuroBasket/<YEAR>/<YEAR>_games.csv, Eurobasket_CSVs/Eurobasket_<YEAR>.csv, and EuroBasket_CSVs/EuroBasket_<YEAR>.csv; tested 2026-10-01)
+### 3.19 EuroBasket (FIBA European Championship for Men) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/EuroBasket/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
 
-Every route below was requested live on 2026-10-01 and returned the named fields for all 51 years (1975–2025, covering 24 tournament editions, 1,319 total game records). The built files, column dictionary, and tournament game counts are stored in both the structured multi-sport directory and standalone download directories. Season = the calendar year of the competition.
+Every route below was requested live on 2026-10-01 and returned the named fields for all 51 years (1975–2025, covering 24 tournament editions, 1,319 total game records). The built files, column dictionary, and tournament game counts are stored in the structured multi-sport directory. Season = the calendar year of the competition.
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|
@@ -760,9 +760,9 @@ Traps found and handled while building the EuroBasket files:
 
 ---
 
-### 3.20 Australia National Basketball League (NBL) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/NBL/<YEAR>/<YEAR>_games.csv and NBL_CSVs/NBL_<YEAR>.csv; tested 2026-10-01)
+### 3.20 Australia National Basketball League (NBL) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/NBL/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
 
-Every route below was requested live on 2026-10-01 and returned the named fields for all 51 years (1975–2025, covering 8,095 total game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `NBL_CSVs/`. Season = start calendar year of the competition.
+Every route below was requested live on 2026-10-01 and returned the named fields for all 51 years (1975–2025, covering 8,095 total game records). The built files, column dictionary, and season counts are stored in the structured multi-sport directory. Season = start calendar year of the competition.
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|
@@ -790,9 +790,9 @@ Traps found and handled while building the Australia NBL files:
 
 ---
 
-### 3.21 National Hockey League (NHL) game-by-game history, 1975-2025 (used to build Previous Sports Results/Ice Hockey/NHL/<YEAR>/<YEAR>_games.csv and NHL_CSVs/NHL_<YEAR>.csv; tested 2026-10-02)
+### 3.21 National Hockey League (NHL) game-by-game history, 1975-2025 (used to build Previous Sports Results/Ice Hockey/NHL/<YEAR>/<YEAR>_games.csv; tested 2026-10-02)
 
-Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 58,379 total verified game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `NHL_CSVs/`. Season = start calendar year of the competition (e.g., 1975 = 1975–76, 2024 = 2024–25, 2025 = 2025–26).
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 58,379 total verified game records). The built files, column dictionary, and season counts are stored in the structured multi-sport directory. Season = start calendar year of the competition (e.g., 1975 = 1975–76, 2024 = 2024–25, 2025 = 2025–26).
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|
@@ -818,9 +818,9 @@ Traps found and handled while building the NHL files:
 
 ---
 
-### 3.22 Women's National Basketball Association (WNBA) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/WNBA/<YEAR>/<YEAR>_games.csv and WNBA_CSVs/WNBA_<YEAR>.csv; tested 2026-10-02)
+### 3.22 Women's National Basketball Association (WNBA) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/WNBA/<YEAR>/<YEAR>_games.csv; tested 2026-10-02)
 
-Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 6,676 total verified game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `WNBA_CSVs/`. Season = calendar year of the competition (summer league, single calendar year).
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 6,676 total verified game records). The built files, column dictionary, and season counts are stored in the structured multi-sport directory. Season = calendar year of the competition (summer league, single calendar year).
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|
@@ -843,9 +843,9 @@ Traps found and handled while building the WNBA files:
 
 ---
 
-### 3.23 National Basketball Association (NBA) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/NBA/<YEAR>/<YEAR>_games.csv and NBA_CSVs/NBA_<YEAR>.csv; tested 2026-10-02)
+### 3.23 National Basketball Association (NBA) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/NBA/<YEAR>/<YEAR>_games.csv; tested 2026-10-02)
 
-Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 59,788 total verified game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `NBA_CSVs/`. Season = start calendar year of the competition (e.g., 1975 = 1975–76, 2024 = 2024–25).
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 59,788 total verified game records). The built files, column dictionary, and season counts are stored in the structured multi-sport directory. Season = start calendar year of the competition (e.g., 1975 = 1975–76, 2024 = 2024–25).
 
 | Source | Route | Fields confirmed | Role | Access | Verified |
 |---|---|---|---|---|---|

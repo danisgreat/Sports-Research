@@ -10,8 +10,7 @@ Generates complete, verified game logs across all 51 seasons (1975 to 2025):
   Conference Quarterfinals/Semifinals/Finals, Stanley Cup Finals), and Special Exhibitions.
 
 Outputs to:
-1. NHL_CSVs/NHL_<YEAR>.csv
-2. Previous Sports Results/Ice Hockey/NHL/<YEAR>/<YEAR>_games.csv
+Previous Sports Results/Ice Hockey/NHL/<YEAR>/<YEAR>_games.csv
 """
 
 import os
@@ -66,11 +65,9 @@ CORE_SEEDS = [
     "CLR", "SEN", "HAM"
 ]
 
-ROOT_OUTPUT_DIR = "NHL_CSVs"
 ARCHIVE_OUTPUT_BASE = os.path.join("Previous Sports Results", "Ice Hockey", "NHL")
 CACHE_DIR = os.path.join("research", "data", "nhl_cache")
 
-os.makedirs(ROOT_OUTPUT_DIR, exist_ok=True)
 os.makedirs(ARCHIVE_OUTPUT_BASE, exist_ok=True)
 os.makedirs(CACHE_DIR, exist_ok=True)
 
@@ -440,11 +437,8 @@ def process_year(year):
     games = fetch_season_games(year)
     rows = build_season_rows(year, games)
     
-    # 1. Root CSV
-    root_csv = os.path.join(ROOT_OUTPUT_DIR, f"NHL_{year}.csv")
-    write_csv(root_csv, rows)
 
-    # 2. Archive CSV
+    # Canonical archive CSV
     archive_csv = os.path.join(ARCHIVE_OUTPUT_BASE, str(year), f"{year}_games.csv")
     write_csv(archive_csv, rows)
 
