@@ -843,6 +843,45 @@ Traps found and handled while building the WNBA files:
 
 ---
 
+### 3.23 National Basketball Association (NBA) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/NBA/<YEAR>/<YEAR>_games.csv and NBA_CSVs/NBA_<YEAR>.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 59,788 total verified game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `NBA_CSVs/`. Season = start calendar year of the competition (e.g., 1975 = 1975–76, 2024 = 2024–25).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| SportsDataVerse `hoopR` NBA Schedule Archive | `https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_games_in_data_repo.csv` | Full NBA schedule and box metadata (2002 through 2025+): Game ID, season, season_type, game_date, start_date, home/away teams, home/away scores, venue_full_name, venue_address_city, venue_address_state, attendance, format_regulation_periods, status_type_description. | S (Curated Open NBA Analytics) | Open Data (CSV, HTTPS) | 200 (31,141 games cataloged) |
+| FiveThirtyEight NBA Elo Ratings Archive | `https://raw.githubusercontent.com/fivethirtyeight/data/master/nba-elo/nbaallelo.csv` | Complete historical match results from the inaugural 1946 BAA game through the 2014–15 season: `gameorder`, `game_id`, `lg_id`, `_iscopy`, `year_id`, `date_game`, `seasongame`, `is_playoffs`, `team_id`, `fran_id`, `pts`, `elo_i`, `elo_n`, `opp_id`, `opp_fran`, `opp_pts`, `opp_elo_i`, `opp_elo_n`, `game_location`, `game_result`. | S (Curated Statistical Archive) | Open Data (CSV, HTTPS) | 200 (126,314 historical match records; 100% historical game-level coverage for 1975–2001) |
+| ESPN NBA Hidden Scoreboard & Schedule API | `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=<YYYY>` | Seasonal schedules, dates, venue information, game status, linescores, and home/away team identifiers. | FO (Broadcast Rights Holder) | API (JSON, keyless HTTPS) | 200 (modern era verified) |
+| NBA Official League Archives & Historical Directory | `https://www.nba.com/history` & `https://stats.nba.com/` | Official franchise histories, expansion timelines (1976 ABA merger, 1980 Dallas, 1988 Miami/Charlotte, 1989 Orlando/Minnesota, 1995 Toronto/Vancouver, 2004 Charlotte Bobcats), rule changes, and playoff bracket archives. | FO (National Basketball Association) | Web / Reference | Verified |
+
+Traps found and handled while building the NBA files:
+
+- **Season Year Convention:** In North American basketball, NBA seasons span across two calendar years (e.g. October 1975 through June 1976). In our schema and folder structure, the starting calendar year designates the season directory and filename (e.g. `1975` corresponds to the 1975–1976 season, `2024` corresponds to 2024–2025, and `2025` corresponds to 2025–2026). In FiveThirtyEight (`year_id`) and SportsDataVerse (`season`), the numeric indicator represents the ending calendar year (e.g., `1976` for the 1975–76 season; `2025` for the 2024–25 season), requiring exact `year + 1` programmatic realignment.
+- **ABA League Disambiguation (1975–76):** In the 1975–76 season prior to the summer 1976 merger, both the NBA and the American Basketball Association (ABA) coexisted. The FiveThirtyEight dataset includes both leagues (`lg_id == 'NBA'` and `lg_id == 'ABA'`). Pre-merger games were strictly filtered on `lg_id == 'NBA'` (788 games in 1975–76), excluding ABA Virginia Squires, Spirits of St. Louis, Kentucky Colonels, etc., before the four ABA franchises (Denver Nuggets, Indiana Pacers, New York Nets, San Antonio Spurs) officially entered the NBA in 1976–77.
+- **Historical Franchise Tri-Codes & Relocations:** Historical tri-codes in pre-2002 datasets were mapped to verified historical franchise names and arenas:
+  - `BUF` → Buffalo Braves (Buffalo Memorial Auditorium, Buffalo, NY)
+  - `KCK` / `KCO` → Kansas City Kings / Kansas City-Omaha Kings (Kemper Arena, Kansas City, MO)
+  - `SDC` → San Diego Clippers (San Diego Sports Arena, San Diego, CA)
+  - `WSB` → Washington Bullets (Capital Centre, Landover, MD)
+  - `SEA` → Seattle SuperSonics (KeyArena / Seattle Center Coliseum, Seattle, WA)
+  - `NOJ` → New Orleans Jazz (Louisiana Superdome, New Orleans, LA)
+  - `NJN` → New Jersey Nets (Brendan Byrne Arena / Continental Airlines Arena, East Rutherford, NJ)
+  - `CHH` → Charlotte Hornets (original franchise at Charlotte Coliseum)
+  - `VAN` → Vancouver Grizzlies (General Motors Place, Vancouver, BC)
+- **Shortened & Lockout Seasons:**
+  - **1998–99 Lockout:** Commenced February 5, 1999 following an extended labor dispute; regular season shortened to 50 games per team (725 regular season games + 66 playoff games = 791 total games).
+  - **2011–12 Lockout:** Commenced December 25, 2011; regular season shortened to 66 games per team (990 regular season games + 85 playoff games = 1,075 total games).
+  - **2019–20 COVID-19 Pause & Orlando Bubble:** Season suspended March 11, 2020; resumed July 30, 2020 with 22 teams in the isolated sanitary bubble at ESPN Wide World of Sports Complex (Bay Lake, FL / Walt Disney World) with zero attendance; completed October 11, 2020 (1,059 regular season games + 80 playoff games = 1,139 total games).
+  - **2020–21 Compressed Season:** Shortened to 72 games per team due to delayed season start (December 22, 2020); introduced the modern 6-game Play-In Tournament (seeds 7–10 in each conference) leading into the 16-team playoffs (1,080 regular season games + 6 play-in games + 86 playoff games = 1,172 total games).
+- **In-Season Tournament (NBA Cup):** Commencing in the 2023–24 season, the NBA introduced an annual in-season tournament. Group play and knockout quarterfinal/semifinal games count towards the 82-game regular season standings, while the NBA Cup Championship Game (held at T-Mobile Arena in Las Vegas) is recorded as a dedicated neutral-site tournament final that does not count towards regular season records.
+- **Playoff Format Evolution:**
+  - 1975–76 to 1982–83: 12-team playoff field (top 2 division champions in each conference received first-round byes); First Round was Best-of-3; Conference Semifinals, Conference Finals, and NBA Finals were Best-of-7.
+  - 1983–84 to 2001–02: 16-team playoff field (seeds 1–8 per conference); First Round expanded to Best-of-5; Semifinals, Conference Finals, and NBA Finals were Best-of-7.
+  - 2002–03 to Present: First Round expanded to Best-of-7 (all rounds now Best-of-7).
+  - 2020–21 to Present: Introduction of the 4-team per conference Page-McIntyre style Play-In Tournament (6 total play-in games).
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
