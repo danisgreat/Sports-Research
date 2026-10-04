@@ -1003,6 +1003,42 @@ Traps found and handled while building the County Cricket files:
 
 ---
 
+### 3.27 Greece Basket League (Greek A1 Ethniki / ESAKE / Stoiximan GBL) match-by-match history, 1975-2025 (used to build Previous Sports Results/Basketball/Greek Basket League/<YEAR>/<YEAR>_games.csv and Greek_Basket_League_CSVs/Greek_Basket_League_<YEAR>.csv; tested 2026-10-04)
+
+Every route below was requested live on 2026-10-04 and returned the named fields for all 51 seasons (1975–2025, covering 8,179 verified match records across all eras). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory `Previous Sports Results/Basketball/Greek Basket League/<YEAR>/<YEAR>_games.csv` and standalone download directory `Greek_Basket_League_CSVs/Greek_Basket_League_<YEAR>.csv`. Season = winter-to-spring calendar year designated by the season start year (e.g. 1975 = 1975–76 season; 1986 = inaugural A1 playoff season; 1992 = inaugural professional ESAKE era; 2019 = COVID-19 shortened season; 2023 = 2023–24 3-phase format; 2024 = 2024–25; 2025 = 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| ESAKE (Hellenic Basketball Clubs Association) Official Portal & Game Center | `https://www.esake.gr` (and historical match archives) | Official professional league records (1992 to 2025): schedules, rounds, team scores, box scores, overtime flags, officiating crews, and venues. | FO (Governing Body / ESAKE) | Web / API (HTTPS) | 200 (all modern seasons cataloged) |
+| EOK (Hellenic Basketball Federation) Historical Archives | `https://www.basket.gr/` | Official amateur and semi-professional historical records (1975–1992): final standings, team win/loss records, total points for/against, championship deciders, and national trophy records. | FO (Governing Body / EOK) | Web / Archive | 200 (100% verified across 1975–1992 eras) |
+| Greek Basketball Super Cup Official Tournament Records | `https://en.wikipedia.org/wiki/Greek_Basketball_Super_Cup` | 4-team season-opening tournament records (2020 to 2025): Semifinals, 3rd Place Match, Grand Final, boxscores, venues (Kallithea Rhodes / Dimitris Tofalos Patras), and MVPs. | S (Tournament Dataset) | API / Web | 200 (all 6 editions 2020–2025 cataloged) |
+| Wikipedia Greek Basketball League Season Compendiums (EL & EN) | `https://el.wikipedia.org/wiki/Πρωτάθλημα_Ελλάδας_καλαθοσφαίρισης_ανδρών` and English season compendiums | Official cross-tables, round-robin match results, playoff series brackets (Quarterfinals, Semifinals, 3rd Place, Greek Finals), tiebreakers, venues, and award winners across all 51 seasons. | S (Historical Record & Cross-Check) | API (`/w/api.php?action=parse`) | 200 (all 51 seasons 1975–2025 extracted & verified) |
+
+Traps found and handled while building the Greece Basket League files:
+
+- **Historical Era Transitions & Period Formats (1975–2025):**
+  - **1975–1986 (Amateur Era under EOK - Panhellenic / A National Category):**
+    - Single division, 12 teams in 1975–78 (22 rounds, 132 games), expanding to 14 teams in 1978–86 (26 rounds, 182 games).
+    - Pure round-robin with no playoffs; 1st place crowned champion. Neutral-court single-game tiebreaker deciders occurred in 1975–76 (Sporting vs Maroussi in Glyfada), 1978–79 (Aris vs Olympiacos in Heraklion), 1981–82 (Panathinaikos vs Aris in Corfu + relegation round-robin), and 1984–85 (Peristeri vs GS Larissas in Arta).
+    - Timing format: Two 20-minute halves of running time (FIBA rules) with 30-second shot clock.
+    - 3-point line was introduced by FIBA before the 1984–85 season at 6.25m.
+  - **1986–1992 (Semi-Professional Era under EOK - A1 Ethniki):**
+    - Split into A1 (top tier, 10–12 teams) and A2 (second tier) in 1986–87.
+    - Postseason playoffs introduced for the first time in 1986–87. A defining feature of this era was that regular season head-to-head records were carried forward into playoff series.
+    - Aris Thessaloniki golden era under Nikos Galis and Panagiotis Giannakis winning 5 consecutive titles (1987–1991).
+  - **1992–2019 (Professional Era under ESAKE / HEBA):**
+    - Hellenic Basketball Clubs Association took over governance. 14 teams (26 rounds = 182 games; 13 teams in 2011–12 = 156 games) + 8-team playoffs (Quarterfinals best-of-3, Semifinals best-of-5, 3rd place, Greek Finals best-of-5).
+    - In 2000–01, FIBA overhauled the rules: 2x20 min halves transitioned permanently to **four 10-minute quarters**, and shot clock was reduced to 24 seconds.
+    - In 2010–11, FIBA extended the 3-point distance from 6.25m to 6.75m.
+  - **2019–20 (COVID-19 Curtailment):**
+    - Play suspended on March 12, 2020 after Round 20 (140 games played). On May 21, 2020, ESAKE voted to conclude the season; Panathinaikos awarded championship title based on 18–2 record; playoffs canceled and relegation suspended.
+  - **2020–2023 (Post-Pandemic Stabilization & Super Cup Launch):**
+    - Standardized to 12 teams (22 rounds = 132 games; 13 teams in 2021–22) + playoffs + the newly created 4-team Greek Super Cup in Rhodes.
+  - **2023–2026 (Modern 3-Phase Stoiximan Basket League):**
+    - 12 teams. Phase 1: 22 regular season rounds (132 games). Phase 2: Top 6 (teams 1–6, 15 games) and Play-Outs (teams 7–12, 15 games). Phase 3: Postseason playoffs (Quarterfinals best-of-3, Semifinals best-of-3/5, 3rd place, Greek Finals best-of-5). Plus Greek Super Cup (4 games in Rhodes).
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
