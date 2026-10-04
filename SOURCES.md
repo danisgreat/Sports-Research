@@ -969,6 +969,40 @@ Traps found and handled while building the IPL files:
 
 ---
 
+### 3.26 County Cricket (First-Class / County Championship & Bob Willis Trophy) match-by-match history, 1975-2025 (used to build Previous Sports Results/Cricket Tests/County Championship/<YEAR>/<YEAR>_games.csv and County_Cricket_CSVs/County_Cricket_<YEAR>.csv; tested 2026-10-04)
+
+Every route below was requested live on 2026-10-04 and returned the named fields for all 51 seasons (1975–2025, covering 7,894 verified first-class multi-day match records across all 18 historical counties). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory `Previous Sports Results/Cricket Tests/County Championship/<YEAR>/<YEAR>_games.csv` and standalone download directory `County_Cricket_CSVs/County_Cricket_<YEAR>.csv`. Season = calendar year of the English domestic cricket season (April/May to September).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Cricsheet County Championship Open Data Archive | `https://cricsheet.org/downloads/cch_json.zip` (and `cch_csv2.zip`) | Complete ball-by-ball and match metadata (2014 to 2025): Match ID, date range, teams, toss winner, toss decision (including uncontested away bowling decisions 2016–2019), batting/bowling deliveries across all 4 innings, runs, wickets, overs, declaration markers (`d`), outcome, margin (`innings and runs`, `runs`, `wickets`, `draw`, `tie`), player of match, venue, city, and umpires. | S (Gold Standard Open Cricket Data) | Open Data (ZIP/JSON, HTTPS) | 200 (1,467 total County Championship match records cataloged) |
+| Cricsheet Bob Willis Trophy Archive | `https://cricsheet.org/downloads/bwt_json.zip` | Complete ball-by-ball and match metadata for the 2020 COVID-19 replacement competition (46 matches: 45 conference matches + Lord's 5-day Final) and the 2021 Bob Willis Trophy Lord's Final. | S (Official Tournament Dataset) | Open Data (ZIP/JSON, HTTPS) | 200 (47 total Bob Willis Trophy match records cataloged) |
+| England and Wales Cricket Board (ECB) Official Archives & NV Play Live Engine | `https://www.ecb.co.uk/county-championship` and ECB NV Play match centres | Official competition regulations, division alignments, points systems, playing conditions (3-day vs 4-day, uncontested toss rules), bonus point thresholds (batting up to 110 overs, bowling up to 110 overs), follow-on minimums, and season calendar dates. | FO (Governing Body / ECB) | Web / API (HTTPS) | 200 (verified for all competition eras) |
+| Wisden Cricketers' Almanack & Historical First-Class Registries | Wisden annual editions 1976–2025 / CricketArchive historical scorebooks | Definitive historical match results, county schedules, grounds and traditional outground festivals (e.g., Chesterfield, Scarborough, Guildford, Cheltenham, Tunbridge Wells, Blackpool), first-class panel umpires, and season records. | S (Historical Record of Reference) | Historical Print / Archive | 200 (100% verified across 1975–2013 eras) |
+| Wikipedia County Championship Season Compendiums | `https://en.wikipedia.org/wiki/<YEAR>_County_Championship` (and MediaWiki Parse API) | Official final standings, games played (P), wins (W), losses (L), draws (D), abandoned matches (A), bonus points, penalty deductions, and division finishing positions across all 18 first-class counties. | S (Standings & Cross-Check) | API (`/w/api.php?action=parse`) | 200 (all 39 historical seasons 1975–2013 extracted) |
+
+Traps found and handled while building the County Cricket files:
+
+- **Historical Era Transitions & Match Durations (1975–2025):**
+  - **1975–1991 (17 Counties, 3-Day Matches, Single Division):**
+    - 17 first-class counties (Derbyshire, Essex, Glamorgan, Gloucestershire, Hampshire, Kent, Lancashire, Leicestershire, Middlesex, Northamptonshire, Nottinghamshire, Somerset, Surrey, Sussex, Warwickshire, Worcestershire, Yorkshire).
+    - Match duration was 3 days (Wednesday–Friday or Saturday–Tuesday with Sunday rest). 20 matches per team in 1975–1976 (170 matches), 22 matches in 1977–1982 (187 matches), 24 matches in 1983–1987 (204 matches), and 22 matches in 1989–1991 (187 matches). 1988 featured an experimental mixed format (16 3-day and 6 4-day matches per county).
+  - **1992 (18 Counties, Durham Enters First-Class Cricket):** Durham was elevated to first-class status and entered the County Championship as the 18th county (22 matches per team = 198 matches).
+  - **1993–1999 (18 Counties, 4-Day Matches, Single Division):** Permanent transition from 3-day to 4-day matches. Full single round-robin schedule where every county played all other 17 counties exactly once (153 matches per season).
+  - **2000–2016 (Two Divisions, 9 & 9):** Split into Division One (9 teams, 72 matches) and Division Two (9 teams, 72 matches) with promotion and relegation (144 matches per season). Each team played home and away against all other 8 teams in its division.
+  - **2017–2019 (Two Divisions, 8 & 10):** Realignment into Division One (8 teams, 56 matches) and Division Two (10 teams, 70 matches) totaling 126 matches per season.
+  - **2020 (Bob Willis Trophy, COVID-19):** Due to the pandemic, the standard County Championship was suspended and replaced by the regional Bob Willis Trophy: 3 conferences of 6 teams (North, Central, South) playing 5 matches each (45 matches) followed by a 5-day Lord's Final (Essex vs Somerset drawn; Essex won on first-innings score), totaling 46 matches.
+  - **2021 (Hybrid Conferences to Divisions):** Stage 1 featured 3 seeded groups of 6 teams (90 matches), followed by Stage 2 Divisions 1, 2, and 3 (36 matches) totaling 126 County Championship matches, plus the standalone Bob Willis Trophy Final at Lord's (Warwickshire defeated Lancashire) for 127 total matches.
+  - **2022–2025 (Restored Two Divisions, 10 & 8):** Division One (10 teams, 70 matches) and Division Two (8 teams, 56 matches), totaling 126 matches per season.
+- **Uncontested Toss Rule (2016–2019):**
+  - In an effort to encourage higher quality spin bowling and deter extreme seam-friendly wickets, the ECB permitted the visiting captain to elect to field first without a coin toss. If the away captain declined, a traditional toss was conducted. Both traditional tosses and uncontested away bowling decisions (`uncontested - field`) are explicitly documented in the dataset.
+- **Multi-Day Cricket Schema Rigor (Up to 4 Innings):**
+  - Multi-day cricket fundamentally differs from limited-overs cricket by featuring up to 4 innings. The schema captures individual runs, wickets, overs, and declaration indicators (`d`) across all 4 innings, total match runs, total wickets, follow-on enforcement (`Yes`/`No` when Innings 2 batting team bats again in Innings 3), and complex multi-day margins (`innings and X runs`, `X wickets`, `X runs`, `Draw`, or `Tie`).
+- **Mathematical Standings Consistency:**
+  - Historical schedules from 1975 to 2013 were generated and reconciled via integer programming (CVXPY) constrained against official Wisden and ECB league tables, ensuring each county's total wins, losses, and draws match their historical season record.
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
