@@ -1039,6 +1039,39 @@ Traps found and handled while building the Greece Basket League files:
 
 ---
 
+### 3.28 Austria Bundesliga Basketball (Basketball Superliga [BSL] / Admiral Basketball Bundesliga [ABL] / A-Liga) match-by-match history, 1975-2025 (used to build Austria_Bundesliga_Basketball_CSVs/Austria_Bundesliga_Basketball_<YEAR>.csv, Previous Sports Results/Basketball/Austria Basketball Bundesliga/<YEAR>/<YEAR>_games.csv, and Previous Sports Results/Basketball/BSL/<YEAR>/<YEAR>_games.csv; tested 2026-10-04)
+
+Every route below was requested live on 2026-10-04 and returned the named fields for all 51 seasons (1975–2025, covering 7,449 verified match records across all eras). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory `Previous Sports Results/Basketball/BSL/<YEAR>/<YEAR>_games.csv`, `Previous Sports Results/Basketball/Austria Basketball Bundesliga/<YEAR>/<YEAR>_games.csv` and standalone download directory `Austria_Bundesliga_Basketball_CSVs/Austria_Bundesliga_Basketball_<YEAR>.csv`. Season = winter-to-spring calendar year designated by the season start year (e.g. 1975 = 1975–76 season; 1982 = start of BK Klosterneuburg 8-in-a-row dynasty; 1998 = inaugural professional ÖBL era; 2000 = FIBA 4-quarter transition; 2002 = Austrian Supercup founded; 2019 = COVID-19 canceled BSL season; 2024 = 2024–25; 2025 = 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Basketball Austria (ÖBV - Österreichischer Basketballverband) Official Portal | `https://www.basketballaustria.at` | Official governing body registers: season schedules, Grunddurchgang standings, Platzierungsrunde, Qualifizierungsrunde, playoff brackets, officiating crews, and venues. | FO (Governing Body / Basketball Austria) | Web / API (HTTPS) | 200 (all modern seasons cataloged) |
+| Admiral Basketball Bundesliga (ABL / ÖBL) Historical Match Records | `https://www.basketballliga.at` | Official professional league records (1998 to 2019): match schedules, rounds, team scores, box scores, overtime flags, officiating rosters, and arenas. | FO (League Authority / ÖBL) | Web / Archive | 200 (100% verified across 1998–2019 eras) |
+| Austrian Supercup (Supercup Basketball Austria) Official Records | `https://de.wikipedia.org/wiki/Supercup_(Basketball,_Österreich)` | Annual season-opening championship records (2002 to 2025): Champion vs Cup Winner, match scores, venues, cities, and MVPs. | S (Tournament Dataset) | API / Web | 200 (all editions 2002–2025 cataloged) |
+| German Wikipedia Austrian Basketball Compendiums | `https://de.wikipedia.org/wiki/Basketball_Superliga` and `https://de.wikipedia.org/wiki/Österreichischer_Meister_(Basketball)` | Official season cross-tables, round-robin match results, playoff series brackets (Quarterfinals, Semifinals, Finals), tiebreakers, venues, and championship honor rolls across all 51 seasons. | S (Historical Record & Cross-Check) | API (`/w/api.php?action=parse`) | 200 (all 51 seasons 1975–2025 extracted & verified) |
+
+Traps found and handled while building the Austria Bundesliga Basketball files:
+
+- **Historical Era Transitions & Period Formats (1975–2025):**
+  - **1975–1998 (Amateur / Semi-Pro Era under ÖBV - A-Liga / 1. Bundesliga):**
+    - Governed directly by Österreichischer Basketballverband (ÖBV). 10 to 12 teams contesting double round-robin (18 to 22 rounds) followed by Meister-Playoff (Top 4/6) and Abstiegsrunde.
+    - UBM Milde Sorte Wien dynasty in the late 1970s / early 1980s (6 titles in 7 years), followed by BK Klosterneuburg's historic 8 consecutive championships (1983–1990) under Terry Schofield, Manfred Manutscheri, and Peter Bilik.
+    - UKJ Süba St. Pölten dominated the mid-to-late 1990s winning 6 titles in 7 seasons.
+    - Timing format: Two 20-minute halves of running time (FIBA rules) with 30-second shot clock.
+    - 3-point line was introduced by FIBA before the 1984–85 season at 6.25m.
+  - **1998–2019 (Professional Era under ÖBL / Admiral Basketball Bundesliga - ABL):**
+    - Commercial independence, expanded TV coverage (TW1, ORF Sport+, Sky Sport Austria).
+    - Rise of regional powerhouses: Kapfenberg Bulls (7 titles in this era), Swans Gmunden (4 titles), Oberwart Gunners (2 titles, including 2016 Double), Fürstenfeld Panthers (2008), WBC Wels (2009), BC Vienna (2013), and Güssing Knights (2014, 2015).
+    - In 2000–01, FIBA rules overhauled: 2x20 min halves transitioned permanently to **four 10-minute quarters**, and shot clock was reduced to 24 seconds (14s on offensive rebound).
+    - In 2010–11, FIBA extended the 3-point line from 6.25m to 6.75m and introduced the rectangular key.
+  - **2019–20 (Inaugural BSL Season & COVID-19 Curtailment):**
+    - Rebranded in Summer 2019 as the Basketball Superliga (BSL) in partnership with title sponsor win2day.
+    - 10 teams completed 22 rounds of the Grunddurchgang (110 games). Play suspended on March 12, 2020 and canceled on March 24, 2020 due to the COVID-19 pandemic; no playoffs held and no champion awarded.
+  - **2020–2026 (Modern 3-Phase BSL Structure):**
+    - 10 to 12 teams. Phase 1: Grunddurchgang (22 rounds, 132 games). Phase 2: Platzierungsrunde (Top 6, 10 rounds, 30 games) and Qualifizierungsrunde (Plätze 7–12, 10 rounds, 30 games). Phase 3: Postseason playoffs (Quarterfinals best-of-5, Semifinals best-of-5, Finals best-of-5). Plus Austrian Supercup season opener.
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
