@@ -1,0 +1,2037 @@
+[
+  {
+    "card_id": "P-527",
+    "event_key": "TMP-20261002-EUR-HTA-RMA",
+    "native_id": "UNKNOWN",
+    "score": [
+      102,
+      98
+    ],
+    "total": 200,
+    "endpoint": "FULL_GAME_CONDITIONAL",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Original fallback mini",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Under 174.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 174.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-EUR-HTA-RMA",
+              "source_url": "https://www.realmadrid.com/de-DE/news/basket/erste-mannshaft/berichte/cronica-hapoel-real-madrid-01-10-2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b6a0225dc06307c1616482b16d34c212c413658bbbbb9d49a27902ab9c0275a7",
+              "raw_score": "[102, 98]"
+            },
+            "threshold_difference": -25.5
+          },
+          {
+            "rank": 2,
+            "label": "Hapoel +4.5",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": 4.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-EUR-HTA-RMA",
+              "source_url": "https://www.realmadrid.com/de-DE/news/basket/erste-mannshaft/berichte/cronica-hapoel-real-madrid-01-10-2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b6a0225dc06307c1616482b16d34c212c413658bbbbb9d49a27902ab9c0275a7",
+              "raw_score": "[102, 98]"
+            },
+            "adjusted_margin": 8.5
+          },
+          {
+            "rank": 3,
+            "label": "Madrid -4.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": -4.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-EUR-HTA-RMA",
+              "source_url": "https://www.realmadrid.com/de-DE/news/basket/erste-mannshaft/berichte/cronica-hapoel-real-madrid-01-10-2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b6a0225dc06307c1616482b16d34c212c413658bbbbb9d49a27902ab9c0275a7",
+              "raw_score": "[102, 98]"
+            },
+            "adjusted_margin": -8.5
+          },
+          {
+            "rank": 4,
+            "label": "Over 174.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 174.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-EUR-HTA-RMA",
+              "source_url": "https://www.realmadrid.com/de-DE/news/basket/erste-mannshaft/berichte/cronica-hapoel-real-madrid-01-10-2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b6a0225dc06307c1616482b16d34c212c413658bbbbb9d49a27902ab9c0275a7",
+              "raw_score": "[102, 98]"
+            },
+            "threshold_difference": 25.5
+          }
+        ],
+        "potential_winner": "Madrid",
+        "potential_winner_diagnostic": "L"
+      },
+      {
+        "source_version": "Consolidated source (NO_FORECAST)",
+        "original_status": "NO_FORECAST",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Madrid -4.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": -4.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-EUR-HTA-RMA",
+              "source_url": "https://www.realmadrid.com/de-DE/news/basket/erste-mannshaft/berichte/cronica-hapoel-real-madrid-01-10-2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b6a0225dc06307c1616482b16d34c212c413658bbbbb9d49a27902ab9c0275a7",
+              "raw_score": "[102, 98]"
+            },
+            "adjusted_margin": -8.5
+          },
+          {
+            "rank": 2,
+            "label": "Under 174.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 174.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-EUR-HTA-RMA",
+              "source_url": "https://www.realmadrid.com/de-DE/news/basket/erste-mannshaft/berichte/cronica-hapoel-real-madrid-01-10-2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b6a0225dc06307c1616482b16d34c212c413658bbbbb9d49a27902ab9c0275a7",
+              "raw_score": "[102, 98]"
+            },
+            "threshold_difference": -25.5
+          },
+          {
+            "rank": 3,
+            "label": "Hapoel +4.5",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": 4.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-EUR-HTA-RMA",
+              "source_url": "https://www.realmadrid.com/de-DE/news/basket/erste-mannshaft/berichte/cronica-hapoel-real-madrid-01-10-2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b6a0225dc06307c1616482b16d34c212c413658bbbbb9d49a27902ab9c0275a7",
+              "raw_score": "[102, 98]"
+            },
+            "adjusted_margin": 8.5
+          },
+          {
+            "rank": 4,
+            "label": "Over 174.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 174.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-EUR-HTA-RMA",
+              "source_url": "https://www.realmadrid.com/de-DE/news/basket/erste-mannshaft/berichte/cronica-hapoel-real-madrid-01-10-2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b6a0225dc06307c1616482b16d34c212c413658bbbbb9d49a27902ab9c0275a7",
+              "raw_score": "[102, 98]"
+            },
+            "threshold_difference": 25.5
+          }
+        ],
+        "potential_winner": "Madrid",
+        "potential_winner_diagnostic": "L"
+      }
+    ],
+    "extra_rows": [],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-528",
+    "event_key": "LOCAL-P528-GR-CLE-20261002",
+    "native_id": "1029073",
+    "score": [
+      2,
+      5
+    ],
+    "total": 7,
+    "endpoint": "FULL_GAME_CONDITIONAL",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Original fallback mini",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Griffins ML",
+            "market": "ML",
+            "side": "AWAY",
+            "line": null,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "LOCAL-P528-GR-CLE-20261002",
+              "source_url": "https://griffinshockey.com/news/oct-2-2026-griffins-5-at-monsters-2",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b9ffad9f3e7ebd9277e9bbc84162f9b5fb57eae4bbeaba91c0cc8fa64a0a9412",
+              "raw_score": "[2, 5]"
+            }
+          },
+          {
+            "rank": 2,
+            "label": "Over 5.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 5.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "LOCAL-P528-GR-CLE-20261002",
+              "source_url": "https://griffinshockey.com/news/oct-2-2026-griffins-5-at-monsters-2",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b9ffad9f3e7ebd9277e9bbc84162f9b5fb57eae4bbeaba91c0cc8fa64a0a9412",
+              "raw_score": "[2, 5]"
+            },
+            "threshold_difference": 1.5
+          },
+          {
+            "rank": 3,
+            "label": "Under 5.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 5.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "LOCAL-P528-GR-CLE-20261002",
+              "source_url": "https://griffinshockey.com/news/oct-2-2026-griffins-5-at-monsters-2",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b9ffad9f3e7ebd9277e9bbc84162f9b5fb57eae4bbeaba91c0cc8fa64a0a9412",
+              "raw_score": "[2, 5]"
+            },
+            "threshold_difference": -1.5
+          },
+          {
+            "rank": 4,
+            "label": "Monsters ML",
+            "market": "ML",
+            "side": "HOME",
+            "line": null,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "LOCAL-P528-GR-CLE-20261002",
+              "source_url": "https://griffinshockey.com/news/oct-2-2026-griffins-5-at-monsters-2",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "b9ffad9f3e7ebd9277e9bbc84162f9b5fb57eae4bbeaba91c0cc8fa64a0a9412",
+              "raw_score": "[2, 5]"
+            }
+          }
+        ],
+        "potential_winner": "Grand Rapids",
+        "potential_winner_diagnostic": "W"
+      }
+    ],
+    "extra_rows": [],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-529",
+    "event_key": "TMP-20261002-NHL-PHI-NJD",
+    "native_id": "2026020009",
+    "score": [
+      3,
+      2
+    ],
+    "total": 5,
+    "endpoint": "FULL_GAME_INCL_OT_CONDITIONAL",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Original fallback mini",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Devils ML",
+            "market": "ML",
+            "side": "HOME",
+            "line": null,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-NHL-PHI-NJD",
+              "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020009/boxscore",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "c821422582f6dce46b56a510a81fba4c95554b123092923515accd1439da184e",
+              "raw_score": "[3, 2]"
+            }
+          },
+          {
+            "rank": 2,
+            "label": "Flyers +1.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": 1.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-NHL-PHI-NJD",
+              "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020009/boxscore",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "c821422582f6dce46b56a510a81fba4c95554b123092923515accd1439da184e",
+              "raw_score": "[3, 2]"
+            },
+            "adjusted_margin": 0.5
+          },
+          {
+            "rank": 3,
+            "label": "Over 5.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 5.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-NHL-PHI-NJD",
+              "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020009/boxscore",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "c821422582f6dce46b56a510a81fba4c95554b123092923515accd1439da184e",
+              "raw_score": "[3, 2]"
+            },
+            "threshold_difference": -0.5
+          },
+          {
+            "rank": 4,
+            "label": "Under 5.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 5.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-NHL-PHI-NJD",
+              "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020009/boxscore",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "c821422582f6dce46b56a510a81fba4c95554b123092923515accd1439da184e",
+              "raw_score": "[3, 2]"
+            },
+            "threshold_difference": 0.5
+          }
+        ],
+        "potential_winner": "New Jersey",
+        "potential_winner_diagnostic": "W"
+      },
+      {
+        "source_version": "Consolidated NO_FORECAST supplied rows; unranked",
+        "original_status": "NO_PREGAME_FORECAST",
+        "unranked": true,
+        "rows": [
+          {
+            "rank": null,
+            "label": "Flyers +1.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": 1.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-NHL-PHI-NJD",
+              "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020009/boxscore",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "c821422582f6dce46b56a510a81fba4c95554b123092923515accd1439da184e",
+              "raw_score": "[3, 2]"
+            },
+            "adjusted_margin": 0.5
+          },
+          {
+            "rank": null,
+            "label": "Devils ML",
+            "market": "ML",
+            "side": "HOME",
+            "line": null,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-NHL-PHI-NJD",
+              "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020009/boxscore",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "c821422582f6dce46b56a510a81fba4c95554b123092923515accd1439da184e",
+              "raw_score": "[3, 2]"
+            }
+          },
+          {
+            "rank": null,
+            "label": "Over 5.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 5.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-NHL-PHI-NJD",
+              "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020009/boxscore",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "c821422582f6dce46b56a510a81fba4c95554b123092923515accd1439da184e",
+              "raw_score": "[3, 2]"
+            },
+            "threshold_difference": -0.5
+          },
+          {
+            "rank": null,
+            "label": "Under 5.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 5.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-NHL-PHI-NJD",
+              "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020009/boxscore",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "c821422582f6dce46b56a510a81fba4c95554b123092923515accd1439da184e",
+              "raw_score": "[3, 2]"
+            },
+            "threshold_difference": 0.5
+          }
+        ],
+        "potential_winner": null,
+        "potential_winner_diagnostic": null
+      }
+    ],
+    "extra_rows": [],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-530",
+    "event_key": "TMP-20261002-MLB-PHI-ATL-G3",
+    "native_id": "849844",
+    "score": [
+      6,
+      2
+    ],
+    "total": 8,
+    "endpoint": "FULL_GAME_CONDITIONAL",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Original fallback mini (LATE_RESEARCH)",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Braves +1.5",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": 1.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-MLB-PHI-ATL-G3",
+              "source_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "578f1ee333f51abd2f85ef2864ecda8d535644a7a88c7fecfb49ddac2ca0c450",
+              "raw_score": "[6, 2]"
+            },
+            "adjusted_margin": 5.5
+          },
+          {
+            "rank": 2,
+            "label": "Over 7.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 7.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-MLB-PHI-ATL-G3",
+              "source_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "578f1ee333f51abd2f85ef2864ecda8d535644a7a88c7fecfb49ddac2ca0c450",
+              "raw_score": "[6, 2]"
+            },
+            "threshold_difference": 0.5
+          },
+          {
+            "rank": 3,
+            "label": "Braves ML",
+            "market": "ML",
+            "side": "HOME",
+            "line": null,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-MLB-PHI-ATL-G3",
+              "source_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "578f1ee333f51abd2f85ef2864ecda8d535644a7a88c7fecfb49ddac2ca0c450",
+              "raw_score": "[6, 2]"
+            }
+          },
+          {
+            "rank": 4,
+            "label": "Phillies ML",
+            "market": "ML",
+            "side": "AWAY",
+            "line": null,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-MLB-PHI-ATL-G3",
+              "source_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "578f1ee333f51abd2f85ef2864ecda8d535644a7a88c7fecfb49ddac2ca0c450",
+              "raw_score": "[6, 2]"
+            }
+          }
+        ],
+        "potential_winner": "Atlanta",
+        "potential_winner_diagnostic": "W"
+      },
+      {
+        "source_version": "Consolidated shadow list",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Braves ML",
+            "market": "ML",
+            "side": "HOME",
+            "line": null,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-MLB-PHI-ATL-G3",
+              "source_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "578f1ee333f51abd2f85ef2864ecda8d535644a7a88c7fecfb49ddac2ca0c450",
+              "raw_score": "[6, 2]"
+            }
+          },
+          {
+            "rank": 2,
+            "label": "Over 7.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 7.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-MLB-PHI-ATL-G3",
+              "source_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "578f1ee333f51abd2f85ef2864ecda8d535644a7a88c7fecfb49ddac2ca0c450",
+              "raw_score": "[6, 2]"
+            },
+            "threshold_difference": 0.5
+          },
+          {
+            "rank": 3,
+            "label": "Phillies ML",
+            "market": "ML",
+            "side": "AWAY",
+            "line": null,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-MLB-PHI-ATL-G3",
+              "source_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "578f1ee333f51abd2f85ef2864ecda8d535644a7a88c7fecfb49ddac2ca0c450",
+              "raw_score": "[6, 2]"
+            }
+          },
+          {
+            "rank": 4,
+            "label": "Under 7.5 (not supplied; shadow alternative)",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 7.5,
+            "source_flags": [
+              "UNSUPPORTED_ALTERNATIVE"
+            ],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-MLB-PHI-ATL-G3",
+              "source_url": "https://statsapi.mlb.com/api/v1.1/game/849844/feed/live",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "578f1ee333f51abd2f85ef2864ecda8d535644a7a88c7fecfb49ddac2ca0c450",
+              "raw_score": "[6, 2]"
+            },
+            "threshold_difference": -0.5
+          }
+        ],
+        "potential_winner": "Atlanta",
+        "potential_winner_diagnostic": "W"
+      }
+    ],
+    "extra_rows": [
+      {
+        "rank": null,
+        "label": "Supplied row 4 Over 7.5 duplicated",
+        "market": "UNRESOLVED_DUPLICATE_ROW",
+        "side": null,
+        "line": null,
+        "source_flags": [
+          "DUPLICATE_ROW"
+        ],
+        "formal_grade": "UNRESOLVED",
+        "formal_blockers": [
+          "UNKNOWN_DEFINITION",
+          "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+          "NO_CANONICAL_PROSPECTIVE_ISSUE"
+        ],
+        "performance_eligible": false,
+        "diagnostic_grade": "UNRESOLVED_DUPLICATE_ROW",
+        "diagnostic_scope": "NOT_GRADED_MISSING_OR_AMBIGUOUS_FIELD"
+      }
+    ],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-531",
+    "event_key": "TMP-20261002-WNBA-IND-LVA-G3",
+    "native_id": "1042600123 owner fixture; ESPN 401918022",
+    "score": [
+      94,
+      83
+    ],
+    "total": 177,
+    "endpoint": "FULL_GAME_INCL_OT_RESEARCH",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Original full fallback card (LATE_RESEARCH)",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Fever +4.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": 4.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_RESEARCH",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-WNBA-IND-LVA-G3",
+              "source_url": "https://www.wnba.com/watch/video/game-recap-las-vegas-aces-94-indiana-fever-83-10-1-2026?collection=game-recaps",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "a58a2e6c8cfe51da1c7bd1751e76b86bdbd979f13d73031886c17d609a416888",
+              "raw_score": "[94, 83]"
+            },
+            "adjusted_margin": -6.5
+          },
+          {
+            "rank": 2,
+            "label": "Over 181.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 181.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_RESEARCH",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-WNBA-IND-LVA-G3",
+              "source_url": "https://www.wnba.com/watch/video/game-recap-las-vegas-aces-94-indiana-fever-83-10-1-2026?collection=game-recaps",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "a58a2e6c8cfe51da1c7bd1751e76b86bdbd979f13d73031886c17d609a416888",
+              "raw_score": "[94, 83]"
+            },
+            "threshold_difference": -4.5
+          },
+          {
+            "rank": 3,
+            "label": "Under 181.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 181.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_RESEARCH",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-WNBA-IND-LVA-G3",
+              "source_url": "https://www.wnba.com/watch/video/game-recap-las-vegas-aces-94-indiana-fever-83-10-1-2026?collection=game-recaps",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "a58a2e6c8cfe51da1c7bd1751e76b86bdbd979f13d73031886c17d609a416888",
+              "raw_score": "[94, 83]"
+            },
+            "threshold_difference": 4.5
+          },
+          {
+            "rank": 4,
+            "label": "Aces -4.5",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": -4.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_RESEARCH",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-WNBA-IND-LVA-G3",
+              "source_url": "https://www.wnba.com/watch/video/game-recap-las-vegas-aces-94-indiana-fever-83-10-1-2026?collection=game-recaps",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "a58a2e6c8cfe51da1c7bd1751e76b86bdbd979f13d73031886c17d609a416888",
+              "raw_score": "[94, 83]"
+            },
+            "adjusted_margin": 6.5
+          }
+        ],
+        "potential_winner": "Las Vegas",
+        "potential_winner_diagnostic": "W"
+      },
+      {
+        "source_version": "Consolidated source",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Fever +4.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": 4.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_RESEARCH",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-WNBA-IND-LVA-G3",
+              "source_url": "https://www.wnba.com/watch/video/game-recap-las-vegas-aces-94-indiana-fever-83-10-1-2026?collection=game-recaps",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "a58a2e6c8cfe51da1c7bd1751e76b86bdbd979f13d73031886c17d609a416888",
+              "raw_score": "[94, 83]"
+            },
+            "adjusted_margin": -6.5
+          },
+          {
+            "rank": 2,
+            "label": "Under 181.5 (implied)",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 181.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_RESEARCH",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-WNBA-IND-LVA-G3",
+              "source_url": "https://www.wnba.com/watch/video/game-recap-las-vegas-aces-94-indiana-fever-83-10-1-2026?collection=game-recaps",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "a58a2e6c8cfe51da1c7bd1751e76b86bdbd979f13d73031886c17d609a416888",
+              "raw_score": "[94, 83]"
+            },
+            "threshold_difference": 4.5
+          },
+          {
+            "rank": 3,
+            "label": "Aces -4.5",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": -4.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_RESEARCH",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261002-WNBA-IND-LVA-G3",
+              "source_url": "https://www.wnba.com/watch/video/game-recap-las-vegas-aces-94-indiana-fever-83-10-1-2026?collection=game-recaps",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "a58a2e6c8cfe51da1c7bd1751e76b86bdbd979f13d73031886c17d609a416888",
+              "raw_score": "[94, 83]"
+            },
+            "adjusted_margin": 6.5
+          },
+          {
+            "rank": 4,
+            "label": "Over 181.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 181.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_INCL_OT_RESEARCH",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261002-WNBA-IND-LVA-G3",
+              "source_url": "https://www.wnba.com/watch/video/game-recap-las-vegas-aces-94-indiana-fever-83-10-1-2026?collection=game-recaps",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "a58a2e6c8cfe51da1c7bd1751e76b86bdbd979f13d73031886c17d609a416888",
+              "raw_score": "[94, 83]"
+            },
+            "threshold_difference": -4.5
+          }
+        ],
+        "potential_winner": "Las Vegas",
+        "potential_winner_diagnostic": "W"
+      }
+    ],
+    "extra_rows": [],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-532",
+    "event_key": "TMP-20261001-NBL-TAS-MEL",
+    "native_id": "36f713cb-58ad-11f1-b8d2-f1316c48f9c2",
+    "score": [
+      84,
+      82
+    ],
+    "total": 166,
+    "endpoint": "FULL_GAME_CONDITIONAL",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Consolidated NO_FORECAST shadow list",
+        "original_status": "NO_FORECAST",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "United -6.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": -6.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261001-NBL-TAS-MEL",
+              "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "f7b8bcb79ce020ea2a757c10d2a52705f9c76039c46e3f3fe9dec05be6bf7976",
+              "raw_score": "[84, 82]"
+            },
+            "adjusted_margin": -8.5
+          },
+          {
+            "rank": 2,
+            "label": "Under 181.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 181.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261001-NBL-TAS-MEL",
+              "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "f7b8bcb79ce020ea2a757c10d2a52705f9c76039c46e3f3fe9dec05be6bf7976",
+              "raw_score": "[84, 82]"
+            },
+            "threshold_difference": 15.5
+          },
+          {
+            "rank": 3,
+            "label": "Tasmania +6.5",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": 6.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261001-NBL-TAS-MEL",
+              "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "f7b8bcb79ce020ea2a757c10d2a52705f9c76039c46e3f3fe9dec05be6bf7976",
+              "raw_score": "[84, 82]"
+            },
+            "adjusted_margin": 8.5
+          },
+          {
+            "rank": 4,
+            "label": "Over 181.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 181.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261001-NBL-TAS-MEL",
+              "source_url": "https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=2026",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "f7b8bcb79ce020ea2a757c10d2a52705f9c76039c46e3f3fe9dec05be6bf7976",
+              "raw_score": "[84, 82]"
+            },
+            "threshold_difference": -15.5
+          }
+        ],
+        "potential_winner": "Melbourne",
+        "potential_winner_diagnostic": "L"
+      }
+    ],
+    "extra_rows": [],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-533",
+    "event_key": "TMP-20261003-KBO-KIA-LG",
+    "native_id": "KBO native UNKNOWN; Naver 20261003HTLG02026",
+    "score": [
+      4,
+      5
+    ],
+    "total": 9,
+    "endpoint": "FULL_GAME_CONDITIONAL",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Consolidated shadow list",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "KIA ML (not supplied; alternative)",
+            "market": "ML",
+            "side": "AWAY",
+            "line": null,
+            "source_flags": [
+              "UNSUPPORTED_ALTERNATIVE"
+            ],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261003-KBO-KIA-LG",
+              "source_url": "https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-03",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "2235e2fe1a3cedf7a0b07eec04f8dc4a64f55334e5586b8d54e14598127fc3f3",
+              "raw_score": "[4, 5]"
+            }
+          },
+          {
+            "rank": 2,
+            "label": "Under 8.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 8.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261003-KBO-KIA-LG",
+              "source_url": "https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-03",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "2235e2fe1a3cedf7a0b07eec04f8dc4a64f55334e5586b8d54e14598127fc3f3",
+              "raw_score": "[4, 5]"
+            },
+            "threshold_difference": -0.5
+          },
+          {
+            "rank": 3,
+            "label": "LG ML",
+            "market": "ML",
+            "side": "HOME",
+            "line": null,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261003-KBO-KIA-LG",
+              "source_url": "https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-03",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "2235e2fe1a3cedf7a0b07eec04f8dc4a64f55334e5586b8d54e14598127fc3f3",
+              "raw_score": "[4, 5]"
+            }
+          },
+          {
+            "rank": 4,
+            "label": "Over 8.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 8.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261003-KBO-KIA-LG",
+              "source_url": "https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-03",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "2235e2fe1a3cedf7a0b07eec04f8dc4a64f55334e5586b8d54e14598127fc3f3",
+              "raw_score": "[4, 5]"
+            },
+            "threshold_difference": 0.5
+          }
+        ],
+        "potential_winner": "KIA",
+        "potential_winner_diagnostic": "W"
+      }
+    ],
+    "extra_rows": [
+      {
+        "rank": null,
+        "label": "Supplied Tigers +1.5 (not shadow R1)",
+        "market": "SPREAD",
+        "side": "AWAY",
+        "line": 1.5,
+        "source_flags": [],
+        "formal_grade": "UNRESOLVED",
+        "formal_blockers": [
+          "UNKNOWN_DEFINITION",
+          "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+          "NO_CANONICAL_PROSPECTIVE_ISSUE"
+        ],
+        "performance_eligible": false,
+        "diagnostic_grade": "W",
+        "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+        "deterministic_settlement": {
+          "result": "W",
+          "event_id": "TMP-20261003-KBO-KIA-LG",
+          "source_url": "https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-03",
+          "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+          "response_sha256": "2235e2fe1a3cedf7a0b07eec04f8dc4a64f55334e5586b8d54e14598127fc3f3",
+          "raw_score": "[4, 5]"
+        },
+        "adjusted_margin": 2.5
+      }
+    ],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-534",
+    "event_key": "TMP-20261004-NRL-SYD-NEW-GF",
+    "native_id": "Owner route /draw/nrl-premiership/2026/grand-final/game-1/; numeric ID UNKNOWN",
+    "score": [
+      19,
+      18
+    ],
+    "total": 37,
+    "endpoint": "FULL_GAME_CONDITIONAL",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Consolidated shadow list",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Roosters -4.5",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": -4.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261004-NRL-SYD-NEW-GF",
+              "source_url": "https://www.nrl.com/draw/data?competition=111&season=2026&round=31",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "47bca5049df7e4b7d970a09d614aff39f119d8260b06bd3d6f54311d18a147ab",
+              "raw_score": "[19, 18]"
+            },
+            "adjusted_margin": -3.5
+          },
+          {
+            "rank": 2,
+            "label": "Over 38.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 38.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261004-NRL-SYD-NEW-GF",
+              "source_url": "https://www.nrl.com/draw/data?competition=111&season=2026&round=31",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "47bca5049df7e4b7d970a09d614aff39f119d8260b06bd3d6f54311d18a147ab",
+              "raw_score": "[19, 18]"
+            },
+            "threshold_difference": -1.5
+          },
+          {
+            "rank": 3,
+            "label": "Knights +12.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": 12.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261004-NRL-SYD-NEW-GF",
+              "source_url": "https://www.nrl.com/draw/data?competition=111&season=2026&round=31",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "47bca5049df7e4b7d970a09d614aff39f119d8260b06bd3d6f54311d18a147ab",
+              "raw_score": "[19, 18]"
+            },
+            "adjusted_margin": 11.5
+          },
+          {
+            "rank": 4,
+            "label": "Under 48.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 48.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261004-NRL-SYD-NEW-GF",
+              "source_url": "https://www.nrl.com/draw/data?competition=111&season=2026&round=31",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "47bca5049df7e4b7d970a09d614aff39f119d8260b06bd3d6f54311d18a147ab",
+              "raw_score": "[19, 18]"
+            },
+            "threshold_difference": 11.5
+          }
+        ],
+        "potential_winner": "Roosters",
+        "potential_winner_diagnostic": "W"
+      }
+    ],
+    "extra_rows": [],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-535",
+    "event_key": "TMP-20261004-GBL-PAO-VIK",
+    "native_id": "UNKNOWN",
+    "score": [
+      103,
+      74
+    ],
+    "total": 177,
+    "endpoint": "FULL_GAME_CONDITIONAL",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Consolidated shadow list",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Panathinaikos -20.5",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": -20.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261004-GBL-PAO-VIK",
+              "source_url": "https://www.paobc.gr/schedule/panathinaikos-bc-aktor-vikos-falcons-04-10-2026/",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "22a3d88778900e6de2d89fd4292b68bd6c50f63ce32e08ba0b172d993206bf97",
+              "raw_score": "[103, 74]"
+            },
+            "adjusted_margin": 8.5
+          },
+          {
+            "rank": 2,
+            "label": "Over 159.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 159.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261004-GBL-PAO-VIK",
+              "source_url": "https://www.paobc.gr/schedule/panathinaikos-bc-aktor-vikos-falcons-04-10-2026/",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "22a3d88778900e6de2d89fd4292b68bd6c50f63ce32e08ba0b172d993206bf97",
+              "raw_score": "[103, 74]"
+            },
+            "threshold_difference": 17.5
+          },
+          {
+            "rank": 3,
+            "label": "Falcons +28.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": 28.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261004-GBL-PAO-VIK",
+              "source_url": "https://www.paobc.gr/schedule/panathinaikos-bc-aktor-vikos-falcons-04-10-2026/",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "22a3d88778900e6de2d89fd4292b68bd6c50f63ce32e08ba0b172d993206bf97",
+              "raw_score": "[103, 74]"
+            },
+            "adjusted_margin": -0.5
+          },
+          {
+            "rank": 4,
+            "label": "Under 170.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 170.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261004-GBL-PAO-VIK",
+              "source_url": "https://www.paobc.gr/schedule/panathinaikos-bc-aktor-vikos-falcons-04-10-2026/",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "22a3d88778900e6de2d89fd4292b68bd6c50f63ce32e08ba0b172d993206bf97",
+              "raw_score": "[103, 74]"
+            },
+            "threshold_difference": -6.5
+          }
+        ],
+        "potential_winner": "Panathinaikos",
+        "potential_winner_diagnostic": "W"
+      }
+    ],
+    "extra_rows": [],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-536",
+    "event_key": "TMP-20261004-BBL-BAY-OLD",
+    "native_id": "2006888",
+    "score": [
+      113,
+      60
+    ],
+    "total": 173,
+    "endpoint": "FULL_GAME_CONDITIONAL",
+    "status": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Consolidated shadow list",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "Bayern -10.5",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": -10.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261004-BBL-BAY-OLD",
+              "source_url": "https://www.easycredit-bbl.de/spiele/2006888",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "d2e5d6739389917a934c213babed5566d51f1a6ac672af3a17373ddf3f9baa37",
+              "raw_score": "[113, 60]"
+            },
+            "adjusted_margin": 42.5
+          },
+          {
+            "rank": 2,
+            "label": "Over 158.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 158.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261004-BBL-BAY-OLD",
+              "source_url": "https://www.easycredit-bbl.de/spiele/2006888",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "d2e5d6739389917a934c213babed5566d51f1a6ac672af3a17373ddf3f9baa37",
+              "raw_score": "[113, 60]"
+            },
+            "threshold_difference": 14.5
+          },
+          {
+            "rank": 3,
+            "label": "Oldenburg +18.5",
+            "market": "SPREAD",
+            "side": "AWAY",
+            "line": 18.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261004-BBL-BAY-OLD",
+              "source_url": "https://www.easycredit-bbl.de/spiele/2006888",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "d2e5d6739389917a934c213babed5566d51f1a6ac672af3a17373ddf3f9baa37",
+              "raw_score": "[113, 60]"
+            },
+            "adjusted_margin": -34.5
+          },
+          {
+            "rank": 4,
+            "label": "Under 169.5",
+            "market": "TOTAL",
+            "side": "UNDER",
+            "line": 169.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261004-BBL-BAY-OLD",
+              "source_url": "https://www.easycredit-bbl.de/spiele/2006888",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "d2e5d6739389917a934c213babed5566d51f1a6ac672af3a17373ddf3f9baa37",
+              "raw_score": "[113, 60]"
+            },
+            "threshold_difference": -3.5
+          }
+        ],
+        "potential_winner": "Bayern",
+        "potential_winner_diagnostic": "W"
+      }
+    ],
+    "extra_rows": [],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  },
+  {
+    "card_id": "P-537",
+    "event_key": "TMP-20261004-INT-KGZ-LBN",
+    "native_id": "Owner native UNKNOWN; ESPN 401921339",
+    "score": [
+      3,
+      1
+    ],
+    "total": 4,
+    "endpoint": "FULL_MATCH_90_PLUS_STOPPAGE_CONDITIONAL",
+    "status": "PARTIALLY_DIAGNOSTICALLY_SETTLED_PERIOD_AND_PROVIDER_OPEN",
+    "receipt_semantics": "DERIVED_REVIEWED_SPORTS_FIELDS: retrieved_utc in deterministic output is REVIEW_TIME, response_sha256 is DERIVED_FIELD_HASH, not raw HTTP custody or formal certification",
+    "versions": [
+      {
+        "source_version": "Consolidated shadow list; alternatives retain source contradiction",
+        "original_status": "UNCALIBRATED_RESEARCH_ONLY",
+        "unranked": false,
+        "rows": [
+          {
+            "rank": 1,
+            "label": "1H Over 0.5 goals",
+            "market": "UNRESOLVED_PERIOD",
+            "side": null,
+            "line": 0.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "UNRESOLVED_PERIOD",
+            "diagnostic_scope": "NOT_GRADED_MISSING_OR_AMBIGUOUS_FIELD"
+          },
+          {
+            "rank": 2,
+            "label": "Full match Over 2.5",
+            "market": "TOTAL",
+            "side": "OVER",
+            "line": 2.5,
+            "source_flags": [],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_MATCH_90_PLUS_STOPPAGE_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261004-INT-KGZ-LBN",
+              "source_url": "https://www.kfu.kg/news/1811",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "e79b160d8b570d1884f21f158064022834807d799df079fd88fbac1b98d62cf7",
+              "raw_score": "[3, 1]"
+            },
+            "threshold_difference": 1.5
+          },
+          {
+            "rank": 3,
+            "label": "Lebanon win (unsupported alternative)",
+            "market": "1X2",
+            "side": "AWAY",
+            "line": null,
+            "source_flags": [
+              "UNSUPPORTED_ALTERNATIVE"
+            ],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "L",
+            "diagnostic_scope": "FULL_MATCH_90_PLUS_STOPPAGE_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "L",
+              "event_id": "TMP-20261004-INT-KGZ-LBN",
+              "source_url": "https://www.kfu.kg/news/1811",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "e79b160d8b570d1884f21f158064022834807d799df079fd88fbac1b98d62cf7",
+              "raw_score": "[3, 1]"
+            }
+          },
+          {
+            "rank": 4,
+            "label": "Corners Over 9.5 (also called unranked alternative)",
+            "market": "UNRESOLVED_PROVIDER_FIELD",
+            "side": null,
+            "line": 9.5,
+            "source_flags": [
+              "UNSUPPORTED_ALTERNATIVE"
+            ],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "UNRESOLVED_PROVIDER_FIELD",
+            "diagnostic_scope": "NOT_GRADED_MISSING_OR_AMBIGUOUS_FIELD"
+          },
+          {
+            "rank": 5,
+            "label": "Kyrgyzstan +0.5 (unsupported alternative)",
+            "market": "SPREAD",
+            "side": "HOME",
+            "line": 0.5,
+            "source_flags": [
+              "UNSUPPORTED_ALTERNATIVE"
+            ],
+            "formal_grade": "UNRESOLVED",
+            "formal_blockers": [
+              "UNKNOWN_DEFINITION",
+              "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+              "NO_CANONICAL_PROSPECTIVE_ISSUE"
+            ],
+            "performance_eligible": false,
+            "diagnostic_grade": "W",
+            "diagnostic_scope": "FULL_MATCH_90_PLUS_STOPPAGE_CONDITIONAL",
+            "deterministic_settlement": {
+              "result": "W",
+              "event_id": "TMP-20261004-INT-KGZ-LBN",
+              "source_url": "https://www.kfu.kg/news/1811",
+              "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+              "response_sha256": "e79b160d8b570d1884f21f158064022834807d799df079fd88fbac1b98d62cf7",
+              "raw_score": "[3, 1]"
+            },
+            "adjusted_margin": 2.5
+          }
+        ],
+        "potential_winner": "DRAW",
+        "potential_winner_diagnostic": "L"
+      }
+    ],
+    "extra_rows": [
+      {
+        "rank": null,
+        "label": "Supplied 1H Under 0.5; not ranked",
+        "market": "UNRESOLVED_PERIOD",
+        "side": null,
+        "line": 0.5,
+        "source_flags": [],
+        "formal_grade": "UNRESOLVED",
+        "formal_blockers": [
+          "UNKNOWN_DEFINITION",
+          "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+          "NO_CANONICAL_PROSPECTIVE_ISSUE"
+        ],
+        "performance_eligible": false,
+        "diagnostic_grade": "UNRESOLVED_PERIOD",
+        "diagnostic_scope": "NOT_GRADED_MISSING_OR_AMBIGUOUS_FIELD"
+      },
+      {
+        "rank": null,
+        "label": "Supplied full match Under 2.5; not ranked",
+        "market": "TOTAL",
+        "side": "UNDER",
+        "line": 2.5,
+        "source_flags": [],
+        "formal_grade": "UNRESOLVED",
+        "formal_blockers": [
+          "UNKNOWN_DEFINITION",
+          "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+          "NO_CANONICAL_PROSPECTIVE_ISSUE"
+        ],
+        "performance_eligible": false,
+        "diagnostic_grade": "L",
+        "diagnostic_scope": "FULL_MATCH_90_PLUS_STOPPAGE_CONDITIONAL",
+        "deterministic_settlement": {
+          "result": "L",
+          "event_id": "TMP-20261004-INT-KGZ-LBN",
+          "source_url": "https://www.kfu.kg/news/1811",
+          "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+          "response_sha256": "e79b160d8b570d1884f21f158064022834807d799df079fd88fbac1b98d62cf7",
+          "raw_score": "[3, 1]"
+        },
+        "threshold_difference": -1.5
+      }
+    ],
+    "p": null,
+    "baseline": null,
+    "brier": null,
+    "log_loss": null,
+    "surprise": null,
+    "performance_eligible": false
+  }
+]

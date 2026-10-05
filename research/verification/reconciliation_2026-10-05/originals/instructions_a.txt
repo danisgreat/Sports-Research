@@ -1,0 +1,258 @@
+**Append/reconcile into Combined Prediction Log + archive mini log
+Use ONLY the current GitHub repository as authority:**
+
+https://github.com/danisgreat/Sports-Research
+
+Do not use any Google Drive copy, cached older methodology, prior-chat summary, or superseded September instructions where they conflict with the current repository.
+
+Your task is to comprehensively settle every game in the CURRENT active mini running log/reference log that has actually reached terminal status, and perform the full retrospective required by the current Sports Research framework.
+
+Do NOT archive the mini log and do NOT start a new running log in this task.
+
+### 1. Mandatory fresh-read and custody gate
+
+Before doing any settlement work, read the CURRENT versions of at least:
+
+- `METHOD.md`
+- `CURRENT\_RULES.md`
+- `CARD\_AND\_LOG\_TEMPLATES.md`
+- `SCORING\_AND\_VALIDATION.md`
+- `SOURCES.md`
+- `RECORD\_ELIGIBILITY\_SCHEMA.md`
+- `VERIFICATION\_PROTOCOL.md`
+- `GAME\_LOG\_STATUS\_CURRENT.md`
+- `research/README.md`
+- the active `prediction logs/PREDICTION\_LOG\_COMBINED\_6.md`
+- the relevant `RULES\_<SPORT>.md` and competition/league rules for every game being settled
+- the active mini running log/reference log itself
+- any current implementation, reconciliation or verification file explicitly referenced by the above documents
+
+Use `METHOD.md` and `CURRENT\_RULES.md` as the current authority. Treat dated historical sections as historical unless the current authority explicitly incorporates them.
+
+Verify the current control/freeze receipt and current canonical custody before changing anything.
+
+If a transactional append is pending, recover or resolve it before any new operation. Never allocate or reuse an ID while custody is uncertain.
+
+### 2. Determine which games can actually be settled
+
+Inspect every record in the active mini log.
+
+For each record:
+
+- determine the exact event identity;
+- verify sport, competition, participants, home/away designation, event/native ID where available, venue, scheduled start, actual start where recoverable, period and settlement endpoint;
+- determine whether the event is genuinely terminal;
+- do not infer FINAL merely from the clock;
+- distinguish FINAL, CANCELLED, POSTPONED, ABANDONED, VOID, unresolved and other terminal states correctly;
+- preserve any existing `LIVE`, `LIVE\_ISSUED`, `LATE`, `RESEARCH\_ONLY`, `UNCALIBRATED\_QUALITATIVE`, `SHADOW\_ONLY`, `NOT PERFORMANCE\_ELIGIBLE`, or equivalent classification.
+
+Do not settle an event if identity, endpoint, period or result remains materially ambiguous.
+
+### 3. Settlement evidence
+
+Follow the current source hierarchy and terminal-evidence rules.
+
+Prefer the field owner/official source first.
+
+Where the current framework requires three independently collected terminal lineages for certified settlement, attempt to obtain all three and audit independence. Three websites using the same upstream provider count as one lineage.
+
+For every source used retain/report, where available:
+
+- source/provider;
+- exact URL or endpoint;
+- event/native ID;
+- retrieved timestamp;
+- terminal state;
+- raw score/result;
+- relevant period/stat field;
+- content/body hash or repository receipt;
+- parser/source-registry information where required;
+- whether it is official/field-owning;
+- whether its collection lineage is independently established, shared, or UNKNOWN.
+
+If full source quorum or actual-start evidence is unavailable, do NOT fabricate certification. Record the sporting outcome diagnostically if adequately supported, but preserve the framework-required unresolved/performance-ineligible classification.
+
+### 4. Preserve the original forecast
+
+The original issued/research card is immutable.
+
+Never rewrite or improve after seeing the result:
+
+- contracts;
+- lines;
+- ranks;
+- probabilities;
+- `p\_model`;
+- `p\_card`;
+- baseline literals;
+- q values from historical cards;
+- projected winner;
+- assumptions;
+- issue/freeze/cutoff timestamps;
+- lineup status;
+- original rationale.
+
+All corrections must be dated append-only revisions/addenda.
+
+Use the original card as actually retained in canonical custody, not a reconstructed version from memory.
+
+### 5. Grade every issued contract
+
+Settle every valid contract exactly according to its original:
+
+- market;
+- side;
+- line;
+- period;
+- regulation/full-game scope;
+- overtime/extra-innings/extra-time treatment;
+- push rule;
+- tie rule;
+- void rule.
+
+Grade each as:
+
+`W / L / P / VOID / UNRESOLVED`
+
+Do not silently convert pushes into losses or omit pushes.
+
+For derivative markets such as corners, cards, shots, player props, innings/period markets or other specialised fields, use the exact pre-registered settlement field/provider semantics. If the required field cannot be independently established, leave the contract unresolved.
+
+Where the repository's deterministic settlement tooling applies, use it instead of hand-entering outcomes.
+
+### 6. Scoring and diagnostics
+
+Apply the CURRENT `SCORING\_AND\_VALIDATION.md`.
+
+Where literal issued probabilities exist and the endpoint is valid, calculate the appropriate diagnostic metrics exactly as specified, including Brier/log-loss where applicable.
+
+Rules:
+
+- q is not an event probability;
+- do not fabricate missing p or baseline values;
+- blank/missing means missing, not zero;
+- score identical events/endpoints when making comparisons;
+- treat complementary contracts and multiple contracts from one event correctly;
+- do not present correlated rows as independent samples;
+- keep performance-ineligible/learning-only records labelled as such;
+- do not claim calibration, predictive skill, ROI or validated performance from diagnostic settlement.
+
+### 7. Comprehensive retrospective for EVERY completed event
+
+Do a full retrospective for wins AND losses with equal scrutiny.
+
+For each event include:
+
+1. **Observed endpoint and result**
+   - final score/result;
+   - relevant period/derivative result;
+   - exact grades of all ranked selections;
+   - potential-winner outcome.
+
+2. **Expectation vs reality**
+   - what the original card expected;
+   - what actually occurred;
+   - where the game stayed within the anticipated distribution/scenario;
+   - where it departed materially.
+
+3. **Issued probability/baseline review**
+   - preserve the literal original p and baseline;
+   - calculate diagnostic surprise where justified;
+   - do not retrospectively adjust the probability.
+
+4. **Source and identity audit**
+   - whether event, teams, endpoint, timing and result were correct;
+   - whether any source or event-ID problem occurred.
+
+5. **Participant/availability audit**
+   - compare expected/confirmed participants with actual starters/lineups where recoverable;
+   - identify late scratches, role changes, restrictions, substitutions, pitching changes, goalkeeper changes, etc.;
+   - clearly separate information available pregame from information only known afterwards.
+
+6. **Mechanisms that occurred**
+   - identify which predeclared mechanisms/risk branches actually materialised.
+
+7. **Mechanisms that did not occur**
+   - identify expected mechanisms that failed to appear.
+
+8. **Model versus research-adjustment effect**
+   - where applicable, distinguish what came from the model from analyst/manual adjustment;
+   - determine whether the adjustment improved or worsened the forecast diagnostically;
+   - do not infer a new coefficient from one game.
+
+9. **Failure-path analysis**
+   - identify the exact branch that defeated each losing top selection;
+   - for wins, identify whether the stated mechanism actually supported the win or whether it was won through an unrelated/outlier path.
+
+10. **Error classification**
+    Classify applicable findings under the current framework:
+    - data/source/identity;
+    - contract/period;
+    - timing/availability;
+    - model/calibration;
+    - research adjustment;
+    - true random miss;
+    - unresolved/censored.
+
+11. **Next testable hypothesis**
+    - state a specific hypothesis and acceptance criterion;
+    - do not promote it into a rule or coefficient from this game alone;
+    - keep it as a prospective hypothesis/test unless repository evidence already supports promotion.
+
+12. **What should NOT change**
+    Explicitly state which result does not justify changing model weights, caps, probabilities or ranking logic.
+
+Do not use postgame awards, end-of-season information or hindsight narratives as if they were available pregame.
+
+### 8. Update the current mini running log
+
+Carefully update the existing Markdown mini running log/reference log.
+
+Requirements:
+
+- preserve all original forecast material;
+- append settlement and retrospective sections rather than rewriting issued content;
+- update each record's status accurately;
+- keep genuinely unsettled or unresolved records clearly identified;
+- keep unresolved records visible for carryover;
+- do not create a new running log;
+- do not archive this log yet;
+- do not allocate a new canonical ID merely for settlement;
+- do not renumber existing events.
+
+If the record is already canonical in Part 6, settlement belongs against that existing canonical ID. Never create a duplicate card.
+
+Use the repository's current settlement/addendum workflow appropriate to that record class. Do not force a certified-issue settlement schema onto a research-only record if the current code does not support that operation. In that case use the current append-only diagnostic/addendum mechanism and keep certification status honest.
+
+### 9. Verification
+
+After all changes, run the CURRENT verification commands prescribed by `research/README.md` and the current authority, including the applicable equivalents of:
+
+- custody verification;
+- control/freeze verification;
+- canonical log/ledger verification;
+- research test suite;
+- acceptance validation;
+- archive/source validation where relevant;
+- workflow status/score where relevant.
+
+Do not claim success if verification was not actually run or passed.
+
+### 10. Final response
+
+Return a concise completion report containing:
+
+- games found in the mini log;
+- games terminal and settled;
+- games still unresolved/unsettled and why;
+- canonical IDs affected;
+- settlement revision/addendum status;
+- Rank 1 and Rank 2 grades for each settled game;
+- major retrospective findings;
+- any source/custody defects;
+- exact files changed;
+- verification results.
+
+Do not paste the entire combined prediction log into chat.
+
+Accuracy, source quality, provenance, append-only custody, and compliance with the CURRENT GitHub methodology take priority over speed.

@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import os
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import re
 import uuid
 from research.src.issue import PART6, RECONCILIATION, CANONICAL_LEDGER, _custody, next_card_id
@@ -44,12 +44,32 @@ def research_cards(records):
         out.append({**core, 'commit_sha256':r['record_sha256']})
     return out
 
+def retained_path(value):
+    """Resolve the ledger's historical store paths after checkout relocation.
+
+    Existing absolute paths remain valid. Only the exact canonical research
+    store suffix may be relocated; its immutable hash is checked by callers.
+    """
+    parts = PureWindowsPath(value).parts
+    if '..' in parts: raise ValueError('retained path traversal')
+    path = Path(value)
+    if path.is_absolute() and path.exists(): return path
+    if len(parts) >= 3 and parts[-3:-1] == ('research', 'issued_research'):
+        return ROOT/'research'/'issued_research'/parts[-1]
+    raise ValueError('retained path outside canonical research store')
+
+def stored_path(path):
+    try:
+        relative = path.relative_to(ROOT).as_posix()
+        return relative if relative.startswith('research/issued_research/') else str(path)
+    except ValueError: return str(path)
+
 def verify_projection(card, part6):
     raw, _ = _custody(part6)
-    projection = Path(card['projection_path']).read_bytes()
+    projection = retained_path(card['projection_path']).read_bytes()
     if sha(projection) != card['projection_sha256'] or raw.count(projection) != 1:
         raise ValueError('canonical research projection missing, duplicated or changed')
-    if sha(Path(card['source_path']).read_bytes()) != card['source_sha256']:
+    if sha(retained_path(card['source_path']).read_bytes()) != card['source_sha256']:
         raise ValueError('retained original research source changed')
     return projection
 
@@ -79,14 +99,20 @@ def _sync_status(part6, reconciliation, ledger):
     freeze=match[1] if match else 'NOT_RECORDED'
     receipt=ROOT/freeze
     freeze_sha=sha(receipt.read_text(encoding='utf-8-sig').replace('\r\n','\n').replace('\r','\n').replace('\n','\r\n').encode('utf-8')) if receipt.exists() else 'NOT_RECORDED'
-    lines=[begin.decode(),'# Current canonical research queue — October 1 v7.1','',
+    lines=[begin.decode(),'# Current canonical research queue','',
            f'**Next canonical ID: {following}.** All requested cards go directly to Part 6, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.',
            f'Current selected freeze: `{freeze}`; normalized-CRLF SHA-256 `{freeze_sha}`. Current authority: METHOD.md and CURRENT_RULES.md.','',
            '| ID | Event | Tracking alias | Status |','|---|---|---|---|']
     # The frozen legacy extractor reads plain P-ID rows as its 517-slot index.
     # Research queue IDs are ledger-owned and formatted distinctly from that index.
     lines += [f"| **{c['card_id']}** | {c['title']} | `{c['tracking_handle']}` | {c['analysis_status']} |" for c in cards]
-    lines += ['', 'P-518–P-522 remain reserved. No new retrospective or certified model promotion is implied. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.',
+    closure=ROOT/'research/verification/closure_2026-10-05/mini_archive_manifest.json'
+    if closure.exists():
+        archive=json.loads(closure.read_text(encoding='utf-8'))
+        lines += ['',f"Highest canonical research ID: **{cards[-1]['card_id']}**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_6.md`.",
+                  'Archived mini references: '+', '.join('`'+a['archive_path']+'`' for a in archive['archives'])+'.',
+                  'Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/carryover.json` and `carryover.md`. Eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6; formal certification remains unresolved.']
+    lines += ['', 'P-518–P-522 remain reserved. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.',
               '', end.decode(),'','## Historical status snapshots — superseded for current queue','']
     new='\r\n'.join(lines).encode('utf-8')+old
     temporary=path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
@@ -95,8 +121,8 @@ def _sync_status(part6, reconciliation, ledger):
 
 def _finish(preparation, ledger, part6):
     p = preparation['payload']
-    projection = Path(p['projection_path']).read_bytes()
-    if sha(projection) != p['projection_sha256'] or sha(Path(p['source_path']).read_bytes()) != p['source_sha256']:
+    projection = retained_path(p['projection_path']).read_bytes()
+    if sha(projection) != p['projection_sha256'] or sha(retained_path(p['source_path']).read_bytes()) != p['source_sha256']:
         raise ValueError('pending transaction retained source/projection changed')
     raw, _ = _custody(part6)
     before = p['part6_before_bytes']
@@ -171,8 +197,8 @@ def commit(card, *, part6=PART6, reconciliation=RECONCILIATION, ledger=CANONICAL
         before, _ = _custody(part6)
         payload = {k:card.get(k) for k in ['event_key','title','tracking_handle','analysis_status','league','native_event_id']}
         payload.update(transaction_id=transaction_id, card_id=card_id, logged_utc=stamp,
-                       projection_path=str(frozen), projection_sha256=sha(projection),
-                       source_path=str(original), source_sha256=sha(source),
+                       projection_path=stored_path(frozen), projection_sha256=sha(projection),
+                       source_path=stored_path(original), source_sha256=sha(source),
                        body_sha256=sha(card['body'].encode('utf-8')),
                        part6_before_bytes=len(before), part6_before_sha256=sha(before),
                        performance_status='RESEARCH_ONLY_NOT_CERTIFIED')
@@ -187,7 +213,7 @@ def commit(card, *, part6=PART6, reconciliation=RECONCILIATION, ledger=CANONICAL
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['commit','recover','verify','next-id'])
+    parser.add_argument('command', choices=['commit','recover','verify','next-id','refresh-status'])
     parser.add_argument('card', type=Path, nargs='?')
     args = parser.parse_args()
     if args.command == 'commit':
@@ -195,6 +221,7 @@ def main():
         result = commit(json.loads(args.card.read_text(encoding='utf-8')))
     elif args.command == 'recover': result = recover()
     else:
+        if args.command == 'refresh-status': _sync_status(PART6,RECONCILIATION,CANONICAL_LEDGER)
         cards = research_cards(read_records(CANONICAL_LEDGER))
         result = {'cards':[c['card_id'] for c in cards], 'next_id':next_id()}
     print(json.dumps(result, indent=2, ensure_ascii=False))

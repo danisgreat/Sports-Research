@@ -1,0 +1,11 @@
+{
+  "observed_utc": "2026-10-05T02:28:34.163786+00:00",
+  "results": [
+    {
+      "check": "regressions",
+      "exit_code": 0,
+      "output_sha256": "02c50836991edd796f6da0550b6da6f7c760f5bfde729f94a3957f2c0e5fd23e"
+    }
+  ],
+  "passed": true
+}

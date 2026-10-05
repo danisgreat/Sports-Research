@@ -1,8 +1,8 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
-# Current canonical research queue — October 1 v7.1
+# Current canonical research queue
 
-**Next canonical ID: P-527.** All requested cards go directly to Part 6, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
-Current selected freeze: `CONTROL_MANIFEST_2026-10-01-5.md`; normalized-CRLF SHA-256 `1fc4151afd0e9dfa0202ab8f1de1ee5487e41df8fb443d1fa83f5d95df644754`. Current authority: METHOD.md and CURRENT_RULES.md.
+**Next canonical ID: P-538.** All requested cards go directly to Part 6, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+Current selected freeze: `CONTROL_MANIFEST_2026-10-05-1.md`; normalized-CRLF SHA-256 `25e8fcaf322f7e188b74cb352e786a18f2b5cc9b702bacbc9cc5eaa863aca6e5`. Current authority: METHOD.md and CURRENT_RULES.md.
 
 | ID | Event | Tracking alias | Status |
 |---|---|---|---|
@@ -10,8 +10,23 @@ Current selected freeze: `CONTROL_MANIFEST_2026-10-01-5.md`; normalized-CRLF SHA
 | **P-524** | KT Wiz @ Kia Tigers — retained October 1 card | `TMP-20261001-KBO-KT-KIA` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
 | **P-525** | Chunichi Dragons @ Hiroshima Toyo Carp — Game 25 | `TMP-20261001-NPB-CHU-HIR-G25` | IMPORT_WITH_DATED_UNCALIBRATED_QUALITATIVE_ANALYSIS |
 | **P-526** | Hanwha Eagles @ Samsung Lions — October 1, 2026 | `TMP-20261001-KBO-HAN-SAM` | LIVE_OBSERVED_UNCALIBRATED_QUALITATIVE |
+| **P-527** | Hapoel Tel Aviv vs Real Madrid — October 1, 2026 | `TMP-20261002-EUR-HTA-RMA` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
+| **P-528** | Grand Rapids Griffins @ Cleveland Monsters — October 2, 2026 | `LOCAL-P528-GR-CLE-20261002` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
+| **P-529** | Philadelphia Flyers @ New Jersey Devils — October 1, 2026 | `TMP-20261002-NHL-PHI-NJD` | HISTORICAL_RESEARCH_IMPORT_LIVE_CLAIM_IN_LATER_SUMMARY |
+| **P-530** | Philadelphia Phillies @ Atlanta Braves — NL Wild Card Game 3 | `TMP-20261002-MLB-PHI-ATL-G3` | HISTORICAL_LATE_UNCALIBRATED_RESEARCH_IMPORT |
+| **P-531** | Indiana Fever @ Las Vegas Aces — First Round Game 3 | `TMP-20261002-WNBA-IND-LVA-G3` | HISTORICAL_LATE_UNCALIBRATED_RESEARCH_IMPORT |
+| **P-532** | Tasmania JackJumpers vs Melbourne United (NBL27, Round 3) | `TMP-20261001-NBL-TAS-MEL` | HISTORICAL_INTAKE_NO_FORECAST_ISSUED |
+| **P-533** | KIA Tigers @ LG Twins (KBO League 2026, Regular Season) | `TMP-20261003-KBO-KIA-LG` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
+| **P-534** | Sydney Roosters vs Newcastle Knights (NRL 2026, Grand Final) | `TMP-20261004-NRL-SYD-NEW-GF` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
+| **P-535** | Panathinaikos AKTOR vs Vikos Falcons (Greek Basket League 2026-27, Round 1) | `TMP-20261004-GBL-PAO-VIK` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
+| **P-536** | FC Bayern München vs EWE Baskets Oldenburg (easyCredit BBL 2026-27, Round 4) | `TMP-20261004-BBL-BAY-OLD` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
+| **P-537** | Kyrgyzstan vs Lebanon (International Friendly, FIFA Window) | `TMP-20261004-INT-KGZ-LBN` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
 
-P-518–P-522 remain reserved. No new retrospective or certified model promotion is implied. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.
+Highest canonical research ID: **P-537**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_6.md`.
+Archived mini references: `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`, `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P527_ONWARD_UPDATED_4.md`.
+Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/carryover.json` and `carryover.md`. Eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6; formal certification remains unresolved.
+
+P-518–P-522 remain reserved. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.
 
 <!-- END CURRENT RESEARCH QUEUE -->
 
@@ -850,3 +865,27 @@ Full mechanical readback: [FINAL_CHECKS.json](C:/Users/danie/Desktop/Sports Rese
 ## October 2 local-mini diagnostic addendum — combined-log reference
 
 User-requested append at 2026-10-02T05:00:57.524535+00:00: [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) now retains the local mini forecast exhibit and four twelve-part sporting diagnostic retrospectives. Source labels P-527–P-531 remain local reservations, not assigned canonical IDs. Zero certified settlements; all formal rows remain unresolved, with P-528 unplayed at the original observation and P-531 secondary-only provisional. No renumbering or new issuance occurs. **Next canonical ID remains P-527.** Original ledger and existing cards are unchanged. [Audit and verification](research/verification/mini_settlement_2026-10-02/REPORT.md); pre-existing full-suite/custody/freeze/archive failures remain disclosed.
+
+<!-- BEGIN CURRENT RESEARCH SETTLEMENT STATUS 2026-10-05 -->
+## Current research settlement status — October 5
+
+This dated table supersedes earlier UNSETTLED/unplayed pointers for these imported research records, while preserving their original classifications. Full source variants, all row grades and eleven twelve-part retrospectives are in Part 6. Canonical IDs were allocated only for unique historical events; settlement creates no new ID. Next available ID: **P-538**.
+
+| Canonical ID | Sporting endpoint | Current status | Formal/performance status |
+|---|---|---|---|
+| **P-527** | Home-away 102-98; total 200 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-528** | Home-away 2-5; total 7 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-529** | Home-away 3-2; total 5 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-530** | Home-away 6-2; total 8 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-531** | Home-away 94-83; total 177 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-532** | Home-away 84-82; total 166 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-533** | Home-away 4-5; total 9 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-534** | Home-away 19-18; total 37 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-535** | Home-away 103-74; total 177 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-536** | Home-away 113-60; total 173 | DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+| **P-537** | Home-away 3-1; total 4 | PARTIALLY_DIAGNOSTICALLY_SETTLED_PERIOD_AND_PROVIDER_OPEN | UNRESOLVED operator/quorum; NOT PERFORMANCE_ELIGIBLE |
+
+Carryover: **P-537** first-half O/U 0.5 UNRESOLVED_PERIOD (2-0 detailed reports versus 0-0 ESPN split); corners Over 9.5 UNRESOLVED_PROVIDER_FIELD. All eleven retain UNKNOWN_DEFINITION and no three audited independent terminal lineages. Missing/unadmitted actual start remains distinct from scheduled time. NBL and later EuroLeague/NHL NO_FORECAST rows remain abstentions; MLB/WNBA late timing is unchanged. No certified settlements, live eligible forecasts or performance scores were created.
+
+Audit: `research/verification/reconciliation_2026-10-05/REPORT.md`; hash-chained research diagnostic revisions are separate from the immutable canonical allocation ledger. Current full-check failures are disclosed in the audit, not hidden by new manifests.
+<!-- END CURRENT RESEARCH SETTLEMENT STATUS 2026-10-05 -->

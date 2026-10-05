@@ -1,0 +1,454 @@
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:22: trailing whitespace.
++**Period:** 2026-10-01 to 2026-10-04  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:23: trailing whitespace.
++**Canonical IDs:** Omitted per request  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:30: trailing whitespace.
++**Tracking Reference:** TMP-20261001-NBL-TAS-MEL  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:31: trailing whitespace.
++**Supplied Event:** Tasmania JackJumpers vs Melbourne United, Australia NBL  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:32: trailing whitespace.
++**Supplied Expected Start:** 01/09/2026, 7:30 PM AEST — corrected to 01/10/2026, 7:30 PM AEST  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:33: trailing whitespace.
++**Supplied Contracts:** United -6.5; JackJumpers +6.5; Over 181.5; Under 181.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:50: trailing whitespace.
++**Tasmania OUT/GTD:** Ben Ayre (hip flexor, test), Josh Bannan (ribs, GTD), Majok Deng (lower leg, out R8–10), Anthony Drmic (back, out), Bryce Hamilton (ACL, season).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:66: trailing whitespace.
++1. Melbourne United -6.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:67: trailing whitespace.
++2. Under 181.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:68: trailing whitespace.
++3. Tasmania JackJumpers +6.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:69: trailing whitespace.
++4. Over 181.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:82: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:83: trailing whitespace.
++**Status:** INTAKE_ONLY / NO_FORECAST_ISSUED / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:90: trailing whitespace.
++**Tracking Reference:** TMP-20261002-EUR-HTA-RMA  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:91: trailing whitespace.
++**Supplied Event:** Hapoel Tel Aviv vs Real Madrid, Euroleague  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:92: trailing whitespace.
++**Supplied Expected Start:** 02/09/2026, 2:00 AM AEST — corrected to 02/10/2026, 2:00 AM AEST  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:93: trailing whitespace.
++**Supplied Contracts:** Madrid -4.5; Tel Aviv +4.5; Over 174.5; Under 174.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:110: trailing whitespace.
++**Hapoel OUT:** Amir Coffey (groin), Tyler Ennis (Achilles), Tomer Ginat (knee), Jacob Toppin (adductor), Tamir Blatt (coach's decision).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:126: trailing whitespace.
++1. Real Madrid -4.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:127: trailing whitespace.
++2. Under 174.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:128: trailing whitespace.
++3. Hapoel Tel Aviv +4.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:129: trailing whitespace.
++4. Over 174.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:142: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:143: trailing whitespace.
++**Status:** INTAKE_ONLY / NO_FORECAST_ISSUED / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:150: trailing whitespace.
++**Tracking Reference:** TMP-20261002-NHL-PHI-NJD  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:151: trailing whitespace.
++**Supplied Event:** PHI Flyers @ NJ Devils, NHL  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:152: trailing whitespace.
++**Supplied Expected Start:** 02/10/2026, 9:07 AM AEST — corrected to 9:00 AM AEST  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:153: trailing whitespace.
++**Supplied Contracts:** Flyers +1.5; Devils ML; Over 5.5; Under 5.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:170: trailing whitespace.
++**Flyers OUT:** Denver Barkey (lower body, IR), Nikita Grebenkin (upper body), Helge Grans (IR-NR).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:171: trailing whitespace.
++**Devils OUT:** Johnathan Kovacevic (knee, IR-NR), Connor Brown (lower body), Nick Bjugstad (IR-NR), Seamus Casey (IR-NR), Stefan Noesen (knee, out until Oct 15).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:194: trailing whitespace.
++**Reason:** **NO_PREGAME_FORECAST** — event live at research time.  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:195: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:196: trailing whitespace.
++**Status:** NO_PREGAME_FORECAST / INTAKE_ONLY / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:203: trailing whitespace.
++**Tracking Reference:** TMP-20261002-MLB-PHI-ATL-G3  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:204: trailing whitespace.
++**Supplied Event:** PHI Phillies @ ATL Braves, MLB  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:205: trailing whitespace.
++**Supplied Expected Start:** 02/10/2026, 10:00 AM AEST — verified correct  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:206: trailing whitespace.
++**Supplied Contracts:** Phillies ML; Braves ML; Over 7.5; Over 7.5 (duplicate)  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:223: trailing whitespace.
++**Starters:** Aaron Nola (PHI, RHP) vs. Ray Kerr (ATL, LHP opener) → Grant Holmes (ATL, RHP bulk).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:224: trailing whitespace.
++**Phillies OUT:** Luis Arráez (ankle, out for series); Caleb Kilian (oblique, IL); Jonathan Bowlan (groin, day-to-day).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:240: trailing whitespace.
++1. Braves ML  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:241: trailing whitespace.
++2. Over 7.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:242: trailing whitespace.
++3. Phillies ML  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:243: trailing whitespace.
++4. Under 7.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:256: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:257: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:264: trailing whitespace.
++**Tracking Reference:** TMP-20261002-WNBA-IND-LVA-G3  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:265: trailing whitespace.
++**Supplied Event:** IND Fever @ LV Aces, WNBA Playoffs  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:266: trailing whitespace.
++**Supplied Expected Start:** 02/10/2026, 11:00 AM AEST — verified correct  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:267: trailing whitespace.
++**Supplied Contracts:** Aces -4.5; Fever +4.5; Over 181.5 (Under implied)  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:284: trailing whitespace.
++**Fever OUT:** Tyasha Harris (left lower-leg, season), Damiris Dantas (knee, season). Caitlin Clark (back), Aliyah Boston (lower leg) — probable.  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:300: trailing whitespace.
++1. Fever +4.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:301: trailing whitespace.
++2. Under 181.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:302: trailing whitespace.
++3. Aces -4.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:303: trailing whitespace.
++4. Over 181.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:316: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:317: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:324: trailing whitespace.
++**Tracking Reference:** TMP-20261003-KBO-KIA-LG  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:325: trailing whitespace.
++**Supplied Event:** KIA Tigers @ LG Twins, Korean KBO  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:326: trailing whitespace.
++**Supplied Expected Start:** 03/10/2026, 3:00 PM AEST — verified correct (2:00 PM KST)  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:327: trailing whitespace.
++**Supplied Contracts:** Tigers +1.5; Twins ML; Over/Under 8.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:344: trailing whitespace.
++**Starters:** James Nail (KIA, RHP, 12-7, 3.45) vs. Carlos Carrasco (LG, RHP, 6-2, 3.55).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:345: trailing whitespace.
++**KIA:** Kim Do-young (broken nose, playing); Kwak Do-gyu (returned).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:361: trailing whitespace.
++1. KIA Tigers ML  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:362: trailing whitespace.
++2. Under 8.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:363: trailing whitespace.
++3. LG Twins ML  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:364: trailing whitespace.
++4. Over 8.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:377: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:378: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:385: trailing whitespace.
++**Tracking Reference:** TMP-20261004-NRL-SYD-NEW-GF  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:386: trailing whitespace.
++**Supplied Event:** Sydney Roosters vs Newcastle Knights, NRL Finals  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:387: trailing whitespace.
++**Supplied Expected Start:** 04/10/2026, 7:30 PM AEST — corrected to 7:30 PM AEDT  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:388: trailing whitespace.
++**Supplied Contracts:** Roosters -4.5; Knights +12.5; Over 38.5; Under 48.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:405: trailing whitespace.
++**Roosters:** Connor Watson OUT (failed HIA); Benaiah Ioelu added to bench.  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:421: trailing whitespace.
++1. Roosters -4.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:422: trailing whitespace.
++2. Over 38.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:423: trailing whitespace.
++3. Knights +12.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:424: trailing whitespace.
++4. Under 48.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:437: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:438: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:445: trailing whitespace.
++**Tracking Reference:** TMP-20261004-GBL-PAO-VIK  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:446: trailing whitespace.
++**Supplied Event:** Panathinaikos vs Vikos Falcons, Greece Basket League  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:447: trailing whitespace.
++**Supplied Expected Start:** 04/10/2026, 8:00 PM AEST — verified correct (13:00 EEST)  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:448: trailing whitespace.
++**Supplied Contracts:** Panathinaikos -20.5; Falcons +28.5; Over 159.5; Under 170.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:466: trailing whitespace.
++**Panathinaikos OUT:** Kendrick Nunn (knee + suspension), Kostas Sloukas (knee), Moustapha Fall (calf), Juancho Hernangómez (adductor), Nikos Rogkavopoulos (back), Jerian Grant (not in foreign six), Iasonas Varvaritis (ankle), Giannis Kouzeloglou (muscle tear).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:482: trailing whitespace.
++1. Panathinaikos -20.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:483: trailing whitespace.
++2. Over 159.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:484: trailing whitespace.
++3. Vikos Falcons +28.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:485: trailing whitespace.
++4. Under 170.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:498: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:499: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:506: trailing whitespace.
++**Tracking Reference:** TMP-20261004-BBL-BAY-OLD  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:507: trailing whitespace.
++**Supplied Event:** Bayern Munich vs Oldenburg, Germany Bundesliga  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:508: trailing whitespace.
++**Supplied Expected Start:** 05/10/2026, 12:00 AM AEST — corrected to 04/10/2026, 11:00 PM AEST  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:509: trailing whitespace.
++**Supplied Contracts:** Munich -10.5; Oldenburg +18.5; Over 158.5; Under 169.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:526: trailing whitespace.
++**Bayern:** Full roster available.  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:527: trailing whitespace.
++**Oldenburg OUT:** Le'Tre Darthard (knee, several weeks), Max DiLeo (hip surgery, weeks), Charles Manning Jr. (foot surgery, months).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:528: trailing whitespace.
++**Oldenburg DOUBTFUL:** Nate Johnson (injury).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:544: trailing whitespace.
++1. Bayern Munich -10.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:545: trailing whitespace.
++2. Over 158.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:546: trailing whitespace.
++3. Oldenburg +18.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:547: trailing whitespace.
++4. Under 169.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:560: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:561: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:568: trailing whitespace.
++**Tracking Reference:** TMP-20261004-INT-KGZ-LBN  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:569: trailing whitespace.
++**Supplied Event:** Kyrgyzstan vs Lebanon, International Match  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:570: trailing whitespace.
++**Supplied Expected Start:** 05/10/2026, 1:00 AM AEST — corrected to 05/10/2026, 2:00 AM AEST  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:571: trailing whitespace.
++**Supplied Contracts:** 1st Half Goals Over/Under 0.5; Total Combined Goals Over/Under 2.5  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:588: trailing whitespace.
++**Kyrgyzstan OUT:** Tamirlan Kozubaev (injury, not called up). Amir Zhaparov (leg injury, in squad but doubtful).  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:604: trailing whitespace.
++1. 1st Half Over 0.5 Goals  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:605: trailing whitespace.
++2. Full Match Over 2.5 Goals  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:606: trailing whitespace.
++3. Lebanon Win (Game Winner)  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:607: trailing whitespace.
++4. Corners Over 9.5 (Alternative)  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:621: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:622: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md:627: trailing whitespace.
++**End of consolidated log entries.**  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7856: trailing whitespace.
++**Tracking Reference:** TMP-20261001-NBL-TAS-MEL  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7857: trailing whitespace.
++**Supplied Event:** Tasmania JackJumpers vs Melbourne United, Australia NBL  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7858: trailing whitespace.
++**Supplied Expected Start:** 01/09/2026, 7:30 PM AEST — corrected to 01/10/2026, 7:30 PM AEST  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7859: trailing whitespace.
++**Supplied Contracts:** United -6.5; JackJumpers +6.5; Over 181.5; Under 181.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7876: trailing whitespace.
++**Tasmania OUT/GTD:** Ben Ayre (hip flexor, test), Josh Bannan (ribs, GTD), Majok Deng (lower leg, out R8–10), Anthony Drmic (back, out), Bryce Hamilton (ACL, season).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7892: trailing whitespace.
++1. Melbourne United -6.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7893: trailing whitespace.
++2. Under 181.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7894: trailing whitespace.
++3. Tasmania JackJumpers +6.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7895: trailing whitespace.
++4. Over 181.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7908: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7909: trailing whitespace.
++**Status:** INTAKE_ONLY / NO_FORECAST_ISSUED / NOT PERFORMANCE_ELIGIBLE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7928: trailing whitespace.
++**Tracking Reference:** TMP-20261003-KBO-KIA-LG  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7929: trailing whitespace.
++**Supplied Event:** KIA Tigers @ LG Twins, Korean KBO  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7930: trailing whitespace.
++**Supplied Expected Start:** 03/10/2026, 3:00 PM AEST — verified correct (2:00 PM KST)  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7931: trailing whitespace.
++**Supplied Contracts:** Tigers +1.5; Twins ML; Over/Under 8.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7948: trailing whitespace.
++**Starters:** James Nail (KIA, RHP, 12-7, 3.45) vs. Carlos Carrasco (LG, RHP, 6-2, 3.55).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7949: trailing whitespace.
++**KIA:** Kim Do-young (broken nose, playing); Kwak Do-gyu (returned).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7965: trailing whitespace.
++1. KIA Tigers ML  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7966: trailing whitespace.
++2. Under 8.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7967: trailing whitespace.
++3. LG Twins ML  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7968: trailing whitespace.
++4. Over 8.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7981: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:7982: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8001: trailing whitespace.
++**Tracking Reference:** TMP-20261004-NRL-SYD-NEW-GF  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8002: trailing whitespace.
++**Supplied Event:** Sydney Roosters vs Newcastle Knights, NRL Finals  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8003: trailing whitespace.
++**Supplied Expected Start:** 04/10/2026, 7:30 PM AEST — corrected to 7:30 PM AEDT  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8004: trailing whitespace.
++**Supplied Contracts:** Roosters -4.5; Knights +12.5; Over 38.5; Under 48.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8021: trailing whitespace.
++**Roosters:** Connor Watson OUT (failed HIA); Benaiah Ioelu added to bench.  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8037: trailing whitespace.
++1. Roosters -4.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8038: trailing whitespace.
++2. Over 38.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8039: trailing whitespace.
++3. Knights +12.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8040: trailing whitespace.
++4. Under 48.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8053: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8054: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8073: trailing whitespace.
++**Tracking Reference:** TMP-20261004-GBL-PAO-VIK  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8074: trailing whitespace.
++**Supplied Event:** Panathinaikos vs Vikos Falcons, Greece Basket League  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8075: trailing whitespace.
++**Supplied Expected Start:** 04/10/2026, 8:00 PM AEST — verified correct (13:00 EEST)  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8076: trailing whitespace.
++**Supplied Contracts:** Panathinaikos -20.5; Falcons +28.5; Over 159.5; Under 170.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8094: trailing whitespace.
++**Panathinaikos OUT:** Kendrick Nunn (knee + suspension), Kostas Sloukas (knee), Moustapha Fall (calf), Juancho Hernangómez (adductor), Nikos Rogkavopoulos (back), Jerian Grant (not in foreign six), Iasonas Varvaritis (ankle), Giannis Kouzeloglou (muscle tear).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8110: trailing whitespace.
++1. Panathinaikos -20.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8111: trailing whitespace.
++2. Over 159.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8112: trailing whitespace.
++3. Vikos Falcons +28.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8113: trailing whitespace.
++4. Under 170.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8126: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8127: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8146: trailing whitespace.
++**Tracking Reference:** TMP-20261004-BBL-BAY-OLD  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8147: trailing whitespace.
++**Supplied Event:** Bayern Munich vs Oldenburg, Germany Bundesliga  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8148: trailing whitespace.
++**Supplied Expected Start:** 05/10/2026, 12:00 AM AEST — corrected to 04/10/2026, 11:00 PM AEST  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8149: trailing whitespace.
++**Supplied Contracts:** Munich -10.5; Oldenburg +18.5; Over 158.5; Under 169.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8166: trailing whitespace.
++**Bayern:** Full roster available.  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8167: trailing whitespace.
++**Oldenburg OUT:** Le'Tre Darthard (knee, several weeks), Max DiLeo (hip surgery, weeks), Charles Manning Jr. (foot surgery, months).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8168: trailing whitespace.
++**Oldenburg DOUBTFUL:** Nate Johnson (injury).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8184: trailing whitespace.
++1. Bayern Munich -10.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8185: trailing whitespace.
++2. Over 158.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8186: trailing whitespace.
++3. Oldenburg +18.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8187: trailing whitespace.
++4. Under 169.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8200: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8201: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8220: trailing whitespace.
++**Tracking Reference:** TMP-20261004-INT-KGZ-LBN  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8221: trailing whitespace.
++**Supplied Event:** Kyrgyzstan vs Lebanon, International Match  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8222: trailing whitespace.
++**Supplied Expected Start:** 05/10/2026, 1:00 AM AEST — corrected to 05/10/2026, 2:00 AM AEST  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8223: trailing whitespace.
++**Supplied Contracts:** 1st Half Goals Over/Under 0.5; Total Combined Goals Over/Under 2.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8240: trailing whitespace.
++**Kyrgyzstan OUT:** Tamirlan Kozubaev (injury, not called up). Amir Zhaparov (leg injury, in squad but doubtful).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8256: trailing whitespace.
++1. 1st Half Over 0.5 Goals  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8257: trailing whitespace.
++2. Full Match Over 2.5 Goals  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8258: trailing whitespace.
++3. Lebanon Win (Game Winner)  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8259: trailing whitespace.
++4. Corners Over 9.5 (Alternative)  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8273: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8274: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8289: trailing whitespace.
++**Tracking Reference:** TMP-20261002-EUR-HTA-RMA  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8290: trailing whitespace.
++**Supplied Event:** Hapoel Tel Aviv vs Real Madrid, Euroleague  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8291: trailing whitespace.
++**Supplied Expected Start:** 02/09/2026, 2:00 AM AEST — corrected to 02/10/2026, 2:00 AM AEST  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8292: trailing whitespace.
++**Supplied Contracts:** Madrid -4.5; Tel Aviv +4.5; Over 174.5; Under 174.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8309: trailing whitespace.
++**Hapoel OUT:** Amir Coffey (groin), Tyler Ennis (Achilles), Tomer Ginat (knee), Jacob Toppin (adductor), Tamir Blatt (coach's decision).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8325: trailing whitespace.
++1. Real Madrid -4.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8326: trailing whitespace.
++2. Under 174.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8327: trailing whitespace.
++3. Hapoel Tel Aviv +4.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8328: trailing whitespace.
++4. Over 174.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8341: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8342: trailing whitespace.
++**Status:** INTAKE_ONLY / NO_FORECAST_ISSUED / NOT PERFORMANCE_ELIGIBLE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8353: trailing whitespace.
++**Tracking Reference:** TMP-20261002-NHL-PHI-NJD  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8354: trailing whitespace.
++**Supplied Event:** PHI Flyers @ NJ Devils, NHL  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8355: trailing whitespace.
++**Supplied Expected Start:** 02/10/2026, 9:07 AM AEST — corrected to 9:00 AM AEST  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8356: trailing whitespace.
++**Supplied Contracts:** Flyers +1.5; Devils ML; Over 5.5; Under 5.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8373: trailing whitespace.
++**Flyers OUT:** Denver Barkey (lower body, IR), Nikita Grebenkin (upper body), Helge Grans (IR-NR).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8374: trailing whitespace.
++**Devils OUT:** Johnathan Kovacevic (knee, IR-NR), Connor Brown (lower body), Nick Bjugstad (IR-NR), Seamus Casey (IR-NR), Stefan Noesen (knee, out until Oct 15).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8397: trailing whitespace.
++**Reason:** **NO_PREGAME_FORECAST** — event live at research time.  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8398: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8399: trailing whitespace.
++**Status:** NO_PREGAME_FORECAST / INTAKE_ONLY / NOT PERFORMANCE_ELIGIBLE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8410: trailing whitespace.
++**Tracking Reference:** TMP-20261002-MLB-PHI-ATL-G3  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8411: trailing whitespace.
++**Supplied Event:** PHI Phillies @ ATL Braves, MLB  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8412: trailing whitespace.
++**Supplied Expected Start:** 02/10/2026, 10:00 AM AEST — verified correct  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8413: trailing whitespace.
++**Supplied Contracts:** Phillies ML; Braves ML; Over 7.5; Over 7.5 (duplicate)  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8430: trailing whitespace.
++**Starters:** Aaron Nola (PHI, RHP) vs. Ray Kerr (ATL, LHP opener) → Grant Holmes (ATL, RHP bulk).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8431: trailing whitespace.
++**Phillies OUT:** Luis Arráez (ankle, out for series); Caleb Kilian (oblique, IL); Jonathan Bowlan (groin, day-to-day).  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8447: trailing whitespace.
++1. Braves ML  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8448: trailing whitespace.
++2. Over 7.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8449: trailing whitespace.
++3. Phillies ML  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8450: trailing whitespace.
++4. Under 7.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8463: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8464: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8475: trailing whitespace.
++**Tracking Reference:** TMP-20261002-WNBA-IND-LVA-G3  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8476: trailing whitespace.
++**Supplied Event:** IND Fever @ LV Aces, WNBA Playoffs  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8477: trailing whitespace.
++**Supplied Expected Start:** 02/10/2026, 11:00 AM AEST — verified correct  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8478: trailing whitespace.
++**Supplied Contracts:** Aces -4.5; Fever +4.5; Over 181.5 (Under implied)  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8495: trailing whitespace.
++**Fever OUT:** Tyasha Harris (left lower-leg, season), Damiris Dantas (knee, season). Caitlin Clark (back), Aliyah Boston (lower leg) — probable.  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8511: trailing whitespace.
++1. Fever +4.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8512: trailing whitespace.
++2. Under 181.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8513: trailing whitespace.
++3. Aces -4.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8514: trailing whitespace.
++4. Over 181.5  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8527: trailing whitespace.
++**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+prediction logs/PREDICTION_LOG_COMBINED_6.md:8528: trailing whitespace.
++**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  

@@ -1,5 +1,7 @@
 .gitattributes -text
 .gitignore -text
+"archive/mini_logs/**" -text
+"prediction logs/PREDICTION_LOG_COMBINED_6.md" -text
 research/** -text whitespace=cr-at-eol
 research/data/raw/openfootball/*.txt binary
 research/**/*.parquet binary

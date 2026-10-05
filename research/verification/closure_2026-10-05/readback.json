@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "canonical_cards": 15,
+  "archived_references": 2,
+  "new_imports": 0,
+  "carryover": 15,
+  "next_id": "P-538",
+  "opening_part6_bytes_preserved": 1057493,
+  "ledger_unchanged": true,
+  "model_dependency_restored": true,
+  "missing_snapshots_restored": 9,
+  "diagnostic_settlements_preserved": 11,
+  "retrospective_sections_preserved": 132
+}

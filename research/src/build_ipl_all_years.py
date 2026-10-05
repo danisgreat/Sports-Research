@@ -1,9 +1,8 @@
 """
 build_ipl_all_years.py
 Generates comprehensive, verified game logs for Indian Premier League (IPL) Cricket
-from 1975 to 2025 (51 seasons) across both:
-  1. Root folder: IPL_CSVs/IPL_<YEAR>.csv
-  2. Nested structure: Previous Sports Results/Cricket T20/IPL/<YEAR>/<YEAR>_games.csv
+from 1975 to 2025 (51 seasons) in:
+  Previous Sports Results/Cricket T20/IPL/<YEAR>/<YEAR>_games.csv
 
 Data Sources:
 - Cricsheet open data archive (cricsheet.org/downloads/ipl_json.zip)
@@ -20,7 +19,6 @@ from datetime import datetime
 from collections import defaultdict
 
 ZIP_PATH = os.path.join("research", "data", "ipl_cache", "ipl_json.zip")
-OUTPUT_ROOT_DIR = "IPL_CSVs"
 OUTPUT_PREV_DIR = os.path.join("Previous Sports Results", "Cricket T20", "IPL")
 
 # Known venue to country mappings
@@ -691,7 +689,6 @@ def main():
         matches_by_year[y].append(rec)
 
     # Ensure output directories exist
-    os.makedirs(OUTPUT_ROOT_DIR, exist_ok=True)
     os.makedirs(OUTPUT_PREV_DIR, exist_ok=True)
 
     summary_stats = []
@@ -701,7 +698,6 @@ def main():
         year_prev_dir = os.path.join(OUTPUT_PREV_DIR, str(year))
         os.makedirs(year_prev_dir, exist_ok=True)
 
-        root_csv_path = os.path.join(OUTPUT_ROOT_DIR, f"IPL_{year}.csv")
         prev_csv_path = os.path.join(year_prev_dir, f"{year}_games.csv")
 
         if year in matches_by_year:
@@ -737,12 +733,6 @@ def main():
             rows = [create_pre_foundation_record(year)]
             era_type = "Pre-Foundation"
 
-        # Write to root CSV
-        with open(root_csv_path, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=CSV_HEADERS)
-            writer.writeheader()
-            writer.writerows(rows)
-
         # Write to nested Previous Sports Results CSV
         with open(prev_csv_path, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=CSV_HEADERS)
@@ -753,7 +743,6 @@ def main():
             "year": year,
             "era": era_type,
             "matches": len(rows),
-            "root_csv": root_csv_path,
             "prev_csv": prev_csv_path
         })
 

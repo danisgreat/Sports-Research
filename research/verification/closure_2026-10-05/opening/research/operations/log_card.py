@@ -1,0 +1,202 @@
+"""Append requested research cards to Part 6 regardless of calibration.
+
+Canonical IDs identify retained cards. RESEARCH_LOG records do not impersonate
+certified ISSUE records or confer prospective performance eligibility.
+Run: py -3.14 -m research.operations.log_card commit card.json
+"""
+from __future__ import annotations
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import uuid
+from research.src.issue import PART6, RECONCILIATION, CANONICAL_LEDGER, _custody, next_card_id
+from research.src.ledger import _append_locked, locked, read_records
+
+ROOT = PART6.parents[1]
+PREPARED = "RESEARCH_LOG_PREPARED"
+COMMITTED = "RESEARCH_LOG_COMMITTED"
+
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+def pending(records):
+    done = {r['payload']['transaction_id'] for r in records if r['record_type'] == COMMITTED}
+    return [r for r in records if r['record_type'] == PREPARED and r['payload']['transaction_id'] not in done]
+
+def research_cards(records):
+    preparations = {r['payload']['transaction_id']:r for r in records if r['record_type'] == PREPARED}
+    out, ids, events = [], set(), set()
+    for r in records:
+        if r['record_type'] != COMMITTED: continue
+        p = r['payload']; earlier = preparations.get(p['transaction_id'])
+        if earlier is None or p['prepared_record_sha256'] != earlier['record_sha256']:
+            raise ValueError('research commit has no matching preparation')
+        core = earlier['payload']
+        if any(p[k] != core[k] for k in ['card_id','event_key','projection_sha256']):
+            raise ValueError('research commit identity or projection changed')
+        if core['card_id'] in ids or core['event_key'] in events:
+            raise ValueError('duplicate research ID or event')
+        ids.add(core['card_id']); events.add(core['event_key'])
+        out.append({**core, 'commit_sha256':r['record_sha256']})
+    return out
+
+def verify_projection(card, part6):
+    raw, _ = _custody(part6)
+    projection = Path(card['projection_path']).read_bytes()
+    if sha(projection) != card['projection_sha256'] or raw.count(projection) != 1:
+        raise ValueError('canonical research projection missing, duplicated or changed')
+    if sha(Path(card['source_path']).read_bytes()) != card['source_sha256']:
+        raise ValueError('retained original research source changed')
+    return projection
+
+def next_id(part6=PART6, reconciliation=RECONCILIATION, ledger=CANONICAL_LEDGER):
+    records = read_records(ledger)
+    if pending(records): raise ValueError('recover pending research append before another ID')
+    for card in research_cards(records): verify_projection(card, part6)
+    return next_card_id(part6, reconciliation, ledger)
+
+def _sync_status(part6, reconciliation, ledger):
+    """Refresh the living register after commitment/recovery; keep old history."""
+    if Path(part6).resolve() != PART6.resolve(): return
+    cards=research_cards(read_records(ledger))
+    following=next_id(part6,reconciliation,ledger)
+    path=ROOT/'GAME_LOG_STATUS_CURRENT.md'
+    old=path.read_bytes() if path.exists() else b''
+    begin=b'<!-- BEGIN CURRENT RESEARCH QUEUE -->'
+    end=b'<!-- END CURRENT RESEARCH QUEUE -->'
+    if old.startswith(begin):
+        boundary=old.index(end)+len(end)
+        old=old[boundary:].lstrip(b'\r\n')
+    history='## Historical status snapshots — superseded for current queue'.encode('utf-8')
+    while old.startswith(history):
+        old=old[len(history):].lstrip(b'\r\n')
+    method=(ROOT/'METHOD.md').read_text(encoding='utf-8-sig') if (ROOT/'METHOD.md').exists() else ''
+    match=re.search(r'Active freeze:\s*\[([^\]]+)\]',method)
+    freeze=match[1] if match else 'NOT_RECORDED'
+    receipt=ROOT/freeze
+    freeze_sha=sha(receipt.read_text(encoding='utf-8-sig').replace('\r\n','\n').replace('\r','\n').replace('\n','\r\n').encode('utf-8')) if receipt.exists() else 'NOT_RECORDED'
+    lines=[begin.decode(),'# Current canonical research queue — October 1 v7.1','',
+           f'**Next canonical ID: {following}.** All requested cards go directly to Part 6, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.',
+           f'Current selected freeze: `{freeze}`; normalized-CRLF SHA-256 `{freeze_sha}`. Current authority: METHOD.md and CURRENT_RULES.md.','',
+           '| ID | Event | Tracking alias | Status |','|---|---|---|---|']
+    # The frozen legacy extractor reads plain P-ID rows as its 517-slot index.
+    # Research queue IDs are ledger-owned and formatted distinctly from that index.
+    lines += [f"| **{c['card_id']}** | {c['title']} | `{c['tracking_handle']}` | {c['analysis_status']} |" for c in cards]
+    lines += ['', 'P-518–P-522 remain reserved. No new retrospective or certified model promotion is implied. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.',
+              '', end.decode(),'','## Historical status snapshots — superseded for current queue','']
+    new='\r\n'.join(lines).encode('utf-8')+old
+    temporary=path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
+    with temporary.open('xb') as handle:handle.write(new);handle.flush();os.fsync(handle.fileno())
+    os.replace(temporary,path)
+
+def _finish(preparation, ledger, part6):
+    p = preparation['payload']
+    projection = Path(p['projection_path']).read_bytes()
+    if sha(projection) != p['projection_sha256'] or sha(Path(p['source_path']).read_bytes()) != p['source_sha256']:
+        raise ValueError('pending transaction retained source/projection changed')
+    raw, _ = _custody(part6)
+    before = p['part6_before_bytes']
+    if len(raw) < before or sha(raw[:before]) != p['part6_before_sha256']:
+        raise ValueError('Part 6 changed outside the pending append; manual audit required')
+    tail = raw[before:]
+    if not projection.startswith(tail):
+        raise ValueError('unrelated bytes follow pending append; manual audit required')
+    with Path(part6).open('ab') as handle:
+        handle.write(projection[len(tail):]); handle.flush(); os.fsync(handle.fileno())
+    verify_projection(p, part6)
+    return _append_locked(ledger, COMMITTED, {
+        'transaction_id':p['transaction_id'], 'prepared_record_sha256':preparation['record_sha256'],
+        'card_id':p['card_id'], 'event_key':p['event_key'], 'projection_sha256':p['projection_sha256'],
+        'performance_status':'RESEARCH_ONLY_NOT_CERTIFIED'})
+
+def recover(*, part6=PART6, ledger=CANONICAL_LEDGER):
+    with locked(ledger):
+        records = read_records(ledger); todo = pending(records)
+        if len(todo) > 1: raise ValueError('multiple pending appends require audit')
+        result = _finish(todo[0], ledger, part6) if todo else None
+        for card in research_cards(read_records(ledger)): verify_projection(card, part6)
+        _sync_status(part6, RECONCILIATION, ledger)
+        return result
+
+def commit(card, *, part6=PART6, reconciliation=RECONCILIATION, ledger=CANONICAL_LEDGER,
+           store=None, fault=None):
+    """Retain immutable originals, journal, append, read back, then commit.
+
+    Existing event requests return their ID. Changed content requires an explicit
+    dated addendum, rather than silently reissuing or editing the earlier card.
+    fault is solely an interruption hook used by recovery tests.
+    """
+    if not all(isinstance(card.get(k), str) and card[k].strip() for k in
+               ['event_key','title','tracking_handle','analysis_status','body','source_path']):
+        raise ValueError('card needs explicit identity, title, status, body and original source')
+    if re.search(r'(?m)^#{1,6}\s+(?:Prediction\s+|Game(?:\s+Card)?\s+)?P-\d+\b', card['body']):
+        raise ValueError('nested canonical ID heading would consume extra IDs')
+    source = Path(card['source_path']).resolve().read_bytes()
+    with locked(ledger):
+        records = read_records(ledger)
+        if pending(records): raise ValueError('recover pending research append first')
+        old = next((c for c in research_cards(records) if c['event_key'] == card['event_key']), None)
+        if old:
+            verify_projection(old, part6)
+            if old['source_sha256'] != sha(source) or old['body_sha256'] != sha(card['body'].encode('utf-8')):
+                raise ValueError('event already logged with different text; use a dated addendum')
+            _sync_status(part6,reconciliation,ledger)
+            return {'card_id':old['card_id'], 'duplicate':True, 'record_sha256':old['commit_sha256']}
+        if any(r['record_type'] in {'ISSUE_PREPARED','ISSUE_COMMITTED'} and
+               r['payload'].get('event_id') == card.get('native_event_id') and
+               r['payload'].get('league') == card.get('league') for r in records):
+            raise ValueError('event already has certified issuance; append to its existing ID')
+        card_id = next_id(part6, reconciliation, ledger)
+        transaction_id = uuid.uuid4().hex
+        stamp = datetime.now(timezone.utc).isoformat()
+        text = (f"## {card_id} — {card['title']}\n\n"
+                f"**CANONICAL RESEARCH CARD / {card['analysis_status']}.** SPORTS_ONLY / MARKET_BLIND.\n\n"
+                f"Tracking alias: `{card['tracking_handle']}`. Logged UTC: {stamp}. "
+                "This ID records the card; calibration and prospective certification are separate labels.\n\n"
+                + card['body'].rstrip() + '\n')
+        projection = (f'\r\n<!-- BEGIN CANONICAL RESEARCH {card_id} {transaction_id} -->\r\n'
+                      + text.replace('\r\n','\n').replace('\n','\r\n')
+                      + f'<!-- END CANONICAL RESEARCH {card_id} {transaction_id} -->\r\n').encode('utf-8')
+        storage = Path(store or ROOT/'research/issued_research').resolve()
+        storage.mkdir(parents=True, exist_ok=True)
+        base = f'{card_id}-{transaction_id}'
+        original = storage/(base+'.original.txt'); frozen = storage/(base+'.md')
+        for path, raw in [(original, source), (frozen, projection)]:
+            with path.open('xb') as handle:
+                handle.write(raw); handle.flush(); os.fsync(handle.fileno())
+        before, _ = _custody(part6)
+        payload = {k:card.get(k) for k in ['event_key','title','tracking_handle','analysis_status','league','native_event_id']}
+        payload.update(transaction_id=transaction_id, card_id=card_id, logged_utc=stamp,
+                       projection_path=str(frozen), projection_sha256=sha(projection),
+                       source_path=str(original), source_sha256=sha(source),
+                       body_sha256=sha(card['body'].encode('utf-8')),
+                       part6_before_bytes=len(before), part6_before_sha256=sha(before),
+                       performance_status='RESEARCH_ONLY_NOT_CERTIFIED')
+        prepared = _append_locked(ledger, PREPARED, payload)
+        if fault == 'prepared': raise RuntimeError('simulated interruption after preparation')
+        if fault == 'partial':
+            with Path(part6).open('ab') as handle: handle.write(projection[:71])
+            raise RuntimeError('simulated partial append')
+        result = _finish(prepared, ledger, part6)
+        _sync_status(part6,reconciliation,ledger)
+        return {'card_id':card_id, 'duplicate':False, 'record_sha256':result['record_sha256']}
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command', choices=['commit','recover','verify','next-id'])
+    parser.add_argument('card', type=Path, nargs='?')
+    args = parser.parse_args()
+    if args.command == 'commit':
+        if not args.card: parser.error('commit needs card.json')
+        result = commit(json.loads(args.card.read_text(encoding='utf-8')))
+    elif args.command == 'recover': result = recover()
+    else:
+        cards = research_cards(read_records(CANONICAL_LEDGER))
+        result = {'cards':[c['card_id'] for c in cards], 'next_id':next_id()}
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+if __name__ == '__main__': main()

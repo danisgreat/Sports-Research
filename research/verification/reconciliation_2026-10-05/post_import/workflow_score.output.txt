@@ -1,0 +1,11 @@
+{
+  "events": [],
+  "coverage": {
+    "exclusions": [],
+    "registered_events": 0,
+    "issued_events": 0,
+    "scored_events": 0,
+    "abstentions": 0,
+    "ledger_head": "74afdc15e0a7af27766f73ed31bcdf3894ae30752fa46a56cc0d6aaab969c43f"
+  }
+}

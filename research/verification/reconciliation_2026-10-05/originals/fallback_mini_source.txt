@@ -1,0 +1,173 @@
+# Prediction Mini Running Log — P-527 onward
+
+**Framework authority:** GitHub only — `danisgreat/Sports-Research`  
+**Governing method:** `MDS-2026.10.01-v7.1`  
+**Control revision:** `CR-2026.10.01-I2`  
+**Scoring:** `SCV-2026.10.01-v3`  
+**Active freeze:** `CONTROL_MANIFEST_2026-10-01-5.md`  
+**Current freeze SHA-256 observed in GitHub status register:** `1fc4151afd0e9dfa0202ab8f1de1ee5487e41df8fb443d1fa83f5d95df644754`  
+**Canonical destination:** `prediction logs/PREDICTION_LOG_COMBINED_6.md`  
+**Repository write status in this chat:** READ-ONLY  
+**GitHub-reported next canonical ID:** **P-527**  
+**Retrospective policy:** **NO RETROSPECTIVE UNTIL EXPLICITLY REQUESTED**
+
+> **Custody warning:** GitHub still reports P-527 as the next canonical ID because none of the fallback cards below has been transactionally committed to Part 6. P-527 through P-531 are chat-local fallback reservations only, not canonical ledger commitments. Canonical import must occur transactionally and in order.
+
+---
+
+## Current Records
+
+| Local reservation | Date (AEST) | Event | Competition | Status | Rank 1 | Rank 2 | Rank 3 | Rank 4 | Potential winner | Settlement |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **P-527** | 2026-10-02 | Hapoel Tel Aviv vs Real Madrid | EuroLeague 2026-27 | `UNCALIBRATED_QUALITATIVE` · `RESEARCH_ONLY_NOT_CERTIFIED` | Under 174.5 | Hapoel +4.5 | Real Madrid -4.5 | Over 174.5 | Real Madrid | **UNSETTLED** |
+| **P-528** | 2026-10-03 | Grand Rapids Griffins @ Cleveland Monsters | AHL 2026-27 | `UNCALIBRATED_QUALITATIVE` · `RESEARCH_ONLY_NOT_CERTIFIED` | Griffins ML | Over 5.5 | Under 5.5 | Monsters ML | Grand Rapids | **UNSETTLED** |
+| **P-529** | 2026-10-02 | Philadelphia Flyers @ New Jersey Devils | NHL 2026-27 | `UNCALIBRATED_QUALITATIVE` · `RESEARCH_ONLY_NOT_CERTIFIED` | Devils ML | Flyers +1.5 | Over 5.5 | Under 5.5 | New Jersey | **UNSETTLED** |
+| **P-530** | 2026-10-02 | Philadelphia Phillies @ Atlanta Braves | MLB NL Wild Card Game 3 | `LATE_RESEARCH` · `UNCALIBRATED_QUALITATIVE` · `RESEARCH_ONLY_NOT_CERTIFIED` | Braves +1.5 | Over 7.5 | Braves ML | Phillies ML | Atlanta Braves | **UNSETTLED** |
+| **P-531** | 2026-10-02 | Indiana Fever @ Las Vegas Aces | WNBA Playoffs First Round Game 3 | `LATE_RESEARCH` · `UNCALIBRATED_QUALITATIVE` · `RESEARCH_ONLY_NOT_CERTIFIED` | Fever +4.5 | Over 181.5 | Under 181.5 | Aces -4.5 | Las Vegas Aces, narrow lean | **UNSETTLED** |
+
+---
+
+## P-531 — Indiana Fever @ Las Vegas Aces
+
+### Identity and timing
+- **Competition:** WNBA 2026 Playoffs, First Round Game 3
+- **Series:** tied 1-1, winner advances
+- **Venue:** Michelob ULTRA Arena, Las Vegas
+- **Scheduled start:** Thursday 2026-10-01, 9:00 PM ET = Friday 2026-10-02, 11:00 AM AEST
+- **Research cutoff:** approximately 2026-10-02 11:01 AEST
+- **Timing classification:** `LATE_RESEARCH`
+- **No live score, possession or in-game event used**
+- **Analysis status:** `UNCALIBRATED_QUALITATIVE / RESEARCH_ONLY_NOT_CERTIFIED`
+- **Probabilities / baseline:** `NOT_ESTIMATED`
+
+### Contracts
+1. Aces -4.5
+2. Fever +4.5
+3. Over 181.5
+4. Under 181.5
+
+For research, spread and total are treated as full-game contracts including overtime. Exact operator settlement wording was not supplied, so formal later settlement remains `UNKNOWN_DEFINITION` until overtime terms are verified.
+
+### Ranked selections
+1. **Indiana Fever +4.5**
+2. **Combined Total Over 181.5**
+3. **Combined Total Under 181.5**
+4. **Las Vegas Aces -4.5**
+
+### Potential winner
+**Las Vegas Aces — narrow lean**
+
+### Availability
+**Indiana**
+- Caitlin Clark — probable, back
+- Aliyah Boston — probable, lower right leg
+- Tyasha Harris — out for season
+- Damiris Dantas — out for season
+
+**Las Vegas**
+- Dana Evans — out, right knee
+- NaLyssa Smith — out for season
+- Stephanie Talbot — reported questionable, left leg
+- Janiah Barker — out for season
+
+### Starting-five state
+Confirmed Game 3 starting fives were not recovered from an official feed before the cutoff.
+
+Previous probable/used fives:
+- **Indiana:** Caitlin Clark, Kelsey Mitchell, Lexie Hull, Makayla Timpson, Aliyah Boston
+- **Las Vegas:** Chelsea Gray, Jackie Young, Stephanie Talbot, A'ja Wilson, Brianna Turner
+
+Talbot's questionable status leaves a meaningful Las Vegas rotation branch unresolved. No player prop is promoted.
+
+### 2026 matchup evidence
+Regular season:
+- Indiana 84-68 Las Vegas
+- Indiana 109-75 Las Vegas
+- Las Vegas 86-84 Indiana (OT)
+
+Playoffs:
+- Game 1: Las Vegas 102-85 Indiana
+- Game 2: Indiana 99-89 Las Vegas
+
+Across the five meetings:
+- Indiana leads 3-2
+- Fever +4.5 would have covered in 4 of 5
+- Totals: 152, 184, 170, 187, 188
+- Over 181.5 hit in 3 of 5
+- Five-game average total: 176.2
+- Two playoff games average: 187.5
+
+### Why Fever +4.5 ranks first
+- Indiana has won three of five meetings this season.
+- Indiana won both regular-season games in Las Vegas.
+- The only failure of +4.5 was the 17-point Game 1 playoff loss.
+- In Game 2, Clark, Mitchell and Boston combined for 75 points.
+- The cushion covers an Indiana win and any Las Vegas win by 1-4.
+
+Main kill path: Las Vegas recreates Game 1's interior/efficiency edge and creates separation before the fourth quarter.
+
+### Why Over 181.5 ranks second
+Team-score budget:
+- IND 90 requires LVA 92 to clear.
+- LVA 92 requires IND 90 to clear.
+- 94-88, 93-89 and 92-90 all go Over.
+
+Support:
+- both playoff games cleared 181.5;
+- Indiana entered the playoffs around 96 PPG;
+- Las Vegas was also one of the league's highest-scoring teams;
+- a close elimination game adds late-foul scoring;
+- overtime is a material upper-tail branch.
+
+Main failure route: Las Vegas controls pace and either Clark/Boston limitation or poor shooting pulls one side into the mid-80s.
+
+### Why Under 181.5 remains third
+- Two of five meetings finished well below the line.
+- The full five-game average is only 176.2.
+- A winner-take-all game can shift more possessions into half-court play.
+- Boston's interior defense gives Indiana a mechanism for limiting Wilson efficiency.
+- Talbot uncertainty may reduce Las Vegas spacing/continuity.
+
+Illustrative Under states: 89-87, 91-88, 88-85.
+
+### Why Aces -4.5 ranks fourth
+Las Vegas has a real outright-win case, but five-plus points is a harder requirement:
+- Fever +4.5 covered 4 of 5 meetings.
+- Indiana won both regular-season games in Las Vegas.
+- Indiana's top three showed in Game 2 that they can keep pace with Wilson/Young production.
+- Talbot is questionable and Evans is out.
+
+Aces -4.5's cleanest path is a repeat of Game 1: Wilson dominates inside, Gray/Young win the possession-quality battle, and Indiana's probable injury tags translate into lower closing efficiency.
+
+### Potential winner rationale
+**Las Vegas Aces, narrowly.**
+- 31-13 regular-season record versus Indiana's 28-16
+- home court in the deciding game
+- won Game 1 at this venue 102-85
+- Wilson remains the single most difficult interior matchup in the series
+- finished the regular season on a seven-game winning streak
+
+Counterweight:
+- Indiana leads the 2026 matchup 3-2
+- Indiana won twice in Las Vegas during the regular season
+- Indiana responded emphatically in Game 2
+
+### Qualitative score corridor
+Illustrative only:
+- Las Vegas 93-90 Indiana
+- Las Vegas 92-90 Indiana
+- Las Vegas 90-88 Indiana
+- Indiana 94-91 Las Vegas as the main upset branch
+
+### Retrospective
+**NOT PERFORMED — explicitly deferred.**
+
+---
+
+## Queue / Custody
+- **GitHub canonical queue still reports:** P-527 next
+- **Chat-local fallback reservations:** P-527, P-528, P-529, P-530, P-531
+- **Expected next ID if P-527 through P-531 are imported successfully in this order:** P-532
+- **Canonical status:** none of P-527–P-531 is yet committed in GitHub
+- **Unsettled local records:** P-527, P-528, P-529, P-530, P-531
+- **Retrospectives performed:** None

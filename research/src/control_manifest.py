@@ -4,7 +4,7 @@ import hashlib
 import re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-NAME=re.search(r"Active freeze: \[(CONTROL_MANIFEST_[^\]]+)\]", (ROOT/"METHOD.md").read_text(encoding="utf-8-sig"))[1]
+NAME="CONTROL_MANIFEST_2026-10-01-1.md"
 EXCLUDE={NAME,"GAME_LOG_STATUS_CURRENT.md","VERIFICATION_RECEIPT_2026-09-28.md",
          "prediction logs/PREDICTION_LOG_COMBINED_6.md"}
 APPEND_STORES=("research/daily/","research/verification/","research/issued/","research/transactions/",

@@ -59,6 +59,30 @@ def test_no_extra_heading_ids(workspace):
     with pytest.raises(ValueError, match='nested'): commit({**card,'body':'## P-999 fake'}, **options)
     assert options['part6'].read_bytes() == before
 
+def test_relocated_canonical_store_preserves_original_hashes(workspace,monkeypatch):
+    from research.operations import log_card
+    card,options,before=workspace
+    commit(card,**options)
+    stored=research_cards(read_records(options['ledger']))[0]
+    root=options['part6'].parent/'new_checkout'
+    destination=root/'research/issued_research'
+    destination.mkdir(parents=True)
+    for key in ['projection_path','source_path']:
+        old=Path(stored[key])
+        (destination/old.name).write_bytes(old.read_bytes())
+        stored[key]='C:\\retired\\checkout\\research\\issued_research\\'+old.name
+    monkeypatch.setattr(log_card,'ROOT',root)
+    log_card.verify_projection(stored,options['part6'])
+    (destination/Path(stored['source_path'].replace('\\','/')).name).write_bytes(b'changed')
+    with pytest.raises(ValueError,match='original'):
+        log_card.verify_projection(stored,options['part6'])
+
+@pytest.mark.parametrize('path',['research/issued_research/../escape.txt','C:\\other\\escape.txt'])
+def test_relocation_rejects_unrelated_or_traversing_paths(path):
+    from research.operations.log_card import retained_path
+    with pytest.raises(ValueError,match='retained path'):
+        retained_path(path)
+
 def test_automatic_current_register_preserves_history(workspace,monkeypatch):
     from research.operations import log_card
     card,options,before=workspace

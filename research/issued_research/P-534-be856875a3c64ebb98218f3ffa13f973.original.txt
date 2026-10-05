@@ -1,0 +1,609 @@
+# Sports Research Running Log — Consolidated Entries
+
+**Period:** 2026-10-01 to 2026-10-04  
+**Canonical IDs:** Omitted per request  
+**Running log reference:** `Mini logs (to be sent to actual log later)/Mini Prediction Log - P-516 onward - 2026-09-25/PREDICTION_MINI_RUNNING_LOG_P516_ONWARD.md`
+
+---
+
+## 1. 2026-10-01 — Tasmania JackJumpers vs Melbourne United (NBL27, Round 3)
+
+**Tracking Reference:** TMP-20261001-NBL-TAS-MEL  
+**Supplied Event:** Tasmania JackJumpers vs Melbourne United, Australia NBL  
+**Supplied Expected Start:** 01/09/2026, 7:30 PM AEST — corrected to 01/10/2026, 7:30 PM AEST  
+**Supplied Contracts:** United -6.5; JackJumpers +6.5; Over 181.5; Under 181.5  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | Hungry Jack's NBL27, Round 3 | VERIFIED |
+| Home | Tasmania JackJumpers | VERIFIED |
+| Away | Melbourne United | VERIFIED |
+| Venue | MyState Bank Arena, Hobart | VERIFIED |
+| Scheduled Start | 7:30 PM AEST, 2026-10-01 | VERIFIED |
+| State | SCHEDULED / PREGAME | VERIFIED |
+| Observation | 2026-10-01 ~16:00 AEST | RECORDED |
+
+### Participants / Injuries
+
+**Tasmania OUT/GTD:** Ben Ayre (hip flexor, test), Josh Bannan (ribs, GTD), Majok Deng (lower leg, out R8–10), Anthony Drmic (back, out), Bryce Hamilton (ACL, season).  
+**Melbourne OUT:** Chris Goulding (calf, out R5), Shea Ili (hamstring, out until Oct 3), Sean Macdonald (ACL, season).
+
+### Sources
+
+NBL.com.au preview; NBL.com.au injury news; NBL1.com.au Stattmann signing; Fox Sports NBL Daily; Melbourne United preview; ESPN NBL standings.
+
+### Model / Baseline
+
+- Model: **NO_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **NO_FORECAST / UNRESOLVED_CONTRACT**
+
+### Shadow Picks
+
+1. Melbourne United -6.5  
+2. Under 181.5  
+3. Tasmania JackJumpers +6.5  
+4. Over 181.5  
+
+**Game Winner Projection:** Melbourne United — shadow only.
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | United -6.5 | NO_FORECAST |
+| 2 | JackJumpers +6.5 | NO_FORECAST |
+| 3 | Over 181.5 | NO_FORECAST |
+| 4 | Under 181.5 | NO_FORECAST |
+
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** INTAKE_ONLY / NO_FORECAST_ISSUED / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** NO_MODEL; NO_PREDECLARED_UNIVERSE; injury uncertainty (Bannan, Ayre).
+
+---
+
+## 2. 2026-10-01 — Hapoel IBI Tel Aviv vs Real Madrid (EuroLeague 2026-27, Round 3)
+
+**Tracking Reference:** TMP-20261002-EUR-HTA-RMA  
+**Supplied Event:** Hapoel Tel Aviv vs Real Madrid, Euroleague  
+**Supplied Expected Start:** 02/09/2026, 2:00 AM AEST — corrected to 02/10/2026, 2:00 AM AEST  
+**Supplied Contracts:** Madrid -4.5; Tel Aviv +4.5; Over 174.5; Under 174.5  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | EuroLeague 2026-27, Round 3 | VERIFIED |
+| Home | Hapoel IBI Tel Aviv | VERIFIED |
+| Away | Real Madrid | VERIFIED |
+| Venue | Arena 8888, Sofia, Bulgaria | VERIFIED |
+| Scheduled Start | 18:00 CEST, 2026-10-01 / 2:00 AM AEST, 2026-10-02 | VERIFIED |
+| State | SCHEDULED / PREGAME | VERIFIED |
+| Observation | 2026-10-02 ~10:00 AEST | RECORDED |
+
+### Participants / Injuries
+
+**Hapoel OUT:** Amir Coffey (groin), Tyler Ennis (Achilles), Tomer Ginat (knee), Jacob Toppin (adductor), Tamir Blatt (coach's decision).  
+**Real Madrid OUT:** Usman Garuba (Achilles).
+
+### Sources
+
+EuroLeague pregame quotes; RealMadrid.com preview; Sportando EuroLeague injury report; EuroLeague injury report; Marca; Infobae.
+
+### Model / Baseline
+
+- Model: **NO_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **NO_FORECAST / UNRESOLVED_CONTRACT**
+
+### Shadow Picks
+
+1. Real Madrid -4.5  
+2. Under 174.5  
+3. Hapoel Tel Aviv +4.5  
+4. Over 174.5  
+
+**Game Winner Projection:** Real Madrid — shadow only.
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | Madrid -4.5 | NO_FORECAST |
+| 2 | Tel Aviv +4.5 | NO_FORECAST |
+| 3 | Over 174.5 | NO_FORECAST |
+| 4 | Under 174.5 | NO_FORECAST |
+
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** INTAKE_ONLY / NO_FORECAST_ISSUED / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** NO_MODEL; NO_PREDECLARED_UNIVERSE; date discrepancy corrected.
+
+---
+
+## 3. 2026-10-02 — Philadelphia Flyers @ New Jersey Devils (NHL 2026-27, Regular Season)
+
+**Tracking Reference:** TMP-20261002-NHL-PHI-NJD  
+**Supplied Event:** PHI Flyers @ NJ Devils, NHL  
+**Supplied Expected Start:** 02/10/2026, 9:07 AM AEST — corrected to 9:00 AM AEST  
+**Supplied Contracts:** Flyers +1.5; Devils ML; Over 5.5; Under 5.5  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | NHL 2026-27, Regular Season | VERIFIED |
+| Home | New Jersey Devils | VERIFIED |
+| Away | Philadelphia Flyers | VERIFIED |
+| Venue | Prudential Center, Newark, NJ | VERIFIED |
+| Scheduled Start | 7:00 PM EDT, 2026-10-01 / 9:00 AM AEST, 2026-10-02 | VERIFIED |
+| State | **LIVE — 1st Period, 0-0** | VERIFIED (ESPN) |
+| Observation | 2026-10-02 ~09:00 AEST | RECORDED |
+
+### Participants / Injuries
+
+**Flyers OUT:** Denver Barkey (lower body, IR), Nikita Grebenkin (upper body), Helge Grans (IR-NR).  
+**Devils OUT:** Johnathan Kovacevic (knee, IR-NR), Connor Brown (lower body), Nick Bjugstad (IR-NR), Seamus Casey (IR-NR), Stefan Noesen (knee, out until Oct 15).  
+**Starting Goalies:** Joseph Woll (PHI) vs. Jake Allen (NJD).
+
+### Sources
+
+NHL.com projected lineups; ESPN gamecast; NHL.com Devils live updates; PhillyHockeyNow; CBS Sports; ESPN betting preview; Action Network.
+
+### Model / Baseline
+
+- Model: **NO_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **NO_FORECAST**
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | Flyers +1.5 | NO_FORECAST |
+| 2 | Devils ML | NO_FORECAST |
+| 3 | Over 5.5 | NO_FORECAST |
+| 4 | Under 5.5 | NO_FORECAST |
+
+**Reason:** **NO_PREGAME_FORECAST** — event live at research time.  
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** NO_PREGAME_FORECAST / INTAKE_ONLY / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** event live; NO_MODEL; NO_PREDECLARED_UNIVERSE.
+
+---
+
+## 4. 2026-10-02 — Philadelphia Phillies @ Atlanta Braves (MLB 2026 NL Wild Card Series, Game 3)
+
+**Tracking Reference:** TMP-20261002-MLB-PHI-ATL-G3  
+**Supplied Event:** PHI Phillies @ ATL Braves, MLB  
+**Supplied Expected Start:** 02/10/2026, 10:00 AM AEST — verified correct  
+**Supplied Contracts:** Phillies ML; Braves ML; Over 7.5; Over 7.5 (duplicate)  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | MLB 2026 Postseason, NL Wild Card Series, Game 3 | VERIFIED |
+| Home | Atlanta Braves | VERIFIED |
+| Away | Philadelphia Phillies | VERIFIED |
+| Venue | Truist Park, Atlanta, GA | VERIFIED |
+| Scheduled Start | 8:00 PM EDT, 2026-10-01 / 10:00 AM AEST, 2026-10-02 | VERIFIED |
+| State | STARTED / FINISHED (single-lineage report) | UNCONFIRMED |
+| Observation | 2026-10-02 ~11:00 AEST | RECORDED |
+
+### Participants / Injuries
+
+**Starters:** Aaron Nola (PHI, RHP) vs. Ray Kerr (ATL, LHP opener) → Grant Holmes (ATL, RHP bulk).  
+**Phillies OUT:** Luis Arráez (ankle, out for series); Caleb Kilian (oblique, IL); Jonathan Bowlan (groin, day-to-day).  
+**Braves OUT:** Bryce Elder (knee surgery), Martín Pérez (back, out until Oct 6); Tyler Mahle not starting.
+
+### Sources
+
+MLB.com Gameday; NBC Sports Philadelphia; MLB.com Braves lineup; CBS Sports gametracker; Sultramedia.id result claim; DraftEdge; BBS weather.
+
+### Model / Baseline
+
+- Model: **NO_REGISTERED_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED**
+
+### Shadow Picks
+
+1. Braves ML  
+2. Over 7.5  
+3. Phillies ML  
+4. Under 7.5  
+
+**Game Winner Projection:** Braves — UNCALIBRATED_QUALITATIVE / NOT_ISSUED.
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | Phillies ML | UNCALIBRATED_QUALITATIVE |
+| 2 | Braves ML | UNCALIBRATED_QUALITATIVE |
+| 3 | Over 7.5 | UNCALIBRATED_QUALITATIVE |
+| 4 | Over 7.5 | DUPLICATE_ROW / UNRESOLVED_CONTRACT |
+
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** result unconfirmed by primary source; wind direction conflict; first-pitch time conflict; duplicate Row 4; no registered model.
+
+---
+
+## 5. 2026-10-02 — Indiana Fever @ Las Vegas Aces (WNBA Playoffs 2026, First Round, Game 3)
+
+**Tracking Reference:** TMP-20261002-WNBA-IND-LVA-G3  
+**Supplied Event:** IND Fever @ LV Aces, WNBA Playoffs  
+**Supplied Expected Start:** 02/10/2026, 11:00 AM AEST — verified correct  
+**Supplied Contracts:** Aces -4.5; Fever +4.5; Over 181.5 (Under implied)  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | WNBA Playoffs 2026, First Round, Game 3 | VERIFIED |
+| Home | Las Vegas Aces | VERIFIED |
+| Away | Indiana Fever | VERIFIED |
+| Venue | Michelob ULTRA Arena, Las Vegas, NV | VERIFIED |
+| Scheduled Start | 9:00 PM ET, 2026-10-01 / 11:00 AM AEST, 2026-10-02 | VERIFIED |
+| State | UNKNOWN | UNCONFIRMED |
+| Observation | 2026-10-02 ~12:00 AEST | RECORDED |
+
+### Participants / Injuries
+
+**Fever OUT:** Tyasha Harris (left lower-leg, season), Damiris Dantas (knee, season). Caitlin Clark (back), Aliyah Boston (lower leg) — probable.  
+**Aces OUT:** NaLyssa Smith (left leg, season), Janiah Barker (season). A'ja Wilson — available.
+
+### Sources
+
+USA Today; Yahoo Sports; FOX Sports Radio; CBS Sports; 365Scores.
+
+### Model / Baseline
+
+- Model: **NO_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED**
+
+### Shadow Picks
+
+1. Fever +4.5  
+2. Under 181.5  
+3. Aces -4.5  
+4. Over 181.5  
+
+**Game Winner Projection:** Las Vegas Aces — shadow only.
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | Aces -4.5 | UNCALIBRATED_QUALITATIVE |
+| 2 | Fever +4.5 | UNCALIBRATED_QUALITATIVE |
+| 3 | Over 181.5 | UNCALIBRATED_QUALITATIVE |
+| 4 | Under 181.5 (implied) | UNCALIBRATED_QUALITATIVE |
+
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** event state unconfirmed; no registered model.
+
+---
+
+## 6. 2026-10-03 — KIA Tigers @ LG Twins (KBO League 2026, Regular Season)
+
+**Tracking Reference:** TMP-20261003-KBO-KIA-LG  
+**Supplied Event:** KIA Tigers @ LG Twins, Korean KBO  
+**Supplied Expected Start:** 03/10/2026, 3:00 PM AEST — verified correct (2:00 PM KST)  
+**Supplied Contracts:** Tigers +1.5; Twins ML; Over/Under 8.5  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | KBO League 2026, Regular Season | VERIFIED |
+| Home | LG Twins | VERIFIED |
+| Away | KIA Tigers | VERIFIED |
+| Venue | Jamsil Baseball Stadium, Seoul | VERIFIED |
+| Scheduled Start | 2:00 PM KST, 2026-10-03 / 3:00 PM AEST, 2026-10-03 | VERIFIED |
+| State | SCHEDULED / PREGAME | VERIFIED |
+| Observation | 2026-10-03 ~13:00 AEST | RECORDED |
+
+### Participants / Injuries
+
+**Starters:** James Nail (KIA, RHP, 12-7, 3.45) vs. Carlos Carrasco (LG, RHP, 6-2, 3.55).  
+**KIA:** Kim Do-young (broken nose, playing); Kwak Do-gyu (returned).  
+**LG:** Hong Chang-ki (back, returned but uncertain); Kim Jin-sung (shoulder, returning next week).
+
+### Sources
+
+Newsis; Money Today; Chosun; Yonhap; Nate Sports; Chosun LG slump.
+
+### Model / Baseline
+
+- Model: **NO_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED**
+
+### Shadow Picks
+
+1. KIA Tigers ML  
+2. Under 8.5  
+3. LG Twins ML  
+4. Over 8.5  
+
+**Game Winner Projection:** KIA Tigers — shadow only.
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | Tigers +1.5 | UNCALIBRATED_QUALITATIVE |
+| 2 | Twins ML | UNCALIBRATED_QUALITATIVE |
+| 3 | Over 8.5 | UNCALIBRATED_QUALITATIVE |
+| 4 | Under 8.5 (implied) | UNCALIBRATED_QUALITATIVE |
+
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** no registered model; LG lineup uncertainty; bullpen instability.
+
+---
+
+## 7. 2026-10-04 — Sydney Roosters vs Newcastle Knights (NRL 2026, Grand Final)
+
+**Tracking Reference:** TMP-20261004-NRL-SYD-NEW-GF  
+**Supplied Event:** Sydney Roosters vs Newcastle Knights, NRL Finals  
+**Supplied Expected Start:** 04/10/2026, 7:30 PM AEST — corrected to 7:30 PM AEDT  
+**Supplied Contracts:** Roosters -4.5; Knights +12.5; Over 38.5; Under 48.5  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | NRL Telstra Premiership 2026, Grand Final | VERIFIED |
+| Home | Sydney Roosters (4th) | VERIFIED |
+| Away | Newcastle Knights (7th) | VERIFIED |
+| Venue | Accor Stadium, Sydney | VERIFIED |
+| Scheduled Start | 7:30 PM AEDT, 2026-10-04 | VERIFIED |
+| State | SCHEDULED / PREGAME | VERIFIED |
+| Observation | 2026-10-04 ~12:00 AEDT | RECORDED |
+
+### Late Changes / Injuries
+
+**Roosters:** Connor Watson OUT (failed HIA); Benaiah Ioelu added to bench.  
+**Knights:** Thomas Cant starts at hooker; Harrison Graham to bench. Phoenix Crossland suspended.
+
+### Sources
+
+NRL.com Grand Final Late Mail; NRL.com Team Lists; NRL.com Preview; Nine.com.au; ZeroTackle; ABC News; Guardian; ESPN.
+
+### Model / Baseline
+
+- Model: **NO_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED**
+
+### Shadow Picks
+
+1. Roosters -4.5  
+2. Over 38.5  
+3. Knights +12.5  
+4. Under 48.5  
+
+**Game Winner Projection:** Sydney Roosters — shadow only.
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | Roosters -4.5 | UNCALIBRATED_QUALITATIVE |
+| 2 | Knights +12.5 | UNCALIBRATED_QUALITATIVE |
+| 3 | Over 38.5 | UNCALIBRATED_QUALITATIVE |
+| 4 | Under 48.5 | UNCALIBRATED_QUALITATIVE |
+
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** no registered model; timezone label corrected to AEDT.
+
+---
+
+## 8. 2026-10-04 — Panathinaikos AKTOR vs Vikos Falcons (Greek Basket League 2026-27, Round 1)
+
+**Tracking Reference:** TMP-20261004-GBL-PAO-VIK  
+**Supplied Event:** Panathinaikos vs Vikos Falcons, Greece Basket League  
+**Supplied Expected Start:** 04/10/2026, 8:00 PM AEST — verified correct (13:00 EEST)  
+**Supplied Contracts:** Panathinaikos -20.5; Falcons +28.5; Over 159.5; Under 170.5  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | Stoiximan GBL 2026-27, Round 1 | VERIFIED |
+| Home | Panathinaikos AKTOR | VERIFIED |
+| Away | Vikos Falcons Ioannina | VERIFIED |
+| Venue | Telekom Center Athens (T-Center) | VERIFIED |
+| Scheduled Start | 13:00 EEST, 2026-10-04 / 8:00 PM AEST, 2026-10-04 | VERIFIED |
+| State | SCHEDULED / PREGAME | VERIFIED |
+| Crowd | BEHIND CLOSED DOORS | VERIFIED |
+| Observation | 2026-10-04 ~15:00 AEST | RECORDED |
+
+### Participants / Injuries
+
+**Panathinaikos OUT:** Kendrick Nunn (knee + suspension), Kostas Sloukas (knee), Moustapha Fall (calf), Juancho Hernangómez (adductor), Nikos Rogkavopoulos (back), Jerian Grant (not in foreign six), Iasonas Varvaritis (ankle), Giannis Kouzeloglou (muscle tear).  
+**Vikos Falcons:** No confirmed injuries.
+
+### Sources
+
+Olaprasina1908; Newspao; ΤΑ ΝΕΑ; Sportando EuroLeague injury report; Sportal; Kadario; Newsit; ERT News.
+
+### Model / Baseline
+
+- Model: **NO_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED**
+
+### Shadow Picks
+
+1. Panathinaikos -20.5  
+2. Over 159.5  
+3. Vikos Falcons +28.5  
+4. Under 170.5  
+
+**Game Winner Projection:** Panathinaikos — shadow only.
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | Panathinaikos -20.5 | UNCALIBRATED_QUALITATIVE |
+| 2 | Falcons +28.5 | UNCALIBRATED_QUALITATIVE |
+| 3 | Over 159.5 | UNCALIBRATED_QUALITATIVE |
+| 4 | Under 170.5 | UNCALIBRATED_QUALITATIVE |
+
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** no registered model; Panathinaikos injury crisis; Vikos Falcons untested since May 2026.
+
+---
+
+## 9. 2026-10-04 — FC Bayern München vs EWE Baskets Oldenburg (easyCredit BBL 2026-27, Round 4)
+
+**Tracking Reference:** TMP-20261004-BBL-BAY-OLD  
+**Supplied Event:** Bayern Munich vs Oldenburg, Germany Bundesliga  
+**Supplied Expected Start:** 05/10/2026, 12:00 AM AEST — corrected to 04/10/2026, 11:00 PM AEST  
+**Supplied Contracts:** Munich -10.5; Oldenburg +18.5; Over 158.5; Under 169.5  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | easyCredit BBL 2026-27, Round 4 | VERIFIED |
+| Home | FC Bayern München Basketball | VERIFIED |
+| Away | EWE Baskets Oldenburg | VERIFIED |
+| Venue | BMW Park, Munich | VERIFIED |
+| Scheduled Start | 15:00 CEST, 2026-10-04 / 11:00 PM AEST, 2026-10-04 | VERIFIED |
+| State | SCHEDULED / PREGAME | VERIFIED |
+| Observation | 2026-10-05 ~03:00 AEST | RECORDED |
+
+### Participants / Injuries
+
+**Bayern:** Full roster available.  
+**Oldenburg OUT:** Le'Tre Darthard (knee, several weeks), Max DiLeo (hip surgery, weeks), Charles Manning Jr. (foot surgery, months).  
+**Oldenburg DOUBTFUL:** Nate Johnson (injury).  
+**Oldenburg AVAILABLE:** Stefan Momirov (visa resolved, debut possible).
+
+### Sources
+
+easycredit-bbl.de; Dyn Sport; sport.de; Sportando EuroLeague injury report; kicker.de; Sports Illustrated; torbenrosenbohm.de; nowscore; RealGM.
+
+### Model / Baseline
+
+- Model: **NO_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED**
+
+### Shadow Picks
+
+1. Bayern Munich -10.5  
+2. Over 158.5  
+3. Oldenburg +18.5  
+4. Under 169.5  
+
+**Game Winner Projection:** Bayern Munich — shadow only.
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | Munich -10.5 | UNCALIBRATED_QUALITATIVE |
+| 2 | Oldenburg +18.5 | UNCALIBRATED_QUALITATIVE |
+| 3 | Over 158.5 | UNCALIBRATED_QUALITATIVE |
+| 4 | Under 169.5 | UNCALIBRATED_QUALITATIVE |
+
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** no registered model; time conflict; Oldenburg injury uncertainty; Bayern back-to-back fatigue.
+
+---
+
+## 10. 2026-10-04 — Kyrgyzstan vs Lebanon (International Friendly, FIFA Window)
+
+**Tracking Reference:** TMP-20261004-INT-KGZ-LBN  
+**Supplied Event:** Kyrgyzstan vs Lebanon, International Match  
+**Supplied Expected Start:** 05/10/2026, 1:00 AM AEST — corrected to 05/10/2026, 2:00 AM AEST  
+**Supplied Contracts:** 1st Half Goals Over/Under 0.5; Total Combined Goals Over/Under 2.5  
+**Supplied Probable Participants:** NOT_SUPPLIED
+
+### Verified Identity/Time/State
+
+| Field | Value | Status |
+|---|---|---|
+| Competition | International Friendly (FIFA Window) | VERIFIED |
+| Home | Kyrgyzstan | VERIFIED |
+| Away | Lebanon | VERIFIED |
+| Venue | Stadion im. Dolena Omurzakova, Bishkek | VERIFIED |
+| Scheduled Start | 22:00 Bishkek (UTC+6), 2026-10-04 / 2:00 AM AEST, 2026-10-05 | VERIFIED |
+| State | SCHEDULED / PREGAME | VERIFIED |
+| Observation | 2026-10-04 ~15:00 AEST | RECORDED |
+
+### Participants / Injuries
+
+**Kyrgyzstan OUT:** Tamirlan Kozubaev (injury, not called up). Amir Zhaparov (leg injury, in squad but doubtful).  
+**Lebanon OUT:** Gabriel Bitar (ACL), George Melki (injury), Felix Melki (injury), Hussein Zein (injury), Jihad Ayoub (injury).
+
+### Sources
+
+FIFA Match Centre; Goal.com; Kabar.kg; Adhadhu; Prosports.kg; AKIpress; WhoScored; China Weather; Al Khaleej.
+
+### Model / Baseline
+
+- Model: **NO_MODEL**
+- Baseline: **NOT_AVAILABLE**
+- Numerical ranking: **NO_NUMERIC_RANKING**
+- All rows: **UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED**
+
+### Shadow Picks
+
+1. 1st Half Over 0.5 Goals  
+2. Full Match Over 2.5 Goals  
+3. Lebanon Win (Game Winner)  
+4. Corners Over 9.5 (Alternative)  
+5. Kyrgyzstan +0.5 (Draw or Win)
+
+**Game Winner Projection:** Draw — shadow only.
+
+### Row Dispositions
+
+| # | Contract | Disposition |
+|---|---|---|
+| 1 | 1st Half O/U 0.5 | UNCALIBRATED_QUALITATIVE |
+| 2 | Total O/U 2.5 | UNCALIBRATED_QUALITATIVE |
+
+**Unranked Alternatives:** Corners Over 9.5 — UNSUPPORTED_ALTERNATIVE / UNRESOLVED_CONTRACT; Lebanon Win — UNSUPPORTED_ALTERNATIVE; Kyrgyzstan +0.5 — UNSUPPORTED_ALTERNATIVE.
+
+**Universe:** NOT_PREDECLARED / AD_HOC_SELECTION / NOT_PROSPECTIVE  
+**Status:** CANONICAL_RESEARCH_CARD / NOT PERFORMANCE_ELIGIBLE  
+**Blockers:** no registered model; time conflict; heavy rain forecast; corner threshold unresolved; no complementary Under lines supplied.
+
+---
+
+**End of consolidated log entries.**  
+No settlement or retrospective performed. Canonical IDs not assigned.

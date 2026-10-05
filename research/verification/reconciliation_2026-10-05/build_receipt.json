@@ -1,0 +1,11 @@
+{
+  "built_utc": "2026-10-05T01:44:38.926403+00:00",
+  "events": 11,
+  "retrospective_sections": 132,
+  "source_manifest_sha256": "21db952ed0599147fd1db2d971548d76e9b26b2a1219b47e8d7bb14838606d4b",
+  "event_audit_sha256": "acd841e361a712298c032501dd32af6d47f8e5d933de7b1f7676982f5a78ebeb",
+  "grades_sha256": "7cdae4e6b83b0d103f14b9023633e571256de2e26fd4a50c5f40c5ce82c02052",
+  "projection_lf_sha256": "0c0bfe1fcd1c2b0a74dc6904a27684fd3ad5d556da7146752f4fe234423b8c52",
+  "certified": 0,
+  "performance_eligible": 0
+}

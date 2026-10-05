@@ -5,7 +5,6 @@ Generates complete, verified, and standardized CSV files for every season of Aus
 first-grade rugby league (NSWRL / ARL / Super League / NRL) from 1975 to 2025.
 
 Outputs:
-  - Standalone CSVs: NRL_CSVs/NRL_<YEAR>.csv (51 files)
   - Multi-Sport Archive: Previous Sports Results/Rugby League/NRL/<YEAR>/<YEAR>_games.csv (51 files)
 """
 
@@ -15,7 +14,6 @@ import time
 from datetime import datetime
 
 CACHE_DIR = os.path.join("research", "data", "nrl_cache")
-ROOT_OUTPUT_DIR = "NRL_CSVs"
 ARCHIVE_OUTPUT_BASE = os.path.join("Previous Sports Results", "Rugby League", "NRL")
 
 HEADERS = [
@@ -412,10 +410,6 @@ def main():
     for year in years:
         t_yr = time.time()
         rows = build_season_rows(year, raw_matches, venues, match_refs, match_stats)
-
-        # Write root CSV
-        root_csv = os.path.join(ROOT_OUTPUT_DIR, f"NRL_{year}.csv")
-        write_csv(root_csv, rows)
 
         # Write archive CSV
         archive_csv = os.path.join(ARCHIVE_OUTPUT_BASE, str(year), f"{year}_games.csv")

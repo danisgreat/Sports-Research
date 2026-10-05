@@ -17,6 +17,8 @@ Card JSON includes event_key, native_event_id, league, title, tracking_handle, a
 
 Use `py -3.14 -B -m research.operations.control_freeze --verify` for METHOD's selected receipt. `py -3.14 -B -m research.operations.verify_custody` additionally checks research-card projections and alternate imported source-receipt fields in memory. Original receipts, frozen acceptance code and model dependencies remain unchanged. Research source/projection stores have their own ledger hashes and are excluded from the static control freeze.
 
+After a reference mini closes, run `py -3.14 -B -m research.operations.log_card refresh-status` to update the living queue through the same verified workflow. Historical absolute canonical research-store paths are resolved in the current checkout and still require their original hashes; new records use relative store paths. The October 5 archived references, entry accounting and unresolved carryover are in [the closure report](verification/closure_2026-10-05/REPORT.md). Keep carryover IDs; do not reissue those events.
+
 ## Install and verify
 
 The implementation was tested with CPython 3.14.6 and the exact [dependency lock](requirements.lock.txt). Use an isolated environment when installing; do not replace unrelated project runtimes.

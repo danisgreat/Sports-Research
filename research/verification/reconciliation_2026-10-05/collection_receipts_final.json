@@ -1,0 +1,59 @@
+[
+  {
+    "name": "euro_page7",
+    "url": "https://feeds.incrowdsports.com/provider/euroleague-feeds/v2/competitions/E/seasons/E2026/games?pageNumber=7",
+    "attempted_utc": "2026-10-05T00:07:54.673308+00:00",
+    "independence": "UNKNOWN",
+    "usage": "MANUAL_RESEARCH_ONLY_NOT_CERTIFIED",
+    "body_path": "research/data/benchmark/reconciliation_2026-10-05/euro_page7.body",
+    "response_sha256": "883671ece1f30dbfc22041ed4a6ab93535b8b1510b87e88d39336bccfc18d637",
+    "response_bytes": 80453,
+    "retrieved_utc": "2026-10-05T00:07:56.018404+00:00",
+    "final_url": "https://feeds.incrowdsports.com/provider/euroleague-feeds/v2/competitions/E/seasons/E2026/games?pageNumber=7",
+    "parser_id": "MANUAL_BODY_FIELD_REVIEW_NOT_REGISTERED",
+    "registry_sha256": "031ca77a5d8fb791c3f0dc9e8fecd62e7cba5647ba7ba63ddba11cd2817f4716",
+    "market_quarantined": true,
+    "status": "FETCHED_BYTES_REQUIRE_FIELD_REVIEW"
+  },
+  {
+    "name": "ahl_owner",
+    "url": "https://theahl.com/stats/game-center/1029073",
+    "attempted_utc": "2026-10-05T00:07:54.674389+00:00",
+    "independence": "UNKNOWN",
+    "usage": "MANUAL_RESEARCH_ONLY_NOT_CERTIFIED",
+    "body_path": "research/data/benchmark/reconciliation_2026-10-05/ahl_owner.body",
+    "response_sha256": "4646fb0e37ff606d8c243a9bac11ee3c630fd84db6f94583aa4641e8dc329f2c",
+    "response_bytes": 121371,
+    "retrieved_utc": "2026-10-05T00:07:55.043466+00:00",
+    "final_url": "https://theahl.com/stats/game-center/1029073",
+    "parser_id": "MANUAL_BODY_FIELD_REVIEW_NOT_REGISTERED",
+    "registry_sha256": "031ca77a5d8fb791c3f0dc9e8fecd62e7cba5647ba7ba63ddba11cd2817f4716",
+    "market_quarantined": true,
+    "status": "FETCHED_BYTES_REQUIRE_FIELD_REVIEW"
+  },
+  {
+    "name": "kbo_record",
+    "url": "https://api-gw.sports.naver.com/schedule/games/20261003HTLG02026/record",
+    "attempted_utc": "2026-10-05T00:07:54.675124+00:00",
+    "independence": "UNKNOWN",
+    "usage": "MANUAL_RESEARCH_ONLY_NOT_CERTIFIED",
+    "body_path": "research/data/benchmark/reconciliation_2026-10-05/kbo_record.body",
+    "response_sha256": "af4c40c82eaf5ee616ace9a33609a7a05e4b1e75f4afd5913b88ebd54464664c",
+    "response_bytes": 21854,
+    "retrieved_utc": "2026-10-05T00:07:56.054582+00:00",
+    "final_url": "https://api-gw.sports.naver.com/schedule/games/20261003HTLG02026/record",
+    "parser_id": "MANUAL_BODY_FIELD_REVIEW_NOT_REGISTERED",
+    "registry_sha256": "031ca77a5d8fb791c3f0dc9e8fecd62e7cba5647ba7ba63ddba11cd2817f4716",
+    "market_quarantined": true,
+    "status": "FETCHED_BYTES_REQUIRE_FIELD_REVIEW"
+  },
+  {
+    "name": "bbl_club_exact",
+    "url": "https://fcbayern.com/basketball/de/news/spielberichte/2026-27/10/fc-bayern-basketball-ewe-baskets-oldenburg",
+    "attempted_utc": "2026-10-05T00:07:54.675709+00:00",
+    "independence": "UNKNOWN",
+    "usage": "MANUAL_RESEARCH_ONLY_NOT_CERTIFIED",
+    "status": "SOURCE_FAILURE",
+    "error": "[WinError 10054] An existing connection was forcibly closed by the remote host"
+  }
+]

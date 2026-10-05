@@ -1,0 +1,132 @@
+[
+  {
+    "name": "research_tests",
+    "command": [
+      "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-p",
+      "no:cacheprovider",
+      "research/tests",
+      "-q"
+    ],
+    "started_utc": "2026-10-05T01:46:51.146618+00:00",
+    "finished_utc": "2026-10-05T01:48:05.512469+00:00",
+    "exit_code": 1,
+    "output_sha256": "b2d78a38a65c0f7691bd15fb6e433511e7df4f492a3d344bb514b7f44419c0ed"
+  },
+  {
+    "name": "logging_tests",
+    "command": [
+      "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-p",
+      "no:cacheprovider",
+      "research/operations/test_log_card.py",
+      "-q"
+    ],
+    "started_utc": "2026-10-05T01:48:05.513451+00:00",
+    "finished_utc": "2026-10-05T01:48:12.183268+00:00",
+    "exit_code": 0,
+    "output_sha256": "5a7456bbbf950dd769e6edb76b09180c28a1d798e5acab89c9638b1d78ca0ed3"
+  },
+  {
+    "name": "custody",
+    "command": [
+      "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-m",
+      "research.operations.verify_custody"
+    ],
+    "started_utc": "2026-10-05T01:48:12.184150+00:00",
+    "finished_utc": "2026-10-05T01:48:14.356606+00:00",
+    "exit_code": 1,
+    "output_sha256": "7db2d7fd935a6408bf2601e8b782c8c8234df28eef60a406ef22ea37793ea30f"
+  },
+  {
+    "name": "acceptance",
+    "command": [
+      "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-m",
+      "research.src.acceptance"
+    ],
+    "started_utc": "2026-10-05T01:48:14.357359+00:00",
+    "finished_utc": "2026-10-05T01:48:16.129443+00:00",
+    "exit_code": 1,
+    "output_sha256": "af1301b0c8d3fcb38ec580a8f2eee833ee37b896a3fd6c367b886cec75a91dfc"
+  },
+  {
+    "name": "canonical",
+    "command": [
+      "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-m",
+      "research.operations.log_card",
+      "verify"
+    ],
+    "started_utc": "2026-10-05T01:48:16.130412+00:00",
+    "finished_utc": "2026-10-05T01:48:17.435245+00:00",
+    "exit_code": 0,
+    "output_sha256": "859843c4473327fd9c680f144a86bdaa73999897184bbad4c0d37b6bfb85b0f0"
+  },
+  {
+    "name": "freeze",
+    "command": [
+      "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-m",
+      "research.operations.control_freeze",
+      "--verify"
+    ],
+    "started_utc": "2026-10-05T01:48:17.436121+00:00",
+    "finished_utc": "2026-10-05T01:48:24.363747+00:00",
+    "exit_code": 1,
+    "output_sha256": "bc2002235ada6f68685284b29b3b4a3bb0d98cf1482b6361429eb38b29cd18cf"
+  },
+  {
+    "name": "archive",
+    "command": [
+      "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-m",
+      "research.src.archive",
+      "validate"
+    ],
+    "started_utc": "2026-10-05T01:48:24.366930+00:00",
+    "finished_utc": "2026-10-05T01:50:00.249113+00:00",
+    "exit_code": 1,
+    "output_sha256": "c52e4a744fab33d8be56795ce24aaabad32b9844b669cac15896520ec6e86641"
+  },
+  {
+    "name": "workflow_status",
+    "command": [
+      "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-m",
+      "research.src.workflow",
+      "status"
+    ],
+    "started_utc": "2026-10-05T01:50:00.250081+00:00",
+    "finished_utc": "2026-10-05T01:50:04.430644+00:00",
+    "exit_code": 0,
+    "output_sha256": "b258ba0f370d8d366d7dd01694bb81978b4edb5592324149cf204540a549e1e2"
+  },
+  {
+    "name": "workflow_score",
+    "command": [
+      "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-m",
+      "research.src.workflow",
+      "score"
+    ],
+    "started_utc": "2026-10-05T01:50:04.431715+00:00",
+    "finished_utc": "2026-10-05T01:50:07.126735+00:00",
+    "exit_code": 0,
+    "output_sha256": "7c7baf3939fff1228a401f5aaf59f4ab7f7bf1b2af2723df52629f0b4f143798"
+  }
+]

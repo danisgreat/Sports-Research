@@ -1,6 +1,6 @@
 # Current operating rules
 
-Authority: **MDS-2026.10.01-v7.1 / CR-2026.10.01-I2**. The user's later October 1 instruction authorizes research regardless of calibration, removal of analysis/logging blockers, late news, analysis after scheduled start and canonical import of the missing cards. Issued historical values remain unchanged.
+Authority: **MDS-2026.10.01-v7.1 / CR-2026.10.05-I1**. The user's later October 1 instruction authorizes research regardless of calibration, removal of analysis/logging blockers, late news, analysis after scheduled start and canonical import of the missing cards. Issued historical values remain unchanged.
 
 ## Requested research — controlling default
 

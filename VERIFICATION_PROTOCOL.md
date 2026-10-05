@@ -2,6 +2,8 @@
 
 Current authority: [METHOD.md](METHOD.md). Run checks from the repository root with the pinned Python environment.
 
+October 5 repair evidence is retained in `research/verification/closure_2026-10-05/`. The CI job runs both regression suites, canonical projection/source verification, custody/acceptance checks and the selected freeze verifier. Checkout includes Git history because custody compares original committed blobs. Failure notifications report the job's actual failure; checks must be repaired rather than disabled. Mini archive readback verifies each preserved body using its recorded byte offset and SHA-256.
+
 ```powershell
 python -B -m pytest -p no:cacheprovider research/tests -q
 python -B -m research.src.archive validate

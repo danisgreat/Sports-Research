@@ -1,6 +1,8 @@
 # METHOD - current authority
 
-Status: **ACTIVE**. Method **MDS-2026.10.01-v7.1**. Control revision **CR-2026.10.01-I2**. Scoring **SCV-2026.10.01-v3**. Active freeze: [CONTROL_MANIFEST_2026-10-01-5.md](CONTROL_MANIFEST_2026-10-01-5.md). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
+October 5 administrative control repairs missing custody snapshots and restores the exact model-pinned control module, closes reconciled mini references, and refreshes the derived archive against retained CSVs. It changes no frozen forecasts, probabilities, model-build receipts or performance admission rules. Evidence and unresolved carryover: [closure report](research/verification/closure_2026-10-05/REPORT.md).
+
+Status: **ACTIVE**. Method **MDS-2026.10.01-v7.1**. Control revision **CR-2026.10.05-I1**. Scoring **SCV-2026.10.01-v3**. Active freeze: [CONTROL_MANIFEST_2026-10-05-1.md](CONTROL_MANIFEST_2026-10-05-1.md). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
 
 The user's October 1 instruction authorizes probability-model, source, process and related repository changes. [CURRENT_RULES.md](CURRENT_RULES.md) is the sole current operating manual. [research/README.md](research/README.md) describes executable workflows. [IMPLEMENTATION_2026-10-01.md](IMPLEMENTATION_2026-10-01.md) records verification and remaining evidence gates. The September pipeline document and earlier root instructions remain historical wherever they conflict with these files.
 

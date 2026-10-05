@@ -15,8 +15,7 @@ Generates complete, verified, chronologically sorted game datasets across all 51
 - 2023-2025: Modern 3-Phase Stoiximan Basket League (Regular Season + Top 6 / Play-Outs + Playoffs)
 
 Populates:
-1. Greek_Basket_League_CSVs/Greek_Basket_League_<YEAR>.csv
-2. Previous Sports Results/Basketball/Greek Basket League/<YEAR>/<YEAR>_games.csv
+Previous Sports Results/Basketball/Greek Basket League/<YEAR>/<YEAR>_games.csv
 """
 
 import os
@@ -33,10 +32,8 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from greek_helpers import normalize_team_name, get_venue_and_city, get_period_format, get_notable_players
 
 CACHE_DIR = r"c:\Users\danie\Desktop\Sports Research\research\data\greek_cache"
-OUTPUT_DIR_ROOT = r"c:\Users\danie\Desktop\Sports Research\Greek_Basket_League_CSVs"
 OUTPUT_DIR_PREV = r"c:\Users\danie\Desktop\Sports Research\Previous Sports Results\Basketball\Greek Basket League"
 
-os.makedirs(OUTPUT_DIR_ROOT, exist_ok=True)
 os.makedirs(OUTPUT_DIR_PREV, exist_ok=True)
 
 CSV_HEADERS = [
@@ -908,13 +905,12 @@ def build_season_dataset(season_year):
     return dataset
 
 def write_season_csvs(season_year, dataset):
-    """Writes dataset to both root CSV and Previous Sports Results directory"""
-    root_csv = os.path.join(OUTPUT_DIR_ROOT, f"Greek_Basket_League_{season_year}.csv")
+    """Write the dataset to its canonical Previous Sports Results directory."""
     prev_dir = os.path.join(OUTPUT_DIR_PREV, str(season_year))
     os.makedirs(prev_dir, exist_ok=True)
     prev_csv = os.path.join(prev_dir, f"{season_year}_games.csv")
     
-    for target_path in [root_csv, prev_csv]:
+    for target_path in [prev_csv]:
         with open(target_path, "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             writer.writerow(CSV_HEADERS)

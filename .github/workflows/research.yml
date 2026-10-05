@@ -17,10 +17,13 @@ jobs:
   offline-regressions:
     runs-on: windows-latest
     timeout-minutes: 15
+    env:
+      PYTHONIOENCODING: utf-8
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
+          fetch-depth: 0 # Custody checks compare retained original Git blobs.
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
           python-version: '3.14.6'
@@ -28,4 +31,6 @@ jobs:
           cache-dependency-path: research/requirements.lock.txt
       - run: python -m pip install -r research/requirements.lock.txt
       - run: python -B -m pytest -p no:cacheprovider research/tests research/operations/test_log_card.py -q
+      - run: python -B -m research.operations.log_card verify
+      - run: python -B -m research.operations.verify_custody
       - run: python -B -m research.operations.control_freeze --verify

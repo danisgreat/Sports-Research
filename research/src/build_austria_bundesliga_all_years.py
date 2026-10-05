@@ -17,9 +17,8 @@ Generates verified game logs across all 51 seasons from 1975 to 2025:
   venues, cities, attendance, notable players, and succinct match summaries.
 
 Outputs:
-1. Austria_Bundesliga_Basketball_CSVs/Austria_Bundesliga_Basketball_<YEAR>.csv (51 files)
-2. Previous Sports Results/Basketball/Austria Basketball Bundesliga/<YEAR>/<YEAR>_games.csv (51 files)
-3. Previous Sports Results/Basketball/BSL/<YEAR>/<YEAR>_games.csv (51 files)
+1. Previous Sports Results/Basketball/Austria Basketball Bundesliga/<YEAR>/<YEAR>_games.csv (51 files)
+2. Previous Sports Results/Basketball/BSL/<YEAR>/<YEAR>_games.csv (51 files)
 """
 
 import os
@@ -905,11 +904,9 @@ def write_csv(path, games):
             writer.writerow(g)
 
 def main():
-    root_csv_dir = "Austria_Bundesliga_Basketball_CSVs"
     ps_bsl_dir = os.path.join("Previous Sports Results", "Basketball", "BSL")
     ps_aut_dir = os.path.join("Previous Sports Results", "Basketball", "Austria Basketball Bundesliga")
 
-    os.makedirs(root_csv_dir, exist_ok=True)
     os.makedirs(ps_bsl_dir, exist_ok=True)
     os.makedirs(ps_aut_dir, exist_ok=True)
 
@@ -924,10 +921,6 @@ def main():
         games = generate_season_games(yr)
         count = len(games)
         total_games_all_years += count
-
-        # 1. Standalone root CSV: Austria_Bundesliga_Basketball_<YEAR>.csv
-        root_csv_path = os.path.join(root_csv_dir, f"Austria_Bundesliga_Basketball_{yr}.csv")
-        write_csv(root_csv_path, games)
 
         # 2. Previous Sports Results/Basketball/BSL/<YEAR>/<YEAR>_games.csv
         bsl_path = os.path.join(ps_bsl_dir, str(yr), f"{yr}_games.csv")
@@ -957,7 +950,6 @@ def main():
     print("=" * 80)
     print(f"COMPLETED! Total seasons generated: 51 (1975 to 2025)")
     print(f"Total verified games across all 51 seasons: {total_games_all_years:,}")
-    print(f"Files created in {root_csv_dir}: 51 CSVs")
     print(f"Files created in {ps_bsl_dir}: 51 CSVs")
     print(f"Files created in {ps_aut_dir}: 51 CSVs")
     print("=" * 80)

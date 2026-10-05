@@ -1,0 +1,134 @@
+{
+  "logged_utc": "2026-10-05T00:10:45.425134+00:00",
+  "records": [
+    {
+      "card_id": "P-527",
+      "duplicate": false,
+      "record_sha256": "2d101d5f4ecde8f5ca4d5ed40f0234f170e936bf7779db89fda4aa6b199204c9",
+      "title": "Hapoel Tel Aviv vs Real Madrid — October 1, 2026",
+      "tracking_handle": "TMP-20261002-EUR-HTA-RMA",
+      "source_version": "ORIGINAL_FALLBACK_MINI",
+      "supplied_section": null
+    },
+    {
+      "card_id": "P-528",
+      "duplicate": false,
+      "record_sha256": "111dc149b23ee9d41bbf3fd28b985cec037824b91ad9bbb4872edf5f392d762e",
+      "title": "Grand Rapids Griffins @ Cleveland Monsters — October 2, 2026",
+      "tracking_handle": "LOCAL-P528-GR-CLE-20261002",
+      "source_version": "ORIGINAL_FALLBACK_MINI",
+      "supplied_section": null
+    },
+    {
+      "card_id": "P-529",
+      "duplicate": false,
+      "record_sha256": "19982af0efc8e15f3bacc1346048aa6b8166150c0421d0eac1c0c28807cb6035",
+      "title": "Philadelphia Flyers @ New Jersey Devils — October 1, 2026",
+      "tracking_handle": "TMP-20261002-NHL-PHI-NJD",
+      "source_version": "ORIGINAL_FALLBACK_MINI",
+      "supplied_section": null
+    },
+    {
+      "card_id": "P-530",
+      "duplicate": false,
+      "record_sha256": "0b8ea049bf6bd4d7075f6099892f0022a687bddf44101cbba8d36c2e61cc0bc4",
+      "title": "Philadelphia Phillies @ Atlanta Braves — NL Wild Card Game 3",
+      "tracking_handle": "TMP-20261002-MLB-PHI-ATL-G3",
+      "source_version": "ORIGINAL_FALLBACK_MINI",
+      "supplied_section": null
+    },
+    {
+      "card_id": "P-531",
+      "duplicate": false,
+      "record_sha256": "84ec9f110367bb8ef14a2367a76153b15e3811969fbba02888f04793349f4593",
+      "title": "Indiana Fever @ Las Vegas Aces — First Round Game 3",
+      "tracking_handle": "TMP-20261002-WNBA-IND-LVA-G3",
+      "source_version": "ORIGINAL_FALLBACK_MINI",
+      "supplied_section": null
+    },
+    {
+      "card_id": "P-532",
+      "duplicate": false,
+      "record_sha256": "6a5028c073539e369d20d50aff423440ef1164f1c1f083f2ff622bfcd81a2f33",
+      "title": "Tasmania JackJumpers vs Melbourne United (NBL27, Round 3)",
+      "tracking_handle": "TMP-20261001-NBL-TAS-MEL",
+      "source_version": "CONSOLIDATED_IMPORT",
+      "supplied_section": 1
+    },
+    {
+      "card_id": "P-527",
+      "title": "Hapoel IBI Tel Aviv vs Real Madrid (EuroLeague 2026-27, Round 3)",
+      "tracking_handle": "TMP-20261002-EUR-HTA-RMA",
+      "source_version": "CONSOLIDATED_ADDENDUM",
+      "supplied_section": 2
+    },
+    {
+      "card_id": "P-529",
+      "title": "Philadelphia Flyers @ New Jersey Devils (NHL 2026-27, Regular Season)",
+      "tracking_handle": "TMP-20261002-NHL-PHI-NJD",
+      "source_version": "CONSOLIDATED_ADDENDUM",
+      "supplied_section": 3
+    },
+    {
+      "card_id": "P-530",
+      "title": "Philadelphia Phillies @ Atlanta Braves (MLB 2026 NL Wild Card Series, Game 3)",
+      "tracking_handle": "TMP-20261002-MLB-PHI-ATL-G3",
+      "source_version": "CONSOLIDATED_ADDENDUM",
+      "supplied_section": 4
+    },
+    {
+      "card_id": "P-531",
+      "title": "Indiana Fever @ Las Vegas Aces (WNBA Playoffs 2026, First Round, Game 3)",
+      "tracking_handle": "TMP-20261002-WNBA-IND-LVA-G3",
+      "source_version": "CONSOLIDATED_ADDENDUM",
+      "supplied_section": 5
+    },
+    {
+      "card_id": "P-533",
+      "duplicate": false,
+      "record_sha256": "7f2555a849538765bd33a1812fd9ee8d1a437d4a2fb202ff76a6abb8ce4dd06f",
+      "title": "KIA Tigers @ LG Twins (KBO League 2026, Regular Season)",
+      "tracking_handle": "TMP-20261003-KBO-KIA-LG",
+      "source_version": "CONSOLIDATED_IMPORT",
+      "supplied_section": 6
+    },
+    {
+      "card_id": "P-534",
+      "duplicate": false,
+      "record_sha256": "f4bd34aaec6e5cc52be9fc0666409f4c548460a4d4cdf92d793904589cf06dc9",
+      "title": "Sydney Roosters vs Newcastle Knights (NRL 2026, Grand Final)",
+      "tracking_handle": "TMP-20261004-NRL-SYD-NEW-GF",
+      "source_version": "CONSOLIDATED_IMPORT",
+      "supplied_section": 7
+    },
+    {
+      "card_id": "P-535",
+      "duplicate": false,
+      "record_sha256": "466135d6c5a6b4e22ff0db8abd76434f014a6ab6f9eecd446fe037f2f683dad0",
+      "title": "Panathinaikos AKTOR vs Vikos Falcons (Greek Basket League 2026-27, Round 1)",
+      "tracking_handle": "TMP-20261004-GBL-PAO-VIK",
+      "source_version": "CONSOLIDATED_IMPORT",
+      "supplied_section": 8
+    },
+    {
+      "card_id": "P-536",
+      "duplicate": false,
+      "record_sha256": "feadf7fdaf8e3b9081157db531ad1f450a54b41d8b409fd03d9909c0c69a4b62",
+      "title": "FC Bayern München vs EWE Baskets Oldenburg (easyCredit BBL 2026-27, Round 4)",
+      "tracking_handle": "TMP-20261004-BBL-BAY-OLD",
+      "source_version": "CONSOLIDATED_IMPORT",
+      "supplied_section": 9
+    },
+    {
+      "card_id": "P-537",
+      "duplicate": false,
+      "record_sha256": "74afdc15e0a7af27766f73ed31bcdf3894ae30752fa46a56cc0d6aaab969c43f",
+      "title": "Kyrgyzstan vs Lebanon (International Friendly, FIFA Window)",
+      "tracking_handle": "TMP-20261004-INT-KGZ-LBN",
+      "source_version": "CONSOLIDATED_IMPORT",
+      "supplied_section": 10
+    }
+  ],
+  "next_id": "P-538",
+  "addendum_sha256": "1505501fddce2fab75be58ce65fd492ea015a6916754d156979c522806367f4c"
+}

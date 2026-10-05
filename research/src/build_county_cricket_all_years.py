@@ -402,9 +402,7 @@ def main():
     print("COUNTY CRICKET ALL-YEAR COMPREHENSIVE GENERATOR (1975-2025)")
     print("=========================================================")
     
-    out_dir_csvs = 'County_Cricket_CSVs'
     base_results_dir = 'Previous Sports Results/Cricket Tests/County Championship'
-    os.makedirs(out_dir_csvs, exist_ok=True)
     
     # 1. Parse Modern Era (2014-2025)
     print("\n--- Ingesting Cricsheet County Championship & Bob Willis Trophy (2014-2025) ---")
@@ -431,7 +429,7 @@ def main():
             
         total_all_games += len(games)
         
-        # Save to both target locations
+        # Save to the canonical archive location.
         df = pd.DataFrame(games)
         # Ensure all columns exist in specified order
         for col in HEADER_COLUMNS:
@@ -439,18 +437,14 @@ def main():
                 df[col] = ''
         df = df[HEADER_COLUMNS]
         
-        # Path 1: County_Cricket_CSVs/County_Cricket_<YEAR>.csv
-        csv1_path = os.path.join(out_dir_csvs, f"County_Cricket_{year}.csv")
-        df.to_csv(csv1_path, index=False, encoding='utf-8')
-        
-        # Path 2: Previous Sports Results/Cricket Tests/County Championship/<YEAR>/<YEAR>_games.csv
+        # Archive: Previous Sports Results/Cricket Tests/County Championship/<YEAR>/<YEAR>_games.csv
         year_dir = os.path.join(base_results_dir, str(year))
         os.makedirs(year_dir, exist_ok=True)
         csv2_path = os.path.join(year_dir, f"{year}_games.csv")
         df.to_csv(csv2_path, index=False, encoding='utf-8')
         
         if year in [1975, 1980, 1985, 1990, 1993, 2000, 2010, 2014, 2020, 2021, 2024, 2025]:
-            print(f"[{year}] Generated {len(df)} matches -> {csv1_path} & {csv2_path}")
+            print(f"[{year}] Generated {len(df)} matches -> {csv2_path}")
             
     print("\n=========================================================")
     print(f"SUCCESS: Generated 51 seasons with {total_all_games} total verified match records!")
