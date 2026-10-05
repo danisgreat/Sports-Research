@@ -1,0 +1,782 @@
+{
+  "run_id": 37305349280,
+  "published_commit": "87a2df6dc8e08b84221abf0463b14702b8479fc0",
+  "mismatches": 153,
+  "records": [
+    {
+      "path": ".github/workflows/research.yml",
+      "tracked": true,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/county_cache/bwt_json.zip",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/county_cache/cch_json.zip",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/county_cache/historical_standings.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/county_cache/mdms_json.zip",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/county_cache/test_cricinfo.html",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1975_1976.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1976_1977.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1977_1978.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1978_1979.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1979_1980.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1980_1981.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1981_1982.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1982_1983.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1983_1984.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1984_1985.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1985_1986.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1986_1987.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1987_1988.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1988_1989.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1989_1990.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1990_1991.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1991_1992.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1992_1993.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1993_1994.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1994_1995.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1995_1996.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1996_1997.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1997_1998.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1998_1999.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_1999_2000.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2000_2001.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2001_2002.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2002_2003.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2003_2004.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2004_2005.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2005_2006.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2006_2007.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2007_2008.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2008_2009.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2009_2010.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2010_2011.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2011_2012.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2012_2013.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2013_2014.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2014_2015.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2015_2016.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2016_2017.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2017_2018.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2018_2019.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2019_2020.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2020_2021.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2021_2022.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2022_2023.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2023_2024.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2024_2025.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/el_2025_2026.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_1999_2000.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2000_2001.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2001_2002.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2002_2003.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2003_2004.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2004_2005.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2005_2006.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2006_2007.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2007_2008.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2008_2009.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2009_2010.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2010_2011.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2011_2012.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2012_2013.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2013_2014.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2014_2015.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2015_2016.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2016_2017.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2017_2018.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2018_2019.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2019_2020.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2020_2021.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2021_2022.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2022_2023.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2023_2024.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2024_2025.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/en_2025_2026.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/sc_2020.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/sc_2021.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/sc_2022.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/sc_2023.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/sc_2024.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/greek_cache/sc_2025.txt",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/ipl_cache/ipl_json.zip",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nba_cache/nbaallelo.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nba_cache/sdv_nba_schedules.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1975_19751976.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1976_19761977.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1977_19771978.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1978_19781979.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1979_19791980.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1980_19801981.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1981_19811982.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1982_19821983.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1983_19831984.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1984_19841985.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1985_19851986.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1986_19861987.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1987_19871988.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1988_19881989.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1989_19891990.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1990_19901991.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1991_19911992.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1992_19921993.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1993_19931994.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1994_19941995.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1995_19951996.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1996_19961997.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1997_19971998.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1998_19981999.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_1999_19992000.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2000_20002001.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2001_20012002.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2002_20022003.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2003_20032004.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2005_20052006.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2006_20062007.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2007_20072008.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2008_20082009.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2009_20092010.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2010_20102011.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2011_20112012.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2012_20122013.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2013_20132014.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2014_20142015.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2015_20152016.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2016_20162017.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2017_20172018.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2018_20182019.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2019_20192020.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2020_20202021.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2021_20212022.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2022_20222023.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2023_20232024.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2024_20242025.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nhl_cache/nhl_2025_20252026.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nrl_cache/match_data.csv",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nrl_cache/player_data.csv",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nrl_cache/player_match_data.csv",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nrl_cache/ref_data.csv",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nrl_cache/ref_match_data.csv",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nrl_cache/team_data.csv",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nrl_cache/test_download.csv",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/nrl_cache/venue_data.csv",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/wnba_cache/fivethirtyeight_wnba_elo.json",
+      "tracked": false,
+      "present_locally": true
+    },
+    {
+      "path": "research/data/wnba_cache/sdv_wnba_schedule.json",
+      "tracked": false,
+      "present_locally": true
+    }
+  ],
+  "counts_by_directory": {
+    ".github/workflows": 1,
+    "research/data/county_cache": 5,
+    "research/data/greek_cache": 84,
+    "research/data/ipl_cache": 1,
+    "research/data/nba_cache": 2,
+    "research/data/nhl_cache": 50,
+    "research/data/nrl_cache": 8,
+    "research/data/wnba_cache": 2
+  }
+}

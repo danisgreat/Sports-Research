@@ -1110,3 +1110,5 @@ Traps found and handled while building the Austria Bundesliga Basketball files:
 - **Re-test the table each month,** and whenever a route fails twice. Record the date in the "Verified" column.
 - **New sources found during a card** go into the canonical Part 6 card's source/document mapping with their route and retained receipts. Use a mini only if canonical writing fails, then reconcile transactionally. Source registry additions require explicit access/lineage/field contracts; a URL list does not grant admission.
 - Historical source audits removed from this tree remain in Git history.
+
+Publication readback: 152 ignored local cache files listed in the full local control freeze remain absent from Git. The first publication also had one workflow line-ending mismatch, corrected with byte-preserving Git attributes. Remote validation remains incomplete; the local freeze does not establish clean-checkout evidence availability. The exact paths are retained in `research/verification/all_log_resolution_2026-10-05/published_freeze_inventory.json`.

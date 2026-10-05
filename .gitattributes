@@ -1,5 +1,6 @@
 .gitattributes -text
 .gitignore -text
+".github/**" -text whitespace=cr-at-eol
 "archive/mini_logs/**" -text
 "prediction logs/PREDICTION_LOG_COMBINED_6.md" -text
 research/** -text whitespace=cr-at-eol

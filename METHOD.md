@@ -6,7 +6,7 @@ October 5 administrative control repairs missing custody snapshots and restores 
 
 The subsequent [October 5 implementation](research/verification/implementation_2026-10-05/REPORT.md) aligns all current document authorities, removes the redundant closed mini pointer after archive readback, retains all eleven retrospective hypotheses as untested proposals, and reports every source-body custody failure. The full custody gate remains strict; local and clean-checkout results are recorded separately. Earlier receipt 1 describes the earlier closure.
 
-Status: **ACTIVE**. Method **MDS-2026.10.01-v7.1**. Control revision **CR-2026.10.05-I5**. Scoring **SCV-2026.10.01-v3**. Active freeze: [CONTROL_MANIFEST_2026-10-05-5.md](CONTROL_MANIFEST_2026-10-05-5.md). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
+Status: **ACTIVE**. Method **MDS-2026.10.01-v7.1**. Control revision **CR-2026.10.05-I6**. Scoring **SCV-2026.10.01-v3**. Active freeze: [CONTROL_MANIFEST_2026-10-05-6.md](CONTROL_MANIFEST_2026-10-05-6.md). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
 
 The user's October 1 instruction authorizes probability-model, source, process and related repository changes. [CURRENT_RULES.md](CURRENT_RULES.md) is the sole current operating manual. [research/README.md](research/README.md) describes executable workflows. [IMPLEMENTATION_2026-10-01.md](IMPLEMENTATION_2026-10-01.md) records verification and remaining evidence gates. The September pipeline document and earlier root instructions remain historical wherever they conflict with these files.
 

@@ -1,0 +1,813 @@
+offline-regressions	Full custody including local benchmark bodies	﻿2026-10-05T11:50:51.4930740Z ##[group]Run python -B -m research.operations.verify_custody
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4931199Z ^[[36;1mpython -B -m research.operations.verify_custody^[[0m
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4989187Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4989484Z env:
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4989647Z   PYTHONIOENCODING: utf-8
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4990387Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4990738Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.6\x64/lib/pkgconfig
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4991081Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4991401Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4991715Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:51.4991962Z ##[endgroup]
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9793744Z {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9794194Z   "observed_utc": "2026-10-05T11:50:52.921686+00:00",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9794889Z   "valid": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9795406Z   "checks": {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9795628Z     "original_snapshot_files": 89,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9795917Z     "frozen_original_research_files": 17,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9796285Z     "part6_original_source_block": "141740_BYTES_HASH_MATCHED",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9796640Z     "next_card_id": "P-538",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9796947Z     "verified_model_builds": 4,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9797223Z     "current_live_qualified_models": 0,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9797589Z     "source_receipt_bodies_verified": 59,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9797924Z     "historical_learning_rows": 2004,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9798233Z     "historical_learning_cards": 522,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9798542Z     "historical_source_anchors_verified": 7,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9798861Z     "active_league_csvs": {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9799115Z       "EPL": 2280,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9799328Z       "NBL": 738
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9799533Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9799769Z     "issued_cards_during_implementation": 0,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9800111Z     "canonical_research_cards": [
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9800303Z       "P-523",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9800448Z       "P-524",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9800581Z       "P-525",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9800714Z       "P-526",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9800845Z       "P-527",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9800979Z       "P-528",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9801108Z       "P-529",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9801250Z       "P-530",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9801383Z       "P-531",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9801517Z       "P-532",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9801710Z       "P-533",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9802185Z       "P-534",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9802407Z       "P-535",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9802546Z       "P-536",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9802684Z       "P-537"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9802820Z     ],
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9802970Z     "research_next_id": "P-538",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9803170Z     "source_receipts_examined": 111,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9803377Z     "source_receipt_body_failures": 52,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9803639Z     "receipt_schema_adapter": "IN_MEMORY_ONLY_NO_SOURCE_REWRITES"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9803896Z   },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9804026Z   "issues": [
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9804430Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_afc_owner_20261001T073155024971Z_0336459b9441.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9805151Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_allsvenskan_matches_20261001T073155377479Z_426f364f5e91.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9805853Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_bff_owner_20261001T073155641824Z_2643ab3c79d7.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9806512Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_cfa_owner_20261001T073157777129Z_c6a68a387051.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9807194Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_guatemala_owner_20261001T073155298448Z_9b351adf5b7d.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9810396Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_leaguescup_owner_20261001T073157719709Z_19df5683fec3.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9811132Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9812188Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p126_sfa_20261001T073204624467Z_98e01db8c03d.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9812873Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p148_toluca_20261001T073159874225Z_45694354dd52.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9813549Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p149_rapids_20261001T073158208315Z_897bd287bf43.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9814220Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p176_f365_20261001T073158151517Z_6f2050d7cdb0.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9814904Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p233_235_xinhua_20261001T073200646773Z_028e27e3f037.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9815591Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p234_titan_20261001T073200073464Z_0dc898a07e1c.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9816276Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p255_uefa_event_20261001T073159736651Z_9b836d19f79a.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9816963Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p255_uefa_stats_20261001T073200371286Z_73bcffdb4678.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9817645Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p256_uefa_event_20261001T073200386131Z_8ab608340185.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9818325Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p256_uefa_stats_20261001T073201106627Z_44d0867e4c59.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9819021Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p407_proleague_20261001T073207568662Z_aefe35a61c1f.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9819745Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p407_voetbalkrant_20261001T073204771667Z_e916f9407a95.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9820442Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p409_lfp_20261001T073201657984Z_9396054cb360.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9821130Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p410_dfl_candidate_20261001T073203669996Z_6701bec018f2.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9821882Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p410_hsv_original_20261001T073204035471Z_ba314d985f5c.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9822801Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p418_rsssf_20261001T073202831271Z_d88466b3bb49.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9823553Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p518_mlb_20261001T073214530554Z_3c44cdd94306.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9824219Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p519_aap_20261001T073203658854Z_2cc8f04d7915.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9824873Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p519_aflw_20261001T073204636554Z_023c364b9440.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9825547Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p519_gc_selection_20261001T073204540127Z_3223bca49584.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9826242Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p519_kimber_20261001T074240306214Z_9636117226f4.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9826924Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p519_sk_selection_20261001T073205492652Z_5a4f1a2d86b6.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9828012Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p520_kbo_20261001T073206431304Z_67c90803b2ce.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9828695Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p520_kbo_review_20261001T073205949204Z_bca2aa8a993d.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9830103Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p520_khan_20261001T073207467333Z_f2df6ff3c9e6.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9831127Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p520_newsis_20261001T073206576707Z_6f8aa14d49b3.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9832158Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p521_acb_20261001T073211067574Z_0bacbf25e942.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9833019Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p521_efe_20261001T073209368031Z_79ed0c1383ee.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9833710Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p521_elprogreso_20261001T073208830581Z_0670d75edfcf.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9834400Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p521_plays_20261001T073211607685Z_babfc1785b8e.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9835071Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p521_ser_20261001T073209224555Z_262a3e2b2a35.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9835730Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p522_acb_20261001T073215250318Z_4155f6404d54.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9836397Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p523_diez_20261001T074403800567Z_dbd3e2cfb109.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9837079Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_p523_vision_20261001T074405028048Z_e6b0bf058296.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9837758Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/audit_uae_fixtures_20261001T073212467005Z_b8d99f6440b5.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9838422Z     "SOURCE_BODY_INVALID:research/data/raw/source_snapshots/bhutan_owner_20261005T110518085833Z_fef39b0f982c.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9839087Z     "SOURCE_BODY_INVALID:research/data/benchmark/source_snapshots/championat_terminal_20261005T110813492452Z_d9e298b2a7f1.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9839749Z     "SOURCE_BODY_INVALID:research/data/raw/source_snapshots/kbo_osen_p526_20261005T111129292606Z_16f8a4c95321.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9840371Z     "SOURCE_BODY_INVALID:research/data/raw/source_snapshots/kfu_news_20261005T110514527168Z_7dc200dcd4e2.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9840976Z     "SOURCE_BODY_INVALID:research/data/raw/source_snapshots/kfu_owner_20261005T110514549862Z_7a0771636e07.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9841588Z     "SOURCE_BODY_INVALID:research/data/raw/source_snapshots/khan_terminal_20261005T110813228076Z_169396fea227.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9842531Z     "SOURCE_BODY_INVALID:research/data/raw/source_snapshots/newsis_terminal_20261005T110813661025Z_b22a1cd279c4.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9843188Z     "SOURCE_BODY_INVALID:research/data/raw/source_snapshots/nikkan_terminal_20261005T110813011838Z_2da6e1d3feaf.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9843838Z     "SOURCE_BODY_INVALID:research/data/raw/source_snapshots/sportkg_terminal_20261005T110815516015Z_1f9da5d58377.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9844484Z     "SOURCE_BODY_INVALID:research/data/raw/source_snapshots/toluca_report_20261005T110522461981Z_9524c354dec1.body:FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9845077Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_afc_owner_20261001T073155024971Z_0336459b9441.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9845804Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_allsvenskan_matches_20261001T073155377479Z_426f364f5e91.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9846369Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_bff_owner_20261001T073155641824Z_2643ab3c79d7.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9847238Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_cfa_owner_20261001T073157777129Z_c6a68a387051.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9847803Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_guatemala_owner_20261001T073155298448Z_9b351adf5b7d.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9848378Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_leaguescup_owner_20261001T073157719709Z_19df5683fec3.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9848941Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9849488Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p126_sfa_20261001T073204624467Z_98e01db8c03d.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9850013Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p148_toluca_20261001T073159874225Z_45694354dd52.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9850545Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p149_rapids_20261001T073158208315Z_897bd287bf43.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9851082Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p176_f365_20261001T073158151517Z_6f2050d7cdb0.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9851615Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p233_235_xinhua_20261001T073200646773Z_028e27e3f037.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9852154Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p234_titan_20261001T073200073464Z_0dc898a07e1c.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9852690Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p255_uefa_event_20261001T073159736651Z_9b836d19f79a.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9853251Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p255_uefa_stats_20261001T073200371286Z_73bcffdb4678.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9853800Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p256_uefa_event_20261001T073200386131Z_8ab608340185.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9854357Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p256_uefa_stats_20261001T073201106627Z_44d0867e4c59.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9854910Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p407_proleague_20261001T073207568662Z_aefe35a61c1f.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9855474Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p407_voetbalkrant_20261001T073204771667Z_e916f9407a95.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9856026Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p409_lfp_20261001T073201657984Z_9396054cb360.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9856575Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p410_dfl_candidate_20261001T073203669996Z_6701bec018f2.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9857156Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p410_hsv_original_20261001T073204035471Z_ba314d985f5c.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9857712Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p418_rsssf_20261001T073202831271Z_d88466b3bb49.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9858254Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p518_mlb_20261001T073214530554Z_3c44cdd94306.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9858777Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p519_aap_20261001T073203658854Z_2cc8f04d7915.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9859300Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p519_aflw_20261001T073204636554Z_023c364b9440.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9859860Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p519_gc_selection_20261001T073204540127Z_3223bca49584.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9860424Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p519_kimber_20261001T074240306214Z_9636117226f4.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9861078Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p519_sk_selection_20261001T073205492652Z_5a4f1a2d86b6.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9861633Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p520_kbo_20261001T073206431304Z_67c90803b2ce.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9862486Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p520_kbo_review_20261001T073205949204Z_bca2aa8a993d.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9863034Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p520_khan_20261001T073207467333Z_f2df6ff3c9e6.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9863564Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p520_newsis_20261001T073206576707Z_6f8aa14d49b3.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9864089Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p521_acb_20261001T073211067574Z_0bacbf25e942.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9864605Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p521_efe_20261001T073209368031Z_79ed0c1383ee.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9865156Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p521_elprogreso_20261001T073208830581Z_0670d75edfcf.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9865700Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p521_plays_20261001T073211607685Z_babfc1785b8e.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9866225Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p521_ser_20261001T073209224555Z_262a3e2b2a35.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9866739Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p522_acb_20261001T073215250318Z_4155f6404d54.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9867256Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p523_diez_20261001T074403800567Z_dbd3e2cfb109.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9867822Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_p523_vision_20261001T074405028048Z_e6b0bf058296.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9868366Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/audit_uae_fixtures_20261001T073212467005Z_b8d99f6440b5.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9868914Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/bhutan_owner_20261005T110518085833Z_fef39b0f982c.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9869457Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/championat_terminal_20261005T110813492452Z_d9e298b2a7f1.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9869999Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/kbo_osen_p526_20261005T111129292606Z_16f8a4c95321.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9870503Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/kfu_news_20261005T110514527168Z_7dc200dcd4e2.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9871006Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/kfu_owner_20261005T110514549862Z_7a0771636e07.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9871515Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/khan_terminal_20261005T110813228076Z_169396fea227.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9872041Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/newsis_terminal_20261005T110813661025Z_b22a1cd279c4.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9872580Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/nikkan_terminal_20261005T110813011838Z_2da6e1d3feaf.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9873111Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/sportkg_terminal_20261005T110815516015Z_1f9da5d58377.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9873633Z     "SOURCE_RECEIPT_INVALID:research/data/source_receipts/toluca_report_20261005T110522461981Z_9524c354dec1.json"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9873992Z   ],
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9874853Z   "limitation": "Mechanics/custody verification does not establish future predictive skill. Archive validation and tests are separate recorded checks. Research IDs are canonical storage identities, not certified prospective ISSUE records. Quarantined bodies remain mandatory; absent or damaged bytes fail this check.",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9875783Z   "source_body_failures": [
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9875960Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9876624Z       "receipt_path": "research/data/source_receipts/audit_afc_owner_20261001T073155024971Z_0336459b9441.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9876981Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9877342Z       "body_path": "research/data/benchmark/source_snapshots/audit_afc_owner_20261001T073155024971Z_0336459b9441.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9877935Z       "expected_sha256": "0336459b94411e312f405d0ca45aa4acb4ffb18a4985f6613673eeb0021128f3",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9878273Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9878491Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9879084Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_afc_owner_20261001T073155024971Z_0336459b9441.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9879633Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9879772Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9880111Z       "receipt_path": "research/data/source_receipts/audit_allsvenskan_matches_20261001T073155377479Z_426f364f5e91.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9880518Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9880900Z       "body_path": "research/data/benchmark/source_snapshots/audit_allsvenskan_matches_20261001T073155377479Z_426f364f5e91.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9881428Z       "expected_sha256": "426f364f5e9116fa22dc581bd9e8028df348adae8b5bd4babb1e680d426ce82c",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9881768Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9881977Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9882896Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_allsvenskan_matches_20261001T073155377479Z_426f364f5e91.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9883474Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9883622Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9883923Z       "receipt_path": "research/data/source_receipts/audit_bff_owner_20261001T073155641824Z_2643ab3c79d7.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9884285Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9884640Z       "body_path": "research/data/benchmark/source_snapshots/audit_bff_owner_20261001T073155641824Z_2643ab3c79d7.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9885136Z       "expected_sha256": "2643ab3c79d76bb78ac57b94a46b0ccefd1d67fa8e8fb5c3763603cd790d721e",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9885464Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9885670Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9886233Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_bff_owner_20261001T073155641824Z_2643ab3c79d7.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9886776Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9886909Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9887199Z       "receipt_path": "research/data/source_receipts/audit_cfa_owner_20261001T073157777129Z_c6a68a387051.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9887544Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9887878Z       "body_path": "research/data/benchmark/source_snapshots/audit_cfa_owner_20261001T073157777129Z_c6a68a387051.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9888366Z       "expected_sha256": "c6a68a3870518c312c652d07b8ba8c0a3f3cceb2df73bb19113c981d0eee9cd4",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9888694Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9888895Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9889444Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_cfa_owner_20261001T073157777129Z_c6a68a387051.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9889993Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9890129Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9890450Z       "receipt_path": "research/data/source_receipts/audit_guatemala_owner_20261001T073155298448Z_9b351adf5b7d.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9890820Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9891180Z       "body_path": "research/data/benchmark/source_snapshots/audit_guatemala_owner_20261001T073155298448Z_9b351adf5b7d.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9891682Z       "expected_sha256": "9b351adf5b7d4d25ab950b6184ed523664256ad21b87335d5f72acd43a590246",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9892100Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9892298Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9892865Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_guatemala_owner_20261001T073155298448Z_9b351adf5b7d.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9893516Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9893650Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9893972Z       "receipt_path": "research/data/source_receipts/audit_leaguescup_owner_20261001T073157719709Z_19df5683fec3.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9894350Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9894711Z       "body_path": "research/data/benchmark/source_snapshots/audit_leaguescup_owner_20261001T073157719709Z_19df5683fec3.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9895220Z       "expected_sha256": "19df5683fec3c56b94182716ee707498e7cea2a0d2cbaaeee97cf24db52219ff",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9895547Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9895740Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9896303Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_leaguescup_owner_20261001T073157719709Z_19df5683fec3.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9896857Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9896983Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9897273Z       "receipt_path": "research/data/source_receipts/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9897622Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9897963Z       "body_path": "research/data/benchmark/source_snapshots/audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9898458Z       "expected_sha256": "51a0a57ae2f49a03de2e661f8954c96f3ae8aef69b9e47135e7dad0c2c5fc8be",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9898772Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9898970Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9899522Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_nbl_official_20261001T073212019558Z_51a0a57ae2f4.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9900054Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9900184Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9900489Z       "receipt_path": "research/data/source_receipts/audit_p126_sfa_20261001T073204624467Z_98e01db8c03d.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9900848Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9901190Z       "body_path": "research/data/benchmark/source_snapshots/audit_p126_sfa_20261001T073204624467Z_98e01db8c03d.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9901682Z       "expected_sha256": "98e01db8c03df20728fb7ce5e29d4a5efc2045aae80c529bcfcf8b2032cc50a6",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9902013Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9902211Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9903011Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p126_sfa_20261001T073204624467Z_98e01db8c03d.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9903560Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9903705Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9904004Z       "receipt_path": "research/data/source_receipts/audit_p148_toluca_20261001T073159874225Z_45694354dd52.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9904356Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9904699Z       "body_path": "research/data/benchmark/source_snapshots/audit_p148_toluca_20261001T073159874225Z_45694354dd52.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9905181Z       "expected_sha256": "45694354dd52c9ad648b486ae5d8b42902193af97bd51d7f0d02e0c0744c6ac1",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9905490Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9905683Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9906233Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p148_toluca_20261001T073159874225Z_45694354dd52.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9906884Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9907011Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9907299Z       "receipt_path": "research/data/source_receipts/audit_p149_rapids_20261001T073158208315Z_897bd287bf43.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9907646Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9908296Z       "body_path": "research/data/benchmark/source_snapshots/audit_p149_rapids_20261001T073158208315Z_897bd287bf43.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9908779Z       "expected_sha256": "897bd287bf43428ffb4faf26c94a2dd67e5a6e34d43bbc6133f355f9751885a5",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9909093Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9909278Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9909822Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p149_rapids_20261001T073158208315Z_897bd287bf43.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9910370Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9910501Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9910784Z       "receipt_path": "research/data/source_receipts/audit_p176_f365_20261001T073158151517Z_6f2050d7cdb0.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9911122Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9911453Z       "body_path": "research/data/benchmark/source_snapshots/audit_p176_f365_20261001T073158151517Z_6f2050d7cdb0.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9911936Z       "expected_sha256": "6f2050d7cdb0a1aea72d8981f9bc90cb1c934cd9ae049cc2d44eba8e2499cc97",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9912251Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9912442Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9912983Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p176_f365_20261001T073158151517Z_6f2050d7cdb0.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9913513Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9913637Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9913937Z       "receipt_path": "research/data/source_receipts/audit_p233_235_xinhua_20261001T073200646773Z_028e27e3f037.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9914285Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9914622Z       "body_path": "research/data/benchmark/source_snapshots/audit_p233_235_xinhua_20261001T073200646773Z_028e27e3f037.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9915110Z       "expected_sha256": "028e27e3f037fd966785a205ed936ecc955f912ffdd71ee6de3f8b7c49951191",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9915425Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9915609Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9916152Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p233_235_xinhua_20261001T073200646773Z_028e27e3f037.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9916701Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9916829Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9917118Z       "receipt_path": "research/data/source_receipts/audit_p234_titan_20261001T073200073464Z_0dc898a07e1c.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9917469Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9917803Z       "body_path": "research/data/benchmark/source_snapshots/audit_p234_titan_20261001T073200073464Z_0dc898a07e1c.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9918291Z       "expected_sha256": "0dc898a07e1cc4b85e1a84ecf76daf19391b8d2ebe2d467277e242e1af043aa9",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9918609Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9918792Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9919345Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p234_titan_20261001T073200073464Z_0dc898a07e1c.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9919872Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9919997Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9920291Z       "receipt_path": "research/data/source_receipts/audit_p255_uefa_event_20261001T073159736651Z_9b836d19f79a.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9920643Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9921061Z       "body_path": "research/data/benchmark/source_snapshots/audit_p255_uefa_event_20261001T073159736651Z_9b836d19f79a.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9921566Z       "expected_sha256": "9b836d19f79a6b6c3cf7584d3dc1a79a228fce1793237526d8176e7e233ed42c",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9921885Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9922151Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9922984Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p255_uefa_event_20261001T073159736651Z_9b836d19f79a.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9923539Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9923668Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9923965Z       "receipt_path": "research/data/source_receipts/audit_p255_uefa_stats_20261001T073200371286Z_73bcffdb4678.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9924330Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9924670Z       "body_path": "research/data/benchmark/source_snapshots/audit_p255_uefa_stats_20261001T073200371286Z_73bcffdb4678.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9925163Z       "expected_sha256": "73bcffdb46788fd4551066f55625173d798d28b8ff1ca6ff676f4948631c4b2d",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9925470Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9925657Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9926205Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p255_uefa_stats_20261001T073200371286Z_73bcffdb4678.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9926747Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9926872Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9927173Z       "receipt_path": "research/data/source_receipts/audit_p256_uefa_event_20261001T073200386131Z_8ab608340185.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9927522Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9927860Z       "body_path": "research/data/benchmark/source_snapshots/audit_p256_uefa_event_20261001T073200386131Z_8ab608340185.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9928347Z       "expected_sha256": "8ab608340185532bbe9691e5d934bd2ca80893ffd2797880e8474b428163cfce",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9928651Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9928833Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9929375Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p256_uefa_event_20261001T073200386131Z_8ab608340185.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9929922Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9930045Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9930340Z       "receipt_path": "research/data/source_receipts/audit_p256_uefa_stats_20261001T073201106627Z_44d0867e4c59.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9930691Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9931033Z       "body_path": "research/data/benchmark/source_snapshots/audit_p256_uefa_stats_20261001T073201106627Z_44d0867e4c59.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9931513Z       "expected_sha256": "44d0867e4c590b0defd973e42b7b039799785657101b18c44098adadee0c1d46",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9931822Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9932005Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9932555Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p256_uefa_stats_20261001T073201106627Z_44d0867e4c59.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9933100Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9933228Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9933533Z       "receipt_path": "research/data/source_receipts/audit_p407_proleague_20261001T073207568662Z_aefe35a61c1f.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9933900Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9934251Z       "body_path": "research/data/benchmark/source_snapshots/audit_p407_proleague_20261001T073207568662Z_aefe35a61c1f.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9934753Z       "expected_sha256": "aefe35a61c1fd0e8d86e3dd525210f13038e8bd97ebbee4639ba9feb984543f7",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9935073Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9935634Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9936202Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p407_proleague_20261001T073207568662Z_aefe35a61c1f.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9936835Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9936966Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9937277Z       "receipt_path": "research/data/source_receipts/audit_p407_voetbalkrant_20261001T073204771667Z_e916f9407a95.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9937646Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9938000Z       "body_path": "research/data/benchmark/source_snapshots/audit_p407_voetbalkrant_20261001T073204771667Z_e916f9407a95.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9938503Z       "expected_sha256": "e916f9407a95457fb05beaaec54492ff80a8167aed0a61349adce16442f44509",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9938819Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9939025Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9939593Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p407_voetbalkrant_20261001T073204771667Z_e916f9407a95.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9940152Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9940282Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9940567Z       "receipt_path": "research/data/source_receipts/audit_p409_lfp_20261001T073201657984Z_9396054cb360.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9940911Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9941240Z       "body_path": "research/data/benchmark/source_snapshots/audit_p409_lfp_20261001T073201657984Z_9396054cb360.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9941715Z       "expected_sha256": "9396054cb3609d525357991124637fdc95080301dfe16bd5a3c1dac9f9475ad8",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9942033Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9942228Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9943049Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p409_lfp_20261001T073201657984Z_9396054cb360.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9943613Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9943740Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9944067Z       "receipt_path": "research/data/source_receipts/audit_p410_dfl_candidate_20261001T073203669996Z_6701bec018f2.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9944438Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9944793Z       "body_path": "research/data/benchmark/source_snapshots/audit_p410_dfl_candidate_20261001T073203669996Z_6701bec018f2.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9945302Z       "expected_sha256": "6701bec018f2d01a4d223b091f920ccdedf7aa2ca45da51349f17d142752a140",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9945617Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9945810Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9946373Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p410_dfl_candidate_20261001T073203669996Z_6701bec018f2.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9946925Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9947054Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9947359Z       "receipt_path": "research/data/source_receipts/audit_p410_hsv_original_20261001T073204035471Z_ba314d985f5c.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9947731Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9948085Z       "body_path": "research/data/benchmark/source_snapshots/audit_p410_hsv_original_20261001T073204035471Z_ba314d985f5c.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9948579Z       "expected_sha256": "ba314d985f5ca98a6c5b4f4b55600c6521db911118cf0d5849ac8730fad98bb8",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9948892Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9949079Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9949638Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p410_hsv_original_20261001T073204035471Z_ba314d985f5c.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9950292Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9950420Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9950716Z       "receipt_path": "research/data/source_receipts/audit_p418_rsssf_20261001T073202831271Z_d88466b3bb49.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9951062Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9951402Z       "body_path": "research/data/benchmark/source_snapshots/audit_p418_rsssf_20261001T073202831271Z_d88466b3bb49.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9951964Z       "expected_sha256": "d88466b3bb49bed563035c145df8f10887049046ec96c4166ebb22c1c0bc0b87",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9952284Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9952480Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9953026Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p418_rsssf_20261001T073202831271Z_d88466b3bb49.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9953560Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9953698Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9953987Z       "receipt_path": "research/data/source_receipts/audit_p518_mlb_20261001T073214530554Z_3c44cdd94306.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9954335Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9954667Z       "body_path": "research/data/benchmark/source_snapshots/audit_p518_mlb_20261001T073214530554Z_3c44cdd94306.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9955144Z       "expected_sha256": "3c44cdd94306f691d70a7124a18b726037f81c21f48277dc1fcec329bb0f1f5f",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9955470Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9955665Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9956204Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p518_mlb_20261001T073214530554Z_3c44cdd94306.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9956735Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9956860Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9957142Z       "receipt_path": "research/data/source_receipts/audit_p519_aap_20261001T073203658854Z_2cc8f04d7915.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9957490Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9957824Z       "body_path": "research/data/benchmark/source_snapshots/audit_p519_aap_20261001T073203658854Z_2cc8f04d7915.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9958292Z       "expected_sha256": "2cc8f04d79153413cd589c5f93ff42d5a972773e92578f901dcc56eb96d53520",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9958604Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9958792Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9959327Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p519_aap_20261001T073203658854Z_2cc8f04d7915.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9959863Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9959989Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9960314Z       "receipt_path": "research/data/source_receipts/audit_p519_aflw_20261001T073204636554Z_023c364b9440.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9961230Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9961820Z       "body_path": "research/data/benchmark/source_snapshots/audit_p519_aflw_20261001T073204636554Z_023c364b9440.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9962696Z       "expected_sha256": "023c364b9440c0ec582d51db5dee391ed163d29f4662b5b9bcd67f498977d1fa",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9963440Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9963832Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9964862Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p519_aflw_20261001T073204636554Z_023c364b9440.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9965886Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9966208Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9966797Z       "receipt_path": "research/data/source_receipts/audit_p519_gc_selection_20261001T073204540127Z_3223bca49584.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9967439Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9968080Z       "body_path": "research/data/benchmark/source_snapshots/audit_p519_gc_selection_20261001T073204540127Z_3223bca49584.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9969018Z       "expected_sha256": "3223bca495841fa8b8781a94de72c272640d0b87b70fb593d5528a6b2cccb459",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9979842Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9980974Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9982035Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p519_gc_selection_20261001T073204540127Z_3223bca49584.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9983213Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9983428Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9983932Z       "receipt_path": "research/data/source_receipts/audit_p519_kimber_20261001T074240306214Z_9636117226f4.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9984518Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9984893Z       "body_path": "research/data/benchmark/source_snapshots/audit_p519_kimber_20261001T074240306214Z_9636117226f4.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9985386Z       "expected_sha256": "9636117226f42d4405452a0fcb3c4f286db32102ec3c48922babde4c376e594f",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9985712Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9985919Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9986484Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p519_kimber_20261001T074240306214Z_9636117226f4.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9987028Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9987158Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9987472Z       "receipt_path": "research/data/source_receipts/audit_p519_sk_selection_20261001T073205492652Z_5a4f1a2d86b6.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9987836Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9988197Z       "body_path": "research/data/benchmark/source_snapshots/audit_p519_sk_selection_20261001T073205492652Z_5a4f1a2d86b6.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9988696Z       "expected_sha256": "5a4f1a2d86b65d18e917333d544de9144864b660962b54b115dce96361529224",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9989021Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9989220Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9989787Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p519_sk_selection_20261001T073205492652Z_5a4f1a2d86b6.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9990336Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9990459Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9990748Z       "receipt_path": "research/data/source_receipts/audit_p520_kbo_20261001T073206431304Z_67c90803b2ce.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9991096Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9991432Z       "body_path": "research/data/benchmark/source_snapshots/audit_p520_kbo_20261001T073206431304Z_67c90803b2ce.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9991915Z       "expected_sha256": "67c90803b2ce0263d1ff295b42a2e42087bb7cc9a24a9d5f4a0e67c67925c6b3",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9992229Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9992420Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9992969Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p520_kbo_20261001T073206431304Z_67c90803b2ce.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9993496Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9993618Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9993928Z       "receipt_path": "research/data/source_receipts/audit_p520_kbo_review_20261001T073205949204Z_bca2aa8a993d.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9994286Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9994647Z       "body_path": "research/data/benchmark/source_snapshots/audit_p520_kbo_review_20261001T073205949204Z_bca2aa8a993d.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9995157Z       "expected_sha256": "bca2aa8a993dab2fee3cf886b9d506f7d8dd9b5a4d6339c85d455ebacb1c5a71",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9995482Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9995678Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9996260Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p520_kbo_review_20261001T073205949204Z_bca2aa8a993d.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9996953Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9997091Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9997392Z       "receipt_path": "research/data/source_receipts/audit_p520_khan_20261001T073207467333Z_f2df6ff3c9e6.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9997831Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9998181Z       "body_path": "research/data/benchmark/source_snapshots/audit_p520_khan_20261001T073207467333Z_f2df6ff3c9e6.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9998687Z       "expected_sha256": "f2df6ff3c9e69c9ef8213d2f7713f5c8bcbdf231e2240783188b30d0882f00d6",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9999010Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9999214Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:52.9999772Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p520_khan_20261001T073207467333Z_f2df6ff3c9e6.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0000311Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0000440Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0001036Z       "receipt_path": "research/data/source_receipts/audit_p520_newsis_20261001T073206576707Z_6f8aa14d49b3.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0001587Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0001952Z       "body_path": "research/data/benchmark/source_snapshots/audit_p520_newsis_20261001T073206576707Z_6f8aa14d49b3.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0002452Z       "expected_sha256": "6f8aa14d49b32c0d116e6bbaf6fd99e96bcecfd18f74f75d971404b4e75cdc34",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0002775Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0002976Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0003534Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p520_newsis_20261001T073206576707Z_6f8aa14d49b3.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0004080Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0004210Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0004502Z       "receipt_path": "research/data/source_receipts/audit_p521_acb_20261001T073211067574Z_0bacbf25e942.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0004848Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0005232Z       "body_path": "research/data/benchmark/source_snapshots/audit_p521_acb_20261001T073211067574Z_0bacbf25e942.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0005719Z       "expected_sha256": "0bacbf25e942c2fe25f6a1de6c80d2396537dcc3cc4466767f44b4f559a6c606",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0006037Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0006227Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0006766Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p521_acb_20261001T073211067574Z_0bacbf25e942.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0007297Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0007423Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0007698Z       "receipt_path": "research/data/source_receipts/audit_p521_efe_20261001T073209368031Z_79ed0c1383ee.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0008035Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0008359Z       "body_path": "research/data/benchmark/source_snapshots/audit_p521_efe_20261001T073209368031Z_79ed0c1383ee.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0008829Z       "expected_sha256": "79ed0c1383ee3c8b53ff8f1d759fc629ce6986bd92a18acef1ae11d73a1bc796",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0009152Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0009337Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0009876Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p521_efe_20261001T073209368031Z_79ed0c1383ee.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0010399Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0010534Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0010835Z       "receipt_path": "research/data/source_receipts/audit_p521_elprogreso_20261001T073208830581Z_0670d75edfcf.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0011300Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0011658Z       "body_path": "research/data/benchmark/source_snapshots/audit_p521_elprogreso_20261001T073208830581Z_0670d75edfcf.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0012165Z       "expected_sha256": "0670d75edfcf98c6806e85036000b00e89ded942a203ea0ac1e1462b5f3e38e9",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0012581Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0012780Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0013348Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p521_elprogreso_20261001T073208830581Z_0670d75edfcf.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0013897Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0014029Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0014331Z       "receipt_path": "research/data/source_receipts/audit_p521_plays_20261001T073211607685Z_babfc1785b8e.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0014680Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0015024Z       "body_path": "research/data/benchmark/source_snapshots/audit_p521_plays_20261001T073211607685Z_babfc1785b8e.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0015522Z       "expected_sha256": "babfc1785b8eb35713e40540206d0057e59924a0e4ff6a2a70c57af77315e8b5",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0015838Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0016032Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0016583Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p521_plays_20261001T073211607685Z_babfc1785b8e.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0017116Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0017244Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0017531Z       "receipt_path": "research/data/source_receipts/audit_p521_ser_20261001T073209224555Z_262a3e2b2a35.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0017873Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0018206Z       "body_path": "research/data/benchmark/source_snapshots/audit_p521_ser_20261001T073209224555Z_262a3e2b2a35.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0018694Z       "expected_sha256": "262a3e2b2a35ddbe63fa44260014baa1678781aee71c9bfeaa91ac44750d423b",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0019013Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0019199Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0019753Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p521_ser_20261001T073209224555Z_262a3e2b2a35.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0020284Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0020409Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0020686Z       "receipt_path": "research/data/source_receipts/audit_p522_acb_20261001T073215250318Z_4155f6404d54.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0021281Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0021609Z       "body_path": "research/data/benchmark/source_snapshots/audit_p522_acb_20261001T073215250318Z_4155f6404d54.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0022076Z       "expected_sha256": "4155f6404d5430310da3d5b50a7f810ce9482f747cf3a0c2e143d6675df2c224",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0022390Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0022575Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0023112Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p522_acb_20261001T073215250318Z_4155f6404d54.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0023637Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0023765Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0024067Z       "receipt_path": "research/data/source_receipts/audit_p523_diez_20261001T074403800567Z_dbd3e2cfb109.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0024411Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0024746Z       "body_path": "research/data/benchmark/source_snapshots/audit_p523_diez_20261001T074403800567Z_dbd3e2cfb109.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0025235Z       "expected_sha256": "dbd3e2cfb1098b8793f8a8a6e7c06ba3c13588cb8eface44401bc7f457027a56",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0025555Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0025836Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0026372Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p523_diez_20261001T074403800567Z_dbd3e2cfb109.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0026903Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0027096Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0027381Z       "receipt_path": "research/data/source_receipts/audit_p523_vision_20261001T074405028048Z_e6b0bf058296.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0027729Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0028061Z       "body_path": "research/data/benchmark/source_snapshots/audit_p523_vision_20261001T074405028048Z_e6b0bf058296.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0028550Z       "expected_sha256": "e6b0bf058296864ed407a85e5bf116a282fd959acbffa29b465d725a1871253c",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0028862Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0029044Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0029593Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_p523_vision_20261001T074405028048Z_e6b0bf058296.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0030129Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0030254Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0030542Z       "receipt_path": "research/data/source_receipts/audit_uae_fixtures_20261001T073212467005Z_b8d99f6440b5.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0030895Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0031241Z       "body_path": "research/data/benchmark/source_snapshots/audit_uae_fixtures_20261001T073212467005Z_b8d99f6440b5.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0031726Z       "expected_sha256": "b8d99f6440b5bb19dda053623cb2246f8518ea6fe4e04c2550c669de10b20a00",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0032035Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0032219Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0032759Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\audit_uae_fixtures_20261001T073212467005Z_b8d99f6440b5.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0033304Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0033432Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0033714Z       "receipt_path": "research/data/source_receipts/bhutan_owner_20261005T110518085833Z_fef39b0f982c.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0034060Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0034365Z       "body_path": "research/data/raw/source_snapshots/bhutan_owner_20261005T110518085833Z_fef39b0f982c.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0034826Z       "expected_sha256": "fef39b0f982c8d51c1b6ac29c05f0f3e3feadc84b9e282bf796291b7ab5985d6",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0035147Z       "market_quarantined": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0035340Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0035858Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\bhutan_owner_20261005T110518085833Z_fef39b0f982c.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0036369Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0036496Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0036804Z       "receipt_path": "research/data/source_receipts/championat_terminal_20261005T110813492452Z_d9e298b2a7f1.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0037160Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0037506Z       "body_path": "research/data/benchmark/source_snapshots/championat_terminal_20261005T110813492452Z_d9e298b2a7f1.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0038004Z       "expected_sha256": "d9e298b2a7f173e03215ec00f1b79e7ebc19dcf625285676c21ecf15d04d651a",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0038314Z       "market_quarantined": true,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0038497Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0039046Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\benchmark\\\\source_snapshots\\\\championat_terminal_20261005T110813492452Z_d9e298b2a7f1.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0039592Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0039719Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0040089Z       "receipt_path": "research/data/source_receipts/kbo_osen_p526_20261005T111129292606Z_16f8a4c95321.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0040426Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0040729Z       "body_path": "research/data/raw/source_snapshots/kbo_osen_p526_20261005T111129292606Z_16f8a4c95321.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0041419Z       "expected_sha256": "16f8a4c953211cbae2d6a9044d9ddcb6b22f9b1545badf1bd0e9196b3afb9b1b",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0041841Z       "market_quarantined": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0042045Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0042583Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\kbo_osen_p526_20261005T111129292606Z_16f8a4c95321.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0043101Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0043229Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0043503Z       "receipt_path": "research/data/source_receipts/kfu_news_20261005T110514527168Z_7dc200dcd4e2.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0043848Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0044168Z       "body_path": "research/data/raw/source_snapshots/kfu_news_20261005T110514527168Z_7dc200dcd4e2.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0044627Z       "expected_sha256": "7dc200dcd4e2936d8fbbe8067b041a3b54565ae8ffd304b388322af62e37c12c",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0044952Z       "market_quarantined": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0045157Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0045692Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\kfu_news_20261005T110514527168Z_7dc200dcd4e2.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0046198Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0046321Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0046598Z       "receipt_path": "research/data/source_receipts/kfu_owner_20261005T110514549862Z_7a0771636e07.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0046929Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0047230Z       "body_path": "research/data/raw/source_snapshots/kfu_owner_20261005T110514549862Z_7a0771636e07.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0047680Z       "expected_sha256": "7a0771636e07ddf097b953aae04dd89396b39eb3ad753e747bd95da66b9cfd11",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0047994Z       "market_quarantined": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0048189Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0048701Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\kfu_owner_20261005T110514549862Z_7a0771636e07.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0049201Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0049328Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0049610Z       "receipt_path": "research/data/source_receipts/khan_terminal_20261005T110813228076Z_169396fea227.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0049946Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0050252Z       "body_path": "research/data/raw/source_snapshots/khan_terminal_20261005T110813228076Z_169396fea227.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0050709Z       "expected_sha256": "169396fea227f1af4c08b017765f46ec849c83bce292d40874bbb3775bcfa99c",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0051028Z       "market_quarantined": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0051213Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0051726Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\khan_terminal_20261005T110813228076Z_169396fea227.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0052236Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0052361Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0052643Z       "receipt_path": "research/data/source_receipts/newsis_terminal_20261005T110813661025Z_b22a1cd279c4.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0052986Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0053296Z       "body_path": "research/data/raw/source_snapshots/newsis_terminal_20261005T110813661025Z_b22a1cd279c4.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0053753Z       "expected_sha256": "b22a1cd279c41d7c66039e4f2dd9e10553bc0415699613d8c99c049319304e84",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0054066Z       "market_quarantined": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0054348Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0054865Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\newsis_terminal_20261005T110813661025Z_b22a1cd279c4.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0055454Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0055579Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0055860Z       "receipt_path": "research/data/source_receipts/nikkan_terminal_20261005T110813011838Z_2da6e1d3feaf.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0056202Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0056512Z       "body_path": "research/data/raw/source_snapshots/nikkan_terminal_20261005T110813011838Z_2da6e1d3feaf.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0056982Z       "expected_sha256": "2da6e1d3feaf88da9a723678a1f2fba53438514cf8beb5bf5b822405ae3d1bd4",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0057298Z       "market_quarantined": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0057488Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0058012Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\nikkan_terminal_20261005T110813011838Z_2da6e1d3feaf.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0058524Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0058651Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0058944Z       "receipt_path": "research/data/source_receipts/sportkg_terminal_20261005T110815516015Z_1f9da5d58377.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0059292Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0059615Z       "body_path": "research/data/raw/source_snapshots/sportkg_terminal_20261005T110815516015Z_1f9da5d58377.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0060073Z       "expected_sha256": "1f9da5d583771464ef07b019b931496710a16f48c05d7e661aae1005cea382ad",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0060380Z       "market_quarantined": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0060567Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0061327Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\sportkg_terminal_20261005T110815516015Z_1f9da5d58377.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0061870Z     },
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0061996Z     {
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0062285Z       "receipt_path": "research/data/source_receipts/toluca_report_20261005T110522461981Z_9524c354dec1.json",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0062641Z       "verified": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0062960Z       "body_path": "research/data/raw/source_snapshots/toluca_report_20261005T110522461981Z_9524c354dec1.body",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0063417Z       "expected_sha256": "9524c354dec10c3385cb6ac90ea0290f10730de3ec0424d953a5a769bb5ff5c1",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0063739Z       "market_quarantined": false,
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0063940Z       "error_type": "FileNotFoundError",
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0064454Z       "error": "[Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\toluca_report_20261005T110522461981Z_9524c354dec1.body'"
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0064964Z     }
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0065087Z   ]
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.0065222Z }
+offline-regressions	Full custody including local benchmark bodies	2026-10-05T11:50:53.1775822Z ##[error]Process completed with exit code 1.
+offline-regressions	Selected control freeze	﻿2026-10-05T11:50:54.1867045Z ##[group]Run python -B -m research.operations.control_freeze --verify
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1867531Z ^[[36;1mpython -B -m research.operations.control_freeze --verify^[[0m
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1927426Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1927726Z env:
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1927914Z   PYTHONIOENCODING: utf-8
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1928171Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1928512Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.6\x64/lib/pkgconfig
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1928876Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1929186Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1929492Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.1929731Z ##[endgroup]
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6213983Z CONTROL_MANIFEST_2026-10-05-5.md: 496 files; 153 mismatches
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6214529Z .github/workflows/research.yml
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6214945Z research/data/county_cache/bwt_json.zip
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6215230Z research/data/county_cache/cch_json.zip
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6215544Z research/data/county_cache/historical_standings.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6215898Z research/data/county_cache/mdms_json.zip
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6216224Z research/data/county_cache/test_cricinfo.html
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6216535Z research/data/greek_cache/el_1975_1976.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6216824Z research/data/greek_cache/el_1976_1977.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6217121Z research/data/greek_cache/el_1977_1978.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6217393Z research/data/greek_cache/el_1978_1979.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6217668Z research/data/greek_cache/el_1979_1980.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6218258Z research/data/greek_cache/el_1980_1981.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6218577Z research/data/greek_cache/el_1981_1982.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6218885Z research/data/greek_cache/el_1982_1983.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6219189Z research/data/greek_cache/el_1983_1984.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6219505Z research/data/greek_cache/el_1984_1985.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6219822Z research/data/greek_cache/el_1985_1986.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6220136Z research/data/greek_cache/el_1986_1987.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6220460Z research/data/greek_cache/el_1987_1988.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6220790Z research/data/greek_cache/el_1988_1989.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6221092Z research/data/greek_cache/el_1989_1990.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6221412Z research/data/greek_cache/el_1990_1991.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6221737Z research/data/greek_cache/el_1991_1992.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6222072Z research/data/greek_cache/el_1992_1993.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6222278Z research/data/greek_cache/el_1993_1994.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6222479Z research/data/greek_cache/el_1994_1995.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6222686Z research/data/greek_cache/el_1995_1996.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6222895Z research/data/greek_cache/el_1996_1997.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6223103Z research/data/greek_cache/el_1997_1998.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6223313Z research/data/greek_cache/el_1998_1999.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6223517Z research/data/greek_cache/el_1999_2000.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6223717Z research/data/greek_cache/el_2000_2001.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6223920Z research/data/greek_cache/el_2001_2002.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6224433Z research/data/greek_cache/el_2002_2003.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6224636Z research/data/greek_cache/el_2003_2004.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6224835Z research/data/greek_cache/el_2004_2005.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6225070Z research/data/greek_cache/el_2005_2006.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6225273Z research/data/greek_cache/el_2006_2007.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6225475Z research/data/greek_cache/el_2007_2008.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6225677Z research/data/greek_cache/el_2008_2009.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6225878Z research/data/greek_cache/el_2009_2010.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6226080Z research/data/greek_cache/el_2010_2011.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6226284Z research/data/greek_cache/el_2011_2012.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6229313Z research/data/greek_cache/el_2012_2013.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6229548Z research/data/greek_cache/el_2013_2014.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6229757Z research/data/greek_cache/el_2014_2015.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6229967Z research/data/greek_cache/el_2015_2016.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6230181Z research/data/greek_cache/el_2016_2017.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6230380Z research/data/greek_cache/el_2017_2018.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6230585Z research/data/greek_cache/el_2018_2019.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6230786Z research/data/greek_cache/el_2019_2020.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6230984Z research/data/greek_cache/el_2020_2021.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6231181Z research/data/greek_cache/el_2021_2022.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6231381Z research/data/greek_cache/el_2022_2023.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6231579Z research/data/greek_cache/el_2023_2024.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6231777Z research/data/greek_cache/el_2024_2025.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6231983Z research/data/greek_cache/el_2025_2026.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6232200Z research/data/greek_cache/en_1999_2000.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6232401Z research/data/greek_cache/en_2000_2001.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6232602Z research/data/greek_cache/en_2001_2002.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6232805Z research/data/greek_cache/en_2002_2003.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6233014Z research/data/greek_cache/en_2003_2004.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6233217Z research/data/greek_cache/en_2004_2005.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6233423Z research/data/greek_cache/en_2005_2006.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6233621Z research/data/greek_cache/en_2006_2007.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6233823Z research/data/greek_cache/en_2007_2008.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6234031Z research/data/greek_cache/en_2008_2009.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6234246Z research/data/greek_cache/en_2009_2010.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6234457Z research/data/greek_cache/en_2010_2011.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6234660Z research/data/greek_cache/en_2011_2012.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6234867Z research/data/greek_cache/en_2012_2013.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6235076Z research/data/greek_cache/en_2013_2014.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6235288Z research/data/greek_cache/en_2014_2015.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6235490Z research/data/greek_cache/en_2015_2016.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6235687Z research/data/greek_cache/en_2016_2017.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6235895Z research/data/greek_cache/en_2017_2018.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6236097Z research/data/greek_cache/en_2018_2019.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6236297Z research/data/greek_cache/en_2019_2020.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6236496Z research/data/greek_cache/en_2020_2021.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6236705Z research/data/greek_cache/en_2021_2022.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6236926Z research/data/greek_cache/en_2022_2023.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6237132Z research/data/greek_cache/en_2023_2024.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6237341Z research/data/greek_cache/en_2024_2025.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6237540Z research/data/greek_cache/en_2025_2026.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6237750Z research/data/greek_cache/sc_2020.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6238236Z research/data/greek_cache/sc_2021.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6238433Z research/data/greek_cache/sc_2022.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6238622Z research/data/greek_cache/sc_2023.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6238811Z research/data/greek_cache/sc_2024.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6239003Z research/data/greek_cache/sc_2025.txt
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6239325Z research/data/ipl_cache/ipl_json.zip
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6239540Z research/data/nba_cache/nbaallelo.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6239770Z research/data/nba_cache/sdv_nba_schedules.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6240009Z research/data/nhl_cache/nhl_1975_19751976.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6240225Z research/data/nhl_cache/nhl_1976_19761977.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6240441Z research/data/nhl_cache/nhl_1977_19771978.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6240653Z research/data/nhl_cache/nhl_1978_19781979.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6240861Z research/data/nhl_cache/nhl_1979_19791980.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6241076Z research/data/nhl_cache/nhl_1980_19801981.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6241661Z research/data/nhl_cache/nhl_1981_19811982.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6241871Z research/data/nhl_cache/nhl_1982_19821983.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6242092Z research/data/nhl_cache/nhl_1983_19831984.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6242303Z research/data/nhl_cache/nhl_1984_19841985.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6242525Z research/data/nhl_cache/nhl_1985_19851986.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6242735Z research/data/nhl_cache/nhl_1986_19861987.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6242946Z research/data/nhl_cache/nhl_1987_19871988.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6243158Z research/data/nhl_cache/nhl_1988_19881989.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6243374Z research/data/nhl_cache/nhl_1989_19891990.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6243594Z research/data/nhl_cache/nhl_1990_19901991.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6243804Z research/data/nhl_cache/nhl_1991_19911992.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6244023Z research/data/nhl_cache/nhl_1992_19921993.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6244245Z research/data/nhl_cache/nhl_1993_19931994.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6244461Z research/data/nhl_cache/nhl_1994_19941995.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6244677Z research/data/nhl_cache/nhl_1995_19951996.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6244893Z research/data/nhl_cache/nhl_1996_19961997.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6245105Z research/data/nhl_cache/nhl_1997_19971998.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6245320Z research/data/nhl_cache/nhl_1998_19981999.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6245535Z research/data/nhl_cache/nhl_1999_19992000.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6245748Z research/data/nhl_cache/nhl_2000_20002001.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6245967Z research/data/nhl_cache/nhl_2001_20012002.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6246193Z research/data/nhl_cache/nhl_2002_20022003.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6246408Z research/data/nhl_cache/nhl_2003_20032004.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6246620Z research/data/nhl_cache/nhl_2005_20052006.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6246835Z research/data/nhl_cache/nhl_2006_20062007.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6247052Z research/data/nhl_cache/nhl_2007_20072008.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6247265Z research/data/nhl_cache/nhl_2008_20082009.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6247483Z research/data/nhl_cache/nhl_2009_20092010.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6247705Z research/data/nhl_cache/nhl_2010_20102011.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6247920Z research/data/nhl_cache/nhl_2011_20112012.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6248145Z research/data/nhl_cache/nhl_2012_20122013.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6248362Z research/data/nhl_cache/nhl_2013_20132014.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6248574Z research/data/nhl_cache/nhl_2014_20142015.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6248795Z research/data/nhl_cache/nhl_2015_20152016.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6249011Z research/data/nhl_cache/nhl_2016_20162017.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6249224Z research/data/nhl_cache/nhl_2017_20172018.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6249433Z research/data/nhl_cache/nhl_2018_20182019.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6249644Z research/data/nhl_cache/nhl_2019_20192020.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6249854Z research/data/nhl_cache/nhl_2020_20202021.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6250075Z research/data/nhl_cache/nhl_2021_20212022.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6250293Z research/data/nhl_cache/nhl_2022_20222023.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6250504Z research/data/nhl_cache/nhl_2023_20232024.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6250716Z research/data/nhl_cache/nhl_2024_20242025.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6250930Z research/data/nhl_cache/nhl_2025_20252026.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6251250Z research/data/nrl_cache/match_data.csv
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6251463Z research/data/nrl_cache/player_data.csv
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6251690Z research/data/nrl_cache/player_match_data.csv
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6251913Z research/data/nrl_cache/ref_data.csv
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6252121Z research/data/nrl_cache/ref_match_data.csv
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6252332Z research/data/nrl_cache/team_data.csv
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6252536Z research/data/nrl_cache/test_download.csv
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6252746Z research/data/nrl_cache/venue_data.csv
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6252979Z research/data/wnba_cache/fivethirtyeight_wnba_elo.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.6253250Z research/data/wnba_cache/sdv_wnba_schedule.json
+offline-regressions	Selected control freeze	2026-10-05T11:50:54.7110631Z ##[error]Process completed with exit code 1.
+offline-regressions	All-log documentary and settlement readback	﻿2026-10-05T11:50:54.7261502Z ##[group]Run python -B -m research.operations.verify_all_logs
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7261985Z ^[[36;1mpython -B -m research.operations.verify_all_logs^[[0m
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7360398Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7360760Z env:
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7360930Z   PYTHONIOENCODING: utf-8
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7361193Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7361541Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.6\x64/lib/pkgconfig
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7361882Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7362194Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7362506Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:54.7362761Z ##[endgroup]
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:57.3193914Z {
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:57.3194272Z   "passed": false,
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:57.3195021Z   "error": "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\a\\\\Sports-Research\\\\Sports-Research\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\kfu_owner_20261005T110514549862Z_7a0771636e07.body'"
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:57.3195718Z }
+offline-regressions	All-log documentary and settlement readback	2026-10-05T11:50:57.5096161Z ##[error]Process completed with exit code 1.

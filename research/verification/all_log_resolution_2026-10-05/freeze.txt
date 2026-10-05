@@ -1,1 +1,1 @@
-CONTROL_MANIFEST_2026-10-05-5.md: 496 files; 0 mismatches
+CONTROL_MANIFEST_2026-10-05-6.md: 497 files; 0 mismatches

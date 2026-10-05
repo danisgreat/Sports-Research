@@ -78,3 +78,7 @@ All eleven retrospective hypotheses are now retained and mechanically verified a
 Formal settlement upgrades still require the exact operator definitions and admitted start/terminal evidence in carryover. Those historical facts cannot be implemented through document editing. P-537 phase/corners conflicts remain unresolved. The model registrations remain SHADOW_ONLY, with zero new live issues or pilots. Source/body availability and archive coverage limitations remain explicit.
 
 Changes are local. No commit or push was requested or performed. Original instructions are retained verbatim in [request_source.txt](request_source.txt), with their source hash in the opening receipt; their earlier tool citation tokens are preserved as supplied text, not treated as independently verifiable repository citations.
+
+## Later authorized publication — historical checkpoint clarification
+
+This report retains the earlier implementation checkpoint. The later user instruction makes local files authoritative and authorizes publication to main. These changes were included in substantive commit 87a2df6dc8e08b84221abf0463b14702b8479fc0, remotely SHA-verified. Current all-log state, control, 53 carryovers and actual remote failures are recorded in [the later all-log report](../all_log_resolution_2026-10-05/REPORT.md). Earlier control/count/no-push statements above are historical evidence, superseded for current operations.

@@ -1,7 +1,7 @@
 """Check staged scope, new local links and authored-text whitespace before push."""
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
-import json, re, subprocess
+import json, re, subprocess, sys
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).parent
@@ -36,7 +36,8 @@ whitespace = git('-c', 'core.whitespace=blank-at-eol,blank-at-eof,space-before-t
                  ':!research/verification/**/*.txt',
                  ':!research/verification/**/*.body',
                  ':!research/verification/**/*.bin')
-(OUT / 'whitespace_scoped.txt').write_bytes(whitespace.stdout)
+followup = '--followup' in sys.argv
+(OUT / ('whitespace_followup.txt' if followup else 'whitespace_scoped.txt')).write_bytes(whitespace.stdout)
 inventory = json.loads((OUT / 'source_inventory.json').read_text())
 excluded = {r['body_path'].replace('\\', '/') for r in inventory['records']
             if r['excluded_from_git']}
@@ -45,6 +46,6 @@ result = dict(staged_files=len(paths), paths=paths, added_local_links_checked=ch
               broken_added_local_links=link_errors, staged_excluded_bodies=staged_excluded,
               authored_whitespace_exit=whitespace.returncode,
               whitespace_scope='CRLF accepted; raw source captures, immutable byte artifacts and retained transcripts excluded')
-(OUT / 'staged_paths.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
+(OUT / ('followup_staged_paths.json' if followup else 'staged_paths.json')).write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
 print(json.dumps({k:v for k,v in result.items() if k!='paths'}, indent=2))
 raise SystemExit(bool(link_errors or staged_excluded or whitespace.returncode))

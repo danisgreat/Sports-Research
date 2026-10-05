@@ -531,3 +531,15 @@ This addendum supersedes the earlier P-520 native-ID gap and selects `research/v
 The local source registry now contains 111 verified receipt bodies; 59 are available from the staged publication and 52 remain excluded local-only. Earlier 110-body counts describe the preceding checkpoint. Local files remain authoritative; GitHub main is the destination. The selected control is CR-2026.10.05-I5, frozen by CONTROL_MANIFEST_2026-10-05-5.md. Earlier append projections and control receipts remain unchanged. No IDs are added; P-538 remains next.
 
 Final native-follow-up readback: all six affected command groups passed again, the selected I5 freeze verifies 496 files with zero mismatches, and the 19 operations tests passed after the owner-verifier change. The earlier full 127-test regression result remains recorded; archive validation and workflow scoring were unchanged by this follow-up. The final staged custody export verifies 59/111 bodies and reports exactly 52 excluded local-only failures.
+
+## Verified GitHub publication and remaining checkout gaps
+
+The substantive 201-file publication was pushed to GitHub main as `87a2df6dc8e08b84221abf0463b14702b8479fc0`; the remote main SHA matched the local commit and the working tree was clean. GitHub is the publication destination; local working files remain authoritative.
+
+[Actions run 37305349280](https://github.com/danisgreat/Sports-Research/actions/runs/37305349280) completed with regression, canonical projection and reconciliation checks passing. Strict source custody failed on exactly 52 absent local-only bodies (59 verified of 111). All-log readback failed on an absent retained owner body, as expected. The full local freeze reported 153 mismatches: 152 ignored, locally present cache files plus a workflow checkout line-ending mismatch. Its complete path inventory, raw failure output and run metadata are retained beside this report. No evidence gate is bypassed.
+
+The workflow line-ending mismatch is repaired by preserving `.github/**` bytes through Git attributes. The new active control is CR-2026.10.05-I6 / CONTROL_MANIFEST_2026-10-05-6.md. The full local freeze still retains all 152 cache hashes; missing clean-checkout caches remain a real failure. Earlier control receipts and failed run evidence remain unchanged. This publication follow-up changes no issued forecasts, IDs, sporting outcomes or performance eligibility.
+
+The earlier implementation report is a historical pre-publication checkpoint. Its statement that no push had been requested or performed describes that earlier scope, superseded by the later explicit publication request and this verified push. The selected current carryover remains `carryover_v3.json` with 53 records. Fifteen retrospective experiments remain registered but unrun; no prospective success or fitted improvement is claimed.
+
+Publication follow-up local readback: the I6 freeze verifies 497 files with zero mismatches; all six affected command groups pass. The original forecast/ledger/projection bytes remain unchanged, next ID is P-538, and the current 53-record carryover stays hash-bound.

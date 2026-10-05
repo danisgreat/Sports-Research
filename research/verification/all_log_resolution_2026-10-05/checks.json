@@ -10,7 +10,7 @@
       "exit_code": 0,
       "output_path": "research/verification/all_log_resolution_2026-10-05/canonical.txt",
       "output_sha256": "859843c4473327fd9c680f144a86bdaa73999897184bbad4c0d37b6bfb85b0f0",
-      "completed_utc": "2026-10-05T11:46:22.101459+00:00"
+      "completed_utc": "2026-10-05T11:54:20.745471+00:00"
     },
     {
       "check": "reconciliation",
@@ -20,8 +20,8 @@
       ],
       "exit_code": 0,
       "output_path": "research/verification/all_log_resolution_2026-10-05/reconciliation.txt",
-      "output_sha256": "79a08c3e2d7a1e0a6c2c2353467d35ef98d0b8f05a081f1bd31a7a998e1f9eb1",
-      "completed_utc": "2026-10-05T11:46:22.199171+00:00"
+      "output_sha256": "a3c8ed88d4d100addbf07f1b2013c87cc6ba6b68877c4c7d95294eb390d54b6d",
+      "completed_utc": "2026-10-05T11:54:20.858088+00:00"
     },
     {
       "check": "freeze",
@@ -32,8 +32,8 @@
       ],
       "exit_code": 0,
       "output_path": "research/verification/all_log_resolution_2026-10-05/freeze.txt",
-      "output_sha256": "0aa69a20370bb348b39edefcc6365fbfc42ec9ad1dce1cec453257adfda67024",
-      "completed_utc": "2026-10-05T11:46:23.186710+00:00"
+      "output_sha256": "025c98002686ef88ea0886a945608f209e7369cdd33636fffc13772b1ce26aef",
+      "completed_utc": "2026-10-05T11:54:21.827754+00:00"
     },
     {
       "check": "custody",
@@ -43,8 +43,8 @@
       ],
       "exit_code": 0,
       "output_path": "research/verification/all_log_resolution_2026-10-05/custody.txt",
-      "output_sha256": "7812e3135cb4bcc5c6c09119289ca2e770aae9e5179cb818304367a362204912",
-      "completed_utc": "2026-10-05T11:46:23.842288+00:00"
+      "output_sha256": "285521b5453d213653ec63ddf8b3da167bb413d034711cacb7a16ac7331628fe",
+      "completed_utc": "2026-10-05T11:54:22.510930+00:00"
     },
     {
       "check": "all_logs",
@@ -54,8 +54,8 @@
       ],
       "exit_code": 0,
       "output_path": "research/verification/all_log_resolution_2026-10-05/all_logs.txt",
-      "output_sha256": "12f2f194b1b0baa5b5a25b7bb0accb3864b0b186a5eb6cd1b562f38f24eb1aad",
-      "completed_utc": "2026-10-05T11:46:25.321157+00:00"
+      "output_sha256": "b3384e5dfe41d57f9820ed94b4cbbca0b8aac86b4639ed9af2f32d18eed026f5",
+      "completed_utc": "2026-10-05T11:54:23.773596+00:00"
     },
     {
       "check": "workflow_status",
@@ -66,8 +66,8 @@
       ],
       "exit_code": 0,
       "output_path": "research/verification/all_log_resolution_2026-10-05/workflow_status.txt",
-      "output_sha256": "d1c8aecb6bae625444a6fce33b328cc604c413e6d786cb038ddebfbede3df7db",
-      "completed_utc": "2026-10-05T11:46:25.221547+00:00"
+      "output_sha256": "1ffc59abf68761e7edb06dc604ed27d2ce6b6422433e0d1544cac0f3d6a598c3",
+      "completed_utc": "2026-10-05T11:54:23.722841+00:00"
     },
     {
       "check": "workflow_score",

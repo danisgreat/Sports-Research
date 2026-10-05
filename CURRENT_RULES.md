@@ -2,7 +2,7 @@
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Authority: **MDS-2026.10.01-v7.1 / CR-2026.10.05-I5**. The user's later October 1 instruction authorizes research regardless of calibration, removal of analysis/logging blockers, late news, analysis after scheduled start and canonical import of the missing cards. Issued historical values remain unchanged.
+Authority: **MDS-2026.10.01-v7.1 / CR-2026.10.05-I6**. The user's later October 1 instruction authorizes research regardless of calibration, removal of analysis/logging blockers, late news, analysis after scheduled start and canonical import of the missing cards. Issued historical values remain unchanged.
 
 ## Requested research — controlling default
 

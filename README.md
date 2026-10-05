@@ -2,7 +2,7 @@
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Current method: **MDS-2026.10.01-v7.1**; controls: **CR-2026.10.05-I5**. Requested analyses and canonical Part 6 logging proceed regardless of calibration, with qualitative ranks or explicitly uncalibrated reproducible scenarios and honest live/late timestamps. Model qualification controls performance claims separately. This repository contains sports-only research, historical competition records and preserved prediction logs.
+Current method: **MDS-2026.10.01-v7.1**; controls: **CR-2026.10.05-I6**. Requested analyses and canonical Part 6 logging proceed regardless of calibration, with qualitative ranks or explicitly uncalibrated reproducible scenarios and honest live/late timestamps. Model qualification controls performance claims separately. This repository contains sports-only research, historical competition records and preserved prediction logs.
 
 ## Start here
 

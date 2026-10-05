@@ -1,0 +1,32 @@
+{
+  "staged_files": 22,
+  "paths": [
+    ".gitattributes",
+    "CONTROL_MANIFEST_2026-10-05-6.md",
+    "CURRENT_RULES.md",
+    "GAME_LOG_STATUS_CURRENT.md",
+    "METHOD.md",
+    "README.md",
+    "SOURCES.md",
+    "VERIFICATION_PROTOCOL.md",
+    "research/README.md",
+    "research/verification/all_log_resolution_2026-10-05/REPORT.md",
+    "research/verification/all_log_resolution_2026-10-05/all_logs.txt",
+    "research/verification/all_log_resolution_2026-10-05/checks.json",
+    "research/verification/all_log_resolution_2026-10-05/custody.txt",
+    "research/verification/all_log_resolution_2026-10-05/finalize_publication.py",
+    "research/verification/all_log_resolution_2026-10-05/freeze.txt",
+    "research/verification/all_log_resolution_2026-10-05/publication_review.py",
+    "research/verification/all_log_resolution_2026-10-05/published_freeze_inventory.json",
+    "research/verification/all_log_resolution_2026-10-05/published_run.json",
+    "research/verification/all_log_resolution_2026-10-05/published_run_failure.txt",
+    "research/verification/all_log_resolution_2026-10-05/reconciliation.txt",
+    "research/verification/all_log_resolution_2026-10-05/workflow_status.txt",
+    "research/verification/implementation_2026-10-05/REPORT.md"
+  ],
+  "added_local_links_checked": 3,
+  "broken_added_local_links": [],
+  "staged_excluded_bodies": [],
+  "authored_whitespace_exit": 0,
+  "whitespace_scope": "CRLF accepted; raw source captures, immutable byte artifacts and retained transcripts excluded"
+}
