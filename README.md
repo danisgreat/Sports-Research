@@ -1,20 +1,25 @@
 # Sports Research
 
-Current method: **MDS-2026.10.01-v7.1**; controls: **CR-2026.10.01-I2**. Requested analyses and canonical Part 6 logging proceed regardless of calibration, with qualitative ranks or explicitly uncalibrated reproducible scenarios and honest live/late timestamps. Model qualification controls performance claims separately. This repository contains sports-only research, historical competition records and preserved prediction logs.
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+Current method: **MDS-2026.10.01-v7.1**; controls: **CR-2026.10.05-I5**. Requested analyses and canonical Part 6 logging proceed regardless of calibration, with qualitative ranks or explicitly uncalibrated reproducible scenarios and honest live/late timestamps. Model qualification controls performance claims separately. This repository contains sports-only research, historical competition records and preserved prediction logs.
 
 ## Start here
 
 1. Read [current operating rules](CURRENT_RULES.md), then [the research workspace](research/README.md).
-2. Use [the implementation report](IMPLEMENTATION_2026-10-01.md) for changes, evidence and outstanding prospective gates.
+2. Use [the October 5 implementation evidence](research/verification/implementation_2026-10-05/REPORT.md) for current reconciliation, cleanup and verification. The [October 1 report](IMPLEMENTATION_2026-10-01.md) retains its historical results.
 3. Use [source contracts](research/sources_registry.json) and [admission registrations](research/admission_registry.json). A URL list or metadata flag cannot confer eligibility.
 4. Use [the archive guide](Previous%20Sports%20Results/README.md) for historical CSVs, coverage, provenance and exclusions.
 5. Use [templates](CARD_AND_LOG_TEMPLATES.md), [scoring](SCORING_AND_VALIDATION.md) and [verification](VERIFICATION_PROTOCOL.md) when preparing a forecast or evaluating a result.
 
 ```powershell
-python -B -m pytest -p no:cacheprovider research/tests -q
+py -3.14 -B -m pytest -p no:cacheprovider research/tests research/operations -q
 python -B -m research.src.daily --window-hours 48
 python -B -m research.src.workflow status
 py -3.14 -B -m research.operations.log_card verify
+py -3.14 -B -m research.operations.verify_custody
+py -3.14 -B -m research.operations.verify_reconciliation
+py -3.14 -B -m research.operations.verify_all_logs
 py -3.14 -B -m research.operations.control_freeze --verify
 ```
 
@@ -30,7 +35,7 @@ The daily command creates dated immutable observations, model-only shadows, fixt
 | Prospective shadows | `research/shadow/` and dated `research/daily/` | No issued card, verified lineup or live qualification is implied |
 | League archive | `Previous Sports Results/_canonical/` and its manifest | Exact-source matches, duplicates, mirror copies, unknown seasons and postgame narratives are separated |
 
-Parts 1-5 remain historical. [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) is the sole canonical destination for new issued cards. P-518 through P-522 remain reserved and excluded from performance; P-523 remains the next unconsumed new issue ID. A separate mini-log is intake only and cannot assign IDs.
+Parts 1-5 remain historical. [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) is the sole canonical destination for new issued cards. P-518 through P-522 remain reserved and excluded from performance; P-523–P-537 are canonical research records; the verified next ID at this repair is P-538. Always read the live allocator before issuance. The [status register](GAME_LOG_STATUS_CURRENT.md) links both closed mini archives and all 15 unresolved carryover records. Eleven diagnostic settlements and 132 retrospective sections remain learning evidence, with zero certified/performance-eligible settlements. Closed minis cannot assign IDs.
 
 ## CSV policy
 

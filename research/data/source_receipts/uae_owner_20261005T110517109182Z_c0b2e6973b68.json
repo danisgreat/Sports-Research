@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "uae_owner",
+  "publisher": "www.uaeproleague.ae",
+  "upstream_lineage_id": "OWNER_COLLECTION_IDENTITY_REQUIRES_EVENT_AUDIT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.uaeproleague.ae/en/fixtures",
+  "final_url": "https://www.uaeproleague.ae/en/fixtures",
+  "retrieved_utc": "2026-10-05T11:05:17.109182+00:00",
+  "response_sha256": "c0b2e6973b686ee5b4e8a26bd7f5d33e306deb8e78751c70c5aa01badb6f04df",
+  "body_path": "research/data/raw/source_snapshots/uae_owner_20261005T110517109182Z_c0b2e6973b68.body",
+  "response_bytes": 207028,
+  "content_type": "text/html; charset=UTF-8",
+  "parser_id": "MANUAL_EVENT_FIELD_AUDIT",
+  "registry_sha256": "3afde260ffc33c65e1e94744b33b1295e3a6348c5bb61725835417e45b53b9a0",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

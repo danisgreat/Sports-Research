@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "lfp_event",
+  "publisher": "plus.ligue1.com",
+  "upstream_lineage_id": "OWNER_COLLECTION_IDENTITY_REQUIRES_EVENT_AUDIT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://plus.ligue1.com/live/306887",
+  "final_url": "https://plus.ligue1.com/live/306887",
+  "retrieved_utc": "2026-10-05T11:05:18.608943+00:00",
+  "response_sha256": "6326eb12d791b8c6f0e64e07944059b905ef6e44958fa654167c5885cadfe211",
+  "body_path": "research/data/raw/source_snapshots/lfp_event_20261005T110518608943Z_6326eb12d791.body",
+  "response_bytes": 6335,
+  "content_type": "text/html",
+  "parser_id": "MANUAL_EVENT_FIELD_AUDIT",
+  "registry_sha256": "3afde260ffc33c65e1e94744b33b1295e3a6348c5bb61725835417e45b53b9a0",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

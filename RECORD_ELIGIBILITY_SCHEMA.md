@@ -1,10 +1,14 @@
 # Record eligibility schema
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
 Current research logging: [log_card.py](research/operations/log_card.py). Frozen certification implementation: [eligibility.py](research/src/eligibility.py), [ledger.py](research/src/ledger.py), [issue.py](research/src/issue.py). Current rules: [CURRENT_RULES.md](CURRENT_RULES.md). Temporal/model/quorum gates below concern certification only; they do not block canonical research logging or analysis.
 
 | Record type | Eligibility | Required custody |
 |---|---|---|
 | Canonical requested research | Qualitative, uncalibrated, live/late and historical imports permitted; certification separately labelled | P-ID; RESEARCH_LOG_PREPARED/COMMITTED; original source/projection hashes; actual logging time; exact identity; explicit missingness; no retroactive pregame claim |
+| Research diagnostic addendum | Sporting arithmetic only; operator/performance certification remains unresolved until admitted evidence passes | Existing canonical ID/core; original version hashes; conditional period/action; actual review time; source/definition conflicts; carryover |
+| Closed mini reference | Evidence archive, never an allocation authority | Full original bytes, archived length/hash/offset, canonical event/addendum map, retained unresolved requirements |
 | Historical literal learning | Always performance-ineligible | Original rank/log pointer; preserved missingness/conflicts |
 | Provisional current observation | Never a forecast | Immutable body, exact parse/field and retrieval hash |
 | Model-only shadow | Always performance-ineligible | Before-start forecast, input/build hashes, family/endpoint, full coverage |

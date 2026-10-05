@@ -1,5 +1,7 @@
 # Current operator prompts
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
 These prompts use MDS-2026.10.01-v7.1. Requested research is delivered and canonically logged regardless of calibration; qualified numerical performance claims require their own evidence. Existing forecast text is retained.
 
 ## Daily sports-only research
@@ -13,6 +15,10 @@ These prompts use MDS-2026.10.01-v7.1. Requested research is delivered and canon
 ## Append a qualified real issue
 
 > Revalidate the prepared real-event transaction immediately before commit. Confirm cutoff < issue < verified scheduled start, fresh independent source quorum, unchanged code/input/registry hashes, all model-family gates and available time before start. Use the journaled issuer to append only the next unconsumed P-ID to Part 6. Preserve all issued bytes and the original P-518 source block. Report the frozen bundle/core/transaction receipt. If any gate fails, append the evidence-backed disposition and leave the event unissued.
+
+## Reconcile mini references and close duplicates
+
+> Read METHOD.md, current status and the ledger-backed allocator. Inventory every mini entry, exact event, source version and immutable body. Recover pending research transactions before allocation. Exact existing event/source/body combinations keep their canonical ID; changed versions become dated addenda. Before importing, check Part 6 and ledger custody so closure never reissues an already canonical event. Separate diagnostic sporting grades from operator certification, retain every unresolved contract/field in carryover, and never invent p/baseline/start/quorum evidence. Verify complete original archive bytes and canonical coverage before deleting redundant working copies. Keep necessary source/archive/audit evidence. Run regressions, canonical verification, strict custody, reconciliation readback and freeze independently. Report local and clean-checkout failures separately with zero new IDs where all entries are already canonical.
 
 ## Settle and learn
 

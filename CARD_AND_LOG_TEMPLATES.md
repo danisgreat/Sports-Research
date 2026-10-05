@@ -1,5 +1,7 @@
 # Card and log templates
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
 Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.01-v7.1. Requested research uses the following template and receives a canonical ID regardless of calibration. Later sections describe the separate frozen certified-issuer protocol; its gates do not block requested research.
 
 ## Requested research card — default workflow
@@ -25,6 +27,12 @@ An adjustment requires an approved method version, reason, frozen parameters and
 The issuer's Markdown includes permanent P-ID, exact event/endpoint, issue/cutoff/start times, model version, model/input/registry hashes, source lineages, contract rows with coherent win/push/loss masses and separate p_model/p_card/p_baseline, adjustment status and transaction ID. Rendered ordering follows p_card. The machine bundle is immutable; the Part 6 projection and canonical ledger bind its bytes.
 
 A preparation is **PREPARED_DRAFT_NOT_ISSUED** and consumes no ID. A committed pregame card is **ISSUED_PENDING_TERMINAL_ADMISSION**. Existing issued forecasts retain their own original format and ranking arithmetic.
+
+## Research diagnostic addendum and mini closure
+
+Bind the existing canonical ID/event, immutable original source/projection hashes, actual observation/review time, exact endpoint and each original source version. Retain conditional grade, operator definition status, actual-start admission, audited terminal-lineage status and performance eligibility separately. UNKNOWN_DEFINITION, UNRESOLVED_PERIOD, UNRESOLVED_PROVIDER_FIELD and missing p/baseline remain literal missingness; NO_FORECAST and late/live classifications remain unchanged. List every unresolved requirement in carryover. A diagnostic addendum does not create an ISSUE or certified settlement record.
+
+An archive receipt binds original length/hash, archive path/hash, preserved-body offset, canonical entry mappings, overlap/addendum disposition, carryover and actual next-ID readback. Closure allocates no ID for an already represented event. Remove redundant working copies only after exact archive/readback checks.
 
 ## Settlement revision
 

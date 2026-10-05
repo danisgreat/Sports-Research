@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "mlb_p492",
+  "publisher": "statsapi.mlb.com",
+  "upstream_lineage_id": "REQUIRES_AUDIT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://statsapi.mlb.com/api/v1.1/game/823897/feed/live",
+  "final_url": "https://statsapi.mlb.com/api/v1.1/game/823897/feed/live",
+  "retrieved_utc": "2026-10-05T11:11:27.562081+00:00",
+  "response_sha256": "f26ab94b8f420b271392ec0a478305443cf8c05f3390e2a94b51e2d62fc66880",
+  "body_path": "research/data/raw/source_snapshots/mlb_p492_20261005T111127562081Z_f26ab94b8f42.body",
+  "response_bytes": 796923,
+  "content_type": "application/json;charset=UTF-8",
+  "parser_id": "EXACT_EVENT_AUDIT",
+  "registry_sha256": "a3813f873fe09a95107ce3f52e507e3fae0691292b47e2fe6d835c3ff2388efe",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

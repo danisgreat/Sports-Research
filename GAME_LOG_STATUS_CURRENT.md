@@ -2,7 +2,7 @@
 # Current canonical research queue
 
 **Next canonical ID: P-538.** All requested cards go directly to Part 6, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
-Current selected freeze: `CONTROL_MANIFEST_2026-10-05-1.md`; normalized-CRLF SHA-256 `25e8fcaf322f7e188b74cb352e786a18f2b5cc9b702bacbc9cc5eaa863aca6e5`. Current authority: METHOD.md and CURRENT_RULES.md.
+Current selected freeze: `CONTROL_MANIFEST_2026-10-05-5.md`; normalized-CRLF SHA-256 `e05292591d95758be08400f7510373b23965200fe8bbcec6cf4e0b50f2b24dc3`. Current authority: METHOD.md and CURRENT_RULES.md.
 
 | ID | Event | Tracking alias | Status |
 |---|---|---|---|
@@ -25,6 +25,10 @@ Current selected freeze: `CONTROL_MANIFEST_2026-10-05-1.md`; normalized-CRLF SHA
 Highest canonical research ID: **P-537**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_6.md`.
 Archived mini references: `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`, `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P527_ONWARD_UPDATED_4.md`.
 Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/carryover.json` and `carryover.md`. Eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6; formal certification remains unresolved.
+
+**Current all-log settlement register:** `research/verification/all_log_resolution_2026-10-05/carryover_v3.json`.
+53 event records retain specific settlement/certification requirements; 10 older rank/contract mappings were repaired. The earlier 15-record closure is a historical snapshot. New sporting reviews and existing retrospective pointers are recorded in the current register; operator or source gaps remain literal.
+Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.
 
 P-518–P-522 remain reserved. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.
 
@@ -889,3 +893,13 @@ Carryover: **P-537** first-half O/U 0.5 UNRESOLVED_PERIOD (2-0 detailed reports 
 
 Audit: `research/verification/reconciliation_2026-10-05/REPORT.md`; hash-chained research diagnostic revisions are separate from the immutable canonical allocation ledger. Current full-check failures are disclosed in the audit, not hidden by new manifests.
 <!-- END CURRENT RESEARCH SETTLEMENT STATUS 2026-10-05 -->
+
+<!-- BEGIN CURRENT IMPLEMENTATION READBACK 2026-10-05-I2 -->
+## October 5 implementation readback ? current verification scope
+
+Canonical P-523?P-537 remain unchanged; next at this readback is P-538. Both complete mini archives and all 15 unresolved carryovers remain retained; the redundant closed working pointer was removed after full original-body/archive hash verification. Eleven diagnostic reviews/132 retrospective sections remain separate from certified settlement. All eleven suggestions are [PROPOSED_NOT_TESTED](research/improvement_register.json), with no model or forecast change.
+
+Local source inventory verifies 78/78 receipt bodies. A tracked-body export verifies 36/78 and fails 42 local-only quarantined bodies. Full custody remains strict and CI runs all verification steps after failures, including freeze. This updates the failure scope described in the earlier closure; it does not claim a green remote workflow. Current control CR-2026.10.05-I3 selects CONTROL_MANIFEST_2026-10-05-3.md.
+
+[Implementation, cleanup and final checks](research/verification/implementation_2026-10-05/REPORT.md). The original historical status snapshots above remain unchanged.
+<!-- END CURRENT IMPLEMENTATION READBACK 2026-10-05-I2 -->

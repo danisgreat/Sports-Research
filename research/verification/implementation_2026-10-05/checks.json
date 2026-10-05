@@ -1,0 +1,129 @@
+{
+  "observed_utc": "2026-10-05T09:52:40.333102+00:00",
+  "results": [
+    {
+      "check": "archive",
+      "command": [
+        "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-B",
+        "-m",
+        "research.src.archive",
+        "validate"
+      ],
+      "started_utc": "2026-10-05T09:51:29.840303+00:00",
+      "completed_utc": "2026-10-05T09:52:09.682885+00:00",
+      "exit_code": 0,
+      "output_path": "research/verification/implementation_2026-10-05/archive.txt",
+      "output_sha256": "ce3d6e628722e3aed2d1b40b959334bda3ed695b36d170a1f25415cb4826b912"
+    },
+    {
+      "check": "canonical",
+      "command": [
+        "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-B",
+        "-m",
+        "research.operations.log_card",
+        "verify"
+      ],
+      "started_utc": "2026-10-05T09:51:28.136031+00:00",
+      "completed_utc": "2026-10-05T09:51:29.623669+00:00",
+      "exit_code": 0,
+      "output_path": "research/verification/implementation_2026-10-05/canonical.txt",
+      "output_sha256": "859843c4473327fd9c680f144a86bdaa73999897184bbad4c0d37b6bfb85b0f0"
+    },
+    {
+      "check": "custody",
+      "command": [
+        "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-B",
+        "-m",
+        "research.operations.verify_custody"
+      ],
+      "started_utc": "2026-10-05T09:51:28.137244+00:00",
+      "completed_utc": "2026-10-05T09:51:49.932006+00:00",
+      "exit_code": 0,
+      "output_path": "research/verification/implementation_2026-10-05/custody.txt",
+      "output_sha256": "43be63a36f4ee478f47a658824d338ffe203c9eafb2333c8b7e84eb2e1d5197b"
+    },
+    {
+      "check": "freeze",
+      "command": [
+        "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-B",
+        "-m",
+        "research.operations.control_freeze",
+        "--verify"
+      ],
+      "started_utc": "2026-10-05T09:51:29.623962+00:00",
+      "completed_utc": "2026-10-05T09:51:30.716592+00:00",
+      "exit_code": 0,
+      "output_path": "research/verification/implementation_2026-10-05/freeze.txt",
+      "output_sha256": "7aa25b664b64d638b11c1c5809c0862eea94ebc11448d9d9afbea76ca602e7eb"
+    },
+    {
+      "check": "reconciliation",
+      "command": [
+        "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-B",
+        "-m",
+        "research.operations.verify_reconciliation"
+      ],
+      "started_utc": "2026-10-05T09:51:28.137920+00:00",
+      "completed_utc": "2026-10-05T09:51:29.840083+00:00",
+      "exit_code": 0,
+      "output_path": "research/verification/implementation_2026-10-05/reconciliation.txt",
+      "output_sha256": "a0fd1e1587cdaa5c622be793a75419741508fa6f59f09945bd7138f7f7184cd3"
+    },
+    {
+      "check": "regressions",
+      "command": [
+        "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "research/tests",
+        "research/operations",
+        "-q"
+      ],
+      "started_utc": "2026-10-05T09:51:28.135346+00:00",
+      "completed_utc": "2026-10-05T09:52:40.331984+00:00",
+      "exit_code": 0,
+      "output_path": "research/verification/implementation_2026-10-05/regressions.txt",
+      "output_sha256": "15cf7c44262271fdcfbb4f6eaf6914d930d3bb3e4dee744e347cfa3e80eb93e1"
+    },
+    {
+      "check": "workflow_score",
+      "command": [
+        "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-B",
+        "-m",
+        "research.src.workflow",
+        "score"
+      ],
+      "started_utc": "2026-10-05T09:51:33.520443+00:00",
+      "completed_utc": "2026-10-05T09:51:36.318562+00:00",
+      "exit_code": 0,
+      "output_path": "research/verification/implementation_2026-10-05/workflow_score.txt",
+      "output_sha256": "7c7baf3939fff1228a401f5aaf59f4ab7f7bf1b2af2723df52629f0b4f143798"
+    },
+    {
+      "check": "workflow_status",
+      "command": [
+        "C:\\Users\\danie\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-B",
+        "-m",
+        "research.src.workflow",
+        "status"
+      ],
+      "started_utc": "2026-10-05T09:51:30.716768+00:00",
+      "completed_utc": "2026-10-05T09:51:33.520265+00:00",
+      "exit_code": 0,
+      "output_path": "research/verification/implementation_2026-10-05/workflow_status.txt",
+      "output_sha256": "34141c5d51d5e9c5a8e00ae8905e5950d29123b4722161d7f9ba909c21b60e42"
+    }
+  ],
+  "passed": true,
+  "scope": "LOCAL_REQUIRED_CHECKS; tracked-only source export independently remains incomplete"
+}

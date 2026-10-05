@@ -1,5 +1,9 @@
 # Closing-line benchmark ledger (`C-MARKET-BENCHMARK`)
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
 **Opened 2026-09-26.** **Status: LEARNING_ONLY / scoring-only / NOT PERFORMANCE_ELIGIBLE.** This ledger compares each settled decision's issued probability with the **closing market's no-vig probability for the same contract**. It exists because a naive population table (`SKILL_BASELINE_LEDGER.md`) is the weakest honest yardstick and the closing line is the strongest public one. It is a scoring comparison only. It is never a value, ROI or performance claim.
 
 ## The firewall (why this does not break `MARKET_BLIND`)

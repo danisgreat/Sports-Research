@@ -1,0 +1,38 @@
+{
+  "source_review_path": "research/verification/all_log_resolution_2026-10-05/new_sporting_settlements.json",
+  "source_review_sha256": "30107894efb9086f1b2808ec7deb3bf582539d9e825c0b19332f9eea77244e55",
+  "records": [
+    {
+      "proposal_id": "RIP-20261005-ALLLOG-P-524",
+      "canonical_id": "P-524",
+      "hypothesis_and_acceptance": "For future KBO totals, compare a preregistered starter-plus-relief model against the unchanged baseline with date-held-out Brier/log loss, calibration and interval coverage. Audit available bullpen workload before issue; retain failures and missing workload rather than applying a postgame coefficient.",
+      "source_text_sha256": "88141d71e3ead943cf202091633e818e11a0812006b94a082abc0382a19c36d6",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261005-ALLLOG-P-525",
+      "canonical_id": "P-525",
+      "hypothesis_and_acceptance": "For future live NPB totals, preregister exact inning/outs/base state and a remaining-runs distribution. Evaluate a held-out live-state baseline at the same observation horizon, without copying final state into inputs; require calibrated uncertainty and phase-correct coverage before attaching probabilities.",
+      "source_text_sha256": "a67527bfa77a904312593b60ba8bf2ac8f1458bb80bd43cfd9c77ddc00e5ddbc",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261005-ALLLOG-P-526",
+      "canonical_id": "P-526",
+      "hypothesis_and_acceptance": "Evaluate the proposed KBO starter/command/relief features prospectively at a frozen live or pregame horizon. Score one representative per decision group, include both wins and losses, and require held-out improvement beyond uncertainty before changing the existing ranking method.",
+      "source_text_sha256": "61dc713cbdba663a361a34efd246de7ca971ed5d0a6339ae30df3828964ff59e",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261005-ALLLOG-P-492",
+      "canonical_id": "P-492",
+      "hypothesis_and_acceptance": "Preregister a pitcher-outs model with removal-risk and lineup-strength features, evaluate held-out outs-distribution coverage and exact-contract Brier against the frozen baseline, and group related side/outs exposures. Do not infer a new coefficient or decision threshold from this single failure.",
+      "source_text_sha256": "895835e2bbfaac8e3ab3a766ba5e3e695ab4e5bdcb7e5f2dce4a9c70ee445e1d",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    }
+  ]
+}

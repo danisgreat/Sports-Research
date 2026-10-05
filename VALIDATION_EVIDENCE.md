@@ -1,5 +1,9 @@
 # Current validation authority - 2026-10-01
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
 The historical evidence below is preserved for learning. Current results and limitations are in [IMPLEMENTATION_2026-10-01.md](IMPLEMENTATION_2026-10-01.md) and [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md). Original September holdouts remain unchanged; October candidate comparisons use opened chronological development data. Every current model is SHADOW_ONLY and prospective skill is not established. A q transform, a file hash, a historical grade or passing mechanics tests cannot confer live qualification.
 
 ---

@@ -1,0 +1,6 @@
+
+## Final native-owner follow-up — P-520
+
+This addendum supersedes the earlier P-520 native-ID gap and selects `research/verification/all_log_resolution_2026-10-05/carryover_v3.json`. The official KBO dated game list now returns `20260927HHLT0`, Hanwha away at Lotte, normal final in the ninth, score 6–2, scheduled September 27 at 17:00 KST. The retained full body and receipt are at `research/verification/all_log_resolution_2026-10-05/P-520_native_owner.json`. The scheduled field does not prove actual first pitch. Existing sporting grades are unchanged; original operator terms, issue/baseline custody and audited source independence still prevent formal certification. All 53 carryover IDs remain, with this one native-owner requirement removed.
+
+The local source registry now contains 111 verified receipt bodies; 59 are available from the staged publication and 52 remain excluded local-only. Earlier 110-body counts describe the preceding checkpoint. Local files remain authoritative; GitHub main is the destination. The selected control is CR-2026.10.05-I5, frozen by CONTROL_MANIFEST_2026-10-05-5.md. Earlier append projections and control receipts remain unchanged. No IDs are added; P-538 remains next.

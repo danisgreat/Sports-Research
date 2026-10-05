@@ -1,0 +1,2126 @@
+[
+  {
+    "handle": "TMP-AUDIT-20260912-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+    "line": 7,
+    "text": "**Period correction:** P-255-C05 and P-256-C05 are **UNRESOLVED_PERIOD**, not demonstrated research wins. Whole-match corners of 24 and 15 do not establish regulation Over 8.5: losing splits require 16+ and 7+ extra-period corners respectively, and no recovered evidence excludes them. Reopen the existing TMP-AUDIT-20260912-03 and -04 handles. They remain separate documentary/period follow-ups, bringing that queue back to **5**; the primary queue stays **23**. Final scores and other rows remain as recorded. Original Part-1 custody is preserved; Appendix A in Part 4 carries the evidence receipt and correction pointer. No new ID or probability is created."
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+    "line": 74591,
+    "text": "| TMP-AUDIT-20260912-01 | P-250-C05 | Restored mini says corners unresolved; missing later settlement artifact claims all graded. Recover field-owner/provider adjudication and exact count before certifying the inherited closure. |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+    "line": 74592,
+    "text": "| TMP-AUDIT-20260912-02 | P-251-C05 | Restored mini has provisional 10-11 corners. Recover the later definition/owner decision; threshold invariance alone does not establish provider validity. |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+    "line": 74593,
+    "text": "| TMP-AUDIT-20260912-03 | P-255-C05 | Restored mini has unresolved corners; recover later exact regulation-only adjudication. |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+    "line": 74594,
+    "text": "| TMP-AUDIT-20260912-04 | P-256-C05 | Same gap, and this was rank 1. Full process retrospective present; outcome-specific corner explanation is not certified without the missing field. |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+    "line": 74595,
+    "text": "| TMP-AUDIT-20260912-05 | P-265-C05 | Supplied pregame provider unknown. A secondary nine-corner display exists, but it cannot reconstruct the missing later settlement decision. Recover corner owner and later settlement decision. The official competition/club reports now verify the first-half goal. |"
+  },
+  {
+    "handle": "TMP-SETTLED",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 7830,
+    "text": "| Canonical mapping | `P-318`–`P-332` → `P-318`–`P-332`; no collision; no `TMP-SETTLED-*` identifier needed. Part 2's next ID at import was `P-318`. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 8009,
+    "text": "| TMP-OPEN-20260909-03 / A / P-126 | [Sofascore exact pairing](https://www.sofascore.com/football/match/aakraman-sc-sikkim-boys-club/zxuhsicEi) now displays Aakraman 3-0 Sikkim Boys, 28 August 2026, SFA A Division round 9. It explicitly identifies a community editor and promotes its amateur Torneo entry service. [The Away End](https://theawayend.co/sikkim-premier-division-league/) search extraction still lists the fixture at 11:00 on 28 August without a result; direct opening timed out. | IDENTITY_STATE_CONFLICT / UNRESOLVED. New 3-0 secondary candidate recorded; old 1-0/reschedule claims are not silently replaced. C06 Over 7.5 corners unresolved. | Obtain organiser-authenticated date, competition, final and event ID first. Community-edited final text does not resolve the inherited identity/state conflict. No starting XI, full bench, both coaches or exact corners newly authenticated. No tactical explanation of the unverified outcome is justified. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 8010,
+    "text": "| TMP-OPEN-20260909-04 / B / P-148-C02 | [Official Toluca report](https://www.tolucafc.com/noticias/estan-invictas) search extraction confirms 1-0 over Leon in Apertura 2026 round 5. It names Alberto Toril and Alejandro Corona and exposes player/substitute fields, but the extracted starter section has only seven names per team. Narrative says penalty at 76 minutes; goal widget says 77. No team-corner aggregate is exposed. | PROVISIONAL LOSS retained; no team-count ordering adjudicated. | Late penalty success does not validate the corner call or early-goal expectation. Useful new official lineup/coaching route, with completeness checked before use. Do not call this a full 22-player capture or backdate it to pregame. Resolve corner owner, team order and exact field. Keep the one-minute reporting difference explicit rather than inventing precision. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 8011,
+    "text": "| TMP-OPEN-20260909-05 / C / P-149-C02 | [Colorado Rapids 2 club release distributed by OurSports Central](https://www.oursportscentral.com/services/releases/colorado-rapids-2-fall-in-tight-battle-against-ventura-county-fc/n-6407094) confirms Ventura's 3-2 win on 28 August local time (29 August UTC). It is a club-attributed release, not an independent second club report. No complete Ventura corner count. | PROVISIONAL WIN retained for Ventura Over 3.5 team corners. | A successful attacking/winner branch and five goals do not identify corner exposure. Preserve goal grades and the original contract. Both complete starters, reserves and coaches were not newly authenticated as a pregame capture. Retry exact MLS NEXT Pro event statistics, not a similarly named senior-team fixture. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 8012,
+    "text": "| TMP-OPEN-20260909-06 / E / P-176-C05 | [Football365 exact match](https://www.football365.fr/direct-foot/359214/359496/amiens-sc-versailles.html) supports Amiens 3-0 Versailles, Ligue 3, 29 August. The inherited eight-corner chronology remains secondary; this pass did not certify a complete owner-controlled aggregate. | PROVISIONAL WIN retained for Under 10.5 (inherited 5-3 = 8). | All scoring after halftime exposes the timing/attacking-ceiling miss. Distinguish chance production from finishing and late penalty events. A commentary count is acceptable only if coverage, corrections, duplicate entries and final completeness are established for the frozen field; otherwise leave provisional. No pregame full-lineup/coaching recovery claimed. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-07",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 8013,
+    "text": "| TMP-OPEN-20260909-07 / F / P-178-C05 | [L'Equipe exact match](https://www.lequipe.fr/Football/match-direct/ligue-3/2026-2027/cannes-le-puy-en-velay-live/693487) verifies Cannes 2-0, Ligue 3 round 4, 29 August. It lists 11 starters per team, substitutions and coaches Mathieu Chabert / Stephane Dief. The bench display may be a used-substitute list; unused-reserve completeness is not established. | PROVISIONAL LOSS retained for Under 10.5 at inherited secondary 16. This follows the September 9 update, superseding September 7's unresolved label. | Correct scorer allocation can make a match Under win while a team Under loses. A goal from a corner is not a final corner count. Postgame lineup recovery helps future source routing but does not prove pre-cutoff access. Exact corner owner and full bench still needed. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-08",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 8014,
+    "text": "| TMP-OPEN-20260909-08 / G / P-179-C05 | [L'Equipe exact match](https://www.lequipe.fr/Football/match-direct/ligue-3/2026-2027/thionville-lusitanos-paris-13-atletico-live/693490) identifies Ligue 3 round 4 and a completed 1-1 league draw. The goals were penalties during play; there is no match-deciding shootout in this record. | PROVISIONAL WIN retained for Under 10.5 at inherited 8-1 = 9. Metadata corrected from National 2 / a tie decided on penalties. | Preserve the draw as an outright-winner failure when the card selected a team. Distinguish penalty goals from a shootout, and competition from generic team-page labels. A correct low-total branch does not validate first-half scoring. No newly authenticated pregame complete starter/bench/coaching capture. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-09",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 8015,
+    "text": "| TMP-OPEN-20260909-09 / J / P-233 | [Xinhua original report](https://www.news.cn/sports/20260902/2f6c7e41328c4604b3525bf42ddd2ac5/c.html) identifies the 1 September match as a Chinese FA Cup quarterfinal, Beijing 3-1 Lanzhou. No corner statistic. | PROVISIONAL WIN retained for Over 8.5 at inherited 13. Round corrected from R16 to quarterfinal. | The attacking result supports the broad scoring branch; conceding defeats the clean-sheet branch. Late decisive goals do not validate an early-goal mechanism. Verify opponent scoring independently and obtain an exact cup match sheet for corners and personnel; no new full pregame roster capture claimed. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-10",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 8016,
+    "text": "| TMP-OPEN-20260909-10 / K / P-234-C03 | The same Xinhua report confirms Dalian 1-0 Shenhua in a quarterfinal. [Titan Sports original report](https://www.ttplus.cn/publish/app/data/2026/09/01/626066/os_news.html) records the early Dalian goalkeeper dismissal and later Shenhua dismissal. Neither supplies a complete corner tally. | PROVISIONAL WIN retained for Over 8.5 at inherited 10. Round corrected; disrupted-match flag retained. | A post-issue dismissal changes personnel and game state; do not treat the result as clean evidence of general cup scoring suppression. Source descriptions differ by a minute around the winning penalty; no derivative needs that precision here. Record starting keeper versus replacement, and separate prediction-time knowledge from later substitutions. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-11",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+    "line": 8017,
+    "text": "| TMP-OPEN-20260909-11 / L / P-235 | Xinhua and Titan identify Shanghai Port's 3-0 quarterfinal win over Shandong. Neither provides the target corner field. They are distinct publishers, but shared underlying match-data lineage is unverified. | PROVISIONAL WIN retained for Over 8.5 at inherited 14. Round corrected from R16. | A match Over can win with one team scoreless; each side's scoring floor needs its own scenarios. The final alone cannot validate a territory/corner mechanism. Retry exact official cup box/team-sheet fields, with date/round and pre-cutoff publication evidence. |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 7,
+    "text": "**Period correction:** P-255-C05 and P-256-C05 are **UNRESOLVED_PERIOD**, not demonstrated research wins. Whole-match corners of 24 and 15 do not establish regulation Over 8.5: losing splits require 16+ and 7+ extra-period corners respectively, and no recovered evidence excludes them. Reopen the existing TMP-AUDIT-20260912-03 and -04 handles. They remain separate documentary/period follow-ups, bringing that queue back to **5**; the primary queue stays **23**. Final scores and other rows remain as recorded. Original Part-1 custody is preserved; Appendix A in Part 4 carries the evidence receipt and correction pointer. No new ID or probability is created."
+  },
+  {
+    "handle": "TMP-OPEN-20260909-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260910-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 43,
+    "text": "| Open / live / pending settlement queue | **2026-09-15(b): NO LIVE EVENT. 23 open handles** — the 13 below plus `TMP-OPEN-20260912-01` (P-377-C02), `TMP-OPEN-20260914-01`/`-02`/`-03`/`-06` (P-399-C02, P-401-C01/C03, P-406 six-over rows) and `TMP-OPEN-20260915-01`…`-05` (P-407-C01, P-409-C02, P-410-C05, **P-418 whole card — identity conflict**, P-419-C05). Retired: `TMP-OPEN-20260914-04`/`-05` (P-402 corners WIN at the Premier League record) and `TMP-SETTLED-20260911-01` (merged into canonical P-374). Table: `GAME_LOG_STATUS_CURRENT.md`. *(Earlier text follows.)* **2026-09-15: NO LIVE EVENT. `P-364` FINAL — England won by 8 wickets (Day 4, 12 Sep); winner label WIN; `TMP-OPEN-20260911-03` retired. Open rows now 13** (four Part-3 corner rows + nine inherited Part-2 rows, below). No new mini log was supplied or found (see §\"2026-09-15\"). *(Historical 2026-09-12 text follows.)* **One live event:** `P-364` (England v Pakistan 3rd Test — Day 3 at this pass). Its four ranked rows are settled; only the potential-winner label is open (`TMP-OPEN-20260911-03`). **Two new provisional derivative rows:** `P-368-C02` (`TMP-OPEN-20260911-01`, Over 7.5 corners, provisional WIN at 9) and `P-369-C01` (`TMP-OPEN-20260911-02`, Under 10.5 corners, provisional LOSS at 11) — no provider was frozen, so no W/L/Brier is booked. **Carried:** `P-341-C03` (`TMP-OPEN-20260909-01`, unsettleable to standard; ESPN `uga.1` still stale on the 2026-09-11 re-probe) and `P-342-C03` (`TMP-OPEN-20260909-02`, provisional WIN). **Nine inherited Part-2 appendix rows** (`TMP-OPEN-20260909-03`…`-11`; custody Part 2). **Collision record:** `TMP-SETTLED-20260911-01` (unsupplied Fenerbahçe–Roma no-forecast record; final 1–1; non-scorable). **Retired this pass:** `TMP-OPEN-20260910-01`…`-03` (`P-345-C03`, `P-346-C05`, `P-355-C05` — all WIN at their frozen field owners). `P-366-C02/C03` closed as terminal censored. **Total genuinely open rows across all three parts: 14.** |"
+  },
+  {
+    "handle": "TMP-SETTLED",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 197,
+    "text": "| Canonical mapping | `P-333`–`P-344` → `P-333`–`P-344`; Part 3's next ID at import was `P-333`; no collision; **no `TMP-SETTLED-*` identifier needed** for the main cohort |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 452,
+    "text": "**Pass scope:** 26 issued cards (`P-345`–`P-369`, `P-371`), 1 administrative no-forecast closure (`P-370`), and 1 unsupplied collision record (`TMP-SETTLED-20260911-01`). Live-state check first; independent re-verification of finals at field owners; settlement of three derivative rows that had been left open; the table-format settlement block and three-question retrospective for every card; a deep retrospective for every Rank-#1 loss; a control-execution audit; cross-sport algorithm changes; source audit; and the researched answer to the standing over/under directive."
+  },
+  {
+    "handle": "TMP-CANON-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 475,
+    "text": "| Local label collision at `P-358` | The `P-371` log reports that an earlier external artifact issued **\"P-358\" as an administrative no-forecast record for Fenerbahçe vs Roma** (UCL league phase MD1, start crossed). That artifact was **not supplied** and is not in this repository, `prediction logs/`, or the user's Downloads folder (searched 2026-09-11). | **Canonical `P-358` = Puerto Rico (W) vs China (W)** — the issued, fully documented card with which `P-359`–`P-371` are contiguous. The mini-log's alias **`TMP-CANON-20260911-01` → canonical `P-358`**, retired on import. The Fenerbahçe–Roma record takes the repository's collision namespace **`TMP-SETTLED-20260911-01`** — the **first use** of that namespace (`EXTERNAL_LOGGING_WORKFLOW.md`). Final verified at the field owner: **Fenerbahçe 1–1 Roma** (UEFA `matchstats` FAME feed, match `2049568`: goals 1/1, corners 3/1; scorers per ESPN/VAVEL: Cristante 39', Archie Brown 48'). No forecast was issued, so it is non-scorable; it takes the next free canonical ID only if its text is ever supplied. |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 475,
+    "text": "| Local label collision at `P-358` | The `P-371` log reports that an earlier external artifact issued **\"P-358\" as an administrative no-forecast record for Fenerbahçe vs Roma** (UCL league phase MD1, start crossed). That artifact was **not supplied** and is not in this repository, `prediction logs/`, or the user's Downloads folder (searched 2026-09-11). | **Canonical `P-358` = Puerto Rico (W) vs China (W)** — the issued, fully documented card with which `P-359`–`P-371` are contiguous. The mini-log's alias **`TMP-CANON-20260911-01` → canonical `P-358`**, retired on import. The Fenerbahçe–Roma record takes the repository's collision namespace **`TMP-SETTLED-20260911-01`** — the **first use** of that namespace (`EXTERNAL_LOGGING_WORKFLOW.md`). Final verified at the field owner: **Fenerbahçe 1–1 Roma** (UEFA `matchstats` FAME feed, match `2049568`: goals 1/1, corners 3/1; scorers per ESPN/VAVEL: Cristante 39', Archie Brown 48'). No forecast was issued, so it is non-scorable; it takes the next free canonical ID only if its text is ever supplied. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 483,
+    "text": "| `P-364` England v Pakistan, 3rd Test, Edgbaston | **LIVE — Day 3, Session 2: Pakistan 206/3 (46.4 ov), trail by 114** (Masood 92*, Babar 34*) | ESPNcricinfo live page via `r.jina.ai` (direct fetch HTTP 403) | Potential-winner row **stays open** → `TMP-OPEN-20260911-03`. Its four ranked rows were already settled from the completed England first innings. Scheduled through 2026-09-13 BST. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260910-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 512,
+    "text": "| `P-345-C03` (Rank #3) | Club Brugge Over 3.5 team corners — UEFA official match statistics | UEFA FAME `corners`: **Brugge 4**, Villa 5 | **WIN** (+0.5) | 0.1600 | `TMP-OPEN-20260910-01` **retired**. The conflict (Guardian 4 vs VI 3) is resolved in the Guardian's favour; **VI's count was wrong by one**. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260910-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 513,
+    "text": "| `P-346-C05` (Rank #5) | Total corners Over 7.5 — UEFA official match statistics | **AEK 7 + LASK 3 = 10** | **WIN** (+2.5) | 0.1600 | `TMP-OPEN-20260910-02` **retired**. The Guardian had reported 7–4 = 11 — **its LASK count was wrong by one**. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260910-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 514,
+    "text": "| `P-355-C05` (Rank #5) | Total corners Over 8.5, regulation — Opta/FotMob definition | FotMob: **Sydney 5 + Victory 4 = 9** | **WIN** (+0.5) | 0.1089 | `TMP-OPEN-20260910-03` **retired**. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 515,
+    "text": "| `P-368-C02` (Rank #2) | Total corners Over 7.5 — **no provider frozen** (`UNKNOWN_DEFINITION`) | FotMob **6–3 = 9**, agreeing with Forebet and M9Bet (multiple secondary displays; independence unverified). UEFA-style field owner not found: the UAE Pro League match centre shows corners as \"–\". | **PROVISIONAL RESEARCH WIN** — not booked | (0.2025 if accepted) | **`TMP-OPEN-20260911-01`** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 516,
+    "text": "| `P-369-C01` (Rank #1) | Total corners Under 10.5 — no provider frozen | FotMob **5–6 = 11** (multiple secondary displays; independence unverified) | **PROVISIONAL RESEARCH LOSS** (−0.5) — not booked | (0.4624 if accepted) | **`TMP-OPEN-20260911-02`** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 518,
+    "text": "| `P-364` potential winner | England to win the Test | Match **LIVE** (above) | pending | — | **`TMP-OPEN-20260911-03`** — retry on the official Test final |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 555,
+    "text": "| `TMP-SETTLED-20260911-01` | Fenerbahçe v Roma (UCL) — unsupplied no-forecast record | Soccer · — | 1–1 | — | — | — | — | — | none issued | **ADMIN / NON-SCORABLE** |"
+  },
+  {
+    "handle": "TMP-CANON-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 896,
+    "text": "#### P-358 — Settlement (canonical `P-358`; mini-log alias `TMP-CANON-20260911-01`, retired)"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1051,
+    "text": "**Potential winner:** England ~91% · **PENDING** (`TMP-OPEN-20260911-03`) · **Card mean Brier (4 rows):** 0.3429."
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1075,
+    "text": "**Match final:** Pakistan 133 & 449 (96.4 ov); England 453 & 130/2 (24.2 ov) — **England won by 8 wickets**, Day 4, 12 Sep 2026 (ESPNcricinfo full scorecard via `r.jina.ai`; Wikipedia corroborates). **Potential winner England: WIN.** `TMP-OPEN-20260911-03` retired; card `FINAL / SETTLED`. Current-series evidence recovered for the tempo miss: England's innings run rates in Tests 1–2 were 4.55, 4.35 and 3.83 (**907 runs / 210.8 overs = 4.30**) against the 4.00 required — in sources the card already cited. Winner-label blindspot: no win/draw/loss mass or overs-remaining arithmetic; the \"Pakistan <200 every innings\" aggregate was followed by a 96.4-over 449. → cricket control 27 evidence refresh and new control 28. Full retrospective: §\"2026-09-15\" at the foot of this file and the archived log B mini (`archive/mini_logs/PREDICTION_MINI_RUNNING_LOG_P390_P406_RETROSPECTIVE_SETTLED_2026-09-15.md` §0.3)."
+  },
+  {
+    "handle": "TMP-OPEN-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1159,
+    "text": "| 2 | Total corners Over 7.5 (no frozen provider) | 0.55 | **PROVISIONAL WIN** | not booked | 9 (multiple secondary displays; independence unverified). `TMP-OPEN-20260911-01`. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1178,
+    "text": "| 1 | Total corners Under 10.5 (no frozen provider) | 0.68 | **PROVISIONAL LOSS** | not booked | 11 — **−0.5**. `TMP-OPEN-20260911-02`. |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1243,
+    "text": "#### `TMP-SETTLED-20260911-01` — unsupplied collision record"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1382,
+    "text": "**2026-09-15 update:** `TMP-OPEN-20260911-03` (`P-364` winner) is **retired — WIN** (England won by 8 wickets). **Open rows: 13; no live event.** Retries today: ESPN has no UAE Pro League route (`uae.1`/`are.1`/`uae.pro_league`/`uae.league` all HTTP 400) for `P-368-C02`/`P-369-C01`; `uga.1` still season 2025 with 0 events on 2026-09-08 for `P-341-C03`. `P-342-C03` and the nine Part-2 rows were not re-researched. The current per-row table is `GAME_LOG_STATUS_CURRENT.md` §\"Primary result/derivative follow-up queue - 13\"."
+  },
+  {
+    "handle": "TMP-OPEN",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1386,
+    "text": "**Tracking-handle conventions.** `TMP-OPEN-<YYYYMMDD>-<seq>` marks an issued row not yet settled to standard (never a canonical ID; never scored; retired on settlement). `TMP-SETTLED-<YYYYMMDD>-<seq>` marks an ID-collision record (`EXTERNAL_LOGGING_WORKFLOW.md`) — first used this pass."
+  },
+  {
+    "handle": "TMP-SETTLED",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1386,
+    "text": "**Tracking-handle conventions.** `TMP-OPEN-<YYYYMMDD>-<seq>` marks an issued row not yet settled to standard (never a canonical ID; never scored; retired on settlement). `TMP-SETTLED-<YYYYMMDD>-<seq>` marks an ID-collision record (`EXTERNAL_LOGGING_WORKFLOW.md`) — first used this pass."
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1390,
+    "text": "| ~~`TMP-OPEN-20260911-03`~~ | `P-364` potential winner | England v Pakistan, 3rd Test — **FINAL (England won by 8 wickets, 12 Sep)** | England to win (~91%) | **RETIRED 2026-09-15 — WIN.** Card `FINAL / SETTLED`. | Official Test result (scheduled through 2026-09-13 BST). Settle the winner label, then close the card. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1391,
+    "text": "| **`TMP-OPEN-20260911-01`** | `P-368-C02` (Rank #2) | Al Jazira 1–1 Al Nasr | Total corners Over 7.5 (no frozen provider) | `PROVISIONAL RESEARCH WIN` — 6–3 = 9 (FotMob/Opta, Forebet, M9Bet). Not booked. | A UAE Pro League official or data-partner match-stat record (the league match centre currently shows \"–\"). |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1392,
+    "text": "| **`TMP-OPEN-20260911-02`** | `P-369-C01` (Rank #1) | Dubai United 1–1 Shabab Al Ahli | Total corners Under 10.5 (no frozen provider) | `PROVISIONAL RESEARCH LOSS` — 5–6 = 11 (multiple secondary displays; independence unverified). Not booked. | Same. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1393,
+    "text": "| `TMP-OPEN-20260909-01` | `P-341-C03` | BUL 4–1 Ntugasaze | Over 7.5 corners | `UNSETTLEABLE` to its pre-registered field-owner standard. **Re-probed 2026-09-11:** ESPN `soccer/uga.1` still season 2025, 0 events on 2026-09-08. | ESPN `uga.1` rolling to 2026-27. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1394,
+    "text": "| `TMP-OPEN-20260909-02` | `P-342-C03` | Komárno 2–0 Lučenec | Over 8.5 corners | `PROVISIONAL RESEARCH WIN` (16) | An SFZ / Niké liga data-partner record. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1395,
+    "text": "| `TMP-OPEN-20260909-03`…`-11` | Part-2 appendix A, B, C, E, F, G, J, K, L | (unchanged) | (unchanged) | Custody stays with `PREDICTION_LOG_COMBINED_2.md`. The external session's 2026-09-11 recheck reported **0 of 9 upgraded**; this pass did not independently re-research them. | as recorded in Part 2 |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1396,
+    "text": "| **`TMP-SETTLED-20260911-01`** | unsupplied \"P-358\" collision record | Fenerbahçe 1–1 Roma | none (no forecast) | ADMIN / NON-SCORABLE | Canonical ID assigned only if the record's text is supplied. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260910-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1398,
+    "text": "**Retired this pass (settled at their frozen field owners):** `TMP-OPEN-20260910-01` (`P-345-C03`, WIN, UEFA 4 corners), `TMP-OPEN-20260910-02` (`P-346-C05`, WIN, UEFA 10), `TMP-OPEN-20260910-03` (`P-355-C05`, WIN, FotMob 9). These three handles were issued by the external session on 2026-09-10 and were never recorded in this file until now. **Closed as terminal:** `P-366-C02/C03` (20-over endpoint censored by a rain-reduced innings; no handle — nothing retrievable can change it)."
+  },
+  {
+    "handle": "TMP-OPEN-20260910-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1398,
+    "text": "**Retired this pass (settled at their frozen field owners):** `TMP-OPEN-20260910-01` (`P-345-C03`, WIN, UEFA 4 corners), `TMP-OPEN-20260910-02` (`P-346-C05`, WIN, UEFA 10), `TMP-OPEN-20260910-03` (`P-355-C05`, WIN, FotMob 9). These three handles were issued by the external session on 2026-09-10 and were never recorded in this file until now. **Closed as terminal:** `P-366-C02/C03` (20-over endpoint censored by a rain-reduced innings; no handle — nothing retrievable can change it)."
+  },
+  {
+    "handle": "TMP-OPEN-20260910-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1398,
+    "text": "**Retired this pass (settled at their frozen field owners):** `TMP-OPEN-20260910-01` (`P-345-C03`, WIN, UEFA 4 corners), `TMP-OPEN-20260910-02` (`P-346-C05`, WIN, UEFA 10), `TMP-OPEN-20260910-03` (`P-355-C05`, WIN, FotMob 9). These three handles were issued by the external session on 2026-09-10 and were never recorded in this file until now. **Closed as terminal:** `P-366-C02/C03` (20-over endpoint censored by a rain-reduced innings; no handle — nothing retrievable can change it)."
+  },
+  {
+    "handle": "TMP-SETTLED",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1407,
+    "text": "**Temporary-ID convention (introduced 2026-09-09).** `EXTERNAL_LOGGING_WORKFLOW.md` already defines `TMP-SETTLED-<date>-<seq>` for the *ID-collision* case (a distinct new event landing on an occupied canonical ID). That case did **not** arise here — `P-333`–`P-344` mapped one-to-one with no collision. What the ledger lacked was a handle for the separate problem the user has flagged: **rows that are not yet fully settled and therefore cannot yet carry a full retrospective.** A distinct namespace is opened for that, deliberately named so it can never be confused with the collision convention:"
+  },
+  {
+    "handle": "TMP-OPEN",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1409,
+    "text": "> **`TMP-OPEN-<YYYYMMDD>-<seq>`** — a tracking handle for an issued row whose settlement field has not been reached to standard. It is **not** a canonical ID, never enters the scorecard, never receives a W/L or Brier, and is retired the moment the row settles (or is declared terminal), at which point the row is graded under its own canonical `P-###-C##` identifier. Its only function is to guarantee that no unsettled row can be silently lost from the queue."
+  },
+  {
+    "handle": "TMP-OPEN-20260909-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1413,
+    "text": "| **`TMP-OPEN-20260909-01`** | `P-341-C03` | BUL FC 4–1 Ntugasaze FC (Uganda Premier League R3) | Over 7.5 total match corners | **`UNSETTLEABLE` to the card's own pre-registered field-owner standard.** Secondary displays indicated ~12 corners (directionally a WIN), but no named official/data-partner endpoint recovered. No W/L/Brier booked. | **Partial.** The card's four score-derived rows have a full three-question retrospective (above). The corner row cannot be retrospected on outcome because no outcome exists to standard; its *process* retrospective is complete and positive — the pre-registered gate worked exactly as written. | **Concrete retry trigger identified (see the settlement attempt below): re-query `soccer/uga.1` once ESPN rolls the feed to 2026-27.** Do not settle from a secondary count (`G10.2`/`L-081`). |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1414,
+    "text": "| **`TMP-OPEN-20260909-02`** | `P-342-C03` | Komárno 2–0 Lučenec (Slovnaft Cup R3) | Over 8.5 total match corners | **`PROVISIONAL RESEARCH WIN`** — two secondary structured sources report 1–15 = 16 corners; `RESEARCH_DIRECTION = PROVISIONAL WIN`, `OPERATOR_ACTION = UNKNOWN_DEFINITION`. No frozen provider. If later accepted, row Brier would be 0.2116 and the 5-row card mean 0.3527 — **not entered now.** | **Partial.** Four score-derived rows fully retrospected (deep Rank-#1 block above). The corner row's direction is corroborated but its provider was never frozen, so no outcome-based retrospective is created. | **No ESPN route exists for any Slovak competition (verified below).** Retry only via an SFZ / Niké liga data-partner record. A `PROVISIONAL WIN` never advances the scorecard. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260910-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1438,
+    "text": "These were the only open `P-333`–`P-344` items. *(Correction 2026-09-11: a 2026-09-10 edit inserted a sentence here pointing to \"the table below\" for three further derivative rows — `P-345-C03`, `P-346-C05`, `P-355-C05` — but never added that table or the cards they belonged to. All three were settled at their frozen field owners on 2026-09-11 (UEFA FAME; FotMob/Opta) and their external handles `TMP-OPEN-20260910-01`…`-03` are retired — see §\"2026-09-11\" and \"Open queue — current (2026-09-11)\".)*"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1444,
+    "text": "| `TMP-OPEN-20260909-03` | **A** / `P-126` | Total Corners Over 7.5 + whole-event identity | `IDENTITY_STATE_CONFLICT — UNRESOLVED` |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1445,
+    "text": "| `TMP-OPEN-20260909-04` | **B** / `P-148-C02` | Toluca team corners | `PROVISIONAL LOSS` |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1446,
+    "text": "| `TMP-OPEN-20260909-05` | **C** / `P-149-C02` | Ventura team corners | `PROVISIONAL WIN` |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1447,
+    "text": "| `TMP-OPEN-20260909-06` | **E** / `P-176-C05` | Amiens/Versailles Under 10.5 corners | `PROVISIONAL WIN` — **strengthened 2026-09-09** (APWin/Football365/TotalCorner consistent at 5–3 = 8) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-07",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1448,
+    "text": "| `TMP-OPEN-20260909-07` | **F** / `P-178-C05` | Cannes/Le Puy Under 10.5 corners | **Updated 2026-09-09: `UNRESOLVED → PROVISIONAL LOSS`** (leballonrond + Forebet independently 8–8 = 16) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-08",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1449,
+    "text": "| `TMP-OPEN-20260909-08` | **G** / `P-179-C05` | Thionville/Paris 13 Under 10.5 corners | `PROVISIONAL WIN` (8–1 = 9) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-09",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1450,
+    "text": "| `TMP-OPEN-20260909-09` | **J** / `P-233` | Beijing/Lanzhou Over 8.5 corners | `PROVISIONAL WIN` (secondary 13) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-10",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1451,
+    "text": "| `TMP-OPEN-20260909-10` | **K** / `P-234-C03` | Dalian/Shenhua Over 8.5 corners | `PROVISIONAL WIN` (secondary 10; disrupted-match flag) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-11",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1452,
+    "text": "| `TMP-OPEN-20260909-11` | **L** / `P-235` | Shandong/Shanghai Port Over 8.5 corners | `PROVISIONAL WIN` (secondary 14) |"
+  },
+  {
+    "handle": "TMP-CANON-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1523,
+    "text": "| `P-358` | Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired) | **FINAL / SETTLED** — deep Rank-#1 retro | L W L W; winner W; Brier 0.2973 |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1529,
+    "text": "| `P-364` | England v Pakistan — 3rd Test (Day-2 card) | **FINAL / SETTLED (2026-09-15)** — England won by 8 wickets; winner label settled, `TMP-OPEN-20260911-03` retired — deep Rank-#1 retro | L L W W; winner **W**; Brier 0.3429 |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1533,
+    "text": "| `P-368` | Al Jazira v Al Nasr — UAE Pro League | **FINAL / PARTIAL** — C02 corners provisional WIN (`TMP-OPEN-20260911-01`) | W P L W L; winner L (draw); Brier 0.1917 (4 rows) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1534,
+    "text": "| `P-369` | Dubai United v Shabab Al Ahli — UAE Pro League | **FINAL / PARTIAL** — C01 corners provisional LOSS (`TMP-OPEN-20260911-02`) — deep Rank-#1 retro (provisional) | P L L W W; winner L (draw); Brier 0.3909 (4 rows) |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1537,
+    "text": "| `TMP-SETTLED-20260911-01` | Fenerbahçe v Roma — UCL (unsupplied external \"P-358\" no-forecast record) | **ADMIN / NON-SCORABLE** | none issued; final 1–1 |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1682,
+    "text": "The fourteen result-evidence follow-ups are unchanged. **Five separate TMP-AUDIT-20260912-01 through -05 tasks** now track the missing later corner adjudications for P-250/P-251/P-255/P-256/P-265. Their original forecasts and available retrospectives were recovered into Part 1; the absent P267 settlement artifact must not be treated as present. See [all current IDs and both queues](../GAME_LOG_STATUS_CURRENT.md). Older settled labels on these five mean inherited closure, not independently reproduced field settlement."
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1687,
+    "text": "P-364 remains IN PROGRESS, at Day-3 stumps, not a final: Pakistan 133 and 449 all out (96.4), England 453. England's unstarted chase target is 130. [Cricbuzz exact commentary](https://www.cricbuzz.com/live-cricket-scores/129596/pak-vs-eng-3rd-test-pakistan-tour-of-england-2026) and [NDTV exact scorecard](https://sports.ndtv.com/cricket/eng-vs-pak-scorecard-live-cricket-score-pakistan-in-england-3-test-series-2026-3rd-test-enpk09092026264908) agree on the completed Pakistan innings and stumps state. Several official/venue pages still exposed Day-2 52/2, so they were not treated as the freshest state merely because they were official. PCB direct retrieval still failed. Ignore the sites' win-probability widgets. TMP-OPEN-20260911-03 stays open; the four already-graded ranked targets do not change. The earlier 233/4 snapshot below/elsewhere is historical, not the latest score. Recheck final on the next settlement request; no result is predicted or booked here."
+  },
+  {
+    "handle": "TMP-OPEN-20260911-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1702,
+    "text": "| `TMP-OPEN-20260911-03` | `P-364` potential winner — England | ESPNcricinfo full scorecard (via `r.jina.ai`): \"England won by 8 wickets\"; Pakistan 133 & 449 (96.4); England 453 & 130/2 (24.2); Day 4, 12 Sep. Wikipedia corroborates (same lineage likely). The search-engine summary said \"132 for 2\" — **wrong; not used**. | **WIN — retired.** `P-364` is `FINAL / SETTLED`. Card Brier unchanged (0.3429, 4 ranked rows); winner labels are not Brier rows. |"
+  },
+  {
+    "handle": "TMP-RECON-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1754,
+    "text": "| `P-374` Fenerbahçe v Roma | Same sporting event as the no-forecast collision record `TMP-SETTLED-20260911-01` | **P-374 is the canonical record** (a genuine pregame forecast); `TMP-SETTLED-20260911-01` and the external `TMP-RECON-20260912-01` are retired into it — not scored twice |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1754,
+    "text": "| `P-374` Fenerbahçe v Roma | Same sporting event as the no-forecast collision record `TMP-SETTLED-20260911-01` | **P-374 is the canonical record** (a genuine pregame forecast); `TMP-SETTLED-20260911-01` and the external `TMP-RECON-20260912-01` are retired into it — not scored twice |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1760,
+    "text": "Every issued event in logs A, B and C had finished before this pass. **No event is live.** One card cannot be settled for an identity reason, not a live one: **P-418** (Drukpa v RTC) — the fixture is not verified as having been played (`TMP-OPEN-20260915-04`)."
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 1941,
+    "text": "#### P-418 — OPEN (identity/state conflict; `TMP-OPEN-20260915-04`)"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2085,
+    "text": "**P-418 Drukpa v RTC (Bhutan) — NOT SETTLED: identity/state conflict.** The card itself recorded a fixture-time conflict (AiScore/Sofascore 12:00 UTC, TNT 13:00 UTC) and a stale Drukpa club schedule that omitted the fixture. At settlement: (1) the Bhutan Broadcasting Service round report dated **2026-09-15** lists the concluding first-round results as Paro 5–1 Thimphu, Thimphu City 4–0 Tensung, Transport United 1–0 Ugyen Academy, **RTC 3–3 Tsirang** and **BFF Academy U-20 2–2 Drukpa** — no Drukpa–RTC match; (2) the Bhutan Football Federation's own report list shows an RTC 1–1 Drukpa draw, but undated on the listing (most likely the earlier first-round meeting); (3) ESPN has no Bhutan route (`bhu.1` HTTP 400); Sofascore and AiScore returned HTTP 403. **Disposition:** `IDENTITY_STATE_CONFLICT — UNRESOLVED`, handle `TMP-OPEN-20260915-04`; no W/L, no Brier. *Blindspot:* the identity gate (`G0`) was treated as satisfied on aggregator fixture listings that disagreed with each other while the club's own schedule was stale. *Smallest change:* in sparse competitions, confirm the exact fixture with the federation or national broadcaster before issue, or fail closed (`RULES_GENERAL.md` §16.10(i)). Retry trigger: a dated BFF/BBS report or fixture list for 13–15 September naming Drukpa's opponent."
+  },
+  {
+    "handle": "TMP-RECON-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2191,
+    "text": "- **Custody:** canonical record for this match; `TMP-SETTLED-20260911-01` and `TMP-RECON-20260912-01` are retired into it."
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2191,
+    "text": "- **Custody:** canonical record for this match; `TMP-SETTLED-20260911-01` and `TMP-RECON-20260912-01` are retired into it."
+  },
+  {
+    "handle": "TMP-OPEN-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2302,
+    "text": "**Open-row tracking handle:** `TMP-OPEN-20260912-01` — retained outside the scored settlement until the required field-owning endpoint is available."
+  },
+  {
+    "handle": "TMP-OPEN-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2308,
+    "text": "- **Corner row:** ESPN exposes no statistics for this league, so C02 stays provisional (`TMP-OPEN-20260912-01`)."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2778,
+    "text": "**Open handle:** `TMP-OPEN-20260914-01` — `P-399-C02`, combined corners O8.5; retry only if a Lega Serie A/official data-partner field or frozen-provider-equivalent record is recovered."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2786,
+    "text": "- **Corner row:** C02 stays provisional (`TMP-OPEN-20260914-01`) — no Serie A record reached."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2814,
+    "text": "**Open handles:** `TMP-OPEN-20260914-02` — `P-401-C01` combined corners O8.5; `TMP-OPEN-20260914-03` — `P-401-C03` IFK team corners O4.5."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2814,
+    "text": "**Open handles:** `TMP-OPEN-20260914-02` — `P-401-C01` combined corners O8.5; `TMP-OPEN-20260914-03` — `P-401-C03` IFK team corners O4.5."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2822,
+    "text": "- **Corner rows:** C01 and C03 stay provisional (`TMP-OPEN-20260914-02`/`-03`), so Rank #1 is not booked."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2852,
+    "text": "**Open handles:** `TMP-OPEN-20260914-04` — `P-402-C02` total corners O8.5; `TMP-OPEN-20260914-05` — `P-402-C03` Tottenham team corners O4.5."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2852,
+    "text": "**Open handles:** `TMP-OPEN-20260914-04` — `P-402-C02` total corners O8.5; `TMP-OPEN-20260914-05` — `P-402-C03` Tottenham team corners O4.5."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2886,
+    "text": "**Open handle:** `TMP-OPEN-20260914-06` — `P-406-C01/C04`, exact Edinburgh score after **6.0 completed legal overs**. One exact checkpoint will settle both complementary rows."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 2909,
+    "text": "- **Final** (Edinburgh 118 all out; Amsterdam 120/2). The six-over rows stay unresolved (`TMP-OPEN-20260914-06`): a final score and fall-of-wicket markers do not settle a phase checkpoint (cricket control 15)."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3348,
+    "text": "> **2026-09-15(b) update to P-402 (this pass):** `P-402-C02` Combined corners Over 8.5 and `P-402-C03` Tottenham team corners Over 4.5 are now **settled WIN** at the Premier League official data record (fixture **128962**: Tottenham 5, Everton 6 = 11). Row Briers 0.0676 and 0.0841; card mean over 5 rows 0.1710. `TMP-OPEN-20260914-04`/`-05` retired. The provisional wording in the P-402 block above is preserved as the external session wrote it."
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3428,
+    "text": "| A's reconciliation: P-374 = same event as `TMP-SETTLED-20260911-01` | **Agree.** ESPN event 401915444 confirms Fenerbahçe 1–1 Roma, corners 1+3 = 4 (P-374 Under 9.5 WIN). | `TMP-SETTLED-20260911-01` retired into canonical P-374. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3464,
+    "text": "| `TMP-OPEN-20260912-01` | P-377-C02 corners O8.5 | Secondary 7; ESPN `gua.1` summary exposes **no** statistics | Liga Bantrab / data-partner corner record |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3465,
+    "text": "| `TMP-OPEN-20260914-01` | P-399-C02 corners O8.5 | ESPN 17 (8+9), secondaries agree; no Serie A record reached | Lega Serie A match-centre record |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3466,
+    "text": "| `TMP-OPEN-20260914-02` / `-03` | P-401-C01 / C03 | ESPN 17 and IFK 8; no Allsvenskan record | Allsvenskan / SEF record |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3467,
+    "text": "| `TMP-OPEN-20260914-06` | P-406-C01 / C04 six-over rows | exact 6.0-over score not recovered | ball-by-ball or official scorecard at 6.0 |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3468,
+    "text": "| **`TMP-OPEN-20260915-01`** | P-407-C01 Brugge corners O4.5 | ESPN 9; Pro League record not reached | Pro League match centre |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3469,
+    "text": "| **`TMP-OPEN-20260915-02`** | P-409-C02 Troyes corners O2.5 | ESPN 5; LFP record not reached | LFP / Ligue 1 match centre |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3470,
+    "text": "| **`TMP-OPEN-20260915-03`** | P-410-C05 Leipzig corners O4.5 | ESPN 8; DFL record not reached | bundesliga.com match facts |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3471,
+    "text": "| **`TMP-OPEN-20260915-04`** | **P-418 whole card** | Identity/state conflict — the fixture is not verified as played | dated BFF/BBS fixture or report naming Drukpa's 13–15 Sep opponent |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3472,
+    "text": "| **`TMP-OPEN-20260915-05`** | P-419-C05 corners O7.5 | ESPN 4; Allsvenskan record not reached | Allsvenskan record |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3473,
+    "text": "| retired | `TMP-OPEN-20260914-04`/`-05` (P-402 corners) | settled WIN at the Premier League record | — |"
+  },
+  {
+    "handle": "TMP-RECON-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3474,
+    "text": "| retired | `TMP-SETTLED-20260911-01`, `TMP-RECON-20260912-01` | merged into canonical P-374 | — |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3474,
+    "text": "| retired | `TMP-SETTLED-20260911-01`, `TMP-RECON-20260912-01` | merged into canonical P-374 | — |"
+  },
+  {
+    "handle": "TMP-SETTLED",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3476,
+    "text": "**No ID collision required a new `TMP-SETTLED` handle.** `P-372` is declared **RESERVED / UNUSED** (never issued; not to be reused). The external IDs `P-373`–`P-423` are canonical as issued. **Next canonical ID: `P-424`.**"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3484,
+    "text": "| P-374 | Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10 | FINAL / SETTLED — canonical record for Fenerbahçe v Roma; absorbs TMP-SETTLED-20260911-01 | W W W L L |"
+  },
+  {
+    "handle": "TMP-OPEN-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3487,
+    "text": "| P-377 | Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260912-01) | L P L W W |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3509,
+    "text": "| P-399 | Genoa vs Frosinone — Serie A | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260914-01) | W P W L L |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3511,
+    "text": "| P-401 | IFK Göteborg vs Halmstads BK — Allsvenskan | FINAL / PARTIAL — C01, C03 corners provisional (TMP-OPEN-20260914-02/-03) | P W P L W |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3512,
+    "text": "| P-402 | Tottenham Hotspur vs Everton — Premier League | FINAL / SETTLED (2026-09-15: corners settled at Premier League official record; TMP-OPEN-20260914-04/-05 retired) | W W W L L |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3516,
+    "text": "| P-406 | Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 | FINAL / PARTIAL — six-over rows unresolved (TMP-OPEN-20260914-06) | P L W P |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3517,
+    "text": "| P-407 | Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League | FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) | P W W L W |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3519,
+    "text": "| P-409 | Lille OSC vs ESTAC Troyes — French Ligue 1 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260915-02) | W P W W W |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3520,
+    "text": "| P-410 | RB Leipzig vs Hamburger SV — German Bundesliga | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-03) | W W W W P |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3528,
+    "text": "| P-418 | Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League | OPEN — IDENTITY/STATE CONFLICT: fixture not verified as played (TMP-OPEN-20260915-04) | none issued |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3529,
+    "text": "| P-419 | Djurgårdens IF vs GAIS — Sweden Allsvenskan | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-05) | W W W W P |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3552,
+    "text": "| Open rows issued here (13 handles) | Stay in this file's custody and are settled here when a retry trigger is met: `TMP-OPEN-20260909-01`/`-02`, `-20260911-01`/`-02`, `-20260912-01`, `-20260914-01`/`-02`/`-03`/`-06`, `-20260915-01`…`-05` (incl. the P-418 identity conflict) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3608,
+    "text": "- Handle `TMP-OPEN-20260914-06` **retired**."
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3630,
+    "text": "- **Disposition:** `IDENTITY_STATE_CONFLICT` → **`RESULT_NOT_RECOVERED`**. No W/L and no Brier. Handle `TMP-OPEN-20260915-04` is kept, with a new retry trigger: an RSSSF update, a BFF match report, or a BBS second-round report dated on or after 14 September."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3639,
+    "text": "| `TMP-OPEN-20260914-06` | P-406-C01/C04 | ESPN cricket API matchnote | **Settled — retired** |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3640,
+    "text": "| `TMP-OPEN-20260915-04` | P-418 | RSSSF raw HTML, BBS page metadata, web search | Re-classified `RESULT_NOT_RECOVERED` |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3641,
+    "text": "| `TMP-OPEN-20260915-03` | P-410-C05 Leipzig team corners O4.5 | bundesliga.com stats: direct HTTP 403; `r.jina.ai` raw text is all-zero placeholders. A WebFetch summary said \"7–7\", which is not on the page — excluded (`G-L13`) | Open (ESPN 8; C′'s secondary displays 7) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3642,
+    "text": "| `TMP-OPEN-20260915-05` | P-419-C05 | allsvenskan.se match `6529990` — JS / cookie wall | Open (ESPN 2+2) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3643,
+    "text": "| `TMP-OPEN-20260914-02` / `-03` | P-401-C01 / C03 | allsvenskan.se (same lane) | Open |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3644,
+    "text": "| `TMP-OPEN-20260915-02` | P-409-C02 | plus.ligue1.com `live/306887` — empty raw text | Open (ESPN 5) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3645,
+    "text": "| `TMP-OPEN-20260915-01` | P-407-C01 | proleague.be 2026-27 match slug → 404 | Open (ESPN 9) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3646,
+    "text": "| `TMP-OPEN-20260914-01` | P-399-C02 | Lega Serie A 2026-27 page not found; Sky Sport Italia tabellino 8–9 (secondary) | Open (ESPN 17) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3673,
+    "text": "| Handles `TMP-OPEN-20260915-02` to `-06` | Canonical queue | Collide with canonical numbering | Recorded as retired aliases in `GAME_LOG_STATUS_CURRENT.md`; canonical numbers unchanged |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_3.md",
+    "line": 3797,
+    "text": "- `P-255-C05` and `P-256-C05` (UEFA Women's Champions League) — settled at the UEFA field owner with a period-scope bound (24 corners / 137 played minutes and 15 / 115); handles `TMP-AUDIT-20260912-03` and `-04` retired."
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 27,
+    "text": "| Open / pending settlement queue (checked first, every session) | **23 handles** (2026-09-17), full table in `GAME_LOG_STATUS_CURRENT.md` §\"Primary result/derivative follow-up queue\". **Part-3 custody (13):**<ul><li>`TMP-OPEN-20260915-04` — **P-418 whole card, `RESULT_NOT_RECOVERED`** (re-classified 2026-09-16; fixture listed by RSSSF)</li><li>`-20260915-01` P-407-C01, `-02` P-409-C02, `-03` P-410-C05, `-05` P-419-C05</li><li>`-20260914-01` P-399-C02, `-02` P-401-C01, `-03` P-401-C03</li><li>`-20260912-01` P-377-C02</li><li>`-20260911-01` P-368-C02, `-02` P-369-C01</li><li>`-20260909-01` P-341-C03, `-02` P-342-C03</li></ul>**Retired 2026-09-16:** `-20260914-06` (P-406 six-over rows — settled in Part 3 §\"2026-09-16\"). *Count correction: the 2026-09-15 version of this row said \"Part-3 custody (13)\" while listing 14 handles; 14 − 1 = 13 now.* **Part-4 custody (1):** `TMP-OPEN-20260917-01` — `P-430-C05` Al Ain team corners Over 3.5; the card pre-registered the AFC official match-stat record, which publishes no corner field. ESPN and two secondary displays agree on Al Ain 2 (a research LOSS) but were not pre-registered, so the row is **not booked** (§16.10(j)). Retry: an AFC field-owning statistics record, or an explicitly reconciled approved provider. **Part-2 custody (9):** `TMP-OPEN-20260909-03`…`-11` (P-126, P-148-C02, P-149-C02, P-176-C05, P-178-C05, P-179-C05, P-233, P-234-C03, P-235). **Documentary/period audits (separate, 5 after 2026-09-17(c)):** `TMP-AUDIT-20260912-01` (P-250 — no route), `-02` (P-251 — reproducible, provider still unreached), `-05` (P-265 — reproducible, knife-edge). `-03` and `-04` (P-255-C05, P-256-C05) **REOPENED — UNRESOLVED_PERIOD**: whole-match counts do not prove regulation Overs. See the correction and Appendix A. None blocks a new forecast. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 27,
+    "text": "| Open / pending settlement queue (checked first, every session) | **23 handles** (2026-09-17), full table in `GAME_LOG_STATUS_CURRENT.md` §\"Primary result/derivative follow-up queue\". **Part-3 custody (13):**<ul><li>`TMP-OPEN-20260915-04` — **P-418 whole card, `RESULT_NOT_RECOVERED`** (re-classified 2026-09-16; fixture listed by RSSSF)</li><li>`-20260915-01` P-407-C01, `-02` P-409-C02, `-03` P-410-C05, `-05` P-419-C05</li><li>`-20260914-01` P-399-C02, `-02` P-401-C01, `-03` P-401-C03</li><li>`-20260912-01` P-377-C02</li><li>`-20260911-01` P-368-C02, `-02` P-369-C01</li><li>`-20260909-01` P-341-C03, `-02` P-342-C03</li></ul>**Retired 2026-09-16:** `-20260914-06` (P-406 six-over rows — settled in Part 3 §\"2026-09-16\"). *Count correction: the 2026-09-15 version of this row said \"Part-3 custody (13)\" while listing 14 handles; 14 − 1 = 13 now.* **Part-4 custody (1):** `TMP-OPEN-20260917-01` — `P-430-C05` Al Ain team corners Over 3.5; the card pre-registered the AFC official match-stat record, which publishes no corner field. ESPN and two secondary displays agree on Al Ain 2 (a research LOSS) but were not pre-registered, so the row is **not booked** (§16.10(j)). Retry: an AFC field-owning statistics record, or an explicitly reconciled approved provider. **Part-2 custody (9):** `TMP-OPEN-20260909-03`…`-11` (P-126, P-148-C02, P-149-C02, P-176-C05, P-178-C05, P-179-C05, P-233, P-234-C03, P-235). **Documentary/period audits (separate, 5 after 2026-09-17(c)):** `TMP-AUDIT-20260912-01` (P-250 — no route), `-02` (P-251 — reproducible, provider still unreached), `-05` (P-265 — reproducible, knife-edge). `-03` and `-04` (P-255-C05, P-256-C05) **REOPENED — UNRESOLVED_PERIOD**: whole-match counts do not prove regulation Overs. See the correction and Appendix A. None blocks a new forecast. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 27,
+    "text": "| Open / pending settlement queue (checked first, every session) | **23 handles** (2026-09-17), full table in `GAME_LOG_STATUS_CURRENT.md` §\"Primary result/derivative follow-up queue\". **Part-3 custody (13):**<ul><li>`TMP-OPEN-20260915-04` — **P-418 whole card, `RESULT_NOT_RECOVERED`** (re-classified 2026-09-16; fixture listed by RSSSF)</li><li>`-20260915-01` P-407-C01, `-02` P-409-C02, `-03` P-410-C05, `-05` P-419-C05</li><li>`-20260914-01` P-399-C02, `-02` P-401-C01, `-03` P-401-C03</li><li>`-20260912-01` P-377-C02</li><li>`-20260911-01` P-368-C02, `-02` P-369-C01</li><li>`-20260909-01` P-341-C03, `-02` P-342-C03</li></ul>**Retired 2026-09-16:** `-20260914-06` (P-406 six-over rows — settled in Part 3 §\"2026-09-16\"). *Count correction: the 2026-09-15 version of this row said \"Part-3 custody (13)\" while listing 14 handles; 14 − 1 = 13 now.* **Part-4 custody (1):** `TMP-OPEN-20260917-01` — `P-430-C05` Al Ain team corners Over 3.5; the card pre-registered the AFC official match-stat record, which publishes no corner field. ESPN and two secondary displays agree on Al Ain 2 (a research LOSS) but were not pre-registered, so the row is **not booked** (§16.10(j)). Retry: an AFC field-owning statistics record, or an explicitly reconciled approved provider. **Part-2 custody (9):** `TMP-OPEN-20260909-03`…`-11` (P-126, P-148-C02, P-149-C02, P-176-C05, P-178-C05, P-179-C05, P-233, P-234-C03, P-235). **Documentary/period audits (separate, 5 after 2026-09-17(c)):** `TMP-AUDIT-20260912-01` (P-250 — no route), `-02` (P-251 — reproducible, provider still unreached), `-05` (P-265 — reproducible, knife-edge). `-03` and `-04` (P-255-C05, P-256-C05) **REOPENED — UNRESOLVED_PERIOD**: whole-match counts do not prove regulation Overs. See the correction and Appendix A. None blocks a new forecast. |"
+  },
+  {
+    "handle": "TMP-OPEN-20260917-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 27,
+    "text": "| Open / pending settlement queue (checked first, every session) | **23 handles** (2026-09-17), full table in `GAME_LOG_STATUS_CURRENT.md` §\"Primary result/derivative follow-up queue\". **Part-3 custody (13):**<ul><li>`TMP-OPEN-20260915-04` — **P-418 whole card, `RESULT_NOT_RECOVERED`** (re-classified 2026-09-16; fixture listed by RSSSF)</li><li>`-20260915-01` P-407-C01, `-02` P-409-C02, `-03` P-410-C05, `-05` P-419-C05</li><li>`-20260914-01` P-399-C02, `-02` P-401-C01, `-03` P-401-C03</li><li>`-20260912-01` P-377-C02</li><li>`-20260911-01` P-368-C02, `-02` P-369-C01</li><li>`-20260909-01` P-341-C03, `-02` P-342-C03</li></ul>**Retired 2026-09-16:** `-20260914-06` (P-406 six-over rows — settled in Part 3 §\"2026-09-16\"). *Count correction: the 2026-09-15 version of this row said \"Part-3 custody (13)\" while listing 14 handles; 14 − 1 = 13 now.* **Part-4 custody (1):** `TMP-OPEN-20260917-01` — `P-430-C05` Al Ain team corners Over 3.5; the card pre-registered the AFC official match-stat record, which publishes no corner field. ESPN and two secondary displays agree on Al Ain 2 (a research LOSS) but were not pre-registered, so the row is **not booked** (§16.10(j)). Retry: an AFC field-owning statistics record, or an explicitly reconciled approved provider. **Part-2 custody (9):** `TMP-OPEN-20260909-03`…`-11` (P-126, P-148-C02, P-149-C02, P-176-C05, P-178-C05, P-179-C05, P-233, P-234-C03, P-235). **Documentary/period audits (separate, 5 after 2026-09-17(c)):** `TMP-AUDIT-20260912-01` (P-250 — no route), `-02` (P-251 — reproducible, provider still unreached), `-05` (P-265 — reproducible, knife-edge). `-03` and `-04` (P-255-C05, P-256-C05) **REOPENED — UNRESOLVED_PERIOD**: whole-match counts do not prove regulation Overs. See the correction and Appendix A. None blocks a new forecast. |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 40,
+    "text": "**Period correction:** P-255-C05 and P-256-C05 are **UNRESOLVED_PERIOD**, not demonstrated research wins. Whole-match corners of 24 and 15 do not establish regulation Over 8.5: losing splits require 16+ and 7+ extra-period corners respectively, and no recovered evidence excludes them. Reopen the existing TMP-AUDIT-20260912-03 and -04 handles. They remain separate documentary/period follow-ups, bringing that queue back to **5**; the primary queue stays **23**. Final scores and other rows remain as recorded. Original Part-1 custody is preserved; Appendix A in Part 4 carries the evidence receipt and correction pointer. No new ID or probability is created."
+  },
+  {
+    "handle": "TMP-OPEN-20260917-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 160,
+    "text": "| Temporary IDs | **None required.** The mini log declares no temp prediction IDs and no canonical conflict. One *derivative/result-recovery* handle was opened and closed inside this pass — `TMP-OPEN-20260917-02` (`P-451` Jornada 20 final) — which is not a prediction ID |"
+  },
+  {
+    "handle": "TMP-OPEN-20260917-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 513,
+    "text": "**Result recovery — the mini log left this open; it is closed here.** The mini log recorded `RESULT_NOT_RELIABLY_RECOVERED` and correctly warned against reusing the Jornada 19 91–89. This pass recovered the field-owner record: **`lnbp.mx/Dorados/team_results.html`, Jornada 20 filter — Dorados 97, El Calor 86.** The page is JavaScript-only (a `curl` returns a 16 KB shell containing no scores), which is why every text-fetch route in the mini log's pass failed; it renders correctly in a browser. The handle `TMP-OPEN-20260917-02` is opened and retired in the same edit. A separate search for a 2026 LNBP regulation packet again returned nothing, so **`BK-P1` stays FAIL** and the block remains correct."
+  },
+  {
+    "handle": "TMP-OPEN-20260917-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 695,
+    "text": "**Queue:** `TMP-OPEN-20260917-02` (`P-451` Jornada 20 final) was opened and retired inside this pass. No other handle changes. The open queue stays at **23 handles** — Part-3 custody 13, Part-4 custody 1 (`P-430-C05`), Part-2 custody 9 — plus 3 documentary audits. Nothing in this cohort is unsettled on a source rule."
+  },
+  {
+    "handle": "TMP-OPEN-20260917-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 811,
+    "text": "| Temporary IDs | One: `TMP-OPEN-20260917-01`, a derivative follow-up handle for `P-430-C05` only — **not** a prediction ID and not a canonical conflict |"
+  },
+  {
+    "handle": "TMP-OPEN-20260917-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 950,
+    "text": "**`P-430-C05` stays open (`TMP-OPEN-20260917-01`).** The card pre-registered the AFC official match-stat record; the reachable AFC report carries the score but not the corner field. ESPN and two secondary displays agree on **Al Ain 2** — a research LOSS — but ESPN was not pre-registered, so under §16.10(j) the row is not booked. This is the correct outcome-independent application: the evidence points to a loss and the row still is not silently promoted."
+  },
+  {
+    "handle": "TMP-OPEN-20260917-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1196,
+    "text": "| Open handles | 22 primary + 3 documentary audits | **23 primary** (`TMP-OPEN-20260917-01` added, Part 4 custody) + 3 documentary audits |"
+  },
+  {
+    "handle": "TMP-OPEN-20260917-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1202,
+    "text": "- The one temporary ID (`TMP-OPEN-20260917-01`) is recorded, with Part 4 holding custody."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1228,
+    "text": "| `P-406-C01` / `P-406-C04` | Part 3 | **WIN / LOSS** — Edinburgh 68/2 after 6.0 overs at the ESPN cricket matchnote; `TMP-OPEN-20260914-06` retired |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1230,
+    "text": "| `P-255-C05` | Part 1 (documentary audit) | **UNRESOLVED_PERIOD** — whole-match 24 over 137 does not bound regulation; TMP-AUDIT-20260912-03 reopened 2026-09-17(c) |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1231,
+    "text": "| `P-256-C05` | Part 1 (documentary audit) | **UNRESOLVED_PERIOD** — whole-match 15 over 115 does not bound regulation; TMP-AUDIT-20260912-04 reopened 2026-09-17(c) |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1256,
+    "text": "- **Handle `TMP-OPEN-20260914-06` retired.** Full settlement, validation answers and retrospective: [Part 3 §\"2026-09-16\"](PREDICTION_LOG_COMBINED_3.md)."
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1263,
+    "text": "- **Booking:** stays provisional under §16.10(j) — Lega Serie A's own record was not reached and the card never pre-registered a provider. `TMP-AUDIT-20260912-02` **kept**, but its \"cannot be reproduced\" premise is now false."
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1273,
+    "text": "- **`TMP-AUDIT-20260912-03` retired:** the field-owner record is recovered and reproducible; the residual is a period-scope limit, not a missing source."
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1282,
+    "text": "- **`TMP-AUDIT-20260912-04` retired** on the same basis as A.3."
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1288,
+    "text": "- **Provider-sensitive:** one corner the other way flips the row, so it stays provisional and `TMP-AUDIT-20260912-05` is **kept**."
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_4.md",
+    "line": 1293,
+    "text": "Re-probed 2026-09-16: ESPN `chn.fa`, `chn.cup`, `chn.fa_cup`, `chn.super_cup` and `chn.2` all return HTTP 400. No keyless route exists. `TMP-AUDIT-20260912-01` **kept**."
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 30,
+    "text": "| Part-5 issued events | **35 canonical event cards through P-517:** P-482–P-489 and P-491–P-517 (P-487 = Dallas Wings @ Phoenix Mercury; **P-516 = `TMP-20260923-NPB-CHU-DB-G25`**; **P-517 = `TMP-20260923-NBL-CNS-TAS`**, both assigned 2026-09-26(a)). P-490 is retired and unused. Separate working mini log claims five further issues; these are reserved but not canonical imports. |"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 30,
+    "text": "| Part-5 issued events | **35 canonical event cards through P-517:** P-482–P-489 and P-491–P-517 (P-487 = Dallas Wings @ Phoenix Mercury; **P-516 = `TMP-20260923-NPB-CHU-DB-G25`**; **P-517 = `TMP-20260923-NBL-CNS-TAS`**, both assigned 2026-09-26(a)). P-490 is retired and unused. Separate working mini log claims five further issues; these are reserved but not canonical imports. |"
+  },
+  {
+    "handle": "TMP-NBL",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 32,
+    "text": "| Part-5 learning-only diagnostics | Existing settled results are unchanged by ID reassignment. The 2026-09-23(c)/(d) cohort (descriptive only): **P-487** Rank-1 **W**; **P-489** Rank-1 **L** (`TOP_OU_REVIEW`); **P-491** Rank-1 **W**; TMP-NBL Rank-1 L. The **2026-09-24 cohort** (16 pregame units; P-494 live-issued and excluded; §(f) part M): **Rank-1 13 W / 3 L**; Rank-2 11 W / 5 L; Hit@2 11/12 once the four covering-pair cards are excluded; top O/U 10 W / 6 L (baseball Overs 1–3); row Brier 0.2282 (n=60), Rank-1 Brier 0.187. |"
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 34,
+    "text": "| Historical open handles | These continue in GAME_LOG_STATUS_CURRENT.md. No temporary ID awaits reconciliation: `TMP-20260923-NPB-CHU-DB-G25` = **P-516** and `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)). TMP-20260922-WNBA-DAL-PHX is retired as an alias of P-487. |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 34,
+    "text": "| Historical open handles | These continue in GAME_LOG_STATUS_CURRENT.md. No temporary ID awaits reconciliation: `TMP-20260923-NPB-CHU-DB-G25` = **P-516** and `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)). TMP-20260922-WNBA-DAL-PHX is retired as an alias of P-487. |"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 34,
+    "text": "| Historical open handles | These continue in GAME_LOG_STATUS_CURRENT.md. No temporary ID awaits reconciliation: `TMP-20260923-NPB-CHU-DB-G25` = **P-516** and `TMP-20260923-NBL-CNS-TAS` = **P-517** (2026-09-26(a)). TMP-20260922-WNBA-DAL-PHX is retired as an alias of P-487. |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 949,
+    "text": "- The P-482-onward active merged mini log retains P-489, P-491, P-493 as pending and TMP-20260923-NBL-CNS-TAS on issue-time hold; it has not been archived."
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 962,
+    "text": "| P-487 | Reserved issue-time hold; later NBL source carries this claim but lacks a verifiable original issue timestamp | Not promoted; see TMP-20260923-NBL-CNS-TAS |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 973,
+    "text": "**NBL custody.** The later temporary source contains a full Cairns–Tasmania forecast labelled P-487, contradicting the earlier “no claimant” audit. The card has no original freeze/issue timestamp. To avoid asserting a false issue order, the forecast is preserved under TMP-20260923-NBL-CNS-TAS with P-487 held, pending timestamp evidence. Its later live-status material remains quarantined as described in the card."
+  },
+  {
+    "handle": "TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 983,
+    "text": "The exact live score state, model, market definitions, sources, settlement route, and freeze receipt are preserved in the [P-494 active mini-log card](Mini%20logs%20(to%20be%20sent%20to%20actual%20log%20later)/Mini%20Prediction%20Log%20-%20P-494%20onward%20-%202026-09-23/PREDICTION_MINI_RUNNING_LOG_P494_ONWARD.md). Original temporary source handle `TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH` is an alias only; byte-exact source preserved under `archive/mini_logs/originals_2026-09-23/`."
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 991,
+    "text": "- Imports the settled records from the consolidated mini log: **P-489** (22 Sep, game 24), **P-491**, and two temporary-ID records (`TMP-20260922-WNBA-DAL-PHX`, `TMP-20260923-NBL-CNS-TAS`)."
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 991,
+    "text": "- Imports the settled records from the consolidated mini log: **P-489** (22 Sep, game 24), **P-491**, and two temporary-ID records (`TMP-20260922-WNBA-DAL-PHX`, `TMP-20260923-NBL-CNS-TAS`)."
+  },
+  {
+    "handle": "TMP-NBL",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1001,
+    "text": "| Issue horizons | **P-489**: START_CROSSED (\"final research pass just after the scheduled start\"), so it stays outside pregame metrics. **P-491**: PREGAME, clean (17:53–17:56 AEST v an 18:00 start, with orders posted). **TMP-NBL**: PREGAME, bounded but untimestamped (existed at 19:34:50; tip-off ≈19:36:09). **TMP-WNBA**: unknown (body not carried). |"
+  },
+  {
+    "handle": "TMP-WNBA",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1001,
+    "text": "| Issue horizons | **P-489**: START_CROSSED (\"final research pass just after the scheduled start\"), so it stays outside pregame metrics. **P-491**: PREGAME, clean (17:53–17:56 AEST v an 18:00 start, with orders posted). **TMP-NBL**: PREGAME, bounded but untimestamped (existed at 19:34:50; tip-off ≈19:36:09). **TMP-WNBA**: unknown (body not carried). |"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1003,
+    "text": "| Pre-write integrity check | **P-489** is one event (22 Sep game 24). **P-491**, **P-493** and **P-494** are each used once. **P-487** has two claimants, so both become TMP records and P-487 stays held. **TMP-G25** is new (the R1 split). After the split there are no duplicate events. States at check (21:38–21:43 AEST): FINAL — P-489, P-491, TMP-WNBA, TMP-NBL; LIVE — TMP-G25, P-493, P-494. |"
+  },
+  {
+    "handle": "TMP-NBL",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1003,
+    "text": "| Pre-write integrity check | **P-489** is one event (22 Sep game 24). **P-491**, **P-493** and **P-494** are each used once. **P-487** has two claimants, so both become TMP records and P-487 stays held. **TMP-G25** is new (the R1 split). After the split there are no duplicate events. States at check (21:38–21:43 AEST): FINAL — P-489, P-491, TMP-WNBA, TMP-NBL; LIVE — TMP-G25, P-493, P-494. |"
+  },
+  {
+    "handle": "TMP-WNBA",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1003,
+    "text": "| Pre-write integrity check | **P-489** is one event (22 Sep game 24). **P-491**, **P-493** and **P-494** are each used once. **P-487** has two claimants, so both become TMP records and P-487 stays held. **TMP-G25** is new (the R1 split). After the split there are no duplicate events. States at check (21:38–21:43 AEST): FINAL — P-489, P-491, TMP-WNBA, TMP-NBL; LIVE — TMP-G25, P-493, P-494. |"
+  },
+  {
+    "handle": "TMP-NBL",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1004,
+    "text": "| Settlement gate (CR-4) | Every FINAL passed with three independent lineages. P-489: NPB box, Sports Navi, Kyodo. P-491: NPB box, Sports Navi, Nikkan. TMP-WNBA: ESPN, Wings official, NE Valley News. TMP-NBL: NBL official, ESPN, Flashscore. Mynavi's AI-generated recaps were excluded. |"
+  },
+  {
+    "handle": "TMP-WNBA",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1004,
+    "text": "| Settlement gate (CR-4) | Every FINAL passed with three independent lineages. P-489: NPB box, Sports Navi, Kyodo. P-491: NPB box, Sports Navi, Nikkan. TMP-WNBA: ESPN, Wings official, NE Valley News. TMP-NBL: NBL official, ESPN, Flashscore. Mynavi's AI-generated recaps were excluded. |"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1012,
+    "text": "| **P-489** | \"Chunichi Dragons @ Yokohama DeNA BayStars (NPB); R1 is the same event and consumes no new ID\" | **The 22 Sep game (game 24, Azuma v Muller) — FINAL / SETTLED** below. R1 is the **23 Sep game (game 25)**, a different event. It is re-handled as `TMP-20260923-NPB-CHU-DB-G25` and carried LIVE to the P-495-onward mini log. |"
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1013,
+    "text": "| **P-487** | \"Reserved issue-time hold; later NBL source carries this claim\" | **Held with two claimants.** Claimant A: `TMP-20260922-WNBA-DAL-PHX` (Dallas @ Phoenix, issued before 12:56 AEST 22 Sep by the session that issued P-484–P-489; `BODY_NOT_CARRIED`; settled on its surviving rows). Claimant B: `TMP-20260923-NBL-CNS-TAS` (settled). **Recommended:** P-487 → claimant A by issue order, once its body is recovered. The operator decides. |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1013,
+    "text": "| **P-487** | \"Reserved issue-time hold; later NBL source carries this claim\" | **Held with two claimants.** Claimant A: `TMP-20260922-WNBA-DAL-PHX` (Dallas @ Phoenix, issued before 12:56 AEST 22 Sep by the session that issued P-484–P-489; `BODY_NOT_CARRIED`; settled on its surviving rows). Claimant B: `TMP-20260923-NBL-CNS-TAS` (settled). **Recommended:** P-487 → claimant A by issue order, once its body is recovered. The operator decides. |"
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1023,
+    "text": "### TMP-20260922-WNBA-DAL-PHX — WNBA — Dallas Wings @ Phoenix Mercury — 22 Sep 2026 12:00 AEST (claims **P-487**; `BODY_NOT_CARRIED`; partially SETTLED 2026-09-23)"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1033,
+    "text": "That session issued P-484 (WNBA, 22 Sep 10:00 AEST), P-485, P-486, **P-487**, P-488 (cutoff 12:56 AEST 22 Sep) and P-489 (22 Sep 19:00 AEST) in sequence. So **this card is the original P-487 claimant by issue order**. The NBL card (`TMP-20260923-NBL-CNS-TAS`, 23 Sep, 19:30 AEST game) claimed P-487 more than a day later."
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1039,
+    "text": "- the WNBA card gets temporary ID `TMP-20260922-WNBA-DAL-PHX`;"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1040,
+    "text": "- the NBL card keeps `TMP-20260923-NBL-CNS-TAS`."
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1092,
+    "text": "### TMP-20260923-NBL-CNS-TAS — NBL — Cairns Taipans v Tasmania JackJumpers — 23 Sep 2026, 19:30 AEST (claims **P-487**; card body partly carried) — **SETTLED 2026-09-23 (temporary ID retained)**"
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1095,
+    "text": "- The card claimed P-487, but a Dallas @ Phoenix WNBA card issued more than 30 hours earlier also claimed it (see `TMP-20260922-WNBA-DAL-PHX`). The NBL card therefore keeps its temporary ID."
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1264,
+    "text": "<!-- BEGIN VERBATIM ISSUED RECORD: TMP-20260923-NBL-CNS-TAS (heading levels demoted by two; text unchanged) -->"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1266,
+    "text": "##### TMP-20260923-NBL-CNS-TAS (source card and status corrections follow verbatim; no canonical ID assigned)"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1267,
+    "text": "##### TMP-20260923-NBL-CNS-TAS — Cairns Taipans vs Tasmania JackJumpers (claimed P-487; unsettled)"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1289,
+    "text": "Historical ID custody note (superseded for sequence only): at this 19:34:50 AEST refresh, the earlier P-484/P-487 claims had not been reconciled, so no canonical ID was assigned in that update. The later 2026-09-23 reconciliation resolves the next ID as P-494 and keeps this NBL event under TMP-20260923-NBL-CNS-TAS with P-487 on issue-time hold. No pick, result or retrospective is changed."
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1311,
+    "text": "<!-- END VERBATIM ISSUED RECORD: TMP-20260923-NBL-CNS-TAS -->"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 1318,
+    "text": "> **Identity correction made in this pass (read first).** The original P-489 card is about the **22 September** game (game 24 of 25; starters Katsuki Azuma v Kyle Muller). Its own schedule line reads \"Correct scheduled start: 22 Sep 2026, 7:00 PM AEST / 18:00 JST\", and the NPB box for 22 September confirms Azuma and Muller as the starters. The 2026-09-23 local reconciliation mapped P-489 to the **23 September** game (game 25; Fukazawa v Nakachi) and appended the 18:59:17 AEST \"R1\" card as a \"same-event reforecast\". **They are two different events.** P-489 keeps its canonical ID for the event it was issued on (22 Sep). The R1 card is a separate event and moves to the Temporary-ID section as `TMP-20260923-NPB-CHU-DB-G25`. The earlier \"ISSUE_HORIZON_UNVERIFIED — conflicts with the official pre-game state\" note was caused by checking the 23 Sep page for a 22 Sep card. It is superseded as to event identity, but not as to horizon (see below). No pick, probability or reasoning in either card was changed."
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2415,
+    "text": "| TMP-20260922-WNBA-DAL-PHX (claims P-487) | Dallas @ Phoenix (22 Sep) | Unknown (body not carried) | PHX 87–86 | **W** (Mercury +5.5) | unknown | unknown | unknown | unknown | unknown | **L** (Dallas) | Unauditable (`BODY_NOT_CARRIED`) |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2418,
+    "text": "| TMP-20260923-NBL-CNS-TAS (claims P-487) | Cairns v Tasmania (23 Sep) | PREGAME, bounded (untimestamped) | CNS 93–87 (180) | **L** (TAS +2.5) | Y* | 1/2* | 0.387* | 1 W / 1 L* (no probabilities) | **W*** (Under 186.5) | **L** (Tasmania) | Result-wrong / process-wrong |"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2426,
+    "text": "- Carried over live and unscored: TMP-G25, P-493, P-494."
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2467,
+    "text": "   - TMP-20260923-NPB-CHU-DB-G25: carried over live; the card published no numeric centre (forced rank). Accrue at settlement if a centre can be recovered."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2490,
+    "text": "| O-ID-DATE-STARTER-MATCH | Four-field event match (date, venue, home/away, starters/participants) required before any \"same-event\" merge or reforecast label | P-489 / TMP-G25 merge | Integrity control (no forecast effect) | `EXTERNAL_LOGGING_WORKFLOW.md`; `RULES_GENERAL.md` G0–G6 | **Promote as PROMOTED_PROCESS** (mechanism clear; zero predictive claim) |"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2537,
+    "text": "| TMP-G25 (R1) *(carried)* | Y | N (forced rank) | N | N | P (\"joint unknown\", no bounds) | N | Y (\"one forced total decision\") | N | P (orders Y; bench partial) | N | P |"
+  },
+  {
+    "handle": "TMP-NBL",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2539,
+    "text": "| TMP-NBL | N | N | N | N | N | N | N | Y (91–88) | P (roster wrong) | N | N |"
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2542,
+    "text": "`BODY_NOT_CARRIED`: TMP-20260922-WNBA-DAL-PHX (one row survives). It is recorded as unauditable, not as non-compliant."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2563,
+    "text": "- Three carried-over records (TMP-G25, P-493, P-494) contribute nothing until they are settled in the P-495-onward log."
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2573,
+    "text": "| Temporary-ID records TMP-20260922-WNBA-DAL-PHX, TMP-20260923-NBL-CNS-TAS (settled), TMP-20260923-NPB-CHU-DB-G25 (pending) | `PREDICTION_LOG_COMBINED_5.md` §\"2026-09-23(c)\"; `GAME_LOG_STATUS_CURRENT.md` noncanonical table | — | Implemented 2026-09-23 |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2573,
+    "text": "| Temporary-ID records TMP-20260922-WNBA-DAL-PHX, TMP-20260923-NBL-CNS-TAS (settled), TMP-20260923-NPB-CHU-DB-G25 (pending) | `PREDICTION_LOG_COMBINED_5.md` §\"2026-09-23(c)\"; `GAME_LOG_STATUS_CURRENT.md` noncanonical table | — | Implemented 2026-09-23 |"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2573,
+    "text": "| Temporary-ID records TMP-20260922-WNBA-DAL-PHX, TMP-20260923-NBL-CNS-TAS (settled), TMP-20260923-NPB-CHU-DB-G25 (pending) | `PREDICTION_LOG_COMBINED_5.md` §\"2026-09-23(c)\"; `GAME_LOG_STATUS_CURRENT.md` noncanonical table | — | Implemented 2026-09-23 |"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2574,
+    "text": "| P-489 identity correction (22 Sep game; R1 split to TMP-G25) and P-487 two-claimant hold | `PREDICTION_LOG_COMBINED_5.md` (appended correction; the earlier reconciliation table is preserved); `GAME_LOG_STATUS_CURRENT.md` rows P-487, P-489 | — | Implemented 2026-09-23 |"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2590,
+    "text": "| Carried-over live records TMP-G25, P-493, P-494 | New mini log `Mini Prediction Log - P-495 onward - 2026-09-23/`; `GAME_LOG_STATUS_CURRENT.md` | — | Implemented 2026-09-23 (custody transfer) |"
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2595,
+    "text": "1. `TMP-20260922-WNBA-DAL-PHX` — Dallas Wings @ Phoenix Mercury, 22 Sep 12:00 AEST — PHX 87–86. Rank #1 (Mercury +5.5) **W**; winner call **L**. Remaining rows `BODY_NOT_CARRIED`. Claims P-487 (held)."
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2598,
+    "text": "4. `TMP-20260923-NBL-CNS-TAS` — Cairns v Tasmania, 23 Sep 19:30 AEST — CNS 93–87. #1 JackJumpers +2.5 **L**, #2 Under 186.5 **W** (contract ambiguity recorded), #3 Over 186.5 **L**, #4 Taipans −2.5 **W**; winner **L**. Claims P-487 (held)."
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2602,
+    "text": "1. `TMP-20260923-NPB-CHU-DB-G25` — Chunichi @ Yokohama DeNA, **game 25**, 23 Sep 19:00 AEST — LIVE at 21:40 (3–3, 7th)."
+  },
+  {
+    "handle": "TMP-20260922-WNBA-DAL-PHX",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2619,
+    "text": "- `TMP-20260922-WNBA-DAL-PHX` is **retired as an alias** of P-487. Its partial settlement in §\"2026-09-23(c)\" is **superseded** by the full settlement below; the earlier text is preserved."
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 2620,
+    "text": "- `TMP-20260923-NBL-CNS-TAS` keeps its temporary ID and takes the next free canonical ID at reconciliation."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 3424,
+    "text": "## 2026-09-24(e) — peer-session settlement of the P-495-onward mini log (TMP-G25, P-493–P-508), as written at ~22:47 AEST"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 3432,
+    "text": ">   - The P-500, P-501, P-502, P-506, P-507, P-493 and TMP-G25 linescores and decisions are wrong."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 3433,
+    "text": ">   - TMP-G25 went **12 innings**, not 9."
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 3440,
+    "text": "### Settlement & Retrospective: `TMP-20260923-NPB-CHU-DB-G25` — Baseball / NPB Central League"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4363,
+    "text": "1. **Dual Run-Line / Spread Arbitrage in 1-Run & 1-Possession Games:** Across MLB and basketball (`P-502`, `P-506`, `TMP-G25`), when the projected median margin is $\\le 1.0$, backing $+1.5$ on both competitors captures a massive joint-win corridor. In baseball, $\\sim 28.5\\%$ of games finish with a 1-run margin; in these outcomes, both $+1.5$ run lines cash simultaneously. This produces an exceptional Hit@2 and Wins@2 profile."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4377,
+    "text": "  - *NPB Bullpen Clutches (`TMP-G25`):* In low-scoring NPB environments, a +1.5 cushion provides unmatched security against 1-run losses."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4414,
+    "text": "| `PREDICTION_LOG_COMBINED_5.md` | Section `2026-09-24(e)` | Full settlement, retrospective, and ledger for `TMP-G25` and `P-493`..`P-508` |"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4428,
+    "text": "1. `TMP-20260923-NPB-CHU-DB-G25` — Baseball / NPB (Chunichi Dragons @ Yokohama DeNA BayStars, Game 25)"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4452,
+    "text": "## 2026-09-24(f) — independent verification audit of the §\"2026-09-24(e)\" import (TMP-G25, P-493–P-508); P-509 carried live"
+  },
+  {
+    "handle": "TMP-20260923",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4481,
+    "text": "**`P-484 onward - 2026-09-23/…P484_ONWARD.md`** — stale Drive re-sync of P-484–P-489 claims plus five `TMP-20260923-*` handles."
+  },
+  {
+    "handle": "TMP-20260923",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4485,
+    "text": "- Its four `TMP-20260923-{WNBA-ATL-NYL, NFL-NYG-LAR, MLB-MIN-SF, WTA-WOLFF-OLI}` handles are the pre-reconciliation aliases of P-484, P-485, P-486 and P-488. The file's own lines 496–499 say so."
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4492,
+    "text": "  - `TMP-20260923-NPB-CHU-DB-G25`, settled;"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4493,
+    "text": "  - `TMP-20260923-NBL-CNS-TAS`, settled."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4528,
+    "text": "3. 13 of the 17 status-register rows for TMP-G25 and P-493–P-508 contradict the issued Field 4 tables (wrong Rank-1 contract, wrong lines, wrong winner verdicts). They are corrected; see part M."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4530,
+    "text": "5. The issued card bodies for TMP-G25 and P-493–P-508 were never appended to Part 5; only settlement blocks were. They are appended verbatim in Appendix (f)-Z. Part 5's P-494 stub also pointed to a mini-log folder that no longer exists."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4547,
+    "text": "| TMP-G25 | Chunichi @ DeNA, 23 Sep, game 25 | **DeNA 4–3, F/12**: 3–3 after 9, DeNA 1x in the 12th, game time 4h18m | NPB box `npb.jp/scores/2026/0923/db-d-25/box.html` (試合終了) | R1 Chunichi +1.5 **W**; R2 DeNA ML **W**; R3 Under 7.5 **W** (7); R4 Over **L**; winner DeNA **W** | Grades unchanged; process corrected (12 innings, not 9) |"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4571,
+    "text": "| TMP-G25 | 9 innings; W Fukazawa 6.0 IP; S Ise; Nakachi 4.1 IP | 12 innings, 1x in the 12th; Nakachi 4.0 IP, 3 ER; loss to Matsuyama | NPB box |"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4678,
+    "text": "- **TMP-G25 — Chunichi +1.5.** It was 3–3 after nine and DeNA won 4–3 in the 12th. The card named exactly this branch: \"covers Chunichi wins, NPB ties, and one-run DeNA wins\". Right, for the stated reason."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4723,
+    "text": "   - **Evidence:** R1/R2 pairs in TMP-G25, P-500, P-502 and P-506; R1/R3 or R2/R3 pairs in P-493, P-501, P-503 and P-507."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4791,
+    "text": "- TMP-G25's named tie and one-run branch."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4796,
+    "text": "Pregame units: 16 (TMP-G25 and P-493, P-495–P-508). P-494 is live-issued and excluded."
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4807,
+    "text": "| Rank-1 Brier (15 cards with numeric p; TMP-G25 has none) | **0.187** | — |"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4829,
+    "text": "| Temporary-ID events included | Yes. TMP-G25 is settled; TMP-NBL-CNS-TAS is settled earlier; both await canonical reconciliation |"
+  },
+  {
+    "handle": "TMP-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4829,
+    "text": "| Temporary-ID events included | Yes. TMP-G25 is settled; TMP-NBL-CNS-TAS is settled earlier; both await canonical reconciliation |"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4846,
+    "text": "## 2026-09-24(f) Appendix Z — verbatim issued records for TMP-G25, P-493 and P-494–P-508"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4860,
+    "text": "### Carried record 1 — `TMP-20260923-NPB-CHU-DB-G25` (NPB, 23 Sep game 25)"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4867,
+    "text": "<!-- BEGIN VERBATIM ISSUED RECORD: TMP-20260923-NPB-CHU-DB-G25 (R1 card and its custody notes, as held in the P-494-onward log) (heading levels demoted by two; text unchanged) -->"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4918,
+    "text": "<!-- END VERBATIM ISSUED RECORD: TMP-20260923-NPB-CHU-DB-G25 (R1 card and its custody notes, as held in the P-494-onward log) -->"
+  },
+  {
+    "handle": "TMP-20260923-KBO-KIA-DOO",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4927,
+    "text": "###### Original pre-reconciliation source handle: TMP-20260923-KBO-KIA-DOO"
+  },
+  {
+    "handle": "TMP-20260923-KBO-KIA-DOO",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4933,
+    "text": "**ID custody (reconciliation note).** The source card was initially held under TMP-20260923-KBO-KIA-DOO while the duplicate-ID audit was open. The local Part 5 reconciliation assigns this event canonical ID P-493. The pregame forecast, ranked picks, reasoning and sources below are retained unchanged; the temporary handle is an alias only."
+  },
+  {
+    "handle": "TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4976,
+    "text": "**Canonical ID:** P-494. Temporary source handle `TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH` is retired as an alias. The full original source log was preserved byte-exact before the temporary file was cleared; see the archive receipt in `archive/mini_logs/originals_2026-09-23/`."
+  },
+  {
+    "handle": "TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4989,
+    "text": "**ID.** Temporary ID `TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH`. The merged running log (`C:\\Users\\danie\\Documents\\Sports Research\\PREDICTION_MINI_RUNNING_LOG_MERGED_P482_ONWARD.md`, read 2026-09-23 ~20:28 AEST) lists **next ID P-494**. This session does not assign it, because concurrent sessions have already produced collisions (P-484). The proposed canonical ID is **P-494, pending reconciliation**."
+  },
+  {
+    "handle": "TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 4998,
+    "text": "- Distribution v1 (superseded before any line was queried): `TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH-prior-v1`, frozen 20:41:19 AEST, SHA-256 `e679a464853e0f7e5f3235f86252dcce77fc31626d0b246e57a2dc955996b3ec`. It had independent sets, so its deciding-set rate was 22%."
+  },
+  {
+    "handle": "TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH-LIVE",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 5042,
+    "text": "#### Entry 2 — P-494 ISSUED LIVE VIEW `TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH-LIVE-v1` (source handle retained as alias; written ~20:53 AEST)"
+  },
+  {
+    "handle": "TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 5232,
+    "text": "**ID note.** A concurrent local log, `Mini Prediction Log - P-494 onward - 2026-09-23/`, was created at 20:44 AEST during this session. At 20:55 it had issued nothing and said \"allocate P-494 only when a new forecast is actually frozen\". This view was frozen at 20:51:54 AEST. It keeps `TMP-20260923-WTA-SGP-ANDREEVA-SASNOVICH` and proposes P-494 (or the next free ID) at reconciliation. The concurrent log was only read, not written."
+  },
+  {
+    "handle": "TMP-20260923-WNBA-ATL-NYL",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 7779,
+    "text": "### P-484 - WNBA - Atlanta Dream @ New York Liberty (alias TMP-20260923-WNBA-ATL-NYL)"
+  },
+  {
+    "handle": "TMP-20260923-NFL-NYG-LAR",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 8512,
+    "text": "### P-485 - NFL - New York Giants @ Los Angeles Rams (alias TMP-20260923-NFL-NYG-LAR)"
+  },
+  {
+    "handle": "TMP-20260923-MLB-MIN-SF",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 9248,
+    "text": "### P-486 - MLB - Minnesota Twins @ San Francisco Giants (alias TMP-20260923-MLB-MIN-SF)"
+  },
+  {
+    "handle": "TMP-20260923-WTA-WOLFF-OLI",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 9955,
+    "text": "### P-488 - WTA Singapore - Vivian Wolff vs Oleksandra Oliynykova (alias TMP-20260923-WTA-WOLFF-OLI)"
+  },
+  {
+    "handle": "TMP-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 11043,
+    "text": "**Queue:** no open event. Next canonical ID **P-510**. TMP-NBL-CNS-TAS and TMP-G25 still await canonical numbers (operator decision)."
+  },
+  {
+    "handle": "TMP-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 11043,
+    "text": "**Queue:** no open event. Next canonical ID **P-510**. TMP-NBL-CNS-TAS and TMP-G25 still await canonical numbers (operator decision)."
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 12654,
+    "text": "| **P-516** | `TMP-20260923-NPB-CHU-DB-G25` | NPB — Chunichi Dragons @ Yokohama DeNA BayStars, 23 Sep 2026, game 25 (18:00 JST = 19:00 AEST) | Frozen **2026-09-23 18:59:17 AEST** (a verified pre-start timestamp in the card) | DeNA 4–3 F/12. R1 Chunichi +1.5 **W**; R2 DeNA ML **W**; R3 Under 7.5 **W**; R4 Over 7.5 L; winner DeNA **W** | Issued record: Appendix Z (§\"2026-09-24(f)\"). Settlement: §\"2026-09-24(e)\", audited §\"2026-09-24(f)\" |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+    "line": 12655,
+    "text": "| **P-517** | `TMP-20260923-NBL-CNS-TAS` | NBL — Cairns Taipans vs Tasmania JackJumpers, 23 Sep 2026, 19:30 AEST (formerly claimed P-487) | **Untimestamped**; bounded only by the 19:30 AEST tip (\"PREGAME, bounded\") | CNS 93–87. R1 JackJumpers +2.5 **L**; R2 Under 186.5 **W** (contract ambiguity recorded); R3 Over 186.5 L; R4 Taipans −2.5 W; winner **L** | Issued record and settlement: §\"2026-09-23(c)\" |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 28,
+    "text": "| ID Determination | Determined from the controlling top snapshot of the active canonical log (`PREDICTION_LOG_COMBINED_5.md` lines 8, 20–30, and §\"2026-09-26(a)\") and verified in `GAME_LOG_STATUS_CURRENT.md` (lines 3, 11). `PREDICTION_LOG_COMBINED_5.md` reconciles canonical IDs through P-517: P-510–P-515 were imported and settled in §\"2026-09-25(f)\"; P-516 (`TMP-20260923-NPB-CHU-DB-G25`) and P-517 (`TMP-20260923-NBL-CNS-TAS`) were assigned on 2026-09-26(a) to the two settled temporary IDs. No temporary ID awaits reconciliation. P-518 through P-522 were issued in this mini log. Next canonical ID is P-523. |"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 28,
+    "text": "| ID Determination | Determined from the controlling top snapshot of the active canonical log (`PREDICTION_LOG_COMBINED_5.md` lines 8, 20–30, and §\"2026-09-26(a)\") and verified in `GAME_LOG_STATUS_CURRENT.md` (lines 3, 11). `PREDICTION_LOG_COMBINED_5.md` reconciles canonical IDs through P-517: P-510–P-515 were imported and settled in §\"2026-09-25(f)\"; P-516 (`TMP-20260923-NPB-CHU-DB-G25`) and P-517 (`TMP-20260923-NBL-CNS-TAS`) were assigned on 2026-09-26(a) to the two settled temporary IDs. No temporary ID awaits reconciliation. P-518 through P-522 were issued in this mini log. Next canonical ID is P-523. |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 29,
+    "text": "| Temporary IDs Awaiting Reconciliation | **None.** `TMP-20260923-NPB-CHU-DB-G25` = P-516 and `TMP-20260923-NBL-CNS-TAS` = P-517 (`PREDICTION_LOG_COMBINED_5.md` §\"2026-09-26(a)\"). |"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 29,
+    "text": "| Temporary IDs Awaiting Reconciliation | **None.** `TMP-20260923-NPB-CHU-DB-G25` = P-516 and `TMP-20260923-NBL-CNS-TAS` = P-517 (`PREDICTION_LOG_COMBINED_5.md` §\"2026-09-26(a)\"). |"
+  },
+  {
+    "handle": "TMP-OPEN-20260917-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1652,
+    "text": "| TMP-OPEN-20260917-01 | P-430-C05 | Al Ain corners O3.5: research LOSS, not booked; AFC field-owner record or explicitly reconciled approved provider needed |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1653,
+    "text": "| TMP-OPEN-20260915-04 | P-418 | Drukpa v RTC result NOT_RECOVERED; kickoff conflict; dated second-round official/result source needed |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1654,
+    "text": "| TMP-OPEN-20260915-01 | P-407-C01 | Club Brugge corners O4.5: provisional WIN; Pro League record missing |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1655,
+    "text": "| TMP-OPEN-20260915-02 | P-409-C02 | Troyes corners O2.5: provisional WIN; LFP record missing |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1656,
+    "text": "| TMP-OPEN-20260915-03 | P-410-C05 | Leipzig corners O4.5: provisional WIN; provider split 7/8, DFL record missing |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1657,
+    "text": "| TMP-OPEN-20260915-05 | P-419-C05 | Total corners O7.5: provisional LOSS; Allsvenskan record missing |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1658,
+    "text": "| TMP-OPEN-20260914-01 | P-399-C02 | Total corners O8.5: provisional WIN; Serie A record missing |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1659,
+    "text": "| TMP-OPEN-20260914-02 | P-401-C01 | Total corners O8.5: provisional WIN; Allsvenskan record missing |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1660,
+    "text": "| TMP-OPEN-20260914-03 | P-401-C03 | IFK corners O4.5: provisional WIN; controlling record still missing |"
+  },
+  {
+    "handle": "TMP-OPEN-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1661,
+    "text": "| TMP-OPEN-20260912-01 | P-377-C02 | Total corners O8.5: provisional LOSS; ESPN has no statistics |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1662,
+    "text": "| TMP-OPEN-20260911-01 | P-368-C02 | Total corners O7.5: provisional research WIN; independence/frozen-provider gap |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1663,
+    "text": "| TMP-OPEN-20260911-02 | P-369-C01 | Total corners U10.5: provisional research LOSS; independence/frozen-provider gap |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1664,
+    "text": "| TMP-OPEN-20260909-01 | P-341-C03 | Total corners O7.5: UNSETTLEABLE to frozen standard; stale ESPN Uganda route |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1665,
+    "text": "| TMP-OPEN-20260909-02 | P-342-C03 | Total corners O8.5: provisional research WIN |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1666,
+    "text": "| TMP-OPEN-20260909-03 | P-126 | Corners/event identity: IDENTITY_STATE_CONFLICT — UNRESOLVED |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1667,
+    "text": "| TMP-OPEN-20260909-04 | P-148-C02 | Toluca team corners: provisional LOSS |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1668,
+    "text": "| TMP-OPEN-20260909-05 | P-149-C02 | Ventura team corners: provisional WIN |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1669,
+    "text": "| TMP-OPEN-20260909-06 | P-176-C05 | Amiens/Versailles corners U10.5: provisional WIN |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-07",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1670,
+    "text": "| TMP-OPEN-20260909-07 | P-178-C05 | Cannes/Le Puy corners U10.5: provisional LOSS |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-08",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1671,
+    "text": "| TMP-OPEN-20260909-08 | P-179-C05 | Thionville/Paris 13 corners U10.5: provisional WIN |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-09",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1672,
+    "text": "| TMP-OPEN-20260909-09 | P-233 | Beijing/Lanzhou corners O8.5: provisional WIN |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-10",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1673,
+    "text": "| TMP-OPEN-20260909-10 | P-234-C03 | Dalian/Shenhua corners O8.5: provisional WIN; disruption noted |"
+  },
+  {
+    "handle": "TMP-OPEN-20260909-11",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1674,
+    "text": "| TMP-OPEN-20260909-11 | P-235 | Shandong/Shanghai Port corners O8.5: provisional WIN |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1678,
+    "text": "| TMP-AUDIT-20260912-01 | P-250-C05 | China FA Cup field-owner/data-partner corner record; no route recovered |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1679,
+    "text": "| TMP-AUDIT-20260912-02 | P-251-C05 | Lega Serie A record; ESPN research WIN not the frozen provider |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1680,
+    "text": "| TMP-AUDIT-20260912-05 | P-265-C05 | Leagues Cup official corner record; threshold/provider sensitive |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1681,
+    "text": "| TMP-AUDIT-20260912-03 | P-255-C05 | UNRESOLVED_PERIOD: regulation corner split or valid sourced bound; prior WIN withdrawn |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 1682,
+    "text": "| TMP-AUDIT-20260912-04 | P-256-C05 | UNRESOLVED_PERIOD: regulation corner split or valid sourced bound; prior WIN withdrawn |"
+  },
+  {
+    "handle": "TMP-AUDIT",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2033,
+    "text": "| P-250 | Yunnan Yukun vs Chongqing Tonglianglong | INHERITED CLOSED; corner row still unsettleable — no keyless China FA Cup route (re-probed 2026-09-16), see TMP-AUDIT queue | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-AUDIT",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2034,
+    "text": "| P-251 | Sassuolo vs Frosinone | INHERITED CLOSED; corner row reproduced 2026-09-16 at ESPN `ita.coppa_italia` (6+5 = 11, threshold-invariant research WIN); Lega Serie A record still unreached — see TMP-AUDIT queue and [Part 4 Appendix A](PREDICTION_LOG_COMBINED_4.md) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2038,
+    "text": "| P-255 | Inter Women vs VfL Wolfsburg Women | Other rows retain recorded status; C05 UNRESOLVED_PERIOD, TMP-AUDIT-20260912-03 reopened 2026-09-17(c) | UNRESOLVED_PERIOD | True |"
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2039,
+    "text": "| P-256 | Paris Saint-Germain Women vs Eintracht Frankfurt Women | Other rows retain recorded status; C05 UNRESOLVED_PERIOD, TMP-AUDIT-20260912-04 reopened 2026-09-17(c) | UNRESOLVED_PERIOD | True |"
+  },
+  {
+    "handle": "TMP-AUDIT",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2048,
+    "text": "| P-265 | Toluca vs Club León | INHERITED CLOSED; corner row reproduced 2026-09-16 at ESPN `concacaf.leagues.cup` (4+5 = 9 — research WIN at exactly the threshold, provider-sensitive); see TMP-AUDIT queue and [Part 4 Appendix A](PREDICTION_LOG_COMBINED_4.md) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-CANON-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2141,
+    "text": "| P-358 | Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired) | FINAL / SETTLED — deep Rank-#1 retro | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |"
+  },
+  {
+    "handle": "TMP-SETTLED-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2157,
+    "text": "| P-374 | Fenerbahçe vs Roma — UEFA Champions League — 2026-09-10 | FINAL / SETTLED — canonical record for Fenerbahçe v Roma; absorbs TMP-SETTLED-20260911-01 | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |"
+  },
+  {
+    "handle": "TMP-OPEN-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2160,
+    "text": "| P-377 | Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260912-01) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2182,
+    "text": "| P-399 | Genoa vs Frosinone — Serie A | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260914-01) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2184,
+    "text": "| P-401 | IFK Göteborg vs Halmstads BK — Allsvenskan | FINAL / PARTIAL — C01, C03 corners provisional (TMP-OPEN-20260914-02/-03) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2185,
+    "text": "| P-402 | Tottenham Hotspur vs Everton — Premier League | FINAL / SETTLED (2026-09-15: corners settled at Premier League official record; TMP-OPEN-20260914-04/-05 retired) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2189,
+    "text": "| P-406 | Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 | FINAL / SETTLED (2026-09-16: six-over rows settled at ESPN cricket API event 1547895 — Edinburgh 68/2 after 6.0; TMP-OPEN-20260914-06 retired) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2190,
+    "text": "| P-407 | Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League | FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) | DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | True |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2192,
+    "text": "| P-409 | Lille OSC vs ESTAC Troyes — French Ligue 1 | FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260915-02) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-03",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2193,
+    "text": "| P-410 | RB Leipzig vs Hamburger SV — German Bundesliga | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-03) | DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE | True |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2201,
+    "text": "| P-418 | Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League | OPEN — RESULT NOT RECOVERED (2026-09-16 re-classification): fixture listed by RSSSF Round 15 [Sep 14], unscored, page updated 11 Sep; the earlier \"no Drukpa–RTC match\" evidence was a BBS report dated 2026-07-17 (TMP-OPEN-20260915-04) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-05",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2202,
+    "text": "| P-419 | Djurgårdens IF vs GAIS — Sweden Allsvenskan | FINAL / PARTIAL — C05 corners provisional (TMP-OPEN-20260915-05) | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-OPEN-20260917-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2213,
+    "text": "| P-430 | Al Ain FC vs Al Nassr — AFC Champions League Elite MD1 | FINAL / PARTIAL — C05 corners unresolved (TMP-OPEN-20260917-01); deep Rank-#1 retro | UNRESOLVED_TARGET_FIELD_OR_PROVIDER | True |"
+  },
+  {
+    "handle": "TMP-20260923-NPB-CHU-DB-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2299,
+    "text": "| P-516 | NPB — Chunichi Dragons @ Yokohama DeNA BayStars — 23 Sep 2026, game 25 (alias `TMP-20260923-NPB-CHU-DB-G25`) | FINAL / SETTLED; verified 2026-09-24(f); canonical ID assigned 2026-09-26(a) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |"
+  },
+  {
+    "handle": "TMP-20260923-NBL-CNS-TAS",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 2300,
+    "text": "| P-517 | NBL — Cairns Taipans vs Tasmania JackJumpers — 23 Sep 2026 (alias `TMP-20260923-NBL-CNS-TAS`; formerly claimed P-487) | FINAL / SETTLED 2026-09-23; canonical ID assigned 2026-09-26(a) | CARRIED_CLOSED_OR_ADMINISTRATIVE_NOT_RECERTIFIED | False |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 5418,
+    "text": "| PREDICTION_LOG_COMBINED_3.md:1159 | d1502c66407039de676b767b955310ad629d979d0971f89eae2260358ecdf2c4 | &#124; 2 &#124; Total corners Over 7.5 (no frozen provider) &#124; 0.55 &#124; **PROVISIONAL WIN** &#124; not booked &#124; 9 (multiple secondary displays; independence unverified). `TMP-OPEN-20260911-01`. &#124; |"
+  },
+  {
+    "handle": "TMP-OPEN-20260911-02",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 5456,
+    "text": "| PREDICTION_LOG_COMBINED_3.md:1178 | 3a4d1030bc81db5208fbde84ed4e7a89134b0bb6a63507df1f3a6f7a1e06fed1 | &#124; 1 &#124; Total corners Under 10.5 (no frozen provider) &#124; 0.68 &#124; **PROVISIONAL LOSS** &#124; not booked &#124; 11 — **−0.5**. `TMP-OPEN-20260911-02`. &#124; |"
+  },
+  {
+    "handle": "TMP-CANON-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 5491,
+    "text": "| GAME_LOG_STATUS_CURRENT.md:421 | de0d18051c000fb69d2288bd7f6e73e62eff8069c607b8cd086a1ac71275364d | &#124; P-358 &#124; Puerto Rico W v China W — FIBA WWC (mini-log alias `TMP-CANON-20260911-01`, retired) &#124; FINAL / SETTLED — deep Rank-#1 retro &#124; L W L W; winner W; Brier 0.2973; [canonical log](PREDICTION_LOG_COMBINED_3.md) &#124; |"
+  },
+  {
+    "handle": "TMP-OPEN-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 5592,
+    "text": "| GAME_LOG_STATUS_CURRENT.md:440 | 58a3cf1c5740ba8cfc18513589a42059fcdc53a791f8d770266cabac7509aba7 | &#124; P-377 &#124; Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026 &#124; FINAL / PARTIAL — C02 corners provisional (TMP-OPEN-20260912-01) &#124; L P L W W &#124; |"
+  },
+  {
+    "handle": "TMP-OPEN-20260914-06",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 5869,
+    "text": "| GAME_LOG_STATUS_CURRENT.md:469 | 3cfd7d02c8e38016132d2bf4fac6f3ecf98a9fd95d56786f1b779157728a31db | &#124; P-406 &#124; Edinburgh Castle Rockers vs Amsterdam Flames — ETPL Match 24 &#124; FINAL / SETTLED (2026-09-16: six-over rows settled at ESPN cricket API event 1547895 — Edinburgh 68/2 after 6.0; TMP-OPEN-20260914-06 retired) &#124; W L W L &#124; |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 5908,
+    "text": "| GAME_LOG_STATUS_CURRENT.md:470 | 574a865a23b251b221806359120a5822d3204a7bfec7da279a8816b17610c282 | &#124; P-407 &#124; Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League &#124; FINAL / PARTIAL — C01 corners provisional (TMP-OPEN-20260915-01) &#124; P W W L W &#124; |"
+  },
+  {
+    "handle": "TMP-OPEN-20260915-04",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6009,
+    "text": "| GAME_LOG_STATUS_CURRENT.md:481 | 39fe737ac601456739382c0892d318d695c10dc3dce25bc12c23f0b8c28f8f11 | &#124; P-418 &#124; Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League &#124; OPEN — RESULT NOT RECOVERED (2026-09-16 re-classification): fixture listed by RSSSF Round 15 [Sep 14], unscored, page updated 11 Sep; the earlier \"no Drukpa–RTC match\" evidence was a BBS report dated 2026-07-17 (TMP-OPEN-20260915-04) &#124; 5 rows issued; none graded &#124; |"
+  },
+  {
+    "handle": "TMP-20261001-BOLCOPA-OPE-STR",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6763,
+    "text": "Tracking alias: `TMP-20261001-BOLCOPA-OPE-STR`. Logged UTC: 2026-10-01T10:35:18.639639+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261001-BOLCOPA-OPE-STR",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6776,
+    "text": "> **Tracking Handle:** `TMP-20261001-BOLCOPA-OPE-STR`  "
+  },
+  {
+    "handle": "TMP-20261001-BOLCOPA-OPE-STR",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6780,
+    "text": "> - **ID:** P-523 (Provisional: `TMP-20261001-BOLCOPA-OPE-STR`)."
+  },
+  {
+    "handle": "TMP-OPEN-20260909-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6895,
+    "text": "> - `TMP-OPEN-20260917-01` (P-430-C05), `TMP-OPEN-20260915-01` to `05`, `TMP-OPEN-20260914-01` to `03`, `TMP-OPEN-20260912-01`, `TMP-OPEN-20260911-01` to `02`, `TMP-OPEN-20260909-01` to `11`."
+  },
+  {
+    "handle": "TMP-OPEN-20260911-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6895,
+    "text": "> - `TMP-OPEN-20260917-01` (P-430-C05), `TMP-OPEN-20260915-01` to `05`, `TMP-OPEN-20260914-01` to `03`, `TMP-OPEN-20260912-01`, `TMP-OPEN-20260911-01` to `02`, `TMP-OPEN-20260909-01` to `11`."
+  },
+  {
+    "handle": "TMP-OPEN-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6895,
+    "text": "> - `TMP-OPEN-20260917-01` (P-430-C05), `TMP-OPEN-20260915-01` to `05`, `TMP-OPEN-20260914-01` to `03`, `TMP-OPEN-20260912-01`, `TMP-OPEN-20260911-01` to `02`, `TMP-OPEN-20260909-01` to `11`."
+  },
+  {
+    "handle": "TMP-OPEN-20260914-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6895,
+    "text": "> - `TMP-OPEN-20260917-01` (P-430-C05), `TMP-OPEN-20260915-01` to `05`, `TMP-OPEN-20260914-01` to `03`, `TMP-OPEN-20260912-01`, `TMP-OPEN-20260911-01` to `02`, `TMP-OPEN-20260909-01` to `11`."
+  },
+  {
+    "handle": "TMP-OPEN-20260915-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6895,
+    "text": "> - `TMP-OPEN-20260917-01` (P-430-C05), `TMP-OPEN-20260915-01` to `05`, `TMP-OPEN-20260914-01` to `03`, `TMP-OPEN-20260912-01`, `TMP-OPEN-20260911-01` to `02`, `TMP-OPEN-20260909-01` to `11`."
+  },
+  {
+    "handle": "TMP-OPEN-20260917-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6895,
+    "text": "> - `TMP-OPEN-20260917-01` (P-430-C05), `TMP-OPEN-20260915-01` to `05`, `TMP-OPEN-20260914-01` to `03`, `TMP-OPEN-20260912-01`, `TMP-OPEN-20260911-01` to `02`, `TMP-OPEN-20260909-01` to `11`."
+  },
+  {
+    "handle": "TMP-AUDIT-20260912-01",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6896,
+    "text": "> - `TMP-AUDIT-20260912-01` to `05`."
+  },
+  {
+    "handle": "TMP-20261001-KBO-KT-KIA",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6906,
+    "text": "Tracking alias: `TMP-20261001-KBO-KT-KIA`. Logged UTC: 2026-10-01T10:35:20.140889+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261001-KBO-KT-KIA",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6918,
+    "text": "### TMP-20261001-KBO-KT-KIA — Baseball / KBO: KT Wiz @ Kia Tigers"
+  },
+  {
+    "handle": "TMP-20261001-KBO-KT-KIA",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6919,
+    "text": "**Tracking Handle:** `TMP-20261001-KBO-KT-KIA`  "
+  },
+  {
+    "handle": "TMP-20261001-KBO-KT-KIA",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6924,
+    "text": "- **ID:** `TMP-20261001-KBO-KT-KIA` (Provisional tracker; no canonical P-ID consumed under `NO_MODEL` status)."
+  },
+  {
+    "handle": "TMP-20261001-NPB-CHU-HIR-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 6997,
+    "text": "Tracking alias: `TMP-20261001-NPB-CHU-HIR-G25`. Logged UTC: 2026-10-01T10:35:20.751030+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261001-NPB-CHU-HIR-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7022,
+    "text": "### TMP-20261001-NPB-CHU-HIR-G25 — Baseball / Japan NPB: Chunichi Dragons @ Hiroshima Toyo Carp (Game 25)"
+  },
+  {
+    "handle": "TMP-20261001-NPB-CHU-HIR-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7023,
+    "text": "**Tracking Handle:** `TMP-20261001-NPB-CHU-HIR-G25`  "
+  },
+  {
+    "handle": "TMP-20261001-NPB-CHU-HIR-G25",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7030,
+    "text": "- **Tracking Handle:** `TMP-20261001-NPB-CHU-HIR-G25`."
+  },
+  {
+    "handle": "TMP-20261001-KBO-HAN-SAM",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7134,
+    "text": "Tracking alias: `TMP-20261001-KBO-HAN-SAM`. Logged UTC: 2026-10-01T10:35:21.343092+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261002-EUR-HTA-RMA",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7613,
+    "text": "Tracking alias: `TMP-20261002-EUR-HTA-RMA`. Logged UTC: 2026-10-05T00:10:41.977915+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261002-NHL-PHI-NJD",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7653,
+    "text": "Tracking alias: `TMP-20261002-NHL-PHI-NJD`. Logged UTC: 2026-10-05T00:10:42.504395+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261002-MLB-PHI-ATL-G3",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7673,
+    "text": "Tracking alias: `TMP-20261002-MLB-PHI-ATL-G3`. Logged UTC: 2026-10-05T00:10:42.797088+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261002-WNBA-IND-LVA-G3",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7693,
+    "text": "Tracking alias: `TMP-20261002-WNBA-IND-LVA-G3`. Logged UTC: 2026-10-05T00:10:43.126473+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261001-NBL-TAS-MEL",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7848,
+    "text": "Tracking alias: `TMP-20261001-NBL-TAS-MEL`. Logged UTC: 2026-10-05T00:10:43.426079+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261001-NBL-TAS-MEL",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7856,
+    "text": "**Tracking Reference:** TMP-20261001-NBL-TAS-MEL  "
+  },
+  {
+    "handle": "TMP-20261003-KBO-KIA-LG",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7920,
+    "text": "Tracking alias: `TMP-20261003-KBO-KIA-LG`. Logged UTC: 2026-10-05T00:10:43.745315+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261003-KBO-KIA-LG",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7928,
+    "text": "**Tracking Reference:** TMP-20261003-KBO-KIA-LG  "
+  },
+  {
+    "handle": "TMP-20261004-NRL-SYD-NEW-GF",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 7993,
+    "text": "Tracking alias: `TMP-20261004-NRL-SYD-NEW-GF`. Logged UTC: 2026-10-05T00:10:44.060038+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261004-NRL-SYD-NEW-GF",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8001,
+    "text": "**Tracking Reference:** TMP-20261004-NRL-SYD-NEW-GF  "
+  },
+  {
+    "handle": "TMP-20261004-GBL-PAO-VIK",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8065,
+    "text": "Tracking alias: `TMP-20261004-GBL-PAO-VIK`. Logged UTC: 2026-10-05T00:10:44.390942+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261004-GBL-PAO-VIK",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8073,
+    "text": "**Tracking Reference:** TMP-20261004-GBL-PAO-VIK  "
+  },
+  {
+    "handle": "TMP-20261004-BBL-BAY-OLD",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8138,
+    "text": "Tracking alias: `TMP-20261004-BBL-BAY-OLD`. Logged UTC: 2026-10-05T00:10:44.721918+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261004-BBL-BAY-OLD",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8146,
+    "text": "**Tracking Reference:** TMP-20261004-BBL-BAY-OLD  "
+  },
+  {
+    "handle": "TMP-20261004-INT-KGZ-LBN",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8212,
+    "text": "Tracking alias: `TMP-20261004-INT-KGZ-LBN`. Logged UTC: 2026-10-05T00:10:44.991027+00:00. This ID records the card; calibration and prospective certification are separate labels."
+  },
+  {
+    "handle": "TMP-20261004-INT-KGZ-LBN",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8220,
+    "text": "**Tracking Reference:** TMP-20261004-INT-KGZ-LBN  "
+  },
+  {
+    "handle": "TMP-20261002-EUR-HTA-RMA",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8289,
+    "text": "**Tracking Reference:** TMP-20261002-EUR-HTA-RMA  "
+  },
+  {
+    "handle": "TMP-20261002-NHL-PHI-NJD",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8353,
+    "text": "**Tracking Reference:** TMP-20261002-NHL-PHI-NJD  "
+  },
+  {
+    "handle": "TMP-20261002-MLB-PHI-ATL-G3",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8410,
+    "text": "**Tracking Reference:** TMP-20261002-MLB-PHI-ATL-G3  "
+  },
+  {
+    "handle": "TMP-20261002-WNBA-IND-LVA-G3",
+    "path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+    "line": 8475,
+    "text": "**Tracking Reference:** TMP-20261002-WNBA-IND-LVA-G3  "
+  }
+]

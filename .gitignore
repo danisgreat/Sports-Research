@@ -14,3 +14,39 @@ Previous Sports Results/_canonical/*.csv
 Previous Sports Results/_canonical/.stage*/
 __pycache__/
 .pytest_cache/
+
+# Full publisher narrative captures are local evidence, not redistributed articles.
+research/data/raw/source_snapshots/newsis_terminal_*
+research/data/raw/source_snapshots/khan_terminal_*
+research/data/raw/source_snapshots/nikkan_terminal_*
+research/data/raw/source_snapshots/sportkg_terminal_*
+research/data/raw/source_snapshots/kbo_osen_p526_*
+research/verification/all_log_resolution_2026-10-05/newsis_terminal.txt
+research/verification/all_log_resolution_2026-10-05/khan_terminal.txt
+research/verification/all_log_resolution_2026-10-05/nikkan_terminal.txt
+research/verification/all_log_resolution_2026-10-05/sportkg_terminal.txt
+research/verification/all_log_resolution_2026-10-05/championat_terminal.txt
+research/verification/all_log_resolution_2026-10-05/kbo_home.txt
+research/verification/all_log_resolution_2026-10-05/kbo_schedule.txt
+research/verification/all_log_resolution_2026-10-05/npb_final.txt
+research/verification/all_log_resolution_2026-10-05/uefa_inter.txt
+research/verification/all_log_resolution_2026-10-05/uefa_psg.txt
+research/verification/all_log_resolution_2026-10-05/afc_owner.txt
+research/verification/all_log_resolution_2026-10-05/proleague_event.txt
+research/verification/all_log_resolution_2026-10-05/dfl_event.txt
+research/verification/all_log_resolution_2026-10-05/toluca_report.txt
+research/verification/all_log_resolution_2026-10-05/bhutan_owner.txt
+research/verification/all_log_resolution_2026-10-05/uae_owner.txt
+research/verification/all_log_resolution_2026-10-05/allsvenskan_owner.txt
+research/verification/all_log_resolution_2026-10-05/cfa_owner.txt
+research/verification/all_log_resolution_2026-10-05/kfu_owner.txt
+research/verification/all_log_resolution_2026-10-05/kfu_news.txt
+research/verification/all_log_resolution_2026-10-05/leaguescup_owner.txt
+research/verification/all_log_resolution_2026-10-05/guatemala_owner.txt
+research/verification/all_log_resolution_2026-10-05/carp_report.txt
+research/verification/all_log_resolution_2026-10-05/npb_schedule.txt
+# Owner narrative pages retained locally; publish hash receipts and derived sports fields.
+research/data/raw/source_snapshots/toluca_report_*
+research/data/raw/source_snapshots/kfu_owner_*
+research/data/raw/source_snapshots/kfu_news_*
+research/data/raw/source_snapshots/bhutan_owner_*

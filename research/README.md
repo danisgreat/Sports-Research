@@ -1,6 +1,12 @@
 # Research workspace
 
+Current October-5 all-log custody: 111 receipt bodies verify locally; 52 are intentionally excluded from Git (42 prior benchmark bodies plus 10 new restricted/market-bearing narrative captures). A clean checkout has 59 bodies and must fail strict custody for the other 52; no CI bypass or fabricated recapture is authorized. See the all-log source inventory and publication evidence.
+
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
 Current controls: [CURRENT_RULES.md](../CURRENT_RULES.md). No current model is live-qualified. Existing September evaluations and forecasts remain frozen; October's changed models are versioned SHADOW_ONLY candidates.
+
+Current reconciliation: [all-log October 5 evidence](verification/all_log_resolution_2026-10-05/REPORT.md). The earlier [document/cleanup evidence](verification/implementation_2026-10-05/REPORT.md) is a completed historical checkpoint. P-523–P-537 are already canonical; P-538 is next at this repair, subject to the live allocator. The two closed mini archives, all 15 carryovers, eleven diagnostic settlements and 132 retrospective sections are retained. No reimport, new certification or forecast rewrite is needed.
 
 ## Requested analyses and canonical logging — current default
 
@@ -25,8 +31,10 @@ The implementation was tested with CPython 3.14.6 and the exact [dependency lock
 
 ```powershell
 python -m pip install -r research/requirements.lock.txt
-python -B -m pytest -p no:cacheprovider research/tests -q
+python -B -m pytest -p no:cacheprovider research/tests research/operations -q
 py -3.14 -B -m research.operations.verify_custody
+py -3.14 -B -m research.operations.verify_reconciliation
+py -3.14 -B -m research.operations.verify_all_logs
 py -3.14 -B -m research.operations.control_freeze --verify
 ```
 
@@ -91,6 +99,8 @@ python -B -m research.src.archive build
 ```
 
 The archive guide explains canonical event grain, source receipt joins, season status, deduplication, mirrors/subsets and narrative separation. Use `research.src.archive.read_events(eligible_only=True, verify=True)` for source-checked historical labels, then apply `point_in_time` availability/endpoint gates before an as-of feature query. Most historical availability timestamps are unknown. Do not treat retrieval today as pregame availability years ago.
+
+Full custody reports every missing/hash-invalid/length-invalid receipt body and returns nonzero for any failure. There is no clean-checkout bypass. At this repair all 78 receipt bodies verify locally, while 42 are local-only benchmark bodies excluded from Git; an export containing tracked bodies alone fails their custody checks. CI runs freeze verification even after custody failure and retains an overall failure. Do not refetch a different body or publish quarantined bytes to mask that gap.
 
 Restricted Football-Data/FixtureDownload snapshots remain local under ignored `data/benchmark/`. The source registry prohibits automated retrieval through those restricted/manual routes. Forecast modules read processed sports-only columns; post-event market benchmark code is isolated. Raw historical rebuilds that require missing local restricted files fail clearly.
 

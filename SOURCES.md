@@ -1,5 +1,11 @@
 # Current source access controls - 2026-10-01
 
+Current October-5 all-log custody: 111 receipt bodies verify locally; 52 are intentionally excluded from Git (42 prior benchmark bodies plus 10 new restricted/market-bearing narrative captures). A clean checkout has 59 bodies and must fail strict custody for the other 52; no CI bypass or fabricated recapture is authorized. See the all-log source inventory and publication evidence.
+
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
 The executable [source registry](research/sources_registry.json) controls retrieval, league/parser/endpoint scope, market quarantine and permitted access. Use [sources.py](research/src/sources.py) for immutable bodies and receipts. The current source observation report is [source_observations.json](research/runs/implementation_2026-10-01/source_observations.json): ten routes returned the specified content; both ESPN probes returned HTTP 403; three entries require manual/local access or are excluded. Accessibility is not exact-event truth or independent collection.
 
 Official league, club, university and gamebook sources are available alongside public statistical archives. The registry and archive receipts materially expand retained source evidence. Every current collector remains UNKNOWN independence pending a supported audit. Same upstream API, embedded provider, club syndication or copied report cannot count as a new lineage. For live evidence, retain both a collector audit and event/body-specific audit before the issue cutoff. Native JSON parsing and reviewed manual field mapping must verify the actual field owner and endpoint.
@@ -1102,5 +1108,5 @@ Traps found and handled while building the Austria Bundesliga Basketball files:
 
 - **A source enters** only with a reproducible retrieval: route, date, access mode and response. One good result never promotes a source; judge it on accuracy, timeliness and authority.
 - **Re-test the table each month,** and whenever a route fails twice. Record the date in the "Verified" column.
-- **New sources found during a card** go into the mini log's document mapping with their route. They are added here at the next import.
+- **New sources found during a card** go into the canonical Part 6 card's source/document mapping with their route and retained receipts. Use a mini only if canonical writing fails, then reconcile transactionally. Source registry additions require explicit access/lineage/field contracts; a URL list does not grant admission.
 - Historical source audits removed from this tree remain in Git history.

@@ -1,8 +1,12 @@
 # METHOD - current authority
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
 October 5 administrative control repairs missing custody snapshots and restores the exact model-pinned control module, closes reconciled mini references, and refreshes the derived archive against retained CSVs. It changes no frozen forecasts, probabilities, model-build receipts or performance admission rules. Evidence and unresolved carryover: [closure report](research/verification/closure_2026-10-05/REPORT.md).
 
-Status: **ACTIVE**. Method **MDS-2026.10.01-v7.1**. Control revision **CR-2026.10.05-I1**. Scoring **SCV-2026.10.01-v3**. Active freeze: [CONTROL_MANIFEST_2026-10-05-1.md](CONTROL_MANIFEST_2026-10-05-1.md). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
+The subsequent [October 5 implementation](research/verification/implementation_2026-10-05/REPORT.md) aligns all current document authorities, removes the redundant closed mini pointer after archive readback, retains all eleven retrospective hypotheses as untested proposals, and reports every source-body custody failure. The full custody gate remains strict; local and clean-checkout results are recorded separately. Earlier receipt 1 describes the earlier closure.
+
+Status: **ACTIVE**. Method **MDS-2026.10.01-v7.1**. Control revision **CR-2026.10.05-I5**. Scoring **SCV-2026.10.01-v3**. Active freeze: [CONTROL_MANIFEST_2026-10-05-5.md](CONTROL_MANIFEST_2026-10-05-5.md). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
 
 The user's October 1 instruction authorizes probability-model, source, process and related repository changes. [CURRENT_RULES.md](CURRENT_RULES.md) is the sole current operating manual. [research/README.md](research/README.md) describes executable workflows. [IMPLEMENTATION_2026-10-01.md](IMPLEMENTATION_2026-10-01.md) records verification and remaining evidence gates. The September pipeline document and earlier root instructions remain historical wherever they conflict with these files.
 

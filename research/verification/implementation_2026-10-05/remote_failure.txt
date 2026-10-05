@@ -1,0 +1,555 @@
+offline-regressions	UNKNOWN STEP	﻿2026-10-05T03:37:34.6175346Z Current runner version: '2.337.0'
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6215621Z ##[group]Runner Image Provisioner
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6216887Z Hosted Compute Agent
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6218202Z Version: 20260901.588
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6219248Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6220474Z Build Date: 2026-09-01T19:56:44Z
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6221790Z Worker ID: {9414ee3b-b3f9-4915-879b-38354aa5dedd}
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6223025Z Azure Region: eastus2
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6223921Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6226173Z ##[group]Operating System
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6227194Z Microsoft Windows Server 2025
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6228215Z 10.0.26100
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6229139Z Datacenter
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6229981Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6230942Z ##[group]Runner Image
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6231987Z Image: windows-2025-vs2026
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6233026Z Version: 20260925.250.1
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6235592Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6239038Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260925.250
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6240874Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6242680Z ##[group]GITHUB_TOKEN Permissions
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6245567Z Contents: read
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6246629Z Metadata: read
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6247533Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6250711Z Secret source: Actions
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6252289Z Cache mode: write
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6253438Z Prepare workflow directory
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6675952Z Prepare all required actions
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.6727151Z Getting action download info
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:34.8622221Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.0003060Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.2812561Z Complete job name: offline-regressions
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4419624Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4421205Z with:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4421628Z   persist-credentials: false
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4422218Z   fetch-depth: 0
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4422749Z   repository: danisgreat/Sports-Research
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4427471Z   token: ***
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4427950Z   ssh-strict: true
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4428452Z   ssh-user: git
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4428914Z   clean: true
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4429414Z   sparse-checkout-cone-mode: true
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4430010Z   fetch-tags: false
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4430502Z   show-progress: true
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4430993Z   lfs: false
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4431460Z   submodules: false
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4431949Z   set-safe-directory: true
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4432417Z   allow-unsafe-pr-checkout: false
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4433088Z env:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4433464Z   PYTHONIOENCODING: utf-8
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.4433936Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.6119263Z Syncing repository: danisgreat/Sports-Research
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.6122201Z ##[group]Getting Git version info
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.6123607Z Working directory is 'D:\a\Sports-Research\Sports-Research'
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:35.7337889Z [command]"C:\Program Files\Git\bin\git.exe" version
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1046620Z git version 2.55.0.windows.5
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1109341Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1130064Z Temporarily overriding HOME='D:\a\_temp\9fcd0c54-71bc-4b4e-ae0e-fbb7b7c57f5a' before making global git config changes
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1131798Z Adding repository directory to the temporary git global config as a safe directory
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1141469Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Sports-Research\Sports-Research
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1898341Z Deleting the contents of 'D:\a\Sports-Research\Sports-Research'
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1903894Z ##[group]Determining repository object format
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1908866Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1910391Z ##[group]Initializing the repository
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.1915210Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\Sports-Research\Sports-Research
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.2806013Z Initialized empty Git repository in D:/a/Sports-Research/Sports-Research/.git/
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.2857021Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/danisgreat/Sports-Research
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.3524857Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.3526683Z ##[group]Disabling automatic garbage collection
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.3535432Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.3862582Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.3863677Z ##[group]Setting up auth
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.3864514Z Removing SSH command configuration
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.3873749Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:36.4210041Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:37.9463552Z Removing HTTP extra header
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:37.9478240Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:37.9807631Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:38.5645945Z Removing includeIf entries pointing to credentials config files
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:38.5655562Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:38.6003331Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:39.1769087Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:39.2120114Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Sports-Research/Sports-Research/.git.path D:\a\_temp\git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:39.2438721Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Sports-Research/Sports-Research/.git/worktrees/*.path D:\a\_temp\git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:39.2830848Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:39.3163138Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:39.3503383Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:39.3504276Z ##[group]Fetching the repository
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:39.3517083Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.6629557Z From https://github.com/danisgreat/Sports-Research
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.6630301Z  * [new branch]          main       -> origin/main
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.6693393Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.7093408Z   origin/main
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.7141004Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.7428588Z 3bde3dd9dee0864bed4954ed90aa3bcb5f3428cc
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.7469317Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.7469983Z ##[group]Determining the checkout info
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.7470704Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.7478469Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.7960553Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.8290317Z ##[group]Checking out the ref
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:46.8303109Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:48.1343135Z Updating files:   5% (4531/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:48.3596397Z Updating files:   6% (5334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:48.8473538Z Updating files:   7% (6223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:48.9926656Z Updating files:   8% (7112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:49.1545354Z Updating files:   8% (7570/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:49.3666682Z Updating files:   9% (8001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:49.5378245Z Updating files:  10% (8889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:49.7328689Z Updating files:  11% (9778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:49.9879679Z Updating files:  12% (10667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:49.9899675Z Updating files:  13% (11556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:50.1693985Z Updating files:  13% (11566/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:50.3480250Z Updating files:  14% (12445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:50.5306327Z Updating files:  15% (13334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:50.7102859Z Updating files:  16% (14223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:50.9060492Z Updating files:  17% (15112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:51.0014595Z Updating files:  18% (16001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:51.0947534Z Updating files:  18% (16476/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:51.3690411Z Updating files:  19% (16889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:51.5833591Z Updating files:  20% (17778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:51.8403212Z Updating files:  21% (18667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:52.0025779Z Updating files:  22% (19556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:52.0081426Z Updating files:  22% (20418/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:52.1798361Z Updating files:  23% (20445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:52.3466093Z Updating files:  24% (21334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:52.5294662Z Updating files:  25% (22223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:52.7798458Z Updating files:  26% (23112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:52.9514563Z Updating files:  27% (24001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:53.0122606Z Updating files:  28% (24889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:53.1254299Z Updating files:  28% (25216/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:53.2998966Z Updating files:  29% (25778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:53.4725520Z Updating files:  30% (26667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:53.6507858Z Updating files:  31% (27556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:53.8229756Z Updating files:  32% (28445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:54.0272530Z Updating files:  33% (29334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:54.1247664Z Updating files:  33% (30203/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:54.2923260Z Updating files:  34% (30223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:54.4641308Z Updating files:  35% (31112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:54.6288765Z Updating files:  36% (32001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:54.7989552Z Updating files:  37% (32889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:54.9701305Z Updating files:  38% (33778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:55.0399370Z Updating files:  39% (34667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:55.1341127Z Updating files:  39% (35049/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:55.3232083Z Updating files:  40% (35556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:55.5278371Z Updating files:  41% (36445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:55.6922065Z Updating files:  42% (37334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:55.8963926Z Updating files:  43% (38223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:56.0530937Z Updating files:  44% (39112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:56.0657770Z Updating files:  44% (39940/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:56.2396690Z Updating files:  45% (40001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:56.4295068Z Updating files:  46% (40889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:56.6060569Z Updating files:  47% (41778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:56.7714050Z Updating files:  48% (42667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:57.0162784Z Updating files:  49% (43556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:57.0544865Z Updating files:  50% (44445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:57.1835422Z Updating files:  50% (44647/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:57.3496874Z Updating files:  51% (45334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:57.5168554Z Updating files:  52% (46223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:57.6837385Z Updating files:  53% (47112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:57.8717115Z Updating files:  54% (48001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:58.0648901Z Updating files:  55% (48889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:58.1364170Z Updating files:  55% (49616/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:58.3034534Z Updating files:  56% (49778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:58.5293858Z Updating files:  57% (50667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:58.6999787Z Updating files:  58% (51556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:58.8951643Z Updating files:  59% (52445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:59.0663869Z Updating files:  60% (53334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:59.0783636Z Updating files:  61% (54223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:59.2560111Z Updating files:  61% (54279/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:59.4251262Z Updating files:  62% (55112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:59.5918594Z Updating files:  63% (56001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:59.8185652Z Updating files:  64% (56889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:37:59.9914153Z Updating files:  65% (57778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:00.0789149Z Updating files:  66% (58667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:00.1606205Z Updating files:  66% (59115/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:00.3313751Z Updating files:  67% (59556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:00.5174953Z Updating files:  68% (60445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:00.6873779Z Updating files:  69% (61334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:00.8554846Z Updating files:  70% (62223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:01.0238408Z Updating files:  71% (63112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:01.0945325Z Updating files:  72% (64001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:01.2425040Z Updating files:  72% (64350/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:01.4162409Z Updating files:  73% (64889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:01.6029542Z Updating files:  74% (65778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:01.7718178Z Updating files:  75% (66667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:01.9426616Z Updating files:  76% (67556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:02.0908097Z Updating files:  77% (68445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:02.1140340Z Updating files:  77% (69219/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:02.2820560Z Updating files:  78% (69334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:02.4546842Z Updating files:  79% (70223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:02.6842026Z Updating files:  80% (71112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:02.8697761Z Updating files:  81% (72001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:03.0369689Z Updating files:  82% (72889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:03.0909944Z Updating files:  83% (73778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:03.2046565Z Updating files:  83% (74055/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:03.3779931Z Updating files:  84% (74667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:03.5501387Z Updating files:  85% (75556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:03.7152990Z Updating files:  86% (76445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:03.8831528Z Updating files:  87% (77334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:04.0924912Z Updating files:  88% (78223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:04.1350153Z Updating files:  88% (78887/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:04.2985504Z Updating files:  89% (79112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:04.4627624Z Updating files:  90% (80001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:04.6323303Z Updating files:  91% (80889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:04.8005834Z Updating files:  92% (81778/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:04.9827623Z Updating files:  93% (82667/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:05.0978614Z Updating files:  94% (83556/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:05.1501016Z Updating files:  94% (84169/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:05.3335262Z Updating files:  95% (84445/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:05.5450178Z Updating files:  96% (85334/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:05.7133009Z Updating files:  97% (86223/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.0486542Z Updating files:  98% (87112/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.0994874Z Updating files:  99% (88001/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.4183970Z Updating files:  99% (88150/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.4184474Z Updating files: 100% (88889/88889)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.4184893Z Updating files: 100% (88889/88889), done.
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.5760784Z Switched to a new branch 'main'
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.5780351Z branch 'main' set up to track 'origin/main'.
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.5952504Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.6321815Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.6628905Z 3bde3dd9dee0864bed4954ed90aa3bcb5f3428cc
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.6679135Z ##[group]Removing auth
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.6679432Z Removing SSH command configuration
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.6688109Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:06.7026582Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:07.3413922Z Removing HTTP extra header
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:07.3425809Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:07.3781642Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:07.9717521Z Removing includeIf entries pointing to credentials config files
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:07.9787394Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.0013444Z includeif.gitdir:D:/a/Sports-Research/Sports-Research/.git.path
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.0014295Z includeif.gitdir:D:/a/Sports-Research/Sports-Research/.git/worktrees/*.path
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.0014850Z includeif.gitdir:/github/workspace/.git.path
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.0015503Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.0062175Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Sports-Research/Sports-Research/.git.path
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.0345436Z D:\a\_temp\git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.0395775Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Sports-Research/Sports-Research/.git.path D\:\\a\\_temp\\git\-credentials\-accfff31\-13b8\-4df8\-9f91\-f7d4f2e809cd\.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.0730777Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Sports-Research/Sports-Research/.git/worktrees/*.path
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.0993943Z D:\a\_temp\git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.1039954Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Sports-Research/Sports-Research/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-accfff31\-13b8\-4df8\-9f91\-f7d4f2e809cd\.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.1367543Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.1647274Z /github/runner_temp/git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.1692509Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-accfff31\-13b8\-4df8\-9f91\-f7d4f2e809cd\.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.2037515Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.2311159Z /github/runner_temp/git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.2358397Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-accfff31\-13b8\-4df8\-9f91\-f7d4f2e809cd\.config
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.2684363Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8501174Z Removing credentials config 'D:\a\_temp\git-credentials-accfff31-13b8-4df8-9f91-f7d4f2e809cd.config'
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8513147Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8956028Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8956482Z with:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8956675Z   python-version: 3.14.6
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8956900Z   cache: pip
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8957146Z   cache-dependency-path: research/requirements.lock.txt
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8957455Z   check-latest: false
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8959746Z   token: ***
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8959944Z   update-environment: true
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8960178Z   allow-prereleases: false
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8960403Z   freethreaded: false
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8960584Z env:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8960752Z   PYTHONIOENCODING: utf-8
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:08.8960962Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:09.0536600Z ##[group]Installed versions
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:09.0551225Z Version 3.14.6 was not found in the local cache
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:09.6521303Z Version 3.14.6 is available for downloading
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:09.6522419Z Download from "https://github.com/actions/python-versions/releases/download/3.14.6-27283001424/python-3.14.6-win32-x64.zip"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:10.0339442Z Extract downloaded archive
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:10.1458212Z [command]"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "$ErrorActionPreference = 'Stop' ; try { Add-Type -AssemblyName System.IO.Compression.ZipFile } catch { } ; try { [System.IO.Compression.ZipFile]::ExtractToDirectory('D:\a\_temp\python-3.14.6-win32-x64.zip', 'D:\a\_temp\845495ad-d8a0-4283-91c5-0127f18f362b', $true) } catch { if (($_.Exception.GetType().FullName -eq 'System.Management.Automation.MethodException') -or ($_.Exception.GetType().FullName -eq 'System.Management.Automation.RuntimeException') ){ Expand-Archive -LiteralPath 'D:\a\_temp\python-3.14.6-win32-x64.zip' -DestinationPath 'D:\a\_temp\845495ad-d8a0-4283-91c5-0127f18f362b' -Force } else { throw $_ } } ;"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:10.6336967Z Execute installation script
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:13.6452220Z Check if Python hostedtoolcache folder exist...
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:13.6455141Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:13.6617808Z Check if current Python version is installed...
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:13.6618277Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:13.6794278Z Python3.14 (x64) was found in C:\hostedtoolcache\windows\Python...
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:13.6794942Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:13.7165962Z Deleting C:\hostedtoolcache\windows\Python\3.14.7\x64...
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:13.7166461Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:17.9552617Z VERBOSE: Performing the operation "Remove File" on target "C:\hostedtoolcache\windows\Python\3.14.7\x64.complete".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:17.9553320Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:17.9563856Z Remove registry entries for Python 3.14(x64)...
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:17.9565991Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3364862Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3366345Z HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\4A74AA6611FA4AE41B603
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3367374Z 2208F1395A2".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3367558Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3386106Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3387361Z HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\553D36C37EB45E0498DA5
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3388272Z 84FB3930D1F".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3388409Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3407421Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3408749Z HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\7ED03295AC2617C46B8F8
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3409690Z F2CE6A729D7".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3410188Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3430445Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3431543Z HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\ABDA378FE12E7494788B2
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3432456Z 8151415BF4F".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3432631Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3451558Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3452365Z HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\AE0E3349BB6F0F047BF4C
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3452973Z 2733DEB37B0".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3453090Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3468455Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3469505Z HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\B25B1AB7748DCA342BEE8
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3470409Z 2DF132F9AB9".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3470583Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3491447Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3492513Z HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\EA3E6CF4BDEDC594E9D45
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3493425Z 61F384D266D".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3493606Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3509372Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3510492Z HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\ED6D42486A04DDE4EAD7E
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3511435Z 8B00D7780F1".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.3511625Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4374340Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4375110Z HKEY_CLASSES_ROOT\Installer\Products\4A74AA6611FA4AE41B6032208F1395A2".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4375471Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4432486Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4433655Z HKEY_CLASSES_ROOT\Installer\Products\553D36C37EB45E0498DA584FB3930D1F".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4434364Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4589066Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4589653Z HKEY_CLASSES_ROOT\Installer\Products\7ED03295AC2617C46B8F8F2CE6A729D7".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4590523Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4809901Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4811111Z HKEY_CLASSES_ROOT\Installer\Products\ABDA378FE12E7494788B28151415BF4F".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4811774Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4851760Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4852325Z HKEY_CLASSES_ROOT\Installer\Products\AE0E3349BB6F0F047BF4C2733DEB37B0".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4852875Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4899874Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4900582Z HKEY_CLASSES_ROOT\Installer\Products\B25B1AB7748DCA342BEE82DF132F9AB9".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.4901072Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5186554Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5187552Z HKEY_CLASSES_ROOT\Installer\Products\EA3E6CF4BDEDC594E9D4561F384D266D".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5188025Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5227245Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5228061Z HKEY_CLASSES_ROOT\Installer\Products\ED6D42486A04DDE4EAD7E8B00D7780F1".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5228628Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5389107Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5390573Z HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\Miniconda3 py314_26.7.1-1 (Python 3.14.7 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5391147Z 64-bit)".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5391259Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5540374Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5541072Z HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\{3C63D355-4BE7-40E5-89AD-85F43B39D0F1}".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5541640Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5606320Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5607079Z HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FC6E3AE-DEDB-495C-9E4D-65F183D462D6}".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5608037Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5638654Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5640741Z HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\{59230DE7-62CA-4C71-B6F8-F8C26E7A927D}".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5641409Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5671912Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5672617Z HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\{66AA47A4-AF11-4EA4-B106-2302F831592A}".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5673417Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5727829Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5728692Z HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\{7BA1B52B-D847-43AC-B2EE-28FD31F2A99B}".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5729617Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5757129Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5758154Z HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\{8424D6DE-40A6-4EDD-AE7D-8E0BD077081F}".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5758698Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5795511Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5796497Z HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\{9433E0EA-F6BB-40F0-B74F-2C37D3BE730B}".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.5797169Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.6013441Z VERBOSE: Performing the operation "Remove Key" on target "Item: 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.6014708Z HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\{F873ADBA-E21E-4947-87B8-82514151FBF4}".
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.6015612Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.6718439Z Create Python 3.14.6 folder in C:\hostedtoolcache\windows\Python
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.6718933Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.6762576Z Copy Python binaries to C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.6764663Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.6895862Z Install Python 3.14.6 in C:\hostedtoolcache\windows\Python...
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:18.6896346Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.8659444Z Create python3 symlink
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.8659802Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9008150Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9009218Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9014323Z Directory: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9015299Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9015306Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9026897Z Mode                 LastWriteTime         Length Name
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9031625Z ----                 -------------         ------ ----
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9043439Z -a---l         10/5/2026   3:38 AM              0 python3.exe
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9052880Z Install and upgrade Pip
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:52.9055179Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.1136570Z Collecting pip
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.1664490Z Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.1915834Z Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.3133615Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.3135455Z ---------------------------------------- 1.8/1.8 MB 16.7 MB/s  0:00:00
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.3136217Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.3490414Z Installing collected packages: pip
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.3492108Z Attempting uninstall: pip
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.3523186Z Found existing installation: pip 26.1.2
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.4304715Z Uninstalling pip-26.1.2:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:54.4513718Z Successfully uninstalled pip-26.1.2
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:56.6669563Z Successfully installed pip-26.2.1
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:56.7319189Z Create complete file
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:56.7319541Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:56.7334059Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:56.7334951Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:56.7813951Z Successfully set up CPython (3.14.6)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:56.7814749Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.2701010Z pip cache is not found
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3024271Z ##[group]Run python -m pip install -r research/requirements.lock.txt
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3024877Z ^[[36;1mpython -m pip install -r research/requirements.lock.txt^[[0m
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3166217Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3166669Z env:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3166922Z   PYTHONIOENCODING: utf-8
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3167324Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3167932Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.6\x64/lib/pkgconfig
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3168754Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3169287Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3169819Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:57.3170231Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.0167180Z Collecting numpy==2.5.2 (from -r research/requirements.lock.txt (line 2))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.0629418Z   Downloading numpy-2.5.2-cp314-cp314-win_amd64.whl.metadata (6.6 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.2254161Z Collecting pandas==3.0.5 (from -r research/requirements.lock.txt (line 3))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.2358395Z   Downloading pandas-3.0.5-cp314-cp314-win_amd64.whl.metadata (19 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.3792597Z Collecting pyarrow==25.0.1 (from -r research/requirements.lock.txt (line 4))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.3913191Z   Downloading pyarrow-25.0.1-cp314-cp314-win_amd64.whl.metadata (3.0 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.5683223Z Collecting scipy==1.18.1 (from -r research/requirements.lock.txt (line 5))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.5780136Z   Downloading scipy-1.18.1-cp314-cp314-win_amd64.whl.metadata (61 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.8678480Z Collecting pytest==9.1.1 (from -r research/requirements.lock.txt (line 6))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.8759461Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.9165857Z Collecting python-dateutil==2.9.0.post0 (from -r research/requirements.lock.txt (line 7))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.9249627Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.9697748Z Collecting six==1.17.0 (from -r research/requirements.lock.txt (line 8))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:38:59.9785833Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.0235341Z Collecting tzdata==2026.3 (from -r research/requirements.lock.txt (line 9))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.0331506Z   Downloading tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.0742774Z Collecting pluggy==1.6.0 (from -r research/requirements.lock.txt (line 10))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.0838774Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.1277321Z Collecting packaging==26.3 (from -r research/requirements.lock.txt (line 11))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.1360659Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.1875564Z Collecting pygments==2.21.0 (from -r research/requirements.lock.txt (line 12))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.1957918Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.2381870Z Collecting iniconfig==2.3.0 (from -r research/requirements.lock.txt (line 13))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.2464934Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.2941326Z Collecting colorama==0.4.6 (from -r research/requirements.lock.txt (line 14))
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.3023052Z   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.3556104Z Downloading numpy-2.5.2-cp314-cp314-win_amd64.whl (12.6 MB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.5160521Z    ---------------------------------------- 12.6/12.6 MB 81.7 MB/s  0:00:00
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.5253127Z Downloading pandas-3.0.5-cp314-cp314-win_amd64.whl (10.0 MB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.6608962Z    ---------------------------------------- 10.0/10.0 MB 73.3 MB/s  0:00:00
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:00.6738942Z Downloading pyarrow-25.0.1-cp314-cp314-win_amd64.whl (28.6 MB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.0599121Z    ---------------------------------------- 28.6/28.6 MB 74.1 MB/s  0:00:00
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.0719818Z Downloading scipy-1.18.1-cp314-cp314-win_amd64.whl (37.4 MB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.6137851Z    ---------------------------------------- 37.4/37.4 MB 68.9 MB/s  0:00:00
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.6232713Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.6493519Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.6761833Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.7026179Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.7559455Z Downloading tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.7828815Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.8113428Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.8429627Z    ---------------------------------------- 1.3/1.3 MB 36.6 MB/s  0:00:00
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.8513129Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:01.8831121Z Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:02.1625434Z Installing collected packages: tzdata, six, pygments, pyarrow, pluggy, packaging, numpy, iniconfig, colorama, scipy, python-dateutil, pytest, pandas
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:27.9228926Z 
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:27.9252766Z Successfully installed colorama-0.4.6 iniconfig-2.3.0 numpy-2.5.2 packaging-26.3 pandas-3.0.5 pluggy-1.6.0 pyarrow-25.0.1 pygments-2.21.0 pytest-9.1.1 python-dateutil-2.9.0.post0 scipy-1.18.1 six-1.17.0 tzdata-2026.3
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1571994Z ##[group]Run python -B -m pytest -p no:cacheprovider research/tests research/operations/test_log_card.py -q
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1572967Z ^[[36;1mpython -B -m pytest -p no:cacheprovider research/tests research/operations/test_log_card.py -q^[[0m
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1645657Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1646033Z env:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1646237Z   PYTHONIOENCODING: utf-8
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1646583Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1647072Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.6\x64/lib/pkgconfig
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1647569Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1648013Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1648457Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:28.1648807Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:38.3066375Z ........................................................................ [ 61%]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.0707136Z ..............................................                           [100%]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.0707711Z 118 passed in 22.07s
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3782081Z ##[group]Run python -B -m research.operations.log_card verify
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3782609Z ^[[36;1mpython -B -m research.operations.log_card verify^[[0m
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3854617Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3854973Z env:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3855168Z   PYTHONIOENCODING: utf-8
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3855486Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3855938Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.6\x64/lib/pkgconfig
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3856378Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3856784Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3857212Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:51.3857536Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2741966Z {
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2742495Z   "cards": [
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2742826Z     "P-523",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2743229Z     "P-524",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2743566Z     "P-525",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2743883Z     "P-526",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2744234Z     "P-527",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2744578Z     "P-528",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2744871Z     "P-529",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2745135Z     "P-530",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2745374Z     "P-531",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2745607Z     "P-532",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2746160Z     "P-533",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2746641Z     "P-534",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2746961Z     "P-535",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2747270Z     "P-536",
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2747546Z     "P-537"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2747832Z   ],
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2748163Z   "next_id": "P-538"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.2748536Z }
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4904474Z ##[group]Run python -B -m research.operations.verify_custody
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4905191Z ^[[36;1mpython -B -m research.operations.verify_custody^[[0m
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4978795Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4979212Z env:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4979422Z   PYTHONIOENCODING: utf-8
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4979757Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4980241Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.14.6\x64/lib/pkgconfig
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4980699Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4981114Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4981541Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.14.6\x64
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:52.4981873Z ##[endgroup]
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7712905Z Traceback (most recent call last):
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7728706Z   File "<frozen runpy>", line 203, in _run_module_as_main
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7729312Z   File "<frozen runpy>", line 88, in _run_code
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7730107Z   File "D:\a\Sports-Research\Sports-Research\research\operations\verify_custody.py", line 32, in <module>
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7731023Z     result=run();print(json.dumps(result,indent=2));raise SystemExit(not result['valid'])
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7731924Z   File "D:\a\Sports-Research\Sports-Research\research\operations\verify_custody.py", line 23, in run
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7732600Z     result=acceptance.run()
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7733172Z   File "D:\a\Sports-Research\Sports-Research\research\src\acceptance.py", line 47, in run
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7733909Z     verified_body(json.loads(path.read_text()),repo);source_count+=1
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7734354Z     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7734988Z   File "D:\a\Sports-Research\Sports-Research\research\operations\verify_custody.py", line 18, in compatible_body
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7735584Z     return verified_body(receipt, root)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7736102Z   File "D:\a\Sports-Research\Sports-Research\research\src\sources.py", line 54, in verified_body
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7736609Z     raw = path.read_bytes()
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7737094Z   File "C:\hostedtoolcache\windows\Python\3.14.6\x64\Lib\pathlib\__init__.py", line 777, in read_bytes
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7737625Z     with self.open(mode='rb', buffering=0) as f:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7737939Z          ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7738448Z   File "C:\hostedtoolcache\windows\Python\3.14.6\x64\Lib\pathlib\__init__.py", line 771, in open
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7739022Z     return io.open(self, mode, buffering, encoding, errors, newline)
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7739420Z            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.7740327Z FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Sports-Research\\Sports-Research\\research\\data\\benchmark\\source_snapshots\\audit_afc_owner_20261001T073155024971Z_0336459b9441.body'
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:53.9731199Z ##[error]Process completed with exit code 1.
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.0015847Z Post job cleanup.
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.2089444Z [command]"C:\Program Files\Git\bin\git.exe" version
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.2445812Z git version 2.55.0.windows.5
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.2514386Z Temporarily overriding HOME='D:\a\_temp\afbac7c7-b6ce-4732-ae69-27a80cba0516' before making global git config changes
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.2515705Z Adding repository directory to the temporary git global config as a safe directory
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.2526497Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Sports-Research\Sports-Research
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.2883284Z Removing SSH command configuration
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.2895621Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.3240218Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.8916682Z Removing HTTP extra header
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.8927445Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:54.9245706Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:55.5323170Z Removing includeIf entries pointing to credentials config files
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:55.5335154Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:55.5651452Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+offline-regressions	UNKNOWN STEP	2026-10-05T03:39:56.1667171Z Cleaning up orphan processes

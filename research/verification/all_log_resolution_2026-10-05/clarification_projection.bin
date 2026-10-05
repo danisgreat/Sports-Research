@@ -1,0 +1,8 @@
+
+## All-log resolution — source and schedule clarification, October 5
+
+Current selected carryover is `research/verification/all_log_resolution_2026-10-05/carryover_v2.json`, hash-bound by `research/current_settlement_register.json`. It retains the same 53 IDs and adds recovered verbatim schedule pointers and exact competition labels; missing schedules remain explicitly unrecovered. The 71 TMP strings comprise 67 event/contract aliases and four namespace/group labels; LOCAL-P528-GR-CLE-20261002 is one additional already canonical local tracker. No ID is assigned twice.
+
+P-525 wording clarification: the single Hiroshima run in the bottom seventh was a run scored on Nakamura Shosei's RBI single, not a home run. The owner linescore remains 5–1, combined six; all four diagnostic grades are unchanged. The preceding phrase “bottom-seventh home run” meant the home side's run and was ambiguous. The home runs in the owner record were Nakamura's third-inning two-run homer and Sakakura's sixth-inning solo; Chunichi's Hosokawa homered in the seventh.
+
+Four additional retrospective hypotheses are retained in `research/verification/all_log_resolution_2026-10-05/improvement_proposals.json`, linked by `research/improvement_register.json`. All 15 original-plus-new suggestions remain PROPOSED_NOT_TESTED; no retrospective result is promoted into a model change.

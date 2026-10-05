@@ -1,5 +1,9 @@
 # Historical pipeline plan - superseded for current procedures
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
 The September plan and results below are retained as historical context. [CURRENT_RULES.md](CURRENT_RULES.md), [research/README.md](research/README.md) and [IMPLEMENTATION_2026-10-01.md](IMPLEMENTATION_2026-10-01.md) control new model/source/process work. Earlier holdouts and forecast bytes remain frozen; new development candidates, eligibility and issuer/pilot controls have separate versioned receipts.
 
 ---

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "scope": "Additional exact-event owner and owner-hosted original news",
+  "sources": {
+    "mlb_p492": {
+      "publisher": "statsapi.mlb.com",
+      "allowed_url_prefixes": [
+        "https://statsapi.mlb.com/api/v1.1/game/823897/feed/live"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "parser_id": "EXACT_EVENT_AUDIT",
+      "upstream_lineage_id": "REQUIRES_AUDIT",
+      "independence_status": "UNKNOWN"
+    },
+    "kbo_osen_p526": {
+      "publisher": "www.koreabaseball.com",
+      "allowed_url_prefixes": [
+        "https://www.koreabaseball.com/MediaNews/News/BreakingNews/View.aspx"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "parser_id": "EXACT_EVENT_AUDIT",
+      "upstream_lineage_id": "REQUIRES_AUDIT",
+      "independence_status": "UNKNOWN"
+    }
+  }
+}

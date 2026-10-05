@@ -1,0 +1,219 @@
+Settle completed games + comprehensive retrospective
+
+
+
+
+
+Your task is to reconcile the completed active mini running log/reference log with canonical custody, ensure every eligible record and settlement is correctly represented in the active Combined Prediction Log, then archive the mini log safely.
+
+Do NOT blindly paste the mini log into Part 6. The current repository treats mini logs as fallback/reference copies and canonical cards may already exist in Part 6.
+
+### 1. Mandatory fresh-read
+
+Before writing anything, read the CURRENT:
+
+- `METHOD.md`
+- `CURRENT_RULES.md`
+- `CARD_AND_LOG_TEMPLATES.md`
+- `SCORING_AND_VALIDATION.md`
+- `GAME_LOG_STATUS_CURRENT.md`
+- `VERIFICATION_PROTOCOL.md`
+- `research/README.md`
+- `research/operations/log_card.py`
+- current canonical ledger/custody documentation
+- active `prediction logs/PREDICTION_LOG_COMBINED_6.md`
+- active mini running log/reference log
+- any current repair/reconciliation document referenced by those files
+
+Use `METHOD.md` and `CURRENT_RULES.md` as controlling authority.
+
+### 2. Recover and verify custody before importing
+
+Before assigning or appending anything:
+
+1. check for a pending/interrupted canonical transaction;
+2. recover it using the current repository workflow if one exists;
+3. run the current `next-id` operation;
+4. verify the canonical ledger, Part 6 projections and retained source hashes;
+5. verify the active control/freeze receipt.
+
+Never infer the next ID by manually incrementing the largest number when the repository provides a transactional `next-id` workflow.
+
+Never reuse reserved IDs.
+
+### 3. Reconcile every mini-log entry against canonical custody
+
+For every entry in the mini log, determine whether it is:
+
+- already canonical under the same event;
+- already canonical but represented by a temporary/tracking alias;
+- already canonical with an existing settlement/addendum;
+- mini-only and still needs canonical import;
+- a duplicate;
+- materially changed from an already-canonical record;
+- unsettled/unresolved and needing carryover.
+
+Match using the strongest available identity:
+
+- canonical ID;
+- event key;
+- native event ID;
+- league;
+- teams;
+- date/start;
+- original source hash;
+- body hash;
+- tracking alias.
+
+Do not create duplicate cards.
+
+If the same event/source/body already exists canonically, keep the existing canonical ID and create/reference the canonical pointer rather than appending it again.
+
+If the same event exists but the mini text differs, do NOT silently overwrite or reissue it. Use the current dated-addendum/correction mechanism.
+
+### 4. Import only records that genuinely require canonical import
+
+For a mini-only research card that legitimately needs canonical retention, use the CURRENT transactional research-card workflow.
+
+Follow the current repository's equivalent of:
+
+`py -3.14 -B -m research.operations.log_card recover`
+
+`py -3.14 -B -m research.operations.log_card next-id`
+
+`py -3.14 -B -m research.operations.log_card commit <card.json>`
+
+`py -3.14 -B -m research.operations.log_card verify`
+
+Do not manually type a P-number into Part 6 before the transaction assigns it.
+
+The canonical import must preserve:
+
+- original event identity;
+- original analysis status;
+- actual historical delivery/log time where documented;
+- original contracts;
+- original ranks;
+- original probabilities/baselines if they existed;
+- original uncertainty labels;
+- original source text/bytes;
+- tracking alias;
+- provenance/source hashes.
+
+Never backdate a prediction or manufacture a pregame issue that did not occur.
+
+`UNCALIBRATED_QUALITATIVE`, late-issued, research-only and performance-ineligible records remain labelled honestly after canonical import.
+
+### 5. Settlement preservation
+
+For records settled under the previous settlement/retrospective task:
+
+- ensure the settlement is associated with the same canonical ID;
+- do not create another prediction card to hold a settlement;
+- preserve the immutable issue/research core;
+- append settlement/revision/addendum information only;
+- preserve W/L/P/VOID/UNRESOLVED literally;
+- preserve retrospective text separately from the original forecast;
+- retain all source/provenance receipts.
+
+Do not upgrade diagnostic settlement into certified/performance-eligible settlement unless every current admission requirement is independently satisfied.
+
+### 6. Handle unsettled records safely
+
+Do NOT discard unresolved or unsettled records merely because the current mini log is being archived.
+
+Create a precise carryover manifest/section containing every unresolved record with:
+
+- existing canonical ID or tracking handle;
+- event;
+- competition;
+- original scheduled start;
+- current state;
+- unresolved contract/field;
+- exact remaining settlement requirement;
+- canonical pointer;
+- source/custody notes.
+
+These entries must be available for the next running log.
+
+Never assign them new canonical IDs.
+
+### 7. Archive the mini running log
+
+Only archive the mini log after every entry is accounted for as one of:
+
+- canonical and settled;
+- canonical and unresolved with carryover prepared;
+- canonical pointer to an existing record;
+- explicitly documented duplicate/alias.
+
+Use the CURRENT archive convention found in the repository. Do not invent an archive path if the repository specifies one.
+
+The archived mini log must become a reference copy, not a competing active ledger.
+
+Its header should clearly record:
+
+- CLOSED/ARCHIVED date and time;
+- covered canonical ID range;
+- which IDs were imported;
+- which entries were already canonical;
+- which unresolved entries were carried forward;
+- canonical Part 6 pointer;
+- next canonical ID after reconciliation;
+- governing method/control revision;
+- archive verification result.
+
+Preserve original bytes/content wherever the current custody rules require preservation.
+
+### 8. Update living status
+
+Update the current status/register only through the repository's supported mechanisms.
+
+The final state must correctly identify:
+
+- current highest canonical research ID;
+- actual next ID returned by the ledger workflow;
+- unresolved/carryover records;
+- active Combined Prediction Log;
+- archived mini reference;
+- current method/control/freeze receipt.
+
+Do not edit historical snapshots to make them appear current.
+
+### 9. Verification gate
+
+Before reporting completion, run the CURRENT required checks, including applicable current equivalents of:
+
+- `research.operations.log_card verify`
+- `research.operations.verify_custody`
+- `research.operations.control_freeze --verify`
+- repository research tests
+- acceptance checks
+- archive validation
+- source validation
+- canonical ledger verification
+- workflow status/score where relevant
+
+If the repository's CURRENT `research/README.md` gives newer commands, use the newer commands.
+
+Do not claim that an import/archive succeeded unless readback confirms it.
+
+### 10. Final response
+
+Report succinctly:
+
+- mini-log records examined;
+- canonical IDs imported;
+- records already canonical and therefore not duplicated;
+- settlement/addenda reconciled;
+- unresolved records prepared for carryover;
+- archived mini-log path;
+- Combined Prediction Log destination;
+- actual next canonical ID returned by the repository;
+- files changed;
+- verification/test results;
+- any remaining custody or evidence problem.
+
+Do not paste the full Combined Prediction Log into chat.
+
+Accuracy, deduplication, immutable forecast custody, transactional ID assignment and verification take priority over speed.

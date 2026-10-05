@@ -1,0 +1,1742 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-05T11:45:07.092216+00:00",
+  "event_count": 53,
+  "documentary_repairs": 10,
+  "scope": "537 canonical/admin/reserved slots inventoried; 53 specific sporting/operator/certification carryovers. Other historical closed entries are not recertified.",
+  "records": [
+    {
+      "canonical_id": "P-126",
+      "event": "Sikkim Aakraman FC vs Sikkim Boys Club — SFA A Division S-League",
+      "competition": "SFA A Division S-League",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: | Schedule                                           | `CONFLICTING`                                                                                                             | / | Current stronger schedule branch                   | 2026-08-29 11:00 IST                                                                                                      |",
+      "current_state": "UNRESOLVED_IDENTITY",
+      "unresolved_contracts_or_fields": [
+        "Original exact contract field not authenticated",
+        "Current secondary schedule still has an unscored Aug 28 row. Prior 1–0 versus secondary 3–0 and Aug 28/29 conflict remain; SFA exact-event final and corners required. Sofa route now 403. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Current secondary schedule still has an unscored Aug 28 row. Prior 1–0 versus secondary 3–0 and Aug 28/29 conflict remain; SFA exact-event final and corners required. Sofa route now 403. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:189",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-03"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 22039,
+          "text": "| Schedule                                           | `CONFLICTING`                                                                                                             |",
+          "line_sha256": "c4ec5677bf0ee44def6febb58f216cc7ae0b72bd785465d5711457dfefe66151"
+        },
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 22040,
+          "text": "| Current stronger schedule branch                   | 2026-08-29 11:00 IST                                                                                                      |",
+          "line_sha256": "acb0fe804c750d83155c34e9e8eba67bd34e5af5c92458936d60fa65fb012069"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-136",
+      "event": "James Duckworth vs Arthur Fery — ATP Winston-Salem Open 2026 Semifinal",
+      "competition": "ATP Winston-Salem Open semifinal",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: | Official scheduled start | Not before 6:30 PM EDT, Friday 28 Aug 2026 |",
+      "current_state": "UNRESOLVED_OPERATOR",
+      "unresolved_contracts_or_fields": [
+        "Over 22.5 total games; Duckworth +1.5 games; Fery -1.5 games; Under 22.5 total games",
+        "Recovered original continuation says Arthur Fery advanced after James Duckworth retired. All four total/game-handicap contracts froze UNKNOWN_DEFINITION retirement rules. Parent FINAL/SETTLED is incomplete at contract level. Require original ticket/operator retirement/action terms; no arbitrary VOID or numeric Brier."
+      ],
+      "remaining_requirement": "Recovered original continuation says Arthur Fery advanced after James Duckworth retired. All four total/game-handicap contracts froze UNKNOWN_DEFINITION retirement rules. Parent FINAL/SETTLED is incomplete at contract level. Require original ticket/operator retirement/action terms; no arbitrary VOID or numeric Brier.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:199",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 28434,
+          "text": "| Official scheduled start | Not before 6:30 PM EDT, Friday 28 Aug 2026 |",
+          "line_sha256": "dfda767458090bef0d7c5a56aeb979500efce8490db2e8e776d54c0142b5bcae"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-148",
+      "event": "Toluca Femenil v León Femenil",
+      "competition": "Liga MX Femenil Apertura",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "; Toluca team corners Over 4.5; ; ",
+        "Toluca official report supports 1–0 but is not an aggregate-corner record. Prior Toluca 2 / ordering 2–6 versus 6–2 is unresolved; provisional LOSS only. Raw local P-147 maps to canonical P-148. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Toluca official report supports 1–0 but is not an aggregate-corner record. Prior Toluca 2 / ordering 2–6 versus 6–2 is unresolved; provisional LOSS only. Raw local P-147 maps to canonical P-148. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:211",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-04"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "toluca_report",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/toluca_report_20261005T110522461981Z_9524c354dec1.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-149",
+      "event": "Colorado Rapids 2 v Ventura County",
+      "competition": "MLS NEXT Pro",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - Scheduled start: Friday Aug. 28, 2026, 7:30 PM CDT / 8:30 PM ET",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "; ; ; ; ",
+        "Club-origin release supports Ventura 3–2, but has no aggregate corners; its syndicated copy is not an independent lineage. Prior research WIN remains provisional. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Club-origin release supports Ventura 3–2, but has no aggregate corners; its syndicated copy is not an independent lineage. Prior research WIN remains provisional. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:212",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-05"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 41565,
+          "text": "- Scheduled start: Friday Aug. 28, 2026, 7:30 PM CDT / 8:30 PM ET",
+          "line_sha256": "793077fbf62c6c3a75f4806e8915d69b494df2c586f31d2e2840f9a30d148d47"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-166",
+      "event": "Melbourne Mustangs vs Canberra Brave — AIHL Goodall Cup Semifinal",
+      "competition": "AIHL Goodall Cup semifinal",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: | Scheduled start | 2026-08-29 18:00 Australia/Melbourne |",
+      "current_state": "UNRESOLVED_OPERATOR",
+      "unresolved_contracts_or_fields": [
+        "Melbourne +1.5; Over 7.5 goals; Under 7.5 goals; Canberra -1.5",
+        "Regulation 4–4, final 5–4 after overtime, inherited sporting grades retained. Ticket/definition specifying overtime treatment NOT_RETRIEVED; no sporting-result search can reconstruct it. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Regulation 4–4, final 5–4 after overtime, inherited sporting grades retained. Ticket/definition specifying overtime treatment NOT_RETRIEVED; no sporting-result search can reconstruct it. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:229",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 49852,
+          "text": "| Scheduled start | 2026-08-29 18:00 Australia/Melbourne |",
+          "line_sha256": "571da966f095989072203d477c2f33fb805cbcf8031595a6511f10707a7686c7"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-176",
+      "event": "Amiens SC vs FC Versailles — France Ligue 3",
+      "competition": "France Ligue 3",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: | Scheduled kickoff | 2026-08-29 14:45 CEST / 22:45 Australia/Melbourne |",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Amiens Team Under 1.5; Under 2.5 Goals; Versailles ML; 1st Half Over 0.5; Total match corners Under 10.5",
+        "Secondary final 3–0 and corner commentary do not prove a complete aggregate. Prior 8 = 5+3 research WIN retained; FFF exact match-stat sheet required. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Secondary final 3–0 and corner commentary do not prove a complete aggregate. Prior 8 = 5+3 research WIN retained; FFF exact match-stat sheet required. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:239",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-06"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "fff_owner",
+          "status": "UNAVAILABLE",
+          "receipt_path": null,
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 52458,
+          "text": "| Scheduled kickoff | 2026-08-29 14:45 CEST / 22:45 Australia/Melbourne |",
+          "line_sha256": "6010421525751d6416f88e72b69dee7c31f14e928082efaf549c46a1efe95854"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-178",
+      "event": "AS Cannes vs Le Puy-en-Velay — France Ligue 3",
+      "competition": "France Ligue 3",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: | Scheduled kickoff | 2026-08-29 14:45 CEST / 22:45 Australia/Melbourne |",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Under 2.5 Goals; Cannes Team Under 1.5; 1st Half Over 0.5; BTTS — No",
+        "L’Équipe exact-event route 403, FFF 403. Prior 16 = 8+8 research LOSS retained; no new official aggregate. Competition is Ligue 3, not silently relabelled National 2. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "L’Équipe exact-event route 403, FFF 403. Prior 16 = 8+8 research LOSS retained; no new official aggregate. Competition is Ligue 3, not silently relabelled National 2. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:241",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-07"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "fff_owner",
+          "status": "UNAVAILABLE",
+          "receipt_path": null,
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 53036,
+          "text": "| Scheduled kickoff | 2026-08-29 14:45 CEST / 22:45 Australia/Melbourne |",
+          "line_sha256": "6010421525751d6416f88e72b69dee7c31f14e928082efaf549c46a1efe95854"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-179",
+      "event": "Thionville Lusitanos vs Paris 13 Atletico — France Ligue 3",
+      "competition": "France Ligue 3",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: | Scheduled kickoff | 2026-08-29 14:45 CEST / 22:45 Australia/Melbourne |",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Thionville Team Over 0.5; 1st Half Over 0.5; Paris 13 Team Under 1.5; Under 2.5 Goals; Under 10.5 Corners",
+        "Exact-event secondary route 403 and FFF 403. Prior 9 = 8+1 research WIN retained. The two penalty goals in the 1–1 result are not a shootout. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Exact-event secondary route 403 and FFF 403. Prior 9 = 8+1 research WIN retained. The two penalty goals in the 1–1 result are not a shootout. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:242",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-08"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "fff_owner",
+          "status": "UNAVAILABLE",
+          "receipt_path": null,
+          "error": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 53384,
+          "text": "| Scheduled kickoff | 2026-08-29 14:45 CEST / 22:45 Australia/Melbourne |",
+          "line_sha256": "6010421525751d6416f88e72b69dee7c31f14e928082efaf549c46a1efe95854"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-200",
+      "event": "Herning Blue Fox vs Rungsted Seier Capital — Danish Metal Ligaen",
+      "competition": "Danish Metal Ligaen",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: | Scheduled puck drop | 2026-08-30 15:00 CEST / 23:00 Australia/Melbourne |",
+      "current_state": "UNRESOLVED_OPERATOR",
+      "unresolved_contracts_or_fields": [
+        "Original exact contract field not authenticated",
+        "Regulation 3–3 and final 4–3 OT change the endpoint of total 6.5. Sporting facts retained; actual ticket/house definition missing. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Regulation 3–3 and final 4–3 OT change the endpoint of total 6.5. Sporting facts retained; actual ticket/house definition missing. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:263",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 59086,
+          "text": "| Scheduled puck drop | 2026-08-30 15:00 CEST / 23:00 Australia/Melbourne |",
+          "line_sha256": "ee8dfab34f7cca9a6bb1829ebcf45ecc7b528695ae6df8c96f29efaaecd80180"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-217",
+      "event": "Trinbago Knight Riders vs Guyana Amazon Warriors — CPL",
+      "competition": "Caribbean Premier League",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_OPERATOR",
+      "unresolved_contracts_or_fields": [
+        "GAW 20-over Under 174.5; GAW after 6 Over 46.5; GAW after 6 Under 46.5; GAW 20-over Over 174.5",
+        "Inherited 16-over 185/5 versus 172/7, Guyana by 9 runs DLS. Total 174.5 research O WIN/U LOSS; six completed overs 31/2 versus mandatory powerplay 4.5 overs 24/2 are different contracts. Ticket/action definition missing. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Inherited 16-over 185/5 versus 172/7, Guyana by 9 runs DLS. Total 174.5 research O WIN/U LOSS; six completed overs 31/2 versus mandatory powerplay 4.5 overs 24/2 are different contracts. Ticket/action definition missing. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:280",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-233",
+      "event": "Beijing Guoan vs Lanzhou Longyuan Athletic — China FA Cup 2026 (quarterfinal, corrected)",
+      "competition": "China FA Cup quarterfinal",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Beijing team goals Over 1.5; 1st-half Over 0.5 goals; Total goals Over 2.5; BTTS — No; Corners Over 8.5",
+        "CFA landing page is not a match sheet; original Xinhua report supplies terminal corroboration only. Prior 13-corner research WIN retained; quarterfinal, not Round of 16. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "CFA landing page is not a match sheet; original Xinhua report supplies terminal corroboration only. Prior 13-corner research WIN retained; quarterfinal, not Round of 16. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:296",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-09"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "cfa_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/cfa_owner_20261005T110517637706Z_599ab2cb1610.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-234",
+      "event": "Dalian Yingbo vs Shanghai Shenhua — China FA Cup 2026 (quarterfinal, corrected)",
+      "competition": "China FA Cup quarterfinal",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "1st-half Over 0.5 goals; Dalian team goals Over 0.5; Corners Over 8.5; BTTS — Yes; Total goals Over 2.5",
+        "Titan exact route retrieval miss; original Xinhua says Dalian 1–0, no corner aggregate. Prior 10-corner WIN provisional; keeper red-card disruption must not be mistaken for a pregame input. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Titan exact route retrieval miss; original Xinhua says Dalian 1–0, no corner aggregate. Prior 10-corner WIN provisional; keeper red-card disruption must not be mistaken for a pregame input. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:297",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-10"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "cfa_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/cfa_owner_20261005T110517637706Z_599ab2cb1610.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-235",
+      "event": "Shandong Taishan vs Shanghai Port — China FA Cup 2026 (quarterfinal, corrected)",
+      "competition": "China FA Cup quarterfinal",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "1st-half Over 0.5 goals; Shanghai Port team goals Over 0.5; BTTS — Yes; Total goals Over 2.5; Corners Over 8.5",
+        "CFA landing page lacks target statistics. Xinhua terminal report supports Port 3–0; prior 14-corner WIN is provisional, not revalidated. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "CFA landing page lacks target statistics. Xinhua terminal report supports Port 3–0; prior 14-corner WIN is provisional, not revalidated. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:298",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-11"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "cfa_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/cfa_owner_20261005T110517637706Z_599ab2cb1610.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-250",
+      "event": "Yunnan Yukun vs Chongqing Tonglianglong",
+      "competition": "China FA Cup",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - **Scheduled kickoff:** 2026-09-02 20:00 Asia/Shanghai / 22:00 Australia/Melbourne",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5; Full Over 2.5; Full Under 2.5; 1H Under 0.5",
+        "China FA Cup field-owner/data-partner aggregate still missing. No inferred grade; historical ESPN noncoverage does not establish that the match was cancelled. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "China FA Cup field-owner/data-partner aggregate still missing. No inferred grade; historical ESPN noncoverage does not establish that the match was cancelled. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:313",
+      "tracking_aliases": [
+        "TMP-AUDIT-20260912-01"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "cfa_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/cfa_owner_20261005T110517637706Z_599ab2cb1610.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 68606,
+          "text": "- **Scheduled kickoff:** 2026-09-02 20:00 Asia/Shanghai / 22:00 Australia/Melbourne",
+          "line_sha256": "b3cec28427fd608180df42463888d82dcc7e1192e7d8c50536a641e280e6af53"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-251",
+      "event": "Sassuolo vs Frosinone",
+      "competition": "Coppa Italia",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - **Field-owner kickoff:** 2026-09-02 15:00 Europe/Rome",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5; Full Over 2.5; Corners Over 8.5; Full Under 2.5; 1H Under 0.5",
+        "ESPN 401911806 final after penalties, 1–1, corners 6+5=11: research WIN. Lega / reconciled issued provider still required; no substitution of the unregistered feed. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "ESPN 401911806 final after penalties, 1–1, corners 6+5=11: research WIN. Lega / reconciled issued provider still required; no substitution of the unregistered feed. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:314",
+      "tracking_aliases": [
+        "TMP-AUDIT-20260912-02"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "lega_owner",
+          "status": "UNAVAILABLE",
+          "receipt_path": null,
+          "error": "HTTPError: HTTP Error 307: Temporary Redirect"
+        }
+      ],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 68742,
+          "text": "- **Field-owner kickoff:** 2026-09-02 15:00 Europe/Rome",
+          "line_sha256": "4509652464946a24d9b79c85bc9db531bb6981c803ae8e1e660e65abed24029c"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-255",
+      "event": "Inter Women vs VfL Wolfsburg Women",
+      "competition": "UEFA Women Champions League",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - **Scheduled kickoff:** 2026-09-02 18:30 CEST",
+      "current_state": "UNRESOLVED_PERIOD",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5; Full Over 2.5; Full Under 2.5; 1H Under 0.5",
+        "UEFA 2049369 FINISHED: regulation 2–0, whole match 3–1, penalties 5–4. Whole-match corners 12+12=24 include extra time. No 90-minute split or defensible bound; old bounded WIN stays withdrawn. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "UEFA 2049369 FINISHED: regulation 2–0, whole match 3–1, penalties 5–4. Whole-match corners 12+12=24 include extra time. No 90-minute split or defensible bound; old bounded WIN stays withdrawn. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:318",
+      "tracking_aliases": [
+        "TMP-AUDIT-20260912-03"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "uefa_inter",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/uefa_inter_20261005T110519078112Z_73bcffdb4678.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 69971,
+          "text": "- **Scheduled kickoff:** 2026-09-02 18:30 CEST",
+          "line_sha256": "5339e37968e4634c1d519b239a9fd20ea2f979640820d2870e33a8e9c39658e0"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-256",
+      "event": "Paris Saint-Germain Women vs Eintracht Frankfurt Women",
+      "competition": "UEFA Women Champions League",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - **Kickoff:** 2026-09-02 18:30 CEST / 2026-09-03 02:30 Australia/Melbourne",
+      "current_state": "UNRESOLVED_PERIOD",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5; Full Under 2.5; Full Over 2.5; 1H Under 0.5",
+        "UEFA 2049367 FINISHED: regulation 1–1, whole match 5–1. Whole-match corners 11+4=15 include extra time. No regulation split or justified bound; old bounded WIN stays withdrawn. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "UEFA 2049367 FINISHED: regulation 1–1, whole match 5–1. Whole-match corners 11+4=15 include extra time. No regulation split or justified bound; old bounded WIN stays withdrawn. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:319",
+      "tracking_aliases": [
+        "TMP-AUDIT-20260912-04"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "uefa_psg",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/uefa_psg_20261005T110519254343Z_44d0867e4c59.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 70263,
+          "text": "- **Kickoff:** 2026-09-02 18:30 CEST / 2026-09-03 02:30 Australia/Melbourne",
+          "line_sha256": "ef651009c85950b5790fea09c6652c325802f10f40666726d4e8f94816ca61c5"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-265",
+      "event": "Toluca vs Club León",
+      "competition": "Leagues Cup",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - **Kickoff:** 2026-09-02 20:00 Houston / 21:00 ET",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Corners Over 8.5; Full Over 2.5; First-half Over 0.5; Full Under 2.5; first-half Under 0.5",
+        "ESPN 401914297 final 2–0, corners 4+5=9: research WIN at the first winning integer. Leagues Cup exact field-owner aggregate required; particularly sensitive to one-corner definition changes. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "ESPN 401914297 final 2–0, corners 4+5=9: research WIN at the first winning integer. Leagues Cup exact field-owner aggregate required; particularly sensitive to one-corner definition changes. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:328",
+      "tracking_aliases": [
+        "TMP-AUDIT-20260912-05"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "leaguescup_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/leaguescup_owner_20261005T110521426111Z_a6e2bf1b50ed.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED.md",
+          "line": 73304,
+          "text": "- **Kickoff:** 2026-09-02 20:00 Houston / 21:00 ET",
+          "line_sha256": "24384cd6d1040e73b9512bbb0309cde99ffa3628e1eb46fcf2812de55a166e5c"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-274",
+      "event": "San Francisco Giants @ Pittsburgh Pirates",
+      "competition": "MLB",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: **Scheduled start:** 2026-09-03 12:35 America/New_York / 2026-09-04 02:35 Australia/Sydney.  ",
+      "current_state": "UNRESOLVED_OPERATOR",
+      "unresolved_contracts_or_fields": [
+        "Giants +1.5; Pirates ML; Over 9.0 runs; Under 9.0 runs",
+        "Inherited Pirates 5–2, actual starter Bachar versus listed Jared Jones. Actual ticket / listed-pitcher action or void terms missing; no invented operator settlement. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Inherited Pirates 5–2, actual starter Bachar versus listed Jared Jones. Actual ticket / listed-pitcher action or void terms missing; no invented operator settlement. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:337",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED_2.md",
+          "line": 903,
+          "text": "**Scheduled start:** 2026-09-03 12:35 America/New_York / 2026-09-04 02:35 Australia/Sydney.  ",
+          "line_sha256": "296e1606df6497537005ca00202c3d8e614352569cda6507efd392f4be084f67"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-341",
+      "event": "BUL FC vs Ntugasaze FC — Uganda Premier League R3",
+      "competition": "Uganda Premier League",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5; Under 2.5; ; Over 2.5; 1H Under 0.5",
+        "ESPN uga.1 still returns season 2025 / 2025–26 with zero events for Sep 8. UNSETTLEABLE to frozen standard retained; empty/stale response is not proof of cancellation or zero corners. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "ESPN uga.1 still returns season 2025 / 2025–26 with zero events for Sep 8. UNSETTLEABLE to frozen standard retained; empty/stale response is not proof of cancellation or zero corners. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:404",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-01"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-342",
+      "event": "MŠK Novohrad Lučenec vs KFC Komárno — Slovnaft Cup R3",
+      "competition": "Slovnaft Cup",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5; Over 2.5; ; Under 2.5; 1H Under 0.5",
+        "Slovak owner route not recovered as a target statistics record. Prior 16-corner research WIN retained; require exact Slovnaft Cup owner record. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "Slovak owner route not recovered as a target statistics record. Prior 16-corner research WIN retained; require exact Slovnaft Cup owner record. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:405",
+      "tracking_aliases": [
+        "TMP-OPEN-20260909-02"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "slovak_owner",
+          "status": "UNAVAILABLE",
+          "receipt_path": null,
+          "error": "ValueError: redirect outside source allowlist"
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-368",
+      "event": "Al Jazira v Al Nasr — UAE Pro League",
+      "competition": "UAE Pro League",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "1st-half Over 0.5; Total corners Over 7.5 (no frozen provider); Over 2.5 goals; Under 2.5 goals; 1st-half Under 0.5",
+        "UAE fixture shell reached, no target aggregate verified. Prior 9-corner research WIN; no frozen provider and secondary independence unverified. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "UAE fixture shell reached, no target aggregate verified. Prior 9-corner research WIN; no frozen provider and secondary independence unverified. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:431",
+      "tracking_aliases": [
+        "TMP-OPEN-20260911-01"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "uae_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/uae_owner_20261005T110517109182Z_c0b2e6973b68.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-369",
+      "event": "Dubai United v Shabab Al Ahli — UAE Pro League",
+      "competition": "UAE Pro League; retained competition label requires exact identity confirmation",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Total corners Under 10.5 (no frozen provider); 1st-half Over 0.5; Over 2.5 goals; Under 2.5 goals; 1st-half Under 0.5",
+        "UAE shell reached, no exact target aggregate. Prior 11-corner research LOSS retained; missing frozen provider remains a distinct gate. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "UAE shell reached, no exact target aggregate. Prior 11-corner research LOSS retained; missing frozen provider remains a distinct gate. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:432",
+      "tracking_aliases": [
+        "TMP-OPEN-20260911-02"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "uae_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/uae_owner_20261005T110517109182Z_c0b2e6973b68.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-377",
+      "event": "Xelajú MC vs Cobán Imperial — Guatemala Liga Nacional Apertura 2026",
+      "competition": "Guatemala Liga Nacional Apertura",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5 goals; Over 8.5 total corners; Over 2.5 total goals; Under 2.5 total goals; 1H Under 0.5 goals",
+        "League landing route returns a tiny shell, not a match-stat record. Prior secondary 7 research LOSS retained; ESPN historical summary lacks aggregate statistics. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "League landing route returns a tiny shell, not a match-stat record. Prior secondary 7 research LOSS retained; ESPN historical summary lacks aggregate statistics. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:440",
+      "tracking_aliases": [
+        "TMP-OPEN-20260912-01"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "guatemala_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/guatemala_owner_20261005T110515724609Z_9b351adf5b7d.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-399",
+      "event": "Genoa vs Frosinone — Serie A",
+      "competition": "Serie A",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5; Combined corners Over 8.5; FT Under 2.5; FT Over 2.5; 1H Under 0.5",
+        "ESPN 401874991 final 1–1, corners 8+9=17: research WIN. Lega exact field-owner record still missing; do not treat its landing-page redirect as success. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "ESPN 401874991 final 1–1, corners 8+9=17: research WIN. Lega exact field-owner record still missing; do not treat its landing-page redirect as success. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:462",
+      "tracking_aliases": [
+        "TMP-OPEN-20260914-01"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "lega_owner",
+          "status": "UNAVAILABLE",
+          "receipt_path": null,
+          "error": "HTTPError: HTTP Error 307: Temporary Redirect"
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-401",
+      "event": "IFK Göteborg vs Halmstads BK — Allsvenskan",
+      "competition": "Allsvenskan",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Combined corners Over 8.5; Halmstad team total Under 1.5; IFK team corners Over 4.5; 1H Under 0.5; FT Over 2.5",
+        "ESPN 401874088 final 2–1, Sep 12 15:30 UTC, corners 8+9=17: research WIN. Sep 13 search missed the event; flag date correction, retain original card. Allsvenskan owner route not recovered. | Same owner gap, ESPN IFK 8: research WIN. This is one event with two open derivative handles, not two independent trials. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "ESPN 401874088 final 2–1, Sep 12 15:30 UTC, corners 8+9=17: research WIN. Sep 13 search missed the event; flag date correction, retain original card. Allsvenskan owner route not recovered. | Same owner gap, ESPN IFK 8: research WIN. This is one event with two open derivative handles, not two independent trials. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:464",
+      "tracking_aliases": [
+        "TMP-OPEN-20260914-02",
+        "TMP-OPEN-20260914-03"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "allsvenskan_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/allsvenskan_owner_20261005T110516113831Z_29143020eb1b.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-407",
+      "event": "Club Brugge vs Royal Antwerp FC — Belgium Jupiler Pro League",
+      "competition": "Belgium Jupiler Pro League",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "; Royal Antwerp team goals Under 1.5; 1st Half total goals Over 0.5; Full match total goals Under 3.5; Full match total goals Over 2.5",
+        "League/Opta plus Robbie Maes original Voetbalkrant report establish two identifiable terminal collections; a third independently collected final, certified actual-start field and frozen forecast source/core remain required. ESPN/league Opta is not a third."
+      ],
+      "remaining_requirement": "League/Opta plus Robbie Maes original Voetbalkrant report establish two identifiable terminal collections; a third independently collected final, certified actual-start field and frozen forecast source/core remain required. ESPN/league Opta is not a third.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:470",
+      "tracking_aliases": [
+        "TMP-OPEN-20260915-01"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "proleague_event",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/proleague_event_20261005T110526062732Z_516428e8d6ad.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-409",
+      "event": "Lille OSC vs ESTAC Troyes — French Ligue 1",
+      "competition": "France Ligue 1",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Lille team goals Over 0.5; ; Lille or Draw (90 min); 1st Half total goals Over 0.5; Full match total goals Under 3.5",
+        "ESPN 401876462 final Lille 2–0, Troyes corners 5: research WIN. LFP live/306887 empty to HTTP and rendered UI (video error, no aggregate); owner still missing. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "ESPN 401876462 final Lille 2–0, Troyes corners 5: research WIN. LFP live/306887 empty to HTTP and rendered UI (video error, no aggregate); owner still missing. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:472",
+      "tracking_aliases": [
+        "TMP-OPEN-20260915-02"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "lfp_event",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/lfp_event_20261005T110518608943Z_6326eb12d791.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-410",
+      "event": "RB Leipzig vs Hamburger SV — German Bundesliga",
+      "competition": "German Bundesliga",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "RB Leipzig team goals Over 0.5; RB Leipzig or Draw (90 min); Hamburger SV team goals Under 1.5; 1st Half total goals Over 0.5; ",
+        "DFL collection and HSV original report are identifiable; a third independently collected final and certified actual start are missing. Pre-cutoff XI, bench, coach and distribution receipts remain unverified."
+      ],
+      "remaining_requirement": "DFL collection and HSV original report are identifiable; a third independently collected final and certified actual start are missing. Pre-cutoff XI, bench, coach and distribution receipts remain unverified.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:473",
+      "tracking_aliases": [
+        "TMP-OPEN-20260915-03"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "dfl_event",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/dfl_event_20261005T110521878198Z_1182e3a83b24.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-418",
+      "event": "Drukpa FC vs Royal Thimphu College (RTC) FC — Bhutan Premier League",
+      "competition": "Bhutan Premier League",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Original exact contract field not authenticated",
+        "RSSSF updated Sep 25 now reports Sep 14 Drukpa 1–3 RTC. This is progress from its unscored prior row, not official settlement. BFF current page is stale; 12:00/13:00 UTC conflict remains. June 13 1–1 and July 17 BBS report are wrong events. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "RSSSF updated Sep 25 now reports Sep 14 Drukpa 1–3 RTC. This is progress from its unscored prior row, not official settlement. BFF current page is stale; 12:00/13:00 UTC conflict remains. June 13 1–1 and July 17 BBS report are wrong events. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:481",
+      "tracking_aliases": [
+        "TMP-OPEN-20260915-04"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "bhutan_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/bhutan_owner_20261005T110518085833Z_fef39b0f982c.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-419",
+      "event": "Djurgårdens IF vs GAIS — Sweden Allsvenskan",
+      "competition": "Allsvenskan",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Djurgården team goals Over 0.5; Djurgården or Draw (1X); GAIS team goals Under 1.5; Under 3.5 total goals; ",
+        "ESPN 401873992 final 2–0, corners 2+2=4: research LOSS. Three red cards recorded at 59, 86 and 90+10. Allsvenskan field-owner aggregate not reached; no retroactive coefficient from the disruption. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "ESPN 401873992 final 2–0, corners 2+2=4: research LOSS. Three red cards recorded at 59, 86 and 90+10. Allsvenskan field-owner aggregate not reached; no retroactive coefficient from the disruption. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:482",
+      "tracking_aliases": [
+        "TMP-OPEN-20260915-05"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "allsvenskan_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/allsvenskan_owner_20261005T110516113831Z_29143020eb1b.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-430",
+      "event": "Al Ain FC vs Al Nassr — AFC Champions League Elite MD1",
+      "competition": "AFC Champions League Elite",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "UNRESOLVED_TARGET_FIELD_OR_PROVIDER",
+      "unresolved_contracts_or_fields": [
+        "Al Nassr team total Over 0.5; Match Over 1.5; 1st Half Over 0.5; Al Nassr +0.5 / X2; ",
+        "ESPN 401912656 final Al Ain 4–0, corners 2–10: research LOSS. Frozen AFC owner record does not supply corners; ESPN not pre-registered. Need AFC field or explicit approved-provider reconciliation; no automatic fallback booking. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false."
+      ],
+      "remaining_requirement": "ESPN 401912656 final Al Ain 4–0, corners 2–10: research LOSS. Frozen AFC owner record does not supply corners; ESPN not pre-registered. Need AFC field or explicit approved-provider reconciliation; no automatic fallback booking. A certified issue core and issue-time source receipts are not recovered. Actual-start semantics and three independently audited agreeing terminal collections are not certified. Historical eligibility remains false.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:493",
+      "tracking_aliases": [
+        "TMP-OPEN-20260917-01"
+      ],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [
+        {
+          "key": "afc_owner",
+          "status": "BODY_RETAINED_TARGET_NOT_YET_VERIFIED",
+          "receipt_path": "research/data/source_receipts/afc_owner_20261005T110519702100Z_a5dc2d38e823.json",
+          "error": null
+        }
+      ],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-492",
+      "event": "MLB — San Diego Padres @ Los Angeles Dodgers",
+      "competition": "MLB",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: | Scheduled start | 2026-09-22 19:10 PDT (UTC−7) = 2026-09-23 02:10 UTC = **2026-09-23 12:10 AEST** (Australia/Melbourne) |",
+      "current_state": "ALL_ORIGINAL_SPORTING_ROWS_DIAGNOSTICALLY_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "King O14.5 outs; SD +1.5; LAD ML; O8.5",
+        "All four original sporting selections are now diagnosed L/L/W/L and original ranks recovered. No first-five forecast was issued in the recovered table. Remaining: original operator action terms, issue-time/source/baseline certification and independently audited terminal quorum; START_CROSSED remains permanently excluded from pregame metrics."
+      ],
+      "remaining_requirement": "All four original sporting selections are now diagnosed L/L/W/L and original ranks recovered. No first-five forecast was issued in the recovered table. Remaining: original operator action terms, issue-time/source/baseline certification and independently audited terminal quorum; START_CROSSED remains permanently excluded from pregame metrics.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Recovered original Part-5 rank table and owner prop receipt retained in this dated repair.",
+      "prior_source_location": "GAME_LOG_STATUS_CURRENT.md:557",
+      "tracking_aliases": [],
+      "prior_retrospective": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "prediction logs/PREDICTION_LOG_COMBINED_5.md",
+          "line": 10597,
+          "text": "| Scheduled start | 2026-09-22 19:10 PDT (UTC−7) = 2026-09-23 02:10 UTC = **2026-09-23 12:10 AEST** (Australia/Melbourne) |",
+          "line_sha256": "8fac69f3eeda1fe46db2ce8020ee04b5a1c44e209fb9bb5deb62f9ebedb8782b"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-518",
+      "event": "MLB New York Mets at Washington Nationals",
+      "competition": "MLB",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - **Scheduled start:** Saturday, 26 September 2026, 12:35 EDT (venue-local) = 26 September 2026, 16:35 UTC = Sunday, 27 September 2026, 02:35 AEST (Australia/Melbourne, UTC+10). / | MLB StatsAPI Schedule | `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-26` | Field owner / STRUCTURED_DATA | Schedule verification, start time 16:35Z, venue verification | 2026-09-27 02:33:00 | OPENED |",
+      "current_state": "DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "Mets +1.5; Nationals +1.5; Over 8.5; Under 8.5",
+        "The official feed reconfirms the final, but independent terminal quorum, actual start and canonical issue transaction are absent. Original LIVE_ISSUED status stays excluded."
+      ],
+      "remaining_requirement": "The official feed reconfirms the final, but independent terminal quorum, actual start and canonical issue transaction are absent. Original LIVE_ISSUED status stays excluded.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "P518_P522_RECONCILIATION.md",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "research/verification/settlement_2026-10-01/issue_text/P-518.md",
+          "line": 10,
+          "text": "- **Scheduled start:** Saturday, 26 September 2026, 12:35 EDT (venue-local) = 26 September 2026, 16:35 UTC = Sunday, 27 September 2026, 02:35 AEST (Australia/Melbourne, UTC+10).",
+          "line_sha256": "6ef109291421cfcd24411b782b29dc805c2f5163bbdb5cf690fcccb17be6fbdf"
+        },
+        {
+          "path": "research/verification/settlement_2026-10-01/issue_text/P-518.md",
+          "line": 154,
+          "text": "| MLB StatsAPI Schedule | `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-26` | Field owner / STRUCTURED_DATA | Schedule verification, start time 16:35Z, venue verification | 2026-09-27 02:33:00 | OPENED |",
+          "line_sha256": "88cebb2c73aeda9ed89b79a853cb3ecbb5bdf0c82cd152289e83482144841aff"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-519",
+      "event": "AFLW Gold Coast vs St Kilda",
+      "competition": "AFLW",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - **Scheduled start:** Sunday, 27 September 2026, 17:05 AEST (07:05 UTC). / | AFLW Match Centre | `https://www.afl.com.au/aflw/matches/8942` | Field owner / OFFICIAL_LEAGUE | Fixture verification, venue People First Stadium, 17:05 AEST scheduled bounce | 2026-09-27 17:05:06 | OPENED |",
+      "current_state": "DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "Under 89.5; Suns(W) -27.5; St Kidla(W) +27.5; Over 89.5",
+        "Champion Data plus AAP original report are identifiable collections. Kimber is a distinct authored report, but independent collection of terminal facts versus the shared AFL stats feed remains unverified; do not promote it automatically as a third. Freeze 07:08:21Z follows scheduled 07:05Z; LIVE_ISSUED stays. Actual start, certified issue core and baseline lineage remain absent."
+      ],
+      "remaining_requirement": "Champion Data plus AAP original report are identifiable collections. Kimber is a distinct authored report, but independent collection of terminal facts versus the shared AFL stats feed remains unverified; do not promote it automatically as a third. Freeze 07:08:21Z follows scheduled 07:05Z; LIVE_ISSUED stays. Actual start, certified issue core and baseline lineage remain absent.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "P518_P522_RECONCILIATION.md",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "research/verification/settlement_2026-10-01/issue_text/P-519.md",
+          "line": 10,
+          "text": "- **Scheduled start:** Sunday, 27 September 2026, 17:05 AEST (07:05 UTC).",
+          "line_sha256": "2873377f353b72601a021d5d2996ff5e07cfb9a57ba6a707c18b4543bff3088b"
+        },
+        {
+          "path": "research/verification/settlement_2026-10-01/issue_text/P-519.md",
+          "line": 169,
+          "text": "| AFLW Match Centre | `https://www.afl.com.au/aflw/matches/8942` | Field owner / OFFICIAL_LEAGUE | Fixture verification, venue People First Stadium, 17:05 AEST scheduled bounce | 2026-09-27 17:05:06 | OPENED |",
+          "line_sha256": "9a510c96191bf78390b34645eb7ddb353b0e8d9020ec76717f049aa27dc5e3bf"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-520",
+      "event": "KBO Hanwha at Lotte",
+      "competition": "KBO",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - **Scheduled start:** Sunday, 27 September 2026, 17:00 KST (venue-local, UTC+9) = 18:00 AEST (Australia/Melbourne, UTC+10) = 08:00 UTC.",
+      "current_state": "OWNER_NATIVE_FINAL; ALL_FOUR_SPORTING_ROWS_DIAGNOSTICALLY_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "Giants ML; Eagles +1.5; Over 10.5; Under 10.5",
+        "Owner native game 20260927HHLT0 is now verified: Hanwha 6–2 Lotte, September 27, scheduled 17:00 KST, normal final in the ninth. Scheduled time is not certified actual first pitch. Original operator action terms, actual-start semantics, canonical issue/source/baseline receipts and independently audited terminal collection status remain unresolved. No certification or performance eligibility is granted."
+      ],
+      "remaining_requirement": "Owner native game 20260927HHLT0 is now verified: Hanwha 6–2 Lotte, September 27, scheduled 17:00 KST, normal final in the ninth. Scheduled time is not certified actual first pitch. Original operator action terms, actual-start semantics, canonical issue/source/baseline receipts and independently audited terminal collection status remain unresolved. No certification or performance eligibility is granted.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes. Native follow-up: research/verification/all_log_resolution_2026-10-05/P-520_native_owner.json; full owner body hash retained in its receipt.",
+      "prior_source_location": "P518_P522_RECONCILIATION.md",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "research/verification/settlement_2026-10-01/issue_text/P-520.md",
+          "line": 10,
+          "text": "- **Scheduled start:** Sunday, 27 September 2026, 17:00 KST (venue-local, UTC+9) = 18:00 AEST (Australia/Melbourne, UTC+10) = 08:00 UTC.",
+          "line_sha256": "e36d6e88d2a09c0e0deff6c0c94794ac9f62e98ecaa473a9b5d02845ab16e2a6"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-521",
+      "event": "ACB Breogan vs Joventut",
+      "competition": "ACB",
+      "original_scheduled_start": "VERBATIM_ORIGINAL_SCHEDULE: - **Official scheduled start:** Sunday, 27 September 2026, **12:00 CEST** (venue-local, UTC+2) = **20:00 AEST** (Australia/Melbourne, UTC+10) = 10:00 UTC. / | ACB Live match centre | `https://live.acb.com/en/partidos/rio-breogan-vs-asisa-joventut-105378/previa` | OFFICIAL_LEAGUE / event ID, start timestamp, state | 2026-09-27 20:39:07 | OPENED |",
+      "current_state": "DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "Joventut -5.5; Over 179.5; Under 179.5; Breogan +5.5",
+        "ACB native final plus EFE and original El Progreso terminal narratives agree; independently collected source status remains UNKNOWN in live registries. No actual-start field or canonical issue receipts; original LIVE_ISSUED remains excluded. ACB card-derived baseline rates are diagnostic, not approved population baselines."
+      ],
+      "remaining_requirement": "ACB native final plus EFE and original El Progreso terminal narratives agree; independently collected source status remains UNKNOWN in live registries. No actual-start field or canonical issue receipts; original LIVE_ISSUED remains excluded. ACB card-derived baseline rates are diagnostic, not approved population baselines.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "P518_P522_RECONCILIATION.md",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false,
+      "original_schedule_source_lines": [
+        {
+          "path": "research/verification/settlement_2026-10-01/issue_text/P-521.md",
+          "line": 10,
+          "text": "- **Official scheduled start:** Sunday, 27 September 2026, **12:00 CEST** (venue-local, UTC+2) = **20:00 AEST** (Australia/Melbourne, UTC+10) = 10:00 UTC.",
+          "line_sha256": "2a4319952efc219b4f14b5c988656b5d5f29902574b99f2c1637342306bfd5c8"
+        },
+        {
+          "path": "research/verification/settlement_2026-10-01/issue_text/P-521.md",
+          "line": 127,
+          "text": "| ACB Live match centre | `https://live.acb.com/en/partidos/rio-breogan-vs-asisa-joventut-105378/previa` | OFFICIAL_LEAGUE / event ID, start timestamp, state | 2026-09-27 20:39:07 | OPENED |",
+          "line_sha256": "b8a4d35f0513116b3d488ec090c3b5915efd3db82fd47cc566336949613e2f56"
+        }
+      ]
+    },
+    {
+      "canonical_id": "P-522",
+      "event": "ACB La Laguna Tenerife vs Casademont Zaragoza",
+      "competition": "ACB",
+      "original_scheduled_start": "NOT_RECOVERED_IN_THIS_REGISTER; exact retained source must control, never substitute retrieval time",
+      "current_state": "DIAGNOSTIC_ALL_RANKED_ROWS_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "Combined Total: Over 169.5 Points; Tenerife −3.5; Combined Total: Over 179.5 Points; Zaragoza +9.5",
+        "Official ACB exact final is reconfirmed. Independent terminal quorum, actual-start semantics and canonical issue receipts remain missing; LIVE_ISSUED and missing approved baseline remain permanent exclusions."
+      ],
+      "remaining_requirement": "Official ACB exact final is reconfirmed. Independent terminal quorum, actual-start semantics and canonical issue receipts remain missing; LIVE_ISSUED and missing approved baseline remain permanent exclusions.",
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "source_custody_notes": "Original historical text preserved; prior per-event full review and retained literals in research/verification/settlement_2026-10-01/REPORT.md. Field/source certification limits remain separate from sporting outcomes.",
+      "prior_source_location": "P518_P522_RECONCILIATION.md",
+      "tracking_aliases": [],
+      "prior_retrospective": "research/verification/settlement_2026-10-01/REPORT.md",
+      "refreshed_owner_routes": [],
+      "performance_eligible": false
+    },
+    {
+      "canonical_id": "P-523",
+      "tracking_handle": "TMP-20261001-BOLCOPA-OPE-STR",
+      "event": "Oriente Petrolero vs The Strongest — retained October 1 card",
+      "competition": "BoliviaCopa",
+      "event_key": "BoliviaCopa:2026:secondary-ESPN-401907909",
+      "native_event_id": null,
+      "original_analysis_status": "HISTORICAL_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-523",
+      "projection_path": "research/issued_research/P-523-0fd247ea4c6b4450a37b7bd6e32e1101.md",
+      "projection_sha256": "3eb0170377235649de31838e7131d3d4f972fdcd63cdca76c7987e325a238fd3",
+      "source_sha256": "f7082acc7acf00d452ab05511c1b23f29e21615c1247d2ea5fe9fb9d52a15c6c",
+      "body_sha256": "865a691b99d733baf3b5a47a0beefcb4112be6ee505a6fa69ead3625795e4351",
+      "commit_sha256": "024343a93d49e6e7821490fe87c81ee354980f71627beab45345ab64ca378dcf",
+      "original_scheduled_start": "2026-10-01T00:30:00Z",
+      "original_schedule_notes": [
+        "The retained mini-log card is now stored in the canonical running log as a historical research import. Its original P-523 claim maps to P-523. The import does not certify an earlier canonical issue or rewrite its forecast values. The source claim of pregame freezing conflicts with its stated 00:31:30 UTC freeze after scheduled 00:30; preserve both timestamps. No new forecast or retrospective is generated for this completed game. The earlier dated all-log audit remains separately linked at `research/verification/settlement_2026-10-01/REPORT.md`; it is not repeated here.",
+        "> - **Scheduled Kickoff:** Wednesday, 30 September 2026, 20:30 BOT (venue-local, UTC-4) = Thursday, 01 October 2026, 00:30:00 UTC = Thursday, 01 October 2026, 10:30:00 AEST (Australia/Melbourne, UTC+10).",
+        "> - **Event State at Freeze:** `PREGAME / STATUS_SCHEDULED` (state `pre`, 0–0, awaiting kickoff; verified via ESPN live feed).",
+        "> - **Freeze Timestamp:** 2026-10-01 10:31:30 AEST (`Freeze − Start`: −1.5 min relative to scheduled 10:30 AEST; 0-0 pregame state confirmed)."
+      ],
+      "current_state": "EXISTING_HISTORICAL_AUDIT_NOT_CERTIFIED; corners UNRESOLVED_LINE",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5 goals",
+        "90m Under 2.5 goals",
+        "90m Over 2.5 goals",
+        "1H Under 0.5 goals",
+        "Corners: undefined threshold"
+      ],
+      "remaining_requirement": "Existing October-1 diagnostic goal review is retained; undefined corner threshold cannot be graded. Original operator rules, actual-start/issue-time conflict and independently audited terminal quorum remain missing; preserve W/W/L/L goal diagnostics as conditional only.",
+      "source_custody_notes": "Original research source and projection verified against the canonical chain; prior logging repair and live/source notes retained at research/verification/log_repair_2026-10-01/REPORT.md. Historical imported statuses are not current finals.",
+      "retrospective_pointer": "research/verification/settlement_2026-10-01/REPORT.md"
+    },
+    {
+      "canonical_id": "P-524",
+      "tracking_handle": "TMP-20261001-KBO-KT-KIA",
+      "event": "KT Wiz @ Kia Tigers — retained October 1 card",
+      "competition": "KBO",
+      "event_key": "KBO:2026:20261001KTHT0",
+      "native_event_id": "20261001KTHT0",
+      "original_analysis_status": "HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-524",
+      "projection_path": "research/issued_research/P-524-427e10b469894624b66263c57b5b4561.md",
+      "projection_sha256": "1d77974347c5d352ff88a9884b92265409a8408cb8f4b53e543d28e2c8029f9c",
+      "source_sha256": "555aa41eeedd9c7d8c84850940a93287fad1cc8e7264cf3b063178bf9eb5f47e",
+      "body_sha256": "a6ae7e3d4616f0044e83bf61eac0e1e57438795422d330b4f5709f4be6230270",
+      "commit_sha256": "bd8474b98ca0c7f13153de593355e9071f9eb3a7990ad6a27cfcbbf774f963bb",
+      "original_scheduled_start": "2026-10-01T09:30:00Z",
+      "original_schedule_notes": [
+        "- **Scheduled First Pitch:** Thursday, 01 October 2026, 18:30:00 KST (Asia/Seoul, UTC+9) = 09:30:00 UTC = 19:30:00 AEST (Australia/Sydney, UTC+10)."
+      ],
+      "current_state": "OWNER_FINAL; ALL_FOUR_SPORTING_ROWS_DIAGNOSTICALLY_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "Kia +1.5",
+        "KT Wiz ML",
+        "Under 8.5 runs",
+        "Over 8.5 runs"
+      ],
+      "remaining_requirement": "Original operator/action terms and audited independent terminal collection status remain missing; no new pregame or prospective certification can be inferred from a live/historical import. Original p/baseline and timing labels unchanged.",
+      "source_custody_notes": "Original research source and projection verified against the canonical chain; prior logging repair and live/source notes retained at research/verification/log_repair_2026-10-01/REPORT.md. Historical imported statuses are not current finals.",
+      "retrospective_pointer": "research/verification/all_log_resolution_2026-10-05/REPORT.md",
+      "sporting_diagnostic_grades": [
+        "L",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "canonical_id": "P-525",
+      "tracking_handle": "TMP-20261001-NPB-CHU-HIR-G25",
+      "event": "Chunichi Dragons @ Hiroshima Toyo Carp — Game 25",
+      "competition": "NPB",
+      "event_key": "NPB:2026:20261001-c-d-25",
+      "native_event_id": "20261001-c-d-25",
+      "original_analysis_status": "IMPORT_WITH_DATED_UNCALIBRATED_QUALITATIVE_ANALYSIS",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-525",
+      "projection_path": "research/issued_research/P-525-86ae2a4dd237491d9f37cfce0da5f9fd.md",
+      "projection_sha256": "01dfce60537e960af6310f1d0aa5b4720842ff8e7f9428e69896467acc2c011d",
+      "source_sha256": "516cecdbf710d01ed00dbc2b89135e8f9970961c82e6177303946aae65efcbda",
+      "body_sha256": "001de66f9a6d60ac18f5a64f51c147603b6cb4625203ef862016f4b8ec1e3062",
+      "commit_sha256": "e7393e1ff51ceca7f3568ce6385acf4ab6415f9035177967ca1bf6ac3acf6ffd",
+      "original_scheduled_start": "2026-10-01T09:00:00Z",
+      "original_schedule_notes": [
+        "**New assessment: UNCALIBRATED_QUALITATIVE; numerical p and baseline NOT_ESTIMATED.** The initial owner capture at 09:40 UTC showed 2–0/bottom third; the 09:57 refresh showed 2–0/top fifth. The latest owner snapshot in `research/verification/log_repair_2026-10-01/delivery_103119Z/npb_game.body`, retained about 10:31 UTC, shows **HIROSHIMA 4–1 CHUNICHI, TOP SEVENTH**. This current owner state controls the new live ranks. Sportsnavi's 0–0/bottom-first update at 18:05 JST is stale and not an agreeing current-state source. The schedule remains 18:00 JST/19:00 AEST. This is a dated live assessment, not a reconstructed pregame forecast.",
+        "- **Scheduled First Pitch:**",
+        "- **Timing Buffer:** Scheduled 19:00:00 AEST minus observation 18:56:09 AEST = 3 minutes 51 seconds. Fails required pre-cutoff issue buffer (minimum 5–15 minutes).",
+        "  3. `TIMING_BUFFER_EXCEEDED`: Refreshed observation at 18:56:09 AEST (<4m before 19:00 AEST scheduled first pitch) violates the minimum issue buffer gate."
+      ],
+      "current_state": "OWNER_FINAL; ALL_FOUR_SPORTING_ROWS_DIAGNOSTICALLY_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "Carp +1.5",
+        "Over 6.5 runs",
+        "Under 6.5 runs",
+        "Dragons +1.5"
+      ],
+      "remaining_requirement": "Original operator/action terms and audited independent terminal collection status remain missing; no new pregame or prospective certification can be inferred from a live/historical import. Original p/baseline and timing labels unchanged.",
+      "source_custody_notes": "Original research source and projection verified against the canonical chain; prior logging repair and live/source notes retained at research/verification/log_repair_2026-10-01/REPORT.md. Historical imported statuses are not current finals.",
+      "retrospective_pointer": "research/verification/all_log_resolution_2026-10-05/REPORT.md",
+      "sporting_diagnostic_grades": [
+        "W",
+        "L",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "canonical_id": "P-526",
+      "tracking_handle": "TMP-20261001-KBO-HAN-SAM",
+      "event": "Hanwha Eagles @ Samsung Lions — October 1, 2026",
+      "competition": "KBO",
+      "event_key": "KBO:2026:20261001HHSS0",
+      "native_event_id": "20261001HHSS0",
+      "original_analysis_status": "LIVE_OBSERVED_UNCALIBRATED_QUALITATIVE",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-526",
+      "projection_path": "research/issued_research/P-526-0676a2a79b094ceab6433c33bd800263.md",
+      "projection_sha256": "6730a6a46b2901715a7a3aa6552a708c2ccbd10062bbf8d86b082a9c239ed7e7",
+      "source_sha256": "ab237649f6f9e753df6a9edb25f9cb55cf2ee9a3ae55e582e86de71c97aa9ff7",
+      "body_sha256": "7d360ea05b97fd2037de8935b3cc7950d102ea183f2a43426392e291a70bcacf",
+      "commit_sha256": "f4bafbb0aef9ea7b1211d2f05177de8130b83203254ba08a8aaedfd03a0b0fd3",
+      "original_scheduled_start": "2026-10-01T09:30:00Z",
+      "original_schedule_notes": [
+        "The initial snapshot was scheduled/prestart; the 09:40 UTC owner refresh showed bottom first, 0–0. The later owner refresh retained in `delivery_095713Z/kbo_game.body` shows **GAME_STATE_SC=2, top second inning, 0–0**, zero outs and a first-base occupancy marker. Exact retrieval is in its receipt. The refreshed posted-order response still binds LINEUP_CK=true to this exact event. The first inning is therefore complete without a run, but the current Hanwha plate appearance already has an offensive opportunity. This analysis uses that live-observed state, rather than claiming pregame issuance. Exact actual first-pitch time is unknown; scheduled time is not substituted for it. This assessment is conditional on the retained observation; later unobserved developments may change it."
+      ],
+      "current_state": "OWNER_FINAL; ALL_FOUR_SPORTING_ROWS_DIAGNOSTICALLY_COMPLETE",
+      "unresolved_contracts_or_fields": [
+        "Under 11.5 runs",
+        "Samsung -0.5",
+        "Hanwha +2.5",
+        "Over 11.5 runs"
+      ],
+      "remaining_requirement": "Original operator/action terms and audited independent terminal collection status remain missing; no new pregame or prospective certification can be inferred from a live/historical import. Original p/baseline and timing labels unchanged.",
+      "source_custody_notes": "Original research source and projection verified against the canonical chain; prior logging repair and live/source notes retained at research/verification/log_repair_2026-10-01/REPORT.md. Historical imported statuses are not current finals.",
+      "retrospective_pointer": "research/verification/all_log_resolution_2026-10-05/REPORT.md",
+      "sporting_diagnostic_grades": [
+        "W",
+        "W",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "canonical_id": "P-527",
+      "tracking_handle": "TMP-20261002-EUR-HTA-RMA",
+      "event": "Hapoel Tel Aviv vs Real Madrid — October 1, 2026",
+      "competition": "EuroLeague",
+      "event_key": "TMP-20261002-EUR-HTA-RMA",
+      "native_event_id": "UNKNOWN",
+      "original_analysis_status": "HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-527",
+      "projection_path": "research/issued_research/P-527-1a199789c2b24604807d8b7c2874adc8.md",
+      "projection_sha256": "28c23cabf49444e8a8d3543c617c722703977dfae9927e4358d036681bd9d48e",
+      "source_sha256": "3da1ef7437d05f70e2a36b6ed7e66d848e04d48c16b1aba5d802c923b8c7e5b8",
+      "body_sha256": "a13dd4aec230169933b6334df6312204dfebae2fde28bb70dbcdf2971e08dacb",
+      "commit_sha256": "2d101d5f4ecde8f5ca4d5ed40f0234f170e936bf7779db89fda4aa6b199204c9",
+      "original_scheduled_start": "2026-10-01T16:00:00Z",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "Under 174.5",
+        "Hapoel +4.5",
+        "Madrid -4.5",
+        "Over 174.5",
+        "Madrid -4.5",
+        "Under 174.5",
+        "Hapoel +4.5",
+        "Over 174.5"
+      ],
+      "unresolved_additional_rows": [],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import.",
+      "diagnostic_revision_sha256": "69f04c6b79c14856c0496e9e722b021c4ad6025e7dba70237ab849f67042231e",
+      "source_custody_notes": "Both owner club reports identify the October 1 meeting and the 102-98 final. Hapoel's stale 0-0 header is not terminal evidence. Venue metadata conflicts with the secondary page. The league feed attempts returned later fixtures, not this event: reject them for native ID/final corroboration. Consolidated observation approximately October 2 10:00 AEST is eight hours after its own scheduled start, contrary to PREGAME. No timestamped original issue or audited actual-start receipt survives.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-528",
+      "tracking_handle": "LOCAL-P528-GR-CLE-20261002",
+      "event": "Grand Rapids Griffins @ Cleveland Monsters — October 2, 2026",
+      "competition": "AHL",
+      "event_key": "LOCAL-P528-GR-CLE-20261002",
+      "native_event_id": "1029073",
+      "original_analysis_status": "HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-528",
+      "projection_path": "research/issued_research/P-528-9b8a2210cef943d9947f25855af71353.md",
+      "projection_sha256": "b16953d6ae7fb80a2782460241f42ef015f97999b10e381ce998e03cf863ae00",
+      "source_sha256": "3da1ef7437d05f70e2a36b6ed7e66d848e04d48c16b1aba5d802c923b8c7e5b8",
+      "body_sha256": "2aa9d36f8555b4c66e83b1377f10bca6ae4083118e0437392ab83c12a6894aae",
+      "commit_sha256": "111dc149b23ee9d41bbf3fd28b985cec037824b91ad9bbb4872edf5f392d762e",
+      "original_scheduled_start": "2026-10-02T23:00:00Z",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "Griffins ML",
+        "Over 5.5",
+        "Under 5.5",
+        "Monsters ML"
+      ],
+      "unresolved_additional_rows": [],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import.",
+      "diagnostic_revision_sha256": "dd22e2a29662dee78915f0527acb7d93b17958575bb03c17531125d0e77f9943",
+      "source_custody_notes": "Exact October 2 club recap links AHL game centre 1029073. It was the season opener at Rocket Arena, distinct from September 27 preseason 5-2 and October 4 rematch 4-5 OT. Both club final tables and the MLive report say 5-2; Cleveland's introductory 4-2 sentence is inconsistent and retained as a source defect. The AHL shell has no parsed terminal field, and multiple reports do not establish audited independence. Scheduled 19:00 EDT maps to October 3 09:00 AEST; actual start/cutoff are not audited.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-529",
+      "tracking_handle": "TMP-20261002-NHL-PHI-NJD",
+      "event": "Philadelphia Flyers @ New Jersey Devils — October 1, 2026",
+      "competition": "NHL",
+      "event_key": "TMP-20261002-NHL-PHI-NJD",
+      "native_event_id": "2026020009",
+      "original_analysis_status": "HISTORICAL_RESEARCH_IMPORT_LIVE_CLAIM_IN_LATER_SUMMARY",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-529",
+      "projection_path": "research/issued_research/P-529-7d966ae11984405189edb6b0dcc8ce5c.md",
+      "projection_sha256": "48914871b8dfe66e17e38085562bf6dfe2adc3e05aaf1d8f1bc3050ff66e25de",
+      "source_sha256": "3da1ef7437d05f70e2a36b6ed7e66d848e04d48c16b1aba5d802c923b8c7e5b8",
+      "body_sha256": "bd95696c5f02446bb4cac7b84daa466a174a1611c274b239c60b12ab6accb52c",
+      "commit_sha256": "19982af0efc8e15f3bacc1346048aa6b8166150c0421d0eac1c0c28807cb6035",
+      "original_scheduled_start": "2026-10-01T23:00:00Z",
+      "actual_start": "OWNER_REPORT_2026-10-01T23:09Z_MINUTE_PRECISION_NOT_ADMITTED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "Devils ML",
+        "Flyers +1.5",
+        "Over 5.5",
+        "Under 5.5",
+        "Flyers +1.5",
+        "Devils ML",
+        "Over 5.5",
+        "Under 5.5"
+      ],
+      "unresolved_additional_rows": [],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import.",
+      "diagnostic_revision_sha256": "88fdc85b8efa8ff1438d2344db5a49ddec5fc4243e2e2ef267079b174f327632",
+      "source_custody_notes": "Owner JSON identifies season 20262027, game type 2, October 1, Prudential Center, OFF terminal state and OT period four. Native 2026020009 is verified for this season; the prior wrong-season report with the same numerical suffix is rejected. Owner actual-start report gives 19:09 EDT, minute precision, distinct from scheduled 19:00. No admitted start/cutoff/lineage audit means the source's approximate 09:00 AEST LIVE statement does not become a verified prospective timestamp.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-530",
+      "tracking_handle": "TMP-20261002-MLB-PHI-ATL-G3",
+      "event": "Philadelphia Phillies @ Atlanta Braves — NL Wild Card Game 3",
+      "competition": "MLB",
+      "event_key": "TMP-20261002-MLB-PHI-ATL-G3",
+      "native_event_id": "849844",
+      "original_analysis_status": "HISTORICAL_LATE_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-530",
+      "projection_path": "research/issued_research/P-530-956203143d324f528cad31cabd011d46.md",
+      "projection_sha256": "f171cd768dfdf3089a2060c3550879df83d2d1a7da0b412dcd3775653ebb5d2d",
+      "source_sha256": "3da1ef7437d05f70e2a36b6ed7e66d848e04d48c16b1aba5d802c923b8c7e5b8",
+      "body_sha256": "74fbb70da45381fd0befee55fe39843f71b8caab8fe9afecdfe1c7c439851a82",
+      "commit_sha256": "0b8ea049bf6bd4d7075f6099892f0022a687bddf44101cbba8d36c2e61cc0bc4",
+      "original_scheduled_start": "2026-10-02T00:00:00Z",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "Braves +1.5",
+        "Over 7.5",
+        "Braves ML",
+        "Phillies ML",
+        "Braves ML",
+        "Over 7.5",
+        "Phillies ML",
+        "Under 7.5 (not supplied; shadow alternative)"
+      ],
+      "unresolved_additional_rows": [
+        {
+          "diagnostic_grade": "UNRESOLVED_DUPLICATE_ROW",
+          "diagnostic_scope": "NOT_GRADED_MISSING_OR_AMBIGUOUS_FIELD",
+          "formal_blockers": [
+            "UNKNOWN_DEFINITION",
+            "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+            "NO_CANONICAL_PROSPECTIVE_ISSUE"
+          ],
+          "formal_grade": "UNRESOLVED",
+          "label": "Supplied row 4 Over 7.5 duplicated",
+          "line": null,
+          "market": "UNRESOLVED_DUPLICATE_ROW",
+          "performance_eligible": false,
+          "rank": null,
+          "side": null,
+          "source_flags": [
+            "DUPLICATE_ROW"
+          ]
+        }
+      ],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import. Preserve the duplicated supplied Over 7.5 row separately from the unsupported Under shadow alternative; no silent row repair.",
+      "diagnostic_revision_sha256": "52c9743cf5dafcc77b5b6248e476086959d3f30f70db2a302092be9ea21d9581",
+      "source_custody_notes": "MLB owner feed 849844 identifies postseason game type F, October 1 local date, Truist Park, Final, nine innings and Atlanta 6-Philadelphia 2. The bottom ninth was unnecessary, not an incomplete game. Source observation approximately 11:00 AEST was one hour after scheduled 10:00 and the mini already says LATE_RESEARCH. First-play timestamps are not substituted for an audited actual-start field. Approved owner receipts remain one collection, not multiple lineages. Weather direction conflict stays unverified.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-531",
+      "tracking_handle": "TMP-20261002-WNBA-IND-LVA-G3",
+      "event": "Indiana Fever @ Las Vegas Aces — First Round Game 3",
+      "competition": "WNBA",
+      "event_key": "TMP-20261002-WNBA-IND-LVA-G3",
+      "native_event_id": "1042600123",
+      "original_analysis_status": "HISTORICAL_LATE_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-531",
+      "projection_path": "research/issued_research/P-531-4f5f65888b15449e84ec4b053b7b6cf9.md",
+      "projection_sha256": "41412a5c9909267ca54043db0706e91e920c6ca8ff355da6ee74bcfe99baae56",
+      "source_sha256": "3da1ef7437d05f70e2a36b6ed7e66d848e04d48c16b1aba5d802c923b8c7e5b8",
+      "body_sha256": "624c86059899b8166c0106ebacb5977ba404886ad7bc610c0b4f1fc304bb098e",
+      "commit_sha256": "84ec9f110367bb8ef14a2367a76153b15e3811969fbba02888f04793349f4593",
+      "original_scheduled_start": "2026-10-02T01:00:00Z",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "Fever +4.5",
+        "Over 181.5",
+        "Under 181.5",
+        "Aces -4.5",
+        "Fever +4.5",
+        "Under 181.5 (implied)",
+        "Aces -4.5",
+        "Over 181.5"
+      ],
+      "unresolved_additional_rows": [],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import.",
+      "diagnostic_revision_sha256": "3377330fa598254dfd42800e6c44c6228f0829db7e1ee468d9cfc4193e6a4bb0",
+      "source_custody_notes": "Current WNBA recap now confirms 94-83 and advancement; the October 2 audit's owner-evidence gap is superseded only for diagnostic final corroboration. ESPN 401918022 agrees, completed true, with four quarters. Earlier 92-83 secondary report remains a retained incomplete conflict. CDN boxscore request returned an HTML shell, not a valid JSON box; do not parse it as terminal. The original cutoff approximately 11:01 AEST is already marked late; later observation approximately noon is later still. Neither becomes prospective on import.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-532",
+      "tracking_handle": "TMP-20261001-NBL-TAS-MEL",
+      "event": "Tasmania JackJumpers vs Melbourne United (NBL27, Round 3)",
+      "competition": "NBL",
+      "event_key": "TMP-20261001-NBL-TAS-MEL",
+      "native_event_id": "36f713cb-58ad-11f1-b8d2-f1316c48f9c2",
+      "original_analysis_status": "HISTORICAL_INTAKE_NO_FORECAST_ISSUED",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-532",
+      "projection_path": "research/issued_research/P-532-18d0d3a685c743409f216010af0f2c1b.md",
+      "projection_sha256": "740c95c1a0fd556d9f572268801a33abdf7b282c2d36c88d18df6caab369f003",
+      "source_sha256": "b0502f56fb034494320c961b467edbe789269f577189a2246fa44f068a0508d8",
+      "body_sha256": "4abcb3c909a8209d08f708968bacfcd2b2afd943c396de64f9fa6fe74692b5dc",
+      "commit_sha256": "6a5028c073539e369d20d50aff423440ef1164f1c1f083f2ff622bfcd81a2f33",
+      "original_scheduled_start": "2026-10-01T09:30:00Z",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "United -6.5",
+        "Under 181.5",
+        "Tasmania +6.5",
+        "Over 181.5"
+      ],
+      "unresolved_additional_rows": [],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import.",
+      "diagnostic_revision_sha256": "740b1b031da79cfb7170d66a887efb064cde40735cf2d62e9c6689d6b41dd5cc",
+      "source_custody_notes": "Owner schedule and exact match ID identify October 1 09:30 UTC, MyState Bank Arena, 84-82 and complete phase. The supplied September typo was corrected in its own record; actual owner season is NBL27. Owner match body agrees. Scheduled time and original claimed 16:00 AEST observation are distinct; no timestamped issued bundle or audited actual-start field exists. NBL API bodies share one official collection; owner-hosted AAP and AAP mirrors do not create multiple terminal lineages.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-533",
+      "tracking_handle": "TMP-20261003-KBO-KIA-LG",
+      "event": "KIA Tigers @ LG Twins (KBO League 2026, Regular Season)",
+      "competition": "KBO",
+      "event_key": "TMP-20261003-KBO-KIA-LG",
+      "native_event_id": "UNKNOWN (Naver provider 20261003HTLG02026)",
+      "original_analysis_status": "HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-533",
+      "projection_path": "research/issued_research/P-533-d043c004e5cd42c4ab2fbd6dcd6df7a4.md",
+      "projection_sha256": "ea4fc25f3e4ea6a2ac4cee0bfe25536b07b330429060b154ad7f1551055ae148",
+      "source_sha256": "b0502f56fb034494320c961b467edbe789269f577189a2246fa44f068a0508d8",
+      "body_sha256": "a5e4655fb350b80d33100475e6a33742ec066aed508a9626607204a2aa9961c3",
+      "commit_sha256": "7f2555a849538765bd33a1812fd9ee8d1a437d4a2fb202ff76a6abb8ce4dd06f",
+      "original_scheduled_start": "2026-10-03T05:00:00Z",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "KIA ML (not supplied; alternative)",
+        "Under 8.5",
+        "LG ML",
+        "Over 8.5"
+      ],
+      "unresolved_additional_rows": [
+        {
+          "adjusted_margin": 2.5,
+          "deterministic_settlement": {
+            "event_id": "TMP-20261003-KBO-KIA-LG",
+            "raw_score": "[4, 5]",
+            "response_sha256": "2235e2fe1a3cedf7a0b07eec04f8dc4a64f55334e5586b8d54e14598127fc3f3",
+            "result": "W",
+            "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+            "source_url": "https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-03"
+          },
+          "diagnostic_grade": "W",
+          "diagnostic_scope": "FULL_GAME_CONDITIONAL",
+          "formal_blockers": [
+            "UNKNOWN_DEFINITION",
+            "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+            "NO_CANONICAL_PROSPECTIVE_ISSUE"
+          ],
+          "formal_grade": "UNRESOLVED",
+          "label": "Supplied Tigers +1.5 (not shadow R1)",
+          "line": 1.5,
+          "market": "SPREAD",
+          "performance_eligible": false,
+          "rank": null,
+          "side": "AWAY",
+          "source_flags": []
+        }
+      ],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import. Preserve unsupported KIA ML separately from the supplied KIA +1.5 contract.",
+      "diagnostic_revision_sha256": "f8cbfac3c7f29924d633fe80632ceccca5785c1e46ea68eb0f99e76732fd61d0",
+      "source_custody_notes": "KBO owner October 3 scoreboard identifies Jamsil 14:00 KST, KIA 5-LG 4, nine innings. Naver provider key 20261003HTLG02026 matches teams/date and RESULT; it is not fabricated as the owner's native key. Source scheduled 15:00 AEST is correct before daylight saving. Actual-start/cutoff and admitted independence are unavailable. Naver may reuse league data and cannot automatically count as an independent lineage.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-534",
+      "tracking_handle": "TMP-20261004-NRL-SYD-NEW-GF",
+      "event": "Sydney Roosters vs Newcastle Knights (NRL 2026, Grand Final)",
+      "competition": "NRL",
+      "event_key": "TMP-20261004-NRL-SYD-NEW-GF",
+      "native_event_id": "UNKNOWN (owner route /draw/nrl-premiership/2026/grand-final/game-1/)",
+      "original_analysis_status": "HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-534",
+      "projection_path": "research/issued_research/P-534-be856875a3c64ebb98218f3ffa13f973.md",
+      "projection_sha256": "64751ad22cc62b183e708b82c91fa1ddf55268b60098986a7c92967eb0aef34c",
+      "source_sha256": "b0502f56fb034494320c961b467edbe789269f577189a2246fa44f068a0508d8",
+      "body_sha256": "852b4f41af671c2d4748a9acd481b801a0ee1d3d27815476cee594585049a1b8",
+      "commit_sha256": "f4bd34aaec6e5cc52be9fc0666409f4c548460a4d4cdf92d793904589cf06dc9",
+      "original_scheduled_start": "2026-10-04T08:30:00Z",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "Roosters -4.5",
+        "Over 38.5",
+        "Knights +12.5",
+        "Under 48.5"
+      ],
+      "unresolved_additional_rows": [],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import.",
+      "diagnostic_revision_sha256": "7f4bb21cf339f640d6605244f9e31e2406a74db338c0991c205abee499a5455f",
+      "source_custody_notes": "Owner round data identifies Accor Stadium, Grand Final, Roosters 19-Knights 18, PostFullTime and 80:00. No golden-point period is required. Owner scheduled 08:30 UTC is 19:30 AEDT on October 4; the source's correction from AEST is appropriate. Numeric native ID and actual start remain unaudited; the exact owner route is retained. Club-hosted NRL report and its league version count as one lineage.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-535",
+      "tracking_handle": "TMP-20261004-GBL-PAO-VIK",
+      "event": "Panathinaikos AKTOR vs Vikos Falcons (Greek Basket League 2026-27, Round 1)",
+      "competition": "Greek Basket League",
+      "event_key": "TMP-20261004-GBL-PAO-VIK",
+      "native_event_id": "UNKNOWN",
+      "original_analysis_status": "HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-535",
+      "projection_path": "research/issued_research/P-535-fc3c5ca55b8c4784843db092991ea2ff.md",
+      "projection_sha256": "e505b5b68baca0d879bde05e89c5b95d581e31c57d0ce28fc05b07b7868d0f1b",
+      "source_sha256": "b0502f56fb034494320c961b467edbe789269f577189a2246fa44f068a0508d8",
+      "body_sha256": "94b0e45959c29d0814cce9ccf96cd03ffd4a1b74b175f443c10d39a1a6c109fd",
+      "commit_sha256": "466135d6c5a6b4e22ff0db8abd76434f014a6ab6f9eecd446fe037f2f683dad0",
+      "original_scheduled_start": "2026-10-04T10:00:00Z",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "Panathinaikos -20.5",
+        "Over 159.5",
+        "Falcons +28.5",
+        "Under 170.5"
+      ],
+      "unresolved_additional_rows": [],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import.",
+      "diagnostic_revision_sha256": "d91106162445e2dfb7de0109c332aa4b28f2201f73d8d14ee41eba10ffdb53b2",
+      "source_custody_notes": "Owner club fixture October 4 at Telekom Center Athens states 103-74 and cumulative quarter scores. 13:00 EEST is 10:00 UTC, 21:00 AEDT in Sydney, equivalent to fixed-offset 20:00 AEST; the source labels a fixed AEST time during Sydney daylight saving. Native league ID was not recovered; unsuccessful guessed ESAKE route is not adopted. Raw owner fetch failed but retained web extraction supplies diagnostic evidence, not a raw HTTP receipt. Three publisher names do not establish audited collection independence.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-536",
+      "tracking_handle": "TMP-20261004-BBL-BAY-OLD",
+      "event": "FC Bayern München vs EWE Baskets Oldenburg (easyCredit BBL 2026-27, Round 4)",
+      "competition": "BBL",
+      "event_key": "TMP-20261004-BBL-BAY-OLD",
+      "native_event_id": "2006888",
+      "original_analysis_status": "HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-536",
+      "projection_path": "research/issued_research/P-536-ec11d7ac9bdc4553ace5aa767d821dec.md",
+      "projection_sha256": "133076c8b6383ad0505d548ff5deb77e5ed53d984c7a1ae0886240464e68454f",
+      "source_sha256": "b0502f56fb034494320c961b467edbe789269f577189a2246fa44f068a0508d8",
+      "body_sha256": "7ad5449afbffc4d30a1c8a88a7c1dd351df5a5d99307865fddfb9ae99a089449",
+      "commit_sha256": "feadf7fdaf8e3b9081157db531ad1f450a54b41d8b409fd03d9909c0c69a4b62",
+      "original_scheduled_start": "2026-10-04T13:00:00Z",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "DIAGNOSTICALLY_SETTLED_NOT_CERTIFIED",
+      "unresolved_contracts_or_fields": [
+        "Bayern -10.5",
+        "Over 158.5",
+        "Oldenburg +18.5",
+        "Under 169.5"
+      ],
+      "unresolved_additional_rows": [],
+      "remaining_requirement": "Obtain exact original operator action/period/OT/shortened-game terms and an audited three-independent-terminal-lineage bundle for this exact event. Retain UNKNOWN_DEFINITION and formal UNRESOLVED; never grant prospective eligibility to this historical import.",
+      "diagnostic_revision_sha256": "962bf6182bbab51db78a2a5563adcb7fb8f6ff5611e84e6d7c7ce326e33e66e6",
+      "source_custody_notes": "Owner event 2006888 and league/club reports identify BMW Park on October 4, final 113-60 in regulation. Scheduled 15:00 CEST maps to October 5 00:00 AEDT in Sydney (fixed 23:00 AEST previous date). Original observation October 5 approximately 03:00 AEST is after scheduled start under either label, contradicting PREGAME. Actual-start and original issuance timestamps are absent. Report publication time is not game start. Secondary count is not audited independence.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    },
+    {
+      "canonical_id": "P-537",
+      "tracking_handle": "TMP-20261004-INT-KGZ-LBN",
+      "event": "Kyrgyzstan vs Lebanon (International Friendly, FIFA Window)",
+      "competition": "International Friendly",
+      "event_key": "TMP-20261004-INT-KGZ-LBN",
+      "native_event_id": "UNKNOWN (ESPN provider 401921339)",
+      "original_analysis_status": "HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT",
+      "performance_eligible": false,
+      "canonical_pointer": "prediction logs/PREDICTION_LOG_COMBINED_6.md#all-log-resolution--2026-10-05",
+      "canonical_marker": "BEGIN CANONICAL RESEARCH P-537",
+      "projection_path": "research/issued_research/P-537-5c15beb5cb9f41878eeed4fc73e7bf88.md",
+      "projection_sha256": "b7fe4013ff2d0c6e66f1a0b05b5b7a8a5ba38bc8792cd8ce465c0602adfba20b",
+      "source_sha256": "b0502f56fb034494320c961b467edbe789269f577189a2246fa44f068a0508d8",
+      "body_sha256": "9d44cf03c670e78bab330761139a4fe7df6370cb5d363daf7b002dd76d0a7d31",
+      "commit_sha256": "74afdc15e0a7af27766f73ed31bcdf3894ae30752fa46a56cc0d6aaab969c43f",
+      "original_scheduled_start": "2026-10-04T14:00:00Z_OWNER_ANNOUNCEMENT",
+      "actual_start": "NOT_AUDITED",
+      "current_state": "PARTIALLY_DIAGNOSTICALLY_SETTLED_PERIOD_AND_PROVIDER_OPEN",
+      "unresolved_contracts_or_fields": [
+        "1H Over 0.5 goals",
+        "Full match Over 2.5",
+        "Lebanon win (unsupported alternative)",
+        "Corners Over 9.5 (also called unranked alternative)",
+        "Kyrgyzstan +0.5 (unsupported alternative)"
+      ],
+      "unresolved_additional_rows": [
+        {
+          "diagnostic_grade": "UNRESOLVED_PERIOD",
+          "diagnostic_scope": "NOT_GRADED_MISSING_OR_AMBIGUOUS_FIELD",
+          "formal_blockers": [
+            "UNKNOWN_DEFINITION",
+            "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+            "NO_CANONICAL_PROSPECTIVE_ISSUE"
+          ],
+          "formal_grade": "UNRESOLVED",
+          "label": "Supplied 1H Under 0.5; not ranked",
+          "line": 0.5,
+          "market": "UNRESOLVED_PERIOD",
+          "performance_eligible": false,
+          "rank": null,
+          "side": null,
+          "source_flags": []
+        },
+        {
+          "deterministic_settlement": {
+            "event_id": "TMP-20261004-INT-KGZ-LBN",
+            "raw_score": "[3, 1]",
+            "response_sha256": "e79b160d8b570d1884f21f158064022834807d799df079fd88fbac1b98d62cf7",
+            "result": "L",
+            "retrieved_utc": "2026-10-05T01:44:38.926403+00:00",
+            "source_url": "https://www.kfu.kg/news/1811"
+          },
+          "diagnostic_grade": "L",
+          "diagnostic_scope": "FULL_MATCH_90_PLUS_STOPPAGE_CONDITIONAL",
+          "formal_blockers": [
+            "UNKNOWN_DEFINITION",
+            "NO_THREE_AUDITED_INDEPENDENT_TERMINAL_LINEAGES",
+            "NO_CANONICAL_PROSPECTIVE_ISSUE"
+          ],
+          "formal_grade": "UNRESOLVED",
+          "label": "Supplied full match Under 2.5; not ranked",
+          "line": 2.5,
+          "market": "TOTAL",
+          "performance_eligible": false,
+          "rank": null,
+          "side": "UNDER",
+          "source_flags": [],
+          "threshold_difference": -1.5
+        }
+      ],
+      "remaining_requirement": "First-half field remains contradictory: fresh Sport.kg detailed narrative supports goals 19 and 31 (2–0), but original ESPN display 0–0 disagrees and fresh KFU pages are still pregame. Owner period/timeline, exact corners aggregate for Over 9.5, original operator definitions and audited independent terminal quorum required. Do not certify either conflicting halftime solely from a final 3–1.",
+      "diagnostic_revision_sha256": "fa7c7f34a06538a1610219be9974be889a78f3aa608f63d9a492bc36144e3e50",
+      "source_custody_notes": "Senior international October 4 is distinct from September U-20 meetings and September 28 Maldives. KFU schedule states 20:00 Bishkek, UTC 14:00 and October 5 01:00 AEDT, contrary to supplied 22:00/02:00 AEST. ESPN 401921339 completed full-time 3-1 agrees with multiple detailed secondary pages; owner terminal result is not recovered. ESPN half split 0-0 conflicts with explicit 2-0 halftime/19th and 31st-minute goals elsewhere. Neither majority voting nor full-time agreement resolves this period. An unretained search-only 2-0 final is not admitted terminal evidence.",
+      "retrospective_pointer": "research/verification/reconciliation_2026-10-05/settlement_addendum.md",
+      "source_capture_pointer": "research/verification/reconciliation_2026-10-05/source_capture_manifest.json"
+    }
+  ],
+  "revision": "P520_NATIVE_OWNER_IDENTITY_RECOVERED",
+  "supersedes_manifest": "research/verification/all_log_resolution_2026-10-05/carryover_v2.json",
+  "supersedes_sha256": "9dd03407f3ee9ed110986b7ca50d7ecc6097b5de11aabd4f56b7a71471b60adf"
+}

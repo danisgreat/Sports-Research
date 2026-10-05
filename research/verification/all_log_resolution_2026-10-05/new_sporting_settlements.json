@@ -1,0 +1,194 @@
+[
+  {
+    "id": "P-524",
+    "event": "KT Wiz @ KIA Tigers",
+    "native": "20261001KTHT0",
+    "final": "KT 7–5 KIA; normal completed ninth inning",
+    "total": 12,
+    "winner": "KT Wiz",
+    "rows": [
+      [
+        1,
+        "KIA +1.5",
+        "L",
+        "0.592",
+        "0.638",
+        "KIA lost by 2: −2 + 1.5 = −0.5"
+      ],
+      [
+        2,
+        "KT Wiz ML",
+        "W",
+        "0.530",
+        "0.471",
+        "KT won by 2"
+      ],
+      [
+        3,
+        "Under 8.5 runs",
+        "L",
+        "0.527",
+        "0.509",
+        "12 > 8.5"
+      ],
+      [
+        4,
+        "Over 8.5 runs",
+        "W",
+        "0.473",
+        "0.491",
+        "12 > 8.5"
+      ]
+    ],
+    "right": "The KT winner view succeeded. Its preserved starter/season advantage was directionally compatible with the result, although it cannot quantify why this particular game was won. The two-run final defeats the KIA cushion even though KIA briefly tied the game.",
+    "wrong": "Rank 1 KIA +1.5 lost by only half a run relative to its adjusted line; rank 3 Under 8.5 lost with twelve runs. The total mean 8.80 already exceeded 8.5, while the card assigned Under 0.527: without a validated distribution the mean alone cannot justify that exact tail probability.",
+    "mechanism": "Owner box: So Hyeong-jun completed six innings with two runs allowed; Yang Hyeon-jong left after 3⅓ with four allowed. The seventh-inning Kim Tae-gun three-run homer made the total ten; the eighth-inning Kim Hyun-soo two-run homer established the two-run final margin. These play facts explain the grade boundaries, without estimating counterfactual probabilities.",
+    "kill": "The named low-walk/starter-quality route did not prevent later scoring. The retained facts support both starter-shortening and multi-run relief branches. They do not establish an estimated weather effect or prove that the qualitative run prevention thesis was generally invalid.",
+    "process": "The card was explicitly observed after play began and imported as historical uncalibrated research. Literal p/baselines remain unvalidated, not certified. No field-owner final can repair missing pre-issue calibration or produce an earlier freeze.",
+    "hypothesis": "For future KBO totals, compare a preregistered starter-plus-relief model against the unchanged baseline with date-held-out Brier/log loss, calibration and interval coverage. Audit available bullpen workload before issue; retain failures and missing workload rather than applying a postgame coefficient."
+  },
+  {
+    "id": "P-525",
+    "event": "Chunichi Dragons @ Hiroshima Toyo Carp, Game 25",
+    "native": "20261001-c-d-25",
+    "final": "Hiroshima 5–1 Chunichi; nine innings, bottom ninth not required",
+    "total": 6,
+    "winner": "Hiroshima",
+    "rows": [
+      [
+        1,
+        "Carp +1.5",
+        "W",
+        null,
+        null,
+        "Hiroshima won by 4"
+      ],
+      [
+        2,
+        "Over 6.5 runs",
+        "L",
+        null,
+        null,
+        "6 < 6.5"
+      ],
+      [
+        3,
+        "Under 6.5 runs",
+        "W",
+        null,
+        null,
+        "6 < 6.5"
+      ],
+      [
+        4,
+        "Dragons +1.5",
+        "L",
+        null,
+        null,
+        "Chunichi lost by 4: −4 + 1.5 = −2.5"
+      ]
+    ],
+    "right": "The dated live rank-1 Carp cushion and Hiroshima winner were correct. The original unranked NO_FORECAST intake remains separate from that later qualitative view. This is an after-start observation, not a successful reconstructed pregame forecast.",
+    "wrong": "Rank 2 Over 6.5 lost by half a run. At the retained 4–1/top-seventh observation, the Over needed at least two more runs; only one further Hiroshima run arrived. The opposing Under succeeded, but its success does not retrospectively make it the issued preferred direction.",
+    "mechanism": "The owner linescore is Chunichi 000000100 and Hiroshima 00200210x. Tokoda completed nine innings; the sole visiting run came in the seventh. The bottom-seventh home run in the scorebook adds only one run to the five-run observed total. No shortened-game or extra-innings branch is needed to explain the final six.",
+    "kill": "The live assessment acknowledged that two further runs would defeat Under, but the corresponding Over failure branch was at most one further run. Remaining opportunities do not by themselves establish a high chance of two runs; uncertainty about relief availability was already documented and cannot be filled with hindsight.",
+    "process": "The original source had no numerical probabilities or baseline. The later qualitative ranking remains p/baseline NOT_ESTIMATED. Owner records minute-precision start 18:00 JST and end 20:12 JST, recovered now; these are not contemporaneous issue-time receipts and do not convert the live view into pregame eligibility.",
+    "hypothesis": "For future live NPB totals, preregister exact inning/outs/base state and a remaining-runs distribution. Evaluate a held-out live-state baseline at the same observation horizon, without copying final state into inputs; require calibrated uncertainty and phase-correct coverage before attaching probabilities."
+  },
+  {
+    "id": "P-526",
+    "event": "Hanwha Eagles @ Samsung Lions",
+    "native": "20261001HHSS0",
+    "final": "Samsung 3–2 Hanwha; normal completed top ninth, bottom ninth unnecessary",
+    "total": 5,
+    "winner": "Samsung Lions",
+    "rows": [
+      [
+        1,
+        "Under 11.5 runs",
+        "W",
+        null,
+        null,
+        "5 < 11.5"
+      ],
+      [
+        2,
+        "Samsung −0.5",
+        "W",
+        null,
+        null,
+        "Samsung won by 1"
+      ],
+      [
+        3,
+        "Hanwha +2.5",
+        "W",
+        null,
+        null,
+        "Hanwha lost by 1: −1 + 2.5 = +1.5"
+      ],
+      [
+        4,
+        "Over 11.5 runs",
+        "L",
+        null,
+        null,
+        "5 < 11.5"
+      ]
+    ],
+    "right": "Preferred Under and Samsung side/winner succeeded. Hanwha +2.5 also won because a one-run Samsung win satisfies both side propositions; three successful rows are not three independent decisions.",
+    "wrong": "The least-preferred opposing Over lost; that is compatible with the analyst ordering, not an avoided actionable loss. The original uncertainty about ranks 1–2 stays. No numerical separation, calibration claim or perfect-process claim follows from three winning rows.",
+    "mechanism": "Owner pitching tables: Hwang 4⅓ innings/one run and Won five innings/one run. Samsung scored a fifth-inning solo homer and a seventh-inning two-run homer; Hanwha reduced the gap in the eighth. Five combined runs leave 6.5 runs of clearance below the Under threshold. A high pitch count did not become a high-run final.",
+    "kill": "The recorded Under danger was walks, early starter exits and relief blow-ups. Both starters stopped before six full innings, yet their short outings allowed only one run each. Four Hwang walks in the owner table are not proof the named scoring cascade occurred. This distinguishes exposure to a risk from realization of its full kill path.",
+    "process": "The analysis and final refresh were explicitly live, at 0–0 in the third. Original p/baseline NOT_ESTIMATED remains correct. Later confirmed orders, final innings and narratives cannot be backdated into the original live evidence packet or certify an earlier issue.",
+    "hypothesis": "Evaluate the proposed KBO starter/command/relief features prospectively at a frozen live or pregame horizon. Score one representative per decision group, include both wins and losses, and require held-out improvement beyond uncertainty before changing the existing ranking method."
+  },
+  {
+    "id": "P-492",
+    "event": "San Diego Padres @ Los Angeles Dodgers",
+    "native": "823897",
+    "final": "Dodgers 7–0 Padres; nine innings, bottom ninth not played",
+    "total": 7,
+    "winner": "Los Angeles Dodgers",
+    "rows": [
+      [
+        1,
+        "Michael King 15+ pitching outs / Over 14.5 outs",
+        "L",
+        null,
+        null,
+        "Owner player 650633: 12 outs, 4.0 IP; 12 < 14.5"
+      ],
+      [
+        2,
+        "Padres +1.5",
+        "L",
+        null,
+        null,
+        "SD lost by 7: −7 + 1.5 = −5.5"
+      ],
+      [
+        3,
+        "Dodgers ML",
+        "W",
+        null,
+        null,
+        "Dodgers won 7–0"
+      ],
+      [
+        4,
+        "Combined Total Over 8.5 runs",
+        "L",
+        null,
+        null,
+        "7 < 8.5"
+      ]
+    ],
+    "right": "The original Dodgers potential-winner view and rank-3 moneyline were correct. The full original table is already retained in Part 5; the historical index pointed only to a merged summary and missed that custody. No new card or extra P-number is justified.",
+    "wrong": "Rank-1 King outs, rank-2 Padres cushion and rank-4 full-game Over lost. The originally selected total is full-game Over 8.5, not a first-five contract. A carried requirement to recover a missing first-five forecast was therefore an audit misattribution; no F5 row is added to this card.",
+    "mechanism": "Fresh owner feed 823897 has Final, away SD 0/home LAD 7 and player ID650633 with outs=12, inningsPitched=4.0, 81 pitches and five runs allowed. The first five completed innings total five runs, but that is an ancillary endpoint only. It does not replace the original full-game target.",
+    "kill": "The original card treated contact/run risk as affecting runs much more than ability to reach the fifth. Five runs and 81 pitches in four innings show that the two risks can share a removal pathway. King workload and Padres close-margin support therefore shared a driver; both top rows lost when it failed.",
+    "process": "The source explicitly reports 12:13 AEST verification after scheduled 12:10 and pregame state unverified. No p/baseline was attached. The retrieved owner pitching line now closes the documentary REVIEW-P490-PROP-BOX gap, while listed-pitcher/operator action, historical issue-time custody and audited certification remain separate.",
+    "hypothesis": "Preregister a pitcher-outs model with removal-risk and lineup-strength features, evaluate held-out outs-distribution coverage and exact-contract Brier against the frozen baseline, and group related side/outs exposures. Do not infer a new coefficient or decision threshold from this single failure."
+  }
+]

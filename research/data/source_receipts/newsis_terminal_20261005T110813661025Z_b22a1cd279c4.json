@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "newsis_terminal",
+  "publisher": "v.daum.net",
+  "upstream_lineage_id": "REQUIRES_AUDIT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://v.daum.net/v/20261001223101462",
+  "final_url": "https://v.daum.net/v/20261001223101462",
+  "retrieved_utc": "2026-10-05T11:08:13.661025+00:00",
+  "response_sha256": "b22a1cd279c41d7c66039e4f2dd9e10553bc0415699613d8c99c049319304e84",
+  "body_path": "research/data/raw/source_snapshots/newsis_terminal_20261005T110813661025Z_b22a1cd279c4.body",
+  "response_bytes": 110597,
+  "content_type": "text/html;charset=UTF-8",
+  "parser_id": "MANUAL_EXACT_EVENT",
+  "registry_sha256": "4888d936f286d6bcbfcded49f9255a1cadf5907e4b82f4a741fc7bfea5424452",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

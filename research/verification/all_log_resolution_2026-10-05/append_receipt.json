@@ -1,0 +1,11 @@
+{
+  "part6_path": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+  "before_bytes": 1058475,
+  "before_sha256": "f85a6556efe0623ac9d513e611fb98211045d9c6e66b135eabc6e2fe47c3390a",
+  "projection_bytes": 75639,
+  "projection_sha256": "33ad3faca8db8c9649f6701c798fb0fb55c8c79ab31bcf5787065d129fab2143",
+  "after_bytes": 1134114,
+  "after_sha256": "6db26dccd12f81310b9dbe12498ead1744dca7c7fad24d44482f288a4d2008a4",
+  "new_ids": [],
+  "next_id": "P-538"
+}

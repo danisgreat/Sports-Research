@@ -1,5 +1,11 @@
 # Learnings index — every lesson, test and recurring mistake, one line each
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+October 5 retrospective suggestions: [eleven source-bound proposals](research/improvement_register.json), all **PROPOSED_NOT_TESTED / NOT PERFORMANCE_ELIGIBLE**. Each retains its original hypothesis/acceptance criterion; none changes a model weight, cap or ranking rule. [Implementation and limits](research/verification/implementation_2026-10-05/REPORT.md).
+
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
 **Opened 2026-09-26.** This is the navigable index of `LEARNING_REGISTER.md`, which stays the evidence record with the full origin of every entry. **Status: LEARNING_ONLY.** Nothing here is a coefficient, cap or ranking override (`L-087`).
 
 **Maintenance (`C-READING-GATE`).** Every new L-, G-L-, M- or test ID added to the register is added here in the same pass, with its status. If a line here and its register entry disagree, the register governs and this index is corrected.

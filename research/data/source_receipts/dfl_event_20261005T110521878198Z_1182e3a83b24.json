@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "dfl_event",
+  "publisher": "www.bundesliga.com",
+  "upstream_lineage_id": "OWNER_COLLECTION_IDENTITY_REQUIRES_EVENT_AUDIT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/3/rb-leipzig-vs-hamburger-sv/stats",
+  "final_url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/3/rb-leipzig-vs-hamburger-sv/stats",
+  "retrieved_utc": "2026-10-05T11:05:21.878198+00:00",
+  "response_sha256": "1182e3a83b24f371711c18765d0fd4f68975dd00c4ff1b6855a8b9ecff303f7f",
+  "body_path": "research/data/raw/source_snapshots/dfl_event_20261005T110521878198Z_1182e3a83b24.body",
+  "response_bytes": 922345,
+  "content_type": "text/html;charset=UTF-8",
+  "parser_id": "MANUAL_EVENT_FIELD_AUDIT",
+  "registry_sha256": "3afde260ffc33c65e1e94744b33b1295e3a6348c5bb61725835417e45b53b9a0",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

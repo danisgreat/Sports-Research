@@ -1,5 +1,9 @@
 # Sports Research implementation and evidence - 1 October 2026
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
 Status: **IMPLEMENTED AND LOCALLY VERIFIED; ALL MODELS SHADOW_ONLY**. Method **MDS-2026.10.01-v7.0**, control **CR-2026.10.01-I1**, scoring **SCV-2026.10.01-v3**. This report records executed work under the user's instruction to implement the review, including probability models, sources, historical data and processes. It replaces the earlier in-progress register.
 
 The initial review rated the workspace **5.5/10**. The implementation addresses the engineering and evidence-control defects behind that assessment. A higher predictive-skill rating is not justified by passing tests or inspecting historical outcomes. Live qualification remains zero; prospective skill has not been established.

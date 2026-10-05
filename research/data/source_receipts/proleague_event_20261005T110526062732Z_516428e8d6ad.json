@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "proleague_event",
+  "publisher": "www.proleague.be",
+  "upstream_lineage_id": "OWNER_COLLECTION_IDENTITY_REQUIRES_EVENT_AUDIT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.proleague.be/fr/matchs/saison-2026-2027-jupiler-pro-league-6-club-brugge-vs-royal-antwerp-fc-646",
+  "final_url": "https://www.proleague.be/fr/matchs/saison-2026-2027-jupiler-pro-league-6-club-brugge-vs-royal-antwerp-fc-646",
+  "retrieved_utc": "2026-10-05T11:05:26.062732+00:00",
+  "response_sha256": "516428e8d6ade38a8d7bb2d3d977a7117f38324b035ca1a570f461303623a8e8",
+  "body_path": "research/data/raw/source_snapshots/proleague_event_20261005T110526062732Z_516428e8d6ad.body",
+  "response_bytes": 3272913,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "MANUAL_EVENT_FIELD_AUDIT",
+  "registry_sha256": "3afde260ffc33c65e1e94744b33b1295e3a6348c5bb61725835417e45b53b9a0",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

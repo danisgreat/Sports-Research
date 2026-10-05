@@ -1,0 +1,202 @@
+{
+  "observed_utc": "2026-10-05T09:55:04.263056+00:00",
+  "files": [
+    {
+      "path": ".github/workflows/research.yml",
+      "sha256": "c258f7b89f3971661299441fc7eb4e0c27a815863f76577b3f1996ebca22497e",
+      "bytes": 1762
+    },
+    {
+      "path": "BASE_RATES_REGISTER.md",
+      "sha256": "e6608d9c9a8ac853b59bf9ccc5ae9faf88d11555f26fead0e61390d4eda7a2c0",
+      "bytes": 37976
+    },
+    {
+      "path": "CARD_AND_LOG_TEMPLATES.md",
+      "sha256": "4f63e0f03dce113796c887e43a87dc5eaebc1dc1c26f101a7001d2832c3e9fd8",
+      "bytes": 6151
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "93bcb73e5e6f62401e17e476fef3405d382aba2725fc5be34e81082148aedecf",
+      "bytes": 66446
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "8c207009c32f33918056bcdccd88f00030c91d0f18fb9248c92a60630563e336",
+      "bytes": 1947
+    },
+    {
+      "path": "CURRENT_RULES.md",
+      "sha256": "95081336299ab2a6f7df8e4fd755a0bf1c135a83a2056b57cfa022f1ce7bbb52",
+      "bytes": 14389
+    },
+    {
+      "path": "GAME_LOG_STATUS_CURRENT.md",
+      "sha256": "5a714a6a03ff897b23cabfc74122f5c391416f987b8ca74eae70cb5f55d9ce15",
+      "bytes": 194548
+    },
+    {
+      "path": "IMPLEMENTATION_2026-10-01.md",
+      "sha256": "061dcf3011e5c3a1cd74f8707d410ef58155f012378aa4f0c1a7847e6201d36d",
+      "bytes": 23812
+    },
+    {
+      "path": "LEAGUE_RULES_CRICKET.md",
+      "sha256": "0f41e6edff6e3d90756bb9eede73ad8159e82859d10abfc5f0438e0a23a42d6a",
+      "bytes": 27261
+    },
+    {
+      "path": "LEAGUE_RULES_SOCCER.md",
+      "sha256": "9202d89ef4a772dd88c4628a604db664d658cddb0fa94f0dc0b1fe9be863a2a4",
+      "bytes": 44744
+    },
+    {
+      "path": "LEARNINGS_INDEX.md",
+      "sha256": "b1e598ce612dc1e7926be9d64b810f33ae8d066271c40f6bc017f7716fd5c3fb",
+      "bytes": 46933
+    },
+    {
+      "path": "LEARNING_REGISTER.md",
+      "sha256": "cd41e633dc797941b42fc125b9c029d057cc783d5fa8b851b9d8792b5d5ef7c8",
+      "bytes": 355029
+    },
+    {
+      "path": "MARKET_BENCHMARK_LEDGER.md",
+      "sha256": "ca987346672c1b766cd0cc601771f6ae823fcd514c96aafdd58da71564727804",
+      "bytes": 4534
+    },
+    {
+      "path": "METHOD.md",
+      "sha256": "51c526837664643d786bbedb74f124b4467a98280e7cd387c70862a6bca24da7",
+      "bytes": 4304
+    },
+    {
+      "path": "P518_P522_RECONCILIATION.md",
+      "sha256": "fdda4644ca46fb09f7acbd456cfccaf796ca0109d90c1f057e4f696dd4d7b480",
+      "bytes": 15098
+    },
+    {
+      "path": "PIPELINE_IMPLEMENTATION_2026-09-29.md",
+      "sha256": "a5bd96efa5db6cb416de7587b33e7eed3bac36f1089e351443dc02db3b377a1c",
+      "bytes": 10802
+    },
+    {
+      "path": "PROBABILITY_TOOLKIT.md",
+      "sha256": "1ff5f2525162f10dff60638b62054a61c115f0556a82f22322394b483958f6a9",
+      "bytes": 52202
+    },
+    {
+      "path": "PROMPTS.md",
+      "sha256": "ae7480310ba3ca1ffdf84272bb43dfec0fb77e2eb8112d034bcd7ff6d2601828",
+      "bytes": 5077
+    },
+    {
+      "path": "Previous Sports Results/_canonical/validation.json",
+      "sha256": "9b421596049687581a43c00253dc4873c1017e24ab5326942662a8037bf83cde",
+      "bytes": 768
+    },
+    {
+      "path": "README.md",
+      "sha256": "dbf35cb9c329481033d40256bfc5edd2addf4c74e77ba235db5b772258434ae9",
+      "bytes": 4787
+    },
+    {
+      "path": "RECORD_ELIGIBILITY_SCHEMA.md",
+      "sha256": "4c7ad2a644e55fef087ef28640ed772adcefb82181133a97e590af78df010fdf",
+      "bytes": 4483
+    },
+    {
+      "path": "RULES_AFL.md",
+      "sha256": "9c45cf6afee30784fcb068293eea59c01febd73df9c414e7c1d55b9b1b9d9a50",
+      "bytes": 38630
+    },
+    {
+      "path": "RULES_AMERICAN_FOOTBALL.md",
+      "sha256": "db9a47d076bf1991aab39fd744c5e22fdedf534975b5ba9351c5bb36f50cbd99",
+      "bytes": 44623
+    },
+    {
+      "path": "RULES_BASEBALL.md",
+      "sha256": "46f5c94e2de97b1bc384b746496288f47b15f54f61506555d9901b992792ddb8",
+      "bytes": 63849
+    },
+    {
+      "path": "RULES_BASKETBALL.md",
+      "sha256": "355403723babc985ab7b95cfc5ab765ffaabdeba02753b1058264fde4631e070",
+      "bytes": 49215
+    },
+    {
+      "path": "RULES_CRICKET.md",
+      "sha256": "4ba296ea8b5b8e6f51472b0c81c6284d866e3343fb3ddf658cec99e595254568",
+      "bytes": 58351
+    },
+    {
+      "path": "RULES_ICE_HOCKEY.md",
+      "sha256": "7fd79afa6d7f3204449449e0d8aa43bc1bce49b65cc724825737b1e30a2e166b",
+      "bytes": 37483
+    },
+    {
+      "path": "RULES_NRL_RUGBY.md",
+      "sha256": "19c00e91931ddf93d68d89f9fe88f3cc1c93d846292da610ee1c8659e32ae671",
+      "bytes": 36081
+    },
+    {
+      "path": "RULES_RUGBY_UNION.md",
+      "sha256": "0f1b84717f51d4d33e3e928d3e45f6a2f3e8360a7914c9406c16ebd72bcffff5",
+      "bytes": 35306
+    },
+    {
+      "path": "RULES_SOCCER.md",
+      "sha256": "bd72ba823030776ae466430bd442b86e12262aa64a36c8bf76a4adddcab3ed3f",
+      "bytes": 43674
+    },
+    {
+      "path": "RULES_TENNIS.md",
+      "sha256": "1e1e2782f005cf9106abce541ddda8a9738df763a6dde7b968c6e6937c582d0a",
+      "bytes": 44724
+    },
+    {
+      "path": "SCORING_AND_VALIDATION.md",
+      "sha256": "6c6fbee3f7ff764d084511e77830a271a2b4cb4f1b88ffb5a7bf80c4f26eeb0b",
+      "bytes": 7663
+    },
+    {
+      "path": "SKILL_BASELINE_LEDGER.md",
+      "sha256": "de514f13c70961cefb82d0bb5bc6af28a7e14e7ac3769d9c1be0d43375d4a265",
+      "bytes": 13810
+    },
+    {
+      "path": "SOURCES.md",
+      "sha256": "f21763a0686a4bb234147b1d3c874978b688b8d5debea38cd90abb3a04b3a395",
+      "bytes": 162507
+    },
+    {
+      "path": "VALIDATION_EVIDENCE.md",
+      "sha256": "7e9117320a6ed04a199183b77c5755ae72c57710af8c94fd99f96e016fe3ac49",
+      "bytes": 51875
+    },
+    {
+      "path": "VERIFICATION_PROTOCOL.md",
+      "sha256": "11f6fef5f1f965a8af093883426188b44ab3926d22dbbe2cfa6c06f8cc0cd1bd",
+      "bytes": 4581
+    },
+    {
+      "path": "VERIFICATION_RECEIPT_2026-09-28.md",
+      "sha256": "2b16b3de59bc814756841d0c76ddaac0836a25d8d770a0110df1fe7331c2ea1c",
+      "bytes": 15122
+    },
+    {
+      "path": "research/README.md",
+      "sha256": "24a3109b5c1e9f15dd151e7ba9e3e866db1464350f4fe0ebbc8f4b89fea3157b",
+      "bytes": 12649
+    },
+    {
+      "path": "research/operations/verify_custody.py",
+      "sha256": "b9b92e205011b9c1b0d55bd9b5481181ad72c25d31ea04917c9684da99ffd36b",
+      "bytes": 4999
+    }
+  ],
+  "staging": "NONE",
+  "publication": "LOCAL_ONLY"
+}

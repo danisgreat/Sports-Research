@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "npb_schedule",
+  "publisher": "npb.jp",
+  "upstream_lineage_id": "OWNER_COLLECTION_IDENTITY_REQUIRES_EVENT_AUDIT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://npb.jp/games/2026/schedule.html",
+  "final_url": "https://npb.jp/games/2026/schedule.html",
+  "retrieved_utc": "2026-10-05T11:05:10.457619+00:00",
+  "response_sha256": "568850aa863ff061693ee8cfbe8b8120464775bad61d08cd365ecf9dd21d28aa",
+  "body_path": "research/data/raw/source_snapshots/npb_schedule_20261005T110510457619Z_568850aa863f.body",
+  "response_bytes": 2171,
+  "content_type": "text/html",
+  "parser_id": "MANUAL_EVENT_FIELD_AUDIT",
+  "registry_sha256": "3afde260ffc33c65e1e94744b33b1295e3a6348c5bb61725835417e45b53b9a0",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

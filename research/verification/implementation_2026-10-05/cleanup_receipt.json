@@ -1,0 +1,12 @@
+{
+  "observed_utc": "2026-10-05T09:42:36.719012+00:00",
+  "path": "Mini logs (to be sent to actual log later)/Mini Prediction Log - P-523 onward - 2026-10-01/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md",
+  "bytes": 462,
+  "sha256": "dcd7bcb75734b336170157c395d2c57531245660965e4f66d64a4887f5ea4c05",
+  "content_utf8": "# CLOSED mini reference\r\n\r\nArchived with its original bytes at `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`.\r\nCanonical ledger: `prediction logs/PREDICTION_LOG_COMBINED_6.md`. Next canonical ID: P-538; use the transactional allocator for current state.\r\nUnresolved carryover: `research/verification/closure_2026-10-05/carryover.md`.\r\nArchive receipt: `research/verification/closure_2026-10-05/mini_archive_manifest.json`.\r\n",
+  "reason": "Redundant closed working pointer; full original archive and canonical/carryover/archive receipt already retained.",
+  "recoverable_at_commit": "3bde3dd9dee0864bed4954ed90aa3bcb5f3428cc",
+  "archive_bodies_verified": true,
+  "removal_status": "REMOVED_VERIFIED_REDUNDANT_POINTER",
+  "recovery": "Exact pointer text retained in this receipt and original Git commit; full mini body remains in hash-verified archive."
+}

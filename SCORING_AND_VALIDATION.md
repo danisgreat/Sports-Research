@@ -1,5 +1,7 @@
 # Scoring and validation
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
 **October 1 v7.1 clarification:** Calibration, model qualification and prospective cohort controls determine the claims that may be made about performance. They do not prevent requested research, qualitative ranks, transparent uncalibrated analyst scenarios, late/live analysis or canonical Part 6 IDs. See CURRENT_RULES.md and research.operations.log_card. Preserve original forecasts and score each appropriate cohort separately. No retrospective when the user has deferred it.
 
 Current scoring: **SCV-2026.10.01-v3**. [CURRENT_RULES.md](CURRENT_RULES.md) controls admission. This file defines measurement; historical cards retain their original conventions.
@@ -33,6 +35,12 @@ Week-block paired bootstrap uses 10,000 replicates and the frozen seed. Report e
 ## Historical learning
 
 `research/data/processed/legacy_learning/contracts.csv` preserves all 2,004 rank-log rows; `cards.csv` covers all 522 IDs. It retains 630 literal probabilities and marks unresolved or disputed fields. It never fills absent cutoffs, baselines, event IDs or endpoints. Brier values there are explicitly literal-grade diagnostics. They cannot establish source truth, prospective calibration or incremental baseline skill. Every historical row remains performance-ineligible.
+
+## October 5 diagnostic cohort
+
+P-527–P-537 retain eleven completed-game diagnostic reviews, not certified prospective outcomes. Missing literal probabilities/baselines make Brier/log loss and adjustment improvement NOT_COMPUTABLE; ordinal ranks, duplicated rows, alternative versions and complementary picks do not create extra trials. P-537 first-half and corners rows remain unresolved. The [carryover](research/verification/closure_2026-10-05/carryover.md) also retains P-523–P-526 custody requirements. No original NO_FORECAST or LATE_RESEARCH state is upgraded.
+
+All eleven retrospective hypotheses are recorded verbatim in [the improvement register](research/improvement_register.json) as PROPOSED_NOT_TESTED. A written acceptance criterion is not a passed experiment; no weights, probabilities or model qualifications change from those proposals.
 
 ## Release and failure policy
 

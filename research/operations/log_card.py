@@ -112,6 +112,13 @@ def _sync_status(part6, reconciliation, ledger):
         lines += ['',f"Highest canonical research ID: **{cards[-1]['card_id']}**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_6.md`.",
                   'Archived mini references: '+', '.join('`'+a['archive_path']+'`' for a in archive['archives'])+'.',
                   'Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/carryover.json` and `carryover.md`. Eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6; formal certification remains unresolved.']
+    from research.operations.settlement_register import selected
+    current=selected(ROOT)
+    if current:
+        manifest=current['manifest']
+        lines += ['', '**Current all-log settlement register:** `'+current['manifest_path']+'`.',
+                  f"{manifest['event_count']} event records retain specific settlement/certification requirements; {manifest['documentary_repairs']} older rank/contract mappings were repaired. The earlier 15-record closure is a historical snapshot. New sporting reviews and existing retrospective pointers are recorded in the current register; operator or source gaps remain literal.",
+                  'Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.']
     lines += ['', 'P-518–P-522 remain reserved. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.',
               '', end.decode(),'','## Historical status snapshots — superseded for current queue','']
     new='\r\n'.join(lines).encode('utf-8')+old

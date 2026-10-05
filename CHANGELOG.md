@@ -1,10 +1,20 @@
 # Changelog
 
+## 2026-10-05 ? local-authority all-log settlement reconciliation
+
+Inventory 537 slots; reconcile 71 TMP strings plus the P-528 local tracker; restore ten documentary rank/contract mappings; append four owner-supported sporting reviews and 48 retrospective sections without changing forecasts or allocating IDs. Select the full 53-record carryover through the logger. Register four further untested hypotheses, preserve strict source failures, and publish the authorized document repairs and redundancy cleanup to main.
+
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
 **Opened 2026-09-25(c).** This is the project's dated history. Until 2026-09-25(c) it lived in the body of `README.md`, which had grown into about twenty dated sections. That buried what the project is and how to use it. The complete former README body is preserved **verbatim** below, in its original order (SHA-256 of the whole former README: `003a7eaecb6b64e70a28811449a34e5f4a7572ef03dffca621675c7d200a9b71`). Its original link text is unchanged; links whose targets were removed are mapped in the [Historical Link Index](HISTORICAL_LINK_INDEX.md).
 
 New entries go at the top, under **Entries from 2026-09-25(c)**. The governing rules live in [`CURRENT_RULES.md`](CURRENT_RULES.md) and the files it cites; this changelog is history, not instruction (`METHOD.md` §9). Older links to removed files refer to versions available in Git history.
 
 ## Entries from 2026-09-25(c)
+
+### 2026-10-05 — document reconciliation and strict custody reporting (I2)
+
+Aligned current documents with canonical P-523–P-537, next P-538 and the selected October 5 receipt; corrected the sport-reference header that wrongly blocked uncalibrated requested research. Retained the two original closed mini archives and all carryover/diagnostic history; removed the redundant working mini pointer after hash readback. Registered eleven retrospective hypotheses as untested proposals. Custody now reports every failed body while preserving strict failure; CI runs canonical/custody/freeze checks independently. All original logs, ledger and four model builds remain unchanged. [Implementation evidence](research/verification/implementation_2026-10-05/REPORT.md).
 
 ### 2026-10-01 — requested-analysis and canonical-log repair (v7.1 / I2)
 

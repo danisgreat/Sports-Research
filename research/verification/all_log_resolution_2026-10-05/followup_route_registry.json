@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "scope": "EXACT_SPORTS_REPORTS_ONLY; independent upstream collection not inferred",
+  "sources": {
+    "newsis_terminal": {
+      "publisher": "v.daum.net",
+      "allowed_url_prefixes": [
+        "https://v.daum.net/v/20261001223101462"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "parser_id": "MANUAL_EXACT_EVENT",
+      "upstream_lineage_id": "REQUIRES_AUDIT",
+      "independence_status": "UNKNOWN"
+    },
+    "khan_terminal": {
+      "publisher": "v.daum.net",
+      "allowed_url_prefixes": [
+        "https://v.daum.net/v/20261001230913192"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "parser_id": "MANUAL_EXACT_EVENT",
+      "upstream_lineage_id": "REQUIRES_AUDIT",
+      "independence_status": "UNKNOWN"
+    },
+    "nikkan_terminal": {
+      "publisher": "www.nikkansports.com",
+      "allowed_url_prefixes": [
+        "https://www.nikkansports.com/baseball/professional/score/2026/cl2026100102.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "parser_id": "MANUAL_EXACT_EVENT",
+      "upstream_lineage_id": "REQUIRES_AUDIT",
+      "independence_status": "UNKNOWN"
+    },
+    "championat_terminal": {
+      "publisher": "www.championat.com",
+      "allowed_url_prefixes": [
+        "https://www.championat.com/football/news-6644730-kyrgyzstan-livan-rezultat-matcha-4-oktyabrya-2026-schet-3-1-tovarischeskij-match.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": true,
+      "parser_id": "MANUAL_EXACT_EVENT",
+      "upstream_lineage_id": "REQUIRES_AUDIT",
+      "independence_status": "UNKNOWN"
+    },
+    "sportkg_terminal": {
+      "publisher": "sport.kg",
+      "allowed_url_prefixes": [
+        "https://sport.kg/main_news/95100-sbornaja-kyrgyzstana-pobedila-livan-v-tovarischeskom-matche-no-voprosy-est.html"
+      ],
+      "access_mode": "AUTOMATED_ALLOWED",
+      "market_fields_possible": false,
+      "parser_id": "MANUAL_EXACT_EVENT",
+      "upstream_lineage_id": "REQUIRES_AUDIT",
+      "independence_status": "UNKNOWN"
+    }
+  }
+}

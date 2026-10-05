@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "kfu_news",
+  "publisher": "www.kfu.kg",
+  "upstream_lineage_id": "OWNER_COLLECTION_IDENTITY_REQUIRES_EVENT_AUDIT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.kfu.kg/news",
+  "final_url": "https://www.kfu.kg/news",
+  "retrieved_utc": "2026-10-05T11:05:14.527168+00:00",
+  "response_sha256": "7dc200dcd4e2936d8fbbe8067b041a3b54565ae8ffd304b388322af62e37c12c",
+  "body_path": "research/data/raw/source_snapshots/kfu_news_20261005T110514527168Z_7dc200dcd4e2.body",
+  "response_bytes": 327739,
+  "content_type": "text/html; charset=UTF-8",
+  "parser_id": "MANUAL_EVENT_FIELD_AUDIT",
+  "registry_sha256": "3afde260ffc33c65e1e94744b33b1295e3a6348c5bb61725835417e45b53b9a0",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

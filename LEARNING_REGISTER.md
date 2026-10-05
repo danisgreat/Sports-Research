@@ -1,5 +1,11 @@
 # Learning and prospective-test register (the lesson archive)
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+October 5 retrospective suggestions: [eleven source-bound proposals](research/improvement_register.json), all **PROPOSED_NOT_TESTED / NOT PERFORMANCE_ELIGIBLE**. Each retains its original hypothesis/acceptance criterion; none changes a model weight, cap or ranking rule. [Implementation and limits](research/verification/implementation_2026-10-05/REPORT.md).
+
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
 > **Current as of 2026-09-26.** Live method **MDS-2026.09.19-v4.3 / CR-2026.09.21-3** (the "v4.0" and "sole current registry" lines further down are historical headers). **Start with [`LEARNINGS_INDEX.md`](LEARNINGS_INDEX.md)**: one line per lesson, test and recurring mistake, with its current status. The recurring-mistake registry runs **M1–M34** (parts B of §"2026-09-25 audit closure", C of §"2026-09-25(b)", C of §"2026-09-25(d)" and C of §"2026-09-26"). The open tests are those in `CURRENT_RULES.md` §D9. The 80 historical candidates and early tests with zero or near-zero prospective counts were closed on 2026-09-26 (§"2026-09-26" D).
 
 

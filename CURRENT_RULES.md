@@ -1,6 +1,8 @@
 # Current operating rules
 
-Authority: **MDS-2026.10.01-v7.1 / CR-2026.10.05-I1**. The user's later October 1 instruction authorizes research regardless of calibration, removal of analysis/logging blockers, late news, analysis after scheduled start and canonical import of the missing cards. Issued historical values remain unchanged.
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+Authority: **MDS-2026.10.01-v7.1 / CR-2026.10.05-I5**. The user's later October 1 instruction authorizes research regardless of calibration, removal of analysis/logging blockers, late news, analysis after scheduled start and canonical import of the missing cards. Issued historical values remain unchanged.
 
 ## Requested research — controlling default
 
@@ -67,6 +69,14 @@ Parts 1-5 and the original 141,740-byte P-518-P-522 block in Part 6 remain uncha
 Run tests, source/archive validation, original-byte checks and the active manifest verification before recording completion. Preserve unrelated pre-existing dirty work. Stage and publish only if separately instructed.
 
 Baseline provenance is mandatory for certified admission: exact lane/league/endpoint/families/version, a pinned approved definition and code artifacts, approval strictly before cutoff, and matching distribution/holdout/shadow/pilot comparator. Hash joins verify retained bytes and declared metadata; they do not independently prove every declared input availability time or recompute every distribution. Review the original source field and baseline construction. The point-in-time feature filter likewise labels declared metadata and cannot confer live admission by itself.
+
+## October 5 reconciliation and closure — current guidance
+
+P-523–P-537 are already canonical. Do not reimport or reissue them. Four overlapping versions are dated addenda. The eleven P-527–P-537 sporting reviews are diagnostic, with 132 retained retrospective sections; they do not certify operator settlements or prospective skill. All 15 records retain separate carryover requirements, including P-537 first-half/corners conflicts. [Carryover](research/verification/closure_2026-10-05/carryover.md) and [implementation evidence](research/verification/implementation_2026-10-05/REPORT.md) bind the exact records.
+
+Before removing a redundant mini, verify its complete archived original against the retained length/hash and map all entries/addenda to the existing canonical IDs. Remove only the redundant working pointer/copy; keep original archive bodies, source receipts, issued cores and historical audit snapshots. Do not allocate an ID for closure.
+
+Missing or damaged source bodies fail full custody verification, including quarantined bodies omitted from Git. Local mechanics PASS is distinct from clean-checkout evidence completeness and sporting/operator certification. Run all required checks even if another check fails. A new administrative receipt records reviewed changes only after failures and evidence limits are retained.
 
 ## Earlier October 1 settlement readback — historical snapshot
 

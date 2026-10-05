@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "toluca_report",
+  "publisher": "www.tolucafc.com",
+  "upstream_lineage_id": "OWNER_COLLECTION_IDENTITY_REQUIRES_EVENT_AUDIT",
+  "independence_status": "UNKNOWN",
+  "source_url": "https://www.tolucafc.com/noticias/estan-invictas",
+  "final_url": "https://www.tolucafc.com/noticias/estan-invictas",
+  "retrieved_utc": "2026-10-05T11:05:22.461981+00:00",
+  "response_sha256": "9524c354dec10c3385cb6ac90ea0290f10730de3ec0424d953a5a769bb5ff5c1",
+  "body_path": "research/data/raw/source_snapshots/toluca_report_20261005T110522461981Z_9524c354dec1.body",
+  "response_bytes": 328509,
+  "content_type": "text/html; charset=utf-8",
+  "parser_id": "MANUAL_EVENT_FIELD_AUDIT",
+  "registry_sha256": "3afde260ffc33c65e1e94744b33b1295e3a6348c5bb61725835417e45b53b9a0",
+  "market_quarantined": false,
+  "assessment": "FETCHED_BYTES_ONLY; event, field, timing and lineage validation remain required"
+}

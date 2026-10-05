@@ -1,5 +1,9 @@
 # Current skill evidence status - 2026-10-01
 
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
 The seed ledger below remains historical. Its probability/grade rows are not newly qualified by this implementation. Original seed Brier was 0.24606162069 versus baseline 0.23600413793; that seed does not show incremental baseline skill. Current experimental and prospective admissions are separate in [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md), the family development report and canonical evidence ledger. q is not an event probability. All historical cards remain performance-ineligible unless explicitly defined as a separate historical diagnostic; no retrospective edit makes them prospective.
 
 ---

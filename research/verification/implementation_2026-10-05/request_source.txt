@@ -1,0 +1,125 @@
+# Canonical Mini-Log Reconciliation and Completed-Game Retrospective
+
+## Executive finding
+
+The current `main` repository already contains the reconciliation/closure state requested here, so the correct action on this fresh readback was **not to import the mini log again**. A second import would have risked exactly the duplicate-card/reused-ID failure that the current method prohibits.
+
+The controlling repository state is **MDS-2026.10.01-v7.1 / CR-2026.10.05-I1**, with `CONTROL_MANIFEST_2026-10-05-1.md` selected as current. The living register identifies `prediction logs/PREDICTION_LOG_COMBINED_6.md` as the active Combined Prediction Log, **P-537** as the highest canonical research ID, and **P-538** as the next canonical ID. P-518–P-522 remain reserved and were not reused. fileciteturn39file0L1-L7 fileciteturn43file0L1-L2
+
+The closure readback confirms **15 canonical cards, two archived references, zero new imports during the closure pass, 15 carryover records, next ID P-538, an unchanged canonical ledger, 11 preserved diagnostic settlements, and 132 preserved retrospective sections**. It also confirms that all 1,057,493 bytes already present in Part 6 at the opening of closure were preserved. fileciteturn24file0L1-L7
+
+That means the requested operation is substantively complete in the current repository, but there is one important qualification: **the latest GitHub Actions verification is not fully green**. The current HEAD passed the research/logging tests and canonical `log_card verify`, then failed `verify_custody`; the freeze-verification step was consequently skipped. fileciteturn46file0L1-L13
+
+## Custody and canonical reconciliation
+
+The current logger is explicitly transactional: it checks for pending PREPARED records, verifies existing projections and retained source hashes, returns the existing canonical ID for exact duplicate event/source/body combinations, and requires a dated addendum rather than overwriting an existing canonical event whose source/body changed. The repository therefore gives canonical custody priority over mini-log text. fileciteturn14file0
+
+The current ledger contains matched PREPARED/COMMITTED research transactions for **P-523 through P-537**. There is no dangling PREPARED transaction in that span, so there is no interrupted allocation to recover before P-538. The living register independently agrees that P-523–P-537 are the current canonical queue and that P-538 is next. fileciteturn43file0L1-L2
+
+The reconciliation accounting is particularly important because the source material was not one-card-per-mini-entry. The closure records **15 canonical events overall**. Within the newer source material, **five original fallback entries plus ten consolidated entries represented only eleven unique additional events because four source versions overlapped**. Those overlaps were retained as dated addenda instead of receiving new prediction cards. fileciteturn42file0L1-L7
+
+The allocation history is therefore:
+
+| Reconciliation class | Result |
+|---|---|
+| P-523–P-526 | Already canonical reference pointers; retained existing IDs |
+| P-527–P-537 | Transactionally imported earlier in the October 5 reconciliation |
+| Additional imports during final closure | **None** |
+| Differing overlapping versions | **4**, retained as dated addenda |
+| Duplicate/reissued canonical cards created by closure | **0** |
+| Highest canonical research ID | **P-537** |
+| Actual next canonical ID | **P-538** |
+
+The machine-readable entry accounting explicitly classifies P-523–P-526 as `ALREADY_CANONICAL_REFERENCE_POINTER_WITH_CARRYOVER`, while P-527–P-537 are already canonical with diagnostic addenda/carryover. It records `new_import: false` for the closure pass and identifies **P-527–P-537 as the historical imports performed earlier in the same October 5 task**. fileciteturn25file0L1-L2 fileciteturn26file0L1-L7
+
+This distinction resolves the apparent contradiction between “eleven IDs imported” and “zero new imports”: **eleven cards, P-527–P-537, were transactionally imported in the preceding reconciliation phase; once the final closure pass began, all fifteen P-523–P-537 records were already canonical, so the closure correctly allocated nothing further.** fileciteturn31file0L1-L7 fileciteturn42file0L1-L7
+
+## Settlements, retrospectives, and unresolved custody
+
+For **P-527–P-537**, the repository retains completed-game sporting outcomes, conditional diagnostic grades, and comprehensive retrospectives without rewriting their original research cores. Eleven twelve-part retrospective packages amount to **132 retrospective sections**. The original classifications—including `LATE_RESEARCH`, `UNCALIBRATED_QUALITATIVE`, `NO_FORECAST`, and research-only status—remain intact rather than being upgraded after the fact. fileciteturn31file0L1-L7 fileciteturn24file0L1-L7
+
+Crucially, these are **diagnostic settlements, not certified prospective-performance settlements**. The reconciliation report says all eleven newer events have observed terminal full-game results, but operator action/period definitions, admitted actual-start/cutoff evidence, and the required audited independent terminal lineage are incomplete. It therefore records **zero operator-certified or performance-eligible settlements** rather than turning post-hoc result knowledge into prospective validation. fileciteturn31file0L1-L7
+
+The formal carryover remains **P-523–P-537, all 15 IDs**, but for two different reasons:
+
+**P-523–P-526** retain their pre-existing historical/live audits and still need exact terminal custody before deterministic settlement. For example, P-524's last retained state is in progress, P-525's retained owner observation is top seventh, and P-526's retained observation is top third; the archive operation expressly did not invent finals for them. fileciteturn40file0L1-L2
+
+**P-527–P-537** are diagnostically settled but remain formally unresolved for certification because required settlement definitions and/or terminal-lineage evidence are absent. P-537 additionally retains a genuine first-half evidence conflict and an unresolved corners field; neither is silently coerced to W/L or zero. fileciteturn42file0L1-L7
+
+That is why the living status can truthfully say both “eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6” **and** “unresolved carryover P-523–P-537.” The first statement concerns sporting diagnostic review; the second concerns the stricter custody/certification gate. fileciteturn43file0L1-L2
+
+## Mini-log archive and living status
+
+The repository used its existing `archive/mini_logs/originals_DATE/` convention rather than inventing a new destination. Two source references were closed:
+
+`archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`
+
+`archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P527_ONWARD_UPDATED_4.md`
+
+The archive manifest records a closure time of **2026-10-05T02:22:56.019573Z**, canonical coverage **P-523–P-537**, next ID **P-538**, 15 already-canonical records, 15 carryover records, and hashes/byte lengths for both original mini bodies. fileciteturn27file0L1-L7
+
+Both archive copies now have an explicit `CLOSED / ARCHIVED MINI REFERENCE` header. The headers state that P-527–P-537 had already been imported, that the final closure imported no new IDs, that P-523–P-526 are existing canonical pointers, that four overlapping versions are addenda rather than new cards, that unresolved records are carried forward, and that Part 6 is canonical. The original historical mini content follows beneath a preservation marker, so stale historical “next ID” or “read-only” statements remain evidence rather than being rewritten to look current. fileciteturn28file0L1-L7 fileciteturn29file0L1-L7
+
+The former repository mini location has likewise ceased to function as a competing ledger; the living register now points readers to the two archives, the carryover manifest, and active Part 6. fileciteturn43file0L1-L2
+
+The definitive current destination is:
+
+`prediction logs/PREDICTION_LOG_COMBINED_6.md`
+
+The closure report says the complete pre-closure Part 6 content was preserved and only a closure pointer was appended during the archival phase. Canonical card projections themselves remain independently bound to `research/issued_research/` and the ledger. fileciteturn42file0L1-L7
+
+## Verification gate
+
+There are two verification layers in the current repository, and they need to be reported separately rather than conflated.
+
+The **retained closure readback is PASS**. Its machine-readable result says:
+
+| Closure/readback invariant | Result |
+|---|---:|
+| Canonical research cards | 15 |
+| Archived references | 2 |
+| New closure imports | 0 |
+| Carryover records | 15 |
+| Next canonical ID | P-538 |
+| Opening Part 6 bytes preserved | 1,057,493 |
+| Canonical ledger unchanged in closure | Yes |
+| Model dependency restored | Yes |
+| Missing custody snapshots restored | 9 |
+| Diagnostic settlements preserved | 11 |
+| Retrospective sections preserved | 132 |
+| Overall readback | **PASS** |
+
+fileciteturn24file0L1-L7
+
+The retained regression output also records **118 passed** tests. fileciteturn45file0L1-L7
+
+The **latest post-publication GitHub Actions run at current HEAD is not PASS overall**. On commit `3bde3dd9dee0864bed4954ed90aa3bcb5f3428cc`, the workflow successfully completed checkout, dependency installation, the combined research/logging tests, and `research.operations.log_card verify`. It then failed `research.operations.verify_custody`, so `research.operations.control_freeze --verify` was skipped. fileciteturn46file0L1-L13 The current workflow definition confirms those are sequential required steps, so a custody failure prevents the freeze check from running. fileciteturn41file0L1-L7
+
+The Actions log shows the test suite at **118 passed** and `log_card verify` returning the complete card set **P-523–P-537 with `next_id: P-538`** before custody failed. The custody exception is a missing benchmark source-snapshot body in the clean checkout (`audit_afc_owner_20261001T073155024971Z_0336459b9441.body`). This is consistent with the closure report's explicit statement that **one source body remains not retained**; the report correctly says archive mechanics do not cure that historical source gap. fileciteturn42file0L1-L7
+
+Accordingly, the correct verification conclusion is:
+
+**Canonical import/deduplication/archive readback: verified. Current full repository verification gate: not fully green because custody verification fails on a missing retained source body, and freeze verification is therefore not reached.**
+
+It would be incorrect to conceal that failure by regenerating a manifest, weakening verification, or declaring the missing evidence satisfied.
+
+## Final reconciliation record
+
+| Requested final field | Current repository result |
+|---|---|
+| **Mini-log records examined** | Canonical span **P-523–P-537: 15 events**. Newer source material comprised 5 fallback + 10 consolidated entries, representing 11 unique additional events because 4 versions overlapped. fileciteturn42file0L1-L7 |
+| **Canonical IDs imported** | **P-527–P-537** were transactionally imported in the earlier October 5 reconciliation; **0 additional IDs** were imported during final closure. fileciteturn26file0L1-L7 |
+| **Already canonical / not duplicated** | **P-523–P-526** were pre-existing canonical pointers; by closure, **all P-523–P-537** were canonical, so none was reissued. fileciteturn25file0L1-L2 |
+| **Settlement/addenda reconciled** | **11** conditional diagnostic settlements; **132** retrospective sections; **4** materially differing overlapping versions retained as dated addenda, not new cards. fileciteturn24file0L1-L7 |
+| **Unresolved carryover** | **15 IDs, P-523–P-537**. P-523–P-526 still require exact terminal custody; P-527–P-537 remain formally uncertified despite diagnostic settlement; P-537 retains additional first-half/corners conflicts. fileciteturn40file0L1-L2 |
+| **Archived mini-log paths** | `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`; `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P527_ONWARD_UPDATED_4.md`. fileciteturn27file0L1-L7 |
+| **Combined Prediction Log destination** | `prediction logs/PREDICTION_LOG_COMBINED_6.md`. fileciteturn43file0L1-L2 |
+| **Highest canonical research ID** | **P-537**. fileciteturn43file0L1-L2 |
+| **Actual next canonical ID** | **P-538**, corroborated by living status, closure readback, and current `log_card verify`. fileciteturn24file0L1-L7 fileciteturn43file0L1-L2 |
+| **Current method/control/freeze** | `MDS-2026.10.01-v7.1` / `CR-2026.10.05-I1` / `CONTROL_MANIFEST_2026-10-05-1.md`. fileciteturn39file0L1-L7 |
+| **Verification/test result** | Closure readback PASS; 118 tests pass; current `log_card verify` passes; **current `verify_custody` fails and freeze verification is skipped**, so the current remote workflow is overall FAILURE. fileciteturn45file0L1-L7 fileciteturn46file0L1-L13 |
+| **Remaining custody/evidence problem** | One benchmark source body is absent from a clean checkout; formal settlement evidence is also incomplete for the carryover cohort. No certification upgrade is warranted. fileciteturn42file0L1-L7 |
+
+The task-scope repository changes already embodied in current `main` include the canonical Part 6 reconciliation, P-527–P-537 ledger/source/projection custody created during the preceding reconciliation phase, `GAME_LOG_STATUS_CURRENT.md`, the two closed archive references, the `research/verification/closure_2026-10-05/` accounting/carryover/readback evidence, and the October 5 control/custody repairs. The closure itself deliberately left the canonical ledger unchanged once it established that every mini entry was already represented canonically. fileciteturn42file0L1-L7 fileciteturn24file0L1-L7
+
+**No additional card, ID, settlement carrier, or duplicate mini import was created by this readback pass**, because current `main` already has the reconciled and archived state and the transactional evidence says the next unconsumed research ID remains **P-538**. The only material outstanding issue is the non-green custody gate described above.

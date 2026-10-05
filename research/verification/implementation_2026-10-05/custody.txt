@@ -1,0 +1,45 @@
+{
+  "observed_utc": "2026-10-05T09:51:49.545579+00:00",
+  "valid": true,
+  "checks": {
+    "original_snapshot_files": 89,
+    "frozen_original_research_files": 17,
+    "part6_original_source_block": "141740_BYTES_HASH_MATCHED",
+    "next_card_id": "P-538",
+    "verified_model_builds": 4,
+    "current_live_qualified_models": 0,
+    "source_receipt_bodies_verified": 78,
+    "historical_learning_rows": 2004,
+    "historical_learning_cards": 522,
+    "historical_source_anchors_verified": 7,
+    "active_league_csvs": {
+      "EPL": 2280,
+      "NBL": 738
+    },
+    "issued_cards_during_implementation": 0,
+    "canonical_research_cards": [
+      "P-523",
+      "P-524",
+      "P-525",
+      "P-526",
+      "P-527",
+      "P-528",
+      "P-529",
+      "P-530",
+      "P-531",
+      "P-532",
+      "P-533",
+      "P-534",
+      "P-535",
+      "P-536",
+      "P-537"
+    ],
+    "research_next_id": "P-538",
+    "source_receipts_examined": 78,
+    "source_receipt_body_failures": 0,
+    "receipt_schema_adapter": "IN_MEMORY_ONLY_NO_SOURCE_REWRITES"
+  },
+  "issues": [],
+  "limitation": "Mechanics/custody verification does not establish future predictive skill. Archive validation and tests are separate recorded checks. Research IDs are canonical storage identities, not certified prospective ISSUE records. Quarantined bodies remain mandatory; absent or damaged bytes fail this check.",
+  "source_body_failures": []
+}
