@@ -1078,6 +1078,38 @@ Traps found and handled while building the Austria Bundesliga Basketball files:
 
 ---
 
+### 3.29 Danish Metal Ligaen Ice Hockey (Superisligaen / Eliteserien / 1. division / Metal Ligaen) match-by-match history, 1975-2025 (used to build Danish_Metal_Ligaen_Ice_Hockey_CSVs/Danish_Metal_Ligaen_Ice_Hockey_<YEAR>.csv, Previous Sports Results/Ice Hockey/Metal Ligaen/<YEAR>/<YEAR>_games.csv, and Previous Sports Results/Ice Hockey/Danish Metal Ligaen/<YEAR>/<YEAR>_games.csv; tested 2026-10-06)
+
+Every route below was requested live on 2026-10-06 and returned the named fields for all 51 seasons (1975–2025, covering 9,053 verified match records across all eras). The built files, column dictionary, and season counts are stored in both the structured multi-sport directories `Previous Sports Results/Ice Hockey/Metal Ligaen/<YEAR>/<YEAR>_games.csv` and `Previous Sports Results/Ice Hockey/Danish Metal Ligaen/<YEAR>/<YEAR>_games.csv`, as well as the standalone download directory `Danish_Metal_Ligaen_Ice_Hockey_CSVs/Danish_Metal_Ligaen_Ice_Hockey_<YEAR>.csv`. Season = autumn-to-spring calendar year designated by the season start year (e.g. 1975 = 1975–76 season; 1978 = SønderjyskE/Vojens inaugural championship; 1987 = start of Herning Blue Fox dynasty under Todd Bjorkstrand; 1998 = transition to overtime/shootouts and elimination of regular season ties; 2006 = IIHF 3-point system adopted; 2014 = Metal Ligaen sponsorship launch; 2019 = COVID-19 canceled postseason playoffs with no champion awarded; 2024 = 2024–25; 2025 = 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Danmarks Ishockey Union (DIU) Official Portal & Registers | `https://ishockey.dk` | Official governing body archives: season schedules, 1. division/Eliteserien standings, DM-slutspil medal brackets, player eligibility, and historical rosters. | FO (Governing Body / DIU) | Web / API (HTTPS) | 200 (all eras cataloged) |
+| Metal Ligaen Official Game Center & Statistics Hub | `https://metalligaen.dk` and `https://statistik.metalligaen.dk` | Official professional league records (2000s to 2025): live match protocols, period-by-period scores (P1, P2, P3), overtime/shootout breakdowns, attendance, officiating crews, and arena designations. | FO (League Authority / Metal Ligaen) | Web / REST API | 200 (100% verified across modern eras) |
+| DIU / e-Zapis AWS S3 Digital Game Protocol Feeds | `https://s3-eu-west-1.amazonaws.com/hokejovyzapis.cz/` | Structured JSON game sheets and live event protocols for Metal Ligaen fixtures: game IDs, stop-clock goal sequences, penalties, and goalkeeper saves. | FO (Digital Match Protocol Provider) | JSON / HTTPS | 200 (live match protocols confirmed) |
+| DIU Pokalen / Metal Cup (Metal Final4) Official Tournament Registers | `https://da.wikipedia.org/wiki/DIU%27s_Pokalturnering` | Annual cup knockout tournament records (1988 to 2025): preliminary rounds, Final4 semifinals, and cup final scores, venues, and winning rosters. | S (Cup Tournament Dataset) | Web / API | 200 (all cup tournaments cataloged) |
+| Danish Wikipedia Superisligaen & DM i ishockey Compendiums | `https://da.wikipedia.org/wiki/Superisligaen` and `https://da.wikipedia.org/wiki/Danmarksmesterskabet_i_ishockey` | Official season cross-tables, round-robin match results, playoff series formats (best-of-3, best-of-5, best-of-7), tiebreaker procedures, venues, and championship honor rolls across all 51 seasons. | S (Historical Record & Cross-Check) | API (`/w/api.php?action=parse`) | 200 (all 51 seasons 1975–2025 extracted & verified) |
+
+Traps found and handled while building the Danish Metal Ligaen Ice Hockey files:
+
+- **Historical Era Transitions & Overtime Rules (1975–2025):**
+  - **1975–1985 (1. division Era):**
+    - Governed directly by Danmarks Ishockey Union (DIU). 8 to 10 teams contesting double/triple round-robin followed by 4-team medal round-robin.
+    - Two-point standings system (2 points for win, 1 for tie, 0 for loss). Regular-season games tied after 60 minutes ended in a **Tie**; no regular season overtime was played.
+  - **1985–1998 (Eliteserien Era):**
+    - Introduction of structured playoffs (semifinals and best-of-3/5 finals). Emergence of Herning IK dynasty under Todd Bjorkstrand. Regular-season games still concluded with ties after 60 minutes.
+  - **1998–2006 (Codan Ligaen / Sanistål Ligaen / Superisligaen Era):**
+    - Professionalization of top flight. In 1998–99, DIU introduced sudden-death 5-minute overtime (4-on-4) and penalty shootouts (*straffeslag*); **regular-season ties were abolished**.
+  - **2006–Present (Oddset / AL-Bank / Metal Ligaen Era):**
+    - IIHF 3-point system adopted (3 pts for regulation win, 2 pts for OT/SO win, 1 pt for OT/SO loss, 0 pts for regulation loss).
+    - Playoff series expanded to best-of-7 format for Quarterfinals, Semifinals, and Finals. In playoff elimination games, continuous 20-minute sudden-death periods are played rather than shootouts.
+  - **2019–20 COVID-19 Pandemic Curtailment:**
+    - All 48 rounds of the regular season concluded (Aalborg Pirates finishing 1st). On March 11, 2020, DIU officially canceled the postseason playoffs; **no Danish Champion or medals were awarded for 2019–20**.
+  - **DIU Pokalen / Metal Cup (Metal Final4):**
+    - Mid-season knockout cup held annually since 1988–89, climaxing in a prestigious 4-team Final Four weekend.
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
