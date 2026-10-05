@@ -2,7 +2,7 @@
 # Current canonical research queue
 
 **Next canonical ID: P-538.** All requested cards go directly to Part 6, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
-Current selected freeze: `CONTROL_MANIFEST_2026-10-05-6.md`; normalized-CRLF SHA-256 `8be41e2c32b0a131d2d33e1c3c618e5b9fec506ab143f1e043e0ce2515057dd6`. Current authority: METHOD.md and CURRENT_RULES.md.
+Current selected freeze: `CONTROL_MANIFEST_2026-10-05-8.md`; normalized-CRLF SHA-256 `741b09501e9f8be41c375c05356510e890165fecdb54dbf379663bb78e73f5ff`. Current authority: METHOD.md and CURRENT_RULES.md.
 
 | ID | Event | Tracking alias | Status |
 |---|---|---|---|

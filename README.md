@@ -2,7 +2,7 @@
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Current method: **MDS-2026.10.01-v7.1**; controls: **CR-2026.10.05-I6**. Requested analyses and canonical Part 6 logging proceed regardless of calibration, with qualitative ranks or explicitly uncalibrated reproducible scenarios and honest live/late timestamps. Model qualification controls performance claims separately. This repository contains sports-only research, historical competition records and preserved prediction logs.
+Current method: **MDS-2026.10.01-v7.1**; controls: **CR-2026.10.05-I8**. Requested analyses and canonical Part 6 logging proceed regardless of calibration, with qualitative ranks or explicitly uncalibrated reproducible scenarios and honest live/late timestamps. Model qualification controls performance claims separately. This repository contains sports-only research, historical competition records and preserved prediction logs.
 
 ## Start here
 
@@ -44,3 +44,7 @@ Historical results CSVs are useful for team strength, form, scoring distribution
 ## Custody and publication
 
 The October overhaul was explicitly authorized by the user. Original controlling files and prior run artifacts are preserved under `research/custody/implementation_2026-10-01/`; archive corrections have their own custody journal. [METHOD.md](METHOD.md) identifies the active freeze receipt. Restricted or odds-bearing raw files remain in the ignored benchmark quarantine; permitted source bodies and receipts stay auditable. No commit, push, deployment or recurring automation is performed by the daily command.
+
+## Fifteen proposed experiments — measurement implementation
+
+All fifteen now have [source-bound measurement protocols](research/experiment_measures.json), an executable capture/evaluation workflow and [per-experiment next steps](research/experiments/NEXT_STEPS.md). Hypotheses are unrun; missing model, dataset, future-cohort and power/audit inputs remain explicit. Measurement tests do not establish predictive improvement.

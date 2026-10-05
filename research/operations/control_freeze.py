@@ -11,7 +11,7 @@ def selected():
     if not name or not method or not control or not re.fullmatch(r'CONTROL_MANIFEST_\d{4}-\d{2}-\d{2}-\d+\.md',name[1]):
         raise ValueError('METHOD needs exact active method/control/manifest')
     old=frozen.NAME;frozen.NAME=name[1];frozen.EXCLUDE=frozen.EXCLUDE-{old}|{frozen.NAME}
-    frozen.APPEND_STORES=frozen.APPEND_STORES+('research/issued_research/',)
+    frozen.APPEND_STORES=frozen.APPEND_STORES+('research/issued_research/','research/experiments/runs/')
     return method[1],control[1]
 def main():
     method,control=selected();path=ROOT/frozen.NAME
@@ -27,7 +27,7 @@ def main():
     text=text.replace('# Control manifest - 2026-10-01-1','# Control manifest - '+frozen.NAME.removeprefix('CONTROL_MANIFEST_').removesuffix('.md'),1)
     text=text.replace('Method: **MDS-2026.10.01-v7.0**; control **CR-2026.10.01-I1**.',f'Method: **{method}**; control **{control}**.',1)
     text=text.replace('User-authorized October overhaul.','User-authorized October overhaul and requested-analysis/canonical-log repair. Earlier receipts and pinned model dependencies remain unchanged.',1)
-    text=text.replace('canonical ledger/issued/pilot transactions','canonical ledger/issued/issued_research/pilot transactions',1)
+    text=text.replace('canonical ledger/issued/pilot transactions','canonical ledger/issued/issued_research/pilot/experiment-run transactions',1)
     with path.open('x',encoding='utf-8') as handle:handle.write(text)
     print(path)
     return 0

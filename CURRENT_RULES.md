@@ -2,7 +2,7 @@
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Authority: **MDS-2026.10.01-v7.1 / CR-2026.10.05-I6**. The user's later October 1 instruction authorizes research regardless of calibration, removal of analysis/logging blockers, late news, analysis after scheduled start and canonical import of the missing cards. Issued historical values remain unchanged.
+Authority: **MDS-2026.10.01-v7.1 / CR-2026.10.05-I8**. The user's later October 1 instruction authorizes research regardless of calibration, removal of analysis/logging blockers, late news, analysis after scheduled start and canonical import of the missing cards. Issued historical values remain unchanged.
 
 ## Requested research — controlling default
 
@@ -81,3 +81,7 @@ Missing or damaged source bodies fail full custody verification, including quara
 ## Earlier October 1 settlement readback — historical snapshot
 
 The dated all-log audit in Part 6 and `research/verification/settlement_2026-10-01/REPORT.md` controls the current diagnostic queue. P-518–P-522 have known ranked-row sporting outcomes but remain reserved and uncertified; issue-time, baseline, actual-start and source-independence work is still unresolved. The intake mini-log contains a manual claim for P-523 and an earlier contradictory empty-header/next-P-524 assertion. Its four goal rows are diagnostic W/W/L/L; its unknown corner line remains unissued. No canonical issue transaction exists, and P-523 remains unconsumed. The archive of original headers/forecasts is preserved. This changes no model qualification or future ranking rule.
+
+## Fifteen experiments — measures implemented, results pending
+
+Use [the experiment measures and next steps](research/experiments/NEXT_STEPS.md) for all fifteen registered hypotheses. Freeze exact candidate/comparator artifacts, targets, future cohort, separate-pilot sample plan, declared dependence/adapter audits and justified acceptance tolerances before collecting the experimental forecasts. Capture real timestamps through `research.experiments.runner`; preserve all pending, void and abstention dispositions. Numerical measurement requirements govern experiment evaluation, never access to requested research or canonical logging. A statistical candidate-for-review result does not qualify or deploy a model. Existing qualification and source admission controls remain in force.

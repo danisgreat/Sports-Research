@@ -1648,3 +1648,7 @@ Authority MDS-2026.10.01-v7.0 / SCV-2026.10.01-v3. Status PARKED_LEARNING_ONLY; 
 | OBS-20261001-AUDIT-05 | Mechanism validation | P519/P520/P521/P522 | Winning cushion or short-leash realization does not prove calibration or the causal adjustment. | Freeze paired model-only and adjusted distributions on identical endpoints, then test an untouched chronological eligible cohort. |
 
 Original per-card narratives are retained as source claims. No one-result rule promotion, hindsight model refit or numeric q score follows. Registered chronological testing is required before changing a coefficient.
+
+## Experiment implementation follow-through
+
+All fifteen source-bound hypotheses retain their original text and PROPOSED_NOT_TESTED status. Their measures are now implemented in [the separate registry](research/experiment_measures.json); [next steps](research/experiments/NEXT_STEPS.md) specify adapters/features, comparator/candidate builds, separate pilot/power planning, future cohort locks, timed forecasts and terminal evaluation. Statistical completion and model qualification are later evidence-dependent transitions, never inferred from registration or unit tests.

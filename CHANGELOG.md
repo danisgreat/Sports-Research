@@ -691,3 +691,7 @@ Full offline suite: 107 passed in 64.39 seconds. Archive and custody acceptance 
 ## 2026-10-01 — all-log settlement and learning reconciliation
 
 Inventoried522historical slots plus one manual claim; reviewed115historicalIDs and the manual claim. Added34exact-endpoint diagnostic grades on8cards/claims,455documentarysource-pointer recoveries, five shadow dispositions,49append-only legacy correction fields, and dated status/learning/Part6/mini-log appends. No certified prospective settlement, operatorVOID, canonical issue, model coefficient or rank change. Original forecast cores/source bytes/normalized views/shadows remain unchanged. Exact source receipts, unresolved cases and reproducible readback: `research/verification/settlement_2026-10-01/REPORT.md`.
+
+## Fifteen experiment measures — 2026-10-05
+
+Implemented source-bound target/feature protocols, proper probability and distribution measures, paired block uncertainty, fifteen-comparison handling, separate-pilot power planning, immutable evaluator/model/runtime locks, actual-time capture and complete cohort accounting. Added per-experiment next steps and regression checks. Preserved all fifteen hypothesis texts, original forecasts, canonical IDs and model-build bytes. No new experiment result or qualification is asserted.

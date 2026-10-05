@@ -45,3 +45,7 @@ For each event record: observed endpoint/outcome; issued probability and baselin
 ## Model-only research
 
 Daily shadows contain no P-number, no issued card, no researched lineup claim and no performance-eligible row. Include their family/version, probability vector, input/body/build hashes, forecast/cutoff times, fixture state and provisional source quality. Report all frozen and abstained fixtures in coverage. A diagnostic grade remains a diagnostic grade until separate live admission gates pass.
+
+## Experiment forecasts and canonical cards
+
+The [experiment protocol](research/experiments/NEXT_STEPS.md) defines separate development artifacts and actual-timestamp forecast journals. Creating a draft, power plan, experiment lock or measured result never allocates a P-ID or backfills a historical card. Requested game cards still use the canonical Part 6 workflow independently of calibration. Retain original `p`, ranking `q`, targets and issued versions; experiment probabilities are PMFs, and `q` is not scored as an event probability.
