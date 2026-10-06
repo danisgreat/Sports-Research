@@ -52,7 +52,9 @@ def test_murphy_decomposition():
     y_prob = np.random.uniform(0.3, 0.9, size=200)
 
     decomp = murphy_decomposition(y_true, y_prob, n_bins=5)
-    # Brier = Reliability - Resolution + Uncertainty
+    # Binned Brier reconstruction = Reliability - Resolution + Uncertainty
     reconstructed = decomp["reliability"] - decomp["resolution"] + decomp["uncertainty"]
-    assert np.isclose(decomp["brier"], reconstructed, atol=1e-5)
+    assert np.isclose(decomp["binned_brier"], reconstructed, atol=1e-5)
+    assert np.isclose(decomp["original_brier"], brier_score(y_true, y_prob), atol=1e-5)
+    assert "within_bin_discrepancy" in decomp
 

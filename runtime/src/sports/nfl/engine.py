@@ -12,9 +12,54 @@ class NFLEngine(BaseSportEngine):
     def __init__(self):
         super().__init__("american_football")
         self.is_fitted = False
+        self.league_avg_score: float = 22.5
+        self.home_advantage: float = 1.8
+        self.team_off_ratings: Dict[str, float] = {}
+        self.team_def_factors: Dict[str, float] = {}
 
     def fit(self, train_data: Any) -> "NFLEngine":
         """Fit drive transition baselines from H0 nflfastR records."""
+        if isinstance(train_data, list):
+            pts_for: Dict[str, float] = {}
+            pts_against: Dict[str, float] = {}
+            games_played: Dict[str, int] = {}
+            h_p_list = []
+            a_p_list = []
+            all_p = []
+
+            for m in train_data:
+                if not isinstance(m, dict):
+                    continue
+                h = m.get("home_team")
+                a = m.get("away_team")
+                h_p = float(m.get("home_score", 23))
+                a_p = float(m.get("away_score", 20))
+
+                h_p_list.append(h_p)
+                a_p_list.append(a_p)
+                all_p.extend([h_p, a_p])
+
+                if h:
+                    pts_for[h] = pts_for.get(h, 0.0) + h_p
+                    pts_against[h] = pts_against.get(h, 0.0) + a_p
+                    games_played[h] = games_played.get(h, 0) + 1
+                if a:
+                    pts_for[a] = pts_for.get(a, 0.0) + a_p
+                    pts_against[a] = pts_against.get(a, 0.0) + h_p
+                    games_played[a] = games_played.get(a, 0) + 1
+
+            if len(all_p) >= 10:
+                self.league_avg_score = float(np.mean(all_p))
+                if h_p_list and a_p_list:
+                    self.home_advantage = float(np.mean(h_p_list) - np.mean(a_p_list))
+
+            for t, gp in games_played.items():
+                if gp >= 3 and self.league_avg_score > 0:
+                    mean_for = pts_for[t] / gp
+                    mean_against = pts_against[t] / gp
+                    self.team_off_ratings[t] = float(0.8 * (mean_for / self.league_avg_score) + 0.2)
+                    self.team_def_factors[t] = float(0.8 * (mean_against / self.league_avg_score) + 0.2)
+
         self.is_fitted = True
         return self
 
@@ -52,14 +97,27 @@ class NFLEngine(BaseSportEngine):
 
     def predict_distribution(self, match_context: Dict[str, Any]) -> ScoreDistribution:
         """Produce joint score distribution preserving football key numbers."""
+        h_team = match_context.get("home_team")
+        a_team = match_context.get("away_team")
+
+        h_off = self.team_off_ratings.get(h_team, 1.0)
+        a_off = self.team_off_ratings.get(a_team, 1.0)
+        h_def = self.team_def_factors.get(h_team, 1.0)
+        a_def = self.team_def_factors.get(a_team, 1.0)
+
         n_drives_h = int(match_context.get("home_drives", 11))
         n_drives_a = int(match_context.get("away_drives", 11))
 
-        # Drive success probabilities
-        h_td = float(match_context.get("home_p_td", 0.23))
-        h_fg = float(match_context.get("home_p_fg", 0.17))
-        a_td = float(match_context.get("away_p_td", 0.20))
-        a_fg = float(match_context.get("away_p_fg", 0.16))
+        # Drive success probabilities adjusted for team strength
+        base_td = 0.22
+        base_fg = 0.17
+        h_mult = h_off * a_def * (1.0 + (self.home_advantage / 50.0))
+        a_mult = a_off * h_def * (1.0 - (self.home_advantage / 50.0))
+
+        h_td = float(match_context.get("home_p_td") or np.clip(base_td * h_mult, 0.08, 0.45))
+        h_fg = float(match_context.get("home_p_fg") or np.clip(base_fg * h_mult, 0.08, 0.35))
+        a_td = float(match_context.get("away_p_td") or np.clip(base_td * a_mult, 0.08, 0.45))
+        a_fg = float(match_context.get("away_p_fg") or np.clip(base_fg * a_mult, 0.08, 0.35))
 
         p_home_scores = self._simulate_team_drives(n_drives_h, h_td, h_fg)
         p_away_scores = self._simulate_team_drives(n_drives_a, a_td, a_fg)

@@ -79,8 +79,8 @@ class PurgedRollingOriginSplit:
             # If dataset is shorter than full rolling window, create a single proportional split
             # partitioned strictly by date intervals with purged embargos to prevent temporal leakage
             # and guarantee identical timestamps are never split across folds.
-            total_span = (max_date - min_date).total_seconds()
-            embargo_buffer_seconds = 3 * timedelta(days=self.embargo_days).total_seconds()
+            total_span_days = (max_date - min_date).total_seconds() / 86400.0
+            embargo_buffer_days = 3.0 * float(self.embargo_days)
 
             dt_series = pd.to_datetime(sorted_dates)
             unique_dates = np.sort(np.unique(dt_series))
@@ -90,56 +90,66 @@ class PurgedRollingOriginSplit:
                     f"TRAIN, TUNE, CAL, and TEST folds without temporal leakage."
                 )
 
-            if total_span > embargo_buffer_seconds and self.embargo_days > 0:
-                active_seconds = total_span - embargo_buffer_seconds
-                train_dur = active_seconds * 0.50
-                tune_dur = active_seconds * 0.20
-                cal_dur = active_seconds * 0.15
-                test_dur = active_seconds * 0.15
+            if self.embargo_days > 0:
+                # Strictly enforce requested embargo separation between folds
+                if total_span_days <= embargo_buffer_days:
+                    raise ValueError(
+                        f"Dataset span ({total_span_days:.1f} days) is insufficient to satisfy requested "
+                        f"embargo of {self.embargo_days} days across 4 partitions (requires > {embargo_buffer_days:.1f} days)."
+                    )
 
+                active_days = total_span_days - embargo_buffer_days
+                train_dur = timedelta(days=active_days * 0.50)
+                tune_dur = timedelta(days=active_days * 0.20)
+                cal_dur = timedelta(days=active_days * 0.15)
+                test_dur = timedelta(days=active_days * 0.15)
                 embargo_delta = timedelta(days=self.embargo_days)
+
                 train_start = min_date
-                train_end = train_start + timedelta(seconds=train_dur)
-
+                train_end = train_start + train_dur
                 tune_start = train_end + embargo_delta
-                tune_end = tune_start + timedelta(seconds=tune_dur)
-
+                tune_end = tune_start + tune_dur
                 cal_start = tune_end + embargo_delta
-                cal_end = cal_start + timedelta(seconds=cal_dur)
-
+                cal_end = cal_start + cal_dur
                 test_start = cal_end + embargo_delta
                 test_end = max_date
 
-                train_mask = (dt_series >= train_start) & (dt_series <= train_end)
-                tune_mask = (dt_series >= tune_start) & (dt_series <= tune_end)
-                cal_mask = (dt_series >= cal_start) & (dt_series <= cal_end)
+                # Half-open intervals prevent shared boundary observations
+                train_mask = (dt_series >= train_start) & (dt_series < train_end)
+                tune_mask = (dt_series >= tune_start) & (dt_series < tune_end)
+                cal_mask = (dt_series >= cal_start) & (dt_series < cal_end)
                 test_mask = (dt_series >= test_start) & (dt_series <= test_end)
             else:
-                # If span is too tight for full multi-day embargos, partition strictly by unique date boundaries
+                # With zero embargo, partition strictly by unique date slices ensuring every fold is non-empty
                 n_u = len(unique_dates)
-                u_train = set(unique_dates[: max(1, int(n_u * 0.50))])
-                u_tune = set(unique_dates[int(n_u * 0.50): max(int(n_u * 0.50) + 1, int(n_u * 0.70))])
-                u_cal = set(unique_dates[int(n_u * 0.70): max(int(n_u * 0.70) + 1, int(n_u * 0.85))])
-                u_test = set(unique_dates[int(n_u * 0.85):])
+                i1 = max(1, int(n_u * 0.50))
+                i2 = max(i1 + 1, int(n_u * 0.70))
+                i3 = max(i2 + 1, int(n_u * 0.85))
+                if i3 >= n_u:
+                    i3 = n_u - 1
+                    i2 = min(i2, i3 - 1)
+                    i1 = min(i1, i2 - 1)
+                if i1 < 1 or i2 <= i1 or i3 <= i2:
+                    i1, i2, i3 = 1, 2, 3
 
-                # Ensure disjoint sets
-                u_tune = u_tune - u_train
-                u_cal = u_cal - u_train - u_tune
-                u_test = u_test - u_train - u_tune - u_cal
+                u_train = set(unique_dates[0:i1])
+                u_tune = set(unique_dates[i1:i2])
+                u_cal = set(unique_dates[i2:i3])
+                u_test = set(unique_dates[i3:n_u])
 
                 train_mask = np.isin(dt_series, list(u_train))
                 tune_mask = np.isin(dt_series, list(u_tune))
                 cal_mask = np.isin(dt_series, list(u_cal))
                 test_mask = np.isin(dt_series, list(u_test))
 
-                train_start = pd.to_datetime(min(u_train)) if u_train else min_date
-                train_end = pd.to_datetime(max(u_train)) if u_train else min_date
-                tune_start = pd.to_datetime(min(u_tune)) if u_tune else None
-                tune_end = pd.to_datetime(max(u_tune)) if u_tune else None
-                cal_start = pd.to_datetime(min(u_cal)) if u_cal else None
-                cal_end = pd.to_datetime(max(u_cal)) if u_cal else None
-                test_start = pd.to_datetime(min(u_test)) if u_test else None
-                test_end = pd.to_datetime(max(u_test)) if u_test else max_date
+                train_start = pd.to_datetime(min(u_train))
+                train_end = pd.to_datetime(max(u_train))
+                tune_start = pd.to_datetime(min(u_tune))
+                tune_end = pd.to_datetime(max(u_tune))
+                cal_start = pd.to_datetime(min(u_cal))
+                cal_end = pd.to_datetime(max(u_cal))
+                test_start = pd.to_datetime(min(u_test))
+                test_end = pd.to_datetime(max(u_test))
 
             yield ChronologicalSplit(
                 fold_idx=0,
@@ -166,11 +176,11 @@ class PurgedRollingOriginSplit:
             train_end = tune_start - timedelta(days=self.embargo_days)
             train_start = train_end - timedelta(days=self.train_window_days)
 
-            # Mask boolean arrays
+            # Mask boolean arrays using half-open intervals to strictly prevent sharing boundary observations
             dt_series = pd.to_datetime(sorted_dates)
-            train_mask = (dt_series >= train_start) & (dt_series <= train_end)
-            tune_mask = (dt_series >= tune_start) & (dt_series <= tune_end)
-            cal_mask = (dt_series >= cal_start) & (dt_series <= cal_end)
+            train_mask = (dt_series >= train_start) & (dt_series < train_end)
+            tune_mask = (dt_series >= tune_start) & (dt_series < tune_end)
+            cal_mask = (dt_series >= cal_start) & (dt_series < cal_end)
             test_mask = (dt_series >= test_start) & (dt_series <= current_test_end)
 
             if train_mask.sum() > 0 and test_mask.sum() > 0:

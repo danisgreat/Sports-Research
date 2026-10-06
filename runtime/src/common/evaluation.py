@@ -52,11 +52,28 @@ def crps_score(y_true: np.ndarray, y_cdf_probs: np.ndarray, thresholds: np.ndarr
 def murphy_decomposition(y_true: np.ndarray, y_prob: np.ndarray, n_bins: int = 10) -> Dict[str, float]:
     """Murphy's Brier Score Decomposition into Reliability, Resolution, and Uncertainty.
     
-    Brier = Reliability - Resolution + Uncertainty
+    The classical 3-term Murphy identity:
+        Brier_binned = Reliability - Resolution + Uncertainty
+    reconstructs the binned Brier score where predictions in bin k are approximated
+    by their bin mean. For continuous predictions with finite bin width, the original
+    exact Brier score differs from the binned reconstruction by within-bin variance.
+    Both original_brier and binned_brier are explicitly reported.
     """
     y_t = np.asarray(y_true, dtype=float)
     y_p = np.asarray(y_prob, dtype=float)
     n = len(y_t)
+    if n == 0:
+        return {
+            "brier": float("nan"),
+            "original_brier": float("nan"),
+            "binned_brier": float("nan"),
+            "reliability": float("nan"),
+            "resolution": float("nan"),
+            "uncertainty": float("nan"),
+            "within_bin_discrepancy": float("nan"),
+        }
+
+    original_brier = float(np.mean((y_p - y_t) ** 2))
     base_rate = float(np.mean(y_t))
     uncertainty = base_rate * (1.0 - base_rate)
 
@@ -78,12 +95,16 @@ def murphy_decomposition(y_true: np.ndarray, y_prob: np.ndarray, n_bins: int = 1
             reliability += weight * ((pred_rate_k - obs_rate_k) ** 2)
             resolution += weight * ((obs_rate_k - base_rate) ** 2)
 
-    total_brier = reliability - resolution + uncertainty
+    binned_brier = reliability - resolution + uncertainty
+    discrepancy = original_brier - binned_brier
     return {
-        "brier": float(total_brier),
+        "brier": original_brier,
+        "original_brier": original_brier,
+        "binned_brier": float(binned_brier),
         "reliability": float(reliability),
         "resolution": float(resolution),
-        "uncertainty": float(uncertainty)
+        "uncertainty": float(uncertainty),
+        "within_bin_discrepancy": float(discrepancy),
     }
 
 
@@ -91,13 +112,15 @@ class FixedCohortEvaluator:
     """Evaluates candidate vs baseline strictly on the exact same cohort of fixtures and supplied lines.
     
     Enforces the Multi-Metric Promotion Matrix:
-    - Fixed fixture and line cohort identity (prevents line-selection bias).
+    - Fixed fixture and line cohort identity (mandatory non-empty event_ids and lines).
     - Strict input validation: no empty sets, no NaNs/Infs, valid [0, 1] probabilities.
+    - Binary outcome enforcement: y_true must be strictly {0, 1}.
     - Sample sufficiency: n >= min_sample_size (default 50).
     - Probabilistic accuracy: Delta Brier <= -0.010.
     - Information loss: Delta LogLoss <= 0.0.
     - Hit rate on same line: Hit Rate (Candidate) >= Hit Rate (Baseline).
-    - Optional Cox calibration quality: beta in [0.90, 1.10], |alpha| <= 0.05.
+    - Mandatory Cox calibration quality by default: beta in [0.90, 1.10], |alpha| <= 0.05.
+    - Optimizer failure safety: failed calibration estimation fails promotion, never passes with default dummy values.
     """
 
     @staticmethod
@@ -111,7 +134,7 @@ class FixedCohortEvaluator:
         lines_cand: Optional[List[float]] = None,
         lines_base: Optional[List[float]] = None,
         min_sample_size: int = 50,
-        require_calibration: bool = False,
+        require_calibration: bool = True,
     ) -> Dict[str, Union[float, int, bool, List[str]]]:
         reasons = []
         is_promotable = True
@@ -176,6 +199,12 @@ class FixedCohortEvaluator:
             is_promotable = False
             reasons.append("Baseline probabilities outside valid [0, 1] range")
 
+        # Binary labels enforcement
+        unique_y = np.unique(y_t)
+        if not np.all(np.isin(unique_y, [0.0, 1.0])):
+            is_promotable = False
+            reasons.append(f"True labels must be binary {{0, 1}}; found non-binary values {unique_y.tolist()}")
+
         # Immediate return if inputs are mathematically corrupt
         if not is_promotable:
             return {
@@ -199,22 +228,26 @@ class FixedCohortEvaluator:
             is_promotable = False
             reasons.append(f"Sample size {n} is below minimum requirement of {min_sample_size}")
 
-        # 4. Cohort matching checks (prevent line selection fallacy)
-        if event_ids_cand is not None and event_ids_base is not None:
-            if list(event_ids_cand) != list(event_ids_base):
-                is_promotable = False
-                reasons.append("Candidate and baseline event IDs do not match identically (fixed fixture cohort violated)")
-        elif (event_ids_cand is None) != (event_ids_base is None):
+        # 4. Mandatory Cohort matching checks (prevent line selection fallacy)
+        if event_ids_cand is None or event_ids_base is None or len(event_ids_cand) == 0 or len(event_ids_base) == 0:
             is_promotable = False
-            reasons.append("Event IDs provided for only one model (cohort matching unverifiable)")
+            reasons.append("Mandatory event IDs missing or empty; cannot verify fixed fixture cohort")
+        elif len(event_ids_cand) != n or len(event_ids_base) != n:
+            is_promotable = False
+            reasons.append(f"Event IDs length ({len(event_ids_cand)}, {len(event_ids_base)}) does not match sample size ({n})")
+        elif list(event_ids_cand) != list(event_ids_base):
+            is_promotable = False
+            reasons.append("Candidate and baseline event IDs do not match identically (fixed fixture cohort violated)")
 
-        if lines_cand is not None and lines_base is not None:
-            if [float(x) for x in lines_cand] != [float(x) for x in lines_base]:
-                is_promotable = False
-                reasons.append("Candidate and baseline supplied lines do not match identically (line selection fallacy / fixed line cohort violated)")
-        elif (lines_cand is None) != (lines_base is None):
+        if lines_cand is None or lines_base is None or len(lines_cand) == 0 or len(lines_base) == 0:
             is_promotable = False
-            reasons.append("Supplied lines provided for only one model (line cohort matching unverifiable)")
+            reasons.append("Mandatory supplied lines missing or empty; cannot verify fixed line cohort")
+        elif len(lines_cand) != n or len(lines_base) != n:
+            is_promotable = False
+            reasons.append(f"Supplied lines length ({len(lines_cand)}, {len(lines_base)}) does not match sample size ({n})")
+        elif [float(x) for x in lines_cand] != [float(x) for x in lines_base]:
+            is_promotable = False
+            reasons.append("Candidate and baseline supplied lines do not match identically (line selection fallacy / fixed line cohort violated)")
 
         # 5. Core scoring metrics
         br_c = brier_score(y_t, p_c)
@@ -259,10 +292,13 @@ class FixedCohortEvaluator:
             alpha = float(cal_res.x[0])
             beta = float(cal_res.x[1])
         else:
-            alpha = 0.0
-            beta = 1.0
+            alpha = float("nan")
+            beta = float("nan")
+            if require_calibration:
+                is_promotable = False
+                reasons.append(f"Calibration optimization failed: {cal_res.message}")
 
-        if require_calibration:
+        if require_calibration and cal_res.success:
             if beta < 0.90 or beta > 1.10:
                 is_promotable = False
                 reasons.append(f"Calibration slope beta={beta:.4f} outside acceptable range [0.90, 1.10]")

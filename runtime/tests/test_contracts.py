@@ -130,3 +130,17 @@ def test_decoupled_match_winner():
     assert dist.p_away_cover(0.0) == 1.0  # Away (4 - 1 = +3) covers 0
 
 
+def test_decoupled_match_winner_invalid_sum_rejection():
+    """Verify that match winner vectors not summing to 1.0 (e.g. sum=2.7) are rejected."""
+    grid = np.eye(5) / 5.0
+    with pytest.raises(ValueError, match="must sum to 1.0"):
+        ScoreDistribution(
+            grid=grid,
+            home_support=np.arange(5),
+            away_support=np.arange(5),
+            p_match_home_win=0.9,
+            p_match_away_win=0.9,
+            p_match_draw=0.9  # Sum = 2.7!
+        )
+
+

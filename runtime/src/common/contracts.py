@@ -50,6 +50,19 @@ class ScoreDistribution:
                 if val < -1e-12 or val > 1.0 + 1e-12 or not np.isfinite(val):
                     raise ValueError(f"{name} must be in [0, 1], got {val}")
 
+        # Enforce consistency of match winner probability vector
+        provided_wins = [x for x in [self.p_match_home_win, self.p_match_away_win] if x is not None]
+        if len(provided_wins) == 2:
+            p_h = self.p_match_home_win
+            p_a = self.p_match_away_win
+            p_d = self.p_match_draw if self.p_match_draw is not None else 0.0
+            total_match_p = p_h + p_a + p_d
+            if abs(total_match_p - 1.0) > 1e-5:
+                raise ValueError(
+                    f"Decoupled match win probabilities must sum to 1.0, got sum={total_match_p:.4f} "
+                    f"(home={p_h}, away={p_a}, draw={p_d})"
+                )
+
     @classmethod
     def from_independent_marginals(cls, p_home: np.ndarray, p_away: np.ndarray) -> "ScoreDistribution":
         """Construct joint distribution assuming independence (Kronecker outer product)."""

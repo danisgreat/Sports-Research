@@ -12,6 +12,31 @@ def selected():
         raise ValueError('METHOD needs exact active method/control/manifest')
     old=frozen.NAME;frozen.NAME=name[1];frozen.EXCLUDE=frozen.EXCLUDE-{old}|{frozen.NAME}
     frozen.APPEND_STORES=frozen.APPEND_STORES+('research/issued_research/','research/experiments/runs/')
+    def custom_inventory():
+        paths=list(ROOT.glob("*.md"))
+        paths.extend(p for p in (ROOT/".github").rglob("*") if p.is_file())
+        paths.extend(ROOT/name for name in (".gitignore",".gitattributes","GAME_PREDICTION_RANK_LOG.csv") if (ROOT/name).exists())
+        paths.extend((ROOT/"prediction logs").glob("PREDICTION_LOG_COMBINED*.md"))
+        paths.extend(p for p in (ROOT/"research").rglob("*") if p.is_file())
+        paths.extend(p for p in (ROOT/"runtime").rglob("*") if p.is_file())
+        archive=ROOT/"Previous Sports Results"
+        paths.extend(archive.glob("*.md"))
+        paths.extend((archive/"_canonical").glob("*manifest*.json"))
+        paths.extend((archive/"_canonical").glob("*correction*.jsonl"))
+        paths.extend((archive/"_canonical").glob("*.md"))
+        paths.extend((archive/"_custody").glob("*manifest*.json"))
+        paths.extend(archive/"_custody"/name for name in ("corrections.jsonl","originals_index.jsonl","verified_facts.json") if (archive/"_custody"/name).exists())
+        paths.extend((archive/"_football_research").glob("*.py"))
+        paths.extend((archive/"_football_research").glob("*.md"))
+        rows=[]
+        for path in sorted(set(paths)):
+            rel=path.relative_to(ROOT).as_posix()
+            if rel in frozen.EXCLUDE or rel=="research/canonical_ledger.jsonl" or rel.startswith(frozen.APPEND_STORES):continue
+            if "/benchmark/" in f"/{rel}/" or "/cricsheet_odi/" in f"/{rel}/" or any(part.endswith("_cache") for part in rel.split("/")) or "__pycache__" in rel or ".pytest_cache" in rel or path.suffix==".pyc":continue
+            mode,data=frozen.normalization(path)
+            rows.append((rel,mode,frozen.hashlib.sha256(data).hexdigest(),len(data)))
+        return rows
+    frozen.inventory=custom_inventory
     return method[1],control[1]
 def main():
     method,control=selected();path=ROOT/frozen.NAME

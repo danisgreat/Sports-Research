@@ -90,3 +90,36 @@ def test_tennis_fitting_and_serialization(tmp_path):
     assert "Sinner" in loaded.player_stats
     assert loaded.player_stats["Sinner"]["serve_win_rate"] == engine.player_stats["Sinner"]["serve_win_rate"]
 
+
+def test_tennis_exact_tiebreak_properties():
+    """Verify exact Markov 7-point tiebreak properties."""
+    # When players have identical serve rates, tiebreak must be exactly 0.50
+    p_tb_equal = TennisEngine.p_tiebreak_win(0.65, 0.65)
+    assert np.isclose(p_tb_equal, 0.50, atol=1e-4)
+
+    # When P1 has huge serve advantage
+    p_tb_fav = TennisEngine.p_tiebreak_win(0.75, 0.55)
+    assert p_tb_fav > 0.65
+
+
+def test_tennis_opponent_adjusted_return_ability():
+    """Verify that opponent return rate adjusts the effective serve win probability."""
+    engine = TennisEngine()
+    train_matches = [
+        # Player A: big server, average returner
+        {"player1": "ServerA", "player2": "AvgGuy", "p1_serve_won": 70, "p1_serve_total": 100, "p2_serve_won": 64, "p2_serve_total": 100},
+        # Player B: elite returner (wins 45% on return against tour ~64% server)
+        {"player1": "ReturnerB", "player2": "AvgGuy", "p1_serve_won": 62, "p1_serve_total": 100, "p2_serve_won": 55, "p2_serve_total": 100},
+    ]
+    engine.fit(train_matches)
+    assert "ReturnerB" in engine.player_stats
+    assert engine.player_stats["ReturnerB"]["return_win_rate"] > 0.40
+
+    # Predict ServerA against ReturnerB vs ServerA against default
+    dist_vs_elite = engine.predict_distribution({"player1": "ServerA", "player2": "ReturnerB"})
+    dist_vs_default = engine.predict_distribution({"player1": "ServerA", "player2": "DefaultGuy"})
+
+    # Against an elite returner, ServerA's win probability should be lower
+    assert dist_vs_elite.p_home_win() < dist_vs_default.p_home_win()
+
+

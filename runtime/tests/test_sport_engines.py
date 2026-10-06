@@ -156,3 +156,73 @@ def test_soccer_engine_fit_and_serialization(tmp_path):
     np.testing.assert_allclose(dist1.grid, dist2.grid)
 
 
+def test_sport_engines_empirical_fit_and_serialization(tmp_path):
+    """Verify empirical parameter estimation and serialization across all sport engines."""
+    # AFL
+    afl_matches = [
+        {"home_team": "Collingwood", "away_team": "Carlton", "home_shots": 26, "away_shots": 20, "home_goals": 15, "away_goals": 10},
+        {"home_team": "Carlton", "away_team": "Collingwood", "home_shots": 22, "away_shots": 24, "home_goals": 11, "away_goals": 13},
+    ] * 3
+    afl = AFLEngine().fit(afl_matches)
+    assert afl.is_fitted
+    assert "Collingwood" in afl.team_attack_ratings
+    p_afl = afl.save_artifact(str(tmp_path / "afl.pkl"))
+    loaded_afl = AFLEngine.load_artifact(str(tmp_path / "afl.pkl"))
+    assert loaded_afl.is_fitted
+
+    # NRL
+    nrl_matches = [
+        {"home_team": "Penrith", "away_team": "Broncos", "home_tries": 5, "away_tries": 2, "home_conversions": 4, "away_conversions": 2},
+        {"home_team": "Broncos", "away_team": "Penrith", "home_tries": 3, "away_tries": 4, "home_conversions": 2, "away_conversions": 3},
+    ] * 3
+    nrl = NRLEngine().fit(nrl_matches)
+    assert nrl.is_fitted
+    assert "Penrith" in nrl.team_attack_tries
+
+    # Baseball
+    bb_matches = [
+        {"home_team": "NYY", "away_team": "BOS", "home_runs": 6, "away_runs": 3},
+        {"home_team": "BOS", "away_team": "NYY", "home_runs": 4, "away_runs": 5},
+    ] * 3
+    bb = BaseballEngine().fit(bb_matches)
+    assert bb.is_fitted
+    assert "NYY" in bb.team_offense_ratings
+
+    # Basketball
+    bk_matches = [
+        {"home_team": "LAL", "away_team": "BOS", "home_score": 118, "away_score": 112},
+        {"home_team": "BOS", "away_team": "LAL", "home_score": 115, "away_score": 110},
+    ] * 3
+    bk = BasketballEngine().fit(bk_matches)
+    assert bk.is_fitted
+    assert "LAL" in bk.team_off_ratings
+
+    # Cricket
+    crick_matches = [
+        {"format": "t20", "home_team": "IND", "away_team": "AUS", "runs": 185},
+        {"format": "t20", "home_team": "AUS", "away_team": "IND", "runs": 175},
+    ] * 3
+    crick = CricketEngine().fit(crick_matches)
+    assert crick.is_fitted
+    assert "IND" in crick.team_batting_ratings
+
+    # NHL
+    nhl_matches = [
+        {"home_team": "EDM", "away_team": "TOR", "home_goals": 4, "away_goals": 2},
+        {"home_team": "TOR", "away_team": "EDM", "home_goals": 3, "away_goals": 4},
+    ] * 3
+    nhl = NHLEngine().fit(nhl_matches)
+    assert nhl.is_fitted
+    assert "EDM" in nhl.team_scoring_factors
+
+    # NFL
+    nfl_matches = [
+        {"home_team": "KC", "away_team": "BUF", "home_score": 27, "away_score": 24},
+        {"home_team": "BUF", "away_team": "KC", "home_score": 24, "away_score": 21},
+    ] * 3
+    nfl = NFLEngine().fit(nfl_matches)
+    assert nfl.is_fitted
+    assert "KC" in nfl.team_off_ratings
+
+
+
