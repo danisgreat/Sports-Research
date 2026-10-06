@@ -1,0 +1,109 @@
+Individual Game Logs
+---------------------------
+Upcoming Basketball Game: partisan vs Mega Basket, Adriatic League,
+
+Estimated Game Time Start: 6 Oct 2026, 3:30 AM AEST, (can be delayed)
+
+Do comprehensive and accurate research, based on the instructions in the sports research framework. Provide the best 4 picks in order from most likely to least likely, for players and/or teams or anything else and pick your own picks, making the decision based on all the instructions and information provided in the documents. Provide accurate and detailed reasoning, based on the research and instructions. Always seek to find the latest starting and available players and players on injury list or rested, and factor that into calculations. Refer to the sports research framework and associated documents. You can take as long as needed to do it properly, no need to rush, even if the scheduled time is passed.
+Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+
+Partizan -11.5
+2) Mega Basket +19.0
+3) Combined Total: Over 168.5 Points
+4) Combined Total: Under 176.5 Points
+
+Add a potential game winner as well, and make no mistakes, no hallucinations, and, importantly, be honest and accurate. Don't do a retrospective yet. Add all sources of information.
+Accuracy, source quality, transparency, and compliance with the sports research framework methodology take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.  if your analysis goes beyond the start time. Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+Accuracy, source quality, transparency, and compliance with the sports research framework methodology take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.  if your analysis goes beyond the start time.
+Update the running log carefully with this information and analysis and assign the next canonical id
+
+-------------------------
+
+
+Upcoming Baseball Game: Kiwoom Heroes @ Hanwha Eagles, Korean KBO,
+
+Estimated Game Time Start: 5 Oct 2026, 3:00 PM AEST, (can be delayed)
+
+Do comprehensive and accurate research, based on the instructions in the documents/sports research framework. Provide the best 4 picks in order from most likely to least likely, for players and/or teams or anything else and pick your own picks, making the decision based on all the instructions and information provided in the documents. Provide accurate and detailed reasoning, based on the research and instructions. Always seek to find the latest starting and available players and players on injury list or rested, and factor that into calculations. Refer to the sports research framework and associated documents. You can take as long as needed to do it properly, no need to rush, even if the scheduled time is passed.
+Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+
+heroes +1.5
+2) Eagles ML
+3) Combined Total: Over 9.5 Runs
+4) Combined Total: Under 12.0 Runs
+
+Add a potential game winner as well, and make no mistakes, no hallucinations, and, importantly, be honest and accurate. Don't do a retrospective yet. Add all sources of information.
+Accuracy, source quality, transparency, and compliance with the sports research framework methodology take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.  if your analysis goes beyond the start time. Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+Accuracy, source quality, transparency, and compliance with the sports research framework methodology take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.  if your analysis goes beyond the start time.
+Update the running log carefully with this information and analysis and assign the next canonical id
+
+--------------------------------------------------------------------
+
+Upcoming Rugby League Game: Sydney Roosters vs Newcastle Knights, NRL Finals,
+
+Estimated Game Time Start: 4 Oct 2026, 7:30 PM AEST, (can be delayed)
+
+Do comprehensive and accurate research, based on the instructions in the sports research framework. Provide the best 4 picks in order from most likely to least likely, for players and/or teams or anything else and pick your own picks, making the decision based on all the instructions and information provided in the documents. Provide accurate and detailed reasoning, based on the research and instructions. Always seek to find the latest starting and available players and players on injury list or rested, and factor that into calculations. Refer to the sports research framework and associated documents. You can take as long as needed to do it properly, no need to rush, even if the scheduled time is passed.
+Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+
+Roosters -4.5
+2) knights +12.5
+3) Combined Total: Over 38.5 Points
+4) Combined Total: Under 48.5 Points
+
+Add a potential game winner as well, and make no mistakes, no hallucinations, and, importantly, be honest and accurate. Don't do a retrospective yet. Add all sources of information.
+Accuracy, source quality, transparency, and compliance with the sports research framework methodology take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.  if your analysis goes beyond the start time. Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+Accuracy, source quality, transparency, and compliance with the sports research framework methodology take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.  if your analysis goes beyond the start time.
+Update the running log carefully with this information and analysis and assign the next canonical id
+
+
+------------------------------------------------------------------------------------
+
+
+Upcoming Soccer Game: Kyrgyzstan vs Lebanon, International Match,
+Estimated Game Time Start: 05 Oct 2026,1:00 AM AEST
+
+Do comprehensive and accurate research, based on the instructions in the documents/sports research framework. Provide the best 5 picks in order, for players and/or teams or anything else, including corners, and pick your own picks, making the decision based on all the instructions and information provided in the documents.  Provide accurate and detailed reasoning, based on the research and instructions. Always seek to find the latest starting and available players and players on injury list or rested, and factor that into calculations. Refer to the github framework and associated documents .  Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+
+1st Half Goals Over/Under: 0.5 Goals
+Total Combined Goals Over/Under 2.5 Goals
+
+Add a potential game winner as well, and make no mistakes, no hallucinations, and, importantly, be honest and accurate. Don't do a retrospective yet. Add all sources of information.
+Accuracy, source quality, transparency, and compliance with the Sports Framework methodology take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.  if your analysis goes beyond the start time.
+Update the running log carefully with this information and analysis and assign the next canonical id.
+
+
+---------------------------
+Upcoming Ice Hockey Game: CGY Flames @ SEA Kraken, NHL,
+
+Estimated Game Time Start: 5 Oct 2026, 11:07 AM AEST, (can be delayed)
+
+Do comprehensive and accurate research, based on the instructions in the sports research framework. Provide the best 4 picks in order from most likely to least likely, for players and/or teams or anything else and pick your own picks, making the decision based on all the instructions and information provided in the documents. Provide accurate and detailed reasoning, based on the research and instructions. Always seek to find the latest starting and available players and players on injury list or rested, and factor that into calculations. Refer to the sports research framework and associated documents. You can take as long as needed to do it properly, no need to rush, even if the scheduled time is passed.
+Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+
+Flames +1.5
+2) Kraken ML
+3) Combined Total: Over 5.5 Goals
+4) Combined Total: Under 5.5 Goals
+
+Add a potential game winner as well, and make no mistakes, no hallucinations, and, importantly, be honest and accurate. Don't do a retrospective yet. Add all sources of information.
+Accuracy, source quality, transparency, and compliance with the sports research framework methodology take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.  if your analysis goes beyond the start time. Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+Accuracy, source quality, transparency, and compliance with the sports research framework methodology take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.  if your analysis goes beyond the start time.
+Update the running log carefully with this information and analysis and assign the next canonical id
+
+
+----------------------------------
+
+Upcoming Tennis Match: Kamilla Rakhimova vs Katie Volynets, WTA Seoul,
+
+Estimated Game Time Start: 23 Sep 2026, 1:00 PM AEST
+
+Do comprehensive and accurate research, based on the instructions in the documents/sports research framework. Provide the best 4 picks in order from most likely to least likely, for players and/or teams or anything else and pick your own picks, making the decision based on all the instructions and information provided in the documents. Provide accurate and detailed reasoning, based on the research and instructions. Refer to the sports research framework sports research framework and associated documents. You can take as long as needed to do it properly, no need to rush, even if the scheduled time is passed. Don't need to freeze at a time, because there may be late news that impacts the game outcomes that can come even minutes before the start time.
+
+Volynets -3.5 Games Handicap
+Rakhimova +3.5 Games Handicap
+Total Games: Over/Under 20.5 Games
+
+Add a potential game winner as well, and make no mistakes, no hallucinations, and, importantly, be honest and accurate. Don't do a retrospective yet. Add all sources of information.
+Accuracy, source quality, transparency, and compliance with the sports research framework take priority over speed.  if your analysis goes beyond the start time, I would rather you take a long time than rush it and be wrong, so take as long as you need, this is strict instructions.
+Don't look at bookies odds, fantasy pages, or anything of the sort. Your predictions must come from your analysis of he stats and news and information that you got from the guidelines. Update the running log carefully with this information and analysis and assign the next canonical id

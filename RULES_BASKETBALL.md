@@ -68,6 +68,15 @@ The basketball model (A1) is ridge offence/defence ratings with a no-tie normal 
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 nested rows dependent · 2 Q1 pace ≠ Q2 · 3 small H2H phase samples weak · 4 minutes are a distribution · 5 blowout/garbage time two-sided · 6 late fouling and OT explicit · 7 rest is mechanistic · 8 prop role coherence · 9 extreme spread is not safety · 10 friendly halves differ · 11 mismatch total and margin share a tree · 12 current roster regime · 13 exact regulation/OT attribution · 14 rest segmented by half · 15 low total can coexist with a blowout · 16 factorised large spreads · 17 team-score budget · 18 late blowouts are multi-axis · 19 names become exposure · 20 quantify every rotation scorer · 21 secondary-scorer usage transfer; floor from worst same-regime shooting · 22 shooting uncertainty with real denominators · 23 spread families incl. underdog separation · 24 conditional margin-total coupling (corrected) · 25 same-competition meeting is current evidence · 26 shared late-game kill state · 27 JS-only field owner is a render escalation. Receipts and references: K-1 official starters/roster · K-2 blowout/rest/shooting states are width · K-3 NBL tip marker · K-4 league reference row · K-5 width benchmark · K-6 early-season and WNBA regime · K-7 back-to-backs · K-8 recency · K-9 plus-cushion disclosure · K-10 departure ledger · K-11 TB-1 anchor · K-12 cushion population rates · K-13 ranking.
 
+### 0.8 Numerical engine specification (MDS-v8.0 / CR-2026.10.06-NUMERICAL-1)
+Under the numerical ML architecture (`runtime/src/sports/basketball/engine.py`):
+1. **Event-First Modeling**: Generates a bivariate joint team-score distribution $(S_{\text{home}}, S_{\text{away}})$ driven by:
+   $$\text{Points} \approx \text{Pace (Possessions)} \times \text{Offensive Rating (Points per 100 Possessions)}$$
+2. **Derived Contract Monotonicity**: Margins and totals are derived from the single joint matrix. All spreads $P(\text{Home} - \text{Away} \ge H)$ and totals $P(\text{Total} \ge T)$ satisfy strict monotonicity.
+3. **Player Rotation & Minutes Exposure**: Team efficiency adjusts dynamically for confirmed starters, bench rotation minutes, and replacement-level usage transfers.
+4. **Independent Training**: Fit exclusively on `H0-BASKETBALL-NBA-v1`; D0 is strictly reserved for qualitative error diagnostics.
+
+
 
 ## 1. Identity and contract
 

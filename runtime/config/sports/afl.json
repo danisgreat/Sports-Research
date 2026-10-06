@@ -1,0 +1,13 @@
+{
+  "sport": "afl",
+  "h0_population": "H0-AFL-v1",
+  "source": "fitzroy_afl",
+  "default_model": "A3",
+  "scoring_components": ["goals", "behinds"],
+  "points_per_goal": 6,
+  "points_per_behind": 1,
+  "discrete_units": "points",
+  "max_score_support": 180,
+  "draw_possible": true
+}
+

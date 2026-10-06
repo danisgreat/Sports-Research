@@ -72,6 +72,14 @@ The soccer model (A1) is Poisson attack/defence ratings with linked halves. On 2
 ### 0.8 Control index (full text in §4 and the dated sections)
 1 regulation winner ≠ advance · 2 rotation changes strength · 3 draw-band discipline (draw/upset mass) · 4 corners are not dominance proxies · 5 leading-state branch · 6 red cards asymmetric · 7 friendlies phased · 8 set-piece/keeper extremes shrink · 9 weather is mechanism-specific · 10 niche-stat settleability · 11 derivative completeness · 12 two-leg early-goal regime · 13 sparse-participant side cap · 14 corner share ≠ corner total · 15 current competition v inherited class · 16 friendly participant phase · 17 placeholder conflict is not a final · 18 winner endpoint literal · 19 schedule conflict · 20 early-goal reconciliation with both sides' first-half rates · 21 late events don't backfill first half · 22 bench minutes · 23 early-season shrinkage · 24 volume/allocation/result · 25 transition pressure · 26 contract matches mechanism · 27 territory/chance/scoreboard separate · 28 exact knockout population · 29 prior leg is context · 30 UEFA matchstats route · 31 cross-competition translation · 32 EPL data API route · 33 team-corner generators · 34 disruption facts · 35 league corner route table · 36 period scope on knockout derivatives · 37 single-team rows > 0.80 without XI · 38 AFC routes · 39 cross-league defensive translation · 40 sibling phase lines from one distribution · 41 settle from a structured feed. References: S-R1 EPL rates · S-R2 disclosure thresholds · S-R3 recency and width.
 
+### 0.9 Numerical engine specification (MDS-v8.0 / CR-2026.10.06-NUMERICAL-1)
+Under the numerical ML architecture (`runtime/src/sports/soccer/engine.py`):
+1. **Event-First Modeling**: Bivariate goal process derived from expected goals (xG) and shot quality:
+   $$\text{Shots} \times \text{xG/Shot} \longrightarrow \text{Poisson/Negative Binomial Goal Matrix } P(G_{\text{home}}=g_1, G_{\text{away}}=g_2)$$
+2. **Derivative Independence**: Corners and cards are modeled via distinct point processes, not as proxies for goal dominance; all contract lines (1X2, Over/Under, BTTS, Asian handicap) are integrated directly from the joint score PMF.
+3. **Regime Conditioning**: Red cards, key starter rotation (especially starting goalkeeper and primary goalscorer), and match state (leading/trailing dynamics) condition transition intensities.
+4. **Independent Training**: Fit exclusively on `H0-SOCCER-v1` via StatsBomb / Football-Data.co.uk; D0 is strictly reserved for qualitative error diagnostics.
+
 
 ## 1. Identity and contract
 

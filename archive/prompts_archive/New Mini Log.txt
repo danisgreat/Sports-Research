@@ -1,0 +1,601 @@
+# Start the next mini running log, carry unsettled records, no retrospective
+
+Use ONLY the **current GitHub repository** as authority:
+
+https://github.com/danisgreat/Sports-Research
+
+
+Create the next Markdown mini running/reference log from the repository's **actual current transactional next canonical ID**, carrying forward every genuinely unsettled/unresolved record required by the current repository authority.
+
+**The canonical ID must be explicitly stored in the running log for every individual prediction/game record.** A prediction record must never exist in the running log with only a temporary/tracking handle and no canonical-ID field.
+
+Maintain clearly and separately:
+
+- the **last committed canonical ID**;
+- the **canonical ID associated with each individual record**;
+- that record's **canonical status**;
+- the **current next available canonical ID**;
+- the temporary/tracking handle where one exists.
+
+**NO retrospective and NO new settlement work is to be performed in this task.** Retrospectives remain deferred until I explicitly request them.
+
+---
+
+## 1. Fresh-read current authority
+
+Before creating or modifying the mini log, read the CURRENT versions of:
+
+- `METHOD.md`
+- `CURRENT_RULES.md`
+- `CARD_AND_LOG_TEMPLATES.md`
+- `GAME_LOG_STATUS_CURRENT.md`
+- `research/README.md`
+- `VERIFICATION_PROTOCOL.md`
+- active `prediction logs/PREDICTION_LOG_COMBINED_6.md`
+- `research/canonical_ledger.jsonl` or the current canonical ledger/custody equivalent
+- immediately preceding archived mini log
+- its carryover/unsettled section
+- any current carryover/reconciliation/closure files referenced by the current rules
+- the active control/freeze manifest selected by `METHOD.md`
+
+Use the **current controlling sections at the top/current authority level** of these files. Do not allow historical status snapshots, superseded headers or lower historical sections to override the current repository state.
+
+If repository documentation says that local working files are authoritative and GitHub is only a published copy, state that limitation clearly and use only the current accessible repository state unless the authoritative local state is actually accessible.
+
+---
+
+## 2. Determine the actual next canonical ID transactionally
+
+Before naming the new log or assigning an ID to any new event:
+
+1. recover any pending/interrupted research append;
+2. verify the canonical ledger/custody state;
+3. determine the highest genuinely committed canonical research ID;
+4. run the current transactional `next-id` operation;
+5. use **that returned ID**, not manual arithmetic, as the new mini log's starting/current available canonical ID.
+
+Use the CURRENT equivalent of:
+
+```text
+py -3.14 -B -m research.operations.log_card recover
+py -3.14 -B -m research.operations.log_card next-id
+py -3.14 -B -m research.operations.log_card verify
+```
+
+Do **not** manually infer, increment, reserve or hardcode a P-number.
+
+Reserved IDs must remain reserved.
+
+If the transactional workflow says the next ID is `P-###`, that is the only P-number that may be shown as the current next available ID.
+
+### Canonical-ID status rule
+
+A P-number can have only one of these clearly labelled states in the running log:
+
+- `COMMITTED` — successfully journalled/appended/read back through the canonical workflow;
+- `EXISTING_CANONICAL` — already existed canonically and is being referenced;
+- `AVAILABLE_UNCOMMITTED` — returned by `next-id` but not yet consumed;
+- `PREPARED_NOT_COMMITTED` — only if the repository genuinely contains a recoverable prepared transaction;
+- `WRITE_BLOCKED_UNCOMMITTED` — the allocator returned this ID, but the canonical write could not complete;
+- another exact repository-defined transaction state if the current workflow uses one.
+
+**Never show an uncommitted ID as though it were assigned or consumed.**
+
+If a write fails, rerun/read back the ledger/status before claiming anything changed.
+
+---
+
+## 3. Create the new Markdown mini running log
+
+Use the repository's current naming/location convention.
+
+Preferred descriptive filename, if consistent with the current convention:
+
+```text
+PREDICTION_MINI_RUNNING_LOG_<NEXT_ID>_ONWARD.md
+```
+
+Clearly label it as:
+
+```text
+REFERENCE / FALLBACK MINI RUNNING LOG
+```
+
+because canonical requested cards are retained in Part 6 under the current methodology.
+
+The mini log is a mirror/reference/fallback artifact. It must **not** become a competing canonical ledger.
+
+### Required header fields
+
+The header must contain at minimum:
+
+- log name;
+- creation timestamp with timezone;
+- governing `METHOD.md` version;
+- control revision;
+- scoring version;
+- active freeze/control manifest;
+- active freeze/control-manifest hash;
+- active canonical destination;
+- predecessor archived mini-log path;
+- current carryover/reconciliation authority;
+- operating mode: `SPORTS_ONLY / MARKET_BLIND`;
+- calibration/performance-status language required by current rules;
+- **last committed canonical ID**;
+- **current next available canonical ID**;
+- **canonical status of that next ID**;
+- method used to determine the ID;
+- explicit statement: `NO RETROSPECTIVE UNTIL EXPLICITLY REQUESTED`;
+- explicit statement that the mini log is not a competing canonical ledger.
+
+Example:
+
+```text
+Last committed canonical ID: P-537
+Current next available canonical ID: P-538
+Canonical status of P-538: AVAILABLE_UNCOMMITTED
+```
+
+Do not describe `P-538` as assigned until the canonical transaction actually commits it.
+
+---
+
+## 4. Mandatory canonical-ID field for EVERY event record
+
+This is a hard requirement.
+
+**Every individual game/prediction record in the mini running log must have an explicit canonical-ID block.**
+
+No event may be stored with only a tracking/TMP handle.
+
+Each new or carried event must contain at least:
+
+```text
+Canonical ID: P-###
+Canonical status: COMMITTED / EXISTING_CANONICAL / AVAILABLE_UNCOMMITTED / WRITE_BLOCKED_UNCOMMITTED / other exact repository state
+Tracking handle: TMP-... or NONE
+Canonical destination: prediction logs/PREDICTION_LOG_COMBINED_6.md
+Canonical pointer / transaction ID: <value if available>
+```
+
+### For existing/carryover records
+
+Use their existing canonical ID exactly.
+
+Example:
+
+```text
+Canonical ID: P-527
+Canonical status: EXISTING_CANONICAL
+Tracking handle: TMP-...
+```
+
+Never renumber them.
+
+### For a newly committed prediction
+
+After the canonical transaction succeeds, store:
+
+```text
+Canonical ID: P-538
+Canonical status: COMMITTED
+Tracking handle: TMP-...
+Transaction ID: ...
+Canonical Part 6 pointer: ...
+```
+
+Then rerun `next-id` and update the log's:
+
+```text
+Current next available canonical ID: P-539
+```
+
+Do **not** assume it is simply P-539 without rerunning the allocator.
+
+### If the canonical write fails
+
+The record must still contain the P-number returned by the transactional allocator, but its status must make the lack of commitment unmistakable.
+
+Example:
+
+```text
+Canonical ID: P-538
+Canonical status: WRITE_BLOCKED_UNCOMMITTED
+Tracking handle: TMP-20261005-...
+```
+
+Also state:
+
+```text
+P-538 remains the repository's current available canonical ID and has NOT been consumed.
+```
+
+The header's current next available ID must therefore remain `P-538` unless repository readback proves otherwise.
+
+This means **every log record still contains its canonical-ID field**, while the status prevents an uncommitted number from being falsely represented as assigned.
+
+---
+
+## 5. Carry forward every unsettled/unresolved record
+
+Copy forward every record the **current repository authority** says remains genuinely unsettled, unresolved, under evidence reconciliation or otherwise required in the active carryover queue.
+
+Do not blindly carry an old mini's unresolved list if a newer repository reconciliation has superseded it.
+
+For each carried record preserve the EXISTING:
+
+- canonical ID;
+- canonical status;
+- temporary/tracking handle;
+- event identity;
+- sport/competition;
+- original contracts;
+- original ranks;
+- original probabilities/baselines, including `NOT_ESTIMATED` where applicable;
+- original analysis/issue status;
+- original issue/research timestamps;
+- original cutoff timestamp where retained;
+- settlement endpoint;
+- current unresolved state;
+- exact outstanding evidence/field required;
+- canonical Part 6 pointer;
+- transaction/projection pointer where retained.
+
+Do **not**:
+
+- give a carried record a new canonical ID;
+- rewrite its forecast;
+- rerank its picks;
+- alter its original probabilities;
+- backfill probabilities;
+- update the forecast after seeing later information;
+- perform a retrospective;
+- silently settle it;
+- remove it merely because it is old;
+- replace an existing canonical ID with its old TMP/local alias.
+
+Keep genuinely unresolved carryover items clearly visible near the top of the new mini log.
+
+---
+
+## 6. Rules for all NEW prediction queries after this log is opened
+
+For every future requested sporting event:
+
+- perform the CURRENT GitHub/repository reading gate;
+- read the applicable current sport/competition rules;
+- research the event comprehensively;
+- verify event identity, venue, scheduled time and actual observed state;
+- seek the latest confirmed/projected participants, lineups, starters, injuries, suspensions, rest and availability;
+- use late news as permitted by the current methodology;
+- continue research past scheduled start if requested, while preserving honest timing/state labels;
+- maintain `SPORTS_ONLY / MARKET_BLIND`;
+- do not use betting-market information as predictive evidence;
+- do not invent calibration or probabilities;
+- use `UNCALIBRATED_QUALITATIVE` / `NOT_ESTIMATED` when required;
+- use numerical probabilities only when supported by an applicable current registered model/distribution;
+- preserve the exact supplied contracts and endpoints;
+- provide the requested ranked picks;
+- provide the potential winner;
+- identify covering, overlapping, correlated or complementary selections honestly;
+- state important failure/kill routes;
+- retain source/provenance details required by the current framework;
+- do not perform a retrospective unless separately instructed.
+
+### Mandatory ID workflow for every new event
+
+Before creating the event block:
+
+```text
+research.operations.log_card recover
+research.operations.log_card next-id
+```
+
+Prepare the card using that transaction state.
+
+Then use:
+
+```text
+research.operations.log_card commit <card.json>
+research.operations.log_card verify
+research.operations.log_card next-id
+```
+
+or the exact current equivalents.
+
+### Mandatory running-log event fields
+
+After every new prediction request, the corresponding running-log event block must contain:
+
+```text
+Canonical ID:
+Canonical status:
+Tracking handle:
+Transaction ID:
+Canonical destination:
+Canonical Part 6 pointer:
+Analysis/research status:
+Research timestamp:
+Scheduled start:
+Observed event state:
+Next available canonical ID after transaction/readback:
+```
+
+Where a field is genuinely unavailable, write an explicit missingness value such as:
+
+```text
+UNKNOWN
+NOT_VERIFIED
+NOT_COMMITTED
+NOT_APPLICABLE
+```
+
+Do not omit the field.
+
+**A TMP/tracking handle is never a substitute for the canonical-ID field.**
+
+---
+
+## 7. Duplicate events and addenda
+
+If an event already exists canonically:
+
+- use its existing canonical ID;
+- set `Canonical status: EXISTING_CANONICAL`;
+- do not allocate a second P-number.
+
+If the event body/source differs from the existing canonical record:
+
+- follow the repository's current dated-addendum process;
+- keep the same canonical event ID where required;
+- do not create a duplicate event ID merely because the research text changed.
+
+Always inspect the canonical ledger and Part 6 before deciding an event is new.
+
+---
+
+## 8. No retrospectives
+
+Until I explicitly request a settlement/retrospective pass:
+
+- do not perform retrospectives;
+- do not grade completed selections;
+- do not calculate post-result accuracy;
+- do not change prediction text;
+- do not rerank historical selections;
+- do not change historical probabilities;
+- do not infer/promote new rules from outcomes;
+- do not update model weights from results;
+- do not conduct outcome-based model learning;
+- do not silently convert an unresolved record into settled.
+
+A later observed event state may be recorded only when necessary for queue/custody accuracy and must not become retrospective analysis.
+
+---
+
+## 9. Running-log structure
+
+Maintain these sections:
+
+### 1. Header / custody state
+
+Include:
+
+- method/control/freeze;
+- last committed canonical ID;
+- current next available canonical ID;
+- canonical status of the next ID;
+- canonical destination;
+- predecessor;
+- current carryover authority.
+
+### 2. Carryover unsettled records
+
+Every carried record must display its canonical ID explicitly.
+
+### 3. Temporary-ID / custody conflicts
+
+Show:
+
+- tracking handle;
+- corresponding canonical ID field;
+- canonical status;
+- exact reason for any conflict.
+
+### 4. Current active/new records in canonical order
+
+Each event must begin with a mandatory block such as:
+
+```text
+Canonical ID: P-###
+Canonical status: COMMITTED
+Tracking handle: TMP-...
+```
+
+or, if writing failed:
+
+```text
+Canonical ID: P-###
+Canonical status: WRITE_BLOCKED_UNCOMMITTED
+Tracking handle: TMP-...
+```
+
+Never create a TMP-only record.
+
+### 5. Settlement-pending queue
+
+Keep the canonical ID beside every item.
+
+### 6. Source/custody defects
+
+Record missing bodies, missing IDs, transaction failures, source conflicts and write-access problems explicitly.
+
+### 7. Canonical ID state
+
+Always show:
+
+```text
+Last committed canonical ID:
+Current next available canonical ID:
+Current next-ID transaction state:
+```
+
+Do not merely show one ambiguous `Next ID` field.
+
+### 8. Change history
+
+Record every:
+
+- new research card;
+- successful canonical commit;
+- failed canonical commit;
+- ID readback;
+- duplicate-event decision;
+- dated addendum;
+- carryover change.
+
+No retrospective work should appear here unless separately requested.
+
+---
+
+## 10. Update the FULL running log after every sports prediction
+
+After every future sports prediction query:
+
+1. complete the research;
+2. determine the canonical transaction state;
+3. attempt the proper canonical workflow;
+4. update the running log;
+5. make sure that event's **canonical ID is explicitly stored in its event block**;
+6. update the canonical-status field;
+7. rerun/read back `next-id`;
+8. update the header's last-committed and next-available ID fields;
+9. return/link the **FULL current Markdown mini running log**.
+
+The running log must never contain a new sporting event without an explicit canonical-ID field.
+
+Detailed research belongs in the proper canonical/reference card section, but the mini log must contain enough information to identify the exact card and canonical state.
+
+---
+
+## 11. Verification
+
+After creating the new mini log, and after every new-card update where practical, verify:
+
+- predecessor archive exists;
+- current carryover/reconciliation source exists;
+- every genuinely unsettled item is represented exactly once;
+- no resolved item was accidentally reintroduced as unresolved;
+- every event has an explicit canonical-ID field;
+- every canonical-ID field has an explicit canonical status;
+- no existing canonical ID was renumbered;
+- no P-number was manually invented;
+- no uncommitted P-number is described as committed;
+- no TMP-only prediction entry exists;
+- current next ID agrees with the canonical ledger/workflow;
+- last committed ID agrees with the canonical ledger;
+- no pending transaction was ignored;
+- duplicate events use their existing IDs;
+- canonical Part 6 projections remain valid;
+- control/freeze receipt verifies;
+- custody verification is run;
+- any verification failure is reported honestly rather than rewritten as a pass.
+
+Run the current repository-prescribed verification commands, including the current equivalents of:
+
+```text
+py -3.14 -B -m research.operations.log_card recover
+py -3.14 -B -m research.operations.log_card verify
+py -3.14 -B -m research.operations.log_card next-id
+py -3.14 -B -m research.operations.control_freeze --verify
+py -3.14 -B -m research.operations.verify_custody
+```
+
+and any additional current verification commands required by `research/README.md` / `VERIFICATION_PROTOCOL.md`.
+
+Report the **actual results**, including partial failures caused by missing local-only source bodies, write permissions or clean-checkout limitations.
+
+A failed verification must not be silently converted into `PASS`.
+
+---
+
+## 12. Write-failure handling
+
+If GitHub/repository writes are unavailable or return an error:
+
+1. do not claim the card was committed;
+2. do not consume the canonical ID;
+3. read back the current ledger and status;
+4. preserve the transactionally returned P-number in the event's mandatory `Canonical ID` field;
+5. mark it clearly as:
+
+```text
+Canonical status: WRITE_BLOCKED_UNCOMMITTED
+```
+
+6. retain the tracking handle;
+7. state that the P-number remains available if repository readback confirms it;
+8. create/update the fallback/reference mini log;
+9. on the next successful write attempt, rerun `recover` and `next-id` before committing.
+
+Never assume the previously available ID is still available without a fresh read.
+
+---
+
+## 13. Final response
+
+Return only a concise operational summary containing:
+
+- new/current mini-log path and filename;
+- starting/current available canonical ID;
+- last committed canonical ID;
+- canonical status of the newest record;
+- predecessor archive;
+- carried unsettled IDs/handles;
+- current canonical destination;
+- current method/control/freeze;
+- verification result;
+- repository-write result if relevant.
+
+Do not perform any retrospective or settlement unless separately requested.
+
+---
+
+# Hard canonical-ID invariant
+
+This rule overrides any ambiguity elsewhere in this prompt:
+
+> **Every sports prediction/event record in the running mini log must explicitly contain a `Canonical ID:` field.**
+
+For an already committed/existing record, this is its real canonical P-ID.
+
+For a new record whose transaction succeeds, this is the newly committed P-ID.
+
+For a new record whose transaction has not succeeded, still record the transactionally returned P-number, but it must be labelled explicitly:
+
+```text
+Canonical ID: P-###
+Canonical status: AVAILABLE_UNCOMMITTED
+```
+
+or:
+
+```text
+Canonical ID: P-###
+Canonical status: WRITE_BLOCKED_UNCOMMITTED
+```
+
+as appropriate.
+
+An uncommitted P-number must **never** be represented as consumed.
+
+A temporary/tracking handle must **never** replace or omit the canonical-ID field.
+
+After every successful commit, rerun the current `next-id` workflow and update the log so it always records both:
+
+```text
+Last committed canonical ID: P-###
+Current next available canonical ID: P-###
+```
+
+These values must come from the current canonical workflow and repository readback, never from manual arithmetic.

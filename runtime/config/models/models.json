@@ -1,0 +1,60 @@
+{
+  "models": {
+    "A0": {
+      "name": "Marginal Population Baseline",
+      "type": "empirical_unconditional",
+      "description": "Historical marginal mean and empirical distribution over the relevant competition population"
+    },
+    "A1": {
+      "name": "Linear Ridge Rating Engine",
+      "type": "ridge_regression",
+      "description": "L2 regularized paired comparison rating with home advantage and competition-specific key number weights"
+    },
+    "A2": {
+      "name": "Possession Drive Markov Simulator",
+      "type": "markov_monte_carlo",
+      "description": "Discrete state transition simulator modeling possession sequences, ball-by-ball, drive, or base-out state chains"
+    },
+    "A3": {
+      "name": "Bivariate Negative Binomial / Poisson",
+      "type": "bivariate_distribution",
+      "description": "Joint score generator with explicit covariance / Frank copula structure between team totals"
+    },
+    "A4": {
+      "name": "Gradient Boosted Tree Regressor",
+      "type": "lightgbm_quantile",
+      "description": "Quantile and point regression on point-in-time engineered features with monotonic constraints"
+    },
+    "A5": {
+      "name": "State-Space Kalman Rating",
+      "type": "kalman_dynamic",
+      "description": "Time-varying latent team and player skill ratings with drift between seasons and match rounds"
+    },
+    "A6": {
+      "name": "Hierarchical Bayesian GLM",
+      "type": "bayesian_hierarchical",
+      "description": "Multi-level shrinkage across leagues, teams, venues, and individual participant regimes"
+    },
+    "A7": {
+      "name": "Deep Sequence Embedder",
+      "type": "temporal_transformer",
+      "description": "Multi-head attention over event sequences and player interaction graphs"
+    },
+    "A8": {
+      "name": "Regularized Stacking Ensemble",
+      "type": "super_learner_ensemble",
+      "description": "Non-negative constrained stacking blender evaluated on holdout calibration split"
+    },
+    "BIGQUERY_ML_AI_FORECAST": {
+      "name": "BigQuery ML AI.FORECAST / ARIMA_PLUS",
+      "type": "cloud_time_series",
+      "description": "Google Cloud BigQuery time-series forecasting model with automated seasonality, trend decomposition, and anomaly cleaning"
+    },
+    "BIGQUERY_ML_BOOSTED_TREE": {
+      "name": "BigQuery ML Boosted Tree Classifier / Regressor",
+      "type": "cloud_tree_engine",
+      "description": "BigQuery native distributed gradient boosted trees trained on in-warehouse feature tables"
+    }
+  }
+}
+

@@ -67,6 +67,14 @@ The cricket model (A1) is Elo for the result plus a ridge batting/bowling/venue 
 ### 0.7 Control index (full text in §5 and the dated sections)
 1 legal deliveries · 2 phase ≠ innings · 3 wicket-cluster floor · 4 finisher ceiling · 5 toss is context · 6 winner independence · 7 adjusted venue samples · 8 direct ceiling conflict · 9 rain/dew conditional · 10 milestones boundary-sensitive · 11 target identity first · 12 one CDF for nested totals · 13 stochastic exposure · 14 calibration preserves geometry · 15 incomplete is not zero · 16 phase-to-innings is joint · 17 sparse competitions shrink · 18 Test rearguards are survival processes · 19 retained resources reverse phase direction (which wickets fall) · 20 phase participants outrank phase H2H (Nos. 3–4, both new-ball bowlers) · 21 innings-order mixture for innings and phase totals · 22 near-start identity gaps cap evidence · 23 overlap-aware evidence units · 24 runs are neither self-correcting nor self-perpetuating · 25 same-venue, same-week cross-format evidence · 26 retrieve XIs after the toss · 27 current-series tempo prior; restart is width · 28 Test winner as a three-way time budget · 29 phase-checkpoint settlement route · 30 direct same-venue current-regime ceiling · 31 bowling replacement chain · 32 conditional activation.
 
+### 0.8 Numerical engine specification (MDS-v8.0 / CR-2026.10.06-NUMERICAL-1)
+Under the numerical ML architecture (`runtime/src/sports/cricket/engine.py`):
+1. **Event-First Modeling**: The engine estimates the full discrete predictive probability mass function $P(Y=y \mid X)$ of runs and wickets. All user propositions (e.g. Day 2 runs Over 185.5, Over 235.5, Under 285.5) are derived analytically from this single CDF, guaranteeing monotonicity: $P(O285.5) \le P(O235.5) \le P(O185.5)$.
+2. **Test Cricket Engine**: Simulates $(R_{\text{future}}, W_{\text{future}}, O_{\text{future}})$ conditioned on current session, pitch wear, crease occupants, new-ball age, follow-on status, declaration risk, and match time budget.
+3. **Limited-Overs Engine**: Ball/over-by-ball discrete state transition model conditioned on phase (Powerplay 1–6, Middle 7–40/15, Death 41–50/16–20), remaining wickets, and target-chase pressure.
+4. **Independent Training**: Fit exclusively on `H0-CRICKET-TEST-v1` and `H0-CRICKET-LO-v1` via Cricsheet JSON; D0 is strictly reserved for error diagnostics.
+
+
 
 ## 1. Identity and contract
 

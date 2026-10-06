@@ -67,6 +67,15 @@ The NFL model (A1) is ridge ratings with the league's own key-number weights (3,
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 QB identity is a regime · 2 line continuity is combinatorial · 3 game script creates dependence · 4 turnovers and one-score records shrink · 5 weather is matchup-specific · 6 key numbers and pushes are discrete · 7 OT matches the competition · 8 special teams are field position · 9 preseason is a separate phase · 10 college availability is asymmetric · 11 preseason quarter-by-quarter unit mixture · 12 reserve-sample shrinkage and explosive tails · 13 low total ≠ close spread · 14 CFL possession chain · 15 aligned regime uncertainty caps a favourite · 16 new-regime uncertainty two-sided · 17 margin prior and width · 18 key numbers at 3 and 7 · 19 prior-season ratings are width · 20 non-offensive score branch · 21 favourite covers inside the Under.
 
+### 0.8 Numerical engine specification (MDS-v8.0 / CR-2026.10.06-NUMERICAL-1)
+Under the numerical ML architecture (`runtime/src/sports/nfl/engine.py`):
+1. **Event-First Modeling**: Simulates match possessions as a Markov drive sequence:
+   $$\text{Starting Field Position} \longrightarrow \text{Drive Efficiency (EPA/play)} \longrightarrow \text{Drive Outcome (TD / FG / Punt / Turnover)}$$
+2. **Key Number Discrete Preservation**: Scores accumulate in increments of 3, 6, 7, and 8, naturally preserving NFL key numbers (3, 7, 10, 14) without artificial smoothing.
+3. **Regime Conditioning**: QB availability, offensive line continuity, and defensive pressure rates condition drive transition matrices.
+4. **Independent Training**: Fit exclusively on `H0-NFL-v1` via `nflfastR`; D0 is strictly reserved for qualitative error diagnostics.
+
+
 
 ## 1. Identity and contract
 

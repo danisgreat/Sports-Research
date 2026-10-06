@@ -70,6 +70,14 @@ The NRL model (A1) is ridge ratings with key-number weights. Validated on 2026: 
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 spine is a regime · 2 possession imbalance drives dependence · 3 cover rates diagnostic · 4 wet weather bidirectional · 5 goal-kicker state · 6 sin-bin/send-off tail · 7 winner ≠ handicap · 8 league and union never pooled · 9 motivation conditional · 10 no calibration claim · 11 defensive regime and spine-return mixture · 12 blowouts are possession-native · 13 a total can clear through one team · 14 low total ≠ close margin · 15 halftime doesn't freeze separation · 16 close-game winner needs terminal events.
 
+### 0.8 Numerical engine specification (MDS-v8.0 / CR-2026.10.06-NUMERICAL-1)
+Under the numerical ML architecture (`runtime/src/sports/nrl/engine.py`):
+1. **Event-First Modeling**: Sets, completion, and territorial field position simulation:
+   $$\text{Completed Sets} \longrightarrow \text{Attacking 20m Entries} \longrightarrow \text{Tries (4 pts) + Conversions (2 pts) + Penalty/Field Goals (1/2 pts)}$$
+2. **Key Number Discrete Preservation**: Rugby league margins cluster around 2, 4, 6, 8, 10, 12; scores are discrete combinations, never continuous Gaussian approximations.
+3. **Regime Conditioning**: 2020 six-again rule change strictly demarcates high-pace modern NRL from legacy low-pace rugby league. Spine availability (1, 6, 7, 9) and primary goal-kicker accuracy condition transition rates.
+4. **Independent Training**: Fit exclusively on `H0-NRL-v1` via `nrlR` (ingested through isolated R script `runtime/r_ingestion/nrl_nrlr.R`); D0 is strictly reserved for qualitative error diagnostics.
+
 
 ## 1. Identity and contract
 

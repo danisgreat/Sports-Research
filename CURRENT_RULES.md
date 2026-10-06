@@ -1,8 +1,8 @@
 # Current operating rules
 
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Local authority, numerical ML runtime and all-log reconciliation (October 6):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Authority: **MDS-2026.10.01-v7.1 / CR-2026.10.05-I8**. The user's later October 1 instruction authorizes research regardless of calibration, removal of analysis/logging blockers, late news, analysis after scheduled start and canonical import of the missing cards. Issued historical values remain unchanged.
+Authority: **MDS-2026.10.01-v8.0 / CR-2026.10.06-NUMERICAL-1**. The user's instruction authorizes research regardless of calibration, canonical import, and the full implementation of the numerical ML runtime architecture ([NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md), [RULES_NHL.md](RULES_NHL.md)). Issued historical values remain unchanged.
 
 ## Requested research — controlling default
 
@@ -85,3 +85,13 @@ The dated all-log audit in Part 6 and `research/verification/settlement_2026-10-
 ## Fifteen experiments — measures implemented, results pending
 
 Use [the experiment measures and next steps](research/experiments/NEXT_STEPS.md) for all fifteen registered hypotheses. Freeze exact candidate/comparator artifacts, targets, future cohort, separate-pilot sample plan, declared dependence/adapter audits and justified acceptance tolerances before collecting the experimental forecasts. Capture real timestamps through `research.experiments.runner`; preserve all pending, void and abstention dispositions. Numerical measurement requirements govern experiment evaluation, never access to requested research or canonical logging. A statistical candidate-for-review result does not qualify or deploy a model. Existing qualification and source admission controls remain in force.
+
+## F. Numerical ML runtime & predictive modeling standards
+
+1. **Event-First Principle**: Models estimate the discrete probability mass function of the sporting event $P(Y = y \mid X)$. Bookmaker contract probabilities (Over/Under, spread, moneyline, 1X2) are derived directly from that distribution. Monotonicity across thresholds is mathematically guaranteed: $P(\text{Over } K_2) \le P(\text{Over } K_1)$ for $K_2 > K_1$.
+2. **Pregame vs. Live Engine Separation**: Pregame models and live models are separate pipelines with distinct model identifiers. Live models condition on $P(Y_{\text{future}} \mid Y_{\text{observed}}, \text{state}_t)$ rather than naively extrapolating pregame rates.
+3. **Point-in-Time Feature Store**: Training features must satisfy $known\_at \le cutoff\_at$. If availability before cutoff cannot be proven, the feature is marked `MISSING`.
+4. **Market Snapshot Semantics**: If market price evaluation is conducted, the market quote must be timestamped at or before forecast cutoff. Post-event or closing odds are strictly quarantined for retrospective benchmarking and cannot retroactively claim predictive edge.
+5. **Rolling-Origin Splitting**: All evaluation adheres to strict chronological `TRAIN` $\to$ `TUNE` $\to$ `CAL` $\to$ `TEST` partitioning. Calibrators are fitted strictly on the out-of-fold calibration set.
+6. **Staking & Kelly Protection**: Fractional Kelly staking is disabled until models achieve validated calibration and edge persistence across untouched out-of-sample data.
+
