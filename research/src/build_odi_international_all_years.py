@@ -28,7 +28,6 @@ MATCH_RES_DIR = os.path.join(BASE_DIR, "research", "data", "match_results_cache"
 STATSGURU_DIR = os.path.join(BASE_DIR, "research", "data", "statsguru_cache")
 CRICSHEET_DIR = os.path.join(BASE_DIR, "research", "data", "cricsheet_odi", "matches")
 
-OUT_DIR_ROOT = os.path.join(BASE_DIR, "ODI_International_CSVs")
 OUT_DIR_PREV1 = os.path.join(BASE_DIR, "Previous Sports Results", "Cricket One-Day Format", "ODI International")
 OUT_DIR_PREV2 = os.path.join(BASE_DIR, "Previous Sports Results", "Cricket One-Day Format", "Men's ODI International")
 
@@ -944,7 +943,6 @@ def main():
             compiled_rows.append(row)
             
         # Output paths
-        root_csv = os.path.join(OUT_DIR_ROOT, f"ODI_International_{year}.csv")
         prev1_dir = os.path.join(OUT_DIR_PREV1, str(year))
         prev2_dir = os.path.join(OUT_DIR_PREV2, str(year))
         os.makedirs(prev1_dir, exist_ok=True)
@@ -953,7 +951,7 @@ def main():
         prev1_csv = os.path.join(prev1_dir, f"{year}_games.csv")
         prev2_csv = os.path.join(prev2_dir, f"{year}_games.csv")
         
-        for target_file in [root_csv, prev1_csv, prev2_csv]:
+        for target_file in [prev1_csv, prev2_csv]:
             with open(target_file, "w", newline="", encoding="utf-8") as f:
                 writer = csv.DictWriter(f, fieldnames=CSV_HEADERS)
                 writer.writeheader()
@@ -961,7 +959,7 @@ def main():
                 
         total_generated += len(compiled_rows)
         yearly_summary[year] = len(compiled_rows)
-        print(f"Year {year}: {len(compiled_rows):3d} matches generated in all 3 target destinations.")
+        print(f"Year {year}: {len(compiled_rows):3d} matches generated in archive destinations.")
 
     print("=" * 80)
     print(f"Grand Total Non-World Cup ODIs Generated (1975–2025): {total_generated}")

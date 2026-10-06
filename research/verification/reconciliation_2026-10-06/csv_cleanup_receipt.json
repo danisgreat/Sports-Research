@@ -1,0 +1,11 @@
+﻿{
+    "completed_utc":  "2026-10-06T07:03:42.0915953Z",
+    "duplicate_csv_count":  102,
+    "preserved_data_rows":  13481,
+    "removal":  "Windows Recycle Bin",
+    "recycled_targets":  [
+                             "C:\\Users\\danie\\Desktop\\Sports Research\\ODI_International_CSVs",
+                             "C:\\Users\\danie\\Desktop\\Sports Research\\Danish_Metal_Ligaen_Ice_Hockey_CSVs"
+                         ],
+    "archive_hashes_rechecked":  true
+}

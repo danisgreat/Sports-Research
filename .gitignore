@@ -1,7 +1,6 @@
 # Local publisher snapshots with restricted redistribution and odds-bearing feeds.
 research/data/benchmark/
 research/data/*_cache/
-research/data/cricsheet_odi/
 research/**/__pycache__/
 research/.pytest_cache/
 
@@ -51,3 +50,4 @@ research/data/raw/source_snapshots/toluca_report_*
 research/data/raw/source_snapshots/kfu_owner_*
 research/data/raw/source_snapshots/kfu_news_*
 research/data/raw/source_snapshots/bhutan_owner_*
+research/data/cricsheet_odi/

@@ -1,0 +1,823 @@
+{
+  "schema": "verified-exact-duplicate-cleanup-2",
+  "count": 102,
+  "data_rows": 13481,
+  "files": [
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1975.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1975\\1975_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1975\\1975_games.csv",
+      "sha256": "05b6d8d9539dde18477306bea6f1909ba144a3d20a3110006a0b48a54fd4ebdb",
+      "bytes": 2651,
+      "data_rows": 4
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1976.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1976\\1976_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1976\\1976_games.csv",
+      "sha256": "bcf1f28bee520c92ead25ed2b67f7a37c52ea1b91a6d112860fd3ab5f2cb999d",
+      "bytes": 3643,
+      "data_rows": 6
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1977.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1977\\1977_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1977\\1977_games.csv",
+      "sha256": "a32624d203fcce29519343bb06bf7016010142dd9b6845fe99fb1a54c0bc7a00",
+      "bytes": 3595,
+      "data_rows": 6
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1978.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1978\\1978_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1978\\1978_games.csv",
+      "sha256": "e7e069849c9afc4b40723963e16fb37483ad77ed8cabea05c0e75526d53e64a7",
+      "bytes": 5506,
+      "data_rows": 10
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1979.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1979\\1979_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1979\\1979_games.csv",
+      "sha256": "6eddccc830107653a27838ef10cc4deb9f8df72a2f4d74f8eb28e5500cd8e878",
+      "bytes": 6510,
+      "data_rows": 12
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1980.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1980\\1980_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1980\\1980_games.csv",
+      "sha256": "2e7b4418321dbe73c92add020e0f676b625e29c9292d2d2a0bf8583c8824ff97",
+      "bytes": 11169,
+      "data_rows": 21
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1981.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1981\\1981_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1981\\1981_games.csv",
+      "sha256": "f4af78ac65767fc3e130f4397c5b6152979ea899522416c7b6c5c89211fffccd",
+      "bytes": 14626,
+      "data_rows": 28
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1982.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1982\\1982_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1982\\1982_games.csv",
+      "sha256": "d0b296480e0997eecff5350700fad6c9a78587d5f8e114bb0733e9d8891624c2",
+      "bytes": 16870,
+      "data_rows": 33
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1983.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1983\\1983_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1983\\1983_games.csv",
+      "sha256": "c20f60dde1f711a3efe511ea56ecd29ae0ad10aa2cd3dd41b3d3a2cc476980ae",
+      "bytes": 20251,
+      "data_rows": 39
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1984.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1984\\1984_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1984\\1984_games.csv",
+      "sha256": "046ab3e4ffd2620967c43fb6ed5f275559022fab55ab6ac4ba9810735a0e7925",
+      "bytes": 26243,
+      "data_rows": 51
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1985.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1985\\1985_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1985\\1985_games.csv",
+      "sha256": "066b5ae091d07353dab976500aab7b82befe1ef52ad04fd0be47c2c6e2f106d2",
+      "bytes": 33443,
+      "data_rows": 65
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1986.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1986\\1986_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1986\\1986_games.csv",
+      "sha256": "96aeece43c9826a6ccfca2b57a045c9e2a8d7899c651797089a40dd00d91ad86",
+      "bytes": 31557,
+      "data_rows": 62
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1987.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1987\\1987_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1987\\1987_games.csv",
+      "sha256": "b12b954c8f41bb055c85ca87eef6b53a354e06a26c990da13c4409aa953772cf",
+      "bytes": 24021,
+      "data_rows": 47
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1988.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1988\\1988_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1988\\1988_games.csv",
+      "sha256": "b10baf838658ab80569ca741b3b90e8fefdd953150ebd9e3b0cbc8718da904dc",
+      "bytes": 31877,
+      "data_rows": 61
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1989.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1989\\1989_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1989\\1989_games.csv",
+      "sha256": "6a83d24caaea37b34786b2781f194182acec7f841be465a825f1f8f3aac508b8",
+      "bytes": 28121,
+      "data_rows": 55
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1990.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1990\\1990_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1990\\1990_games.csv",
+      "sha256": "44a1118a3e4d16061c962e8efbaebb61a775e260d5281d10026fbb06184d7732",
+      "bytes": 30983,
+      "data_rows": 61
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1991.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1991\\1991_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1991\\1991_games.csv",
+      "sha256": "cca168eb11de1edb001c0238cfc117cd7df81ba0d9d01ccc5f115c8af3a54609",
+      "bytes": 20253,
+      "data_rows": 39
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1992.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1992\\1992_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1992\\1992_games.csv",
+      "sha256": "c4ecf12e69c8f9004e387477f21eab52479bae48729901d8dc48f99f84f4f39b",
+      "bytes": 25689,
+      "data_rows": 50
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1993.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1993\\1993_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1993\\1993_games.csv",
+      "sha256": "5d698332f26c9b39f5d59544163aeb4f9e6447bd1f7c18144cb5eb738e3bf9cf",
+      "bytes": 42387,
+      "data_rows": 82
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1994.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1994\\1994_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1994\\1994_games.csv",
+      "sha256": "bbd744cb32a64467610ad4719154b6c54e72949be8c6839998cdf97729972969",
+      "bytes": 50389,
+      "data_rows": 98
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1995.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1995\\1995_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1995\\1995_games.csv",
+      "sha256": "3099c8d2f2645036ed93cc4b13fb9d4ee0c3711dc40d75ec705b33feeae6b22c",
+      "bytes": 31522,
+      "data_rows": 60
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1996.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1996\\1996_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1996\\1996_games.csv",
+      "sha256": "5b419d165de0e7d50f02b4b31e385be54b95a4475f3278879ab39d21402e2123",
+      "bytes": 47084,
+      "data_rows": 91
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1997.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1997\\1997_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1997\\1997_games.csv",
+      "sha256": "09384375c03f4222e7b14302864658bac0090040968d5940ce7a62b6b095ce73",
+      "bytes": 58146,
+      "data_rows": 115
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1998.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1998\\1998_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1998\\1998_games.csv",
+      "sha256": "c829eb9c3290cc119cab50f15cfa6aad2a9928cb33356f79f943ec12a72d372a",
+      "bytes": 55879,
+      "data_rows": 108
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_1999.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\1999\\1999_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\1999\\1999_games.csv",
+      "sha256": "e42608f67b4405c07012af99264918abf4f6908b6bd61cab603e16e6a3b07353",
+      "bytes": 57556,
+      "data_rows": 112
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2000.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2000\\2000_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2000\\2000_games.csv",
+      "sha256": "6900fc44da464f7eb759f4c9ec1496c2b9eb4caf34c0dbb9a76cb1f270cd4316",
+      "bytes": 67224,
+      "data_rows": 131
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2001.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2001\\2001_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2001\\2001_games.csv",
+      "sha256": "c50f86b2cb17a5cf8d247cbb568c548b62c9df8f485e17f1b4aa91d0048e36e3",
+      "bytes": 61797,
+      "data_rows": 120
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2002.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2002\\2002_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2002\\2002_games.csv",
+      "sha256": "cc27a0774ef32116e95503e22b83a9b3b184cebec8e04dd56ab9e7f9b9fa6e5e",
+      "bytes": 74636,
+      "data_rows": 145
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2003.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2003\\2003_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2003\\2003_games.csv",
+      "sha256": "1aeaf72f1f655502799a6aafd7d57abf719fd5cd7b0e88e502b6a3bec1d356ee",
+      "bytes": 59533,
+      "data_rows": 95
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2004.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2004\\2004_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2004\\2004_games.csv",
+      "sha256": "750a20d9bcbd1e442ecb9f6e8159458a777ea787359c963b1e9c2197ab78a565",
+      "bytes": 75734,
+      "data_rows": 128
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2005.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2005\\2005_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2005\\2005_games.csv",
+      "sha256": "7228befdde2a6680b950674b17647290b101067ce577583e5511cb354bb0dfe6",
+      "bytes": 64608,
+      "data_rows": 107
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2006.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2006\\2006_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2006\\2006_games.csv",
+      "sha256": "9771c1cd42a1c4554142c87bfd860f808746de4ed51987a752f619899da25390",
+      "bytes": 98921,
+      "data_rows": 160
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2007.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2007\\2007_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2007\\2007_games.csv",
+      "sha256": "c83c0903c35b8e820e328cbf642ef5135685a3aa0f6bd3f861721a33d32cfd85",
+      "bytes": 85155,
+      "data_rows": 140
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2008.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2008\\2008_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2008\\2008_games.csv",
+      "sha256": "bdf08fa4b31c7f780f6ec07a99cbe11df32fb5cb566717a1d680da1d18541a42",
+      "bytes": 77277,
+      "data_rows": 126
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2009.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2009\\2009_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2009\\2009_games.csv",
+      "sha256": "9f76f665eb082502828c08d40fb5cec7ccf9e320873cc7073553216805839598",
+      "bytes": 92812,
+      "data_rows": 150
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2010.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2010\\2010_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2010\\2010_games.csv",
+      "sha256": "e241970c11e696d4031631a5aa29e065908d01d2d29db409cddd507e4db749a5",
+      "bytes": 88571,
+      "data_rows": 142
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2011.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2011\\2011_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2011\\2011_games.csv",
+      "sha256": "c1a2855a2ae68f81f52603617e2826710f6d86903099f9eed1de9ea96ed3bbdc",
+      "bytes": 62452,
+      "data_rows": 97
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2012.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2012\\2012_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2012\\2012_games.csv",
+      "sha256": "e4f06ff91610dfe2786845d6b3c40696d68727b714987b79898d14db78b250e4",
+      "bytes": 59468,
+      "data_rows": 90
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2013.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2013\\2013_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2013\\2013_games.csv",
+      "sha256": "ed2c36a6fec3d32edc5f43fd81ad2630eb3485dba2b2dd5a124571f2ac87d426",
+      "bytes": 88294,
+      "data_rows": 136
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2014.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2014\\2014_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2014\\2014_games.csv",
+      "sha256": "f3c31dd1d7a0eeff379b810f24ab054b5dc59ce6fe6208228727d36038c8afc4",
+      "bytes": 77983,
+      "data_rows": 121
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2015.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2015\\2015_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2015\\2015_games.csv",
+      "sha256": "29201fbca6e6eea1f0572c42d4da96d28a8c9bb04a2a63e6f990aa8ade085a5c",
+      "bytes": 63126,
+      "data_rows": 98
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2016.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2016\\2016_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2016\\2016_games.csv",
+      "sha256": "def5f04f4b05525b9a5496be72313a268d0bffa7c91e80d9f45425449489b50f",
+      "bytes": 62513,
+      "data_rows": 99
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2017.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2017\\2017_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2017\\2017_games.csv",
+      "sha256": "868682d6b871411c44907e1c7c92ae9d9ea80cfd7cf80197232739a9b95eaf14",
+      "bytes": 81187,
+      "data_rows": 129
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2018.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2018\\2018_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2018\\2018_games.csv",
+      "sha256": "0135147c737260c861126243bea18b4cf9fcd7847f7e4483a23fd78fa5f4e7aa",
+      "bytes": 80264,
+      "data_rows": 128
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2019.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2019\\2019_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2019\\2019_games.csv",
+      "sha256": "d2e94861de59b296360312a20b8a52ec9984d00c1bd55283ba6bf830635fa76c",
+      "bytes": 64139,
+      "data_rows": 105
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2020.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2020\\2020_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2020\\2020_games.csv",
+      "sha256": "d20cb04e2f639a3df15d2b49aa3a63f3a432d88215b17d2cc542346bd8f5b553",
+      "bytes": 28362,
+      "data_rows": 44
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2021.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2021\\2021_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2021\\2021_games.csv",
+      "sha256": "71514befa286045439476672e26e89ab01ae69d5c9ea5aa10a817ada0b55d761",
+      "bytes": 44529,
+      "data_rows": 71
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2022.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2022\\2022_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2022\\2022_games.csv",
+      "sha256": "68c915c53d167023713bb4aca6f9143ab21cdcaafb1eb2f976b3b78ff0ab8a07",
+      "bytes": 95986,
+      "data_rows": 161
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2023.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2023\\2023_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2023\\2023_games.csv",
+      "sha256": "b24731618e1103eeb9684d226c8d58e6cc938b754c88345b1c20e0cf720bbe88",
+      "bytes": 103499,
+      "data_rows": 170
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2024.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2024\\2024_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2024\\2024_games.csv",
+      "sha256": "fb0448992eadcd6a255a41cf9449216ab2bc74a8711fe38d599ddbe246668720",
+      "bytes": 64210,
+      "data_rows": 104
+    },
+    {
+      "source": "ODI_International_CSVs\\ODI_International_2025.csv",
+      "destination": "Previous Sports Results\\Cricket One-Day Format\\ODI International\\2025\\2025_games.csv",
+      "mirror": "Previous Sports Results\\Cricket One-Day Format\\Men's ODI International\\2025\\2025_games.csv",
+      "sha256": "638a2fc70a09dcd47e1ce8719552409a944a7e5d469c38c730316897cd3ccc35",
+      "bytes": 72625,
+      "data_rows": 115
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1975.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1975\\1975_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1975\\1975_games.csv",
+      "sha256": "4ce01964df20dcfefa8840bfdfb4b8e741b4a0f3e4ad5b371f835e16f71774a9",
+      "bytes": 113274,
+      "data_rows": 180
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1976.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1976\\1976_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1976\\1976_games.csv",
+      "sha256": "a010a0af5f4496f1bd1239fbe0e6851a581f06c3571ce5a0e3b76b24b79cbb4f",
+      "bytes": 113406,
+      "data_rows": 180
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1977.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1977\\1977_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1977\\1977_games.csv",
+      "sha256": "5b5b3fae9313c5849cd3599b84cb0b1000fd19a63c8574e04bab40bf28617796",
+      "bytes": 71589,
+      "data_rows": 112
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1978.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1978\\1978_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1978\\1978_games.csv",
+      "sha256": "e1069619cad724f9b4db7741aca6cfda7312dc69b323b901f9b6d2432aaae45d",
+      "bytes": 71730,
+      "data_rows": 112
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1979.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1979\\1979_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1979\\1979_games.csv",
+      "sha256": "0f2912169e5b1af940cfec0e1a94adc60e59724521f4f195937187f9b831c833",
+      "bytes": 71953,
+      "data_rows": 112
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1980.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1980\\1980_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1980\\1980_games.csv",
+      "sha256": "1ce0e5c98d8fe552be20dee0747a6790d8ab7fc051ee1013f801ec02ac899952",
+      "bytes": 71885,
+      "data_rows": 112
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1981.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1981\\1981_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1981\\1981_games.csv",
+      "sha256": "a4ba1415e777e188e7341dcac8f32c88991d3fd8f2ccb33eef642e8e538dd590",
+      "bytes": 79637,
+      "data_rows": 123
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1982.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1982\\1982_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1982\\1982_games.csv",
+      "sha256": "5895460fc79c82293df9c90bf84fb51aa18c1f293d2b43301833bc363abc91c2",
+      "bytes": 79543,
+      "data_rows": 123
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1983.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1983\\1983_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1983\\1983_games.csv",
+      "sha256": "b03f6144b8c9ed4f9585983119b0c32407e592f425a477bde5211592ebcddac5",
+      "bytes": 78582,
+      "data_rows": 122
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1984.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1984\\1984_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1984\\1984_games.csv",
+      "sha256": "6dace745cfc167ae69575b7466cec25b94ce275e31c469858ce5638af6b046c7",
+      "bytes": 120597,
+      "data_rows": 194
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1985.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1985\\1985_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1985\\1985_games.csv",
+      "sha256": "1726f775ebdf464ccfa46a758b4a9ec8740a0da306fb47bd52c4c453a3638216",
+      "bytes": 53905,
+      "data_rows": 84
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1986.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1986\\1986_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1986\\1986_games.csv",
+      "sha256": "b7fe9b9e4c7dd17ce2a892adb7ffa3ef0b08887158db2023618add94a01cfd76",
+      "bytes": 53492,
+      "data_rows": 84
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1987.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1987\\1987_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1987\\1987_games.csv",
+      "sha256": "d188737d2b221096a8caac156aafeac6cdd7a4f990bbd0e3bb542ee3fee1b70b",
+      "bytes": 53339,
+      "data_rows": 84
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1988.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1988\\1988_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1988\\1988_games.csv",
+      "sha256": "9dc6bf561c729b7b033a0db30860eb33bf6e00fce6d415b10fa6e01229bf1471",
+      "bytes": 55513,
+      "data_rows": 86
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1989.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1989\\1989_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1989\\1989_games.csv",
+      "sha256": "aff580e4f2436252edb5b7f8c7df480a0fd4fb209d21fd06a80d5eeb8e2316c9",
+      "bytes": 78027,
+      "data_rows": 123
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1990.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1990\\1990_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1990\\1990_games.csv",
+      "sha256": "7badb08ea7e2b9a6a87326d1ec6f510d57752d28c0fdf1099d55f45f53f3e6d1",
+      "bytes": 80143,
+      "data_rows": 126
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1991.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1991\\1991_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1991\\1991_games.csv",
+      "sha256": "6cd6932cf369eef85e4b5328033216dbd55516ec221e47cb6ac85d652abcc2c4",
+      "bytes": 80236,
+      "data_rows": 126
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1992.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1992\\1992_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1992\\1992_games.csv",
+      "sha256": "13a1c92a84424a32f6b27855aa2814b1482ac0a037bba52892d958bdc44525c4",
+      "bytes": 125088,
+      "data_rows": 196
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1993.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1993\\1993_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1993\\1993_games.csv",
+      "sha256": "dc1e9f57ec066188cb9ff0f480b0f4a10cd8bde4c436ca0de3c396057346648b",
+      "bytes": 125746,
+      "data_rows": 197
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1994.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1994\\1994_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1994\\1994_games.csv",
+      "sha256": "1a98001250da02f61bf587f753f6163c3a33c0641ea6cf16cfbc478150550767",
+      "bytes": 120665,
+      "data_rows": 190
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1995.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1995\\1995_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1995\\1995_games.csv",
+      "sha256": "b33647e35601d0f18bc43057c899b0d128c04e8a28c31d2a55f991597517f364",
+      "bytes": 122775,
+      "data_rows": 193
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1996.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1996\\1996_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1996\\1996_games.csv",
+      "sha256": "4d145c23ee2eba4c2778cfe7f76da50eb5f494fec6112e29485797d1cc17a965",
+      "bytes": 123697,
+      "data_rows": 194
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1997.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1997\\1997_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1997\\1997_games.csv",
+      "sha256": "87a3da89602564521c754587a4387adb96ecdaaaf94b1a7a8874f676a9b6d197",
+      "bytes": 125295,
+      "data_rows": 196
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1998.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1998\\1998_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1998\\1998_games.csv",
+      "sha256": "ae94a53ee3da05050888b432d698977d4eb4302116d2ce5e97c56b8617004c24",
+      "bytes": 127932,
+      "data_rows": 196
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_1999.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\1999\\1999_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\1999\\1999_games.csv",
+      "sha256": "78f9b7f40ee37f3968a08d65fd4f9826b4559e89409ecac4156af238a7e2e8ef",
+      "bytes": 129498,
+      "data_rows": 198
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2000.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2000\\2000_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2000\\2000_games.csv",
+      "sha256": "d3618694ff47f0f083656376a5502229eead0e39f8d2bd7db0317ca5e99ebe2e",
+      "bytes": 102280,
+      "data_rows": 157
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2001.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2001\\2001_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2001\\2001_games.csv",
+      "sha256": "031242fd53381dfb3e52d20b9d1bc4e9762c67c24c987b34d8095f9d498c0349",
+      "bytes": 104550,
+      "data_rows": 160
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2002.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2002\\2002_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2002\\2002_games.csv",
+      "sha256": "9a8ea9a58e6bc813beae0ff207281296367a164f12d2178f8fdae4e4d2b0e911",
+      "bytes": 105034,
+      "data_rows": 161
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2003.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2003\\2003_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2003\\2003_games.csv",
+      "sha256": "66ac7343eef1fa699f44140ec6a6fdf9890b13fc2e1fbf5d237abd729e788777",
+      "bytes": 123221,
+      "data_rows": 189
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2004.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2004\\2004_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2004\\2004_games.csv",
+      "sha256": "4a175632cdb16f067a56dfca0cd1713e6f472e31f42bebf832fa5984a850b340",
+      "bytes": 123894,
+      "data_rows": 188
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2005.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2005\\2005_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2005\\2005_games.csv",
+      "sha256": "c98ad17a7dc300a61edd244857757dd14a2c42e19dde5e0d2ad7064989bfb0f5",
+      "bytes": 122925,
+      "data_rows": 188
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2006.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2006\\2006_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2006\\2006_games.csv",
+      "sha256": "24ecbfb02f6e710e741c6cefabfe957e8f55608f46b5dead103971254fb8f1a4",
+      "bytes": 122240,
+      "data_rows": 187
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2007.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2007\\2007_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2007\\2007_games.csv",
+      "sha256": "bf69e102ea8f020e58fde2b3c3c07494371823178dfe010e6924f3cf8a713cb0",
+      "bytes": 146088,
+      "data_rows": 223
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2008.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2008\\2008_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2008\\2008_games.csv",
+      "sha256": "92bd23188cce7d7ab67ccc33556d5c4b77bb7d88ee37ec6bb82d4816b34d0b1e",
+      "bytes": 146745,
+      "data_rows": 224
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2009.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2009\\2009_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2009\\2009_games.csv",
+      "sha256": "e39ae07fa8db2f51b05990c025f89ebaef3eaff3fe2df806be8bf3c62bba9461",
+      "bytes": 122043,
+      "data_rows": 186
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2010.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2010\\2010_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2010\\2010_games.csv",
+      "sha256": "6aabad6aa6511b9185fcaf00a65f4f08803d4df5467efb14ee343f95cfa911b5",
+      "bytes": 123196,
+      "data_rows": 187
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2011.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2011\\2011_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2011\\2011_games.csv",
+      "sha256": "f64e03e7276d4f13cba113d20c9088d255ddac0017ccd1a08522281593726a8c",
+      "bytes": 123664,
+      "data_rows": 189
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2012.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2012\\2012_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2012\\2012_games.csv",
+      "sha256": "e201aee6a75ebdf19c67624973e5afc25ec6ed3c52ef418e355bd9654b36a629",
+      "bytes": 124720,
+      "data_rows": 189
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2013.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2013\\2013_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2013\\2013_games.csv",
+      "sha256": "3eeafc0217fa4a060da465eacb7302594379ccf3aebaa9d9c8b95107ddc56dfe",
+      "bytes": 124022,
+      "data_rows": 189
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2014.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2014\\2014_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2014\\2014_games.csv",
+      "sha256": "353b0606ad70d529fc0673d41d971a2c92546b00492c181b27c0e1754a81af73",
+      "bytes": 145427,
+      "data_rows": 223
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2015.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2015\\2015_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2015\\2015_games.csv",
+      "sha256": "6e28de4885a491ba796b8463c65fa9934290503538082416ee59820da390ee43",
+      "bytes": 145656,
+      "data_rows": 224
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2016.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2016\\2016_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2016\\2016_games.csv",
+      "sha256": "9ec9a77fbff4d0fe7b460625b1cd5bacf960650ab1a8aec1125b8111970b7562",
+      "bytes": 144790,
+      "data_rows": 223
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2017.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2017\\2017_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2017\\2017_games.csv",
+      "sha256": "7b34b25aa106248ba0d379e832149e5e0f0a85640acb8afafe48483cb480e50c",
+      "bytes": 190609,
+      "data_rows": 294
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2018.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2018\\2018_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2018\\2018_games.csv",
+      "sha256": "cf6025b46f5f0f4dab564adc37f55229bab77f484e4f489071c81e887e3a9843",
+      "bytes": 145904,
+      "data_rows": 222
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2019.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2019\\2019_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2019\\2019_games.csv",
+      "sha256": "75b099df9ab7c59f4e5fe5a6e91dad52df3b58c30e4b8207fc22218e0d3ab595",
+      "bytes": 126920,
+      "data_rows": 195
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2020.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2020\\2020_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2020\\2020_games.csv",
+      "sha256": "b6c03a77011ea2587b543971c9a3b7900cc3c6d9e6c8b378a93bff9a747b8348",
+      "bytes": 154121,
+      "data_rows": 236
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2021.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2021\\2021_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2021\\2021_games.csv",
+      "sha256": "20a58e17f8b581fcad9a94230b2edd6e56bb2aec233cc9f35fca0e958ddf3c1e",
+      "bytes": 153697,
+      "data_rows": 235
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2022.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2022\\2022_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2022\\2022_games.csv",
+      "sha256": "f1775c781e852be5099206b16eb8b21c73b3c47ad035f7ed223429d9925cf251",
+      "bytes": 153770,
+      "data_rows": 236
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2023.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2023\\2023_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2023\\2023_games.csv",
+      "sha256": "fdaac2242a37dafb6caa9f6ccdef2628f33a5ee8307870c0dfa484abe22f4c05",
+      "bytes": 154219,
+      "data_rows": 236
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2024.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2024\\2024_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2024\\2024_games.csv",
+      "sha256": "7a8028ae12e8f856f55a9fc7d624a68bac6514c2239458413ab14323f3d6cba4",
+      "bytes": 153679,
+      "data_rows": 235
+    },
+    {
+      "source": "Danish_Metal_Ligaen_Ice_Hockey_CSVs\\Danish_Metal_Ligaen_Ice_Hockey_2025.csv",
+      "destination": "Previous Sports Results\\Ice Hockey\\Danish Metal Ligaen\\2025\\2025_games.csv",
+      "mirror": "Previous Sports Results\\Ice Hockey\\Metal Ligaen\\2025\\2025_games.csv",
+      "sha256": "0999ff6cc96a12f47dff853369d463eb8abf87f13a78e58b9e8e4d1a025d08c8",
+      "bytes": 152491,
+      "data_rows": 234
+    }
+  ]
+}

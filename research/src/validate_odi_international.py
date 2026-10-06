@@ -49,30 +49,28 @@ def main():
     for year in range(1975, 2026):
         exp_count = ground_truth[str(year)]["non_wc_matches"]
         
-        f_root = os.path.join(ROOT_DIR, f"ODI_International_{year}.csv")
         f_p1 = os.path.join(PREV1_DIR, str(year), f"{year}_games.csv")
         f_p2 = os.path.join(PREV2_DIR, str(year), f"{year}_games.csv")
         
-        # Check files exist
-        for fpath in [f_root, f_p1, f_p2]:
+        # Check archive files exist
+        for fpath in [f_p1, f_p2]:
             if not os.path.exists(fpath):
                 errors.append(f"Missing file: {fpath}")
                 continue
                 
-        # Validate content from root CSV
-        with open(f_root, "r", encoding="utf-8") as f:
+        # Validate content from archive CSV
+        with open(f_p1, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             rows = list(reader)
             
         if len(rows) != exp_count:
-            errors.append(f"Year {year}: Expected {exp_count} matches, but found {len(rows)} in {f_root}")
+            errors.append(f"Year {year}: Expected {exp_count} matches, but found {len(rows)} in {f_p1}")
             
-        # Verify identical counts in previous sports results
-        with open(f_p1, "r", encoding="utf-8") as f1, open(f_p2, "r", encoding="utf-8") as f2:
-            r1 = list(csv.DictReader(f1))
+        # Verify identical counts in both previous sports results
+        with open(f_p2, "r", encoding="utf-8") as f2:
             r2 = list(csv.DictReader(f2))
-            if len(r1) != len(rows):
-                errors.append(f"Year {year}: Count mismatch in {f_p1} ({len(r1)} vs {len(rows)})")
+            if len(r2) != len(rows):
+                errors.append(f"Year {year}: Count mismatch in {f_p2} ({len(r2)} vs {len(rows)})")
             if len(r2) != len(rows):
                 errors.append(f"Year {year}: Count mismatch in {f_p2} ({len(r2)} vs {len(rows)})")
                 
