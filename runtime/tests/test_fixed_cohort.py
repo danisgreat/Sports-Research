@@ -35,3 +35,61 @@ def test_fixed_cohort_promotion_fail_on_log_loss():
     assert res["delta_log_loss"] > 0.0
     assert res["is_promotable"] is False
     assert any("LogLoss" in r for r in res["promotion_reasons"])
+
+
+def test_fixed_cohort_empty_dataset_fails():
+    """Verify that an empty dataset strictly returns is_promotable=False."""
+    res = FixedCohortEvaluator.evaluate(np.array([]), np.array([]), np.array([]))
+    assert res["is_promotable"] is False
+    assert res["n_samples"] == 0
+    assert any("Empty" in r for r in res["promotion_reasons"])
+
+
+def test_fixed_cohort_nan_predictions_fail():
+    """Verify that predictions containing NaN strictly return is_promotable=False."""
+    y_true = np.array([1, 0, 1, 0] * 15)  # n = 60
+    p_base = np.array([0.5] * 60)
+    p_cand = np.array([0.5] * 60)
+    p_cand[5] = np.nan
+
+    res = FixedCohortEvaluator.evaluate(y_true, p_cand, p_base)
+    assert res["is_promotable"] is False
+    assert any("NaN" in r for r in res["promotion_reasons"])
+
+
+def test_fixed_cohort_insufficient_sample_size_fails():
+    """Verify that sample sizes below min_sample_size (default 50) fail promotion."""
+    y_true = np.array([1, 0, 1, 0] * 5)  # n = 20
+    p_base = np.array([0.5] * 20)
+    p_cand = np.array([0.9, 0.1] * 10)
+
+    res = FixedCohortEvaluator.evaluate(y_true, p_cand, p_base, min_sample_size=50)
+    assert res["is_promotable"] is False
+    assert any("minimum requirement" in r for r in res["promotion_reasons"])
+
+
+def test_fixed_cohort_mismatched_fixtures_and_lines_fail():
+    """Verify that mismatched event IDs or lines fail promotion (preventing line-selection fallacy)."""
+    y_true = np.array([1, 0, 1, 0] * 15)  # n = 60
+    p_base = np.array([0.5] * 60)
+    p_cand = np.array([0.7, 0.3] * 30)
+
+    ev_cand = [f"event_{i}" for i in range(60)]
+    ev_base = [f"event_{i}" for i in range(1, 61)]  # Mismatched fixtures
+
+    res_ev = FixedCohortEvaluator.evaluate(
+        y_true, p_cand, p_base,
+        event_ids_cand=ev_cand, event_ids_base=ev_base
+    )
+    assert res_ev["is_promotable"] is False
+    assert any("event IDs" in r for r in res_ev["promotion_reasons"])
+
+    lines_cand = [-2.5] * 60
+    lines_base = [-5.5] * 60  # Mismatched handicaps
+    res_line = FixedCohortEvaluator.evaluate(
+        y_true, p_cand, p_base,
+        lines_cand=lines_cand, lines_base=lines_base
+    )
+    assert res_line["is_promotable"] is False
+    assert any("lines" in r for r in res_line["promotion_reasons"])
+

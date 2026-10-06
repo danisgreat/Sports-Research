@@ -92,21 +92,32 @@ class PointInTimeFeatureStore:
         entity_id: str,
         cutoff_at: datetime
     ) -> Dict[str, Any]:
-        """Retrieve features for entity_id strictly known on or before cutoff_at."""
+        """Retrieve features for entity_id strictly known on or before cutoff_at.
+        
+        For each feature_name, selects the observation with the maximum known_at
+        strictly <= cutoff_at, regardless of insertion order into the store.
+        """
         if entity_id not in self._store:
             return {}
 
-        results: Dict[str, Any] = {}
+        # Select the most recent observation on or before cutoff_at for each feature
+        latest_by_feature: Dict[str, Dict[str, Any]] = {}
         for entry in self._store[entity_id]:
+            if entry["known_at"] <= cutoff_at:
+                fname = entry["feature_name"]
+                if fname not in latest_by_feature or entry["known_at"] > latest_by_feature[fname]["known_at"]:
+                    latest_by_feature[fname] = entry
+
+        results: Dict[str, Any] = {}
+        for fname, best_entry in latest_by_feature.items():
             self.auditor.verify_point_in_time(
                 match_id=entity_id,
-                feature_name=entry["feature_name"],
-                source_provider=entry["source"],
-                known_at=entry["known_at"],
+                feature_name=best_entry["feature_name"],
+                source_provider=best_entry["source"],
+                known_at=best_entry["known_at"],
                 cutoff_at=cutoff_at
             )
-            # Retain the most recently known value before or at cutoff
-            results[entry["feature_name"]] = entry["feature_value"]
+            results[fname] = best_entry["feature_value"]
 
         return results
 

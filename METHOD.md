@@ -6,7 +6,7 @@ October 5 administrative control repairs missing custody snapshots and restores 
 
 The subsequent [October 5 implementation](research/verification/implementation_2026-10-05/REPORT.md) aligns all current document authorities, removes the redundant closed mini pointer after archive readback, retains all eleven retrospective hypotheses as untested proposals, and reports every source-body custody failure.
 
-Status: **ACTIVE**. Method **MDS-2026.10.01-v8.0**. Control revision **CR-2026.10.06-NUMERICAL-1**. Scoring **SCV-2026.10.01-v3**.
+Status: **ACTIVE**. Method **MDS-2026.10.01-v7.1**. Control revision **CR-2026.10.05-I8**. Scoring **SCV-2026.10.01-v3**. Active freeze: [CONTROL_MANIFEST_2026-10-05-8.md](CONTROL_MANIFEST_2026-10-05-8.md). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
 
 The user's instruction authorizes the implementation of the numerical machine learning system: [NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md), [RULES_NHL.md](RULES_NHL.md), and the executable `runtime/` engine. [CURRENT_RULES.md](CURRENT_RULES.md) is the controlling operational manual. [research/README.md](research/README.md) and [runtime/README.md](runtime/README.md) describe executable workflows.
 

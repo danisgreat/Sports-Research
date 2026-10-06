@@ -88,20 +88,135 @@ def murphy_decomposition(y_true: np.ndarray, y_prob: np.ndarray, n_bins: int = 1
 
 
 class FixedCohortEvaluator:
-    """Evaluates candidate vs baseline strictly on the exact same cohort of fixtures and supplied lines."""
+    """Evaluates candidate vs baseline strictly on the exact same cohort of fixtures and supplied lines.
+    
+    Enforces the Multi-Metric Promotion Matrix:
+    - Fixed fixture and line cohort identity (prevents line-selection bias).
+    - Strict input validation: no empty sets, no NaNs/Infs, valid [0, 1] probabilities.
+    - Sample sufficiency: n >= min_sample_size (default 50).
+    - Probabilistic accuracy: Delta Brier <= -0.010.
+    - Information loss: Delta LogLoss <= 0.0.
+    - Hit rate on same line: Hit Rate (Candidate) >= Hit Rate (Baseline).
+    - Optional Cox calibration quality: beta in [0.90, 1.10], |alpha| <= 0.05.
+    """
 
     @staticmethod
     def evaluate(
         y_true: np.ndarray,
         p_cand: np.ndarray,
         p_base: np.ndarray,
-        decision_threshold: float = 0.50
+        decision_threshold: float = 0.50,
+        event_ids_cand: Optional[List[str]] = None,
+        event_ids_base: Optional[List[str]] = None,
+        lines_cand: Optional[List[float]] = None,
+        lines_base: Optional[List[float]] = None,
+        min_sample_size: int = 50,
+        require_calibration: bool = False,
     ) -> Dict[str, Union[float, int, bool, List[str]]]:
-        y_t = np.asarray(y_true, dtype=float)
-        p_c = np.asarray(p_cand, dtype=float)
-        p_b = np.asarray(p_base, dtype=float)
+        reasons = []
+        is_promotable = True
+
+        y_t = np.asarray(y_true, dtype=float) if y_true is not None else np.array([])
+        p_c = np.asarray(p_cand, dtype=float) if p_cand is not None else np.array([])
+        p_b = np.asarray(p_base, dtype=float) if p_base is not None else np.array([])
         n = len(y_t)
 
+        # 1. Non-empty check
+        if n == 0 or len(p_c) == 0 or len(p_b) == 0:
+            return {
+                "n_samples": 0,
+                "brier_candidate": float("nan"),
+                "brier_baseline": float("nan"),
+                "delta_brier": float("nan"),
+                "log_loss_candidate": float("nan"),
+                "log_loss_baseline": float("nan"),
+                "delta_log_loss": float("nan"),
+                "hit_rate_candidate": float("nan"),
+                "hit_rate_baseline": float("nan"),
+                "cal_slope_beta": float("nan"),
+                "cal_intercept_alpha": float("nan"),
+                "is_promotable": False,
+                "promotion_reasons": ["Empty dataset: sample size is 0"],
+            }
+
+        # Shape consistency check
+        if len(p_c) != n or len(p_b) != n:
+            return {
+                "n_samples": n,
+                "brier_candidate": float("nan"),
+                "brier_baseline": float("nan"),
+                "delta_brier": float("nan"),
+                "log_loss_candidate": float("nan"),
+                "log_loss_baseline": float("nan"),
+                "delta_log_loss": float("nan"),
+                "hit_rate_candidate": float("nan"),
+                "hit_rate_baseline": float("nan"),
+                "cal_slope_beta": float("nan"),
+                "cal_intercept_alpha": float("nan"),
+                "is_promotable": False,
+                "promotion_reasons": [f"Length mismatch: y_true ({n}), p_cand ({len(p_c)}), p_base ({len(p_b)})"],
+            }
+
+        # 2. NaN / Inf check
+        if np.any(np.isnan(p_c)) or np.any(np.isinf(p_c)):
+            is_promotable = False
+            reasons.append("Candidate probabilities contain NaN or Inf")
+        if np.any(np.isnan(p_b)) or np.any(np.isinf(p_b)):
+            is_promotable = False
+            reasons.append("Baseline probabilities contain NaN or Inf")
+        if np.any(np.isnan(y_t)) or np.any(np.isinf(y_t)):
+            is_promotable = False
+            reasons.append("True labels contain NaN or Inf")
+
+        # Probability bound check [0, 1]
+        if np.any(p_c < -1e-9) or np.any(p_c > 1.0 + 1e-9):
+            is_promotable = False
+            reasons.append("Candidate probabilities outside valid [0, 1] range")
+        if np.any(p_b < -1e-9) or np.any(p_b > 1.0 + 1e-9):
+            is_promotable = False
+            reasons.append("Baseline probabilities outside valid [0, 1] range")
+
+        # Immediate return if inputs are mathematically corrupt
+        if not is_promotable:
+            return {
+                "n_samples": n,
+                "brier_candidate": float("nan"),
+                "brier_baseline": float("nan"),
+                "delta_brier": float("nan"),
+                "log_loss_candidate": float("nan"),
+                "log_loss_baseline": float("nan"),
+                "delta_log_loss": float("nan"),
+                "hit_rate_candidate": float("nan"),
+                "hit_rate_baseline": float("nan"),
+                "cal_slope_beta": float("nan"),
+                "cal_intercept_alpha": float("nan"),
+                "is_promotable": False,
+                "promotion_reasons": reasons,
+            }
+
+        # 3. Minimum sample sufficiency check
+        if n < min_sample_size:
+            is_promotable = False
+            reasons.append(f"Sample size {n} is below minimum requirement of {min_sample_size}")
+
+        # 4. Cohort matching checks (prevent line selection fallacy)
+        if event_ids_cand is not None and event_ids_base is not None:
+            if list(event_ids_cand) != list(event_ids_base):
+                is_promotable = False
+                reasons.append("Candidate and baseline event IDs do not match identically (fixed fixture cohort violated)")
+        elif (event_ids_cand is None) != (event_ids_base is None):
+            is_promotable = False
+            reasons.append("Event IDs provided for only one model (cohort matching unverifiable)")
+
+        if lines_cand is not None and lines_base is not None:
+            if [float(x) for x in lines_cand] != [float(x) for x in lines_base]:
+                is_promotable = False
+                reasons.append("Candidate and baseline supplied lines do not match identically (line selection fallacy / fixed line cohort violated)")
+        elif (lines_cand is None) != (lines_base is None):
+            is_promotable = False
+            reasons.append("Supplied lines provided for only one model (line cohort matching unverifiable)")
+
+        # 5. Core scoring metrics
         br_c = brier_score(y_t, p_c)
         br_b = brier_score(y_t, p_b)
         delta_brier = br_c - br_b
@@ -113,9 +228,6 @@ class FixedCohortEvaluator:
         acc_c = float(np.mean((p_c >= decision_threshold) == y_t))
         acc_b = float(np.mean((p_b >= decision_threshold) == y_t))
 
-        reasons = []
-        is_promotable = True
-
         if delta_brier > -0.010:
             is_promotable = False
             reasons.append(f"Delta Brier {delta_brier:.4f} did not meet required threshold <= -0.010")
@@ -123,6 +235,41 @@ class FixedCohortEvaluator:
         if delta_ll > 0.0:
             is_promotable = False
             reasons.append(f"Delta LogLoss {delta_ll:.4f} deteriorated (> 0.0)")
+
+        if acc_c < acc_b:
+            is_promotable = False
+            reasons.append(f"Candidate hit rate {acc_c:.4f} is lower than baseline {acc_b:.4f}")
+
+        # 6. Cox calibration: logit(p_c) -> alpha + beta * logit(p_c)
+        from scipy.optimize import minimize
+        from scipy.special import logit
+        p_c_clipped = np.clip(p_c, 1e-6, 1.0 - 1e-6)
+        logit_p = logit(p_c_clipped)
+
+        def cal_objective(params):
+            a, b = params
+            z = a + b * logit_p
+            # Stable log-loss with logaddexp: log(1 + exp(z)) - y * z
+            loss = np.sum(np.logaddexp(0.0, z) - y_t * z)
+            loss += 1e-4 * (a ** 2 + (b - 1.0) ** 2)
+            return loss
+
+        cal_res = minimize(cal_objective, [0.0, 1.0], method="L-BFGS-B")
+        if cal_res.success:
+            alpha = float(cal_res.x[0])
+            beta = float(cal_res.x[1])
+        else:
+            alpha = 0.0
+            beta = 1.0
+
+        if require_calibration:
+            if beta < 0.90 or beta > 1.10:
+                is_promotable = False
+                reasons.append(f"Calibration slope beta={beta:.4f} outside acceptable range [0.90, 1.10]")
+
+            if abs(alpha) > 0.05:
+                is_promotable = False
+                reasons.append(f"Calibration intercept |alpha|={abs(alpha):.4f} exceeds threshold 0.05")
 
         return {
             "n_samples": n,
@@ -134,8 +281,10 @@ class FixedCohortEvaluator:
             "delta_log_loss": delta_ll,
             "hit_rate_candidate": acc_c,
             "hit_rate_baseline": acc_b,
+            "cal_slope_beta": beta,
+            "cal_intercept_alpha": alpha,
             "is_promotable": is_promotable,
-            "promotion_reasons": reasons
+            "promotion_reasons": reasons,
         }
 
 

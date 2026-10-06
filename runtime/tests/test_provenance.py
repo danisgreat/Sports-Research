@@ -68,3 +68,34 @@ def test_feature_store_dataframe_leakage():
     with pytest.raises(DataLeakageError):
         store.filter_dataframe(df, "known_at", t_cutoff)
 
+
+def test_feature_store_insertion_order_independence():
+    """Verify that inserting an older observation after a newer one does not overwrite the newer value."""
+    store = PointInTimeFeatureStore()
+    t_cutoff = datetime(2026, 10, 10, 12, 0, 0, tzinfo=timezone.utc)
+
+    # Insert newer observation first
+    store.insert_feature(
+        "team_1", "rating", 1650.0,
+        known_at=t_cutoff - timedelta(hours=1),
+        source="elo_v2"
+    )
+
+    # Insert older observation second (e.g. out-of-order ingestion)
+    store.insert_feature(
+        "team_1", "rating", 1500.0,
+        known_at=t_cutoff - timedelta(days=5),
+        source="elo_v1"
+    )
+
+    # Also insert future observation (should not be selected or raise leakage for cutoff query)
+    store.insert_feature(
+        "team_1", "rating", 1700.0,
+        known_at=t_cutoff + timedelta(hours=2),
+        source="elo_future"
+    )
+
+    features = store.get_features_as_of("team_1", t_cutoff)
+    assert features["rating"] == 1650.0  # Must be the latest as-of cutoff (1650.0), NOT 1500.0 or 1700.0
+
+

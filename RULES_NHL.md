@@ -1,6 +1,8 @@
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
 # National Hockey League (NHL) & Professional Ice Hockey Numerical Rules
 
-**Authority:** MDS-2026.10.01-v8.0 / CR-2026.10.06-NUMERICAL-1.
+**Authority:** MDS-2026.10.01-v7.1 / CR-2026.10.05-I8 (with numerical runtime extension CR-2026.10.06-NUMERICAL-1).
 **Companion Document:** [RULES_ICE_HOCKEY.md](RULES_ICE_HOCKEY.md) (Foundational Ice Hockey Governance).
 
 ---

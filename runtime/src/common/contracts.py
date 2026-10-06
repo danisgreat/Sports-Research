@@ -15,16 +15,40 @@ class ScoreDistribution:
     grid: np.ndarray  # Shape: (max_home + 1, max_away + 1)
     home_support: np.ndarray  # 1D array of possible home scores [0, 1, ..., H]
     away_support: np.ndarray  # 1D array of possible away scores [0, 1, ..., A]
+    p_match_home_win: Optional[float] = None
+    p_match_away_win: Optional[float] = None
+    p_match_draw: Optional[float] = None
 
     def __post_init__(self):
-        # Ensure valid probability distribution
+        # Validate grid numerical validity and non-negativity
+        if np.any(np.isnan(self.grid)) or np.any(np.isinf(self.grid)):
+            raise ValueError("Score distribution grid contains NaN or Inf")
+        if np.any(self.grid < -1e-12):
+            raise ValueError("Score distribution grid cannot contain negative probability mass")
+
+        self.grid = np.clip(self.grid, 0.0, None)
         total_mass = float(np.sum(self.grid))
-        if not np.isclose(total_mass, 1.0, atol=1e-3):
-            # Normalize to 1.0 if minor numerical drift
-            if total_mass > 0:
-                self.grid = self.grid / total_mass
-            else:
-                raise ValueError("Score distribution grid must have non-zero probability mass")
+        if total_mass <= 0 or not np.isfinite(total_mass):
+            raise ValueError("Score distribution grid must have positive finite mass")
+
+        # Always renormalize to unit probability
+        self.grid = self.grid / total_mass
+
+        if self.grid.shape != (len(self.home_support), len(self.away_support)):
+            raise ValueError(
+                f"Grid shape {self.grid.shape} does not match support lengths "
+                f"({len(self.home_support)}, {len(self.away_support)})"
+            )
+
+        # Validate decoupled match win probabilities if provided
+        for name, val in [
+            ("p_match_home_win", self.p_match_home_win),
+            ("p_match_away_win", self.p_match_away_win),
+            ("p_match_draw", self.p_match_draw),
+        ]:
+            if val is not None:
+                if val < -1e-12 or val > 1.0 + 1e-12 or not np.isfinite(val):
+                    raise ValueError(f"{name} must be in [0, 1], got {val}")
 
     @classmethod
     def from_independent_marginals(cls, p_home: np.ndarray, p_away: np.ndarray) -> "ScoreDistribution":
@@ -72,19 +96,28 @@ class ScoreDistribution:
         )
 
     def p_home_win(self) -> float:
-        """P(Home Score > Away Score)"""
-        mask = np.greater.outer(self.home_support, self.away_support)
-        return float(np.sum(self.grid[mask]))
+        """P(Home Score > Away Score) or decoupled match win probability."""
+        if self.p_match_home_win is not None:
+            return float(np.clip(self.p_match_home_win, 0.0, 1.0))
+        home_col = self.home_support[:, np.newaxis]
+        away_row = self.away_support[np.newaxis, :]
+        return float(np.sum(self.grid[home_col > away_row]))
 
     def p_away_win(self) -> float:
-        """P(Away Score > Home Score)"""
-        mask = np.less.outer(self.home_support, self.away_support)
-        return float(np.sum(self.grid[mask]))
+        """P(Away Score > Home Score) or decoupled match win probability."""
+        if self.p_match_away_win is not None:
+            return float(np.clip(self.p_match_away_win, 0.0, 1.0))
+        home_col = self.home_support[:, np.newaxis]
+        away_row = self.away_support[np.newaxis, :]
+        return float(np.sum(self.grid[away_row > home_col]))
 
     def p_draw(self) -> float:
-        """P(Home Score == Away Score)"""
-        mask = np.equal.outer(self.home_support, self.away_support)
-        return float(np.sum(self.grid[mask]))
+        """P(Home Score == Away Score) or decoupled match draw probability."""
+        if self.p_match_draw is not None:
+            return float(np.clip(self.p_match_draw, 0.0, 1.0))
+        home_col = self.home_support[:, np.newaxis]
+        away_row = self.away_support[np.newaxis, :]
+        return float(np.sum(self.grid[home_col == away_row]))
 
     def p_double_chance(self, selection: str) -> float:
         """Selections: '1X' (Home or Draw), 'X2' (Draw or Away), '12' (Home or Away)."""
@@ -115,33 +148,49 @@ class ScoreDistribution:
 
     def p_over(self, line: float) -> float:
         """P(Home + Away > line)"""
-        tot_matrix = np.add.outer(self.home_support, self.away_support)
+        home_col = self.home_support[:, np.newaxis]
+        away_row = self.away_support[np.newaxis, :]
+        tot_matrix = home_col + away_row
         return float(np.sum(self.grid[tot_matrix > line]))
 
     def p_under(self, line: float) -> float:
         """P(Home + Away < line)"""
-        tot_matrix = np.add.outer(self.home_support, self.away_support)
+        home_col = self.home_support[:, np.newaxis]
+        away_row = self.away_support[np.newaxis, :]
+        tot_matrix = home_col + away_row
         return float(np.sum(self.grid[tot_matrix < line]))
 
     def p_push_total(self, line: float) -> float:
         """P(Home + Away == line)"""
-        tot_matrix = np.add.outer(self.home_support, self.away_support)
+        home_col = self.home_support[:, np.newaxis]
+        away_row = self.away_support[np.newaxis, :]
+        tot_matrix = home_col + away_row
         return float(np.sum(self.grid[tot_matrix == line]))
 
     def p_home_cover(self, spread: float) -> float:
         """P(Home Score - Away Score + spread > 0)."""
-        margin_matrix = np.subtract.outer(self.home_support, self.away_support)
-        return float(np.sum(self.grid[margin_matrix + spread > 0]))
+        home_col = self.home_support[:, np.newaxis]
+        away_row = self.away_support[np.newaxis, :]
+        h_margin = home_col - away_row
+        return float(np.sum(self.grid[h_margin + spread > 0]))
 
     def p_away_cover(self, spread: float) -> float:
         """P(Away Score - Home Score + spread > 0)."""
-        margin_matrix = np.subtract.outer(self.away_support, self.home_support)
-        return float(np.sum(self.grid[margin_matrix + spread > 0]))
+        home_col = self.home_support[:, np.newaxis]
+        away_row = self.away_support[np.newaxis, :]
+        a_margin = away_row - home_col
+        return float(np.sum(self.grid[a_margin + spread > 0]))
 
-    def p_push_spread(self, spread: float) -> float:
-        """P(Home Score - Away Score + spread == 0)."""
-        margin_matrix = np.subtract.outer(self.home_support, self.away_support)
-        return float(np.sum(self.grid[margin_matrix + spread == 0]))
+    def p_push_spread(self, spread: float, side: str = "home") -> float:
+        """P(Margin + spread == 0)."""
+        home_col = self.home_support[:, np.newaxis]
+        away_row = self.away_support[np.newaxis, :]
+        if side.lower().strip() == "away":
+            a_margin = away_row - home_col
+            return float(np.sum(self.grid[a_margin + spread == 0]))
+        else:
+            h_margin = home_col - away_row
+            return float(np.sum(self.grid[h_margin + spread == 0]))
 
     def p_team_total_over(self, team: str, line: float) -> float:
         """P(Team score > line)"""

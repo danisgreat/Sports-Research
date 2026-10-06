@@ -97,3 +97,22 @@ class BaseSportEngine(ABC):
 
         return results
 
+    def save_artifact(self, filepath: str) -> None:
+        """Serialize engine parameters and state to disk."""
+        import pickle
+        from pathlib import Path
+        p = Path(filepath)
+        p.parent.mkdir(parents=True, exist_ok=True)
+        with open(p, "wb") as f:
+            pickle.dump(self, f)
+
+    @classmethod
+    def load_artifact(cls, filepath: str) -> "BaseSportEngine":
+        """Load engine parameters and state from disk."""
+        import pickle
+        with open(filepath, "rb") as f:
+            engine = pickle.load(f)
+        if not isinstance(engine, BaseSportEngine):
+            raise TypeError(f"Loaded artifact is not a BaseSportEngine instance: {type(engine)}")
+        return engine
+

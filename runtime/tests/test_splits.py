@@ -60,3 +60,51 @@ def test_short_dataset_fallback():
     assert len(splits[0].train_indices) > 0
     assert len(splits[0].test_indices) > 0
 
+    s = splits[0]
+    train_dates = pd.to_datetime(df.iloc[s.train_indices]["match_date"])
+    tune_dates = pd.to_datetime(df.iloc[s.tune_indices]["match_date"])
+    cal_dates = pd.to_datetime(df.iloc[s.cal_indices]["match_date"])
+    test_dates = pd.to_datetime(df.iloc[s.test_indices]["match_date"])
+
+    # Strict chronological ordering
+    assert train_dates.max() < tune_dates.min()
+    assert tune_dates.max() < cal_dates.min()
+    assert cal_dates.max() < test_dates.min()
+
+    # Embargo buffer strictly enforced between folds
+    assert (tune_dates.min() - train_dates.max()).days >= 7
+    assert (cal_dates.min() - tune_dates.max()).days >= 7
+    assert (test_dates.min() - cal_dates.max()).days >= 7
+
+
+def test_splits_never_separate_identical_timestamps():
+    """Verify that multiple observations sharing the exact same timestamp are never split across folds."""
+    # 5 events per day across 30 days (150 rows)
+    base_date = datetime(2025, 3, 1)
+    dates = []
+    for day in range(30):
+        d = base_date + timedelta(days=day)
+        dates.extend([d] * 5)  # 5 rows sharing the exact timestamp
+
+    df = pd.DataFrame({
+        "match_id": [f"m_{i}" for i in range(len(dates))],
+        "match_date": dates
+    })
+
+    splitter = PurgedRollingOriginSplit(embargo_days=3)
+    splits = list(splitter.split(df, "match_date"))
+    assert len(splits) == 1
+
+    s = splits[0]
+    train_d = set(pd.to_datetime(df.iloc[s.train_indices]["match_date"]))
+    tune_d = set(pd.to_datetime(df.iloc[s.tune_indices]["match_date"]))
+    cal_d = set(pd.to_datetime(df.iloc[s.cal_indices]["match_date"]))
+    test_d = set(pd.to_datetime(df.iloc[s.test_indices]["match_date"]))
+
+    # Date sets must have zero overlap
+    assert len(train_d.intersection(tune_d)) == 0
+    assert len(tune_d.intersection(cal_d)) == 0
+    assert len(cal_d.intersection(test_d)) == 0
+    assert len(train_d.intersection(test_d)) == 0
+
+

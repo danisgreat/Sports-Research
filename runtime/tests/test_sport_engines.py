@@ -130,3 +130,29 @@ def test_nhl_engine():
     assert len(contracts) == 3
     assert contracts[1].stated_prob >= contracts[0].stated_prob - 1e-9
 
+
+def test_soccer_engine_fit_and_serialization(tmp_path):
+    """Verify fitting match records to SoccerEngine and persisting artifact."""
+    engine = SoccerEngine(xi=0.002, l2_reg=0.05)
+    train_matches = [
+        {"home": "Liverpool", "away": "Chelsea", "home_goals": 2, "away_goals": 1, "days_ago": 5},
+        {"home": "Chelsea", "away": "Liverpool", "home_goals": 1, "away_goals": 1, "days_ago": 20},
+        {"home": "Arsenal", "away": "Liverpool", "home_goals": 0, "away_goals": 2, "days_ago": 15},
+    ]
+    engine.fit(train_matches)
+    assert engine.is_fitted
+    assert "Liverpool" in engine.dixon_coles.team_idx
+
+    dist1 = engine.predict_distribution({"home_team": "Liverpool", "away_team": "Chelsea"})
+    assert np.isclose(np.sum(dist1.grid), 1.0, atol=1e-4)
+
+    # Test serialization roundtrip
+    model_path = str(tmp_path / "soccer_dixon_coles.pkl")
+    engine.save_artifact(model_path)
+
+    loaded = SoccerEngine.load_artifact(model_path)
+    assert loaded.is_fitted
+    dist2 = loaded.predict_distribution({"home_team": "Liverpool", "away_team": "Chelsea"})
+    np.testing.assert_allclose(dist1.grid, dist2.grid)
+
+

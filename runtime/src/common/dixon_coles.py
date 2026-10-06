@@ -84,9 +84,24 @@ class DixonColesEngine:
                 lambda_h = np.exp(alphas[i] + betas[j] + gamma)
                 mu_a = np.exp(alphas[j] + betas[i])
 
-                p_base = poisson.pmf(hg, lambda_h) * poisson.pmf(ag, mu_a)
+                # Dixon-Coles low-score adjustments must all be positive
+                min_tau = min(
+                    self.tau(0, 0, lambda_h, mu_a, rho),
+                    self.tau(0, 1, lambda_h, mu_a, rho),
+                    self.tau(1, 0, lambda_h, mu_a, rho),
+                    self.tau(1, 1, lambda_h, mu_a, rho)
+                )
+                if min_tau <= 1e-4:
+                    return 1e8 + 1e5 * max(0.0, 1e-4 - min_tau)
+
                 adj = self.tau(hg, ag, lambda_h, mu_a, rho)
-                p_joint = max(p_base * adj, 1e-12)
+                if adj <= 0.0:
+                    return 1e8
+
+                p_base = poisson.pmf(hg, lambda_h) * poisson.pmf(ag, mu_a)
+                p_joint = p_base * adj
+                if p_joint <= 0.0:
+                    return 1e8
 
                 nll -= weights[k] * np.log(p_joint)
 
@@ -100,12 +115,22 @@ class DixonColesEngine:
         init_params[2 * n_teams] = 0.25  # Initial home advantage
         init_params[2 * n_teams + 1] = -0.04  # Initial rho
 
-        res = minimize(objective, init_params, method="BFGS")
+        # Constrain parameters to mathematically and empirically valid domains
+        # Alphas and betas bounded to reasonable log-rate differences
+        # Home advantage in [0.0, 1.5]
+        # Dixon-Coles rho strictly bounded to [-0.25, 0.25]
+        bounds = (
+            [(-3.0, 3.0)] * (2 * n_teams)
+            + [(0.0, 1.5)]
+            + [(-0.25, 0.25)]
+        )
+
+        res = minimize(objective, init_params, method="L-BFGS-B", bounds=bounds)
         if res.success:
             self.attacks = res.x[:n_teams]
             self.defences = res.x[n_teams:2 * n_teams]
             self.home_adv = float(res.x[2 * n_teams])
-            self.rho = float(res.x[2 * n_teams + 1])
+            self.rho = float(np.clip(res.x[2 * n_teams + 1], -0.25, 0.25))
         else:
             self.attacks = np.zeros(n_teams)
             self.defences = np.zeros(n_teams)
@@ -129,8 +154,17 @@ class DixonColesEngine:
             lambda_h = 1.45
             mu_a = 1.20
         else:
-            lambda_h = np.exp(self.attacks[idx_h] + self.defences[idx_a] + self.home_adv)
-            mu_a = np.exp(self.attacks[idx_a] + self.defences[idx_h])
+            lambda_h = float(np.exp(self.attacks[idx_h] + self.defences[idx_a] + self.home_adv))
+            mu_a = float(np.exp(self.attacks[idx_a] + self.defences[idx_h]))
+
+        # Validate that all low-score adjustments are strictly positive
+        for (x, y) in [(0, 0), (0, 1), (1, 0), (1, 1)]:
+            factor = self.tau(x, y, lambda_h, mu_a, self.rho)
+            if factor <= 0.0:
+                raise ValueError(
+                    f"Invalid Dixon-Coles parameters: tau({x},{y})={factor} <= 0 "
+                    f"for lambda_h={lambda_h:.3f}, mu_a={mu_a:.3f}, rho={self.rho:.4f}"
+                )
 
         grid = np.zeros((max_goals + 1, max_goals + 1), dtype=float)
         p_h = poisson.pmf(np.arange(max_goals + 1), lambda_h)
@@ -139,7 +173,7 @@ class DixonColesEngine:
         for x in range(max_goals + 1):
             for y in range(max_goals + 1):
                 adj = self.tau(x, y, lambda_h, mu_a, self.rho)
-                grid[x, y] = p_h[x] * p_a[y] * max(adj, 0.0)
+                grid[x, y] = p_h[x] * p_a[y] * adj
 
         grid /= np.sum(grid)
         return ScoreDistribution(
