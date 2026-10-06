@@ -1,6 +1,7 @@
 # Local publisher snapshots with restricted redistribution and odds-bearing feeds.
 research/data/benchmark/
 research/data/*_cache/
+research/data/cricsheet_odi/
 research/**/__pycache__/
 research/.pytest_cache/
 

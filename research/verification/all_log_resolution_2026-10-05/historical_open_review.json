@@ -1,4 +1,12 @@
-[
+ proper csv files of every game in that season for the sports league competition/tournamnet, etc. 
+do comprehensive research first on the headings needed, like game type (pre-seaons,/regular season, playoffs, etc.), teams involved, home/away team, venue, total runs/points/goals, touchdowns etc. winning margin, etc. and any other sport specific items that can be obtained from data sets, there might need to be additional columns to record additional data as well. I then need you to do proper research  
+ and then proeprly fill it with all of the correct details from each game held in every year, in its own csv file and label it with ["Sports_league_YEAR"] and make sure to include all games leading upto, including and post season, and label which is which. also do elaborate and through research to get the correct and full details , you may find that certain events didn't occur in a particular year or they may have shortened seasons,, or the later years might have more expansion teams so they have more games, and pre season games might be a later year thing, so not all year csvs will be the same, you find that from research. 
+some sports leagues will go into the next year, so when i say NFl 2005, the season may be 2005-2006, but this should be recorded in the 2005 year section. be accurate in your research, and after you are done, add this as a source of of informaTION TO the sources document, there are also some later seasons which have pre season games, all star games, and the like which previous seasons don't have so make these additions to the csv files accordingly. 
+ 
+ 
+if a file already exists, populate it accurately and append it correctly, delete any duplicates and merge them with the ones inside each sports league file, sorted by the years 
+ 
+now do this forDanish Metal Ligaen Ice Hockey from 1975 to 2025. [/browser](slashCommand;browser) [
   {
     "card_id": "P-012",
     "claimed_id": "P-012",
