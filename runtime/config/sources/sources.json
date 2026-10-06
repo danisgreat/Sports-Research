@@ -71,6 +71,15 @@
       "known_at_cutoff": "puck_drop_utc",
       "license": "open_attribution",
       "grain": "shot_and_game"
+    },
+    "tennis_abstract": {
+      "sport": "tennis",
+      "format": "csv",
+      "url": "https://github.com/JeffSackmann",
+      "update_cadence": "daily_post_tournament",
+      "known_at_cutoff": "match_start_utc",
+      "license": "cc_by_nc_sa_4.0",
+      "grain": "point_and_match"
     }
   }
 }

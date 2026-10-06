@@ -70,6 +70,12 @@
   - **Features**: Shot-by-shot data with 124 attributes, expected goals (xG), shot distance/angle, rebound flags, manpower state (5v5, 5v4, 4v5, empty net).
   - **Known Limitations**: Blocked shots are excluded from MoneyPuck raw tables; shot-attempt and possession baselines derived from NHL play-by-play.
 
+### 2.9 Tennis
+- **Primary Match & Point-by-Point Source**: Tennis Abstract & Jeff Sackmann Match Charting Project (`github.com/JeffSackmann`)
+  - **Coverage**: ATP, WTA, and Grand Slam matches 1968–Present; point-by-point charted matches 2011–Present.
+  - **Features**: Opponent-adjusted serve/return points won, first-serve %, break points converted/saved, surface splits (Clay, Hard, Grass), Elo ratings.
+  - **Regime Boundary**: Surface is a hard regime boundary; best-of-3 vs best-of-5 endpoint rules strictly separated.
+
 ---
 
 ## 3. Source Quality & Validation Matrix
@@ -85,6 +91,7 @@
 | NRL | nrlR / RLP | Parquet | Primary | Daily | Yes (regime-checked: 2020+) |
 | Soccer | StatsBomb / Football-Data | JSON/CSV | Primary | Weekly / Daily | Yes (halftime/fulltime splits) |
 | NHL | MoneyPuck / NHL API | CSV/JSON | Primary | Daily | Yes (shot timestamps / period) |
+| Tennis | Tennis Abstract / Sackmann MCP | CSV | Primary | Daily / Post-tournament | Yes (point/match sequence) |
 
 ---
 

@@ -1,49 +1,54 @@
 {
   "models": {
-    "A0": {
+    "A0_EMPIRICAL": {
       "name": "Marginal Population Baseline",
       "type": "empirical_unconditional",
       "description": "Historical marginal mean and empirical distribution over the relevant competition population"
     },
-    "A1": {
-      "name": "Linear Ridge Rating Engine",
-      "type": "ridge_regression",
-      "description": "L2 regularized paired comparison rating with home advantage and competition-specific key number weights"
+    "ELO_RATING": {
+      "name": "Dynamic Elo / Skill Rating",
+      "type": "dynamic_rating",
+      "description": "Surface and home-adjusted latent skill rating tracking with uncertainty and draw modeling"
     },
-    "A2": {
-      "name": "Possession Drive Markov Simulator",
-      "type": "markov_monte_carlo",
-      "description": "Discrete state transition simulator modeling possession sequences, ball-by-ball, drive, or base-out state chains"
+    "BRADLEY_TERRY_DRAW": {
+      "name": "Draw-Aware Bradley-Terry Model",
+      "type": "paired_comparison",
+      "description": "Regularized paired comparison rating with explicit draw probability parameterization (Rao-Davidson extension)"
     },
-    "A3": {
-      "name": "Bivariate Negative Binomial / Poisson",
-      "type": "bivariate_distribution",
-      "description": "Joint score generator with explicit covariance / Frank copula structure between team totals"
-    },
-    "A4": {
-      "name": "Gradient Boosted Tree Regressor",
-      "type": "lightgbm_quantile",
-      "description": "Quantile and point regression on point-in-time engineered features with monotonic constraints"
-    },
-    "A5": {
-      "name": "State-Space Kalman Rating",
-      "type": "kalman_dynamic",
-      "description": "Time-varying latent team and player skill ratings with drift between seasons and match rounds"
-    },
-    "A6": {
-      "name": "Hierarchical Bayesian GLM",
+    "HIERARCHICAL_BAYESIAN": {
+      "name": "Hierarchical Bayesian Attack-Defence Model",
       "type": "bayesian_hierarchical",
-      "description": "Multi-level shrinkage across leagues, teams, venues, and individual participant regimes"
+      "description": "Multi-level shrinkage across teams and leagues sharing information while retaining exceptional performance"
     },
-    "A7": {
-      "name": "Deep Sequence Embedder",
-      "type": "temporal_transformer",
-      "description": "Multi-head attention over event sequences and player interaction graphs"
+    "DIXON_COLES": {
+      "name": "Dixon-Coles Poisson Engine",
+      "type": "bivariate_poisson",
+      "description": "Dynamic attack and defence ratings with home advantage, time decay weighting, and low-score correlation parameter rho"
     },
-    "A8": {
-      "name": "Regularized Stacking Ensemble",
+    "NEGATIVE_BINOMIAL": {
+      "name": "Negative Binomial Dispersion Regressor",
+      "type": "count_regression",
+      "description": "Overdispersed count model capturing conditional variance > mean for baseball runs, soccer corners, and cricket components"
+    },
+    "STUDENT_T_JOINT": {
+      "name": "Student-t Joint Score & Margin-Total Model",
+      "type": "joint_distribution",
+      "description": "Heavy-tailed bivariate Student-t distribution capturing tail events and joint correlation between team scores"
+    },
+    "CATBOOST": {
+      "name": "CatBoost Nonlinear Challenger",
+      "type": "gradient_boosting",
+      "description": "First nonlinear boosted tree challenger handling high-cardinality categorical variables, interactions, and ordered boosting"
+    },
+    "NGBOOST": {
+      "name": "Natural Gradient Boosting (NGBoost)",
+      "type": "distributional_boosting",
+      "description": "Distributional boosting estimating conditional distribution parameters, allowing prediction uncertainty to vary by matchup"
+    },
+    "CHRONOLOGICAL_STACKING": {
+      "name": "Chronological Out-of-Fold Stacking Blender",
       "type": "super_learner_ensemble",
-      "description": "Non-negative constrained stacking blender evaluated on holdout calibration split"
+      "description": "Non-negative constrained blending ensemble fit on out-of-fold calibration predictions and evaluated on forward test data"
     },
     "BIGQUERY_ML_AI_FORECAST": {
       "name": "BigQuery ML AI.FORECAST / ARIMA_PLUS",
@@ -57,4 +62,3 @@
     }
   }
 }
-

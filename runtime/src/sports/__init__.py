@@ -1,4 +1,4 @@
-"""Sport engine implementations for 8 core sports."""
+"""Sport engine implementations for 9 supported sports."""
 
 from .base import BaseSportEngine
 from .cricket.engine import CricketEngine
@@ -9,6 +9,7 @@ from .afl.engine import AFLEngine
 from .nrl.engine import NRLEngine
 from .soccer.engine import SoccerEngine
 from .nhl.engine import NHLEngine
+from .tennis.engine import TennisEngine
 
 __all__ = [
     "BaseSportEngine",
@@ -20,5 +21,5 @@ __all__ = [
     "NRLEngine",
     "SoccerEngine",
     "NHLEngine",
+    "TennisEngine",
 ]
-

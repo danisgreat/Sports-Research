@@ -86,3 +86,56 @@ def murphy_decomposition(y_true: np.ndarray, y_prob: np.ndarray, n_bins: int = 1
         "uncertainty": float(uncertainty)
     }
 
+
+class FixedCohortEvaluator:
+    """Evaluates candidate vs baseline strictly on the exact same cohort of fixtures and supplied lines."""
+
+    @staticmethod
+    def evaluate(
+        y_true: np.ndarray,
+        p_cand: np.ndarray,
+        p_base: np.ndarray,
+        decision_threshold: float = 0.50
+    ) -> Dict[str, Union[float, int, bool, List[str]]]:
+        y_t = np.asarray(y_true, dtype=float)
+        p_c = np.asarray(p_cand, dtype=float)
+        p_b = np.asarray(p_base, dtype=float)
+        n = len(y_t)
+
+        br_c = brier_score(y_t, p_c)
+        br_b = brier_score(y_t, p_b)
+        delta_brier = br_c - br_b
+
+        ll_c = log_loss(y_t, p_c)
+        ll_b = log_loss(y_t, p_b)
+        delta_ll = ll_c - ll_b
+
+        acc_c = float(np.mean((p_c >= decision_threshold) == y_t))
+        acc_b = float(np.mean((p_b >= decision_threshold) == y_t))
+
+        reasons = []
+        is_promotable = True
+
+        if delta_brier > -0.010:
+            is_promotable = False
+            reasons.append(f"Delta Brier {delta_brier:.4f} did not meet required threshold <= -0.010")
+
+        if delta_ll > 0.0:
+            is_promotable = False
+            reasons.append(f"Delta LogLoss {delta_ll:.4f} deteriorated (> 0.0)")
+
+        return {
+            "n_samples": n,
+            "brier_candidate": br_c,
+            "brier_baseline": br_b,
+            "delta_brier": delta_brier,
+            "log_loss_candidate": ll_c,
+            "log_loss_baseline": ll_b,
+            "delta_log_loss": delta_ll,
+            "hit_rate_candidate": acc_c,
+            "hit_rate_baseline": acc_b,
+            "is_promotable": is_promotable,
+            "promotion_reasons": reasons
+        }
+
+

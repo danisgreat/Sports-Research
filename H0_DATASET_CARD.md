@@ -59,6 +59,7 @@ $$\text{If } known\_at > cutoff\_at \implies \text{Feature is marked MISSING and
 | `H0-NRL-v1` | Rugby League | NRL Premiership | 2020–2026 | Match / Half / Team | `nrlR` / Rugby League Project |
 | `H0-SOCCER-EPL-v1` | Soccer | English Premier League | 2010–2026 | Match / Half / Team | Football-Data.co.uk / StatsBomb |
 | `H0-NHL-v1` | Ice Hockey | NHL Regular Season | 2010–2026 | Period / Shot / Game | MoneyPuck / NHL API |
+| `H0-TENNIS-v1` | Tennis | ATP & WTA Tour Main Draws | 2011–2026 | Point / Game / Set / Match | Tennis Abstract / Sackmann MCP |
 
 ---
 
@@ -84,11 +85,12 @@ Random splits (e.g. k-fold cross-validation or random 80/20) are **strictly forb
 Models are trained on full-event target distributions, **never on individual bookmaker lines**:
 
 - **Basketball**: Joint team score matrix $(S_{home}, S_{away}) \implies P(\text{Win}), P(\text{Margin} \ge M), P(\text{Total} \ge T)$.
-- **Cricket**: Test Day/Session Runs $R \sim \text{PMF}(r)$, Wickets $W \sim \text{PMF}(w)$.
+- **Cricket**: Test Day/Session Runs $R \sim \text{PMF}(r)$, Wickets $W \sim \text{PMF}(w)$; chase stopping rule $S_2 \le S_1 + 1$.
 - **American Football**: Team drives and discrete scoring events.
 - **Baseball**: Team runs from starter duration + bullpen degradation chains.
 - **AFL**: Team scoring shots and conversion $(G, B) \implies 6G + B$.
 - **NRL**: Sets and tries/conversions $(T, C) \implies 4T + 2C + \text{FG}$.
 - **Soccer**: Team goals $(G_{home}, G_{away})$ and independent corners count $(C_{home}, C_{away})$.
 - **NHL**: Team goals $(G_{home}, G_{away})$ with explicit regulation and empty-net tail components.
+- **Tennis**: Match winner and joint games $(G_1, G_2) \implies P(\text{Match Win}), P(\text{Handicap } \Delta G), P(\text{Total Games } \ge K)$.
 
