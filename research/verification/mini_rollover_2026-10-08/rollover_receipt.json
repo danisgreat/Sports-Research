@@ -1,0 +1,18 @@
+{
+  "previous_active": "prediction logs/PREDICTION_LOG_COMBINED_6.md",
+  "new_active": "prediction logs/PREDICTION_LOG_COMBINED_7.md",
+  "highest_committed": "P-549",
+  "next_before": "P-550",
+  "next_after": "P-550",
+  "id_consumed_by_rollover": false,
+  "ledger_sha256_before": "2b551e3702fe56577c7e1ce840fada5ce26bd257788edf6bdffca6616baae033",
+  "ledger_sha256_after": "2b551e3702fe56577c7e1ce840fada5ce26bd257788edf6bdffca6616baae033",
+  "previous_log_prefix_bytes": 1343675,
+  "previous_log_prefix_sha256": "a7ac46922087ba4c36b9a2610a7201b278bef3276de4d232595b1738018f2c30",
+  "rollover_append_sha256": "e2a183bb259303c208a2d703f66390b93825a062b869a2e673f04552d5f0b30e",
+  "new_header_sha256": "a7820d98db8cdd9aff2aceb55da7f678e7dc4b9d76a7458763753c40a791c3fa",
+  "new_header_bytes": 3259,
+  "legacy_original_block_bytes": 141740,
+  "legacy_original_block_sha256": "c4d497bf339010eae2ff5df23a2d76290983585671666e74791618342565cf30",
+  "rollover_append_bytes": 679
+}

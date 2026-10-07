@@ -3,6 +3,15 @@ import re,sys
 from pathlib import Path
 from research.src import control_manifest as frozen
 ROOT=Path(__file__).resolve().parents[2]
+def controlled_bytes(path):
+    """Normalize controlled runtime text, preserving raw evidence byte checks."""
+    relative=path.relative_to(ROOT).as_posix()
+    runtime_text=(relative.startswith(('runtime/src/','runtime/tests/','runtime/config/','runtime/r_ingestion/'))
+                  or relative=='runtime/pyproject.toml')
+    if runtime_text and path.suffix in {'.py','.json','.R','.toml','.txt'}:
+        text=path.read_bytes().decode('utf-8-sig').replace('\r\n','\n').replace('\r','\n')
+        return 'CRLF',text.replace('\n','\r\n').encode('utf-8')
+    return frozen.normalization(path)
 def selected():
     text=(ROOT/'METHOD.md').read_text(encoding='utf-8-sig')
     name=re.search(r'Active freeze:\s*\[([^\]]+)\]\(\1\)',text)
@@ -12,6 +21,9 @@ def selected():
         raise ValueError('METHOD needs exact active method/control/manifest')
     old=frozen.NAME;frozen.NAME=name[1];frozen.EXCLUDE=frozen.EXCLUDE-{old}|{frozen.NAME}
     frozen.APPEND_STORES=frozen.APPEND_STORES+('research/issued_research/','research/experiments/runs/')
+    from research.src.combined_log import active_log
+    # The header and each later append have separate canonical custody.
+    frozen.EXCLUDE=frozen.EXCLUDE|{active_log(ROOT).relative_to(ROOT).as_posix()}
     def custom_inventory():
         paths=list(ROOT.glob("*.md"))
         paths.extend(p for p in (ROOT/".github").rglob("*") if p.is_file())
@@ -33,7 +45,7 @@ def selected():
             rel=path.relative_to(ROOT).as_posix()
             if rel in frozen.EXCLUDE or rel=="research/canonical_ledger.jsonl" or rel.startswith(frozen.APPEND_STORES):continue
             if "/benchmark/" in f"/{rel}/" or "/cricsheet_odi/" in f"/{rel}/" or any(part.endswith("_cache") for part in rel.split("/")) or "__pycache__" in rel or ".pytest_cache" in rel or path.suffix==".pyc":continue
-            mode,data=frozen.normalization(path)
+            mode,data=controlled_bytes(path)
             rows.append((rel,mode,frozen.hashlib.sha256(data).hexdigest(),len(data)))
         return rows
     frozen.inventory=custom_inventory

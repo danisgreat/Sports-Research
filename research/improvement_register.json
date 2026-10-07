@@ -133,5 +133,13 @@
       "proposals": 4,
       "status": "PROPOSED_NOT_TESTED"
     }
+  ],
+  "pending_retrospective_review_registers": [
+    {
+      "path": "research/verification/mini_rollover_2026-10-08/improvement_proposals.json",
+      "sha256": "55a02e2e311379c5923351fe41dd6f4ac0740dfdf47ed64ea66a5b4904c1ba4d",
+      "event_count": 12,
+      "status": "PROPOSED_NOT_TESTED"
+    }
   ]
 }

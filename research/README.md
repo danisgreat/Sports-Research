@@ -1,16 +1,18 @@
 # Research workspace
 
+**October 8 current destination:** [Part 7](../prediction%20logs/PREDICTION_LOG_COMBINED_7.md) is active, with P-550 unconsumed. Part 6 retains P-523–P-549 and immutable special source custody. [Settlement/rollover evidence](verification/mini_rollover_2026-10-08/REPORT.md) and the selected 65-record carryover supersede earlier queue counts. `log_card addendum revision.json` appends a dated revision under its existing `card_id`; it never consumes a new ID.
+
 Current October-5 all-log custody: 111 receipt bodies verify locally; 52 are intentionally excluded from Git (42 prior benchmark bodies plus 10 new restricted/market-bearing narrative captures). A clean checkout has 59 bodies and must fail strict custody for the other 52; no CI bypass or fabricated recapture is authorized. See the all-log source inventory and publication evidence.
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
 Current controls: [CURRENT_RULES.md](../CURRENT_RULES.md). No current model is live-qualified. Existing September evaluations and forecasts remain frozen; October's changed models are versioned SHADOW_ONLY candidates.
 
-Current reconciliation: [all-log October 5 evidence](verification/all_log_resolution_2026-10-05/REPORT.md). The earlier [document/cleanup evidence](verification/implementation_2026-10-05/REPORT.md) is a completed historical checkpoint. P-523–P-537 are already canonical; P-538 is next at this repair, subject to the live allocator. The two closed mini archives, all 15 carryovers, eleven diagnostic settlements and 132 retrospective sections are retained. No reimport, new certification or forecast rewrite is needed.
+Current reconciliation: [all-log October 5 evidence](verification/all_log_resolution_2026-10-05/REPORT.md). The earlier [document/cleanup evidence](verification/implementation_2026-10-05/REPORT.md) is a completed historical checkpoint. P-523–P-537 are already canonical; P-538 was next at that historical repair; after the October 8 import, P-550 is next, subject to the live allocator. The two closed mini archives, all 15 carryovers, eleven diagnostic settlements and 132 retrospective sections are retained. No reimport, new certification or forecast rewrite is needed.
 
 ## Requested analyses and canonical logging — current default
 
-Every requested sport receives evidence-based analysis and canonical Part 6 logging regardless of model qualification or calibration. Qualitative ranks and explicitly uncalibrated reproducible analyst scenarios are allowed. Late news and after-start analysis are allowed with honest observation/log times. Missing calibration, fixture-universe registration or independence audits are labels and limits, not analysis/logging blockers. The certified-issuer sections below describe a separate performance protocol.
+Every requested sport receives evidence-based analysis and canonical logging to the active combined log regardless of model qualification or calibration. Qualitative ranks and explicitly uncalibrated reproducible analyst scenarios are allowed. Late news and after-start analysis are allowed with honest observation/log times. Missing calibration, fixture-universe registration or independence audits are labels and limits, not analysis/logging blockers. The certified-issuer sections below describe a separate performance protocol.
 
 ```powershell
 py -3.14 -B -m research.operations.log_card next-id
@@ -19,7 +21,7 @@ py -3.14 -B -m research.operations.log_card verify
 py -3.14 -B -m research.operations.log_card recover
 ```
 
-Card JSON includes event_key, native_event_id, league, title, tracking_handle, analysis_status, original source_path and complete Markdown body. Research commits share the canonical ledger hash chain and writer lock, using distinct RESEARCH_LOG record types. Retained originals and exact Part 6 projections are hashed and read back. Duplicate imports return the same ID. Interrupted appends must be recovered before another ID; recovery refuses unrelated changes. Import minis into Part 6 and leave canonical pointers, without maintaining competing active copies. Do not backdate imports or manufacture previous predictions. No retrospective until requested.
+Card JSON includes event_key, native_event_id, league, title, tracking_handle, analysis_status, original source_path and complete Markdown body. Research commits share the canonical ledger hash chain and writer lock, using distinct RESEARCH_LOG record types. Retained originals and exact per-part projections are hashed and read back. Duplicate imports return the same ID. Interrupted appends must be recovered before another ID; recovery refuses unrelated changes. Import minis into the configured active combined log and leave canonical pointers, without maintaining competing active copies. Do not backdate imports or manufacture previous predictions. No retrospective until requested.
 
 Use `py -3.14 -B -m research.operations.control_freeze --verify` for METHOD's selected receipt. `py -3.14 -B -m research.operations.verify_custody` additionally checks research-card projections and alternate imported source-receipt fields in memory. Original receipts, frozen acceptance code and model dependencies remain unchanged. Research source/projection stores have their own ledger hashes and are excluded from the static control freeze.
 
@@ -44,8 +46,8 @@ Tests are offline and check temporal leakage, contract coherence, source hashes,
 
 ```powershell
 python -B -m research.src.daily --window-hours 48
-python -B -m research.src.workflow status
-python -B -m research.src.workflow score
+python -B -m research.operations.workflow status
+python -B -m research.operations.workflow score
 ```
 
 A unique `research/daily/<UTC>/` directory contains each lane's raw-source receipt, processed scores, upcoming and excluded fixtures, snapshot hash, model shadows, complete fixture coverage and run status. Fresh score inputs are single-publisher provisional observations; this is model research, not certified issuance. EPL retains provider-derived IDs separately from missing official IDs. NBL uses the league's exact UUID. Failed sources or parsers create recorded FAILED_CLOSED lanes and a nonzero exit.
@@ -72,14 +74,14 @@ The old tuning and holdout commands refuse overwrite. Previous evaluation code a
 The canonical ledger is `research/canonical_ledger.jsonl`, created only when a genuine universe/action is registered. `sources_registry.json` defines allowed routes, parser/league/endpoint scope, official ownership and collector independence. UNKNOWN independence fails live admission. `admission_registry.json` scopes each model version and contract family. Neither a handwritten VALIDATED flag nor a generic M2_PASS promotes a model.
 
 ```powershell
-python -B -m research.src.workflow validate-bundle <bundle.json>
-python -B -m research.src.workflow register-universe <universe.json>
-python -B -m research.src.workflow prepare-issue <bundle.json> <new-transaction.json>
-python -B -m research.src.workflow commit-issue <transaction.json> --real
-python -B -m research.src.workflow settle <terminal-bundle.json> --reason "Exact terminal evidence appended"
+python -B -m research.operations.workflow validate-bundle <bundle.json>
+python -B -m research.operations.workflow register-universe <universe.json>
+python -B -m research.operations.workflow prepare-issue <bundle.json> <new-transaction.json>
+python -B -m research.operations.workflow commit-issue <transaction.json> --real
+python -B -m research.operations.workflow settle <terminal-bundle.json> --reason "Exact terminal evidence appended"
 ```
 
-These are operator commands for future qualified real events. Preparation writes a concrete draft without consuming an ID. Commit defaults to disabled unless `--real` is passed; it revalidates exact cached evidence under a lock and appends a journaled core to Part 6. Source-state freshness is capped at five minutes. All three independently audited pregame lineages must agree, including one official source. Native NBL/MLB/ESPN JSON parsers check actual body identity. Other source mappings require a retained parser audit. Event-specific collector audits bind the event, body hash and upstream lineage.
+These are operator commands for future qualified real events. Preparation writes a concrete draft without consuming an ID. Commit defaults to disabled unless `--real` is passed; it revalidates exact cached evidence under a lock and appends a journaled core to the active combined log. Source-state freshness is capped at five minutes. All three independently audited pregame lineages must agree, including one official source. Native NBL/MLB/ESPN JSON parsers check actual body identity. Other source mappings require a retained parser audit. Event-specific collector audits bind the event, body hash and upstream lineage.
 
 Terminal admission additionally requires final-score agreement across three independent lineages and a source field explicitly audited as actual start. Schedule time and first play are not silently substituted. Corrections append chained revisions against the unchanged issue core. Recovery completes an exact pending projection and prevents ID reuse; it never edits issued bytes.
 
@@ -113,3 +115,7 @@ Publication readback: 152 ignored local cache files listed in the full local con
 ## Fifteen experiment measures and next steps
 
 [The measure register](experiment_measures.json) and [execution guide](experiments/NEXT_STEPS.md) cover all fifteen retrospective proposals. Run `py -3.14 -B -m research.experiments.runner verify` or `status` from the repository root. The CLI supplies template, source-backed power planning, immutable protocol freeze, real-time forecast capture and complete-cohort evaluation. It never creates canonical IDs or promotes models. Follow the guide for exact artifact fields, experiment-specific measures and every next step. Original proposal statuses remain PROPOSED_NOT_TESTED; zero actual experiments were run at registration.
+
+## Rollover and the frozen certified issuer
+
+`research/src/issue.py`, `research/src/workflow.py` and `research/src/acceptance.py` are immutable model-pinned historical implementations. Current issuer and operator entry points are `research.operations.canonical_issue` and `research.operations.workflow`; their isolated module namespaces reuse frozen validation/transaction functions with the active-log custody and shared allocator. Historical modules remain available for reproduction and are not current append entry points. The logger defaults dynamically to `research/current_combined_log.json`. Existing preparations keep their recorded part; new ledger preparations retain the combined-log path. Never roll over with a pending transaction.

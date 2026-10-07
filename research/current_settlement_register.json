@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "manifest_path": "research/verification/all_log_resolution_2026-10-05/carryover_v3.json",
-  "manifest_sha256": "1f5c61447a8a06015bbcc5b4944f501782468f0e38f7bb99f3b0db815f24d66e",
-  "report_path": "research/verification/all_log_resolution_2026-10-05/REPORT.md"
+  "manifest_path": "research/verification/mini_rollover_2026-10-08/carryover.json",
+  "manifest_sha256": "0c3f0fdb057f9f23f926c9247bbb20416723ddd17f5ba3b344d7e3e9c5444ab3",
+  "report_path": "research/verification/mini_rollover_2026-10-08/REPORT.md"
 }

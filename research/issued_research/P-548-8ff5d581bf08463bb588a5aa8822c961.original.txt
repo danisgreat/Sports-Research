@@ -1,0 +1,119 @@
+# P-548 — Busan KCC Egis vs Daegu Korea Gas Corporation Pegasus — Korea KBL — 2026-10-07
+
+**LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT.**  
+**SPORTS_ONLY / MARKET_BLIND.**  
+**PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED.**
+
+## A. Identity and timing
+
+- **Sport / competition:** Basketball — Korea KBL, 2026-2027 regular season.
+- **Event:** Busan KCC Egis vs Daegu Korea Gas Corporation Pegasus.
+- **Venue:** Busan Sajik Gymnasium, Busan, South Korea.
+- **Official scheduled tip:** 2026-10-07 19:00 KST / 2026-10-07 21:00 AEDT (Melbourne).
+- **User-supplied time:** 21:00 AEST; corrected for Melbourne daylight saving to 21:00 AEDT.
+- **Forecast-input cutoff:** approximately 20:58 AEDT / 18:58 KST, before the scheduled tip.
+- **Research completion:** after the scheduled tip, but no observed game action, score, possessions or live statistics were used.
+- **State:** `PREGAME_INPUT_CUTOFF / RESEARCH_COMPLETION_AFTER_SCHEDULED_START`.
+- **GitHub main authority SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`.
+
+## B. Framework/model status
+
+- Current method: `MDS-2026.10.01-v8.0 / CR-2026.10.07-I1`.
+- Basketball rules require one coherent event score distribution, explicit availability uncertainty and SPORTS_ONLY / MARKET_BLIND evidence handling.
+- No KBL model is registered as LIVE_QUALIFIED.
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`.
+- **TEAM_BASELINE_P:** `NOT_COVERED` for KBL by the current registered live numerical lanes.
+- All spread/total rows below are defined as **full game including overtime** for sporting analysis. Operator-specific regulation/OT settlement terms were not supplied and remain a later settlement issue.
+
+## C. Availability and current evidence
+
+### Busan KCC Egis
+
+- KCC enters 1-1: 68-103 vs Changwon LG, then 97-87 at Ulsan Hyundai Mobis.
+- In the Mobis win, Lewis King scored 32 points in 26:36 on 13/17 shooting, Shawn Long had 25 points and 17 rebounds in 28:39, and Heo Hoon recorded 17 points and 13 assists.
+- Heo Woong has opened the season at only 5.5 points per game and was 0-for-11 from three through the first two games; his shooting regression is an upside branch, not assumed as guaranteed recovery.
+- KCC's current roster core includes Heo Hoon, Heo Woong, Lewis King, Shawn Long and Jang Jae-seok. Song Kyo-chang and Choi Jun-yong are not part of the current domestic core after offseason overseas moves.
+- No verified late pre-tip absence for Hoon, Woong, King or Long was recovered.
+
+### Daegu Korea Gas Corporation Pegasus
+
+- Korea Gas enters 0-2 after losses of 73-82 at Goyang Sono and 80-86 vs Anyang Jung Kwan Jang. Both defeats were within 10 points.
+- Samjosef Belangel rebounded from a two-point opener with 23 points, 5 rebounds, 8 assists and 3 steals against Anyang.
+- Kebe Aluma is averaging 16.0 points and 4.5 rebounds through two games and has made 40% of his threes, but he fouled out in both games; his minutes distribution is therefore widened.
+- Ra Gun-ah is averaging 18.0 points and 10.0 rebounds through the first two games; he recorded 15 points and 8 rebounds against Anyang.
+- Yang Woo-hyuk had a rib issue after the October 5 game. He travelled with the team to Busan and was expected to be available, but his role/minutes remain an uncertainty branch.
+- No authoritative static source with both confirmed starting fives was recovered before the modelling cutoff. Probable core exposure was therefore used rather than inventing a confirmed five.
+
+## D. Matchup and scoring scenario
+
+The central analyst scenario is approximately:
+
+- **KCC:** 88.5 points
+- **Korea Gas:** 83.5 points
+- **Expected margin:** KCC +5.0
+- **Expected total:** 172.0
+- **Margin width:** about 14.5 points
+- **Total width:** about 17.5 points
+
+The widths remain deliberately broad because this is only the third regular-season game for both teams, KCC has already shown extreme game-to-game variance, Aluma's foul trouble creates a high-impact minutes branch, and the KBL's 2026-27 foreign-player usage change increases early-season lineup/pace uncertainty.
+
+## E. Ranked picks
+
+### Rank 1 — Combined Total UNDER 178.5 points — `p_card 64.5%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — SUPPORTED`
+
+**Reasoning:** The 172-point centre provides 6.5 points of cushion. Korea Gas has scored 73 and 80 in its first two games and has had stretches of half-court stagnation when Belangel is contained or Aluma is limited by foul trouble. KCC's 97-point outing demonstrates a genuine upper tail, but its opener produced only 68 points, so the evidence does not justify treating the Mobis result as the new offensive floor.
+
+**Main failure route:** King/Long/Hoon reproduce the high-efficiency Mobis performance, Heo Woong's three-point shooting normalises sharply, and Korea Gas contributes enough through Belangel/Aluma/Ra to push the game into the 180s.
+
+### Rank 2 — Korea Gas Corporation +8.5 points — `p_card 59.5%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — SUPPORTED LEAN`
+
+**Reasoning:** Korea Gas has lost its first two games by 9 and 6, and the +8.5 cushion captures a wide set of competitive-loss outcomes. The previous September open-match meeting was an 80-67 Korea Gas win, but KCC was missing Hoon, Woong and Jang Jae-seok, so that result is context rather than a direct predictive anchor. Korea Gas still has enough frontcourt scoring/rebounding through Aluma and Ra and enough creation through Belangel to keep a meaningful close-game branch.
+
+**Main failure route:** KCC's foreign-player pairing overwhelms Korea Gas inside and in transition, while Aluma again loses minutes to foul trouble and KCC separates into a double-digit margin.
+
+### Rank 3 — Combined Total OVER 168.5 points — `p_card 57.9%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — LEAN`
+
+**Reasoning:** The same 172-point centre leaves the Over modestly favoured. KCC scored 97 in its latest game, Korea Gas reached 80 against Anyang, and the new two-foreigner court-time structure in the second and third quarters can increase scoring/spacing. The line is also low enough that a normal 88-82 or 90-80 type game clears it.
+
+**Main failure route:** Korea Gas slows the game, Aluma's foul trouble removes one of its primary scoring hubs, and KCC's perimeter efficiency regresses toward its poor opener.
+
+### Rank 4 — Busan KCC Egis -2.5 points — `p_card 56.8%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — LEAN`
+
+**Reasoning:** KCC has the stronger top-end creation currently available: Hoon as primary organiser, King as high-volume scorer and Long as an interior/rebounding anchor. Korea Gas is 0-2 and has repeatedly struggled to finish games. Home court and KCC's stronger offensive ceiling move the centre to approximately KCC +5.
+
+**Main failure route:** Belangel controls the point-of-attack matchup, Ra/Aluma win the rebounding and paint battle, or KCC's volatile perimeter shooting produces another low-output game.
+
+## F. Potential game winner
+
+**Busan KCC Egis — 63.5%**
+
+`UNCALIBRATED_ANALYST_SCENARIO`
+
+This is a moderate, not strong, winner preference. The same margin distribution that prices KCC -2.5 at 56.8% gives KCC approximately 63.5% to finish ahead after overtime.
+
+## G. Dependence and coherence
+
+- Korea Gas +8.5 and KCC -2.5 overlap: both can win when KCC wins by 3 to 8 points. They are not independent predictive trials.
+- Over 168.5 and Under 178.5 also overlap: both win when the final total is 169-178.
+- All four rows come from the same KCC +5 / total 172 scenario rather than separately chosen probabilities.
+
+## H. Material sources
+
+1. Busan KCC Egis official schedule/site — official October 7 fixture at 19:00 KST, 1-1 current record and October 5 result.
+2. Jumpball October 7 pregame preview — current KCC/Korea Gas records; King, Long, Hoon, Woong, Belangel, Aluma and Ra recent production.
+3. Jumpball October 7 warm-up interview — Aluma's consecutive foul-outs and coach Kang Hyuk's stated need for Aluma to stay on court.
+4. Jumpball October 7 Yang Woo-hyuk availability report — rib issue, travelled with team to Busan, expected availability.
+5. Jumpball October 6 KCC report — Heo Woong early shooting slump and KCC's current offensive structure.
+6. Jumpball/KBL October 5 reports — KCC 97-87 Mobis and Korea Gas 80-86 Anyang with current player stat lines.
+7. KCC official season player records — current active roster and early-season player statistics.
+8. Current Sports Research GitHub main — `RULES_BASKETBALL.md`, `METHOD.md`, `CURRENT_RULES.md`, numerical model register.
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**

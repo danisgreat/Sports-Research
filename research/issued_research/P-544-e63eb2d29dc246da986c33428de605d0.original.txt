@@ -1,0 +1,141 @@
+## P-544 — BASEBALL / KOREA KBO — Doosan Bears @ LG Twins
+
+**LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT.**  
+**SPORTS_ONLY / MARKET_BLIND.**  
+**PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED.**
+
+### A. Identity and state
+
+- **Sport / competition:** Baseball — Korea KBO, 2026 regular season.
+- **Event:** Doosan Bears @ LG Twins.
+- **Venue:** Jamsil Baseball Stadium, Seoul.
+- **Scheduled first pitch:** 2026-10-07 18:30 KST / 2026-10-07 20:30 AEDT (Melbourne).
+- **Official event key:** `20261007OBLG0`.
+- **Forecast/research cutoff:** `2026-10-07 20:15:20 AEDT` / `18:15:20 KST`.
+- **Observed state at cutoff:** `PREGAME / START_UNVERIFIED`. The official KBO Game Center still listed the fixture as scheduled. No observed runs, pitches, plate appearances or other in-game outcomes were used.
+- **Endpoint:** full completed KBO game under the league's regular-season completion/tie rules. Operator-specific action/void semantics are unknown and retained as a later settlement limitation.
+
+### B. Repository authority
+
+- **GitHub main SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`.
+- **Method:** `MDS-2026.10.01-v8.0`.
+- **Control:** `CR-2026.10.07-I1` with numerical extension `CR-2026.10.06-NUMERICAL-1`.
+- **Scoring:** `SCV-2026.10.01-v3`.
+- **Active manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`.
+- **Sport rules:** current `RULES_BASEBALL.md`.
+- **Model qualification:** no live-qualified KBO numerical model. NPB/KBO/CPBL numerical baseball lane is not validated for live card probability use.
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`.
+
+### C. Supplied contracts — verbatim
+
+1. `Bears +1.5`
+2. `Twins +0.5`
+3. `TOTAL RUNS OVER 7.5`
+4. `TOTAL RUNS UNDER 7.5`
+
+The two total rows are exact complements under the same full-game 7.5-run endpoint. `Bears +1.5` and `Twins +0.5` are dependent and can both cover when LG wins by exactly one run or when the completed KBO game finishes tied.
+
+### D. Confirmed participants / late availability
+
+- **Doosan starter:** Choi Min-seok — 26 G, 14-4, 2.92 ERA, 124 SO. His previous start after returning from the Asian Games was only 3 IP with 8 H and 4 R, so workload/command uncertainty is retained rather than treated as a new true-talent level.
+- **LG starter:** Im Chan-kyu — 29 G, 14-7, 4.30 ERA, 96 SO. Against Doosan in 2026: 4 starts, 3-0, 1.90 ERA; this matchup split is supporting context, not a stand-alone predictive model.
+- **Doosan posted order:** Park Chan-ho SS; Ahn Jae-seok 3B; Severino DH; Yang Eui-ji C; Kim Min-seok LF; Kang Seung-ho 2B; Yang Seok-hwan 1B; Jo Su-haeng RF; Jung Soo-bin CF.
+- **LG posted order:** Park Hae-min CF; Song Chan-eui LF; Austin 1B; Moon Jung-bin DH; Moon Bo-kyung 3B; Lee Jae-won RF; Koo Bon-hyeok SS; Park Dong-won C; Lee Young-bin 2B.
+- No additional same-day injury report was verified that justified overriding the posted starting nines. Recent bullpen workload is retained as uncertainty rather than assumed unavailability.
+
+### E. Key sporting research
+
+- **Doosan has the stronger run-prevention profile:** KBO's current team table has Doosan first with a 3.82 ERA, 1.34 WHIP and 616 runs allowed; LG is at 4.83 ERA and 705 runs allowed.
+- **LG has scored slightly more:** 709 runs in 140 games (5.06/game) versus Doosan's 679 in 142 (4.78/game), despite similar batting averages (.265 LG, .268 Doosan).
+- **Starter edge is split:** Choi's full-season numbers are materially stronger, while Im's current-season Doosan matchup has been excellent. That reduces confidence in either outright side.
+- **Context favours a close, high-leverage game:** LG is 76-63-1 and Doosan 73-64-5, separated by two games late in the regular season. Doosan enters on three straight wins; LG snapped an eight-game skid with a 6-1 win over NC on 6 October.
+- **Bullpen tail remains live:** both clubs used late relievers on 6 October. Workload was not extreme enough to assume key arms unavailable, but it prevents an overly narrow run distribution.
+- **Environment:** secondary Jamsil weather information indicated clear, cool conditions and no meaningful rain threat. It is treated as width/context only, not an automatic Under adjustment.
+
+### F. Probability scenario
+
+**Method:** one coherent overdispersed full-game run distribution, incorporating posted lineups, starter quality/uncertainty, team scoring and run-prevention rates, home batting entitlement, bullpen transition risk and the KBO tie-permitting completion branch.
+
+**Scenario centre:** approximately **Doosan 4.0 — LG 4.3** (total about **8.3 runs**).  
+**Run-distribution width:** intentionally broad, approximately the framework's ~4.5-run baseball reference rather than a narrow normal approximation.  
+**Final tie mass:** retained explicitly at about **2.1%** after the KBO completion branch.
+
+Coherent winner family:
+
+| Outcome | p_card |
+|---|---:|
+| LG Twins win | **51.7%** |
+| Doosan Bears win | **46.2%** |
+| Final tie | **2.1%** |
+
+`51.7 + 46.2 + 2.1 = 100.0%`.
+
+Contract probabilities from the same distribution:
+
+| Contract | p_card |
+|---|---:|
+| Bears +1.5 | **62.7%** |
+| Twins +0.5 | **53.8%** |
+| Over 7.5 | **51.6%** |
+| Under 7.5 | **48.4%** |
+
+For the half-run total, `Over 7.5 + Under 7.5 = 100.0%`. These are analytical estimates, not calibrated or validated KBO probabilities.
+
+### G. Ranked predictions
+
+| Rank | Exact proposition | Origin | p_card | Strength | Main reason | Principal failure route |
+|---|---|---|---:|---|---|---|
+| **1** | **Doosan Bears +1.5 runs** | SUPPLIED | **62.7%** | **SUPPORTED LEAN** | Choi and the league-best Doosan staff materially reduce LG's separation probability; the +1.5 also captures Doosan wins, a completed tie, and one-run LG wins. | LG's stronger scoring context gets to Choi early or separates against the transition/bullpen innings by 2+. |
+| **2** | **LG Twins +0.5 runs** | SUPPLIED | **53.8%** | **LEAN** | LG has the home batting state, slightly stronger season scoring, and Im has handled Doosan well in 2026; +0.5 also retains the tie branch. | Choi's stronger season run suppression carries through and Doosan wins outright. |
+| **3** | **Total Runs Over 7.5** | SUPPLIED | **51.6%** | **LEAN / NEAR COIN FLIP** | The league/team scoring environment and bullpen-transition tails leave 8+ runs marginally more likely than 7 or fewer despite the starter quality. | Both starters work efficiently into the middle innings and Jamsil's run environment plus fresh-enough relief keeps the game compressed. |
+| **4** | **Total Runs Under 7.5** | SUPPLIED | **48.4%** | **FORCED RANK / COUNTER-SCENARIO** | Strong Choi season numbers, Im's Doosan-specific success and cool conditions create a substantial low-score branch. | One clustered inning, early Choi command trouble, or late relief separation pushes the game to 8+ runs. |
+
+### H. Potential winner
+
+**LG Twins — 51.7%**  
+**Doosan Bears — 46.2%**  
+**Final tie — 2.1%**
+
+LG is only a **narrow** winner call. The difference is driven by home batting entitlement, the slightly stronger run-scoring profile and Im's current matchup record; Choi's superior overall season and Doosan's much stronger staff prevent a high-confidence favourite call.
+
+### I. Dependence / correlation
+
+- `Bears +1.5` and `Twins +0.5` are **not independent**. Both cover in an LG one-run win and a completed tie.
+- Over 7.5 and Under 7.5 are exact complements, not two independent forecasts.
+- The strongest failure state for both Rank 1 and the Under branch is an LG multi-run offensive cluster after Choi's exit; therefore top-pick outcomes are partially dependent on the same transition-inning mechanism.
+
+### J. Material sources
+
+1. **KBO Game Center** — official fixture, 18:30 KST start, venue/state and confirmed starters.  
+   `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20261007&gameId=20261007OBLG0&section=START_PIT`
+2. **KBO team batting records** — current Doosan/LG games, runs and batting production.  
+   `https://koreabaseball.com/Record/Team/Hitter/Basic1.aspx`
+3. **KBO team pitching records** — current team ERA, runs allowed, WHIP and staff context.  
+   `https://www.koreabaseball.com/Record/Team/Pitcher/Basic1.aspx`
+4. **KBO team standings** — current records/home-away context.  
+   `https://koreabaseball.com/Record/TeamRank/TeamRank.aspx`
+5. **OSEN, 2026-10-07 17:01 KST** — Doosan posted lineup, Choi season/current LG matchup context.  
+   `https://www.osen.co.kr/article/G1112889182`
+6. **Chosun Biz / OSEN, 2026-10-07 16:00–16:02 KST** — LG posted lineup and Im's Doosan split.  
+   `https://biz.chosun.com/sports/baseball/2026/10/07/MNTGEYJWHFTDONRUGZSTAMDCMY/`
+7. **AccuWeather Jamsil** — secondary environment check only; no predictive market information used.  
+   `https://www.accuweather.com/ko/kr/jamsil-4-sa-dong/2002263/current-weather/2002263`
+
+### K. Integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_RESEARCH`  
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`  
+`MODEL_QUALIFICATION: NOT_LIVE_QUALIFIED_FOR_KBO`  
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`  
+`LOG_STATUS: LOCAL_MINI_STAGING`  
+`CANONICAL_IMPORT_STATUS: PENDING`  
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 20:15:20 AEDT`  
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+### L. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+
+---
+
+

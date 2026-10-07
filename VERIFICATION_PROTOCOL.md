@@ -37,3 +37,9 @@ Publication readback: 152 ignored local cache files listed in the full local con
 ## Experiment-measure verification
 
 Run `py -3.14 -B -m research.experiments.runner verify` and include `research/experiments` in regression tests. The [catalog](research/experiment_measures.json) must cover all fifteen original hypotheses with preserved source hashes, fixed target/feature/measure definitions and explicit pending inputs. Test arithmetic independently and exercise overwrite, data leakage, period/provider, duplicate, pending-cohort, PMF and code/runtime-custody failures. Synthetic test success is never an experiment result. Runtime experiment stores use their own source/lock/journal/result hashes; original model builds, forecasts and ledger remain protected.
+
+## October 8 mini import and active-log rollover
+
+Run `py -3.14 -B -m research.operations.verify_rollover` for exact original mini substrings, twelve canonical imports, 144 retrospective sections, append-only prior log/ledger prefixes, reserved IDs, dated addenda, current destination/status and unconsumed rollover ID. Use `--local-body-custody` separately to verify the 18 terminal bodies retained locally in Downloads; these narrative captures are not published. Three independent audited collection lineages remain unestablished. The current issuer/workflow adapters preserve immutable model-pinned historical source modules.
+
+Runtime source, tests, configuration, R ingestion scripts and pyproject text are normalized to CRLF for the current static control receipt, making LF/CRLF checkouts equivalent. Raw event/evidence JSON and source bodies remain RAW and hash-strict. Earlier receipts retain their original normalization and state; the October 8 second receipt records this administrative portability correction.

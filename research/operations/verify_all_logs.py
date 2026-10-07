@@ -20,7 +20,7 @@ def run():
   path=ROOT/item['path']
   if item['path'].startswith(('prediction logs/','research/issued_research/','research/model_builds/')) or item['path']=='research/canonical_ledger.jsonl':
    body=path.read_bytes()
-   if path==PART6:body=body[:item['bytes']]
+   if path==PART6 or item['path']=='research/canonical_ledger.jsonl':body=body[:item['bytes']]
    need(len(body)==item['bytes'] and sha(body)==item['sha256'],'Immutable original changed: '+item['path'])
  for filename,projectionname in [('append_receipt.json','settlement_projection.bin'),('clarification_append_receipt.json','clarification_projection.bin'),('native_append_receipt.json','native_projection.bin')]:
   receipt=load(filename);projection=(OUT/projectionname).read_bytes()
@@ -44,9 +44,12 @@ def run():
   target=r['canonical_target']
   if target:need(target.split('-C')[0] in known,'Alias invented unknown ID')
  selected_register=selected(ROOT);need(selected_register is not None,'Missing selected settlement register')
- carry=selected_register['manifest'];need(carry['event_count']==len(carry['records'])==53,'Dated carryover coverage')
+ carry=selected_register['manifest'];need(carry['event_count']==len(carry['records']),'Current carryover coverage')
+ dated=load('carryover_v3.json');need(dated['event_count']==len(dated['records'])==53,'Dated carryover coverage')
+ cards=research_cards(read_records(CANONICAL_LEDGER))
+ current_known=known|{c['card_id'] for c in cards}
  for r in carry['records']:
-  need(r['canonical_id'] in known,'Unknown carryover event')
+  need(r['canonical_id'] in current_known,'Unknown carryover event')
   for note in r.get('original_schedule_source_lines',[]):
    line=(ROOT/note['path']).read_text(encoding='utf-8-sig').splitlines()[note['line']-1]
    need(line==note['text'] and sha(line.encode())==note['line_sha256'],'Original schedule changed')

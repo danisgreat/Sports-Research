@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "observed_utc": "2026-10-07T15:59:36.663391+00:00",
+  "historical_slots": 537,
+  "temporary_strings": 71,
+  "local_trackers": 1,
+  "documentary_repairs": 10,
+  "new_sporting_reviews": 4,
+  "new_retrospective_sections": 48,
+  "current_carryovers": 65,
+  "dated_carryovers": 53,
+  "new_ids": [],
+  "next_id": "P-550",
+  "original_forecasts_ledger_and_projection_bytes_preserved": true,
+  "limitation": "Custody and deterministic diagnostics; no historical or prospective certification is inferred."
+}

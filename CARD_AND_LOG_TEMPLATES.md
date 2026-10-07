@@ -8,7 +8,7 @@ Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.01-v7.1. Re
 
 Prepare JSON with `event_key`, `native_event_id` (unknown if not verified), `league`, `title`, `tracking_handle`, `analysis_status`, `source_path` and full Markdown `body`. Body: exact fixture/time/state and source update time; supplied contracts and sporting/operator semantics; posted participants; season/recent/exposure/bullpen/environment evidence; ranked four picks and potential winner; rationale and failure routes; calibration/assumption/missingness labels; full sources and retained receipts. Use `UNCALIBRATED_QUALITATIVE` and `NOT_ESTIMATED` for unsupported percentages. Analyst scenarios may contain explicit uncalibrated reproducible estimates.
 
-Run `py -3.14 -m research.operations.log_card commit card.json`, then `verify`. Retain actual log time, original source bytes and exact projection. Import original cards literally beneath a dated canonical correction; do not retroactively rewrite probabilities, claim times or fabricate missing ranks. Part 6 is the destination; existing events retain their ID for dated additions. No retrospective until requested.
+Run `py -3.14 -m research.operations.log_card commit card.json`, then `verify`. Retain actual log time, original source bytes and exact projection. Import original cards literally beneath a dated canonical correction; do not retroactively rewrite probabilities, claim times or fabricate missing ranks. The configured active combined log is the destination; existing events retain their ID for dated additions. No retrospective until requested.
 
 ## Complete universe
 
@@ -24,7 +24,7 @@ An adjustment requires an approved method version, reason, frozen parameters and
 
 ## Issued core
 
-The issuer's Markdown includes permanent P-ID, exact event/endpoint, issue/cutoff/start times, model version, model/input/registry hashes, source lineages, contract rows with coherent win/push/loss masses and separate p_model/p_card/p_baseline, adjustment status and transaction ID. Rendered ordering follows p_card. The machine bundle is immutable; the Part 6 projection and canonical ledger bind its bytes.
+The issuer's Markdown includes permanent P-ID, exact event/endpoint, issue/cutoff/start times, model version, model/input/registry hashes, source lineages, contract rows with coherent win/push/loss masses and separate p_model/p_card/p_baseline, adjustment status and transaction ID. Rendered ordering follows p_card. The machine bundle is immutable; the ledger-selected projection and canonical ledger bind its bytes.
 
 A preparation is **PREPARED_DRAFT_NOT_ISSUED** and consumes no ID. A committed pregame card is **ISSUED_PENDING_TERMINAL_ADMISSION**. Existing issued forecasts retain their own original format and ranking arithmetic.
 
@@ -48,4 +48,4 @@ Daily shadows contain no P-number, no issued card, no researched lineup claim an
 
 ## Experiment forecasts and canonical cards
 
-The [experiment protocol](research/experiments/NEXT_STEPS.md) defines separate development artifacts and actual-timestamp forecast journals. Creating a draft, power plan, experiment lock or measured result never allocates a P-ID or backfills a historical card. Requested game cards still use the canonical Part 6 workflow independently of calibration. Retain original `p`, ranking `q`, targets and issued versions; experiment probabilities are PMFs, and `q` is not scored as an event probability.
+The [experiment protocol](research/experiments/NEXT_STEPS.md) defines separate development artifacts and actual-timestamp forecast journals. Creating a draft, power plan, experiment lock or measured result never allocates a P-ID or backfills a historical card. Requested game cards still use the canonical workflow to the active combined log independently of calibration. Retain original `p`, ranking `q`, targets and issued versions; experiment probabilities are PMFs, and `q` is not scored as an event probability.

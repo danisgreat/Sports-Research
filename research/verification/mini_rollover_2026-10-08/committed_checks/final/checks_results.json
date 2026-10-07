@@ -1,0 +1,58 @@
+[
+  {
+    "check": "canonical",
+    "exit_code": 0,
+    "command": "py -3.14 -B -m research.operations.log_card verify",
+    "workspace": "C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008",
+    "output_path": "C:\\Users\\danie\\Desktop\\Sports Research\\research\\verification\\mini_rollover_2026-10-08\\committed_checks\\final\\canonical.txt"
+  },
+  {
+    "check": "rollover",
+    "exit_code": 0,
+    "command": "py -3.14 -B -m research.operations.verify_rollover",
+    "workspace": "C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008",
+    "output_path": "C:\\Users\\danie\\Desktop\\Sports Research\\research\\verification\\mini_rollover_2026-10-08\\committed_checks\\final\\rollover.txt"
+  },
+  {
+    "check": "custody",
+    "exit_code": 1,
+    "command": "py -3.14 -B -m research.operations.verify_custody",
+    "workspace": "C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008",
+    "output_path": "C:\\Users\\danie\\Desktop\\Sports Research\\research\\verification\\mini_rollover_2026-10-08\\committed_checks\\final\\custody.txt"
+  },
+  {
+    "check": "reconciliation",
+    "exit_code": 0,
+    "command": "py -3.14 -B -m research.operations.verify_reconciliation",
+    "workspace": "C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008",
+    "output_path": "C:\\Users\\danie\\Desktop\\Sports Research\\research\\verification\\mini_rollover_2026-10-08\\committed_checks\\final\\reconciliation.txt"
+  },
+  {
+    "check": "all_logs",
+    "exit_code": 1,
+    "command": "py -3.14 -B -m research.operations.verify_all_logs",
+    "workspace": "C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008",
+    "output_path": "C:\\Users\\danie\\Desktop\\Sports Research\\research\\verification\\mini_rollover_2026-10-08\\committed_checks\\final\\all_logs.txt"
+  },
+  {
+    "check": "archive",
+    "exit_code": 1,
+    "command": "py -3.14 -B -m research.src.archive validate",
+    "workspace": "C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008",
+    "output_path": "C:\\Users\\danie\\Desktop\\Sports Research\\research\\verification\\mini_rollover_2026-10-08\\committed_checks\\final\\archive.txt"
+  },
+  {
+    "check": "experiments",
+    "exit_code": 0,
+    "command": "py -3.14 -B -m research.experiments.runner verify",
+    "workspace": "C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008",
+    "output_path": "C:\\Users\\danie\\Desktop\\Sports Research\\research\\verification\\mini_rollover_2026-10-08\\committed_checks\\final\\experiments.txt"
+  },
+  {
+    "check": "control",
+    "exit_code": 0,
+    "command": "py -3.14 -B -m research.operations.control_freeze --verify",
+    "workspace": "C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008",
+    "output_path": "C:\\Users\\danie\\Desktop\\Sports Research\\research\\verification\\mini_rollover_2026-10-08\\committed_checks\\final\\control.txt"
+  }
+]

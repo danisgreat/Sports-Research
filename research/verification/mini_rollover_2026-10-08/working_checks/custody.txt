@@ -1,0 +1,45 @@
+{
+  "observed_utc": "2026-10-07T15:59:29.329970+00:00",
+  "valid": false,
+  "checks": {
+    "canonical_research_cards": [
+      "P-523",
+      "P-524",
+      "P-525",
+      "P-526",
+      "P-527",
+      "P-528",
+      "P-529",
+      "P-530",
+      "P-531",
+      "P-532",
+      "P-533",
+      "P-534",
+      "P-535",
+      "P-536",
+      "P-537",
+      "P-538",
+      "P-539",
+      "P-540",
+      "P-541",
+      "P-542",
+      "P-543",
+      "P-544",
+      "P-545",
+      "P-546",
+      "P-547",
+      "P-548",
+      "P-549"
+    ],
+    "research_next_id": "P-550",
+    "source_receipts_examined": 111,
+    "source_receipt_bodies_verified": 111,
+    "source_receipt_body_failures": 0,
+    "receipt_schema_adapter": "IN_MEMORY_ONLY_NO_SOURCE_REWRITES"
+  },
+  "issues": [
+    "ACCEPTANCE_FAILED:ValueError:model build changed: research/src/control_manifest.py"
+  ],
+  "limitation": "Incomplete acceptance; no custody or predictive certification. Research IDs are canonical storage identities, not certified prospective ISSUE records. Quarantined bodies remain mandatory; absent or damaged bytes fail this check.",
+  "source_body_failures": []
+}

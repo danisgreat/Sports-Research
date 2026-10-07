@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "schema": "experiment-measures-1",
+  "proposals": 15,
+  "measures_implemented": 15,
+  "ready_to_freeze": 0,
+  "hypothesis_text_preserved": true,
+  "performance_eligible": false,
+  "limitation": "Measurement/catalog mechanics only; missing candidate/baseline/cohort/power/audit inputs remain explicit."
+}

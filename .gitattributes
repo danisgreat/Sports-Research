@@ -9,3 +9,4 @@ research/**/*.parquet binary
 "Previous Sports Results/_canonical/**" -text
 "Previous Sports Results/_custody/**" -text
 "Previous Sports Results/_football_research/*.py" -text
+"prediction logs/PREDICTION_LOG_COMBINED_7.md" -text whitespace=cr-at-eol

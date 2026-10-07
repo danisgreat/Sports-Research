@@ -1,0 +1,298 @@
+## P-539 — TENNIS / ATP MASTERS 1000 SHANGHAI — Aleksandar Kovacevic vs Matteo Berrettini
+
+**WORKING_ID — PENDING_CANONICAL_RECONCILIATION**
+
+### A. Identity and timing
+
+- **P-ID:** `P-539` (working mini ID; not ledger-committed)
+- **Tracking alias:** `TMP-20261007-ATP-SHA-KOV-BER`
+- **Exact event:** Aleksandar Kovacevic (USA) vs Matteo Berrettini (ITA)
+- **Competition:** Rolex Shanghai Masters, ATP Masters 1000
+- **Round:** First Round / Round of 128
+- **Season:** 2026 ATP Tour
+- **Venue:** Stadium Court, Qi Zhong Tennis Center / Qizhong Forest Sports City Arena, Shanghai, China
+- **Surface:** Deco-Turf hard court; scheduled as outdoor hard
+- **Format:** men's singles, best-of-three sets; standard ATP tiebreak set format
+- **Official/native event ID:** `NOT_EXPOSED_IN_ACCESSIBLE_OFFICIAL TOURNAMENT PAGE`; player IDs are ATP `K0AZ` (Kovacevic) and `BK40` (Berrettini)
+- **Official scheduled start:** 2026-10-07 12:00 Shanghai time (UTC+8)
+- **UTC scheduled start:** 2026-10-07 04:00 UTC
+- **Australia/Melbourne equivalent:** 2026-10-07 15:00 **AEDT** (UTC+11), not AEST
+- **User-supplied estimate preserved:** `<3:00 PM 7/10/2026 AEST, can be delayed>`
+- **Observation timestamp:** 2026-10-07 14:58:26 AEDT / 11:58:26 Shanghai time
+- **Research completion timestamp:** `2026-10-07 14:59:57 AEDT / 11:59:57 Shanghai time`
+- **Verified event state at observation:** `PREGAME` — official tournament order of play listed the match first on Stadium Court at 12:00 local, and current time was still before that scheduled start; Tennis.com also showed the fixture as upcoming. No in-match score or point data was used.
+
+### B. Repository authority
+
+- **Repository:** `danisgreat/Sports-Research`
+- **Branch:** `main`
+- **Main-branch commit SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`
+- **Methodology:** `MDS-2026.10.01-v8.0`
+- **Control revision:** `CR-2026.10.07-I1`
+- **Numerical extension:** `CR-2026.10.06-NUMERICAL-1`
+- **Scoring revision:** `SCV-2026.10.01-v3`
+- **Active control manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`
+- **Applicable sport rules:** `RULES_TENNIS.md`, current root controls taking precedence over historical commentary
+- **Runtime sport configuration:** `H0-TENNIS-v1`, source `tennis_abstract`, default model `A2`, discrete unit `games`
+- **Runtime implementation:** `runtime/src/sports/tennis/engine.py` — point-on-serve -> hold/break -> set -> match/games distribution architecture
+- **Model qualification:** `DEVELOPMENT_ONLY / NOT ADMITTED FOR LIVE CARD PROBABILITIES`; no Tennis entry exists in the current admission registry and no Tennis model is `LIVE_QUALIFIED`
+- **Assessment used for this card:** `UNCALIBRATED_QUALITATIVE` with an external dated Elo benchmark; no runtime-generated probability is claimed
+
+### C. Supplied contracts
+
+Reproduced verbatim:
+
+```text
+<Kovacevic +2.5 Games>
+<Berrettini -2.5 Games>
+<Total Games: 24.5>
+<Total Games: 24.5>
+<OPTIONAL CONTRACT 5>
+```
+
+**Contract interpretation:**
+
+- `Kovacevic +2.5 Games` and `Berrettini -2.5 Games` are aggregate full-match game handicaps if the operator uses the ordinary tennis games-handicap definition.
+- The two `Total Games: 24.5` entries are **directionless duplicates**. They are not silently rewritten. To satisfy the requested four-rank analysis, the card evaluates analyst-defined **Under 24.5** and **Over 24.5** sporting propositions against that supplied threshold, clearly labelled as analyst-defined directions.
+- `OPTIONAL CONTRACT 5` is a placeholder, not a defined sporting proposition, and is not ranked.
+- **Operator retirement/walkover rules were not supplied.** Under `RULES_TENNIS.md` this remains `UNKNOWN_DEFINITION`; the sporting propositions can be analysed, but operator settlement/value cannot be certified.
+
+### D. Participants and availability
+
+#### Aleksandar Kovacevic
+
+- Current official tournament H2H page: ATP ranking **81**; 2026 YTD main-tour record displayed as **15-23**.
+- Right-handed, one-handed backhand; ATP player ID `K0AZ`.
+- No verified withdrawal or current injury report was found in the official tournament/tour material reviewed before the match.
+- Recent hard-court activity:
+  - Tokyo qualifying: beat Zachary Svajda 6-7(7), 6-2, 6-4 on 28 September; held all 15 service games, hit 19 aces, and saved all six break points.
+  - Tokyo qualifying final: lost to Jaume Munar 2-6, 3-6 on 29 September; won only 54% of first-serve points and 53% of second-serve points, and was broken four times.
+  - Chengdu: lost to Lloyd Harris 3-6, 4-6 on 24 September; won 71% of first-serve points but only 10 return points from 51 opponent service points and converted 0/3 break points.
+  - Winston-Salem: beat Stefanos Tsitsipas 6-3, 7-6(1) before losing to Arthur Fery in three sets.
+- **Rest:** last recorded competitive match 29 September, giving roughly one week without a match before Shanghai.
+
+#### Matteo Berrettini
+
+- Current official tournament H2H page: ATP ranking **46**; 2026 YTD main-tour record displayed as **17-15**.
+- Right-handed, two-handed backhand, 196 cm; ATP player ID `BK40`.
+- No verified withdrawal or new current injury report was found in the official tournament/tour material reviewed before the match.
+- Recent hard-court activity:
+  - Tokyo R1: beat world No. 26 Alejandro Davidovich Fokina 1-6, 7-6(1), 6-4 on 1 October. Berrettini hit 16 aces, landed 70% first serves and won 69% of first-serve points.
+  - Tokyo R2: lost to Adolfo Daniel Vallejo 6-7(6), 1-6 on 3 October. He created three break points but converted none, and won only 61% of first-serve points in that match.
+  - US Open R1: beat Stan Wawrinka 7-6(4), 7-6(3), 6-0.
+- **Rest:** last match 3 October, around four days before Shanghai.
+
+**Availability assessment:** both players were present in the official Shanghai order of play and no pre-match withdrawal was identified at the evidence cutoff. This does not certify medical fitness or operator retirement terms.
+
+### E. Sporting research
+
+#### 1. Independent benchmark strongly favours Berrettini
+
+The repository's Tennis gate requires a dated Tennis Abstract Elo benchmark. The latest pre-event page available was updated **28 September 2026**. It listed:
+
+- **Berrettini overall Elo:** 1824.4; **hard-court blended hElo:** 1779.9
+- **Kovacevic overall Elo:** 1648.8; **hard-court blended hElo:** 1620.3
+
+The hard-court gap is **159.6 Elo points**. Using Tennis Abstract's standard best-of-three Elo conversion, that corresponds to an approximate **71.5% benchmark win probability for Berrettini**. This is a **benchmark**, not `p_card`, not a live-qualified model probability, and not a licence to manufacture handicap/total percentages.
+
+The benchmark is materially stronger than the simple ATP-ranking gap and is more relevant because it explicitly incorporates opponent quality and hard-court performance. Rankings are therefore kept as context, not used as the primary mechanism.
+
+#### 2. Berrettini's serve creates the clearest matchup edge
+
+Berrettini's main route is first-strike service dominance. Against Davidovich Fokina in Tokyo he hit 16 aces and survived a poor opening set to win in three. Even when he lost to Vallejo, the first set reached a tiebreak. His height, first-serve power and forehand-first attacking pattern are naturally valuable on a hard court where short points are common.
+
+Kovacevic can also serve at a high level — 19 aces and no breaks conceded against Svajda show that ceiling — so this is not a one-sided serving matchup. The concern is **stability**: one day later against Munar, Kovacevic's first-serve points won fell to 54% and he lost all four break points faced. Against Harris he generated almost no return pressure despite respectable serving numbers.
+
+That combination supports Berrettini as the better player while warning against assuming an easy straight-sets result.
+
+#### 3. Kovacevic's return pressure is the main concern for his +2.5 case
+
+Kovacevic's recent losses expose a repeatable failure route: when the opponent holds efficiently, he has struggled to create enough return pressure to stay within the game margin. Against Harris he went 0/3 on break points and won only 8% of first-serve return points; against Munar he won only 14% of first-serve return points. Berrettini's first serve is a stronger weapon than either opponent's typical baseline serve, so Kovacevic needs either an unusually high own-hold rate or a dip in Berrettini's first-serve efficiency to keep the handicap close.
+
+The counterpoint is meaningful: Kovacevic's Svajda match showed 15/15 holds, and two big servers can produce tiebreak-heavy sets where a +2.5 cushion remains live even if the stronger player wins.
+
+#### 4. Total-games geometry at 24.5
+
+A 24.5 total in best-of-three is primarily a **set-count and closeness** proposition.
+
+- Representative Berrettini-control scoreline: **6-4, 6-4** = 20 games. This covers Berrettini -2.5 and lands Under 24.5.
+- Close straight-sets example: **7-6, 7-6** = 26 games. Berrettini can win in straight sets yet fail -2.5 and send the match Over.
+- Three-set matches frequently clear 24.5, but not automatically; lopsided three-set scores can still stay Under.
+
+Both players have recent tiebreak exposure and strong serving peaks, so the Over cannot be dismissed. However, Berrettini's Elo/quality edge plus Kovacevic's recent return weakness makes a two-set Berrettini control branch more persuasive than a full three-set branch. That is why Under 24.5 ranks above Over 24.5, but not with high confidence.
+
+#### 5. Surface, workload and continuity
+
+The match is on Shanghai's Deco-Turf hard court. Both players have been competing in the Asian hard-court swing, so there is no major surface transition. Berrettini comes in with the more recent main-draw match exposure; Kovacevic has more rest after Tokyo qualifying. Workload therefore carries both signs rather than being treated as a simple advantage.
+
+There is **no prior head-to-head** on the official Shanghai H2H page. No H2H narrative is used.
+
+### F. Numerical or qualitative assessment
+
+- **Assessment type:** `UNCALIBRATED_QUALITATIVE`
+- **Internal model probability:** `NOT_AVAILABLE`
+- **p_model:** `NOT_AVAILABLE`
+- **p_card:** `NOT_ESTIMATED`
+- **Tennis Abstract benchmark:** Berrettini approximately **71.5%** from the 28-Sep hard-court hElo gap; benchmark only
+- **Calibration status:** no Tennis live-qualified/admitted model for this card
+- **Evidence cutoff:** 2026-10-07 14:58:26 AEDT, before the 15:00 AEDT scheduled start
+- **Observed in-match information used:** none
+- **Key assumptions:** both listed players start; standard ATP best-of-three/tiebreak format; sporting handicap/total interpreted over completed match games; operator-specific retirement rules remain unknown
+- **Missing features:** complete point-in-time serve/return numerators across a matched opponent-quality sample; operator retirement terms; live-qualified Tennis model; independently retained official medical/fitness state
+
+**Coherent qualitative tree:**
+
+1. **Berrettini ordinary control:** stronger serve and hard-court level -> 6-4, 6-4 / 7-5, 6-4 type outcomes.
+2. **Close Berrettini win:** both serve well -> 7-6, 6-4 or 7-6, 7-6.
+3. **Three-set Berrettini win:** Kovacevic's serve peak steals a set, but Berrettini's broader level wins the decider.
+4. **Kovacevic upset:** Berrettini's recent return/second-set instability reappears while Kovacevic serves near his Svajda level.
+
+No numerical weights are assigned to these branches because doing so would manufacture unsupported probabilities.
+
+### G. Ranked predictions
+
+#### Rank 1 — Berrettini -2.5 Games
+
+- **Exact proposition:** Matteo Berrettini -2.5 aggregate games over the full match
+- **Contract origin:** supplied (`<Berrettini -2.5 Games>`)
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **SUPPORTED LEAN**
+- **Confidence:** moderate qualitative confidence; no calibrated probability
+- **Supporting evidence:** 159.6-point pre-event hard-court Elo edge; current ATP rank/record context also favours Berrettini; stronger serve/first-strike profile; Kovacevic has recently been broken four times by Munar and generated very little return pressure against Harris
+- **Principal failure route:** Kovacevic serves at his Svajda level, forcing one or two tiebreaks; Berrettini can win the match yet fail a -2.5 game line in a 7-6, 7-6 or similarly tight result
+- **Missingness:** no operator retirement rule; no calibrated game-margin distribution; no complete opponent-adjusted current serve/return feature store
+
+#### Rank 2 — Under 24.5 Total Games
+
+- **Exact proposition:** analyst-defined **Under 24.5 total games**, using the supplied `Total Games: 24.5` threshold
+- **Contract origin:** analyst-defined direction applied to a user-supplied directionless threshold
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **LEAN**
+- **Confidence:** moderate-low qualitative confidence
+- **Supporting evidence:** Berrettini's quality edge and Kovacevic's recent return weakness support a two-set control branch; representative 6-4, 6-4 result totals only 20 games and is coherent with Rank 1
+- **Principal failure route:** both players' serve peaks create tiebreaks or Kovacevic takes a set; 7-6, 7-6 is already 26 games and a competitive three-set match usually clears 24.5
+- **Missingness:** no calibrated set-count mixture or exact P(deciding set); no operator retirement rule
+
+#### Rank 3 — Kovacevic +2.5 Games
+
+- **Exact proposition:** Aleksandar Kovacevic +2.5 aggregate games over the full match
+- **Contract origin:** supplied (`<Kovacevic +2.5 Games>`)
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **FORCED RANK / COUNTER-SCENARIO**
+- **Confidence:** low-to-moderate qualitative confidence
+- **Supporting evidence:** Kovacevic's serve ceiling is real — 19 aces, 15/15 holds and 6/6 break points saved against Svajda; a tiebreak-heavy match can keep him within +2.5 even if Berrettini is the better winner candidate
+- **Principal failure route:** Berrettini consistently reaches Kovacevic's second serve while Kovacevic cannot pressure the Italian serve, reproducing the margin shape seen in the Harris and Munar losses
+- **Missingness:** directly complementary to Berrettini -2.5 and therefore not independent; retirement terms unresolved
+
+#### Rank 4 — Over 24.5 Total Games
+
+- **Exact proposition:** analyst-defined **Over 24.5 total games**, using the supplied `Total Games: 24.5` threshold
+- **Contract origin:** analyst-defined direction applied to a user-supplied directionless threshold
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **FORCED RANK / COUNTER-SCENARIO**
+- **Confidence:** low qualitative confidence
+- **Supporting evidence:** both players can generate large ace totals and tiebreak sets; Berrettini's Tokyo win over Davidovich Fokina went three sets, while Kovacevic's win over Svajda also went three; any genuinely competitive decider gives the Over a strong route
+- **Principal failure route:** Berrettini controls return games enough to win in two ordinary sets; 6-4, 6-4 or 7-5, 6-3 stays clearly Under
+- **Missingness:** exact deciding-set probability is unavailable; direct complement of the Under branch
+
+### H. Potential winner
+
+- **Predicted winner:** **Matteo Berrettini**
+- **Applicable endpoint:** complete best-of-three match
+- **Probability:** `NOT_ESTIMATED` for the card
+- **Independent benchmark:** Tennis Abstract hard-court Elo implies approximately **71.5% Berrettini** from its 28-Sep snapshot
+- **Confidence:** moderate qualitative lean, not calibrated certainty
+- **Primary reasons:** meaningful hard-court Elo advantage; stronger first-strike serve profile; better recent high-level win (Davidovich Fokina); Kovacevic's recent return weakness and unstable serve performance
+- **Upset route:** Kovacevic serves near his best, Berrettini's Tokyo second-round serving/return instability continues, and one or two tiebreaks shift the match into a small-sample finish
+
+### I. Correlation and dependence
+
+- `Berrettini -2.5` and `Kovacevic +2.5` are direct complements at the same half-game handicap and are **not independent predictions**.
+- Under 24.5 and Over 24.5 are direct complements at the same half-game total and are **not independent predictions**.
+- Berrettini -2.5 and Under 24.5 are positively related in the principal Berrettini-control branch.
+- Kovacevic +2.5 and Over 24.5 become more plausible together in a close/tiebreak-heavy or three-set branch.
+- A Berrettini match win does **not** imply Berrettini -2.5; 7-6, 7-6 is the clearest counterexample.
+
+### J. Missingness and limitations
+
+1. **Operator retirement/walkover terms:** unavailable; `UNKNOWN_DEFINITION` for formal settlement.
+2. **Directionless totals:** the user supplied `Total Games: 24.5` twice without Over/Under; directions in Ranks 2 and 4 are analyst-defined sporting propositions only.
+3. **Model qualification:** the Tennis runtime exists but is not live-qualified/admitted for this event; no internal probability is presented.
+4. **Elo freshness:** Tennis Abstract's latest pre-event update is 28 September and therefore does not include the players' final Tokyo matches. It remains a valid dated benchmark but is not a complete current-state model.
+5. **Serve/return sample:** recent match-level evidence is informative but small and opponent-dependent; no false precision is assigned.
+6. **Fitness:** absence of a withdrawal notice is not proof of perfect health. No current verified injury was found, but complete medical fitness is not independently certifiable.
+7. **Surface/roof state:** official tournament material confirms Deco-Turf hard court; no current roof-state adjustment is made.
+8. **No H2H:** the players have no prior meeting on the official tournament H2H page.
+
+### K. Source register
+
+Research/retrieval window: approximately 2026-10-07 14:54-14:58 AEDT.
+
+1. **Rolex Shanghai Masters / ATP — Wednesday 7 October order of play**  
+   URL: https://en.rolexshanghaimasters.com/en/media/news/shanghai-2026-schedule  
+   Role: official event identity, first-round/R128 placement, Stadium Court and 12:00 Shanghai start.
+
+2. **Rolex Shanghai Masters — official schedule page**  
+   URL: https://en.rolexshanghaimasters.com/en/scores/schedule?dayToDisplay=7  
+   Role: official live schedule state and R128 listing.
+
+3. **Rolex Shanghai Masters — official H2H page, Kovacevic vs Berrettini**  
+   URL: https://en.rolexshanghaimasters.com/en/scores/head-to-head/singles/k0az/bk40  
+   Role: player IDs, current tournament-displayed rankings, YTD records and confirmation of no prior H2H.
+
+4. **Rolex Shanghai Masters — General Information**  
+   URL: https://en.rolexshanghaimasters.com/en/tournament/general-information  
+   Role: Deco-Turf hard court and Qi Zhong Tennis Center venue identity.
+
+5. **Tennis Abstract — ATP Elo Ratings, last update 2026-09-28**  
+   URL: https://tennisabstract.com/reports/atp_elo_ratings.html  
+   Role: required independent TE-P5 benchmark; Berrettini hElo 1779.9, Kovacevic hElo 1620.3.
+
+6. **Tennis.com — Jaume Munar vs Aleksandar Kovacevic, Tokyo qualifying, 29 Sep 2026**  
+   URL: https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/j-munar-vs-a-kovacevic-2026-09-29  
+   Role: recent Kovacevic serve/return and break-point performance.
+
+7. **Tennis.com — Zachary Svajda vs Aleksandar Kovacevic, Tokyo qualifying, 28 Sep 2026**  
+   URL: https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/z-svajda-vs-a-kovacevic-2026-09-28  
+   Role: Kovacevic serving ceiling, aces, holds and break-point saves.
+
+8. **Tennis.com — Lloyd Harris vs Aleksandar Kovacevic, Chengdu, 24 Sep 2026**  
+   URL: https://www.tennis.com/tournaments/chengdu-open/matches/l-harris-vs-a-kovacevic-2026-09-24  
+   Role: recent Kovacevic return-pressure evidence.
+
+9. **Tennis.com — Alejandro Davidovich Fokina vs Matteo Berrettini, Tokyo, 1 Oct 2026**  
+   URL: https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/a-davidovich-fokina-vs-m-berrettini-2026-10-01  
+   Role: recent Berrettini serve performance and three-set win.
+
+10. **Tennis.com — Matteo Berrettini vs Adolfo Daniel Vallejo, Tokyo, 3 Oct 2026**  
+    URL: https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/m-berrettini-vs-a-vallejo-2026-10-03  
+    Role: most recent Berrettini match and downside branch.
+
+11. **ATP Tour / US Open reporting — Berrettini vs Wawrinka, US Open 2026**  
+    URL: https://www.atptour.com/en/news/wawrinka-us-open-2026-reaction-r1  
+    Role: corroboration of Berrettini's hard-court tiebreak performance.
+
+**SPORTS_ONLY / MARKET_BLIND note:** sportsbook odds, prediction markets, tipster selections and third-party projected-winner percentages surfaced during search were deliberately excluded from ranking and confidence.
+
+### L. Forecast integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_EVIDENCE_CUTOFF_UNCALIBRATED_QUALITATIVE`
+
+`MODEL_QUALIFICATION: DEVELOPMENT_ONLY / NOT_ADMITTED_FOR_LIVE_CARD_PROBABILITIES`
+
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`
+
+`LOG_STATUS: MINI_STAGING`
+
+`CANONICAL_LEDGER_STATUS: PENDING_RECONCILIATION`
+
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 14:58:26 AEDT`
+
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+`IN_MATCH_DATA_USED_AS_PREGAME_EVIDENCE: NO`
+
+### M. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+

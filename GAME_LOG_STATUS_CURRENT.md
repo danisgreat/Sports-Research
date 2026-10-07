@@ -1,8 +1,9 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
 # Current canonical research queue
 
-**Next canonical ID: P-538.** All requested cards go directly to Part 6, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
-Current selected freeze: `CONTROL_MANIFEST_2026-10-07-1.md`; normalized-CRLF SHA-256 `420dae0b627101b59afab9281af5dcb07a9cf00a477ef2786a415a3e144a7d04`. Current authority: METHOD.md and CURRENT_RULES.md.
+**Next canonical ID: P-550.** All requested cards go directly to the active combined log, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
+Current selected freeze: `CONTROL_MANIFEST_2026-10-08-2.md`; normalized-CRLF SHA-256 `6db924b2e18c213f56e4dbfb64b64fe54193fad052e50fc4e3ebfee773e63b90`. Current authority: METHOD.md and CURRENT_RULES.md.
 
 | ID | Event | Tracking alias | Status |
 |---|---|---|---|
@@ -21,13 +22,25 @@ Current selected freeze: `CONTROL_MANIFEST_2026-10-07-1.md`; normalized-CRLF SHA
 | **P-535** | Panathinaikos AKTOR vs Vikos Falcons (Greek Basket League 2026-27, Round 1) | `TMP-20261004-GBL-PAO-VIK` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
 | **P-536** | FC Bayern München vs EWE Baskets Oldenburg (easyCredit BBL 2026-27, Round 4) | `TMP-20261004-BBL-BAY-OLD` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
 | **P-537** | Kyrgyzstan vs Lebanon (International Friendly, FIFA Window) | `TMP-20261004-INT-KGZ-LBN` | HISTORICAL_UNCALIBRATED_RESEARCH_IMPORT |
+| **P-538** | NHL — Florida Panthers @ Los Angeles Kings | `LOCAL-20261007-P-538` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-539** | TENNIS / ATP MASTERS 1000 SHANGHAI — Aleksandar Kovacevic vs Matteo Berrettini | `LOCAL-20261007-P-539` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-540** | TENNIS / ATP MASTERS 1000 SHANGHAI — Adrian Mannarino vs Nikoloz Basilashvili | `LOCAL-20261007-P-540` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-541** | TENNIS / ATP MASTERS 1000 SHANGHAI — Mattia Bellucci vs Yi Zhou | `LOCAL-20261007-P-541` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-542** | BASKETBALL / AUSTRALIA NBL — Adelaide 36ers vs Melbourne United | `LOCAL-20261007-P-542` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-543** | BASEBALL / JAPAN NPB — Hiroshima Toyo Carp @ Hanshin Tigers | `LOCAL-20261007-P-543` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-544** | BASEBALL / KOREA KBO — Doosan Bears @ LG Twins | `LOCAL-20261007-P-544` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-545** | BASEBALL / KOREA KBO — Hanwha Eagles @ Kiwoom Heroes | `LOCAL-20261007-P-545` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-546** | Samsung Lions @ KT Wiz — KBO — 2026-10-07 | `LOCAL-20261007-P-546` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-547** | NC Dinos @ SSG Landers — KBO — 2026-10-07 | `LOCAL-20261007-P-547` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-548** | Busan KCC Egis vs Daegu Korea Gas Corporation Pegasus — Korea KBL — 2026-10-07 | `LOCAL-20261007-P-548` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-549** | Foshan Nanshi vs Guangxi Hengchen — China League One — 2026-10-07 | `LOCAL-20261007-P-549` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
 
-Highest canonical research ID: **P-537**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_6.md`.
+Highest canonical research ID: **P-549**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
 Archived mini references: `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`, `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P527_ONWARD_UPDATED_4.md`.
 Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/carryover.json` and `carryover.md`. Eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6; formal certification remains unresolved.
 
-**Current all-log settlement register:** `research/verification/all_log_resolution_2026-10-05/carryover_v3.json`.
-53 event records retain specific settlement/certification requirements; 10 older rank/contract mappings were repaired. The earlier 15-record closure is a historical snapshot. New sporting reviews and existing retrospective pointers are recorded in the current register; operator or source gaps remain literal.
+**Current all-log settlement register:** `research/verification/mini_rollover_2026-10-08/carryover.json`.
+65 event records retain specific settlement/certification requirements; 10 older rank/contract mappings were repaired. The earlier 15-record closure is a historical snapshot. New sporting reviews and existing retrospective pointers are recorded in the current register; operator or source gaps remain literal.
 Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.
 
 P-518–P-522 remain reserved. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.

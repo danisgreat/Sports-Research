@@ -9892,3 +9892,2920 @@ Four additional retrospective hypotheses are retained in `research/verification/
 This addendum supersedes the earlier P-520 native-ID gap and selects `research/verification/all_log_resolution_2026-10-05/carryover_v3.json`. The official KBO dated game list now returns `20260927HHLT0`, Hanwha away at Lotte, normal final in the ninth, score 6–2, scheduled September 27 at 17:00 KST. The retained full body and receipt are at `research/verification/all_log_resolution_2026-10-05/P-520_native_owner.json`. The scheduled field does not prove actual first pitch. Existing sporting grades are unchanged; original operator terms, issue/baseline custody and audited source independence still prevent formal certification. All 53 carryover IDs remain, with this one native-owner requirement removed.
 
 The local source registry now contains 111 verified receipt bodies; 59 are available from the staged publication and 52 remain excluded local-only. Earlier 110-body counts describe the preceding checkpoint. Local files remain authoritative; GitHub main is the destination. The selected control is CR-2026.10.05-I5, frozen by CONTROL_MANIFEST_2026-10-05-5.md. Earlier append projections and control receipts remain unchanged. No IDs are added; P-538 remains next.
+
+<!-- BEGIN CANONICAL RESEARCH P-538 8bbb821b7a81406f807b6e9acca6a549 -->
+## P-538 — NHL — Florida Panthers @ Los Angeles Kings
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-538`. Logged UTC: 2026-10-07T15:41:50.974275+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**WORKING_ID — PENDING_CANONICAL_RECONCILIATION**  
+**Tracking alias:** `TMP-20261007-NHL-FLA-LAK`
+
+### A. Identity and timing
+
+- **Supplied event label:** `GLA Panthers @ LA Kings`
+- **Verified event identity:** Florida Panthers at Los Angeles Kings. The supplied `GLA Panthers` label does not correspond to an NHL team code; the official NHL fixture is Florida (`FLA`) at Los Angeles (`LAK`).
+- **Official/native event ID:** `2026020052`
+- **Sport / competition:** Ice hockey / National Hockey League (NHL), 2026-27 regular season
+- **Stage/context:** Florida's fourth game of its season-opening road trip; Los Angeles home opener
+- **Away team:** Florida Panthers
+- **Home team:** Los Angeles Kings
+- **Venue:** Crypto.com Arena, Los Angeles, California, USA
+- **Official scheduled start:** Tuesday 6 October 2026, 10:00 PM EDT / 7:00 PM PDT
+- **UTC:** Wednesday 7 October 2026, 02:00 UTC
+- **Australia/Melbourne:** Wednesday 7 October 2026, 13:00 AEDT (UTC+11)
+- **User-estimated start:** `1:20 PM 7/10/2026 AEST, can be delayed`. Melbourne is on AEDT, not AEST, on this date. The user's 1:20 PM local estimate is treated only as an expected puck-drop estimate, not the official scheduled start.
+- **Observation timestamp:** approximately 2026-10-07 13:27 AEDT / 02:27 UTC
+- **Research completion timestamp:** 2026-10-07 13:32 AEDT / 02:32 UTC
+- **Verified event state:** `START_UNVERIFIED / LATE_RESEARCH`. The official scheduled time had passed, but the accessible official NHL material still presented pregame/gamecenter information and did not expose a reliable current clock/state in the retrieved body. No observed score, shot, penalty, goal, or other in-game event was used as predictive evidence.
+- **Playing format:** NHL regular season; three 20-minute regulation periods. A regulation tie proceeds to 5-minute 3-on-3 sudden-death overtime and then a shootout if required.
+
+### B. Repository authority
+
+- **Repository:** `danisgreat/Sports-Research`
+- **Branch:** `main`
+- **Main-branch commit SHA read:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`
+- **Methodology:** `MDS-2026.10.01-v8.0`
+- **Control revision:** `CR-2026.10.07-I1`
+- **Numerical runtime extension:** `CR-2026.10.06-NUMERICAL-1`
+- **Scoring revision:** `SCV-2026.10.01-v3`
+- **Active control manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`
+- **Applicable sport rules:** `RULES_ICE_HOCKEY.md`, `RULES_NHL.md`
+- **NHL runtime configuration:** `runtime/config/sports/nhl.json`, default model `A3`; `runtime/src/sports/nhl/engine.py` present at the read commit
+- **Model register architecture:** NHL shot-quality / goalie model with dependent goal distribution, regulation score object, empty-net tail and OT/SO conversion
+- **Admission state:** no NHL entry was found in `research/admission_registry.json`; no current NHL model is `LIVE_QUALIFIED`
+- **Model qualification used for this card:** `DEVELOPMENT_ONLY — NOT USED FOR CARD PROBABILITIES`
+- **Assessment type:** `UNCALIBRATED_QUALITATIVE`
+- **SPORTS_ONLY / MARKET_BLIND:** enforced. No sportsbook odds, betting-market movement, tipster picks, consensus predictions, fantasy projections, or market-implied probabilities were used.
+
+### C. Supplied contracts
+
+The supplied contract text is preserved verbatim:
+
+1. `<Panthers ML>`
+2. `<Kings ML>`
+3. `<Total Goals: 5.5>`
+4. `<Total Goals: 5.5>`
+5. `<OPTIONAL CONTRACT 5>`
+
+**Contract-definition warning:** the two `Total Goals: 5.5` entries do not specify Over or Under and therefore are not complete directional propositions. They are retained exactly as supplied. For ranking, this card evaluates two **analyst-defined sporting propositions** against that supplied threshold: full-game **Under 5.5** and full-game **Over 5.5**, including the NHL OT/SO result process for sporting analysis. This does **not** establish any operator's actual settlement terms or prove that those exact directional contracts were offered.
+
+**Moneyline definition warning:** the supplied `Panthers ML` and `Kings ML` do not include operator action wording. The sporting winner assessment below refers to the full NHL game including OT/SO, but formal operator settlement remains `UNKNOWN_DEFINITION` until the original operator terms are available.
+
+### D. Participants and availability
+
+#### Florida Panthers
+
+**Projected forwards**
+- Carter Verhaeghe — Sam Bennett — Matthew Tkachuk
+- Brady Tkachuk — Sam Reinhart — Brad Marchand
+- Eetu Luostarinen — Anton Lundell — Sandis Vilmanis
+- Bokondji Imama — Lars Eller — Garnet Hathaway
+
+**Projected defence**
+- Dmitry Kulikov — Gustav Forsling
+- Niko Mikkola — Seth Jones
+- Uvis Balinskis — Radko Gudas
+
+**Goaltenders**
+- **Jacob Markstrom — expected/announced starter in current pregame reporting**
+- Akira Schmid — backup
+
+**Unavailable / scratched / uncertainty**
+- Aleksander Barkov — lower-body injury; NHL reports a 6-8 week absence
+- Jonah Gadjovich — neck injury
+- Aaron Ekblad — scratched in the official projected-lineup report
+- Sam Lafferty — scratched
+- Alexander Petrovic — scratched
+- Brad Marchand — projected to play after returning Sunday; the NHL projected-lineup page still carries a lower-body injury label, so the card records him as projected/available with recent injury context rather than fully healthy
+
+#### Los Angeles Kings
+
+**Projected forwards**
+- Artemi Panarin — Quinton Byfield — Adrian Kempe
+- Mats Zuccarello — Alex Turcotte — Alex Laferriere
+- Trevor Moore — Erik Haula — Scott Laughton
+- Corey Perry — Joel Armia
+
+**Projected defence**
+- Brian Dumoulin — Drew Doughty
+- Erik Gustafsson — Brandt Clarke
+- Mikey Anderson — Cody Ceci
+- Joel Edmundson as the seventh defenseman in the projected group
+
+**Goaltenders**
+- **Darcy Kuemper — confirmed as the intended starter in NHL pregame reporting**
+- Anton Forsberg — backup
+
+**Unavailable / scratched / uncertainty**
+- Kevin Fiala — out following leg surgery; reported as skating on his own with a possible early-November return window
+- Andre Lee — scratched
+- Samuel Helenius — scratched
+- Mats Zuccarello — projected to play after a maintenance day; this remains a late lineup point to monitor
+
+### E. Sporting research
+
+#### Florida defensive process is the strongest current signal
+
+Florida enters 1-0-2, but the record undersells the early defensive process. The Panthers' own preview reports that through 131:35 at 5-on-5 they had outscored opponents **3-1**, led **53-38 in scoring chances**, and had a **2.85 expected-goals-against mark at 5-on-5**, described there as the lowest in the NHL at that point. They had also surrendered only one 5-on-5 goal through three games. That is a more useful mechanism than simply noting the low final totals in two of three games.
+
+The starting-goalie comparison also leans Florida on available evidence. NHL Gamecenter lists Markstrom at 1-0-1 with a .914 save percentage and 1.40 GAA entering this game, while Kuemper's only start ended with eight goals allowed on 29 shots in Colorado. Kuemper's sample is only one game and should not be treated as his true ability; the Panthers' preview also notes a .917 career save percentage in 13 starts against Florida. The appropriate conclusion is not that Kuemper is a .724 goalie, but that Florida has the cleaner *current* goaltending evidence while a Kuemper rebound remains a major counter-scenario.
+
+#### Florida's offense is materially weakened by Barkov's absence
+
+Barkov being out 6-8 weeks removes Florida's captain and elite two-way center. Sam Reinhart has been used at center in the adjusted lineup, and Marchand's return helps restore scoring depth, but the Panthers' power play had converted only 5.9% in the tiny three-game sample. Florida's structure is therefore more convincing than its current scoring ceiling. The absence of Barkov is the principal reason not to make Florida ML an aggressive or high-confidence selection.
+
+#### Los Angeles has real offensive upside despite an 0-1-1 start
+
+The Kings have scored four goals in each of their first two games. Their new Panarin-Byfield-Kempe line was especially dangerous against San Jose: the Kings' official analysis reported a 20-4 5-on-5 shot-attempt edge with that trio on the ice and nine scoring chances, while all three scored and had multiple points. Los Angeles also scored twice on the power play in that game. This makes a low-total position fragile: the Kings' top unit has enough speed, retrieval and finishing talent to break Florida's structure, particularly with Barkov absent.
+
+At the same time, the Kings have allowed 13 goals in two games. Four of Colorado's eight goals came on the power play, and San Jose scored five including the overtime winner. Early-season team special-teams percentages are extremely noisy, but the breakdowns are real enough to prevent treating Los Angeles as a clean defensive side simply because Kuemper has a stronger long-term résumé than his first start.
+
+#### Rest, travel and venue
+
+Florida is finishing a four-game road trip after playing Anaheim on Sunday. Los Angeles last played Saturday in San Jose and is opening its home schedule, giving the Kings the rest/venue edge. The repository's hockey rules treat rest as a mechanism through goalie choice, line workload and forecheck quality rather than an automatic goals or side adjustment. That edge is therefore meaningful but not decisive.
+
+#### Head-to-head
+
+Florida went 2-0-0 against Los Angeles in 2025-26 and led 8-4 in aggregate scoring, according to the Panthers' preview. This is secondary evidence only. Both rosters and the Kings' coaching context have changed materially, so prior head-to-head is not used as a primary rate estimate.
+
+### F. Numerical or qualitative assessment
+
+- **Assessment:** `UNCALIBRATED_QUALITATIVE`
+- **Probability:** `NOT_ESTIMATED`
+- **p_model:** `NOT_AVAILABLE`
+- **p_card:** `NOT_ESTIMATED`
+- **Baseline probability:** `NOT_ESTIMATED`
+- **Calibration:** none applicable to this card
+- **Runtime model:** NHL A3 code/configuration exists but has no current NHL admission/qualification record and was not used to generate card probabilities
+- **Prediction cutoff:** research completed after the nominal 13:00 AEDT scheduled start, with event state not reliably observable in the accessible official body; therefore this is `LATE_RESEARCH / START_UNVERIFIED`, not certified pregame research
+- **Observed game information used in prediction:** none
+- **Major missing features:** a retained current NHL API event body with reliable live/pre-live state; exact operator ML/total settlement definitions; a qualified fitted NHL model; independent source-lineage receipts; full point-in-time xG/shot-quality feature store for both teams; final confirmed warm-up lines beyond the available projected-lineup reporting
+
+**Robustness summary:** Florida remains the preferred side if Markstrom starts as reported and the Panthers' 5-on-5 suppression persists. The Under remains viable if the game stays primarily five-on-five and Kuemper normalizes substantially from his opener. Los Angeles and the Over both become more plausible if its top line continues to dominate possession, Florida's Barkov-less center depth is exposed, or special-teams/empty-net states create extra scoring.
+
+### G. Ranked predictions
+
+#### Rank 1 — Panthers ML
+
+- **Exact proposition:** Florida Panthers to win the full NHL game, including overtime/shootout for the sporting assessment
+- **Contract origin:** supplied (`Panthers ML`)
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **SUPPORTED LEAN**
+- **Confidence:** moderate qualitative confidence; not a calibrated probability
+- **Supporting evidence:** Florida's markedly stronger early 5-on-5 defensive process; only one 5-on-5 goal allowed through three games; Markstrom's strong current form; Los Angeles has conceded 13 goals through two games; Florida won both 2025-26 meetings, used only as secondary evidence
+- **Principal failure route:** Los Angeles' Panarin-Byfield-Kempe line continues its strong chance-generation, the Kings exploit Florida special teams/center depth without Barkov, and Kuemper rebounds sharply at home
+- **Missingness:** no qualified NHL probability model; exact operator ML action rules absent; event start state not independently verified at research completion
+
+#### Rank 2 — Full-game Under 5.5 goals
+
+- **Exact proposition:** Analyst-defined sporting proposition — full-game total Under 5.5 goals, including NHL OT/SO scoring treatment, using the supplied `5.5` threshold
+- **Contract origin:** analyst-defined side applied to the user's supplied threshold; the original `Total Goals: 5.5` text itself is directionless
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **LEAN**
+- **Confidence:** moderate-low qualitative confidence
+- **Supporting evidence:** Florida's 5-on-5 defensive control is the strongest process signal in the matchup; Markstrom enters in strong form; Florida has scored only 2.00 goals per game through three and is missing Barkov; two of Florida's first three games finished at five total goals or fewer including OT
+- **Principal failure route:** Los Angeles has scored four in each game, its top line is creating at an elite early rate, and both teams' early special-teams/empty-net branches can push a 3-2 type game beyond 5.5
+- **Missingness:** Kuemper has only one 2026-27 start; early-season special-teams rates are unstable; exact operator total/OT/SO counting rule was not supplied
+
+#### Rank 3 — Kings ML
+
+- **Exact proposition:** Los Angeles Kings to win the full NHL game, including overtime/shootout for the sporting assessment
+- **Contract origin:** supplied (`Kings ML`)
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **FORCED RANK / LIVE COUNTER-SCENARIO**
+- **Confidence:** low-to-moderate qualitative confidence
+- **Supporting evidence:** home opener; extra rest; strong early offensive production; Panarin-Byfield-Kempe generated dominant 5-on-5 shot/chance shares against San Jose; Florida is missing Barkov and Ekblad
+- **Principal failure route:** Florida's defensive structure and Markstrom suppress the Kings' top line while Los Angeles' defensive and penalty-kill issues continue
+- **Missingness:** same model/timing/operator limitations as Rank 1; direct complement of Panthers ML and therefore not independent
+
+#### Rank 4 — Full-game Over 5.5 goals
+
+- **Exact proposition:** Analyst-defined sporting proposition — full-game total Over 5.5 goals, including NHL OT/SO scoring treatment, using the supplied `5.5` threshold
+- **Contract origin:** analyst-defined side applied to the user's supplied threshold; the original `Total Goals: 5.5` text itself is directionless
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **FORCED RANK / COUNTER-SCENARIO**
+- **Confidence:** low qualitative confidence
+- **Supporting evidence:** Los Angeles has scored four in both games and allowed 13 total; its top line and power play have produced; the NHL 5.5 total has discrete OT geometry and late empty-net exposure that can move a close game across the threshold
+- **Principal failure route:** Florida controls five-on-five play, Markstrom continues his strong start, and Kuemper's long-term ability produces a substantial rebound from his opening result
+- **Missingness:** exact total settlement wording absent; complementary with Under 5.5 and not an independent prediction
+
+### H. Potential winner
+
+- **Predicted winner:** **Florida Panthers**
+- **Applicable endpoint:** full NHL game including overtime/shootout
+- **Probability:** `NOT_ESTIMATED`
+- **Confidence:** moderate qualitative lean only
+- **Primary reasons:** better early 5-on-5 defensive process; stronger current goaltending evidence with Markstrom; Los Angeles' defensive leakage through its first two games
+- **Upset route:** Los Angeles' top line sustains its strong possession/chance creation, Kuemper rebounds toward career norms, and the Kings exploit Florida's Barkov-less middle and road-trip fatigue
+
+### I. Correlation and dependence
+
+- `Panthers ML` and `Kings ML` are direct complements under the same full-game endpoint and cannot be treated as independent predictions.
+- Under 5.5 and Over 5.5 are direct complements at the supplied threshold, subject to push impossibility at a half-goal line but still dependent on the same score distribution.
+- Panthers ML and Under 5.5 are positively related in the main Florida-control scenario: strong Panthers 5-on-5 defense plus Markstrom lowers Los Angeles scoring while Florida does enough to win.
+- Kings ML and Over 5.5 are positively related in the main Los Angeles-upside scenario: Kings top-line/special-teams success both raises their win chance and increases total scoring.
+- These four ranks represent alternative branches of one event, not four independent trials.
+
+### J. Missingness and limitations
+
+1. **Timing/state:** official scheduled time had passed by research completion, but a reliable live state was not exposed in the accessible official body. The card is therefore `START_UNVERIFIED`, not claimed pregame.
+2. **No live contamination:** no observed game score, goal, shot, penalty or possession was used.
+3. **Contract ambiguity:** both supplied total lines are identical and directionless; operator OT/SO/action wording is unavailable.
+4. **Model qualification:** the repository contains NHL runtime code but no admitted/qualified NHL model for card probabilities.
+5. **Small samples:** Florida has played three games and Los Angeles two; current special-teams, goalie and team scoring rates are highly unstable.
+6. **Availability:** projected lineups are authoritative pregame reporting but are not equivalent to a retained official warm-up roster handshake. Marchand carries recent injury context despite being projected to play; Zuccarello had a maintenance day.
+7. **Roster/context changes:** 2025-26 head-to-head is secondary only because both teams changed personnel and Los Angeles changed coaching context.
+8. **Source independence:** several current facts originate in the NHL/team ecosystem; they are useful field-owner evidence but are not counted as multiple independent lineages for certification.
+
+### K. Source register
+
+Retrieval window: approximately 2026-10-07 13:20-13:32 AEDT.
+
+1. **NHL Gamecenter — Florida Panthers at Los Angeles Kings, game 2026020052**  
+   URL: https://www.nhl.com/gamecenter/fla-vs-lak/2026/10/06/2026020052  
+   Role: official event identity, venue, team records, team/goaltender statistical context. Accessible body did not expose a trustworthy live clock/state at research time.
+
+2. **NHL.com — Panthers at Kings projected lineups, Oct. 6, 2026**  
+   URL: https://www.nhl.com/news/florida-panthers-los-angeles-kings-game-preview-october-6-2026  
+   Role: projected lines, scratches, injuries, Kuemper start, Barkov absence, Fiala absence.
+
+3. **FloridaPanthers.com — PREVIEW: Panthers wrap up season-opening road trip in Los Angeles**  
+   URL: https://www.nhl.com/panthers/news/preview-panthers-wrap-up-season-opening-road-trip-in-los-angeles  
+   Role: Florida 5-on-5 process, scoring-chance/xGA context, previous meeting context, projected roster and opponent notes.
+
+4. **LAKings.com — Game Preview: LAK vs. FLA, Oct. 6, 2026**  
+   URL: https://www.nhl.com/kings/news/tune-in-kings-versus-panthers-october-6  
+   Role: official venue/start, Kings home-opener context, expected lineup continuity, recent scoring contributors.
+
+5. **LAKings.com — Top Forward Line Showing What It Can Do Early In Season, Oct. 5, 2026**  
+   URL: https://www.nhl.com/kings/news/insider-top-forward-line-showing-what-it-can-do-early-in-season  
+   Role: Panarin-Byfield-Kempe 5-on-5 shot-attempt and scoring-chance process, speed/forecheck context.
+
+6. **NHL.com — Barkov out 6-8 weeks for Panthers, Oct. 6, 2026**  
+   URL: https://www.nhl.com/news/aleksander-barkov-injury-status-update-october-6-2026  
+   Role: current Barkov injury timetable.
+
+7. **NHL.com recaps — Panthers/Hurricanes, Panthers/Ducks, Kings/Avalanche, Kings/Sharks**  
+   URLs: official NHL recap pages retrieved during research.  
+   Role: cross-check recent game results and mechanisms only; no market data used.
+
+**Source confidence:** official league/team sources dominate identity, roster and current-process evidence. Current state remains `START_UNVERIFIED` because accessible official Gamecenter rendering did not provide a reliable current clock/state at the time of analysis.
+
+### L. Forecast integrity
+
+`FORECAST_CLASSIFICATION: LATE_START_UNVERIFIED_UNCALIBRATED_QUALITATIVE`
+
+`MODEL_QUALIFICATION: DEVELOPMENT_ONLY — NHL A3 RUNTIME NOT ADMITTED / NOT USED FOR PROBABILITIES`
+
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`
+
+`LOG_STATUS: MINI_STAGING`
+
+`CANONICAL_LEDGER_STATUS: PENDING_RECONCILIATION`
+
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 approximately 13:27-13:32 AEDT`
+
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+`LIVE_GAME_DATA_USED_AS_PREGAME_EVIDENCE: NO`
+
+### M. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-538 8bbb821b7a81406f807b6e9acca6a549 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-539 17aff7e2508347a998bdd124bbaface7 -->
+## P-539 — TENNIS / ATP MASTERS 1000 SHANGHAI — Aleksandar Kovacevic vs Matteo Berrettini
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-539`. Logged UTC: 2026-10-07T15:41:51.328386+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**WORKING_ID — PENDING_CANONICAL_RECONCILIATION**
+
+### A. Identity and timing
+
+- **P-ID:** `P-539` (working mini ID; not ledger-committed)
+- **Tracking alias:** `TMP-20261007-ATP-SHA-KOV-BER`
+- **Exact event:** Aleksandar Kovacevic (USA) vs Matteo Berrettini (ITA)
+- **Competition:** Rolex Shanghai Masters, ATP Masters 1000
+- **Round:** First Round / Round of 128
+- **Season:** 2026 ATP Tour
+- **Venue:** Stadium Court, Qi Zhong Tennis Center / Qizhong Forest Sports City Arena, Shanghai, China
+- **Surface:** Deco-Turf hard court; scheduled as outdoor hard
+- **Format:** men's singles, best-of-three sets; standard ATP tiebreak set format
+- **Official/native event ID:** `NOT_EXPOSED_IN_ACCESSIBLE_OFFICIAL TOURNAMENT PAGE`; player IDs are ATP `K0AZ` (Kovacevic) and `BK40` (Berrettini)
+- **Official scheduled start:** 2026-10-07 12:00 Shanghai time (UTC+8)
+- **UTC scheduled start:** 2026-10-07 04:00 UTC
+- **Australia/Melbourne equivalent:** 2026-10-07 15:00 **AEDT** (UTC+11), not AEST
+- **User-supplied estimate preserved:** `<3:00 PM 7/10/2026 AEST, can be delayed>`
+- **Observation timestamp:** 2026-10-07 14:58:26 AEDT / 11:58:26 Shanghai time
+- **Research completion timestamp:** `2026-10-07 14:59:57 AEDT / 11:59:57 Shanghai time`
+- **Verified event state at observation:** `PREGAME` — official tournament order of play listed the match first on Stadium Court at 12:00 local, and current time was still before that scheduled start; Tennis.com also showed the fixture as upcoming. No in-match score or point data was used.
+
+### B. Repository authority
+
+- **Repository:** `danisgreat/Sports-Research`
+- **Branch:** `main`
+- **Main-branch commit SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`
+- **Methodology:** `MDS-2026.10.01-v8.0`
+- **Control revision:** `CR-2026.10.07-I1`
+- **Numerical extension:** `CR-2026.10.06-NUMERICAL-1`
+- **Scoring revision:** `SCV-2026.10.01-v3`
+- **Active control manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`
+- **Applicable sport rules:** `RULES_TENNIS.md`, current root controls taking precedence over historical commentary
+- **Runtime sport configuration:** `H0-TENNIS-v1`, source `tennis_abstract`, default model `A2`, discrete unit `games`
+- **Runtime implementation:** `runtime/src/sports/tennis/engine.py` — point-on-serve -> hold/break -> set -> match/games distribution architecture
+- **Model qualification:** `DEVELOPMENT_ONLY / NOT ADMITTED FOR LIVE CARD PROBABILITIES`; no Tennis entry exists in the current admission registry and no Tennis model is `LIVE_QUALIFIED`
+- **Assessment used for this card:** `UNCALIBRATED_QUALITATIVE` with an external dated Elo benchmark; no runtime-generated probability is claimed
+
+### C. Supplied contracts
+
+Reproduced verbatim:
+
+```text
+<Kovacevic +2.5 Games>
+<Berrettini -2.5 Games>
+<Total Games: 24.5>
+<Total Games: 24.5>
+<OPTIONAL CONTRACT 5>
+```
+
+**Contract interpretation:**
+
+- `Kovacevic +2.5 Games` and `Berrettini -2.5 Games` are aggregate full-match game handicaps if the operator uses the ordinary tennis games-handicap definition.
+- The two `Total Games: 24.5` entries are **directionless duplicates**. They are not silently rewritten. To satisfy the requested four-rank analysis, the card evaluates analyst-defined **Under 24.5** and **Over 24.5** sporting propositions against that supplied threshold, clearly labelled as analyst-defined directions.
+- `OPTIONAL CONTRACT 5` is a placeholder, not a defined sporting proposition, and is not ranked.
+- **Operator retirement/walkover rules were not supplied.** Under `RULES_TENNIS.md` this remains `UNKNOWN_DEFINITION`; the sporting propositions can be analysed, but operator settlement/value cannot be certified.
+
+### D. Participants and availability
+
+#### Aleksandar Kovacevic
+
+- Current official tournament H2H page: ATP ranking **81**; 2026 YTD main-tour record displayed as **15-23**.
+- Right-handed, one-handed backhand; ATP player ID `K0AZ`.
+- No verified withdrawal or current injury report was found in the official tournament/tour material reviewed before the match.
+- Recent hard-court activity:
+  - Tokyo qualifying: beat Zachary Svajda 6-7(7), 6-2, 6-4 on 28 September; held all 15 service games, hit 19 aces, and saved all six break points.
+  - Tokyo qualifying final: lost to Jaume Munar 2-6, 3-6 on 29 September; won only 54% of first-serve points and 53% of second-serve points, and was broken four times.
+  - Chengdu: lost to Lloyd Harris 3-6, 4-6 on 24 September; won 71% of first-serve points but only 10 return points from 51 opponent service points and converted 0/3 break points.
+  - Winston-Salem: beat Stefanos Tsitsipas 6-3, 7-6(1) before losing to Arthur Fery in three sets.
+- **Rest:** last recorded competitive match 29 September, giving roughly one week without a match before Shanghai.
+
+#### Matteo Berrettini
+
+- Current official tournament H2H page: ATP ranking **46**; 2026 YTD main-tour record displayed as **17-15**.
+- Right-handed, two-handed backhand, 196 cm; ATP player ID `BK40`.
+- No verified withdrawal or new current injury report was found in the official tournament/tour material reviewed before the match.
+- Recent hard-court activity:
+  - Tokyo R1: beat world No. 26 Alejandro Davidovich Fokina 1-6, 7-6(1), 6-4 on 1 October. Berrettini hit 16 aces, landed 70% first serves and won 69% of first-serve points.
+  - Tokyo R2: lost to Adolfo Daniel Vallejo 6-7(6), 1-6 on 3 October. He created three break points but converted none, and won only 61% of first-serve points in that match.
+  - US Open R1: beat Stan Wawrinka 7-6(4), 7-6(3), 6-0.
+- **Rest:** last match 3 October, around four days before Shanghai.
+
+**Availability assessment:** both players were present in the official Shanghai order of play and no pre-match withdrawal was identified at the evidence cutoff. This does not certify medical fitness or operator retirement terms.
+
+### E. Sporting research
+
+#### 1. Independent benchmark strongly favours Berrettini
+
+The repository's Tennis gate requires a dated Tennis Abstract Elo benchmark. The latest pre-event page available was updated **28 September 2026**. It listed:
+
+- **Berrettini overall Elo:** 1824.4; **hard-court blended hElo:** 1779.9
+- **Kovacevic overall Elo:** 1648.8; **hard-court blended hElo:** 1620.3
+
+The hard-court gap is **159.6 Elo points**. Using Tennis Abstract's standard best-of-three Elo conversion, that corresponds to an approximate **71.5% benchmark win probability for Berrettini**. This is a **benchmark**, not `p_card`, not a live-qualified model probability, and not a licence to manufacture handicap/total percentages.
+
+The benchmark is materially stronger than the simple ATP-ranking gap and is more relevant because it explicitly incorporates opponent quality and hard-court performance. Rankings are therefore kept as context, not used as the primary mechanism.
+
+#### 2. Berrettini's serve creates the clearest matchup edge
+
+Berrettini's main route is first-strike service dominance. Against Davidovich Fokina in Tokyo he hit 16 aces and survived a poor opening set to win in three. Even when he lost to Vallejo, the first set reached a tiebreak. His height, first-serve power and forehand-first attacking pattern are naturally valuable on a hard court where short points are common.
+
+Kovacevic can also serve at a high level — 19 aces and no breaks conceded against Svajda show that ceiling — so this is not a one-sided serving matchup. The concern is **stability**: one day later against Munar, Kovacevic's first-serve points won fell to 54% and he lost all four break points faced. Against Harris he generated almost no return pressure despite respectable serving numbers.
+
+That combination supports Berrettini as the better player while warning against assuming an easy straight-sets result.
+
+#### 3. Kovacevic's return pressure is the main concern for his +2.5 case
+
+Kovacevic's recent losses expose a repeatable failure route: when the opponent holds efficiently, he has struggled to create enough return pressure to stay within the game margin. Against Harris he went 0/3 on break points and won only 8% of first-serve return points; against Munar he won only 14% of first-serve return points. Berrettini's first serve is a stronger weapon than either opponent's typical baseline serve, so Kovacevic needs either an unusually high own-hold rate or a dip in Berrettini's first-serve efficiency to keep the handicap close.
+
+The counterpoint is meaningful: Kovacevic's Svajda match showed 15/15 holds, and two big servers can produce tiebreak-heavy sets where a +2.5 cushion remains live even if the stronger player wins.
+
+#### 4. Total-games geometry at 24.5
+
+A 24.5 total in best-of-three is primarily a **set-count and closeness** proposition.
+
+- Representative Berrettini-control scoreline: **6-4, 6-4** = 20 games. This covers Berrettini -2.5 and lands Under 24.5.
+- Close straight-sets example: **7-6, 7-6** = 26 games. Berrettini can win in straight sets yet fail -2.5 and send the match Over.
+- Three-set matches frequently clear 24.5, but not automatically; lopsided three-set scores can still stay Under.
+
+Both players have recent tiebreak exposure and strong serving peaks, so the Over cannot be dismissed. However, Berrettini's Elo/quality edge plus Kovacevic's recent return weakness makes a two-set Berrettini control branch more persuasive than a full three-set branch. That is why Under 24.5 ranks above Over 24.5, but not with high confidence.
+
+#### 5. Surface, workload and continuity
+
+The match is on Shanghai's Deco-Turf hard court. Both players have been competing in the Asian hard-court swing, so there is no major surface transition. Berrettini comes in with the more recent main-draw match exposure; Kovacevic has more rest after Tokyo qualifying. Workload therefore carries both signs rather than being treated as a simple advantage.
+
+There is **no prior head-to-head** on the official Shanghai H2H page. No H2H narrative is used.
+
+### F. Numerical or qualitative assessment
+
+- **Assessment type:** `UNCALIBRATED_QUALITATIVE`
+- **Internal model probability:** `NOT_AVAILABLE`
+- **p_model:** `NOT_AVAILABLE`
+- **p_card:** `NOT_ESTIMATED`
+- **Tennis Abstract benchmark:** Berrettini approximately **71.5%** from the 28-Sep hard-court hElo gap; benchmark only
+- **Calibration status:** no Tennis live-qualified/admitted model for this card
+- **Evidence cutoff:** 2026-10-07 14:58:26 AEDT, before the 15:00 AEDT scheduled start
+- **Observed in-match information used:** none
+- **Key assumptions:** both listed players start; standard ATP best-of-three/tiebreak format; sporting handicap/total interpreted over completed match games; operator-specific retirement rules remain unknown
+- **Missing features:** complete point-in-time serve/return numerators across a matched opponent-quality sample; operator retirement terms; live-qualified Tennis model; independently retained official medical/fitness state
+
+**Coherent qualitative tree:**
+
+1. **Berrettini ordinary control:** stronger serve and hard-court level -> 6-4, 6-4 / 7-5, 6-4 type outcomes.
+2. **Close Berrettini win:** both serve well -> 7-6, 6-4 or 7-6, 7-6.
+3. **Three-set Berrettini win:** Kovacevic's serve peak steals a set, but Berrettini's broader level wins the decider.
+4. **Kovacevic upset:** Berrettini's recent return/second-set instability reappears while Kovacevic serves near his Svajda level.
+
+No numerical weights are assigned to these branches because doing so would manufacture unsupported probabilities.
+
+### G. Ranked predictions
+
+#### Rank 1 — Berrettini -2.5 Games
+
+- **Exact proposition:** Matteo Berrettini -2.5 aggregate games over the full match
+- **Contract origin:** supplied (`<Berrettini -2.5 Games>`)
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **SUPPORTED LEAN**
+- **Confidence:** moderate qualitative confidence; no calibrated probability
+- **Supporting evidence:** 159.6-point pre-event hard-court Elo edge; current ATP rank/record context also favours Berrettini; stronger serve/first-strike profile; Kovacevic has recently been broken four times by Munar and generated very little return pressure against Harris
+- **Principal failure route:** Kovacevic serves at his Svajda level, forcing one or two tiebreaks; Berrettini can win the match yet fail a -2.5 game line in a 7-6, 7-6 or similarly tight result
+- **Missingness:** no operator retirement rule; no calibrated game-margin distribution; no complete opponent-adjusted current serve/return feature store
+
+#### Rank 2 — Under 24.5 Total Games
+
+- **Exact proposition:** analyst-defined **Under 24.5 total games**, using the supplied `Total Games: 24.5` threshold
+- **Contract origin:** analyst-defined direction applied to a user-supplied directionless threshold
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **LEAN**
+- **Confidence:** moderate-low qualitative confidence
+- **Supporting evidence:** Berrettini's quality edge and Kovacevic's recent return weakness support a two-set control branch; representative 6-4, 6-4 result totals only 20 games and is coherent with Rank 1
+- **Principal failure route:** both players' serve peaks create tiebreaks or Kovacevic takes a set; 7-6, 7-6 is already 26 games and a competitive three-set match usually clears 24.5
+- **Missingness:** no calibrated set-count mixture or exact P(deciding set); no operator retirement rule
+
+#### Rank 3 — Kovacevic +2.5 Games
+
+- **Exact proposition:** Aleksandar Kovacevic +2.5 aggregate games over the full match
+- **Contract origin:** supplied (`<Kovacevic +2.5 Games>`)
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **FORCED RANK / COUNTER-SCENARIO**
+- **Confidence:** low-to-moderate qualitative confidence
+- **Supporting evidence:** Kovacevic's serve ceiling is real — 19 aces, 15/15 holds and 6/6 break points saved against Svajda; a tiebreak-heavy match can keep him within +2.5 even if Berrettini is the better winner candidate
+- **Principal failure route:** Berrettini consistently reaches Kovacevic's second serve while Kovacevic cannot pressure the Italian serve, reproducing the margin shape seen in the Harris and Munar losses
+- **Missingness:** directly complementary to Berrettini -2.5 and therefore not independent; retirement terms unresolved
+
+#### Rank 4 — Over 24.5 Total Games
+
+- **Exact proposition:** analyst-defined **Over 24.5 total games**, using the supplied `Total Games: 24.5` threshold
+- **Contract origin:** analyst-defined direction applied to a user-supplied directionless threshold
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** **FORCED RANK / COUNTER-SCENARIO**
+- **Confidence:** low qualitative confidence
+- **Supporting evidence:** both players can generate large ace totals and tiebreak sets; Berrettini's Tokyo win over Davidovich Fokina went three sets, while Kovacevic's win over Svajda also went three; any genuinely competitive decider gives the Over a strong route
+- **Principal failure route:** Berrettini controls return games enough to win in two ordinary sets; 6-4, 6-4 or 7-5, 6-3 stays clearly Under
+- **Missingness:** exact deciding-set probability is unavailable; direct complement of the Under branch
+
+### H. Potential winner
+
+- **Predicted winner:** **Matteo Berrettini**
+- **Applicable endpoint:** complete best-of-three match
+- **Probability:** `NOT_ESTIMATED` for the card
+- **Independent benchmark:** Tennis Abstract hard-court Elo implies approximately **71.5% Berrettini** from its 28-Sep snapshot
+- **Confidence:** moderate qualitative lean, not calibrated certainty
+- **Primary reasons:** meaningful hard-court Elo advantage; stronger first-strike serve profile; better recent high-level win (Davidovich Fokina); Kovacevic's recent return weakness and unstable serve performance
+- **Upset route:** Kovacevic serves near his best, Berrettini's Tokyo second-round serving/return instability continues, and one or two tiebreaks shift the match into a small-sample finish
+
+### I. Correlation and dependence
+
+- `Berrettini -2.5` and `Kovacevic +2.5` are direct complements at the same half-game handicap and are **not independent predictions**.
+- Under 24.5 and Over 24.5 are direct complements at the same half-game total and are **not independent predictions**.
+- Berrettini -2.5 and Under 24.5 are positively related in the principal Berrettini-control branch.
+- Kovacevic +2.5 and Over 24.5 become more plausible together in a close/tiebreak-heavy or three-set branch.
+- A Berrettini match win does **not** imply Berrettini -2.5; 7-6, 7-6 is the clearest counterexample.
+
+### J. Missingness and limitations
+
+1. **Operator retirement/walkover terms:** unavailable; `UNKNOWN_DEFINITION` for formal settlement.
+2. **Directionless totals:** the user supplied `Total Games: 24.5` twice without Over/Under; directions in Ranks 2 and 4 are analyst-defined sporting propositions only.
+3. **Model qualification:** the Tennis runtime exists but is not live-qualified/admitted for this event; no internal probability is presented.
+4. **Elo freshness:** Tennis Abstract's latest pre-event update is 28 September and therefore does not include the players' final Tokyo matches. It remains a valid dated benchmark but is not a complete current-state model.
+5. **Serve/return sample:** recent match-level evidence is informative but small and opponent-dependent; no false precision is assigned.
+6. **Fitness:** absence of a withdrawal notice is not proof of perfect health. No current verified injury was found, but complete medical fitness is not independently certifiable.
+7. **Surface/roof state:** official tournament material confirms Deco-Turf hard court; no current roof-state adjustment is made.
+8. **No H2H:** the players have no prior meeting on the official tournament H2H page.
+
+### K. Source register
+
+Research/retrieval window: approximately 2026-10-07 14:54-14:58 AEDT.
+
+1. **Rolex Shanghai Masters / ATP — Wednesday 7 October order of play**  
+   URL: https://en.rolexshanghaimasters.com/en/media/news/shanghai-2026-schedule  
+   Role: official event identity, first-round/R128 placement, Stadium Court and 12:00 Shanghai start.
+
+2. **Rolex Shanghai Masters — official schedule page**  
+   URL: https://en.rolexshanghaimasters.com/en/scores/schedule?dayToDisplay=7  
+   Role: official live schedule state and R128 listing.
+
+3. **Rolex Shanghai Masters — official H2H page, Kovacevic vs Berrettini**  
+   URL: https://en.rolexshanghaimasters.com/en/scores/head-to-head/singles/k0az/bk40  
+   Role: player IDs, current tournament-displayed rankings, YTD records and confirmation of no prior H2H.
+
+4. **Rolex Shanghai Masters — General Information**  
+   URL: https://en.rolexshanghaimasters.com/en/tournament/general-information  
+   Role: Deco-Turf hard court and Qi Zhong Tennis Center venue identity.
+
+5. **Tennis Abstract — ATP Elo Ratings, last update 2026-09-28**  
+   URL: https://tennisabstract.com/reports/atp_elo_ratings.html  
+   Role: required independent TE-P5 benchmark; Berrettini hElo 1779.9, Kovacevic hElo 1620.3.
+
+6. **Tennis.com — Jaume Munar vs Aleksandar Kovacevic, Tokyo qualifying, 29 Sep 2026**  
+   URL: https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/j-munar-vs-a-kovacevic-2026-09-29  
+   Role: recent Kovacevic serve/return and break-point performance.
+
+7. **Tennis.com — Zachary Svajda vs Aleksandar Kovacevic, Tokyo qualifying, 28 Sep 2026**  
+   URL: https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/z-svajda-vs-a-kovacevic-2026-09-28  
+   Role: Kovacevic serving ceiling, aces, holds and break-point saves.
+
+8. **Tennis.com — Lloyd Harris vs Aleksandar Kovacevic, Chengdu, 24 Sep 2026**  
+   URL: https://www.tennis.com/tournaments/chengdu-open/matches/l-harris-vs-a-kovacevic-2026-09-24  
+   Role: recent Kovacevic return-pressure evidence.
+
+9. **Tennis.com — Alejandro Davidovich Fokina vs Matteo Berrettini, Tokyo, 1 Oct 2026**  
+   URL: https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/a-davidovich-fokina-vs-m-berrettini-2026-10-01  
+   Role: recent Berrettini serve performance and three-set win.
+
+10. **Tennis.com — Matteo Berrettini vs Adolfo Daniel Vallejo, Tokyo, 3 Oct 2026**  
+    URL: https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/m-berrettini-vs-a-vallejo-2026-10-03  
+    Role: most recent Berrettini match and downside branch.
+
+11. **ATP Tour / US Open reporting — Berrettini vs Wawrinka, US Open 2026**  
+    URL: https://www.atptour.com/en/news/wawrinka-us-open-2026-reaction-r1  
+    Role: corroboration of Berrettini's hard-court tiebreak performance.
+
+**SPORTS_ONLY / MARKET_BLIND note:** sportsbook odds, prediction markets, tipster selections and third-party projected-winner percentages surfaced during search were deliberately excluded from ranking and confidence.
+
+### L. Forecast integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_EVIDENCE_CUTOFF_UNCALIBRATED_QUALITATIVE`
+
+`MODEL_QUALIFICATION: DEVELOPMENT_ONLY / NOT_ADMITTED_FOR_LIVE_CARD_PROBABILITIES`
+
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`
+
+`LOG_STATUS: MINI_STAGING`
+
+`CANONICAL_LEDGER_STATUS: PENDING_RECONCILIATION`
+
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 14:58:26 AEDT`
+
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+`IN_MATCH_DATA_USED_AS_PREGAME_EVIDENCE: NO`
+
+### M. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-539 17aff7e2508347a998bdd124bbaface7 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-540 6f88cb51e1244c589f192334704484c0 -->
+## P-540 — TENNIS / ATP MASTERS 1000 SHANGHAI — Adrian Mannarino vs Nikoloz Basilashvili
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-540`. Logged UTC: 2026-10-07T15:41:51.679895+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**WORKING_ID — PENDING_CANONICAL_RECONCILIATION**
+
+### A. Identity and timing
+
+- **P-ID:** `P-540`
+- **Tracking alias:** `TMP-20261007-ATP-SHA-MAN-BAS`
+- **Exact event:** Adrian Mannarino (FRA) vs Nikoloz Basilashvili (GEO)
+- **Official player IDs on Shanghai H2H route:** `ME82` / `BG23`
+- **Native match/event ID:** `UNKNOWN` — the accessible official tournament pages did not expose a durable match ID, so none is invented
+- **Sport / competition:** Tennis — Rolex Shanghai Masters, ATP Masters 1000
+- **Season / stage:** 2026, Men's Singles, Round of 128 / First Round
+- **Court:** Show Court 3, Qi Zhong Tennis Center, Shanghai, China
+- **Surface:** Deco-Turf hard court
+- **Format:** ATP singles, best of three tie-break sets
+- **Official order-of-play timing:** Show Court 3 starts at **12:00 Shanghai time (UTC+8)** with Sho Shimabukuro vs Miomir Kecmanovic; Mannarino vs Basilashvili is listed **"Followed By"**. No fixed official clock time is stated for this match.
+- **Supplied estimated start, preserved literally:** `<4:30 PM 7/10/2026 AEST, can be delayed>`
+- **Timezone clarification:** Melbourne was on **AEDT (UTC+11)** on 7 October 2026, not AEST. If the supplied `4:30 PM AEST` is interpreted literally as UTC+10, it equals 17:30 AEDT / 14:30 Shanghai. If it was intended as a Melbourne wall-clock estimate, 16:30 local is AEDT. The official schedule remains sequence-based rather than fixed to either estimate.
+- **Observation timestamp:** 2026-10-07 16:30:51 AEDT (05:30:51 UTC; 13:30:51 Shanghai)
+- **Research completion / forecast freeze:** 2026-10-07 16:30:51 AEDT
+- **Verified event state at freeze:** `PREGAME`
+- **State evidence:** the official Shanghai live-score page showed **"There are currently no live scores"** and Tennis.com still labelled this specific match **"Upcoming"** at the freeze check. No in-match score, point, serve order or already-observed outcome was used.
+- **State conflict note:** a lower-confidence aggregator surfaced a generic `Postponed/Suspended` label across the day's Shanghai order. That was not adopted because it conflicted with the official tournament schedule/live-score pages and the match-specific Tennis.com `Upcoming` state. The uncertainty is retained rather than forced into agreement.
+
+### B. Repository authority
+
+- **Repository:** `danisgreat/Sports-Research`
+- **Branch:** `main`
+- **Main HEAD used:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`
+- **Method:** `MDS-2026.10.01-v8.0`
+- **Control revision:** `CR-2026.10.07-I1`
+- **Scoring revision:** `SCV-2026.10.01-v3`
+- **Numerical extension:** `CR-2026.10.06-NUMERICAL-1`
+- **Active control manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`
+- **Sport rules:** `RULES_TENNIS.md`, current §0 plus applicable tennis sections
+- **Runtime population:** `H0-TENNIS-v1`
+- **Runtime default model:** `A2`
+- **Executable engine:** `runtime/src/sports/tennis/engine.py`
+- **Model qualification:** `DEVELOPMENT_ONLY / NOT_ADMITTED_FOR_LIVE_CARD_PROBABILITIES`
+- **Admission note:** no Tennis lane appears in the current admission registry; current root rules state current registered forecast candidates are not live-qualified. The executable Tennis engine is therefore not treated as a validated card-probability source.
+- **Assessment type:** `UNCALIBRATED_QUALITATIVE`
+- **Probability reporting:** `NOT_ESTIMATED` for all card picks
+- **Performance eligibility:** `NOT_CERTIFIED`
+- **SPORTS_ONLY / MARKET_BLIND:** `PASS`
+
+### C. Supplied contracts
+
+Reproduced exactly as supplied:
+
+```text
+<Mannarino -0.5 Games>
+<Basilashvili +0.5 Games>
+<Total Games: 22.5>
+<Total Games: 22.5>
+<OPTIONAL CONTRACT 5>
+```
+
+Contract interpretation and unresolved definitions:
+
+- `Mannarino -0.5 Games` and `Basilashvili +0.5 Games` are treated as **aggregate full-match game handicaps**, not as match-winner contracts. A player can win the match yet fail an aggregate-games handicap in unusual three-set score shapes.
+- The two `Total Games: 22.5` entries contain **no Over/Under direction**. They are preserved literally. For ranking purposes, **Over 22.5** and **Under 22.5** are separately labelled analyst-proposed sporting propositions using the supplied threshold; they are not represented as user-supplied directional bookmaker lines.
+- `<OPTIONAL CONTRACT 5>` is retained as a placeholder and is not treated as an issued proposition.
+- The named operator's retirement, walkover, completed-set and void rules were not supplied. `TE-P3: UNKNOWN_DEFINITION`. This prevents operator-value/settlement claims but does not block the explicitly defined sporting assessment.
+
+### D. Participants, status and workload
+
+#### Adrian Mannarino
+
+- Official Shanghai H2H page: rank **83**, left-handed, age 38, 2026 tour YTD displayed **15-25**.
+- Tennis Abstract dated 2026-09-28: overall Elo **1677.1**; hard-court hElo **1648.7**.
+- Current-year yElo on the same 2026-09-28 snapshot: **1663.1**.
+- Recent hard-court sequence before Shanghai included:
+  - Chengdu R1: def. Juncheng Shang 7-6, 6-2; 40/52 first serves in, 35/40 first-serve points won, 8/12 second-serve points won, 9/9 service games held.
+  - Chengdu R2: def. Alejandro Tabilo 6-4, 6-4; 34/42 first-serve points won, 12/21 second-serve points won, 10/10 service games held, 2/3 break points converted.
+  - Chengdu QF: lost to Denis Shapovalov 7-6, 3-6, 2-6; the opening set was competitive but return pressure disappeared later (0/4 break points converted overall).
+  - Beijing Q1: def. Miomir Kecmanovic 7-6, 3-6, 7-6.
+  - Beijing Q2 on 29 Sep: lost to Pablo Carreno Busta 3-6, 4-6; only 6/9 service games held and 1/4 break points converted.
+- **Workload/rest:** no later match was found after 29 September before this Shanghai first-round match, giving substantially more recovery time than Basilashvili.
+- **Medical status:** no current official withdrawal or medical restriction was found at the freeze. This does not prove perfect fitness.
+
+#### Nikoloz Basilashvili
+
+- Official Shanghai H2H page: qualifier, rank **124**, right-handed, age 34, 2026 tour YTD displayed **7-9**.
+- Tennis Abstract dated 2026-09-28: overall Elo **1630.2**; hard-court hElo **1594.9**.
+- Current-year yElo on the same snapshot: **1613.5**.
+- Recent Chengdu hard-court form was materially stronger than his headline ranking alone implies:
+  - R1: def. Miomir Kecmanovic 7-6, 6-4; 13 aces, 33/40 first-serve points won, 15/19 second-serve points won and 11/11 service games held.
+  - R2: def. Botic van de Zandschulp 6-4, 7-5.
+  - QF: def. Jenson Brooksby 6-4, 7-6; 29/39 first-serve points won, 18/27 second-serve points won, 10/11 service games held.
+  - SF: lost to Alejandro Davidovich Fokina 6-4, 4-6, 3-6; still produced 13 aces and held 11/14 service games.
+- **Shanghai qualifying workload:** official tournament results show a 3:02:29 three-set Q1 win over Andre Ilagan (6-3, 6-7, 7-5) on 5 Oct and a 2:43:09 three-set Q2 win over Liam Draxl (5-7, 7-5, 6-4) on 6 Oct. That is approximately **5 hours 45 minutes of official match time across the previous two days**, immediately before the main-draw match.
+- **Workload interpretation:** this is a real exposure difference, but fatigue is not assumed to be automatically negative. The load can also indicate court acclimatisation and competitive rhythm; it primarily widens uncertainty and creates a plausible late-match physical fade branch.
+- **Medical status:** a secondary source records a retirement in mid-September, but Basilashvili subsequently completed the Chengdu run and both Shanghai qualifying matches. No current official withdrawal/medical restriction was found. The earlier retirement is retained only as background uncertainty, not treated as a current injury diagnosis.
+
+### E. Sporting research and matchup assessment
+
+#### 1. Independent benchmark
+
+The mandatory dated Tennis Abstract benchmark was retrieved from the 2026-09-28 snapshot:
+
+- Mannarino hard-court hElo: **1648.7**
+- Basilashvili hard-court hElo: **1594.9**
+- hElo gap: **53.8 points to Mannarino**
+- Using Tennis Abstract's published Elo conversion, that gap corresponds to approximately **57.7% Mannarino** for a best-of-three match.
+
+This is an **independent benchmark only**, not `p_model`, not `p_card`, and not a calibrated probability for the supplied game handicap. The gap is modest, so the benchmark describes Mannarino as a small favourite rather than a dominant one.
+
+#### 2. Current-regime reconciliation
+
+The benchmark and current evidence broadly agree on Mannarino being slightly stronger, but they do not create a large separation:
+
+- Mannarino has the better dated overall/hard Elo and more rest.
+- Basilashvili's late-September Chengdu run was strong and included wins over credible ATP opposition.
+- Basilashvili's Shanghai qualification path adds two recent competitive three-set matches and a large immediate workload burden.
+- Mannarino's recent hard-court serving has alternated between highly efficient control (Shang/Tabilo) and a poor Beijing Q2 performance, so his advantage is not stable enough for high confidence.
+
+#### 3. Serve-return interaction
+
+- Mannarino's strongest recent hard-court branch is first-ball efficiency plus a compact left-handed redirecting game that reduces Basilashvili's time to unload on groundstrokes.
+- Basilashvili's strongest branch is aggressive first-strike serving/forehand tennis; the Chengdu Kecmanovic and Brooksby matches show a credible high-hold regime.
+- Neither player's recent evidence supports treating return dominance as automatic. The matchup can therefore produce both routine-break sets and tiebreak/close-set states.
+- The workload asymmetry matters more late than early: if Basilashvili's legs or timing degrade, Mannarino's flatter redirection and consistency can turn a close match into a larger aggregate-games margin.
+
+#### 4. H2H continuity
+
+The official Shanghai ATP-level H2H presentation is **1-1**: Basilashvili won Sofia 2017 in two tiebreaks; Mannarino won Paris 2021 6-2, 6-4. Tennis.com additionally exposes a 2024 Rennes Challenger meeting won by Mannarino 7-6, 3-6, 6-3. These meetings span different years, levels and competitive contexts, so H2H is **diagnostic only** and does not control the ranking.
+
+#### 5. Coherent qualitative score tree
+
+No event-specific calibrated Tennis distribution is available, so numerical branch weights are not invented. The required branches are nevertheless explicit:
+
+- **Mannarino ordinary control:** 6-4, 6-4 / 6-3, 6-4 type score; supports Mannarino -0.5 and Under 22.5.
+- **Mannarino close control:** 7-6, 6-4 / 7-5, 7-6 type score; supports Mannarino -0.5 and can support Over 22.5.
+- **Mannarino three-set win:** competitive first two sets followed by a late Basilashvili workload fade; generally supports Over 22.5 and may or may not cover -0.5 depending on set margins.
+- **Basilashvili straight-set upset:** aggressive serving and first-strike conversion prevent Mannarino from creating enough return pressure; supports Basilashvili +0.5 and can land either total direction depending on set closeness.
+- **Basilashvili three-set upset:** strong serving survives the workload and he wins the higher-variance deciding set; supports Basilashvili +0.5 and usually Over 22.5.
+
+Men's best-of-three population reference in the repository: deciding set **0.358**. The event-specific deciding-set probability is `NOT_ESTIMATED`; the relatively small hElo gap and Basilashvili's recent close-set form make the long-match branch material, while his 5h45 qualifying workload prevents treating it as one-sided.
+
+### F. Numerical / qualitative assessment
+
+- **Assessment type:** `UNCALIBRATED_QUALITATIVE`
+- **Internal model probability:** `NOT_AVAILABLE`
+- **Card probability:** `NOT_ESTIMATED`
+- **Independent benchmark:** Tennis Abstract hard-court hElo ~57.7% Mannarino, dated 2026-09-28; benchmark only
+- **Runtime status:** Tennis A2 engine exists, but no Tennis admission/lane establishes `LIVE_QUALIFIED` status for this event
+- **Cutoff:** 2026-10-07 16:30:51 AEDT
+- **Post-cutoff/in-match inputs used:** `NONE`
+- **Key missing model features:** fitted point-on-serve priors with point-in-time provenance for both players, opponent-adjusted return priors, calibrated set-count distribution, injury/fitness probability, event-specific fatigue coefficient, and operator retirement semantics
+- **Robustness:** Mannarino remains the qualitative winner lean across ordinary-rest and moderate-fatigue branches; Basilashvili becomes materially more dangerous if his Chengdu/qualifying serve level persists without a physical drop. The total direction is less robust than the side because both ordinary straight sets and close/tiebreak sets have credible support.
+
+### G. Ranked predictions
+
+#### Rank 1 — Mannarino -0.5 Games
+
+- **Exact proposition:** `Mannarino -0.5 Games`
+- **Contract origin:** user-supplied
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** `SUPPORTED LEAN`
+- **Evidence confidence:** `LOW` — consistent with the repository's Tennis `NO_DEMONSTRATED_SKILL` cap
+- **Why ranked first:** Mannarino owns the modest hard-court Elo edge, the current-year yElo edge, and a large rest/workload advantage. His best recent hard-court wins also show enough serving efficiency to protect a small aggregate-games handicap. The handicap is narrow enough that an ordinary two-set or balanced three-set Mannarino win usually covers it.
+- **Representative coherent scoreline:** Mannarino 6-4, 6-4. This covers -0.5 and produces 20 total games.
+- **Principal failure route:** Basilashvili reproduces his Chengdu serving/first-strike level, keeps sets on serve, and either wins outright or wins enough games in a three-set loss to finish ahead on aggregate games.
+- **Missingness:** no calibrated game-margin distribution; unknown retirement rules; current fitness is not medically certified.
+
+#### Rank 2 — Over 22.5 Total Games
+
+- **Exact proposition:** `Over 22.5 Total Games`
+- **Contract origin:** **analyst-proposed direction** using the supplied `Total Games: 22.5` threshold
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** `LEAN`
+- **Evidence confidence:** `LOW`
+- **Why ranked second:** the hElo separation is modest rather than dominant, Basilashvili's recent hard-court serve has generated high hold rates and tiebreak/close-set branches, and 22.5 can clear even in straight sets (for example 7-6, 6-4 = 23). A deciding set normally gives the Over a strong path. The repository's men's best-of-three deciding-set population reference is 0.358, but no event-specific probability is invented.
+- **Principal failure route:** Basilashvili's accumulated qualifying workload causes an early level drop and Mannarino controls in routine straight sets, or Mannarino's own level falls enough for Basilashvili to win two relatively one-sided sets.
+- **Missingness:** no calibrated set-count mixture or event-specific hold/break distribution.
+
+#### Rank 3 — Basilashvili +0.5 Games
+
+- **Exact proposition:** `Basilashvili +0.5 Games`
+- **Contract origin:** user-supplied
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** `FORCED RANK / COUNTER-SCENARIO`
+- **Evidence confidence:** `LOW`
+- **Supporting route:** Basilashvili's recent Chengdu sequence and Shanghai qualifying resilience show real current hard-court competitiveness. If his first-strike serve holds up, the match can stay on tiebreak/one-break margins and +0.5 aggregate games remains live even in some Mannarino match-win score shapes.
+- **Principal failure route:** the recent workload catches up with Basilashvili and Mannarino repeatedly exposes his movement/second-ball tolerance, producing a multi-break margin.
+- **Dependence:** direct complement of Rank 1 under a completed-match aggregate-games interpretation.
+
+#### Rank 4 — Under 22.5 Total Games
+
+- **Exact proposition:** `Under 22.5 Total Games`
+- **Contract origin:** **analyst-proposed direction** using the supplied `Total Games: 22.5` threshold
+- **Probability:** `NOT_ESTIMATED`
+- **Evidence strength:** `FORCED RANK / COUNTER-SCENARIO`
+- **Evidence confidence:** `LOW`
+- **Supporting route:** the clearest Under path is a fatigue-assisted Mannarino straight-set win such as 6-4, 6-4 or 6-3, 6-4. A decisive Basilashvili straight-set upset can also finish Under.
+- **Principal failure route:** one tiebreak plus another close set or any normal three-set match can take the total above 22.5.
+- **Dependence:** direct complement of Rank 2 under ordinary completed-match total-game semantics.
+
+**Top-two discipline:** Rank 1 is more robust than Rank 2. Mannarino -0.5 is supported by independent benchmark + rest/workload + recent-level evidence. Over 22.5 is more sensitive to the unknown set-count mixture and therefore remains only a low-confidence lean. The order would narrow materially if Basilashvili shows no fatigue and continues holding at his recent Chengdu level.
+
+### H. Potential winner
+
+- **Predicted winner:** **Adrian Mannarino**
+- **Endpoint:** complete best-of-three match
+- **Card probability:** `NOT_ESTIMATED`
+- **Independent benchmark only:** approximately **57.7% Mannarino** from the dated hard-court hElo gap
+- **Confidence:** `LOW / MODEST LEAN`
+- **Supporting reasons:** slight hard-court Elo advantage, slightly better current-year yElo, much lighter immediate workload, and recent evidence that he can hold efficiently against credible hard-court opposition.
+- **Upset route:** Basilashvili's current serving/forehand level persists, his Shanghai qualifying workload functions more as acclimatisation than fatigue, and the match is decided by one or two high-variance close sets/tiebreaks.
+- **Missingness:** no live-qualified Tennis model, no certified medical/fitness state, no event-specific hold distribution.
+
+### I. Correlation and dependence
+
+- `Mannarino -0.5 Games` and `Basilashvili +0.5 Games` are mutually dependent complementary aggregate-game propositions under a normal completed-match interpretation.
+- `Over 22.5` and `Under 22.5` are direct complements under ordinary completed-match total-game semantics.
+- Mannarino -0.5 and Under 22.5 correlate in the routine-control branch, but they are not equivalent.
+- Mannarino -0.5 and Over 22.5 can both win in a close Mannarino victory, e.g. 7-6, 6-4 (Mannarino +3 games, 23 total).
+- Basilashvili +0.5 and Over 22.5 correlate in close/tiebreak or three-set branches.
+- None of the four rows is treated as an independent event for evidence counting.
+
+### J. Missingness and limitations
+
+- **Exact start:** official schedule is sequence-based (`Followed By`), not a fixed 16:30 clock time.
+- **Timezone:** user's `AEST` label does not match Melbourne's AEDT on this date; both interpretations are recorded rather than silently corrected.
+- **Operator rules:** retirement/walkover/void definitions unavailable; `UNKNOWN_DEFINITION`.
+- **Medical state:** no current official injury/withdrawal was found, but absence of a withdrawal is not proof of full fitness.
+- **Basilashvili workload:** measured match time is known, physiological effect is not; fatigue direction is therefore not deterministic.
+- **Numerical model:** no Tennis live-qualified model or event-specific calibrated game/set distribution.
+- **Recent statistics:** selected match-level samples are small and opponent-dependent; they are used as mechanisms, not as raw plug-in probabilities.
+- **H2H:** source scope differs (official ATP-level page 1-1; Tennis.com includes a 2024 Challenger win for Mannarino). H2H is diagnostic only.
+- **State source conflict:** a lower-confidence aggregator marked the day's order `Postponed/Suspended`, while the official tournament live-score page showed no live scores and Tennis.com labelled the match `Upcoming`. The card follows the higher-priority sources and records the conflict.
+
+### K. Source register
+
+Research window: approximately 2026-10-07 16:27-16:31 AEDT.
+
+1. **Rolex Shanghai Masters / ATP — official Wednesday order of play**  
+   URL: https://en.rolexshanghaimasters.com/en/media/news/shanghai-2026-schedule  
+   Role: tournament, round, Show Court 3 sequence; confirms this match follows Shimabukuro-Kecmanovic rather than having a fixed official start.
+
+2. **Rolex Shanghai Masters — official schedule, 7 October**  
+   URL: https://en.rolexshanghaimasters.com/en/scores/schedule?dayToDisplay=7  
+   Role: participant identity, qualifier tag and live order-of-play structure.
+
+3. **Rolex Shanghai Masters — official live scores**  
+   URL: https://en.rolexshanghaimasters.com/en/scores/live-scores  
+   Role: state handshake; showed no live scores at the freeze check.
+
+4. **Rolex Shanghai Masters — official H2H, Mannarino vs Basilashvili**  
+   URL: https://en.rolexshanghaimasters.com/en/scores/head-to-head/singles/me82/bg23  
+   Role: player IDs, rankings, handedness, official ATP-level H2H and YTD display.
+
+5. **Rolex Shanghai Masters — General Information**  
+   URL: https://en.rolexshanghaimasters.com/en/tournament/general-information  
+   Role: Deco-Turf hard court and Qi Zhong Tennis Center.
+
+6. **Rolex Shanghai Masters — official qualifying results, Day 1**  
+   URL: https://en.rolexshanghaimasters.com/en/scores/results?resultDay=1  
+   Role: Basilashvili 6-3, 6-7, 7-5 win over Andre Ilagan; official match duration 03:02:29.
+
+7. **Rolex Shanghai Masters — official qualifying results, Day 2**  
+   URL: https://en.rolexshanghaimasters.com/en/scores/results?resultDay=2  
+   Role: Basilashvili 5-7, 7-5, 6-4 win over Liam Draxl; official match duration 02:43:09.
+
+8. **ATP Tour — 2026 Rulebook**  
+   URL: https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook_25jan26.pdf  
+   Role: ATP singles matches are best of three tie-break sets.
+
+9. **Tennis Abstract — ATP Elo Ratings, last update 2026-09-28**  
+   URL: https://www.tennisabstract.com/reports/atp_elo_ratings.html  
+   Role: mandatory TE-P5 benchmark; Mannarino hElo 1648.7, Basilashvili hElo 1594.9; published Elo-to-win conversion.
+
+10. **Tennis Abstract — ATP Season yElo Ratings, last update 2026-09-28**  
+    URL: https://www.tennisabstract.com/reports/atp_season_yelo_ratings.html  
+    Role: current-year strength cross-check; Mannarino 1663.1, Basilashvili 1613.5.
+
+11. **Tennis.com — Mannarino vs Basilashvili match page**  
+    URL: https://www.tennis.com/tournaments/rolex-shanghai-masters/matches/a-mannarino-vs-n-basilashvili-2026-10-07  
+    Role: match-specific `Upcoming` state at freeze; broader H2H scope including Rennes 2024.
+
+12. **Tennis.com — recent Mannarino match-stat pages**  
+    URLs:  
+    https://www.tennis.com/tournaments/chengdu-open/matches/j-shang-vs-a-mannarino-2026-09-24  
+    https://www.tennis.com/tournaments/chengdu-open/matches/a-tabilo-vs-a-mannarino-2026-09-25  
+    https://www.tennis.com/tournaments/chengdu-open/matches/a-mannarino-vs-d-shapovalov-2026-09-27  
+    https://www.tennis.com/tournaments/china-open-atp/matches/m-kecmanovic-vs-a-mannarino-2026-09-28  
+    https://www.tennis.com/tournaments/china-open-atp/matches/a-mannarino-vs-p-carreno-busta-2026-09-29  
+    Role: match-level serve/return numerators, denominators and recent hard-court form.
+
+13. **Tennis.com — recent Basilashvili match-stat pages**  
+    URLs:  
+    https://www.tennis.com/tournaments/chengdu-open/matches/m-kecmanovic-vs-n-basilashvili-2026-09-24  
+    https://www.tennis.com/tournaments/chengdu-open/matches/j-brooksby-vs-n-basilashvili-2026-09-27  
+    https://www.tennis.com/tournaments/chengdu-open/matches/n-basilashvili-vs-a-davidovich-fokina-2026-09-28  
+    Role: recent serve/return numerators and hard-court performance mechanisms.
+
+14. **Tennis Explorer — Basilashvili injury/retirement history**  
+    URL: https://www.tennisexplorer.com/player/Basilashvili/  
+    Role: lower-confidence background only for the recent September retirement; not used to assert a current injury.
+
+15. **TennisTemple — Shanghai 7 October order of play**  
+    URL: https://en.tennistemple.com/competitions/shanghai/orderofplay/2026-10-07  
+    Role: lower-confidence conflict source showing broad `Postponed/Suspended` labels; not allowed to override official/match-specific state evidence.
+
+**SPORTS_ONLY / MARKET_BLIND:** no sportsbook odds, implied probabilities, betting-market movement, tipster selections, betting previews, prediction-market prices or fantasy projections were used. Search results containing such material were excluded from the evidence chain.
+
+### L. Forecast integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_UNCALIBRATED_QUALITATIVE`
+
+`MODEL_QUALIFICATION: DEVELOPMENT_ONLY / NOT_ADMITTED_FOR_LIVE_CARD_PROBABILITIES`
+
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`
+
+`LOG_STATUS: MINI_STAGING`
+
+`CANONICAL_LEDGER_STATUS: PENDING_RECONCILIATION`
+
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 16:30:51 AEDT`
+
+`LOG_WRITE_TIMESTAMP: 2026-10-07 16:31:10 AEDT`
+
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+`IN_MATCH_DATA_USED_AS_PREGAME_EVIDENCE: NO`
+
+### M. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-540 6f88cb51e1244c589f192334704484c0 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-541 184816af88124a759ab3754a2dac779b -->
+## P-541 — TENNIS / ATP MASTERS 1000 SHANGHAI — Mattia Bellucci vs Yi Zhou
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-541`. Logged UTC: 2026-10-07T15:41:52.098652+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**WORKING_ID — PENDING_CANONICAL_RECONCILIATION**
+
+### A. Identity and timing
+
+- **Tracking alias:** `TMP-20261007-ATP-SHA-BEL-ZHO`
+- **Event:** Mattia Bellucci vs Yi Zhou
+- **Competition:** Rolex Shanghai Masters — ATP Masters 1000
+- **Round:** R128 / First Round
+- **Court:** Grandstand 2
+- **Surface:** outdoor hard court / Deco-Turf tournament surface
+- **Format:** men's singles, best of three tie-break sets
+- **Entry status:** Bellucci qualifier; Zhou wildcard
+- **Official/native event ID:** `UNKNOWN` — no durable native match ID was exposed in the accessible official material, so none was invented
+- **Supplied estimated start:** `<6:30 PM AEST 7/10/2026>`
+- **Timing note:** Melbourne was on AEDT (UTC+11) on 2026-10-07; the tournament order of play listed this match as `Followed By`, not a fixed 18:30 start
+- **Original research cutoff:** `2026-10-07 18:39:11 AEDT`
+- **Local log write timestamp:** `2026-10-07 18:43:05 AEDT`
+- **Verified state at forecast cutoff:** `PREGAME` — match-specific secondary source showed `Upcoming`; official order of play still listed the match pending
+- **In-match evidence used:** `NO`
+
+### B. Repository authority
+
+- **GitHub repository:** `danisgreat/Sports-Research`
+- **Branch read:** `main`
+- **Read commit SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`
+- **Method:** `MDS-2026.10.01-v8.0`
+- **Control:** `CR-2026.10.07-I1`
+- **Scoring:** `SCV-2026.10.01-v3`
+- **Active manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`
+- **Applicable rules:** `RULES_TENNIS.md`
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`
+- **Model qualification:** `DEVELOPMENT_ONLY / NOT_LIVE_QUALIFIED`
+
+The local mini log is ahead of the published GitHub canonical queue. Per the user's clarified instruction, this event therefore receives the next verified local working ID, `P-541`, while canonical GitHub reconciliation remains pending.
+
+### C. Supplied contracts
+
+Preserved verbatim:
+
+1. `<Bellucci -3.5>`
+2. `<Yi Zhou>`
+3. `<TOTAL GAMES OVER 21.5>`
+4. `<TOTAL GAMES UNDER 21.5>`
+
+`<Yi Zhou>` is interpreted for sporting analysis as **Yi Zhou to win the complete match** because no handicap, set or period was supplied. The literal source contract remains unchanged.
+
+### D. Availability and current conditions
+
+- No credible current withdrawal or medical restriction was established before the forecast cutoff.
+- Bellucci carried the heavier immediate workload: Jingshan Challenger final on 4 October, Shanghai qualifying on 5 October and qualifying again on 6 October.
+- Zhou entered as a wildcard and was materially fresher, with his latest referenced singles match on 28 September.
+- Bellucci is left-handed; Zhou is right-handed.
+- The official tournament H2H page showed no prior meeting.
+
+### E. Sporting assessment
+
+- **Independent hard-court Elo benchmark:** Bellucci 1666.2 vs Zhou 1407.6, a 258.6-point gap, corresponding to about **81.6% Bellucci** as an external benchmark before current-condition adjustments.
+- Bellucci's level-adjusted profile is materially stronger, particularly across serve/return competition quality.
+- Bellucci's recent hard-court aggregate showed approximately 65.2% service points won, 81.1% hold rate and 22.3% break rate, with level/sample caveats.
+- Zhou's recent ATP-level return production was limited, including weak second-serve outcomes in referenced Beijing matches.
+- Zhou's freshness and first-strike/serve profile create a meaningful close-set or upset path.
+- Bellucci's accumulated workload is the main reason the card probability is discounted materially below the Elo benchmark.
+
+### F. Coherent probability scenario
+
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`
+
+This is not a calibrated or performance-certified Tennis model. The scenario uses the independent Elo benchmark, current surface/level evidence, serve-return information, workload/rest and plausible straight-set/three-set branches.
+
+| Match branch | p_card |
+|---|---:|
+| Bellucci 2-0 | 57.0% |
+| Bellucci 2-1 | 20.0% |
+| Zhou 2-0 | 9.0% |
+| Zhou 2-1 | 14.0% |
+| **Bellucci wins** | **77.0%** |
+| **Zhou wins** | **23.0%** |
+| **Three sets** | **34.0%** |
+
+The four terminal set-score branches sum to 100%. Handicap and total estimates are derived from the same qualitative score-tree assumptions rather than treated as independent forecasts.
+
+### G. Ranked predictions
+
+| Rank | Exact proposition | Origin | p_card | Strength | Main reason | Principal failure route |
+|---|---|---|---:|---|---|---|
+| **1** | **Bellucci -3.5 games** | SUPPLIED | **62.0%** | **SUPPORTED** | Clear level/Elo advantage plus stronger overall serve-return baseline | Close Bellucci win such as 7-6, 6-4 covers the match winner but not -3.5; fatigue can also force a decider |
+| **2** | **TOTAL GAMES UNDER 21.5** | SUPPLIED | **54.0%** | **LEAN** | Main control branch is Bellucci straight-set control, e.g. 6-3, 6-4 | Any normal three-set match or a tiebreak-heavy two-set match pushes the total Over |
+| **3** | **TOTAL GAMES OVER 21.5** | SUPPLIED | **46.0%** | **COUNTER-SCENARIO** | Zhou's freshness/serve can extend sets; one tiebreak plus a 6-4 set already reaches 23 games | Bellucci's return edge produces routine straight sets |
+| **4** | **Yi Zhou — match winner** | SUPPLIED literal interpreted as match winner | **23.0%** | **FORCED RANK / UPSET** | Freshness, serve and home-wildcard environment give a credible upset route | Bellucci's level and return quality expose Zhou's second serve and control both sets |
+
+### H. Potential winner
+
+- **Predicted winner:** Mattia Bellucci
+- **Endpoint:** complete best-of-three match
+- **p_card:** **77.0%**
+- **Independent hard-court Elo benchmark:** approximately **81.6% Bellucci**
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`
+- **Primary upset route:** Bellucci's workload suppresses movement/return quality while Zhou protects serve and forces close sets or a decider.
+
+### I. Dependence and coherence
+
+- Bellucci -3.5 and Zhou match winner are strongly opposed and must not be counted as independent evidence.
+- Under 21.5 and Over 21.5 are direct complements under the normal completed-match definition.
+- Bellucci -3.5 + Under 21.5 is the principal control branch; Zhou competitiveness/tiebreaks/three sets increase the Over branch.
+- Representative control score: **6-3, 6-4 Bellucci** = Bellucci +5 games and 19 total games.
+- Representative close favourite score: **7-6, 6-4 Bellucci** = Bellucci +3 games and 23 total games, showing why match winner, -3.5 and Under are not interchangeable.
+
+### J. Material sources
+
+1. **Rolex Shanghai Masters — official schedule/order of play**  
+   https://en.rolexshanghaimasters.com/en/scores/schedule?dayToDisplay=7  
+   Role: official round/court/order, Bellucci qualifier and Zhou wildcard status.
+
+2. **Rolex Shanghai Masters — official head-to-head/player page**  
+   https://en.rolexshanghaimasters.com/en/scores/head-to-head/singles/b0gg/z0cq  
+   Role: official player identity, rankings, handedness/height and no prior H2H.
+
+3. **Tennis.com — Bellucci vs Zhou Shanghai match page**  
+   https://www.tennis.com/tournaments/rolex-shanghai-masters/matches/m-bellucci-vs-y-zhou-2026-10-07  
+   Role: match-specific `Upcoming` status at the forecast cutoff and player context.
+
+4. **Tennis Abstract — ATP Elo ratings, dated 2026-09-28**  
+   https://tennisabstract.com/reports/atp_elo_ratings.html  
+   Role: overall/surface Elo benchmark and benchmark win-probability comparison.
+
+5. **Tennis Abstract — Bellucci and Zhou player records**  
+   https://www.tennisabstract.com/  
+   Role: recent serve/return and surface-level context used with sample/level caveats.
+
+6. **Tennis.com recent match-stat pages**  
+   Role: recent Bellucci workload and Zhou serve/return performance cross-checks.
+
+**SPORTS_ONLY / MARKET_BLIND:** no sportsbook odds, implied market probabilities, betting-market movement, tipster predictions, consensus picks or fantasy projections were used.
+
+### K. Forecast integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_UNCALIBRATED_ANALYST_SCENARIO`
+
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`
+
+`MODEL_QUALIFICATION: DEVELOPMENT_ONLY / NOT_LIVE_QUALIFIED`
+
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`
+
+`LOG_STATUS: MINI_STAGING`
+
+`CANONICAL_LEDGER_STATUS: PENDING_RECONCILIATION`
+
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 18:39:11 AEDT`
+
+`LOG_WRITE_TIMESTAMP: 2026-10-07 18:43:05 AEDT`
+
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+`IN_MATCH_DATA_USED_AS_PREGAME_EVIDENCE: NO`
+
+### L. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-541 184816af88124a759ab3754a2dac779b -->
+
+<!-- BEGIN CANONICAL RESEARCH P-542 f3138e40a3544ca9a64f48e36f8261d0 -->
+## P-542 — BASKETBALL / AUSTRALIA NBL — Adelaide 36ers vs Melbourne United
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-542`. Logged UTC: 2026-10-07T15:41:52.679578+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT**
+
+### A. Identity and timing
+
+- **Tracking alias:** `TMP-20261007-NBL-ADL-MEL`
+- **Event:** Adelaide 36ers vs Melbourne United
+- **Competition:** Hungry Jack's NBL27 — Round 4 / Ignite Cup
+- **Venue:** Adelaide Entertainment Centre
+- **Official/native event ID:** `UNKNOWN` — the accessible public NBL match page did not expose a durable native event ID, so none was invented
+- **Supplied estimated start:** `<7 October 2026, 7:30 PM AEST>`
+- **Verified advertised start:** **7:30 PM AEDT** on 7 October 2026 (equivalent to **7:00 PM ACDT** at the Adelaide venue)
+- **Forecast cutoff:** `2026-10-07 19:19:26 AEDT`
+- **Local log write timestamp:** `2026-10-07 19:25:36 AEDT`
+- **Verified state at forecast cutoff:** `PREGAME / START_UNVERIFIED` — the match-specific NBL Game Centre still appeared in the upcoming fixture set and no verified first `jumpBall` was observed
+- **In-game evidence used:** `NO`
+- **Sporting endpoint used for probability analysis:** full game including overtime
+- **Operator settlement definition:** `UNKNOWN` — supplied contracts did not state regulation/OT settlement terms; literal contracts are preserved below
+
+### B. Repository authority and numerical status
+
+- **GitHub repository:** `danisgreat/Sports-Research`
+- **Branch read:** `main`
+- **Read commit SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`
+- **Method:** `MDS-2026.10.01-v8.0`
+- **Control:** `CR-2026.10.07-I1`
+- **Numerical extension:** `CR-2026.10.06-NUMERICAL-1`
+- **Scoring:** `SCV-2026.10.01-v3`
+- **Active manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`
+- **Applicable rules:** `RULES_BASKETBALL.md`
+- **Registered NBL candidate:** `nbl-oof-width-0.2.0` — `SHADOW_ONLY`, regular-season moneyline including OT
+- **Event-specific qualified runtime output available for this card:** `NO`
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`
+- **Performance eligibility:** `NOT_CERTIFIED`
+
+The published GitHub queue remains behind the active local mini. Per the current local-first workflow, this new event receives the next unused local working P-ID, `P-542`; canonical GitHub import/reconciliation is deferred.
+
+### C. Supplied contracts
+
+Preserved verbatim:
+
+1. `<Adelaide +9.0>`
+2. `<United -1.5>`
+3. `<COMBINED TOTAL OVER 175.5>`
+4. `<COMBINED TOTAL UNDER 187.5>`
+
+For sporting probability analysis, all four are treated as full-game propositions including overtime. Because operator terms were not supplied, later operator settlement semantics remain `UNKNOWN_DEFINITION` until verified.
+
+### D. Availability and current conditions
+
+- **Adelaide unavailable:** Flynn Cameron (ankle), Isaac Humphries (knee), Bul Kuol (ACL). Humphries' absence removes important interior size; Cameron removes another primary guard/wing option.
+- **Adelaide addition:** Corey Webster was signed as an injury replacement and the club subsequently confirmed he would play. His recent NZNBL line was 18.7 points per game with 40.2% three-point shooting, but his immediate NBL role/minutes remain uncertain.
+- **Nick Rakocevic:** available after an early guilty plea left him free to face Melbourne.
+- **Melbourne unavailable:** Chris Goulding (calf) and Sean Macdonald (ACL). Shea Ili had returned to the available depth chart after his earlier hamstring absence.
+- **Starting-five certainty:** complete official starting fives were not verified at the forecast cutoff. Per BK-P2, this keeps lineup-dependent confidence capped and requires an uncalibrated minutes/availability mixture rather than a fully qualified issue.
+
+### E. Sporting assessment
+
+- Adelaide entered 2-3 and had scored **88.2 points per game** through five regular-season games; its five results imply about 92.8 points allowed per game. The latest two losses were 114-92 at Illawarra and 88-72 at home to New Zealand.
+- Melbourne entered 1-3. Its four current regular-season scores imply about **89.5 points scored and 87.3 allowed per game**, but the defence collapsed late against Cairns: United led by nine after three quarters and lost 107-95 after conceding 35 in the fourth.
+- The first meeting this season finished **Adelaide 97-95 Melbourne** in Melbourne. It is useful current evidence but deliberately shrunk because one game is high variance and both rotations have changed.
+- Bryce Cotton (25.0 PPG on the current NBL leader board) and Cole Anthony (24.8 PPG) remain the principal scoring engines. Adelaide's missing depth and Melbourne's missing Goulding increase usage concentration around those creators.
+- Adelaide's +9 cushion is supported by home court, the two-point Round-1 win and Melbourne's inconsistent closing defence, but weakened by Adelaide's three important absences and consecutive double-digit losses.
+- The Ignite Cup's quarter-by-quarter incentive structure can preserve late-quarter effort even when the game margin widens, so the total distribution is kept at the framework's full NBL reference width rather than artificially narrowed.
+
+### F. Coherent probability scenario
+
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`
+
+No live-qualified NBL model output was available for this event. The card therefore uses a transparent joint margin/total scenario, informed by current season scoring/defence, opponent-adjusted recent results, availability, home court and the framework's NBL uncertainty widths.
+
+Central full-game score budget:
+
+- **Adelaide:** 88.5
+- **Melbourne:** 91.0
+- **Expected total:** 179.5
+- **Expected Adelaide margin:** -2.5
+
+Uncertainty:
+
+- **Margin SD:** 15.2 points — current framework NBL reference width
+- **Total SD:** 18.7 points — current framework NBL reference width
+- **Margin-total correlation:** 0.00 in this analyst scenario because no reliable current-event covariance estimate was available; this is an explicit simplifying assumption, not a fitted claim
+- **OT:** included in the full-game endpoint; the framework's roughly 4-5.5% OT tail is retained conceptually rather than treated as zero
+
+The current team rates already reflect the early-season environment, so the framework's early-season scoring caution is used as a guard against inflating the centre, not double-counted as another full -8.5 point adjustment.
+
+Derived contract probabilities from the same distribution:
+
+| Proposition | Win mass | Push mass | Loss mass | p_card |
+|---|---:|---:|---:|---:|
+| Adelaide +9.0 | **65.3%** | **2.4%** | **32.3%** | **65.3%** |
+| Melbourne United -1.5 | **52.6%** | 0.0% | 47.4% | **52.6%** |
+| Over 175.5 | **58.5%** | 0.0% | 41.5% | **58.5%** |
+| Under 187.5 | **66.6%** | 0.0% | 33.4% | **66.6%** |
+| Melbourne full-game winner | **56.5%** | — | 43.5% | **56.5%** |
+
+The wide 12-point middle band means **Over 175.5 and Under 187.5 can both win**; the scenario puts about **25.0%** mass on totals from 176 through 187 inclusive. They are therefore not complementary contracts.
+
+### G. Ranked predictions
+
+| Rank | Exact proposition | Origin | p_card | Status / strength | Main reason | Principal failure route |
+|---|---|---|---:|---|---|---|
+| **1** | **COMBINED TOTAL UNDER 187.5** | SUPPLIED | **66.6%** | **UNCALIBRATED_ANALYST_SCENARIO / SUPPORTED** | 179.5 central total leaves an eight-point cushion; Adelaide's offence is only 88.2 PPG and the framework warns against over-reading high early-season scoring tails | Anthony/Cotton-led efficiency spike, Webster adding immediate shooting, or OT pushes a competitive game through 188 |
+| **2** | **Adelaide +9.0** | SUPPLIED | **65.3% win + 2.4% push** | **UNCALIBRATED_ANALYST_SCENARIO / SUPPORTED** | Home court, a 97-95 Round-1 win over Melbourne and United's volatile late defence make nine points a meaningful cushion | Adelaide's Humphries/Cameron/Kuol absences and recent -22/-16 defeats create a genuine double-digit Melbourne separation branch |
+| **3** | **COMBINED TOTAL OVER 175.5** | SUPPLIED | **58.5%** | **UNCALIBRATED_ANALYST_SCENARIO / LEAN** | Central total is 179.5 and both teams retain elite high-usage guards; Melbourne's last game reached 202 and Adelaide-Melbourne Round 1 reached 192 | Adelaide's recent offensive collapse, early-season lower-scoring regime, or Melbourne controlling pace keeps the game in the 160s/low 170s |
+| **4** | **Melbourne United -1.5** | SUPPLIED | **52.6%** | **UNCALIBRATED_ANALYST_SCENARIO / LEAN / NEAR-TIE** | Adelaide's depleted rotation and missing interior size give Melbourne a narrow matchup edge; Ili's availability improves point-of-attack defence and secondary creation | Adelaide already beat United in Round 1, has home court, and + Cotton/Rakocevic/Webster can punish another Melbourne late-game lapse |
+
+### H. Potential winner
+
+- **Predicted winner:** Melbourne United
+- **Endpoint:** full game including overtime
+- **p_card:** **56.5%**
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`
+- **Reason:** Melbourne's healthier overall rotation, Adelaide's missing Humphries/Cameron/Kuol and the United frontcourt/guard creation edge move the central margin modestly toward Melbourne, but not enough to make the winner call strong.
+- **Upset route:** Cotton controls the creation battle, Rakocevic wins the interior/rebounding minutes, Webster supplies immediate spacing, and Adelaide's home environment converts a close fourth quarter.
+
+### I. Dependence and coherence
+
+- **Rank 1 Under 187.5 + Rank 2 Adelaide +9** are not independent; a controlled competitive game is favourable to both. Under the scenario's explicit zero margin-total correlation assumption, their joint outright-loss mass is about **10.8%**, but this number is assumption-sensitive.
+- **Over 175.5 and Under 187.5 overlap:** both cash in the 176-187 total band; they are not opposite sides of one threshold.
+- **Adelaide +9 and Melbourne -1.5 can both win** when Melbourne wins by 2-8; they are nested rather than complementary.
+- Representative central score: **Melbourne 91, Adelaide 89** — Melbourne winner/-1.5, Adelaide +9, Over 175.5 and Under 187.5 all succeed in that branch.
+
+### J. Material sources
+
+1. **NBL official — Adelaide v Melbourne preview / expected depth charts**  
+   https://www.nbl.com.au/news/how-to-watch-talking-points-adelaide-36ers-v-melbourne-united  
+   Role: official schedule, venue, Ignite Cup context, expected depth charts and current absences.
+
+2. **NBL official — NBL27 injury list**  
+   https://www.nbl.com.au/news/nbl26-the-latest-injury-updates  
+   Role: current injury status for Cameron, Humphries, Kuol, Goulding and Macdonald.
+
+3. **NBL official — Corey Webster signing / availability**  
+   https://league.nbl.com.au/news/adelaide-36ers-add-much-needed-scoring-punch-corey-webster  
+   Role: signing context, 18.7 PPG / 40.2% 3PT NZNBL production and initial availability uncertainty.
+
+4. **NBL official — Corey Webster comeback update**  
+   https://www.nbl.com.au/news/corey-webster-near-retirement-36ers-comeback  
+   Role: club confirmation that Webster would play.
+
+5. **NBL official/AAP — Round 1 Melbourne 95-97 Adelaide**  
+   https://www.nbl.com.au/news/sixers-gleeson-era-starts-impressively  
+   Role: current-season same-matchup evidence and Cotton/Anthony matchup context.
+
+6. **NBL official/AAP — Adelaide 72-88 New Zealand**  
+   https://league.nbl.com.au/news/clinical-breakers-win-big-in-adelaide  
+   Role: Adelaide's latest offensive form and Rakocevic/Cotton production.
+
+7. **NBL official/AAP — Melbourne 95-107 Cairns**  
+   https://league.nbl.com.au/news/taipans-prevail-on-massive-fourth-quarter  
+   Role: Melbourne's latest performance, Anthony's 40 points and fourth-quarter defensive collapse.
+
+8. **NBL official club schedules / current homepage**  
+   https://www.nbl.com.au/club-schedule/adl  
+   https://www.nbl.com.au/club-schedule/mel  
+   Role: current-season results and schedule cross-check.
+
+**SPORTS_ONLY / MARKET_BLIND:** no sportsbook odds, implied probabilities, betting movement, tipster selections, consensus predictions or fantasy projections were used as predictive evidence. User-supplied lines were used only as contract thresholds.
+
+### K. Forecast integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_START_UNVERIFIED_UNCALIBRATED_ANALYST_SCENARIO`
+
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`
+
+`REGISTERED_NBL_MODEL_STATUS: SHADOW_ONLY`
+
+`EVENT_SPECIFIC_MODEL_OUTPUT_USED: NO`
+
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`
+
+`LOG_STATUS: LOCAL_MINI_STAGING`
+
+`CANONICAL_IMPORT_STATUS: PENDING`
+
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 19:19:26 AEDT`
+
+`LOG_WRITE_TIMESTAMP: 2026-10-07 19:25:36 AEDT`
+
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+`IN_GAME_DATA_USED_AS_PREGAME_EVIDENCE: NO`
+
+### L. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-542 f3138e40a3544ca9a64f48e36f8261d0 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-543 353b0f3012e54aa9a9ee518d86240d71 -->
+## P-543 — BASEBALL / JAPAN NPB — Hiroshima Toyo Carp @ Hanshin Tigers
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-543`. Logged UTC: 2026-10-07T15:41:53.252492+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT**
+
+### A. Identity and timing
+
+- **Tracking alias:** `TMP-20261007-NPB-C-HAN`
+- **Event:** Hiroshima Toyo Carp @ Hanshin Tigers — JERA Central League, 25th meeting
+- **Venue:** Hanshin Koshien Stadium, Nishinomiya, Japan
+- **Official/native event pointer:** NPB game route `2026/1007/t-c-25`
+- **Supplied estimated start:** `<7 October 2026, 8:00 PM AEST>`
+- **Verified start:** **18:00 JST = 20:00 AEDT** on 7 October 2026
+- **Forecast cutoff:** `2026-10-07 19:59:00 AEDT` (17:59 JST)
+- **Local log write timestamp:** `2026-10-07 20:00:22 AEDT`
+- **Verified state at cutoff:** `PREGAME` — official NPB page still displayed `試合開始前` and 0 pitches/0 plate appearances
+- **In-game evidence used as pregame evidence:** `NO`
+- **Sporting endpoint:** scheduled full game with NPB extra-innings/tie state retained
+- **Operator tie/listed-pitcher/action terms:** `UNKNOWN_DEFINITION`; supplied contracts are preserved literally
+
+### B. Repository authority and numerical status
+
+- **Repository:** `danisgreat/Sports-Research`
+- **Branch read:** `main`
+- **GitHub HEAD:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`
+- **Method:** `MDS-2026.10.01-v8.0`
+- **Control:** `CR-2026.10.07-I1`
+- **Numerical extension:** `CR-2026.10.06-NUMERICAL-1`
+- **Applicable rules:** `RULES_BASEBALL.md`
+- **NPB numerical qualification:** `NOT_VALIDATED / NO LIVE-QUALIFIED NPB MODEL`
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`
+- **Performance eligibility:** `NOT_CERTIFIED`
+- **GitHub canonical queue snapshot:** published repository remains behind the active local sequence; canonical import is deferred under the current local-first workflow
+
+### C. Supplied contracts
+
+Preserved verbatim:
+
+1. `<Carp +1.5>`
+2. `<Tigers ML>`
+3. `<TOTAL RUNS OVER 5.5>`
+4. `<TOTAL RUNS UNDER 5.5>`
+
+For the sporting probability layer, `Tigers ML` is interpreted as **Hanshin win outright after the competition's permitted completion procedure**; a final tie is not counted as a Hanshin win. Operator treatment of an NPB tie remains unknown.
+
+### D. Confirmed participants and availability
+
+**Official starting pitchers**
+- **Hanshin:** Yuki Nishi, RHP — 2026: 8 G, 38.1 IP, 3.29 ERA, 38 H, 4 HR, 12 BB, 22 K. His previous NPB start was 2 September (3.1 IP, 4 ER); this is his announced final/retirement start, creating material leash uncertainty.
+- **Hiroshima:** Shogo Tamamura, LHP — 2026: 15 G, 78.1 IP, 2.76 ERA, 69 H, 7 HR, 16 BB, 56 K. On 29 September he allowed 3 ER on 6 H in 5 IP against Yomiuri.
+
+**Official starting lineups at the cutoff**
+- **Hiroshima:** Nakamura (CF), Katsuda (SS), Kikuchi (2B), Sakakura (1B), Sasaki (3B), Suekane (RF), Hayashi (LF), Ishihara (C), Tamamura (P).
+- **Hanshin:** Chikamoto (CF), Kinami (2B), Morishita (RF), Sato (3B), Ohyama (1B), Takatera (LF), Umeno (C), Obata (SS), Nishi (P).
+
+**Material lineup/bullpen notes**
+- Hiroshima's starting nine omits Fabian and Montero despite both being available on the bench, reducing the starting lineup's established power relative to many earlier-season configurations.
+- Hanshin retains Chikamoto, Morishita, Sato and Ohyama in the top five, although Nakano is not in the starting lineup.
+- Hanshin used Iwasada, Iwasaki, Ishii and Kudo in the 2-1 win on 6 October. Of that group, Iwasaki is on today's active bench while Ishii/Kudo are not listed, so the late-inning ladder differs from the previous night.
+- Hiroshima used Akagi, Mori, Taka and Kikuchi on 6 October; Mori, Taka and Kikuchi remain available today, while Akagi is not listed. Moriura is also absent from today's bench list.
+- Hanshin reliever Hiroto Yuasa is unavailable following surgery; this is not treated as a new same-day surprise because the club announced it on 6 October.
+
+### E. Current team and matchup evidence
+
+- Through 6 October, Hanshin is **78-61-2 (.561)** and Hiroshima **61-77-4 (.442)**.
+- Hanshin has scored **516 runs in 141 games (3.66/G)** and allowed 434 (3.08/G); Hiroshima has scored **430 in 142 (3.03/G)** and allowed 518 (3.65/G).
+- Team pitching ERA strongly favours Hanshin: **2.80** versus Hiroshima **3.40**.
+- Hiroshima's season offence is the weakest in the Central League by the official team table: **.224 AVG / .288 OBP / .323 SLG**. Hanshin is **.247 / .318 / .372**.
+- The clubs played yesterday at Koshien, Hanshin winning **2-1**. That result is treated as context only, not as a direct forecast coefficient.
+- Tamamura's season run prevention is better than Nishi's, while Nishi's long layoff and ceremonial final-start context widen the early-hook/transition-inning branch. Hanshin's stronger offence/home state offsets that starter disadvantage.
+- NPB's official schedule listed **sunny to partly cloudy** conditions. No reliable field-relative wind measurement was recovered, so no directional wind adjustment is applied.
+
+### F. Coherent probability scenario
+
+**Method:** `UNCALIBRATED_ANALYST_SCENARIO` using the repository's event-first baseball logic.
+
+Inputs were combined into one coherent full-game distribution rather than pricing the four contracts independently:
+
+- team-scoring anchors from current R/G and opponent RA/G;
+- starter quality and expected exposure;
+- confirmed batting orders;
+- bullpen availability changes from 6 October to 7 October;
+- Koshien/home batting state;
+- NPB tie-permitting completion state;
+- reference total width of approximately 4.5 runs retained to avoid false precision.
+
+**Scenario centre:** Hanshin **3.4** runs, Hiroshima **2.6** runs; total centre approximately **6.0**.
+
+A negative-binomial-style overdispersed run object is used for the total, with the regulation tie branch passed through an extra-innings kernel and a residual final-tie state. Approximate three-way full-game mass:
+
+- **Hanshin win:** `57.4%`
+- **Hiroshima win:** `39.6%`
+- **Final tie:** `3.0%`
+
+Sum = `100.0%`.
+
+Derived contract probabilities from the same scenario:
+
+- **Hiroshima +1.5:** `58.7%`
+- **Hanshin win outright:** `57.4%`
+- **Under 5.5:** `54.1%`
+- **Over 5.5:** `45.9%`
+
+`P(Over 5.5) + P(Under 5.5) = 100.0%` for the sporting completed-game total definition used here.
+
+These are analytical estimates, not calibrated model probabilities.
+
+### G. Ranked predictions
+
+| Rank | Exact proposition | Origin | p_card | Strength | Main reason | Principal failure route |
+|---|---|---|---:|---|---|---|
+| **1** | **Hiroshima Carp +1.5 runs** | SUPPLIED | **58.7%** | SUPPORTED LEAN | Low projected run centre plus Tamamura's stronger season ERA keeps a one-run Hanshin win and Hiroshima outright-win paths meaningful. | Hanshin's core bats exploit Tamamura/relief transition and separate by 2+ runs. |
+| **2** | **Hanshin Tigers to win outright** | SUPPLIED | **57.4%** | SUPPORTED LEAN | Hanshin has the stronger season team profile, home batting entitlement and substantially better season run prevention. | Nishi's long layoff/short retirement-start leash exposes the middle innings and Tamamura controls Hanshin's left-heavy core. |
+| **3** | **Combined Total Under 5.5 runs** | SUPPLIED | **54.1%** | LEAN | Both starters have sub-3.30 ERAs and Hiroshima's confirmed starting lineup is light on established power; the distribution median sits below the mean because of baseball's run-tail skew. | Early starter hook, bullpen transition failure, or one multi-run inning creates the upper tail quickly. |
+| **4** | **Combined Total Over 5.5 runs** | SUPPLIED | **45.9%** | FORCED RANK / COUNTER-SCENARIO | Hanshin's top five can generate most of the six-run requirement by themselves, while altered bullpens increase late variance. | Tamamura plus Hanshin's remaining leverage arms keep the game in the 2-1/3-1/3-2 cluster. |
+
+**Top-two dependence:** Rank 1 and Rank 2 form a covering pair. Both can win only if Hanshin wins by exactly one run; they are not independent trials.
+
+### H. Potential game winner
+
+**Predicted winner:** Hanshin Tigers  
+**p_card:** **57.4%**  
+**Hiroshima win:** **39.6%**  
+**Final tie:** **3.0%**  
+**Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`
+
+Hanshin receives the narrow winner edge from stronger season offence, stronger overall pitching and home state. The principal upset route is Tamamura outperforming Nishi over the starter window, with Nishi's long layoff/final-start leash forcing an early bullpen transition.
+
+### I. Important uncertainties
+
+- Nishi's retirement-start pitch count/leash was not officially quantified; this is the largest single uncertainty.
+- Operator treatment of an NPB final tie and listed-pitcher/action rules was not supplied.
+- Exact field-relative wind was not recovered, so weather contributes no directional run adjustment.
+- Several usual late-inning names are absent from today's bench lists, increasing relief-role uncertainty.
+
+### J. Material source register
+
+1. NPB official schedule / probable starters — `https://npb.jp/games/2026/schedule_10_detail.html`
+2. NPB official game/lineup page — `https://npb.jp/scores/2026/1007/t-c-25/box.html`
+3. NPB official bench roster — `https://npb.jp/scores/2026/1007/t-c-25/roster.html`
+4. NPB official Central League team batting — `https://npb.jp/bis/2026/stats/tmb_c.html`
+5. NPB official Central League team pitching — `https://npb.jp/bis/2026/stats/tmp_c.html`
+6. NPB player record — Shogo Tamamura — `https://npb.jp/bis/players/41245151.html`
+7. Hanshin official player record — Yuki Nishi — `https://www.hanshintigers.jp/data/player/2026/16.html`
+8. NPB 6 October box — `https://npb.jp/scores/2026/1006/t-c-24/box.html`
+9. Hanshin official retirement page — `https://hanshintigers.jp/home/nishi16/`
+10. Hanshin official Yuasa update — `https://www.hanshintigers.jp/news/topics/info_11287.html`
+
+### K. Integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_RESEARCH`
+
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`
+
+`MODEL_QUALIFICATION: NPB_NOT_VALIDATED`
+
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`
+
+`LOG_STATUS: LOCAL_MINI_STAGING`
+
+`CANONICAL_IMPORT_STATUS: PENDING`
+
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 19:59:00 AEDT`
+
+`LOG_WRITE_TIMESTAMP: 2026-10-07 20:00:22 AEDT`
+
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+`IN_GAME_DATA_USED_AS_PREGAME_EVIDENCE: NO`
+
+### L. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-543 353b0f3012e54aa9a9ee518d86240d71 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-544 e63eb2d29dc246da986c33428de605d0 -->
+## P-544 — BASEBALL / KOREA KBO — Doosan Bears @ LG Twins
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-544`. Logged UTC: 2026-10-07T15:41:53.786413+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT.**  
+**SPORTS_ONLY / MARKET_BLIND.**  
+**PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED.**
+
+### A. Identity and state
+
+- **Sport / competition:** Baseball — Korea KBO, 2026 regular season.
+- **Event:** Doosan Bears @ LG Twins.
+- **Venue:** Jamsil Baseball Stadium, Seoul.
+- **Scheduled first pitch:** 2026-10-07 18:30 KST / 2026-10-07 20:30 AEDT (Melbourne).
+- **Official event key:** `20261007OBLG0`.
+- **Forecast/research cutoff:** `2026-10-07 20:15:20 AEDT` / `18:15:20 KST`.
+- **Observed state at cutoff:** `PREGAME / START_UNVERIFIED`. The official KBO Game Center still listed the fixture as scheduled. No observed runs, pitches, plate appearances or other in-game outcomes were used.
+- **Endpoint:** full completed KBO game under the league's regular-season completion/tie rules. Operator-specific action/void semantics are unknown and retained as a later settlement limitation.
+
+### B. Repository authority
+
+- **GitHub main SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`.
+- **Method:** `MDS-2026.10.01-v8.0`.
+- **Control:** `CR-2026.10.07-I1` with numerical extension `CR-2026.10.06-NUMERICAL-1`.
+- **Scoring:** `SCV-2026.10.01-v3`.
+- **Active manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`.
+- **Sport rules:** current `RULES_BASEBALL.md`.
+- **Model qualification:** no live-qualified KBO numerical model. NPB/KBO/CPBL numerical baseball lane is not validated for live card probability use.
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`.
+
+### C. Supplied contracts — verbatim
+
+1. `Bears +1.5`
+2. `Twins +0.5`
+3. `TOTAL RUNS OVER 7.5`
+4. `TOTAL RUNS UNDER 7.5`
+
+The two total rows are exact complements under the same full-game 7.5-run endpoint. `Bears +1.5` and `Twins +0.5` are dependent and can both cover when LG wins by exactly one run or when the completed KBO game finishes tied.
+
+### D. Confirmed participants / late availability
+
+- **Doosan starter:** Choi Min-seok — 26 G, 14-4, 2.92 ERA, 124 SO. His previous start after returning from the Asian Games was only 3 IP with 8 H and 4 R, so workload/command uncertainty is retained rather than treated as a new true-talent level.
+- **LG starter:** Im Chan-kyu — 29 G, 14-7, 4.30 ERA, 96 SO. Against Doosan in 2026: 4 starts, 3-0, 1.90 ERA; this matchup split is supporting context, not a stand-alone predictive model.
+- **Doosan posted order:** Park Chan-ho SS; Ahn Jae-seok 3B; Severino DH; Yang Eui-ji C; Kim Min-seok LF; Kang Seung-ho 2B; Yang Seok-hwan 1B; Jo Su-haeng RF; Jung Soo-bin CF.
+- **LG posted order:** Park Hae-min CF; Song Chan-eui LF; Austin 1B; Moon Jung-bin DH; Moon Bo-kyung 3B; Lee Jae-won RF; Koo Bon-hyeok SS; Park Dong-won C; Lee Young-bin 2B.
+- No additional same-day injury report was verified that justified overriding the posted starting nines. Recent bullpen workload is retained as uncertainty rather than assumed unavailability.
+
+### E. Key sporting research
+
+- **Doosan has the stronger run-prevention profile:** KBO's current team table has Doosan first with a 3.82 ERA, 1.34 WHIP and 616 runs allowed; LG is at 4.83 ERA and 705 runs allowed.
+- **LG has scored slightly more:** 709 runs in 140 games (5.06/game) versus Doosan's 679 in 142 (4.78/game), despite similar batting averages (.265 LG, .268 Doosan).
+- **Starter edge is split:** Choi's full-season numbers are materially stronger, while Im's current-season Doosan matchup has been excellent. That reduces confidence in either outright side.
+- **Context favours a close, high-leverage game:** LG is 76-63-1 and Doosan 73-64-5, separated by two games late in the regular season. Doosan enters on three straight wins; LG snapped an eight-game skid with a 6-1 win over NC on 6 October.
+- **Bullpen tail remains live:** both clubs used late relievers on 6 October. Workload was not extreme enough to assume key arms unavailable, but it prevents an overly narrow run distribution.
+- **Environment:** secondary Jamsil weather information indicated clear, cool conditions and no meaningful rain threat. It is treated as width/context only, not an automatic Under adjustment.
+
+### F. Probability scenario
+
+**Method:** one coherent overdispersed full-game run distribution, incorporating posted lineups, starter quality/uncertainty, team scoring and run-prevention rates, home batting entitlement, bullpen transition risk and the KBO tie-permitting completion branch.
+
+**Scenario centre:** approximately **Doosan 4.0 — LG 4.3** (total about **8.3 runs**).  
+**Run-distribution width:** intentionally broad, approximately the framework's ~4.5-run baseball reference rather than a narrow normal approximation.  
+**Final tie mass:** retained explicitly at about **2.1%** after the KBO completion branch.
+
+Coherent winner family:
+
+| Outcome | p_card |
+|---|---:|
+| LG Twins win | **51.7%** |
+| Doosan Bears win | **46.2%** |
+| Final tie | **2.1%** |
+
+`51.7 + 46.2 + 2.1 = 100.0%`.
+
+Contract probabilities from the same distribution:
+
+| Contract | p_card |
+|---|---:|
+| Bears +1.5 | **62.7%** |
+| Twins +0.5 | **53.8%** |
+| Over 7.5 | **51.6%** |
+| Under 7.5 | **48.4%** |
+
+For the half-run total, `Over 7.5 + Under 7.5 = 100.0%`. These are analytical estimates, not calibrated or validated KBO probabilities.
+
+### G. Ranked predictions
+
+| Rank | Exact proposition | Origin | p_card | Strength | Main reason | Principal failure route |
+|---|---|---|---:|---|---|---|
+| **1** | **Doosan Bears +1.5 runs** | SUPPLIED | **62.7%** | **SUPPORTED LEAN** | Choi and the league-best Doosan staff materially reduce LG's separation probability; the +1.5 also captures Doosan wins, a completed tie, and one-run LG wins. | LG's stronger scoring context gets to Choi early or separates against the transition/bullpen innings by 2+. |
+| **2** | **LG Twins +0.5 runs** | SUPPLIED | **53.8%** | **LEAN** | LG has the home batting state, slightly stronger season scoring, and Im has handled Doosan well in 2026; +0.5 also retains the tie branch. | Choi's stronger season run suppression carries through and Doosan wins outright. |
+| **3** | **Total Runs Over 7.5** | SUPPLIED | **51.6%** | **LEAN / NEAR COIN FLIP** | The league/team scoring environment and bullpen-transition tails leave 8+ runs marginally more likely than 7 or fewer despite the starter quality. | Both starters work efficiently into the middle innings and Jamsil's run environment plus fresh-enough relief keeps the game compressed. |
+| **4** | **Total Runs Under 7.5** | SUPPLIED | **48.4%** | **FORCED RANK / COUNTER-SCENARIO** | Strong Choi season numbers, Im's Doosan-specific success and cool conditions create a substantial low-score branch. | One clustered inning, early Choi command trouble, or late relief separation pushes the game to 8+ runs. |
+
+### H. Potential winner
+
+**LG Twins — 51.7%**  
+**Doosan Bears — 46.2%**  
+**Final tie — 2.1%**
+
+LG is only a **narrow** winner call. The difference is driven by home batting entitlement, the slightly stronger run-scoring profile and Im's current matchup record; Choi's superior overall season and Doosan's much stronger staff prevent a high-confidence favourite call.
+
+### I. Dependence / correlation
+
+- `Bears +1.5` and `Twins +0.5` are **not independent**. Both cover in an LG one-run win and a completed tie.
+- Over 7.5 and Under 7.5 are exact complements, not two independent forecasts.
+- The strongest failure state for both Rank 1 and the Under branch is an LG multi-run offensive cluster after Choi's exit; therefore top-pick outcomes are partially dependent on the same transition-inning mechanism.
+
+### J. Material sources
+
+1. **KBO Game Center** — official fixture, 18:30 KST start, venue/state and confirmed starters.  
+   `https://www.koreabaseball.com/Schedule/GameCenter/Main.aspx?gameDate=20261007&gameId=20261007OBLG0&section=START_PIT`
+2. **KBO team batting records** — current Doosan/LG games, runs and batting production.  
+   `https://koreabaseball.com/Record/Team/Hitter/Basic1.aspx`
+3. **KBO team pitching records** — current team ERA, runs allowed, WHIP and staff context.  
+   `https://www.koreabaseball.com/Record/Team/Pitcher/Basic1.aspx`
+4. **KBO team standings** — current records/home-away context.  
+   `https://koreabaseball.com/Record/TeamRank/TeamRank.aspx`
+5. **OSEN, 2026-10-07 17:01 KST** — Doosan posted lineup, Choi season/current LG matchup context.  
+   `https://www.osen.co.kr/article/G1112889182`
+6. **Chosun Biz / OSEN, 2026-10-07 16:00–16:02 KST** — LG posted lineup and Im's Doosan split.  
+   `https://biz.chosun.com/sports/baseball/2026/10/07/MNTGEYJWHFTDONRUGZSTAMDCMY/`
+7. **AccuWeather Jamsil** — secondary environment check only; no predictive market information used.  
+   `https://www.accuweather.com/ko/kr/jamsil-4-sa-dong/2002263/current-weather/2002263`
+
+### K. Integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_RESEARCH`  
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`  
+`MODEL_QUALIFICATION: NOT_LIVE_QUALIFIED_FOR_KBO`  
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`  
+`LOG_STATUS: LOCAL_MINI_STAGING`  
+`CANONICAL_IMPORT_STATUS: PENDING`  
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 20:15:20 AEDT`  
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+### L. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+
+---
+<!-- END CANONICAL RESEARCH P-544 e63eb2d29dc246da986c33428de605d0 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-545 9c7ed1157e374ff38a31dc61a926e62d -->
+## P-545 — BASEBALL / KOREA KBO — Hanwha Eagles @ Kiwoom Heroes
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-545`. Logged UTC: 2026-10-07T15:41:54.328298+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT.**  
+**SPORTS_ONLY / MARKET_BLIND.**  
+**PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED.**
+
+### A. Identity and state
+
+- **Sport / competition:** Baseball — Korea KBO, 2026 regular season.
+- **Event:** Hanwha Eagles @ Kiwoom Heroes.
+- **Venue:** Gocheok Sky Dome, Seoul.
+- **Scheduled first pitch:** 2026-10-07 18:30 KST / 2026-10-07 20:30 AEDT (Melbourne).
+- **Native event ID:** `UNKNOWN` — the official KBO schedule/scoreboard identity was verified, but no stable returned native ID was treated as proven from the accessible pregame page.
+- **Forecast-input cutoff:** `2026-10-07 20:19:48 AEDT` / `18:19:48 KST`, before scheduled first pitch.
+- **State handling:** `PREGAME_FORECAST`. Research continued after the scheduled start only to complete source readback. A later KBO scoreboard readback showed that play had begun; no observed runs, pitches, outs, hits, baserunners or other live outcomes were used in this forecast.
+- **Endpoint:** full completed KBO game under the league's tie-permitting completion rules. Operator-specific tie/action/void semantics are not supplied and remain a later settlement limitation.
+
+### B. Repository authority
+
+- **GitHub main SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`.
+- **Method:** `MDS-2026.10.01-v8.0`.
+- **Control:** `CR-2026.10.07-I1` with numerical extension `CR-2026.10.06-NUMERICAL-1`.
+- **Scoring:** `SCV-2026.10.01-v3`.
+- **Active manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`.
+- **Sport rules:** current `RULES_BASEBALL.md`.
+- **Model qualification:** no live-qualified KBO numerical model. NPB/KBO/CPBL remain unvalidated for live model probabilities under the current baseball rules.
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`.
+
+### C. Supplied contracts — verbatim
+
+1. `Eagles ML`
+2. `Heroes +2.5`
+3. `TOTAL RUNS OVER 9.5`
+4. `TOTAL RUNS UNDER 9.5`
+
+`Over 9.5` and `Under 9.5` are exact complements under the defined full-game sporting endpoint. `Eagles ML` and `Heroes +2.5` are dependent: both can succeed when Hanwha wins by one or two runs.
+
+### D. Confirmed participants / late availability
+
+- **Hanwha starter:** Jung Woo-ju (RHP) — 44 G, 42.0 IP, 1-3, 8.36 ERA, 48 SO, 34 BB, 2.10 WHIP in 2026. This is his first start in 139 days and only his fourth start of the season, so starter length is modeled as a wide mixture rather than a normal full-start projection.
+- **Jung vs Kiwoom in 2026:** 5 appearances, 3.52 ERA; his May 14 start against Kiwoom was strong. That small matchup sample is supporting evidence only.
+- **Kiwoom starter:** Kim Seong-jin (RHP) — 33 G, 35 1/3 IP, 1-3, 6.37 ERA, 25 SO, 13 BB, 1.81 WHIP. He spent most of the year in relief before converting to a starter in the Futures League.
+- **Kim's starter transition:** Futures work included a 9-inning shutout against Hanwha on September 13; his first KBO start on September 30 lasted 4 IP with 5 runs allowed. This is only his second KBO start, so the full-game projection keeps a large early-hook/transition branch.
+- **Hanwha posted lineup:** Choi In-ho CF; Lee Do-yoon 2B; Moon Hyun-bin LF; Kang Baek-ho DH; Noh Si-hwan 3B; Heo In-seo C; Kim Tae-yeon 1B; Yu Min RF; Park Jung-hyun SS.
+- **Kiwoom posted lineup:** Choo Jae-hyun CF; Davidson 1B; Hiura LF; Kim Woong-bin DH; Kim Gun-hee C; Park Chan-hyuk RF; Yeo Dong-wook 3B; Yeom Seung-won 2B; Kwon Hyuk-bin SS.
+- No additional same-day injury information was verified that justified overriding the published starting nines. Bullpen availability is treated probabilistically rather than inferred from a single recent appearance.
+
+### E. Key sporting research
+
+- **Hanwha owns the much stronger season offense:** official KBO team batting records show 810 runs in 142 games (5.70/game), compared with Kiwoom's 560 in 143 (3.92/game). Hanwha also carries substantially more home-run power (173 HR vs 111).
+- **Both pitching staffs have struggled:** Hanwha's team ERA is 5.27 with 821 runs allowed; Kiwoom's is 5.31 with 814 allowed. They are the bottom two clubs in the current KBO team-ERA table.
+- **Starting-pitcher uncertainty increases variance:** Jung's season command/run prevention has been poor and his workload is uncertain after 139 days without a start; Kim is only making his second KBO start after a relief-to-starter conversion. This is a strong reason not to use narrow starter-based distributions.
+- **Recent context:** Hanwha enters on two straight wins, including 13-6 over Kiwoom on October 5 and 9-2 over SSG on October 6. Kiwoom enters on two losses. These results are context only and do not create a trend coefficient.
+- **Head-to-head caution:** Kiwoom has performed better than its season record against Hanwha, so the large season offensive gap is not treated as sufficient evidence for a multi-run Hanwha separation by itself.
+- **Venue/environment:** Gocheok Sky Dome removes ordinary rain/wind exposure from the scoring model. No external weather-direction adjustment is applied.
+
+### F. Probability scenario
+
+**Method:** one coherent overdispersed full-game run distribution using season scoring/allowance, posted lineups, starter identity and workload mixtures, bullpen-transition risk, home batting entitlement and a KBO tie branch. No sportsbook or market information is used.
+
+**Scenario centre:** approximately **Hanwha 5.8 — Kiwoom 5.0** (total about **10.8 runs**).  
+**Distribution width:** deliberately broad (approximately **4.8 runs** on the total) because both starters have unusually uncertain roles/lengths.  
+**Final tie mass:** retained at approximately **2.3%** under the KBO completion branch.
+
+Coherent winner family:
+
+| Outcome | p_card |
+|---|---:|
+| Hanwha Eagles win | **58.2%** |
+| Kiwoom Heroes win | **39.5%** |
+| Final tie | **2.3%** |
+
+`58.2 + 39.5 + 2.3 = 100.0%`.
+
+For a two-way operator ML that voids a final tie, the conditional sporting win share would be approximately `58.2 / (1 - 0.023) = 59.6%`; operator rules are not assumed here.
+
+Contract probabilities from the same distribution:
+
+| Contract | p_card |
+|---|---:|
+| Heroes +2.5 | **70.5%** |
+| Over 9.5 | **63.5%** |
+| Eagles ML — outright Hanwha win | **58.2%** |
+| Under 9.5 | **36.5%** |
+
+For the half-run total, `Over 9.5 + Under 9.5 = 100.0%`.
+
+### G. Ranked predictions
+
+| Rank | Exact proposition | Origin | p_card | Strength | Main reason | Principal failure route |
+|---|---|---|---:|---|---|---|
+| **1** | **Kiwoom Heroes +2.5 runs** | SUPPLIED | **70.5%** | **SUPPORTED** | A +2.5 cushion captures all Kiwoom wins/ties plus one- and two-run Hanwha wins. Jung's uncertain starter length and Hanwha's weak season run prevention reduce confidence in a 3+ run separation even though Hanwha has the stronger offense. | Hanwha's middle order gets to Kim early and then separates against Kiwoom's transition/bullpen innings by 3+. |
+| **2** | **Total Runs Over 9.5** | SUPPLIED | **63.5%** | **SUPPORTED LEAN** | Both clubs are bottom-two in team ERA, both starters carry large role/length uncertainty, and Hanwha's offense averages 5.70 runs/game. The common centre is above the supplied threshold. | Kim's Futures starter gains translate, Jung repeats his earlier success against Kiwoom, and the game remains efficient through the middle innings. |
+| **3** | **Hanwha Eagles ML — outright win** | SUPPLIED | **58.2%** | **LEAN** | Hanwha has the materially stronger batting profile and power, while Kim is making only his second KBO start. | Jung's command/length issues expose Hanwha's bullpen early and Kiwoom's right-handed middle order takes advantage. |
+| **4** | **Total Runs Under 9.5** | SUPPLIED | **36.5%** | **COUNTER-SCENARIO / FORCED RANK** | The Under survives if both starter-transition experiments work and the dome game avoids clustered relief innings. | The most likely failure is exactly what drives Rank 2: one or both starters exit early and either bullpen permits a multi-run inning. |
+
+### H. Potential winner
+
+**Hanwha Eagles — 58.2%**  
+**Kiwoom Heroes — 39.5%**  
+**Final tie — 2.3%**
+
+Hanwha is the most likely winner because its season offense is substantially better and Kim's top-level starting sample is extremely limited. The call is not strong enough to override the Kiwoom +2.5 cushion at Rank 1 because Jung's own starter profile is also highly uncertain.
+
+### I. Dependence / correlation
+
+- `Heroes +2.5` and `Eagles ML` are a **covering pair**, not independent predictions. Both win when Hanwha wins by one or two runs.
+- `Over 9.5` and `Under 9.5` are exact complements.
+- Rank 1 and Rank 2 can both fail in the same low-scoring Hanwha blowout branch; conversely, a high-scoring close game supports both top picks.
+
+### J. Material sources
+
+1. **KBO official October schedule / scoreboard** — fixture, Gocheok venue, 18:30 KST first pitch and official pregame status.  
+   `https://www.koreabaseball.com/Schedule/Schedule.aspx?month=10&year=2026`
+2. **KBO official team batting records** — Hanwha/Kiwoom games, runs, batting and HR production.  
+   `https://www.koreabaseball.com/Record/Team/Hitter/Basic1.aspx`
+3. **KBO official team pitching records** — team ERA, runs allowed and staff context.  
+   `https://www.koreabaseball.com/Record/Team/Pitcher/Basic1.aspx`
+4. **KBO official Jung Woo-ju record** — 2026 ERA, innings, strikeouts, walks and WHIP.  
+   `https://www.koreabaseball.com/Record/Player/PitcherDetail/Total.aspx?playerId=55743`
+5. **KBO official Kim Seong-jin record** — 2026 relief/starter-season statistics and opponent splits.  
+   `https://www.koreabaseball.com/Record/Player/PitcherDetail/Basic.aspx?playerId=51301`
+6. **MoneyToday / OSEN, 2026-10-07 16:46 KST** — both posted starting lineups; Jung's 139-day start gap and Kiwoom matchup context.  
+   `https://www.mt.co.kr/sports/2026/10/07/202610071641770530O`
+7. **NewsPim, 2026-10-07** — Kim's relief-to-starter transition, Futures complete-game shutout and first KBO start context.  
+   `https://www.newspim.com/news/view/20261007000832`
+
+### K. Integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_RESEARCH`  
+`PREGAME_INPUT_CUTOFF: 2026-10-07 20:19:48 AEDT`  
+`RESEARCH_COMPLETION_NOTE: CROSSED_SCHEDULED_START; LIVE_OUTCOME_INPUT_EXCLUDED`  
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`  
+`MODEL_QUALIFICATION: NOT_LIVE_QUALIFIED_FOR_KBO`  
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`  
+`LOG_STATUS: LOCAL_MINI_STAGING`  
+`CANONICAL_IMPORT_STATUS: PENDING`  
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+### L. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+
+---
+<!-- END CANONICAL RESEARCH P-545 9c7ed1157e374ff38a31dc61a926e62d -->
+
+<!-- BEGIN CANONICAL RESEARCH P-546 54f7a86934f04322a94a106b4f92289d -->
+## P-546 — Samsung Lions @ KT Wiz — KBO — 2026-10-07
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-546`. Logged UTC: 2026-10-07T15:41:54.999328+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**Status:** `LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT`  
+**Analysis status:** `PREGAME_UNCALIBRATED_ANALYST_SCENARIO`  
+**Competition:** Korea KBO, regular season  
+**Venue:** Suwon KT Wiz Park, Suwon  
+**Scheduled first pitch:** 2026-10-07 18:30 KST / 20:30 AEDT  
+**Forecast cutoff:** 2026-10-07 18:26:54 KST / 20:26:54 AEDT  
+**Observed state at cutoff:** PREGAME / START_UNVERIFIED  
+**Sports-only rule:** SPORTS_ONLY / MARKET_BLIND  
+**Settlement:** NOT PERFORMED  
+**Retrospective:** NOT PERFORMED  
+
+## Identity and availability
+
+KBO's October 7 schedule lists Samsung at KT in Suwon at 18:30 KST. Same-day lineup reporting confirmed **Won Tae-in** for Samsung and **So Hyeong-jun** for KT, with both starting nines published before the cutoff.
+
+Samsung starting order: Kim Hyun-jun, Kim Seong-yoon, Park Seung-gyu, Lewin Díaz, Choi Hyung-woo, Ryu Ji-hyeok, Lee Jae-hyun, Kim Young-woong, Kim Do-hwan.
+
+KT starting order: Choi Won-jun, Kim Min-hyuk, Ahn Hyun-min, Sam Hilliard, Kim Hyun-soo, Ryu Hyun-in, Heo Kyoung-min, Jo Dae-hyun, Kwon Dong-jin.
+
+Both clubs have already fixed their regular-season positions: KT first and Samsung second. That reduces standings pressure and adds uncertainty around starter leash, bullpen sequencing and late substitutions, so this card uses wider rather than narrower tails.
+
+## Starting pitching and matchup
+
+**Won Tae-in (Samsung):** 25 games, 7-8, 4.55 ERA entering today. His latest start was October 1 against Hanwha: 5 IP, 1 ER. Against KT in 2026 he has been materially better than his season ERA: 4 starts, 22 2/3 IP, 3.18 ERA, 25 H, 7 BB, 19 K. That matchup suppression is relevant but not treated as a permanent 3.18 true-talent rate.
+
+**So Hyeong-jun (KT):** 21 games, 8-3, 3.37 ERA entering today. His latest start was October 1 at KIA: 6 IP, 2 ER. His one 2026 start against Samsung was poor: 6 IP, 6 ER on April 4. The single matchup is not treated as ownership, but it prevents an aggressive Samsung run-suppression assumption.
+
+## Team strength and environment
+
+Official KBO team batting through the October 7 pregame state:
+- KT: 800 runs in 141 games, .284 AVG, .365 OBP, .411 SLG.
+- Samsung: 797 runs in 140 games, .275 AVG, .364 OBP, .418 SLG.
+
+Official KBO team pitching:
+- KT: 4.18 ERA.
+- Samsung: 4.23 ERA.
+
+Samsung lead the season series 9-4, but KT enter on a seven-game winning streak and hold home batting entitlement. The current Samsung starting nine does not include Koo Ja-wook or Kim Ji-chan, while KT retained its main current top-order core. Those lineup facts shift the centre slightly toward KT without erasing Samsung's substantial scoring capability.
+
+Suwon has been a high-run 2026 venue in the available park split (10.50 runs/game). Because an official field-weather receipt was not recovered before cutoff, no wind/temperature directional adjustment is applied. Weather is therefore **NOT USED DIRECTIONALLY**.
+
+## Bullpen/rest context
+
+KT played October 6 at Kiwoom and won 10-1. Daniel Davis worked five innings; Park Ji-hoon worked two, Joo Kwon one and Oh Won-seok one. That is meaningful workload information for those specific arms but does not imply the whole bullpen is depleted.
+
+Samsung beat KIA 5-4 on October 6. The official English scoreboard records Lee Jae-hee as winning pitcher and Bae Chan-seung as the save pitcher. A full verified reliever-usage ladder was not recovered before cutoff, so Samsung bullpen availability is widened rather than guessed.
+
+## Coherent analyst distribution
+
+**Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`  
+**Live-qualified model:** NONE for KBO  
+**Indicative completed-game centre:** Samsung 4.7 — KT 5.2  
+**Indicative total centre:** 9.9 runs  
+**Final winner family:** KT 55.5% / Samsung 42.0% / tie 2.5%  
+
+All ranked contracts below are derived from this same overdispersed completed-game run scenario. No sportsbook odds, market movement, implied probabilities or tipster information were used.
+
+## Ranked picks
+
+### Rank 1 — KT Wiz +1.5 runs — `p_card 74.0%`
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — SUPPORTED`
+
+Why: KT has the slightly stronger current lineup, home batting entitlement, the better starter season ERA, and an offense essentially equal to Samsung's. The +1.5 additionally survives a one-run Samsung win and the final-tie branch. Won Tae-in's strong 2026 results against KT keep this from being priced even higher.
+
+Main failure route: Samsung's power core reaches So Hyeong-jun early and then separates by 2+ before KT's late innings can recover.
+
+### Rank 2 — Samsung Lions +1.5 runs — `p_card 62.8%`
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — SUPPORTED LEAN`
+
+Why: Samsung has scored 797 runs in 140 games, leads this season series 9-4, and Won Tae-in has a 3.18 ERA over four starts against KT. The cushion protects Samsung in the large one-run-game branch even though KT is the narrow winner lean.
+
+Main failure route: Samsung's reduced starting lineup struggles against So, while KT's top order turns a close game into a multi-run home win against the middle relief innings.
+
+### Rank 3 — Total Runs Over 9.5 — `p_card 53.0%`
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — LEAN / NEAR COIN FLIP`
+
+Why: both offenses average roughly 5.7 runs per game, Suwon's available 2026 park split is 10.50 runs/game, So allowed six runs in his only 2026 Samsung start, and locked standings may produce shorter or more experimental pitching usage. These raise the upper tail.
+
+Main failure route: Won reproduces his strong KT matchup profile while So works six efficient innings, producing another 4-3 / 5-3 type game.
+
+### Rank 4 — Total Runs Under 9.5 — `p_card 47.0%`
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — COUNTER-SCENARIO`
+
+Why: Won's 3.18 ERA against KT this season, So's 3.37 season ERA and potentially reduced late-game urgency create a meaningful lower-total branch. The Under remains close enough that Rank 3 is not a strong total call.
+
+Main failure route: either starter exits early or the experimental/middle-relief innings create one multi-run cluster in a park that has played above league average for scoring.
+
+## Potential game winner
+
+**KT Wiz — 55.5%**  
+Samsung win: 42.0%  
+Final tie: 2.5%  
+
+This is a modest winner lean, not a high-confidence favourite call. The winner family is three-way because KBO permits tied final states under its innings cap; any operator-specific two-way action rule remains `UNKNOWN_DEFINITION` until separately supplied.
+
+## Correlation / dependence
+
+KT +1.5 and Samsung +1.5 are not independent. Both can succeed when the game is tied or when either side loses by exactly one run. Over 9.5 and Under 9.5 are exact complements and are therefore one total family, not two independent trials.
+
+## Evidence limitations
+
+- No KBO model is currently LIVE_QUALIFIED; probabilities are explicitly uncalibrated analyst estimates.
+- No official same-day injury bulletin beyond the posted active starting lineups was recovered before cutoff; availability inferences are limited to published lineups/rosters.
+- Complete Samsung relief usage from October 6 was not recovered before cutoff, so no unverified bullpen-depletion claim is made.
+- An official field-weather receipt was not recovered before cutoff, so weather is not used directionally.
+- Standings are already fixed; unusual pitcher hooks or substitutions remain a larger-than-normal uncertainty source.
+
+## Sources used
+
+1. KBO official October 2026 schedule — Samsung @ KT, Suwon, October 7, 18:30 KST: https://www.koreabaseball.com/Schedule/Schedule.aspx?month=10&year=2026
+2. KBO official team batting records — 2026: https://www.koreabaseball.com/Record/Team/Hitter/Basic1.aspx
+3. KBO official team pitching records — 2026: https://www.koreabaseball.com/Record/Team/Pitcher/Basic2.aspx
+4. KBO official Won Tae-in splits / 2026 opponent record: https://www.koreabaseball.com/record/Player/PitcherDetail/Game.aspx?playerId=69446
+5. KBO official October 6 scoreboard: https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-06
+6. KBO/OSEN same-day preview and posted lineups, October 7, 2026: https://www.osen.co.kr/article/G1112889168
+7. KBO/OSEN same-day starter preview, October 7, 2026: https://www.osen.co.kr/article/G1112888915
+8. MyKBO Stats 2026 park splits — Suwon 10.50 R/G: https://mykbostats.com/stats/park_splits/2026
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-546 54f7a86934f04322a94a106b4f92289d -->
+
+<!-- BEGIN CANONICAL RESEARCH P-547 a6c2f4f8c6524f71b3158334efc8162c -->
+## P-547 — NC Dinos @ SSG Landers — KBO — 2026-10-07
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-547`. Logged UTC: 2026-10-07T15:41:55.710970+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**Status:** `LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT`  
+**Analysis status:** `LATE_START_UNVERIFIED_UNCALIBRATED_ANALYST_SCENARIO`  
+**Competition:** Korea KBO, regular season  
+**Venue:** Incheon SSG Landers Field (Munhak), Incheon  
+**Scheduled first pitch:** 2026-10-07 18:30 KST / 20:30 AEDT  
+**Research/log cutoff:** 2026-10-07 20:31:13 AEDT / 18:31:13 KST  
+**Timing classification:** scheduled start had just passed; actual first pitch was not independently verified at the analysis cutoff. Only pre-start/static information was used. No observed game action was used.  
+**Sports-only rule:** SPORTS_ONLY / MARKET_BLIND  
+**Settlement:** NOT PERFORMED  
+**Retrospective:** NOT PERFORMED  
+
+## Identity and starter gate
+
+KBO and MyKBO pre-start fixture pages listed **NC Dinos at SSG Landers**, 18:30 KST at Incheon SSG Landers Field, with **Song Myung-gi** for NC and **Kim Min-jun** for SSG. SSG entered 63-73-5 and NC 63-76-2; SSG led the season series 9-4-2.
+
+A complete official posted batting order could not be recovered from the accessible pre-start source route before the modelling cutoff. Under the baseball rules this is a real evidence limitation, so lineup-specific directional adjustments are capped rather than invented. Pre-start public material still identified core bats such as Park Sung-han and Heredia for SSG and Park Kun-woo for NC, but those names are not treated as a substitute for a verified full order.
+
+## Starting pitching
+
+**SSG — Kim Min-jun (RHP):** 16 games, 84 IP, 8-3, 3.86 ERA, 68 H, 8 HR, 37 BB, 68 K; approximately 1.25 WHIP. His 2026 arsenal profile is roughly fastball 50.5% at 142.4 km/h, forkball 28.6% at 129.0 km/h, slider 14.2% at 129.1 km/h and curveball 6.7% at 118.5 km/h. He had not faced NC earlier in the 2026 regular season. His most recent start against LG was 5 IP, 5 H, 2 HR, 3 BB, 6 K, 4 ER. The ERA is materially better than his FIP-style estimate, so the card does not treat 3.86 as a precise true-talent run rate.
+
+**NC — Song Myung-gi (RHP):** 22 games, 36 IP, 1-2, 6.25 ERA, 44 H, 9 HR, 16 BB, 33 K, 1.67 WHIP. His 2026 arsenal profile is roughly fastball 50.0% at 143.0 km/h, sweeper 36.4% at 121.6 km/h and forkball 13.6% at 132.1 km/h. His recent 10-game line was 23 1/3 IP with a 5.40 ERA; on October 1 at Doosan he allowed 6 ER in 3 IP. In his only 2026 appearance against SSG before today he allowed 1 ER over 2 IP. That short SSG sample is not treated as ownership.
+
+The starting-pitcher edge therefore goes to SSG, but Kim's walk rate and Song's volatile short-start profile both preserve meaningful transition-inning variance.
+
+## Team strength, park and weather
+
+Pre-start team comparison:
+- NC: 63-76-2, .271 team batting average, 4.74 team ERA, 130 HR.
+- SSG: 63-73-5, .258 team batting average, 5.19 team ERA, 140 HR.
+- Season series: SSG 9-4-2.
+
+This produces an important split: SSG have the better current starter and home field/head-to-head context, but NC have the stronger season batting-average and team-ERA profile. The game is therefore not modelled as a dominant SSG mismatch.
+
+Munhak has been a high-scoring 2026 park: 721 runs in 69 games, **10.45 R/G**, with 166 HR (**2.41 HR/G**). Pre-start weather was clear around 19C with light-to-moderate westerly wind near 9 km/h around first pitch and no meaningful rain threat. Weather was used as a small width/context input only; no strong automatic directional adjustment was applied.
+
+## Bullpen/rest context
+
+Both clubs played on October 6. NC lost 1-6 at LG and SSG lost 2-9 at Hanwha. A complete official pitch-by-pitch relief workload ledger for every high-leverage arm was not recovered before this card, so no reliever is declared unavailable without direct evidence. Recent workload is therefore represented as uncertainty around the relief transition rather than as a fabricated availability claim.
+
+SSG's season staff ERA is worse than NC's overall, which matters once Kim exits. Conversely, Song's shorter/less stable starter profile increases the chance NC reaches its bullpen earlier.
+
+## Coherent analyst distribution
+
+**Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`  
+**Live-qualified KBO model:** NONE  
+**Indicative completed-game centre:** NC 4.7 — SSG 5.6  
+**Indicative total centre:** 10.3 runs  
+**Final winner family:** SSG 56.0% / NC 37.2% / tie 6.8%  
+
+All ranked contracts derive from the same overdispersed completed-game run scenario with an explicit KBO tie branch. No sportsbook odds, market movement, public pick percentages, tipster content or implied probabilities were used.
+
+## Ranked picks
+
+### Rank 1 — NC Dinos +1.5 runs — `p_card 61.8%`
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — SUPPORTED LEAN`
+
+Why: the +1.5 captures all NC wins, all final ties and the substantial one-run SSG-win branch. That cushion is important because NC's overall offense (.271) and team pitching (4.74 ERA) are better than SSG's corresponding season marks, even though SSG have the starter advantage and home edge. The framework's baseball +1.5 population baseline is also structurally high because one-run games are common.
+
+Main failure route: Kim Min-jun works deep and SSG gets to Song or NC's transition relief early enough to create a 2+ run home margin.
+
+### Rank 2 — SSG Landers moneyline / outright win — `p_card 56.0%`
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — LEAN`
+
+Why: SSG have the more reliable starter, home batting entitlement, a 9-4-2 season-series advantage and a lineup core capable of punishing Song's homer/traffic profile. Kim's 3.86 ERA, 84-inning workload and stronger strikeout/walk run-prevention profile give SSG the clearest single matchup edge.
+
+Main failure route: NC's stronger season batting-average profile gets enough traffic against Kim's walks, while SSG's weaker season staff ERA shows up after Kim exits.
+
+### Rank 3 — Total Runs Over 9.5 — `p_card 54.6%`
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — LEAN`
+
+Why: Munhak has produced 10.45 R/G with 2.41 HR/G, Song enters with a 6.25 ERA / 1.67 WHIP and nine HR allowed in only 36 innings, and SSG's season bullpen/staff profile is not strong enough to remove the NC scoring tail. A centre around 10.3 places the line slightly below the scenario median/mean region.
+
+Main failure route: Kim suppresses NC for 6+ innings and Song gives NC a better-than-expected five-inning start, producing a 4-3 / 5-3 type game.
+
+### Rank 4 — Total Runs Under 9.5 — `p_card 45.4%`
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — COUNTER-SCENARIO`
+
+Why: Kim is capable of carrying a low NC team total, clear cool weather removes rain-driven pitching disruption, and NC's season staff ERA is better than SSG's. The Under therefore retains a substantial branch even though it ranks behind the Over.
+
+Main failure route: Song's short-start volatility combines with Munhak's home-run environment or SSG's weaker relief phase to create one multi-run cluster that pushes the game into double digits.
+
+## Potential game winner
+
+**SSG Landers — 56.0%**  
+NC Dinos win: 37.2%  
+Final tie: 6.8%  
+
+This is a moderate winner lean rather than a strong favourite call. KBO can finish tied under its innings cap; any operator-specific two-way moneyline tie treatment remains `UNKNOWN_DEFINITION` until supplied.
+
+## Dependence / contract coherence
+
+NC +1.5 and SSG ML are a covering pair, not independent picks. Both succeed when SSG wins by exactly one run. Over 9.5 and Under 9.5 are exact complements and represent one total family.
+
+## Evidence limitations
+
+- The scheduled start had just passed when the research cutoff was recorded; actual first pitch was not independently verified. This card is therefore `LATE_START_UNVERIFIED`, not falsely backdated as pregame.
+- No observed pitches, runs, outs, base states or other live outcomes were used.
+- A complete verified official batting order was not recovered through the accessible pre-start source route; lineup-specific adjustments were capped.
+- A complete same-day high-leverage bullpen availability ledger was not recovered, so no reliever was declared unavailable without evidence.
+- No KBO probability model is LIVE_QUALIFIED; all probabilities are explicitly uncalibrated analyst estimates.
+
+## Sources used
+
+1. KBO official October 7 schedule / pre-start fixture state and starters — NC @ SSG, 18:30 KST, Song Myung-gi vs Kim Min-jun.
+2. KBO official October 7 preview — Kim Min-jun 8-3, 3.86 ERA; Song Myung-gi 1-2, 6.25 ERA; season records and 9-4-2 SSG head-to-head edge.
+3. KBO official Song Myung-gi player page — 2026 ERA/IP/H/HR/BB/K/WHIP and game logs.
+4. KBO official Kim Min-jun player page — 2026 ERA/IP/H/HR/BB/K and season workload.
+5. MyKBO Stats game page — pre-start team comparison, venue and weather context.
+6. MyKBO Stats 2026 park splits — Incheon-Munhak 10.45 R/G and 2.41 HR/G.
+7. Yagoonara/KBO-derived pitch data — Song Myung-gi and Kim Min-jun 2026 pitch usage and average velocity.
+8. KBO October 6 scoreboard/results — NC 1-6 LG; SSG 2-9 Hanwha, used only for prior-day workload context.
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-547 a6c2f4f8c6524f71b3158334efc8162c -->
+
+<!-- BEGIN CANONICAL RESEARCH P-548 8ff5d581bf08463bb588a5aa8822c961 -->
+## P-548 — Busan KCC Egis vs Daegu Korea Gas Corporation Pegasus — Korea KBL — 2026-10-07
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-548`. Logged UTC: 2026-10-07T15:41:56.233168+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT.**  
+**SPORTS_ONLY / MARKET_BLIND.**  
+**PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED.**
+
+## A. Identity and timing
+
+- **Sport / competition:** Basketball — Korea KBL, 2026-2027 regular season.
+- **Event:** Busan KCC Egis vs Daegu Korea Gas Corporation Pegasus.
+- **Venue:** Busan Sajik Gymnasium, Busan, South Korea.
+- **Official scheduled tip:** 2026-10-07 19:00 KST / 2026-10-07 21:00 AEDT (Melbourne).
+- **User-supplied time:** 21:00 AEST; corrected for Melbourne daylight saving to 21:00 AEDT.
+- **Forecast-input cutoff:** approximately 20:58 AEDT / 18:58 KST, before the scheduled tip.
+- **Research completion:** after the scheduled tip, but no observed game action, score, possessions or live statistics were used.
+- **State:** `PREGAME_INPUT_CUTOFF / RESEARCH_COMPLETION_AFTER_SCHEDULED_START`.
+- **GitHub main authority SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`.
+
+## B. Framework/model status
+
+- Current method: `MDS-2026.10.01-v8.0 / CR-2026.10.07-I1`.
+- Basketball rules require one coherent event score distribution, explicit availability uncertainty and SPORTS_ONLY / MARKET_BLIND evidence handling.
+- No KBL model is registered as LIVE_QUALIFIED.
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`.
+- **TEAM_BASELINE_P:** `NOT_COVERED` for KBL by the current registered live numerical lanes.
+- All spread/total rows below are defined as **full game including overtime** for sporting analysis. Operator-specific regulation/OT settlement terms were not supplied and remain a later settlement issue.
+
+## C. Availability and current evidence
+
+### Busan KCC Egis
+
+- KCC enters 1-1: 68-103 vs Changwon LG, then 97-87 at Ulsan Hyundai Mobis.
+- In the Mobis win, Lewis King scored 32 points in 26:36 on 13/17 shooting, Shawn Long had 25 points and 17 rebounds in 28:39, and Heo Hoon recorded 17 points and 13 assists.
+- Heo Woong has opened the season at only 5.5 points per game and was 0-for-11 from three through the first two games; his shooting regression is an upside branch, not assumed as guaranteed recovery.
+- KCC's current roster core includes Heo Hoon, Heo Woong, Lewis King, Shawn Long and Jang Jae-seok. Song Kyo-chang and Choi Jun-yong are not part of the current domestic core after offseason overseas moves.
+- No verified late pre-tip absence for Hoon, Woong, King or Long was recovered.
+
+### Daegu Korea Gas Corporation Pegasus
+
+- Korea Gas enters 0-2 after losses of 73-82 at Goyang Sono and 80-86 vs Anyang Jung Kwan Jang. Both defeats were within 10 points.
+- Samjosef Belangel rebounded from a two-point opener with 23 points, 5 rebounds, 8 assists and 3 steals against Anyang.
+- Kebe Aluma is averaging 16.0 points and 4.5 rebounds through two games and has made 40% of his threes, but he fouled out in both games; his minutes distribution is therefore widened.
+- Ra Gun-ah is averaging 18.0 points and 10.0 rebounds through the first two games; he recorded 15 points and 8 rebounds against Anyang.
+- Yang Woo-hyuk had a rib issue after the October 5 game. He travelled with the team to Busan and was expected to be available, but his role/minutes remain an uncertainty branch.
+- No authoritative static source with both confirmed starting fives was recovered before the modelling cutoff. Probable core exposure was therefore used rather than inventing a confirmed five.
+
+## D. Matchup and scoring scenario
+
+The central analyst scenario is approximately:
+
+- **KCC:** 88.5 points
+- **Korea Gas:** 83.5 points
+- **Expected margin:** KCC +5.0
+- **Expected total:** 172.0
+- **Margin width:** about 14.5 points
+- **Total width:** about 17.5 points
+
+The widths remain deliberately broad because this is only the third regular-season game for both teams, KCC has already shown extreme game-to-game variance, Aluma's foul trouble creates a high-impact minutes branch, and the KBL's 2026-27 foreign-player usage change increases early-season lineup/pace uncertainty.
+
+## E. Ranked picks
+
+### Rank 1 — Combined Total UNDER 178.5 points — `p_card 64.5%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — SUPPORTED`
+
+**Reasoning:** The 172-point centre provides 6.5 points of cushion. Korea Gas has scored 73 and 80 in its first two games and has had stretches of half-court stagnation when Belangel is contained or Aluma is limited by foul trouble. KCC's 97-point outing demonstrates a genuine upper tail, but its opener produced only 68 points, so the evidence does not justify treating the Mobis result as the new offensive floor.
+
+**Main failure route:** King/Long/Hoon reproduce the high-efficiency Mobis performance, Heo Woong's three-point shooting normalises sharply, and Korea Gas contributes enough through Belangel/Aluma/Ra to push the game into the 180s.
+
+### Rank 2 — Korea Gas Corporation +8.5 points — `p_card 59.5%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — SUPPORTED LEAN`
+
+**Reasoning:** Korea Gas has lost its first two games by 9 and 6, and the +8.5 cushion captures a wide set of competitive-loss outcomes. The previous September open-match meeting was an 80-67 Korea Gas win, but KCC was missing Hoon, Woong and Jang Jae-seok, so that result is context rather than a direct predictive anchor. Korea Gas still has enough frontcourt scoring/rebounding through Aluma and Ra and enough creation through Belangel to keep a meaningful close-game branch.
+
+**Main failure route:** KCC's foreign-player pairing overwhelms Korea Gas inside and in transition, while Aluma again loses minutes to foul trouble and KCC separates into a double-digit margin.
+
+### Rank 3 — Combined Total OVER 168.5 points — `p_card 57.9%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — LEAN`
+
+**Reasoning:** The same 172-point centre leaves the Over modestly favoured. KCC scored 97 in its latest game, Korea Gas reached 80 against Anyang, and the new two-foreigner court-time structure in the second and third quarters can increase scoring/spacing. The line is also low enough that a normal 88-82 or 90-80 type game clears it.
+
+**Main failure route:** Korea Gas slows the game, Aluma's foul trouble removes one of its primary scoring hubs, and KCC's perimeter efficiency regresses toward its poor opener.
+
+### Rank 4 — Busan KCC Egis -2.5 points — `p_card 56.8%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — LEAN`
+
+**Reasoning:** KCC has the stronger top-end creation currently available: Hoon as primary organiser, King as high-volume scorer and Long as an interior/rebounding anchor. Korea Gas is 0-2 and has repeatedly struggled to finish games. Home court and KCC's stronger offensive ceiling move the centre to approximately KCC +5.
+
+**Main failure route:** Belangel controls the point-of-attack matchup, Ra/Aluma win the rebounding and paint battle, or KCC's volatile perimeter shooting produces another low-output game.
+
+## F. Potential game winner
+
+**Busan KCC Egis — 63.5%**
+
+`UNCALIBRATED_ANALYST_SCENARIO`
+
+This is a moderate, not strong, winner preference. The same margin distribution that prices KCC -2.5 at 56.8% gives KCC approximately 63.5% to finish ahead after overtime.
+
+## G. Dependence and coherence
+
+- Korea Gas +8.5 and KCC -2.5 overlap: both can win when KCC wins by 3 to 8 points. They are not independent predictive trials.
+- Over 168.5 and Under 178.5 also overlap: both win when the final total is 169-178.
+- All four rows come from the same KCC +5 / total 172 scenario rather than separately chosen probabilities.
+
+## H. Material sources
+
+1. Busan KCC Egis official schedule/site — official October 7 fixture at 19:00 KST, 1-1 current record and October 5 result.
+2. Jumpball October 7 pregame preview — current KCC/Korea Gas records; King, Long, Hoon, Woong, Belangel, Aluma and Ra recent production.
+3. Jumpball October 7 warm-up interview — Aluma's consecutive foul-outs and coach Kang Hyuk's stated need for Aluma to stay on court.
+4. Jumpball October 7 Yang Woo-hyuk availability report — rib issue, travelled with team to Busan, expected availability.
+5. Jumpball October 6 KCC report — Heo Woong early shooting slump and KCC's current offensive structure.
+6. Jumpball/KBL October 5 reports — KCC 97-87 Mobis and Korea Gas 80-86 Anyang with current player stat lines.
+7. KCC official season player records — current active roster and early-season player statistics.
+8. Current Sports Research GitHub main — `RULES_BASKETBALL.md`, `METHOD.md`, `CURRENT_RULES.md`, numerical model register.
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-548 8ff5d581bf08463bb588a5aa8822c961 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-549 708bd5b49a3b407cb65fb0be6a1c8626 -->
+## P-549 — Foshan Nanshi vs Guangxi Hengchen — China League One — 2026-10-07
+
+**CANONICAL RESEARCH CARD / HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED.** SPORTS_ONLY / MARKET_BLIND.
+
+Tracking alias: `LOCAL-20261007-P-549`. Logged UTC: 2026-10-07T15:41:56.814312+00:00. This ID records the card; calibration and prospective certification are separate labels.
+
+**LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT.**  
+**SPORTS_ONLY / MARKET_BLIND.**  
+**PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED.**
+
+## A. Identity and timing
+
+- **Sport / competition:** Soccer — China League One (Chinese Jia League), 2026 regular season, Round 25.
+- **Event:** Foshan Nanshi vs Guangxi Hengchen.
+- **Venue:** Foshan Nanhai Sports Center Stadium, Foshan, Guangdong, China.
+- **Official/club-confirmed scheduled kickoff:** 2026-10-07 19:30 CST / 22:30 AEDT (Melbourne).
+- **User-supplied time:** 22:30 AEST; corrected for Melbourne daylight saving to 22:30 AEDT.
+- **Forecast-input cutoff:** 2026-10-07 19:27:37 CST / 22:27:37 AEDT, before scheduled kickoff.
+- **State at cutoff:** `PREGAME / START_UNVERIFIED`.
+- **GitHub main authority SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`.
+
+## B. Framework/model status
+
+- Current authority: `MDS-2026.10.01-v8.0 / CR-2026.10.07-I1`.
+- Current soccer rules require one coherent regulation-time score grid, explicit draw mass, separate first-half state, and participant/bench missingness disclosure.
+- China League One has no LIVE_QUALIFIED model in the current framework.
+- `TEAM_BASELINE_P`: `NOT_YET_DERIVED / UNVALIDATED:CHINA_LEAGUE_ONE`.
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`.
+- No sportsbook odds, market movement, tipster views or prediction-market information entered the model or ranking.
+
+## C. Participant / availability state
+
+- A verified current starting XI, complete bench, formation and penalty/set-piece-taker sheet for both teams was **not recovered before the cutoff**.
+- Therefore, side/double-chance confidence is participant-capped under SO-P2; no player was silently assumed to start today.
+- **Foshan recent verified starters:** goalkeeper Ge Yifan started the September 12 and September 19 league games. Recent attacking starters included Milos Deletic, Ndiaye and, in the September 12 game, Antewi.
+- **Guangxi recent verified starters:** goalkeeper Liang Kun started the September 25 win at Wuxi; the XI also included Yuan Xiucheng, Chen Guanjian, Luan Haodong, Li Siqi, Wei Chaolun, Lu Rongkaizhu, Chen Dongtao, Ji Xinlong, Liang Yibin and Noel Mbo.
+- Lati was injured late in the September 18 win at Nantong, while Zhang Zijian returned from injury in that match. Lati was subsequently listed among the available substitutes at Wuxi on September 25, so the September 18 issue was not treated as a confirmed current absence.
+- No reliable same-day source establishing additional injuries/suspensions was recovered before cutoff; missing information remains uncertainty rather than an assumption of full health.
+
+## D. Team strength, form and incentives
+
+### Foshan Nanshi
+
+- Current table snapshot: **24 matches, 2W-7D-15L, 24 GF, 49 GA, 13 points, 16th**.
+- Season scoring rate: **1.00 GF/game, 2.04 GA/game**.
+- Most recent verified league results before today: 1-1 at Dingnan, 2-3 at Suzhou, 0-0 vs Dalian, 1-2 vs Shenzhen, 0-6 at Changchun, 1-2 vs Shijiazhuang.
+- The September 19 official-club match report showed Foshan creating repeated wide/crossing opportunities and equalising through a late Ndiaye-to-Deletic aerial sequence, but it also showed continued defensive concession risk.
+- Foshan remain in a severe relegation position; incentives are maximal, but urgency is not treated as an automatic positive strength adjustment.
+
+### Guangxi Hengchen
+
+- Current table snapshot: **24 matches, 13W-6D-5L, 40 GF, 26 GA, 45 points, 2nd**.
+- Season scoring rate: **1.67 GF/game, 1.08 GA/game**.
+- Guangxi entered on three consecutive league wins: 2-1 vs Yanbian, 1-0 at Nantong and 1-0 at Wuxi.
+- The September 18 club report showed a 0-0 first half followed by improved second-half vertical play; substitute Lati assisted Mbo for the winner before later leaving injured.
+- The September 25 win at Wuxi was again 0-0 at half; Liang Kun made a key one-on-one save and Mbo scored the 85th-minute winner. Coach Liu Junwei said the side was tense/limited in the first half but improved after halftime.
+- Guangxi are in the promotion places and have direct promotion incentive; the next match against Shenzhen is also important, creating a small rotation-management uncertainty rather than a deterministic effect.
+
+## E. Chance-quality / tactical evidence and missingness
+
+- A reliable current field-owner xG/xGA feed for China League One was **not recovered**, so no xG values are invented.
+- Complete current shots/SOT season splits were also not recovered from an authoritative pre-match source.
+- Available match reports support a Foshan crossing/aerial route and a Guangxi transition/direct-running route, particularly through Mbo.
+- Guangxi's recent clean-sheet sequence is treated as evidence of current defensive execution and goalkeeper contribution, but not as proof of a permanently lower concession rate.
+- The May 30 meeting finished 3-3; it is retained only as context because one prior match is not a stable scoring baseline.
+
+## F. Weather and venue
+
+- Venue: Foshan Nanhai Sports Center Stadium.
+- Guangdong provincial forecast for October 7 listed Foshan at approximately **22–30°C, sunny to partly cloudy**.
+- No material rain or severe wind mechanism was identified for the match window. Weather therefore does not materially shift the scoring centre.
+
+## G. Coherent regulation-time goal model
+
+Because this competition has no validated live model and complete XI/bench data were unavailable, the card uses a transparent uncalibrated Poisson-style analyst scenario:
+
+- **Foshan expected goals centre:** 0.78
+- **Guangxi expected goals centre:** 1.60
+- **Full-match expected goals:** 2.38
+- **First-half Foshan intensity:** 0.30
+- **First-half Guangxi intensity:** 0.65
+- **First-half total intensity:** 0.95
+
+This reflects the large season attack/defence gap, Guangxi's stronger recent defensive structure and promotion-level performance, Foshan home effect, participant uncertainty, and shrinkage against overreacting to Guangxi's three straight wins or the 3-3 May H2H.
+
+The resulting regulation-time family is:
+
+- **Foshan win:** 18.15%
+- **Draw:** 24.95%
+- **Guangxi win:** 56.90%
+- **Guangxi or draw (X2):** 81.85%
+- **Guangxi team Over 0.5 goals:** 79.81%
+- **Under 3.5 goals:** 78.29%
+- **First-half Over 0.5:** 61.33%
+- **First-half Under 0.5:** 38.67%
+- **Full-time Under 2.5:** 57.49%
+- **Full-time Over 2.5:** 42.51%
+
+Most likely exact-score branch: **Foshan 0-1 Guangxi (~14.8%)**.
+
+## H. Ranked picks
+
+### Rank 1 — Guangxi Hengchen double chance (X2: Guangxi win or draw) — `p_card 81.85%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — PARTICIPANT-CAPPED / HIGH RAW PROBABILITY`
+
+**Reasoning:** The same score grid allocates 56.90% to a Guangxi win and 24.95% to the draw. Guangxi have the materially stronger season attack/defence profile (40-26 vs Foshan 24-49), are second in the table, and arrive after three straight league wins. The double chance protects against the meaningful 24.95% draw branch, which is important because Guangxi's two latest away wins were only 1-0 and were 0-0 at halftime.
+
+**Main failure route:** Foshan's relegation urgency and home setting translate into an unusually efficient attacking game, while Guangxi rotate or underperform enough for a Foshan home win. Raw home-win mass: 18.15%.
+
+### Rank 2 — Guangxi Hengchen team total OVER 0.5 goals — `p_card 79.81%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — SUPPORTED LEAN`
+
+**Reasoning:** Foshan have conceded 49 in 24 league matches (2.04/game), while Guangxi have scored 40 in 24 (1.67/game). Mbo has recently supplied decisive goals, including the late winners at Nantong/Wuxi sequence, and Foshan conceded in five of their last six league matches.
+
+**Main failure route:** Foshan reproduce the defensive organisation shown in the 0-0 draw with Dalian, Guangxi's recent first-half caution persists for the full match, or missing-XI uncertainty removes a key attacking role. Model scoreless-Guangxi mass: 20.19%.
+
+### Rank 3 — Full-time total goals UNDER 3.5 — `p_card 78.29%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — SUPPORTED LEAN`
+
+**Reasoning:** The card centre is 2.38 goals. Guangxi's last three league wins were 2-1, 1-0 and 1-0, and the last two were 0-0 at halftime. Foshan's defence creates an upper-tail risk, but a four-goal requirement is materially above the central distribution. The prior 3-3 H2H is explicitly shrunk rather than treated as a repeat template.
+
+**Main failure route:** Foshan's defensive weakness and transition exposure combine with an early Guangxi goal, forcing Foshan to open the game and creating a 3-1 / 4-0 / 3-2 branch.
+
+### Rank 4 — First-half total goals OVER 0.5 — `p_card 61.33%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — LEAN`
+
+**Reasoning:** Foshan's last six league matches produced at least one first-half goal in five of six; their recent first halves included 0-2, 0-5, 0-2, 0-0, 0-1 and 0-1. Guangxi's corresponding recent six were more cautious, with three 0-0 half-times, so the line is only a moderate lean. The printed first-half intensity is 0.95 rather than a fixed fraction of the full-match total.
+
+**Main failure route:** Guangxi repeat the patient structure from Nantong and Wuxi, where both matches were 0-0 at halftime, while Foshan sit deeper against the stronger opponent. First-half 0-0 mass: 38.67%.
+
+### Rank 5 — Full-time total goals UNDER 2.5 — `p_card 57.49%`
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — LEAN / CLOSE`
+
+**Reasoning:** The 2.38-goal centre makes the Under the better-supported side of the supplied 2.5 total. Guangxi's two latest away wins were 1-0, and their current defensive record is substantially stronger than Foshan's attack. However, the margin is modest because Foshan's concession rate generates a real 0-3/1-2/1-3 upper tail.
+
+**Main failure route:** Guangxi score twice early enough to force Foshan forward, or Foshan contribute one goal and Guangxi's stronger attack adds two or more. Full-time Over 2.5 mass: 42.51%.
+
+## I. Supplied complementary contracts
+
+- **First-half Over 0.5:** 61.33%
+- **First-half Under 0.5:** 38.67%
+- **Full-time Over 2.5:** 42.51%
+- **Full-time Under 2.5:** 57.49%
+
+These are exact complements inside the same phase/full-match model; they are not independent prediction trials.
+
+## J. Potential full-time result / winner
+
+**Most likely result: Guangxi Hengchen win — 56.90%**
+
+- Guangxi win: **56.90%**
+- Draw: **24.95%**
+- Foshan win: **18.15%**
+
+**Status:** `UNCALIBRATED_ANALYST_SCENARIO — PARTICIPANT-CAPPED` because a verified current XI/bench was not recovered before cutoff.
+
+## K. Material sources
+
+1. Guangxi Hengchen official Weibo — October 7 away fixture confirmation, Round 25, Foshan Nanhai Sports Center, 19:30 CST.
+2. Baidu Sports current China League One table — Foshan 24 matches, 24-49 goals, 13 points; Guangxi 24 matches, 40-26 goals, 45 points.
+3. Guangxi Hengchen official Weibo September 18 match report — 1-0 at Nantong, 0-0 halftime, Lati assist/Mbo goal, Zhang Zijian return, Liang Kun late save.
+4. Guangxi Hengchen official/secondary September 25 match report — 1-0 at Wuxi, 0-0 halftime, Mbo 85th-minute winner, Liang Kun one-on-one save, full starting XI.
+5. Foshan Nanshi official Weibo September 19 match report — 1-1 at Dingnan, crossing/aerial attacking route and Deletic equaliser.
+6. Zhibo8 September 19 and September 12 reports — verified recent Foshan starting XI/goalkeeper and first-half score states.
+7. 2026 China League One result archive — recent full-time and half-time sequences for both clubs.
+8. Hong Kong Observatory / Guangdong Meteorological Service city forecast — Foshan 22-30°C, sunny to partly cloudy on October 7.
+9. Current Sports Research GitHub main — `METHOD.md`, `CURRENT_RULES.md`, `RULES_SOCCER.md`, `LEAGUE_RULES_SOCCER.md`, numerical model register and current queue snapshot.
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+<!-- END CANONICAL RESEARCH P-549 708bd5b49a3b407cb65fb0be6a1c8626 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-538 6671c6027ede4bf28f4c50e1a89bec41 -->
+### Dated addendum for P-538
+
+Logged UTC: 2026-10-07T15:41:57.443488+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-538 — Florida Panthers @ Los Angeles Kings
+
+### R1. Original prediction
+Rank 1 Panthers ML; Rank 2 full-game Under 5.5; Rank 3 Kings ML; Rank 4 full-game Over 5.5. The original card used `UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED` probabilities and selected Florida as the potential winner.
+
+### R2. Final event
+Florida 2-1 Los Angeles; regulation, 3 goals.
+
+### R3. Exact contracts
+Rank 1 Panthers ML: WIN; Rank 2 Under 5.5 goals: WIN; Rank 3 Kings ML: LOSS; Rank 4 Over 5.5 goals: LOSS
+
+### R4. Rank diagnostics
+{"rank1": 1, "rank2": 1, "hit_at_2": 1, "wins_at_2": 2, "ndcg_at_2": 1.0}
+
+### R5. Winner call
+CORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+Florida 2-1 Los Angeles; regulation, 3 goals. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+The low-goal branch and Florida winner direction both realised. They share an event and cannot count as independent successes.
+
+### R8. Missed mechanism and uncertainty
+A low final does not by itself verify five-on-five suppression. Official boxscore has Florida 28 shots and Los Angeles 20; no xG mechanism is inferred from score alone.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Research completion timestamp:** 2026-10-07 13:32 AEDT / 02:32 UTC - **Verified event state:** `START_UNVERIFIED / LATE_RESEARCH`. The official scheduled time had passed, but the accessible official NHL material still presented pregame/gamecenter information and did not expose a reliable current clock/state in the retrieved body. No observed score, shot, penalty, goal, or other in-game event was used as predictive evidence. - **Admission state:** no NHL entry was found in `research/admission_registry.json`; no current NHL model is `LIVE_QUALIFIED` - **Prediction cutoff:** research completed after the nominal 13:00 AEDT scheduled start, with event state not reliably observable in the accessible official body; therefore this is `LATE_RESEARCH / START_UNVERIFIED`, not certified pregame research - **Missingness:** no qualified NHL probability model; exact operator ML action rules absent; event start state not independently verified at research completion 1. **Timing/state:** official scheduled time had passed by research completion, but a reliable live state was not exposed in the accessible official body. The card is therefore `START_UNVERIFIED`, not claimed pregame. Role: official event identity, venue, team records, team/goaltender statistical context. Accessible body did not expose a trustworthy live clock/state at research time. **Source confidence:** official league/team sources dominate identity, roster and current-process evidence. Current state remains `START_UNVERIFIED` because accessible official Gamecenter rendering did not provide a reliable current clock/state at the time of analysis. Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Prospectively test side/low-total dependence from one regulation/OT model, retaining joint top-two failure mass and goalie status on the identical future event cohort. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [nhl_owner](https://api-web.nhle.com/v1/gamecenter/2026020052/boxscore), [nhl_report](https://www.nhl.com/news/florida-panthers-los-angeles-kings-game-recap-october-6-2026).
+<!-- END RESEARCH ADDENDUM P-538 6671c6027ede4bf28f4c50e1a89bec41 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-539 e8fd46ea004c431f81dc5c698c6926dd -->
+### Dated addendum for P-539
+
+Logged UTC: 2026-10-07T15:41:57.864620+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-539 — Aleksandar Kovacevic vs Matteo Berrettini
+
+### R1. Original prediction
+Rank 1 Panthers ML; Rank 2 full-game Under 5.5; Rank 3 Kings ML; Rank 4 full-game Over 5.5. The original card used `UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED` probabilities and selected Florida as the potential winner.
+
+### R2. Final event
+Berrettini 6-7(3), 6-1, 6-4; aggregate 18-12, total 30.
+
+### R3. Exact contracts
+Rank 1 Berrettini -2.5 games: WIN; Rank 2 Under 24.5 games: LOSS; Rank 3 Kovacevic +2.5 games: LOSS; Rank 4 Over 24.5 games: WIN
+
+### R4. Rank diagnostics
+{"rank1": 1, "rank2": 0, "hit_at_2": 1, "wins_at_2": 1, "ndcg_at_2": 0.6131471927654584}
+
+### R5. Winner call
+CORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+Berrettini 6-7(3), 6-1, 6-4; aggregate 18-12, total 30. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+Favourite separation worked for the game handicap, while the deciding-set path defeated the Under.
+
+### R8. Missed mechanism and uncertainty
+Tiebreak plus three sets was an identified failure route. A single realisation cannot establish that its probability was miscalibrated.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Research completion timestamp:** `2026-10-07 14:59:57 AEDT / 11:59:57 Shanghai time` - **Verified event state at observation:** `PREGAME` — official tournament order of play listed the match first on Stadium Court at 12:00 local, and current time was still before that scheduled start; Tennis.com also showed the fixture as upcoming. No in-match score or point data was used. **Availability assessment:** both players were present in the official Shanghai order of play and no pre-match withdrawal was identified at the evidence cutoff. This does not certify medical fitness or operator retirement terms. - **Evidence cutoff:** 2026-10-07 14:58:26 AEDT, before the 15:00 AEDT scheduled start 7. **Surface/roof state:** official tournament material confirms Deco-Turf hard court; no current roof-state adjustment is made. `FORECAST_CLASSIFICATION: PREGAME_EVIDENCE_CUTOFF_UNCALIBRATED_QUALITATIVE` Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test explicit set-count and tiebreak mixtures against the unchanged comparator on future surface/format-matched fixtures; retain this result solely as a diagnostic example. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [shanghai_owner](https://en.rolexshanghaimasters.com/en/scores/results?resultDay=7).
+<!-- END RESEARCH ADDENDUM P-539 e8fd46ea004c431f81dc5c698c6926dd -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-540 728b8910c53f4926bf0b6bb25927623d -->
+### Dated addendum for P-540
+
+Logged UTC: 2026-10-07T15:41:58.323927+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-540 — Adrian Mannarino vs Nikoloz Basilashvili
+
+### R1. Original prediction
+Rank 1 Panthers ML; Rank 2 full-game Under 5.5; Rank 3 Kings ML; Rank 4 full-game Over 5.5. The original card used `UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED` probabilities and selected Florida as the potential winner.
+
+### R2. Final event
+Mannarino advanced 6-3, 2-2 RET; partial aggregate 8-5 and 13 observed games do not settle full-match contracts.
+
+### R3. Exact contracts
+Rank 1 Mannarino -0.5 games: UNKNOWN_DEFINITION; Rank 2 Over 22.5 games: UNKNOWN_DEFINITION; Rank 3 Basilashvili +0.5 games: UNKNOWN_DEFINITION; Rank 4 Under 22.5 games: UNKNOWN_DEFINITION
+
+### R4. Rank diagnostics
+NOT_SCORED: original retirement/action rule unavailable
+
+### R5. Winner call
+CORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+Mannarino advanced 6-3, 2-2 RET; partial aggregate 8-5 and 13 observed games do not settle full-match contracts. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+Retirement terminated the completed-match forecast branch. Advancement is sportingly correct for the separate winner call.
+
+### R8. Missed mechanism and uncertainty
+The frozen operator action definition is absent. Do not grade the partial total, impose VOID, or retrieve a current rule and pretend it was the original ticket rule.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Research completion / forecast freeze:** 2026-10-07 16:30:51 AEDT - **Verified event state at freeze:** `PREGAME` - **Cutoff:** 2026-10-07 16:30:51 AEDT - **Post-cutoff/in-match inputs used:** `NONE` - **Medical state:** no current official injury/withdrawal was found, but absence of a withdrawal is not proof of full fitness. Role: match-specific `Upcoming` state at freeze; broader H2H scope including Rennes 2024. Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+CONTRACT / RETIREMENT_ACTION_UNKNOWN
+
+### R11. Testable hypothesis
+Retain the exact named operator/action/retirement rule and its issue-time source when available on future cards. Preserve unknown terms explicitly; compare unknown-definition rates without changing sporting predictions. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+SOURCE_PROCESS_CHANGE_CANDIDATE; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [shanghai_owner](https://en.rolexshanghaimasters.com/en/scores/results?resultDay=7).
+<!-- END RESEARCH ADDENDUM P-540 728b8910c53f4926bf0b6bb25927623d -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-541 7d81d9c3550f40a892e4d655bf36fc58 -->
+### Dated addendum for P-541
+
+Logged UTC: 2026-10-07T15:41:58.771031+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-541 — Mattia Bellucci vs Yi Zhou
+
+### R1. Original prediction
+Rank 1 Panthers ML; Rank 2 full-game Under 5.5; Rank 3 Kings ML; Rank 4 full-game Over 5.5. The original card used `UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED` probabilities and selected Florida as the potential winner.
+
+### R2. Final event
+Yi Zhou 6-4, 3-6, 7-6(4); aggregate games 16-16, total 32.
+
+### R3. Exact contracts
+Rank 1 Bellucci -3.5 games: LOSS; Rank 2 Under 21.5 games: LOSS; Rank 3 Over 21.5 games: WIN; Rank 4 Yi Zhou match winner: WIN
+
+### R4. Rank diagnostics
+{"rank1": 0, "rank2": 0, "hit_at_2": 0, "wins_at_2": 0, "ndcg_at_2": 0.0}
+
+### R5. Winner call
+INCORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+Yi Zhou 6-4, 3-6, 7-6(4); aggregate games 16-16, total 32. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+The deciding set and tiebreak realised; Bellucci neither won nor exceeded a 3.5-game margin. Equal aggregate games demonstrate why set winner and game margin must be separated.
+
+### R8. Missed mechanism and uncertainty
+The 77% analyst winner scenario lost; this is a high-probability miss, not standalone proof of miscalibration. Three-set/tiebreak exposure dominated the 21.5 Under.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Original research cutoff:** `2026-10-07 18:39:11 AEDT` - **Verified state at forecast cutoff:** `PREGAME` — match-specific secondary source showed `Upcoming`; official order of play still listed the match pending - No credible current withdrawal or medical restriction was established before the forecast cutoff. Role: match-specific `Upcoming` status at the forecast cutoff and player context. Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test a serve/return and set-count mixture on independent ATP hard-court population data, including equal-game matches; evaluate full-slate proper scores and unchanged supplied lines. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [shanghai_owner](https://en.rolexshanghaimasters.com/en/scores/results?resultDay=7), [bellucci_tennis](https://www.tennis.com/tournaments/rolex-shanghai-masters/matches/m-bellucci-vs-y-zhou-2026-10-07), [bellucci_lapresse](https://ae.lapresse.it/sport-ae/2026/10/07/tennis-atp-masters-1000-shanghai-bellucci-knocked-out-in-the-first-round/).
+<!-- END RESEARCH ADDENDUM P-541 7d81d9c3550f40a892e4d655bf36fc58 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-542 46b887cfafe44bf6aace7c95829c9e4f -->
+### Dated addendum for P-542
+
+Logged UTC: 2026-10-07T15:41:59.275713+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-542 — Adelaide 36ers vs Melbourne United
+
+### R1. Original prediction
+Rank 1 Panthers ML; Rank 2 full-game Under 5.5; Rank 3 Kings ML; Rank 4 full-game Over 5.5. The original card used `UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED` probabilities and selected Florida as the potential winner.
+
+### R2. Final event
+Melbourne 96-91 Adelaide; total 187, Melbourne margin 5.
+
+### R3. Exact contracts
+Rank 1 Under 187.5 points: WIN; Rank 2 Adelaide +9.0 points: WIN; Rank 3 Over 175.5 points: WIN; Rank 4 Melbourne -1.5 points: WIN
+
+### R4. Rank diagnostics
+{"rank1": 1, "rank2": 1, "hit_at_2": 1, "wins_at_2": 2, "ndcg_at_2": 1.0}
+
+### R5. Winner call
+CORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+Melbourne 96-91 Adelaide; total 187, Melbourne margin 5. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+The 176-187 total band and 2-8 Melbourne margin band both held. All four wins are dependent rows on one event.
+
+### R8. Missed mechanism and uncertainty
+The Under won by only 0.5. Melbourne club text has a conflicting 94-91 opening sentence but concludes 96-91; the official league final agrees with the conclusion. Retain the internal conflict rather than silently cherry-pick it.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Forecast cutoff:** `2026-10-07 19:19:26 AEDT` - **Verified state at forecast cutoff:** `PREGAME / START_UNVERIFIED` — the match-specific NBL Game Centre still appeared in the upcoming fixture set and no verified first `jumpBall` was observed - **Starting-five certainty:** complete official starting fives were not verified at the forecast cutoff. Per BK-P2, this keeps lineup-dependent confidence capped and requires an uncalibrated minutes/availability mixture rather than a fully qualified issue. Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test early-season total centres and widths separately using independent possession/efficiency data and paired chronological evaluation; monitor narrow threshold wins without moving this forecast retrospectively. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [nbl_owner](https://league.nbl.com.au/news/trevor-gleeson-adelaide-36ers-scared-outworked-united), [nbl_club](https://www.melbourneutd.com.au/news/nbl27-match-recap-adelaide-36ers-vs-melbourne-united-7-october-2026).
+<!-- END RESEARCH ADDENDUM P-542 46b887cfafe44bf6aace7c95829c9e4f -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-543 b1ac64306daf42c9a10189cf26bf7912 -->
+### Dated addendum for P-543
+
+Logged UTC: 2026-10-07T15:41:59.681178+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-543 — Hiroshima Toyo Carp @ Hanshin Tigers
+
+### R1. Original prediction
+Rank 1 Panthers ML; Rank 2 full-game Under 5.5; Rank 3 Kings ML; Rank 4 full-game Over 5.5. The original card used `UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED` probabilities and selected Florida as the potential winner.
+
+### R2. Final event
+Hanshin 2-1 Hiroshima after 11 innings; total 3, Hanshin margin 1; regulation through nine was 1-1.
+
+### R3. Exact contracts
+Rank 1 Carp +1.5 runs: WIN; Rank 2 Hanshin win: WIN; Rank 3 Under 5.5 runs: WIN; Rank 4 Over 5.5 runs: LOSS
+
+### R4. Rank diagnostics
+{"rank1": 1, "rank2": 1, "hit_at_2": 1, "wins_at_2": 2, "ndcg_at_2": 1.0}
+
+### R5. Winner call
+CORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+Hanshin 2-1 Hiroshima after 11 innings; total 3, Hanshin margin 1; regulation through nine was 1-1. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+The exact one-run Hanshin win is the covering-pair branch in which both top picks win. Extra innings were needed.
+
+### R8. Missed mechanism and uncertainty
+A stale pregame mirror and a secondary 1-1 row were superseded by the exact official 11-inning terminal body. The 1-1 regulation score cannot settle a full-game moneyline.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Forecast cutoff:** `2026-10-07 19:59:00 AEDT` (17:59 JST) - **Verified state at cutoff:** `PREGAME` — official NPB page still displayed `試合開始前` and 0 pitches/0 plate appearances **Official starting lineups at the cutoff** Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test endpoint-specific baseball adapters on tied-through-nine/extra-innings fixtures; require explicit final state, inning count and tie semantics before deriving full-game contracts. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [npb_owner](https://npb.jp/scores/2026/1007/t-c-25/).
+<!-- END RESEARCH ADDENDUM P-543 b1ac64306daf42c9a10189cf26bf7912 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-544 0fc5dab8917b4e9d9d1bc60a766bb52c -->
+### Dated addendum for P-544
+
+Logged UTC: 2026-10-07T15:42:00.113414+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-544 — Doosan Bears @ LG Twins
+
+### R1. Original prediction
+Rank 1 Panthers ML; Rank 2 full-game Under 5.5; Rank 3 Kings ML; Rank 4 full-game Over 5.5. The original card used `UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED` probabilities and selected Florida as the potential winner.
+
+### R2. Final event
+LG 7-5 Doosan; nine innings, total 12, LG margin 2.
+
+### R3. Exact contracts
+Rank 1 Doosan +1.5 runs: LOSS; Rank 2 LG +0.5 runs: WIN; Rank 3 Over 7.5 runs: WIN; Rank 4 Under 7.5 runs: LOSS
+
+### R4. Rank diagnostics
+{"rank1": 0, "rank2": 1, "hit_at_2": 1, "wins_at_2": 1, "ndcg_at_2": 0.38685280723454163}
+
+### R5. Winner call
+CORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+LG 7-5 Doosan; nine innings, total 12, LG margin 2. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+The LG direction and Over realised. Doosan +1.5 missed by 0.5 runs; a competitive score did not ensure a winning cushion.
+
+### R8. Missed mechanism and uncertainty
+The official inning line has five Doosan runs in the third, and LG runs in the second, third and fifth. Do not claim a bullpen or fatigue cause without pitcher-level evidence.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Forecast/research cutoff:** `2026-10-07 20:15:20 AEDT` / `18:15:20 KST`. - **Observed state at cutoff:** `PREGAME / START_UNVERIFIED`. The official KBO Game Center still listed the fixture as scheduled. No observed runs, pitches, plate appearances or other in-game outcomes were used. Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test starter-to-relief transition uncertainty and key run margins with pre-cutoff usage data on a fixed KBO cohort; separate total and margin errors. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [kbo_owner](https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-07), [kbo_lg_onsite](https://sports.khan.co.kr/article/202610072126013).
+<!-- END RESEARCH ADDENDUM P-544 0fc5dab8917b4e9d9d1bc60a766bb52c -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-545 2d218680c0164b35bbd16aa45b46e741 -->
+### Dated addendum for P-545
+
+Logged UTC: 2026-10-07T15:42:00.576370+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-545 — Hanwha Eagles @ Kiwoom Heroes
+
+### R1. Original prediction
+Rank 1 Panthers ML; Rank 2 full-game Under 5.5; Rank 3 Kings ML; Rank 4 full-game Over 5.5. The original card used `UNCALIBRATED_QUALITATIVE / NOT_ESTIMATED` probabilities and selected Florida as the potential winner.
+
+### R2. Final event
+Kiwoom 5-3 Hanwha; nine innings, total 8, Kiwoom margin 2.
+
+### R3. Exact contracts
+Rank 1 Kiwoom +2.5 runs: WIN; Rank 2 Over 9.5 runs: LOSS; Rank 3 Hanwha ML: LOSS; Rank 4 Under 9.5 runs: WIN
+
+### R4. Rank diagnostics
+{"rank1": 1, "rank2": 0, "hit_at_2": 1, "wins_at_2": 1, "ndcg_at_2": 0.6131471927654584}
+
+### R5. Winner call
+INCORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+Kiwoom 5-3 Hanwha; nine innings, total 8, Kiwoom margin 2. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+The underdog cushion survived, but Hanwha winner and high-total directions failed. The Under complement won.
+
+### R8. Missed mechanism and uncertainty
+Starter uncertainty did not produce the anticipated high-scoring branch. The supplementary NewsPim report is AI-assisted and is not used to certify an independent collection lineage.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Forecast-input cutoff:** `2026-10-07 20:19:48 AEDT` / `18:19:48 KST`, before scheduled first pitch. `PREGAME_INPUT_CUTOFF: 2026-10-07 20:19:48 AEDT` Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test separate centre/width effects of starter-role uncertainty using verified pre-start roles and relief usage; measure fixed-line winner and total errors without replacing the comparator. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [kbo_owner](https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-07), [kbo_kiwoom_report](https://www.newspim.com/news/view/20261007001640).
+<!-- END RESEARCH ADDENDUM P-545 2d218680c0164b35bbd16aa45b46e741 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-546 9ed8bd763dc4434dace98fe3b5c44ccc -->
+### Dated addendum for P-546
+
+Logged UTC: 2026-10-07T15:42:00.985685+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-546 — Samsung Lions @ KT Wiz
+
+### R1. Original prediction
+Rank 1 KT +1.5 (74.0%); Rank 2 Samsung +1.5 (62.8%); Rank 3 Over 9.5 (53.0%); Rank 4 Under 9.5 (47.0%). Potential winner KT 55.5%.
+
+### R2. Final event
+KT 9-3 Samsung; nine innings, total 12, KT margin 6.
+
+### R3. Exact contracts
+Rank 1 KT +1.5 runs: WIN; Rank 2 Samsung +1.5 runs: LOSS; Rank 3 Over 9.5 runs: WIN; Rank 4 Under 9.5 runs: LOSS
+
+### R4. Rank diagnostics
+{"rank1": 1, "rank2": 0, "hit_at_2": 1, "wins_at_2": 1, "ndcg_at_2": 0.6131471927654584}
+
+### R5. Winner call
+CORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+KT 9-3 Samsung; nine innings, total 12, KT margin 6. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+KT winner/cushion and Over realised. Samsung +1.5 failed; the covering pair wins together only on a sufficiently close game.
+
+### R8. Missed mechanism and uncertainty
+The official inning line has five KT runs in the eighth. A six-run realised margin exposes width risk but does not establish a permanent favourite-separation adjustment.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. **Forecast cutoff:** 2026-10-07 18:26:54 KST / 20:26:54 AEDT **Observed state at cutoff:** PREGAME / START_UNVERIFIED KBO's October 7 schedule lists Samsung at KT in Suwon at 18:30 KST. Same-day lineup reporting confirmed **Won Tae-in** for Samsung and **So Hyeong-jun** for KT, with both starting nines published before the cutoff. Official KBO team batting through the October 7 pregame state: Suwon has been a high-run 2026 venue in the available park split (10.50 runs/game). Because an official field-weather receipt was not recovered before cutoff, no wind/temperature directional adjustment is applied. Weather is therefore **NOT USED DIRECTIONALLY**. Samsung beat KIA 5-4 on October 6. The official English scoreboard records Lee Jae-hee as winning pitcher and Bae Chan-seung as the save pitcher. A full verified reliever-usage ladder was not recovered before cutoff, so Samsung bullpen availability is widened rather than guessed. - No official same-day injury bulletin beyond the posted active starting lineups was recovered before cutoff; availability inferences are limited to published lineups/rosters. - Complete Samsung relief usage from October 6 was not recovered before cutoff, so no unverified bullpen-depletion claim is made. - An official field-weather receipt was not recovered before cutoff, so weather is not used directionally. Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test upper margin tails and late-inning total clustering on independently collected KBO population games, retaining both winning and losing cushion rows. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [kbo_owner](https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-07), [kbo_kt_onsite](https://isplus.com/article/view/isp202610070243).
+<!-- END RESEARCH ADDENDUM P-546 9ed8bd763dc4434dace98fe3b5c44ccc -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-547 0bbeac6c4691495087278fc5fbbc76c0 -->
+### Dated addendum for P-547
+
+Logged UTC: 2026-10-07T15:42:01.493897+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-547 — NC Dinos @ SSG Landers
+
+### R1. Original prediction
+Rank 1 NC +1.5 (61.8%); Rank 2 SSG ML (56.0%); Rank 3 Over 9.5 (54.6%); Rank 4 Under 9.5 (45.4%). Potential winner SSG 56.0%.
+
+### R2. Final event
+SSG 6-3 NC; nine innings, total 9, SSG margin 3.
+
+### R3. Exact contracts
+Rank 1 NC +1.5 runs: LOSS; Rank 2 SSG ML: WIN; Rank 3 Over 9.5 runs: LOSS; Rank 4 Under 9.5 runs: WIN
+
+### R4. Rank diagnostics
+{"rank1": 0, "rank2": 1, "hit_at_2": 1, "wins_at_2": 1, "ndcg_at_2": 0.38685280723454163}
+
+### R5. Winner call
+CORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+SSG 6-3 NC; nine innings, total 9, SSG margin 3. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+The SSG winner direction and Under won. The NC cushion missed; the Over missed by 0.5 runs.
+
+### R8. Missed mechanism and uncertainty
+Official innings place four SSG runs in the third, two in the seventh and three NC runs in the eighth. No missing lineup or bullpen cause is inferred from final alone.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. **Research/log cutoff:** 2026-10-07 20:31:13 AEDT / 18:31:13 KST **Timing classification:** scheduled start had just passed; actual first pitch was not independently verified at the analysis cutoff. Only pre-start/static information was used. No observed game action was used. - The scheduled start had just passed when the research cutoff was recorded; actual first pitch was not independently verified. This card is therefore `LATE_START_UNVERIFIED`, not falsely backdated as pregame. Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test lineup-missingness sensitivity and margin-tail width with future prospectively frozen KBO scenarios. Preserve LATE_START_UNVERIFIED as a separate cohort label. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [kbo_owner](https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-07), [kbo_ssg_onsite](https://www.starnewskorea.com/en/sports/2026/10/07/2026100716313989473).
+<!-- END RESEARCH ADDENDUM P-547 0bbeac6c4691495087278fc5fbbc76c0 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-548 0df2b67cc4f046489b62f74e52150013 -->
+### Dated addendum for P-548
+
+Logged UTC: 2026-10-07T15:42:01.959416+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-548 — Busan KCC Egis vs Daegu Korea Gas Corporation Pegasus
+
+### R1. Original prediction
+Rank 1 Under 178.5 (64.5%); Rank 2 Korea Gas +8.5 (59.5%); Rank 3 Over 168.5 (57.9%); Rank 4 KCC -2.5 (56.8%). Potential winner KCC 63.5%.
+
+### R2. Final event
+KCC 103-98 Korea Gas; quarter scores 30-32, 28-18, 29-28, 16-20; regulation total 201, margin 5.
+
+### R3. Exact contracts
+Rank 1 Under 178.5 points: LOSS; Rank 2 Korea Gas +8.5 points: WIN; Rank 3 Over 168.5 points: WIN; Rank 4 KCC -2.5 points: WIN
+
+### R4. Rank diagnostics
+{"rank1": 0, "rank2": 1, "hit_at_2": 1, "wins_at_2": 1, "ndcg_at_2": 0.38685280723454163}
+
+### R5. Winner call
+CORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+KCC 103-98 Korea Gas; quarter scores 30-32, 28-18, 29-28, 16-20; regulation total 201, margin 5. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+The five-point margin agrees with the scenario centre, while the 172-point total centre was 29 points too low. Side/cushion rows held and the leading Under lost.
+
+### R8. Missed mechanism and uncertainty
+Centre and width require separate diagnosis. Changed foreign-player usage is a plausible regime hypothesis, not a causal conclusion established by this one high total.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Forecast-input cutoff:** approximately 20:58 AEDT / 18:58 KST, before the scheduled tip. - **Research completion:** after the scheduled tip, but no observed game action, score, possessions or live statistics were used. - **State:** `PREGAME_INPUT_CUTOFF / RESEARCH_COMPLETION_AFTER_SCHEDULED_START`. - No authoritative static source with both confirmed starting fives was recovered before the modelling cutoff. Probable core exposure was therefore used rather than inventing a confirmed five. Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test KBL same-season possession and PPP centre shifts separately from width under the changed roster regime, using chronological independent population data and preregistered acceptance. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Sources: [kbl_yna](https://www.yna.co.kr/amp/view/AKR20261007201300007), [kbl_basketkorea](https://www.basketkorea.com/news/newsview.php?ncode=1065613721301888), [kbl_sbs](https://news.sbs.co.kr/english/article.do?news_id=N1008787988).
+<!-- END RESEARCH ADDENDUM P-548 0df2b67cc4f046489b62f74e52150013 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-549 8c0c72eab5ac43e4939e02698aab06e6 -->
+### Dated addendum for P-549
+
+Logged UTC: 2026-10-07T15:42:02.421025+00:00. Original forecast unchanged.
+
+## Settlement refresh for P-549 — Foshan Nanshi vs Guangxi Hengchen
+
+### R1. Original prediction
+Rank 1 Guangxi X2 (81.85%); Rank 2 Guangxi team Over 0.5 (79.81%); Rank 3 Under 3.5 (78.29%); Rank 4 1H Over 0.5 (61.33%); Rank 5 Under 2.5 (57.49%). Potential winner Guangxi 56.90%, draw 24.95%, Foshan 18.15%.
+
+### R2. Final event
+Foshan 1-0 Guangxi, halftime 0-0; regulation full-game total 1 and Guangxi total 0.
+
+### R3. Exact contracts
+Rank 1 Guangxi X2: LOSS; Rank 2 Guangxi team Over 0.5 goals: LOSS; Rank 3 Under 3.5 goals: WIN; Rank 4 1H Over 0.5 goals: LOSS; Rank 5 Under 2.5 goals: WIN
+
+### R4. Rank diagnostics
+{"rank1": 0, "rank2": 0, "hit_at_2": 0, "wins_at_2": 0, "ndcg_at_2": 0.0}
+
+### R5. Winner call
+INCORRECT sporting winner call; not operator certification
+
+### R6. Line assessment
+Foshan 1-0 Guangxi, halftime 0-0; regulation full-game total 1 and Guangxi total 0. Literal thresholds are tested against this endpoint only; complementary and overlapping rows are dependent.
+
+### R7. Expected versus realised mechanism
+Both leading Guangxi-dependent rows lost together. Low full-time totals won, while the first-half Over lost. The scoreless-away branch was an issued failure route.
+
+### R8. Missed mechanism and uncertainty
+No verified pre-cutoff XI existed. Final score cannot demonstrate which absent player/tactical feature caused the miss; table rank and urgency do not establish causal motivation.
+
+### R9. Source and timing
+Original state, evidence cutoff, ranks and probabilities remain literal. - **Forecast-input cutoff:** 2026-10-07 19:27:37 CST / 22:27:37 AEDT, before scheduled kickoff. - **State at cutoff:** `PREGAME / START_UNVERIFIED`. - A verified current starting XI, complete bench, formation and penalty/set-piece-taker sheet for both teams was **not recovered before the cutoff**. - No reliable same-day source establishing additional injuries/suspensions was recovered before cutoff; missing information remains uncertainty rather than an assumption of full health. **Status:** `UNCALIBRATED_ANALYST_SCENARIO — PARTICIPANT-CAPPED` because a verified current XI/bench was not recovered before cutoff. Source-body retrieval now establishes terminal facts only; it cannot prove pregame availability. No independently audited quorum or complete original source bundle is manufactured.
+
+### R10. Error/process classification
+DESCRIPTIVE_CENTRE_WIDTH_RANKING_REVIEW; causal attribution and calibration remain unproven
+
+### R11. Testable hypothesis
+Test participant-missingness mixtures and joint away-scoreless/home-win tail mass on a fixed China League One cohort, with untouched chronology and identical supplied contracts. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.
+
+### R12. Disposition
+MONITOR / PROPOSE_EXPERIMENT; PROPOSED_NOT_TESTED. Implemented process controls are recorded separately; no fitted model parameter changes or promotion.
+
+Additional unranked issued complement: 1H Under 0.5 goals — **WIN**.
+
+Additional unranked issued complement: Full-time Over 2.5 goals — **LOSS**.
+
+Sources: [soccer_sportradar](https://statshub.sportradar.com/sportradar/en/match/69456656), [soccer_dongqiudi](https://pc.dongqiudi.com/articles/6450059.html).
+
+
+## Counts and interpretation
+
+```json
+{
+  "events": 12,
+  "fully_sporting_graded": 11,
+  "partially_graded": 1,
+  "ranked_rows": 49,
+  "win": 26,
+  "loss": 19,
+  "unknown_definition": 4,
+  "push": 0,
+  "void": 0,
+  "no_action": 0,
+  "terminal_censored": 0,
+  "additional_unranked_rows": 2,
+  "additional_unranked_win": 1,
+  "additional_unranked_loss": 1,
+  "rank1": 6,
+  "rank2": 6,
+  "hit_at_2": 9,
+  "wins_at_2": 12,
+  "mean_ndcg_at_2": 0.5454545454545454,
+  "winner_calls_correct": 9,
+  "winner_calls_total": 12,
+  "performance_certified": 0,
+  "prior_retained_carryovers": 53,
+  "prior_active_sporting_carryovers": 32
+}
+```
+
+Rank-1/Rank-2 each 6/11; Hit@2 9/11; Wins@2 12/22; mean full-slate NDCG@2 0.545455; sporting winner calls 9/12. Four unresolved retirement rows are excluded, explicitly, from ranking metrics. No baseline skill, calibration, monetary return or independent-row trial count is inferred.
+
+## Historical carryover audit
+
+All 53 selected historical records were matched against the mini carryover inventory; all remain retained once under their original IDs. The mini divides them into 32 active sporting/contract gaps and 21 certification/reference pointers. Operator terms, identity conflicts, exact periods/provider fields, original source custody and independent collection gaps cannot be closed from new-event finals. Embedded DO NOT SETTLE text is source-document context, not an instruction overriding the user. This pass does not manufacture historical closure or reallocate any carried ID. Full per-record remaining requirements are reproduced in UNRESOLVED_CARRYOVER.md and carryover.json.
+<!-- END RESEARCH ADDENDUM P-549 8c0c72eab5ac43e4939e02698aab06e6 -->
+
+## Rollover to Combined Prediction Log 7 — 2026-10-08
+
+Closed for new forecasts at 2026-10-08T02:43:51.164995+11:00; final committed ID in this part P-549 (research P-523–P-549; reserved P-518–P-522). Next allocator ID P-550. Active destination: `prediction logs/PREDICTION_LOG_COMBINED_7.md`. Method MDS-2026.10.01-v8.0 / CR-2026.10.08-R1; selected freeze `CONTROL_MANIFEST_2026-10-08-1.md`. Pre-rollover prefix: 1343675 bytes, SHA-256 `a7ac46922087ba4c36b9a2610a7201b278bef3276de4d232595b1738018f2c30`. Existing issued cards and the legacy original-source block remain unchanged. Historical corrections retain their existing IDs; no ID is consumed by this metadata.

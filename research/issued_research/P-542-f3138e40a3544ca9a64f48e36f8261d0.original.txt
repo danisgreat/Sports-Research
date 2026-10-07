@@ -1,0 +1,190 @@
+## P-542 — BASKETBALL / AUSTRALIA NBL — Adelaide 36ers vs Melbourne United
+
+**LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT**
+
+### A. Identity and timing
+
+- **Tracking alias:** `TMP-20261007-NBL-ADL-MEL`
+- **Event:** Adelaide 36ers vs Melbourne United
+- **Competition:** Hungry Jack's NBL27 — Round 4 / Ignite Cup
+- **Venue:** Adelaide Entertainment Centre
+- **Official/native event ID:** `UNKNOWN` — the accessible public NBL match page did not expose a durable native event ID, so none was invented
+- **Supplied estimated start:** `<7 October 2026, 7:30 PM AEST>`
+- **Verified advertised start:** **7:30 PM AEDT** on 7 October 2026 (equivalent to **7:00 PM ACDT** at the Adelaide venue)
+- **Forecast cutoff:** `2026-10-07 19:19:26 AEDT`
+- **Local log write timestamp:** `2026-10-07 19:25:36 AEDT`
+- **Verified state at forecast cutoff:** `PREGAME / START_UNVERIFIED` — the match-specific NBL Game Centre still appeared in the upcoming fixture set and no verified first `jumpBall` was observed
+- **In-game evidence used:** `NO`
+- **Sporting endpoint used for probability analysis:** full game including overtime
+- **Operator settlement definition:** `UNKNOWN` — supplied contracts did not state regulation/OT settlement terms; literal contracts are preserved below
+
+### B. Repository authority and numerical status
+
+- **GitHub repository:** `danisgreat/Sports-Research`
+- **Branch read:** `main`
+- **Read commit SHA:** `de0edc6b0822e88edb7fccd4d11bc33011b5cceb`
+- **Method:** `MDS-2026.10.01-v8.0`
+- **Control:** `CR-2026.10.07-I1`
+- **Numerical extension:** `CR-2026.10.06-NUMERICAL-1`
+- **Scoring:** `SCV-2026.10.01-v3`
+- **Active manifest:** `CONTROL_MANIFEST_2026-10-07-1.md`
+- **Applicable rules:** `RULES_BASKETBALL.md`
+- **Registered NBL candidate:** `nbl-oof-width-0.2.0` — `SHADOW_ONLY`, regular-season moneyline including OT
+- **Event-specific qualified runtime output available for this card:** `NO`
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`
+- **Performance eligibility:** `NOT_CERTIFIED`
+
+The published GitHub queue remains behind the active local mini. Per the current local-first workflow, this new event receives the next unused local working P-ID, `P-542`; canonical GitHub import/reconciliation is deferred.
+
+### C. Supplied contracts
+
+Preserved verbatim:
+
+1. `<Adelaide +9.0>`
+2. `<United -1.5>`
+3. `<COMBINED TOTAL OVER 175.5>`
+4. `<COMBINED TOTAL UNDER 187.5>`
+
+For sporting probability analysis, all four are treated as full-game propositions including overtime. Because operator terms were not supplied, later operator settlement semantics remain `UNKNOWN_DEFINITION` until verified.
+
+### D. Availability and current conditions
+
+- **Adelaide unavailable:** Flynn Cameron (ankle), Isaac Humphries (knee), Bul Kuol (ACL). Humphries' absence removes important interior size; Cameron removes another primary guard/wing option.
+- **Adelaide addition:** Corey Webster was signed as an injury replacement and the club subsequently confirmed he would play. His recent NZNBL line was 18.7 points per game with 40.2% three-point shooting, but his immediate NBL role/minutes remain uncertain.
+- **Nick Rakocevic:** available after an early guilty plea left him free to face Melbourne.
+- **Melbourne unavailable:** Chris Goulding (calf) and Sean Macdonald (ACL). Shea Ili had returned to the available depth chart after his earlier hamstring absence.
+- **Starting-five certainty:** complete official starting fives were not verified at the forecast cutoff. Per BK-P2, this keeps lineup-dependent confidence capped and requires an uncalibrated minutes/availability mixture rather than a fully qualified issue.
+
+### E. Sporting assessment
+
+- Adelaide entered 2-3 and had scored **88.2 points per game** through five regular-season games; its five results imply about 92.8 points allowed per game. The latest two losses were 114-92 at Illawarra and 88-72 at home to New Zealand.
+- Melbourne entered 1-3. Its four current regular-season scores imply about **89.5 points scored and 87.3 allowed per game**, but the defence collapsed late against Cairns: United led by nine after three quarters and lost 107-95 after conceding 35 in the fourth.
+- The first meeting this season finished **Adelaide 97-95 Melbourne** in Melbourne. It is useful current evidence but deliberately shrunk because one game is high variance and both rotations have changed.
+- Bryce Cotton (25.0 PPG on the current NBL leader board) and Cole Anthony (24.8 PPG) remain the principal scoring engines. Adelaide's missing depth and Melbourne's missing Goulding increase usage concentration around those creators.
+- Adelaide's +9 cushion is supported by home court, the two-point Round-1 win and Melbourne's inconsistent closing defence, but weakened by Adelaide's three important absences and consecutive double-digit losses.
+- The Ignite Cup's quarter-by-quarter incentive structure can preserve late-quarter effort even when the game margin widens, so the total distribution is kept at the framework's full NBL reference width rather than artificially narrowed.
+
+### F. Coherent probability scenario
+
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`
+
+No live-qualified NBL model output was available for this event. The card therefore uses a transparent joint margin/total scenario, informed by current season scoring/defence, opponent-adjusted recent results, availability, home court and the framework's NBL uncertainty widths.
+
+Central full-game score budget:
+
+- **Adelaide:** 88.5
+- **Melbourne:** 91.0
+- **Expected total:** 179.5
+- **Expected Adelaide margin:** -2.5
+
+Uncertainty:
+
+- **Margin SD:** 15.2 points — current framework NBL reference width
+- **Total SD:** 18.7 points — current framework NBL reference width
+- **Margin-total correlation:** 0.00 in this analyst scenario because no reliable current-event covariance estimate was available; this is an explicit simplifying assumption, not a fitted claim
+- **OT:** included in the full-game endpoint; the framework's roughly 4-5.5% OT tail is retained conceptually rather than treated as zero
+
+The current team rates already reflect the early-season environment, so the framework's early-season scoring caution is used as a guard against inflating the centre, not double-counted as another full -8.5 point adjustment.
+
+Derived contract probabilities from the same distribution:
+
+| Proposition | Win mass | Push mass | Loss mass | p_card |
+|---|---:|---:|---:|---:|
+| Adelaide +9.0 | **65.3%** | **2.4%** | **32.3%** | **65.3%** |
+| Melbourne United -1.5 | **52.6%** | 0.0% | 47.4% | **52.6%** |
+| Over 175.5 | **58.5%** | 0.0% | 41.5% | **58.5%** |
+| Under 187.5 | **66.6%** | 0.0% | 33.4% | **66.6%** |
+| Melbourne full-game winner | **56.5%** | — | 43.5% | **56.5%** |
+
+The wide 12-point middle band means **Over 175.5 and Under 187.5 can both win**; the scenario puts about **25.0%** mass on totals from 176 through 187 inclusive. They are therefore not complementary contracts.
+
+### G. Ranked predictions
+
+| Rank | Exact proposition | Origin | p_card | Status / strength | Main reason | Principal failure route |
+|---|---|---|---:|---|---|---|
+| **1** | **COMBINED TOTAL UNDER 187.5** | SUPPLIED | **66.6%** | **UNCALIBRATED_ANALYST_SCENARIO / SUPPORTED** | 179.5 central total leaves an eight-point cushion; Adelaide's offence is only 88.2 PPG and the framework warns against over-reading high early-season scoring tails | Anthony/Cotton-led efficiency spike, Webster adding immediate shooting, or OT pushes a competitive game through 188 |
+| **2** | **Adelaide +9.0** | SUPPLIED | **65.3% win + 2.4% push** | **UNCALIBRATED_ANALYST_SCENARIO / SUPPORTED** | Home court, a 97-95 Round-1 win over Melbourne and United's volatile late defence make nine points a meaningful cushion | Adelaide's Humphries/Cameron/Kuol absences and recent -22/-16 defeats create a genuine double-digit Melbourne separation branch |
+| **3** | **COMBINED TOTAL OVER 175.5** | SUPPLIED | **58.5%** | **UNCALIBRATED_ANALYST_SCENARIO / LEAN** | Central total is 179.5 and both teams retain elite high-usage guards; Melbourne's last game reached 202 and Adelaide-Melbourne Round 1 reached 192 | Adelaide's recent offensive collapse, early-season lower-scoring regime, or Melbourne controlling pace keeps the game in the 160s/low 170s |
+| **4** | **Melbourne United -1.5** | SUPPLIED | **52.6%** | **UNCALIBRATED_ANALYST_SCENARIO / LEAN / NEAR-TIE** | Adelaide's depleted rotation and missing interior size give Melbourne a narrow matchup edge; Ili's availability improves point-of-attack defence and secondary creation | Adelaide already beat United in Round 1, has home court, and + Cotton/Rakocevic/Webster can punish another Melbourne late-game lapse |
+
+### H. Potential winner
+
+- **Predicted winner:** Melbourne United
+- **Endpoint:** full game including overtime
+- **p_card:** **56.5%**
+- **Probability status:** `UNCALIBRATED_ANALYST_SCENARIO`
+- **Reason:** Melbourne's healthier overall rotation, Adelaide's missing Humphries/Cameron/Kuol and the United frontcourt/guard creation edge move the central margin modestly toward Melbourne, but not enough to make the winner call strong.
+- **Upset route:** Cotton controls the creation battle, Rakocevic wins the interior/rebounding minutes, Webster supplies immediate spacing, and Adelaide's home environment converts a close fourth quarter.
+
+### I. Dependence and coherence
+
+- **Rank 1 Under 187.5 + Rank 2 Adelaide +9** are not independent; a controlled competitive game is favourable to both. Under the scenario's explicit zero margin-total correlation assumption, their joint outright-loss mass is about **10.8%**, but this number is assumption-sensitive.
+- **Over 175.5 and Under 187.5 overlap:** both cash in the 176-187 total band; they are not opposite sides of one threshold.
+- **Adelaide +9 and Melbourne -1.5 can both win** when Melbourne wins by 2-8; they are nested rather than complementary.
+- Representative central score: **Melbourne 91, Adelaide 89** — Melbourne winner/-1.5, Adelaide +9, Over 175.5 and Under 187.5 all succeed in that branch.
+
+### J. Material sources
+
+1. **NBL official — Adelaide v Melbourne preview / expected depth charts**  
+   https://www.nbl.com.au/news/how-to-watch-talking-points-adelaide-36ers-v-melbourne-united  
+   Role: official schedule, venue, Ignite Cup context, expected depth charts and current absences.
+
+2. **NBL official — NBL27 injury list**  
+   https://www.nbl.com.au/news/nbl26-the-latest-injury-updates  
+   Role: current injury status for Cameron, Humphries, Kuol, Goulding and Macdonald.
+
+3. **NBL official — Corey Webster signing / availability**  
+   https://league.nbl.com.au/news/adelaide-36ers-add-much-needed-scoring-punch-corey-webster  
+   Role: signing context, 18.7 PPG / 40.2% 3PT NZNBL production and initial availability uncertainty.
+
+4. **NBL official — Corey Webster comeback update**  
+   https://www.nbl.com.au/news/corey-webster-near-retirement-36ers-comeback  
+   Role: club confirmation that Webster would play.
+
+5. **NBL official/AAP — Round 1 Melbourne 95-97 Adelaide**  
+   https://www.nbl.com.au/news/sixers-gleeson-era-starts-impressively  
+   Role: current-season same-matchup evidence and Cotton/Anthony matchup context.
+
+6. **NBL official/AAP — Adelaide 72-88 New Zealand**  
+   https://league.nbl.com.au/news/clinical-breakers-win-big-in-adelaide  
+   Role: Adelaide's latest offensive form and Rakocevic/Cotton production.
+
+7. **NBL official/AAP — Melbourne 95-107 Cairns**  
+   https://league.nbl.com.au/news/taipans-prevail-on-massive-fourth-quarter  
+   Role: Melbourne's latest performance, Anthony's 40 points and fourth-quarter defensive collapse.
+
+8. **NBL official club schedules / current homepage**  
+   https://www.nbl.com.au/club-schedule/adl  
+   https://www.nbl.com.au/club-schedule/mel  
+   Role: current-season results and schedule cross-check.
+
+**SPORTS_ONLY / MARKET_BLIND:** no sportsbook odds, implied probabilities, betting movement, tipster selections, consensus predictions or fantasy projections were used as predictive evidence. User-supplied lines were used only as contract thresholds.
+
+### K. Forecast integrity
+
+`FORECAST_CLASSIFICATION: PREGAME_START_UNVERIFIED_UNCALIBRATED_ANALYST_SCENARIO`
+
+`PROBABILITY_STATUS: UNCALIBRATED_ANALYST_SCENARIO`
+
+`REGISTERED_NBL_MODEL_STATUS: SHADOW_ONLY`
+
+`EVENT_SPECIFIC_MODEL_OUTPUT_USED: NO`
+
+`PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED`
+
+`LOG_STATUS: LOCAL_MINI_STAGING`
+
+`CANONICAL_IMPORT_STATUS: PENDING`
+
+`ORIGINAL_RESEARCH_TIMESTAMP: 2026-10-07 19:19:26 AEDT`
+
+`LOG_WRITE_TIMESTAMP: 2026-10-07 19:25:36 AEDT`
+
+`SPORTS_ONLY_MARKET_BLIND: PASS`
+
+`IN_GAME_DATA_USED_AS_PREGAME_EVIDENCE: NO`
+
+### L. Final status
+
+**UNSETTLED — NO RETROSPECTIVE PERFORMED.**
+

@@ -1,0 +1,29 @@
+{
+  "imported_ids": [
+    "P-538",
+    "P-539",
+    "P-540",
+    "P-541",
+    "P-542",
+    "P-543",
+    "P-544",
+    "P-545",
+    "P-546",
+    "P-547",
+    "P-548",
+    "P-549"
+  ],
+  "next_before": "P-538",
+  "next_after_import": "P-550",
+  "next_after_addenda": "P-550",
+  "part6_before_bytes": 1136720,
+  "part6_before_sha256": "2e3ab49ef0ad5906ffce6532e2ab2dc211070f314d03830beb73ed871d3b2777",
+  "part6_after_import_bytes": 1343675,
+  "part6_after_import_sha256": "a7ac46922087ba4c36b9a2610a7201b278bef3276de4d232595b1738018f2c30",
+  "ledger_before_bytes": 31041,
+  "ledger_before_sha256": "35e34a0691b0e9cdcd8344ac69386c3feaf27eb85c370865b6e124fc4b34db5f",
+  "ledger_after_import_sha256": "2b551e3702fe56577c7e1ce840fada5ce26bd257788edf6bdffca6616baae033",
+  "canonical_research_count": 27,
+  "dated_addenda": 12,
+  "all_imports_performance_eligible": false
+}

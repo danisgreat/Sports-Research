@@ -3,12 +3,16 @@ on:
   push:
     paths:
       - 'research/**'
+      - 'runtime/**'
+      - 'prediction logs/**'
       - '*.md'
       - '.github/workflows/research.yml'
       - 'Previous Sports Results/_football_research/**'
   pull_request:
     paths:
       - 'research/**'
+      - 'runtime/**'
+      - 'prediction logs/**'
       - '*.md'
       - '.github/workflows/research.yml'
       - 'Previous Sports Results/_football_research/**'
@@ -33,7 +37,7 @@ jobs:
           cache-dependency-path: research/requirements.lock.txt
       - run: python -m pip install -r research/requirements.lock.txt
       - name: Research and operations regressions
-        run: python -B -m pytest -p no:cacheprovider research/tests research/operations research/experiments -q
+        run: python -B -m pytest -p no:cacheprovider research/tests research/operations research/experiments runtime/tests -q
       - name: Canonical source and projection custody
         if: ${{ !cancelled() }}
         run: python -B -m research.operations.log_card verify
@@ -52,3 +56,6 @@ jobs:
       - name: All fifteen experiment measurement protocols
         if: ${{ !cancelled() }}
         run: python -B -m research.experiments.runner verify
+      - name: Imported mini and combined-log rollover custody
+        if: ${{ !cancelled() }}
+        run: python -B -m research.operations.verify_rollover

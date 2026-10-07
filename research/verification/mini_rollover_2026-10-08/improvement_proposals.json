@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "source_review_sha256": "8002d103c66b8d3ddb974cd557c55bf559f4c402d0737ede205a36d460f68e57",
+  "records": [
+    {
+      "proposal_id": "RIP-20261008-P-538",
+      "canonical_id": "P-538",
+      "hypothesis_and_acceptance": "Prospectively test side/low-total dependence from one regulation/OT model, retaining joint top-two failure mass and goalie status on the identical future event cohort. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-539",
+      "canonical_id": "P-539",
+      "hypothesis_and_acceptance": "Test explicit set-count and tiebreak mixtures against the unchanged comparator on future surface/format-matched fixtures; retain this result solely as a diagnostic example. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-540",
+      "canonical_id": "P-540",
+      "hypothesis_and_acceptance": "Retain the exact named operator/action/retirement rule and its issue-time source when available on future cards. Preserve unknown terms explicitly; compare unknown-definition rates without changing sporting predictions. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-541",
+      "canonical_id": "P-541",
+      "hypothesis_and_acceptance": "Test a serve/return and set-count mixture on independent ATP hard-court population data, including equal-game matches; evaluate full-slate proper scores and unchanged supplied lines. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-542",
+      "canonical_id": "P-542",
+      "hypothesis_and_acceptance": "Test early-season total centres and widths separately using independent possession/efficiency data and paired chronological evaluation; monitor narrow threshold wins without moving this forecast retrospectively. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-543",
+      "canonical_id": "P-543",
+      "hypothesis_and_acceptance": "Test endpoint-specific baseball adapters on tied-through-nine/extra-innings fixtures; require explicit final state, inning count and tie semantics before deriving full-game contracts. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-544",
+      "canonical_id": "P-544",
+      "hypothesis_and_acceptance": "Test starter-to-relief transition uncertainty and key run margins with pre-cutoff usage data on a fixed KBO cohort; separate total and margin errors. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-545",
+      "canonical_id": "P-545",
+      "hypothesis_and_acceptance": "Test separate centre/width effects of starter-role uncertainty using verified pre-start roles and relief usage; measure fixed-line winner and total errors without replacing the comparator. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-546",
+      "canonical_id": "P-546",
+      "hypothesis_and_acceptance": "Test upper margin tails and late-inning total clustering on independently collected KBO population games, retaining both winning and losing cushion rows. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-547",
+      "canonical_id": "P-547",
+      "hypothesis_and_acceptance": "Test lineup-missingness sensitivity and margin-tail width with future prospectively frozen KBO scenarios. Preserve LATE_START_UNVERIFIED as a separate cohort label. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-548",
+      "canonical_id": "P-548",
+      "hypothesis_and_acceptance": "Test KBL same-season possession and PPP centre shifts separately from width under the changed roster regime, using chronological independent population data and preregistered acceptance. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    },
+    {
+      "proposal_id": "RIP-20261008-P-549",
+      "canonical_id": "P-549",
+      "hypothesis_and_acceptance": "Test participant-missingness mixtures and joint away-scoreless/home-win tail mass on a fixed China League One cohort, with untouched chronology and identical supplied contracts. Freeze candidate/comparator, sample/power plan, endpoint, acceptance and identical event/line cohort before testing; this event cannot be the untouched test.",
+      "status": "PROPOSED_NOT_TESTED",
+      "performance_eligible": false
+    }
+  ],
+  "implemented_process_changes": [
+    "Full-slate NDCG with unresolved-row exclusion",
+    "Configured active destination with legacy Part-6 custody",
+    "Ledger-owned dated addenda retain parent ID and recover safely",
+    "Versioned settlement register preserves historical and new carryovers"
+  ]
+}

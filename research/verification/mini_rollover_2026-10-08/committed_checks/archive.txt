@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\danie\AppData\Local\Temp\sports-rollover-check-20261008\research\src\archive.py", line 650, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\danie\AppData\Local\Temp\sports-rollover-check-20261008\research\src\archive.py", line 643, in main
+    result = validate(args.archive_root)
+  File "C:\Users\danie\AppData\Local\Temp\sports-rollover-check-20261008\research\src\archive.py", line 556, in validate
+    if sha256((archive_root.parent / relative).read_bytes()) != digest:
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\danie\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\danie\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008\\Previous Sports Results\\_football_research\\afl_api.json'

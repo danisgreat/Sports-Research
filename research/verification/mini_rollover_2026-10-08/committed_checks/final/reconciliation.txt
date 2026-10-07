@@ -1,0 +1,15 @@
+{
+  "observed_utc": "2026-10-07T16:00:28.463517+00:00",
+  "passed": true,
+  "canonical_cards": 27,
+  "next_id": "P-550",
+  "closed_original_archives": 2,
+  "historical_carryovers": 15,
+  "diagnostic_revisions": 11,
+  "retrospective_sections": 132,
+  "untested_proposals": 11,
+  "reference_documents": 25,
+  "control": "CR-2026.10.08-R1",
+  "freeze": "CONTROL_MANIFEST_2026-10-08-1.md",
+  "limitation": "Readback verifies retained mechanics, mappings and missingness; it supplies no new sporting facts or prospective certification."
+}
