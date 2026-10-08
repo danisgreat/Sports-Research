@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "reviewed_records": 65,
+  "retrospective_sections": 780,
+  "new_events": 0,
+  "new_formal_grades": 0,
+  "ids_consumed": 0,
+  "next_id": "P-550",
+  "active_log": "prediction logs/PREDICTION_LOG_COMBINED_7.md",
+  "reserved_references": 5,
+  "excluded_local_event": "P-550",
+  "supplied_files_verified": 8,
+  "optional_not_supplied": [
+    "README.md"
+  ],
+  "fresh_source_urls": 19,
+  "fresh_local_bodies_checked": 0,
+  "source_certification": "NOT_ESTABLISHED",
+  "states_replaced": 0
+}

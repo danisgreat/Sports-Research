@@ -140,6 +140,12 @@
       "sha256": "55a02e2e311379c5923351fe41dd6f4ac0740dfdf47ed64ea66a5b4904c1ba4d",
       "event_count": 12,
       "status": "PROPOSED_NOT_TESTED"
+    },
+    {
+      "path": "research/verification/carryover_review_2026-10-08/improvement_proposals.json",
+      "sha256": "4178af545e4cb66eade8e37df85eec8023a868c8cac8469799f0288be35911fd",
+      "event_count": 65,
+      "status": "PROPOSED_NOT_TESTED"
     }
   ]
 }

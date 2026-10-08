@@ -1,8 +1,10 @@
 # Card and log templates
 
+**Retrospective-only carryover packets:** retain the supplied artifacts and original source prefix; reconcile selected IDs and reserved references; append a dated exhibit to the configured active log without issuing new cards or recounting historical grades. Keep any excluded local card in source custody and show its pending reservation separately from the canonical next ID. The [October 8 packet review](research/verification/carryover_review_2026-10-08/REPORT.md) preserves 65 reviews and 780 sections. Run `py -3.14 -B -m research.operations.verify_carryover_review` for published custody, adding `--local-body-custody` only when local publisher captures are available.
+
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.01-v7.1. Requested research uses the following template and receives a canonical ID regardless of calibration. Later sections describe the separate frozen certified-issuer protocol; its gates do not block requested research.
+Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.01-v8.0. Requested research uses the following template and receives a canonical ID regardless of calibration. Later sections describe the separate frozen certified-issuer protocol; its gates do not block requested research.
 
 ## Requested research card — default workflow
 

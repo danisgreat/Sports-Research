@@ -3,7 +3,7 @@
 
 **Next canonical ID: P-550.** All requested cards go directly to the active combined log, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
-Current selected freeze: `CONTROL_MANIFEST_2026-10-08-2.md`; normalized-CRLF SHA-256 `6db924b2e18c213f56e4dbfb64b64fe54193fad052e50fc4e3ebfee773e63b90`. Current authority: METHOD.md and CURRENT_RULES.md.
+Current selected freeze: `CONTROL_MANIFEST_2026-10-08-3.md`; normalized-CRLF SHA-256 `73381897ff1025a4fdf9d47226e808b9dd49dee2149b918ae767b6c5e192647e`. Current authority: METHOD.md and CURRENT_RULES.md.
 
 | ID | Event | Tracking alias | Status |
 |---|---|---|---|
@@ -39,9 +39,11 @@ Highest canonical research ID: **P-549**. Active Combined Log: `prediction logs/
 Archived mini references: `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`, `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P527_ONWARD_UPDATED_4.md`.
 Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/carryover.json` and `carryover.md`. Eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6; formal certification remains unresolved.
 
-**Current all-log settlement register:** `research/verification/mini_rollover_2026-10-08/carryover.json`.
+**Current all-log settlement register:** `research/verification/carryover_review_2026-10-08/carryover.json`.
 65 event records retain specific settlement/certification requirements; 10 older rank/contract mappings were repaired. The earlier 15-record closure is a historical snapshot. New sporting reviews and existing retrospective pointers are recorded in the current register; operator or source gaps remain literal.
 Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.
+
+**Local source reservation:** P-550 / native event `2026020055` / alias `LOCAL-20261008-P-550-NHL-EDM-ANA` is preserved source-only, pending canonical import. It consumes no canonical ID here. Local next `P-551` is a distinct working sequence. Match this existing event before allocating the canonical next ID.
 
 P-518–P-522 remain reserved. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.
 

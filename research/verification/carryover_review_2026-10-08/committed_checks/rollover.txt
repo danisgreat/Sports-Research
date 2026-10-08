@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "imported_events": 12,
+  "retrospective_sections": 144,
+  "ranked_rows": 49,
+  "win": 26,
+  "loss": 19,
+  "unknown_definition": 4,
+  "active_log": "prediction logs/PREDICTION_LOG_COMBINED_7.md",
+  "next_id": "P-550",
+  "current_carryovers": 65,
+  "legacy_part6_custody": "PASS",
+  "original_forecast_substrings": "PASS",
+  "local_terminal_bodies_checked": 0,
+  "source_certification": "NOT_ESTABLISHED; collection independence is UNKNOWN"
+}

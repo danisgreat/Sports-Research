@@ -1,0 +1,72 @@
+{
+  "records": [
+    {
+      "ids": [
+        "P-148"
+      ],
+      "url": "https://www.tolucafc.com/noticias/estan-invictas",
+      "finding": "Club narrative displays Toluca Femenil 1-0 Leon Femenil in Apertura 2026 Jornada 5. Exact required terminal corner field is absent.",
+      "status": "OWNER_SCORE_ONLY_NOT_TARGET_AUTHENTICATION",
+      "field_admission": "NOT_ADMITTED",
+      "new_grade": null,
+      "collection_independence": "UNKNOWN"
+    },
+    {
+      "ids": [
+        "P-341"
+      ],
+      "url": "https://bulfc.co.ug/results/",
+      "finding": "Club results row displays BUL 4-1 Ntugasaze, September 8 2026. No exact terminal corner field is authenticated.",
+      "status": "OWNER_SCORE_ONLY_NOT_TARGET_AUTHENTICATION",
+      "field_admission": "NOT_ADMITTED",
+      "new_grade": null,
+      "collection_independence": "UNKNOWN"
+    },
+    {
+      "ids": [
+        "P-255"
+      ],
+      "url": "https://www.inter.it/en/news/inter-women-wolfsburg-uefa-women-champions-league-2026-27",
+      "finding": "Club narrative supports 2-0 before extra time and 3-1 after extra time. The narrative and matchsheet have different extra-time goal minutes; neither authenticates the required 90-minute corners.",
+      "status": "OWNER_PERIOD_SCORE_ONLY_NOT_TARGET_AUTHENTICATION",
+      "field_admission": "NOT_ADMITTED",
+      "new_grade": null,
+      "collection_independence": "UNKNOWN"
+    },
+    {
+      "ids": [
+        "P-256"
+      ],
+      "url": "https://www.uefa.com/womenschampionsleague/news/02a9-217d330f6fd3-67b535229a8f-1000--women-s-champions-league-third-qualifying-round-inter-pari/",
+      "finding": "UEFA narrative supports PSG 5-1 Frankfurt after extra time and 6-2 on aggregate. This does not authenticate the original 90-minute corner subset.",
+      "status": "OWNER_PERIOD_SCORE_ONLY_NOT_TARGET_AUTHENTICATION",
+      "field_admission": "NOT_ADMITTED",
+      "new_grade": null,
+      "collection_independence": "UNKNOWN"
+    },
+    {
+      "ids": [
+        "P-430"
+      ],
+      "url": "https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/md1-al-ain-fc-uae-4-0-al-nassr-club-ksa",
+      "finding": "AFC article displays Al Ain 4-0 Al Nassr and a September 28 2026 page date. Its date and narrative weekday require reconciliation with the frozen fixture; terminal corners are absent.",
+      "status": "SCORE_NARRATIVE_IDENTITY_DATE_AND_TARGET_PENDING",
+      "field_admission": "NOT_ADMITTED",
+      "new_grade": null,
+      "collection_independence": "UNKNOWN"
+    },
+    {
+      "ids": [
+        "P-176",
+        "P-179"
+      ],
+      "url": "https://paris-idf.fff.fr/simple/",
+      "finding": "The supplied URL is a rotating archive. Fresh accessible text did not contain Amiens or Thionville and does not authenticate either claimed exact fixture. Require event-specific federation page/native match sheet.",
+      "status": "SUPPLIED_CLAIM_NOT_LOCATED_AT_CITED_ROUTE",
+      "field_admission": "NOT_ADMITTED",
+      "new_grade": null,
+      "collection_independence": "UNKNOWN"
+    }
+  ],
+  "scope": "Fresh corroboration or missing-field findings only; all other supplied research claims remain unadmitted."
+}

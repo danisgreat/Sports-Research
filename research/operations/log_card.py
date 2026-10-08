@@ -157,6 +157,9 @@ def _sync_status(part6, reconciliation, ledger):
         lines += ['', '**Current all-log settlement register:** `'+current['manifest_path']+'`.',
                   f"{manifest['event_count']} event records retain specific settlement/certification requirements; {manifest['documentary_repairs']} older rank/contract mappings were repaired. The earlier 15-record closure is a historical snapshot. New sporting reviews and existing retrospective pointers are recorded in the current register; operator or source gaps remain literal.",
                   'Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.']
+        for reservation in manifest.get('local_reservations', []):
+            if reservation['local_id'] not in {c['card_id'] for c in cards}:
+                lines += ['', f"**Local source reservation:** {reservation['local_id']} / native event `{reservation['native_event_id']}` / alias `{reservation['tracking_alias']}` is preserved source-only, pending canonical import. It consumes no canonical ID here. Local next `{reservation['next_local_working_id']}` is a distinct working sequence. Match this existing event before allocating the canonical next ID."]
     lines += ['', 'P-518–P-522 remain reserved. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.',
               '', end.decode(),'','## Historical status snapshots — superseded for current queue','']
     new='\r\n'.join(lines).encode('utf-8')+old

@@ -1,5 +1,7 @@
 # Research workspace
 
+**Carryover review published to Part 7:** [65 reviews and mapping/source corrections](verification/carryover_review_2026-10-08/REPORT.md) retain all unresolved obligations and consume no canonical ID. The supplied local P-550 is source-only and pending import; canonical next P-550 and local next P-551 are distinct.
+
 **October 8 current destination:** [Part 7](../prediction%20logs/PREDICTION_LOG_COMBINED_7.md) is active, with P-550 unconsumed. Part 6 retains P-523–P-549 and immutable special source custody. [Settlement/rollover evidence](verification/mini_rollover_2026-10-08/REPORT.md) and the selected 65-record carryover supersede earlier queue counts. `log_card addendum revision.json` appends a dated revision under its existing `card_id`; it never consumes a new ID.
 
 Current October-5 all-log custody: 111 receipt bodies verify locally; 52 are intentionally excluded from Git (42 prior benchmark bodies plus 10 new restricted/market-bearing narrative captures). A clean checkout has 59 bodies and must fail strict custody for the other 52; no CI bypass or fabricated recapture is authorized. See the all-log source inventory and publication evidence.

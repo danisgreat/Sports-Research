@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\danie\\\\AppData\\\\Local\\\\Temp\\\\sports-rollover-check-20261008\\\\research\\\\data\\\\raw\\\\source_snapshots\\\\kfu_owner_20261005T110514549862Z_7a0771636e07.body'"
+}

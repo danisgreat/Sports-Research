@@ -1,10 +1,12 @@
 # Current operating rules
 
+**October 8 carryover review:** 65 existing records receive 780 supplied retrospective sections in active Part 7, with no new grades, cards or ledger writes. P-518-P-522 remain reserved. The excluded local P-550 card is preserved only in source custody; canonical next remains P-550, while its local working successor is P-551. [Review, source limits and corrections](research/verification/carryover_review_2026-10-08/REPORT.md).
+
 **October 8 settlement and rollover:** P-538–P-549 were imported without renumbering into Part 6, with original text and dated sporting retrospectives. Part 7 is now active; P-550 remains next and no ID was consumed by its creation. The selected carryover has 65 exact records, including four P-540 retirement rows with UNKNOWN_DEFINITION. See [the complete settlement/rollover review](research/verification/mini_rollover_2026-10-08/REPORT.md).
 
 **Local authority, numerical ML runtime and all-log reconciliation (October 6):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Authority: **MDS-2026.10.01-v8.0 / CR-2026.10.08-R2** (with numerical runtime extension **CR-2026.10.06-NUMERICAL-1**). The user's instruction authorizes research regardless of calibration, canonical import, and the full implementation of the numerical ML runtime architecture ([NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md), [RULES_NHL.md](RULES_NHL.md)). Issued historical values remain unchanged.
+Authority: **MDS-2026.10.01-v8.0 / CR-2026.10.08-R3** (with numerical runtime extension **CR-2026.10.06-NUMERICAL-1**). The user's instruction authorizes research regardless of calibration, canonical import, and the full implementation of the numerical ML runtime architecture ([NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md), [RULES_NHL.md](RULES_NHL.md)). Issued historical values remain unchanged.
 
 ## Requested research — controlling default
 

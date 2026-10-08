@@ -59,3 +59,6 @@ jobs:
       - name: Imported mini and combined-log rollover custody
         if: ${{ !cancelled() }}
         run: python -B -m research.operations.verify_rollover
+      - name: Supplied carryover retrospective exhibit custody
+        if: ${{ !cancelled() }}
+        run: python -B -m research.operations.verify_carryover_review

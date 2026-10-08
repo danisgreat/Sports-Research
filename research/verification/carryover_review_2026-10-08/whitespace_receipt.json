@@ -1,0 +1,13 @@
+{
+  "files": {
+    "prediction logs/PREDICTION_LOG_COMBINED_7.md": 65,
+    "research/verification/carryover_review_2026-10-08/inputs/P126_P549_ORIGINAL_MINI_FROZEN.md": 19,
+    "research/verification/carryover_review_2026-10-08/inputs/P126_P549_PREDICTION_MINI_SETTLED_P-126_P-549.md": 84,
+    "research/verification/carryover_review_2026-10-08/inputs/P126_P549_SOURCE_RESEARCH_REGISTER.md": 1,
+    "research/verification/carryover_review_2026-10-08/settlement_projection.bin": 65
+  },
+  "types": [
+    "new blank line at EOF.",
+    "trailing whitespace."
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "records": [
+    {
+      "id": "P-126",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-136",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-148",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-149",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-166",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-176",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-178",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-179",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-200",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-217",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-233",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-234",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-235",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-250",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-251",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-255",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-256",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-265",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-274",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-341",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-342",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-368",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-369",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-377",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-399",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-401",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-407",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-409",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-410",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-418",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-419",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-430",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-492",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "HISTORICAL_DOCUMENTARY_REFERENCE_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-518",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "RESERVED_DOCUMENTARY_REFERENCE_NOT_COMMITTED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-519",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "RESERVED_DOCUMENTARY_REFERENCE_NOT_COMMITTED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-520",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "RESERVED_DOCUMENTARY_REFERENCE_NOT_COMMITTED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-521",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "RESERVED_DOCUMENTARY_REFERENCE_NOT_COMMITTED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-522",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "RESERVED_DOCUMENTARY_REFERENCE_NOT_COMMITTED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-523",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-524",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-525",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-526",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-527",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-528",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-529",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-530",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-531",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-532",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-533",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-534",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-535",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-536",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-537",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-538",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-539",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-540",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-541",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-542",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-543",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-544",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-545",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-546",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-547",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-548",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    },
+    {
+      "id": "P-549",
+      "supplied_class": "ALREADY_CANONICAL_REFERENCE",
+      "repository_class": "COMMITTED_RESEARCH_CARD_NOT_CERTIFIED",
+      "new_id": false,
+      "new_formal_grade": null
+    }
+  ],
+  "excluded_local_event": {
+    "local_id": "P-550",
+    "native_event_id": "2026020055",
+    "tracking_alias": "LOCAL-20261008-P-550-NHL-EDM-ANA",
+    "status": "PRESERVED_SOURCE_ONLY_PENDING_CANONICAL_IMPORT",
+    "next_local_working_id": "P-551",
+    "grade": null,
+    "imported": false
+  },
+  "corrections": [
+    "P-518 through P-522 remain reserved documentary references, not committed research cards.",
+    "The local P-550 card is retained in frozen input custody, excluded from this supplement and not imported.",
+    "The manifest references a README not supplied with this packet; no missing content was reconstructed.",
+    "Source URLs and official-domain labels do not authenticate every claimed field or independent lineage."
+  ]
+}

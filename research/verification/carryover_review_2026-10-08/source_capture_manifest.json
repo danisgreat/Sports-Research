@@ -1,0 +1,334 @@
+{
+  "created_utc": "2026-10-08T04:10:25.466389+00:00",
+  "records": [
+    {
+      "url": "https://www.sofascore.com/football/match/aakraman-sc-sikkim-boys-club/zxuhsicEi",
+      "related_ids": [
+        "P-126"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:01.827706+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 403,
+      "retrieval_status": "HTTP_ERROR_BODY_NOT_EVIDENCE",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\5e276d267ae84e5b.body",
+      "bytes": 48,
+      "sha256": "6b771bca0fe4271cc0baf29954f10c68be99102048e4df524b6d7d6bf38dad5d"
+    },
+    {
+      "url": "https://www.sport24.rest/team/923624/last",
+      "related_ids": [
+        "P-126"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:01.829042+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.sport24.rest/team/923624/last",
+      "content_type": "text/html; charset=UTF-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\4eb83c016297e249.body",
+      "bytes": 85815,
+      "sha256": "8379312f3e2a37b3b189d48a78e02250b0bfcd59f666a413f35eef6e2b1b57c5"
+    },
+    {
+      "url": "https://www.tolucafc.com/noticias/estan-invictas",
+      "related_ids": [
+        "P-148"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:01.829515+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.tolucafc.com/noticias/estan-invictas",
+      "content_type": "text/html; charset=utf-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\673e33d2ddda8913.body",
+      "bytes": 328509,
+      "sha256": "8fad612efde978b466cb53cf2d134da86609c3d7db783d6157899cda4eb4ca35"
+    },
+    {
+      "url": "https://paris-idf.fff.fr/simple/",
+      "related_ids": [
+        "P-176",
+        "P-179"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:01.830494+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 403,
+      "retrieval_status": "HTTP_ERROR_BODY_NOT_EVIDENCE",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\ce80f1860aae3d02.body",
+      "bytes": 12548,
+      "sha256": "89535c26b713dbd425b86766c5e05f669911c0d3c59b5ba23b8a31adbc1cccfa"
+    },
+    {
+      "url": "https://www.football365.fr/direct-foot/359214/359490/thionville-lusitanos-paris-13-atletico.html",
+      "related_ids": [
+        "P-179"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:02.020030+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.football365.fr/direct-foot/359214/359490/thionville-lusitanos-paris-13-atletico.html",
+      "content_type": "text/html; charset=UTF-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\889876079225bde3.body",
+      "bytes": 149829,
+      "sha256": "0dfbf012b5e535efdc59e6f4d14f975678a7071a1edd0f0c187fff6c693cdf8d"
+    },
+    {
+      "url": "https://www.totalcorner.com/tr/h2h/chongqing-tonglianglong-vs-yunnan-yukun",
+      "related_ids": [
+        "P-250"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:03.993685+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.totalcorner.com/tr/h2h/chongqing-tonglianglong-vs-yunnan-yukun",
+      "content_type": "text/html; charset=UTF-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\a4b1e00c8af53849.body",
+      "bytes": 94062,
+      "sha256": "5e9e218576efa6e98e03ad2ee812af1d479f7465d5892d46421003416717854b"
+    },
+    {
+      "url": "https://www.inter.it/en/news/inter-women-wolfsburg-uefa-women-champions-league-2026-27",
+      "related_ids": [
+        "P-255"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:04.244981+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.inter.it/en/news/inter-women-wolfsburg-uefa-women-champions-league-2026-27",
+      "content_type": "text/html; charset=utf-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\8b3928bbf79e6481.body",
+      "bytes": 669578,
+      "sha256": "5586d1108868738aaa46fa93da6664cb53ee191ef12ca68fbc6372a29c792a60"
+    },
+    {
+      "url": "https://www.vfl-wolfsburg.de/newsdetails/news-detail/detail/news/vom-punkt-gestoppt",
+      "related_ids": [
+        "P-255"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:04.366360+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.vfl-wolfsburg.de/newsdetails/news-detail/detail/news/vom-punkt-gestoppt",
+      "content_type": "text/html; charset=utf-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\05ed9bc142a45e12.body",
+      "bytes": 475505,
+      "sha256": "d154ffb2f6d67868e0b6c19d6efb3d8fe06d0dd2db64e0ecf657865c36ca2d0e"
+    },
+    {
+      "url": "https://www.uefa.com/womenschampionsleague/news/02a9-217d330f6fd3-67b535229a8f-1000--women-s-champions-league-third-qualifying-round-inter-pari/",
+      "related_ids": [
+        "P-256"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:05.176661+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "retrieval_status": "FETCH_FAILED",
+      "error": "TimeoutError: The read operation timed out"
+    },
+    {
+      "url": "https://bulfc.co.ug/results/",
+      "related_ids": [
+        "P-341"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:05.621417+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://bulfc.co.ug/results/",
+      "content_type": "text/html; charset=UTF-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\cc1064eb3d04ff02.body",
+      "bytes": 166226,
+      "sha256": "7cc6053be0db7c45f4a7c9d9dbaba44baf40731b26f0e29bfbb81e595400b448"
+    },
+    {
+      "url": "https://www.totalcorner.com/team/view/151826",
+      "related_ids": [
+        "P-341"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:05.822721+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 403,
+      "retrieval_status": "HTTP_ERROR_BODY_NOT_EVIDENCE",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\68c778791c3b3a7c.body",
+      "bytes": 5569,
+      "sha256": "4c300a42026ca407051f22a1065705032039bc0fc16b58d616fa932b653f5c65"
+    },
+    {
+      "url": "https://www.aiscore.com/tournament-bhutan-premier-league/59gklzi36gu37xd",
+      "related_ids": [
+        "P-418"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:05.881876+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 403,
+      "retrieval_status": "HTTP_ERROR_BODY_NOT_EVIDENCE",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\d4ef4d796d6f4ef8.body",
+      "bytes": 5614,
+      "sha256": "b29449a2669fbbe157cdcbc5cde40fe866c89b2f4ecc0689ec378bb477882aeb"
+    },
+    {
+      "url": "https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/md1-al-ain-fc-uae-4-0-al-nassr-club-ksa",
+      "related_ids": [
+        "P-430"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:06.174648+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/md1-al-ain-fc-uae-4-0-al-nassr-club-ksa",
+      "content_type": "text/html; charset=utf-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\90e18ddcea80feab.body",
+      "bytes": 8495,
+      "sha256": "74c796594e821a8f70cd5c935b6ebf7077f8461693c1ffcf48ad6b97b46b92aa"
+    },
+    {
+      "url": "https://www.futbol24.com/match/2026/10/04/international/International/Friendly/2026/Kyrgyzstan/vs/Lebanon",
+      "related_ids": [
+        "P-537"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:06.763607+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.futbol24.com/match/2026/10/04/international/International/Friendly/2026/Kyrgyzstan/vs/Lebanon",
+      "content_type": "text/html;charset=utf-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\38f8c5355248f83f.body",
+      "bytes": 285280,
+      "sha256": "76164f1afc6edb808809d39b40c022ae1e4f3b30e8a7f46266cfb4c73f4cf003"
+    },
+    {
+      "url": "https://www.footballwebpages.co.uk/match/2026-2027/international-friendly/kyrgyz-republic/lebanon/593589",
+      "related_ids": [
+        "P-537"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:07.812645+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.footballwebpages.co.uk/match/2026-2027/international-friendly/kyrgyz-republic/lebanon/593589",
+      "content_type": "text/html;charset=UTF-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\7e9847bd0ea35e77.body",
+      "bytes": 45141,
+      "sha256": "b34885ae84dd1bbdc6d0a6fdd5c25f27c33c73b2ad4800f847accee8ec98765b"
+    },
+    {
+      "url": "https://www.matchendirect.fr/live-score/kirghizistan-liban_c7txqebls70jxpsnw0fpsh5hw.html?p=stats",
+      "related_ids": [
+        "P-537"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:08.439438+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.matchendirect.fr/live-score/kirghizistan-liban_c7txqebls70jxpsnw0fpsh5hw.html?p=stats",
+      "content_type": "text/html; charset=utf-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\c80bbebeae1d1a98.body",
+      "bytes": 307483,
+      "sha256": "3c2e103c460ff01c582fbc09df60fd5fbb7b9595a99297587ed940823ec429f9"
+    },
+    {
+      "url": "https://www.footboom1.com/en/football/game/kyrgyzstan-lebanon-2026-09-28",
+      "related_ids": [
+        "P-537"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:09.441062+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 403,
+      "retrieval_status": "HTTP_ERROR_BODY_NOT_EVIDENCE",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\c8eae5af791d707e.body",
+      "bytes": 5674,
+      "sha256": "105222db4577151a1255e2e656e022d6ec0a62404af1d292659b263eeed2493b"
+    },
+    {
+      "url": "https://www.365scores.com/football/match/friendly-international-570/kyrgyzstan-lebanon-5088-11295-570",
+      "related_ids": [
+        "P-537"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:09.637363+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://www.365scores.com/football/match/friendly-international-570/kyrgyzstan-lebanon-5088-11295-570",
+      "content_type": "text/html",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\e86084d0a147bba1.body",
+      "bytes": 71256,
+      "sha256": "8bddb7accbc61416fb1b2171ee510893df71734edfc70b34802192855833b918"
+    },
+    {
+      "url": "https://mts.kg/en/sport/",
+      "related_ids": [
+        "P-537"
+      ],
+      "retrieved_utc": "2026-10-08T04:10:09.787986+00:00",
+      "collection_independence": "UNKNOWN",
+      "purpose": "POST_EVENT_CANDIDATE_ONLY",
+      "field_admission": "NOT_ADMITTED",
+      "publication_scope": "LOCAL_ONLY",
+      "http_status": 200,
+      "resolved_url": "https://mts.kg/en/sport/",
+      "content_type": "text/html; charset=utf-8",
+      "retrieval_status": "BODY_RETAINED_NOT_FIELD_AUTHENTICATED",
+      "body_path": "C:\\Users\\danie\\Downloads\\Carryover Review - P126 P549 - 2026-10-08\\3ba6ad761f516a5e.body",
+      "bytes": 84675,
+      "sha256": "390b7cbfd715ab69cad8d578df91b6e4ed1dcf28284085146529c7bdc5b8e27a"
+    }
+  ],
+  "note": "Fresh HTTP bodies retain post-event custody only. No original issue receipt, independence or target statistic is inferred. Bodies remain local publisher evidence."
+}

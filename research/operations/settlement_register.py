@@ -25,4 +25,12 @@ def selected(root):
             if not r.get(key): raise ValueError('Incomplete settlement carryover: '+r['canonical_id']+':'+key)
         if r.get('performance_eligible') is not False:
             raise ValueError('Historical settlement admission cannot be inferred from register')
+    reservations=manifest.get('local_reservations', [])
+    reserved_ids=[r.get('local_id') for r in reservations]
+    if len(reserved_ids)!=len(set(reserved_ids)) or set(reserved_ids)&set(ids):
+        raise ValueError('Local reservation duplicated or counted as reviewed canonical event')
+    for r in reservations:
+        if r.get('status')!='LOCAL_ONLY_PENDING_IMPORT' or not all(r.get(k) for k in
+                ('native_event_id','tracking_alias','source_path','source_sha256','next_local_working_id')):
+            raise ValueError('Incomplete local-only reservation')
     return {**config,'manifest':manifest}
