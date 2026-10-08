@@ -1,0 +1,37 @@
+## P-552 — Cairns Taipans vs Brisbane Bullets — APPENDED SETTLEMENT / RETROSPECTIVE
+
+**Original P-ID and alias:** `P-552`, `LOCAL-20261008-P-552-NBL-CNS-BRI`; **canonical mapping:** `PENDING_IMPORT` (do not renumber). Native event ID: `NOT_AUTHENTICATED`.
+
+**R1. Original forecast.** Original research issue time: `2026-10-08T19:35:49+11:00`. Original state `LATE_START_UNVERIFIED_PREGAME_ONLY; NOT_CERTIFIED`. The immutable rankings and probabilities were:
+
+| Rank | Exact originally issued proposition (operator-neutral interpretation) | p_card | Sporting disposition |
+|---:|---|---:|---|
+| 1 | Combined UNDER 188.5 full-game points including OT | 62.85% | **WIN** |
+| 2 | Brisbane Bullets +2.5 full-game points including OT | 51.95% | **LOSS** |
+| 3 | Cairns Taipans −2.5 full-game points including OT | 48.05% | **WIN** |
+| 4 | Combined OVER 188.5 full-game points including OT | 37.15% | **LOSS** |
+
+**R2. Final event.** Cairns 97–91 Brisbane (final, no documented OT). Sporting winner: **Cairns Taipans**. Margin: Cairns +6 points. Combined scoring/game total: **188**. NBL full-game scoreboard final, 40-minute regulation indicated by competition report; no OT in sourced final. Source: Official NBL report: https://league.nbl.com.au/news/snakes-hold-out-bullets-in-cairns.
+
+**R3. Contract settlement.** In the original ranked order, **WIN, LOSS, WIN, LOSS**; 2 WIN / 2 LOSS / 0 PUSH / 0 VOID / 0 NO_ACTION. This is the result of literal completed-sporting endpoints, not a named bookmaker/operator adjudication. Independent issue-time retirement/OT/walkover documentation is not present; no historic certification can be inferred.
+
+**R4. Rank diagnostics.** Rank 1: **WIN**; Rank 2: **LOSS**; Hit@2: **1**; Wins@2: **1/2**; binary relevance NDCG@2 (four original rows as candidate set): **0.6131**. Top-two contracts remain dependent rows.
+
+**R5. Winner call.** Issued `Cairns Taipans` at `p_card=54.00%` versus winner `Cairns Taipans`: **CORRECT**. Original probability status `UNCALIBRATED_ANALYST_SCENARIO`.
+
+**R6. Spread/total/line assessment.** NBL full-game scoreboard final, 40-minute regulation indicated by competition report; no OT in sourced final. The literal line boundaries in the R1 table—not alternative or interpolated lines—determine each binary sporting grade. Complementary markets must never be counted as independent matches.
+
+**R7. Expected vs realised.** The relatively restrained total finished at 188, just inside the 188.5 Under. Cairns’ home-court and star execution secured the winner call.
+
+**R8. Missed/underweighted mechanism.** Brisbane +2.5 failed: McVeigh’s late creation and Cairns’ shot-making built a six-point victory. A one-point model separation understated the realized margin; the winning Under was fragile at the boundary.
+
+**R9. Source/timing.** Original timing status: `LATE_START_UNVERIFIED_PREGAME_ONLY; NOT_CERTIFIED`. The final was collected **only for this subsequent settlement**; original prediction text is immutable. Official competition final from Official NBL report confirms completed sporting endpoint. Missing issue-time proof of actual start, independent contemporaneous evidence, named-operator retirement/action rules and certified model scope remains open.
+
+**R10. Process/error taxonomy.** `TIMING_UNVERIFIED`; `SOURCE_CUSTODY_INCOMPLETE`; `OPERATOR_RULE_NOT_ATTESTED`; `UNCALIBRATED_PROBABILITIES`; `NOT_PERFORMANCE_ELIGIBLE`; plus `VARIANCE` / `FEATURE` / `RANKING` as appropriate. Sporting grade and process qualification are distinct.
+
+**R11. Testable learning hypothesis.** Backtest NBL endgame margin/total joint residuals conditional on scores within three points during the final two minutes, foul rates and possession pace. **Status: `PROPOSED_NOT_TESTED`.** Use independent H0 data and prospective shadow cohorts, not D0 forecasts, for fitted model parameters.
+
+**R12. Disposition.** `PROPOSE_EXPERIMENT` (`PROPOSED_NOT_TESTED`); local sporting outcome settled, **certification/issue-time/operator evidence unresolved**. Keep `P-552` in future local reconciliation until canonical import and independent process review.
+
+---
+

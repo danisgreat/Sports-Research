@@ -1,0 +1,202 @@
+{
+  "schema": "canonical-settled-mini-import-v1",
+  "mode": "CANONICAL_SETTLED_MINI_IMPORT",
+  "date_melbourne": "2026-10-09",
+  "base_head_before_import": "1ffbd9f52c63926bf7b1f5df9796e37477c1e9a3",
+  "allocator": {
+    "next_id_before": "P-550",
+    "next_id_after": "P-557",
+    "method": "research.operations.log_card commit (transactional allocator)"
+  },
+  "active_combined_log": "prediction logs/PREDICTION_LOG_COMBINED_7.md",
+  "inputs": {
+    "LOCAL_ID_MAPPING.md": {
+      "bytes": 7752,
+      "sha256": "5721650db9e20f4e3d2ffd9ae904636fae0e47881e3dd8450a2e01b536edc28f"
+    },
+    "PREDICTION_MINI_RUNNING_LOG_P-551_ONWARD_FROZEN.md": {
+      "bytes": 175096,
+      "sha256": "fc1c3b4592b1df5e8ac2a9abbabb9f5945b124cf493d62e686ab59360e3f0415"
+    },
+    "PREDICTION_MINI_SETTLED_P-550_P-556.md": {
+      "bytes": 561737,
+      "sha256": "62447b56fcc75c41695b5b59909a5e1ede610c885d1b3fab736eeae2e005bfe3"
+    },
+    "RECONCILIATION_INVENTORY.csv": {
+      "bytes": 46601,
+      "sha256": "30a39dff6e9ce9c1bfaf8cda26e3dfe1e4145124b7afb5c3c17bcded5934a4c1"
+    },
+    "SETTLEMENT_MANIFEST.json": {
+      "bytes": 5160,
+      "sha256": "65d3f3601a54aa5e67b6f4a631bf8ea57f310de564cd712566289bdde7ee85eb"
+    },
+    "SETTLEMENT_SOURCES.md": {
+      "bytes": 3035,
+      "sha256": "edf51f7ad444b75bec6243da1731049c533185b7571357b9b1e5c7890cc1847c"
+    },
+    "UNRESOLVED_CARRYOVER.md": {
+      "bytes": 85594,
+      "sha256": "4d5a0042b119a3ba8b28de2f2c833ef09373e91449b5fef5026c098961e357da"
+    },
+    "VERIFICATION_REPORT.md": {
+      "bytes": 2178,
+      "sha256": "b46599169698028e2707277184eab44f1879558d0a37c5d9544572879ecf79a9"
+    }
+  },
+  "imported": {
+    "cards": 7,
+    "addenda": 7,
+    "canonical_ids": [
+      "P-550",
+      "P-551",
+      "P-552",
+      "P-553",
+      "P-554",
+      "P-555",
+      "P-556"
+    ],
+    "ledger_records_appended": 28,
+    "duplicates_created": 0,
+    "older_carryover_reimported": 0
+  },
+  "diagnostics": {
+    "events": 7,
+    "ranked_rows": 28,
+    "W": 15,
+    "L": 13,
+    "push_void_no_action": 0,
+    "rank1_wins": 4,
+    "rank2_wins": 3,
+    "hit_at_2": 5,
+    "wins_at_2": 7,
+    "wins_at_2_denominator": 14,
+    "ndcg_at_2_mean": 0.5161638846807798,
+    "winner_calls_correct": 4,
+    "winner_calls_total": 7
+  },
+  "cards": [
+    {
+      "canonical_id": "P-550",
+      "local_id": "P-550",
+      "tracking_handle": "LOCAL-20261008-P-550-NHL-EDM-ANA",
+      "event_key": "NHL:2026:nhl-2026020055:2026-10-07",
+      "league": "NHL",
+      "native_event_id": "2026020055",
+      "card_transaction_id": "8ed8360cd6874113889b8a3a2cb37548",
+      "card_source_sha256": "4b4d50ae43825f1ef2e17906b251383369615a59fec24c92c2bf38d69d348a67",
+      "card_projection_sha256": "8bf66c3aa39e40bd223db5d2463fec03d7df9e0f14f55785f8901d6a26dceaf0",
+      "card_committed_record_sha256": "4e3960ae564cd60bcbc21bbd2f2166845de337c2ce0c1ab8e69b2ecdd18a269d",
+      "addendum_transaction_id": "70bcf3b4ea384a2c81d35d929ba6880f",
+      "addendum_source_sha256": "e1dadc88d45430412793596427583e24769ba9ad982bf053e63b238ae051cf73",
+      "addendum_projection_sha256": "388fa2a49c7eba83c846795e5497b4a4a11a8bd3c1da758104c90ea951082a10",
+      "addendum_committed_record_sha256": "8911e3e7378e5aca74396c9879e0a9f3d27fd96e5b6d95dc5edfe56c4692bb33"
+    },
+    {
+      "canonical_id": "P-551",
+      "local_id": "P-551",
+      "tracking_handle": "LOCAL-20261008-P-551-ATP-SHANGHAI-VALLEJO-ROYER",
+      "event_key": "ATP:2026:Shanghai Masters:Vallejo vs Royer:2026-10-08",
+      "league": "ATP",
+      "native_event_id": "",
+      "card_transaction_id": "e273ac29ce46472293fe61c5801d011e",
+      "card_source_sha256": "80149a8f7c868acdb7e4ca13c605a7e91c658b5b59a92c54e52d5561bd7e87f9",
+      "card_projection_sha256": "e11757e097b4eb50d153d1073707b9d134399f4e0dcdcfc120bab8c5a5ee4af0",
+      "card_committed_record_sha256": "11356c78c5063d99c018936a3389c62a675fa2f63d7fc0c70560a88f3728cbbb",
+      "addendum_transaction_id": "f0bc3ebbcf7e4a9abab17586277fcd93",
+      "addendum_source_sha256": "fa1bc8ec8e9c4c6982260d5da36ebb41a2a614e80e469f473d6b49ce0c19f04c",
+      "addendum_projection_sha256": "0c564c67fc70a26159a1ba87883825acfc0685dd85926bcd76bc9157e4a43388",
+      "addendum_committed_record_sha256": "108cb7c56de352477c18168f27d677421bf44eb070608a0631f69bcde0e4441a"
+    },
+    {
+      "canonical_id": "P-552",
+      "local_id": "P-552",
+      "tracking_handle": "LOCAL-20261008-P-552-NBL-CNS-BRI",
+      "event_key": "NBL:2026:Cairns Taipans vs Brisbane Bullets:2026-10-08",
+      "league": "NBL",
+      "native_event_id": "",
+      "card_transaction_id": "95d71f0c38db4988b90793099f3f7a1c",
+      "card_source_sha256": "af8d6cdc1de24292667b5d3b42d9be5d51e910509a9f3e6d5da08bdc5b2d6927",
+      "card_projection_sha256": "b352ba1b317ec16deab9e36fd24b243f23b195906a038b3d8a821ff2e2135c57",
+      "card_committed_record_sha256": "268e564173a63a913c11a41dda0059d80b4094e1474d41b367da35520c129628",
+      "addendum_transaction_id": "600c7397da40424c8d30f9ab4bf41628",
+      "addendum_source_sha256": "0f881bae9cbb78c7ce7d61b62984ea319f4337e1edef396e228b6b13dc7a8c4d",
+      "addendum_projection_sha256": "f301305ed5ab172377db58726240f59e35a2dfd96109c41b0eb624eeee5556b6",
+      "addendum_committed_record_sha256": "63c57572564c79f1cd8daa766dc593402eafb8c443dc590aae2fb714123db17d"
+    },
+    {
+      "canonical_id": "P-553",
+      "local_id": "P-553",
+      "tracking_handle": "LOCAL-20261008-P-553-BP-KOB-CHJ",
+      "event_key": "B.LEAGUE:2026:506439:2026-10-08",
+      "league": "B.LEAGUE",
+      "native_event_id": "506439",
+      "card_transaction_id": "4e569abc482a49a6aba2c6fdc50a5c89",
+      "card_source_sha256": "85d11f80b1f087ecbd55a7b6c1671a670404b7abf94b11ad2cfaff03db0ae429",
+      "card_projection_sha256": "580abc4c8a83c5e56713b95b341f86dfefb7665da35ecdd75e0f3aeabcd8f276",
+      "card_committed_record_sha256": "70ba263cdddb8e8702bcb620ac0acb228ab90303c5874fe648beec772602a987",
+      "addendum_transaction_id": "4ef199df497348b9a385b622db46a0a2",
+      "addendum_source_sha256": "1d54ecb2e78b4cd65e1230b28c6783312ffa3eb569553939efb033e6229b6a79",
+      "addendum_projection_sha256": "35272d374ca153c2c45f56d877d17d01b7a8d63fabeb0b9858a0cbf3c62204f1",
+      "addendum_committed_record_sha256": "752c80145f8464961e7604841ccc6393d30912acd5c0ba01c9d8e1607041dbf7"
+    },
+    {
+      "canonical_id": "P-554",
+      "local_id": "P-554",
+      "tracking_handle": "LOCAL-20261008-P-554-BP-NAG-SHI",
+      "event_key": "B.LEAGUE:2026:506440:2026-10-08",
+      "league": "B.LEAGUE",
+      "native_event_id": "506440",
+      "card_transaction_id": "021a1a94651b49c4a06284b00de370ed",
+      "card_source_sha256": "9b9b6c6b6b37add3248f1b105f927b0238372ac8360d8332be87f2b64e772e93",
+      "card_projection_sha256": "04773f491c8a97cae0ea34001ac738978ae49561a58b9d9ee5c78e5267cad109",
+      "card_committed_record_sha256": "5c6e3b6c5f9e383158d45da048a81c6871cae86e49515e0098025804e353f4ab",
+      "addendum_transaction_id": "bb66303a7f854ead98dd799447b7c9e4",
+      "addendum_source_sha256": "5c6b1a54d1135792f3987bd48cd480fbf36ed2ac81ee569900928b6d22ab5de7",
+      "addendum_projection_sha256": "ebbdc02b4b7b975c95233bbb15593c44989c7bd98eba52da8a4ced8cd82bc4b5",
+      "addendum_committed_record_sha256": "c566319dd161bcd54f93c04b4b31e5a2e0051dbadaf6a8c21470990b08272805"
+    },
+    {
+      "canonical_id": "P-555",
+      "local_id": "P-555",
+      "tracking_handle": "LOCAL-20261008-P-555-ATP-SHA-KOP-BER",
+      "event_key": "ATP:2026:Shanghai Masters:Kopriva vs Bergs:2026-10-08",
+      "league": "ATP",
+      "native_event_id": "",
+      "card_transaction_id": "d19bb87e291d481b92862507fe7fac23",
+      "card_source_sha256": "ac6f79a1faa3361b4687ea9e259356e4b8a7173d7452540787cfbf9fd0dcd6aa",
+      "card_projection_sha256": "4ad99769889aa884569fde598baf689a899068f5e3bfcabb4ea837cebb167ccd",
+      "card_committed_record_sha256": "8717fabea1ac9c49113794461a7737d108622ac8aee65787cd465c9ab8cdf449",
+      "addendum_transaction_id": "f737aa3925c143878b277c1642503aa9",
+      "addendum_source_sha256": "4bf6b413eb4dce4988750d88f7f80fbfd0e46d680daaf66101f0bf49f4bea1b0",
+      "addendum_projection_sha256": "3e606ff9ce414093c5eba123adb50a810d008a850bf2251a43d758f5405bd975",
+      "addendum_committed_record_sha256": "581a9b8e01c6d33efa4a28058a0189244f932c5fa17bfb2055e91db8961b3045"
+    },
+    {
+      "canonical_id": "P-556",
+      "local_id": "P-556",
+      "tracking_handle": "LOCAL-20261008-P-556-ATP-SHA-NOR-SVR",
+      "event_key": "ATP:2026:Shanghai Masters:Norrie vs Svrcina:2026-10-08",
+      "league": "ATP",
+      "native_event_id": "",
+      "card_transaction_id": "e9f58a571049490baf8275d6f59855aa",
+      "card_source_sha256": "07849fb2a1e410ba22f17474707ddccbf538e5d65e89253c9d08f1d915a76ac1",
+      "card_projection_sha256": "fb30db980c4dbb80e2b8b3545e56f4f9bdb0b82f73efd525ffe6b96bea15d4fb",
+      "card_committed_record_sha256": "d474488916cf2d6d93c3a5085695c26265ceede8aa21a708a739cfb8217d8d58",
+      "addendum_transaction_id": "63799b9554cc447db540fe6b94bc9bf3",
+      "addendum_source_sha256": "58193c14318ccfef5271cde92e50a3507520aa06e388c5cc5bfa1e05187fe4a5",
+      "addendum_projection_sha256": "037624e5cb8e7047a9436e342585f3f3e571492f125ec41f11ba45f38e75e235",
+      "addendum_committed_record_sha256": "dfa37198d6475ec5798908d9b7b4c3fddd76def69da11ff6aae5b7bfae57a18e"
+    }
+  ],
+  "independent_checks": {
+    "count": 163,
+    "passed": true
+  },
+  "write_scope": {
+    "original_forecast_bytes_rewritten": false,
+    "historical_grades_changed": false,
+    "model_or_method_changed": false,
+    "new_research_or_predictions": false,
+    "unrelated_files_changed": false
+  }
+}

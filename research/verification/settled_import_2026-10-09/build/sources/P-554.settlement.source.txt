@@ -1,0 +1,37 @@
+## P-554 — Nagasaki Velca vs Shinshu Brave Warriors — APPENDED SETTLEMENT / RETROSPECTIVE
+
+**Original P-ID and alias:** `P-554`, `LOCAL-20261008-P-554-BP-NAG-SHI`; **canonical mapping:** `PENDING_IMPORT` (do not renumber). Native event ID: `506440`.
+
+**R1. Original forecast.** Original research issue time: `2026-10-08T21:12:xx+11:00 (exact local issue timestamp not firmly normalized)`. Original state `LATE_OR_IN_PROGRESS_START_UNVERIFIED; NOT_CERTIFIED`. The immutable rankings and probabilities were:
+
+| Rank | Exact originally issued proposition (operator-neutral interpretation) | p_card | Sporting disposition |
+|---:|---|---:|---|
+| 1 | Shinshu Brave Warriors +4.5 full-game points including OT | 68.70% | **WIN** |
+| 2 | Combined UNDER 164.5 full-game points including OT | 51.70% | **WIN** |
+| 3 | Combined OVER 164.5 full-game points including OT | 48.30% | **LOSS** |
+| 4 | Nagasaki Velca −4.5 full-game points including OT | 31.30% | **LOSS** |
+
+**R2. Final event.** Nagasaki 74–71 Shinshu (official final). Sporting winner: **Nagasaki Velca**. Margin: Nagasaki +3 points. Combined scoring/game total: **145**. Official B.LEAGUE completed full game; margin +3 so Shinshu +4.5 wins while Nagasaki −4.5 loses. Source: Official B.LEAGUE game key 506440: https://www.bleague.jp/game_detail/?ScheduleKey=506440&tab=2.
+
+**R3. Contract settlement.** In the original ranked order, **WIN, WIN, LOSS, LOSS**; 2 WIN / 2 LOSS / 0 PUSH / 0 VOID / 0 NO_ACTION. This is the result of literal completed-sporting endpoints, not a named bookmaker/operator adjudication. Independent issue-time retirement/OT/walkover documentation is not present; no historic certification can be inferred.
+
+**R4. Rank diagnostics.** Rank 1: **WIN**; Rank 2: **WIN**; Hit@2: **1**; Wins@2: **2/2**; binary relevance NDCG@2 (four original rows as candidate set): **1.0000**. Top-two contracts remain dependent rows.
+
+**R5. Winner call.** Issued `Shinshu Brave Warriors` at `p_card=57.80%` versus winner `Nagasaki Velca`: **INCORRECT**. Original probability status `UNCALIBRATED_ANALYST_SCENARIO`.
+
+**R6. Spread/total/line assessment.** Official B.LEAGUE completed full game; margin +3 so Shinshu +4.5 wins while Nagasaki −4.5 loses. The literal line boundaries in the R1 table—not alternative or interpolated lines—determine each binary sporting grade. Complementary markets must never be counted as independent matches.
+
+**R7. Expected vs realised.** Nagasaki’s offensive limitations held the combined total to only 145. Shinshu +4.5 covered despite Shinshu losing outright; cushion and winner are distinct endpoints.
+
+**R8. Missed/underweighted mechanism.** The model favored Shinshu outright based on its four-game scoring/rebounding edge, underweighting Nagasaki’s home/defensive ability to eke out a three-point victory. No evidence supports retroactive availability changes.
+
+**R9. Source/timing.** Original timing status: `LATE_OR_IN_PROGRESS_START_UNVERIFIED; NOT_CERTIFIED`. The final was collected **only for this subsequent settlement**; original prediction text is immutable. Official competition final from Official B.LEAGUE game key 506440 confirms completed sporting endpoint. Missing issue-time proof of actual start, independent contemporaneous evidence, named-operator retirement/action rules and certified model scope remains open.
+
+**R10. Process/error taxonomy.** `TIMING_UNVERIFIED`; `SOURCE_CUSTODY_INCOMPLETE`; `OPERATOR_RULE_NOT_ATTESTED`; `UNCALIBRATED_PROBABILITIES`; `NOT_PERFORMANCE_ELIGIBLE`; plus `VARIANCE` / `FEATURE` / `RANKING` as appropriate. Sporting grade and process qualification are distinct.
+
+**R11. Testable learning hypothesis.** Evaluate B.PREMIER home-court and roster-strength priors against four-game early-season rebounding/FTA differences in a forward-chaining backtest. **Status: `PROPOSED_NOT_TESTED`.** Use independent H0 data and prospective shadow cohorts, not D0 forecasts, for fitted model parameters.
+
+**R12. Disposition.** `PROPOSE_EXPERIMENT` (`PROPOSED_NOT_TESTED`); local sporting outcome settled, **certification/issue-time/operator evidence unresolved**. Keep `P-554` in future local reconciliation until canonical import and independent process review.
+
+---
+

@@ -1,0 +1,38 @@
+## P-556 — Cameron Norrie vs Dalibor Svrčina — APPENDED SETTLEMENT / RETROSPECTIVE
+
+**Original P-ID and alias:** `P-556`, `LOCAL-20261008-P-556-ATP-SHA-NOR-SVR`; **canonical mapping:** `PENDING_IMPORT` (do not renumber). Native event ID: `NOT_AUTHENTICATED`.
+
+**R1. Original forecast.** Original research issue time: `2026-10-08T22:45:51+11:00`. Original state `START_UNVERIFIED; NOT_CERTIFIED`. The immutable rankings and probabilities were:
+
+| Rank | Exact originally issued proposition (operator-neutral interpretation) | p_card | Sporting disposition |
+|---:|---|---:|---|
+| 1 | OVER 21.5 total completed match games | 64.31% | **WIN** |
+| 2 | Dalibor Svrčina +3.5 aggregate match games | 54.73% | **WIN** |
+| 3 | Cameron Norrie −3.5 aggregate match games | 45.27% | **LOSS** |
+| 4 | UNDER 21.5 total completed match games | 35.69% | **LOSS** |
+
+**R2. Final event.** Svrčina beat Norrie 6–3, 3–6, 6–4 (three sets). Sporting winner: **Dalibor Svrčina**. Margin: Svrčina +2 aggregate games (15–13). Combined scoring/game total: **28**. Official tournament confirms three completed sets and 28 games; Svrčina won two games more in aggregate. Source: Official Rolex Shanghai Masters: https://en.rolexshanghaimasters.com/en/scores/results.
+
+**R3. Contract settlement.** In the original ranked order, **WIN, WIN, LOSS, LOSS**; 2 WIN / 2 LOSS / 0 PUSH / 0 VOID / 0 NO_ACTION. This is the result of literal completed-sporting endpoints, not a named bookmaker/operator adjudication. Independent issue-time retirement/OT/walkover documentation is not present; no historic certification can be inferred.
+
+**R4. Rank diagnostics.** Rank 1: **WIN**; Rank 2: **WIN**; Hit@2: **1**; Wins@2: **2/2**; binary relevance NDCG@2 (four original rows as candidate set): **1.0000**. Top-two contracts remain dependent rows.
+
+**R5. Winner call.** Issued `Cameron Norrie` at `p_card=70.57%` versus winner `Dalibor Svrčina`: **INCORRECT**. Original probability status `UNCALIBRATED_ANALYST_SCENARIO`.
+
+**R6. Spread/total/line assessment.** Official tournament confirms three completed sets and 28 games; Svrčina won two games more in aggregate. The literal line boundaries in the R1 table—not alternative or interpolated lines—determine each binary sporting grade. Complementary markets must never be counted as independent matches.
+
+**R7. Expected vs realised.** The model’s extended/deciding-set branch was realized; its top two ranked propositions both won because Svrčina won a three-set contest.
+
+**R8. Missed/underweighted mechanism.** The nominal favourite Norrie lost outright. The hard-Elo gap and serve advantage were not sufficient to rule out the qualifier’s return and competitive upside.
+
+**R9. Source/timing.** Original timing status: `START_UNVERIFIED; NOT_CERTIFIED`. The final was collected **only for this subsequent settlement**; original prediction text is immutable. Official competition final from Official Rolex Shanghai Masters confirms completed sporting endpoint. Missing issue-time proof of actual start, independent contemporaneous evidence, named-operator retirement/action rules and certified model scope remains open.
+
+**R10. Process/error taxonomy.** `TIMING_UNVERIFIED`; `SOURCE_CUSTODY_INCOMPLETE`; `OPERATOR_RULE_NOT_ATTESTED`; `UNCALIBRATED_PROBABILITIES`; `NOT_PERFORMANCE_ELIGIBLE`; plus `VARIANCE` / `FEATURE` / `RANKING` as appropriate. Sporting grade and process qualification are distinct.
+
+**R11. Testable learning hypothesis.** Quantify Elo-expected vs actual ATP hard-court upsets after qualifier match workload, conditioning on pre-match serve/return strengths, using untouched seasons. **Status: `PROPOSED_NOT_TESTED`.** Use independent H0 data and prospective shadow cohorts, not D0 forecasts, for fitted model parameters.
+
+**R12. Disposition.** `PROPOSE_EXPERIMENT` (`PROPOSED_NOT_TESTED`); local sporting outcome settled, **certification/issue-time/operator evidence unresolved**. Keep `P-556` in future local reconciliation until canonical import and independent process review.
+
+---
+
+

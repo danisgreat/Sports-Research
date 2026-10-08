@@ -1,0 +1,78 @@
+## P-555 — TENNIS / ATP SHANGHAI MASTERS — Vít Kopřiva vs Zizou Bergs — 2026-10-08
+
+**LOCAL_WORKING_P_ID:** `P-555` | **Alias:** `LOCAL-20261008-P-555-ATP-SHA-KOP-BER` | **CANONICAL_MAPPING:** `PENDING_IMPORT` (repository next-ID snapshot `P-550`; P-550..P-554 retained locally) | **Record type:** `LOCAL_UNIMPORTED_EVENT`.
+
+**Research/issue timestamp:** `2026-10-08T22:34:33+11:00` Australia/Melbourne (AEDT, UTC+11); **event time:** Thursday 8 October 2026, fourth scheduled match on Grandstand 2, not-before time unverified; user estimate 21:30 AEST = 22:30 AEDT. **Timing:** `LATE_OR_START_UNVERIFIED`, `NOT_PERFORMANCE_ELIGIBLE`; exact first point/time unverified. Official tournament page showed event `VS` when checked; that is not affirmative evidence of no play. Observed in-match stats, points, games, sets and result information were excluded. **No settlement or retrospective.**
+
+**Method/control:** `MDS-2026.10.01-v8.0` / `CR-2026.10.08-R3`; GitHub main HEAD `1ffbd9f52c63926bf7b1f5df9796e37477c1e9a3`; `RULES_TENNIS.md` §0. Tennis status `NO_DEMONSTRATED_SKILL`; **p_card status for every row:** `UNCALIBRATED_ANALYST_SCENARIO`; `SHADOW: NO_LANE` / `LEARNING_ONLY`; **source regime:** `SPORTS_ONLY / MARKET_BLIND`.
+
+### A. Event identity and contract gate
+
+- **Tournament/round:** 2026 Rolex Shanghai Masters ATP Masters 1000, men's singles Round 1/R128; neither player marked `(Q)` in official draw/schedule: main draw, not this event's qualifiers. **Court:** Grandstand 2, fourth match following Munar–Brooksby, Navone–Carreno Busta, Landaluce–Struff; no guaranteed exact start.
+- **Surface/format:** outdoor hard, best-of-three tiebreak sets; standard set tiebreak at 6–6 (third set not a match-tiebreak). Both players right-handed, two-handed backhands.
+- **Supplied literal contracts:** (1) `Kopriva +3.5` (interpreted full-match aggregate games +3.5), (2) `Bergs -3.5` (aggregate games), (3) `TOTAL GAMES OVER 22.5`, (4) `TOTAL GAMES UNDER 22.5`. ±3.5 set interpretation is invalid for best-of-three; games interpretation used with explicit operator verification pending.
+- **Operator retirement/walkover terms:** provider unknown -> `TE-P3 UNKNOWN_DEFINITION`; settlement after retirement may differ by operator; all model numbers conditional on normally completed match, not certified operator contract probabilities. Named bookmaker deliberately not accessed.
+- **Medical/withdrawal status:** neither withdrawn as of the consulted official listing, but that does **not** establish full fitness or a confirmed actual start. No independently confirmed current match-day injury, medical time-out or late withdrawal report. Precise actual on-court readiness `UNKNOWN`.
+
+### B. Dated numerical prior and current evidence
+
+| Pre-existing comparison | Vít Kopřiva | Zizou Bergs | Source/regime |
+|---|---:|---:|---|
+| Approx ATP singles ranking | 68 | 38–39 | ATP event/player listings; source timestamps vary |
+| Overall Elo | 1687.4 | 1781.6 | Tennis Abstract, last updated **28 Sep 2026** |
+| Hard Elo | 1634.1 | 1725.5 | Same, dated 28 Sep |
+| Recent hard-court serve points won | 60.4% | 65.0% | Tennis Abstract reported hard split, last-52 observation, mixed levels |
+| Recent hard-court return points won | 37.2% | 35.8% | Same; sample denominators not provided in public split |
+| Recent hard-court hold% | about 73.9% | 81.6% | Same, historical realised rates, not matchup-adjusted |
+| Hard-court ace rate (% service points) | 5.9% | 9.3% | Same; not aces/game |
+| Hard-court first serve in | 61.5% | 56.6% | Same |
+| Hard-court first serve points won | 66.8% | 74.4% | Same |
+| Hard-court second serve points won | 50.3% | 52.8% | Same |
+| Hard-court tiebreak records | 4–6 | 8–13 | Historical hard splits, very small and non-independent |
+
+- **Hard-surface Elo benchmark:** `P(Bergs win) = 1 / (1 + 10^(-91.4/400)) = 62.9%`; overall Elo analogue `63.2%`; neither rating current beyond 28 September. The model's 63.3% winner mass departs by less than 1 percentage point.
+- **Verified recent Kopřiva form:** lost to Alex Molčan in Beijing qualifying on 28 September 6–7(3), 6–2, 6–7(8); match involved 114 Kopřiva service points, 11 aces, 6 double faults; first serve 72/114, first-serve points 55/72, second-serve points 17/36, total 72/108 displayed serve points won with slight on-screen denominator inconsistencies in source; do not use that single match as baseline. Lost Denis Shapovalov 2–6,3–6 on 25 September, after beating Jia Hu 6–4,7–5 in Chengdu. Beijing entry was qualifying; Shanghai entry is main draw.
+- **Verified recent Bergs form:** Tokyo R32 loss to Jiří Lehečka 3–6, 7–6(3), 3–6 on 30 Sep/1 Oct event labelling, 104 recorded Bergs serve-point attempts with 60 first serves, 45/60 first-serve points won and 21/41 second-serve points won in Tennis.com display (minor consistency gap versus 104 total); 1 ace, 3 double faults; 0/2 break conversions and 12/14 holds. His September Davis Cup and multi-hour US Open matches indicate workload/variance, not an injury diagnosis. Approx rest one week since Tokyo, versus about ten days for Kopřiva since Beijing qualifying; travel from Tokyo or Beijing to Shanghai, precise arrival unverified.
+- **H2H:** two Challenger-level matches in March/July **2021** split 1–1, one on clay and one indoor. No tour-level H2H shown. Five-year-old lower-level H2H carries minimal weight due to evolved form/surface differences.
+- **Missing:** no audited per-match rolling service/return numerators and denominators for full comparable hard-court population, no first/second-serve opponent-adjusted full sample, no point-level current health confirmation, no provider retirement contract, no verified actual start time. `TE-P4` partially met with missingness; `TE-S2/S4` insufficient for calibrated fitting.
+
+### C. Single coherent best-of-three match/set/game tree
+
+- Tennis Abstract split input, equal-player pre-adjustment: `Bergs serve ≈ (65.0% + 100%-37.2%)/2 = 63.9%`; `Kopriva serve ≈ (60.4% + 100%-35.8%)/2 = 62.3%`. These are *not* independent point-level fitted rates; surfaces/levels differ and numerators unavailable.
+- **Scenario adjustment (explicitly subjective):** Bergs service point `p=0.641` (+0.2 percentage point); Kopřiva service point `p=0.614` (−0.9 percentage point after qualitative level adjustment toward ~63% Bergs winner Elo benchmark). Rates are analyst hypotheses, **not calibrated forecasts**; they imply exact hold probabilities Bergs `81.4%`, Kopřiva `76.4%`. Do not confuse with empirical hard-surface holds above.
+- Compute exact service-game hold from i.i.d. Bernoulli service points. Enumerate game-by-game set scores with alternating service and first-server 50/50, tiebreak at 6–6 with rotating serve and first point server equal to the opening server; enumerate first two sets and third only when split; aggregate both players' exact **completed-match** games. This single discrete score tree produces every row; no separately guessed handicaps/totals.
+- **Branch masses:** Bergs 2–0 `34.8%`; Bergs 2–1 `28.5%`; Kopřiva 2–0 `16.8%`; Kopřiva 2–1 `19.8%`; 3 sets `48.4%` versus reference men's BO3 35.8%. Mass `1.000000`.
+- Over 22.5 probability from 3-set branch `48.2%` of all match mass, from straight-set branch `10.4%`; at the 22.5 line the total is largely a deciding-set exposure.
+- **Representative leading-row-consistent scoreline:** Bergs wins **6–4, 7–6** -> **23 total games**, Bergs +3 games -> **Over 22.5 and Kopřiva +3.5 both WIN**, despite Bergs winning. It illustrates one path, not an exact-score recommendation or highest-probability exact scoreline.
+- **Sensitivity:** no levels adjustment `pB=.639, pK=.623` yields Bergs win 58.0%, Kopřiva +3.5 66.6%, Over 60.1%; stronger gap `pB=.646, pK=.609` yields Bergs win 68.0%, Kopřiva +3.5 57.0%, Over 57.1%. Top 2 order sensitive: narrow difference and scenario weakness explicit.
+- **Coherence checks:** `P(Kopriva +3.5)+P(Bergs -3.5)=1` and `P(Over22.5)+P(Under22.5)=1` for completed match; `P(Bergs -3.5)<P(Bergs win)`; no push at half-game lines. These rows are dependent, not four independent events.
+
+### D. Four ranked picks — conditional completed match, strongest to weakest
+
+| Rank | Exact issued proposition | `p_card` | Probability status | Pre-existing evidence | Principal failure route |
+|---|---|---:|---|---|---|
+| **1** | **Vít Kopřiva +3.5 aggregate games** | **61.5%** | `UNCALIBRATED_ANALYST_SCENARIO` | Three-set branch 48.4% and close straight sets; can cover while losing match. Bergs favourite Elo does not imply games cover. | Bergs serves first and breaks Kopřiva repeatedly, winning two sets with ≥4 aggregate-game advantage. |
+| **2** | **Total games OVER 22.5** | **58.6%** | `UNCALIBRATED_ANALYST_SCENARIO` | Both have recently played deciding sets; model projects near 48% three-set chance, and 7–6 sets elevate total. | Bergs straight-set control, e.g. 6–3,6–3; 20-game-or-less two-set outcome. |
+| **3** | **Total games UNDER 22.5** | **41.4%** | `UNCALIBRATED_ANALYST_SCENARIO` | Bergs superior hard Elo, first-serve quality and serve hold may produce relatively quick two-set win. | Extended sets/tiebreak(s) or a full third set. |
+| **4** | **Zizou Bergs -3.5 aggregate games** | **38.5%** | `UNCALIBRATED_ANALYST_SCENARIO` | Elo ~63% Bergs winner, stronger hard hold/serve; lopsided straight-set paths are live. | Kopřiva breaks often or takes a set, eroding the aggregate-game margin even in a Bergs match win. |
+
+**Most likely match winner:** **Zizou Bergs 63.3%**, Kopřiva `36.7%`, best-of-three completed-match endpoint. **Calibration:** none demonstrated. Confidence grade: **LOW**. No official retirement settlement representation certified. Both highest-ranked rows are vulnerable to the same Bergs straight-set domination mechanism; no claim of independent picks.
+
+### E. Sources, provenance and process gates
+
+1. Official Rolex Shanghai Masters October 8 court list (R128 / court / order): https://en.rolexshanghaimasters.com/en/scores/schedule?dayToDisplay=8
+2. Tennis Abstract weekly Elo table (as of 2026-09-28): https://tennisabstract.com/reports/atp_elo_ratings.html
+3. Tennis Abstract Bergs 2026 and hard-surface splits: https://www.tennisabstract.com/cgi-bin/player-classic.cgi?f=A2026qq&p=200267%2FZizou-Bergs
+4. Tennis Abstract Kopřiva recent hard split: https://www.tennisabstract.com/cgi-bin/player-classic.cgi?f=ACareerqq&p=200240%2FVit-Kopriva&q=HamadMedjedovic
+5. Tennis.com Molčan vs Kopřiva (28 Sep): https://www.tennis.com/tournaments/china-open-atp/matches/a-molcan-vs-v-kopriva-2026-09-28
+6. Tennis.com Lehečka vs Bergs (30 Sep): https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/j-lehecka-vs-z-bergs-2026-09-30
+7. Historical Challenger H2H (2021, secondary): https://www.aiscore.com/head-to-head/tennis/vit-kopriva-vs-zizou-bergs
+8. Additional event confirmation: https://www.tennis.com/tournaments/rolex-shanghai-masters/matches/v-kopriva-vs-z-bergs-2026-10-08
+9. Repo authority (READ ONLY): https://github.com/danisgreat/Sports-Research , main HEAD above; `RULES_TENNIS.md`, `METHOD.md`, `CURRENT_RULES.md`, `CARD_AND_LOG_TEMPLATES.md`, current control manifest, status and canonical ledger.
+
+**Gates:** TE-P1 PASS; TE-P2 PASS at schedule lookup only, no observed live confirmation; TE-P3 `UNKNOWN_DEFINITION`; TE-P4 PARTIAL/UNKNOWN CURRENT FITNESS; TE-P5 PASS dated 28 Sep. `SHADOW: NO_LANE`; source independence not audited, match start status UNVERIFIED. Not eligible for official performance certification.
+
+**No pre-match contamination:** No current match point/game/set scores or results used. No sportsbook/external market probabilities, prices or editorial tips used as model input. **No settlement, no retrospective, no historical-card alteration, no GitHub/Combined Log/canonical-ledger writes**. Working `P-555` is not yet a committed canonical ID.
+
+---
+

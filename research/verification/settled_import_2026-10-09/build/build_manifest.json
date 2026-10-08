@@ -1,0 +1,135 @@
+[
+ {
+  "id": "P-550",
+  "title": "ICE HOCKEY / NHL — Edmonton Oilers @ Anaheim Ducks — 2026-10-07 (Anaheim)",
+  "handle": "LOCAL-20261008-P-550-NHL-EDM-ANA",
+  "card_chars": [
+   63266,
+   81819
+  ],
+  "card_bytes": 18659,
+  "card_sha256": "4b4d50ae43825f1ef2e17906b251383369615a59fec24c92c2bf38d69d348a67",
+  "body_sha256": "1454007cf37dff76bff00ea8405f53192c63dcfc9e16b749a80399accfc9e4d8",
+  "settle_chars": [
+   176610,
+   180869
+  ],
+  "settle_bytes": 4279,
+  "settle_sha256": "e1dadc88d45430412793596427583e24769ba9ad982bf053e63b238ae051cf73",
+  "add_body_sha256": "f11e421a20ce84ba08914ce7bb8f69ebc1a7b06d2cf88b4069e1aa25d7e2bda1"
+ },
+ {
+  "id": "P-551",
+  "title": "TENNIS / ATP MASTERS 1000 SHANGHAI — Adolfo Daniel Vallejo vs Valentin Royer — 2026-10-08",
+  "handle": "LOCAL-20261008-P-551-ATP-SHANGHAI-VALLEJO-ROYER",
+  "card_chars": [
+   96971,
+   112450
+  ],
+  "card_bytes": 15516,
+  "card_sha256": "80149a8f7c868acdb7e4ca13c605a7e91c658b5b59a92c54e52d5561bd7e87f9",
+  "body_sha256": "64a95493908a891b6e061e540faea6001acff28e6807ba4d67ad94d0d2876c03",
+  "settle_chars": [
+   180869,
+   185087
+  ],
+  "settle_bytes": 4236,
+  "settle_sha256": "fa1bc8ec8e9c4c6982260d5da36ebb41a2a614e80e469f473d6b49ce0c19f04c",
+  "add_body_sha256": "53682add61caf188b035b84323adb2284ad2c06ceec7155c20167599b91ae65b"
+ },
+ {
+  "id": "P-552",
+  "title": "BASKETBALL / AUSTRALIA NBL27 — Cairns Taipans vs Brisbane Bullets — 2026-10-08",
+  "handle": "LOCAL-20261008-P-552-NBL-CNS-BRI",
+  "card_chars": [
+   112450,
+   126736
+  ],
+  "card_bytes": 14355,
+  "card_sha256": "af8d6cdc1de24292667b5d3b42d9be5d51e910509a9f3e6d5da08bdc5b2d6927",
+  "body_sha256": "86cbda831c1be35d58d982d8238386bac373f9ddcdff8211a9af28d31ab3fa18",
+  "settle_chars": [
+   185087,
+   189197
+  ],
+  "settle_bytes": 4128,
+  "settle_sha256": "0f881bae9cbb78c7ce7d61b62984ea319f4337e1edef396e228b6b13dc7a8c4d",
+  "add_body_sha256": "00bbd6fceb1c3a5a976a08631071b750376e53fa60950bf754ecc58da142e669"
+ },
+ {
+  "id": "P-553",
+  "title": "Kobe Storks vs Chiba Jets — B.PREMIER — 2026-10-08",
+  "handle": "LOCAL-20261008-P-553-BP-KOB-CHJ",
+  "card_chars": [
+   126736,
+   136402
+  ],
+  "card_bytes": 9719,
+  "card_sha256": "85d11f80b1f087ecbd55a7b6c1671a670404b7abf94b11ad2cfaff03db0ae429",
+  "body_sha256": "8baeb308dba97c356a2268d44dfd5762ee6a7073d12e84ff0df061736bec93d8",
+  "settle_chars": [
+   189197,
+   193294
+  ],
+  "settle_bytes": 4115,
+  "settle_sha256": "1d54ecb2e78b4cd65e1230b28c6783312ffa3eb569553939efb033e6229b6a79",
+  "add_body_sha256": "67510e325ceaeb472e46336029128e7837629a3a8b450804ebe26a5af0d2e59a"
+ },
+ {
+  "id": "P-554",
+  "title": "Nagasaki Velca vs Shinshu Brave Warriors — B.PREMIER — 2026-10-08",
+  "handle": "LOCAL-20261008-P-554-BP-NAG-SHI",
+  "card_chars": [
+   136402,
+   148178
+  ],
+  "card_bytes": 11844,
+  "card_sha256": "9b9b6c6b6b37add3248f1b105f927b0238372ac8360d8332be87f2b64e772e93",
+  "body_sha256": "e641c0d0d918fed6c314a209d4ddd171d6886cf859f992a1dd9e7a0e7ecef1fe",
+  "settle_chars": [
+   193294,
+   197495
+  ],
+  "settle_bytes": 4221,
+  "settle_sha256": "5c6b1a54d1135792f3987bd48cd480fbf36ed2ac81ee569900928b6d22ab5de7",
+  "add_body_sha256": "2f032af4e458bab1f1c642eccb106756c050db3101e7b62ea0958c92ca173b44"
+ },
+ {
+  "id": "P-555",
+  "title": "TENNIS / ATP SHANGHAI MASTERS — Vít Kopřiva vs Zizou Bergs — 2026-10-08",
+  "handle": "LOCAL-20261008-P-555-ATP-SHA-KOP-BER",
+  "card_chars": [
+   148178,
+   160028
+  ],
+  "card_bytes": 11951,
+  "card_sha256": "ac6f79a1faa3361b4687ea9e259356e4b8a7173d7452540787cfbf9fd0dcd6aa",
+  "body_sha256": "8ed4e2308000d2139c19d952805f3a8d75cccb3f7000a4f33e5a090cd456f95d",
+  "settle_chars": [
+   197495,
+   201503
+  ],
+  "settle_bytes": 4036,
+  "settle_sha256": "4bf6b413eb4dce4988750d88f7f80fbfd0e46d680daaf66101f0bf49f4bea1b0",
+  "add_body_sha256": "6187c09a64e0583d8730b2fedead101347c116105746340d5e01c0e168a5ffb9"
+ },
+ {
+  "id": "P-556",
+  "title": "TENNIS / ATP SHANGHAI MASTERS — Cameron Norrie vs Dalibor Svrčina — 2026-10-08",
+  "handle": "LOCAL-20261008-P-556-ATP-SHA-NOR-SVR",
+  "card_chars": [
+   160028,
+   171990
+  ],
+  "card_bytes": 12067,
+  "card_sha256": "07849fb2a1e410ba22f17474707ddccbf538e5d65e89253c9d08f1d915a76ac1",
+  "body_sha256": "6484698621d0c90048d2eb6148690e17b2db42e16b8f8591f35fcc02575c07a6",
+  "settle_chars": [
+   201503,
+   205519
+  ],
+  "settle_bytes": 4047,
+  "settle_sha256": "58193c14318ccfef5271cde92e50a3507520aa06e388c5cc5bfa1e05187fe4a5",
+  "add_body_sha256": "4d37b01a0e0dd269163c115777071e6bb4ae825f79e9a0547a298344339bf940"
+ }
+]
