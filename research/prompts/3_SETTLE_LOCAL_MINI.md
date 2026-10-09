@@ -14,9 +14,9 @@ Record the `main` HEAD SHA, then read:
 
 1. `METHOD.md` and `CURRENT_RULES.md`: Rules **T2** (only Rank 1 and Rank 2 count as wins), **R1** (a Rank-1 failure needs the eight-part deep retrospection) and the local-mini lifecycle.
 2. `SCORING_AND_VALIDATION.md` (SCV-2026.10.09-v4): top-two counting, evidence grades, PUSH/VOID handling.
-3. `CARD_AND_LOG_TEMPLATES.md`, section **Local mini format `mini-log-2`**.
+3. `CARD_AND_LOG_TEMPLATES.md`, section **Local mini format `mini-log-3`** (a `mini-log-2` mini is settled the same way; v3 cards add the fields used in sections 4 and 5 below).
 4. `research/prompts/examples/EXAMPLE_SETTLED_MINI.md`: the exact settlement structure to copy.
-5. `GAME_LOG_STATUS_CURRENT.md`: the repository's `Next canonical ID`, for the report.
+5. `CURRENT_STATE.md` and `GAME_LOG_STATUS_CURRENT.md`: the repository's `Next canonical ID`, for the report.
 6. The `RULES_*.md` file for each sport in the mini (endpoint, OT/extra-time, retirement and abandonment rules).
 
 Then read the **active local mini** in full, including every card, carryover and addendum.
@@ -49,6 +49,8 @@ For each event, research the final result from these sources, in order:
 3. an official structured statistics provider;
 4. independent high-quality corroboration.
 
+**Settlement SLA.** Settle each card within **72 hours** of its final. Open carryover must stay at or below 5 (`python -B -m research.operations.settlement_sla <mini>.md` reports breaches). A `mini-log-3` card names its exact settlement fields and provider (`Settlement fields`) and a `Capture due` time: capture those pages first, because corners, half-time, period and player pages rot within days. Retain what you capture (`python -B -m research.operations.evidence_snapshot store --kind capture --key P-NNN-<field> --file page.html --url <https url>`), or say in the Basis cell which page decided the row.
+
 Verify the identity and date, the final state, the score, regulation versus OT/ET/extras/shootout, the period/half/set/innings splits, and any statistic a proposition needs. Check retirement, abandonment, rain and DLS where relevant. Do not infer a missing statistic from the final score alone. If you can only bound it, use evidence grade **E** and state your confidence.
 
 ## 5. Settle every issued row (settle anyway)
@@ -69,6 +71,7 @@ Settle the **literal proposition as issued**, on the card's own endpoint. Each r
 | `X` | No admissible data exists; the row **must** be `VOID` |
 
 - **Settle anyway.** If details are missing, settle on the best evidence code above. Do not leave a terminal event unsettled.
+- **Contract definitions come from the card.** Where the sporting endpoint is known but the contract rule is not (retirement, listed pitcher, abandonment), apply the card's `Retirement rule`, `Listed-pitcher rule` or `Abandonment rule`. `FRAMEWORK_DEFAULT:` and `OPERATOR:` rules are applied as written and graded `OP`; `N/A` means the field cannot arise. Never invent a definition after the result is known, and never settle a row differently to make a pick look better.
 - **Only a non-terminal event stays open.** If the event is postponed, suspended or not yet played, write `**Card state:** PENDING_EVENT` and carry it forward. That status is reserved for events that have not finished. It is not for missing statistics.
 - Complementary rows (e.g. Over 5.5 and Under 7.5) are dependent outcomes of one event, not independent trials.
 
@@ -93,6 +96,8 @@ A winning pick can have poor process, and a losing pick can have sound process. 
 - **Process layer:** identity, timing state, source quality and independence, lineups and availability, point-in-time integrity, endpoint and contract definition, distribution and probability, and any addendum's late news.
 
 Record the process verdict in R9 and R10 as `Process: SOUND` or `Process: DEFICIENT — <what>`.
+
+For a `mini-log-3` card also check, and write in R9: whether the `Rank-1 gate` was `PASS` or `RANK1_UNSTABLE` (an unstable card is scored in its own cohort, and its Rank-1 loss still gets the deep retrospection); whether `Adjustment dependence` was `ADJUSTMENT_DEPENDENT` and the adjusted or unadjusted top two would have won; whether a `Regime flag` was set, applied by the register's multiplier, or ignored (`REGIME_IGNORED`); and whether the `Evidence snapshots` retained show what was knowable at the research time.
 
 ## 7. Write the settlement section
 
@@ -131,7 +136,7 @@ Then write **one settlement block per card and per carryover**, carryovers first
 **Top-two result:** `<TOP2_ALL_WON|TOP2_SPLIT|TOP2_ALL_LOST|VOID>` — <w> counted win(s) of <n> live top-two row(s). Rank 1: <grade>; Rank 2: <grade>.
 **Winner call:** <name from the card's Potential winner line>: `<CORRECT|INCORRECT|NOT_ISSUED|UNRESOLVED>`
 
-**R1. Original prediction.** …
+**R1. Original prediction.** Copy THIS card's Rank 1 and Rank 2 propositions and p_card verbatim ("Rank 1 <proposition> p_card …; Rank 2 …"). `python -B -m research.operations.settlement_lint addenda <settled mini>.md` fails an R1 that describes another card's ranking or repeats the text of a different card (the P-539 to P-545 refresh blocks repeated P-538's).
 **R2. Final event.** …
 **R3. Contract settlement.** …
 **R4. Rank diagnostics.** Rank 1 <grade>; Rank 2 <grade>; Hit@2 <0|1>; counted <w>/<n>; NDCG@2 <value, or n/a if any row is PUSH/VOID>.
@@ -238,7 +243,7 @@ Check each of these:
 - the pending list matches `UNRESOLVED_CARRYOVER.md`;
 - no GitHub write occurred.
 
-With the repository available locally, the user can run:
+With the repository available locally, the user can run (and `settlement_lint` is also run by CI on the active Combined Log):
 
 ```powershell
 py -3.14 -B -m research.operations.mini_log join "ORIGINAL_MINI/<frozen>.md" "SETTLEMENT_SECTION.md" --out "PREDICTION_MINI_SETTLED_<FIRST>_<LAST>.md"

@@ -367,18 +367,6 @@
       "leagues": [
         "NBL"
       ]
-    },
-    "fantasy_premierleague": {
-      "publisher": "Fantasy Premier League",
-      "access_mode": "EXCLUDED_FANTASY",
-      "allowed_url_prefixes": [],
-      "upstream_lineage_id": "EXCLUDED",
-      "independence_status": "UNKNOWN",
-      "parser_id": "EXCLUDED",
-      "endpoints": [],
-      "market_fields_possible": true,
-      "official": false,
-      "leagues": []
     }
   }
 }

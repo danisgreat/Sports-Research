@@ -4,7 +4,7 @@
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.09-v8.2 / CR-2026.10.09-R2. Requested cards normally arrive through the [local-mini lifecycle](#local-mini-format-mini-log-2) and the operator prompts in [research/prompts/](research/prompts/README.md). Requested research uses the following template and receives a canonical ID regardless of calibration. Later sections describe the separate frozen certified-issuer protocol; its gates do not block requested research.
+Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.09-v8.3 / CR-2026.10.09-R3. Requested cards normally arrive through the [local-mini lifecycle](#local-mini-format-mini-log-3) and the operator prompts in [research/prompts/](research/prompts/README.md). Requested research uses the following template and receives a canonical ID regardless of calibration. Later sections describe the separate frozen certified-issuer protocol; its gates do not block requested research.
 
 ## Requested research card — default workflow
 
@@ -26,6 +26,35 @@ The Proposition cell holds the exact proposition, line, period and endpoint. Bel
 ### Settlement with top-two counting and Rank-1 retrospection (from 2026-10-09)
 
 Grade every row W/L/PUSH/VOID on its sporting endpoint with an evidence grade (A owner, B structured provider, C best-available, E estimated bound, OP default rule, X no data → VOID). Count wins only for ranks 1–2 and print the card class (`TOP2_ALL_WON`/`TOP2_SPLIT`/`TOP2_ALL_LOST`/`VOID`). If Rank 1 lost, append the deep retrospection with all eight parts of Rule R1 (claim, what happened, distribution check, knowability, verdict, own-top-two counterfactual, failure class, proposed correction). The [2026-10-09 final settlement](research/verification/final_settlement_2026-10-09/REPORT.md) is the worked reference.
+
+## Local mini format `mini-log-3`
+
+`mini-log-3` is `mini-log-2` plus the fields and checks below. Everything in the [`mini-log-2` section](#local-mini-format-mini-log-2) (file layout, IDs, blocks, addenda, settlement, settlement folder) applies unchanged. The first line is `<!-- MINI-LOG-FORMAT: mini-log-3 -->`; `mini-log-2` minis already in progress remain valid and are finished in their own format (`mini_log.detect_version` reads the tag, and the [legacy examples](research/prompts/examples/legacy_mini_log_2/) are tested). The [golden mini](research/prompts/examples/EXAMPLE_ACTIVE_MINI.md) and its [settled copy](research/prompts/examples/EXAMPLE_SETTLED_MINI.md) are the reference; `research.operations.mini_log verify` and `research.operations.card_validator` enforce this section, and prompt 4 re-runs them on import.
+
+**Extra card metadata** (all required; `N/A`, `NONE` or `FRAMEWORK_DEFAULT:` are explicit values, never blanks):
+
+| Bullet | Value |
+|---|---|
+| `Distribution object` | `<family>_<method>_v<n> — <one-line parameters>`. One grid prices every row; the first token is the object's id. |
+| `Regime flags` | `NONE`, or comma-separated `FINALS_COMPRESSION`, `EARLY_SEASON`, `CUP_ROTATION`, `RULE_CHANGE:<name>`, taken from the measured table in `BASE_RATES_REGISTER.md` |
+| `Retirement rule`, `Listed-pitcher rule`, `Abandonment rule` | `N/A`, `FRAMEWORK_DEFAULT: <rule>` or `OPERATOR: <name>: <rule>` (GOV-04). Settlement applies the stated rule and grades such rows `OP`; it never invents one |
+| `Settlement fields` | The exact field each pick settles on, with `(provider: <name>)`. Corners, half-time, period and player rows require a named provider (SRC-02) |
+| `Capture due` | ISO 8601 with a UTC offset, after the scheduled start; a warning above 36 h. `capture_schedule` lists captures due and overdue |
+| `Evidence snapshots` | `sha256:<64 hex>@<ISO time with offset>` items separated by `; `, or `NONE` (warns). `evidence_snapshot verify-card` resolves each token to a stored receipt (SRC-03) |
+
+**Decision block and appendix.** The card body is `### Decision block` (at most 4096 bytes, target 2560) followed by `### Appendix` (sections `A1.`–`A9.`: identity, supplied contracts, evidence, distribution, priced ladder, adjustments, family checks, sources, integrity receipt). The decision block holds the `**Distribution:**` line, the pick table, and the bold lines `**P(Rank 1 and Rank 2 both lose):**`, `**Rank 1 − Rank 2 gap:**`, `**Rank-1 gate:**`, `**Adjustment dependence:**`, `**Supplied rows not selected:**` and `**Potential winner:**`.
+
+**One distribution.** Every pick row's `Probability status` reads `FROM_DISTRIBUTION:<distribution id>`; there is no `q` column; ranks are non-increasing in p_card; no `TO_FILL` placeholder survives.
+
+**Rank-1 gate** (provisional values from `runtime/config/selection_rules.json`): `**Rank-1 gate:** PASS|RANK1_UNSTABLE — p_card x%; best non-complementary alternative y%; margin z points`. It passes when p_card is at least 62% and the margin is at least 4 points; the validator recomputes the verdict from the stated numbers. A failing gate is allowed and routes the card to its own scoreboard cohort. Rank 2 is the remaining row with p_card of at least 58% that minimises the joint top-two failure probability; the validator warns above 35%.
+
+**Adjustments.** `**Adjustments:** NONE`, or the table `| Name | Target | Size | SD units | Prior basis |` with a basis of `fitted`, `archive_estimate` or `analyst_judgement`. If any adjustment exceeds 0.25 SD, print `**Unadjusted top two:** <rank 1>; <rank 2>` and set `**Adjustment dependence:**` to `ADJUSTMENT_DEPENDENT` exactly when that pair differs from the picks (the validator checks both directions).
+
+**Family rules** (from `selection_rules.json`, checked on the pick table): a first-half Over 0.5 is not Rank 1 below 72%; a baseball +1.5 is not Rank 1 below 65%; tennis games rows need the exact-tree distribution with a form shock; corners rows need a provider and a negative-binomial count distribution.
+
+**Re-forecast addendum.** A confirmed starter, goalie or quarterback change after the research time writes a dated `ADDENDUM` whose re-priced table is headed `| Rank | Proposition | p_reforecast |` (never the pick-table header). The card stays unchanged and is graded.
+
+**Settlement additions.** R1 of each settlement copies that card's own Rank 1 and Rank 2 (`settlement_lint` fails an R1 that describes another card's ranking). Settle within 72 hours of the final (`settlement_sla`); open carryover stays at or below 5.
 
 ## Local mini format `mini-log-2`
 

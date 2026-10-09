@@ -32,6 +32,17 @@ STEPS: list[tuple[str, list[str]]] = [
     ("experiments verify", ["-B", "-m", "research.experiments.runner", "verify"]),
     ("verify_rollover", ["-B", "-m", "research.operations.verify_rollover"]),
     ("verify_carryover_review", ["-B", "-m", "research.operations.verify_carryover_review"]),
+    ("scoreboard verify", ["-B", "-m", "research.operations.scoreboard", "verify"]),
+    ("regimes verify", ["-B", "-m", "research.operations.regimes", "verify"]),
+    ("cross_card verify", ["-B", "-m", "research.experiments.cross_card", "verify"]),
+    ("settlement_lint active", ["-B", "-m", "research.operations.settlement_lint", "active"]),
+    ("settlement_lint rank-log", ["-B", "-m", "research.operations.settlement_lint", "rank-log", "GAME_PREDICTION_RANK_LOG.csv"]),
+    ("registry_lint", ["-B", "-m", "research.operations.registry_lint"]),
+    ("reachability verify", ["-B", "-m", "research.operations.reachability", "verify"]),
+    ("evidence_snapshot verify-store", ["-B", "-m", "research.operations.evidence_snapshot", "verify-store"]),
+    ("current_state verify", ["-B", "-m", "research.operations.current_state", "verify"]),
+    ("fit_runtime_models verify", ["-B", "-m", "research.operations.fit_runtime_models", "verify"]),
+    ("boosted_challenger verify", ["-B", "-m", "research.operations.boosted_challenger", "verify"]),
 ]
 
 

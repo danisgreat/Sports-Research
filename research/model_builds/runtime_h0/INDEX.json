@@ -1,0 +1,120 @@
+{
+ "not_fitted": {
+  "cricket": {
+   "engine": "CricketEngine",
+   "reason": "The archive holds scorecards, not ball-by-ball phase data; the engine needs per-phase run and wicket rates. Fit `CricketFormat` rates from Cricsheet ball-by-ball (research/src/download_cricsheet_odi.py) before any cricket row is priced."
+  },
+  "tennis": {
+   "engine": "TennisEngine",
+   "reason": "The archive holds match results only; the engine needs serve-point and return-point counts per player. Fit it from Sackmann-format match statistics (SRC-01 ATP/WTA adapter) with `TennisEngine.fit`, then `calibrate_form_sigma` on the population deciding-set rate."
+  }
+ },
+ "receipts": {
+  "afl": {
+   "beats_baseline_brier": {
+    "home_cover_train_median_margin": true,
+    "home_win": true,
+    "total_over_train_median": false
+   },
+   "engine": "AFLEngine",
+   "predictions": 300,
+   "receipt_sha256": "878adbff46c81de9b51dfd9afa7d6a90ddc5a6d1fcf65f28baa2cb6cd62809ac",
+   "status": "FITTED_RECEIPT",
+   "test_seasons": [
+    2024,
+    2025
+   ]
+  },
+  "epl": {
+   "beats_baseline_brier": {
+    "home_cover_train_median_margin": true,
+    "home_win": true,
+    "total_over_train_median": false
+   },
+   "engine": "SoccerEngine",
+   "predictions": 300,
+   "receipt_sha256": "98bae7cb0f050b34b5149a4d7c368fd18145be2c9e3bce82e7e6d3012c8c7a41",
+   "status": "FITTED_RECEIPT",
+   "test_seasons": [
+    2025,
+    2026
+   ]
+  },
+  "mlb": {
+   "beats_baseline_brier": {
+    "home_cover_train_median_margin": true,
+    "home_win": false,
+    "total_over_train_median": false
+   },
+   "engine": "BaseballEngine",
+   "predictions": 300,
+   "receipt_sha256": "1860926ff6ca7f9aaee2d42c4f20814cd8ff70569cca9c68f6dcb82adaa57bf3",
+   "status": "FITTED_RECEIPT",
+   "test_seasons": [
+    2025,
+    2026
+   ]
+  },
+  "nba": {
+   "beats_baseline_brier": {
+    "home_cover_train_median_margin": false,
+    "home_win": false,
+    "total_over_train_median": false
+   },
+   "engine": "BasketballEngine",
+   "predictions": 300,
+   "receipt_sha256": "c2eb1184efa7d65de92e930d7d6a1329eaa740136479202cf53b33e764bb8d5c",
+   "status": "FITTED_RECEIPT",
+   "test_seasons": [
+    2024,
+    2025
+   ]
+  },
+  "nfl": {
+   "beats_baseline_brier": {
+    "home_cover_train_median_margin": false,
+    "home_win": false,
+    "total_over_train_median": false
+   },
+   "engine": "NFLEngine",
+   "predictions": 300,
+   "receipt_sha256": "4ea7e33a02e55a7ac43a7129fc586d9f87b33301e9f7c3a69e8317105dd060fa",
+   "status": "FITTED_RECEIPT",
+   "test_seasons": [
+    2024,
+    2025
+   ]
+  },
+  "nhl": {
+   "beats_baseline_brier": {
+    "home_cover_train_median_margin": false,
+    "home_win": false,
+    "total_over_train_median": false
+   },
+   "engine": "NHLEngine",
+   "predictions": 300,
+   "receipt_sha256": "3597fa6ba29388ff28b58f79673a77f458c9ddefa548daadba08426df473e3c5",
+   "status": "FITTED_RECEIPT",
+   "test_seasons": [
+    2024,
+    2025
+   ]
+  },
+  "nrl": {
+   "beats_baseline_brier": {
+    "home_cover_train_median_margin": false,
+    "home_win": false,
+    "total_over_train_median": false
+   },
+   "engine": "NRLEngine",
+   "predictions": 300,
+   "receipt_sha256": "56c83430e152d1b58f3e94237403bed0849b8f2a5d320c0a557a564dc60d7f9d",
+   "status": "FITTED_RECEIPT",
+   "test_seasons": [
+    2024,
+    2025
+   ]
+  }
+ },
+ "schema": "runtime-h0-index-1"
+}

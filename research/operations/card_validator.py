@@ -106,8 +106,9 @@ def scan_markdown(path: Path) -> list[dict]:
     lines = text.replace('\r\n', '\n').split('\n')
     heading_at = []
     for i, line in enumerate(lines):
-        if re.match(r'^#{1,6}\s', line) and ID_RE.search(line):
-            heading_at.append((i, ID_RE.search(line)[0]))
+        found = ID_RE.search(line)
+        if re.match(r'^#{1,6}\s', line) and found:
+            heading_at.append((i, found[0]))
     results = []
     for start, header, rows in markdown_tables(text):
         id_col = next((n for n, h in enumerate(header) if h.lower() in {'card', 'id', 'p-id', 'canonical id'}), None)

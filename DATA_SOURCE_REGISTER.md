@@ -7,9 +7,9 @@
 
 ## 1. Governance and Ingestion Principles
 
-1. **Immutable Raw Snapshots**: All external ingestion must write raw responses verbatim to `runtime/data/raw/<sport>/<provider>/<YYYY-MM-DD>/` accompanied by SHA-256 hash, retrieval timestamp (UTC), request payload/endpoint, and source version.
+1. **Immutable Raw Snapshots**: All external ingestion writes raw responses verbatim to `runtime/data/raw/<sport>/<provider>/<YYYY-MM-DD>/` with SHA-256, retrieval timestamp (UTC), endpoint and source version. The writer is `runtime/src/common/snapshots.py` (`write_snapshot`, `verify`, and the `register` command for hand-run exports such as the R bridges). The research pipeline's own fetched bodies and receipts live in `research/data/raw/source_snapshots/` and `research/data/source_receipts/` (`research/src/sources.py`). `runtime/data/` is created on first write; nothing is stored there until a job runs.
 2. **Point-in-Time Provenance**: Every feature derived from external sources must record `known_at` (the earliest time the underlying fact was publicly authoritative). A feature is strictly **missing** if `known_at > cutoff_at`.
-3. **No Direct Python R-Dependencies**: R-based ingestion wrappers (`fitzRoy`, `nrlR`) execute as isolated batch CLI scripts outputting normalized Parquet tables. No `rpy2` bindings are permitted in core prediction runtimes.
+3. **No Direct Python R-Dependencies**: R-based ingestion wrappers (`runtime/r_ingestion/afl_fitzroy.R`, `runtime/r_ingestion/nrl_nrlr.R`) execute as isolated, manually run batch scripts outputting normalized Parquet tables to `runtime/data/canonical/<sport>/`; no scheduler runs them yet, so their output is registered as a hashed snapshot after each run. No `rpy2` bindings are permitted in core prediction runtimes.
 4. **Market Blindness**: Model fitting, feature engineering, and core probability generation are strictly independent of betting odds or market sentiment. Market snapshot prices are quarantined to `runtime/data/market/` for post-calibration value analysis only.
 
 ---

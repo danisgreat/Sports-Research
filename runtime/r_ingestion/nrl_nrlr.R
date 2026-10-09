@@ -1,6 +1,7 @@
 # NRL nrlR standalone ingestion script
 # Pulls match results and play statistics from nrlR and exports clean Parquet tables.
-# Run via Rscript without Python rpy2 coupling.
+# Run via Rscript without Python rpy2 coupling. Register the output afterwards:
+#   python -B -m runtime.src.common.snapshots register runtime/data/canonical/nrl/nrl_matches.parquet --sport nrl --provider nrlr --endpoint fetch_results
 
 suppressPackageStartupMessages({
   if (!requireNamespace("remotes", quietly = TRUE)) {
@@ -17,7 +18,7 @@ suppressPackageStartupMessages({
 })
 
 args <- commandArgs(trailingOnly = TRUE)
-output_dir <- ifelse(length(args) > 0, args[1], "data/h0/nrl")
+output_dir <- ifelse(length(args) > 0, args[1], "runtime/data/canonical/nrl")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 cat("Fetching NRL match data...\n")

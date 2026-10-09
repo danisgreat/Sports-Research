@@ -1,0 +1,276 @@
+{
+ "body": {
+  "__class__": "runtime.src.sports.afl.engine:AFLEngine",
+  "state": {
+   "_structures": {},
+   "_warnings": [],
+   "conversion": 0.530535918887952,
+   "is_fitted": true,
+   "league": {
+    "__class__": "runtime.src.common.leagues:LeagueProfile",
+    "state": {
+     "extras": {
+      "goal_conversion": 0.531986,
+      "margin_excess_kurtosis": 0.377177,
+      "scoring_shots_dispersion_phi": 0.019431,
+      "scoring_shots_mean": 22.982287
+     },
+     "league": "AFL",
+     "margin_pmf": null,
+     "margin_sd": 41.0783216260109,
+     "mean_away": 80.49597423510467,
+     "mean_home": 87.73107890499195,
+     "n_games": 621,
+     "provenance": {
+      "archive_seasons": [
+       2023,
+       2024,
+       2025
+      ],
+      "builder": "league-profile-v1",
+      "source_files": {
+       "Previous Sports Results/AFL/AFL/2023/2023_games.csv": "bdac234d3675e50d3de54d4cf0f02dd4d4cb3b89c9ad4882b401383cbf648449",
+       "Previous Sports Results/AFL/AFL/2024/2024_games.csv": "5ed0d19583bd666d6b44ae153020bef971a1cb16eb0b0ea0bdb403db621b5716",
+       "Previous Sports Results/AFL/AFL/2025/2025_games.csv": "120a7dbc1056ee8ddf3be96e1feedded8b10b0283e10845a04b5b003b0e00070"
+      },
+      "stage": "regular"
+     },
+     "score_corr": -0.3282759663354315,
+     "seasons": {
+      "__tuple__": [
+       2023,
+       2025
+      ]
+     },
+     "sport": "afl",
+     "total_sd": 29.29860135127136
+    }
+   },
+   "margin_sd": 34.375750342636316,
+   "model": {
+    "__class__": "runtime.src.common.strengths:AttackDefenceModel",
+    "state": {
+     "att": {
+      "__ndarray__": [
+       0.019136328951088244,
+       0.11664661796793115,
+       0.02224268323625419,
+       0.013655252749651833,
+       -0.034012962951467,
+       -0.018176077776049463,
+       0.09368155059291057,
+       -0.005304999475883871,
+       -0.00048706547953454446,
+       -0.026610038368506908,
+       0.03471921908792964,
+       -0.16816711681913132,
+       0.04299483380377509,
+       -0.033844643474438586,
+       -0.06631423500513509,
+       0.0700318900660644,
+       -0.16556893213032597,
+       0.1054734575553689
+      ],
+      "dtype": "float64",
+      "shape": [
+       18
+      ]
+     },
+     "cv_folds": 4,
+     "cv_scores": {
+      "__dict__": [
+       [
+        0.3,
+        2.3782031404836177
+       ],
+       [
+        1.0,
+        2.3779973393767353
+       ],
+       [
+        3.0,
+        2.377417949530689
+       ],
+       [
+        10.0,
+        2.37549255608261
+       ],
+       [
+        30.0,
+        2.3708212688992214
+       ],
+       [
+        100.0,
+        2.3605613753705716
+       ],
+       [
+        300.0,
+        2.3598602165287597
+       ],
+       [
+        1000.0,
+        2.4235203284841726
+       ],
+       [
+        3000.0,
+        2.5660746937389276
+       ]
+      ]
+     },
+     "defn": {
+      "__ndarray__": [
+       0.016254830799119414,
+       -0.0653818448252958,
+       -0.014410309086959242,
+       -0.05830259558049113,
+       0.04834596860416456,
+       -0.059760768288628315,
+       -0.08023837845148883,
+       0.00149540104173612,
+       0.022727476503674165,
+       -0.0022590686111106104,
+       -0.08919526838350007,
+       0.18570011418763702,
+       -0.024700356402801844,
+       0.07465645919459696,
+       -0.022987970075465575,
+       -0.030125287292499543,
+       0.1669988317921304,
+       -0.06872147259431628
+      ],
+      "dtype": "float64",
+      "shape": [
+       18
+      ]
+     },
+     "games_played": {
+      "Adelaide": 113,
+      "Brisbane Lions": 113,
+      "Carlton": 113,
+      "Collingwood": 113,
+      "Essendon": 113,
+      "Fremantle": 113,
+      "Geelong": 113,
+      "Gold Coast": 113,
+      "Greater Western Sydney": 113,
+      "Hawthorn": 113,
+      "Melbourne": 113,
+      "North Melbourne": 113,
+      "Port Adelaide": 113,
+      "Richmond": 113,
+      "St Kilda": 113,
+      "Sydney": 113,
+      "West Coast": 113,
+      "Western Bulldogs": 113
+     },
+     "log_base": 3.082891537835726,
+     "log_home": 0.06928271618990604,
+     "min_games": 20,
+     "ridge": null,
+     "ridge_grid": {
+      "__tuple__": [
+       0.3,
+       1.0,
+       3.0,
+       10.0,
+       30.0,
+       100.0,
+       300.0,
+       1000.0,
+       3000.0
+      ]
+     },
+     "ridge_used": 300.0,
+     "teams": [
+      "Adelaide",
+      "Brisbane Lions",
+      "Carlton",
+      "Collingwood",
+      "Essendon",
+      "Fremantle",
+      "Geelong",
+      "Gold Coast",
+      "Greater Western Sydney",
+      "Hawthorn",
+      "Melbourne",
+      "North Melbourne",
+      "Port Adelaide",
+      "Richmond",
+      "St Kilda",
+      "Sydney",
+      "West Coast",
+      "Western Bulldogs"
+     ]
+    }
+   },
+   "sport_name": "afl",
+   "team_conversion": {
+    "Adelaide": 0.5372055990780147,
+    "Brisbane Lions": 0.533261423651995,
+    "Carlton": 0.5197775180729597,
+    "Collingwood": 0.532211050121161,
+    "Essendon": 0.5267993834926168,
+    "Fremantle": 0.522510448794752,
+    "Geelong": 0.5457381608488008,
+    "Gold Coast": 0.5214081783388105,
+    "Greater Western Sydney": 0.5504936504019269,
+    "Hawthorn": 0.5421237724054581,
+    "Melbourne": 0.519000137529501,
+    "North Melbourne": 0.551798477390983,
+    "Port Adelaide": 0.5139860027679126,
+    "Richmond": 0.5092156095802498,
+    "St Kilda": 0.5320602561618003,
+    "Sydney": 0.5354727355593126,
+    "West Coast": 0.528207802942854,
+    "Western Bulldogs": 0.5301251275767082
+   },
+   "total_sd": 28.16155023520819,
+   "unknown_team_policy": "league_average"
+  }
+ },
+ "content_sha256": "bc3861ae52d255374b9cdb28b092935cc4eec79473df78d119e65c64ae8eeea4",
+ "model_card": {
+  "code_sha256": "1651611e1f261ba8740c8eac846a5e9f86539f03facdfa556100a50b3bf9e75b",
+  "data_sha256": "749bf2739fc9816aee67a2daa9e10d75341c1a03371ee0e2a162542f84df7b7b",
+  "date_range": [
+   "2021-03-18",
+   "2025-08-27"
+  ],
+  "environment": {
+   "numpy": "2.5.2",
+   "python": "3.14.6",
+   "scipy": "1.18.1"
+  },
+  "metrics": {
+   "home_cover_train_median_margin": {
+    "calibration_slope": 1.0191291136469605,
+    "delta_brier": -0.026514130538717484,
+    "delta_brier_ci95": [
+     -0.04155769370843691,
+     -0.01063216705409457
+    ],
+    "n": 300
+   },
+   "home_win": {
+    "calibration_slope": 1.0785475125860189,
+    "delta_brier": -0.024856631564402043,
+    "delta_brier_ci95": [
+     -0.039385329442252995,
+     -0.009448986706139577
+    ],
+    "n": 297
+   },
+   "total_over_train_median": {
+    "calibration_slope": 0.3912071345824487,
+    "delta_brier": 0.005406182335617571,
+    "delta_brier_ci95": [
+     -0.002892034865397763,
+     0.013345873368298398
+    ],
+    "n": 300
+   }
+  },
+  "notes": "AFLEngine fitted on the last 5 seasons; see receipt"
+ },
+ "schema": "runtime-artifact-1"
+}

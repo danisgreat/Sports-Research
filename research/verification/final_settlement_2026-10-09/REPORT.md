@@ -36,7 +36,7 @@ Framework defaults applied under OP: a missing operator definition does not bloc
 
 ## Register pointer
 
-`research/current_settlement_register.json` still selects the hash-pinned 2026-10-08 register. `verify_rollover` requires `event_count == 65`, and `verify_carryover_review` requires the selection to equal its own snapshot, so moving the pointer needs verifier code changes. Under the user instruction that improvements are laid out but not implemented, those changes are left as GOV-01 in `FRAMEWORK_RETROSPECTIVE_2026-10-09.md`. This folder's `register.json` supersedes the old register for sporting settlement.
+`research/current_settlement_register.json` now selects this folder's `register.json` (kind `settled`, schema 2). The earlier 2026-10-08 carryover register is not lost: the pointer's `history` pins it by SHA-256, and `verify_carryover_review` and `verify_rollover` verify that snapshot through `settlement_register.pinned` and `in_lineage` instead of requiring it to be the current selection (GOV-01). A later settlement can therefore move the pointer again without touching a dated verifier.
 
 ## Per-record result
 

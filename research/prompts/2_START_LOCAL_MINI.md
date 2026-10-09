@@ -12,12 +12,13 @@ This task creates an empty mini. It performs **no** research, prediction, settle
 
 Read from `main` and record the HEAD commit SHA:
 
-1. `METHOD.md`: method, control revision, scoring version and active freeze (manifest name).
-2. `CURRENT_RULES.md`: Rules T2, R1 and P4 and the local-mini lifecycle.
-3. `CARD_AND_LOG_TEMPLATES.md`, section **Local mini format `mini-log-2`**.
-4. `GAME_LOG_STATUS_CURRENT.md`: the line `Next canonical ID: P-NNN` and the highest canonical ID.
-5. `research/current_combined_log.json`: the active Combined Log.
-6. `research/prompts/examples/EXAMPLE_ACTIVE_MINI.md`: the exact structure to copy.
+1. `CURRENT_STATE.md` (generated): method, control revision, scoring version, active freeze, **next canonical ID** and the active Combined Log.
+2. `METHOD.md`: confirms the method, control revision, scoring version and active freeze (manifest name) that `CURRENT_STATE.md` states.
+3. `CURRENT_RULES.md`: Rules T2, R1 and P4 and the local-mini lifecycle.
+4. `CARD_AND_LOG_TEMPLATES.md`, section **Local mini format `mini-log-3`**.
+5. `GAME_LOG_STATUS_CURRENT.md`: the line `Next canonical ID: P-NNN` and the highest canonical ID (must equal `CURRENT_STATE.md`).
+6. `research/current_combined_log.json`: the active Combined Log.
+7. `research/prompts/examples/EXAMPLE_ACTIVE_MINI.md`: the exact structure to copy.
 
 If these sources disagree with each other, report the disagreement and stop.
 
@@ -33,7 +34,7 @@ If there is no previous mini, record `Highest local working P-ID before creation
 ## 3. Choose the first working ID
 
 ```text
-REPOSITORY_NEXT_ID_SNAPSHOT = <Next canonical ID from GAME_LOG_STATUS_CURRENT.md>
+REPOSITORY_NEXT_ID_SNAPSHOT = <Next canonical ID from CURRENT_STATE.md, equal to GAME_LOG_STATUS_CURRENT.md>
 PREVIOUS_LOCAL_HIGHEST      = <highest card ID in the previous mini, or NONE>
 FIRST_WORKING_ID            = max(REPOSITORY_NEXT_ID_SNAPSHOT, PREVIOUS_LOCAL_HIGHEST + 1)
 ```
@@ -56,7 +57,7 @@ Carry forward every card that the previous settlement left as `PENDING_EVENT`: p
 - **Sport:** `<…>`
 - **League:** `<…>`
 - **Carryover class:** `ACTIVE_SPORTING_CARRYOVER`
-- **Remaining requirement:** <why it is not terminal, and the new scheduled date if known>
+- **Remaining requirement:** <why it is not terminal, and the new scheduled date if known; it must be settled within 72 h of its final>
 
 <the original card's pick table, copied byte-for-byte: header, separator and four rows>
 
@@ -64,7 +65,7 @@ DO NOT SETTLE UNTIL THE EVENT IS TERMINAL.
 <!-- END CARRYOVER P-NNN -->
 ```
 
-Everything else from the previous mini is closed. Do not re-carry settled records, certification gaps or aliases.
+Everything else from the previous mini is closed. Do not re-carry settled records, certification gaps or aliases. Open carryover must stay at or below **5** (settlement SLA, `python -B -m research.operations.settlement_sla`); if the previous settlement left more, say so in the return block rather than silently carrying them.
 
 ## 5. Create the file
 
@@ -72,7 +73,7 @@ Path: `Mini Prediction Log - <FIRST_WORKING_ID> onward - <YYYY-MM-DD>/PREDICTION
 
 Copy the structure of `EXAMPLE_ACTIVE_MINI.md` exactly, without its cards and without its "FORMAT EXAMPLE" note:
 
-1. First line: `<!-- MINI-LOG-FORMAT: mini-log-2 -->`
+1. First line: `<!-- MINI-LOG-FORMAT: mini-log-3 -->`
 2. `# Prediction Mini Running Log — <FIRST_WORKING_ID> onward`
 3. `## A. Authority snapshot`: the two-column table with **every** field below, real values only:
    `Repository`, `Branch`, `GitHub HEAD SHA`, `Method`, `Control revision`, `Active manifest`, `Scoring version`, `Active Combined Log`, `Highest committed repository P-ID`, `Repository next-ID snapshot`, `Highest local working P-ID before creation`, `First working P-ID for this mini`, `Mini opened` (ISO 8601 with UTC offset), `Mode` = `LOCAL_MINI_STAGING`.

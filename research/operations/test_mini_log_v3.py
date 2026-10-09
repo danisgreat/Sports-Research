@@ -116,3 +116,9 @@ def test_no_snapshot_warns_and_new_minis_are_v3():
     assert report['errors'] == [] and any('no pregame evidence snapshot' in w for w in report['warnings'])
     assert mini_log.FORMAT_TAG.endswith('mini-log-3 -->')
     assert card_validator.decision_block(text) is not None
+
+
+def test_median_decision_block_is_reported_and_within_target():
+    report = mini_log.analyse(ACTIVE)
+    assert report['decision_block_median_bytes'] is not None and report['decision_block_median_bytes'] <= card_validator.DECISION_BLOCK_SOFT
+    assert mini_log.analyse((LEGACY / 'EXAMPLE_ACTIVE_MINI.md').read_bytes())['decision_block_median_bytes'] is None

@@ -1,6 +1,7 @@
 # AFL fitzRoy standalone ingestion script
 # Pulls match, player, and fixture tables from fitzRoy and exports clean Parquet tables.
-# Run via Rscript without Python rpy2 coupling.
+# Run via Rscript without Python rpy2 coupling. Register the output afterwards:
+#   python -B -m runtime.src.common.snapshots register runtime/data/canonical/afl/afl_matches.parquet --sport afl --provider fitzroy --endpoint fetch_results_afl
 
 suppressPackageStartupMessages({
   if (!requireNamespace("fitzRoy", quietly = TRUE)) {
@@ -14,7 +15,7 @@ suppressPackageStartupMessages({
 })
 
 args <- commandArgs(trailingOnly = TRUE)
-output_dir <- ifelse(length(args) > 0, args[1], "data/h0/afl")
+output_dir <- ifelse(length(args) > 0, args[1], "runtime/data/canonical/afl")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 cat("Fetching AFL match results...\n")

@@ -1,0 +1,199 @@
+{
+ "body": {
+  "__class__": "runtime.src.sports.soccer.engine:SoccerEngine",
+  "state": {
+   "_warnings": [],
+   "dixon_coles": {
+    "__class__": "runtime.src.common.dixon_coles:DixonColesEngine",
+    "state": {
+     "attacks": {
+      "__ndarray__": [
+       0.40370547356988273,
+       0.20813397012958473,
+       0.16420816509343308,
+       0.19192430364237648,
+       0.16316553278925786,
+       -0.20257225383788227,
+       0.2208874866348493,
+       -0.021107607102566657,
+       -0.07405024687660541,
+       0.03720286903987603,
+       -0.29714667851407206,
+       0.04856727495606441,
+       -0.26244934915493673,
+       0.4220516560000746,
+       0.07816589690381068,
+       0.4921071855267875,
+       0.2321634392013591,
+       0.2629226953373066,
+       -0.726308322165621,
+       0.07797086097831386,
+       -0.30681462810793725,
+       -0.4944261985098373,
+       -0.09347107578339638,
+       0.1520998187870523,
+       -0.44870819937967604,
+       0.015616251408577005,
+       -0.2436601134016454
+      ],
+      "dtype": "float64",
+      "shape": [
+       27
+      ]
+     },
+     "converged": true,
+     "defences": {
+      "__ndarray__": [
+       -0.4187674453927103,
+       0.07869111822895461,
+       0.11713339654023634,
+       0.13742655592935193,
+       0.08869115999449269,
+       0.43249944583878136,
+       0.07823860147162993,
+       0.10074809781526986,
+       0.03366130310735844,
+       0.09690049789242959,
+       0.5649405434554357,
+       0.1958967491271309,
+       0.4650064870189786,
+       0.03154459451264067,
+       0.5924127953623203,
+       -0.2475874518505893,
+       0.08005389191317405,
+       0.12418657000527303,
+       0.6168176982527416,
+       0.08881639279021859,
+       0.7703843593380165,
+       0.5498069794298613,
+       0.017810726713347203,
+       0.24782466969793632,
+       0.5382420531994047,
+       0.28113284545684064,
+       0.30640484541024626
+      ],
+      "dtype": "float64",
+      "shape": [
+       27
+      ]
+     },
+     "home_adv": 0.17594534113243693,
+     "l2_reg": 0.05,
+     "min_matches": 3,
+     "rho": -0.08635566601136231,
+     "team_idx": {
+      "Arsenal": 0,
+      "Aston Villa": 1,
+      "Bournemouth": 2,
+      "Brentford": 3,
+      "Brighton": 4,
+      "Burnley": 5,
+      "Chelsea": 6,
+      "Crystal Palace": 7,
+      "Everton": 8,
+      "Fulham": 9,
+      "Ipswich": 10,
+      "Leeds": 11,
+      "Leicester": 12,
+      "Liverpool": 13,
+      "Luton": 14,
+      "Man City": 15,
+      "Man United": 16,
+      "Newcastle": 17,
+      "Norwich": 18,
+      "Nott'm Forest": 19,
+      "Sheffield United": 20,
+      "Southampton": 21,
+      "Sunderland": 22,
+      "Tottenham": 23,
+      "Watford": 24,
+      "West Ham": 25,
+      "Wolves": 26
+     },
+     "teams": [
+      "Arsenal",
+      "Aston Villa",
+      "Bournemouth",
+      "Brentford",
+      "Brighton",
+      "Burnley",
+      "Chelsea",
+      "Crystal Palace",
+      "Everton",
+      "Fulham",
+      "Ipswich",
+      "Leeds",
+      "Leicester",
+      "Liverpool",
+      "Luton",
+      "Man City",
+      "Man United",
+      "Newcastle",
+      "Norwich",
+      "Nott'm Forest",
+      "Sheffield United",
+      "Southampton",
+      "Sunderland",
+      "Tottenham",
+      "Watford",
+      "West Ham",
+      "Wolves"
+     ],
+     "unknown_team": "league_average",
+     "xi": 0.002
+    }
+   },
+   "half_split": null,
+   "is_fitted": true,
+   "league": null,
+   "rho": null,
+   "sport_name": "soccer",
+   "unknown_team_policy": "league_average"
+  }
+ },
+ "content_sha256": "7964c82fc458ac8cad35186b6514f39271afb2b8935ae2a9a83228dbb0199852",
+ "model_card": {
+  "code_sha256": "1bf2568e50e465385e7e9c3e4861e7f75bd7a1352f3ce5d479b9246145ddd381",
+  "data_sha256": "24b4d612b23904f3da07fff2f0e78e33844385c36d861a1b59577026baab2b11",
+  "date_range": [
+   "2021-08-13",
+   "2026-05-24"
+  ],
+  "environment": {
+   "numpy": "2.5.2",
+   "python": "3.14.6",
+   "scipy": "1.18.1"
+  },
+  "metrics": {
+   "home_cover_train_median_margin": {
+    "calibration_slope": 0.9563675175218624,
+    "delta_brier": -0.02510966380302279,
+    "delta_brier_ci95": [
+     -0.04294616886980454,
+     -0.005891494460585464
+    ],
+    "n": 300
+   },
+   "home_win": {
+    "calibration_slope": 1.233301344654626,
+    "delta_brier": -0.03246651080666166,
+    "delta_brier_ci95": [
+     -0.05859910592512323,
+     -0.004800414553526388
+    ],
+    "n": 216
+   },
+   "total_over_train_median": {
+    "calibration_slope": 0.5696851240347105,
+    "delta_brier": 0.000310665544766775,
+    "delta_brier_ci95": [
+     -0.0072668318232370355,
+     0.009316914401946158
+    ],
+    "n": 300
+   }
+  },
+  "notes": "SoccerEngine fitted on the last 5 seasons; see receipt"
+ },
+ "schema": "runtime-artifact-1"
+}

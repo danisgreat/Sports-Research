@@ -1,10 +1,10 @@
 # Current operator prompts
 
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+Local working files govern; GitHub main publishes them, and the latest user instruction supersedes earlier GitHub-only prompts. The current ID, active log and freeze are in [CURRENT_STATE.md](CURRENT_STATE.md).
 
-**Current lifecycle prompts (CR-2026.10.09-R2):** the six operator prompts for starting a local mini, writing game cards, settling, canonical import, Combined Log rollover and the cohort retrospective are in [research/prompts/](research/prompts/README.md). They supersede the requested-event and settlement prompts below wherever the two differ.
+**Current lifecycle prompts (CR-2026.10.09-R3):** the six operator prompts for starting a local mini, writing game cards, settling, canonical import, Combined Log rollover and the cohort retrospective are in [research/prompts/](research/prompts/README.md) (format `mini-log-3`). They supersede the requested-event and settlement prompts below wherever the two differ.
 
-These prompts use MDS-2026.10.09-v8.2 / CR-2026.10.09-R2 (Rules T2, R1 and P4 in CURRENT_RULES.md). Requested research is delivered and canonically logged regardless of calibration; qualified numerical performance claims require their own evidence. Existing forecast text is retained.
+These prompts use MDS-2026.10.09-v8.3 / CR-2026.10.09-R3 (Rules T2, R1 and P4 in CURRENT_RULES.md). Requested research is delivered and canonically logged regardless of calibration; qualified numerical performance claims require their own evidence. Existing forecast text is retained.
 
 ## Daily sports-only research
 

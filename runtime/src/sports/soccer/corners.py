@@ -71,11 +71,11 @@ class CornersModel:
             totals.append(hc + ac)
             means_t.append(mu_h + mu_a)
             resid_h.append(hc - mu_h)
-        totals, means_t = np.array(totals), np.array(means_t)
-        self.phi = float(max(np.sum((totals - means_t) ** 2 - means_t) / np.sum(means_t ** 2), 0.0))
-        total_var = float(np.mean((totals - means_t) ** 2))
+        totals_a, means_a = np.array(totals), np.array(means_t)
+        self.phi = float(max(np.sum((totals_a - means_a) ** 2 - means_a) / np.sum(means_a ** 2), 0.0))
+        total_var = float(np.mean((totals_a - means_a) ** 2))
         team_var = float(np.mean(np.square(resid_h)))
-        mean_total = float(np.mean(means_t))
+        mean_total = float(np.mean(means_a))
         try:
             self.concentration = concentration_from_team_sd(mean_total, np.sqrt(total_var), np.sqrt(team_var))
         except ValueError:

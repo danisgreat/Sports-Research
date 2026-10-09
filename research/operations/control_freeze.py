@@ -2,6 +2,7 @@
 import re,sys
 from pathlib import Path
 from research.src import control_manifest as frozen
+from research.src.custody_text import CRLF_CUSTODY,custody_bytes
 ROOT=Path(__file__).resolve().parents[2]
 def controlled_bytes(path):
     """Normalize controlled runtime text, preserving raw evidence byte checks."""
@@ -11,6 +12,8 @@ def controlled_bytes(path):
     if runtime_text and path.suffix in {'.py','.json','.R','.toml','.txt'}:
         text=path.read_bytes().decode('utf-8-sig').replace('\r\n','\n').replace('\r','\n')
         return 'CRLF',text.replace('\n','\r\n').encode('utf-8')
+    if relative in CRLF_CUSTODY:
+        return 'RAW',custody_bytes(path,ROOT)        # the rank CSV is hashed over CRLF bytes on every platform (GOV-02)
     return frozen.normalization(path)
 def selected():
     text=(ROOT/'METHOD.md').read_text(encoding='utf-8-sig')
@@ -21,6 +24,9 @@ def selected():
         raise ValueError('METHOD needs exact active method/control/manifest')
     old=frozen.NAME;frozen.NAME=name[1];frozen.EXCLUDE=frozen.EXCLUDE-{old}|{frozen.NAME}
     frozen.APPEND_STORES=frozen.APPEND_STORES+('research/issued_research/','research/experiments/runs/')
+    # Generated or periodically refreshed state that every import / weekly probe rewrites; each has its own `verify` that regenerates and compares.
+    frozen.APPEND_STORES=frozen.APPEND_STORES+('research/scoreboard/','research/reachability/','research/data/raw/evidence/')
+    frozen.EXCLUDE=frozen.EXCLUDE|{'CURRENT_STATE.md'}
     from research.src.combined_log import active_log
     # The header and each later append have separate canonical custody.
     frozen.EXCLUDE=frozen.EXCLUDE|{active_log(ROOT).relative_to(ROOT).as_posix()}

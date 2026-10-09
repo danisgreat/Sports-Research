@@ -6,11 +6,13 @@ never becomes a passing check. Pinned acceptance/model code is not rewritten.
 from __future__ import annotations
 
 from datetime import datetime, timezone
+import hashlib
 import json
 from pathlib import Path
 from unittest.mock import patch
 
 from research.src import acceptance
+from research.src.custody_text import custody_bytes, windows_path
 from research.src.sources import verified_body
 from research.src.ledger import read_records
 from research.src.issue import CANONICAL_LEDGER, PART6
@@ -24,6 +26,8 @@ def compatible_body(receipt, root):
         receipt = {**receipt, 'response_sha256': receipt['content_sha256'],
                    'body_path': receipt['stored_snapshot_path'],
                    'source_url': receipt.get('url')}
+    if '\\' in str(receipt.get('body_path', '')):                                  # a Windows-recorded relative path, read on any platform
+        receipt = {**receipt, 'body_path': windows_path(receipt['body_path']).as_posix()}
     raw = verified_body(receipt, root)
     if 'response_bytes' in receipt and len(raw) != receipt['response_bytes']:
         raise ValueError('retained source body length mismatch')
@@ -67,8 +71,12 @@ def run():
             body_issues.append(f'SOURCE_BODY_INVALID:{path}:{type(exc).__name__}')
             return b''
 
+    def custody_sha(path):
+        # Parts 1-5 and the rank CSV were hashed over CRLF bytes; hash the same bytes on an LF checkout (GOV-02).
+        return hashlib.sha256(custody_bytes(Path(path))).hexdigest()
+
     try:
-        with patch.object(acceptance, 'verified_body', collect_body):
+        with patch.object(acceptance, 'verified_body', collect_body), patch.object(acceptance, 'sha', custody_sha):
             result = acceptance.run()
     except (OSError, ValueError, KeyError, TypeError) as exc:
         result = {'observed_utc': datetime.now(timezone.utc).isoformat(), 'valid': False,

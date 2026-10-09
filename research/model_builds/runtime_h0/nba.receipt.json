@@ -1,0 +1,124 @@
+{
+ "artifact": "nba.model.json",
+ "code_sha256": "950dc4cbaf61b109b88b94818a89a58d1a9f7890003eb0ada1ffb4444347c1bd",
+ "competition": "NBA",
+ "data": {
+  "files": 51,
+  "files_sha256": "13b594f560516d20967b12ba573a5aa6f3906c5b77e5de44ca8b58b4ab1bb857",
+  "seasons": [
+   1975,
+   2025
+  ]
+ },
+ "engine": "BasketballEngine",
+ "environment": {
+  "numpy": "2.5.2",
+  "python": "3.14.6"
+ },
+ "events_loaded": 55965,
+ "final_fit": {
+  "first_date": "2021-10-19",
+  "games": 6152,
+  "last_date": "2026-04-12"
+ },
+ "key": "nba",
+ "lines": {
+  "total_over": 227.5
+ },
+ "metrics": {
+  "home_cover_train_median_margin": {
+   "base_rate": 0.47333333333333333,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 50,
+   "brier_baseline": 0.24935912523812,
+   "brier_engine": 0.24691961949867183,
+   "calibration_intercept": -0.0004839022662260551,
+   "calibration_slope": 0.5735489328478204,
+   "calibration_slope_ci95": [
+    0.15628462787840894,
+    1.1211072031777591
+   ],
+   "delta_brier": -0.002439505739448178,
+   "delta_brier_ci95": [
+    -0.015027738690563532,
+    0.009602136682088988
+   ],
+   "delta_logloss": -0.0038252339477635733,
+   "delta_logloss_ci95": [
+    -0.03368331658613643,
+    0.02299487058066824
+   ],
+   "logloss_baseline": 0.6918650365692992,
+   "logloss_engine": 0.6880398026215356,
+   "n": 300
+  },
+  "home_win": {
+   "base_rate": 0.5566666666666666,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 50,
+   "brier_baseline": 0.24685487617086618,
+   "brier_engine": 0.24242965697818794,
+   "calibration_intercept": 0.1128698821926118,
+   "calibration_slope": 0.661112719233905,
+   "calibration_slope_ci95": [
+    0.2058533183968484,
+    1.2159749568766622
+   ],
+   "delta_brier": -0.0044252191926782425,
+   "delta_brier_ci95": [
+    -0.01924044642667167,
+    0.00920261487269758
+   ],
+   "delta_logloss": -0.008846939896012374,
+   "delta_logloss_ci95": [
+    -0.0377529913205023,
+    0.024115921793876817
+   ],
+   "logloss_baseline": 0.6868446143005789,
+   "logloss_engine": 0.6779976744045665,
+   "n": 300
+  },
+  "total_over_train_median": {
+   "base_rate": 0.5733333333333334,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 50,
+   "brier_baseline": 0.25127570782421366,
+   "brier_engine": 0.25022457197919856,
+   "calibration_intercept": 0.32224413460700896,
+   "calibration_slope": 0.5558906196929913,
+   "calibration_slope_ci95": [
+    0.05340760712060073,
+    1.0196698513227915
+   ],
+   "delta_brier": -0.0010511358450150943,
+   "delta_brier_ci95": [
+    -0.010688912167349802,
+    0.009877964287493372
+   ],
+   "delta_logloss": -0.0015556333615911466,
+   "delta_logloss_ci95": [
+    -0.022881255723917332,
+    0.01831997314771867
+   ],
+   "logloss_baseline": 0.695699252373038,
+   "logloss_engine": 0.6941436190114468,
+   "n": 300
+  }
+ },
+ "population": "regular-season games, de-duplicated by (date, home, away)",
+ "prediction_errors": {},
+ "predictions": 300,
+ "refits": 14,
+ "schema": "runtime-h0-receipt-1",
+ "seconds": 107.5,
+ "sport_dir": "Basketball",
+ "status": "FITTED_RECEIPT",
+ "test_seasons": [
+  2024,
+  2025
+ ],
+ "unknown_team_or_warning_rows": 0
+}

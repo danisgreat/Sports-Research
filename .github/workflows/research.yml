@@ -68,3 +68,23 @@ jobs:
       - name: Supplied carryover retrospective exhibit custody
         if: ${{ !cancelled() }}
         run: python -B -m research.operations.verify_carryover_review
+      - name: Scoreboard, regime table and cross-card experiment
+        if: ${{ !cancelled() }}
+        run: |
+          python -B -m research.operations.scoreboard verify
+          python -B -m research.operations.regimes verify
+          python -B -m research.experiments.cross_card verify
+      - name: Settlement, source registry and evidence lint
+        if: ${{ !cancelled() }}
+        run: |
+          python -B -m research.operations.settlement_lint active
+          python -B -m research.operations.settlement_lint rank-log GAME_PREDICTION_RANK_LOG.csv
+          python -B -m research.operations.registry_lint
+          python -B -m research.operations.reachability verify
+          python -B -m research.operations.evidence_snapshot verify-store
+          python -B -m research.operations.current_state verify
+      - name: Fitted runtime evidence receipts
+        if: ${{ !cancelled() }}
+        run: |
+          python -B -m research.operations.fit_runtime_models verify
+          python -B -m research.operations.boosted_challenger verify

@@ -105,9 +105,9 @@ class NRLEngine(BaseSportEngine):
         if len(games) < 100:
             raise InsufficientData(f"need at least 100 games to fit rugby league kicking and spread, got {len(games)}")
         self.model = AttackDefenceModel().fit(games)
-        t, g = np.array(tries), np.array(goals)
-        c = float(np.clip(np.cov(t, g)[0, 1] / t.var(ddof=1), 0.5, 0.99))      # goals rise with tries at the conversion rate
-        pg = float(max(g.mean() - c * t.mean(), 0.0))
+        tries_a, goals_a = np.array(tries), np.array(goals)
+        c = float(np.clip(np.cov(tries_a, goals_a)[0, 1] / tries_a.var(ddof=1), 0.5, 0.99))      # goals rise with tries at the conversion rate
+        pg = float(max(goals_a.mean() - c * tries_a.mean(), 0.0))
         self.kicking = NRLKicking(conversion_rate=c, penalty_goals=pg, field_goals=float(np.mean(extra_points)))
         total_res, margin_res = [], []
         for (home, away, _, _), rec in zip(games, records):

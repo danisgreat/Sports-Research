@@ -1,0 +1,124 @@
+{
+ "artifact": "nfl.model.json",
+ "code_sha256": "8bf29ff93c0ff1d0510c0b1817d2c78348ec67f4de1a3cf8c5097ed07c6b742b",
+ "competition": "NFL",
+ "data": {
+  "files": 106,
+  "files_sha256": "d36228e936225cee02f8f9ea9daafcf686d4fc5cb4b0cb75159b0aeef2cdc778",
+  "seasons": [
+   1920,
+   2025
+  ]
+ },
+ "engine": "NFLEngine",
+ "environment": {
+  "numpy": "2.5.2",
+  "python": "3.14.6"
+ },
+ "events_loaded": 17534,
+ "final_fit": {
+  "first_date": "2021-09-09",
+  "games": 1359,
+  "last_date": "2026-01-04"
+ },
+ "key": "nfl",
+ "lines": {
+  "total_over": 45.5
+ },
+ "metrics": {
+  "home_cover_train_median_margin": {
+   "base_rate": 0.49333333333333335,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 36,
+   "brier_baseline": 0.2499999846272172,
+   "brier_engine": 0.2426662562909878,
+   "calibration_intercept": 0.01855708308447872,
+   "calibration_slope": 0.8613522590345223,
+   "calibration_slope_ci95": [
+    0.3682610421326577,
+    1.472169958382079
+   ],
+   "delta_brier": -0.007333728336229417,
+   "delta_brier_ci95": [
+    -0.01686335709157386,
+    0.002768534424424934
+   ],
+   "delta_logloss": -0.015042549541322003,
+   "delta_logloss_ci95": [
+    -0.03714438001999441,
+    0.008002057547997033
+   ],
+   "logloss_baseline": 0.693147130334673,
+   "logloss_engine": 0.678104580793351,
+   "n": 300
+  },
+  "home_win": {
+   "base_rate": 0.5466666666666666,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 36,
+   "brier_baseline": 0.24801350695033914,
+   "brier_engine": 0.24079738365566017,
+   "calibration_intercept": 0.08052476707967811,
+   "calibration_slope": 0.8552126167442189,
+   "calibration_slope_ci95": [
+    0.3422271344197551,
+    1.575865293900294
+   ],
+   "delta_brier": -0.007216123294678967,
+   "delta_brier_ci95": [
+    -0.01812057133593472,
+    0.003963255133268157
+   ],
+   "delta_logloss": -0.014684219870704895,
+   "delta_logloss_ci95": [
+    -0.03883270773485694,
+    0.009032940136996162
+   ],
+   "logloss_baseline": 0.6891700848333248,
+   "logloss_engine": 0.6744858649626199,
+   "n": 300
+  },
+  "total_over_train_median": {
+   "base_rate": 0.5266666666666666,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 36,
+   "brier_baseline": 0.2502184315104751,
+   "brier_engine": 0.24595533920967777,
+   "calibration_intercept": 0.0474251884204688,
+   "calibration_slope": 0.7814088690436373,
+   "calibration_slope_ci95": [
+    0.07387483488428345,
+    1.6063257389771617
+   ],
+   "delta_brier": -0.004263092300797355,
+   "delta_brier_ci95": [
+    -0.0127475863779559,
+    0.004768845028939793
+   ],
+   "delta_logloss": -0.008635685512811686,
+   "delta_logloss_ci95": [
+    -0.026751906920965213,
+    0.00940139758464485
+   ],
+   "logloss_baseline": 0.6935838566091965,
+   "logloss_engine": 0.6849481710963848,
+   "n": 300
+  }
+ },
+ "population": "regular-season games, de-duplicated by (date, home, away)",
+ "prediction_errors": {},
+ "predictions": 300,
+ "refits": 10,
+ "schema": "runtime-h0-receipt-1",
+ "seconds": 31.0,
+ "sport_dir": "American Football",
+ "status": "FITTED_RECEIPT",
+ "test_seasons": [
+  2024,
+  2025
+ ],
+ "unknown_team_or_warning_rows": 0
+}

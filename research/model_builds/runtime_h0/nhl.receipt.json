@@ -1,0 +1,124 @@
+{
+ "artifact": "nhl.model.json",
+ "code_sha256": "67d97d16f976c3fe7b8238c09189ea04cc829aea4f28fc6bf3394aa4127079ec",
+ "competition": "NHL",
+ "data": {
+  "files": 50,
+  "files_sha256": "2bac6a24c5df0f1056cfcb359185bba02aef4f2e43445bf55ebf2811efb12f54",
+  "seasons": [
+   1975,
+   2025
+  ]
+ },
+ "engine": "NHLEngine",
+ "environment": {
+  "numpy": "2.5.2",
+  "python": "3.14.6"
+ },
+ "events_loaded": 52199,
+ "final_fit": {
+  "first_date": "2021-10-12",
+  "games": 6560,
+  "last_date": "2026-04-16"
+ },
+ "key": "nhl",
+ "lines": {
+  "total_over": 6.5
+ },
+ "metrics": {
+  "home_cover_train_median_margin": {
+   "base_rate": 0.32666666666666666,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 54,
+   "brier_baseline": 0.22007677866006062,
+   "brier_engine": 0.21760219644368836,
+   "calibration_intercept": -0.26527104880268393,
+   "calibration_slope": 0.6992525324500289,
+   "calibration_slope_ci95": [
+    0.02960740363289324,
+    1.3966104671216992
+   ],
+   "delta_brier": -0.0024745822163722564,
+   "delta_brier_ci95": [
+    -0.013267146296504802,
+    0.007460144434441908
+   ],
+   "delta_logloss": -0.0065681525826696285,
+   "delta_logloss_ci95": [
+    -0.030153866473035106,
+    0.017149190559071447
+   ],
+   "logloss_baseline": 0.6320671989486334,
+   "logloss_engine": 0.6254990463659638,
+   "n": 300
+  },
+  "home_win": {
+   "base_rate": 0.5566666666666666,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 54,
+   "brier_baseline": 0.2473537485738091,
+   "brier_engine": 0.23915587831161966,
+   "calibration_intercept": 0.0997856510532179,
+   "calibration_slope": 0.8964474222267266,
+   "calibration_slope_ci95": [
+    0.33264382132548403,
+    1.458460471017537
+   ],
+   "delta_brier": -0.008197870262189433,
+   "delta_brier_ci95": [
+    -0.01823762727790584,
+    0.0035685170179235075
+   ],
+   "delta_logloss": -0.016672615611876607,
+   "delta_logloss_ci95": [
+    -0.038790646667393416,
+    0.004929091432076852
+   ],
+   "logloss_baseline": 0.6878487143085767,
+   "logloss_engine": 0.6711760986967001,
+   "n": 300
+  },
+  "total_over_train_median": {
+   "base_rate": 0.4533333333333333,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 54,
+   "brier_baseline": 0.24776316890174988,
+   "brier_engine": 0.2534884526683878,
+   "calibration_intercept": -0.20449456953146442,
+   "calibration_slope": 0.19887068382252737,
+   "calibration_slope_ci95": [
+    -1.1510141514458796,
+    1.670282755117219
+   ],
+   "delta_brier": 0.005725283766637945,
+   "delta_brier_ci95": [
+    -0.0029433285001028995,
+    0.013040075288009528
+   ],
+   "delta_logloss": 0.011557263133804563,
+   "delta_logloss_ci95": [
+    -0.0063230511320016974,
+    0.028329515403241082
+   ],
+   "logloss_baseline": 0.6886660506211277,
+   "logloss_engine": 0.7002233137549323,
+   "n": 300
+  }
+ },
+ "population": "regular-season games, de-duplicated by (date, home, away)",
+ "prediction_errors": {},
+ "predictions": 300,
+ "refits": 14,
+ "schema": "runtime-h0-receipt-1",
+ "seconds": 63.9,
+ "sport_dir": "Ice Hockey",
+ "status": "FITTED_RECEIPT",
+ "test_seasons": [
+  2024,
+  2025
+ ],
+ "unknown_team_or_warning_rows": 2
+}

@@ -25,7 +25,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from research.operations import card_validator, top_two
+from research.operations import card_validator, settlement_lint, top_two
 
 ROOT = Path(__file__).resolve().parents[2]
 FORMAT_TAGS = {2: '<!-- MINI-LOG-FORMAT: mini-log-2 -->', 3: '<!-- MINI-LOG-FORMAT: mini-log-3 -->'}
@@ -184,12 +184,14 @@ def parse_card(block: dict, version: int = 2):
         warnings += v3_warnings
     gate_line = re.search(r'(?m)^\*\*Rank-1 gate:\*\*\s*(PASS|RANK1_UNSTABLE)\b', text)
     dependence_line = re.search(r'(?m)^\*\*Adjustment dependence:\*\*\s*(NONE|ADJUSTMENT_DEPENDENT)\b', text)
+    decision_text = card_validator.decision_block(text) if version >= 3 else None
     return {'id': block['id'], 'meta': meta, 'picks': picks, 'winner': winner[1] if winner else None,
             'joint_failure': joint_p, 'heading': heading[2] if heading else None, 'errors': errors, 'warnings': warnings,
             'version': version, 'rank1_gate': gate_line[1] if gate_line else None,
             'adjustment_dependence': dependence_line[1] if dependence_line else None,
             'distribution': card_validator.distribution_id(meta) if version >= 3 else None,
-            'regime_flags': meta.get('Regime flags') if version >= 3 else None}
+            'regime_flags': meta.get('Regime flags') if version >= 3 else None,
+            'decision_block_bytes': len(decision_text.encode('utf-8')) if decision_text else None}
 
 
 def parse_carryover(block: dict):
@@ -337,7 +339,11 @@ def analyse(raw: bytes):
                 errors.append(f'footer "{field}" is {footer.get(field)!r}, expected {value!r}')
         if footer.get('GitHub writes performed') not in ('NO', None):
             warnings.append('footer records GitHub writes; a local mini never writes to GitHub')
-    return {'cards': cards, 'carryovers': carry, 'addenda': addenda, 'settlements': settle, 'first_id': first,
+    sizes = sorted(c['decision_block_bytes'] for c in cards if c.get('decision_block_bytes'))
+    median_bytes = (sizes[len(sizes) // 2] if len(sizes) % 2 else (sizes[len(sizes) // 2 - 1] + sizes[len(sizes) // 2]) / 2) if sizes else None
+    if median_bytes and median_bytes > card_validator.DECISION_BLOCK_SOFT:
+        warnings.append(f'median decision block is {median_bytes:.0f} bytes; the target is {card_validator.DECISION_BLOCK_SOFT}')
+    return {'cards': cards, 'carryovers': carry, 'addenda': addenda, 'settlements': settle, 'first_id': first, 'decision_block_median_bytes': median_bytes,
             'highest_id': highest, 'next_id': expected_next, 'footer': footer, 'version': version,
             'errors': errors, 'warnings': warnings, 'sha256': sha(raw), 'bytes': len(raw)}
 
@@ -368,6 +374,9 @@ def parse_settlement(block: dict, original_picks):
         errors.append('missing settlement table | ' + ' | '.join(SETTLE_HEADER) + ' |')
         rows = []
     by_rank = {p['rank']: p for p in original_picks}
+    r1 = settlement_lint.r1_text(text)
+    if r1:
+        errors += [f'R1: {finding}' for finding in settlement_lint.check_r1(r1, {rank: p['proposition'] for rank, p in by_rank.items()})]
     for row in rows:
         if len(row) != len(SETTLE_HEADER):
             errors.append(f'settlement row has {len(row)} cells, expected {len(SETTLE_HEADER)}')
@@ -738,7 +747,7 @@ def main(argv=None):
             report = analyse(args.mini.read_bytes())
             result = {'passed': not report['errors'], 'cards': [c['id'] for c in report['cards']],
                       'carryovers': [c['id'] for c in report['carryovers']], 'addenda': [a['id'] for a in report['addenda']],
-                      'next_id': report['next_id'],
+                      'next_id': report['next_id'], 'decision_block_median_bytes': report['decision_block_median_bytes'],
                       'sha256': report['sha256'], 'errors': report['errors'], 'warnings': report['warnings']}
         elif args.command == 'join':
             outcome = join(args.frozen, args.section, args.out)

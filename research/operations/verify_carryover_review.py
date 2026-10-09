@@ -4,7 +4,8 @@ import argparse
 import json
 from research.operations.review_packet import sha, require, validate_packet
 from research.operations.log_card import next_id, research_cards, pending
-from research.operations.settlement_register import selected
+from research.operations.settlement_register import in_lineage, pinned, selected
+from research.src.custody_text import custody_bytes
 from research.src.combined_log import active_log, custody
 from research.src.issue import CANONICAL_LEDGER
 from research.src.ledger import read_records
@@ -37,7 +38,7 @@ def run(local_bodies=False):
     require(settled[packet['original_prefix_bytes']:] in projection, 'Supplied supplement not retained exactly')
     require(b'## P-550' not in projection, 'Excluded local card was imported')
     for item in opening['files']:
-        raw = (ROOT/item['path']).read_bytes()
+        raw = custody_bytes(ROOT/item['path'])
         if item['path'] == load('publication_mapping.json')['active_log']:
             raw = raw[:item['bytes']]
         require(len(raw) == item['bytes'] and sha(raw) == item['sha256'], 'Earlier combined-log bytes changed: ' + item['path'])
@@ -51,7 +52,9 @@ def run(local_bodies=False):
     require(carry['event_count'] == 65 and len(carry['review_addenda']['records']) == 65, 'Current review coverage differs')
     for name, digest in carry['review_addenda']['artifact_sha256'].items():
         require(sha((OUT/name).read_bytes()) == digest, 'Bound review artifact changed: ' + name)
-    require(selected(ROOT)['manifest'] == carry, 'Current selected carryover differs')
+    carry_path = 'research/verification/carryover_review_2026-10-08/carryover.json'
+    require(in_lineage(ROOT, carry_path), 'Reviewed register left the settlement-register lineage')
+    require(pinned(ROOT, carry_path) == carry, 'Pinned reviewed register differs from the review snapshot')
     proposals = load('improvement_proposals.json')
     require(proposals['source_review_sha256'] == sha((OUT/'event_reviews.json').read_bytes()), 'Proposal source changed')
     require(len(proposals['records']) == len(packet['reviews']), 'Proposal coverage differs')

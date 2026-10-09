@@ -22,7 +22,7 @@ Run a rollover between mini imports, never while a mini import is half-done.
 1. `git fetch`, check out the current `main` and record its 40-hex HEAD SHA. The working tree must be clean.
 2. On Windows, use the normal checkout with `core.autocrlf=true`. On Linux or macOS, create a worktree with `git -c core.autocrlf=true worktree add <dir> main` and work there. Parts 1–5 and the root CSV are custody-hashed as CRLF. **Never** set `core.autocrlf` with `git config`, because the setting leaks into the shared configuration.
 3. Read:
-   - `METHOD.md`, `CURRENT_RULES.md` and `GAME_LOG_STATUS_CURRENT.md`;
+   - `CURRENT_STATE.md` (generated), `METHOD.md`, `CURRENT_RULES.md` and `GAME_LOG_STATUS_CURRENT.md`;
    - `research/current_combined_log.json` and `research/src/combined_log.py`;
    - `research/operations/rollover.py` and `research/operations/log_card.py`;
    - `research/README.md`;
@@ -95,20 +95,21 @@ If `apply` raises, nothing after the failing step has happened. Report the error
 
 Part N leaves the freeze exclusion and becomes controlled history, so a new versioned control manifest is required. **Never edit an earlier manifest.**
 
-1. Update only the living documents that name the active destination:
-   - `METHOD.md`;
-   - `CURRENT_RULES.md`;
-   - `research/README.md`;
+1. Update the living documents that must change by hand:
+   - `METHOD.md` (the `Active freeze` link, and the method/control revision if they change);
    - `CHANGELOG.md` (a dated entry).
 
-   Historical statements such as "P-523–P-549 live in Part 6" stay as they are.
-2. In `METHOD.md`, set `Active freeze: [CONTROL_MANIFEST_<YYYY-MM-DD>-<k>.md](CONTROL_MANIFEST_<YYYY-MM-DD>-<k>.md)`. Use the next unused suffix `k` for today.
-3. Generate the freeze, then verify it:
+   No other living document states the active destination or the next ID: `CURRENT_STATE.md` does, and it is generated (`current_state verify` fails when a living document states a next ID or a destination). Historical statements such as "P-523–P-549 live in Part 6" stay where they are.
+2. **Archive the superseded manifests before generating the new one.** Move every `CONTROL_MANIFEST_*.md` at the repository root into `archive/controls/` with `git mv` (content untouched; never edit an earlier manifest) and repoint the links in the living documents (`METHOD.md`, `README.md`, `CURRENT_RULES.md`, `research/README.md`, `SOURCES.md`) to `archive/controls/…`. Do not touch files under `prediction logs/`, `research/issued_research/` or `research/verification/`: their links are historical. Only the new manifest stays at the root.
+3. In `METHOD.md`, set `Active freeze: [CONTROL_MANIFEST_<YYYY-MM-DD>-<k>.md](CONTROL_MANIFEST_<YYYY-MM-DD>-<k>.md)`. Use the next unused suffix `k` for today.
+4. Generate the freeze, then verify it and refresh the generated state:
 
 ```powershell
 py -3.14 -B -m research.operations.control_freeze
 py -3.14 -B -m research.operations.control_freeze --verify
 py -3.14 -B -m research.operations.log_card refresh-status
+py -3.14 -B -m research.operations.current_state write
+py -3.14 -B -m research.operations.current_state verify
 ```
 
 `--verify` must report **0 mismatches**. Every controlled file must already be in its final form when you generate the freeze, because any later edit to a controlled file needs another new freeze.
@@ -120,12 +121,12 @@ Re-run every baseline command from step 2, then check all of the following:
 | Check | Expected |
 |---|---|
 | `log_card next-id` | Same ID as before the rollover |
-| `git diff --stat` | Only these paths changed: Part N (closure appended), the new Part N+1, `research/current_combined_log.json`, `.gitattributes`, `GAME_LOG_STATUS_CURRENT.md`, the receipt folder, the new manifest, and the updated living documents |
+| `git diff --stat` | Only these paths changed: Part N (closure appended), the new Part N+1, `research/current_combined_log.json`, `.gitattributes`, `GAME_LOG_STATUS_CURRENT.md`, `CURRENT_STATE.md`, the receipt folder, the new manifest, the superseded manifests (renamed into `archive/controls/`), and the updated living documents |
 | Part N | Its pre-rollover bytes are an exact prefix (compare with the receipt's `previous_log_prefix_sha256`) |
 | Part N+1 | Exists exactly once and contains no card |
 | Ledger | Unchanged |
 | Pending transactions | None |
-| Status page | Names Part N+1 |
+| Status page and `CURRENT_STATE.md` | Both name Part N+1 |
 | `control_freeze --verify` | 0 mismatches |
 | Baseline failures | Identical before and after; any new failure blocks publication |
 

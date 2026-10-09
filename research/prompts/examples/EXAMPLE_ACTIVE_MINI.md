@@ -10,9 +10,9 @@
 | Repository | https://github.com/danisgreat/Sports-Research |
 | Branch | main |
 | GitHub HEAD SHA | `0000000000000000000000000000000000000000` |
-| Method | MDS-2026.10.09-v8.2 |
-| Control revision | CR-2026.10.09-R2 |
-| Active manifest | CONTROL_MANIFEST_2026-10-09-2.md |
+| Method | MDS-2026.10.09-v8.3 |
+| Control revision | CR-2026.10.09-R3 |
+| Active manifest | CONTROL_MANIFEST_2026-10-09-3.md |
 | Scoring version | SCV-2026.10.09-v4 |
 | Active Combined Log | `prediction logs/PREDICTION_LOG_COMBINED_7.md` |
 | Highest committed repository P-ID | P-899 |

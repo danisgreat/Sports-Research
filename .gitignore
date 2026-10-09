@@ -51,3 +51,6 @@ research/data/raw/source_snapshots/kfu_owner_*
 research/data/raw/source_snapshots/kfu_news_*
 research/data/raw/source_snapshots/bhutan_owner_*
 research/data/cricsheet_odi/
+
+# Retained pregame-evidence and settlement-capture bodies (publisher text); the hashed receipts (*.json) are tracked.
+research/data/raw/evidence/*/*.body

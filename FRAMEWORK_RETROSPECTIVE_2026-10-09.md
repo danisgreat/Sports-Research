@@ -1,6 +1,6 @@
 # Framework retrospective and improvement plan, 2026-10-09
 
-**Status:** `RECOMMENDATIONS_ONLY — NOT IMPLEMENTED`. The user asked for every improvement to be laid out but not yet implemented. The only changes made with this review are the user-directed final settlement (`research/verification/final_settlement_2026-10-09/`) and the three October 9 rules (T2, R1 and P4 in [CURRENT_RULES.md](CURRENT_RULES.md)). No model, engine, source adapter, verifier or threshold was changed. Defects are reported here, not fixed.
+**Status:** `IMPLEMENTED 2026-10-09` (see §5.8). Sections 0–5.7 and 6–7 are the review as written, including its acceptance tests and the wording "not implemented"; they are kept unchanged so the findings can be re-read against what was found at the time. §5.8 records, for every recommendation ID, what was implemented, what could not be verified offline, and what only prospective cards can show. The only changes made with the review itself were the user-directed final settlement (`research/verification/final_settlement_2026-10-09/`) and the three October 9 rules (T2, R1, P4).
 
 **Authority at review:** MDS-2026.10.09-v8.1 / CR-2026.10.09-R1 / SCV-2026.10.09-v4.
 
@@ -225,7 +225,7 @@ Each finding has an ID that the recommendation register (§5) references. Severi
 
 ---
 
-## 5. Recommendation register (not implemented)
+## 5. Recommendation register (as written; implementation status in §5.8)
 
 Columns: **ID** · **Priority** (P0 = correctness/blocking, P1 = high value, P2 = valuable, P3 = hygiene) · **Addresses** · **Recommendation** · **Acceptance test** · **Effort** (S < 1 day, M 1–3 days, L > 3 days).
 
@@ -321,6 +321,74 @@ Columns: **ID** · **Priority** (P0 = correctness/blocking, P1 = high value, P2 
 | GOV-06 | P3 | F-GOV-6 | Remove zero-byte root scripts and move one-off scripts (`validate_austria_bundesliga.py`, `subagent_parser.js`) into `research/src/` or `archive/`. | Root contains only docs, configs and the canonical CSV | S |
 | GOV-07 | P2 | F-SRC-2 | A settlement SLA: every card is settled within 72 h of its final with the evidence hierarchy (A/B/C/E/OP/X), so carryover cannot accumulate to 72 records again. | Open carryover ≤ 5 at any time | S |
 
+### 5.8 Implementation status (2026-10-09)
+
+Status values: **IMPLEMENTED** (mechanism built and tested; the stated acceptance test was run and passes, or is a property of the code); **PARTLY** (part done, the remainder named); **PENDING DATA** (mechanism built and tested, but the acceptance test needs prospective cards or elapsed time); **NOT MET OFFLINE** (needs web access, restricted local files or data the build environment did not have). No row is marked implemented on the strength of a test that was not run. All paths are in this repository.
+
+| ID | Status | What exists, and what it did not show |
+|---|---|---|
+| ENG-01 | IMPLEMENTED | `runtime/tests/test_import_smoke.py` imports every runtime module, so a broken import fails collection. |
+| ENG-02 | IMPLEMENTED | CI and `dev_check` run ruff (undefined names on `research/src`; the full rule set on `runtime` and `research/operations`) and mypy. |
+| ENG-03 | IMPLEMENTED | `.python-version` (3.14.6), `requirements-lint.txt`, `dev_check` mirroring CI step for step (a parity test fails on drift); a wrong interpreter exits 2 instead of skipping tests. |
+| DST-01 | IMPLEMENTED | A zero score is a score. Fits reject missing scores; tests in every engine module. |
+| ML-01 | IMPLEMENTED | PAVA calibrator with a reference implementation test and monotone output; temperature, Platt and beta calibrators. |
+| ML-02 | IMPLEMENTED | `FitFailed`, `InsufficientData`, `MissingInputs`, `NotFitted`; no silent default in Dixon–Coles, distributional regression, stacking, ratings or strengths (`test_fit_failures.py`). |
+| DST-02 | IMPLEMENTED | `common/endpoints.py`: NHL, NBA and MLB full-game contracts resolve OT/SO/extras inside the grid, so P(home) + P(away) = 1; regulation contracts unchanged. |
+| DST-03 | IMPLEMENTED | Grid mean equals the input mean across league scoring levels; league profiles are built from the archive (`runtime/config/leagues/`), with no NBA default for another league. |
+| SRC-01 | PARTLY | `research/src/adapters.py` and `research/sources_registry_adapters.json`. Recorded-body tests: KBO, NPB and the MLB live feed (plus parsers for the already-registered MLB schedule and NBL routes). Synthetic-fixture only: NHL, ESPN soccer, Sackmann ATP, because no live body could be fetched (no internet in the build environment; the cloud container's proxy refuses most sports hosts). Planned, no adapter: B.League, KBL, EuroLeague, ACB, BBL/GBL. `adapters.fetch` returns a hashed receipt (tested with an injected opener). The acceptance test is met for 3 of the 11 new adapters. |
+| SRC-02 | PENDING DATA | `Settlement fields` and `Capture due` are validated on every v3 card; `capture_schedule` lists captures due and overdue; `evidence_snapshot store --kind capture` retains the page. "Zero no-provider VOIDs over 4 weeks" needs four weeks of cards. |
+| SRC-03 | PENDING DATA | `evidence_snapshot` stores hashed bodies or extracts and prints the `sha256@time` token; `verify-card` resolves every token on a card to a stored receipt retrieved before the research time. "Every new card resolves" needs new cards. |
+| SRC-04 | NOT MET OFFLINE | `lineage_audit` (schema, validator, quorum function requiring distinct terminal collectors including an official one) and `registry_lint` exist. **No audit was performed**: reading publishers' own documentation needs web access. Every collector stays UNKNOWN and no league has an independent quorum. |
+| SRC-05 | IMPLEMENTED | `research.src.archive_std` (`coverage`, `build`): one standard event schema over the raw archive with a recorded reason for every unmapped row. The module name differs from the register's `archive build`; the pinned `archive.py` is unchanged. |
+| SRC-06 | IMPLEMENTED | `runtime/src/common/snapshots.py` writes hashed snapshots in the documented layout; the R bridges register their output; `DATA_SOURCE_REGISTER.md` was regenerated to match the filesystem. |
+| SRC-07 | PARTLY | `reachability` probes each registered source per environment and renders the matrix with same-league, different-lineage fallbacks into `SOURCES.md`. Probed from the cloud container (1 of 14 sources reachable: openfootball; 2 manual-only). The local Windows machine has not been probed; the weekly refresh is an operator action. |
+| SRC-08 | IMPLEMENTED | `fantasy_premierleague` moved to `research/excluded_sources.json`; `registry_lint` fails if an excluded source returns to the executable registry. |
+| PRD-01 | IMPLEMENTED | `card_validator` rejects rank inversions, `q` ranking and p-and-q columns; the historical replay flags exactly P-519, P-521 and P-522 in the P-518–P-522 range. |
+| PRD-02 | PARTLY | Rank 2 is the row minimising P(both lose) from the joint grid (`common/selection.py`), with a conservative bound across outcome spaces. Replaying the final-settlement cohort was impossible: those cards do not retain their distributions. The ≤ 0.30 criterion is tested on synthetic distributions and left to the prospective experiments. |
+| PRD-03 | PENDING DATA | Gate (p ≥ 62%, margin ≥ 4 points) in `selection_rules.json`, validated on every card and routed to its own scoreboard cohort. The values stay provisional until experiment SEL-1 (8 or more weeks) completes. |
+| PRD-04 | IMPLEMENTED | `candidates` returns the ladder, the four chosen rows with tags, joint failure, the gate and the distribution object (id with a content hash). |
+| PRD-05 | IMPLEMENTED | Adjustments table, `ADJUSTMENT_DEPENDENT` label and the unadjusted top two, checked in both directions. P-553 was not replayed: the old card has no adjustments table. |
+| PRD-06 | IMPLEMENTED | `reforecast check` and `addendum`; tested on goalie, starter and quarterback changes of the P-274 and P-531 kind. |
+| PRD-07 | IMPLEMENTED | `regimes build`: 15 league/flag multipliers with season-block bootstrap intervals in `runtime/config/regimes.json` and `BASE_RATES_REGISTER.md`; the recommended multiplier is 1.0 where the interval contains 1. CUP_ROTATION and the KBL foreign-player rule are NOT_ESTIMABLE (reasons recorded). |
+| PRD-08 | IMPLEMENTED | Decision block capped at 4096 bytes (target 2560) with the appendix below; the golden examples measure 1.7–1.8 KB. A median over real cards is not yet measurable. |
+| PRD-09 | IMPLEMENTED | Family rules from `selection_rules.json` are enforced by the validator. |
+| DST-04 | PARTLY | Exact point-to-match tree with serve order and a match-level form effect, tested (the P-551/P-555 deciding-set inflation is removed). The archive has results only, so the form σ and the by-surface deciding-set check could not be fitted: the tennis engine is NOT_FITTED. |
+| DST-05 | IMPLEMENTED | Opponent-adjusted, shrunk strengths with a cross-validated ridge, recovered on synthetic data. The register's "beats the current engine on 2 seasons per sport" comparison was not run; rolling-origin receipts (ML-03) compare engines with the population baseline instead. |
+| DST-06 | PARTLY | Negative-binomial corners with score-state effects, validated against the register's EPL mean and on synthetic provider data. The archive has no corners provider, so the per-decile calibration on an archive season was not run. |
+| DST-07 | IMPLEMENTED | Half-split Dixon–Coles validated against the register's EPL first-half rates. |
+| DST-08 | PARTLY | Starter-leash mixture, matchup shock, conditional bottom of the ninth; one-run share falls with the expected total. League-average shape matches the archive within 3 points (observed gap about 2 points); the ±2-point by-decile criterion was not demonstrated. |
+| DST-09 | PARTLY | Pace × efficiency with a Student-t joint. Moment matching is tested; a per-league PIT histogram was not produced. |
+| DST-10 | PARTLY | Empty-net late-game state with a stepwise DP that converges to the closed form. Rates are `ILLUSTRATIVE`, not fitted to the archive, so the ±2-point archive match is not demonstrated. |
+| DST-11 | PARTLY | Exact innings dynamic program checked against brute force and a ball-by-ball simulation; chase stopping rule with boundary overshoot; toss branch; reduced-overs ratio. No ball-by-ball archive was available to calibrate it, so the cricket engine is NOT_FITTED. |
+| DST-12 | IMPLEMENTED | NRL (Conway–Maxwell–Poisson tries, negative home share, kicking, half-time) and AFL (shots × conversion) reproduce league spread and correlation in archive round-trip tests. |
+| DST-13 | IMPLEMENTED | No literal 1.55 / 1.20 / 112 defaults remain in `runtime/src` (grep-checked); engines require a league profile. |
+| DST-14 | IMPLEMENTED | NFL margin weights; key-number mass (3, 6, 7, 10, 14) within 1 point on 2023–2025 games, weights learned on 2015–2025. |
+| DST-15 | IMPLEMENTED | Quantile reconstruction is monotone and non-crossing (`common/distributional.py`). |
+| ML-03 | PARTLY | Rolling-origin receipts with monthly refits for NHL, NBA, MLB, NFL, NRL, AFL and EPL under `research/model_builds/runtime_h0/`. Cricket and tennis have no receipt (no data). Home-win interval below zero: AFL, EPL. Margin cover: AFL, EPL, MLB. Totals: none. See `NUMERICAL_MODEL_REGISTER.md` §6. |
+| ML-04 | IMPLEMENTED | Dixon–Coles with a time-decay ξ chosen by cross-validation and a vectorised fit (timing tested). |
+| ML-05 | IMPLEMENTED | Rolling calibration layer reporting slope and intercept with intervals. |
+| ML-06 | NOT MET | Dependency-free histogram gradient boosting for Poisson rates, Gaussian means and log variance (`common/boosting.py`) and a rolling-origin comparison in NHL, NBA, EPL and MLB. The acceptance test (beats the baseline on log loss and CRPS in at least two sports, interval below zero) was **not met in any sport**; the challenger is not used. |
+| ML-07 | IMPLEMENTED | Elo, Glicko (published worked example reproduced) and a rating baseline. |
+| ML-08 | IMPLEMENTED | JSON artifacts with hashes; loading executes no code. |
+| ML-09 | IMPLEMENTED | BigQuery module reduced to point-in-time feature joins and BOOSTED_TREE challengers; no project hard-coded; the register states the scope. |
+| ML-10 | IMPLEMENTED | Chronological linear and logit stacking, used only if it beats the best single model on TEST. |
+| EVL-01 | IMPLEMENTED | `scoreboard publish/verify`: deterministic, byte-comparable, built only from retained settlement tables, the ledger and the legacy rank log. |
+| EVL-02 | IMPLEMENTED | Promotion gate with week-block bootstrap intervals, calibration-slope interval, seed stability and power (`FixedCohortEvaluator`). |
+| EVL-03 | IMPLEMENTED | Block structure required; interval wider than i.i.d. on correlated synthetic data (tested). |
+| EVL-04 | PARTLY | Six pre-registered experiments (XCARD-1..6, SEL-1) in `research/experiments/cross_card_v1.json` with power calculations. XCARD-3..6 are infeasible within 26 weeks at current card volume; XCARD-6 is blocked pending a machine-readable ladder. |
+| EVL-05 | IMPLEMENTED | The scoreboard reports COUNTED, RANK1_UNSTABLE and informational cohorts separately; the headline counts only the first. |
+| GOV-01 | IMPLEMENTED | Settlement register is a pointer with pinned history (kinds `carryover` and `settled`); verifiers read the pointer instead of hard-coded counts. |
+| GOV-02 | IMPLEMENTED | `custody_text` hashes CRLF-normalised bytes; tests cover LF and CRLF checkouts. The full custody verifiers still cannot pass on a clean checkout: 52 local-only source bodies are gitignored by design. |
+| GOV-03 | IMPLEMENTED | `settlement_lint` flags the R1 blocks of P-539–P-545 and any new blank-contract `P` row; the five historical rows (P-407 R1, P-409 R2, P-410 R5, P-419 R5, P-430 R5) are reported as `UNKNOWN_CONTRACT`. |
+| GOV-04 | IMPLEMENTED | Retirement, listed-pitcher and abandonment rule fields are required on v3 cards. |
+| GOV-05 | IMPLEMENTED | `CURRENT_STATE.md` is generated and verified; living documents no longer state a next ID or destination (a test fails if they do); superseded manifests moved unchanged to `archive/controls/`; removed paragraphs kept in `archive/status_notes/`. |
+| GOV-06 | IMPLEMENTED | Seven zero-byte root scripts deleted; the two unused files moved to `archive/legacy_root/`; `validate_austria_bundesliga.py` moved to `research/src/`. |
+| GOV-07 | IMPLEMENTED | `settlement_sla` (72 h after the final plus a per-sport allowance; open carryover at most 5). No carryover is open now (the final settlement closed all 72 records). |
+
+**Counts.** 57 recommendation IDs: 41 implemented, 11 partly implemented (SRC-01, SRC-07, PRD-02, DST-04, DST-06, DST-08, DST-09, DST-10, DST-11, ML-03, EVL-04), 3 pending prospective data (SRC-02, SRC-03, PRD-03), 1 not met offline (SRC-04) and 1 built but not met (ML-06: the challenger did not beat the baseline). On CPython 3.14.6 the full suite (`research/tests`, `research/operations`, `research/experiments`, `runtime/tests`) passes with 634 tests and no skips; ruff and mypy are clean. `verify_custody` and `verify_all_logs` cannot pass on a checkout that lacks the 52 gitignored local-only source bodies.
+
+**What this does not establish.** Nothing here changes an issued forecast, certifies a model, or shows that the new rules raise the win rate: PRD-03, SRC-02 and SRC-03 need prospective cards, SRC-04 needs web access, and the engines' rolling-origin evidence is development evidence on opened data. The thresholds in `selection_rules.json` remain provisional.
+
 ---
 
 ## 6. Sequenced roadmap
@@ -343,4 +411,4 @@ Columns: **ID** · **Priority** (P0 = correctness/blocking, P1 = high value, P2 
 - Historical win rates use literal grades from the rank index, which includes provisional and later-corrected rows. They are learning diagnostics, not certified performance.
 - The tennis overdispersion figures come from the reproduction script with a chosen σ = 0.05; the correct σ must be fitted (DST-04). The direction of the effect is robust: any positive σ lowers deciding-set mass and the 22.5 Over probability for near-equal players.
 - Some threshold values (PRD-02's 0.58, PRD-03's 0.62/0.04, PRD-09's family gates) are starting points derived from §3.2. They must be confirmed prospectively before becoming binding.
-- Nothing in this document changes an issued forecast, a model weight or a control. Implementation needs a separate instruction.
+- Nothing in this document changes an issued forecast or a model weight. The implementation that followed (§5.8) changed controls, tooling and engines only, by explicit instruction.

@@ -10,9 +10,9 @@
 | Repository | https://github.com/danisgreat/Sports-Research |
 | Branch | main |
 | GitHub HEAD SHA | `0000000000000000000000000000000000000000` |
-| Method | MDS-2026.10.09-v8.2 |
-| Control revision | CR-2026.10.09-R2 |
-| Active manifest | CONTROL_MANIFEST_2026-10-09-2.md |
+| Method | MDS-2026.10.09-v8.3 |
+| Control revision | CR-2026.10.09-R3 |
+| Active manifest | CONTROL_MANIFEST_2026-10-09-3.md |
 | Scoring version | SCV-2026.10.09-v4 |
 | Active Combined Log | `prediction logs/PREDICTION_LOG_COMBINED_7.md` |
 | Highest committed repository P-ID | P-899 |
@@ -247,7 +247,7 @@ Totals use a pace × efficiency centre, not a raw points average. Overtime is re
 |---|---|
 | Settled at | 2026-10-11T10:00:00+11:00 |
 | GitHub HEAD SHA read | `0000000000000000000000000000000000000000` |
-| Frozen original SHA-256 | `baad1bfd0ff6170cb83ee225a70f7598053804b5cea37bc5dfe1f945ec50246a` |
+| Frozen original SHA-256 | `40b5b566d4a741b71c8ca69fb89ff770af289aec88d22a7eaa45433d28b16469` |
 | Settlement directive | Settle every terminal event; missing details are settled on the A/B/C/E/OP/X evidence hierarchy |
 
 <!-- BEGIN SETTLEMENT P-900 -->
@@ -267,7 +267,7 @@ Totals use a pace × efficiency centre, not a raw points average. Overtime is re
 **Top-two result:** `TOP2_SPLIT` — 1 counted win(s) of 2 live top-two row(s). Rank 1: WIN; Rank 2: LOSS.
 **Winner call:** Southport Bears: `CORRECT`
 
-**R1. Original prediction.** Ranks as issued above; uncalibrated analyst scenario; PREGAME.
+**R1. Original prediction.** Rank 1 Total goals Under 7.5 (full game incl. OT/SO) at p_card 77.1%; Rank 2 Northfield Owls +1.5 (full game incl. OT/SO) at 68.2%; uncalibrated analyst scenario; PREGAME.
 **R2. Final event.** Southport 4–2 in regulation.
 **R3. Contract settlement.** WIN, LOSS, WIN, WIN on the full-game endpoint.
 **R4. Rank diagnostics.** Rank 1 WIN; Rank 2 LOSS; Hit@2 1; counted 1/2.
@@ -300,7 +300,7 @@ Totals use a pace × efficiency centre, not a raw points average. Overtime is re
 **Top-two result:** `TOP2_SPLIT` — 1 counted win(s) of 2 live top-two row(s). Rank 1: LOSS; Rank 2: WIN.
 **Winner call:** Westbay Gulls: `CORRECT`
 
-**R1. Original prediction.** Ranks as issued above; uncalibrated analyst scenario; PREGAME.
+**R1. Original prediction.** Rank 1 Combined total Over 152.5 (full game incl. OT) at p_card 68.2%; Rank 2 Combined total Under 168.5 (full game incl. OT) at 66.2%; uncalibrated analyst scenario; PREGAME.
 **R2. Final event.** Westbay 74–71; total 145.
 **R3. Contract settlement.** LOSS, WIN, WIN, WIN.
 **R4. Rank diagnostics.** Rank 1 LOSS; Rank 2 WIN; Hit@2 1; counted 1/2.

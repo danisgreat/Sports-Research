@@ -750,7 +750,7 @@
  },
  "inputs": {
   "ledger_sha256": "eaedf84e412374eb5b4b6b7522a463d50be1470273008f70a254bdf0f5abfdba",
-  "rank_log_sha256": "e142ffe07751f668447324576c3d2f7491bdbb14c3ae244652e39e086c3d71e7",
+  "rank_log_sha256": "4bb0592221b7c9c94a75f13559eb9a233055a436b8a2e880cfe9d96bff3a97d7",
   "settlement_tables": [
    {
     "path": "research/verification/final_settlement_2026-10-09/settlement_table.json",

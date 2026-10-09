@@ -25,6 +25,7 @@ from pathlib import Path
 from typing import Any
 
 from research.operations import cohort_review, top_two
+from research.src.custody_text import custody_bytes
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT_DIR = ROOT / 'research/scoreboard'
@@ -35,8 +36,9 @@ DATE_SUFFIX = re.compile(r':(\d{4}-\d{2}-\d{2})$')
 UNDATED = 'UNDATED'
 
 
-def sha256_file(path: Path) -> str:
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def sha256_file(path: Path, root: Path = ROOT) -> str:
+    """SHA-256 over custody bytes: identical on LF and CRLF checkouts for the files whose custody form is CRLF (GOV-02)."""
+    return hashlib.sha256(custody_bytes(Path(path), root)).hexdigest()
 
 
 def ledger_dates(ledger: Path = LEDGER) -> dict[str, str]:
@@ -167,9 +169,9 @@ def build(root: Path = ROOT) -> dict:
     result = {
         'schema': SCHEMA, 'scoring': 'SCV-2026.10.09-v4',
         'inputs': {'settlement_tables': [{'path': s['path'], 'schema': s['schema'], 'records': s['records'],
-                                          'sha256': sha256_file(root / s['path'])} for s in sources],
-                   'ledger_sha256': sha256_file(root / 'research/canonical_ledger.jsonl') if (root / 'research/canonical_ledger.jsonl').exists() else None,
-                   'rank_log_sha256': sha256_file(root / 'GAME_PREDICTION_RANK_LOG.csv') if (root / 'GAME_PREDICTION_RANK_LOG.csv').exists() else None},
+                                          'sha256': sha256_file(root / s['path'], root)} for s in sources],
+                   'ledger_sha256': sha256_file(root / 'research/canonical_ledger.jsonl', root) if (root / 'research/canonical_ledger.jsonl').exists() else None,
+                   'rank_log_sha256': sha256_file(root / 'GAME_PREDICTION_RANK_LOG.csv', root) if (root / 'GAME_PREDICTION_RANK_LOG.csv').exists() else None},
         'cards': len(ordered), 'forecast_cards': len(forecast), 'first_id': ordered[0]['id'] if ordered else None,
         'last_id': ordered[-1]['id'] if ordered else None,
         'headline_counted_cohort': _summary(cohorts['COUNTED']),

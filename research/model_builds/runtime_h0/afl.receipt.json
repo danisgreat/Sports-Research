@@ -1,0 +1,124 @@
+{
+ "artifact": "afl.model.json",
+ "code_sha256": "1651611e1f261ba8740c8eac846a5e9f86539f03facdfa556100a50b3bf9e75b",
+ "competition": "AFL",
+ "data": {
+  "files": 126,
+  "files_sha256": "749bf2739fc9816aee67a2daa9e10d75341c1a03371ee0e2a162542f84df7b7b",
+  "seasons": [
+   1900,
+   2025
+  ]
+ },
+ "engine": "AFLEngine",
+ "environment": {
+  "numpy": "2.5.2",
+  "python": "3.14.6"
+ },
+ "events_loaded": 15928,
+ "final_fit": {
+  "first_date": "2021-03-18",
+  "games": 1017,
+  "last_date": "2025-08-27"
+ },
+ "key": "afl",
+ "lines": {
+  "total_over": 160.5
+ },
+ "metrics": {
+  "home_cover_train_median_margin": {
+   "base_rate": 0.5333333333333333,
+   "beats_baseline_brier": true,
+   "beats_baseline_logloss": true,
+   "blocks": 51,
+   "brier_baseline": 0.25083501998782914,
+   "brier_engine": 0.22432088944911166,
+   "calibration_intercept": 0.13123347140404282,
+   "calibration_slope": 1.0191291136469605,
+   "calibration_slope_ci95": [
+    0.6693630088002718,
+    1.3802303077609281
+   ],
+   "delta_brier": -0.026514130538717484,
+   "delta_brier_ci95": [
+    -0.04155769370843691,
+    -0.01063216705409457
+   ],
+   "delta_logloss": -0.05880683395185171,
+   "delta_logloss_ci95": [
+    -0.09291200825440056,
+    -0.022359333528473774
+   ],
+   "logloss_baseline": 0.6948175327340284,
+   "logloss_engine": 0.6360106987821766,
+   "n": 300
+  },
+  "home_win": {
+   "base_rate": 0.6060606060606061,
+   "beats_baseline_brier": true,
+   "beats_baseline_logloss": true,
+   "blocks": 51,
+   "brier_baseline": 0.24038216795921122,
+   "brier_engine": 0.21552553639480918,
+   "calibration_intercept": 0.19520925554711827,
+   "calibration_slope": 1.0785475125860189,
+   "calibration_slope_ci95": [
+    0.7467876240235006,
+    1.4428678745144083
+   ],
+   "delta_brier": -0.024856631564402043,
+   "delta_brier_ci95": [
+    -0.039385329442252995,
+    -0.009448986706139577
+   ],
+   "delta_logloss": -0.05752493568944206,
+   "delta_logloss_ci95": [
+    -0.08702680052737864,
+    -0.024854985275015055
+   ],
+   "logloss_baseline": 0.6738247584166777,
+   "logloss_engine": 0.6162998227272356,
+   "n": 297
+  },
+  "total_over_train_median": {
+   "base_rate": 0.62,
+   "beats_baseline_brier": false,
+   "beats_baseline_logloss": false,
+   "blocks": 51,
+   "brier_baseline": 0.25131051187834696,
+   "brier_engine": 0.25671669421396454,
+   "calibration_intercept": 0.5249579787554911,
+   "calibration_slope": 0.3912071345824487,
+   "calibration_slope_ci95": [
+    -0.5069586018572769,
+    1.22115002595671
+   ],
+   "delta_brier": 0.005406182335617571,
+   "delta_brier_ci95": [
+    -0.002892034865397763,
+    0.013345873368298398
+   ],
+   "delta_logloss": 0.011371467780914468,
+   "delta_logloss_ci95": [
+    -0.004634129797682065,
+    0.028409512617941807
+   ],
+   "logloss_baseline": 0.6957685226245298,
+   "logloss_engine": 0.7071399904054443,
+   "n": 300
+  }
+ },
+ "population": "regular-season games, de-duplicated by (date, home, away)",
+ "prediction_errors": {},
+ "predictions": 300,
+ "refits": 12,
+ "schema": "runtime-h0-receipt-1",
+ "seconds": 252.9,
+ "sport_dir": "AFL",
+ "status": "FITTED_RECEIPT",
+ "test_seasons": [
+  2024,
+  2025
+ ],
+ "unknown_team_or_warning_rows": 0
+}

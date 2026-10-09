@@ -155,9 +155,15 @@ def _sync_status(part6, reconciliation, ledger):
     current=selected(ROOT)
     if current:
         manifest=current['manifest']
-        lines += ['', '**Current all-log settlement register:** `'+current['manifest_path']+'`.',
-                  f"{manifest['event_count']} event records retain specific settlement/certification requirements; {manifest['documentary_repairs']} older rank/contract mappings were repaired. The earlier 15-record closure is a historical snapshot. New sporting reviews and existing retrospective pointers are recorded in the current register; operator or source gaps remain literal.",
-                  'Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.']
+        if current.get('kind') == 'settled':
+            lines += ['', '**Current settlement register:** `'+current['manifest_path']+'`.',
+                      f"{manifest['event_count']} event records are final-settled ({manifest['open_sporting_settlements']} sporting settlements open). "
+                      "No record is performance-certified; operator and source gaps remain literal. Earlier carryover registers stay pinned by SHA-256 in the pointer history.",
+                      'Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.']
+        else:
+            lines += ['', '**Current all-log settlement register:** `'+current['manifest_path']+'`.',
+                      f"{manifest['event_count']} event records retain specific settlement/certification requirements; {manifest['documentary_repairs']} older rank/contract mappings were repaired. The earlier 15-record closure is a historical snapshot. New sporting reviews and existing retrospective pointers are recorded in the current register; operator or source gaps remain literal.",
+                      'Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.']
         for reservation in manifest.get('local_reservations', []):
             if reservation['local_id'] not in {c['card_id'] for c in cards}:
                 lines += ['', f"**Local source reservation:** {reservation['local_id']} / native event `{reservation['native_event_id']}` / alias `{reservation['tracking_alias']}` is preserved source-only, pending canonical import. It consumes no canonical ID here. Local next `{reservation['next_local_working_id']}` is a distinct working sequence. Match this existing event before allocating the canonical next ID."]

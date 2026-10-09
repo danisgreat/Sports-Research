@@ -4,7 +4,8 @@ import argparse
 import hashlib,json
 from research.operations.log_card import next_id,pending,research_cards,research_addenda,verify_projection
 from research.operations.diagnostic_rank import metrics
-from research.operations.settlement_register import selected
+from research.operations.settlement_register import pinned
+from research.src.custody_text import custody_bytes
 from research.src.issue import CANONICAL_LEDGER,PART6,_custody
 from research.src.ledger import read_records
 from research.src.combined_log import active_log,custody
@@ -21,7 +22,7 @@ def run(local_bodies=False):
     need(not pending(records),'Pending canonical transaction')
     for item in opening['files']:
         if item['path'].startswith('prediction logs/') or item['path']=='research/canonical_ledger.jsonl':
-            body=(ROOT/item['path']).read_bytes()
+            body=custody_bytes(ROOT/item['path'])
             if item['path'].endswith('_6.md') or item['path']=='research/canonical_ledger.jsonl':body=body[:item['bytes']]
             need(len(body)==item['bytes'] and sha(body)==item['sha256'],'Original prefix changed: '+item['path'])
     original=(OUT/'provided_mini.original.bin').read_bytes()
@@ -34,7 +35,8 @@ def run(local_bodies=False):
     for card in new:
         from research.operations.log_card import retained_path
         need(retained_path(card['source_path']).read_bytes() in original,'Imported forecast is not an exact original substring')
-    need(len([a for a in addenda if a['card_id'] in imported['imported_ids']])==12,'Missing dated retrospective')
+    dated=[a for a in addenda if a['card_id'] in imported['imported_ids']]
+    need(len(dated)>=12 and {a['card_id'] for a in dated}==set(imported['imported_ids']),'Missing dated retrospective')    # later addenda are legitimate progress
     need(sha(raw[:rollover['previous_log_prefix_bytes']])==rollover['previous_log_prefix_sha256'],'Rollover prefix changed')
     first=rollover['previous_log_prefix_bytes']
     need(sha(raw[first:first+rollover['rollover_append_bytes']])==rollover['rollover_append_sha256'],'Rollover append changed')
@@ -49,7 +51,7 @@ def run(local_bodies=False):
         need(review['rank_metrics']==metrics([r['grade'] for r in review['rows']]),'Rank metric changed')
         need(set(review['retrospective'])=={'R'+str(n) for n in range(1,13)} and review['performance_eligible'] is False,'Review incomplete or promoted')
     need((summary['win'],summary['loss'],summary['unknown_definition'])==(26,19,4),'Disposition counts changed')
-    register=selected(ROOT)['manifest'];old=json.loads((ROOT/'research/verification/all_log_resolution_2026-10-05/carryover_v3.json').read_text(encoding='utf-8'))
+    register=pinned(ROOT,'research/verification/carryover_review_2026-10-08/carryover.json');old=json.loads((ROOT/'research/verification/all_log_resolution_2026-10-05/carryover_v3.json').read_text(encoding='utf-8'))
     current={r['canonical_id']:r for r in register['records']}
     for r in old['records']:need(current[r['canonical_id']]==r,'Historical carryover changed')
     need(register['event_count']==65,'Current carryover count changed')

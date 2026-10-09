@@ -1,6 +1,6 @@
 # Contribution procedure
 
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+Run `py -3.14 -B -m research.operations.dev_check` before pushing: it runs every CI step in CI order and needs the interpreter pinned in `.python-version`. The current ID, active log and freeze are in the generated [CURRENT_STATE.md](CURRENT_STATE.md).
 
 Read [CURRENT_RULES.md](CURRENT_RULES.md) and [research/README.md](research/README.md). Preserve issued forecast bytes, original source receipts and unrelated dirty files. Model/process edits require explicit versioning and before/after evidence.
 

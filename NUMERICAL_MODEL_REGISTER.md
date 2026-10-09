@@ -122,3 +122,31 @@ Promotion from challenger to production requires meeting **all** conditions on t
 1. **Chronological Isolation**: Calibration algorithms (Platt sigmoid, Isotonic PAVA, Beta calibration, Temperature scaling) are fit exclusively on the chronological calibration fold `CAL`.
 2. **Isotonic Sample Sufficiency**: Isotonic regression requires $n \ge 200$ events per market to prevent overfitting step functions to noise. If $n < 200$, Platt scaling or Temperature scaling is mandatory.
 3. **Distribution Coherence Check**: If contracts are calibrated independently, recheck that monotonicity and covering pair invariants ($P(O_{k+1}) \le P(O_k)$ and $P(\text{Home } +k) \ge P(\text{Home ML})$) remain strictly preserved.
+
+---
+
+## 6. October 9 implementation: what exists and what it showed
+
+This section records the implementation of the retrospective's engineering, distribution and ML items. The thresholds in section 4 still define promotion; the evaluator now applies them with uncertainty.
+
+**Promotion gate with uncertainty (EVL-02, EVL-03).** `FixedCohortEvaluator.evaluate` (runtime/src/common/evaluation.py) requires block identifiers (week or match day; single rows are never resampled), a minimum number of blocks, a week-block bootstrap 95% interval of delta Brier and delta log loss that lies entirely below zero, a Cox calibration slope interval that contains 1 and an intercept interval that contains 0, no deterioration of the same-line hit rate, and the same decision under every resampling seed. A calibration estimation failure fails promotion. Power at the observed sample is reported. `prospective.py` produces the same intervals for the shadow ledger.
+
+**Engines and shared modules** (all raise on fitting failure instead of falling back to a default; none writes pickles):
+
+| Module | Purpose |
+|---|---|
+| `common/distributional.py` | Distributional regression, Student-t joint score, quantile reconstruction with non-crossing (ML-02, DST-15) |
+| `common/dixon_coles.py`, `strengths.py`, `ratings.py` | Dixon-Coles with time decay chosen by cross-validation (ML-04); opponent-adjusted, shrunk attack/defence strengths (DST-05); Elo, Glicko and a rating baseline (ML-07) |
+| `common/calibration.py`, `calibration_layer.py` | PAVA isotonic, Platt, temperature and beta calibration with a reference test (ML-01); rolling calibration layer with slope monitoring (ML-05) |
+| `common/stacking.py` | Chronological linear and logit pooling; a stack is used only if it beats the best single model on TEST (ML-10) |
+| `common/boosting.py` | Dependency-free histogram gradient boosting for Poisson rates, Gaussian means and log-variance (ML-06) |
+| `common/selection.py`, `endpoints.py`, `counts.py` | Joint outcome space, candidate ladder, Rank-1 gate, Rank-2 minimum joint failure, endpoint resolution (PRD-02..05, DST-02) |
+| `common/bigquery_ml.py` | SQL generation for point-in-time feature joins and BOOSTED_TREE challengers only; no ARIMA_PLUS or AI.FORECAST; no project or dataset is hard-coded (ML-09) |
+| `common/snapshots.py` | Hashed raw snapshots in `runtime/data/raw/<sport>/<provider>/<date>/` (SRC-06) |
+| `sports/*/engine.py` | Coherent engines for soccer (with `halves.py`, `corners.py`), basketball, baseball, NHL, NFL, AFL, NRL, cricket (exact innings dynamic program with the chase stopping rule) and tennis (exact point-to-match tree with a match-level form effect) |
+
+**Fitted receipts (ML-03).** `research/model_builds/runtime_h0/` holds a rolling-origin receipt per engine with monthly refits and point-in-time features, scored against a population baseline with week-block intervals (`python -B -m research.operations.fit_runtime_models verify`). Seven engines are fitted: NHL, NBA, MLB, NFL, NRL, AFL and EPL. Cricket and tennis are **not fitted**: the archive has scorecards and results, not ball-by-ball or serve-point data. Result: the point estimate of delta Brier favours the engine for home win in all seven, but the 95% interval lies below zero for the baseline comparison only where `INDEX.json` says so (AFL and EPL home win; AFL, EPL and MLB margin cover). On the totals contract no engine's interval lay below zero (the point estimate favours the engine in NBA, MLB, NFL and NRL and the baseline in NHL, AFL and EPL). These are development evidence on opened data. Nothing here is a promotion.
+
+**Boosted challenger (ML-06).** `research/model_builds/runtime_h0/challenger/` compares a boosted-distribution challenger with the engine baseline on winner log loss and total CRPS for NHL, NBA, EPL and MLB. The acceptance criterion (beats the baseline on both metrics, with the 95% interval below zero, in at least two sports) is **not met**: no sport met it. NBA shows lower point estimates on both metrics, with intervals that include zero. The challenger is not used.
+
+**What is still needed before any promotion:** prospective shadow cards under the EVL-02 gate (at least 50 matches in 28 days per contract, per section 4), cricket ball-by-ball and tennis serve-point data for the two unfitted engines, and independently audited source quorums.

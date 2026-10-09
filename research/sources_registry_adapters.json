@@ -1,0 +1,332 @@
+{
+ "schema_version": 1,
+ "created_utc": "2026-10-09T00:00:00+00:00",
+ "policy": "SPORTS_ONLY / MARKET_BLIND; adapters read sporting fields only. Registered here: parsers beyond the original catalogue. A status of SYNTHETIC_FIXTURE_ONLY means the parser was written from the provider's documented schema and has NOT yet met a real body; probe it before relying on it.",
+ "sources": {
+  "kbo_official": {
+   "publisher": "Korea Baseball Organization",
+   "hostname": "www.koreabaseball.com",
+   "parser_id": "KBO_GAMELIST_V1",
+   "upstream_lineage_id": "KBO_OFFICIAL_COLLECTION",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [
+    "https://www.koreabaseball.com/ws/Main.asmx/",
+    "https://www.koreabaseball.com/ws/Schedule.asmx/"
+   ],
+   "endpoints": [
+    "FINAL_SCORE",
+    "FULL_GAME",
+    "SCHEDULE"
+   ],
+   "access_mode": "AUTOMATED_ALLOWED",
+   "market_fields_possible": false,
+   "probe_url": "https://www.koreabaseball.com/ws/Main.asmx/GetKboGameList",
+   "probe_expected_text": [
+    "game",
+    "G_ID"
+   ],
+   "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED",
+   "official": true,
+   "leagues": [
+    "KBO"
+   ],
+   "settlement_fields": [
+    "final_score",
+    "innings",
+    "extra_innings",
+    "status"
+   ],
+   "adapter_status": "RECORDED_BODY_TESTED",
+   "recorded_body": "research/verification/all_log_resolution_2026-10-05/kbo_ajax_games.body",
+   "not_provided": [
+    "inning_runs (box score endpoint GetBoxScoreScroll is retained but not parsed)",
+    "halftime",
+    "corners"
+   ]
+  },
+  "mlb_livefeed": {
+   "publisher": "Major League Baseball",
+   "hostname": "statsapi.mlb.com",
+   "parser_id": "MLB_LIVEFEED_V1",
+   "upstream_lineage_id": "MLB_STATSAPI_COLLECTION",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [
+    "https://statsapi.mlb.com/api/v1.1/game/"
+   ],
+   "endpoints": [
+    "FINAL_SCORE",
+    "FULL_GAME",
+    "PERIODS"
+   ],
+   "access_mode": "AUTOMATED_ALLOWED",
+   "market_fields_possible": false,
+   "probe_url": "https://statsapi.mlb.com/api/v1.1/game/823897/feed/live",
+   "probe_expected_text": [
+    "gameData",
+    "liveData"
+   ],
+   "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED",
+   "official": true,
+   "leagues": [
+    "MLB"
+   ],
+   "settlement_fields": [
+    "final_score",
+    "innings",
+    "extra_innings",
+    "inning_runs",
+    "status"
+   ],
+   "adapter_status": "RECORDED_BODY_TESTED",
+   "recorded_body": "research/data/raw/source_snapshots/mlb_p492_20261005T111127562081Z_f26ab94b8f42.body"
+  },
+  "npb_official": {
+   "publisher": "Nippon Professional Baseball",
+   "hostname": "npb.jp",
+   "parser_id": "NPB_SCOREPAGE_V1",
+   "upstream_lineage_id": "NPB_OFFICIAL_COLLECTION",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [
+    "https://npb.jp/scores/"
+   ],
+   "endpoints": [
+    "FINAL_SCORE",
+    "FULL_GAME",
+    "PERIODS"
+   ],
+   "access_mode": "AUTOMATED_ALLOWED",
+   "market_fields_possible": false,
+   "probe_url": "https://npb.jp/scores/2026/1001/c-d-25/",
+   "probe_expected_text": [
+    "tablefix_ls"
+   ],
+   "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED",
+   "official": true,
+   "leagues": [
+    "NPB"
+   ],
+   "settlement_fields": [
+    "final_score",
+    "innings",
+    "extra_innings",
+    "inning_runs",
+    "status"
+   ],
+   "adapter_status": "RECORDED_BODY_TESTED",
+   "recorded_body": "research/data/raw/source_snapshots/npb_final_20261005T110510668609Z_319191d40b59.body"
+  },
+  "nhl_official": {
+   "publisher": "National Hockey League",
+   "hostname": "api-web.nhle.com",
+   "parser_id": "NHL_GAMECENTER_V1",
+   "upstream_lineage_id": "NHL_OFFICIAL_COLLECTION",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [
+    "https://api-web.nhle.com/v1/gamecenter/"
+   ],
+   "endpoints": [
+    "FINAL_SCORE",
+    "FULL_GAME",
+    "REGULATION"
+   ],
+   "access_mode": "AUTOMATED_ALLOWED",
+   "market_fields_possible": false,
+   "probe_url": "https://api-web.nhle.com/v1/gamecenter/2026020052/boxscore",
+   "probe_expected_text": [
+    "homeTeam",
+    "awayTeam"
+   ],
+   "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED",
+   "official": true,
+   "leagues": [
+    "NHL"
+   ],
+   "settlement_fields": [
+    "final_score",
+    "overtime",
+    "shootout",
+    "status"
+   ],
+   "adapter_status": "SYNTHETIC_FIXTURE_ONLY",
+   "not_provided": [
+    "period goal splits (landing endpoint, not parsed)",
+    "regulation-only score"
+   ]
+  },
+  "espn_soccer": {
+   "publisher": "ESPN",
+   "hostname": "site.api.espn.com",
+   "parser_id": "ESPN_SUMMARY_V1",
+   "upstream_lineage_id": "ESPN_OPTA_UNVERIFIED_UPSTREAM",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [
+    "https://site.api.espn.com/apis/site/v2/sports/soccer/"
+   ],
+   "endpoints": [
+    "FINAL_SCORE",
+    "REGULATION",
+    "FIRST_HALF",
+    "CORNERS"
+   ],
+   "access_mode": "AUTOMATED_ALLOWED",
+   "market_fields_possible": false,
+   "probe_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/summary?event=704512",
+   "probe_expected_text": [
+    "header",
+    "boxscore"
+   ],
+   "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED",
+   "official": false,
+   "leagues": [
+    "EPL",
+    "LALIGA",
+    "SERIEA",
+    "BUNDESLIGA",
+    "LIGUE1"
+   ],
+   "settlement_fields": [
+    "final_score",
+    "halftime_score",
+    "corners",
+    "status"
+   ],
+   "adapter_status": "SYNTHETIC_FIXTURE_ONLY"
+  },
+  "sackmann_tennis": {
+   "publisher": "Jeff Sackmann (Tennis Abstract)",
+   "hostname": "raw.githubusercontent.com",
+   "parser_id": "SACKMANN_ATP_V1",
+   "upstream_lineage_id": "SACKMANN_COMPILATION_UNVERIFIED_UPSTREAM",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/",
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/"
+   ],
+   "endpoints": [
+    "FINAL_SCORE",
+    "SERVE_STATS"
+   ],
+   "access_mode": "AUTOMATED_ALLOWED",
+   "market_fields_possible": false,
+   "probe_url": "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_2024.csv",
+   "probe_expected_text": [
+    "winner_name",
+    "w_svpt"
+   ],
+   "source_truth_status": "EVENT_FIELD_RECEIPT_REQUIRED",
+   "official": false,
+   "leagues": [
+    "ATP",
+    "WTA"
+   ],
+   "settlement_fields": [
+    "serve_stats",
+    "final_score",
+    "surface"
+   ],
+   "adapter_status": "SYNTHETIC_FIXTURE_ONLY",
+   "not_provided": [
+    "retirement/walkover flag beyond the score string",
+    "current-week results (published with a lag)"
+   ]
+  },
+  "bleague_official": {
+   "publisher": "B.LEAGUE",
+   "hostname": "www.bleague.jp",
+   "parser_id": "PLANNED",
+   "upstream_lineage_id": "BLEAGUE_OFFICIAL_COLLECTION",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [],
+   "endpoints": [],
+   "access_mode": "PLANNED_NO_ADAPTER",
+   "market_fields_possible": false,
+   "official": true,
+   "leagues": [
+    "B.LEAGUE"
+   ],
+   "adapter_status": "PLANNED_NO_ADAPTER",
+   "blocker": "game pages (ScheduleKey) are rendered client-side; no retained body shows the score JSON endpoint. Capture one real body, then write the parser."
+  },
+  "kbl_official": {
+   "publisher": "Korean Basketball League",
+   "hostname": "www.kbl.or.kr",
+   "parser_id": "PLANNED",
+   "upstream_lineage_id": "KBL_OFFICIAL_COLLECTION",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [],
+   "endpoints": [],
+   "access_mode": "PLANNED_NO_ADAPTER",
+   "market_fields_possible": false,
+   "official": true,
+   "leagues": [
+    "KBL"
+   ],
+   "adapter_status": "PLANNED_NO_ADAPTER",
+   "blocker": "no retained body from kbl.or.kr; endpoint shape unknown."
+  },
+  "euroleague_official": {
+   "publisher": "Euroleague Basketball",
+   "hostname": "api-live.euroleague.net",
+   "parser_id": "PLANNED",
+   "upstream_lineage_id": "EUROLEAGUE_OFFICIAL_COLLECTION",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [],
+   "endpoints": [],
+   "access_mode": "PLANNED_NO_ADAPTER",
+   "market_fields_possible": false,
+   "official": true,
+   "leagues": [
+    "EuroLeague",
+    "EuroCup"
+   ],
+   "adapter_status": "PLANNED_NO_ADAPTER",
+   "blocker": "official live API v1/v2 schema not retained; fetch a real body and register the parser."
+  },
+  "acb_official": {
+   "publisher": "Liga Endesa",
+   "hostname": "live.acb.com",
+   "parser_id": "PLANNED",
+   "upstream_lineage_id": "ACB_OFFICIAL_COLLECTION",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [],
+   "endpoints": [],
+   "access_mode": "PLANNED_NO_ADAPTER",
+   "market_fields_possible": false,
+   "official": true,
+   "leagues": [
+    "ACB"
+   ],
+   "adapter_status": "PLANNED_NO_ADAPTER",
+   "blocker": "game and statistics views can share one feed (P-521/P-522 reconciliation); capture bodies and audit lineage before parsing."
+  },
+  "bbl_gbl_official": {
+   "publisher": "BBL and Greek Basket League",
+   "hostname": "www.easycredit-bbl.de",
+   "parser_id": "PLANNED",
+   "upstream_lineage_id": "UNKNOWN",
+   "independence_status": "UNKNOWN",
+   "lineage_audit": null,
+   "allowed_url_prefixes": [],
+   "endpoints": [],
+   "access_mode": "PLANNED_NO_ADAPTER",
+   "market_fields_possible": false,
+   "official": true,
+   "leagues": [
+    "BBL",
+    "GBL"
+   ],
+   "adapter_status": "PLANNED_NO_ADAPTER",
+   "blocker": "no retained official bodies; the archive builders use Eurobasket/Greek-basket scrapers instead."
+  }
+ }
+}

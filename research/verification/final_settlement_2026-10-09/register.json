@@ -3,7 +3,6 @@
  "created": "2026-10-09",
  "status": "ALL_PENDING_RECORDS_FINAL_SETTLED",
  "supersedes_for_sporting_settlement": "research/verification/carryover_review_2026-10-08/carryover.json (65) and research/verification/settled_import_2026-10-09/UNRESOLVED_POST_IMPORT.md (7)",
- "selected_pointer_unchanged": "research/current_settlement_register.json still pins the 2026-10-08 register because verify_rollover/verify_carryover_review require that exact snapshot; see REPORT.md.",
  "event_count": 72,
  "open_sporting_settlements": 0,
  "certification": "NOT_CERTIFIED for every record; performance_eligible false; unchanged by this settlement",
@@ -731,5 +730,6 @@
    "deep_rank1_retrospection": false,
    "performance_eligible": false
   }
- ]
+ ],
+ "selected_pointer": "research/current_settlement_register.json selects this register (kind \"settled\") from 2026-10-09 (GOV-01). The superseded 2026-10-08 carryover register stays pinned by SHA-256 in the pointer history; the dated verifiers check their own snapshot through settlement_register.pinned."
 }

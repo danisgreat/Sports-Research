@@ -3,7 +3,7 @@
 
 **Next canonical ID: P-557.** All requested cards go directly to the active combined log, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
-Current selected freeze: `CONTROL_MANIFEST_2026-10-09-2.md`; normalized-CRLF SHA-256 `872923672c282f96ccdb3676a1a6cde2f26065443f287cb393f393e802b6678d`. Current authority: METHOD.md and CURRENT_RULES.md.
+Current selected freeze: `CONTROL_MANIFEST_2026-10-09-3.md`; normalized-CRLF SHA-256 `a3ec424f416111ce316adc5828d1dc9cece1d0da9d7286be6adb7bea85cc6b85`. Current authority: METHOD.md and CURRENT_RULES.md.
 
 | ID | Event | Tracking alias | Status |
 |---|---|---|---|
@@ -46,8 +46,8 @@ Highest canonical research ID: **P-556**. Active Combined Log: `prediction logs/
 Archived mini references: `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`, `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P527_ONWARD_UPDATED_4.md`.
 Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/carryover.json` and `carryover.md`. Eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6; formal certification remains unresolved.
 
-**Current all-log settlement register:** `research/verification/carryover_review_2026-10-08/carryover.json`.
-65 event records retain specific settlement/certification requirements; 10 older rank/contract mappings were repaired. The earlier 15-record closure is a historical snapshot. New sporting reviews and existing retrospective pointers are recorded in the current register; operator or source gaps remain literal.
+**Current settlement register:** `research/verification/final_settlement_2026-10-09/register.json`.
+72 event records are final-settled (0 sporting settlements open). No record is performance-certified; operator and source gaps remain literal. Earlier carryover registers stay pinned by SHA-256 in the pointer history.
 Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.
 
 P-518–P-522 remain reserved. Mini logs are reference/fallback copies. Run `research.operations.log_card verify` to verify actual projections, source hashes and next ID.

@@ -1,20 +1,14 @@
 # Research workspace
 
-**Carryover review published to Part 7:** [65 reviews and mapping/source corrections](verification/carryover_review_2026-10-08/REPORT.md) retain all unresolved obligations and consume no canonical ID. The supplied local P-550 is source-only and pending import; canonical next P-550 and local next P-551 are distinct.
-
-**October 8 current destination:** [Part 7](../prediction%20logs/PREDICTION_LOG_COMBINED_7.md) is active, with P-550 unconsumed. Part 6 retains P-523–P-549 and immutable special source custody. [Settlement/rollover evidence](verification/mini_rollover_2026-10-08/REPORT.md) and the selected 65-record carryover supersede earlier queue counts. `log_card addendum revision.json` appends a dated revision under its existing `card_id`; it never consumes a new ID.
+Current state (next ID, active Combined Log, active freeze) is generated in [../CURRENT_STATE.md](../CURRENT_STATE.md); earlier dated notes are kept in [../archive/status_notes/](../archive/status_notes/SUPERSEDED_STATUS_PARAGRAPHS_2026-10-09.md). `log_card addendum revision.json` appends a dated revision under its existing `card_id`; it never consumes a new ID.
 
 Current October-5 all-log custody: 111 receipt bodies verify locally; 52 are intentionally excluded from Git (42 prior benchmark bodies plus 10 new restricted/market-bearing narrative captures). A clean checkout has 59 bodies and must fail strict custody for the other 52; no CI bypass or fabricated recapture is authorized. See the all-log source inventory and publication evidence.
 
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
-
 Current controls: [CURRENT_RULES.md](../CURRENT_RULES.md). No current model is live-qualified. Existing September evaluations and forecasts remain frozen; October's changed models are versioned SHADOW_ONLY candidates.
 
-Current reconciliation: [all-log October 5 evidence](verification/all_log_resolution_2026-10-05/REPORT.md). The earlier [document/cleanup evidence](verification/implementation_2026-10-05/REPORT.md) is a completed historical checkpoint. P-523–P-537 are already canonical; P-538 was next at that historical repair; after the October 8 import, P-550 is next, subject to the live allocator. The two closed mini archives, all 15 carryovers, eleven diagnostic settlements and 132 retrospective sections are retained. No reimport, new certification or forecast rewrite is needed.
+## Local-mini lifecycle — current default (CR-2026.10.09-R3)
 
-## Local-mini lifecycle — current default (CR-2026.10.09-R2)
-
-Cards are written into a local mini by an external chat agent, settled locally, and imported here. The prompts are in [prompts/](prompts/README.md) and the format is [`mini-log-2`](../CARD_AND_LOG_TEMPLATES.md#local-mini-format-mini-log-2).
+Cards are written into a local mini by an external chat agent, settled locally, and imported here. The prompts are in [prompts/](prompts/README.md) and the format is [`mini-log-3`](../CARD_AND_LOG_TEMPLATES.md#local-mini-format-mini-log-3).
 
 ```powershell
 # Local checks on a mini (any machine with the repository)

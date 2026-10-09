@@ -7,6 +7,7 @@ from research.src.issue import PART6,CANONICAL_LEDGER
 from research.src.ledger import read_records
 from research.src.eligibility import digest
 from research.operations.verify_custody import compatible_body
+from research.src.custody_text import custody_bytes
 ROOT=PART6.parents[1]
 OUT=ROOT/'research/verification/all_log_resolution_2026-10-05'
 def sha(raw):return hashlib.sha256(raw).hexdigest()
@@ -18,7 +19,7 @@ def run():
  for item in opening['files']:
   path=ROOT/item['path']
   if item['path'].startswith(('prediction logs/','research/issued_research/','research/model_builds/')) or item['path']=='research/canonical_ledger.jsonl':
-   body=path.read_bytes()
+   body=custody_bytes(path)
    if path==PART6 or item['path']=='research/canonical_ledger.jsonl':body=body[:item['bytes']]
    need(len(body)==item['bytes'] and sha(body)==item['sha256'],'Immutable original changed: '+item['path'])
  for filename,projectionname in [('append_receipt.json','settlement_projection.bin'),('clarification_append_receipt.json','clarification_projection.bin'),('native_append_receipt.json','native_projection.bin')]:
@@ -30,7 +31,7 @@ def run():
  doc=load('documentary_repairs.json');need(len(doc)==10,'Missing documentary repair')
  for d in doc:
   for r in d['source_rows']:
-   body=(ROOT/r['retained_path']).read_bytes();line=body.decode('utf-8-sig').splitlines()[r['line']-1]
+   body=custody_bytes(ROOT/r['retained_path']);line=body.decode('utf-8-sig').splitlines()[r['line']-1]
    need(sha(body)==r['file_sha256'] and line==r['line_literal'] and sha(line.encode())==r['line_sha256'],'Documentary row changed: '+d['canonical_id'])
   need(d['performance_eligible'] is False,'Documentary promoted')
  historical=load('historical_inventory.json')
