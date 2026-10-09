@@ -1,8 +1,0 @@
-{
-  "label": "P430_ESPN",
-  "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/afc.champions/summary?event=401912656",
-  "source_id": "audit_p430_espn",
-  "attempt_utc": "2026-10-01T07:32:03.001067+00:00",
-  "status": "UNAVAILABLE",
-  "reason": "HTTPError: HTTP Error 403: Forbidden"
-}

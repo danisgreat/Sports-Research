@@ -1,8 +1,0 @@
-{
-  "label": "P419_ESPN",
-  "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/summary?event=401873992",
-  "source_id": "audit_p419_espn",
-  "attempt_utc": "2026-10-01T07:32:02.858986+00:00",
-  "status": "UNAVAILABLE",
-  "reason": "HTTPError: HTTP Error 403: Forbidden"
-}

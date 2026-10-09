@@ -1,8 +1,0 @@
-{
-  "label": "P179_Equipe",
-  "url": "https://www.lequipe.fr/Football/match-direct/ligue-3/2026-2027/thionville-lusitanos-paris-13-atletico-live/693490",
-  "source_id": "audit_p179_equipe",
-  "attempt_utc": "2026-10-01T07:31:58.404700+00:00",
-  "status": "UNAVAILABLE",
-  "reason": "HTTPError: HTTP Error 403: Forbidden"
-}

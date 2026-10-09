@@ -1,9 +1,0 @@
-[
-  {
-    "check": "tests",
-    "exit_code": 0,
-    "command": "py -3.14 -B -m pytest -p no:cacheprovider research/tests research/operations research/experiments runtime/tests -q",
-    "workspace": "C:\\Users\\danie\\AppData\\Local\\Temp\\sports-rollover-check-20261008",
-    "output_path": "C:\\Users\\danie\\Desktop\\Sports Research\\research\\verification\\mini_rollover_2026-10-08\\committed_checks\\control_r2\\tests.txt"
-  }
-]
